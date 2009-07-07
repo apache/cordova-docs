@@ -1,0 +1,14 @@
+<h3 class="code">Code</h3>
+<pre>Array.implement({
+  
+  invoke: function(fn, args){
+    var result = [];
+    
+    for (var i = 0, l = this.length; i &lt; l; i++){
+      if(this[i] &amp;&amp; this[i][fn])
+        result.push(args ? this[i][fn].pass(args, this[i])() : this[i][fn]());
+    }
+    return result;
+  }
+  
+});</pre>

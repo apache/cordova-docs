@@ -1,0 +1,27 @@
+<h2>Event</h2>
+
+<h3>on</h3>
+<p>This method has shortcut aliases for:</p>
+<ul>
+  <li>click</li>
+  <li>load</li>
+  <li>touchstart</li>
+  <li>touchmove</li>
+  <li>touchend</li>
+  <li>touchcancel</li>
+  <li>gesturestart</li>
+  <li>gesturechange</li>
+  <li>gestureend</li>
+  <li>orientationchange</li>
+</ul>
+
+<h4>Syntax</h4>
+<pre>x$('button').on( 'click', function(e){ alert('hey that tickles!') });</pre>
+
+<h4>Or</h4>
+<pre>x$('a.save').click(function(e){ alert('tee hee!') });</pre>
+
+<h4>Example</h4>
+<pre>x$(window).load(function(e){
+  x$('.save').touchstart( function(evt){ alert('tee hee!') }).css(background:'grey'); 
+});</pre>

@@ -1,0 +1,17 @@
+<h2>Accelerometer</h2>
+
+<h3 class="code">Basic</h3>
+<pre>navigator.accelerometer.watchAcceleration(win, fail, opt);</pre>
+
+<h3 class="code">Example</h3>
+<pre>function watchAccel() {
+  var win = function(a){
+    document.getElementById('x').innerHTML = a.x;
+    document.getElementById('y').innerHTML = a.y;
+    document.getElementById('z').innerHTML = a.z;
+  };
+  var fail = function(){};
+  var opt = {};
+  opt.frequency = 100;
+  timer = navigator.accelerometer.watchAcceleration(win, fail, opt);
+}</pre>

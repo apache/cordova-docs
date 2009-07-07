@@ -1,0 +1,17 @@
+<h2>Geo Location</h2>
+
+<h3 class="code">Basic</h3>
+<pre>navigator.geolocation.getCurrentPosition(win, fail);</pre>
+
+<h3 class="code">Example</h3>
+<pre>var getLocation = function() {
+
+  var win = function(p){
+    alert(p.coords.latitude + " " + p.coords.longitude);
+  };
+  var fail = function(){
+    //default query
+  };
+  
+  navigator.geolocation.getCurrentPosition(win, fail);
+}</pre>
