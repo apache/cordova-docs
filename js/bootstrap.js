@@ -1,5 +1,4 @@
 system.use("com.joyent.Sammy");
-system.use("smart-helpers.init");
 
 function render(that, temp, args){
   if (!args){ args = {};}
