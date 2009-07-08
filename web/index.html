@@ -1,14 +1,24 @@
-<h3 class="code">Code</h3>
-<pre>Array.implement({
-  
-  invoke: function(fn, args){
-    var result = [];
-    
-    for (var i = 0, l = this.length; i &lt; l; i++){
-      if(this[i] &amp;&amp; this[i][fn])
-        result.push(args ? this[i][fn].pass(args, this[i])() : this[i][fn]());
-    }
-    return result;
-  }
-  
-});</pre>
+<h2>Welcome to PhoneGap Docs</h2>
+
+<ul style="padding:0px 20px">
+  <li>Device</li>
+  <li>Notification
+    <ul>
+      <li>Alert</li>
+      <li>Beep</li>
+      <li>Vibrate</li>
+      <li>loadingStart</li>
+      <li>loadingStop</li>
+    </ul>
+  </li>
+  <li>Contact</li>
+    <ul>
+      <li>getAllContacts</li>
+      <li>displayContact</li>
+      <li>newContact</li>
+      <li>removeContact</li>
+      <li>chooseContact</li>
+    </ul>
+  </li>
+  <li>Media</li>
+</ul>

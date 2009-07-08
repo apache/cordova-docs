@@ -13,7 +13,7 @@ function render(that, temp, args){
 }
 
 GET("/", function(){
-  return render(this, "index.html");
+  return render(this, "index.html", {layout:"docs.html"});
 });
 
 GET(/\/docs\/(.+)\/?$/, function(page){

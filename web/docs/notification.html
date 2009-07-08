@@ -1,3 +1,56 @@
-<h2>Notification</h2>
+<ul class="devices"><li class="iphone">iphone</li><li class="android">android</li><li class="blackberry">blackberry</li></ul>
+<h2>Alert</h2>
 
+<h3>Syntax</h3>
+<p class="syntax">navigator.notification.alert(<span class="arg req">message</span>, <span class="arg req">title</span>, <span class="arg req">button</span>);</p>
+
+<h3>Arguments</h3>
+<p class="argument">message<span class="type">String</span></p>
+<p class="argument">title<span class="type">String</span></p>
+<p class="argument">button<span class="type">String</span></p>
+
+<h3>Example</h3>
+<pre>navigator.notification.alert("this is a custom message", "Attention", "Ok");</pre>
+
+<hr />
+
+<ul class="devices"><li class="iphone">iphone</li><li class="android">android</li><li class="blackberry">blackberry</li></ul>
+<h2>Beep</h2>
+
+<h3>Syntax</h3>
+<p class="syntax">navigator.notification.beep(<span class="arg req">times</span>);</p>
+
+<h3>Arguments</h3>
+<p class="argument">times<span class="type">Integer</span></p>
+
+<h3>Example</h3>
+<pre>navigator.notification.beep(2);</pre>
+
+<hr />
+
+<ul class="devices"><li class="iphone">iphone</li><li class="android">android</li><li class="blackberry">blackberry</li></ul>
+<h2>Vibration</h2>
+<h3>Syntax</h3>
+<p class="syntax">navigator.notification.vibrate(<span class="arg req">duration</span>);</p>
+<h3>Arguments</h3>
+<p class="argument">duration<span class="type">Integer</span></p>
+<h3>Example</h3>
 <pre>navigator.notification.vibrate(0);</pre>
+
+<hr />
+
+<ul class="devices"><li class="iphone">iphone</li></ul>
+<h2>Loading Start</h2>
+<h3>Syntax</h3>
+<p class="syntax">navigator.notification.loadingStart();</p>
+<h3>Example</h3>
+<pre>navigator.notification.loadingStart();</pre>
+
+<hr />
+
+<ul class="devices"><li class="iphone">iphone</li></ul>
+<h2>Loading Stop</h2>
+<h3>Syntax</h3>
+<p class="syntax">navigator.notification.loadingStop();</p>
+<h3>Example</h3>
+<pre>navigator.notification.loadingStop();</pre>

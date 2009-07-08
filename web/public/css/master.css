@@ -84,6 +84,52 @@ pre {
 	font-size: 12px;
 }
 
+h3{
+  margin:18px 0px 12px;
+}
+
+p.syntax{
+  background:#fff;
+  font-weight:bold;
+  border-width:0;
+  padding:0;
+  font-family:Verdana;
+  color:#555;
+  font-size:16px;
+}
+
+p.syntax span.arg{
+  font-style:italic;
+}
+
+p.syntax span.arg.opt{
+  font-style:italic;
+  color:#aaa;
+}
+
+p.argument{
+  font-size:1em;
+  background:#ffe;
+  padding:6px 20px;
+  font-weight:bold;
+  margin:4px 0px;
+  position:relative;
+}
+
+p.argument span.type{
+  position:absolute;
+  left:400px;
+  color:#666;
+}
+p.argument span.optional{
+  color:#999;
+}
+
+hr{
+  border-width:3px;
+}
+
+
 a.download span {
 	display: none;
 }
@@ -168,3 +214,28 @@ a.download:hover {
 }
 
 /* @end */
+ul.devices{
+  margin:0;
+  overflow:auto;
+  float:right;
+}
+
+ul.devices li{
+  font-family:verdana;
+  list-style-type:none;
+  background:orange;
+  font-size:10px;
+  color:#fff;
+  float:left;
+  margin-right:3px;
+  line-height:1em;
+  padding:2px 5px 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  radius:3px;
+}
+ul.devices li.iphone{ background:#BD1550;}
+ul.devices li.android{ background:#E97F02;}
+ul.devices li.blackberry{ background:#8A9B0F;}
+ul.devices li.unimplemented{ background:#bbb;}
+
