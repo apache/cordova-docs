@@ -24,6 +24,11 @@ body {
 	padding: 0;
 }
 
+#header h1 a{
+  color:#000;
+  text-decoration:none
+}
+
 ul li {
 	list-style: square;
 }
