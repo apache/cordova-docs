@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head>  
+    <meta name="description" content="PhoneGap API Documentation" /> 
+    <link href="/assets/stylesheets/index.css" media="screen" rel="stylesheet" type="text/css" /> 
+    <link href="/assets/stylesheets/pygments.css" media="screen" rel="stylesheet" type="text/css" /> 
+    
+    <title>PhoneGap API Documentation</title> 
+  </head> 
+  <body> 
+    <div class="row">
+      <a href="/"><img src="/assets/images/www.phonegap.png" alt="PhoneGap" /></a>
+    </div>
+    <div class="row">
+      <div class="col col_nav">
+        <h1>PhoneGap</h1>
+        <ul>
+          {% for object in site.categories.phonegap reversed %}
+          <li><a href="{{ object.url }}">{{ object.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <h1>Plugins</h1>
+        {% if site.categories.android %}
+        <h2>Android</h2>
+        <ul>
+          {% for object in site.categories.android %}
+          <li><a href="{{ object.url }}">{{ object.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="col col_body">
+        <h1>{{ page.categories | capitalize }} / {{ page.title | capitalize }}</h1>
+        {{ content }}
+      </div>
+    </div>
+    <div id="footer" class="row">
+      <ul>
+        <li><a href="http://www.phonegap.com/">PhoneGap.com</a></li>
+        <li><a href="http://github.com/phonegap/phonegap">Github</a></li>
+        <li><a href="http://groups.google.com/group/phonegap">Google Groups</a></li>
+        <li><a href="http://phonegap.pbwiki.com/">Wiki</a></li>
+        <li><a href="http://twitter.com/phonegap">Twitter</a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>	
+  </body> 
+</html>

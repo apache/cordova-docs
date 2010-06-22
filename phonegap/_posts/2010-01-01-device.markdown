@@ -1,0 +1,13 @@
+---
+layout: default
+title: Device
+objects: ['name', 'platform', 'uuid', 'version']
+---
+{% for object in page.objects %}
+* ## [device.{{object}}](#device.{{object}}) ##
+{% endfor %}
+
+{: #device.name     }{% include phonegap/device.name.markdown %}
+{: #device.platform }{% include phonegap/device.platform.markdown %}
+{: #device.uuid     }{% include phonegap/device.uuid.markdown %}
+{: #device.version  }{% include phonegap/device.version.markdown %}
