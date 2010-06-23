@@ -6,6 +6,9 @@ PhoneGap / Geolocation
 =================
 
 * __Geolocation Methods__
+* [navigator.geolocation.getCurrentPosition](#getCurrentPosition)
+* [navigator.geolocation.watchPosition](#watchPosition)
+* [navigator.geolocation.clearWatch](#clearWatch)
 * __Geolocation Model__
 * [Position](#Position)
 * [Position.coords](#Position.coords)
@@ -18,6 +21,9 @@ PhoneGap / Geolocation
 * [Coordinates.heading](#Coordinates.heading)
 * [Coordinates.speed](#Coordinates.speed)
 
+{: #getCurrentPosition    }{% include phonegap/geolocation/geolocation.getCurrentPosition.markdown %}
+{: #watchPosition    }{% include phonegap/geolocation/geolocation.watchPosition.markdown %}
+{: #clearWatch    }{% include phonegap/geolocation/geolocation.clearWatch.markdown %}
 {: #Position     }{% include phonegap/geolocation/Position.markdown %}
 {: #Position.coords     }{% include phonegap/geolocation/Position.coords.markdown %}
 {: #Position.timestamp     }{% include phonegap/geolocation/Position.timestamp.markdown %}
