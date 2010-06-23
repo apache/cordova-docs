@@ -1,0 +1,5 @@
+permalink: /:categories/:title/index.html
+#permalink: none
+auto: true
+pygments: true
+#markdown: rdiscount # uncomment to enable sublists
