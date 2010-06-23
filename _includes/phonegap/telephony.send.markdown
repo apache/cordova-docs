@@ -1,6 +1,6 @@
-class.function
+telephony.send
 -----------
-Returns blah blah blah.
+Sets the function to be called when .
 
 ### Returns ###
 String

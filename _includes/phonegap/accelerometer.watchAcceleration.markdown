@@ -1,11 +1,11 @@
-class.function
+accelerometer.watchAcceleration
 -----------
-Returns blah blah blah.
+Specifies a function to be called when acceleration events occur.
 
 ### Returns ###
-String
+null
 
 ### Example ###
 {% highlight javascript %}
-    console.log(navigator.class.function);
+    navigator.accelerometer.watchAcceleration( function(accel) {console.log(accel.x+","+accel.y+","+accel.z)} );
 {% endhighlight %}

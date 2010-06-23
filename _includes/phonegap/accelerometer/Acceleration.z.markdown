@@ -1,11 +1,12 @@
-class.function
+Acceleration.z
 -----------
-Returns blah blah blah.
+Returns the z axis acceleration value.
 
 ### Returns ###
 String
 
 ### Example ###
 {% highlight javascript %}
-    console.log(navigator.class.function);
+	var accel = navigator.accelerometer.getCurrentAcceleration();
+    console.log(accel.z);
 {% endhighlight %}
