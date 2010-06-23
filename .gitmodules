@@ -1,4 +1,0 @@
-
-[submodule "js/smart-helpers"]
-	path = js/smart-helpers
-	url = git://github.com/sintaxi/smart-helpers.git
