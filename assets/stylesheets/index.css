@@ -89,9 +89,6 @@ a {
 .col_body ul li {
   line-height:1.75;
 }
-.col_body ul li a {
-  display:block;
-}
 .col_body ul li span {
   font-size:13px;
   padding-left:10px;

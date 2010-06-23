@@ -1,6 +1,10 @@
 Position(coords, timestamp)
 -----------
-Creates a new Position object, which encapsulates not only the location via a Coordinates object but also associates a timestamp to the object, representing when the Position was created.
+Creates a new [Position](#Position) object, which encapsulates not only the location via a [Coordinates](#Coordinates) object but also associates a timestamp to the object, representing when the [Position](#Position) was created.
+
+### Properties ###
+* [coords](#Position.coords): a [Coordinates](#Coordinates) object.
+* [timestamp](#Position.timestamp): a number representing when the [Position](#Position) object was created.
 
 ### Supported Platforms ###
 iPhone, Android, BlackBerry, webOS
