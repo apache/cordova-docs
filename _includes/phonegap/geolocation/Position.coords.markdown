@@ -1,11 +1,16 @@
-class.function
+Position.coords
 -----------
-Returns blah blah blah.
+Returns the Coordinates (link here!) object associated with the Position object. This is the object that most likely will interest you if you are working with the Position object 
 
-### Returns ###
-String
+### Supported Platforms ###
+iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-    console.log(navigator.class.function);
+	// Generate a new Coordinates object.
+    var coords = new Coordinates(1,2,3,4,5,6);
+	// Generate a new Position object.
+	var p = new Position(coords, new Date().getTime());
+	alert(p.coords == coords);
+	// Alerts true.
 {% endhighlight %}

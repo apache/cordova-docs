@@ -42,3 +42,8 @@ Scotch for Docs Hack Night
         * The documentation should live closer to the method, to keep the documentation up to date
     * Some of these methods are tightly bound to the PhoneGap-<platform>
         * Eventually they will be extracted out as a plugin
+
+To-do
+----------------------------
+* Decide how to document model objects, i.e. the geolocation 'Position' and 'Coordinates' objects. For now, we're documenting it in the ./phonegap markdown files.
+* Figure out an elegant solution for linking to methods and objects that are defined across the entire API.
