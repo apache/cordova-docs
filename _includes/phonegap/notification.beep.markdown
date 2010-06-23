@@ -1,11 +1,11 @@
-notification.beep
+notification.beep(numberOfBeeps)
 ------------------
-Beep!
+Causes the device to beep, the number of times specified by the numberOfBeeps parameter.
 
-### Returns ###
-Nothing.
+### Supported Platforms ###
+iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-
+	navigator.notification.beep(2); // Beeps twice!
 {% endhighlight %}
