@@ -1,6 +1,6 @@
 Position.coords
 -----------
-Returns the Coordinates (link here!) object associated with the Position object. This is the object that most likely will interest you if you are working with the Position object 
+Returns the [Coordinates](#Coordinates) object associated with the [Position](#Position) object. This is the object that most likely will interest you if you are working with the [Position](#Position) object 
 
 ### Supported Platforms ###
 iPhone, Android, BlackBerry, webOS

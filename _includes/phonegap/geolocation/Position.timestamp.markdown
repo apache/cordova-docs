@@ -1,6 +1,6 @@
 Position.timestamp
 -----------
-Returns a number, the value of the date associated with the generation of this Position. The underlying structure of this property is the same as 
+Returns a number, the value of the date associated with the generation of this [Position](#Position). The underlying structure of this property is the same as
 {% highlight javascript %}
     new Date().getTime();
 {% endhighlight %}
