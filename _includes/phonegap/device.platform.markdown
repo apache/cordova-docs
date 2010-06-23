@@ -9,6 +9,6 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-    var devicePlatform = device.platform;
-	// Returns 'BlackBerry' or 'iPhone' or 'Android' or 'webOS'
+var devicePlatform = device.platform;
+// Returns 'BlackBerry' or 'iPhone' or 'Android' or 'webOS'
 {% endhighlight %}

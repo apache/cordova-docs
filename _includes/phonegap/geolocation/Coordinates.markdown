@@ -1,4 +1,4 @@
-Position(coords, timestamp)
+Coordinates()
 -----------
 Creates a new Position object, which encapsulates not only the location via a Coordinates object but also associates a timestamp to the object, representing when the Position was created.
 

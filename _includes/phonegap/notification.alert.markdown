@@ -11,5 +11,5 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-    navigator.notification.alert('title', 'message', 'ButtonName');
+navigator.notification.alert('title', 'message', 'ButtonName');
 {% endhighlight %}
