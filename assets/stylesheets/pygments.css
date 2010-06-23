@@ -1,4 +1,4 @@
-.highlight { background-color:#222222; padding:8px 10px; }
+.highlight { background-color:#222222; padding:8px 10px; overflow:scroll; }
 .highlight .hll { background-color: #404040 }
 .highlight .c { color: #999999; font-style: italic } /* Comment */
 .highlight .err { } /* Error */
