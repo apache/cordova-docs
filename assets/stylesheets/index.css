@@ -50,8 +50,8 @@ a {
 }
 .col_nav ul {
   list-style:none;
-  margin-left:30px;
-  padding-bottom:16px;
+  margin:0px 0px 0px 30px;
+  padding:0px 0px 16px 0px;
 }
 .col_nav ul li {
   line-height:1.5;
@@ -93,8 +93,9 @@ a {
   font-size:13px;
   padding-left:10px;
 }
-.col_body ul li h2 {
+.col_body ul li a {
   border:0px;
+  font-size:24px;
   font-weight:normal;
   margin:0px;
   padding:0px;
