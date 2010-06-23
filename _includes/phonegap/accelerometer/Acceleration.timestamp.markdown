@@ -1,6 +1,6 @@
-Acceleration.y
+Acceleration.timestamp
 -----------
-Returns the y axis acceleration value.
+Returns the timestamp of the last acceleration value.
 
 ### Returns ###
 String
@@ -8,5 +8,5 @@ String
 ### Example ###
 {% highlight javascript %}
 	var accel = navigator.accelerometer.getCurrentAcceleration();
-    console.log(accel.y);
+    console.log(accel.timestamp);
 {% endhighlight %}
