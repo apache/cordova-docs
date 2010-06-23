@@ -1,6 +1,6 @@
 /** General **/
 
-h1,h2,ul,li {
+h1,h2 {
   margin:0px;
   padding:0px;
 }
@@ -81,6 +81,10 @@ a {
 /** Table of Contents **/
 .col_body ul {
   list-style:none;
+}
+.col_body > ul {
+  margin:0px;
+  padding:0px;
 }
 .col_body ul li {
   line-height:1.75;
