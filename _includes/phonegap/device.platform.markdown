@@ -1,6 +1,7 @@
 device.platform
 ---------------
 Returns the device's platform name. This is more general than device.name and tells you the name of the manufacturer.
+
 The 'device' object is assigned to the 'window' object, so is implicitly in global scope. It is the only PhoneGap / device API object to be available in such a way.
 
 ### Returns ###

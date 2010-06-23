@@ -1,6 +1,7 @@
 device.version
 --------------
 Returns the device's OS version.
+
 The 'device' object is assigned to the 'window' object, so is implicitly in global scope. It is the only PhoneGap / device API object to be available in such a way.
 
 ### Returns ###

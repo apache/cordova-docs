@@ -1,6 +1,7 @@
 device.name
 -----------
 Returns the device's model name. The name is defined by the manufacturer, so it is different for each device.
+
 The 'device' object is assigned to the 'window' object, so is implicitly in global scope. It is the only PhoneGap / device API object to be available in such a way.
 
 ### Returns ###

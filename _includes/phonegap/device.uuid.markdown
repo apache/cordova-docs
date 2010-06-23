@@ -1,6 +1,7 @@
 device.uuid
 -----------
 Returns a unique ID associated to the device. The way this ID is generated is different based on device platform and/or model.
+
 The 'device' object is assigned to the 'window' object, so is implicitly in global scope. It is the only PhoneGap / device API object to be available in such a way.
 
 ### Returns ###
