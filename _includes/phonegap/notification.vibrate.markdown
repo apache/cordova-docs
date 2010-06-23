@@ -10,5 +10,6 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-	navigator.notification.vibrate(2); // Vibrates for two seconds on a BlackBerry, two milliseconds on an Android...
+	navigator.notification.vibrate(2);
+	// Vibrates for two seconds on a BlackBerry, two milliseconds on an Android...
 {% endhighlight %}
