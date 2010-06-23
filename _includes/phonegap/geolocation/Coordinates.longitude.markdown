@@ -7,7 +7,7 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-	var coords = new Coordinates(1,2,3,4,5,6);
-	alert(coords.longitude);
-	// Returns 2.
+var coords = new Coordinates(1,2,3,4,5,6);
+alert(coords.longitude);
+// Returns 2.
 {% endhighlight %}

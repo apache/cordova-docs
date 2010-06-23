@@ -7,6 +7,6 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-	navigator.notification.beep(2);
-	// Beeps twice!
+navigator.notification.beep(2);
+// Beeps twice!
 {% endhighlight %}

@@ -9,9 +9,9 @@ iPhone, Android, BlackBerry, webOS
 
 ### Example ###
 {% highlight javascript %}
-    var deviceName = device.name;
-	// Returns the model number of the device, pretty device-specific:
-	// BlackBerry: Bold returns '9000', later Pearl would return '8900'.
-	// Android: Nexus One returns 'Passion' (Original code name HTC had for that device).
-	// iPhone: Whatever the owner of the iPhone 'named' it when they plugged it into iTunes, i.e. "Joe's iPhone"
+var deviceName = device.name;
+// Returns the model number of the device, pretty device-specific:
+// BlackBerry: Bold returns '9000', later Pearl would return '8900'.
+// Android: Nexus One returns 'Passion' (Original code name HTC had for that device).
+// iPhone: Whatever the owner of the iPhone 'named' it when they plugged it into iTunes, i.e. "Joe's iPhone"
 {% endhighlight %}

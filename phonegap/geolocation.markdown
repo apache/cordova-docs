@@ -15,3 +15,4 @@ PhoneGap / Geolocation
 {: #Position     }{% include phonegap/geolocation/Position.markdown %}
 {: #Position.coords     }{% include phonegap/geolocation/Position.coords.markdown %}
 {: #Position.timestamp     }{% include phonegap/geolocation/Position.timestamp.markdown %}
+{: #Coordinates     }{% include phonegap/geolocation/Coordinates.markdown %}
