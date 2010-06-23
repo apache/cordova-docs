@@ -16,22 +16,16 @@
       <div class="col col_nav">
         <h1>PhoneGap</h1>
         <ul>
-          {% for object in site.categories.phonegap reversed %}
-          <li><a href="{{ object.url }}">{{ object.title }}</a></li>
-          {% endfor %}
+          <li><a href="/phonegap/device.html">Device</a></li>
+          <li><a href="/phonegap/notification.html">Notification</a></li>
         </ul>
         <h1>Plugins</h1>
-        {% if site.categories.android %}
         <h2>Android</h2>
         <ul>
-          {% for object in site.categories.android %}
-          <li><a href="{{ object.url }}">{{ object.title }}</a></li>
-          {% endfor %}
+          <li><a href="/android/device.html">Device</a></li>
         </ul>
-        {% endif %}
       </div>
       <div class="col col_body">
-        <h1>{{ page.categories | capitalize }} / {{ page.title | capitalize }}</h1>
         {{ content }}
       </div>
     </div>

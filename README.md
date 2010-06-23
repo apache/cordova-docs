@@ -12,7 +12,7 @@ The goal of this repository is to provide a foundation for writing the PhoneGap 
 Getting Starting with Jekyll
 ----------------------------
     gem install jekyll
-    git clone http://github.com/mwbrooks/phonegap-docs.git
+    git clone http://github.com/mwbrooks/phonegap-docs-jekyll.git
     cd phonegap-docs/
     jekyll --server
 
@@ -21,9 +21,6 @@ Getting Starting with Documentation
 * Each platform has a directory in the root.
     * e.g. ./phonegap
     * e.g. ./android
-* There is a post for each PhoneGap object
-    * e.g. ./phonegap/_posts/2010-01-01-device.markdown
-    * Unfortuantely, the date is required by Jekyll
 * Each PhoneGap object post includes documentation files from _include/<platform>
     * e.g. ./_include/phonegap/device.name.markdown
     

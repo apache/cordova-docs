@@ -1,5 +1,0 @@
----
-layout: default
-title: Device
----
-This is where the extra Android device implementation goes
