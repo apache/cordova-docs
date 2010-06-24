@@ -1,34 +1,33 @@
-navigator.geolocation.clearWatch(watchId);
+navigator.geolocation.clearWatch
 -----------
-Has the device retrieve the current GPS position (as a [Position](#Position) object). This is an asynchronous call that invokes native source code on the platform.
+Clears out the position watch interval specified by the provided watchID parameter. This ID is provided as a return value by navigator.geolocation.watchPosition.
+
+### Function Signature ###
+    navigator.geolocation.clearWatch(watchID);
 
 ### Parameters ###
-* __successCallback:__ reference to a function which accepts a [Position](#Position) object as paremeter, and handles successfully retrieving the device's position.
-* __errorCallback:__ reference to a function, and handles not being able to retrieve the device's position.
-* __options:__ optional object passed in specifying parameters regarding the location retrieval. Not used by this function, but see [watchPosition](#watchPosition) for an example of its usage.
+* __watchID__: The ID of the position watch interval you want to clear.
 
 ### Supported Platforms ###
 iPhone, Android, BlackBerry, webOS
 
 ### Example ###
-{% highlight javascript %}
-// Create references to functions that will act as our success and error callbacks, respectively.
-// Important to note that the function accepts a parameter! This is a Position object!
-var win = function(p) {
-  alert('Here is your position, latitude: ' + p.coords.latitude + ', longitude: ' + p.coords.longitude);
-};
-var fail = function() {
-  alert('Fail whale!');
-};
-// Make the PhoneGap GPS call:
-navigator.geolocation.getCurrentPosition(win, fail);
-// You can also define the callback functions in-line:
-navigator.geolocation.getCurrentPosition(function(p) {
-  // Set the content of DOM elements with IDs 'myLatitude' and 'myLongitude,'
-  // respectively, to Position values.
-  document.getElementById('myLatitude').innerHTML = p.coords.latitude;
-  document.getElementById('myLongitude').innerHTML = p.coords.longitude;
-}, function() {
-  alert('Failure oh no!');
-});
-{% endhighlight %}
+    // Create a variable that will store the position watch ID.
+    var myWatch = null;
+    // Create a function that will initiate a position watch and save the watch ID.
+    function startWatch(frequency) {
+        // Start a position watch, save the returned ID to our variable above.
+        myWatch = navigator.geolocation.watchPosition(function(p) { 
+            alert('got a position!');
+        }, function() {
+            alert('error occured!');
+        }, {'frequency':frequency});
+    }
+    // Create a function that will clear position watches for us.
+    function stopWatch(id) {
+        navigator.geolocation.clearWatch(id);
+    }
+    // Now we can start the watch by calling:
+    startWatch(10000); // starts a watch with a 10 second interval.
+    // ... and we can stop the watch by calling:
+    stopWatch(myWatch);
