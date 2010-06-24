@@ -1,11 +1,10 @@
-class.function
+NetworkStatus.REACHABLE_VIA_WIFI_NETWORK
 -----------
-Returns blah blah blah.
+Returns an integer value (12 indicating a data connection is available through wifi.
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (networkStatus == NetworkStatus.REACHABLE_VIA_WIFI_NETWORK)
+        initiateLongDistanceVoipCall();

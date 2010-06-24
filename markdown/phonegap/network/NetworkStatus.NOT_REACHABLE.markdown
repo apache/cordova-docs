@@ -1,11 +1,9 @@
-class.function
+NetworkStatus.NOT_REACHABLE
 -----------
-Returns blah blah blah.
+Returns an integer value (0) indicating the Network is not reachable.
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (networkStatus == NetworkStatus.NOT_REACHABLE) doCoolOfflineStuff();

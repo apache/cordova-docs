@@ -1,11 +1,19 @@
-class.function
+network.isReachable(hostName, callback, options)
 -----------
-Returns blah blah blah.
+Checks whether the specified hostName (a string) is accessible through a data connection.
 
-### Returns ###
-String
+Upon completion, the callback function is passed an object that contains a "code" value. This code is equal to one of the [NetworkStatus](#NetworkStatus) constants defined.
+
+### Parameters ###
+* __hostName:__ The hostname to attempt to connect to.
+* __callback:__ function reference that is passed a status object in response.
+* __options:__ optional object. If the hostName is an ip address, pass in an options object with the "isIpAddress" field set to true.
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    function isNetworkAvailable(status) {
+      if (status.code == NetworkStatus.NOT_REACHABLE) {
+        alert("ALERT ALERT YOU CAN'T ACCESS ESSENTIAL RESOURCES ALERT ALERT");
+      }
+    }
+    
+    navigator.network.isReachable("twitter.com", isNetworkAvailable, { "isIpAddress":false });
