@@ -8,7 +8,5 @@ The 'device' object is assigned to the 'window' object, so is implicitly in glob
 iPhone, Android, BlackBerry, webOS
 
 ### Example ###
-{% highlight javascript %}
-var devicePlatform = device.platform;
-// Returns 'BlackBerry' or 'iPhone' or 'Android' or 'webOS'
-{% endhighlight %}
+    var devicePlatform = device.platform;
+    // Returns 'BlackBerry' or 'iPhone' or 'Android' or 'webOS'
