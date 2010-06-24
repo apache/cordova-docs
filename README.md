@@ -17,8 +17,9 @@ Repository Layout
 -----------------
 
 The repository is separated into two branches:
-* __master__: contains a static web site that is served as a Github page.
-* __doc__: a set of markdown files that document PhoneGap and web site template.
+
+*  __master__: contains a static web site that is served as a Github page.
+*  __doc__: a set of markdown files that document PhoneGap and web site template.
 
 Document File Format
 --------------------
