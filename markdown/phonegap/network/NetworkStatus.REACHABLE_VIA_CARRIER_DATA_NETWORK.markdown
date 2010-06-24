@@ -1,11 +1,10 @@
-class.function
+NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK
 -----------
-Returns blah blah blah.
+Returns an integer value (1) indicating a data connection is available, not through wifi.
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (networkStatus == NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK)
+        downloadMoreLolCats();
