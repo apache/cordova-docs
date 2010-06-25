@@ -1,14 +1,32 @@
 device.version
 --------------
-Returns the device's OS version as a string.
 
-The 'device' object is assigned to the 'window' object, so is implicitly in global scope. It is the only PhoneGap / device API object to be available in such a way.
+Returns the device's operating system (OS) version as a string.
 
+### Syntax ###
+
+    window.device.version;
+    device.version;
+    
 ### Supported Platforms ###
-iPhone, Android, BlackBerry, webOS
+
+- Android
+- BlackBerry
+- iPhone
+- webOS
 
 ### Example ###
+
+    // Android: Froyo OS would return "2.2"
+    //          Eclair OS would return "2.1", "2.0.1", or "2.0"
+    //          Cupcake OS would return "1.6"
+    //
+    // BlackBerry: Bold 9000 using OS 4.6 would return "4.6.0.282"
+    //
+    // iPhone: iOS 3.2 returns "3.2"
+    //
+    var deviceVersion = window.device.version;
+
+    // Shorthand form:
+    //
     var deviceVersion = device.version;
-    // Returns different strings based on the device OS's version. Examples include...
-    // A typical BlackBerry Bold 9000 would return '4.6.0.282' (referring to BlackBerry OS 4.6)
-    // An Android phone running Froyo would return '2.2', an Android running Eclair would return '2.1' or '2.0.1' or '2.0', 1.6 would return 'Cupcake', etc.
