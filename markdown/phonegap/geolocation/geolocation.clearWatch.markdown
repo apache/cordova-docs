@@ -14,20 +14,16 @@ iPhone, Android, BlackBerry, webOS
 ### Example ###
     // Create a variable that will store the position watch ID.
     var myWatch = null;
-    // Create a function that will initiate a position watch and save the watch ID.
-    function startWatch(frequency) {
-        // Start a position watch, save the returned ID to our variable above.
-        myWatch = navigator.geolocation.watchPosition(function(p) { 
-            alert('got a position!');
+    // Call watchPosition and assign the return value, the watch ID, to our watch variable above.
+    myWatch = navigator.geolocation.watchPosition(function(p) {
+            // Success callback.
+            alert('successfully retrieved location!');
         }, function() {
-            alert('error occured!');
-        }, {'frequency':frequency});
-    }
-    // Create a function that will clear position watches for us.
-    function stopWatch(id) {
-        navigator.geolocation.clearWatch(id);
-    }
-    // Now we can start the watch by calling:
-    startWatch(10000); // starts a watch with a 10 second interval.
-    // ... and we can stop the watch by calling:
-    stopWatch(myWatch);
+            // Error callback.
+            alert('oh no, error!');
+        },
+        {frequency,10000}); // This object tells the device to retrieve a position every 10 seconds (specified in millseconds).
+        // This means one of our two callbacks above should be fired every 10 seconds.
+    // ... more code ...
+    // When we want to stop the position watch interval, we simply call:
+    navigator.geolocation.clearWatch(myWatch);
