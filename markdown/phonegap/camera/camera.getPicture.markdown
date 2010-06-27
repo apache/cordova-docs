@@ -17,7 +17,7 @@ Takes a photo and returns the image as a `String` of base64 encoded data.
         * `function(errorMessage) {}`
     * __Parameter:__
         * __errorMessage:__ Different error message on each platform. _(String)_
-* __options:__ Customization options. Some are platform-specific. _(Object)_ (Optional)
+* __options:__ Customization. _(Object)_ (Optional)
     * __Syntax:__
         * `var cameraOptions = { quality: 75 };`
     * __Values:__
@@ -37,6 +37,13 @@ Takes a photo and returns the image as a `String` of base64 encoded data.
 - BlackBerry
 - iPhone
 - webOS
+
+### Warning ###
+
+The `options` parameter is ignored on:
+
+- BlackBerry
+- WebOS
 
 ### Brief Example ###
 
