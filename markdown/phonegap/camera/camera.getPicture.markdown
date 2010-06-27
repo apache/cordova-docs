@@ -27,9 +27,9 @@ Takes a photo and returns the image as a `String` of base64 encoded data.
 
 `camera.getPicture` opens the device's default camera application and allows the user to take a photo. Once the photo is captured, the camera application closes and your application is restored. The image is base64 encoded and returned as a JavaScript `String` in the `successCallback` function. Since the data is a `String`, you can do whatever you want with it, for example:
 
-* Render the image in an `<img>` tag _(See the example)_
-* Save the data locally (`LocalStorage`, `Lawnchair`, etc)
-* Post the data to a remote server
+- Render the image in an `<img>` tag _(See the example)_
+- Save the data locally (`LocalStorage`, `Lawnchair`, etc)
+- Post the data to a remote server
 
 ### Supported Platforms ###
 
