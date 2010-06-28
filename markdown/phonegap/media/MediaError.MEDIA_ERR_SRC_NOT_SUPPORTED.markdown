@@ -1,11 +1,10 @@
-class.function
+MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
 -----------
-Returns blah blah blah.
+Returns an integer value (4) indicating that the Media source format is not supported.
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (myAudioPlayer.error == Media.MEDIA_SRC_NOT_SUPPORTED)
+        alert("Error: that format is not supported")

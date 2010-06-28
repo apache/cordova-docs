@@ -1,11 +1,10 @@
-class.function
+MediaError.MEDIA_ERR_DECODE
 -----------
-Returns blah blah blah.
+Returns an integer value (3) indicating that the Media cannot be decoded
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (myAudioPlayer.error == Media.MEDIA_ERR_DECODE)
+        alert("We cannot decode that song")

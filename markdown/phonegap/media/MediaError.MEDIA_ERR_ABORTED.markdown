@@ -1,11 +1,10 @@
-class.function
+MediaError.MEDIA_ERR_ABORTED
 -----------
-Returns blah blah blah.
+Returns an integer value (1) indicating that the Media action has been aborted.
 
 ### Returns ###
-String
+Integer
 
 ### Example ###
-{% highlight javascript %}
-    console.log(navigator.class.function);
-{% endhighlight %}
+    if (myAudioPlayer.error == Media.MEDIA_ERR_ABORTED)
+        alert("Your song has been aborted")
