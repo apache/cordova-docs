@@ -1,6 +1,6 @@
 NetworkStatus.REACHABLE_VIA_WIFI_NETWORK
 -----------
-Returns an integer value (12 indicating a data connection is available through wifi.
+Returns an integer value (2) indicating a data connection is available through wifi.
 
 ### Returns ###
 Integer
