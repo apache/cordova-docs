@@ -6,7 +6,5 @@ Returns the y axis acceleration value.
 String
 
 ### Example ###
-{% highlight javascript %}
 	var accel = navigator.accelerometer.getCurrentAcceleration();
     console.log(accel.y);
-{% endhighlight %}
