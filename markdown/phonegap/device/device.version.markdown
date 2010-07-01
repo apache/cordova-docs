@@ -10,12 +10,10 @@ Returns the device's operating system (OS) version as a string.
     
 ### Supported Platforms ###
 
-- Android
-- BlackBerry
+- Android 2.1+
 - iPhone
-- webOS
 
-### Example ###
+### Brief Example ###
 
     // Android: Froyo OS would return "2.2"
     //          Eclair OS would return "2.1", "2.0.1", or "2.0"
@@ -30,3 +28,32 @@ Returns the device's operating system (OS) version as a string.
     // Shorthand form:
     //
     var deviceVersion = device.version;
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+
+### Full Example ###
+    <html>
+      <head>
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Device Version Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+
+        function onDeviceReady() {
+            var deviceVersion = device.version;
+			document.getElementById('dVersion').innerHTML  = deviceVersion;
+        }
+	
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <p>Your device version is <span id="dVersion">unknown</span></p>
+      </body>
+    </html>

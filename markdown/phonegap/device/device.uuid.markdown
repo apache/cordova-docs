@@ -10,12 +10,10 @@ Returns the device's Universally Unique Identifier ([UUID](http://en.wikipedia.o
 
 ### Supported Platforms ###
 
-- Android
-- BlackBerry
+- Android 2.1 +
 - iPhone
-- webOS
 
-### Example ###
+### Brief Example ###
 
     // Android: Returns a random 64-bit integer (as a string, again!)
     //          The integer is generated on the device's first boot
@@ -33,4 +31,33 @@ Returns the device's Universally Unique Identifier ([UUID](http://en.wikipedia.o
     // Shorthand form:
     //
     var deviceID = device.uuid;
+
+### Full Example ###
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head>
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Device UUID Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+
+        function onDeviceReady() {
+            var deviceID = device.uuid;
+			document.getElementById('dID').innerHTML  = deviceID;
+        }
+	
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <p>Your device uuid is <span id="dID">unknown</span></p>
+      </body>
+    </html>
     

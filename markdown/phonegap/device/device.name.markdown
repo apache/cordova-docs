@@ -10,12 +10,10 @@ Returns the device's model name as a string. The name is defined by the manufact
 
 ### Supported Platforms ###
 
-- Android
-- BlackBerry
+- Android 2.1+
 - iPhone
-- webOS
 
-### Example ###
+### Brief Example ###
 
     // Android:    Nexus One will return "Passion" (original code name)
     // BlackBerry: Bold will return "9000"
@@ -26,3 +24,32 @@ Returns the device's model name as a string. The name is defined by the manufact
     // Shorthand form:
     //
     var deviceName = device.name
+
+### Full Example ###
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head>
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Device Name Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+
+        function onDeviceReady() {
+            var deviceName = device.name;
+			document.getElementById('dName').innerHTML  = deviceName;
+        }
+	
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <p>Your device name is <span id="dName">unknown</span></p>
+      </body>
+    </html>
