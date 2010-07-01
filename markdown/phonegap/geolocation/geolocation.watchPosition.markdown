@@ -1,32 +1,124 @@
-navigator.geolocation.watchPosition(successCallback, errorCallback, options)
------------
-Has the device retrieve the current GPS position as a Position object. This is an asynchronous call that invokes native source code on the platform. You can specify how frequently to retrieve the Position by setting the options object up properly.
+geolocation.watchPosition
+-------------------------
 
-Returns an ID that you can hang onto and later use to clear the watch, using the navigator.geolocation.clearWatch function.
+Gets the device's current GPS `Position` at a regular interval. Each time the `Position` is retrieved, the `onSuccess` callback function is executed.
 
-### Function Signature ###
-    navigator.geolocation.clearWatch(watchID);
+Returns a watch ID that references the watch position interval. The watch ID can be used with `geolocation.clearWatch` to stop watching the geolocation.
 
-### Parameters ###
-* __successCallback:__ reference to a function which accepts a Position object as paremeter, and handles successfully retrieving the device's position.
-* __errorCallback:__ reference to a function, and handles not being able to retrieve the device's position.
-* __options:__ optional object passed with properties specifying parameters surrounding the retrieval of location. In particular, a 'frequency' property should be specified as a number in milliseconds, which will tell the framework how often to retrieve the position. This is a valid options object:
-    // Passing this as the options parameter will retrieve a location every 10 seconds.
-    {frequency:10000}
+### Syntax ###
+
+    var watchId = navigator.geolocation.watchPosition(onSuccess, onError, [options]);
+
+- __onSuccess:__ Called each time the GPS position is successfully retrieved. _(Function)_
+    - __Syntax:__
+        - `function(devicePosition) {}`
+    - __Parameter:__
+        - __devicePosition:__ Contains the position coordinates of the device. _(Position)_
+- __onError:__ Called when PhoneGap is unable to retrieve the device's position. _(Function)_
+    - __Syntax:__
+        - `function() {}`
+- __options:__ _(Object)_ (Optional)
+    - __Syntax:__
+        - `var options = { frequency: 10000 };`
+    - __Values:__
+        - __frequency:__ How often to retrieve the position in milliseconds. _(Number)_ (Default: 10000)
+
+### Details ###
+
+`geolocation.watchPositon` is an asynchronous function. When the device's native code has retrieved the device's GPS location, the `onSuccess` callback is invoked with a `Position` object as the parameter.
 
 ### Supported Platforms ###
-iPhone, Android, BlackBerry, webOS
+
+- Android
+- BlackBerry
+- iPhone
+- webOS
 
 ### Example ###
-    // Create references to functions that will act as our success and error callbacks, respectively.
-    // Important to note that the function accepts a parameter! This is a Position object!
-    var win = function(p) {
-        alert('Here is your position, latitude: ' + p.coords.latitude + ', longitude: ' + p.coords.longitude);
+
+    // onSuccess Callback
+    //
+    var onSuccess = function(position) {
+        alert('Your latitude is '      + position.coords.latitude +
+              'and your longitude is ' + position.coords.longitude);
     };
-    var fail = function() {
+    
+    // onError Callback
+    var onError = function() {
         alert('Fail whale!');
     };
-    // Let's create an options object, which will force the watch to retrieve a position every 30 seconds.
-    var opts = {frequency:30000};
-    // Make the PhoneGap GPS call:
-    var myWatchId = navigator.geolocation.watchPosition(win, fail, opts);
+    
+    // Options: retrieve the location every 3 seconds
+    //
+    var options = { frequency: 3000 };
+    
+    // Start watching the geolocation
+    //
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+
+### Example: Full Application ###
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head>
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Geolocation Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+
+        function onDeviceReady() {
+            startWatch();
+        }
+        
+        function startWatch() {
+            var watchID = navigator.geolocation.watchPosition(
+                // onSuccess Callback
+                //
+                function(position) {
+                    // Create three new list items:
+                    //   * Latitude
+                    //   * Longitude
+                    //   * ---------
+                    //
+                    var latitude     = document.createElement('li');
+                    var longitude    = document.createElement('li');
+                    var divider      = document.createElement('li');
+                
+                    latitude.innerHTML  = 'Latitude is  ' + position.coords.latitude;
+                    longitude.innerHTML = 'Longitude is ' + position.coords.longitude;
+                    divider.innerHTML   = '<hr />';
+                
+                    divider.style.listStyle = 'none';
+                
+                    var locationList = document.getElementById('locationList');
+                    locationList.prependChild(latitude);
+                    locationList.prependChild(longitude);
+                    locationList.prependChild(divider);
+                },
+
+                // onError Callback
+                //
+                function() {
+                    alert('Fail whale!');
+                },
+            
+                // Options: Query every 3 seconds
+                //
+                { frequency: 3000 }
+            );
+        }
+
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <h2>geolocation.watchPosition</h2>
+        <ul id="locationList"></ul>
+      </body>
+    </html>
