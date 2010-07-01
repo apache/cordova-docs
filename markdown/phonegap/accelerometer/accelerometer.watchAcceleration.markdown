@@ -1,6 +1,6 @@
 accelerometer.watchAcceleration
 -----------
-Gets the device's current accelerometer data at a regular interval. Each time the `Acceleration` is retrieved, the `successCallback` callback function is executed.
+Gets the device's current accelerometer data at a regular interval. Each time the `Acceleration` is retrieved, the `successCallback` callback function is executed. Essentially, `navigator.accelerometer.getCurrentAcceleration` called on an interval.
 
 Returns a watch ID that references the accelerometer watch interval. The watch ID can be used with `accelerometer.clearWatch` to stop watching the accelerometer.
 
