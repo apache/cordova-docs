@@ -3,20 +3,10 @@ PhoneGap API Documentation
 
 This is a documentation effort to eventually update and replace the current [PhoneGap API Documentation website](http://docs.phonegap.com/).
 
-How to Help
------------
-
-* First, finish reading this README.md
-* Pick a file in `markdown/phonegap/` and give it some love
-    * Each document should start with the class or method header
-    * h1 for a class, h2 for a method
-    * Aside from that, format the document for clarity
-* Thanks for helping!
-
 Document File Format
 --------------------
 
-All of the PhoneGap documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document the PhoneGap API.
+All of the [PhoneGap](http://www.phonegap.com/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document PhoneGap's core API and platform-specific APIs.
 
 Doc Branch Structure
 --------------------
