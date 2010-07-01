@@ -1,17 +1,35 @@
 accelerometer.getCurrentAcceleration
 -----------
-Returns the current acceleration values in X,Y,Z axis in an Acceleration object.
+Calls the `successCallback` function with current acceleration values in X,Y,Z axis as an `Acceleration` object.
 
-### Returns ###
-Acceleration Object
+### Syntax ###
+    navigator.acceleration.watchAcceleration(successCallback, errorCallback, options)
+    
+- __successCallback:__ Called when the acceleration data is available _(Function)_
+    - __Syntax:__
+        - `function (accel) {}`
+    - __Parameter:__
+        - __accel:__ Acceleration coordinates for the device _(Acceleration)_
+- __errorCallback:__ Called when something goes wrong _(Function)_ (Optional)
+    - __Syntax:__
+        - `function (error) {}`
+    - __Parameter:__
+        - __error:__ An error message _(String)_
+- __options:__ Not currently used _(Object)_ (Optional)
 
 ### Example ###
-{% highlight javascript %}
-	var x = 1;
-	var y = 2;
-	var z = 3;
-	var a = new Acceleration(x, y, z);
-	
-	a = navigator.accelerometer.getCurrentAcceleration();
-    console.log("X,Y,Z = "+a.x+","+a.y+","+a.z);
-{% endhighlight %}
+    // successCallback Callback
+    //
+    var onSuccess = function(accel) {
+        alert('Your x position is is ' + accel.x + ', your y position is ' + accel.y +
+              ' and your z position is ' + accel.z);
+    };
+
+    // errorCallback Callback
+    var onError = function() {
+        alert('Fail whale!');
+    };
+
+    // Start watching the acceleration
+    //
+    var watchID = navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
