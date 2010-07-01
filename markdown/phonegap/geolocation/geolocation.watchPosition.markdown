@@ -62,57 +62,50 @@ Returns a watch ID that references the watch position interval. The watch ID can
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <meta name="viewport" content="width=default-width; user-scalable=no" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>Geolocation Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-        
+    
+        var watchID = null;
+    
         function onLoad() {
-            document.addEventListener("deviceready",onDeviceReady,false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
+        // PhoneGap is loaded and ready
+        //
         function onDeviceReady() {
-            startWatch();
-        }
+            // Create geolocation options: update location every 3 seconds
+            //
+            var options = { frequency: 3000 };
         
-        function startWatch() {
-            var watchID = navigator.geolocation.watchPosition(
-                // onSuccess Callback
-                //
-                function(position) {
-                    // Create three new list items:
-                    //   * Latitude
-                    //   * Longitude
-                    //   * ---------
-                    //
-                    var latitude     = document.createElement('li');
-                    var longitude    = document.createElement('li');
-                    var divider      = document.createElement('li');
-                
-                    latitude.innerHTML  = 'Latitude is  ' + position.coords.latitude;
-                    longitude.innerHTML = 'Longitude is ' + position.coords.longitude;
-                    divider.innerHTML   = '<hr />';
-                
-                    divider.style.listStyle = 'none';
-                
-                    var locationList = document.getElementById('locationList');
-                    locationList.prependChild(latitude);
-                    locationList.prependChild(longitude);
-                    locationList.prependChild(divider);
-                },
-
-                // onError Callback
-                //
-                function() {
-                    alert('Fail whale!');
-                },
-            
-                // Options: Query every 3 seconds
-                //
-                { frequency: 3000 }
-            );
+            // Start watching the geolocation
+            //
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+        }
+    
+        // Geolocation onSuccess Callback
+        //
+        function onSuccess(position) {
+            addElement('Latitude: '       + position.coords.latitude + 
+                       '<br/>Longitude: ' + position.coords.longitude);
+        }
+    
+        // Geolocation onError Callback
+        //
+        function onError() {
+            alert('Fail whale!');
+        }
+    
+        // Add the `message` to the list
+        //
+        function addElement(message) {
+            var li = document.createElement('li');
+            li.innerHTML = message;
+        
+            var locationList = document.getElementById('locationList');
+            locationList.appendChild(li);
         }
 
         </script>
