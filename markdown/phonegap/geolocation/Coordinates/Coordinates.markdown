@@ -14,7 +14,7 @@ A set of properties that describe the geographic coordinates of a position.
 
 ### Details ###
 
-The `Coordinates` object is created and populated by PhoneGap, and returned to the user through a callback function.
+The `Coordinates` object is created and populated by PhoneGap, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
 
 ### Supported Platforms ###
 
