@@ -47,7 +47,7 @@ Returns a watch ID that references the accelerometer watch interval. The watch I
 
     // Start watching the acceleration
     //
-    var watchID = navigator.accelerometer.watchPosition(onSuccess, onError, options);
+    var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     
 ### Example: Full Application ###
     <!doctype html>
