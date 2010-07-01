@@ -1,35 +1,115 @@
-navigator.geolocation.getCurrentPosition
------------
-Has the device retrieve the current GPS position as a Position object. This is an asynchronous call that invokes native source code on the platform.
+geolocation.getCurrentPosition
+------------------------------
 
-### Function Signature ###
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
+Returns the device's current GPS position as a `Position` object.
 
-### Parameters ###
-* __successCallback:__ reference to a function which accepts a Position object as parameter, and handles successfully retrieving the device's position.
-* __errorCallback:__ reference to a function, and handles not being able to retrieve the device's position.
-* __options:__ optional object passed in specifying parameters regarding the location retrieval. Not used by this function, but see navigator.geolocation.watchPosition for an example of its usage.
+### Syntax ###
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, [options]);
+
+- __onSuccess:__ Called when the GPS position is successfully retrieved. _(Function)_
+    - __Syntax:__
+        - `function(devicePosition) {}`
+    - __Parameter:__
+        - __devicePosition:__ Contains the position coordinates of the device. _(Position)_
+- __onError:__ Called when PhoneGap is unable to retrieve the device's position. _(Function)_
+    - __Syntax:__
+        - `function() {}`
+- __options:__ Unused at the moment. _(Object)_ (Optional)
+
+### Details ###
+
+`geolocation.getCurrentPositon` is an asynchronous function.
+
+If the geolocation is retrieved, then the `onSuccess` function is called.
+
+If an error occurs while retrieving the geolocation, then the `onError` function is called.
 
 ### Supported Platforms ###
-iPhone, Android, BlackBerry, webOS
 
-### Example ###
-    // Create references to functions that will act as our success and error callbacks, respectively.
-    // Important to note that the function accepts a parameter! This is a Position object!
-    var win = function(p) {
-        alert('Here is your position, latitude: ' + p.coords.latitude + ', longitude: ' + p.coords.longitude);
+- Android
+- BlackBerry
+- iPhone
+- webOS
+
+### Example: In-Line Callbacks ###
+
+    // You can also define the callback functions in-line
+    //
+    navigator.geolocation.getCurrentPosition(
+        // onSuccess
+        //
+        function(position) {
+            alert('Your latitude is ' + position.coords.latitude +
+                  ' and your longitude is ' + position.coords.longitude);
+        },
+        // onError
+        //
+        function() {
+            alert('Fail whale!');
+        }
+    );
+    
+### Example: External Callbacks ###
+
+    // onSuccess Callback
+    //   This method accepts a `Position` object, which contains
+    //   the current GPS coordinates
+    //
+    var onSuccess = function(position) {
+        alert('Your latitude is ' + position.coords.latitude +
+              ' and your longitude is ' + position.coords.longitude);
     };
-    var fail = function() {
+
+    // onError Callback
+    //
+    var onError = function() {
         alert('Fail whale!');
     };
-    // Make the PhoneGap GPS call:
-    navigator.geolocation.getCurrentPosition(win, fail);
-    // You can also define the callback functions in-line:
-    navigator.geolocation.getCurrentPosition(function(p) {
-        // Set the content of DOM elements with IDs 'myLatitude' and 'myLongitude,'
-        // respectively, to Position values.
-        document.getElementById('myLatitude').innerHTML = p.coords.latitude;
-        document.getElementById('myLongitude').innerHTML = p.coords.longitude;
-    }, function() {
-        alert('Failure oh no!');
-    });
+
+    // Have PhoneGap get the GPS position.
+    //   We do not pass an options object, since it is currently ignored.
+    //
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+### Example: Full Application ###
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head>
+        <meta name="viewport" content="width=default-width; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Geolocation Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        function onLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+
+        function onDeviceReady() {
+            navigator.geolocation.getCurrentPosition(
+                // onSuccess Callback
+                //
+                function(position) {
+                    document.getElementById('latitude').innerHTML  = position.coords.latitude;
+                    document.getElementById('longitude').innerHTML = position.coords.longitude;
+                },
+                
+                // onError Callback
+                //
+                function() {
+                    alert('Fail whale!');
+                }
+            );
+        }
+	
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <p>Your latitude is <span id="latitude">unknown</span></p>
+        <p>Your longitude is <span id="longitude">unknown</span></p>
+      </body>
+    </html>
