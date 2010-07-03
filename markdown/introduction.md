@@ -1,6 +1,9 @@
 PhoneGap API Documentation
 =========================
 
+About
+=====
+
 PhoneGap is...
 
 Getting Started
