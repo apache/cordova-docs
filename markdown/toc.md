@@ -1,3 +1,4 @@
+<!-- Default all link targets to the 'content' frame -->
 <base target="content" />
 
 PhoneGap Guide
@@ -17,4 +18,4 @@ Core API
 - Network
 - Notification
 
-<a href="_index.html" target="content">Keyword Index</a>
+[Keyword Index](./_index.html)
