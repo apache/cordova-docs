@@ -12,6 +12,7 @@ Core API
 - Accelerometer
 - Camera
 - Device
+- Events
 - Geolocation
 - Network
 - Notification
