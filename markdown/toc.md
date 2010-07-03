@@ -4,6 +4,7 @@
 PhoneGap Guide
 --------------
 
+- About
 - Getting Started
 - Application Template
 
