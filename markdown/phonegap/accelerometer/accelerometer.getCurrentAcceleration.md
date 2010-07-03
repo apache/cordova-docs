@@ -1,8 +1,11 @@
 accelerometer.getCurrentAcceleration
------------
+====================================
+
 Calls the `successCallback` function with current acceleration values in X,Y,Z axis as an `Acceleration` object.
 
-### Syntax ###
+Syntax
+------
+
     navigator.acceleration.watchAcceleration(successCallback, errorCallback, options)
     
 - __successCallback:__ Called when the acceleration data is available _(Function)_
@@ -17,7 +20,9 @@ Calls the `successCallback` function with current acceleration values in X,Y,Z a
         - __error:__ An error message _(String)_
 - __options:__ Not currently used _(Object)_ (Optional)
 
-### Example ###
+Example
+-------
+
     // successCallback Callback
     //
     var onSuccess = function(accel) {

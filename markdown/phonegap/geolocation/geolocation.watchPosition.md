@@ -1,11 +1,12 @@
 geolocation.watchPosition
--------------------------
+=========================
 
 Gets the device's current GPS `Position` at a regular interval. Each time the `Position` is retrieved, the `onSuccess` callback function is executed.
 
 Returns a watch ID that references the watch position interval. The watch ID can be used with `geolocation.clearWatch` to stop watching the geolocation.
 
-### Syntax ###
+Syntax
+------
 
     var watchId = navigator.geolocation.watchPosition(onSuccess, onError, [options]);
 
@@ -23,18 +24,21 @@ Returns a watch ID that references the watch position interval. The watch ID can
     - __Values:__
         - __frequency:__ How often to retrieve the position in milliseconds. _(Number)_ (Default: 10000)
 
-### Details ###
+Details
+-------
 
 `geolocation.watchPositon` is an asynchronous function. When the device's native code has retrieved the device's GPS location, the `onSuccess` callback is invoked with a `Position` object as the parameter.
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android
 - BlackBerry
 - iPhone
 - webOS
 
-### Example ###
+Example
+-------
 
     // onSuccess Callback
     //
@@ -56,7 +60,8 @@ Returns a watch ID that references the watch position interval. The watch ID can
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
 
-### Example: Full Application ###
+Example: Full Application
+-------------------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

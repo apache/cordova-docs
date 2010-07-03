@@ -1,9 +1,10 @@
 notification.alert
-------------------
+==================
 
 Shows an alert or dialog box.
 
-### Syntax ###
+Syntax
+------
 
     navigator.notification.alert(message, [title], [buttonName])
 
@@ -11,7 +12,8 @@ Shows an alert or dialog box.
 - __title:__ Dialog title _(String)_ (Optional) (Default: "Alert")
 - __buttonName:__ Button name _(String)_ (Optional) (Default: "OK")
     
-### Details ###
+Details
+-------
 
 PhoneGap usually leverages the platform browser's JavaScript `alert` function, but on some platforms a more robust dialog box is shown.
 
@@ -19,14 +21,16 @@ The iPhone is the only platform that supports custom dialog titles and button na
 
 The Android shows a non-blocking dialog with the `title` "Alert" and OK / Cancel buttons. The dialog's non-blocking nature can be counter-intuitive because the most recent alert will show on top!
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android
 - BlackBerry
 - iPhone
 - webOS
 
-### Example ###
+Example
+-------
 
     // Android / BlackBerry / webOS
     //

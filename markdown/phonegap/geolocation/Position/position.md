@@ -1,22 +1,26 @@
 Position
---------
+========
 
 Contains `Position` coordinates that are created by the geolocation API.
 
-### Properties ###
+Properties
+----------
 
 - __coords:__ A set of geographic coordinates. _(Coordinates)_
 - __timestamp:__ Creation timestamp for `coords` in milliseconds. _(DOMTimeStamp)_
 
-### Details ###
+Details
+-------
 
 The `Position` object is created and populated by PhoneGap, and returned to the user through a callback function.
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - iPhone
 
-### Quick Example ###
+Quick Example
+-------------
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -35,7 +39,8 @@ The `Position` object is created and populated by PhoneGap, and returned to the 
         alert('Fail whale!');
     }
 
-### Full Example ###
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

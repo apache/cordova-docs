@@ -1,19 +1,22 @@
 device.platform
----------------
+===============
 
 Returns the device's platform as a string. The platform is defined as the manufacturer's name, so this property has a broader reach when compared to the device's name.
 
-### Syntax ###
+Syntax
+------
 
     window.device.platform;
     device.plaform;
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android 2.1+
 - iPhone
 
-### Brief Example ###
+Brief Example
+-------------
 
     // Depending on the device, this will return:
     //   - "Android"
@@ -27,7 +30,8 @@ Returns the device's platform as a string. The platform is defined as the manufa
     //
     var devicePlatform = device.platform;
 
-### Full Example ###
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

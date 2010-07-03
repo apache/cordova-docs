@@ -1,10 +1,15 @@
 Acceleration.z
------------
+==============
+
 Returns the z axis acceleration value.
 
-### Returns ###
+Returns
+-------
+
 String
 
-### Example ###
+Example
+-------
+
 	var accel = navigator.accelerometer.getCurrentAcceleration();
     console.log(accel.z);

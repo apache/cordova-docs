@@ -1,10 +1,15 @@
 NetworkStatus.REACHABLE_VIA_WIFI_NETWORK
------------
+========================================
+
 Returns an integer value (2) indicating a data connection is available through wifi.
 
-### Returns ###
+Returns
+-------
+
 Integer
 
-### Example ###
+Example
+-------
+
     if (networkStatus == NetworkStatus.REACHABLE_VIA_WIFI_NETWORK)
         initiateLongDistanceVoipCall();

@@ -1,15 +1,17 @@
 notification.vibrate
---------------------
+====================
 
 Vibrates the device for the specified amount of time.
 
-### Syntax ###
+Syntax
+------
 
     navigator.notification.vibrate(milliseconds)
 
 - __time:__ Milliseconds to vibrate the device. 1000 milliseconds equals 1 second _(Number)_
 
-### Warning ###
+Warning
+-------
 
 At the moment, the `milliseconds` parameter is not respected across all platforms.
 
@@ -17,14 +19,16 @@ At the moment, the `milliseconds` parameter is not respected across all platform
 - __BlackBerry:__ Seconds.
 - __iPhone:__ Ignores the argument and vibrates for a preset time.
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android
 - BlackBerry
 - iPhone
 - webOS
 
-### Example ###
+Example
+-------
 
     // Android: vibrate for 2.5 seconds
     //

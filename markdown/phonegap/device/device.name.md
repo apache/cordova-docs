@@ -1,19 +1,22 @@
 device.name
------------
+===========
 
 Returns the device's model name as a string. The name is defined by the manufacturer, so it is different for each device.
 
-### Syntax ###
+Syntax
+------
 
     window.device.name;
     device.name;
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android 2.1+
 - iPhone
 
-### Brief Example ###
+Brief Example
+-------------
 
     // Android:    Nexus One will return "Passion" (original code name)
     // BlackBerry: Bold will return "9000"
@@ -25,7 +28,8 @@ Returns the device's model name as a string. The name is defined by the manufact
     //
     var deviceName = device.name
 
-### Full Example ###
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

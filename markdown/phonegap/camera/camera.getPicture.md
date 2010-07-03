@@ -1,9 +1,10 @@
 camera.getPicture
------------------
+=================
 
 Takes a photo and returns the image as a `String` of base64 encoded data.
 
-### Syntax ###
+Syntax
+------
 
     navigator.camera.getPicture(successCallback, errorCallback, [options]);
 
@@ -23,7 +24,8 @@ Takes a photo and returns the image as a `String` of base64 encoded data.
     * __Values:__
         * __quality:__ Quality of saved image. Range is 0 - 100. _(Number)_
 
-### Details ###
+Details
+-------
 
 `camera.getPicture` opens the device's default camera application and allows the user to take a photo. Once the photo is captured, the camera application closes and your application is restored. The image is base64 encoded and returned as a JavaScript `String` in the `successCallback` function. Since the data is a `String`, you can do whatever you want with it, for example:
 
@@ -31,21 +33,24 @@ Takes a photo and returns the image as a `String` of base64 encoded data.
 - Save the data locally (`LocalStorage`, `Lawnchair`, etc)
 - Post the data to a remote server
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android
 - BlackBerry
 - iPhone
 - webOS
 
-### Warning ###
+Warning
+-------
 
 The `options` parameter is ignored on:
 
 - BlackBerry
 - WebOS
 
-### Brief Example ###
+Brief Example
+-------------
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
 
@@ -58,7 +63,8 @@ The `options` parameter is ignored on:
 		alert('Failed because: ' + message);
 	}
 
-### Full Example ###
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

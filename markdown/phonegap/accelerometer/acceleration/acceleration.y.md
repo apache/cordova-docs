@@ -1,10 +1,15 @@
 Acceleration.y
------------
+==============
+
 Returns the y axis acceleration value.
 
-### Returns ###
+Returns
+-------
+
 String
 
-### Example ###
+Example
+-------
+
 	var accel = navigator.accelerometer.getCurrentAcceleration();
     console.log(accel.y);

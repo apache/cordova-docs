@@ -1,19 +1,22 @@
 geolocation.clearWatch
-----------------------
+======================
 
 Stops watching the geolocation position that's referenced by the watch ID parameter. The watch ID is returned by `geolocation.watchPosition`.
 
-### Syntax ###
+Syntax
+------
 
     navigator.geolocation.clearWatch(watchID);
 
 - __watchID:__ The ID of the `watchPosition` interval to clear. _(Number)_
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - iPhone
 
-### Example ###
+Example
+-------
 
     // onSuccess Callback
     //
@@ -40,7 +43,8 @@ Stops watching the geolocation position that's referenced by the watch ID parame
     //
     navigator.geolocation.clearWatch(watchID);
 
-### Example: Full Application ###
+Example: Full Application
+-------------------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

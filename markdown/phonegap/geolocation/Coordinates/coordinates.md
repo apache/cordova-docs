@@ -1,9 +1,11 @@
 Coordinates
------------
+===========
 
 A set of properties that describe the geographic coordinates of a position.
 
-### Properties ###
+Properties
+----------
+
 * __latitude__: Latitude in decimal degrees. _(Number)_
 * __longitude__: Longitude in decimal degrees. _(Number)_
 * __altitude__: Height of the position in meters above the ellipsoid. _(Number)_
@@ -12,15 +14,18 @@ A set of properties that describe the geographic coordinates of a position.
 * __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
-### Details ###
+Details
+-------
 
 The `Coordinates` object is created and populated by PhoneGap, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - iPhone
 
-### Quick Example ###
+Quick Example
+-------------
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -38,7 +43,8 @@ The `Coordinates` object is created and populated by PhoneGap, and attached to t
         alert('Fail whale!');
     }
 
-### Full Example ###
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

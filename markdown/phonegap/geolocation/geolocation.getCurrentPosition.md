@@ -1,9 +1,10 @@
 geolocation.getCurrentPosition
-------------------------------
+==============================
 
 Returns the device's current GPS position as a `Position` object.
 
-### Syntax ###
+Syntax
+------
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError, [options]);
 
@@ -17,7 +18,8 @@ Returns the device's current GPS position as a `Position` object.
         - `function() {}`
 - __options:__ Unused at the moment. _(Object)_ (Optional)
 
-### Details ###
+Details
+-------
 
 `geolocation.getCurrentPositon` is an asynchronous function.
 
@@ -25,14 +27,16 @@ If the geolocation is retrieved, then the `onSuccess` function is called.
 
 If an error occurs while retrieving the geolocation, then the `onError` function is called.
 
-### Supported Platforms ###
+Supported Platforms
+-------------------
 
 - Android
 - BlackBerry
 - iPhone
 - webOS
 
-### Example: In-Line Callbacks ###
+Example: In-Line Callbacks
+--------------------------
 
     // You can also define the callback functions in-line
     //
@@ -50,7 +54,8 @@ If an error occurs while retrieving the geolocation, then the `onError` function
         }
     );
     
-### Example: External Callbacks ###
+Example: External Callbacks
+---------------------------
 
     // onSuccess Callback
     //   This method accepts a `Position` object, which contains
@@ -72,7 +77,8 @@ If an error occurs while retrieving the geolocation, then the `onError` function
     //
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-### Example: Full Application ###
+Example: Full Application
+-------------------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

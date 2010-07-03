@@ -1,9 +1,14 @@
 NetworkStatus.NOT_REACHABLE
------------
+===========================
+
 Returns an integer value (0) indicating the Network is not reachable.
 
-### Returns ###
+Returns
+-------
+
 Integer
 
-### Example ###
+Example
+-------
+
     if (networkStatus == NetworkStatus.NOT_REACHABLE) doCoolOfflineStuff();

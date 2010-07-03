@@ -1,17 +1,25 @@
 accelerometer.clearWatch
------------
+========================
+
 Clears the watch function on the accelerometer previously set using the `watchAcceleration` function (this return value from `navigator.accelerometer.watchAcceleration`)
 
-### Function Signature ###
+Function Signature
+------------------
+
     navigator.accelerometer.clearWatch(watchID);
 
-### Parameters ###
 * __watchID__: The ID of the accelerometer watch interval you want to clear.
 
-### Supported Platforms ###
-iPhone, Android, webOS
+Supported Platforms
+-------------------
 
-### Example ###
+- Android
+- iPhone
+- webOS
+
+Example
+-------
+
     // Create a variable that will store the position watch ID.
     var myWatch = null;
     // Call watchPosition and assign the return value, the watch ID, to our watch variable above.
