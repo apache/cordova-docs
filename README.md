@@ -14,10 +14,39 @@ Doc Branch Structure
     markdown/
     markdown/phonegap/
     markdown/phonegap/class_name/
-    markdown/phonegap/class_name/class_name.markdown
-    markdown/phonegap/class_name/class_name.method_name.markdown
+    markdown/phonegap/class_name/class_name.md
+    markdown/phonegap/class_name/class_name.method_name.md
 
-Documentation Generator Tool
-----------------------------
+Documentation Generator
+-----------------------
 
-A documentation generator tool is needed to convert the markdown files into one or more HTML files. Right now, we haven't decided on the specific tool. Perhaps [joDoc](http://joapp.com/jo/#joDoc)? Perhaps a home brew?
+Currently, PhoneGap-Docs uses [joDoc](http://github.com/davebalmer/jodoc) to generate HTML documentation from the set of Markdown files.
+
+### Install joDoc ###
+
+- Clone [joDoc](http://github.com/davebalmer/jodoc)
+
+        git clone http://github.com/davebalmer/joDoc.git
+        
+- Add joDoc/ to your path
+    
+  Open `~/.bashrc` or `~/.profile` (or whatever you use)
+
+        export PATH=$PATH:~/path/to/joDoc/
+    
+- Install markdown
+
+        # Use your package manager
+        brew install markdown
+        port install markdown
+        aptitude install markdown
+
+### Run the Script ###
+
+    cd phonegap-docs
+    ./bin/phonegap-docs
+
+### Manually Run joDoc ###
+
+    cd phonegap-docs/markdown
+    jodoc --output ../tmp --title "PhoneGap API Documentation" --toc toc.md introduction.md phonegap/
