@@ -8,8 +8,8 @@ PhoneGap Guide
 - Getting Started
 - Application Template
 
-Core API
---------
+PhoneGap API
+------------
 
 - Accelerometer
 - Camera
