@@ -21,14 +21,6 @@ Supported Platforms
 
 - iPhone
 
-Warning
--------
-
-The `options` parameter is ignored on:
-
-- BlackBerry
-- WebOS
-
 Brief Example
 -------------
 
