@@ -1,32 +1,32 @@
 device.name
 ===========
 
-Returns the device's model name as a string. The name is defined by the manufacturer, so it is different for each device.
+Get the device's model name.
 
-Syntax
-------
+    var string = window.device.name;
+    
+Description
+-----------
 
-    window.device.name;
-    device.name;
+`device.name` is a property that returns a `String`. 
+
+The name of the device is defined as the model or product name. This value is set by the device manufacturer and may be different across model versions.
 
 Supported Platforms
 -------------------
 
 - Android 2.1+
+- BlackBerry
 - iPhone
 
-Brief Example
+Quick Example
 -------------
 
-    // Android:    Nexus One will return "Passion" (original code name)
-    // BlackBerry: Bold will return "9000"
-    // iPhone:     Returns the name assigned in iTunes e.g. "Joe's iPhone"
+    // Android:    Nexus One  => "Passion" (Nexus One code name)
+    // BlackBerry: Bold       => "8900" or "9000"
+    // iPhone:     Any device => Custom name set in iTunes e.g. "Joe's iPhone"
     //
     var deviceName = window.device.name;
-    
-    // Shorthand form:
-    //
-    var deviceName = device.name
 
 Full Example
 ------------
@@ -35,25 +35,34 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <meta name="viewport" content="width=default-width; user-scalable=no" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <title>Device Name Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
+        // Wait for PhoneGap to load
+        //
         function onLoad() {
-            document.addEventListener("deviceready",onDeviceReady,false);
+            document.addEventListener("deviceready", onDeviceReady, false);
         }
 
+        // PhoneGap is ready
+        //
         function onDeviceReady() {
-            var deviceName = device.name;
-			document.getElementById('dName').innerHTML  = deviceName;
+            alert(window.device.name);
         }
-	
+
         </script>
       </head>
       <body onload="onLoad()">
-        <p>Your device name is <span id="dName">unknown</span></p>
+        <p>Device name will be shown in an alert box.</p>
       </body>
     </html>
+    
+iPhone Quirks
+-------------
+
+- __Does not__ get the device model name.
+- Gets the name assigned by owner.
+    - The value is set in iTunes.
+    - e.g. "Joe's iPhone"
