@@ -10,4 +10,4 @@ onError callback function that provides an error message.
 Parameters
 ----------
 
-- __message:__ The message is provided by the device's native code. _(String)_
+- __message:__ The message is provided by the device's native code. (`String`)

@@ -8,7 +8,7 @@ An optional parameter to customize the camera settings.
 Options
 -------
 
-- __quality:__ Quality of saved image. Range is [0, 100]. _(Number)_
+- __quality:__ Quality of saved image. Range is [0, 100]. (`Number`)
 
 BlackBerry Quirks
 -----------------

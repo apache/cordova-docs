@@ -10,7 +10,7 @@ onSuccess callback function that provides the image data.
 Parameters
 ----------
 
-- __imageData:__ Base64 encoding of the image data. _(String)_
+- __imageData:__ Base64 encoding of the image data. (`String`)
 
 Example
 -------

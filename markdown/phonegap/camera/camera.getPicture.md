@@ -1,7 +1,7 @@
 camera.getPicture
 =================
 
-Takes a photo and returns the image as a `String` of base64 encoded data.
+Takes a photo and returns the image as a base64 encoded `String`.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
