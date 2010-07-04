@@ -18,6 +18,7 @@ Supported Platforms
 -------------------
 
 - iPhone
+- Android
 
 Quick Example
 -------------
@@ -62,3 +63,8 @@ Full Example
       <body onload="onLoad()">
       </body>
     </html>
+    
+BlackBerry Quirks
+-------------
+
+In PhoneGap for BlackBerry OS version 4.6 to 5.0, custom events are not supported in the RIM BrowserField (a.k.a. WebView), therefore this event will not fire.
