@@ -3,26 +3,7 @@ camera.getPicture
 
 Takes a photo and returns the image as a `String` of base64 encoded data.
 
-Syntax
-------
-
-    navigator.camera.getPicture(successCallback, errorCallback, [options]);
-
-* __successCallback:__ Invoked when the photo is taken. _(Function)_
-    * __Syntax:__
-        * `function(imageData) {}`
-    * __Parameter:__
-        * __imageData:__ Stores the base64 encoded data. _(String)_
-* __errorCallback:__ Invoked when an error occurs. _(Function)_
-    * __Syntax:__
-        * `function(errorMessage) {}`
-    * __Parameter:__
-        * __errorMessage:__ Different error message on each platform. _(String)_
-* __options:__ Customization. _(Object)_ (Optional)
-    * __Syntax:__
-        * `var cameraOptions = { quality: 75 };`
-    * __Values:__
-        * __quality:__ Quality of saved image. Range is 0 - 100. _(Number)_
+    navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
 Details
 -------
