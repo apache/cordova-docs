@@ -176,7 +176,7 @@ a[href] {
 
 pre code a[href] {
   background: none;
-  text-decoration:underline;
+  border-bottom:1px dotted;
 }
 
 /* puts an * after external links, jodoc designates with .external */
