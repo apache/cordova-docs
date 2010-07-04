@@ -7,5 +7,3 @@ Methods
 -------
 
 - camera.getPicture
-
-  Takes a photo and returns the image.

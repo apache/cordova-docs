@@ -3,24 +3,13 @@ Device
 
 > The `device` object is a set of properties that describe the hardware and software of the device.
 
-Methods
--------
+Properties
+----------
 
 - device.name
-
-  Get the model name.
-  
 - device.platform
-
-  Get the platform name.
-
 - device.uuid
-
-  Get the Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
-  
 - device.version
-
-  Get the operating system (OS) version.
 
 Details
 -------

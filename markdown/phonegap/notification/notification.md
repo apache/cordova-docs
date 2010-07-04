@@ -7,13 +7,5 @@ Methods
 -------
 
 - notification.alert
-
-  Display an alert or dialog box.
-  
 - notification.beep
-
-  Play an audible sound or chime.
-  
 - notification.vibrate
-
-  Vibrate the device.

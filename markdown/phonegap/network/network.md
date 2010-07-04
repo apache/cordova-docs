@@ -7,5 +7,3 @@ Methods
 -------
 
 - network.isReachable
-
-  Checks whether there is a valid data connection.
