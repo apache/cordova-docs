@@ -1,7 +1,7 @@
 Accelerometer
 =============
 
-> The `accelerometer` object provides access to the device's motion sensor.
+> Capture device motion in the x, y, and z directions.
 
 Methods
 -------
@@ -9,3 +9,8 @@ Methods
 - accelerometer.getCurrentAcceleration
 - accelerometer.watchAcceleration
 - accelerometer.clearWatch
+
+Objects (read-only)
+-------------------
+
+- Acceleration
