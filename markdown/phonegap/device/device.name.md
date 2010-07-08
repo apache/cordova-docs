@@ -62,7 +62,6 @@ Full Example
 iPhone Quirks
 -------------
 
-- __Does not__ get the device model name.
-- Gets the name assigned by owner.
-    - The value is set in iTunes.
+- Gets the owner assigned name instead of the device model name.
+    - The owner assigned name is set in iTunes.
     - e.g. "Joe's iPhone"
