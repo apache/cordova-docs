@@ -22,22 +22,25 @@ Supported Platforms
 Quick Example
 -------------
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    // onSuccess Callback
+    //
+    var onSuccess = function(position) {
+        alert('Latitude: '  + position.coords.latitude      + '\n' +
+              'Longitude: ' + position.coords.longitude     + '\n' +
+              'Altitude: '  + position.coords.altitude      + '\n' +
+              'Accuracy: '  + position.coords.accuracy      + '\n' +
+              'Heading: '   + position.coords.heading       + '\n' +
+              'Speed: '     + position.coords.speed         + '\n' +
+              'Timestamp: ' + new Date(position.timestamp)  + '\n');
+    };
 
-    function onSuccess(position) {
-        alert('Latitude: '             + position.coords.latitude             + '\n' +
-              'Longitude: '            + position.coords.longitude            + '\n' +
-              'Altitude: '             + position.coords.altitude             + '\n' +
-              'Accuracy (Horzintal): ' + position.coords.accuracy.horizontal  + '\n' +
-              'Accuracy (Vertical): '  + position.coords.accuracy.horizontal  + '\n' +
-              'Heading: '              + position.coords.heading              + '\n' +
-              'Speed: '                + position.coords.speed                + '\n' +
-              'Timestamp: '            + new Date(position.timestamp * 1000)  + '\n');
-    }
-
-    function onError() {
+    // onError Callback
+    //
+    var onError = function() {
         alert('Fail whale!');
-    }
+    };
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 Full Example
 ------------
@@ -46,38 +49,38 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Geolocation Position Example</title>
+        <title>Device Properties Example</title>
+
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Set an event to wait for PhoneGap to load
+        // Wait for PhoneGap to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and Ready
+        // PhoneGap is ready
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
-        // Display `Position` properties from the geolocation
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
-            var div = document.getElementById('myDiv');
+            var element = document.getElementById('geolocation');
         
-            div.innerHTML = 'Latitude: '             + position.coords.latitude             + '<br/>' +
-                            'Longitude: '            + position.coords.longitude            + '<br/>' +
-                            'Altitude: '             + position.coords.altitude             + '<br/>' +
-                            'Accuracy (Horzintal): ' + position.coords.accuracy.horizontal  + '<br/>' +
-                            'Accuracy (Vertical): '  + position.coords.accuracy.horizontal  + '<br/>' +
-                            'Heading: '              + position.coords.heading              + '<br/>' +
-                            'Speed: '                + position.coords.speed                + '<br/>' +
-                            'TimeStamp: '            + new Date(position.timestamp * 1000)  + '<br/>';
+            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                'Longitude: ' + position.coords.longitude     + '<br />' +
+                                'Altitude: '  + position.coords.altitude      + '<br />' +
+                                'Accuracy: '  + position.coords.accuracy      + '<br />' +
+                                'Heading: '   + position.coords.heading       + '<br />' +
+                                'Speed: '     + position.coords.speed         + '<br />' +
+                                'Timestamp: ' + new Date(position.timestamp)  + '<br />';
         }
     
-        // Show an alert if there is a problem getting the geolocation
+        // onError Geolocation
         //
         function onError() {
             alert('Fail whale!');
@@ -86,6 +89,18 @@ Full Example
         </script>
       </head>
       <body onload="onLoad()">
-        <div id="myDiv"></div>
+        <p id="geolocation">Finding geolocation...</p>
       </body>
     </html>
+
+iPhone Quirks
+-------------
+
+- __timestamp:__ Uses seconds instead of milliseconds.
+  A workaround is to manually convert the timestamp to milliseconds (x 1000):
+
+        var onSuccess = function(position) {
+            alert('Latitude: '  + position.coords.latitude             + '\n' +
+                  'Longitude: ' + position.coords.longitude            + '\n' +
+                  'Timestamp: ' + new Date(position.timestamp * 1000)  + '\n');
+        };

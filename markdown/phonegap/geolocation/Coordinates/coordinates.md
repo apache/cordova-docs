@@ -10,7 +10,6 @@ Properties
 * __longitude__: Longitude in decimal degrees. _(Number)_
 * __altitude__: Height of the position in meters above the ellipsoid. _(Number)_
 * __accuracy__: Accuracy level of the latitude and longitude coordinates in meters. _(Object)_
-    - This value can be device-specific.
 * __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
@@ -27,21 +26,28 @@ Supported Platforms
 Quick Example
 -------------
 
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+Quick Example
+-------------
 
-    function onSuccess(position) {
-        alert('Latitude: '             + position.coords.latitude             + '\n' +
-              'Longitude: '            + position.coords.longitude            + '\n' +
-              'Altitude: '             + position.coords.altitude             + '\n' +
-              'Accuracy (Horzintal): ' + position.coords.accuracy.horizontal  + '\n' +
-              'Accuracy (Vertical): '  + position.coords.accuracy.horizontal  + '\n' +
-              'Heading: '              + position.coords.heading              + '\n' +
-              'Speed: '                + position.coords.speed                + '\n');
-    }
+    // onSuccess Callback
+    //
+    var onSuccess = function(position) {
+        alert('Latitude: '  + position.coords.latitude      + '\n' +
+              'Longitude: ' + position.coords.longitude     + '\n' +
+              'Altitude: '  + position.coords.altitude      + '\n' +
+              'Accuracy: '  + position.coords.accuracy      + '\n' +
+              'Heading: '   + position.coords.heading       + '\n' +
+              'Speed: '     + position.coords.speed         + '\n' +
+              'Timestamp: ' + new Date(position.timestamp)  + '\n');
+    };
 
-    function onError() {
+    // onError Callback
+    //
+    var onError = function() {
         alert('Fail whale!');
-    }
+    };
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 Full Example
 ------------
@@ -92,3 +98,17 @@ Full Example
         <div id="myDiv"></div>
       </body>
     </html>
+    
+iPhone Quirks
+-------------
+
+__accuracy:__ Instead of a single value, the iPhone has separate values for the longitude and latitude.
+
+- __accuracy.horizontal:__ Latitude accuracy.
+- __accuracy.vertical:__ Longitude accuracy.
+
+        var onSuccess = function(position) {
+            var accuracy = position.coords.accuracy;
+            alert('Latitude Accuracy: '  + accuracy.horizontal + '\n' +
+                  'Longitude Accuracy: ' + accuracy.vertical   + '\n');
+        };
