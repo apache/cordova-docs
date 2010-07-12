@@ -1,7 +1,7 @@
 Geolocation
 ===========
 
-> The `geolocation` object provides access to the device's GPS information.
+> The `geolocation` object provides access to the device's GPS sensor.
 
 Methods
 -------
@@ -9,3 +9,9 @@ Methods
 - geolocation.getCurrentPosition
 - geolocation.watchPosition
 - geolocation.clearWatch
+
+Objects (Read-Only)
+-------------------
+
+- Position
+- Coordinates
