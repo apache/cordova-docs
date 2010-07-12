@@ -21,7 +21,7 @@ Supported Platforms
 
 - iPhone
 
-Brief Example
+Quick Example
 -------------
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
