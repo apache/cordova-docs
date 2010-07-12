@@ -51,3 +51,8 @@ Full Example
         <p>Your device platform is <span id="dPlatform">unknown</span></p>
       </body>
     </html>
+    
+iPhone Quirks
+-------------
+
+All devices return `iPhone` as the platform. This is inaccurate because Apple has rebranded the iPhone operating system as `iOS`.
