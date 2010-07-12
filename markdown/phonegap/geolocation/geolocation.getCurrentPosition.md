@@ -97,4 +97,4 @@ Full Example
 iPhone Quirks
 -------------
 
-The iPhone PhoneGap has a slightly different implementation of Position and Coordinates. Each object's documentation explains the differences.
+The iPhone PhoneGap has a slightly different implementation of Position and Coordinates.

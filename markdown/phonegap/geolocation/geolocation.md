@@ -10,6 +10,14 @@ Methods
 - geolocation.watchPosition
 - geolocation.clearWatch
 
+
+Parameters
+----------
+
+- geolocationSuccess (`Function`)
+- geolocationError (`Function`)
+- geolocationOptions (`Object`)
+
 Objects (Read-Only)
 -------------------
 
