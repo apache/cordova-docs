@@ -1,42 +1,33 @@
 device.version
 ==============
 
-Returns the device's operating system (OS) version as a string.
+Get the operating system version.
 
-Syntax
-------
+    var string = window.device.version;
 
-    window.device.version;
-    device.version;
-    
 Supported Platforms
 -------------------
 
 - Android 2.1+
 - iPhone
 
-Brief Example
+Quick Example
 -------------
 
-    // Android: Froyo OS would return "2.2"
-    //          Eclair OS would return "2.1", "2.0.1", or "2.0"
+    // Android:    Froyo OS would return "2.2"
+    //             Eclair OS would return "2.1", "2.0.1", or "2.0"
     //
     // BlackBerry: Bold 9000 using OS 4.6 would return "4.6.0.282"
     //
-    // iPhone: iOS 3.2 returns "3.2"
+    // iPhone:     iOS 3.2 returns "3.2"
     //
     var deviceVersion = window.device.version;
-
-    // Shorthand form:
-    //
-    var deviceVersion = device.version;
-
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
 
 Full Example
 ------------
 
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
         <meta name="viewport" content="width=default-width; user-scalable=no" />

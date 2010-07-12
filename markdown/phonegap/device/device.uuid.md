@@ -1,13 +1,14 @@
 device.uuid
 ===========
 
-Returns the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)) as a string. The details of how the UUID is generated are determined by the device manufacturer and are specific to the device's platform or model.
+Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
-Syntax
-------
+    var string = window.device.uuid;
+    
+Description
+-----------
 
-    window.device.uuid;
-    device.uuid;
+The details of how a UUID is generated are determined by the device manufacturer and specific to the device's platform or model.
 
 Supported Platforms
 -------------------
@@ -15,7 +16,7 @@ Supported Platforms
 - Android 2.1 +
 - iPhone
 
-Brief Example
+Quick Example
 -------------
 
     // Android: Returns a random 64-bit integer (as a string, again!)
@@ -30,10 +31,6 @@ Brief Example
     //         to the user account.
     //
     var deviceID = window.device.uuid;
-    
-    // Shorthand form:
-    //
-    var deviceID = device.uuid;
 
 Full Example
 ------------

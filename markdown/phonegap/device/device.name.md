@@ -8,9 +8,7 @@ Get the device's model name.
 Description
 -----------
 
-`device.name` is a property that returns a `String`. 
-
-The name of the device is defined as the model or product name. This value is set by the device manufacturer and may be different across model versions.
+`device.name` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
 
 Supported Platforms
 -------------------
@@ -22,11 +20,11 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android:    Nexus One  => "Passion" (Nexus One code name)
-    // BlackBerry: Bold       => "8900" or "9000"
-    // iPhone:     Any device => Custom name set in iTunes e.g. "Joe's iPhone"
+    // Android:    Nexus One   returns "Passion" (Nexus One code name)
+    // BlackBerry: Bold 8900   returns "8900"
+    // iPhone:     All devices returns a name set by iTunes e.g. "Joe's iPhone"
     //
-    var deviceName = window.device.name;
+    var name = window.device.name;
 
 Full Example
 ------------
@@ -58,10 +56,17 @@ Full Example
         <p>Device name will be shown in an alert box.</p>
       </body>
     </html>
-    
+
+Android Quirks
+--------------
+
+- Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL).
+    - The product name is often the code name given during production.
+    - e.g. Nexus One returns "Passion"
+
 iPhone Quirks
 -------------
 
-- Gets the owner assigned name instead of the device model name.
-    - The owner assigned name is set in iTunes.
+- Gets the [device's custom name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) instead of the [device model name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1).
+    - The custom name is set by the owner in iTunes.
     - e.g. "Joe's iPhone"
