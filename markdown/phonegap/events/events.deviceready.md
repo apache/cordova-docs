@@ -1,16 +1,18 @@
 deviceready
 ===========
 
-Event that fires when PhoneGap has loaded the native and JavaScript code.
+This is an event that fires when PhoneGap is fully loaded.
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
 
 Details
 -------
 
-This is a very important event that every PhoneGap application must use.
+This is a very important event that every PhoneGap application should use.
 
-You can only use the PhoneGap API once the `deviceready` event has fired.
+PhoneGap consists of two code bases: native and JavaScript. While the native code is loading, a custom loading image is displayed. However, JavaScript is only loaded once the DOM loads. This means your web application could, potentially, call a PhoneGap JavaScript function before it is loaded.
+
+The PhoneGap `deviceready` event fires once PhoneGap has fully loaded. After the device has fired, you can safely make calls to PhoneGap function.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once the HTML document's DOM has loaded.
 
@@ -36,9 +38,8 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Template</title>
+        <title>PhoneGap Device Ready Example</title>
 
-        <!-- PhoneGap.js passes commands to the device's native PhoneGap implementation -->
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -65,6 +66,27 @@ Full Example
     </html>
     
 BlackBerry Quirks
--------------
+-----------------
 
-In PhoneGap for BlackBerry OS version 4.6 to 5.0, custom events are not supported in the RIM BrowserField (a.k.a. WebView), therefore this event will not fire.
+Custom events are not supported in the RIM BrowserField (web browser view), so the `deviceready` event will never fire.
+
+A workaround is to manually query `PhoneGap.available` until PhoneGap has fully loaded.
+
+    function onLoad() {
+        // BlackBerry OS 4 browser does not support events.
+        // So, manually wait until PhoneGap is available.
+        //
+        var intervalID = window.setInterval(
+          function() {
+              if (PhoneGap.available) {
+                  window.clearInterval(intervalID);
+                  onDeviceReady();
+              }
+          },
+          500
+        );
+    }
+
+    function onDeviceReady() {
+        // Now safe to use the PhoneGap API
+    }
