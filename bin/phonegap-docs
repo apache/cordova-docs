@@ -3,7 +3,7 @@ require 'fileutils'
 
 JO_DOC          = 'jodoc'
 SCRIPT_DIR      = File.expand_path File.join(File.dirname(__FILE__), '..')
-DOCS_DIR        = File.join SCRIPT_DIR, 'markdown'
+DOCS_DIR        = File.join SCRIPT_DIR, 'docs'
 TEMPLATE_DIR    = File.join SCRIPT_DIR, 'template', 'joDoc'
 TMP_DIR         = File.join SCRIPT_DIR, 'tmp'
 
