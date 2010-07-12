@@ -3,7 +3,7 @@ network.isReachable
 
 Checks whether a connection can be established with the specified domain.
 
-    network.isReachable(reachableHostName, reachableCallback, [reachableOptions])
+    network.isReachable(reachableHostname, reachableCallback, [reachableOptions])
 
 Description
 -----------
