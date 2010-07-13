@@ -1,7 +1,7 @@
 network.isReachable
 ===================
 
-Checks whether a connection can be established with the specified domain.
+Checks if a connection can be established with a specific domain.
 
     network.isReachable(reachableHostname, reachableCallback, [reachableOptions])
 
@@ -10,7 +10,7 @@ Description
 
 This is a fast way to determine the device's network connection state, type of connection, and whether a specific domain is online.
 
-`network.isReachable` is an asynchronous function that returns the network state through the callback function.
+Since `network.isReachable` is an asynchronous function, the network state is returned using a callback function.
 
 Quick Example
 -------------
@@ -24,7 +24,7 @@ Quick Example
         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
     
-        alert('Connection type: ' + states[reachability.code]);
+        alert('Connection type: ' + states[reachability]);
     }
     
     navigator.network.isReachable(domain, reachableCallback, options);
@@ -62,7 +62,7 @@ Full Example
             states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
             states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
         
-            alert('Connection type: ' + states[reachability.code]);
+            alert('Connection type: ' + states[reachability]);
         }
 
         </script>
@@ -70,8 +70,3 @@ Full Example
       <body onload="onLoad()">
       </body>
     </html>
-    
-iPhone Quirks
--------------
-
-Please see the reachableCallback and reachableOptions for iPhone specific quirks.
