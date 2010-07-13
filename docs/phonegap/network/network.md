@@ -7,3 +7,15 @@ Methods
 -------
 
 - network.isReachable
+
+Arguments
+---------
+
+- reachableHostname
+- reachableCallback
+- reachableOptions
+
+Constants
+---------
+
+- NetworkStatus
