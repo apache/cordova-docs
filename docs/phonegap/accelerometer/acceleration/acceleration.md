@@ -6,36 +6,35 @@ Contains `Accelerometer` data captured at a specific point in time.
 Properties
 ----------
 
-- __x:__ Amount of motion on the x-axis. Range [0, 1] _(Number)_
-- __y:__ Amount of motion on the y-axis. Range [0, 1] _(Number)_
-- __z:__ Amount of motion on the z-axis. Range [0, 1] _(Number)_
-- __timestamp:__ Creation timestamp in milliseconds. _(DOMTimeStamp)_
+- __x:__ Amount of motion on the x-axis. Range [0, 1] (`Number`)
+- __y:__ Amount of motion on the y-axis. Range [0, 1] (`Number`)
+- __z:__ Amount of motion on the z-axis. Range [0, 1] (`Number`)
+- __timestamp:__ Creation timestamp in milliseconds. (`DOMTimeStamp`)
 
-Details
--------
+Description
+-----------
 
-This object is created and populated by PhoneGap, and returned from `Accelerometer` methods.
+This object is created and populated by PhoneGap, and returned by an `Accelerometer` method.
 
 Supported Platforms
 -------------------
 
-- iPhone
+- Untested
 
 Quick Example
 -------------
 
-    navigator.accelerometer.watchAcceleration(onSuccess, onError, { frequency:50 });
-
     function onSuccess(acceleration) {
-        // acceleration.x;
-        // acceleration.y;
-        // acceleration.z
-        // new Date(acceleration.timestamp);
-    }
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n';
+    };
 
     function onError() {
         alert('Fail whale!');
-    }
+    };
+
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
 Full Example
 ------------
@@ -44,34 +43,32 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Accelerometer Example</title>
+        <title>Acceleration Example</title>
+
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Set an event to wait for PhoneGap to load
+        // Wait for PhoneGap to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and Ready
+        // PhoneGap is ready
         //
         function onDeviceReady() {
-            navigator.accelerometer.watchAcceleration(onSuccess, onError, { frequency:50 });
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
 
-        // Display `Acceleration` values
+        // onSuccess: Get a snapshot of the current acceleration
         //
-        function onSuccess(acceleration) {
-            var div = document.getElementById('myDiv');
-    
-            div.innerHTML = 'x: '    + acceleration.x + '<br/>' +
-                            'y: '    + acceleration.y + '<br/>' +
-                            'z: '    + acceleration.z + '<br/>' +
-                            'Time: ' + new Date(acceleration.timestamp);
+        function onSuccess() {
+            alert('Acceleration X: ' + acceleration.x + '\n' +
+                  'Acceleration Y: ' + acceleration.y + '\n' +
+                  'Acceleration Z: ' + acceleration.z + '\n';
         }
 
-        // Alert if there is a problem
+        // onError: Failed to get the acceleration
         //
         function onError() {
             alert('Fail whale!');
@@ -80,6 +77,7 @@ Full Example
         </script>
       </head>
       <body onload="onLoad()">
-        <div id="myDiv"></div>
+        <h1>Example</h1>
+        <p>getCurrentAcceleration</p>
       </body>
     </html>

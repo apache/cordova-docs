@@ -1,40 +1,74 @@
 accelerometer.getCurrentAcceleration
 ====================================
 
-Calls the `successCallback` function with current acceleration values in X,Y,Z axis as an `Acceleration` object.
+Get the current acceleration along the x, y, and z axis.
 
-Syntax
-------
+    navigator.acceleration.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
-    navigator.acceleration.watchAcceleration(successCallback, errorCallback, options)
-    
-- __successCallback:__ Called when the acceleration data is available _(Function)_
-    - __Syntax:__
-        - `function (accel) {}`
-    - __Parameter:__
-        - __accel:__ Acceleration coordinates for the device _(Acceleration)_
-- __errorCallback:__ Called when something goes wrong _(Function)_ (Optional)
-    - __Syntax:__
-        - `function (error) {}`
-    - __Parameter:__
-        - __error:__ An error message _(String)_
-- __options:__ Not currently used _(Object)_ (Optional)
+Description
+-----------
 
-Example
--------
+The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-    // successCallback Callback
-    //
-    var onSuccess = function(accel) {
-        alert('Your x position is is ' + accel.x + ', your y position is ' + accel.y +
-              ' and your z position is ' + accel.z);
+The acceleration is returned using the `accelerometerSuccess` callback function.
+
+Quick Example
+-------------
+
+    function onSuccess(acceleration) {
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n';
     };
 
-    // errorCallback Callback
-    var onError = function() {
+    function onError() {
         alert('Fail whale!');
     };
 
-    // Start watching the acceleration
-    //
-    var watchID = navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+    navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+
+Full Example
+------------
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head>
+        <title>Acceleration Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        // Wait for PhoneGap to load
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+        // PhoneGap is ready
+        //
+        function onDeviceReady() {
+            navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
+        }
+    
+        // onSuccess: Get a snapshot of the current acceleration
+        //
+        function onSuccess() {
+            alert('Acceleration X: ' + acceleration.x + '\n' +
+                  'Acceleration Y: ' + acceleration.y + '\n' +
+                  'Acceleration Z: ' + acceleration.z + '\n';
+        }
+    
+        // onError: Failed to get the acceleration
+        //
+        function onError() {
+            alert('Fail whale!');
+        }
+
+        </script>
+      </head>
+      <body onload="onLoad()">
+        <h1>Example</h1>
+        <p>getCurrentAcceleration</p>
+      </body>
+    </html>

@@ -1,7 +1,7 @@
 Accelerometer
 =============
 
-> Capture device motion in the x, y, and z directions.
+> Captures device motion in the x, y, and z direction.
 
 Methods
 -------
@@ -10,7 +10,14 @@ Methods
 - accelerometer.watchAcceleration
 - accelerometer.clearWatch
 
-Objects (read-only)
+Arguments
+---------
+
+- accelerometerSuccess
+- accelerometerError
+- accelerometerOptions
+
+Objects (Read-Only)
 -------------------
 
 - Acceleration
