@@ -11,12 +11,12 @@ Methods
 - geolocation.clearWatch
 
 
-Parameters
-----------
+Arguments
+---------
 
-- geolocationSuccess (`Function`)
-- geolocationError (`Function`)
-- geolocationOptions (`Object`)
+- geolocationSuccess
+- geolocationError
+- geolocationOptions
 
 Objects (Read-Only)
 -------------------

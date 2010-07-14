@@ -1,120 +1,89 @@
 geolocation.clearWatch
 ======================
 
-Stops watching the geolocation position that's referenced by the watch ID parameter. The watch ID is returned by `geolocation.watchPosition`.
-
-Syntax
-------
+Stop watching the `Position` referenced by the watch ID parameter.
 
     navigator.geolocation.clearWatch(watchID);
 
-- __watchID:__ The ID of the `watchPosition` interval to clear. _(Number)_
+- __watchID:__ The ID of the `watchPosition` interval to clear. (Number)
 
 Supported Platforms
 -------------------
 
-- iPhone
+- Untested
 
-Example
--------
+Quick Example
+-------------
 
     // onSuccess Callback
+    //   This method accepts a `Position` object, which contains
+    //   the current GPS coordinates
     //
     var onSuccess = function(position) {
-        alert('Your latitude is '      + position.coords.latitude +
-              'and your longitude is ' + position.coords.longitude);
+        alert('Latitude: '  + position.coords.latitude      + '\n' +
+              'Longitude: ' + position.coords.longitude     + '\n' +
+              'Altitude: '  + position.coords.altitude      + '\n' +
+              'Accuracy: '  + position.coords.accuracy      + '\n' +
+              'Heading: '   + position.coords.heading       + '\n' +
+              'Speed: '     + position.coords.speed         + '\n' +
+              'Timestamp: ' + new Date(position.timestamp)  + '\n');
     };
-    
+
     // onError Callback
     //
     var onError = function() {
         alert('Fail whale!');
     };
-    
-    // Options: retrieve the location every 3 seconds
-    //
-    var options = { frequency: 3000 };
-    
-    // Start watching the geolocation
-    //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-    
-    // Stop the watching the geolocation
-    //
-    navigator.geolocation.clearWatch(watchID);
 
-Example: Full Application
--------------------------
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+Full Example
+------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Geolocation Example</title>
+        <title>Device Properties Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
-        var watchID = null;
-    
+
+        // Wait for PhoneGap to load
+        //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and ready
+        // PhoneGap is ready
         //
         function onDeviceReady() {
-            // Create geolocation options: update location every 3 seconds
-            //
-            var options = { frequency: 3000 };
-            
-            // Start watching the geolocation
-            //
-            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-            
-            // Wait 6 seconds and then stop geolocation
-            //
-            setTimeout(clearWatch, 6000);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
     
-        // Geolocation onSuccess Callback
+        // onSuccess Geolocation
         //
         function onSuccess(position) {
-            addElement('Latitude: '       + position.coords.latitude + 
-                       '<br/>Longitude: ' + position.coords.longitude);
+            var element = document.getElementById('geolocation');
+        
+            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                'Longitude: ' + position.coords.longitude     + '<br />' +
+                                'Altitude: '  + position.coords.altitude      + '<br />' +
+                                'Accuracy: '  + position.coords.accuracy      + '<br />' +
+                                'Heading: '   + position.coords.heading       + '<br />' +
+                                'Speed: '     + position.coords.speed         + '<br />' +
+                                'Timestamp: ' + new Date(position.timestamp)  + '<br />';
         }
     
-        // Geolocation onError Callback
+        // onError Geolocation
         //
         function onError() {
             alert('Fail whale!');
-        }
-    
-        // Stop Watching Geolocation
-        //
-        function clearWatch() {
-            if (watchID) {
-                navigator.geolocation.clearWatch(watchID);
-                
-                addElement('Stopped watching geolocation');
-                watchID = null;
-            }
-        }
-    
-        // Add the `message` to the list
-        //
-        function addElement(message) {
-            var li = document.createElement('li');
-            li.innerHTML = message;
-            
-            var locationList = document.getElementById('locationList');
-            locationList.appendChild(li);
         }
 
         </script>
       </head>
       <body onload="onLoad()">
-        <h2>geolocation.watchPosition</h2>
-        <ul id="locationList"></ul>
+        <p id="geolocation">Finding geolocation...</p>
       </body>
     </html>
