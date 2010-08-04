@@ -10,7 +10,7 @@ Vibrates the device for the specified amount of time.
 Supported Platforms
 -------------------
 
-- Untested
+- iPhone
 
 Quick Example
 -------------
