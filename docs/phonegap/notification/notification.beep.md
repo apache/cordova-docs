@@ -10,7 +10,7 @@ The device will play a beep sound.
 Supported Platforms
 -------------------
 
-- Untested
+- iPhone
 
 Quick Example
 -------------
@@ -73,3 +73,7 @@ iPhone Quirks
 -------------
 
 - Ignores the beep count argument.
+- There is no native beep API for iPhone.
+  - PhoneGap implements beep by playing an audio file via the media API.
+  - The user must provide a file with the desired beep tone.
+  - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`. 
