@@ -10,7 +10,7 @@ Stop watching the `Acceleration` referenced by the watch ID parameter.
 Supported Platforms
 -------------------
 
-- Untested
+- iPhone
 
 Quick Example
 -------------
@@ -51,10 +51,9 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
-            clearWatch();
             
             // Update acceleration every 3 seconds
-            var options = { frequency: 30000 };
+            var options = { frequency: 3000 };
             
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
@@ -67,10 +66,10 @@ Full Example
                 watchID = null;
             }
         }
-        
+		    
         // onSuccess: Get a snapshot of the current acceleration
         //
-        function onSuccess() {
+        function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
@@ -87,5 +86,6 @@ Full Example
       </head>
       <body onload="onLoad()">
         <div id="accelerometer">Waiting for accelerometer...</div>
+		<button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>
