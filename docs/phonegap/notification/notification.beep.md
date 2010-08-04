@@ -72,4 +72,6 @@ Full Example
 iPhone Quirks
 -------------
 
-- Ignores the beep count argument.
+- Ignores the beep count argument.  
+
+- There is no native beep API for iPhone.  PhoneGap implements this by playing an audio file via the media API.  The user MUST provide a file with the desired beep tone.  This file must be less than 30 seconds long, located in the www directory and must be named beep.wav. 
