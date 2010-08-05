@@ -1,26 +1,32 @@
-accelerometer.clearWatch
-========================
+Accelerometer Watch Acceleration
+================================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+At a regular interval, get the acceleration along the x, y, and z axis.
 
-    navigator.accelerometer.clearWatch(watchID);
+    var watchID = navigator.acceleration.watchAcceleration(onSuccess, onError, [options]);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+Description
+-----------
 
-Supported Platforms
--------------------
-
-- iPhone
+The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
 
 Quick Example
 -------------
 
+    function(acceleration) {
+        alert('Acceleration X: ' + acceleration.x + '\n' +
+              'Acceleration Y: ' + acceleration.y + '\n' +
+              'Acceleration Z: ' + acceleration.z + '\n';
+    };
+
+    function onError() {
+        alert('Fail whale!');
+    };
+
+    var options = { frequency: 3000 };  // Update every 3 seconds
+    
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    
-    // ... later on ...
-    
-    navigator.accelerometer.clearWatch(watchID);
-    
+
 Full Example
 ------------
 
@@ -51,9 +57,10 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
+            clearWatch();
             
             // Update acceleration every 3 seconds
-            var options = { frequency: 3000 };
+            var options = { frequency: 30000 };
             
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
@@ -66,10 +73,10 @@ Full Example
                 watchID = null;
             }
         }
-		    
+        
         // onSuccess: Get a snapshot of the current acceleration
         //
-        function onSuccess(acceleration) {
+        function onSuccess() {
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
@@ -86,6 +93,10 @@ Full Example
       </head>
       <body onload="onLoad()">
         <div id="accelerometer">Waiting for accelerometer...</div>
-		<button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>
+
+Android Quirks:
+---------------
+
+Watch acceleration is a little wonky right now.

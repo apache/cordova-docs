@@ -12,6 +12,11 @@ The accelerometer is a motion sensor that detects the change (delta) in movement
 
 The acceleration is returned using the `accelerometerSuccess` callback function.
 
+Supported Platforms
+-------------------
+
+- iPhone
+
 Quick Example
 -------------
 
@@ -53,10 +58,10 @@ Full Example
     
         // onSuccess: Get a snapshot of the current acceleration
         //
-        function onSuccess() {
+        function onSuccess(acceleration) {
             alert('Acceleration X: ' + acceleration.x + '\n' +
                   'Acceleration Y: ' + acceleration.y + '\n' +
-                  'Acceleration Z: ' + acceleration.z + '\n';
+                  'Acceleration Z: ' + acceleration.z + '\n');
         }
     
         // onError: Failed to get the acceleration
@@ -72,3 +77,10 @@ Full Example
         <p>getCurrentAcceleration</p>
       </body>
     </html>
+    
+iPhone Quirks
+-------------
+
+- iPhone doesn't have the concept of getting the current acceleration at any given point.
+- You must watch the acceleration and capture the data at given time intervals.
+- Thus, the `getCurrentAcceleration` function will give you the last value reported from a phoneGap `watchAccelerometer` call.

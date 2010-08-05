@@ -1,42 +1,10 @@
 #!/usr/bin/env ruby
-require 'fileutils'
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+require 'phonegap_docs'
 
-JO_DOC          = 'jodoc'
-SCRIPT_DIR      = File.expand_path File.join(File.dirname(__FILE__), '..')
-DOCS_DIR        = File.join SCRIPT_DIR, 'docs'
-TEMPLATE_DIR    = File.join SCRIPT_DIR, 'template', 'joDoc'
-TMP_DIR         = File.join SCRIPT_DIR, 'tmp'
+puts 'Generating the PhoneGap Documentation...'
 
-def command_exists?(command)
-  system("which #{command} > /dev/null 2>/dev/null")
-end
+phonegap_docs = PhoneGapDocs.new
+phonegap_docs.run
 
-def die(message)
-  raise StandardError, message
-end
-
-# Dependency Check
-#
-die 'The jodoc script is not in your path' unless command_exists?(JO_DOC)
-
-[DOCS_DIR, TEMPLATE_DIR].each do |directory|
-  die "The directory #{directory}/ should exist." unless File.directory? directory
-end
-
-# Delete tmp/
-#
-FileUtils.cd SCRIPT_DIR do
-  FileUtils.rm_rf(TMP_DIR, :verbose => true) if File.directory? TMP_DIR
-end
-
-# Copy Template to tmp/
-#
-FileUtils.cd SCRIPT_DIR do
-  FileUtils.cp_r TEMPLATE_DIR, TMP_DIR, :verbose => true
-end
-
-# Run joDoc and ouput to tmp/
-#
-FileUtils.cd DOCS_DIR do
-  `jodoc --output #{TMP_DIR} --title "PhoneGap API Documentation" --toc toc.md introduction.md phonegap/`
-end
+puts " => #{phonegap_docs.output_directory}"
