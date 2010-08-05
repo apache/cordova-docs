@@ -1,34 +1,22 @@
-accelerometer.watchAcceleration
-===============================
+Accelerometer Watch Acceleration
+================================
 
 At a regular interval, get the acceleration along the x, y, and z axis.
 
-    var watchID = navigator.acceleration.watchAcceleration(accelerometerSuccess,
-                                                           accelerometerError,
-                                                           [accelerometerOptions]);
-                                                           
+    var watchID = navigator.acceleration.watchAcceleration(onSuccess, onError, [options]);
+
 Description
 -----------
 
 The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
 
-The `accelerometer.watchAcceleration` gets the device's current acceleration at a regular interval. Each time the `Acceleration` is retrieved, the `accelerometerSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `acceleratorOptions` object.
-
-The returned watch ID references references the accelerometer watch interval. The watch ID can be used with `accelerometer.clearWatch` to stop watching the accelerometer.
-
-Supported Platforms
--------------------
-
-- iPhone
-
-
 Quick Example
 -------------
 
-    function onSuccess(acceleration) {
+    function(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
               'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n');
+              'Acceleration Z: ' + acceleration.z + '\n';
     };
 
     function onError() {
@@ -69,9 +57,10 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
+            clearWatch();
             
             // Update acceleration every 3 seconds
-            var options = { frequency: 3000 };
+            var options = { frequency: 30000 };
             
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
@@ -87,7 +76,7 @@ Full Example
         
         // onSuccess: Get a snapshot of the current acceleration
         //
-        function onSuccess(acceleration) {
+        function onSuccess() {
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
@@ -106,10 +95,3 @@ Full Example
         <div id="accelerometer">Waiting for accelerometer...</div>
       </body>
     </html>
-    
- iPhone Quirks
--------------
-
-- At the interval requested, PhoneGap will call the success callback function and pass the accelerometer results.
-- However, in requests to the device PhoneGap restricts the interval to minimum of every 40ms and a maximum of every 1000ms.
-  - For example, if you request an interval of 3 seconds (3000ms), PhoneGap will request an interval of 1 second from the device but invoke the success callback at the requested interval of 3 seconds.

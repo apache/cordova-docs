@@ -15,7 +15,7 @@ The acceleration is returned using the `accelerometerSuccess` callback function.
 Supported Platforms
 -------------------
 
-- iPhone (see iPhone quirks)
+- iPhone
 
 Quick Example
 -------------
@@ -81,4 +81,6 @@ Full Example
 iPhone Quirks
 -------------
 
-- iPhone doesn't have the concept of getting the current acceleration at any given point.  You must watch the acceleration and capture the data at given time intervals. Thus, this getCurrentAcceleration function will give you the last value reported from a phoneGap watchAccelerometer call.
+- iPhone doesn't have the concept of getting the current acceleration at any given point.
+- You must watch the acceleration and capture the data at given time intervals.
+- Thus, the `getCurrentAcceleration` function will give you the last value reported from a phoneGap `watchAccelerometer` call.

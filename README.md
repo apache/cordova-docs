@@ -1,7 +1,7 @@
 PhoneGap API Documentation
 ==========================
 
-This is a documentation effort to eventually update and replace the current [PhoneGap API Documentation website](http://docs.phonegap.com/).
+The public API documentation for [PhoneGap](http://www.github.com/phonegap/). The documentation is rendered as the [PhoneGap API Documentation website](http://docs2.phonegap.com/).
 
 Document File Format
 --------------------
