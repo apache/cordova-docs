@@ -1,6 +1,6 @@
 class JoDoc
   JO_DOC_CLI         = 'jodoc'
-  TEMPLATE_DIRECTORY = File.expand_path( File.join( File.dirname(__FILE__), '..', '..', 'template', 'joDoc' ) )
+  TEMPLATE_DIRECTORY = File.expand_path( File.join( File.dirname(__FILE__), '..', '..', 'template', 'phonegap' ) )
   
   attr_accessor :input_directory
   attr_accessor :output_directory
@@ -17,7 +17,7 @@ class JoDoc
 
     # Run joDoc
     FileUtils.cd @input_directory do
-      `jodoc --output #{@output_directory} --title "PhoneGap API Documentation" --toc toc.md introduction.md phonegap/`
+      `jodoc --output #{@output_directory} --title "PhoneGap API Documentation" --template #{TEMPLATE_DIRECTORY}/index.html ./phonegap`
     end
   end
   
