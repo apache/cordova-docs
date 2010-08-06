@@ -20,9 +20,10 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android:    Nexus One   returns "Passion" (Nexus One code name)
-    // BlackBerry: Bold 8900   returns "8900"
-    // iPhone:     All devices returns a name set by iTunes e.g. "Joe's iPhone"
+    // Android:    Nexus One       returns "Passion" (Nexus One code name)
+    //             Motorola Droid  returns "voles"
+    // BlackBerry: Bold 8900       returns "8900"
+    // iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
     //
     var name = window.device.name;
 
@@ -68,7 +69,7 @@ Android Quirks
 
 - Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL).
     - The product name is often the code name given during production.
-    - e.g. Nexus One returns "Passion"
+    - e.g. Nexus One returns "Passion", Motorola Droid returns "voles"
 
 iPhone Quirks
 -------------
