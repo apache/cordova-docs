@@ -3,7 +3,7 @@ device.name
 
 Get the device's model name.
 
-    var string = window.device.name;
+    var string = device.name;
     
 Description
 -----------
@@ -25,7 +25,7 @@ Quick Example
     // BlackBerry: Bold 8900       returns "8900"
     // iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
     //
-    var name = window.device.name;
+    var name = device.name;
 
 Full Example
 ------------

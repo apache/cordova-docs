@@ -3,7 +3,7 @@ device.version
 
 Get the operating system version.
 
-    var string = window.device.version;
+    var string = device.version;
 
 Supported Platforms
 -------------------
@@ -22,7 +22,7 @@ Quick Example
     //
     // iPhone:     iOS 3.2 returns "3.2"
     //
-    var deviceVersion = window.device.version;
+    var deviceVersion = device.version;
 
 Full Example
 ------------

@@ -3,7 +3,7 @@ device.platform
 
 Get the device's operating system name.
 
-    var string = window.device.platform;
+    var string = device.platform;
 
 Supported Platforms
 -------------------
@@ -20,7 +20,7 @@ Quick Example
     //   - "iPhone"
     //   - "webOS"
     //
-    var devicePlatform = window.device.platform;
+    var devicePlatform = device.platform;
 
 Full Example
 ------------
