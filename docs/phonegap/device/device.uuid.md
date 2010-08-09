@@ -3,7 +3,7 @@ device.uuid
 
 Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
-    var string = window.device.uuid;
+    var string = device.uuid;
     
 Description
 -----------
@@ -13,7 +13,7 @@ The details of how a UUID is generated are determined by the device manufacturer
 Supported Platforms
 -------------------
 
-- Android 2.1 +
+- Android 2.1+
 - iPhone
 
 Quick Example
@@ -30,7 +30,7 @@ Quick Example
     //         It is guaranteed to be unique for every device and cannot be tied
     //         to the user account.
     //
-    var deviceID = window.device.uuid;
+    var deviceID = device.uuid;
 
 Full Example
 ------------
