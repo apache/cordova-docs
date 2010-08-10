@@ -10,6 +10,7 @@ h1, ul, li {
 }
 
 #header {
+  background-color:#515151;
   background:#515151 -webkit-gradient(
     linear,
     left top,
@@ -17,6 +18,7 @@ h1, ul, li {
     color-stop(0.2, #747474),
     color-stop(0.8, #515151)
   );
+  background:-moz-linear-gradient(center bottom , #515151 20%, #747474 80%);
   border-top:1px solid #919192;
   height:32px;
   left:0px;
@@ -26,13 +28,14 @@ h1, ul, li {
   z-index:1;
 }
 #header2 {
-  background:#515151 -webkit-gradient(
-    linear,
+  background-color:#CBCBCB;
+  background:-webkit-gradient(linear,
     left top,
     left bottom,
     color-stop(0.0, #F9F9F9),
     color-stop(1.0, #CBCBCB)
   );
+  background:-moz-linear-gradient(center bottom , #CBCBCB 0%, #F9F9F9 100%);
   border-top:1px solid #383A3C;
   border-bottom:1px solid #919395;
   height:32px;
@@ -47,6 +50,7 @@ h1, ul, li {
   background-color:#ECEAE7;
   bottom:0px;
   left:0px;
+  overflow:auto;
   padding:20px 40px 0px 0px;
   position:absolute;
   text-align:right;
@@ -81,7 +85,7 @@ h1, ul, li {
 #header h1,
 #header h1 a,
 #header2 h1 {
-  color:#FFFFFF;
+  color:#F6F4F2;
   font-size:18px;
   font-weight:normal;
   line-height:32px;
@@ -358,7 +362,7 @@ a[href].external:after {
 #index {
 	-webkit-column-width: 250px;
 	-webkit-column-rule-width: 10px;
-	-moz-column-width: 170px;
+	-moz-column-width: 250px;
 	-moz-column-rule-width: 10px;
 	column-width: 170px;
 	column-rule-width: 10px;
