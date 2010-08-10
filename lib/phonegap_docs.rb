@@ -3,7 +3,9 @@ $: << File.join(File.dirname(__FILE__), 'phonegap')
 require 'file_helpers'
 require 'yaml_front_matter'
 require 'quirks_merger'
-require 'table_of_contents'
+require 'file_merger'
+require 'add_title'
+require 'update_index'
 require 'jodoc'
 require 'fileutils'
 
@@ -38,7 +40,7 @@ class PhoneGapDocs
   protected
   
   def before_jodoc(input_directory)
-    klasses = [ YamlFrontMatter.new, QuirksMerger.new, TableOfContents.new ]
+    klasses = [ YamlFrontMatter.new, QuirksMerger.new, FileMerger.new ]
     
     klasses.each do |klass|
       each_file input_directory do |file|
@@ -57,6 +59,16 @@ class PhoneGapDocs
   end
   
   def after_jodoc(input_directory)
+    klasses = [ AddTitle.new, UpdateIndex.new ]
+    
+    klasses.each do |klass|
+      each_file input_directory do |file|
+        klass.run file
+      end
+    end
+    
+    input_directory
+    
     input_directory
   end
 end

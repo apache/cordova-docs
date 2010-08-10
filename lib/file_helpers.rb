@@ -44,7 +44,7 @@ module FileHelpers
     directory_glob = Dir.glob(File.join directory, '**', '*')
     
     directory_glob.each do |entry|
-      yield(entry) unless File.directory?(entry)
+      yield(entry) unless File.directory?(entry) or entry !~ /md|html/
     end
   end
   
