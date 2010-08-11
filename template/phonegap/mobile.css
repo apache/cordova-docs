@@ -1,0 +1,26 @@
+body {
+  margin:0px;
+  padding:0px;
+}
+
+#header {
+  position:static;
+}
+
+#header h1 {
+  margin:0px;
+  text-align:center;
+}
+
+#header2 {
+  position:static;
+}
+
+#sidebar {
+  display:none;
+}
+
+#content {
+  padding:10px;
+  position:static;
+}
