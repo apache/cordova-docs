@@ -28,29 +28,4 @@ Example
 
         alert('Connection type: ' + states[reachability]);
     }
-
-iPhone Quirks
--------------
-
-- The reachableCallback function must be declared in the global scope, otherwise the callback is never fired.
-    - This works:
-    
-            // Global scope. Not declared within another function or object
-            //
-            function reachableCallback(reachability) {
-                // Do something
-            }
-            
-    - These do not work:
-    
-            navigator.network.isReachable('twitter.com', function() {
-                // This does not work on the iPhone
-            });
-            
-            // neither does
-            
-            var reachableCallback = function(reachability) {
-                // This does not work on the iPhone
-            };
-            
     

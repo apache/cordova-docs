@@ -8,8 +8,8 @@ describe UpdateIndex do
   include SpecHelpers
   
   before :all do
-    @original_file = File.join(File.dirname(__FILE__),   'update_index_spec', '_index.html')
-    @test_file     = File.join(spec_tmp_directory,       '_index.html')
+    @original_file = File.join(File.dirname(__FILE__),   'update_index_spec', 'index.md.html')
+    @test_file     = File.join(spec_tmp_directory,       'index.md.html')
     @result_file   = File.join(File.dirname(@test_file), 'index.html')
     
     FileUtils.mkdir_p spec_tmp_directory
@@ -21,11 +21,11 @@ describe UpdateIndex do
     FileUtils.cp @original_file, @test_file
   end
 
-  it 'should skip all files but _index.html' do
+  it 'should skip all files but index.html.html' do
     # All false
     @update_index.run('index.html').should be_false
     @update_index.run('index.htm').should be_false
-    @update_index.run('_index.htm').should be_false
+    @update_index.run('_index.html').should be_false
     
     # True
     @update_index.run(@test_file).should be_true
@@ -36,24 +36,12 @@ describe UpdateIndex do
     @update_index.run(@test_file)
     Nokogiri::HTML(File.read @result_file).css('#header2 > h1')[0].content.should == @update_index.header_title
   end
-  
-  it 'should rename the h1' do
-    Nokogiri::HTML(File.read @test_file).css('#content > h1')[0].content.should_not == @update_index.content_title
-    @update_index.run(@test_file)
-    Nokogiri::HTML(File.read @result_file).css('#content > h1')[0].content.should == @update_index.content_title
-  end
-  
-  it 'should remove the <hr/>' do
-    Nokogiri::HTML(File.read @test_file).css('#content > hr').should have_at_least(1).items
-    @update_index.run(@test_file)
-    Nokogiri::HTML(File.read @result_file).css('#content > hr').should have(0).items
-  end
-  
+
   it 'should rename the file' do
     File.exists?(@test_file).should  be_true
     File.exists?(@result_file).should be_false
     
-    @update_index.run @test_file
+    @update_index.run(@test_file)
     
     File.exists?(@test_file).should be_false
     File.exists?(@result_file).should be_true

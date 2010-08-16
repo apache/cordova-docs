@@ -4,32 +4,25 @@ require 'fileutils'
 
 class UpdateIndex
   attr_accessor :header_title
-  attr_accessor :content_title
   attr_accessor :filename
   
   def initialize
-    @header_title  = 'PhoneGap Class Reference'
-    @content_title = 'Keyword Index'
-    @filename      = 'index.html'
+    @input_filename  = 'index.md.html'
+    @output_filename = 'index.html'
+    @header_title    = 'Home'
   end
   
   def run(filename)
-    return false unless File.basename(filename) == '_index.html'
+    return false unless File.basename(filename) == @input_filename
     
     doc = Nokogiri::HTML(File.read filename)
     
     element = doc.css('#header2 > h1')[0]
     element.content = @header_title unless element.nil?
     
-    element = doc.css('#content > h1')[0]
-    element.content = @content_title unless element.nil?
-    
-    element = doc.css('#content > hr')[0]
-    element.remove unless element.nil?
-    
     File.open(filename, 'w') { |file| file.write doc.to_html }
     
-    FileUtils.mv filename, File.join(File.dirname(filename), @filename)
+    FileUtils.mv(filename, File.join(File.dirname(filename), @output_filename))
     
     return true
   end
