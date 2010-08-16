@@ -5,6 +5,7 @@ require 'yaml_front_matter'
 require 'quirks_merger'
 require 'file_merger'
 require 'add_title'
+require 'update_index'
 require 'update_keyword_index'
 require 'jodoc'
 require 'fileutils'
@@ -59,7 +60,7 @@ class PhoneGapDocs
   end
   
   def after_jodoc(input_directory)
-    klasses = [ AddTitle.new, UpdateKeywordIndex.new ]
+    klasses = [ AddTitle.new, UpdateIndex.new, UpdateKeywordIndex.new ]
     
     klasses.each do |klass|
       each_file input_directory do |file|
