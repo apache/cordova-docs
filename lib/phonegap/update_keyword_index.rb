@@ -2,15 +2,14 @@ require 'rubygems'
 require 'nokogiri'
 require 'fileutils'
 
-class UpdateIndex
+class UpdateKeywordIndex
   attr_accessor :header_title
   attr_accessor :content_title
   attr_accessor :filename
   
   def initialize
-    @header_title  = 'PhoneGap Class Reference'
+    @header_title  = 'Keyword Index'
     @content_title = 'Keyword Index'
-    @filename      = 'index.html'
   end
   
   def run(filename)
@@ -28,8 +27,6 @@ class UpdateIndex
     element.remove unless element.nil?
     
     File.open(filename, 'w') { |file| file.write doc.to_html }
-    
-    FileUtils.mv filename, File.join(File.dirname(filename), @filename)
     
     return true
   end
