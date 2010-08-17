@@ -32,9 +32,9 @@ describe UpdateKeywordIndex do
   end
   
   it 'should rename the title' do
-    Nokogiri::HTML(File.read @test_file).css('#header2 > h1')[0].content.should_not == @update_keyword.header_title
+    Nokogiri::HTML(File.read @test_file).css('#subheader > h1')[0].content.should_not == @update_keyword.header_title
     @update_keyword.run(@test_file)
-    Nokogiri::HTML(File.read @result_file).css('#header2 > h1')[0].content.should == @update_keyword.header_title
+    Nokogiri::HTML(File.read @result_file).css('#subheader > h1')[0].content.should == @update_keyword.header_title
   end
   
   it 'should rename the h1' do

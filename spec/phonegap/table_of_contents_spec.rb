@@ -43,7 +43,7 @@ describe TableOfContents do
     @toc.run @test_file
     
     doc = Nokogiri::HTML(File.read @test_file)
-    doc.css('#header2 > small > select').should have(1).item
+    doc.css('#subheader > small > select').should have(1).item
   end
   
   # No H1 / H2 elements available

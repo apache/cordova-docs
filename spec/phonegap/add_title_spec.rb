@@ -38,7 +38,7 @@ describe AddTitle do
     AddTitle.new.run(@test_file).should == 'Accelerometer'
     
     # Test written value
-    Nokogiri::HTML(File.read @test_file).css('#header2 > h1')[0].content.should == 'Accelerometer'
+    Nokogiri::HTML(File.read @test_file).css('#subheader > h1')[0].content.should == 'Accelerometer'
   end
   
   it 'should skip files with no source title' do
