@@ -19,6 +19,7 @@ The image is base64 encoded and returned as a `String` in the `cameraSuccess` fu
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 Quick Example
