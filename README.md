@@ -49,3 +49,20 @@ Currently, PhoneGap-Docs uses [joDoc](http://github.com/davebalmer/jodoc) to gen
 
     cd phonegap-docs
     ./bin/phonegap-docs
+    
+Script Test Suite
+-----------------
+
+__Install rspec:__
+
+    gem install rspec
+    
+__Run all specs:__
+
+    cd phonegap-docs
+    rake
+
+__Run a specific spec:__
+
+    cd phonegap-docs
+    spec spec/phonegap/add_title_spec.rb

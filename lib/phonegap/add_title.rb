@@ -8,7 +8,7 @@ class AddTitle
     title_source = doc.css('#content > h1')[0]
     return nil if title_source.nil?
     
-    title_target = doc.css('#header2 > h1')[0]
+    title_target = doc.css('#subheader > h1')[0]
     return nil if title_target.nil?
     
     title_target.content = title_source.content

@@ -69,7 +69,5 @@ class PhoneGapDocs
     end
     
     input_directory
-    
-    input_directory
   end
 end

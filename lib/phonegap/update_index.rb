@@ -17,7 +17,7 @@ class UpdateIndex
     
     doc = Nokogiri::HTML(File.read filename)
     
-    element = doc.css('#header2 > h1')[0]
+    element = doc.css('#subheader > h1')[0]
     element.content = @header_title unless element.nil?
     
     File.open(filename, 'w') { |file| file.write doc.to_html }

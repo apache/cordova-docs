@@ -16,7 +16,7 @@ class TableOfContents
     
     # Find the parent that will hold the select element
     #
-    target_select = doc.css('#header2 > small')[0]
+    target_select = doc.css('#subheader > small')[0]
     return nil if target_select.nil?
     
     # Generate Table of Contents

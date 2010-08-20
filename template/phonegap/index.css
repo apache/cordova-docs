@@ -27,7 +27,7 @@ h1, ul, li {
   width:100%;
   z-index:1;
 }
-#header2 {
+#subheader {
   background-color:#CBCBCB;
   background:-webkit-gradient(linear,
     left top,
@@ -70,7 +70,7 @@ h1, ul, li {
 
 #header h1,
 #header h1 a,
-#header2 h1 {
+#subheader h1 {
   color:#F6F4F2;
   font-size:18px;
   font-weight:normal;
@@ -85,13 +85,13 @@ h1, ul, li {
   margin-left:20px;
 }
 
-#header2 h1 {
+#subheader h1 {
   color:#000000;
   text-shadow:#FFFFFF 0px 1px 0px;
 }
 
 #header small,
-#header2 small {
+#subheader small {
   color:#EFEFEF;
   font-size:14px;
   line-height:32px;

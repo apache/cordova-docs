@@ -28,8 +28,9 @@ module FileHelpers
   end
   
   def move_directory(source, destination)
-    FileUtils.rm_rf destination
-    FileUtils.mv    source, destination
+    FileUtils.rm_rf   destination
+    FileUtils.mkdir_p File.dirname(destination)
+    FileUtils.mv      source, destination
   end
   
   def empty_tmp_directory
