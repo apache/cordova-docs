@@ -19,6 +19,7 @@ The returned watch ID references references the accelerometer watch interval. Th
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 
