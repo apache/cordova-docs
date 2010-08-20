@@ -15,6 +15,7 @@ The acceleration is returned using the `accelerometerSuccess` callback function.
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 Quick Example
