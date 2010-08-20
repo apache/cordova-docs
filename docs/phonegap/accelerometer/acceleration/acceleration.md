@@ -31,7 +31,7 @@ Quick Example
     };
 
     function onError() {
-        alert('Fail whale!');
+        alert('onError!');
     };
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
@@ -71,7 +71,7 @@ Full Example
         // onError: Failed to get the acceleration
         //
         function onError() {
-            alert('Fail whale!');
+            alert('onError!');
         }
 
         </script>
