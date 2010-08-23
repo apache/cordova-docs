@@ -44,7 +44,7 @@ Quick Example
     // onError Callback
     //
     var onError = function() {
-        alert('Fail whale!');
+        alert('onError!');
     };
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -89,7 +89,7 @@ Full Example
         // Show an alert if there is a problem getting the geolocation
         //
         function onError() {
-            alert('Fail whale!');
+            alert('onError!');
         }
 
         </script>

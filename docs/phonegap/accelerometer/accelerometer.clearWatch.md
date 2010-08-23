@@ -10,6 +10,7 @@ Stop watching the `Acceleration` referenced by the watch ID parameter.
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 Quick Example
@@ -79,7 +80,7 @@ Full Example
         // onError: Failed to get the acceleration
         //
         function onError() {
-            alert('Fail whale!');
+            alert('onError!');
         }
 
         </script>

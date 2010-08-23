@@ -19,6 +19,7 @@ The returned watch ID references references the accelerometer watch interval. Th
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 
@@ -32,7 +33,7 @@ Quick Example
     };
 
     function onError() {
-        alert('Fail whale!');
+        alert('onError!');
     };
 
     var options = { frequency: 3000 };  // Update every 3 seconds
@@ -97,7 +98,7 @@ Full Example
         // onError: Failed to get the acceleration
         //
         function onError() {
-            alert('Fail whale!');
+            alert('onError!');
         }
 
         </script>
