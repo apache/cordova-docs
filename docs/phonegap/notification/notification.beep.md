@@ -10,6 +10,7 @@ The device will play a beep sound.
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 Quick Example
@@ -68,6 +69,12 @@ Full Example
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
     </html>
+
+Android Quirks
+--------------
+
+- Ignores the beep count argument.
+- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
 
 iPhone Quirks
 -------------

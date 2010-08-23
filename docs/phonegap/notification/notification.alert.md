@@ -21,6 +21,7 @@ The Android shows a non-blocking dialog with the `title` "Alert" and OK / Cancel
 Supported Platforms
 -------------------
 
+- Android
 - iPhone
 
 Quick Example

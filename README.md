@@ -1,7 +1,7 @@
 PhoneGap API Documentation
 ==========================
 
-The public API documentation for [PhoneGap](http://www.github.com/phonegap/). The documentation is rendered as the [PhoneGap API Documentation website](http://docs2.phonegap.com/).
+The public API documentation for [PhoneGap](http://www.github.com/phonegap/). The documentation is rendered as the [PhoneGap API Documentation website](http://docs.phonegap.com/).
 
 Document File Format
 --------------------
@@ -41,12 +41,28 @@ Currently, PhoneGap-Docs uses [joDoc](http://github.com/davebalmer/jodoc) to gen
         port install markdown
         aptitude install markdown
 
+- Install nokogiri (Ruby HTML parser)
+
+        gem install nokogiri
+
 ### Run the Script ###
 
     cd phonegap-docs
     ./bin/phonegap-docs
+    
+Script Test Suite
+-----------------
 
-### Manually Run joDoc ###
+__Install rspec:__
 
-    cd phonegap-docs/markdown
-    jodoc --output ../tmp --title "PhoneGap API Documentation" --toc toc.md introduction.md phonegap/
+    gem install rspec
+    
+__Run all specs:__
+
+    cd phonegap-docs
+    rake
+
+__Run a specific spec:__
+
+    cd phonegap-docs
+    spec spec/phonegap/add_title_spec.rb

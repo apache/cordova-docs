@@ -12,23 +12,28 @@ This is a fast way to determine the device's network connection state, type of c
 
 Since `network.isReachable` is an asynchronous function, the network state is returned using a callback function.
 
+Supported Platforms
+-------------------
+
+- Android
+
 Quick Example
 -------------
 
-    var domain  = 'twitter.com';
-    var options = { };
-    
     function reachableCallback(reachability) {
+        // There is no consistency on the format of reachability
+        var networkState = reachability.internetConnectionStatus || reachability.code || reachability;
+        
         var states = {};
         states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
     
-        alert('Connection type: ' + states[reachability]);
+        alert('Connection type: ' + states[networkState]);
     }
     
-    navigator.network.isReachable(domain, reachableCallback, options);
- 
+    navigator.network.isReachable('phonegap.com', reachableCallback);
+
 
 Full Example
 ------------
@@ -38,35 +43,39 @@ Full Example
     <html>
       <head>
         <title>isReachable Example</title>
-
+        
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-
+            
         // Wait for PhoneGap to load
         // 
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
-
+        
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
         function onDeviceReady() {
-            navigator.network.isReachable("twitter.com", reachableCallback);
+            navigator.network.isReachable("phonegap.com", reachableCallback, {});
         }
-    
+        
         // Check network status
         //
         function reachableCallback(reachability) {
+            // There is no consistency on the format of reachability
+            var networkState = reachability.internetConnectionStatus || reachability.code || reachability;
+            
             var states = {};
             states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
             states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'Carrier data connection';
             states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi connection';
-        
-            alert('Connection type: ' + states[reachability]);
+            
+            alert('Connection type: ' + states[networkState]);
         }
-
+        
         </script>
       </head>
       <body onload="onLoad()">
+        <p>A dialog box will report the network state.</p>
       </body>
     </html>
