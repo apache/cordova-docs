@@ -19,6 +19,10 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(ga, s);
 			})();
+			
+			function moveToSection(dropdown) {
+				document.location="#" + dropdown.options[dropdown.selectedIndex].value;
+			}
 		</script>
 	</head>
 	<body>

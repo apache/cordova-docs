@@ -8,9 +8,21 @@ class TableOfContents
     # Find all the H1 and H2 elements in the content area
     #
     source_contents = []
-    #doc.xpath("id('content')/h1 | id('content')/h2").each do |tag|
-    doc.xpath("id('content')/h1").each do |tag|
-      source_contents.push( (tag.name == 'h1') ? tag.content : "    - #{tag.content}" )
+    current_h1 = ""
+    doc.xpath("id('content')/h1 | id('content')/h2").each do |tag| 
+    #doc.xpath("id('content')/h1").each do |tag|
+      if (tag.name == 'h1') then
+        current_h1 = tag.content
+        #cur = "<option value=\"#{tag.content}\">#{tag.content}</option>"
+		cur = "<option value=\"#{ tag.child[:name] }\">#{tag.content}</option>"
+      else
+        # Remove all leading and trailing non-word characters
+        # Replace all inner non-word characters with an underscore
+        s = tag.content.gsub(/^\W+|\W+$/, '').gsub(/\W+/, '_').downcase
+        cur = "<option value=\"#{current_h1}_#{s}\"> - #{tag.content}</option>"
+        tag.inner_html = "<a name=\"#{current_h1}_#{s}\">#{tag.content}</a>"
+      end
+      source_contents.push( cur )
     end
     return nil if source_contents.count <= 0
     
@@ -21,8 +33,8 @@ class TableOfContents
     
     # Generate Table of Contents
     #
-    toc = '<select>'
-    source_contents.each { |item| toc += "<option value=\"#{item}\">#{item}</option>" }
+    toc = '<select onChange="moveToSection(this)">'
+    source_contents.each { |item| toc += item}
     toc += '</select>'
     
     # Save Table of Contents
