@@ -12,6 +12,11 @@ This is a fast way to determine the device's network connection state, type of c
 
 Since `network.isReachable` is an asynchronous function, the network state is returned using a callback function.
 
+Supported Platforms
+-------------------
+
+- Android
+
 Quick Example
 -------------
 
@@ -28,7 +33,7 @@ Quick Example
     }
     
     navigator.network.isReachable('phonegap.com', reachableCallback);
- 
+
 
 Full Example
 ------------
