@@ -26,9 +26,6 @@ Supported Platforms
 Quick Example
 -------------
 
-Quick Example
--------------
-
     // onSuccess Callback
     //
     var onSuccess = function(position) {
