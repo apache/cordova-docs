@@ -4,9 +4,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
 		<meta name="generator" content="joDoc">
+		
+		<title>PhoneGap API Documentation</title>
+				
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<link rel="stylesheet" type="text/css" href="mobile.css" media="only screen and (max-device-width: 1024px)">
-		<title>PhoneGap API Documentation</title>
+		<link rel="stylesheet" type="text/css" href="prettify/prettify.css" />
+		
+		<script type="text/javascript" src="prettify/prettify.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-94271-11']);
@@ -25,7 +30,7 @@
 			}
 		</script>
 	</head>
-	<body>
+	<body onload="prettyPrint();">
 		
 		<div id="header">
 			<h1><a href="index.html">Phone<strong>Gap</strong> Documentation</a></h1>
@@ -54,8 +59,10 @@
 			</ul>
 		</div>
 		
-		<div id="content">
-			$body
+		<div id="scrollable">
+    		<div id="content">
+    			$body
+    		</div>
 		</div>
 		
 	</body>
