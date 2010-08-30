@@ -9,7 +9,8 @@ Properties
 * __latitude__: Latitude in decimal degrees. _(Number)_
 * __longitude__: Longitude in decimal degrees. _(Number)_
 * __altitude__: Height of the position in meters above the ellipsoid. _(Number)_
-* __accuracy__: Accuracy level of the latitude and longitude coordinates in meters. _(Object)_
+* __accuracy__: Accuracy level of the latitude and longitude coordinates in meters. _(Number)_
+* __altitudeAccuracy__: Accuracy level of the altitude coordinate in meters. _(Number)_
 * __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
@@ -21,6 +22,8 @@ The `Coordinates` object is created and populated by PhoneGap, and attached to t
 Supported Platforms
 -------------------
 
+- Android
+- BlackBerry
 - iPhone
 
 Quick Example
@@ -29,13 +32,14 @@ Quick Example
     // onSuccess Callback
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  + position.coords.latitude      + '\n' +
-              'Longitude: ' + position.coords.longitude     + '\n' +
-              'Altitude: '  + position.coords.altitude      + '\n' +
-              'Accuracy: '  + position.coords.accuracy      + '\n' +
-              'Heading: '   + position.coords.heading       + '\n' +
-              'Speed: '     + position.coords.speed         + '\n' +
-              'Timestamp: ' + new Date(position.timestamp)  + '\n');
+        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
+              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
+              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
+              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
+              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
+              'Heading: '   		+ position.coords.heading       	+ '\n' +
+              'Speed: '     		+ position.coords.speed         	+ '\n' +
+              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
     };
 
     // onError Callback
@@ -77,8 +81,8 @@ Full Example
             div.innerHTML = 'Latitude: '             + position.coords.latitude  + '<br/>' +
                             'Longitude: '            + position.coords.longitude + '<br/>' +
                             'Altitude: '             + position.coords.altitude  + '<br/>' +
-                            'Accuracy (Horzintal): ' + position.coords.accuracy.horizontal  + '<br/>' +
-                            'Accuracy (Vertical): '  + position.coords.accuracy.horizontal  + '<br/>' +
+                            'Accuracy: '             + position.coords.accuracy  + '<br/>' +
+                            'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '<br/>' +
                             'Heading: '              + position.coords.heading   + '<br/>' +
                             'Speed: '                + position.coords.speed     + '<br/>';
         }
@@ -96,16 +100,7 @@ Full Example
       </body>
     </html>
     
-iPhone Quirks
+Android Quirks
 -------------
 
-__accuracy:__ Instead of a single value, the iPhone has separate values for the longitude and latitude.
-
-- __accuracy.horizontal:__ Latitude accuracy.
-- __accuracy.vertical:__ Longitude accuracy.
-
-        var onSuccess = function(position) {
-            var accuracy = position.coords.accuracy;
-            alert('Latitude Accuracy: '  + accuracy.horizontal + '\n' +
-                  'Longitude Accuracy: ' + accuracy.vertical   + '\n');
-        };
+__altitudeAccuracy:__ This attribute is not support by Android devices, it will always return null.
