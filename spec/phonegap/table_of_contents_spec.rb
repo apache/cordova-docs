@@ -16,9 +16,36 @@ describe TableOfContents do
   
   it 'should find the table of content values' do
     contents = @toc.run @file[:normal]
-    contents.should have(8).items
+    contents.should have(32).items
   end
-    
+
+  it 'should find all <h1> elements' do
+    contents = @toc.run @file[:normal]
+	
+    headers = []
+    contents.each { |header| headers.push(header) if (header =~ /-/).nil? }
+    headers.should have(8).items
+  end
+
+  it 'should find all <h2> elements' do
+    contents = @toc.run @file[:normal]
+	
+    headers = []
+    contents.each { |header| headers.push(header) if nil != (header =~ /-/) and (header =~ /-/) > 0 }
+    headers.should have(24).items
+  end
+  
+  it 'should ignore whitespace in the target name' do
+    contents = @toc.run @file[:normal]
+    contents = contents.reverse
+
+    names = []
+    doc = Nokogiri::HTML(File.read @file[:normal])
+    doc.xpath("id('content')/h1 | id('content')/h2").each do |tag| 
+      tag.child[:name].should == contents.pop.match(/value=\"([^\"]*)\"/)[1]
+    end
+  end
+   
   it 'should create a HTML select element' do
     @toc.run @file[:normal]
     

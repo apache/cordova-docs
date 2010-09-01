@@ -17,6 +17,8 @@ The `Position` object is created and populated by PhoneGap, and returned to the 
 Supported Platforms
 -------------------
 
+- Android
+- BlackBerry
 - iPhone
 
 Quick Example
@@ -25,13 +27,14 @@ Quick Example
     // onSuccess Callback
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  + position.coords.latitude      + '\n' +
-              'Longitude: ' + position.coords.longitude     + '\n' +
-              'Altitude: '  + position.coords.altitude      + '\n' +
-              'Accuracy: '  + position.coords.accuracy      + '\n' +
-              'Heading: '   + position.coords.heading       + '\n' +
-              'Speed: '     + position.coords.speed         + '\n' +
-              'Timestamp: ' + new Date(position.timestamp)  + '\n');
+        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
+              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
+              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
+              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
+              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
+              'Heading: '   		+ position.coords.heading       	+ '\n' +
+              'Speed: '     		+ position.coords.speed         	+ '\n' +
+              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
     };
 
     // onError Callback
@@ -71,13 +74,14 @@ Full Example
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
         
-            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                                'Longitude: ' + position.coords.longitude     + '<br />' +
-                                'Altitude: '  + position.coords.altitude      + '<br />' +
-                                'Accuracy: '  + position.coords.accuracy      + '<br />' +
-                                'Heading: '   + position.coords.heading       + '<br />' +
-                                'Speed: '     + position.coords.speed         + '<br />' +
-                                'Timestamp: ' + new Date(position.timestamp)  + '<br />';
+            element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                                'Longitude: '          + position.coords.longitude             + '<br />' +
+                                'Altitude: '           + position.coords.altitude              + '<br />' +
+                                'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                                'Heading: '            + position.coords.heading               + '<br />' +
+                                'Speed: '              + position.coords.speed                 + '<br />' +
+                                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
         }
     
         // onError Geolocation
