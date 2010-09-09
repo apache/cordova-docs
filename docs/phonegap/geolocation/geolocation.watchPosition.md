@@ -19,6 +19,8 @@ Gets the device's current GPS `Position` at a regular interval. Each time the `P
 Supported Platforms
 -------------------
 
+- Android
+- BlackBerry
 - iPhone
 
 Quick Example
@@ -29,13 +31,14 @@ Quick Example
     //   the current GPS coordinates
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  + position.coords.latitude      + '\n' +
-              'Longitude: ' + position.coords.longitude     + '\n' +
-              'Altitude: '  + position.coords.altitude      + '\n' +
-              'Accuracy: '  + position.coords.accuracy      + '\n' +
-              'Heading: '   + position.coords.heading       + '\n' +
-              'Speed: '     + position.coords.speed         + '\n' +
-              'Timestamp: ' + new Date(position.timestamp)  + '\n');
+        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
+              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
+              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
+              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
+              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
+              'Heading: '   		+ position.coords.heading       	+ '\n' +
+              'Speed: '     		+ position.coords.speed         	+ '\n' +
+              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
     };
 
     // onError Callback
@@ -99,8 +102,3 @@ Full Example
         <p id="geolocation">Finding geolocation...</p>
       </body>
     </html>
-
-iPhone Quirks
--------------
-
-The iPhone PhoneGap has a slightly different implementation of Position and Coordinates.

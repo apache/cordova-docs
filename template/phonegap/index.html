@@ -19,13 +19,16 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(ga, s);
 			})();
+			
+			function moveToSection(dropdown) {
+				document.location="#" + dropdown.options[dropdown.selectedIndex].value;
+			}
 		</script>
 	</head>
 	<body>
 		
 		<div id="header">
 			<h1><a href="index.html">Phone<strong>Gap</strong> Documentation</a></h1>
-			<small></small>
 		</div>
 		<div id="subheader">
 			<h1>Geolocation</h1>

@@ -71,15 +71,6 @@ Full Example
       </body>
     </html>
 
-BlackBerry Quirks
------------------
-
-- __time:__ Seconds instead of milliseconds. (`Number`)
-
-        // Vibrate for 2 seconds
-        //
-        navigator.notification.vibrate(2)
-
 iPhone Quirks
 -------------
 
