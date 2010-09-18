@@ -47,7 +47,8 @@ Full Example
 
     	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-	
+
+        var pictureSource;   // picture source for iPhone
 	    // Wait for PhoneGap to connect with the device
 	    //
     	function onLoad() {
@@ -57,6 +58,8 @@ Full Example
     	// PhoneGap is ready to be used!
     	//
     	function onDeviceReady() {
+    	    // used for iPhone only
+    	    pictureSource=navigator.camera.PictureSourceType;
     	}
 	
 	    // A button will call this function
@@ -93,12 +96,30 @@ Full Example
     	function onFail(mesage) {
     		alert('Failed because: ' + message);
     	}
-
+        // iPhone ONLY
+        function getPicture(source){
+            navigator.camera.getPicture(onSuccess, onFail, {quality: 20, sourceType: source});
+        }
+        function getPictureEdit(source){
+            navigator.camera.getPicture(onSuccess, onFail, {quality: 20, sourceType: source, allowEdit: true});
+        }
+        function capturePhotoEdit() {
+            navigator.camera.getPicture(onSuccess, onFail, { quality: 20, allowEdit: true }); 
+        }
         </script>
       </head>
       <body onload="onLoad()">
     	<a href="#" onclick="capturePhoto();return false;">Take Photo</a>
-    	
+        <p>iPhone Only <br>
+        <button onclick="getPicture(pictureSource.PHOTOLIBRARY)">
+        From Photo Library</button> <br>
+        <button onclick="getPictureEdit(pictureSource.PHOTOLIBRARY)">
+        From Photo Library - editable</button> <br>
+        <button onclick="capturePhotoEdit()">
+        Capture Editable</button> <br>
+        <button onclick="getPicture(pictureSource.SAVEDPHOTOALBUM)">
+        From Saved Photos</button>
+        </p>
     	<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     	<img style="display:none;" id="largeImage" src="" />
       </body>
