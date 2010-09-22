@@ -10,6 +10,10 @@
             <span>Capture a photo using the device's camera.</span>
         </li>
         <li>
+            <h2>Contacts</h2>
+            <span>Work with the devices contact database.</span>
+        </li>
+        <li>
             <h2>Device</h2>
             <span>Gather device specific information.</span>
         </li>
