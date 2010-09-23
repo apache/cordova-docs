@@ -14,8 +14,8 @@ Properties
 * __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
-Details
--------
+Description
+-----------
 
 The `Coordinates` object is created and populated by PhoneGap, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
 
@@ -32,14 +32,14 @@ Quick Example
     // onSuccess Callback
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
-              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
-              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
-              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
-              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
-              'Heading: '   		+ position.coords.heading       	+ '\n' +
-              'Speed: '     		+ position.coords.speed         	+ '\n' +
-              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
     // onError Callback
@@ -103,4 +103,4 @@ Full Example
 Android Quirks
 -------------
 
-__altitudeAccuracy:__ This attribute is not support by Android devices, it will always return null.
+__altitudeAccuracy:__ This property is not support by Android devices, it will always return null.

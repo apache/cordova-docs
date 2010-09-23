@@ -1,16 +1,24 @@
 geolocation.clearWatch
 ======================
 
-Stop watching the `Position` referenced by the watch ID parameter.
+Stop watching for changes to the device's location referenced by the `watchID` parameter.
 
     navigator.geolocation.clearWatch(watchID);
 
-- __watchID:__ The ID of the `watchPosition` interval to clear. (Number)
+Parameters
+----------
+
+- __watchID:__ The id of the `watchPosition` interval to clear. (String)
+
+Description
+-----------
+
+Function `geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
 
 Supported Platforms
 -------------------
 
-- Untested
+- Android
 
 Quick Example
 -------------
@@ -20,14 +28,14 @@ Quick Example
     //   the current GPS coordinates
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
-              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
-              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
-              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
-              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
-              'Heading: '   		+ position.coords.heading       	+ '\n' +
-              'Speed: '     		+ position.coords.speed         	+ '\n' +
-              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
     // onError Callback

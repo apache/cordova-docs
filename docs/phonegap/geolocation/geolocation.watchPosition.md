@@ -1,20 +1,28 @@
 geolocation.watchPosition
 =========================
 
-Continually gets the device's current GPS `Position`.
+Watches for changes to the device's current position.
 
     var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
-                                                      geolocationError,
+                                                      [geolocationError],
                                                       [geolocationOptions]);
 
-Details
+Parameters
+----------
+
+- __geolocationSuccess__: The callback that is called with the current position.
+- __geolocationError__: (Optional) The callback that is called if there was an error.
+- __geolocationOptions__: (Optional) The geolocation options.
+
+Returns
 -------
 
-Gets the device's current GPS `Position` at a regular interval. Each time the `Position` is retrieved, the `geolocationSuccess` callback function is executed.
+- __String__: returns a watch id that references the watch position interval. The watch id can be used with `geolocation.clearWatch` to stop watching for changes in position.
 
-`geolocation.watchPosition` returns a watch ID that references the watch position interval. The watch ID can be used with `geolocation.clearWatch` to stop watching the geolocation.
+Description
+-----------
 
-`geolocation.watchPosition` is an asynchronous function. When the device's native code has retrieved the device's GPS location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.
+Function `geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
 
 Supported Platforms
 -------------------
@@ -31,19 +39,19 @@ Quick Example
     //   the current GPS coordinates
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
-              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
-              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
-              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
-              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
-              'Heading: '   		+ position.coords.heading       	+ '\n' +
-              'Speed: '     		+ position.coords.speed         	+ '\n' +
-              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
     // onError Callback
     //
-    var onError = function() {
+    var onError = function(error) {
         alert('onError!');
     };
     
