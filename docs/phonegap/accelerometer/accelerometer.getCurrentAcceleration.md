@@ -3,7 +3,7 @@ accelerometer.getCurrentAcceleration
 
 Get the current acceleration along the x, y, and z axis.
 
-    navigator.acceleration.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+    navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
 Description
 -----------
