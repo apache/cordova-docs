@@ -1,14 +1,24 @@
 geolocation.getCurrentPosition
 ==============================
 
-Returns the device's current GPS position as a `Position` object.
+Returns the device's current position as a `Position` object.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError);
+    navigator.geolocation.getCurrentPosition(geolocationSuccess, 
+                                             [geolocationError], 
+                                             [geolocationOptions]);
+
+Parameters
+----------
+
+- __geolocationSuccess__: The callback that is called with the current position.
+- __geolocationError__: (Optional) The callback that is called if there was an error.
+- __geolocationOptions__: (Optional) The geolocation options.
 
 Description
 -----------
 
-`geolocation.getCurrentPositon` is an asynchronous function that returns the current position through a callback function.
+Function `geolocation.getCurrentPositon` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+
 
 Supported Platforms
 -------------------
@@ -25,14 +35,14 @@ Quick Example
     //   the current GPS coordinates
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
-              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
-              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
-              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
-              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
-              'Heading: '   		+ position.coords.heading       	+ '\n' +
-              'Speed: '     		+ position.coords.speed         	+ '\n' +
-              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
     // onError Callback
@@ -84,7 +94,7 @@ Full Example
     
         // onError Geolocation
         //
-        function onError() {
+        function onError(error) {
             alert('onError!');
         }
 

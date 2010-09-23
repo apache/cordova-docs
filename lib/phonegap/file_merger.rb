@@ -23,6 +23,7 @@ class FileMerger
                               'geolocation.clearWatch.md',
                               File.join('Coordinates', 'coordinates.md'),
                               File.join('Position',    'position.md'),
+                              File.join('PositionError','positionError.md'),
                               File.join('parameters',   'geolocationSuccess.md'),
                               File.join('parameters',   'geolocationError.md'),
                               File.join('parameters',   'geolocation.options.md') ],
