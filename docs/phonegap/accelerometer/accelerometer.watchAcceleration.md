@@ -3,7 +3,7 @@ accelerometer.watchAcceleration
 
 At a regular interval, get the acceleration along the x, y, and z axis.
 
-    var watchID = navigator.acceleration.watchAcceleration(accelerometerSuccess,
+    var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
                                                            accelerometerError,
                                                            [accelerometerOptions]);
                                                            

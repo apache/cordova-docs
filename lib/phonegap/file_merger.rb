@@ -14,6 +14,7 @@ class FileMerger
                               File.join('parameter',   'cameraError.md'),
                               File.join('parameter',   'cameraOptions.md') ],
     'device.md'          => [ 'device.name.md',
+                              'device.phonegap.md',
                               'device.platform.md',
                               'device.uuid.md',
                               'device.version.md' ],
