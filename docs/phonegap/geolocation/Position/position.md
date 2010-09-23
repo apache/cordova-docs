@@ -9,8 +9,8 @@ Properties
 - __coords:__ A set of geographic coordinates. _(Coordinates)_
 - __timestamp:__ Creation timestamp for `coords` in milliseconds. _(DOMTimeStamp)_
 
-Details
--------
+Description
+-----------
 
 The `Position` object is created and populated by PhoneGap, and returned to the user through a callback function.
 
@@ -27,14 +27,14 @@ Quick Example
     // onSuccess Callback
     //
     var onSuccess = function(position) {
-        alert('Latitude: '  		+ position.coords.latitude      	+ '\n' +
-              'Longitude: ' 		+ position.coords.longitude     	+ '\n' +
-              'Altitude: '  		+ position.coords.altitude      	+ '\n' +
-              'Accuracy: '  		+ position.coords.accuracy      	+ '\n' +
-              'Altitude Accuracy: '	+ position.coords.altitudeAccuracy	+ '\n' +
-              'Heading: '   		+ position.coords.heading       	+ '\n' +
-              'Speed: '     		+ position.coords.speed         	+ '\n' +
-              'Timestamp: ' 		+ new Date(position.timestamp)  	+ '\n');
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
     // onError Callback
@@ -101,7 +101,8 @@ iPhone Quirks
 -------------
 
 - __timestamp:__ Uses seconds instead of milliseconds.
-  A workaround is to manually convert the timestamp to milliseconds (x 1000):
+
+A workaround is to manually convert the timestamp to milliseconds (x 1000):
 
         var onSuccess = function(position) {
             alert('Latitude: '  + position.coords.latitude             + '\n' +
