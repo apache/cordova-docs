@@ -16,6 +16,7 @@ Supported Platforms
 -------------------
 
 - Android
+- iPhone
 
 Quick Example
 -------------
@@ -63,7 +64,7 @@ Full Example
         //
         function reachableCallback(reachability) {
             // There is no consistency on the format of reachability
-            var networkState = reachability.internetConnectionStatus || reachability.code || reachability;
+            var networkState = reachability.code || reachability;
             
             var states = {};
             states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';

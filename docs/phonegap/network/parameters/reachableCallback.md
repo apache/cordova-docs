@@ -23,7 +23,7 @@ Example
 
     function reachableCallback(reachability) {
         // There is no consistency on the format of reachability
-        var networkState = reachability.internetConnectionStatus || reachability.code || reachability;
+        var networkState = reachability.code || reachability;
     
         var states = {};
         states[NetworkStatus.NOT_REACHABLE]                      = 'No network connection';
@@ -36,7 +36,7 @@ Example
 BlackBerry Quirks
 -----------------
 
-Provides the network status as the value of of `reachablity`
+Provides the network status as the value of `reachablity`
 
     function reachableCallback(reachability) {
         var hasConnection = (reachability !== NetworkStatus.NOT_REACHABLE);
@@ -45,8 +45,4 @@ Provides the network status as the value of of `reachablity`
 iPhone Quirks
 -------------
 
-The iPhone implementation provides the network status as `reachability.internetConnectionStatus`
-
-    function reachableCallback(reachability) {
-        var hasConnection = (reachability.internetConnectionStatus !== NetworkStatus.NOT_REACHABLE);
-    }
+The iPhone implementation only provides information about the type of connection available. It does not verify that the host is actually available. 
