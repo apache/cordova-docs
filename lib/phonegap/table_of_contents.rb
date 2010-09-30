@@ -12,10 +12,8 @@ class TableOfContents
     indentation = '&nbsp;' * 6
     
     doc.xpath("id('content')/h1 | id('content')/h2").each do |tag| 
-    #doc.xpath("id('content')/h1").each do |tag|
       if (tag.name == 'h1') then
         current_h1 = tag.content
-        #cur = "<option value=\"#{tag.content}\">#{tag.content}</option>"
         cur = "<option value=\"#{ tag.child[:name] }\">#{tag.content}</option>"
       else
         # Remove all leading and trailing non-word characters
@@ -26,7 +24,10 @@ class TableOfContents
       end
       source_contents.push( cur )
     end
-    return nil if source_contents.count <= 0
+    
+    # Return if one or less elments found (useless selection box)
+    #
+    return nil if source_contents.count <= 1
     
     # Find the parent that will hold the select element
     #
