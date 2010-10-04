@@ -6,6 +6,7 @@ Contacts
 Methods
 -------
 
+- contacts.create
 - contacts.find
 
 Arguments
@@ -26,3 +27,4 @@ Objects (Read-Only)
 - ContactOrganization
 - ContactAccount
 - ContactFindOptions
+- ContactError
