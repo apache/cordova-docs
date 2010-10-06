@@ -30,6 +30,12 @@ Properties
 - __utcOffset:__ The offset from UTC of the contacts time zone. _(DOMString)_
 - __connected:__ Only true if the contact and the user have a bi-directional relationship. _(DOMString)_
 
+Methods
+-------
+
+- __clone__: returns a new Contact object that is a deep copy of the calling object but the id property is set to null. 
+- __remove__: deletes the contact from the devices database of Contacts.  An error callback is called with a ContactError object if the deletion is unsuccessful.
+
 Details
 -------
 
@@ -40,8 +46,8 @@ Supported Platforms
 
 - Android
 
-Quick Example
--------------
+Find Quick Example
+------------------
 
     function onSuccess(contacts) {
         alert(contacts.length);
@@ -55,6 +61,28 @@ Quick Example
 	options.filter="";
 	filter = ["displayName"];
     navigator.service.contacts.find(filter, onSuccess, onError, options);
+
+Clone Quick Example
+-------------------
+
+	var contact = new Contact(1);
+	var cloned = contact.clone();
+	console.log("Original contact ID = " + contact.id);
+	console.log("Cloned contact ID = " + cloned.id); // prints null
+
+Remove Quick Example
+--------------------
+
+    function onSuccess() {
+        alert("Removal Success");
+    };
+
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
+    };
+
+	var contact = new Contact(1);
+	contact.remove(onSuccess,onError);
 
 Full Example
 ------------
@@ -77,10 +105,20 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
+			// Find
 			var options = new ContactFindOptions();
 			options.filter="";
 			filter = ["displayName"];
 			navigator.service.contacts.find(filter, onSuccess, onError, options);
+			
+			// Clone
+			var contact = new Contact(1);
+			var cloned = contact.clone();
+			console.log("Original contact ID = " + contact.id);
+			console.log("Cloned contact ID = " + cloned.id); // prints null
+			
+			// Remove
+			contact.remove(onRemoveSuccess,onRemoveError);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -95,6 +133,18 @@ Full Example
         //
         function onError() {
             alert('onError!');
+        }
+    
+        // onRemoveSuccess: Get a snapshot of the current contacts
+        //
+        function onRemoveSuccess(contacts) {
+			alert("Removal Success");
+        }
+    
+        // onRemoveError: Failed to get the contacts
+        //
+        function onRemoveError(contactError) {
+			alert("Error = " + contactError.code);
         }
 
         </script>
