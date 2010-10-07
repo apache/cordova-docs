@@ -1,12 +1,19 @@
 cameraOptions
 =============
 
-An optional parameter to customize the camera settings.
+Optional parameters to customize the camera settings.
 
-    { quality: 75 };
+    { destinationType : Camera.DestinationType.DATA_URL, quality : 75 };
 
 Options
 -------
+
+- __destinationType:__ Choose the format of the return value.  Defined in navigator.camera.DestinationType
+		
+            Camera.DestinationType = {
+                DATA_URL : 0,                // Return image as base64 encoded string
+                FILE_URI : 1                 // Return image file URI
+            };
 
 - __quality:__ Quality of saved image. Range is [0, 100]. (`Number`)
 
@@ -14,6 +21,8 @@ BlackBerry Quirks
 -----------------
 
 - Ignores the `quality` parameter.
+- Application must have key injection permissions to close native Camera application after photo is taken.
+- Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
 
 Palm Quirks
 -----------

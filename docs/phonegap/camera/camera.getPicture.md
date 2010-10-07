@@ -8,9 +8,14 @@ Takes a photo and returns the image as a base64 encoded `String`.
 Description
 -----------
 
-`camera.getPicture` opens the device's default camera application so that the user to take a photo. Once the photo is taken, the camera application closes and your application is restored.
+`camera.getPicture` opens the device's default camera application so that the user can take a photo. Once the photo is taken, the camera application closes and your application is restored.
 
-The image is base64 encoded and returned as a `String` in the `cameraSuccess` function. Since the data is a `String`, you can do whatever you want with it, for example:
+The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+
+- A `String` containing the base64 encoded photo image (default). 
+- A `String` representing the image file location on local storage.  
+
+You can do whatever you want with the encoded image or URI, for example:
 
 - Render the image in an `<img>` tag _(see example below)_
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
@@ -21,20 +26,39 @@ Supported Platforms
 
 - Android
 - iPhone
+- Blackberry Widgets (OS 5.0 and higher)
 
 Quick Example
 -------------
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+Retrieve base64-encoded image:
+
+    navigator.camera.getPicture(onSuccess, onFail, 
+	    { destinationType: Camera.DestinationType.DATA_URL, quality: 50 }); 
 
     function onSuccess(imageData) {
 	    var image = document.getElementById('myImage');
         image.src = "data:image/jpeg;base64," + imageData;
     }
 
-	function onFail(mesage) {
+	function onFail(message) {
 		alert('Failed because: ' + message);
 	}
+
+Retrieve image file location: 
+
+    navigator.camera.getPicture(onSuccess, onFail, 
+	    { destinationType: Camera.DestinationType.FILE_URI, quality: 50 }); 
+
+    function onSuccess(imageURI) {
+	    var image = document.getElementById('myImage');
+        image.src = imageURI;
+    }
+
+	function onFail(message) {
+		alert('Failed because: ' + message);
+	}
+
 
 Full Example
 ------------
@@ -61,34 +85,57 @@ Full Example
     	    // used for iPhone only
     	    pictureSource=navigator.camera.PictureSourceType;
     	}
-	
+
 	    // A button will call this function
 	    //
     	function capturePhoto() {
-          navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+          // Take picture and retrieve image as base64-encoded string
+          navigator.camera.getPicture(onSuccessBase64, fail, 
+	        { destinationType: Camera.DestinationType.DATA_URL, quality: 50 });
+
+          // Take picture and retrieve image file URI 
+          navigator.camera.getPicture(onSuccessURI, fail, 
+            { destinationType: Camera.DestinationType.FILE_URI, quality: 50 });
     	}
 
         // Called when a photo is successfully taken
         //
-        function onSuccess(imageData) {
+        function onSuccessBase64(imageData) {
     	  // Uncomment to view the base64 encoded image data
-          // debug.log(data);
+          // console.log(data);
 	  
-    	  // Get image handles
+    	  // Get image handle
     	  //
     	  var smallImage = document.getElementById('smallImage');
-    	  var largeImage = document.getElementById('largeImage');
 	  
     	  // Unhide image elements
     	  //
     	  smallImage.style.display = 'block';
-    	  largeImage.style.display = 'block';
 	  
     	  // Show the captured photo
     	  // The inline CSS rules are used to resize the image
     	  //
           smallImage.src = "data:image/jpeg;base64," + imageData;
-    	  largeImage.src = "data:image/jpeg;base64," + imageData;
+        }
+
+        // Called when a photo is successfully taken
+        //
+        function onSuccessURI(imageURI) {
+    	  // Uncomment to view the image file URI 
+          // console.log(data);
+	  
+    	  // Get image handle
+    	  //
+    	  var largeImage = document.getElementById('largeImage');
+	  
+    	  // Unhide image elements
+    	  //
+    	  largeImage.style.display = 'block';
+	  
+    	  // Show the captured photo
+    	  // The inline CSS rules are used to resize the image
+    	  //
+    	  largeImage.src = imageURI;
         }
 	
 	    // Called if something bad happens.
