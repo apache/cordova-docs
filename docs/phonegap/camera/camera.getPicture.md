@@ -12,7 +12,7 @@ Description
 
 The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
 
-- A `String` containing the base64 encoded photo image (default). 
+- A `String` containing the Base64 encoded photo image (default). 
 - A `String` representing the image file location on local storage.  
 
 You can do whatever you want with the encoded image or URI, for example:
@@ -21,17 +21,19 @@ You can do whatever you want with the encoded image or URI, for example:
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
+Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+
 Supported Platforms
 -------------------
 
 - Android
-- iPhone
 - Blackberry Widgets (OS 5.0 and higher)
+- iPhone
 
 Quick Example
 -------------
 
-Retrieve base64-encoded image:
+Retrieve Base64-encoded image:
 
     navigator.camera.getPicture(onSuccess, onFail, 
 	    { destinationType: Camera.DestinationType.DATA_URL, quality: 50 }); 
@@ -89,13 +91,14 @@ Full Example
 	    // A button will call this function
 	    //
     	function capturePhoto() {
-          // Take picture and retrieve image as base64-encoded string
-          navigator.camera.getPicture(onSuccessBase64, fail, 
-	        { destinationType: Camera.DestinationType.DATA_URL, quality: 50 });
-
+          // choose a method:
           // Take picture and retrieve image file URI 
           navigator.camera.getPicture(onSuccessURI, fail, 
             { destinationType: Camera.DestinationType.FILE_URI, quality: 50 });
+
+          // Take picture and retrieve image as base64-encoded string
+          //navigator.camera.getPicture(onSuccessBase64, fail, 
+	      //  { destinationType: Camera.DestinationType.DATA_URL, quality: 50 });
     	}
 
         // Called when a photo is successfully taken
