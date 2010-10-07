@@ -33,33 +33,32 @@ Supported Platforms
 Quick Example
 -------------
 
-Retrieve Base64-encoded image:
+Take photo and retrieve Base64-encoded image:
 
-    navigator.camera.getPicture(onSuccess, onFail, 
-	    { destinationType: Camera.DestinationType.DATA_URL, quality: 50 }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
 
     function onSuccess(imageData) {
 	    var image = document.getElementById('myImage');
         image.src = "data:image/jpeg;base64," + imageData;
     }
 
-	function onFail(message) {
-		alert('Failed because: ' + message);
-	}
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
 
-Retrieve image file location: 
+Take photo and retrieve image file location: 
 
-    navigator.camera.getPicture(onSuccess, onFail, 
-	    { destinationType: Camera.DestinationType.FILE_URI, quality: 50 }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
+        destinationType: Camera.DestinationType.FILE_URI }); 
 
     function onSuccess(imageURI) {
-	    var image = document.getElementById('myImage');
+        var image = document.getElementById('myImage');
         image.src = imageURI;
     }
 
-	function onFail(message) {
-		alert('Failed because: ' + message);
-	}
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
 
 
 Full Example
@@ -74,7 +73,9 @@ Full Example
     	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        var pictureSource;   // picture source for iPhone
+        var pictureSource;   // picture source
+        var destinationType; // sets the format of returned value 
+	    
 	    // Wait for PhoneGap to connect with the device
 	    //
     	function onLoad() {
@@ -84,28 +85,15 @@ Full Example
     	// PhoneGap is ready to be used!
     	//
     	function onDeviceReady() {
-    	    // used for iPhone only
     	    pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.DestinationType;
     	}
 
-	    // A button will call this function
-	    //
-    	function capturePhoto() {
-          // choose a method:
-          // Take picture and retrieve image file URI 
-          navigator.camera.getPicture(onSuccessURI, fail, 
-            { destinationType: Camera.DestinationType.FILE_URI, quality: 50 });
-
-          // Take picture and retrieve image as base64-encoded string
-          //navigator.camera.getPicture(onSuccessBase64, fail, 
-	      //  { destinationType: Camera.DestinationType.DATA_URL, quality: 50 });
-    	}
-
-        // Called when a photo is successfully taken
+        // Called when a photo is successfully retrieved
         //
-        function onSuccessBase64(imageData) {
+        function onPhotoDataSuccess(imageData) {
     	  // Uncomment to view the base64 encoded image data
-          // console.log(data);
+          // console.log(imageData);
 	  
     	  // Get image handle
     	  //
@@ -121,11 +109,11 @@ Full Example
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
 
-        // Called when a photo is successfully taken
+        // Called when a photo is successfully retrieved
         //
-        function onSuccessURI(imageURI) {
+        function onPhotoURISuccess(imageURI) {
     	  // Uncomment to view the image file URI 
-          // console.log(data);
+          // console.log(imageURI);
 	  
     	  // Get image handle
     	  //
@@ -140,36 +128,43 @@ Full Example
     	  //
     	  largeImage.src = imageURI;
         }
+
+	    // A button will call this function
+	    //
+    	function capturePhoto() {
+          // Take picture using device camera and retrieve image as base64-encoded string
+          navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
+    	}
+
+	    // A button will call this function
+	    //
+        function capturePhotoEdit() {
+          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+          navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true }); 
+        }
 	
+	    // A button will call this function
+	    //
+    	function getPhoto(source) {
+          // Retrieve image file location from specified source
+          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+            destinationType: destinationType.FILE_URI,
+            sourceType: source });
+    	}
+
 	    // Called if something bad happens.
 	    // 
     	function onFail(mesage) {
-    		alert('Failed because: ' + message);
+          alert('Failed because: ' + message);
     	}
-        // iPhone ONLY
-        function getPicture(source){
-            navigator.camera.getPicture(onSuccess, onFail, {quality: 20, sourceType: source});
-        }
-        function getPictureEdit(source){
-            navigator.camera.getPicture(onSuccess, onFail, {quality: 20, sourceType: source, allowEdit: true});
-        }
-        function capturePhotoEdit() {
-            navigator.camera.getPicture(onSuccess, onFail, { quality: 20, allowEdit: true }); 
-        }
+
         </script>
       </head>
       <body onload="onLoad()">
-    	<a href="#" onclick="capturePhoto();return false;">Take Photo</a>
-        <p>iPhone Only <br>
-        <button onclick="getPicture(pictureSource.PHOTOLIBRARY)">
-        From Photo Library</button> <br>
-        <button onclick="getPictureEdit(pictureSource.PHOTOLIBRARY)">
-        From Photo Library - editable</button> <br>
-        <button onclick="capturePhotoEdit()">
-        Capture Editable</button> <br>
-        <button onclick="getPicture(pictureSource.SAVEDPHOTOALBUM)">
-        From Saved Photos</button>
-        </p>
+    	<button onclick="capturePhoto();">Capture Photo</button> <br>
+        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    	<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
     	<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     	<img style="display:none;" id="largeImage" src="" />
       </body>
