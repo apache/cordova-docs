@@ -11,6 +11,8 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry (OS 4.6)
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
@@ -44,10 +46,14 @@ Full Example
             // Empty
         }
     
-        // Show an Alert Box
+        // Show a custom alert
         //
         function showAlert() {
-            navigator.notification.alert('Howdy!');
+		    navigator.notification.alert(
+		        'You are the winner!',  // message
+		        'Game Over',            // title
+		        'Done'                  // buttonName
+		    );
         }
     
         // Beep three times
