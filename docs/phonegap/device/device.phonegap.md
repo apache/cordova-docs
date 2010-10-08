@@ -13,7 +13,7 @@ Description
 Supported Platforms
 -------------------
 
-- Android 2.1+
+- Android
 - BlackBerry
 - BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
@@ -59,4 +59,4 @@ Full Example
         <p id="deviceProperties">Loading device properties...</p>
       </body>
     </html>
-	
+    
