@@ -18,7 +18,8 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry
+- BlackBerry (OS 4.6)
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
@@ -37,11 +38,12 @@ Quick Example
               'Timestamp: '         + new Date(position.timestamp)      + '\n');
     };
 
-    // onError Callback
+    // onError Callback receives a PositionError object
     //
-    var onError = function() {
-        alert('onError!');
-    };
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -73,7 +75,6 @@ Full Example
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
-        
             element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                                 'Longitude: '          + position.coords.longitude             + '<br />' +
                                 'Altitude: '           + position.coords.altitude              + '<br />' +
@@ -84,11 +85,12 @@ Full Example
                                 'Timestamp: '          + new Date(position.timestamp)          + '<br />';
         }
     
-        // onError Geolocation
-        //
-        function onError() {
-            alert('onError!');
-        }
+	    // onError Callback receives a PositionError object
+	    //
+	    function onError(error) {
+	        alert('code: '    + error.code    + '\n' +
+	              'message: ' + error.message + '\n');
+	    }
 
         </script>
       </head>
