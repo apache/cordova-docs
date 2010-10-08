@@ -12,37 +12,31 @@ Shows an alert or dialog box.
 Description
 -----------
 
-Most PhoneGap implementations leverage the platform browser's `alert` function, but on some platforms a more robust (native) dialog box is used.
-
-The iPhone is the only platform that supports custom dialog titles and button names.
-
-The Android shows a non-blocking dialog with the `title` "Alert" and OK / Cancel buttons. The dialog's non-blocking nature can be counter-intuitive because the most recent alert will show on top!
+Most PhoneGap implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry (OS 4.6)
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
 -------------
 
-    // Android / BlackBerry / webOS
-    //
-    navigator.notification.alert('You are the winner!');
-    
-    // iPhone
+    // Android / BlackBerry Widgets (OS 5.0 and higher) / iPhone
     //
     navigator.notification.alert(
         'You are the winner!',  // message
         'Game Over',            // title
         'Done'                  // buttonName
     );
-    
-    // iPhone simple dialog
+
+    // BlackBerry (OS 4.6) / webOS
     //
     navigator.notification.alert('You are the winner!');
-    
+        
 Full Example
 ------------
 
@@ -67,10 +61,14 @@ Full Example
             // Empty
         }
     
-        // Show an Alert Box
+        // Show a custom alert
         //
         function showAlert() {
-            navigator.notification.alert('Howdy!');
+		    navigator.notification.alert(
+		        'You are the winner!',  // message
+		        'Game Over',            // title
+		        'Done'                  // buttonName
+		    );
         }
     
         // Beep three times

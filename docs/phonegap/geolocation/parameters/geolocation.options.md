@@ -1,9 +1,9 @@
 geolocationOptions
 ==================
 
-An optional parameter to customize the retrieval of the geolocation.
+Optional parameters to customize the retrieval of the geolocation.
 
-    { maximumAge: 3000, enableHighAccuracy: true };
+    { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
 Options
 -------
