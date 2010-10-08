@@ -19,5 +19,5 @@ Constants
 Description
 -----------
 
-The `PositionError` object is returned to the user through the geolocationError callback function when an error occurs with geolocation.
+The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
 

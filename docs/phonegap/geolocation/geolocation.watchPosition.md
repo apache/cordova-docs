@@ -28,7 +28,8 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry
+- BlackBerry (OS 4.6)
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
@@ -38,28 +39,24 @@ Quick Example
     //   This method accepts a `Position` object, which contains
     //   the current GPS coordinates
     //
-    var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
-              'Accuracy: '          + position.coords.accuracy          + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-              'Heading: '           + position.coords.heading           + '\n' +
-              'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + new Date(position.timestamp)      + '\n');
-    };
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                            'Longitude: ' + position.coords.longitude     + '<br />' +
+                            '<hr />'      + element.innerHTML;
+    }
 
-    // onError Callback
+    // onError Callback receives a PositionError object
     //
-    var onError = function(error) {
-        alert('onError!');
-    };
-    
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
     // Options: retrieve the location every 3 seconds
     //
-    var options = { frequency: 3000 };
-
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+    
 
 Full Example
 ------------
@@ -79,34 +76,35 @@ Full Example
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
+        var watchID = null;
+
         // PhoneGap is ready
         //
         function onDeviceReady() {
             // Update every 3 seconds
             var options = { frequency: 3000 };
-        
-            var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+            watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     
         // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
-        
             element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
                                 'Longitude: ' + position.coords.longitude     + '<br />' +
                                 '<hr />'      + element.innerHTML;
         }
     
-        // onError Geolocation
-        //
-        function onError() {
-            alert('onError!');
-        }
+	    // onError Callback receives a PositionError object
+	    //
+	    function onError(error) {
+	        alert('code: '    + error.code    + '\n' +
+	              'message: ' + error.message + '\n');
+	    }
 
         </script>
       </head>
       <body onload="onLoad()">
-        <p id="geolocation">Finding geolocation...</p>
+        <p id="geolocation">Watching geolocation...</p>
       </body>
     </html>

@@ -8,7 +8,7 @@ Get the current acceleration along the x, y, and z axis.
 Description
 -----------
 
-The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current position. The accelerometer can detect 3D movement along the x, y, and z axis.
+The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation. The accelerometer can detect 3D movement along the x, y, and z axis.
 
 The acceleration is returned using the `accelerometerSuccess` callback function.
 
@@ -16,6 +16,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
@@ -24,7 +25,8 @@ Quick Example
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
               'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n';
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
     };
 
     function onError() {
@@ -62,7 +64,8 @@ Full Example
         function onSuccess(acceleration) {
             alert('Acceleration X: ' + acceleration.x + '\n' +
                   'Acceleration Y: ' + acceleration.y + '\n' +
-                  'Acceleration Z: ' + acceleration.z + '\n');
+                  'Acceleration Z: ' + acceleration.z + '\n' +
+                  'Timestamp: '      + acceleration.timestamp + '\n');
         }
     
         // onError: Failed to get the acceleration

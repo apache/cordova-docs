@@ -20,6 +20,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 
@@ -29,7 +30,8 @@ Quick Example
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
               'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n');
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
     };
 
     function onError() {
@@ -92,7 +94,8 @@ Full Example
             var element = document.getElementById('accelerometer');
             element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
                                 'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />';
+                                'Acceleration Z: ' + acceleration.z + '<br />' +
+                                'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 
         // onError: Failed to get the acceleration
