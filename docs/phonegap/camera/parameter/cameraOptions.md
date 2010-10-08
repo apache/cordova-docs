@@ -4,9 +4,9 @@ cameraOptions
 Optional parameters to customize the camera settings.
 
     { quality : 75, 
-	  destinationType : Camera.DestinationType.DATA_URL, 
-	  sourceType : Camera.PictureSourceType.CAMERA, 
-	  allowEdit : true };
+      destinationType : Camera.DestinationType.DATA_URL, 
+      sourceType : Camera.PictureSourceType.CAMERA, 
+      allowEdit : true };
 
 Options
 -------
@@ -14,7 +14,7 @@ Options
 - __quality:__ Quality of saved image. Range is [0, 100]. (`Number`)
 
 - __destinationType:__ Choose the format of the return value.  Defined in navigator.camera.DestinationType (`Number`)
-		
+        
             Camera.DestinationType = {
                 DATA_URL : 0,                // Return image as base64 encoded string
                 FILE_URI : 1                 // Return image file URI
@@ -22,7 +22,7 @@ Options
 
 - __sourceType:__ Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (`Number`)
      
-        Camera.prototype.PictureSourceType = {
+        Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
             CAMERA : 1,
             SAVEDPHOTOALBUM : 2
@@ -34,6 +34,7 @@ Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
+- Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
 
 BlackBerry Quirks
 -----------------
