@@ -13,7 +13,9 @@ The details of how a UUID is generated are determined by the device manufacturer
 Supported Platforms
 -------------------
 
-- Android 2.1+
+- Android
+- BlackBerry
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example

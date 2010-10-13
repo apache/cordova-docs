@@ -19,8 +19,9 @@ Typically, you will want to attach an event listener with `document.addEventList
 Supported Platforms
 -------------------
 
-- iPhone
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
+- iPhone
 
 Quick Example
 -------------
@@ -65,8 +66,8 @@ Full Example
       </body>
     </html>
     
-BlackBerry Quirks
------------------
+BlackBerry (OS 4.6) Quirks
+--------------------------
 
 Custom events are not supported in the RIM BrowserField (web browser view), so the `deviceready` event will never fire.
 

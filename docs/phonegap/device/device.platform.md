@@ -8,7 +8,9 @@ Get the device's operating system name.
 Supported Platforms
 -------------------
 
-- Android 2.1+
+- Android
+- BlackBerry
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example
@@ -63,3 +65,8 @@ iPhone Quirks
 -------------
 
 All devices return `iPhone` as the platform. This is inaccurate because Apple has rebranded the iPhone operating system as `iOS`.
+
+BlackBerry Quirks
+-----------------
+
+Devices may return the device platform version instead of the platform name.  For example, the Storm2 9550 would return '2.13.0.95' or similar.

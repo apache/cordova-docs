@@ -23,7 +23,8 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry
+- BlackBerry (OS 4.6)
+- BlackBerry Widgets (OS 5.0 and higher)
 - iPhone
 
 Quick Example

@@ -48,6 +48,7 @@ class FileMerger
                               File.join('parameters',   'reachableHostname.md'),
                               File.join('parameters',   'reachableOptions.md') ],
     'notification.md'    => [ 'notification.alert.md',
+                              'notification.confirm.md',
                               'notification.beep.md',
                               'notification.vibrate.md' ]
   }

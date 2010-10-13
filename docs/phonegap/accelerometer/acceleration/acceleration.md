@@ -19,7 +19,9 @@ This object is created and populated by PhoneGap, and returned by an `Accelerome
 Supported Platforms
 -------------------
 
-- Untested
+- Android
+- BlackBerry Widgets (OS 5.0 and higher)
+- iPhone
 
 Quick Example
 -------------
@@ -27,7 +29,8 @@ Quick Example
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
               'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n';
+              'Acceleration Z: ' + acceleration.z + '\n' +
+              'Timestamp: '      + acceleration.timestamp + '\n');
     };
 
     function onError() {
@@ -65,7 +68,8 @@ Full Example
         function onSuccess() {
             alert('Acceleration X: ' + acceleration.x + '\n' +
                   'Acceleration Y: ' + acceleration.y + '\n' +
-                  'Acceleration Z: ' + acceleration.z + '\n';
+                  'Acceleration Z: ' + acceleration.z + '\n' +
+                  'Timestamp: '      + acceleration.timestamp + '\n');
         }
 
         // onError: Failed to get the acceleration
