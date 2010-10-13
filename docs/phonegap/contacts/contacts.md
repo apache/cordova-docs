@@ -17,8 +17,8 @@ Arguments
 - contactError
 - contactOptions
 
-Objects (Read-Only)
--------------------
+Objects
+-------
 
 - Contact
 - ContactName
