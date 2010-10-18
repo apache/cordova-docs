@@ -55,4 +55,9 @@ Palm Quirks
 iPhone Quirks
 --------------
 
-- Set quality below 50 to avoid memory error on some devices.
+- Set `quality` below 50 to avoid memory error on some devices.
+- When `destinationType.FILE_URI` is used, photos taken with the camera and edited photos are saved in the application's Documents/tmp directory.
+- The application's Documents/tmp directory is deleted when the application ends. Developers may also delete this directory using the navigator.fileMgr APIs if storage space is a concern.
+
+           navigator.fileMgr.deleteDirectory("tmp", onSuccess, onFail);
+           
