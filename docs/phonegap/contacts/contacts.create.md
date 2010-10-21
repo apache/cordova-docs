@@ -3,17 +3,20 @@ contacts.create
 
 Returns a new Contact object.
 
-    navigator.service.contacts.create(attributes);
+    var contact = navigator.service.contacts.create(properties);
 
 Description
 -----------
 
-contacts.create is a synchronous function that returns a Contact object.  The returned Contact object is not stored in the devices database.  In order to save the Contact object on the device call the save method on the Contact object.
+contacts.create is a synchronous function that returns a new `Contact` object.
+
+This method does not persist the Contact object to the device contacts database.  To persist the Contact object to the device, invoke the `Contact.save` method.
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Quick Example
 -------------

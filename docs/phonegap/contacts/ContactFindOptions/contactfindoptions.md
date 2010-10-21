@@ -1,41 +1,45 @@
 ContactFindOptions
 ==================
 
-Contains `ContactFindOptions` properties that are passed as an optional parameter to customize the retrieval of the contacts.
-
+Contains properties that can be used to limit or filter the results of a `contacts.find` operation.
 
 Properties
 ----------
 
 - __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find command should return multiple contacts. _(Boolean)_ (Default: true)
-- __limit:__ The maximum number of contacts to return. Only used if multipe is true. _(Number)_ (Default: MAXINT)
+- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: true)
+- __limit:__ The maximum number of contacts to return. Only used if multiple is true. _(Number)_ (Default: MAXINT)
 - __updatedSince:__ Only return contacts updated since the date specified. _(Date)_ (Default: "")
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Quick Example
 -------------
 
+	// success callback
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
 			alert(contacts[i].displayName);
 		}
     };
 
+	// error callback
     function onError() {
         alert('onError!');
     };
 
+	// specify contact search criteria
     var options = new ContactFindOptions();
-	options.filter="";
-	options.multiple=true;
-	options.limit=10;
-	options.updatedSince="";
-	filter = ["displayName"];
+	options.filter="";			// empty search string returns all contacts
+	options.multiple=true;		// return multiple results
+	options.limit=10;			// limit results to 10 contacts
+	filter = ["displayName"];	// return contact.displayName field
+	
+	// find contacts
     navigator.service.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -59,13 +63,15 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			options.multiple=true;
-			options.limit=10;
-			options.updatedSince="";
-			filter = ["displayName"];
-			navigator.service.contacts.find(filter, onSuccess, onError, options);
+			// specify contact search criteria
+		    var options = new ContactFindOptions();
+			options.filter="";			// empty search string returns all contacts
+			options.multiple=true;		// return multiple results
+			options.limit=10;			// limit results to 10 contacts
+			filter = ["displayName"];	// return contact.displayName field
+
+			// find contacts
+		    navigator.service.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
