@@ -1,7 +1,7 @@
 ContactName
 ===========
 
-Contains `ContactName` properties that are returned from the devices contacts database.
+Contains name properties of a `Contact` object.
 
 Properties
 ----------
@@ -16,12 +16,13 @@ Properties
 Details
 -------
 
-The `ContactName` object is created and populated by PhoneGap, added to a Contact object, and returned to the user through a callback function.
+The `ContactName` object stores name properties of a contact.
 
 Supported Platforms
 -------------------
 
 - Android 2.X
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Quick Example
 -------------
@@ -99,3 +100,13 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
+
+BlackBerry Widgets (OS 5.0 and higher) Quirks
+---------------------------------------------
+
+- __formatted:__ Partially supported.  Will return concatenation of BlackBerry __firstName__ and __lastName__ fields.
+- __familyName:__ Supported.  Stored in BlackBerry __lastName__ field.
+- __givenName:__ Supported.  Stored in BlackBerry __firstName__ field.
+- __middleName:__ This property is not supported, and will always return `null`.
+- __honorificPrefix:__ This property is not supported, and will always return `null`.
+- __honorificSuffix:__ This property is not supported, and will always return `null`.

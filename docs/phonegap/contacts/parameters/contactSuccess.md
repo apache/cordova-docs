@@ -1,7 +1,7 @@
 contactSuccess
 ==============
 
-onSuccess callback function that provides the contacts array.
+Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
 
     function(contacts) {
         // Do something
@@ -10,7 +10,7 @@ onSuccess callback function that provides the contacts array.
 Parameters
 ----------
 
-- __contacts:__ The contact arrary returned by the device. (`Contact`)
+- __contacts:__ The contact array resulting from a find operation. (`Contact`)
 
 Example
 -------

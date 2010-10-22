@@ -1,7 +1,7 @@
 Contacts
 ========
 
-> The `contacts` object provides access to the device's database of contacts.
+> The `contacts` object provides access to the device contacts database.  
 
 Methods
 -------
@@ -12,10 +12,10 @@ Methods
 Arguments
 ---------
 
-- contactFilter
+- contactFields
 - contactSuccess
 - contactError
-- contactOptions
+- contactFindOptions
 
 Objects
 -------
