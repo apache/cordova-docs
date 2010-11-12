@@ -1,8 +1,8 @@
 contactError
 ============
 
-onError callback function for contact functions.
+Error callback function for contact functions.
 
-    function() {
+    function(error) {
         // Handle the error
     }

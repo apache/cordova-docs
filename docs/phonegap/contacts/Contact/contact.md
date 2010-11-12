@@ -1,7 +1,7 @@
 Contact
 =======
 
-Contains `Contact` properties that are returned from the devices contacts database.
+Contains properties that describe a contact, such as a user's personal or business contact.
 
 Properties
 ----------
@@ -21,7 +21,7 @@ Properties
 - __anniversary:__ The wedding anniversary of the contact. _(DOMString)_
 - __gender:__ The gender of the contact. _(DOMString)_
 - __note:__ A note about the contact. _(DOMString)_
-- __preferredUsername:__ The preferred usename of the contact. _(DOMString)_
+- __preferredUsername:__ The preferred username of the contact. _(DOMString)_
 - __photos:__ An array of all the contact's photos. _(ContactField[])_
 - __tags:__  An array of all the contacts user defined tags. _(ContactField[])_
 - __relationships:__  An array of all the contact's relationships. _(ContactField[])_
@@ -33,42 +33,48 @@ Properties
 Methods
 -------
 
-- __clone__: returns a new Contact object that is a deep copy of the calling object but the id property is set to null. 
-- __remove__: deletes the contact from the devices database of Contacts.  An error callback is called with a ContactError object if the deletion is unsuccessful.
+- __clone__: Returns a new Contact object that is a deep copy of the calling object, with the id property set to `null`. 
+- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `ContactError` object if the removal is unsuccessful.
+- __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
+
 
 Details
 -------
 
-The `Contact` object array is created and populated by PhoneGap, and returned to the user through a callback function.
+The `Contact` object represents a user contact.  Contacts can be created, saved to, or removed from the device contacts database.  Contacts can also be retrieved (individually or in bulk) from the database by invoking the `contacts.find` method.
+
+_Note: Not all of the above contact fields are supported on every device platform.  Please check each platform's Quirks section for information about which fields are supported._
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
-Find Quick Example
+Save Quick Example
 ------------------
 
-    function onSuccess(contacts) {
-        alert(contacts.length);
-    };
-
-    function onError() {
-        alert('onError!');
-    };
-
-    var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName"];
-    navigator.service.contacts.find(filter, onSuccess, onError, options);
+	// create a new contact object
+    var contact = navigator.service.contacts.create();
+	contact.displayName = "Plumber";
+	
+	// populate some fields
+	var name = new ContactName();
+	name.givenName = "Jane";
+	name.familyName = "Doe";
+	contact.name = name;
+	
+	// save to device
+	contact.save();
 
 Clone Quick Example
 -------------------
 
-	var contact = new Contact(1);
-	var cloned = contact.clone();
-	console.log("Original contact ID = " + contact.id);
-	console.log("Cloned contact ID = " + cloned.id); // prints null
+	// clone the contact object
+	var clone = contact.clone();
+	clone.name.givenName = "John";
+	console.log("Original contact name = " + contact.name.givenName);
+	console.log("Cloned contact name = " + clone.name.givenName); 
 
 Remove Quick Example
 --------------------
@@ -81,7 +87,7 @@ Remove Quick Example
         alert("Error = " + contactError.code);
     };
 
-	var contact = new Contact(1);
+	// remove the contact from the device
 	contact.remove(onSuccess,onError);
 
 Full Example
@@ -105,36 +111,27 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			// Find
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName"];
-			navigator.service.contacts.find(filter, onSuccess, onError, options);
+		    // create
+		    var contact = navigator.service.contacts.create();
+			contact.displayName = "Plumber";
+			var name = new ContactName();
+			name.givenName = "Jane";
+			name.familyName = "Doe";
+			contact.name = name;
+
+			// save
+			contact.save();
 			
-			// Clone
-			var contact = new Contact(1);
-			var cloned = contact.clone();
-			console.log("Original contact ID = " + contact.id);
-			console.log("Cloned contact ID = " + cloned.id); // prints null
+			// clone
+			var clone = contact.clone();
+			clone.name.givenName = "John";
+			console.log("Original contact name = " + contact.name.givenName);
+			console.log("Cloned contact name = " + clone.name.givenName); 
 			
-			// Remove
+			// remove
 			contact.remove(onRemoveSuccess,onRemoveError);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
-        //
-        function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				console.log("Display Name = " + contacts[i].displayName;
-			}
-        }
-    
-        // onError: Failed to get the contacts
-        //
-        function onError() {
-            alert('onError!');
-        }
-    
+        
         // onRemoveSuccess: Get a snapshot of the current contacts
         //
         function onRemoveSuccess(contacts) {
@@ -158,31 +155,60 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __published:__ This attribute is not support by Android 2.X devices, it will always return null
-- __updated:__ This attribute is not support by Android 2.X devices, it will always return null
-- __gender:__ This attribute is not support by Android 2.X devices, it will always return null
-- __preferredUsername:__ This attribute is not support by Android 2.X devices, it will always return null
-- __photos:__ This attribute is not support by Android 2.X devices, it will always return null
-- __tags:__  This attribute is not support by Android 2.X devices, it will always return null
-- __accounts:__ This attribute is not support by Android 1.X devices, it will always return null
-- __utcOffset:__ This attribute is not support by Android 2.X devices, it will always return null
-- __connected:__ This attribute is not support by Android 2.X devices, it will always return null
+- __save__ function not yet supported.
+- __published:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __updated:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __gender:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __preferredUsername:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __photos:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __tags:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __accounts:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __utcOffset:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __connected:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 
 Android 1.X Quirks
 ------------------
 
-- __name:__ This attribute is not support by Android 1.X devices, it will always return null
-- __nickname:__ This attribute is not support by Android 1.X devices, it will always return null
-- __published:__ This attribute is not support by Android 1.X devices, it will always return null
-- __updated:__ This attribute is not support by Android 1.X devices, it will always return null
-- __birthday:__ This attribute is not support by Android 1.X devices, it will always return null
-- __anniversary:__ This attribute is not support by Android 1.X devices, it will always return null
-- __gender:__ This attribute is not support by Android 1.X devices, it will always return null
-- __preferredUsername:__ This attribute is not support by Android 1.X devices, it will always return null
-- __photos:__ This attribute is not support by Android 1.X devices, it will always return null
-- __tags:__  This attribute is not support by Android 1.X devices, it will always return null
-- __relationships:__  This attribute is not support by Android 1.X devices, it will always return null
-- __urls:__  This attribute is not support by Android 1.X devices, it will always return null
-- __accounts:__ This attribute is not support by Android 1.X devices, it will always return null
-- __utcOffset:__ This attribute is not support by Android 1.X devices, it will always return null
-- __connected:__ This attribute is not support by Android 1.X devices, it will always return null
+- __save__ function not yet supported.
+- __name:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __nickname:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __published:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __updated:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __birthday:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __anniversary:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __gender:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __preferredUsername:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __photos:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __tags:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __relationships:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __urls:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __accounts:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __utcOffset:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __connected:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+
+BlackBerry Widgets (OS 5.0 and higher) Quirks
+---------------------------------------------
+
+- __id:__ Supported.  Assigned by device when contact is saved.
+- __displayname:__ Supported.  Stored in BlackBerry __title__ field.
+- __name:__ Supported.
+- __nickname:__ This property is not supported, and will always be returned as `null`. 
+- __phoneNumbers:__ Partially supported.  Phone numbers will be stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
+- __emails:__ Partially supported.  The first three email addresses will be stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
+- __addresses:__ Partially supported.  The first and second addresses will be stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
+- __ims:__ This property is not supported, and will always be returned as `null`. 
+- __organizations:__ Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
+- __published:__ This property is not supported, and will always be returned as `null`. 
+- __updated:__ This property is not supported, and will always be returned as `null`. 
+- __birthday:__ Supported.
+- __anniversary:__ Supported.
+- __gender:__ This property is not supported, and will always be returned as `null`. 
+- __note:__ Supported.
+- __preferredUsername:__ This property is not supported, and will always be returned as `null`. 
+- __photos:__ This property is not supported, and will always be returned as `null`. 
+- __tags:__  This property is not supported, and will always be returned as `null`. 
+- __relationships:__  This property is not supported, and will always be returned as `null`. 
+- __urls:__  Partially supported. The first url is stored in BlackBerry __webpage__ field.
+- __accounts:__ This property is not supported, and will always be returned as `null`.
+- __utcOffset:__ This property is not supported, and will always be returned as `null`.
+- __connected:__ This property is not supported, and will always be returned as `null`. 

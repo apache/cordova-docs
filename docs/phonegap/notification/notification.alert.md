@@ -1,11 +1,12 @@
 notification.alert
 ==================
 
-Shows an alert or dialog box.
+Shows a custom alert or dialog box.
 
-    navigator.notification.alert(message, [title], [buttonName])
+    navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
 - __message:__ Dialog message (`String`)
+- __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Alert")
 - __buttonName:__ Button name (`String`) (Optional, Default: "OK")
     
@@ -27,8 +28,13 @@ Quick Example
 
     // Android / BlackBerry Widgets (OS 5.0 and higher) / iPhone
     //
+    function alertDismissed() {
+        // do something
+    }
+
     navigator.notification.alert(
         'You are the winner!',  // message
+        alertDismissed,         // callback
         'Game Over',            // title
         'Done'                  // buttonName
     );
@@ -61,33 +67,25 @@ Full Example
             // Empty
         }
     
+        // alert dialog dismissed
+	    function alertDismissed() {
+	        // do something
+	    }
+
         // Show a custom alert
         //
         function showAlert() {
 		    navigator.notification.alert(
 		        'You are the winner!',  // message
+		        alertDismissed,         // callback
 		        'Game Over',            // title
 		        'Done'                  // buttonName
 		    );
         }
     
-        // Beep three times
-        //
-        function playBeep() {
-            navigator.notification.beep(3);
-        }
-    
-        // Vibrate for 2 seconds
-        //
-        function vibrate() {
-            navigator.notification.vibrate(2000);
-        }
-
         </script>
       </head>
       <body onload="onLoad()">
         <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-        <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-        <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
     </html>

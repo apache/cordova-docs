@@ -1,7 +1,7 @@
 ContactOrganization
 ===================
 
-Contains `ContactOrganization` properties that are returned from the devices contacts database.
+Contains organization properties of a `Contact` object.
 
 Properties
 ----------
@@ -17,12 +17,13 @@ Properties
 Details
 -------
 
-The `ContactOrganization` object is created and populated by PhoneGap, added to an array of ContactOrganization objects, and returned to the user through a callback function.
+The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Quick Example
 -------------
@@ -110,14 +111,27 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __startDate:__ This attribute is not support by Android 1.X devices, it will always return null
-- __endDate:__ This attribute is not support by Android 1.X devices, it will always return null
+- __startDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+- __endDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
 	
 Android 1.X Quirks
 ------------------
 
-- __title:__ This attribute is not support by Android 1.X devices, it will always return null
-- __startDate:__ This attribute is not support by Android 1.X devices, it will always return null
-- __endDate:__ This attribute is not support by Android 1.X devices, it will always return null
-- __location:__ This attribute is not support by Android 1.X devices, it will always return null
-- __description:__ This attribute is not support by Android 1.X devices, it will always return null
+- __title:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+- __startDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+- __endDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+- __location:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+- __description:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
+
+BlackBerry Widget (OS 5.0 and higher) Quirks
+--------------------------------------------
+
+- __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
+- __department:__ This property is not supported, and will always be returned as `null`.
+- __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
+- __startDate:__ This property is not supported, and will always be returned as `null`.
+- __endDate:__ This property is not supported, and will always be returned as `null`.
+- __location:__ This property is not supported, and will always be returned as `null`.
+- __description:__ This property is not supported, and will always be returned as `null`.
+
+

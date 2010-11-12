@@ -1,7 +1,7 @@
 ContactAccount
 ==============
 
-Contains `ContactAccount` properties of the Contact object.
+Contains user account properties of a `Contact` object.
 
 Properties
 ----------
@@ -13,7 +13,7 @@ Properties
 Details
 -------
 
-The `ContactAccount` object is created and populated by PhoneGap, and returned to the user through a callback function.
+The `ContactAccount` object stores user account properties of a contact.  A `Contact` object stores one or more accounts in a `ContactAddress[]` array.
 
 Supported Platforms
 -------------------
@@ -35,9 +35,10 @@ Quick Example
         alert('onError!');
     };
 
+    // find all contacts
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["accounts"];
+	options.filter=""; 
+	var filter = ["displayName","accounts"];
     navigator.service.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -61,10 +62,11 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["accounts"];
-			navigator.service.contacts.find(filter, onSuccess, onError, options);
+		    // find all contacts
+		    var options = new ContactFindOptions();
+			options.filter=""; 
+			var filter = ["displayName","accounts"];
+		    navigator.service.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
