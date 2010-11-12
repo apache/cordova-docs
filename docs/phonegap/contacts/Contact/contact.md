@@ -54,6 +54,14 @@ Supported Platforms
 Save Quick Example
 ------------------
 
+	function onSuccess(contacts) {
+		alert("Save Success");
+	};
+
+	function onError(contactError) {
+		alert("Error = " + contactError.code);
+	};
+
 	// create a new contact object
     var contact = navigator.service.contacts.create();
 	contact.displayName = "Plumber";
@@ -65,7 +73,7 @@ Save Quick Example
 	contact.name = name;
 	
 	// save to device
-	contact.save();
+	contact.save(onSuccess,onError);
 
 Clone Quick Example
 -------------------
@@ -120,7 +128,7 @@ Full Example
 			contact.name = name;
 
 			// save
-			contact.save();
+			contact.save(onSaveSuccess,onSaveError);
 			
 			// clone
 			var clone = contact.clone();
@@ -130,6 +138,18 @@ Full Example
 			
 			// remove
 			contact.remove(onRemoveSuccess,onRemoveError);
+        }
+        
+        // onSaveSuccess: Get a snapshot of the current contacts
+        //
+        function onSaveSuccess(contacts) {
+			alert("Save Success");
+        }
+    
+        // onSaveError: Failed to get the contacts
+        //
+        function onSaveError(contactError) {
+			alert("Error = " + contactError.code);
         }
         
         // onRemoveSuccess: Get a snapshot of the current contacts
@@ -155,7 +175,6 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __save__ function not yet supported.
 - __published:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __updated:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __gender:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
@@ -169,7 +188,6 @@ Android 2.X Quirks
 Android 1.X Quirks
 ------------------
 
-- __save__ function not yet supported.
 - __name:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __nickname:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __published:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
