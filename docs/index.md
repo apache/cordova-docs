@@ -22,6 +22,10 @@
             <span>Hook into native events through JavaScript.</span>
         </li>
         <li>
+            <h2>File</h2>
+            <span>Hook into native file system through JavaScript.</span>
+        </li>
+        <li>
             <h2>Geolocation</h2>
             <span>Make your application location aware.</span>
         </li>

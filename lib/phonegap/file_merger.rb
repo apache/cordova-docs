@@ -33,6 +33,8 @@ class FileMerger
                               'device.uuid.md',
                               'device.version.md' ],
     'events.md'          => [ 'events.deviceready.md' ],
+	'file.md'			 => [File.join('filereader', 'filereader.md'),
+							File.join('filewriter', 'filewriter.md')],
     'geolocation.md'     => [ 'geolocation.getCurrentPosition.md',
                               'geolocation.watchPosition.md',
                               'geolocation.clearWatch.md',
