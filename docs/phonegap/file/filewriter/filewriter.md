@@ -31,6 +31,8 @@ Details
 
 The `FileWriter` object is a way to write files from the devices file system.  Users register their own event listners to receive the writestart, progress, write, writeend, error and abort events.
 
+A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
+
 Supported Platforms
 -------------------
 
@@ -62,6 +64,18 @@ Write Quick Example
 	var writer = new FileWriter(paths[0] + "/write.txt");
 	writer.onwrite = writeSuccess;
 	writer.write("some sample text");
+
+Append Quick Example
+--------------------	
+
+	var writeSuccess = function(evt) {
+		console.log("Write has succeeded");
+	};
+	
+    var paths = navigator.fileMgr.getRootPaths();
+	var writer = new FileWriter(paths[0] + "/write.txt", true);
+	writer.onwrite = writeSuccess;
+	writer.write("some more text");
 	
 Abort Quick Example
 -------------------
