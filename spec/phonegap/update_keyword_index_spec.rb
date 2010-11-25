@@ -37,6 +37,12 @@ describe UpdateKeywordIndex do
     Nokogiri::HTML(File.read @file).css('#content > hr').should have(0).items
   end
   
+  it 'should update references from index.md.html to index.html' do
+    Nokogiri::HTML(File.read @file).to_html.scan('index.md.html').length.should_not == 0
+    @update_keyword.run @file
+    Nokogiri::HTML(File.read @file).to_html.scan('index.md.html').length.should     == 0
+  end
+  
   after :all do
     Helper::remove_tmp_directory
   end

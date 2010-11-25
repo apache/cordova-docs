@@ -26,7 +26,9 @@ class UpdateKeywordIndex
     element = doc.css('#content > hr')[0]
     element.remove unless element.nil?
     
-    File.open(filename, 'w') { |file| file.write doc.to_html }
+    # Update referenced to index.md.html
+    # Then save
+    File.open(filename, 'w') { |file| file.write doc.to_html.gsub('index.md.html', 'index.html') }
     
     return true
   end
