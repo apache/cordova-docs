@@ -63,7 +63,7 @@ Read As Text Quick Example
 	var reader = new FileReader();
 	reader.onload = win;
 	reader.onerror= fail;
-	reader.readAsText(paths[0] + "/readme.txt");
+	reader.readAsText(paths[0] + "readme.txt");
 
 Abort Quick Example
 -------------------
@@ -75,7 +75,7 @@ Abort Quick Example
     var paths = navigator.fileMgr.getRootPaths();
 	var reader = new FileReader();
 	reader.onabort = aborted;
-	reader.readAsText(paths[0] + "/readme.txt");
+	reader.readAsText(paths[0] + "readme.txt");
 	reader.abort();
 
 Full Example
@@ -103,7 +103,7 @@ Full Example
 			var reader = new FileReader();
 			reader.onload = win;
 			reader.onerror= fail;
-			reader.readAsText(paths[0] + "/readme.txt");
+			reader.readAsText(paths[0] + "readme.txt");
         }
 
 		function win(evt) {
