@@ -34,6 +34,10 @@
             <span>Make your application location aware.</span>
         </li>
         <li>
+            <h2>Media</h2>
+            <span>Record and play back audio files.</span>
+        </li>
+        <li>
             <h2>Network</h2>
             <span>Quickly check the network state.</span>
         </li>
