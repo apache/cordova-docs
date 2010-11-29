@@ -37,12 +37,13 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Seek Quick Example
 ------------------------------
 	
     var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "/write.txt");
+	var writer = new FileWriter(paths[0] + "write.txt");
 	// fast forwards file pointer to end of file
 	writer.seek(writer.length);	
 
@@ -50,7 +51,7 @@ Truncate Quick Example
 --------------------------
 
     var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "/write.txt");
+	var writer = new FileWriter(paths[0] + "write.txt");
 	writer.truncate(10);	
 
 Write Quick Example
@@ -61,7 +62,7 @@ Write Quick Example
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "/write.txt");
+	var writer = new FileWriter(paths[0] + "write.txt");
 	writer.onwrite = writeSuccess;
 	writer.write("some sample text");
 
@@ -73,7 +74,7 @@ Append Quick Example
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "/write.txt", true);
+	var writer = new FileWriter(paths[0] + "write.txt", true);
 	writer.onwrite = writeSuccess;
 	writer.write("some more text");
 	
@@ -85,7 +86,7 @@ Abort Quick Example
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "/write.txt");
+	var writer = new FileWriter(paths[0] + "write.txt");
 	writer.onabort = aborted;
 	writer.write("some sample text");
 	writer.abort();
@@ -112,7 +113,7 @@ Full Example
         //
         function onDeviceReady() {
 			var paths = navigator.fileMgr.getRootPaths();
-			var writer = new FileWriter(paths[0] + "/write.txt");
+			var writer = new FileWriter(paths[0] + "write.txt");
 			writer.onwrite = writeSuccess;
 			writer.write("some sample text");
 			// The file is now 'some sample text'
@@ -121,7 +122,7 @@ Full Example
 		function writeSuccess() {
 			console.log("Write has succeeded");
 			var paths = navigator.fileMgr.getRootPaths();
-			var writer = new FileWriter(paths[0] + "/write.txt");
+			var writer = new FileWriter(paths[0] + "write.txt");
 			writer.seek(4);
 			writer.truncate(writer.position);
 			// The file is now 'some'
