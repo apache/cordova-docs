@@ -10,6 +10,10 @@
             <span>Capture a photo using the device's camera.</span>
         </li>
         <li>
+            <h2>Compass</h2>
+            <span>Obtain the direction that the device is pointing.</span>
+        </li>
+        <li>
             <h2>Contacts</h2>
             <span>Work with the devices contact database.</span>
         </li>
