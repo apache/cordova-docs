@@ -45,6 +45,10 @@
             <h2>Notification</h2>
             <span>Visual, audible, and tactile device notifications.</span>
         </li>
+        <li>
+            <h2>Storage</h2>
+            <span>Hook into the devices native storage options.</span>
+        </li>
     </ul>
     <h1>Guides</h1>
     <ul>

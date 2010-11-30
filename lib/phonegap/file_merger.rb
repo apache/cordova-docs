@@ -68,7 +68,18 @@ class FileMerger
     'notification.md'    => [ 'notification.alert.md',
                               'notification.confirm.md',
                               'notification.beep.md',
-                              'notification.vibrate.md' ]
+                              'notification.vibrate.md' ],
+	'storage.md'		 => [ 'storage.opendatabase.md',
+                              File.join('parameters',   'name.md'),
+                              File.join('parameters',   'version.md'),
+                              File.join('parameters',   'display_name.md'),
+                              File.join('parameters',   'size.md'),
+                              File.join('database',   	'database.md'),
+                              File.join('sqltransaction',   	'sqltransaction.md'),
+                              File.join('sqlresultset',   	'sqlresultset.md'),
+                              File.join('sqlresultsetlist',   	'sqlresultsetlist.md'),
+                              File.join('sqlerror',   	'sqlerror.md'),
+							  File.join('localstorage', 	'localstorage.md') ]
   }
   
   def run(file_path)
