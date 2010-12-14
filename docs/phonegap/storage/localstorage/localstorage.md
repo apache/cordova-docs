@@ -3,7 +3,7 @@ localStorage
 
 Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
-    var storage = navigator.localStorage;
+    var storage = window.localStorage;
 
 Methods
 -------
@@ -29,28 +29,28 @@ Supported Platforms
 Key Quick Example
 -------------
 
-    var keyName = navigator.localStorage.key(0);
+    var keyName = window.localStorage.key(0);
 
 Set Item Quick Example
 -------------
 
-    navigator.localStorage.setItem("key", "value");
+    window.localStorage.setItem("key", "value");
 
 Get Item Quick Example
 -------------
 
-	var value = navigator.localStorage.getItem("key");
+	var value = window.localStorage.getItem("key");
 	// value is now equal to "value"
 
 Remove Item Quick Example
 -------------
 
-	navigator.localStorage.removeItem("key");
+	window.localStorage.removeItem("key");
 
 Clear Quick Example
 -------------
 
-	navigator.localStorage.clear();
+	window.localStorage.clear();
 
 Full Example
 ------------
@@ -73,14 +73,14 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			navigator.localStorage.setItem("key", "value");
-			var keyname = navigator.localStorage.key(i);
+			window.localStorage.setItem("key", "value");
+			var keyname = window.localStorage.key(i);
 			// keyname is now equal to "key"
-			var value = navigator.localStorage.getItem("key");
+			var value = window.localStorage.getItem("key");
 			// value is now equal to "value"
-			navigator.localStorage.removeItem("key");
-			navigator.localStorage.setItem("key2", "value2");
-			navigator.localStorage.clear();
+			window.localStorage.removeItem("key");
+			window.localStorage.setItem("key2", "value2");
+			window.localStorage.clear();
 			// localStorage is now empty
         }
     
