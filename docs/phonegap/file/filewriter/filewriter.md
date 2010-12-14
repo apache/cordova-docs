@@ -37,6 +37,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry Widgets (OS 5.0 and higher)
 
 Seek Quick Example
 ------------------------------

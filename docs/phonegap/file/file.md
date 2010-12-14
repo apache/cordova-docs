@@ -8,3 +8,4 @@ Objects
 
 - FileReader
 - FileWriter
+- FileError
