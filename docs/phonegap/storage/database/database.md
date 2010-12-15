@@ -12,7 +12,7 @@ Methods
 Details
 -------
 
-A Database object is returned from a call to navigator.openDatabase().  
+A Database object is returned from a call to `window.openDatabase()`.
 
 Supported Platforms
 -------------------
