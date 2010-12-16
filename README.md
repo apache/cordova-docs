@@ -8,14 +8,14 @@ Document File Format
 
 All of the [PhoneGap](http://www.phonegap.com/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document PhoneGap's core API and platform-specific APIs.
 
-Doc Branch Structure
+Repository Structure
 --------------------
 
-    markdown/
-    markdown/phonegap/
-    markdown/phonegap/class_name/
-    markdown/phonegap/class_name/class_name.md
-    markdown/phonegap/class_name/class_name.method_name.md
+    docs/
+    docs/phonegap/
+    docs/phonegap/class_name/
+    docs/phonegap/class_name/class_name.md
+    docs/phonegap/class_name/class_name.method_name.md
 
 Documentation Generator
 -----------------------
