@@ -10,6 +10,10 @@
             <span>Capture a photo using the device's camera.</span>
         </li>
         <li>
+            <h2>Compass</h2>
+            <span>Obtain the direction that the device is pointing.</span>
+        </li>
+        <li>
             <h2>Contacts</h2>
             <span>Work with the devices contact database.</span>
         </li>
@@ -22,8 +26,16 @@
             <span>Hook into native events through JavaScript.</span>
         </li>
         <li>
+            <h2>File</h2>
+            <span>Hook into native file system through JavaScript.</span>
+        </li>
+        <li>
             <h2>Geolocation</h2>
             <span>Make your application location aware.</span>
+        </li>
+        <li>
+            <h2>Media</h2>
+            <span>Record and play back audio files.</span>
         </li>
         <li>
             <h2>Network</h2>
@@ -32,6 +44,10 @@
         <li>
             <h2>Notification</h2>
             <span>Visual, audible, and tactile device notifications.</span>
+        </li>
+        <li>
+            <h2>Storage</h2>
+            <span>Hook into the devices native storage options.</span>
         </li>
     </ul>
     <h1>Guides</h1>

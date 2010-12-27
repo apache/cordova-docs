@@ -1,14 +1,14 @@
 notification.confirm
 ====================
 
-Shows a confirmation dialog box.
+Shows a customizable confirmation dialog box.
 
-    navigator.notification.confirm(message, [title], [buttonLabels])
+    navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
 - __message:__ Dialog message (`String`)
+- __confirmCallback:__ - Callback to invoke with index of button pressed (1, 2 or 3). (`Number`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Confirm")
 - __buttonLabels:__ Comma separated string with button labels (`String`) (Optional, Default: "OK,Cancel")
-- __returns:__ Index of the button clicked (1, 2 or 3). (`Number`)
     
 Description
 -----------
@@ -25,11 +25,21 @@ Supported Platforms
 Quick Example
 -------------
 
-    navigator.notification.confirm(
-        'You are the winner!',  // message
-        'Game Over',            // title
-        'Restart,Exit'          // buttonLabels
-    );
+	// process the confirmation dialog result
+	function onConfirm(button) {
+		alert('You selected button ' + button);
+	}
+
+    // Show a custom confirmation dialog
+    //
+    function showConfirm() {
+        navigator.notification.confirm(
+	        'You are the winner!',  // message
+			onConfirm,				// callback to invoke with index of button pressed
+	        'Game Over',            // title
+	        'Restart,Exit'          // buttonLabels
+        );
+    }
         
 Full Example
 ------------
@@ -55,15 +65,20 @@ Full Example
             // Empty
         }
     
-        // Show a custom confirm
+		// process the confirmation dialog result
+		function onConfirm(button) {
+			alert('You selected button ' + button);
+		}
+
+        // Show a custom confirmation dialog
         //
         function showConfirm() {
-            var r = navigator.notification.confirm(
-                'You are the winner!',  // message
-                'Game Over',            // title
-                'Restart,Exit'          // buttonLabels
+            navigator.notification.confirm(
+		        'You are the winner!',  // message
+				onConfirm,				// callback to invoke with index of button pressed
+		        'Game Over',            // title
+		        'Restart,Exit'          // buttonLabels
             );
-            navigator.notification.alert('You selected button ' + r);
         }
     
         </script>
