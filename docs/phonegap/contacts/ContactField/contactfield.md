@@ -20,6 +20,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -116,4 +117,6 @@ BlackBerry Widget (OS 5.0 and higher) Quirks
 - __value:__ Supported.
 - __primary:__ This property is not supported, and will always return `false`.
 
-
+iOS Quirks
+-----------
+- __primary:__ This property is not supported on iOS devices and will always return `false`.

@@ -50,6 +50,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Save Quick Example
 ------------------
@@ -65,6 +66,7 @@ Save Quick Example
 	// create a new contact object
     var contact = navigator.service.contacts.create();
 	contact.displayName = "Plumber";
+	contact.nickname = "Plumber"; 		//specify both to support all devices
 	
 	// populate some fields
 	var name = new ContactName();
@@ -122,6 +124,7 @@ Full Example
 		    // create
 		    var contact = navigator.service.contacts.create();
 			contact.displayName = "Plumber";
+			contact.nickname = "Plumber"; 		//specify both to support all devices
 			var name = new ContactName();
 			name.givenName = "Jane";
 			name.familyName = "Doe";
@@ -230,3 +233,17 @@ BlackBerry Widgets (OS 5.0 and higher) Quirks
 - __accounts:__ This property is not supported, and will always be returned as `null`.
 - __utcOffset:__ This property is not supported, and will always be returned as `null`.
 - __connected:__ This property is not supported, and will always be returned as `null`. 
+
+iOS Quirks
+----------
+- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
+- __anniversary:__ This property is not currently supported and will be returned as `null`.
+- __gender:__ This property is not supported by iOS devices, and will always be returned as `null`.
+- __preferredUsername:__ This property is not supported by iOS devices, and will always be returned as `null`.
+- __photos:__ This property is not currently supported and will be returned as `null`. 
+- __tags:__  This property is not currently supported and will always be returned as `null`.
+- __relationships:__  This property is not supported and will be returned as `null`.
+- __urls:__  This property is not currently supported and will be returned as `null`.
+- __accounts:__ This property is not supported by iOS devices and will be returned as `null`.
+- __utcOffset:__ This property is not currently supported and will be returned as `null`.
+- __connected:__ This property is not currently supported and will always be returned as `null`.
