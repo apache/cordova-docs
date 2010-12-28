@@ -23,6 +23,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -128,4 +129,6 @@ BlackBerry Widget (OS 5.0 and higher) Quirks
 - __postalCode:__ Supported.  Stored in BlackBerry __zipPostal__ address field.
 - __country:__ Supported.
 
-
+iOS Quirks
+----------
+- __formatted:__ Not currently supported.

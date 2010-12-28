@@ -23,6 +23,7 @@ Supported Platforms
 
 - Android 2.X
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -110,3 +111,7 @@ BlackBerry Widgets (OS 5.0 and higher) Quirks
 - __middleName:__ This property is not supported, and will always return `null`.
 - __honorificPrefix:__ This property is not supported, and will always return `null`.
 - __honorificSuffix:__ This property is not supported, and will always return `null`.
+
+iOS Quirks
+------------
+- __formatted:__ Partially supported.  Will return iOS Composite Name but will not store.

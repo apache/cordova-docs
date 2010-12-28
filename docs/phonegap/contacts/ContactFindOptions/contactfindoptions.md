@@ -16,6 +16,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -95,3 +96,10 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
+    
+iOS Quirks
+----------
+- __filter:__ iOS currently only searchs name fields.
+- __multiple:__ Currently ignored by iOS.
+- __limit:__ Currently ignored by iOS.
+- __updatedSince:__ Currently ignored by iOS.
