@@ -237,10 +237,13 @@ BlackBerry Widgets (OS 5.0 and higher) Quirks
 iOS Quirks
 ----------
 - __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
+- __published:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
+- __updated:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
+- __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
 - __anniversary:__ This property is not currently supported and will be returned as `null`.
 - __gender:__ This property is not supported by iOS devices, and will always be returned as `null`.
 - __preferredUsername:__ This property is not supported by iOS devices, and will always be returned as `null`.
-- __photos:__ This property is not currently supported and will be returned as `null`. 
+- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Temporary folder is deleted when application exits. 
 - __tags:__  This property is not currently supported and will always be returned as `null`.
 - __relationships:__  This property is not supported and will be returned as `null`.
 - __urls:__  This property is not currently supported and will be returned as `null`.

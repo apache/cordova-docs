@@ -99,7 +99,5 @@ Full Example
     
 iOS Quirks
 ----------
-- __filter:__ iOS currently only searchs name fields.
-- __multiple:__ Currently ignored by iOS.
-- __limit:__ Currently ignored by iOS.
-- __updatedSince:__ Currently ignored by iOS.
+- __filter:__ iOS currently only searches name fields.
+- __updatedSince:__ Must be specified as a JavaScript Date object.
