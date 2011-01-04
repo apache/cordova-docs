@@ -17,3 +17,8 @@ Options
 - __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: true)
 - __limit:__ The maximum number of contacts to return. Only applied if multiple is `true`. _(Number)_ (Default: MAXINT)
 - __updatedSince:__ Only return contacts updated since the date specified. _(Date)_ (Default: "")
+
+iOS Quirks
+----------
+- __filter:__ iOS currently only searches name fields.
+- __updatedSince:__ Must be specified as a JavaScript Date object.

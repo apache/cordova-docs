@@ -24,6 +24,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+-iOS
 
 Quick Example
 -------------
@@ -133,5 +134,15 @@ BlackBerry Widget (OS 5.0 and higher) Quirks
 - __endDate:__ This property is not supported, and will always be returned as `null`.
 - __location:__ This property is not supported, and will always be returned as `null`.
 - __description:__ This property is not supported, and will always be returned as `null`.
+
+iOS Quirks
+-----------
+- __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
+- __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
+- __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
+- __startDate:__ This property is not supported by iOS devices, and will always be returned as `null`. 
+- __endDate:__ This property is not supported by iOS devices, and will always be returned as `null`. 
+- __location:__ This property is not supported by iOS devices, and will always be returned as `null`. 
+- __description:__ This property is not support by iOS devices, and will always be returned as `null`. 
 
 

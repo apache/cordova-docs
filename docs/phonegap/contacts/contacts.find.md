@@ -27,6 +27,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -94,3 +95,7 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
+    
+iOS Quirks
+----------
+- iOS currently only supports searching by names.

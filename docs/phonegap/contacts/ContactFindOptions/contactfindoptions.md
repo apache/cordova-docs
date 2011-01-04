@@ -16,6 +16,7 @@ Supported Platforms
 
 - Android
 - BlackBerry Widgets (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -95,3 +96,8 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
+    
+iOS Quirks
+----------
+- __filter:__ iOS currently only searches name fields.
+- __updatedSince:__ Must be specified as a JavaScript Date object.
