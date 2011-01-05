@@ -22,6 +22,7 @@ Methods
 - media.getDuration: Returns the duration of an audio file.
 - media.play: Start or resume playing audio file.
 - media.pause: Pause playing audio file.
+- media.release: Releases the underlying OS'es audio resources.
 - media.startRecord: Start recording audio file.
 - media.stopRecord: Stop recording audio file.
 - media.stop: Stop playing audio file.

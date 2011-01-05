@@ -55,6 +55,7 @@ class FileMerger
                               'media.getDuration.md',
                               'media.pause.md',
                               'media.play.md',
+                              'media.release.md',
                               'media.startRecord.md',
                               'media.stop.md',
                               'media.stopRecord.md',
