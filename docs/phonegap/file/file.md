@@ -9,3 +9,7 @@ Objects
 - FileReader
 - FileWriter
 - FileError
+- FileTransfer
+- FileUploadOptions
+- FileUploadResult
+- FileTransferError
