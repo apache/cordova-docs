@@ -84,7 +84,7 @@ Full Example
 						"Given Name: "  + contacts[i].name.givenName + "\n" + 
 						"Middle Name: "  + contacts[i].name.middleName + "\n" + 
 						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
-						"Prefix: "  + contacts[i].name.honorificSuffix);
+						"Prefix: "  + contacts[i].name.honorificPrefix);
 			}
 		};
     
@@ -101,6 +101,10 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
+
+Android Quirks
+------------
+- __formatted:__ Partially supported.  Will return the concatenation of honorificPrefix, givenName, middleName, familyName and honorificSuffix but will not store.
 
 BlackBerry Widgets (OS 5.0 and higher) Quirks
 ---------------------------------------------
