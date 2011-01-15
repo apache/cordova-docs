@@ -43,7 +43,7 @@ Quick Example
     // find all contacts with 'Bob' in any name field
     var options = new ContactFindOptions();
 	options.filter="Bob"; 
-	var fields = ["displayName", "names"];
+	var fields = ["displayName", "name"];
     navigator.service.contacts.find(fields, onSuccess, onError, options);
 
 Full Example
@@ -70,7 +70,7 @@ Full Example
 		    // find all contacts with 'Bob' in any name field
 		    var options = new ContactFindOptions();
 			options.filter="Bob"; 
-			var fields = ["displayName", "names"];
+			var fields = ["displayName", "name"];
 		    navigator.service.contacts.find(fields, onSuccess, onError, options);
         }
     
@@ -98,4 +98,4 @@ Full Example
     
 iOS Quirks
 ----------
-- iOS currently only supports searching by names.
+- iOS currently only supports searching by name.
