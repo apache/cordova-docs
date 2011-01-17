@@ -49,7 +49,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Save Quick Example
@@ -207,7 +207,7 @@ Android 1.X Quirks
 - __utcOffset:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __connected:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 
-BlackBerry Widgets (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
 - __id:__ Supported.  Assigned by device when contact is saved.

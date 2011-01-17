@@ -10,7 +10,7 @@ Supported Platforms
 
 - Android
 - BlackBerry
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
 Quick Example

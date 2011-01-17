@@ -19,7 +19,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -110,7 +110,7 @@ Android Quirks
 
 - __primary:__ This property is not support by Android devices, and will always return `false`.
 
-BlackBerry Widget (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __type:__ Partially supported.  Used for phone numbers.
