@@ -22,7 +22,7 @@ Supported Platforms
 -------------------
 
 - Android 2.X
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -106,7 +106,7 @@ Android Quirks
 ------------
 - __formatted:__ Partially supported.  Will return the concatenation of honorificPrefix, givenName, middleName, familyName and honorificSuffix but will not store.
 
-BlackBerry Widgets (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
 - __formatted:__ Partially supported.  Will return concatenation of BlackBerry __firstName__ and __lastName__ fields.

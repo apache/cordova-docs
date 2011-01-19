@@ -23,7 +23,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 -iOS
 
 Quick Example
@@ -124,7 +124,7 @@ Android 1.X Quirks
 - __location:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
 - __description:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
 
-BlackBerry Widget (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.

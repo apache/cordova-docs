@@ -22,7 +22,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -119,7 +119,7 @@ Android 1.X Quirks
 - __postalCode:__ This property is not support by Android 1.X devices, and will always return `null`.
 - __country:__ This property is not support by Android 1.X devices, and will always return `null`.
 
-BlackBerry Widget (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __formatted:__ Partially supported.  Will return concatenation of all BlackBerry address fields.

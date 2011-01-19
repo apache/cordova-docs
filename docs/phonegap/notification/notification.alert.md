@@ -20,13 +20,13 @@ Supported Platforms
 
 - Android
 - BlackBerry (OS 4.6)
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 
 Quick Example
 -------------
 
-    // Android / BlackBerry Widgets (OS 5.0 and higher) / iPhone
+    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
     //
     function alertDismissed() {
         // do something
