@@ -182,7 +182,6 @@ Android 2.X Quirks
 - __updated:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __gender:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __preferredUsername:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __photos:__ This property is currently read only. You may retrieve the contacts photos but not set one.
 - __tags:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __accounts:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __utcOffset:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
