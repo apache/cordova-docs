@@ -9,10 +9,6 @@ Properties
 - __name:__ The name of the organization. _(DOMString)_
 - __department:__ The department the contract works for. _(DOMString)_
 - __title:__ The contacts title at the organization. _(DOMString)_
-- __startDate:__ The date the contact started working with the organization. _(DOMString)_
-- __endDate:__ The date the contact finished working with the organization. _(DOMString)_
-- __location:__ The address of the location. _(DOMString)_
-- __description:__ A description of the role the contact has in the organization. _(DOMString)_
 
 Details
 -------
@@ -24,7 +20,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
--iOS
+- iOS
 
 Quick Example
 -------------
@@ -34,11 +30,7 @@ Quick Example
 			for (var j=0; j<contacts[i].organizations.length; j++) {
 				alert("Name: " + contacts[i].organizations[j].name + "\n" + 
 						"Department: "  + contacts[i].organizations[j].department + "\n" + 
-						"Title: "  + contacts[i].organizations[j].title + "\n" + 
-						"Start Date: "  + contacts[i].organizations[j].startDate + "\n" + 
-						"End Date: "  + contacts[i].organizations[j].endDate + "\n" + 
-						"Location: "  + contacts[i].organizations[j].location + "\n" + 
-						"Description: "  + contacts[i].organizations[j].description);
+						"Title: "  + contacts[i].organizations[j].title);
 			}
 		}
     };
@@ -86,11 +78,7 @@ Full Example
 				for (var j=0; j<contacts[i].organizations.length; j++) {
 					alert("Name: " + contacts[i].organizations[j].name + "\n" + 
 							"Department: "  + contacts[i].organizations[j].department + "\n" + 
-							"Title: "  + contacts[i].organizations[j].title + "\n" + 
-							"Start Date: "  + contacts[i].organizations[j].startDate + "\n" + 
-							"End Date: "  + contacts[i].organizations[j].endDate + "\n" + 
-							"Location: "  + contacts[i].organizations[j].location + "\n" + 
-							"Description: "  + contacts[i].organizations[j].description);
+							"Title: "  + contacts[i].organizations[j].title);
 				}
 			}
 		};
@@ -108,21 +96,11 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-
-Android 2.X Quirks
-------------------
-
-- __startDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
-- __endDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
 	
 Android 1.X Quirks
 ------------------
 
 - __title:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
-- __startDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
-- __endDate:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
-- __location:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
-- __description:__ This property is not support by Android 1.X devices, and will always be returned as `null`. 
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
@@ -130,19 +108,11 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 - __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
 - __department:__ This property is not supported, and will always be returned as `null`.
 - __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
-- __startDate:__ This property is not supported, and will always be returned as `null`.
-- __endDate:__ This property is not supported, and will always be returned as `null`.
-- __location:__ This property is not supported, and will always be returned as `null`.
-- __description:__ This property is not supported, and will always be returned as `null`.
 
 iOS Quirks
 -----------
 - __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
 - __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
 - __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
-- __startDate:__ This property is not supported by iOS devices, and will always be returned as `null`. 
-- __endDate:__ This property is not supported by iOS devices, and will always be returned as `null`. 
-- __location:__ This property is not supported by iOS devices, and will always be returned as `null`. 
-- __description:__ This property is not support by iOS devices, and will always be returned as `null`. 
 
 

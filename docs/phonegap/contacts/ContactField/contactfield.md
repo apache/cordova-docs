@@ -8,12 +8,12 @@ Properties
 
 - __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)_
 - __value:__ The value of the field (such as a phone number or email address). _(DOMString)_
-- __primary:__ Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
+- __pref:__ Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
 Details
 -------
 
-The `ContactField` object is a reusable component that is used to support contact fields in a generic fashion.  Each `ContactField` object contains a value property, a type property, and a primary property.  A `Contact` object stores several properties in `ContactField[]` arrays, such as phone numbers and email addresses.
+The `ContactField` object is a reusable component that is used to support contact fields in a generic fashion.  Each `ContactField` object contains a value property, a type property, and a pref property.  A `Contact` object stores several properties in `ContactField[]` arrays, such as phone numbers and email addresses.
 
 Supported Platforms
 -------------------
@@ -31,7 +31,7 @@ Quick Example
 	// store contact phone numbers in ContactField[]
 	var phoneNumbers = [3];
 	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-	phoneNumbers[1] = new ContactField('mobile', '917-555'-5432', true); // primary number
+	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
 	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
 	contact.phoneNumbers = phoneNumbers;
 	
@@ -65,7 +65,7 @@ Full Example
 			// store contact phone numbers in ContactField[]
 			var phoneNumbers = [3];
 			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-			phoneNumbers[1] = new ContactField('mobile', '917-555'-5432', true); // primary number
+			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
 			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
 			contact.phoneNumbers = phoneNumbers;
 
@@ -108,15 +108,15 @@ Full Example
 Android Quirks
 --------------
 
-- __primary:__ This property is not support by Android devices, and will always return `false`.
+- __pref:__ This property is not support by Android devices, and will always return `false`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __type:__ Partially supported.  Used for phone numbers.
 - __value:__ Supported.
-- __primary:__ This property is not supported, and will always return `false`.
+- __pref:__ This property is not supported, and will always return `false`.
 
 iOS Quirks
 -----------
-- __primary:__ This property is not supported on iOS devices and will always return `false`.
+- __pref:__ This property is not supported on iOS devices and will always return `false`.

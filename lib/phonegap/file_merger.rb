@@ -22,7 +22,6 @@ class FileMerger
     'contacts.md'          => [ 'contacts.create.md',
                               'contacts.find.md',
                               File.join('Contact',   'contact.md'),
-                              File.join('ContactAccount',   'contactaccount.md'),
                               File.join('ContactAddress',   'contactaddress.md'),
                               File.join('ContactField',   'contactfield.md'),
                               File.join('ContactFindOptions',   'contactfindoptions.md'),

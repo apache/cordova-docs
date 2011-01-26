@@ -25,6 +25,5 @@ Objects
 - ContactField
 - ContactAddress
 - ContactOrganization
-- ContactAccount
 - ContactFindOptions
 - ContactError

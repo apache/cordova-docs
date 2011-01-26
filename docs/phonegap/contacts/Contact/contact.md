@@ -15,20 +15,14 @@ Properties
 - __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
 - __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
 - __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
-- __published:__ The date the contact was first added to the database. _(DOMString)_
-- __updated:__ The last date the contact was updated. _(DOMString)_
-- __birthday:__ The birthday of the contact. _(DOMString)_
-- __anniversary:__ The wedding anniversary of the contact. _(DOMString)_
+- __revision:__ The last date the contact was revised. _(DOMString)_
+- __birthday:__ The birthday of the contact. _(Date)_
 - __gender:__ The gender of the contact. _(DOMString)_
 - __note:__ A note about the contact. _(DOMString)_
-- __preferredUsername:__ The preferred username of the contact. _(DOMString)_
 - __photos:__ An array of all the contact's photos. _(ContactField[])_
-- __tags:__  An array of all the contacts user defined tags. _(ContactField[])_
-- __relationships:__  An array of all the contact's relationships. _(ContactField[])_
+- __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
 - __urls:__  An array of web pages associated to the contact. _(ContactField[])_
-- __accounts:__ An array of accounts associated to the contact. _(ContactAccount[])_
-- __utcOffset:__ The offset from UTC of the contacts time zone. _(DOMString)_
-- __connected:__ Only true if the contact and the user have a bi-directional relationship. _(DOMString)_
+- __timezone:__ The timezone of the conact. _(DOMString)_
 
 Methods
 -------
@@ -178,33 +172,23 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __published:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __updated:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __revision:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __gender:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __preferredUsername:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __tags:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __accounts:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __utcOffset:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __connected:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __categories:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
+- __timezone:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 
 Android 1.X Quirks
 ------------------
 
 - __name:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __nickname:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __published:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __updated:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __revision:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __birthday:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __anniversary:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __gender:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __preferredUsername:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __photos:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __tags:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __relationships:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __categories:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __urls:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __accounts:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __utcOffset:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __connected:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+- __timezone:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
@@ -218,34 +202,20 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 - __addresses:__ Partially supported.  The first and second addresses will be stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
 - __ims:__ This property is not supported, and will always be returned as `null`. 
 - __organizations:__ Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
-- __published:__ This property is not supported, and will always be returned as `null`. 
-- __updated:__ This property is not supported, and will always be returned as `null`. 
+- __revision:__ This property is not supported, and will always be returned as `null`. 
 - __birthday:__ Supported.
-- __anniversary:__ Supported.
 - __gender:__ This property is not supported, and will always be returned as `null`. 
 - __note:__ Supported.
-- __preferredUsername:__ This property is not supported, and will always be returned as `null`. 
-- __photos:__ This property is not supported, and will always be returned as `null`. 
-- __tags:__  This property is not supported, and will always be returned as `null`. 
-- __relationships:__  This property is not supported, and will always be returned as `null`. 
+- __photos:__ - Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, specify a file:/// or http:// URL pointing to the image.  The image will be scaled down before saving.  Returns a file URL to the photo.
+- __categories:__  Partially supported.  Only 'Business' and 'Personal' categories are supported. 
 - __urls:__  Partially supported. The first url is stored in BlackBerry __webpage__ field.
-- __accounts:__ This property is not supported, and will always be returned as `null`.
-- __utcOffset:__ This property is not supported, and will always be returned as `null`.
-- __connected:__ This property is not supported, and will always be returned as `null`. 
+- __timezone:__ This property is not supported, and will always be returned as `null`. 
 
 iOS Quirks
 ----------
 - __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
-- __published:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
-- __updated:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
+- __revision:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
-- __anniversary:__ This property is not currently supported and will be returned as `null`.
 - __gender:__ This property is not supported by iOS devices, and will always be returned as `null`.
-- __preferredUsername:__ This property is not supported by iOS devices, and will always be returned as `null`.
 - __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Temporary folder is deleted when application exits. 
-- __tags:__  This property is not currently supported and will always be returned as `null`.
-- __relationships:__  This property is not supported and will be returned as `null`.
-- __urls:__  This property is not currently supported and will be returned as `null`.
-- __accounts:__ This property is not supported by iOS devices and will be returned as `null`.
-- __utcOffset:__ This property is not currently supported and will be returned as `null`.
-- __connected:__ This property is not currently supported and will always be returned as `null`.
+- __categories:__  This property is not currently supported and will always be returned as `null`.
