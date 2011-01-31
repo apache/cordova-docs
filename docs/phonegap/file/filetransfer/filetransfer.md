@@ -16,7 +16,7 @@ Methods
 Details
 -------
 
-The `FileTransfer` object is a way to upload files to a server using a HTTP multi-part POST.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload the success callback will be called with a FileUploadResult object.  If an error occurs the error callback with be executed with FileTransferError object.
+The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
 
 Supported Platforms
 -------------------
