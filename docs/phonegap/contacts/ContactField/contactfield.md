@@ -15,6 +15,8 @@ Details
 
 The `ContactField` object is a reusable component that is used to support contact fields in a generic fashion.  Each `ContactField` object contains a value property, a type property, and a pref property.  A `Contact` object stores several properties in `ContactField[]` arrays, such as phone numbers and email addresses.
 
+In most instances, there are no pre-determined values for the __type__ attribute of a `ContactField` object.  For example, a phone number can have __type__ values of 'home', 'work', 'mobile', 'iPhone', or any other value that is supported by the contact database on a particular device platform.  However, in the case of the `Contact` __photos__ field, PhoneGap makes use of the __type__ field to indicate the format of the returned image.  PhoneGap will return __type: 'url'__ when the __value__ attribute contains a URL to the photo image, or __type: 'base64'__ when the returned __value__ attribute contains a Base64 encoded image string.
+
 Supported Platforms
 -------------------
 
@@ -83,10 +85,11 @@ Full Example
         //
 		function onSuccess(contacts) {
 			for (var i=0; i<contacts.length; i++) {
+				// display phone numbers
 				for (var j=0; j<contacts[i].phoneNumbers.length; j++) {
 					alert("Type: " + contacts[i].phoneNumbers[j].type + "\n" + 
 							"Value: "  + contacts[i].phoneNumbers[j].value + "\n" + 
-							"Primary: "  + contacts[i].phoneNumbers[j].primary);
+							"Preferred: "  + contacts[i].phoneNumbers[j].pref);
 				}
 			}
 		};
