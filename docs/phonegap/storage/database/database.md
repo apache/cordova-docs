@@ -18,7 +18,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
 Transaction Quick Example

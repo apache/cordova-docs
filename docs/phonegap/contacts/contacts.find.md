@@ -10,7 +10,7 @@ Description
 
 contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of empty `Contact` objects.
+Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated.
 
 The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
 
@@ -20,13 +20,13 @@ Parameters
 - __contactFields:__ Contact fields to be used as search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
 - __contactSuccess:__ Success callback function that is invoked with the contacts returned from the contacts database. [Required]
 - __contactError:__ Error callback function. Invoked when error occurs. [Optional]
-- __contactFindOptions:__ Search options to limit and/or filter contacts. [Optional]
+- __contactFindOptions:__ Search options to filter contacts. [Optional]
 
 Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -43,7 +43,7 @@ Quick Example
     // find all contacts with 'Bob' in any name field
     var options = new ContactFindOptions();
 	options.filter="Bob"; 
-	var fields = ["displayName", "names"];
+	var fields = ["displayName", "name"];
     navigator.service.contacts.find(fields, onSuccess, onError, options);
 
 Full Example
@@ -70,7 +70,7 @@ Full Example
 		    // find all contacts with 'Bob' in any name field
 		    var options = new ContactFindOptions();
 			options.filter="Bob"; 
-			var fields = ["displayName", "names"];
+			var fields = ["displayName", "name"];
 		    navigator.service.contacts.find(fields, onSuccess, onError, options);
         }
     
@@ -98,4 +98,4 @@ Full Example
     
 iOS Quirks
 ----------
-- iOS currently only supports searching by names.
+- iOS currently only supports searching by name.

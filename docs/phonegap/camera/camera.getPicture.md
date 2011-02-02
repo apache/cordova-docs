@@ -29,7 +29,7 @@ Supported Platforms
 -------------------
 
 - Android
-- Blackberry Widgets (OS 5.0 and higher)
+- Blackberry WebWorks (OS 5.0 and higher)
 - iPhone
 
 Quick Example

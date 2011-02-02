@@ -22,7 +22,7 @@ Supported Platforms
 -------------------
 
 - Android 2.X
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -84,7 +84,7 @@ Full Example
 						"Given Name: "  + contacts[i].name.givenName + "\n" + 
 						"Middle Name: "  + contacts[i].name.middleName + "\n" + 
 						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
-						"Prefix: "  + contacts[i].name.honorificSuffix);
+						"Prefix: "  + contacts[i].name.honorificPrefix);
 			}
 		};
     
@@ -102,7 +102,11 @@ Full Example
       </body>
     </html>
 
-BlackBerry Widgets (OS 5.0 and higher) Quirks
+Android Quirks
+------------
+- __formatted:__ Partially supported.  Will return the concatenation of honorificPrefix, givenName, middleName, familyName and honorificSuffix but will not store.
+
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
 - __formatted:__ Partially supported.  Will return concatenation of BlackBerry __firstName__ and __lastName__ fields.

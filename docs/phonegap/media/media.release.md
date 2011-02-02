@@ -1,20 +1,15 @@
-media.getCurrentPosition
-========================
+media.release
+=================
 
-Returns the current position within an audio file.
+Releases the underlying operating systems audio resources.
 
-    media.getCurrentPosition(mediaSuccess, [mediaError]);
+    media.release();
 
-Parameters
-----------
-
-- __mediaSuccess__: The callback that is called with the current position.
-- __mediaError__: (Optional) The callback that is called if there was an error.
 
 Description
 -----------
 
-Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object.
+Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularily important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
 
 Supported Platforms
 -------------------
@@ -27,30 +22,16 @@ Quick Example
         // Audio player
         //
         var my_media = new Media(src, onSuccess, onError);
-
-        // Update media position every second
-        var mediaTimer = setInterval(function() {
-            // get media position
-            my_media.getCurrentPosition(
-                // success callback
-                function(position) {
-                    if (position > -1) {
-                        console.log((position/1000) + " sec");
-                    }
-                },
-                // error callback
-                function(e) {
-                    console.log("Error getting pos=" + e);
-                }
-            );
-        }, 1000);
-
+        
+        my_media.play();
+        my_media.stop();
+        my_media.release();
 
 Full Example
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd">
+                              "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
             <title>Media Example</title>

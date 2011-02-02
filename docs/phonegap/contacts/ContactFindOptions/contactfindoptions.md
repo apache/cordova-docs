@@ -1,21 +1,20 @@
 ContactFindOptions
 ==================
 
-Contains properties that can be used to limit or filter the results of a `contacts.find` operation.
+Contains properties that can be used to filter the results of a `contacts.find` operation.
 
 Properties
 ----------
 
 - __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
 - __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: true)
-- __limit:__ The maximum number of contacts to return. Only used if multiple is true. _(Number)_ (Default: MAXINT)
 - __updatedSince:__ Only return contacts updated since the date specified. _(Date)_ (Default: "")
 
 Supported Platforms
 -------------------
 
 - Android
-- BlackBerry Widgets (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
 Quick Example
@@ -37,7 +36,6 @@ Quick Example
     var options = new ContactFindOptions();
 	options.filter="";			// empty search string returns all contacts
 	options.multiple=true;		// return multiple results
-	options.limit=10;			// limit results to 10 contacts
 	filter = ["displayName"];	// return contact.displayName field
 	
 	// find contacts
@@ -68,7 +66,6 @@ Full Example
 		    var options = new ContactFindOptions();
 			options.filter="";			// empty search string returns all contacts
 			options.multiple=true;		// return multiple results
-			options.limit=10;			// limit results to 10 contacts
 			filter = ["displayName"];	// return contact.displayName field
 
 			// find contacts
@@ -96,8 +93,11 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-    
-iOS Quirks
+
+Android Quirks
 ----------
-- __filter:__ iOS currently only searches name fields.
-- __updatedSince:__ Must be specified as a JavaScript Date object.
+- __updatedSince:__ Not currently supported.
+    
+BlackBerry WebWorks (OS 5.0 and higher) Quirks
+---------------------------------------------
+- __updatedSince:__ Not currently supported.
