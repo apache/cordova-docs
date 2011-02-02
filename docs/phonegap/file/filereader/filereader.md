@@ -10,7 +10,7 @@ Properties
 - __result:__ The contents of the file that has been read. _(DOMString)_
 - __error:__ An object containing errors. _(FileError)_
 - __onloadstart:__ Called when the read starts. . _(Function)_
-- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_
+- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
 - __onload:__ Called when the read has successfully completed. _(Function)_
 - __onabort:__ Called when the read has been aborted. For instance, by invoking the abort() method. _(Function)_
 - __onerror:__ Called when the read has failed. _(Function)_
@@ -33,15 +33,23 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
-Read As Data URL Quick Example
-------------------------------
+Read As Data URL 
+----------------
+
+__Parameters:__
+- fileName - the full path of the file to read
+
+
+Quick Example
+-------------
 
 	var win = function(evt) {
 		console.log(evt.target.result);
 	};
 	var fail = function(evt) {
-		console.log(evt.target.error);
+		console.log(evt.target.error.code);
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
@@ -50,14 +58,22 @@ Read As Data URL Quick Example
 	reader.onerror= fail;
 	reader.readAsDataURL(paths[0] + "readme.txt");
 
-Read As Text Quick Example
---------------------------
+Read As Text
+------------
+
+__Parameters:__
+
+- fileName - the full path of the file to read
+- encoding - the encoding to use to encode the file's content. Default is UTF8.
+
+Quick Example
+-------------
 
 	var win = function(evt) {
 		console.log(evt.target.result);
 	};
 	var fail = function(evt) {
-		console.log(evt.target.error);
+		console.log(evt.target.error.code);
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
@@ -70,7 +86,7 @@ Abort Quick Example
 -------------------
 
 	var aborted = function(evt) {
-		console.log(evt.target.error);
+		console.log(evt.target.error.code);
 	};
 	
     var paths = navigator.fileMgr.getRootPaths();
@@ -112,7 +128,7 @@ Full Example
 		}
 		
 		function fail(evt) {
-			console.log(evt.target.error);
+			console.log(evt.target.error.code);
 		}
 		
         </script>
@@ -122,3 +138,8 @@ Full Example
         <p>Read File</p>
       </body>
     </html>
+
+iOS Quirks
+----------
+- __encoding__ parameter is not supported, UTF8 encoding is always used.
+-  __readAsDataUrl()__ is not supported.
