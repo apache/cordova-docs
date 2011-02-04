@@ -12,8 +12,7 @@ Properties
 - __position:__ The current position of the file pointer. _(long)_
 - __error:__ An object containing errors. _(FileError)_
 - __onwritestart:__ Called when the write starts. . _(Function)_
-- __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_
-- __onload:__ Called when the write has successfully completed. _(Function)_
+- __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
 - __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
 - __onerror:__ Called when the write has failed. _(Function)_
 - __onwriteend:__ Called when the request has completed (either in success or failure).  _(Function)_
@@ -29,7 +28,7 @@ Methods
 Details
 -------
 
-The `FileWriter` object is a way to write files from the devices file system.  Users register their own event listners to receive the writestart, progress, write, writeend, error and abort events.
+The `FileWriter` object is a way to write files from the devices file system.  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
 
 A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
 
@@ -38,6 +37,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 Seek Quick Example
 ------------------------------
@@ -129,7 +129,7 @@ Full Example
 		}
 		
 		function fail(evt) {
-			console.log(evt.target.error);
+			console.log(evt.target.error.code);
 		}
 		
         </script>
@@ -139,3 +139,4 @@ Full Example
         <p>Write File</p>
       </body>
     </html>
+    
