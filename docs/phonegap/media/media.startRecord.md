@@ -117,3 +117,4 @@ iOS Quirks
 ----------
 
 - The method name is `startAudioRecord` on iOS.
+- The file to record to must already exist.
