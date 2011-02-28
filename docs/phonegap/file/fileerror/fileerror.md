@@ -1,7 +1,7 @@
 FileError
 ========
 
-A `FileError` object is thrown when an error occurs.
+A 'FileError' object is set on the FileWriter/FileReader error property when an error occurs. 
 
 Properties
 ----------
@@ -23,5 +23,5 @@ Constants
 Description
 -----------
 
-The `FileError` object is thrown when an error occurs when reading, writing, seeking or truncating a file.  When the user calls the abort method of the reader or writer a FileError with a code of ABORT_ERR is thrown.
+The `FileError` object may be thrown when an unrecoverable error occurs when reading, writing, seeking or truncating a file. When the user calls the abort method of the writer a FileError with a code of ABORT_ERR is thrown if the current state is FileWriter.DONE or FileWriter.INIT.  
 

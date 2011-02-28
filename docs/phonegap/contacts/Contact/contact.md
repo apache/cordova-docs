@@ -19,7 +19,7 @@ Properties
 - __birthday:__ The birthday of the contact. _(Date)_
 - __gender:__ The gender of the contact. _(DOMString)_
 - __note:__ A note about the contact. _(DOMString)_
-- __photos:__ An array of all the contact's photos. _(ContactField[])_
+- __photos:__ An array of the contact's photos. _(ContactField[])_
 - __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
 - __urls:__  An array of web pages associated to the contact. _(ContactField[])_
 - __timezone:__ The timezone of the conact. _(DOMString)_
@@ -194,8 +194,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
 - __id:__ Supported.  Assigned by device when contact is saved.
-- __displayname:__ Supported.  Stored in BlackBerry __title__ field.
-- __name:__ Supported.
+- __displayname:__ Supported.  Stored in BlackBerry __user1__ field.
 - __nickname:__ This property is not supported, and will always be returned as `null`. 
 - __phoneNumbers:__ Partially supported.  Phone numbers will be stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
 - __emails:__ Partially supported.  The first three email addresses will be stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
@@ -203,10 +202,8 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 - __ims:__ This property is not supported, and will always be returned as `null`. 
 - __organizations:__ Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
 - __revision:__ This property is not supported, and will always be returned as `null`. 
-- __birthday:__ Supported.
 - __gender:__ This property is not supported, and will always be returned as `null`. 
-- __note:__ Supported.
-- __photos:__ - Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, specify a file:/// or http:// URL pointing to the image.  The image will be scaled down before saving.  Returns a file URL to the photo.
+- __photos:__ - Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, pass in a either a Base64 encoded image, or a URL pointing to the image.  The image will be scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a Base64 encoded image.
 - __categories:__  Partially supported.  Only 'Business' and 'Personal' categories are supported. 
 - __urls:__  Partially supported. The first url is stored in BlackBerry __webpage__ field.
 - __timezone:__ This property is not supported, and will always be returned as `null`. 

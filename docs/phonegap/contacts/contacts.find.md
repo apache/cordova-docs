@@ -98,4 +98,4 @@ Full Example
     
 iOS Quirks
 ----------
-- iOS currently only supports searching by name.
+- iOS returns null for array properties that have no results, other platforms return an empty array.

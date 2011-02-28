@@ -12,7 +12,7 @@ Parameters
 ----------
 
 - __src__: A URI containing the audio content. _(DOMString)_
-- __mediaSuccess__: (Optional) The callback that is invoked after a Media object is created. _(Function)_
+- __mediaSuccess__: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. _(Function)_
 - __mediaError__: (Optional) The callback that is invoked if there was an error. _(Function)_
 
 Methods
@@ -32,3 +32,8 @@ Supported Platforms
 
 - Android
 - iOS
+
+iOS Quirks
+----------
+- The callback functions must be global in scope (version 0.9.4 and earlier).
+- In the media constructor iOS calls a prepare method to load the file into the player in preparation for playing.  An optional downloadCompleteCallback can be passed as the final parameter to the Media constructor.  It will be called when the the call to prepare completes.  
