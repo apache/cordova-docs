@@ -13,6 +13,7 @@ Properties
 - __error:__ An object containing errors. _(FileError)_
 - __onwritestart:__ Called when the write starts. . _(Function)_
 - __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
+- __onwrite:__ Called when the request has completed successfully.  _(Function)_
 - __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
 - __onerror:__ Called when the write has failed. _(Function)_
 - __onwriteend:__ Called when the request has completed (either in success or failure).  _(Function)_
