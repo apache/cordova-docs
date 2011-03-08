@@ -1,7 +1,7 @@
 FileError
 ========
 
-A 'FileError' object is set on the FileWriter/FileReader error property when an error occurs. 
+A 'FileError' object is set when an error occurs in any of the File API methods. 
 
 Properties
 ----------
@@ -19,9 +19,12 @@ Constants
 - `FileError.NO_MODIFICATION_ALLOWED_ERR`
 - `FileError.INVALID_STATE_ERR`
 - `FileError.SYNTAX_ERR`
+- `FileError.INVALID_MODIFICATION_ERR`
+- `FileError.QUOTA_EXCEEDED_ERR`
+- `FileError.TYPE_MISMATCH_ERR`
+- `FileError.PATH_EXISTS_ERR`
 
 Description
 -----------
 
-The `FileError` object may be thrown when an unrecoverable error occurs when reading, writing, seeking or truncating a file. When the user calls the abort method of the writer a FileError with a code of ABORT_ERR is thrown if the current state is FileWriter.DONE or FileWriter.INIT.  
-
+The `FileError` object is the only parameter of any of the File API's error callbacks.  Developers must read the code property to determine the type of error.
