@@ -1,7 +1,7 @@
 File
-==========
+====
 
-This interface describes a single file.
+This object contains attributes of a single file.
 
 Properties
 ----------
@@ -9,13 +9,13 @@ Properties
 - __name:__ The name of the file. _(DOMString)_
 - __fullPath:__ The full path of the file including the file name. _(DOMString)_
 - __type:__ The mime type of the file. _(DOMString)_
-- __lastModifiedDate:__ The last time the file was edited. _(Date)_
+- __lastModifiedDate:__ The last time the file was modified. _(Date)_
 - __size:__ The size of the file in bytes. _(long)_
 
 Details
 -------
 
-The `File` object represents a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
+The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
 
 Supported Platforms
 -------------------

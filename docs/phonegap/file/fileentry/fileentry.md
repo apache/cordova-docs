@@ -1,33 +1,33 @@
 FileEntry
 ==========
 
-This interface represents a file on a file system.
+This object represents a file on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
 
 Properties
 ----------
 
-- __isFile:__ Entry is a file, always true. _(boolean)_
-- __isDirectory:__ Entry is a directory, always false. _(boolean)_
-- __name:__ The name of the entry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the entry. _(DOMString)_
-- __filesystem:__ The file system on which the entry resides. _(FileSystem)_ -NOT SUPPORTED
+- __isFile:__ Always true. _(boolean)_
+- __isDirectory:__ Always false. _(boolean)_
+- __name:__ The name of the FileEntry, excluding the path leading to it. _(DOMString)_
+- __fullPath:__ The full absolute path from the root to the FileEntry. _(DOMString)_
+
+NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
+
+- __filesystem:__ The file system on which the FileEntry resides. _(FileSystem)_
+
 
 Methods
 -------
 
-- __getMetadata__: Look up metadata about this entry. 
-- __moveTo__: Move an entry to a different location on the file system.
-- __copyTo__: Copy an entry to a different location on the file system.
-- __toURI__: Returns a URI that can be used to identify this entry.
-- __remove__: Deletes a file or directory.
-- __getParent__: Look up the parent DirectoryEntry containing this Entry.
-- __createWriter__: Creates a new FileWriter associated with the file that this FileEntry represents.
-- __file__: Creates a new FileWriter associated with the file that this FileEntry represents.
+- __getMetadata__: Look up metadata about a file. 
+- __moveTo__: Move a file to a different location on the file system.
+- __copyTo__: Copy a file to a different location on the file system.
+- __toURI__: Return a URI that can be used to locate a file.
+- __remove__: Delete a file.  
+- __getParent__: Look up the parent directory.
+- __createWriter__: Creates a FileWriter object that can be used to write to a file.
+- __file__: Creates a File object containing file properties.
 
-Details
--------
-
-An interface representing a file entry in a file system.
 
 Supported Platforms
 -------------------
@@ -35,189 +35,206 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
+
 getMetadata
 ----------------
 
-Look up metadata about this entry.
+Look up metadata about a file.
 
 __Parameters:__
 
-- successCallback - A callback that is called with a Metadata object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
 
 
 __Quick Example__
 
-	function win(metadata) {
-		console.log("Last Modified: " + metadata.modificationTime);
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// Request the metadata object for this entry
-	entry.getMetadata(win, fail);	
-	
-moveTo
-----------------
+    function success(metadata) {
+        console.log("Last Modified: " + metadata.modificationTime);
+    }
 
-Move a file to a different location on the file system. It is an error to try to:
+    function fail(error) {
+        alert(error.code);
+    }
+
+    // Request the metadata object for this entry
+    entry.getMetadata(success, fail);	
+
+
+moveTo
+------
+
+Move a file to a different location on the file system. It is an error to attempt to:
 
 - move a file into its parent if a name different from its current one isn't provided;
 - move a file to a path occupied by a directory;
 
-A move of a file on top of an existing file must attempt to delete and replace that file. 
+In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file. 
 
 __Parameters:__
 
-- parent - The directory to which to move the entry. _(DirectoryEntry)_
-- newName - The new name of the entry. Defaults to the Entry's current name if unspecified. _(DOMString)_
-- successCallback - A callback that is called with a FileEntry object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
+- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
 
 
 __Quick Example__
 
-	function win(entry) {
-		console.log("New Path: " + entry.fullPath);
-	}
+    function success(entry) {
+        console.log("New Path: " + entry.fullPath);
+    }
+
+    function fail(error) {
+        alert(error.code);
+    }
+
+    function moveFile(entry) {
+        var parent = document.getElementById('parent').value,
+            parentEntry = new DirectoryEntry({fullPath: parent});
+
+        // move the file to a new directory and rename it
+        entry.moveTo(parentEntry, "newFile.txt", success, fail);
+    }
 	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// move the file to a new directory and rename it
-	entry.moveTo(newDir, "newname.txt", win, fail);	
-	
-	
+
 copyTo
-----------------
+------
 
-Copy a file to a different location on the file system. It is an error to try to copy it into its parent 
-if a name different from its current one isn't provided. 
+Copy a file to a new location on the file system.  It is an error to attempt to:
+
+- copy a file into its parent if a name different from its current one is not provided. 
 
 __Parameters:__
 
-- parent - The directory to which to move the entry. _(DirectoryEntry)_
-- newName - The new name of the entry. Defaults to the Entry's current name if unspecified. _(DOMString)_
-- successCallback - A callback that is called with a FileEntry object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
+- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
 
 
 __Quick Example__
 
-	function win(entry) {
-		console.log("New Path: " + entry.fullPath);
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// copy the file to a new directory and rename it
-	entry.copyTo(newDir, "newname.txt", win, fail);	
+    function win(entry) {
+	    console.log("New Path: " + entry.fullPath);
+    }
+
+    function fail(error) {
+	    alert(error.code);
+    }
+
+    function copyFile(entry) {
+        var parent = document.getElementById('parent').value,
+            parentEntry = new DirectoryEntry({fullPath: parent});
+
+        // copy the file to a new directory and rename it
+        entry.copyTo(parentEntry, "file.copy", success, fail);
+    }
+
 	
 toURI
-----------------
+-----
 
-Returns a URI that can be used to identify this entry. 
+Returns a URI that can be used to locate the file. 
 
 __Quick Example__
 	
-	// Request the metadata object for this entry
-	var uri = entry.toURI();
-	console.log(uri);
+    // Request the metadata object for this entry
+    var uri = entry.toURI();
+    console.log(uri);
+
 
 remove
-----------------
+------
 
-Deletes the file. 
+Deletes a file. 
 
 __Parameters:__
 
-- successCallback - A callback that is called with no parameters on success. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
 
 __Quick Example__
 	
-	function win(entry) {
-		console.log("Removal succeeded");
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// copy the file to a new directory and rename it
-	entry.remove(win, fail);	
+    function success(entry) {
+        console.log("Removal succeeded");
+    }
+
+    function fail(error) {
+        alert('Error removing file: ' + error.code);
+    }
+
+    // remove the file
+    entry.remove(success, fail);
+
 
 getParent
-----------------
+---------
 
-Look up the parent DirectoryEntry containing this file. 
+Look up the parent DirectoryEntry containing the file. 
 
 __Parameters:__
 
-- successCallback - A callback that is called with a DirectoryEntry object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
 
 __Quick Example__
 	
-	function win(parent) {
-		console.log("Parent Name: " + parent.name);
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// copy the file to a new directory and rename it
-	entry.getParent(win, fail);	
+    function success(parent) {
+        console.log("Parent Name: " + parent.name);
+    }
+
+    function fail(error) {
+        alert(error.code);
+    }
+
+    // Get the parent DirectoryEntry
+    entry.getParent(success, fail);	
+
 
 createWriter
-----------------
+------------
 
-Creates a new FileWriter associated with the file that this FileEntry represents.
+Create a FileWriter object associated with the file that the FileEntry represents.
 
 __Parameters:__
 
-- successCallback - A callback that is called with a FileWriter object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
 
 __Quick Example__
 	
-	function win(writer) {
-		writer.write("Some text to the file");
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// copy the file to a new directory and rename it
-	entry.createWriter(win, fail);	
+    function success(writer) {
+        writer.write("Some text to the file");
+    }
+
+    function fail(error) {
+        alert(error.code);
+    }
+
+    // create a FileWriter to write to the file
+    entry.createWriter(success, fail);	
+
 
 file
-----------------
+----
 
-Returns a File that represents the current state of the file that this FileEntry represents.
+Return a File object that represents the current state of the file that this FileEntry represents.
 
 __Parameters:__
 
-- successCallback - A callback that is called with a File object. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is called with a File object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
 
 __Quick Example__
 	
-	function win(file) {
-		console.log("File size: " + file.size);
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// copy the file to a new directory and rename it
-	entry.file(win, fail);	
+    function success(file) {
+        console.log("File size: " + file.size);
+    }
 
+    function fail(error) {
+        alert("Unable to retrieve file properties: " + error.code);
+    }
+ 
+    // obtain properties of a file
+    entry.file(success, fail);	

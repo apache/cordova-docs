@@ -1,13 +1,13 @@
 LocalFileSystem
-==========
+===============
 
-This interface supplies a way in which a file system entry point can be obtained.
+This object provides a way to obtain root file systems.
 
 Methods
 ----------
 
-- __requestFileSystem:__ Requests a filesystem in which to store application data. _(Function)_
-- __resolveLocalFileSystemURI:__ Allows the user to look up the Entry for a file or directory referred to by a local URI. _(Function)_
+- __requestFileSystem:__ Requests a filesystem. _(Function)_
+- __resolveLocalFileSystemURI:__ Retrieve a DirectoryEntry or FileEntry using local URI. _(Function)_
 
 Constants
 ---------
@@ -18,7 +18,7 @@ Constants
 Details
 -------
 
-The `LocalFileSystem` objects methods are installed into the Window object so users can call the methods to line up with W3C specs.
+The `LocalFileSystem` object methods are defined on the __window__ object.
 
 Supported Platforms
 -------------------
@@ -27,7 +27,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 
 Request File System Quick Example
--------------
+---------------------------------
 
 	function onSuccess(fileSystem) {
 		console.log(fileSystem.name);
@@ -37,7 +37,7 @@ Request File System Quick Example
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
 
 Resolve Local File System URI Quick Example
--------------
+-------------------------------------------
 
 	function onSuccess(fileEntry) {
 		console.log(fileEntry.name);

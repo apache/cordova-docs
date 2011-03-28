@@ -1,17 +1,13 @@
 DirectoryReader
-==========
+===============
 
-This interface lets a user list files and directories in a directory.
+An object that lists files and directories in a directory.  Defined in the [Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
 
 Methods
 -------
 
-- __readEntries__: Read the entries from this directory. 
+- __readEntries__: Read the entries in a directory. 
 
-Details
--------
-
-This interface lets a user list files and directories in a directory.
 
 Supported Platforms
 -------------------
@@ -20,31 +16,30 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 
 readEntries
-----------------
+-----------
 
-Read the entries from this directory.
+Read the entries in this directory.
 
 __Parameters:__
 
-- successCallback - A callback that is called with array of File/DirectoryEntry objects on success. _(Function)_
-- errorCallback - A callback that is called when errors happen with an FileError object. _(Function)_
+- __successCallback__ - A callback that is passed an array of FileEntry and DirectoryEntry objects. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the directory listing. Invoked with a FileError object. _(Function)_
 
 __Quick Example__
 	
-	function win(entries) {
-		for (i=0; i<entries.length; i++) {
-			console.log(entries[i].name);
-		}
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	// Get a directory reader
-	var directoryReader = entry.createReader();
-	
-	// Get a list of all the entries in the directory
-	directoryReader.readEntries(win,fail);
+    function success(entries) {
+        var i;
+        for (i=0; i<entries.length; i++) {
+            console.log(entries[i].name);
+        }
+    }
 
+    function fail(error) {
+        alert("Failed to list directory contents: " + error.code);
+    }
 
+    // Get a directory reader
+    var directoryReader = dirEntry.createReader();
+
+    // Get a list of all the entries in the directory
+    directoryReader.readEntries(success,fail);

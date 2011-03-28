@@ -1,12 +1,12 @@
 FileSystem
 ==========
 
-This interface represents a file system.
+This object represents a file system.
 
 Properties
 ----------
 
-- __name:__ This is the name of the file system. _(DOMString)_
+- __name:__ The name of the file system. _(DOMString)_
 - __root:__ The root directory of the file system. _(DirectoryEntry)_
 
 Details
@@ -21,7 +21,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 
 File System Quick Example
--------------
+-------------------------
 
 	function onSuccess(fileSystem) {
 		console.log(fileSystem.name);
@@ -29,7 +29,7 @@ File System Quick Example
 	}
 	
 	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
 Full Example
 ------------

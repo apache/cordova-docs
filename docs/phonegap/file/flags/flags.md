@@ -1,18 +1,13 @@
 Flags
-==========
+=====
 
-This interface is used to supply arguments to methods that look up or create files or directories.
+This object is used to supply arguments to the `DirectoryEntry` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
 
 Properties
 ----------
 
-- __create:__ Used to indicate that the user wants to create a file or directory if it was not previously there. _(boolean)_
-- __exclusive:__ By itself, exclusive must have no effect. Used with create, it causes getFile and getDirectory to fail if the target path already exists. _(boolean)_
-
-Details
--------
-
-The `Metadata` object represents information about the state of a file or directory.  You can get an instance of a Metadata object by calling the __getMetadata__ method of a `DirectoryEntry` or `FileEntry` object.
+- __create:__ Used to indicate that the file or directory should be created, if it does not exist. _(boolean)_
+- __exclusive:__ By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. _(boolean)_
 
 Supported Platforms
 -------------------
@@ -23,8 +18,8 @@ Supported Platforms
 Quick Example
 -------------
 
-	// Get the data directory, creating it if it doesn't exist.
-	dataDir = fileSys.root.getDirectory("data", {create: true});
+    // Get the data directory, creating it if it doesn't exist.
+    dataDir = fileSystem.root.getDirectory("data", {create: true});
 
-	// Create the lock file, if and only if it doesn't exist.
-	lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
+    // Create the lock file, if and only if it doesn't exist.
+    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
