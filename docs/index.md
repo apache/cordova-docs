@@ -10,6 +10,10 @@
             <span>Capture a photo using the device's camera.</span>
         </li>
         <li>
+            <h2>Capture</h2>
+            <span>Capture media files using device's media capture applications.</span>
+        </li>
+        <li>
             <h2>Compass</h2>
             <span>Obtain the direction that the device is pointing.</span>
         </li>
