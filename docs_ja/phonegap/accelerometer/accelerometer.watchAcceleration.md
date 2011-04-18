@@ -12,8 +12,8 @@ accelerometer.watchAcceleration
 
 加速度センサーは三次元空間上の動きを補足するものです。
 
-`accelerometer.watchAcceleration` 関数を使うと、一定間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `accelerometerSuccess` コールバック関数が実行されます。 
-取得する感覚は `frequency` オブジェクトのパラメータを `frequency` 通じてミリ秒単位で指定できます。
+ `accelerometer.watchAcceleration` 関数を使うと、一定間隔ごとにデバイスの加速度情報を取得できます。加速度情報を取得するたびに、 `accelerometerSuccess` コールバック関数が実行されます。 
+取得する間隔は `frequency` オブジェクトのパラメータを `frequency` 通じてミリ秒単位で指定できます。
 本関数の戻り値であるウォッチIDは、実行中の加速度センサー測定への参照を表します。関数にウォッチIDを渡すことで、加速度センサーのキャプチャを停止できます。
 
 サポートされているプラットフォーム
@@ -42,7 +42,7 @@ accelerometer.watchAcceleration
     
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-詳細な仕様例
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
