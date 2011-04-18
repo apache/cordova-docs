@@ -47,13 +47,13 @@ accelerometer.getCurrentAcceleration
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // 
+        // PhoneGapの読み込みを待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの読み込み完了まで待機
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
