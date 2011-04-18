@@ -5,7 +5,7 @@ accelerometer.clearWatch
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: `accelerometer.watchAcceleration` によって返されるウォッチID
+- __watchID__: `accelerometer.watchAcceleration`によって返されるウォッチID
 
 サポートされているプラットフォーム
 -------------------
@@ -76,7 +76,7 @@ accelerometer.clearWatch
             element.innerHTML = 'X軸上の加速度: ' + acceleration.x + '<br />' +
                                 'Y軸上の加速度: ' + acceleration.y + '<br />' +
                                 'Z軸上の加速度: ' + acceleration.z + '<br />' + 
-                                'Timestamp: '      + acceleration.timestamp + '<br />';
+                                'タイムスタンプ: '      + acceleration.timestamp + '<br />';
         }
 
         // 加速度情報取得に失敗
