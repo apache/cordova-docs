@@ -75,7 +75,7 @@ Accelerationオブジェクト
         // onError: 加速度情報取得に失敗
         //
         function onError() {
-            alert('エラーが発生しました。!');
+            alert('エラーが発生しました。');
         }
 
         </script>
