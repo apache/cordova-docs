@@ -14,3 +14,8 @@ Description
 -----------
 
 The `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
+
+iOS Quirks
+----------
+- iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object. 
+

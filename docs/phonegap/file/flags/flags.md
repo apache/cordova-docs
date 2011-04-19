@@ -14,6 +14,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------

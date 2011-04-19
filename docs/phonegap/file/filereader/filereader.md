@@ -175,4 +175,3 @@ Full Example
 iOS Quirks
 ----------
 - __encoding__ parameter is not supported, UTF8 encoding is always used.
--  __readAsDataUrl()__ is not supported.
