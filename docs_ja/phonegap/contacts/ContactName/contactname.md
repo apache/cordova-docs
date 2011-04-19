@@ -11,7 +11,7 @@ ContactName
 - __givenName:__ 連絡先の名前を表します _(DOMString)_
 - __middleName:__ 連絡先のミドルネームを表します _(DOMString)_
 - __honorificPrefix:__ 連絡先の接頭敬称を表します (例：Mr. Dr.) _(DOMString)_
-- __honorificSuffix:__ 連絡先の接尾敬称を表します _(DOMString)_
+- __honorificSuffix:__ 連絡先の接尾敬称を表します （例：Esq.）_(DOMString)_
 
 詳細
 -------
@@ -66,7 +66,7 @@ ContactName
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
 			var options = new ContactFindOptions();
@@ -83,15 +83,15 @@ ContactName
 						"名字: "  + contacts[i].name.familyName + "\n" + 
 						"名前: "  + contacts[i].name.givenName + "\n" + 
 						"ミドルネーム: "  + contacts[i].name.middleName + "\n" + 
-						"敬称: "  + contacts[i].name.honorificSuffix + "\n" + 
-						"敬称: "  + contacts[i].name.honorificPrefix);
+						"接頭敬称: "  + contacts[i].name.honorificSuffix + "\n" + 
+						"接尾敬称: "  + contacts[i].name.honorificPrefix);
 			}
 		};
     
         // onError: 連絡先の取得に失敗
         //
         function onError() {
-            alert('エラーが発生しました');
+            alert('エラーが発生しました。');
         }
 
         </script>
@@ -109,8 +109,8 @@ Android に関する注意点
 BlackBerry WebWorks に関する注意点
 ---------------------------------------------
 
-- __formatted:__ このプロパティは部分的にサポートされています。firstNameとlastNameフィールドの連結を返します。
-- __familyName:__ このプロパティはBlackBerry WebWorksでサポートされており、BlackBerrlastNameフィールドに保存されます。
+- __formatted:__ このプロパティは部分的にサポートされています。 __firstName__ と __lastName__ フィールドの連結を返します。
+- __familyName:__ このプロパティはBlackBerry WebWorksでサポートされており、BlackBerry __lastName__ フィールドに保存されます。
 - __givenName:__　このプロパティはBlackBerry WebWorksでサポートされており、BlackBerry __firstName__ フィールドに保存されます。
 - __middleName:__ このプロパティはBlackBerry WebWorksではサポートされておらず、常にfalseを返します。
 - __honorificPrefix:__ このプロパティはBlackBerry WebWorksではサポートされておらず、常にfalseを返します。
@@ -118,4 +118,4 @@ BlackBerry WebWorks に関する注意点
 
 iOS に関する注意点
 ------------
-- __formatted:__ このプロパティはiOSでサポートされています。複合名を返しますが、保存は行われません。
+- __formatted:__ このプロパティはiOSで部分的にサポートされています。複合名を返しますが、保存は行われません。

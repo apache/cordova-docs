@@ -14,7 +14,7 @@ SQLResultSet
 -------
 
 SQLTransaction executeSql メソッドが呼び出されると、コールバックがSQLResultSetオブジェクトとともに呼び出されます。
-resultオブジェクトは `insertId` 、`rowAffected` 、そして `SQLResultSetList` という3つのプロパティーを持っています。
+SQLResultSetオブジェクトは `insertId` 、`rowAffected` 、そして `SQLResultSetList` という3つのプロパティーを持っています。
  `insertId` は SQL へのinsertが成功した行の番号を返します。SQL 命令文がinsertではなかった場合、`insertId` はセットされません。
  `rowAffected` はSQLのselectに対しては常に0を取ります。insert/updateに対しては修正された行の数を返します。
  `SQLResultSetList` はSQLのselectによって返されたデータを保存します。

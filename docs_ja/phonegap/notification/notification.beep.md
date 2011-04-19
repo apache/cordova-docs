@@ -49,9 +49,9 @@ notification.beep
         //
         function showAlert() {
 		    navigator.notification.alert(
-		        'You are the winner!',  // メッセージ
-		        'Game Over',            // タイトル
-		        'Done'                  // ボタン
+		        'メッセージの内容',  // メッセージ
+		        'タイトルの内容',            // タイトル
+		        'ボタンの内容'                  // ボタン
 		    );
         }
 

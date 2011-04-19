@@ -55,7 +55,7 @@ PhoneGapはネイティブとJavaScriptの2つのコードで形成されます�
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの読み込みが完了させ、PhoneGapのメソッドの読み込みが可能にします。
+        // PhoneGapの読み込みが完了したので、PhoneGapのメソッドを安全に呼び出すことができます。
         //
         function onDeviceReady() {
             // PhoneGap APIを安全に使用できます。

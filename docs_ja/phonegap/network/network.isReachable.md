@@ -8,7 +8,8 @@ network.isReachable
 概要
 -----------
 
-このメソッドはデバイスのネットワークへの接続状況や接続の形式などの情報を調べるために必要です。 `network.isReachable` は非同期関数なので、ネットワークの状態はコールバック関数から返されます。
+このメソッドはデバイスのネットワークへの接続状況や接続の形式などの情報を調べるために必要です。 
+`network.isReachable` は非同期関数なので、ネットワークの状態はコールバック関数から返されます。
 
 
 サポートされているプラットフォーム
@@ -31,7 +32,7 @@ network.isReachable
         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'データ接続';
         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi接続';
     
-        alert('接続の種類: ' + states[networkState]);
+        alert('接続の形式: ' + states[networkState]);
     }
     
     navigator.network.isReachable('phonegap.com', reachableCallback);
@@ -72,7 +73,7 @@ network.isReachable
             states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'データ接続';
             states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi接続';
             
-            alert('接続の種類: ' + states[networkState]);
+            alert('接続の形式: ' + states[networkState]);
         }
         
         </script>

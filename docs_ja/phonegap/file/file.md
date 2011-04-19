@@ -1,7 +1,7 @@
-ファイル（File）
+File
 ==========
 
-> `FileReader` と `FileWriter` オブジェクトはファイルシステムへの読み書きを提供します。
+> `FileReader` と `FileWriter` オブジェクトはファイルシステムへの読み書き手段を提供します。
 
 
 オブジェクト

@@ -16,7 +16,8 @@ ContactAddress
 詳細
 -------
 
- `ContactAddress` オブジェクトは連絡先の各住所を表します。`Contact` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
+ `ContactAddress` オブジェクトは連絡先の住所に関するプロパティを表します。
+ `Contact` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
 
 サポートされているプラットフォーム
 -------------------
@@ -28,7 +29,7 @@ ContactAddress
 使用例
 -------------
 
-	// すべての連絡先情報を取得し、表示します
+	// すべての連絡先の住所情報を取得し、表示します
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
 			for (var j=0; j<contacts[i].addresses.length; j++) {
@@ -43,7 +44,7 @@ ContactAddress
     };
 
     function onError() {
-        alert('エラーが発生しました');
+        alert('エラーが発生しました。');
     };
 
     // 連絡先を検索します
@@ -70,7 +71,7 @@ ContactAddress
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
 		    // 全ての連絡先を検索します。

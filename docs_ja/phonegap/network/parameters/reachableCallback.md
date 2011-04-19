@@ -10,15 +10,16 @@ reachableCallback
 パラメータ
 ----------
 
-- __reachability:__ デバイスのネットワーク状況です。 (`NetworkStatus`)
-    - 各プラットフォーム間での`reachability`のフォーマットに関しての一貫性が今のところないのが現状です。下記のプラットフォームに関する注意点を参照してください。
+- __reachability:__ デバイスのネットワーク状況です。 ( `NetworkStatus` )
+    - 各プラットフォーム間での`reachability`のフォーマットに関しての一貫性が今のところないのが現状です。
+	下記のプラットフォームに関する注意点を参照してください。
 
 詳細
 -----------
 このコールバック関数は `NetworkStatus` のコンスタントである引数、 `reachability` のみを受け入れます。
 
 
-例
+使用例
 -------
 
     function reachableCallback(reachability) {
@@ -30,13 +31,13 @@ reachableCallback
         states[NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK] = 'データ接続';
         states[NetworkStatus.REACHABLE_VIA_WIFI_NETWORK]         = 'WiFi接続';
 
-        alert('接続の種類: ' + states[networkState]);
+        alert('接続の形式: ' + states[networkState]);
     }
 
 BlackBerry に関する注意点
 -----------------
 
-`reachablity`の値としてネットワークの状態を返します。
+　`reachablity`　の値としてネットワークの状態を返します。
 
     function reachableCallback(reachability) {
         var hasConnection = (reachability !== NetworkStatus.NOT_REACHABLE);
@@ -45,4 +46,4 @@ BlackBerry に関する注意点
 iPhone に関する注意点
 -------------
 
-iPhone上での実装は接続種類の情報のみを提供します。 ホストへ接続が可能かどうかは認証しません。
+iPhone上での実装は接続形式の情報のみを提供します。 ホストへ接続が可能かどうかは認証しません。

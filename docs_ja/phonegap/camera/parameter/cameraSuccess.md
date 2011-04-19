@@ -10,7 +10,7 @@ cameraSuccess
 パラメータ
 ----------
 
-- __imageData:__ Base64 によるイメージエンコーディング、またはイメージファイルの URL (cameraOptionsで設定)
+- __imageData:__ Base64 によるイメージエンコーディング、またはイメージファイルの URI (cameraOptionsで設定)
 
 使用例
 -------

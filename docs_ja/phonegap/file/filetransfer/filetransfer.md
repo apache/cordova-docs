@@ -16,9 +16,11 @@ N/A
 詳細
 -------
 
-`FileTransfer` オブジェクトはマルチパート形式でHTTPサーバーにPOST処理を行いファイルをアップロードします。このメソッドはHTTPとHTTPSの両方をサポートします。uploadメソッドに `FileUploadOptions` オブジェクトを送ることで、任意のパラメータを追加できます。
+`FileTransfer` オブジェクトはマルチパート形式でHTTPサーバーにPOST処理を行いファイルをアップロードします。
+このメソッドはHTTPとHTTPSの両方をサポートします。uploadメソッドに `FileUploadOptions` オブジェクトを送ることで、任意のパラメータを追加できます。
 
-アップロードが成功した場合 `FileUploadResult` オブジェクトともにsuccessコールバック関数が呼ばれます。エラーが発生した場合は `FileTransferError` オブジェクトとともにerrorコールバックが呼ばれます。
+アップロードが成功した場合 `FileUploadResult` オブジェクトともにsuccessコールバック関数が呼ばれます。
+エラーが発生した場合は `FileTransferError` オブジェクトとともにerrorコールバックが呼ばれます。
 
 サポートされているプラットフォーム
 -------------------
@@ -72,7 +74,7 @@ N/A
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
 			var options = new FileUploadOptions();
@@ -93,8 +95,8 @@ N/A
 
 		function win(evt) {
         	console.log("コード = " + r.responseCode);
-        	console.log("反応 = " + r.response);
-        	console.log("送信完了 = " + r.bytesSent);
+        	console.log("結果 = " + r.response);
+        	console.log("送信バイト数 = " + r.bytesSent);
 		}
 		
 		function fail(evt) {

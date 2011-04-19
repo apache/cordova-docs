@@ -13,7 +13,8 @@ ContactOrganization
 詳細
 -------
 
-`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 `Contact` オブジェクトは複数の `ContactOrganization` オブジェクトを配列の中に格納します。
+`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 
+`Contact` オブジェクトは複数の `ContactOrganization` オブジェクトを配列の中に格納します。
 
 サポートされているプラットフォーム
 -------------------
@@ -62,7 +63,7 @@ ContactOrganization
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
 			var options = new ContactFindOptions();
@@ -100,18 +101,18 @@ ContactOrganization
 Android 1.X に関する注意点
 ------------------
 
-- __title:__ このプロパティはAndroid 1.Xではサポートされていません。常にfalseを返します。
+- __title:__ このプロパティはAndroid 1.Xではサポートされおらず、常にnullを返します。
 
 BlackBerry WebWorks に関する注意点
 --------------------------------------------
 
-- __name:__ このプロパティはBlackBerryで部分的にサポートされていません。組織名は BlackBerry __company__ フィールドに保存されます。
-- __department:__ このプロパティはBlackBerry WebWorksではサポートされていません。常にfalseを返します。
-- __title:__ このプロパティはBlackBerryで部分的にサポートされていません。役職名はBlackBerry __jobTitle__ フィールドに保存されます。
+- __name:__ このプロパティはBlackBerryで部分的にサポートおり、組織名は BlackBerryの __company__ フィールドに保存されます。
+- __department:__ このプロパティはBlackBerry WebWorksではサポートされていません。常にnullを返します。
+- __title:__ このプロパティはBlackBerryで部分的にサポートされており、役職名はBlackBerryの __jobTitle__ フィールドに保存されます。
 
 iOS に関する注意点
 -----------
-- __name:__ このプロパティはiOSで部分的にサポートされており、組織名はiOS __kABPersonOrganizationProperty__ フィールドに保存されます。
-- __department__: このプロパティはiOSで部分的にサポートされており、部署名はiOS __kABPersonDepartmentProperty__ フィールドに保存されます。
-- __title__: このプロパティはiOSで部分的にサポートされており、役職名はiOS __kABPersonJobTitleProperty__ フィールドに保存されます。
+- __name:__ このプロパティはiOSで部分的にサポートされており、組織名はiOSの __kABPersonOrganizationProperty__ フィールドに保存されます。
+- __department__: このプロパティはiOSで部分的にサポートされており、部署名はiOSの __kABPersonDepartmentProperty__ フィールドに保存されます。
+- __title__: このプロパティはiOSで部分的にサポートされており、役職名はiOSの __kABPersonJobTitleProperty__ フィールドに保存されます。
 

@@ -38,7 +38,7 @@ compass.getCurrentHeading
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>コンパスの例</title>
+        <title>コンパスの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -49,7 +49,7 @@ compass.getCurrentHeading
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             navigator.compass.getCurrentHeading(onSuccess, onError);

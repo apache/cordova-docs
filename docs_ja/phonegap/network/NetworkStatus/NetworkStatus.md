@@ -1,7 +1,8 @@
 NetworkStatus
 =============
 
- `NetworkStatus` はネットワークの接続状況を表す定数の集合を定義します。 `network.isReachable` の `reachability` 引数は `NetworkStatus` 定数です。
+ `NetworkStatus` はネットワークの接続状況を表す定数の集合を定義します。
+ `network.isReachable` の `reachability` 引数は `NetworkStatus` 定数です。
 
 コンスタント
 ---------

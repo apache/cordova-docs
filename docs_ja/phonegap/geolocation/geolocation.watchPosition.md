@@ -22,7 +22,8 @@ geolocation.watchPosition
 
 概要
 -----------
-`geolocation.watchPosition` は位置情報に変化があった場合にデバイスに現在位置情報を返す非同期関数です。デバイスが新しい位置情報を取得した場合、 `geolocationSuccess` コールバック関数が `Position` オブジェクトをパラメータとして呼び出されます。
+`geolocation.watchPosition` は位置情報に変化があった場合にデバイスに現在位置情報を返す非同期関数です。
+デバイスが新しい位置情報を取得した場合、 `geolocationSuccess` コールバック関数が `Position` オブジェクトをパラメータとして呼び出されます。
 
 エラー発生時には `geolocationError` コールバック関数が `PositionError` オブジェクトとともに呼ばれます。
 
@@ -56,7 +57,7 @@ geolocation.watchPosition
               'メッセージ: ' + error.message + '\n');
     }
 
-    // 3秒ごとに位置情報を取得する設定
+    // 3秒ごとに位置情報を取得する設定（オプション）
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
     

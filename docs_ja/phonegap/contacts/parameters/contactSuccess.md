@@ -1,7 +1,7 @@
 contactSuccess
 ==============
 
- `contacts.find` 関数の実行に成功した場合に呼び出されるコールバック関数です。
+ `contacts.find` メソッドの実行に成功した場合に呼び出されるコールバック関数です。
 
     function(contacts) {
         // 処理を記述

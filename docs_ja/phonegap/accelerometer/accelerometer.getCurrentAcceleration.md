@@ -47,7 +47,7 @@ accelerometer.getCurrentAcceleration
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // PhoneGapの読み込みを待機
+        // PhoneGapの読み込み完了まで待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
@@ -86,4 +86,4 @@ accelerometer.getCurrentAcceleration
 -------------
 
 - iPhoneはピンポイントでの現在加速度情報を得ることはできません。
-- 加速度情報を取得するには加速度の変異を計測しながら一定の時間間隔でデータのキャプチャを行います。そのため、getCurrentAcceleration関数はPhoneGapの[wachAccelerometer]関数で取得した最新値を返します。
+- 加速度情報を取得するには加速度の変異を計測しながら一定の時間間隔でデータのキャプチャを行います。そのため、getCurrentAcceleration関数はPhoneGapの [wachAccelerometer] 関数で取得した最新値を返します。

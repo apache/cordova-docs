@@ -10,9 +10,11 @@ compass.watchHeading
 
 `compass.watchHeading` 関数は一定の時間間隔でデバイスの現在の方位を取得します。
 
-方位情報が取得されるごとに `compassSuccess` コールバック関数が実行されます。時間間隔は `campassOptions` オブジェクトの `frequency` パラメータを通じてミリ秒単位で指定します。
+方位情報が取得されるごとに `compassSuccess` コールバック関数が実行されます。
+時間間隔は `campassOptions` オブジェクトの `frequency` パラメータを通じてミリ秒単位で指定します。
 
-この関数の返り値であるwatchIDには、コンパスの監視間隔への参照が格納されます。このIDは `compass.clearWatch` 関数を用いて監視を停止に使用します。
+この関数の返り値であるwatchIDには、コンパスの監視間隔への参照が格納されます。
+このIDは `compass.clearWatch` 関数を用いて監視を停止に使用します。
 
 サポートされているプラットフォーム
 -------------------

@@ -5,7 +5,7 @@ notification.vibrate
 
     navigator.notification.vibrate(milliseconds)
 
-- __time:__ バイブレーションの長さを表すミリ秒単位の数値です。 (`Number`)
+- __time:__ バイブレーションの長さを表すミリ秒単位の数値です。 ( `Number` )
 
 サポートされているプラットフォーム
 -------------------
@@ -50,9 +50,9 @@ notification.vibrate
         //
         function showAlert() {
 		    navigator.notification.alert(
-		        'You are the winner!',  // メッセージ
-		        'Game Over',            // タイトル
-		        'Done'                  // ボタン
+		        'メッセージの内容',  // メッセージ
+		        'タイトルの内容',            // タイトル
+		        'ボタンの内容'                  // ボタン
 		    );
         }
     
@@ -80,7 +80,7 @@ notification.vibrate
 iPhone に関する注意点
 -------------
 
-- __time:__ `time`の設定を無視し、iPhoneであらかじめ定められた時間バイブレーションを流します。
+- __time:__ `time` の設定を無視し、iPhoneであらかじめ定められた時間バイブレーションを流します。
 
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 は無視されます。

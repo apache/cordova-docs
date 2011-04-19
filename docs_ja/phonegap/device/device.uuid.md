@@ -20,14 +20,14 @@ UUIDの生成方法については、デバイスの製造者やプラットフ�
 使用例
 -------------
 
-    // Android: ランダムな64ビットの数値を文字列として返却
+    // Android: ランダムな64ビットの数値を文字列として返却します。
     //          数値はデバイスの最初の起動時に生成されます。
     //
-    // BlackBerry: デバイスのPIN番号を返却
+    // BlackBerry: デバイスのPIN番号を返却します。
     //             この番号は9桁のユニークな数字となります。
     //
-    // iPhone: UIDeviceクラスドキュメントに記載されているとおり
-    //         ハードウェアIDに基づくハッシュ値を返却
+    // iPhone: UIDeviceクラスドキュメントに記載されている通り
+    //         ハードウェアIDに基づくハッシュ値を返却します。
     //         デバイスに固有でユーザーアカウントとは
     //         リンクされていません。
     //
@@ -51,7 +51,7 @@ UUIDの生成方法については、デバイスの製造者やプラットフ�
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');

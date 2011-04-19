@@ -5,7 +5,7 @@ accelerometer.clearWatch
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: `accelerometer.watchAcceleration`によって返されるウォッチID
+- __watchID__: `accelerometer.watchAcceleration` によって返されるウォッチID
 
 サポートされているプラットフォーム
 -------------------
@@ -14,7 +14,7 @@ accelerometer.clearWatch
 - BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
-簡単な例
+使用例
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
@@ -23,7 +23,7 @@ accelerometer.clearWatch
     
     navigator.accelerometer.clearWatch(watchID);
     
-詳細な例
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"

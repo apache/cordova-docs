@@ -34,9 +34,9 @@ ContactFindOptions
 
 	// 検索条件を指定
     var options = new ContactFindOptions();
-	options.filter="";			// 空白の場合すべての文字列を返却
+	options.filter="";			// 空のサーチは全ての連絡先を返却
 	options.multiple=true;		// 複数の結果を返却
-	filter = ["displayName"];	// contact.displayName フィールドを返却対象に指定
+	filter = ["displayName"];	// contact.displayName フィールドを返却
 	
 	// 検索を実行
     navigator.service.contacts.find(filter, onSuccess, onError, options);
@@ -65,8 +65,8 @@ ContactFindOptions
 			// specify contact search criteria
 		    var options = new ContactFindOptions();
 			options.filter="";			// 空のサーチは全ての連絡先を返します。
-			options.multiple=true;		// 複数の結果を返します。
-			filter = ["displayName"];	// contact.displayName フィールドを返します。
+			options.multiple=true;		// 複数の結果を返却
+			filter = ["displayName"];	// contact.displayName フィールドを返却
 
 			// 連絡先を検索
 		    navigator.service.contacts.find(filter, onSuccess, onError, options);

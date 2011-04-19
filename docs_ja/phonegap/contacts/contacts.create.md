@@ -42,7 +42,7 @@ contacts.create関数で作成したContactオブジェクトは、デバイス�
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             var myContact = navigator.service.contacts.create({"displayName": "Test User"});
@@ -55,6 +55,6 @@ contacts.create関数で作成したContactオブジェクトは、デバイス�
       </head>
       <body onload="onLoad()">
         <h1>サンプル</h1>
-        <p>連絡先を作成しました</p>
+        <p>連絡先を作成します</p>
       </body>
     </html>

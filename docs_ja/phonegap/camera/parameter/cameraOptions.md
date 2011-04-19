@@ -56,8 +56,10 @@ iPhoneに関する注意点
 --------------
 
 - メモリエラーを防ぐには、`quality` パラメータを50以下に設定してください。
-- `destinationType.FILE_URI` が使用された場合、撮られた写真や編集された写真はアプリケーションの Documents/tmp ディレクトリに保存されます。
-- アプリケーションの Documents/tmp ディレクトリはアプリ終了とともに消去されます。もしストレージの空きが少ない場合、このディレクトリは navigator.fileMgr API をつかって消去できます。
+- `destinationType.FILE_URI` が使用された場合、撮られた写真や編集された写真は
+アプリケーションの Documents/tmp ディレクトリに保存されます。
+- アプリケーションの Documents/tmp ディレクトリはアプリ終了とともに消去されます。
+もしストレージの空きが少ない場合、このディレクトリは navigator.fileMgr API をつかって消去できます。
 
            navigator.fileMgr.deleteDirectory("tmp", onSuccess, onFail);
            

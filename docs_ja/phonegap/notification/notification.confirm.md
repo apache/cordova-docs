@@ -5,7 +5,7 @@ notification.confirm
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
-- __message:__ ダイアログのメッセージです。 (`String`)
+- __message:__ ダイアログのメッセージです。 ( `String` )
 - __confirmCallback:__ - 押されたボタンのインデックス（1,2,3...）とともに呼び出されるコールバック関数です。 ( `Number` )
 - __title:__ ダイアログのタイトルです。( `String` ) (Optional, Default: "Confirm")
 - __buttonLabels:__ ボタンのラベルを設定するためのカンマ区切りのStringです。 ( `String` ) (Optional, Default: "OK,Cancel")
@@ -34,10 +34,10 @@ notification.confirm
     //
     function showConfirm() {
         navigator.notification.confirm(
-	        'You are the winner!',  // メッセージ
+	        'メッセージの内容',  // メッセージ
 			onConfirm,				// 選択されたボタンによって呼ばれるコールバック
-	        'Game Over',            // タイトル
-	        'Restart,Exit'          // ボタン
+	        'タイトルの内容',            // タイトル
+	        'ボタンの内容'          // ボタン
         );
     }
         
@@ -74,10 +74,10 @@ notification.confirm
         //
         function showConfirm() {
             navigator.notification.confirm(
-		        'You are the winner!',  // メッセージ
+		        'メッセージの内容',  // メッセージ
 				onConfirm,				// 選択されたボタンによって呼ばれるコールバック
-		        'Game Over',            // タイトル
-		        'Restart,Exit'          // ボタン
+		        'タイトルの内容',            // タイトル
+		        'ボタンの内容'          // ボタン
             );
         }
     

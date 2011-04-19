@@ -1,4 +1,4 @@
-加速度センサー（Accelerometer）
+Accelerometer
 =============
 
 デバイスの動きを(x, y, z)軸で取得します。

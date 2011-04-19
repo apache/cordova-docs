@@ -1,7 +1,7 @@
 FileUploadResult
 ========
 
-`FileUploadResult` オブジェクトは `FileTransfer` オブジェクトの upload 関数を呼び出した際、成功時に返されるオブジェクトです。
+`FileUploadResult` オブジェクトは `FileTransfer` オブジェクトの upload メソッドを呼び出し、それが成功した時に返されるオブジェクトです。
 
 プロパティ
 ----------
@@ -13,4 +13,4 @@ FileUploadResult
 詳細
 -----------
 
-`FileUploadResult` オブジェクトは `FileTransfer` オブジェクトの upload 関数を呼び出した際、成功時に返されるオブジェクトです。
+`FileUploadResult` オブジェクトは `FileTransfer` オブジェクトの upload メソッドを呼び出し、それが成功した時に返されるオブジェクトです。

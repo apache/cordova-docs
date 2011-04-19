@@ -2,6 +2,7 @@ camera.getPicture
 =================
 
 デバイスのカメラで写真を撮る、またはデバイスのアルバム内にある写真を検索します。
+Base64形式でエンコードされたフォトイメージを表す文字列、またはイメージファイルのURIが返されます。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
@@ -9,9 +10,12 @@ camera.getPicture
 -----------
 
 `camera.getPicture` 関数はデバイスが標準で備えるカメラアプリを実行します。
-( `Camera.sourceType = Camera.PictureSourceType.CAMERA` に設定する必要がありますが、デフォルトの設定となります。) 写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
+( この際`Camera.sourceType = Camera.PictureSourceType.CAMERA` に設定する必要がありますが、デフォルトの設定となります。) 
+写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
 
- `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示されます。
+ `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは 
+ `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、
+ 写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
 
 返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます。
 
@@ -24,7 +28,9 @@ camera.getPicture
 - データをローカルに保存 ( `LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) を使用します)
 - データをリモートサーバーに送信
 
-注意： iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好です。ただし、そのような画像データをBase64でエンコードすると、メモリーの問題が発生します。よって、 FILE_URL を Camera.DestinationType として使用することが推奨されます。
+注意： iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好です。
+ただし、そのような画像データをBase64でエンコードすると、メモリーの問題が発生します。
+よって、 FILE_URI を Camera.destinationType として使用することが推奨されます。
 
 サポートされているプラットフォーム
 -------------------
@@ -49,7 +55,7 @@ camera.getPicture
         alert('エラーが発生しました: ' + message);
     }
 
-撮影した写真を、イメージファイルとして取得します。
+撮影した写真のURIを取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
         destinationType: Camera.DestinationType.FILE_URI }); 
@@ -85,7 +91,7 @@ camera.getPicture
             document.addEventListener("deviceready",onDeviceReady,false);
         }
     
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;

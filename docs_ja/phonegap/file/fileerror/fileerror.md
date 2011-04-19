@@ -23,4 +23,5 @@ FileError
 詳細
 -----------
 
-`FileError` オブジェクトはファイルの読み書き時に回避不能なエラーが発生した時に発行されます。現在の状態が FileWriter.DONE または FileWriter.INIT である場合に abort メソッドを呼び出した場合は ABORT_ERR が発行されます。
+`FileError` オブジェクトはファイルの読み書き時に回避不能なエラーが発生した時に発行されます。
+現在の状態が FileWriter.DONE または FileWriter.INIT である場合に abort メソッドを呼び出すと、 ABORT_ERR が発行されます。

@@ -31,7 +31,7 @@ device.platform
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -42,7 +42,7 @@ device.platform
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
@@ -64,7 +64,7 @@ device.platform
 iPhone に関する注意点
 -------------
 
-全てのデバイスで `iPhone` を返します。AppleはiPhoneのOSをiOSと名称を変更したのでこの表記は正確ではありません。
+全てのデバイスで `iPhone` を返します。AppleはiPhoneのOSの名称をiOSに変更したので、この返り値は厳密には正確でないという点に注意してください。
 
 BlackBerry に関する注意点
 -----------------

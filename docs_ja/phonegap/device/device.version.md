@@ -10,7 +10,7 @@ OSのバージョンを取得します。
 
 - Android 2.1+
 - BlackBerry
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 
 使用例
@@ -18,7 +18,7 @@ OSのバージョンを取得します。
 
     // Android:    Froyoの場合は2.2を返却
     //             Eclaiの場合は2.0、2.0.1、もしくは2.1を返却
-    //             アップデートが行われると2.1-update1のように返却
+    //             アップデートが行われると 2.1-update1 のように返却
     //
     // BlackBerry: OS 4.6を搭載したBold 9000の場合4.6.0.282を返却
     //
@@ -33,7 +33,7 @@ OSのバージョンを取得します。
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>デバイスプロパティの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -44,7 +44,7 @@ OSのバージョンを取得します。
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGapの準備完了
+        // PhoneGap準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');

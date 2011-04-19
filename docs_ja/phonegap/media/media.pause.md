@@ -62,7 +62,7 @@ media.pause
                 document.addEventListener("deviceready", onDeviceReady, false);
             }
         
-            // PhoneGapの準備完了
+            // PhoneGap準備完了
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
