@@ -92,9 +92,3 @@ Full Example
         <p>localStorage</p>
       </body>
     </html>
-
-Android 1.X Quirks
-------------------
-
-- __key:__ This method is not support by Android 1.X devices.
-- __clear:__ This method is not support by Android 1.X devices.
