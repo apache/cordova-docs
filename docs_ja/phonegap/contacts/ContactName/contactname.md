@@ -11,7 +11,7 @@ ContactName
 - __givenName:__ 連絡先の名前を表します _(DOMString)_
 - __middleName:__ 連絡先のミドルネームを表します _(DOMString)_
 - __honorificPrefix:__ 連絡先の接頭敬称を表します (例：Mr. Dr.) _(DOMString)_
-- __honorificSuffix:__ 連絡先の接尾敬称を表します （例：Esq.）_(DOMString)_
+- __honorificSuffix:__ 連絡先の接尾敬称を表します (例：Esq.)_(DOMString)_
 
 詳細
 -------

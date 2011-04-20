@@ -5,10 +5,10 @@ notification.alert
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message:__ ダイアログのメッセージです。 ( `String` )
-- __alertCallback:__ 通知ダイアログが確認された後に呼び出されるコールバック関数です。 ( `Function` )
-- __title:__ ダイアログのタイトルです。 ( `String` ) (Optional, Default: "Alert")
-- __buttonName:__ ボタンの表記です。 ( `String` ) (Optional, Default: "OK")
+- __message:__ ダイアログのメッセージです。 (`String`)
+- __alertCallback:__ 通知ダイアログが確認された後に呼び出されるコールバック関数です。 (`Function`)
+- __title:__ ダイアログのタイトルです。 (`String`) (Optional, Default: "Alert")
+- __buttonName:__ ボタンの表記です。 (`String`) (Optional, Default: "OK")
     
 詳細
 -----------
@@ -51,7 +51,7 @@ notification.alert
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Notification の使用例</title>
+        <title>通知機能の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -78,7 +78,7 @@ notification.alert
         function showAlert() {
           navigator.notification.alert(
             'メッセージ内容',       // メッセージ
-            alertDismissed,         // コールバック
+            alertDismissed,       // コールバック
             'タイトル',             // タイトル
             'ボタン'                // ボタン
           );

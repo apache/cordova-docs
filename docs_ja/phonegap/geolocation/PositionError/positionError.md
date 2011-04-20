@@ -1,7 +1,7 @@
 PositionError
 ========
 
-`PositionError` オブジェクトはエラーが発生した場合に、geolocationErrorコールバック関数に渡されます。
+`PositionError` オブジェクトはエラーが発生した場合に、geolocationError コールバック関数に渡されます。
 
 
 プロパティ

@@ -5,7 +5,7 @@ notification.vibrate
 
     navigator.notification.vibrate(milliseconds)
 
-- __time:__ バイブレーションの長さを表すミリ秒単位の数値です。 ( `Number` )
+- __time:__ バイブレーションの長さを表すミリ秒単位の数値です。 (`Number`)
 
 サポートされているプラットフォーム
 -------------------
@@ -51,8 +51,8 @@ notification.vibrate
         function showAlert() {
 		    navigator.notification.alert(
 		        'メッセージの内容',  // メッセージ
-		        'タイトルの内容',            // タイトル
-		        'ボタンの内容'                  // ボタン
+		        'タイトルの内容', // タイトル
+		        'ボタンの内容'  // ボタン
 		    );
         }
     

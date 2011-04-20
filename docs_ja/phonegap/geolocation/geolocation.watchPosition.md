@@ -11,9 +11,9 @@ geolocation.watchPosition
 パラメータ
 ----------
 
-- __geolocationSuccess__: 現在位置取得成功時に呼ばれるコールバック関数です。
-- __geolocationError__: (オプション) エラー発生時に呼ばれるコールバック関数です。
-- __geolocationOptions__: (オプション) geolocation のオプションです。
+- __geolocationSuccess__: 現在位置取得成功時に呼ばれるコールバック関数です
+- __geolocationError__: (オプション) エラー発生時に呼ばれるコールバック関数です
+- __geolocationOptions__: (オプション) geolocation のオプションです
 
 返り値
 -------

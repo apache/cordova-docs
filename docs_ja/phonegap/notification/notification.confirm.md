@@ -5,10 +5,10 @@ notification.confirm
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
-- __message:__ ダイアログのメッセージです。 ( `String` )
-- __confirmCallback:__ - 押されたボタンのインデックス（1,2,3...）とともに呼び出されるコールバック関数です。 ( `Number` )
-- __title:__ ダイアログのタイトルです。( `String` ) (Optional, Default: "Confirm")
-- __buttonLabels:__ ボタンのラベルを設定するためのカンマ区切りのStringです。 ( `String` ) (Optional, Default: "OK,Cancel")
+- __message:__ ダイアログのメッセージです。 (`String`)
+- __confirmCallback:__ - 押されたボタンのインデックス（1,2,3...）とともに呼び出されるコールバック関数です。 (`Number`)
+- __title:__ ダイアログのタイトルです。(`String`) (Optional, Default: "Confirm")
+- __buttonLabels:__ ボタンのラベルを設定するためのカンマ区切りのStringです。 (`String`) (Optional, Default: "OK,Cancel")
     
 概要
 -----------
@@ -35,9 +35,9 @@ notification.confirm
     function showConfirm() {
         navigator.notification.confirm(
 	        'メッセージの内容',  // メッセージ
-			onConfirm,				// 選択されたボタンによって呼ばれるコールバック
-	        'タイトルの内容',            // タイトル
-	        'ボタンの内容'          // ボタン
+			onConfirm,	// 選択されたボタンによって呼ばれるコールバック
+	        'タイトルの内容',    // タイトル
+	        'ボタンの内容'  // ボタン
         );
     }
         
@@ -48,7 +48,7 @@ notification.confirm
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Notification の使用例</title>
+        <title>通知機能の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">

@@ -1,6 +1,6 @@
 device.uuid
 ===========
-デバイスの固有ID ([Universally Unique Identifier、UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier))を取得します。
+デバイスの固有ID ([Universally Unique Identifier - UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier))を取得します。
 
     var string = device.uuid;
     

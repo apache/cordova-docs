@@ -52,7 +52,7 @@ media.stopRecord
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>デバイスプロパティーの使用例</title>
+        <title>メディアの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">

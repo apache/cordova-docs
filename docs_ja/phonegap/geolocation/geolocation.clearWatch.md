@@ -90,7 +90,7 @@ geolocation.clearWatch
         </script>
       </head>
       <body onload="onLoad()">
-        <p id="geolocation">Geolocation監視中...</p>
+        <p id="geolocation">Geolocation　監視中...</p>
     	<button onclick="clearWatch();">監視の停止</button>     
       </body>
     </html>

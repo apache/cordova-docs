@@ -1,7 +1,7 @@
 Position
 ========
 
-Geolocation APIによって作成された位置座標（ `Position` ）を扱うオブジェクトです。
+Geolocation APIによって作成された位置座標(`Position`)を扱うオブジェクトです。
 
 プロパティ
 ----------
@@ -55,7 +55,7 @@ Geolocation APIによって作成された位置座標（ `Position` ）を扱�
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>デバイスプロパティの使用例</title>
+        <title>位置情報の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">

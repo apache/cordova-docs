@@ -28,7 +28,7 @@ notification.beep
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Notification の例</title>
+        <title>通知機能の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -50,8 +50,8 @@ notification.beep
         function showAlert() {
 		    navigator.notification.alert(
 		        'メッセージの内容',  // メッセージ
-		        'タイトルの内容',            // タイトル
-		        'ボタンの内容'                  // ボタン
+		        'タイトルの内容',   // タイトル
+		        'ボタンの内容'      // ボタン
 		    );
         }
 

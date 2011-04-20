@@ -10,7 +10,7 @@ reachableCallback
 パラメータ
 ----------
 
-- __reachability:__ デバイスのネットワーク状況です。 ( `NetworkStatus` )
+- __reachability:__ デバイスのネットワーク状況です。 (`NetworkStatus`)
     - 各プラットフォーム間での`reachability`のフォーマットに関しての一貫性が今のところないのが現状です。
 	下記のプラットフォームに関する注意点を参照してください。
 
@@ -23,7 +23,7 @@ reachableCallback
 -------
 
     function reachableCallback(reachability) {
-        // 現状では各プラットフォーム間でのreachabilityのフォーマットに関しての一貫性はありません
+        // 現状では各プラットフォーム間での reachability のフォーマットに関しての一貫性はありません
         var networkState = reachability.code || reachability;
     
         var states = {};

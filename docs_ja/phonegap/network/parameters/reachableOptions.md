@@ -8,4 +8,4 @@ reachableOptions
 オプション
 -------
 
-- __isIpAddress:__ `reachableHostname` がIPアドレスかどうかを確認します。( `Boolean` ) (Default: `false` )
+- __isIpAddress:__ `reachableHostname` がIPアドレスかどうかを確認します。(`Boolean`) (Default: `false` )
