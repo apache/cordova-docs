@@ -1,7 +1,7 @@
 FileTransferError
 ========
 
-A `FileTransferError` object is thrown when an error occurs.
+A `FileTransferError` object is returned via the error callback when an error occurs.
 
 Properties
 ----------
@@ -18,4 +18,4 @@ Constants
 Description
 -----------
 
-The `FileTransferError` object is thrown when an error occurs when uploading a file.
+The `FileTransferError` object is returned via the error callback  when an error occurs when uploading a file.
