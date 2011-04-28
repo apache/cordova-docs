@@ -3,6 +3,27 @@ Capture
 
 > Provides access to the audio, image, and video capture capabilities of the device.
 
+Objects
+-------
+
+- Capture
+- CaptureAudioOptions
+- CaptureImageOptions
+- CaptureVideoOptions
+- CaptureCB
+- CaptureErrorCB
+- ConfigurationData
+- MediaFile
+- MediaFileData
+
+Methods
+-------
+
+- capture.captureAudio
+- capture.captureImage
+- capture.captureVideo
+- MediaFile.getFormatData
+
 Scope
 -----
 
