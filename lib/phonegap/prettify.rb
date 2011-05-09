@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class Prettify
   def run(filename)
-    doc = Nokogiri::HTML(File.read filename)
+    doc = Nokogiri::HTML(File.read(filename))
     
     code_tags = doc.css('#content pre').each do |tag|
       tag['class'] = 'prettyprint'
