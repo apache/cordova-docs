@@ -46,3 +46,8 @@ iPhone Quirks
 -------------
 
 The iPhone implementation only provides information about the type of connection available. It does not verify that the host is actually available. 
+
+	function reachableCallback(reachability) {
+	    var networkState = reachability.code;
+	    alert('Connection type: ' + networkState + ' - ' + reachability.message);
+	}
