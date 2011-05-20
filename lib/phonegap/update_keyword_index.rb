@@ -15,7 +15,7 @@ class UpdateKeywordIndex
   def run(filename)
     return false unless File.basename(filename) == '_index.html'
     
-    doc = Nokogiri::HTML(File.read filename)
+    doc = Nokogiri::HTML(File.read(filename))
     
     element = doc.css('#subheader > h1')[0]
     element.content = @header_title unless element.nil?

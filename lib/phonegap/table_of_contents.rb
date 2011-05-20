@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class TableOfContents
   def run(filename)
-    doc = Nokogiri::HTML(File.read filename)
+    doc = Nokogiri::HTML(File.read(filename))
     
     # Find all the H1 and H2 elements in the content area
     #
@@ -27,7 +27,7 @@ class TableOfContents
     
     # Return if one or less elments found (useless selection box)
     #
-    return nil if source_contents.count <= 1
+    return nil if source_contents.length <= 1
     
     # Find the parent that will hold the select element
     #
