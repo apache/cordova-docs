@@ -18,6 +18,10 @@
             <span>Obtain the direction that the device is pointing.</span>
         </li>
         <li>
+            <h2>Connection</h2>
+            <span>Quickly check the network state, and cellular network information.</span>
+        </li>
+        <li>
             <h2>Contacts</h2>
             <span>Work with the devices contact database.</span>
         </li>
