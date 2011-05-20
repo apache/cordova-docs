@@ -19,7 +19,7 @@ Quick Example
 -------------
 
     function checkConnection() {
-        var networkState = navigator.connection.type;
+        var networkState = navigator.network.connection.type;
         
         var states = {};
         states[Connection.UNKNOWN]	= 'Unknown connection';
@@ -43,7 +43,7 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>navigator.connection.type Example</title>
+        <title>navigator.network.connection.type Example</title>
         
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -61,7 +61,7 @@ Full Example
         }
         
 	    function checkConnection() {
-	        var networkState = navigator.connection.type;
+	        var networkState = navigator.network.connection.type;
 
 	        var states = {};
 	        states[Connection.UNKNOWN]	= 'Unknown connection';

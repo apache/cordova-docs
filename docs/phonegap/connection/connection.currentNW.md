@@ -17,7 +17,7 @@ Supported Platforms
 Quick Example
 -------------
 
-	alert("Current Network: " + navigator.connection.currentNW);
+	alert("Current Network: " + navigator.network.connection.currentNW);
 
 
 Full Example
@@ -27,7 +27,7 @@ Full Example
 	                          "http://www.w3.org/TR/html4/strict.dtd">
 	    <html>
 	      <head>
-	        <title>navigator.connection.currentNW Example</title>
+	        <title>navigator.network.connection.currentNW Example</title>
 
 	        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 	        <script type="text/javascript" charset="utf-8">
@@ -41,7 +41,7 @@ Full Example
 	        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 	        //
 	        function onDeviceReady() {
-				alert("Home Network: " + navigator.connection.currentNW);
+				alert("Home Network: " + navigator.network.connection.currentNW);
 	        }
 
 	        </script>
