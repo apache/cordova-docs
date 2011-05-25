@@ -8,5 +8,7 @@ Event Types
 
 - backbutton
 - deviceready
+- menubutton
 - pause
 - resume
+- searchbutton
