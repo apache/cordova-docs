@@ -51,6 +51,10 @@ Full Example
 	      </body>
 	    </html>
 
+Android Quirks
+----------
+- This property may be null, it is read from the devices SIM card and not all carriers set this information.
+
 iOS Quirks
 ----------
 - This property is always null, it is set here for future support once iOS supports it.
