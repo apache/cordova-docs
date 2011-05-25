@@ -92,6 +92,10 @@ class FileMerger
                               File.join('parameters',   'reachableCallback.md'),
                               File.join('parameters',   'reachableHostname.md'),
                               File.join('parameters',   'reachableOptions.md') ],
+    'connection.md'         => [ 'connection.type.md',
+                                'connection.currentNW.md',
+                                'connection.homeNW.md'
+                               ],
     'notification.md'    => [ 'notification.alert.md',
                               'notification.confirm.md',
                               'notification.beep.md',
