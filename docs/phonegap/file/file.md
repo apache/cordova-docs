@@ -1,15 +1,23 @@
 File
 ==========
 
-> The `FileReader` and `FileWriter` objects provide access to the devices file system for reading of files. 
+> An API to read, write and navigate file system hierarchies. 
 
 Objects
 -------
 
-- FileReader
-- FileWriter
+- DirectoryEntry
+- DirectoryReader
+- File
+- FileEntry
 - FileError
+- FileReader
+- FileSystem
 - FileTransfer
+- FileTransferError
 - FileUploadOptions
 - FileUploadResult
-- FileTransferError
+- FileWriter
+- Flags
+- LocalFileSystem
+- Metadata

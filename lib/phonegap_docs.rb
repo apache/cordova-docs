@@ -34,7 +34,7 @@ class PhoneGapDocs
   def run
     copy_directory(@input_directory, @working_directory)
 
-    @working_directory = after_jodoc jodocify before_jodoc(@working_directory)
+    @working_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
     
     move_directory(@working_directory, @output_directory)
     empty_tmp_directory

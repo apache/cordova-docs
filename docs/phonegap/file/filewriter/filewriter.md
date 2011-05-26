@@ -42,102 +42,131 @@ Supported Platforms
 
 Seek Quick Example
 ------------------------------
+
+	function win(writer) {
+		// fast forwards file pointer to end of file
+		writer.seek(writer.length);	
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
+	};
 	
-    var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "write.txt");
-	// fast forwards file pointer to end of file
-	writer.seek(writer.length);	
+    entry.createWriter(win, fail);
 
 Truncate Quick Example
 --------------------------
 
-    var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "write.txt");
-	writer.truncate(10);	
+	function win(writer) {
+		writer.truncate(10);	
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
+	};
+	
+    entry.createWriter(win, fail);
 
 Write Quick Example
 -------------------	
 
-	var writeSuccess = function(evt) {
-		console.log("Write has succeeded");
+	function win(writer) {
+		writer.onwrite = function(evt) {
+        	console.log("write success");
+        };
+		writer.write("some sample text");
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
 	};
 	
-    var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "write.txt");
-	writer.onwrite = writeSuccess;
-	writer.write("some sample text");
+    entry.createWriter(win, fail);
 
 Append Quick Example
 --------------------	
 
-	var writeSuccess = function(evt) {
-		console.log("Write has succeeded");
+	function win(writer) {
+		writer.onwrite = function(evt) {
+        	console.log("write success");
+        };
+        writer.seek(writer.length);
+		writer.write("appended text");
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
 	};
 	
-    var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "write.txt", true);
-	writer.onwrite = writeSuccess;
-	writer.write("some more text");
+    entry.createWriter(win, fail);
 	
 Abort Quick Example
 -------------------
 
-	var aborted = function(evt) {
-		console.log(evt.target.error);
+	function win(writer) {
+		writer.onwrite = function(evt) {
+        	console.log("write success");
+        };
+		writer.write("some sample text");
+		writer.abort();
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
 	};
 	
-    var paths = navigator.fileMgr.getRootPaths();
-	var writer = new FileWriter(paths[0] + "write.txt");
-	writer.onabort = aborted;
-	writer.write("some sample text");
-	writer.abort();
+    entry.createWriter(win, fail);
 
 Full Example
 ------------
-
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>FileWriter Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load
         //
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var paths = navigator.fileMgr.getRootPaths();
-			var writer = new FileWriter(paths[0] + "write.txt");
-			writer.onwrite = writeSuccess;
-			writer.write("some sample text");
-			// The file is now 'some sample text'
+			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-
-		function writeSuccess() {
-			console.log("Write has succeeded");
-			var paths = navigator.fileMgr.getRootPaths();
-			var writer = new FileWriter(paths[0] + "write.txt");
+		
+		function gotFS(fileSystem) {
+			fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+		}
+		
+		function gotFileEntry(fileEntry) {
+			fileEntry.createWriter(gotFileWriter, fail);
+		}
+		
+		function gotFileWriter(writer) {
+	        writer.onwrite = function(evt) {
+                console.log("write success");
+            };
+            writer.write("some sample text");
+			// contents of file now 'some sample text'
+			writer.truncate(11);
+			// contents of file now 'some sample'
 			writer.seek(4);
-			writer.truncate(writer.position);
-			// The file is now 'some'
+			// contents of file still 'some sample' but file pointer is after the 'e' in 'some'
+			writer.write(" different text");
+			// contents of file now 'some different text'
 		}
-		
-		function fail(evt) {
-			console.log(evt.target.error.code);
-		}
-		
+        
+        function fail(error) {
+            console.log(error.code);
+        }
+        
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <h1>Example</h1>
         <p>Write File</p>
       </body>
     </html>
-    

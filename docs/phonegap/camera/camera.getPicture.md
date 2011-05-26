@@ -66,8 +66,7 @@ Take photo and retrieve image file location:
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Capture Photo</title>
@@ -80,9 +79,7 @@ Full Example
         
         // Wait for PhoneGap to connect with the device
         //
-        function onLoad() {
-            document.addEventListener("deviceready",onDeviceReady,false);
-        }
+        document.addEventListener("deviceready",onDeviceReady,false);
     
         // PhoneGap is ready to be used!
         //
@@ -162,7 +159,7 @@ Full Example
 
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <button onclick="capturePhoto();">Capture Photo</button> <br>
         <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>

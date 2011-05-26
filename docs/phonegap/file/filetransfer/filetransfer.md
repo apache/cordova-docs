@@ -23,9 +23,12 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 Quick Example
 ------------------------------
+	
+	// !! Assumes variable fileURI contains a valid URI to a  text file on the device
 	
   	var win = function(r) {
         console.log("Code = " + r.responseCode);
@@ -39,7 +42,7 @@ Quick Example
 	
 	var options = new FileUploadOptions();
 	options.fileKey="file";
-	options.fileName="newfile.txt";
+	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";
 
     var params = new Object();
@@ -48,61 +51,69 @@ Quick Example
 		
 	options.params = params;
 	
-	var paths = navigator.fileMgr.getRootPaths();
 	var ft = new FileTransfer();
-    ft.upload(paths[0] + "newfile.txt", "http://some.server.com/upload.php", win, fail, options);
+    ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
     
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
-      <head>
-        <title>Contact Example</title>
-
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <head>
+        <title>File Transfer Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.min.js"></script>
         <script type="text/javascript" charset="utf-8">
-
-        // Wait for PhoneGap to load
-        //
-        function onLoad() {
+            
+            // Wait for PhoneGap to load
+            //
             document.addEventListener("deviceready", onDeviceReady, false);
-        }
-
-        // PhoneGap is ready
-        //
-        function onDeviceReady() {
-			var options = new FileUploadOptions();
-			options.fileKey="file";
-			options.fileName="newfile.txt";
-			options.mimeType="text/plain";
-
-    		var params = new Object();
-			params.value1 = "test";
-			params.value2 = "param";
-		
-			options.params = params;
-	
-			var paths = navigator.fileMgr.getRootPaths();
-			var ft = new FileTransfer();
-    		ft.upload(paths[0] + "newfile.txt", "http://some.server.com/upload.php", win, fail, options);
-        }
-
-		function win(evt) {
-        	console.log("Code = " + r.responseCode);
-        	console.log("Response = " + r.response);
-        	console.log("Sent = " + r.bytesSent);
-		}
-		
-		function fail(evt) {
-        	alert("An error has occurred: Code = " = error.code);
-		}
-		
-        </script>
-      </head>
-      <body onload="onLoad()">
+            
+            // PhoneGap is ready
+            //
+            function onDeviceReady() {
+                
+                // Retrieve image file location from specified source
+                navigator.camera.getPicture(uploadPhoto,
+                                            function(message) { alert('get picture failed'); },
+                                            { quality: 50, 
+                                            destinationType: navigator.camera.DestinationType.FILE_URI,
+                                            sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
+                                            );
+                
+            }
+            
+            function uploadPhoto(imageURI) {
+                var options = new FileUploadOptions();
+                options.fileKey="file";
+                options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+                options.mimeType="image/jpeg";
+                
+                var params = new Object();
+                params.value1 = "test";
+                params.value2 = "param";
+                
+                options.params = params;
+                
+                var ft = new FileTransfer();
+                ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
+            }
+            
+            function win(r) {
+                console.log("Code = " + r.responseCode);
+                console.log("Response = " + r.response);
+                console.log("Sent = " + r.bytesSent);
+            }
+            
+            function fail(error) {
+                alert("An error has occurred: Code = " = error.code);
+            }
+            
+            </script>
+    </head>
+    <body>
         <h1>Example</h1>
-        <p>Read File</p>
-      </body>
+        <p>Upload File</p>
+    </body>
     </html>
+

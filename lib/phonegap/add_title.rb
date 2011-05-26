@@ -3,7 +3,7 @@ require 'nokogiri'
 
 class AddTitle
   def run(filename)
-    doc = Nokogiri::HTML(File.read filename)
+    doc = Nokogiri::HTML(File.read(filename))
     
     title_source = doc.css('#content > h1')[0]
     return nil if title_source.nil?

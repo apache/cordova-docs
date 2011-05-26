@@ -55,7 +55,7 @@ Script Test Suite
 
 __Install rspec:__
 
-    gem install rspec
+    gem install rspec --version 1.3.0
     
 __Run all specs:__
 
