@@ -34,9 +34,7 @@ Full Example
 
 	        // Wait for PhoneGap to load
 	        // 
-	        function onLoad() {
-	            document.addEventListener("deviceready", onDeviceReady, false);
-	        }
+	        document.addEventListener("deviceready", onDeviceReady, false);
 
 	        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 	        //
@@ -46,7 +44,7 @@ Full Example
 
 	        </script>
 	      </head>
-	      <body onload="onLoad()">
+	      <body>
 	        <p>A dialog box will report the current network.</p>
 	      </body>
 	    </html>

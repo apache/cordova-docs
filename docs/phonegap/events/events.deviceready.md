@@ -35,8 +35,7 @@ Quick Example
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>PhoneGap Device Ready Example</title>
@@ -50,9 +49,7 @@ Full Example
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
         // 
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
@@ -62,7 +59,7 @@ Full Example
 
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
       </body>
     </html>
     

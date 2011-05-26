@@ -25,8 +25,7 @@ Quick Example
 Full Example
 ------------
     
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Notification Example</title>
@@ -36,9 +35,7 @@ Full Example
 
         // Wait for PhoneGap to load
         //
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
@@ -70,7 +67,7 @@ Full Example
 
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
         <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
