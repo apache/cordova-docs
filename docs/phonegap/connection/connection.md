@@ -9,9 +9,6 @@ Properties
 ----------
 
 - connection.type
-- connection.currentNW
-- connection.homeNW
-
 
 Constants
 ---------

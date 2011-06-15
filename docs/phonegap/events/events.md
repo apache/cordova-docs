@@ -12,3 +12,6 @@ Event Types
 - pause
 - resume
 - searchbutton
+- online
+- offline
+

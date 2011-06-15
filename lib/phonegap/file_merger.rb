@@ -54,6 +54,8 @@ class FileMerger
     						  'events.menubutton.md',
     						  'events.pause.md',
     						  'events.resume.md',
+    						  'events.online.md',
+    						  'events.offline.md',
     						  'events.searchbutton.md'],
 	'file.md'			 => [File.join('fileobj', 'fileobj.md'),
 							File.join('filereader', 'filereader.md'),
@@ -94,9 +96,7 @@ class FileMerger
                               File.join('parameters',   'reachableCallback.md'),
                               File.join('parameters',   'reachableHostname.md'),
                               File.join('parameters',   'reachableOptions.md') ],
-    'connection.md'         => [ 'connection.type.md',
-                                'connection.currentNW.md',
-                                'connection.homeNW.md'
+    'connection.md'         => [ 'connection.type.md'
                                ],
     'notification.md'    => [ 'notification.alert.md',
                               'notification.confirm.md',
