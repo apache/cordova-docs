@@ -14,6 +14,7 @@ Supported Platforms
 
 - iOS
 - Android
+- BlackBerry WebWorks (OS 5.0 and higher)
 
 Quick Example
 -------------
@@ -78,7 +79,3 @@ Full Example
         <p>A dialog box will report the network state.</p>
       </body>
     </html>
-
-iOS Quirks
-----------
-- for a cellular connection, connection.type will always be Connection.CELL_2G
