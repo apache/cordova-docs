@@ -18,6 +18,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 BlackBerry WebWorks Quirks
 --------------------------
@@ -25,4 +26,8 @@ There is no API that provides format information of media files.  Therefore, all
 
 Android Quirks
 --------------
+The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+
+iOS Quirks
+----------
 The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
