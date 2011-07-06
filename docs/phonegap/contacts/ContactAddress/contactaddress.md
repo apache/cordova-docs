@@ -5,7 +5,8 @@ Contains address properties for a `Contact` object.
 
 Properties
 ----------
-
+- __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
+- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
 - __formatted:__ The full address formatted for display. _(DOMString)_
 - __streetAddress:__ The full street address. _(DOMString)_
 - __locality:__ The city or locality. _(DOMString)_
@@ -32,7 +33,9 @@ Quick Example
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
 			for (var j=0; j<contacts[i].addresses.length; j++) {
-				alert("Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
+				alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
+						"Type: " + contacts[i].addresses[j].type + "\n" +
+						"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
 						"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
 						"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
 						"Region: "  + contacts[i].addresses[j].region + "\n" + 
@@ -42,7 +45,7 @@ Quick Example
 		}
     };
 
-    function onError() {
+    function onError(contactError) {
         alert('onError!');
     };
 
@@ -50,7 +53,7 @@ Quick Example
     var options = new ContactFindOptions();
 	options.filter=""; 
 	var filter = ["displayName","addresses"];
-    navigator.service.contacts.find(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
 ------------
@@ -74,7 +77,7 @@ Full Example
 		    var options = new ContactFindOptions();
 			options.filter=""; 
 			var filter = ["displayName","addresses"];
-		    navigator.service.contacts.find(filter, onSuccess, onError, options);
+		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -83,7 +86,9 @@ Full Example
 			// display the address information for all contacts
 			for (var i=0; i<contacts.length; i++) {
 				for (var j=0; j<contacts[i].addresses.length; j++) {
-					alert("Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
+					alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
+							"Type: " + contacts[i].addresses[j].type + "\n" +
+							"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
 							"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
 							"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
 							"Region: "  + contacts[i].addresses[j].region + "\n" + 
@@ -95,7 +100,7 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError() {
+        function onError(contactError) {
             alert('onError!');
         }
 
@@ -107,9 +112,16 @@ Full Example
       </body>
     </html>
 
+Android 2.X Quirks
+------------------
+
+- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+
 Android 1.X Quirks
 ------------------
 
+- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
+- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
 - __streetAddress:__ This property is not support by Android 1.X devices, and will always return `null`.
 - __locality:__ This property is not support by Android 1.X devices, and will always return `null`.
 - __region:__ This property is not support by Android 1.X devices, and will always return `null`.
@@ -118,7 +130,8 @@ Android 1.X Quirks
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-
+- __pref:__ This property is not supported on Blackberry devices and will always return `false`.
+- __type:__ Partially supported.  Only one each of "Work" and "Home" type addresses can be stored per contact. 
 - __formatted:__ Partially supported.  Will return concatenation of all BlackBerry address fields.
 - __streetAddress:__ Supported.  Will return concatenation of BlackBerry __address1__ and __address2__ address fields. 
 - __locality:__ Supported.  Stored in BlackBerry __city__ address field.
@@ -128,4 +141,5 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
+- __pref:__ This property is not supported on iOS devices and will always return `false`.
 - __formatted:__ Not currently supported.

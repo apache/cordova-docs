@@ -3,14 +3,14 @@ contacts.find
 
 Queries the device contacts database and returns one or more `Contact` objects, each containing the fields specified.
 
-    navigator.service.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
+    navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
 Description
 -----------
 
 contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated.
+Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
 
 The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
 
@@ -36,7 +36,7 @@ Quick Example
         alert('Found ' + contacts.length + ' contacts.');
     };
 
-    function onError() {
+    function onError(contactError) {
         alert('onError!');
     };
 
@@ -44,7 +44,7 @@ Quick Example
     var options = new ContactFindOptions();
 	options.filter="Bob"; 
 	var fields = ["displayName", "name"];
-    navigator.service.contacts.find(fields, onSuccess, onError, options);
+    navigator.contacts.find(fields, onSuccess, onError, options);
 
 Full Example
 ------------
@@ -68,7 +68,7 @@ Full Example
 		    var options = new ContactFindOptions();
 			options.filter="Bob"; 
 			var fields = ["displayName", "name"];
-		    navigator.service.contacts.find(fields, onSuccess, onError, options);
+		    navigator.contacts.find(fields, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -81,7 +81,7 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError() {
+        function onError(contactError) {
             alert('onError!');
         }
 
@@ -93,6 +93,4 @@ Full Example
       </body>
     </html>
     
-iOS Quirks
-----------
-- iOS returns null for array properties that have no results, other platforms return an empty array.
+

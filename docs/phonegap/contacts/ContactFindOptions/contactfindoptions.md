@@ -7,8 +7,8 @@ Properties
 ----------
 
 - __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: true)
-- __updatedSince:__ Only return contacts updated since the date specified. _(Date)_ (Default: "")
+- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+
 
 Supported Platforms
 -------------------
@@ -28,7 +28,7 @@ Quick Example
     };
 
 	// error callback
-    function onError() {
+    function onError(contactError) {
         alert('onError!');
     };
 
@@ -39,7 +39,7 @@ Quick Example
 	filter = ["displayName"];	// return contact.displayName field
 	
 	// find contacts
-    navigator.service.contacts.find(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
 ------------
@@ -66,7 +66,7 @@ Full Example
 			filter = ["displayName"];	// return contact.displayName field
 
 			// find contacts
-		    navigator.service.contacts.find(filter, onSuccess, onError, options);
+		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -79,7 +79,7 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError() {
+        function onError(contactError) {
             alert('onError!');
         }
 
@@ -91,10 +91,3 @@ Full Example
       </body>
     </html>
 
-Android Quirks
-----------
-- __updatedSince:__ Not currently supported.
-    
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
----------------------------------------------
-- __updatedSince:__ Not currently supported.

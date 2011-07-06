@@ -28,7 +28,7 @@ Quick Example
 -------------
 
 	// create a new contact
-	var contact = navigator.service.contacts.create();
+	var contact = navigator.contacts.create();
 	
 	// store contact phone numbers in ContactField[]
 	var phoneNumbers = [3];
@@ -59,7 +59,7 @@ Full Example
         //
         function onDeviceReady() {
 			// create a new contact
-			var contact = navigator.service.contacts.create();
+			var contact = navigator.contacts.create();
 
 			// store contact phone numbers in ContactField[]
 			var phoneNumbers = [3];
@@ -75,7 +75,7 @@ Full Example
 			var options = new ContactFindOptions();
 			options.filter="";
 			filter = ["displayName","phoneNumbers"];
-			navigator.service.contacts.find(filter, onSuccess, onError, options);
+			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -93,7 +93,7 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError() {
+        function onError(contactError) {
             alert('onError!');
         }
 
