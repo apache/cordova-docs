@@ -6,7 +6,10 @@ Optional parameters to customize the camera settings.
     { quality : 75, 
       destinationType : Camera.DestinationType.DATA_URL, 
       sourceType : Camera.PictureSourceType.CAMERA, 
-      allowEdit : true };
+      allowEdit : true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 100,
+      targetHeight: 100 };
 
 Options
 -------
@@ -29,12 +32,23 @@ Options
         };
 
 - __allowEdit:__ Allow simple editing of image before selection. (`Boolean`)
-    
+  
+- __EncodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
+        
+            Camera.EncodingType = {
+                JPEG : 0,               // Return JPEG encoded image
+                PNG : 1                 // Return PNG encoded image
+            };
+
+- __targetWidth:__ Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (`Number`)
+- __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
+  
 Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
 - Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
+- Camera.EncodingType is not supported.
 
 BlackBerry Quirks
 -----------------
@@ -56,8 +70,7 @@ iPhone Quirks
 --------------
 
 - Set `quality` below 50 to avoid memory error on some devices.
-- When `destinationType.FILE_URI` is used, photos taken with the camera and edited photos are saved in the application's Documents/tmp directory.
-- The application's Documents/tmp directory is deleted when the application ends. Developers may also delete this directory using the navigator.fileMgr APIs if storage space is a concern.
+- When `destinationType.FILE_URI` is used, photos are saved in the application's temporary directory.
+- The contents of the application's temporary directory is deleted when the application ends. Developers may also delete the contents of this directory using the navigator.fileMgr APIs if storage space is a concern.
 
-           navigator.fileMgr.deleteDirectory("tmp", onSuccess, onFail);
            
