@@ -21,6 +21,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -45,8 +46,7 @@ Quick Example
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Capture Audio</title>
@@ -108,3 +108,8 @@ BlackBerry WebWorks Quirks
 --------------------------
 
 - PhoneGap for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+
+iOS Quirks
+----------
+
+- iOS does not have a default audio recording application so a simple user interface is provided.

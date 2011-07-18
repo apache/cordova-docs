@@ -29,3 +29,9 @@ BlackBerry WebWorks Quirks
 
 - The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
 - The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Adaptive Multi-Rate (AMR) format (audio/amr).
+
+iOS Quirks
+----------
+
+- The __limit__ parameter is not supported. One recording can be created for each invocation.
+- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Waveform Audio (WAV) format (audio/wav).

@@ -1,31 +1,31 @@
-pause
+offline
 ===========
 
-This is an event that fires when a PhoneGap application is put into the background.
+This is an event that fires when a PhoneGap application is offline (not connected to the Internet).
 
-    document.addEventListener("pause", yourCallbackFunction, false);
+    document.addEventListener("offline", yourCallbackFunction, false);
 
 Details
 -------
 
-PhoneGap consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
+When the application's network connection changes to being offline, the offline event is fired.  
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
 Supported Platforms
 -------------------
 
+- iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
 
 Quick Example
 -------------
 
-    document.addEventListener("pause", onPause, false);
+    document.addEventListener("offline", onOffline, false);
 
-    function onPause() {
-        // Handle the pause event
+    function onOffline() {
+        // Handle the offline event
     }
 
 Full Example
@@ -50,12 +50,12 @@ Full Example
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
         function onDeviceReady() {
-		    document.addEventListener("pause", onPause, false);
+		    document.addEventListener("offline", onOffline, false);
         }
 
-        // Handle the pause event
+        // Handle the offline event
         //
-        function onPause() {
+        function onOffline() {
         }
         
         </script>
@@ -66,4 +66,4 @@ Full Example
 
 iOS Quirks
 --------------------------
-In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the PhoneGap API. These will only be processed when the app resumes (processed on the next run-loop). 
+During initial startup, the first offline event (if applicable) will take at least a second to fire.

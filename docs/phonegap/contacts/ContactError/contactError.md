@@ -13,7 +13,6 @@ Constants
 
 - `ContactError.UNKNOWN_ERROR`
 - `ContactError.INVALID_ARGUMENT_ERROR`
-- `ContactError.NOT_FOUND_ERROR`
 - `ContactError.TIMEOUT_ERROR`
 - `ContactError.PENDING_OPERATION_ERROR`
 - `ContactError.IO_ERROR`

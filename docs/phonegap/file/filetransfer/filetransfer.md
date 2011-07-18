@@ -67,9 +67,7 @@ Full Example
             
             // Wait for PhoneGap to load
             //
-            function onLoad() {
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
+            document.addEventListener("deviceready", onDeviceReady, false);
             
             // PhoneGap is ready
             //
@@ -113,7 +111,7 @@ Full Example
             
             </script>
     </head>
-    <body onload="onLoad()">
+    <body>
         <h1>Example</h1>
         <p>Upload File</p>
     </body>

@@ -14,6 +14,7 @@ Supported Platforms
 
 - iOS
 - Android
+- BlackBerry WebWorks (OS 5.0 and higher)
 
 Quick Example
 -------------
@@ -39,8 +40,7 @@ Quick Example
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>navigator.network.connection.type Example</title>
@@ -50,9 +50,7 @@ Full Example
             
         // Wait for PhoneGap to load
         // 
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
         
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
@@ -77,11 +75,7 @@ Full Example
         
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <p>A dialog box will report the network state.</p>
       </body>
     </html>
-
-iOS Quirks
-----------
-- for a cellular connection, connection.type will always be Connection.CELL_2G

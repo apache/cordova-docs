@@ -7,8 +7,8 @@ Properties
 ----------
 
 - __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: true)
-- __updatedSince:__ Only return contacts updated since the date specified. _(Date)_ (Default: "")
+- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+
 
 Supported Platforms
 -------------------
@@ -28,7 +28,7 @@ Quick Example
     };
 
 	// error callback
-    function onError() {
+    function onError(contactError) {
         alert('onError!');
     };
 
@@ -39,13 +39,12 @@ Quick Example
 	filter = ["displayName"];	// return contact.displayName field
 	
 	// find contacts
-    navigator.service.contacts.find(filter, onSuccess, onError, options);
+    navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Contact Example</title>
@@ -55,9 +54,7 @@ Full Example
 
         // Wait for PhoneGap to load
         //
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
@@ -69,7 +66,7 @@ Full Example
 			filter = ["displayName"];	// return contact.displayName field
 
 			// find contacts
-		    navigator.service.contacts.find(filter, onSuccess, onError, options);
+		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
         // onSuccess: Get a snapshot of the current contacts
@@ -82,22 +79,15 @@ Full Example
     
         // onError: Failed to get the contacts
         //
-        function onError() {
+        function onError(contactError) {
             alert('onError!');
         }
 
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <h1>Example</h1>
         <p>Find Contacts</p>
       </body>
     </html>
 
-Android Quirks
-----------
-- __updatedSince:__ Not currently supported.
-    
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
----------------------------------------------
-- __updatedSince:__ Not currently supported.

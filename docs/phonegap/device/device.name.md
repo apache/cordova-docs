@@ -31,8 +31,7 @@ Quick Example
 Full Example
 ------------
 
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                          "http://www.w3.org/TR/html4/strict.dtd">
+    <!DOCTYPE html>
     <html>
       <head>
         <title>Device Properties Example</title>
@@ -42,9 +41,7 @@ Full Example
 
         // Wait for PhoneGap to load
         //
-        function onLoad() {
-            document.addEventListener("deviceready", onDeviceReady, false);
-        }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
         // PhoneGap is ready
         //
@@ -60,7 +57,7 @@ Full Example
 
         </script>
       </head>
-      <body onload="onLoad()">
+      <body>
         <p id="deviceProperties">Loading device properties...</p>
       </body>
     </html>

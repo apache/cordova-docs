@@ -11,8 +11,10 @@ This object is used to describe media capture modes supported by the device.  Th
 The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  Examples:
 
 - video/3gpp
+- video/quicktime
 - image/jpeg
-- audio/amr 
+- audio/amr
+- audio/wav 
 
 Properties
 ----------
@@ -36,3 +38,6 @@ Quick Example
             selectedmode = mode;
         }
     }
+
+
+Not supported by any platform.  All configuration data arrays are empty.

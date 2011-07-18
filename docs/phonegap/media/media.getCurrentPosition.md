@@ -60,9 +60,7 @@ Full Example
         
             // Wait for PhoneGap to load
             //
-            function onLoad() {
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
+            document.addEventListener("deviceready", onDeviceReady, false);
         
             // PhoneGap is ready
             //
@@ -144,7 +142,7 @@ Full Example
         
             </script>
           </head>
-          <body onload="onLoad()">
+          <body>
             <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
             <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
             <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
