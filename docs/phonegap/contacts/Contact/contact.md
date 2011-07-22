@@ -7,7 +7,7 @@ Properties
 ----------
 
 - __id:__ A globally unique identifier. _(DOMString)_
-- __displayname:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
+- __displayName:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
 - __name:__ An object containing all components of a persons name. _(ContactName)_
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
 - __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
@@ -15,14 +15,11 @@ Properties
 - __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
 - __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
 - __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
-- __revision:__ The last date the contact was revised. _(DOMString)_
 - __birthday:__ The birthday of the contact. _(Date)_
-- __gender:__ The gender of the contact. _(DOMString)_
 - __note:__ A note about the contact. _(DOMString)_
 - __photos:__ An array of the contact's photos. _(ContactField[])_
 - __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
 - __urls:__  An array of web pages associated to the contact. _(ContactField[])_
-- __timezone:__ The timezone of the conact. _(DOMString)_
 
 Methods
 -------
@@ -49,7 +46,7 @@ Supported Platforms
 Save Quick Example
 ------------------
 
-	function onSuccess(contacts) {
+	function onSuccess(contact) {
 		alert("Save Success");
 	};
 
@@ -58,7 +55,7 @@ Save Quick Example
 	};
 
 	// create a new contact object
-    var contact = navigator.service.contacts.create();
+    var contact = navigator.contacts.create();
 	contact.displayName = "Plumber";
 	contact.nickname = "Plumber"; 		//specify both to support all devices
 	
@@ -113,7 +110,7 @@ Full Example
         //
         function onDeviceReady() {
 		    // create
-		    var contact = navigator.service.contacts.create();
+		    var contact = navigator.contacts.create();
 			contact.displayName = "Plumber";
 			contact.nickname = "Plumber"; 		//specify both to support all devices
 			var name = new ContactName();
@@ -136,7 +133,7 @@ Full Example
         
         // onSaveSuccess: Get a snapshot of the current contacts
         //
-        function onSaveSuccess(contacts) {
+        function onSaveSuccess(contact) {
 			alert("Save Success");
         }
     
@@ -169,47 +166,37 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __revision:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __gender:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 - __categories:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
-- __timezone:__ This property is not support by Android 2.X devices, and will always be returned as `null`.
 
 Android 1.X Quirks
 ------------------
 
 - __name:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __nickname:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __revision:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __birthday:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __gender:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __photos:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __categories:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
 - __urls:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __timezone:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
+
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
 - __id:__ Supported.  Assigned by device when contact is saved.
-- __displayname:__ Supported.  Stored in BlackBerry __user1__ field.
+- __displayName:__ Supported.  Stored in BlackBerry __user1__ field.
 - __nickname:__ This property is not supported, and will always be returned as `null`. 
 - __phoneNumbers:__ Partially supported.  Phone numbers will be stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
 - __emails:__ Partially supported.  The first three email addresses will be stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
 - __addresses:__ Partially supported.  The first and second addresses will be stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
 - __ims:__ This property is not supported, and will always be returned as `null`. 
 - __organizations:__ Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
-- __revision:__ This property is not supported, and will always be returned as `null`. 
-- __gender:__ This property is not supported, and will always be returned as `null`. 
 - __photos:__ - Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, pass in a either a Base64 encoded image, or a URL pointing to the image.  The image will be scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a Base64 encoded image.
 - __categories:__  Partially supported.  Only 'Business' and 'Personal' categories are supported. 
 - __urls:__  Partially supported. The first url is stored in BlackBerry __webpage__ field.
-- __timezone:__ This property is not supported, and will always be returned as `null`. 
 
 iOS Quirks
 ----------
 - __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
-- __revision:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
-- __gender:__ This property is not supported by iOS devices, and will always be returned as `null`.
-- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Temporary folder is deleted when application exits. 
+- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.

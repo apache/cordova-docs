@@ -3,7 +3,7 @@ contacts.create
 
 Returns a new Contact object.
 
-    var contact = navigator.service.contacts.create(properties);
+    var contact = navigator.contacts.create(properties);
 
 Description
 -----------
@@ -22,7 +22,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    var myContact = navigator.service.contacts.create({"displayName": "Test User"});
+    var myContact = navigator.contacts.create({"displayName": "Test User"});
 
 Full Example
 ------------
@@ -42,7 +42,7 @@ Full Example
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			var myContact = navigator.service.contacts.create({"displayName": "Test User"});
+			var myContact = navigator.contacts.create({"displayName": "Test User"});
 			myContact.gender = "male";
 			console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
         }
