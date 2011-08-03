@@ -114,8 +114,5 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
-----------
 
-- The method name is `stopAudioRecord` on iOS.
 

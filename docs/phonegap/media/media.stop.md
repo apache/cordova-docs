@@ -87,7 +87,7 @@ Full Example
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position/1000) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback
