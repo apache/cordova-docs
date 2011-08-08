@@ -46,10 +46,6 @@
             <span>Record and play back audio files.</span>
         </li>
         <li>
-            <h2>Network</h2>
-            <span>Quickly check the network state.</span>
-        </li>
-        <li>
             <h2>Notification</h2>
             <span>Visual, audible, and tactile device notifications.</span>
         </li>

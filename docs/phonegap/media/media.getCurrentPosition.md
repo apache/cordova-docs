@@ -8,18 +8,19 @@ Returns the current position within an audio file.
 Parameters
 ----------
 
-- __mediaSuccess__: The callback that is called with the current position.
+- __mediaSuccess__: The callback that is called with the current position in seconds.
 - __mediaError__: (Optional) The callback that is called if there was an error.
 
 Description
 -----------
 
-Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object.
+Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
 
 Supported Platforms
 -------------------
 
 - Android
+- iOS
     
 Quick Example
 -------------
@@ -35,7 +36,7 @@ Quick Example
                 // success callback
                 function(position) {
                     if (position > -1) {
-                        console.log((position/1000) + " sec");
+                        console.log((position) + " sec");
                     }
                 },
                 // error callback
@@ -90,7 +91,7 @@ Full Example
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position/1000) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback

@@ -91,11 +91,6 @@ class FileMerger
                               'media.stopRecord.md',
                               File.join('MediaError','mediaError.md'),
                               File.join('Parameters','mediaError.md') ],                          
-    'network.md'         => [ 'network.isReachable.md',
-                              File.join('NetworkStatus', 'NetworkStatus.md'),
-                              File.join('parameters',   'reachableCallback.md'),
-                              File.join('parameters',   'reachableHostname.md'),
-                              File.join('parameters',   'reachableOptions.md') ],
     'connection.md'         => [ 'connection.type.md'
                                ],
     'notification.md'    => [ 'notification.alert.md',
