@@ -113,5 +113,4 @@ Full Example
 iOS Quirks
 ----------
 
-- The method name is `startAudioRecord` on iOS.
-- The file to record to must already exist.
+- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
