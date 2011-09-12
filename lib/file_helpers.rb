@@ -6,7 +6,7 @@ module FileHelpers
   #
   
   def default_input_directory
-    File.join root_directory, 'docs'
+    File.join root_directory, 'docs/en'
   end
   
   def default_output_directory
