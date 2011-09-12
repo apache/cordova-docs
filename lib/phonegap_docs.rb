@@ -41,9 +41,9 @@ class PhoneGapDocs
 
       copy_directory(version_directory, @working_directory)
 
-      @working_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
+      docs_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
     
-      move_directory(@working_directory, File.join(@output_directory, version))
+      move_directory(docs_directory, File.join(@output_directory, version))
       empty_tmp_directory
     end
   end
