@@ -36,7 +36,7 @@ module FileHelpers
   def empty_tmp_directory
     FileUtils.rm_rf tmp_directory
   end
-  
+
   #
   # File Operations
   #
@@ -48,7 +48,7 @@ module FileHelpers
       yield(entry) unless File.directory?(entry) or entry !~ /md|html/
     end
   end
-  
+
   private
   
   def root_directory

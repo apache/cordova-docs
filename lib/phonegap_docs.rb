@@ -25,19 +25,27 @@ class PhoneGapDocs
   end
   
   # PhoneGap Build-Time Steps
-  #   - Create a work space for the docs processing
-  #   - Pre-file processing
-  #   - Run joDoc
-  #   - Pre-file processing
-  #   - Release and cleanup
+  #   - For each version of the documentation
+  #     - Create a work space for the docs processing
+  #     - Pre-file processing
+  #     - Run joDoc
+  #     - Pre-file processing
+  #     - Release and cleanup
   #
   def run
-    copy_directory(@input_directory, @working_directory)
+    Dir.foreach(@input_directory) do |version|
+      next if version == '.' or version == '..'
 
-    @working_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
+      version_directory = File.join(@input_directory, version);
+      next unless File.directory?(version_directory)
+
+      copy_directory(version_directory, @working_directory)
+
+      @working_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
     
-    move_directory(@working_directory, @output_directory)
-    empty_tmp_directory
+      move_directory(@working_directory, File.join(@output_directory, version))
+      empty_tmp_directory
+    end
   end
   
   protected
