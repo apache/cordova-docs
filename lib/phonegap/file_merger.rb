@@ -120,6 +120,7 @@ class FileMerger
         File.open file_path, 'a' do |file|
           files.each do |filename|
             filename = File.join File.dirname(file_path), filename
+            next unless File.exists? filename
             file.write "\n\n---\n"
             file.write File.read(filename).strip
             FileUtils.rm filename
