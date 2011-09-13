@@ -43,10 +43,11 @@ class PhoneGapDocs
         next if ['.', '..'].include? version_dir
         output_path = File.join @output_directory, language_dir, version_dir
         input_path  = File.join @input_directory,  language_dir, version_dir
+        options     = { :lang => language_dir }
         next unless File.directory? input_path
 
         copy_directory(input_path, @working_directory)
-        generated_path = after_jodoc(jodocify(before_jodoc(@working_directory)))
+        generated_path = after_jodoc(jodocify(before_jodoc(@working_directory), options))
         move_directory(generated_path, output_path)
         empty_tmp_directory
       end
@@ -67,9 +68,9 @@ class PhoneGapDocs
     input_directory
   end
   
-  def jodocify(input_directory)
+  def jodocify(input_directory, options)
     output_directory = File.join tmp_directory, 'jodoc'
-    JoDoc.new(input_directory, output_directory).run
+    JoDoc.new(input_directory, output_directory, options).run
     
     output_directory
   end
