@@ -68,7 +68,7 @@ Full Example
         function onDeviceReady() {
 			var options = new ContactFindOptions();
 			options.filter="";
-			filter = ["displayName"];
+			filter = ["displayName","name"];
 			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     

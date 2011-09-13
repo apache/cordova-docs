@@ -9,12 +9,13 @@ Releases the underlying operating systems audio resources.
 Description
 -----------
 
-Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularily important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
+Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
 
 Supported Platforms
 -------------------
 
 - Android
+- iOS
     
 Quick Example
 -------------
@@ -71,7 +72,7 @@ Full Example
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position/1000) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback

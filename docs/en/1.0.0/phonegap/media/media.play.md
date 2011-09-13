@@ -69,9 +69,10 @@ Full Example
             // Play audio
             //
             function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
-        
+            	if (my_media == null) {
+                	// Create Media object from src
+                	my_media = new Media(src, onSuccess, onError);
+            	} // else play current audio
                 // Play audio
                 my_media.play();
         
@@ -83,7 +84,7 @@ Full Example
                             // success callback
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position/1000) + " sec");
+                                    setAudioPosition((position) + " sec");
                                 }
                             },
                             // error callback

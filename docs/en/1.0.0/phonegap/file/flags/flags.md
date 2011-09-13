@@ -6,9 +6,8 @@ This object is used to supply arguments to the `DirectoryEntry` __getFile__ and 
 Properties
 ----------
 
-- __create:__ Used to indicate that the file or directory should be created, if it does not exist. _(boolean)_
-- __exclusive:__ By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. _(boolean)_
-
+- __create:__ Used to indicate that the file or directory should be created, if it does not exist. If not set defaults to false. _(boolean)_ 
+- __exclusive:__ By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. If not set defaults to false. _(boolean)_ 
 Supported Platforms
 -------------------
 
