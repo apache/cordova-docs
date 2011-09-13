@@ -6,7 +6,7 @@ module FileHelpers
   #
   
   def default_input_directory
-    File.join root_directory, 'docs/en'
+    File.join root_directory, 'docs'
   end
   
   def default_output_directory
@@ -35,6 +35,10 @@ module FileHelpers
   
   def empty_tmp_directory
     FileUtils.rm_rf tmp_directory
+  end
+
+  def empty_output_directory
+    FileUtils.rm_rf @output_directory
   end
 
   #

@@ -33,18 +33,23 @@ class PhoneGapDocs
   #     - Release and cleanup
   #
   def run
-    Dir.foreach(@input_directory) do |version|
-      next if version == '.' or version == '..'
+    empty_output_directory
 
-      version_directory = File.join(@input_directory, version);
-      next unless File.directory?(version_directory)
+    Dir.foreach @input_directory do |language_dir|
+      next if ['.', '..'].include? language_dir
+      language_path = File.join @input_directory, language_dir
 
-      copy_directory(version_directory, @working_directory)
+      Dir.foreach language_path do |version_dir|
+        next if ['.', '..'].include? version_dir
+        output_path = File.join @output_directory, language_dir, version_dir
+        input_path  = File.join @input_directory,  language_dir, version_dir
+        next unless File.directory? input_path
 
-      docs_directory = after_jodoc(jodocify(before_jodoc(@working_directory)))
-    
-      move_directory(docs_directory, File.join(@output_directory, version))
-      empty_tmp_directory
+        copy_directory(input_path, @working_directory)
+        generated_path = after_jodoc(jodocify(before_jodoc(@working_directory)))
+        move_directory(generated_path, output_path)
+        empty_tmp_directory
+      end
     end
   end
   
