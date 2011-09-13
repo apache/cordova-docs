@@ -129,7 +129,7 @@ Full Example
         }
 		
 		function gotFS(fileSystem) {
-			fileSystem.root.getFile("readme.txt", {create: true}, gotFileEntry, fail);
+			fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
 		}
 		
 		function gotFileEntry(fileEntry) {
