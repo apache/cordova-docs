@@ -1,4 +1,5 @@
 {
+    "language": "Japanese",
     "merge": {
         "accelerometer.md": [
             "phonegap/accelerometer/accelerometer.md",
