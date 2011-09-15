@@ -45,6 +45,10 @@ Currently, PhoneGap-Docs uses [joDoc](http://github.com/davebalmer/jodoc) to gen
 
         gem install nokogiri
 
+- Install json (Ruby JSON parser)
+
+        gem install json
+
 ### Run the Script ###
 
     cd phonegap-docs

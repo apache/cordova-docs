@@ -27,7 +27,7 @@ class JoDoc
 
     # Run joDoc
     FileUtils.cd @input_directory do
-      `jodoc --output #{@output_directory} --title "PhoneGap API Documentation" --template #{@output_directory}/index.html ./`
+      `jodoc --output #{@output_directory} --title "PhoneGap API Documentation" --template #{@output_directory}/index.html ./ 2> /dev/null`
     end
   end
   
@@ -42,7 +42,7 @@ class JoDoc
   end
   
   def command_exists?(command)
-    system("which #{command} > /dev/null 2>/dev/null")
+    system("which #{command} > /dev/null 2> /dev/null")
   end
   
   def die(message)

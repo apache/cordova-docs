@@ -6,7 +6,7 @@ Events
 Event Types
 -----------
 
-- backbutton
 - deviceready
 - pause
 - resume
+- backbutton

@@ -2,8 +2,6 @@
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
 require 'phonegap_docs'
 
-puts 'Generating the PhoneGap Documentation...'
-
 phonegap_docs = PhoneGapDocs.new
 phonegap_docs.run
 
