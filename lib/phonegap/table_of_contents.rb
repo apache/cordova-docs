@@ -36,7 +36,7 @@ class TableOfContents
     
     # Generate Table of Contents
     #
-    toc = '<select onChange="moveToSection(this)">'
+    toc = '<select>'
     source_contents.each { |item| toc += item}
     toc += '</select>'
     
