@@ -11,6 +11,7 @@ require 'jodoc'
 require 'fileutils'
 require 'table_of_contents'
 require 'version_menu'
+require 'navigation_menu'
 require 'prettify'
 
 class PhoneGapDocs
@@ -50,7 +51,7 @@ class PhoneGapDocs
         copy_directory(input_path, @working_directory)
 
         puts " => Generating the PhoneGap Documentation for #{version_dir}-#{language_dir}..."
-        generated_path = after_jodoc(jodocify(before_jodoc(@working_directory), options), options)
+        generated_path = after_jodoc(jodocify(before_jodoc(@working_directory, options), options), options)
 
         move_directory(generated_path, output_path)
         empty_tmp_directory
@@ -60,7 +61,7 @@ class PhoneGapDocs
   
   protected
   
-  def before_jodoc(input_directory)
+  def before_jodoc(input_directory, options)
     klasses = [ YamlFrontMatter.new, QuirksMerger.new, FileMerger.new ]
     
     klasses.each do |klass|
@@ -80,7 +81,7 @@ class PhoneGapDocs
   end
   
   def after_jodoc(input_directory, options)
-    klasses = [ AddTitle.new, UpdateIndex.new, UpdateKeywordIndex.new, TableOfContents.new, VersionMenu.new(options), Prettify.new ]
+    klasses = [ AddTitle.new, UpdateIndex.new, UpdateKeywordIndex.new, TableOfContents.new, VersionMenu.new(options), NavigationMenu.new(options), Prettify.new ]
     
     klasses.each do |klass|
       each_file input_directory do |file|
