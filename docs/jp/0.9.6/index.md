@@ -6,15 +6,11 @@
             <span>デバイスの加速度センサー情報を取得します。</span>
         </li>
         <li>
-            <h2>Camera</h2>
+            <h2>カメラ制御</h2>
             <span>カメラを通じて写真を取得します。</span>
         </li>
         <li>
-            <h2>Compass</h2>
-            <span>コンパス方向を取得します。</span>
-        </li>
-        <li>
-            <h2>Contacts</h2>
+            <h2>連絡先</h2>
             <span>連絡先データベース情報を操作します。</span>
         </li>
         <li>
