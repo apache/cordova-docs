@@ -78,6 +78,10 @@ __4. config.xml__
 For each version, there is a `config.xml` that defines the name of the language and
 how to merge the files.
 
+__5. Customizing HTML template__
+
+Each language can override the default template in `template/docs/LANGUAGE`.
+
 Generating the Documentation
 ----------------------------
 
