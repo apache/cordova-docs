@@ -42,13 +42,15 @@ class TableOfContents
     #
     return nil if option_set.length <= 1
     
-    # Find the parent that will hold the select element
+    # Add select menu to the subheader
     #
-    select = doc.css('#subheader > small select')[0]
-    return nil if select.nil?
+    select = Nokogiri::XML::Node.new 'select', doc
     select.add_child option_set
+    subheader = doc.css('#subheader > small')[0]
+    subheader.add_child select
     
     # Save Table of Contents
+    # Add Nokogiri hack to properly render spaces
     File.open(filename, 'w') { |file| file.write doc.to_html.gsub('&amp;nbsp;', '&nbsp;') }
     
     return option_set
