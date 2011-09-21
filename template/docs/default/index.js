@@ -33,7 +33,9 @@ _gaq.push(['_trackPageview']);
             var language    = $select.parentElement.getAttribute('value');
             var currentFile = (window.location.href.match(/\/[^\/]*$/) || ['/index.html'])[0];
 
-            window.location.href = '../../' + language + '/' + version + currentFile;
+            // Uncomment to also jump to the same page. However, the server should handle missing page
+            // window.location.href = '../../' + language + '/' + version + currentFile;
+            window.location.href = '../../' + language + '/' + version + '/index.html';
         }, false);
     }, false);
 })();
