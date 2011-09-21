@@ -5,9 +5,28 @@ require 'fileutils'
 
 class VersionMenu
   def initialize(options = {})
-    @versions  = {}
-    @languages = {}
-    docs_path = File.expand_path File.join(__FILE__, '..', '..', '..', 'docs')
+      @version = options[:version]
+  end
+
+  def run(filename)
+    doc = Nokogiri::HTML(File.read(filename))
+
+    select = doc.css('#header small select')[0]
+    select.add_child generate_set(doc)
+
+    File.open(filename, 'w') { |file| file.write doc.to_html }
+
+    return doc.to_html
+  end
+
+  private
+
+  def generate_set doc
+    optgroup_set = Nokogiri::XML::NodeSet.new doc
+    docs_path    = File.expand_path File.join(__FILE__, '..', '..', '..', 'docs')
+    versions     = {}
+    languages    = {}
+    html         = []
 
     # build hash of languages and versions
     Dir.glob(File.join docs_path, '**', 'config.json').each do |file|
@@ -16,42 +35,30 @@ class VersionMenu
       language = JSON.parse(IO.read(file))['language']
 
       if language
-        @versions[language] ||= []
-        @versions[language].push version
-        @languages[language] = lang
+        versions[language] ||= []
+        versions[language].push version
+        languages[language] = lang
       else
         puts "Warning: The key 'language' was not defined in #{file}"
       end
     end
 
-    @html = []
-
     # generate HTML <select> output
-    @versions.keys.sort.each do |language|
-      @html.push "<optgroup label=\"#{language}\" value=\"#{@languages[language]}\">"
+    versions.keys.sort.each do |language|
+      optgroup = Nokogiri::XML::Node.new 'optgroup', doc
+      optgroup['label'] = language
+      optgroup['value'] = languages[language]
+      optgroup_set.push optgroup
 
-      @versions[language].sort.reverse.each do |version|
-        if version == options[:version]
-            @html.push "  <option value=\"#{version}\" selected>#{version}</option>"
-        else
-            @html.push "  <option value=\"#{version}\">#{version}</option>"
-        end
+      versions[language].sort.reverse.each do |v|
+        option = Nokogiri::XML::Node.new 'option', doc
+        option['selected'] = 'selected' if v == @version
+        option['value'] = v;
+        option.content = v
+        optgroup.add_child option
       end
-
-      @html.push "</optgroup>"
     end
 
-    @html = @html.join("\n").concat("\n")
-  end
-
-  def run(filename)
-    doc = Nokogiri::HTML(File.read(filename))
-
-    select_element = doc.css('#header small select')[0]
-    select_element.inner_html = @html
-
-    File.open(filename, 'w') { |file| file.write doc.to_html }
-
-    return doc.to_html
+    return optgroup_set
   end
 end
