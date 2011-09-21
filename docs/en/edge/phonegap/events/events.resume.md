@@ -25,7 +25,7 @@ Quick Example
     document.addEventListener("resume", onResume, false);
 
     function onResume() {
-        // Handle the pause event
+        // Handle the resume event
     }
 
 Full Example

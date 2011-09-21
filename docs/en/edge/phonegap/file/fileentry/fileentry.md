@@ -140,7 +140,7 @@ Returns a URI that can be used to locate the file.
 
 __Quick Example__
 	
-    // Request the metadata object for this entry
+    // Request the URI for this entry
     var uri = entry.toURI();
     console.log(uri);
 
