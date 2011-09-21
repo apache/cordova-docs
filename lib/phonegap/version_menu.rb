@@ -5,7 +5,8 @@ require 'fileutils'
 
 class VersionMenu
   def initialize(options = {})
-      @version = options[:version]
+      @version  = options[:version]
+      @language = options[:lang]
   end
 
   def run(filename)
@@ -52,7 +53,7 @@ class VersionMenu
 
       versions[language].sort.reverse.each do |v|
         option = Nokogiri::XML::Node.new 'option', doc
-        option['selected'] = 'selected' if v == @version
+        option['selected'] = 'selected' if @version == v && @language == languages[language]
         option['value'] = v;
         option.content = v
         optgroup.add_child option
