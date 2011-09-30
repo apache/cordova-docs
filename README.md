@@ -73,9 +73,9 @@ __3. Begin Translating__
 Currently, English is the most up-to-date and so it is easiest to copy each English
 file into the new language directory.
 
-__4. config.xml__
+__4. config.json__
 
-For each version, there is a `config.xml` that defines the name of the language and
+For each version, there is a `config.json` that defines the name of the language and
 how to merge the files.
 
 __5. Customizing HTML template__
