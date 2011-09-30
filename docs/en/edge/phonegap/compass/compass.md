@@ -9,6 +9,8 @@ Methods
 - compass.getCurrentHeading
 - compass.watchHeading
 - compass.clearWatch
+- compass.watchHeadingFilter
+- compass.clearWatchFilter
 
 Arguments
 ---------
@@ -16,3 +18,4 @@ Arguments
 - compassSuccess
 - compassError
 - compassOptions
+- compassHeading

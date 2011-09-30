@@ -10,7 +10,7 @@ Description
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The compass heading is returned using the `compassSuccess` callback function.
+The compass heading information is returned via a CompassHeading object using the `compassSuccess` callback function.
 
 Supported Platforms
 -------------------
@@ -22,11 +22,11 @@ Quick Example
 -------------
 
     function onSuccess(heading) {
-        alert('Heading: ' + heading);
+        alert('Heading: ' + heading.magneticHeading);
     };
 
-    function onError() {
-        alert('onError!');
+    function onError(error) {
+        alert('CompassError: ' error.code);
     };
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
@@ -55,13 +55,13 @@ Full Example
         // onSuccess: Get the current heading
         //
         function onSuccess(heading) {
-            alert('Heading: ' + heading);
+            alert('Heading: ' + heading.magneticHeading);
         }
     
         // onError: Failed to get the heading
         //
-        function onError() {
-            alert('onError!');
+        function onError(compassError) {
+            alert('Compass Error: ' + compassError.code);
         }
 
         </script>

@@ -1,9 +1,11 @@
 compassError
-============
+==========
 
-onError callback function for compass functions.
+onError callback function for compass functions. 
 
-    function() {
-        // Handle the error
-    }
+Example
+-------
 
+function(CompassError) {
+    // Handle the error
+}

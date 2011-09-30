@@ -39,9 +39,13 @@
             "phonegap/compass/compass.getCurrentHeading.md",
             "phonegap/compass/compass.watchHeading.md",
             "phonegap/compass/compass.clearWatch.md",
+            "phonegap/compass/compass.watchHeadingFilter.md",
+            "phonegap/compass/compass.clearWatchFilter.md",
             "phonegap/compass/parameters/compassSuccess.md",
             "phonegap/compass/parameters/compassError.md",
-            "phonegap/compass/parameters/compassOptions.md"
+            "phonegap/compass/parameters/compassOptions.md",
+            "phonegap/compass/parameters/compassHeading.md",
+            "phonegap/compass/compassError/compassError.md"
         ],
         "contacts.md": [
             "phonegap/contacts/contacts.md",

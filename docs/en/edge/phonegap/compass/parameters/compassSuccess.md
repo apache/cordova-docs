@@ -1,7 +1,7 @@
 compassSuccess
 ==============
 
-onSuccess callback function that provides the compass heading information.
+onSuccess callback function that provides the compass heading information via a compassHeading object.
 
     function(heading) {
         // Do something
@@ -10,11 +10,12 @@ onSuccess callback function that provides the compass heading information.
 Parameters
 ----------
 
-- __heading:__ The heading in degrees from 0 - 359.99 at a single moment in time. _(Number)_
+
+- __heading:__ The heading information. _(compassHeading)_
 
 Example
 -------
 
     function onSuccess(heading) {
-        alert('Heading: ' + heading);
+        alert('Heading: ' + heading.magneticHeading);
     };
