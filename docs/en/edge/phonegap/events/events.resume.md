@@ -17,7 +17,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 
 Quick Example
 -------------
@@ -34,7 +34,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>PhoneGap Resume Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -44,22 +44,24 @@ Full Example
         // At this point, the document has loaded but phonegap.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
-        document.addEventListener("deviceready", onDeviceReady, false);
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
         function onDeviceReady() {
-		    document.addEventListener("resume", onResume, false);
+            document.addEventListener("resume", onResume, false);
         }
 
         // Handle the resume event
         //
         function onResume() {
         }
-        
+
         </script>
       </head>
-      <body>
+      <body onload="onLoad()">
       </body>
     </html>
