@@ -42,6 +42,14 @@ Options
 
 - __targetWidth:__ Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (`Number`)
 - __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
+
+- __MediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
+     
+        Camera.MediaType = { 
+			PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
+			VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
+			ALLMEDIA : 2			// allow selection from all media types
+};
   
 Android Quirks
 --------------
@@ -58,6 +66,7 @@ BlackBerry Quirks
 - Ignores the `allowEdit` parameter.
 - Application must have key injection permissions to close native Camera application after photo is taken.
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
+- Camera.MediaType is not supported.
 
 Palm Quirks
 -----------
@@ -65,6 +74,7 @@ Palm Quirks
 - Ignores the `quality` parameter.
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
+- Camera.MediaType is not supported.
 
 iPhone Quirks
 --------------
