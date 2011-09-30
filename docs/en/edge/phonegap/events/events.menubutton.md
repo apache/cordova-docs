@@ -1,14 +1,14 @@
 menubutton
 ===========
 
-This is an event that fires when the user presses the menu button on Android.
+This is an event that fires when the user presses the menu button.
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to over ride the default menu button behaviour on Android you can register and event listenter for the 'menubutton' event.
+If you need to override the default menu button behaviour you can register an event listenter for the 'menubutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
@@ -16,6 +16,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 and higher)
 
 Quick Example
 -------------
@@ -23,7 +24,7 @@ Quick Example
     document.addEventListener("menubutton", onMenuKeyDown, false);
 
     function onMenuKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example
@@ -33,7 +34,7 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>PhoneGap Menu Button Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -43,7 +44,7 @@ Full Example
         // At this point, the document has loaded but phonegap.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
+        //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
@@ -54,7 +55,7 @@ Full Example
             // Register the event listener
             document.addEventListener("menubutton", onMenuKeyDown, false);
         }
-        
+
         // Handle the menu button
         //
         function onMenuKeyDown() {
