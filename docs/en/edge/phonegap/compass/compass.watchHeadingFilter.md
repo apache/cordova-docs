@@ -1,23 +1,22 @@
-compass.watchHeading
-====================
+compass.watchHeadingFilter
+==========================
 
-At a regular interval, get the compass heading in degrees.
+Get the compass heading in degrees when it changes by at least a certain number of degrees.
 
-    var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
+    var watchID = navigator.compass.watchHeadingFilter(compassSuccess, compassError, compassOptions);
                                                            
 Description
 -----------
 
 The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
 
-The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `compassOptions` object.
+The `compass.watchHeadingFilter` gets the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `compassOptions` object.
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatch` to stop watching the compass.
+The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatchFilter` to stop watching the compass via a degree filter.  Only one watchHeadingFilter can be in effect at one time.  If a watchHeadingFilter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS this method is more efficient than compass.watchFilter() based on the iOS mechanism for monitoring compass heading changes.
 
 Supported Platforms
 -------------------
 
-- Android
 - iPhone
 
 
@@ -33,9 +32,9 @@ Quick Example
             alert('Compass error: ' + compassError.code);
     };
 
-    var options = { frequency: 3000 };  // Update every 3 seconds
+    var options = { filter: 10 };  // Get notified on compass heading changes or 10 degrees or more
     
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
 
 Full Example
 ------------
@@ -65,17 +64,17 @@ Full Example
         //
         function startWatch() {
             
-            // Update compass every 3 seconds
-            var options = { frequency: 3000 };
+            // Get notified on compass heading changes or 10 degrees or more
+            var options = { filter: 10 };
             
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
         }
         
         // Stop watching the compass
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.compass.clearWatchFilter(watchID);
                 watchID = null;
             }
         }
@@ -97,7 +96,7 @@ Full Example
       </head>
       <body>
         <div id="heading">Waiting for heading...</div>
-        <button onclick="startWatch();">Start Watching</button>
+        <button onclick="startWatch();">Start Watching via Filter</button>
         <button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>

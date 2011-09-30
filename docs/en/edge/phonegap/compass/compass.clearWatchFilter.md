@@ -1,26 +1,25 @@
-compass.clearWatch
+compass.clearWatchFilter
 ========================
 
 Stop watching the compass referenced by the watch ID parameter.
 
-    navigator.compass.clearWatch(watchID);
+    navigator.compass.clearWatchFilter(watchID);
 
-- __watchID__: The ID returned by `compass.watchHeading`.
+- __watchID__: The ID returned by `compass.watchHeadingFilter`.
 
 Supported Platforms
 -------------------
 
-- Android
 - iPhone
 
 Quick Example
 -------------
 
-    var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    var watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
     
     // ... later on ...
     
-    navigator.compass.clearWatch(watchID);
+    navigator.compass.clearWatchFilter(watchID);
     
 Full Example
 ------------
@@ -50,17 +49,17 @@ Full Example
         //
         function startWatch() {
             
-            // Update compass every 3 seconds
-            var options = { frequency: 3000 };
+            // Get notified on compass heading changes or 10 degrees or more
+            var options = { filter: 10 };
             
-            watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+            watchID = navigator.compass.watchHeadingFilter(onSuccess, onError, options);
         }
         
         // Stop watching the compass
         //
         function stopWatch() {
             if (watchID) {
-                navigator.compass.clearWatch(watchID);
+                navigator.compass.clearWatchFilter(watchID);
                 watchID = null;
             }
         }
@@ -83,7 +82,7 @@ Full Example
       </head>
       <body>
         <div id="heading">Waiting for heading...</div>
-        <button onclick="startWatch();">Start Watching</button>
+        <button onclick="startWatch();">Start Watching via Filter</button>
         <button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>
