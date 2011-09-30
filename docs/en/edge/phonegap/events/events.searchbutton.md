@@ -8,7 +8,7 @@ This is an event that fires when the user presses the search button on Android.
 Details
 -------
 
-If you need to over ride the default search button behaviour on Android you can register and event listenter for the 'searchbutton' event.
+If you need to override the default search button behaviour on Android you can register an event listener for the 'searchbutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
@@ -23,7 +23,7 @@ Quick Example
     document.addEventListener("searchbutton", onSearchKeyDown, false);
 
     function onSearchKeyDown() {
-        // Handle the search buton
+        // Handle the search button
     }
 
 Full Example
@@ -33,7 +33,7 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>PhoneGap Search Button Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -43,7 +43,7 @@ Full Example
         // At this point, the document has loaded but phonegap.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
+        //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
@@ -54,7 +54,7 @@ Full Example
             // Register the event listener
             document.addEventListener("searchbutton", onSearchKeyDown, false);
         }
-        
+
         // Handle the search button
         //
         function onSearchKeyDown() {

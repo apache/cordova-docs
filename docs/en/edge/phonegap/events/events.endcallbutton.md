@@ -1,39 +1,39 @@
-backbutton
+endcallbutton
 ===========
 
-This is an event that fires when the user presses the back button.
+This is an event that fires when the user presses the end call button.
 
-    document.addEventListener("backbutton", yourCallbackFunction, false);
+    document.addEventListener("endcallbutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to override the default back button behaviour you can register an event listener for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
+If you need to override the default end call behaviour you can register an event listener for the 'endcallbutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
 Supported Platforms
 -------------------
 
-- Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
 Quick Example
 -------------
 
-    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("endcallbutton", onEndCallKeyDown, false);
 
-    function onBackKeyDown() {
-        // Handle the back button
+    function onEndCallKeyDown() {
+        // Handle the end call button
     }
 
 Full Example
 ------------
 
-    <!DOCTYPE html>
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                          "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Back Button Example</title>
+        <title>PhoneGap End Call Button Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -48,16 +48,16 @@ Full Example
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and it is now safe to call PhoneGap methods
+        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
         function onDeviceReady() {
             // Register the event listener
-            document.addEventListener("backbutton", onBackKeyDown, false);
+            document.addEventListener("endcallbutton", onEndCallKeyDown, false);
         }
-        
-        // Handle the back button
+
+        // Handle the end call button
         //
-        function onBackKeyDown() {
+        function onEndCallKeyDown() {
         }
 
         </script>

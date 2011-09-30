@@ -14,4 +14,8 @@ Event Types
 - backbutton
 - menubutton
 - searchbutton
+- startcallbutton
+- endcallbutton
+- volumedownbutton
+- volumeupbutton
 

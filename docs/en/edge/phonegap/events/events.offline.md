@@ -15,9 +15,9 @@ Typically, you will want to attach an event listener with `document.addEventList
 Supported Platforms
 -------------------
 
-- iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
+- iOS
 
 Quick Example
 -------------
@@ -34,7 +34,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>PhoneGap Offline Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -44,8 +44,10 @@ Full Example
         // At this point, the document has loaded but phonegap.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
-        document.addEventListener("deviceready", onDeviceReady, false);
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
         // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
         //
@@ -57,10 +59,10 @@ Full Example
         //
         function onOffline() {
         }
-        
+
         </script>
       </head>
-      <body>
+      <body onload="onLoad()">
       </body>
     </html>
 
