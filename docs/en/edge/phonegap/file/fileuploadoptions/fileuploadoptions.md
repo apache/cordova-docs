@@ -10,6 +10,7 @@ Properties
 - __fileName:__ The file name you want the file to be saved as on the server.  If not set defaults to "image.jpg". (DOMString)
 - __mimeType:__ The mime type of the data you are uploading.  If not set defaults to "image/jpeg". (DOMString)
 - __params:__ A set of optional key/value pairs to be passed along in the HTTP request. (Object)
+- __chunkedMode:__ Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)
 
 
 Description

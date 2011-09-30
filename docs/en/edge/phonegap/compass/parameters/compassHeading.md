@@ -17,7 +17,8 @@ The `CompassHeading` object is returned to the user through the `compassSuccess`
 
 Android Quirks
 --------------
-- trueHeading is not supported
+- trueHeading is not supported. It will report the same value as magneticHeading
+- headingAccuracy will always be 0 as there is no difference between the magneticHeading and trueHeading on Android.
 
 iOS Quirks
 ----------
