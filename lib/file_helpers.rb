@@ -36,7 +36,11 @@ module FileHelpers
   def empty_tmp_directory
     FileUtils.rm_rf tmp_directory
   end
-  
+
+  def empty_output_directory
+    FileUtils.rm_rf @output_directory
+  end
+
   #
   # File Operations
   #
@@ -44,11 +48,11 @@ module FileHelpers
   def each_file(directory)
     directory_glob = Dir.glob(File.join(directory, '**', '*'))
     
-    directory_glob.each do |entry|
+    directory_glob.sort.each do |entry|
       yield(entry) unless File.directory?(entry) or entry !~ /md|html/
     end
   end
-  
+
   private
   
   def root_directory

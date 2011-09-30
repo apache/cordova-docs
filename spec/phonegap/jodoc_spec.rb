@@ -18,7 +18,7 @@ describe JoDoc do
   end
   
   it 'should generate HTML assets from Markdown' do
-    File.exists?(File.join(@tmp_public_directory, 'phonegap_accelerometer_accelerometer.md.html')).should be_true
+    File.exists?(File.join(@tmp_public_directory, 'en', 'edge', 'phonegap_accelerometer_accelerometer.md.html')).should be_true
   end
   
   after :all do
