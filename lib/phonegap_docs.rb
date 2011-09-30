@@ -37,12 +37,14 @@ class PhoneGapDocs
   def run
     empty_output_directory
 
+    ignore_list = ['.', '..', '.DS_Store']
+
     Dir.foreach @input_directory do |language_dir|
-      next if ['.', '..'].include? language_dir
+      next if ignore_list.include? language_dir
       language_path = File.join @input_directory, language_dir
 
       Dir.foreach language_path do |version_dir|
-        next if ['.', '..'].include? version_dir
+        next if ignore_list.include? version_dir
         output_path = File.join @output_directory, language_dir, version_dir
         input_path  = File.join @input_directory,  language_dir, version_dir
         options     = { :lang => language_dir, :version => version_dir }
