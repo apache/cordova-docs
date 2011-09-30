@@ -18,8 +18,12 @@ class FileMerger
       if name == root_name
         File.open file_path, 'a' do |file|
           files.each do |filename|
+            # skip the file that is opened for appending
+            next if File.basename(filename) == root_name
+
             filename = File.join @root_dir, filename
             next unless file_exists? filename
+
             file.write "\n\n---\n"
             file.write File.read(filename).strip
             FileUtils.rm filename unless name == File.basename(filename)
