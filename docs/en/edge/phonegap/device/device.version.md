@@ -12,6 +12,7 @@ Supported Platforms
 - BlackBerry
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
+- Windows Phone 7 ( Mango )
 
 Quick Example
 -------------
@@ -24,6 +25,7 @@ Quick Example
     //
     // iPhone:     iOS 3.2 returns "3.2"
     //
+    // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
     var deviceVersion = device.version;
 
 Full Example

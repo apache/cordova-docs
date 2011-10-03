@@ -14,6 +14,7 @@ Supported Platforms
 - BlackBerry (OS 4.6)
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
+- Windows Phone 7 ( Mango )
 
 Quick Example
 -------------
@@ -85,4 +86,9 @@ iPhone Quirks
 - There is no native beep API for iPhone.
   - PhoneGap implements beep by playing an audio file via the media API.
   - The user must provide a file with the desired beep tone.
-  - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`. 
+  - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`.
+
+Windows Phone 7 Quirks
+-------------
+
+- WP7 PhoneGap lib includes a generic beep file that is used. 
