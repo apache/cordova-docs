@@ -83,4 +83,8 @@ iPhone Quirks
 - When `destinationType.FILE_URI` is used, photos are saved in the application's temporary directory.
 - The contents of the application's temporary directory is deleted when the application ends. Developers may also delete the contents of this directory using the navigator.fileMgr APIs if storage space is a concern.
 
+Windows Phone 7 Quirks
+--------------
+
+- Ignores the `allowEdit` parameter.
            

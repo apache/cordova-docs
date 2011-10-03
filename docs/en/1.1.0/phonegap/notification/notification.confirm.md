@@ -21,6 +21,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
+- Windows Phone 7 ( Mango )
 
 Quick Example
 -------------
@@ -84,3 +85,8 @@ Full Example
         <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
       </body>
     </html>
+
+Windows Phone 7 Quirks
+-------------
+
+- Ignores button names, always 'OK|Cancel'

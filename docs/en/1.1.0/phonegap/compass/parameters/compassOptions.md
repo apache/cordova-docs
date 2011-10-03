@@ -12,3 +12,8 @@ Options
 Android Quirks
 ______________
 - filter is not supported.
+
+Windows Phone 7 Quirks
+--------------
+
+- filter is not supported.
