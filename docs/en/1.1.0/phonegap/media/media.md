@@ -40,4 +40,5 @@ Supported Platforms
 
 - Android
 - iOS
+- Windows Phone 7 ( Mango )
 

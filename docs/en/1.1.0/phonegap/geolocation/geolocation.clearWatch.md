@@ -22,6 +22,7 @@ Supported Platforms
 - BlackBerry (OS 4.6)
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
+- Windows Phone 7 ( Mango )
 
 Quick Example
 -------------

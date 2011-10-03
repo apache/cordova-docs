@@ -17,6 +17,7 @@ Supported Platforms
 - BlackBerry
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
+- Windows Phone 7 ( Mango )
 
 Quick Example
 -------------
@@ -31,7 +32,9 @@ Quick Example
     //         Returns a string of hash values created from multiple hardware identifies.
     //         It is guaranteed to be unique for every device and cannot be tied
     //         to the user account.
-    //
+    // Windows Phone 7 : Returns a hash of device+current user, 
+    // if the user is not defined, a guid is generated and will persist until the app is uninstalled
+    // 
     var deviceID = device.uuid;
 
 Full Example

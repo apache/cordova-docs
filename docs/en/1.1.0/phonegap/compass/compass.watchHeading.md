@@ -19,6 +19,7 @@ Supported Platforms
 
 - Android
 - iPhone
+- Windows Phone 7 ( Mango ) if available in hardware
 
 
 Quick Example
