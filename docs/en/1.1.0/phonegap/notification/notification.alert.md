@@ -91,4 +91,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- Ignores button names, always 'OK'
+- Ignores button names, always uses 'OK' 
