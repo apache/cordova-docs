@@ -12,6 +12,9 @@ Event Types
 - online
 - offline
 - backbutton
+- batterycritical
+- batterylow
+- batterystatus
 - menubutton
 - searchbutton
 - startcallbutton
