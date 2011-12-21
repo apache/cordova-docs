@@ -1,7 +1,7 @@
 FileTransfer
 ==========
 
-FileTransfer is an object that allows you to upload files to a server.
+FileTransfer is an object that allows you to upload files to a server or download files from a server.
 
 Properties
 ----------
@@ -12,11 +12,13 @@ Methods
 -------
 
 - __upload__: sends a file to a server. 
+- __download__: downloads a file from server.
 
 Details
 -------
 
 The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
+It is also possible to download a file from remote and save it on the device (only iOS and Android).
 
 Supported Platforms
 -------------------
@@ -26,10 +28,20 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 
-Quick Example
-------------------------------
+upload
+--------------
+
+__Parameters:__
+
+- __filePath__ - Full path of the file on the device
+- __server__ - URL of the server to receive the file
+- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __options__ - Optional parameters such as file name and mimetype
+
+__Quick Example__
 	
-	// !! Assumes variable fileURI contains a valid URI to a  text file on the device
+    // !! Assumes variable fileURI contains a valid URI to a  text file on the device
 	
   	var win = function(r) {
         console.log("Code = " + r.responseCode);
@@ -39,6 +51,8 @@ Quick Example
 	
     var fail = function(error) {
         alert("An error has occurred: Code = " = error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
     }
 	
 	var options = new FileUploadOptions();
@@ -55,8 +69,7 @@ Quick Example
 	var ft = new FileTransfer();
     ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
     
-Full Example
-------------
+__Full Example__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
@@ -108,6 +121,8 @@ Full Example
             
             function fail(error) {
                 alert("An error has occurred: Code = " = error.code);
+                console.log("upload error source " + error.source);
+                console.log("upload error target " + error.target);
             }
             
             </script>
@@ -118,3 +133,31 @@ Full Example
     </body>
     </html>
 
+download
+--------------
+
+__Parameters:__
+
+- __source__ - URL of the server to receive the file
+- __target__ - Full path of the file on the device
+- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+
+__Quick Example__
+
+     // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
+
+    var fileTransfer = new FileTransfer();
+    
+    fileTransfer.download(
+        url,
+        filePath,
+        function(entry) {
+            console.log("download complete: " + entry.fullPath);
+        },
+        function(error) {
+            console.log("download error source " + error.source);
+            console.log("download error target " + error.target);
+            console.log("upload error code" + error.code);
+        }
+    );
