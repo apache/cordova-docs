@@ -140,7 +140,7 @@ __Parameters:__
 
 - __source__ - URL of the server to receive the file
 - __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
+- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
 
 __Quick Example__
