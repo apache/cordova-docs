@@ -118,3 +118,31 @@ Full Example
     </body>
     </html>
 
+download
+--------------
+
+__Parameters:__
+
+- __source__ - URL of the server to receive the file
+- __target__ - Full path of the file on the device
+- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
+- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+
+__Quick Example__
+
+     // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
+
+    var fileTransfer = new FileTransfer();
+    
+    fileTransfer.download(
+        url,
+        filePath,
+        function(entry) {
+            console.log("download complete: " + entry.fullPath);
+        },
+        function(error) {
+            console.log("download error source " + error.source);
+            console.log("download error target " + error.target);
+            console.log("upload error code" + error.code);
+        }
+    );
