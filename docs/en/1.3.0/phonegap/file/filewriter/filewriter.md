@@ -124,46 +124,48 @@ Full Example
     <html>
       <head>
         <title>FileWriter Example</title>
-
-        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.js"></script>
+    
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-
+    
         // Wait for PhoneGap to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-
+    
         // PhoneGap is ready
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-		
-		function gotFS(fileSystem) {
-			fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
-		}
-		
-		function gotFileEntry(fileEntry) {
-			fileEntry.createWriter(gotFileWriter, fail);
-		}
-		
-		function gotFileWriter(writer) {
-	        writer.onwrite = function(evt) {
-                console.log("write success");
+    
+        function gotFS(fileSystem) {
+            fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+        }
+    
+        function gotFileEntry(fileEntry) {
+            fileEntry.createWriter(gotFileWriter, fail);
+        }
+    
+        function gotFileWriter(writer) {
+            writer.onwriteend = function(evt) {
+                console.log("contents of file now 'some sample text'");
+                writer.truncate(11);  
+                writer.onwriteend = function(evt) {
+                    console.log("contents of file now 'some sample'");
+                    writer.seek(4);
+                    writer.write(" different text");
+                    writer.onwriteend = function(evt){
+                        console.log("contents of file now 'some different text'");
+                    }
+                };
             };
             writer.write("some sample text");
-			// contents of file now 'some sample text'
-			writer.truncate(11);
-			// contents of file now 'some sample'
-			writer.seek(4);
-			// contents of file still 'some sample' but file pointer is after the 'e' in 'some'
-			writer.write(" different text");
-			// contents of file now 'some different text'
-		}
-        
+        }
+    
         function fail(error) {
             console.log(error.code);
         }
-        
+    
         </script>
       </head>
       <body>
