@@ -68,6 +68,7 @@ class PhoneGapDocs
     
     klasses.each do |klass|
       each_file input_directory do |file|
+        next if file.match(/\/guide\//) # do not process the guides
         klass.run file
       end
     end

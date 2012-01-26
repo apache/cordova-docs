@@ -14,7 +14,7 @@ class UpdateKeywordIndex
   
   def run(filename)
     return false unless File.basename(filename) == '_index.html'
-    
+
     doc = Nokogiri::HTML(File.read(filename))
     
     element = doc.css('#subheader > h1')[0]
@@ -28,7 +28,7 @@ class UpdateKeywordIndex
     
     # Update referenced to index.md.html
     # Then save
-    File.open(filename, 'w') { |file| file.write doc.to_html.gsub('index.md.html', 'index.html') }
+    File.open(filename, 'w') { |file| file.write doc.to_html.gsub('/index.md.html', '/index.html') }
     
     return true
   end
