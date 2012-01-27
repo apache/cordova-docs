@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
+require 'uri'
 
 class TableOfContents
   def run(filename)
@@ -16,7 +17,7 @@ class TableOfContents
         current_h1 = tag.content
 
         option = Nokogiri::XML::Node.new 'option', doc
-        option['value'] = tag.child[:name]
+        option['value'] = URI.escape(tag.child[:name])
         option.content = tag.content
         option_set.push option
       else
@@ -25,7 +26,7 @@ class TableOfContents
         s = tag.content.gsub(/^\W+|\W+$/, '').gsub(/\W+/, '_').downcase
 
         option = Nokogiri::XML::Node.new 'option', doc
-        option['value'] = "#{current_h1}_#{s}"
+        option['value'] = URI.escape("#{current_h1}_#{s}")
         option.content = "#{indentation}- #{tag.content}"
         option_set.push option
 
