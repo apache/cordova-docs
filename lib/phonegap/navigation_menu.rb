@@ -15,7 +15,7 @@ class NavigationMenu
 
     h1_set   = doc.css('#home > h1')
     ul_set   = doc.css('#home > ul')
-    count    = h1_set.count
+    count    = h1_set.length
 
     count.times do |index|
       links = []
