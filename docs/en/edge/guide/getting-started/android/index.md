@@ -32,8 +32,8 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
     ![](img/guide/getting-started/android/new_android_project.jpeg)
 - In the root directory of the project, create two new directories:
  	- **/libs**
- 	- **guides/images/www**
-- Copy **phonegap.js** from your PhoneGap download earlier to **guides/images/www**
+ 	- **assets/www**
+- Copy **phonegap.js** from your PhoneGap download earlier to **assets/www**
 - Copy **phonegap.jar** from your PhoneGap download earlier to **/libs**
 - Copy **xml** folder from your PhoneGap download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
@@ -74,7 +74,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 4. Hello World
 --------------    
 
-Now create and open a new file named **index.html** in the **guides/images/www** directory. Paste the following code:
+Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
 	    <!DOCTYPE HTML>
         <html>
@@ -87,7 +87,7 @@ Now create and open a new file named **index.html** in the **guides/images/www**
         </body>
         </html>
 	
-    *phonegap.js might need to be replaced with phonegap.&lt;VERSION NUMER&gt;.js
+    *phonegap.js might need to be replaced with phonegap-&lt;VERSION NUMBER&gt;.js
 
 
 5A. Deploy to Simulator
