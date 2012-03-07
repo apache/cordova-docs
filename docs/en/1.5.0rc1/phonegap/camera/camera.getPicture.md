@@ -32,6 +32,7 @@ Supported Platforms
 - Blackberry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
+- webOS
 
 Quick Example
 -------------
@@ -169,3 +170,10 @@ Full Example
         <img style="display:none;" id="largeImage" src="" />
       </body>
     </html>
+
+webOS Quirks
+------------
+- Ignores the quality parameter.
+- Ignores the sourceType parameter.
+- Ignores the allowEdit parameter.
+- Camera.MediaType is not supported.
