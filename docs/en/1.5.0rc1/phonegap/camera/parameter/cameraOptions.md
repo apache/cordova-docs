@@ -68,7 +68,7 @@ BlackBerry Quirks
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
 - Camera.MediaType is not supported.
 
-Palm Quirks
+webOS Quirks
 -----------
 
 - Ignores the `quality` parameter.

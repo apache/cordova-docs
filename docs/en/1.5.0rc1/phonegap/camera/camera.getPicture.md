@@ -170,10 +170,3 @@ Full Example
         <img style="display:none;" id="largeImage" src="" />
       </body>
     </html>
-
-webOS Quirks
-------------
-- Ignores the quality parameter.
-- Ignores the sourceType parameter.
-- Ignores the allowEdit parameter.
-- Camera.MediaType is not supported.

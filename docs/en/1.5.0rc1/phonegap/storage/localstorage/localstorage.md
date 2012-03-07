@@ -25,6 +25,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
+- webOS
 
 Key Quick Example
 -------------
