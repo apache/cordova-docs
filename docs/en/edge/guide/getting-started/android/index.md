@@ -33,17 +33,16 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 - In the root directory of the project, create two new directories:
  	- **/libs**
  	- **assets/www**
-- Copy **phonegap.js** from your PhoneGap download earlier to **assets/www**
-- Copy **phonegap.jar** from your PhoneGap download earlier to **/libs**
+- Copy **cordova.js** from your PhoneGap download earlier to **assets/www**
+- Copy **cordova.jar** from your PhoneGap download earlier to **/libs**
 - Copy **xml** folder from your PhoneGap download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
 	- Change the class's extend from **Activity** to **DroidGap**
 	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
-	- Add **import com.phonegap.*;**
-	- Remove **import android.app.Activity;**
+	- Add **import org.apache.cordova.*;**
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
-- You might experience an error here, where Eclipse can't find phonegap-1.0.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add phonegap-1.0.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- You might experience an error here, where Eclipse can't find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions under versionName: (view image below)
 
@@ -65,9 +64,6 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
-- Add a second activity under you appliction tag in AndroidManifest. (view image below)
-	
-	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 
 	![](img/guide/getting-started/android/manifest.jpg)
 
@@ -80,14 +76,14 @@ Now create and open a new file named **index.html** in the **assets/www** direct
         <html>
         <head>
         <title>PhoneGap</title>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
         </body>
         </html>
 	
-    *phonegap.js might need to be replaced with phonegap-&lt;VERSION NUMBER&gt;.js
+    *cordova.js might need to be replaced with cordova-&lt;VERSION NUMBER&gt;.js
 
 
 5A. Deploy to Simulator
