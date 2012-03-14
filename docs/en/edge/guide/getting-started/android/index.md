@@ -29,7 +29,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 - Launch Eclipse, then under the menu select **New &gt; Android Project**
 
-    ![](img/guide/getting-started/android/new_android_project.jpeg)
+    ![](img/guide/getting-started/android/AndroidFlow.png)
 - In the root directory of the project, create two new directories:
  	- **/libs**
  	- **assets/www**
