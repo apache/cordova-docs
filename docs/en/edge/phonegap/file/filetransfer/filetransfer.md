@@ -50,7 +50,7 @@ __Quick Example__
 	}
 	
     var fail = function(error) {
-        alert("An error has occurred: Code = " = error.code);
+        alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
@@ -120,7 +120,7 @@ __Full Example__
             }
             
             function fail(error) {
-                alert("An error has occurred: Code = " = error.code);
+                alert("An error has occurred: Code = " + error.code);
                 console.log("upload error source " + error.source);
                 console.log("upload error target " + error.target);
             }
