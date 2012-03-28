@@ -66,7 +66,7 @@
         "device.md": [
             "phonegap/device/device.md",
             "phonegap/device/device.name.md",
-            "phonegap/device/device.phonegap.md",
+            "phonegap/device/device.cordova.md",
             "phonegap/device/device.platform.md",
             "phonegap/device/device.uuid.md",
             "phonegap/device/device.version.md"
