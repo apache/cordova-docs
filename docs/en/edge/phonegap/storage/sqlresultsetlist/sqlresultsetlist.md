@@ -103,7 +103,7 @@ Full Example
 		// Cordova is ready
 		//
 		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
 			db.transaction(populateDB, errorCB, successCB);
 		}
 	
