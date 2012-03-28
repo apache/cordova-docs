@@ -29,7 +29,7 @@ Video Tutorials:
 --------------------
 
 - Launch Xcode, then under the File menu select **New** and then **New Project...**
-- Select **PhoneGap-based Application** from the list of templates
+- Select **Cordova-based Application** from the list of templates
 
     ![](img/guide/getting-started/ios/XCode4-templates.png)
 - Select the **Next** button, Fill in the "Product Name" &amp; "Company Identifier" for your app

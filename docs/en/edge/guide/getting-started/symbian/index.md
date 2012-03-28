@@ -1,11 +1,12 @@
 Getting Started with Symbian
 ============================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
 Video Tutorials:
 ----------------
 
-- [PhoneGap Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
+- [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
 
 1. Requirements
@@ -16,17 +17,17 @@ Video Tutorials:
 There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGap-Symbian-%28Qt%29) and [Symbian with Sony Ericsson](http://wiki.phonegap.com/w/page/16494782/Getting-Started-with-PhoneGap-Symbian-(WRT-on-Sony-Ericsson)) guides.
 
 
-2. Install SDK + PhoneGap
+2. Install SDK + Cordova
 -------------------------
 
 - Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select "make" as it is not included by default
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project
 --------------------
 
-- In cygwin, navigate to where you extracted PhoneGap and go into the Symbian directory</li>
+- In cygwin, navigate to where you extracted Cordova and go into the Symbian directory</li>
 
  
 4. Hello World

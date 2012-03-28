@@ -1,11 +1,12 @@
 Getting Started with WebOS
 ==========================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
 Video Tutorials:
 ----------------
 
-- [PhoneGapPhoneGap and HP Palm webOS quick start video](http://www.youtube.com/v/XEnAUbDRZfw?autoplay=1)
+- [Cordova and HP Palm webOS quick start video](http://www.youtube.com/v/XEnAUbDRZfw?autoplay=1)
 - [How to convert iPhone app to a Palm](http://www.youtube.com/v/wWoJfQw79XI?autoplay=1)
 
 
@@ -15,20 +16,20 @@ Video Tutorials:
 - Windows, OS X, or Linux
 
 
-2. Install SDK + PhoneGap
+2. Install SDK + Cordova
 ----------------------------
 
 - Download and install [Virtual Box](http://www.virtualbox.org/)
 - Download and install [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/)
 - Download and install [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321)  (Windows only). Make sure you select "make" as it is not included by default
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
  
 3. Setup New Project
 --------------------
 
-- Open up terminal/cygwin and navigate to where you extracted your PhoneGap Download. Go into the webOS directory.
+- Open up terminal/cygwin and navigate to where you extracted your Cordova Download. Go into the webOS directory.
 
 
 4. Hello World

@@ -68,4 +68,4 @@ Full Example
 
 iOS Quirks
 --------------------------
-In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the PhoneGap API. These will only be processed when the app resumes (processed on the next run-loop).
+In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the Cordova API. These will only be processed when the app resumes (processed on the next run-loop).

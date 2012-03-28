@@ -1,12 +1,13 @@
 Getting Started with Windows Phone
 ==================================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
 Video Tutorials:
 ----------------
 
-- [PhoneGap and Windows Phone quick setup video](http://www.youtube.com/v/wO9xdRcNHIM?autoplay=1)
-- [PhoneGap and Windows Phone deep dive](http://www.youtube.com/v/BJFX1GRUXj8?autoplay=1)
+- [Cordova and Windows Phone quick setup video](http://www.youtube.com/v/wO9xdRcNHIM?autoplay=1)
+- [Cordova and Windows Phone deep dive](http://www.youtube.com/v/BJFX1GRUXj8?autoplay=1)
 
 
 1. Requirements
@@ -21,11 +22,11 @@ Necessary for Installing on Device and Submitting to Market Place:
 - Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
 
 
-2. Install SDK + PhoneGap
+2. Install SDK + Cordova
 ----------------------------
 
 - Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project
@@ -41,7 +42,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 4. Review the project structure
 -------------------------------
 
-- The 'www' folder contains your PhoneGap html/js/css and any other resources included in your app.
+- The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
 
     ![](img/guide/getting-started/windows-phone/wp7projectstructure.PNG)
