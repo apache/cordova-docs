@@ -29,17 +29,17 @@ Full Example
       <head>
         <title>Compass Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // The watch id references the current `watchHeading`
         var watchID = null;
         
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
             startWatch();

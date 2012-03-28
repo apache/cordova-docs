@@ -11,7 +11,7 @@ Properties
 - __name:__ The name of the DirectoryEntry, excluding the path leading to it. _(DOMString)_
 - __fullPath:__ The full absolute path from the root to the DirectoryEntry. _(DOMString)_
 
-NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
+NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by Cordova:
 
 - __filesystem:__ The file system on which the DirectoryEntry resides. _(FileSystem)_ 
 

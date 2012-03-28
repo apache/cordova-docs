@@ -7,7 +7,7 @@ Properties
 ----------
 
 - device.name
-- device.phonegap
+- device.cordova
 - device.platform
 - device.uuid
 - device.version

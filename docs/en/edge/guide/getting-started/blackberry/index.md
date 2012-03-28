@@ -1,11 +1,13 @@
 Getting Started with Blackberry
 ============================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+
 
 Video Tutorials:
 ----------------
 
-- [PhoneGap and BlackBerry Widgets uick Start Video](http://www.youtube.com/v/eF0h0K0OLwI?autoplay=1)
+- [Cordova and BlackBerry Widgets Quick Start Video](http://www.youtube.com/v/eF0h0K0OLwI?autoplay=1)
 
 
 
@@ -17,20 +19,20 @@ Video Tutorials:
 For 4.x devices check out [this guide](http://wiki.phonegap.com/w/page/25653281/Getting%20Started%20with%20PhoneGap-BlackBerry%20with%20the%20Latest%20Environment).
 
 
-2. Install SDK + PhoneGap
--------------------------
+2. Install SDK + Cordova
+------------------------
 
 - (Windows Only) Download and install [SUN JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version). Add it to your PATH variable.
 - (Windows Only) Download and extract [Apache Ant](http://ant.apache.org/bindownload.cgi). Add it to your PATH variable.
 - Download [BlackBerry WebWorks Smartphone SDK](ttps://bdsc.webapps.blackberry.com/html5/download/sdk) for BlackBerry development and/or [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for Playbook development. Keep note of the directories you install these SDKs.
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project
 --------------------
 
-- Open up a command prompt/terminal and navigate to where you extracted PhoneGap. CD into the PhoneGapBlackBerry directory.
-- Create a PhoneGap BlackBerry and PlayBook project. Type 'ant create -Dproject.path='followed by the location you wish to create your project into the command prompt/terminal.
+- Open up a command prompt/terminal and navigate to where you extracted Cordova. CD into the Cordova BlackBerry directory.
+- Create a Cordova BlackBerry and PlayBook project. Type 'ant create -Dproject.path='followed by the location you wish to create your project into the command prompt/terminal.
 - Change to the newly created directory located at `C:\Dev\bbw\sample`.
 - Open up the project.properties file with your favourite editor and change the lines `BlackBerry.bbwp.dir=` and `PlayBook.bbwp.dir=` to equal the respective install locations of the SDKs you downloaded earlier.
 
@@ -38,7 +40,7 @@ For 4.x devices check out [this guide](http://wiki.phonegap.com/w/page/25653281/
 4. Hello World
 --------------
 
-Build the PhoneGap sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace the target with either blackberry or playbook. Note this is the sample PhoneGap project and not a basic hello world application. You can go edit the index.html file located in the www directory of your project to make it say Hello World if you wish.
+Build the Cordova sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace the target with either blackberry or playbook. Note this is the sample Cordova project and not a basic hello world application. You can go edit the index.html file located in the www directory of your project to make it say Hello World if you wish.
 
 
 5A. Deploy to Simulator (Windows Only)

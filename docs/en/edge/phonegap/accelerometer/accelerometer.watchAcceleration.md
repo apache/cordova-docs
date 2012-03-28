@@ -50,17 +50,17 @@ Full Example
       <head>
         <title>Acceleration Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // The watch id references the current `watchAcceleration`
         var watchID = null;
         
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
             startWatch();
@@ -111,6 +111,6 @@ Full Example
  iPhone Quirks
 -------------
 
-- At the interval requested, PhoneGap will call the success callback function and pass the accelerometer results.
-- However, in requests to the device PhoneGap restricts the interval to minimum of every 40ms and a maximum of every 1000ms.
-  - For example, if you request an interval of 3 seconds (3000ms), PhoneGap will request an interval of 1 second from the device but invoke the success callback at the requested interval of 3 seconds.
+- At the interval requested, Cordova will call the success callback function and pass the accelerometer results.
+- However, in requests to the device Cordova restricts the interval to minimum of every 40ms and a maximum of every 1000ms.
+  - For example, if you request an interval of 3 seconds (3000ms), Cordova will request an interval of 1 second from the device but invoke the success callback at the requested interval of 3 seconds.

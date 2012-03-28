@@ -1,11 +1,12 @@
 Getting Started with Android
 ============================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
 Video Tutorials:
 ----------------
 
-- [PhoneGap and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
+- [Cordova and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
 
 
 1. Requirements
@@ -16,13 +17,13 @@ Video Tutorials:
 There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-android-terminal-quickstart) of this tutorial that doesn't use Eclipse.
 
 
-2. Install SDK + PhoneGap
+2. Install SDK + Cordova
 ----------------------------
 
 - Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
  3. Setup New Project
 -----------------------
@@ -33,16 +34,16 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 - In the root directory of the project, create two new directories:
  	- **/libs**
  	- **assets/www**
-- Copy **cordova.js** from your PhoneGap download earlier to **assets/www**
-- Copy **cordova.jar** from your PhoneGap download earlier to **/libs**
-- Copy **xml** folder from your PhoneGap download earlier to **/res**
+- Copy **cordova-1.6.0.js** from your Cordova download earlier to **assets/www**
+- Copy **cordova-1.6.0.jar** from your Cordova download earlier to **/libs**
+- Copy **xml** folder from your Cordova download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
 	- Change the class's extend from **Activity** to **DroidGap**
 	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
 	- Add **import org.apache.cordova.*;**
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
-- You might experience an error here, where Eclipse can't find cordova-1.5.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.5.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- You might experience an error here, where Eclipse can't find cordova-1.6.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.6.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions under versionName: (view image below)
 
@@ -75,15 +76,15 @@ Now create and open a new file named **index.html** in the **assets/www** direct
 	    <!DOCTYPE HTML>
         <html>
         <head>
-        <title>PhoneGap</title>
-        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <title>Cordova</title>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
         </body>
         </html>
 	
-    *cordova.js might need to be replaced with cordova-&lt;VERSION NUMBER&gt;.js
+    *cordova-1.6.0.js might need to be replaced with latest cordova-<VERSION NUMBER>.js
 
 
 5A. Deploy to Simulator

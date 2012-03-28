@@ -43,14 +43,14 @@ Full Example
       <head>
         <title>Acceleration Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
@@ -84,4 +84,4 @@ iPhone Quirks
 
 - iPhone doesn't have the concept of getting the current acceleration at any given point.
 - You must watch the acceleration and capture the data at given time intervals.
-- Thus, the `getCurrentAcceleration` function will give you the last value reported from a phoneGap `watchAccelerometer` call.
+- Thus, the `getCurrentAcceleration` function will give you the last value reported from a Cordova `watchAccelerometer` call.

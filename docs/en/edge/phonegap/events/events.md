@@ -1,7 +1,7 @@
 Events
 ======
 
-> PhoneGap lifecycle events.
+> Cordova lifecycle events.
 
 Event Types
 -----------

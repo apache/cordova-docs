@@ -27,7 +27,7 @@ class JoDoc
 
     # Run joDoc
     FileUtils.cd @input_directory do
-      `jodoc --output #{@output_directory} --title "PhoneGap API Documentation" --template #{@output_directory}/index.html ./ 2> /dev/null`
+        `jodoc --output #{@output_directory} --title "Cordova API Documentation" --template #{@output_directory}/index.html ./ 2> /dev/null`
     end
   end
   

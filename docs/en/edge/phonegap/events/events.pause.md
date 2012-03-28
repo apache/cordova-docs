@@ -1,16 +1,16 @@
 pause
 ===========
 
-This is an event that fires when a PhoneGap application is put into the background.
+This is an event that fires when a Cordova application is put into the background.
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
 Details
 -------
 
-PhoneGap consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
+Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
 
 Supported Platforms
 -------------------
@@ -34,22 +34,22 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Pause Example</title>
+        <title>Cordova Pause Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when PhoneGap is loaded.
+        // Call onDeviceReady when Cordova is loaded.
         //
-        // At this point, the document has loaded but phonegap.js has not.
-        // When PhoneGap is loaded and talking with the native device,
+        // At this point, the document has loaded but cordova-1.6.0.js has not.
+        // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+        // Cordova is loaded and it is now safe to make calls Cordova methods
         //
         function onDeviceReady() {
 		    document.addEventListener("pause", onPause, false);
