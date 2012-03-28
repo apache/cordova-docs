@@ -1,11 +1,13 @@
 Getting Started with iOS
 ========================
 
+This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+
 
 Video Tutorials:
 ----------------
 
-- [PhoneGap Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
+- [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
 
 1. Requirements
@@ -16,11 +18,11 @@ Video Tutorials:
     - iOS developer certification
 
 
-2. Install SDK + PhoneGap
--------------------------
+2. Install SDK + Cordova
+------------------------
 
 - Download and install Xcode from [Apple Developer Portal](http://developer.apple.com) (Membership required)</p>
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project

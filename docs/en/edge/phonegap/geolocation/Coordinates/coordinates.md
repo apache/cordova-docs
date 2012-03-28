@@ -17,7 +17,7 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is created and populated by PhoneGap, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
+The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
 
 Supported Platforms
 -------------------
@@ -59,14 +59,14 @@ Full Example
     <html>
       <head>
         <title>Geolocation Position Example</title>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Set an event to wait for PhoneGap to load
+        // Set an event to wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is loaded and Ready
+        // Cordova is loaded and Ready
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);

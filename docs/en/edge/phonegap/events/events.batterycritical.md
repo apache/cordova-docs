@@ -1,21 +1,21 @@
 batterycritical
 ===========
 
-This is an event that fires when a PhoneGap application detects the battery has reached the critical level threshold.
+This is an event that fires when a Cordova application detects the battery has reached the critical level threshold.
 
     window.addEventListener("batterycritical", yourCallbackFunction, false);
 
 Details
 -------
 
-This event that fires when a PhoneGap application detects the percentage of battery has reached the critical battery threshold. This value is device specific.
+This event that fires when a Cordova application detects the percentage of battery has reached the critical battery threshold. This value is device specific.
 
 The batterycritical handler will be called with an object that contains two properties:
 
 - __level:__ The percentage of battery (0-100). _(Number)_
 - __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
 
 Supported Platforms
 -------------------
@@ -40,22 +40,22 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>PhoneGap Device Ready Example</title>
+        <title>Cordova Device Ready Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when PhoneGap is loaded.
+        // Call onDeviceReady when Cordova is loaded.
         //
-        // At this point, the document has loaded but phonegap.js has not.
-        // When PhoneGap is loaded and talking with the native device,
+        // At this point, the document has loaded but cordova-1.6.0.js has not.
+        // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         // 
 	    function onLoad() {
     	    document.addEventListener("deviceready", onDeviceReady, false);
     	}
 
-        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+        // Cordova is loaded and it is now safe to make calls Cordova methods
         //
         function onDeviceReady() {
 		    window.addEventListener("batterycritical", onBatteryCritical, false);

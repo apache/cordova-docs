@@ -3,7 +3,7 @@ openDatabase
 
 Returns a new Database object.
 
-    var dbShell = window.openDatabase(name, version, display_name, size);
+    var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 Description
 -----------
@@ -32,14 +32,14 @@ Full Example
       <head>
         <title>Contact Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
 			var db = window.openDatabase("test", "1.0", "Test DB", 1000000);

@@ -30,14 +30,14 @@ Full Example
       <head>
         <title>Notification Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
             // Empty
@@ -84,11 +84,11 @@ iPhone Quirks
 
 - Ignores the beep count argument.
 - There is no native beep API for iPhone.
-  - PhoneGap implements beep by playing an audio file via the media API.
+  - Cordova implements beep by playing an audio file via the media API.
   - The user must provide a file with the desired beep tone.
   - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`.
 
 Windows Phone 7 Quirks
 -------------
 
-- WP7 PhoneGap lib includes a generic beep file that is used. 
+- WP7 Cordova lib includes a generic beep file that is used. 

@@ -72,17 +72,17 @@ Full Example
       <head>
         <title>Capture Photo</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value 
         
-        // Wait for PhoneGap to connect with the device
+        // Wait for Cordova to connect with the device
         //
         document.addEventListener("deviceready",onDeviceReady,false);
     
-        // PhoneGap is ready to be used!
+        // Cordova is ready to be used!
         //
         function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;

@@ -58,11 +58,11 @@
     <ul>
         <li>
             <h2>Getting Started Guides</h2>
-            <span>Setup each SDK and create your first PhoneGap app.</span>
+            <span>Setup each SDK and create your first Cordova app.</span>
         </li>
         <li>
             <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the PhoneGap Documentation.</span>
+            <span>Full index of the Cordova Documentation.</span>
         </li>
     </ul>
 </div>

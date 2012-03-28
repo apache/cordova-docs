@@ -52,7 +52,7 @@ Full Example
       <head>
         <title>Capture Audio</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -108,7 +108,7 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- PhoneGap for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 iOS Quirks
 ----------

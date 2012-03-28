@@ -10,7 +10,7 @@ Details
 
 If you need to override the default start call behaviour you can register an event listener for the 'startcallbutton' event.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
+Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
 
 Supported Platforms
 -------------------
@@ -33,22 +33,22 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>PhoneGap Start Call Button Example</title>
+        <title>Cordova Start Call Button Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when PhoneGap is loaded.
+        // Call onDeviceReady when Cordova is loaded.
         //
-        // At this point, the document has loaded but phonegap.js has not.
-        // When PhoneGap is loaded and talking with the native device,
+        // At this point, the document has loaded but cordova-1.6.0.js has not.
+        // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+        // Cordova is loaded and it is now safe to make calls Cordova methods
         //
         function onDeviceReady() {
             // Register the event listener

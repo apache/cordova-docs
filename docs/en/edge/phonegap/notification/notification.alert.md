@@ -13,7 +13,7 @@ Shows a custom alert or dialog box.
 Description
 -----------
 
-Most PhoneGap implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
+Most Cordova implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
 
 Supported Platforms
 -------------------
@@ -52,14 +52,14 @@ Full Example
       <head>
         <title>Notification Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for PhoneGap to load
+        // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap is ready
+        // Cordova is ready
         //
         function onDeviceReady() {
             // Empty
