@@ -116,7 +116,7 @@ Currently, Cordova-Docs uses a Ruby script and [joDoc](http://github.com/davebal
 
 ### Run the Script ###
 
-    ./bin/phonegap-docs
+    ./bin/generate
     
 Script Test Suite
 -----------------
