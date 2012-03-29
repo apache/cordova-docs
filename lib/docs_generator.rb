@@ -1,5 +1,5 @@
 $: << File.join(File.dirname(__FILE__))
-$: << File.join(File.dirname(__FILE__), 'phonegap')
+$: << File.join(File.dirname(__FILE__), 'cordova')
 require 'file_helpers'
 require 'yaml_front_matter'
 require 'quirks_merger'
@@ -26,7 +26,7 @@ class DocsGenerator
     @working_directory = File.join tmp_directory, 'docs'
   end
   
-  # PhoneGap Build-Time Steps
+  # Cordova Build-Time Steps
   #   - For each version of the documentation
   #     - Create a work space for the docs processing
   #     - Pre-file processing

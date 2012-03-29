@@ -1,22 +1,23 @@
 require 'fileutils'
 
 class QuirksMerger
-  attr_accessor :phonegap_path
+  attr_accessor :cordova_path
   
   def run(file_path)
-    @phonegap_path = nil
+    @cordova_path = nil
     
     platform_directory = find_directory_containing(file_path, 'phonegap')
+    platform_directory = find_directory_containing(file_path, 'cordova') if platform_directory.nil?
     return if platform_directory.nil?
-    return if File.basename(platform_directory).downcase == 'phonegap'
+    return if ['phonegap', 'cordova'].include?(File.basename(platform_directory).downcase)
     
-    @phonegap_path = generate_phonegap_path(file_path, platform_directory)
-    return unless File.file? @phonegap_path
+    @cordova_path = generate_cordova_path(file_path, platform_directory)
+    return unless File.file? @cordova_path
     
-    phonegap_data = File.read(@phonegap_path).strip
+    cordova_data = File.read(@cordova_path).strip
     partial_data  = File.read(file_path).strip
 
-    File.open(@phonegap_path, 'w') { |file| file.write(phonegap_data + "\n\n" + partial_data) }
+    File.open(@cordova_path, 'w') { |file| file.write(cordova_data + "\n\n" + partial_data) }
     FileUtils.rm file_path
   end
   
@@ -35,13 +36,13 @@ class QuirksMerger
     File.join directory, platform_name
   end
   
-  def generate_phonegap_path(full_path, platform_path)
+  def generate_cordova_path(full_path, platform_path)
     path = {
       :prefix   => File.dirname(platform_path),
       :platform => File.basename(platform_path),
       :postfix  => full_path.sub(platform_path, '')
     }
     
-    "#{path[:prefix]}/phonegap/#{path[:postfix]}".gsub(/\/+/, '/')
+    "#{path[:prefix]}/#{path[:platform]}/#{path[:postfix]}".gsub(/\/+/, '/')
   end
 end
