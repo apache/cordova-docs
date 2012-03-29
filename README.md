@@ -1,14 +1,14 @@
-PhoneGap API Documentation
-==========================
+Cordova API Documentation
+=========================
 
-The JavaScript API documentation for [PhoneGap](http://www.github.com/phonegap/).
+The JavaScript API documentation for [Apache Cordova](http://incubator.apache.org/cordova/).
 
 The documentation is available on [PhoneGap API Documentation website](http://docs.phonegap.com/).
 
 Documentation Format
 --------------------
 
-All of the [PhoneGap](http://www.phonegap.com/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document PhoneGap's core API and platform-specific APIs.
+All of the [Cordova](http://incubator.apache.org/cordova/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document Cordova's core API and platform-specific APIs.
 
 File Structure
 --------------
@@ -26,7 +26,7 @@ Contributing to the Documentation
 
 ### Report or Fix an Issue
 
-We use [GitHub Issues](https://github.com/phonegap/phonegap-docs/issues)
+We use [Apache JIRA](https://issues.apache.org/jira/browse/CB)
 
 By the way, you rock! Thanks for helping us improve the documentation!
 
@@ -51,11 +51,11 @@ We appreciate the use of topic branches.
 
     git push origin issue_23
 
-    # send pull request from branch issue_23 to phonegap:master
+    # send pull request from branch issue_23 to cordova:master
 
 ### Adding a Language
 
-Do you want the PhoneGap documentation in another language? We do too!
+Do you want the Cordova documentation in another language? We do too!
 
 __1. Create the language directory__
 
@@ -85,7 +85,7 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 Generating the Documentation
 ----------------------------
 
-Currently, PhoneGap-Docs uses a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) to generate HTML documentation.
+Currently, Cordova-Docs uses a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) to generate HTML documentation.
 
 ### Install joDoc ###
 
@@ -116,7 +116,6 @@ Currently, PhoneGap-Docs uses a Ruby script and [joDoc](http://github.com/daveba
 
 ### Run the Script ###
 
-    cd phonegap-docs
     ./bin/phonegap-docs
     
 Script Test Suite
@@ -128,10 +127,8 @@ __Install rspec:__
     
 __Run all specs:__
 
-    cd phonegap-docs
     rake
 
 __Run a specific spec:__
 
-    cd phonegap-docs
     spec spec/phonegap/add_title_spec.rb
