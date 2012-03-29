@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 $: << File.join(File.dirname(__FILE__), '..', 'lib')
-require 'phonegap_docs'
+require 'docs_generator'
 
-phonegap_docs = PhoneGapDocs.new
-phonegap_docs.run
+generator = DocsGenerator.new
+generator.run
 
-puts " => #{phonegap_docs.output_directory}"
+puts " => #{generator.output_directory}"

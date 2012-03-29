@@ -1,29 +1,29 @@
 $:.unshift File.join(File.dirname(__FILE__))
 require 'spec_helpers'
-require 'phonegap_docs'
+require 'docs_generator'
 
-describe PhoneGapDocs do
+describe DocsGenerator do
   before :each do
     @tmp_docs_directory   = Helper::create_tmp_directory_assets
     @tmp_public_directory = Helper::tmp_public_directory
-    @phonegap_docs = PhoneGapDocs.new(@tmp_docs_directory, Helper::tmp_public_directory)
+    @generator = DocsGenerator.new(@tmp_docs_directory, Helper::tmp_public_directory)
   end
   
   it 'should create an output directory' do
-    @phonegap_docs.run
+    @generator.run
     File.exists?(@tmp_public_directory).should be_true
     Dir.glob(File.join(@tmp_public_directory, '**', '*')).should have_at_least(1).items
   end
   
   it 'should have a valid default directories' do
-    phonegap_docs = PhoneGapDocs.new
-    File.exists?(phonegap_docs.input_directory).should be_true
+    generator = DocsGenerator.new
+    File.exists?(generator.input_directory).should be_true
   end
   
   it 'should accept custom directories' do
-    @phonegap_docs.run
-    @phonegap_docs.input_directory.should  == @tmp_docs_directory
-    @phonegap_docs.output_directory.should == @tmp_public_directory
+    @generator.run
+    @generator.input_directory.should  == @tmp_docs_directory
+    @generator.output_directory.should == @tmp_public_directory
   end
   
   after :all do

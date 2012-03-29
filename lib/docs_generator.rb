@@ -14,7 +14,7 @@ require 'version_menu'
 require 'navigation_menu'
 require 'prettify'
 
-class PhoneGapDocs
+class DocsGenerator
   include FileHelpers
   
   attr_accessor :input_directory
