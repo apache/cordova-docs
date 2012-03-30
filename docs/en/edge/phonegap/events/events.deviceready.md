@@ -64,29 +64,3 @@ Full Example
       <body onload="onLoad()">
       </body>
     </html>
-    
-BlackBerry (OS 4.6) Quirks
---------------------------
-
-Custom events are not supported in the RIM BrowserField (web browser view), so the `deviceready` event will never fire.
-
-A workaround is to manually query `cordova.available` until Cordova has fully loaded.
-
-    function onLoad() {
-        // BlackBerry OS 4 browser does not support events.
-        // So, manually wait until Cordova is available.
-        //
-        var intervalID = window.setInterval(
-          function() {
-              if (cordova.available) {
-                  window.clearInterval(intervalID);
-                  onDeviceReady();
-              }
-          },
-          500
-        );
-    }
-
-    function onDeviceReady() {
-        // Now safe to use the Cordova API
-    }

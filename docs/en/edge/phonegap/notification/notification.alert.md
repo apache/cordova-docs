@@ -19,7 +19,6 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry (OS 4.6)
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
@@ -39,10 +38,6 @@ Quick Example
         'Game Over',            // title
         'Done'                  // buttonName
     );
-
-    // BlackBerry (OS 4.6) / webOS
-    //
-    navigator.notification.alert('You are the winner!');
         
 Full Example
 ------------
@@ -91,4 +86,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- Ignores button names, always uses 'OK' 
+- Ignores button names, always uses 'OK'

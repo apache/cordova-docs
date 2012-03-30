@@ -14,7 +14,6 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
@@ -24,7 +23,7 @@ Quick Example
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
     //             Motorola Droid  returns "voles"
-    // BlackBerry: Bold 8900       returns "8900"
+    // BlackBerry: Torch 9800      returns "9800"
     // iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
     //
     var name = device.name;

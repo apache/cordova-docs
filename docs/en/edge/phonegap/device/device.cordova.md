@@ -14,7 +14,6 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
@@ -57,4 +56,4 @@ Full Example
         <p id="deviceProperties">Loading device properties...</p>
       </body>
     </html>
-    
+
