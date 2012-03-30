@@ -2,7 +2,6 @@ $: << File.join(File.dirname(__FILE__))
 $: << File.join(File.dirname(__FILE__), 'cordova')
 require 'file_helpers'
 require 'yaml_front_matter'
-require 'quirks_merger'
 require 'file_merger'
 require 'add_title'
 require 'update_index'
@@ -64,7 +63,7 @@ class DocsGenerator
   protected
   
   def before_jodoc(input_directory, options)
-    klasses = [ YamlFrontMatter.new, QuirksMerger.new, FileMerger.new ]
+    klasses = [ YamlFrontMatter.new, FileMerger.new ]
     
     klasses.each do |klass|
       each_file input_directory do |file|
