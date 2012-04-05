@@ -50,6 +50,9 @@ Options
 			VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
 			ALLMEDIA : 2			// allow selection from all media types
 };
+
+- __correctOrientation:__ Rotate the image to correct for the orientation of the device during capture. (`Boolean`)
+- __saveToPhotoAlbum:__ Save the image to the photo album on the device after capture. (`Boolean`)
   
 Android Quirks
 --------------
@@ -57,6 +60,8 @@ Android Quirks
 - Ignores the `allowEdit` parameter.
 - Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
 - Camera.EncodingType is not supported.
+- Ignores the `correctOrientation` parameter.
+- Ignores the `saveToPhotoAlbum` parameter.
 
 BlackBerry Quirks
 -----------------
@@ -67,6 +72,8 @@ BlackBerry Quirks
 - Application must have key injection permissions to close native Camera application after photo is taken.
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
 - Camera.MediaType is not supported.
+- Ignores the `correctOrientation` parameter.
+- Ignores the `saveToPhotoAlbum` parameter.
 
 Palm Quirks
 -----------
@@ -75,8 +82,10 @@ Palm Quirks
 - Ignores the `sourceType` parameter.
 - Ignores the `allowEdit` parameter.
 - Camera.MediaType is not supported.
+- Ignores the `correctOrientation` parameter.
+- Ignores the `saveToPhotoAlbum` parameter.
 
-iPhone Quirks
+iOS Quirks
 --------------
 
 - Set `quality` below 50 to avoid memory error on some devices.
@@ -87,4 +96,6 @@ Windows Phone 7 Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
+- Ignores the `correctOrientation` parameter.
+- Ignores the `saveToPhotoAlbum` parameter.
            
