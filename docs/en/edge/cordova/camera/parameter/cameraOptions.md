@@ -33,7 +33,7 @@ Options
 
 - __allowEdit:__ Allow simple editing of image before selection. (`Boolean`)
   
-- __EncodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
+- __encodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
         
             Camera.EncodingType = {
                 JPEG : 0,               // Return JPEG encoded image
@@ -43,7 +43,7 @@ Options
 - __targetWidth:__ Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (`Number`)
 - __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
 
-- __MediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
+- __mediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
      
         Camera.MediaType = { 
 			PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
