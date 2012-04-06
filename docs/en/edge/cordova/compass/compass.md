@@ -9,8 +9,8 @@ Methods
 - compass.getCurrentHeading
 - compass.watchHeading
 - compass.clearWatch
-- compass.watchHeadingFilter
-- compass.clearWatchFilter
+- compass.watchHeadingFilter 	(obsolete)
+- compass.clearWatchFilter		(obsolete)
 
 Arguments
 ---------
