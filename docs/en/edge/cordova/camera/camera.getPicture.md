@@ -38,7 +38,9 @@ Quick Example
 
 Take photo and retrieve Base64-encoded image:
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL
+     }); 
 
     function onSuccess(imageData) {
         var image = document.getElementById('myImage');
