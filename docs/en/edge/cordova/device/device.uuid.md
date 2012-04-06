@@ -69,3 +69,8 @@ Full Example
         <p id="deviceProperties">Loading device properties...</p>
       </body>
     </html>
+
+iOS Quirk
+-------------
+
+The uuid for iOS is not unique for a device, but is unique per application per install. This will change if you delete the app and re-install, and possibly also when you upgrade your iOS version, or even upgrade your app per version (as we've seen in iOS 5.1). Not a reliable value.
