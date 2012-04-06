@@ -1,8 +1,7 @@
 Getting Started with iOS
 ========================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
-
+This guide describes how to set up your development environment for Cordova and run a sample application.
 
 Video Tutorials:
 ----------------
@@ -12,60 +11,85 @@ Video Tutorials:
 
 1. Requirements
 ---------------
-- Intel-based computer with Mac OS X Snow Leopard (10.6)
+- Intel-based computer with Mac OS X Lion (10.7)
 - Necessary for Installing on Device:
     - An Apple iOS device (iPhone, iPad, iPod Touch)
-    - iOS developer certification
+    - iOS ceveloper certification
 
 
 2. Install SDK + Cordova
 ------------------------
 
-- Download and install Xcode from [Apple Developer Portal](http://developer.apple.com) (Membership required)</p>
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) </p>
+- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the **lib/ios** directory.
 
 
 3. Setup New Project
 --------------------
 
-- Launch Xcode, then under the File menu select **New** and then **New Project...**
+- Launch Xcode
+- Select the **File** menu
+- Select **New**, then **New Project...**
 - Select **Cordova-based Application** from the list of templates
 
     ![](img/guide/getting-started/ios/XCode4-templates.png)
-- Select the **Next** button, Fill in the "Product Name" &amp; "Company Identifier" for your app
+- Select the **Next** button
+- Fill in the "Product Name" &amp; "Company Identifier" for your app
 
     ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
     
-- Choose a directory to store your app
-- You should see your project in Xcode 4 now. Press the **Run** button in the top left corner. Your build should succeed and launch in the simulator
-- You should see a error in your simulator informing you index.html was not found
-- To fix this, we need to copy the **www** directory into the project. Right click on the project in the left navigation window and click show in finder
-- In Finder, you should see the **www** directory beside your project
-- Next step is **IMPORTANT**! Drag the **www** folder into Xcode 4. You can't just drag the www folder into your app's folder. It needs to be dragged into Xcode 4!! In my case I would drag it and drop it on HiWorld shown below.
+- Do **NOT** check the "Use Automatic Reference Counting" checkbox
+- Select the **Next** button
+- **Choose a folder** to save your new app in
+- Select the **Create** button, this will create your project
+- Select the **Run** button in the top left corner. Your build should succeed and launch in the iOS Simulator
+
+    a. You should see an error in the iOS Simulator informing you that **www/index.html** was not found
+    
+    b. To fix this, we need to add a folder reference to the **www** directory into the project. 
+    
+    ![](img/guide/getting-started/ios/index-not-found.png)
+
+- **Right-click** on the project icon in the Project Navigator (left sidebar) and select **Show in Finder**
+- **In the Finder**, you should see the **www** directory beside your project
+
+    ![](img/guide/getting-started/ios/www-folder.png)
+
+- **IMPORTANT**! **Drag** the **www** folder into Xcode 4. **Don't** drag the www folder into your app's folder. **It needs to be dragged into Xcode 4.** For example, you would drag and drop it on the **highlighted red section** of the HelloWorld project shown below.
     
     ![](img/guide/getting-started/ios/project.jpg)
-- After you drag, you should see a prompt with a few options. Make sure to select **Create folder references for any added folders**. Click Finish
+- A window sheet should slide down with a few options, after the **"www"** folder has been dragged and dropped into the project. 
+- Select the radio-button **Create folder references for any added folders**.
+
+    ![](img/guide/getting-started/ios/create-folder-reference.png)
+
+- Select the **Finish** button
 
 
 4. Hello World
 --------------
 
-Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>` tag in **index.html**. You can also add any associated Javascript and CSS files there as well.
+- Select the folder named **www** in your Project Navigator in Xcode
+- Select the **index.html** file
+- Type `<h1>Hello World</h1>` after the `<body>` tag
+
+You can also add any associated JavaScript and CSS files there as well.
     
     
 5A. Deploy to Simulator
 -----------------------
 
-- Make sure to change the Active SDK in the top left menu to **Simulator+version#**.
-- Hit **Run** in your project window header.
+- Change the Active SDK in the Scheme drop-down menu on the toolbar to **iOS version# Simulator**.
+- Select the **Run** button in your project window's toolbar
 
 
 5B. Deploy to Device
 --------------------
 
-- Open [AppName]-Info.plist and change **BundleIdentifier** to the identifier provided by Apple. If you have a developer license, you can access and run the Assistant at [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your App.
-- Make sure to change the Active SDK in the top left menu to **Device+version#**.
-- Hit **Run** in your project window header.
+- Open [AppName]-Info.plist (where [AppName] is your application's name)
+- Change **BundleIdentifier** to the identifier provided by Apple, or your own bundle identifier. If you have a developer license, you can access and run the Assistant [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your app.
+- Change the Active SDK in the Scheme drop-down menu on the toolbar to **[DEVICENAME]** where [DEVICENAME] is the name of the device you want to deploy to.
+- Select the **Run** button in your project window's toolbar
 
     ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)    
 
@@ -73,5 +97,4 @@ Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>`
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/39991939/Getting-Started-with-PhoneGap-iOS-using-Xcode-4-%28Template-Version%29).
-
+Add more HTML, CSS and JavaScript to your **www** folder outside of Xcode, your file additions will be picked up automatically inside Xcode.
