@@ -86,7 +86,7 @@ You can also add any associated JavaScript and CSS files there as well.
 5B. Deploy to Device
 --------------------
 
-- Open [AppName]-Info.plist (where [AppName] is your application's name)
+- Open [AppName]-Info.plist (where [AppName] is your application's name), under the "Supporting Files" group
 - Change **BundleIdentifier** to the identifier provided by Apple, or your own bundle identifier. If you have a developer license, you can access and run the Assistant [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your app.
 - Change the Active SDK in the Scheme drop-down menu on the toolbar to **[DEVICENAME]** where [DEVICENAME] is the name of the device you want to deploy to.
 - Select the **Run** button in your project window's toolbar
