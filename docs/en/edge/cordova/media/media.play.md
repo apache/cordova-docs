@@ -144,3 +144,13 @@ Full Example
             <p id="audio_position"></p>
           </body>
         </html>
+
+iOS Quirk
+---------
+
+- __numberOfLoops__
+ 
+    Pass in this option to the **play** method to specify the number of times you want the media file to play. e.g:
+    
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ numberOfLoops: 2 })

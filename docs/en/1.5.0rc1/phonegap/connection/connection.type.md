@@ -16,6 +16,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 ( Mango )
+- webOS
 
 Quick Example
 -------------
@@ -80,3 +81,7 @@ Full Example
         <p>A dialog box will report the network state.</p>
       </body>
     </html>
+
+webOS Quirks
+------------
+- will only show that a connection is available, but not which type
