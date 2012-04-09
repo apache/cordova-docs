@@ -21,3 +21,9 @@ Constants
 - Connection.CELL_4G
 - Connection.NONE
 
+WP7 Quirk
+---------
+
+- __type:__
+Windows Phone Emulator always reports navigator.network.connection.type is Connection.UNKNOWN
+

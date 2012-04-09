@@ -18,6 +18,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Windows Phone 7
 
 Quick Example
 -------------
@@ -69,3 +70,7 @@ Full Example
 iOS Quirks
 --------------------------
 During initial startup, the first online event (if applicable) will take at least a second to fire.
+
+Windows Phone 7 Quirks
+--------------------------
+When running in the Emulator, the connection.status of the device is always unknown, and this event will NOT fire.

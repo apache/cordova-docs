@@ -90,3 +90,5 @@ Windows Phone 7 Quirks
 -------------
 
 - Ignores button names, always 'OK|Cancel'
+- There is no built in browser confirm, so if you want to just write alert('foo'); you can assign window.confirm = navigator.notification.confirm;
+- alert + confirm calls are non-blocking, and result is only available asyncronously.
