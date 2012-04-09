@@ -27,7 +27,3 @@ iOS Quirks
 - For iOS > 4 devices, if the device is rotated and the app supports that orientation, the heading values will be reported 
 back with respect to the current orientation. 
 
-Windows Phone 7 Quirks
--------------
-
-- returns trueHeading only, note that this code is largely untested because of a lack of devices that support compass.
