@@ -23,3 +23,9 @@ iOS Quirk
 
 - __chunkedMode:__
     This parameter is ignored on iOS.
+
+WP7 Quirk
+---------
+
+- __chunkedMode:__
+    This parameter is ignored on WP7.    
