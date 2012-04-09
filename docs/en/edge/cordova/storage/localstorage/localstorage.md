@@ -19,12 +19,15 @@ Details
 
 localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
 
+Note: window.sessionStorage provides the same interface, but is cleared between app launches.
+
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
+- Windows Phone 7
 
 Key Quick Example
 -------------
@@ -89,3 +92,9 @@ Full Example
         <p>localStorage</p>
       </body>
     </html>
+
+
+Windows Phone 7 Quirks
+-------------
+
+- dot notation is NOT available on Windows Phone. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';

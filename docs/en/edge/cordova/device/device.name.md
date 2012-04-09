@@ -76,3 +76,8 @@ iPhone Quirks
 - Gets the [device's custom name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) instead of the [device model name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1).
     - The custom name is set by the owner in iTunes.
     - e.g. "Joe's iPhone"
+
+Windows Phone 7 Quirks
+-------------
+
+- returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'

@@ -67,3 +67,8 @@ BlackBerry Quirks
 -----------------
 
 Devices may return the device platform version instead of the platform name.  For example, the Storm2 9550 would return '2.13.0.95' or similar.
+
+Windows Phone 7 Quirks
+-----------------
+
+Windows Phone 7 devices report platform as 'WinCE'

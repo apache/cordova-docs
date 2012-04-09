@@ -114,3 +114,8 @@ iOS Quirks
 ----------
 
 - iOS does not have a default audio recording application so a simple user interface is provided.
+
+Windows Phone 7 Quirks
+----------
+
+- Windows Phone 7 does not have a default audio recording application so a simple user interface is provided.
