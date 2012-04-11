@@ -3,51 +3,55 @@ Getting Started with Android
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-Video Tutorials:
-----------------
-
-- [Cordova and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
-
 
 1. Requirements
 ---------------
 
 - Eclipse 3.4+
 
-There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-android-terminal-quickstart) of this tutorial that doesn't use Eclipse.
-
 
 2. Install SDK + Cordova
-----------------------------
+------------------------
 
 - Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
  3. Setup New Project
------------------------
+---------------------
 
-- Launch Eclipse, then under the menu select **New &gt; Android Project**
+- Launch Eclipse, and select menu item **New &gt; Android Project**.  Fill out the three panels of the **New Android Project** wizard shown below.
 
     ![](img/guide/getting-started/android/AndroidFlow.png)
-- In the root directory of the project, create two new directories:
+    
+- In the root directory of your project, create two new directories:
  	- **/libs**
  	- **assets/www**
 - Copy **cordova-1.6.0.js** from your Cordova download earlier to **assets/www**
 - Copy **cordova-1.6.0.jar** from your Cordova download earlier to **/libs**
 - Copy **xml** folder from your Cordova download earlier to **/res**
-- Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
+
+- Verify that **cordova-1.6.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.6.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+
+    ![](img/guide/getting-started/android/buildPath.jpg)
+
+- Edit your project's main Java file found in the **src** folder in Eclipse:
+	- Add **import org.apache.cordova.*;**
 	- Change the class's extend from **Activity** to **DroidGap**
 	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
-	- Add **import org.apache.cordova.*;**
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
-- You might experience an error here, where Eclipse can't find cordova-1.6.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add cordova-1.6.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
-- Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
-- Paste the following permissions under versionName: (view image below)
+	
+- Right click on AndroidManifest.xml and select **Open With &gt; XML Editor**
+- Paste the following permissions between the **&lt;uses-sdk.../&gt;** and **&lt;application.../&gt;** tags.
 
-        <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true" />
+        <supports-screens 
+            android:largeScreens="true" 
+            android:normalScreens="true" 
+            android:smallScreens="true" 
+            android:resizeable="true" 
+            android:anyDensity="true" />
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.VIBRATE" />
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -61,17 +65,22 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
         <uses-permission android:name="android.permission.READ_CONTACTS" />
         <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
-- Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
+- Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
 
-	![](img/guide/getting-started/android/manifest.jpg)
+        android:configChanges="orientation|keyboardHidden"
+
+- Your AndroidManifest.xml file should look like
+
+    ![](img/guide/getting-started/android/manifest.jpg)
 
 4. Hello World
 --------------    
 
-Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
+- Create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
 	    <!DOCTYPE HTML>
         <html>
@@ -83,26 +92,21 @@ Now create and open a new file named **index.html** in the **assets/www** direct
         <h1>Hello World</h1>
         </body>
         </html>
-	
-    *cordova-1.6.0.js might need to be replaced with latest cordova-<VERSION NUMBER>.js
 
 
 5A. Deploy to Simulator
 -----------------------
 
-- Right click the project and go to **Run As** and click **Android Application**
+- Right click the project and go to **Run As &gt; Android Application**
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 
 5B. Deploy to Device
 --------------------
 
-- Make sure USB debugging is enabled on your device and plug it into your system. (Settings &gt; Applications &gt; Development)
-- Right click the project and go to **Run As** and click **Android Application**
+- Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)
+- Right click the project and go to **Run As &gt; Android Application**
 
 
 Done!
 -----
-
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/30862722/phonegap-android-eclipse-quickstart).
-

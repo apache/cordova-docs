@@ -33,7 +33,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 --------------------
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
-- Select **PhoneGapStarter**.
+- Select **CordovaStarter**. ( the version number will be displayed in the template description )
 - Give your project a name, and select OK.
 
     ![](img/guide/getting-started/windows-phone/wpnewproj.PNG)
