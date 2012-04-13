@@ -1,5 +1,5 @@
 $: << File.join(File.dirname(__FILE__), '..', '..', 'lib')
-$: << File.join(File.dirname(__FILE__), '..', '..', 'lib', 'phonegap')
+$: << File.join(File.dirname(__FILE__), '..', '..', 'lib', 'cordova')
 require 'table_of_contents'
 require 'spec_helpers'
 

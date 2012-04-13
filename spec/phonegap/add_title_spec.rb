@@ -1,5 +1,5 @@
 $: << File.join(File.dirname(__FILE__), '..')
-$: << File.join(File.dirname(__FILE__), '..', '..', 'lib', 'phonegap')
+$: << File.join(File.dirname(__FILE__), '..', '..', 'lib', 'cordova')
 require 'spec_helpers'
 require 'add_title'
 require 'nokogiri'  # Nokogiri may not be the best way to test this suite. Any thoughts?

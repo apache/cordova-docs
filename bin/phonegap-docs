@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-$: << File.join(File.dirname(__FILE__), '..', 'lib')
-require 'phonegap_docs'
-
-phonegap_docs = PhoneGapDocs.new
-phonegap_docs.run
-
-puts " => #{phonegap_docs.output_directory}"

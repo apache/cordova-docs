@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+require 'docs_generator'
+
+generator = DocsGenerator.new
+generator.run
+
+puts " => #{generator.output_directory}"

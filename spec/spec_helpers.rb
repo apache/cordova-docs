@@ -1,5 +1,5 @@
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-$:.unshift File.join(File.dirname(__FILE__), '..', 'lib', 'phonegap')
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib', 'cordova')
 require 'file_helpers'
 require 'fileutils'
 

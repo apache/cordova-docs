@@ -5,7 +5,7 @@ require 'jodoc'
 describe JoDoc do
   before :all do
     @tmp_public_directory = Helper::tmp_public_directory
-    PhoneGapDocs.new(Helper::create_tmp_directory_assets, @tmp_public_directory).run
+    DocsGenerator.new(Helper::create_tmp_directory_assets, @tmp_public_directory).run
   end
   
   it 'should run on a validate directory' do
