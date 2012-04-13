@@ -144,7 +144,7 @@ Full Example
         function capturePhoto() {
           // Take picture using device camera and retrieve image as base64-encoded string
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-            destinationType.DATA_URL });
+            destinationType: destinationType.DATA_URL });
         }
 
         // A button will call this function
@@ -152,7 +152,7 @@ Full Example
         function capturePhotoEdit() {
           // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
-            destinationType.DATA_URL });
+            destinationType: destinationType.DATA_URL });
         }
     
         // A button will call this function
