@@ -43,8 +43,8 @@ Full Example
         //
         function onDeviceReady() {
 			var myContact = navigator.contacts.create({"displayName": "Test User"});
-			myContact.gender = "male";
-			console.log("The contact, " + myContact.displayName + ", is of the " + myContact.gender + " gender");
+			myContact.note = "This contact has a note.";
+			console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
         }
     
 
