@@ -13,7 +13,7 @@ Properties
 Details
 -------
 
-When you call the SQLTransaction executeSql method it's callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When you call the SQLTransaction executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
 
 Supported Platforms
 -------------------
@@ -30,12 +30,14 @@ Execute SQL Quick Example
 	}
 
 	function querySuccess(tx, results) {
-		// this will be empty since no rows were inserted.
-		console.log("Insert ID = " + results.insertId);
-		// this will be 0 since it is a select statement
-		console.log("Rows Affected = " + results.rowsAffected);
-		// the number of rows returned by the select statement
-		console.log("Insert ID = " + results.rows.length);
+    console.log("Returned rows = " + results.rows.length);
+    // this will be true since it was a select statement and so rowsAffected was 0
+    if (!resultSet.rowsAffected) {
+      console.log('No rows affected!');
+      return false;
+    }
+    // for an insert statement, this property will return the ID of the last inserted row
+    console.log("Last inserted row ID = " + results.insertId);
 	}
 	
 	function errorCB(err) {
@@ -78,12 +80,14 @@ Full Example
 		// Query the success callback
 		//
 		function querySuccess(tx, results) {
-			// this will be empty since no rows were inserted.
-			console.log("Insert ID = " + results.insertId);
-			// this will be 0 since it is a select statement
-			console.log("Rows Affected = " + results.rowsAffected);
-			// the number of rows returned by the select statement
-			console.log("Insert ID = " + results.rows.length);
+      console.log("Returned rows = " + results.rows.length);
+      // this will be true since it was a select statement and so rowsAffected was 0
+      if (!resultSet.rowsAffected) {
+        console.log('No rows affected!');
+        return false;
+      }
+      // for an insert statement, this property will return the ID of the last inserted row
+      console.log("Last inserted row ID = " + results.insertId);
 		}
 
 		// Transaction error callback
