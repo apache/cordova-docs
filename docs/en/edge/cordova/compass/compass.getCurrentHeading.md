@@ -27,7 +27,7 @@ Quick Example
     };
 
     function onError(error) {
-        alert('CompassError: ' error.code);
+        alert('CompassError: ' + error.code);
     };
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
