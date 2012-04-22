@@ -24,12 +24,12 @@ Methods
 - __abort__: Aborts writing file. 
 - __seek__: Moves the file pointer to the byte specified.
 - __truncate__: Shortens the file to the length specified.
-- __write__: Writes data to the file.
+- __write__: Writes data to the file with a UTF-8 encoding.
 
 Details
 -------
 
-The `FileWriter` object is a way to write files from the devices file system.  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
+The `FileWriter` object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
 
 A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
 
