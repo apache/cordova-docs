@@ -3,7 +3,7 @@ Connection
 
 > The `connection` object gives access to the device's cellular and wifi connection information.
 
-This object is accessed under the navigator.network interface.
+This object is accessed under the `navigator.network` interface.
 
 Properties
 ----------
@@ -26,4 +26,11 @@ WP7 Quirk
 
 - __type:__
 Windows Phone Emulator always reports navigator.network.connection.type is Connection.UNKNOWN
+
+iOS Quirk
+---------
+
+- __type:__
+iOS can only report whether the device is on a cellular connection, not
+of what type, thus it will always report as CELL_2G
 
