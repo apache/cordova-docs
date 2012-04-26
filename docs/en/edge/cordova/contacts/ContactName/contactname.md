@@ -24,6 +24,7 @@ Supported Platforms
 - Android 2.X
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Bada 1.2
 
 Quick Example
 -------------

@@ -22,6 +22,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
+- Bada 1.2 & 2.x
 
 Quick Example
 -------------
@@ -92,3 +93,11 @@ Windows Phone 7 Quirks
 - Ignores button names, always 'OK|Cancel'
 - There is no built in browser confirm, so if you want to just write alert('foo'); you can assign window.confirm = navigator.notification.confirm;
 - alert + confirm calls are non-blocking, and result is only available asyncronously.
+
+Bada 2.x Quirks
+---------------
+- confirm uses javascript alert
+
+Bada 1.2 Quirks
+---------------
+- Ignore button names, always 'OK|Cancel'

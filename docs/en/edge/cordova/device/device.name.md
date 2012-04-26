@@ -17,6 +17,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
+- Bada 1.2 & 2.x
 
 Quick Example
 -------------
@@ -81,3 +82,7 @@ Windows Phone 7 Quirks
 -------------
 
 - returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'
+
+Bada Quirks
+-----------
+- returns the manufacturer model name. For example 'Samsung Wave S8500'

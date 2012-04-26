@@ -98,4 +98,8 @@ Windows Phone 7 Quirks
 - Ignores the `allowEdit` parameter.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `saveToPhotoAlbum` parameter.
-           
+
+Bada 1.2 Quirks
+--------------
+- options not supported
+- always returns a FILE URI

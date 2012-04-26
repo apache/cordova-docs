@@ -17,3 +17,7 @@ Windows Phone 7 Quirks
 --------------
 
 - filter is not supported.
+
+Bada Quirks
+-----------
+- filter is not supported.

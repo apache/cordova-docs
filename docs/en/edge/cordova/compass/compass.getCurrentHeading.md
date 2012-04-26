@@ -18,6 +18,7 @@ Supported Platforms
 - Android
 - iPhone
 - Windows Phone 7 ( Mango ) if available in hardware
+- Bada 1.2 & 2.x
 
 Quick Example
 -------------
