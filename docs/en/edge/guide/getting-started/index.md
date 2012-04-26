@@ -7,3 +7,4 @@ Getting Started Guides
 - Getting Started with Symbian
 - Getting Started with WebOS
 - Getting Started with Windows Phone
+- Getting Started with Bada
