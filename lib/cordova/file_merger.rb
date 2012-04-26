@@ -7,6 +7,9 @@ class FileMerger
   end
 
   def run(filepath)
+    # skip the guides
+    return if filepath.match(/\/guide\//)
+    
     # skip missing files (file that are merged are also deleted)
     return unless File.exists?(filepath)
     
