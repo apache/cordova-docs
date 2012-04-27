@@ -50,7 +50,7 @@ Full Example
       <head>
         <title>Compass Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-0.9.4.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // The watch id references the current `watchHeading`
