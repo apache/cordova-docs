@@ -92,7 +92,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 Now create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
-	    <!DOCTYPE HTML>
+        <!DOCTYPE HTML>
         <html>
         <head>
         <title>Cordova</title>
@@ -102,9 +102,6 @@ Now create and open a new file named **index.html** in the **assets/www** direct
         <h1>Hello World</h1>
         </body>
         </html>
-	
-    *cordova-1.6.0.js might need to be replaced with latest cordova-<VERSION NUMBER>.js
-
 
 5A. Deploy to Simulator
 -----------------------
