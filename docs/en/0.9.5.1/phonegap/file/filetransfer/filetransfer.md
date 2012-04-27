@@ -81,7 +81,7 @@ Full Example
     <head>
         <title>File Transfer Example</title>
     
-        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.1.js"></script>
         <script type="text/javascript" charset="utf-8">
             
             // Wait for PhoneGap to load
