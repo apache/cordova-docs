@@ -50,7 +50,7 @@ Ejemplo Completo
       <head>
         <title>Ejemplo de Acceleration</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // El identificador del visor de aceleración a detener

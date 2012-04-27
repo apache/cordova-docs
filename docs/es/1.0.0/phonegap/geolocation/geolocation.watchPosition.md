@@ -85,7 +85,7 @@ Ejemplo Completo
       <head>
         <title>Ejemplo de Geolocation</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Espere a que PhoneGap se inicie
