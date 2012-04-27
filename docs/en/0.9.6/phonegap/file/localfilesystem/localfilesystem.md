@@ -74,7 +74,7 @@ Full Example
       <head>
         <title>Local File System Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.6.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for PhoneGap to load

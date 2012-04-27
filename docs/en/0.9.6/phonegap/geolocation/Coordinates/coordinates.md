@@ -77,7 +77,7 @@ Full Example
     <html>
       <head>
         <title>Geolocation Position Example</title>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.6.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Set an event to wait for PhoneGap to load
