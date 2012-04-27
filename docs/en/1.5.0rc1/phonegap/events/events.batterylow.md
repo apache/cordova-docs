@@ -61,12 +61,12 @@ Full Example
       <head>
         <title>PhoneGap Device Ready Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Call onDeviceReady when PhoneGap is loaded.
         //
-        // At this point, the document has loaded but phonegap.js has not.
+        // At this point, the document has loaded but cordova-1.5.0.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
         // 
