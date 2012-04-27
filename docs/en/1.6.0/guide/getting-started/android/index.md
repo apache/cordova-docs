@@ -101,7 +101,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
 
-	    <!DOCTYPE HTML>
+        <!DOCTYPE HTML>
         <html>
         <head>
         <title>Cordova</title>
@@ -111,7 +111,6 @@ This guide describes how to set up your development environment for Cordova and 
         <h1>Hello World</h1>
         </body>
         </html>
-
 
 5A. Deploy to Simulator
 -----------------------
