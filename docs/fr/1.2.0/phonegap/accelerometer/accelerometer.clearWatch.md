@@ -50,7 +50,7 @@ Exemple complet
       <head>
         <title>Exemple Accelerometer</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Le watchID référence l'écoute de l'accéléromètre courante
