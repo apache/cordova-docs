@@ -57,7 +57,7 @@ Video Tutorials:
 
     ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
     
-- Do **NOT** check the "Use Automatic Reference Counting" checkbox
+- **IMPORTANT! DO NOT CHECK** the "Use Automatic Reference Counting" checkbox 
 - Select the **Next** button
 - **Choose a folder** to save your new app in
 - Select the **Create** button, this will create your project
