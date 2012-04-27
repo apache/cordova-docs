@@ -59,12 +59,12 @@ Exemple complet
       <head>
         <title>Exemple évènement deviceready PhoneGap</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Appeler onDeviceReady lorsque PhoneGap est prêt.
         //
-        // Pour le moment, le document est chargé mais pas phonegap.js.
+        // Pour le moment, le document est chargé mais pas phonegap-1.1.0.js.
         // Lorsque PhoneGap sera chargé et capable de communiquer avec la partie native du mobile,
         // il déclenchera l'évènement `deviceready`.
         //

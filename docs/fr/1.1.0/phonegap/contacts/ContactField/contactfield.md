@@ -67,7 +67,7 @@ Exemple complet
       <head>
         <title>Exemple Contact</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Attendre que PhoneGap soit prêt

@@ -144,7 +144,7 @@ Exemple complet
       <head>
         <title>FileWriter Exemple</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Attendre que PhoneGap soit prêt
