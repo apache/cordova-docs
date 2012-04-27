@@ -82,7 +82,7 @@ Exemple complet
     <head>
         <title>Exemple de transfert de fichier</title>
     
-        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">
             
             // Attendre que PhoneGap soit prêt
