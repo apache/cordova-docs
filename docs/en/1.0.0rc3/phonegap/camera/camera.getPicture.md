@@ -90,7 +90,7 @@ Full Example
       <head>
         <title>Capture Photo</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
