@@ -50,7 +50,7 @@ watchID パラメータによって参照されるコンパスの監視を停止
       <head>
         <title>コンパスの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // watchIDは現在のウォッチ方位を参照します

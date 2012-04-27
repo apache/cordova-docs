@@ -72,7 +72,7 @@ accelerometer.watchAcceleration
       <head>
         <title>加速度センサーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // ウォッチIDが現在の `watchAcceleration` を参照

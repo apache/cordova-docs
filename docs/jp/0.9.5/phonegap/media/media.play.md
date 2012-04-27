@@ -67,7 +67,7 @@ media.play
           <head>
             <title>メディア使用例</title>
         
-            <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+            <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
             <script type="text/javascript" charset="utf-8">
         
             // PhoneGapの読み込みを待機

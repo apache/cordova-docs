@@ -98,7 +98,7 @@ Base64形式でエンコードされたフォトイメージを表す文字列�
       <head>
         <title>写真を撮ってみよう</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // 写真ソース

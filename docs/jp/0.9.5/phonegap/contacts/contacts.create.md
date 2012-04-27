@@ -52,7 +52,7 @@ contacts.create関数で作成したContactオブジェクトは、デバイス�
       <head>
         <title>連絡先の例</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // PhoneGapの読み込みを待機

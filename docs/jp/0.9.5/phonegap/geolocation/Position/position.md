@@ -76,7 +76,7 @@ Geolocation APIによって作成された位置座標(`Position`)を扱うオ�
       <head>
         <title>位置情報の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // PhoneGapの読み込みを待機

@@ -62,7 +62,7 @@ PhoneGapはネイティブとJavaScriptの2つのコードで形成されます�
       <head>
         <title>PhoneGap Device Ready 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // PhoneGapの読み込み完了とともにonDeviceReadyを呼び出します。
