@@ -95,7 +95,7 @@ __Full Example__
     <head>
         <title>File Transfer Example</title>
     
-        <script type="text/javascript" charset="utf-8" src="cordova-1.6.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.6.1.js"></script>
         <script type="text/javascript" charset="utf-8">
             
             // Wait for Cordova to load
