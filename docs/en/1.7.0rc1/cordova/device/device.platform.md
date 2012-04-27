@@ -80,7 +80,7 @@ Full Example
 iPhone Quirks
 -------------
 
-All devices return `iPhone` as the platform. This is inaccurate because Apple has rebranded the iPhone operating system as `iOS`.
+The iPhone returns `iPhone` as the platform. The iPad returns `iPad` as the platform.  In the simulator they will return `iPhone Simulator` and `iPad Simulator` respectively.  These are inaccurate in all cases because Apple has rebranded the iPhone operating system as `iOS`.
 
 BlackBerry Quirks
 -----------------
