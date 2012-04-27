@@ -52,8 +52,8 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 - In the root directory of the project, create two new directories:
  	- **/libs**
  	- **guides/images/www**
-- Copy **phonegap.js** from your PhoneGap download earlier to **guides/images/www**
-- Copy **phonegap.jar** from your PhoneGap download earlier to **/libs**
+- Copy **phonegap-1.4.0.js** from your PhoneGap download earlier to **guides/images/www**
+- Copy **phonegap-1.4.0.jar** from your PhoneGap download earlier to **/libs**
 - Copy **xml** folder from your PhoneGap download earlier to **/res**
 - Make a few adjustments too the project's main Java file found in the **src** folder in Eclipse: (view image below)
 	- Change the class's extend from **Activity** to **DroidGap**
@@ -62,7 +62,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 	- Remove **import android.app.Activity;**
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
-- You might experience an error here, where Eclipse can't find phonegap-1.0.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add phonegap-1.0.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- You might experience an error here, where Eclipse can't find phonegap-1.4.0.jar. In this case, right click on the /libs folder and go to Build Paths/ &gt; Configure Build Paths. Then, in the Libraries tab, add phonegap-1.4.0.jar to the Project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 - Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions under versionName: (view image below)
 
@@ -95,18 +95,16 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 
 Now create and open a new file named **index.html** in the **guides/images/www** directory. Paste the following code:
 
-	    <!DOCTYPE HTML>
+        <!DOCTYPE HTML>
         <html>
         <head>
         <title>PhoneGap</title>
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.4.0.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
         </body>
         </html>
-	
-    *phonegap.js might need to be replaced with phonegap.&lt;VERSION NUMER&gt;.js
 
 
 5A. Deploy to Simulator
