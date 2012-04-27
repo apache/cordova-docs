@@ -54,12 +54,12 @@ Full Example
       <head>
         <title>PhoneGap Start Call Button Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Call onDeviceReady when PhoneGap is loaded.
         //
-        // At this point, the document has loaded but phonegap.js has not.
+        // At this point, the document has loaded but phonegap-1.4.1.js has not.
         // When PhoneGap is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
