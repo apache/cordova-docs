@@ -132,3 +132,11 @@ __Run all specs:__
 __Run a specific spec:__
 
     spec spec/phonegap/add_title_spec.rb
+
+Generated a Version Release
+---------------------------
+
+There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
+
+    # generate version 1.7.0
+    rake version[1.7.0]

@@ -18,6 +18,9 @@
 require 'rubygems'
 require 'rake'
 require 'spec/rake/spectask'
+require 'fileutils'
+
+task :default => :spec
 
 desc "Run specs"
 Spec::Rake::SpecTask.new('spec') do |t|
@@ -27,4 +30,41 @@ Spec::Rake::SpecTask.new('spec') do |t|
 end
 task :spec
 
-task :default => :spec
+desc "Increment the version - generates a release and updates the edge documentation"
+task :version, :nextVersion do |t, args|
+    # get current and next version
+    nextVersion = args[:nextVersion].strip
+    prevVersion = File.read('VERSION').sub(/rc\d+$/, '').strip # remove release candidate
+    
+    # update edge documentation to reference next version
+    _nextVersion = nextVersion.sub(/rc\d+$/, '') # cordova file references do not include the RC
+    unless prevVersion == _nextVersion
+        files = Dir.glob(File.join('docs', 'en', 'edge', '**', '*'))
+        
+        files.sort.each do |file|
+          next if File.directory?(file) or file !~ /md|html/
+          content = File.read(file)
+          content.gsub!(prevVersion, _nextVersion)
+          File.open(file, 'w') { |f| f.write(content) }
+        end
+    end
+    
+    # generate a release
+    edge_dir = File.join('docs', 'en', 'edge')
+    release_dir = File.join('docs', 'en', nextVersion)
+    FileUtils.cp_r(edge_dir, release_dir)
+    
+    # update VERSION file
+    File.open('VERSION', 'w') do |f|
+        f.write(nextVersion)
+    end
+    
+    # echo results
+    puts "Generated version #{nextVersion}"
+    puts ""
+    puts "Next steps:"
+    puts "  1. Review the update using `git status`"
+    puts "  2. Commit the changes as 'Version #{nextVersion}'"
+    puts "  3. Tag the commit as '#{nextVersion}'"
+    puts ""
+end
