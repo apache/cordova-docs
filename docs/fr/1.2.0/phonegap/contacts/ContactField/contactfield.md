@@ -50,7 +50,7 @@ Exemple rapide
 	var contact = navigator.contacts.create();
 	
 	// Enregistrer les numéros de téléphone du contact dans un tableau ContactField[]
-	var phoneNumbers = [3];
+	var phoneNumbers = [];
 	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // Numéro préféré
 	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
@@ -81,7 +81,7 @@ Exemple complet
 		    var contact = navigator.contacts.create();
 
 			// Enregistrer les numéros de téléphone du contact dans un tableau ContactField[]
-			var phoneNumbers = [3];
+			var phoneNumbers = [];
 			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // Numéro préféré
 			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);

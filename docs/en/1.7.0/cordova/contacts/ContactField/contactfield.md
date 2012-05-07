@@ -51,7 +51,7 @@ Quick Example
 	var contact = navigator.contacts.create();
 	
 	// store contact phone numbers in ContactField[]
-	var phoneNumbers = [3];
+	var phoneNumbers = [];
 	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
 	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
@@ -82,7 +82,7 @@ Full Example
 			var contact = navigator.contacts.create();
 
 			// store contact phone numbers in ContactField[]
-			var phoneNumbers = [3];
+			var phoneNumbers = [];
 			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
 			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);

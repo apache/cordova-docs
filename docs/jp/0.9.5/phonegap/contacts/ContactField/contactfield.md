@@ -58,7 +58,7 @@ ContactField
 	var contact = navigator.service.contacts.create();
 	
 	// 連絡先の電話番号をContactField[]に格納
-	var phoneNumbers = [3];
+	var phoneNumbers = [];
 	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // 適当な電話番号
 	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
@@ -92,7 +92,7 @@ ContactField
 			var contact = navigator.service.contacts.create();
 
 			// ContactField[] に電話番号を保存
-			var phoneNumbers = [3];
+			var phoneNumbers = [];
 			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
 			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // 適当な電話番号
 			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
