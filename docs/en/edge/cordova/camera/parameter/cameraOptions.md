@@ -94,7 +94,7 @@ BlackBerry Quirks
 - Ignores the `correctOrientation` parameter.
 - Ignores the `saveToPhotoAlbum` parameter.
 
-Palm Quirks
+webOS Quirks
 -----------
 
 - Ignores the `quality` parameter.

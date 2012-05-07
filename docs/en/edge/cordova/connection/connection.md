@@ -56,3 +56,7 @@ of what type, thus it will always report as CELL_2G
 Bada Quirk
 ----------
 - Bada can only report if device is on Wifi or connected to cellular connection CELL_2G ( type not reported )
+
+webOS Quirks
+------------
+- will only show that a connection is available, but not which type

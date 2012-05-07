@@ -37,6 +37,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
+- webOS
 
 Quick Example
 -------------
@@ -54,6 +55,7 @@ Quick Example
     // Windows Phone 7 : Returns a hash of device+current user, 
     // if the user is not defined, a guid is generated and will persist until the app is uninstalled
     // 
+    // webOS: returns the device NDUID
     var deviceID = device.uuid;
 
 Full Example

@@ -52,14 +52,13 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 - Bada 1.2
-
+- webOS
 
 Windows Phone 7 Quirks
 ----------------------
 
 Invoking the native camera application while your device is connected
 via Zune will not work, and the error callback will be triggered.
-
 
 Quick Example
 -------------

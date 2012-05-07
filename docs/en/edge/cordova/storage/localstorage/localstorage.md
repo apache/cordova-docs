@@ -47,6 +47,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 - Windows Phone 7
+- webOS
 
 Key Quick Example
 -------------
