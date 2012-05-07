@@ -1,14 +1,14 @@
-Cordova API Documentation
-=========================
+Apache Cordova API Documentation
+================================
 
-The JavaScript API documentation for [Apache Cordova](http://incubator.apache.org/cordova/).
+The JavaScript API documentation for [Apache Cordova](http://cordova.io/).
 
 The documentation is available on [PhoneGap API Documentation website](http://docs.phonegap.com/).
 
 Documentation Format
 --------------------
 
-All of the [Cordova](http://incubator.apache.org/cordova/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document Cordova's core API and platform-specific APIs.
+All of the [Apache Cordova](http://cordova.io/) documentation is written with [markdown](http://daringfireball.net/projects/markdown/syntax), a lightweight markup language that can be typeset to HTML. Markdown provides a simple and flexible way to document Cordova's core API and platform-specific APIs.
 
 File Structure
 --------------
@@ -55,7 +55,7 @@ We appreciate the use of topic branches.
 
 ### Adding a Language
 
-Do you want the Cordova documentation in another language? We do too!
+Do you want the Apache Cordova documentation in another language? We do too!
 
 __1. Create the language directory__
 
@@ -85,7 +85,7 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 Generating the Documentation
 ----------------------------
 
-Currently, Cordova-Docs uses a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) to generate HTML documentation.
+Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are used to generate the HTML documentation.
 
 ### Install joDoc ###
 
