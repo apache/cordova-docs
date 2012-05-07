@@ -3,7 +3,7 @@ Apache Cordova API Documentation
 
 The JavaScript API documentation for [Apache Cordova](http://cordova.io/).
 
-The documentation is available on [PhoneGap API Documentation website](http://docs.phonegap.com/).
+The documentation is available at [docs.cordova.io](http://docs.cordova.io/).
 
 Documentation Format
 --------------------
@@ -16,10 +16,10 @@ File Structure
     docs/
     docs/LANGUAGE
     docs/LANGUAGE/VERSION
-    docs/LANGUAGE/VERSION/phonegap/
-    docs/LANGUAGE/VERSION/phonegap/PLUGIN/
-    docs/LANGUAGE/VERSION/phonegap/PLUGIN/className.md
-    docs/LANGUAGE/VERSION/phonegap/PLUGIN/className.functionName.md
+    docs/LANGUAGE/VERSION/cordova/
+    docs/LANGUAGE/VERSION/cordova/PluginName/
+    docs/LANGUAGE/VERSION/cordova/PluginName/className.md
+    docs/LANGUAGE/VERSION/cordova/PluginName/className.functionName.md
 
 Contributing to the Documentation
 ---------------------------------
