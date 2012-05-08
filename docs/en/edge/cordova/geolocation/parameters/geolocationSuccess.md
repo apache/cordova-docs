@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationSuccess
 ==================
 
-The user's callback function that is called when a geolocation position is available.
+The user's callback function that is called when a geolocation position becomes available (when using with `geolocation.getCurrentPosition`), or when the position changes (when using with `geolocation.watchPosition`).
 
     function(position) {
         // Do something

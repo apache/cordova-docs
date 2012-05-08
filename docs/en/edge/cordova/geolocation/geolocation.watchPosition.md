@@ -36,21 +36,22 @@ Parameters
 Returns
 -------
 
-- __String__: returns a watch id that references the watch position interval. The watch id can be used with `geolocation.clearWatch` to stop watching for changes in position.
+- __String__: returns a watch id that references the watch position interval. The watch id should be used with `geolocation.clearWatch` to stop watching for changes in position.
 
 Description
 -----------
 
-Function `geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
+- webOS
 
 Quick Example
 -------------
@@ -73,9 +74,9 @@ Quick Example
               'message: ' + error.message + '\n');
     }
 
-    // Options: retrieve the location every 3 seconds
+    // Options: throw an error if no update is received every 30 seconds.
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
     
 
 Full Example
@@ -98,8 +99,8 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-            // Update every 3 seconds
-            var options = { frequency: 3000 };
+            // Throw an error if no update is received every 30 seconds
+            var options = { timeout: 30000 };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     

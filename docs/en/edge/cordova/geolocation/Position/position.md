@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Position
 ========
 
-Contains `Position` coordinates that are created by the geolocation API.
+Contains `Position` coordinates and timestamp, created by the geolocation API.
 
 Properties
 ----------
@@ -38,7 +38,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 - webOS
@@ -116,16 +116,3 @@ Full Example
         <p id="geolocation">Finding geolocation...</p>
       </body>
     </html>
-
-iPhone Quirks
--------------
-
-- __timestamp:__ Uses seconds instead of milliseconds.
-
-A workaround is to manually convert the timestamp to milliseconds (x 1000):
-
-        var onSuccess = function(position) {
-            alert('Latitude: '  + position.coords.latitude             + '\n' +
-                  'Longitude: ' + position.coords.longitude            + '\n' +
-                  'Timestamp: ' + new Date(position.timestamp * 1000)  + '\n');
-        };

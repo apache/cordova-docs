@@ -36,7 +36,7 @@ Parameters
 Description
 -----------
 
-Function `geolocation.getCurrentPositon` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.getCurrentPositon` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
 
 
 Supported Platforms
@@ -44,9 +44,10 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
+- webOS
     
 Quick Example
 -------------

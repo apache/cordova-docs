@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 PositionError
 ========
 
-A `PositionError` object is returned to the geolocationError callback when an error occurs.
+A `PositionError` object is returned to the `geolocationError` callback when an error occurs.
 
 Properties
 ----------
@@ -40,3 +40,20 @@ Description
 
 The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
 
+### `PositionError.PERMISSION_DENIED`
+
+Returned when the user does not allow your application to retrieve
+position information. This is dependent on the platform.
+
+### `PositionError.POSITION_UNAVAILABLE`
+
+Returned when the device was unable to retrieve a position. In general
+this means the device has no network connectivity and/or cannot get a
+satellite fix.
+
+### `PositionError.TIMEOUT`
+
+Returned when the device was unable to retrieve a position within the
+time specified in the `geolocationOptions`' `timeout` property. When using
+in conjunction with `geolocation.watchPosition`, this error could be
+called into the `geolocationError` callback every `timeout` milliseconds.

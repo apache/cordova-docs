@@ -32,23 +32,25 @@ Parameters
 Description
 -----------
 
-Function `geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
+- webOS
 
 Quick Example
 -------------
 
-    // Options: retrieve the location every 3 seconds
+    // Options: watch for changes in position, and use the most
+    // accurate position acquisition method available.
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
 
     // ...later on...
 
@@ -75,8 +77,9 @@ Full Example
         // Cordova is ready
         //
         function onDeviceReady() {
-            // Update every 3 seconds
-            var options = { frequency: 3000 };
+            // Get the most accurate position updates available on the
+            // device.
+            var options = { enableHighAccuracy: true };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
     

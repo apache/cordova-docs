@@ -24,7 +24,7 @@ Geolocation
 
 Geolocation provides location information for the device, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the device's actual location. 
 
-This API is based on the [W3C Geo location API Specification](http://dev.w3.org/geo/api/spec-source.html).  Some devices already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, Cordova's implementation should be compatible with the W3C specification.
+This API is based on the [W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html).  Some devices (Android, BlackBerry, Bada, Windows Phone 7 and webOS, to be specific) already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, the Cordova implementation adheres to the W3C specification.
 
 Methods
 -------
