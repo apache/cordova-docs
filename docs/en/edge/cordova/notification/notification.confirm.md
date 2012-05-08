@@ -25,7 +25,7 @@ Shows a customizable confirmation dialog box.
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
 - __message:__ Dialog message (`String`)
-- __confirmCallback:__ - Callback to invoke with index of button pressed (1, 2 or 3). (`Number`)
+- __confirmCallback:__ - Callback to invoke with index of button pressed (1, 2 or 3). (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Confirm")
 - __buttonLabels:__ Comma separated string with button labels (`String`) (Optional, Default: "OK,Cancel")
     
@@ -33,6 +33,13 @@ Description
 -----------
 
 Function `notification.confirm` displays a native dialog box that is more customizable than the browser's `confirm` function.
+
+confirmCallback
+---------------
+
+The `confirmCallback` is called when the user has pressed one of the buttons on the confirmation dialog box.
+
+The callback takes the argument `buttonIndex` (`Number`), which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
 
 Supported Platforms
 -------------------
@@ -47,8 +54,8 @@ Quick Example
 -------------
 
 	// process the confirmation dialog result
-	function onConfirm(button) {
-		alert('You selected button ' + button);
+	function onConfirm(buttonIndex) {
+		alert('You selected button ' + buttonIndex);
 	}
 
     // Show a custom confirmation dialog
@@ -84,8 +91,8 @@ Full Example
         }
     
 		// process the confirmation dialog result
-		function onConfirm(button) {
-			alert('You selected button ' + button);
+		function onConfirm(buttonIndex) {
+			alert('You selected button ' + buttonIndex);
 		}
 
         // Show a custom confirmation dialog
@@ -107,16 +114,19 @@ Full Example
     </html>
 
 Windows Phone 7 Quirks
--------------
+----------------------
 
-- Ignores button names, always 'OK|Cancel'
-- There is no built in browser confirm, so if you want to just write alert('foo'); you can assign window.confirm = navigator.notification.confirm;
-- alert + confirm calls are non-blocking, and result is only available asyncronously.
+- Ignores button names, always `'OK|Cancel'`.
+- There is no built-in browser function for `window.confirm`
+    - You can bind `window.confirm` by assigning `window.confirm = navigator.notification.confirm;`.
+- Calls to `alert` and `confirm` are non-blocking and result is only available asyncronously.
 
 Bada 2.x Quirks
 ---------------
-- confirm uses javascript alert
+
+- `confirm` uses the browser's built-in `alert` function.
 
 Bada 1.2 Quirks
 ---------------
-- Ignore button names, always 'OK|Cancel'
+
+- Ignore button names, always `'OK|Cancel'`.
