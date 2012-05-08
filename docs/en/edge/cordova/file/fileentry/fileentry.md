@@ -39,6 +39,7 @@ Methods
 -------
 
 - __getMetadata__: Look up metadata about a file. 
+- __setMetadata__: Set metadata on a file.
 - __moveTo__: Move a file to a different location on the file system.
 - __copyTo__: Copy a file to a different location on the file system.
 - __toURI__: Return a URI that can be used to locate a file.
@@ -80,6 +81,36 @@ __Quick Example__
 
     // Request the metadata object for this entry
     entry.getMetadata(success, fail);	
+
+
+setMetadata
+----------------
+
+Set metadata on a file. 
+**Only works on iOS currently** - this will set the extended attributes of a file.
+
+__Parameters:__
+
+- __successCallback__ - A callback that is called when the metadata was successfully set. _(Function)_
+- __errorCallback__ - A callback that is called when the metadata was not successfully set. _(Function)_
+- __metadataObject__ - An object that contains the metadata keys and values. _(Object)_
+
+
+__Quick Example__
+
+    function success() {
+        console.log("The metadata was successfully set.");
+    }
+
+    function fail() {
+        alert("There was an error in setting the metadata");
+    }
+
+    // Set the metadata
+    entry.setMetadata(success, fail, { "com.apple.MobileBackup", 1});	
+__iOS Quirk__
+
+- only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to NOT enable the file to be backed up by iCloud. Set the value to **0** to re-enable the file to be backed up by iCloud.
 
 
 moveTo
