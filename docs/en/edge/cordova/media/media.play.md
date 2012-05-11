@@ -34,6 +34,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 ( Mango )
     
@@ -163,6 +164,11 @@ Full Example
             <p id="audio_position"></p>
           </body>
         </html>
+
+BlackBerry WebWorks Quirks
+----------
+
+- BlackBerry devices support a limited number of simultaneous audio channels. CDMA devices only support a single audio channel. Other devices support up to two simultaneous channels. Attempting to play more audio files then the supported amount will result in previous playback being stopped.
 
 iOS Quirk
 ---------

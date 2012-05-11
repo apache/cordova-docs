@@ -39,6 +39,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Windows Phone 7 ( Mango )
     
@@ -149,3 +150,8 @@ Full Example
             <p id="audio_position"></p>
           </body>
         </html>
+
+BlackBerry WebWorks Quirks
+----------
+
+- This API is not supported on BlackBerry OS 5 devices.

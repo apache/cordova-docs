@@ -34,6 +34,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 ( Mango )
     
@@ -129,6 +130,10 @@ Full Example
       </body>
     </html>
 
+BlackBerry WebWorks Quirks
+----------
+
+- BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a .amr extension.
 
 iOS Quirks
 ----------
