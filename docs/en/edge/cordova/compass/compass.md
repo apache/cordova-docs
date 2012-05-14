@@ -38,3 +38,38 @@ Arguments
 - compassError
 - compassOptions
 - compassHeading
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Compass" value="org.apache.cordova.CompassListener" />
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+    @TODO
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Compass</key>
+        <string>CDVLocation</string>
+    </dict>
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO

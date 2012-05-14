@@ -40,3 +40,44 @@ Since `device` is assigned to the `window` object, it is implicitly in the globa
     //
     var phoneName = window.device.name;
     var phoneName = device.name;
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    @TODO
+
+#### app/AndroidManifest.xml
+
+    @TODO
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    @TODO
+
+#### www/config.xml
+
+    @TODO
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    @TODO
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO

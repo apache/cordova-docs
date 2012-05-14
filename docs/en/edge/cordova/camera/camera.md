@@ -26,3 +26,49 @@ Methods
 -------
 
 - camera.getPicture
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+
+#### app/AndroidManifest
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+
+#### www/config.xml
+
+    <feature id="blackberry.media.camera" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Camera</key>
+        <string>CDVCamera</string>
+    </dict>
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO

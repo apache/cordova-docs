@@ -60,3 +60,44 @@ Bada Quirk
 webOS Quirks
 ------------
 - will only show that a connection is available, but not which type
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    @TODO
+
+#### app/AndroidManifest.xml
+
+    @TODO
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    @TODO
+
+#### www/config.xml
+
+    @TODO
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    @TODO
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO

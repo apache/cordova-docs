@@ -40,3 +40,45 @@ Objects (Read-Only)
 -------------------
 
 - Acceleration
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Accelerometer" value="org.apache.cordova.AccelListener"/>
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" />
+
+#### www/config.xml
+
+    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+    <feature id="org.apache.cordova" required="true" version="1.0.0" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Accelerometer</key>
+        <string>CDVAccelerometer</string>
+    </dict>
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO

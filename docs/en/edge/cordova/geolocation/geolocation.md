@@ -47,3 +47,44 @@ Objects (Read-Only)
 - Position
 - PositionError
 - Coordinates
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    @TODO
+
+#### app/AndroidManifest.xml
+
+    @TODO
+
+### Bada
+
+    @TODO
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    @TODO
+
+#### www/config.xml
+
+    @TODO
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    @TODO
+
+### webOS
+
+    @TODO
+
+### Windows Phone
+
+    @TODO
