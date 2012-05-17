@@ -80,4 +80,12 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+http://msdn.microsoft.com/en-us/library/ff769509(v=vs.92).aspx
+
+    <Capabilities>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        <Capability Name="ID_CAP_IDENTITY_USER" />
+    </Capabilities>

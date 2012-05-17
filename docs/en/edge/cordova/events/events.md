@@ -80,4 +80,4 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+    No additional permissions required.

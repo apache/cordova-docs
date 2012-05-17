@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Media
 =====
 
-> The `Media` object provides the ability to record and play back audio files on a device. 
+> The `Media` object provides the ability to record and play back audio files on a device.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
@@ -101,4 +101,14 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+http://msdn.microsoft.com/en-us/library/ff769509(v=vs.92).aspx
+
+    <Capabilities>
+        <Capability Name="ID_CAP_MEDIALIB" />
+        <Capability Name="ID_CAP_MICROPHONE"/>
+        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_ISV_CAMERA"/>
+        <Capability Name="ID_CAP_CAMERA"/>
+    </Capabilities>

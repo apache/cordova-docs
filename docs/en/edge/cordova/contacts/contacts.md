@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Contacts
 ========
 
-> The `contacts` object provides access to the device contacts database.  
+> The `contacts` object provides access to the device contacts database.
 
 Methods
 -------
@@ -86,4 +86,10 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+http://msdn.microsoft.com/en-us/library/ff769509(v=vs.92).aspx
+
+    <Capabilities>
+        <Capability Name="ID_CAP_CONTACTS"/>
+    </Capabilities>

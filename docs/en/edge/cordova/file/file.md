@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 File
 ==========
 
->  This API is based on the W3C [File API](http://www.w3.org/TR/FileAPI). An API to read, write and navigate file system hierarchies. 
+>  This API is based on the W3C [File API](http://www.w3.org/TR/FileAPI). An API to read, write and navigate file system hierarchies.
 
 Objects
 -------
@@ -80,4 +80,4 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+    No additional permissions required.
