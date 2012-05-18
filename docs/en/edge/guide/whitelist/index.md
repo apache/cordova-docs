@@ -17,18 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-White List Guide
-================
+Domain Whitelist Guide
+=====================
 
 Overview
 --------
 
-White Listing in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then delcare access to specific network domains and subdomains.
+Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then delcare access to specific network domains and subdomains.
 
 Specification
 -------------
 
-White Listing lays the ground work for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract White Listing with the W3C Widget Access specification.
+Domain whitelisting lays the ground work for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement it's own domain whitelisting.
 
 Syntax
 ------
