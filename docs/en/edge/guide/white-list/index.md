@@ -56,11 +56,4 @@ You can also use wildcards on whitelist keys. If you want to enable all domains 
 
 Be warned that you should not include a full URL, with the `http://` part, just the sub-domain/domain, like on the examples.
 
-The End
--------
-
-This guide is a contribution of [Nathan Campos][2] to the Cordova project.
-
-
 [1]: http://google.com
-[2]: http://about.me/nathanpc
