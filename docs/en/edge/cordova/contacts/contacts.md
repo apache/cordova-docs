@@ -54,11 +54,13 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Contacts" value="org.apache.cordova.ContactManager"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />   
 
 ### Bada
 

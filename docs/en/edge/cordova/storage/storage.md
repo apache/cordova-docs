@@ -54,7 +54,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Storage" value="org.apache.cordova.Storage"/>
 
 #### app/AndroidManifest.xml
 

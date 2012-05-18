@@ -48,7 +48,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Device" value="org.apache.cordova.Device"/>
 
 #### app/AndroidManifest.xml
 

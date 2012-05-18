@@ -37,7 +37,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Notification" value="org.apache.cordova.Notification"/>
 
 #### app/AndroidManifest.xml
 

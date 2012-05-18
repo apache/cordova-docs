@@ -48,11 +48,12 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="File" value="org.apache.cordova.FileUtils"/>
+    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
 
 ### Bada
 
