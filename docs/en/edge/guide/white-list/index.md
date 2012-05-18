@@ -20,40 +20,68 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 White List Guide
 ================
 
-This guide will introduce you to Cordova's newest addition: Whitelists. It's intention is to be simple and easy to understand so new and senior Cordova developers can avoid errors while upgrading a project or creating a new one.
+Overview
+--------
 
-Why was this introduced?
-------------------------
+White Listing in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then delcare access to specific network domains and subdomains.
 
-A question I asked myself as soon as I got a error while debugging a project after upgrading to 1.6.1.
+Specification
+-------------
 
-This feature was introduced, for developers that weren't sanitizing their links, as to prevent an app state where there is no way back.
+White Listing lays the ground work for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract White Listing with the W3C Widget Access specification.
 
-Its current status
-------------------
+Syntax
+------
 
- * **iOS**: Full whitelist support
- * **Android**: Unknown
- * **Windows Phone**: Unknown
- * **BlackBerry**: Unknown
- * **WebOS, Symbian, Bada**: Unknown
+Access to [google.com][2]:
 
-How to edit the whitelist?
---------------------------
+    http://google.com
 
-**iOS**
+Access to the secure [google.com][3] (`https://`):
+
+    https://google.com
+
+Access to the subdomain [maps.google.com][4]:
+
+    http://maps.google.com
+
+Access to all the subdomains on [google.com][2] (e.g. [mail.google.com][5] and [docs.google.com][6]):
+
+    http://*.google.com
+
+Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
+
+    *
+
+Android
+-------
+
+Bada
+----
+
+BlackBerry
+----------
+
+iOS
+---
 
 The easiest way of doing this is by going to your project's *cordova.plist* file and adding a new *String* to the *ExternalHosts* key. That's all!
 
-How should a whitelist key look like?
--------------------------------------
-
-For example, if you want to add [google.com][1] to your whitelist all you have to do is add a new key, as described above, with the following value: `google.com`
-
-**Wildcards**
-
-You can also use wildcards on whitelist keys. If you want to enable all domains possible it's easy, just add a key with the value `*`. If you want to add all the sub-domains to the whitelist, just add a key with a value like this: `*.domain.com`.
-
 Be warned that you should not include a full URL, with the `http://` part, just the sub-domain/domain, like on the examples.
 
-[1]: http://google.com
+Symbian
+-------
+
+webOS
+-----
+
+Windows Phone
+-------------
+
+[1]: http://www.w3.org/TR/widgets-access/
+[2]: http://google.com
+[3]: https://google.com
+[4]: http://maps.google.com
+[5]: http://mail.google.com
+[6]: http://docs.google.com
+[7]: http://developer.mozilla.org
