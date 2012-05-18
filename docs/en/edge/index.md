@@ -84,8 +84,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Upgrade an application to the latest Cordova release.</span>
         </li>
         <li>
-            <h2>White Listing Guide</h2>
-            <span>Given an application access to external domains.</span>
+            <h2>White List Guide</h2>
+            <span>Grant an application access to external domains.</span>
         </li>
         <li>
             <h2><a href="_index.html">Keyword Index</a></h2>

@@ -17,8 +17,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-White Listing Guide
-===================
+White List Guide
+================
 
 This guide will introduce you to Cordova's newest addition: Whitelists. It's intention is to be simple and easy to understand so new and senior Cordova developers can avoid errors while upgrading a project or creating a new one.
 
