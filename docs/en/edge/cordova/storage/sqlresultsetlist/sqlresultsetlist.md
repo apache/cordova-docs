@@ -54,9 +54,9 @@ Execute SQL Quick Example
 
 	function querySuccess(tx, results) {
 		var len = results.rows.length;
-	   	console.log("DEMO table: " + len + " rows found.");
-	   	for (var i=0; i<len; i++){
-	    	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+	   	console.log("DEMO table: " + len + " rows found.");
+	   	for (var i=0; i<len; i++){
+	        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
 		}
 	}
 	
