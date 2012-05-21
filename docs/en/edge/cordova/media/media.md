@@ -85,7 +85,7 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
 
 #### www/config.xml
 

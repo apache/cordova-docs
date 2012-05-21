@@ -83,7 +83,7 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
 
 #### www/config.xml
 

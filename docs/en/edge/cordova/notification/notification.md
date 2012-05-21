@@ -51,11 +51,11 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification"/>
 
 #### www/config.xml
 
-    @TODO
+   <feature id="blackberry.ui.dialog" />
 
 ### iOS
 

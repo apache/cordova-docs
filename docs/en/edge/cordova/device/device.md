@@ -62,12 +62,14 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+	<plugin name="Device" value="org.apache.cordova.device.Device"/>
 
 #### www/config.xml
 
-    @TODO
-
+    <feature id="blackberry.app" required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
 ### iOS
 
 #### App/Supporting Files/Cordova.plist

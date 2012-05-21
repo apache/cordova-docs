@@ -72,7 +72,7 @@ Permissions
 
 #### www/config.xml
 
-    @TODO
+    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0"/>
 
 ### iOS
 

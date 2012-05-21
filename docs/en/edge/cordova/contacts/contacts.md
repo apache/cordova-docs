@@ -70,11 +70,13 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+	<plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
 #### www/config.xml
-
-    @TODO
+   <feature id="blackberry.find" required="true" version="1.0.0.0" />
+   <feature id="blackberry.identity" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
 ### iOS
 

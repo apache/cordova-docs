@@ -71,11 +71,12 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+   <plugin name="Geolocation"    value="org.apache.cordova.geolocation.Geolocation"/>
 
 #### www/config.xml
-
-    @TODO
+   <rim:permissions>
+       <rim:permit>read_geolocation</rim:permit>
+   </rim:permissions>
 
 ### iOS
 
