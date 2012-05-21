@@ -31,7 +31,7 @@ Properties
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
 - __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
 - __emails:__ An array of all the contact's email addresses. _(ContactField[])_
-- __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
+- __addresses:__ An array of all the contact's addresses. _(ContactAddress[])_
 - __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
 - __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
 - __birthday:__ The birthday of the contact. _(Date)_
