@@ -49,10 +49,15 @@ Supported Platforms
 
 - Android
 - Blackberry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 ( Mango )
 - Bada 1.2
 - webOS
+
+iOS Quirks
+----------
+
+Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully close before the alert is displayed: setTimeout("alert('message');", 0);
 
 Windows Phone 7 Quirks
 ----------------------
