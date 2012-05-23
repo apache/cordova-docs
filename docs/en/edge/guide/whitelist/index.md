@@ -65,9 +65,27 @@ BlackBerry
 iOS
 ---
 
-The easiest way of doing this is by going to your project's *cordova.plist* file and adding a new *String* to the *ExternalHosts* key. That's all!
+1. Search for the **Cordova.plist** file in your project. 
+2. Add a new **String** value to the **ExternalHosts** key. 
 
-Be warned that you should not include a full URL, with the `http://` part, just the sub-domain/domain, like on the examples.
+For the value of the String, just include the **hostname / IP Address** of the URL **only** without the scheme or the path of the URL.
+
+For example, if you have a URL like this: **http://**my.phonegap.com**:443?is_awesome=yes**, the whitelist value would be:
+
+        my.phonegap.com
+
+You can also use **wildcards** in the value. For example, if you want to **allow all subdomains**, you would use this value:
+
+        *.phonegap.com
+        
+Similarly, if you want to allow all TLDs also (.com, .net, etc) you would do this:
+
+        *.phonegap.*
+        
+To allow all domains, you would just add ** "*" ** like so, this will effectively **turn off the whitelist**:
+
+        * 
+        
 
 Symbian
 -------
