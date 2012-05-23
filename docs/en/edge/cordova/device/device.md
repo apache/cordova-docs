@@ -72,10 +72,8 @@ Permissions
     </rim:permissions>
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    @TODO
-
+    Device is not implemented as a plugin.
+    
 ### webOS
 
     @TODO

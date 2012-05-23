@@ -82,7 +82,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Geolocation</key>
+        <string>CDVLocation</string>
+    </dict>
 
 ### webOS
 

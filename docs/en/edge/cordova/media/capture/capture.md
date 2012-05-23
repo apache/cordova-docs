@@ -106,7 +106,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Capture</key>
+        <string>CDVCapture</string>
+    </dict>
 
 ### webOS
 

@@ -82,7 +82,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Contacts</key>
+        <string>CDVContacts</string>
+    </dict>
 
 ### webOS
 

@@ -61,7 +61,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Notification</key>
+        <string>CDVNotification</string>
+    </dict>
 
 ### webOS
 

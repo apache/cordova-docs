@@ -74,7 +74,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Battery</key>
+        <string>CDVBattery</string>
+    </dict>
 
 ### webOS
 

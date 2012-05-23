@@ -76,9 +76,7 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    @TODO
+    No plugin required.
 
 ### webOS
 

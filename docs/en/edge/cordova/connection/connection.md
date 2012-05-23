@@ -93,7 +93,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>NetworkStatus</key>
+        <string>CDVConnection</string>
+    </dict>
 
 ### webOS
 

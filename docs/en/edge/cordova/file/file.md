@@ -77,7 +77,17 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>File</key>
+        <string>CDVFile</string>
+    </dict>
+    
+    <key>Plugins</key>
+    <dict>
+        <key>FileTransfer</key>
+        <string>CDVFileTransfer</string>
+    </dict>
 
 ### webOS
 
