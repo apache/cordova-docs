@@ -36,11 +36,6 @@ Permissions
 
     <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
 
-#### app/AndroidManifest
-
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
 ### Bada
 
     @TODO

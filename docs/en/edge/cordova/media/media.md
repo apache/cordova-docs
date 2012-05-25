@@ -69,11 +69,12 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Media" value="org.apache.cordova.AudioHandler"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
 ### Bada
 

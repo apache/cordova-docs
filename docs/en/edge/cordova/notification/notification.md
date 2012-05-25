@@ -37,11 +37,11 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Notification" value="org.apache.cordova.Notification"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.VIBRATE" />
 
 ### Bada
 

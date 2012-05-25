@@ -54,11 +54,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
-
-#### app/AndroidManifest.xml
-
-    @TODO
+    <plugin name="Storage" value="org.apache.cordova.Storage"/>
 
 ### Bada
 
