@@ -73,7 +73,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
