@@ -43,7 +43,7 @@ Supported Platforms
 - Android 2.X
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 Quick Example
 -------------
@@ -136,3 +136,10 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 iOS Quirks
 ------------
 - __formatted:__ Partially supported.  Will return iOS Composite Name but will not store.
+
+Bada Quirks
+-----------
+- __formatted:__ Property not supported
+- __middleName:__ Property not supported
+_ __honorificPrefix:__ Property not supported
+- __honorificSuffix:__ Property not supported

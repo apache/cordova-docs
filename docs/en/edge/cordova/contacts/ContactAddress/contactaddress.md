@@ -44,7 +44,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 Quick Example
 -------------
@@ -163,3 +163,8 @@ iOS Quirks
 ----------
 - __pref:__ This property is not supported on iOS devices and will always return `false`.
 - __formatted:__ Not currently supported.
+
+Bada Quirks
+-----------
+- __formatted:__ This property is not supported
+- __type:__ Has to be one of the following: WORK, HOME

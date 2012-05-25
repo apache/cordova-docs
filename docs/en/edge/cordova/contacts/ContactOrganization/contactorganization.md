@@ -148,4 +148,6 @@ iOS Quirks
 - __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
 - __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
 
-
+Bada 2.0 Quirks
+---------------
+- ContactOrganization not supported
