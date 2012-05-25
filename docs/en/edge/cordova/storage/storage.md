@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Storage
 ==========
 
-> Provides access to the devices storage options.  
+> Provides access to the devices storage options.
 
 This API is based on the [W3C Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with Cordova's implementation. For devices that don't have storage support, Cordova's implementation should be compatible with the W3C specification.
 
@@ -68,13 +68,11 @@ Permissions
 
 #### www/config.xml
 
-    @TODO
+    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0"/>
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    @TODO
+    No plugin required.
 
 ### webOS
 
@@ -82,4 +80,4 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+    No additional permissions required.

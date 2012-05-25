@@ -54,9 +54,9 @@ Execute SQL Quick Example
 
 	function querySuccess(tx, results) {
 		var len = results.rows.length;
-	   	console.log("DEMO table: " + len + " rows found.");
-	   	for (var i=0; i<len; i++){
-	    	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+	   	console.log("DEMO table: " + len + " rows found.");
+	   	for (var i=0; i<len; i++){
+	        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
 		}
 	}
 	
@@ -73,7 +73,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">

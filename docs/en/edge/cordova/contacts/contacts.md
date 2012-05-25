@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Contacts
 ========
 
-> The `contacts` object provides access to the device contacts database.  
+> The `contacts` object provides access to the device contacts database.
 
 Methods
 -------
@@ -54,7 +54,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-        <plugin name="Contacts" value="org.apache.cordova.ContactManager"/>
+    <plugin name="Contacts" value="org.apache.cordova.ContactManager"/>
 
 #### app/AndroidManifest.xml
 
@@ -64,23 +64,33 @@ Permissions
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>ADDRESSBOOK</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
 
-    @TODO
+	<plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
 #### www/config.xml
-
-    @TODO
+   <feature id="blackberry.find" required="true" version="1.0.0.0" />
+   <feature id="blackberry.identity" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Contacts</key>
+        <string>CDVContacts</string>
+    </dict>
 
 ### webOS
 
@@ -88,4 +98,10 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_CONTACTS"/>
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

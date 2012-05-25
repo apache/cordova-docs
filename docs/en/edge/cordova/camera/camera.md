@@ -36,6 +36,13 @@ Permissions
 
     <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
 
+#### app/AndroidManifest
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
 ### Bada
 
     @TODO
@@ -49,6 +56,10 @@ Permissions
 #### www/config.xml
 
     <feature id="blackberry.media.camera" />
+    
+    <rim:permissions>
+        <rim:permit>use_camera</rim:permit>
+    </rim:permissions>
 
 ### iOS
 
@@ -66,4 +77,12 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_CAMERA"/>
+        <Capability Name="ID_CAP_ISV_CAMERA"/>
+        <Capability Name="ID_HW_FRONTCAMERA"/>
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

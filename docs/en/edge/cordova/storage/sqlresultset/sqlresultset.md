@@ -73,7 +73,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Storage Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -102,7 +102,7 @@ Full Example
 		function querySuccess(tx, results) {
       console.log("Returned rows = " + results.rows.length);
       // this will be true since it was a select statement and so rowsAffected was 0
-      if (!resultSet.rowsAffected) {
+      if (!results.rowsAffected) {
         console.log('No rows affected!');
         return false;
       }

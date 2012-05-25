@@ -75,6 +75,7 @@ Permissions
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 ### Bada
 
@@ -84,7 +85,7 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
 
 #### www/config.xml
 
@@ -94,7 +95,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>NetworkStatus</key>
+        <string>CDVConnection</string>
+    </dict>
 
 ### webOS
 
@@ -102,4 +107,10 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_NETWORKING"/>
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

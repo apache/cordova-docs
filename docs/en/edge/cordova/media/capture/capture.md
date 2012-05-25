@@ -81,11 +81,12 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Capture" value="org.apache.cordova.Capture"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
 
 ### Bada
 
@@ -105,7 +106,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Capture</key>
+        <string>CDVCapture</string>
+    </dict>
 
 ### webOS
 

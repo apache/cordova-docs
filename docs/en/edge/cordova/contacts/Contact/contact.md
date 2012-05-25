@@ -31,7 +31,7 @@ Properties
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
 - __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
 - __emails:__ An array of all the contact's email addresses. _(ContactField[])_
-- __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
+- __addresses:__ An array of all the contact's addresses. _(ContactAddress[])_
 - __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
 - __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
 - __birthday:__ The birthday of the contact. _(Date)_
@@ -61,7 +61,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 Save Quick Example
 ------------------
@@ -220,3 +220,13 @@ iOS Quirks
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
 - __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.
+
+
+Bada Quirks
+-----------
+
+- __displayName:__ This property is not supported
+- __birthday:__ This property is not supported
+- __photos:__ This property should be a list with one URL to a photo
+- __categories:__ This property is not supported
+- __ims:__ This property is not supported

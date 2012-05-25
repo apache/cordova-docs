@@ -62,22 +62,30 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+	<plugin name="Device" value="org.apache.cordova.device.Device"/>
 
 #### www/config.xml
 
-    @TODO
-
+    <feature id="blackberry.app" required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    @TODO
-
+    Device is not implemented as a plugin.
+    
 ### webOS
 
     @TODO
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        <Capability Name="ID_CAP_IDENTITY_USER" />
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

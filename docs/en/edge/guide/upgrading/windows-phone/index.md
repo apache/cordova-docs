@@ -19,3 +19,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Upgrading Cordova Windows Phone
 ===============================
+
+This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
+
+- To upgrade to 1.8.0, please go from 1.7.0
+
+## Upgrade to 1.8.0 from 1.7.0 ##
+
+### In Visual Studio's Solution Explorer window:
+1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
+2. Remove the reference to WP7CordovaClassLib in the References folder.
+3. Right-Click on References and Select 'Add Reference'
+4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
+    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
+5. Copy the new cordova-1.8.0.js into your project ( be sure it is marked as Content )
+6. Update your HTML to use the new cordova-1.8.0.js file.

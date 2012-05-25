@@ -42,7 +42,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 Quick Example
 -------------
@@ -140,3 +140,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 iOS Quirks
 -----------
 - __pref:__ This property is not supported on iOS devices and will always return `false`.
+
+Bada Quirks
+-----------
+- __type:__ Property has to be one of the following for Email or Address fields: "WORK", "HOME". Property has to be one of the following for Phone fields: "WORK", "HOME", "VOICE", "FAX", "MSG", "CELL", "PAGER","BBS", "MODEM", "CAR", "ISDN","VIDEO", "PCS"

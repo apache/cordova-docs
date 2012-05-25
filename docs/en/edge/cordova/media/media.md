@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Media
 =====
 
-> The `Media` object provides the ability to record and play back audio files on a device. 
+> The `Media` object provides the ability to record and play back audio files on a device.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
@@ -75,6 +75,7 @@ Permissions
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
 
 ### Bada
 
@@ -84,7 +85,7 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
 
 #### www/config.xml
 
@@ -94,7 +95,11 @@ Permissions
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Media</key>
+        <string>CDVSound</string>
+    </dict>
 
 ### webOS
 
@@ -102,4 +107,14 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_MEDIALIB" />
+        <Capability Name="ID_CAP_MICROPHONE"/>
+        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_ISV_CAMERA"/>
+        <Capability Name="ID_CAP_CAMERA"/>
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

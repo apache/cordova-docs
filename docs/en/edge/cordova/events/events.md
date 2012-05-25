@@ -62,17 +62,23 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery"/>
 
 #### www/config.xml
 
-    @TODO
+   <feature id="blackberry.app" required="true" version="1.0.0.0" />
+   <feature id="blackberry.app.event" required="true" version="1.0.0.0" />
+   <feature id="blackberry.system.event" required="true" version="1.0.0.0"/>
 
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Battery</key>
+        <string>CDVBattery</string>
+    </dict>
 
 ### webOS
 
@@ -80,4 +86,4 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+    No additional permissions required.

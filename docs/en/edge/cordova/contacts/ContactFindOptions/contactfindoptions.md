@@ -35,7 +35,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 Quick Example
 -------------
@@ -111,3 +111,6 @@ Full Example
       </body>
     </html>
 
+Bada Quirks
+-----------
+__filter:__ Property can only apply to the following: "firstName", "lastName", "nickname", "phoneNumber", "email", "address"

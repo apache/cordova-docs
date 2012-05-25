@@ -51,17 +51,21 @@ Permissions
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification"/>
 
 #### www/config.xml
 
-    @TODO
+   <feature id="blackberry.ui.dialog" />
 
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
 
-    @TODO
+    <key>Plugins</key>
+    <dict>
+        <key>Notification</key>
+        <string>CDVNotification</string>
+    </dict>
 
 ### webOS
 
@@ -69,4 +73,4 @@ Permissions
 
 ### Windows Phone
 
-    @TODO
+    No additional permissions required.
