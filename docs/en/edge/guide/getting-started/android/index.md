@@ -71,7 +71,6 @@ This guide describes how to set up your development environment for Cordova and 
             android:smallScreens="true" 
             android:resizeable="true" 
             android:anyDensity="true" />
-        <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.VIBRATE" />
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -90,7 +89,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
 
-        android:configChanges="orientation|keyboardHidden"
+        android:configChanges="orientation|keyboardHidden|screenSize"
 
 - Your AndroidManifest.xml file should look like
 
