@@ -17,15 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
-======
+Accelerometer
+=============
 
-> The `camera` object provides access to the device's default camera application.
+> Captures device motion in the x, y, and z direction.
 
 Methods
 -------
 
-- camera.getPicture
+- accelerometer.getCurrentAcceleration
+- accelerometer.watchAcceleration
+- accelerometer.clearWatch
+
+Arguments
+---------
+
+- accelerometerSuccess
+- accelerometerError
+- accelerometerOptions
+
+Objects (Read-Only)
+-------------------
+
+- Acceleration
 
 Permissions
 -----------
@@ -34,11 +48,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
-
-#### app/AndroidManifest
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <plugin name="Accelerometer" value="org.apache.cordova.AccelListener"/>
 
 ### Bada
 
@@ -48,15 +58,12 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" />
 
 #### www/config.xml
 
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+    <feature id="org.apache.cordova" required="true" version="1.0.0" />
 
 ### iOS
 
@@ -64,8 +71,8 @@ Permissions
 
     <key>Plugins</key>
     <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
+        <key>Accelerometer</key>
+        <string>CDVAccelerometer</string>
     </dict>
 
 ### webOS
@@ -77,9 +84,7 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_SENSORS"/>
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

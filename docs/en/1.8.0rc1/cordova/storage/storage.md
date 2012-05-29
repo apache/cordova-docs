@@ -17,15 +17,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
-======
+Storage
+==========
 
-> The `camera` object provides access to the device's default camera application.
+> Provides access to the devices storage options.
+
+This API is based on the [W3C Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/) and [W3C Web Storage API Specification](http://dev.w3.org/html5/webstorage/). Some devices already provide an implementation of this spec. For those devices, the built-in support is used instead of replacing it with Cordova's implementation. For devices that don't have storage support, Cordova's implementation should be compatible with the W3C specification.
 
 Methods
 -------
 
-- camera.getPicture
+- openDatabase
+
+Arguments
+---------
+
+- database_name
+- database_version
+- database_displayname
+- database_size
+
+Objects
+-------
+
+- Database
+- SQLTransaction
+- SQLResultSet
+- SQLResultSetList
+- SQLError
+- localStorage
 
 Permissions
 -----------
@@ -34,11 +54,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
-
-#### app/AndroidManifest
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <plugin name="Storage" value="org.apache.cordova.Storage"/>
 
 ### Bada
 
@@ -48,25 +64,15 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+    @TODO
 
 #### www/config.xml
 
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0"/>
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    <key>Plugins</key>
-    <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
-    </dict>
+    No plugin required.
 
 ### webOS
 
@@ -74,12 +80,4 @@ Permissions
 
 ### Windows Phone
 
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+    No additional permissions required.

@@ -17,15 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
+Events
 ======
 
-> The `camera` object provides access to the device's default camera application.
+> Cordova lifecycle events.
 
-Methods
--------
+Event Types
+-----------
 
-- camera.getPicture
+- deviceready
+- pause
+- resume
+- online
+- offline
+- backbutton
+- batterycritical
+- batterylow
+- batterystatus
+- menubutton
+- searchbutton
+- startcallbutton
+- endcallbutton
+- volumedownbutton
+- volumeupbutton
 
 Permissions
 -----------
@@ -34,11 +48,11 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    @TODO
 
-#### app/AndroidManifest
+#### app/AndroidManifest.xml
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    @TODO
 
 ### Bada
 
@@ -48,15 +62,13 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery"/>
 
 #### www/config.xml
 
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+   <feature id="blackberry.app" required="true" version="1.0.0.0" />
+   <feature id="blackberry.app.event" required="true" version="1.0.0.0" />
+   <feature id="blackberry.system.event" required="true" version="1.0.0.0"/>
 
 ### iOS
 
@@ -64,8 +76,8 @@ Permissions
 
     <key>Plugins</key>
     <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
+        <key>Battery</key>
+        <string>CDVBattery</string>
     </dict>
 
 ### webOS
@@ -74,12 +86,4 @@ Permissions
 
 ### Windows Phone
 
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+    No additional permissions required.

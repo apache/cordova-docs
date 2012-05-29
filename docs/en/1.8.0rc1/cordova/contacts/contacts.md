@@ -17,15 +17,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
-======
+Contacts
+========
 
-> The `camera` object provides access to the device's default camera application.
+> The `contacts` object provides access to the device contacts database.
 
 Methods
 -------
 
-- camera.getPicture
+- contacts.create
+- contacts.find
+
+Arguments
+---------
+
+- contactFields
+- contactSuccess
+- contactError
+- contactFindOptions
+
+Objects
+-------
+
+- Contact
+- ContactName
+- ContactField
+- ContactAddress
+- ContactOrganization
+- ContactFindOptions
+- ContactError
 
 Permissions
 -----------
@@ -34,29 +54,33 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Contacts" value="org.apache.cordova.ContactManager"/>
 
-#### app/AndroidManifest
+#### app/AndroidManifest.xml
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />   
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>ADDRESSBOOK</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+	<plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
 #### www/config.xml
-
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+   <feature id="blackberry.find" required="true" version="1.0.0.0" />
+   <feature id="blackberry.identity" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+   <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
 ### iOS
 
@@ -64,8 +88,8 @@ Permissions
 
     <key>Plugins</key>
     <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
+        <key>Contacts</key>
+        <string>CDVContacts</string>
     </dict>
 
 ### webOS
@@ -77,9 +101,7 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_CONTACTS"/>
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

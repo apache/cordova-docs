@@ -17,15 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
+Device
 ======
 
-> The `camera` object provides access to the device's default camera application.
+> The `device` object describes the device's hardware and software.
 
-Methods
--------
+Properties
+----------
 
-- camera.getPicture
+- device.name
+- device.cordova
+- device.platform
+- device.uuid
+- device.version
+
+Variable Scope
+--------------
+
+Since `device` is assigned to the `window` object, it is implicitly in the global scope.
+
+    // These reference the same `device`
+    //
+    var phoneName = window.device.name;
+    var phoneName = device.name;
 
 Permissions
 -----------
@@ -34,11 +48,11 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Device" value="org.apache.cordova.Device"/>
 
-#### app/AndroidManifest
+#### app/AndroidManifest.xml
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 ### Bada
 
@@ -48,26 +62,18 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+	<plugin name="Device" value="org.apache.cordova.device.Device"/>
 
 #### www/config.xml
 
-    <feature id="blackberry.media.camera" />
-    
+    <feature id="blackberry.app" required="true" version="1.0.0.0" />
     <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
+        <rim:permit>read_device_identifying_information</rim:permit>
     </rim:permissions>
-
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
-
-    <key>Plugins</key>
-    <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
-    </dict>
-
+    Device is not implemented as a plugin.
+    
 ### webOS
 
     @TODO
@@ -77,9 +83,9 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        <Capability Name="ID_CAP_IDENTITY_USER" />
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

@@ -17,15 +17,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
-======
+Compass
+=======
 
-> The `camera` object provides access to the device's default camera application.
+> Obtains the direction that the device is pointing.
 
 Methods
 -------
 
-- camera.getPicture
+- compass.getCurrentHeading
+- compass.watchHeading
+- compass.clearWatch
+- compass.watchHeadingFilter 	(obsolete)
+- compass.clearWatchFilter		(obsolete)
+
+Arguments
+---------
+
+- compassSuccess
+- compassError
+- compassOptions
+- compassHeading
 
 Permissions
 -----------
@@ -34,11 +46,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
-
-#### app/AndroidManifest
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <plugin name="Compass" value="org.apache.cordova.CompassListener" />
 
 ### Bada
 
@@ -46,17 +54,7 @@ Permissions
 
 ### BlackBerry WebWorks
 
-#### www/plugins.xml
-
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
-
-#### www/config.xml
-
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+    @TODO
 
 ### iOS
 
@@ -64,8 +62,8 @@ Permissions
 
     <key>Plugins</key>
     <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
+        <key>Compass</key>
+        <string>CDVLocation</string>
     </dict>
 
 ### webOS
@@ -77,9 +75,7 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
+        <Capability Name="ID_CAP_SENSORS"/>
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

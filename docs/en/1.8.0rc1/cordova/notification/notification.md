@@ -17,15 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Camera
-======
+Notification
+============
 
-> The `camera` object provides access to the device's default camera application.
+> Visual, audible, and tactile device notifications.
 
 Methods
 -------
 
-- camera.getPicture
+- notification.alert
+- notification.confirm
+- notification.beep
+- notification.vibrate
 
 Permissions
 -----------
@@ -34,11 +37,11 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Notification" value="org.apache.cordova.Notification"/>
 
-#### app/AndroidManifest
+#### app/AndroidManifest.xml
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.VIBRATE" />
 
 ### Bada
 
@@ -48,15 +51,11 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification"/>
 
 #### www/config.xml
 
-    <feature id="blackberry.media.camera" />
-    
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+   <feature id="blackberry.ui.dialog" />
 
 ### iOS
 
@@ -64,8 +63,8 @@ Permissions
 
     <key>Plugins</key>
     <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
+        <key>Notification</key>
+        <string>CDVNotification</string>
     </dict>
 
 ### webOS
@@ -74,12 +73,4 @@ Permissions
 
 ### Windows Phone
 
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_CAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+    No additional permissions required.
