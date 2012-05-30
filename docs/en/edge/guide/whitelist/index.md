@@ -67,6 +67,8 @@ Access to [google.com][2]:
 Bada
 ----
 
+Domain whitelisting is unsupported on Bada. By default, all domains are accessible.
+
 BlackBerry
 ----------
 
