@@ -110,6 +110,8 @@ Domain whitelisting is unsupported on webOS. By default, all domains are accessi
 Windows Phone
 -------------
 
+Domain whitelisting is unsupported on Windows Phone. By default, all domains are accessible.
+
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com
