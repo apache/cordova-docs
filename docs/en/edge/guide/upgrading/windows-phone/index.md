@@ -22,9 +22,9 @@ Upgrading Cordova Windows Phone
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
-- To upgrade to 1.8.0, please go from 1.7.0
+- To upgrade to 1.8.0, please go from 1.8.0
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.8.0 from 1.8.0 ##
 
 ### In Visual Studio's Solution Explorer window:
 1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
