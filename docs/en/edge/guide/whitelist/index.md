@@ -56,10 +56,13 @@ Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
 Android
 -------
 
-The access rules are found in cordova.xml in res/xml/cordova.xml.  These rules follow the [W3C Widget Access][1] specification such that the
-access elements control the whitelist.  For example:
+The whitelisting rules are found in `res/xml/cordova.xml` and declared with the element `<access origin="..." />`.
 
-    <access origin="http://127.0.0.1*"/>
+Android has full support for the whitelisting syntax.
+
+Access to [google.com][2]:
+
+    <access origin="http://google.com" />
 
 Bada
 ----
