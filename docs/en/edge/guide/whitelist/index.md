@@ -100,6 +100,8 @@ To allow all domains, you would just add ** "*" ** like so, this will effectivel
 Symbian
 -------
 
+Domain whitelisting is unsupported on Symbian. By default, all domains are accessible.
+
 webOS
 -----
 
