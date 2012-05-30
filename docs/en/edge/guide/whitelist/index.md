@@ -105,6 +105,8 @@ Domain whitelisting is unsupported on Symbian. By default, all domains are acces
 webOS
 -----
 
+Domain whitelisting is unsupported on webOS. By default, all domains are accessible.
+
 Windows Phone
 -------------
 
