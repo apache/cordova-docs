@@ -72,6 +72,26 @@ Domain whitelisting is unsupported on Bada. By default, all domains are accessib
 BlackBerry
 ----------
 
+The whitelisting rules are found in `www/config.xml` and declared with the element `<access uri="..." />`.
+
+For a complete reference, see the [BlackBerry WebWorks Access Element documentation][8].
+
+Access to [google.com][2]:
+
+    <access uri="http://google.com" subdomains="false" />
+
+Access to  [maps.google.com][4]:
+
+    <access uri="http://maps.google.com" subdomains="false" />
+
+Access to all the subdomains on [google.com][2]:
+
+    <access uri="http://google.com" subdomains="true" />
+
+Access to all domains, including `file://` protocol:
+
+    <access uri="*" subdomains="true" />
+
 iOS
 ---
 
@@ -119,3 +139,4 @@ Domain whitelisting is unsupported on Windows Phone. By default, all domains are
 [5]: http://mail.google.com
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
+[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
