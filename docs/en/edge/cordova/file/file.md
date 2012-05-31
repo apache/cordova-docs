@@ -67,12 +67,14 @@ Permissions
    <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
 
 #### www/config.xml
+
    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
    <feature id="blackberry.utils" required="true" version="1.0.0.0" />
    <feature id="blackberry.io.dir" required="true" version="1.0.0.0" />
    <rim:permissions>
        <rim:permit>access_shared</rim:permit>
    </rim:permissions>
+
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
