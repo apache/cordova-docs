@@ -76,4 +76,4 @@ Permissions
 
 ### Windows Phone
 
-    No additional permissions required.
+    No permissions required.
