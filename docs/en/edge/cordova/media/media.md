@@ -87,10 +87,6 @@ Permissions
 
     <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
 
-#### www/config.xml
-
-    @TODO
-
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
