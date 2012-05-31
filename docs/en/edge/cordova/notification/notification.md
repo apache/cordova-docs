@@ -55,7 +55,7 @@ Permissions
 
 #### www/config.xml
 
-   <feature id="blackberry.ui.dialog" />
+    <feature id="blackberry.ui.dialog" />
 
 ### iOS
 
