@@ -87,10 +87,6 @@ Permissions
 
     <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
 
-#### www/config.xml
-
-    @TODO
-
 ### iOS
 
 #### App/Supporting Files/Cordova.plist
