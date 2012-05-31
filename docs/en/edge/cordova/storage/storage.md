@@ -62,10 +62,6 @@ Permissions
 
 ### BlackBerry WebWorks
 
-#### www/plugins.xml
-
-    @TODO
-
 #### www/config.xml
 
     <feature id="blackberry.widgetcache" required="true" version="1.0.0.0"/>
