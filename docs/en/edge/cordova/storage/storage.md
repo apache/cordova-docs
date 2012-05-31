@@ -58,7 +58,7 @@ Permissions
 
 ### Bada
 
-    No permissiones required.
+    No permissions are required.
 
 ### BlackBerry WebWorks
 
@@ -68,12 +68,12 @@ Permissions
 
 ### iOS
 
-    No permissions required.
+    No permissions are required.
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 
-    No permissions required.
+    No permissions are required.

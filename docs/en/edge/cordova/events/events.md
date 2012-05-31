@@ -86,8 +86,8 @@ Permissions
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 
-    No permissions required.
+    No permissions are required.

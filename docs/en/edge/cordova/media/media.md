@@ -104,7 +104,7 @@ Permissions
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 

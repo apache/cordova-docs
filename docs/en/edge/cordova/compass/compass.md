@@ -50,11 +50,11 @@ Permissions
 
 ### Bada
 
-    No permissions required.
+    No permissions are required.
 
 ### BlackBerry WebWorks
 
-    No permissions required.
+    No permissions are required.
 
 ### iOS
 
@@ -68,7 +68,7 @@ Permissions
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 

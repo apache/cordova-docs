@@ -52,7 +52,7 @@ Permissions
 
 ### Bada
 
-    No permissions required.
+    No permissions are required.
 
 ### BlackBerry WebWorks
 
@@ -77,7 +77,7 @@ Permissions
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 
