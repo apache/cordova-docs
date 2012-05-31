@@ -72,8 +72,8 @@ Permissions
     </rim:permissions>
 ### iOS
 
-    Device is not implemented as a plugin.
-    
+    No permissions are required.
+
 ### webOS
 
     @TODO
