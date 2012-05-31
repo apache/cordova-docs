@@ -68,7 +68,7 @@ Permissions
 
 ### iOS
 
-    No plugin required.
+    No permissions required.
 
 ### webOS
 
