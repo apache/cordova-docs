@@ -56,9 +56,13 @@ Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
 Android
 -------
 
+### Details
+
 The whitelisting rules are found in `res/xml/cordova.xml` and declared with the element `<access origin="..." />`.
 
 Android has full support for the whitelisting syntax.
+
+### Syntax
 
 Access to [google.com][2]:
 
@@ -72,9 +76,13 @@ Domain whitelisting is unsupported on Bada. By default, all domains are accessib
 BlackBerry
 ----------
 
+### Details
+
 The whitelisting rules are found in `www/config.xml` and declared with the element `<access uri="..." />`.
 
 For a complete reference, see the [BlackBerry WebWorks Access Element documentation][8].
+
+### Syntax
 
 Access to [google.com][2]:
 
@@ -95,6 +103,8 @@ Access to all domains, including `file://` protocol:
 iOS
 ---
 
+### Details
+
 1. Open `Cordova.plist`.
     - In Xcode, it is found at `AppName/Supporting Files/Cordova.plist`
     - In the directory, it is found at `AppName/Cordova.plist`
@@ -102,6 +112,8 @@ iOS
     - We recommend using Xcode to avoid editing raw XML.
 
 Domain protocols (e.g. `http://` and `https://`) are not supported by iOS.
+
+### Syntax
 
 Access to [google.com][2] and the secure [google.com][3] (`https://`):
 
