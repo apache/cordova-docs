@@ -54,7 +54,7 @@ Permissions
 
 ### BlackBerry WebWorks
 
-    @TODO
+    Unsupported.
 
 ### iOS
 
