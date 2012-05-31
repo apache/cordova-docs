@@ -48,11 +48,11 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    @TODO
+    <plugin name="Battery" value="org.apache.cordova.BatteryListener"/>
 
 #### app/AndroidManifest.xml
 
-    @TODO
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 ### Bada
 
