@@ -47,8 +47,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager"/>
-
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 
 #### app/AndroidManifest.xml
 
@@ -64,7 +63,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Network Status" value="org.apache.cordova.network.Network"/>
+    <plugin name="Network Status" value="org.apache.cordova.network.Network" />
 
 ### iOS
 
@@ -85,7 +84,7 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_NETWORKING"/>
+        <Capability Name="ID_CAP_NETWORKING" />
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

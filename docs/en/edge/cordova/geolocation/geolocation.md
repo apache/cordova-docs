@@ -55,7 +55,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker"/>
+    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
 #### app/AndroidManifest.xml
 
@@ -71,13 +71,13 @@ Permissions
 
 #### www/plugins.xml
 
-   <plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation" />
+    <plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation" />
 
 #### www/config.xml
 
-   <rim:permissions>
-       <rim:permit>read_geolocation</rim:permit>
-   </rim:permissions>
+    <rim:permissions>
+        <rim:permit>read_geolocation</rim:permit>
+    </rim:permissions>
 
 ### iOS
 

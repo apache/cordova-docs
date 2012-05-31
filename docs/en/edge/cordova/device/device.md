@@ -37,7 +37,6 @@ Variable Scope
 Since `device` is assigned to the `window` object, it is implicitly in the global scope.
 
     // These reference the same `device`
-    //
     var phoneName = window.device.name;
     var phoneName = device.name;
 
@@ -48,7 +47,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Device" value="org.apache.cordova.Device"/>
+    <plugin name="Device" value="org.apache.cordova.Device" />
 
 #### app/AndroidManifest.xml
 
@@ -62,7 +61,7 @@ Permissions
 
 #### www/plugins.xml
 
-	<plugin name="Device" value="org.apache.cordova.device.Device"/>
+    <plugin name="Device" value="org.apache.cordova.device.Device" />
 
 #### www/config.xml
 
@@ -70,6 +69,7 @@ Permissions
     <rim:permissions>
         <rim:permit>read_device_identifying_information</rim:permit>
     </rim:permissions>
+
 ### iOS
 
     No permissions are required.

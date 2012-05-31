@@ -54,7 +54,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Storage" value="org.apache.cordova.Storage"/>
+    <plugin name="Storage" value="org.apache.cordova.Storage" />
 
 ### Bada
 
@@ -64,7 +64,7 @@ Permissions
 
 #### www/config.xml
 
-    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0"/>
+    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
 ### iOS
 

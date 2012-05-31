@@ -48,7 +48,7 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Battery" value="org.apache.cordova.BatteryListener"/>
+    <plugin name="Battery" value="org.apache.cordova.BatteryListener" />
 
 #### app/AndroidManifest.xml
 
@@ -62,13 +62,13 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Battery" value="org.apache.cordova.battery.Battery"/>
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery" />
 
 #### www/config.xml
 
-   <feature id="blackberry.app" required="true" version="1.0.0.0" />
-   <feature id="blackberry.app.event" required="true" version="1.0.0.0" />
-   <feature id="blackberry.system.event" required="true" version="1.0.0.0"/>
+    <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+    <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+    <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
 
 ### iOS
 
@@ -86,4 +86,4 @@ Permissions
 
 ### Windows Phone
 
-    No additional permissions required.
+    No permissions required.

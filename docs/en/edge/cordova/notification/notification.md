@@ -51,7 +51,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Notification" value="org.apache.cordova.notification.Notification"/>
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification" />
 
 #### www/config.xml
 
@@ -73,4 +73,4 @@ Permissions
 
 ### Windows Phone
 
-    No additional permissions required.
+    No permissions required.

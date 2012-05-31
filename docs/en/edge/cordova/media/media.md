@@ -51,8 +51,9 @@ Methods
 Additional ReadOnly Parameters
 ---------------------
 
-- ___position__: The position within the audio playback in seconds.  Not automatically updated during play, call getCurrentPosition to update.
-- ___duration__: The duration of the media in seconds.
+- __position__: The position within the audio playback in seconds.
+    - Not automatically updated during play, call `getCurrentPosition` to update.
+- __duration__: The duration of the media in seconds.
 
 Supported Platforms
 -------------------
@@ -60,7 +61,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
 Permissions
 -----------
@@ -69,13 +70,13 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="Media" value="org.apache.cordova.AudioHandler"/>
+    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
 
 #### app/AndroidManifest.xml
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 ### Bada
 
@@ -85,7 +86,7 @@ Permissions
 
 #### www/plugins.xml
 
-    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture" />
 
 ### iOS
 
@@ -107,10 +108,10 @@ Permissions
 
     <Capabilities>
         <Capability Name="ID_CAP_MEDIALIB" />
-        <Capability Name="ID_CAP_MICROPHONE"/>
-        <Capability Name="ID_HW_FRONTCAMERA"/>
-        <Capability Name="ID_CAP_ISV_CAMERA"/>
-        <Capability Name="ID_CAP_CAMERA"/>
+        <Capability Name="ID_CAP_MICROPHONE" />
+        <Capability Name="ID_HW_FRONTCAMERA" />
+        <Capability Name="ID_CAP_ISV_CAMERA" />
+        <Capability Name="ID_CAP_CAMERA" />
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

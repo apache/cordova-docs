@@ -48,12 +48,12 @@ Permissions
 
 #### app/res/xml/plugins.xml
 
-    <plugin name="File" value="org.apache.cordova.FileUtils"/>
-    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer"/>
+    <plugin name="File" value="org.apache.cordova.FileUtils" />
+    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
 
 #### app/AndroidManifest.xml
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 ### Bada
 
@@ -63,17 +63,17 @@ Permissions
 
 #### www/plugins.xml
 
-   <plugin name="File" value="org.apache.cordova.file.FileManager"/>
-   <plugin name="FileTransfer"   value="org.apache.cordova.http.FileTransfer"/>
+    <plugin name="File" value="org.apache.cordova.file.FileManager" />
+    <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer" />
 
 #### www/config.xml
 
-   <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
-   <feature id="blackberry.utils" required="true" version="1.0.0.0" />
-   <feature id="blackberry.io.dir" required="true" version="1.0.0.0" />
-   <rim:permissions>
-       <rim:permit>access_shared</rim:permit>
-   </rim:permissions>
+    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+    <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+    <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>access_shared</rim:permit>
+    </rim:permissions>
 
 ### iOS
 
@@ -84,7 +84,7 @@ Permissions
         <key>File</key>
         <string>CDVFile</string>
     </dict>
-    
+
     <key>Plugins</key>
     <dict>
         <key>FileTransfer</key>
@@ -97,4 +97,4 @@ Permissions
 
 ### Windows Phone
 
-    No additional permissions required.
+    No permissions required.
