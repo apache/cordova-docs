@@ -27,7 +27,6 @@ Description
 
 This property is a fast way to determine the device's network connection state, and type of connection.
 
-
 Supported Platforms
 -------------------
 
@@ -57,7 +56,6 @@ Quick Example
     }
     
     checkConnection();
-
 
 Full Example
 ------------
@@ -101,3 +99,25 @@ Full Example
         <p>A dialog box will report the network state.</p>
       </body>
     </html>
+
+iOS Quirks
+----------
+
+- iOS cannot detect the type of cellular network connection.
+    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+
+Bada Quirks
+-----------
+
+- Bada can only detect a WiFi or cellular connection.
+    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+
+webOS Quirks
+------------
+
+- Only shows that a connection is available, but not which type.
+
+Windows Phone Quirks
+--------------------
+
+- Windows Phone Emulator always detects `navigator.network.connection.type` as `Connection.UNKNOWN`.

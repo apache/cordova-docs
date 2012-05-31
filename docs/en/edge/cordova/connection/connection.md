@@ -40,27 +40,6 @@ Constants
 - Connection.CELL_4G
 - Connection.NONE
 
-WP7 Quirk
----------
-
-- __type:__
-Windows Phone Emulator always reports navigator.network.connection.type is Connection.UNKNOWN
-
-iOS Quirk
----------
-
-- __type:__
-iOS can only report whether the device is on a cellular connection, not
-of what type, thus it will always report as CELL_2G
-
-Bada Quirk
-----------
-- Bada can only report if device is on Wifi or connected to cellular connection CELL_2G ( type not reported )
-
-webOS Quirks
-------------
-- will only show that a connection is available, but not which type
-
 Permissions
 -----------
 
