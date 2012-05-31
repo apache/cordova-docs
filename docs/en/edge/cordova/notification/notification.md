@@ -45,7 +45,11 @@ Permissions
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 

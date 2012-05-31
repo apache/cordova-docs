@@ -58,7 +58,7 @@ Permissions
 
 ### Bada
 
-    @TODO
+    No permissiones required.
 
 ### BlackBerry WebWorks
 

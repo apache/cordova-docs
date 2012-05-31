@@ -80,7 +80,11 @@ Permissions
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>RECORDING</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 

@@ -50,11 +50,11 @@ Permissions
 
 ### Bada
 
-    @TODO
+    No permissions required.
 
 ### BlackBerry WebWorks
 
-    Unsupported.
+    No permissions required.
 
 ### iOS
 

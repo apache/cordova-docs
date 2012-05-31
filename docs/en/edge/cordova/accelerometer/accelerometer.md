@@ -52,7 +52,7 @@ Permissions
 
 ### Bada
 
-    @TODO
+    No permissions required.
 
 ### BlackBerry WebWorks
 

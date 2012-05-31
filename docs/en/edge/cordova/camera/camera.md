@@ -42,7 +42,14 @@ Permissions
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>CAMERA</Name>
+    </Privilege>
+    <Privilege>
+        <Name>RECORDING</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 
