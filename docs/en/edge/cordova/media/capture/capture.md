@@ -90,17 +90,22 @@ Permissions
 
 ### Bada
 
-    @TODO
+#### manifest.xml
+
+    <Privilege>
+        <Name>RECORDING</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
 
-    @TODO
+    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
 
 #### www/config.xml
 
-    @TODO
+    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
 ### iOS
 
@@ -114,8 +119,16 @@ Permissions
 
 ### webOS
 
-    @TODO
+    No permissions are required.
 
 ### Windows Phone
 
-    @TODO
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_MEDIALIB" />
+        <Capability Name="ID_CAP_MICROPHONE" />
+        <Capability Name="ID_HW_FRONTCAMERA" />
+        <Capability Name="ID_CAP_ISV_CAMERA" />
+        <Capability Name="ID_CAP_CAMERA" />
+    </Capabilities>
