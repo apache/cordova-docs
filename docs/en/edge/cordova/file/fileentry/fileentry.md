@@ -107,7 +107,7 @@ __Quick Example__
     }
 
     // Set the metadata
-    entry.setMetadata(success, fail, { "com.apple.MobileBackup", 1});
+    entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
 __iOS Quirk__
 
 - only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to NOT enable the file to be backed up by iCloud. Set the value to **0** to re-enable the file to be backed up by iCloud.
