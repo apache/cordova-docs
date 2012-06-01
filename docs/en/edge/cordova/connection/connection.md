@@ -57,7 +57,9 @@ Permissions
 
 ### Bada
 
-    No permissions are required.
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 
