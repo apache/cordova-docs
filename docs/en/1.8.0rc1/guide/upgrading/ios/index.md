@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading Cordova iOS
 =====================
 
-## Upgrading Cordova 1.8.0 projects to 1.8.0 ##
+## Upgrading Cordova 1.7.0 projects to 1.8.0 ##
 
 1. **Install** Cordova 1.8.0
 2. **Create a new project** - you will have to grab assets from this new project
