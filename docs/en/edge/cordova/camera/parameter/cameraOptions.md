@@ -28,7 +28,8 @@ Optional parameters to customize the camera settings.
       allowEdit : true,
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
-      targetHeight: 100 };
+      targetHeight: 100,
+      popoverOptions: CameraPopoverOptions };
 
 Options
 -------
@@ -72,6 +73,7 @@ Options
 
 - __correctOrientation:__ Rotate the image to correct for the orientation of the device during capture. (`Boolean`)
 - __saveToPhotoAlbum:__ Save the image to the photo album on the device after capture. (`Boolean`)
+- __popoverOptions:__ iOS only options to specify popover location in iPad.  Defined in CameraPopoverOptions
   
 Android Quirks
 --------------
