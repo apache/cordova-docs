@@ -16,7 +16,8 @@
             "cordova/camera/camera.getPicture.md",
             "cordova/camera/parameter/cameraSuccess.md",
             "cordova/camera/parameter/cameraError.md",
-            "cordova/camera/parameter/cameraOptions.md"
+            "cordova/camera/parameter/cameraOptions.md",
+            "cordova/camera/parameter/CameraPopoverOptions.md"
         ],
         "capture.md": [
             "cordova/media/capture/capture.md",
