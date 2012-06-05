@@ -64,7 +64,7 @@ Quick Example
               'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
               'Heading: '           + position.coords.heading           + '\n' +
               'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + new Date(position.timestamp)      + '\n');
+              'Timestamp: '         + position.timestamp                + '\n');
     };
 
     // onError Callback receives a PositionError object
@@ -108,7 +108,7 @@ Full Example
                                 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
                                 'Heading: '            + position.coords.heading               + '<br />' +
                                 'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          + new Date(position.timestamp)          + '<br />';
+                                'Timestamp: '          +                                   position.timestamp          + '<br />';
         }
     
 	    // onError Callback receives a PositionError object

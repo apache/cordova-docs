@@ -42,5 +42,5 @@ Example
               'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
               'Heading: '           + position.coords.heading           + '\n' +
               'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + new Date(position.timestamp)      + '\n');
+              'Timestamp: '         + position.timestamp                + '\n');
     }
