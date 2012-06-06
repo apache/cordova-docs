@@ -26,6 +26,7 @@ Methods
 -------
 
 - camera.getPicture
+- camera.cleanup
 
 Permissions
 -----------
