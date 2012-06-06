@@ -143,7 +143,8 @@ __Quick Example__
 
     function moveFile(entry) {
         var parent = document.getElementById('parent').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentName = parent.substring(parent.lastIndexOf('/')+1),
+            parentEntry = new DirectoryEntry(parentName, parent);
 
         // move the file to a new directory and rename it
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
@@ -177,7 +178,8 @@ __Quick Example__
 
     function copyFile(entry) {
         var parent = document.getElementById('parent').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentName = parent.substring(parent.lastIndexOf('/')+1),
+            parentEntry = new DirectoryEntry(parentName, parent);
 
         // copy the file to a new directory and rename it
         entry.copyTo(parentEntry, "file.copy", success, fail);
