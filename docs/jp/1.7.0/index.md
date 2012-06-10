@@ -18,70 +18,70 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 <div id="home">
-    <h1>API Reference</h1>
+    <h1>API リファレンス</h1>
     <ul>
         <li>
             <h2>Accelerometer</h2>
-            <span>Tap into the device's motion sensor.</span>
+            <span>デバイスの加速度センサー情報を取得します。</span>
         </li>
         <li>
             <h2>Camera</h2>
-            <span>Capture a photo using the device's camera.</span>
+            <span>カメラを通じて写真を取得します。</span>
         </li>
         <li>
             <h2>Capture</h2>
-            <span>Capture media files using device's media capture applications.</span>
+            <span>デバイスのメディアキャプチャー機能を通じてメディアファイルを取得します。</span>
         </li>
         <li>
             <h2>Compass</h2>
-            <span>Obtain the direction that the device is pointing.</span>
+            <span>コンパス方向を取得します。</span>
         </li>
         <li>
             <h2>Connection</h2>
-            <span>Quickly check the network state, and cellular network information.</span>
+            <span>ネットワークの状態および携帯電話ネットワークの情報を取得します。</span>
         </li>
         <li>
             <h2>Contacts</h2>
-            <span>Work with the devices contact database.</span>
+            <span>連絡先データベース情報を操作します。</span>
         </li>
         <li>
             <h2>Device</h2>
-            <span>Gather device specific information.</span>
+            <span>デバイス特有の情報を取得します。</span>
         </li>
         <li>
             <h2>Events</h2>
-            <span>Hook into native events through JavaScript.</span>
+            <span>JavaScript を通じてネイティブイベントを操作します。</span>
         </li>
         <li>
             <h2>File</h2>
-            <span>Hook into native file system through JavaScript.</span>
+            <span>JavaScript を通じてネイティブファイルシステムを操作します。</span>
         </li>
         <li>
             <h2>Geolocation</h2>
-            <span>Make your application location aware.</span>
+            <span>位置情報を取得します。</span>
         </li>
         <li>
             <h2>Media</h2>
-            <span>Record and play back audio files.</span>
+            <span>オーディオの録音と再生を行います。</span>
         </li>
         <li>
             <h2>Notification</h2>
-            <span>Visual, audible, and tactile device notifications.</span>
+            <span>視覚、聴覚、触覚を用いたデバイス通知機能を提供します。</span>
         </li>
         <li>
             <h2>Storage</h2>
-            <span>Hook into the devices native storage options.</span>
+            <span>デバイスのネイティブストレージを操作します。</span>
         </li>
     </ul>
-    <h1>Guides</h1>
+    <h1>ガイド</h1>
     <ul>
         <li>
-            <h2>Getting Started Guides</h2>
-            <span>Setup each SDK and create your first Cordova app.</span>
+            <h2>入門ガイド</h2>
+            <span>SDK をセットアップして、最初の Cordova アプリケーションを作ります。</span>
         </li>
         <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the Cordova Documentation.</span>
+            <h2><a href="_index.html">索引</a></h2>
+            <span>Cordova ドキュメントの索引を見ます。</span>
         </li>
     </ul>
 </div>
