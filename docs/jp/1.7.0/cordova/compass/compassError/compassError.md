@@ -20,21 +20,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CompassError
 ==========
 
-A `CompassError` object is returned to the `compassError` callback function when an error occurs.
+エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
 
-Constants
+定数
 ---------
-- `CompassError.COMPASS_INTERNAL_ERR` 
+- `CompassError.COMPASS_INTERNAL_ERR`
 - `CompassError.COMPASS_NOT_SUPPORTED`
 
-Description
+概要
 -----------
 
-The `CompassError` object is returned to the user through the `compassError` callback function when an error occurs.
+エラーが起きた場合、 `compassError` コールバック関数には `CompassError` オブジェクトが返されます。
 
 

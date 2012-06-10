@@ -20,11 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compassError
 ==========
 
-onError callback function for compass functions. 
+コンパス方位の取得に失敗したときに呼び出されるコールバック関数です。
 
-Example
+使用例
 -------
 
 function(CompassError) {
-    // Handle the error
+    // エラー処理
 }

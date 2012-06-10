@@ -42,7 +42,7 @@ camera.getPicture
 - データをローカルに保存 (`LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
 - データをリモートサーバーに送信
 
-注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメータで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。
+注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。
 
 サポートされているプラットフォーム
 -------------------

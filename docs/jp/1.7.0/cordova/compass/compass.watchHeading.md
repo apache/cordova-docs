@@ -20,79 +20,79 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compass.watchHeading
 ====================
 
-At a regular interval, get the compass heading in degrees.
+コンパス方位を一定の時間間隔で取得します。
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
-                                                           
-Description
+
+概要
 -----------
 
-The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
+コンパスはデバイスが向いている方向を感知するセンサーです。コンパスはその方角を0から359.99の範囲で計測します。
 
-The `compass.watchHeading` gets the device's current heading at a regular interval. Each time the heading is retrieved, the `headingSuccess` callback function is executed. Specify the interval in milliseconds via the `frequency` parameter in the `compassOptions` object.
+`compass.watchHeading` 関数は一定の時間間隔でデバイスの現在の方位を取得します。方位情報が取得されるごとに `headingSuccess` コールバック関数が実行されます。時間間隔は `compassOptions` オブジェクトの `frequency` パラメーターを通じてミリ秒単位で指定します。
 
-The returned watch ID references references the compass watch interval. The watch ID can be used with `compass.clearWatch` to stop watching the compass.
+本関数の戻り値である watch ID は、コンパスの監視間隔への参照を表します。 `compass.clearWatch` 関数に watch ID を渡すことで、監視を停止できます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
 - iPhone
-- Windows Phone 7 ( Mango ) if available in hardware
+- Windows Phone 7 ( Mango ) ハードウェア内で有効な場合
 - Bada 1.2 & 2.x
 
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(heading) {
         var element = document.getElementById('heading');
-        element.innerHTML = 'Heading: ' + heading.magneticHeading;
+        element.innerHTML = '方位: ' + heading.magneticHeading;
     };
 
     function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+            alert('コンパスのエラーが発生しました: ' + compassError.code);
     };
 
-    var options = { frequency: 3000 };  // Update every 3 seconds
-    
+    var options = { frequency: 3000 };  // 3秒ごとに更新
+
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Compass Example</title>
+        <title>コンパスの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // The watch id references the current `watchHeading`
+        // watch ID が現在の `watchHeading` を参照
         var watchID = null;
-        
-        // Wait for Cordova to load
+
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             startWatch();
         }
 
-        // Start watching the compass
+        // コンパスの監視を開始
         //
         function startWatch() {
-            
-            // Update compass every 3 seconds
+
+            // コンパスを3秒ごとに更新
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.compass.watchHeading(onSuccess, onError, options);
         }
-        
-        // Stop watching the compass
+
+        // コンパスの監視を停止
         //
         function stopWatch() {
             if (watchID) {
@@ -100,32 +100,32 @@ Full Example
                 watchID = null;
             }
         }
-        
-        // onSuccess: Get the current heading
+
+        // onSuccess: 現在の方位を取得
         //
         function onSuccess(heading) {
             var element = document.getElementById('heading');
-            element.innerHTML = 'Heading: ' + heading.magneticHeading;
+            element.innerHTML = '方位: ' + heading.magneticHeading;
         }
 
-        // onError: Failed to get the heading
+        // onError: 方位の取得に失敗
         //
         function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+            alert('コンパスのエラーが発生しました: ' + compassError.code);
         }
 
         </script>
       </head>
       <body>
-        <div id="heading">Waiting for heading...</div>
-        <button onclick="startWatch();">Start Watching</button>
-        <button onclick="stopWatch();">Stop Watching</button>
+        <div id="heading">方位を待機...</div>
+        <button onclick="startWatch();">監視開始</button>
+        <button onclick="stopWatch();">監視中止</button>
       </body>
     </html>
-    
-iOS Quirks
+
+iOS に関する注意点
 --------------
 
-In iOS `compass.watchHeading` can also get the device's current heading when it changes by a specified number of degrees. Each time the heading changes by the specified number of degrees or more, the `headingSuccess` callback function is called. Specify the degrees of change via the `filter` parameter in the `compassOptions` object.  Clear the watch as normal by passing the returned watch ID to `compass.clearWatch`.  This functionality replaces the previously separate, iOS only functions, watchHeadingFilter and clearWatchFilter, which were removed in 1.6.
+iOS では、指定された角度分だけデバイスの現在の方位が変更されたとき、 `compass.watchHeading` でそのデバイスの現在の向きを取得することもできます。方位が指定された角度以上で変更されるたび、 `headingSuccess` コールバック関数が呼び出されます。角度は、 `compassOptions` オブジェクトの `filter` パラメーターで指定します。 `compass.clearWatch` に `watch ID` を渡すことで、通常と同じように監視を停止できます。この機能は、1.6で廃止になった iOS 限定の watchHeadingFilter 関数と clearWatchFilter 関数に置き換わるものです。
 
-In iOS only one watchHeading can be in effect at one time.  If a watchHeading via filter is in effect, calling getCurrentHeading or watchHeading will use the existing filter value for specifying heading changes. On iOS watching heading changes via a filter is more efficient than via time.
+iOS では、一度に一つの watchHeading のみが有効です。もし filter を用いて watchHeading が使用されている場合、 getCurrentHeading 関数または watchHeading 関数は既に存在している filter の値を、方位の角度変化量の指定に使用します。 iOS では、時間による監視より、 filter を用いた方位変化量による監視の方が効果的です。

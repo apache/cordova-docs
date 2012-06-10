@@ -20,4 +20,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compass.watchHeadingFilter
 ==========================
 
-No longer supported as of 1.6, see `compass.watchHeading` for equivalent functionality.
+1.6以降はサポートされていません。同等の機能として、 `compass.watchHeading` を参照してください。

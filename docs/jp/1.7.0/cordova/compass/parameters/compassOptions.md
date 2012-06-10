@@ -20,23 +20,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compassOptions
 ==============
 
-An optional parameter to customize the retrieval of the compass.
+コンパス取得の設定をカスタマイズするためのパラメーターを表します。
 
-Options
+オプション
 -------
 
-- __frequency:__ How often to retrieve the compass heading in milliseconds. _(Number)_ (Default: 100)
-- __filter:__ The change in degrees required to initiate a watchHeading success callback. _(Number)_
+- __frequency:__ コンパスの向きを取得する頻度をミリ秒で表します。 _(Number)_ (デフォルト: 100)
+- __filter:__ watchHeading の成功時のコールバック関数を初期化する際に必要な、角度の変化量を表します。 _(Number)_
 
-Android Quirks
-______________
-- filter is not supported.
-
-Windows Phone 7 Quirks
+Android に関する注意点
 --------------
 
-- filter is not supported.
+- filter はサポートされていません。
 
-Bada Quirks
+Windows Phone 7 に関する注意点
+--------------
+
+- filter はサポートされていません。
+
+Bada に関する注意点
 -----------
-- filter is not supported.
+
+- filter はサポートされていません。
+

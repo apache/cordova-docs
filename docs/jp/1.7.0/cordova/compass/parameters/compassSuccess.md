@@ -20,21 +20,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compassSuccess
 ==============
 
-onSuccess callback function that provides the compass heading information via a compassHeading object.
+コンパス方位の取得に成功したときに、 compassHeading オブジェクトを用いてコンパス方位情報を提供するコールバック関数です。
 
     function(heading) {
-        // Do something
+        // 任意のコード
     }
 
-Parameters
+パラメーター
 ----------
 
 
-- __heading:__ The heading information. _(compassHeading)_
+- __heading:__ 方位情報。 _(compassHeading)_
 
-Example
+使用例
 -------
 
     function onSuccess(heading) {
-        alert('Heading: ' + heading.magneticHeading);
+        alert('現在の方位: ' + heading.magneticHeading);
     };

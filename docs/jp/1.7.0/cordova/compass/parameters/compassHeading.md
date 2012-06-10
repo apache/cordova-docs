@@ -20,29 +20,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compassHeading
 ==========
 
-A `CompassHeading` object is returned to the `compassSuccess` callback function when an error occurs.
+エラーが起きた場合、 `compassSuccess` コールバック関数には `CompassHeading` オブジェクトが返されます。
 
-Properties
+プロパティー
 ----------
-- __magneticHeading:__ The heading in degrees from 0 - 359.99 at a single moment in time. _(Number)_
-- __trueHeading:__ The heading relative to the geographic North Pole in degrees 0 - 359.99 at a single moment in time. A negative value indicates that the true heading could not be determined.  _(Number)_
-- __headingAccuracy:__ The deviation in degrees between the reported heading and the true heading. _(Number)_
-- __timestamp:__ The time at which this heading was determined.  _(milliseconds)_
+- __magneticHeading:__ ある瞬間のコンパス方位を磁北を基準に0から359.99の範囲で表します。 _(Number)_
+- __trueHeading:__ ある瞬間のコンパス方位を真北を基準に0から359.99の範囲で表します。負の値は、 trueHeading の値が定まっていないことを示しています。 _(Number)_
+- __headingAccuracy:__ magneticHeading の値と trueHeading の値との角度の差、偏角を表します。 _(Number)_
+- __timestamp:__ コンパス方位を取得した時間を表します。 _(milliseconds)_
 
-Description
+概要
 -----------
 
-The `CompassHeading` object is returned to the user through the `compassSuccess` callback function.
+`CompassHeading` オブジェクトは、 `compassSuccess` コールバック関数を通じてユーザに返されます。
 
-Android Quirks
+Android に関する注意点
 --------------
-- trueHeading is not supported. It will report the same value as magneticHeading
-- headingAccuracy will always be 0 as there is no difference between the magneticHeading and trueHeading on Android.
+- trueHeading はサポートされていません。 trueHeading には magneticHeading と同じ値が代入されます。
+- このため、 Android では trueHeading と magneticHeading に差が無いので、 headingAccuracy は常に0となります。
 
-iOS Quirks
+iOS に関する注意点
 ----------
 
-- trueHeading is only returned when location services are running via `navigator.geolocation.watchLocation()`
-- For iOS > 4 devices, if the device is rotated and the app supports that orientation, the heading values will be reported 
-back with respect to the current orientation. 
+- trueHeading は、位置情報サービスが `navigator.geolocation.watchLocation()` によって稼動している場合にのみ返されます。
+- iOS 4より上位のデバイスでは、もしデバイスが横方向などに回転していて、アプリがそれをサポートしていれば、 magneticHeading の値は現在のデバイスの向きに対応して返されます。
 

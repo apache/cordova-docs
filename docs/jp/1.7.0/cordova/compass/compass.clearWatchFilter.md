@@ -20,4 +20,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 compass.clearWatchFilter
 ========================
 
-No longer supported as of 1.6.  See `compass.clearWatch`.
+1.6以降はサポートされていません。 `compass.clearWatch` を参照してください。

@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometerOptions
 ====================
 
-加速度センサーを取得する際のパラメータを表します。
+加速度センサーを取得する際のパラメーターを表します。
 
 オプション
 -------

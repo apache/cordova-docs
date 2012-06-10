@@ -20,18 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Compass
 =======
 
-> Obtains the direction that the device is pointing.
+> デバイスの向いている方向に関する情報を取得します。
 
-Methods
+メソッド
 -------
 
 - compass.getCurrentHeading
 - compass.watchHeading
 - compass.clearWatch
-- compass.watchHeadingFilter 	(obsolete)
-- compass.clearWatchFilter		(obsolete)
+- compass.watchHeadingFilter    (廃止)
+- compass.clearWatchFilter      (廃止)
 
-Arguments
+引数
 ---------
 
 - compassSuccess
