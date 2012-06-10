@@ -20,86 +20,86 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Acceleration
 ============
 
-Contains `Accelerometer` data captured at a specific point in time.
+ある時間軸上でキャプチャーされた加速度センサーのデータを保持します。
 
-Properties
+プロパティー
 ----------
 
-- __x:__  Amount of acceleration on the x-axis. (in m/s^2) (`Number`)
-- __y:__  Amount of acceleration on the y-axis. (in m/s^2) (`Number`)
-- __z:__  Amount of acceleration on the z-axis. (in m/s^2) (`Number`)
-- __timestamp:__ Creation timestamp in milliseconds. (`DOMTimeStamp`)
+- __x:__  x 軸上での加速度を表します。 (単位 m/s^2) (`Number`)
+- __y:__  y 軸上での加速度を表します。 (単位 m/s^2) (`Number`)
+- __z:__  z 軸上での加速度を表します。 (単位 m/s^2) (`Number`)
+- __timestamp:__ ミリ秒単位のタイムスタンプ値を表します。 (`DOMTimeStamp`)
 
-Description
+概要
 -----------
 
-This object is created and populated by Cordova, and returned by an `Accelerometer` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
+x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイスが机の上に表向きで置かれている場合、値はそれぞれ x=0, y=0, z=9.81 となります。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
+        alert('X 軸における加速度: ' + acceleration.x + '\n' +
+              'Y 軸における加速度: ' + acceleration.y + '\n' +
+              'Z 軸における加速度: ' + acceleration.z + '\n' +
+              'タイムスタンプ: '     + acceleration.timestamp + '\n');
     };
 
     function onError() {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>加速度センサーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
 
-        // onSuccess: Get a snapshot of the current acceleration
+        // onSuccess: 現在の加速度情報を取得
         //
         function onSuccess(acceleration) {
-            alert('Acceleration X: ' + acceleration.x + '\n' +
-                  'Acceleration Y: ' + acceleration.y + '\n' +
-                  'Acceleration Z: ' + acceleration.z + '\n' +
-                  'Timestamp: '      + acceleration.timestamp + '\n');
+            alert('X 軸における加速度: ' + acceleration.x + '\n' +
+                  'Y 軸における加速度: ' + acceleration.y + '\n' +
+                  'Z 軸における加速度: ' + acceleration.z + '\n' +
+                  'タイムスタンプ: '     + acceleration.timestamp + '\n');
         }
 
-        // onError: Failed to get the acceleration
+        // onError: 加速度情報の取得に失敗
         //
         function onError() {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1>使用例</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>

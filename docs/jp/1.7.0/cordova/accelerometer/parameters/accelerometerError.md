@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometerError
 ==================
 
-onError callback function for acceleration functions.
+加速度情報の取得に失敗したときに呼び出されるコールバック関数です。
 
     function() {
-        // Handle the error
+        // エラー処理
     }

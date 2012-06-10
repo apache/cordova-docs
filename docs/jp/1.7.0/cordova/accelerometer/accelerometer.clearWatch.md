@@ -20,65 +20,65 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+指定した watch ID の加速度情報の監視を停止します。
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `accelerometer.watchAcceleration`.
+- __watchID__: `accelerometer.watchAcceleration`  によって返される ID。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    
-    // ... later on ...
-    
+
+    // ... 後に続く ...
+
     navigator.accelerometer.clearWatch(watchID);
-    
-Full Example
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>加速度センサーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // The watch id references the current `watchAcceleration`
+        // watch ID が現在の `watchAcceleration` を参照
         var watchID = null;
-        
-        // Wait for Cordova to load
+
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             startWatch();
         }
 
-        // Start watching the acceleration
+        // 加速度情報の監視を開始
         //
         function startWatch() {
-            
-            // Update acceleration every 3 seconds
+
+            // 加速度情報を3秒ごとに更新
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
-        
-        // Stop watching the acceleration
+
+        // 加速度情報の監視を停止
         //
         function stopWatch() {
             if (watchID) {
@@ -86,27 +86,27 @@ Full Example
                 watchID = null;
             }
         }
-		    
-        // onSuccess: Get a snapshot of the current acceleration
+
+        // onSuccess: 現在の加速度情報を取得
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
-            element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-                                'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' + 
-                                'Timestamp: '      + acceleration.timestamp + '<br />';
+            element.innerHTML = 'X 軸における加速度: ' + acceleration.x + '<br />' +
+                                'Y 軸における加速度: ' + acceleration.y + '<br />' +
+                                'Z 軸における加速度: ' + acceleration.z + '<br />' +
+                                'タイムスタンプ: '     + acceleration.timestamp + '<br />';
         }
 
-        // onError: Failed to get the acceleration
+        // onError: 加速度情報の取得に失敗
         //
         function onError() {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <div id="accelerometer">Waiting for accelerometer...</div>
-		<button onclick="stopWatch();">Stop Watching</button>
+        <div id="accelerometer">加速度センサーを待機...</div>
+        <button onclick="stopWatch();">監視中止</button>
       </body>
     </html>

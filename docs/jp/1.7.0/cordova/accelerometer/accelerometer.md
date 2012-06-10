@@ -20,23 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Accelerometer
 =============
 
-> Captures device motion in the x, y, and z direction.
+> デバイスの動きを (x, y, z) 軸で取得します。
 
-Methods
+メソッド
 -------
 
 - accelerometer.getCurrentAcceleration
 - accelerometer.watchAcceleration
 - accelerometer.clearWatch
 
-Arguments
+引数
 ---------
 
 - accelerometerSuccess
 - accelerometerError
 - accelerometerOptions
 
-Objects (Read-Only)
+オブジェクト (読み取り専用)
 -------------------
 
 - Acceleration

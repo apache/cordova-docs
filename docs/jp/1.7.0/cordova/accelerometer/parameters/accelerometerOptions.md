@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometerOptions
 ====================
 
-An optional parameter to customize the retrieval of the accelerometer.
+加速度センサーを取得する際のパラメータを表します。
 
-Options
+オプション
 -------
 
-- __frequency:__ How often to retrieve the `Acceleration` in milliseconds. _(Number)_ (Default: 10000)
+- __frequency:__ 加速度情報の取得頻度をミリ秒単位で表します。 _(Number)_ (デフォルト: 10000)

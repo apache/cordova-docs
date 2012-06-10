@@ -20,23 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometerSuccess
 ====================
 
-onSuccess callback function that provides the Acceleration information.
+加速度情報を返す onSuccess コールバック関数です。
 
     function(acceleration) {
-        // Do something
+        // 任意のコード
     }
 
-Parameters
+パラメーター
 ----------
 
-- __acceleration:__ The acceleration at a single moment in time. (Acceleration)
+- __acceleration:__ ある瞬間における加速度を表します。 (Acceleration)
 
-Example
+使用例
 -------
 
     function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
+        alert('X 軸における加速度: ' + acceleration.x + '\n' +
+              'Y 軸における加速度: ' + acceleration.y + '\n' +
+              'Z 軸における加速度: ' + acceleration.z + '\n' +
+              'タイムスタンプ: '     + acceleration.timestamp + '\n');
     };

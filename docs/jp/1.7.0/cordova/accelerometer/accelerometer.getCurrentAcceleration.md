@@ -20,89 +20,89 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometer.getCurrentAcceleration
 ====================================
 
-Get the current acceleration along the x, y, and z axis.
+デバイスの傾きの増加量を計測します。
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
-Description
+概要
 -----------
 
-The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation. The accelerometer can detect 3D movement along the x, y, and z axis.
+加速度センサーはデバイスの傾きの増加量を計測します。 加速度センサーでは x, y, z 軸の3次元の傾きを取得出来ます。
 
-The acceleration is returned using the `accelerometerSuccess` callback function.
+加速度情報は `accelerometerSuccess` コールバック関数によって返されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(acceleration) {
-        alert('Acceleration X: ' + acceleration.x + '\n' +
-              'Acceleration Y: ' + acceleration.y + '\n' +
-              'Acceleration Z: ' + acceleration.z + '\n' +
-              'Timestamp: '      + acceleration.timestamp + '\n');
+        alert('X 軸における加速度: ' + acceleration.x + '\n' +
+              'Y 軸における加速度: ' + acceleration.y + '\n' +
+              'Z 軸における加速度: ' + acceleration.z + '\n' +
+              'タイムスタンプ: '     + acceleration.timestamp + '\n');
     };
 
     function onError() {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Acceleration Example</title>
+        <title>加速度センサーの使用</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
-    
-        // onSuccess: Get a snapshot of the current acceleration
+
+        // onSuccess: 現在の加速度情報を取得
         //
         function onSuccess(acceleration) {
-            alert('Acceleration X: ' + acceleration.x + '\n' +
-                  'Acceleration Y: ' + acceleration.y + '\n' +
-                  'Acceleration Z: ' + acceleration.z + '\n' +
-                  'Timestamp: '      + acceleration.timestamp + '\n');
+            alert('X 軸における加速度: ' + acceleration.x + '\n' +
+                  'Y 軸における加速度: ' + acceleration.y + '\n' +
+                  'Z 軸における加速度: ' + acceleration.z + '\n' +
+                  'タイムスタンプ: '     + acceleration.timestamp + '\n');
         }
-    
-        // onError: Failed to get the acceleration
+
+        // onError: 加速度情報の取得に失敗
         //
         function onError() {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
+        <h1>使用例</h1>
         <p>getCurrentAcceleration</p>
       </body>
     </html>
-    
-iPhone Quirks
+
+iPhoneに関する注意点
 -------------
 
-- iPhone doesn't have the concept of getting the current acceleration at any given point.
-- You must watch the acceleration and capture the data at given time intervals.
-- Thus, the `getCurrentAcceleration` function will give you the last value reported from a Cordova `watchAccelerometer` call.
+- iPhone はピンポイントで現在の加速度情報を得ることは出来ません。
+- 加速度情報を取得するには、一定の時間間隔で加速度データの変異を計測する必要があります。
+- そのため、 `getCurrentAcceleration` 関数は Cordova の `watchAccelerometer` 関数で取得した最新値を返します。
