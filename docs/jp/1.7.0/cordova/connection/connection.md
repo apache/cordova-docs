@@ -20,16 +20,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Connection
 ==========
 
-> The `connection` object gives access to the device's cellular and wifi connection information.
+> `connection` オブジェクトを通じて、携帯電話ネットワーク及び wifi 接続情報にアクセス出来ます。
 
-This object is accessed under the `navigator.network` interface.
+このオブジェクトは、 `navigator.network` インターフェース以下からアクセスされます。
 
-Properties
+プロパティー
 ----------
 
 - connection.type
 
-Constants
+定数
 ---------
 
 - Connection.UNKNOWN
@@ -40,19 +40,19 @@ Constants
 - Connection.CELL_4G
 - Connection.NONE
 
-WP7 Quirk
+WP7 に関する注意点
 ---------
 
 - __type:__
-Windows Phone Emulator always reports navigator.network.connection.type is Connection.UNKNOWN
+Windows Phone Emulator は常に navigator.network.connection.type を Connection.UNKNOWN と返します。
 
-iOS Quirk
+iOS に関する注意点
 ---------
 
 - __type:__
-iOS can only report whether the device is on a cellular connection, not
-of what type, thus it will always report as CELL_2G
+iOS は、デバイスが携帯電話ネットワークに接続しているかどうかだけを返すことができ、タイプは返すことが出来ません。
+そのため、もし接続している場合は常に CELL_2G として返されます。
 
-Bada Quirk
+Bada に関する注意点
 ----------
-- Bada can only report if device is on Wifi or connected to cellular connection CELL_2G ( type not reported )
+- Bada は、デバイスが Wifi または CELL_2G 携帯電話ネットワークに接続されているかどうかのみを返します (タイプは返されません) 。

@@ -20,83 +20,83 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 connection.type
 ===================
 
-Checks the active network connection that is being used.
+使われているネットワーク接続のタイプを確認します。
 
-Description
+概要
 -----------
 
-This property is a fast way to determine the device's network connection state, and type of connection.
+このプロパティーは、デバイスのネットワーク接続状態や接続のタイプを手早く取得出来ます。
 
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
-- Windows Phone 7 ( Mango )
+- BlackBerry WebWorks (OS 5.0 以上)
+- Windows Phone 7 (Mango)
 - Bada 2.x
 
-Quick Example
+使用例
 -------------
 
     function checkConnection() {
         var networkState = navigator.network.connection.type;
-        
+
         var states = {};
-        states[Connection.UNKNOWN]	= 'Unknown connection';
-        states[Connection.ETHERNET]	= 'Ethernet connection';
-        states[Connection.WIFI]   	= 'WiFi connection';
-        states[Connection.CELL_2G]	= 'Cell 2G connection';
-        states[Connection.CELL_3G]	= 'Cell 3G connection';
-        states[Connection.CELL_4G]	= 'Cell 4G connection';
-        states[Connection.NONE]   	= 'No network connection';
-    
-        alert('Connection type: ' + states[networkState]);
+        states[Connection.UNKNOWN]  = '不明な接続';
+        states[Connection.ETHERNET] = 'イーサネット接続';
+        states[Connection.WIFI]     = 'WiFi接続';
+        states[Connection.CELL_2G]  = '2G接続';
+        states[Connection.CELL_3G]  = '3G接続';
+        states[Connection.CELL_4G]  = '4G接続';
+        states[Connection.NONE]     = 'ネットワーク接続なし';
+
+        alert('コネクションタイプ: ' + states[networkState]);
     }
-    
+
     checkConnection();
 
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.network.connection.type Example</title>
-        
+        <title>navigator.network.connection.type 使用例</title>
+
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
-        // Wait for Cordova to load
-        // 
+
+        // Cordova の読み込み完了まで待機
+        //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             checkConnection();
         }
-        
-	    function checkConnection() {
-	        var networkState = navigator.network.connection.type;
 
-	        var states = {};
-	        states[Connection.UNKNOWN]	= 'Unknown connection';
-	        states[Connection.ETHERNET]	= 'Ethernet connection';
-	        states[Connection.WIFI]   	= 'WiFi connection';
-	        states[Connection.CELL_2G]	= 'Cell 2G connection';
-	        states[Connection.CELL_3G]	= 'Cell 3G connection';
-	        states[Connection.CELL_4G]	= 'Cell 4G connection';
-	        states[Connection.NONE]   	= 'No network connection';
+        function checkConnection() {
+            var networkState = navigator.network.connection.type;
 
-	        alert('Connection type: ' + states[networkState]);
-	    }
-        
+            var states = {};
+            states[Connection.UNKNOWN]  = '不明な接続';
+            states[Connection.ETHERNET] = 'イーサネット接続';
+            states[Connection.WIFI]     = 'WiFi接続';
+            states[Connection.CELL_2G]  = '2G接続';
+            states[Connection.CELL_3G]  = '3G接続';
+            states[Connection.CELL_4G]  = '4G接続';
+            states[Connection.NONE]     = 'ネットワーク接続なし';
+
+            alert('コネクションタイプ: ' + states[networkState]);
+        }
+
         </script>
       </head>
       <body>
-        <p>A dialog box will report the network state.</p>
+        <p>ダイアログボックスがネットワーク状態を表示します。</p>
       </body>
     </html>
