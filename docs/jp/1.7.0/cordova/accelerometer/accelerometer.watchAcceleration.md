@@ -129,7 +129,7 @@ accelerometer.watchAcceleration
       </body>
     </html>
 
- iPhoneに関する注意点
+ iPhone に関する注意点
 -------------
 
 - 指定された時間間隔に対して、 Cordova はコールバック関数を呼び出し、加速度情報を渡します。

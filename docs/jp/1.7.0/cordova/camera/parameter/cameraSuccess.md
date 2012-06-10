@@ -20,21 +20,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 cameraSuccess
 =============
 
-onSuccess callback function that provides the image data.
+撮影が成功したときに呼び出されるコールバック関数です。
 
     function(imageData) {
-        // Do something with the image
+        // 任意のコード
     }
 
-Parameters
+パラメーター
 ----------
 
-- __imageData:__ Base64 encoding of the image data, OR the image file URI, depending on `cameraOptions` used. (`String`)
+- __imageData:__ Base64 エンコーディングされた画像データ、またはイメージファイルの URI (`cameraOptions`による) (`String`)
 
-Example
+使用例
 -------
 
-    // Show image
+    // 画像を表示
     //
     function cameraCallback(imageData) {
         var image = document.getElementById('myImage');

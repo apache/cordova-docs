@@ -20,105 +20,105 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 cameraOptions
 =============
 
-Optional parameters to customize the camera settings.
+カメラの設定をカスタマイズするのためのオプションパラメーターです。
 
-    { quality : 75, 
-      destinationType : Camera.DestinationType.DATA_URL, 
-      sourceType : Camera.PictureSourceType.CAMERA, 
+    { quality : 75,
+      destinationType : Camera.DestinationType.DATA_URL,
+      sourceType : Camera.PictureSourceType.CAMERA,
       allowEdit : true,
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100 };
 
-Options
+オプション
 -------
 
-- __quality:__ Quality of saved image. Range is [0, 100]. (`Number`)
+- __quality:__ イメージの画質を指定します。 範囲: 0から100 (`Number`)
 
-- __destinationType:__ Choose the format of the return value.  Defined in navigator.camera.DestinationType (`Number`)
-        
-            Camera.DestinationType = {
-                DATA_URL : 0,                // Return image as base64 encoded string
-                FILE_URI : 1                 // Return image file URI
-            };
+- __destinationType:__ 返り値のフォーマットを指定します。フォーマットは navigator.camera.DestinationType で定義されています。 (`Number`)
 
-- __sourceType:__ Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (`Number`)
-     
+        Camera.DestinationType = {
+            DATA_URL : 0,           // 画像を Base64 形式で取得
+            FILE_URI : 1            // 画像をファイル URI として取得
+        };
+
+- __sourceType:__ 取得ソースを指定します。ソースは nagivator.camera.PictureSourceType で定義されています。 (`Number`)
+
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
             CAMERA : 1,
             SAVEDPHOTOALBUM : 2
         };
 
-- __allowEdit:__ Allow simple editing of image before selection. (`Boolean`)
-  
-- __encodingType:__ Choose the encoding of the returned image file.  Defined in navigator.camera.EncodingType (`Number`)
-        
-            Camera.EncodingType = {
-                JPEG : 0,               // Return JPEG encoded image
-                PNG : 1                 // Return PNG encoded image
-            };
+- __allowEdit:__ イメージ選択の前に、簡単な編集を許可します。 (`Boolean`)
 
-- __targetWidth:__ Width in pixels to scale image. Must be used with targetHeight.  Aspect ratio is maintained. (`Number`)
-- __targetHeight:__ Height in pixels to scale image. Must be used with targetWidth. Aspect ratio is maintained. (`Number`)
+- __encodingType:__ 画像ファイルのエンコード形式を選択します。形式は navigator.camera.EncodingType で定義されています。 (`Number`)
 
-- __mediaType:__ Set the type of media to select from.  Only works when PictureSourceType is PHOTOLIBRARY or SAVEDPHOTOALBUM. Defined in nagivator.camera.MediaType (`Number`)
-     
-        Camera.MediaType = { 
-			PICTURE: 0,             // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
-			VIDEO: 1,               // allow selection of video only, WILL ALWAYS RETURN FILE_URI
-			ALLMEDIA : 2			// allow selection from all media types
-};
+        Camera.EncodingType = {
+            JPEG : 0,               // 画像を JPEG 形式で取得
+            PNG : 1                 // 画像を PNG 形式で取得
+        };
 
-- __correctOrientation:__ Rotate the image to correct for the orientation of the device during capture. (`Boolean`)
-- __saveToPhotoAlbum:__ Save the image to the photo album on the device after capture. (`Boolean`)
-  
-Android Quirks
+- __targetWidth:__ 画像をスケールするための幅をピクセルで指定します。 targetHeight と同時に使用してください。アスペクト比は保持されます。 (`Number`)
+- __targetHeight:__ 画像をスケールするための高さをピクセルで指定します。 targetWidth と同時に使用してください。アスペクト比は保持されます。 (`Number`)
+
+- __mediaType:__ 画像の取得元を指定します。 PictureSourceType に PHOTOLIBRARY もしくは SAVEPHOTOALBUM が指定されている場合にのみ有効です。取得元は nagivator.camera.MediaType で定義されています。 (`Number`)
+
+        Camera.MediaType = {
+            PICTURE: 0,             // 取得元は静止画像のみとします。デフォルトです。返り値のフォーマットは DestinationType によって指定されたものになります。
+            VIDEO: 1,               // 取得元はビデオのみとします。戻り値のフォーマットは常にファイル URI となります。
+            ALLMEDIA : 2            // 全てのメディアタイプからの取得を許可します。
+        };
+
+- __correctOrientation:__ 写真が撮影されたときと同じ向きになるよう写真を回転させます。 (`Boolean`)
+- __saveToPhotoAlbum:__ 写真が撮影された後、デバイスのフォトアルバムに画像を保存します。 (`Boolean`)
+
+Android に関する注意点
 --------------
 
-- Ignores the `allowEdit` parameter.
-- Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
-- Camera.EncodingType is not supported.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
+- `allowEdit` は無視されます。
+- Camera.PictureSourceType.PHOTOLIBRARY と Camera.PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
+- Camera.EncodingType はサポートされていません。
+- `correctOrientation` パラメーターは無視されます。
+- `saveToPhotoAlbum` パラメーターは無視されます。
 
-BlackBerry Quirks
+BlackBerry に関する注意点
 -----------------
 
-- Ignores the `quality` parameter.
-- Ignores the `sourceType` parameter.
-- Ignores the `allowEdit` parameter.
-- Application must have key injection permissions to close native Camera application after photo is taken.
-- Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
-- Camera.MediaType is not supported.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
+- `quality` パラメーターは無視されます。
+- `sourceType` パラメーターは無視されます。
+- `allowEdit` は無視されます。
+- 撮影後にカメラアプリを閉じるためには、アプリケーションにキー入力許可の権限が付与されている必要があります。
+- 大きなサイズで撮影を行った場合、高画質カメラを搭載したデバイスでエンコードすることができない場合があります。 (Torch 9800 など)
+- Camera.MediaType はサポートされていません。
+- `correctOrientation` パラメーターは無視されます。
+- `saveToPhotoAlbum` パラメーターは無視されます。
 
-Palm Quirks
+Palm に関する注意点
 -----------
 
-- Ignores the `quality` parameter.
-- Ignores the `sourceType` parameter.
-- Ignores the `allowEdit` parameter.
-- Camera.MediaType is not supported.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
+- `quality` パラメーターは無視されます。
+- `sourceType` パラメーターは無視されます。
+- `allowEdit` は無視されます。
+- Camera.MediaType はサポートされていません。
+- `correctOrientation` パラメーターは無視されます。
+- `saveToPhotoAlbum` パラメーターは無視されます。
 
-iOS Quirks
+iOS に関する注意点
 --------------
 
-- Set `quality` below 50 to avoid memory error on some devices.
-- When `destinationType.FILE_URI` is used, photos are saved in the application's temporary directory.
-- The contents of the application's temporary directory is deleted when the application ends. Developers may also delete the contents of this directory using the navigator.fileMgr APIs if storage space is a concern.
+- メモリエラーを防ぐには、 `quality` パラメーターを50以下に設定してください。
+- `destinationType.FILE_URI` が使用された場合、撮影された写真や編集された写真はアプリケーションの temporary ディレクトリに保存されます。
+- アプリケーションの temporary ディレクトリの中身はアプリケーション終了とともに消去されます。もしストレージの空きが少ない場合、このディレクトリは navigator.fileMgr API を使って消去できます。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 --------------
 
-- Ignores the `allowEdit` parameter.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
+- `allowEdit` は無視されます。
+- `correctOrientation` パラメーターは無視されます。
+- `saveToPhotoAlbum` パラメーターは無視されます。
 
-Bada 1.2 Quirks
+Bada 1.2 に関する注意点
 --------------
-- options not supported
-- always returns a FILE URI
+- オプションはサポートされていません。
+- 常に FILE URI を返します。

@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Camera
 ======
 
-> The `camera` object provides access to the device's default camera application.
+> `camera` オブジェクトは、デバイスのカメラアプリへの制御を提供します。
 
-Methods
+メソッド
 -------
 
 - camera.getPicture

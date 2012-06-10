@@ -20,55 +20,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 camera.getPicture
 =================
 
-Takes a photo using the camera or retrieves a photo from the device's album.  The image is returned as a base64 encoded `String` or as the URI of an image file.
+デバイスのカメラで写真を撮る、またはデバイスのアルバム内にある写真を検索します。 Base64 形式でエンコードされたフォトイメージを表す文字列、またはイメージファイルの URI が返されます。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
-Description
+概要
 -----------
 
-Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
+`camera.getPicture` 関数はユーザが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `Camera.sourceType = Camera.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
+もし `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます:
 
-- A `String` containing the Base64 encoded photo image (default). 
-- A `String` representing the image file location on local storage.  
+- Base64 形式でエンコードされたフォトイメージを表す文字列 (デフォルト)
+- ローカルストレージ内に記録されたファイルの場所を表す文字列
 
-You can do whatever you want with the encoded image or URI, for example:
+エンコードされたイメージや URI をもとに、以下のような処理の記述が可能です:
 
-- Render the image in an `<img>` tag _(see example below)_
-- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
-- Post the data to a remote server
+- `<img>` タグで画像を表示 _(下記の使用例を参考にしてください)_
+- データをローカルに保存 (`LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
+- データをリモートサーバーに送信
 
-Note: The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメータで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- Blackberry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上) 
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2
 
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 ----------------------
 
-Invoking the native camera application while your device is connected
-via Zune will not work, and the error callback will be triggered.
+Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
 
 
-Quick Example
+使用例
 -------------
 
-Take photo and retrieve Base64-encoded image:
+写真を撮影し、 Base64 形式のイメージとして取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
-     }); 
+     });
 
     function onSuccess(imageData) {
         var image = document.getElementById('myImage');
@@ -76,13 +75,13 @@ Take photo and retrieve Base64-encoded image:
     }
 
     function onFail(message) {
-        alert('Failed because: ' + message);
+        alert('エラーが発生しました: ' + message);
     }
 
-Take photo and retrieve image file location: 
+撮影した写真の URI を取得します。
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-        destinationType: Camera.DestinationType.FILE_URI }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI });
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -90,113 +89,113 @@ Take photo and retrieve image file location:
     }
 
     function onFail(message) {
-        alert('Failed because: ' + message);
+        alert('エラーが発生しました: ' + message);
     }
 
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Photo</title>
+        <title>写真を撮ってみよう</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        var pictureSource;   // picture source
-        var destinationType; // sets the format of returned value 
-        
-        // Wait for Cordova to connect with the device
+        var pictureSource;   // 写真ソース
+        var destinationType; // 戻り値のフォーマット
+
+        // Cordova がデバイスと接続するまで待機
         //
         document.addEventListener("deviceready",onDeviceReady,false);
-    
-        // Cordova is ready to be used!
+
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
         }
 
-        // Called when a photo is successfully retrieved
+        // 写真の撮影に成功した場合 (URI 形式)
         //
         function onPhotoDataSuccess(imageData) {
-          // Uncomment to view the base64 encoded image data
+          // 下記のコメントを外すことで Base64 形式のデータをログに出力
           // console.log(imageData);
-      
-          // Get image handle
+
+          // 画像ハンドルを取得
           //
           var smallImage = document.getElementById('smallImage');
-      
-          // Unhide image elements
+
+          // 画像要素を表示
           //
           smallImage.style.display = 'block';
-      
-          // Show the captured photo
-          // The inline CSS rules are used to resize the image
+
+          // 取得した写真を表示
+          // 画像のリサイズにインライン CSS を使用
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
 
-        // Called when a photo is successfully retrieved
+        // 写真の撮影に成功した場合 (URI  形式)
         //
         function onPhotoURISuccess(imageURI) {
-          // Uncomment to view the image file URI 
+          // 下記のコメントを外すことでファイル URI をログに出力
           // console.log(imageURI);
-      
-          // Get image handle
+
+          // 画像ハンドルを取得
           //
           var largeImage = document.getElementById('largeImage');
-      
-          // Unhide image elements
+
+          // 画像要素を表示
           //
           largeImage.style.display = 'block';
-      
-          // Show the captured photo
-          // The inline CSS rules are used to resize the image
+
+          // 取得した写真を表示
+          // 画像のリサイズにインライン CSS を使
           //
           largeImage.src = imageURI;
         }
 
-        // A button will call this function
+        // ボタンがクリックされた場合の処理
         //
         function capturePhoto() {
-          // Take picture using device camera and retrieve image as base64-encoded string
+          // 編集が許可された写真を撮影し、 Base64 形式のイメージとして取得する場合
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
             destinationType: destinationType.DATA_URL });
         }
 
-        // A button will call this function
+        // ボタンがクリックされた場合の処理
         //
         function capturePhotoEdit() {
-          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+          // 編集が許可された写真を撮影し、 Base64 形式のイメージとして取得する場合
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
             destinationType: destinationType.DATA_URL });
         }
-    
-        // A button will call this function
+
+        // ボタンがクリックされた場合の処理
         //
         function getPhoto(source) {
-          // Retrieve image file location from specified source
-          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+          // 写真をファイル URI として取得する場合
+          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
             destinationType: destinationType.FILE_URI,
             sourceType: source });
         }
 
-        // Called if something bad happens.
-        // 
+        // エラー発生時の処理
+        //
         function onFail(message) {
-          alert('Failed because: ' + message);
+          alert('エラーが発生しました: ' + message);
         }
 
         </script>
       </head>
       <body>
-        <button onclick="capturePhoto();">Capture Photo</button> <br>
-        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+        <button onclick="capturePhoto();">写真を撮影</button> <br>
+        <button onclick="capturePhotoEdit();">写真を撮影して編集</button> <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">フォトライブラリから取得</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">フォトアルバムから取得</button><br>
         <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
         <img style="display:none;" id="largeImage" src="" />
       </body>

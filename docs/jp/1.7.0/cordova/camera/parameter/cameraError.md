@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 cameraError
 ===========
 
-onError callback function that provides an error message.
+エラーが発生した場合に呼び出されるコールバック関数です。
 
     function(message) {
-        // Show a helpful message
+        // エラーメッセージを表示
     }
 
-Parameters
+パラメーター
 ----------
 
-- __message:__ The message is provided by the device's native code. (`String`)
+- __message:__ デバイスのネイティブコードによって与えられたメッセージ (`String`)

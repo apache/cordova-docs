@@ -100,7 +100,7 @@ accelerometer.getCurrentAcceleration
       </body>
     </html>
 
-iPhoneに関する注意点
+iPhone に関する注意点
 -------------
 
 - iPhone はピンポイントで現在の加速度情報を得ることは出来ません。
