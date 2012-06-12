@@ -27,7 +27,7 @@ camera.getPicture
 概要
 -----------
 
-`camera.getPicture` 関数はユーザが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `Camera.sourceType = Camera.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
+`camera.getPicture` 関数はユーザーが写真を撮れるように、デバイスが標準で備えるカメラアプリを起動します (もしデフォルト設定である `Camera.sourceType = Camera.PictureSourceType.CAMERA` の場合) 。写真の撮影が完了するとカメラアプリは終了し、アプリケーションに戻ります。
 
 もし `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` もしくは `Camera.PictureSourceType.SAVEDPHOTOALBUM` が指定された場合、写真選択ダイアログが表示され、アルバムから写真を選択できるようになります。
 

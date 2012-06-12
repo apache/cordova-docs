@@ -20,6 +20,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactFields
 =============
 
-Required parameter of the `contacts.find` method.  Use this parameter to specify which fields should be included in the `Contact` objects resulting from a find operation.
+`contacts.find` メソッドを使用する際の必須パラメーターです。このパラメーターを使って、検索操作によって得られる `Contact` オブジェクトが持つフィールドを指定します。
 
     ["name", "phoneNumbers", "emails"]

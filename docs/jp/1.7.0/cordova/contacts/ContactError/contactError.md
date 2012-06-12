@@ -20,14 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactError
 ========
 
-A `ContactError` object is returned to the `contactError` callback when an error occurs.
+`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
 
-Constants
+定数
 ---------
 
 - `ContactError.UNKNOWN_ERROR`
@@ -38,8 +38,8 @@ Constants
 - `ContactError.NOT_SUPPORTED_ERROR`
 - `ContactError.PERMISSION_DENIED_ERROR`
 
-Description
+概要
 -----------
 
-The `ContactError` object is returned to the user through the `contactError` callback function when an error occurs.
+`ContactError` オブジェクトは、エラーが発生したときに `contactError` コールバック関数に渡されるオブジェクトです。
 

@@ -20,119 +20,119 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactName
 ===========
 
-Contains name properties of a `Contact` object.
+`Contact` オブジェクトの名前プロパティーを表します。
 
-Properties
+プロパティー
 ----------
 
-- __formatted:__ The complete name of the contact. _(DOMString)_
-- __familyName:__ The contacts family name. _(DOMString)_
-- __givenName:__ The contacts given name. _(DOMString)_
-- __middleName:__ The contacts middle name. _(DOMString)_
-- __honorificPrefix:__ The contacts prefix (example Mr. or Dr.) _(DOMString)_
-- __honorificSuffix:__ The contacts suffix (example Esq.). _(DOMString)_
+- __formatted:__ 連絡先のフルネームを表します _(DOMString)_
+- __familyName:__ 連絡先の姓を表します _(DOMString)_
+- __givenName:__ 連絡先の名を表します _(DOMString)_
+- __middleName:__ 連絡先のミドルネームを表します _(DOMString)_
+- __honorificPrefix:__ 連絡先の接頭敬称を表します (例: Mr. Dr.) _(DOMString)_
+- __honorificSuffix:__ 連絡先の接尾敬称を表します (例: Esq.) _(DOMString)_
 
-Details
+詳細
 -------
 
-The `ContactName` object stores name properties of a contact.
+`ContactName` オブジェクトは連絡先の名前プロパティーの情報を格納します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android 2.X
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			alert("Formatted: " + contacts[i].name.formatted + "\n" + 
-					"Family Name: "  + contacts[i].name.familyName + "\n" + 
-					"Given Name: "  + contacts[i].name.givenName + "\n" + 
-					"Middle Name: "  + contacts[i].name.middleName + "\n" + 
-					"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
-					"Prefix: "  + contacts[i].name.honorificSuffix);
-		}
+        for (var i=0; i<contacts.length; i++) {
+            alert("名前: " + contacts[i].name.formatted + "\n" +
+                    "姓: " + contacts[i].name.familyName + "\n" +
+                    "名: " + contacts[i].name.givenName + "\n" +
+                    "ミドルネーム: " + contacts[i].name.middleName + "\n" +
+                    "接頭敬称: " + contacts[i].name.honorificSuffix + "\n" +
+                    "接尾敬称: " + contacts[i].name.honorificSuffix);
+        }
     };
 
     function onError(contactError) {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","name"];
+    options.filter="";
+    filter = ["displayName","name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","name"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","name"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				alert("Formatted: " + contacts[i].name.formatted + "\n" + 
-						"Family Name: "  + contacts[i].name.familyName + "\n" + 
-						"Given Name: "  + contacts[i].name.givenName + "\n" + 
-						"Middle Name: "  + contacts[i].name.middleName + "\n" + 
-						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" + 
-						"Prefix: "  + contacts[i].name.honorificPrefix);
-			}
-		};
-    
-        // onError: Failed to get the contacts
+        function onSuccess(contacts) {
+            for (var i=0; i<contacts.length; i++) {
+                alert("名前: " + contacts[i].name.formatted + "\n" +
+                        "姓: " + contacts[i].name.familyName + "\n" +
+                        "名: " + contacts[i].name.givenName + "\n" +
+                        "ミドルネーム: " + contacts[i].name.middleName + "\n" +
+                        "接頭敬称: " + contacts[i].name.honorificSuffix + "\n" +
+                        "接尾敬称: " + contacts[i].name.honorificSuffix);
+            }
+        };
+
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
 
-Android Quirks
+Android に関する注意点
 ------------
-- __formatted:__ Partially supported.  Will return the concatenation of honorificPrefix, givenName, middleName, familyName and honorificSuffix but will not store.
+- __formatted:__ 部分的にサポートされています。 honorificPrefix, givenName, middleName, familyName, honorificSuffix を連結したものを返しますが、保存は行われません。
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 ---------------------------------------------
 
-- __formatted:__ Partially supported.  Will return concatenation of BlackBerry __firstName__ and __lastName__ fields.
-- __familyName:__ Supported.  Stored in BlackBerry __lastName__ field.
-- __givenName:__ Supported.  Stored in BlackBerry __firstName__ field.
-- __middleName:__ This property is not supported, and will always return `null`.
-- __honorificPrefix:__ This property is not supported, and will always return `null`.
-- __honorificSuffix:__ This property is not supported, and will always return `null`.
+- __formatted:__ 部分的にサポートされています。 BlackBerry の __firstName__ と __lastName__ フィールドを連結したものを返します。
+- __familyName:__ サポートされています。 BlackBerry の __lastName__ フィールドに保存されています。
+- __givenName:__ サポートされています。 BlackBerry の __firstName__ フィールドに保存されています。
+- __middleName:__ このプロパティーはサポートされておらず、常に `null` を返します。
+- __honorificPrefix:__ このプロパティーはサポートされておらず、常に `null` を返します。
+- __honorificSuffix:__ このプロパティーはサポートされておらず、常に `null` を返します。
 
-iOS Quirks
+iOS に関する注意点
 ------------
-- __formatted:__ Partially supported.  Will return iOS Composite Name but will not store.
+- __formatted:__ 部分的にサポートされています。 iOS の合成名を返しますが、保存は行われません。

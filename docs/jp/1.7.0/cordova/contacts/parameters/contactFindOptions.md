@@ -20,16 +20,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactFindOptions
 ==================
 
-Optional parameter of the `contacts.find` method.  Use this parameter to filter the contacts returned from the contacts database.
+`contacts.find` メソッドを使用する際のオプションのパラメーターです。連絡先の検索時にフィルターをかける場合に使用します。
 
-    { 
-		filter: "",
-		multiple: true,
-	};
+    {
+        filter: "",
+        multiple: true,
+    };
 
-Options
+オプション
 -------
 
-- __filter:__ The search string used to filter contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+- __filter:__ 絞り込み検索用の文字列を指定します _(DOMString)_ (デフォルト: "")
+- __multiple:__ 検索時に複数の連絡先を返すかどうかを指定します _(Boolean)_ (デフォルト: false)
 

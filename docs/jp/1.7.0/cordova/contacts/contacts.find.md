@@ -20,97 +20,97 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contacts.find
 =============
 
-Queries the device contacts database and returns one or more `Contact` objects, each containing the fields specified.
+デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトを取得します。
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
-Description
+概要
 -----------
 
-contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
+contacts.find 関数は、デバイスの連絡先データベースに問い合わせを行い、 `Contact` オブジェクトの配列を返す非同期関数です。 作成されたオブジェクトは __contactSuccess__ に従って `contactSuccess` コールバック関数に送られます。
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
+このメソッドを使用する際は __contactFields__ パラメーターに検索フィールドを指定します。 __contactFields__ パラメーターに渡したフィールドだけが、 `Contact` オブジェクトのプロパティーとして __contactSuccess__ コールバック関数に渡されます。 __contactFields__ パラメーターが空の場合は、 `id` プロパティーのみを持つ `Contact` オブジェクト配列が作成されます。 __contactFields__ の値が["*"]の場合は、全ての連絡先フィールドが返されます。
 
-The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
+連絡先データベースの問い合わせの際には、 __contactFindOptions.filter__ を用いて検索条件を絞ることが出来ます。このオプションが指定されていた場合、大文字小文字の区別なく、部分一致方式により __contactFields__ パラメーターに指定されたフィールドの検索が行われます。いずれかのフィールドにマッチした内容があった場合、その連絡先情報が返されます。
 
-Parameters
+パラメーター
 ----------
 
-- __contactFields:__ Contact fields to be used as search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
-- __contactSuccess:__ Success callback function that is invoked with the contacts returned from the contacts database. [Required]
-- __contactError:__ Error callback function. Invoked when error occurs. [Optional]
-- __contactFindOptions:__ Search options to filter contacts. [Optional]
+- __contactFields:__ 検索条件に格納されるフィールドを指定します。このパラメーターに定義されたフィールドのみが `Contact` オブジェクトにセットされます。 _(DOMString[])_ [必須]
+- __contactSuccess:__ 連絡先データベースへの問い合わせに成功した場合に呼び出されるコールバック関数を指定します [必須]
+- __contactError:__ エラーコールバック関数を指定します。連絡先データベースへの問い合わせに失敗した場合に呼び出されます [任意]
+- __contactFindOptions:__ 連絡先情報に絞り込み検索を行うための検索オプションを指定します [任意]
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(contacts) {
-        alert('Found ' + contacts.length + ' contacts.');
+        alert(contacts.length + '  件の連絡先が見つかりました。');
     };
 
     function onError(contactError) {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
-    // find all contacts with 'Bob' in any name field
+    // Bob という名前が含まれる全ての連絡先を取得
     var options = new ContactFindOptions();
-	options.filter="Bob"; 
-	var fields = ["displayName", "name"];
+    options.filter="Bob";
+    var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    // find all contacts with 'Bob' in any name field
-		    var options = new ContactFindOptions();
-			options.filter="Bob"; 
-			var fields = ["displayName", "name"];
-		    navigator.contacts.find(fields, onSuccess, onError, options);
+            // Bob という名前が含まれる全ての連絡先を取得
+            var options = new ContactFindOptions();
+            options.filter="Bob";
+            var fields = ["displayName", "name"];
+            navigator.contacts.find(fields, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
         function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				console.log("Display Name = " + contacts[i].displayName);
-			}
+            for (var i=0; i<contacts.length; i++) {
+                console.log("表示名 = " + contacts[i].displayName);
+            }
         }
-    
-        // onError: Failed to get the contacts
+
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
-    
+
 

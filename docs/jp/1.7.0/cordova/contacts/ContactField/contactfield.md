@@ -20,123 +20,123 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactField
 ============
 
-Supports generic fields in a `Contact` object.  Some properties that are stored as `ContactField` objects include email addresses, phone numbers, and urls.
+`Contact` オブジェクトで使用される汎用フィールドに用いられます。 `ContactField` オブジェクトとして格納されるデータとしては、メールアドレスや電話番号などが挙げられます。
 
-Properties
+プロパティー
 ----------
 
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)_
-- __value:__ The value of the field (such as a phone number or email address). _(DOMString)_
-- __pref:__ Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
+- __type:__ フィールドのタイプを表します (例: 'home') _(DOMString)_
+- __value:__ フィールド値を表します (例: 電話番号、メールアドレス) _(DOMString)_
+- __pref:__ `ContactField` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
 
-Details
+詳細
 -------
 
-The `ContactField` object is a reusable component that is used to support contact fields in a generic fashion.  Each `ContactField` object contains a value property, a type property, and a pref property.  A `Contact` object stores several properties in `ContactField[]` arrays, such as phone numbers and email addresses.
+`ContactField` オブジェクトは、連絡先の各フィールドを汎用的に格納するためのコンポーネントです。各 `ContactField` オブジェクトは、 value プロパティ、 type プロパティ、 pref プロパティーを持っています。 `Contact` オブジェクトは電話番号やメールアドレスなどといった複数のプロパティーを `ContactField[]` 配列に保存しています。
 
-In most instances, there are no pre-determined values for the __type__ attribute of a `ContactField` object.  For example, a phone number can have __type__ values of 'home', 'work', 'mobile', 'iPhone', or any other value that is supported by the contact database on a particular device platform.  However, in the case of the `Contact` __photos__ field, Cordova makes use of the __type__ field to indicate the format of the returned image.  Cordova will return __type: 'url'__ when the __value__ attribute contains a URL to the photo image, or __type: 'base64'__ when the returned __value__ attribute contains a Base64 encoded image string.
+多くの場合 `ContactField` オブジェクトの __type__ 属性に定義済みの値は存在しません。例えば、電話番号について __type__ 属性の値として 'home', 'work', 'mobile', 'iPhone' など、デバイスのプラットフォームに応じて異なった値が格納されます。ただし `Contact` の __photos__ フィールドに限り、 __type__ 属性には画像フォーマットが格納されます。 Cordova は __value__ 属性が画像への URL を含む場合、 __type: 'url'__ を返します。 __value__ 属性が Base64 形式の画像を含む場合、 __type: 'base64'__ を返します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
-	// create a new contact
-	var contact = navigator.contacts.create();
-	
-	// store contact phone numbers in ContactField[]
-	var phoneNumbers = [];
-	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
-	contact.phoneNumbers = phoneNumbers;
-	
-	// save the contact
-	contact.save();
+    // 新しい連絡先を作成
+    var contact = navigator.contacts.create();
 
-Full Example
+    // 連絡先の電話番号を ContactField[] に格納
+    var phoneNumbers = [];
+    phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+    phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // 推奨された電話番号
+    phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+    contact.phoneNumbers = phoneNumbers;
+
+    // 連絡先を保存
+    contact.save();
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			// create a new contact
-			var contact = navigator.contacts.create();
+            // 新しい連絡先を作成
+            var contact = navigator.contacts.create();
 
-			// store contact phone numbers in ContactField[]
-			var phoneNumbers = [];
-			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
-			contact.phoneNumbers = phoneNumbers;
+            // 連絡先の電話番号を ContactField[] に格納
+            var phoneNumbers = [];
+            phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+            phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // 推奨された電話番号
+            phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+            contact.phoneNumbers = phoneNumbers;
 
-			// save the contact
-			contact.save();
+            // 連絡先を保存
+            contact.save();
 
-			// search contacts, returning display name and phone numbers
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","phoneNumbers"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            // 連絡先を検索し、名前と電話番号を表示
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","phoneNumbers"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				// display phone numbers
-				for (var j=0; j<contacts[i].phoneNumbers.length; j++) {
-					alert("Type: " + contacts[i].phoneNumbers[j].type + "\n" + 
-							"Value: "  + contacts[i].phoneNumbers[j].value + "\n" + 
-							"Preferred: "  + contacts[i].phoneNumbers[j].pref);
-				}
-			}
-		};
-    
-        // onError: Failed to get the contacts
+        function onSuccess(contacts) {
+            for (var i=0; i<contacts.length; i++) {
+                // 電話番号を表示
+                for (var j=0; j<contacts[i].phoneNumbers.length; j++) {
+                    alert("タイプ: " + contacts[i].phoneNumbers[j].type + "\n" +
+                            "値: "  + contacts[i].phoneNumbers[j].value + "\n" +
+                            "Preferred: "  + contacts[i].phoneNumbers[j].pref);
+                }
+            }
+        };
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- __pref:__ This property is not support by Android devices, and will always return `false`.
+- __pref:__ このプロパティーは Android ではサポートされておらず、常に `false` を返します。
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 --------------------------------------------
 
-- __type:__ Partially supported.  Used for phone numbers.
-- __value:__ Supported.
-- __pref:__ This property is not supported, and will always return `false`.
+- __type:__ 部分的にサポートされています。電話番号に使われます。
+- __value:__ サポートされています。
+- __pref:__ このプロパティーはサポートされておらず、常に `false` を返します。
 
-iOS Quirks
+iOS に関する注意点
 -----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
+
+- __pref:__ このプロパティーは iOS ではサポートされておらず、常に `false` を返します。

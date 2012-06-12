@@ -20,132 +20,132 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactOrganization
 ===================
 
-Contains organization properties of a `Contact` object.
+`Contact` オブジェクトの組織プロパティーを表します。
 
-Properties
+プロパティー
 ----------
-- __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
-- __name:__ The name of the organization. _(DOMString)_
-- __department:__ The department the contract works for. _(DOMString)_
-- __title:__ The contacts title at the organization. _(DOMString)_
+- __pref:__ `ContactOrganization` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
+- __type:__ フィールドのタイプを表します (例: 'home') _(DOMString)_
+- __name:__ 組織名を表します _(DOMString)_
+- __department:__ 部署名を表します _(DOMString)_
+- __title:__ 役職名を表します _(DOMString)_
 
-Details
+詳細
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+`ContactOrganization` オブジェクトは連絡先の組織情報を表します。 `Contact` オブジェクトは複数の `ContactOrganization` オブジェクトを配列に保持します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			for (var j=0; j<contacts[i].organizations.length; j++) {
-				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-						"Type: " + contacts[i].organizations[j].type + "\n" +
-						"Name: " + contacts[i].organizations[j].name + "\n" + 
-						"Department: "  + contacts[i].organizations[j].department + "\n" + 
-						"Title: "  + contacts[i].organizations[j].title);
-			}
-		}
+        for (var i=0; i<contacts.length; i++) {
+            for (var j=0; j<contacts[i].organizations.length; j++) {
+                alert("推奨値: " + contacts[i].organizations[j].pref + "\n" +
+                        "タイプ: " + contacts[i].organizations[j].type + "\n" +
+                        "組織名: " + contacts[i].organizations[j].name + "\n" +
+                        "部署名: " + contacts[i].organizations[j].department + "\n" +
+                        "役職名: " + contacts[i].organizations[j].title);
+            }
+        }
     };
 
     function onError(contactError) {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","organizations"];
+    options.filter="";
+    filter = ["displayName","organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","organizations"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","organizations"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				for (var j=0; j<contacts[i].organizations.length; j++) {
-					alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-							"Type: " + contacts[i].organizations[j].type + "\n" +
-							"Name: " + contacts[i].organizations[j].name + "\n" + 
-							"Department: "  + contacts[i].organizations[j].department + "\n" + 
-							"Title: "  + contacts[i].organizations[j].title);
-				}
-			}
-		};
-    
-        // onError: Failed to get the contacts
+        function onSuccess(contacts) {
+            for (var i=0; i<contacts.length; i++) {
+                for (var j=0; j<contacts[i].organizations.length; j++) {
+                    alert("推奨値: " + contacts[i].organizations[j].pref + "\n" +
+                            "タイプ: " + contacts[i].organizations[j].type + "\n" +
+                            "組織名: " + contacts[i].organizations[j].name + "\n" +
+                            "部署名: " + contacts[i].organizations[j].department + "\n" +
+                            "役職名: " + contacts[i].organizations[j].title);
+                }
+            }
+        };
+
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
-	
 
-Android 2.X Quirks
+
+Android 2.X に関する注意点
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ このプロパティーは Android 2.X ではサポートされておらず、常に `false` を返します。
 
-Android 1.X Quirks
+Android 1.X に関する注意点
 ------------------
 
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __title:__ This property is not supported by Android 1.X devices, and will always be returned as `null`. 
+- __pref:__ このプロパティーは Android 1.X ではサポートされておらず、常に `false` を返します。
+- __type:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __title:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 --------------------------------------------
-- __pref:__ This property is not supported by Blackberry devices and will always return `false`.
-- __type:__ This property is not supported by Blackberry devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
-- __department:__ This property is not supported, and will always be returned as `null`.
-- __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
+- __pref:__ このプロパティーは BlackBerry ではサポートされておらず、常に `false` を返します。
+- __type:__ このプロパティーは BlackBerry ではサポートされておらず、常に `null` を返します。
+- __name:__ 部分的にサポートされています。一つ目の組織名が BlackBerry の __company__ フィールドに保存されます。
+- __department:__ このプロパティーはサポートされておらず、常に `null` を返します。
+- __title:__ 部分的にサポートされています。一つ目の役職名が BlackBerry の __jobTitle__ フィールドに保存されます。
 
-iOS Quirks
+iOS に関する注意点
 -----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __type:__ This property is not supported on iOS devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
-- __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
-- __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
+- __pref:__ このプロパティーは iOS ではサポートされておらず、常に `false` を返します。
+- __type:__ このプロパティーは iOS ではサポートされておらず、常に `null` を返します。
+- __name:__ 部分的にサポートされています。一つ目の組織名が iOS の __kABPersonOrganizationProperty__ フィールドに保存されます。
+- __department__: 部分的にサポートされています。一つ目の部署名が iOS の __kABPersonDepartmentProperty__ フィールドに保存されます。
+- __title__: 部分的にサポートされています。一つ目の役職名が iOS の __kABPersonJobTitleProperty__ フィールドに保存されます。
 
 

@@ -20,15 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Contacts
 ========
 
-> The `contacts` object provides access to the device contacts database.  
+> `contacts` オブジェクトを通じて、デバイスの連絡先データベースにアクセスできます。
 
-Methods
+メソッド
 -------
 
 - contacts.create
 - contacts.find
 
-Arguments
+引数
 ---------
 
 - contactFields
@@ -36,7 +36,7 @@ Arguments
 - contactError
 - contactFindOptions
 
-Objects
+オブジェクト
 -------
 
 - Contact

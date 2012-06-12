@@ -20,146 +20,148 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactAddress
 ==============
 
-Contains address properties for a `Contact` object.
+`Contact` オブジェクトの住所プロパティーを表します。
 
-Properties
+プロパティー
 ----------
-- __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
-- __formatted:__ The full address formatted for display. _(DOMString)_
-- __streetAddress:__ The full street address. _(DOMString)_
-- __locality:__ The city or locality. _(DOMString)_
-- __region:__ The state or region. _(DOMString)_
-- __postalCode:__ The zip code or postal code. _(DOMString)_
-- __country:__ The country name. _(DOMString)_
+- __pref:__ `ContactAddress` がユーザーの推奨値を含むかどうかを表します。含む場合、 `true` がセットされます _(boolean)_
+- __type:__ フィールドのタイプを表します (例: 'home') _(DOMString)_
+- __formatted:__ 住所全体を表します _(DOMString)_
+- __streetAddress:__ 番地を表します _(DOMString)_
+- __locality:__ 都市名を表します _(DOMString)_
+- __region:__ 地域名を表します _(DOMString)_
+- __postalCode:__ 郵便番号を表します _(DOMString)_
+- __country:__ 国を表します _(DOMString)_
 
-Details
+詳細
 -------
 
-The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
+`ContactAddress` オブジェクトは連絡先の住所に関するプロパティーを表します。 `Contact` オブジェクトは、複数の住所が格納された `ContactAddress[]` 配列を保持しています。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
-	// display the address information for all contacts
+    // すべての連絡先の住所情報を取得し、表示します
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			for (var j=0; j<contacts[i].addresses.length; j++) {
-				alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-						"Type: " + contacts[i].addresses[j].type + "\n" +
-						"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
-						"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
-						"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
-						"Region: "  + contacts[i].addresses[j].region + "\n" + 
-						"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" + 
-						"Country: "  + contacts[i].addresses[j].country);
-			}
-		}
+        for (var i=0; i<contacts.length; i++) {
+            for (var j=0; j<contacts[i].addresses.length; j++) {
+                alert("推奨値: " + contacts[i].addresses[j].pref + "\n" +
+                        "タイプ: " + contacts[i].addresses[j].type + "\n" +
+                        "住所: " + contacts[i].addresses[j].formatted + "\n" +
+                        "番地: " + contacts[i].addresses[j].streetAddress + "\n" +
+                        "都市名: " + contacts[i].addresses[j].locality + "\n" +
+                        "地域名: " + contacts[i].addresses[j].region + "\n" +
+                        "郵便番号: " + contacts[i].addresses[j].postalCode + "\n" +
+                        "国名: " + contacts[i].addresses[j].country);
+            }
+        }
     };
 
     function onError(contactError) {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
-    // find all contacts
+    // 連絡先を検索します
     var options = new ContactFindOptions();
-	options.filter=""; 
-	var filter = ["displayName","addresses"];
+    options.filter="";
+    var filter = ["displayName","addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    // find all contacts
-		    var options = new ContactFindOptions();
-			options.filter=""; 
-			var filter = ["displayName","addresses"];
-		    navigator.contacts.find(filter, onSuccess, onError, options);
+            // find all contacts
+            var options = new ContactFindOptions();
+            options.filter="";
+            var filter = ["displayName","addresses"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
-		function onSuccess(contacts) {
-			// display the address information for all contacts
-			for (var i=0; i<contacts.length; i++) {
-				for (var j=0; j<contacts[i].addresses.length; j++) {
-					alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-							"Type: " + contacts[i].addresses[j].type + "\n" +
-							"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
-							"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
-							"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
-							"Region: "  + contacts[i].addresses[j].region + "\n" + 
-							"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" + 
-							"Country: "  + contacts[i].addresses[j].country);
-				}
-			}
-		};
-    
-        // onError: Failed to get the contacts
+        function onSuccess(contacts) {
+            // すべての連絡先の住所情報を取得し、表示します
+            for (var i=0; i<contacts.length; i++) {
+                for (var j=0; j<contacts[i].addresses.length; j++) {
+                    alert("推奨値: " + contacts[i].addresses[j].pref + "\n" +
+                            "タイプ: " + contacts[i].addresses[j].type + "\n" +
+                            "住所: " + contacts[i].addresses[j].formatted + "\n" +
+                            "番地: " + contacts[i].addresses[j].streetAddress + "\n" +
+                            "都市名: " + contacts[i].addresses[j].locality + "\n" +
+                            "地域名: " + contacts[i].addresses[j].region + "\n" +
+                            "郵便番号: " + contacts[i].addresses[j].postalCode + "\n" +
+                            "国名: " + contacts[i].addresses[j].country);
+                }
+            }
+        };
+
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
 
-Android 2.X Quirks
+Android 2.X に関する注意点
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ このプロパティーは Android 2.X ではサポートされておらず、常に `false` を返します。
 
-Android 1.X Quirks
+Android 1.X に関する注意点
 ------------------
 
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __streetAddress:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __locality:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __region:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __postalCode:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __country:__ This property is not support by Android 1.X devices, and will always return `null`.
+- __pref:__ このプロパティーは Android 1.X ではサポートされておらず、常に `false` を返します。
+- __type:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __streetAddress:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __locality:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __region:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __postalCode:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
+- __country:__ このプロパティーは Android 1.X ではサポートされておらず、常に `null` を返します。
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
+BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 --------------------------------------------
-- __pref:__ This property is not supported on Blackberry devices and will always return `false`.
-- __type:__ Partially supported.  Only one each of "Work" and "Home" type addresses can be stored per contact. 
-- __formatted:__ Partially supported.  Will return concatenation of all BlackBerry address fields.
-- __streetAddress:__ Supported.  Will return concatenation of BlackBerry __address1__ and __address2__ address fields. 
-- __locality:__ Supported.  Stored in BlackBerry __city__ address field.
-- __region:__ Supported.  Stored in BlackBerry __stateProvince__ address field.
-- __postalCode:__ Supported.  Stored in BlackBerry __zipPostal__ address field.
-- __country:__ Supported.
 
-iOS Quirks
+- __pref:__ このプロパティーは BlackBerry ではサポートされておらず、常に `false` を返します。
+- __type:__ 部分的にサポートされています。 一つの連絡先につき、一つずつの "Work" と "Home" タイプの住所が保存できます。
+- __formatted:__ 部分的にサポートされています。 BlackBerry のアドレスフィールドの連結を返します。
+- __streetAddress:__ サポートされています。 BlackBerry の __address1__ と __address2__ アドレスフィールドの連結を返します。
+- __locality:__ サポートされています。 BlackBerry の __city__ アドレスフィールドに保存されます。
+- __region:__ サポートされています。 BlackBerry の __stateProvince__ アドレスフィールドに保存されます。
+- __postalCode:__ サポートされています。 BlackBerry の __zipPostal__ アドレスフィールドに保存されます。
+- __country:__ サポートされています。
+
+iOS に関する注意点
 ----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __formatted:__ Not currently supported.
+
+- __pref:__ このプロパティーは iOS ではサポートされておらず、常に `false` を返します。
+- __formatted:__ サポートされていません。

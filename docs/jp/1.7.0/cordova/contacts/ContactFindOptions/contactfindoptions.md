@@ -20,94 +20,94 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactFindOptions
 ==================
 
-Contains properties that can be used to filter the results of a `contacts.find` operation.
+`contacts.find` 関数の検索結果を絞るために使用するプロパティーを表します。
 
-Properties
+プロパティー
 ----------
 
-- __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+- __filter:__ 絞り込み検索用の文字列を指定します _(DOMString)_ (デフォルト: "")
+- __multiple:__ 検索時に複数の連絡先を返すかどうかを指定します _(Boolean)_ (デフォルト: false)
 
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
-	// success callback
+    // 呼び出し成功
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			alert(contacts[i].displayName);
-		}
+        for (var i=0; i<contacts.length; i++) {
+            alert(contacts[i].displayName);
+        }
     };
 
-	// error callback
+    // 呼び出し失敗
     function onError(contactError) {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
-	// specify contact search criteria
+    // 検索条件を指定
     var options = new ContactFindOptions();
-	options.filter="";			// empty search string returns all contacts
-	options.multiple=true;		// return multiple results
-	filter = ["displayName"];	// return contact.displayName field
-	
-	// find contacts
+    options.filter="";          // 空のサーチは全ての連絡先を返す
+    options.multiple=true;      // 複数の結果を返す
+    filter = ["displayName"];   // contact.displayName フィールドを返す
+
+    // 連絡先を検索します
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			// specify contact search criteria
-		    var options = new ContactFindOptions();
-			options.filter="";			// empty search string returns all contacts
-			options.multiple=true;		// return multiple results
-			filter = ["displayName"];	// return contact.displayName field
+            // 検索条件を指定
+            var options = new ContactFindOptions();
+            options.filter="";          // 空のサーチは全ての連絡先を返す
+            options.multiple=true;      // 複数の結果を返す
+            filter = ["displayName"];   // contact.displayName フィールドを返す
 
-			// find contacts
-		    navigator.contacts.find(filter, onSuccess, onError, options);
+            // 連絡先を検索します
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
-        // onSuccess: Get a snapshot of the current contacts
+
+        // onSuccess: 連絡先の取得に成功した場合
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				alert(contacts[i].displayName);
-			}
-		};
-    
-        // onError: Failed to get the contacts
+        function onSuccess(contacts) {
+            for (var i=0; i<contacts.length; i++) {
+                alert(contacts[i].displayName);
+            }
+        };
+
+        // onError: 連絡先の取得に失敗した場合
         //
         function onError(contactError) {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
+        <h1>使用例</h1>
+        <p>連絡先の検索</p>
       </body>
     </html>
 

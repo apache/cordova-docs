@@ -20,58 +20,58 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contacts.create
 ===============
 
-Returns a new Contact object.
+新しい Contact オブジェクトを作成します。
 
     var contact = navigator.contacts.create(properties);
 
-Description
+概要
 -----------
 
-contacts.create is a synchronous function that returns a new `Contact` object.
+contacts.create 関数は、新しい `Contact` オブジェクトを同期的に作成します。
 
-This method does not persist the Contact object to the device contacts database.  To persist the Contact object to the device, invoke the `Contact.save` method.
+この関数で作成した Contact オブジェクトは、デバイスの連絡先データベースには残りません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` 関数を使用します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Bada 1.2
 
-Quick Example
+使用例
 -------------
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var myContact = navigator.contacts.create({"displayName": "Test User"});
-			myContact.note = "This contact has a note.";
-			console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+            var myContact = navigator.contacts.create({"displayName": "Test User"});
+            myContact.note = "この連絡先のメモ";
+            console.log("連絡先, " + myContact.displayName + ", メモ: " + myContact.note);
         }
-    
+
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Create Contact</p>
+        <h1>使用例</h1>
+        <p>連絡先を作成します</p>
       </body>
     </html>

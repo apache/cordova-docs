@@ -20,21 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactSuccess
 ==============
 
-Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
+`contacts.find` メソッドの実行に成功した場合に呼び出される、 `Contact` 配列を提供するコールバック関数です。
 
     function(contacts) {
-        // Do something
+        // 任意のコード
     }
 
-Parameters
+パラメーター
 ----------
 
-- __contacts:__ The contact array resulting from a find operation. (`Contact`)
+- __contacts:__ 検索の結果の連絡先配列 (`Contact`)
 
-Example
+使用例
 -------
 
     function contactSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			console.log("Display Name = " + contacts[i].displayName;
+        for (var i=0; i<contacts.length; i++) {
+            console.log("表示名 = " + contacts[i].displayName);
+        }
     }

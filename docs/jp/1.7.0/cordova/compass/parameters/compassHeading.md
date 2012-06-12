@@ -32,7 +32,7 @@ compassHeading
 概要
 -----------
 
-`CompassHeading` オブジェクトは、 `compassSuccess` コールバック関数を通じてユーザに返されます。
+`CompassHeading` オブジェクトは、 `compassSuccess` コールバック関数を通じてユーザーに返されます。
 
 Android に関する注意点
 --------------

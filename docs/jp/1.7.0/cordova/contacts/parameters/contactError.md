@@ -20,8 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactError
 ============
 
-Error callback function for contact functions.
+連絡先情報の取得に失敗したときに呼び出されるコールバック関数です。
 
     function(error) {
-        // Handle the error
+        // エラー処理
     }
