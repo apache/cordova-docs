@@ -20,75 +20,75 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 device.platform
 ===============
 
-Get the device's operating system name.
+デバイスの OS 名を取得します。
 
     var string = device.platform;
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Depending on the device, a few examples are:
-    //   - "Android"
-    //   - "BlackBerry"
-    //   - "iPhone"
-    //   - "webOS"
-    //   - "WinCE"
+    // デバイスによって異なります。例:
+    // - "Android"
+    // - "BlackBerry"
+    // - "iPhone"
+    // - "webOS"
+    // - "WinCE"
     var devicePlatform = device.platform;
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-    
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Version: '  + device.version  + '<br />';
+
+            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
+                                'デバイス Cordova: '    + device.cordova    + '<br />' +
+                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
+                                'デバイス UUID: '       + device.uuid       + '<br />' +
+                                'デバイスバージョン: '  + device.version    + '<br />';
         }
 
         </script>
       </head>
       <body>
-        <p id="deviceProperties">Loading device properties...</p>
+        <p id="deviceProperties">デバイスプロパティーを読込中...</p>
       </body>
     </html>
-    
-iPhone Quirks
+
+iPhone に関する注意点
 -------------
 
-The iPhone returns `iPhone` as the platform. The iPad returns `iPad` as the platform.  In the simulator they will return `iPhone Simulator` and `iPad Simulator` respectively.  These are inaccurate in all cases because Apple has rebranded the iPhone operating system as `iOS`.
+iPhone は `iPhone` をプラットフォームとして返します。 iPad は `iPad` をプラットフォームとして返します。シミュレータの場合は、 `iPhone Simulator` や `iPad Simulator` をそれぞれ返します。 Apple は iPhone の OS の名称を `iOS` に変更したので、この返り値は厳密には正確でないという点に注意してください。
 
-BlackBerry Quirks
+BlackBerry に関する注意点
 -----------------
 
-Devices may return the device platform version instead of the platform name.  For example, the Storm2 9550 would return '2.13.0.95' or similar.
+OS 名ではなくプラットフォームのバージョンを返す可能性があります。例えば、 Storm2 9550 の場合 '2.13.0.95' を返すことがあります。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -----------------
 
-Windows Phone 7 devices report platform as 'WinCE'
+Windows Phone 7 デバイスはプラットフォームとして 'WinCE' を返します。

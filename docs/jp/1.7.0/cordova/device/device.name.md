@@ -20,88 +20,88 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 device.name
 ===========
 
-Get the device's model name.
+デバイスのモデル名を取得します。
 
     var string = device.name;
-    
-Description
+
+概要
 -----------
 
-`device.name` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
+`device.name` はデバイスのモデル名を返します。この値はデバイスの製造者によって設定されるため、同じモデルでも異なるバージョンで値が異なる場合があります。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Android:    Nexus One       returns "Passion" (Nexus One code name)
-    //             Motorola Droid  returns "voles"
-    // BlackBerry: Torch 9800      returns "9800"
-    // iPhone:     All devices     returns a name set by iTunes e.g. "Joe's iPhone"
+    // Android:    Nexus One       はコードネームである "Passion" を返します
+    //             Motorola Droid  は "voles" を返します
+    // BlackBerry: Torch 9800      は "9800" を返します
+    // iPhone:     iTunes でセットした名前、 "Joe's iPhone" などを返します
     //
     var name = device.name;
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-    
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Version: '  + device.version  + '<br />';
+
+            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
+                                'デバイス Cordova: '    + device.cordova    + '<br />' +
+                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
+                                'デバイス UUID: '       + device.uuid       + '<br />' +
+                                'デバイスバージョン: '  + device.version    + '<br />';
         }
 
         </script>
       </head>
       <body>
-        <p id="deviceProperties">Loading device properties...</p>
+        <p id="deviceProperties">デバイスプロパティーを読込中...</p>
       </body>
     </html>
 
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL).
-    - The product name is often the code name given during production.
-    - e.g. Nexus One returns "Passion", Motorola Droid returns "voles"
+- [モデル名](http://developer.android.com/reference/android/os/Build.html#MODEL) の代わりに [製品名](http://developer.android.com/reference/android/os/Build.html#PRODUCT) を取得します。
+    - 製品名はほとんどの場合、生産時のコードネームになります。
+    - 例: Nexus One は "Passion" を返し、 Motorola Droid は "voles" を返します。
 
-iPhone Quirks
+iPhoneに関する注意点
 -------------
 
-- Gets the [device's custom name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) instead of the [device model name](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1).
-    - The custom name is set by the owner in iTunes.
-    - e.g. "Joe's iPhone"
+- [モデル名](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW1) の代わりに [デバイスのカスタムネーム](http://developer.apple.com/iphone/library/documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html#//apple_ref/doc/uid/TP40006902-CH3-SW13) を取得します。
+    - カスタムネームは iTunes のオーナーによって設定されます。
+    - 例: "Joe's iPhone"
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-- returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'
+- 製造時のデバイス名を返します。例: 'SGH-i917'
 
-Bada Quirks
+Bada に関する注意点
 -----------
-- returns the manufacturer model name. For example 'Samsung Wave S8500'
+- 製造時のモデル名を返します。 例: 'Samsung Wave S8500'

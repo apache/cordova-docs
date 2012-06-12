@@ -20,82 +20,82 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 device.uuid
 ===========
 
-Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
+デバイスの固定 ID ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)) を取得します。
 
     var string = device.uuid;
-    
-Description
+
+概要
 -----------
 
-The details of how a UUID is generated are determined by the device manufacturer and specific to the device's platform or model.
+UUID の生成方法については、デバイスの製造者やプラットフォームによって決定されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Android: Returns a random 64-bit integer (as a string, again!)
-    //          The integer is generated on the device's first boot
+    // Android: ランダムな64ビットの数値を文字列として返します
+    //          数値はデバイスの初回起動時に生成されます
     //
-    // BlackBerry: Returns the PIN number of the device
-    //             This is a nine-digit unique integer (as a string, though!)
+    // BlackBerry: デバイスの PIN 番号を文字列として返します
+    //             この番号は9桁の一意な数値です
     //
-    // iPhone: (Paraphrased from the UIDevice Class documentation)
-    //         Returns a string of hash values created from multiple hardware identifies.
-    //         It is guaranteed to be unique for every device and cannot be tied
-    //         to the user account.
-    // Windows Phone 7 : Returns a hash of device+current user, 
-    // if the user is not defined, a guid is generated and will persist until the app is uninstalled
-    // 
+    // iPhone: (UIDevice クラスのドキュメントに記載)
+    //         ハードウエア ID に基づくハッシュ値を返します
+    //         デバイスに固有でユーザアカウントとは
+    //         リンクされていません
+    // Windows Phone 7 : デバイスユーザのハッシュ値を返します
+    // もしユーザが定義されていない場合、ガイドが生成され、アプリがアンインストールするまで存続します
+    //
     var deviceID = device.uuid;
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-    
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Version: '  + device.version  + '<br />';
+
+            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
+                                'デバイス Cordova: '    + device.cordova    + '<br />' +
+                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
+                                'デバイス UUID: '       + device.uuid       + '<br />' +
+                                'デバイスバージョン: '  + device.version    + '<br />';
         }
 
         </script>
       </head>
       <body>
-        <p id="deviceProperties">Loading device properties...</p>
+        <p id="deviceProperties">デバイスプロパティーを読込中...</p>
       </body>
     </html>
 
-iOS Quirk
+iOS に関する注意点
 -------------
 
-The uuid for iOS is not unique for a device, but is unique per application per install. This will change if you delete the app and re-install, and possibly also when you upgrade your iOS version, or even upgrade your app per version (as we've seen in iOS 5.1). Not a reliable value.
+iOS の UUID はデバイスによって一意ではありませんが、インストールされたアプリごとに一意です。もしアプリを削除し再インストールすると、この値は変化します。また、 iOS のバージョンアップをしたとき、もしくはアプリのバージョンアップをしたときにも変化する可能性があります (iOS 5.1 で現象を確認) 。安定した値ではありません。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-The uuid for Windows Phone 7 requires the permission ID_CAP_IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capablility is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.
+Windows Phone 7 の UUID には IDCAPIDENTITY_DEVICE の許可が必要です。 Microsoft はこのプロパティを近い将来サポートしなくなります。もし機能が有効でなければ、アプリが永続的な guid を生成し、インストールされている限り保持されます。

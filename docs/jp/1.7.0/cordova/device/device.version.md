@@ -20,63 +20,63 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 device.version
 ==============
 
-Get the operating system version.
+OS のバージョンを取得します。
 
     var string = device.version;
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android 2.1+
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Android:    Froyo OS would return "2.2"
-    //             Eclair OS would return "2.1", "2.0.1", or "2.0"
-    //             Version can also return update level "2.1-update1" 
+    // Android:     Froyo の場合は "2.2" を返す
+    //              Eclair の場合は "2.1", "2.0.1" もしくは "2.0" を返す
+    //              アップデートが行われると "2.1-update1" のように返す
     //
-    // BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
+    // BlackBerry:  OS 6.0 を搭載した Torch 9800 の場合は "6.0.0.600" を返す
     //
-    // iPhone:     iOS 3.2 returns "3.2"
+    // iPhone:      iOS 3.2 は "3.2" を返す
     //
-    // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+    // Windows Phone 7: 現在の OS バージョンを返す、例: Mango は7.10.7720を返す
     var deviceVersion = device.version;
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-        
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Version: '  + device.version  + '<br />';
+
+            element.innerHTML = 'デバイス名: '          + device.name       + '<br />' +
+                                'デバイス Cordova: '    + device.cordova    + '<br />' +
+                                'デバイスプラットフォーム: ' + device.platform + '<br />' +
+                                'デバイス UUID: '       + device.uuid       + '<br />' +
+                                'デバイスバージョン: '  + device.version    + '<br />';
         }
 
         </script>
       </head>
       <body>
-        <p id="deviceProperties">Loading device properties...</p>
+        <p id="deviceProperties">デバイスプロパティーを読込中...</p>
       </body>
     </html>

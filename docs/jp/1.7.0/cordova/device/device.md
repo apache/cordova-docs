@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Device
 ======
 
-> The `device` object describes the device's hardware and software.
+> `device` オブジェクトはデバイスのハードウェアとソフトウェアの情報を表します。
 
-Properties
+プロパティー
 ----------
 
 - device.name
@@ -31,12 +31,12 @@ Properties
 - device.uuid
 - device.version
 
-Variable Scope
+変数の範囲
 --------------
 
-Since `device` is assigned to the `window` object, it is implicitly in the global scope.
+`device` オブジェクトは `window` オブジェクトに割当たれるため、暗黙的にグローバルスコープとして扱われます。
 
-    // These reference the same `device`
+    // 下記は同じ `device` オブジェクト
     //
     var phoneName = window.device.name;
     var phoneName = device.name;
