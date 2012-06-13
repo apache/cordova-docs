@@ -47,11 +47,11 @@ This guide describes how to set up your development environment for Cordova and 
 - In the root directory of your project, create two new directories:
  	- **/libs**
  	- **assets/www**
-- Copy **cordova-1.7.0.js** from your Cordova download earlier to **assets/www**
-- Copy **cordova-1.7.0.jar** from your Cordova download earlier to **/libs**
+- Copy **cordova-1.8.1.js** from your Cordova download earlier to **assets/www**
+- Copy **cordova-1.8.1.jar** from your Cordova download earlier to **/libs**
 - Copy **xml** folder from your Cordova download earlier to **/res**
 
-- Verify that **cordova-1.7.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.7.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- Verify that **cordova-1.8.1.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.8.1.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 
     ![](img/guide/getting-started/android/buildPath.jpg)
 
@@ -104,7 +104,7 @@ This guide describes how to set up your development environment for Cordova and 
         <html>
         <head>
         <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>

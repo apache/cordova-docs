@@ -79,7 +79,9 @@ Permissions
 
 ### Bada
 
-    @TODO
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
 
 ### BlackBerry WebWorks
 

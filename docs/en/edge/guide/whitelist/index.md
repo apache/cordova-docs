@@ -56,50 +56,101 @@ Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
 Android
 -------
 
-The access rules are found in cordova.xml in res/xml/cordova.xml.  These rules follow the [W3C Widget Access][1] specification such that the
-access elements control the whitelist.  For example:
+### Details
 
-    <access origin="http://127.0.0.1*"/>
+The whitelisting rules are found in `res/xml/cordova.xml` and declared with the element `<access origin="..." />`.
+
+Android has full support for the whitelisting syntax.
+
+### Syntax
+
+Access to [google.com][2]:
+
+    <access origin="http://google.com" />
 
 Bada
 ----
 
+Domain whitelisting is unsupported on Bada. By default, all domains are accessible.
+
 BlackBerry
 ----------
+
+### Details
+
+The whitelisting rules are found in `www/config.xml` and declared with the element `<access uri="..." />`.
+
+For a complete reference, see the [BlackBerry WebWorks Access Element documentation][8].
+
+### Syntax
+
+Access to [google.com][2]:
+
+    <access uri="http://google.com" subdomains="false" />
+
+Access to  [maps.google.com][4]:
+
+    <access uri="http://maps.google.com" subdomains="false" />
+
+Access to all the subdomains on [google.com][2]:
+
+    <access uri="http://google.com" subdomains="true" />
+
+Access to all domains, including `file://` protocol:
+
+    <access uri="*" subdomains="true" />
 
 iOS
 ---
 
-1. Search for the **Cordova.plist** file in your project. 
-2. Add a new **String** value to the **ExternalHosts** key. 
+### Details
 
-For the value of the String, just include the **hostname / IP Address** of the URL **only** without the scheme or the path of the URL.
+1. Open `Cordova.plist`.
+    - In Xcode, it is found at `AppName/Supporting Files/Cordova.plist`
+    - In the directory, it is found at `AppName/Cordova.plist`
+2. Add a new `String` value under the `ExternalHosts` key.
+    - We recommend using Xcode to avoid editing raw XML.
 
-For example, if you have a URL like this: **http://**my.phonegap.com**:443?is_awesome=yes**, the whitelist value would be:
+Domain protocols (e.g. `http://` and `https://`) are not supported by iOS.
 
-        my.phonegap.com
+### Syntax
 
-You can also use **wildcards** in the value. For example, if you want to **allow all subdomains**, you would use this value:
+Access to [google.com][2] and the secure [google.com][3] (`https://`):
 
-        *.phonegap.com
-        
-Similarly, if you want to allow all TLDs also (.com, .net, etc) you would do this:
+    google.com
 
-        *.phonegap.*
-        
-To allow all domains, you would just add ** "*" ** like so, this will effectively **turn off the whitelist**:
+Access to the subdomain [maps.google.com][4]:
 
-        * 
-        
+    maps.google.com
+
+Access to all the subdomains on [google.com][2] (e.g. [mail.google.com][5] and [docs.google.com][6]):
+
+    *.google.com
+
+Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
+
+    *
+
+Wildcards on iOS (`*`) are more flexible than the [W3C Widget Access][1] specification.
+
+Access to all subdomains and TLDs (`.com`, `.net`, etc):
+
+    *.google.*
 
 Symbian
 -------
 
+Domain whitelisting is unsupported on Symbian. By default, all domains are accessible.
+
 webOS
 -----
 
+Domain whitelisting is unsupported on webOS. By default, all domains are accessible.
+
 Windows Phone
 -------------
+
+Domain whitelisting is unsupported on Windows Phone. By default, all domains are accessible.
 
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
@@ -108,3 +159,4 @@ Windows Phone
 [5]: http://mail.google.com
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
+[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
