@@ -20,62 +20,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 backbutton
 ===========
 
-This is an event that fires when the user presses the back button.
+このイベントはユーザが戻るボタンを押したときに呼び出されます。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-If you need to override the default back button behaviour you can register an event listener for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
+もしデフォルトの戻るボタンの挙動を上書きしたい場合は、 'backbutton' イベントにイベントリスナーを登録することができます。戻るボタンの挙動を上書きするために、他のメソッドを呼び出す必要はありません。ただ 'backbutton' イベントリスナーを登録するだけで大丈夫です。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
-- Windows Phone 7 ( Mango )
+- BlackBerry WebWorks (OS 5.0 以上)
+- Windows Phone 7 (Mango)
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("backbutton", onBackKeyDown, false);
 
     function onBackKeyDown() {
-        // Handle the back button
+        // メニューボタン関する操作を記述
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Back Button Example</title>
+        <title>Cordova Back Button 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordovaのロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to call Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Register the event listener
+            // イベントリスナーを登録
             document.addEventListener("backbutton", onBackKeyDown, false);
         }
-        
-        // Handle the back button
+
+        // メニューボタン関する操作を記述
         //
         function onBackKeyDown() {
         }

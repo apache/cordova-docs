@@ -20,72 +20,72 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 batterylow
 ===========
 
-This is an event that fires when a Cordova application detects the battery has reached the low level threshold.
+このイベントはバッテリー残量が低下したことを Cordova アプリケーションが検知したときに呼び出されます。
 
     window.addEventListener("batterylow", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-This event that fires when a Cordova application detects the percentage of battery has reached the low battery threshold. This value is device specific.
+このイベントはバッテリー残量のパーセンテージが低下の閾値に達したことを Cordova アプリケーションが検知したときに呼び出されます。この値はデバイス固有です。
 
-The batterylow handler will be called with an object that contains two properties:
+batterylow ハンドラーは以下の2つのプロパティーを含むオブジェクトを伴って呼び出されます:
 
-- __level:__ The percentage of battery (0-100). _(Number)_
-- __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
+- __level:__ バッテリーのパーセンテージ (0-100) _(Number)_
+- __isPlugged:__ デバイスが充電器に接続されているかどうかを表します _(Boolean)_
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 
-Quick Example
+使用例
 -------------
 
     window.addEventListener("batterylow", onBatteryLow, false);
 
     function onBatteryLow(info) {
-        // Handle the battery low event
-       	alert("Battery Level Low " + info.level + "%"); 
+        // バッテリー関する操作を記述
+        alert("バッテリー残量が低下しています " + info.level + "%");
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Cordova Device Ready 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
-        // 
-	    function onLoad() {
-    	    document.addEventListener("deviceready", onDeviceReady, false);
-    	}
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    window.addEventListener("batterylow", onBatteryLow, false);
+            window.addEventListener("batterylow", onBatteryLow, false);
         }
 
-        // Handle the batterylow event
+        // バッテリー関する操作を記述
         //
         function onBatteryLow(info) {
-	       	alert("Battery Level Low " + info.level + "%"); 
+            alert("バッテリー残量が低下しています " + info.level + "%");
         }
-        
+
         </script>
       </head>
       <body onload="onLoad()">

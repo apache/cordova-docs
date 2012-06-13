@@ -20,64 +20,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 deviceready
 ===========
 
-This is an event that fires when Cordova is fully loaded.
+このイベントは Cordova が完全にロードされたときに呼び出されます。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-This is a very important event that every Cordova application should use.
+このイベントはすべての Cordova アプリケーションで使用される重要なイベントです。
 
-Cordova consists of two code bases: native and JavaScript. While the native code is loading, a custom loading image is displayed. However, JavaScript is only loaded once the DOM loads. This means your web application could, potentially, call a Cordova JavaScript function before it is loaded.
+Cordova はネイティブと JavaScript の2つのコードで形成されます。ネイティブコードがロードされている間は、カスタムのロード画面が表示されます。しかし、 JavaScript は DOM が読み込まれるまではロードされません。そのため、 Cordova の JavaScript 関数群がロードされる前に、それらの関数が呼ばれる可能性があります。
 
-The Cordova `deviceready` event fires once Cordova has fully loaded. After the device has fired, you can safely make calls to Cordova function.
+Cordova の `deviceready` イベントは、 Cordova が完全にロードした後で呼び出されます。安全に Cordova 関数を呼び出すためには、デバイスが完全に呼び出されたことを確認してください。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once the HTML document's DOM has loaded.
+通常は、 HTML の DOM が読み込まれた後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-        // Now safe to use the Cordova API
+        // Cordova API を安全に使用できます
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Cordova Device Ready 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Now safe to use the Cordova API
+            // Cordova API を安全に使用できます
         }
 
         </script>

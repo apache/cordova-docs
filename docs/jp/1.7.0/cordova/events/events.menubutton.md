@@ -20,62 +20,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 menubutton
 ===========
 
-This is an event that fires when the user presses the menu button.
+このイベントはユーザーがメニューボタンを押したときに呼び出されます。
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-If you need to override the default menu button behaviour you can register an event listenter for the 'menubutton' event.
+もしデフォルトのメニューボタンの挙動を上書きしたい場合は、 'menubutton' イベントにイベントリスナーを登録することができます。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
 
     function onMenuKeyDown() {
-        // Handle the back button
+        // メニューボタン関する操作を記述
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Cordova Menu Button Example</title>
+        <title>Cordova Menu Button 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Register the event listener
+            // イベントリスナーを登録
             document.addEventListener("menubutton", onMenuKeyDown, false);
         }
 
-        // Handle the menu button
+        // メニューボタン関する操作を記述
         //
         function onMenuKeyDown() {
         }

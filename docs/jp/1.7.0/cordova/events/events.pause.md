@@ -20,62 +20,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 pause
 ===========
 
-This is an event that fires when a Cordova application is put into the background.
+このイベントは Cordova アプリケーションがバックグラウンド動作になったときに呼び出されます。
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
+Cordova はネイティブと JavaScript の2つのコードで形成されます。 ネイティブコードがアプリをバックグラウンド動作にしているとき、 pause イベントが呼び出されます。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("pause", onPause, false);
 
     function onPause() {
-        // Handle the pause event
+        // pause イベントに関する操作を記述
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Pause Example</title>
+        <title>Cordova Pause 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    document.addEventListener("pause", onPause, false);
+            document.addEventListener("pause", onPause, false);
         }
 
-        // Handle the pause event
+        // pause イベントに関する操作を記述
         //
         function onPause() {
         }
@@ -86,12 +86,12 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
+iOS に関する注意点
 --------------------------
-In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the Cordova API. These will only be processed when the app resumes (processed on the next run-loop).
+pause ハンドラー内では、 Objective-C を利用するあらゆる呼び出し、または alerts のようなインタラクティブな呼び出しが一切動作しません。これは、 console.log やプラグインまたは Cordova API からのすべての呼び出しが呼び出せないことを意味します。これらは、アプリを再開されたときに実行されます (次の run-loop で実行されます) 。
 
-- __resign__ event 
+- __resign__ イベント
 
-    This iOS specific event is available as a variant of the **pause** event, and is often used to detect when the "Lock" button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **pause** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background). 
-    
-    Under iOS 5, if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.
+    この iOS 固有のイベントは pause イベントの一部として使用でき、アプリ実行中にオン／オフボタンが押されたことを検知するのに使われます。 もしアプリ (とデバイス) がマルチタスク可能なら、このイベントは iOS 5 でのみ続く **pause** と対になります (事実上マルチタスク可能な iOS 5 のすべてのロックされたアプリはバックグラウンド操作となります) 。
+
+    iOS 5 で、もしデバイスがロック状態でもまだアプリを動かしたいのなら、アプリに対してマルチタスク機能を無効 (UIApplicationExitsOnSuspend - YES) にする必要があります。これは、 iOS 4 の場合と異なります。 iOS 4 の場合は、デバイスロック状態でアプリを動作させることと、マルチタスク機能の設定は関係ありません。

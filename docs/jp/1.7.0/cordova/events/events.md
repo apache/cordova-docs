@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Events
 ======
 
-> Cordova lifecycle events.
+> Cordova ライフサイクルのイベントです。
 
 Event Types
 -----------

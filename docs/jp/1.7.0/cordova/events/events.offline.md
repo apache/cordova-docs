@@ -20,62 +20,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 offline
 ===========
 
-This is an event that fires when a Cordova application is offline (not connected to the Internet).
+このイベントは Cordova アプリケーションがオフライン (インターネットに接続) になったときに呼び出されます。
 
-    document.addEventListener("offline", yourCallbackFunction, false);
+    document.addEventListener("online", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-When the application's network connection changes to being offline, the offline event is fired.  
+アプリのネットワーク接続がオフラインになったとき、 offline イベントが呼び出されます。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("offline", onOffline, false);
 
     function onOffline() {
-        // Handle the offline event
+        // offlineイベントに関する操作を記述
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Offline Example</title>
+        <title>Cordova Offline 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    document.addEventListener("offline", onOffline, false);
+            document.addEventListener("offline", onOffline, false);
         }
 
-        // Handle the offline event
+        // offline イベントに関する操作を記述
         //
         function onOffline() {
         }
@@ -86,10 +86,10 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
+iOS に関する注意点
 --------------------------
-During initial startup, the first offline event (if applicable) will take at least a second to fire.
+初回起動時、最初の offline イベントは少なくとも起動に1秒かかります。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 --------------------------
-When running in the Emulator, the connection.status of the device is always unknown, and this event will NOT fire.
+エミュレータで起動している場合、デバイスの connection.status は常に unknown (不明) であるため、このイベントは呼び出されません。

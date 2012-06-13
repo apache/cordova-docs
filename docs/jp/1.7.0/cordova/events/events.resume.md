@@ -20,62 +20,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 resume
 ===========
 
-This is an event that fires when a Cordova application is retrieved from the background.
+このイベントは Cordova アプリケーションがバックグラウンドから復帰したときに呼び出されます。
 
     document.addEventListener("resume", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.  
+Cordova はネイティブと JavaScript の2つのコードで形成されます。ネイティブコードがアプリをバックグラウンドから復帰させるとき、 resume イベントが呼び出されます。
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7
 
-Quick Example
+使用例
 -------------
 
     document.addEventListener("resume", onResume, false);
 
     function onResume() {
-        // Handle the resume event
+        // resume イベントに関する操作を記述
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Resume Example</title>
+        <title>Cordova Resume 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             document.addEventListener("resume", onResume, false);
         }
 
-        // Handle the resume event
+        // resume イベントに関する操作を記述
         //
         function onResume() {
         }
@@ -86,22 +86,22 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
+iOS に関する注意点
 --------------------------
-Any calls to console.log during your **pause** event handler will be run now when the app resumes, see the iOS Quirks section for the **pause** event for an explanation. 
+アプリが復帰したとき、 **pause** イベントハンドラー中の console.log への呼び出しが走ります。 **pause** イベントの iOS に関する注意点のセクションに詳細を記載しています。
 
-Interactive functions like `alert` when the **resume** event fires will need to be wrapped in a `setTimeout` call with a timeout value of zero, or else the app will hang. e.g.
+**resume** イベントが呼び出されるとき、 `alert` のようなインタラクティブな関数はタイムアウト値を0にした `setTimeout` 関数によってラップされる必要があります。
 
     document.addEventListener("resume", onResume, false);
 
     function onResume() {
-       setTimeout(function() {
-              // TODO: do your thing!
-            }, 0);
+        setTimeout(function() {
+                // 任意のコード
+              }, 0);
     }
 
-- __active__ event 
+- __active__ イベント
 
-    This iOS specific event is available as a variant of the **resume** event, and is often used to detect when the "Lock" button has been pressed to unlock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **resume** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background). 
-    
-    Under iOS 5,  if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.
+    この iOS 固有のイベントは **resume** イベントの一部として使用でき、アプリ実行中にオン／オフボタンが押されたことを検知するのに使われます。もしアプリ (とデバイス) がマルチタスク可能なら、このイベントは iOS 5 でのみ続く **resume** と対になります (事実上マルチタスク可能な iOS 5 のすべてのロックされたアプリはバックグラウンド操作となります) 。
+
+    iOS 5 で、もしデバイスがロック状態でもまだアプリを動かしたいのなら、アプリに対してマルチタスク機能を無効 (UIApplicationExitsOnSuspend - YES) にする必要があります。これは、 iOS 4 の場合と異なります。 iOS 4 の場合は、デバイスロック状態でアプリを動作させることと、マルチタスク機能の設定は関係ありません。

@@ -20,81 +20,80 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 batterystatus
 ===========
 
-This is an event that fires when a Cordova application detects a change in the battery status.
+このイベントはバッテリーのステータスが変化したことを Cordova アプリケーションが検知したときに呼び出されます。
 
     window.addEventListener("batterystatus", yourCallbackFunction, false);
 
-Details
+詳細
 -------
 
-This event that fires when a Cordova application detects the percentage of battery has changed by at least 1 percent. It is also fired if the device has been plugged in or un-plugged.
+このイベントはバッテリー残量のパーセンテージが1パーセントでも変化したことを Cordova アプリケーションが検知したときに呼び出されます。 また、デバイスが充電器に接続されたとき、接続が解除されたときも呼び出されます。
 
-The battery status handler will be called with an object that contains two properties:
+battery status ハンドラーは以下の2つのプロパティーを含むオブジェクトを伴って呼び出されます:
 
-- __level:__ The percentage of battery (0-100). _(Number)_
-- __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
+- __level:__ バッテリーのパーセンテージ (0-100) _(Number)_
+- __isPlugged:__ デバイスが充電器に接続されているかどうかを表します _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+通常は、 Cordova の 'deviceready' イベントを受け取った後、 `window.addEventListener` を通じてイベントリスナーをセットします。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
-- Windows Phone 7 ( Mango )
+- BlackBerry WebWorks (OS 5.0 以上)
+- Windows Phone 7 (Mango)
 
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 ----------------------
 
-The `level` property is unavailable as Windows Phone 7 does not provide
-native APIs for determining battery level. The `isPlugged` parameter
-_is_ supported.
+Windows Phone 7 はバッテリー残量を取得するネイティブの API を提供していないため、
+level プロパティーは利用できません。 `isPlugged` パラメーターはサポートされています。
 
-Quick Example
+使用例
 -------------
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
 
     function onBatteryStatus(info) {
-        // Handle the online event
-       	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        // バッテリーに関する操作を記述
+        console.log("残量: " + info.level + " 充電器に接続: " + info.isPlugged);
     }
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Cordova Device Ready 使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // At this point, the document has loaded but cordova-1.7.0.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
-        // 
-	    function onLoad() {
-    	    document.addEventListener("deviceready", onDeviceReady, false);
-    	}
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.7.0.js はまだ完了していません。
+        // Cordova のロード完了とともに
+        // `deviceready` イベントが呼び出されます。
+        //
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-		    window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.addEventListener("batterystatus", onBatteryStatus, false);
         }
 
-        // Handle the batterystatus event
+        // バッテリーに関する操作を記述
         //
         function onBatteryStatus(info) {
-        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+            console.log("残量: " + info.level + " 充電器に接続: " + info.isPlugged);
         }
-        
+
         </script>
       </head>
       <body onload="onLoad()">
