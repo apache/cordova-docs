@@ -20,95 +20,95 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Coordinates
 ===========
 
-A set of properties that describe the geographic coordinates of a position.
+位置情報で使用される座標を格納します。
 
-Properties
+プロパティー
 ----------
 
-* __latitude__: Latitude in decimal degrees. _(Number)_
-* __longitude__: Longitude in decimal degrees. _(Number)_
-* __altitude__: Height of the position in meters above the ellipsoid. _(Number)_
-* __accuracy__: Accuracy level of the latitude and longitude coordinates in meters. _(Number)_
-* __altitudeAccuracy__: Accuracy level of the altitude coordinate in meters. _(Number)_
-* __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
-* __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
+* __latitude__: 緯度を数値で表します _(Number)_
+* __longitude__: 経度を数値で表します _(Number)_
+* __altitude__: 海抜からの高度をメートル単位で表します _(Number)_
+* __accuracy__: 位置の精度をメートル単位で表します _(Number)_
+* __altitudeAccuracy__: 高度の精度をメートル単位で表します _(Number)_
+* __heading__: 北から時計回りでのデバイスの方位を角度で表します _(Number)_
+* __speed__: 現在のデバイスのスピードをメートル/秒で表します _(Number)_
 
-Description
+概要
 -----------
 
-The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
+`Coordinates` オブジェクトは `Position` オブジェクトのプロパティーとして作成されます。 `Position` オブジェクトはコールバック関数を通してユーザーに返されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // onSuccess Callback
+    // 成功時のコールバック関数
     //
     var onSuccess = function(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
-              'Accuracy: '          + position.coords.accuracy          + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-              'Heading: '           + position.coords.heading           + '\n' +
-              'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + new Date(position.timestamp)      + '\n');
+        alert('緯度: '              + position.coords.latitude          + '\n' +
+              '経度: '              + position.coords.longitude         + '\n' +
+              '高度: '              + position.coords.altitude          + '\n' +
+              '位置精度: '          + position.coords.accuracy          + '\n' +
+              '高度精度: '          + position.coords.altitudeAccuracy  + '\n' +
+              '方位: '              + position.coords.heading           + '\n' +
+              '速度: '              + position.coords.speed             + '\n' +
+              'タイムスタンプ: '    + new Date(position.timestamp)      + '\n');
     };
 
-    // onError Callback
+    // エラー時のコールバック関数
     //
     var onError = function() {
-        alert('onError!');
+        alert('エラーが発生しました。');
     };
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Geolocation Position Example</title>
+        <title>位置情報の使用例</title>
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Set an event to wait for Cordova to load
+        // Cordovaの読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is loaded and Ready
+        // Cordova準備完了
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
-    
-        // Display `Position` properties from the geolocation
+
+        // `Position` プロパティーを表示
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');
-        
-            div.innerHTML = 'Latitude: '             + position.coords.latitude  + '<br/>' +
-                            'Longitude: '            + position.coords.longitude + '<br/>' +
-                            'Altitude: '             + position.coords.altitude  + '<br/>' +
-                            'Accuracy: '             + position.coords.accuracy  + '<br/>' +
-                            'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '<br/>' +
-                            'Heading: '              + position.coords.heading   + '<br/>' +
-                            'Speed: '                + position.coords.speed     + '<br/>';
+
+            div.innerHTML = '緯度: '        + position.coords.latitude      + '<br/>' +
+                            '経度: '        + position.coords.longitude     + '<br/>' +
+                            '高度: '        + position.coords.altitude      + '<br/>' +
+                            '位置精度: '    + position.coords.accuracy      + '<br/>' +
+                            '高度精度: '    + position.coords.altitudeAccuracy + '<br/>' +
+                            '方位: '        + position.coords.heading       + '<br/>' +
+                            '速度: '        + position.coords.speed         + '<br/>';
         }
-    
-        // Show an alert if there is a problem getting the geolocation
+
+        // エラー発生時に警告を表示
         //
         function onError() {
-            alert('onError!');
+            alert('エラーが発生しました。');
         }
 
         </script>
@@ -117,8 +117,8 @@ Full Example
         <div id="myDiv"></div>
       </body>
     </html>
-    
-Android Quirks
+
+Android に関する注意点
 -------------
 
-__altitudeAccuracy:__ This property is not support by Android devices, it will always return null.
+このプロパティーは Android ではサポートされておらず、常に null を返します。

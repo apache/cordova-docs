@@ -20,95 +20,95 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocation.clearWatch
 ======================
 
-Stop watching for changes to the device's location referenced by the `watchID` parameter.
+watch ID パラメーターによって参照されるデバイスの位置情報の監視を停止します。
 
     navigator.geolocation.clearWatch(watchID);
 
-Parameters
+パラメーター
 ----------
 
-- __watchID:__ The id of the `watchPosition` interval to clear. (String)
+- __watchID:__ `watchPosition` 関数での監視を停止したい watchID を表します (String)
 
-Description
+概要
 -----------
 
-Function `geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+`geolocation.clearWatch` 関数は、 `watchID` によって参照される `geolocation.watchPosition` 関数を停止させるによって、位置情報の監視を停止します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Options: retrieve the location every 3 seconds
+    // 3秒ごとに位置情報を取得する設定 (オプション)
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
 
-    // ...later on...
+    // ... 後に続く ...
 
     navigator.geolocation.clearWatch(watchID);
 
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Update every 3 seconds
+            // 3秒ごとに更新
             var options = { frequency: 3000 };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
             var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                                'Longitude: ' + position.coords.longitude     + '<br />' +
-                                '<hr />'      + element.innerHTML;
+            element.innerHTML = '緯度: ' + position.coords.latitude     + '<br />' +
+                                '経度: ' + position.coords.longitude    + '<br />' +
+                                '<hr />' + element.innerHTML;
         }
 
-        // clear the watch that was started earlier
-        // 
+        // 先に開始された監視を停止する
+        //
         function clearWatch() {
             if (watchID != null) {
                 navigator.geolocation.clearWatch(watchID);
                 watchID = null;
             }
         }
-    
-	    // onError Callback receives a PositionError object
-	    //
-	    function onError(error) {
-	      alert('code: '    + error.code    + '\n' +
-	            'message: ' + error.message + '\n');
-	    }
+
+        // エラー時のコールバック関数は PositionError オブジェクトを受けとる
+        //
+        function onError(error) {
+            alert('コード: '        + error.code    + '\n' +
+                  'メッセージ: '    + error.message + '\n');
+        }
 
         </script>
       </head>
       <body>
-        <p id="geolocation">Watching geolocation...</p>
-    	<button onclick="clearWatch();">Clear Watch</button>     
+        <p id="geolocation">位置情報を監視中...</p>
+        <button onclick="clearWatch();">監視の停止</button>
       </body>
     </html>

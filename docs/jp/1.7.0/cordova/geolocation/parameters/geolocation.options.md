@@ -20,22 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationOptions
 ==================
 
-Optional parameters to customize the retrieval of the geolocation.
+位置情報取得の設定をカスタマイズするためのパラメーターを表します。
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
-Options
+オプション
 -------
 
-- __frequency:__ How often to retrieve the position in milliseconds. This option is not part of the W3C spec and will be removed in the future. maximumAge should be used instead. _(Number)_ (Default: 10000)
-- __enableHighAccuracy:__ Provides a hint that the application would like to receive the best possible results. _(Boolean)_
-- __timeout:__ The maximum length of time (msec) that is allowed to pass from the call to `geolocation.getCurrentPosition` or `geolocation.watchPosition` until the corresponding `geolocationSuccess` callback is invoked. _(Number)_
-- __maximumAge:__ Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
+- __frequency:__ 位置情報を取得する頻度をミリ秒で表します。 このオプションは W3C の仕様に含まれておらず、将来的には実装が廃止されます。 maximumAge を代わりに使用してください。 _(Number)_ (デフォルト: 10000)
+- __enableHighAccuracy:__ より精度の高い位置情報を取得するためのヒントを提供するかどうかを表します _(Boolean)_
+- __timeout:__ `geolocation.getCurrentPosition` または `geolocation.watchPosition` 関数が呼び出されたときに、それぞれに対応する `geolocationSuccess` コールバック関数が呼ばれるまでの最大経過時間をミリ秒単位で表します _(Number)_
+- __maximumAge:__ キャッシュされた位置情報の取得を許容する最大時間をミリ秒単位で表します _(Number)_
 
-Android Quirks
+Android に関する注意点
 --------------
 
-The Android 2.x simulators will not return a geolocation result unless the enableHighAccuracy option is set to true.
+Android 2.x のシミュレーターは enableHighAccuracy オプションが true にセットしない限り位置情報の取得結果を通知しません。
 
     { enableHighAccuracy: true }
 

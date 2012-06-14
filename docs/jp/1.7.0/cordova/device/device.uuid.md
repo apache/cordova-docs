@@ -98,4 +98,4 @@ iOS の UUID はデバイスによって一意ではありませんが、イン�
 Windows Phone 7 に関する注意点
 -------------
 
-Windows Phone 7 の UUID には IDCAPIDENTITY_DEVICE の許可が必要です。 Microsoft はこのプロパティを近い将来サポートしなくなります。もし機能が有効でなければ、アプリが永続的な guid を生成し、インストールされている限り保持されます。
+Windows Phone 7 の UUID には IDCAPIDENTITY_DEVICE の許可が必要です。 Microsoft はこのプロパティーを近い将来サポートしなくなります。もし機能が有効でなければ、アプリが永続的な guid を生成し、インストールされている限り保持されます。

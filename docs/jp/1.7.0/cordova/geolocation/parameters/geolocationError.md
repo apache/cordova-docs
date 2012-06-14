@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationError
 ================
 
-The user's callback function that is called when there is an error for geolocation functions.
+位置情報取得関数にエラーが発生したときに呼び出されるコールバック関数です。
 
     function(error) {
-        // Handle the error
+        // エラー処理
     }
 
-Parameters
+パラメーター
 ----------
 
-- __error:__ The error returned by the device. (`PositionError`)
+- __error:__ デバイスから返されるエラーを表します (`PositionError`)

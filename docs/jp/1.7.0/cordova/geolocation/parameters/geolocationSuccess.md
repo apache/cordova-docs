@@ -20,27 +20,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationSuccess
 ==================
 
-The user's callback function that is called when a geolocation position is available.
+位置情報取得に成功したときに呼び出されるコールバック関数です。
 
     function(position) {
-        // Do something
+        // 任意のコード
     }
 
-Parameters
+パラメーター
 ----------
 
-- __position:__ The geolocation position returned by the device. (`Position`)
+- __position:__ デバイスによって返される位置情報を表します (`Position`)
 
-Example
+使用例
 -------
 
     function geolocationSuccess(position) {
-        alert('Latitude: '          + position.coords.latitude          + '\n' +
-              'Longitude: '         + position.coords.longitude         + '\n' +
-              'Altitude: '          + position.coords.altitude          + '\n' +
-              'Accuracy: '          + position.coords.accuracy          + '\n' +
-              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-              'Heading: '           + position.coords.heading           + '\n' +
-              'Speed: '             + position.coords.speed             + '\n' +
-              'Timestamp: '         + new Date(position.timestamp)      + '\n');
+        alert('緯度: '              + position.coords.latitude          + '\n' +
+              '経度: '              + position.coords.longitude         + '\n' +
+              '高度: '              + position.coords.altitude          + '\n' +
+              '位置精度: '          + position.coords.accuracy          + '\n' +
+              '高度精度: '          + position.coords.altitudeAccuracy  + '\n' +
+              '方位: '              + position.coords.heading           + '\n' +
+              '速度: '              + position.coords.speed             + '\n' +
+              'タイムスタンプ: '    + new Date(position.timestamp)      + '\n');
     }

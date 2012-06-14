@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileUploadOptions
 ========
 
-`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメータとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 プロパティー
 ----------
@@ -35,7 +35,7 @@ FileUploadOptions
 概要
 -----------
 
-`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメータとして設定する場合に使用します。
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
 iOS に関する注意点
 ---------

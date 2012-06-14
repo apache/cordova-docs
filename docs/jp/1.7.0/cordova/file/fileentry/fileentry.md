@@ -45,7 +45,7 @@ FileEntry
 - __remove__: ファイルを削除します
 - __getParent__: 親ディレクトリを取得します
 - __createWriter__: ファイルの書き込みに使用できる FileWriter オブジェクトを作成します
-- __file__: ファイルプロパティを含む File オブジェクトを作成します
+- __file__: ファイルプロパティーを含む File オブジェクトを作成します
 
 
 サポートされているプラットフォーム
@@ -254,8 +254,8 @@ __使用例__
     }
 
     function fail(error) {
-        alert("ファイルのプロパティを取得できませんでした: " + error.code);
+        alert("ファイルのプロパティーを取得できませんでした: " + error.code);
     }
 
-    // ファイルのプロパティを取得
+    // ファイルのプロパティーを取得
     entry.file(success, fail);

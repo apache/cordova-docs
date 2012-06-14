@@ -20,23 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 PositionError
 ========
 
-A `PositionError` object is returned to the geolocationError callback when an error occurs.
+`PositionError` オブジェクトは、エラーが発生したときに geolocationError コールバック関数に渡されます。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ Error message describing the details of the error encountered.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
+- __message:__ エラーの内容を表すエラーメッセージを表します
 
-Constants
+定数
 ---------
 
 - `PositionError.PERMISSION_DENIED`
 - `PositionError.POSITION_UNAVAILABLE`
 - `PositionError.TIMEOUT`
 
-Description
+概要
 -----------
 
-The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
+`PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
 

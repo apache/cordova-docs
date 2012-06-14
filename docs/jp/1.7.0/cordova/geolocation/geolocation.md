@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Geolocation
 ===========
 
-> The `geolocation` object provides access to the device's GPS sensor. 
+> `geolocation` オブジェクトはデバイスの GPS センサーへのアクセスを提供します。
 
-Geolocation provides location information for the device, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the device's actual location. 
+Geolocation は緯度や経度といったデバイスの位置情報を提供します。主に Global Positioning System (GPS) から位置情報を取得しますが、 IP アドレスや RFID, WiFi, Bluetooh, MAC アドレス, 基地局 ID などのソースからも現在位置を推測します。ただしこの API がデバイスの正確な位置を特定する保証はありません。
 
-This API is based on the [W3C Geo location API Specification](http://dev.w3.org/geo/api/spec-source.html).  Some devices already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, Cordova's implementation should be compatible with the W3C specification.
+この API は [W3C Geo location API Specification](http://dev.w3.org/geo/api/spec-source.html) をベースとしています。いくつかのデバイスではすでにこの機能の実装を提供しています。 これらについては、 Cordova の実装ではなくビルトインのサポートが実行されます。位置情報のサポートがされてないデバイスについては、Cordovaの実装によってW3Cの仕様に沿った機能が提供されます。
 
-Methods
+メソッド
 -------
 
 - geolocation.getCurrentPosition
@@ -34,14 +34,14 @@ Methods
 - geolocation.clearWatch
 
 
-Arguments
+引数
 ---------
 
 - geolocationSuccess
 - geolocationError
 - geolocationOptions
 
-Objects (Read-Only)
+オブジェクト (読み取り専用)
 -------------------
 
 - Position
