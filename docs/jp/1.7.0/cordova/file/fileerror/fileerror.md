@@ -20,14 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileError
 ========
 
-A 'FileError' object is set when an error occurs in any of the File API methods. 
+`FileError` オブジェクトはエラーが発生した際に File API のメソッドに渡されます。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
 
-Constants
+定数
 ---------
 
 - `FileError.NOT_FOUND_ERR`
@@ -43,7 +43,7 @@ Constants
 - `FileError.TYPE_MISMATCH_ERR`
 - `FileError.PATH_EXISTS_ERR`
 
-Description
+概要
 -----------
 
-The `FileError` object is the only parameter of any of the File API's error callbacks.  Developers must read the code property to determine the type of error.
+`FileError` オブジェクトは File API のあらゆるエラーコールバック関数への唯一のパラメーターです。開発者はエラーのタイプを特定するために、 code プロパティーを確認する必要があります。

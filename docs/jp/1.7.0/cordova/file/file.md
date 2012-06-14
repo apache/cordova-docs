@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 File
 ==========
 
->  This API is based on the W3C [File API](http://www.w3.org/TR/FileAPI). An API to read, write and navigate file system hierarchies. 
+>  このAPIはW3Cの [File API](http://www.w3.org/TR/FileAPI) をベースとしています。ファイルシステムへの読み書きのための API です。
 
-Objects
+オブジェクト
 -------
 
 - DirectoryEntry

@@ -20,27 +20,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Flags
 =====
 
-This object is used to supply arguments to the `DirectoryEntry` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
+このオブジェクトは、 `DirectoryEntry` の __getFile__ メソッドと __getDirectory__ メソッド (ファイルやディレクトリを取得または作成するメソッド) に渡される引数として使われます。
 
-Properties
+プロパティー
 ----------
 
-- __create:__ Used to indicate that the file or directory should be created, if it does not exist. _(boolean)_
-- __exclusive:__ By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. _(boolean)_
+- __create:__ もし対象のファイルまたはディレクトリが無かった場合、作成するかどうかを表します _(boolean)_
+- __exclusive:__ このプロパティー単体では効果はありません。 create プロパティーと一緒に使います。もし対象のパスが既に存在した場合は、取得するのではなくファイルまたはディレクトリの作成に失敗します _(boolean)_
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Quick Example
+使用例
 -------------
 
-    // Get the data directory, creating it if it doesn't exist.
+    // data ディレクトリを取得します。もし存在しない場合は、作成します
     dataDir = fileSystem.root.getDirectory("data", {create: true});
 
-    // Create the lock file, if and only if it doesn't exist.
+    // lockfile.txt ファイルを、存在しない場合のみ作成します
     lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});

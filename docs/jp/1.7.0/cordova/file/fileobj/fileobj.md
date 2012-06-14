@@ -20,26 +20,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 File
 ====
 
-This object contains attributes of a single file.
+このオブジェクトは一つのファイルの属性を含みます。
 
-Properties
+プロパティー
 ----------
 
-- __name:__ The name of the file. _(DOMString)_
-- __fullPath:__ The full path of the file including the file name. _(DOMString)_
-- __type:__ The mime type of the file. _(DOMString)_
-- __lastModifiedDate:__ The last time the file was modified. _(Date)_
-- __size:__ The size of the file in bytes. _(long)_
+- __name:__ ファイルの名前を表します。 _(DOMString)_
+- __fullPath:__ ファイルの名前を含むフルパスを表します。 _(DOMString)_
+- __type:__ ファイルの mime type を表します。 _(DOMString)_
+- __lastModifiedDate:__ ファイルの最終更新日時を表します。 _(Date)_
+- __size:__ ファイルのサイズをバイトで表します。 _(long)_
 
-Details
+詳細
 -------
 
-The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
+この `File` オブジェクトは一つのファイルの属性を含みます。 `FileEntry` オブジェクトの __file__ メソッドを呼び出すことで、 File オブジェクトのインスタンスを取得できます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)

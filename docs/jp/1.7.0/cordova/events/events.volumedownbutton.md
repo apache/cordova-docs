@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 volumedownbutton
 ===========
 
-このイベントはユーザがボリュームダウンボタンを押したときに呼び出されます。
+このイベントはユーザーがボリュームダウンボタンを押したときに呼び出されます。
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
 

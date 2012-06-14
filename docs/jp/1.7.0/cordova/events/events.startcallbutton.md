@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 startcallbutton
 ===========
 
-このイベントはユーザがスタートコールボタンを押したときに呼び出されます。
+このイベントはユーザーがスタートコールボタンを押したときに呼び出されます。
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
 

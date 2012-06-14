@@ -20,68 +20,68 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileSystem
 ==========
 
-This object represents a file system.
+このオブジェクトはファイルシステムを表します。
 
-Properties
+プロパティー
 ----------
 
-- __name:__ The name of the file system. _(DOMString)_
-- __root:__ The root directory of the file system. _(DirectoryEntry)_
+- __name:__ ファイルシステムの名前を表します _(DOMString)_
+- __root:__ ファイルシステムのルートディレクトリを表します _(DirectoryEntry)_
 
-Details
+詳細
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+`FileSystem` オブジェクトはファイルシステムの情報を表します。ファイルシステムの名前は既にあるファイルシステムに対して一意になります。 root プロパティはファイルシステムのルートディレクトリを表す `DirectoryEntry` オブジェクトを保持します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-File System Quick Example
+File System の使用例
 -------------------------
 
-	function onSuccess(fileSystem) {
-		console.log(fileSystem.name);
-		console.log(fileSystem.root.name);
-	}
-	
-	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+        console.log(fileSystem.root.name);
+    }
 
-Full Example
+    // ファイルシステムをリクエスト
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>File System Example</title>
+        <title>File System の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
 
-		function onFileSystemSuccess(fileSystem) {
-			console.log(fileSystem.name);
-			console.log(fileSystem.root.name);
-		}
-		
-		function fail(evt) {
-			console.log(evt.target.error.code);
-		}
-		
+        function onFileSystemSuccess(fileSystem) {
+            console.log(fileSystem.name);
+            console.log(fileSystem.root.name);
+        }
+
+        function fail(evt) {
+            console.log(evt.target.error.code);
+        }
+
         </script>
       </head>
       <body>

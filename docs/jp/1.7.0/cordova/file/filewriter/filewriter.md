@@ -20,175 +20,175 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileWriter
 ==========
 
-FileWriter is an object that allows one to write a file.
+FileWriter はファイルへの書き込みを行うオブジェクトです。
 
-Properties
+プロパティー
 ----------
 
-- __readyState:__ One of the three states the reader can be in INIT, WRITING or DONE.
-- __fileName:__ The name of the file to be written. _(DOMString)_
-- __length:__ The length of the file to be written. _(long)_
-- __position:__ The current position of the file pointer. _(long)_
-- __error:__ An object containing errors. _(FileError)_
-- __onwritestart:__ Called when the write starts. . _(Function)_
-- __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
-- __onwrite:__ Called when the request has completed successfully.  _(Function)_
-- __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the write has failed. _(Function)_
-- __onwriteend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState:__ 右の3種類の状態のいずれかを表します (INIT, WRITING, DONE)
+- __fileName:__ 書き込みの対象となるファイル名を表します _(DOMString)_
+- __length:__ 書き込みの対象となるファイル名を表します _(long)_
+- __position:__ ファイルポインタの現在の位置を表します _(long)_
+- __error:__ エラー情報を表します _(FileError)_
+- __onwritestart:__ 書き込み開始時に呼ばれる関数を表します _(Function)_
+- __onprogress:__ ファイル書き込み中に呼ばれ、進捗状況を報告する関数を表します (progess.loaded/progress.total) _(Function)_ - 現在サポートされていません
+- __onwrite:__ リクエストが成功したときに呼ばれる関数を表します _(Function)_
+- __onabort:__ abort() メソッドを実行したときなど、 書き込みが強制終了したときに呼ばれる関数を表します _(Function)_
+- __onerror:__ 書き込みが失敗したときに呼ばれる関数を表します _(Function)_
+- __onwriteend:__ 成功、失敗にかかわらずリクエストが完了した際に呼ばれる関数を表します _(Function)_
 
-Methods
+メソッド
 -------
 
-- __abort__: Aborts writing file. 
-- __seek__: Moves the file pointer to the byte specified.
-- __truncate__: Shortens the file to the length specified.
-- __write__: Writes data to the file with a UTF-8 encoding.
+- __abort__: 書き込みを中断します
+- __seek__: ファイルポインタを指定したバイトまで移動します
+- __truncate__: ファイルを指定した長さに切り詰めます
+- __write__: ファイルにデータを UTF-8 エンコーディングで書き込みます
 
-Details
+詳細
 -------
 
-The `FileWriter` object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
+`FileWriter` オブジェクトはデバイスのファイルシステムに書きこむ際に使用します。また、 writestart, progress, write, writeend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
 
-A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
+FileWriter は一つのファイルに対して使用されます。複数回の書き込みを行うこともできます。 FileWriter はファイルポインタの位置と length 属性を指定することができるので、ファイルのどの位置からでも書き込みを行うことができます。デフォルトではファイルの開始位置にポインタがセットされ、既存のデータを上書きしながら書き込みが行われます。書き込みをファイルの最終から始める場合は、 FileWriter のコンストラクタに true をオプションとして指定してください。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Seek Quick Example
+Seek の例
 ------------------------------
 
-	function win(writer) {
-		// fast forwards file pointer to end of file
-		writer.seek(writer.length);	
-	};
+    function win(writer) {
+        // ファイルポインタを EOF (ファイルの終端) に移動
+        writer.seek(writer.length);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
-Truncate Quick Example
+Truncate の例
 --------------------------
 
-	function win(writer) {
-		writer.truncate(10);	
-	};
+    function win(writer) {
+        writer.truncate(10);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
-Write Quick Example
--------------------	
-
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
-        };
-		writer.write("some sample text");
-	};
-
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
-    entry.createWriter(win, fail);
-
-Append Quick Example
---------------------	
-
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
-        };
-        writer.seek(writer.length);
-		writer.write("appended text");
-	};
-
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
-    entry.createWriter(win, fail);
-	
-Abort Quick Example
+Write の例
 -------------------
 
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
+    function win(writer) {
+        writer.onwrite = function(evt) {
+            console.log("書き込み成功");
         };
-		writer.write("some sample text");
-		writer.abort();
-	};
+        writer.write("サンプルテキスト");
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
-Full Example
+Append の例
+--------------------
+
+    function win(writer) {
+        writer.onwrite = function(evt) {
+            console.log("書き込み成功");
+        };
+        writer.seek(writer.length);
+        writer.write("付加テキスト);
+    };
+
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
+    entry.createWriter(win, fail);
+
+Abort の例
+-------------------
+
+    function win(writer) {
+        writer.onwrite = function(evt) {
+            console.log("書き込み成功");
+        };
+        writer.write("サンプルテキスト");
+        writer.abort();
+    };
+
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
+    entry.createWriter(win, fail);
+
+詳細な使用例
 ------------
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileWriter Example</title>
-    
+        <title>FileWriter の使用例</title>
+
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
-        // Wait for Cordova to load
+
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-    
-        // Cordova is ready
+
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-    
+
         function gotFS(fileSystem) {
             fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
-    
+
         function gotFileEntry(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
-    
+
         function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
-                console.log("contents of file now 'some sample text'");
-                writer.truncate(11);  
+                console.log("ファイルの内容が 'some sample text' となりました");
+                writer.truncate(11); 
                 writer.onwriteend = function(evt) {
-                    console.log("contents of file now 'some sample'");
+                    console.log("ファイルの内容が 'some sample' となりました");
                     writer.seek(4);
                     writer.write(" different text");
                     writer.onwriteend = function(evt){
-                        console.log("contents of file now 'some different text'");
+                        console.log("ファイルの内容が 'some different text' となりました");
                     }
                 };
             };
-            writer.write("some sample text");
+            writer.write("サンプルテキスト");
         }
-    
+
         function fail(error) {
             console.log(error.code);
         }
-    
+
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Write File</p>
+        <h1>使用例</h1>
+        <p>ファイルに書き込みます。</p>
       </body>
     </html>

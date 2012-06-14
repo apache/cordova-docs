@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 volumeupbutton
 ===========
 
-このイベントはユーザがボリュームアップボタンを押したときに呼び出されます。
+このイベントはユーザーがボリュームアップボタンを押したときに呼び出されます。
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
 

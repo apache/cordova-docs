@@ -20,32 +20,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Metadata
 ==========
 
-This interface supplies information about the state of a file or directory.
+ファイルやディレクトリの状態を提供します。
 
-Properties
+プロパティー
 ----------
 
-- __modificationTime:__ This is the time at which the file or directory was last modified. _(Date)_
+- __modificationTime:__ ファイルまたはディレクトリの最終更新日時を表します _(Date)_
 
-Details
+詳細
 -------
 
-The `Metadata` object represents information about the state of a file or directory.  You can get an instance of a Metadata object by calling the __getMetadata__ method of a `DirectoryEntry` or `FileEntry` object.
+`Metadata` オブジェクトは、ファイルやディレクトリの状態を表します。 `DirectoryEntry` または `FileEntry` の __getMetadata__ メソッドを呼び出すことで、 Metadata オブジェクトが取得できます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Quick Example
+使用例
 -------------
 
-	function win(metadata) {
-		console.log("Last Modified: " + metadata.modificationTime);
-	}
-	
-	// Request the metadata object for this entry
-	entry.getMetadata(win, null);
+    function win(metadata) {
+        console.log("最終更新日: " + metadata.modificationTime);
+    }
+
+    // このエントリーの Metadata オブジェクトを取得
+    entry.getMetadata(win, null);

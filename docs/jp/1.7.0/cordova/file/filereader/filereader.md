@@ -20,177 +20,177 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileReader
 ==========
 
-FileReader is an object that allows one to read a file.
+FileReader はファイルの読み込みを行うオブジェクトです。
 
-Properties
+プロパティー
 ----------
 
-- __readyState:__ One of the three states the reader can be in EMPTY, LOADING or DONE.
-- __result:__ The contents of the file that has been read. _(DOMString)_
-- __error:__ An object containing errors. _(FileError)_
-- __onloadstart:__ Called when the read starts. . _(Function)_
-- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
-- __onload:__ Called when the read has successfully completed. _(Function)_
-- __onabort:__ Called when the read has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the read has failed. _(Function)_
-- __onloadend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState:__ 右の3種類の状態のいずれかを表します (EMPTY, LOADING, DONE)
+- __result:__ 読み込まれたファイルのコンテンツを表します _(DOMString)_
+- __error:__ エラー情報を表します _(FileError)_
+- __onloadstart:__ 読み込み開始時に呼ばれる関数を表します _(Function)_
+- __onprogress:__ 読込中に呼ばれ、進捗状況を報告する関数を表します (progess.loaded/progress.total) _(Function)_ - 現在サポートされていません
+- __onload:__ 読み込みが成功したときに呼ばれる関数を表します _(Function)_
+- __onabort:__ abort() メソッドを実行したときなど、 読み込みが強制終了したときに呼ばれる関数を表します _(Function)_
+- __onerror:__ 読み込みが失敗したときに呼ばれる関数を表します _(Function)_
+- __onloadend:__ 成功、失敗にかかわらずリクエストが完了した際に呼ばれる関数を表します _(Function)_
 
-Methods
+メソッド
 -------
 
-- __abort__: Aborts reading file. 
-- __readAsDataURL__: Read file and return data as a base64 encoded data url.
-- __readAsText__: Reads text file.
+- __abort__: 読み込みを強制終了します
+- __readAsDataURL__: ファイルを読み込み、データを Base64 エンコードされたデータ URL で返します
+- __readAsText__: テキストファイルを読み込みます
 
-Details
+詳細
 -------
 
-The `FileReader` object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listners to receive the loadstart, progress, load, loadend, error and abort events.
+`FileReader` オブジェクトはデバイスのファイルシステムからファイルを読み込む際に使用します。ファイルはテキストもしくは Base64 でエンコードされた文字列として読み込まれます。また、 loadstart, progress, load, loadend, error や abort などのイベントを受け取るための独自のイベントリスナーを登録することも出来ます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Read As Data URL 
+データ URL として読み込む場合
 ----------------
 
-__Parameters:__
-- file - the file object to read
+__パラメーター:__
+- file - 読み込むファイルのフルパスを表します
 
 
-Quick Example
+使用例
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("読み込み成功");
             console.log(evt.target.result);
         };
-		reader.readAsDataURL(file);
-	};
+        reader.readAsDataURL(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.file(win, fail);
 
-Read As Text
+テキストとして読み込む場合
 ------------
 
-__Parameters:__
+__パラメーター:__
 
-- file - the file object to read
-- encoding - the encoding to use to encode the file's content. Default is UTF8.
+- file - 読み込むファイルのフルパスを表します
+- encoding - ファイルのコンテンツのエンコードを表します (デフォルト: UTF-8)
 
-Quick Example
+使用例
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("読み込み成功");
             console.log(evt.target.result);
         };
-		reader.readAsText(file);
-	};
+        reader.readAsText(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.file(win, fail);
 
-Abort Quick Example
+Abort の例
 -------------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("読み込み成功");
             console.log(evt.target.result);
         };
-		reader.readAsText(file);
-		reader.abort();
-	};
+        reader.readAsText(file);
+        reader.abort();
+    };
 
     function fail(error) {
-    	console.log(error.code);
+        console.log(error.code);
     }
-	
+
     entry.file(win, fail);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>FileReader Example</title>
+        <title>FileReader の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-		
-		function gotFS(fileSystem) {
-			fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
-		}
-		
-		function gotFileEntry(fileEntry) {
-			fileEntry.file(gotFile, fail);
-		}
-		
+
+        function gotFS(fileSystem) {
+            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+        }
+
+        function gotFileEntry(fileEntry) {
+            fileEntry.file(gotFile, fail);
+        }
+
         function gotFile(file){
-			readDataUrl(file);
-			readAsText(file);
-		}
-        
+            readDataUrl(file);
+            readAsText(file);
+        }
+
         function readDataUrl(file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
-                console.log("Read as data URL");
+                console.log("データ URL として読み込み");
                 console.log(evt.target.result);
             };
             reader.readAsDataURL(file);
         }
-        
+
         function readAsText(file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
-                console.log("Read as text");
+                console.log("テキストとして読み込み");
                 console.log(evt.target.result);
             };
             reader.readAsText(file);
         }
-        
+
         function fail(evt) {
             console.log(evt.target.error.code);
         }
-        
+
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Read File</p>
+        <h1>使用例</h1>
+        <p>ファイルを読み込みます。</p>
       </body>
     </html>
 
-iOS Quirks
+iOS に関する注意点
 ----------
-- __encoding__ parameter is not supported, UTF8 encoding is always used.
+- __encoding__ パラメーターはサポートされておらず、常に UTF-8 エンコーディングが使われます。

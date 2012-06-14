@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 endcallbutton
 ===========
 
-このイベントはユーザがエンドコールボタンを押したときに呼び出されます。
+このイベントはユーザーがエンドコールボタンを押したときに呼び出されます。
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
 

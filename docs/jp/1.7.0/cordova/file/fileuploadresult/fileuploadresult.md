@@ -20,21 +20,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileUploadResult
 ========
 
-A `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
+`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
-Properties
+プロパティー
 ----------
 
-- __bytesSent:__ The number of bytes sent to the server as part of the upload. (long)
-- __responseCode:__ The HTTP response code returned by the server. (long)
-- __response:__ The HTTP response returned by the server. (DOMString)
+- __bytesSent:__ 送信されたバイト数を表します (long)
+- __responseCode:__ サーバーから返された HTTP のレスポンスコードを表します (long)
+- __response:__ サーバーから返された HTTP のレスポンスを表します (DOMString)
 
-Description
+概要
 -----------
 
-The `FileUploadResult` object is returned via the success callback of the FileTransfer upload method.
+`FileUploadResult` オブジェクトは、 FileTransfer の upload メソッドの呼び出しが成功した時に、成功コールバック関数に渡されるオブジェクトです。
 
-iOS Quirks
+iOS に関する注意点
 ----------
-- iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object. 
-
+- iOS では、成功コールバック関数に渡される FileUploadResult オブジェクトには、 responseCode も bytesSent も含まれません。

@@ -20,159 +20,159 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileTransfer
 ==========
 
-FileTransfer is an object that allows you to upload files to a server or download files from a server.
+FileTransfer オブジェクトはファイルをサーバーにアップロードまたはサーバからダウンロードする際に使用します。
 
-Properties
+プロパティー
 ----------
 
-N/A
+なし
 
-Methods
+メソッド
 -------
 
-- __upload__: sends a file to a server. 
-- __download__: downloads a file from server.
+- __upload__: サーバーにファイルを送信
+- __download__: サーバーからファイルをダウンロード
 
-Details
+詳細
 -------
 
-The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
-It is also possible to download a file from remote and save it on the device (only iOS and Android).
+`FileTransfer` オブジェクトは HTTP マルチパート POST リクエストを使ってファイルをサーバーにアップロードする機能を提供します。このメソッドは HTTP と HTTPS の両方のプロトコルをサポートします。 upload メソッドに FileUploadOptions オブジェクトを渡すことで、任意のパラメーターを追加できます。アップロードが成功した場合 FileUploadResult オブジェクトとともに success コールバック関数が呼ばれます。エラーが発生した場合は FileTransferError オブジェクトとともに error コールバック関数が呼ばれます。
+また、サーバーからファイルをダウンロードし保存することもできます (iOS と Android のみ) 。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
 upload
 --------------
 
-__Parameters:__
+__パラメーター:__
 
-- __filePath__ - Full path of the file on the device
-- __server__ - URL of the server to receive the file
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
-- __options__ - Optional parameters such as file name and mimetype
+- __filePath__ - デバイス内のファイルのフルパスを表します
+- __server__ - ファイルを受け取るサーバーの URL を表します
+- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
+- __options__ - ファイル名や minetype などのオプションのパラメーターを表します
 
-__Quick Example__
-	
-    // !! Assumes variable fileURI contains a valid URI to a  text file on the device
-	
-  	var win = function(r) {
-        console.log("Code = " + r.responseCode);
-        console.log("Response = " + r.response);
-        console.log("Sent = " + r.bytesSent);
-	}
-	
+__使用例__
+
+    // !! fileURI の値は有効なデバイス内の有効なテキストファイルの URI であるとみなします
+
+    var win = function(r) {
+        console.log("コード = " + r.responseCode);
+        console.log("結果 = " + r.response);
+        console.log("送信バイト数 = " + r.bytesSent);
+    }
+
     var fail = function(error) {
-        alert("An error has occurred: Code = " + error.code);
+        alert("エラーが発生しました: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-	
-	var options = new FileUploadOptions();
-	options.fileKey="file";
-	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-	options.mimeType="text/plain";
+
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+    options.mimeType="text/plain";
 
     var params = new Object();
-	params.value1 = "test";
-	params.value2 = "param";
-		
-	options.params = params;
-	
-	var ft = new FileTransfer();
+    params.value1 = "test";
+    params.value2 = "param";
+
+    options.params = params;
+
+    var ft = new FileTransfer();
     ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
-    
-__Full Example__
+
+__詳細な使用例__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <html>
-    <head>
-        <title>File Transfer Example</title>
-    
+      <head>
+        <title>File Transfer の使用例</title>
+
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
-            // Wait for Cordova to load
+
+            // Cordova の読み込み完了まで待機
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-            
-            // Cordova is ready
+
+            // Cordova 準備完了
             //
             function onDeviceReady() {
-                
-                // Retrieve image file location from specified source
+
+                // 写真をファイル URI として取得する場合
                 navigator.camera.getPicture(uploadPhoto,
-                                            function(message) { alert('get picture failed'); },
-                                            { quality: 50, 
+                                            function(message) { alert('写真の取得に失敗しました'); },
+                                            { quality: 50,
                                             destinationType: navigator.camera.DestinationType.FILE_URI,
                                             sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
                                             );
-                
+
             }
-            
+
             function uploadPhoto(imageURI) {
                 var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
-                
+
                 var params = new Object();
                 params.value1 = "test";
                 params.value2 = "param";
-                
+
                 options.params = params;
-                
+
                 var ft = new FileTransfer();
                 ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
             }
-            
+
             function win(r) {
-                console.log("Code = " + r.responseCode);
-                console.log("Response = " + r.response);
-                console.log("Sent = " + r.bytesSent);
+                console.log("コード = " + r.responseCode);
+                console.log("結果 = " + r.response);
+                console.log("送信バイト数 = " + r.bytesSent);
             }
-            
+
             function fail(error) {
-                alert("An error has occurred: Code = " + error.code);
+                alert("エラーが発生しました: Code = " + error.code);
                 console.log("upload error source " + error.source);
                 console.log("upload error target " + error.target);
             }
-            
-            </script>
-    </head>
-    <body>
-        <h1>Example</h1>
-        <p>Upload File</p>
-    </body>
+
+         </script>
+       </head>
+       <body>
+         <h1>使用例</h1>
+         <p>ファイルアップロード</p>
+       </body>
     </html>
 
 download
 --------------
 
-__Parameters:__
+__パラメーター:__
 
-- __source__ - URL of the server to receive the file
-- __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __source__ - ファイルを取得するサーバーの URL を表します
+- __target__ - デバイス内のファイルのフルパスを表します
+- __successCallback__ - FileEntry オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
+__使用例__
 
-     // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
+    // !! url はサーバー内の有効なファイルを指すことと filePath がデバイス内の有効な値であるとみなします
 
     var fileTransfer = new FileTransfer();
-    
+
     fileTransfer.download(
         url,
         filePath,
         function(entry) {
-            console.log("download complete: " + entry.fullPath);
+            console.log("ダウンロード完了: " + entry.fullPath);
         },
         function(error) {
             console.log("download error source " + error.source);

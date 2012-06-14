@@ -20,23 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileTransferError
 ========
 
-A `FileTransferError` object is returned via the error callback when an error occurs.
+`FileTransferError` オブジェクトは、エラーが発生したときエラーコールバック関数に渡されます。
 
-Properties
+プロパティー
 ----------
 
-- __code__ One of the predefined error codes listed below. (int)
-- __source__ URI to the source (string)
-- __target__ URI to the target (string)
+- __code__ 事前に定義された以下のエラーコードのうちの1つを表します (int)
+- __source__ ソースの URI を表します (string)
+- __target__ ターゲットの URI を表します (string)
 
-Constants
+定数
 ---------
 
 - `FileTransferError.FILE_NOT_FOUND_ERR`
 - `FileTransferError.INVALID_URL_ERR`
 - `FileTransferError.CONNECTION_ERR`
 
-Description
+概要
 -----------
 
-The `FileTransferError` object is returned via the error callback  when an error occurs when uploading a file.
+`FileTransferError` オブジェクトは、ファイルアップロード時にエラーが発生したときエラーコールバック関数に渡されます。

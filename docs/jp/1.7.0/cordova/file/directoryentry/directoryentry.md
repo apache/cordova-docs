@@ -20,143 +20,143 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 DirectoryEntry
 ==============
 
-This object represents a directory on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+このオブジェクトはファイルシステムのディレクトリを表します。これは [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) の仕様書で定義されています。
 
-Properties
+プロパティー
 ----------
 
-- __isFile:__ Always false. _(boolean)_
-- __isDirectory:__ Always true. _(boolean)_
-- __name:__ The name of the DirectoryEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the DirectoryEntry. _(DOMString)_
+- __isFile:__ 常に false を表します _(boolean)_
+- __isDirectory:__ 常に true を表します _(boolean)_
+- __name:__ パスを除いた DirectoryEntry の名前を表します _(DOMString)_
+- __fullPath:__ ルートから DirectoryEntry への絶対パスを表します _(DOMString)_
 
-NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by Cordova:
+注意: 以下の属性は W3C の仕様書によって定義されていますが、 Cordova では __サポートされていません__ :
 
-- __filesystem:__ The file system on which the DirectoryEntry resides. _(FileSystem)_ 
+- __filesystem:__ DirectoryEntry が属するファイルシステムを表します _(FileSystem)_
 
-Methods
+メソッド
 -------
 
-The following methods can be invoked on a DirectoryEntry object:
+以下のメソッドは DirectoryEntry オブジェクトから呼び出すことができます:
 
-- __getMetadata__: Look up metadata about a directory. 
-- __moveTo__: Move a directory to a different location on the file system.
-- __copyTo__: Copy a directory to a different location on the file system.
-- __toURI__: Return a URI that can be used to locate a directory.
-- __remove__: Delete a directory.  The directory must be empty.
-- __getParent__: Look up the parent directory.
-- __createReader__: Create a new DirectoryReader that can read entries from a directory.
-- __getDirectory__: Create or look up a directory.
-- __getFile__: Create or look up a file.
-- __removeRecursively__: Delete a directory and all of its contents.
+- __getMetadata__: ディレクトリのメタデータを取得します
+- __moveTo__: ディレクトリを、ファイルシステム内の別の場所に移動します
+- __copyTo__: ディレクトリを、ファイルシステム内の別の場所にコピーします
+- __toURI__: ディレクトリの位置特定に使用できる URI を返します
+- __remove__: ディレクトリを削除します。ディレクトリは空である必要があります
+- __getParent__: 親ディレクトリを取得します
+- __getParent__: ディレクトリからエントリを読み込みできる DirectoryReader を作成します
+- __getDirectory__: ディレクトリを取得または作成します
+- __getFile__: ファイルを取得または作成します
+- __removeRecursively__: ディレクトリと、その中身をすべて削除します
 
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
 getMetadata
 -----------
 
-Look up metadata about a directory.
+ディレクトリのメタデータを取得します。
 
-__Parameters:__
+__パラメーター:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
 
-__Quick Example__
+__使用例__
 
     function success(metadata) {
-        console.log("Last Modified: " + metadata.modificationTime);
+        console.log("最終更新日: " + metadata.modificationTime);
     }
 
     function fail(error) {
         alert(error.code);
     }
 
-    // Request the metadata object for this entry
-    entry.getMetadata(success, fail);	
+    // このエントリーの Metadata オブジェクトを取得
+    entry.getMetadata(success, fail);
 
 
 moveTo
 ------
 
-Move a directory to a different location on the file system. It is an error to attempt to:
+ディレクトリを、ファイルシステム内の別の場所に移動します。 以下のことを試みるとエラーが発生します:
 
-- move a directory inside itself or to any child at any depth;
-- move a directory into its parent if a name different from its current one is not provided;
-- move a directory to a path occupied by a file;
-- move a directory to a path occupied by a directory which is not empty.
+- ディレクトリをそれ自体、またはその子ディレクトリに移動する場合
+- もし移動先親ディレクトリが移動元と同じで、移動先ディレクトリ名も移動元と同じである場合
+- もし移動先のディレクトリ名がファイルである場合
+- もし移動先のディレクトリが空でないディレクトリである場合
 
-In addition, an attempt to move a directory on top of an existing empty directory must attempt to delete and replace that directory.
+ディレクトリをすでに存在するディレクトリの場所に移動する行為は、削除してディレクトリを置き換える行為となります。
 
-__Parameters:__
+__パラメーター:__
 
-- __parent__ - The parent directory to which to move the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the directory.  Invoked with a FileError object. _(Function)_
+- __parent__ - ディレクトリの移動先の親ディレクトリを表します _(DirectoryEntry)_
+- __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
+- __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリの移動中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
 
-__Quick Example__
+__使用例__
 
     function success(entry) {
-        console.log("New Path: " + entry.fullPath);
+        console.log("新しいパス: " + entry.fullPath);
     }
 
     function fail(error) {
         alert(error.code);
     }
-	
-	function moveDir(entry) {
+
+    function moveDir(entry) {
         var parent = document.getElementById('parent').value,
             newName = document.getElementById('newName').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // move the directory to a new directory and rename it
+        // ディレクトリを新しいディレクトリに移動し、名前付け替えます
         entry.moveTo(parentEntry, newName, success, fail);
     }
 
 copyTo
 ------
 
-Copy a directory to a different location on the file system. It is an error to attempt to:
+ディレクトリを、ファイルシステム内の別の場所にコピーします 以下のことを試みるとエラーが発生します:
 
-- copy a directory inside itself at any depth;
-- copy a directory into its parent if a name different from its current one is not provided. 
+- ディレクトリをそれ自体、またはその子ディレクトリにコピーする場合
+- もしコピー先親ディレクトリがコピー元と同じで、コピー先ディレクトリ名もコピー元と同じである場合
 
-Directory copies are always recursive - that is, they copy all contents of the directory.
+ディレクトリーのコピーは常に再帰的で、ディレクトリ内の全ての中身がコピーされます。
 
-__Parameters:__
+__パラメーター:__
 
-- __parent__ - The parent directory to which to copy the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the underlying directory.  Invoked with a FileError object. _(Function)_
+- __parent__ - ディレクトリのコピー先の親ディレクトリを表します _(DirectoryEntry)_
+- __newName__ - ディレクトリの新しい名前を表します。 もし指定されていない場合は、デフォルトで現在の名前となります _(DOMString)_
+- __successCallback__ - 新しいディレクトリの DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
 
-__Quick Example__
+__使用例__
 
-	function win(entry) {
-		console.log("New Path: " + entry.fullPath);
-	}
-	
-	function fail(error) {
-		alert(error.code);
-	}
-	
-	function copyDir(entry) {
+    function win(entry) {
+        console.log("新しいパス: " + entry.fullPath);
+    }
+
+    function fail(error) {
+        alert(error.code);
+    }
+
+    function copyDir(entry) {
         var parent = document.getElementById('parent').value,
             newName = document.getElementById('newName').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // copy the directory to a new directory and rename it
+        // ディレクトリを新しいディレクトリにコピーし、名前付け替えます
         entry.copyTo(parentEntry, newName, success, fail);
     }
 
@@ -164,11 +164,11 @@ __Quick Example__
 toURI
 -----
 
-Returns a URI that can be used to locate the directory. 
+ディレクトリの位置特定に使用できる URI を返します。
 
-__Quick Example__
-	
-    // Get the URI for this directory
+__使用例__
+
+    // ディレクトリ URI の取得
     var uri = entry.toURI();
     console.log(uri);
 
@@ -176,144 +176,144 @@ __Quick Example__
 remove
 ------
 
-Deletes a directory. It is an error to attempt to:
+ディレクトリを削除します。 以下のことを試みるとエラーが発生します:
 
-- delete a directory that is not empty;
-- delete the root directory of a filesystem.
+- 空でないディレクトリを削除する場合
+- ファイルシステムのルートディレクトリを削除する場合
 
-__Parameters:__
+__パラメーター:__
 
-- __successCallback__ - A callback that is called after the directory has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the directory.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - ディレクトリが削除されたときに呼び出されるコールバック関数を表します。パラメーターなしで呼び出されます _(Function)_
+- __errorCallback__ - ディレクトリのコピー中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(entry) {
-        console.log("Removal succeeded");
+        console.log("削除成功");
     }
 
     function fail(error) {
-        alert('Error removing directory: ' + error.code);
+        alert('ディレクトリの削除中にエラーが発生しました: ' + error.code);
     }
 
-    // remove this directory
+    // ディレクトリを削除
     entry.remove(success, fail);
 
 
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the directory. 
+そのディレクトリの親 DirectoryEntry を取得します。
 
-__Parameters:__
+__パラメーター:__
 
-- __successCallback__ - A callback that is called with the directory's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - ディレクトリの親 DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ファイルの親 DirectoryEntry の取得中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(parent) {
-        console.log("Parent Name: " + parent.name);
+        console.log("親ディレクトリの名前: " + parent.name);
     }
- 
+
     function fail(error) {
-        alert('Failed to get parent directory: ' + error.code);
+        alert('親ディレクトリの取得中にエラーが発生しました: ' + error.code);
     }
-	
-	// Get the parent DirectoryEntry
-	entry.getParent(success, fail);	
+
+    // 親 DirectoryEntry を取得
+    entry.getParent(success, fail);
 
 
 createReader
 ------------
 
-Creates a new DirectoryReader to read entries in a directory.
+ディレクトリのエントリを読み込みするための DirectoryReader を作成します。
 
-__Quick Example__
-	
-    // create a directory reader
-    var directoryReader = entry.createReader();	
+__使用例__
+
+    // directory reader の作成
+    var directoryReader = entry.createReader();
 
 
 getDirectory
 ------------
 
-Creates or looks up an existing directory.  It is an error to attempt to:
+ディレクトリを取得または作成します。 以下のことを試みるとエラーが発生します:
 
-- create a directory whose immediate parent does not yet exist.
+- 親ディレクトリが存在しないディレクトリを作る場合
 
-__Parameters:__
+__パラメーター:__
 
-- __path__ - The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
-- __options__ - Options to specify whether the directory is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a DirectoryEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the directory.  Invoked with a FileError object. _(Function)_
+- __path__ - 取得または作成したいディレクトリまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
+- __options__ - もしディレクトリが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
+- __successCallback__ - DirectoryEntry を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(parent) {
-        console.log("Parent Name: " + parent.name);
+        console.log("親ディレクトリの名前: " + parent.name);
     }
 
     function fail(error) {
-        alert("Unable to create new directory: " + error.code);
+        alert("新しいディレクトリの作成中にエラーが発生しました: " + error.code);
     }
 
-    // Retrieve an existing directory, or create it if it does not already exist
-    entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);	
+    // 既存のディレクトリを取得。存在しない場合は作成
+    entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 
 
 getFile
 -------
 
-Creates or looks up a file.  It is an error to attempt to:
+ファイルを取得または作成します。 以下のことを試みるとエラーが発生します:
 
-- create a file whose immediate parent does not yet exist.
+- 親ディレクトリが存在しないファイルを作る場合
 
-__Parameters:__
+__パラメーター:__
 
-- __path__ - The path to the file to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
-- __options__ - Options to specify whether the file is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the file.  Invoked with a FileError object. _(Function)_
+- __path__ - 取得または作成したいファイルまでのパスを表します。 この DirectoryEntry からの絶対パスまたは相対パスを指定します _(DOMString)_
+- __options__ - もしファイルが存在しない場合、作成するかどうかを指定するオプションを表します _(Flags)_
+- __successCallback__ - FileEntry を伴って呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - ファイルの取得または作成中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(parent) {
-        console.log("Parent Name: " + parent.name);
+        console.log("親ディレクトリの名前: " + parent.name);
     }
 
     function fail(error) {
-        alert("Failed to retrieve file: " + error.code);
+        alert("ファイルの取得中にエラーが発生しました: " + error.code);
     }
 
-    // Retrieve an existing file, or create it if it does not exist
-    entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);	
+    // 既存のファイルを取得。存在しない場合は作成
+    entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail); 
 
 
 removeRecursively
 -----------------
 
-Deletes a directory and all of its contents.  In the event of an error (e.g. trying to delete 
-a directory that contains a file that cannot be removed), some of the contents of the directory may 
-be deleted.   It is an error to attempt to:
+ディレクトリと、その中身をすべて削除します。 エラーが起きたとき (例: 削除できないファイルが含まれるディレクトリを削除しようとした場合)
+ディレクトリのコンテンツのいくつかは削除されている場合があります。
+以下のことを試みるとエラーが発生します:
 
-- delete the root directory of a filesystem.
+- ファイルシステムのルートディレクトリを削除する場合
 
-__Parameters:__
+__パラメーター:__
 
-- __successCallback__ - A callback that is called after the DirectoryEntry has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - DirectoryEntry が削除されたときに呼び出されるコールバック関数を表します。 パラメーターなしで呼び出されます _(Function)_
+- __errorCallback__ - DirectoryEntry の削除中にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(parent) {
-        console.log("Remove Recursively Succeeded");
+        console.log("再帰的な削除成功");
     }
 
     function fail(error) {
-        alert("Failed to remove directory or it's contents: " + error.code);
+        alert("ディレクトリまたはディレクトリの中身の削除中にエラーが発生しました: " + error.code);
     }
 
-    // remove the directory and all it's contents
-    entry.removeRecursively(success, fail);	
+    // ディレクトリとディレクトリの中身を削除
+    entry.removeRecursively(success, fail);

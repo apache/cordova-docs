@@ -20,31 +20,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileUploadOptions
 ========
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメータとして設定する場合に使用します。
 
-Properties
+プロパティー
 ----------
 
-- __fileKey:__ The name of the form element.  If not set defaults to "file". (DOMString)
-- __fileName:__ The file name you want the file to be saved as on the server.  If not set defaults to "image.jpg". (DOMString)
-- __mimeType:__ The mime type of the data you are uploading.  If not set defaults to "image/jpeg". (DOMString)
-- __params:__ A set of optional key/value pairs to be passed along in the HTTP request. (Object)
-- __chunkedMode:__ Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)
+- __fileKey:__ フォーム要素の名前を指定します。 デフォルトは "file" です (DOMString)
+- __fileName:__ サーバーに保存する際のファイル名を指定します。 デフォルトは "image.jpg" です (DOMString)
+- __mimeType:__ データの MIME 形式を指定します。 デフォルトは "image/jpeg" です (DOMString)
+- __params:__ その他の HTTP リクエストで送信されるパラメーターを指定します (Object)
+- __chunkedMode:__ アップロードにチャンクドストリーミングモードを使用するかを指定します。 デフォルトは "true" です (Boolean)
 
 
-Description
+概要
 -----------
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+`FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメータとして設定する場合に使用します。
 
-iOS Quirk
+iOS に関する注意点
 ---------
 
 - __chunkedMode:__
-    This parameter is ignored on iOS.
+    iOS ではこの値は無視されます。
 
-WP7 Quirk
+WP7 に関する注意点
 ---------
 
 - __chunkedMode:__
-    This parameter is ignored on WP7.    
+    WP7 ではこの値は無視されます。

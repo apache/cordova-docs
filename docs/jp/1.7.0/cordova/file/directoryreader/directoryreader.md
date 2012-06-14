@@ -20,34 +20,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 DirectoryReader
 ===============
 
-An object that lists files and directories in a directory.  Defined in the [Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+ディレクトリの中のファイルとディレクトリをリストアップするオブジェクトです。これは [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) の仕様書で定義されています。
 
-Methods
+メソッド
 -------
 
-- __readEntries__: Read the entries in a directory. 
+- __readEntries__: ディレクトリの中のエントリを読み込みます
 
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
 readEntries
 -----------
 
-Read the entries in this directory.
+このディレクトリの中のエントリを読み込みます。
 
-__Parameters:__
+__パラメーター:__
 
-- __successCallback__ - A callback that is passed an array of FileEntry and DirectoryEntry objects. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the directory listing. Invoked with a FileError object. _(Function)_
+- __successCallback__ - FileEntry と DirectoryEntry オブジェクトの配列を渡すコールバック関数を表します _(Function)_
+- __errorCallback__ - ディレクトリリストの取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 
-__Quick Example__
-	
+__使用例__
+
     function success(entries) {
         var i;
         for (i=0; i<entries.length; i++) {
@@ -56,11 +56,11 @@ __Quick Example__
     }
 
     function fail(error) {
-        alert("Failed to list directory contents: " + error.code);
+        alert("コンテンツのリストアップ中にエラーが発生しました: " + error.code);
     }
 
-    // Get a directory reader
+    // directory readerの取得
     var directoryReader = dirEntry.createReader();
 
-    // Get a list of all the entries in the directory
+    // ディレクトリの中のすべてのエントリのリストを取得
     directoryReader.readEntries(success,fail);

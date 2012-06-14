@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 searchbutton
 ===========
 
-このイベントはユーザが検索ボタンを押したときに呼び出されます。
+このイベントはユーザーが検索ボタンを押したときに呼び出されます。
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
 

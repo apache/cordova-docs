@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 backbutton
 ===========
 
-このイベントはユーザが戻るボタンを押したときに呼び出されます。
+このイベントはユーザーが戻るボタンを押したときに呼び出されます。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
 
