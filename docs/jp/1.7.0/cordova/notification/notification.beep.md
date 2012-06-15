@@ -20,65 +20,65 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 notification.beep
 =================
 
-The device will play a beep sound.
+デバイスが警告音を鳴らします。
 
     navigator.notification.beep(times);
 
-- __times:__ The number of times to repeat the beep (`Number`)
+- __times:__ 警告音を鳴らす回数を表します (`Number`)
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Beep twice!
+    // 警告音を2回鳴らす
     navigator.notification.beep(2);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Empty
+            // 処理なし
         }
 
-        // Show a custom alert
+        // 通知ダイアログを表示
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'あなたの勝ちです！', // メッセージ
+                'ゲームオーバー', // タイトル
+                '終了' // ボタン名
+            );
         }
 
-        // Beep three times
+        // 警告音を3回鳴らす
         //
         function playBeep() {
             navigator.notification.beep(3);
         }
 
-        // Vibrate for 2 seconds
+        // 2秒間バイブレーションさせます
         //
         function vibrate() {
             navigator.notification.vibrate(2000);
@@ -87,27 +87,27 @@ Full Example
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-        <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-        <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">通知を表示</a></p>
+        <p><a href="#" onclick="playBeep(); return false;">警告音を鳴らす</a></p>
+        <p><a href="#" onclick="vibrate(); return false;">バイブレーション</a></p>
       </body>
     </html>
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
+- Android では、 "Settings/Sound & Display" パネルで設定されたデフォルトの "Notification ringtone" を鳴らします。
 
-iPhone Quirks
+iPhone に関する注意点
 -------------
 
-- Ignores the beep count argument.
-- There is no native beep API for iPhone.
-  - Cordova implements beep by playing an audio file via the media API.
-  - The user must provide a file with the desired beep tone.
-  - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`.
+- 引数の警告音の回数を無視します。
+- iPhone はネイティブの beep API を持っていません。
+- Cordova は media API を使って、オーディオファイルを再生することで警告音を実装しています。
+- ユーザーは適切な警告音のファイルを用意する必要があります。
+- このファイルは30秒未満とし、 www/root に beep.wav として保存してください。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-- WP7 Cordova lib includes a generic beep file that is used. 
+- WP7 の Cordova ライブラリは独自の警告音ファイルを含んでおり、それを使用しています。

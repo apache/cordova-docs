@@ -20,103 +20,103 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 notification.confirm
 ====================
 
-Shows a customizable confirmation dialog box.
+カスタマイズ可能な確認ダイアログボックスを表示します。
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
-- __message:__ Dialog message (`String`)
-- __confirmCallback:__ - Callback to invoke with index of button pressed (1, 2 or 3). (`Number`)
-- __title:__ Dialog title (`String`) (Optional, Default: "Confirm")
-- __buttonLabels:__ Comma separated string with button labels (`String`) (Optional, Default: "OK,Cancel")
-    
-Description
+- __message:__ ダイアログのメッセージを表します (`String`)
+- __confirmCallback:__ 押されたボタンのインデックス (1, 2, または3) とともに呼び出されるコールバック関数を表します (`Number`)
+- __title:__ ダイアログのタイトルを表します (`String`) (オプション, デフォルト: "Confirm")
+- __buttonLabels:__ ボタンのラベルを設定するためのカンマ区切りの文字列を表します (String) (オプション, デフォルト: "OK,Cancel")
+
+概要
 -----------
 
-Function `notification.confirm` displays a native dialog box that is more customizable than the browser's `confirm` function.
+`notification.confirm` 関数は、ブラウザの confirm 関数よりも広いカスタマイズ性を持ったネイティブダイアログボックスを表示する関数です。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-	// process the confirmation dialog result
-	function onConfirm(button) {
-		alert('You selected button ' + button);
-	}
+    // 確認ダイアログの表示プロセスの開始
+    function onConfirm(button) {
+        alert('選択されたボタン ' + button);
+    }
 
-    // Show a custom confirmation dialog
+    // カスタム確認ダイアログを表示
     //
     function showConfirm() {
         navigator.notification.confirm(
-	        'You are the winner!',  // message
-			onConfirm,				// callback to invoke with index of button pressed
-	        'Game Over',            // title
-	        'Restart,Exit'          // buttonLabels
+            'あなたの勝ちです！', // メッセージ
+            onConfirm, // 選択されたボタン情報とともに呼ばれるコールバック関数
+            'ゲームオーバー', // タイトル
+            'リスタート,終了' // ボタン
         );
     }
-        
-Full Example
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Empty
+            // 処理なし
         }
-    
-		// process the confirmation dialog result
-		function onConfirm(button) {
-			alert('You selected button ' + button);
-		}
 
-        // Show a custom confirmation dialog
+        // 確認ダイアログの表示プロセスの開始
+        function onConfirm(button) {
+            alert('選択されたボタン ' + button);
+        }
+
+        // カスタム確認ダイアログを表示
         //
         function showConfirm() {
             navigator.notification.confirm(
-		        'You are the winner!',  // message
-				onConfirm,				// callback to invoke with index of button pressed
-		        'Game Over',            // title
-		        'Restart,Exit'          // buttonLabels
+                'あなたの勝ちです！', // メッセージ
+                onConfirm, // 選択されたボタン情報とともに呼ばれるコールバック関数
+                'ゲームオーバー', // タイトル
+                'リスタート,終了' // ボタン
             );
         }
-    
+
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+        <p><a href="#" onclick="showConfirm(); return false;">確認ダイアログを表示</a></p>
       </body>
     </html>
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-- Ignores button names, always 'OK|Cancel'
-- There is no built in browser confirm, so if you want to just write alert('foo'); you can assign window.confirm = navigator.notification.confirm;
-- alert + confirm calls are non-blocking, and result is only available asyncronously.
+- ボタンの名前は無視され、常に 'OK|Cancel' が使用されます。
+- ビルトインのブラウザ確認ダイアログ機能はないため、もし confirm('foo'); とだけ書きたい場合は、 window.confirm = navigator.notification.confirm; と window.confirm に Cordova の notification.confirm をアサインできます。
+- 通知と確認の呼び出しはノンブロッキングで、結果は非同期でのみ取得可能です。
 
-Bada 2.x Quirks
+Bada 2.x に関する注意点
 ---------------
-- confirm uses javascript alert
+- 確認は、 Javascript の alert を使用します。
 
-Bada 1.2 Quirks
+Bada 1.2 に関する注意点
 ---------------
-- Ignore button names, always 'OK|Cancel'
+- ボタンの名前は無視され、常に 'OK|Cancel' が使用されます。

@@ -20,66 +20,66 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 notification.vibrate
 ====================
 
-Vibrates the device for the specified amount of time.
+指定された時間デバイスをバイブレーションさせます。
 
     navigator.notification.vibrate(milliseconds)
 
-- __time:__ Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (`Number`)
+- __time:__ バイブレーションの長さをミリ秒単位で表します。 1000ミリ秒は1秒です (`Number`)
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
 - Windows Phone 7
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Vibrate for 2.5 seconds
+    // 2.5秒間バイブレーションさせます
     //
     navigator.notification.vibrate(2500);
 
-Full Example
+詳細な使用例
 ------------
-    
+
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Empty
+            // 処理なし
         }
-    
-        // Show a custom alert
+
+        // 通知ダイアログを表示
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'あなたの勝ちです！', // メッセージ
+                'ゲームオーバー', // タイトル
+                '終了' // ボタン名
+            );
         }
-    
-        // Beep three times
+
+        // 警告音を3回鳴らす
         //
         function playBeep() {
             navigator.notification.beep(3);
         }
-    
-        // Vibrate for 2 seconds
+
+        // 2秒間バイブレーションさせます
         //
         function vibrate() {
             navigator.notification.vibrate(2000);
@@ -88,16 +88,16 @@ Full Example
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-        <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-        <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">通知を表示</a></p>
+        <p><a href="#" onclick="playBeep(); return false;">警告音を鳴らす</a></p>
+        <p><a href="#" onclick="vibrate(); return false;">バイブレーション</a></p>
       </body>
     </html>
 
-iPhone Quirks
+iPhone に関する注意点
 -------------
 
-- __time:__ Ignores the time and vibrates for a pre-set amount of time.
+- __time:__ 引数のバイブレーションの長さを無視し、あらかじめ定められた時間バイブレーションします。
 
         navigator.notification.vibrate();
-        navigator.notification.vibrate(2500);   // 2500 is ignored
+        navigator.notification.vibrate(2500); // 2500は無視されます

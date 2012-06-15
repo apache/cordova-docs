@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Notification
 ============
 
-> Visual, audible, and tactile device notifications.
+> 視覚、聴覚、触覚を用いたデバイス通知機能を提供します。
 
-Methods
+メソッド
 -------
 
 - notification.alert

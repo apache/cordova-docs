@@ -20,96 +20,96 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 notification.alert
 ==================
 
-Shows a custom alert or dialog box.
+通知ダイアログボックスを表示します。
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message:__ Dialog message (`String`)
-- __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
-- __title:__ Dialog title (`String`) (Optional, Default: "Alert")
-- __buttonName:__ Button name (`String`) (Optional, Default: "OK")
-    
-Description
+- __message:__ ダイアログのメッセージを表します (`String`)
+- __alertCallback:__ 通知ダイアログが確認された後に呼び出されるコールバック関数を表します (`Function`)
+- __title:__ ダイアログのタイトルを表します (`String`) (オプション, デフォルト: "Alert")
+- __buttonName:__ ボタンの名前を表します (`String`) (オプション, デフォルト: "OK")
+
+概要
 -----------
 
-Most Cordova implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
+ほとんどの Cordova の実装はネイティブのダイアログボックスを使用しています。一部のプラットフォームのみブラウザの `alert` 関数を使っており、通常これらはカスタマイズが制限されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 
-Quick Example
+使用例
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
+    // Android / BlackBerry WebWorks (OS 5.0 以上) / iPhone
     //
     function alertDismissed() {
-        // do something
+        // 任意のコード
     }
 
     navigator.notification.alert(
-        'You are the winner!',  // message
-        alertDismissed,         // callback
-        'Game Over',            // title
-        'Done'                  // buttonName
+        'あなたの勝ちです！', // メッセージ
+        alertDismissed, // コールバック関数
+        'ゲームオーバー', // タイトル
+        '終了' // ボタン名
     );
-        
-Full Example
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Notification Example</title>
+        <title>Notification の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-            // Empty
+            // 処理なし
         }
-    
-        // alert dialog dismissed
-	    function alertDismissed() {
-	        // do something
-	    }
 
-        // Show a custom alert
+        // 通知ダイアログボックスが確認された
+        function alertDismissed() {
+            // 任意のコード
+        }
+
+        // 通知ダイアログを表示
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        alertDismissed,         // callback
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'あなたの勝ちです！', // メッセージ
+                alertDismissed, // コールバック関数
+                'ゲームオーバー', // タイトル
+                '終了' // ボタン名
+            );
         }
-    
+
         </script>
       </head>
       <body>
-        <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+        <p><a href="#" onclick="showAlert(); return false;">通知を表示</a></p>
       </body>
     </html>
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-- Ignores button names, always uses 'OK'
-- There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-- alert + confirm calls are non-blocking, and result is only available asyncronously.
+- ボタンの名前は無視され、常に 'OK' が使用されます。
+- ビルトインのブラウザ通知ダイアログ機能はないため、もし alert('foo'); とだけ書きたい場合は、 window.alert = navigator.notification.alert; と window.alert に Cordova の notification.alert をアサインできます。
+- 通知と確認の呼び出しはノンブロッキングで、結果は非同期でのみ取得可能です。
 
-Bada 2.x Quirks
+Bada 2.xに関する注意点
 ---------------
-- alert uses javascript alert
+- 通知は、 Javascript の alert を使用します。
