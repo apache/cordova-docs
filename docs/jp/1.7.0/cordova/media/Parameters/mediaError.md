@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 mediaError
 ==========
 
-A user specified callback function that is invoked when there is an error in media functions.
+メディア関数群にエラーが発生したときのユーザーによって定義されるコールバック関数です。
 
     function(error) {
-        // Handle the error
+        // エラー処理
     }
 
-Parameters
+パラメーター
 ----------
 
-- __error:__ The error returned by the device. (`MediaError`)
+- __error:__ デバイスから返されるエラーを表します (`MediaError`)

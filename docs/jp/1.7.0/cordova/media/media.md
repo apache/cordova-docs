@@ -20,44 +20,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Media
 =====
 
-> The `Media` object provides the ability to record and play back audio files on a device. 
+> `Media` オブジェクトは、デバイス上でのオーディオファイルの再生や録音などといった機能をサポートします。
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
 
-Note: The current implementation does not adhere to a W3C specification for media capture, and is provided for convenience only.  A future implementation will adhere to the latest W3C specification and may deprecate the current APIs.
+注意: 現在の実装はメディアキャプチャーに関する W3C の仕様を満たしていません。利便性のためだけに提供されています。将来的には最新の W3C の仕様に合わせるとともに、現在の API を廃止することも検討されています。
 
-Parameters
+パラメーター
 ----------
 
-- __src__: A URI containing the audio content. _(DOMString)_
-- __mediaSuccess__: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. _(Function)_
-- __mediaError__: (Optional) The callback that is invoked if there was an error. _(Function)_
-- __mediaStatus__: (Optional) The callback that is invoked to indicate status changes. _(Function)_
+- __src__: オーディオコンテンツを示す URI を表します _(DOMString)_
+- __mediaSuccess__: (オプション) Media オブジェクトが再生、録音、停止などのアクションを完了したときに呼ばれるコールバック関数を表します _(Function)_
+- __mediaError__: (オプション) エラー発生時に呼ばれるコールバック関数を表します _(Function)_
+- __mediaStatus__: (オプション) ステータスが変わったときに呼ばれるコールバック関数を表します _(Function)_
 
-Methods
+メソッド
 -------
 
-- media.getCurrentPosition: Returns the current position within an audio file.
-- media.getDuration: Returns the duration of an audio file.
-- media.play: Start or resume playing audio file.
-- media.pause: Pause playing audio file.
-- media.release: Releases the underlying OS'es audio resources.
-- media.seekTo: Moves the position within the audio file.
-- media.startRecord: Start recording audio file.
-- media.stopRecord: Stop recording audio file.
-- media.stop: Stop playing audio file.
+- media.getCurrentPosition: オーディオファイル内の現在の再生位置を返します
+- media.getDuration: オーディオファイルの再生時間を返します
+- media.play: オーディオファイルを再生または再開します
+- media.pause: オーディオファイルを一時停止します
+- media.release: OS のオーディオリソースを開放します
+- media.seekTo: オーディオファイル中の再生位置を動かします
+- media.startRecord: オーディオファイルの録音を開始します
+- media.stopRecord: オーディオファイルの録音を停止します
+- media.stop: オーディオファイルを停止します
 
-Additional ReadOnly Parameters
+追加の読み取り専用パラメーター
 ---------------------
 
-- ___position__: The position within the audio playback in seconds.  Not automatically updated during play, call getCurrentPosition to update.
-- ___duration__: The duration of the media in seconds.
+- ___position__: 再生位置を秒単位で表します。 再生中は自動的に値が更新されないので、 getCurrentPosition メソッドを呼び、値を更新します
+- ___duration__: メディアの再生時間を秒単位で表します
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 

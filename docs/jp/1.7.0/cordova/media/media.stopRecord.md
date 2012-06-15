@@ -20,76 +20,76 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 media.stopRecord
 ================
 
-Stops recording an audio file.
+オーディオファイルの録音を停止します。
 
     media.stopRecord();
 
 
-Description
+概要
 -----------
 
-Function `media.stopRecord` is a synchronous function that stops recording an audio file.
+`media.stopRecord` 関数はオーディオファイルの録音を停止させる同期関数です。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
 - iOS
-- Windows Phone 7 ( Mango )
-    
-Quick Example
+- Windows Phone 7 (Mango)
+
+使用例
 -------------
 
-    // Record audio
-    // 
+    // オーディオの録音
+    //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // 呼び出し成功
             function() {
                 console.log("recordAudio():Audio Success");
             },
-            
-            // error callback
+
+            // 呼び出し失敗
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
-            });
+        });
 
-        // Record audio
+        // オーディオの録音
         mediaRec.startRecord();
 
-        // Stop recording after 10 seconds
+        // 10秒後に録音を停止
         setTimeout(function() {
             mediaRec.stopRecord();
         }, 10000);
     }
 
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>デバイスプロパティーの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Record audio
-        // 
+        // オーディオの録音
+        //
         function recordAudio() {
             var src = "myrecording.mp3";
             var mediaRec = new Media(src, onSuccess, onError);
 
-            // Record audio
+            // オーディオの録音
             mediaRec.startRecord();
 
-            // Stop recording after 10 sec
+            // 10秒後に録音を停止
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
@@ -101,27 +101,27 @@ Full Example
             }, 1000);
         }
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
             recordAudio();
         }
-    
-        // onSuccess Callback
+
+        // 成功時のコールバック関数
         //
         function onSuccess() {
             console.log("recordAudio():Audio Success");
         }
-    
-        // onError Callback 
+
+        // エラー時のコールバック関数 
         //
         function onError(error) {
-            alert('code: '    + error.code    + '\n' + 
-                  'message: ' + error.message + '\n');
+            alert('コード: '        + error.code    + '\n' +
+                  'メッセージ: '    + error.message + '\n');
         }
 
-        // Set audio position
-        // 
+        // 再生位置をセット
+        //
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }
@@ -129,7 +129,7 @@ Full Example
         </script>
       </head>
       <body>
-        <p id="media">Recording audio...</p>
+        <p id="media">オーディオを録音...</p>
         <p id="audio_position"></p>
       </body>
     </html>

@@ -20,15 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 MediaError
 ==========
 
-A `MediaError` object is returned to the `mediaError` callback function when an error occurs.
+`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ Error message describing the details of the error.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
+- __message:__ エラーの内容を表すエラーメッセージを表します
 
-Constants
+定数
 ---------
 
 - `MediaError.MEDIA_ERR_ABORTED`
@@ -37,8 +37,8 @@ Constants
 - `MediaError.MEDIA_ERR_NONE_SUPPORTED`
 
 
-Description
+概要
 -----------
 
-The `MediaError` object is returned to the user through the `mediaError` callback function when an error occurs.
+`MediaError` オブジェクトは、エラー発生時に `mediaError` コールバック関数に渡されます。
 

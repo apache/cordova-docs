@@ -20,98 +20,97 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 media.pause
 ===========
 
-Pauses playing an audio file.
+オーディオファイルを一時停止します。
 
     media.pause();
 
 
-Description
+概要
 -----------
 
-Function `media.pause` is a synchronous function that pauses playing an audio file.
+`media.pause` 関数はオーディオファイルを一時停止させる同期関数です。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
 - iOS
-- Windows Phone 7 ( Mango )
-    
-Quick Example
+- Windows Phone 7 (Mango)
+
+使用例
 -------------
 
-    // Play audio
+    // オーディオ再生
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // URL のオーディオファイルを再生
         var my_media = new Media(url,
-            // success callback
+            // 呼び出し成功
             function() {
                 console.log("playAudio():Audio Success");
             },
-            // error callback
+            // 呼び出し失敗
             function(err) {
                 console.log("playAudio():Audio Error: "+err);
         });
 
-        // Play audio
+        // オーディオ再生
         my_media.play();
 
-        // Pause after 10 seconds
+        // 10秒後に一時停止
         setTimeout(function() {
             media.pause();
-        }, 10000);        
+        }, 10000);
     }
 
-
-Full Example
+詳細な使用例
 ------------
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
-        
+            <title>メディアの使用例</title>
+
             <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
             <script type="text/javascript" charset="utf-8">
-        
-            // Wait for Cordova to load
+
+            // Cordova の読み込み完了まで待機
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-        
-            // Cordova is ready
+
+            // Cordova 準備完了
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
-        
-            // Audio player
+
+            // オーディオプレイヤー
             //
             var my_media = null;
             var mediaTimer = null;
-        
-            // Play audio
+
+            // オーディオ再生
             //
             function playAudio(src) {
-                // Create Media object from src
+                // src から Media オブジェクトを作成
                 my_media = new Media(src, onSuccess, onError);
-        
-                // Play audio
+
+                // オーディオ再生
                 my_media.play();
-        
-                // Update my_media position every second
+
+                // my_media の再生位置を一秒ごとに更新
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // my_media の再生位置を取得
                         my_media.getCurrentPosition(
-                            // success callback
+                            // 呼び出し成功
                             function(position) {
                                 if (position > -1) {
                                     setAudioPosition((position) + " sec");
                                 }
                             },
-                            // error callback
+                            // 呼び出し失敗
                             function(e) {
                                 console.log("Error getting pos=" + e);
                                 setAudioPosition("Error: " + e);
@@ -120,17 +119,17 @@ Full Example
                     }, 1000);
                 }
             }
-        
-            // Pause audio
-            // 
+
+            // オーディオ一時停止
+            //
             function pauseAudio() {
                 if (my_media) {
                     my_media.pause();
                 }
             }
-        
-            // Stop audio
-            // 
+
+            // オーディオ停止
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -138,32 +137,32 @@ Full Example
                 clearInterval(mediaTimer);
                 mediaTimer = null;
             }
-        
-            // onSuccess Callback
+
+            // 成功時のコールバック関数
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
-        
-            // onError Callback 
+
+            // エラー時のコールバック関数 
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
-                      'message: ' + error.message + '\n');
+                alert('コード: '        + error.code    + '\n' +
+                      'メッセージ: '    + error.message + '\n');
             }
-        
-            // Set audio position
-            // 
+
+            // 再生位置をセット
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
-        
+
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">再生</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">一時停止</a>
+            <a href="#" class="btn large" onclick="stopAudio();">停止</a>
             <p id="audio_position"></p>
           </body>
         </html>

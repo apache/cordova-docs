@@ -20,36 +20,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 media.seekTo
 ========================
 
-Sets the current position within an audio file.
+オーディオファイル中の再生位置を動かします。
 
     media.seekTo(milliseconds);
 
-Parameters
+パラメーター
 ----------
 
-- __milliseconds__: The position to set the playback position within the audio in milliseconds. .
+- __milliseconds__: 再生位置を動かす先の位置をミリ秒単位で表します
 
 
-Description
+概要
 -----------
 
-Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+`media.seekTo` 関数は Media オブジェクトのオーディオファイルの現在再生位置を更新する非同期関数です。 Media オブジェクト内の __position__ パラメーターの値も更新します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
 - iOS
-- Windows Phone 7 ( Mango )
-    
-Quick Example
+- Windows Phone 7 (Mango)
+
+使用例
 -------------
 
-        // Audio player
+        // オーディオプレイヤー
         //
         var my_media = new Media(src, onSuccess, onError);
-		my_media.play();
-        // SeekTo to 10 seconds after 5 seconds
+        my_media.play();
+        // 5秒後に、10秒の位置まで移動
         setTimeout(function() {
             my_media.seekTo(10000);
         }, 5000);
@@ -62,58 +62,58 @@ Full Example
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
-        
+            <title>メディアの使用例</title>
+
             <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
             <script type="text/javascript" charset="utf-8">
-        
-            // Wait for Cordova to load
+
+            // Cordova の読み込み完了まで待機
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-        
-            // Cordova is ready
+
+            // Cordova 準備完了
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
-        
-            // Audio player
+
+            // オーディオプレイヤー
             //
             var my_media = null;
             var mediaTimer = null;
-        
-            // Play audio
+
+            // オーディオ再生
             //
             function playAudio(src) {
-                // Create Media object from src
+                // src から Media オブジェクトを作成
                 my_media = new Media(src, onSuccess, onError);
-        
-                // Play audio
+
+                // オーディオ再生
                 my_media.play();
-                // Update media position every second
-        		mediaTimer = setInterval(function() {
-            		// get media position
-           			my_media.getCurrentPosition(
-                		// success callback
-                		function(position) {
-                    		if (position > -1) {
-                        		setAudioPosition(position + " sec");
-                    		}
-                		},
-                		// error callback
-                		function(e) {
-                    		console.log("Error getting pos=" + e);
-                		}
-            		);
-        		}, 1000);
-        		// SeekTo to 10 seconds after 5 seconds
-        		setTimeout(function() {
-            		my_media.seekTo(10000);
-           		}, 5000);
-     		}
-        
-            // Stop audio
-            // 
+                // メディアの再生位置を一秒ごとに更新
+                mediaTimer = setInterval(function() {
+                    // 再生位置を取得
+                    my_media.getCurrentPosition(
+                        // 呼び出し成功
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition(position + " sec");
+                            }
+                        },
+                        // 呼び出し失敗
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                        }
+                    );
+                }, 1000);
+                // 5秒後に、10秒の位置まで移動
+                setTimeout(function() {
+                    my_media.seekTo(10000);
+                }, 5000);
+            }
+
+            // オーディオ停止
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -121,31 +121,31 @@ Full Example
                 clearInterval(mediaTimer);
                 mediaTimer = null;
             }
-        
-            // onSuccess Callback
+
+            // 成功時のコールバック関数
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
-        
-            // onError Callback 
+
+            // エラー時のコールバック関数
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
-                      'message: ' + error.message + '\n');
+                alert('コード: '        + error.code    + '\n' +
+                      'メッセージ: '    + error.message + '\n');
             }
-        
-            // Set audio position
-            // 
+
+            // 再生位置をセット
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
-        
+
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">再生</a>
+            <a href="#" class="btn large" onclick="stopAudio();">停止</a>
             <p id="audio_position"></p>
           </body>
         </html>
