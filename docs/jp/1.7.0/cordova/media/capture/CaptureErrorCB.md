@@ -20,21 +20,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureErrorCB
 ==============
 
-> Invoked if an error occurs during a media capture operation.
+> メディアキャプチャー操作中にエラーが発生した場合に呼び出されます。
 
     function captureError( CaptureError error ) { ... };
 
-Description
+概要
 -----------
 
-This function is invoked if an error occurs when trying to launch a media capture operation and the capture application is busy, if an error occurs while the capture operation is taking place, or if the capture operation has been canceled by the user before any media files have been captured.
+この関数は、もしメディアキャプチャーアプリを起動しようとして、アプリがビジー状態であってエラーが発生した場合、もしキャプチャー操作実行中にエラーが発生した場合、もしユーザーによってメディアファイルがキャプチャーされる前にキャプチャー操作がキャンセルされた場合などに呼び出されます。
 
-This function is invoked with a CaptureError object containing an appropriate error code.
+この関数は適切なエラーコードが含まれた CaptureError オブジェクトを伴って呼び出されます。
 
-Quick Example
+使用例
 -------------
 
-    // capture error callback
+    // capture エラーコールバック関数
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };

@@ -20,43 +20,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 MediaFileData
 =============
 
-> Encapsulates format information about a media file.
+> メディアファイルのフォーマット情報をカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __codecs:__ The actual format of the audio and video content. (DOMString)
-- __bitrate:__ The average bitrate of the content.  In case of an image, this attribute has value 0. (Number)
-- __height:__ The height of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)
-- __width:__ The width of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)
-- __duration:__ The length of the video or sound clip in seconds. In the case of an image, this attribute has value 0. (Number)
+- __codecs:__ オーディオやビデオの実際のフォーマットを表します。 (DOMString)
+- __bitrate:__ ファイルの平均ビットレートを表します。画像の場合は、0に設定されます。 (Number)
+- __height:__ 画像またはビデオの高さをピクセルで表します。オーディオの場合は、0に設定されます。 (Number)
+- __width:__ 画像またはビデオの幅をピクセルで表します。オーディオの場合は、0に設定されます。 (Number)
+- __duration:__ ビデオまたはオーディオの長さを秒で表します。画像の場合は、0に設定されます。 (Number)
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
-There is no API that provides format information of media files.  So the MediaFileData object returned by the MediaFile.getFormatData function will have the following default values:
+メディアファイルのフォーマット情報を提供する API はありません。 MediaFileData オブジェクトは、 MediaFile.getFormatData 関数によって返され、以下のようなデフォルト値を持ちます:
 
-- __codecs:__ Not supported. The attribute will always be null.
-- __bitrate:__ Not supported.  The attribute will always be 0.
-- __height:__ Not supported.  The attribute will always be 0.
-- __width:__ Not supported.  The attribute will always be 0.
-- __duration:__ Not supported.  The attribute will always be 0.
+- __codecs:__ サポートされていません。この属性は常に null となります。
+- __bitrate:__ サポートされていません。この属性は常に0となります。
+- __height:__ サポートされていません。この属性は常に0となります。
+- __width:__ サポートされていません。この属性は常に0となります。
+- __duration:__ サポートされていません。この属性は常に0となります。
 
-Android Quirks
+Android に関する注意点
 --------------
-Support for the MediaFileData properties is as follows:
+MediaFileData プロパティーへのサポートは以下のとおりです:
 
-- __codecs:__ Not supported.  The attribute will always be null.
-- __bitrate:__ Not supported.  The attribute will always be 0.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
-- __duration:__ Supported.  (Audio and video files only).
+- __codecs:__ サポートされていません。この属性は常に null となります。
+- __bitrate:__ サポートされていません。この属性は常に0となります。
+- __height:__ サポートされています。 (画像及びビデオに限る) 。
+- __width:__ サポートされています。 (画像及びビデオに限る) 。
+- __duration:__ サポートされています。 (オーディオ及びビデオに限る) 。
 
-iOS Quirks
+iOS に関する注意点
 ----------
-Support for the MediaFileData properties is as follows:
+MediaFileData プロパティーへのサポートは以下のとおりです:
 
-- __codecs:__ Not supported.  The attribute will always be null.
-- __bitrate:__ Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
-- __duration:__ Supported.  (Audio and video files only).
+- __codecs:__ サポートされていません。この属性は常に null となります。
+- __bitrate:__ iOS4 のデバイスにおいて、オーディオのみサポートされています。この属性は、画像とビデオについては常に0となります。
+- __height:__ サポートされています。 (画像及びビデオに限る) 。
+- __width:__ サポートされています。 (画像及びビデオに限る) 。
+- __duration:__ サポートされています。 (オーディオ及びビデオに限る) 。

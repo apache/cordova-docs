@@ -20,18 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 MediaFile
 =========
 
-> Encapsulates properties of a media capture file.
+> メディアキャプチャーファイルのプロパティーをカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __name:__ The name of the file, without path information. (DOMString)
-- __fullPath:__ The full path of the file, including the name. (DOMString)
-- __type:__ The mime type (DOMString)
-- __lastModifiedDate:__ The date and time that the file was last modified. (Date)
-- __size:__ The size of the file, in bytes. (Number)
+- __name:__ パス情報を含まないファイルの名前を表します。 (DOMString)
+- __fullPath:__ ファイルの名前を含むフルパスを表します。 (DOMString)
+- __type:__ ファイルの mime type を表します。 (DOMString)
+- __lastModifiedDate:__ ファイルの最終更新日時を表します。 (Date)
+- __size:__ ファイルのサイズをバイトで表します。 (Number)
 
-Methods
+メソッド
 -------
 
-- __MediaFile.getFormatData:__ Retrieves the format information of the media file.
+- __MediaFile.getFormatData:__ メディアファイルのフォーマット情報を取得します。

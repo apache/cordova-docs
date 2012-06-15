@@ -20,18 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureError
 ============
 
-> Encapsulates the error code resulting from a failed media capture operation.
+> 失敗したメディアキャプチャー操作のエラーコードをカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the pre-defined error codes listed below.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
 
-Constants
+定数
 ---------
 
-- CaptureError.`CAPTURE_INTERNAL_ERR`: Camera or microphone failed to capture image or sound. 
-- CaptureError.`CAPTURE_APPLICATION_BUSY`: Camera application or audio capture application is currently serving other capture request.
-- CaptureError.`CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g. limit parameter has value less than one).
-- CaptureError.`CAPTURE_NO_MEDIA_FILES`: User exited camera application or audio capture application before capturing anything.
-- CaptureError.`CAPTURE_NOT_SUPPORTED`: The requested capture operation is not supported.
+- CaptureError.`CAPTURE_INTERNAL_ERR`: カメラまたはマイクが画像または音のキャプチャーに失敗した場合。
+- CaptureError.`CAPTURE_APPLICATION_BUSY`: カメラアプリまたはオーディオ録音アプリが現在他のキャプチャーリクエストを扱っている場合。
+- CaptureError.`CAPTURE_INVALID_ARGUMENT`: API の使用方法が不正であった場合 (例: limit パラメーターの値が1未満である) 。
+- CaptureError.`CAPTURE_NO_MEDIA_FILES`: ユーザーが何もキャプチャーせずにカメラアプリやオーディオ録音アプリを終了した場合。
+- CaptureError.`CAPTURE_NOT_SUPPORTED`: キャプチャー操作のリクエストがサポートされていない場合。

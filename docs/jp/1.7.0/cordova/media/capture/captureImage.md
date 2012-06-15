@@ -20,92 +20,91 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureImage
 ====================
 
-> Start the camera application and return information about captured image file(s).
+> カメラアプリを起動し、キャプチャーしたファイルの情報を返します。
 
-    navigator.device.capture.captureImage( 
-	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
-	);
+    navigator.device.capture.captureImage(
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+    );
 
-Description
+概要
 -----------
 
-This method starts an asynchronous operation to capture images using the device camera application.  The operation allows the device user to capture multiple images in a single session.
+このメソッドは、デバイスのカメラアプリを使用して、画像をキャプチャーするための非同期操作を開始します。この操作はユーザーに、単一セッションで複数の画像のキャプチャーをユーザーに許可します。
 
-The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in CaptureImageOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
+キャプチャー操作は、ユーザーがカメラアプリを終了するか、 CaptureImageOption の中の __limit__ パラメーターで指定された最大撮影回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度画像を撮影した後に終了します。
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+キャプチャー操作が終了した時、それぞれの画像ファイル情報が書かれた MediaFile オブジェクトの配列を伴った CaptureCB コールバック関数を呼び出します。もし画像がキャプチャーされる前にユーザーによって操作が終了されたら、 CaptureError.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ CaptureError オブジェクトを伴った CaptureErrorCB コールバック関数が呼び出されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 ----------------------
 
-Invoking the native camera application while your device is connected
-via Zune will not work, and the error callback will be triggered.
+Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
 
-Quick Example
+使用例
 -------------
 
-    // capture callback
+    // capture コールバック関数
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
-    // capture error callback
+    // capture エラーコールバック関数
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start image capture
+    // 画像のキャプチャーを開始
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Image</title>
+        <title>画像キャプチャー</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Called when capture operation is finished
+        // キャプチャー操作の正常終了時の処理
         //
         function captureSuccess(mediaFiles) {
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	    
+            }
         }
 
-        // Called if something bad happens.
-        // 
+        // エラー発生時の処理
+        //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            var msg = 'キャプチャー中にエラーが発生しました: ' + error.code;
+            navigator.notification.alert(msg, null, 'エラー');
         }
 
-        // A button will call this function
+        // ボタンがクリックされた場合の処理
         //
         function captureImage() {
-            // Launch device camera application, 
-            // allowing user to capture up to 2 images
+            // デバイスのカメラアプリを起動、
+            // ユーザーに2つまで画像のキャプチャーを許可する
             navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
         }
 
-        // Upload files to server
+        // ファイルをサーバーにアップロード
         function uploadFile(mediaFile) {
             var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
@@ -114,20 +113,20 @@ Full Example
             ft.upload(path,
                 "http://my.domain.com/upload.php",
                 function(result) {
-                    console.log('Upload success: ' + result.responseCode);
-                    console.log(result.bytesSent + ' bytes sent');
+                    console.log('アップロード成功: ' + result.responseCode);
+                    console.log(result.bytesSent + ' バイト送信');
                 },
                 function(error) {
-                    console.log('Error uploading file ' + path + ': ' + error.code);
+                    console.log('ファイルのアップロードに失敗 ' + path + ': ' + error.code);
                 },
-                { fileName: name });   
+                { fileName: name });
         }
 
         </script>
-        </head>
-        <body>
-            <button onclick="captureImage();">Capture Image</button> <br>
-        </body>
+      </head>
+      <body>
+        <button onclick="captureImage();">画像キャプチャー</button> <br>
+      </body>
     </html>
 
 

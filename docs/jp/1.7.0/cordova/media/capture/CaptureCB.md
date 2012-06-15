@@ -20,25 +20,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureCB
 =========
 
-> Invoked upon a successful media capture operation.
+> メディアキャプチャー操作が成功した場合に呼び出されます。
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
-Description
+概要
 -----------
 
-This function is invoked after a successful capture operation has completed.  This means a media file has been captured, and either the user has exited the media capture application, or the capture limit has been reached.
+この関数は、キャプチャー操作が正常に完了したときに呼び出されます。これは、メディアファイルがキャプチャーされ、ユーザーがメディアキャプチャーアプリを終了した、もしくはキャプチャーの取得制限値に達したという意味です。
 
-Each MediaFile object describes a captured media file.  
+それぞれの MediaFile オブジェクトはキャプチャーされたメディアファイルを表します。
 
-Quick Example
+使用例
 -------------
 
-    // capture callback
+    // capture コールバック関数
     function captureSuccess(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };

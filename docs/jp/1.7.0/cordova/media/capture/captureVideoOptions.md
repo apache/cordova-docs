@@ -20,40 +20,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureVideoOptions
 ===================
 
-> Encapsulates video capture configuration options.
+> ビデオキャプチャーのオプションをカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __limit:__ The maximum number of video clips the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
-- __duration:__ The maximum duration of a video clip, in seconds.
-- __mode:__ The selected video capture mode.  The value must match one of the elements in `capture.supportedVideoModes`.
+- __limit:__ 一つのキャプチャー操作で録画できるビデオの最大値を表します。値は1以上の必要があります  (デフォルトは1です) 。
+- __duration:__ ビデオクリップの最大録画時間を秒で表します。
+- __mode:__ 選択されたビデオのモードを表します。値は `capture.supportedVideoModes` の中の一つである必要があります。
 
-Quick Example
+使用例
 -------------
 
-    // limit capture operation to 3 video clips
+    // キャプチャー操作時のビデオクリップの最大値を3に制限
     var options = { limit: 3 };
 
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
+- __duration__ パラメーターはサポートされていません。録画時間をプログラム的に制限することは出来ません。
+- __mode__ パラメーターはサポートされていません。ビデオのサイズとフォーマットはプログラム的に変更することはできません。しかし、これらのパラメーターはユーザーによって変更することは可能です。デフォルトでは、ビデオは 3GPP (video/3gpp) フォーマットで録画されます。
 
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
+- __duration__ パラメーターはサポートされていません。 録画時間をプログラム的に制限することは出来ません。
+- __mode__ パラメーターはサポートされていません。 ビデオのサイズとフォーマットはプログラム的に変更することはできません。しかし、これらのパラメーターはユーザーによって変更することは可能です。 デフォルトでは、ビデオは 3GPP (video/3gpp) フォーマットで録画されます。
 
-iOS Quirks
+iOS に関する注意点
 ----------
 
-- The __limit__ parameter is not supported.  One video is recorded per invocation.
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically. By default, videos are recorded in MOV (video/quicktime) format.
+- __limit__ パラメーターはサポートされていません。1つのキャプチャー操作につき1つのビデオが録画されます。
+- __duration__ パラメーターはサポートされていません。録画時間をプログラム的に制限することは出来ません。
+- __mode__ パラメーターはサポートされていません。ビデオのサイズとフォーマットはプログラム的に変更することはできません。デフォルトでは、ビデオは MOV (video/quicktime) フォーマットで録画されます。
 

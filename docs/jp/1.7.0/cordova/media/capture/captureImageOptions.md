@@ -20,34 +20,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureImageOptions
 ===================
 
-> Encapsulates image capture configuration options.
+> 画像キャプチャーのオプションをカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __limit:__ The maximum number of images the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
-- __mode:__ The selected image mode.  The value must match one of the elements in `capture.supportedImageModes`.
+- __limit:__ 一つのキャプチャー操作で撮影できる画像の最大値を表します。値は1以上の必要があります (デフォルトは1です) 。
+- __mode:__ 選択された画像のモードを表します。値は `capture.supportedImageModes` の中の一つである必要があります。
 
-Quick Example
+使用例
 -------------
 
-    // limit capture operation to 3 images
+    // キャプチャー操作時の取得画像の最大値を3に制限
     var options = { limit: 3 };
 
     navigator.device.capture.captureImage(captureSuccess, captureError, options);
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- The __mode__ parameter is not supported.  The image size and format cannot be altered programmatically; however, the image size can be altered by the device user.  Images are saved in JPEG format (image/jpeg).
+- __mode__ パラメーターはサポートされていません。画像のサイズとフォーマットはプログラム的に変更することはできません。しかし、画像サイズはユーザーによって変更することは可能です。画像は JPEG フォーマット (image/jpeg) で保存されます。
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
 
-- The __mode__ parameter is not supported.  The image size and format cannot be altered programmatically; however, the image size can be altered by the device user.  Images are saved in JPEG format (image/jpeg).
+- __mode__ パラメーターはサポートされていません。画像のサイズとフォーマットはプログラム的に変更することはできません。しかし、画像サイズはユーザーによって変更することは可能です。画像は JPEG フォーマット (image/jpeg) で保存されます。
 
-iOS Quirks
+iOS に関する注意点
 ----------
 
-- The __limit__ parameter is not supported. One image is taken per invocation.
-- The __mode__ parameter is not supported.  The image size and format cannot be altered programmatically.  Images are saved in JPEG format (image/jpeg).
+- __limit__ パラメーターはサポートされていません。1つのキャプチャー操作につき1つの画像が撮影されます。
+- __mode__ パラメーターはサポートされていません。画像のサイズとフォーマットはプログラム的に変更することはできません。画像は JPEG フォーマット (image/jpeg) で保存されます。

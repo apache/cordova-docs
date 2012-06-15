@@ -20,86 +20,86 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureAudio
 ====================
 
-> Start the audio recorder application and return information about captured audio clip file(s).
+> オーディオ録音アプリを起動し、キャプチャーしたファイルの情報を返します。
 
-    navigator.device.capture.captureAudio( 
-	    CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
-	);
+    navigator.device.capture.captureAudio(
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureAudioOptions options]
+    );
 
-Description
+概要
 -----------
 
-This method starts an asynchronous operation to capture audio recordings using the device's default audio recording application.  The operation allows the device user to capture multiple recordings in a single session.
+このメソッドは、デバイスのデフォルトのオーディオ録音アプリを使用して、オーディオをキャプチャーするための非同期操作を開始します。この操作はユーザーに、単一セッションで複数のビデオのキャプチャーをユーザーに許可します。
 
-The capture operation ends when either the user exits the audio recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureAudioOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single audio clip.
+キャプチャー操作は、ユーザーがオーディオ録音アプリを終了するか、 CaptureAudioOptions の中の __limit__ パラメーターで指定された最大録音回数に達した場合に終了します。もし __limit__ パラメーターが指定されていない場合は、デフォルト値である1が使用され、キャプチャー操作はユーザーが1度オーディオを録音した後に終了します。
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured audio clip file.  If the operation is terminated by the user before an audio clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+キャプチャー操作が終了した時、それぞれのオーディオ録音ファイル情報が書かれた MediaFile オブジェクトの配列を伴った CaptureCB コールバック関数を呼び出します。もしオーディオがキャプチャーされる前にユーザーによって操作が終了されたら、 CaptureError.`CAPTURE_NO_MEDIA_FILES` エラーコードを持つ CaptureError オブジェクトを伴った CaptureErrorCB コールバック関数が呼び出されます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-Quick Example
+使用例
 -------------
 
-    // capture callback
+    // capture コールバック関数
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
-    // capture error callback
+    // capture エラーコールバック関数
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start audio capture
+    // オーディオキャプチャーを開始
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Audio</title>
+        <title>オーディオキャプチャー</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Called when capture operation is finished
+        // キャプチャー操作の正常終了時の処理
         //
         function captureSuccess(mediaFiles) {
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	    
+            }
         }
 
-        // Called if something bad happens.
-        // 
+        // エラー発生時の処理
+        //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            var msg = 'キャプチャー中にエラーが発生しました: ' + error.code;
+            navigator.notification.alert(msg, null, 'エラー');
         }
 
-        // A button will call this function
+        // ボタンがクリックされた場合の処理
         //
         function captureAudio() {
-            // Launch device audio recording application, 
-            // allowing user to capture up to 2 audio clips
+            // デバイスのオーディオ録音アプリを起動し、
+            // ユーザーに2つまでオーディオの録音を許可する
             navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 2});
         }
 
-        // Upload files to server
+        // ファイルをサーバーにアップロード
         function uploadFile(mediaFile) {
             var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
@@ -108,33 +108,33 @@ Full Example
             ft.upload(path,
                 "http://my.domain.com/upload.php",
                 function(result) {
-                    console.log('Upload success: ' + result.responseCode);
-                    console.log(result.bytesSent + ' bytes sent');
+                    console.log('アップロード成功: ' + result.responseCode);
+                    console.log(result.bytesSent + ' バイト送信');
                 },
                 function(error) {
-                    console.log('Error uploading file ' + path + ': ' + error.code);
+                    console.log('ファイルのアップロードに失敗 ' + path + ': ' + error.code);
                 },
-                { fileName: name });   
+                { fileName: name });
         }
 
         </script>
         </head>
         <body>
-            <button onclick="captureAudio();">Capture Audio</button> <br>
+            <button onclick="captureAudio();">オーディオキャプチャー</button> <br>
         </body>
     </html>
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks は、オーディオ録音のために RIM より提供されている __Voice Notes Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は CaptureError.`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
 
-iOS Quirks
+iOS に関する注意点
 ----------
 
-- iOS does not have a default audio recording application so a simple user interface is provided.
+- iOS にはデフォルトのオーディオ録音アプリがないため、シンプルなユーザーインタフェースが提供されます。
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 ----------
 
-- Windows Phone 7 does not have a default audio recording application so a simple user interface is provided.
+- Windows Phone 7 にはデフォルトのオーディオ録音アプリがないため、シンプルなユーザーインタフェースが提供されます。

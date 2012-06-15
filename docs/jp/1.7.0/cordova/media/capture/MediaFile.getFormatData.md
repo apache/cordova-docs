@@ -20,34 +20,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 MediaFile.getFormatData
 =======================
 
-> Retrieves format information about the media capture file.
+> メディアキャプチャーファイルのフォーマット情報を取得します。
 
-    mediaFile.getFormatData( 
-        MediaFileDataSuccessCB successCallback, 
+    mediaFile.getFormatData(
+        MediaFileDataSuccessCB successCallback,
         [MediaFileDataErrorCB errorCallback]
     );
 
-Description
+概要
 -----------
 
-This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a MediaFileData object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.
+この関数は、メディアファイルのフォーマット情報の取得を非同期で試みます。もし成功すれば、 MediaFileData オブジェクトを伴った MediaFileDataSuccessCB コールバック関数を呼び出します。もし失敗すれば、 MediaFileDataErrorCB コールバック関数を呼び出します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
-There is no API that provides format information of media files.  Therefore, all MediaFileData objects will be returned with default values.  See MediaFileData documentation.
+メディアファイルのフォーマット情報を提供する API はありません。従って、全ての MediaFileData オブジェクトはデフォルト値で返されます。詳しくは MediaFileData のドキュメントをご覧ください。
 
-Android Quirks
+Android に関する注意点
 --------------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。
 
-iOS Quirks
+iOS に関する注意点
 ----------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+メディアファイルのフォーマット情報を取得する API は限定されています。従って、全ての MediaFileData のプロパティーがサポートされている訳ではありません。詳しくは MediaFileData のドキュメントをご覧ください。

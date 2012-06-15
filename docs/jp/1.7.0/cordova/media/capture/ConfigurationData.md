@@ -20,14 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ConfigurationData
 =================
 
-> Encapsulates a set of media capture parameters that a device supports.
+> デバイスがサポートしているメディアキャプチャーのパラメーターのセットをカプセル化します。
 
-Description
+概要
 -----------
 
-This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).  
+このオブジェクトは、デバイスによってサポートされているメディアキャプチャーのモードを表すために使われています。設定データは MIME type とビデオまたはイメージキャプチャーのためのサイズ情報を含んでいます。
 
-The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  Examples:
+MIME type は [RFC2046](http://www.ietf.org/rfc/rfc2046.txt) に従っています。 例:
 
 - video/3gpp
 - video/quicktime
@@ -35,20 +35,20 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 - audio/amr
 - audio/wav 
 
-Properties
+プロパティー
 ----------
 
-- __type:__ The ASCII-encoded string in lower case representing the media type. (DOMString)
-- __height:__ The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
-- __width:__ The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
+- __type:__ ASCII エンコードされた小文字の文字列でメディアタイプを表します。 (DOMString)
+- __height:__ 画像またはビデオの高さをピクセルで表します。 オーディオの場合は、0に設定されます。 (Number)
+- __width:__ 画像またはビデオの幅をピクセルで表します。 オーディオの場合は、0に設定されます。 (Number)
 
-Quick Example
+使用例
 -------------
 
-    // retrieve supported image modes
+    // サポートされている画像のモードを取得
     var imageModes = navigator.device.capture.supportedImageModes;
 
-    // Select mode that has the highest horizontal resolution
+    // 幅が一番高い解像度を持つモードを選択
     var width = 0;
     var selectedmode;
     for each (var mode in imageModes) {
@@ -59,4 +59,4 @@ Quick Example
     }
 
 
-Not supported by any platform.  All configuration data arrays are empty.
+どのプラットフォームからもサポートされていません。全ての設定データは空となっています。

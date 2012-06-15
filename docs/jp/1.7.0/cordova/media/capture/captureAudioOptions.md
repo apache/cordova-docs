@@ -20,37 +20,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CaptureAudioOptions
 ===================
 
-> Encapsulates audio capture configuration options.
+> オーディオキャプチャーのオプションをカプセル化します。
 
-Properties
+プロパティー
 ----------
 
-- __limit:__ The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
-- __duration:__ The maximum duration of an audio sound clip, in seconds.
-- __mode:__ The selected audio mode.  The value must match one of the elements in `capture.supportedAudioModes`.
+- __limit:__ 一つのキャプチャー操作で録音できるオーディオクリップの最大値を表します。値は1以上の必要があります (デフォルトは1です) 。
+- __duration:__ オーディオクリップの最大録音時間を秒で表します。
+- __mode:__ 選択されたオーディオのモードを表します。値は `capture.supportedAudioModes` の中の一つである必要があります。
 
-Quick Example
+使用例
 -------------
 
-    // limit capture operation to 3 media files, no longer than 10 seconds each
+    // キャプチャー操作時のオーディオクリップの最大値を3に制限、最大録音時間を10秒に設定
     var options = { limit: 3, duration: 10 };
 
     navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
-Android Quirks
+Android に関する注意点
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Adaptive Multi-Rate (AMR) format (audio/amr).
+- __duration__ パラメーターはサポートされていません。録画時間をプログラム的に制限することは出来ません。
+- __mode__ パラメーターはサポートされていません。録音のフォーマットをプログラム的に変更することは出来ません。録音は Adaptive Multi-Rate (AMR) フォーマット (audio/amr) を使用してエンコードされます。
 
-BlackBerry WebWorks Quirks
+BlackBerry WebWorks に関する注意点
 --------------------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Adaptive Multi-Rate (AMR) format (audio/amr).
+- __duration__ パラメーターはサポートされていません。録画時間をプログラム的に制限することは出来ません。
+- __mode__ パラメーターはサポートされていません。録音のフォーマットをプログラム的に変更することは出来ません。録音は Adaptive Multi-Rate (AMR) フォーマット (audio/amr) を使用してエンコードされます。
 
-iOS Quirks
+iOS に関する注意点
 ----------
 
-- The __limit__ parameter is not supported. One recording can be created for each invocation.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Waveform Audio (WAV) format (audio/wav).
+- __limit__ パラメーターはサポートされていません。1つのキャプチャー操作につき1つの録音が作られます。
+- __mode__ パラメーターはサポートされていません。録音のフォーマットをプログラム的に変更することは出来ません。録音は Waveform Audio (WAV) フォーマット (audio/wav) を使用してエンコードされます。

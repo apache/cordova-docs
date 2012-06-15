@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Capture
 =======
 
-> Provides access to the audio, image, and video capture capabilities of the device.
+> デバイスのオーディオ、イメージ、ビデオキャプチャー機能への制御を提供します。
 
-Objects
+オブジェクト
 -------
 
 - Capture
@@ -35,7 +35,7 @@ Objects
 - MediaFile
 - MediaFileData
 
-Methods
+メソッド
 -------
 
 - capture.captureAudio
@@ -43,33 +43,33 @@ Methods
 - capture.captureVideo
 - MediaFile.getFormatData
 
-Scope
+スコープ
 -----
 
-The __capture__ object is assigned to the __navigator.device__ object, and therefore has global scope.
+__capture__ オブジェクトは __navigator.device__ オブジェクトに割り当てられており、そのためグローバルスコープです。
 
-    // The global capture object
+    // グローバル capture オブジェクト
     var capture = navigator.device.capture;
 
-Properties
+プロパティー
 ----------
 
-- __supportedAudioModes:__ The audio recording formats supported by the device. (ConfigurationData[])
-- __supportedImageModes:__ The recording image sizes and formats supported by the device. (ConfigurationData[])
-- __supportedVideoModes:__ The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes:__ デバイスによってサポートされているオーディオ録音のフォーマットです。 (ConfigurationData[])
+- __supportedImageModes:__ デバイスによってサポートされている記録用の画像サイズやフォーマットです。 (ConfigurationData[])
+- __supportedVideoModes:__ デバイスによってサポートされている記録用のビデオ解像度やフォーマットです。 (ConfigurationData[])
 
-Methods
+メソッド
 -------
 
-- capture.captureAudio: Launch the device audio recording application for recording audio clip(s).
-- capture.captureImage: Launch the device camera application for taking image(s).
-- capture.captureVideo: Launch the device video recorder application for recording video(s).
+- capture.captureAudio: オーディオ録音のために、デバイスのオーディオ録音アプリを起動します。
+- capture.captureImage: 画像取得のために、デバイスのカメラアプリを起動します。
+- capture.captureVideo: ビデオ録画のために、デバイスのビデオ録画アプリを起動します。
 
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 (Mango)
