@@ -20,116 +20,116 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLResultSetList
 =======
 
-One of the properties of the SQLResultSet containing the rows returned from a SQL query.
+SQL 問い合わせから返される行を保持した SQLResultSet のプロパティーのうちの1つです。
 
-Properties
+プロパティー
 -------
 
-- __length__: the number of rows returned by the SQL query
+- __length__: SQL 問い合わせによって返される行の行数を表します
 
-Methods
+メソッド
 -------
 
-- __item__: returns the row at the specified index represented by a JavaScript object.
+- __item__: 指定された行を JavaScript オブジェクトとして返します
 
-Details
+詳細
 -------
 
-The SQLResultSetList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
+SQLResultSetList は SQL の select 文によって返されるデータを保持しています。このオブジェクトは select 文によって返された行の数を表す length プロパティーを持っています。ある行のデータを取得するためには、行番号を指定した `item` メソッドを使用します。この item メソッドは JavaScript オブジェクトを返します。この JavaScript オブジェクトは select 文が実行されたデータベースのカラムをプロパティーとして持っています。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 
-Execute SQL Quick Example
+Execute SQL の例
 ------------------
 
-	function queryDB(tx) {
-		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-	}
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+    }
 
-	function querySuccess(tx, results) {
-		var len = results.rows.length;
-	    console.log("DEMO table: " + len + " rows found.");
-	    for (var i=0; i<len; i++){
-	        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-		}
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err.code);
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.transaction(queryDB, errorCB);
+    function querySuccess(tx, results) {
+        var len = results.rows.length;
+        console.log("DEMO table: " + len + " 行見つかりました。");
+        for (var i=0; i<len; i++){
+            console.log("行 = " + i + " ID = " + results.rows.item(i).id + " Data = " + results.rows.item(i).data);
+        }
+    }
 
-Full Example
+    function errorCB(err) {
+        alert("SQL 実行中にエラーが発生しました: "+err.code);
+    }
+
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(queryDB, errorCB);
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// Populate the database 
-		//
-		function populateDB(tx) {
-			tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
+        // データベースを操作
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
 
-		// Query the database
-		//
-		function queryDB(tx) {
-			tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-		}
+        // データベースに問い合わせ
+        //
+        function queryDB(tx) {
+            tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+        }
 
-		// Query the success callback
-		//
-		function querySuccess(tx, results) {
-			var len = results.rows.length;
-			console.log("DEMO table: " + len + " rows found.");
-			for (var i=0; i<len; i++){
-				console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-			}
-		}
+        // 問い合わせ成功時のコールバック
+        //
+        function querySuccess(tx, results) {
+            var len = results.rows.length;
+            console.log("DEMO table: " + len + " 行見つかりました。");
+            for (var i=0; i<len; i++){
+                console.log("行 = " + i + " ID = " + results.rows.item(i).id + " Data = " + results.rows.item(i).data);
+            }
+        }
 
-		// Transaction error callback
-		//
-		function errorCB(err) {
-			console.log("Error processing SQL: "+err.code);
-		}
+        // トランザクション失敗時のコールバック
+        //
+        function errorCB(err) {
+            console.log("SQL 実行中にエラーが発生しました: "+err.code);
+        }
 
-		// Transaction success callback
-		//
-		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(queryDB, errorCB);
-		}
+        // トランザクション成功時のコールバック
+        //
+        function successCB() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(queryDB, errorCB);
+        }
 
-		// Cordova is ready
-		//
-		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
-		}
-	
+        // Cordova 準備完了
+        //
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(populateDB, errorCB, successCB);
+        }
+
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Database</p>
+        <h1>使用例</h1>
+        <p>データベース</p>
       </body>
     </html>

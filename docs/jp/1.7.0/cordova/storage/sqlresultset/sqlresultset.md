@@ -20,119 +20,113 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLResultSet
 =======
 
-When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
+SQLTransaction の executeSql メソッドが呼ばれるとき、 SQLResultSet とともにコールバック関数が呼び出されます。
 
-Properties
+プロパティー
 -------
 
-- __insertId__: the row ID of the row that the SQLResultSet object's SQL statement inserted into the database
-- __rowsAffected__: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0. 
-- __rows__: a SQLResultSetRowList representing the rows returned.  If no rows are returned the object will be empty.
+- __insertId__: SQLResultSet オブジェクトの SQL 文によりデータベースに挿入された行の行番号を表します
+- __rowsAffected__: SQL 文によって変更された行数を表します。もし SQL 文がデータベースに変更を加えなかった場合は0を返します
+- __rows__: 結果を表す SQLResultSetRowList オブジェクトです。行が返されなかった場合、オブジェクトは空になります
 
-Details
+詳細
 -------
 
-When you call the SQLTransaction executeSql method its callback methods will be called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+SQLTransaction の executeSql メソッドが呼び出されるとき、 SQLResultSet オブジェクトとともにコールバック関数が呼び出されます。この結果オブジェクトは3つのプロパティーを持っています。1つめは `insertId` で、 SQL の insert 文が成功した行の番号を返します。もし SQL 文が insert 文では無かった場合、 `insertId` はセットされません。2つめの `rowsAffected` は SQL の select 文に対しては常に0を返します。 insert もしくは update 文に対しては、修正された行数を返します。最後の SQLResultSetList は、 SQL の select 文によって返されたデータを保持します。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 
-Execute SQL Quick Example
+Execute SQL の例
 ------------------
 
-	function queryDB(tx) {
-		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-	}
-
-	function querySuccess(tx, results) {
-    console.log("Returned rows = " + results.rows.length);
-    // this will be true since it was a select statement and so rowsAffected was 0
-    if (!results.rowsAffected) {
-      console.log('No rows affected!');
-      return false;
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
     }
-    // for an insert statement, this property will return the ID of the last inserted row
-    console.log("Last inserted row ID = " + results.insertId);
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err.code);
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.transaction(queryDB, errorCB);
 
-Full Example
+    function querySuccess(tx, results) {
+        console.log("検索された行 = " + results.rows.length);
+        // select 文のため、 rowsAffected は0となり、 true となります
+        if (!results.rowsAffected) {
+            console.log('どの行も変更されていません。');
+            return false;
+        }
+        // insert 文では、このプロパティーは挿入された最終行を表します
+        console.log("挿入された行 = " + results.insertId);
+    }
+
+    function errorCB(err) {
+        alert("SQL 実行中にエラーが発生しました: "+err.code);
+    }
+
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(queryDB, errorCB);
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// Populate the database 
-		//
-		function populateDB(tx) {
-			tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
+        // データベースを操作
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
 
-		// Query the database
-		//
-		function queryDB(tx) {
-			tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-		}
+        // データベースに問い合わせ
+        //
+        function queryDB(tx) {
+            tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+        }
 
-		// Query the success callback
-		//
-		function querySuccess(tx, results) {
-      console.log("Returned rows = " + results.rows.length);
-      // this will be true since it was a select statement and so rowsAffected was 0
-      if (!resultSet.rowsAffected) {
-        console.log('No rows affected!');
-        return false;
-      }
-      // for an insert statement, this property will return the ID of the last inserted row
-      console.log("Last inserted row ID = " + results.insertId);
-		}
+        // 問い合わせ成功時のコールバック
+        //
+        function querySuccess(tx, results) {
+            console.log("検索された行 = " + results.rows.length);
+            // select 文のため、 rowsAffected は0となり、 true となります
+            if (!resultSet.rowsAffected) {
+                console.log('どの行も変更されていません。');
+                return false;
+            }
+            // insert 文では、このプロパティーは挿入された最終行を表します
+            console.log("挿入された行 = " + results.insertId);
+        }
 
-		// Transaction error callback
-		//
-		function errorCB(err) {
-			console.log("Error processing SQL: "+err.code);
-		}
+        // トランザクション失敗時のコールバック
+        //
+        function successCB() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(queryDB, errorCB);
+        }
 
-		// Transaction success callback
-		//
-		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(queryDB, errorCB);
-		}
+        // Cordova 準備完了
+        //
+        function onDeviceReady() {
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(populateDB, errorCB, successCB);
+        }
 
-		// Cordova is ready
-		//
-		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
-		}
-	
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Database</p>
+        <h1>使用例</h1>
+        <p>データベース</p>
       </body>
     </html>

@@ -20,95 +20,95 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Database
 =======
 
-Contains methods that allow the user to manipulate the Database
+データベースの操作に必要なメソッドを提供します。
 
-Methods
+メソッド
 -------
 
-- __transaction__: Runs a database transaction. 
-- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update. 
+- __transaction__: データベースのトランザクションを実行します
+- __changeVersion__: スクリプトがデータベースのバージョンを自動的に確認し、スキーマのアップデートと同時にバージョンを変更します
 
-Details
+詳細
 -------
 
-A Database object is returned from a call to `window.openDatabase()`.
+Database オブジェクトは `window.openDatabase()` メソッド呼び出し時に返されるオブジェクトです。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 
-Transaction Quick Example
+Transaction の例
 ------------------
-	function populateDB(tx) {
-		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-		 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err.code);
-	}
-	
-	function successCB() {
-		alert("success!");
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.transaction(populateDB, errorCB, successCB);
+    function populateDB(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
 
-Change Version Quick Example
+    function errorCB(err) {
+        alert("SQL実行中にエラーが発生しました: "+err.code);
+    }
+
+    function successCB() {
+        alert("成功しました。");
+    }
+
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(populateDB, errorCB, successCB);
+
+Change Version の例
 -------------------
 
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.changeVersion("1.0", "1.1");
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.changeVersion("1.0", "1.1");
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(populateDB, errorCB, successCB);
         }
-		
-		// Populate the database 
-		//
-		function populateDB(tx) {
-			 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
-		
-		// Transaction error callback
-		//
-		function errorCB(tx, err) {
-			alert("Error processing SQL: "+err);
-		}
-		
-		// Transaction success callback
-		//
-		function successCB() {
-			alert("success!");
-		}
-	
+
+        // データベースを操作 
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
+
+        // トランザクション失敗時のコールバック
+        //
+        function errorCB(tx, err) {
+            alert("SQL実行中にエラーが発生しました: "+err);
+        }
+
+        // トランザクション成功時のコールバック
+        //
+        function successCB() {
+            alert("成功しました。");
+        }
+
         </script>
       </head>
       <body>
@@ -117,7 +117,7 @@ Full Example
       </body>
     </html>
 
-Android 1.X Quirks
+Android 1.X に関する注意点
 ------------------
 
-- __changeVersion:__ This method is not support by Android 1.X devices.
+- __changeVersion:__ このメソッドは Android 1.X デバイスではサポートされていません。

@@ -20,93 +20,93 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLTransaction
 =======
 
-Contains methods that allow the user to execute SQL statements against the Database.
+データベースに対して SQL を実行するためのメソッドを提供します。
 
-Methods
+メソッド
 -------
 
-- __executeSql__: executes a SQL statement
+- __executeSql__: SQL 文を実行します
 
-Details
+詳細
 -------
 
-When you call a Database objects transaction method it's callback methods will be called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.  
+Database オブジェクトの transaction メソッドを呼ぶとき、それに対応するコールバック関数が SQLTransaction オブジェクトと一緒に呼び出されます。 executeSql メソッドを複数回使用することで、データベーストランザクションを作成できます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 
-Execute SQL Quick Example
+Execute SQL の例
 ------------------
 
-	function populateDB(tx) {
-		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-		 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err);
-	}
-	
-	function successCB() {
-		alert("success!");
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.transaction(populateDB, errorCB, successCB);
+    function populateDB(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
 
-Full Example
+    function errorCB(err) {
+        alert("SQL 実行中にエラーが発生しました: "+err);
+    }
+
+    function successCB() {
+        alert("成功しました。");
+    }
+
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(populateDB, errorCB, successCB);
+
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(populateDB, errorCB, successCB);
         }
-		
-		// Populate the database 
-		//
-		function populateDB(tx) {
-			 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
-		
-		// Transaction error callback
-		//
-		function errorCB(err) {
-			alert("Error processing SQL: "+err);
-		}
-		
-		// Transaction success callback
-		//
-		function successCB() {
-			alert("success!");
-		}
-	
+
+        // データベースを操作
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
+
+        // トランザクション失敗時のコールバック
+        //
+        function errorCB(err) {
+            alert("SQL 実行中にエラーが発生しました: "+err);
+        }
+
+        // トランザクション成功時のコールバック
+        //
+        function successCB() {
+            alert("成功しました。");
+        }
+
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>SQLTransaction</p>
+        <h1>使用例</h1>
+        <p>SQLトランザクション</p>
       </body>
     </html>

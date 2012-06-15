@@ -20,4 +20,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 database_size
 ==============
 
-The size of the database in bytes.
+データベースのサイズです。バイト単位で表されます。

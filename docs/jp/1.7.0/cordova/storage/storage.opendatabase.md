@@ -20,54 +20,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 openDatabase
 ===============
 
-Returns a new Database object.
+Database オブジェクトを新規作成します。
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
-Description
+概要
 -----------
 
-window.openDatabase returns a new Database object.
+window.openDatabase メソッドは新しい Database オブジェクトを返します。
 
-This method will create a new SQL Lite Database and return a Database object.  Use the Database Object to manipulate the data.
+このメソッドは SQLite のデータベースを新規作成し、 Database オブジェクトを返します。 Database オブジェクトは、データを操作するために使います。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 
-Quick Example
+使用例
 -------------
 
     var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
-		
+
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>Open Database</p>
+        <h1>使用例</h1>
+        <p>データベースを開く</p>
       </body>
     </html>

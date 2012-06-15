@@ -20,4 +20,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 database_name
 ============
 
-The name of the database.
+データベース名です。

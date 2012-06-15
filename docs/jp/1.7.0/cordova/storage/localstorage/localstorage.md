@@ -20,100 +20,100 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 localStorage
 ===============
 
-Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute) へのアクセスを提供します。
 
     var storage = window.localStorage;
 
-Methods
+メソッド
 -------
 
-- __key__: Returns the name of the key at the position specified. 
-- __getItem__: Returns the item identified by it's key.
-- __setItem__: Saves and item at the key provided.
-- __removeItem__: Removes the item identified by it's key.
-- __clear__: Removes all of the key value pairs.
+- __key__: キーの名前を返します
+- __getItem__: キーによって指定されたアイテムを返します
+- __setItem__: キーによって指定されたアイテムを保存します
+- __removeItem__: キーによって指定されたアイテムを削除します
+- __clear__: 全てのキーとアイテムを削除します
 
-Details
+詳細
 -----------
 
-localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
+localStorage は W3C Storage interface へのインターフェースを提供します。キーと値のペアでデータを管理します。
 
-Note: window.sessionStorage provides the same interface, but is cleared between app launches.
+注意: window.sessionStorage は同じインターフェースを提供しますが、アプリが起動するたびにこの値はクリアされます。
 
-Supported Platforms
+サポートされているプラットフォーム
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 - Windows Phone 7
 
-Key Quick Example
+Key の例
 -------------
 
     var keyName = window.localStorage.key(0);
 
-Set Item Quick Example
+Set Item の例
 -------------
 
     window.localStorage.setItem("key", "value");
 
-Get Item Quick Example
+Get Item の例
 -------------
 
-	var value = window.localStorage.getItem("key");
-	// value is now equal to "value"
+    var value = window.localStorage.getItem("key");
+    // value の値は "value"
 
-Remove Item Quick Example
+Remove Item の例
 -------------
 
-	window.localStorage.removeItem("key");
+    window.localStorage.removeItem("key");
 
-Clear Quick Example
+Clear の例
 -------------
 
-	window.localStorage.clear();
+    window.localStorage.clear();
 
-Full Example
+詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact Example</title>
+        <title>Contact の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Cordova の読み込み完了まで待機
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // Cordova 準備完了
         //
         function onDeviceReady() {
-			window.localStorage.setItem("key", "value");
-			var keyname = window.localStorage.key(i);
-			// keyname is now equal to "key"
-			var value = window.localStorage.getItem("key");
-			// value is now equal to "value"
-			window.localStorage.removeItem("key");
-			window.localStorage.setItem("key2", "value2");
-			window.localStorage.clear();
-			// localStorage is now empty
+            window.localStorage.setItem("key", "value");
+            var keyname = window.localStorage.key(i);
+            // key の値は "key"
+            var value = window.localStorage.getItem("key");
+            // value の値は "value"
+            window.localStorage.removeItem("key");
+            window.localStorage.setItem("key2", "value2");
+            window.localStorage.clear();
+            // localStorage は空
         }
-    
+
 
         </script>
       </head>
       <body>
-        <h1>Example</h1>
-        <p>localStorage</p>
+        <h1>使用例</h1>
+        <p>localStorage のサンプル</p>
       </body>
     </html>
 
 
-Windows Phone 7 Quirks
+Windows Phone 7 に関する注意点
 -------------
 
-- dot notation is NOT available on Windows Phone. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';
+- ドット表記は Windows Phone では使用できません。 window.localStorage.setItem/getItem メソッドを使用して、 W3C の仕様で定義されている window.localStorage.someKey = 'someValue'; の方法は使用しないでください。

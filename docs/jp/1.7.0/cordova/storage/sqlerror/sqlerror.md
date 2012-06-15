@@ -20,19 +20,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLError
 ========
 
-A `SQLError` object is thrown when an error occurs.
+エラー発生時に投げられる `SQLError` オブジェクトです。
 
-Properties
+プロパティー
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ A description of the error.
+- __code:__ 事前に定義された以下のエラーコードのうちの1つを表します
+- __message:__ エラーの詳細メッセージを表します
 
-Constants
+定数
 ---------
 
 - `SQLError.UNKNOWN_ERR`
-- `SQLError.DATABASE_ERR`
+- `SQLError.DATABASE_ERR
 - `SQLError.VERSION_ERR`
 - `SQLError.TOO_LARGE_ERR`
 - `SQLError.QUOTA_ERR`
@@ -40,8 +40,8 @@ Constants
 - `SQLError.CONSTRAINT_ERR`
 - `SQLError.TIMEOUT_ERR`
 
-Description
+概要
 -----------
 
-The `SQLError` object is thrown when an error occurs when manipulating a database.
+データベース操作時のエラーに対して投げられる `SQLError` オブジェクトです。
 
