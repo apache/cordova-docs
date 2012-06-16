@@ -20,100 +20,100 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with iOS
 ========================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。
 
-Video Tutorials:
+ビデオチュートリアル:
 ----------------
 
 - [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
 
-1. Requirements
+1. 必要なもの
 ---------------
-- Intel-based computer with Mac OS X Lion (10.7)
-- Necessary for Installing on Device:
-    - An Apple iOS device (iPhone, iPad, iPod Touch)
-    - iOS ceveloper certification
+- Intel ベースの Mac OS X Lion (10.7)
+- デバイスへのインストールに必要なもの:
+    - Apple iOS デバイス (iPhone, iPad, iPod Touch)
+    - iOS デベロッパー証明書
 
 
-2. Install SDK + Cordova
+2. SDK と Cordova のインストール
 ------------------------
 
-- Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) </p>
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the **lib/ios** directory.
+- [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) から Xcode をインストールします。
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから **lib/ios** ディレクトリと一緒に作業を進めます。
 
 
-3. Setup New Project
+3. 新規プロジェクトの作成
 --------------------
 
-- Launch Xcode
-- Select the **File** menu
-- Select **New**, then **New Project...**
-- Select **Cordova-based Application** from the list of templates
+- Xcode を起動します
+- メニューから **File** を選択します
+- **New** を選択し、 **New Project...** を選択します
+- テンプレートのリストから **Cordova-based Application** を選択します
 
     ![](img/guide/getting-started/ios/XCode4-templates.png)
-- Select the **Next** button
-- Fill in the "Product Name" &amp; "Company Identifier" for your app
+- **Next** ボタンをクリックします
+- "Product Name" と "Company Identifier" を記入します
 
     ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
-    
-- **IMPORTANT! DO NOT CHECK** the "Use Automatic Reference Counting" checkbox 
-- Select the **Next** button
-- **Choose a folder** to save your new app in
-- Select the **Create** button, this will create your project
-- Select the **Run** button in the top left corner. Your build should succeed and launch in the iOS Simulator
 
-    a. You should see an error in the iOS Simulator informing you that **www/index.html** was not found
-    
-    b. To fix this, we need to add a folder reference to the **www** directory into the project. 
-    
+- **重要！** "Use Automatic Reference Counting" のチェックボックスにチェックを入れないでください 
+- **Next** ボタンをクリックします
+- 新しいアプリを保存する **フォルダーを選択します**
+- **Create** ボタンをクリックし、プロジェクトを作成します
+- 左上にある **Run** ボタンをクリックします。 ビルドが成功し、 iOS シミュレーターが起動します
+
+    a. iOS シミュレーターが、 **www/index.html** was not found と警告しているのが確認できるはずです。
+
+    b. これを修正するため、 **www** ディレクトリへのリファレンスをプロジェクトに追加する必要があります。 
+
     ![](img/guide/getting-started/ios/index-not-found.png)
 
-- **Right-click** on the project icon in the Project Navigator (left sidebar) and select **Show in Finder**
-- **In the Finder**, you should see the **www** directory beside your project
+- 左側のサイドバーにある Project Navigator の中のプロジェクトアイコンの上で **右クリック** し、 **Show in Finder** を選択します
+- **フォルダー内** に、 **www** ディレクトリが確認できるはずです
 
     ![](img/guide/getting-started/ios/www-folder.png)
 
-- **IMPORTANT**! **Drag** the **www** folder into Xcode 4. **Don't** drag the www folder into your app's folder. **It needs to be dragged into Xcode 4.** For example, you would drag and drop it on the **highlighted red section** of the HelloWorld project shown below.
-    
+- **重要！** **www** フォルダーを Xcode 4 に **ドラッグ** します。 アプリフォルダーには **ドラッグしないでください** 。 **Xcode 4** にドラッグしてください。下の HelloWorld プロジェクトの例だと、 **赤い四角の枠で囲ってある部分** にドラッグアンドドロップします。
+
     ![](img/guide/getting-started/ios/project.jpg)
-- A window sheet should slide down with a few options, after the **"www"** folder has been dragged and dropped into the project. 
-- Select the radio-button **Create folder references for any added folders**.
+- 正確に **"www"** フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます 
+- **Create folder references for any added folders** のラジオボタンを選択します
 
     ![](img/guide/getting-started/ios/create-folder-reference.png)
 
-- Select the **Finish** button
+- **Finish** ボタンをクリックします
 
 
-4. Hello World
+4. Hello World の作成
 --------------
 
-- Select the folder named **www** in your Project Navigator in Xcode
-- Select the **index.html** file
-- Type `<h1>Hello World</h1>` after the `<body>` tag
+- Xcode の Project Navigator にある **www** フォルダーを選択します
+- **index.html** ファイルを選択します
+- `<body>` タグの後に `<h1>Hello World</h1>` と記述します
 
-You can also add any associated JavaScript and CSS files there as well.
-    
-    
-5A. Deploy to Simulator
+関連する JavaScript や CSS ファイルも追加することができます。
+
+
+5A. シミュレーターへのデプロイ
 -----------------------
 
-- Change the Active SDK in the Scheme drop-down menu on the toolbar to **iOS version# Simulator**.
-- Select the **Run** button in your project window's toolbar
+- ツールバーにあるドロップダウンメニューから Active SDK を **iOS version# Simulator** に変更します
+- プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします
 
 
-5B. Deploy to Device
+5B. デバイスへのデプロイ
 --------------------
 
-- Open [AppName]-Info.plist (where [AppName] is your application's name), under the "Supporting Files" group
-- Change **BundleIdentifier** to the identifier provided by Apple, or your own bundle identifier. If you have a developer license, you can access and run the Assistant [here](http://developer.apple.com/iphone/manage/overview/index.action) and register your app.
-- Change the Active SDK in the Scheme drop-down menu on the toolbar to **[DEVICENAME]** where [DEVICENAME] is the name of the device you want to deploy to.
-- Select the **Run** button in your project window's toolbar
+- "Supporting Files" グループの中にある [AppName]-Info.plist ([AppName]は作成したアプリの名前) を開きます
+- **BundleIdentifier** を Apple から提供された Identifer 、または自分の Identifer に変更します。もし開発者ライセンスを持っている場合は、 Assistant に [ここ](http://developer.apple.com/iphone/manage/overview/index.action) からアクセスし、アプリを登録できます
+- ツールバーにあるドロップダウンメニューから Active SDK を **[DEVICENAME]** に変更します。ここで、 [DEVICENAME] はデプロイしたいデバイスの名前です
+- プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)    
+    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
 
 
-Done!
+終了
 -----
 
-Add more HTML, CSS and JavaScript to your **www** folder outside of Xcode, your file additions will be picked up automatically inside Xcode.
+Xcode の外で HTML, CSS, JavaScript を **www** フォルダーに追加した場合も、追加したファイルは自動的に Xcode の中に取り込まれます。

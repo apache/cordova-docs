@@ -20,74 +20,74 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Bada
 =========================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。 Cordova は以前は PhoneGap と呼ばれていたため、いくつかのサイトは PhoneGap という名前をまだ使用しています。
 
-1. Requirements
+1. 必要なもの
 ---------------
 
 - Windows
-- You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung&apos;s website)
+- cordova-bada を使うためには、 bada 1.2 SDK が必要です (すでに Samsung のウェブサイトでは入手できません)
 
-2. Install SDK + Cordova
+2. SDK と Cordova のインストール
 -------------------------
 
-- Download and install the [Bada SDK](http://developer.bada.com) (Windows only). 
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the bada directory.
+- [Bada SDK](http://developer.bada.com) のダウンロードとインストール (Windows のみ)
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから bada ディレクトリと一緒に作業を進めます。
 
 
-3. Setup New Project
+3. 新規プロジェクトの作成
 --------------------
-- In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project. 
-    - Note: Bada 1.2 select "Bada Application Project"
-    
+- Bada IDE で、 File -> Import project -> Bada C++ / Flash Project を選択します
+    - 注意: Bada 1.2 では "Bada Application Project" を選択します
+
     ![](img/guide/getting-started/bada/import_bada_project.png)
 
-- Make sure "Select root directory is checked" and then click Browse
-- Browse to Cordova bada project folder (bada for 1.2 and bada-wac for 2.x) and select it. Make sure "Copy projects into workspace is checked"
-    
+- "Select root directory" がチェックされていることを確認し、 Browse ボタンをクリックします
+- Cordova bada プロジェクトフォルダー (1.2にはbadaフォルダー、2.xにはbada-wacフォルダー) を選択します "Copy projects into workspace" がチェックされていることを確認します
+
     ![](img/guide/getting-started/bada/import_bada_project.png)
 
-- Click "Finish"
+- "Finish" をクリックします
 
     ![](img/guide/getting-started/bada/bada_project.png)
- 
-4. Hello World
+
+4. Hello World の作成
 --------------
 
-**Bada 2.x**: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
+**Bada 2.x**: HTML/CSS/Javascript のコードは Res/ フォルダー直下にあります。 以下の2行が index.html の <head> に含まれていることを確認します。
 
 
         <link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="osp://webapp/js/webapp_core.js"></script>
 
-**Bada 1.2**: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following line.
+**Bada 1.2**: HTML/CSS/Javascript のコードは Res/ フォルダー直下にあります。 以下の行が index.html に含まれていることを確認します。
 
         <script type="text/javascript" src="cordova/cordova.js"> </script>
 
-5A. Deploy to Simulator
+5A. シミュレーターへのデプロイ
 -----------------------
 
-- **Bada 2.x**: Right click on your project s folder and select Run As -&gt; bada Emulator Web Application 
-    
+- **Bada 2.x**: プロジェクトで右クリックをし、 Run As -&gt; bada Emulator Web Application を選択します
+
     ![](img/guide/getting-started/bada/bada_1_run.png)
 
-- **Bada 1.2**: Right click on your project&apos; folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug
+- **Bada 1.2**: プロジェクトで右クリックをし、 Build configurations -&g; Set Active -&gt; Simulator-Debugを選択します
 
     ![](img/guide/getting-started/bada/bada_set_target.png)
 
-- Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
+- プロジェクトで右クリックをし、 Run As -&gt; bada Simulator Application を選択します。 アプリを更新するたびに、エミュレーターを閉じる必要があります。
 
-5B. Deploy to Device
+5B. デバイスへのデプロイ
 --------------------
 
-- Make sure your device is properly configured 
+- デバイスが適切に設定されていることを確認します
 
-**Bada 2.x**: Right click on your project&apos;s folder and select Run As -&gt; bada Target Web Application
+**Bada 2.x**: プロジェクトで右クリックをし、 Run As -&gt; bada Target Web Application を選択します
 
 **Bada 1.2**:
-- Right click on your project&apos;s folder and select Build configurations -> Set Active -> Target-Debug
-- Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to close the emulator every time you update your app!
+- プロジェクトで右クリックをし、 Build configurations -&g; Set Active -> Target-Debugを選択します
+- プロジェクトで右クリックをし、 Run As -> bada Target Application を選択します アプリを更新するたびに、エミュレーターを閉じる必要があります。
 
 
-Done!
+終了
 -----

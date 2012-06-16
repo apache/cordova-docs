@@ -20,59 +20,59 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Symbian
 ============================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。 Cordova は以前は PhoneGap と呼ばれていたため、いくつかのサイトは PhoneGap という名前をまだ使用しています。
 
-Video Tutorials:
+ビデオチュートリアル:
 ----------------
 
 - [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
 
-1. Requirements
+1. 必要なもの
 ---------------
 
-- Windows, OS X, or Linux
+- Windows, OS X, または Linux
 
-There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGap-Symbian-%28Qt%29) and [Symbian with Sony Ericsson](http://wiki.phonegap.com/w/page/16494782/Getting-Started-with-PhoneGap-Symbian-(WRT-on-Sony-Ericsson)) guides.
+他に [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGap-Symbian-%28Qt%29) や [Symbian with Sony Ericsson](http://wiki.phonegap.com/w/page/16494782/Getting-Started-with-PhoneGap-Symbian-(WRT-on-Sony-Ericsson)) といったガイドもあります。
 
 
-2. Install SDK + Cordova
+2. SDK と Cordova のインストール
 -------------------------
 
-- Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select "make" as it is not included by default
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- [cygwin](http://www.cygwin.com/setup.exe) をダウンロードし、インストールします (Windows のみ) 。デフォルトでは選択されていませんが、 "make" を選択してください
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから Android ディレクトリと一緒に作業を進めます
 
 
-3. Setup New Project
+3. 新規プロジェクトの作成
 --------------------
 
-- In cygwin, navigate to where you extracted Cordova and go into the Symbian directory</li>
+- cygwin で、 Cordova を解凍したディレクトリまで移動し、 Symbian ディレクトリに移動します
 
- 
-4. Hello World
+
+4. Hello World の作成
 --------------
 
-- Open up index.html located in phonegap/symbian/framework/www with your favourite editor. 
-- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
-- In cygwin/terminal, type make. This will produce phonegap-symbian.wrt/app.wgz. 
+- phonegap/symbian/framework/www にある index.html を好きなエディタで開きます
+- `body` タグの中にある `"Build your phonegap app here! Dude!"` を削除し、 `<h1>Hello World</h1>` を追加します
+- cygwin または terminal で、 make を実行します。これにより、 phonegap-symbian.wrt と app.wgz が作られます
 
 
-5A. Deploy to Simulator
+5A. シミュレーターへのデプロイ
 -----------------------
 
-- For Mac or Linux you should install [Aptana Studio](http://www.aptana.org/products/studio2/download) and [Nokia WRT Plug-in for Aptana Studio](http://www.forum.nokia.com/info/sw.nokia.com/id/00d62bd8-4214-4c86-b608-5f11b94dad54/Nokia_WRT_Plug_in_for_Aptana_Studio.html). This has a browser-based javascript emulator
-- For Windows you can download the [S60 SDK](http://www.forum.nokia.com/info/sw.nokia.com/id/ec866fab-4b76-49f6-b5a5-af0631419e9c/S60_All_in_One_SDKs.html) which includes the S60 Emulator
-- Load the phonegap-symbian.wrt/app.wgz file into the emulator.
+- Mac もしくは Linux には、 [Aptana Studio](http://www.aptana.org/products/studio2/download) と [Nokia WRT Plug-in for Aptana Studio](http://www.forum.nokia.com/info/sw.nokia.com/id/00d62bd8-4214-4c86-b608-5f11b94dad54/Nokia_WRT_Plug_in_for_Aptana_Studio.html) をインストールする必要があります。これは、ブラウザベースの JavaScript エミュレーターを持っています
+- Windows は、S60 エミュレーターを持つ [S60 SDK](http://www.forum.nokia.com/info/sw.nokia.com/id/ec866fab-4b76-49f6-b5a5-af0631419e9c/S60_All_in_One_SDKs.html) をダウンロードします
+- エミュレーターに phonegap-symbian.wrt と app.wgz をロードします
 
 
-5B. Deploy to Device
+5B. デバイスへのデプロイ
 --------------------
 
-- Load the phonegap-symbian.wrt/app.wgz file into the device using bluetooth or email.
+- phonegap-symbian.wrt と app.wgz を bluetooth または email を使ってデバイスにロードします
 
 
-Done!
+終了
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494780/Getting-Started-with-Phonegap-Nokia-WRT).
+さらに詳しいガイドは [ここ](http://wiki.phonegap.com/w/page/16494780/Getting-Started-with-Phonegap-Nokia-WRT) で確認できます。
 

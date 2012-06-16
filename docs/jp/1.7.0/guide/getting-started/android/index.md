@@ -20,56 +20,56 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Android
 ============================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。 Cordova は以前は PhoneGap と呼ばれていたため、いくつかのサイトは PhoneGap という名前をまだ使用しています。
 
 
-1. Requirements
+1. 必要なもの
 ---------------
 
-- Eclipse 3.4+
+- Eclipse 3.4以上
 
 
-2. Install SDK + Cordova
+2. SDK と Cordova のインストール
 ------------------------
 
-- Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
-- Download and install [Android SDK](http://developer.android.com/sdk/index.html)
-- Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- [Eclipse Classic](http://www.eclipse.org/downloads/) のダウンロードとインストール
+- [Android SDK](http://developer.android.com/sdk/index.html) のダウンロードとインストール
+- [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing) のダウンロードとインストール
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから windows ディレクトリと一緒に作業を進めます。
 
- 3. Setup New Project
+ 3. 新規プロジェクトの作成
 ---------------------
 
-- Launch Eclipse, and select menu item **New &gt; Android Project**.  Fill out the three panels of the **New Android Project** wizard shown below.
+- Eclipse を起動し、メニューから **ファイル新規 &gt; Android Project** を選択します。 **New Android Project** ウィザードの3つの画面を、以下のとおり設定します。
 
     ![](img/guide/getting-started/android/AndroidFlow.png)
-    
-- In the root directory of your project, create two new directories:
- 	- **/libs**
- 	- **assets/www**
-- Copy **cordova-1.7.0.js** from your Cordova download earlier to **assets/www**
-- Copy **cordova-1.7.0.jar** from your Cordova download earlier to **/libs**
-- Copy **xml** folder from your Cordova download earlier to **/res**
 
-- Verify that **cordova-1.7.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.7.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- 作成したプロジェクトのルートディレクトリに、以下の2つの新しいディレクトリを作成します:
+    - **/libs**
+    - **assets/www**
+- ダウンロードした Cordova から **cordova-1.7.0.js** を **assets/www** にコピーしてください。
+- ダウンロードした Cordova から **cordova-1.7.0.jar** を **/libs** にコピーしてください。
+- ダウンロードした Cordova から **xml** フォルダーを **/res** にコピーしてください。
+
+- **cordova-1.7.0.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-1.7.0.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
 
     ![](img/guide/getting-started/android/buildPath.jpg)
 
-- Edit your project's main Java file found in the **src** folder in Eclipse:
-	- Add **import org.apache.cordova.*;**
-	- Change the class's extend from **Activity** to **DroidGap**
-	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
+- 作成したプロジェクトの **src** フォルダーにあるメインの Java ファイルを編集します:
+    - **import org.apache.cordova.*;** を追加
+    - クラスの継承元を **Activity** から **DroidGap** に変更
+    - **setContentView()** の行を **super.loadUrl("file:///android_asset/www/index.html");** に置き換え 
 
-	![](img/guide/getting-started/android/javaSrc.jpg)
-	
-- Right click on AndroidManifest.xml and select **Open With &gt; XML Editor**
-- Paste the following permissions between the **&lt;uses-sdk.../&gt;** and **&lt;application.../&gt;** tags.
+    ![](img/guide/getting-started/android/javaSrc.jpg)
 
-        <supports-screens 
-            android:largeScreens="true" 
-            android:normalScreens="true" 
-            android:smallScreens="true" 
-            android:resizeable="true" 
+- AndroidManifest.xml を右クリックし、 **アプリケーションから開く &gt; XML エディター** を選択します。
+- 以下のコードを、 **&lt;uses-sdk.../&gt;** と **&lt;application.../&gt;** タグの間に貼り付けてください。
+
+        <supports-screens
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="true"
+            android:resizeable="true"
             android:anyDensity="true" />
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.VIBRATE" />
@@ -84,22 +84,22 @@ This guide describes how to set up your development environment for Cordova and 
         <uses-permission android:name="android.permission.READ_CONTACTS" />
         <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
-- Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
+- 画面の回転をサポートするために、以下を **&lt;activity&gt;** タグの中に貼り付けてください。
 
         android:configChanges="orientation|keyboardHidden"
 
-- Your AndroidManifest.xml file should look like
+- AndroidManifest.xml は以下のようになります。
 
     ![](img/guide/getting-started/android/manifest.jpg)
 
-4. Hello World
---------------    
+4. Hello World の作成
+--------------
 
-- Create and open a new file named **index.html** in the **assets/www** directory. Paste the following code:
+- **index.html** という名前のファイルを **assets/www** ディレクトリに新規作成します。 以下のコードを貼り付けます:
 
         <!DOCTYPE HTML>
         <html>
@@ -112,19 +112,19 @@ This guide describes how to set up your development environment for Cordova and 
         </body>
         </html>
 
-5A. Deploy to Simulator
+5A. シミュレーターへのデプロイ
 -----------------------
 
-- Right click the project and go to **Run As &gt; Android Application**
-- Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
+- プロジェクトを右クリックし、次を **実行 &gt; Android Application** を選択
+- 適切な AVD を選択。 もしない場合は、作成する必要があります
 
 
-5B. Deploy to Device
+5B. デバイスへのデプロイ
 --------------------
 
-- Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)
-- Right click the project and go to **Run As &gt; Android Application**
+- デバイスの設定で USB デバッグが有効になっていること、またコンピュータに接続されていることを確認 (**設定 &gt; アプリケーション &gt; 開発**)
+- プロジェクトを右クリックし、次を **実行 > Android Application** を選択
 
 
-Done!
+終了
 -----

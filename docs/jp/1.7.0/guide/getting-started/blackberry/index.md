@@ -20,81 +20,81 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Blackberry
 ============================
 
-Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments. WebWorks applications can ONLY be deployed to BlackBerry devices running OS 5.0 and higher or the BlackBerry PlayBook operating system.
+Cordova for BlackBerry は [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5) を使用して作られています。 BlackBerry WebWorks ツールは Windows または Mac にて使用可能です。 WebWorks アプリケーションは OS 5.0以上の BlackBerry デバイスまたは BlackBerry PlayBook OS にのみデプロイ可能です。
 
-1.  Requirements
+1. 必要なもの
 ---------------
 
-- Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
+- Windows XP (32-bit) またはWindows 7 (32-bit and 64-bit) または Mac OSX 10.6.4以上
 - Java Development Kit (JDK)
     - Windows: [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version)
-    - Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of [Java](http://support.apple.com/kb/DL1421).
--   Apache Ant
-    - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
-    - Mac OS X: Apache Ant is bundled with Java install.
+    - Mac OS X: Mac OS X 10.7より前については、 Java はデフォルトで提供されています。 OS X 10.7以上については、 [Java](http://support.apple.com/kb/DL1421) のインストールが必要です
+- Apache Ant
+    - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi)
+    - Mac OS X: Apache Ant は Java と一緒にインストールされます
 
-2.  Install SDK + Cordova
+2. SDK と Cordova のインストール
 -------------------------
 
-- PlayBook development requires the [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
-- Download and install one or more of the WebWorks SDKs. Keep note of the install directory.
-    - Smartphone Development: [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
-    - PlayBook Development: [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents.
+- PlayBook の開発には [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html) が必要です
+- 1つ以上の WebWorks SDK をダウンロード、インストールします。 インストールしたディレクトリを覚えておいてください。
+    - スマートフォンの開発: [BlackBerry WebWorks Smartphone SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
+    - PlayBook の開発: [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。
 
-3.  Setup New Project
+3. 新規プロジェクトの作成
 --------------------
 
-- Open up a command prompt/terminal and navigate to where you extracted Cordova.
-- There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
-- The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
-- Change to the newly created directory.
-- Open up the project.properties file with your favorite editor and edit the entries for `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=`. Set the  value(s) to the directory containing the `bbwp` binary in the WebWorks SDK(s) installed earlier.
+- コマンドプロンプトまたはターミナルをひらいて、 Cordova をダウンロード、解凍したディレクトリまで移動します。
+- そのディレクトリには、 Cordova がサポートするプラットフォームごとにさらにディレクトリがあります。 blackberry のディレクトリに移動します。
+- blackberry のディレクトリには、 `sample` と `www` の2つのディレクトリがあります。 `sample` フォルダーには、完成した Cordova プロジェクトが入っています。 `sample` フォルダーをコンピュータ内の別の場所にコピーします。
+- コピーしたフォルダーに移動します。
+- project.properties ファイルをあなたの好きなエディタで開き、 `blackberry.bbwp.dir=` および／または `playbook.bbwp.dir=` の部分を編集します。 値には、先ほどインストールした WebWorks SDK の中の `bbwp` バイナリファイルの位置をセットします。
 
-4.  Hello World
+4. Hello World の作成
 --------------
 
-Build the Cordova sample project by typing `ant target build` in your command prompt/terminal while you are in your project's directory. Replace `target` with either `blackberry` or `playbook`. Note this is a sample Cordova project and not a basic hello world application. The provided index.html in the www contains example usages of many of the Cordova API.
+サンプルプロジェクトのディレクトリ内でコマンドプロンプトまたはターミナルで `ant target build` とタイプすることで、サンプルプロジェクトをビルドします。ここで、 `target` は `blackberry` か `playbook` に置き換えてください。これは Cordova のサンプルプロジェクトで、普通の Hello World アプリではないことに注意してください。 www フォルダーにある index.html は多くの Cordova API の使用例を含みます。
 
-5A.  Deploy to Simulator
+5A. シミュレーターへのデプロイ
 --------------------------------------
 
-BlackBerry smartphone simulators are only available on Windows. PlayBook simulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default simulator. Additional simulators are [available](http://us.blackberry.com/developers/resources/simulators.jsp).
+BlackBerry スマートフォンシミュレーターは Windows でのみ利用可能です。 PlayBook シミュレーターは VMWare Player (Windows) または VMWare Fusion (Mac OS X) を必要とします。 WebWorks SDK はデフォルトのシミュレーターを提供しています。追加のシミュレーターも [入手可能](http://us.blackberry.com/developers/resources/simulators.jsp) です。
 
-- Open the project.properties file with your favorite editor and customize the following properties.
-    - Smartphone (Optional)
-        - `blackberry.sim.dir` : Path to directory containing simulator. On windows file separator '\' must be escaped '\\\'.
-        - `blackberry.sim.bin` : Name of the simulator executable in the specified directory.
+- project.properties ファイルをお好きなエディタで開き、以下のプロパティーをカスタマイズします。
+    - スマートフォン (オプション)
+        - `blackberry.sim.dir` : シミュレーターのあるディレクトリへのパスを表します。 Windows では、ファイルセパレーターの '\' は '\\\' でエスケープされている必要があります。
+        - `blackberry.sim.bin` : 指定されたシミュレーターのディレクトリ内で、実行したいシミュレーターの名前を表します。
     - Playbook
-        - `playbook.sim.ip` : IP address of simulator obtained when placing the simulator in developer mode through simulator security settings.
-        - `playbook.sim.password` : Simulator password which can be set through simulator security settings.
-- While in your project directory, in command prompt/terminal type `ant target load-simulator`. Replace `target` with either `blackberry` or `playbook`.  Note, for PlayBook the simulator virtual image must already be started.
-- The application will be installed in the All Applications section in the simulator.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
+        - `playbook.sim.ip` : シミュレーターのセキュリティ設定でデベロッパーモードにした場合の、取得する IP アドレスを表します。
+        - `playbook.sim.password` : シミュレーターのセキュリティ設定で設定できるシミュレータのパスワードを表します。
+- プロジェクトのディレクトリにいるときは、コマンドプロンプトまたはターミナルで `ant target load-simulator` とタイプしてください。 ここで、 `target` は `blackberry` か `playbook` に置き換えてください。 PlayBook では、シミュレーターのバーチャルイメージは既にスタートしている必要があることに注意してください。
+- アプリケーションは、シミュレーター内の All Applications セクションにインストールされます。 BlackBerry OS 5 ではアプリケーションは Download フォルダーにインストールされることに注意してください。
 
-5B.  Deploy to Device (Windows and Mac)
+5B. デバイスへのデプロイ (Windows and Mac)
 --------------------------------------
 
-- Deploying to a device requires signing keys which can be obtained from RIM.
-    - Fill out this [form](https://bdsc.webapps.blackberry.com/html5/signingkey). to request signing keys.
-    - Install the signing keys once they have been received:
+- デバイスへのデプロイは、 RIM から取得できる signing keys が必要です。
+    - signing keys のリクエストのため、この [フォーム](https://bdsc.webapps.blackberry.com/html5/signingkey) に記入し提出してください。
+    - signing keys を受け取ったら、それらをインストールします:
         - [Setup Smartphone Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
         - [Setup Tablet Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
-- Install [BlackBerry Desktop Sofware](http://us.blackberry.com/apps-software/desktop/) to be able to install a signed application to a smartphone device attached via USB.
-- Open the project.properties file with your favorite editor and customize the following properties:
-    - Smartphone (Optional)
-        - `blackberry.sigtool.password` : Password used when code signing keys were registered.  If not specified, a prompt will occur.
-    - Playbook (Required)
-        - `playbook.sigtool.csk.password` : Signing key password.
-        - `playbook.sigtool.p12.password` : Signing key password.
-        - `playbook.device.ip` : IP address of device obtained when placing the device in developer mode through device security settings.
-        - `playbook.device.password` : Device password which is set through device security settings.
-- While in your project directory, in command prompt/terminal type `ant target load-device`. Replace `target` with either `blackberry` or `playbook`.
-- The application will be installed in the All Applications section in the device.  Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
+- サインされたアプリケーションを USB 接続されたスマートフォンデバイスにインストールするために、 [BlackBerry Desktop Sofware](http://us.blackberry.com/apps-software/desktop/) をインストールします。
+- project.properties ファイルをお好きなエディタで開き、以下のプロパティーをカスタマイズします:
+    - スマートフォン (オプション)
+        - `blackberry.sigtool.password` : signing keys が登録されたときに使われるパスワードを表します。 もし指定されていない場合は、プロンプトにより入力が促されます。
+    - Playbook (必須)
+        - `playbook.sigtool.csk.password` : Signing key のパスワードを表します。
+        - `playbook.sigtool.p12.password` : Signing key のパスワードを表します。
+        - `playbook.device.ip` : デバイスのセキュリティ設定でデベロッパーモードにした場合の、取得する IP アドレスを表します。
+        - `playbook.device.password` : デバイスのセキュリティ設定で設定できるデバイスのパスワードを表します。
+- プロジェクトのディレクトリにいるときは、コマンドプロンプトまたはターミナルで `ant target load-device` とタイプしてください。ここで、 `target` は `blackberry` か `playbook` に置き換えてください。
+- アプリケーションは、デバイス内の All Applications セクションにインストールされます。 BlackBerry OS 5 ではアプリケーションは Download フォルダーにインストールされることに注意してください。
 
-Additional Information
+追加の情報
 ----------------------
 
-The following articles provide help to issues you may encounter when developing a Cordova application which is based on the BlackBerry WebWorks framework.
+以下の記事は、 BlackBerry WebWorks framework を使って Cordova アプリケーションを開発するときに役立ちます。
 
 - [BlackBerry WebWorks Development Pitfalls](http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712)
 - [Best practices for packaging WebWorks applications](https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html)

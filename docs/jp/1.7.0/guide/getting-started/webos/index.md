@@ -20,59 +20,58 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with WebOS
 ==========================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。 Cordova は以前は PhoneGap と呼ばれていたため、いくつかのサイトは PhoneGap という名前をまだ使用しています。
 
-Video Tutorials:
+ビデオチュートリアル:
 ----------------
 
 - [Cordova and HP Palm webOS quick start video](http://www.youtube.com/v/XEnAUbDRZfw?autoplay=1)
 - [How to convert iPhone app to a Palm](http://www.youtube.com/v/wWoJfQw79XI?autoplay=1)
 
 
-1. Requirements
+1. 必要なもの
 ---------------
 
-- Windows, OS X, or Linux
+- Windows, OS X, または Linux
 
 
-2. Install SDK + Cordova
+2. SDK と Cordova のインストール
 ----------------------------
 
-- Download and install [Virtual Box](http://www.virtualbox.org/)
-- Download and install [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/)
-- Download and install [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321)  (Windows only). Make sure you select "make" as it is not included by default
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- [Virtual Box](http://www.virtualbox.org/) のダウンロードとインストール
+- [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/) のダウンロードとインストール
+- [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321) のダウンロードとインストール (Windows のみ) 。デフォルトでは選択されていませんが、 "make" を選択してください
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから webOS ディレクトリと一緒に作業を進めます。
 
 
- 
-3. Setup New Project
+
+3. 新規プロジェクトの作成
 --------------------
 
-- Open up terminal/cygwin and navigate to where you extracted your Cordova Download. Go into the webOS directory.
+- ターミナルまたは cygwin を開き、 Cordova を解凍したフォルダーまで移動します。 webOS ディレクトリに移動します。
 
-
-4. Hello World
+4. Hello World の作成
 --------------
 
-In phonegap/webOS/framework/www, open up index.html with your favourite editor. After the body tag add `<h1>Hello World</h1>`
+phonegap/webOS/framework/www の中の index.html を好きなエディタで開きます。 body タグの後に `<h1>Hello World</h1>` を追加します
 
 
-5A. Deploy to Simulator
+5A. シミュレーターへのデプロイ
 -----------------------
 
-- Open up your Palm Emulator from your applications folder/start menu.
-- Type `make` in your terminal/cygwin while in the webOS directory.
+- アプリケーションフォルダーまたはスタートメニューからPlam エミュレーターを起動します
+- webOS ディレクトリ内で、ターミナルまたは cygwin で make を実行します
 
 
-5B. Deploy to Device
+5B. デバイスへのデプロイ
 --------------------
 
-- Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
-- Type `make` in your terminal/cygwin while in the webOS directory.
-       
+- デバイスが [デベロッパーモードになっており、また接続されている](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode) ことを確認します
+- webOS ディレクトリ内で、ターミナルまたは cygwin で make を実行します
 
-Done!
+
+終了
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
+さらに詳しいガイドは [ここ](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS) で確認できます。
 
