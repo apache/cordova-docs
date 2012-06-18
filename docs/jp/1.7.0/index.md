@@ -73,7 +73,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>デバイスのネイティブストレージを操作します。</span>
         </li>
     </ul>
-    <h1>ガイド</h1>
+    <h1>Guides</h1>
     <ul>
         <li>
             <h2>入門ガイド</h2>
