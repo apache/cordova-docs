@@ -45,7 +45,11 @@ Necessary for Installing on Device and Submitting to Market Place:
 ----------------------------
 
 - Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. 
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone\
+- copy the file CordovaStarter-x.x.x.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
+if you have just installed VisualStudio, you should launch it once to create this folder
+if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder.
+
 
 
 3. Setup New Project
@@ -53,6 +57,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
 - Select **CordovaStarter**. ( the version number will be displayed in the template description )
+- - note: If you do not see it, you may have to select the top level 'Visual C#' to see it
 - Give your project a name, and select OK.
 
     ![](img/guide/getting-started/windows-phone/wpnewproj.PNG)
