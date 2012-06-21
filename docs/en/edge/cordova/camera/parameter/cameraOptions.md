@@ -29,7 +29,8 @@ Optional parameters to customize the camera settings.
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100,
-      popoverOptions: CameraPopoverOptions };
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false };
 
 Options
 -------
@@ -80,9 +81,7 @@ Android Quirks
 
 - Ignores the `allowEdit` parameter.
 - Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
-- Camera.EncodingType is not supported.
 - Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
 
 BlackBerry Quirks
 -----------------
