@@ -69,7 +69,7 @@ Full Example
           <head>
             <title>Media Example</title>
         
-            <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
             <script type="text/javascript" charset="utf-8">
         
             // Wait for Cordova to load
@@ -179,3 +179,10 @@ iOS Quirk
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
+
+- __playAudioWhenScreenIsLocked__
+ 
+    Pass in this option to the **play** method to specify whether you want to play the audio of the media file when the screen is locked (this defaults to true if not set). If this is set to true, it will ignore the state of the hardware mute button. e.g:
+    
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ playAudioWhenScreenIsLocked : false })

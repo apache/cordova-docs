@@ -56,12 +56,12 @@ Full Example
       <head>
         <title>Cordova Resume Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.8.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Call onDeviceReady when Cordova is loaded.
         //
-        // At this point, the document has loaded but cordova-1.8.0.js has not.
+        // At this point, the document has loaded but cordova-1.8.1.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
@@ -89,16 +89,6 @@ Full Example
 iOS Quirks
 --------------------------
 Any calls to console.log during your **pause** event handler will be run now when the app resumes, see the iOS Quirks section for the **pause** event for an explanation. 
-
-Interactive functions like `alert` when the **resume** event fires will need to be wrapped in a `setTimeout` call with a timeout value of zero, or else the app will hang. e.g.
-
-    document.addEventListener("resume", onResume, false);
-
-    function onResume() {
-       setTimeout(function() {
-              // TODO: do your thing!
-            }, 0);
-    }
 
 - __active__ event 
 
