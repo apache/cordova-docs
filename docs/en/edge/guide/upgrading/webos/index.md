@@ -22,16 +22,16 @@ Upgrading Cordova webOS
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
-## Upgrade to 1.8.1 from 1.8.0 ##
+## Upgrade to 1.9.0 from 1.8.1 ##
 
-1. remove cordova-1.8.0.js from your project
+1. remove cordova-1.8.1.js from your project
 
 2. update the following line in your index.html:
 
     change this:
-    <script type="text/javascript" src="cordova-1.8.0.js"></script> 
+    <script type="text/javascript" src="cordova-1.8.1.js"></script> 
     
     to:
-    <script type="text/javascript" src="cordova-1.8.1.js"></script> 
+    <script type="text/javascript" src="cordova-1.9.0.js"></script> 
 
-3. run the makefile to generate the newest version of the cordova-1.8.1.js file
+3. run the makefile to generate the newest version of the cordova-1.9.0.js file
