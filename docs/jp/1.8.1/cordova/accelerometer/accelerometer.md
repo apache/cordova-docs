@@ -40,3 +40,51 @@ Accelerometer
 -------------------
 
 - Acceleration
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
+
+### Bada
+
+    パーミッションの設定は必要ありません。
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" />
+
+#### www/config.xml
+
+    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+    <feature id="org.apache.cordova" required="true" version="1.0.0" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Accelerometer</key>
+        <string>CDVAccelerometer</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_SENSORS" />
+    </Capabilities>
+
+Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
