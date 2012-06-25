@@ -24,10 +24,14 @@ Please note that **Xcode 4 is required**. To submit to the Apple App Store, you 
 
 ## Upgrading Cordova 1.8.x projects to 1.9.0 ##
 
-1. **Install** Cordova 1.8.0
+1. **Install** Cordova 1.9.0
 2. **Create a new project** - you will have to grab assets from this new project
 3. **Copy** the **www/cordova-1.9.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.8.x.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-1.9.0.js** file
+
+**Note:**
+
+1.9.0 supports the new **"BackupWebStorage"** boolean setting in Cordova.plist. By default, this setting is turned on, set it to "false" to turn it off - especially for iOS 6 - see [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
 
 ## Upgrading Cordova 1.7.0 projects to 1.8.x ##
