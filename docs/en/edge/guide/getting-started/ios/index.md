@@ -29,7 +29,7 @@ Video Tutorial
 
 Requirements
 ------------
-
+- Xcode 4.x
 - Intel-based computer with Mac OS X Lion (10.7)
 - Necessary for installing on device:
     - Apple iOS device (iPhone, iPad, iPod Touch)
