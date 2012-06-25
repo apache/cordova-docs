@@ -42,7 +42,8 @@ Video Tutorials:
 - Download and install [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/)
 - Download and install [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321)  (Windows only). Make sure you select "make" as it is not included by default
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the webOS directory.
-
+- Download and install XCode from the [Mac App Store](http://itunes.apple.com/ca/app/xcode/id497799835?mt=12) (OSX only)
+- Download and install Command Line Tools for XCode (OSX only); this can be done by going to XCode's Preferences -> Downloads -> Components and then click install on Command Line Tools
 
  
 3. Setup New Project
