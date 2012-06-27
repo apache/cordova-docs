@@ -151,6 +151,40 @@ __Full Example__
         <p>Upload File</p>
     </body>
     </html>
+    
+iOS Quirks
+----------
+
+Setting headers for FileTransfer Upload:
+
+__Quick Example__
+
+    function win(r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        console.log("Sent = " + r.bytesSent);
+    }
+    
+    function fail(error) {
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+    
+    var uri = "http://some.server.com/upload.php";
+    
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+    options.mimeType="text/plain";
+        
+    var params = new Object();
+    params.headers={'headerParam':'headerValue'};
+    
+    options.params = params;
+    
+    var ft = new FileTransfer();
+    ft.upload(fileURI, uri, win, fail, options);    
 
 download
 --------------
