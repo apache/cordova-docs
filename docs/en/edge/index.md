@@ -92,6 +92,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Grant an application access to external domains.</span>
         </li>
         <li>
+            <h2>Embedding WebView</h2>
+            <span>Implement the Cordova WebView in your project.</span>
+        </li>
+        <li>
             <h2><a href="_index.html">Keyword Index</a></h2>
             <span>Full index of the Cordova Documentation.</span>
         </li>
