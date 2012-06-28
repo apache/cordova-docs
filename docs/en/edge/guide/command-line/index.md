@@ -17,126 +17,180 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Command-Line Usage
-==================
+# Command-Line Usage
 
-Cordova now ships with a set of command line tools that make it easier for you to developer cross platform apps. You can build, clean, launch an emulator with a single command.
+Cordova now ships with a set of command-line tools that make it easier
+for you to develop cross-platform applications. You can build, clean,
+and launch an emulator with a single command. You can consider these
+instructions as an alternative to the Getting Started guides. Whereas
+the Getting Started guides help you get setup with the default IDEs and
+tooling surrounding the platforms you are working with, the command-line
+tools aim to provide a shell-based approach to creating and working with
+Cordova projects.
+
+## Supported Platforms
 
 * iOS
 * Android
+* BlackBerry
 
-iOS
-===
+## iOS
 
-Create a project
-----------------
+The iOS command-line tools are built upon shell scripts and rely on
+XCode command-line tools such as `xcode-select` and `xcodebuild`.
 
-Run the create comand with the:
+### Create a project
 
-* Path to your new cordova iOS project
-* Package name
+Run the `create` command with the following parameters:
+
+* Path to your new Cordova iOS project
+* Package name, following reverse-domain style convention
 * Project name
 
-<!-- -->
 
-    $ /path/to/phonegap-phonegap-xxxxxxx/lib/ios/bin/create /path/to/cordova_project com.example.cordova_project_name CordovaProjectName
+    $ ./path/to/cordova-ios/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
+### Build a project
 
-Build a project
----------------
+    $ /path/to/my_new_cordova_project/cordova/debug
 
-    $ /path/to/cordova_project/cordova/debug /path/to/cordova_project CordovaProjectName
+### Launch emulator
 
-Launch emulator
----------------
+    $ /path/to/my_new_cordova_project/cordova/emulate
 
-    $ /path/to/cordova_project/cordova/emulate
+### Logging
 
-Logging
--------
-
-    $ /path/to/cordova_project/cordova/log
+    $ /path/to/my_new_cordova_project/cordova/log
 
 
-Android
-=======
+## Android
+
+The Android command-line tools are built upon shell scripts. You _must_
+have the Android SDK's `tools` and `platform-tools` folders in your
+PATH!
+
+### Create a project
+
+Run the `create` comand with the following parameters:
+
+* Path to your new Cordova Android project
+* Package name, following reverse-domain style convention
+* Main Activity name
 
 
-Create a project
-----------------
-
-Run the create comand with the:
-
-* Path to your new cordova android project
-* Package name
-* Main activity name
-
-<!-- -->
-
-    $ /path/to/phonegap-phonegap-xxxxxxx/lib/android/bin/create /path/to/cordova_project com.example.cordova_project_name CordovaProjectName
+    $ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 or
 
-        $ /path/to/phonegap-phonegap-xxxxxxx/lib/android/bin/create.bat /path/to/new_cordova_project com.example.cordova_project_name CordovaProjectName
+    $ /path/to/cordova-android/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 on **Windows**
 
-Build a project
----------------
+### Build a project
 
-    $ /path/to/cordova_project/cordova/debug
+    $ /path/to/my_new_cordova_project/cordova/debug
 
 or
 
-    $ /path/to/cordova_project/cordova/debug.bat
+    $ /path/to/my_new_cordova_project/cordova/debug.bat
 
 on **Windows**
 
-Launch emulator
----------------
+### Launch emulator
 
-    $ /path/to/cordova_project/cordova/emulate
+    $ /path/to/my_new_cordova_project/cordova/emulate
 
 or
 
-    $ /path/to/cordova_project/cordova/emulate.bat
+    $ /path/to/my_new_cordova_project/cordova/emulate.bat
 
 on **Windows**
 
-Make sure you created at least one Android Virtual Device if you did not it will ask you to create one with the *android* command.
+Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
 If you have multiple AVDs, it will prompt you to select an AVD.
 
-Logging
--------
+### Logging
 
-    $ /path/to/cordova_project/cordova/log
+    $ /path/to/my_new_cordova_project/cordova/log
 
 or
 
-    $ /path/to/cordova_project/cordova/log.bat
+    $ /path/to/my_new_cordova_project/cordova/log.bat
 
 on **Windows**
 
-Cleaning
---------
+### Cleaning
 
-    $ /path/to/cordova_project/cordova/clean
+    $ /path/to/my_new_cordova_project/cordova/clean
 
 or
 
-    $ /path/to/cordova_project/cordova/clean.bat
+    $ /path/to/my_new_cordova_project/cordova/clean.bat
 
 on **Windows**
 
-Clean, build, deploy and launch
--------------------------------
+### Clean, build, deploy and launch
 
-    $ /path/to/cordova_project/cordova/BOOM
+    $ /path/to/my_new_cordova_project/cordova/BOOM
 
 or
 
-    $ /path/to/cordova_project/cordova/BOOM.bat
+    $ /path/to/my_new_cordova_project/cordova/BOOM.bat
 
 on **Windows**
 
 Make sure you have an emulator or a device connected.
+
+
+## BlackBerry
+
+The BlackBerry command-line tools are built upon shell scripts.
+
+### Create a project
+
+Run the `create` comand with the following parameters:
+
+* Path to your new Cordova BlackBerry project
+* Application name
+
+
+    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project CordovaProjectName
+
+or
+
+    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project CordovaProjectName
+
+on **Windows**
+
+### Build a project
+
+    $ /path/to/my_new_cordova_project/cordova/debug
+
+or
+
+    $ /path/to/my_new_cordova_project/cordova/debug.bat
+
+on **Windows**
+
+### Launch emulator
+
+    $ /path/to/my_new_cordova_project/cordova/emulate
+
+or
+
+    $ /path/to/my_new_cordova_project/cordova/emulate.bat
+
+on **Windows**
+
+Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
+If you have multiple AVDs, it will prompt you to select an AVD.
+
+### Logging
+
+Unfortunately streaming logs directly from the device is not
+supported at this time. However, BlackBerry offers built-in Web
+Inspector support for Playbook and BlackBerry smartphone devices running
+BlackBerry OS 7.0 and above. Additionally, you can access your
+application's logs (including any calls to `console.log`) on your device
+by holding down the ALT key from the home screen and hitting "lglg"
+keys.
