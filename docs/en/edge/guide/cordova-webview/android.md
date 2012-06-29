@@ -28,12 +28,14 @@ The prerequisites are the same as the prerequisites for Android application deve
 look at the Getting Started guide to developing a Cordova Application and start there before continuing with this approach. This is not the main approach used
 to author Android Cordova applications. Thus the instructions are currently manual.  In the future, we may try to further automate project generation via this method.
 
-## Prerequisites ##
+Prerequisites
+-------------
 
 1. **Cordova 1.9** or greater
 2. Android SDK updated with 15
 
-## Guide to using CordovaWebView in an Android Project ##
+Guide to using CordovaWebView in an Android Project
+---------------------------------------------------
 
 1. Use `bin/create` to fetch the commons-codec-1.6.jar
 2. `cd` into `/framework` and run `ant jar` to build the cordova jar (it
