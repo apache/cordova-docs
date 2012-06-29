@@ -26,12 +26,15 @@ New Cordova-based applications created using the Xcode template provided in Cord
 
 It is recommended that you follow the `Cordova.framework` instructions below. The `CordovaLib` sub-project instructions are for Cordova core developers or users that have custom `CordovaLib` project code (for ease of debugging the core).
 
-## Prerequisites ##
+Prerequisites
+-------------
+
 1. **Cordova 1.4.1** or greater
 2. **Xcode 4.2** or greater
 3. `Cordova.plist` file
 
-## Adding Cleaver to your Xcode project (Cordova.framework) ##
+Adding Cleaver to your Xcode project (Cordova.framework)
+--------------------------------------------------------
 
 1. **Copy** the `Cordova.plist` file into your project folder on disk
 2. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
@@ -58,7 +61,8 @@ It is recommended that you follow the `Cordova.framework` instructions below. Th
         MobileCoreServices.framework
         CoreMedia.framework
 
-## Adding Cleaver to your Xcode project (CordovaLib sub-project) ##
+Adding Cleaver to your Xcode project (CordovaLib sub-project)
+-------------------------------------------------------------
 
 1. **Copy** the `Cordova.plist` file into your project folder on disk
 2. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
@@ -101,7 +105,8 @@ It is recommended that you follow the `Cordova.framework` instructions below. Th
     this if you have multiple boxes!
 26. Click on the **"+" button**, and add `libCordova.a`
 
-### Adding new classes to CordovaLib sub-project ###
+Adding new classes to CordovaLib sub-project
+--------------------------------------------
 
 In general if you are only modifying or debugging existing CordovaLib
 classes you should be OK with just the above steps. However if you are
@@ -115,7 +120,8 @@ adding new classes you need to follow a few additional steps:
 3. In your project's Target's Build Settings, search for "Other Linker
    Flags". Add `-Obj-C` and `-all_load` to this.
 
-## Using CDVViewController in your code ##
+Using CDVViewController in your code
+------------------------------------
 
 1. Add this **header** if you used the `Cordova.framework`:
 
@@ -149,7 +155,8 @@ adding new classes you need to follow a few additional steps:
 
         [myView addSubview:viewController.view];
 
-## Adding your HTML, CSS and JavaScript assets ##
+Adding your HTML, CSS and JavaScript assets
+-------------------------------------------
 
 1. Create a **new folder** in your project **on disk**, for example, name it `www`
 2. Put your **HTML, CSS and JavaScript assets** into this folder
@@ -164,5 +171,4 @@ adding new classes you need to follow a few additional steps:
         */
         viewController.wwwFolderName = @"myfolder";
         viewController.startPage = @"mypage.html"
-<br />
 
