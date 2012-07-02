@@ -81,7 +81,6 @@ Android Quirks
 
 - Ignores the `allowEdit` parameter.
 - Camera.PictureSourceType.PHOTOLIBRARY and Camera.PictureSourceType.SAVEDPHOTOALBUM both display the same photo album.
-- Ignores the `correctOrientation` parameter.
 
 BlackBerry Quirks
 -----------------
