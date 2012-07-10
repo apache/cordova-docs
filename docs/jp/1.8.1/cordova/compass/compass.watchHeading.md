@@ -66,7 +66,7 @@ compass.watchHeading
       <head>
         <title>コンパスの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // watch ID が現在の `watchHeading` を参照
