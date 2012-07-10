@@ -36,6 +36,7 @@ connection.type
 - BlackBerry WebWorks (OS 5.0 以上)
 - Windows Phone 7 (Mango)
 - Bada 2.x
+- webOS
 
 使用例
 -------------
@@ -66,7 +67,7 @@ connection.type
       <head>
         <title>navigator.network.connection.type 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -100,3 +101,25 @@ connection.type
         <p>ダイアログボックスがネットワーク状態を表示します。</p>
       </body>
     </html>
+
+iOS に関する注意点
+----------
+
+- iOS はネットワーク接続のタイプを特定することが出来ません。
+    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
+
+Bada に関する注意点
+-----------
+
+- Bada は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
+    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
+
+webOS に関する注意点
+------------
+
+- 接続が確立されているかのみを表し、タイプについては特定できません。
+
+Windows Phone に関する注意点
+--------------------
+
+- Windows Phone Emulator は常に `navigator.network.connection.type` を `Connection.UNKNOWN` と返します。

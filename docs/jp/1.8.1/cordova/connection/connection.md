@@ -40,19 +40,53 @@ Connection
 - Connection.CELL_4G
 - Connection.NONE
 
-WP7 に関する注意点
----------
+パーミッション
+-----------
 
-- __type:__
-Windows Phone Emulator は常に navigator.network.connection.type を Connection.UNKNOWN と返します。
+### Android
 
-iOS に関する注意点
----------
+#### app/res/xml/plugins.xml
 
-- __type:__
-iOS は、デバイスが携帯電話ネットワークに接続しているかどうかだけを返すことができ、タイプは返すことが出来ません。
-そのため、もし接続している場合は常に CELL_2G として返されます。
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 
-Bada に関する注意点
-----------
-- Bada は、デバイスが Wifi または CELL_2G 携帯電話ネットワークに接続されているかどうかのみを返します (タイプは返されません) 。
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+### Bada
+
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Network Status" value="org.apache.cordova.network.Network" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>NetworkStatus</key>
+        <string>CDVConnection</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_NETWORKING" />
+    </Capabilities>
+
+参照: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
