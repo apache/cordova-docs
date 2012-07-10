@@ -41,3 +41,53 @@ Event Types
 - volumedownbutton
 - volumeupbutton
 
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Battery" value="org.apache.cordova.BatteryListener" />
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+### Bada
+
+#### manifest.xml
+
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Battery" value="org.apache.cordova.battery.Battery" />
+
+#### www/config.xml
+
+    <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+    <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+    <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Battery</key>
+        <string>CDVBattery</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+    パーミッションの設定は必要ありません。
