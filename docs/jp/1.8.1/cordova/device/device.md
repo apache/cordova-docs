@@ -37,6 +37,59 @@ Device
 `device` オブジェクトは `window` オブジェクトに割当たれるため、暗黙的にグローバルスコープとして扱われます。
 
     // 下記は同じ `device` オブジェクト
-    //
     var phoneName = window.device.name;
     var phoneName = device.name;
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Device" value="org.apache.cordova.Device" />
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+### Bada
+
+#### manifest.xml
+
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Device" value="org.apache.cordova.device.Device" />
+
+#### www/config.xml
+
+    <feature id="blackberry.app" required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
+
+### iOS
+
+    パーミッションの設定は必要ありません。
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        <Capability Name="ID_CAP_IDENTITY_USER" />
+    </Capabilities>
+
+参照: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

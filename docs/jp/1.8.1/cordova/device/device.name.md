@@ -37,6 +37,7 @@ device.name
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -56,7 +57,7 @@ device.name
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

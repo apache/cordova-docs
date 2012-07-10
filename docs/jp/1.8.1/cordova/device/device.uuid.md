@@ -37,6 +37,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -54,6 +55,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
     // Windows Phone 7 : デバイスユーザーのハッシュ値を返します
     // もしユーザーが定義されていない場合、ガイドが生成され、アプリがアンインストールするまで存続します
     //
+    // webOS: デバイスの NDUID を返します
     var deviceID = device.uuid;
 
 詳細な使用例
@@ -64,7 +66,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

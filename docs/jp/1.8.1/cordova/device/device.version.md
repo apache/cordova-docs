@@ -32,6 +32,7 @@ OS のバージョンを取得します。
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -45,6 +46,7 @@ OS のバージョンを取得します。
     // iPhone:      iOS 3.2 は "3.2" を返す
     //
     // Windows Phone 7: 現在の OS バージョンを返す、例: Mango は7.10.7720を返す
+    // webOS: webOS 2.2.4 は 2.2.4 を返す
     var deviceVersion = device.version;
 
 詳細な使用例
@@ -55,7 +57,7 @@ OS のバージョンを取得します。
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
