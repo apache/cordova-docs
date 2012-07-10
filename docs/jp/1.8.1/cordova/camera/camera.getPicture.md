@@ -49,9 +49,14 @@ camera.getPicture
 
 - Android
 - BlackBerry WebWorks (OS 5.0 以上) 
-- iPhone
+- iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2
+
+iOS に関する注意点
+----------
+
+JavaScript の alert() をコールバック関数に含めると、問題が生じる可能性があります。 alert を setTimeout() でラップすることで、 alert が表示される前に iOS の image picker または popover が完全に閉じるようにします: setTimeout("alert('message');", 0);
 
 
 Windows Phone 7 に関する注意点
@@ -101,7 +106,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       <head>
         <title>写真を撮ってみよう</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // 写真ソース

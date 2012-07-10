@@ -28,7 +28,8 @@ cameraOptions
       allowEdit : true,
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
-      targetHeight: 100 };
+      targetHeight: 100,
+      popoverOptions: CameraPopoverOptions };
 
 オプション
 -------
@@ -72,6 +73,7 @@ cameraOptions
 
 - __correctOrientation:__ 写真が撮影されたときと同じ向きになるよう写真を回転させます。 (`Boolean`)
 - __saveToPhotoAlbum:__ 写真が撮影された後、デバイスのフォトアルバムに画像を保存します。 (`Boolean`)
+- __popoverOptions:__ iPad でのポップオーバーの位置を指定します。iOS のみのオプションです。 CameraPopoverOptions で定義されます。
 
 Android に関する注意点
 --------------
@@ -94,7 +96,7 @@ BlackBerry に関する注意点
 - `correctOrientation` パラメーターは無視されます。
 - `saveToPhotoAlbum` パラメーターは無視されます。
 
-Palm に関する注意点
+WebOS に関する注意点
 -----------
 
 - `quality` パラメーターは無視されます。
@@ -108,8 +110,7 @@ iOS に関する注意点
 --------------
 
 - メモリエラーを防ぐには、 `quality` パラメーターを50以下に設定してください。
-- `destinationType.FILE_URI` が使用された場合、撮影された写真や編集された写真はアプリケーションの temporary ディレクトリに保存されます。
-- アプリケーションの temporary ディレクトリの中身はアプリケーション終了とともに消去されます。もしストレージの空きが少ない場合、このディレクトリは navigator.fileMgr API を使って消去できます。
+- `destinationType.FILE_URI` が使用された場合、撮影された写真や編集された写真はアプリケーションの temporary ディレクトリに保存されます。もしストレージの空きが少ない場合、このディレクトリは navigator.fileMgr API を使って消去できます。
 
 Windows Phone 7 に関する注意点
 --------------
