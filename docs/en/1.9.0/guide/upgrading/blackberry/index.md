@@ -22,49 +22,40 @@ Upgrading Cordova BlackBerry
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
-- To upgrade to 1.8.0, please go from 1.7.0
+- To upgrade to 1.9.0, please go from 1.8.1
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.9.0 from 1.8.1 ##
 
 Updating just the www folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
 3. Update the contents of the `ext-air/` folder.
-4. Copy the new `cordova-1.8.0.js` into your project.
+4. Copy the new `cordova-1.9.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
-5. Update your HTML to use the new `cordova-1.8.0.js` file.
-6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+5. Update your HTML to use the new `cordova-1.9.0.js` file.
+6. Update your `www/config.xml` file to enable microphone recording:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
 
-   To:
+And add this new permission:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
+<rim:permit>record_audio</rim:permit>
 
 Updating the sample folder (ie, updating using the ant tools):
 
 1. Open the `sample/lib/` folder.
-2. Update the .jar file in the `cordova.1.7.0/ext/` folder.
-3. Update the contents of the `cordova.1.7.0/ext-air/` folder.
-4. Update the .js file in the `cordova.1.7.0/javascript/` folder.
-5. Open the `sample/lib/` folder and rename the `cordova.1.7.0/` folder to `cordova.1.8.0/`.
+2. Update the .jar file in the `cordova.1.8.1/ext/` folder.
+3. Update the contents of the `cordova.1.8.1/ext-air/` folder.
+4. Update the .js file in the `cordova.1.8.1/javascript/` folder.
+5. Open the `sample/lib/` folder and rename the `cordova.1.8.1/` folder to `cordova.1.9.0/`.
 6. Type `ant blackberry build` or `ant playbook build` to update the `www/` folder with updated Cordova.
-7. Open the `www/` folder and update your HTML to use the new `cordova-1.8.0.js` file.
-8. Open the `www/` folder and update the `plugins.xml` file. Two plugins
-   changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+7. Open the `www/` folder and update your HTML to use the new `cordova-1.9.0.js` file.
+8. Open the `www/` folder and update the `config.xml` file to enable microphone recording:
 
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
 
-   To:
+And add this new permission:
 
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+<rim:permit>record_audio</rim:permit>
 
