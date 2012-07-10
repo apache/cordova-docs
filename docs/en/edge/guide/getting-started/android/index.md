@@ -40,9 +40,17 @@ This guide describes how to set up your development environment for Cordova and 
  3. Setup New Project
 ---------------------
 
-- Launch Eclipse, and select menu item **New &gt; Android Project**.  Fill out the three panels of the **New Android Project** wizard shown below.
-
-    ![](img/guide/getting-started/android/AndroidFlow.png)
+- Launch Eclipse, and select menu item **New Project**
+    ![](img/guide/getting-started/android/step_1.jpg)
+- Then specify new application project
+    ![](img/guide/getting-started/android/step_2.jpg)
+- Then speciy an Application Name, a Project Name and Package Name with Namespace
+    ![](img/guide/getting-started/android/step_3.jpg)
+- Then select a graphic
+    ![](img/guide/getting-started/android/step_4.jpg)
+- Then Create a Blank Activity
+    ![](img/guide/getting-started/android/step_5.jpg)
+- Make sure the activity doesn't inherit from anything.  You most likely won't have PhoneGap on your Eclipse Workspace.  Once this is done, click finish
     
 - In the root directory of your project, create two new directories:
  	- **/libs**
@@ -93,7 +101,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Your AndroidManifest.xml file should look like
 
-    ![](img/guide/getting-started/android/manifest.jpg)
+    ![](img/guide/getting-started/android/manifest.png)
 
 4. Hello World
 --------------    
