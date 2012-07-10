@@ -40,3 +40,57 @@ File
 - Flags
 - LocalFileSystem
 - Metadata
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="File" value="org.apache.cordova.FileUtils" />
+    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+### Bada
+
+    パーミッションの設定は必要ありません。
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="File" value="org.apache.cordova.file.FileManager" />
+    <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer" />
+
+#### www/config.xml
+
+    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+    <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+    <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+    <rim:permissions>
+        <rim:permit>access_shared</rim:permit>
+    </rim:permissions>
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>File</key>
+        <string>CDVFile</string>
+    </dict>
+
+    <key>Plugins</key>
+    <dict>
+        <key>FileTransfer</key>
+        <string>CDVFileTransfer</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。

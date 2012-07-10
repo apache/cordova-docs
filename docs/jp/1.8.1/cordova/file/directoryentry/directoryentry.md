@@ -40,12 +40,13 @@ DirectoryEntry
 以下のメソッドは DirectoryEntry オブジェクトから呼び出すことができます:
 
 - __getMetadata__: ディレクトリのメタデータを取得します
+- __setMetadata__: ディレクトリのメタデータをセットします
 - __moveTo__: ディレクトリを、ファイルシステム内の別の場所に移動します
 - __copyTo__: ディレクトリを、ファイルシステム内の別の場所にコピーします
-- __toURI__: ディレクトリの位置特定に使用できる URI を返します
+- __toURL__: ディレクトリの位置特定に使用できる URL を返します
 - __remove__: ディレクトリを削除します。ディレクトリは空である必要があります
 - __getParent__: 親ディレクトリを取得します
-- __getParent__: ディレクトリからエントリを読み込みできる DirectoryReader を作成します
+- __createReader__: ディレクトリからエントリを読み込みできる DirectoryReader を作成します
 - __getDirectory__: ディレクトリを取得または作成します
 - __getFile__: ファイルを取得または作成します
 - __removeRecursively__: ディレクトリと、その中身をすべて削除します
@@ -83,6 +84,34 @@ __使用例__
     // このエントリーの Metadata オブジェクトを取得
     entry.getMetadata(success, fail);
 
+setMetadata
+----------------
+
+ディレクトリのメタデータをセットします。
+**現在 iOS のみ対応しています** - ディレクトリの拡張属性をセットします。
+
+__パラメーター:__
+
+- __successCallback__ - Metadata が正常にセットされたときに呼び出されるコールバック関数を表します _(Function)_
+- __errorCallback__ - Metadata のセット時にエラーが起きた場合に呼び出されるコールバック関数を表します _(Function)_
+- __metadataObject__ - Metadata のキーと値が格納されているオブジェクトを表します _(Object)_
+
+
+__使用例__
+
+    function success() {
+        console.log("メタデータが正常にセットされました。");
+    }
+
+    function fail() {
+        alert("メタデータ作成中にエラーが発生しました。");
+    }
+
+    // メタデータをセット
+    entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+__iOS に関する注意点__
+
+- **"com.apple.MobileBackup"** 拡張属性のみサポートされています。値を **1** とセットすることで、ディレクトリを iCloud でバックアップされない設定とします。値を **0** とセットすることで、再度ディレクトリを iCloud でバックアップされる設定とします。
 
 moveTo
 ------
@@ -116,8 +145,9 @@ __使用例__
 
     function moveDir(entry) {
         var parent = document.getElementById('parent').value,
+            parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentEntry = new DirectoryEntry(parentName, parent);
 
         // ディレクトリを新しいディレクトリに移動し、名前付け替えます
         entry.moveTo(parentEntry, newName, success, fail);
@@ -153,24 +183,25 @@ __使用例__
 
     function copyDir(entry) {
         var parent = document.getElementById('parent').value,
+            parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
-            parentEntry = new DirectoryEntry({fullPath: parent});
+            parentEntry = new DirectoryEntry(parentName, parent);
 
         // ディレクトリを新しいディレクトリにコピーし、名前付け替えます
         entry.copyTo(parentEntry, newName, success, fail);
     }
 
 
-toURI
+toURL
 -----
 
-ディレクトリの位置特定に使用できる URI を返します。
+ディレクトリの位置特定に使用できる URL を返します。
 
 __使用例__
 
-    // ディレクトリ URI の取得
-    var uri = entry.toURI();
-    console.log(uri);
+    // ディレクトリ URL の取得
+    var dirURL = entry.toURL();
+    console.log(dirURL);
 
 
 remove

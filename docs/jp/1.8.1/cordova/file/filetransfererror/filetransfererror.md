@@ -28,6 +28,7 @@ FileTransferError
 - __code__ 事前に定義された以下のエラーコードのうちの1つを表します (int)
 - __source__ ソースの URI を表します (string)
 - __target__ ターゲットの URI を表します (string)
+- __http_status__ HTTP のステータスコードを表します。この属性は、レスポンスコードが HTTP コネクションから返されたときのみ有効です (int)
 
 定数
 ---------
