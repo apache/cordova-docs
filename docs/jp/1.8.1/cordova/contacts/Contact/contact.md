@@ -31,7 +31,7 @@ Contact
 - __nickname:__ ニックネームを表します _(DOMString)_
 - __phoneNumbers:__ 連絡先のすべての電話番号の配列を表します _(ContactField[])_
 - __emails:__ 連絡先のすべてのメールアドレスの配列を表します _(ContactField[])_
-- __addresses:__ 連絡先のすべての住所の配列を表します _(ContactAddresses[])_
+- __addresses:__ 連絡先のすべての住所の配列を表します _(ContactAddress[])_
 - __ims:__ 連絡先のすべてのIMアドレスの配列を表します _(ContactField[])_
 - __organizations:__ 連絡先のすべての組織名の配列を表します _(ContactOrganization[])_
 - __birthday:__ 連絡先の誕生日を表します _(Date)_
@@ -61,7 +61,7 @@ _注意: プラットフォームによっては、いくつかのフィール�
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 保存する例
 ------------------
@@ -119,7 +119,7 @@ _注意: プラットフォームによっては、いくつかのフィール�
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -206,17 +206,26 @@ BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 - __displayName:__ サポートされています。 BlackBerry では __user1__ フィールドとして保存されます。
 - __nickname:__ このプロパティーはサポートされておらず、常に `null` を返します。.
 - __phoneNumbers:__ 部分的にサポートされています。 BlackBerry では、電話番号はもし _type_ が 'home' の場合は __homePhone1__と __homePhone2__ に、 _type_ が 'work' の場合は __workPhone1__ と __workPhone2__ に、 _type_ が 'mobile' の場合は __mobilePhone__ に、 _type_ が 'fax' の場合は __faxPhone__ に、 _type_ が 'pager' の場合は __pagerPhone__ に、それ以外の場合は __otherPhone__ に保存されます。
- - __emails:__ 部分的にサポートされています。 BlackBerry では、最初の3メールアドレスが __email1__, __email2__, __email3__ フィールドに保存されます。
- - __addresses:__ 部分的にサポートされています。 BlackBerry では、最初の2つの住所が __homeAddress__ と __workAddress__ フィールドに保存されます。
- - __ims:__ このプロパティーはサポートされておらず、常に `null` を返します。
- - __organizations:__ 部分的にサポートされています。 BlackBerry では、最初の組織の名前とタイトルが __company__ と __title__ フィールドに保存されます。
- - __photos:__ 部分的にサポートされています。 サムネイルサイズの写真のみサポートされています。 連絡先に写真を登録する場合、 Base64 エンコードされたイメージか、イメージの場所を指定する URL を渡します。 写真は BlackBerry の連絡先データベースに保存される前に縮小されます。 連絡先写真は Base64 エンコードされたイメージとして返されます。
- - __categories:__ 部分的にサポートされています。 'Business' と 'Personal' カテゴリーのみサポートされています。
- - __urls:__ 部分的にサポートされています。 BlackBerry では、最初の URL が __webpage__ フィールドに保存されます。
+- __emails:__ 部分的にサポートされています。 BlackBerry では、最初の3メールアドレスが __email1__, __email2__, __email3__ フィールドに保存されます。
+- __addresses:__ 部分的にサポートされています。 BlackBerry では、最初の2つの住所が __homeAddress__ と __workAddress__ フィールドに保存されます。
+- __ims:__ このプロパティーはサポートされておらず、常に `null` を返します。
+- __organizations:__ 部分的にサポートされています。 BlackBerry では、最初の組織の名前とタイトルが __company__ と __title__ フィールドに保存されます。
+- __photos:__ 部分的にサポートされています。 サムネイルサイズの写真のみサポートされています。 連絡先に写真を登録する場合、 Base64 エンコードされたイメージか、イメージの場所を指定する URL を渡します。 写真は BlackBerry の連絡先データベースに保存される前に縮小されます。 連絡先写真は Base64 エンコードされたイメージとして返されます。
+- __categories:__ 部分的にサポートされています。 'Business' と 'Personal' カテゴリーのみサポートされています。
+- __urls:__ 部分的にサポートされています。 BlackBerry では、最初の URL が __webpage__ フィールドに保存されます。
 
- iOS に関する注意点
- ----------
- - __displayName:__ このプロパティーは iOS ではサポートされておらず、 ContactName が指定されていない場合限り `null` を返します。 もし ContactName が指定されていない場合、合成された名前、 __nickname__ 、または "" が __displayName__ として返されます。
- - __birthday:__ 入力として、このプロパティーは JavaScript の Date オブジェクトとして指定する必要があります。 JavaScript の Date オブジェクトとして返されます。
- - __photos:__  取得した写真はアプリの一時ディレクトリに保存され、写真への File URL が返されます。一時ディレクトリの中身はアプリを終了する際に削除されます。
- - __categories:__ このプロパティーはサポートされておらず、常に `null` を返します。
+iOS に関する注意点
+----------
+- __displayName:__ このプロパティーは iOS ではサポートされておらず、 ContactName が指定されていない場合限り `null` を返します。 もし ContactName が指定されていない場合、合成された名前、 __nickname__ 、または "" が __displayName__ として返されます。
+- __birthday:__ 入力として、このプロパティーは JavaScript の Date オブジェクトとして指定する必要があります。 JavaScript の Date オブジェクトとして返されます。
+- __photos:__  取得した写真はアプリの一時ディレクトリに保存され、写真への File URL が返されます。一時ディレクトリの中身はアプリを終了する際に削除されます。
+- __categories:__ このプロパティーはサポートされておらず、常に `null` を返します。
+
+Bada に関する注意点
+-----------
+
+- __displayName:__ このプロパティーはサポートされていません。
+- __birthday:__ このプロパティーはサポートされていません。
+- __photos:__ このプロパティーは写真へのURL1つを格納したリストです。
+- __categories:__ このプロパティーはサポートされていません。
+- __ims:__ このプロパティーはサポートされていません。

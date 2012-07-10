@@ -37,7 +37,7 @@ contacts.create 関数は、新しい `Contact` オブジェクトを同期的�
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 使用例
 -------------
@@ -52,7 +52,7 @@ contacts.create 関数は、新しい `Contact` オブジェクトを同期的�
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

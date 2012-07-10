@@ -42,7 +42,7 @@ ContactField
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 使用例
 -------------
@@ -68,7 +68,7 @@ ContactField
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -140,3 +140,7 @@ iOS に関する注意点
 -----------
 
 - __pref:__ このプロパティーは iOS ではサポートされておらず、常に `false` を返します。
+
+Bada に関する注意点
+-----------
+- __type:__ メールアドレス または 住所 フィールドの場合、プロパティーは次のいずれかである必要があります: "WORK", "HOME"。電話フィールドの場合、プロパティーは次のいずれかである必要があります: "WORK", "HOME", "VOICE", "FAX", "MSG", "CELL", "PAGER", "BBS", "MODEM", "CAR", "ISDN","VIDEO", "PCS"。

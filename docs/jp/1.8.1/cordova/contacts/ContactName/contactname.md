@@ -43,7 +43,7 @@ ContactName
 - Android 2.X
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Bada 1.2
+- Bada 1.2 & 2.0
 
 使用例
 -------------
@@ -76,7 +76,7 @@ ContactName
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -136,3 +136,10 @@ BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
 iOS に関する注意点
 ------------
 - __formatted:__ 部分的にサポートされています。 iOS の合成名を返しますが、保存は行われません。
+
+Bada に関する注意点
+-----------
+- __formatted:__ サポートされていません。
+- __middleName:__ サポートされていません。
+_ __honorificPrefix:__ サポートされていません。
+- __honorificSuffix:__ サポートされていません。

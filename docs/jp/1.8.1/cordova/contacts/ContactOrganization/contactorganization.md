@@ -75,7 +75,7 @@ ContactOrganization
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -148,4 +148,6 @@ iOS に関する注意点
 - __department__: 部分的にサポートされています。一つ目の部署名が iOS の __kABPersonDepartmentProperty__ フィールドに保存されます。
 - __title__: 部分的にサポートされています。一つ目の役職名が iOS の __kABPersonJobTitleProperty__ フィールドに保存されます。
 
-
+Bada 2.0 に関する注意点
+---------------
+- ContactOrganization はサポートされていません。
