@@ -73,3 +73,62 @@ __capture__ オブジェクトは __navigator.device__ オブジェクトに割�
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Capture" value="org.apache.cordova.Capture"/>
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+### Bada
+
+#### manifest.xml
+
+    <Privilege>
+        <Name>RECORDING</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
+
+#### www/config.xml
+
+    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Capture</key>
+        <string>CDVCapture</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_MEDIALIB" />
+        <Capability Name="ID_CAP_MICROPHONE" />
+        <Capability Name="ID_HW_FRONTCAMERA" />
+        <Capability Name="ID_CAP_ISV_CAMERA" />
+        <Capability Name="ID_CAP_CAMERA" />
+    </Capabilities>
