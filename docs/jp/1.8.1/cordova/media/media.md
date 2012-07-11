@@ -51,13 +51,71 @@ Media
 追加の読み取り専用パラメーター
 ---------------------
 
-- ___position__: 再生位置を秒単位で表します。 再生中は自動的に値が更新されないので、 getCurrentPosition メソッドを呼び、値を更新します
-- ___duration__: メディアの再生時間を秒単位で表します
+- __position__: 再生位置を秒単位で表します。
+    - 再生中は自動的に値が更新されないので、 `getCurrentPosition` メソッドを呼び、値を更新します
+- __duration__: メディアの再生時間を秒単位で表します
 
 サポートされているプラットフォーム
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
 
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+### Bada
+
+#### manifest.xml
+
+    <Privilege>
+        <Name>RECORDING</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Media</key>
+        <string>CDVSound</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+#### Properties/WPAppManifest.xml
+
+    <Capabilities>
+        <Capability Name="ID_CAP_MEDIALIB" />
+        <Capability Name="ID_CAP_MICROPHONE" />
+        <Capability Name="ID_HW_FRONTCAMERA" />
+        <Capability Name="ID_CAP_ISV_CAMERA" />
+        <Capability Name="ID_CAP_CAMERA" />
+    </Capabilities>
+
+参照: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)

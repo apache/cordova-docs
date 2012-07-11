@@ -39,6 +39,7 @@ media.seekTo
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 6.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
 
@@ -64,7 +65,7 @@ Full Example
           <head>
             <title>メディアの使用例</title>
 
-            <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -149,3 +150,8 @@ Full Example
             <p id="audio_position"></p>
           </body>
         </html>
+
+BlackBerry WebWorks に関する注意点
+----------
+
+- この API は BlackBerry OS 5 デバイスではサポートされていません。

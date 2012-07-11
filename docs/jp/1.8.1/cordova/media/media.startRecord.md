@@ -34,6 +34,7 @@ media.startRecord
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
 
@@ -68,7 +69,7 @@ media.startRecord
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -129,6 +130,10 @@ media.startRecord
       </body>
     </html>
 
+BlackBerry WebWorks に関する注意点
+----------
+
+- BlackBerry デバイスはオーディオを Adaptive Multi-Rate フォーマットで録音します。ファイル名は .amr 拡張子で指定される必要があります。
 
 iOS に関する注意点
 ----------

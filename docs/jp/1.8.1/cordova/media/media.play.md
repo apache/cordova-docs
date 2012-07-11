@@ -34,6 +34,7 @@ media.play
 -------------------
 
 - Android
+- BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
 
@@ -68,7 +69,7 @@ media.play
           <head>
             <title>メディアの使用例</title>
 
-            <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -163,6 +164,11 @@ media.play
             <p id="audio_position"></p>
           </body>
         </html>
+
+BlackBerry WebWorks に関する注意点
+----------
+
+- BlackBerry は同時に再生できるオーディオの数が決まっています。 CDMA デバイスは1つのオーディオのみサポートしています。他のデバイスは2つまで同時再生をサポートしています。サポートされている数以上のオーディオファイルを再生することは、直前の再生オーディオを停止することに繋がります。
 
 iOS に関する注意点
 ---------
