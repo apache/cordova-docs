@@ -70,7 +70,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
 	
-- Right click on AndroidManifest.xml and select **Open With &gt; XML Editor**
+- Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions between the **&lt;uses-sdk.../&gt;** and **&lt;application.../&gt;** tags.
 
         <supports-screens 
@@ -94,10 +94,10 @@ This guide describes how to set up your development environment for Cordova and 
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
         <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+*Note You are adding a blanket list of permissions to your application. You should remove permissions you aren't using before submitting your application to Google Play.
+- Support orientation changes by pasting the following inside the **&lt;activity&gt;** tag.
 
-- Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
-
-        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:configChanges="orientation|keyboardHidden"
 
 - Your AndroidManifest.xml file should look like
 
