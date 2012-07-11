@@ -45,7 +45,11 @@ Getting Started with Windows Phone
 ----------------------------
 
 - [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/) のダウンロードとインストール
-- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから windows ディレクトリと一緒に作業を進めます。
+- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから lib\windows-phone\ サブフォルダーと一緒に作業を進めます。
+- CordovaStarter-x.x.x.zip のファイルを次のフォルダにコピーします: \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
+もし VisualStudio をインストールしたばかりの場合は、このフォルダを作成するために一度起動する必要があります。
+"Visual C#" の "Silverlight for Windows Phone" サブフォルダーの代わりにこのプロジェクトを追加することも出来ます。これは、新しいプロジェクトを作るときにプロジェクトテンプレートがどこに表れるかに影響するだけです。また、このフォルダーを作成する必要があるかもしれません。
+
 
 
 3. 新規プロジェクトの作成
@@ -53,6 +57,7 @@ Getting Started with Windows Phone
 
 - Visual Studio Express for Windows Phone を開き、 **New Project** を選択します。
 - **CordovaStarter** を選択します。 (テンプレートの説明の中に、バージョン番号が表示されます)
+    - 注意: もし見つからない場合は、 'Visual C#' を選択してみてください。
 - プロジェクト名を指定し、 OK をクリックします。
 
     ![](img/guide/getting-started/windows-phone/wpnewproj.PNG)

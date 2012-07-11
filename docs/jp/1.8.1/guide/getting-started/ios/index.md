@@ -20,15 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with iOS
 ========================
 
-このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。
+このガイドは、 Apache Cordova のための開発環境セットアップ方法、また Apache Cordova のサンプルアプリの動かし方を解説します。
 
-ビデオチュートリアル:
+ビデオチュートリアル
 ----------------
 
 - [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
 
-1. 必要なもの
+必要なもの
 ---------------
 - Intel ベースの Mac OS X Lion (10.7)
 - デバイスへのインストールに必要なもの:
@@ -36,84 +36,97 @@ Getting Started with iOS
     - iOS デベロッパー証明書
 
 
-2. SDK と Cordova のインストール
+SDK と Apache Cordova のインストール
 ------------------------
 
 - [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) から Xcode をインストールします。
-- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから **lib/ios** ディレクトリと一緒に作業を進めます。
+- [Apache Cordova](http://phonegap.com/download) の最新版をダウンロードします。
+    - ダウンロードしたものを解凍します
+    - Apache Corder iOS は `lib/ios` ディレクトリ以下にあります
 
 
-3. 新規プロジェクトの作成
+新規プロジェクトの作成
 --------------------
 
 - Xcode を起動します
-- メニューから **File** を選択します
-- **New** を選択し、 **New Project...** を選択します
-- テンプレートのリストから **Cordova-based Application** を選択します
+- メニューから _File_ を選択します
+- _New_ を選択し、 _New Project..._ を選択します
+- テンプレートのリストから _Cordova-based Application_ を選択します
 
     ![](img/guide/getting-started/ios/XCode4-templates.png)
-- **Next** ボタンをクリックします
-- "Product Name" と "Company Identifier" を記入します
+
+- _Next_ ボタンをクリックします
+- _Product Name_ と _Company Identifier_ を記入します
 
     ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
 
-- **重要！** "Use Automatic Reference Counting" のチェックボックスにチェックを入れないでください 
-- **Next** ボタンをクリックします
-- 新しいアプリを保存する **フォルダーを選択します**
-- **Create** ボタンをクリックし、プロジェクトを作成します
-- 左上にある **Run** ボタンをクリックします。 ビルドが成功し、 iOS シミュレーターが起動します
+- **注意:** _Use Automatic Reference Counting_ のチェックボックスにチェックを **入れないでください**
+- _Next_ ボタンをクリックします
+- 新しいアプリを保存するフォルダーを選択します
+- _Create_ ボタンをクリックします
 
-    a. iOS シミュレーターが、 **www/index.html** was not found と警告しているのが確認できるはずです。
+Apache Cordova プロジェクトが作成出来ました。次に、プロジェクトと web ディレクトリを関連付ける必要があります。この作業は、 Xcode のプロジェクトテンプレートと制約のため必要となります。
 
-    b. これを修正するため、 **www** ディレクトリへのリファレンスをプロジェクトに追加する必要があります。 
+- 左上にある _Run_ ボタンをクリックします
+    - ビルドが成功し、 iOS シミュレーターが起動します
+    - iOS シミュレーターが、 _www/index.html was not found_ と警告しているのが確認できるはずです
+    - `www` ディレクトリへのリファレンスをプロジェクトに追加することによりこれを修正します
 
     ![](img/guide/getting-started/ios/index-not-found.png)
 
-- 左側のサイドバーにある Project Navigator の中のプロジェクトアイコンの上で **右クリック** し、 **Show in Finder** を選択します
-- **フォルダー内** に、 **www** ディレクトリが確認できるはずです
+- 左側のサイドバーにある _Project Navigator_ の中のプロジェクトアイコンの上で右クリックし、 _Show in Finder_ を選択します
+- Finder で、プロジェクトの中に `www` ディレクトリが確認できるはずです
 
     ![](img/guide/getting-started/ios/www-folder.png)
 
-- **重要！** **www** フォルダーを Xcode 4 に **ドラッグ** します。 アプリフォルダーには **ドラッグしないでください** 。 **Xcode 4** にドラッグしてください。下の HelloWorld プロジェクトの例だと、 **赤い四角の枠で囲ってある部分** にドラッグアンドドロップします。
+- `www` フォルダーを Xcode 4 にドラッグします
+    - アプリフォルダーの中に `www` ディレクトリをドラッグしないでください
+    - 以下の画像赤い四角の枠で囲ってある部分にドラッグしてください:
 
     ![](img/guide/getting-started/ios/project.jpg)
-- 正確に **"www"** フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます 
-- **Create folder references for any added folders** のラジオボタンを選択します
+
+- 正確に `www` フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます
+    - _Create folder references for any added folders_ を選択します
+    - _Finish_ ボタンをクリックします
 
     ![](img/guide/getting-started/ios/create-folder-reference.png)
 
-- **Finish** ボタンをクリックします
-
-
-4. Hello World の作成
+Hello World の作成
 --------------
 
-- Xcode の Project Navigator にある **www** フォルダーを選択します
-- **index.html** ファイルを選択します
-- `<body>` タグの後に `<h1>Hello World</h1>` と記述します
+- Xcode の _Project Navigator_ にある `www` フォルダーを選択します
+- `index.html` ファイルを選択します
+- `<body>` タグの後に以下を追加します:
+
+        <h1>Hello World</h1>
 
 関連する JavaScript や CSS ファイルも追加することができます。
 
 
-5A. シミュレーターへのデプロイ
+シミュレーターへのデプロイ
 -----------------------
 
-- ツールバーにあるドロップダウンメニューから Active SDK を **iOS version# Simulator** に変更します
-- プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします
+- ツールバーにあるドロップダウンメニューから _Active SDK_ を _iOS version Simulator_ に変更します
+- プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
 
-5B. デバイスへのデプロイ
+デバイスへのデプロイ
 --------------------
 
-- "Supporting Files" グループの中にある [AppName]-Info.plist ([AppName]は作成したアプリの名前) を開きます
-- **BundleIdentifier** を Apple から提供された Identifer 、または自分の Identifer に変更します。もし開発者ライセンスを持っている場合は、 Assistant に [ここ](http://developer.apple.com/iphone/manage/overview/index.action) からアクセスし、アプリを登録できます
-- ツールバーにあるドロップダウンメニューから Active SDK を **[DEVICENAME]** に変更します。ここで、 [DEVICENAME] はデプロイしたいデバイスの名前です
-- プロジェクトウィンドウのツールバーにある **Run** ボタンをクリックします
+- _Supporting Files_ グループの中にある `あなたのアプリ名-Info.plist` を開きます
+- _BundleIdentifier_ を Apple から提供された Identifer 、または自分の Identifer に変更します
+    - もし開発者ライセンスを持っている場合は、 [Assistant] (http://developer.apple.com/iphone/manage/overview/index.action) よりアプリを登録できます
+- ツールバーにあるドロップダウンメニューから _Active SDK_ を _あなたのDevice名_ に変更します
+    - デバイスを USB で接続する必要があります
+- プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
     ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
 
 
-終了
------
+アプリを作成
+--------------
 
-Xcode の外で HTML, CSS, JavaScript を **www** フォルダーに追加した場合も、追加したファイルは自動的に Xcode の中に取り込まれます。
+これで Xcode プロジェクトのセットアップが完了し、シミュレーターまたはデバイスでビルドし動かすことが出来ます。
+アプリを書くために、 Xcode を使用する必要はありません。
+あなたの好きなテキストエディターを使い、 Xcode でリビルド作業を行えます。
+Xcode は自動的に `www` ディレクトリ内にあるファイルの変化を検出します。

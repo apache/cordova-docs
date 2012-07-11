@@ -47,11 +47,11 @@ Getting Started with Android
 - 作成したプロジェクトのルートディレクトリに、以下の2つの新しいディレクトリを作成します:
     - **/libs**
     - **assets/www**
-- ダウンロードした Cordova から **cordova-1.7.0.js** を **assets/www** にコピーしてください。
-- ダウンロードした Cordova から **cordova-1.7.0.jar** を **/libs** にコピーしてください。
+- ダウンロードした Cordova から **cordova-1.8.1.js** を **assets/www** にコピーしてください。
+- ダウンロードした Cordova から **cordova-1.8.1.jar** を **/libs** にコピーしてください。
 - ダウンロードした Cordova から **xml** フォルダーを **/res** にコピーしてください。
 
-- **cordova-1.7.0.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-1.7.0.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
+- **cordova-1.8.1.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-1.8.1.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
 
     ![](img/guide/getting-started/android/buildPath.jpg)
 
@@ -71,7 +71,6 @@ Getting Started with Android
             android:smallScreens="true"
             android:resizeable="true"
             android:anyDensity="true" />
-        <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.VIBRATE" />
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -90,7 +89,7 @@ Getting Started with Android
 
 - 画面の回転をサポートするために、以下を **&lt;activity&gt;** タグの中に貼り付けてください。
 
-        android:configChanges="orientation|keyboardHidden"
+        android:configChanges="orientation|keyboardHidden|screenSize"
 
 - AndroidManifest.xml は以下のようになります。
 
@@ -105,7 +104,7 @@ Getting Started with Android
         <html>
         <head>
         <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
