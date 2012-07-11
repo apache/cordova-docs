@@ -23,13 +23,6 @@ Upgrading Cordova Android
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
-- To upgrade to 1.9.0, please go from 1.8.1
-- To upgrade to 1.8.1, please go from 1.8.0
-- To upgrade to 1.8.0, please go from 1.7.0
-- To upgrade to 1.7.0, please go from 1.6.1
-- To upgrade to 1.0.0, please go from 0.9.6
-
-
 ## Upgrade to 1.9.0 from 1.8.1 ##
 
 1. Remove cordova-1.8.0.jar from the libs directory in your project
@@ -93,7 +86,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 4. Copy the new cordova-1.6.1.js into your project
 5. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
 
-# Upgrade to 1.6.0 from 1.5.0
+## Upgrade to 1.6.0 from 1.5.0 ##
 1. Remove cordova-1.5.0.jar from the libs directory in your project
 2. Add cordova-1.6.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -103,7 +96,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 7. Replace the res/xml/phonegap.xml with res/xml/cordova.xml so that it is the same as the one found in framework/res/xml/cordova.xml
 
 
-# Upgrade to 1.5.0 from 1.4.0
+## Upgrade to 1.5.0 from 1.4.0##
 1. Remove phonegap-1.4.0.jar from the libs directory in your project
 2. Add cordova-1.5.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -112,7 +105,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 7. Replace the res/xml/phonegap.xml with res/xml/cordova.xml so that it is the same as the one found in framework/res/xml/cordova.xml
 
-# Upgrade to 1.4.0 from 1.3.0
+## Upgrade to 1.4.0 from 1.3.0 ##
 1. Remove phonegap-1.3.0.jar from the libs directory in your project
 2. Add phonegap-1.4.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -122,7 +115,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
 
 
-# Upgrade to 1.3.0 from 1.2.0
+## Upgrade to 1.3.0 from 1.2.0 ##
 1. Remove phonegap-1.2.0.jar from the libs directory in your project
 2. Add phonegap-1.3.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -132,7 +125,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
 
 
-# Upgrade to 1.2.0 from 1.1.0
+## Upgrade to 1.2.0 from 1.1.0 ##
 1. Remove phonegap-1.1.0.jar from the libs directory in your project
 2. Add phonegap-1.2.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -142,7 +135,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
 
 
-# Upgrade to 1.1.0 from 1.0.0
+## Upgrade to 1.1.0 from 1.0.0 ##
 1. Remove phonegap-1.0.0.jar from the libs directory in your project
 2. Add phonegap-1.1.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
@@ -151,7 +144,7 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 
 
-# Upgrade to 1.0.0 from 0.9.6
+## Upgrade to 1.0.0 from 0.9.6 ##
 1. Remove phonegap-0.9.6.jar from the libs directory in your project
 2. Add phonegap-1.0.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
