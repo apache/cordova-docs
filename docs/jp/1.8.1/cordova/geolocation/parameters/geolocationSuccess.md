@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationSuccess
 ==================
 
-位置情報取得に成功したときに呼び出されるコールバック関数です。
+位置情報取得に成功したとき (`geolocation.getCurrentPosition` と一緒に使われた時) 、または位置情報が変化したとき (`geolocation.watchPosition` と一緒に使われた時) に呼び出されるコールバック関数です。
 
     function(position) {
         // 任意のコード
@@ -42,5 +42,5 @@ geolocationSuccess
               '高度精度: '          + position.coords.altitudeAccuracy  + '\n' +
               '方位: '              + position.coords.heading           + '\n' +
               '速度: '              + position.coords.speed             + '\n' +
-              'タイムスタンプ: '    + new Date(position.timestamp)      + '\n');
+              'タイムスタンプ: '    + position.timestamp                + '\n');
     }

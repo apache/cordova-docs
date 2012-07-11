@@ -36,7 +36,7 @@ geolocation.watchPosition
 返り値
 -------
 
-- __String__: 位置変化を参照する watch ID を返します。 watch ID は `geolocation.clearWatch` に渡すことで位置変化の監視を中止することができます。
+- __String__: 位置変化を参照する watch ID を返します。 watch ID は `geolocation.clearWatch` に渡すことで位置変化の監視を中止するために使われます。
 
 概要
 -----------
@@ -48,9 +48,10 @@ geolocation.watchPosition
 
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
-- iPhone
+- iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -73,9 +74,9 @@ geolocation.watchPosition
               'メッセージ: '    + error.message + '\n');
     }
 
-    // 3秒ごとに位置情報を取得する設定 (オプション)
+    // もし30秒ごとに更新が取得できない場合、エラーが投げられる (オプション)
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 30000 });
 
 
 詳細な使用例
@@ -86,7 +87,7 @@ geolocation.watchPosition
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -98,8 +99,8 @@ geolocation.watchPosition
         // Cordova 準備完了
         //
         function onDeviceReady() {
-            // 3秒ごとに更新
-            var options = { frequency: 3000 };
+            // もし30秒ごとに更新が取得できない場合、エラーが投げられる
+            var options = { frequency: 30000 };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
 

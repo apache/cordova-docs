@@ -44,9 +44,10 @@ geolocation.getCurrentPosition
 
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
-- iPhone
+- iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -63,7 +64,7 @@ geolocation.getCurrentPosition
               '高度精度: '          + position.coords.altitudeAccuracy + '\n' +
               '方位: '              + position.coords.heading       + '\n' +
               '速度: '              + position.coords.speed         + '\n' +
-              'タイムスタンプ: '    + new Date(position.timestamp) + '\n');
+              'タイムスタンプ: '    + position.timestamp            + '\n');
     };
 
     // エラー時のコールバック関数は PositionError オブジェクトを受けとる
@@ -83,7 +84,7 @@ geolocation.getCurrentPosition
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -107,7 +108,7 @@ geolocation.getCurrentPosition
                                 '高度精度: '        + position.coords.altitudeAccuracy + '<br />' +
                                 '方位: '            + position.coords.heading       + '<br />' +
                                 '速度: '            + position.coords.speed         + '<br />' +
-                                'タイムスタンプ: '  + new Date(position.timestamp)  + '<br />';
+                                'タイムスタンプ: '  + position.timestamp            + '<br />';
         }
 
         // エラー時のコールバック関数は PositionError オブジェクトを受けとる

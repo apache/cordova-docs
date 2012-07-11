@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 PositionError
 ========
 
-`PositionError` オブジェクトは、エラーが発生したときに geolocationError コールバック関数に渡されます。
+`PositionError` オブジェクトは、エラーが発生したときに `geolocationError` コールバック関数に渡されます。
 
 プロパティー
 ----------
@@ -40,3 +40,14 @@ PositionError
 
 `PositionError` オブジェクトは、位置情報取得に関するエラーが発生したときに `geolocationError` コールバック関数を通してユーザーに返されます。
 
+### `PositionError.PERMISSION_DENIED`
+
+ユーザーがアプリケーションに対して、位置情報の取得を許可しなかった場合に返されます。これはプラットフォームに依存します。
+
+### `PositionError.POSITION_UNAVAILABLE`
+
+デバイスが位置を取得できなかった場合に返されます。大抵、これはデバイスがネットワークに接続されていない、および／または衛生情報が取得出来なかったことを意味します。
+
+### `PositionError.TIMEOUT`
+
+デバイスが、 `geolocationOptions` の `timeout` プロパティーによって指定された時間内に位置が取得できなかった場合に返されます。 `geolocation.watchPosition` と一緒に使用するとき、このエラーは `geolocationError` コールバックの中で毎 `timeout` ミリ秒後呼ばれる可能性があります。

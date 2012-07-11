@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Position
 ========
 
-geolocation API によって作成された位置情報 (`Position`) を扱うオブジェクトです。
+geolocation API によって作成された位置情報とタイムスタンプ (`Position`) とを扱うオブジェクトです。
 
 プロパティー
 ----------
 
 - __coords:__ 地理座標を表します _(Coordinates)_
-- __timestamp:__ ミリ秒単位のタイムスタンプ値を表します _(DOMTimeStamp)_
+- __timestamp:__ タイムスタンプ値を表します _(Date)_
 
 概要
 -----------
@@ -38,9 +38,10 @@ geolocation API によって作成された位置情報 (`Position`) を扱う�
 
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
-- iPhone
+- iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
@@ -55,7 +56,7 @@ geolocation API によって作成された位置情報 (`Position`) を扱う�
               '高度精度: '          + position.coords.altitudeAccuracy  + '\n' +
               '方位: '              + position.coords.heading           + '\n' +
               '速度: '              + position.coords.speed             + '\n' +
-              'タイムスタンプ: '    + new Date(position.timestamp)      + '\n');
+              'タイムスタンプ: '    + position.timestamp                + '\n');
     };
 
     // エラー時のコールバック関数は PositionError オブジェクトを受けとる
@@ -75,7 +76,7 @@ geolocation API によって作成された位置情報 (`Position`) を扱う�
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -99,7 +100,7 @@ geolocation API によって作成された位置情報 (`Position`) を扱う�
                                 '高度精度: '        + position.coords.altitudeAccuracy + '<br />' +
                                 '方位: '            + position.coords.heading       + '<br />' +
                                 '速度: '            + position.coords.speed         + '<br />' +
-                                'タイムスタンプ: '  + new Date(position.timestamp)  + '<br />';
+                                'タイムスタンプ: '  + position.timestamp            + '<br />';
         }
 
         // エラー時のコールバック関数は PositionError オブジェクトを受けとる
@@ -115,16 +116,3 @@ geolocation API によって作成された位置情報 (`Position`) を扱う�
         <p id="geolocation">位置情報を取得中...</p>
       </body>
     </html>
-
-iPhone に関する注意点
--------------
-
-- __timestamp:__ ミリ秒ではなく、秒が使用されています。
-
-対処法としては、1000倍することにより手動でマイクロ秒にすることが考えられます。
-
-    var onSuccess = function(position) {
-        alert('緯度: '              + position.coords.latitude      + '\n' +
-              '経度: '              + position.coords.longitude     + '\n' +
-              'タイムスタンプ: '    + new Date(position.timestamp * 1000) + '\n');
-    };

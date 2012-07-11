@@ -39,16 +39,18 @@ watch ID パラメーターによって参照されるデバイスの位置情�
 
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
-- iPhone
+- iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- webOS
 
 使用例
 -------------
 
-    // 3秒ごとに位置情報を取得する設定 (オプション)
+    // 位置の変化を監視し、取得可能なもっとも精度の高い位置を使います
+    // (オプション)
     //
-    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
+    var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
 
     // ... 後に続く ...
 
@@ -63,7 +65,7 @@ watch ID パラメーターによって参照されるデバイスの位置情�
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -75,8 +77,9 @@ watch ID パラメーターによって参照されるデバイスの位置情�
         // Cordova 準備完了
         //
         function onDeviceReady() {
-            // 3秒ごとに更新
-            var options = { frequency: 3000 };
+            // デバイスで有効な最も制度の高い位置で更新
+            //
+            var options = { enableHighAccuracy: true };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
 
