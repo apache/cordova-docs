@@ -38,6 +38,7 @@ Database オブジェクトの transaction メソッドを呼ぶとき、それ�
 - Android
 - BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
+- webOS
 
 Execute SQL の例
 ------------------
@@ -66,9 +67,9 @@ Execute SQL の例
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title>Storage の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

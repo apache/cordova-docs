@@ -40,6 +40,7 @@ SQLTransaction の executeSql メソッドが呼び出されるとき、 SQLResu
 - Android
 - BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
+- webOS
 
 Execute SQL の例
 ------------------
@@ -72,9 +73,9 @@ Execute SQL の例
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Contact の使用例</title>
+        <title>Storage の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -101,7 +102,7 @@ Execute SQL の例
         function querySuccess(tx, results) {
             console.log("検索された行 = " + results.rows.length);
             // select 文のため、 rowsAffected は0となり、 true となります
-            if (!resultSet.rowsAffected) {
+            if (!results.rowsAffected) {
                 console.log('どの行も変更されていません。');
                 return false;
             }

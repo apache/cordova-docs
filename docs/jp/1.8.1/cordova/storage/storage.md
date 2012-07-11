@@ -46,3 +46,34 @@ Storage
 - SQLResultSetList
 - SQLError
 - localStorage
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Storage" value="org.apache.cordova.Storage" />
+
+### Bada
+
+    パーミッションの設定は必要ありません。
+
+### BlackBerry WebWorks
+
+#### www/config.xml
+
+    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
+
+### iOS
+
+    パーミッションの設定は必要ありません。
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+    パーミッションの設定は必要ありません。
