@@ -29,3 +29,52 @@ Notification
 - notification.confirm
 - notification.beep
 - notification.vibrate
+
+パーミッション
+-----------
+
+### Android
+
+#### app/res/xml/plugins.xml
+
+    <plugin name="Notification" value="org.apache.cordova.Notification"/>
+
+#### app/AndroidManifest.xml
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+### Bada
+
+#### manifest.xml
+
+    <Privilege>
+        <Name>SYSTEM_SERVICE</Name>
+    </Privilege>
+
+### BlackBerry WebWorks
+
+#### www/plugins.xml
+
+    <plugin name="Notification" value="org.apache.cordova.notification.Notification" />
+
+#### www/config.xml
+
+    <feature id="blackberry.ui.dialog" />
+
+### iOS
+
+#### App/Supporting Files/Cordova.plist
+
+    <key>Plugins</key>
+    <dict>
+        <key>Notification</key>
+        <string>CDVNotification</string>
+    </dict>
+
+### webOS
+
+    パーミッションの設定は必要ありません。
+
+### Windows Phone
+
+    パーミッションの設定は必要ありません。

@@ -25,7 +25,7 @@ notification.confirm
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
 - __message:__ ダイアログのメッセージを表します (`String`)
-- __confirmCallback:__ 押されたボタンのインデックス (1, 2, または3) とともに呼び出されるコールバック関数を表します (`Number`)
+- __confirmCallback:__ 押されたボタンのインデックス (1, 2, または3) とともに呼び出されるコールバック関数を表します (`Function`)
 - __title:__ ダイアログのタイトルを表します (`String`) (オプション, デフォルト: "Confirm")
 - __buttonLabels:__ ボタンのラベルを設定するためのカンマ区切りの文字列を表します (String) (オプション, デフォルト: "OK,Cancel")
 
@@ -33,6 +33,14 @@ notification.confirm
 -----------
 
 `notification.confirm` 関数は、ブラウザの confirm 関数よりも広いカスタマイズ性を持ったネイティブダイアログボックスを表示する関数です。
+
+confirmCallback
+---------------
+
+`confirmCallback` はユーザーが確認ダイアログのいずれかのボタンが押したときに呼び出されます。
+
+コールバックは、押されたボタンを表すインデックス `buttonIndex` (`Number`) を引数にとります。このインデックスは、 `1`, `2`, `3` のように1始まりであることに注意してください。
+
 
 サポートされているプラットフォーム
 -------------------
@@ -47,8 +55,8 @@ notification.confirm
 -------------
 
     // 確認ダイアログの表示プロセスの開始
-    function onConfirm(button) {
-        alert('選択されたボタン ' + button);
+    function onConfirm(buttonIndex) {
+        alert('選択されたボタン ' + buttonIndex);
     }
 
     // カスタム確認ダイアログを表示
@@ -70,7 +78,7 @@ notification.confirm
       <head>
         <title>Notification の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -84,8 +92,8 @@ notification.confirm
         }
 
         // 確認ダイアログの表示プロセスの開始
-        function onConfirm(button) {
-            alert('選択されたボタン ' + button);
+        function onConfirm(buttonIndex) {
+            alert('選択されたボタン ' + buttonIndex);
         }
 
         // カスタム確認ダイアログを表示
@@ -107,16 +115,19 @@ notification.confirm
     </html>
 
 Windows Phone 7 に関する注意点
--------------
+----------------------
 
-- ボタンの名前は無視され、常に 'OK|Cancel' が使用されます。
-- ビルトインのブラウザ確認ダイアログ機能はないため、もし confirm('foo'); とだけ書きたい場合は、 window.confirm = navigator.notification.confirm; と window.confirm に Cordova の notification.confirm をアサインできます。
-- 通知と確認の呼び出しはノンブロッキングで、結果は非同期でのみ取得可能です。
+- ボタンの名前は無視され、常に `'OK|Cancel'` が使用されます。
+- `window.confirm` に対応するビルトインのブラウザ確認ダイアログ機能はありません。
+    - `window.confirm = navigator.notification.confirm;` と指定することによって、 `window.confirm` にこの関数をアサインできます。
+- 通知 (`alert`) と確認 (`confirm`) の呼び出しはノンブロッキングで、結果は非同期でのみ取得可能です。
 
 Bada 2.x に関する注意点
 ---------------
-- 確認は、 Javascript の alert を使用します。
+
+- 確認 (`confirm`) は、ブラウザのビルトイン `alert` 関数を使用します。
 
 Bada 1.2 に関する注意点
 ---------------
-- ボタンの名前は無視され、常に 'OK|Cancel' が使用されます。
+
+- ボタンの名前は無視され、常に `'OK|Cancel'` が使用されます。
