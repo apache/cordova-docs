@@ -22,6 +22,15 @@ Upgrading Cordova iOS
 
 Please note that **Xcode 4 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 5.1. The iOS 5.1 SDK requires Xcode 4.
 
+## Upgrading Cordova 1.9.0 projects to 2.0.0 ##
+
+1. **Install** Cordova 2.0.0
+2. **Create a new project** - you will have to grab assets from this new project
+3. **Copy** the **www/cordova-2.0.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.9.0.js** file
+4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.0.0.js** file
+5. **Add** a new entry under **Plugins** in your **Cordova.plist** file - key is **Device** and the value is **CDVDevice**
+
+
 ## Upgrading Cordova 1.8.x projects to 1.9.0 ##
 
 1. **Install** Cordova 1.9.0
