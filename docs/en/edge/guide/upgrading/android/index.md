@@ -23,6 +23,15 @@ Upgrading Cordova Android
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
+## Upgrade to 2.0.0 from 1.9.0 ##
+
+1. Remove cordova-1.9.0.jar from the libs directory in your project
+2. Add cordova-2.0.0.jar to the libs directory in your project
+3. If you are using Eclipse, please refresh your eclipse project and do a clean
+4. Copy the new cordova-2.0.0.js into your project
+5. Update your HTML to use the new cordova-2.0.0.js file
+6. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
+
 ## Upgrade to 1.9.0 from 1.8.1 ##
 
 1. Remove cordova-1.8.0.jar from the libs directory in your project
