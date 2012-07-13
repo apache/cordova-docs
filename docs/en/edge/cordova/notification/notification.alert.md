@@ -43,11 +43,12 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 Quick Example
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone
+    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone / Tizen
     //
     function alertDismissed() {
         // do something

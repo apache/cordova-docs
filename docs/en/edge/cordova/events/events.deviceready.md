@@ -43,6 +43,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 - Bada 1.2 & 2.x
+- Tizen
 
 Quick Example
 -------------

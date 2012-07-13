@@ -135,5 +135,7 @@ Full Example
       </body>
     </html>
 
+Tizen Quirks
+----------
 
-
+- This API is not supported on Tizen devices.

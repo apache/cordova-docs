@@ -139,3 +139,8 @@ iOS Quirks
 ----------
 
 - The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+
+Tizen Quirks
+----------
+
+- This API is not supported on Tizen devices.

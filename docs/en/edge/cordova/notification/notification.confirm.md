@@ -49,6 +49,7 @@ Supported Platforms
 - iPhone
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
+- Tizen
 
 Quick Example
 -------------

@@ -40,3 +40,7 @@ Windows Phone 7 Quirks
 Bada Quirks
 -----------
 - filter is not supported.
+
+Tizen Quirks
+-----------
+- filter is not supported.

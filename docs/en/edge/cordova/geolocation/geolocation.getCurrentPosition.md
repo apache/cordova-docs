@@ -48,7 +48,8 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 - webOS
-    
+- Tizen
+
 Quick Example
 -------------
 
@@ -111,12 +112,12 @@ Full Example
                                 'Timestamp: '          +                                   position.timestamp          + '<br />';
         }
     
-	    // onError Callback receives a PositionError object
-	    //
-	    function onError(error) {
-	        alert('code: '    + error.code    + '\n' +
-	              'message: ' + error.message + '\n');
-	    }
+        // onError Callback receives a PositionError object
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+        }
 
         </script>
       </head>

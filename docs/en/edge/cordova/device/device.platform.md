@@ -33,6 +33,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 Quick Example
 -------------
@@ -43,6 +44,7 @@ Quick Example
     //   - "iPhone"
     //   - "webOS"
     //   - "WinCE"
+    //   - "Tizen"
     var devicePlatform = device.platform;
 
 Full Example

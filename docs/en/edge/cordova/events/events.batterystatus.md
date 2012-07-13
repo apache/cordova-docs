@@ -43,7 +43,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 ( Mango )
-
+- Tizen
 
 Windows Phone 7 Quirks
 ----------------------

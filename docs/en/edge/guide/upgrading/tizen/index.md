@@ -17,16 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Guides
-================
+Upgrading Cordova Tizen
+======================
 
-> Learn how to upgrade an application to the latest Apache Cordova release.
-
-- Upgrading Cordova Android
-- Upgrading Cordova BlackBerry
-- Upgrading Cordova iOS
-- Upgrading Cordova Symbian
-- Upgrading Cordova webOS
-- Upgrading Cordova Windows Phone
-- Upgrading Cordova Bada
-- Upgrading Cordova Tizen
+This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.

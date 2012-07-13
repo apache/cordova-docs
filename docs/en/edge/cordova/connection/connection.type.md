@@ -36,6 +36,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 2.x
 - webOS
+- Tizen
 
 Quick Example
 -------------
@@ -121,3 +122,9 @@ Windows Phone Quirks
 --------------------
 
 - Windows Phone Emulator always detects `navigator.network.connection.type` as `Connection.UNKNOWN`.
+
+Tizen Quirks
+--------------------
+
+- Tizen can only detect a WiFi or cellular connection.
+    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.

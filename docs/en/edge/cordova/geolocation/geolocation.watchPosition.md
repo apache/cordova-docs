@@ -52,6 +52,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 Quick Example
 -------------

@@ -53,6 +53,7 @@ Supported Platforms
 - Windows Phone 7 ( Mango )
 - Bada 1.2
 - webOS
+- Tizen
 
 iOS Quirks
 ----------
@@ -64,6 +65,11 @@ Windows Phone 7 Quirks
 
 Invoking the native camera application while your device is connected
 via Zune will not work, and the error callback will be triggered.
+
+Tizen Quirks
+----------------------
+
+Only 'destinationType: Camera.DestinationType.FILE_URI' and 'sourceType: Camera.PictureSourceType.PHOTOLIBRARY' are supported.
 
 Quick Example
 -------------

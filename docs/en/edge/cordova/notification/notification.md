@@ -78,3 +78,7 @@ Permissions
 ### Windows Phone
 
     No permissions are required.
+
+### Tizen
+
+    No permissions are required.
