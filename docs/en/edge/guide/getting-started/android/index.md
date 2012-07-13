@@ -40,9 +40,17 @@ This guide describes how to set up your development environment for Cordova and 
  3. Setup New Project
 ---------------------
 
-- Launch Eclipse, and select menu item **New &gt; Android Project**.  Fill out the three panels of the **New Android Project** wizard shown below.
-
-    ![](img/guide/getting-started/android/AndroidFlow.png)
+- Launch Eclipse, and select menu item **New Project**
+    ![](img/guide/getting-started/android/step_1.jpg)
+- Then specify new application project
+    ![](img/guide/getting-started/android/step_2.jpg)
+- Then speciy an Application Name, a Project Name and Package Name with Namespace
+    ![](img/guide/getting-started/android/step_3.jpg)
+- Then select a graphic
+    ![](img/guide/getting-started/android/step_4.jpg)
+- Then Create a Blank Activity
+    ![](img/guide/getting-started/android/step_5.jpg)
+- Make sure the activity doesn't inherit from anything.  You most likely won't have PhoneGap on your Eclipse Workspace.  Once this is done, click finish
     
 - In the root directory of your project, create two new directories:
  	- **/libs**
@@ -62,7 +70,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 	![](img/guide/getting-started/android/javaSrc.jpg)
 	
-- Right click on AndroidManifest.xml and select **Open With &gt; XML Editor**
+- Right click on AndroidManifest.xml and select **Open With &gt; Text Editor**
 - Paste the following permissions between the **&lt;uses-sdk.../&gt;** and **&lt;application.../&gt;** tags.
 
         <supports-screens 
@@ -86,14 +94,14 @@ This guide describes how to set up your development environment for Cordova and 
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
         <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+*Note You are adding a blanket list of permissions to your application. You should remove permissions you aren't using before submitting your application to Google Play.
+- Support orientation changes by pasting the following inside the **&lt;activity&gt;** tag.
 
-- Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
-
-        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:configChanges="orientation|keyboardHidden"
 
 - Your AndroidManifest.xml file should look like
 
-    ![](img/guide/getting-started/android/manifest.jpg)
+    ![](img/guide/getting-started/android/manifest.png)
 
 4. Hello World
 --------------    

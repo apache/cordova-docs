@@ -92,7 +92,6 @@ BlackBerry Quirks
 - Using Large image sizes may result in inability to encode image on later model devices with high resolution cameras (e.g. Torch 9800).
 - Camera.MediaType is not supported.
 - Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
 
 webOS Quirks
 -----------
@@ -115,7 +114,6 @@ Windows Phone 7 Quirks
 
 - Ignores the `allowEdit` parameter.
 - Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
 
 Bada 1.2 Quirks
 --------------
