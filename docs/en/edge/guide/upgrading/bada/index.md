@@ -23,6 +23,10 @@ Upgrading Cordova Bada
 This document is for people who need to upgrade their Cordova versions from an
 older version to a current version of Cordova.
 
+## Upgrade to 1.9.0 from 2.0.0 ##
+
+1. Update `Res/js/cordova.js` with the new JavaScript file.
+
 ## Upgrade to 1.9.0 from 1.8.x ##
 
 1. Update `Res/js/cordova.js` with the new JavaScript file.
