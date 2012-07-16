@@ -37,12 +37,6 @@ Description
 
 A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
 
-iOS Quirk
----------
-
-- __chunkedMode:__
-    This parameter is ignored on iOS.
-
 WP7 Quirk
 ---------
 
