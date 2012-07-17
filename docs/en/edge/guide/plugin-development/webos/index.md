@@ -19,3 +19,5 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Developing a Plugin on webOS
 ============================
+
+Plugins are currently not supported by the webOS platform.
