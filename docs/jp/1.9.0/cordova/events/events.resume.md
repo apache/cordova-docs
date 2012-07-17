@@ -56,12 +56,12 @@ Cordova はネイティブと JavaScript の2つのコードで形成されま�
       <head>
         <title>Cordova Resume 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.8.1.js はまだ完了していません。
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.9.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //
@@ -89,16 +89,6 @@ Cordova はネイティブと JavaScript の2つのコードで形成されま�
 iOS に関する注意点
 --------------------------
 アプリが復帰したとき、 **pause** イベントハンドラー中の console.log への呼び出しが走ります。 **pause** イベントの iOS に関する注意点のセクションに詳細を記載しています。
-
-**resume** イベントが呼び出されるとき、 `alert` のようなインタラクティブな関数はタイムアウト値を0にした `setTimeout` 関数によってラップされる必要があります。
-
-    document.addEventListener("resume", onResume, false);
-
-    function onResume() {
-        setTimeout(function() {
-                // 任意のコード
-              }, 0);
-    }
 
 - __active__ イベント
 

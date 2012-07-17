@@ -61,12 +61,12 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
       <head>
         <title>Cordova Device Ready 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.8.1.js はまだ完了していません。
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-1.9.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //
