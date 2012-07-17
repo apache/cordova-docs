@@ -80,12 +80,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>SDK をセットアップして、最初の Cordova アプリケーションを作ります。</span>
         </li>
         <li>
+            <h2>コマンドライン使用法</h2>
+            <span>コマンドラインからアプリケーションの作成、ビルド、デプロイ、デバッグを行います。</span>
+        </li>
+        <li>
             <h2>アップグレードガイド</h2>
             <span>アプリケーションを最新の Cordova にアップグレードします。</span>
         </li>
         <li>
             <h2>ドメインホワイトリストガイド</h2>
             <span>アプリケーションに外部ドメインへのアクセス権を与えます。</span>
+        </li>
+        <li>
+            <h2>WebView の埋め込み</h2>
+            <span>Cordova WebView をプロジェクトで実装します。</span>
         </li>
         <li>
             <h2><a href="_index.html">索引</a></h2>
