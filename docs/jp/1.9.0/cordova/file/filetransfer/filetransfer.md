@@ -95,7 +95,7 @@ __詳細な使用例__
       <head>
         <title>File Transfer の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -151,6 +151,40 @@ __詳細な使用例__
          <p>ファイルアップロード</p>
        </body>
     </html>
+
+iOS に関する注意点
+----------
+
+FileTransfer アップロードのためのヘッダーを設定:
+
+__使用例__
+
+    function win(r) {
+        console.log("コード = " + r.responseCode);
+        console.log("結果 = " + r.response);
+        console.log("送信バイト数 = " + r.bytesSent);
+    }
+
+    function fail(error) {
+        alert("エラーが発生しました: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+
+    var uri = "http://some.server.com/upload.php";
+
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+    options.mimeType="text/plain";
+
+    var params = new Object();
+    params.headers={'headerParam':'headerValue'};
+
+    options.params = params;
+
+    var ft = new FileTransfer();
+    ft.upload(fileURI, uri, win, fail, options);
 
 download
 --------------
