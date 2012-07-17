@@ -42,6 +42,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 ( Mango )
+- Bada 2.x
 
 Windows Phone 7 Quirks
 ----------------------
@@ -130,4 +131,28 @@ Full Example
         </body>
     </html>
 
+
+Bada Quirks
+-----------
+
+Bada supports _captureImage_ just like the other platforms. However there is _another_ mode where you can capture a video or an image straight in the webview without launching any camera app. In order to do that you need to:
+
+1. create a _&#60;div&#62;_ element somewhere in your document and give it an id (such as "preview"). 
+
+        <div id="preview"></div>
+
+2. Initialize the camera preview with the following method
+
+        navigator.camera.showPreview("preview");
+
+3. Once you get the preview you can
+
+    3.1 Capture an image with
+
+        var options = { destinationFilename: "images/cam01.jpg", highRes: false};
+        navigator.capture.captureImage(success, fail, options);
+    
+3. Hide the camera preview with the following method
+
+        navigator.camera.hidePreview("preview");
 
