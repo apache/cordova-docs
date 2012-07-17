@@ -53,7 +53,7 @@ upload
 __Parameters:__
 
 - __filePath__ - Full path of the file on the device
-- __server__ - URL of the server to receive the file
+- __server__ - URL of the server to receive the file (must already be encoded using encodeURI())
 - __successCallback__ - A callback that is called with a Metadata object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
 - __options__ - Optional parameters such as file name and mimetype
@@ -86,7 +86,7 @@ __Quick Example__
 	options.params = params;
 	
 	var ft = new FileTransfer();
-    ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
+    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     
 __Full Example__
 
@@ -129,7 +129,7 @@ __Full Example__
                 options.params = params;
                 
                 var ft = new FileTransfer();
-                ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
+                ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
             
             function win(r) {
@@ -171,7 +171,7 @@ __Quick Example__
         console.log("upload error target " + error.target);
     }
     
-    var uri = "http://some.server.com/upload.php";
+    var uri = encodeURI("http://some.server.com/upload.php");
     
     var options = new FileUploadOptions();
     options.fileKey="file";
@@ -191,7 +191,7 @@ download
 
 __Parameters:__
 
-- __source__ - URL of the server to receive the file
+- __source__ - URL of the server to download the file (must already be encoded using encodeURI())
 - __target__ - Full path of the file on the device
 - __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
@@ -201,9 +201,10 @@ __Quick Example__
      // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
 
     var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://some.server.com/download.php");
     
     fileTransfer.download(
-        url,
+        uri,
         filePath,
         function(entry) {
             console.log("download complete: " + entry.fullPath);
