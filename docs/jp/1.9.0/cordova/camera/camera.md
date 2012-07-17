@@ -26,6 +26,7 @@ Camera
 -------
 
 - camera.getPicture
+- camera.cleanup
 
 パーミッション
 -----------

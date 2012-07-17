@@ -29,7 +29,8 @@ cameraOptions
       encodingType: Camera.EncodingType.JPEG,
       targetWidth: 100,
       targetHeight: 100,
-      popoverOptions: CameraPopoverOptions };
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false };
 
 オプション
 -------
@@ -80,9 +81,6 @@ Android に関する注意点
 
 - `allowEdit` は無視されます。
 - Camera.PictureSourceType.PHOTOLIBRARY と Camera.PictureSourceType.SAVEDPHOTOALBUM は同じフォトアルバムを表示します。
-- Camera.EncodingType はサポートされていません。
-- `correctOrientation` パラメーターは無視されます。
-- `saveToPhotoAlbum` パラメーターは無視されます。
 
 BlackBerry に関する注意点
 -----------------

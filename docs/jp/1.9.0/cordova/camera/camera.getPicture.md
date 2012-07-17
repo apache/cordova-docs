@@ -106,7 +106,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       <head>
         <title>写真を撮ってみよう</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // 写真ソース
