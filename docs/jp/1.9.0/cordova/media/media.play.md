@@ -69,7 +69,7 @@ media.play
           <head>
             <title>メディアの使用例</title>
 
-            <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -179,3 +179,10 @@ iOS に関する注意点
 
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
+
+- __playAudioWhenScreenIsLocked__
+
+    このオプションを **play** メソッドに渡すことで、スクリーンがロックされた状態でもオーディオを再生するかどうかを指定します (設定しなかった場合、デフォルトは true です) 。もし true にセットされた場合は、ハードウェアのミュートボタンの設定は無視されます。例:
+
+        var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
+        myMedia.play({ playAudioWhenScreenIsLocked : false })
