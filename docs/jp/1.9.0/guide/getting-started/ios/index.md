@@ -30,6 +30,7 @@ Getting Started with iOS
 
 必要なもの
 ---------------
+- Xcode 4.x
 - Intel ベースの Mac OS X Lion (10.7)
 - デバイスへのインストールに必要なもの:
     - Apple iOS デバイス (iPhone, iPad, iPod Touch)

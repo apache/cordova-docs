@@ -42,7 +42,8 @@ Getting Started with WebOS
 - [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/) のダウンロードとインストール
 - [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321) のダウンロードとインストール (Windows のみ) 。デフォルトでは選択されていませんが、 "make" を選択してください
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから webOS ディレクトリと一緒に作業を進めます。
-
+- [Mac App Store](http://itunes.apple.com/ca/app/xcode/id497799835?mt=12) のダウンロードとインストール (OSC のみ)
+- Command Line Tools for XCode のダウンロードとインストール (OSX のみ) 。 XCode の Preferences -> Downloads -> Components から、 Command Line Tools の install をクリックすることでインストールできます
 
 
 3. 新規プロジェクトの作成
