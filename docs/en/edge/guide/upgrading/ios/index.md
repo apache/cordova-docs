@@ -25,11 +25,51 @@ Please note that **Xcode 4 is required**. To submit to the Apple App Store, you 
 ## Upgrading Cordova 1.9.0 projects to 2.0.0 ##
 
 1. **Install** Cordova 2.0.0
-2. **Create a new project** - you will have to grab assets from this new project
+2. **Create a new project** from the command-line tools - you will have to grab the assets from this new project
 3. **Copy** the **www/cordova-2.0.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.9.0.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.0.0.js** file
-5. **Add** a new entry under **Plugins** in your **Cordova.plist** file - key is **Device** and the value is **CDVDevice**
+5. Copy the **"cordova"** folder from the new project into your project's root folder (if you want the project command-line tools) 
+6. **Add** a new entry under **Plugins** in your **Cordova.plist** file (under the **Supporting Files** group) - the key is **Device** and the value is **CDVDevice**
+7. Remove **Cordova.framework**
+8. Remove **verify.sh** from the **Supporting Files** group
+9. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
+10. Search for **"Preprocessor Macros"**, then remove all **"CORDOVA_FRAMEWORK=1"** values
+11. Locate the **CordovaLib** folder that was installed in your hard-drive under your home folder's **Documents** sub-folder.
+12. Locate the **CordovaLib.xcodeproj** file in the **CordovaLib** folder, then **drag and drop** the file into your project - it should appear as a **sub-project**.
+13. **Build** your project, you should get some **errors** relating to **#import** directives
+14. For the **#import errors**, change any **quote-based** imports in this style:
 
+        #import "CDV.h"
+        
+    to this **brackets-based** style:
+    
+        #import <Cordova/CDV.h>
+        
+    and remove any **#ifdef** wrappers around any Cordova imports, they are not needed anymore (the imports are **unified** now)    
+15. **Build** your project again, and it should not have any **#import** errors.
+16. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Phases"** tab
+17. Expand the **"Target Dependencies"** phase, then select the **"+"** button
+18. Select the **"CordovaLib"** target, then select the **"Add"** button
+19. Expand the **first** **"Link Binary with Libraries"** phase (it should already contain a bunch of frameworks), then select the **"+"** button
+20. Select the **libCordova.a** static library, then select the **"Add"** button
+21. Delete the **"Run Script"** phase.
+22. Select the **project icon** in the Project Navigator, select your project **Target**, then select the **"Build Settings"** tab
+23. Search for **"Other Linker Flags"**, and add the values **-all_load** and **-Obj-C**
+24. Expand the **"CordovaLib" sub-project**
+25. Locate the **"VERSION"** file, drag it into your main project (we want to create a link to it, not a copy)
+26. Select the **"Create groups for any added folders"** radiobutton, then select the **"Finish"** button
+27. Select the **"VERSION"** file that you just dragged in a previous step
+28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
+30. **Build** your project, it should compile and link with **no issues**.
+31. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**
+32. Select the **Run** button
+
+**NOTE 1:**<br /> 
+If your project is **not working** as expected in the Simulator, please **take a note of any errors** in the **console log in Xcode** for clues.
+
+**NOTE 2:**<br /> 
+For the **unified #import headers** to work, the build products should **build into the same build directory**. You may need to set the preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**
 
 ## Upgrading Cordova 1.8.x projects to 1.9.0 ##
 
