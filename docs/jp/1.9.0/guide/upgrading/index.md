@@ -23,9 +23,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 > アプリケーションを最新の Apache Cordova にアップグレードする方法を解説します。
 
 - Upgrading Cordova Android
-- Upgrading Cordova Bada
 - Upgrading Cordova BlackBerry
 - Upgrading Cordova iOS
 - Upgrading Cordova Symbian
 - Upgrading Cordova webOS
 - Upgrading Cordova Windows Phone
+- Upgrading Cordova Bada

@@ -22,45 +22,40 @@ Upgrading Cordova BlackBerry
 
 これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。
 
-- 1.8.0 にアップグレードするには、 1.7.0 からアップグレードしてください
+- 1.9.0 にアップグレードするには、 1.8.1 からアップグレードしてください
 
-## 1.7.0 から 1.8.0 へのアップグレード ##
+## 1.8.1 から 1.9.0 へのアップグレード ##
 
 www フォルダーのアップデート:
 
 1. アプリの `www/` フォルダーを開きます
 2. `ext/` フォルダーにある .jar ファイルを削除し更新します
 3. `ext-air/` フォルダーの内容を更新します
-4. 新しい `cordova-1.8.0.js` をプロジェクトにコピーします
+4. 新しい `cordova-1.9.0.js` をプロジェクトにコピーします
     - playbook の場合は `playbook/` フォルダーの中の .js ファイルを更新します
-5. HTML を、新しい cordova-1.8.0.js を使って更新します
-6. `www/plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 Capture と Contact の項目を次から:
+5. HTML を、新しい `cordova-1.9.0.js` を使って更新します
+6. マイクによる録音を使用可能にするために `www/config.xml` ファイルを次のように更新します:
 
-        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
 
-   次に変更します:
+また、新しいパーミッションを追加します:
 
-        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
+<rim:permit>record_audio</rim:permit>
 
 サンプルフォルダーのアップデート (例, ant ツールを使ったアップデート):
 
 1. `sample/lib/` フォルダーを開きます
-2. `cordova.1.7.0/ext/` フォルダーにある .jar ファイルを更新します
-3. `cordova.1.7.0/ext-air/` フォルダーの内容を更新します
-4. `cordova.1.7.0/javascript/` フォルダーにある .js ファイルを更新します
-5. `sample/lib/` フォルダーを開き、 `cordova.1.7.0/` フォルダーを `cordova.1.8.0/` へリネームします
+2. `cordova.1.8.1/ext/` フォルダーにある .jar ファイルを更新します
+3. `cordova.1.8.1/ext-air/` フォルダーの内容を更新します
+4. `cordova.1.8.1/javascript/` フォルダーにある .js ファイルを更新します
+5. `sample/lib/` フォルダーを開き、 `cordova.1.8.1/` フォルダーを `cordova.1.9.0/` へリネームします
 6. `www/` フォルダーを新しい Cordova でアップデートするため、 `ant blackberry build` または `ant playbook build` とタイプします
-7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.8.0.js` を使って更新します
-8. `www/` フォルダーを開き、 `plugins.xml` ファイルを更新します。2つのプラグインの namespace/service ラベルが変更されています。 Capture と Contact の項目を次から:
+7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.9.0.js` を使って更新します
+8. `www/` フォルダーを開き、マイクによる録音を使用可能にするために `www/config.xml` ファイルを次のように更新します:
 
-         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
-         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
 
-   次に変更します:
+また、新しいパーミッションを追加します:
 
-         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
-         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+<rim:permit>record_audio</rim:permit>
 
