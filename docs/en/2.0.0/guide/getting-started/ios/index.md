@@ -1,0 +1,98 @@
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
+
+Getting Started with iOS
+========================
+
+This guide describes how to set up your development environment for Apache Cordova and run a sample Apache Cordova application.
+
+Requirements
+------------
+- Xcode 4.x
+- Intel-based computer with Mac OS X Lion or greater (10.7+)
+- Necessary for installing on device:
+    - Apple iOS device (iPhone, iPad, iPod Touch)
+    - iOS developer certificate
+
+Install the iOS SDK and Apache Cordova
+----------------------------------
+
+- Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+- Download the latest release of [Apache Cordova](http://phonegap.com/download)
+    - extract its contents
+    - Apache Cordova iOS is found under `lib/ios`
+
+Setup New Project
+-----------------
+
+- Copy the **bin** folder (either from the source, or from the .dmg) to a location on your hard drive
+
+    ![](img/guide/getting-started/ios/bin_folder.png)
+
+- Launch **Terminal.app**
+- Drag the copied **bin** folder to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
+- Type in `./create <project_folder_path> <bundle_id> <project_name>` then press **"Enter"**
+
+        <project_folder_path> is the path to your new Cordova iOS project (it must be empty if it exists)
+        <package_name> is the package name, following reverse-domain style convention
+        <project_name> is the project name
+        
+    ![](img/guide/getting-started/ios/bin_create_project.png)
+
+
+- **Locate** your new project folder that you just created
+- **Launch** the .xcodeproj file in the folder
+
+Hello World
+-----------
+
+- Select the folder named `www` in the Xcode _Project Navigator_
+- Select the file `index.html`
+- Add the following after `<body>`:
+
+        <h1>Hello World</h1>
+
+You can also add any associated JavaScript and CSS files there as well.
+    
+Deploy to Simulator
+-------------------
+
+- Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
+- Change the **Active SDK** in the **Scheme** drop-down menu on the toolbar to **iOS [version] Simulator**
+- Select the **Run** button in your project window's toolbar
+
+Deploy to Device
+----------------
+
+- Open `HelloWorld-Info.plist`, under the **Supporting Files** group
+- Change **BundleIdentifier** to the identifier provided by Apple or your own bundle identifier
+    - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
+- Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your Device Name]**
+    - You will need to have your device connected via USB
+- Select the **Run** button in your project window's toolbar
+
+    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+
+Build Your App
+--------------
+
+You now have an Xcode project setup and you can build and run on the Simulator and device.
+It is important to understand that you do not need to use Xcode to write your web application.
+You can use your favourite text editor and simply rebuild your project using Xcode, or the [command-line tools](guide_command-line_index.md.html#Command-Line%20Usage) in your project folder (under the **cordova** sub-folder)
+Xcode will automatically detect the files that are changed in `www`.
