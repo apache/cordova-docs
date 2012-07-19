@@ -80,7 +80,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>SDK をセットアップして、最初の Cordova アプリケーションを作ります。</span>
         </li>
         <li>
-            <h2>コマンドライン使用法</h2>
+            <h2>コマンドライン使用ガイド</h2>
             <span>コマンドラインからアプリケーションの作成、ビルド、デプロイ、デバッグを行います。</span>
         </li>
         <li>
