@@ -88,6 +88,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Upgrade an application to the latest Cordova release.</span>
         </li>
         <li>
+            <h2>Plugin Development Guide</h2>
+            <span>Develop your first Cordova plugin.</span>
+        </li>
+        <li>
             <h2>Domain Whitelist Guide</h2>
             <span>Grant an application access to external domains.</span>
         </li>
