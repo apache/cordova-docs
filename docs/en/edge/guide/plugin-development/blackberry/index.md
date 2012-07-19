@@ -24,8 +24,7 @@ Developing a Plugin on BlackBerry
 
 In this article, we will explore how to develop the Echo plugin on BlackBerry. If you haven't read the
 top level article about the JavaScript part of the plugin, it would be best if you read that first
-and then this article. In addition, please download the Cordova Blackberry repo from here:
-https://git-wip-us.apache.org/repos/asf?p=incubator-cordova-blackberry-webworks.git;a=summary
+and then this article. In addition, please download the [Cordova Blackberry repo](https://git-wip-us.apache.org/repos/asf?p=incubator-cordova-blackberry-webworks.git;a=summary).
 
 To note, the Corodova-BlackBerry project allows you to deploy to BlackBerry devices like the 
 Torch, Bold, etc and as well as the Playbook. There exists a distinction between deploying to
@@ -35,9 +34,10 @@ Therefore in this article, the focus will be on the hand held devices and not th
 this guide should cover both platforms.
 
 Continuing on from the previous article, the Echo plugin is essentially returning whatever message a user 
-provides to the window.echo function. 
+provides to the `window.echo` function. 
 
 The Echo function:
+
     window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
                 callback('Nothing to echo.');
@@ -45,67 +45,70 @@ The Echo function:
         };
 
 ## Modifying plugins.xml
+
 This file resides in your project's www folder and contains all of the references to the plugins that 
 your Cordova project uses. We are going to add an additional reference so that when cordova.exec is called,
-Cordova will know how to map the "Echo" argument of cordova.exec to the Echo class that we want to write natively.
+Cordova will know how to map the "Echo" argument of `cordova.exec` to the Echo class that we want to write natively.
 
-<plugins>
-  ...
-  <plugin name="Echo" value="org.apache.cordova.echo.Echo"/>
-  ...
-</plugins>
+    <plugins>
+      ...
+      <plugin name="Echo" value="org.apache.cordova.echo.Echo"/>
+      ...
+    </plugins>
 
 ## Adding Echo.java
+
 If you notice the structure of the value attribute, you'll see a defined path that leads to the Echo
 plugin. In the root folder of the Cordova BlackBerry Webworks repo, look for a folder called framework.
 This folder contains all of the source code that runs natively on the BlackBerry. cd into the folder 
-structure until you reach the path: framework/ext/src/org/apache/cordova. At this point, you'll see
+structure until you reach the path: `framework/ext/src/org/apache/cordova`. At this point, you'll see
 all of the plugin folders and inside each folder is the plugins' source code. So, we will add
-the folder echo to framework/ext/src/org/apache/cordova/echo and create a file called Echo.java
-at framework/ext/src/org/apache/cordova/echo/Echo.java.
+the folder echo to `framework/ext/src/org/apache/cordova/echo` and create a file called `Echo.java`
+at `framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
 ## Writing Echo.java
+
 The basic idea of writing a plugin is to create a class that extends the Plugin class and have
 a method called execute to return a PluginResult class. Any call to cordova.exec will pass in 
 the action that we want to execute within the class as well as the arguments. In this case,
 "echo" is the action we want to execute within the class "Echo" and [str] are the arguments we are passing in.
 
-package org.apache.cordova.echo;
+    package org.apache.cordova.echo;
 
-import org.apache.cordova.api.Plugin;
-import org.apache.cordova.api.PluginResult;
-import org.apache.cordova.json4j.JSONArray;
-import org.apache.cordova.json4j.JSONException;
-import org.apache.cordova.json4j.JSONObject;
-import org.apache.cordova.util.Logger;
-/**
- * A simple plugin to demonstrate how to build a plugin for Blackberry
- * Basically echos back the msg that a user calls to this plugin 
- */
-public final class Echo extends Plugin {
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    import org.apache.cordova.util.Logger;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for Blackberry
+     * Basically echos back the msg that a user calls to this plugin 
+     */
+    public final class Echo extends Plugin {
 
-	public static final String echo = "echo";
+        public static final String echo = "echo";
 
-	public PluginResult execute(String action, JSONArray args, String callbackId) {
-		PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
-		if(action.equals(echo)){
-			try {
-				JSONObject echoObj = new JSONObject();
-				String theMsg = args.getString(0);
-				if(theMsg.length()>0){   
-				    result = new PluginResult(PluginResult.Status.OK, theMsg);
-				}else{
-				    result = new PluginResult(PluginResult.Status.ERROR, theMsg);
-				}
-			} catch (JSONException e) {
-				result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
-			}
-		}
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    JSONObject echoObj = new JSONObject();
+                    String theMsg = args.getString(0);
+                    if(theMsg.length()>0){   
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, theMsg);
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
 
-		return result;
-	}
+            return result;
+        }
 
-}
+    }
 
 So if we look at the code above, we can see that within the execute method, we are first looking for
 what actions are coming in. The Echo plugin has only one action, "echo" so we will be only checking for 
@@ -113,7 +116,7 @@ that. If our plugin had more actions, it's simply a matter of adding more if-con
 for those actions.
 
 We are then going to grab the message coming in from the arguments which is supplied by the args parameter.
-We can grab the first argument by simply doing String theMsg = args.getString(0);
+We can grab the first argument by simply doing `String theMsg = args.getString(0);`.
 
 We will do some error checking and if the message looks okay, we will instantiate a new PluginResult with
 an ok status: PluginResult.Status.OK and return the message: theMsg. After this, we will then return the 
@@ -123,15 +126,13 @@ or PluginResult.Status.INVALID_ACTION. When these types of results are passed ba
 callback in JavaScript. 
 
 ## Updating the .jar in your project's www folder
-The addition of the Echo.java needs to be updated in your project so to build the .jar file, cd
-to the root directory of the BlackBerry Webworks repo. Use the ant command: ant update -Dproject.path="~/path_to_my_project"
 
-This will build a new .jar file in the build/ext folder. Copy the build/ext/cordova___.jar file into your
+The addition of the Echo.java needs to be updated in your project so to build the .jar file, cd
+to the root directory of the BlackBerry Webworks repo. Use the ant command:
+
+    ant update -Dproject.path="~/path_to_my_project"
+
+This will build a new .jar file in the build/ext folder. Copy the `build/ext/cordova.jar` file into your
 project/www/ext folder. 
 
 If all goes well, that should allow you to use the Echo plugin in BlackBerry.
-
-## Common Pitfalls
-
-## Debugging
-
