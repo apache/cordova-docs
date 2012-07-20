@@ -109,3 +109,4 @@ this guide.
 - Developing a Plugin on iOS
 - Developing a Plugin on webOS
 - Developing a Plugin on Windows Phone
+- Developing a Plugin on Tizen
