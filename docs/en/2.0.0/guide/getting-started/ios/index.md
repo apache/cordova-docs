@@ -40,7 +40,7 @@ Install the iOS SDK and Apache Cordova
 
 Setup New Project
 -----------------
-
+- Run the installer **'Cordova-2.0.0.pkg'** to completion
 - Copy the **bin** folder (either from the source, or from the .dmg) to a location on your hard drive
 
     ![](img/guide/getting-started/ios/bin_folder.png)
