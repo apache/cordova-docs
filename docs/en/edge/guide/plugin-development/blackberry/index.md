@@ -80,7 +80,6 @@ the action that we want to execute within the class as well as the arguments. In
     import org.apache.cordova.json4j.JSONArray;
     import org.apache.cordova.json4j.JSONException;
     import org.apache.cordova.json4j.JSONObject;
-    import org.apache.cordova.util.Logger;
     /**
      * A simple plugin to demonstrate how to build a plugin for Blackberry
      * Basically echos back the msg that a user calls to this plugin 
@@ -93,12 +92,11 @@ the action that we want to execute within the class as well as the arguments. In
             PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
             if(action.equals(echo)){
                 try {
-                    JSONObject echoObj = new JSONObject();
                     String theMsg = args.getString(0);
-                    if(theMsg.length()>0){   
+                    if(theMsg!= null || theMsg.length()>0){   
                         result = new PluginResult(PluginResult.Status.OK, theMsg);
                     }else{
-                        result = new PluginResult(PluginResult.Status.ERROR, theMsg);
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
                     }
                 } catch (JSONException e) {
                     result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
