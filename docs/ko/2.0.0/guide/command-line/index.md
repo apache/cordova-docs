@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Command-Line Usage
+# 커맨드 라인 사용법 
 
 Cordova now ships with a set of command-line tools that make it easier
 for you to develop cross-platform applications. You can build, clean,
