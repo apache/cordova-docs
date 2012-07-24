@@ -29,7 +29,6 @@ Apache Cordova のドメインホワイトリストは、 `http://google.com` �
 -------------
 
 ドメインホワイトリストは [W3C Widget Access][1] の仕様に基づいています。 Widget Access 仕様の中で、 `<access>` 要素はネットワークドメインへのアクセス許可を指定するために使われています。将来、 Apache Cordova はホワイトリスト実装のプラットフォームの W3C Widget Access 仕様書。しかしながら、現在は各プラットフォームは各々のドメインホワイトリストを実装する必要があります。
-Domain whitelisting lays the ground work for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement it's own domain whitelisting.
 
 シンタックス
 ------

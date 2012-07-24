@@ -87,14 +87,14 @@ Upgrading Cordova iOS
 5. Project Navigator から **"PhoneGap.framework"** を探し、選択します
 6. **Delete** キーを押して、 Project Navigator の中の **"PhoneGap.framework"** の参照を削除します
 7. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
-8. **Shift-Command-G** キーを押します。フォルダ移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
+8. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 9. **"/Users/Shared/Cordova/Frameworks/Cordova.framework"** と入力し、 **"Go"** ボタンをクリックします
 10. **"Add Files.." 画面** で **"Add"** ボタンをクリックします
 11. Project Navigator で **"Cordova.framework" を選択** します
 12. **File Inspector** を開くため、 **Option-Command-1** キーを押します
 13. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Absolute Path"** を選択します
 14. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files.." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
-15. **Shift-Command-G** キーを押します。フォルダ移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
+15. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
 16. **"~/Documents/CordovaLib/Classes/deprecated"** と入力し、 **"Go"** ボタンをクリックします
 17. **"Add Files.." 画面** で **"Add"** ボタンをクリックします
 18. **AppDelegate.h, AppDelegate.m, MainViewController.h** ファイルの **#ifdef PHONEGAP_FRAMEWORK** の部分を以下に置き換えます:
