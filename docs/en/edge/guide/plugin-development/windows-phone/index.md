@@ -167,19 +167,19 @@ Javascript is a little more difficult to debug on Windows Phone, you will need t
 Common Pitfalls
 ===
 
-1. Be careful when deciding on the arguments you pass to native in your JavaScript implementation.  Most device platforms expect the args passed to cordova.exec to be an array, but if you have different types of objects in this array, it becomes difficult or impossible to deserialize.
+- Be careful when deciding on the arguments you pass to native in your JavaScript implementation.  Most device platforms expect the args passed to cordova.exec to be an array, but if you have different types of objects in this array, it becomes difficult or impossible to deserialize.
 
 	cordova.exec(win,fail,"ServiceName","MethodName",["this is a string", 54, {literal:'trouble'}]);
 
-This will mean that your C# code will receive a string value of "[\"this is a string\",54,{literal:'trouble'}]" which is difficult to decode.
+-- This will mean that your C# code will receive a string value of "[\"this is a string\",54,{literal:'trouble'}]" which is difficult to decode.
 
-Consider converting ALL parameters to strings before calling exec :
+-- Consider converting ALL parameters to strings before calling exec :
 
 	cordova.exec(win,fail,"ServiceName","MethodName",["this is a string", "54", "{literal:'trouble'}"])	;
 	
 	string[] optValues = JsonHelper.Deserialize<string[]>(options);
 
-2. It is usually a good idea to do parameter checking in your JavaScript code, before you call exec.  This will let you re-use more JS code between different native implementations of your plugin.
+- It is usually a good idea to do parameter checking in your JavaScript code, before you call exec.  This will let you re-use more JS code between different native implementations of your plugin.
 
 
 
