@@ -59,22 +59,15 @@ Setup New Project
 - **Locate** your new project folder that you just created
 - **Launch** the .xcodeproj file in the folder
 
-Hello World
------------
-
-- Select the folder named `www` in the Xcode _Project Navigator_
-- Select the file `index.html`
-- Add the following after `<body>`:
-
-        <h1>Hello World</h1>
-
-You can also add any associated JavaScript and CSS files there as well.
     
 Deploy to Simulator
 -------------------
 
 - Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
 - Change the **Active SDK** in the **Scheme** drop-down menu on the toolbar to **iOS [version] Simulator**
+
+    ![](img/guide/getting-started/ios/active_scheme_simulator.png)
+
 - Select the **Run** button in your project window's toolbar
 
 Deploy to Device
@@ -83,11 +76,20 @@ Deploy to Device
 - Open `HelloWorld-Info.plist`, under the **Supporting Files** group
 - Change **BundleIdentifier** to the identifier provided by Apple or your own bundle identifier
     - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
+- Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
 - Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your Device Name]**
     - You will need to have your device connected via USB
+
+    ![](img/guide/getting-started/ios/active_scheme_device.png)
+    
 - Select the **Run** button in your project window's toolbar
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+Results
+----------------
+- You should see the screen below, with a pulsating green **"device is ready"** message
+
+    ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+    
 
 Build Your App
 --------------
