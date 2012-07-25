@@ -171,9 +171,9 @@ Common Pitfalls
 
 	cordova.exec(win,fail,"ServiceName","MethodName",["this is a string", 54, {literal:'trouble'}]);
 
--- This will mean that your C# code will receive a string value of "[\"this is a string\",54,{literal:'trouble'}]" which is difficult to decode.
+	- This will mean that your C# code will receive a string value of "[\"this is a string\",54,{literal:'trouble'}]" which is difficult to decode.
 
--- Consider converting ALL parameters to strings before calling exec :
+	- Consider converting ALL parameters to strings before calling exec :
 
 	cordova.exec(win,fail,"ServiceName","MethodName",["this is a string", "54", "{literal:'trouble'}"])	;
 	
