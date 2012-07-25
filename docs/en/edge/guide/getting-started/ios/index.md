@@ -24,7 +24,8 @@ This guide describes how to set up your development environment for Apache Cordo
 
 Requirements
 ------------
-- Xcode 4.x
+- Xcode 4.3+
+- Xcode Command Line Tools 
 - Intel-based computer with Mac OS X Lion or greater (10.7+)
 - Necessary for installing on device:
     - Apple iOS device (iPhone, iPad, iPod Touch)
@@ -34,6 +35,7 @@ Install the iOS SDK and Apache Cordova
 ----------------------------------
 
 - Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+- Install the Xcode Command Line Tools (Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install).
 - Download the latest release of [Apache Cordova](http://phonegap.com/download)
     - extract its contents
     - Apache Cordova iOS is found under `lib/ios`
@@ -73,7 +75,7 @@ Deploy to Simulator
 Deploy to Device
 ----------------
 
-- Open `HelloWorld-Info.plist`, under the **Supporting Files** group
+- Open `HelloWorld-Info.plist`, under the **Resources** group
 - Change **BundleIdentifier** to the identifier provided by Apple or your own bundle identifier
     - If you have a developer license, you can run the [Assistant](http://developer.apple.com/iphone/manage/overview/index.action) to register your app
 - Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
@@ -90,6 +92,12 @@ Results
 
     ![](img/guide/getting-started/ios/HelloWorldStandard.png)
     
+Problems in Xcode
+----------------
+If you have compilation problems related to missing headers, the build products should **build into the same build directory**. You may need to set the preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**. This is the default setting for Xcode on a fresh new install, if you upgraded from older versions of Xcode, you might have a legacy preference in there that you need to update.
+
+Also, when installing **Cordova-2.0.0.pkg**, you must ensure Xcode is not running, if not certain Xcode variables won't be set. 
+
 
 Build Your App
 --------------
@@ -98,3 +106,9 @@ You now have an Xcode project setup and you can build and run on the Simulator a
 It is important to understand that you do not need to use Xcode to write your web application.
 You can use your favourite text editor and simply rebuild your project using Xcode, or the [command-line tools](guide_command-line_index.md.html#Command-Line%20Usage) in your project folder (under the **cordova** sub-folder)
 Xcode will automatically detect the files that are changed in `www`.
+
+Problems in the Command Line Tools
+----------------
+If you see this error: **"Error: No developer directory found at /Developer. Run /usr/bin/xcode-select to update the developer directory path."** Run this to set your Developer folder:
+
+        sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
