@@ -53,7 +53,7 @@ upload
 __パラメーター:__
 
 - __filePath__ - デバイス内のファイルのフルパスを表します
-- __server__ - ファイルを受け取るサーバーの URL を表します
+- __server__ - ファイルを受け取るサーバーの URL を表します (encodeURI() を使用して既にエンコードされている必要があります)
 - __successCallback__ - Metadata オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
 - __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
 - __options__ - ファイル名や minetype などのオプションのパラメーターを表します
@@ -86,7 +86,7 @@ __使用例__
     options.params = params;
 
     var ft = new FileTransfer();
-    ft.upload(fileURI, "http://some.server.com/upload.php", win, fail, options);
+    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
 
 __詳細な使用例__
 
@@ -95,7 +95,7 @@ __詳細な使用例__
       <head>
         <title>File Transfer の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -129,7 +129,7 @@ __詳細な使用例__
                 options.params = params;
 
                 var ft = new FileTransfer();
-                ft.upload(imageURI, "http://some.server.com/upload.php", win, fail, options);
+                ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
 
             function win(r) {
@@ -171,7 +171,7 @@ __使用例__
         console.log("upload error target " + error.target);
     }
 
-    var uri = "http://some.server.com/upload.php";
+    var uri = encodeURI("http://some.server.com/upload.php");
 
     var options = new FileUploadOptions();
     options.fileKey="file";
@@ -191,7 +191,7 @@ download
 
 __パラメーター:__
 
-- __source__ - ファイルを取得するサーバーの URL を表します
+- __source__ - ファイルを取得するサーバーの URL を表します (encodeURI() を使用して既にエンコードされている必要があります)
 - __target__ - デバイス内のファイルのフルパスを表します
 - __successCallback__ - FileEntry オブジェクトを伴って呼び出されるコールバック関数を表します _(Function)_
 - __errorCallback__ - Metadata の取得時にエラーが起きた場合に呼び出されるコールバック関数を表します。 FileError オブジェクトを伴って呼び出されます _(Function)_
@@ -201,6 +201,7 @@ __使用例__
     // !! url はサーバー内の有効なファイルを指すことと filePath がデバイス内の有効な値であるとみなします
 
     var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://some.server.com/download.php");
 
     fileTransfer.download(
         url,

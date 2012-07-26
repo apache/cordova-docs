@@ -37,12 +37,6 @@ FileUploadOptions
 
 `FileUploadOptions` オブジェクトは upload メソッドを実行する際に FileTransfer オブジェクトに渡して、追加のパラメーターとして設定する場合に使用します。
 
-iOS に関する注意点
----------
-
-- __chunkedMode:__
-    iOS ではこの値は無視されます。
-
 WP7 に関する注意点
 ---------
 
