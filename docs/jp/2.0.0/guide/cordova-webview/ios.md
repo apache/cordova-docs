@@ -24,46 +24,20 @@ Cordova 1.4 からは、 Cordova を iOS アプリケーションの中でコン
 
 Cordova 1.4 以降の Xcode テンプレートを用いて作られた新しい Cordova バースのアプリケーションは Cleaver を使用し、このテンプレートは Cleaver の参照実装と捉えられます。
 
-通常は、以下の `Cordova.framework` の手順に従ってください。 `CordovaLib` サブプロジェクトの手順は、 Cordova のコアデベロッパーもしくはカスタム `CordovaLib` のあるユーザ向けとなっています (コアのデバッグを容易にするため)。
+Cordova 2.0.0 からは、 Cleaver を実装したサブプロジェクトのみをサポートしています。
 
 必要なもの
 -------------
 
-1. **Cordova 1.4.1** またはそれ以降
-2. **Xcode 4.2** またはそれ以降
+1. **Cordova 2.0.0** またはそれ以降
+2. **Xcode 4.3** またはそれ以降
 3. `Cordova.plist` ファイル
 
-Xcode プロジェクトへの Cleaver の追加 (Cordova.framework)
---------------------------------------------------------
-
-1. `Cordova.plist` ファイルをディスクのプロジェクトフォルダー内に **コピー** します
-2. `Cordova.plist` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します
-3. **"Create groups for any added folders"** のラジオボタンを **選択** します
-4. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
-5. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
-6. `/Users/Shared/Cordova/Frameworks/Cordova.framework` と入力し、 **"Go"** ボタンをクリックします
-7. **"Add Files..." 画面** で **"Add"** ボタンをクリックします
-8. Project Navigator で `Cordova.framework` を選択します
-9. **File Inspector** を開くため、 **Option-Command-1** キーを押します
-10. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Absolute Path"** を選択します
-11. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-12. **"Link Binaries with Libraries"** を展開します
-13. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
-
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
-        CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
-        MobileCoreServices.framework
-        CoreMedia.framework
 
 Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェクト)
 -------------------------------------------------------------
 
+0. Cordova を **インストール** します
 1. `Cordova.plist` ファイルをディスクのプロジェクトフォルダー内に **コピー** します
 2. `Cordova.plist` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します
 3. **"Create groups for any added folders"** のラジオボタンを **選択** します
@@ -80,12 +54,10 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
 14. **File Inspector** を開くため、 **Option-Command-1** キーを押します
 15. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
 16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-17. 検索フィールドに **"Header Search Paths"** と入力します
-18. **"Header Search Paths"** の値に `$(CORDOVALIB)/Classes` を追加し、 **Recursive** チェックボックス (このチェックボックスはラベルがない可能性があります) にチェックします
-19. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
-20. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
-21. **"Link Binaries with Libraries"** を展開します
-22. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
+17. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+18. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
+19. **"Link Binaries with Libraries"** を展開します
+20. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
 
         AddressBook.framework
         AddressBookUI.framework
@@ -98,60 +70,40 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
         MobileCoreServices.framework
         CoreMedia.framework
 
-23. **"Target Dependencies"** を展開します。
+21. **"Target Dependencies"** を展開します。 (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
+22. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します
+23. **"Link Binaries with Libraries"** を展開します。
     (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
-24. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します
-25. **"Link Binaries with Libraries"** を展開します。
-    (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
-26. **"+" ボタン** をクリックし、 `libCordova.a` を追加します
-
-CordovaLib サブプロジェクトへの新規クラスの追加
---------------------------------------------
-
-通常、もし既存の CordovaLib クラスだけを編集したりデバッグするだけならば
-上のステップに問題はありません。しかし、もし新しいクラスを追加している場合、
-次の追加ステップが必要になります:
-
-1. Xcode のプロジェクトの Frameworks ディレクトリから
-   `Cordova.framework` を削除します。
-2. ステップ18から20までを再度行います。 dependencies や libraries が
-   プロジェクトの Target の Build Phases の中の一番上のボックス
-   であることを確認してください。
-3. プロジェクトの Target の Build Settings で、 "Other Linker Flags" を
-   検索します。 `-Obj-C` と `-all_load` をこれに追加します。
+24. **"+" ボタン** をクリックし、 `libCordova.a` を追加します
 
 コード中での CDVViewController の使用法
 ------------------------------------
 
-1. `Cordova.framework` を使用している場合、この **header** を追加します:
+1. この **header** を追加します:
 
         #import <Cordova/CDVViewController.h>
 
-2. `CordovaLib` サブプロジェクトを使用している場合、この **header** を追加します:
-
-        #import "CDVViewController.h"
-
-3. **新しい** `CDVViewController` のインスタンスを作成し、どこかで保持します:
+2. **新しい** `CDVViewController` のインスタンスを作成し、どこかで保持します:
 
         CDVViewController* viewController = [CDVViewController new];
 
-4. (_オプション_) `wwwFolderName` プロパティーをセットします (デフォルトは `"www"`):
+3. (_オプション_) `wwwFolderName` プロパティーをセットします (デフォルトは `"www"`):
 
         viewController.wwwFolderName = @"myfolder";
 
-5. (_オプション_) `startPage` プロパティーをセットします (デフォルトは `"index.html"`):
+4. (_オプション_) `startPage` プロパティーをセットします (デフォルトは `"index.html"`):
 
         viewController.startPage = @"mystartpage.html";
 
-6. (_オプション_) `useSplashScreen` プロパティーをセットします (デフォルトは `NO`):
+5. (_オプション_) `useSplashScreen` プロパティーをセットします (デフォルトは `NO`):
 
         viewController.useSplashScreen = YES;
 
-5. **view frame** をセットします (常にこれを最後のプロパティーとしてセットします):
+6. **view frame** をセットします (常にこれを最後のプロパティーとしてセットします):
 
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
 
-6. Cleaver を view に **追加** します:
+7. Cleaver を view に **追加** します:
 
         [myView addSubview:viewController.view];
 
