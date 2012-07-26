@@ -22,106 +22,81 @@ Getting Started with iOS
 
 このガイドは、 Apache Cordova のための開発環境セットアップ方法、また Apache Cordova のサンプルアプリの動かし方を解説します。
 
-ビデオチュートリアル
-----------------
-
-- [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
-
-
 必要なもの
 ---------------
-- Xcode 4.x
-- Intel ベースの Mac OS X Lion (10.7)
+- Xcode 4.3+
+- Xcode コマンドラインツール
+- Intel ベースの Mac OS X Lion 以上 (10.7+)
 - デバイスへのインストールに必要なもの:
     - Apple iOS デバイス (iPhone, iPad, iPod Touch)
     - iOS デベロッパー証明書
-
 
 SDK と Apache Cordova のインストール
 ------------------------
 
 - [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) から Xcode をインストールします。
+- Xcode コマンドラインツール (Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install) をインストールします。
 - [Apache Cordova](http://phonegap.com/download) の最新版をダウンロードします。
     - ダウンロードしたものを解凍します
     - Apache Corder iOS は `lib/ios` ディレクトリ以下にあります
 
-
 新規プロジェクトの作成
 --------------------
+- **'Cordova-2.0.0.pkg'** インストーラーを実行し、インストールを完了します
+- **bin** フォルダー (ソース、もしくは .dmg から) をハードドライブ上にコピーします
 
-- Xcode を起動します
-- メニューから _File_ を選択します
-- _New_ を選択し、 _New Project..._ を選択します
-- テンプレートのリストから _Cordova-based Application_ を選択します
+    ![](img/guide/getting-started/ios/bin_folder.png)
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+- **Terminal.app** を起動します
+- コピーした **bin** フォルダーを Dock にある **Terminal.app** のアイコンにドラッグします。これにより、新しいターミナルのウィンドウが開きます
+- `./create <project_folder_path> <bundle_id> <project_name>` を入力し、 **"Enter"** を押します
 
-- _Next_ ボタンをクリックします
-- _Product Name_ と _Company Identifier_ を記入します
+        <project_folder_path> は新しい Cordova iOS プロジェクトへのパスを表します (もし既に存在する場合は、空である必要があります)
+        <package_name> はリバースドメインスタイルのパッケージ名を表します
+        <project_name> はプロジェクト名を表します
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![](img/guide/getting-started/ios/bin_create_project.png)
 
-- **注意:** _Use Automatic Reference Counting_ のチェックボックスにチェックを **入れないでください**
-- _Next_ ボタンをクリックします
-- 新しいアプリを保存するフォルダーを選択します
-- _Create_ ボタンをクリックします
 
-Apache Cordova プロジェクトが作成出来ました。次に、プロジェクトと web ディレクトリを関連付ける必要があります。この作業は、 Xcode のプロジェクトテンプレートと制約のため必要となります。
-
-- 左上にある _Run_ ボタンをクリックします
-    - ビルドが成功し、 iOS シミュレーターが起動します
-    - iOS シミュレーターが、 _www/index.html was not found_ と警告しているのが確認できるはずです
-    - `www` ディレクトリへのリファレンスをプロジェクトに追加することによりこれを修正します
-
-    ![](img/guide/getting-started/ios/index-not-found.png)
-
-- 左側のサイドバーにある _Project Navigator_ の中のプロジェクトアイコンの上で右クリックし、 _Show in Finder_ を選択します
-- Finder で、プロジェクトの中に `www` ディレクトリが確認できるはずです
-
-    ![](img/guide/getting-started/ios/www-folder.png)
-
-- `www` フォルダーを Xcode 4 にドラッグします
-    - アプリフォルダーの中に `www` ディレクトリをドラッグしないでください
-    - 以下の画像赤い四角の枠で囲ってある部分にドラッグしてください:
-
-    ![](img/guide/getting-started/ios/project.jpg)
-
-- 正確に `www` フォルダーがドラッグアンドドロップされると、いくつかのオプションがある画面が表示されます
-    - _Create folder references for any added folders_ を選択します
-    - _Finish_ ボタンをクリックします
-
-    ![](img/guide/getting-started/ios/create-folder-reference.png)
-
-Hello World の作成
---------------
-
-- Xcode の _Project Navigator_ にある `www` フォルダーを選択します
-- `index.html` ファイルを選択します
-- `<body>` タグの後に以下を追加します:
-
-        <h1>Hello World</h1>
-
-関連する JavaScript や CSS ファイルも追加することができます。
+- たった今作成した新しいプロジェクトフォルダーを **見つけます**
+- フォルダーの中の .xcodeproj を **起動します**
 
 
 シミュレーターへのデプロイ
 -----------------------
 
-- ツールバーにあるドロップダウンメニューから _Active SDK_ を _iOS version Simulator_ に変更します
-- プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
+- ツールバーにあるドロップダウンメニューから **Target** を **"HelloWorld"** (あなたのプロジェクト名) に変更します
+- ツールバーにあるドロップダウンメニューから **Active SDK** を **iOS [version] Simulator** に変更します
 
+    ![](img/guide/getting-started/ios/active_scheme_simulator.png)
+
+- プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
 デバイスへのデプロイ
 --------------------
 
-- _Supporting Files_ グループの中にある `あなたのアプリ名-Info.plist` を開きます
-- _BundleIdentifier_ を Apple から提供された Identifer 、または自分の Identifer に変更します
+- **Resources** グループの中にある `HelloWorld-Info.plist` を開きます
+- **BundleIdentifier** を Apple から提供された Identifer 、または自分の Identifer に変更します
     - もし開発者ライセンスを持っている場合は、 [Assistant] (http://developer.apple.com/iphone/manage/overview/index.action) よりアプリを登録できます
-- ツールバーにあるドロップダウンメニューから _Active SDK_ を _あなたのDevice名_ に変更します
+- ツールバーにあるドロップダウンメニューから **Target** を **"HelloWorld"** (あなたのプロジェクト名) に変更します
+- ツールバーにあるドロップダウンメニューから **Active SDK** を **[あなたのDevice名]** に変更します
     - デバイスを USB で接続する必要があります
+
+    ![](img/guide/getting-started/ios/active_scheme_device.png)
+
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+結果
+----------------
+- 緑色の点滅した **"device is ready"** のメッセージを伴った画面が見えるはずです
+
+    ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+
+Xcode の問題
+----------------
+もしヘッダーが無いなどに関連した編集での問題がある場合、ビルドプロダクトは **同じビルドディレクトリでビルドする** 必要があります。**"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** の設定を **"Unique"** に変更する必要があるかもしれません。これは Xcode をインストールした直後のデフォルト設定ですが、もし古いバージョンからアップグレードした場合は昔の設定が残っており、その場合はアップデートする必要があります。
+
+また、 **Cordova-2.0.0.pkg** をインストールする時、 Xcode が起動していないことを確認擦る必要があります。もし起動していた場合は、 Xcode のセットされるべき値がセットされません。
 
 
 アプリを作成
@@ -129,5 +104,11 @@ Hello World の作成
 
 これで Xcode プロジェクトのセットアップが完了し、シミュレーターまたはデバイスでビルドし動かすことが出来ます。
 アプリを書くために、 Xcode を使用する必要はありません。
-あなたの好きなテキストエディターを使い、 Xcode でリビルド作業を行えます。
+あなたの好きなテキストエディターを使い、 Xcode 、またはプロジェクトフォルダ (**cordova** サブフォルダ) 内で [コマンドラインツール](guide_command-line_index.md.html) でリビルド作業を行えます。
 Xcode は自動的に `www` ディレクトリ内にあるファイルの変化を検出します。
+
+コマンドラインツールの問題
+----------------
+もし **"Error: No developer directory found at /Developer. Run /usr/bin/xcode-select to update the developer directory path."** というエラーを見る場合、 Developer フォルダーを設定するために以下を実行してください:
+
+    sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
