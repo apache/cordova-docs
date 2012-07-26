@@ -71,7 +71,7 @@ accelerometer.watchAcceleration
       <head>
         <title>加速度センサーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // watch ID が現在の `watchAcceleration` を参照

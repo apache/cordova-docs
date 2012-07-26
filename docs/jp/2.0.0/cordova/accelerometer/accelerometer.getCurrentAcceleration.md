@@ -64,7 +64,7 @@ accelerometer.getCurrentAcceleration
       <head>
         <title>加速度センサーの使用</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
