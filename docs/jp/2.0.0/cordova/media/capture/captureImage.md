@@ -42,11 +42,13 @@ capture.captureImage
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
+- Bada 2.x
 
 Windows Phone 7 に関する注意点
 ----------------------
 
-Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
+Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは
+起動せずに、エラーコールバックが呼び出されます。
 
 使用例
 -------------
@@ -76,7 +78,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       <head>
         <title>画像キャプチャー</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -129,4 +131,28 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       </body>
     </html>
 
+
+Bada に関する注意点
+-----------
+
+Bada は _captureImage_ を他のデバイスと同様にサポートします。しかしながら、カメラアプリを起動せずにビデオや画像を webview 内でキャプチャー出来る _別の_ モードが存在します。このモードを使うためには、以下の手順が必要です:
+
+1. _&#60;div&#62;_ 要素をドキュメントのどこかに作成し、 "preview" といったような id を付与します
+
+        <div id="preview"></div>
+
+2. カメラプレビューを以下のメソッドで初期化します
+
+        navigator.camera.showPreview("preview");
+
+3. プレビューを取得した後、以下のことが可能です
+
+    3.1 画像をキャプチャー
+
+        var options = { destinationFilename: "images/cam01.jpg", highRes: false};
+        navigator.capture.captureImage(success, fail, options);
+
+3. 以下のメソッドでカメラプレビュー画面を隠します
+
+        navigator.camera.hidePreview("preview");
 
