@@ -92,7 +92,6 @@ BlackBerry に関する注意点
 - 大きなサイズで撮影を行った場合、高画質カメラを搭載したデバイスでエンコードすることができない場合があります。 (Torch 9800 など)
 - Camera.MediaType はサポートされていません。
 - `correctOrientation` パラメーターは無視されます。
-- `saveToPhotoAlbum` パラメーターは無視されます。
 
 WebOS に関する注意点
 -----------
@@ -115,7 +114,6 @@ Windows Phone 7 に関する注意点
 
 - `allowEdit` は無視されます。
 - `correctOrientation` パラメーターは無視されます。
-- `saveToPhotoAlbum` パラメーターは無視されます。
 
 Bada 1.2 に関する注意点
 --------------
