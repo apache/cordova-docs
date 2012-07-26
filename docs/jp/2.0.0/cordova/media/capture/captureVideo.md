@@ -42,6 +42,7 @@ capture.captureVideo
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
+- Bada 2.x
 
 使用例
 -------------
@@ -71,7 +72,7 @@ capture.captureVideo
         <head>
         <title>ビデオキャプチャー</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
@@ -128,3 +129,31 @@ BlackBerry WebWorks に関する注意点
 --------------------------
 
 - Cordova for BlackBerry WebWorks は、ビデオ録画のために RIM より提供されている __Video Recorder__ の起動を試みます。デベロッパーは、もしアプリがインストールされていない場合は CaptureError.`CAPTURE_NOT_SUPPORTED` エラーを受け取ります。
+
+Bada 2.x に関する注意点
+---------------
+
+Bada は _captureVideo_ を他のデバイスと同様にサポートします。しかしながら、カメラアプリを起動せずにビデオや画像を webview 内でキャプチャー出来る _別の_ モードが存在します。このモードを使うためには、以下の手順が必要です:
+
+1. _&#60;div&#62;_ 要素をドキュメントのどこかに作成し、 "preview" といったような id を付与します
+
+        <div id="preview"></div>
+
+2. カメラプレビューを以下のメソッドで初期化します
+
+        navigator.camera.showPreview("preview");
+
+3. プレビューを取得した後、以下のことが可能です
+
+    3.1 ビデオのキャプチャーを開始
+
+        navigator.capture.startVideoCapture(success, fail, {duration: 5000, destinationFilename: "videos/a.3gp"});
+
+    3.2 ビデオのキャプチャーを停止
+
+        navigator.capture.stopVideoCapture();
+
+3. 以下のメソッドでカメラプレビュー画面を隠します
+
+        navigator.camera.hidePreview("preview");
+
