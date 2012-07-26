@@ -88,6 +88,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>アプリケーションを最新の Cordova にアップグレードします。</span>
         </li>
         <li>
+            <h2>プラグイン開発ガイド</h2>
+            <span>最初の Cordova プラグインを作ります。</span>
+        </li>
+        <li>
             <h2>ドメインホワイトリストガイド</h2>
             <span>アプリケーションに外部ドメインへのアクセス権を与えます。</span>
         </li>
