@@ -41,25 +41,25 @@ This guide describes how to set up your development environment for Cordova and 
 ---------------------
 
 - Launch Eclipse, and select menu item **New Project**
-    ![](img/guide/getting-started/android/step_1.jpg)
+    ![](img/guide/getting-started/android/step_1.png)
 - Then specify new application project
-    ![](img/guide/getting-started/android/step_2.jpg)
+    ![](img/guide/getting-started/android/step_2.png)
 - Then speciy an Application Name, a Project Name and Package Name with Namespace
-    ![](img/guide/getting-started/android/step_3.jpg)
+    ![](img/guide/getting-started/android/step_3.png)
 - Then select a graphic
-    ![](img/guide/getting-started/android/step_4.jpg)
+    ![](img/guide/getting-started/android/step_4.png)
 - Then Create a Blank Activity
-    ![](img/guide/getting-started/android/step_5.jpg)
+    ![](img/guide/getting-started/android/step_5.png)
 - Make sure the activity doesn't inherit from anything.  You most likely won't have PhoneGap on your Eclipse Workspace.  Once this is done, click finish
     
 - In the root directory of your project, create two new directories:
  	- **/libs**
  	- **assets/www**
-- Copy **cordova-1.9.0.js** from your Cordova download earlier to **assets/www**
-- Copy **cordova-1.9.0.jar** from your Cordova download earlier to **/libs**
+- Copy **cordova-2.0.0.js** from your Cordova download earlier to **assets/www**
+- Copy **cordova-2.0.0.jar** from your Cordova download earlier to **/libs**
 - Copy **xml** folder from your Cordova download earlier to **/res**
 
-- Verify that **cordova-1.9.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.9.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
+- Verify that **cordova-2.0.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-2.0.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 
     ![](img/guide/getting-started/android/buildPath.jpg)
 

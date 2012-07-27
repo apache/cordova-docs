@@ -85,9 +85,15 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 Generating the Documentation
 ----------------------------
 
+### Quick Preview
+
+When making minor edits, it is usually safe to simply render the edited from
+Markdown to HTML. Many code editors have plugins to render Markdown to HTML
+and there are a handful of [good](http://dillinger.io/) online editors.
+
 Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are used to generate the HTML documentation.
 
-### Install joDoc ###
+### Install joDoc
 
 - Clone [joDoc](http://github.com/davebalmer/jodoc)
 
@@ -103,8 +109,6 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
 
         # Use your package manager
         brew install markdown
-        port install markdown
-        aptitude install markdown
 
 - Install nokogiri (Ruby HTML parser)
 
@@ -114,25 +118,12 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
 
         gem install json
 
-### Run the Script ###
+### Run the Script
 
     ./bin/generate
+
+### Problems
     
-Script Test Suite
------------------
-
-__Install rspec:__
-
-    gem install rspec --version 1.3.0
-    
-__Run all specs:__
-
-    rake
-
-__Run a specific spec:__
-
-    spec spec/phonegap/add_title_spec.rb
-
 Generated a Version Release
 ---------------------------
 
@@ -140,3 +131,28 @@ There is a Rake task to increment the version, generate the version directory, a
 
     # generate version 1.7.0
     rake version[1.7.0]
+
+FAQ
+---
+
+### Error while running `./bin/generate`
+
+If you get the following error:
+
+    ./bin/../lib/cordova/navigation_menu.rb:14:in `read': can't convert nil into String (TypeError)
+        from ./bin/../lib/cordova/navigation_menu.rb:14:in `initialize'
+        from ./bin/../lib/docs_generator.rb:86:in `new'
+        from ./bin/../lib/docs_generator.rb:86:in `after_jodoc'
+        from ./bin/../lib/docs_generator.rb:55:in `run'
+        from ./bin/../lib/docs_generator.rb:45:in `foreach'
+        from ./bin/../lib/docs_generator.rb:45:in `run'
+        from ./bin/../lib/docs_generator.rb:41:in `foreach'
+        from ./bin/../lib/docs_generator.rb:41:in `run'
+        from ./bin/generate:6
+
+You may need to add the following line to the joDoc script:
+
+    $markdown_bin = "/path/to/Markdown.pl";
+
+For more details, see the [Issue #590](https://issues.apache.org/jira/browse/CB-590).
+
