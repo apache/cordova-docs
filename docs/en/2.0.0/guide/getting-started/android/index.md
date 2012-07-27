@@ -97,7 +97,7 @@ This guide describes how to set up your development environment for Cordova and 
 *Note You are adding a blanket list of permissions to your application. You should remove permissions you aren't using before submitting your application to Google Play.
 - Support orientation changes by pasting the following inside the **&lt;activity&gt;** tag.
 
-        android:configChanges="orientation|keyboardHidden"
+        android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
 
 - Your AndroidManifest.xml file should look like
 
