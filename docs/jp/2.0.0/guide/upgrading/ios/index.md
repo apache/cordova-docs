@@ -22,6 +22,55 @@ Upgrading Cordova iOS
 
 **Xcode 4 が必須** であることに注意してください。 Apple App Store に提出するためには、最新バージョンの iOS SDK (iOS 5.1) を使用する必要があります。 iOS 5.1 は Xcode 4 を必要とします。
 
+## 1.9.0 から 2.0.0 へのアップグレード ##
+
+1. Cordova 2.0.0 を **インストール** します
+2. コマンドラインツールから **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持っていきます
+3. 新規プロジェクトから **www/cordova-2.0.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-1.9.0.js** ファイルを削除します
+4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-2.0.0.js** ファイルを参照するように **更新** します
+5. 新規プロジェクトから **"cordova"** フォルダーを、 root フォルダーにコピーします (もしコマンドラインツールを使用したい場合)
+6. **Cordova.plist** ファイル (**Supporting Files** グループの下) の中の **Plugins** 以下に新しいエントリーを **追加** します - キーは **Device** で値は **CDVDevice** です
+7. **Cordova.framework** を削除します
+8. **Supporting Files** グループから **verify.sh** を削除します
+9. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
+10.  **"Preprocessor Macros"** を検索し、すべての **"CORDOVA_FRAMEWORK=1"** の値を削除します
+11. ハードドライブのホームディレクトリの下の **Documents** フォルダーにインストールされた **CordovaLib** フォルダーを開きます
+12. **CordovaLib** フォルダーの中にある **CordovaLib.xcodeproj** ファイルを見つけ、ファイルをプロジェクトに **ドラッグアンドドロップ** します - このフォルダは **サブプロジェクト** として表示されるはずです
+13. プロジェクトを **ビルド** します。いくつかの **#import** ディレクティブに関する **エラー** が検出されるはずです
+14. **#import に関するエラー** に対しては、すべての **引用符ベースの** import 文を、次から:
+
+        #import "CDV.h"
+
+    次の **山括弧ベース** のスタイルに変更します:
+
+        #import <Cordova/CDV.h>
+
+    そして、 **#ifdef** で囲まれたすべての Cordova に関する import を削除します。これらはもう必要ありません (import は **統合** されました)
+15. プロジェクトを再び **ビルド** します。ここでは、 **#import** エラーが検出されないはずです
+16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
+17. **"Target Dependencies"** phase を展開し、 **"+"** ボタンを選択します
+18. **"CordovaLib"** target を選択し、 **"Add"** ボタンを選択します
+19. 一番上の **"Link Binary with Libraries"** phase (既に多くの framework が入っているはずです) を展開し、 **"+"** ボタンを選択します
+20. **libCordova.a** static library を選択し、 **"Add"** ボタンを選択します
+21. **"Ran Script"** phase を削除します
+22. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
+23. **"Other Linker Flags"** を探し、 **-all_load** と **-Obj-C** を値に追加します
+24. **"CordovaLib" sub-project** を展開します
+25. **"VERSION"** ファイルを見つけ、メインプロジェクトにドラッグします (ここではコピーではなくリンクを作成します)
+26. **"Create groups for any added folders"** ラジオボタンを選択し、 **"Finish"** ボタンを選択します
+27. 前のステップでドラッグした **"VERSION"** ファイルを選択します
+28. **File Inspector** を開くため、 **Option-Command-1** キーを押します (または、メニューから **View -> Utilities -> Show File Inspector**)
+29. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
+30. プロジェクトを **ビルド** します。 **問題なく** コンパイルされるはずです
+31. **Scheme** ドロップダウンから **プロジェクトを選択** し、 **"iPhone 5.1 Simulator"** を選択します
+32. **Run** ボタンを選択します
+
+**注意1:**
+もしプロジェクトがシミュレーターで期待通りに **動かない** 場合は、 **Xcode のコンソールログ** にある **すべてのエラーに注意して** 原因を探ってください。
+
+**注意2:**
+**統合した #import ヘッダー** が機能するために、ビルドプロダクトは **同じビルドディレクトリでビルドする** 必要があります。 **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** の設定を **"Unique"** に変更する必要があるかもしれません。
+
 ## 1.8.x から 1.9.0 へのアップグレード ##
 
 1. Cordova 1.9.0 を **インストール** します
@@ -141,5 +190,77 @@ Upgrading Cordova iOS
 5. すべての新しい **MainViewController** ファイルを Xcode プロジェクトに **追加** します
 6. 新規プロジェクトから **www/phonegap-1.4.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/phonegap-1.3.0.js** ファイルを削除します
 7.  **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **phonegap-1.4.0.js** ファイルを参照するように **更新** します
+8. **PhoneGap.plist** ファイルの **Plugins** の下に新しい要素を **追加** します - キーは **com.phonegap.battery** で値は **PGBattery** です
+9. **バックアップした AppDelegate.h 及び AppDelegate.m** にあったプロジェクト固有のコードを新しい AppDelegate ファイルに **統合** します
+
+## 1.2.0 から 1.3.0 へのアップグレード ##
+
+1. Cordova 1.3.0 を **インストール** します
+2. **AppDelegate.m** と **AppDelegate.h** の **バックアップを作成します**
+3. **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持って行きます
+4. 以下のファイルを **新しい** プロジェクトから1.2.0ベースのプロジェクトのフォルダーにコピーし、古いファイルは **置き換え** ます (上のステップ2でファイルを **バックアップ** します):
+
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        MainViewController.xib
+5. すべての新しい **MainViewController** ファイルを Xcode プロジェクトに **追加** します
+6. 新規プロジェクトから **www/phonegap-1.3.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/phonegap-1.2.0.js** ファイルを削除します
+7.  **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **phonegap-1.3.0.js** ファイルを参照するように **更新** します
+8. **PhoneGap.plist** ファイルの **Plugins** の下に新しい要素を **追加** します - キーは **com.phonegap.battery** で値は **PGBattery** です
+9. **バックアップした AppDelegate.h 及び AppDelegate.m** にあったプロジェクト固有のコードを新しい AppDelegate ファイルに **統合** します
+
+## 1.1.0 から 1.2.0 へのアップグレード ##
+
+1. Cordova 1.2.0 を **インストール** します
+2. **AppDelegate.m** と **AppDelegate.h** の **バックアップを作成します**
+3. **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持って行きます
+4. 以下のファイルを **新しい** プロジェクトから1.1.0ベースのプロジェクトのフォルダーにコピーし、古いファイルは **置き換え** ます (上のステップ2でファイルを **バックアップ** します):
+
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        MainViewController.xib
+5. すべての新しい **MainViewController** ファイルを Xcode プロジェクトに **追加** します
+6. 新規プロジェクトから **www/phonegap-1.2.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/phonegap-1.1.0.js** ファイルを削除します
+7.  **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **phonegap-1.2.0.js** ファイルを参照するように **更新** します
+8. **PhoneGap.plist** ファイルの **Plugins** の下に新しい要素を **追加** します - キーは **com.phonegap.battery** で値は **PGBattery** です
+9. **バックアップした AppDelegate.h 及び AppDelegate.m** にあったプロジェクト固有のコードを新しい AppDelegate ファイルに **統合** します
+
+## 1.0.0 から 1.1.0 へのアップグレード ##
+
+1. Cordova 1.1.0 を **インストール** します
+2. **AppDelegate.m** と **AppDelegate.h** の **バックアップを作成します**
+3. **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持って行きます
+4. 以下のファイルを **新しい** プロジェクトから1.1.0ベースのプロジェクトのフォルダーにコピーし、古いファイルは **置き換え** ます (上のステップ2でファイルを **バックアップ** します):
+
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        MainViewController.xib
+5. すべての新しい **MainViewController** ファイルを Xcode プロジェクトに **追加** します
+6. 新規プロジェクトから **www/phonegap-1.2.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/phonegap-1.1.0.js** ファイルを削除します
+7.  **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **phonegap-1.2.0.js** ファイルを参照するように **更新** します
+8. **PhoneGap.plist** ファイルの **Plugins** の下に新しい要素を **追加** します - キーは **com.phonegap.battery** で値は **PGBattery** です
+9. **バックアップした AppDelegate.h 及び AppDelegate.m** にあったプロジェクト固有のコードを新しい AppDelegate ファイルに **統合** します
+
+## 0.9.6 から 1.0.0 へのアップグレード ##
+
+1. Cordova 1.0.0 を **インストール** します
+2. **AppDelegate.m** と **AppDelegate.h** の **バックアップを作成します**
+3. **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持って行きます
+4. 以下のファイルを **新しい** プロジェクトから0.9.6ベースのプロジェクトのフォルダーにコピーし、古いファイルは **置き換え** ます (上のステップ2でファイルを **バックアップ** します):
+
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        MainViewController.xib
+5. すべての新しい **MainViewController** ファイルを Xcode プロジェクトに **追加** します
+6. 新規プロジェクトから **www/phonegap-1.0.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/phonegap-0.9.6.js** ファイルを削除します
+7.  **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **phonegap-1.0.0.js** ファイルを参照するように **更新** します
 8. **PhoneGap.plist** ファイルの **Plugins** の下に新しい要素を **追加** します - キーは **com.phonegap.battery** で値は **PGBattery** です
 9. **バックアップした AppDelegate.h 及び AppDelegate.m** にあったプロジェクト固有のコードを新しい AppDelegate ファイルに **統合** します
