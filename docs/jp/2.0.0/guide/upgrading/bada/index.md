@@ -20,9 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading Cordova Bada
 ======================
 
-これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。
+これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする
+必要がある人のためのドキュメントです。
 
-## 1.7.0 から 1.8.0 へのアップグレード ##
+## 1.9.0 から 2.0.0 へのアップグレード ##
+
+1. 新しい JavaScript ファイルを使って `Res/js/cordova.js` を更新します
+
+## 1.8.x から 1.9.0 へのアップグレード ##
+
+1. 新しい JavaScript ファイルを使って `Res/js/cordova.js` を更新します
+
+## 1.7.0 から 1.8.x へのアップグレード ##
 
 1. cordova.bada.js ファイルを Res/js ディレクトリから削除します
 2. 新しい cordova.js ファイルを Res/js ディレクトリに追加します
@@ -31,10 +40,9 @@ Upgrading Cordova Bada
 この行を次から:
 
     <script type="text/javascript" src="./js/cordova.bada.js"></script>
-
-
-*次に変更します*
+次に変更します:
 
     <script type="text/javascript" src="./js/cordova.js"></script>
 
-Cordova 1.8 では、 Bada 1.2 は既にサポートされていません。このリポジトリは今後も使用したい方のためにアーカイブとして存続します。このため、これにはいくつかの廃止された API が含まれます。
+Cordova 1.8 では、 Bada 1.2 は既にサポートされていません。
+このリポジトリは今後も使用したい方のためにアーカイブとして存続します。このため、これにはいくつかの廃止された API が含まれます。

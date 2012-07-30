@@ -22,40 +22,96 @@ Upgrading Cordova BlackBerry
 
 これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。
 
-- 1.9.0 にアップグレードするには、 1.8.1 からアップグレードしてください
-
-## 1.8.1 から 1.9.0 へのアップグレード ##
+## 1.9.0 から 2.0.0 へのアップグレード ##
 
 www フォルダーのアップデート:
 
 1. アプリの `www/` フォルダーを開きます
 2. `ext/` フォルダーにある .jar ファイルを削除し更新します
 3. `ext-air/` フォルダーの内容を更新します
-4. 新しい `cordova-1.9.0.js` をプロジェクトにコピーします
+4. 新しい `cordova-2.0.0.js` をプロジェクトにコピーします
     - playbook の場合は `playbook/` フォルダーの中の .js ファイルを更新します
-5. HTML を、新しい `cordova-1.9.0.js` を使って更新します
-6. マイクによる録音を使用可能にするために `www/config.xml` ファイルを次のように更新します:
+5. HTML を、新しい `cordova-2.0.0.js` を使って更新します
+6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
+   ネームスペース/サービスのラベルが変更されています。
+   古い Capture 及び Contact プラグインを次から:
 
-<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-また、新しいパーミッションを追加します:
+   次に変更します:
 
-<rim:permit>record_audio</rim:permit>
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+
 
 サンプルフォルダーのアップデート (例, ant ツールを使ったアップデート):
 
 1. `sample/lib/` フォルダーを開きます
-2. `cordova.1.8.1/ext/` フォルダーにある .jar ファイルを更新します
-3. `cordova.1.8.1/ext-air/` フォルダーの内容を更新します
-4. `cordova.1.8.1/javascript/` フォルダーにある .js ファイルを更新します
-5. `sample/lib/` フォルダーを開き、 `cordova.1.8.1/` フォルダーを `cordova.1.9.0/` へリネームします
+2. `cordova.1.9.0/ext/` フォルダーにある .jar ファイルを更新します
+3. `cordova.1.9.0/ext-air/` フォルダーの内容を更新します
+4. `cordova.1.9.0/javascript/` フォルダーにある .js ファイルを更新します
+5. `sample/lib/` フォルダーを開き、 `cordova.1.9.0/` フォルダーの名前を `cordova.2.0.0/` に変更します
 6. `www/` フォルダーを新しい Cordova でアップデートするため、 `ant blackberry build` または `ant playbook build` とタイプします
-7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.9.0.js` を使って更新します
-8. `www/` フォルダーを開き、マイクによる録音を使用可能にするために `www/config.xml` ファイルを次のように更新します:
+7. `www/` フォルダーを開き、新しい `cordova-2.0.0.js` を使って HTML を更新します
+8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
+   ネームスペース/サービスのラベルが変更されています。
+   古い Capture 及び Contact プラグインを次から:
 
-<feature id="blackberry.media.microphone" required="true" version="1.0.0.0"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-また、新しいパーミッションを追加します:
+   次に変更します:
 
-<rim:permit>record_audio</rim:permit>
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+
+
+
+
+- 1.8.0 にアップグレードするには、 1.7.0 からアップグレードしてください
+
+## 1.7.0 から 1.8.0 へのアップグレード ##
+
+www フォルダーのアップデート:
+
+1. アプリの `www/` フォルダーを開きます
+2. `ext/` フォルダーにある .jar ファイルを削除し更新します
+3. `ext-air/` フォルダーの内容を更新します
+4. 新しい `cordova-1.8.0.js` をプロジェクトにコピーします
+    - playbook の場合は `playbook/` フォルダーの中の .js ファイルを更新します
+5. 新しい `cordova-1.8.0.js` を使って HTML を更新します
+6. `www/plugins.xml` ファイルを更新します。2つのプラグインの
+   ネームスペース/サービスのラベルが変更されています。
+   古い Capture 及び Contact プラグインを次から:
+
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+
+   次に変更します:
+
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
+
+
+サンプルフォルダーのアップデート (例, ant ツールを使ったアップデート):
+
+1. `sample/lib/` フォルダーを開きます
+2. `cordova.1.7.0/ext/` フォルダーにある .jar ファイルを更新します
+3. `cordova.1.7.0/ext-air/` フォルダーの内容を更新します
+4. `cordova.1.7.0/javascript/` フォルダーにある .js ファイルを更新します
+5. `sample/lib/` フォルダーを開き、 `cordova.1.7.0/` フォルダーを `cordova.1.8.0/` へリネームします
+6. `www/` フォルダーを新しい Cordova でアップデートするため、 `ant blackberry build` または `ant playbook build` とタイプします
+7. `www/` フォルダーを開き、HTML を、新しい `cordova-1.8.0.js` を使って更新します
+8. `www/` フォルダーを開き `plugins.xml` ファイルを更新します。2つのプラグインの
+   ネームスペース/サービスのラベルが変更されています。
+   古い Capture 及び Contact プラグインを次から:
+
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
+
+   次に変更します:
+
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
