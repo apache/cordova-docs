@@ -30,6 +30,7 @@ Properties
 - __mimeType:__ The mime type of the data you are uploading.  If not set defaults to "image/jpeg". (DOMString)
 - __params:__ A set of optional key/value pairs to be passed along in the HTTP request. (Object)
 - __chunkedMode:__ Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)
+- __headers:__ A map of header name => header value. To specify multiple values for a header, use an array of values. (Object)
 
 
 Description
