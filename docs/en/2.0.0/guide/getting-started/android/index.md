@@ -112,7 +112,7 @@ This guide describes how to set up your development environment for Cordova and 
         <html>
         <head>
         <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
