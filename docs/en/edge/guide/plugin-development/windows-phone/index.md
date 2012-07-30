@@ -54,7 +54,7 @@ Writing a plugin for Cordova on Windows Phone requires a basic understanding of 
 	
 
 Namespaces
-===
+----------
 
 The default namespace for unqualified commands is :
 
@@ -80,7 +80,7 @@ Then, in JS you would need to call exec like this :
 
 
 Interpretting your arguments in C#
-===
+----------------------------------
 
 The data received by your plugin method is a string value, but in actuallality looking at our JavaScript code, we see our intention was to pass an array of strings.  Looking back at our JS call to cordova.exec, we see we passed [str]
 
@@ -100,7 +100,7 @@ We can use simple JSON deserialization.
 
 
 Passing results from C# to JS 
-===
+-----------------------------
 
 The base class BaseCommand provides methods for passing data to your JS callback handlers.
 To simply signal that the command has succeeded, when no additional result info is needed, you can can simply call :
@@ -121,7 +121,7 @@ If you need to signal that an error has occured, you can call DispatchCommandRes
 
 
 Handling serialization errors in your plugin's C# method
-===
+--------------------------------------------------------
 
 When interpretting your arguments, it is a good idea to use a try/catch block in case we have bad input.
 This is a pattern used throughout the Cordova C# code :
@@ -150,7 +150,7 @@ This is a pattern used throughout the Cordova C# code :
 
 
 Advanced Plugin Functionality
-===
+-----------------------------
 
 See other methods that you can override in:
 
@@ -158,14 +158,14 @@ See other methods that you can override in:
 
 For example, you can hook into the 'pause' and 'resume' application events.
 
-## Debugging Plugins
+### Debugging Plugins
 
 To debug the C# side, you can use Visual Studio's debugger, just set a break point at any of the methods exposed by your class.
 
 Javascript is a little more difficult to debug on Windows Phone, you will need to use console.log to output the state of your plugin, or inform yourself of errors.
 
 Common Pitfalls
-===
+---------------
 
 - Be careful when deciding on the arguments you pass to native in your JavaScript implementation.  Most device platforms expect the args passed to cordova.exec to be an array, but if you have different types of objects in this array, it becomes difficult or impossible to deserialize.
 
