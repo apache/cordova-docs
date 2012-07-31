@@ -97,7 +97,7 @@ Getting Started with Android
 *これにより、パーミッションの包括的なリストを追加していることに注意してください。 Google Play にアプリケーションを提出する前に、使用していないパーミッションは削除してください。
 - 画面の回転をサポートするために、以下を **&lt;activity&gt;** タグの中に貼り付けてください。
 
-        android:configChanges="orientation|keyboardHidden"
+        android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
 
 - AndroidManifest.xml は以下のようになります。
 
@@ -112,7 +112,7 @@ Getting Started with Android
         <html>
         <head>
         <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>
