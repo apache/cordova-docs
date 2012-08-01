@@ -22,10 +22,24 @@ Upgrading Cordova iOS
 
 Please note that **Xcode 4 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 5.1. The iOS 5.1 SDK requires Xcode 4.
 
+## Upgrading Cordova 2.0.0 projects to 2.1.0 ##
+
+1. **Download and extract the Cordova 2.1.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.1.0)
+2. **Quit Xcode** if it is running.
+3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
+4. Type **make** and press **Enter**. This will update the $(CORDOVALIB) build setting in Xcode to point to the CordovaLib in the permanent folder location above.
+5. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+6. **Copy** the **www/cordova-2.1.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.0.0.js** file
+7. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.1.0.js** file
+8. Copy the **"cordova"** folder from the new project into your project's root folder **(in 2.1.0, this has the updated scripts to support paths with spaces)** 
+9. Remove the **VERSION** file reference from your **project** (**NOT** the one in CordovaLib)
+
+    With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Reference Counting (ARC)**. You don't need to upgrade to **ARC** to use CordovaLib, but if you want to upgrade your project to use **ARC**, please use the Xcode migration wizard from the menu: **Edit -> Refactor -> Convert to Objective-C ARC…**, **de-select libCordova.a**, then run the wizard to completion. 
+
 ## Upgrading Cordova 1.9.0 projects to 2.0.0 ##
 
 1. **Install** Cordova 2.0.0
-2. **Create a new project** from the command-line tools - you will have to grab the assets from this new project
+2. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
 3. **Copy** the **www/cordova-2.0.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.9.0.js** file
 4. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.0.0.js** file
 5. Copy the **"cordova"** folder from the new project into your project's root folder (if you want the project command-line tools) 
