@@ -34,21 +34,29 @@ Requirements
 Install the iOS SDK and Apache Cordova
 ----------------------------------
 
-- Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
-- Install the Xcode Command Line Tools (Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install).
+- Install **Xcode** from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) or [Apple Developer Downloads](http://developer.apple.com/downloads)
+- Install the **Xcode Command Line Tools** (**Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install**).
 - Download the latest release of [Apache Cordova](http://phonegap.com/download)
     - extract its contents
     - Apache Cordova iOS is found under `lib/ios`
 
-Setup New Project
------------------
-- Run the installer **'Cordova-2.0.0.pkg'** to completion
-- Copy the **bin** folder (either from the source, or from the .dmg) to a location on your hard drive
 
-    ![](img/guide/getting-started/ios/bin_folder.png)
+Install CordovaLib 
+------------------
+
+1. **Download and extract the Cordova source** to a **permanent folder location** on your hard drive (for example, to ~/Documents/Cordova)
+2. **Quit Xcode** if it is running
+3. Launch **Terminal.app**
+4. Drag the permanent folder location of Cordova (from above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
+4. Type in `make` then press **"Enter"**. This will update the **$(CORDOVALIB)** build setting in Xcode to point to the CordovaLib in the permanent folder location above, for Cordova projects to find the CordovaLib project
+
+    ![](img/guide/getting-started/ios/make.png)
+
+Create a New Project
+--------------------
 
 - Launch **Terminal.app**
-- Drag the copied **bin** folder to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
+- Drag the **bin** folder (located in the permanent folder location of Cordova, from the **"Install Cordova"** section above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
 - Type in `./create <project_folder_path> <bundle_id> <project_name>` then press **"Enter"**
 
         <project_folder_path> is the path to your new Cordova iOS project (it must be empty if it exists)
