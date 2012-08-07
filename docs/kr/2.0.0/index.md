@@ -80,7 +80,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Setup each SDK and create your first Cordova app.</span>
         </li>
         <li>
-            <h2>Command-Line Usage</h2>
+            <h2>커맨드 라인 사용법 </h2>
             <span>Create, build, deploy, and debug from the command-line.</span>
         </li>
         <li>
