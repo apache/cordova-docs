@@ -106,7 +106,7 @@ iOS
 ### Details
 
 1. Open `Cordova.plist`.
-    - In Xcode, it is found at `AppName/Supporting Files/Cordova.plist`
+    - In Xcode, it is found at `AppName/Resources/Cordova.plist`
     - In the directory, it is found at `AppName/Cordova.plist`
 2. Add a new `String` value under the `ExternalHosts` key.
     - We recommend using Xcode to avoid editing raw XML.
