@@ -1,5 +1,5 @@
 {
-    "language": "English",
+    "language": "Korean",
     "merge": {
         "accelerometer.md": [
             "cordova/accelerometer/accelerometer.md",
