@@ -111,7 +111,6 @@ iOS
 2. Add a new `String` value under the `ExternalHosts` key.
     - We recommend using Xcode to avoid editing raw XML.
 
-Domain protocols (e.g. `http://` and `https://`) are not supported by iOS.
 
 ### Syntax
 
