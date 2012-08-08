@@ -112,6 +112,36 @@ __iOS Quirk__
 
 - only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to NOT enable the file to be backed up by iCloud. Set the value to **0** to re-enable the file to be backed up by iCloud.
 
+__Quick Example__
+
+    function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue) 
+    {
+	    var onSetMetadataWin = function() {
+	      console.log("success setting metadata")
+	    }
+        var onSetMetadataFail = function() {
+	      console.log("error setting metadata")
+        }
+
+	    var onGetFileWin = function(parent) {
+	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, { metadataKey: metadataValue});
+	    }
+	    var onGetFileFail = function() {
+	      console.log("error getting file")
+	    }
+
+	    var onFSWin = function(fileSystem) {
+	      fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+	    }
+
+	    var onFSFail = function(evt) {
+		  console.log(evt.target.error.code);
+	    }
+
+	    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+    }
+
+	setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
