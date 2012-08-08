@@ -113,6 +113,36 @@ __iOS Quirk__
 
 - only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to NOT enable the directory to be backed up by iCloud. Set the value to **0** to re-enable the directory to be backed up by iCloud.
 
+__Quick Example__
+
+    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue) 
+    {
+	    var onSetMetadataWin = function() {
+	      console.log("success setting metadata")
+	    }
+        var onSetMetadataFail = function() {
+	      console.log("error setting metadata")
+        }
+
+	    var onGetDirectoryWin = function(parent) {
+	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, { metadataKey: metadataValue});
+	    }
+	    var onGetDirectoryFail = function() {
+	      console.log("error getting dir")
+	    }
+
+	    var onFSWin = function(fileSystem) {
+	      fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
+	    }
+
+	    var onFSFail = function(evt) {
+		  console.log(evt.target.error.code);
+	    }
+
+	    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+    }
+
+	setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
