@@ -61,15 +61,22 @@ Please note that **Xcode 4 is required**. To submit to the Apple App Store, you 
 27. Select the **"VERSION"** file that you just dragged in a previous step
 28. Press the key combination **Option-Command-1** to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
 29. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location**
-30. **Build** your project, it should compile and link with **no issues**.
-31. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**
-32. Select the **Run** button
+30. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"** (this is so the unified headers can be found)
+31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
+32. Search for **"Header Search Paths"**. For that setting, add these three values below (with quotes):
 
-**NOTE 1:**<br /> 
+        "$(TARGET_BUILD_DIR)/usr/local/lib/include"
+    
+        "$(OBJROOT)/UninstalledProducts/include"
+    
+        "$(BUILT_PRODUCTS_DIR)"
+
+33. **Build** your project, it should compile and link with **no issues**.
+34. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**
+35. Select the **Run** button
+
+**NOTE:**<br /> 
 If your project is **not working** as expected in the Simulator, please **take a note of any errors** in the **console log in Xcode** for clues.
-
-**NOTE 2:**<br /> 
-For the **unified #import headers** to work, the build products should **build into the same build directory**. You may need to set the preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**
 
 ## Upgrading Cordova 1.8.x projects to 1.9.0 ##
 
