@@ -57,7 +57,7 @@ Create a New Project
 
 - Launch **Terminal.app**
 - Drag the **bin** folder (located in the permanent folder location of Cordova, from the **"Install Cordova"** section above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
-- Type in `./create <project_folder_path> <bundle_id> <project_name>` then press **"Enter"**
+- Type in `./create <project_folder_path> <package_name> <project_name>` then press **"Enter"**
 
         <project_folder_path> is the path to your new Cordova iOS project (it must be empty if it exists)
         <package_name> is the package name, following reverse-domain style convention
