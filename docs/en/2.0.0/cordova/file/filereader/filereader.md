@@ -74,7 +74,7 @@ Quick Example
 		reader.readAsDataURL(file);
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
@@ -100,7 +100,7 @@ Quick Example
 		reader.readAsText(file);
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
