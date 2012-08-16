@@ -78,8 +78,8 @@ Full Example
 			console.log(fileSystem.root.name);
 		}
 		
-		function fail(evt) {
-			console.log(evt.target.error.code);
+		function fail(error) {
+			console.log(error.code);
 		}
 		
         </script>
