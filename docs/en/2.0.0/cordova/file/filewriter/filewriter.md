@@ -68,7 +68,7 @@ Seek Quick Example
 		writer.seek(writer.length);	
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
@@ -81,7 +81,7 @@ Truncate Quick Example
 		writer.truncate(10);	
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
@@ -97,7 +97,7 @@ Write Quick Example
 		writer.write("some sample text");
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
@@ -114,7 +114,7 @@ Append Quick Example
 		writer.write("appended text");
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
@@ -131,7 +131,7 @@ Abort Quick Example
 		writer.abort();
 	};
 
-	var fail = function(evt) {
+	var fail = function(error) {
     	console.log(error.code);
 	};
 	
