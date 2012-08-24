@@ -112,7 +112,7 @@ Full Example
       <head>
         <title>Capture Photo</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source

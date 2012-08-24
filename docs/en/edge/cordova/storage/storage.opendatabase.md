@@ -53,7 +53,7 @@ Full Example
       <head>
         <title>Storage Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load

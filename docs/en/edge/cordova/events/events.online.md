@@ -57,12 +57,12 @@ Full Example
       <head>
         <title>Cordova Online Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Call onDeviceReady when Cordova is loaded.
         //
-        // At this point, the document has loaded but cordova-2.0.0.js has not.
+        // At this point, the document has loaded but cordova-2.1.0.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
         //
