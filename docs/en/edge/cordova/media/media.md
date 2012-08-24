@@ -35,6 +35,17 @@ Parameters
 - __mediaError__: (Optional) The callback that is invoked if there was an error. _(Function)_
 - __mediaStatus__: (Optional) The callback that is invoked to indicate status changes. _(Function)_
 
+Constants
+---------
+
+The following constants are reported as the only parameter to the __mediaStatus__ callback function.
+
+- `Media.MEDIA_NONE`     = 0;
+- `Media.MEDIA_STARTING` = 1;
+- `Media.MEDIA_RUNNING`  = 2;
+- `Media.MEDIA_PAUSED`   = 3;
+- `Media.MEDIA_STOPPED`  = 4;
+
 Methods
 -------
 
