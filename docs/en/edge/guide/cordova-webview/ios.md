@@ -40,19 +40,18 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 1. **Download and extract the Cordova source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. Type **make** and press **Enter**. This will update the $(CORDOVALIB) build setting in Xcode to point to the CordovaLib in the permanent folder location above.
-5. **Copy** the `Cordova.plist` file into your project folder on disk (see **Prerequisites** above)
-6. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
-7. **Choose** the radio-button **"Create groups for any added folders"**, select the **Finish** button
-8. **Drag and drop** the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the CordovaLib sub-folder)
-9. Select `CordovaLib.xcodeproj` in the Project Navigator
-10. Press the key combination **Option-Command-1** to show the **File Inspector**
-11. Choose **"Relative to CORDOVALIB"** in the **File Inspector** for the drop-down menu for **Location** 
-12. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
-13. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
-14. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
-15. Expand **"Link Binaries with Libraries"** 
-16. Select the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
+4. **Copy** the `Cordova.plist` file into your project folder on disk (see **Prerequisites** above)
+5. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
+6. **Choose** the radio-button **"Create groups for any added folders"**, select the **Finish** button
+7. **Drag and drop** the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the CordovaLib sub-folder)
+8. Select `CordovaLib.xcodeproj` in the Project Navigator
+9. Press the key combination **Option-Command-1** to show the **File Inspector**
+10. Choose **"Relative to Group"** in the **File Inspector** for the drop-down menu for **Location** 
+11. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
+12. Add `-all_load` and `-Obj-C` - for the **"Other Linker Flags"** value
+13. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Phases"** tab
+14. Expand **"Link Binaries with Libraries"** 
+15. Select the **"+" button**, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
 
         AddressBook.framework
         AddressBookUI.framework
@@ -65,14 +64,14 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
         MobileCoreServices.framework
         CoreMedia.framework
 
-17. Expand **"Target Dependencies"** - the top box labeled like this if you have multiple boxes!
-18. Select the **"+" button**, and add the `CordovaLib` build product
-19. Expand **"Link Binaries with Libraries"** - the top box labeled like
+16. Expand **"Target Dependencies"** - the top box labeled like this if you have multiple boxes!
+17. Select the **"+" button**, and add the `CordovaLib` build product
+18. Expand **"Link Binaries with Libraries"** - the top box labeled like
     this if you have multiple boxes!
-20. Select the **"+" button**, and add `libCordova.a`
-21. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**
-22. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
-23. Search for **"Header Search Paths"**. For that setting, add these three values below (with quotes):
+19. Select the **"+" button**, and add `libCordova.a`
+20. Set the Xcode preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**
+21. Select the **project icon** in the Project Navigator, select your **Target**, then select the **"Build Settings"** tab
+22. Search for **"Header Search Paths"**. For that setting, add these three values below (with quotes):
 
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"
     

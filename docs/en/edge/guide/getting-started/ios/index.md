@@ -44,19 +44,15 @@ Install the iOS SDK and Apache Cordova
 Install CordovaLib 
 ------------------
 
-1. **Download and extract the Cordova source** to a **permanent folder location** on your hard drive (for example, to ~/Documents/Cordova)
-2. **Quit Xcode** if it is running
-3. Launch **Terminal.app**
-4. Drag the permanent folder location of Cordova (from above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
-4. Type in `make` then press **"Enter"**. This will update the **$(CORDOVALIB)** build setting in Xcode to point to the CordovaLib in the permanent folder location above, for Cordova projects to find the CordovaLib project
-
-    ![](img/guide/getting-started/ios/make.png)
+1. **Download** the Cordova source
+2. **Extract** to source to their final permanent location on your hard drive (for example, to ~/Documents/CordovaLib-2.X.X)
+3. There is no step 3
 
 Create a New Project
 --------------------
 
 - Launch **Terminal.app**
-- Drag the **bin** folder (located in the permanent folder location of Cordova, from the **"Install Cordova"** section above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
+- Drag the **bin** folder (located in the permanent folder location of Cordova, from the **"Install CordovaLib"** section above) to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
 - Type in `./create <project_folder_path> <package_name> <project_name>` then press **"Enter"**
 
         <project_folder_path> is the path to your new Cordova iOS project (it must be empty if it exists)
@@ -103,8 +99,6 @@ Results
 Problems in Xcode
 ----------------
 If you have compilation problems related to missing headers, the build products should **build into the same build directory**. You may need to set the preference **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** to **"Unique"**. This is the default setting for Xcode on a fresh new install, if you upgraded from older versions of Xcode, you might have a legacy preference in there that you need to update.
-
-Also, when installing **Cordova-2.0.0.pkg**, you must ensure Xcode is not running, if not certain Xcode variables won't be set. 
 
 
 Build Your App
