@@ -58,7 +58,11 @@ Supported Platforms
 iOS Quirks
 ----------
 
-Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully close before the alert is displayed: setTimeout("alert('message');", 0);
+Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully close before the alert is displayed: 
+
+    setTimeout(function() { 
+        // do your thing here!
+    }, 0);
 
 Windows Phone 7 Quirks
 ----------------------
