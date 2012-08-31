@@ -72,7 +72,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7 (Mango)
+- Windows Phone 7.5
 - Tizen
 
 Permissions
@@ -135,3 +135,8 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 ### Tizen
 
     No permissions are required.
+
+
+### Windows Phone Quirks
+    Only one media file can be played back at a time.
+    There are strict restrictions as to how your application interacts with other media. See http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx     
