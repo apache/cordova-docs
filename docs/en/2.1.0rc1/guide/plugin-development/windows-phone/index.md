@@ -82,7 +82,7 @@ Then, in JS you would need to call exec like this:
 Interpretting your arguments in C#
 ----------------------------------
 
-The data received by your plugin method is a string value, but in actuallality
+The data received by your plugin method is a string value, but in actuality
 looking at our JavaScript code, we see our intention was to pass an array of strings.
 Looking back at our JS call to `cordova.exec`, we see we passed `[str]`:
 
