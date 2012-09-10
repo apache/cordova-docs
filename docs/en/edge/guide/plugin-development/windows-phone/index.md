@@ -125,7 +125,7 @@ If you need to signal that an error has occured, you can call `DispatchCommandRe
 Handling serialization errors in your plugin's C# method
 --------------------------------------------------------
 
-When interpretting your arguments, it is a good idea to use a try/catch block
+When interpreting your arguments, it is a good idea to use a try/catch block
 in case we have bad input. This is a pattern used throughout the Cordova C# code:
 
     string optVal = null;

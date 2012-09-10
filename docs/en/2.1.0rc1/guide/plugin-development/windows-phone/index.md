@@ -79,7 +79,7 @@ Then, in JS you would need to call exec like this:
 
     cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
-Interpretting your arguments in C#
+Interpreting your arguments in C#
 ----------------------------------
 
 The data received by your plugin method is a string value, but in actuality
@@ -125,7 +125,7 @@ If you need to signal that an error has occured, you can call `DispatchCommandRe
 Handling serialization errors in your plugin's C# method
 --------------------------------------------------------
 
-When interpretting your arguments, it is a good idea to use a try/catch block
+When interpreting your arguments, it is a good idea to use a try/catch block
 in case we have bad input. This is a pattern used throughout the Cordova C# code:
 
     string optVal = null;
