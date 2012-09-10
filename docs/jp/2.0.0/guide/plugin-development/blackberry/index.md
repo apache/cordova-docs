@@ -59,7 +59,7 @@ Echo 関数:
 ## Echo.java の追加
 
 もし value 属性の構造にお気づきなら、 Echo プラグインへの定義されたパスが見えるでしょう。
-Cordova BlackBerry Webworks のリポジトリーのルートフォルダーで、 framework と呼ばれるフォルダーを探してください。
+Cordova BlackBerry WebWorks のリポジトリーのルートフォルダーで、 framework と呼ばれるフォルダーを探してください。
 このフォルダーは BlackBerry 上で動くすべてのソースコードを含んでいます。
 このフォルダー以下の `framework/ext/src/org/apache/cordova` にフォルダーに辿りつくまで cd し続けます。
 この時すべてのプラグインフォルダーが見えるでしょう。また、それぞれのフォルダーの中身はプラグインのソースコードとなっています。
@@ -127,7 +127,7 @@ cordova.exec へのすべての呼び出しは、クラス内で実行したい�
 
 ## www フォルダーの .jar の更新
 
-あなたのプロジェクト内で Echo.java の追加分が更新される必要があります。 .jar ファイルをビルドするためには、 BlackBerry Webworks リポジトリーのルートディレクトリに cd します。
+あなたのプロジェクト内で Echo.java の追加分が更新される必要があります。 .jar ファイルをビルドするためには、 BlackBerry WebWorks リポジトリーのルートディレクトリに cd します。
 次の ant コマンドを使用します:
 
     ant update -Dproject.path="~/path_to_my_project"
