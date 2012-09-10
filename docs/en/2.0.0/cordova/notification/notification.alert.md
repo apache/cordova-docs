@@ -109,7 +109,7 @@ Windows Phone 7 Quirks
 
 - Ignores button names, always uses 'OK'
 - There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-- alert + confirm calls are non-blocking, and result is only available asyncronously.
+- alert + confirm calls are non-blocking, and result is only available asynchronously.
 
 Bada 2.x Quirks
 ---------------
