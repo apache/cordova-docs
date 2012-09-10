@@ -25,7 +25,7 @@ This guide describes how to set up your development environment for Cordova and 
 Video Tutorials:
 ----------------
 
-- [Cordova and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
+- [Cordova and Android Quick Start Video Using Eclipse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
 
 
 1. Requirements

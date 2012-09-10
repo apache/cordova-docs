@@ -24,7 +24,7 @@ Getting Started with Android
 Video Tutorials:
 ----------------
 
-- [PhoneGap and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
+- [PhoneGap and Android Quick Start Video Using Eclipse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
 
 
 1. Requirements
