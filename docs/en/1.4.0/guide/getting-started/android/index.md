@@ -84,7 +84,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
-- Add a second activity under you appliction tag in AndroidManifest. (view image below)
+- Add a second activity under you application tag in AndroidManifest. (view image below)
 	
 	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 
