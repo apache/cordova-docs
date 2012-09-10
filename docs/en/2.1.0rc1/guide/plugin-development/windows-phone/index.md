@@ -120,7 +120,7 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
 If you need to signal that an error has occurred, you can call `DispatchCommandResult` with a `PluginResult` object:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signalled an error"));
+    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
 
 Handling serialization errors in your plugin's C# method
 --------------------------------------------------------
