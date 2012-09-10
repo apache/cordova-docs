@@ -23,7 +23,7 @@ Domain Whitelist Guide
 Overview
 --------
 
-Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then delcare access to specific network domains and subdomains.
+Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then declare access to specific network domains and subdomains.
 
 Specification
 -------------
