@@ -27,7 +27,7 @@ This is an event that fires when the user presses the back button on Android.
 Details
 -------
 
-If you need to over ride the default back button behaviour on Android you can register and event listenter for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
+If you need to over ride the default back button behaviour on Android you can register and event listener for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 

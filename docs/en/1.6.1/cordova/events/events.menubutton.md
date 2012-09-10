@@ -27,7 +27,7 @@ This is an event that fires when the user presses the menu button.
 Details
 -------
 
-If you need to override the default menu button behaviour you can register an event listenter for the 'menubutton' event.
+If you need to override the default menu button behaviour you can register an event listener for the 'menubutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
 
