@@ -112,13 +112,6 @@ Windows Phone 7 and 8 Quirks
 - There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
 - alert + confirm calls are non-blocking, and result is only available asynchronously.
 
-Windows 8 App Quirks
----------------
-
-- In the other platforms, messages "stack up" - e.g. issue two **alert** requests and you'll get two messages overlaid. In Windows 8 apps, 
-you only get the last message.
-- There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-
 Bada 2.x Quirks
 ---------------
 - alert uses javascript alert

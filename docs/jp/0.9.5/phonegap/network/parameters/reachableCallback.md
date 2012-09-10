@@ -56,7 +56,7 @@ reachableCallback
 BlackBerry に関する注意点
 -----------------
 
-　`reachablity`　の値としてネットワークの状態を返します。
+　`reachability`　の値としてネットワークの状態を返します。
 
     function reachableCallback(reachability) {
         var hasConnection = (reachability !== NetworkStatus.NOT_REACHABLE);

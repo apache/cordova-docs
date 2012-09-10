@@ -40,7 +40,7 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 -------------------------
 
 - Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select "make" as it is not included by default
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project

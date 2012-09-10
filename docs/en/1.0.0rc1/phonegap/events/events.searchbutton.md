@@ -27,7 +27,7 @@ This is an event that fires when the user presses the search button on Android.
 Details
 -------
 
-If you need to over ride the default search button behaviour on Android you can register and event listenter for the 'searchbutton' event.
+If you need to over ride the default search button behaviour on Android you can register and event listener for the 'searchbutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
@@ -42,7 +42,7 @@ Quick Example
     document.addEventListener("searchbutton", onSearchKeyDown, false);
 
     function onSearchKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example

@@ -175,7 +175,7 @@ Full Example
 
         // Called if something bad happens.
         // 
-        function onFail(mesage) {
+        function onFail(message) {
           alert('Failed because: ' + message);
         }
 

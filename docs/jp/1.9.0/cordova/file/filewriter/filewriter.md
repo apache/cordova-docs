@@ -31,7 +31,7 @@ FileWriter はファイルへの書き込みを行うオブジェクトです。
 - __position:__ ファイルポインタの現在の位置を表します _(long)_
 - __error:__ エラー情報を表します _(FileError)_
 - __onwritestart:__ 書き込み開始時に呼ばれる関数を表します _(Function)_
-- __onprogress:__ ファイル書き込み中に呼ばれ、進捗状況を報告する関数を表します (progess.loaded/progress.total) _(Function)_ - 現在サポートされていません
+- __onprogress:__ ファイル書き込み中に呼ばれ、進捗状況を報告する関数を表します (progress.loaded/progress.total) _(Function)_ - 現在サポートされていません
 - __onwrite:__ リクエストが成功したときに呼ばれる関数を表します _(Function)_
 - __onabort:__ abort() メソッドを実行したときなど、 書き込みが強制終了したときに呼ばれる関数を表します _(Function)_
 - __onerror:__ 書き込みが失敗したときに呼ばれる関数を表します _(Function)_

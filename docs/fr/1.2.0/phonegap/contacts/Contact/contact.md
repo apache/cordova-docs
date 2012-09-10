@@ -215,7 +215,7 @@ Singularités BlackBerry WebWorks (OS 5.0 et plus récent)
 
 Singularités iOS
 ----------------
-- __displayName:__ Cette propriété n'est pas supportée sur iOS et sera ignorée à l'enregistrement sauf si aucun `ContactName` n'est renseigné.  A la récupération du contact, si aucun `ContactName` n'est renseigné, alors le "Composite Name" iOS, __nickame__ ou "" sera utilisé comme valeur de __displayName__. 
+- __displayName:__ Cette propriété n'est pas supportée sur iOS et sera ignorée à l'enregistrement sauf si aucun `ContactName` n'est renseigné.  A la récupération du contact, si aucun `ContactName` n'est renseigné, alors le "Composite Name" iOS, __nickname__ ou "" sera utilisé comme valeur de __displayName__. 
 - __birthday:__ En entrée, cette propriété doit être valorisée avec un objet Date JavaScript. Elle est renvoyée également sous forme d'objet Date JavaScript.
 - __photos:__ La photo du contact est déposée dans le dossier temporaire de l'application et c'est l'URI de ce fichier image qui est renvoyée. Le contenu du dossier temporaire est supprimé à la fermeture de l'application.
 - __categories:__ Cette propriété n'est pas supportée et vaudra toujours `null`.

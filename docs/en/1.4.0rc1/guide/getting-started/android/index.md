@@ -24,7 +24,7 @@ Getting Started with Android
 Video Tutorials:
 ----------------
 
-- [PhoneGap and Android Quick Start Video Using Ecliplse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
+- [PhoneGap and Android Quick Start Video Using Eclipse](http://www.youtube.com/v/MzcIcyBYJMA?autoplay=1)
 
 
 1. Requirements
@@ -41,7 +41,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 - Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
  3. Setup New Project
 -----------------------
@@ -84,7 +84,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 - Add `android:configChanges="orientation|keyboardHidden"` to the activity tag in AndroidManifest. (view image below)
-- Add a second activity under you appliction tag in AndroidManifest. (view image below)
+- Add a second activity under you application tag in AndroidManifest. (view image below)
 	
 	    <activity android:name="com.phonegap.DroidGap" android:label="@string/app_name" android:configChanges="orientation|keyboardHidden"> <intent-filter> </intent-filter> </activity>
 

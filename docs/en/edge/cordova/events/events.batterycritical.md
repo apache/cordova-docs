@@ -60,7 +60,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Battery Criticaly Example</title>
+        <title>Cordova Battery Critical Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">

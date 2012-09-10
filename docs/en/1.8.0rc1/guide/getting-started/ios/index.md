@@ -33,14 +33,14 @@ Video Tutorials:
 - Intel-based computer with Mac OS X Lion (10.7)
 - Necessary for Installing on Device:
     - An Apple iOS device (iPhone, iPad, iPod Touch)
-    - iOS ceveloper certification
+    - iOS developer certification
 
 
 2. Install SDK + Cordova
 ------------------------
 
 - Install Xcode from the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) </p>
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the **lib/ios** directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the **lib/ios** directory.
 
 
 3. Setup New Project

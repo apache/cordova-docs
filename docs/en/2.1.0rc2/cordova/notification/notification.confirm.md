@@ -120,7 +120,7 @@ Windows Phone 7 Quirks
 - Ignores button names, always `'OK|Cancel'`.
 - There is no built-in browser function for `window.confirm`
     - You can bind `window.confirm` by assigning `window.confirm = navigator.notification.confirm;`.
-- Calls to `alert` and `confirm` are non-blocking and result is only available asyncronously.
+- Calls to `alert` and `confirm` are non-blocking and result is only available asynchronously.
 
 Bada 2.x Quirks
 ---------------

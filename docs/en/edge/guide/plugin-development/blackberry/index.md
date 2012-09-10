@@ -26,7 +26,7 @@ In this article, we will explore how to develop the Echo plugin on BlackBerry. I
 top level article about the JavaScript part of the plugin, it would be best if you read that first
 and then this article. In addition, please download the [Cordova Blackberry repo](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary).
 
-To note, the Corodova-BlackBerry project allows you to deploy to BlackBerry devices like the 
+To note, the Cordova-BlackBerry project allows you to deploy to BlackBerry devices like the
 Torch, Bold, etc and as well as the Playbook. There exists a distinction between deploying to
 normal BlackBerry hand held devices (ie, Torch and Bold) and the Playbook. The code base between
 the two are separate so when you develop for one, you have to duplicate your efforts for the other!
@@ -59,7 +59,7 @@ Cordova will know how to map the "Echo" argument of `cordova.exec` to the Echo c
 ## Adding Echo.java
 
 If you notice the structure of the value attribute, you'll see a defined path that leads to the Echo
-plugin. In the root folder of the Cordova BlackBerry Webworks repo, look for a folder called framework.
+plugin. In the root folder of the Cordova BlackBerry WebWorks repo, look for a folder called framework.
 This folder contains all of the source code that runs natively on the BlackBerry. cd into the folder 
 structure until you reach the path: `framework/ext/src/org/apache/cordova`. At this point, you'll see
 all of the plugin folders and inside each folder is the plugins' source code. So, we will add
@@ -126,7 +126,7 @@ callback in JavaScript.
 ## Updating the .jar in your project's www folder
 
 The addition of the Echo.java needs to be updated in your project so to build the .jar file, cd
-to the root directory of the BlackBerry Webworks repo. Use the ant command:
+to the root directory of the BlackBerry WebWorks repo. Use the ant command:
 
     ant update -Dproject.path="~/path_to_my_project"
 

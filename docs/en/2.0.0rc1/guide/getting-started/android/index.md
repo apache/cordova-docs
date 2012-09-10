@@ -44,7 +44,7 @@ This guide describes how to set up your development environment for Cordova and 
     ![](img/guide/getting-started/android/step_1.jpg)
 - Then specify new application project
     ![](img/guide/getting-started/android/step_2.jpg)
-- Then speciy an Application Name, a Project Name and Package Name with Namespace
+- Then specify an Application Name, a Project Name and Package Name with Namespace
     ![](img/guide/getting-started/android/step_3.jpg)
 - Then select a graphic
     ![](img/guide/getting-started/android/step_4.jpg)

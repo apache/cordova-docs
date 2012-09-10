@@ -42,7 +42,7 @@ For 4.x devices check out [this guide](http://wiki.phonegap.com/w/page/25653281/
 - (Windows Only) Download and install [SUN JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version). Add it to your PATH variable.
 - (Windows Only) Download and extract [Apache Ant](http://ant.apache.org/bindownload.cgi). Add it to your PATH variable.
 - Download [BlackBerry WebWorks Smartphone SDK](ttps://bdsc.webapps.blackberry.com/html5/download/sdk) for BlackBerry development and/or [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk) for Playbook development. Keep note of the directories you install these SDKs.
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project

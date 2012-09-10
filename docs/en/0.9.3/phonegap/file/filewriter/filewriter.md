@@ -31,7 +31,7 @@ Properties
 - __position:__ The current position of the file pointer. _(long)_
 - __error:__ An object containing errors. _(FileError)_
 - __onwritestart:__ Called when the write starts. . _(Function)_
-- __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_
+- __onprogress:__ Called while writing the file, reports progress (progress.loaded/progress.total). _(Function)_
 - __onload:__ Called when the write has successfully completed. _(Function)_
 - __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
 - __onerror:__ Called when the write has failed. _(Function)_

@@ -31,7 +31,7 @@ This guide describes how to set up your development environment for Cordova and 
 -------------------------
 
 - Download and install the [Tizen SDK](https://developer.tizen.org/sdk).
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the tizen directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the tizen directory.
 - (optional) Install Tizen Cordova template projects: copy the `/templates` directory content into you Tizen Eclipse IDE web templates directory (e.g: `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
 3. Setup New Project
@@ -96,7 +96,7 @@ This guide describes how to set up your development environment for Cordova and 
 --------------------
 
 - Make sure that your target device is properly launched/connected/configured ("Date and Time" settings must have been set correctly)
-- Select your application deployement target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
+- Select your application deployment target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
 
     ![](img/guide/getting-started/tizen/connection_explorer.png)
 

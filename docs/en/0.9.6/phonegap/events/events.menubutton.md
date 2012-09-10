@@ -27,7 +27,7 @@ This is an event that fires when the user presses the menu button on Android.
 Details
 -------
 
-If you need to over ride the default menu button behaviour on Android you can register and event listenter for the 'menubutton' event.
+If you need to over ride the default menu button behaviour on Android you can register and event listener for the 'menubutton' event.
 
 Typically, you will want to attach an event listener with `document.addEventListener` once you receive the PhoneGap 'deviceready' event.
 
@@ -42,7 +42,7 @@ Quick Example
     document.addEventListener("menubutton", onMenuKeyDown, false);
 
     function onMenuKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example

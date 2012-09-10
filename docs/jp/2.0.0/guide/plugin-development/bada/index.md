@@ -26,7 +26,7 @@ Bada の実装はすべて JavaScript の実装です。そのため、カスタ
 
 1. CordovaJS リポジトリーを clone します
 
-        git clone https://git-wip-us.apache.org/repos/asf/incubuator-cordova-js.git
+        git clone https://git-wip-us.apache.org/repos/asf/incubator-cordova-js.git
 
 2. __lib/bada/plugin/bada/__ 以下に新しい JavaScript ファイルを作成し、 _HelloWorld.js_ と名前をつけます。以下の内容を追加します:
 
@@ -57,7 +57,7 @@ Bada の実装はすべて JavaScript の実装です。そのため、カスタ
         };
 5. これで、好きなようにユーザー向けの JavaScript を書くことができます。しかし、プラグインを実行するためには、以下のメソッドを呼び出す必要があることを忘れないで下さい
 
-        exec(succes, fail, 'HelloWorld', 'printHello', ['Jackson!']);
+        exec(success, fail, 'HelloWorld', 'printHello', ['Jackson!']);
 
     success はプラグインが正常に終了したときに実行される成功コールバック関数です
     fail はプラグインが正常に終了しなかったときに実行されるエラーコールバック関数です

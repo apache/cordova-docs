@@ -33,7 +33,7 @@ The JavaScript portion of a plugin always uses the `cordova.exec` method as foll
 
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
-This will marshall a request from the WebView to the Android native
+This will marshal a request from the WebView to the Android native
 side, more or less boiling down to calling the `action` method on the
 `service` class, with the arguments passed in the `args` Array.
 

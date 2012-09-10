@@ -31,7 +31,7 @@ Atributos
 - __position:__ La posición actual del puntero del archivo. _(long)_
 - __error:__ Un objeto conteniendo errores. _(FileError)_
 - __onwritestart:__ Llamada cuando la escritura comienza. _(Function)_
-- __onprogress:__ Llamada mientras se escribe el archivo, reporta el progreso (progess.loaded/progress.total). _(Function)_ -NO SOPORTADO
+- __onprogress:__ Llamada mientras se escribe el archivo, reporta el progreso (progress.loaded/progress.total). _(Function)_ -NO SOPORTADO
 - __onwrite:__ Llamada cuando la escritura se completo satisfactoriamente. _(Function)_
 - __onabort:__ Llamada cuando la escritura sea abortada. Por ejemplo cuando se llama al método `FileWriter.abort`. _(Function)_
 - __onerror:__ Llamada cuando la escritura falle. _(Function)_

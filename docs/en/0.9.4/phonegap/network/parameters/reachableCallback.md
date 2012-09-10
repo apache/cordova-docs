@@ -55,7 +55,7 @@ Example
 BlackBerry Quirks
 -----------------
 
-Provides the network status as the value of `reachablity`
+Provides the network status as the value of `reachability`
 
     function reachableCallback(reachability) {
         var hasConnection = (reachability !== NetworkStatus.NOT_REACHABLE);

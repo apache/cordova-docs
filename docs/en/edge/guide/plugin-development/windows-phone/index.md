@@ -77,7 +77,7 @@ call to `cordova.exec`. For example, if you wanted to define your C# class like 
 
 Then, in JS you would need to call exec like this:
 
-    codova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
+    cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
 Interpreting your arguments in C#
 ----------------------------------
@@ -118,14 +118,14 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
 
-If you need to signal that an error has occured, you can call `DispatchCommandResult` with a `PluginResult` object:
+If you need to signal that an error has occurred, you can call `DispatchCommandResult` with a `PluginResult` object:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signalled an error"));
+    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
 
 Handling serialization errors in your plugin's C# method
 --------------------------------------------------------
 
-When interpretting your arguments, it is a good idea to use a try/catch block
+When interpreting your arguments, it is a good idea to use a try/catch block
 in case we have bad input. This is a pattern used throughout the Cordova C# code:
 
     string optVal = null;

@@ -41,7 +41,7 @@ Properties
 - __photos:__ An array of the contact's photos. _(ContactField[])_
 - __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
 - __urls:__  An array of web pages associated to the contact. _(ContactField[])_
-- __timezone:__ The timezone of the conact. _(DOMString)_
+- __timezone:__ The timezone of the contact. _(DOMString)_
 
 Methods
 -------
@@ -226,7 +226,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
+- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
 - __revision:__ This property is output only and can not be modified.  It is returned as a JavaScript Date object.
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
 - __gender:__ This property is not supported by iOS devices, and will always be returned as `null`.

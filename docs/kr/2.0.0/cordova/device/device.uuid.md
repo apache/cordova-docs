@@ -100,4 +100,4 @@ The uuid for iOS is not unique for a device, but is unique per application per i
 Windows Phone 7 Quirks
 -------------
 
-The uuid for Windows Phone 7 requires the permission ID_CAP_IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capablility is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.
+The uuid for Windows Phone 7 requires the permission ID_CAP_IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capability is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.

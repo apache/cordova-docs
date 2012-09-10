@@ -117,4 +117,4 @@ Tizen Quirks
 -------------
 
   - Tizen implements beep by playing an audio file via the media API.
-  - This beep file must be short, named `beep.wav` and has to be located in a 'sounds' sub-directory of the application root disctory.
+  - This beep file must be short, named `beep.wav` and has to be located in a 'sounds' sub-directory of the application root directory.
