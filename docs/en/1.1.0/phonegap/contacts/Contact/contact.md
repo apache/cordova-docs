@@ -215,7 +215,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickame__ or "" is returned for __displayName__, respectively. 
+- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
 - __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.

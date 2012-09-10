@@ -215,7 +215,7 @@ Peculiaridades BlackBerry WebWorks (OS 5.0 y superior)
 
 Peculiaridades iOS
 ------------------
-- __displayName:__ Esta propiedad no esta soportada por iOS y siempre retornara `null` a menos que no halla un ContactName especificado. Si no hay ningún ContactName, entonces respectivamente el nombre compuesto, el __nickame__ o "" como valor de __displayName__. 
+- __displayName:__ Esta propiedad no esta soportada por iOS y siempre retornara `null` a menos que no halla un ContactName especificado. Si no hay ningún ContactName, entonces respectivamente el nombre compuesto, el __nickname__ o "" como valor de __displayName__. 
 - __birthday:__ Cuando introduzcas esta propiedad, esta debe ser dada como un objeto Date de JavaScript. También se retorna como un objeto Date de JavaScript.
 - __photos:__ La foto se guarda en el directorio temporal de aplicaciones, y retorna una URL hacia esta. El contenido de este directorio temporal se eliminara cuando la aplicacion termine. 
 - __categories:__  Esta propiedad no esta soportada, y siempre retornara `null`.
