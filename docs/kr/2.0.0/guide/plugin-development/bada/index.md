@@ -57,7 +57,7 @@ The Bada implementation is a full javascript implementation. Therefore, adding a
         };
 5. Now you can write your user-facing javascript however you like but remember that in order for your plugin to execute you need to call the following method
 
-        exec(succes, fail, 'HelloWorld', 'printHello', ['Jackson!']);
+        exec(success, fail, 'HelloWorld', 'printHello', ['Jackson!']);
 
     success is the success callback that gets executed when the plugin succeeds
     fail is the failure callback that gets executed if the plugin fails
