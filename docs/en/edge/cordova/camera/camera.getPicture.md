@@ -42,7 +42,7 @@ You can do whatever you want with the encoded image or URI, for example:
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-Note: The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+__Note:__ The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  ___Encoding such images using Base64 has caused memory issues on many newer devices.  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.___
 
 Supported Platforms
 -------------------
