@@ -56,7 +56,7 @@ class TableOfContents
       end
     end
     
-    # Return if one or less elments found (useless selection box)
+    # Return if one or less elements found (useless selection box)
     #
     return nil if option_set.length <= 1
     
