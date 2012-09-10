@@ -34,7 +34,7 @@ By the way, you rock! Thanks for helping us improve the documentation!
 
 Are you new to Git or contributing on GitHub?
 
-We have [written a few Git tutorials](http://wiki.apache.org/cordova/ContributerWorkflow)
+We have [written a few Git tutorials](http://wiki.apache.org/cordova/ContributorWorkflow)
 to help you get started with contributing to the documentation.
 
 ### Sending Pull Requests
