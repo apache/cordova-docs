@@ -88,7 +88,7 @@ This guide describes how to set up your development environment for Cordova and 
         <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
-- Support orientation changes by pasting the folowing inside the **&lt;activity&gt;** tag.
+- Support orientation changes by pasting the following inside the **&lt;activity&gt;** tag.
 
         android:configChanges="orientation|keyboardHidden"
 
