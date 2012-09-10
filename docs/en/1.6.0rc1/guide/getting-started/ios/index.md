@@ -41,7 +41,7 @@ Video Tutorials:
 ------------------------
 
 - Download and install Xcode from [Apple Developer Portal](http://developer.apple.com) (Membership required)</p>
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 
 3. Setup New Project

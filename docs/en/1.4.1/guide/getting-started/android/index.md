@@ -41,7 +41,7 @@ There is also a [Terminal](http://wiki.phonegap.com/w/page/30864168/phonegap-and
 - Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
-- Donwload the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
+- Download the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
  3. Setup New Project
 -----------------------

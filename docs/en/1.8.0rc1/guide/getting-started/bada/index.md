@@ -32,7 +32,7 @@ This guide describes how to set up your development environment for Cordova and 
 -------------------------
 
 - Download and install the [Bada SDK](http://developer.bada.com) (Windows only). 
-- Donwload the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the bada directory.
+- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the bada directory.
 
 
 3. Setup New Project
