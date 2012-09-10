@@ -36,7 +36,7 @@ Paramètres
 Description
 -----------
 
-La fonction `geolocation.getCurrentPositon` est asynchrone. Elle retourne la position courante du mobile à la fonction de callback `geolocationSuccess` avec en paramètre un objet `Position`.  Si une erreur survient, la fonction de callback `geolocationError` est appelée avec en paramètre un object `PositionError`.
+La fonction `geolocation.getCurrentPosition` est asynchrone. Elle retourne la position courante du mobile à la fonction de callback `geolocationSuccess` avec en paramètre un objet `Position`.  Si une erreur survient, la fonction de callback `geolocationError` est appelée avec en paramètre un object `PositionError`.
 
 
 Plateformes supportées

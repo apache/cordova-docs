@@ -36,7 +36,7 @@ Argumentos
 Descripción
 -----------
 
-La función `geolocation.getCurrentPositon` es asíncrona. Retornara la actual posición del dispositivo a la función 'callback' `geolocationSuccess` con el objeto `Position` como argumento. Si ocurriese un error, se llamara a `geolocationError` pasándole el objeto `PositionError` como argumento.
+La función `geolocation.getCurrentPosition` es asíncrona. Retornara la actual posición del dispositivo a la función 'callback' `geolocationSuccess` con el objeto `Position` como argumento. Si ocurriese un error, se llamara a `geolocationError` pasándole el objeto `PositionError` como argumento.
 
 
 Plataformas Soportadas

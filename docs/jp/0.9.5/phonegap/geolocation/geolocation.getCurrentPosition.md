@@ -36,7 +36,7 @@ geolocation.getCurrentPosition
 概要
 -----------
 
-`geolocation.getCurrentPositon` は `Position` オブジェクトをパラメータとして `geolocationSuccess` コールバック関数にデバイスの現在位置を返す非同期関数です。
+`geolocation.getCurrentPosition` は `Position` オブジェクトをパラメータとして `geolocationSuccess` コールバック関数にデバイスの現在位置を返す非同期関数です。
 また、エラーが発生した場合 `geolocationError` コールバック関数を `PositionError` オブジェクトとともに呼び出します。
 
 
