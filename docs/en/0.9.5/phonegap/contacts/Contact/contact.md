@@ -41,7 +41,7 @@ Properties
 - __photos:__ An array of the contact's photos. _(ContactField[])_
 - __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
 - __urls:__  An array of web pages associated to the contact. _(ContactField[])_
-- __timezone:__ The timezone of the conact. _(DOMString)_
+- __timezone:__ The timezone of the contact. _(DOMString)_
 
 Methods
 -------
