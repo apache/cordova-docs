@@ -118,7 +118,7 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
 
-If you need to signal that an error has occured, you can call `DispatchCommandResult` with a `PluginResult` object:
+If you need to signal that an error has occurred, you can call `DispatchCommandResult` with a `PluginResult` object:
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signalled an error"));
 
