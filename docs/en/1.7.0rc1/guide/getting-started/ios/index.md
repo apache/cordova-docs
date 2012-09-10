@@ -33,7 +33,7 @@ Video Tutorials:
 - Intel-based computer with Mac OS X Lion (10.7)
 - Necessary for Installing on Device:
     - An Apple iOS device (iPhone, iPad, iPod Touch)
-    - iOS ceveloper certification
+    - iOS developer certification
 
 
 2. Install SDK + Cordova
