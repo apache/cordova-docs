@@ -96,7 +96,7 @@ This guide describes how to set up your development environment for Cordova and 
 --------------------
 
 - Make sure that your target device is properly launched/connected/configured ("Date and Time" settings must have been set correctly)
-- Select your application deployement target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
+- Select your application deployment target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )
 
     ![](img/guide/getting-started/tizen/connection_explorer.png)
 
