@@ -79,7 +79,7 @@ BlackBerry smartphone simulators are only available on Windows. PlayBook simulat
     - Install the signing keys once they have been received:
         - [Setup Smartphone Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
         - [Setup Tablet Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
-- Install [BlackBerry Desktop Sofware](http://us.blackberry.com/apps-software/desktop/) to be able to install a signed application to a smartphone device attached via USB.
+- Install [BlackBerry Desktop Software](http://us.blackberry.com/apps-software/desktop/) to be able to install a signed application to a smartphone device attached via USB.
 - Open the project.properties file with your favorite editor and customize the following properties:
     - Smartphone (Optional)
         - `blackberry.sigtool.password` : Password used when code signing keys were registered.  If not specified, a prompt will occur.

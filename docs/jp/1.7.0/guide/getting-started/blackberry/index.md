@@ -79,7 +79,7 @@ BlackBerry スマートフォンシミュレーターは Windows でのみ利用
     - signing keys を受け取ったら、それらをインストールします:
         - [Setup Smartphone Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_smartphone_apps_1920010_11.html)
         - [Setup Tablet Signing keys](https://bdsc.webapps.blackberry.com/html5/documentation/ww_publishing/signing_setup_tablet_apps_1920009_11.html)
-- サインされたアプリケーションを USB 接続されたスマートフォンデバイスにインストールするために、 [BlackBerry Desktop Sofware](http://us.blackberry.com/apps-software/desktop/) をインストールします。
+- サインされたアプリケーションを USB 接続されたスマートフォンデバイスにインストールするために、 [BlackBerry Desktop Software](http://us.blackberry.com/apps-software/desktop/) をインストールします。
 - project.properties ファイルをお好きなエディタで開き、以下のプロパティーをカスタマイズします:
     - スマートフォン (オプション)
         - `blackberry.sigtool.password` : signing keys が登録されたときに使われるパスワードを表します。 もし指定されていない場合は、プロンプトにより入力が促されます。
