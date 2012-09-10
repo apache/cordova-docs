@@ -31,7 +31,7 @@ Propriétés
 - __position:__ La position courante du pointeur dans le fichier. _(long)_
 - __error:__ Un objet contenant une erreur survenue. _(FileError)_
 - __onwritestart:__ Appelé lorsque l'écriture commence. _(Function)_
-- __onprogress:__ Appelé pendant l'écriture du fichier, fournit l'avancement (progess.loaded/progress.total). _(Function)_ -NON SUPPORTE
+- __onprogress:__ Appelé pendant l'écriture du fichier, fournit l'avancement (progress.loaded/progress.total). _(Function)_ -NON SUPPORTE
 - __onwrite:__ Appelé lorsque l'écriture s'est terminée correctement.  _(Function)_
 - __onabort:__ Appelé lorsque l'écriture a été suspendue. Par exemple, suite à un appel de méthode abort(). _(Function)_
 - __onerror:__ Appelé lorsque l'écriture a échouée. _(Function)_
