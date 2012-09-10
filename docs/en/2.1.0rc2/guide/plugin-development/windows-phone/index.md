@@ -77,7 +77,7 @@ call to `cordova.exec`. For example, if you wanted to define your C# class like 
 
 Then, in JS you would need to call exec like this:
 
-    codova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
+    cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
 Interpretting your arguments in C#
 ----------------------------------
