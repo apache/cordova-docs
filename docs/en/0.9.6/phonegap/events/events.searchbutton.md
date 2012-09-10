@@ -42,7 +42,7 @@ Quick Example
     document.addEventListener("searchbutton", onSearchKeyDown, false);
 
     function onSearchKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example

@@ -42,7 +42,7 @@ Quick Example
     document.addEventListener("menubutton", onMenuKeyDown, false);
 
     function onMenuKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example

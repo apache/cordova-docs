@@ -42,7 +42,7 @@ Quick Example
     document.addEventListener("backbutton", onBackKeyDown, false);
 
     function onBackKeyDown() {
-        // Handle the back buton
+        // Handle the back button
     }
 
 Full Example
