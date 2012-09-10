@@ -29,7 +29,7 @@ The JavaScript portion of a plugin always uses the `cordova.exec` method as foll
 
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
-This will marshall a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
+This will marshal a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
 
 The plugin must be added to `Plugins` key (a Dictionary) of the `Cordova.plist` file in your Cordova-iOS application's project folder.
 

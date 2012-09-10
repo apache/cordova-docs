@@ -29,7 +29,7 @@ The JavaScript portion of a plugin always uses the `cordova.exec` method as foll
 
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
-This will marshall a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
+This will marshal a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
 
 The `options` parameter for the Objective-C plugin method is being deprecated, and it should not be used. For legacy reasons - the last JavaScript object passed in the `args` Array will be passed in as the `options` dictionary of the method in Objective-C. You must make sure that any JavaScript object that is passed in as an element in the `args` array occurs as the last item in the Array, if not it will throw off the array index of all subsequent parameters of the Array in Objective-C. Only one JavaScript object is supported for the options dictionary, and only the last one encountered will be passed to the native method. It is because of these error-prone reasons that they are being deprecated.
 
