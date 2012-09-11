@@ -71,9 +71,13 @@ Please note that **Xcode 4 is required**. To submit to the Apple App Store, you 
     
         "$(BUILT_PRODUCTS_DIR)"
 
-33. **Build** your project, it should compile and link with **no issues**.
-34. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**
-35. Select the **Run** button
+33. Search for **"Other Linker Flags"**. For that setting, add this value below:
+
+        -weak_framework CoreFoundation
+
+34. **Build** your project, it should compile and link with **no issues**.
+35. **Select your project** from the **Scheme** drop-down, and then select **"iPhone 5.1 Simulator"**
+36. Select the **Run** button
 
 **NOTE:**<br /> 
 If your project is **not working** as expected in the Simulator, please **take a note of any errors** in the **console log in Xcode** for clues.
