@@ -26,6 +26,7 @@ file.
 A plugin will consist of at least a single Java class that extends the `Plugin` class. A plugin **must**
 have a method called `execute` that must return a `PluginResult` object. In addition to this, there is a best practice that
 the plugin should handle pause and resume events, and should handle message passing between plugins.
+Plugins with long-running requests or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the Javascript.
 
 ## Plugin Class Mapping 
 
