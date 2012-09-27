@@ -50,17 +50,19 @@ class DocsGenerator
   #     - Pre-file processing
   #     - Release and cleanup
   #
-  def run
+  def run(one_lang = nil, one_version = nil)
     empty_output_directory
 
     ignore_list = ['.', '..', '.DS_Store']
 
     Dir.foreach @input_directory do |language_dir|
       next if ignore_list.include? language_dir
+      next if one_lang and language_dir != one_lang
       language_path = File.join @input_directory, language_dir
 
       Dir.foreach language_path do |version_dir|
         next if ignore_list.include? version_dir
+        next if one_version and version_dir != one_version
         output_path = File.join @output_directory, language_dir, version_dir
         input_path  = File.join @input_directory,  language_dir, version_dir
         options     = { :lang => language_dir, :version => version_dir }
