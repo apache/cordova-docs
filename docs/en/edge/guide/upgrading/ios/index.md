@@ -35,9 +35,11 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 8. Update (or replace, if you never changed the file) your **AppDelegate.m** according to the one from the new project:
     - Edited -> application:didFinishLaunchingWithOptions:
 	- Added  -> application:supportedInterfaceOrientationsForWindow:
-9. Copy the **"cordova"** folder from the new project into your project's root folder **(in 2.1.0, this has the updated scripts to support paths with spaces)** 
-10. Remove the **VERSION** file reference from your **project** (**NOT** the one in CordovaLib)
-11. Next, update your CordovaLib sub-project reference. Beginning with Cordova 2.1.0, we are not using the CORDOVALIB Xcode variable anymore when referencing where CordovaLib resides, the reference is an absolute file reference now.
+9. Update (or replace, if you never changed the file) your **MainViewController.m** according to the one from the new project:
+    - Added -> viewWillAppear
+10. Copy the **"cordova"** folder from the new project into your project's root folder **(in 2.1.0, this has the updated scripts to support paths with spaces)** 
+11. Remove the **VERSION** file reference from your **project** (**NOT** the one in CordovaLib)
+12. Next, update your CordovaLib sub-project reference. Beginning with Cordova 2.1.0, we are not using the CORDOVALIB Xcode variable anymore when referencing where CordovaLib resides, the reference is an absolute file reference now.
     1. Launch **Terminal.app**
     2. Go to the location where you installed Cordova **(see Step 1)**, in the **bin** sub-folder
     3. Run the script below where the first parameter is the path to your project's **.xcodeproj** file:
