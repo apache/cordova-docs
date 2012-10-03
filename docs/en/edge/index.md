@@ -61,6 +61,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Make your application location aware.</span>
         </li>
         <li>
+            <h2>Globalization</h2>
+            <span>Enable representation of objects specific to a locale.</span>
+        </li>
+        <li>
             <h2>Media</h2>
             <span>Record and play back audio files.</span>
         </li>
