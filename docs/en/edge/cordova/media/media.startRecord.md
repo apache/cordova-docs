@@ -79,7 +79,7 @@ Full Example
         // Record audio
         // 
         function recordAudio() {
-            var src = "myrecording.mp3";
+            var src = "myrecording.amr";
             var mediaRec = new Media(src, onSuccess, onError);
 
             // Record audio
@@ -129,6 +129,11 @@ Full Example
         <p id="audio_position"></p>
       </body>
     </html>
+
+Android Quirks
+----------
+
+- Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a .amr extension.
 
 BlackBerry WebWorks Quirks
 ----------
