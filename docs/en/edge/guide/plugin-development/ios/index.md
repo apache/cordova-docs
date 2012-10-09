@@ -31,6 +31,8 @@ The JavaScript portion of a plugin always uses the `cordova.exec` method as foll
 
 This will marshall a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
 
+Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the Javascript.
+
 The plugin must be added to `Plugins` key (a Dictionary) of the `Cordova.plist` file in your Cordova-iOS application's project folder.
 
     <key>service_name</key>

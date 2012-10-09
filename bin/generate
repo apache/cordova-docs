@@ -22,6 +22,17 @@ $: << File.join(File.dirname(__FILE__), '..', 'lib')
 require 'docs_generator'
 
 generator = DocsGenerator.new
-generator.run
+
+# Can be invoked without any args, or with a specific language/version
+# such as "bin/generate en edge" which will build just that one, or
+# with the --edge flag to build just en/edge.
+if (ARGV[0] && (ARGV[0] == "--edge"))
+  generator.run("en", "edge")
+elsif (ARGV[0] && ARGV[1])
+  generator.run(ARGV[0], ARGV[1])
+else
+  # build all languages and versions
+  generator.run
+end
 
 puts " => #{generator.output_directory}"
