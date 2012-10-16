@@ -16,6 +16,7 @@
 # under the License.
 
 require 'fileutils'
+require 'pathname'
 
 module FileHelpers
   #
@@ -73,6 +74,11 @@ module FileHelpers
   private
   
   def root_directory
-    File.expand_path(File.join(File.dirname(__FILE__), '..'))
+    if Pathname.new(__FILE__).absolute?
+      return File.join(File.dirname(__FILE__), '..')
+    end
+    # Pathname.pwd resolves symlinks, which can introduce spaces in paths.
+    # Use CWD instead.
+    File.join(ENV['PWD'], File.dirname(__FILE__), '..')
   end
 end
