@@ -28,6 +28,9 @@ class NavigationMenu
     @sections = []
 
     filename = Dir.glob(File.join tmp_directory, '**', 'index.md.html')[0]
+    if filename == nil
+      abort('index.md.html was not generated in ' + tmp_directory)
+    end
     doc     = Nokogiri::HTML(File.read(filename))
 
     h1_set   = doc.css('#home > h1')
