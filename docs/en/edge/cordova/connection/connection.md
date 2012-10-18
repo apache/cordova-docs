@@ -22,7 +22,7 @@ Connection
 
 > The `connection` object gives access to the device's cellular and wifi connection information.
 
-This object is accessed under the `navigator.network` interface.
+This object is exposed as `navigator.connection`.
 
 Properties
 ----------

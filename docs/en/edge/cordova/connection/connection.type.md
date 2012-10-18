@@ -42,7 +42,7 @@ Quick Example
 -------------
 
     function checkConnection() {
-        var networkState = navigator.network.connection.type;
+        var networkState = navigator.connection.type;
         
         var states = {};
         states[Connection.UNKNOWN]	= 'Unknown connection';
@@ -64,7 +64,7 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.network.connection.type Example</title>
+        <title>navigator.connection.type Example</title>
         
         <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -80,7 +80,7 @@ Full Example
         }
         
 	    function checkConnection() {
-	        var networkState = navigator.network.connection.type;
+	        var networkState = navigator.connection.type;
 
 	        var states = {};
 	        states[Connection.UNKNOWN]	= 'Unknown connection';
@@ -101,17 +101,25 @@ Full Example
       </body>
     </html>
 
+API Change
+----------
+Before Cordova 2.2.0, the Connection object existed at: `navigator.network.connection`.
+
+To match the spec, this was changed to `navigator.connection` in 2.2.0.
+
+`navigator.network.connection` still exists, but is now deprecated and will be removed in a future release.
+
 iOS Quirks
 ----------
 
 - iOS cannot detect the type of cellular network connection.
-    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
 
 Bada Quirks
 -----------
 
 - Bada can only detect a WiFi or cellular connection.
-    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
 
 webOS Quirks
 ------------
@@ -121,10 +129,10 @@ webOS Quirks
 Windows Phone Quirks
 --------------------
 
-- Windows Phone Emulator always detects `navigator.network.connection.type` as `Connection.UNKNOWN`.
+- Windows Phone Emulator always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
 Tizen Quirks
 --------------------
 
 - Tizen can only detect a WiFi or cellular connection.
-    - `navigator.network.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
