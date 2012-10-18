@@ -119,7 +119,3 @@ Full Example
       </body>
     </html>
 
-Android 1.X Quirks
-------------------
-
-- __changeVersion:__ This method is not support by Android 1.X devices.

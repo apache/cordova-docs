@@ -137,17 +137,6 @@ Android 2.X Quirks
 
 - __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
 
-Android 1.X Quirks
-------------------
-
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __streetAddress:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __locality:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __region:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __postalCode:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __country:__ This property is not support by Android 1.X devices, and will always return `null`.
-
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 - __pref:__ This property is not supported on Blackberry devices and will always return `false`.

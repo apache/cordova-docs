@@ -125,13 +125,6 @@ Android 2.X Quirks
 
 - __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
 
-Android 1.X Quirks
-------------------
-
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __title:__ This property is not supported by Android 1.X devices, and will always be returned as `null`. 
-
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 - __pref:__ This property is not supported by Blackberry devices and will always return `false`.

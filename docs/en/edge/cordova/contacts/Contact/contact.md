@@ -188,16 +188,6 @@ Android 2.X Quirks
 
 - __categories:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
 
-Android 1.X Quirks
-------------------
-
-- __name:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __nickname:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __birthday:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __photos:__ This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __categories:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
-- __urls:__  This property is not support by Android 1.X devices, and will always be returned as `null`.
-
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
