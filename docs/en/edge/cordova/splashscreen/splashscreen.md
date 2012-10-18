@@ -1,0 +1,61 @@
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
+
+Splashscreen
+==========
+
+> Enables developers to show/hide the applications splash screen.
+
+
+Methods
+-------
+
+- show
+- hide
+
+Permissions
+-----------
+
+### Android
+
+#### app/res/xml/config.xml
+
+    <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    
+Setup
+-----
+
+### Android
+
+1. Copy your splash screen image into the res/drawable directories of your Android project. The sizes of each image should be:
+
+   - xlarge (xhdpi): at least 960 x 720
+   - large (hdpi): at least 640 x 480
+   - medium (mdpi): at least 470 x 320
+   - small (ldpi): at least 426 x 320
+   
+   It is highly recommended that you use a [9-patch image](https://developer.android.com/tools/help/draw9patch.html) for your splash screen.
+
+2. In the onCreate method of the class that extends DroidGap add the following two lines:
+
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        super.loadUrl("file:///android_asset/www/index.html", 10000);
+    
+    The first line 'super.setIntegerProperty' sets the image to be displayed as the splashscreen. If you have named your image anything other than splash.png you will have to modify this line.
+    The second line is the normal 'super.loadUrl' line but it has a second parameter which is the timeout value for the splash screen. In this example the splash screen will display for 10 seconds. If you want to dismiss the splash screen once you get the "deviceready" event you should call the navigator.splashscreen.hide() method.

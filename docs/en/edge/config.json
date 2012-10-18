@@ -169,6 +169,11 @@
             "cordova/notification/notification.beep.md",
             "cordova/notification/notification.vibrate.md"
         ],
+        "splashscreen.md": [
+            "cordova/splashscreen/splashscreen.md",
+            "cordova/splashscreen/splashscreen.show.md",
+            "cordova/splashscreen/splashscreen.hide.md"
+        ],
         "storage.md": [
             "cordova/storage/storage.md",
             "cordova/storage/storage.opendatabase.md",

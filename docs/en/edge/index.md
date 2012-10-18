@@ -73,6 +73,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Visual, audible, and tactile device notifications.</span>
         </li>
         <li>
+            <h2>Splashscreen</h2>
+            <span>Show and hide the applications splash screen.</span>
+        </li>
+        <li>
             <h2>Storage</h2>
             <span>Hook into the devices native storage options.</span>
         </li>
