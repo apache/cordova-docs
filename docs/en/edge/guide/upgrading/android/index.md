@@ -29,8 +29,9 @@ This document is for people who need to upgrade their Cordova versions from an o
 2. Add cordova-2.2.0.jar to the libs directory in your project
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
 4. Copy the new cordova-2.2.0.js into your project
-5. Update your HTML to use the new cordova-2.2.0.js file
+5. Update your HTML to use the new cordova-2.120.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
@@ -41,6 +42,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 5. Update your HTML to use the new cordova-2.1.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
 
+
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
 1. Remove cordova-1.9.0.jar from the libs directory in your project
@@ -48,7 +50,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
 4. Copy the new cordova-2.0.0.js into your project
 5. Update your HTML to use the new cordova-2.0.0.js file
-6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xmll
 
 ### Notes about 2.0.0 release
 config.xml will be replacing cordova.xml and plugins.xml.  This new file is a combination of the previous two.  However, the
