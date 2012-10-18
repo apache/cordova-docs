@@ -54,4 +54,8 @@ The `globalization` object is a child of the `navigator` object, and therefore h
 Permissions
 -----------
 
-No special device permissions needed.
+### Android
+
+#### app/res/xml/config.xml
+
+    <plugin name="Globalization" value="org.apache.cordova.Globalization" />

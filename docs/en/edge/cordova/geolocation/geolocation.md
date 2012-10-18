@@ -53,7 +53,7 @@ Permissions
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 

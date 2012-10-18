@@ -46,7 +46,7 @@ Permissions
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Battery" value="org.apache.cordova.BatteryListener" />
 
