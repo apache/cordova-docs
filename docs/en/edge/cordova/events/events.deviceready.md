@@ -35,6 +35,8 @@ The Cordova `deviceready` event fires once Cordova has fully loaded. After the d
 
 Typically, you will want to attach an event listener with `document.addEventListener` once the HTML document's DOM has loaded.
 
+This event behaves differently from others in that any event handler registered after the event has been fired will have its callback function called immediately.
+
 Supported Platforms
 -------------------
 
