@@ -19,9 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Developing a Plugin on iOS
 
-Writing a plugin requires an understanding of the architecture of Cordova-iOS. Cordova-iOS consists of a UIWebView where intercept commands passed in as url changes. These plugins are represented as class mappings in the Cordova.plist file, under the Plugins key.
-
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
+
+Each plugin class must be registered using the Cordova.plist file, under the Plugins key.
 
 ## Plugin Class Mapping 
 
@@ -134,11 +134,12 @@ Although UIWebViews run on a dedicated thread, plugin methods are executed on th
 
     - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
     {
+        // Check command.arguments here.
         [self.commandDelegate runInBackground:^{
             NSString* payload = nil;
             // Some blocking logic...
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-            // sendPluginResult is thread-safe.
+            // The sendPluginResult method is thread-safe.
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }];
     }
