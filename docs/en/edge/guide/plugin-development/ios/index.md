@@ -46,39 +46,33 @@ We have JavaScript fire off a plugin request to the native side. We have the iOS
 
 What gets dispatched to the plugin via JavaScript's `exec` function gets passed into the corresponding Plugin class's `action` method. A plugin method has this signature:
 
-    - (void) myMethod:(CDVInvokedUrlCommand*)command
+    - (void)myMethod:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
-        NSString* javaScript = nil;
+        NSString* myarg = [command.arguments objectAtIndex:0];
 
-        @try {
-            NSString* myarg = [command.arguments objectAtIndex:0];
-
-            if (myarg != nil) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
-            } 
-        } @catch (id exception) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
+        if (myarg != nil) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } else { 
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
         }
-
-        [self writeJavascript:javaScript];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
     
 1. [CDVInvokedUrlCommand.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
 2. [CDVPluginResult.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
+3. [CDVCommandDelegate.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
 
   
 ## Plugin Signatures
 
 The **new signature** supported beginning in **Cordova 2.1.0** is:
 
-        - (void) myMethod:(CDVInvokedUrlCommand*)command;
+        - (void)myMethod:(CDVInvokedUrlCommand*)command;
 
 The **old (deprecated)** signature is:
 
-        - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+        - (void)myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
 Basically, the options dictionary has been removed for the new signature, and the callbackId is not the 0th index item for the arguments array, but it is now in a separate property. 
 
@@ -98,7 +92,7 @@ application folder:
 
     @interface Echo : CDVPlugin
 
-    - (void) echo:(CDVInvokedUrlCommand*)command;
+    - (void)echo:(CDVInvokedUrlCommand*)command;
 
     @end
     
@@ -109,27 +103,18 @@ application folder:
 
     @implementation Echo
 
-    - (void) echo:(CDVInvokedUrlCommand*)command
+    - (void)echo:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
-        NSString* javaScript = nil;
+        NSString* echo = [command.arguments objectAtIndex:0];
 
-        @try {
-            NSString* echo = [command.arguments objectAtIndex:0];
-
-            if (echo != nil && [echo length] > 0) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
-            } else {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-                javaScript = [pluginResult toErrorCallbackString:command.callbackId];
-            }
-        } @catch (NSException* exception) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
+        if (echo != nil && [echo length] > 0) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
         }
 
-        [self writeJavascript:javaScript];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 
     @end
@@ -139,9 +124,25 @@ Let's take a look at the code. At the top we have all of the necessary Cordova i
 
 This plugin only supports one action, the `echo` action. First, we grab the echo string using the `objectAtIndex` method on our `args`, telling it we want to get the 0th parameter in the arguments array. We do a bit of parameter checking: make sure it is not `nil`, and make sure it is not a zero-length string.
 
-If it is, we return a `PluginResult` with an `ERROR` status. If all of those checks pass, then we return a `PluginResult` with an `OK` status, and pass in the `echo` string we received in the first place as a parameter. Then, we convert the `PluginResult` to JavaScript by calling either the `toSuccessCallbackString` (if it was OK) or `toErrorCallbackString` (if it was an error) methods.
+If it is, we return a `PluginResult` with an `ERROR` status. If all of those checks pass, then we return a `PluginResult` with an `OK` status, and pass in the `echo` string we received in the first place as a parameter.
 
-Finally we write the JavaScript back to the UIWebView, which will execute the JavaScript that will callback to success or failure callbacks of the exec method on the JavaScript side. If the success callback was called, it will pass the `echo` parameter as a parameter.
+Finally, we send the result to `self.commandDelegate`, which will execute the JavaScript that will callback to success or failure callbacks of the exec method on the JavaScript side. If the success callback was called, it will pass the `echo` parameter as a parameter.
+
+## Threading
+
+Although UIWebViews run on a dedicated thread, plugin methods are executed on the UI thread. If your plugin requires a non-trivial amount of processing or requires a blocking call, you should make use of a background thread. An example:
+
+    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+    {
+        [self.commandDelegate runInBackground:^{
+            NSString* payload = nil;
+            // Some blocking logic...
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            // sendPluginResult is thread-safe.
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }];
+    }
+
 
 ## Advanced Plugin Functionality
 
@@ -154,7 +155,7 @@ For example, you can hook into the pause, resume, app terminate and handleOpenUR
 
 ## Debugging Plugins
 
-To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, you can use [Weinre, an Apache Cordova Project](https://github.com/apache/incubator-cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
+To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova Project](https://github.com/apache/incubator-cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
 
 For iOS 6, you would use Safari 6.0 to simply attach to your app running in the iOS 6 Simulator.
 
@@ -162,11 +163,6 @@ For iOS 6, you would use Safari 6.0 to simply attach to your app running in the 
 
 * Don't forget to add your plugin's mapping to Cordova.plist - if you forgot, an error will be printed to the Xcode console log
 * Don't forget to add any hosts you connect to in the [whitelist](guide_whitelist_index.md.html#Domain%20Whitelist%20Guide) - if you forgot, an error will be printed to the Xcode console log
-* If you handle the resume event, and the app resumes, you can hang the app if you send out a JavaScript call that executes a native function, like alerts. To be safe, wrap your JavaScript call in a setTimeout call, with a timeout value of zero:
-
-        setTimeout(function() {
-            // do your thing here!
-        }, 0);
 
 ## Deprecated Plugin Signature Note
 
