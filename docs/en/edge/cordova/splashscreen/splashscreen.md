@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Splashscreen
 ==========
 
-> Enables developers to show/hide the applications splash screen.
+> Enables developers to show/hide the application's splash screen.
 
 
 Methods
@@ -37,6 +37,14 @@ Permissions
 #### app/res/xml/config.xml
 
     <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+
+### iOS
+
+#### Cordova.plist
+
+        Add an entry under the Plugins dictionary - with the key "SplashScreen" and value "CDVSplashScreen". 
+        New projects should already have this key.
+
     
 Setup
 -----
@@ -59,3 +67,21 @@ Setup
     
     The first line 'super.setIntegerProperty' sets the image to be displayed as the splashscreen. If you have named your image anything other than splash.png you will have to modify this line.
     The second line is the normal 'super.loadUrl' line but it has a second parameter which is the timeout value for the splash screen. In this example the splash screen will display for 10 seconds. If you want to dismiss the splash screen once you get the "deviceready" event you should call the navigator.splashscreen.hide() method.
+
+### iOS
+
+1. Copy your splash screen images into the **Resources/splash** directory of your iOS project. Only add the images for the devices you want to support (iPad screen size or iPhone screen size). The sizes of each image should be:
+
+   - Default-568h@2x~iphone.png (640x1136 pixels)
+   - Default-Landscape@2x~ipad.png (2048x1496 pixels)
+   - Default-Landscape~ipad.png (1024x768 pixels)
+   - Default-Portrait@2x~ipad.png (1536x2008 pixels)
+   - Default-Portrait~ipad.png (768x1024 pixels)
+   - Default@2x~iphone.png (640x960 pixels)
+   - Default~iphone.png (320x240 pixels)
+        
+        
+
+
+   
+

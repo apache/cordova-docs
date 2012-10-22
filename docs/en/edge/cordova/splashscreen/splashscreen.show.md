@@ -33,6 +33,7 @@ Supported Platforms
 -------------------
 
 - Android
+- iOS
 
 Quick Example
 -------------
