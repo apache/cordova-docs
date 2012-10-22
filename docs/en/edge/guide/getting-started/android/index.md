@@ -57,6 +57,15 @@ This guide describes how to set up your development environment for Cordova and 
 - Right click the project and go to **Run As &gt; Android Application**
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
+**Note: For a faster experience, use an Intel-based emulator image:**
+
+- Open the Android SDK Manager
+  ![](img/guide/getting-started/android/eclipse_android_sdk_button.png)
+- Install one or more `Intel x86 Atom` System Images as well as the `Intel Hardware Accelerated Execution Manager` (under Extras).
+- Run the Intel installer, which has been downloaded to: `extras/intel/Hardware_Accelerated_Execution_Manager` within your Android SDK
+- Create a new AVD with the Target set to an Intel image.
+- When starting the emulator, ensure there are no error messages about the HAX module failing to load.
+
 
 4B. Deploy to Device
 --------------------
@@ -64,6 +73,3 @@ This guide describes how to set up your development environment for Cordova and 
 - Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)
 - Right click the project and go to **Run As &gt; Android Application**
 
-
-Done!
------
