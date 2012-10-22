@@ -65,6 +65,13 @@ Create a New Project
 - **Locate** your new project folder that you just created
 - **Launch** the .xcodeproj file in the folder
 
+**Note:**
+Starting with Cordova 2.2, the project will have a copy of CordovaLib within it instead of having
+a dependency on the copy of CordovaLib from your Cordova installation.
+
+If you would like your project to depend directly on your Cordova installation's version of CordovaLib, you can use:
+`./create --shared`, or change the project reference after creation using:
+`./update_cordova_subproject path/to/you/project`.
     
 Deploy to Simulator
 -------------------
