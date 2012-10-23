@@ -46,8 +46,8 @@ The **Cordova.plist settings file** controls various settings of Cordova. This i
 
 	i. **OpenAllWhitelistURLsInWebView (boolean, defaults to NO)** - set to YES to open all white-listed URLs in the main WebView
 
-	j. **BackupWebStorage (boolean, defaults to YES)** - set to NO to prevent the backup of localStorage and WebSQL databases to the Documents/Backups folder. This was a fix for this [Apple bug](http://phonegap.com/2012/04/18/ios-5-1-and-the-embedded-uiwebview-with-cordova/)
-
-	k. **KeyboardDisplayRequiresUserAction (boolean, defaults to YES)** - set to NO to open keyboard when form elements get focus via JavaScript focus() call.
+	j. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
+	
+	k. **KeyboardDisplayRequiresUserAction (boolean, defaults to YES)** - set to NO to open the keyboard when form elements get focus via the JavaScript focus() call.
 
 	l. **SuppressesIncrementalRendering (boolean, defaults to NO)** - set to YES to wait until all new view content has been received before it is rendered.
