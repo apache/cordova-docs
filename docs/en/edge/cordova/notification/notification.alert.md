@@ -87,7 +87,7 @@ Full Example
 	        // do something
 	    }
 
-        // Show a custom alert
+        // Show a custom alertDismissed
         //
         function showAlert() {
 		    navigator.notification.alert(
@@ -111,6 +111,13 @@ Windows Phone 7 Quirks
 - Ignores button names, always uses 'OK'
 - There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
 - alert + confirm calls are non-blocking, and result is only available asyncronously.
+
+Windows 8 App Quirks
+---------------
+
+- In the other platforms, messages "stack up" - e.g. issue two **alert** requests and you'll get two messages overlaid. In Windows 8 apps, 
+you only get the last message.
+- There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
 
 Bada 2.x Quirks
 ---------------
