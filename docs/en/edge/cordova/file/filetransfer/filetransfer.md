@@ -25,13 +25,14 @@ FileTransfer is an object that allows you to upload files to a server or downloa
 Properties
 ----------
 
-N/A
+- __onprogress:__ Called with a ProgressEvent whenever a new chunk of data is transferred. _(Function)_
 
 Methods
 -------
 
 - __upload__: sends a file to a server. 
 - __download__: downloads a file from server.
+- __abort__: Aborts an in-progress transfer.
 
 Details
 -------
@@ -60,7 +61,7 @@ __Parameters:__
 
 __Quick Example__
 	
-    // !! Assumes variable fileURI contains a valid URI to a  text file on the device
+    // !! Assumes variable fileURI contains a valid URI to a text file on the device
 	
   	var win = function(r) {
         console.log("Code = " + r.responseCode);
@@ -79,7 +80,7 @@ __Quick Example__
 	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
 	options.mimeType="text/plain";
 
-    var params = new Object();
+  var params = {};
 	params.value1 = "test";
 	params.value2 = "param";
 		
@@ -122,7 +123,7 @@ __Full Example__
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
                 
-                var params = new Object();
+                var params = {};
                 params.value1 = "test";
                 params.value2 = "param";
                 
@@ -152,12 +153,9 @@ __Full Example__
     </body>
     </html>
     
-iOS Quirks
-----------
+__Setting Upload Headers__
 
-Setting headers for FileTransfer Upload:
-
-__Quick Example__
+Supported on Android and iOS
 
     function win(r) {
         console.log("Code = " + r.responseCode);
@@ -178,7 +176,7 @@ __Quick Example__
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
         
-    var params = new Object();
+    var params = {};
     params.headers={'headerParam':'headerValue'};
     
     options.params = params;
@@ -198,7 +196,7 @@ __Parameters:__
 
 __Quick Example__
 
-     // !! Assumes variable url contains a valid URI to a file on a server and filePath is a valid path on the device
+    // !! Assumes filePath is a valid path on the device
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
@@ -215,3 +213,37 @@ __Quick Example__
             console.log("upload error code" + error.code);
         }
     );
+
+abort
+--------------
+
+Aborts an in-progress transfer. The onerror callback will be called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
+
+__Supported Platforms__
+
+- Android
+- iOS
+
+onprogress
+--------------
+
+Called with a ProgressEvent whenever a new chunk of data is transferred.
+
+__Supported Platforms__
+
+- Android
+- iOS
+
+__Example__
+
+    fileTransfer.onprogress = function(progressEvent) {
+        if (progressEvent.lengthComputable) {
+          loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+        } else {
+          loadingStatus.increment();
+        }
+    };
+    fileTransfer.download(...); // or fileTransfer.upload(...);
+
+__Quirks__
+- On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.
