@@ -125,7 +125,9 @@ __Quick Example__
         }
 
 	    var onGetDirectoryWin = function(parent) {
-	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, { metadataKey: metadataValue});
+	      var data = {};
+	      data[metadataKey] = metadataValue;
+	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
 	    }
 	    var onGetDirectoryFail = function() {
 	      console.log("error getting dir")
