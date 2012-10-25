@@ -37,7 +37,7 @@ Cordova projects.
 ## iOS
 
 The iOS command-line tools are built upon shell scripts and rely on
-XCode command-line tools such as `xcode-select` and `xcodebuild`.
+Xcode command-line tools such as `xcode-select` and `xcodebuild`.
 
 ### Create a project
 

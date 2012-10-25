@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading Cordova iOS
 =====================
 
-Please note that **Xcode 4 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 5.1. The iOS 5.1 SDK requires Xcode 4.
+Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 6. The iOS 6 SDK requires Xcode 4.5.
 
 ## Upgrading Cordova 2.1.0 projects to 2.2.0 ##
 

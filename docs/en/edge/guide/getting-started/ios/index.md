@@ -24,7 +24,7 @@ This guide describes how to set up your development environment for Apache Cordo
 
 Requirements
 ------------
-- Xcode 4.3+
+- Xcode 4.5+
 - Xcode Command Line Tools 
 - Intel-based computer with Mac OS X Lion or greater (10.7+)
 - Necessary for installing on device:

@@ -30,7 +30,7 @@ Prerequisites
 -------------
 
 1. **Cordova 2.1.0** or greater
-2. **Xcode 4.3** or greater
+2. **Xcode 4.5** or greater
 3. `Cordova.plist` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project)
 
 
