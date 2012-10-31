@@ -184,6 +184,10 @@ Supported on Android and iOS
     var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);    
 
+__Android Quirks__
+
+If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.
+
 download
 --------------
 
