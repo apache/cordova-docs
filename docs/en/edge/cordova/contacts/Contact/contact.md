@@ -61,6 +61,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Windows Phone 7
 - Bada 1.2 & 2.0
 
 Save Quick Example
@@ -210,6 +211,20 @@ iOS Quirks
 - __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
 - __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.
+
+Windows Phone 7 Quirks
+-----------
+
+- __displayName:__ When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact. 
+- __urls:__ When creating a contact, user inputs multiple web addresses in the url field and saves the contact. While pulling the information during the contact search url field do not show up multiple web addresses
+- __phoneNumbers:__ _pref_ is not supported, _type_ is not supported in a _find_ operation, only supports one phoneNumber of each _type_
+- __emails:__ _pref_ is not supported, home and personal points to same email entry, supports only one entry for each _type_
+- __addresses:__ supports only _type_ of work, home/personal, _type_ home and personal points to same address entry, supports only one entry for each _type_
+- __organizations:__ Multiple _organizations_ are not supported, does not support the attributes: _pref_, _type_, _department_
+- __note:__ This property is not supported, and will always be returned as `null`. 
+- __ims:__ This property is not supported, and will always be returned as `null`. 
+- __birthdays:__ This property is not supported, and will always be returned as `null`. 
+- __categories:__ This property is not supported, and will always be returned as `null`. 
 
 
 Bada Quirks
