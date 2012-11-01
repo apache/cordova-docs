@@ -53,7 +53,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 
 	![](img/guide/getting-started/windows-8/wschangemanifest.PNG)
 
-- To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **corvoda.js** file in the **lib\windows-8** folder that we called out previously. 
+- To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **cordova.js** file in the **lib\windows-8** folder that we called out previously. 
 
 - Edit the code for **index.html**. Add a reference to **cordova.js**. You can do this manually, or by dragging the file from Solution Explorer.
 
