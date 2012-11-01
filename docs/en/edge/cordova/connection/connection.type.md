@@ -37,6 +37,7 @@ Supported Platforms
 - Bada 2.x
 - webOS
 - Tizen
+- Windows 8
 
 Quick Example
 -------------

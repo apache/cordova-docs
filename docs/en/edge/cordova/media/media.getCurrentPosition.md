@@ -43,6 +43,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 - Tizen
+- Windows 8
 
 Quick Example
 -------------

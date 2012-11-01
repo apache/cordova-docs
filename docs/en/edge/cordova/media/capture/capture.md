@@ -73,6 +73,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 ( Mango )
+- Windows 8
 
 Permissions
 -----------

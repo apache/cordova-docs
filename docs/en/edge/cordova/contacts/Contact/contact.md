@@ -63,6 +63,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7
 - Bada 1.2 & 2.0
+- Windows 8
 
 Save Quick Example
 ------------------

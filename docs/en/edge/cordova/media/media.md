@@ -74,6 +74,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7.5
 - Tizen
+- Windows 8
 
 Permissions
 -----------

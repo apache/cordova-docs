@@ -42,6 +42,8 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Bada 1.2
+- Windows Phone 7
+- Windows 8
 
 Quick Example
 -------------

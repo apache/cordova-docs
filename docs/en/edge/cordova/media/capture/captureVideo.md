@@ -43,6 +43,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 ( Mango )
 - Bada 2.x
+- Windows 8
 
 Quick Example
 -------------

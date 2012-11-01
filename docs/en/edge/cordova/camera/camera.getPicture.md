@@ -50,10 +50,11 @@ Supported Platforms
 - Android
 - Blackberry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7
 - Bada 1.2
 - webOS
 - Tizen
+- Windows 8
 
 iOS Quirks
 ----------
