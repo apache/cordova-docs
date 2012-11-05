@@ -58,7 +58,7 @@ Android
 
 ### Details
 
-The whitelisting rules are found in `res/xml/cordova.xml` and declared with the element `<access origin="..." />`.
+The whitelisting rules are found in `res/xml/config.xml` and declared with the element `<access origin="..." />`.
 
 Android has full support for the whitelisting syntax.
 
