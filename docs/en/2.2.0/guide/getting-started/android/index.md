@@ -36,7 +36,42 @@ This guide describes how to set up your development environment for Cordova and 
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
 - Download the latest copy of [Cordova](http://incubator.apache.org/cordova/#download) and extract its contents. We will be working with the Android directory.
 
-3. Setup New Project
+
+3A. Setup your PATH environment variable on Mac OS
+---------------------------------------
+
+- Open the Terminal program (this is in your Applications/Utilites folder by default).
+- Run the following command
+
+`touch ~/.bash_profile; open ~/.bash_profile`
+
+- This will open the file in the your default text editor.
+- You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use "/Development/android-sdk-macosx" as the directory the SDK is installed in. Add the following line:
+
+`export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools` 
+
+- Save the file and quit the text editor.
+- Execute your .bash_profile to update your PATH. 
+
+`source ~/.bash_profile`
+
+- Now everytime you open the Terminal program you PATH will included the Android SDK.
+
+3B. Setup your PATH environment variable on Windows
+---------------------------------------
+
+- From the Desktop, right-click My Computer and click Properties.
+- Click Advanced System Settings link in the left column.
+- In the System Properties window click the Environment Variables button.
+- Select the PATH variable from the System variables section.
+- Select the Edit button.
+- You need to add the path to your Android SDK platform-tools and tools directory. In my example I will use "C:\Development\android-sdk-windows" as the directory the SDK is installed in. Append the following text into the text box:
+
+`;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools`
+
+- Save your edit. Close the Environment Variables dialog.
+
+4. Setup New Project
 --------------------
 
 - In a terminal window, navigate to the `bin` directory within the `android` subfolder of the Cordova distribution.
@@ -51,7 +86,7 @@ This guide describes how to set up your development environment for Cordova and 
 - Select the directory you used for `<project_folder_path>`
 - Click Finish.
 
-4A. Deploy to Emulator
+5A. Deploy to Emulator
 ----------------------
 
 - Right click the project and go to **Run As &gt; Android Application**
@@ -67,7 +102,7 @@ This guide describes how to set up your development environment for Cordova and 
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
 
-4B. Deploy to Device
+5B. Deploy to Device
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)
