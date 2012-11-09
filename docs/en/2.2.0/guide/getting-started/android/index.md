@@ -70,6 +70,9 @@ This guide describes how to set up your development environment for Cordova and 
 `;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools`
 
 - Save your edit. Close the Environment Variables dialog.
+- Additionally, you may need to include `%JAVA_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `java`. If the program can not be found add `%JAVA_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%JAVA_HOME%` environment variable.
+- Finally, you may need to include `%ANT_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `any`. If the program can not be found add `%ANT_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%ANT_HOME%` environment variable.
+
 
 4. Setup New Project
 --------------------
@@ -85,6 +88,15 @@ This guide describes how to set up your development environment for Cordova and 
     ![](img/guide/getting-started/android/eclipse_new_project.png)
 - Select the directory you used for `<project_folder_path>`
 - Click Finish.
+
+If your project has a red X indicating there is a problem follow these additional steps:
+
+- Right click on the project folder.
+- In the Properties dialog that is displayed select Android from the navigation pane.
+- For the project build target select the highest Android API level you have installed.
+- Click OK
+- Then from the Project menu bar item select Clean.
+- This should correct all the errors in the project.
 
 5A. Deploy to Emulator
 ----------------------
