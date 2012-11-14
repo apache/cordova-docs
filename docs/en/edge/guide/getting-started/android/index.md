@@ -71,7 +71,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Save your edit. Close the Environment Variables dialog.
 - Additionally, you may need to include `%JAVA_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `java`. If the program can not be found add `%JAVA_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%JAVA_HOME%` environment variable.
-- Finally, you may need to include `%ANT_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `any`. If the program can not be found add `%ANT_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%ANT_HOME%` environment variable.
+- Finally, you may need to include `%ANT_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `ant`. If the program can not be found add `%ANT_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%ANT_HOME%` environment variable.
 
 
 4. Setup New Project
