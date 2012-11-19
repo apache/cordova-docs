@@ -22,11 +22,19 @@ Getting Started with Android
 
 This guide describes how to set up your development environment for Cordova and run a sample application.
 
-1. Requirements
+1. Minimum Requirements for Development
 ---------------
+- Identical to [Android Minimum Requirements](http://developer.android.com/sdk/index.html)
 
-- Eclipse 3.4+
+1.1 Supported Android Devices
+-------------------------------
+- Android 2.1 (Deprecated May 2013)
+- Android 2.2
+- Android 2.3
+- Android 3.x (Deprecated May 2013)
+- Android 4.x
 
+We currently do not support Android 1.x, and we plan to deprecate platforms in the future as they are updated and dip below 5% on the [distribution dashboard](http://developer.android.com/about/dashboards/index.html) provided by Google.
 
 2. Install SDK + Cordova
 ------------------------
