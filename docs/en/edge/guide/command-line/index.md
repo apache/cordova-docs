@@ -53,11 +53,11 @@ Run the `create` command with the following parameters:
 
 ### Build a project
 
-    $ /path/to/my_new_cordova_project/cordova/debug
+    $ /path/to/my_new_cordova_project/cordova/build
 
-### Launch emulator
+### Run app on emulator
 
-    $ /path/to/my_new_cordova_project/cordova/emulate
+    $ /path/to/my_new_cordova_project/cordova/run
 
 ### Logging
 
@@ -88,19 +88,19 @@ or, on **Windows**
 
 ### Build a project
 
-    $ /path/to/my_new_cordova_project/cordova/debug
+    $ /path/to/my_new_cordova_project/cordova/build
 
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/debug.bat
+    $ /path/to/my_new_cordova_project/cordova/build.bat
 
-### Launch emulator
+### Run app on emulator/device
 
-    $ /path/to/my_new_cordova_project/cordova/emulate
+    $ /path/to/my_new_cordova_project/cordova/run
 
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/emulate.bat
+    $ /path/to/my_new_cordova_project/cordova/run.bat
 
 Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
 If you have multiple AVDs, it will prompt you to select an AVD.
@@ -120,16 +120,6 @@ or, on **Windows**
 or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/clean.bat
-
-### Clean, build, deploy and launch
-
-    $ /path/to/my_new_cordova_project/cordova/BOOM
-
-or, on **Windows**
-
-    $ /path/to/my_new_cordova_project/cordova/BOOM.bat
-
-Make sure you have an emulator or a device connected.
 
 
 ## BlackBerry
