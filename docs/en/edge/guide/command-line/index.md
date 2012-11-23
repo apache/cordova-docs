@@ -59,6 +59,10 @@ Run the `create` command with the following parameters:
 
     $ /path/to/my_new_cordova_project/cordova/run
 
+### Releasing
+
+    $ /path/to/my_new_cordova_project/cordova/release
+
 ### Logging
 
     $ /path/to/my_new_cordova_project/cordova/log
@@ -120,6 +124,14 @@ or, on **Windows**
 or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/clean.bat
+
+### Releasing
+
+    $ /path/to/my_new_cordova_project/cordova/release
+
+or, on **Windows**
+
+    $ /path/to/my_new_cordova_project/cordova/release.bat
 
 
 ## BlackBerry
