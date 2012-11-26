@@ -178,10 +178,9 @@ Supported on Android and iOS
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
         
-    var params = {};
-    params.headers={'headerParam':'headerValue'};
+    var headers={'headerParam':'headerValue'};
     
-    options.params = params;
+    options.headers = headers;
     
     var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);    
