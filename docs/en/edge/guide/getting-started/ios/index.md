@@ -24,11 +24,11 @@ This guide describes how to set up your development environment for Apache Cordo
 
 Requirements
 ------------
-- Xcode 4.5+
+- Xcode 4.5+ (iOS 6.x SDK)
 - Xcode Command Line Tools 
-- Intel-based computer with Mac OS X Lion or greater (10.7+)
+- Intel-based computer with Mac OS X Lion or greater (10.7.4+)
 - Necessary for installing on device:
-    - Apple iOS device (iPhone, iPad, iPod Touch)
+    - Apple iOS 5.x device (iPhone 3GS or greater, iPad, iPod Touch 3rd Gen or greater)
     - iOS developer certificate
 
 Install the iOS SDK and Apache Cordova
