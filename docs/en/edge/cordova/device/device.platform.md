@@ -29,7 +29,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7
 - Bada 1.2 & 2.x
 - webOS
@@ -42,7 +42,7 @@ Quick Example
     // Depending on the device, a few examples are:
     //   - "Android"
     //   - "BlackBerry"
-    //   - "iPhone"
+    //   - "iOS"
     //   - "webOS"
     //   - "WinCE"
     //   - "Tizen"
@@ -56,7 +56,7 @@ Full Example
       <head>
         <title>Device Properties Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
@@ -82,11 +82,6 @@ Full Example
       </body>
     </html>
     
-iPhone Quirks
--------------
-
-The iPhone returns `iPhone` as the platform. The iPad returns `iPad` as the platform.  In the simulator they will return `iPhone Simulator` and `iPad Simulator` respectively.  These are inaccurate in all cases because Apple has rebranded the iPhone operating system as `iOS`.
-
 BlackBerry Quirks
 -----------------
 
