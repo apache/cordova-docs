@@ -105,30 +105,12 @@ iOS
 
 ### Details
 
-1. Open `Cordova.plist`.
-    - In Xcode, it is found at `AppName/Resources/Cordova.plist`
-    - In the directory, it is found at `AppName/Cordova.plist`
-2. Add a new `String` value under the `ExternalHosts` key.
-    - We recommend using Xcode to avoid editing raw XML.
+The whitelisting rules are found in `AppName/config.xml` and declared with the element `<access origin="..." />`.
+
+iOS has full support for the whitelisting syntax.
 
 
 ### Syntax
-
-Access to [google.com][2] and the secure [google.com][3] (`https://`):
-
-    google.com
-
-Access to the subdomain [maps.google.com][4]:
-
-    maps.google.com
-
-Access to all the subdomains on [google.com][2] (e.g. [mail.google.com][5] and [docs.google.com][6]):
-
-    *.google.com
-
-Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
-
-    *
 
 Wildcards on iOS (`*`) are more flexible than the [W3C Widget Access][1] specification.
 
