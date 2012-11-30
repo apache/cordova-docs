@@ -125,6 +125,6 @@ If your project has a red X indicating there is a problem follow these additiona
 5B. Deploy to Device
 --------------------
 
-- Make sure USB debugging is enabled on your device and plug it into your system. (**Settings &gt; Applications &gt; Development**)
+- Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the [Android Developer Site](http://developer.android.com/tools/device.html)
 - Right click the project and go to **Run As &gt; Android Application**
 
