@@ -25,7 +25,8 @@ Getting Started Guides
 - Getting Started with iOS
 - Getting Started with Symbian
 - Getting Started with WebOS
-- Getting Started with Windows Phone
+- Getting Started with Windows Phone 7
+- Getting Started with Windows Phone 8
 - Getting Started with Windows 8
 - Getting Started with Bada
 - Getting Started with Tizen
