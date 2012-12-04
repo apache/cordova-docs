@@ -22,6 +22,8 @@ Getting Started with Windows Phone 8
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
+Note: Applications built with Apache Cordova for Windows Phone 8 will only run on Windows Phone 8 devices. If you are looking to target both 7.5 AND 8 devices, then you should be using Apache Cordova for Windows Phone 7, which does not have all the new shiny included in IE10, but implements the same APIs.
+
 1. System Requirements
 ---------------
 
