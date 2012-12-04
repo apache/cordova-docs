@@ -33,7 +33,7 @@ Supported Platforms
 - iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Bada 2.x
 - webOS
 - Tizen
@@ -130,7 +130,7 @@ webOS Quirks
 Windows Phone Quirks
 --------------------
 
-- Windows Phone Emulator always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
 Tizen Quirks
 --------------------

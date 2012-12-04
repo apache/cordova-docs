@@ -85,7 +85,6 @@ Permissions
 #### Properties/WPAppManifest.xml
 
     <Capabilities>
-        <Capability Name="ID_CAP_CAMERA" />
         <Capability Name="ID_CAP_ISV_CAMERA" />
         <Capability Name="ID_HW_FRONTCAMERA" />
     </Capabilities>

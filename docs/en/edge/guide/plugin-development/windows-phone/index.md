@@ -32,9 +32,9 @@ and it comes with the majority of the 'plumbing' built for you already.
     - The name of this class must EXACTLY match what you call into `cordova.exec(win, fail, "Echo", ...)`
 3. Include the base classes implementation
 
-        using WP7CordovaClassLib.Cordova;
-        using WP7CordovaClassLib.Cordova.Commands;
-        using WP7CordovaClassLib.Cordova.JSON;
+        using WPCordovaClassLib.Cordova;
+        using WPCordovaClassLib.Cordova.Commands;
+        using WPCordovaClassLib.Cordova.JSON;
 
 4. Extend your class from BaseCommand
 
@@ -79,10 +79,10 @@ Then, in JS you would need to call exec like this:
 
     codova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
-Interpretting your arguments in C#
+Interpreting your arguments in C#
 ----------------------------------
 
-The data received by your plugin method is a string value, but in actuallality
+The data received by your plugin method is a string value, but in actuality
 looking at our JavaScript code, we see our intention was to pass an array of strings.
 Looking back at our JS call to `cordova.exec`, we see we passed `[str]`:
 
