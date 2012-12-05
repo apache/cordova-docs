@@ -42,10 +42,10 @@ Supported Platforms
 - iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Tizen
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 ----------------------
 
 The `level` property is unavailable as Windows Phone 7 does not provide

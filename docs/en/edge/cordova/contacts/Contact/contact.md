@@ -213,7 +213,7 @@ iOS Quirks
 - __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
 - __categories:__  This property is not currently supported and will always be returned as `null`.
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 -----------
 
 - __displayName:__ When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact. 

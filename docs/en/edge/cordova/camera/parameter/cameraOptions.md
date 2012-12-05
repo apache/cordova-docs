@@ -109,7 +109,7 @@ iOS Quirks
 - Set `quality` below 50 to avoid memory error on some devices.
 - When `destinationType.FILE_URI` is used, photos are saved in the application's temporary directory.  Developers may delete the contents of this directory using the navigator.fileMgr APIs if storage space is a concern.
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.

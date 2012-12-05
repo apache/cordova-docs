@@ -19,6 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 device.name
 ===========
+WARNING: device.name is deprecated as of version 2.3.0
 
 Get the device's model name.
 
@@ -35,7 +36,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7
+- Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
 - Tizen
@@ -93,7 +94,7 @@ Android Quirks
     - The product name is often the code name given during production.
     - e.g. Nexus One returns "Passion", Motorola Droid returns "voles"
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 -------------
 
 - returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'
