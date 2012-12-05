@@ -47,7 +47,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
 - Windows 8
@@ -115,13 +115,13 @@ Full Example
       </body>
     </html>
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 ----------------------
 
-- Ignores button names, always `'OK|Cancel'`.
 - There is no built-in browser function for `window.confirm`
     - You can bind `window.confirm` by assigning `window.confirm = navigator.notification.confirm;`.
-- Calls to `alert` and `confirm` are non-blocking and result is only available asyncronously.
+- Calls to `alert` and `confirm` are non-blocking and result is only available asynchronously.
+
 
 Bada 2.x Quirks
 ---------------

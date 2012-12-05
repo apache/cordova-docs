@@ -46,7 +46,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
-- Windows Phone 7
+- Windows Phone 7 and 8
 - webOS
 - Tizen
 
@@ -118,4 +118,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- dot notation is NOT available on Windows Phone. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';
+- dot notation is NOT available on Windows Phone 7. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';

@@ -41,7 +41,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Windows 8
 
 Quick Example
@@ -135,7 +135,7 @@ iOS Quirks
 
 - iOS does not have a default audio recording application so a simple user interface is provided.
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 ----------
 
 - Windows Phone 7 does not have a default audio recording application so a simple user interface is provided.

@@ -37,7 +37,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7
+- Windows Phone 7 and 8
 - Tizen
 - Windows 8
 
@@ -95,3 +95,7 @@ During initial startup, the first offline event (if applicable) will take at lea
 Windows Phone 7 Quirks
 --------------------------
 When running in the Emulator, the connection.status of the device is always unknown, and this event will NOT fire.
+
+Windows Phone 8 Quirks
+--------------------------
+Emulator reports connection type as Cellular, and it will not change, so events will NOT fire.

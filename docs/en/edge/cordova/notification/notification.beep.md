@@ -32,7 +32,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
 
@@ -108,10 +108,10 @@ iPhone Quirks
   - The user must provide a file with the desired beep tone.
   - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`.
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 -------------
 
-- WP7 Cordova lib includes a generic beep file that is used. 
+- Cordova lib includes a generic beep file that is used. 
 
 Tizen Quirks
 -------------

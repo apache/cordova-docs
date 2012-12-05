@@ -40,7 +40,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 7 ( Mango )
+- Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
 - Tizen
@@ -106,12 +106,11 @@ Full Example
       </body>
     </html>
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 -------------
 
-- Ignores button names, always uses 'OK'
 - There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-- alert + confirm calls are non-blocking, and result is only available asyncronously.
+- alert + confirm calls are non-blocking, and result is only available asynchronously.
 
 Windows 8 App Quirks
 ---------------

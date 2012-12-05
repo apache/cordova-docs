@@ -32,9 +32,8 @@ Android Quirks
 ______________
 - filter is not supported.
 
-Windows Phone 7 Quirks
+Windows Phone 7 and 8 Quirks
 --------------
-
 - filter is not supported.
 
 Bada Quirks
