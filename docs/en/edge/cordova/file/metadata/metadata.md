@@ -38,7 +38,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7
+- Windows Phone 7 and 8
 - Windows 8
 
 Quick Example
