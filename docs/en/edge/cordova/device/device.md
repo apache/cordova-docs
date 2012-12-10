@@ -30,6 +30,7 @@ Properties
 - device.platform
 - device.uuid
 - device.version
+- device.model
 
 Variable Scope
 --------------

@@ -17,18 +17,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-device.name
+device.model
 ===========
-WARNING: device.name is deprecated as of version 2.3.0, use device.model instead
 
 Get the device's model name.
 
-    var string = device.name;
+    var string = device.model;
     
 Description
 -----------
 
-`device.name` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
+`device.model` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
 
 Supported Platforms
 -------------------
@@ -48,9 +47,9 @@ Quick Example
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
     //             Motorola Droid  returns "voles"
     // BlackBerry: Torch 9800      returns "9800"
-    // iOS:     All devices     returns either "iPhone", "iPod Touch", "iPhone Simulator", "iPad", "iPad Simulator"
+    // iOS:     for the iPad Mini, will return iPad2,5. iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
     //
-    var name = device.name;
+    var model = device.model;
 
 Full Example
 ------------
@@ -98,7 +97,7 @@ Android Quirks
 Windows Phone 7 and 8 Quirks
 -------------
 
-- returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'
+- returns the manufacturer specified device model, for example, the Samsung Focus returns 'SGH-i917'
 
 Bada Quirks
 -----------
