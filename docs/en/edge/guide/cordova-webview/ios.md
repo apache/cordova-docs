@@ -29,9 +29,9 @@ Beginning with Cordova 2.0.0 and greater, we only support the sub-project based 
 Prerequisites
 -------------
 
-1. **Cordova 2.1.0** or greater
+1. **Cordova 2.3.0** or greater
 2. **Xcode 4.5** or greater
-3. `Cordova.plist` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project)
+3. `config.xml` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project)
 
 
 Adding Cleaver to your Xcode project (CordovaLib sub-project)
@@ -40,8 +40,8 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 1. **Download and extract the Cordova source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. **Copy** the `Cordova.plist` file into your project folder on disk (see **Prerequisites** above)
-5. **Drag and drop** the `Cordova.plist` file into the Project Navigator of Xcode
+4. **Copy** the `config.xml` file into your project folder on disk (see **Prerequisites** above)
+5. **Drag and drop** the `config.xml` file into the Project Navigator of Xcode
 6. **Choose** the radio-button **"Create groups for any added folders"**, select the **Finish** button
 7. **Drag and drop** the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the CordovaLib sub-folder)
 8. Select `CordovaLib.xcodeproj` in the Project Navigator
@@ -96,9 +96,13 @@ Using CDVViewController in your code
 
         viewController.wwwFolderName = @"myfolder";
 
-4. (_OPTIONAL_) Set the `startPage` property (defaults to `"index.html"`):
+4. (_OPTIONAL_) Set the `startPage` property (defaults to `"index.html"`). This can be any URL as well:
 
         viewController.startPage = @"mystartpage.html";
+        
+    OR
+        
+        viewController.startPage = @"http://apache.org";
 
 5. (_OPTIONAL_) Set the `useSplashScreen` property (defaults to `NO`):
 
