@@ -187,6 +187,11 @@
             "cordova/storage/sqlresultsetlist/sqlresultsetlist.md",
             "cordova/storage/sqlerror/sqlerror.md",
             "cordova/storage/localstorage/localstorage.md"
+        ],
+        "inappbrowser.md": [
+            "cordova/inappbrowser/inappbrowser.md",
+            "cordova/inappbrowser/window.open.md"
         ]
+        
     }
 }
