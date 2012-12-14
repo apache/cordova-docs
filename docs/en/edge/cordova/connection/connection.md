@@ -69,13 +69,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>NetworkStatus</key>
-        <string>CDVConnection</string>
-    </dict>
+    <plugin name="NetworkStatus" value="CDVConnection" />
 
 ### webOS
 

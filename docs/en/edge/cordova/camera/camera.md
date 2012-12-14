@@ -68,13 +68,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Camera</key>
-        <string>CDVCamera</string>
-    </dict>
+    <plugin name="Camera" value="CDVCamera" />
 
 ### webOS
 

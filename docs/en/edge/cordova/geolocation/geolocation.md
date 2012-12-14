@@ -81,13 +81,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Geolocation</key>
-        <string>CDVLocation</string>
-    </dict>
+    <plugin name="Geolocation" value="CDVLocation" />
 
 ### webOS
 

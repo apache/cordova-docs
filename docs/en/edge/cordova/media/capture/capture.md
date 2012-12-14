@@ -110,13 +110,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Capture</key>
-        <string>CDVCapture</string>
-    </dict>
+    <plugin name="Capture" value="CDVCapture" />
 
 ### webOS
 

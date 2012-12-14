@@ -71,7 +71,7 @@ Full Example
 iOS Quirk
 ------------
 
-1. In your Cordova.plist, you need to [modify the value](guide_project-settings_index.md.html#Project%20Settings) for **"AutoHideSplashScreen”** to false
+1. In your **config.xml**, you need to [modify the value](guide_project-settings_index.md.html#Project%20Settings) for **"AutoHideSplashScreen”** to false
 
 2. Then, if you want to delay hiding the splash screen for 2 seconds, you can do this in your **deviceready** event handler:
 
