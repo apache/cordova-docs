@@ -25,7 +25,7 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
     var ref = window.open(url, target, options);
     
 - __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __url:__ the URL to load (`String`)
+- __url:__ the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
 - __target:__ the target to load the URL in (`String`) (Optional, Default: "_self")
 
         _self - opens in the Cordova WebView if url is in the white-list, else it opens in the InAppBrowser 
@@ -49,6 +49,7 @@ Quick Example
 -------------
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
 
 Full Example
 ------------
@@ -69,7 +70,7 @@ Full Example
         //
         function onDeviceReady() {
             // external url
-            var ref = window.open('http://apache.org', '_blank', 'location=yes');
+            var ref = window.open(encodeURI('http://apache.org'), '_blank', 'location=yes');
             // relative document
             ref = window.open('next.html', '_self');
         }
