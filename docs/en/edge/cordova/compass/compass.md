@@ -58,13 +58,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Compass</key>
-        <string>CDVLocation</string>
-    </dict>
+    <plugin name="Compass" value="CDVLocation" />
 
 ### webOS
 

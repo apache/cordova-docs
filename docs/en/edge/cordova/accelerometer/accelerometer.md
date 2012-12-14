@@ -67,13 +67,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Accelerometer</key>
-        <string>CDVAccelerometer</string>
-    </dict>
+    <plugin name="Accelerometer" value="CDVAccelerometer" />
 
 ### webOS
 

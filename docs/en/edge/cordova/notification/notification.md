@@ -63,13 +63,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Notification</key>
-        <string>CDVNotification</string>
-    </dict>
+    <plugin name="Notification" value="CDVNotification" />
 
 ### webOS
 

@@ -85,13 +85,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Contacts</key>
-        <string>CDVContacts</string>
-    </dict>
+    <plugin name="Contacts" value="CDVContacts" />
 
 ### webOS
 

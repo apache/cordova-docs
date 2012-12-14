@@ -107,13 +107,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Media</key>
-        <string>CDVSound</string>
-    </dict>
+    <plugin name="Media" value="CDVSound" />
 
 ### webOS
 

@@ -22,7 +22,7 @@ Getting Started with Windows Phone 8
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-Note: Applications built with Apache Cordova for Windows Phone 8 will only run on Windows Phone 8 devices. If you are looking to target both 7.5 AND 8 devices, then you should be using Apache Cordova for Windows Phone 7, which does not have all the new shiny included in IE10, but implements the same APIs.
+Note: Applications built with Apache Cordova for Windows Phone 8 will only run on Windows Phone 8 devices. If you are looking to target both 7.5 AND 8 devices, then you should be using Apache Cordova for Windows Phone 7, which does not have all the new shiny features included in IE10, but implements the same APIs.
 
 1. System Requirements
 ---------------
@@ -43,11 +43,11 @@ Note: Applications built with Apache Cordova for Windows Phone 8 will only run o
  - VS Express for Windows Phone ( included in the SDK )
  - Visual Studio Professional, Premium, or Ultimate
 
-Note: Running in Virtual Machine has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 8 (x64)
+Note: Running in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for Windows Phone on a Mac: http://aka.ms/BuildaWP8apponaMac
 
 Necessary for Installing on Device and Submitting to Market Place:
 
-- Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
+- •	Register for the [Windows Phone Developer Center](http://dev.windowsphone.com/en-us/publish)
 
 
 2. Install SDK + Cordova
@@ -63,7 +63,9 @@ Necessary for Installing on Device and Submitting to Market Place:
 
 2.1. Building the template
 -----------------------------
-( note, this step may not be required.  If the lib\windows-phone directory already contains a file CordovaStarter-x.x.x.zip then you may skip this step )
+Note: this step may not be required.  If the lib\windows-phone directory already contains a file CordovaStarter-x.x.x.zip then you may skip this step )
+In order to simplify the development process, Cordova comes with a Visual Studio template that allows creating a Cordova application rapidly. This template can be modified if needed and the below steps indicate how to proceed if you want to modify and re-generate the template.
+
 - Open the file lib\windows-phone\templates\standalone\CordovaSolution.sln in Visual Studio Express for Windows Phone
 - From the file menu, select 'Export Template...' 
 - Choose template type 'Project template'

@@ -40,11 +40,9 @@ Permissions
 
 ### iOS
 
-#### Cordova.plist
+#### config.xml
 
-        Add an entry under the Plugins dictionary - with the key "SplashScreen" and value "CDVSplashScreen". 
-        New projects should already have this key.
-
+    <plugin name="SplashScreen" value="CDVSplashScreen" />
     
 Setup
 -----

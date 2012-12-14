@@ -76,13 +76,9 @@ Permissions
 
 ### iOS
 
-#### App/Supporting Files/Cordova.plist
+#### config.xml
 
-    <key>Plugins</key>
-    <dict>
-        <key>Battery</key>
-        <string>CDVBattery</string>
-    </dict>
+    <plugin name="Battery" value="CDVBattery" />
 
 ### webOS
 

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
 
-Each plugin class must be registered using the Cordova.plist file, under the Plugins key.
+Each plugin class must be registered using the config.xml file, as a &lt;plugin&gt; tag under the &lt;plugins&gt; key.
 
 ## Plugin Class Mapping 
 
@@ -33,16 +33,15 @@ This will marshall a request from the UIWebView to the iOS native side, more or 
 
 Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the Javascript.
 
-The plugin must be added to `Plugins` key (a Dictionary) of the `Cordova.plist` file in your Cordova-iOS application's project folder.
+The plugin must be added under the `<plugins>` tag of the `config.xml` file in your Cordova-iOS application's project folder.
 
-    <key>service_name</key>
-    <string>PluginClassName</string>
+    <plugin name="service_name" value="PluginClassName" />
 
 The key `service_name` should match what you use in the JavaScript `exec` call, and the value will be the name of the Objective-C class of the plugin. Without this added, the plugin may compile but will not be reachable by Cordova.
 
 ## Writing an iOS Cordova Plugin
 
-We have JavaScript fire off a plugin request to the native side. We have the iOS Objective-C plugin mapped properly via the `Cordova.plist` file. So what does the final iOS Objective-C Plugin class look like?
+We have JavaScript fire off a plugin request to the native side. We have the iOS Objective-C plugin mapped properly via the `config.xml` file. So what does the final iOS Objective-C Plugin class look like?
 
 What gets dispatched to the plugin via JavaScript's `exec` function gets passed into the corresponding Plugin class's `action` method. A plugin method has this signature:
 
@@ -78,10 +77,9 @@ Basically, the options dictionary has been removed for the new signature, and th
 
 ## Echo Plugin iOS Plugin
 
-We would add the following to the `Plugins` key (a Dictionary) of the project's `Cordova.plist` file:
+We would add the following to the `<plugins>` tag of the project's `config.xml` file:
 
-    <key>Echo</key>
-    <string>Echo</string>
+    <plugin name="Echo" value="Echo" />
 
 Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins folder inside our Cordova-iOS
 application folder:
@@ -162,7 +160,7 @@ For iOS 6, you would use Safari 6.0 to simply attach to your app running in the 
 
 ## Common Pitfalls
 
-* Don't forget to add your plugin's mapping to Cordova.plist - if you forgot, an error will be printed to the Xcode console log
+* Don't forget to add your plugin's mapping to config.xml - if you forgot, an error will be printed to the Xcode console log
 * Don't forget to add any hosts you connect to in the [whitelist](guide_whitelist_index.md.html#Domain%20Whitelist%20Guide) - if you forgot, an error will be printed to the Xcode console log
 
 ## Deprecated Plugin Signature Note
