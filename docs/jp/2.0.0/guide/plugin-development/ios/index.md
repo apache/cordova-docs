@@ -136,14 +136,14 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 他にも、オーバーライド出来るメソッドについては以下を参照してください:
 
-1. [CDVPlugin.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-2. [CDVPlugin.m](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
 例えば、 pausa, resume, app terminate, handleOpenURL events といったような機能を実装できます。
 
 ## プラグインのデバッグ
 
-Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 [Apache Cordova Project の Weinre](https://github.com/apache/incubator-cordova-weinre) または [サードパーティ製の iWebInspector](http://www.iwebinspector.com/) を使用できます。
+Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 [Apache Cordova Project の Weinre](https://github.com/apache/cordova-weinre) または [サードパーティ製の iWebInspector](http://www.iwebinspector.com/) を使用できます。
 
 ## よくある落とし穴
 

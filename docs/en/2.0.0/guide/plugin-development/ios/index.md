@@ -136,14 +136,14 @@ Finally we write the JavaScript back to the UIWebView, which will execute the Ja
 
 See other methods that you can override in:
 
-1. [CDVPlugin.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-2. [CDVPlugin.m](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
 For example, you can hook into the pause, resume, app terminate and handleOpenURL events.
 
 ## Debugging Plugins
 
-To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, you can use [Weinre, an Apache Cordova Project](https://github.com/apache/incubator-cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
+To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, you can use [Weinre, an Apache Cordova Project](https://github.com/apache/cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
 
 ## Common Pitfalls
 

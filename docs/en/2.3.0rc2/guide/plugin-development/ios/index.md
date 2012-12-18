@@ -58,9 +58,9 @@ What gets dispatched to the plugin via JavaScript's `exec` function gets passed 
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
     
-1. [CDVInvokedUrlCommand.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
-2. [CDVPluginResult.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
-3. [CDVCommandDelegate.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
+1. [CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
+2. [CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
+3. [CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
 
   
 ## Plugin Signatures
@@ -147,14 +147,14 @@ Although UIWebViews run on a dedicated thread, plugin methods are executed on th
 
 See other methods that you can override in:
 
-1. [CDVPlugin.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-2. [CDVPlugin.m](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
 For example, you can hook into the pause, resume, app terminate and handleOpenURL events.
 
 ## Debugging Plugins
 
-To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova Project](https://github.com/apache/incubator-cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
+To debug the Objective-C side, you would use Xcode's built in debugger. For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova Project](https://github.com/apache/cordova-weinre) or [iWebInspector, a third-party utility](http://www.iwebinspector.com/)
 
 For iOS 6, you would use Safari 6.0 to simply attach to your app running in the iOS 6 Simulator.
 
