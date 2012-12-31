@@ -42,7 +42,7 @@ camera.getPicture
 - データをローカルに保存 (`LocalStorage` や [Lawnchair](http://brianleroux.github.com/lawnchair/) など)
 - データをリモートサーバーに送信
 
-注意: iPhone 4 や Black Berry Touch 9800 などの最新デバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 _そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。_ よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。
+__注意:__ 最新のデバイスで撮影したイメージの画質は良好で、フォトアルバムから取得する画像はたとえ quality パラメーターで画質を指定したとしても、縮小されません。 ___そのような画像を Base64 でエンコードすると、メモリーの問題が発生します。よって、 FILE_URI を 'Camera.destinationType' として使用することが推奨されます。___
 
 サポートされているプラットフォーム
 -------------------
@@ -52,11 +52,16 @@ camera.getPicture
 - iOS
 - Windows Phone 7 (Mango)
 - Bada 1.2
+- Tizen
 
 iOS に関する注意点
 ----------
 
-JavaScript の alert() をコールバック関数に含めると、問題が生じる可能性があります。 alert を setTimeout() でラップすることで、 alert が表示される前に iOS の image picker または popover が完全に閉じるようにします: setTimeout("alert('message');", 0);
+JavaScript の alert() をコールバック関数に含めると、問題が生じる可能性があります。 alert を setTimeout() でラップすることで、 alert が表示される前に iOS の image picker または popover が完全に閉じるようにします:
+
+    setTimeout(function() {
+        // 任意のコード
+    }, 0);
 
 
 Windows Phone 7 に関する注意点
@@ -64,6 +69,10 @@ Windows Phone 7 に関する注意点
 
 Zune とデバイスが接続している間は、ネイティブカメラアプリケーションは起動せずに、エラーコールバックが呼び出されます。
 
+Tizen に関する注意点
+----------------------
+
+'destinationType: Camera.DestinationType.FILE_URI' と 'sourceType: Camera.PictureSourceType.PHOTOLIBRARY' のみサポートされています。
 
 使用例
 -------------
@@ -106,7 +115,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       <head>
         <title>写真を撮ってみよう</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // 写真ソース

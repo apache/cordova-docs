@@ -68,7 +68,7 @@ x, y, z の加速度は重力の影響 (9.81 m/s^2) を含みます。デバイ�
       <head>
         <title>加速度センサーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
