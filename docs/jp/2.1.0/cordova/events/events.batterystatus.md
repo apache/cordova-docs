@@ -43,7 +43,7 @@ battery status ハンドラーは以下の2つのプロパティーを含むオ�
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 - Windows Phone 7 (Mango)
-
+- Tizen
 
 Windows Phone 7 に関する注意点
 ----------------------
@@ -69,12 +69,12 @@ level プロパティーは利用できません。 `isPlugged` パラメータ�
       <head>
         <title>Cordova Device Ready 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.0.0.js はまだ完了していません。
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.1.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //

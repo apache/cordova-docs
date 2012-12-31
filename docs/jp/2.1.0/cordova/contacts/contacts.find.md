@@ -63,6 +63,7 @@ contacts.find 関数は、デバイスの連絡先データベースに問い合
     // Bob という名前が含まれる全ての連絡先を取得
     var options = new ContactFindOptions();
     options.filter="Bob";
+    options.multiple=true;
     var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
@@ -74,7 +75,7 @@ contacts.find 関数は、デバイスの連絡先データベースに問い合
       <head>
         <title>Contact の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

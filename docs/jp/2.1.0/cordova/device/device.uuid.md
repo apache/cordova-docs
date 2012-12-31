@@ -38,6 +38,7 @@ UUID の生成方法については、デバイスの製造者やプラットフ
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 使用例
 -------------
@@ -56,6 +57,9 @@ UUID の生成方法については、デバイスの製造者やプラットフ
     // もしユーザーが定義されていない場合、ガイドが生成され、アプリがアンインストールするまで存続します
     //
     // webOS: デバイスの NDUID を返します
+    //
+    // Tizen: デバイスの IMEI (International Mobile Equipment Identity) を返します
+    //        IMEI はGSM と UMTS の全ての携帯電話ごとに一意な番号です
     var deviceID = device.uuid;
 
 詳細な使用例

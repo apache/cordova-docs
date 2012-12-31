@@ -42,6 +42,7 @@ batterylow ハンドラーは以下の2つのプロパティーを含むオブ�
 - iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
+- Tizen
 
 使用例
 -------------
@@ -61,12 +62,12 @@ batterylow ハンドラーは以下の2つのプロパティーを含むオブ�
       <head>
         <title>Cordova Device Ready 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.0.0.js はまだ完了していません。
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.1.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //

@@ -38,6 +38,7 @@ device.name
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 使用例
 -------------
@@ -57,7 +58,7 @@ device.name
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -106,3 +107,7 @@ Windows Phone 7 に関する注意点
 Bada に関する注意点
 -----------
 - 製造時のモデル名を返します。 例: 'Samsung Wave S8500'
+
+Tizen に関する注意点
+-----------
+- 製造時のモデル名を返します。 例: 'TIZEN'

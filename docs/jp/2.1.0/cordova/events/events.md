@@ -91,3 +91,11 @@ Event Types
 ### Windows Phone
 
     パーミッションの設定は必要ありません。
+
+### Tizen
+
+#### config.xml
+
+    <feature name="http://tizen.org/api/systeminfo" required="true"/>
+
+参照: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
