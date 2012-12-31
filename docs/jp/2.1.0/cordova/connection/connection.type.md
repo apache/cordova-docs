@@ -37,6 +37,7 @@ connection.type
 - Windows Phone 7 (Mango)
 - Bada 2.x
 - webOS
+- Tizen
 
 使用例
 -------------
@@ -67,7 +68,7 @@ connection.type
       <head>
         <title>navigator.network.connection.type 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -123,3 +124,9 @@ Windows Phone に関する注意点
 --------------------
 
 - Windows Phone Emulator は常に `navigator.network.connection.type` を `Connection.UNKNOWN` と返します。
+
+Tizen に関する注意点
+--------------------
+
+- Tizen は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
+    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
