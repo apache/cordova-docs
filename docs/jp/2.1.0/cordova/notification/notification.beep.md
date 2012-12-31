@@ -34,6 +34,7 @@ notification.beep
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- Tizen
 
 使用例
 -------------
@@ -49,7 +50,7 @@ notification.beep
       <head>
         <title>Notification の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -111,3 +112,9 @@ Windows Phone 7 に関する注意点
 -------------
 
 - WP7 の Cordova ライブラリは独自の警告音ファイルを含んでおり、それを使用しています。
+
+Tizen に関する注意点
+-------------
+
+  - Tizen は media API を使って、オーディオファイルを再生することで警告音を実装しています。
+  - このファイルは短い長さとし、 `beep.wav` という名前でアプリケーションのルートディレクトリの 'sounds' サブディレクトリに保存してください。

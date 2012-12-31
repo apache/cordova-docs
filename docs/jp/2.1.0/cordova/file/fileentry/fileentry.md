@@ -112,6 +112,37 @@ __iOS に関する注意点__
 
 - **"com.apple.MobileBackup"** 拡張属性のみサポートされています。値を **1** とセットすることで、ディレクトリを iCloud でバックアップされない設定とします。値を **0** とセットすることで、再度ディレクトリを iCloud でバックアップされる設定とします。
 
+__使用例__
+
+    function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue) 
+    {
+        var onSetMetadataWin = function() {
+          console.log("メタデータが正常にセットされました。")
+        }
+        var onSetMetadataFail = function() {
+          console.log("メタデータ作成中にエラーが発生しました。")
+        }
+
+        var onGetFileWin = function(parent) {
+          parent.setMetadata(onSetMetadataWin, onSetMetadataFail, { metadataKey: metadataValue});
+        }
+        var onGetFileFail = function() {
+          console.log("ファイル取得中にエラーが発生しました。")
+        }
+
+        var onFSWin = function(fileSystem) {
+          fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+        }
+
+        var onFSFail = function(evt) {
+          console.log(evt.target.error.code);
+        }
+
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+    }
+
+    setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+
 moveTo
 ------
 

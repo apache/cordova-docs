@@ -30,6 +30,7 @@ FileUploadOptions
 - __mimeType:__ データの MIME 形式を指定します。 デフォルトは "image/jpeg" です (DOMString)
 - __params:__ その他の HTTP リクエストで送信されるパラメーターを指定します (Object)
 - __chunkedMode:__ アップロードにチャンクドストリーミングモードを使用するかを指定します。 デフォルトは "true" です (Boolean)
+- __headers:__ ヘッダー名 => ヘッダー値の Map を指定します。ヘッダーへ複数の値を設定するには、配列を使用します (Object)
 
 
 概要

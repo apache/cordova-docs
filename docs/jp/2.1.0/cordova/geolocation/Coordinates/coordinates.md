@@ -47,6 +47,7 @@ Coordinates
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
 - webOS
+- Tizen
 
 使用例
 -------------
@@ -79,7 +80,7 @@ Coordinates
     <html>
       <head>
         <title>位置情報の使用例</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordovaの読み込み完了まで待機

@@ -74,7 +74,7 @@ __パラメーター:__
         reader.readAsDataURL(file);
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -100,7 +100,7 @@ __パラメーター:__
         reader.readAsText(file);
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -133,7 +133,7 @@ Abort の例
       <head>
         <title>FileReader の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -179,8 +179,8 @@ Abort の例
             reader.readAsText(file);
         }
 
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
 
         </script>

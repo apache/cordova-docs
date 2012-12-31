@@ -42,6 +42,7 @@ media.getCurrentPosition
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
 - Windows Phone 7 (Mango)
+- Tizen
 
 使用例
 -------------
@@ -77,7 +78,7 @@ media.getCurrentPosition
           <head>
             <title>メディアの使用例</title>
 
-            <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
             <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機

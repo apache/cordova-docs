@@ -69,7 +69,7 @@ media.startRecord
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -139,3 +139,8 @@ iOS に関する注意点
 ----------
 
 - 録音するためのファイルは既に .wav 形式で存在していなければなりません。 File API 群を使用することでファイルを作成することができます。
+
+Tizen に関する注意点
+----------
+
+- この API は Tizen デバイスではサポートされていません。

@@ -44,6 +44,7 @@ SQLResultSetList は SQL の select 文によって返されるデータを保�
 - BlackBerry WebWorks (OS 6.0 以上)
 - iPhone
 - webOS
+- Tizen
 
 Execute SQL の例
 ------------------
@@ -75,7 +76,7 @@ Execute SQL の例
       <head>
         <title>Storage の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

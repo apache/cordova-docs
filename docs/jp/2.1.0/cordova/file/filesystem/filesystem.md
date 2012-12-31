@@ -60,7 +60,7 @@ File System の使用例
       <head>
         <title>File System の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -78,8 +78,8 @@ File System の使用例
             console.log(fileSystem.root.name);
         }
 
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
 
         </script>

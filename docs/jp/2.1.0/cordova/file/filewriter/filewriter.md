@@ -68,7 +68,7 @@ Seek の例
         writer.seek(writer.length);
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -81,7 +81,7 @@ Truncate の例
         writer.truncate(10);
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -97,7 +97,7 @@ Write の例
         writer.write("サンプルテキスト");
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -114,7 +114,7 @@ Append の例
         writer.write("付加テキスト);
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -131,7 +131,7 @@ Abort の例
         writer.abort();
     };
 
-    var fail = function(evt) {
+    var fail = function(error) {
         console.log(error.code);
     };
 
@@ -144,7 +144,7 @@ Abort の例
       <head>
         <title>FileWriter の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機

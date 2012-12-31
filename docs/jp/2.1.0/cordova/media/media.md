@@ -35,6 +35,17 @@ Media
 - __mediaError__: (オプション) エラー発生時に呼ばれるコールバック関数を表します _(Function)_
 - __mediaStatus__: (オプション) ステータスが変わったときに呼ばれるコールバック関数を表します _(Function)_
 
+定数
+---------
+
+以下の定数は __mediaStatus__ コールバック関数への引数としてのみ使用されます。
+
+- `Media.MEDIA_NONE`     = 0;
+- `Media.MEDIA_STARTING` = 1;
+- `Media.MEDIA_RUNNING`  = 2;
+- `Media.MEDIA_PAUSED`   = 3;
+- `Media.MEDIA_STOPPED`  = 4;
+
 メソッド
 -------
 
@@ -61,7 +72,8 @@ Media
 - Android
 - BlackBerry WebWorks (OS 5.0 以上)
 - iOS
-- Windows Phone 7 (Mango)
+- Windows Phone 7.5
+- Tizen
 
 パーミッション
 -----------
@@ -119,3 +131,12 @@ Media
     </Capabilities>
 
 参照: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+
+### Tizen
+
+    パーミッションの設定は必要ありません。
+
+
+### Windows Phone に関する注意点
+    一度に一つのメディアファイルのみ再生できます。
+    アプリケーションが他のメディアとどのように関わるかには、厳しい制限があります。詳しくは http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx を参照してください。

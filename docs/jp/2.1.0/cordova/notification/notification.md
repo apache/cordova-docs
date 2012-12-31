@@ -78,3 +78,7 @@ Notification
 ### Windows Phone
 
     パーミッションの設定は必要ありません。
+
+### Tizen
+
+    パーミッションの設定は必要ありません。
