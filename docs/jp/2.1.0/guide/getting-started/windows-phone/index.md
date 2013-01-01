@@ -47,9 +47,21 @@ Getting Started with Windows Phone
 - [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/) のダウンロードとインストール
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから lib\windows-phone\ サブフォルダーと一緒に作業を進めます。
 - CordovaStarter-x.x.x.zip のファイルを次のフォルダーにコピーします: \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
+(もしテンプレートファイルが存在しない場合、これをビルドする必要があります。以下の 2.1 を参照してください)
 もし VisualStudio をインストールしたばかりの場合は、このフォルダーを作成するために一度起動する必要があります。
 "Visual C#" の "Silverlight for Windows Phone" サブフォルダーの代わりにこのプロジェクトを追加することも出来ます。これは、新しいプロジェクトを作るときにプロジェクトテンプレートがどこに表れるかに影響するだけです。また、このフォルダーを作成する必要があるかもしれません。
 
+
+2.1 テンプレートのビルド
+-----------------------------
+(このステップは必要ないかもしれません。もし lib\windows-phone がすでに CordovaStarter-x.x.x.zip ファイルを含んでいる場合は、このステップをスキップしてください)
+- Visual Studio Express for Windows Phone にある lib\windows-phone\templates\standalone\CordovaSolution.sln を開きます
+- ファイルメニューから 'Export Template...' を選びます
+- テンプレートタイプ 'Project template' を選びます
+- エクスポートするテンプレート名を指定します。例: CordovaStarter-2.1.0 は CordovaStarter-2.1.0.zip となります
+- 概要、アイコン画像、プレビュー画像などを必要に応じて追加します。これは、 Visual Studio の 'New Project' ダイアログで表示される内容になります
+- 注意: もし ('Automatically import the template ... ') を選択した場合、ステップ2 にある .zip ファイルのコピーは必要ありません
+- 'Finish' をクリックします
 
 
 3. 新規プロジェクトの作成

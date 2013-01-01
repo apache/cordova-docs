@@ -24,40 +24,34 @@ Cordova 1.4 からは、 Cordova を iOS アプリケーションの中でコン
 
 Cordova 1.4 以降の Xcode テンプレートを用いて作られた新しい Cordova バースのアプリケーションは Cleaver を使用し、このテンプレートは Cleaver の参照実装と捉えられます。
 
-Cordova 2.0.0 からは、 Cleaver を実装したサブプロジェクトのみをサポートしています。
+Cordova 2.0.0 以降は、 Cleaver を実装したサブプロジェクトのみをサポートしています。
 
 必要なもの
 -------------
 
-1. **Cordova 2.0.0** またはそれ以降
+1. **Cordova 2.1.0** またはそれ以降
 2. **Xcode 4.3** またはそれ以降
-3. `Cordova.plist` ファイル
+3. `Cordova.plist` ファイル ([新しく作成した](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova プロジェクトから)
 
 
 Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェクト)
 -------------------------------------------------------------
 
-0. Cordova を **インストール** します
-1. `Cordova.plist` ファイルをディスクのプロジェクトフォルダー内に **コピー** します
-2. `Cordova.plist` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します
-3. **"Create groups for any added folders"** のラジオボタンを **選択** します
-4. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
-5. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
-6. `~/Documents/CordovaLib/` と入力し、 **"Go"** ボタンをクリックします
-7. **"Add Files..." 画面** で `VERSION` ファイルを選択します
-8. **"Add Files..." 画面** で **"Add"** ボタンをクリックします
-9. **Option-Command-A** キーを押します。ファイルをプロジェクトに追加するためのドロップダウン画面 (**"Add Files..." 画面**) が開きます。 **"Created groups for any added folders"** のラジオボタンが選択されていることを確認します
-10. **Shift-Command-G** キーを押します。フォルダー移動のための別のドロップダウン画面 (**"Go to the folder:" 画面**) が開きます
-11. `~/Documents/CordovaLib/CordovaLib.xcodeproj` と入力し、 **"Go"** ボタンをクリックします
-12. **"Add Files..." 画面** で **"Add"** ボタンをクリックします
-13. Project Navigator で `CordovaLib.xcodeproj` を選択します
-14. **File Inspector** を開くため、 **Option-Command-1** キーを押します
-15. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
-16. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
-17. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
-18. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
-19. **"Link Binaries with Libraries"** を展開します
-20. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
+1. ハードディスクの**恒久的なフォルダー** (例: ~/Documents/Cordova) に **Cordova をダウンロードし解凍**します
+2. Xcode が起動している場合、 **終了** します
+3. **Terminal.app** を使用して、Cordova をダウンロードしたディレクトリまで **移動**します
+4. `Cordova.plist` ファイルをディスクのプロジェクトフォルダー内に **コピー** します (上の **必要なもの** を参照してください)
+5. `Cordova.plist` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します
+6. **"Create groups for any added folders"** のラジオボタンを **選択** し、 **Finish** ボタンをクリックします
+7. `CordovaLib.xcodeproj` ファイルを Xcode の Project Navigator に **ドラッグアンドドロップ** します (上の、 CordovaLib のサブディレクトリ、恒久的なフォルダーから)
+8. Project Navigator で `CordovaLib.xcodeproj` を選択します
+9. **File Inspector** を開くため、 **Option-Command-1** キーを押します
+10. **Location** のドロップダウンメニューのため、 **File Inspector** から **"Relative to CORDOVALIB"** を選択します
+11. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
+12. **"Other Linker Flags"** の値に `-all_load` と `-Obj-C` を追加します
+13. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Phases"** タブを選択します
+14. **"Link Binaries with Libraries"** を展開します
+15. **"+" ボタン** をクリックし、以下の **framework** を追加します (オプションで、 Project Navigator の中でこれらを Frameworks グループに **移動** します):
 
         AddressBook.framework
         AddressBookUI.framework
@@ -70,11 +64,22 @@ Xcode プロジェクトへの Cleaver の追加 (CordovaLib サブプロジェ�
         MobileCoreServices.framework
         CoreMedia.framework
 
-21. **"Target Dependencies"** を展開します。 (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
-22. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します
-23. **"Link Binaries with Libraries"** を展開します。
+16. **"Target Dependencies"** を展開します。 (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
+17. **"+" ボタン** をクリックし、 `CordovaLib` ビルドプロダクトを追加します
+18. **"Link Binaries with Libraries"** を展開します。
     (もしこのラベルのボックスが複数ある場合は、一番上のものを選んでください)
-24. **"+" ボタン** をクリックし、 `libCordova.a` を追加します
+19. **"+" ボタン** をクリックし、 `libCordova.a` を追加します
+20. Xcode 設定 **"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** を **"Unique"** にセットします
+21. Project Navigator の **Project アイコン** をクリックし、 **Target** を選択し、 **"Build Settings"** タブを選択します
+22. **"Header Search Paths"** で検索をします。この設定に、以下の値を追加します (クォートを含む)
+
+        "$(TARGET_BUILD_DIR)/usr/local/lib/include"
+
+        "$(OBJROOT)/UninstalledProducts/include"
+
+        "$(BUILT_PRODUCTS_DIR)"
+
+    **Cordova 2.1.0** では、 CordovaLib は **Automatic Reference Counting (ARC)** を使用するようにアップグレードされました。 CordovaLib を使用するにあたって **ARC** にアップグレードする必要はありませんが、もしプロジェクトを **ARC** を使用するようにアップグレードしたい場合は、メニューから Xcode migration wizard : **Edit -> Refactor -> Convert to Objective-C ARC…** を使用して、 **libCordova.a を選択解除** し、ウィザードを完了してください。
 
 コード中での CDVViewController の使用法
 ------------------------------------

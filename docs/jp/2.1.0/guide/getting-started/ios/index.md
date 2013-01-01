@@ -1,4 +1,4 @@
----
+/--
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -34,21 +34,24 @@ Getting Started with iOS
 SDK と Apache Cordova のインストール
 ------------------------
 
-- [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) から Xcode をインストールします。
-- Xcode コマンドラインツール (Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install) をインストールします。
+- [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) または [Apple Developer Downloads](http://developer.apple.com/downloads) から **Xcode** をインストールします。
+- **Xcode コマンドラインツール** (**Xcode Preferences -> Downloads -> Components -> Command Line Tools -> Install**) をインストールします。
 - [Apache Cordova](http://phonegap.com/download) の最新版をダウンロードします。
     - ダウンロードしたものを解凍します
     - Apache Corder iOS は `lib/ios` ディレクトリ以下にあります
 
+CordovaLib のインストール
+------------------
+
+1. Cordova を **ダウンロード** します
+2. ダウンロードしたものを、ハードディスクの恒久的な場所に **解凍** します (例: ~/Documents/CordovaLib-2.X.X)
+3. Step 3 はありません
+
 新規プロジェクトの作成
 --------------------
-- **'Cordova-2.0.0.pkg'** インストーラーを実行し、インストールを完了します
-- **bin** フォルダー (ソース、もしくは .dmg から) をハードドライブ上にコピーします
-
-    ![](img/guide/getting-started/ios/bin_folder.png)
 
 - **Terminal.app** を起動します
-- コピーした **bin** フォルダーを Dock にある **Terminal.app** のアイコンにドラッグします。これにより、新しいターミナルのウィンドウが開きます
+- (上の **CordovaLib のインストール** セクションで解凍した恒久的な場所にある) **bin** フォルダーを Dock にある **Terminal.app** のアイコンにドラッグします。これにより、新しいターミナルのウィンドウが開きます
 - `./create <project_folder_path> <bundle_id> <project_name>` を入力し、 **"Enter"** を押します
 
         <project_folder_path> は新しい Cordova iOS プロジェクトへのパスを表します (もし既に存在する場合は、空である必要があります)
@@ -96,7 +99,6 @@ Xcode の問題
 ----------------
 もしヘッダーが無いなどに関連した編集での問題がある場合、ビルドプロダクトは **同じビルドディレクトリでビルドする** 必要があります。**"Xcode Preferences -> Locations -> Derived Data -> Advanced…"** の設定を **"Unique"** に変更する必要があるかもしれません。これは Xcode をインストールした直後のデフォルト設定ですが、もし古いバージョンからアップグレードした場合は昔の設定が残っており、その場合はアップデートする必要があります。
 
-また、 **Cordova-2.0.0.pkg** をインストールする時、 Xcode が起動していないことを確認擦る必要があります。もし起動していた場合は、 Xcode のセットされるべき値がセットされません。
 
 
 アプリを作成
@@ -104,7 +106,7 @@ Xcode の問題
 
 これで Xcode プロジェクトのセットアップが完了し、シミュレーターまたはデバイスでビルドし動かすことが出来ます。
 アプリを書くために、 Xcode を使用する必要はありません。
-あなたの好きなテキストエディターを使い、 Xcode 、またはプロジェクトフォルダ (**cordova** サブフォルダ) 内で [コマンドラインツール](guide_command-line_index.md.html) でリビルド作業を行えます。
+あなたの好きなテキストエディターを使い、 Xcode 、またはプロジェクトフォルダ (**cordova** サブフォルダー) 内で [コマンドラインツール](guide_command-line_index.md.html) でリビルド作業を行えます。
 Xcode は自動的に `www` ディレクトリ内にあるファイルの変化を検出します。
 
 コマンドラインツールの問題

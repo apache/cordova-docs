@@ -112,7 +112,7 @@ Getting Started with Android
         <html>
         <head>
         <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
         </head>
         <body>
         <h1>Hello World</h1>

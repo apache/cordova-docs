@@ -27,3 +27,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 - Getting Started with WebOS
 - Getting Started with Windows Phone
 - Getting Started with Bada
+- Getting Started with Tizen
