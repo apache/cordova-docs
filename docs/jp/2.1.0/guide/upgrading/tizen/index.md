@@ -20,4 +20,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading Cordova Tizen
 ======================
 
-これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要が>ある人のためのドキュメントです。
+これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。

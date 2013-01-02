@@ -61,12 +61,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>位置情報を取得します。</span>
         </li>
         <li>
+            <h2>Globalization</h2>
+            <span>ロケール固有のオブジェクトの表現を可能にします。</span>
+        </li>
+        <li>
             <h2>Media</h2>
             <span>オーディオの録音と再生を行います。</span>
         </li>
         <li>
             <h2>Notification</h2>
             <span>視覚、聴覚、触覚を用いたデバイス通知機能を提供します。</span>
+        </li>
+        <li>
+            <h2>Splashscreen</h2>
+            <span>アプリケーションのスプラッシュスクリーンを表示・非表示します。</span>
         </li>
         <li>
             <h2>Storage</h2>
@@ -86,6 +94,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <li>
             <h2>アップグレードガイド</h2>
             <span>アプリケーションを最新の Cordova にアップグレードします。</span>
+        </li>
+        <li>
+            <h2>プロジェクトの設定</h2>
+            <span>アプリケーションの設定をカスタマイズします。</span>
         </li>
         <li>
             <h2>プラグイン開発ガイド</h2>

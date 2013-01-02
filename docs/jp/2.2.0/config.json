@@ -120,6 +120,22 @@
             "cordova/geolocation/parameters/geolocationError.md",
             "cordova/geolocation/parameters/geolocation.options.md"
         ],
+        "globalization.md": [
+            "cordova/globalization/globalization.md",
+            "cordova/globalization/globalization.getPreferredLanguage.md",
+            "cordova/globalization/globalization.getLocaleName.md",
+            "cordova/globalization/globalization.dateToString.md",
+            "cordova/globalization/globalization.stringToDate.md",
+            "cordova/globalization/globalization.getDatePattern.md",
+            "cordova/globalization/globalization.getDateNames.md",
+            "cordova/globalization/globalization.isDayLightSavingsTime.md",
+            "cordova/globalization/globalization.getFirstDayOfWeek.md",
+            "cordova/globalization/globalization.numberToString.md",
+            "cordova/globalization/globalization.stringToNumber.md",
+            "cordova/globalization/globalization.getNumberPattern.md",
+            "cordova/globalization/globalization.getCurrencyPattern.md",
+            "cordova/globalization/GlobalizationError/globalizationerror.md"
+        ],
         "media.md": [
             "cordova/media/media.md",
             "cordova/media/media.getCurrentPosition.md",
@@ -152,6 +168,11 @@
             "cordova/notification/notification.confirm.md",
             "cordova/notification/notification.beep.md",
             "cordova/notification/notification.vibrate.md"
+        ],
+        "splashscreen.md": [
+            "cordova/splashscreen/splashscreen.md",
+            "cordova/splashscreen/splashscreen.show.md",
+            "cordova/splashscreen/splashscreen.hide.md"
         ],
         "storage.md": [
             "cordova/storage/storage.md",
