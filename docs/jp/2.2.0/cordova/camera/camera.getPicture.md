@@ -115,7 +115,7 @@ Tizen に関する注意点
       <head>
         <title>写真を撮ってみよう</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // 写真ソース

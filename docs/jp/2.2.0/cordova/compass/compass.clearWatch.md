@@ -33,6 +33,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
 - iPhone
 - Windows Phone 7 ( Mango ) ハードウェア内で有効な場合
 - Bada 1.2 & 2.x
+- Tizen
 
 使用例
 -------------
@@ -51,7 +52,7 @@ watch ID パラメーターによって参照されるコンパスの監視を�
       <head>
         <title>Compass Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // watch ID が現在の `watchHeading` を参照

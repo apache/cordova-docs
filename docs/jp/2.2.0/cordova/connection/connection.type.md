@@ -27,7 +27,6 @@ connection.type
 
 このプロパティーは、デバイスのネットワーク接続状態や接続のタイプを手早く取得出来ます。
 
-
 サポートされているプラットフォーム
 -------------------
 
@@ -43,7 +42,7 @@ connection.type
 -------------
 
     function checkConnection() {
-        var networkState = navigator.network.connection.type;
+        var networkState = navigator.connection.type;
 
         var states = {};
         states[Connection.UNKNOWN]  = '不明な接続';
@@ -59,16 +58,15 @@ connection.type
 
     checkConnection();
 
-
 詳細な使用例
 ------------
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>navigator.network.connection.type 使用例</title>
+        <title>navigator.connection.type 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -82,7 +80,7 @@ connection.type
         }
 
         function checkConnection() {
-            var networkState = navigator.network.connection.type;
+            var networkState = navigator.connection.type;
 
             var states = {};
             states[Connection.UNKNOWN]  = '不明な接続';
@@ -103,17 +101,26 @@ connection.type
       </body>
     </html>
 
+API の変更点
+----------
+Cordova 2.2.0 以前では、 Connection オブジェクトは `navigator.network.connection` にありました。
+
+仕様と一致させるため、これは 2.2.0 で `navigator.connection` に変更されました。
+
+`navigator.network.connection` はまだ存在していますが、非推奨であり、将来削除されるでしょう。
+
+
 iOS に関する注意点
 ----------
 
 - iOS はネットワーク接続のタイプを特定することが出来ません。
-    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。
 
 Bada に関する注意点
 -----------
 
 - Bada は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
-    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。
 
 webOS に関する注意点
 ------------
@@ -123,10 +130,10 @@ webOS に関する注意点
 Windows Phone に関する注意点
 --------------------
 
-- Windows Phone Emulator は常に `navigator.network.connection.type` を `Connection.UNKNOWN` と返します。
+- Windows Phone Emulator は常に `navigator.connection.type` を `Connection.UNKNOWN` と返します。
 
 Tizen に関する注意点
 --------------------
 
 - Tizen は WiFi または 携帯電話ネットワークに接続されているかどうかのみを特定できます。
-    - 携帯電話ネットワークでの接続時、 `navigator.network.connection.type` には `Connection.CELL_2G` がセットされます。
+    - 携帯電話ネットワークでの接続時、 `navigator.connection.type` には `Connection.CELL_2G` がセットされます。

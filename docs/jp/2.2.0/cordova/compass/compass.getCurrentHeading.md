@@ -38,6 +38,7 @@ compass.getCurrentHeading
 - iPhone
 - Windows Phone 7 ( Mango ) ハードウェア内で有効な場合
 - Bada 1.2 & 2.x
+- Tizen
 
 使用例
 -------------
@@ -60,7 +61,7 @@ compass.getCurrentHeading
       <head>
         <title>コンパスの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
