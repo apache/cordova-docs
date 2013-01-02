@@ -43,6 +43,7 @@ accelerometer.watchAcceleration
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- Tizen
 
 
 使用例

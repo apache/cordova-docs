@@ -34,6 +34,7 @@ accelerometer.clearWatch
 - iPhone
 - Windows Phone 7 (Mango)
 - Bada 1.2 & 2.x
+- Tizen
 
 使用例
 -------------
@@ -52,7 +53,7 @@ accelerometer.clearWatch
       <head>
         <title>加速度センサーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // watch ID が現在の `watchAcceleration` を参照
