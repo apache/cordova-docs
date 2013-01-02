@@ -31,8 +31,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 これは UIWebView から iOS ネイティブ側へのリクエストを整理し、おおよそ要約すると `service` クラスで `action` メソッドを、 `args` 配列で渡された引数と一緒に呼び出すということになります。
 
-Objective-C プラグインメソッドの `options` パラメーターは非推奨であり、使われるべきではありません。レガシー的な理由で、 `args` 配列の最後の JavaScript オブジェクト要素は、 Objective-C 側メソッドの `options` 辞書に渡されます。どんな JavaScript オブジェクトでも `args` 配列の最後の要素として渡されるべきであり、もし配列の途中の要素に JavaScript オブジェクトがあると、それ以降の Objective-C 側の配列のインデックスがでたらめになることに十分注意してください。 options 辞書はただ1つの JavaScript オブジェクトのみをサポートしており、また配列の一番最後の要素のみネイティブメソッドに渡されます。このようにエラーを起こしやすいので、 `options` は非推奨となっています。
-
 このプラグインは、 Cordova-iOS アプリケーションのプロジェクトフォルダーの中の `Cordova.plist` ファイルの `Plugins` キー (辞書) に追加される必要があります。
 
     <key>service_name</key>
@@ -44,32 +42,45 @@ Objective-C プラグインメソッドの `options` パラメーターは非推
 
 私たちはプラグインリクエストをネイティブ側に送る JavaScript を作成しました。また、正しく `Cordova.plist` ファイルでマッピングされた iOS Objective-C プラグインもあります。では、最終的に iOS Objective-C プラグインのクラスがどのようになるのか見ていきましょう。
 
-JavaScript の `exec` 関数によってプラグインに割り当てられたものは、プラグインクラスの対応する `action` メソッドに渡されます。大半のメソッドの実装は以下のようになります:
+JavaScript の `exec` 関数によってプラグインに割り当てられたものは、プラグインクラスの対応する `action` メソッドに渡されます。プラグインメソッドのシグネチャは次のようになります:
 
-    - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+    - (void) myMethod:(CDVInvokedUrlCommand*)command
     {
-        NSString* callbackId = [arguments objectAtIndex:0];
-
         CDVPluginResult* pluginResult = nil;
         NSString* javaScript = nil;
 
         @try {
-            NSString* myarg = [arguments objectAtIndex:1];
+            NSString* myarg = [command.arguments objectAtIndex:0];
 
             if (myarg != nil) {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-                javaScript = [pluginResult toSuccessCallbackString:callbackId];
+                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
             } 
         } @catch (id exception) {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:callbackId];
+            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
         }
 
         [self writeJavascript:javaScript];
     }
 
+1. [CDVInvokedUrlCommand.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
+2. [CDVPluginResult.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
 
-### iOS プラグインの Echo プラグイン
+
+## プラグインシグネチャ
+
+**Cordova 2.1.0** からサポートされた **新しいシグネチャ** は次のとおりです:
+
+        - (void) myMethod:(CDVInvokedUrlCommand*)command;
+
+**古い (非推奨)** シグネチャはつぎのとおりです:
+
+        - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+
+基本的に、オプション辞書は新しいシグネチャでは削除されており、 callbackId は引数配列の 0 番目の要素ではなく、別のプロパティーとなっています。
+
+## iOS プラグインの Echo プラグイン
 
 `Cordova.plist` ファイルの `Plugins` キー (辞書) に以下を追加します:
 
@@ -81,41 +92,39 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
     /********* Echo.h Cordova Plugin Header *******/
 
-    #import <Cordova/CDVPlugin.h>
+    #import <Cordova/CDV.h>
 
     @interface Echo : CDVPlugin
 
-    - (void) echo:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+    - (void) echo:(CDVInvokedUrlCommand*)command;
 
     @end
 
     /********* Echo.m Cordova Plugin Implementation *******/
 
     #import "Echo.h"
-    #import <Cordova/CDVPluginResult.h>
+    #import <Cordova/CDV.h>
 
     @implementation Echo
 
-    - (void) echo:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
+    - (void) echo:(CDVInvokedUrlCommand*)command
     {
-        NSString* callbackId = [arguments objectAtIndex:0];
-
         CDVPluginResult* pluginResult = nil;
         NSString* javaScript = nil;
 
         @try {
-            NSString* echo = [arguments objectAtIndex:1];
+            NSString* echo = [command.arguments objectAtIndex:0];
 
             if (echo != nil && [echo length] > 0) {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-                javaScript = [pluginResult toSuccessCallbackString:callbackId];
+                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
             } else {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-                javaScript = [pluginResult toErrorCallbackString:callbackId];
+                javaScript = [pluginResult toErrorCallbackString:command.callbackId];
             }
         } @catch (NSException* exception) {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:callbackId];
+            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
         }
 
         [self writeJavascript:javaScript];
@@ -126,7 +135,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 コードを見ていきましょう。一番上には、必要なすべての Cordova に関する import 文が並んでいます。クラスは `CDVPlugin` を継承しています - これはとても重要です。
 
-このプラグインは1つのアクション `echo` のみをサポートしています。最初に、引数配列の0番目の要素である `callbackId` パラメーターを取得します。次に、 `objectAtIndex` メソッドを使って、引数配列の1番目の要素である echo 用文字列を取得します。ここで、少しパラメーターに対してチェックを行います: `nil` チェックや文字列の長さが0でないかどうかなどです。
+このプラグインは 1 つのアクション `echo` のみをサポートしています。最初に、 `objectAtIndex` メソッドを `args` に使って引数配列 0 番目の要素である echo 用文字列を取得します。次に、 `objectAtIndex` メソッドを使って、引数配列の1番目の要素である echo 用文字列を取得します。ここで、少しパラメーターに対してチェックを行います: `nil` チェックや文字列の長さが0でないかどうかなどです。
 
 もしそうであった場合は、ステータスが `ERROR` の `PluginResult` を返します。もしこれらのチェックをパスしたら、ステータスが `OK` の `PluginResult` を返し、パラメーターとして受け取った `echo` 文字列を渡します。そして、もし正常な場合は `toSuccessCallbackString` メソッド、エラーの場合は `toErrorCallbackString` メソッドを呼びだして `PluginResult` を JavaScript に変換します。
 
@@ -145,6 +154,8 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 [Apache Cordova Project の Weinre](https://github.com/apache/incubator-cordova-weinre) または [サードパーティ製の iWebInspector](http://www.iwebinspector.com/) を使用できます。
 
+iOS 6 では、 Safari 6.0 を使用して簡単に iOS 6 シミュレーター上で動いているアプリをデバッグできます。
+
 ## よくある落とし穴
 
 * Cordova.plist にプラグインマッピングを追加することを忘れないでください - もし忘れている場合は、 Xcode のコンソールログにエラーが表示されます
@@ -155,3 +166,10 @@ Objective-C 側でデバッグするには、 Xcode のビルトインのデバ�
             // 任意のコード
         }, 0);
 
+## 非推奨のプラグインシグネチャに関する注意点
+
+**古い (非推奨)** シグネチャはつぎのとおりです:
+
+        - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+
+Objective-C プラグインメソッドの `options` パラメーターは非推奨であり、使われるべきではありません。レガシー的な理由で、 `args` 配列の最後の JavaScript オブジェクト要素は、 Objective-C 側メソッドの `options` 辞書に渡されます。どんな JavaScript オブジェクトでも `args` 配列の最後の要素として渡されるべきであり、もし配列の途中の要素に JavaScript オブジェクトがあると、それ以降の Objective-C 側の配列のインデックスがでたらめになることに十分注意してください。 options 辞書はただ1つの JavaScript オブジェクトのみをサポートしており、また配列の一番最後の要素のみネイティブメソッドに渡されます。このようにエラーを起こしやすいので、 `options` は非推奨となっています。

@@ -58,7 +58,7 @@ Android
 
 ### 詳細
 
-ホワイトリストのルールは `res/xml/cordova.xml` で見つけることができ、 `<access origin="..." />` 要素によって宣言できます。
+ホワイトリストのルールは `res/xml/config.xml` で見つけることができ、 `<access origin="..." />` 要素によって宣言できます。
 
 Android はホワイトリストのシンタックスをフルサポートしています。
 
@@ -111,7 +111,6 @@ iOS
 2. `ExternalHosts` キー配下に新しい文字列を追加します
     - XML の直接編集を避けるため、 Xcode を使用することを勧めます
 
-ドメインのプロトコル (例: `http://` 及び `https://`) は iOS ではサポートされていません。
 
 ### シンタックス
 
@@ -153,6 +152,34 @@ Windows Phone
 
 ドメインホワイトリストは Windows Phone ではサポートされていません。デフォルトとして、全てのドメインにアクセス可能です。
 
+Tizen
+----------
+
+### 詳細
+
+ドメインホワイトリストのルールはアプリケーションのルートディレクトリにある `config.xml` で見つけることができます。
+これらは、 `<access origin="..." />` 要素によって宣言されています。
+詳細については、 [Tizen Accessing External Network Resources documentation][9] を参照してください。
+
+
+### シンタックス
+
+[google.com][2] のアクセス:
+
+    <access origin="http://google.com" subdomains="false" />
+
+[google.com][3] へのセキュアアクセス (`https://`):
+
+    <access origin="https://google.com" subdomains="false" />
+
+[google.com][2] のすべてのサブドメインへのアクセス:
+
+    <access origin="http://google.com" subdomains="true" />
+
+`file://` プロトコルを含むすべてのドメインへのアクセス:
+
+    <access origin="*" subdomains="true" />
+
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com
@@ -161,3 +188,4 @@ Windows Phone
 [6]: http://docs.google.com
 [7]: http://developer.mozilla.org
 [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[9]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources

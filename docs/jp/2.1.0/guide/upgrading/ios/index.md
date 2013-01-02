@@ -22,10 +22,34 @@ Upgrading Cordova iOS
 
 **Xcode 4 が必須** であることに注意してください。 Apple App Store に提出するためには、最新バージョンの iOS SDK (iOS 5.1) を使用する必要があります。 iOS 5.1 は Xcode 4 を必要とします。
 
+## 2.0.0 から 2.1.0 へのアップグレード ##
+
+**Cordova 2.1.0** では、 CordovaLib は **Automatic Reference Counting (ARC)** を使用するようにアップグレードされました。 CordovaLib を使用するにあたって **ARC** にアップグレードする必要はありませんが、もしプロジェクトを **ARC** を使用するようにアップグレードしたい場合は、メニューから Xcode migration wizard : **Edit -> Refactor -> Convert to Objective-C ARC…** を使用して、 **libCordova.a を選択解除** し、ウィザードを完了してください。
+
+1. ハードディスクの**恒久的なフォルダー** (例: ~/Documents/Cordova-2.1.0) に **Cordova 2.1.0 をダウンロードし解凍**します
+2. Xcode が起動している場合、 **終了** します
+3. **Terminal.app** を使用して、Cordova をダウンロードしたディレクトリまで **移動**します
+4. コマンドラインツールから [**新規プロジェクトを作成**](guide_command-line_index.md.html#Command-Line%20Usage_ios) します - この新規プロジェクトからアセットを持っていきます
+5. 新規プロジェクトから **www/cordova-2.1.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-2.0.0.js** ファイルを削除します
+6. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-2.1.0.js** ファイルを参照するように **更新** します
+7. **AppDelegate.m** を新規プロジェクトから更新 (または、もしファイルを変更してなかった場合は置換) します:
+    - 編集されたもの -> application:didFinishLaunchingWithOptions:
+    - 追加されたもの -> application:supportedInterfaceOrientationsForWindow:
+8. **MainViewController.m** を新規プロジェクトから更新 (または、もしファイルを変更してなかった場合は置換) します:
+    - 追加されたもの -> viewWillAppear
+9. **"cordova"** フォルダーを新しいプロジェクトから既存プロジェクトのルートフォルダーにコピーします **(2.1.0 では、スペースを含むパスをサポートするようになりました)**
+10. **プロジェクト** から **VERSION** ファイルの参照を削除します (CordovaLib にあるものでは**ありません**)
+11. 次に、 CordovaLib のサブプロジェクトの参照を更新します。 Cordova 2.1.0 から、 CordovaLib がどこに存在するかを示す CORDOVALIB という Xcode の変数は使用しなくなり、絶対ファイル参照となりました。
+    1. **Terminal.app** を起動します
+    2. **ステップ 1** で Cordova をインストールした位置の、 **bin** サブフォルダーに移動します
+    3. 以下のスクリプトを走らせます。パラメーターは、プロジェクトの **.xcodeproj** ファイルへのパスです
+
+        `update_cordova_subproject path/to/your/project/xcodeproj`
+
 ## 1.9.0 から 2.0.0 へのアップグレード ##
 
 1. Cordova 2.0.0 を **インストール** します
-2. コマンドラインツールから **新規プロジェクトを作成します** - この新規プロジェクトからアセットを持っていきます
+2. コマンドラインツールから [**新規プロジェクトを作成**](guide_command-line_index.md.html#Command-Line%20Usage_ios) します - この新規プロジェクトからアセットを持っていきます
 3. 新規プロジェクトから **www/cordova-2.0.0.js** ファイルを **www** フォルダーに **コピー** し、 **www/cordova-1.9.0.js** ファイルを削除します
 4. **www/index.html** ファイル (また、他に Cordova script を参照しているファイル) の Cordova script 参照部分を、新しい **cordova-2.0.0.js** ファイルを参照するように **更新** します
 5. 新規プロジェクトから **"cordova"** フォルダーを、 root フォルダーにコピーします (もしコマンドラインツールを使用したい場合)

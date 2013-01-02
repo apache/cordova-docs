@@ -80,7 +80,6 @@ cordova.exec へのすべての呼び出しは、クラス内で実行したい�
     import org.apache.cordova.json4j.JSONArray;
     import org.apache.cordova.json4j.JSONException;
     import org.apache.cordova.json4j.JSONObject;
-    import org.apache.cordova.util.Logger;
     /**
      * BlackBerry でのプラグインの作り方デモのためのシンプルなプラグイン
      * ユーザーがプラグインを呼び出したときのメッセージをそのまま返します
@@ -93,12 +92,11 @@ cordova.exec へのすべての呼び出しは、クラス内で実行したい�
             PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
             if(action.equals(echo)){
                 try {
-                    JSONObject echoObj = new JSONObject();
                     String theMsg = args.getString(0);
-                    if(theMsg.length()>0){
+                    if(theMsg!= null || theMsg.length()>0){
                         result = new PluginResult(PluginResult.Status.OK, theMsg);
                     }else{
-                        result = new PluginResult(PluginResult.Status.ERROR, theMsg);
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
                     }
                 } catch (JSONException e) {
                     result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());

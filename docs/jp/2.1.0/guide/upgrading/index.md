@@ -29,3 +29,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 - Upgrading Cordova webOS
 - Upgrading Cordova Windows Phone
 - Upgrading Cordova Bada
+- Upgrading Cordova Tizen

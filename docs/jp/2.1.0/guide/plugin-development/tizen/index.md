@@ -17,22 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Cordova webOS
-=======================
+Developing a Plugin on Tizen
+============================
 
-これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。
-
-## 2.0.0 から 2.1.0 へのアップグレード ##
-
-1. cordova-2.0.0.js をプロジェクトから削除します
-
-2. index.html から次の行を更新します:
-
-    次から:
-    <script type="text/javascript" src="cordova-2.0.0.js"></script>
-
-    次に変更します:
-    <script type="text/javascript" src="cordova-2.1.0.js"></script>
-
-3. makefile を実行し、新しいバージョンの cordova-2.1.0.js ファイルを生成します
-
+プラグインは Tizen プラットフォームでは現在サポートされていません。
