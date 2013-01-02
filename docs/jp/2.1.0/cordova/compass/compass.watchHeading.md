@@ -40,6 +40,7 @@ compass.watchHeading
 - iPhone
 - Windows Phone 7 ( Mango ) ハードウェア内で有効な場合
 - Bada 1.2 & 2.x
+- Tizen
 
 
 使用例

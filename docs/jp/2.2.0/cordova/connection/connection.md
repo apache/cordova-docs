@@ -22,7 +22,7 @@ Connection
 
 > `connection` オブジェクトを通じて、携帯電話ネットワーク及び wifi 接続情報にアクセス出来ます。
 
-このオブジェクトは、 `navigator.network` インターフェース以下からアクセスされます。
+このオブジェクトは、 `navigator.connection` として知られています。
 
 プロパティー
 ----------
@@ -45,7 +45,7 @@ Connection
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 

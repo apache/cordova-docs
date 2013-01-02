@@ -45,7 +45,7 @@ Device
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Device" value="org.apache.cordova.Device" />
 
