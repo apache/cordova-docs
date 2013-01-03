@@ -88,7 +88,7 @@ Using CDVViewController in your code
 
         #import <Cordova/CDVViewController.h>
 
-2. Instantiate a **new** `CDVViewController`, and retain it somewhere: 
+2. Instantiate a **new** `CDVViewController`, and **retain it somewhere** (e.g. to a property in your class): 
 
         CDVViewController* viewController = [CDVViewController new];
 
