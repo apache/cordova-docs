@@ -49,7 +49,7 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Download Cordova
 
-Download the latest version of [Apache Cordova](http://www.apache.org/dist/incubator/cordova/) from http://www.apache.org/dist/incubator/cordova/.  Click on the Download icon and select cordova-X.Y.Z -incubating-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example 2.3.0.  The download includes the code for all of the Apache Cordova supported platforms.   
+Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/incubator/cordova/.  Click on the Download icon and select cordova-X.Y.Z -incubating-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example 2.3.0.  The download includes the code for all of the Apache Cordova supported platforms.   
 ### Extract Cordova
 
 To access the code it will need to be extracted from the archive (.zip) file.
