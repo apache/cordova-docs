@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-SQLResultSetList
+SQLResultSetRowList
 =======
 
 One of the properties of the SQLResultSet containing the rows returned from a SQL query.
@@ -35,7 +35,7 @@ Methods
 Details
 -------
 
-The SQLResultSetList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
+The SQLResultSetRowList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
 
 Supported Platforms
 -------------------

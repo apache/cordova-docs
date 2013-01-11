@@ -184,7 +184,7 @@
             "cordova/storage/database/database.md",
             "cordova/storage/sqltransaction/sqltransaction.md",
             "cordova/storage/sqlresultset/sqlresultset.md",
-            "cordova/storage/sqlresultsetlist/sqlresultsetlist.md",
+            "cordova/storage/sqlresultsetrowlist/sqlresultsetrowlist.md",
             "cordova/storage/sqlerror/sqlerror.md",
             "cordova/storage/localstorage/localstorage.md"
         ],

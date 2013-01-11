@@ -43,7 +43,7 @@ Objects
 - Database
 - SQLTransaction
 - SQLResultSet
-- SQLResultSetList
+- SQLResultSetRowList
 - SQLError
 - localStorage
 
