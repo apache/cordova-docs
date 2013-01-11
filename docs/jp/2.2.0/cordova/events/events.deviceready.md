@@ -35,6 +35,8 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
 
 通常は、 HTML の DOM が読み込まれた後、 `document.addEventListener` を通じてイベントリスナーをセットします。
 
+このイベントは、イベントが発火された後に登録されたどのイベントハンドラーもコールバック関数を直ちに呼び出すという点で、他のイベントとは異なった振る舞いをします。
+
 サポートされているプラットフォーム
 -------------------
 
@@ -62,12 +64,12 @@ Cordova の `deviceready` イベントは、 Cordova が完全にロードした
       <head>
         <title>Cordova Device Ready 使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova のロード完了とともに onDeviceReady を呼び出します。
         //
-        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.1.0.js はまだ完了していません。
+        // この時点では、ドキュメントの読み込みは完了していますが、 cordova-2.2.0.js はまだ完了していません。
         // Cordova のロード完了とともに
         // `deviceready` イベントが呼び出されます。
         //
