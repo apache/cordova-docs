@@ -46,7 +46,7 @@ File
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="File" value="org.apache.cordova.FileUtils" />
     <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />

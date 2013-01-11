@@ -25,13 +25,14 @@ FileTransfer オブジェクトはファイルをサーバーにアップロー�
 プロパティー
 ----------
 
-なし
+- __onprogress:__ ProgressEvent とともに、新しいデーターの塊が転送される度に呼び出される関数を表します _(Function)_
 
 メソッド
 -------
 
-- __upload__: サーバーにファイルを送信
-- __download__: サーバーからファイルをダウンロード
+- __upload__: サーバーにファイルを送信します
+- __download__: サーバーからファイルをダウンロードします
+- __abort__: 進行中の転送を中止します
 
 詳細
 -------
@@ -79,7 +80,7 @@ __使用例__
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
 
-    var params = new Object();
+    var params = {};
     params.value1 = "test";
     params.value2 = "param";
 
@@ -95,7 +96,7 @@ __詳細な使用例__
       <head>
         <title>File Transfer の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
             // Cordova の読み込み完了まで待機
@@ -122,7 +123,7 @@ __詳細な使用例__
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
 
-                var params = new Object();
+                var params = {};
                 params.value1 = "test";
                 params.value2 = "param";
 
@@ -152,12 +153,9 @@ __詳細な使用例__
        </body>
     </html>
 
-iOS に関する注意点
-----------
+__アップロードヘッダーの設定__
 
-FileTransfer アップロードのためのヘッダーを設定:
-
-__使用例__
+Android と iOS でサポートされています。
 
     function win(r) {
         console.log("コード = " + r.responseCode);
@@ -178,13 +176,17 @@ __使用例__
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
 
-    var params = new Object();
+    var params = {};
     params.headers={'headerParam':'headerValue'};
 
     options.params = params;
 
     var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);
+
+__Android に関する注意点__
+
+Nginx サーバーへのアップロードで問題が発生した場合は、 chunkedMode オプションが false にセットされていることを確認してください。
 
 download
 --------------
@@ -198,7 +200,7 @@ __パラメーター:__
 
 __使用例__
 
-    // !! url はサーバー内の有効なファイルを指すことと filePath がデバイス内の有効な値であるとみなします
+    // !! filePath がデバイス内の有効な値であるとみなします
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
@@ -215,3 +217,37 @@ __使用例__
             console.log("upload error code" + error.code);
         }
     );
+
+abort
+--------------
+
+進行中の転送を中止します。 FileTransferError.ABORT_ERR エラーコードを持つ FileTransferError オブジェクトを伴って onerror コールバックが呼び出されます。
+
+__サポートされているプラットフォーム__
+
+- Android
+- iOS
+
+onprogress
+--------------
+
+ProgressEvent とともに、新しいデーターの塊が転送される度に呼び出されます。
+
+__サポートされているプラットフォーム__
+
+- Android
+- iOS
+
+__使用例__
+
+    fileTransfer.onprogress = function(progressEvent) {
+        if (progressEvent.lengthComputable) {
+          loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+        } else {
+          loadingStatus.increment();
+        }
+    };
+    fileTransfer.download(...); // または fileTransfer.upload(...);
+
+__注意点__
+- Android と iOS の両方で、 gzip エンコーディングを用いるダウンロードの際には lengthComputable が false になります。

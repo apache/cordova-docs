@@ -124,7 +124,9 @@ __使用例__
         }
 
         var onGetFileWin = function(parent) {
-          parent.setMetadata(onSetMetadataWin, onSetMetadataFail, { metadataKey: metadataValue});
+          var data = {};
+          data[metadataKey] = metadataValue;
+          parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
         }
         var onGetFileFail = function() {
           console.log("ファイル取得中にエラーが発生しました。")

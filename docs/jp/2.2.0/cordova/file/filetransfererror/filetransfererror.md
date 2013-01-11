@@ -36,6 +36,7 @@ FileTransferError
 - `FileTransferError.FILE_NOT_FOUND_ERR`
 - `FileTransferError.INVALID_URL_ERR`
 - `FileTransferError.CONNECTION_ERR`
+- `FileTransferError.ABORT_ERR`
 
 概要
 -----------
