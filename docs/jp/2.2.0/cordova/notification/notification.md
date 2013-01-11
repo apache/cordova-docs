@@ -35,7 +35,7 @@ Notification
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Notification" value="org.apache.cordova.Notification"/>
 

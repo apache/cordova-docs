@@ -69,7 +69,7 @@ media.startRecord
       <head>
         <title>デバイスプロパティーの使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -79,7 +79,7 @@ media.startRecord
         // オーディオの録音
         //
         function recordAudio() {
-            var src = "myrecording.mp3";
+            var src = "myrecording.amr";
             var mediaRec = new Media(src, onSuccess, onError);
 
             // オーディオの録音
@@ -129,6 +129,11 @@ media.startRecord
         <p id="audio_position"></p>
       </body>
     </html>
+
+Android に関する注意点
+----------
+
+- Android デバイスはオーディオを Adaptive Multi-Rate フォーマットで録音します。ファイル名は .amr 拡張子で指定される必要があります。
 
 BlackBerry WebWorks に関する注意点
 ----------

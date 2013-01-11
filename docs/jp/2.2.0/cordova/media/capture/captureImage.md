@@ -78,7 +78,7 @@ Zune とデバイスが接続している間は、ネイティブカメラアプ
       <head>
         <title>画像キャプチャー</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 

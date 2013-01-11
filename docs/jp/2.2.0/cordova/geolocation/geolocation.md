@@ -53,7 +53,7 @@ Geolocation は緯度や経度といったデバイスの位置情報を提供�
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 

@@ -68,7 +68,7 @@ notification.alert
       <head>
         <title>Notification の使用例</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Cordova の読み込み完了まで待機
@@ -110,6 +110,13 @@ Windows Phone 7 に関する注意点
 - ボタンの名前は無視され、常に 'OK' が使用されます。
 - ビルトインのブラウザ通知ダイアログ機能はないため、もし alert('foo'); とだけ書きたい場合は、 window.alert = navigator.notification.alert; と window.alert に Cordova の notification.alert をアサインできます。
 - 通知と確認の呼び出しはノンブロッキングで、結果は非同期でのみ取得可能です。
+
+Windows 8 アプリに関する注意点
+---------------
+
+- 他のプラットフォームでは、メッセージは "重なって表示" (例: 2つの **alert** を呼び出すと、重なった2つのメッセージが表示) されますが、
+Windows 8 アプリの場合は最後のメッセージのみが表示されます。
+- ビルトインのブラウザ通知ダイアログ機能はないため、もし alert('foo'); とだけ書きたい場合は、 window.alert = navigator.notification.alert; と window.alert に Cordova の notification.alert をアサインできます。
 
 Bada 2.xに関する注意点
 ---------------
