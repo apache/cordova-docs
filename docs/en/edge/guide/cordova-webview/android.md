@@ -59,7 +59,8 @@ Guide to using CordovaWebView in an Android Project
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.main);
                 cwv = (CordovaWebView) findViewById(R.id.tutorialView);
-                cwv.loadUrl("file:///android_asset/www/index.html");
+                Config.init(this);
+                cwv.loadUrl(Config.getStartUrl());
             }
 
 In addition to this, if you are using camera, you will want to implement this as well:

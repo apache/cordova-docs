@@ -96,13 +96,13 @@ Using CDVViewController in your code
 
         viewController.wwwFolderName = @"myfolder";
 
-4. (_OPTIONAL_) Set the `startPage` property (defaults to `"index.html"`). This can be any URL as well:
+4. (_OPTIONAL_) Set the start page in your config.xml, the `<content>` tag.
 
-        viewController.startPage = @"mystartpage.html";
-        
+        <content src="index.html" />
+
     OR
-        
-        viewController.startPage = @"http://apache.org";
+
+        <content src="http://apache.org" />
 
 5. (_OPTIONAL_) Set the `useSplashScreen` property (defaults to `NO`):
 

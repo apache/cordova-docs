@@ -61,8 +61,8 @@ Setup
 2. In the onCreate method of the class that extends DroidGap add the following two lines:
 
         super.setIntegerProperty("splashscreen", R.drawable.splash);
-        super.loadUrl("file:///android_asset/www/index.html", 10000);
-    
+        super.loadUrl(Config.getStartUrl(), 10000);
+
     The first line 'super.setIntegerProperty' sets the image to be displayed as the splashscreen. If you have named your image anything other than splash.png you will have to modify this line.
     The second line is the normal 'super.loadUrl' line but it has a second parameter which is the timeout value for the splash screen. In this example the splash screen will display for 10 seconds. If you want to dismiss the splash screen once you get the "deviceready" event you should call the navigator.splashscreen.hide() method.
 
