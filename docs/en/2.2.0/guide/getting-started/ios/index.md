@@ -45,7 +45,7 @@ Install CordovaLib
 ------------------
 
 1. **Download** the Cordova source
-2. **Extract** to source to their final permanent location on your hard drive (for example, to ~/Documents/CordovaLib-2.X.X)
+2. **Extract** the source to their final permanent location on your hard drive (for example, to ~/Documents/Cordova-2.X.X)
 3. There is no step 3
 
 Create a New Project
