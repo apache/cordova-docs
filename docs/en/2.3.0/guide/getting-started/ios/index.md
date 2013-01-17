@@ -257,10 +257,10 @@ Determine where on your system you will locate the Xcode project files for your 
   Another common method of initializing a page is to add an event listener for the deviceReady event within the handler for the body onload event as shown in the code snippet below:
 
       <head>
-        <script type="text/javascript" src="cordova-2.2.0.js"></script>
+        <script type="text/javascript" src="cordova-2.3.0.js"></script>
         <script>
 	      function onLoad() {
-	    document.addEventListenter(
+	    document.addEventListener(
 		  ‘deviceready’, onDeviceReady, false);
         }
         function onDeviceReady() {
