@@ -24,7 +24,7 @@ Developing a Plugin on BlackBerry
 
 このガイドでは、 BlackBerry での Echo プラグインの作り方について説明します。
 もし上位のガイドである JavaScript パートのプラグインについてのガイドを読んでいない場合は、それを最初に読むことをおすすめします。
-加えて、 [Cordova Blackberry repo](https://git-wip-us.apache.org/repos/asf?p=incubator-cordova-blackberry-webworks.git;a=summary) をダウンロードしてください。
+加えて、 [Cordova Blackberry repo](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary) をダウンロードしてください。
 
 Cordova-BlackBerry プロジェクトは Torch, Bold, Playbook といった BlackBerry デバイスへのデプロイを可能にします。
 通常の携帯端末タイプの BlackBerry (例, Torch と Bold) とタブレットタイプの Playbook の間には、デプロイ方法に差があります。

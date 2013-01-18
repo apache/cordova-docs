@@ -154,7 +154,7 @@ To pass structured object data back to JS, it should be encoded as a JSON string
 
 オーバーライドできるその他の機能については以下を参照してください:
 
-1. [BaseCommand.cs](https://github.com/apache/incubator-cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
+1. [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
 例えば、 'pause' や 'resume' といったアプリケーションイベントもオーバーライドできます。
 
