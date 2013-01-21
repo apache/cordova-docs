@@ -26,7 +26,7 @@ The Bada implementation is a full javascript implementation. Therefore, adding a
 
 1. Clone the CordovaJS repository
 
-        git clone https://git-wip-us.apache.org/repos/asf/incubator-cordova-js.git
+        git clone https://git-wip-us.apache.org/repos/asf/cordova-js.git
 
 2. Create a new javascript file under __lib/bada/plugin/bada/__ and name it _HelloWorld.js_. Add the following content:
 

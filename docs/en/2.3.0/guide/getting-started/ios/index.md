@@ -49,20 +49,20 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Download Cordova
 
-Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/incubator/cordova/.  Click on the Download icon and select cordova-X.Y.Z -incubating-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example 2.3.0.  The download includes the code for all of the Apache Cordova supported platforms.   
+Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/cordova/.  Click on the Download icon and select cordova-X.Y.Z-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example 2.3.0.  The download includes the code for all of the Apache Cordova supported platforms.   
 ### Extract Cordova
 
 To access the code it will need to be extracted from the archive (.zip) file.
 
 
-1. Navigate to the folder where you downloaded the code.  Find the cordova-X.Y.Z-incubating-src.zip file.   
+1. Navigate to the folder where you downloaded the code.  Find the cordova-X.Y.Z-src.zip file.   
     Note: The file names change with each new version of Cordova.  The file name will be different if you are using an updated or newer version of Cordova. 
 
 2. Using the Finder® app, double click the file to extract. This will create a directory named, cordova-X.Y.Z.   
 
-3. Expand this folder and locate the incubator-cordova-ios.zip file and double click to extract it.   
+3. Expand this folder and locate the cordova-ios.zip file and double click to extract it.   
 
-4. The code for iOS is within the incubator-cordova-ios directory structure.
+4. The code for iOS is within the cordova-ios directory structure.
 
 ## Project Creation
 
@@ -81,7 +81,7 @@ Determine where on your system you will locate the Xcode project files for your 
 
 2. Locate the Terminal app and double click to open it.  
 
-3. In Finder, navigate to the incubator-cordova-ios directory from the downloaded and extracted Cordova code and expand it if necessary.   Highlight the bin directory as shown:
+3. In Finder, navigate to the cordova-ios directory from the downloaded and extracted Cordova code and expand it if necessary.   Highlight the bin directory as shown:
 
   ![](img/guide/getting-started/ios/bin_dir_listing.png)
 
@@ -133,7 +133,7 @@ Determine where on your system you will locate the Xcode project files for your 
      The Xcode project is still created in the ~/Documents/CordovaXY/HelloWorld directory, but it references the CordovaLib files from the fixed location of the Cordova distribution rather than a copy of these files within the project directory.  
   - **Additional Scripts**
 
-  Within the incubator-cordova-ios/bin directory there is an additional script that changes the location of the CordovaLib directory to refer to a shared location after the project has been created, 
+  Within the cordova-ios/bin directory there is an additional script that changes the location of the CordovaLib directory to refer to a shared location after the project has been created, 
 
          ./update_cordova_subproject path/to/your/project 
 
