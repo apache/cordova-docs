@@ -48,12 +48,16 @@ The **config.xml settings file** controls various settings of Cordova. This is a
 
 	f. **ShowSplashScreenSpinner (boolean, defaults to true)** - set to false to hide the splash-screen spinner
 
-	g. **MediaPlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
+	g. **FadeSplashScreen (boolean, defaults to true)** - set to false to prevent the splash-screen to fade in and out when showing/hiding it.
 
-	h. **AllowInlineMediaPlayback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
+	h. **FadeSplashScreenDuration (float, defaults to 2)** - The splash-screen Fade duration in seconds.  
 
-	i. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
+	i. **MediaPlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
+
+	j. **AllowInlineMediaPlayback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
+
+	k. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
 	
-	j. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
+	l. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
 
-	k. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.
+	m. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.
