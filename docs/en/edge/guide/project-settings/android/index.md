@@ -37,3 +37,6 @@ The **config.xml settings file** controls various settings of Cordova. This is a
 3. Various **other** preferences (as **&lt;preference&gt;** tags) defaults err on not breaking existing apps)
 
 a. **useBrowserHistory (boolean, defaults to true)** - set to false if you want to use the history shim that was used to work around the hashtag error present in Android 3.x prior to the history fix.  (Note: This setting will be deprecated in April 2013)
+b. **loadingDialog** - Display a native loading dialog when loading the app.  Format for the value is "Title, Message"
+c. **loadingPageDialog** - Display a native loading dialog when loading sub-pages. Format for the value is "Title, Message"
+d. **errorUrl** - Set the error page for your application. Should be located in your Android project in file://android_asset/www/
