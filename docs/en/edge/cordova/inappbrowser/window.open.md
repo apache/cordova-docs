@@ -54,6 +54,7 @@ Supported Platforms
 
 - Android
 - iOS
+- BlackBerry 10
 
 Quick Example
 -------------
