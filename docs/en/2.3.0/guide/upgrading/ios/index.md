@@ -33,20 +33,13 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 7. Update (or replace, if you never changed the file) your **MainViewController.m** according to the one from the new project.
 8. Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.3.0, this has new scripts)** 
 9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
-10. Next, update your CordovaLib sub-project reference.
-    1. Launch **Terminal.app**
-    2. Go to the location where you installed Cordova **(see Step 1)**, in the **bin** sub-folder
-    3. Run the script below where the first parameter is the path to your project's **.xcodeproj** file:
-    
-        `update_cordova_subproject path/to/your/project/xcodeproj`
-
-11. Convert your **Cordova.plist** file to **config.xml**, by running the script **bin/cordova\_plist\_to\_config\_xml** on your project file.
-12. Add the InAppBrowser plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
+10. Convert your **Cordova.plist** file to **config.xml**, by running the script **bin/cordova\_plist\_to\_config\_xml** on your project file.
+11. Add the InAppBrowser plugin to your **config.xml**, by adding this tag under **&lt;cordova&gt;&lt;plugins&gt;**:
 
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
-13. Note that Objective-C plugins are **not** whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the “User-Agent” header of the connection to the same user-agent as the main Cordova WebView. 
+12. Note that Objective-C plugins are **not** whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the “User-Agent” header of the connection to the same user-agent as the main Cordova WebView. 
 You can get this by accessing the **userAgent** property off the main view-controller. The main view-controller (CDVViewController) also has a **URLisAllowed** method for you to check whether a URL will pass the whitelist.        
-14. Device API changes: 
+13. Device API changes: 
     * For iOS, device.platform used to return “iPhone”, “iPad” or “iPod Touch” — now it returns (correctly) “iOS”. 
     * For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′) — now it returns what device.platform used to return: ”iPhone”, “iPad” or “iPod Touch”.  
     * For all platforms, there is a new property called device.model — this returns the specific device model, e.g “iPad2,5″ (for other platforms, this returns what device.name used to return).
