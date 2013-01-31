@@ -35,9 +35,19 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
     
 - __options:__ options for the InAppBrowser (`String`) (Optional, Default: "location=yes")
     
-    The options string must not contain any blank space, each feature name and value must be separated by a comma. Only the value below is supported:
+    The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:
 
-            location - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+    - __location__ - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+
+    iOS only
+    --------
+    - __enableViewportScale__ -  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')
+    - __mediaPlaybackRequiresUserAction__ - set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')
+    - __allowInlineMediaPlayback__ - set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')
+    - __keyboardDisplayRequiresUserAction__ - set to 'yes' or 'no' to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to 'yes')
+    - __suppressesIncrementalRendering__ - set to 'yes' or 'no' to wait until all new view content has been received before it is rendered (defaults to 'no')
+    - __presentationstyle__ -  set to 'pagesheet', 'formsheet' or 'fullscreen' to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to 'fullscreen')
+    - __transitionstyle__ - set to 'fliphorizontal', 'crossdissolve' or 'coververtical' to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to 'coververtical')
             
 Supported Platforms
 -------------------
