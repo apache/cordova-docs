@@ -22,38 +22,29 @@
 Project Settings for iOS
 ========================
 
-The **config.xml settings file** controls various settings of Cordova. This is application wide, and not set per CDVViewController instance. An example:
+The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
+The `config.xml` file is located in your `<project folder>/<appname>` directory.
 
-        <cordova>
-            <preference name="MySetting" value="true" />
-            <plugins>
-                <plugin name="MyPlugin" value="MyPluginClass" />
-            </plugins>
-            <access origin="*" />
-        </cordova>
+Various preferences (as **&lt;preference&gt;** tags) default on not breaking existing apps. The available preferences are:
 
-1. A list of **plugins** (plugin tags under **&lt;cordova&gt;/&lt;plugins&gt;**) allowed to be used in a CDVViewController (set in the Plugins dictionary - name is the servicename used in JavaScript, and the value is the Objective-C class for the plugin that is a CDVPlugin sub-class)
-2. A **white-list** of hosts that Cordova is allowed to connect to (add an **&lt;access&gt;** tag, and set the origin attribute - wildcards allowed)
-3. Various **other** preferences (as **&lt;preference&gt;** tags) defaults err on not breaking existing apps)
+1. **UIWebViewBounce (boolean, defaults to true)** - set to false if you don't want the WebView to rubber-band
 
-	a. **UIWebViewBounce (boolean, defaults to true)** - set to false if you don't want the WebView to rubber-band
+2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
 
-	b. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
+3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate)
 
-	c. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate)
+4. **EnableViewportScale (boolean, defaults to false)** - set to true to prevent viewport scaling through a meta tag
 
-	d. **EnableViewportScale (boolean, defaults to false)** - set to true to prevent viewport scaling through a meta tag
+5. **AutoHideSplashScreen (boolean, defaults to true)** - set to false to control when the splashscreen is hidden through a JavaScript API
 
-	e. **AutoHideSplashScreen (boolean, defaults to true)** - set to false to control when the splashscreen is hidden through a JavaScript API
+6. **ShowSplashScreenSpinner (boolean, defaults to true)** - set to false to hide the splash-screen spinner
 
-	f. **ShowSplashScreenSpinner (boolean, defaults to true)** - set to false to hide the splash-screen spinner
+7. **MediaPlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
 
-	g. **MediaPlaybackRequiresUserAction (boolean, defaults to false)** - set to true to not allow autoplayed HTML5 video
+8. **AllowInlineMediaPlayback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
 
-	h. **AllowInlineMediaPlayback (boolean, defaults to false)** - set to true to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute
-
-	i. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
+9. **BackupWebStorage (string, defaults to 'cloud')** - valid values are 'none', 'cloud' and 'local'. Set to 'cloud' to allow the web storage data to be backed up to iCloud, and set to 'local' to only allow local backups (iTunes sync). Set to 'none' to not allow any backups of web storage.
 	
-	j. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
+10. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
 
-	k. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.
+11. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.

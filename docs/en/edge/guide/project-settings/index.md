@@ -48,6 +48,16 @@ abstractions that are heavily standards driven and adopted by the web community.
 yourself with the [config.xml specification](http://www.w3.org/TR/widgets/), to understand the type of application metadata the
 Apache Cordova project aims to abstract and provide simple entry points for.
 
+An example:
+
+        <cordova>
+            <preference name="MySetting" value="true" />
+            <plugins>
+                <plugin name="MyPlugin" value="MyPluginClass" />
+            </plugins>
+            <access origin="*" />
+        </cordova>
+
 A list of supported elements across major platforms which are supported in Apache Cordova follow.
 
 ### `<plugin>`
@@ -66,4 +76,4 @@ These elements define how your whitelist works. Please see the Domain Whitelist 
 
 ### `<content>`
 
-This element defines the start page of your application. The default is "index.html". 
+This element defines the start page of your application, relative to the project's standard web assets root folder. The default is "index.html". 
