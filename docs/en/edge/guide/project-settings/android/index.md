@@ -40,3 +40,7 @@ a. **useBrowserHistory (boolean, defaults to true)** - set to false if you want 
 b. **loadingDialog** - Display a native loading dialog when loading the app.  Format for the value is "Title, Message"
 c. **loadingPageDialog** - Display a native loading dialog when loading sub-pages. Format for the value is "Title, Message"
 d. **errorUrl** - Set the error page for your application. Should be located in your Android project in file://android_asset/www/
+e. **backgroundColor** - Set the background color for your application.  Supports a four-byte hex value, with the first byte representing alpha value, and the following three bytes with standard RGB values. (i.e. 0x00000000 = Black)
+f. **loadUrlTimeoutValue** - How much time Cordova should wait before throwing a timeout error on the application.
+g. **keepRunning (boolean, defaults to true)** - Determines whether Cordova will keep running in the background or not
+h. **splashscreen** - The name of the file minus its extension in the res/drawable directory.  If you have multiple assets, they all must share this common name in their respective directories.
