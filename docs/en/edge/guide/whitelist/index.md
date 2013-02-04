@@ -23,7 +23,9 @@ Domain Whitelist Guide
 Overview
 --------
 
-Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`. The default security policy is to block all network access. The application developer can then declare access to specific network domains and subdomains.
+Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`.
+
+The default security policy is to allow all network access. Before moving your application to production, it is advised to review your application's whitelist. The application developer is encouraged to declare access to specific network domains and subdomains.
 
 Specification
 -------------
@@ -128,10 +130,18 @@ webOS
 
 Domain whitelisting is unsupported on webOS. By default, all domains are accessible.
 
-Windows Phone
--------------
+Windows Phone (7 & 8)
+---------------------
 
-Domain whitelisting is unsupported on Windows Phone. By default, all domains are accessible.
+The whitelisting rules are found in `config.xml` and declared with the element `<access origin="..." />`.
+
+Android has full support for the whitelisting syntax.
+
+### Syntax
+
+Access to [google.com][2]:
+
+    <access origin="http://google.com" />
 
 Tizen
 ----------
