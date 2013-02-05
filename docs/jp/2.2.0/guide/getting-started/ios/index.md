@@ -24,7 +24,7 @@ Getting Started with iOS
 
 必要なもの
 ---------------
-- Xcode 4.3+
+- Xcode 4.5+
 - Xcode コマンドラインツール
 - Intel ベースの Mac OS X Lion 以上 (10.7+)
 - デバイスへのインストールに必要なもの:
@@ -64,6 +64,13 @@ CordovaLib のインストール
 - たった今作成した新しいプロジェクトフォルダーを **見つけます**
 - フォルダーの中の .xcodeproj を **起動します**
 
+**注意:**
+Cordova 2.2 から、プロジェクトが Cordova インストール内の CordovaLib のコピーへ依存していたのに代わり、
+プロジェクトが CordovaLib のコピーをプロジェクト内に持つようになりました。
+
+もしプロジェクトが Cordova インストール内の CordovaLib に直接依存するようにしたい場合は、
+`./create --shared` が使用できます。または、プロジェクトを作成した後で
+`./update_cordova_subproject path/to/you/project` とすることで、参照を変更できます。
 
 シミュレーターへのデプロイ
 -----------------------

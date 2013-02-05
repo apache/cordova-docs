@@ -23,6 +23,16 @@ Upgrading Cordova Android
 
 これは、 Cordova を古いバージョンから新しいバージョンにアップグレードする必要がある人のためのドキュメントです。
 
+## 2.1.0 から 2.2.0 へのアップグレード ##
+
+1. プロジェクトの libs ディレクトリから cordova-2.1.0.jar を削除します
+2. プロジェクトの libs ディレクトリに cordova-2.2.0.jar を追加します
+3. もし Eclipse を使用している場合は、プロジェクトをリフレッシュし clean を実行します
+4. 新しい cordova-2.2.0.js をプロジェクトにコピーします
+5. HTML を、新しい cordova-2.2.0.js を使って更新します
+6. res/xml/config.xml を framework/res/xml/config.xml と同じとなるようにコピーします
+
+
 ## 2.0.0 から 2.1.0 へのアップグレード ##
 
 1. プロジェクトの libs ディレクトリから cordova-2.0.0.jar を削除します
