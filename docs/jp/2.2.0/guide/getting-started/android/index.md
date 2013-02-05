@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Android
 ============================
 
-このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。 Cordova は以前は PhoneGap と呼ばれていたため、いくつかのサイトは PhoneGap という名前をまだ使用しています。
+このガイドは、 Cordova のための開発環境セットアップ方法、またシンプルなアプリの動かし方を解説します。
 
 
 1. 必要なもの
@@ -35,95 +35,84 @@ Getting Started with Android
 - [Eclipse Classic](http://www.eclipse.org/downloads/) のダウンロードとインストール
 - [Android SDK](http://developer.android.com/sdk/index.html) のダウンロードとインストール
 - [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing) のダウンロードとインストール
-- [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから windows ディレクトリと一緒に作業を進めます。
+- [Cordova](http://incubator.apache.org/cordova/#download) の最新版をダウンロードし解凍します。これから Android ディレクトリと一緒に作業を進めます。
 
- 3. 新規プロジェクトの作成
+
+3A. PATH 環境変数の設定 (Mac OS)
+---------------------------------------
+
+- ターミナルを開きます (デフォルトでは、 Applications/Utilites フォルダーにあります)
+- 以下のコマンドを実行します
+
+`touch ~/.bash_profile; open ~/.bash_profile`
+
+- これにより、ファイルをあなたのデフォルトテキストエディタで開きます
+- Android SDK platform-tools と tools ディレクトリにパスを通す必要があります。この例では、 "/Development/android-sdk-macosx" を SDK がインストールされているフォルダーとします。以下の行を追加します:
+
+`export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools`
+
+- ファイルを保存し、テキストエディタを終了します
+- PATH を更新するために、 .bash_profile を実行します
+
+`source ~/.bash_profile`
+
+- これで、ターミナルを開く度に Android SDK へのパスが通っているようになります
+
+3B. PATH 環境変数の設定 (Windows)
+---------------------------------------
+
+- デスクトップから、マイコンピューターを右クリックし、プロパティーをクリックします
+- 左側の列から、詳細設定をクリックします
+- システムプロパティーのウィンドウで、環境変数ボタンをクリックします
+- システム環境変数から、 PATH を選択します
+- 編集ボタンをクリックします
+- Android SDK platform-tools と tools ディレクトリにパスを通す必要があります。この例では、 "C:\Development\android-sdk-macosx" を SDK がインストールされているフォルダーとします。以下をテキストボックスに追加します:
+
+`;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools`
+
+- 編集を保存します。環境変数ダイアログを閉じます
+- 追加で、 `%JAVA_HOME%\bin` も PATH に追加する必要があるかもしれません。この作業が必要かどうかを確認するには、コマンドプロンプトで `java` を入力してください。もしプログラムが見つからなかった場合は、 `%JAVA_HOME%\bin` を PATH に追加してください。場合によっては、 %JAVA_HOME% の環境変数ではなくフルパスを指定する必要があるかもしれません
+- `%ANT_HOME%\bin` も PATH に追加する必要があるかもしれません。この作業が必要かどうかを確認するには、コマンドプロンプトで `ant` を入力してください。もしプログラムが見つからなかった場合は、 `%ANT_HOME%\bin` を PATH に追加してください。場合によっては、 %ANT_HOME% の環境変数ではなくフルパスを指定する必要があるかもしれません
+
+
+4. 新規プロジェクトの作成
 ---------------------
 
+- ターミナルで、 Cordova の `android` サブフォルダーの中にある `bin` ディレクトリまで移動します
+- `./create <project_folder_path> <package_name> <project_name>` と入力し、 **"Enter"** を押します
+
+        <project_folder_path> は新規 Cordova Android プロジェクトへのパスです
+        <package_name> はパッケージ名です。例: com.YourCompany.YourAppName
+        <project_name> はプロジェクト名です。例: YourApp (スペースを含まない)
+
 - Eclipse を起動し、メニューから **新規プロジェクト** を選択します
-    ![](img/guide/getting-started/android/step_1.png)
-- 新しいアプリケーションプロジェクトを指定します
-    ![](img/guide/getting-started/android/step_2.png)
-- アプリケーション名、プロジェクト名、ネームスペースを伴ったパッケージ名を指定します
-    ![](img/guide/getting-started/android/step_3.png)
-- ランチャーアイコンの設定をします
-    ![](img/guide/getting-started/android/step_4.png)
-- Blank Activity を作成します
-    ![](img/guide/getting-started/android/step_5.png)
-- Activity が何も継承していないことを確認して下さい。 PhoneGap が Eclipse のワークスペースに無いような状態です。これが終わったら、 Finish をクリックします
+    ![](img/guide/getting-started/android/eclipse_new_project.png)
+- `<project_folder_path>` で使用したディレクトリを選択します
+- Finish をクリックします
 
-- 作成したプロジェクトのルートディレクトリに、以下の2つの新しいディレクトリを作成します:
-    - **/libs**
-    - **assets/www**
-- ダウンロードした Cordova から **cordova-2.0.0.js** を **assets/www** にコピーしてください。
-- ダウンロードした Cordova から **cordova-2.0.0.jar** を **/libs** にコピーしてください。
-- ダウンロードした Cordova から **xml** フォルダーを **/res** にコピーしてください。
+もしプロジェクトがa red X indicatingを保つ場合には問題があるので、以下の追加の手順が必要です
 
-- **cordova-2.0.0.jar** がプロジェクトのビルドパスに追加されていることを確認してください。 /libs フォルダーを右クリックし、 **ビルド・パス &gt; ビルド・パスの構成** を選択します。ライブラリータブで、 **cordova-2.0.0.jar** をプロジェクトに追加します。もしうまくいかない場合は、 F5 キーを押してプロジェクトをリフレッシュする必要があるかもしれません。
+- プロジェクトフォルダーを右クリックします
+- プロパティーダイアログで、ナビゲーションパネルから Android を選択します
+- Project build target には、インストールしてある中での最新バージョンの Android API を選択します
+- OK をクリックします
+- プロジェクトメニューバーから Clean を選択します
+- これでプロジェクトからエラーが無くなるはずです
 
-    ![](img/guide/getting-started/android/buildPath.jpg)
-
-- 作成したプロジェクトの **src** フォルダーにあるメインの Java ファイルを編集します:
-    - **import org.apache.cordova.*;** を追加
-    - クラスの継承元を **Activity** から **DroidGap** に変更
-    - **setContentView()** の行を **super.loadUrl("file:///android_asset/www/index.html");** に置き換え
-
-    ![](img/guide/getting-started/android/javaSrc.jpg)
-
-- AndroidManifest.xml を右クリックし、 **アプリケーションから開く &gt; テキスト・エディター** を選択します
-- 以下のコードを、 **&lt;uses-sdk.../&gt;** と **&lt;application.../&gt;** タグの間に貼り付けてください。
-
-        <supports-screens
-            android:largeScreens="true"
-            android:normalScreens="true"
-            android:smallScreens="true"
-            android:resizeable="true"
-            android:anyDensity="true" />
-        <uses-permission android:name="android.permission.VIBRATE" />
-        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.RECEIVE_SMS" />
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
-        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-*これにより、パーミッションの包括的なリストを追加していることに注意してください。 Google Play にアプリケーションを提出する前に、使用していないパーミッションは削除してください。
-- 画面の回転をサポートするために、以下を **&lt;activity&gt;** タグの中に貼り付けてください。
-
-        android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
-
-- AndroidManifest.xml は以下のようになります。
-
-    ![](img/guide/getting-started/android/manifest.png)
-
-4. Hello World の作成
---------------
-
-- **index.html** という名前のファイルを **assets/www** ディレクトリに新規作成します。 以下のコードを貼り付けます:
-
-        <!DOCTYPE HTML>
-        <html>
-        <head>
-        <title>Cordova</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
-        </head>
-        <body>
-        <h1>Hello World</h1>
-        </body>
-        </html>
-
-5A. シミュレーターへのデプロイ
+5A. エミュレーターへのデプロイ
 -----------------------
 
 - プロジェクトを右クリックし、次を **実行 &gt; Android Application** を選択
 - 適切な AVD を選択。 もしない場合は、作成する必要があります
+
+**注意: より早く動かすために、 Intel ベースのエミュレーターを使用します:**
+
+- Android SDK Manager を開きます
+  ![](img/guide/getting-started/android/eclipse_android_sdk_button.png)
+- ひとつ以上の `Intel x86 Atom` システムイメージおよび `Intel Hardware Accelerated Execution Manager` (Extras 以下にあります) をインストールします
+- Android SDK の中の `extras/intel/Hardware_Accelerated_Execution_Manager` にダウンロードされた Intel installer を実行します
+- Target を Intel のイメージとした新しい AVD を作成します
+- エミュレーターがスタートするとき、 HAX モジュールのロードに失敗したといったエラーメッセージが出力されないことを確認します
 
 
 5B. デバイスへのデプロイ
@@ -132,6 +121,3 @@ Getting Started with Android
 - デバイスの設定で USB デバッグが有効になっていること、またコンピュータに接続されていることを確認 (**設定 &gt; アプリケーション &gt; 開発**)
 - プロジェクトを右クリックし、次を **実行 > Android Application** を選択
 
-
-終了
------

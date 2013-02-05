@@ -64,6 +64,8 @@ Getting Started with Windows Phone
 - 'Finish' をクリックします
 
 
+
+
 3. 新規プロジェクトの作成
 --------------------
 

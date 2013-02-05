@@ -19,9 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Developing a Plugin on iOS
 
-プラグインの開発には、 Cordova-iOS のアーキテクチャの理解が必要です。 Conrdova-iOS は UIWebView から構成されています。インターセプト命令は、 URL の変化に応じて UIWebView に渡されます。これらのプラグインは .plist ファイルの Plugins キーにクラスマッピングとして表されています。
-
 プラグインは `CDVPlugin` クラスを継承した Objective-C のクラスです。
+
+各プラグインクラスは Cordova.plist ファイルの Plugins キーを使用し登録されている必要があります。
 
 ## プラグインクラスのマッピング
 
@@ -30,6 +30,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
 これは UIWebView から iOS ネイティブ側へのリクエストを整理し、おおよそ要約すると `service` クラスで `action` メソッドを、 `args` 配列で渡された引数と一緒に呼び出すということになります。
+
+実行に時間がかかったり、バックグラウンドで動く (例: media の再生) もの、リスナーや内部状態を持つプラグインは `onReset()` メソッドが実装され、これらの動作を停止またはリセットすべきです。このメソッドは `UIWebView` が新しいページに遷移、もしくはリフレッシュした時、つまり JavaScript がリロードされた時に実行されます。
 
 このプラグインは、 Cordova-iOS アプリケーションのプロジェクトフォルダーの中の `Cordova.plist` ファイルの `Plugins` キー (辞書) に追加される必要があります。
 
@@ -44,24 +46,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 JavaScript の `exec` 関数によってプラグインに割り当てられたものは、プラグインクラスの対応する `action` メソッドに渡されます。プラグインメソッドのシグネチャは次のようになります:
 
-    - (void) myMethod:(CDVInvokedUrlCommand*)command
+    - (void)myMethod:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
-        NSString* javaScript = nil;
+        NSString* myarg = [command.arguments objectAtIndex:0];
 
-        @try {
-            NSString* myarg = [command.arguments objectAtIndex:0];
-
-            if (myarg != nil) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
-            } 
-        } @catch (id exception) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
+        if (myarg != nil) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
         }
-
-        [self writeJavascript:javaScript];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 
 1. [CDVInvokedUrlCommand.h](https://github.com/apache/incubator-cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
@@ -72,11 +67,11 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 **Cordova 2.1.0** からサポートされた **新しいシグネチャ** は次のとおりです:
 
-        - (void) myMethod:(CDVInvokedUrlCommand*)command;
+        - (void)myMethod:(CDVInvokedUrlCommand*)command;
 
 **古い (非推奨)** シグネチャはつぎのとおりです:
 
-        - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+        - (void)myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
 基本的に、オプション辞書は新しいシグネチャでは削除されており、 callbackId は引数配列の 0 番目の要素ではなく、別のプロパティーとなっています。
 
@@ -96,7 +91,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
     @interface Echo : CDVPlugin
 
-    - (void) echo:(CDVInvokedUrlCommand*)command;
+    - (void)echo:(CDVInvokedUrlCommand*)command;
 
     @end
 
@@ -107,27 +102,18 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
     @implementation Echo
 
-    - (void) echo:(CDVInvokedUrlCommand*)command
+    - (void)echo:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
-        NSString* javaScript = nil;
+        NSString* echo = [command.arguments objectAtIndex:0];
 
-        @try {
-            NSString* echo = [command.arguments objectAtIndex:0];
-
-            if (echo != nil && [echo length] > 0) {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-                javaScript = [pluginResult toSuccessCallbackString:command.callbackId];
-            } else {
-                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-                javaScript = [pluginResult toErrorCallbackString:command.callbackId];
-            }
-        } @catch (NSException* exception) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_JSON_EXCEPTION messageAsString:[exception reason]];
-            javaScript = [pluginResult toErrorCallbackString:command.callbackId];
+        if (echo != nil && [echo length] > 0) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
         }
 
-        [self writeJavascript:javaScript];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 
     @end
@@ -137,9 +123,26 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 このプラグインは 1 つのアクション `echo` のみをサポートしています。最初に、 `objectAtIndex` メソッドを `args` に使って引数配列 0 番目の要素である echo 用文字列を取得します。次に、 `objectAtIndex` メソッドを使って、引数配列の1番目の要素である echo 用文字列を取得します。ここで、少しパラメーターに対してチェックを行います: `nil` チェックや文字列の長さが0でないかどうかなどです。
 
-もしそうであった場合は、ステータスが `ERROR` の `PluginResult` を返します。もしこれらのチェックをパスしたら、ステータスが `OK` の `PluginResult` を返し、パラメーターとして受け取った `echo` 文字列を渡します。そして、もし正常な場合は `toSuccessCallbackString` メソッド、エラーの場合は `toErrorCallbackString` メソッドを呼びだして `PluginResult` を JavaScript に変換します。
+もしそうであった場合は、ステータスが `ERROR` の `PluginResult` を返します。もしこれらのチェックをパスしたら、ステータスが `OK` の `PluginResult` を返し、パラメーターとして受け取った `echo` 文字列を渡します。
 
-最後に、 JavaScript 側で成功またはエラーコールバック関数を実行するような JavaScript を書き出します。もし成功コールバックが呼ばれた場合は、 `echo` パラメーターをパラメーターとして渡します。
+最後に、 `self.commandDelegate` に結果を返します。これは、 JavaScript 側で成功またはエラーコールバック関数を実行するような JavaScript を実行します。もし成功コールバックが呼ばれた場合は、 `echo` パラメーターをパラメーターとして渡します。
+
+## スレッド
+
+たとえ UIWebView が dedicated thread 上で実行されるとしても、プラグインメソッドは UI スレッドで実行されます。もしプラグインが尋常じゃない数のプロセスが必要、または処理をブロックする必要がある場合は、バックグラウンドスレッドを使用するべきです。使用例は次のとおりです:
+
+    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+    {
+        // Check command.arguments here.
+        [self.commandDelegate runInBackground:^{
+            NSString* payload = nil;
+            // Some blocking logic...
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            // The sendPluginResult method is thread-safe.
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }];
+    }
+
 
 ## 一歩進んだプラグインの機能
 
@@ -152,7 +155,7 @@ JavaScript の `exec` 関数によってプラグインに割り当てられた�
 
 ## プラグインのデバッグ
 
-Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 [Apache Cordova Project の Weinre](https://github.com/apache/incubator-cordova-weinre) または [サードパーティ製の iWebInspector](http://www.iwebinspector.com/) を使用できます。
+Objective-C 側でデバッグするには、 Xcode のビルトインのデバッガーを使用します。 JavaScript 側では、 iOS 5.0 では [Apache Cordova Project の Weinre](https://github.com/apache/incubator-cordova-weinre) または [サードパーティ製の iWebInspector](http://www.iwebinspector.com/) を使用できます。
 
 iOS 6 では、 Safari 6.0 を使用して簡単に iOS 6 シミュレーター上で動いているアプリをデバッグできます。
 
@@ -160,11 +163,6 @@ iOS 6 では、 Safari 6.0 を使用して簡単に iOS 6 シミュレーター�
 
 * Cordova.plist にプラグインマッピングを追加することを忘れないでください - もし忘れている場合は、 Xcode のコンソールログにエラーが表示されます
 * 接続するすべてのホストを [ホワイトリスト](guide_whitelist_index.md.html#Domain%20Whitelist%20Guide) に追加することを忘れないで下さい - もし忘れている場合は、 Xcode のコンソールログにエラーが表示されます
-* もしアプリが復帰する際にイベント処理をしていて、イベント復帰時にアラートといったようなネイティブ関数を実行すると、アプリケーションが停止してしまいます。安全のため、 JavaScript 呼び出しをタイムアウト値0の setTimeout でラップしてください:
-
-        setTimeout(function() {
-            // 任意のコード
-        }, 0);
 
 ## 非推奨のプラグインシグネチャに関する注意点
 

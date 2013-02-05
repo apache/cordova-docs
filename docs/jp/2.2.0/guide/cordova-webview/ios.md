@@ -30,7 +30,7 @@ Cordova 2.0.0 以降は、 Cleaver を実装したサブプロジェクトのみ
 -------------
 
 1. **Cordova 2.1.0** またはそれ以降
-2. **Xcode 4.3** またはそれ以降
+2. **Xcode 4.5** またはそれ以降
 3. `Cordova.plist` ファイル ([新しく作成した](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova プロジェクトから)
 
 

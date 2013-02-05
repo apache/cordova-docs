@@ -37,7 +37,7 @@ shell ベースで Cordova プロジェクトを作成し、
 ## iOS
 
 iOS コマンドラインツールはシェルスクリプトで作られており、
-Xcode のコマンドラインツール (`xcode-select` や `xcodebuild` など) に依存しています。
+XCode のコマンドラインツール (`xcode-select` や `xcodebuild` など) に依存しています。
 
 ### プロジェクトの作成
 
