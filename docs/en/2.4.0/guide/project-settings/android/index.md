@@ -24,6 +24,8 @@ Project Settings for Android
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CordovaWebView Instance.
 
+## &lt;preference&gt;
+
 Various **other** preferences (as **&lt;preference&gt;** tags) default on not breaking existing apps. The available preferences are:
 
 1. **useBrowserHistory (boolean, defaults to true)** - set to false if you want to use the history shim that was used to work around the hashtag error present in Android 3.x prior to the history fix.  (Note: This setting will be deprecated in April 2013)
@@ -34,3 +36,7 @@ Various **other** preferences (as **&lt;preference&gt;** tags) default on not br
 6. **loadUrlTimeoutValue** - How much time Cordova should wait before throwing a timeout error on the application.
 7. **keepRunning (boolean, defaults to true)** - Determines whether Cordova will keep running in the background or not
 8. **splashscreen** - The name of the file minus its extension in the res/drawable directory.  If you have multiple assets, they all must share this common name in their respective directories.
+
+## &lt;plugin&gt;
+
+Android supports using &lt;feature&gt; as analogues to &lt;plugin&gt; elements.

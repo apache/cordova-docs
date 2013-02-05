@@ -66,10 +66,6 @@ These elements map to native APIs that the application will be able to access. A
 the `<plugin>` elements and maps them to native code to enable your Cordova application to access device APIs otherwise
 unavailable to typical web-based applications.
 
-#### `<plugin>` quirks
-
-- Android supports `<feature>` elements as analogues to `<plugin>`.
-
 ### `<access>`
 
 These elements define how your whitelist works. Please see the Domain Whitelist Guide for more information.  
