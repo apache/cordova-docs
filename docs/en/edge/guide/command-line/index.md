@@ -33,6 +33,23 @@ Cordova projects.
 * [iOS](#Command-Line%20Usage_ios)
 * [Android](#Command-Line%20Usage_android)
 * [BlackBerry](#Command-Line%20Usage_blackberry)
+* [Windows Phone 8](#Command-Line%20Usage_wp8)
+
+## Windows Phone 8
+
+The Windows Phone 8 command line tools support creating new projects.
+
+### Create a project
+
+Run the `create` command with the following parameters:
+
+* Path to your new Cordova WP8 project
+* Package Name, following reverse-domain style convention ( this becomes the default Namespace )
+* Project name
+
+<!-- -->
+
+    $ ./path/to/cordova-wp8/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 ## iOS
 

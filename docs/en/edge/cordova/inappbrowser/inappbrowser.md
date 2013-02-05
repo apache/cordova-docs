@@ -52,6 +52,14 @@ Permissions
     <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
 
+### Windows Phone 7 + 8
+
+#### config.xml
+
+    <plugin name="InAppBrowser" />
+
+
+
 addEventListener
 ================
 
@@ -74,6 +82,7 @@ Supported Platforms
 
 - Android
 - iOS
+- Windows Phone 7 + 8
 
 Quick Example
 -------------
@@ -133,6 +142,7 @@ Supported Platforms
 
 - Android
 - iOS
+- Windows Phone 7 + 8
 
 Quick Example
 -------------
@@ -204,6 +214,7 @@ Supported Platforms
 
 - Android
 - iOS
+- Windows Phone 7 + 8
 
 Quick Example
 -------------
