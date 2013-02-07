@@ -25,6 +25,6 @@ onError callback function for compass functions.
 Example
 -------
 
-function(CompassError) {
-    // Handle the error
-}
+    function(CompassError) {
+        // Handle the error
+    }

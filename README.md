@@ -120,7 +120,11 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
 
 ### Run the Script
 
-    ./bin/generate
+    bin/generate
+
+If all you want to generate is edge/English, then
+
+    bin/generate --edge
 
 ### Problems
     
