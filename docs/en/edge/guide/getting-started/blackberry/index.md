@@ -62,7 +62,7 @@ Once you receive your Signing Keys, they'll need to be setup. To learn how to se
 4.  Install Cordova
 -------------------------
 
-Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents to your local machine.
+Download the latest copy of [Cordova](http://cordova.apache.org/#download) and extract its contents to your local machine.
 
 
 5.  Setup New Project
@@ -70,7 +70,7 @@ Download the latest copy of [Cordova](http://phonegap.com/download) and extract 
 
 - Open up a command prompt/terminal and navigate to where you extracted Cordova.
 - There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
-- The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
+- The blackberry directory contains several directories.  The `example` folder contains a complete Cordova project.  Copy the `example` folder to another location on your computer.
 - Change to the newly created directory.
 - Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
 
