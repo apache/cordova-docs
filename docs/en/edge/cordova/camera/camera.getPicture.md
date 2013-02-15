@@ -20,7 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 camera.getPicture
 =================
 
-Takes a photo using the camera or retrieves a photo from the device's album.  The image is returned as a base64 encoded `String` or as the URI of an image file.
+Takes a photo using the camera or retrieves a photo from the device's album.
+The image is passed to the success callback as a base64 encoded `String` or as the URI of an image file.
+The method itself returns a CameraPopoverHandle object, which can be used to reposition the file selection popover.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
@@ -29,7 +31,7 @@ Description
 
 Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.
+If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.  A `CameraPopoverHandle` object, which can be used to reposition the photo chooser dialog (eg. when the device orientation changes) is returned by `camera.getPicture`.
 
 The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
 
