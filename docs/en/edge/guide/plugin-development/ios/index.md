@@ -31,13 +31,22 @@ The JavaScript portion of a plugin always uses the `cordova.exec` method as foll
 
 This will marshal a request from the UIWebView to the iOS native side, more or less boiling down to calling the `action` method on the `service` class, with the arguments passed in the `args` Array. 
 
-Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the Javascript.
-
 The plugin must be added under the `<plugins>` tag of the `config.xml` file in your Cordova-iOS application's project folder.
 
     <plugin name="service_name" value="PluginClassName" />
 
 The key `service_name` should match what you use in the JavaScript `exec` call, and the value will be the name of the Objective-C class of the plugin. Without this added, the plugin may compile but will not be reachable by Cordova.
+
+## Plugin Initialization and Lifetime
+
+There is one instance of a plugin object that is created per-UIWebView, and the lifetime of the instance is tied to the UIWebView. Plugins are not instantiated until they are first referenced by a call from JS, unless the `onload` attribute set within config.xml. E.g.:
+
+    <plugin name="Echo" value="Echo" onload="true" />
+
+There is *no* designated initializer for plugins. Instead, plugins should use the `pluginInitialize` method for their start-up logic.
+
+Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the Javascript.
+
 
 ## Writing an iOS Cordova Plugin
 
@@ -128,7 +137,7 @@ Finally, we send the result to `self.commandDelegate`, which will execute the Ja
 
 ## Threading
 
-Although UIWebViews run on a dedicated thread, plugin methods are executed on the UI thread. If your plugin requires a non-trivial amount of processing or requires a blocking call, you should make use of a background thread. An example:
+Plugin methods are executed on the UI thread. If your plugin requires a non-trivial amount of processing or requires a blocking call, you should make use of a background thread. An example:
 
     - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
     {
@@ -169,4 +178,4 @@ The **old (deprecated)** signature is:
 
         - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
-The options parameter for the Objective-C plugin method is being deprecated, and it should not be used. For legacy reasons - the last JavaScript object passed in the args Array will be passed in as the options dictionary of the method in Objective-C. You must make sure that any JavaScript object that is passed in as an element in the args array occurs as the last item in the Array, if not it will throw off the array index of all subsequent parameters of the Array in Objective-C. Only one JavaScript object is supported for the options dictionary, and only the last one encountered will be passed to the native method. It is because of these error-prone reasons that they are being deprecated.
+The options parameter for the Objective-C plugin method is deprecated, and it should not be used. For legacy reasons - the last JavaScript object passed in the args Array will be passed in as the options dictionary of the method in Objective-C. You must make sure that any JavaScript object that is passed in as an element in the args array occurs as the last item in the Array, if not it will throw off the array index of all subsequent parameters of the Array in Objective-C. Only one JavaScript object is supported for the options dictionary, and only the last one encountered will be passed to the native method. It is because of these error-prone reasons that they are being deprecated.
