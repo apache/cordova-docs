@@ -44,7 +44,7 @@ class JoDoc
 
     # Run joDoc
     FileUtils.cd @input_directory do
-        `jodoc --output "#{@output_directory}" --title "Cordova API Documentation" --template "#{@output_directory}/index.html" ./`
+        `jodoc --output "#{@output_directory}" --title "Cordova API Documentation" --template "#{@output_directory}/index.html" ./ > /dev/null 2> /dev/null`
     end
   end
   
