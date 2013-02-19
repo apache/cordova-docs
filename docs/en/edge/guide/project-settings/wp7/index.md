@@ -22,3 +22,4 @@
 Project Settings for Windows Phone 7 
 ===================================
 
+Windows Phone 7 does not currently have any additional configurable features.
