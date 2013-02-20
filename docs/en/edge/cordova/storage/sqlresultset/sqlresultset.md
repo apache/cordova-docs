@@ -51,14 +51,14 @@ Execute SQL Quick Example
 	}
 
 	function querySuccess(tx, results) {
-    console.log("Returned rows = " + results.rows.length);
-    // this will be true since it was a select statement and so rowsAffected was 0
-    if (!resultSet.rowsAffected) {
-      console.log('No rows affected!');
-      return false;
-    }
-    // for an insert statement, this property will return the ID of the last inserted row
-    console.log("Last inserted row ID = " + results.insertId);
+		console.log("Returned rows = " + results.rows.length);
+		// this will be true since it was a select statement and so rowsAffected was 0
+		if (!results.rowsAffected) {
+			console.log('No rows affected!');
+			return false;
+		}
+		// for an insert statement, this property will return the ID of the last inserted row
+		console.log("Last inserted row ID = " + results.insertId);
 	}
 	
 	function errorCB(err) {
