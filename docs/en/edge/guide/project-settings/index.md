@@ -28,7 +28,7 @@ The location of the `config.xml` file is different depending on the platform. Th
 ## Platform-Specific Properties
 
 As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet. As such, some native and platform-specific
-properties, characterstics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
+properties, characteristics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
 `config.xml` file. The following sub-sections linked to are guides which go into more details about these preferences.
 
 - Project Settings for iOS
@@ -50,13 +50,13 @@ Apache Cordova project aims to abstract and provide simple entry points for.
 
 An example:
 
-        <cordova>
+        <widget>
             <preference name="MySetting" value="true" />
             <plugins>
                 <plugin name="MyPlugin" value="MyPluginClass" />
             </plugins>
             <access origin="*" />
-        </cordova>
+        </widget>
 
 A list of supported elements across major platforms which are supported in Apache Cordova follow.
 

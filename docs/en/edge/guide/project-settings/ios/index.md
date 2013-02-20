@@ -25,6 +25,8 @@ Project Settings for iOS
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
 The `config.xml` file is located in your `<project folder>/<appname>` directory.
 
+## &lt;preference&gt;
+
 Various preferences (as **&lt;preference&gt;** tags) default on not breaking existing apps. The available preferences are:
 
 1. **UIWebViewBounce (boolean, defaults to true)** - set to false if you don't want the WebView to rubber-band
