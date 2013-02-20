@@ -30,9 +30,11 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
 5. **Copy** the **www/cordova-2.4.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.3.0.js** file
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.4.0.js** file
-7. Update (or replace, if you never changed the file) your **MainViewController.m** according to the one from the new project.
-8. Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.4.0, this has fixed scripts)** 
-9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
+7. Update (or replace, if you never changed the files) your **MainViewController.m** file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997)).
+8. Update (or replace, if you never changed the file) your **AppDelegate.m** file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d))
+9. In your **config.xml** file, [add this new line](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d).
+9. Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.4.0, this has fixed scripts)** 
+10. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
 ## Upgrading Cordova 2.2.0 projects to 2.3.0 ##
 
