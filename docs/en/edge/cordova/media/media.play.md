@@ -188,3 +188,11 @@ iOS Quirk
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
+
+
+- __order of file search__
+
+    When only a file name or simple path is provided, iOS will search in the www for the file and then in the application documents/tmp directory.
+
+        var myMedia = new Media("audio/beer.mp3")
+        myMedia.play()  // will first look for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

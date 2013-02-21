@@ -144,7 +144,11 @@ BlackBerry WebWorks Quirks
 iOS Quirks
 ----------
 
-- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+- iOS only records to files of type .wav and returns an error if the file name extension is not correct.
+- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the File apis using LocalFileSystem.TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
+- Files can be recorded and played back using the documents URI:
+
+        var myMedia = new Media("documents://beer.mp3")
 
 Tizen Quirks
 ----------
