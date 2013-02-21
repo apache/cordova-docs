@@ -36,6 +36,7 @@ Various **other** preferences (as **&lt;preference&gt;** tags) default on not br
 6. **loadUrlTimeoutValue** - How much time Cordova should wait before throwing a timeout error on the application.
 7. **keepRunning (boolean, defaults to true)** - Determines whether Cordova will keep running in the background or not
 8. **splashscreen** - The name of the file minus its extension in the res/drawable directory.  If you have multiple assets, they all must share this common name in their respective directories.
+9. **disallowOverscroll (boolean, defaults to false)** - set to true if you want to disable the glow when a user scrolls beyond the edge of the webview.
 
 ## &lt;plugin&gt;
 
