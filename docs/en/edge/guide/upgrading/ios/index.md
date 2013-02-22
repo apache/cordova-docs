@@ -22,6 +22,22 @@ Upgrading Cordova iOS
 
 Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 6. The iOS 6 SDK requires Xcode 4.5.
 
+## Upgrading Cordova 2.4.0 projects to 2.5.0 ##
+
+1. **Download and extract the Cordova 2.5.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.5.0)
+2. **Quit Xcode** if it is running.
+3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
+4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+5. **Copy** the **www/cordova-2.5.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.4.0.js** file
+6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.5.0.js** file
+7. Update (or replace, if you never changed the file) your **AppDelegate.m** file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09))
+9. In your **config.xml** file, [add these new lines](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb).
+9. In your **config.xml** file, [edit the root element, change it from cordova to widget](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c).
+9. In your **config.xml** file, [remove the OpenAllWhitelistURLsInWebView preference](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4).
+9.
+ Delete your **"cordova"** folder, and copy the **"cordova"** folder from the new project into your project's root folder **(in 2.5.0, this has updated scripts)** 
+10. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
+
 ## Upgrading Cordova 2.3.0 projects to 2.4.0 ##
 
 1. **Download and extract the Cordova 2.4.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.4.0)
