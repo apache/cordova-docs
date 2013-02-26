@@ -29,7 +29,7 @@ The `config.xml` file is located in your `<project folder>/<appname>` directory.
 
 Various preferences (as **&lt;preference&gt;** tags) default on not breaking existing apps. The available preferences are:
 
-1. **UIWebViewBounce (boolean, defaults to true)** - set to false if you don't want the WebView to rubber-band
+1. **DisallowOverscroll (boolean, defaults to false)** - set to true if you don't want the WebView to rubber-band
 
 2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
 
