@@ -77,7 +77,7 @@ Using CDVPluginResult you can return a variety of result types back to your java
 
     + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
 
-The types you can create are: `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer`, and `Multipart`.  Or, don't attach any result (just send a status).  Or, ruturn an Error.  You can even not send any result at all.
+The types you can create are: `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer`, and `Multipart`.  Or, don't attach any arguments (just send a status).  Or, return an Error.  You can even chose to not send any plugin result at all (your callback will not fire).
 
 ### Notes
 
