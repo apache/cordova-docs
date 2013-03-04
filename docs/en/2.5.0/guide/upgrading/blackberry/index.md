@@ -27,30 +27,23 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 Updating the PhoneGap download folder:
 
-it is recommended that you download a fresh copy of the entire folder
-for piecemeal update:
+It is recommended that you download a fresh copy of the entire folder. 
+
+However, here are the new parts needed for the piecemeal update:
 1. Update the cordova.blackberry.js file in the ‘Phonegap-2.5.0/lib/blackberry/javascript’ folder
 2. Update the ‘ext’, ‘ext-air’, and ‘ext-qnx’ in the ‘Phonegap-2.5.0/lib/blackberry/framework’ folder
 3. Update the ‘build.xml’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
 4. Update the the ‘Phonegap-2.5.0/lib/blackberry/bin’ folder
 5. Update the ‘VERSION’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
-1. Update the .jar file in the `cordova.1.9.0/ext/` folder.
-2. Update the contents of the `cordova.1.9.0/ext-air/` folder.
-3. Update the .js file in the `cordova.1.9.0/javascript/` folder.
-4. Open the `sample/lib/` folder and rename the `cordova.1.9.0/` folder to `cordova.2.0.0/`.
-5. Type `ant blackberry build` or `ant playbook build` to update the `www/` folder with updated Cordova.
-6. Open the `www/` folder and update your HTML to use the new `cordova-2.0.0.js` file.
 
-
-Updating the Example folder or Migrating an existing project:
+Updating the example/ folder or migrating an existing project:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
 3. Update the contents of the `ext-air/` folder.
+4. Update the contents of the `ext-qnx/` folder.
 4. Copy the new `cordova-2.5.0.js` into your project.
 5. Update your HTML to use the new `cordova-2.5.0.js` file.
-
-
 
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
