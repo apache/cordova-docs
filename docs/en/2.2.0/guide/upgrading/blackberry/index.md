@@ -31,6 +31,7 @@ Updating just the www folder:
 3. Update the contents of the `ext-air/` folder.
 4. Copy the new `cordova-2.2.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
+    - If BlackBerry10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.2.0.js` file.
 
 
@@ -39,10 +40,11 @@ Updating the sample folder (ie, updating using the ant tools):
 1. Open the `sample/lib/` folder.
 2. Update the .jar file in the `cordova.2.1.0/ext/` folder.
 3. Update the contents of the `cordova.2.1.0/ext-air/` folder.
-4. Update the .js file in the `cordova.2.1.0/javascript/` folder.
-5. Open the `sample/lib/` folder and rename the `cordova.2.1.0/` folder to `cordova.2.2.0/`.
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` folder with updated Cordova.
-7. Open the `www/` folder and update your HTML to use the new `cordova-2.2.0.js` file.
+4. Update the contents of the `cordova.2.1.0/ext-qnx/` folder.
+5. Update the .js file in the `cordova.2.1.0/javascript/` folder.
+6. Open the `sample/lib/` folder and rename the `cordova.2.1.0/` folder to `cordova.2.2.0/`.
+7. Type `ant blackberry build` or `ant playbook build` to update the `www/` folder with updated Cordova.
+8. Open the `www/` folder and update your HTML to use the new `cordova-2.2.0.js` file.
 
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
