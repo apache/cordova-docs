@@ -32,6 +32,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 5. Update your HTML to use the new cordova-2.5.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
 7. Update framework/res/xml/config.xml to have similar settings as it did previously
+8. Copy files from bin/templates/cordova to the cordova directory in your project
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
@@ -41,6 +42,8 @@ This document is for people who need to upgrade their Cordova versions from an o
 4. Copy the new cordova-2.4.0.js into your project
 5. Update your HTML to use the new cordova-2.4.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Copy files from bin/templates/cordova to the cordova directory in your project
+
 
 ## Upgrade to 2.3.0 from 2.2.0 ##
 
@@ -50,6 +53,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 4. Copy the new cordova-2.3.0.js into your project
 5. Update your HTML to use the new cordova-2.3.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Copy files from bin/templates/cordova to the cordova directory in your project
 
 ## Upgrade to 2.2.0 from 2.1.0 ##
 
@@ -59,6 +63,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 4. Copy the new cordova-2.2.0.js into your project
 5. Update your HTML to use the new cordova-2.2.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Copy files from bin/templates/cordova to the cordova directory in your project
 
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
@@ -69,6 +74,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 4. Copy the new cordova-2.1.0.js into your project
 5. Update your HTML to use the new cordova-2.1.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Copy files from bin/templates/cordova to the cordova directory in your project
 
 
 ## Upgrade to 2.0.0 from 1.9.0 ##
