@@ -71,7 +71,20 @@ What gets dispatched to the plugin via JavaScript's `exec` function gets passed 
 2. [CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
 3. [CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
 
-  
+## iOS CDVPluginResult message types
+
+Using CDVPluginResult you can return a variety of result types back to your javascript callbacks, using class methods that look like:
+
+    + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
+
+The types you can create are: `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer`, and `Multipart`.  Or, don't attach any arguments (just send a status).  Or, return an Error.  You can even chose to not send any plugin result at all (your callback will not fire).
+
+### Notes
+
+ * `messageAsArrayBuffer` expects `NSData*` and will convert to an `ArrayBuffer` for your javascript callback (and `ArrayBuffers` sent to a plugin from javascript are converted to `NSData*`).
+ * `messageAsMultipart` expects an `NSArray*` containing any of the other supported types, and will send the whole array as the `arguments` to your javascript callback.
+   *  Quirk: this is not just syntactic sugar (though it is sweet).  This way, all of the arguments are serialized/deserialized as necessary.  e.g. it is safe to return `NSData*` as multipart, but not as `Array`/`Dictionary`.
+
 ## Plugin Signatures
 
 The **new signature** supported beginning in **Cordova 2.1.0** is:
