@@ -54,3 +54,5 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 12. **KeyboardDisplayRequiresUserAction (boolean, defaults to true)** - set to false to open the keyboard when form elements get focus via the JavaScript focus() call.
 
 13. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.
+
+14. **HideKeyboardFormAccessoryBar (boolean, defaults to false)** - set to true to hide the additional toolbar that is on top of the keyboard (this is the toolbar that has the Prev, Next and Done buttons)
