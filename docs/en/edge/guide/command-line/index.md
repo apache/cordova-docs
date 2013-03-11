@@ -160,15 +160,18 @@ The BlackBerry command-line tools are built upon shell scripts.
 Run the `create` command with the following parameters:
 
 * Path to your new Cordova BlackBerry project
+* Placeholder package name
 * Application name
 
 <!-- -->
 
-    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project CordovaProjectName
+    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 or, on **Windows**
 
-    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project CordovaProjectName
+    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+
+Note: the package name placeholder (com.example.cordova_project_name) is ignored on the Blackberry platform, but is required for use of the crossplatform tools
 
 ### Build a project
 
