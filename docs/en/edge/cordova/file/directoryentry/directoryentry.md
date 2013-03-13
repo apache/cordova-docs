@@ -382,3 +382,11 @@ __Quick Example__
 
     // remove the directory and all it's contents
     entry.removeRecursively(success, fail);
+
+BlackBerry Quirks
+-----------------
+
+May fail if access is attempted on an directory created by a previous installation of an application.
+This can occur if an app creates a directory during normal operation, then the app is reinstalled 
+without the directory being cleaned. An attempt to access the directory from the new app install will 
+fail with a 'ControlledAccessException'.
