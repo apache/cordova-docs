@@ -38,6 +38,7 @@ Constants
 - Connection.CELL_2G
 - Connection.CELL_3G
 - Connection.CELL_4G
+- Connection.CELL
 - Connection.NONE
 
 Permissions
