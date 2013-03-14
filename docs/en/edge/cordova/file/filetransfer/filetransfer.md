@@ -199,6 +199,7 @@ __Parameters:__
 - __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
 - __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __options__ - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
 __Quick Example__
 
@@ -217,6 +218,12 @@ __Quick Example__
             console.log("download error source " + error.source);
             console.log("download error target " + error.target);
             console.log("upload error code" + error.code);
+        },
+        false,
+        {
+            headers: {
+                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+            }
         }
     );
 

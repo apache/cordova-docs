@@ -41,7 +41,8 @@ Options
         
             Camera.DestinationType = {
                 DATA_URL : 0,                // Return image as base64 encoded string
-                FILE_URI : 1                 // Return image file URI
+                FILE_URI : 1,                // Return image file URI
+                NATIVE_URI : 2               // Return image native URI (eg. assets-library:// on iOS or content:// on Android)
             };
 
 - __sourceType:__ Set the source of the picture.  Defined in nagivator.camera.PictureSourceType (`Number`)
