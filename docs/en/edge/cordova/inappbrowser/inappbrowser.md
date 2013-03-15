@@ -72,6 +72,7 @@ addEventListener
 
         loadstart - event fired when the InAppBrowser starts to load a URL 
         loadstop - event fired when the InAppBrowser finished loading a URL
+        loaderror - event fired when the InAppBrowser encounters an error loading a URL
         exit - event fired when the InAppBrowser window is closed 
 
 - __callback:__ the function that is called when the event is fired. 
@@ -109,9 +110,10 @@ Full Example
         //
         function onDeviceReady() {
              var ref = window.open('http://apache.org', '_blank', 'location=yes');
-             ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-             ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-             ref.addEventListener('exit', function() { alert(event.type); });
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             ref.addEventListener('exit', function(event) { alert(event.type); });
         }
 
         </script>
@@ -132,6 +134,7 @@ removeEventListener
 
         loadstart - event fired when the InAppBrowser starts to load a URL 
         loadstop - event fired when the InAppBrowser finished loading a URL
+        loaderror - event fired when the InAppBrowser encounters an error loading a URL
         exit - event fired when the InAppBrowser window is closed 
 
 - __callback:__ the function that was to be called when the event is fired. 
@@ -178,10 +181,15 @@ Full Example
             alert(event.type + ' - ' + event.url);
         }
    
+        function iabLoadError(event) {
+            alert(event.type + ' - ' + event.message);
+        }
+   
         function iabClose(event) {
              alert(event.type);
              iabRef.removeEventListener('loadstart', iabLoadStart);
              iabRef.removeEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
              iabRef.removeEventListener('exit', iabClose);
         }
 
@@ -191,6 +199,7 @@ Full Example
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
 
