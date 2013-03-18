@@ -262,6 +262,160 @@ Full Example
       </body>
     </html>
 
+executeScript
+=============
+
+> Injects JavaScript code into the InAppBrowser window
+
+    ref.executeScript(details, callback);
+
+- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __injectDetails:__ details of the script ot run (`Object`)
+    - Supported keys:  (exactly one of "file" or "code" should be present)
+
+            "file" - URL of the script to inject
+            "code" - Text of the script to inject
+
+- __callback:__ the function that is to be called in the Cordova application after the JavaScript code is injected.
+
+Supported Platforms
+-------------------
+
+- Android
+- iOS
+
+Quick Example
+-------------
+
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.executeSript({file: "myscript.js"});
+    });
+
+Full Example
+------------
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        // Global InAppBrowser reference
+        var iabRef = null;
+        
+        // Inject our custom JavaScript into the InAppBrowser window
+        //
+        function replaceHeaderImage() {
+            iabRef.executeScript({
+                code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+            }, function() {
+                alert("Image Element Successfully Hijacked");
+            }
+        }
+
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', replaceHeaderImage);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', replaceHeaderImage);
+             iabRef.addEventListener('exit', iabClose);
+        }
+
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
+
+insertCSS
+=========
+
+> Injects CSS into the InAppBrowser window
+
+    ref.insertCSS(details, callback);
+
+- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __injectDetails:__ details of the script ot run (`Object`)
+    - Supported keys:  (exactly one of "file" or "code" should be present)
+
+            "file" - URL of the stylesheet to inject
+            "code" - Text of the stylesheet to inject
+
+- __callback:__ the function that is to be called in the Cordova application after the CSS is injected.
+
+Supported Platforms
+-------------------
+
+- Android
+- iOS
+
+Quick Example
+-------------
+
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.insertCSS({file: "mystyles.css"});
+    });
+
+Full Example
+------------
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+        
+        // Global InAppBrowser reference
+        var iabRef = null;
+        
+        // Inject our custom CSS into the InAppBrowser window
+        //
+        function changeBackgroundColor() {
+            iabRef.executeScript({
+                code: "body { background: #ffff00"
+            }, function() {
+                alert("Styles Altered");
+            }
+        }
+
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', changeBackgroundColor);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', changeBackgroundColor);
+             iabRef.addEventListener('exit', iabClose);
+        }
+
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
+
 InAppBrowserEvent
 =================
 
