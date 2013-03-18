@@ -386,7 +386,12 @@ __Quick Example__
 BlackBerry Quirks
 -----------------
 
-May fail if access is attempted on an directory created by a previous installation of an application.
-This can occur if an app creates a directory during normal operation, then the app is reinstalled 
-without the directory being cleaned. An attempt to access the directory from the new app install will 
-fail with a 'ControlledAccessException'.
+May fail with a ControlledAccessException in the following cases:
+
+- Access is attempted on an directory created by a previous installation of an application.
+
+> solution: insure temporary directories are cleaned manually, or by the application before reinstall
+
+- if device is connected by usb
+
+> solution: disconnect usb cable from device and run again 
