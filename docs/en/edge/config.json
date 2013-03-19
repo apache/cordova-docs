@@ -167,6 +167,7 @@
             "cordova/notification/notification.md",
             "cordova/notification/notification.alert.md",
             "cordova/notification/notification.confirm.md",
+            "cordova/notification/notification.prompt.md",
             "cordova/notification/notification.beep.md",
             "cordova/notification/notification.vibrate.md"
         ],

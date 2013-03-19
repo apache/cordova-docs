@@ -27,6 +27,7 @@ Methods
 
 - notification.alert
 - notification.confirm
+- notification.prompt
 - notification.beep
 - notification.vibrate
 
