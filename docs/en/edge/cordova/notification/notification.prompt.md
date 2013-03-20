@@ -28,7 +28,7 @@ Shows a customizable prompt dialog box.
 - __promptCallback:__ - Callback to invoke when a button is pressed (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Prompt")
 - __buttonLabels:__ Array of strings for the button labels (`Array`) (Optional, Default: ["OK","Cancel"])
-    
+
 Description
 -----------
 
@@ -53,22 +53,22 @@ Supported Platforms
 Quick Example
 -------------
 
-	// process the promp dialog results
-	function onPrompt(results) {
-		alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
-	}
+    // process the promp dialog results
+    function onPrompt(results) {
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    }
 
     // Show a custom prompt dialog
     //
     function showPrompt() {
         navigator.notification.prompt(
-	        'Please enter your name',  // message
-			onPrompt,	               // callback to invoke
-	        'Registration',            // title
-	        ['Ok','Exit']              // buttonLabels
+            'Please enter your name',  // message
+            onPrompt,	               // callback to invoke
+            'Registration',            // title
+            ['Ok','Exit']              // buttonLabels
         );
     }
-        
+
 Full Example
 ------------
 
@@ -89,23 +89,23 @@ Full Example
         function onDeviceReady() {
             // Empty
         }
-    
-		// process the promptation dialog result
-		function onPrompt(results) {
-			alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
-		}
+
+        // process the promptation dialog result
+        function onPrompt(results) {
+            alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+        }
 
         // Show a custom prompt dialog
         //
         function showPrompt() {
             navigator.notification.prompt(
-	            'Please enter your name',  // message
-			    onPrompt,				   // callback to invoke
-	            'Registration',            // title
-	            ['Ok','Exit']              // buttonLabels
+                'Please enter your name',  // message
+                onPrompt,                  // callback to invoke
+                'Registration',            // title
+                ['Ok','Exit']              // buttonLabels
             );
         }
-    
+
         </script>
       </head>
       <body>
