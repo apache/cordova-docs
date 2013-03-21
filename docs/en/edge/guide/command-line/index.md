@@ -181,13 +181,13 @@ This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.
 
-    $ /path/to/my_new_cordova_project/cordova/debug
-
+    $ /path/to/my_new_cordova_project/cordova/build <platform>
+ 
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/debug.bat
+    $ /path/to/my_new_cordova_project/cordova/build.bat <platform>
 
-### Launch emulator
+### Launch simulator
 
 For BlackBerry projects, please make sure you customize the
 `project.properties` file in the root of your Cordova project folder.
@@ -195,12 +195,20 @@ This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.
 
-    $ /path/to/my_new_cordova_project/cordova/emulate
+    $ /path/to/my_new_cordova_project/cordova/run <platform>
+    
+and then choose 'no' when prompted with: 
 
+    Do you have a BlackBerry device connected to your computer? (y/n)
+    
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/emulate.bat
+    $ /path/to/my_new_cordova_project/cordova/run <platform>
 
+and then choose 'no' when prompted with: 
+
+    Do you have a BlackBerry device connected to your computer? (y/n)
+    
 ### Logging
 
 Unfortunately streaming logs directly from the device is not
