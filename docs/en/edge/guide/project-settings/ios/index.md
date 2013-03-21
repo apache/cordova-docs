@@ -56,3 +56,5 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 13. **SuppressesIncrementalRendering (boolean, defaults to false)** - set to true to wait until all new view content has been received before it is rendered.
 
 14. **HideKeyboardFormAccessoryBar (boolean, defaults to false)** - set to true to hide the additional toolbar that is on top of the keyboard (this is the toolbar that has the Prev, Next and Done buttons)
+
+15. **KeyboardShrinksView (boolean, defaults to false)** -  set to true to shrink the WebView when the keyboard comes up. The WebView shrinks instead of the viewport shrinking and the page scrollable. This applies to apps that position their elements relative to the bottom of the WebView. This is the default behaviour on Android, and makes a lot of sense when building apps as opposed to webpages.
