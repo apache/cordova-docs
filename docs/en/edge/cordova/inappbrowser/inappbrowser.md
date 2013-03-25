@@ -224,6 +224,7 @@ Supported Platforms
 - Android
 - iOS
 - Windows Phone 7 + 8
+- BlackBerry 10
 
 Quick Example
 -------------
