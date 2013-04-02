@@ -90,7 +90,9 @@ We currently do not support Android 1.x, and we plan to deprecate platforms in t
 
         <project_folder_path> is the path to your new Cordova Android project
         <package_name> is the package name, e.g. com.YourCompany.YourAppName
-        <project_name> is the project name, e.g. YourApp (Must not contain spaces)
+        <project_name> is the project name, e.g. YourApp (Must not contain spaces and dashes)
+ 
+- If you're getting an 'An unexpected error occurred" error, try the command again prefixed with `sudo`
 
 - Launch Eclipse, and select menu item **New Project**
     ![](img/guide/getting-started/android/eclipse_new_project.png)
