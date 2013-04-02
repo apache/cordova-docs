@@ -39,9 +39,7 @@ We currently do not support Android 1.x, and we plan to deprecate platforms in t
 2. Install SDK + Cordova
 ------------------------
 
-- Download and install [Eclipse Classic](http://www.eclipse.org/downloads/)
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
-- Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
 - Download the latest copy of [Cordova](http://cordova.apache.org/#download) and extract its contents. We will be working with the Android directory.
 
 
