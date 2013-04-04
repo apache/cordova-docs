@@ -278,6 +278,9 @@ executeScript
             "code" - Text of the script to inject
 
 - __callback:__ the function that is to be called in the Cordova application after the JavaScript code is injected.
+    - If the injected script is of type "code", then the callback will be called with a single argument, which is
+      the return value of the script, wrapped in an Array. (For multi-line scripts, this is the return value of the
+      last statement, or the last expression evaluated.)
 
 Supported Platforms
 -------------------
