@@ -52,6 +52,7 @@ Quick Example
         states[Connection.CELL_2G]	= 'Cell 2G connection';
         states[Connection.CELL_3G]	= 'Cell 3G connection';
         states[Connection.CELL_4G]	= 'Cell 4G connection';
+        states[Connection.CELL]   	= 'Cell generic connection';
         states[Connection.NONE]   	= 'No network connection';
     
         alert('Connection type: ' + states[networkState]);
@@ -90,6 +91,7 @@ Full Example
 	        states[Connection.CELL_2G]	= 'Cell 2G connection';
 	        states[Connection.CELL_3G]	= 'Cell 3G connection';
 	        states[Connection.CELL_4G]	= 'Cell 4G connection';
+	        states[Connection.CELL]	  	= 'Cell generic connection';
 	        states[Connection.NONE]   	= 'No network connection';
 
 	        alert('Connection type: ' + states[networkState]);
@@ -114,7 +116,7 @@ iOS Quirks
 ----------
 
 - iOS cannot detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return `Connection.CELL` in a future release.
 
 Bada Quirks
 -----------
@@ -131,6 +133,8 @@ Windows Phone Quirks
 --------------------
 
 - When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- Windows Phone cannot detect the type of cellular network connection.
+    - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 Tizen Quirks
 --------------------

@@ -17,7 +17,8 @@
             "cordova/camera/parameter/cameraSuccess.md",
             "cordova/camera/parameter/cameraError.md",
             "cordova/camera/parameter/cameraOptions.md",
-            "cordova/camera/parameter/CameraPopoverOptions.md"
+            "cordova/camera/parameter/CameraPopoverOptions.md",
+            "cordova/camera/parameter/CameraPopoverHandle.md"
         ],
         "capture.md": [
             "cordova/media/capture/capture.md",
@@ -166,6 +167,7 @@
             "cordova/notification/notification.md",
             "cordova/notification/notification.alert.md",
             "cordova/notification/notification.confirm.md",
+            "cordova/notification/notification.prompt.md",
             "cordova/notification/notification.beep.md",
             "cordova/notification/notification.vibrate.md"
         ],

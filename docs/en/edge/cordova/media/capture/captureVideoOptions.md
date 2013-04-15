@@ -40,7 +40,6 @@ Quick Example
 Android Quirks
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
 - The __mode__ parameter is not supported.  The video size and format cannot be altered programmatically; however, these parameters can be changed by the device user. By default, videos are recorded in 3GPP (video/3gpp) format.
 
 

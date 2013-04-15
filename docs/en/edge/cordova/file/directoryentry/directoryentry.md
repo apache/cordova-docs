@@ -382,3 +382,16 @@ __Quick Example__
 
     // remove the directory and all it's contents
     entry.removeRecursively(success, fail);
+
+BlackBerry Quirks
+-----------------
+
+May fail with a ControlledAccessException in the following cases:
+
+- Access is attempted on an directory created by a previous installation of an application.
+
+> solution: insure temporary directories are cleaned manually, or by the application before reinstall
+
+- if device is connected by usb
+
+> solution: disconnect usb cable from device and run again 

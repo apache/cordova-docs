@@ -38,9 +38,11 @@ Properties
 Methods
 -------
 
-- __abort__: Aborts reading file. 
+- __abort__: Aborts reading file.
 - __readAsDataURL__: Read file and return data as a base64 encoded data url.
 - __readAsText__: Reads text file.
+- __readAsBinaryString__: Reads file as binary and returns a binary string.
+- __readAsArrayBuffer__: Reads file as an ArrayBuffer.
 
 Details
 -------
@@ -195,3 +197,59 @@ Full Example
 iOS Quirks
 ----------
 - __encoding__ parameter is not supported, UTF8 encoding is always used.
+
+Read As Binary String
+---------------------
+
+Currently supported on iOS and Android only.
+
+__Parameters:__
+- file - the file object to read
+
+
+Quick Example
+-------------
+
+	function win(file) {
+		var reader = new FileReader();
+		reader.onloadend = function(evt) {
+        	console.log("read success");
+            console.log(evt.target.result);
+        };
+		reader.readAsBinaryString(file);
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
+	};
+	
+    entry.file(win, fail);
+
+
+Read As Array Buffer
+--------------------
+
+Currently supported on iOS and Android only.
+
+__Parameters:__
+- file - the file object to read
+
+
+Quick Example
+-------------
+
+	function win(file) {
+		var reader = new FileReader();
+		reader.onloadend = function(evt) {
+        	console.log("read success");
+            console.log(new Uint8Array(evt.target.result));
+        };
+		reader.readAsArrayBuffer(file);
+	};
+
+	var fail = function(evt) {
+    	console.log(error.code);
+	};
+	
+    entry.file(win, fail);
+

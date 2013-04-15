@@ -160,15 +160,18 @@ The BlackBerry command-line tools are built upon shell scripts.
 Run the `create` command with the following parameters:
 
 * Path to your new Cordova BlackBerry project
+* Placeholder package name
 * Application name
 
 <!-- -->
 
-    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project CordovaProjectName
+    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 or, on **Windows**
 
-    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project CordovaProjectName
+    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+
+Note: the package name placeholder (com.example.cordova_project_name) is ignored on the Blackberry platform, but is required for use of the crossplatform tools
 
 ### Build a project
 
@@ -178,13 +181,13 @@ This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.
 
-    $ /path/to/my_new_cordova_project/cordova/debug
-
+    $ /path/to/my_new_cordova_project/cordova/build <platform>
+ 
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/debug.bat
+    $ /path/to/my_new_cordova_project/cordova/build.bat <platform>
 
-### Launch emulator
+### Launch simulator
 
 For BlackBerry projects, please make sure you customize the
 `project.properties` file in the root of your Cordova project folder.
@@ -192,12 +195,20 @@ This is necessary for things like supplying your BlackBerry signing key
 password, location of the BlackBerry WebWorks SDK, and location of
 BlackBerry simulator executables.
 
-    $ /path/to/my_new_cordova_project/cordova/emulate
+    $ /path/to/my_new_cordova_project/cordova/run <platform>
+    
+and then choose 'no' when prompted with: 
 
+    Do you have a BlackBerry device connected to your computer? (y/n)
+    
 or, on **Windows**
 
-    $ /path/to/my_new_cordova_project/cordova/emulate.bat
+    $ /path/to/my_new_cordova_project/cordova/run <platform>
 
+and then choose 'no' when prompted with: 
+
+    Do you have a BlackBerry device connected to your computer? (y/n)
+    
 ### Logging
 
 Unfortunately streaming logs directly from the device is not
