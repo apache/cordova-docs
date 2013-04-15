@@ -111,6 +111,8 @@ The whitelisting rules are found in `AppName/config.xml` and declared with the e
 
 iOS has full support for the whitelisting syntax.
 
+Note: origins specified without a protocol (i.e. `www.apache.org` instead of `http://www.apache.org`) will default to all of http, https, ftp, and ftps.
+
 
 ### Syntax
 
