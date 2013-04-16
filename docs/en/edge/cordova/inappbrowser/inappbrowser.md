@@ -99,7 +99,7 @@ Full Example
       <head>
         <title>InAppBrowser.addEventListener Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
@@ -163,7 +163,7 @@ Full Example
       <head>
         <title>InAppBrowser.removeEventListener Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
@@ -240,7 +240,7 @@ Full Example
       <head>
         <title>InAppBrowser.close Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for Cordova to load
