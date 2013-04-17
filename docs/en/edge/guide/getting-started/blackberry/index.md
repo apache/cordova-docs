@@ -162,17 +162,18 @@ BlackBerry Smartphone (OS5-7)
 - Smartphone (Optional)
 - `blackberry.sigtool.password`
 
-While in your project directory, in command prompt/terminal type `ant target load-device`. Replace `target` with either `qnx`, `playbook`, or `blackberry`.  For example...
+While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`.  For example...
 
 BlackBerry 10 (QNX)
-- `ant qnx load-device`
+- `./cordova/run qnx`
 
 BlackBerry PlayBook
-- `ant playbook load-device`
+- `./cordova/run playbook`
 
 BlackBerry Smartphone (OS5-7)
-- `ant blackberry load-device`
+- `./cordova/run blackberry`
 
+Answer "y" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
 The application will be installed to the home screen of the device. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
 Additional Information
