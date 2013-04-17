@@ -23,7 +23,7 @@ InAppBrowser
 > The InAppBrowser is a web-browser that is shown in your app when you use the `window.open` call.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
-    
+
 Description
 -----------
 
@@ -70,12 +70,12 @@ addEventListener
 - __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
 - __eventname:__ the event to listen for (`String`)
 
-        loadstart - event fired when the InAppBrowser starts to load a URL 
+        loadstart - event fired when the InAppBrowser starts to load a URL
         loadstop - event fired when the InAppBrowser finished loading a URL
         loaderror - event fired when the InAppBrowser encounters an error loading a URL
-        exit - event fired when the InAppBrowser window is closed 
+        exit - event fired when the InAppBrowser window is closed
 
-- __callback:__ the function that is called when the event is fired. 
+- __callback:__ the function that is called when the event is fired.
 The function is passed an `InAppBrowserEvent` object.
 
 Supported Platforms
@@ -132,12 +132,12 @@ removeEventListener
 - __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
 - __eventname:__ the event to stop listening for (`String`)
 
-        loadstart - event fired when the InAppBrowser starts to load a URL 
+        loadstart - event fired when the InAppBrowser starts to load a URL
         loadstop - event fired when the InAppBrowser finished loading a URL
         loaderror - event fired when the InAppBrowser encounters an error loading a URL
-        exit - event fired when the InAppBrowser window is closed 
+        exit - event fired when the InAppBrowser window is closed
 
-- __callback:__ the function that was to be called when the event is fired. 
+- __callback:__ the function that was to be called when the event is fired.
 The function is passed an `InAppBrowserEvent` object.
 
 Supported Platforms
@@ -169,10 +169,10 @@ Full Example
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
+
         // Global InAppBrowser reference
         var iabRef = null;
-        
+
         function iabLoadStart(event) {
             alert(event.type + ' - ' + event.url);
         }
@@ -180,11 +180,11 @@ Full Example
         function iabLoadStop(event) {
             alert(event.type + ' - ' + event.url);
         }
-   
+
         function iabLoadError(event) {
             alert(event.type + ' - ' + event.message);
         }
-   
+
         function iabClose(event) {
              alert(event.type);
              iabRef.removeEventListener('loadstart', iabLoadStart);
@@ -310,10 +310,10 @@ Full Example
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
+
         // Global InAppBrowser reference
         var iabRef = null;
-        
+
         // Inject our custom JavaScript into the InAppBrowser window
         //
         function replaceHeaderImage() {
@@ -387,10 +387,10 @@ Full Example
         // Wait for Cordova to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
+
         // Global InAppBrowser reference
         var iabRef = null;
-        
+
         // Inject our custom CSS into the InAppBrowser window
         //
         function changeBackgroundColor() {
@@ -428,5 +428,7 @@ The object that is passed to the callback function from an addEventListener call
 Properties
 ----------
 
-- __type:__ the eventname (`String`) - one of loadstart, loadstop, or exit
+- __type:__ the eventname (`String`) - one of loadstart, loadstop, loaderror or exit
 - __url:__ the URL that was loaded (`String`)
+- __code:__ the error code (`Number`) - only in the case of loaderror
+- __message:__ the error message (`String`) - only in the case of loaderror
