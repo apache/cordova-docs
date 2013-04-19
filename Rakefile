@@ -36,23 +36,23 @@ task :version, :nextVersion do |t, args|
     nextVersion = args[:nextVersion].strip
     prevVersion = File.read('VERSION').sub(/rc\d+$/, '').strip # remove release candidate
     
-    # update edge documentation to reference next version
-    _nextVersion = nextVersion.sub(/rc\d+$/, '') # cordova file references do not include the RC
-    unless prevVersion == _nextVersion
-        files = Dir.glob(File.join('docs', 'en', 'edge', '**', '*'))
-        
-        files.sort.each do |file|
-          next if File.directory?(file) or file !~ /md|html/
-          content = File.read(file)
-          content.gsub!(prevVersion, _nextVersion)
-          File.open(file, 'w') { |f| f.write(content) }
-        end
-    end
-    
     # generate a release
     edge_dir = File.join('docs', 'en', 'edge')
     release_dir = File.join('docs', 'en', nextVersion)
     FileUtils.cp_r(edge_dir, release_dir)
+    
+    # update version number in new release directory
+    _nextVersion = nextVersion.sub(/rc\d+$/, '') # cordova file references do not include the RC
+    unless prevVersion == _nextVersion
+        files = Dir.glob(File.join('docs', 'en', nextVersion, '**', '*'))
+        
+        files.sort.each do |file|
+          next if File.directory?(file) or file !~ /md|html/
+          content = File.read(file)
+          content.gsub!('x.x.x', _nextVersion)
+          File.open(file, 'w') { |f| f.write(content) }
+        end
+    end
     
     # update VERSION file
     File.open('VERSION', 'w') do |f|

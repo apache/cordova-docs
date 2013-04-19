@@ -296,7 +296,7 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 4. **Copy** the **MainViewController.m** file from the **new** project into your 1.4.0 based project folder on disk, **replacing** the old file (**backup** your files first from step 2 above).
 5. **Add** the **MainViewController.m** file into your Xcode project
 6. **Integrate** any project specific code that you have in your **backed-up MainViewController.m** into the new file
-7. Updating the phonegap-X.X.X.js file is optional, nothing has changed in the JavaScript between 1.4.0 and 1.4.1
+7. Updating the phonegap-1.4.0.js file is optional, nothing has changed in the JavaScript between 1.4.0 and 1.4.1
 
 ## Upgrading Cordova 1.3.0 projects to 1.4.0 ##
 

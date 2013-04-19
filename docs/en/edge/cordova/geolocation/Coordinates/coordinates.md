@@ -81,7 +81,7 @@ Full Example
     <html>
       <head>
         <title>Geolocation Position Example</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-2.6.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Set an event to wait for Cordova to load

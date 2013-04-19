@@ -49,7 +49,7 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Download Cordova
 
-Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/cordova/.  Click on the Download icon and select cordova-X.Y.Z-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example 2.6.0.  The download includes the code for all of the Apache Cordova supported platforms.   
+Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/cordova/.  Click on the Download icon and select cordova-X.Y.Z-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example x.x.x.  The download includes the code for all of the Apache Cordova supported platforms.   
 ### Extract Cordova
 
 To access the code it will need to be extracted from the archive (.zip) file.
@@ -257,7 +257,7 @@ Determine where on your system you will locate the Xcode project files for your 
   Another common method of initializing a page is to add an event listener for the deviceReady event within the handler for the body onload event as shown in the code snippet below:
 
       <head>
-        <script type="text/javascript" src="cordova-2.6.0.js"></script>
+        <script type="text/javascript" src="cordova-x.x.x.js"></script>
         <script>
 	      function onLoad() {
 	    document.addEventListener(
