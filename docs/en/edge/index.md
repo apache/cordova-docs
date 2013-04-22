@@ -96,6 +96,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Create, build, deploy, and debug from the command-line.</span>
         </li>
         <li>
+            <h2>Privacy Guide</h2>
+            <span>Learn about important mobile privacy issues.</span>
+        </li>
+        <li>
             <h2>Upgrading Guides</h2>
             <span>Upgrade an application to the latest Cordova release.</span>
         </li>
