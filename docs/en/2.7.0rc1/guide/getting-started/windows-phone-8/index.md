@@ -57,12 +57,12 @@ Note: Running the SDK in Virtual Machine might present some challenges. You can 
 
 - Download and install [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone-8\
-- copy the file CordovaWP8AppFull-2.7.0.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
+- copy the file CordovaWP8_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
 
 
 2.1. Building the template
 -----------------------------
-Note: this step may not be required.  If the lib\windows-phone directory already contains a file CordovaStarter-2.7.0.zip then you may skip this step.
+Note: this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP8_x_x_x.zip then you may skip this step.
 
 In order to simplify the development process, Cordova comes with a Visual Studio template that allows creating a Cordova application rapidly. This template can be modified if needed and the below steps indicate how to proceed if you want to modify and re-generate the template.
 
@@ -75,23 +75,20 @@ In order to simplify the development process, Cordova comes with a Visual Studio
 - Press 'Finish'
 
 
-2.2 About the different templates
+2.2 About the template
 --------------------
-Apache Cordova for Windows Phone 8 supports 2 different types of templates.  
+Apache Cordova for Windows Phone 8 has moved to only supporting the standalone template.
 
-The 'Full' template includes a pre-built dll containing all the framework code for Apache Cordova.  This template will create a project that is easy to update, as you can simply replace the JavaScript and .dll in your project and rebuild when a new version comes out. The downside of this approach is that because the dll contains ALL of the Cordova API, it requires all available permissions even if the APIs are not called.  When you submit an app to the App store, Microsoft will run a static analyzer against your application, and detect that you require all available permissions, and place a disclaimer on you app that is presented to the user when they choose to install your app.  Users may be discouraged if they see a required permission that does not make sense ( ie, why does this drawing program need access to my media library and contacts ).
-
-The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  This project is easier to fine-tune to use just the features you need, thereby working around the permissions issues of the 'Full' template, however this type of project will be more difficult to update, as you will need to update individual files within your project and manage any dependancies yourself.  In order to exclude an API you are not using, you can simply right-click-select the Command class file in Visual Studio and choose 'do not include in project'.
+The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  This project is easier to fine-tune to use just the features you need, thereby working around the permissions issues of using the dll.  In order to exclude an API (Plugin) you are not using, you can simply right-click-select the Command class file in Visual Studio and choose 'do not include in project'.
 
 
 3. Setup New Project
 --------------------
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
-- Select **CordovaWP8AppFull** or **CordovaWP8AppStandalone**. ( the version number will be displayed in the template description )
+- Select **CordovaWP8**. ( the version number will be displayed in the template description )
 - Give your project a name, and select OK.
 
-![](img/guide/getting-started/windows-phone-8/FullTemplate.PNG)
 ![](img/guide/getting-started/windows-phone-8/StandAloneTemplate.PNG)
 
  
