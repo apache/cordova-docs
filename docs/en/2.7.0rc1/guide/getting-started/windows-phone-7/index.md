@@ -32,7 +32,7 @@ Video Tutorials:
 1. Requirements
 ---------------
 
-- Windows 7 or Windows Vista with SP2
+- Windows 7, Windows 8 or Windows Vista with SP2
 
 Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista
 
@@ -46,7 +46,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 
 - Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone\
-- copy the file CordovaStarter-2.7.0.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
+- copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates
 ( if the template file does not exist, you will need to build it. See 2.1 below )
 if you have just installed VisualStudio, you should launch it once to create this folder
 if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder. 
@@ -54,7 +54,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 
 2.1. Building the template
 -----------------------------
-( note, this step may not be required.  If the lib\windows-phone directory already contains a file CordovaStarter-2.7.0.zip then you may skip this step )
+( note, this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP7_x_x_x.zip then you may skip this step )
 - Open the file lib\windows-phone\templates\standalone\CordovaSolution.sln in Visual Studio Express for Windows Phone
 - From the file menu, select 'Export Template...' 
 - Choose template type 'Project template'
