@@ -35,21 +35,54 @@ Cordova projects.
 * [BlackBerry](#Command-Line%20Usage_blackberry)
 * [Windows Phone 8](#Command-Line%20Usage_wp8)
 
-## Windows Phone 8
+## Windows Phone
 
-The Windows Phone 8 command line tools support creating new projects.
+The Windows Phone command line tools support creating, building and
+running new projects.
 
 ### Create a project
 
 Run the `create` command with the following parameters:
 
-* Path to your new Cordova WP8 project
+* Path to your new Cordova Windows Phone project
 * Package Name, following reverse-domain style convention ( this becomes the default Namespace )
 * Project name
 
 <!-- -->
 
-    $ ./path/to/cordova-wp8/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+    $ C:\path\to\cordova-wp8\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+
+### Building your project (cleans then builds)
+
+* Debug
+
+<!-- -->
+
+    $ C:\path\to\my_new_cordova_project\cordova\build --debug
+
+* Release
+
+<!-- -->
+
+    $ C:\path\to\my_new_cordova_project\cordova\build --release
+
+### Running your application
+
+Run the 'run' command with the following *optional* parameters
+
+* Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+* Build specification. This includes `--debug`, `--release`, or `--nobuild`.
+
+<!-- -->
+
+    $ C:\path\to\my_new_cordova_project\cordova\run [Target] [Build]
+
+By default the `run` command will look for a connected device, if no device is found it will look for any started emulators. If you have multiple emulators, you can specify a target ID.
+
+### Cleaning
+
+    $ C:\path\to\my_new_cordova_project\cordova\clean
+
 
 ## iOS
 
@@ -103,52 +136,66 @@ Run the `create` command with the following parameters:
 
     $ /path/to/cordova-android/bin/create /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
-or, on **Windows**
+or, on *Windows*
 
-    $ /path/to/cordova-android/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+    $ C:\path\to\cordova-android\bin\create.bat C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
-### Build a project
+### Building your project (cleans then builds)
 
-    $ /path/to/my_new_cordova_project/cordova/build
+* **Debug**
 
-or, on **Windows**
+<!-- -->
 
-    $ /path/to/my_new_cordova_project/cordova/build.bat
+    $ /path/to/my_new_cordova_project/cordova/build --debug
 
-### Run app on emulator/device
+   or, on *Windows*
 
-    $ /path/to/my_new_cordova_project/cordova/run
+    $ C:\path\to\my_new_cordova_project\cordova\build.bat --debug
 
-or, on **Windows**
+* **Release**
 
-    $ /path/to/my_new_cordova_project/cordova/run.bat
+<!-- -->
+
+    $ /path/to/my_new_cordova_project/cordova/build --release
+
+   or, on *Windows*
+
+    $ C:\path\to\my_new_cordova_project\cordova\build.bat --release
+
+
+### Running your application
+
+Run the 'run' command with the following *optional* parameters
+
+* Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+* Build specification. This includes `--debug`, `--release`, or `--nobuild`.
+
+<!-- -->
+    $ /path/to/my_new_cordova_project/cordova/run [Target] [Build]
+
+   or, on *Windows*
+
+    $ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
+
 
 Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
-If you have multiple AVDs, it will prompt you to select an AVD.
+By default the `run` command will look for a connected device, if no device is found it will look for any started emulators. If you have multiple AVDs, you can specify a target ID.
 
 ### Logging
 
     $ /path/to/my_new_cordova_project/cordova/log
 
-or, on **Windows**
+or, on *Windows*
 
-    $ /path/to/my_new_cordova_project/cordova/log.bat
+    $ C:\path\to\my_new_cordova_project\cordova\log.bat
 
 ### Cleaning
 
     $ /path/to/my_new_cordova_project/cordova/clean
 
-or, on **Windows**
+or, on *Windows*
 
-    $ /path/to/my_new_cordova_project/cordova/clean.bat
-
-### Releasing
-
-    $ /path/to/my_new_cordova_project/cordova/release
-
-or, on **Windows**
-
-    $ /path/to/my_new_cordova_project/cordova/release.bat
+    $ C:\path\to\my_new_cordova_project\cordova\clean.bat
 
 
 ## BlackBerry
