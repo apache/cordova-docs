@@ -22,6 +22,27 @@ Upgrading Cordova Windows Phone
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
+## Upgrade to 2.2.0 from 2.1.0 ##
+
+### In Visual Studio's Solution Explorer window:
+1. Create a new Apache Cordova WP7 2.2.0 Project
+2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new cordova-2.2.0.js file.
+4. Copy and overwrite any splash screen, or icon images.
+5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+6. Build and test.
+
+## Upgrade to 2.1.0 from 2.0.0 ##
+
+### In Visual Studio's Solution Explorer window:
+1. Create a new Apache Cordova WP7 2.1.0 Project
+2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new cordova-2.1.0.js file.
+4. Copy and overwrite any splash screen, or icon images.
+5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+6. Build and test.
+
+
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
 There have been considerable changes to the WP7 project structure in Apache Cordova 2.0.0 which make this upgrade a little more involved that the others. Essentially this is not an upgrade but creation of a new project and copy over of existing source files.
