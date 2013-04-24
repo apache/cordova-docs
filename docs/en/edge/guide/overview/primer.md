@@ -17,6 +17,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Primer on Command-line Deployment
-=================================
+Command-line Deployment Primer
+==============================
 
