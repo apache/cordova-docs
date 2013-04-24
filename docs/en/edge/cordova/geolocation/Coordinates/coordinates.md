@@ -120,8 +120,8 @@ Full Example
         <div id="myDiv"></div>
       </body>
     </html>
-    
+
 Android Quirks
 -------------
 
-__altitudeAccuracy:__ This property is not support by Android devices, it will always return null.
+__altitudeAccuracy:__ Not supported by Android devices, returning `null`.

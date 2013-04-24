@@ -19,6 +19,6 @@
 #
 -->
 
-Project Settings for FirefoxOS 
+Project Settings for FirefoxOS
 ===================================
 

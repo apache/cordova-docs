@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,16 +20,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometer.getCurrentAcceleration
 ====================================
 
-Get the current acceleration along the x, y, and z axis.
+Get the current acceleration along the _x_, _y_, and _z_ axes.
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
 Description
 -----------
 
-The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation. The accelerometer can detect 3D movement along the x, y, and z axis.
+The accelerometer is a motion sensor that detects the change (_delta_)
+in movement relative to the current device orientation, in three
+dimensions along the _x_, _y_, and _z_ axis.
 
-The acceleration is returned using the `accelerometerSuccess` callback function.
+These acceleration values are returned to the `accelerometerSuccess`
+callback function.
 
 Supported Platforms
 -------------------
@@ -101,10 +104,10 @@ Full Example
         <p>getCurrentAcceleration</p>
       </body>
     </html>
-    
+
 iPhone Quirks
 -------------
 
-- iPhone doesn't have the concept of getting the current acceleration at any given point.
+- iPhone doesn't recognize the concept of getting the current acceleration at any given point.
 - You must watch the acceleration and capture the data at given time intervals.
-- Thus, the `getCurrentAcceleration` function will give you the last value reported from a Cordova `watchAccelerometer` call.
+- Thus, the `getCurrentAcceleration` function yields the last value reported from a Cordova `watchAccelerometer` call.

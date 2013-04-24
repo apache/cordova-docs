@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,26 +20,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 camera.cleanup
 =================
 
-Cleans up the image files that were taken by the camera, that were stored in a temporary storage location.
+Cleans up the photos taken by the camera and made available in a
+temporary storage location.
 
     navigator.camera.cleanup( cameraSuccess, cameraError );
 
 Description
 -----------
 
-Cleans up the image files stored in the temporary storage location, when the function `camera.getPicture` is used with  `Camera.sourceType = Camera.PictureSourceType.CAMERA` and `Camera.destinationType = Camera.DestinationType.FILE_URI`
-
+Cleans up the image files stored in the temporary storage location
+after calling `camera.getPicture`. Applies only when the value of
+`Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
+`Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.
 
 Supported Platforms
 -------------------
 
 - iOS
 
-
 Example
 -------------
 
-    navigator.camera.cleanup(onSuccess, onFail); 
+    navigator.camera.cleanup(onSuccess, onFail);
 
     function onSuccess() {
         console.log("Camera cleanup success.")

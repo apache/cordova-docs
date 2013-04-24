@@ -43,7 +43,6 @@ If there is an error obtaining the pattern, then the errorCB callback is invoked
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.
 
-
 Supported Platforms
 -------------------
 
@@ -61,7 +60,7 @@ In the case when the browser is set to the en\_US locale, this should display a 
     symbol: .
     fraction: 0
     rounding: 0
-    positive: 
+    positive:
     negative: -
     decimal: .
     grouping: ,

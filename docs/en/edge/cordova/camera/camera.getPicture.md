@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,31 +20,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 camera.getPicture
 =================
 
-Takes a photo using the camera or retrieves a photo from the device's album.
-The image is passed to the success callback as a base64 encoded `String` or as the URI of an image file.
-The method itself returns a CameraPopoverHandle object, which can be used to reposition the file selection popover.
+Takes a photo using the camera, or retrieves a photo from the device's
+image gallery.  The image is passed to the success callback as a
+base64-encoded `String`, or as the URI for the image file.  The method
+itself returns a `CameraPopoverHandle` object that can be used to
+reposition the file selection popover.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
 Description
 -----------
 
-Function `camera.getPicture` opens the device's default camera application so that the user can take a picture (if `Camera.sourceType = Camera.PictureSourceType.CAMERA`, which is the default). Once the photo is taken, the camera application closes and your application is restored.
+The `camera.getPicture` function opens the device's default camera
+application that allows the user to take a picture. This behavior
+occurs by default, when `Camera.sourceType` equals
+`Camera.PictureSourceType.CAMERA`.  Once the photo is taken, the
+camera application closes and the application is restored.
 
-If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a photo chooser dialog is shown, from which a photo from the album can be selected.  A `CameraPopoverHandle` object, which can be used to reposition the photo chooser dialog (eg. when the device orientation changes) is returned by `camera.getPicture`.
+If `Camera.sourceType` is `Camera.PictureSourceType.PHOTOLIBRARY` or
+`Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
+that allows users to select an existing image.  The
+`camera.getPicture` function returns a `CameraPopoverHandle` object,
+which can be used to reposition the image selection dialog, for
+example, when the device orientation changes.
 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+The return value is sent to the `cameraSuccess` callback function, in
+one of the following formats, depending on the specified
+`cameraOptions`:
 
-- A `String` containing the Base64 encoded photo image.
+- A `String` containing the base64-encoded photo image.
 - A `String` representing the image file location on local storage (default).
 
-You can do whatever you want with the encoded image or URI, for example:
+You can do whatever you want with the encoded image or URI, for
+example:
 
-- Render the image in an `<img>` tag _(see example below)_
+- Render the image in an `<img>` tag, as in the example below
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-__Note:__ The image quality of pictures taken using the camera on newer devices is quite good, and images from the Photo Album will not be downscaled to a lower quality, even if a quality parameter is specified.  ___Encoding such images using Base64 has caused memory issues on many newer devices.  Therefore, using FILE\_URI as the 'Camera.destinationType' is highly recommended.___
+**NOTE:** Photo resolution on newer devices is quite good. Photos
+selected from the device's gallery are not downscaled to a lower
+quality, even if a `quality` parameter is specified.  To avoid common
+memory problems, set `Camera.destinationType` to `FILE_URI` rather
+than `DATA_URL`.
 
 Supported Platforms
 -------------------
@@ -61,9 +79,12 @@ Supported Platforms
 iOS Quirks
 ----------
 
-Including a JavaScript alert() in either of the callback functions can cause problems.  Wrap the alert in a setTimeout() to allow the iOS image picker or popover to fully close before the alert is displayed: 
+Including a JavaScript `alert()` in either of the callback functions
+can cause problems.  Wrap the alert within a `setTimeout()` to allow
+the iOS image picker or popover to fully close before the alert
+displays:
 
-    setTimeout(function() { 
+    setTimeout(function() {
         // do your thing here!
     }, 0);
 
@@ -71,21 +92,23 @@ Windows Phone 7 Quirks
 ----------------------
 
 Invoking the native camera application while your device is connected
-via Zune will not work, and the error callback will be triggered.
+via Zune does not work, and triggers an error callback.
 
 Tizen Quirks
 ----------------------
 
-Only 'destinationType: Camera.DestinationType.FILE_URI' and 'sourceType: Camera.PictureSourceType.PHOTOLIBRARY' are supported.
+Tizen only supports a `destinationType` of
+`Camera.DestinationType.FILE_URI` and a `sourceType` of
+`Camera.PictureSourceType.PHOTOLIBRARY`.
 
 Quick Example
 -------------
 
-Take photo and retrieve Base64-encoded image:
+Take a photo and retrieve it as a base64-encoded image:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
-     }); 
+    });
 
     function onSuccess(imageData) {
         var image = document.getElementById('myImage');
@@ -96,10 +119,10 @@ Take photo and retrieve Base64-encoded image:
         alert('Failed because: ' + message);
     }
 
-Take photo and retrieve image file location: 
+Take a photo and retrieve the image's file location:
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-        destinationType: Camera.DestinationType.FILE_URI }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI });
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -109,7 +132,6 @@ Take photo and retrieve image file location:
     function onFail(message) {
         alert('Failed because: ' + message);
     }
-
 
 Full Example
 ------------
@@ -123,7 +145,7 @@ Full Example
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
-        var destinationType; // sets the format of returned value 
+        var destinationType; // sets the format of returned value
         
         // Wait for Cordova to connect with the device
         //
@@ -139,7 +161,7 @@ Full Example
         // Called when a photo is successfully retrieved
         //
         function onPhotoDataSuccess(imageData) {
-          // Uncomment to view the base64 encoded image data
+          // Uncomment to view the base64-encoded image data
           // console.log(imageData);
       
           // Get image handle
@@ -159,7 +181,7 @@ Full Example
         // Called when a photo is successfully retrieved
         //
         function onPhotoURISuccess(imageURI) {
-          // Uncomment to view the image file URI 
+          // Uncomment to view the image file URI
           // console.log(imageURI);
       
           // Get image handle
@@ -187,7 +209,7 @@ Full Example
         // A button will call this function
         //
         function capturePhotoEdit() {
-          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
             destinationType: destinationType.DATA_URL });
         }
@@ -196,13 +218,13 @@ Full Example
         //
         function getPhoto(source) {
           // Retrieve image file location from specified source
-          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
             destinationType: destinationType.FILE_URI,
             sourceType: source });
         }
 
         // Called if something bad happens.
-        // 
+        //
         function onFail(message) {
           alert('Failed because: ' + message);
         }

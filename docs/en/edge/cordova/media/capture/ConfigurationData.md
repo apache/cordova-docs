@@ -25,7 +25,7 @@ ConfigurationData
 Description
 -----------
 
-This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).  
+This object is used to describe media capture modes supported by the device.  The configuration data includes the MIME type, and capture dimensions (for video or image capture).
 
 The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  Examples:
 
@@ -33,7 +33,7 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 - video/quicktime
 - image/jpeg
 - audio/amr
-- audio/wav 
+- audio/wav
 
 Properties
 ----------
@@ -57,6 +57,5 @@ Quick Example
             selectedmode = mode;
         }
     }
-
 
 Not supported by any platform.  All configuration data arrays are empty.

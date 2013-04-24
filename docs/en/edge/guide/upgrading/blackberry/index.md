@@ -182,7 +182,7 @@ Updating the sample folder (ie, updating using the ant tools):
 
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
@@ -201,7 +201,6 @@ Updating just the www folder:
 
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -224,14 +223,11 @@ Updating the sample folder (ie, updating using the ant tools):
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
          <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
-
-
-
 - To upgrade to 1.8.0, please go from 1.7.0
 
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
@@ -250,7 +246,6 @@ Updating just the www folder:
 
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
 
 Updating the sample folder (ie, updating using the ant tools):
 

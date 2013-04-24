@@ -24,7 +24,6 @@ Starts or resumes playing an audio file.
 
     media.play();
 
-
 Description
 -----------
 
@@ -60,7 +59,6 @@ Quick Example
         // Play audio
         my_media.play();
     }
-
 
 Full Example
 ------------
@@ -121,7 +119,7 @@ Full Example
             }
         
             // Pause audio
-            // 
+            //
             function pauseAudio() {
                 if (my_media) {
                     my_media.pause();
@@ -129,7 +127,7 @@ Full Example
             }
         
             // Stop audio
-            // 
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -144,15 +142,15 @@ Full Example
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError Callback
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
+                alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
         
             // Set audio position
-            // 
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
@@ -188,7 +186,6 @@ iOS Quirk
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
-
 
 - __order of file search__
 

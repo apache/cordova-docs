@@ -22,7 +22,6 @@ Splashscreen
 
 > Enables developers to show/hide the application's splash screen.
 
-
 Methods
 -------
 
@@ -79,7 +78,6 @@ Setup
    - Default~iphone.png (320x480 pixels)
         
         
-
 
    
 

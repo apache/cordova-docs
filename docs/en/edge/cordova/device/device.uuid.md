@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -23,11 +23,11 @@ device.uuid
 Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
     var string = device.uuid;
-    
+
 Description
 -----------
 
-The details of how a UUID is generated are determined by the device manufacturer and specific to the device's platform or model.
+The details of how a UUID is generated are determined by the device manufacturer and are specific to the device's platform or model.
 
 Supported Platforms
 -------------------
@@ -54,9 +54,9 @@ Quick Example
     //         Returns a string of hash values created from multiple hardware identifies.
     //         It is guaranteed to be unique for every device and cannot be tied
     //         to the user account.
-    // Windows Phone 7 : Returns a hash of device+current user, 
+    // Windows Phone 7 : Returns a hash of device+current user,
     // if the user is not defined, a guid is generated and will persist until the app is uninstalled
-    // 
+    //
     // webOS: returns the device NDUID
     //
     // Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
@@ -83,10 +83,10 @@ Full Example
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
                                 'Device Version: '  + device.version  + '<br />';
         }
 
@@ -100,9 +100,17 @@ Full Example
 iOS Quirk
 -------------
 
-The uuid for iOS is not unique for a device, but is unique per application per install. This will change if you delete the app and re-install, and possibly also when you upgrade your iOS version, or even upgrade your app per version (as we've seen in iOS 5.1). Not a reliable value.
+The `uuid` on iOS is not unique to a device, but varies for each
+application, for each installation.  It changes if you delete and
+re-install the app, and possibly also when you upgrade iOS, or even
+upgrade your app per version (apparent in iOS 5.1). The `uuid` is not
+a reliable value.
 
 Windows Phone 7 and 8 Quirks
 -------------
 
-The uuid for Windows Phone 7 requires the permission ID_CAP_IDENTITY_DEVICE.  Microsoft will likely be deprecating this property in the near future.  If the capability is not available, the application generates a persistent guid, that will be maintained for the install-lifetime of the application on the device.
+The `uuid` for Windows Phone 7 requires the permission
+`ID_CAP_IDENTITY_DEVICE`.  Microsoft will likely deprecate this
+property soon.  If the capability is not available, the application
+generates a persistent guid that is maintained for the duration of the
+application's installation on the device.

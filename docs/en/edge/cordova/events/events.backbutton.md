@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,16 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 backbutton
 ===========
 
-This is an event that fires when the user presses the back button.
+The event fires when the user presses the back button.
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to override the default back button behaviour you can register an event listener for the 'backbutton' event.  It is no longer necessary to call any other method to over ride the back button behaviour.  Now, you only need to register an event listener for 'backbutton'.
-
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+To override the default back-button behavior, register an event
+listener for the `backbutton` event, typically by calling
+`document.addEventListener` once you receive the Cordova `deviceready`
+event.  It is no longer necessary to call any other method to override
+the back-button behaviour.
 
 Supported Platforms
 -------------------

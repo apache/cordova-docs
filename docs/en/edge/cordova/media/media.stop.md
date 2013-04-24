@@ -24,7 +24,6 @@ Stops playing an audio file.
 
     media.stop();
 
-
 Description
 -----------
 
@@ -63,7 +62,7 @@ Quick Example
         // Pause after 10 seconds
         setTimeout(function() {
             my_media.stop();
-        }, 10000);        
+        }, 10000);
     }
 
 Full Example
@@ -124,7 +123,7 @@ Full Example
             }
         
             // Pause audio
-            // 
+            //
             function pauseAudio() {
                 if (my_media) {
                     my_media.pause();
@@ -132,7 +131,7 @@ Full Example
             }
         
             // Stop audio
-            // 
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -147,15 +146,15 @@ Full Example
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError Callback
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
+                alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
         
             // Set audio position
-            // 
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }

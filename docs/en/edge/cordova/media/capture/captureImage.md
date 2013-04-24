@@ -22,7 +22,7 @@ capture.captureImage
 
 > Start the camera application and return information about captured image file(s).
 
-    navigator.device.capture.captureImage( 
+    navigator.device.capture.captureImage(
 	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
 	);
 
@@ -89,11 +89,11 @@ Full Example
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	    
+            }	
         }
 
         // Called if something bad happens.
-        // 
+        //
         function captureError(error) {
 	        var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
@@ -102,7 +102,7 @@ Full Example
         // A button will call this function
         //
         function captureImage() {
-            // Launch device camera application, 
+            // Launch device camera application,
             // allowing user to capture up to 2 images
             navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
         }
@@ -122,7 +122,7 @@ Full Example
                 function(error) {
                     console.log('Error uploading file ' + path + ': ' + error.code);
                 },
-                { fileName: name });   
+                { fileName: name });
         }
 
         </script>
@@ -132,13 +132,12 @@ Full Example
         </body>
     </html>
 
-
 Bada Quirks
 -----------
 
 Bada supports _captureImage_ just like the other platforms. However there is _another_ mode where you can capture a video or an image straight in the webview without launching any camera app. In order to do that you need to:
 
-1. create a _&#60;div&#62;_ element somewhere in your document and give it an id (such as "preview"). 
+1. create a _&#60;div&#62;_ element somewhere in your document and give it an id (such as "preview").
 
         <div id="preview"></div>
 

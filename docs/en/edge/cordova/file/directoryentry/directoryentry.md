@@ -51,7 +51,6 @@ The following methods can be invoked on a DirectoryEntry object:
 - __getFile__: Create or look up a file.
 - __removeRecursively__: Delete a directory and all of its contents.
 
-
 Supported Platforms
 -------------------
 
@@ -70,7 +69,6 @@ __Parameters:__
 
 - __successCallback__ - A callback that is called with a Metadata object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
-
 
 __Quick Example__
 
@@ -97,7 +95,6 @@ __Parameters:__
 - __errorCallback__ - A callback that is called when the metadata was not successfully set. _(Function)_
 - __metadataObject__ - An object that contains the metadata keys and values. _(Object)_
 
-
 __Quick Example__
 
     function success() {
@@ -116,7 +113,7 @@ __iOS Quirk__
 
 __Quick Example__
 
-    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue) 
+    function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
     {
 	    var onSetMetadataWin = function() {
 	      console.log("success setting metadata")
@@ -166,7 +163,6 @@ __Parameters:__
 - __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs when attempting to move the directory.  Invoked with a FileError object. _(Function)_
 
-
 __Quick Example__
 
     function success(entry) {
@@ -204,7 +200,6 @@ __Parameters:__
 - __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs when attempting to copy the underlying directory.  Invoked with a FileError object. _(Function)_
 
-
 __Quick Example__
 
 	function win(entry) {
@@ -225,7 +220,6 @@ __Quick Example__
         entry.copyTo(parentEntry, newName, success, fail);
     }
 
-
 toURL
 -----
 
@@ -236,7 +230,6 @@ __Quick Example__
     // Get the URL for this directory
     var dirURL = entry.toURL();
     console.log(dirURL);
-
 
 remove
 ------
@@ -264,7 +257,6 @@ __Quick Example__
     // remove this directory
     entry.remove(success, fail);
 
-
 getParent
 ---------
 
@@ -288,7 +280,6 @@ __Quick Example__
 	// Get the parent DirectoryEntry
 	entry.getParent(success, fail);
 
-
 createReader
 ------------
 
@@ -298,7 +289,6 @@ __Quick Example__
 
     // create a directory reader
     var directoryReader = entry.createReader();
-
 
 getDirectory
 ------------
@@ -327,7 +317,6 @@ __Quick Example__
     // Retrieve an existing directory, or create it if it does not already exist
     entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 
-
 getFile
 -------
 
@@ -354,7 +343,6 @@ __Quick Example__
 
     // Retrieve an existing file, or create it if it does not exist
     entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
-
 
 removeRecursively
 -----------------
@@ -394,4 +382,4 @@ May fail with a ControlledAccessException in the following cases:
 
 - if device is connected by usb
 
-> solution: disconnect usb cable from device and run again 
+> solution: disconnect usb cable from device and run again

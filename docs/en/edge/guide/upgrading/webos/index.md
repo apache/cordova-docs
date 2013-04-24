@@ -29,10 +29,10 @@ This document is for people who need to upgrade their Cordova versions from an o
 2. update the following line in your index.html:
 
     change this:
-    <script type="text/javascript" src="cordova-2.4.0.js"></script> 
-    
+    <script type="text/javascript" src="cordova-2.4.0.js"></script>
+
     to:
-    <script type="text/javascript" src="cordova-2.5.0.js"></script> 
+    <script type="text/javascript" src="cordova-2.5.0.js"></script>
 
 3. run the makefile to generate the newest version of the cordova-2.5.0.js file
 

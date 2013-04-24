@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -45,7 +45,7 @@ Quick Example
     // ... later on ...
     
     navigator.compass.clearWatch(watchID);
-    
+
 Full Example
 ------------
 
@@ -101,7 +101,6 @@ Full Example
         function onError(compassError) {
             alert('Compass error: ' + compassError.code);
         }
-
 
         </script>
       </head>

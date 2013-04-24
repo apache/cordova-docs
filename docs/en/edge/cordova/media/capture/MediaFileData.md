@@ -47,8 +47,8 @@ Support for the MediaFileData properties is as follows:
 
 - __codecs:__ Not supported.  The attribute will always be null.
 - __bitrate:__ Not supported.  The attribute will always be 0.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
+- __height:__ Supported.  (Image and video files only).
+- __width:__ Supported.  (Image and video files only).
 - __duration:__ Supported.  (Audio and video files only).
 
 iOS Quirks
@@ -57,6 +57,6 @@ Support for the MediaFileData properties is as follows:
 
 - __codecs:__ Not supported.  The attribute will always be null.
 - __bitrate:__ Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
+- __height:__ Supported.  (Image and video files only).
+- __width:__ Supported.  (Image and video files only).
 - __duration:__ Supported.  (Audio and video files only).

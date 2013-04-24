@@ -32,7 +32,6 @@ Properties
 - __chunkedMode:__ Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)
 - __headers:__ A map of header name => header value. To specify multiple values for a header, use an array of values. (Object)
 
-
 Description
 -----------
 
@@ -42,4 +41,4 @@ WP7 Quirk
 ---------
 
 - __chunkedMode:__
-    This parameter is ignored on WP7.    
+    This parameter is ignored on WP7.

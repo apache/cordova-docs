@@ -27,7 +27,7 @@ Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#
 Methods
 -------
 
-- __key__: Returns the name of the key at the position specified. 
+- __key__: Returns the name of the key at the position specified.
 - __getItem__: Returns the item identified by it's key.
 - __setItem__: Saves and item at the key provided.
 - __removeItem__: Removes the item identified by it's key.
@@ -113,7 +113,6 @@ Full Example
         <p>localStorage</p>
       </body>
     </html>
-
 
 Windows Phone 7 Quirks
 -------------

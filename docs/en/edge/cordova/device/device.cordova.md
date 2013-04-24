@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -23,7 +23,7 @@ device.cordova
 Get the version of Cordova running on the device.
 
     var string = device.cordova;
-    
+
 Description
 -----------
 
@@ -65,10 +65,10 @@ Full Example
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova  + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
                                 'Device Version: '  + device.version  + '<br />';
         }
 

@@ -58,7 +58,6 @@ Quick Example
 
     navigator.geolocation.clearWatch(watchID);
 
-
 Full Example
 ------------
 
@@ -95,7 +94,7 @@ Full Example
         }
 
         // clear the watch that was started earlier
-        // 
+        //
         function clearWatch() {
             if (watchID != null) {
                 navigator.geolocation.clearWatch(watchID);
@@ -114,6 +113,6 @@ Full Example
       </head>
       <body>
         <p id="geolocation">Watching geolocation...</p>
-    	<button onclick="clearWatch();">Clear Watch</button>     
+    	<button onclick="clearWatch();">Clear Watch</button>
       </body>
     </html>

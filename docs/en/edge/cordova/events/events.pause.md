@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 pause
 ===========
 
-This is an event that fires when a Cordova application is put into the background.
+This event fires when a Cordova application is put into the background.
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.  
+Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -91,8 +92,8 @@ iOS Quirks
 --------------------------
 In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the Cordova API. These will only be processed when the app resumes (processed on the next run-loop).
 
-- __resign__ event 
+- __resign__ event
 
-    This iOS specific event is available as a variant of the **pause** event, and is often used to detect when the "Lock" button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **pause** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background). 
-    
+    This iOS specific event is available as a variant of the **pause** event, and is often used to detect when the "Lock" button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **pause** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background).
+
     Under iOS 5, if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.

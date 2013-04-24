@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -30,16 +30,16 @@ Options
 
 Android Quirks
 ______________
-- filter is not supported.
+- `filter` is not supported.
 
 Windows Phone 7 and 8 Quirks
 --------------
-- filter is not supported.
+- `filter` is not supported.
 
 Bada Quirks
 -----------
-- filter is not supported.
+- `filter` is not supported.
 
 Tizen Quirks
 -----------
-- filter is not supported.
+- `filter` is not supported.

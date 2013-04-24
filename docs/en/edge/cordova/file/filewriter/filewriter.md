@@ -40,7 +40,7 @@ Properties
 Methods
 -------
 
-- __abort__: Aborts writing file. 
+- __abort__: Aborts writing file.
 - __seek__: Moves the file pointer to the byte specified.
 - __truncate__: Shortens the file to the length specified.
 - __write__: Writes data to the file with a UTF-8 encoding.
@@ -169,7 +169,7 @@ Full Example
         function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
-                writer.truncate(11);  
+                writer.truncate(11);
                 writer.onwriteend = function(evt) {
                     console.log("contents of file now 'some sample'");
                     writer.seek(4);

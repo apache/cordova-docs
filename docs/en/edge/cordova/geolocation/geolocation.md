@@ -35,7 +35,6 @@ Methods
 - geolocation.watchPosition
 - geolocation.clearWatch
 
-
 Arguments
 ---------
 

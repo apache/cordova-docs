@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -38,7 +38,7 @@ setPosition
 Set the position of the popover.
 
 __Parameters:__
-- cameraPopoverOptions - the CameraPopoverOptions specifying the new position
+- `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
 
 Quick Example
 -------------

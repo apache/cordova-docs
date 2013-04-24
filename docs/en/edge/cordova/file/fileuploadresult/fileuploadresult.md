@@ -36,5 +36,5 @@ The `FileUploadResult` object is returned via the success callback of the FileTr
 
 iOS Quirks
 ----------
-- iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object. 
+- iOS does not include values for responseCode nor bytesSent in the success callback FileUploadResult object.
 

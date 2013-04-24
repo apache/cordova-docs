@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 online
 ===========
 
-This is an event that fires when a Cordova application is online (connected to the Internet).
+This event fires when a Cordova application is online (connected to the Internet).
 
     document.addEventListener("online", yourCallbackFunction, false);
 
 Details
 -------
 
-When the application's network connection changes to being online, the online event is fired.  
+When the application's network connection changes to being online, the online event is fired.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------

@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -25,7 +25,7 @@ Contains address properties for a `Contact` object.
 Properties
 ----------
 - __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
+- __type:__ A string indicating what type of field this is, _home_ for example. _(DOMString)_
 - __formatted:__ The full address formatted for display. _(DOMString)_
 - __streetAddress:__ The full street address. _(DOMString)_
 - __locality:__ The city or locality. _(DOMString)_
@@ -36,7 +36,9 @@ Properties
 Details
 -------
 
-The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
+The `ContactAddress` object stores the properties of a single address
+of a contact.  A `Contact` object may include more than one address in
+a `ContactAddress[]` array.
 
 Supported Platforms
 -------------------
@@ -57,11 +59,11 @@ Quick Example
 			for (var j=0; j<contacts[i].addresses.length; j++) {
 				alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
 						"Type: " + contacts[i].addresses[j].type + "\n" +
-						"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
-						"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
-						"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
-						"Region: "  + contacts[i].addresses[j].region + "\n" + 
-						"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" + 
+						"Formatted: " + contacts[i].addresses[j].formatted + "\n" +
+						"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
+						"Locality: "  + contacts[i].addresses[j].locality + "\n" +
+						"Region: "  + contacts[i].addresses[j].region + "\n" +
+						"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
 						"Country: "  + contacts[i].addresses[j].country);
 			}
 		}
@@ -73,7 +75,7 @@ Quick Example
 
     // find all contacts
     var options = new ContactFindOptions();
-	options.filter=""; 
+	options.filter="";
 	var filter = ["displayName","addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
@@ -97,7 +99,7 @@ Full Example
         function onDeviceReady() {
 		    // find all contacts
 		    var options = new ContactFindOptions();
-			options.filter=""; 
+			options.filter="";
 			var filter = ["displayName","addresses"];
 		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
@@ -110,11 +112,11 @@ Full Example
 				for (var j=0; j<contacts[i].addresses.length; j++) {
 					alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
 							"Type: " + contacts[i].addresses[j].type + "\n" +
-							"Formatted: " + contacts[i].addresses[j].formatted + "\n" + 
-							"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" + 
-							"Locality: "  + contacts[i].addresses[j].locality + "\n" + 
-							"Region: "  + contacts[i].addresses[j].region + "\n" + 
-							"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" + 
+							"Formatted: " + contacts[i].addresses[j].formatted + "\n" +
+							"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
+							"Locality: "  + contacts[i].addresses[j].locality + "\n" +
+							"Region: "  + contacts[i].addresses[j].region + "\n" +
+							"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
 							"Country: "  + contacts[i].addresses[j].country);
 				}
 			}
@@ -137,14 +139,14 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ Not supported, returning `false` on Android 2.X devices.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ This property is not supported on Blackberry devices and will always return `false`.
-- __type:__ Partially supported.  Only one each of "Work" and "Home" type addresses can be stored per contact. 
-- __formatted:__ Partially supported.  Will return concatenation of all BlackBerry address fields.
-- __streetAddress:__ Supported.  Will return concatenation of BlackBerry __address1__ and __address2__ address fields. 
+- __pref:__ Not supported on Blackberry devices, returning `false`.
+- __type:__ Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
+- __formatted:__ Partially supported.  Returns a concatenation of all BlackBerry address fields.
+- __streetAddress:__ Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
 - __locality:__ Supported.  Stored in BlackBerry __city__ address field.
 - __region:__ Supported.  Stored in BlackBerry __stateProvince__ address field.
 - __postalCode:__ Supported.  Stored in BlackBerry __zipPostal__ address field.
@@ -152,10 +154,10 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __formatted:__ Not currently supported.
+- __pref:__ Not supported on iOS devices, returning `false`.
+- __formatted:__ Currently not supported.
 
 Bada Quirks
 -----------
-- __formatted:__ This property is not supported
-- __type:__ Has to be one of the following: WORK, HOME
+- __formatted:__ Not supported.
+- __type:__ Has to be either `WORK` or `HOME`

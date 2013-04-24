@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,12 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 connection.type
 ===================
 
-Checks the active network connection that is being used.
+Checks the currently active network connection.
 
 Description
 -----------
 
-This property is a fast way to determine the device's network connection state, and type of connection.
+This property offers a fast way to determine the device's network
+connection state, and type of connection.
 
 Supported Platforms
 -------------------
@@ -72,7 +73,7 @@ Full Example
         <script type="text/javascript" charset="utf-8">
             
         // Wait for Cordova to load
-        // 
+        //
         document.addEventListener("deviceready", onDeviceReady, false);
         
         // Cordova is loaded and it is now safe to make calls Cordova methods
@@ -106,11 +107,12 @@ Full Example
 
 API Change
 ----------
-Before Cordova 2.3.0, the Connection object existed at: `navigator.network.connection`.
 
-To match the spec, this was changed to `navigator.connection` in 2.3.0.
-
-`navigator.network.connection` still exists, but is now deprecated and will be removed in a future release.
+Prior to Cordova 2.3.0, the `Connection` object was accessed via
+`navigator.network.connection`.  It was changed to
+`navigator.connection` in 2.3.0 to match the W3C specification. It's
+still available at its original location, but is deprecated and will
+eventually be removed.
 
 iOS Quirks
 ----------
@@ -121,7 +123,7 @@ iOS Quirks
 Bada Quirks
 -----------
 
-- Bada can only detect a WiFi or cellular connection.
+- Bada can only distinguish a WiFi and cellular connection.
     - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
 
 webOS Quirks

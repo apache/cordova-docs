@@ -23,18 +23,17 @@ A Cordova plugin bridges a bit of functionality between the WebView
 powering a Cordova application and the native platform the Cordova
 application is running on. Plugins are composed of a single JavaScript
 interface used across all platforms, and native implementations
-following platform-specific Plugin interfaces that the JavaScript will
-call into. It should be noted that all of the core Cordova APIs are
-implemented using this exact architecture.
+following platform-specific Plugin interfaces that the JavaScript
+calls into. All of the core Cordova APIs are implemented using this
+architecture.
 
-This guide will go through each step necessary to write a simple Echo
-Plugin. The Echo Plugin will pass a string from JavaScript and send it
-into the native environment for the supported platforms. The native code
-will then return the same string back into the callbacks inside the
-plugin's JavaScript.
+This guide steps the process of writing a simple Echo Plugin that
+passes a string from JavaScript and sends it into the native
+environment for the supported platforms. The native code then returns
+the same string back to the callbacks inside the plugin's JavaScript.
 
-This guide should give anyone the necessary overview and level of
-detail to write more complex plugins.
+This guide provides enough overview on which you can build to write
+more complex plugins.
 
 ## JavaScript
 
@@ -51,23 +50,22 @@ thing you _must_ use to communicate between the Cordova JavaScript
                  "action", ["firstArgument", "secondArgument", 42,
                  false]);
 
-The parameters explained in more detail:
+The parameters are detailed below:
 
 1. `function(winParam) {}` - Success function callback. Assuming your
-   `exec` call completes successfully, this function will be invoked
-    (optionally with any parameters you pass back to it)
+   `exec` call completes successfully, this function is invoked
+    (optionally with any parameters you pass back to it).
 2. `function(error) {}` - Error function callback. If the operation does
-   not complete successfully, this function will be invoked (optionally
-   with an error parameter)
+   not complete successfully, this function is invoked (optionally
+   with an error parameter).
 3. `"service"` - The service name to call into on the native side. This
-   will be mapped to a native class. More on this in the native guides
-   below
+   is mapped to a native class, about which more information is
+   available in the native guides listed below.
 4. `"action"` - The action name to call into. This is picked up by the
    native class receiving the `exec` call, and, depending on the
-   platform, essentially maps to a class's method. For more detail
-   please check out the native guides located at the end of this article.
-5. `[/* arguments */]` - Arguments to get passed into the native
-   environment
+   platform, essentially maps to a class's method.
+   The native guides listed below provide details.
+5. `[/* arguments */]` - Arguments to pass into the native environment.
 
 ### Echo Plugin JavaScript Example
 
@@ -93,21 +91,21 @@ which is the first parameter into the `window.echo` function.
 The success callback passed into `exec` is simply a reference to the
 callback function that `window.echo` takes. We do a bit more for the
 error callback: if the native side fires off the error callback, we
-simply invoke the success callback and pass into it a "default" string.
+simply invoke the success callback and pass into it a "default"
+string.
 
 ## Native
 
-Once you have defined a JavaScript for your plugin, you need to
-complement it with at least one native implementation. Below are
-specific guides for each platform Cordova supports. The below guides
-will continue on building the simple Echo Plugin example we started in
-this guide.
+Once you define JavaScript for your plugin, you need to complement it
+with at least one native implementation. Details to do so for each
+platform are listed below.  These guides continue to build on the
+simple Echo Plugin example discussed above.
 
 - Developing a Plugin on Android
 - Developing a Plugin on Bada
 - Developing a Plugin on BlackBerry
 - Developing a Plugin on BlackBerry 10
 - Developing a Plugin on iOS
-- Developing a Plugin on webOS
 - Developing a Plugin on Windows Phone
-- Developing a Plugin on Tizen
+
+The webOS and Tizen platforms currently do not support plugins.

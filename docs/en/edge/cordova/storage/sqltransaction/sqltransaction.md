@@ -30,7 +30,7 @@ Methods
 Details
 -------
 
-When you call a Database objects transaction method it's callback methods will be called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.  
+When you call a Database objects transaction method, its callback methods is called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.
 
 Supported Platforms
 -------------------
@@ -84,7 +84,7 @@ Full Example
 			db.transaction(populateDB, errorCB, successCB);
         }
 		
-		// Populate the database 
+		// Populate the database
 		//
 		function populateDB(tx) {
 			 tx.executeSql('DROP TABLE IF EXISTS DEMO');

@@ -66,7 +66,7 @@ Full Example
                       
         function successCB(date) {
           alert('month:' + date.month +
-                ' day:' + date.day + 
+                ' day:' + date.day +
                 ' year:' + date.year + '\n');
         }
                                             

@@ -34,7 +34,6 @@ NOTE: The following attributes are defined by the W3C specification, but are __n
 
 - __filesystem:__ The file system on which the FileEntry resides. _(FileSystem)_
 
-
 Methods
 -------
 
@@ -48,7 +47,6 @@ Methods
 - __createWriter__: Creates a FileWriter object that can be used to write to a file.
 - __file__: Creates a File object containing file properties.
 
-
 Supported Platforms
 -------------------
 
@@ -57,7 +55,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
-
 
 getMetadata
 ----------------
@@ -68,7 +65,6 @@ __Parameters:__
 
 - __successCallback__ - A callback that is called with a Metadata object. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
-
 
 __Quick Example__
 
@@ -83,7 +79,6 @@ __Quick Example__
     // Request the metadata object for this entry
     entry.getMetadata(success, fail);
 
-
 setMetadata
 ----------------
 
@@ -95,7 +90,6 @@ __Parameters:__
 - __successCallback__ - A callback that is called when the metadata was successfully set. _(Function)_
 - __errorCallback__ - A callback that is called when the metadata was not successfully set. _(Function)_
 - __metadataObject__ - An object that contains the metadata keys and values. _(Object)_
-
 
 __Quick Example__
 
@@ -115,7 +109,7 @@ __iOS Quirk__
 
 __Quick Example__
 
-    function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue) 
+    function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue)
     {
 	    var onSetMetadataWin = function() {
 	      console.log("success setting metadata")
@@ -163,7 +157,6 @@ __Parameters:__
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
 
-
 __Quick Example__
 
     function success(entry) {
@@ -183,7 +176,6 @@ __Quick Example__
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
     }
 
-
 copyTo
 ------
 
@@ -197,7 +189,6 @@ __Parameters:__
 - __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
 - __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
 - __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
-
 
 __Quick Example__
 
@@ -218,7 +209,6 @@ __Quick Example__
         entry.copyTo(parentEntry, "file.copy", success, fail);
     }
 
-
 toURL
 -----
 
@@ -229,7 +219,6 @@ __Quick Example__
     // Request the URL for this entry
     var fileURL = entry.toURL();
     console.log(fileURL);
-
 
 remove
 ------
@@ -254,7 +243,6 @@ __Quick Example__
     // remove the file
     entry.remove(success, fail);
 
-
 getParent
 ---------
 
@@ -278,7 +266,6 @@ __Quick Example__
     // Get the parent DirectoryEntry
     entry.getParent(success, fail);
 
-
 createWriter
 ------------
 
@@ -301,7 +288,6 @@ __Quick Example__
 
     // create a FileWriter to write to the file
     entry.createWriter(success, fail);
-
 
 file
 ----

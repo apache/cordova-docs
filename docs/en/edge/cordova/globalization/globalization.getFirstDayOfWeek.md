@@ -31,7 +31,6 @@ The days of the week are numbered starting from 1 where 1 is considered to be Su
 
 If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
 
-
 Supported Platforms
 -------------------
 

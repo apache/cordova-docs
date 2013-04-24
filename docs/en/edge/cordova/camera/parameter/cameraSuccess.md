@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -29,7 +29,7 @@ onSuccess callback function that provides the image data.
 Parameters
 ----------
 
-- __imageData:__ Base64 encoding of the image data, OR the image file URI, depending on `cameraOptions` used. (`String`)
+- __imageData:__ Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. (`String`)
 
 Example
 -------

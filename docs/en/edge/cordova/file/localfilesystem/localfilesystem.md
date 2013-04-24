@@ -70,7 +70,6 @@ Resolve Local File System URI Quick Example
 Full Example
 ------------
 
-
     <!DOCTYPE html>
     <html>
       <head>

@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+  license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,21 +20,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 batterystatus
 ===========
 
-This is an event that fires when a Cordova application detects a change in the battery status.
+The event fires when there is a change in the battery status.
 
     window.addEventListener("batterystatus", yourCallbackFunction, false);
 
 Details
 -------
 
-This event that fires when a Cordova application detects the percentage of battery has changed by at least 1 percent. It is also fired if the device has been plugged in or un-plugged.
+This event fires when the percentage of battery charge changes by at
+least 1 percent, or if the device is plugged in or unplugged.
 
-The battery status handler will be called with an object that contains two properties:
+The battery status handler is called with an object that contains two
+properties:
 
-- __level:__ The percentage of battery (0-100). _(Number)_
-- __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
+- __level:__ The percentage of battery charge (0-100). _(Number)_
+- __isPlugged:__ A boolean that indicates whether the device is plugged in. _(Boolean)_
 
-Typically, you will want to attach an event listener with `window.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `window.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -48,9 +51,9 @@ Supported Platforms
 Windows Phone 7 and 8 Quirks
 ----------------------
 
-The `level` property is unavailable as Windows Phone 7 does not provide
-native APIs for determining battery level. The `isPlugged` parameter
-_is_ supported.
+Windows Phone 7 does not provide native APIs to determine battery
+level, so the `level` property is unavailable.  The `isPlugged`
+parameter _is_ supported.
 
 Quick Example
 -------------
@@ -59,7 +62,7 @@ Quick Example
 
     function onBatteryStatus(info) {
         // Handle the online event
-       	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+       	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
 Full Example
@@ -78,7 +81,7 @@ Full Example
         // At this point, the document has loaded but cordova-x.x.x.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
+        //
 	    function onLoad() {
     	    document.addEventListener("deviceready", onDeviceReady, false);
     	}
@@ -92,7 +95,7 @@ Full Example
         // Handle the batterystatus event
         //
         function onBatteryStatus(info) {
-        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
         }
         
         </script>

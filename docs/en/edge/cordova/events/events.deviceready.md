@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+  license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 deviceready
 ===========
 
-This is an event that fires when Cordova is fully loaded.
+The event fires when Cordova is fully loaded.
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
 
@@ -29,13 +29,20 @@ Details
 
 This is a very important event that every Cordova application should use.
 
-Cordova consists of two code bases: native and JavaScript. While the native code is loading, a custom loading image is displayed. However, JavaScript is only loaded once the DOM loads. This means your web application could, potentially, call a Cordova JavaScript function before it is loaded.
+Cordova consists of two code bases: native and JavaScript. While the
+native code loads, a custom loading image displays. However,
+JavaScript only loads once the DOM loads. This means your web
+application may potentially call a Cordova JavaScript function before
+the corresponding native code is available.
 
-The Cordova `deviceready` event fires once Cordova has fully loaded. After the device has fired, you can safely make calls to Cordova function.
+The Cordova `deviceready` event fires once Cordova has fully loaded.
+After the device has fired, you can safely make calls to Cordova APIs.
+Applications typically attach an event listener with
+`document.addEventListener` once the HTML document's DOM has loaded.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once the HTML document's DOM has loaded.
-
-This event behaves differently from others in that any event handler registered after the event has been fired will have its callback function called immediately.
+The `deviceready` event behaves somewhat differently from others.  Any
+event handler registered after the `deviceready` event fires has its
+callback function called immediately.
 
 Supported Platforms
 -------------------

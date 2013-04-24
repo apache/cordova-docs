@@ -33,7 +33,6 @@ properties object as a parameter. That object should have a ``value`` property w
 
 If there is an error getting the locale, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
 
-
 Supported Platforms
 -------------------
 
@@ -41,7 +40,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 8
-
 
 Quick Example
 -------------

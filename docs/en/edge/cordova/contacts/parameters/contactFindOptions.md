@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactFindOptions
 ==================
 
-Optional parameter of the `contacts.find` method.  Use this parameter to filter the contacts returned from the contacts database.
+Optional parameter of the `contacts.find` method, used to filter the
+contacts returned from the contacts database.
 
-    { 
-		filter: "",
-		multiple: true,
-	};
+    {
+      filter: "",
+      multiple: true,
+    };
 
 Options
 -------
 
-- __filter:__ The search string used to filter contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+- __filter:__ The search string used to filter contacts. _(DOMString)_ (Default: `""`)
+- __multiple:__ Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: `false`)
 

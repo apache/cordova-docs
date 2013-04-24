@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-
+         
            http://www.apache.org/licenses/LICENSE-2.0
-
+         
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -39,8 +39,8 @@ Cordova projects.
 
 ## Windows Phone
 
-The Windows Phone command line tools support creating, building and
-running new projects.  Commands must be run from a cmd or powershell prompt.
+The Windows Phone command-line tools support creating, building, and
+running new projects. Commands must be run from a cmd or powershell prompt.
 
 ### Create a project
 
@@ -118,7 +118,6 @@ Run the `create` command with the following parameters:
 
     $ /path/to/my_new_cordova_project/cordova/log
 
-
 ## Android
 
 The Android command-line tools are built upon shell scripts. You _must_
@@ -178,9 +177,11 @@ Run the 'run' command with the following *optional* parameters
 
     $ C:\path\to\my_new_cordova_project\cordova\run.bat [Target] [Build]
 
-
-Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
-By default the `run` command will look for a connected device, if no device is found it will look for any started emulators. If you have multiple AVDs, you can specify a target ID.
+Make sure you create at least one Android Virtual Device, otherwise
+you're prompted to do so with the `android` command.  If you have
+multiple AVDs, you're prompted to select one. By default the `run`
+command will detect a connected device. When no device is found,
+it will detect a running emulator.
 
 ### Logging
 
@@ -197,7 +198,6 @@ or, on *Windows*
 or, on *Windows*
 
     $ C:\path\to\my_new_cordova_project\cordova\clean.bat
-
 
 ## BlackBerry
 
@@ -219,15 +219,17 @@ or, on **Windows**
 
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
-Note: the package name placeholder (com.example.cordova_project_name) is ignored on the Blackberry platform, but is required for use of the crossplatform tools
+__NOTE:__ The Blackberry platform ignores the package name placeholder
+(`com.example.cordova_project_name`), but it's still required for use by
+cross-platform tools.
 
 ### Build a project
 
 For BlackBerry projects, please make sure you customize the
-`project.properties` file in the root of your Cordova project folder.
-This is necessary for things like supplying your BlackBerry signing key
-password, location of the BlackBerry WebWorks SDK, and location of
-BlackBerry simulator executables.
+`project.properties` file in your Cordova project's root directory.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+simulator executables.
 
     $ /path/to/my_new_cordova_project/cordova/build <platform>
 
@@ -239,9 +241,9 @@ or, on **Windows**
 
 For BlackBerry projects, please make sure you customize the
 `project.properties` file in the root of your Cordova project folder.
-This is necessary for things like supplying your BlackBerry signing key
-password, location of the BlackBerry WebWorks SDK, and location of
-BlackBerry simulator executables.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+simulator executables.
 
     $ /path/to/my_new_cordova_project/cordova/run <platform>
 
@@ -259,22 +261,20 @@ and then choose 'no' when prompted with:
 
 ### Logging
 
-Unfortunately streaming logs directly from the device is not
-supported at this time. However, BlackBerry offers built-in Web
-Inspector support for Playbook and BlackBerry smartphone devices running
-BlackBerry OS 7.0 and above. Additionally, you can access your
-application's logs (including any calls to `console.log`) on your device
-by holding down the ALT key from the home screen and hitting "lglg"
-keys.
+Unfortunately, streaming logs directly from the device is currently
+unsupported. However, BlackBerry offers built-in Web Inspector support
+for Playbook and BlackBerry smartphone devices running BlackBerry OS
+7.0 and above. You can also access your application's logs (including
+any calls to `console.log`) on your device by holding down the ''ALT''
+key from the home screen and typing ''lglg'' keys.
 
-
-##BlackBerry 10
+## BlackBerry 10
 
 Command-line tools are based on shell scripts. If you need help with a command, type the command with the `-h` or `-help` arguments, which are supported by all commands and which will provide descriptions for each of the available arguments.
 
 The following commands are available:
 
-##create
+## create
 
 The 'create' command creates a new project:
 
@@ -282,11 +282,11 @@ The 'create' command creates a new project:
 bin/create <path-to-project>
 ```
 
-##target
+## target
 
 The `target` command allows you to manage the BlackBerry device(s) or simulator that you will use to test your app. You can add or remove a target, or set a target as the default target.
 
-###Add a target
+### Add a target
 
 ```
 <path-to-project>/cordova/target  add  <name>  <ip-address>  <device | simulator>  [-p | --password <password>]  [--pin <device-pin>]
@@ -299,23 +299,23 @@ where
 -   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
-###Remove a target
+### Remove a target
 
 ```
 <path-to-project>/cordova/target  remove  <name>
 ```
 
-###Set a target as the default
+### Set a target as the default
 
 ```
 <path-to-project>/cordova/target  default  <name>
 ```
 
-##build
+## build
 
 The `build` command builds the project as a .bar file. You can build your app in either release mode (which produces a signed .bar file) or in debug mode (which produces an unsigned .bar file).
 
-###Build your project in release mode
+### Build your project in release mode
 
 ```
 <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
@@ -326,7 +326,7 @@ where
 -   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
-###Build your project in debug mode
+### Build your project in debug mode
 
 ```
 <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
@@ -345,7 +345,7 @@ If you have previously defined a default target (and previously installed a debu
 <path-to-project>/cordova/build debug
 ```
 
-##run
+## run
 
 The `run` command deploys the app on the specified BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to. The deploy script will deploy the most recent build of your app.
 
@@ -356,30 +356,30 @@ The `run` command deploys the app on the specified BlackBerry device or a simula
 where
 -   `<target> `specifies the name of a previously added target. If `<target> `is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 
-##plugin
+## plugin
 
 The `target` command allows you to add and remove plugins
 
-###Fetch a locally-hosted plugin
+### Fetch a locally-hosted plugin
 
 
 ```
 <path-to-project>/cordova/plugin fetch <path-to-plugin>
 ```
 
-###View a list of installed plugins
+### View a list of installed plugins
 
 ```
 <path-to-project>/cordova/plugin ls
 ```
 
-###Add a plugin
+### Add a plugin
 
 ```
 <path-to-project>/cordova/plugin add <name>
 ```
 
-###Remove a plugin
+### Remove a plugin
 
 ```
 <path-to-project>/cordova/plugin rm <name>
@@ -397,4 +397,3 @@ Run the `create` command with the following parameters:
 * Path to your new Cordova Windows 8 project
 * Package Name, following reverse-domain style convention ( this becomes the default Namespace )
 * Project name
-

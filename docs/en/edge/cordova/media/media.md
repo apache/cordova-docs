@@ -24,7 +24,6 @@ Media
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
-
 Note: The current implementation does not adhere to a W3C specification for media capture, and is provided for convenience only.  A future implementation will adhere to the latest W3C specification and may deprecate the current APIs.
 
 Parameters
@@ -134,7 +133,6 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
     No permissions are required.
 
-
 ### Windows Phone Quirks
 
     Only one media file can be played back at a time.
@@ -142,3 +140,4 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 There are strict restrictions as to how your application interacts with other media. See the [Microsoft documentation for details][url].
 
 [url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx
+

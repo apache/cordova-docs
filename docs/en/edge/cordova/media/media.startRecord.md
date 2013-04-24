@@ -24,7 +24,6 @@ Starts recording an audio file.
 
     media.startRecord();
 
-
 Description
 -----------
 
@@ -43,7 +42,7 @@ Quick Example
 -------------
 
     // Record audio
-    // 
+    //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
@@ -61,7 +60,6 @@ Quick Example
         mediaRec.startRecord();
     }
 
-
 Full Example
 ------------
 
@@ -78,7 +76,7 @@ Full Example
         document.addEventListener("deviceready", onDeviceReady, false);
 
         // Record audio
-        // 
+        //
         function recordAudio() {
             var src = "myrecording.amr";
             var mediaRec = new Media(src, onSuccess, onError);
@@ -110,15 +108,15 @@ Full Example
             console.log("recordAudio():Audio Success");
         }
     
-        // onError Callback 
+        // onError Callback
         //
         function onError(error) {
-            alert('code: '    + error.code    + '\n' + 
+            alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         }
 
         // Set audio position
-        // 
+        //
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
         }

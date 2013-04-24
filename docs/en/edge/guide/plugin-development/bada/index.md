@@ -22,13 +22,13 @@ Developing a Plugin on Bada
 
 Plugins are only supported on Bada 2.0 and above. Bada 1.2 does not support plugins.
 
-The Bada implementation is a full javascript implementation. Therefore, adding a custom plugin involves updating CordovaJS with your plugin code. Follow these steps to add a simple _Hello World_ plugin:
+The Bada implementation is a full JavaScript implementation. Therefore, adding a custom plugin involves updating CordovaJS with your plugin code. Follow these steps to add a simple _Hello World_ plugin:
 
 1. Clone the CordovaJS repository
 
         git clone https://git-wip-us.apache.org/repos/asf/cordova-js.git
 
-2. Create a new javascript file under __lib/bada/plugin/bada/__ and name it _HelloWorld.js_. Add the following content:
+2. Create a new JavaScript file under __lib/bada/plugin/bada/__ and name it _HelloWorld.js_. Add the following content:
 
         function HelloWorld() {
         }
@@ -40,11 +40,11 @@ The Bada implementation is a full javascript implementation. Therefore, adding a
         module.exports = new HelloWorld();
 
 3. Add a link to your newly created plugin in __lib/bada/platform.js__ under the objects property:
-    
+
         objects: {
             ...
             HelloWorld: {
-                'cordova/plugin/bada/HelloWorld' 
+                'cordova/plugin/bada/HelloWorld'
             },
             ...
         }
@@ -55,7 +55,7 @@ The Bada implementation is a full javascript implementation. Therefore, adding a
             ...
             "HelloWorld": require('cordova/plugin/bada/HelloWorld')
         };
-5. Now you can write your user-facing javascript however you like but remember that in order for your plugin to execute you need to call the following method
+5. Now you can write your user-facing JavaScript however you like but remember that in order for your plugin to execute you need to call the following method
 
         exec(success, fail, 'HelloWorld', 'printHello', ['Jackson!']);
 
@@ -65,10 +65,10 @@ The Bada implementation is a full javascript implementation. Therefore, adding a
     'printHello' is your plugin action
     Finally, the last argument is your plugin parameters (if any).
 
-6. Run the following command to generate the new common javascript (make sure you have the jake npm module installed)
+6. Run the following command to generate the new common JavaScript (make sure you have the jake npm module installed)
 
         jake
 
-7. Copy the newly generated javascript under __pkg/cordova.bada.js__ to your Bada project under __Res/js__
+7. Copy the newly generated JavaScript under __pkg/cordova.bada.js__ to your Bada project under __Res/js__
 
 6. That is it! You can now add new Bada plugins and implement the many features that are not currently supported by Cordova Bada.

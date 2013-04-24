@@ -18,19 +18,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 Domain Whitelist Guide
-=====================
+======================
 
 Overview
 --------
 
-Domain whitelisting in Apache Cordova is a security model that controls access to outside domains, such as `http://google.com`.
-
-The default security policy is to allow all network access. Before moving your application to production, it is advised to review your application's whitelist. The application developer is encouraged to declare access to specific network domains and subdomains.
+Domain whitelisting is a security model that controls access to
+outside domains, such as `http://google.com`.  Apache Cordova's
+default security policy allows access to any site. Before moving your
+application to production, you should review its whitelist and declare
+access to specific network domains and subdomains.
 
 Specification
 -------------
 
-Domain whitelisting lays the ground work for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement it's own domain whitelisting.
+Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement its own domain whitelisting.
 
 Syntax
 ------
@@ -60,9 +62,10 @@ Android
 
 ### Details
 
-The whitelisting rules are found in `res/xml/config.xml` and declared with the element `<access origin="..." />`.
+The whitelisting rules are found in `res/xml/config.xml` and declared
+with the element `<access origin="..." />`.
 
-Android has full support for the whitelisting syntax.
+Android fully supports whitelisting syntax.
 
 ### Syntax
 
@@ -73,7 +76,7 @@ Access to [google.com][2]:
 Bada
 ----
 
-Domain whitelisting is unsupported on Bada. By default, all domains are accessible.
+Bada does not support domain whitelisting. By default, all domains are accessible.
 
 BlackBerry
 ----------
@@ -109,10 +112,11 @@ iOS
 
 The whitelisting rules are found in `AppName/config.xml` and declared with the element `<access origin="..." />`.
 
-iOS has full support for the whitelisting syntax.
+iOS fully supports whitelisting syntax.
 
-Note: origins specified without a protocol (i.e. `www.apache.org` instead of `http://www.apache.org`) will default to all of http, https, ftp, and ftps.
-
+__NOTE:__ origins specified without a protocol, such as
+`www.apache.org` rather than `http://www.apache.org`, default to all
+of the `http`, `https`, `ftp`, and `ftps` schemes.
 
 ### Syntax
 
@@ -125,19 +129,19 @@ Access to all subdomains and TLDs (`.com`, `.net`, etc):
 Symbian
 -------
 
-Domain whitelisting is unsupported on Symbian. By default, all domains are accessible.
+Symbian does not support domain whitelisting. By default, all domains are accessible.
 
 webOS
 -----
 
-Domain whitelisting is unsupported on webOS. By default, all domains are accessible.
+webOS does not support domain whitelisting. By default, all domains are accessible.
 
 Windows Phone (7 & 8)
 ---------------------
 
 The whitelisting rules are found in `config.xml` and declared with the element `<access origin="..." />`.
 
-Android has full support for the whitelisting syntax.
+Android fully supports whitelisting syntax.
 
 ### Syntax
 
@@ -150,8 +154,8 @@ Tizen
 
 ### Details
 
-The domain whitelisting rules are found in `config.xml` located in your application root directory.
-They are declared with the element `<access origin="..." />`.
+The application root directory's `config.xml` file specifies domain
+whitelisting rules, using the `<access origin="..." />` element.
 For a complete reference, see the [Tizen Accessing External Network Resources documentation][10].
 
 ### Syntax

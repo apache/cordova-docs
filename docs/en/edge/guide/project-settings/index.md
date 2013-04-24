@@ -21,9 +21,9 @@ Project Settings
 ================
 
 You can set various application configuration parameters using a platform-agnostic configuration file, `config.xml`.
-This file is based on the W3C [Packaged Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification. 
+This file is based on the W3C [Packaged Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification.
 
-The location of the `config.xml` file is different depending on the platform. The contents, in general, are not. 
+The location of the `config.xml` file is different depending on the platform. The contents, in general, are not.
 
 ## Platform-Specific Properties
 
@@ -62,14 +62,19 @@ A list of supported elements across major platforms which are supported in Apach
 
 ### `<plugin>`
 
-These elements map to native APIs that the application will be able to access. At runtime, the Apache Cordova framework checks
-the `<plugin>` elements and maps them to native code to enable your Cordova application to access device APIs otherwise
-unavailable to typical web-based applications.
+These elements map to native APIs that the application accesses. At
+runtime, the Apache Cordova framework checks the `<plugin>` elements
+and maps them to native code to enable your Cordova application to
+access device APIs otherwise unavailable to typical web-based
+applications.
 
 ### `<access>`
 
-These elements define how your whitelist works. Please see the Domain Whitelist Guide for more information.  
+These elements define how your whitelist works. Please see the
+Domain Whitelist Guide for more information.
 
 ### `<content>`
 
-This element defines the start page of your application, relative to the project's standard web assets root folder. The default is "index.html". 
+This element defines your application's start page relative to the
+project's standard web assets root folder. The default is
+`index.html`.

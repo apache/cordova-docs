@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 offline
 ===========
 
-This is an event that fires when a Cordova application is offline (not connected to the Internet).
+This event fires when a Cordova application is offline (not connected to the Internet).
 
     document.addEventListener("offline", yourCallbackFunction, false);
 
 Details
 -------
 
-When the application's network connection changes to being offline, the offline event is fired.  
+When the application's network connection changes to being offline, the offline event is fired.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------

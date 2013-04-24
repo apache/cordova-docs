@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -19,16 +19,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 device.name
 ===========
-WARNING: device.name is deprecated as of version 2.3.0, use device.model instead
+
+__WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
 Get the device's model name.
 
     var string = device.name;
-    
+
 Description
 -----------
 
-`device.name` returns the name of the device's model or product. This value is set by the device manufacturer and may be different across versions of the same product.
+`device.name` returns the name of the device's model or product. This
+value is set by the device manufacturer and may be different across
+versions of the same product.
 
 Supported Platforms
 -------------------
@@ -72,11 +75,11 @@ Full Example
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
     
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                                'Device Cordova: '  + device.cordova + '<br />' + 
-                                'Device Platform: ' + device.platform + '<br />' + 
-                                'Device UUID: '     + device.uuid     + '<br />' + 
-                                'Device Model: '    + device.model     + '<br />' + 
+            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                                'Device Cordova: '  + device.cordova + '<br />' +
+                                'Device Platform: ' + device.platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Model: '    + device.model     + '<br />' +
                                 'Device Version: '  + device.version  + '<br />';
         }
 
@@ -87,23 +90,20 @@ Full Example
       </body>
     </html>
 
-
 Android Quirks
 --------------
 
-- Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL).
-    - The product name is often the code name given during production.
-    - e.g. Nexus One returns "Passion", Motorola Droid returns "voles"
+- Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
 
 Windows Phone 7 and 8 Quirks
 -------------
 
-- returns the manufacturer specified device name, for example, the Samsung Focus returns 'SGH-i917'
+- Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
 Bada Quirks
 -----------
-- returns the manufacturer model name. For example 'Samsung Wave S8500'
+- Returns the manufacturer model name, for example, `Samsung Wave S8500`
 
 Tizen Quirks
 -----------
-- returns the device model assigned by the vendor. For example 'TIZEN'
+- Returns the device model assigned by the vendor, for example, `TIZEN`

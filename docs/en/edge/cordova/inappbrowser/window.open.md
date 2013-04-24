@@ -28,9 +28,9 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
 - __url:__ the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
 - __target:__ the target to load the URL in (`String`) (Optional, Default: "_self")
 
-        _self - opens in the Cordova WebView if url is in the white-list, else it opens in the InAppBrowser 
-        _blank - always open in the InAppBrowser 
-        _system - always open in the system web browser 
+        _self - opens in the Cordova WebView if URL is in the white-list, else it opens in the InAppBrowser
+        _blank - always open in the InAppBrowser
+        _system - always open in the system web browser
     
     
 - __options:__ options for the InAppBrowser (`String`) (Optional, Default: "location=yes")

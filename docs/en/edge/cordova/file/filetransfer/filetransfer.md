@@ -30,14 +30,14 @@ Properties
 Methods
 -------
 
-- __upload__: sends a file to a server. 
+- __upload__: sends a file to a server.
 - __download__: downloads a file from server.
 - __abort__: Aborts an in-progress transfer.
 
 Details
 -------
 
-The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback will be called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
+The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback is called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
 It is also possible to download a file from remote and save it on the device (only iOS and Android).
 
 Supported Platforms
@@ -84,9 +84,9 @@ __Quick Example__
     var params = {};
     params.value1 = "test";
     params.value2 = "param";
-    
+
     options.params = params;
-    
+
     var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
 
@@ -111,7 +111,7 @@ __Full Example__
                 // Retrieve image file location from specified source
                 navigator.camera.getPicture(uploadPhoto,
                                             function(message) { alert('get picture failed'); },
-                                            { quality: 50, 
+                                            { quality: 50,
                                             destinationType: navigator.camera.DestinationType.FILE_URI,
                                             sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
                                             );
@@ -153,7 +153,7 @@ __Full Example__
         <p>Upload File</p>
     </body>
     </html>
-    
+
 __Setting Upload Headers__
 
 Supported on Android and iOS
@@ -182,7 +182,7 @@ Supported on Android and iOS
     options.headers = headers;
     
     var ft = new FileTransfer();
-    ft.upload(fileURI, uri, win, fail, options);    
+    ft.upload(fileURI, uri, win, fail, options);
 
 __Android Quirks__
 
@@ -229,7 +229,7 @@ __Quick Example__
 abort
 --------------
 
-Aborts an in-progress transfer. The onerror callback will be called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback is called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
 __Supported Platforms__
 

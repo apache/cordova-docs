@@ -37,7 +37,6 @@ If there is an error obtaining the names, then the errorCB callback is invoked w
 The default options are `{type:'wide', item:'months'}`.
 The options parameter is optional.
 
-
 Supported Platforms
 -------------------
 
@@ -60,7 +59,6 @@ In the case when the browser is set to the en\_US locale, this should display a 
       function () {alert('Error getting names\n');},
       {type:'wide', item:'months'}
     );
-
 
 Full Example
 ------------

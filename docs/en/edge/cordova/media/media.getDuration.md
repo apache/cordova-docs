@@ -24,7 +24,6 @@ Returns the duration of an audio file.
 
     media.getDuration();
 
-
 Description
 -----------
 
@@ -60,7 +59,6 @@ Quick Example
                 document.getElementById('audio_duration').innerHTML = (dur) + " sec";
             }
        }, 100);
-
 
 Full Example
 ------------
@@ -120,7 +118,7 @@ Full Example
             }
         
             // Pause audio
-            // 
+            //
             function pauseAudio() {
                 if (my_media) {
                     my_media.pause();
@@ -128,7 +126,7 @@ Full Example
             }
         
             // Stop audio
-            // 
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -143,15 +141,15 @@ Full Example
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError Callback
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
+                alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
         
             // Set audio position
-            // 
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }

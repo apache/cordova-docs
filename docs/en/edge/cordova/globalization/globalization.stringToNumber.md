@@ -34,7 +34,6 @@ If there is an error parsing the number string, then the errorCB callback is inv
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.
 
-
 Supported Platforms
 -------------------
 
@@ -54,7 +53,6 @@ In the case when the browser is set to the en\_US locale, this should display a 
       function () {alert('Error getting number\n');},
       {type:'decimal'}
     );
-
 
 Full Example
 ------------

@@ -22,8 +22,8 @@ geolocation.getCurrentPosition
 
 Returns the device's current position as a `Position` object.
 
-    navigator.geolocation.getCurrentPosition(geolocationSuccess, 
-                                             [geolocationError], 
+    navigator.geolocation.getCurrentPosition(geolocationSuccess,
+                                             [geolocationError],
                                              [geolocationOptions]);
 
 Parameters
@@ -37,7 +37,6 @@ Description
 -----------
 
 `geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
-
 
 Supported Platforms
 -------------------
