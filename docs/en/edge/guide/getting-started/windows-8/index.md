@@ -20,9 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Windows 8
 ==================================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+This guide describes how to set up your Cordova development
+environment and run a sample application.  Note that Cordova used to
+be called PhoneGap, so some of the sites still use the old PhoneGap
+name.
 
-During development of Windows 8 and Windows RT, Microsoft deprecated the name "Metro-style apps". On MSDN, this type of app is now called a "Windows Store" app. That's the name that we'll use in this guide. Also in this guide whenever we refer to Windows 8, you should take that to mean both Windows 8 and Windows RT.
+Microsoft deprecated the name "Metro-style apps" in Windows 8 and
+Windows RT. MSDN now refers to this type of app as a "Windows Store"
+app, and this guide follows that convention. Also, in this guide
+"Windows 8" signifies both Windows 8 and Windows RT.
 
 1. Requirements
 ---------------
@@ -36,24 +42,24 @@ Follow the instructions [here](http://www.windowsstore.com/) to submit your apps
 2. Install SDK + Cordova
 ----------------------------
 
-- Setup your preferred variant of Visual Studio 2012. All of the paid versions of the product (Professional, etc) let you build Windows Store apps. To build Windows Store apps using the [Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products), you will need **Express for Windows 8**.
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder **lib\windows-8**.
+- Set up your preferred variant of Visual Studio 2012. All of the product's paid versions (Professional, etc.) let you build Windows Store apps. You need **Express for Windows 8** to build Windows Store apps using the [Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products).
+- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-8` subfolder.
 
-3. Setup New Project
+3. Set up New Project
 --------------------
 
 You can already build Windows 8 apps using the "HTML/JavaScript track" available in Windows Store apps. The purpose of Cordova in Windows Store apps is to expose the same APIs used on all the other Cordova platforms.
 
 - Open Visual Studio 2012 and choose **New Project**.
-- Select **Installed - Template - Other Languages - JavaScript - Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like. We're using **CordovaWin8Foo** in this guide.
+- Select **Installed - Template - Other Languages - JavaScript - Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** in this example.
 
     ![](img/guide/getting-started/windows-8/wsnewproject.PNG)
 
-- Microsoft continues to use **default.html** as the default page for use in websites, whereas most "open web" developers use **index.html**. (Plus it's likely that in the other platform variants of your project you are using **index.html** as the name of your default page.) To fix this, in Solution Explorer rename the **default.html** file to **index.html**. Then double-click the **package.appxmanifest** file and change the **Start page** value to **index.html**. 
+- Microsoft continues to use `default.html` as the default home page, but most web developers use `index.html`. (Plus it's likely that in the other platform variants of your project you are using `index.html` as the name of your default page.) To fix this, in Solution Explorer rename the `default.html` file to `index.html`. Then double-click the **package.appxmanifest** file and change the **Start page** value to **index.html**.
 
 	![](img/guide/getting-started/windows-8/wschangemanifest.PNG)
 
-- To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **cordova.js** file in the **lib\windows-8** folder that we called out previously. 
+- To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **cordova.js** file in the **lib\windows-8** folder noted above.
 
 - Edit the code for **index.html**. Add a reference to **cordova.js**. You can do this manually, or by dragging the file from Solution Explorer.
 
@@ -70,7 +76,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 	    <link href="/css/default.css" rel="stylesheet" />
 	    <script src="/js/default.js"></script>
 
-- Next we want to add some code that will demonstrate that Cordova is working. 
+- Next, add some code that demonstrates Cordova is working.
 
 ### Adding a 'deviceready' handler...
 	<body>
@@ -93,7 +99,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 5. Test the Project
 -------------------------------
 
-- Run the project from Visual Studio. You'll see the message box appear.
+- Run the project from Visual Studio. You'll see the message box appear:
 
 	![](img/guide/getting-started/windows-8/wsalert.PNG)
 

@@ -41,12 +41,12 @@ Video Tutorials:
 - Download and install [Virtual Box](http://www.virtualbox.org/)
 - Download and install [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/)
 - Download and install [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321)  (Windows only). Make sure you select "make" as it is not included by default
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the webOS directory.
+- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `webOS` directory.
 - Download and install XCode from the [Mac App Store](http://itunes.apple.com/ca/app/xcode/id497799835?mt=12) (OSX only)
 - Download and install Command Line Tools for XCode (OSX only); this can be done by going to XCode's Preferences -> Downloads -> Components and then click install on Command Line Tools
 
- 
-3. Setup New Project
+
+3. Set up New Project
 --------------------
 
 - Open up terminal/cygwin and navigate to where you extracted your Cordova Download. Go into the webOS directory.
@@ -55,7 +55,7 @@ Video Tutorials:
 4. Hello World
 --------------
 
-In phonegap/webOS/framework/www, open up index.html with your favourite editor. After the body tag add `<h1>Hello World</h1>`
+Edit `phonegap/webOS/framework/www/index.html`, adding `<h1>Hello World</h1>` after the `<body>` tag.
 
 
 5A. Deploy to Simulator
@@ -70,10 +70,11 @@ In phonegap/webOS/framework/www, open up index.html with your favourite editor. 
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
 - Type `make` in your terminal/cygwin while in the webOS directory.
-       
+
 
 Done!
 -----
 
-You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
+A more detailed version of this guide is available
+[here](http://wiki.phonegap.com/w/page/16494781/Getting-Started-with-PhoneGap-webOS).
 

@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-
+         
            http://www.apache.org/licenses/LICENSE-2.0
-
+         
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -37,7 +37,7 @@ Cordova projects.
 
 ## Windows Phone 8
 
-The Windows Phone 8 command line tools support creating new projects.
+The Windows Phone 8 command-line tools support creating new projects.
 
 ### Create a project
 
@@ -123,8 +123,9 @@ or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/run.bat
 
-Make sure you have created at least one Android Virtual Device. If you did not it will ask you to create one with the `android` command.
-If you have multiple AVDs, it will prompt you to select an AVD.
+Make sure you create at least one Android Virtual Device, otherwise
+you're prompted to do so with the `android` command.  If you have
+multiple AVDs, you're prompted to select one.
 
 ### Logging
 
@@ -171,18 +172,20 @@ or, on **Windows**
 
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
-Note: the package name placeholder (com.example.cordova_project_name) is ignored on the Blackberry platform, but is required for use of the crossplatform tools
+__NOTE:__ The Blackberry platform ignores the package name placeholder
+(`com.example.cordova_project_name`), but it's still required for use by
+cross-platform tools.
 
 ### Build a project
 
 For BlackBerry projects, please make sure you customize the
-`project.properties` file in the root of your Cordova project folder.
-This is necessary for things like supplying your BlackBerry signing key
-password, location of the BlackBerry WebWorks SDK, and location of
-BlackBerry simulator executables.
+`project.properties` file in your Cordova project's root directory.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+simulator executables.
 
     $ /path/to/my_new_cordova_project/cordova/build <platform>
- 
+
 or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/build.bat <platform>
@@ -191,24 +194,24 @@ or, on **Windows**
 
 For BlackBerry projects, please make sure you customize the
 `project.properties` file in the root of your Cordova project folder.
-This is necessary for things like supplying your BlackBerry signing key
-password, location of the BlackBerry WebWorks SDK, and location of
-BlackBerry simulator executables.
+You need to do so to supply your BlackBerry signing key password, and
+specify locations for the BlackBerry WebWorks SDK and BlackBerry
+simulator executables.
 
     $ /path/to/my_new_cordova_project/cordova/run <platform>
-    
-and then choose 'no' when prompted with: 
+
+and then choose 'no' when prompted with:
 
     Do you have a BlackBerry device connected to your computer? (y/n)
-    
+
 or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/run <platform>
 
-and then choose 'no' when prompted with: 
+and then choose 'no' when prompted with:
 
     Do you have a BlackBerry device connected to your computer? (y/n)
-    
+
 ### Logging
 
 Unfortunately streaming logs directly from the device is not

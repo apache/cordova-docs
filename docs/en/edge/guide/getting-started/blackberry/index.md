@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-
+         
            http://www.apache.org/licenses/LICENSE-2.0
-
+         
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with BlackBerry
 ============================
 
-Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments. 
+Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments.
 
 WebWorks applications can ONLY be deployed to the following BlackBerry platforms:
 
@@ -52,7 +52,7 @@ Download and install the appropriate WebWorks SDKs for your development. BlackBe
 
 3.  Register for Signing Keys
 -------------------------
-If you wish to publish your application on BlackBerry App World, or deploy on an actual device you’ll need to register for a set of free Code Signing Keys.  
+If you wish to publish your application on BlackBerry App World, or deploy on an actual device you’ll need to register for a set of free Code Signing Keys.
 
 To register for Signing Keys visit, and complete the [BlackBerry Keys Order Form](https://www.blackberry.com/SignedKeys).
 
@@ -62,10 +62,10 @@ Once you receive your Signing Keys, they'll need to be setup. To learn how to se
 4.  Install Cordova
 -------------------------
 
-Download the latest copy of [Cordova](http://cordova.apache.org/#download) and extract its contents to your local machine.
+Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download).
 
 
-5.  Setup New Project
+5.  Set up New Project
 --------------------
 
 - Open up a command prompt/terminal and navigate to where you extracted Cordova.
@@ -110,21 +110,21 @@ For instructions on installing simulators, please visit the following link(s):
 - [BlackBerry Smartphone](https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html)
 
 - Open the project.properties file with your favorite editor and customize the following properties.
-    
+
 BlackBerry 10
 - `qnx.sim.ip`
 - `qnx.sim.password`
-- Note: IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
 
 Playbook
-- `playbook.sim.ip` : 
+- `playbook.sim.ip` :
 - `playbook.sim.password`
-- Note: IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
 
 Smartphone (Optional)
-- `blackberry.sim.dir` 
+- `blackberry.sim.dir`
 - `blackberry.sim.bin`
-- Note: On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.  
+- __NOTE:__ On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.
 
 While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the simulator virtual image must already be started.  For example...
 
@@ -137,9 +137,9 @@ BlackBerry PlayBook
 BlackBerry Smartphone (OS5-7)
 - `./cordova/run blackberry`
 
-Answer 'n' when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
+Answer "n" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
 
-The application will be installed to the home screen of the simulator. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
+The application is installed to the simulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
 
 
 7B.  Deploy to Device (Windows and Mac)
@@ -177,7 +177,7 @@ BlackBerry Smartphone (OS5-7)
 
 Answer "y" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
 
-The application will be installed to the home screen of the device. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
+The application is installed to the device's home screen. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 
 Additional Information
 ----------------------

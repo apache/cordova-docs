@@ -22,7 +22,7 @@ Developing a Plugin on Windows Phone
 
 Writing a plugin for Cordova on Windows Phone requires a basic understanding of
 the architecture of Cordova. Cordova-WP7 consists of a WebBrowser which hosts the
-application javascript code and manages native API calls. There is a BaseCommand
+application JavaScript code and manages native API calls. There is a BaseCommand
 (`WP7CordovaClassLib.Cordova.Commands.BaseCommand`) class in C# which you can extend,
 and it comes with the majority of the 'plumbing' built for you already.
 
@@ -64,8 +64,9 @@ The default namespace for unqualified commands is:
         // ...
     }
 
-If you would like to use your own namespace, you will need to make a fully qualified
-call to `cordova.exec`. For example, if you wanted to define your C# class like this:
+If you want to use your own namespace, you need to make a fully
+qualified call to `cordova.exec`. For example, if you want to define
+your C# class like this:
 
     namespace com.mydomain.cordovaExtensions
     {
@@ -75,7 +76,7 @@ call to `cordova.exec`. For example, if you wanted to define your C# class like 
         }
     }
 
-Then, in JS you would need to call exec like this:
+Then, in JS you need to call `exec` like this:
 
     cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
@@ -88,12 +89,12 @@ Looking back at our JS call to `cordova.exec`, we see we passed `[str]`:
 
     cordova.exec(win, fail, "Echo", "echo", ["input string"]);
 
-If we inspect the options string passed in to our `Echo.echo` method, we will
-see that the value is actually:
+If we inspect the options string passed in to our `Echo.echo` method,
+we see that the value is actually:
 
     "[\"input string\"]"
 
-All javascript exec arguments are JSON encoded before being passed into C#.
+All JavaScript exec arguments are JSON encoded before being passed into C#.
 
 If we want to treat this as the string we were expecting, we need to decode it.
 We can use simple JSON deserialization.
@@ -110,7 +111,7 @@ you can can simply call:
 
     DispatchCommandResult(); // calls back with an empty plugin result, considered a success callback
 
-To pass data back, you will need to call a different version of `DispatchCommandResult`:
+To pass data back, you need to call a different version of `DispatchCommandResult`:
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
 
@@ -130,13 +131,13 @@ in case we have bad input. This is a pattern used throughout the Cordova C# code
 
     string optVal = null;
 
-    try 
+    try
     {
         optVal = JsonHelper.Deserialize<string[]>(options)[0];
     }
     catch(Exception)
     {
-        // simply catch the exception, we will handle null values and exceptions together
+        // simply catch the exception, we handle null values and exceptions together
     }
 
     if (optVal == null)
@@ -162,8 +163,9 @@ For example, you can hook into the 'pause' and 'resume' application events.
 To debug the C# side, you can use Visual Studio's debugger, just set a break point
 at any of the methods exposed by your class.
 
-Javascript is a little more difficult to debug on Windows Phone, you will need to
-use `console.log` to output the state of your plugin, or inform yourself of errors.
+JavaScript is a little more difficult to debug on Windows Phone. You
+need to use `console.log` to output the state of your plugin, or
+inform yourself of errors.
 
 Common Pitfalls
 ---------------
@@ -175,7 +177,7 @@ Common Pitfalls
 
         cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
 
-    - This will mean that your C# code will receive a difficult to decode string value, such as:
+    - This means that your C# code receives a difficult to decode string value, such as:
 
             "[\"this is a string\", 54, { literal:'trouble' }]"
 
@@ -185,7 +187,8 @@ Common Pitfalls
 
             string[] optValues = JsonHelper.Deserialize<string[]>(options);
 
-- It is usually a good idea to do parameter checking in your JavaScript code,
-  before you call exec.  This will let you re-use more JS code between different
-  native implementations of your plugin.
+- It is usually a good idea to do parameter checking in your
+  JavaScript code, before you call `exec`.  This allows you to re-use
+  more JavaScript code among your plug-in's various native
+  implementations.
 

@@ -34,54 +34,54 @@ Video Tutorials:
 
 - Windows 7 or Windows Vista with SP2
 
-Note: Running in VM has issues, if you are on a Mac, you will need to setup a bootcamp partition with Windows 7 or Vista
+__NOTE:__ Running in VM does not work well. If you are on a Mac, you need to set up a bootcamp partition with Windows 7 or Vista.
 
-Necessary for Installing on Device and Submitting to Market Place:
-
-- Become an [App Hub member](http://create.msdn.com/en-US/home/membership).
-
+- Become an [App Hub member](http://create.msdn.com/en-US/home/membership). You need to do so to install onto a device and submit the application to the market place.
 
 2. Install SDK + Cordova
 ----------------------------
 
 - Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
-- Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone\
-- copy the file CordovaStarter-x.x.x.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
-( if the template file does not exist, you will need to build it. See 2.1 below )
+- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone` subfolder.
+- Copy the `CordovaStarter-x.x.x.zip` to the `\My Documents\Visual Studio 2010\Templates\ProjectTemplates\` folder.
+(If the template file does not exist, you need to build it as described in 2.1 below.)
 if you have just installed VisualStudio, you should launch it once to create this folder
-if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder. 
+if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder.
 
 
 2.1. Building the template
 -----------------------------
-( note, this step may not be required.  If the lib\windows-phone directory already contains a file CordovaStarter-x.x.x.zip then you may skip this step )
-- Open the file lib\windows-phone\templates\standalone\CordovaSolution.sln in Visual Studio Express for Windows Phone
-- From the file menu, select 'Export Template...' 
-- Choose template type 'Project template'
-- Give the exported template a name, ex. CordovaStarter-2.1.0 will produce CordovaStarter-2.1.0.zip
-- Optionally, you may add a description, icon image, and Preview image.  These are what is displayed in Visual Studio in the 'New Project' dialog.- 
-- Note: If you select ( 'Automatically import the template ... ') then you will not need to copy the .zip file over as outlined in step 2.
-- Press 'Finish'
+
+__NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a `CordovaStarter-x.x.x.zip` file.
+
+- Open the `lib\windows-phone\templates\standalone\CordovaSolution.sln` in Visual Studio Express for Windows Phone
+- Select __Export Template...__ from the __File__ menu.
+- Choose template type __Project template__
+- Supply a name of the exported template, such as `CordovaStarter-2.1.0` to produce a `CordovaStarter-2.1.0.zip` file.
+
+- Optionally, add a description, icon image, or Preview image.  These are displayed in Visual Studio's __New Project__ dialog.
+- __NOTE:__ If you select __Automatically import the template...__, then you don't need to copy the `.zip` file over as outlined in step 2.
+- Press __Finish__.
 
 
 
 
-3. Setup New Project
+3. Set up New Project
 --------------------
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
-- Select **CordovaStarter**. ( the version number will be displayed in the template description )
-- - note: If you do not see it, you may have to select the top level 'Visual C#' to see it
-- Give your project a name, and select OK.
+- Select **CordovaStarter**. (The version number displays in the template description.)
+- - __NOTE:__ If you do not see it, you may have to select the top-level 'Visual C#'.
+- Give your project a name, and select __OK__.
 
     ![](img/guide/getting-started/windows-phone-7/wpnewproj.PNG)
 
- 
+
 4. Review the project structure
 -------------------------------
 
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
-- Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
+- Any content that you add needs to be a part of the Visual Studio project, and it must be set as content.
 
     ![](img/guide/getting-started/windows-phone-7/wp7projectstructure.PNG)
 
@@ -89,8 +89,8 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 5. Build and Deploy to Emulator
 -------------------------------
 
-- Make sure to have **Windows Phone Emulator** selected in the top drop-down menu.
-- Hit the green **play button** beside the Windows Phone Emulator drop-down menu to start debugging or press F5.
+- Make sure **Windows Phone Emulator** is selected in the main drop-down menu.
+- Press the green **play** button next to the drop-down menu to start debugging, or else type __F5__.
 
     ![](img/guide/getting-started/windows-phone-7/wprun.png)
     ![](img/guide/getting-started/windows-phone-7/wpfirstrun.PNG)
@@ -99,11 +99,11 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 6. Build your project for the device
 ------------------------------------
 
-In order to test your application on a device, the device must be registered. Click [here](http://msdn.microsoft.com/en-us/library/gg588378(v=VS.92).aspx) to read documentation on deploying and testing on your Windows Phone.
+To test your application on a device, the device must be registered. MSDN provides [documentation](http://msdn.microsoft.com/en-us/library/gg588378(v=VS.92).aspx) to help deploy and test your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
 - In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
-- Hit the green **play button** beside the drop-down menu to start debugging or press F5.
+- Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
     ![](img/guide/getting-started/windows-phone-7/wpd.png)
 

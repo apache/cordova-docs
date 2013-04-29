@@ -19,6 +19,6 @@
 #
 -->
 
-Project Settings for Bada 
+Project Settings for Bada
 ===================================
 
