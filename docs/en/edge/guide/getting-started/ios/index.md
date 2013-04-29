@@ -26,7 +26,6 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Requirements ###
 
-
 - **Intel-based Computer with Mac® OS X® Lion or greater (10.7.4+)** 
     The Apple® tools required for building iOS applications run only on the OS X operating system. The version of the development environment required, Xcode® 4.5, runs only on Mac OS X version 10.7 (Lion) or greater.   
 - **Xcode 4.5 and iOS 6 SDK**
@@ -40,7 +39,6 @@ Apache Cordova is a library used to create native mobile applications using Web 
     1. Open Xcode
     2. Select the following via the Xcode Menus:  **Xcode Preferences> Downloads>Command Line Tools**.  This will download and install copies of the core command line tools and system headers into system folders on your computer.
 
-
 - **iOS Device**
 
     You can test many of the Cordova features using the iOS simulator that is installed with the iOS SDK and Xcode, but you will need an actual device to fully test all of the device features used in your applications before submitting to the App Store.  The device must have at least iOS 5.x installed - this is the minimum iOS version supported as of Cordova 2.3.  Devices that support at least iOS 5 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd Generation or later.           In addition, to install apps onto a device, you must be a member of the [iOS Developer Program](https://developer.apple.com/programs/ios/) from Apple.  The program costs $99 per year. This Getting Started guide documents deploying the application to the iOS simulator so registration with the developer program is not required.
@@ -53,7 +51,6 @@ Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordo
 ### Extract Cordova
 
 To access the code it will need to be extracted from the archive (.zip) file.
-
 
 1. Navigate to the folder where you downloaded the code.  Find the cordova-X.Y.Z-src.zip file.   
     Note: The file names change with each new version of Cordova.  The file name will be different if you are using an updated or newer version of Cordova. 
@@ -279,7 +276,6 @@ Determine where on your system you will locate the Xcode project files for your 
         <body onload=”onLoad();”>
         .....
 
-
 ###Code Your Application
 
   Replace the sample code in the www directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be index.html (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the www directory are permitted.  Note that the www directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
@@ -300,7 +296,6 @@ Determine where on your system you will locate the Xcode project files for your 
 
 ### Apple
 
-
   Some of these references are within the Apple iOS Developer Reference and require an iOS Developer License. 
 
   - [Start Developing iOS Apps Today](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343) provides a quick overview of steps for developing iOS Apps. 
@@ -316,7 +311,6 @@ Determine where on your system you will locate the Xcode project files for your 
   - Cordova API documentation is available at [http://docs.cordova.io](http://docs.cordova.io) 
   - [PhoneGap google group](https://groups.google.com/forum/?fromgroups=%23!forum/phonegap) to discuss and ask questions about Cordova.  This forum is monitored by Cordova developers as well as users.  When posting please include the platform, device type, Cordova version and as many details as possible about the error or problem.  
   - File Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
-
 
 ### Credits
     

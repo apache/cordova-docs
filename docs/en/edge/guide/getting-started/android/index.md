@@ -22,12 +22,12 @@ Getting Started with Android
 
 This guide describes how to set up your development environment for Cordova and run a sample application.
 
-1. Minimum Requirements for Development
----------------
+## 1. Minimum Requirements for Development ##
+
 - Identical to [Android Minimum Requirements](http://developer.android.com/sdk/index.html)
 
-1.1 Supported Android Devices
--------------------------------
+## 1.1 Supported Android Devices ##
+
 - Android 2.1 (Deprecated May 2013)
 - Android 2.2
 - Android 2.3
@@ -36,15 +36,12 @@ This guide describes how to set up your development environment for Cordova and 
 
 We currently do not support Android 1.x, and we plan to deprecate platforms in the future as they are updated and dip below 5% on the [distribution dashboard](http://developer.android.com/about/dashboards/index.html) provided by Google.
 
-2. Install SDK + Cordova
-------------------------
+## 2. Install SDK + Cordova ##
 
 - Download and install [Android SDK](http://developer.android.com/sdk/index.html)
 - Download the latest copy of [Cordova](http://cordova.apache.org/#download) and extract its contents. We will be working with the Android directory.
 
-
-3A. Setup your PATH environment variable on Mac OS
----------------------------------------
+## 3A. Setup your PATH environment variable on Mac OS ##
 
 - Open the Terminal program (this is in your Applications/Utilites folder by default).
 - Run the following command
@@ -63,8 +60,7 @@ We currently do not support Android 1.x, and we plan to deprecate platforms in t
 
 - Now everytime you open the Terminal program you PATH will included the Android SDK.
 
-3B. Setup your PATH environment variable on Windows
----------------------------------------
+## 3B. Setup your PATH environment variable on Windows ##
 
 - From the Desktop, right-click My Computer and click Properties.
 - Click Advanced System Settings link in the left column.
@@ -79,9 +75,7 @@ We currently do not support Android 1.x, and we plan to deprecate platforms in t
 - Additionally, you may need to include `%JAVA_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `java`. If the program can not be found add `%JAVA_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%JAVA_HOME%` environment variable.
 - Finally, you may need to include `%ANT_HOME%\bin` to your PATH as well. To check to see if this is required, run a command prompt and type `ant`. If the program can not be found add `%ANT_HOME%\bin` to the PATH. You may need to specify the full path instead of using the `%ANT_HOME%` environment variable.
 
-
-4. Setup New Project
---------------------
+## 4. Setup New Project ##
 
 - In a terminal window, navigate to the `bin` directory within the `android` subfolder of the Cordova distribution.
 - Type in `./create <project_folder_path> <package_name> <project_name>` then press **"Enter"**
@@ -106,8 +100,7 @@ If your project has a red X indicating there is a problem follow these additiona
 - Then from the Project menu bar item select Clean.
 - This should correct all the errors in the project.
 
-5A. Deploy to Emulator
-----------------------
+## 5A. Deploy to Emulator ##
 
 - Right click the project and go to **Run As &gt; Android Application**
 - Eclipse will ask you to select an appropriate AVD. If there isn't one, then you'll need to create it.
@@ -121,9 +114,7 @@ If your project has a red X indicating there is a problem follow these additiona
 - Create a new AVD with the Target set to an Intel image.
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
-
-5B. Deploy to Device
---------------------
+## 5B. Deploy to Device ##
 
 - Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the [Android Developer Site](http://developer.android.com/tools/device.html)
 - Right click the project and go to **Run As &gt; Android Application**

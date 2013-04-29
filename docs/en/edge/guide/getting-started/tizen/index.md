@@ -22,20 +22,17 @@ Getting Started with Tizen
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-1. Requirements
----------------
+## 1. Requirements ##
 
 - Linux Ubuntu 10.04/10.10/11.04/11.10 32-bit, Windows XP SP3/7 32-bit.
 
-2. Install SDK + Cordova
--------------------------
+## 2. Install SDK + Cordova ##
 
 - Download and install the [Tizen SDK](https://developer.tizen.org/sdk).
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the tizen directory.
 - (optional) Install Tizen Cordova template projects: copy the `/templates` directory content into you Tizen Eclipse IDE web templates directory (e.g: `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
-3. Setup New Project
---------------------
+## 3. Setup New Project ##
 
 - **Method #1: Import a Cordova Tizen project sample**
     - Launch Tizen Eclipse IDE
@@ -72,8 +69,8 @@ This guide describes how to set up your development environment for Cordova and 
 
     - Your project should now have been created and appear **Project Explorer** view
 
-4. Hello World
---------------
+## 4. Hello World ##
+
 - To build your project:
 
     - **Right Click** your project in the **Project Explorer** view and Select **Build Project**
@@ -84,16 +81,13 @@ This guide describes how to set up your development environment for Cordova and 
 
     - **Note** that the provided samples Tizen Cordova projects are not basic hello world applications. They contain a simple example usage of the Battery Cordova API.
 
-
-5A. Deploy to Simulator
------------------------
+## 5A. Deploy to Simulator ##
 
 - **Right Click** your project in the **Project Explorer** view and Select **Run As** and **Tizen Web Simulator Application**
 
     ![](img/guide/getting-started/tizen/runas_web_sim_app.png)
 
-5B. Deploy to Device/Emulator
---------------------
+## 5B. Deploy to Device/Emulator ##
 
 - Make sure that your target device is properly launched/connected/configured ("Date and Time" settings must have been set correctly)
 - Select your application deployment target with the **Connection Explorer** view (Select **Window** Menu -> **Show View** -> **Connection Explorer** )

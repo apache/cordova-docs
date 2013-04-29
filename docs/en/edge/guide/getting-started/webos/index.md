@@ -22,21 +22,16 @@ Getting Started with WebOS
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-Video Tutorials:
-----------------
+## Video Tutorials: ##
 
 - [Cordova and HP Palm webOS quick start video](http://www.youtube.com/v/XEnAUbDRZfw?autoplay=1)
 - [How to convert iPhone app to a Palm](http://www.youtube.com/v/wWoJfQw79XI?autoplay=1)
 
-
-1. Requirements
----------------
+## 1. Requirements ##
 
 - Windows, OS X, or Linux
 
-
-2. Install SDK + Cordova
-----------------------------
+## 2. Install SDK + Cordova ##
 
 - Download and install [Virtual Box](http://www.virtualbox.org/)
 - Download and install [WebOS SDK](http://developer.palm.com/index.php?option=com_content&view=article&layout=page&id=1788&Itemid=321/)
@@ -46,27 +41,20 @@ Video Tutorials:
 - Download and install Command Line Tools for XCode (OSX only); this can be done by going to XCode's Preferences -> Downloads -> Components and then click install on Command Line Tools
 
  
-3. Setup New Project
---------------------
+## 3. Setup New Project ##
 
 - Open up terminal/cygwin and navigate to where you extracted your Cordova Download. Go into the webOS directory.
 
-
-4. Hello World
---------------
+## 4. Hello World ##
 
 In phonegap/webOS/framework/www, open up index.html with your favourite editor. After the body tag add `<h1>Hello World</h1>`
 
-
-5A. Deploy to Simulator
------------------------
+## 5A. Deploy to Simulator ##
 
 - Open up your Palm Emulator from your applications folder/start menu.
 - Type `make` in your terminal/cygwin while in the webOS directory.
 
-
-5B. Deploy to Device
---------------------
+## 5B. Deploy to Device ##
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
 - Type `make` in your terminal/cygwin while in the webOS directory.

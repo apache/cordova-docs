@@ -24,8 +24,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 During development of Windows 8 and Windows RT, Microsoft deprecated the name "Metro-style apps". On MSDN, this type of app is now called a "Windows Store" app. That's the name that we'll use in this guide. Also in this guide whenever we refer to Windows 8, you should take that to mean both Windows 8 and Windows RT.
 
-1. Requirements
----------------
+## 1. Requirements ##
 
 - Windows 8
 
@@ -33,14 +32,12 @@ During development of Windows 8 and Windows RT, Microsoft deprecated the name "M
 
 Follow the instructions [here](http://www.windowsstore.com/) to submit your apps Windows Store.
 
-2. Install SDK + Cordova
-----------------------------
+## 2. Install SDK + Cordova ##
 
 - Setup your preferred variant of Visual Studio 2012. All of the paid versions of the product (Professional, etc) let you build Windows Store apps. To build Windows Store apps using the [Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products), you will need **Express for Windows 8**.
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder **lib\windows-8**.
 
-3. Setup New Project
---------------------
+## 3. Setup New Project ##
 
 You can already build Windows 8 apps using the "HTML/JavaScript track" available in Windows Store apps. The purpose of Cordova in Windows Store apps is to expose the same APIs used on all the other Cordova platforms.
 
@@ -89,9 +86,7 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 
 	</body>
 
-
-5. Test the Project
--------------------------------
+## 5. Test the Project ##
 
 - Run the project from Visual Studio. You'll see the message box appear.
 

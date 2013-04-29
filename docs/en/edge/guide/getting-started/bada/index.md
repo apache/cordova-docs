@@ -22,21 +22,18 @@ Getting Started with Bada
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-1. Requirements
----------------
+## 1. Requirements ##
 
 - Windows
 - You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung&apos;s website)
 
-2. Install SDK + Cordova
--------------------------
+## 2. Install SDK + Cordova ##
 
 - Download and install the [Bada SDK](http://developer.bada.com) (Windows only). 
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the bada directory.
 
+## 3. Setup New Project ##
 
-3. Setup New Project
---------------------
 - In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project. 
     - Note: Bada 1.2 select "Bada Application Project"
     
@@ -51,11 +48,9 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/getting-started/bada/bada_project.png)
  
-4. Hello World
---------------
+## 4. Hello World ##
 
 **Bada 2.x**: Your HTML/CSS/Javascript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
-
 
         <link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="osp://webapp/js/webapp_core.js"></script>
@@ -64,8 +59,7 @@ This guide describes how to set up your development environment for Cordova and 
 
         <script type="text/javascript" src="cordova/cordova.js"> </script>
 
-5A. Deploy to Simulator
------------------------
+## 5A. Deploy to Simulator ##
 
 - **Bada 2.x**: Right click on your project s folder and select Run As -&gt; bada Emulator Web Application 
     
@@ -77,8 +71,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
 
-5B. Deploy to Device
---------------------
+## 5B. Deploy to Device ##
 
 - Make sure your device is properly configured 
 
@@ -87,7 +80,6 @@ This guide describes how to set up your development environment for Cordova and 
 **Bada 1.2**:
 - Right click on your project&apos;s folder and select Build configurations -> Set Active -> Target-Debug
 - Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to close the emulator every time you update your app!
-
 
 Done!
 -----
