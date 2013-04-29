@@ -41,7 +41,7 @@ Video Tutorials:
 - Download and install [cygwin SDK](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;layout=page&amp;id=1788&amp;Itemid=321)  (Windows only). Make sure you select `make` as it is not included by default
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `webOS` directory.
 - Download and install XCode from the [Mac App Store](http://itunes.apple.com/ca/app/xcode/id497799835?mt=12) (OSX only)
-- Download and install Command Line Tools for XCode (OSX only); this can be done by going to XCode's Preferences &rarr; Downloads &rarr; Components and then click install on Command Line Tools
+- Download and install Command Line Tools for XCode (OSX only); this can be done by going to __Preferences &rarr; Downloads &rarr; Components__ and then click install on Command Line Tools
 
 3. Set up New Project
 --------------------

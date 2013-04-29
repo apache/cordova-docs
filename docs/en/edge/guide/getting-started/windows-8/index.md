@@ -53,7 +53,7 @@ available in Windows Store apps. Use Cordova in Windows Store apps to
 expose the same APIs as on other Cordova-supported platforms.
 
 - Open Visual Studio 2012 and choose **New Project**.
-- Select **Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** in this example.
+- Select **Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** as in this example.
 
     ![](img/guide/getting-started/windows-8/wsnewproject.PNG)
 

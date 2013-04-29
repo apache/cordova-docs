@@ -65,22 +65,22 @@ This guide describes how to set up your development environment for Cordova and 
 5A. Deploy to Simulator
 -----------------------
 
-- **Bada 2.x**: Right-click on your project s folder and select Run As -&gt; bada Emulator Web Application
+- **Bada 2.x**: Right-click on your project's folder and select __Run As &rarr; bada Emulator Web Application__
 
     ![](img/guide/getting-started/bada/bada_1_run.png)
 
-- **Bada 1.2**: Right-click on your project' folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug
+- **Bada 1.2**: Right-click on your project' folder and select __Build configurations &rarr; Set Active &rarr; Simulator-Debug--__
 
     ![](img/guide/getting-started/bada/bada_set_target.png)
 
-- Right-click on your project's folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
+- Right-click on your project's folder and select __Run As &rarr; bada Simulator Application__. Note that you need to close the emulator every time you update your app.
 
 5B. Deploy to Device
 --------------------
 
 - Make sure your device is properly configured
 
-**Bada 2.x**: Right-click on your project's folder and select Run As -&gt; bada Target Web Application
+**Bada 2.x**: Right-click on your project's folder and select __Run As &rarr; bada Target Web Application__
 
 **Bada 1.2**:
 - Right-click on your project's folder and select __Build configurations &rarr; Set Active &rarr; Target-Debug__
