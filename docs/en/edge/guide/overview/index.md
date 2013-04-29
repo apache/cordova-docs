@@ -25,13 +25,11 @@ to use standard web technologies such as HTML5, CSS3, and JavaScript
 for cross-platform development, avoiding each mobile platforms' native
 development language.  Applications execute as a WebView within a
 native wrapper, and rely on standards-compliant Cordova API bindings
-to access the device's sensors, data, and network status.
+to access each device's sensors, data, and network status.
 
-Cordova also offers features
-
-PhoneGap is a product offering that relies on the Cordova framework.
-Its PhoneGap Build service provides a way to build applications
-remotely without having to run local tools.
+PhoneGap is a product offering based on the Cordova framework.  Its
+PhoneGap Build service provides an additional way to build
+applications remotely without having to run local tools.
 
 Use Cordova if you are:
 
@@ -40,12 +38,25 @@ Use Cordova if you are:
   platform's language and tool set.
 
 * a web developer and want to deploy a web app that's packaged for
-  distribution in app store portals.
+  distribution in various app store portals.
 
-* a developer who wants to blend
+* a mobile developer interested in deploying a WebView that can access
+  device-level APIs.
 
+There are several different ways to use Cordova, depending on the kind
+of tools and workflow you prefer. They all allow you to create new
+projects, then rebuild them and preview them with an emulator:
 
-How Do You Use It?
----------------------
+* a single command-line interface (CLI) that allows you to specify all
+  the mobile platforms you want to cover.
 
-There are several ways to build
+* a PhoneGap Build service that allows you to build cross-platform
+  projects remotely.
+
+* a set of command-line tools targeted for each mobile platform.
+
+* as plug-ins to traditional IDE development environments.
+
+The cross-platform command-line tools and PhoneGap build service offer
+the quickest way overall to deploy a project, but IDEs offer the most
+control to target applications for each platform.
