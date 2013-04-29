@@ -243,7 +243,7 @@ references the deprecated invokeString API:
   2. In the Derived Data section click the Advanced button and select Unique as the Build Location as shown:
 ![](img/guide/getting-started/ios/xcode_build_location.png)
 
-  This is the default setting for a new Xcode install but it may have been set differently if you upgraded from an older version of Xcode.
+  This is the default setting for a new Xcode install, but it may be set differently if you upgraded from an older version of Xcode.
 
 ## Next Steps
 

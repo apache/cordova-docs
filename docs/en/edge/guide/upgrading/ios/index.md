@@ -170,7 +170,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 25. Locate the **VERSION** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **Create groups for any added folders** radiobutton, then select the **Finish** button
 27. Select the **VERSION** file that you just dragged in a previous step
-28. Press the **Option-Command-1** key combination to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+28. Type the **Option-Command-1** key combination to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
 29. Choose **Relative to CORDOVALIB** in the **File Inspector** for the drop-down menu for **Location**
 30. Set the Xcode preference **Xcode Preferences -> Locations -> Derived Data -> Advanced...** to **Unique** (this is so the unified headers can be found)
 31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **Build Settings** tab
@@ -212,8 +212,8 @@ __NOTE:__ 1.9.0 supports the new **BackupWebStorage** boolean `Cordova.plist` se
 If you intend on using the **Capture API**, you will need the new **iPad retina-display** assets:
 
 1.  **Copy** the `Resources/Capture.bundle` item from the new project into your project folder, over-writing your existing `Resources/Capture.bundle` item
-2.  In your project, select the `Capture.bundle` item into Xcode into your Project Navigator, and press the **Delete** key, then select **Remove Reference** from the dialog that pops up.
-3.  Drag the new `Capture.bundle` from Step 1. above into Xcode into your Project Navigator, and select the **Create groups for any added folders** radio button
+2.  In your project, select the `Capture.bundle` item into your Project Navigator in Xcode, type the **Delete** key, then select **Remove Reference** from the resulting dialog.
+3.  Drag the new `Capture.bundle` from Step 1 above into your Project Navigator in Xcode, then select the **Create groups for any added folders** radio button
 
 ## Upgrading Cordova 1.6.x projects to 1.7.0 ##
 
@@ -252,16 +252,16 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 3. **Copy** the **www/cordova-1.5.0.js** file from the new project into your **www** folder, and delete your **www/phonegap-1.4.x.js** file
 4. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new Cordova **cordova-1.5.0.js** file
 5. Find `PhoneGap.framework` in your Project Navigator, select it
-6. Press the **Delete** key and delete the `PhoneGap.framework` reference in the Project Navigator
-7. Press the **Option-Command-A** key combination, which should drop down a sheet to add files to your project (the **Add Files...** sheet). Make sure the **Created groups for any added folders** radio button is selected
-8. Press the **Shift-Command-G** key combination, which should drop down another sheet for you to go to a folder (the **Go to the folder:** sheet)
+6. Type the **Delete** key and delete the `PhoneGap.framework` reference in the Project Navigator
+7. Type the **Option-Command-A** key combination, which should drop down a sheet to add files to your project (the **Add Files...** sheet). Make sure the **Created groups for any added folders** radio button is selected
+8. Type the **Shift-Command-G** key combination, which should drop down another sheet for you to go to a folder (the **Go to the folder:** sheet)
 9. Enter **/Users/Shared/Cordova/Frameworks/Cordova.framework** in the **Go to the folder:** sheet and then press the **Go** button
 10. Press the **Add** button in the **Add Files...** sheet
 11. Select `Cordova.framework` in the Project Navigator
-12. Press the **Option-Command-1** key combination to show the **File Inspector**
+12. Type the **Option-Command-1** key combination to show the **File Inspector**
 13. Choose **Absolute Path** in the **File Inspector** for the drop-down menu for **Location**
-14. Press the **Option-Command-A** key combination, which should drop down a sheet to add files to your project (the **Add Files...** sheet). Make sure the **Created groups for any added folders** radio button is selected
-15. Press the **Shift-Command-G** key combination, which should drop down another sheet for you to go to a folder (the **Go to the folder:** sheet)
+14. Type the **Option-Command-A** key combination, which should drop down a sheet to add files to your project (the **Add Files...** sheet). Make sure the **Created groups for any added folders** radio button is selected
+15. Type the **Shift-Command-G** key combination, which should drop down another sheet for you to go to a folder (the **Go to the folder:** sheet)
 16. Enter **~/Documents/CordovaLib/Classes/deprecated** in the **Go to the folder:** sheet and then press the **Go** button
 17. Press the **Add** button in the **Add Files...** sheet
 18. In your **AppDelegate.h, AppDelegate.m, and MainViewController.h** files - replace the whole **#ifdef PHONEGAP_FRAMEWORK** block with:

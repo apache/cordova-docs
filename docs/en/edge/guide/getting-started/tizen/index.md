@@ -55,14 +55,14 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/getting-started/tizen/project_explorer.png)
 
-    - Your project should now have been imported and appear **Project Explorer** view
+    - Your project should now be imported and appear in the **Project Explorer** view
 
 - **Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates**
     - Launch Tizen Eclipse IDE
     - Select  **File &rarr; New &rarr; Tizen Web Project**
     - Select **User Template** and **User defined** items
     - Select one of the Tizen Cordova template (e.g: **CordovaBasicTemplate**)
-    - Fill-up the **Project name** and its target **Location**
+    - Fill the **Project name** and its target **Location**
 
     ![](img/guide/getting-started/tizen/project_template.png)
 
@@ -70,7 +70,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/getting-started/tizen/project_explorer.png)
 
-    - Your project should now have been created and appear **Project Explorer** view
+    - Your project should now appear in the **Project Explorer** view
 
 4. Hello World
 --------------
@@ -80,7 +80,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/getting-started/tizen/build_project.png)
 
-    - A widget package should have been generated in your project root directory (e.g: `cordova-basic.wgt`)
+    - A widget package should be generated in your project root directory (e.g: `cordova-basic.wgt`)
 
     - __NOTE:__ The provided samples Tizen Cordova projects are not basic hello world applications. They contain a simple example usage of the Battery Cordova API.
 
@@ -94,7 +94,7 @@ This guide describes how to set up your development environment for Cordova and 
 5B. Deploy to Device/Emulator
 --------------------
 
-- Make sure that your target device is properly launched/connected/configured. __Date and Time__ settings must have been set correctly.
+- Make sure that your target device is properly launched, connected and configured. Its __Date and Time__ settings must be set correctly.
 - Select your application deployment target with the **Connection Explorer** view (Select **Window &rarr; Show View &rarr; Connection Explorer**.)
 
     ![](img/guide/getting-started/tizen/connection_explorer.png)

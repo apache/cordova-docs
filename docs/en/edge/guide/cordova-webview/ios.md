@@ -45,7 +45,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
 4. **Copy** the `config.xml` file into your project folder on disk (see **Prerequisites** above)
 5. **Drag and drop** the `config.xml` file into the Project Navigator of Xcode
-6. **Choose** the **Create groups for any added folders** radio button, and press **Finish**
+6. **Choose** the **Create groups for any added folders** radio button and press **Finish**
 7. **Drag and drop** the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the CordovaLib sub-folder)
 8. Select `CordovaLib.xcodeproj` in the Project Navigator
 9. Type the **Option-Command-1** key combination to show the **File Inspector**
@@ -122,10 +122,10 @@ Using CDVViewController in your code
 Adding your HTML, CSS and JavaScript assets
 -------------------------------------------
 
-1. Create a **new folder** in your project **on disk**, for example, name it `www`
-2. Put your **HTML, CSS and JavaScript assets** into this folder
-3. **Drag and drop** the folder into the Project Navigator of Xcode
-4. **Choose** the **Create folder references for any added folders** radio button
+1. Create a **new folder** in your project **on disk**, `www` for example.
+2. Put your **HTML, CSS and JavaScript** assets into this folder.
+3. **Drag and drop** the folder into the Project Navigator of Xcode.
+4. **Choose** the **Create folder references for any added folders** radio button.
 5. **Set the appropriate `wwwFolderName` and `startPage` properties** for the folder you created in **(1)** or use the defaults (see previous section) when you instantiate the `CDVViewController`.
 
         /*
