@@ -239,8 +239,8 @@ references the deprecated invokeString API:
 
   Some users have encountered compilation errors relating to missing headers.  This refers to a problem in the build location and is fixed via Xcode preferences.
 
-  1.  Within the Xcode menus select **Xcode>Preferences>Locations**.
-  2. In the Derived Data section click the Advanced button and select Unique as the Build Location as shown:
+  1.  Within the Xcode menus select **Xcode &rarr; Preferences &rarr; Locations**.
+  2. In the __Derived Data__ section click the __Advanced__ button and select __Unique__ as the __Build Location_ as shown:
 ![](img/guide/getting-started/ios/xcode_build_location.png)
 
   This is the default setting for a new Xcode install, but it may be set differently if you upgraded from an older version of Xcode.
@@ -251,7 +251,7 @@ references the deprecated invokeString API:
 
   **Include Cordova**
 
-  All of the code for the sample application is contained within the www directory in the Xcode project structure.  The starting page is named index.html.  Any page that uses Cordova must include the cordova-*.js file for the associated Cordova version and platform.  The format of the JavaScript file name is cordova-x.y.z where x represents the major version number, y the minor version and z any point release.  For example, the Cordova 2.2.0 file was named cordova-2.2.0.js.   The sample HelloWorld application includes this file from index.html.
+  All of the code for the sample application is contained within the `www` directory in the Xcode project structure.  The starting page is named index.html.  Any page that uses Cordova must include the cordova-*.js file for the associated Cordova version and platform.  The format of the JavaScript file name is cordova-x.y.z where x represents the major version number, y the minor version and z any point release.  For example, the Cordova 2.2.0 file was named cordova-2.2.0.js.   The sample HelloWorld application includes this file from index.html.
 
       <script type="text/javascript" src="cordova-2.2.0.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
@@ -261,9 +261,9 @@ references the deprecated invokeString API:
 
   **Wait for deviceReady Event**
 
-  When loading a page, Cordova’s deviceReady event must fire before you can access any of the platform features via the Cordova JavaScript APIs.  Within the sample application this is set up within the app object found within the js/index.js file. The app.initialze() call at the bottom of the index.html file (visible in the previous code example) sets in motion the binding of events to receive and respond to the deviceReady event.
+  When loading a page, Cordova’s `deviceReady` event must fire before you can access any of the platform features via the Cordova JavaScript APIs.  Within the sample application this is set up within the app object found within the js/index.js file. The app.initialze() call at the bottom of the `index.html` file (visible in the previous code example) sets in motion the binding of events to receive and respond to the `deviceReady` event.
 
-  Another common method of initializing a page is to add an event listener for the deviceReady event within the handler for the body onload event as shown in the code snippet below:
+  Another common way to initialize a page is to add a `deviceReady` event listener from the body's `onload` event handler as shown below:
 
       <head>
         <script type="text/javascript" src="cordova-x.x.x.js"></script>
@@ -290,7 +290,7 @@ references the deprecated invokeString API:
 
 ###Code Your Application
 
-  Replace the sample code in the www directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be index.html (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the www directory are permitted.  Note that the www directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
+  Replace the sample code in the `www` directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be `index.html` (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the `www` directory are permitted.  Note that the `www` directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
 
   You can use many mobile JavaScript frameworks with Cordova  to create the UI and page navigation of your application.  Popular ones include:
 

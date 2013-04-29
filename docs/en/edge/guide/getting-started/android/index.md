@@ -67,11 +67,11 @@ platforms are deprecated as they dip below 5% on Google's
 3B. Set up your PATH environment variable on Windows
 ---------------------------------------
 
-- From the Desktop, right-click My Computer and click Properties.
-- Click Advanced System Settings link in the left column.
-- In the System Properties window, click the Environment Variables button.
+- From the Desktop, right-click __My Computer__ and click __Properties__.
+- Click the __Advanced System Settings__ link in the left column.
+- In the __System Properties__ window, click the __Environment Variables__ button.
 - Select the PATH variable from the System variables section.
-- Select the Edit button.
+- Select the __Edit__ button.
 - You need to add the path to your Android SDK platform-tools and tools directory. This example uses `C:\Development\android-sdk-windows` as the SDK's install directory. Append the following into the text box:
 
 `;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools`
