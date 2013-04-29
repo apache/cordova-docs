@@ -45,7 +45,7 @@ __NOTE:__ Running in VM does not work well. If you are on a Mac, you need to set
 - Copy the `CordovaStarter-x.x.x.zip` to the `\My Documents\Visual Studio 2010\Templates\ProjectTemplates\` folder.
 (If the template file does not exist, you need to build it as described in 2.1 below.)
 if you have just installed VisualStudio, you should launch it once to create this folder
-if you prefer, you may add the project instead to the "Silverlight for Windows Phone" subfolder of "Visual C#". This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder.
+if you prefer, you may add the project instead to the `Silverlight for Windows Phone` subfolder of `Visual C#`. This is up to you, and only affects where the project template is shown when creating a new project. Also, You may need to create this folder.
 
 2.1. Building the template
 -----------------------------

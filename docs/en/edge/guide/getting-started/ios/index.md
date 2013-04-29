@@ -190,7 +190,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 ### Deprecation Warnings
 
 When an application programming interface (API) is changed or replaced
-by another API, it is marked as "deprecated."  The API still works in
+by another API, it is marked as _deprecated_.  The API still works in
 the near term, but is eventually removed.  Some of these deprecated
 interfaces are reflected in Apache Cordova, and Xcode issues warnings
 about them when you build and deploy an application.  The Xcode

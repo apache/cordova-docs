@@ -31,7 +31,7 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 
 1. **DisallowOverscroll (boolean, defaults to false)** - set to true if you don't want the WebView to rubber-band
 
-2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are "whiteLarge", "white" and "gray"
+2. **TopActivityIndicator (string, defaults to 'gray')** - this is the top spinning throbber in the status/battery bar, valid values are `whiteLarge`, `white`, and `gray`
 
 3. **EnableLocation (boolean, defaults to false)** - set to true, to initialize the Geolocation plugin at start-up (so the fix on your location can be more accurate) **DEPRECATED**: please set the **onload** attribute of the **Geolocation** plugin to **true** instead.
 

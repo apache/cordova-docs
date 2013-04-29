@@ -25,10 +25,10 @@ environment and run a sample application.  Note that Cordova used to
 be called PhoneGap, so some of the sites still use the old PhoneGap
 name.
 
-Microsoft deprecated the name "Metro-style apps" in Windows 8 and
-Windows RT. MSDN now refers to this type of app as a "Windows Store"
+Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
+Windows RT. MSDN now refers to this type of app as a _Windows Store_
 app, and this guide follows that convention. Also, in this guide
-"Windows 8" signifies both Windows 8 and Windows RT.
+_Windows 8_ signifies both Windows 8 and Windows RT.
 
 1. Requirements
 ---------------
@@ -48,20 +48,22 @@ Follow the instructions [here](http://www.windowsstore.com/) to submit your apps
 3. Set up New Project
 --------------------
 
-You can already build Windows 8 apps using the "HTML/JavaScript track" available in Windows Store apps. The purpose of Cordova in Windows Store apps is to expose the same APIs used on all the other Cordova platforms.
+You can already build Windows 8 apps using the _HTML/JavaScript track_
+available in Windows Store apps. Use Cordova in Windows Store apps to
+expose the same APIs as on other Cordova-supported platforms.
 
 - Open Visual Studio 2012 and choose **New Project**.
-- Select **Installed - Template - Other Languages - JavaScript - Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** in this example.
+- Select **Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** in this example.
 
     ![](img/guide/getting-started/windows-8/wsnewproject.PNG)
 
-- Microsoft continues to use `default.html` as the default home page, but most web developers use `index.html`. (Plus it's likely that in the other platform variants of your project you are using `index.html` as the name of your default page.) To fix this, in Solution Explorer rename the `default.html` file to `index.html`. Then double-click the **package.appxmanifest** file and change the **Start page** value to **index.html**.
+- Microsoft continues to use `default.html` as the default home page, but most web developers use `index.html`. (Plus it's likely that in the other platform variants of your project you are using `index.html` as the name of your default page.) To fix this, in Solution Explorer rename the `default.html` file to `index.html`. Then double-click the `package.appxmanifest` file and change the **Start page** value to `index.html`.
 
 	![](img/guide/getting-started/windows-8/wschangemanifest.PNG)
 
-- To include **cordova.js** in your project, right-click on the **js** folder in Solution Explorer and select **Add - New Item**. Locate the **cordova.js** file in the **lib\windows-8** folder noted above.
+- To include `cordova.js` in your project, right-click on the **js** folder in Solution Explorer and select **Add &rarr; New Item**. Locate the `cordova.js` file in the **lib\windows-8** folder noted above.
 
-- Edit the code for **index.html**. Add a reference to **cordova.js**. You can do this manually, or by dragging the file from Solution Explorer.
+- Edit the code for `index.html`. Add a reference to `cordova.js`. You can do this manually, or by dragging the file from Solution Explorer.
 
 ### Adding the reference...
 	    <!-- WinJS references -->

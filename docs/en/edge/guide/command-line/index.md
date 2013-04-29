@@ -212,10 +212,9 @@ and then choose 'no' when prompted with:
 
 ### Logging
 
-Unfortunately streaming logs directly from the device is not
-supported at this time. However, BlackBerry offers built-in Web
-Inspector support for Playbook and BlackBerry smartphone devices running
-BlackBerry OS 7.0 and above. Additionally, you can access your
-application's logs (including any calls to `console.log`) on your device
-by holding down the ALT key from the home screen and hitting "lglg"
-keys.
+Unfortunately, streaming logs directly from the device is currently
+unsupported. However, BlackBerry offers built-in Web Inspector support
+for Playbook and BlackBerry smartphone devices running BlackBerry OS
+7.0 and above. You can also access your application's logs (including
+any calls to `console.log`) on your device by holding down the ''ALT''
+key from the home screen and typing ''lglg'' keys.

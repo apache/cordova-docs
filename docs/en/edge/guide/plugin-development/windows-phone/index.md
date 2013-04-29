@@ -26,10 +26,10 @@ application JavaScript code and manages native API calls. There is a BaseCommand
 (`WP7CordovaClassLib.Cordova.Commands.BaseCommand`) class in C# which you can extend,
 and it comes with the majority of the 'plumbing' built for you already.
 
-1. Select your project, and right click choose 'Add -> New Item ...'
+1. Select your project, and right-click to choose __Add &rarr; New Item...__
     - Preferably add it to the 'Plugins' folder, but it is up to you
 2. Select 'Class' and name it `Echo.cs`
-    - The name of this class must EXACTLY match what you call into `cordova.exec(win, fail, "Echo", ...)`
+    - The name of this class must _exactly_ match what you call into `cordova.exec(win, fail, "Echo", ...)`
 3. Include the base classes implementation
 
         using WPCordovaClassLib.Cordova;

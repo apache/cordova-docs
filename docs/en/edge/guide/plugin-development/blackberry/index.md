@@ -120,7 +120,7 @@ and [str] are the arguments we are passing in.
 
 So if we look at the code above, we can see that within the execute
 method, we are first looking for what actions are coming in. The Echo
-plugin has only one action, "echo", so we will be only checking for
+plugin has only one action, `echo`, so we will be only checking for
 that. If our plugin had more actions, it's simply a matter of adding
 more conditional tests to check for those actions.
 

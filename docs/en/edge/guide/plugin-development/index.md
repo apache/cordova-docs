@@ -50,7 +50,7 @@ thing you _must_ use to communicate between the Cordova JavaScript
                  "action", ["firstArgument", "secondArgument", 42,
                  false]);
 
-The parameters explained in more detail:
+The parameters are detailed below:
 
 1. `function(winParam) {}` - Success function callback. Assuming your
    `exec` call completes successfully, this function is invoked

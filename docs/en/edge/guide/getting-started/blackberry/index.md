@@ -130,14 +130,14 @@ BlackBerry PlayBook
 BlackBerry Smartphone (OS5-7)
 - `./cordova/run blackberry`
 
-Answer "n" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
+When prompted __Do you have a BlackBerry device connected to your computer? (y/n)__, answer __n__.
 
 The application is installed to the simulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
 
 7B.  Deploy to Device (Windows and Mac)
 --------------------------------------
 
-To deploy your app to a device you must have registered for, and setup BlackBerry Code Signing Keys.  See section 3 for details. Also, to deploy apps on BlackBerry 10 or PlayBook, the device must be set to Development Mode which can be enabled from the Settings > Security menu.
+To deploy your app to a device you must have registered for, and setup BlackBerry Code Signing Keys.  See section 3 for details. Also, to deploy apps on BlackBerry 10 or PlayBook, the device must be set to Development Mode which can be enabled from the __Settings &rarr; Security__ menu.
 
 - Open the project.properties file with your favorite editor and customize the following properties:
 
@@ -167,7 +167,7 @@ BlackBerry PlayBook
 BlackBerry Smartphone (OS5-7)
 - `./cordova/run blackberry`
 
-Answer "y" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
+When prompted __Do you have a BlackBerry device connected to your computer? (y/n)__, answer __y__.
 
 The application is installed to the device's home screen. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
 

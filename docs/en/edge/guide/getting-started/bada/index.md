@@ -26,7 +26,7 @@ This guide describes how to set up your development environment for Cordova and 
 ---------------
 
 - Windows
-- You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung&apos;s website)
+- You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung's website)
 
 2. Install SDK + Cordova
 -------------------------
@@ -36,55 +36,55 @@ This guide describes how to set up your development environment for Cordova and 
 
 3. Set up New Project
 --------------------
-- In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project.
-    - __NOTE:__ Bada 1.2 select "Bada Application Project"
+- In Bada IDE, select __File &rarr; Import project &rarr; Bada C++ / Flash Project__.
+    - __NOTE:__ In Bada 1.2 select __Bada Application Project__
 
     ![](img/guide/getting-started/bada/import_bada_project.png)
 
-- Make sure "Select root directory" is checked and then click Browse
-- Browse to Cordova bada project folder (bada for 1.2 and bada-wac for 2.x) and select it. Make sure "Copy projects into workspace is checked"
+- Make sure __Select root directory__ is checked, then click __Browse__
+- Browse to the Cordova bada project folder (bada for 1.2 and bada-wac for 2.x) and select it. Make sure __Copy projects into workspace__ is checked.
 
     ![](img/guide/getting-started/bada/import_bada_project.png)
 
-- Click "Finish"
+- Click __Finish__
 
     ![](img/guide/getting-started/bada/bada_project.png)
 
 4. Hello World
 --------------
 
-**Bada 2.x**: Your HTML/CSS/JavaScript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
+**Bada 2.x**: Your HTML/CSS/JavaScript code lives under the `Res/` folder. Make sure your `index.html` contains the following two lines in the `<head>` section:
 
         <link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="osp://webapp/js/webapp_core.js"></script>
 
-**Bada 1.2**: Your HTML/CSS/JavaScript code lives under the Res/ folder. Make sure your index.html contains the following line.
+**Bada 1.2**: Your HTML/CSS/JavaScript code lives under the `Res/` folder. Make sure your `index.html` contains the following line:
 
         <script type="text/javascript" src="cordova/cordova.js"> </script>
 
 5A. Deploy to Simulator
 -----------------------
 
-- **Bada 2.x**: Right click on your project s folder and select Run As -&gt; bada Emulator Web Application
+- **Bada 2.x**: Right-click on your project s folder and select Run As -&gt; bada Emulator Web Application
 
     ![](img/guide/getting-started/bada/bada_1_run.png)
 
-- **Bada 1.2**: Right click on your project&apos; folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug
+- **Bada 1.2**: Right-click on your project' folder and select Build configurations -&gt; Set Active -&gt; Simulator-Debug
 
     ![](img/guide/getting-started/bada/bada_set_target.png)
 
-- Right click on your project&apos;s folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
+- Right-click on your project's folder and select Run As -&gt; bada Simulator Application. You need to close the emulator every time you update your app!
 
 5B. Deploy to Device
 --------------------
 
 - Make sure your device is properly configured
 
-**Bada 2.x**: Right click on your project&apos;s folder and select Run As -&gt; bada Target Web Application
+**Bada 2.x**: Right-click on your project's folder and select Run As -&gt; bada Target Web Application
 
 **Bada 1.2**:
-- Right click on your project&apos;s folder and select Build configurations -> Set Active -> Target-Debug
-- Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to close the emulator every time you update your app!
+- Right-click on your project's folder and select __Build configurations &rarr; Set Active &rarr; Target-Debug__
+- Right-click on your project's folder and select __Run As &rarr; bada Target Application__. You need to close the emulator every time you update your app!
 
 Done!
 -----

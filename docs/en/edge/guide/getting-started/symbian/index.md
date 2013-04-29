@@ -37,7 +37,7 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 2. Install SDK + Cordova
 -------------------------
 
-- Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select "make" as it is not included by default
+- Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select `make` as it is not included by default.
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the Android directory.
 
 3. Set up New Project
@@ -48,9 +48,9 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 4. Hello World
 --------------
 
-- Open up index.html located in phonegap/symbian/framework/www with your favourite editor.
-- In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
-- In cygwin/terminal, type `make`. This produces a `phonegap-symbian.wrt/app.wgz` file.
+- Edit the `index.html` file located in `phonegap/symbian/framework/www`.
+- In the `body` tag, remove the line `Build your phonegap app here! Dude!` and add the line `<h1>Hello World</h1>`
+- In `cygwin/terminal`, type `make`. This produces a `phonegap-symbian.wrt/app.wgz` file.
 
 5A. Deploy to Simulator
 -----------------------

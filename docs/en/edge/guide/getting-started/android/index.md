@@ -53,12 +53,12 @@ platforms are deprecated as they dip below 5% on Google's
 
 `touch ~/.bash_profile; open ~/.bash_profile`
 
-- You need to add the path to your Android SDK platform-tools and tools directory. This example uses "/Development/android-sdk-macosx" as the SDK's install directory. Add the following line:
+- You need to add the path to your Android SDK `platform-tools` and `tools` directory. This example uses `/Development/android-sdk-macosx` as the SDK's install directory. Add the following line:
 
 `export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools`
 
 - Save the file and quit the text editor.
-- Execute your .bash_profile to update your PATH.
+- Execute your `.bash_profile` to update your PATH.
 
 `source ~/.bash_profile`
 
@@ -69,7 +69,7 @@ platforms are deprecated as they dip below 5% on Google's
 
 - From the Desktop, right-click My Computer and click Properties.
 - Click Advanced System Settings link in the left column.
-- In the System Properties window click the Environment Variables button.
+- In the System Properties window, click the Environment Variables button.
 - Select the PATH variable from the System variables section.
 - Select the Edit button.
 - You need to add the path to your Android SDK platform-tools and tools directory. This example uses `C:\Development\android-sdk-windows` as the SDK's install directory. Append the following into the text box:
@@ -90,26 +90,26 @@ platforms are deprecated as they dip below 5% on Google's
         <package_name> is the package name, e.g. com.YourCompany.YourAppName
         <project_name> is the project name, e.g. YourApp (Must not contain spaces and dashes)
 
-- If you're getting an 'An unexpected error occurred" error, try the command again prefixed with `sudo`
+- If you get an __An unexpected error occurred__ error, try the command again prefixed with `sudo`
 
 - Launch Eclipse, and select menu item **New Project**:
     ![](img/guide/getting-started/android/eclipse_new_project.png)
 - Select the directory you used for `<project_folder_path>`
 - Click Finish.
 
-If your project has a red X indicating there is a problem follow these additional steps:
+If your project has a red __X__ indicating there is a problem follow
+these additional steps:
 
-- Right click on the project folder.
-- In the Properties dialog that is displayed select Android from the navigation pane.
-- For the project build target select the highest Android API level you have installed.
-- Click OK
-- Then from the Project menu bar item select Clean.
-- This should correct all the errors in the project.
+- Right-click on the project folder.
+- In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
+- For the project build target, select the highest Android API level you have installed.
+- Click __OK__
+- Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
 5A. Deploy to Emulator
 ----------------------
 
-- Right click the project and go to **Run As &gt; Android Application**
+- Right-click the project and go to **Run As &gt; Android Application**
 - Eclipse asks you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 __NOTE:__ For a faster experience, use an Intel-based emulator image.
@@ -125,5 +125,5 @@ __NOTE:__ For a faster experience, use an Intel-based emulator image.
 --------------------
 
 - Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the [Android Developer Site](http://developer.android.com/tools/device.html)
-- Right click the project and go to **Run As &gt; Android Application**
+- Right-click the project and go to **Run As &gt; Android Application**
 
