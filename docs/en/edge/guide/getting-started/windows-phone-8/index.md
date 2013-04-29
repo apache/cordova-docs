@@ -51,14 +51,12 @@ __NOTE:__ Applications built with Apache Cordova for Windows Phone 8 run only on
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
-
 2. Install SDK + Cordova
 ----------------------------
 
 - Download and install [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8` subfolder.
 - copy the file CordovaWP8AppFull-x.x.x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
-
 
 2.1. Building the template
 -----------------------------
@@ -73,7 +71,6 @@ In order to simplify the development process, Cordova comes with a Visual Studio
 - Optionally, you may add a description, icon image, and preview image.  These  display in Visual Studio's __New Project__ dialog.
 - __NOTE:__ If you select __Automatically import the template...__, then you don't need to copy the `.zip` file over as outlined in step 2.
 - Press __Finish__
-
 
 2.2 About the different templates
 --------------------
@@ -112,7 +109,6 @@ choose __do not include in project__.
 ![](img/guide/getting-started/windows-phone-8/FullTemplate.PNG)
 ![](img/guide/getting-started/windows-phone-8/StandAloneTemplate.PNG)
 
-
 4. Review the project structure
 -------------------------------
 
@@ -121,7 +117,6 @@ choose __do not include in project__.
 
 ![](img/guide/getting-started/windows-phone-8/projectStructure.PNG)
 
-
 5. Build and Deploy to Emulator
 -------------------------------
 
@@ -129,7 +124,6 @@ choose __do not include in project__.
 - Press the green **play** button next to the drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/getting-started/windows-phone-8/BuildEmulator.PNG)
-
 
 6. Build your project for the device
 ------------------------------------
@@ -142,7 +136,6 @@ In order to test your application on a device, the device must be registered. Cl
 
 ![](img/guide/getting-started/windows-phone-8/BuildDevice.PNG)
 
-
 Done!
 -----
 
@@ -150,6 +143,4 @@ Further Reading
 -------
 
 For more details on the specific differences between IE10 and WebKit browsers, and how to support both MS has a helpful [guide here](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
-
-
 

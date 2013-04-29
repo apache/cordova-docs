@@ -53,7 +53,6 @@ There is *no* designated initializer for plugins. Instead, plugins should use th
 
 Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the JavaScript.
 
-
 ## Writing an iOS Cordova Plugin
 
 We have JavaScript fire off a plugin request to the native side. We have the iOS Objective-C plugin mapped properly via the `config.xml` file. So what does the final iOS Objective-C Plugin class look like?
@@ -149,7 +148,6 @@ application folder:
 
     @end
 
-
 Let's take a look at the code. At the top we have all of the necessary Cordova imports. Our class extends from `CDVPlugin` - very important.
 
 This plugin only supports one action, the `echo` action. First, we
@@ -185,7 +183,6 @@ call, you should use a background thread. For example:
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }];
     }
-
 
 ## Advanced Plugin Functionality
 

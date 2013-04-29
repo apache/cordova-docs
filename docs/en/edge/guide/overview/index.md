@@ -44,7 +44,6 @@ Use Cordova if you are:
 
 * a developer who wants to blend
 
-
 How Do You Use It?
 ---------------------
 

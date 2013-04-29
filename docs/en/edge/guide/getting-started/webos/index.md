@@ -28,12 +28,10 @@ Video Tutorials:
 - [Cordova and HP Palm webOS quick start video](http://www.youtube.com/v/XEnAUbDRZfw?autoplay=1)
 - [How to convert iPhone app to a Palm](http://www.youtube.com/v/wWoJfQw79XI?autoplay=1)
 
-
 1. Requirements
 ---------------
 
 - Windows, OS X, or Linux
-
 
 2. Install SDK + Cordova
 ----------------------------
@@ -45,18 +43,15 @@ Video Tutorials:
 - Download and install XCode from the [Mac App Store](http://itunes.apple.com/ca/app/xcode/id497799835?mt=12) (OSX only)
 - Download and install Command Line Tools for XCode (OSX only); this can be done by going to XCode's Preferences -> Downloads -> Components and then click install on Command Line Tools
 
-
 3. Set up New Project
 --------------------
 
 - Open up terminal/cygwin and navigate to where you extracted your Cordova Download. Go into the webOS directory.
 
-
 4. Hello World
 --------------
 
 Edit `phonegap/webOS/framework/www/index.html`, adding `<h1>Hello World</h1>` after the `<body>` tag.
-
 
 5A. Deploy to Simulator
 -----------------------
@@ -64,13 +59,11 @@ Edit `phonegap/webOS/framework/www/index.html`, adding `<h1>Hello World</h1>` af
 - Open up your Palm Emulator from your applications folder/start menu.
 - Type `make` in your terminal/cygwin while in the webOS directory.
 
-
 5B. Deploy to Device
 --------------------
 
 - Make sure your device is in [Developer Mode and plug it in.](http://developer.palm.com/index.php?option=com_content&amp;view=article&amp;id=1552&amp;Itemid=59#dev_mode)
 - Type `make` in your terminal/cygwin while in the webOS directory.
-
 
 Done!
 -----

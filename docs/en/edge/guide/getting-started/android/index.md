@@ -45,7 +45,6 @@ platforms are deprecated as they dip below 5% on Google's
 
 - Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download). You will be working in the `android` directory.
 
-
 3A. Set up your PATH environment variable on Mac OS
 ---------------------------------------
 
@@ -80,7 +79,6 @@ platforms are deprecated as they dip below 5% on Google's
 - Save your edit and close the Environment Variables dialog.
 - You may also need to include `%JAVA_HOME%\bin` to your PATH. To check if this is required, open a command prompt and type `java`. Add `%JAVA_HOME%\bin` to the PATH if the program can't be found. You may need to specify the full path instead of the `%JAVA_HOME%` environment variable.
 - Finally, you may also need to include `%ANT_HOME%\bin` to your PATH. To check if this is required, open a command prompt and type `ant`. Add `%ANT_HOME%\bin` to the PATH if the program can't be found. You may need to specify the full path instead of the `%ANT_HOME%` environment variable.
-
 
 4. Set up New Project
 --------------------
@@ -122,7 +120,6 @@ __NOTE:__ For a faster experience, use an Intel-based emulator image.
 - Run the Intel installer, which has been downloaded to: `extras/intel/Hardware_Accelerated_Execution_Manager` within your Android SDK
 - Create a new AVD with the Target set to an Intel image.
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
-
 
 5B. Deploy to Device
 --------------------

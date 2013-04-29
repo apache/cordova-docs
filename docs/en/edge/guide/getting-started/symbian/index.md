@@ -27,7 +27,6 @@ Video Tutorials:
 
 - [Cordova Installer - Xcode 4 Template](http://www.youtube.com/v/R9zktJUN7AI?autoplay=1)
 
-
 1. Requirements
 ---------------
 
@@ -35,19 +34,16 @@ Video Tutorials:
 
 There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGap-Symbian-%28Qt%29) and [Symbian with Sony Ericsson](http://wiki.phonegap.com/w/page/16494782/Getting-Started-with-PhoneGap-Symbian-(WRT-on-Sony-Ericsson)) guides.
 
-
 2. Install SDK + Cordova
 -------------------------
 
 - Download and install [cygwin](http://www.cygwin.com/setup.exe) (Windows only). Make sure you select "make" as it is not included by default
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the Android directory.
 
-
 3. Set up New Project
 --------------------
 
 - In cygwin, navigate to where you extracted Cordova and go into the Symbian directory</li>
-
 
 4. Hello World
 --------------
@@ -56,7 +52,6 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - In the `body` tag, remove the line `"Build your phonegap app here! Dude!"` and add the line `<h1>Hello World</h1>`
 - In cygwin/terminal, type `make`. This produces a `phonegap-symbian.wrt/app.wgz` file.
 
-
 5A. Deploy to Simulator
 -----------------------
 
@@ -64,12 +59,10 @@ There are also [QT for Symbian](http://wiki.phonegap.com/w/page/16494811/PhoneGa
 - For Windows you can download the [S60 SDK](http://www.forum.nokia.com/info/sw.nokia.com/id/ec866fab-4b76-49f6-b5a5-af0631419e9c/S60_All_in_One_SDKs.html) which includes the S60 Emulator
 - Load the phonegap-symbian.wrt/app.wgz file into the emulator.
 
-
 5B. Deploy to Device
 --------------------
 
 - Load the phonegap-symbian.wrt/app.wgz file into the device using bluetooth or email.
-
 
 Done!
 -----

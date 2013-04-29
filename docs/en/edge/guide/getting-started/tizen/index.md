@@ -84,7 +84,6 @@ This guide describes how to set up your development environment for Cordova and 
 
     - **Note** that the provided samples Tizen Cordova projects are not basic hello world applications. They contain a simple example usage of the Battery Cordova API.
 
-
 5A. Deploy to Simulator
 -----------------------
 

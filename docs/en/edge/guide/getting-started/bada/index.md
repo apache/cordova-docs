@@ -34,7 +34,6 @@ This guide describes how to set up your development environment for Cordova and 
 - Download and install the [Bada SDK](http://developer.bada.com) (Windows only).
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `bada` directory.
 
-
 3. Set up New Project
 --------------------
 - In Bada IDE, select _File_ -> Import project -> Bada C++ / Flash Project.
@@ -55,7 +54,6 @@ This guide describes how to set up your development environment for Cordova and 
 --------------
 
 **Bada 2.x**: Your HTML/CSS/JavaScript code lives under the Res/ folder. Make sure your index.html contains the following two lines in the <head> section.
-
 
         <link href="osp://webapp/css/style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="osp://webapp/js/webapp_core.js"></script>
@@ -87,7 +85,6 @@ This guide describes how to set up your development environment for Cordova and 
 **Bada 1.2**:
 - Right click on your project&apos;s folder and select Build configurations -> Set Active -> Target-Debug
 - Right click on your project&apos;s folder and select Run As -> bada Target Application. You need to close the emulator every time you update your app!
-
 
 Done!
 -----

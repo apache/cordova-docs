@@ -84,7 +84,6 @@ Run the `create` command with the following parameters:
 
     $ /path/to/my_new_cordova_project/cordova/log
 
-
 ## Android
 
 The Android command-line tools are built upon shell scripts. You _must_
@@ -150,7 +149,6 @@ or, on **Windows**
 or, on **Windows**
 
     $ /path/to/my_new_cordova_project/cordova/release.bat
-
 
 ## BlackBerry
 

@@ -95,7 +95,6 @@ You can already build Windows 8 apps using the "HTML/JavaScript track" available
 
 	</body>
 
-
 5. Test the Project
 -------------------------------
 

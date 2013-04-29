@@ -28,7 +28,6 @@ WebWorks applications can ONLY be deployed to the following BlackBerry platforms
 * BlackBerry PlayBook
 * BlackBerry 10 (QNX)
 
-
 1.  Requirements
 ---------------
 
@@ -40,7 +39,6 @@ WebWorks applications can ONLY be deployed to the following BlackBerry platforms
     - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
     - Mac OS X: Apache Ant is bundled with Java install.
 
-
 2.  Install the WebWorks SDK
 -------------------------
 Download and install the appropriate WebWorks SDKs for your development. BlackBerry 10, BlackBerry PlayBook, and BlackBerry Smartphone WebWorks SDKs can all be downloaded from the following locations.  Please note that BlackBerry PlayBook development requires the Adobe Air SDK as well.
@@ -48,7 +46,6 @@ Download and install the appropriate WebWorks SDKs for your development. BlackBe
 - [BlackBerry 10 (QNX) SDK] (https://developer.blackberry.com/html5/download/#blackberry10)
 - [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) & [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
 - [BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)
-
 
 3.  Register for Signing Keys
 -------------------------
@@ -58,12 +55,10 @@ To register for Signing Keys visit, and complete the [BlackBerry Keys Order Form
 
 Once you receive your Signing Keys, they'll need to be setup. To learn how to setup your Signing Keys visit the [BlackBerry HTML5/WebWorks website](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html).
 
-
 4.  Install Cordova
 -------------------------
 
 Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download).
-
 
 5.  Set up New Project
 --------------------
@@ -83,7 +78,6 @@ BlackBerry PlayBook
 BlackBerry Smartphone (OS5-7)
 - `blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager`
 
-
 6.  Hello World
 --------------
 
@@ -97,7 +91,6 @@ BlackBerry PlayBook
 
 BlackBerry Smartphone (OS5-7)
 - `./cordova/build blackberry`
-
 
 7A.  Deploy to Simulator
 --------------------------------------
@@ -140,7 +133,6 @@ BlackBerry Smartphone (OS5-7)
 Answer "n" when prompted "Do you have a BlackBerry device connected to your computer? (y/n)"
 
 The application is installed to the simulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
-
 
 7B.  Deploy to Device (Windows and Mac)
 --------------------------------------

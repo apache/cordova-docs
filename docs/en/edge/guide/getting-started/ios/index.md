@@ -26,7 +26,6 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Requirements ###
 
-
 - **Intel-based Computer with Mac® OS X® Lion or greater (10.7.4+)**
     The Apple® tools required for building iOS applications run only on the OS X operating system. The version of the development environment required, Xcode® 4.5, runs only on Mac OS X version 10.7 (Lion) or greater.
 - **Xcode 4.5 and iOS 6 SDK**
@@ -39,7 +38,6 @@ Apache Cordova is a library used to create native mobile applications using Web 
     Cordova uses the command line to create a new application project.  To access the Xcode tools from the command line an additional download is required.  The tools are downloaded from within Xcode.
     1. Open Xcode
     2. Select the following via the Xcode Menus:  **Xcode Preferences> Downloads>Command Line Tools**.  This downloads and installs copies of the core command-line tools and system headers into your computer's system folders.
-
 
 - **iOS Device**
 
@@ -97,7 +95,6 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
   Three parameters are required to creating a Cordova project from the command line, in this order:
 
     1. **project location**
-
 
       This directory is where the Xcode project and application files are to be located. This tutorial uses `~/Documents/CordovaXY` as the base location (with 'X' and 'Y' representing the Cordova version number) and the `HelloWorld` application name as the project directory.  Since the command creates the final `HelloWorld` directory, it must not already exist.
 
@@ -291,7 +288,6 @@ references the deprecated invokeString API:
         <body onload=”onLoad();”>
         .....
 
-
 ###Code Your Application
 
   Replace the sample code in the www directory of a new project with the HTML, JavaScript and CSS code for your application.  The name of the initial file to load when the app is launched should be index.html (advanced users can change this if necessary).  As demonstrated in the HelloWorld sample application, subdirectories within the www directory are permitted.  Note that the www directory is readonly, you can not write information to this directory during app execution.  If you need to store information use the Cordova File or Storage APIs.
@@ -312,7 +308,6 @@ references the deprecated invokeString API:
 
 ### Apple
 
-
   Some of these references are within the Apple iOS Developer Reference and require an iOS Developer License.
 
   - [Start Developing iOS Apps Today](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343) provides a quick overview of steps for developing iOS Apps.
@@ -328,7 +323,6 @@ references the deprecated invokeString API:
   - Cordova API documentation is available at [http://docs.cordova.io](http://docs.cordova.io)
   - [PhoneGap google group](https://groups.google.com/forum/?fromgroups=%23!forum/phonegap) to discuss and ask questions about Cordova.  This forum is monitored by Cordova developers as well as users.  When posting please include the platform, device type, Cordova version and as many details as possible about the error or problem.
   - File Cordova bugs at [https://issues.apache.org/jira/browse/CB](https://issues.apache.org/jira/browse/CB)
-
 
 ### Credits
 

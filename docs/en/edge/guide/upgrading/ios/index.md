@@ -133,7 +133,6 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-
 ## Upgrading Cordova 1.9.0 projects to 2.0.0 ##
 
 1. **Install** Cordova 2.0.0
@@ -207,7 +206,6 @@ in `Cordova.plist`. By default, this setting is enabled, so set it to
 Safari and UIKit
 Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
-
 ## Upgrading Cordova 1.7.0 projects to 1.8.x ##
 
 1. **Install** Cordova 1.8.0
@@ -250,7 +248,6 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 12. Click on the **project icon** in the Project Navigator, select your **Project**, then select the **"Build Settings"** tab
 13. Enter **"Compiler for C/C++/Objective-C"** in the search field
 14. Select the **"Apple LLVM Compiler 3.1"** value
-
 
 ## Upgrading Cordova 1.4.x projects to 1.5.0 ##
 

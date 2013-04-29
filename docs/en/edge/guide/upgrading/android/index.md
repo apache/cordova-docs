@@ -20,7 +20,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading Cordova Android
 =========================
 
-
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
 ## Upgrade to 2.5.0 from 2.4.0 ##
@@ -44,7 +43,6 @@ This document is for people who need to upgrade their Cordova versions from an o
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
 7. Copy files from bin/templates/cordova to the cordova directory in your project
 
-
 ## Upgrade to 2.3.0 from 2.2.0 ##
 
 1. Remove cordova-2.2.0.jar from the libs directory in your project
@@ -65,7 +63,6 @@ This document is for people who need to upgrade their Cordova versions from an o
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
 7. Copy files from bin/templates/cordova to the cordova directory in your project
 
-
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
 1. Remove cordova-2.0.0.jar from the libs directory in your project
@@ -75,7 +72,6 @@ This document is for people who need to upgrade their Cordova versions from an o
 5. Update your HTML to use the new cordova-2.1.0.js file
 6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
 7. Copy files from bin/templates/cordova to the cordova directory in your project
-
 
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
@@ -113,7 +109,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 5. Update your HTML to use the new cordova-1.8.1.js file
 6. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
 
-
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
 1. Remove cordova-1.7.0.jar from the libs directory in your project
@@ -123,9 +118,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 5. Update your HTML to use the new cordova-1.8.0.js file
 6. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
 
-
-
-
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
 1. Remove cordova-1.7.0.jar from the libs directory in your project
@@ -134,7 +126,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 4. Copy the new cordova-1.8.0.js into your project
 5. Update your HTML to use the new cordova-1.8.0.js file
 6. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
-
 
 ## Upgrade to 1.7.0 from 1.6.1 ##
 
@@ -143,7 +134,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 3. If you are using Eclipse, please refresh your eclipse project and do a clean
 4. Copy the new cordova-1.7.0.js into your project
 5. Update the res/xml/plugins.xml to be the same as the one found in framework/res/xml/plugins.xml
-
 
 ## Upgrade to 1.6.1 from 1.6.0 ##
 
@@ -161,7 +151,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 5. Update your HTML to use the new cordova-1.6.0.js file
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 7. Replace the res/xml/phonegap.xml with res/xml/cordova.xml so that it is the same as the one found in framework/res/xml/cordova.xml
-
 
 ## Upgrade to 1.5.0 from 1.4.0##
 1. Remove phonegap-1.4.0.jar from the libs directory in your project
@@ -181,7 +170,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
 
-
 ## Upgrade to 1.3.0 from 1.2.0 ##
 1. Remove phonegap-1.2.0.jar from the libs directory in your project
 2. Add phonegap-1.3.0.jar to the libs directory in your project
@@ -190,7 +178,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 5. Update your HTML to use the new phonegap-1.2.0.js file
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
-
 
 ## Upgrade to 1.2.0 from 1.1.0 ##
 1. Remove phonegap-1.1.0.jar from the libs directory in your project
@@ -201,7 +188,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 7. Update the res/xml/phonegap.xml so that it is the same as the one found in framework/res/xml/phonegap.xml
 
-
 ## Upgrade to 1.1.0 from 1.0.0 ##
 1. Remove phonegap-1.0.0.jar from the libs directory in your project
 2. Add phonegap-1.1.0.jar to the libs directory in your project
@@ -210,7 +196,6 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 5. Update your HTML to use the new phonegap-1.1.0.js file
 6. Update the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
 
-
 ## Upgrade to 1.0.0 from 0.9.6 ##
 1. Remove phonegap-0.9.6.jar from the libs directory in your project
 2. Add phonegap-1.0.0.jar to the libs directory in your project
@@ -218,5 +203,4 @@ getContext() or getActivity().  If you are not an experienced Android developer,
 4. Copy the new phonegap-1.0.0.js into your project
 5. Update your HTML to use the new phonegap-1.0.0.js file
 6. Add the res/xml/plugins.xml so that it is the same as the one found in framework/res/xml/plugins.xml
-
 

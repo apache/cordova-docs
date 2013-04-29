@@ -118,7 +118,6 @@ __NOTE:__ origins specified without a protocol, such as
 `www.apache.org` rather than `http://www.apache.org`, default to all
 of the `http`, `https`, `ftp`, and `ftps` schemes.
 
-
 ### Syntax
 
 Wildcards on iOS (`*`) are more flexible than the [W3C Widget Access][1] specification.

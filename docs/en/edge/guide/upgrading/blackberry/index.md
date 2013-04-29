@@ -44,7 +44,6 @@ Updating just the www folder:
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
-
 Updating the sample folder (ie, updating using the ant tools):
 
 1. Open the `sample/lib/` folder.
@@ -65,9 +64,6 @@ Updating the sample folder (ie, updating using the ant tools):
 
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
          <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
-
-
 
 - To upgrade to 1.8.0, please go from 1.7.0
 
@@ -92,7 +88,6 @@ Updating just the www folder:
 
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
-
 
 Updating the sample folder (ie, updating using the ant tools):
 

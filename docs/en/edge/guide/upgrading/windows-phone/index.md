@@ -84,7 +84,6 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
-
 ## Upgrade to 1.9.0 from 1.8.0 ##
 
 ### In Visual Studio's Solution Explorer window:
@@ -95,7 +94,6 @@ There have been considerable changes to the WP7 project structure in Apache Cord
     - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
 5. Copy the new cordova-1.9.0.js into your project ( be sure it is marked as Content )
 6. Update your HTML to use the new cordova-1.9.0.js file.
-
 
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
