@@ -33,8 +33,8 @@ If `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY` or `Camera.Pictur
 
 The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
 
-- A `String` containing the Base64 encoded photo image (default). 
-- A `String` representing the image file location on local storage.  
+- A `String` containing the Base64 encoded photo image.
+- A `String` representing the image file location on local storage (default).
 
 You can do whatever you want with the encoded image or URI, for example:
 
