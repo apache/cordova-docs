@@ -15,8 +15,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
          under the License.
+
 ---
 
-Command-line Deployment Primer
-==============================
+PhoneGap Build Primer
+======================
 
