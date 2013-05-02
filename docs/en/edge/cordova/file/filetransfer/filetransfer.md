@@ -62,35 +62,34 @@ __Parameters:__
 - __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
-	
-    // !! Assumes variable fileURI contains a valid URI to a text file on the device
-	
-  	var win = function(r) {
-        console.log("Code = " + r.responseCode);
-        console.log("Response = " + r.response);
-        console.log("Sent = " + r.bytesSent);
-	}
-	
-    var fail = function(error) {
-        alert("An error has occurred: Code = " + error.code);
-        console.log("upload error source " + error.source);
-        console.log("upload error target " + error.target);
-    }
-	
-	var options = new FileUploadOptions();
-	options.fileKey="file";
-	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-	options.mimeType="text/plain";
 
-  var params = {};
-	params.value1 = "test";
-	params.value2 = "param";
-		
-	options.params = params;
-	
-	var ft = new FileTransfer();
-    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+    // !! Assumes variable fileURI contains a valid URI to a text file on the device
     
+    var win = function(r) {
+      console.log("Code = " + r.responseCode);
+      console.log("Response = " + r.response);
+      console.log("Sent = " + r.bytesSent);
+    }
+    var fail = function(error) {
+      alert("An error has occurred: Code = " + error.code);
+      console.log("upload error source " + error.source);
+      console.log("upload error target " + error.target);
+    }
+    
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+    options.mimeType="text/plain";
+
+    var params = {};
+    params.value1 = "test";
+    params.value2 = "param";
+    
+    options.params = params;
+    
+    var ft = new FileTransfer();
+    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+
 __Full Example__
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
