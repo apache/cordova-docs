@@ -99,7 +99,7 @@ if you prefer, you may add the project instead to the "Silverlight for Windows P
 6. Build your project for the device
 ------------------------------------
 
-In order to test your application on a device, the device must be registered. Click [here](http://msdn.microsoft.com/en-us/library/gg588378(v=VS.92).aspx) to read documentation on deploying and testing on your Windows Phone.
+In order to test your application on a device, the device must be registered. Click [here](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx) to read documentation on deploying and testing on your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
 - In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.

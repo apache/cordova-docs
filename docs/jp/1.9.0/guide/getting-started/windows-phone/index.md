@@ -85,7 +85,7 @@ Getting Started with Windows Phone
 6. デバイスのためにプロジェクトをビルド
 ------------------------------------
 
-デバイスでアプリをテストするためには、デバイスは登録されていなければなりません。 [ここ](http://msdn.microsoft.com/en-us/library/gg588378(v=VS.92).aspx) をクリックし、 Windows Phone へのデプロイとテストに関するドキュメントを読んでください。
+デバイスでアプリをテストするためには、デバイスは登録されていなければなりません。 [ここ](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx) をクリックし、 Windows Phone へのデプロイとテストに関するドキュメントを読んでください。
 
 - デバイスが接続され、スクリーンがアンロックなことを確認します
 - Visual Studio で、上部のドロップダウンメニューから 'Windows Phone Device' を選択します
