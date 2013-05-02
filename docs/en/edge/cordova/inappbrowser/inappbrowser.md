@@ -35,6 +35,8 @@ Methods
 - addEventListener
 - removeEventListener
 - close
+- executeScript
+- insertCSS
 
 Permissions
 -----------
