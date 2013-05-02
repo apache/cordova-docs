@@ -120,7 +120,7 @@ Click [here](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff4025
 - In Visual Studio, select 'Device' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
-![](img/guide/getting-started/windows-phone-8/BuildDevice.png)
+![](img/guide/getting-started/windows-phone-7/wpd.png)
 
 
 Done!

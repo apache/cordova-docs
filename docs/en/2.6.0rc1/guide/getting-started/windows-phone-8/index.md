@@ -122,7 +122,7 @@ In order to test your application on a device, the device must be registered. Cl
 - In Visual Studio, select 'Device' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
-![](img/guide/getting-started/windows-phone-8/BuildDevice.PNG)
+![](img/guide/getting-started/windows-phone-7/wpd.png)
 
 
 Done!
