@@ -22,12 +22,13 @@ notification.prompt
 
 Shows a customizable prompt dialog box.
 
-    navigator.notification.prompt(message, promptCallback, [title], [buttonLabels])
+    navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
 
 - __message:__ Dialog message (`String`)
 - __promptCallback:__ - Callback to invoke when a button is pressed (`Function`)
 - __title:__ Dialog title (`String`) (Optional, Default: "Prompt")
 - __buttonLabels:__ Array of strings for the button labels (`Array`) (Optional, Default: ["OK","Cancel"])
+- __defaultText:__ Default textbox input value (`String`) (Optional, Default: "Default text")
 
 Description
 -----------
@@ -65,7 +66,8 @@ Quick Example
             'Please enter your name',  // message
             onPrompt,	               // callback to invoke
             'Registration',            // title
-            ['Ok','Exit']              // buttonLabels
+            ['Ok','Exit'],             // buttonLabels
+            'Jane Doe'                 // defaultText
         );
     }
 
@@ -102,7 +104,8 @@ Full Example
                 'Please enter your name',  // message
                 onPrompt,                  // callback to invoke
                 'Registration',            // title
-                ['Ok','Exit']              // buttonLabels
+                ['Ok','Exit'],             // buttonLabels
+                'Jane Doe'                 // defaultText
             );
         }
 
