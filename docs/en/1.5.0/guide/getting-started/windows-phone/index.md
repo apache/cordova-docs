@@ -54,7 +54,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 - Select **PhoneGapStarter**.
 - Give your project a name, and select OK.
 
-    ![](img/guide/getting-started/windows-phone/wpnewproj.PNG)
+    ![](img/guide/getting-started/windows-phone/wpnewproj.png)
 
  
 4. Review the project structure
@@ -63,7 +63,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 - The 'www' folder contains your PhoneGap html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
 
-    ![](img/guide/getting-started/windows-phone/wp7projectstructure.PNG)
+    ![](img/guide/getting-started/windows-phone/wp7projectstructure.png)
 
 
 5. Build and Deploy to Emulator
@@ -73,7 +73,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 - Hit the green **play button** beside the Windows Phone Emulator drop-down menu to start debugging or press F5.
 
     ![](img/guide/getting-started/windows-phone/wprun.png)
-    ![](img/guide/getting-started/windows-phone/wpfirstrun.PNG)
+    ![](img/guide/getting-started/windows-phone/wpfirstrun.png)
 
 
 6. Build your project for the device

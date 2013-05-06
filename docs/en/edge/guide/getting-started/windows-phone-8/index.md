@@ -89,7 +89,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 - Select **CordovaWP8**. ( the version number will be displayed in the template description )
 - Give your project a name, and select OK.
 
-![](img/guide/getting-started/windows-phone-8/StandAloneTemplate.PNG)
+![](img/guide/getting-started/windows-phone-8/StandAloneTemplate.png)
 
  
 4. Review the project structure
@@ -98,7 +98,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
 
-![](img/guide/getting-started/windows-phone-8/projectStructure.PNG)
+![](img/guide/getting-started/windows-phone-8/projectStructure.png)
 
 
 5. Build and Deploy to Emulator
