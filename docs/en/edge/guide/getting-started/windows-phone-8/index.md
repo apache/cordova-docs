@@ -101,6 +101,7 @@ choose __do not include in project__.
 
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
+- Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual version installed.
 
 ![](img/guide/getting-started/windows-phone-8/projectStructure.png)
 
