@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started with iOS
-========================
+# Getting Started with iOS
 
 ## Introduction ##
 

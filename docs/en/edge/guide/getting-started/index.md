@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started Guides
-======================
+# Getting Started Guides
 
 - Getting Started with Android
 - Getting Started with BlackBerry
