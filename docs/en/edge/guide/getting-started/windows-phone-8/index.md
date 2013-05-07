@@ -100,6 +100,8 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 
 ![](img/guide/getting-started/windows-phone-8/projectStructure.PNG)
 
+- Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual Cordova version installed.
+
 
 5. Build and Deploy to Emulator
 -------------------------------
