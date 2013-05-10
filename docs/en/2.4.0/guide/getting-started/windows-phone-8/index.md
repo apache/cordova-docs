@@ -115,7 +115,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 6. Build your project for the device
 ------------------------------------
 
-In order to test your application on a device, the device must be registered. Click [here](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx) to read documentation on deploying and testing on your Windows Phone 8.
+In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
 
 - Make sure your phone is connected, and the screen is unlocked
 - In Visual Studio, select 'Device' from the top drop-down menu.
@@ -132,5 +132,4 @@ Further Reading
 
 For more details on the specific differences between IE10 and WebKit browsers, and how to support both MS has a helpful [guide here](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 
-
-
+[register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx

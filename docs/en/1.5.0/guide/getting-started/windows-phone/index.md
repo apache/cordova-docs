@@ -79,7 +79,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 6. Build your project for the device
 ------------------------------------
 
-In order to test your application on a device, the device must be registered. Click [here](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx) to read documentation on deploying and testing on your Windows Phone.
+In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone.
 
 - Make sure your phone is connected, and the screen is unlocked
 - In Visual Studio, select 'Windows Phone Device' from the top drop-down menu.
@@ -93,3 +93,4 @@ Done!
 
 You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/48672055/Getting%20Started%20with%20PhoneGap%20Windows%20Phone%207).
 
+[register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx

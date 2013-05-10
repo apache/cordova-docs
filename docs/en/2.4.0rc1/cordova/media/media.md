@@ -135,5 +135,9 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
 
 ### Windows Phone Quirks
+
     Only one media file can be played back at a time.
-    There are strict restrictions as to how your application interacts with other media. See http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx     
+
+There are strict restrictions as to how your application interacts with other media. See the [Microsoft documentation for details][url].
+
+[url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx
