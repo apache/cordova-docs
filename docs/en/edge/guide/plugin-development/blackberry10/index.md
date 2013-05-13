@@ -1,39 +1,37 @@
 ---
 license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
+         or more contributor license agreements. See the NOTICE file
          distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
+         regarding copyright ownership. The ASF licenses this file
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+         with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
 
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
          under the License.
 ---
 
-Developing a Plugin on BlackBerry 10
-====================================
+# Developing a Plugin on BlackBerry 10
 
-This is a continuation of the [Plugin Development Guide for Cordova](http://docs.phonegap.com/en/edge/guide_plugin-development_index.md.html#Plugin%20Development%20Guide). Now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
+This is a continuation of the Plugin Development Guide for Cordova. Once you have reviewed that content, now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
 
     window.echo = function(str, callback) {
-        cordova.exec(callback, function(err) {
-            callback('Nothing to echo.');
-        }, "Echo", "echo", [str]);
-    };
+            cordova.exec(callback, function(err) {
+                callback('Nothing to echo.');
+            }, "Echo", "echo", [str]);
+        };
 
-A native plugin for Cordova-BlackBerry has two main parts: native code and JavaScript code. The native and JavaScript parts communicate with each other through a framework provided by JNEXT. Every plugin is composed of a plugin.xml file, and certain JavaScript and C++ files.
+A native BlackBerry WebWorks plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a plugin.xml file.
 
-## Architecture of the plugin
+## Architecture of the plugin ##
 
-You can place the artifacts of the Cordova-BlackBerry plugin, which includes the plugin.xml file, the JavaScript and C++ source files, and the binary files using the following directory structure:
-
+You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we show a typical structure that you can follow:
 
 ***your_project_folder*** (>plugin.xml)
 
@@ -45,7 +43,7 @@ You can place the artifacts of the Cordova-BlackBerry plugin, which includes the
 
 (The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. File names are preceded by the '>' sign.)
 
-## Contents of the plugin.xml file
+## Contents of the plugin.xml file##
 The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:
 
     <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
@@ -64,7 +62,7 @@ The plugin.xml file contains the namespace of the extension and other metadata. 
         </platform>
     </plugin>
 
-## Creating the native part of your plugin
+## Creating the native part of your plugin ##
 The native portion of your plugin must contain the following C++ files:
 
 - ***name*_js.hpp** - C++ header for the JNEXT code.
@@ -144,7 +142,7 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
         return NULL;
     }
 
-## Creating the JavaScript part of your plugin
+##Creating the JavaScript part of your plugin##
 
 The JavaScript portion of your plugin must contain the following files:
 
@@ -152,7 +150,7 @@ The JavaScript portion of your plugin must contain the following files:
 
 - **index.js** – This is considered the server side. Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
 
-The client and server side (client.js and index.js) interacts through the `Cordova.exec `object. So, in client.js you invoke the exec function and provide the necessary arguments. In the Echo plugin, we have the following in the client.js file:
+The client and server side (client.js and index.js) interacts through the `Cordova.exec `function. So, in client.js you invoke the exec function and provide the necessary arguments. In the Echo plugin, we have the following in the client.js file:
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
