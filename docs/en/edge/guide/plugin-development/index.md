@@ -105,6 +105,6 @@ simple Echo Plugin example discussed above.
 - Developing a Plugin on Bada
 - Developing a Plugin on BlackBerry
 - Developing a Plugin on iOS
-- Developing a Plugin on webOS
 - Developing a Plugin on Windows Phone
-- Developing a Plugin on Tizen
+
+The webOS and Tizen platforms currently do not support plugins.
