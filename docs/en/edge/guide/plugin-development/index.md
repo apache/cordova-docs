@@ -106,6 +106,10 @@ this guide.
 - Developing a Plugin on Android
 - Developing a Plugin on Bada
 - Developing a Plugin on BlackBerry
+<<<<<<< HEAD
+=======
+- Developing a Plugin on BlackBerry 10
+>>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 - Developing a Plugin on iOS
 - Developing a Plugin on webOS
 - Developing a Plugin on Windows Phone

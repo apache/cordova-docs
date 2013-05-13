@@ -20,11 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with BlackBerry 10
 ==================================
 
-<<<<<<< HEAD
 Apache Cordova is an application development platform that allows you to use common web technologies—primarily HTML5, JavaScript, and CSS—to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.
-=======
-Apache Cordova is an application development platform that allows you to use common web technologies-—primarily HTML5, JavaScript, and CSS—-to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 Requirements
 ------------
@@ -38,11 +34,7 @@ Cordova for BlackBerry has the following software requirements:
 Setting up your signing keys
 ----------------------------
 
-<<<<<<< HEAD
 Before starting development, you’ll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.
-=======
-Before starting development, you’ll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World.  The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself, however; if you supply the keystore password, the build script will create and install the debug token for you.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 -   [Register for your code signing key now.](https://www.blackberry.com/SignedKeys/codesigning.html)
 -   [Set your computer up for code signing. ](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
@@ -55,56 +47,11 @@ To create a new project, you use the `create` command to set up the folder struc
 
 1.  On the command line, navigate to the folder where you extracted Cordova.
 2.  Run the `create` command using the following syntax:
-<<<<<<< HEAD
     ```
 	bin/create <path-to-project>
 	```
 
 This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
-=======
-    ```bin/create <path-to-project>```
-
-This  command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
-
-Adding and managing plugins
----------------------------
-
-To add additional functionality that is outside of the core features of Cordova, you’ll need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform. For example, the `com.blackberry.bbm.platform` plugin allows you to integrate your app with features of the BBM social platform.
-
-In order to use a plugin, you must first install it into your project. Once installed into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.
-
-Plugins hosted locally must be fetched before they can be installed. Plugins hosted remotely can simply be installed.
-
-###Fetch a locally-hosted plugin
-
-To fetch a locally-hosted plugin, on the command line, type the following command:
-
-```<path-to-project>/cordova/plugin fetch <path-to-plugin>
-```
-
-Once fetched, the plugin can be installed by name, just as a remotely hosted plugin.
-
-###View a list of remote plugins
-
-To view a list of remotely hosted plugins, on the command line, type the following command:
-
-```<path-to-project>/cordova/plugin ls
-```
-
-###Install a plugin
-
-To install a plugin, on the command line, type the following command:
-
-```<path-to-project>/cordova/plugin add <name>
-```
-
-###Remove a plugin
-
-To remove a plugin, on the command line, type the following command:
-
-```<path-to-project>/cordova/plugin rm <name>
-```
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 Adding and managing targets
 ---------------------------
@@ -121,17 +68,10 @@ To add a target, on the command line, type the following command:
 
 where
 
-<<<<<<< HEAD
 -   `<name>`  specifies a unique name for the target.
 -   `<ip-address>`  specifies the ip address of the BlackBerry device or simulator.
 -   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
-=======
--   `<name> `specifies a unique name for the target.
--   `<ip-address> `specifies the ip address of the BlackBerry device or simulator.
--   `-p|--password <password> `specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
--   `--pin <device-pin>` specifies the PIN of the BlackBerry device.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 ###Remove a target
 
@@ -145,12 +85,8 @@ To remove a target, on the command line, type the following command:
 
 To specify a specific target as the default, on the command line, type the following command:
 
-<<<<<<< HEAD
 ```
 <path-to-project>/cordova/target  default  <name>
-=======
-```<path-to-project>/cordova/target  default  <name>
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 ```
 
 Building your app
@@ -187,17 +123,10 @@ To build your app in release mode, on the command line, type the following comma
 
 where
 
-<<<<<<< HEAD
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator and you have not created a default target. Additionally, if `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 -   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools.
 -   `-ll|--loglevel <level>`  specifies the log level. The log level may be one of `error`, `warn`, or `verbose`.
-=======
--   `<target> `specifies the name of a previously added target. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator. If `<target> `is a device, then that device must be connected to your computer by USB connection.
--   `-k|--keystorepass <password> `specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.
--   `-p|--params <params-JSON-file> `specifies a JSON file containing additional parameters to pass to downstream tools.
--   `-ll|--loglevel <level> `specifies the log level. The log level may be one of `error`, `warn`, or `verbose`.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 Note that all of these parameters are optional. If you have previously defined a default target (and installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:
 
@@ -208,15 +137,9 @@ Note that all of these parameters are optional. If you have previously defined a
 Deploying an app
 -------------------------
 
-<<<<<<< HEAD
 You can test your app using either a BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to.
 
 The run script will deploy the most recent build of your app, which may or may not be signed. If you intend to deploy an app to a physical device for testing and you most recently built your app in debug mode, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the build script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator, even if that app is unsigned.
-=======
-You can test an unsigned app using either a BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to.
-
-If you intend to deploy an unsigned app to a physical device for testing, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the build script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
 
 To deploy your app to a device or simulator, on a command line type the following command:
 
@@ -225,7 +148,6 @@ To deploy your app to a device or simulator, on a command line type the followin
 ```
 
 where
-<<<<<<< HEAD
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 
 Adding and managing plugins
@@ -271,6 +193,3 @@ To remove a plugin, on the command line, type the following command:
 <path-to-project>/cordova/plugin rm <name>
 ```
 
-=======
--   `<target> `specifies the name of a previously added target. If `<target> `is a device, than that device must be connected to your computer by USB connection.
->>>>>>> 31853da... Fixed hyperlinks on getting started and plugin dev guides for bb10
