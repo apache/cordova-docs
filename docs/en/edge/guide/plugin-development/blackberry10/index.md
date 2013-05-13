@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 Developing a Plugin on BlackBerry 10
-===================================
+====================================
 
 This is a continuation of the [Plugin Development Guide for Cordova](http://docs.phonegap.com/en/edge/guide_plugin-development_index.md.html#Plugin%20Development%20Guide). Now let's look at things we need to have the Echo plugin for the BlackBerry 10 platform. Recall that the Echo plugin basically returns whatever string a user provides to the `window.echo` function:
 
