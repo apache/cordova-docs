@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Accelerometer
 =============
 
-> Captures device motion in the x, y, and z direction.
+> Captures device motion in the _x_, _y_, and _z_ direction.
 
 Methods
 -------

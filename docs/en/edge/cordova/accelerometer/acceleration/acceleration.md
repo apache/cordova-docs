@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -33,7 +33,10 @@ Properties
 Description
 -----------
 
-This object is created and populated by Cordova, and returned by an `Accelerometer` method. The x, y, z acceleration values include the effect of gravity (9.81 m/s^2), so at when a device is lying flat on a table facing up, the value returned should be x=0, y=0, z=9.81.
+This object is created and populated by Cordova, and returned by an
+`Accelerometer` method. Acceleration values include the effect of
+gravity (9.81 m/s^2), so that when a device lies flat and facing up,
+_x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
 Supported Platforms
 -------------------

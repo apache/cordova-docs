@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,7 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 CameraPopoverOptions
 ====================
 
-Parameters only used by iOS to specify the anchor element location and arrow direction of popover used on iPad when selecting images from the library or album.
+iOS-only parameters that specify the anchor element location and arrow
+direction of the popover when selecting images from an iPad's library
+or album.
 
     { x : 0, 
       y :  32,
@@ -32,15 +34,15 @@ Parameters only used by iOS to specify the anchor element location and arrow dir
 CameraPopoverOptions
 --------------------
 
-- __x:__ x pixel coordinate of element on the screen to anchor popover onto. (`Number`)
+- __x:__ x pixel coordinate of screen element onto which to anchor the popover. (`Number`)
 
-- __y:__ y pixel coordinate of element on the screen to anchor popover onto. (`Number`)
+- __y:__ y pixel coordinate of screen element onto which to anchor the popover. (`Number`)
 
-- __width:__ width, in pixels, of the element on the screen to anchor popover onto. (`Number`)
+- __width:__ width, in pixels, of the screen element onto which to anchor the popover. (`Number`)
 
-- __height:__ height, in pixels, of the element on the screen to anchor popover onto. (`Number`)
+- __height:__ height, in pixels, of the screen element onto which to anchor the popover. (`Number`)
 
-- __arrowDir:__ Direction the arrow on the popover should point.  Defined in Camera.PopoverArrowDirection (`Number`)
+- __arrowDir:__ Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` (`Number`)
         
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
@@ -50,7 +52,10 @@ CameraPopoverOptions
                 ARROW_ANY : 15
             };
   
-Note that the size of the popover may change to adjust to the direction of the arrow and orientation of the screen.  Make sure to account for orientation changes when specifying the anchor element location. 
+Note that the size of the popover may change to adjust to the
+direction of the arrow and orientation of the screen.  Make sure to
+account for orientation changes when specifying the anchor element
+location.
 
 Quick Example
 -------------

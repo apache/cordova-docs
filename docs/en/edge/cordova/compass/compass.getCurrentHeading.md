@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -27,9 +27,12 @@ Get the current compass heading.
 Description
 -----------
 
-The compass is a sensor that detects the direction or heading that the device is pointed.  It measures the heading in degrees from 0 to 359.99.
+The compass is a sensor that detects the direction or heading that the
+device is pointed.  It measures the heading in degrees from 0 to
+359.99.
 
-The compass heading information is returned via a CompassHeading object using the `compassSuccess` callback function.
+The compass heading information is returned via a `CompassHeading`
+object using the `compassSuccess` callback function.
 
 Supported Platforms
 -------------------

@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 accelerometer.clearWatch
 ========================
 
-Stop watching the `Acceleration` referenced by the watch ID parameter.
+Stop watching the `Acceleration` referenced by the `watchID` parameter.
 
     navigator.accelerometer.clearWatch(watchID);
 
