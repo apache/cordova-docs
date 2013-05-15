@@ -27,7 +27,7 @@ This event fires when the user presses the start call button.
 Details
 -------
 
-If you need to override the default start call behaviour you can register an event listener for the 'startcallbutton' event.
+If you need to override the default start call behavior you can register an event listener for the 'startcallbutton' event.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

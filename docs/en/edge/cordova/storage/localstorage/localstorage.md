@@ -117,4 +117,4 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- dot notation is NOT available on Windows Phone 7. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';
+- dot notation is _not_ available on Windows Phone 7. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';

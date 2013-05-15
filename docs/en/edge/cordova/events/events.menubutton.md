@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+  license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -27,8 +27,7 @@ The event fires when the user presses the menu button.
 Details
 -------
 
-If you need to override the default menu button behaviour you can
-register an event listener for the 'menubutton' event.
+Applying an event handler overrides the default menu button behavior.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

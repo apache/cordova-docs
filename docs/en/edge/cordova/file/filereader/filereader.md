@@ -29,7 +29,7 @@ Properties
 - __result:__ The contents of the file that has been read. _(DOMString)_
 - __error:__ An object containing errors. _(FileError)_
 - __onloadstart:__ Called when the read starts. . _(Function)_
-- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
+- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -_not_ SUPPORTED
 - __onload:__ Called when the read has successfully completed. _(Function)_
 - __onabort:__ Called when the read has been aborted. For instance, by invoking the abort() method. _(Function)_
 - __onerror:__ Called when the read has failed. _(Function)_

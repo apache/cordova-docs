@@ -31,7 +31,7 @@ To override the default back-button behavior, register an event
 listener for the `backbutton` event, typically by calling
 `document.addEventListener` once you receive the Cordova `deviceready`
 event.  It is no longer necessary to call any other method to override
-the back-button behaviour.
+the back-button behavior.
 
 Supported Platforms
 -------------------

@@ -27,7 +27,9 @@ This event fires when a Cordova application is put into the background.
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.
+Cordova consists of two code bases: native and JavaScript. When the
+native code puts the application into the background, the pause event
+fires.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

@@ -27,7 +27,7 @@ This event fires when the user presses the volume down button.
 Details
 -------
 
-If you need to override the default volume down behaviour you can register an event listener for the 'volumedownbutton' event.
+If you need to override the default volume down behavior you can register an event listener for the 'volumedownbutton' event.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.
