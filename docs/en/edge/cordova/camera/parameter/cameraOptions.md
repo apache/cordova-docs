@@ -40,7 +40,7 @@ Options
 - __destinationType:__ Choose the format of the return value.  Defined in `navigator.camera.DestinationType` (`Number`)
 
         Camera.DestinationType = {
-            DATA_URL : 0,      // Return image as base64 encoded string
+            DATA_URL : 0,      // Return image as base64-encoded string
             FILE_URI : 1,      // Return image file URI
             NATIVE_URI : 2     // Return image native URI (e.g. assets-library:// on iOS or content:// on Android)
         };

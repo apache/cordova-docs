@@ -45,7 +45,7 @@ Quick Example
     // ... later on ...
     
     navigator.compass.clearWatch(watchID);
-    
+
 Full Example
 ------------
 
@@ -101,7 +101,6 @@ Full Example
         function onError(compassError) {
             alert('Compass error: ' + compassError.code);
         }
-
 
         </script>
       </head>

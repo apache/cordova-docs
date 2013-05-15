@@ -23,7 +23,7 @@ globalization.dateToString
 Returns a date formatted as a string according to the client's locale and timezone.
 
     navigator.globalization.dateToString(date, successCB, errorCB, options);
-    
+
 Description
 -----------
 
@@ -38,7 +38,6 @@ If there is an error formatting the date, then the errorCB callback is invoked w
 
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The `options` parameter is optional.
-
 
 Supported Platforms
 -------------------
@@ -84,7 +83,6 @@ Full Example
         <button onclick="checkDateString()">Click for date string</button>
       </body>
     </html>
-
 
 Windows Phone 8 Quirks
 --------------

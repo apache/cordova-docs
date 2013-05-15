@@ -48,7 +48,7 @@ The return value is sent to the `cameraSuccess` callback function, in
 one of the following formats, depending on the specified
 `cameraOptions`:
 
-- A `String` containing the Base64-encoded photo image (default).
+- A `String` containing the base64-encoded photo image (default).
 - A `String` representing the image file location on local storage.
 
 You can do whatever you want with the encoded image or URI, for
@@ -84,7 +84,7 @@ can cause problems.  Wrap the alert within a `setTimeout()` to allow
 the iOS image picker or popover to fully close before the alert
 displays:
 
-    setTimeout(function() { 
+    setTimeout(function() {
         // do your thing here!
     }, 0);
 
@@ -104,11 +104,11 @@ Tizen only supports a `destinationType` of
 Quick Example
 -------------
 
-Take a photo and retrieve it as a Base64-encoded image:
+Take a photo and retrieve it as a base64-encoded image:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
-    }); 
+    });
 
     function onSuccess(imageData) {
         var image = document.getElementById('myImage');
@@ -119,10 +119,10 @@ Take a photo and retrieve it as a Base64-encoded image:
         alert('Failed because: ' + message);
     }
 
-Take a photo and retrieve the image's file location: 
+Take a photo and retrieve the image's file location:
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
-        destinationType: Camera.DestinationType.FILE_URI }); 
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI });
 
     function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
@@ -132,7 +132,6 @@ Take a photo and retrieve the image's file location:
     function onFail(message) {
         alert('Failed because: ' + message);
     }
-
 
 Full Example
 ------------
@@ -146,7 +145,7 @@ Full Example
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
-        var destinationType; // sets the format of returned value 
+        var destinationType; // sets the format of returned value
         
         // Wait for Cordova to connect with the device
         //
@@ -162,7 +161,7 @@ Full Example
         // Called when a photo is successfully retrieved
         //
         function onPhotoDataSuccess(imageData) {
-          // Uncomment to view the base64 encoded image data
+          // Uncomment to view the base64-encoded image data
           // console.log(imageData);
       
           // Get image handle
@@ -182,7 +181,7 @@ Full Example
         // Called when a photo is successfully retrieved
         //
         function onPhotoURISuccess(imageURI) {
-          // Uncomment to view the image file URI 
+          // Uncomment to view the image file URI
           // console.log(imageURI);
       
           // Get image handle
@@ -210,7 +209,7 @@ Full Example
         // A button will call this function
         //
         function capturePhotoEdit() {
-          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
             destinationType: destinationType.DATA_URL });
         }
@@ -219,13 +218,13 @@ Full Example
         //
         function getPhoto(source) {
           // Retrieve image file location from specified source
-          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
+          navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
             destinationType: destinationType.FILE_URI,
             sourceType: source });
         }
 
         // Called if something bad happens.
-        // 
+        //
         function onFail(message) {
           alert('Failed because: ' + message);
         }

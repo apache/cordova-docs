@@ -25,8 +25,7 @@ An object that lists files and directories in a directory.  Defined in the [Dire
 Methods
 -------
 
-- __readEntries__: Read the entries in a directory. 
-
+- __readEntries__: Read the entries in a directory.
 
 Supported Platforms
 -------------------

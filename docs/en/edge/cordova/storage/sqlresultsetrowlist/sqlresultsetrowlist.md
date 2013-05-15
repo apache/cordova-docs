@@ -83,7 +83,7 @@ Full Example
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// Populate the database 
+		// Populate the database
 		//
 		function populateDB(tx) {
 			tx.executeSql('DROP TABLE IF EXISTS DEMO');

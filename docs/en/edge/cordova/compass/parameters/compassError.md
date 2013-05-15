@@ -20,7 +20,7 @@
 compassError
 ==========
 
-onError callback function for compass functions. 
+onError callback function for compass functions.
 
 Example
 -------

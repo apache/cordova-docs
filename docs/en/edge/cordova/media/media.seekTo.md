@@ -29,11 +29,10 @@ Parameters
 
 - __milliseconds__: The position to set the playback position within the audio in milliseconds. .
 
-
 Description
 -----------
 
-Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object.
 
 Supported Platforms
 -------------------
@@ -56,7 +55,6 @@ Quick Example
         setTimeout(function() {
             my_media.seekTo(10000);
         }, 5000);
-
 
 Full Example
 ------------
@@ -116,7 +114,7 @@ Full Example
      		}
         
             // Stop audio
-            // 
+            //
             function stopAudio() {
                 if (my_media) {
                     my_media.stop();
@@ -131,15 +129,15 @@ Full Example
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError Callback
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
+                alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
         
             // Set audio position
-            // 
+            //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }

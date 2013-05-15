@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -27,9 +27,10 @@ Returns a new Contact object.
 Description
 -----------
 
-contacts.create is a synchronous function that returns a new `Contact` object.
+The `contacts.create` method is synchronous, and returns a new `Contact` object.
 
-This method does not persist the Contact object to the device contacts database.  To persist the Contact object to the device, invoke the `Contact.save` method.
+This method does not retain the Contact object in the device contacts
+database, for which you need to invoke the `Contact.save` method.
 
 Supported Platforms
 -------------------

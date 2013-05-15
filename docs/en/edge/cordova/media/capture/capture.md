@@ -65,7 +65,6 @@ Methods
 - capture.captureImage: Launch the device camera application for taking image(s).
 - capture.captureVideo: Launch the device video recorder application for recording video(s).
 
-
 Supported Platforms
 -------------------
 
@@ -87,7 +86,7 @@ Permissions
 #### app/AndroidManifest.xml
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 ### Bada
 

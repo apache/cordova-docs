@@ -36,7 +36,6 @@ Constants
 - `MediaError.MEDIA_ERR_DECODE`
 - `MediaError.MEDIA_ERR_NONE_SUPPORTED`
 
-
 Description
 -----------
 

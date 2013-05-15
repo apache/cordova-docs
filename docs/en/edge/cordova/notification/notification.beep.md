@@ -111,7 +111,7 @@ iPhone Quirks
 Windows Phone 7 and 8 Quirks
 -------------
 
-- Cordova lib includes a generic beep file that is used. 
+- Cordova lib includes a generic beep file that is used.
 
 Tizen Quirks
 -------------

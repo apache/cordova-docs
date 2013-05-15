@@ -24,7 +24,7 @@ Returns a pattern string for formatting and parsing currency values according
 to the client's user preferences and ISO 4217 currency code.
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCB, errorCB);
-    
+
 Description
 -----------
 
@@ -72,7 +72,6 @@ In the case when the browser is set to the en\_US locale and the selected curren
                                 'grouping: ' + pattern.grouping);},
       function () {alert('Error getting pattern\n');}
     );
-
 
 Full Example
 ------------

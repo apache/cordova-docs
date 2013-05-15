@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -35,6 +35,7 @@ Example
 -------
 
     function contactSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			console.log("Display Name = " + contacts[i].displayName;
+        for (var i=0; i<contacts.length; i++) {
+            console.log("Display Name = " + contacts[i].displayName);
+        }
     }

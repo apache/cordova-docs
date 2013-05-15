@@ -98,4 +98,4 @@ Full Example
         <p>getCurrentHeading</p>
       </body>
     </html>
-    
+

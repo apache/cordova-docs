@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,25 +20,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contacts.find
 =============
 
-Queries the device contacts database and returns one or more `Contact` objects, each containing the fields specified.
+Queries the device contacts database and returns one or more `Contact`
+objects, each containing the fields specified.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
 Description
 -----------
 
-contacts.find is an asynchronous function that queries the device contacts database and returns an array of `Contact` objects.  The resulting objects are passed to the `contactSuccess` callback function specified by the __contactSuccess__ parameter.  
+The `contacts.find` method executes asynchronously, querying the
+device contacts database and returning an array of `Contact` objects.
+The resulting objects are passed to the `contactSuccess` callback
+function specified by the __contactSuccess__ parameter.
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function.  A zero-length __contactFields__ parameter is invalid and will result in a `ContactError.INVALID_ARGUMENT_ERROR` . A __contactFields__ value of ["*"] will return all contact fields. 
+The __contactFields__ parameter specifies the fields to be used as a
+search qualifier, and only those results are passed to the
+__contactSuccess__ callback function.  A zero-length __contactFields__
+parameter is invalid and results in
+`ContactError.INVALID_ARGUMENT_ERROR`. A __contactFields__ value of
+`"*"` returns all contact fields.
 
-The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
+The __contactFindOptions.filter__ string can be used as a search
+filter when querying the contacts database.  If provided, a
+case-insensitive, partial value match is applied to each field
+specified in the __contactFields__ parameter.  If there's a match for
+_any_ of the specified fields, the contact is returned.
 
 Parameters
 ----------
 
-- __contactFields:__ Contact fields to be used as search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
-- __contactSuccess:__ Success callback function that is invoked with the contacts returned from the contacts database. [Required]
-- __contactError:__ Error callback function. Invoked when error occurs. [Optional]
+- __contactFields:__ Contact fields to use as a search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
+- __contactSuccess:__ Success callback function invoked with the contacts returned from the database. [Required]
+- __contactError:__ Error callback function, invoked when an error occurs. [Optional]
 - __contactFindOptions:__ Search options to filter contacts. [Optional]
 
 Supported Platforms
@@ -65,7 +78,7 @@ Quick Example
     // find all contacts with 'Bob' in any name field
     var options = new ContactFindOptions();
 	options.filter="Bob";
-	options.multiple=true; 
+	options.multiple=true;
 	var fields = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
@@ -89,7 +102,7 @@ Full Example
         function onDeviceReady() {
 		    // find all contacts with 'Bob' in any name field
 		    var options = new ContactFindOptions();
-			options.filter="Bob"; 
+			options.filter="Bob";
 			var fields = ["displayName", "name"];
 		    navigator.contacts.find(fields, onSuccess, onError, options);
         }
@@ -115,5 +128,4 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-    
 

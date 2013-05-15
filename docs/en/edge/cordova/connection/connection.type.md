@@ -73,7 +73,7 @@ Full Example
         <script type="text/javascript" charset="utf-8">
             
         // Wait for Cordova to load
-        // 
+        //
         document.addEventListener("deviceready", onDeviceReady, false);
         
         // Cordova is loaded and it is now safe to make calls Cordova methods

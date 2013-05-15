@@ -39,7 +39,7 @@ Methods
 -------
 
 - __abort__: Aborts reading file.
-- __readAsDataURL__: Read file and return data as a base64 encoded data url.
+- __readAsDataURL__: Read file and return data as a base64-encoded data URL.
 - __readAsText__: Reads text file.
 - __readAsBinaryString__: Reads file as binary and returns a binary string.
 - __readAsArrayBuffer__: Reads file as an ArrayBuffer.
@@ -58,12 +58,11 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Read As Data URL 
+Read As Data URL
 ----------------
 
 __Parameters:__
 - file - the file object to read
-
 
 Quick Example
 -------------
@@ -206,7 +205,6 @@ Currently supported on iOS and Android only.
 __Parameters:__
 - file - the file object to read
 
-
 Quick Example
 -------------
 
@@ -225,7 +223,6 @@ Quick Example
 	
     entry.file(win, fail);
 
-
 Read As Array Buffer
 --------------------
 
@@ -233,7 +230,6 @@ Currently supported on iOS and Android only.
 
 __Parameters:__
 - file - the file object to read
-
 
 Quick Example
 -------------

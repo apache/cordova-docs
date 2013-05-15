@@ -25,8 +25,8 @@ Contains methods that allow the user to manipulate the Database
 Methods
 -------
 
-- __transaction__: Runs a database transaction. 
-- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update. 
+- __transaction__: Runs a database transaction.
+- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update.
 
 Details
 -------
@@ -90,7 +90,7 @@ Full Example
 			db.transaction(populateDB, errorCB, successCB);
         }
 		
-		// Populate the database 
+		// Populate the database
 		//
 		function populateDB(tx) {
 			 tx.executeSql('DROP TABLE IF EXISTS DEMO');

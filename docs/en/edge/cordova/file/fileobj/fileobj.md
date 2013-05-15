@@ -50,7 +50,6 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-
 slice
 --------------
 

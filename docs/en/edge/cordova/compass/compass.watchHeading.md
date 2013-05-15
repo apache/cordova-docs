@@ -23,7 +23,7 @@ compass.watchHeading
 At a regular interval, get the compass heading in degrees.
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
-                                                           
+
 Description
 -----------
 
@@ -50,7 +50,6 @@ Supported Platforms
 - webOS
 - Tizen
 - Windows 8
-
 
 Quick Example
 -------------
@@ -132,7 +131,7 @@ Full Example
         <button onclick="stopWatch();">Stop Watching</button>
       </body>
     </html>
-    
+
 iOS Quirks
 --------------
 

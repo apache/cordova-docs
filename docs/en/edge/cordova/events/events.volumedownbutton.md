@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 volumedownbutton
 ===========
 
-This is an event that fires when the user presses the volume down button.
+This event fires when the user presses the volume down button.
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
 
@@ -29,7 +29,8 @@ Details
 
 If you need to override the default volume down behaviour you can register an event listener for the 'volumedownbutton' event.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------

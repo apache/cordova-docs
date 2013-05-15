@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+  license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 endcallbutton
 ===========
 
-This is an event that fires when the user presses the end call button.
+This event fires when the user presses the end call button.
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to override the default end call behaviour you can register an event listener for the 'endcallbutton' event.
+The event overrides the default end call behavior.
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------

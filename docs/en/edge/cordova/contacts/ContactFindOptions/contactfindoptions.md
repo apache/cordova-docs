@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -25,9 +25,8 @@ Contains properties that can be used to filter the results of a `contacts.find` 
 Properties
 ----------
 
-- __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
-
+- __filter:__ The search string used to find contacts. _(DOMString)_ (Default: `""`)
+- __multiple:__ Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: false)
 
 Supported Platforms
 -------------------
@@ -115,4 +114,5 @@ Full Example
 
 Bada Quirks
 -----------
-__filter:__ Property can only apply to the following: "firstName", "lastName", "nickname", "phoneNumber", "email", "address"
+
+__filter:__ Property can only apply to the following: _firstName_, _lastName_, _nickname_, _phoneNumber_, _email_, and _address_.

@@ -79,7 +79,6 @@ Quick Example
     // Options: throw an error if no update is received every 30 seconds.
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
-    
 
 Full Example
 ------------

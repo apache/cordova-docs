@@ -25,7 +25,7 @@ At a regular interval, get the acceleration along the _x_, _y_, and _z_ axis.
     var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
                                                            accelerometerError,
                                                            [accelerometerOptions]);
-                                                           
+
 Description
 -----------
 
@@ -137,7 +137,7 @@ Full Example
         <div id="accelerometer">Waiting for accelerometer...</div>
       </body>
     </html>
-    
+
  iPhone Quirks
 -------------
 

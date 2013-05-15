@@ -104,7 +104,7 @@ Full Example
         <p>getCurrentAcceleration</p>
       </body>
     </html>
-    
+
 iPhone Quirks
 -------------
 

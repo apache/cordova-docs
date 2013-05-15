@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,21 +20,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 batterylow
 ===========
 
-This is an event that fires when a Cordova application detects the battery has reached the low level threshold.
+The event fires when the battery has reached the low level threshold.
 
     window.addEventListener("batterylow", yourCallbackFunction, false);
 
 Details
 -------
 
-This event that fires when a Cordova application detects the percentage of battery has reached the low battery threshold. This value is device specific.
+The event fires when the percentage of battery charge has reached the
+low battery threshold, device-specific value.
 
-The batterylow handler will be called with an object that contains two properties:
+The `batterylow` handler is called with an object that contains two
+properties:
 
-- __level:__ The percentage of battery (0-100). _(Number)_
-- __isPlugged:__ A boolean that represents whether or not the device is plugged in or not. _(Boolean)_
+- __level:__ The percentage of battery charge (0-100). _(Number)_
+- __isPlugged:__ A boolean that indicates whether the device is plugged in. _(Boolean)_
 
-Typically, you will want to attach an event listener with `document.addEventListener` once you receive the Cordova 'deviceready' event.
+Applications typically should use `document.addEventListener` to
+attach an event listener once the Cordova `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -51,7 +54,7 @@ Quick Example
 
     function onBatteryLow(info) {
         // Handle the battery low event
-       	alert("Battery Level Low " + info.level + "%"); 
+       	alert("Battery Level Low " + info.level + "%");
     }
 
 Full Example
@@ -70,7 +73,7 @@ Full Example
         // At this point, the document has loaded but cordova-x.x.x.js has not.
         // When Cordova is loaded and talking with the native device,
         // it will call the event `deviceready`.
-        // 
+        //
 	    function onLoad() {
     	    document.addEventListener("deviceready", onDeviceReady, false);
     	}
@@ -84,7 +87,7 @@ Full Example
         // Handle the batterylow event
         //
         function onBatteryLow(info) {
-	       	alert("Battery Level Low " + info.level + "%"); 
+	       	alert("Battery Level Low " + info.level + "%");
         }
         
         </script>

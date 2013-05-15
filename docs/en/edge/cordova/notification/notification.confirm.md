@@ -122,7 +122,6 @@ Windows Phone 7 and 8 Quirks
     - You can bind `window.confirm` by assigning `window.confirm = navigator.notification.confirm;`.
 - Calls to `alert` and `confirm` are non-blocking and result is only available asynchronously.
 
-
 Bada 2.x Quirks
 ---------------
 

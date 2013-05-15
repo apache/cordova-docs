@@ -22,8 +22,8 @@ MediaFile.getFormatData
 
 > Retrieves format information about the media capture file.
 
-    mediaFile.getFormatData( 
-        MediaFileDataSuccessCB successCallback, 
+    mediaFile.getFormatData(
+        MediaFileDataSuccessCB successCallback,
         [MediaFileDataErrorCB errorCallback]
     );
 

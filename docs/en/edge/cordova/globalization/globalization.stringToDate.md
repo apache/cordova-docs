@@ -49,7 +49,6 @@ The options parameter is optional.
 
 If there is an error parsing the date string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
 
-
 Supported Platforms
 -------------------
 
@@ -66,12 +65,11 @@ In the case when the browser is set to the en\_US locale, this should display a 
     navigator.globalization.stringToDate(
       '9/25/2012',
       function (date) {alert('month:' + date.month +
-                             ' day:' + date.day + 
+                             ' day:' + date.day +
                              ' year:' + date.year + '\n');},
       function () {alert('Error getting date\n');},
       {selector:'date'}
     );
-
 
 Full Example
 ------------
@@ -87,7 +85,7 @@ Full Example
           navigator.globalization.stringToDate(
             '9/25/2012',
             function (date) {alert('month:' + date.month +
-                                   ' day:' + date.day + 
+                                   ' day:' + date.day +
                                    ' year:' + date.year + '\n');},
             function () {alert('Error getting date\n');},
             {selector:'date'}

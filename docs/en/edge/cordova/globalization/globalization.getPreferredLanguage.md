@@ -41,7 +41,6 @@ Supported Platforms
 - iPhone
 - Windows Phone 8
 
-
 Quick Example
 -------------
 
@@ -74,7 +73,6 @@ Full Example
         <button onclick="checkLanguage()">Click for language</button>
       </body>
     </html>
-
 
 Windows Phone 8 Quirks
 -------

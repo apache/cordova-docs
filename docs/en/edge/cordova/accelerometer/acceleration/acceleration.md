@@ -50,7 +50,6 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-
 Quick Example
 -------------
 

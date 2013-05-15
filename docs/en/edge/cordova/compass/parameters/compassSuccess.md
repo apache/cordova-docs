@@ -29,7 +29,6 @@ onSuccess callback function that provides the compass heading information via a 
 Parameters
 ----------
 
-
 - __heading:__ The heading information. _(compassHeading)_
 
 Example

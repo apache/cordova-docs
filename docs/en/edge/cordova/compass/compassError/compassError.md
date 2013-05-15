@@ -29,12 +29,11 @@ Properties
 
 Constants
 ---------
-- `CompassError.COMPASS_INTERNAL_ERR` 
+- `CompassError.COMPASS_INTERNAL_ERR`
 - `CompassError.COMPASS_NOT_SUPPORTED`
 
 Description
 -----------
 
 The `CompassError` object is returned to the user through the `compassError` callback function when an error occurs.
-
 

@@ -24,7 +24,7 @@ iOS-only parameters that specify the anchor element location and arrow
 direction of the popover when selecting images from an iPad's library
 or album.
 
-    { x : 0, 
+    { x : 0,
       y :  32,
       width : 320,
       height : 480,
@@ -43,7 +43,7 @@ CameraPopoverOptions
 - __height:__ height, in pixels, of the screen element onto which to anchor the popover. (`Number`)
 
 - __arrowDir:__ Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` (`Number`)
-        
+
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
                 ARROW_DOWN : 2,
@@ -51,7 +51,7 @@ CameraPopoverOptions
                 ARROW_RIGHT : 8,
                 ARROW_ANY : 15
             };
-  
+
 Note that the size of the popover may change to adjust to the
 direction of the arrow and orientation of the screen.  Make sure to
 account for orientation changes when specifying the anchor element

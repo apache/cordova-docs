@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,20 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ContactOrganization
 ===================
 
-Contains organization properties of a `Contact` object.
+Contains a `Contact` object's organization properties.
 
 Properties
 ----------
 - __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
+- __type:__ A string that indicates what type of field this is, _home_ for example. _(DOMString)
 - __name:__ The name of the organization. _(DOMString)_
 - __department:__ The department the contract works for. _(DOMString)_
-- __title:__ The contacts title at the organization. _(DOMString)_
+- __title:__ The contact's title at the organization. _(DOMString)_
 
 Details
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+The `ContactOrganization` object stores a contact's organization
+properties.  A `Contact` object stores one or more
+`ContactOrganization` objects in an array.
 
 Supported Platforms
 -------------------
@@ -53,8 +55,8 @@ Quick Example
 			for (var j=0; j<contacts[i].organizations.length; j++) {
 				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
 						"Type: " + contacts[i].organizations[j].type + "\n" +
-						"Name: " + contacts[i].organizations[j].name + "\n" + 
-						"Department: "  + contacts[i].organizations[j].department + "\n" + 
+						"Name: " + contacts[i].organizations[j].name + "\n" +
+						"Department: "  + contacts[i].organizations[j].department + "\n" +
 						"Title: "  + contacts[i].organizations[j].title);
 			}
 		}
@@ -100,8 +102,8 @@ Full Example
 				for (var j=0; j<contacts[i].organizations.length; j++) {
 					alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
 							"Type: " + contacts[i].organizations[j].type + "\n" +
-							"Name: " + contacts[i].organizations[j].name + "\n" + 
-							"Department: "  + contacts[i].organizations[j].department + "\n" + 
+							"Name: " + contacts[i].organizations[j].name + "\n" +
+							"Department: "  + contacts[i].organizations[j].department + "\n" +
 							"Title: "  + contacts[i].organizations[j].title);
 				}
 			}
@@ -125,24 +127,24 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ Not supported by Android 2.X devices, returning `false`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ This property is not supported by Blackberry devices and will always return `false`.
-- __type:__ This property is not supported by Blackberry devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
-- __department:__ This property is not supported, and will always be returned as `null`.
-- __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
+- __pref:__ Not supported by Blackberry devices, returning `false`.
+- __type:__ Not supported by Blackberry devices, returning `null`.
+- __name:__ Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
+- __department:__ Not supported, returning `null`.
+- __title:__ Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
 
 iOS Quirks
 -----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __type:__ This property is not supported on iOS devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
-- __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
-- __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
+- __pref:__ Not supported on iOS devices, returning `false`.
+- __type:__ Not supported on iOS devices, returning `null`.
+- __name:__ Partially supported.  The first organization name is stored in the iOS __kABPersonOrganizationProperty__ field.
+- __department__: Partially supported.  The first department name is stored in the iOS __kABPersonDepartmentProperty__ field.
+- __title__: Partially supported.  The first title is stored in the iOS __kABPersonJobTitleProperty__ field.
 
 Bada 2.0 Quirks
 ---------------
-- ContactOrganization not supported
+- `ContactOrganization` is not supported.

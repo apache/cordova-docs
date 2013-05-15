@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -28,7 +28,7 @@ Properties
 - __id:__ A globally unique identifier. _(DOMString)_
 - __displayName:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
 - __name:__ An object containing all components of a persons name. _(ContactName)_
-- __nickname:__ A casual name to address the contact by. _(DOMString)_
+- __nickname:__ A casual name by which to address the contact. _(DOMString)_
 - __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
 - __emails:__ An array of all the contact's email addresses. _(ContactField[])_
 - __addresses:__ An array of all the contact's addresses. _(ContactAddress[])_
@@ -37,23 +37,27 @@ Properties
 - __birthday:__ The birthday of the contact. _(Date)_
 - __note:__ A note about the contact. _(DOMString)_
 - __photos:__ An array of the contact's photos. _(ContactField[])_
-- __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
-- __urls:__  An array of web pages associated to the contact. _(ContactField[])_
+- __categories:__  An array of all the contact's user-defined categories. _(ContactField[])_
+- __urls:__  An array of web pages associated with the contact. _(ContactField[])_
 
 Methods
 -------
 
-- __clone__: Returns a new Contact object that is a deep copy of the calling object, with the id property set to `null`. 
-- __remove__: Removes the contact from the device contacts database.  An error callback is called with a `ContactError` object if the removal is unsuccessful.
+- __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
+- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `ContactError` object.
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
-
 
 Details
 -------
 
-The `Contact` object represents a user contact.  Contacts can be created, saved to, or removed from the device contacts database.  Contacts can also be retrieved (individually or in bulk) from the database by invoking the `contacts.find` method.
+The `Contact` object represents a user contact.  Contacts can be
+created, stored, or removed from the device contacts database.
+Contacts can also be retrieved (individually or in bulk) from the
+database by invoking the `contacts.find` method.
 
-_Note: Not all of the above contact fields are supported on every device platform.  Please check each platform's Quirks section for information about which fields are supported._
+__NOTE:__ Not all of the contact fields listed above are supported on
+every device platform.  Please check each platform's _Quirks_ section
+for details.
 
 Supported Platforms
 -------------------
@@ -97,7 +101,7 @@ Clone Quick Example
 	var clone = contact.clone();
 	clone.name.givenName = "John";
 	console.log("Original contact name = " + contact.name.givenName);
-	console.log("Cloned contact name = " + clone.name.givenName); 
+	console.log("Cloned contact name = " + clone.name.givenName);
 
 Remove Quick Example
 --------------------
@@ -147,7 +151,7 @@ Full Example
 			var clone = contact.clone();
 			clone.name.givenName = "John";
 			console.log("Original contact name = " + contact.name.givenName);
-			console.log("Cloned contact name = " + clone.name.givenName); 
+			console.log("Cloned contact name = " + clone.name.givenName);
 			
 			// remove
 			contact.remove(onRemoveSuccess,onRemoveError);
@@ -188,51 +192,50 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __categories:__  This property is not support by Android 2.X devices, and will always be returned as `null`.
-
+- __categories:__  Not supported on Android 2.X devices, returning `null`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
-- __id:__ Supported.  Assigned by device when contact is saved.
+- __id:__ Supported.  Assigned by the device when saving the contact.
 - __displayName:__ Supported.  Stored in BlackBerry __user1__ field.
-- __nickname:__ This property is not supported, and will always be returned as `null`. 
-- __phoneNumbers:__ Partially supported.  Phone numbers will be stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
-- __emails:__ Partially supported.  The first three email addresses will be stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
-- __addresses:__ Partially supported.  The first and second addresses will be stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
-- __ims:__ This property is not supported, and will always be returned as `null`. 
+- __nickname:__ Not supported, returning `null`.
+- __phoneNumbers:__ Partially supported.  Phone numbers are stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
+- __emails:__ Partially supported.  The first three email addresses are stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
+- __addresses:__ Partially supported.  The first and second addresses are stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
+- __ims:__ Not supported, returning `null`.
 - __organizations:__ Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
-- __photos:__ - Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, pass in a either a Base64 encoded image, or a URL pointing to the image.  The image will be scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a Base64 encoded image.
-- __categories:__  Partially supported.  Only 'Business' and 'Personal' categories are supported. 
-- __urls:__  Partially supported. The first url is stored in BlackBerry __webpage__ field.
+- __photos:__ Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, pass in a either a base64-encoded image, or a URL pointing to the image.  The image is scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a base64-encoded image.
+- __categories:__  Partially supported.  Only _Business_ and _Personal_ categories are supported.
+- __urls:__  Partially supported. The first URL is stored in BlackBerry __webpage__ field.
 
 iOS Quirks
 ----------
-- __displayName:__ This property is not supported by iOS and will be returned as `null` unless there is no ContactName specified.  If there is no ContactName, then composite name, __nickname__ or "" is returned for __displayName__, respectively. 
-- __birthday:__ For input, this property must be provided as a JavaScript Date object. It is returned as a JavaScript Date object.
-- __photos:__ Returned Photo is stored in the application's temporary directory and a File URL to photo is returned.  Contents of temporary folder is deleted when application exits. 
-- __categories:__  This property is not currently supported and will always be returned as `null`.
+
+- __displayName:__ Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
+- __birthday:__ Must be input as a JavaScript `Date` object, the same way it is returned.
+- __photos:__ Returns a File URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
+- __categories:__  This property is currently not supported, returning `null`.
 
 Windows Phone 7 and 8 Quirks
 -----------
 
-- __displayName:__ When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact. 
-- __urls:__ When creating a contact, user inputs multiple web addresses in the url field and saves the contact. While pulling the information during the contact search url field do not show up multiple web addresses
-- __phoneNumbers:__ _pref_ is not supported, _type_ is not supported in a _find_ operation, only supports one phoneNumber of each _type_
-- __emails:__ _pref_ is not supported, home and personal points to same email entry, supports only one entry for each _type_
-- __addresses:__ supports only _type_ of work, home/personal, _type_ home and personal points to same address entry, supports only one entry for each _type_
-- __organizations:__ Multiple _organizations_ are not supported, does not support the attributes: _pref_, _type_, _department_
-- __note:__ This property is not supported, and will always be returned as `null`. 
-- __ims:__ This property is not supported, and will always be returned as `null`. 
-- __birthdays:__ This property is not supported, and will always be returned as `null`. 
-- __categories:__ This property is not supported, and will always be returned as `null`. 
-
+- __displayName:__ When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
+- __urls:__ When creating a contact, users can input and save more than one web address, but only one is available is available when searching the contact.
+- __phoneNumbers:__ The _pref_ option is not supported. The _type_ is not supported in a _find_ operation. Only one `phoneNumber` is allowed for each _type_.
+- __emails:__ The _pref_ option is not supported. Home and personal references same email entry. Only one entry is allowed for each _type_.
+- __addresses:__ Supports only work, and home/personal _type_. The home and personal _type_ reference the same address entry. Only one entry is allowed for each _type_.
+- __organizations:__ Only one is allowed, and does not support the _pref_, _type_, and _department_ attributes.
+- __note:__ Not supported, returning `null`.
+- __ims:__ Not supported, returning `null`.
+- __birthdays:__ Not supported, returning `null`.
+- __categories:__ Not supported, returning `null`.
 
 Bada Quirks
 -----------
 
-- __displayName:__ This property is not supported
-- __birthday:__ This property is not supported
+- __displayName:__ Not supported.
+- __birthday:__ Not supported.
 - __photos:__ This property should be a list with one URL to a photo
-- __categories:__ This property is not supported
-- __ims:__ This property is not supported
+- __categories:__ Not supported.
+- __ims:__ Not supported.

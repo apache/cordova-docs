@@ -38,11 +38,10 @@ Supported Platforms
 
 - iOS
 
-
 Example
 -------------
 
-    navigator.camera.cleanup(onSuccess, onFail); 
+    navigator.camera.cleanup(onSuccess, onFail);
 
     function onSuccess() {
         console.log("Camera cleanup success.")

@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -20,6 +20,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 contactFields
 =============
 
-Required parameter of the `contacts.find` method.  Use this parameter to specify which fields should be included in the `Contact` objects resulting from a find operation.
+Required parameter for the `contacts.find` method, used to specify which fields should be included in the `Contact` objects resulting from a find operation.
 
     ["name", "phoneNumbers", "emails"]

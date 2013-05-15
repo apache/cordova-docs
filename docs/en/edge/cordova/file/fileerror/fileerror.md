@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileError
 ========
 
-A 'FileError' object is set when an error occurs in any of the File API methods. 
+A 'FileError' object is set when an error occurs in any of the File API methods.
 
 Properties
 ----------
