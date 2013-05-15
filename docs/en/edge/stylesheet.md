@@ -97,9 +97,9 @@ editorial guidelines.
 
 * An XML/HTML 'element' rather than 'tag'
 
-* It's a "method" when called on an object. Use "function" only when
-  unspecified, e.g. a "callback function" may also be implemented as
-  an object method.
+* It's a "method" when called on an object. Refer to "function" only
+  when unspecified, e.g. a "callback function" may also be implemented
+  as an object method.
 
 * Use parentheses when referring to `method()` and `function()` names.
   Exception: when referencing the object rather than calling it.
@@ -109,10 +109,12 @@ editorial guidelines.
 * Append colon to text that introduces a code snippet, image, or
   procedure listing.
 
-* Use arrow entities (&rarr;) for hierarchical menus or sequences of
-  nested dialog boxes.
+* Use `&amp;rarr;` arrow entities (&rarr;) for hierarchical menus or
+  sequences of nested dialog boxes.
 
-* Periods at end of complete-sentence bullet items.
+* Add periods at end of bullet items when they consist of complete
+  sentences. No periods when bullets are sentence fragments. However,
+  bullet list should be internally consistent.
 
 ## Miscellaneous
 
@@ -121,9 +123,10 @@ editorial guidelines.
   this. It does so-and-so, which you might see in some result. (2) Do
   that...
 
-* Bold & all-cap __NOTE:__, with colon inside. Do not incorporate font
-  change into sentences as in "__Note__ that..." but OK to start a
-  sentence: "Note that..." when the point is less consequential.
+* Bold & all-cap __NOTE:__, with colon inside, always at the start of
+  a paragraph, never mid-paragraph. Do not incorporate font change
+  into sentences as in "__Note__ that..." but OK to start a sentence:
+  "Note that..." when the point is less consequential.
 
 * As an alternative to __NOTE:__, use __WARNING:__ for serious
   matters, or __TIP:__ to pass along useful tricks or context.
