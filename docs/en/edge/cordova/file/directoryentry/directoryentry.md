@@ -20,33 +20,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 DirectoryEntry
 ==============
 
-This object represents a directory on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+This object represents a directory on a file system, as defined by the
+[W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
+specification.
 
 Properties
 ----------
 
 - __isFile:__ Always false. _(boolean)_
 - __isDirectory:__ Always true. _(boolean)_
-- __name:__ The name of the DirectoryEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the DirectoryEntry. _(DOMString)_
+- __name:__ The name of the `DirectoryEntry`, excluding the path leading to it. _(DOMString)_
+- __fullPath:__ The full absolute path from the root to the `DirectoryEntry`. _(DOMString)_
 
-__NOTE:__ The following attributes are defined by the W3C specification, but are __not supported__ by Cordova:
+__NOTE:__ The following attributes are defined by the W3C
+specification, but are _not_ supported by Cordova:
 
-- __filesystem:__ The file system on which the DirectoryEntry resides. _(FileSystem)_
+- __filesystem:__ The file system on which the `DirectoryEntry` resides. _(FileSystem)_
 
 Methods
 -------
 
-The following methods can be invoked on a DirectoryEntry object:
+The following methods can be invoked on a `DirectoryEntry` object:
 
 - __getMetadata__: Look up metadata about a directory.
 - __setMetadata__: Set metadata on a directory.
 - __moveTo__: Move a directory to a different location on the file system.
 - __copyTo__: Copy a directory to a different location on the file system.
-- __toURL__: Return a URL that can be used to locate a directory.
-- __remove__: Delete a directory.  The directory must be empty.
+- __toURL__: Return a URL to help locate a directory.
+- __remove__: Delete a directory. The directory must be empty.
 - __getParent__: Look up the parent directory.
-- __createReader__: Create a new DirectoryReader that can read entries from a directory.
+- __createReader__: Create a new `DirectoryReader` that can read entries from a directory.
 - __getDirectory__: Create or look up a directory.
 - __getFile__: Create or look up a file.
 - __removeRecursively__: Delete a directory and all of its contents.
@@ -67,8 +70,8 @@ Look up metadata about a directory.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - A callback function to be called with a `Metadata` object. _(Function)_
+- __errorCallback__ - A callback function that executes if an error occurs when retrieving the `Metadata`, invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
