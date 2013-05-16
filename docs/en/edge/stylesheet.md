@@ -49,7 +49,8 @@ editorial guidelines.
 * Use present tense. "This happens," not "this will happen." (Future
   tense sounds like a tenuous prediction.)
 
-* Passive voice is to be avoided.
+* Passive voice is to be avoided. E.g., "the pause event fires
+  when..."  rather than "the pause event is fired when..."
 
 * Prefer action verbs over weak verbs like "is".
 
@@ -133,7 +134,11 @@ editorial guidelines.
 
 * Use titles in link text, never 'click here'
 
+## To clarify:
 
+* plug-in or plugin?
 
+* emulator or Emulator?
 
+* Init-cap Web & Internet as noun?
 
