@@ -27,7 +27,7 @@ Returns whether daylight savings time is in effect for a given date using the cl
 Description
 -----------
 
-It returns whether or not daylight savings time is in effect to the successCB callback with a properties object as a parameter. That object should have a ``dst`` property with a Boolean value. The value 'true' indicates that daylight savings time is in effect for the given date, and 'false' indicates that it is not.
+It returns whether or not daylight savings time is in effect to the successCB callback with a properties object as a parameter. That object should have a `dst` property with a Boolean value. The value 'true' indicates that daylight savings time is in effect for the given date, and 'false' indicates that it is not.
 
 The inbound parameter `date` should be of type `Date`.
 

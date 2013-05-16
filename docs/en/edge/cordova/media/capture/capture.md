@@ -29,7 +29,7 @@ Objects
 - CaptureAudioOptions
 - CaptureImageOptions
 - CaptureVideoOptions
-- CaptureCB
+- CaptureCallback
 - CaptureErrorCB
 - ConfigurationData
 - MediaFile

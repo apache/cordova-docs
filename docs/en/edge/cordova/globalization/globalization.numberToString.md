@@ -27,7 +27,7 @@ Returns a number formatted as a string according to the client's user preference
 Description
 -----------
 
-It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a String value.
+It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a `value` property with a String value.
 
 If there is an error formatting the number, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
 

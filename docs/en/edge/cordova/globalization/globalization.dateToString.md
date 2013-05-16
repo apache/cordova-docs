@@ -27,14 +27,18 @@ Returns a date formatted as a string according to the client's locale and timezo
 Description
 -----------
 
-It returns the formatted date string to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a String value.
+It returns the formatted date string to the successCB callback with a
+properties object as a parameter. That object should have a `value`
+property with a `String` value.
 
-The inbound ``date`` parameter should be of type ``Date``.
+The inbound `date` parameter should be of type `Date`.
 
-If there is an error formatting the date, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error formatting the date, then the `errorCB` callback is
+invoked with a `GlobalizationError` object as a parameter. The expected
+code for this error is `GlobalizationError.FORMATTING\_ERROR`.
 
-`options.formatLength` can be 'short', 'medium', 'long', or 'full'.
-`options.selector` can be 'date', 'time' or 'date and time'.
+The `options.formatLength` can be 'short', 'medium', 'long', or 'full'.
+The `options.selector` can be 'date', 'time' or 'date and time'.
 
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The `options` parameter is optional.

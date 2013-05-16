@@ -29,7 +29,7 @@ Description
 -----------
 
 It returns the language identifier string to the successCB callback with a
-properties object as a parameter. That object should have a ``value`` property with a String value.
+properties object as a parameter. That object should have a `value` property with a String value.
 
 If there is an error getting the language, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
 
