@@ -20,14 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 searchbutton
 ===========
 
-This event fires when the user presses the search button on Android.
+The event fires when the user presses the search button on Android.
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to override the default search button behavior on Android you can register an event listener for the 'searchbutton' event.
+If you need to override the default search button behavior on Android
+you can register an event listener for the 'searchbutton' event.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

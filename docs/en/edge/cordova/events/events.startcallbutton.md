@@ -20,14 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 startcallbutton
 ===========
 
-This event fires when the user presses the start call button.
+The event fires when the user presses the start call button.
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
 
 Details
 -------
 
-If you need to override the default start call behavior you can register an event listener for the 'startcallbutton' event.
+If you need to override the default start call behavior you can
+register an event listener for the `startcallbutton` event.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.
