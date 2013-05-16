@@ -75,6 +75,8 @@ editorial guidelines.
   E.g., instead of "...for which you need to invoke the `Contact.save`
   method", try "...for which the `Contact.save` method is required."
 
+* Do not start a sentence with a lowercase member name.
+
 ## Usage
 
 * "User" may refer to the end user, not to the application's
