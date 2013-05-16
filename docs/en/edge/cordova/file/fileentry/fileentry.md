@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,19 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileEntry
 ==========
 
-This object represents a file on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+Represents a file on a file system, as defined in the
+[W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
+specification.
 
 Properties
 ----------
 
-- __isFile:__ Always true. _(boolean)_
-- __isDirectory:__ Always false. _(boolean)_
-- __name:__ The name of the FileEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the FileEntry. _(DOMString)_
+- __isFile__: Always true. _(boolean)_
+- __isDirectory__: Always false. _(boolean)_
+- __name__: The name of the `FileEntry`, excluding the path leading to it. _(DOMString)_
+- __fullPath__: The full absolute path from the root to the `FileEntry`. _(DOMString)_
 
-__NOTE:__ The following attributes are defined by the W3C specification, but are __not supported__ by Cordova:
+__NOTE:__ The following attributes are defined by the W3C
+specification, but are _not_ supported by Cordova:
 
-- __filesystem:__ The file system on which the FileEntry resides. _(FileSystem)_
+- __filesystem__: The file system on which the `FileEntry` resides. _(FileSystem)_
 
 Methods
 -------
@@ -44,8 +47,8 @@ Methods
 - __toURL__: Return a URL that can be used to locate a file.
 - __remove__: Delete a file.
 - __getParent__: Look up the parent directory.
-- __createWriter__: Creates a FileWriter object that can be used to write to a file.
-- __file__: Creates a File object containing file properties.
+- __createWriter__: Creates a `FileWriter` object that can be used to write to a file.
+- __file__: Creates a `File` object containing file properties.
 
 Supported Platforms
 -------------------
@@ -63,8 +66,8 @@ Look up metadata about a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is passed a `Metadata` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -83,13 +86,15 @@ setMetadata
 ----------------
 
 Set metadata on a file.
-**Only works on iOS currently** - this will set the extended attributes of a file.
+
+__Currently works only on iOS.__
+- this will set the extended attributes of a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called when the metadata was successfully set. _(Function)_
-- __errorCallback__ - A callback that is called when the metadata was not successfully set. _(Function)_
-- __metadataObject__ - An object that contains the metadata keys and values. _(Object)_
+- __successCallback__: A callback that executes when the metadata is set. _(Function)_
+- __errorCallback__: A callback that executes when the metadata is not successfully set. _(Function)_
+- __metadataObject__: An object that contains the metadata's keys and values. _(Object)_
 
 __Quick Example__
 
@@ -103,9 +108,10 @@ __Quick Example__
 
     // Set the metadata
     entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+
 __iOS Quirk__
 
-- only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to _not_ enable the file to be backed up by iCloud. Set the value to **0** to re-enable the file to be backed up by iCloud.
+- Only the `com.apple.MobileBackup` extended attribute is supported. Set the value to `1` to prevent the file from being backed up to iCloud. Set the value to `0` to re-enable the file to be backed up to iCloud.
 
 __Quick Example__
 
@@ -143,19 +149,21 @@ __Quick Example__
 moveTo
 ------
 
-Move a file to a different location on the file system. It is an error to attempt to:
+Move a file to a different location on the file system. An error
+results if the app attempts to:
 
 - move a file into its parent if a name different from its current one isn't provided;
 - move a file to a path occupied by a directory;
 
-In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file.
+In addition, moving a file on top of an existing file attempts to
+delete and replace that file.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
+- __parent__: The parent directory to which to move the file. _(DirectoryEntry)_
+- __newName__: The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__: A callback that is passed the new files `FileEntry` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to move the file.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -179,16 +187,17 @@ __Quick Example__
 copyTo
 ------
 
-Copy a file to a new location on the file system.  It is an error to attempt to:
+Copy a file to a new location on the file system.  An error results if
+the app attempts to:
 
 - copy a file into its parent if a name different from its current one is not provided.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
+- __parent__: The parent directory to which to copy the file. _(DirectoryEntry)_
+- __newName__: The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__: A callback that is passed the new file's `FileEntry` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to copy the file.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -227,8 +236,8 @@ Deletes a file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that executes after the file has been deleted.  Invoked with no parameters. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the file.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -246,12 +255,12 @@ __Quick Example__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the file.
+Look up the parent `DirectoryEntry` containing the file.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is passed the file's parent DirectoryEntry. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -269,12 +278,12 @@ __Quick Example__
 createWriter
 ------------
 
-Create a FileWriter object associated with the file that the FileEntry represents.
+Create a `FileWriter` object associated with the file represented by the `FileEntry`.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is passed a `FileWriter` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs while attempting to create the FileWriter.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -292,12 +301,13 @@ __Quick Example__
 file
 ----
 
-Return a File object that represents the current state of the file that this FileEntry represents.
+Return a `File` object that represents the current state of the file
+that this `FileEntry` represents.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a File object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is passed a `File` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating the `File` object, such as when the file no longer exists.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 

@@ -25,13 +25,13 @@ MediaFile
 Properties
 ----------
 
-- __name:__ The name of the file, without path information. (DOMString)
-- __fullPath:__ The full path of the file, including the name. (DOMString)
-- __type:__ The mime type (DOMString)
-- __lastModifiedDate:__ The date and time that the file was last modified. (Date)
-- __size:__ The size of the file, in bytes. (Number)
+- __name__: The name of the file, without path information. (DOMString)
+- __fullPath__: The full path of the file, including the name. (DOMString)
+- __type__: The mime type (DOMString)
+- __lastModifiedDate__: The date and time that the file was last modified. (Date)
+- __size__: The size of the file, in bytes. (Number)
 
 Methods
 -------
 
-- __MediaFile.getFormatData:__ Retrieves the format information of the media file.
+- __MediaFile.getFormatData__: Retrieves the format information of the media file.

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,15 +27,15 @@ specification.
 Properties
 ----------
 
-- __isFile:__ Always false. _(boolean)_
-- __isDirectory:__ Always true. _(boolean)_
-- __name:__ The name of the `DirectoryEntry`, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the `DirectoryEntry`. _(DOMString)_
+- __isFile__: Always false. _(boolean)_
+- __isDirectory__: Always true. _(boolean)_
+- __name__: The name of the `DirectoryEntry`, excluding the path leading to it. _(DOMString)_
+- __fullPath__: The full absolute path from the root to the `DirectoryEntry`. _(DOMString)_
 
 __NOTE:__ The following attributes are defined by the W3C
 specification, but are _not_ supported by Cordova:
 
-- __filesystem:__ The file system on which the `DirectoryEntry` resides. _(FileSystem)_
+- __filesystem__: The file system on which the `DirectoryEntry` resides. _(FileSystem)_
 
 Methods
 -------
@@ -70,8 +70,8 @@ Look up metadata about a directory.
 
 __Parameters:__
 
-- __successCallback__ - A callback function to be called with a `Metadata` object. _(Function)_
-- __errorCallback__ - A callback function that executes if an error occurs when retrieving the `Metadata`, invoked with a `FileError` object. _(Function)_
+- __successCallback__: A callback function to execute with a `Metadata` object. _(Function)_
+- __errorCallback__: A callback function to execute if an error occurs when retrieving the `Metadata`. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -90,13 +90,13 @@ setMetadata
 ----------------
 
 Set metadata on a directory.
-**Only works on iOS currently** - this will set the extended attributes of a directory.
+__Currently works only on iOS.__ - this will set the extended attributes of a directory.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called when the metadata was successfully set. _(Function)_
-- __errorCallback__ - A callback that is called when the metadata was not successfully set. _(Function)_
-- __metadataObject__ - An object that contains the metadata keys and values. _(Object)_
+- __successCallback__: A callback that executes when the metadata is successfully set. _(Function)_
+- __errorCallback__: A callback that executes when the metadata fails to be set. _(Function)_
+- __metadataObject__: An object that contains the metadata's keys and values. _(Object)_
 
 __Quick Example__
 
@@ -110,9 +110,10 @@ __Quick Example__
 
     // Set the metadata
     entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
+
 __iOS Quirk__
 
-- only the **"com.apple.MobileBackup"** extended attribute is supported. Set the value to **1** to _not_ enable the directory to be backed up by iCloud. Set the value to **0** to re-enable the directory to be backed up by iCloud.
+- Only the `com.apple.MobileBackup` extended attribute is supported. Set the value to `1` to prevent the directory from being backed up to iCloud. Set the value to `0` to re-enable the directory to be backed up to iCloud.
 
 __Quick Example__
 
@@ -150,21 +151,22 @@ __Quick Example__
 moveTo
 ------
 
-Move a directory to a different location on the file system. It is an error to attempt to:
+Move a directory to a different location on the file system. An error results if the app attempts to:
 
-- move a directory inside itself or to any child at any depth;
-- move a directory into its parent if a name different from its current one is not provided;
-- move a directory to a path occupied by a file;
-- move a directory to a path occupied by a directory which is not empty.
+- move a directory inside itself or to any child at any depth.
+- move a directory into its parent if a name different from its current directory is not provided.
+- move a directory to a path occupied by a file.
+- move a directory to a path occupied by a directory that is not empty.
 
-In addition, an attempt to move a directory on top of an existing empty directory must attempt to delete and replace that directory.
+Moving a directory on top of an existing empty directory attempts to
+delete and replace that directory.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to move the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the directory.  Invoked with a FileError object. _(Function)_
+- __parent__: The parent directory to which to move the directory. _(DirectoryEntry)_
+- __newName__: The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to move the directory. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -189,19 +191,19 @@ __Quick Example__
 copyTo
 ------
 
-Copy a directory to a different location on the file system. It is an error to attempt to:
+Copy a directory to a different location on the file system.  An error results if the app attempts to:
 
-- copy a directory inside itself at any depth;
-- copy a directory into its parent if a name different from its current one is not provided.
+- copy a directory inside itself at any depth.
+- copy a directory into its parent if a name different from its current directory is not provided.
 
-Directory copies are always recursive - that is, they copy all contents of the directory.
+Directory copies are always recursive, and copy all contents of the directory.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to copy the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the underlying directory.  Invoked with a FileError object. _(Function)_
+- __parent__: The parent directory to which to copy the directory. _(DirectoryEntry)_
+- __newName__: The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
+- __successCallback__: A callback that executes with the `DirectoryEntry` object for the new directory. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to copy the underlying directory. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -237,15 +239,15 @@ __Quick Example__
 remove
 ------
 
-Deletes a directory. It is an error to attempt to:
+Deletes a directory. An error results if the app attempts to:
 
-- delete a directory that is not empty;
+- delete a directory that is not empty.
 - delete the root directory of a filesystem.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the directory has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the directory.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is called after the directory has been deleted.  Invoked with no parameters. _(Function)_
+- __errorCallback__: A callback that is called if an error occurs when attempting to delete the directory. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -267,8 +269,8 @@ Look up the parent DirectoryEntry containing the directory.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the directory's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is called with the directory's parent DirectoryEntry. _(Function)_
+- __errorCallback__: A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -296,16 +298,16 @@ __Quick Example__
 getDirectory
 ------------
 
-Creates or looks up an existing directory.  It is an error to attempt to:
+Creates or looks up an existing directory.  An error results if the app attempts to:
 
 - create a directory whose immediate parent does not yet exist.
 
 __Parameters:__
 
-- __path__ - The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
-- __options__ - Options to specify whether the directory is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a DirectoryEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the directory.  Invoked with a FileError object. _(Function)_
+- __path__: The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
+- __options__: Options to specify whether the directory is to be created if it doesn't exist.  _(Flags)_
+- __successCallback__: A callback that executes with a `DirectoryEntry` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the directory. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -323,16 +325,16 @@ __Quick Example__
 getFile
 -------
 
-Creates or looks up a file.  It is an error to attempt to:
+Creates or looks up a file.  An error results if the app attempts to:
 
 - create a file whose immediate parent does not yet exist.
 
 __Parameters:__
 
-- __path__ - The path to the file to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
-- __options__ - Options to specify whether the file is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the file.  Invoked with a FileError object. _(Function)_
+- __path__: The path to the file to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
+- __options__: Options to specify whether the file is created if it doesn't exist.  _(Flags)_
+- __successCallback__: A callback that is invoked with a `FileEntry` object. _(Function)_
+- __errorCallback__: A callback that is called if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -350,16 +352,16 @@ __Quick Example__
 removeRecursively
 -----------------
 
-Deletes a directory and all of its contents.  In the event of an error (e.g. trying to delete
-a directory that contains a file that cannot be removed), some of the contents of the directory may
-be deleted.   It is an error to attempt to:
+Deletes a directory and all of its contents.  In the event of an error (such as trying to delete
+a directory containing a file that cannot be removed), some of the contents of the directory may
+be deleted.   An error results if the app attempts to:
 
 - delete the root directory of a filesystem.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the DirectoryEntry has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that executes after the `DirectoryEntry` has been deleted.  Invoked with no parameters. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -377,12 +379,13 @@ __Quick Example__
 BlackBerry Quirks
 -----------------
 
-May fail with a ControlledAccessException in the following cases:
+May fail with a `ControlledAccessException` in the following cases:
 
-- Access is attempted on an directory created by a previous installation of an application.
+- An app attempts to access a directory created by a previous installation of the app.
 
-> solution: insure temporary directories are cleaned manually, or by the application before reinstall
+> Solution: ensure temporary directories are cleaned manually, or by the application prior to reinstallation.
 
-- if device is connected by usb
+- If the device is connected by USB.
 
-> solution: disconnect usb cable from device and run again
+> Solution: disconnect the USB cable from the device and run again.
+

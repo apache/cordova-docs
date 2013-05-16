@@ -24,14 +24,14 @@ Contains address properties for a `Contact` object.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
-- __type:__ A string indicating what type of field this is, _home_ for example. _(DOMString)_
-- __formatted:__ The full address formatted for display. _(DOMString)_
-- __streetAddress:__ The full street address. _(DOMString)_
-- __locality:__ The city or locality. _(DOMString)_
-- __region:__ The state or region. _(DOMString)_
-- __postalCode:__ The zip code or postal code. _(DOMString)_
-- __country:__ The country name. _(DOMString)_
+- __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
+- __type__: A string indicating what type of field this is, _home_ for example. _(DOMString)_
+- __formatted__: The full address formatted for display. _(DOMString)_
+- __streetAddress__: The full street address. _(DOMString)_
+- __locality__: The city or locality. _(DOMString)_
+- __region__: The state or region. _(DOMString)_
+- __postalCode__: The zip code or postal code. _(DOMString)_
+- __country__: The country name. _(DOMString)_
 
 Details
 -------
@@ -139,25 +139,25 @@ Full Example
 Android 2.X Quirks
 ------------------
 
-- __pref:__ Not supported, returning `false` on Android 2.X devices.
+- __pref__: Not supported, returning `false` on Android 2.X devices.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ Not supported on Blackberry devices, returning `false`.
-- __type:__ Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
-- __formatted:__ Partially supported.  Returns a concatenation of all BlackBerry address fields.
-- __streetAddress:__ Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
-- __locality:__ Supported.  Stored in BlackBerry __city__ address field.
-- __region:__ Supported.  Stored in BlackBerry __stateProvince__ address field.
-- __postalCode:__ Supported.  Stored in BlackBerry __zipPostal__ address field.
-- __country:__ Supported.
+- __pref__: Not supported on Blackberry devices, returning `false`.
+- __type__: Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
+- __formatted__: Partially supported.  Returns a concatenation of all BlackBerry address fields.
+- __streetAddress__: Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
+- __locality__: Supported.  Stored in BlackBerry __city__ address field.
+- __region__: Supported.  Stored in BlackBerry __stateProvince__ address field.
+- __postalCode__: Supported.  Stored in BlackBerry __zipPostal__ address field.
+- __country__: Supported.
 
 iOS Quirks
 ----------
-- __pref:__ Not supported on iOS devices, returning `false`.
-- __formatted:__ Currently not supported.
+- __pref__: Not supported on iOS devices, returning `false`.
+- __formatted__: Currently not supported.
 
 Bada Quirks
 -----------
-- __formatted:__ Not supported.
-- __type:__ Has to be either `WORK` or `HOME`
+- __formatted__: Not supported.
+- __type__: Has to be either `WORK` or `HOME`

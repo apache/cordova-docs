@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,12 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileTransfer
 ==========
 
-FileTransfer is an object that allows you to upload files to a server or download files from a server.
+The `FileTransfer` object allows you to upload or download files to
+and from a server.
 
 Properties
 ----------
 
-- __onprogress:__ Called with a ProgressEvent whenever a new chunk of data is transferred. _(Function)_
+- __onprogress__: Called with a `ProgressEvent` whenever a new chunk of data is transferred. _(Function)_
 
 Methods
 -------
@@ -37,8 +38,15 @@ Methods
 Details
 -------
 
-The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback is called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
-It is also possible to download a file from remote and save it on the device (only iOS and Android).
+The `FileTransfer` object provides a way to upload files to a remote
+server using an HTTP multi-part POST request.  Both HTTP and HTTPS
+protocols are supported.  Optional parameters can be specified by
+passing a `FileUploadOptions` object to the `upload()` method.  On
+successful upload, a `FileUploadResult` object is passed to the
+success callback.  If an error occurs, a `FileTransferError` object is
+passed to the error callback.  It is also possible (only on iOS and
+Android) to download a file from a remote server and save it on the
+device.
 
 Supported Platforms
 -------------------
@@ -54,12 +62,12 @@ upload
 
 __Parameters:__
 
-- __filePath__ - Full path of the file on the device
-- __server__ - URL of the server to receive the file (must already be encoded using encodeURI())
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
-- __options__ - Optional parameters such as file name and mimetype
-- __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __filePath__: Full path of the file on the device.
+- __server__: URL of the server to receive the file, as encoded by `encodeURI()`.
+- __successCallback__: A callback that is called with a `Metadata` object. _(Function)_
+- __errorCallback__: A callback that is called if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+- __options__: Optional parameters such as file name and mimetype.
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
 	
@@ -187,19 +195,20 @@ Supported on Android and iOS
 
 __Android Quirks__
 
-If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.
+Set the `chunkedMode` option to `false` to prevent problems uploading
+to a Nginx server.
 
 download
 --------------
 
-__Parameters:__
+__Parameters:__	
 
-- __source__ - URL of the server to download the file (must already be encoded using encodeURI())
-- __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
-- __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
-- __options__ - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
+- __source__: URL of the server to download the file, as encoded by `encodeURI()`.
+- __target__: Full path of the file on the device.
+- __successCallback__: A callback that is passed  a `FileEntry` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true` then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
 __Quick Example__
 

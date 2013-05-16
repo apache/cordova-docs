@@ -33,8 +33,8 @@ low battery threshold, device-specific value.
 The `batterylow` handler is called with an object that contains two
 properties:
 
-- __level:__ The percentage of battery charge (0-100). _(Number)_
-- __isPlugged:__ A boolean that indicates whether the device is plugged in. _(Boolean)_
+- __level__: The percentage of battery charge (0-100). _(Number)_
+- __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

@@ -29,7 +29,7 @@ onSuccess callback function that provides the `Acceleration` information.
 Parameters
 ----------
 
-- __acceleration:__ The acceleration at a single moment in time. (Acceleration)
+- __acceleration__: The acceleration at a single moment in time. (Acceleration)
 
 Example
 -------

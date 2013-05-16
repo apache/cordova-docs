@@ -24,30 +24,30 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
 
     var ref = window.open(url, target, options);
     
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __url:__ the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
-- __target:__ the target to load the URL in (`String`) (Optional, Default: "_self")
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __url__: the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
+- __target__: the target to load the URL in (`String`) (Optional, Default: "_self")
 
         _self - opens in the Cordova WebView if URL is in the white-list, else it opens in the InAppBrowser
         _blank - always open in the InAppBrowser
         _system - always open in the system web browser
     
     
-- __options:__ options for the InAppBrowser (`String`) (Optional, Default: "location=yes")
+- __options__: options for the InAppBrowser (`String`) (Optional, Default: "location=yes")
     
     The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:
 
-    - __location__ - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+    - __location__: set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
 
     iOS only
     --------
-    - __enableViewportScale__ -  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')
-    - __mediaPlaybackRequiresUserAction__ - set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')
-    - __allowInlineMediaPlayback__ - set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')
-    - __keyboardDisplayRequiresUserAction__ - set to 'yes' or 'no' to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to 'yes')
-    - __suppressesIncrementalRendering__ - set to 'yes' or 'no' to wait until all new view content has been received before it is rendered (defaults to 'no')
-    - __presentationstyle__ -  set to 'pagesheet', 'formsheet' or 'fullscreen' to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to 'fullscreen')
-    - __transitionstyle__ - set to 'fliphorizontal', 'crossdissolve' or 'coververtical' to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to 'coververtical')
+    - __enableViewportScale__:  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')
+    - __mediaPlaybackRequiresUserAction__: set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')
+    - __allowInlineMediaPlayback__: set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')
+    - __keyboardDisplayRequiresUserAction__: set to 'yes' or 'no' to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to 'yes')
+    - __suppressesIncrementalRendering__: set to 'yes' or 'no' to wait until all new view content has been received before it is rendered (defaults to 'no')
+    - __presentationstyle__:  set to 'pagesheet', 'formsheet' or 'fullscreen' to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to 'fullscreen')
+    - __transitionstyle__: set to 'fliphorizontal', 'crossdissolve' or 'coververtical' to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to 'coververtical')
             
 Supported Platforms
 -------------------

@@ -25,8 +25,8 @@ A `MediaError` object is returned to the `mediaError` callback function when an 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ Error message describing the details of the error.
+- __code__: One of the predefined error codes listed below.
+- __message__: Error message describing the details of the error.
 
 Constants
 ---------

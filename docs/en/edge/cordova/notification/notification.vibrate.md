@@ -24,7 +24,7 @@ Vibrates the device for the specified amount of time.
 
     navigator.notification.vibrate(milliseconds)
 
-- __time:__ Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (`Number`)
+- __time__: Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (`Number`)
 
 Supported Platforms
 -------------------
@@ -97,7 +97,7 @@ Full Example
 iPhone Quirks
 -------------
 
-- __time:__ Ignores the time and vibrates for a pre-set amount of time.
+- __time__: Ignores the time and vibrates for a pre-set amount of time.
 
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored

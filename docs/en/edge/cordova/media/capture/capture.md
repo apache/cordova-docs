@@ -54,9 +54,9 @@ The __capture__ object is assigned to the __navigator.device__ object, and there
 Properties
 ----------
 
-- __supportedAudioModes:__ The audio recording formats supported by the device. (ConfigurationData[])
-- __supportedImageModes:__ The recording image sizes and formats supported by the device. (ConfigurationData[])
-- __supportedVideoModes:__ The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
+- __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
+- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
 
 Methods
 -------

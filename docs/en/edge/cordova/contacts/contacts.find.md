@@ -49,10 +49,10 @@ _any_ of the specified fields, the contact is returned.
 Parameters
 ----------
 
-- __contactFields:__ Contact fields to use as a search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
-- __contactSuccess:__ Success callback function invoked with the contacts returned from the database. [Required]
-- __contactError:__ Error callback function, invoked when an error occurs. [Optional]
-- __contactFindOptions:__ Search options to filter contacts. [Optional]
+- __contactFields__: Contact fields to use as a search qualifier. Only these fields will have values in the resulting `Contact` objects. _(DOMString[])_ [Required]
+- __contactSuccess__: Success callback function invoked with the contacts returned from the database. [Required]
+- __contactError__: Error callback function, invoked when an error occurs. [Optional]
+- __contactFindOptions__: Search options to filter contacts. [Optional]
 
 Supported Platforms
 -------------------

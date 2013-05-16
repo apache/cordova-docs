@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 DirectoryReader
 ===============
 
-An object that lists files and directories in a directory.  Defined in the [Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+An object that lists files and directories within a directory, as
+defined in the
+[W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
+specification.
 
 Methods
 -------
@@ -43,8 +46,8 @@ Read the entries in this directory.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is passed an array of FileEntry and DirectoryEntry objects. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the directory listing. Invoked with a FileError object. _(Function)_
+- __successCallback__: A callback that is passed an array of `FileEntry` and `DirectoryEntry` objects. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 	

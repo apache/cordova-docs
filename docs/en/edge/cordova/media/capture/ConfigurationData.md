@@ -38,9 +38,9 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 Properties
 ----------
 
-- __type:__ The ASCII-encoded string in lower case representing the media type. (DOMString)
-- __height:__ The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
-- __width:__ The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
+- __type__: The ASCII-encoded string in lower case representing the media type. (DOMString)
+- __height__: The height of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
+- __width__: The width of the image or video in pixels.  In the case of a sound clip, this attribute has value 0. (Number)
 
 Quick Example
 -------------

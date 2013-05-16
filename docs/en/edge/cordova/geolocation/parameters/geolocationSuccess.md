@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationSuccess
 ==================
 
-The user's callback function that is called when a geolocation position becomes available (when using with `geolocation.getCurrentPosition`), or when the position changes (when using with `geolocation.watchPosition`).
+The user's callback function that executes when a geolocation position
+becomes available (when called from `geolocation.getCurrentPosition`),
+or when the position changes (when called from
+`geolocation.watchPosition`).
 
     function(position) {
         // Do something
@@ -29,7 +32,7 @@ The user's callback function that is called when a geolocation position becomes 
 Parameters
 ----------
 
-- __position:__ The geolocation position returned by the device. (`Position`)
+- __position__: The geolocation position returned by the device. (`Position`)
 
 Example
 -------

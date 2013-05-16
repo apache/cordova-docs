@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,20 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileReader
 ==========
 
-FileReader is an object that allows one to read a file.
+The `FileReader` allows basic access to a file.
 
 Properties
 ----------
 
-- __readyState:__ One of the three states the reader can be in EMPTY, LOADING or DONE.
-- __result:__ The contents of the file that has been read. _(DOMString)_
-- __error:__ An object containing errors. _(FileError)_
-- __onloadstart:__ Called when the read starts. . _(Function)_
-- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -_not_ SUPPORTED
-- __onload:__ Called when the read has successfully completed. _(Function)_
-- __onabort:__ Called when the read has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the read has failed. _(Function)_
-- __onloadend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState__: One of the reader's three possible states, either `EMPTY`, `LOADING` or `DONE`.
+- __result__: The contents of the file that have been read. _(DOMString)_
+- __error__: An object containing errors. _(FileError)_
+- __onloadstart__: Called when the read starts. _(Function)_
+- __onload__: Called when the read has successfully completed. _(Function)_
+- __onabort__: Called when the read has been aborted. For instance, by invoking the `abort()` method. _(Function)_
+- __onerror__: Called when the read has failed. _(Function)_
+- __onloadend__: Called when the request has completed (either in success or failure).  _(Function)_
+
+__NOTE:__ The following porperty is not supported:
+
+- __onprogress__: Called while reading the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
 
 Methods
 -------
@@ -42,12 +45,15 @@ Methods
 - __readAsDataURL__: Read file and return data as a base64-encoded data URL.
 - __readAsText__: Reads text file.
 - __readAsBinaryString__: Reads file as binary and returns a binary string.
-- __readAsArrayBuffer__: Reads file as an ArrayBuffer.
+- __readAsArrayBuffer__: Reads file as an `ArrayBuffer`.
 
 Details
 -------
 
-The `FileReader` object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listeners to receive the loadstart, progress, load, loadend, error and abort events.
+The `FileReader` object offers a way to read files from the device's
+file system.  Files can be read as text or as a base64 data-encoded
+string.  Event listeners receive the `loadstart`, `progress`, `load`,
+`loadend`, `error`, and `abort` events.
 
 Supported Platforms
 -------------------
@@ -62,7 +68,8 @@ Read As Data URL
 ----------------
 
 __Parameters:__
-- file - the file object to read
+
+- __file__: the file object to read.
 
 Quick Example
 -------------
@@ -87,8 +94,8 @@ Read As Text
 
 __Parameters:__
 
-- file - the file object to read
-- encoding - the encoding to use to encode the file's content. Default is UTF8.
+- __file__: the file object to read.
+- __encoding__: the encoding to use to encode the file's content. Default is UTF8.
 
 Quick Example
 -------------
@@ -195,7 +202,7 @@ Full Example
 
 iOS Quirks
 ----------
-- __encoding__ parameter is not supported, UTF8 encoding is always used.
+- The __encoding__ parameter is not supported, and UTF8 encoding is always in effect.
 
 Read As Binary String
 ---------------------
@@ -203,7 +210,8 @@ Read As Binary String
 Currently supported on iOS and Android only.
 
 __Parameters:__
-- file - the file object to read
+
+- __file__: the file object to read.
 
 Quick Example
 -------------
@@ -229,7 +237,7 @@ Read As Array Buffer
 Currently supported on iOS and Android only.
 
 __Parameters:__
-- file - the file object to read
+- __file__:  the file object to read.
 
 Quick Example
 -------------

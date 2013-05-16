@@ -25,7 +25,7 @@ A handle to the popover dialog created by `camera.getPicture`.
 Methods
 -------
 
-- __setPosition:__ Set the position of the popover.
+- __setPosition__: Set the position of the popover.
 
 Supported Platforms
 -------------------

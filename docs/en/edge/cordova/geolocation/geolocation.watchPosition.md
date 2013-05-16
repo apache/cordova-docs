@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -29,8 +29,8 @@ Watches for changes to the device's current position.
 Parameters
 ----------
 
-- __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: (Optional) The callback that is called if there was an error.
+- __geolocationSuccess__: The callback that is passed the current position.
+- __geolocationError__: (Optional) The callback that executes if there was an error.
 - __geolocationOptions__: (Optional) The geolocation options.
 
 Returns
@@ -41,7 +41,12 @@ Returns
 Description
 -----------
 
-`geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.watchPosition` is an asynchronous function. It returns
+the device's current position when a change in position is detected.
+When the device retrieves a new location, the `geolocationSuccess`
+callback executes with a `Position` object as the parameter.  If
+there is an error, the `geolocationError` callback executes with a
+`PositionError` object as the parameter.
 
 Supported Platforms
 -------------------

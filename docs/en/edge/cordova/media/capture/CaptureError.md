@@ -25,7 +25,7 @@ CaptureError
 Properties
 ----------
 
-- __code:__ One of the pre-defined error codes listed below.
+- __code__: One of the pre-defined error codes listed below.
 
 Constants
 ---------

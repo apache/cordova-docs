@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -25,11 +25,11 @@ This object contains attributes of a single file.
 Properties
 ----------
 
-- __name:__ The name of the file. _(DOMString)_
-- __fullPath:__ The full path of the file including the file name. _(DOMString)_
-- __type:__ The mime type of the file. _(DOMString)_
-- __lastModifiedDate:__ The last time the file was modified. _(Date)_
-- __size:__ The size of the file in bytes. _(long)_
+- __name__: The name of the file. _(DOMString)_
+- __fullPath__: The full path of the file including the file name. _(DOMString)_
+- __type__: The mime type of the file. _(DOMString)_
+- __lastModifiedDate__: The last time the file was modified. _(Date)_
+- __size__: The size of the file in bytes. _(long)_
 
 Methods
 -------
@@ -39,7 +39,9 @@ Methods
 Details
 -------
 
-The `File` object contains attributes of a single file.  You can get an instance of a File object by calling the __file__ method of a `FileEntry` object.
+The `File` object contains attributes of a single file.  You can get
+an instance of a `File` object by calling a `FileEntry` object's
+`file()` method.
 
 Supported Platforms
 -------------------
@@ -53,14 +55,15 @@ Supported Platforms
 slice
 --------------
 
-Return a new File object, for which FileReader will return only the specified portion of the file.
-Negative values for __start__ or __end__ are measured from the end of the file.
-The indexes are always relative to the current slice (see the full example).
+Return a new `File` object, for which `FileReader` returns only the
+specified portion of the file.  Negative values for `start` or `end`
+are measured from the end of the file.  Indexes are positioned
+relative to the current slice. (See the full example below.)
 
 __Parameters:__
 
-- __start__ - The index of the first byte to read, inclusive.
-- __end__ - The index of the byte after the last one to read.
+- __start__: The index of the first byte to read, inclusive.
+- __end__: The index of the byte after the last one to read.
 
 __Quick Example__
 

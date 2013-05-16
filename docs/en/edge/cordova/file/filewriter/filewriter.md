@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,37 +20,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileWriter
 ==========
 
-FileWriter is an object that allows one to write a file.
+As object that allows you to create and write data to a file.
 
 Properties
 ----------
 
-- __readyState:__ One of the three states the reader can be in INIT, WRITING or DONE.
-- __fileName:__ The name of the file to be written. _(DOMString)_
-- __length:__ The length of the file to be written. _(long)_
-- __position:__ The current position of the file pointer. _(long)_
-- __error:__ An object containing errors. _(FileError)_
-- __onwritestart:__ Called when the write starts. . _(Function)_
-- __onprogress:__ Called while writing the file, reports progress (progress.loaded/progress.total). _(Function)_ -_not_ SUPPORTED
-- __onwrite:__ Called when the request has completed successfully.  _(Function)_
-- __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the write has failed. _(Function)_
-- __onwriteend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState__: One of the three possible states, either `INIT`, `WRITING`, or `DONE`.
+- __fileName__: The name of the file to be written. _(DOMString)_
+- __length__: The length of the file to be written. _(long)_
+- __position__: The current position of the file pointer. _(long)_
+- __error__: An object containing errors. _(FileError)_
+- __onwritestart__: Called when the write starts. _(Function)_
+- __onwrite__: Called when the request has completed successfully.  _(Function)_
+- __onabort__: Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
+- __onerror__: Called when the write has failed. _(Function)_
+- __onwriteend__: Called when the request has completed (either in success or failure).  _(Function)_
 
+The following property is _not_ supported:
+
+- __onprogress__: Called while writing the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
 Methods
 -------
 
-- __abort__: Aborts writing file.
-- __seek__: Moves the file pointer to the byte specified.
-- __truncate__: Shortens the file to the length specified.
+- __abort__: Aborts writing the file.
+- __seek__: Moves the file pointer to the specified byte.
+- __truncate__: Shortens the file to the specified length.
 - __write__: Writes data to the file with a UTF-8 encoding.
 
 Details
 -------
 
-The `FileWriter` object is a way to write files to the device file system (UTF-8 encoded).  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
+The `FileWriter` object offers a way to write UTF-8 encoded files to
+the device file system.  Applications respond to `writestart`,
+`progress`, `write`, `writeend`, `error`, and `abort` events.
 
-A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
+Each `FileWriter` corresponds to a single file, to which data can be
+written many times.  The `FileWriter` maintains the file's `position`
+and `length` attributes, which allow the app to `seek` and `write`
+anywhere in the file. By default, the `FileWriter` writes to the
+beginning of the file, overwriting existing data. Set the optional
+`append` boolean to `true` in the `FileWriter`'s constructor to 
+write to the end of the file.
 
 Supported Platforms
 -------------------

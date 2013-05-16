@@ -24,10 +24,10 @@ Shows a custom alert or dialog box.
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message:__ Dialog message (`String`)
-- __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
-- __title:__ Dialog title (`String`) (Optional, Default: "Alert")
-- __buttonName:__ Button name (`String`) (Optional, Default: "OK")
+- __message__: Dialog message (`String`)
+- __alertCallback__: Callback to invoke when alert dialog is dismissed. (`Function`)
+- __title__: Dialog title (`String`) (Optional, Default: "Alert")
+- __buttonName__: Button name (`String`) (Optional, Default: "OK")
     
 Description
 -----------

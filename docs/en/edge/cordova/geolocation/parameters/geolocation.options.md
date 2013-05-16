@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -28,14 +28,12 @@ Optional parameters to customize the retrieval of the geolocation
 Options
 -------
 
-- __enableHighAccuracy:__ Provides a hint that the application would like to receive the best possible results. By default, the device will attempt to retrieve a `Position` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
-- __timeout:__ The maximum length of time (milliseconds) that is allowed to pass from the call to `geolocation.getCurrentPosition` or `geolocation.watchPosition` until the corresponding `geolocationSuccess` callback is invoked. If the `geolocationSuccess` callback is not invoked within this time, the `geolocationError` callback will be invoked with a `PositionError.TIMEOUT` error code. NOTE: when used in conjunction with `geolocation.watchPosition`, the `geolocationError` callback could be called on an interval every `timeout` milliseconds! _(Number)_
-- __maximumAge:__ Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
+- __enableHighAccuracy__: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a `Position` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
+- __timeout__: The maximum length of time (milliseconds) that is allowed to pass from the call to `geolocation.getCurrentPosition` or `geolocation.watchPosition` until the corresponding `geolocationSuccess` callback is invoked. If the `geolocationSuccess` callback is not invoked within this time, the `geolocationError` callback is invoked with a `PositionError.TIMEOUT` error code. (Note that when used in conjunction with `geolocation.watchPosition`, the `geolocationError` callback could be called on an interval every `timeout` milliseconds!) _(Number)_
+- __maximumAge__: Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
 
 Android Quirks
 --------------
 
-The Android 2.x simulators will not return a geolocation result unless the enableHighAccuracy option is set to true.
-
-    { enableHighAccuracy: true }
+Android 2.x simulators do not return a geolocation result unless the `enableHighAccuracy` option is set to `true`.
 

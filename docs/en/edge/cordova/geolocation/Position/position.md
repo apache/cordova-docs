@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -25,8 +25,8 @@ Contains `Position` coordinates and timestamp, created by the geolocation API.
 Properties
 ----------
 
-- __coords:__ A set of geographic coordinates. _(Coordinates)_
-- __timestamp:__ Creation timestamp for `coords`. _(Date)_
+- __coords__: A set of geographic coordinates. _(Coordinates)_
+- __timestamp__: Creation timestamp for `coords`. _(Date)_
 
 Description
 -----------
@@ -102,8 +102,7 @@ Full Example
                                 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
                                 'Heading: '            + position.coords.heading               + '<br />' +
                                 'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          +
-     position.timestamp                    + '<br />';
+                                'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
 	    // onError Callback receives a PositionError object

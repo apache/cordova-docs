@@ -27,9 +27,9 @@ URLs.
 Properties
 ----------
 
-- __type:__ A string that indicates what type of field this is, _home_ for example. _(DOMString)_
-- __value:__ The value of the field, such as a phone number or email address. _(DOMString)_
-- __pref:__ Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
+- __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)_
+- __value__: The value of the field, such as a phone number or email address. _(DOMString)_
+- __pref__: Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
 Details
 -------
@@ -144,20 +144,20 @@ Full Example
 Android Quirks
 --------------
 
-- __pref:__ Not supported, returning `false`.
+- __pref__: Not supported, returning `false`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
-- __type:__ Partially supported.  Used for phone numbers.
-- __value:__ Supported.
-- __pref:__ Not supported, returning `false`.
+- __type__: Partially supported.  Used for phone numbers.
+- __value__: Supported.
+- __pref__: Not supported, returning `false`.
 
 iOS Quirks
 -----------
-- __pref:__ Not supported, returning `false`.
+- __pref__: Not supported, returning `false`.
 
 Bada Quirks
 -----------
 
-- __type:__ For email or address fields, property must be _WORK_ or _HOME_. For phone fields, must be _WORK_, _HOME_, _VOICE_, _FAX_, _MSG_, _CELL_, _PAGER_, _BBS_, _MODEM_, _CAR_, _ISDN_,_VIDEO_, or _PCS_.
+- __type__: For email or address fields, property must be _WORK_ or _HOME_. For phone fields, must be _WORK_, _HOME_, _VOICE_, _FAX_, _MSG_, _CELL_, _PAGER_, _BBS_, _MODEM_, _CAR_, _ISDN_,_VIDEO_, or _PCS_.

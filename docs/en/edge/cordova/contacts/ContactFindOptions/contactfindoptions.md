@@ -25,8 +25,8 @@ Contains properties that can be used to filter the results of a `contacts.find` 
 Properties
 ----------
 
-- __filter:__ The search string used to find contacts. _(DOMString)_ (Default: `""`)
-- __multiple:__ Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: false)
+- __filter__: The search string used to find contacts. _(DOMString)_ (Default: `""`)
+- __multiple__: Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: false)
 
 Supported Platforms
 -------------------
@@ -115,4 +115,4 @@ Full Example
 Bada Quirks
 -----------
 
-__filter:__ Property can only apply to the following: _firstName_, _lastName_, _nickname_, _phoneNumber_, _email_, and _address_.
+__filter__: Property can only apply to the following: _firstName_, _lastName_, _nickname_, _phoneNumber_, _email_, and _address_.

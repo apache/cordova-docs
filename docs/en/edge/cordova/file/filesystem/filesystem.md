@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -25,13 +25,16 @@ This object represents a file system.
 Properties
 ----------
 
-- __name:__ The name of the file system. _(DOMString)_
-- __root:__ The root directory of the file system. _(DirectoryEntry)_
+- __name__: The name of the file system. _(DOMString)_
+- __root__: The root directory of the file system. _(DirectoryEntry)_
 
 Details
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+The `FileSystem` object represents information about the file system.
+The name of the file system is unique across the list of exposed
+file systems.  The root property contains a `DirectoryEntry` object
+that represents the file system's root directory.
 
 Supported Platforms
 -------------------

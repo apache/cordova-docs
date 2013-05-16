@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -30,13 +30,17 @@ Parameters
 ----------
 
 - __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: (Optional) The callback that is called if there was an error.
-- __geolocationOptions__: (Optional) The geolocation options.
+- __geolocationError__: _(Optional)_ The callback that is called if there was an error.
+- __geolocationOptions__: _(Optional)_ The geolocation options.
 
 Description
 -----------
 
-`geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.getCurrentPosition` is an asynchronous function. It
+returns the device's current position to the `geolocationSuccess`
+callback with a `Position` object as the parameter.  If there is an
+error, the `geolocationError` callback is invoked with a
+`PositionError` object.
 
 Supported Platforms
 -------------------
@@ -109,7 +113,7 @@ Full Example
                                 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
                                 'Heading: '            + position.coords.heading               + '<br />' +
                                 'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          +                                   position.timestamp          + '<br />';
+                                'Timestamp: '          + position.timestamp                    + '<br />';
         }
     
         // onError Callback receives a PositionError object

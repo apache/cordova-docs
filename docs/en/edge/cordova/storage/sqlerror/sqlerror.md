@@ -25,8 +25,8 @@ A `SQLError` object is thrown when an error occurs.
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ A description of the error.
+- __code__: One of the predefined error codes listed below.
+- __message__: A description of the error.
 
 Constants
 ---------

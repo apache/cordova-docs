@@ -34,15 +34,15 @@ or album.
 CameraPopoverOptions
 --------------------
 
-- __x:__ x pixel coordinate of screen element onto which to anchor the popover. (`Number`)
+- __x__: x pixel coordinate of screen element onto which to anchor the popover. (`Number`)
 
-- __y:__ y pixel coordinate of screen element onto which to anchor the popover. (`Number`)
+- __y__: y pixel coordinate of screen element onto which to anchor the popover. (`Number`)
 
-- __width:__ width, in pixels, of the screen element onto which to anchor the popover. (`Number`)
+- __width__: width, in pixels, of the screen element onto which to anchor the popover. (`Number`)
 
-- __height:__ height, in pixels, of the screen element onto which to anchor the popover. (`Number`)
+- __height__: height, in pixels, of the screen element onto which to anchor the popover. (`Number`)
 
-- __arrowDir:__ Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` (`Number`)
+- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` (`Number`)
 
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants

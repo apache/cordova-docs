@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -36,7 +36,8 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
+The `Coordinates` object is attached to the `Position` object that is
+available to callback functions in requests for the current position.
 
 Supported Platforms
 -------------------
@@ -124,4 +125,4 @@ Full Example
 Android Quirks
 -------------
 
-__altitudeAccuracy:__ Not supported by Android devices, returning `null`.
+__altitudeAccuracy__: Not supported by Android devices, returning `null`.

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,17 +20,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Metadata
 ==========
 
-This interface supplies information about the state of a file or directory.
+An interface that supplies information about the state of a file or directory.
 
 Properties
 ----------
 
-- __modificationTime:__ This is the time at which the file or directory was last modified. _(Date)_
+- __modificationTime__: The time when the file or directory was last modified. _(Date)_
 
 Details
 -------
 
-The `Metadata` object represents information about the state of a file or directory.  You can get an instance of a Metadata object by calling the __getMetadata__ method of a `DirectoryEntry` or `FileEntry` object.
+The `Metadata` object represents information about the state of a file
+or directory.  Calling a `DirectoryEntry` or `FileEntry` object's
+`getMetadata()` method results in a `Metadata` instance.
 
 Supported Platforms
 -------------------

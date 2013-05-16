@@ -64,15 +64,15 @@ addEventListener
 
     ref.addEventListener(eventname, callback);
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __eventname:__ the event to listen for (`String`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __eventname__: the event to listen for (`String`)
 
         loadstart - event fired when the InAppBrowser starts to load a URL
         loadstop - event fired when the InAppBrowser finished loading a URL
         loaderror - event fired when the InAppBrowser encounters an error loading a URL
         exit - event fired when the InAppBrowser window is closed
 
-- __callback:__ the function that is called when the event is fired.
+- __callback__: the function that is called when the event is fired.
 The function is passed an `InAppBrowserEvent` object.
 
 Supported Platforms
@@ -126,15 +126,15 @@ removeEventListener
 
     ref.removeEventListener(eventname, callback);
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __eventname:__ the event to stop listening for (`String`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __eventname__: the event to stop listening for (`String`)
 
         loadstart - event fired when the InAppBrowser starts to load a URL
         loadstop - event fired when the InAppBrowser finished loading a URL
         loaderror - event fired when the InAppBrowser encounters an error loading a URL
         exit - event fired when the InAppBrowser window is closed
 
-- __callback:__ the function that was to be called when the event is fired.
+- __callback__: the function that was to be called when the event is fired.
 The function is passed an `InAppBrowserEvent` object.
 
 Supported Platforms
@@ -213,7 +213,7 @@ close
 
     ref.close();
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
 
 Supported Platforms
 -------------------
@@ -267,14 +267,14 @@ executeScript
 
     ref.executeScript(details, callback);
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __injectDetails:__ details of the script ot run (`Object`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __injectDetails__: details of the script ot run (`Object`)
     - Supported keys:  (exactly one of "file" or "code" should be present)
 
             "file" - URL of the script to inject
             "code" - Text of the script to inject
 
-- __callback:__ the function that is to be called in the Cordova application after the JavaScript code is injected.
+- __callback__: the function that is to be called in the Cordova application after the JavaScript code is injected.
     - If the injected script is of type "code", then the callback is called with a single argument, which is
       the return value of the script, wrapped in an Array. (For multi-line scripts, this is the return value of the
       last statement, or the last expression evaluated.)
@@ -347,14 +347,14 @@ insertCSS
 
     ref.insertCSS(details, callback);
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
-- __injectDetails:__ details of the script ot run (`Object`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __injectDetails__: details of the script ot run (`Object`)
     - Supported keys:  (exactly one of "file" or "code" should be present)
 
             "file" - URL of the stylesheet to inject
             "code" - Text of the stylesheet to inject
 
-- __callback:__ the function that is to be called in the Cordova application after the CSS is injected.
+- __callback__: the function that is to be called in the Cordova application after the CSS is injected.
 
 Supported Platforms
 -------------------
@@ -425,7 +425,7 @@ The object that is passed to the callback function from an addEventListener call
 Properties
 ----------
 
-- __type:__ the eventname (`String`) - one of loadstart, loadstop, loaderror or exit
-- __url:__ the URL that was loaded (`String`)
-- __code:__ the error code (`Number`) - only in the case of loaderror
-- __message:__ the error message (`String`) - only in the case of loaderror
+- __type__: the eventname (`String`) - one of loadstart, loadstop, loaderror or exit
+- __url__: the URL that was loaded (`String`)
+- __code__: the error code (`Number`) - only in the case of loaderror
+- __message__: the error message (`String`) - only in the case of loaderror

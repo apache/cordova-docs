@@ -25,10 +25,10 @@ Contains `Accelerometer` data captured at a specific point in time.
 Properties
 ----------
 
-- __x:__  Amount of acceleration on the x-axis. (in m/s^2) (`Number`)
-- __y:__  Amount of acceleration on the y-axis. (in m/s^2) (`Number`)
-- __z:__  Amount of acceleration on the z-axis. (in m/s^2) (`Number`)
-- __timestamp:__ Creation timestamp in milliseconds. (`DOMTimeStamp`)
+- __x__:  Amount of acceleration on the x-axis. (in m/s^2) (`Number`)
+- __y__:  Amount of acceleration on the y-axis. (in m/s^2) (`Number`)
+- __z__:  Amount of acceleration on the z-axis. (in m/s^2) (`Number`)
+- __timestamp__: Creation timestamp in milliseconds. (`DOMTimeStamp`)
 
 Description
 -----------

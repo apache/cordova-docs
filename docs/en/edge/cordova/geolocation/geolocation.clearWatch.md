@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,19 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocation.clearWatch
 ======================
 
-Stop watching for changes to the device's location referenced by the `watchID` parameter.
+Stop watching for changes to the device's location referenced by the
+`watchID` parameter.
 
     navigator.geolocation.clearWatch(watchID);
 
 Parameters
 ----------
 
-- __watchID:__ The id of the `watchPosition` interval to clear. (String)
+- __watchID__: The id of the `watchPosition` interval to clear. (String)
 
 Description
 -----------
 
-`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+The `geolocation.clearWatch` stops watching changes to the device's
+location by clearing the `geolocation.watchPosition` referenced by
+`watchID`.
 
 Supported Platforms
 -------------------

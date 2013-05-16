@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -25,8 +25,8 @@ This object provides a way to obtain root file systems.
 Methods
 ----------
 
-- __requestFileSystem:__ Requests a filesystem. _(Function)_
-- __resolveLocalFileSystemURI:__ Retrieve a DirectoryEntry or FileEntry using local URI. _(Function)_
+- __requestFileSystem__: Requests a filesystem. _(Function)_
+- __resolveLocalFileSystemURI__: Retrieve a `DirectoryEntry` or `FileEntry` using local URI. _(Function)_
 
 Constants
 ---------
@@ -37,7 +37,7 @@ Constants
 Details
 -------
 
-The `LocalFileSystem` object methods are defined on the __window__ object.
+The `LocalFileSystem` object methods are defined on the `window` object.
 
 Supported Platforms
 -------------------
