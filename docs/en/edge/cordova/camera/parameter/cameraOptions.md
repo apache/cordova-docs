@@ -117,6 +117,7 @@ iOS Quirks
 
 - Set `quality` below 50 to avoid memory error on some devices.
 - When `destinationType.FILE_URI` is used, photos are saved in the application's temporary directory. 
+- Images saved to the photo album using the `saveToPhotoAlbum` parameter does not contain the same image metadata as compared to the image returned from camera.getPicture.  For example, the image saved to the photo album does not contain any GPS metadata.
 
 Windows Phone 7 and 8 Quirks
 --------------
