@@ -142,3 +142,6 @@ editorial guidelines.
 
 * Init-cap Web & Internet as noun?
 
+* For DL-style bullets that define terms, use a colon (:) with no
+  inline formatting to separate the term from subsequent text. Do not
+  use a dash.
