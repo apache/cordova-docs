@@ -35,7 +35,8 @@ The Cordova command-line utility is available Mac OSX and Linux.
   installation, you should be able to run `node` or `npm` on your
   command line.
 
-* Download and install SDKs for the mobile platforms you wish to support:
+* Download and install SDKs for the mobile platforms you wish to
+  support:
 
   * [iOS](http://developer.apple.com/):
 
@@ -67,6 +68,19 @@ The Cordova command-line utility is available Mac OSX and Linux.
 
         $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
 
+After installing the `cordova` utility, you can update it by running
+the following:
+
+        $ sudo npm update -g cordova
+
+Use this syntax to install a specific version:
+
+        $ sudo npm install -g cordova@2.7.0
+
+Run the `info` command for a listing of available version numbers:
+
+        $ npm info cordova
+
 ## Create an App
 
 Go to the directory where you want to maintain your source code, and
@@ -97,6 +111,10 @@ platforms.  Run any of the following at any point during development:
         $ cordova platform add android
         $ cordova platform add ios
         $ cordova platform add blackberry
+        $ cordova platform add wp7
+        $ cordova platform add wp8
+
+(The _wp_ options refer to Windows Phone versions.)
 
 Run this to check your current set of platforms:
 
