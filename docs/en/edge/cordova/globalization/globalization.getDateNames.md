@@ -29,7 +29,7 @@ Description
 
 It returns the array of names to the `successCallback` with a properties object as a parameter. That object should have a `value` property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.
 
-If there is an error obtaining the names, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error obtaining the names, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
 
 `options.type` can be 'narrow', or 'wide'.
 `options.item` can be 'months', or 'days'.
@@ -48,7 +48,7 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to "month: January"
+When the browser is set to the en\_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to "month: January"
 
     navigator.globalization.getDateNames(
       function (names) {

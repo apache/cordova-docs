@@ -29,18 +29,22 @@ Description
 -----------
 
 Returns the pattern to the `successCallback` with a `properties` object
-as a parameter. That object should have the following properties:
+as a parameter. That object should contain the following properties:
 
-- __pattern__ {String}: The currency pattern for formatting and parsing currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
-- __code__ {String}: The ISO 4217 currency code for the pattern.
-- __fraction__ {Number}: The number of fractional digits to use when parsing and formatting currency.
-- __rounding__ {Number}: The rounding increment to use when parsing and formatting.
-- __decimal__: {String}: The decimal symbol to use for parsing and formatting.
-- __grouping__: {String}: The grouping symbol to use for parsing and formatting.
+- __pattern__: The currency pattern to format and parse currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __code__: The ISO 4217 currency code for the pattern. _(String)_
+- __fraction__: The number of fractional digits to use when parsing and formatting currency. _(Number)_
+- __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+- __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+- __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
-The inbound `currencyCode` parameter should be a String of one of the ISO 4217 currency codes, for example 'USD'.
+The inbound `currencyCode` parameter should be a `String` of one of
+the ISO 4217 currency codes, for example 'USD'.
 
-If there is an error obtaining the pattern, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback`
+is invoked with a `GlobalizationError` object as a parameter. The
+expected code for this error is
+`GlobalizationError.FORMATTING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -52,16 +56,9 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale and the selected currency is United States Dollars, this should display a popup dialog with text similar to:
-
-    pattern: $#,##0.##;($#,##0.##)
-    code: USD
-    fraction: 2
-    rounding: 0
-    decimal: .
-    grouping: ,
-
-.
+When the browser is set to the `en\_US` locale and the selected currency
+is United States Dollars, this example should display a popup dialog with text
+similar to the results that follow:
 
     navigator.globalization.getCurrencyPattern(
       'USD',
@@ -73,6 +70,15 @@ In the case when the browser is set to the en\_US locale and the selected curren
                                 'grouping: ' + pattern.grouping);},
       function () {alert('Error getting pattern\n');}
     );
+
+Expected result:
+
+    pattern: $#,##0.##;($#,##0.##)
+    code: USD
+    fraction: 2
+    rounding: 0
+    decimal: .
+    grouping: ,
 
 Full Example
 ------------

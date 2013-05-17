@@ -31,13 +31,13 @@ Description
 
 It returns the date to the success callback with a properties object as a parameter. That object should have the following properties:
 
-- year {Number}: The four digit year
-- month {Number}: The month from (0 - 11)
-- day {Number}: The day from (1 - 31)
-- hour {Number}: The hour from (0 - 23)
-- minute {Number}: The minute from (0 - 59)
-- second {Number}: The second from (0 - 59)
-- millisecond {Number}: The milliseconds (from 0 - 999), not available on all platforms
+- __year__: The four digit year. _(Number)_
+- __month__: The month from (0 - 11). _(Number)_
+- __day__: The day from (1 - 31). _(Number)_
+- __hour__: The hour from (0 - 23). _(Number)_
+- __minute__: The minute from (0 - 59). _(Number)_
+- __second__: The second from (0 - 59). _(Number)_
+- __millisecond__: The milliseconds (from 0 - 999), not available on all platforms. _(Number)_
 
 The inbound `dateString` parameter should be of type `String`.
 
@@ -47,7 +47,7 @@ The inbound `dateString` parameter should be of type `String`.
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The options parameter is optional.
 
-If there is an error parsing the date string, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+If there is an error parsing the date string, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PARSING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -60,7 +60,7 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
+When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
 
     navigator.globalization.stringToDate(
       '9/25/2012',

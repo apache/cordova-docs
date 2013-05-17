@@ -31,7 +31,7 @@ It returns whether or not daylight savings time is in effect to the `successCall
 
 The inbound parameter `date` should be of type `Date`.
 
-If there is an error reading the date, then the `errorCallback` is invoked. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error reading the date, then the `errorCallback` is invoked. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------

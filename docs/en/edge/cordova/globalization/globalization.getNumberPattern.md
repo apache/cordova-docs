@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getNumberPattern
 ===========
 
-Returns a pattern string for formatting and parsing numbers according to the client's user preferences.
+Returns a pattern string to format and parse numbers according to the client's user preferences.
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
     
@@ -29,16 +29,16 @@ Description
 
 It returns the pattern to the `successCallback` with a properties object as a parameter. That object should have the following properties:
 
-- pattern {String}: The number pattern for formatting and parsing numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
-- symbol {String}: The symbol to be used when formatting and parsing e.g., percent or currency symbol.
-- fraction {Number}: The number of fractional digits to use when parsing and formatting numbers.
-- rounding {Number}: The rounding increment to use when parsing and formatting.
-- positive {String}: The symbol to use for positive numbers when parsing and formatting.
-- negative: {String}: The symbol to use for negative numbers when parsing and formatting.
-- decimal: {String}: The decimal symbol to use for parsing and formatting.
-- grouping: {String}: The grouping symbol to use for parsing and formatting.
+- __pattern__: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __symbol__: The symbol to be used when formatting and parsing e.g., percent or currency symbol. _(String)_
+- __fraction__: The number of fractional digits to use when parsing and formatting numbers. _(Number)_
+- __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+- __positive__: The symbol to use for positive numbers when parsing and formatting. _(String)_
+- __negative__: The symbol to use for negative numbers when parsing and formatting. _(String)_
+- __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+- __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
-If there is an error obtaining the pattern, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PATTERN\_ERROR`.
 
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.
@@ -54,7 +54,7 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to:
+When the browser is set to the en\_US locale, this should display a popup dialog with text similar to:
 
     pattern: #,##0.###
     symbol: .

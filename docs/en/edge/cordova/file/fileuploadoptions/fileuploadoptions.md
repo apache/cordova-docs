@@ -44,4 +44,4 @@ upload script.
 WP7 Quirk
 ---------
 
-- __chunkedMode:__ Ignored on WP7.
+- __chunkedMode:__: Ignored on WP7.

@@ -29,7 +29,7 @@ Description
 
 The days of the week are numbered starting from 1 where 1 is considered to be Sunday. It returns the day to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a Number value.
 
-If there is an error obtaining the pattern, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -42,7 +42,7 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "day: 1".
+When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "day: 1".
 
     navigator.globalization.getFirstDayOfWeek(
       function (day) {alert('day: ' + day.value + '\n');},

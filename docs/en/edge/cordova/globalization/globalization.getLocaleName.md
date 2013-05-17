@@ -31,7 +31,7 @@ Description
 It returns the locale identifier string to the `successCallback` with a
 properties object as a parameter. That object should have a `value` property with a String value.
 
-If there is an error getting the locale, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error getting the locale, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -44,7 +44,7 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with the text "locale: en\_US".
+When the browser is set to the en\_US locale, this should display a popup dialog with the text "locale: en\_US".
 
     navigator.globalization.getLocaleName(
       function (locale) {alert('locale: ' + locale.value + '\n');},
