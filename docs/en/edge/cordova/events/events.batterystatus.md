@@ -30,7 +30,7 @@ Details
 This event fires when the percentage of battery charge changes by at
 least 1 percent, or if the device is plugged in or unplugged.
 
-The battery status handler is called with an object that contains two
+The battery status handler is passed an object that contains two
 properties:
 
 - __level__: The percentage of battery charge (0-100). _(Number)_

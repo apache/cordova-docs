@@ -246,8 +246,8 @@ Deletes a directory. An error results if the app attempts to:
 
 __Parameters:__
 
-- __successCallback__: A callback that is called after the directory has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__: A callback that is called if an error occurs when attempting to delete the directory. Invoked with a `FileError` object. _(Function)_
+- __successCallback__: A callback that executes after the directory is deleted.  Invoked with no parameters. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to delete the directory. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -265,12 +265,12 @@ __Quick Example__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the directory.
+Look up the parent `DirectoryEntry` containing the directory.
 
 __Parameters:__
 
-- __successCallback__: A callback that is called with the directory's parent DirectoryEntry. _(Function)_
-- __errorCallback__: A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry. Invoked with a `FileError` object. _(Function)_
+- __successCallback__: A callback that is passed the directory's parent `DirectoryEntry`. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 
@@ -334,7 +334,7 @@ __Parameters:__
 - __path__: The path to the file to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
 - __options__: Options to specify whether the file is created if it doesn't exist.  _(Flags)_
 - __successCallback__: A callback that is passed a `FileEntry` object. _(Function)_
-- __errorCallback__: A callback that is called if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 

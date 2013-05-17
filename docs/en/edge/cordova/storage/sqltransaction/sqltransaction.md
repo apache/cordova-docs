@@ -30,7 +30,7 @@ Methods
 Details
 -------
 
-When you call a Database objects transaction method, its callback methods is called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.
+When you call a Database objects transaction method, its callback method is passed a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.
 
 Supported Platforms
 -------------------

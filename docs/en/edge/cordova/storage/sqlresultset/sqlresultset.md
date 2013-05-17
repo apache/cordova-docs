@@ -20,7 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLResultSet
 =======
 
-When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
+When the `executeSql` method of a `SQLTransaction` is called it
+invokes its callback with a `SQLResultSet`.
 
 Properties
 -------
@@ -32,7 +33,7 @@ Properties
 Details
 -------
 
-When you call the SQLTransaction executeSql method its callback methods is called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When you call the SQLTransaction executeSql method its callback methods is passed a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
 
 Supported Platforms
 -------------------

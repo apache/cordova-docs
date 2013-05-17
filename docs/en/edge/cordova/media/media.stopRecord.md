@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,7 +27,8 @@ Stops recording an audio file.
 Description
 -----------
 
-Function `media.stopRecord` is a synchronous function that stops recording an audio file.
+The `media.stopRecord` method executes synchronously, stopping the
+recording of an audio file.
 
 Supported Platforms
 -------------------
@@ -137,4 +138,4 @@ Full Example
 Tizen Quirks
 ----------
 
-- This API is not supported on Tizen devices.
+- Not supported on Tizen devices.

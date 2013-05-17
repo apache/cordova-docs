@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,13 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 MediaError
 ==========
 
-A `MediaError` object is returned to the `mediaError` callback function when an error occurs.
+A `MediaError` object is returned to the `mediaError` callback
+function when an error occurs.
 
 Properties
 ----------
 
 - __code__: One of the predefined error codes listed below.
-- __message__: Error message describing the details of the error.
+- __message__: An error message describing the details of the error.
 
 Constants
 ---------
@@ -39,5 +40,6 @@ Constants
 Description
 -----------
 
-The `MediaError` object is returned to the user through the `mediaError` callback function when an error occurs.
+The `MediaError` object is passed to a `mediaError` callback function
+when an error occurs.
 

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,7 +27,8 @@ Starts recording an audio file.
 Description
 -----------
 
-Function `media.startRecord` is a synchronous function that starts recording an audio file.
+The `media.startRecord` method executes synchronously, starts a
+recording for an audio file.
 
 Supported Platforms
 -------------------
@@ -132,18 +133,18 @@ Full Example
 Android Quirks
 ----------
 
-- Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a .amr extension.
+- Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a _.amr_ extension.
 
 BlackBerry WebWorks Quirks
 ----------
 
-- BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a .amr extension.
+- BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a _.amr_ extension.
 
 iOS Quirks
 ----------
 
-- iOS only records to files of type .wav and returns an error if the file name extension is not correct.
-- If a full path is not provided the recording will be placed in the <application>/documents/tmp directory.  This can be accessed via the File apis using LocalFileSystem.TEMPORARY.  Subdirectories are not created at record time and must already exist.  Thus,  myRecording.wav will work but recordings/myRecording.wav will not if the recordings directory does not already exist at <application>/documents/tmp/.
+- iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
+- If a full path is not provided, the recording is placed in the application's _documents/tmp_ directory. This can be accessed via the `File` API using `LocalFileSystem.TEMPORARY`. Any subdirectory specified at record time must already exist.
 - Files can be recorded and played back using the documents URI:
 
         var myMedia = new Media("documents://beer.mp3")
@@ -151,4 +152,4 @@ iOS Quirks
 Tizen Quirks
 ----------
 
-- This API is not supported on Tizen devices.
+- Not supported on Tizen devices.

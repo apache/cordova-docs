@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,8 +27,8 @@ Properties
 
 - __name__: The name of the file, without path information. (DOMString)
 - __fullPath__: The full path of the file, including the name. (DOMString)
-- __type__: The mime type (DOMString)
-- __lastModifiedDate__: The date and time that the file was last modified. (Date)
+- __type__: The file's mime type (DOMString)
+- __lastModifiedDate__: The date and time when the file was last modified. (Date)
 - __size__: The size of the file, in bytes. (Number)
 
 Methods

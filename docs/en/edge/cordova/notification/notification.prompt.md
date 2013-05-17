@@ -37,7 +37,7 @@ Function `notification.prompt` displays a native dialog box that is more customi
 promptCallback
 ---------------
 
-The `promptCallback` is called when the user has pressed one of the buttons on the prompt dialog box.
+The `promptCallback` executes when the user has pressed one of the buttons on the prompt dialog box.
 
 The callback takes the argument `results` which contains the following properties:
 

@@ -37,7 +37,8 @@ Function `notification.confirm` displays a native dialog box that is more custom
 confirmCallback
 ---------------
 
-The `confirmCallback` is called when the user has pressed one of the buttons on the confirmation dialog box.
+The `confirmCallback` executes when the user presses one of the
+buttons on the confirmation dialog box.
 
 The callback takes the argument `buttonIndex` _(Number)_, which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
 

@@ -29,8 +29,8 @@ Returns the device's current position as a `Position` object.
 Parameters
 ----------
 
-- __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: _(Optional)_ The callback that is called if there was an error.
+- __geolocationSuccess__: The callback that is passed the current position.
+- __geolocationError__: _(Optional)_ The callback that executes if an error occurs.
 - __geolocationOptions__: _(Optional)_ The geolocation options.
 
 Description

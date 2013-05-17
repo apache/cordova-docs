@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,12 +27,14 @@ Sets the current position within an audio file.
 Parameters
 ----------
 
-- __milliseconds__: The position to set the playback position within the audio in milliseconds. .
+- __milliseconds__: The position to set the playback position within the audio, in milliseconds.
 
 Description
 -----------
 
-Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object.
+The `media.seekTo` executes asynchronously, updating the current
+playback position within an audio file referenced by a `Media`
+object. Also updates the `Media` object's `position` parameter.
 
 Supported Platforms
 -------------------
@@ -154,4 +156,4 @@ Full Example
 BlackBerry WebWorks Quirks
 ----------
 
-- This API is not supported on BlackBerry OS 5 devices.
+- Not supported on BlackBerry OS 5 devices.

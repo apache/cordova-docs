@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Capture
 =======
 
-> Provides access to the audio, image, and video capture capabilities of the device.
+> Provides access to the device's audio, image, and video capture capabilities.
 
 Objects
 -------
@@ -46,7 +46,8 @@ Methods
 Scope
 -----
 
-The __capture__ object is assigned to the __navigator.device__ object, and therefore has global scope.
+The `capture` object is assigned to the `navigator.device` object, and
+therefore has global scope.
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -61,9 +62,9 @@ Properties
 Methods
 -------
 
-- capture.captureAudio: Launch the device audio recording application for recording audio clip(s).
-- capture.captureImage: Launch the device camera application for taking image(s).
-- capture.captureVideo: Launch the device video recorder application for recording video(s).
+- `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
+- `capture.captureImage`: Launch the device's camera application to take photos.
+- `capture.captureVideo`: Launch the device's video recorder application to record videos.
 
 Supported Platforms
 -------------------

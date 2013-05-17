@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,13 +27,15 @@ Returns the current position within an audio file.
 Parameters
 ----------
 
-- __mediaSuccess__: The callback that is called with the current position in seconds.
-- __mediaError__: (Optional) The callback that is called if there was an error.
+- __mediaSuccess__: The callback that is passed the current position in seconds.
+- __mediaError__: (Optional) The callback to execute if an error occurs.
 
 Description
 -----------
 
-Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object.
+An asynchronous function that returns the current position of the
+underlying audio file of a `Media` object. Also updates the `Media`
+object's `position` parameter.
 
 Supported Platforms
 -------------------

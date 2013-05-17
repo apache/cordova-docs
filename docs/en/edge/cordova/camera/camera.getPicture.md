@@ -58,7 +58,7 @@ example:
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
 - Post the data to a remote server
 
-**NOTE:** Photo resolution on newer devices is quite good. Photos
+__NOTE:__ Photo resolution on newer devices is quite good. Photos
 selected from the device's gallery are not downscaled to a lower
 quality, even if a `quality` parameter is specified.  To avoid common
 memory problems, set `Camera.destinationType` to `FILE_URI` rather

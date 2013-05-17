@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,14 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 media.release
 =================
 
-Releases the underlying operating systems audio resources.
+Releases the underlying operating system's audio resources.
 
     media.release();
 
 Description
 -----------
 
-Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
+The `media.release` method executes synchronously, releasing the
+underlying operating system's audio resources.  This is particularly
+important for Android, since there are a finite amount of OpenCore
+instances for media playback. Applications should call the `release`
+function for any `Media` resource that is no longer needed.
 
 Supported Platforms
 -------------------

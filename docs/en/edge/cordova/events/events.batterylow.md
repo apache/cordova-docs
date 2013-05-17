@@ -30,7 +30,7 @@ Details
 The event fires when the percentage of battery charge has reached the
 low battery threshold, device-specific value.
 
-The `batterylow` handler is called with an object that contains two
+The `batterylow` handler is passed an object that contains two
 properties:
 
 - __level__: The percentage of battery charge (0-100). _(Number)_

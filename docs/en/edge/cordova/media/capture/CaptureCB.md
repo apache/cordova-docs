@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,9 +27,12 @@ CaptureCB
 Description
 -----------
 
-This function is invoked after a successful capture operation has completed.  This means a media file has been captured, and either the user has exited the media capture application, or the capture limit has been reached.
+This function executes after a successful capture operation completes.
+At this point a media file has been captured, and either the user has
+exited the media capture application, or the capture limit has been
+reached.
 
-Each MediaFile object describes a captured media file.
+Each `MediaFile` object describes a captured media file.
 
 Quick Example
 -------------

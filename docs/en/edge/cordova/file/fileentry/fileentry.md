@@ -259,8 +259,8 @@ Look up the parent `DirectoryEntry` containing the file.
 
 __Parameters:__
 
-- __successCallback__: A callback that is passed the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a `FileError` object. _(Function)_
+- __successCallback__: A callback that is passed the file's parent `DirectoryEntry`. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when attempting to retrieve the parent `DirectoryEntry`.  Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
 

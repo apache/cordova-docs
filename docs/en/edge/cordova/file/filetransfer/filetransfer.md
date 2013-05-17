@@ -64,8 +64,8 @@ __Parameters:__
 
 - __filePath__: Full path of the file on the device.
 - __server__: URL of the server to receive the file, as encoded by `encodeURI()`.
-- __successCallback__: A callback that is called with a `Metadata` object. _(Function)_
-- __errorCallback__: A callback that is called if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+- __successCallback__: A callback that is passed a `Metadata` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
 - __options__: Optional parameters such as file name and mimetype.
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
@@ -239,7 +239,7 @@ __Quick Example__
 abort
 --------------
 
-Aborts an in-progress transfer. The onerror callback is called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
 __Supported Platforms__
 

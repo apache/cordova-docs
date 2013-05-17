@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -29,11 +29,22 @@ capture.captureVideo
 Description
 -----------
 
-This method starts an asynchronous operation to capture video recordings using the device video recording application.  The operation allows the device user to capture multiple recordings in a single session.
+Starts an asynchronous operation to capture video recordings using the
+device's video recording application.  The operation allows the user
+to capture more than one recordings in a single session.
 
-The capture operation ends when either the user exits the video recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureVideoOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single video clip.
+The capture operation ends when either the user exits the video
+recording application, or the maximum number of recordings specified
+by `CaptureVideoOptions.limit` is reached.  If no `limit` parameter
+value is specified, it defaults to one (1), and the capture operation
+terminates after the user records a single video clip.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured video clip file.  If the operation is terminated by the user before an video clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation finishes, it the `CaptureCB` callback
+executes with an array of `MediaFile` objects describing each captured
+video clip file.  If the user terminates the operation before
+capturing a video clip, the `CaptureErrorCB` callback executes with a
+`CaptureError` object featuring a
+`CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -129,32 +140,32 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture the video recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 Bada 2.x Quirks
 ---------------
 
-Bada supports _captureVideo_ just like the other platforms. However there is _another_ mode where you can capture a video or an image straight in the webview without launching any camera apps. In order to do that you need to:
+Bada supports `captureVideo` just like the other platforms, but
+features _another_ mode allowing video or image capture straight into
+the WebView without launching any camera app. Here's how:
 
-1. create a _&#60;div&#62;_ element somewhere in your document and give it an id (such as "preview").
+1. Create an element with an `id` attribute somewhere in the HTML:
 
         <div id="preview"></div>
 
-2. Initialize the camera preview with the following method
+2. Initialize the camera preview as follows:
 
         navigator.camera.showPreview("preview");
 
-3. Once you get the preview you can
-
-    3.1 Start capturing a video with
+3. Once the preview is available, use code such as this to start capturing a video:
 
         navigator.capture.startVideoCapture(success, fail, {duration: 5000, destinationFilename: "videos/a.3gp"});
     
-    3.2 Stop the video capture with
+4. Use this to stop the video capture:
 
         navigator.capture.stopVideoCapture();
 
-3. Hide the camera preview with the following method
+5. Dismiss the camera preview as follows:
 
         navigator.camera.hidePreview("preview");
 

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,7 +27,7 @@ Pauses playing an audio file.
 Description
 -----------
 
-Function `media.pause` is a synchronous function that pauses playing an audio file.
+The `media.pause` method executes synchronously, and pauses playing an audio file.
 
 Supported Platforms
 -------------------

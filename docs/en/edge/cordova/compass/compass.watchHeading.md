@@ -138,7 +138,7 @@ iOS Quirks
 In iOS `compass.watchHeading` can also get the device's current
 heading when it changes by a specified number of degrees. Each time
 the heading changes by the specified number of degrees or more, the
-`headingSuccess` callback function is called. Specify the degrees of
+`headingSuccess` callback function executes. Specify the degrees of
 change via the `filter` parameter in the `compassOptions` object.
 Clear the watch as usual by passing the returned watch ID to
 `compass.clearWatch`.  This functionality replaces the previously

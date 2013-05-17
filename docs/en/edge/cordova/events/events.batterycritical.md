@@ -31,8 +31,8 @@ Details
 The event fires when the percentage of battery charge has reached the
 critical battery threshold. The value is device-specific.
 
-The `batterycritical` handler is called with an object that contains
-two properties:
+The `batterycritical` handler is passed an object that contains two
+properties:
 
 - __level__: The percentage of battery charge (0-100). _(Number)_
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_

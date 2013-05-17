@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,7 +27,9 @@ Returns the duration of an audio file.
 Description
 -----------
 
-Function `media.getDuration` is a synchronous function that returns the duration of the audio file in seconds, if known.  If the duration is unknown, a value of -1 is returned.
+The `media.getDuration` method executes synchronously, returning the
+duration of the audio file in seconds, if known.  If the duration is
+unknown, it returns a value of -1.
 
 Supported Platforms
 -------------------

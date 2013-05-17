@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -39,14 +39,14 @@ Quick Example
 Android Quirks
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
+- The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
 
 BlackBerry WebWorks Quirks
 --------------------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
+- The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
 
 iOS Quirks
 ----------
 
-- The __limit__ parameter is not supported. One recording can be created for each invocation.
+- The `limit` parameter is not supported, so only one recording can be created for each invocation.

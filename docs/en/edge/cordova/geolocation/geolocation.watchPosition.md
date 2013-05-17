@@ -30,7 +30,7 @@ Parameters
 ----------
 
 - __geolocationSuccess__: The callback that is passed the current position.
-- __geolocationError__: (Optional) The callback that executes if there was an error.
+- __geolocationError__: (Optional) The callback that executes if an error occurs.
 - __geolocationOptions__: (Optional) The geolocation options.
 
 Returns

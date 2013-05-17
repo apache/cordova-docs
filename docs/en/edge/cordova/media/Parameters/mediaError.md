@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 mediaError
 ==========
 
-A user specified callback function that is invoked when there is an error in media functions.
+A user-specified callback function that executes when there is an
+error in media functions.
 
     function(error) {
         // Handle the error
