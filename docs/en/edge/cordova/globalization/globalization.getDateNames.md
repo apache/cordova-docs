@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,22 +20,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getDateNames
 ===========
 
-Returns an array of either the names of the months or days of the week according to the client's user preferences and calendar.
+Returns an array of the names of the months or days of the week,
+depending on the client's user preferences and calendar.
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the array of names to the `successCallback` with a properties object as a parameter. That object should have a `value` property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.
+Returns the array of names to the `successCallback` with a
+`properties` object as a parameter. That object contains a `value`
+property with an `Array` of `String` values. The array features names
+starting from either the first month in the year or the first day of
+the week, depending on the option selected.
 
-If there is an error obtaining the names, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
+If there is an error obtaining the names, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-`options.type` can be 'narrow', or 'wide'.
-`options.item` can be 'months', or 'days'.
+The `options` parameter is optional, and its default values are:
 
-The default options are `{type:'wide', item:'months'}`.
-The options parameter is optional.
+    {type:'wide', item:'months'}
+
+The value of `options.type` can be `narrow` or `wide`.
+The value of `options.item` can be `months` or `days`.
 
 Supported Platforms
 -------------------
@@ -48,7 +56,9 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a series of 12 popup dialogs, one per month, with text similar to "month: January"
+When the browser is set to the `en\_US` locale, this example displays
+a series of twelve popup dialogs, one per month, with text similar to
+`month: January`:
 
     navigator.globalization.getDateNames(
       function (names) {

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,10 +27,11 @@ Returns a pattern string to format and parse numbers according to the client's u
 Description
 -----------
 
-It returns the pattern to the `successCallback` with a properties object as a parameter. That object should have the following properties:
+Returns the pattern to the `successCallback` with a `properties` object
+as a parameter. That object contains the following properties:
 
 - __pattern__: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
-- __symbol__: The symbol to be used when formatting and parsing e.g., percent or currency symbol. _(String)_
+- __symbol__: The symbol to use when formatting and parsing, such as a percent or currency symbol. _(String)_
 - __fraction__: The number of fractional digits to use when parsing and formatting numbers. _(Number)_
 - __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
 - __positive__: The symbol to use for positive numbers when parsing and formatting. _(String)_
@@ -38,10 +39,16 @@ It returns the pattern to the `successCallback` with a properties object as a pa
 - __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
-If there is an error obtaining the pattern, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PATTERN\_ERROR`.
+If there is an error obtaining the pattern, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
-`options.type` can be 'decimal', 'percent', or 'currency'.
-The default options are `{type:'decimal'}`. The `options` parameter is optional.
+The `options` parameter is optional, and default values are:
+
+    {type:'decimal'}
+
+The `options.type` can be `decimal`, `percent`, or `currency`.
+
 
 Supported Platforms
 -------------------
@@ -54,18 +61,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to:
-
-    pattern: #,##0.###
-    symbol: .
-    fraction: 0
-    rounding: 0
-    positive:
-    negative: -
-    decimal: .
-    grouping: ,
-
-.
+When the browser is set to the `en\_US` locale, this should display a
+popup dialog with text similar to the results that follow:
 
     navigator.globalization.getNumberPattern(
       function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
@@ -79,6 +76,17 @@ When the browser is set to the en\_US locale, this should display a popup dialog
       function () {alert('Error getting pattern\n');},
       {type:'decimal'}
     );
+
+Results:
+
+    pattern: #,##0.###
+    symbol: .
+    fraction: 0
+    rounding: 0
+    positive:
+    negative: -
+    decimal: .
+    grouping: ,
 
 Full Example
 ------------
@@ -114,7 +122,5 @@ Full Example
     
 Windows Phone 8 Quirks
 ----------------
-- `pattern` property is not supported; empty string is always returned.
-- `fraction` property is not supported; zero is always returned.
-    
-
+- The `pattern` property is not supported, and retuens an empty string.
+- The `fraction` property is not supported, and returns zero.

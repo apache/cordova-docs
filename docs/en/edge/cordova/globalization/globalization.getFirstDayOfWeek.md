@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,16 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getFirstDayOfWeek
 ===========
 
-Returns the first day of the week according to the client's user preferences and calendar.
+Returns the first day of the week according to the client's user
+preferences and calendar.
 
     navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
     
 Description
 -----------
 
-The days of the week are numbered starting from 1 where 1 is considered to be Sunday. It returns the day to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a Number value.
+The days of the week are numbered starting from 1, where 1 is assumed
+to be Sunday.  Returns the day to the `successCallback` with a
+`properties` object as a parameter. That object should have a `value`
+property with a `Number` value.
 
-If there is an error obtaining the pattern, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
+If there is an error obtaining the pattern, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -42,7 +48,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "day: 1".
+When the browser is set to the `en\_US` locale, this displays a
+popup dialog with text similar to `day: 1`.
 
     navigator.globalization.getFirstDayOfWeek(
       function (day) {alert('day: ' + day.value + '\n');},

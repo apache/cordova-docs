@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -30,7 +30,7 @@ Properties
   - GlobalizationError.FORMATTING\_ERROR: 1
   - GlobalizationError.PARSING\_ERROR: 2
   - GlobalizationError.PATTERN\_ERROR: 3
-- __message__:  A text message that includes the error explanation and/or details (`String`)
+- __message__:  A text message that includes the error's explanation and/or details (`String`)
 
 Description
 -----------
@@ -47,7 +47,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the following error callback is invoked, it should display a popup dialog with the text similar to "code: 3" and "message: ".
+When the following error callback executes, it displays a
+popup dialog with the text similar to `code: 3` and `message:`
 
     function errorCallback(error) {
         alert('code: ' + error.code + '\n' +

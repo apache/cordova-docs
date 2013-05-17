@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -42,9 +42,8 @@ The inbound `currencyCode` parameter should be a `String` of one of
 the ISO 4217 currency codes, for example 'USD'.
 
 If there is an error obtaining the pattern, then the `errorCallback`
-is invoked with a `GlobalizationError` object as a parameter. The
-expected code for this error is
-`GlobalizationError.FORMATTING\_ERROR`.
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -56,9 +55,9 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the `en\_US` locale and the selected currency
-is United States Dollars, this example should display a popup dialog with text
-similar to the results that follow:
+When the browser is set to the `en\_US` locale and the selected
+currency is United States Dollars, this example displays a popup
+dialog with text similar to the results that follow:
 
     navigator.globalization.getCurrencyPattern(
       'USD',

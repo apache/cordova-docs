@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,27 +20,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getDatePattern
 ===========
 
-Returns a pattern string to format and parse dates according to the client's user preferences.
+Returns a pattern string to format and parse dates according to the
+client's user preferences.
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the pattern to the `successCallback` with a properties object as a parameter. That object should have the following properties:
+Returns the pattern to the `successCallback`. The object passed in as
+a parameter contains the following properties:
 
 - __pattern__: The date and time pattern to format and parse dates.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
 - __timezone__: The abbreviated name of the time zone on the client. _(String)_
 - __utc\_offset__: The current difference in seconds between the client's time zone and coordinated universal time. _(Number)_
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
 
-If there is an error obtaining the pattern, then the `errorCallback` is invokedwith a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PATTERN\_ERROR`.
+If there is an error obtaining the pattern, the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The 
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
-`options.formatLength` can be 'short', 'medium', 'long', or 'full'.
-`options.selector` can be 'date', 'time' or 'date and time'.
+The `options` parameter is optional, and defaults to the following values:
 
-The default options are `{formatLength:'short', selector:'date and time'}`.
-The options parameter is optional.
+    {formatLength:'short', selector:'date and time'}
+
+The `options.formatLength` can be `short`, `medium`, `long`, or
+`full`.  The `options.selector` can be `date`, `time` or `date and
+time`.
 
 Supported Platforms
 -------------------
@@ -53,7 +59,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "pattern: M/d/yyyy h:mm a".
+When the browser is set to the `en\_US` locale, this example displays
+a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
 
     function checkDatePattern() {
       navigator.globalization.getDatePattern(
@@ -91,8 +98,8 @@ Full Example
 Windows Phone 8 Quirks
 --------------
 
-- `formatLength` option supports only short and full values.
-- `pattern` property for `date and time` pattern returns only full datetime format.
-- `timezone` property returns full time zone name
-- `dst_offset` returned property is not supported and always returns zero.
+- The `formatLength` supports only `short` and `full` values.
+- The `pattern` for `date and time` pattern returns only full datetime format.
+- The `timezone` returns the full time zone name.
+- The `dst_offset` property is not supported, and always returns zero.
 

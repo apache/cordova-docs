@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,18 +20,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.isDayLightSavingsTime
 ===========
 
-Returns whether daylight savings time is in effect for a given date using the client's time zone and calendar.
+Indicates whether daylight savings time is in effect for a given date
+using the client's time zone and calendar.
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
     
 Description
 -----------
 
-It returns whether or not daylight savings time is in effect to the `successCallback` with a properties object as a parameter. That object should have a `dst` property with a Boolean value. The value 'true' indicates that daylight savings time is in effect for the given date, and 'false' indicates that it is not.
+Indicates whether or not daylight savings time is in effect to the
+`successCallback` with a `properties` object as a parameter. That object
+should have a `dst` property with a `Boolean` value. A `true` value
+indicates that daylight savings time is in effect for the given date,
+and `false` indicates that it is not.
 
 The inbound parameter `date` should be of type `Date`.
 
-If there is an error reading the date, then the `errorCallback` is invoked. The expected code for this error is `GlobalizationError.UNKNOWN\_ERROR`.
+If there is an error reading the date, then the `errorCallback`
+executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -44,7 +50,9 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case during the summer when the browser is set to a DST-enabled timezone, this should display a popup dialog with text similar to "dst: true".
+During the summer, and if the browser is set to a DST-enabled
+timezone, this should display a popup dialog with text similar to
+`dst: true`:
 
     navigator.globalization.isDayLightSavingsTime(
       new Date(),

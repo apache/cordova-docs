@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Globalization
 ======
 
-The `globalization` object obtains information and performs operations specific to the user's locale and timezone.
+Obtains information and performs operations specific to the user's
+locale and timezone.
 
 Objects
 -------
@@ -46,7 +47,8 @@ Methods
 Variable Scope
 --------------
 
-The `globalization` object is a child of the `navigator` object, and therefore has global scope.
+The `globalization` object is a child of the `navigator` object, and
+therefore has global scope.
 
     // The global globalization object
     var globalization = navigator.globalization;

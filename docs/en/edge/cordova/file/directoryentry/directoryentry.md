@@ -333,7 +333,7 @@ __Parameters:__
 
 - __path__: The path to the file to be looked up or created.  Either an absolute path, or a relative path from this `DirectoryEntry`. _(DOMString)_
 - __options__: Options to specify whether the file is created if it doesn't exist.  _(Flags)_
-- __successCallback__: A callback that is invoked with a `FileEntry` object. _(Function)_
+- __successCallback__: A callback that is passed a `FileEntry` object. _(Function)_
 - __errorCallback__: A callback that is called if an error occurs when creating or looking up the file. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__

@@ -54,9 +54,9 @@ Supported Platforms
 Quick Example
 -------------
 
-If the browser is set to the `en\_US` locale, this should display a
-popup dialog with text similar to `date: 9/25/2012 4:21PM` using the
-default options:
+If the browser is set to the `en\_US` locale, this displays a popup
+dialog with text similar to `date: 9/25/2012 4:21PM` using the default
+options:
 
     navigator.globalization.dateToString(
       new Date(),

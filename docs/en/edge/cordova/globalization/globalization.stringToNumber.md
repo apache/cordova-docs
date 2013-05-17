@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,19 +20,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.stringToNumber
 ===========
 
-Parses a number formatted as a string according to the client's user preferences and returns the corresponding number.
+Parses a number formatted as a string according to the client's user
+preferences and returns the corresponding number.
 
     navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the number to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a Number value.
+Returns the number to the `successCallback` with a `properties` object
+as a parameter. That object should have a `value` property with a
+`Number` value.
 
-If there is an error parsing the number string, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PARSING\_ERROR`.
+If there is an error parsing the number string, then the
+`errorCallback` executes with a `GlobalizationError` object as a
+parameter. The error's expected code is
+`GlobalizationError.PARSING\_ERROR`.
 
-`options.type` can be 'decimal', 'percent', or 'currency'.
-The default options are `{type:'decimal'}`. The `options` parameter is optional.
+The `options` parameter is optional, and defaults to the following
+values:
+
+    {type:'decimal'}
+
+The `options.type` can be `decimal`, `percent`, or `currency`.
 
 Supported Platforms
 -------------------
@@ -45,7 +55,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "number: 1234.56".
+When the browser is set to the `en\_US` locale, this should display a
+popup dialog with text similar to `number: 1234.56`:
 
     navigator.globalization.stringToNumber(
       '1234.56',

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,16 +20,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.stringToDate
 ===========
 
-Parses a date formatted as a string according to the client's user
-preferences and calendar using the time zone of the client and returns
-the corresponding date object.
+Parses a date formatted as a string, according to the client's user
+preferences and calendar using the time zone of the client, and
+returns the corresponding date object.
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the date to the success callback with a properties object as a parameter. That object should have the following properties:
+Returns the date to the success callback with a `properties` object as
+a parameter. That object should have the following properties:
 
 - __year__: The four digit year. _(Number)_
 - __month__: The month from (0 - 11). _(Number)_
@@ -41,13 +42,18 @@ It returns the date to the success callback with a properties object as a parame
 
 The inbound `dateString` parameter should be of type `String`.
 
-`options.formatLength` can be 'short', 'medium', 'long', or 'full'.
-`options.selector` can be 'date', 'time' or 'date and time'.
+The `options` parameter is optional, and defaults to the following
+values:
 
-The default options are `{formatLength:'short', selector:'date and time'}`.
-The options parameter is optional.
+    {formatLength:'short', selector:'date and time'}
 
-If there is an error parsing the date string, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.PARSING\_ERROR`.
+The `options.formatLength` can be `short`, `medium`, `long`, or
+`full`.  The `options.selector` can be `date`, `time` or `date and
+time`.
+
+If there is an error parsing the date string, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PARSING\_ERROR`.
 
 Supported Platforms
 -------------------
@@ -60,7 +66,10 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
+When the browser is set to the `en\_US` locale, this displays a
+popup dialog with text similar to `month:8 day:25 year:2012`. Note
+that the month integer is one less than the string, as the month
+integer represents an array index.
 
     navigator.globalization.stringToDate(
       '9/25/2012',
@@ -102,4 +111,4 @@ Full Example
 Windows Phone 8 Quirks
 ------------------
 
-- `formatLength` option supports only short and full values
+- The `formatLength` option supports only `short` and `full` values.

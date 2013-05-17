@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,11 +27,19 @@ Returns a number formatted as a string according to the client's user preference
 Description
 -----------
 
-It returns the formatted number string to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a String value.
+Returns the formatted number string to the `successCallback` with a
+`properties` object as a parameter. That object should have a `value`
+property with a `String` value.
 
-If there is an error formatting the number, then the `errorCallback` is invoked with a `GlobalizationError` object as a parameter. The expected code for this error is `GlobalizationError.FORMATTING\_ERROR`.
+If there is an error formatting the number, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
-`options.type` can be 'decimal', 'percent', or 'currency'. The default options are `{type:'decimal'}`. The `options` parameter is optional.
+The `options` parameter is optional, and its default values are:
+
+    {type:'decimal'}
+
+The `options.type` can be 'decimal', 'percent', or 'currency'.
 
 Supported Platforms
 -------------------
@@ -44,7 +52,8 @@ Supported Platforms
 Quick Example
 -------------
 
-When the browser is set to the en\_US locale, this should display a popup dialog with text similar to "number: 3.142"
+When the browser is set to the `en\_US` locale, this displays a popup
+dialog with text similar to `number: 3.142`:
 
     navigator.globalization.numberToString(
       3.1415926,
