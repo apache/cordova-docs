@@ -24,10 +24,10 @@ Shows a customizable prompt dialog box.
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels])
 
-- __message__: Dialog message (`String`)
-- __promptCallback__: Callback to invoke when a button is pressed (`Function`)
-- __title__: Dialog title (`String`) (Optional, Default: "Prompt")
-- __buttonLabels__: Array of strings for the button labels (`Array`) (Optional, Default: ["OK","Cancel"])
+- __message__: Dialog message _(String)_
+- __promptCallback__: Callback to invoke when a button is pressed _(Function)_
+- __title__: Dialog title _(String)_ (Optional, Default: "Prompt")
+- __buttonLabels__: Array of strings for the button labels _(Array)_ (Optional, Default: ["OK","Cancel"])
 
 Description
 -----------
@@ -41,8 +41,8 @@ The `promptCallback` is called when the user has pressed one of the buttons on t
 
 The callback takes the argument `results` which contains the following properties:
 
-- __buttonIndex__: (`Number`), which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
-- __input1__: (`String`), which is the text entered in the prompt dialog box.
+- __buttonIndex__: _(Number)_, which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
+- __input1__: _(String)_, which is the text entered in the prompt dialog box.
 
 Supported Platforms
 -------------------

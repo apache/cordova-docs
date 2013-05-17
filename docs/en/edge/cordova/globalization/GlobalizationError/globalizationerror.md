@@ -25,12 +25,12 @@ An object representing a error from the Globalization API.
 Properties
 ----------
 
-- __code__:  One of the following codes representing the error type (`Number`)
+- __code__:  One of the following codes representing the error type _(Number)_
   - GlobalizationError.UNKNOWN\_ERROR: 0
   - GlobalizationError.FORMATTING\_ERROR: 1
   - GlobalizationError.PARSING\_ERROR: 2
   - GlobalizationError.PATTERN\_ERROR: 3
-- __message__:  A text message that includes the error's explanation and/or details (`String`)
+- __message__:  A text message that includes the error's explanation and/or details _(String)_
 
 Description
 -----------

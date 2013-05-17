@@ -29,4 +29,4 @@ A user specified callback function that is invoked when there is an error in med
 Parameters
 ----------
 
-- __error__: The error returned by the device. (`MediaError`)
+- __error__: The error returned by the device. _(MediaError)_

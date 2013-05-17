@@ -30,4 +30,4 @@ geolocation functions.
 Parameters
 ----------
 
-- __error__: The error returned by the device. (`PositionError`)
+- __error__: The error returned by the device. _(PositionError)_

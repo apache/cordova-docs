@@ -32,7 +32,7 @@ or when the position changes (when called from
 Parameters
 ----------
 
-- __position__: The geolocation position returned by the device. (`Position`)
+- __position__: The geolocation position returned by the device. _(Position)_
 
 Example
 -------

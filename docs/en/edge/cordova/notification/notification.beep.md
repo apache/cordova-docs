@@ -24,7 +24,7 @@ The device will play a beep sound.
 
     navigator.notification.beep(times);
 
-- __times__: The number of times to repeat the beep (`Number`)
+- __times__: The number of times to repeat the beep _(Number)_
 
 Supported Platforms
 -------------------

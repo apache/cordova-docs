@@ -24,7 +24,7 @@ Vibrates the device for the specified amount of time.
 
     navigator.notification.vibrate(milliseconds)
 
-- __time__: Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (`Number`)
+- __time__: Milliseconds to vibrate the device. 1000 milliseconds equals 1 second _(Number)_
 
 Supported Platforms
 -------------------

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,34 +20,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 window.open
 ===========
 
-Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
+Opens a URL in a new `InAppBrowser` instance, the current browser
+instance, or the system browser.
 
     var ref = window.open(url, target, options);
     
-- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
-- __url__: the URL to load (`String`). Call encodeURI() on this if you have Unicode characters in your URL.
-- __target__: the target to load the URL in (`String`) (Optional, Default: "_self")
+- __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
+- __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
+- __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
 
-        _self - opens in the Cordova WebView if URL is in the white-list, else it opens in the InAppBrowser
-        _blank - always open in the InAppBrowser
-        _system - always open in the system web browser
+  - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
+  - `_blank`: Opens in the `InAppBrowser`.
+  - `_system`: Opens in the system's web browser.
     
+- __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
     
-- __options__: options for the InAppBrowser (`String`) (Optional, Default: "location=yes")
-    
-    The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:
+    The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:
 
-    - __location__: set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+    - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
 
     iOS only
     --------
-    - __enableViewportScale__:  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')
-    - __mediaPlaybackRequiresUserAction__: set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')
-    - __allowInlineMediaPlayback__: set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')
-    - __keyboardDisplayRequiresUserAction__: set to 'yes' or 'no' to open the keyboard when form elements get focus via the JavaScript focus() call (defaults to 'yes')
-    - __suppressesIncrementalRendering__: set to 'yes' or 'no' to wait until all new view content has been received before it is rendered (defaults to 'no')
-    - __presentationstyle__:  set to 'pagesheet', 'formsheet' or 'fullscreen' to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to 'fullscreen')
-    - __transitionstyle__: set to 'fliphorizontal', 'crossdissolve' or 'coververtical' to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to 'coververtical')
+    - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
+    - __mediaPlaybackRequiresUserAction__: Set to `yes` or `no` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
+    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow inline HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
+    - __keyboardDisplayRequiresUserAction__: Set to `yes` or `no` to open the keyboard when form elements receive focus via JavaScript's `focus()` call (defaults to `yes`).
+    - __suppressesIncrementalRendering__: Set to `yes` or `no` to wait until all new view content is received before being rendered (defaults to `no`).
+    - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to `fullscreen`).
+    - __transitionstyle__: Set to `fliphorizontal`, `crossdissolve` or `coververtical` to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to `coververtical`).
             
 Supported Platforms
 -------------------
@@ -92,4 +92,3 @@ Full Example
       <body>
       </body>
     </html>
-

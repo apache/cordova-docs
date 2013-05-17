@@ -35,9 +35,9 @@ Optional parameters to customize the camera settings.
 Options
 -------
 
-- __quality__: Quality of saved image. Range is [0, 100]. (`Number`)
+- __quality__: Quality of saved image. Range is [0, 100]. _(Number)_
 
-- __destinationType__: Choose the format of the return value.  Defined in `navigator.camera.DestinationType` (`Number`)
+- __destinationType__: Choose the format of the return value.  Defined in `navigator.camera.DestinationType` _(Number)_
 
         Camera.DestinationType = {
             DATA_URL : 0,      // Return image as base64-encoded string
@@ -45,7 +45,7 @@ Options
             NATIVE_URI : 2     // Return image native URI (e.g. assets-library:// on iOS or content:// on Android)
         };
 
-- __sourceType__: Set the source of the picture.  Defined in `navigator.camera.PictureSourceType` (`Number`)
+- __sourceType__: Set the source of the picture.  Defined in `navigator.camera.PictureSourceType` _(Number)_
 
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
@@ -53,19 +53,19 @@ Options
             SAVEDPHOTOALBUM : 2
         };
 
-- __allowEdit__: Allow simple editing of image before selection. (`Boolean`)
+- __allowEdit__: Allow simple editing of image before selection. _(Boolean)_
 
-- __encodingType__: Choose the  returned image file's encoding.  Defined in `navigator.camera.EncodingType` (`Number`)
+- __encodingType__: Choose the  returned image file's encoding.  Defined in `navigator.camera.EncodingType` _(Number)_
 
         Camera.EncodingType = {
             JPEG : 0,               // Return JPEG encoded image
             PNG : 1                 // Return PNG encoded image
         };
 
-- __targetWidth__: Width in pixels to scale image. Must be used with __targetHeight__.  Aspect ratio remains constant. (`Number`)
-- __targetHeight__: Height in pixels to scale image. Must be used with __targetWidth__. Aspect ratio remains constant. (`Number`)
+- __targetWidth__: Width in pixels to scale image. Must be used with __targetHeight__.  Aspect ratio remains constant. _(Number)_
+- __targetHeight__: Height in pixels to scale image. Must be used with __targetWidth__. Aspect ratio remains constant. _(Number)_
 
-- __mediaType__: Set the type of media to select from.  Only works when `PictureSourceType` is `PHOTOLIBRARY` or `SAVEDPHOTOALBUM`. Defined in `nagivator.camera.MediaType` (`Number`)
+- __mediaType__: Set the type of media to select from.  Only works when `PictureSourceType` is `PHOTOLIBRARY` or `SAVEDPHOTOALBUM`. Defined in `nagivator.camera.MediaType` _(Number)_
 
         Camera.MediaType = {
             PICTURE: 0,    // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
@@ -73,10 +73,10 @@ Options
             ALLMEDIA : 2   // allow selection from all media types
 };
 
-- __correctOrientation__: Rotate the image to correct for the orientation of the device during capture. (`Boolean`)
-- __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. (`Boolean`)
+- __correctOrientation__: Rotate the image to correct for the orientation of the device during capture. _(Boolean)_
+- __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. _(Boolean)_
 - __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `CameraPopoverOptions`.
-- __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` (`Number`)
+- __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` _(Number)_
 
         Camera.Direction = {
             BACK : 0,      // Use the back-facing camera

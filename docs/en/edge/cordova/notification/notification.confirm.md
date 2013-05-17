@@ -24,10 +24,10 @@ Shows a customizable confirmation dialog box.
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
-- __message__: Dialog message (`String`)
-- __confirmCallback__: Callback to invoke with index of button pressed (1, 2 or 3) or when the dialog is dismissed without a button press (0), (`Function`)
-- __title__: Dialog title (`String`) (Optional, Default: "Confirm")
-- __buttonLabels__: Comma separated string with button labels (`String`) (Optional, Default: "OK,Cancel")
+- __message__: Dialog message _(String)_
+- __confirmCallback__: Callback to invoke with index of button pressed (1, 2 or 3) or when the dialog is dismissed without a button press (0), _(Function)_
+- __title__: Dialog title _(String)_ (Optional, Default: "Confirm")
+- __buttonLabels__: Comma separated string with button labels _(String)_ (Optional, Default: "OK,Cancel")
     
 Description
 -----------
@@ -39,7 +39,7 @@ confirmCallback
 
 The `confirmCallback` is called when the user has pressed one of the buttons on the confirmation dialog box.
 
-The callback takes the argument `buttonIndex` (`Number`), which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
+The callback takes the argument `buttonIndex` _(Number)_, which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
 
 Supported Platforms
 -------------------
