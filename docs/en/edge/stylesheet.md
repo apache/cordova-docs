@@ -150,3 +150,9 @@ editorial guidelines.
 
 * Use italic paren to indicate data types for return values, e.g.:
   _(Number)_
+
+* Do not refer to objects passed to callbacks using the same name as
+  one of the object members. E.g. the example in `getCurrencyPattern`
+  features this sample code: `function (pattern) {alert('pattern: ' +
+  pattern.pattern);`
+
