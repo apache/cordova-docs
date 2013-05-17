@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -24,15 +24,17 @@ Shows a custom alert or dialog box.
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message__: Dialog message _(String)_
+- __message__: Dialog message. _(String)_
 - __alertCallback__: Callback to invoke when alert dialog is dismissed. _(Function)_
-- __title__: Dialog title _(String)_ (Optional, Default: "Alert")
-- __buttonName__: Button name _(String)_ (Optional, Default: "OK")
+- __title__: Dialog title. _(String)_ (Optional, defaults to `Alert`)
+- __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
     
 Description
 -----------
 
-Most Cordova implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
+Most Cordova implementations use a native dialog box for this feature,
+but some platforms use the browser's `alert` function, which is
+typically less customizable.
 
 Supported Platforms
 -------------------
@@ -109,9 +111,12 @@ Full Example
 Windows Phone 7 and 8 Quirks
 -------------
 
-- There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-- alert + confirm calls are non-blocking, and result is only available asynchronously.
+- There is no built-in browser alert, so if you want to just write `alert('foo')`; you can assign:
+
+        window.alert = navigator.notification.alert;
+
+- `alert` and `confirm` calls are non-blocking, and the result is only available asynchronously.
 
 Bada 2.x Quirks
 ---------------
-- alert uses javascript alert
+- Uses JavaScript's `alert`
