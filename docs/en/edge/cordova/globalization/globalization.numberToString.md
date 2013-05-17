@@ -22,14 +22,14 @@ globalization.numberToString
 
 Returns a number formatted as a string according to the client's user preferences.
 
-    navigator.globalization.numberToString(number, successCB, errorCB, options);
+    navigator.globalization.numberToString(number, successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a `value` property with a String value.
+It returns the formatted number string to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a String value.
 
-If there is an error formatting the number, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error formatting the number, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
 
 `options.type` can be 'decimal', 'percent', or 'currency'. The default options are `{type:'decimal'}`. The `options` parameter is optional.
 

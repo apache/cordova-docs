@@ -22,14 +22,14 @@ globalization.getDateNames
 
 Returns an array of either the names of the months or days of the week according to the client's user preferences and calendar.
 
-    navigator.globalization.getDateNames(successCB, errorCB, options);
+    navigator.globalization.getDateNames(successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the array of names to the successCB callback with a properties object as a parameter. That object should have a `value` property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.
+It returns the array of names to the `successCallback` with a properties object as a parameter. That object should have a `value` property with an Array of Strings. That array will be the names starting from either the first month in the year or the first day of the week, depending on the option selected.
 
-If there is an error obtaining the names, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error obtaining the names, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
 
 `options.type` can be 'narrow', or 'wide'.
 `options.item` can be 'months', or 'days'.

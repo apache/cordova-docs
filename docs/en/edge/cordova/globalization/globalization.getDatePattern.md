@@ -22,19 +22,19 @@ globalization.getDatePattern
 
 Returns a pattern string for formatting and parsing dates according to the client's user preferences.
 
-    navigator.globalization.getDatePattern(successCB, errorCB, options);
+    navigator.globalization.getDatePattern(successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:
+It returns the pattern to the `successCallback` with a properties object as a parameter. That object should have the following properties:
 
 - pattern {String}: The date and time pattern for formatting and parsing dates.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
 - timezone {String}: The abbreviated name of the time zone on the client
 - utc\_offset {Number}: The current difference in seconds between the client's time zone and coordinated universal time.
 - dst\_offset {Number}: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone.
 
-If there is an error obtaining the pattern, then the errorCB callback is invokedwith a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback` is invokedwith a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
 
 `options.formatLength` can be 'short', 'medium', 'long', or 'full'.
 `options.selector` can be 'date', 'time' or 'date and time'.

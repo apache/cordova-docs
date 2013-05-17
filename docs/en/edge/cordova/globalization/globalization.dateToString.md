@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -22,26 +22,26 @@ globalization.dateToString
 
 Returns a date formatted as a string according to the client's locale and timezone.
 
-    navigator.globalization.dateToString(date, successCB, errorCB, options);
+    navigator.globalization.dateToString(date, successCallback, errorCallback, options);
 
 Description
 -----------
 
-It returns the formatted date string to the successCB callback with a
-properties object as a parameter. That object should have a `value`
-property with a `String` value.
+Returns the formatted date `String` via a `value` property accessible
+from the object passed as a parameter to the `successCallback`.
 
 The inbound `date` parameter should be of type `Date`.
 
-If there is an error formatting the date, then the `errorCB` callback is
-invoked with a `GlobalizationError` object as a parameter. The expected
-code for this error is `GlobalizationError.FORMATTING\_ERROR`.
+If there is an error formatting the date, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
-The `options.formatLength` can be 'short', 'medium', 'long', or 'full'.
-The `options.selector` can be 'date', 'time' or 'date and time'.
+The `options` parameter is optional, and its default values are:
 
-The default options are `{formatLength:'short', selector:'date and time'}`.
-The `options` parameter is optional.
+    {formatLength:'short', selector:'date and time'}
+
+The `options.formatLength` can be `short`, `medium`, `long`, or `full`.
+The `options.selector` can be `date`, `time` or `date and time`.
 
 Supported Platforms
 -------------------
@@ -54,11 +54,13 @@ Supported Platforms
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "date: 9/25/2012 4:21PM" using the default options.
+If the browser is set to the `en\_US` locale, this should display a
+popup dialog with text similar to `date: 9/25/2012 4:21PM` using the
+default options:
 
     navigator.globalization.dateToString(
       new Date(),
-      function (date) {alert('date:' + date.value + '\n');},
+      function (date) {alert('date: ' + date.value + '\n');},
       function () {alert('Error getting dateString\n');},
       {formatLength:'short', selector:'date and time'}
     );
@@ -90,4 +92,5 @@ Full Example
 
 Windows Phone 8 Quirks
 --------------
-- `formatLength` option supports only short and full values
+
+- The `formatLength` option supports only `short` and `full` values.

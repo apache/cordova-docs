@@ -49,7 +49,7 @@ Quick Example
 
 When the following error callback is invoked, it should display a popup dialog with the text similar to "code: 3" and "message: ".
 
-    function errorCB(error) {
+    function errorCallback(error) {
         alert('code: ' + error.code + '\n' +
               'message: ' + error.message + '\n');
     };
@@ -64,13 +64,13 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
                       
-        function successCB(date) {
+        function successCallback(date) {
           alert('month:' + date.month +
                 ' day:' + date.day +
                 ' year:' + date.year + '\n');
         }
                                             
-        function errorCB(error) {
+        function errorCallback(error) {
           alert('code: ' + error.code + '\n' +
                 'message: ' + error.message + '\n');
         };
@@ -78,8 +78,8 @@ Full Example
         function checkError() {
           navigator.globalization.stringToDate(
             'notADate',
-            successCB,
-            errorCB,
+            successCallback,
+            errorCallback,
             {selector:'foobar'}
           );
         }

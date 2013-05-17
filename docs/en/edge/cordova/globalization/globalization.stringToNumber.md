@@ -22,14 +22,14 @@ globalization.stringToNumber
 
 Parses a number formatted as a string according to the client's user preferences and returns the corresponding number.
 
-    navigator.globalization.stringToNumber(string, successCB, errorCB, options);
+    navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
     
 Description
 -----------
 
-It returns the number to the successCB callback with a properties object as a parameter. That object should have a `value` property with a Number value.
+It returns the number to the `successCallback` with a properties object as a parameter. That object should have a `value` property with a Number value.
 
-If there is an error parsing the number string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+If there is an error parsing the number string, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
 
 `options.type` can be 'decimal', 'percent', or 'currency'.
 The default options are `{type:'decimal'}`. The `options` parameter is optional.

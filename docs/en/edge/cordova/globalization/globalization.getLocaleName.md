@@ -22,16 +22,16 @@ globalization.getLocaleName
 
 Get the string identifier for the client's current locale setting.
 
-    navigator.globalization.getLocaleName(successCB, errorCB);
+    navigator.globalization.getLocaleName(successCallback, errorCallback);
 
     
 Description
 -----------
 
-It returns the locale identifier string to the successCB callback with a
+It returns the locale identifier string to the `successCallback` with a
 properties object as a parameter. That object should have a `value` property with a String value.
 
-If there is an error getting the locale, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error getting the locale, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
 
 Supported Platforms
 -------------------

@@ -20,26 +20,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getCurrencyPattern
 ===========
 
-Returns a pattern string for formatting and parsing currency values according
+Returns a pattern string to format and parse currency values according
 to the client's user preferences and ISO 4217 currency code.
 
-     navigator.globalization.getCurrencyPattern(currencyCode, successCB, errorCB);
+     navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
 
 Description
 -----------
 
-It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:
+Returns the pattern to the `successCallback` with a `properties` object
+as a parameter. That object should have the following properties:
 
-- pattern {String}: The currency pattern for formatting and parsing currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
-- code {String}: The ISO 4217 currency code for the pattern.
-- fraction {Number}: The number of fractional digits to use when parsing and formatting currency.
-- rounding {Number}: The rounding increment to use when parsing and formatting.
-- decimal: {String}: The decimal symbol to use for parsing and formatting.
-- grouping: {String}: The grouping symbol to use for parsing and formatting.
+- __pattern__ {String}: The currency pattern for formatting and parsing currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
+- __code__ {String}: The ISO 4217 currency code for the pattern.
+- __fraction__ {Number}: The number of fractional digits to use when parsing and formatting currency.
+- __rounding__ {Number}: The rounding increment to use when parsing and formatting.
+- __decimal__: {String}: The decimal symbol to use for parsing and formatting.
+- __grouping__: {String}: The grouping symbol to use for parsing and formatting.
 
 The inbound `currencyCode` parameter should be a String of one of the ISO 4217 currency codes, for example 'USD'.
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
 
 Supported Platforms
 -------------------

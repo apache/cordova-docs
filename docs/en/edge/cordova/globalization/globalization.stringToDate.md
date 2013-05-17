@@ -24,7 +24,7 @@ Parses a date formatted as a string according to the client's user
 preferences and calendar using the time zone of the client and returns
 the corresponding date object.
 
-    navigator.globalization.stringToDate(dateString, successCB, errorCB, options);
+    navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
     
 Description
 -----------
@@ -47,7 +47,7 @@ The inbound `dateString` parameter should be of type `String`.
 The default options are `{formatLength:'short', selector:'date and time'}`.
 The options parameter is optional.
 
-If there is an error parsing the date string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+If there is an error parsing the date string, then the `errorCallback` is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
 
 Supported Platforms
 -------------------
