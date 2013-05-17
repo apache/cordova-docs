@@ -147,3 +147,6 @@ editorial guidelines.
 * For DL-style bullets that define terms, use a colon (:) with no
   inline formatting to separate the term from subsequent text. Do not
   use a dash.
+
+* Use italic paren to indicate data types for return values, e.g.:
+  _(Number)_
