@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,12 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLResultSetRowList
 =======
 
-One of the properties of the SQLResultSet containing the rows returned from a SQL query.
+One of the properties of the `SQLResultSet` containing the rows
+returned from a SQL query.
 
 Properties
 -------
 
-- __length__: the number of rows returned by the SQL query
+- __length__: the number of rows returned by the SQL query.
 
 Methods
 -------
@@ -35,7 +36,12 @@ Methods
 Details
 -------
 
-The SQLResultSetRowList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifying an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
+The `SQLResultSetRowList` contains the data returned from a SQL
+`select` statement.  The object contains a `length` property
+indicating how many rows the `select` statement returns.  To get a row
+of data, call the `item` method to specify an index.  It returns a
+JavaScript `Object` whose properties are the database columns the
+`select` statement was executed against.
 
 Supported Platforms
 -------------------
@@ -49,18 +55,18 @@ Supported Platforms
 Execute SQL Quick Example
 ------------------
 
-	function queryDB(tx) {
-		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-	}
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+    }
 
-	function querySuccess(tx, results) {
-		var len = results.rows.length;
-	   	console.log("DEMO table: " + len + " rows found.");
-	   	for (var i=0; i<len; i++){
-	        console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-		}
-	}
-	
+    function querySuccess(tx, results) {
+        var len = results.rows.length;
+            console.log("DEMO table: " + len + " rows found.");
+            for (var i=0; i<len; i++){
+                console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+            }
+        }
+    
 	function errorCB(err) {
 		alert("Error processing SQL: "+err.code);
 	}

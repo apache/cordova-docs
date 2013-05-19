@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,18 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Database
 =======
 
-Contains methods that allow the user to manipulate the Database
+Provides access to an SQL database.
 
 Methods
 -------
 
 - __transaction__: Runs a database transaction.
-- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update.
+- __changeVersion__: Allows scripts to automatically verify the version number and change it when updating a schema.
 
 Details
 -------
 
-A Database object is returned from a call to `window.openDatabase()`.
+The `window.openDatabase()` method returns a `Database` object.
 
 Supported Platforms
 -------------------
@@ -118,4 +118,3 @@ Full Example
         <p>Database</p>
       </body>
     </html>
-

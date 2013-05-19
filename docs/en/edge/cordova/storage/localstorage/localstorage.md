@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,25 +20,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 localStorage
 ===============
 
-Provides access to a W3C Storage interface (http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to a [W3C Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
     var storage = window.localStorage;
 
 Methods
 -------
 
-- __key__: Returns the name of the key at the position specified.
-- __getItem__: Returns the item identified by it's key.
-- __setItem__: Saves and item at the key provided.
-- __removeItem__: Removes the item identified by it's key.
-- __clear__: Removes all of the key value pairs.
+- __key__: Returns the name of the key at the specified position.
+- __getItem__: Returns the item identified by the specified key.
+- __setItem__: Assigns a keyed item's value.
+- __removeItem__: Removes the item identified by the specified key.
+- __clear__: Removes all of the key/value pairs.
 
 Details
 -----------
 
-localStorage provides an interface to a W3C Storage interface.  It allows one to save data as key-value pairs.
-
-Note: window.sessionStorage provides the same interface, but is cleared between app launches.
+The `window.localStorage` interface is based on the W3C Web Storage
+interface.  An app can use it to save persistent data using key-value
+pairs.  The `window.sessionStorage` interface works the same way, but
+all data is cleared each time the app closes.
 
 Supported Platforms
 -------------------
@@ -117,4 +118,7 @@ Full Example
 Windows Phone 7 Quirks
 -------------
 
-- dot notation is _not_ available on Windows Phone 7. Be sure to use : window.localStorage.setItem/getItem, and not the w3 spec defined calls to window.localStorage.someKey = 'someValue';
+Dot notation is _not_ available on Windows Phone 7. Be sure to use
+`setItem` or `getItem`, rather than accessing keys directly from the
+storage object, such as `window.localStorage.someKey`.
+

@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,17 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLTransaction
 =======
 
-Contains methods that allow the user to execute SQL statements against the Database.
+Allows execution of SQL statements against the Database.
 
 Methods
 -------
 
-- __executeSql__: executes a SQL statement
+- __executeSql__: executes a SQL statement.
 
 Details
 -------
 
-When you call a Database objects transaction method, its callback method is passed a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.
+Calling a `Database` object's transaction method, passes a
+`SQLTransaction` object to the specified callback method.
 
 Supported Platforms
 -------------------

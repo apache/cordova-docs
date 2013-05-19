@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLError
 ========
 
-A `SQLError` object is thrown when an error occurs.
+An `SQLError` object is thrown when an error occurs.
 
 Properties
 ----------
@@ -44,4 +44,3 @@ Description
 -----------
 
 The `SQLError` object is thrown when an error occurs when manipulating a database.
-

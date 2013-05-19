@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -20,16 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 openDatabase
 ===============
 
-Returns a new Database object.
+Returns a new `Database` object.
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 Description
 -----------
 
-window.openDatabase returns a new Database object.
-
-This method will create a new SQL Lite Database and return a Database object.  Use the Database Object to manipulate the data.
+The method creates a new SQL Lite Database and returns a `Database`
+object that allows manipulation of the data.
 
 Supported Platforms
 -------------------
