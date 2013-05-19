@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -27,7 +27,7 @@ Displays the splash screen.
 Description
 -----------
 
-navigator.splashscreen.show() displays the applications splash screen.
+This method displays the application's splash screen.
 
 Supported Platforms
 -------------------
