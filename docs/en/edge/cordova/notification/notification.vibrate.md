@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -24,7 +24,7 @@ Vibrates the device for the specified amount of time.
 
     navigator.notification.vibrate(milliseconds)
 
-- __time__: Milliseconds to vibrate the device. 1000 milliseconds equals 1 second _(Number)_
+- __time__: Milliseconds to vibrate the device, where 1000 milliseconds equals 1 second. _(Number)_
 
 Supported Platforms
 -------------------
@@ -66,11 +66,11 @@ Full Example
         // Show a custom alert
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
         }
     
         // Beep three times
@@ -97,7 +97,7 @@ Full Example
 iPhone Quirks
 -------------
 
-- __time__: Ignores the time and vibrates for a pre-set amount of time.
+- __time__: Ignores the specified time and vibrates for a pre-set amount of time.
 
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored

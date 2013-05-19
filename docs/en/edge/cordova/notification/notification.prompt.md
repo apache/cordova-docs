@@ -1,4 +1,4 @@
---- 
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -24,25 +24,26 @@ Shows a customizable prompt dialog box.
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels])
 
-- __message__: Dialog message _(String)_
-- __promptCallback__: Callback to invoke when a button is pressed _(Function)_
-- __title__: Dialog title _(String)_ (Optional, Default: "Prompt")
-- __buttonLabels__: Array of strings for the button labels _(Array)_ (Optional, Default: ["OK","Cancel"])
+- __message__: Dialog message. _(String)_
+- __promptCallback__: Callback to invoke when a button is pressed. _(Function)_
+- __title__: Dialog title _(String)_ (Optional, defaults to `Prompt`)
+- __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `["OK","Cancel"]`)
 
 Description
 -----------
 
-Function `notification.prompt` displays a native dialog box that is more customizable than the browser's `prompt` function.
+The `notification.prompt` method displays a native dialog box that is
+more customizable than the browser's `prompt` function.
 
 promptCallback
 ---------------
 
-The `promptCallback` executes when the user has pressed one of the buttons on the prompt dialog box.
+The `promptCallback` executes when the user presses one of the buttons
+in the prompt dialog box. The `results` object passed to the callback
+contains the following properties:
 
-The callback takes the argument `results` which contains the following properties:
-
-- __buttonIndex__: _(Number)_, which is the index of the pressed button. It's important to note that the index uses one-based indexing, so the value will be `1`, `2`, `3`, etc.
-- __input1__: _(String)_, which is the text entered in the prompt dialog box.
+- __buttonIndex__: The index of the pressed button. _(Number)_ Note that the index uses one-based indexing, so the value is `1`, `2`, `3`, etc.
+- __input1__: The text entered in the prompt dialog box. _(String)_
 
 Supported Platforms
 -------------------
@@ -63,7 +64,7 @@ Quick Example
     function showPrompt() {
         navigator.notification.prompt(
             'Please enter your name',  // message
-            onPrompt,	               // callback to invoke
+            onPrompt,                  // callback to invoke
             'Registration',            // title
             ['Ok','Exit']              // buttonLabels
         );
@@ -116,5 +117,5 @@ Full Example
 Android Quirks
 ----------------------
 
-- Android supports up to a maximum of 3 buttons.  Additional button labels over 3 are ignored.
-- On Android 3.0 and later, the buttons will be displayed in reverse order for devices using the Holo theme.
+- Android supports a maximum of three buttons, and ignores any more than that.
+- On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.
