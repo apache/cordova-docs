@@ -55,6 +55,7 @@ Methods
 - media.pause: Pause playing audio file.
 - media.release: Releases the underlying OS'es audio resources.
 - media.seekTo: Moves the position within the audio file.
+- media.setVolume: Set the volume for audio playback.
 - media.startRecord: Start recording audio file.
 - media.stopRecord: Stop recording audio file.
 - media.stop: Stop playing audio file.

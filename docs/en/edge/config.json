@@ -145,6 +145,7 @@
             "cordova/media/media.play.md",
             "cordova/media/media.release.md",
             "cordova/media/media.seekTo.md",
+            "cordova/media/media.setVolume.md",
             "cordova/media/media.startRecord.md",
             "cordova/media/media.stop.md",
             "cordova/media/media.stopRecord.md",
