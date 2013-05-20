@@ -111,12 +111,12 @@ Full Example
 Windows Phone 7 and 8 Quirks
 -------------
 
-- There is no built-in browser alert, so if you want to just write `alert('foo')`; you can assign:
+- There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:
 
         window.alert = navigator.notification.alert;
 
-- `alert` and `confirm` calls are non-blocking, and the result is only available asynchronously.
+- Both `alert` and `confirm` are non-blocking calls, results of which are only available asynchronously.
 
 Bada 2.x Quirks
 ---------------
-- Uses JavaScript's `alert`
+- Uses JavaScript's `alert` function.

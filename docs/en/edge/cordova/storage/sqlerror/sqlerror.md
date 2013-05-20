@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLError
 ========
 
-An `SQLError` object is thrown when an error occurs.
+A `SQLError` object is thrown when an error occurs.
 
 Properties
 ----------
