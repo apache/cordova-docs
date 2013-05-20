@@ -35,9 +35,9 @@ Optional parameters to customize the camera settings.
 Options
 -------
 
-- __quality__: Quality of saved image. Range is [0, 100]. _(Number)_
+- __quality__: Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. _(Number)_ (Note that information about the camera's resolution is unavailable.)
 
-- __destinationType__: Choose the format of the return value.  Defined in `navigator.camera.DestinationType` _(Number)_
+- __destinationType__: Choose the format of the return value. Defined in `navigator.camera.DestinationType` _(Number)_
 
         Camera.DestinationType = {
             DATA_URL : 0,      // Return image as base64-encoded string

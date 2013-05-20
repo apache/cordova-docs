@@ -43,4 +43,4 @@ iOS Quirks
 ----------
 
 - `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
-- For iOS > 4 devices, heading factors in the device's current orientation, not in reference to its absolute position, for apps that supports that orientation.
+- For iOS 4 devices and above, heading factors in the device's current orientation, not in reference to its absolute position, for apps that supports that orientation.

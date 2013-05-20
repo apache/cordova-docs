@@ -20,15 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 camera.cleanup
 =================
 
-Cleans up the photos taken by the camera and made available in a
-temporary storage location.
+Removes intermediate photos taken by the camera from temporary
+storage.
 
     navigator.camera.cleanup( cameraSuccess, cameraError );
 
 Description
 -----------
 
-Cleans up the image files stored in the temporary storage location
+Removes intermediate image files that are kept in temporary storage
 after calling `camera.getPicture`. Applies only when the value of
 `Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
 `Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.

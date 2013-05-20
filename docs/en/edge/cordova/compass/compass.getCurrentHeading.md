@@ -28,8 +28,8 @@ Description
 -----------
 
 The compass is a sensor that detects the direction or heading that the
-device is pointed.  It measures the heading in degrees from 0 to
-359.99.
+device is pointed, typically from the top of the device.  It measures
+the heading in degrees from 0 to 359.99, where 0 is north.
 
 The compass heading information is returned via a `CompassHeading`
 object using the `compassSuccess` callback function.
