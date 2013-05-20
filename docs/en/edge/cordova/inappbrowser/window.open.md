@@ -37,10 +37,15 @@ Opens a URL in a new InAppBrowser instance, the current browser instance, or the
     
     The options string must not contain any blank space, each feature name and value must be separated by a comma. Feature names are case insensitive. Only the value below is supported on all platforms:
 
-    - __location__ - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser
+    - __location__ - set to 'yes' or 'no' to turn the location bar on or off for the InAppBrowser (defaults to 'yes')
+    
+    iOS and Android only
+    --------------------
+    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. Note that if you set this for iOS, you will have to localize this value yourself.
 
     iOS only
     --------
+    - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the InAppBrowser (defaults to 'yes')
     - __enableViewportScale__ -  set to 'yes' or 'no' to prevent viewport scaling through a meta tag (defaults to 'no')
     - __mediaPlaybackRequiresUserAction__ - set to 'yes' or 'no' to not allow autoplayed HTML5 video (defaults to 'no')
     - __allowInlineMediaPlayback__ - set to 'yes' or 'no' to allow inline HTML5 media playback, also, the video element in the HTML document must also include the webkit-playsinline attribute (defaults to 'no')
