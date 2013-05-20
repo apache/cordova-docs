@@ -156,3 +156,7 @@ editorial guidelines.
   features this sample code: `function (pattern) {alert('pattern: ' +
   pattern.pattern);`
 
+* Clarify the arbitrary name of a callback parameter (interfaceName)
+  as referenced in doc, vs the name of the underlying interface
+  (InterfaceName).
+
