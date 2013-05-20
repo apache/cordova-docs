@@ -136,6 +136,22 @@ editorial guidelines.
 
 * Use titles in link text, never 'click here'
 
+## Callback inconsistencies:
+
+* Many different ways to describe how callbacks execute. Sometimes
+  they simply "are passed" values. Prefer they "execute" with object
+  available as parameter.
+
+* How does the localName of the variable passed to the callback relate
+  to the InterfaceName
+
+* Are the object's member "properties" referenced consistently?
+
+* Do not refer to objects passed to callbacks using the same name as
+  one of the object members. E.g. the example in `getCurrencyPattern`
+  features this sample code: `function (pattern) {alert('pattern: ' +
+  pattern.pattern);`
+
 ## To clarify:
 
 * plug-in or plugin?
@@ -151,12 +167,6 @@ editorial guidelines.
 * Use italic paren to indicate data types for return values, e.g.:
   _(Number)_
 
-* Do not refer to objects passed to callbacks using the same name as
-  one of the object members. E.g. the example in `getCurrencyPattern`
-  features this sample code: `function (pattern) {alert('pattern: ' +
-  pattern.pattern);`
-
 * Clarify the arbitrary name of a callback parameter (interfaceName)
   as referenced in doc, vs the name of the underlying interface
   (InterfaceName).
-
