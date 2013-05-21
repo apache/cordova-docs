@@ -157,32 +157,12 @@ To add additional functionality that is outside of the core features of Cordova,
 
 In order to use a plugin, you must first add it into your project. Once added into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.
 
-Plugins hosted locally must be fetched before they can be installed. Plugins hosted remotely can simply be installed.
-
-###Fetch a locally-hosted plugin
-
-To fetch a locally-hosted plugin, on the command line, type the following command:
-
-```
-<path-to-project>/cordova/plugin fetch <path-to-plugin>
-```
-
-Once fetched, the plugin can be added by name, just as a remotely hosted plugin.
-
-###View a list of installed plugins
-
-To view a list of installed plugins, on the command line, type the following command:
-
-```
-<path-to-project>/cordova/plugin ls
-```
-
 ###Add a plugin
 
 To add a plugin, on the command line, type the following command:
 
 ```
-<path-to-project>/cordova/plugin add <name>
+<path-to-project>/cordova/plugin add <path to plugin>
 ```
 
 ###Remove a plugin
@@ -193,3 +173,10 @@ To remove a plugin, on the command line, type the following command:
 <path-to-project>/cordova/plugin rm <name>
 ```
 
+###View a list of installed plugins
+
+To view a list of installed plugins, on the command line, type the following command:
+
+```
+<path-to-project>/cordova/plugin ls
+```
