@@ -27,9 +27,8 @@ The event fires when a Cordova application is retrieved from the background.
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. The
-`resume` event fires when the native code pulls the application from
-the background.
+The `resume` event fires when the native platform pulls the
+application out from the background.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.

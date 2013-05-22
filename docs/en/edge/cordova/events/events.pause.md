@@ -27,9 +27,9 @@ The event fires when a Cordova application is put into the background.
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. When the
-native code puts the application into the background, the `pause` event
-fires.
+The `pause` event fires when the native platform puts the application
+into the background, typically when the user switches to a different
+application.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.
@@ -93,11 +93,10 @@ Full Example
 iOS Quirks
 --------------------------
 
-In the `pause` handler, any calls that go through Objective-C do not
-work, nor do any calls that are interactive, such as alerts.  You
-can't make calls with `console.log()`, or any calls from plugins or
-the Cordova API. They are only processed when the app resumes, on the
-next run-loop.
+In the `pause` handler, any calls to the Cordova API or to native
+plug-ins that go through Objective-C do not work, along with any
+interactive calls, such as alerts or `console.log()`. They are only
+processed when the app resumes, on the next run loop.
 
 The iOS-specific `resign` event is available as an alternative to
 `pause`, and detects when users enable the __Lock__ button to lock the

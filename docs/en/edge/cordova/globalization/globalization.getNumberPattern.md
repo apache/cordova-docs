@@ -49,7 +49,6 @@ The `options` parameter is optional, and default values are:
 
 The `options.type` can be `decimal`, `percent`, or `currency`.
 
-
 Supported Platforms
 -------------------
 

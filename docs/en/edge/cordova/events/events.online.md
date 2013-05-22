@@ -28,8 +28,10 @@ device becomes connected to the Internet.
 Details
 -------
 
-When the application's network connection changes to being online, the
-online event is fired.
+The `online` event fires when a previously unconnected device receives
+a network connection to allow an application access to the Internet.
+It relies on the same information as the Connection API, and fires
+when the value of `connection.type` becomes `NONE`.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the Cordova `deviceready` event fires.
@@ -93,7 +95,10 @@ Full Example
 
 iOS Quirks
 --------------------------
-During initial startup, the first `online` event (if applicable) takes at least a second to fire.
+
+During initial startup, the first `online` event (if applicable) takes
+at least a second to fire, prior to which `connection.type` is
+`UNKNOWN`.
 
 Windows Phone 7 Quirks
 --------------------------
