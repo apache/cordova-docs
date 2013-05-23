@@ -18,113 +18,127 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# Cordova Command Primer
+# The Cordova Command-line Interface
 
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
-utility. This tool allows you to create new projects, build them on
-different platforms, and run them within an emulator. You can also use
-this tool to initially generate project code and use various
-platforms' IDEs to develop them further.
+interface (CLI). This tool allows you to create new projects, build
+them on different platforms, and run them within an emulator. You can
+also use the CLI to initially generate project code, after which you
+use various platforms' IDEs to develop them further.
 
 ## Prerequisites
 
-The Cordova command-line utility is available Mac OSX and Linux.
+Before running any command-line tools, you need to install SDKs for
+each platform you wish to target. See Installing Platform SDKs for
+more details.
 
-* Download and install [Node.js](http://nodejs.org/). Following
-  installation, you should be able to run `node` or `npm` on your
-  command line.
+To add support or rebuild a project for any platform, you need to run
+the command-line interface from the same machine that supports the
+platform's SDK. The CLI supports the following combinations:
 
-* Download and install SDKs for the mobile platforms you wish to
-  support:
+* iOS (Mac)
+* Android (Mac, Linux)
+* Blackberry (Mac, Windows)
+* Windows Phone 7 (Windows)
+* Windows Phone 8 (Windows)
 
-  * [iOS](http://developer.apple.com/):
+The more likely it is that you run the CLI from different machines,
+the more it makes sense to maintain a remote source code repository,
+which you pull down to local sandboxes.
 
-  * [BlackBerry](http://developer.blackberry.com/cascades/downloads/).
-    The SDK places a workspace in your home directory by default, but
-    you can configure it to prompt for and remember a different
-    directory.
+To install the `cordova` command-line tool, follow these
+steps:
 
-  * [Android](http://developer.android.com/)
+1. Download and install [Node.js](http://nodejs.org/). Following
+   installation, you should be able to run `node` or `npm` on your
+   command line.
 
-  The Android SDK's `tools` and `platform-tools` directories need to
-  be included in the system PATH. Here are ways you would typically
-  modify different shell environments in your `.bashrc` or `.cshrc`
-  congiguration files:
+1. Install the `cordova` utility. The `sudo` command may be necessary
+   to install development utilities in otherwise restricted directories:
 
-        PATH=$PATH:$HOME/bin:/path/to/sdk/tools:/path/to/sdk/platform-tools         # bash
-        set PATH = ($PATH $HOME/bin /path/to/sdk/tools /path/to/sdk/platform-tools) # csh
+    $ sudo npm install -g cordova
 
-* Install the `cordova` utility. The `sudo` command may be necessary
-  to install in otherwise restricted directories:
+   Following installation, you should be able to run `cordova` on the
+   command line.
 
-        $ sudo npm install -g cordova
+1. The installation log may produce errors for any uninstalled
+   platform SDKs. To ensure permissions are correct, follow up with
+   the following command, changing _LOGIN_ to match your account name:
 
-  Following installation, you should be able to run `cordova` on the
-  command line. The installation log may produce errors for any
-  uninstalled platform SDKs. To ensure permissions are correct, follow
-  up with the following command, changing _LOGIN_ to match your
-  account name:
+    $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
 
-        $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
+After installing the `cordova` utility, you can update it to the
+latest version by running the following:
 
-After installing the `cordova` utility, you can update it by running
-the following:
-
-        $ sudo npm update -g cordova
+    $ sudo npm update -g cordova
 
 Use this syntax to install a specific version:
 
-        $ sudo npm install -g cordova@2.7.0
+    $ sudo npm install -g cordova@2.7.0
 
 Run the `info` command for a listing of available version numbers:
 
-        $ npm info cordova
+    $ npm info cordova
 
 ## Create an App
 
 Go to the directory where you want to maintain your source code, and
-run the following command:
+run a command such as the following:
 
-        $ cordova create HelloWorld com.example.hello "Hello World"
+    $ cordova create HelloWorld com.example.hello "Hello World"
 
-The first argument specifies the `HelloWorld` directory created for
-your project. Its `www` subdirectory houses your application's home
-page, along with various resources under `css`, `js`, and `img` that
-are common for web development. The `config.xml` file contains
-information needed to distribute the application.
+The first argument specifies a _HelloWorld_ directory that is
+generated for your project. Its `www` subdirectory houses your
+application's home page, along with various resources under `css`,
+`js`, and `img` that are common for web development. The `config.xml`
+file contains important metadata needed to distribute the application.
 
 The other two arguments are optional: the `com.example.hello` argument
-provides a reverse-domain-style identifier, and the `"Hello World!"`
-provides display text. You can edit both of these values later in the
-`config.xml` file.
+provides your project with a reverse-domain-style identifier, and the
+`"Hello World!"` provides display text. You can edit both of these
+values later in the `config.xml` file.
 
 ## Add Platforms
 
-All subsequent commands need to be run within the project's directory:
+All subsequent commands need to be run within the project's directory,
+or any subdirectories within its scope:
 
-        $ cd HelloWorld
+    $ cd HelloWorld
 
 Before you can build the project, you need to specify a set of target
 platforms.  Run any of the following at any point during development:
 
-        $ cordova platform add android
-        $ cordova platform add ios
-        $ cordova platform add blackberry
-        $ cordova platform add wp7
-        $ cordova platform add wp8
+    $ cordova platform add android
+    $ cordova platform add ios
+    $ cordova platform add blackberry
+    $ cordova platform add wp7
+    $ cordova platform add wp8
 
 (The _wp_ options refer to Windows Phone versions.)
 
 Run this to check your current set of platforms:
 
-        $ cordova platform ls
+    $ cordova platforms ls
+
+(The `platform` and `platforms` commands do the same thing.)
 
 Run the following to remove a platform:
 
-        $ cordova platform remove blackberry
+    $ cordova platform remove blackberry
 
-<!-- s/b error if already removed -->
+These actions are reflected in the contents of the project's
+_platforms_ directory, where each platform you specify appears as a
+subdirectory. The _www_ source directory is reproduced within each
+platform's subdirectory, appearing for example in _platforms/ios/www_
+or _platforms/android/assets/www_.
+
+If you wish, you can use an SDK at this point to open the project you
+created. However, any edits you make to the project in an SDK affect
+the derivative set of assets, not the original cross-platform source
+files. Use this approach if you simply want to initialize a project
+for a specific platform.  Read on if you wish to use command-line
+tools for the entire development cycle.
 
 ## Build the App
 
@@ -132,23 +146,24 @@ By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
-default from `www/js/index.js`. (See API Primer for details.)
+default from `www/js/index.js`. (For details, see API and
+Configuration Guide.)
 
 Run the following command to iteratively build the project:
 
-        $ cordova build
+    $ cordova build
 
 This generates platform-specific code within the project's `platforms`
 subdirectory.  You can optionally limit the scope of each build to
 specific platforms:
 
-        $ cordova build ios
+    $ cordova build ios
 
 The `cordova build` command is a shorthand for the following, which in
 this example is also targeted to a single platform:
 
-        $ cordova prepare ios
-        $ cordova compile ios
+    $ cordova prepare ios
+    $ cordova compile ios
 
 In this case, once you run `prepare`, you can use Apple's Xcode SDK as
 an alternative to modify and compile the platform-specific code that
@@ -161,33 +176,33 @@ network APIs.
 scenarios where you'd keep running `prepare`, then use Xcode to tweak
 the results in some way without editing source?  -->
 
-## View the App
+## View the App in a Browser
 
 Since the application uses web-based components, you can use a
 standard web browser to preview different platforms' instances for
 your project. For example, run this command to preview the iOS
 application:
 
-        $ cordova serve ios
+    $ cordova serve ios
 
 By default, the application is available at `http://localhost:8000/`,
 which you can modify with your own optional port number:
 
-        $ cordova serve ios 2013
+    $ cordova serve ios 2013
 
 Unlike `serve`, running the alternate `ripple` command displays the
 application within the device's larger context:
 
-        $ cordova ripple ios
+    $ cordova ripple ios
 
 ![](./scr_ripple.png)
 
 The _ripple_ emulator provides an outer skin that demonstrates how the
 application works with device-level features. For example, you can
 simulate changes in location, changes to orientation, and other
-accelerometer-driven shaking gestures. (Other platform features, such
+accelerometer-driven shaking gestures. Other platform features, such
 as access to the camera or user contacts, can only be tested on the
-device.)
+device.
 
 As a basic example, the default application features a handler for the
 custom `deviceready` event, which ordinarily fires once Cordova
@@ -200,6 +215,8 @@ As part of its initialization phase, The application displays a new
 log message:
 
 ![](./scr_ripple_ready.png)
+
+## View the App in an Emulator
 
 <!--
 
