@@ -183,9 +183,8 @@ the results in some way without editing source?  -->
 ## View the App in a Browser
 
 Since the application uses web-based components, you can often use a
-standard web browser to preview different platforms' instances for
-your project.  For example, run this command to preview the iOS
-application:
+standard web browser to preview them directly from the source _www_
+directory.  For example, run this command to preview the application:
 
     $ cordova serve ios
 
@@ -198,7 +197,8 @@ Either way, you can view the application within a browser window:
 
 ![](./scr_serve.png)
 
-Within a standard browser view, the __Connecting to device__ message
+The size of the browser window doesn't correspond to how it would
+appear on the device.  Also, the __Connecting to device__ message
 lacks any context, since there is no mobile device to connect to.
 Unlike `serve`, running the alternate `ripple` command displays the
 application within the device's larger context:
@@ -226,13 +226,23 @@ log message:
 
 ![](./scr_ripple_ready.png)
 
+Specifying a platform, such as `ios` or `android`, makes the
+application run under `serve` or `ripple` with device-specific user
+agent strings. In addition, `ripple` applies the screen size for
+specific devices. After running `ripple`, you also have the option to
+view the application as various other devices, under the __Devices__
+tab at the top left.  For example, here is how an application would
+appear on an iPad that's tipped to its side:
+
+![](./scr_ripple_ipad.png)
+
 The `serve` command is only appropriate for web applications that
 _don't_ interact with Cordova APIs, which are detailed in the API
 Reference.  The `ripple` command is appropriate if your application
 responds to location, orientation, and varying network conditions.
 Neither approach is reliable for applications that take photos, record
 audio or video, or access users' contact data. They also don't work
-for hybrid applications that mix cordova webviews with native
+for hybrid applications that mix cordova WebViews with native
 components, or that use plug-ins. (See Extended Hybrid Applications
 for details.)
 
