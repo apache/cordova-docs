@@ -137,6 +137,8 @@ the contents of the project's _platforms_ directory, where each
 platform you specify appears as a subdirectory. The _www_ source
 directory is reproduced within each platform's subdirectory, appearing
 for example in _platforms/ios/www_ or _platforms/android/assets/www_.
+By default, each platform's configuration file is set up to be able to
+access all of Cordova's APIs.
 
 If you wish, you can use an SDK at this point to open the project you
 created. However, any edits you make to the project in an SDK affect
