@@ -44,7 +44,7 @@ Supported Platforms
 -------------------
 
 - Android
-- iPhone
+- iOS
 - Windows Phone 7 and 8 (if available in hardware)
 - Bada 1.2 & 2.x
 - webOS

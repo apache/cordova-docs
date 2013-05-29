@@ -31,7 +31,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 
@@ -94,7 +94,7 @@ Full Example
       </body>
     </html>
 
-iPhone Quirks
+iOS Quirks
 -------------
 
 - __time__: Ignores the specified time and vibrates for a pre-set amount of time.

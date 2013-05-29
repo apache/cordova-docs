@@ -41,7 +41,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
@@ -51,7 +51,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone / Tizen
+    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
     //
     function alertDismissed() {
         // do something

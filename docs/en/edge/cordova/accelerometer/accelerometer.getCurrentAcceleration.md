@@ -39,7 +39,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
@@ -105,9 +105,9 @@ Full Example
       </body>
     </html>
 
-iPhone Quirks
+iOS Quirks
 -------------
 
-- iPhone doesn't recognize the concept of getting the current acceleration at any given point.
+- iOS doesn't recognize the concept of getting the current acceleration at any given point.
 - You must watch the acceleration and capture the data at given time intervals.
 - Thus, the `getCurrentAcceleration` function yields the last value reported from a Cordova `watchAccelerometer` call.

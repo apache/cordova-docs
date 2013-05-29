@@ -49,7 +49,7 @@ Supported Platforms
 -------------------
 
 - Android
-- iPhone
+- iOS
 
 Quick Example
 -------------

@@ -48,7 +48,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
-- iPhone
+- iOS
 - webOS
 - Tizen
 
