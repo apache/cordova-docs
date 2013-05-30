@@ -24,7 +24,7 @@ Get the string identifier for the client's current locale setting.
 
     navigator.globalization.getLocaleName(successCallback, errorCallback);
 
-    
+
 Description
 -----------
 
@@ -51,8 +51,8 @@ When the browser is set to the `en\_US` locale, this displays a popup
 dialog with the text `locale: en\_US`.
 
     navigator.globalization.getLocaleName(
-      function (locale) {alert('locale: ' + locale.value + '\n');},
-      function () {alert('Error getting locale\n');}
+        function (locale) {alert('locale: ' + locale.value + '\n');},
+        function () {alert('Error getting locale\n');}
     );
 
 Full Example
@@ -61,10 +61,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getLocaleName Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
+
         function checkLocale() {
           navigator.globalization.getLocaleName(
             function (locale) {alert('locale: ' + locale.value + '\n');},

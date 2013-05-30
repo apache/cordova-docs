@@ -23,8 +23,8 @@ capture.captureAudio
 > Start the audio recorder application and return information about the captured audio clip file(s).
 
     navigator.device.capture.captureAudio(
-	    CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
-	);
+        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+    );
 
 Description
 -----------
@@ -93,13 +93,13 @@ Full Example
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	
+            }
         }
 
         // Called if something bad happens.
         //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
+            var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
         }
 

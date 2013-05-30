@@ -53,20 +53,21 @@ Supported Platforms
 Quick Example
 -------------
 
-	// display the address information for all contacts
+    // display the address information for all contacts
+
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			for (var j=0; j<contacts[i].addresses.length; j++) {
-				alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-						"Type: " + contacts[i].addresses[j].type + "\n" +
-						"Formatted: " + contacts[i].addresses[j].formatted + "\n" +
-						"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
-						"Locality: "  + contacts[i].addresses[j].locality + "\n" +
-						"Region: "  + contacts[i].addresses[j].region + "\n" +
-						"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
-						"Country: "  + contacts[i].addresses[j].country);
-			}
-		}
+        for (var i = 0; i < contacts.length; i++) {
+            for (var j = 0; j < contacts[i].addresses.length; j++) {
+                alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
+                    "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                    "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                    "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                    "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                    "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                    "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                    "Country: "        + contacts[i].addresses[j].country);
+            }
+        }
     };
 
     function onError(contactError) {
@@ -75,8 +76,8 @@ Quick Example
 
     // find all contacts
     var options = new ContactFindOptions();
-	options.filter="";
-	var filter = ["displayName","addresses"];
+    options.filter = "";
+    var filter = ["displayName", "addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -90,38 +91,38 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-		    // find all contacts
-		    var options = new ContactFindOptions();
-			options.filter="";
-			var filter = ["displayName","addresses"];
-		    navigator.contacts.find(filter, onSuccess, onError, options);
+            // find all contacts
+            var options = new ContactFindOptions();
+            options.filter = "";
+            var filter = ["displayName", "addresses"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			// display the address information for all contacts
-			for (var i=0; i<contacts.length; i++) {
-				for (var j=0; j<contacts[i].addresses.length; j++) {
-					alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
-							"Type: " + contacts[i].addresses[j].type + "\n" +
-							"Formatted: " + contacts[i].addresses[j].formatted + "\n" +
-							"Street Address: "  + contacts[i].addresses[j].streetAddress + "\n" +
-							"Locality: "  + contacts[i].addresses[j].locality + "\n" +
-							"Region: "  + contacts[i].addresses[j].region + "\n" +
-							"Postal Code: "  + contacts[i].addresses[j].postalCode + "\n" +
-							"Country: "  + contacts[i].addresses[j].country);
-				}
-			}
-		};
-    
+        function onSuccess(contacts) {
+            // display the address information for all contacts
+            for (var i = 0; i < contacts.length; i++) {
+                for (var j = 0; j < contacts[i].addresses.length; j++) {
+                    alert("Pref: "           + contacts[i].addresses[j].pref          + "\n" +
+                          "Type: "           + contacts[i].addresses[j].type          + "\n" +
+                          "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
+                          "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
+                          "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
+                          "Region: "         + contacts[i].addresses[j].region        + "\n" +
+                          "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
+                          "Country: "        + contacts[i].addresses[j].country);
+                }
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {

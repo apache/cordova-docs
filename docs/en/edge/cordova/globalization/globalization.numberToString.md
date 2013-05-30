@@ -23,7 +23,7 @@ globalization.numberToString
 Returns a number formatted as a string according to the client's user preferences.
 
     navigator.globalization.numberToString(number, successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -56,10 +56,10 @@ When the browser is set to the `en\_US` locale, this displays a popup
 dialog with text similar to `number: 3.142`:
 
     navigator.globalization.numberToString(
-      3.1415926,
-      function (number) {alert('number: ' + number.value + '\n');},
-      function () {alert('Error getting number\n');},
-      {type:'decimal'}
+        3.1415926,
+        function (number) {alert('number: ' + number.value + '\n');},
+        function () {alert('Error getting number\n');},
+        {type:'decimal'}
     );
 
 Full Example
@@ -68,10 +68,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>numberToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkNumber() {
           navigator.globalization.numberToString(
             3.1415926,
@@ -80,7 +80,7 @@ Full Example
             {type:'decimal'}
           );
         }
-                                            
+
         </script>
       </head>
       <body>

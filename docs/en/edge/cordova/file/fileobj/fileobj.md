@@ -73,7 +73,7 @@ __Full Example__
 
     var slice1 = file.slice(100, 400);
     var slice2 = slice1.slice(20, 35);
-    
+
     var slice3 = file.slice(120, 135);
     // slice2 and slice3 are equivalent.
 

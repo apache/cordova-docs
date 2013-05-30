@@ -24,7 +24,7 @@ Returns the first day of the week according to the client's user
 preferences and calendar.
 
     navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
-    
+
 Description
 -----------
 
@@ -52,8 +52,8 @@ When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `day: 1`.
 
     navigator.globalization.getFirstDayOfWeek(
-      function (day) {alert('day: ' + day.value + '\n');},
-      function () {alert('Error getting day\n');}
+        function (day) {alert('day: ' + day.value + '\n');},
+        function () {alert('Error getting day\n');}
     );
 
 Full Example
@@ -62,17 +62,17 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getFirstDayOfWeek Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkFirstDay() {
           navigator.globalization.getFirstDayOfWeek(
             function (day) {alert('day: ' + day.value + '\n');},
             function () {alert('Error getting day\n');}
           );
         }
-        
+
         </script>
       </head>
       <body>

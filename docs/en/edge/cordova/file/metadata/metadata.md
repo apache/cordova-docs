@@ -46,9 +46,9 @@ Supported Platforms
 Quick Example
 -------------
 
-	function win(metadata) {
-		console.log("Last Modified: " + metadata.modificationTime);
-	}
-	
-	// Request the metadata object for this entry
-	entry.getMetadata(win, null);
+    function win(metadata) {
+        console.log("Last Modified: " + metadata.modificationTime);
+    }
+
+    // Request the metadata object for this entry
+    entry.getMetadata(win, null);

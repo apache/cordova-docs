@@ -51,14 +51,14 @@ Quick Example
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			alert("Formatted: " + contacts[i].name.formatted + "\n" +
-					"Family Name: "  + contacts[i].name.familyName + "\n" +
-					"Given Name: "  + contacts[i].name.givenName + "\n" +
-					"Middle Name: "  + contacts[i].name.middleName + "\n" +
-					"Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-					"Prefix: "  + contacts[i].name.honorificSuffix);
-		}
+        for (var i = 0; i < contacts.length; i++) {
+            alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+                "Family Name: "  + contacts[i].name.familyName      + "\n" +
+                "Given Name: "   + contacts[i].name.givenName       + "\n" +
+                "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+                "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+                "Prefix: "       + contacts[i].name.honorificSuffix);
+        }
     };
 
     function onError(contactError) {
@@ -66,8 +66,8 @@ Quick Example
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","name"];
+    options.filter = "";
+    filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -81,32 +81,32 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","name"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","name"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				alert("Formatted: " + contacts[i].name.formatted + "\n" +
-						"Family Name: "  + contacts[i].name.familyName + "\n" +
-						"Given Name: "  + contacts[i].name.givenName + "\n" +
-						"Middle Name: "  + contacts[i].name.middleName + "\n" +
-						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-						"Prefix: "  + contacts[i].name.honorificPrefix);
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i = 0; i < contacts.length; i ++) {
+                alert("Formatted: " + contacts[i].name.formatted       + "\n" +
+                    "Family Name: " + contacts[i].name.familyName      + "\n" +
+                    "Given Name: "  + contacts[i].name.givenName       + "\n" +
+                    "Middle Name: " + contacts[i].name.middleName      + "\n" +
+                    "Suffix: "      + contacts[i].name.honorificSuffix + "\n" +
+                    "Prefix: "      + contacts[i].name.honorificPrefix);
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {

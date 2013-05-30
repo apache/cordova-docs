@@ -45,20 +45,20 @@ Quick Example
 
     function checkConnection() {
         var networkState = navigator.connection.type;
-        
+
         var states = {};
-        states[Connection.UNKNOWN]	= 'Unknown connection';
-        states[Connection.ETHERNET]	= 'Ethernet connection';
-        states[Connection.WIFI]   	= 'WiFi connection';
-        states[Connection.CELL_2G]	= 'Cell 2G connection';
-        states[Connection.CELL_3G]	= 'Cell 3G connection';
-        states[Connection.CELL_4G]	= 'Cell 4G connection';
-        states[Connection.CELL]   	= 'Cell generic connection';
-        states[Connection.NONE]   	= 'No network connection';
-    
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.CELL]     = 'Cell generic connection';
+        states[Connection.NONE]     = 'No network connection';
+
         alert('Connection type: ' + states[networkState]);
     }
-    
+
     checkConnection();
 
 Full Example
@@ -68,36 +68,36 @@ Full Example
     <html>
       <head>
         <title>navigator.connection.type Example</title>
-        
+
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
-        // Wait for Cordova to load
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-        
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+
+        // device APIs are available
         //
         function onDeviceReady() {
             checkConnection();
         }
-        
-	    function checkConnection() {
-	        var networkState = navigator.connection.type;
 
-	        var states = {};
-	        states[Connection.UNKNOWN]	= 'Unknown connection';
-	        states[Connection.ETHERNET]	= 'Ethernet connection';
-	        states[Connection.WIFI]   	= 'WiFi connection';
-	        states[Connection.CELL_2G]	= 'Cell 2G connection';
-	        states[Connection.CELL_3G]	= 'Cell 3G connection';
-	        states[Connection.CELL_4G]	= 'Cell 4G connection';
-	        states[Connection.CELL]	  	= 'Cell generic connection';
-	        states[Connection.NONE]   	= 'No network connection';
+            function checkConnection() {
+                var networkState = navigator.connection.type;
 
-	        alert('Connection type: ' + states[networkState]);
-	    }
-        
+                var states = {};
+                states[Connection.UNKNOWN]  = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI]     = 'WiFi connection';
+                states[Connection.CELL_2G]  = 'Cell 2G connection';
+                states[Connection.CELL_3G]  = 'Cell 3G connection';
+                states[Connection.CELL_4G]  = 'Cell 4G connection';
+                states[Connection.CELL]     = 'Cell generic connection';
+                states[Connection.NONE]     = 'No network connection';
+
+                alert('Connection type: ' + states[networkState]);
+            }
+
         </script>
       </head>
       <body>
@@ -108,10 +108,10 @@ Full Example
 API Change
 ----------
 
-Prior to Cordova 2.3.0, the `Connection` object was accessed via
-`navigator.network.connection`.  It was changed to
-`navigator.connection` in 2.3.0 to match the W3C specification. It's
-still available at its original location, but is deprecated and will
+Until Cordova 2.3.0, the `Connection` object was accessed via
+`navigator.network.connection`, after which it was changed to
+`navigator.connection` to match the W3C specification.  It's still
+available at its original location, but is deprecated and will
 eventually be removed.
 
 iOS Quirks

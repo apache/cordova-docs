@@ -60,14 +60,16 @@ currency is United States Dollars, this example displays a popup
 dialog with text similar to the results that follow:
 
     navigator.globalization.getCurrencyPattern(
-      'USD',
-      function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                'code: ' + pattern.code + '\n' +
-                                'fraction: ' + pattern.fraction + '\n' +
-                                'rounding: ' + pattern.rounding + '\n' +
-                                'decimal: ' + pattern.decimal + '\n' +
-                                'grouping: ' + pattern.grouping);},
-      function () {alert('Error getting pattern\n');}
+        'USD',
+        function (pattern) {
+            alert('pattern: '  + pattern.pattern  + '\n' +
+                  'code: '     + pattern.code     + '\n' +
+                  'fraction: ' + pattern.fraction + '\n' +
+                  'rounding: ' + pattern.rounding + '\n' +
+                  'decimal: '  + pattern.decimal  + '\n' +
+                  'grouping: ' + pattern.grouping);
+        },
+        function () { alert('Error getting pattern\n'); }
     );
 
 Expected result:
@@ -85,23 +87,23 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                  
+
         function checkPattern() {
           navigator.globalization.getCurrencyPattern(
             'USD',
-            function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                      'code: ' + pattern.code + '\n' +
+            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                      'code: '     + pattern.code     + '\n' +
                                       'fraction: ' + pattern.fraction + '\n' +
                                       'rounding: ' + pattern.rounding + '\n' +
-                                      'decimal: ' + pattern.decimal + '\n' +
+                                      'decimal: '  + pattern.decimal  + '\n' +
                                       'grouping: ' + pattern.grouping);},
             function () {alert('Error getting pattern\n');}
           );
         }
-                                            
+
         </script>
       </head>
       <body>

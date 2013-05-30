@@ -28,7 +28,7 @@ Shows a custom alert or dialog box.
 - __alertCallback__: Callback to invoke when alert dialog is dismissed. _(Function)_
 - __title__: Dialog title. _(String)_ (Optional, defaults to `Alert`)
 - __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
-    
+
 Description
 -----------
 
@@ -63,7 +63,7 @@ Quick Example
         'Game Over',            // title
         'Done'                  // buttonName
     );
-        
+
 Full Example
 ------------
 
@@ -75,32 +75,32 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Empty
         }
-    
+
         // alert dialog dismissed
-	    function alertDismissed() {
-	        // do something
-	    }
+            function alertDismissed() {
+                // do something
+            }
 
         // Show a custom alertDismissed
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        alertDismissed,         // callback
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                alertDismissed,         // callback
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
         }
-    
+
         </script>
       </head>
       <body>

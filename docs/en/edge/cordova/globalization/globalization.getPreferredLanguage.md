@@ -24,7 +24,7 @@ Get the string identifier for the client's current language.
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
 
-    
+
 Description
 -----------
 
@@ -51,8 +51,8 @@ When the browser is set to the `en\_US` locale, this should display a
 popup dialog with the text `language: English`:
 
     navigator.globalization.getPreferredLanguage(
-      function (language) {alert('language: ' + language.value + '\n');},
-      function () {alert('Error getting language\n');}
+        function (language) {alert('language: ' + language.value + '\n');},
+        function () {alert('Error getting language\n');}
     );
 
 Full Example
@@ -61,10 +61,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
+
         function checkLanguage() {
           navigator.globalization.getPreferredLanguage(
             function (language) {alert('language: ' + language.value + '\n');},

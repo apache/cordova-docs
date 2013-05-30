@@ -41,9 +41,9 @@ Quick Example
 -------------
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-    
+
     // ... later on ...
-    
+
     navigator.compass.clearWatch(watchID);
 
 Full Example
@@ -59,12 +59,12 @@ Full Example
 
         // The watch id references the current `watchHeading`
         var watchID = null;
-        
-        // Wait for Cordova to load
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             startWatch();
@@ -73,13 +73,13 @@ Full Example
         // Start watching the compass
         //
         function startWatch() {
-            
+
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.compass.watchHeading(onSuccess, onError, options);
         }
-        
+
         // Stop watching the compass
         //
         function stopWatch() {
@@ -88,7 +88,7 @@ Full Example
                 watchID = null;
             }
         }
-        
+
         // onSuccess: Get the current heading
         //
         function onSuccess(heading) {

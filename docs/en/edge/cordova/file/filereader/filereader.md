@@ -74,19 +74,19 @@ __Parameters:__
 Quick Example
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function (evt) {
+            console.log("read success");
             console.log(evt.target.result);
         };
-		reader.readAsDataURL(file);
-	};
+        reader.readAsDataURL(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function (evt) {
+        console.log(error.code);
+    };
+
     entry.file(win, fail);
 
 Read As Text
@@ -100,38 +100,38 @@ __Parameters:__
 Quick Example
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function (evt) {
+            console.log("read success");
             console.log(evt.target.result);
         };
-		reader.readAsText(file);
-	};
+        reader.readAsText(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function (evt) {
+        console.log(error.code);
+    };
+
     entry.file(win, fail);
 
 Abort Quick Example
 -------------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("read success");
             console.log(evt.target.result);
         };
-		reader.readAsText(file);
-		reader.abort();
-	};
+        reader.readAsText(file);
+        reader.abort();
+    };
 
     function fail(error) {
-    	console.log(error.code);
+        console.log(error.code);
     }
-	
+
     entry.file(win, fail);
 
 Full Example
@@ -145,31 +145,31 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-		
-		function gotFS(fileSystem) {
-			fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
-		}
-		
-		function gotFileEntry(fileEntry) {
-			fileEntry.file(gotFile, fail);
-		}
-		
+
+        function gotFS(fileSystem) {
+            fileSystem.root.getFile("readme.txt", null, gotFileEntry, fail);
+        }
+
+        function gotFileEntry(fileEntry) {
+            fileEntry.file(gotFile, fail);
+        }
+
         function gotFile(file){
-			readDataUrl(file);
-			readAsText(file);
-		}
-        
+            readDataUrl(file);
+            readAsText(file);
+        }
+
         function readDataUrl(file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
@@ -178,7 +178,7 @@ Full Example
             };
             reader.readAsDataURL(file);
         }
-        
+
         function readAsText(file) {
             var reader = new FileReader();
             reader.onloadend = function(evt) {
@@ -187,11 +187,11 @@ Full Example
             };
             reader.readAsText(file);
         }
-        
+
         function fail(evt) {
             console.log(evt.target.error.code);
         }
-        
+
         </script>
       </head>
       <body>
@@ -216,20 +216,20 @@ __Parameters:__
 Quick Example
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function (evt) {
+            console.log("read success");
             console.log(evt.target.result);
         };
-		reader.readAsBinaryString(file);
-	};
+        reader.readAsBinaryString(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
-    entry.file(win, fail);
+    var fail = function (evt) {
+        console.log(error.code);
+    };
+
+entry.file(win, fail);
 
 Read As Array Buffer
 --------------------
@@ -242,18 +242,17 @@ __Parameters:__
 Quick Example
 -------------
 
-	function win(file) {
-		var reader = new FileReader();
-		reader.onloadend = function(evt) {
-        	console.log("read success");
+    function win(file) {
+        var reader = new FileReader();
+        reader.onloadend = function (evt) {
+            console.log("read success");
             console.log(new Uint8Array(evt.target.result));
         };
-		reader.readAsArrayBuffer(file);
-	};
+        reader.readAsArrayBuffer(file);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function (evt) {
+        console.log(error.code);
+    };
+
     entry.file(win, fail);
-

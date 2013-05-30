@@ -25,7 +25,7 @@ preferences and calendar using the time zone of the client, and
 returns the corresponding date object.
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -72,12 +72,12 @@ that the month integer is one less than the string, as the month
 integer represents an array index.
 
     navigator.globalization.stringToDate(
-      '9/25/2012',
-      function (date) {alert('month:' + date.month +
-                             ' day:' + date.day +
-                             ' year:' + date.year + '\n');},
-      function () {alert('Error getting date\n');},
-      {selector:'date'}
+        '9/25/2012',
+        function (date) {alert('month:' + date.month +
+                               ' day:'  + date.day   +
+                               ' year:' + date.year  + '\n');},
+        function () {alert('Error getting date\n');},
+        {selector: 'date'}
     );
 
 Full Example
@@ -86,10 +86,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>stringToDate Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                  
+
         function checkStringDate() {
           navigator.globalization.stringToDate(
             '9/25/2012',

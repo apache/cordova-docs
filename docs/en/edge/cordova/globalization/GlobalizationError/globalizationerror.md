@@ -61,21 +61,21 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function successCallback(date) {
           alert('month:' + date.month +
                 ' day:' + date.day +
                 ' year:' + date.year + '\n');
         }
-                                            
+
         function errorCallback(error) {
           alert('code: ' + error.code + '\n' +
                 'message: ' + error.message + '\n');
         };
-                                                                  
+
         function checkError() {
           navigator.globalization.stringToDate(
             'notADate',
@@ -84,7 +84,7 @@ Full Example
             {selector:'foobar'}
           );
         }
-    
+
         </script>
       </head>
       <body>

@@ -41,25 +41,25 @@ Supported Platforms
 Quick Example
 -------------
 
-	// success callback
+    // success callback
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			alert(contacts[i].displayName);
-		}
+        for (var i=0; i<contacts.length; i++) {
+            alert(contacts[i].displayName);
+        }
     };
 
-	// error callback
+    // error callback
     function onError(contactError) {
         alert('onError!');
     };
 
-	// specify contact search criteria
+    // specify contact search criteria
     var options = new ContactFindOptions();
-	options.filter="";			// empty search string returns all contacts
-	options.multiple=true;		// return multiple results
-	filter = ["displayName"];	// return contact.displayName field
-	
-	// find contacts
+        options.filter="";        // empty search string returns all contacts
+        options.multiple=true;    // return multiple results
+        filter = ["displayName"]; // return contact.displayName field
+
+        // find contacts
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -73,31 +73,31 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			// specify contact search criteria
-		    var options = new ContactFindOptions();
-			options.filter="";			// empty search string returns all contacts
-			options.multiple=true;		// return multiple results
-			filter = ["displayName"];	// return contact.displayName field
+            // specify contact search criteria
+            var options = new ContactFindOptions();
+            options.filter = "";      // empty search string returns all contacts
+            options.multiple = true;  // return multiple results
+            filter = ["displayName"]; // return contact.displayName field
 
-			// find contacts
-		    navigator.contacts.find(filter, onSuccess, onError, options);
+            // find contacts
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				alert(contacts[i].displayName);
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i=0; i<contacts.length; i++) {
+                alert(contacts[i].displayName);
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {

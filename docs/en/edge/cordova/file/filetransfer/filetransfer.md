@@ -70,33 +70,33 @@ __Parameters:__
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
-	
+
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
-	
-  	var win = function(r) {
+
+    var win = function (r) {
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
-	}
-	
-    var fail = function(error) {
+    }
+
+    var fail = function (error) {
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-	
-	var options = new FileUploadOptions();
-	options.fileKey="file";
-	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-	options.mimeType="text/plain";
 
-  var params = {};
-	params.value1 = "test";
-	params.value2 = "param";
-		
-	options.params = params;
-	
-	var ft = new FileTransfer();
+    var options = new FileUploadOptions();
+    options.fileKey = "file";
+    options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
+    options.mimeType = "text/plain";
+
+    var params = {};
+    params.value1 = "test";
+    params.value2 = "param";
+
+    options.params = params;
+
+    var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
 
 __Full Example__
@@ -105,56 +105,57 @@ __Full Example__
     <html>
     <head>
         <title>File Transfer Example</title>
-    
+
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
-            // Wait for Cordova to load
+
+            // Wait for device API libraries to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-            
-            // Cordova is ready
+
+            // device APIs are available
             //
             function onDeviceReady() {
-                
                 // Retrieve image file location from specified source
-                navigator.camera.getPicture(uploadPhoto,
-                                            function(message) { alert('get picture failed'); },
-                                            { quality: 50,
-                                            destinationType: navigator.camera.DestinationType.FILE_URI,
-                                            sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
-                                            );
-                
+                navigator.camera.getPicture(
+                    uploadPhoto,
+                    function(message) { alert('get picture failed'); },
+                    {
+                        quality         : 50,
+                        destinationType : navigator.camera.DestinationType.FILE_URI,
+                        sourceType      : navigator.camera.PictureSourceType.PHOTOLIBRARY
+                    }
+                );
             }
-            
+
             function uploadPhoto(imageURI) {
                 var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
-                
+
                 var params = {};
                 params.value1 = "test";
                 params.value2 = "param";
-                
+
                 options.params = params;
-                
+
                 var ft = new FileTransfer();
                 ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
-            
+
             function win(r) {
                 console.log("Code = " + r.responseCode);
                 console.log("Response = " + r.response);
                 console.log("Sent = " + r.bytesSent);
             }
-            
+
             function fail(error) {
                 alert("An error has occurred: Code = " + error.code);
                 console.log("upload error source " + error.source);
                 console.log("upload error target " + error.target);
             }
-            
+
             </script>
     </head>
     <body>
@@ -172,24 +173,24 @@ Supported on Android and iOS
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
     }
-    
+
     function fail(error) {
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-    
+
     var uri = encodeURI("http://some.server.com/upload.php");
-    
+
     var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
-        
+
     var headers={'headerParam':'headerValue'};
-    
+
     options.headers = headers;
-    
+
     var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);
 
@@ -201,7 +202,7 @@ to a Nginx server.
 download
 --------------
 
-__Parameters:__	
+__Parameters:__
 
 - __source__: URL of the server to download the file, as encoded by `encodeURI()`.
 - __target__: Full path of the file on the device.
@@ -216,7 +217,7 @@ __Quick Example__
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
-    
+
     fileTransfer.download(
         uri,
         filePath,
@@ -247,33 +248,33 @@ __Supported Platforms__
 - iOS
 
 __Quick Example__
-	
+
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
-	
-  	var win = function(r) {
+
+          var win = function(r) {
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
-	}
-	
+        }
+
     var fail = function(error) {
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-	
-	var options = new FileUploadOptions();
-	options.fileKey="file";
-	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-	options.mimeType="text/plain";
+
+        var options = new FileUploadOptions();
+        options.fileKey="file";
+        options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+        options.mimeType="text/plain";
 
     var params = {};
-	params.value1 = "test";
-	params.value2 = "param";
-		
-	options.params = params;
-	
-	var ft = new FileTransfer();
+        params.value1 = "test";
+        params.value2 = "param";
+
+        options.params = params;
+
+        var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort(win, fail);
 

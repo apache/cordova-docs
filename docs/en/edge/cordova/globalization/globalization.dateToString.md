@@ -59,10 +59,10 @@ dialog with text similar to `date: 9/25/2012 4:21PM` using the default
 options:
 
     navigator.globalization.dateToString(
-      new Date(),
-      function (date) {alert('date: ' + date.value + '\n');},
-      function () {alert('Error getting dateString\n');},
-      {formatLength:'short', selector:'date and time'}
+        new Date(),
+        function (date) { alert('date: ' + date.value + '\n'); },
+        function () { alert('Error getting dateString\n'); },
+        { formatLength: 'short', selector: 'date and time' }
     );
 
 Full Example
@@ -71,10 +71,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>dateToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
+
         function checkDateString() {
           navigator.globalization.dateToString(
             new Date(),

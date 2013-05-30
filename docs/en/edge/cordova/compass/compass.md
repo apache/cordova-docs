@@ -28,8 +28,8 @@ Methods
 - compass.getCurrentHeading
 - compass.watchHeading
 - compass.clearWatch
-- compass.watchHeadingFilter 	(obsolete)
-- compass.clearWatchFilter		(obsolete)
+- compass.watchHeadingFilter (obsolete)
+- compass.clearWatchFilter   (obsolete)
 
 Arguments
 ---------

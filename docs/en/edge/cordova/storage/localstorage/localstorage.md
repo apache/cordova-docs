@@ -64,18 +64,18 @@ Set Item Quick Example
 Get Item Quick Example
 -------------
 
-	var value = window.localStorage.getItem("key");
-	// value is now equal to "value"
+        var value = window.localStorage.getItem("key");
+        // value is now equal to "value"
 
 Remove Item Quick Example
 -------------
 
-	window.localStorage.removeItem("key");
+        window.localStorage.removeItem("key");
 
 Clear Quick Example
 -------------
 
-	window.localStorage.clear();
+        window.localStorage.clear();
 
 Full Example
 ------------
@@ -88,24 +88,23 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			window.localStorage.setItem("key", "value");
-			var keyname = window.localStorage.key(i);
-			// keyname is now equal to "key"
-			var value = window.localStorage.getItem("key");
-			// value is now equal to "value"
-			window.localStorage.removeItem("key");
-			window.localStorage.setItem("key2", "value2");
-			window.localStorage.clear();
-			// localStorage is now empty
+            window.localStorage.setItem("key", "value");
+            var keyname = window.localStorage.key(i);
+            // keyname is now equal to "key"
+            var value = window.localStorage.getItem("key");
+            // value is now equal to "value"
+            window.localStorage.removeItem("key");
+            window.localStorage.setItem("key2", "value2");
+            window.localStorage.clear();
+            // localStorage is now empty
         }
-    
 
         </script>
       </head>

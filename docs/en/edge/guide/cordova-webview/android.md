@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-         
+
            http://www.apache.org/licenses/LICENSE-2.0
-         
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -83,16 +83,16 @@ Guide to using CordovaWebView in an Android Project
     public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
         this.activityResultCallback = command;
         this.activityResultKeepRunning = this.keepRunning;
-        
+
         // If multitasking turned on, then disable it for activities that return results
         if (command != null) {
             this.keepRunning = false;
         }
-        
+
         // Start activity
         super.startActivityForResult(intent, requestCode);
     }
-    
+
     @Override
     /**
      * Called when an activity you launched exits, giving you the requestCode you started it with,

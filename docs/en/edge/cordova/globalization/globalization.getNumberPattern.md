@@ -23,7 +23,7 @@ globalization.getNumberPattern
 Returns a pattern string to format and parse numbers according to the client's user preferences.
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -64,16 +64,16 @@ When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to the results that follow:
 
     navigator.globalization.getNumberPattern(
-      function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                'symbol: ' + pattern.symbol + '\n' +
-                                'fraction: ' + pattern.fraction + '\n' +
-                                'rounding: ' + pattern.rounding + '\n' +
-                                'positive: ' + pattern.positive + '\n' +
-                                'negative: ' + pattern.negative + '\n' +
-                                'decimal: ' + pattern.decimal + '\n' +
-                                'grouping: ' + pattern.grouping);},
-      function () {alert('Error getting pattern\n');},
-      {type:'decimal'}
+        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                  'symbol: '   + pattern.symbol   + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'positive: ' + pattern.positive + '\n' +
+                                  'negative: ' + pattern.negative + '\n' +
+                                  'decimal: '  + pattern.decimal  + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');},
+        {type:'decimal'}
     );
 
 Results:
@@ -93,32 +93,32 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkPattern() {
           navigator.globalization.getNumberPattern(
-            function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                      'symbol: ' + pattern.symbol + '\n' +
+            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                      'symbol: '   + pattern.symbol   + '\n' +
                                       'fraction: ' + pattern.fraction + '\n' +
                                       'rounding: ' + pattern.rounding + '\n' +
                                       'positive: ' + pattern.positive + '\n' +
                                       'negative: ' + pattern.negative + '\n' +
-                                      'decimal: ' + pattern.decimal + '\n' +
+                                      'decimal: '  + pattern.decimal  + '\n' +
                                       'grouping: ' + pattern.grouping);},
             function () {alert('Error getting pattern\n');},
             {type:'decimal'}
           );
         }
-                                            
+
         </script>
       </head>
       <body>
         <button onclick="checkPattern()">Click for pattern</button>
       </body>
     </html>
-    
+
 Windows Phone 8 Quirks
 ----------------
 - The `pattern` property is not supported, and retuens an empty string.

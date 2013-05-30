@@ -48,13 +48,13 @@ Supported Platforms
 File System Quick Example
 -------------------------
 
-	function onSuccess(fileSystem) {
-		console.log(fileSystem.name);
-		console.log(fileSystem.root.name);
-	}
-	
-	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+        console.log(fileSystem.root.name);
+    }
+
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
 Full Example
 ------------
@@ -67,25 +67,25 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
 
-		function onFileSystemSuccess(fileSystem) {
-			console.log(fileSystem.name);
-			console.log(fileSystem.root.name);
-		}
-		
-		function fail(evt) {
-			console.log(evt.target.error.code);
-		}
-		
+        function onFileSystemSuccess(fileSystem) {
+            console.log(fileSystem.name);
+            console.log(fileSystem.root.name);
+        }
+
+        function fail(evt) {
+            console.log(evt.target.error.code);
+        }
+
         </script>
       </head>
       <body>

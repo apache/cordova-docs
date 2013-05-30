@@ -69,22 +69,22 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.compass.getCurrentHeading(onSuccess, onError);
         }
-    
+
         // onSuccess: Get the current heading
         //
         function onSuccess(heading) {
             alert('Heading: ' + heading.magneticHeading);
         }
-    
+
         // onError: Failed to get the heading
         //
         function onError(compassError) {

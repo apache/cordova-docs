@@ -24,7 +24,7 @@ Opens a URL in a new `InAppBrowser` instance, the current browser
 instance, or the system browser.
 
     var ref = window.open(url, target, options);
-    
+
 - __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
 - __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
 - __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
@@ -32,9 +32,9 @@ instance, or the system browser.
   - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
   - `_blank`: Opens in the `InAppBrowser`.
   - `_system`: Opens in the system's web browser.
-    
+
 - __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
-    
+
     The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:
 
     - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
@@ -48,7 +48,7 @@ instance, or the system browser.
     - __suppressesIncrementalRendering__: Set to `yes` or `no` to wait until all new view content is received before being rendered (defaults to `no`).
     - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to `fullscreen`).
     - __transitionstyle__: Set to `fliphorizontal`, `crossdissolve` or `coververtical` to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to `coververtical`).
-            
+
 Supported Platforms
 -------------------
 
@@ -74,11 +74,11 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // external url

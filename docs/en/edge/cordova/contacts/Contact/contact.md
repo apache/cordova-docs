@@ -37,7 +37,7 @@ Properties
 - __birthday__: The birthday of the contact. _(Date)_
 - __note__: A note about the contact. _(DOMString)_
 - __photos__: An array of the contact's photos. _(ContactField[])_
-- __categories__:  An array of all the contact's user-defined categories. _(ContactField[])_
+- __categories__:  An array of all the user-defined categories associated with the contact. _(ContactField[])_
 - __urls__:  An array of web pages associated with the contact. _(ContactField[])_
 
 Methods
@@ -50,7 +50,7 @@ Methods
 Details
 -------
 
-The `Contact` object represents a user contact.  Contacts can be
+The `Contact` object represents a user's contact.  Contacts can be
 created, stored, or removed from the device contacts database.
 Contacts can also be retrieved (individually or in bulk) from the
 database by invoking the `contacts.find` method.
@@ -72,36 +72,36 @@ Supported Platforms
 Save Quick Example
 ------------------
 
-	function onSuccess(contact) {
-		alert("Save Success");
-	};
+    function onSuccess(contact) {
+        alert("Save Success");
+    };
 
-	function onError(contactError) {
-		alert("Error = " + contactError.code);
-	};
+    function onError(contactError) {
+        alert("Error = " + contactError.code);
+    };
 
-	// create a new contact object
+    // create a new contact object
     var contact = navigator.contacts.create();
-	contact.displayName = "Plumber";
-	contact.nickname = "Plumber"; 		//specify both to support all devices
-	
-	// populate some fields
-	var name = new ContactName();
-	name.givenName = "Jane";
-	name.familyName = "Doe";
-	contact.name = name;
-	
-	// save to device
-	contact.save(onSuccess,onError);
+    contact.displayName = "Plumber";
+    contact.nickname = "Plumber";            // specify both to support all devices
+
+    // populate some fields
+    var name = new ContactName();
+    name.givenName = "Jane";
+    name.familyName = "Doe";
+    contact.name = name;
+
+    // save to device
+    contact.save(onSuccess,onError);
 
 Clone Quick Example
 -------------------
 
-	// clone the contact object
-	var clone = contact.clone();
-	clone.name.givenName = "John";
-	console.log("Original contact name = " + contact.name.givenName);
-	console.log("Cloned contact name = " + clone.name.givenName);
+        // clone the contact object
+        var clone = contact.clone();
+        clone.name.givenName = "John";
+        console.log("Original contact name = " + contact.name.givenName);
+        console.log("Cloned contact name = " + clone.name.givenName);
 
 Remove Quick Example
 --------------------
@@ -114,8 +114,8 @@ Remove Quick Example
         alert("Error = " + contactError.code);
     };
 
-	// remove the contact from the device
-	contact.remove(onSuccess,onError);
+        // remove the contact from the device
+        contact.remove(onSuccess,onError);
 
 Full Example
 ------------
@@ -128,57 +128,57 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-		    // create
-		    var contact = navigator.contacts.create();
-			contact.displayName = "Plumber";
-			contact.nickname = "Plumber"; 		//specify both to support all devices
-			var name = new ContactName();
-			name.givenName = "Jane";
-			name.familyName = "Doe";
-			contact.name = name;
+            // create
+            var contact = navigator.contacts.create();
+            contact.displayName = "Plumber";
+            contact.nickname = "Plumber";                 // specify both to support all devices
+            var name = new ContactName();
+            name.givenName = "Jane";
+            name.familyName = "Doe";
+            contact.name = name;
 
-			// save
-			contact.save(onSaveSuccess,onSaveError);
-			
-			// clone
-			var clone = contact.clone();
-			clone.name.givenName = "John";
-			console.log("Original contact name = " + contact.name.givenName);
-			console.log("Cloned contact name = " + clone.name.givenName);
-			
-			// remove
-			contact.remove(onRemoveSuccess,onRemoveError);
+            // save
+            contact.save(onSaveSuccess,onSaveError);
+
+            // clone
+            var clone = contact.clone();
+            clone.name.givenName = "John";
+            console.log("Original contact name = " + contact.name.givenName);
+            console.log("Cloned contact name = " + clone.name.givenName);
+
+            // remove
+            contact.remove(onRemoveSuccess,onRemoveError);
         }
-        
+
         // onSaveSuccess: Get a snapshot of the current contacts
         //
         function onSaveSuccess(contact) {
-			alert("Save Success");
+            alert("Save Success");
         }
-    
+
         // onSaveError: Failed to get the contacts
         //
         function onSaveError(contactError) {
-			alert("Error = " + contactError.code);
+            alert("Error = " + contactError.code);
         }
-        
+
         // onRemoveSuccess: Get a snapshot of the current contacts
         //
         function onRemoveSuccess(contacts) {
-			alert("Removal Success");
+            alert("Removal Success");
         }
-    
+
         // onRemoveError: Failed to get the contacts
         //
         function onRemoveError(contactError) {
-			alert("Error = " + contactError.code);
+            alert("Error = " + contactError.code);
         }
 
         </script>

@@ -51,22 +51,22 @@ Supported Platforms
 Request File System Quick Example
 ---------------------------------
 
-	function onSuccess(fileSystem) {
-		console.log(fileSystem.name);
-	}
-	
-	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
 
 Resolve Local File System URI Quick Example
 -------------------------------------------
 
-	function onSuccess(fileEntry) {
-		console.log(fileEntry.name);
-	}
+    function onSuccess(fileEntry) {
+        console.log(fileEntry.name);
+    }
 
-	window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
-	
+    window.resolveLocalFileSystemURI("file:///example.txt", onSuccess, onError);
+
 Full Example
 ------------
 
@@ -78,29 +78,29 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-			window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.resolveLocalFileSystemURI("file:///example.txt", onResolveSuccess, fail);
         }
 
-		function onFileSystemSuccess(fileSystem) {
-			console.log(fileSystem.name);
-		}
+        function onFileSystemSuccess(fileSystem) {
+            console.log(fileSystem.name);
+        }
 
-		function onResolveSuccess(fileEntry) {
-			console.log(fileEntry.name);
-		}
-		
-		function fail(evt) {
-			console.log(evt.target.error.code);
-		}
-		
+        function onResolveSuccess(fileEntry) {
+            console.log(fileEntry.name);
+        }
+
+        function fail(evt) {
+            console.log(evt.target.error.code);
+        }
+
         </script>
       </head>
       <body>

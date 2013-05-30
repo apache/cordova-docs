@@ -24,7 +24,7 @@ Returns a pattern string to format and parse dates according to the
 client's user preferences.
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -37,7 +37,7 @@ a parameter contains the following properties:
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
 
 If there is an error obtaining the pattern, the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The 
+executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
 The `options` parameter is optional, and defaults to the following values:
@@ -63,11 +63,11 @@ When the browser is set to the `en\_US` locale, this example displays
 a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
 
     function checkDatePattern() {
-      navigator.globalization.getDatePattern(
-        function (date) {alert('pattern: ' + date.pattern + '\n');},
-        function () {alert('Error getting pattern\n');},
-        {formatLength:'short', selector:'date and time'}
-      );
+        navigator.globalization.getDatePattern(
+            function (date) { alert('pattern: ' + date.pattern + '\n'); },
+            function () { alert('Error getting pattern\n'); },
+            { formatLength: 'short', selector: 'date and time' }
+        );
     }
 
 Full Example
@@ -76,10 +76,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getDatePattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkDatePattern() {
           navigator.globalization.getDatePattern(
             function (date) {alert('pattern: ' + date.pattern + '\n');},

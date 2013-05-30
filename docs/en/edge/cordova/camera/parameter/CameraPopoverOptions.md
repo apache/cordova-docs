@@ -60,17 +60,21 @@ location.
 Quick Example
 -------------
 
-     var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
-     var options = { quality: 50, destinationType: Camera.DestinationType.DATA_URL,sourceType: Camera.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
-     
-     navigator.camera.getPicture(onSuccess, onFail, options);
-     
-     function onSuccess(imageData) {
-        var image = document.getElementById('myImage');
-        image.src = "data:image/jpeg;base64," + imageData;
-    }
+     var popover = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var options = {
+         quality         : 50,
+         destinationType : Camera.DestinationType.DATA_URL,
+         sourceType      : Camera.PictureSource.SAVEDPHOTOALBUM,
+         popoverOptions  : popover
+     };
 
-    function onFail(message) {
-        alert('Failed because: ' + message);
-    }
-     
+     navigator.camera.getPicture(onSuccess, onFail, options);
+
+     function onSuccess(imageData) {
+         var image = document.getElementById('myImage');
+         image.src = "data:image/jpeg;base64," + imageData;
+     }
+
+     function onFail(message) {
+         alert('Failed because: ' + message);
+     }

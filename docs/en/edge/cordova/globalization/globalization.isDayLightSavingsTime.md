@@ -24,7 +24,7 @@ Indicates whether daylight savings time is in effect for a given date
 using the client's time zone and calendar.
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
-    
+
 Description
 -----------
 
@@ -55,9 +55,9 @@ timezone, this should display a popup dialog with text similar to
 `dst: true`:
 
     navigator.globalization.isDayLightSavingsTime(
-      new Date(),
-      function (date) {alert('dst: ' + date.dst + '\n');},
-      function () {alert('Error getting names\n');}
+        new Date(),
+        function (date) {alert('dst: ' + date.dst + '\n');},
+        function () {alert('Error getting names\n');}
     );
 
 Full Example
@@ -66,10 +66,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>isDayLightSavingsTime Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-        
+
         function checkDayLightSavings() {
           navigator.globalization.isDayLightSavingsTime(
             new Date(),
@@ -77,11 +77,11 @@ Full Example
             function () {alert('Error getting names\n');}
           );
         }
-                                             
+
         </script>
       </head>
       <body>
         <button onclick="checkDayLightSavings()">Click for daylight savings</button>
       </body>
     </html>
-    
+

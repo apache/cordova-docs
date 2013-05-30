@@ -98,11 +98,11 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
              var ref = window.open('http://apache.org', '_blank', 'location=yes');
@@ -162,7 +162,7 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -189,7 +189,7 @@ Full Example
              iabRef.removeEventListener('exit', iabClose);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
@@ -239,11 +239,11 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
              var ref = window.open('http://apache.org', '_blank', 'location=yes');
@@ -299,10 +299,10 @@ Full Example
       <head>
         <title>InAppBrowser.executeScript Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -324,7 +324,7 @@ Full Example
              iabRef.removeEventListener('exit', iabClose);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
@@ -373,10 +373,10 @@ Full Example
       <head>
         <title>InAppBrowser.executeScript Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -398,7 +398,7 @@ Full Example
              iabRef.removeEventListener('exit', iabClose);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');

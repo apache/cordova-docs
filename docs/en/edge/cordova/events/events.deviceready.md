@@ -27,7 +27,8 @@ The event fires when Cordova is fully loaded.
 Details
 -------
 
-This is a very important event that every Cordova application should use.
+This event is essential to any application. It signals that Cordova's
+device APIs have loaded and are ready to access.
 
 Cordova consists of two code bases: native and JavaScript. While the
 native code loads, a custom loading image displays. However,
@@ -35,10 +36,10 @@ JavaScript only loads once the DOM loads. This means your web
 application may potentially call a Cordova JavaScript function before
 the corresponding native code is available.
 
-The Cordova `deviceready` event fires once Cordova has fully loaded.
-After the device has fired, you can safely make calls to Cordova APIs.
-Applications typically attach an event listener with
-`document.addEventListener` once the HTML document's DOM has loaded.
+The `deviceready` event fires once Cordova has fully loaded. Once the
+event fires, you can safely make calls to Cordova APIs.  Applications
+typically attach an event listener with `document.addEventListener`
+once the HTML document's DOM has loaded.
 
 The `deviceready` event behaves somewhat differently from others.  Any
 event handler registered after the `deviceready` event fires has its
@@ -61,7 +62,7 @@ Quick Example
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-        // Now safe to use the Cordova API
+        // Now safe to use device APIs
     }
 
 Full Example
@@ -70,25 +71,21 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Device Ready Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
-            // Now safe to use the Cordova API
+            // Now safe to use device APIs
         }
 
         </script>

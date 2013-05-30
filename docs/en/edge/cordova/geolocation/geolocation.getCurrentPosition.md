@@ -58,8 +58,8 @@ Quick Example
 -------------
 
     // onSuccess Callback
-    //   This method accepts a `Position` object, which contains
-    //   the current GPS coordinates
+    // This method accepts a Position object, which contains the
+    // current GPS coordinates
     //
     var onSuccess = function(position) {
         alert('Latitude: '          + position.coords.latitude          + '\n' +
@@ -92,16 +92,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
@@ -115,12 +115,12 @@ Full Example
                                 'Speed: '              + position.coords.speed                 + '<br />' +
                                 'Timestamp: '          + position.timestamp                    + '<br />';
         }
-    
+
         // onError Callback receives a PositionError object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
-                    'message: ' + error.message + '\n');
+                  'message: ' + error.message + '\n');
         }
 
         </script>

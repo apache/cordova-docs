@@ -28,7 +28,7 @@ Displays a customizable confirmation dialog box.
 - __confirmCallback__: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). _(Function)_
 - __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)
 - __buttonLabels__: Comma-separated string specifying button labels. _(String)_ (Optional, defaults to `OK,Cancel`)
-    
+
 Description
 -----------
 
@@ -74,7 +74,7 @@ Quick Example
             'Restart,Exit'         // buttonLabels
         );
     }
-        
+
 Full Example
 ------------
 
@@ -86,16 +86,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Empty
         }
-    
+
         // process the confirmation dialog result
         function onConfirm(buttonIndex) {
             alert('You selected button ' + buttonIndex);
@@ -111,7 +111,7 @@ Full Example
                 'Restart,Exit'         // buttonLabels
             );
         }
-    
+
         </script>
       </head>
       <body>

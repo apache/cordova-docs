@@ -35,5 +35,5 @@ Constants
 Description
 -----------
 
-The `CompassError` object is returned to the user through the `compassError` callback function when an error occurs.
-
+When an error occurs, the `CompassError` object is passed as a
+parameter to a `compassError` callback function.

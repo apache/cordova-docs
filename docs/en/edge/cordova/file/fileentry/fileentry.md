@@ -32,8 +32,8 @@ Properties
 - __name__: The name of the `FileEntry`, excluding the path leading to it. _(DOMString)_
 - __fullPath__: The full absolute path from the root to the `FileEntry`. _(DOMString)_
 
-__NOTE:__ The following attributes are defined by the W3C
-specification, but are _not_ supported by Cordova:
+__NOTE:__ The following attribute is defined by the W3C specification,
+but is _not_ supported:
 
 - __filesystem__: The file system on which the `FileEntry` resides. _(FileSystem)_
 
@@ -117,34 +117,34 @@ __Quick Example__
 
     function setFileMetadata(localFileSystem, filePath, metadataKey, metadataValue)
     {
-	    var onSetMetadataWin = function() {
-	      console.log("success setting metadata")
-	    }
+            var onSetMetadataWin = function() {
+              console.log("success setting metadata")
+            }
         var onSetMetadataFail = function() {
-	      console.log("error setting metadata")
+              console.log("error setting metadata")
         }
 
-	    var onGetFileWin = function(parent) {
-	      var data = {};
-	      data[metadataKey] = metadataValue;
-	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
-	    }
-	    var onGetFileFail = function() {
-	      console.log("error getting file")
-	    }
+            var onGetFileWin = function(parent) {
+              var data = {};
+              data[metadataKey] = metadataValue;
+              parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+            }
+            var onGetFileFail = function() {
+              console.log("error getting file")
+            }
 
-	    var onFSWin = function(fileSystem) {
-	      fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
-	    }
+            var onFSWin = function(fileSystem) {
+              fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
+            }
 
-	    var onFSFail = function(evt) {
-		  console.log(evt.target.error.code);
-	    }
+            var onFSFail = function(evt) {
+                  console.log(evt.target.error.code);
+            }
 
-	    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+            window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
 
-	setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
+        setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
@@ -202,11 +202,11 @@ __Parameters:__
 __Quick Example__
 
     function win(entry) {
-	    console.log("New Path: " + entry.fullPath);
+        console.log("New Path: " + entry.fullPath);
     }
 
     function fail(error) {
-	    alert(error.code);
+        alert(error.code);
     }
 
     function copyFile(entry) {

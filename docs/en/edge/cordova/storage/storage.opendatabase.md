@@ -55,16 +55,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
-		
+
         </script>
       </head>
       <body>

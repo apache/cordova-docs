@@ -24,7 +24,7 @@ Parses a number formatted as a string according to the client's user
 preferences and returns the corresponding number.
 
     navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -59,10 +59,10 @@ When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to `number: 1234.56`:
 
     navigator.globalization.stringToNumber(
-      '1234.56',
-      function (number) {alert('number: ' + number.value + '\n');},
-      function () {alert('Error getting number\n');},
-      {type:'decimal'}
+        '1234.56',
+        function (number) {alert('number: ' + number.value + '\n');},
+        function () {alert('Error getting number\n');},
+        {type:'decimal'}
     );
 
 Full Example
@@ -71,10 +71,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>stringToNumber Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkNumber() {
           navigator.globalization.stringToNumber(
             '1234.56',
@@ -83,7 +83,7 @@ Full Example
             {type:'decimal'}
           );
         }
-                                        
+
         </script>
       </head>
       <body>

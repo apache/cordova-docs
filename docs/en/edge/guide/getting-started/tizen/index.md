@@ -82,7 +82,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     - A widget package should be generated in your project root directory (e.g: `cordova-basic.wgt`)
 
-    - __NOTE:__ The provided samples Tizen Cordova projects are not basic hello world applications. They contain a simple example usage of the Battery Cordova API.
+    - __NOTE:__ The sample Tizen Cordova projects provided go beyond basic "hello world" applications, and feature example usage of the Battery API.
 
 5A. Deploy to Simulator
 -----------------------

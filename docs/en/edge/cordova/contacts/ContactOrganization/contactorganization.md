@@ -51,15 +51,15 @@ Quick Example
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			for (var j=0; j<contacts[i].organizations.length; j++) {
-				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-						"Type: " + contacts[i].organizations[j].type + "\n" +
-						"Name: " + contacts[i].organizations[j].name + "\n" +
-						"Department: "  + contacts[i].organizations[j].department + "\n" +
-						"Title: "  + contacts[i].organizations[j].title);
-			}
-		}
+        for (var i = 0; i < contacts.length; i++) {
+            for (var j = 0; j < contacts[i].organizations.length; j++) {
+                alert("Pref: "      + contacts[i].organizations[j].pref       + "\n" +
+                    "Type: "        + contacts[i].organizations[j].type       + "\n" +
+                    "Name: "        + contacts[i].organizations[j].name       + "\n" +
+                    "Department: "  + contacts[i].organizations[j].department + "\n" +
+                    "Title: "       + contacts[i].organizations[j].title);
+            }
+        }
     };
 
     function onError(contactError) {
@@ -67,8 +67,8 @@ Quick Example
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","organizations"];
+    options.filter = "";
+    filter = ["displayName", "organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -82,33 +82,33 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","organizations"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","organizations"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				for (var j=0; j<contacts[i].organizations.length; j++) {
-					alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-							"Type: " + contacts[i].organizations[j].type + "\n" +
-							"Name: " + contacts[i].organizations[j].name + "\n" +
-							"Department: "  + contacts[i].organizations[j].department + "\n" +
-							"Title: "  + contacts[i].organizations[j].title);
-				}
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i = 0; i < contacts.length; i++) {
+                for (var j = 0; j < contacts[i].organizations.length; j++) {
+                    alert("Pref: "     + contacts[i].organizations[j].pref       + "\n" +
+                        "Type: "       + contacts[i].organizations[j].type       + "\n" +
+                        "Name: "       + contacts[i].organizations[j].name       + "\n" +
+                        "Department: " + contacts[i].organizations[j].department + "\n" +
+                        "Title: "      + contacts[i].organizations[j].title);
+                }
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {
@@ -122,7 +122,7 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-	
+
 
 Android 2.X Quirks
 ------------------

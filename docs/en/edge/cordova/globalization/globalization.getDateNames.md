@@ -24,7 +24,7 @@ Returns an array of the names of the months or days of the week,
 depending on the client's user preferences and calendar.
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
-    
+
 Description
 -----------
 
@@ -61,13 +61,13 @@ a series of twelve popup dialogs, one per month, with text similar to
 `month: January`:
 
     navigator.globalization.getDateNames(
-      function (names) {
-        for (var i=0; i<names.value.length; i++) {
-          alert('month: ' + names.value[i] + '\n');
-        }
-      },
-      function () {alert('Error getting names\n');},
-      {type:'wide', item:'months'}
+        function (names) {
+            for (var i = 0; i < names.value.length; i++) {
+                alert('month: ' + names.value[i] + '\n');
+            }
+        },
+        function () { alert('Error getting names\n'); },
+        { type: 'wide', item: 'months' }
     );
 
 Full Example
@@ -76,10 +76,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getDateNames Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                  
+
         function checkDateNames() {
           navigator.globalization.getDateNames(
             function (names) {
@@ -91,7 +91,7 @@ Full Example
             {type:'wide', item:'months'}
           );
         }
-                                            
+
         </script>
       </head>
       <body>

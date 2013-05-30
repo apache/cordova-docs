@@ -59,7 +59,7 @@ written many times.  The `FileWriter` maintains the file's `position`
 and `length` attributes, which allow the app to `seek` and `write`
 anywhere in the file. By default, the `FileWriter` writes to the
 beginning of the file, overwriting existing data. Set the optional
-`append` boolean to `true` in the `FileWriter`'s constructor to 
+`append` boolean to `true` in the `FileWriter`'s constructor to
 write to the end of the file.
 
 Supported Platforms
@@ -74,78 +74,78 @@ Supported Platforms
 Seek Quick Example
 ------------------------------
 
-	function win(writer) {
-		// fast forwards file pointer to end of file
-		writer.seek(writer.length);	
-	};
+    function win(writer) {
+        // fast forwards file pointer to end of file
+        writer.seek(writer.length);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
 Truncate Quick Example
 --------------------------
 
-	function win(writer) {
-		writer.truncate(10);	
-	};
+    function win(writer) {
+        writer.truncate(10);
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
 Write Quick Example
--------------------	
+-------------------
 
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
+    function win(writer) {
+        writer.onwrite = function(evt) {
+            console.log("write success");
         };
-		writer.write("some sample text");
-	};
+        writer.write("some sample text");
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
 Append Quick Example
---------------------	
+--------------------
 
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
-        };
-        writer.seek(writer.length);
-		writer.write("appended text");
-	};
+    function win(writer) {
+        writer.onwrite = function(evt) {
+        console.log("write success");
+    };
+    writer.seek(writer.length);
+        writer.write("appended text");
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
-	
+
 Abort Quick Example
 -------------------
 
-	function win(writer) {
-		writer.onwrite = function(evt) {
-        	console.log("write success");
+    function win(writer) {
+        writer.onwrite = function(evt) {
+            console.log("write success");
         };
-		writer.write("some sample text");
-		writer.abort();
-	};
+        writer.write("some sample text");
+        writer.abort();
+    };
 
-	var fail = function(evt) {
-    	console.log(error.code);
-	};
-	
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
 Full Example
@@ -154,28 +154,28 @@ Full Example
     <html>
       <head>
         <title>FileWriter Example</title>
-    
+
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
-        // Wait for Cordova to load
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
-    
-        // Cordova is ready
+
+        // device APIs are available
         //
         function onDeviceReady() {
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         }
-    
+
         function gotFS(fileSystem) {
             fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
         }
-    
+
         function gotFileEntry(fileEntry) {
             fileEntry.createWriter(gotFileWriter, fail);
         }
-    
+
         function gotFileWriter(writer) {
             writer.onwriteend = function(evt) {
                 console.log("contents of file now 'some sample text'");
@@ -191,11 +191,11 @@ Full Example
             };
             writer.write("some sample text");
         }
-    
+
         function fail(error) {
             console.log(error.code);
         }
-    
+
         </script>
       </head>
       <body>

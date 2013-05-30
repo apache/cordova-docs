@@ -96,20 +96,20 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Throw an error if no update is received every 30 seconds
             var options = { timeout: 30000 };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
@@ -118,13 +118,13 @@ Full Example
                                 'Longitude: ' + position.coords.longitude     + '<br />' +
                                 '<hr />'      + element.innerHTML;
         }
-    
-	    // onError Callback receives a PositionError object
-	    //
-	    function onError(error) {
-	        alert('code: '    + error.code    + '\n' +
-	              'message: ' + error.message + '\n');
-	    }
+
+            // onError Callback receives a PositionError object
+            //
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' +
+                      'message: ' + error.message + '\n');
+            }
 
         </script>
       </head>

@@ -30,7 +30,7 @@ Details
 The event overrides the default end call behavior.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -53,22 +53,18 @@ Full Example
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Cordova End Call Button Example</title>
+        <title>End Call Button Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
             // Register the event listener

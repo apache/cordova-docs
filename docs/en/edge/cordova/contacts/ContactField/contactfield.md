@@ -45,10 +45,10 @@ In most instances, there are no pre-determined values for a
 number can specify __type__ values of _home_, _work_, _mobile_,
 _iPhone_, or any other value that is supported by a particular device
 platform's contact database.  However, for the `Contact` __photos__
-field, Cordova uses the __type__ field to indicate the format of the
-returned image.  Cordova returns a __type__ of __url__ when the
-__value__ attribute contains a URL to the photo image, or _base64_
-when the __value__ contains a base64-encoded image string.
+field, the __type__ field indicates the format of the returned image:
+__url__ when the __value__ attribute contains a URL to the photo
+image, or _base64_ when the __value__ contains a base64-encoded image
+string.
 
 Supported Platforms
 -------------------
@@ -63,18 +63,18 @@ Supported Platforms
 Quick Example
 -------------
 
-	// create a new contact
-	var contact = navigator.contacts.create();
-	
-	// store contact phone numbers in ContactField[]
-	var phoneNumbers = [];
-	phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-	phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-	phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
-	contact.phoneNumbers = phoneNumbers;
-	
-	// save the contact
-	contact.save();
+        // create a new contact
+        var contact = navigator.contacts.create();
+
+        // store contact phone numbers in ContactField[]
+        var phoneNumbers = [];
+        phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+        phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
+        phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+        contact.phoneNumbers = phoneNumbers;
+
+        // save the contact
+        contact.save();
 
 Full Example
 ------------
@@ -87,46 +87,47 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
+
         function onDeviceReady() {
-			// create a new contact
-			var contact = navigator.contacts.create();
+            // create a new contact
+            var contact = navigator.contacts.create();
 
-			// store contact phone numbers in ContactField[]
-			var phoneNumbers = [];
-			phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
-			phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
-			phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
-			contact.phoneNumbers = phoneNumbers;
+            // store contact phone numbers in ContactField[]
+            var phoneNumbers = [];
+            phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
+            phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
+            phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
+            contact.phoneNumbers = phoneNumbers;
 
-			// save the contact
-			contact.save();
+            // save the contact
+            contact.save();
 
-			// search contacts, returning display name and phone numbers
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","phoneNumbers"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            // search contacts, returning display name and phone numbers
+            var options = new ContactFindOptions();
+            options.filter = "";
+            filter = ["displayName", "phoneNumbers"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				// display phone numbers
-				for (var j=0; j<contacts[i].phoneNumbers.length; j++) {
-					alert("Type: " + contacts[i].phoneNumbers[j].type + "\n" +
-							"Value: "  + contacts[i].phoneNumbers[j].value + "\n" +
-							"Preferred: "  + contacts[i].phoneNumbers[j].pref);
-				}
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i = 0; i < contacts.length; i++) {
+                // display phone numbers
+                for (var j = 0; j < contacts[i].phoneNumbers.length; j++) {
+                    alert("Type: "      + contacts[i].phoneNumbers[j].type  + "\n" +
+                          "Value: "     + contacts[i].phoneNumbers[j].value + "\n" +
+                          "Preferred: " + contacts[i].phoneNumbers[j].pref);
+                }
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {

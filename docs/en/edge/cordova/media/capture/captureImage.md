@@ -23,8 +23,8 @@ capture.captureImage
 > Start the camera application and return information about captured image file(s).
 
     navigator.device.capture.captureImage(
-	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
-	);
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+    );
 
 Description
 -----------
@@ -99,13 +99,13 @@ Full Example
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	
+            }
         }
 
         // Called if something bad happens.
         //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
+            var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
         }
 
@@ -161,7 +161,7 @@ the WebView without launching any camera app. Here's how:
 
         var options = { destinationFilename: "images/cam01.jpg", highRes: false};
         navigator.capture.captureImage(success, fail, options);
-    
+
 4. Dismiss the camera preview as follows:
 
         navigator.camera.hidePreview("preview");

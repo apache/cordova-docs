@@ -32,9 +32,9 @@ Description
 -----------
 
 The `camera.getPicture` function opens the device's default camera
-application that allows the user to take a picture. This behavior
-occurs by default, when `Camera.sourceType` equals
-`Camera.PictureSourceType.CAMERA`.  Once the photo is taken, the
+application that allows users to snap pictures. This behavior occurs
+by default, when `Camera.sourceType` equals
+`Camera.PictureSourceType.CAMERA`.  Once the user snaps the photo, the
 camera application closes and the application is restored.
 
 If `Camera.sourceType` is `Camera.PictureSourceType.PHOTOLIBRARY` or
@@ -55,7 +55,7 @@ You can do whatever you want with the encoded image or URI, for
 example:
 
 - Render the image in an `<img>` tag, as in the example below
-- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
+- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc.)
 - Post the data to a remote server
 
 __NOTE:__ Photo resolution on newer devices is quite good. Photos
@@ -146,12 +146,12 @@ Full Example
 
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value
-        
-        // Wait for Cordova to connect with the device
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready",onDeviceReady,false);
-    
-        // Cordova is ready to be used!
+
+        // device APIs are available
         //
         function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;
@@ -163,15 +163,15 @@ Full Example
         function onPhotoDataSuccess(imageData) {
           // Uncomment to view the base64-encoded image data
           // console.log(imageData);
-      
+
           // Get image handle
           //
           var smallImage = document.getElementById('smallImage');
-      
+
           // Unhide image elements
           //
           smallImage.style.display = 'block';
-      
+
           // Show the captured photo
           // The inline CSS rules are used to resize the image
           //
@@ -183,15 +183,15 @@ Full Example
         function onPhotoURISuccess(imageURI) {
           // Uncomment to view the image file URI
           // console.log(imageURI);
-      
+
           // Get image handle
           //
           var largeImage = document.getElementById('largeImage');
-      
+
           // Unhide image elements
           //
           largeImage.style.display = 'block';
-      
+
           // Show the captured photo
           // The inline CSS rules are used to resize the image
           //
@@ -213,7 +213,7 @@ Full Example
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
             destinationType: destinationType.DATA_URL });
         }
-    
+
         // A button will call this function
         //
         function getPhoto(source) {

@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-         
+
            http://www.apache.org/licenses/LICENSE-2.0
-         
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -77,9 +77,9 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 22. Search for **Header Search Paths**. For that setting, add these three values below (with quotes):
 
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"
-        
+
         "$(OBJROOT)/UninstalledProducts/include"
-        
+
         "$(BUILT_PRODUCTS_DIR)"
 
     With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Reference Counting (ARC)**. You don't need to upgrade to **ARC** to use CordovaLib, but if you want to upgrade your project to use **ARC**, please use the Xcode migration wizard from the menu: **Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...**, **de-select libCordova.a**, then run the wizard to completion.

@@ -42,7 +42,7 @@ Permissions
 #### config.xml
 
     <plugin name="SplashScreen" value="CDVSplashScreen" />
-    
+
 Setup
 -----
 
@@ -54,7 +54,7 @@ Setup
    - large (hdpi): at least 640 &times; 480
    - medium (mdpi): at least 470 &times; 320
    - small (ldpi): at least 426 &times; 320
-   
+
    You should use a [9-patch image](https://developer.android.com/tools/help/draw9patch.html) for your splash screen.
 
 2. In the `onCreate` method of the class that extends `DroidGap`, add the following two lines:

@@ -49,72 +49,74 @@ Supported Platforms
 Quick Example
 -------------
 
-        // Audio player
-        //
-        var my_media = new Media(src, onSuccess, onError);
-		my_media.play();
-        // SeekTo to 10 seconds after 5 seconds
-        setTimeout(function() {
-            my_media.seekTo(10000);
-        }, 5000);
+    // Audio player
+    //
+    var my_media = new Media(src, onSuccess, onError);
+        my_media.play();
+    // SeekTo to 10 seconds after 5 seconds
+    setTimeout(function() {
+        my_media.seekTo(10000);
+    }, 5000);
 
 Full Example
 ------------
 
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd">
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+                              "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
             <title>Media Example</title>
-        
+
             <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
             <script type="text/javascript" charset="utf-8">
-        
-            // Wait for Cordova to load
+
+            // Wait for device API libraries to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-        
-            // Cordova is ready
+
+            // device APIs are available
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
-        
+
             // Audio player
             //
             var my_media = null;
             var mediaTimer = null;
-        
+
             // Play audio
             //
             function playAudio(src) {
                 // Create Media object from src
                 my_media = new Media(src, onSuccess, onError);
-        
+
                 // Play audio
                 my_media.play();
+
                 // Update media position every second
-        		mediaTimer = setInterval(function() {
-            		// get media position
-           			my_media.getCurrentPosition(
-                		// success callback
-                		function(position) {
-                    		if (position > -1) {
-                        		setAudioPosition(position + " sec");
-                    		}
-                		},
-                		// error callback
-                		function(e) {
-                    		console.log("Error getting pos=" + e);
-                		}
-            		);
-        		}, 1000);
-        		// SeekTo to 10 seconds after 5 seconds
-        		setTimeout(function() {
-            		my_media.seekTo(10000);
-           		}, 5000);
-     		}
-        
+                mediaTimer = setInterval(function() {
+                    // get media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition(position + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                        }
+                    );
+                }, 1000);
+
+                // SeekTo to 10 seconds after 5 seconds
+                setTimeout(function() {
+                    my_media.seekTo(10000);
+                }, 5000);
+            }
+
             // Stop audio
             //
             function stopAudio() {
@@ -124,26 +126,26 @@ Full Example
                 clearInterval(mediaTimer);
                 mediaTimer = null;
             }
-        
+
             // onSuccess Callback
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
-        
+
             // onError Callback
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
-        
+
             // Set audio position
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
-        
+
             </script>
           </head>
           <body>

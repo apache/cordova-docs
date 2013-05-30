@@ -38,7 +38,7 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
-    
+
 Quick Example
 -------------
 
@@ -51,11 +51,12 @@ Quick Example
             function() {
                 console.log("recordAudio():Audio Success");
             },
-            
+
             // error callback
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
-            });
+            }
+        );
 
         // Record audio
         mediaRec.startRecord();
@@ -77,7 +78,7 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -102,18 +103,18 @@ Full Example
             }, 1000);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             recordAudio();
         }
-    
+
         // onSuccess Callback
         //
         function onSuccess() {
             console.log("recordAudio():Audio Success");
         }
-    
+
         // onError Callback
         //
         function onError(error) {

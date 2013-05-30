@@ -50,7 +50,7 @@ __Parameters:__
 - __errorCallback__: A callback that executes if an error occurs when retrieving the directory listing. Invoked with a `FileError` object. _(Function)_
 
 __Quick Example__
-	
+
     function success(entries) {
         var i;
         for (i=0; i<entries.length; i++) {

@@ -32,8 +32,8 @@ Properties
 - __name__: The name of the `DirectoryEntry`, excluding the path leading to it. _(DOMString)_
 - __fullPath__: The full absolute path from the root to the `DirectoryEntry`. _(DOMString)_
 
-__NOTE:__ The following attributes are defined by the W3C
-specification, but are _not_ supported by Cordova:
+__NOTE:__ The following attribute is defined by the W3C specification,
+but is _not_ supported:
 
 - __filesystem__: The file system on which the `DirectoryEntry` resides. _(FileSystem)_
 
@@ -119,34 +119,34 @@ __Quick Example__
 
     function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
     {
-	    var onSetMetadataWin = function() {
-	      console.log("success setting metadata")
-	    }
+            var onSetMetadataWin = function() {
+              console.log("success setting metadata")
+            }
         var onSetMetadataFail = function() {
-	      console.log("error setting metadata")
+              console.log("error setting metadata")
         }
 
-	    var onGetDirectoryWin = function(parent) {
-	      var data = {};
-	      data[metadataKey] = metadataValue;
-	      parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
-	    }
-	    var onGetDirectoryFail = function() {
-	      console.log("error getting dir")
-	    }
+            var onGetDirectoryWin = function(parent) {
+              var data = {};
+              data[metadataKey] = metadataValue;
+              parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+            }
+            var onGetDirectoryFail = function() {
+              console.log("error getting dir")
+            }
 
-	    var onFSWin = function(fileSystem) {
-	      fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
-	    }
+            var onFSWin = function(fileSystem) {
+              fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
+            }
 
-	    var onFSFail = function(evt) {
-		  console.log(evt.target.error.code);
-	    }
+            var onFSFail = function(evt) {
+                  console.log(evt.target.error.code);
+            }
 
-	    window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+            window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
 
-	setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
+        setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
 
 moveTo
 ------
@@ -178,7 +178,7 @@ __Quick Example__
         alert(error.code);
     }
 
-	function moveDir(entry) {
+        function moveDir(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
@@ -207,15 +207,15 @@ __Parameters:__
 
 __Quick Example__
 
-	function win(entry) {
-		console.log("New Path: " + entry.fullPath);
-	}
+        function win(entry) {
+            console.log("New Path: " + entry.fullPath);
+        }
 
-	function fail(error) {
-		alert(error.code);
-	}
+        function fail(error) {
+            alert(error.code);
+        }
 
-	function copyDir(entry) {
+        function copyDir(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
@@ -282,8 +282,8 @@ __Quick Example__
         alert('Failed to get parent directory: ' + error.code);
     }
 
-	// Get the parent DirectoryEntry
-	entry.getParent(success, fail);
+        // Get the parent DirectoryEntry
+        entry.getParent(success, fail);
 
 createReader
 ------------

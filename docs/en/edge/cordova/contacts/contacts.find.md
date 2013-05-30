@@ -76,10 +76,10 @@ Quick Example
     };
 
     // find all contacts with 'Bob' in any name field
-    var options = new ContactFindOptions();
-	options.filter="Bob";
-	options.multiple=true;
-	var fields = ["displayName", "name"];
+    var options      = new ContactFindOptions();
+    options.filter   = "Bob";
+    options.multiple = true;
+    var fields       = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
 Full Example
@@ -87,45 +87,42 @@ Full Example
 
     <!DOCTYPE html>
     <html>
-      <head>
-        <title>Contact Example</title>
+        <head>
+            <title>Contact Example</title>
+            <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
+            <script type="text/javascript" charset="utf-8">
 
-        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
-        <script type="text/javascript" charset="utf-8">
+                // Wait for device API libraries to load
+                document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Wait for Cordova to load
-        //
-        document.addEventListener("deviceready", onDeviceReady, false);
+                // device APIs are available
 
-        // Cordova is ready
-        //
-        function onDeviceReady() {
-		    // find all contacts with 'Bob' in any name field
-		    var options = new ContactFindOptions();
-			options.filter="Bob";
-			var fields = ["displayName", "name"];
-		    navigator.contacts.find(fields, onSuccess, onError, options);
-        }
-    
-        // onSuccess: Get a snapshot of the current contacts
-        //
-        function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				console.log("Display Name = " + contacts[i].displayName);
-			}
-        }
-    
-        // onError: Failed to get the contacts
-        //
-        function onError(contactError) {
-            alert('onError!');
-        }
+                function onDeviceReady() {
+                    // find all contacts with 'Bob' in any name field
+                    var options = new ContactFindOptions();
+                    options.filter = "Bob";
+                    var fields = ["displayName", "name"];
+                    navigator.contacts.find(fields, onSuccess, onError, options);
+                }
 
-        </script>
-      </head>
-      <body>
-        <h1>Example</h1>
-        <p>Find Contacts</p>
-      </body>
+                // onSuccess: Get a snapshot of the current contacts
+
+                function onSuccess(contacts) {
+                    for (var i = 0; i < contacts.length; i++) {
+                        console.log("Display Name = " + contacts[i].displayName);
+                    }
+                }
+
+                // onError: Failed to get the contacts
+
+                function onError(contactError) {
+                    alert('onError!');
+                }
+            </script>
+        </head>
+
+        <body>
+            <h1>Example</h1>
+            <p>Find Contacts</p>
+        </body>
     </html>
-
