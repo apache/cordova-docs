@@ -28,7 +28,7 @@ Requirements
 Cordova for BlackBerry has the following software requirements:
 
 -   Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
--   node.js. [Download node.js now](http://nodejs.org/)
+-   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
 -   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
 
 Setting up your signing keys
@@ -63,13 +63,14 @@ A target refers to a BlackBerry device or simulator that you will use to test yo
 To add a target, on the command line, type the following command:
 
 ```
-<path-to-project>/cordova/target  add  <name>  <ip-address>  <device | simulator>  [-p | --password <password>]  [--pin <device-pin>]
+<path-to-project>/cordova/target  add  <name>  <ip-address>  [-t <device | simulator>]  [-p | --password <password>]  [--pin <device-pin>]
 ```
 
 where
 
 -   `<name>`  specifies a unique name for the target.
 -   `<ip-address>`  specifies the ip address of the BlackBerry device or simulator.
+-   `-t <device | simulator>` specifies the target type. If not provided, the default value is device.
 -   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
@@ -139,16 +140,18 @@ Deploying an app
 
 You can test your app using either a BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to.
 
-The run script will deploy the most recent build of your app, which may or may not be signed. If you intend to deploy an app to a physical device for testing and you most recently built your app in debug mode, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the build script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator, even if that app is unsigned.
+The run script will first build  your app. If you intend to deploy an app to a physical device for testing, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the run script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator, even if that app is unsigned.
 
 To deploy your app to a device or simulator, on a command line type the following command:
 
 ```
-<path-to-project>/cordova/run <target>
+<path-to-project>/cordova/run <target> [--no-build]
 ```
 
 where
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
+
+-   `-no--build` will use the most recently built version of the application rather than re-building. This is useful to test an application in release mode.
 
 Adding and managing plugins
 ---------------------------
