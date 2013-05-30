@@ -23,6 +23,9 @@ Upgrading Cordova Android
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
+## Upgrade to 2.8.0 from 2.7.0 ##
+1. Run bin/update <project> with the project path listed in the Cordova Source directory
+
 ## Upgrade to 2.7.0 from 2.6.0 ##
 1. Run bin/update <project> with the project path listed in the Cordova Source directory
 
