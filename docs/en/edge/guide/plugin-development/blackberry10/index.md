@@ -27,19 +27,72 @@ This is a continuation of the Plugin Development Guide for Cordova. Once you hav
             }, "Echo", "echo", [str]);
         };
 
-A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a plugin.xml file.
+A native BlackBerry WebWorks plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a plugin.xml file.
 
+## Architecture of the plugin ##
+
+You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we show a typical structure that you can follow:
+
+***your_project_folder*** (>plugin.xml)
+
+- **www** (>client.js)
+- **src**
+  - **BlackBerry10** (>index.js, **native** >*.cpp, *.hpp)
+  - **device** (>*biary file* *.so)
+  - **simulator** (>*binary file* *.so)
+
+(The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. File names are preceded by the '>' sign.)
+
+## Contents of the plugin.xml file##
+The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:
+
+    <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="org.apache.cordova.blackberry.echo"
+        version="1.0.0">
+        <js-module src="www/client.js">
+            <merges target="navigator" />
+        </js-module>
+        <platform name="blackberry10">
+            <source-file src="src/blackberry10/index.js" />
+            <lib-file src="src/blackberry10/native/device/libecho.so" arch="device" />
+            <lib-file src="src/blackberry10/native/simulator/libecho.so" arch="simulator" />
+            <config-file target="www/config.xml" parent="/widget">
+                <feature name="org.apache.cordova.blackberry.echo" value="org.apache.cordova.blackberry.echo" />
+            </config-file>
+        </platform>
+    </plugin>
 
 ## Creating the native part of your plugin ##
-
-To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select File > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
-
-The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.
+The native portion of your plugin must contain the following C++ files:
 
 - ***name*_js.hpp** - C++ header for the JNEXT code.
 - ***name*_js.cpp** - C++ code for JNEXT.
 
-The native interface for the JNEXT extension can be viewed in the plugin header file located in the public folder of your project. It also contains constants and utility functions that can be used in your native code. Your plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:
+The BlackBerry 10 Native SDK comes with a template for creating a BlackBerry WebWorks native extension. You can use this template to create your native extension project:
+
+1. On the **File menu**, click **New** > **BlackBerry Project**.
+2. On the **New BlackBerry Project** screen, in the left pane, click **Native Extension**.
+![BlackBerry 10 Native SDK template for WebWorks native extension.](img/guide/plugin-development/blackberry10/WebWorks-native-extension-project.png)
+3. In the right pane, click **BlackBerry WebWorks**.
+4. Click **Next**.
+5. In the **Project name** field, type a name for the project (for example, **echo**).
+6. Click **Finish**.
+
+Inside your Workbench, the project appears in the Project Explorer view and the memory_js.cpp file opens up in an editor. In the Project Explorer view you can rename memory_js.cpp and memory_js.hpp as per your project name. You can update the code or write new code using the editor.
+
+To follow the content in this guide you can use the Import wizard in the IDE to import the Echo plugin project into your Workbench. Also, instead of using a template, you can use the Echo plugin project as a starting point for your own plugin:
+
+1. On the **File menu*, click **Import**.
+2. On the **Import ** screen, click **General **> **Existing Projects into Workspace**.
+3. Click **Next**.
+4. Select the **Select root directory** option and click **Browse**.
+![Importing BlackBerry WebWorks native extension plugin project.](img/guide/plugin-development/blackberry10/WebWorks-import-echo-native-plugin-project.png)
+5. In the **Browse For Folder** screen, browse to and click on the folder containing the Echo plugin project.
+6. Click **Finish**.
+
+Inside your Workbench, the project appears in the Project Explorer view.
+
+The native interface for the JNEXT extension can be viewed in the plugin header file located in the public folder of your project. It also contains constants and utility functions that can be used in your native code. Your Cordova-BlackBerry plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:
 
     class JSExt
     {
@@ -117,9 +170,9 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
 
 The JavaScript portion of your plugin must contain the following files:
 
-- **client.js** – This is considered the client side and contains the API that a Cordova application can call. The API in client.js calls makes calls to index.js. The API in client.js also connects callback functions to the events that fire the callbacks.
+- **client.js** – This is considered the client side and contains the API that a BlackBerry WebWorks application can call. The API in client.js calls makes calls to index.js. The API in client.js also connects callback functions to the events that fire the callbacks.
 
-- **index.js** – Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
+- **index.js** – This is considered the server side. Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
 
 The client and server side (client.js and index.js) interacts through the `Cordova.exec `function. So, in client.js you invoke the exec function and provide the necessary arguments. In the Echo plugin, we have the following in the client.js file:
 
@@ -156,36 +209,3 @@ You can now send the data back. Let’s put it all together:
             result.ok(response, false);
         }
     };
-
-## Architecture of the plugin ##
-
-You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files (.so) within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we show a typical structure that you can follow:
-
-***your_project_folder*** (>plugin.xml)
-
-- **www** (>client.js)
-- **src**
-  - **blackberry10** (>index.js, **native** >*.cpp, *.hpp)
-  - **device** (>*biary file* *.so)
-  - **simulator** (>*binary file* *.so)
-
-(The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. File names are preceded by the '>' sign.)
-
-## Contents of the plugin.xml file##
-The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:
-
-    <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="org.apache.cordova.blackberry.echo"
-        version="1.0.0">
-        <js-module src="www/client.js">
-            <merges target="navigator" />
-        </js-module>
-        <platform name="blackberry10">
-            <source-file src="src/blackberry10/index.js" />
-            <lib-file src="src/blackberry10/native/device/libecho.so" arch="device" />
-            <lib-file src="src/blackberry10/native/simulator/libecho.so" arch="simulator" />
-            <config-file target="www/config.xml" parent="/widget">
-                <feature name="org.apache.cordova.blackberry.echo" value="org.apache.cordova.blackberry.echo" />
-            </config-file>
-        </platform>
-    </plugin>
