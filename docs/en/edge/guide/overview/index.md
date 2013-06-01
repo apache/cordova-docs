@@ -18,19 +18,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-Overview
-========
+# Overview
 
 Cordova is an open-source mobile development framework. It allows you
 to use standard web technologies such as HTML5, CSS3, and JavaScript
 for cross-platform development, avoiding each mobile platforms' native
-development language.  Applications execute as a WebView within a
-native wrapper, and rely on standards-compliant Cordova API bindings
-to access each device's sensors, data, and network status.
+development language.  Applications execute within wrappers targeted
+to each platform, and rely on standards-compliant API bindings to
+access each device's sensors, data, and network status.
+
+<!-- START PG -->
 
 PhoneGap is a product offering based on the Cordova framework.  Its
 PhoneGap Build service provides an additional way to build
-applications remotely without having to run local tools.
+applications remotely without having to run local tools.  See the
+[PhoneGap Build documentation](http://docs.phonegap.com/en/edge/phonegap-build.md.html)
+for details.
+
+<!-- END PG -->
 
 Use Cordova if you are:
 
@@ -46,30 +51,76 @@ Use Cordova if you are:
   device-level APIs, or if you want to develop a plug-in interface
   between native and WebView components.
 
-There are several different ways to use Cordova, depending on the kind
-of tools and workflow you prefer. They all allow you to create new
-projects, then rebuild them and preview them within an emulator:
+## Basic Components
 
-* a single `cordova` command that allows you to specify all the mobile
-  platforms you want to cover. (See Cordova Command Primer for details.)
+Cordova applications rely on a common `config.xml` file that provides
+information about the app and specifies parameters affecting how it
+works, such as whether it responds to orientation shifts. This file
+adheres to the W3C's
+[Packaged Web App](http://www.w3.org/TR/widgets/),
+or _widget_, specification.
 
-* a _PhoneGap Build_ service that allows you to compile cross-platform
-  projects remotely. (See PhoneGap Build Primer for details.)
+The application itself is implemented as a web page, named
+_index.html_ by default, that references whatever CSS, JavaScript,
+images, media files, or other resources are necessary for it to run.
+The app appears as a _WebView_ within the native application wrapper,
+which you distribute to app stores.  For the web app to interact with
+various device features the way native apps do, it must also reference
+a `cordova.js` file, which provides API bindings. (See the API
+Reference for an overview, and the API and Configuration Guide for
+examples of how they're useful.)
 
-* as plug-ins to traditional IDE development environments. (See
-  Getting Started Guides for details.)
+<!-- TEST: is cordova.js 100% necessary even for minimal hello-world apps? -->
 
-The `cordova` command still requires you to install local IDEs.  The
-cross-platform command-line tools and PhoneGap Build service offer the
-quickest way overall to deploy a project, but IDEs may offer more
+<!-- QUERY: are any significant platform features unavailable in cordova? -->
+
+## Development Options
+
+The easiest way to set up these components is to install the `cordova`
+command-line utility. Use it to create a new project and specify the
+mobile platforms you want to support. It sets up a set of default
+application files that you can modify as needed. Use it also to
+rebuild the app and test it in various platforms' device emulators.
+(See The Cordova Command-line Interface for details. The command-line
+interface requires you install SDKs for each targeted platform.  See
+Installing Platform SDKs for details.)
+
+At any point in the development cycle, you can also rely on
+platform-specific SDK tools, which may provide a richer set of
+options.  (See Platform Development Guide for details about each
+platform's SDK tool set.) An SDK environment is more appropriate if
+you want implement a hybrid app that mixes web-based and native
+application components.  (See Extended Hybrid Applications for more
+information.)  You may use the command-line utility to initially
+generate the app, or iteratively thereafter to feed updated code to
+SDK tools.  You may also build the app's configuration file yourself.
+(See Configuration Reference for details.)
+
+<!-- START PG -->
+
+As a third option, you may use the PhoneGap Build service to compile
+projects remotely. This approach means maintaining source code, but
+with no need to install SDK tools or command-line utilities.  As part
+of this development cycle, you have the option to upload the source
+files, or link to a github repository.  (See PhoneGap Build for
+details.)
+
+<!-- END PG -->
+
+The cross-platform command-line tools and PhoneGap Build service offer
+the quickest way overall to deploy a project, but IDEs may offer more
 control to target applications for each platform.
+
+To build projects on some platforms, you may need to apply digital
+signatures. See Distributing Applications for information on how to
+upload your app to various store portals.
 
 ## Platform Support
 
 The following shows the set of development tools and device APIs
 available for each mobile platform:
 
-<!-- edit & copy into index.md file -->
+<!-- START HTML -->
 
 <style>
 .compat .n { background-color: pink; }
@@ -136,23 +187,23 @@ available for each mobile platform:
 
     <tr>
         <th><a href="guide_getting-started_index.md.html">IDE platform support</a></th>
-        <td data-col="android"    class="y"><a href="guide_getting-started_android_index.md.html">         details</a></td>
-        <td data-col="blackberry" class="y"><a href="guide_getting-started_blackberry_index.md.html">      details</a></td>
-        <td data-col="ios"        class="y"><a href="guide_getting-started_ios_index.md.html">             details</a></td>
-        <td data-col="symbian"    class="y"><a href="guide_getting-started_symbian_index.md.html">         details</a></td>
-        <td data-col="webos"      class="y"><a href="guide_getting-started_webos_index.md.html">           details</a></td>
-        <td data-col="winphone7"  class="y"><a href="guide_getting-started_windows-phone-7_index.md.html"> details</a></td>
-        <td data-col="winphone8"  class="y"><a href="guide_getting-started_windows-phone-8_index.md.html"> details</a></td>
-        <td data-col="win8"       class="y"><a href="guide_getting-started_windows-8_index.md.html">       details</a></td>
-        <td data-col="bada"       class="y"><a href="guide_getting-started_bada_index.md.html">            details</a></td>
-        <td data-col="tizen"      class="y"><a href="guide_getting-started_tizen_index.md.html">           details</a></td>
+        <td data-col="android"    class="y"><a href="guide_getting-started_android_index.md.html">         </a></td>
+        <td data-col="blackberry" class="y"><a href="guide_getting-started_blackberry_index.md.html">      </a></td>
+        <td data-col="ios"        class="y"><a href="guide_getting-started_ios_index.md.html">             </a></td>
+        <td data-col="symbian"    class="y"><a href="guide_getting-started_symbian_index.md.html">         </a></td>
+        <td data-col="webos"      class="y"><a href="guide_getting-started_webos_index.md.html">           </a></td>
+        <td data-col="winphone7"  class="y"><a href="guide_getting-started_windows-phone-7_index.md.html"> </a></td>
+        <td data-col="winphone8"  class="y"><a href="guide_getting-started_windows-phone-8_index.md.html"> </a></td>
+        <td data-col="win8"       class="y"><a href="guide_getting-started_windows-8_index.md.html">       </a></td>
+        <td data-col="bada"       class="y"><a href="guide_getting-started_bada_index.md.html">            </a></td>
+        <td data-col="tizen"      class="y"><a href="guide_getting-started_tizen_index.md.html">           </a></td>
     </tr>
 
     <tr>
         <th><a href="#">Embedded<br/>WebView</a></th>
-        <td data-col="android"    class="y"><a href="guide_cordova-webview_android.md.html">details</a></td>
+        <td data-col="android"    class="y"><a href="guide_cordova-webview_android.md.html"></a></td>
         <td data-col="blackberry" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_cordova-webview_ios.md.html">details</a></td>
+        <td data-col="ios"        class="y"><a href="guide_cordova-webview_ios.md.html"></a></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="n"></td>
@@ -164,15 +215,15 @@ available for each mobile platform:
 
     <tr>
         <th><a href="guide_plugin-development_index.md.html">Plug-in<br/>Interface</a></th>
-        <td data-col="android"    class="y"><a href="guide_plugin-development_android_index.md.html">details</a></td>
-        <td data-col="blackberry" class="y"><a href="guide_plugin-development_blackberry_index.md.html">details</a></td>
-        <td data-col="ios"        class="y"><a href="guide_plugin-development_ios_index.md.html">details</a></td>
+        <td data-col="android"    class="y"><a href="guide_plugin-development_android_index.md.html"></a></td>
+        <td data-col="blackberry" class="y"><a href="guide_plugin-development_blackberry_index.md.html"></a></td>
+        <td data-col="ios"        class="y"><a href="guide_plugin-development_ios_index.md.html"></a></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
-        <td data-col="winphone7"  class="y"><a href="guide_plugin-development_windows-phone_index.md.html">details</a></td>
+        <td data-col="winphone7"  class="y"><a href="guide_plugin-development_windows-phone_index.md.html"></a></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="y"><a href="guide_plugin-development_bada_index.md.html">details</a></td>
+        <td data-col="bada"       class="y"><a href="guide_plugin-development_bada_index.md.html"></a></td>
         <td data-col="tizen"      class="n"></td>
     </tr>
 
@@ -407,3 +458,5 @@ available for each mobile platform:
 
 </tbody>
 </table>
+
+<!-- END HTML -->
