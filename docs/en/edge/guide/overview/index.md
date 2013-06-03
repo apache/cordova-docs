@@ -27,7 +27,7 @@ development language.  Applications execute within wrappers targeted
 to each platform, and rely on standards-compliant API bindings to
 access each device's sensors, data, and network status.
 
-<!-- START PG -->
+<!-- START PG
 
 PhoneGap is a product offering based on the Cordova framework.  Its
 PhoneGap Build service provides an additional way to build
@@ -35,7 +35,7 @@ applications remotely without having to run local tools.  See the
 [PhoneGap Build documentation](http://docs.phonegap.com/en/edge/phonegap-build.md.html)
 for details.
 
-<!-- END PG -->
+END PG -->
 
 Use Cordova if you are:
 
@@ -96,7 +96,7 @@ generate the app, or iteratively thereafter to feed updated code to
 SDK tools.  You may also build the app's configuration file yourself.
 (See Configuration Reference for details.)
 
-<!-- START PG -->
+<!-- START PG
 
 As a third option, you may use the PhoneGap Build service to compile
 projects remotely. This approach means maintaining source code, but
@@ -105,7 +105,7 @@ of this development cycle, you have the option to upload the source
 files, or link to a github repository.  (See PhoneGap Build for
 details.)
 
-<!-- END PG -->
+END PG -->
 
 The cross-platform command-line tools and PhoneGap Build service offer
 the quickest way overall to deploy a project, but IDEs may offer more
@@ -133,9 +133,10 @@ available for each mobile platform:
 .compat .y:before { content: "\2714"; margin-right: 6px; }
 .compat tr> th:first-of-type { text-align: right }
 .compat td , .compat th[colspan]:first-of-type { text-align: center } 
-</style>
 
-<!-- each cell is classed one of: y=yes; n=no; p=partial; u=unknown -->
+/* each cell is classed one of: y=yes; n=no; p=partial; u=unknown */
+
+</style>
 
 <table class="compat">
 
