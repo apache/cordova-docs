@@ -56,7 +56,7 @@ To install the `cordova` command-line tool, follow these steps:
 1. Install the `cordova` utility. The `sudo` command may be necessary
    to install development utilities in otherwise restricted directories:
 
-    $ sudo npm install -g cordova
+        $ sudo npm install -g cordova
 
    The installation log may produce errors for any uninstalled
    platform SDKs.  Following installation, you should be able to run
@@ -65,27 +65,27 @@ To install the `cordova` command-line tool, follow these steps:
 1. To ensure permissions are correct, run this command, changing
    _LOGIN_ to match your account name:
 
-    $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
+        $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
 
 After installing the `cordova` utility, you can always update it to
 the latest version by running the following command:
 
-    $ sudo npm update -g cordova
+        $ sudo npm update -g cordova
 
 Use this syntax to install a specific version:
 
-    $ sudo npm install -g cordova@2.7.0
+        $ sudo npm install -g cordova@2.7.0
 
 Run the `info` command for a listing of available version numbers:
 
-    $ npm info cordova
+        $ npm info cordova
 
 ## Create an App
 
 Go to the directory where you maintain your source code, and run a
 command such as the following:
 
-    $ cordova create HelloWorld com.example.hello "Hello World"
+        $ cordova create HelloWorld com.example.hello "Hello World"
 
 The first argument specifies a _HelloWorld_ directory that is
 generated for your project. Its `www` subdirectory houses your
@@ -103,34 +103,34 @@ both of these values later in the `config.xml` file.
 All subsequent commands need to be run within the project's directory,
 or any subdirectories within its scope:
 
-    $ cd HelloWorld
+        $ cd HelloWorld
 
 Before you can build the project, you need to specify a set of target
 platforms. Your ability to run these commands depends on whether your
 machine supports each SDK.  Run any of these from a Mac:
 
-    $ cordova platform add ios
-    $ cordova platform add android
-    $ cordova platform add blackberry
+        $ cordova platform add ios
+        $ cordova platform add android
+        $ cordova platform add blackberry
 
 Run any of these from a Windows machine:
 
-    $ cordova platform add wp7
-    $ cordova platform add wp8
-    $ cordova platform add android
-    $ cordova platform add blackberry
+        $ cordova platform add wp7
+        $ cordova platform add wp8
+        $ cordova platform add android
+        $ cordova platform add blackberry
 
 (The _wp_ options refer to Windows Phone versions 7 and 8.)
 
 Run this to check your current set of platforms:
 
-    $ cordova platforms ls
+        $ cordova platforms ls
 
 (Note the `platform` and `platforms` commands are synonymous.)
 
 Run the following to remove a platform:
 
-    $ cordova platform remove blackberry
+        $ cordova platform remove blackberry
 
 When you run commands to add or remove platforms, it's reflected in
 the contents of the project's _platforms_ directory, where each
@@ -159,19 +159,19 @@ details.)
 
 Run the following command to iteratively build the project:
 
-    $ cordova build
+        $ cordova build
 
 This generates platform-specific code within the project's `platforms`
 subdirectory.  You can optionally limit the scope of each build to
 specific platforms:
 
-    $ cordova build ios
+        $ cordova build ios
 
 The `cordova build` command is a shorthand for the following, which in
 this example is also targeted to a single platform:
 
-    $ cordova prepare ios
-    $ cordova compile ios
+        $ cordova prepare ios
+        $ cordova compile ios
 
 In this case, once you run `prepare`, you can use Apple's Xcode SDK as
 an alternative to modify and compile the platform-specific code that
@@ -188,12 +188,12 @@ Since the application uses web-based components, you can often use a
 standard web browser to preview them directly from the source _www_
 directory.  For example, run this command to preview the application:
 
-    $ cordova serve ios
+        $ cordova serve ios
 
 By default, the application is available at `http://localhost:8000/`,
 which you can modify with your own optional port number:
 
-    $ cordova serve ios 2013
+        $ cordova serve ios 2013
 
 Either way, you can view the application within a browser window:
 
@@ -205,7 +205,7 @@ lacks any context, since there is no mobile device to connect to.
 Unlike `serve`, running the alternate `ripple` command displays the
 application within the device's larger context:
 
-    $ cordova ripple ios
+        $ cordova ripple ios
 
 ![](./scr_ripple.png)
 

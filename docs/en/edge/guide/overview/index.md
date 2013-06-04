@@ -74,7 +74,7 @@ examples of how they're useful.)
 
 <!-- QUERY: are any significant platform features unavailable in cordova? -->
 
-## Development Options
+## Development Paths
 
 The easiest way to set up these components is to install the `cordova`
 command-line utility. Use it to create a new project and specify the
