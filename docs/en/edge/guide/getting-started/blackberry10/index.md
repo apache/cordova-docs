@@ -46,8 +46,7 @@ Creating your project
 To create a new project, you use the `create` command to set up the folder structure for your app.
 
 1.  On the command line, navigate to the folder where you extracted Cordova.
-2.  Run `npm install`
-3.  Run the `create` command using the following syntax:
+2.  Run the `create` command using the following syntax:
     ```
 	bin/create <path-to-project>
 	```
