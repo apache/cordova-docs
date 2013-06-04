@@ -24,13 +24,37 @@ Upgrading Cordova Android
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
 ## Upgrade to 2.8.0 from 2.7.0 ##
-1. Run bin/update <project> with the project path listed in the Cordova Source directory
+1. Remove cordova-2.7.0.jar from the libs directory in your project
+2. Add cordova-2.8.0.jar to the libs directory in your project
+3. If you are using Eclipse, please refresh your eclipse project and do a clean
+4. Copy the new cordova.js into your project
+5. Update your HTML to use the new cordova.js file
+6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Update framework/res/xml/config.xml to have similar settings as it did previously
+8. Copy files from bin/templates/cordova to the cordova directory in your project
 
 ## Upgrade to 2.7.0 from 2.6.0 ##
-1. Run bin/update <project> with the project path listed in the Cordova Source directory
+1. Remove cordova-2.6.0.jar from the libs directory in your project
+2. Add cordova-2.7.0.jar to the libs directory in your project
+3. If you are using Eclipse, please refresh your eclipse project and do a clean
+4. Copy the new cordova-2.7.0.js into your project
+5. Update your HTML to use the new cordova-2.7.0.js file
+6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Update framework/res/xml/config.xml to have similar settings as it did previously
+8. Copy files from bin/templates/cordova to the cordova directory in your project
+
 
 ## Upgrade to 2.6.0 from 2.5.0 ##
-1. Run bin/update <project> with the project path listed in the Cordova Source directory
+1. Remove cordova-2.5.0.jar from the libs directory in your project
+2. Add cordova-2.6.0.jar to the libs directory in your project
+3. If you are using Eclipse, please refresh your eclipse project and do a clean
+4. Copy the new cordova-2.6.0.js into your project
+5. Update your HTML to use the new cordova-2.6.0.js file
+6. Copy the res/xml/config.xml to be the same as the one found in framework/res/xml/config.xml
+7. Update framework/res/xml/config.xml to have similar settings as it did previously
+8. Copy files from bin/templates/cordova to the cordova directory in your project
+
+. Run bin/update <project> with the project path listed in the Cordova Source directory
 
 ## Upgrade to 2.5.0 from 2.4.0 ##
 
