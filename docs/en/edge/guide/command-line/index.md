@@ -34,12 +34,13 @@ Cordova projects.
 * [Android](#Command-Line%20Usage_android)
 * [BlackBerry](#Command-Line%20Usage_blackberry)
 * [BlackBerry 10](#Command-Line%20Usage_blackberry_10)
-* [Windows Phone 8](#Command-Line%20Usage_wp8)
+* [Windows Phone](#Command-Line%20Usage_windows_phone)
+* [Windows 8](#Command-Line%20Usage_windows_8)
 
 ## Windows Phone
 
 The Windows Phone command line tools support creating, building and
-running new projects.
+running new projects.  Commands must be run from a cmd or powershell prompt.
 
 ### Create a project
 
@@ -83,7 +84,6 @@ By default the `run` command will look for a connected device, if no device is f
 ### Cleaning
 
     $ C:\path\to\my_new_cordova_project\cordova\clean
-
 
 ## iOS
 
@@ -384,4 +384,17 @@ The `target` command allows you to add and remove plugins
 ```
 <path-to-project>/cordova/plugin rm <name>
 ```
+
+## Windows 8
+
+The Windows 8 command line tools support creating new projects only.
+Commands must be run from a cmd or powershell prompt.
+
+### Create a project
+
+Run the `create` command with the following parameters:
+
+* Path to your new Cordova Windows 8 project
+* Package Name, following reverse-domain style convention ( this becomes the default Namespace )
+* Project name
 
