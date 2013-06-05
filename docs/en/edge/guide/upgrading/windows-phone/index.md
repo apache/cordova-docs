@@ -22,12 +22,22 @@ Upgrading Cordova Windows Phone
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova. This applies to both WP7 and WP8.
 
+## Upgrade to 2.8.0 from 2.7.0 ##
+
+### In Visual Studio's Solution Explorer window:
+1. Create a new Apache Cordova WP7 or WP8 2.8.0 Project
+2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new cordova.js file. ( note that there is no longer a version number in the name )
+4. Copy and overwrite any splash screen, or icon images.
+5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+6. Build and test.
+
 ## Upgrade to 2.7.0 from 2.6.0 ##
 
 ### In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.7.0 Project
 2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.67.0.js file.
+3. Update your HTML to use the new cordova-2.7.0.js file.
 4. Copy and overwrite any splash screen, or icon images.
 5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
