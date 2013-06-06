@@ -63,27 +63,48 @@ or _widget_, specification.
 The application itself is implemented as a web page, named
 _index.html_ by default, that references whatever CSS, JavaScript,
 images, media files, or other resources are necessary for it to run.
-The app appears as a _WebView_ within the native application wrapper,
+The app executes as a _WebView_ within the native application wrapper,
 which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings. (See the API
 Reference for an overview, and the API and Configuration Guide for
-examples of how they're useful.)
+examples of how to use them.)
 
-<!-- TEST: is cordova.js 100% necessary even for minimal hello-world apps? -->
+<!-- TEST: is cordova.js necessary even for minimal hello-world apps? -->
 
 <!-- QUERY: are any significant platform features unavailable in cordova? -->
 
+The Cordova-enabled WebView may provide the application with its
+entire user interface. It can also be a component within a larger,
+hybrid application that mixes the WebView with native application
+components.  Cordova provides a _plug-in_ interface for these
+components to communicate with each other.
+
 ## Development Paths
 
-The easiest way to set up these components is to install the `cordova`
-command-line utility. Use it to create a new project and specify the
-mobile platforms you want to support. It sets up a set of default
-application files that you can modify as needed. Use it also to
-rebuild the app and test it in various platforms' device emulators.
-(See The Cordova Command-line Interface for details. The command-line
-interface requires you install SDKs for each targeted platform.  See
-Installing Platform SDKs for details.)
+The easiest way to set up an application is to run the `cordova`
+command-line utility, also known as the _command-line interface_
+(CLI). (To install the CLI, see The Cordova Command-line Interface.)
+Depending on the set of platforms you wish to target, you can rely on
+the CLI for progressively greater shares of the development cycle:
+
+* In the most basic scenario, you can use the CLI simply to create a
+  new project that is populated with default configuration for you to
+  modify.
+
+* For many mobile platforms, you can also use the CLI to set up
+  additional project files required to compile within each SDK.  For
+  this to work, you must install each targeted platform's SDK. (See
+  Installing Platform SDKs for instructions.) As indicated in the
+  Platform Support table below, you may need to run the CLI on
+  different operating systems depending on the targeted platform.
+
+* For supporting platforms, the CLI can compile executible
+  applications and run them in an SDK- or browser-based device
+  emulator, depending on the device feature you want to test.  (See
+  API and Configuration Guide for details.)  For comprehensive
+  testing, you can also generate application files and install them
+  directly on a device.
 
 At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
@@ -99,17 +120,15 @@ SDK tools.  You may also build the app's configuration file yourself.
 <!-- START PG
 
 As a third option, you may use the PhoneGap Build service to compile
-projects remotely. This approach means maintaining source code, but
-with no need to install SDK tools or command-line utilities.  As part
-of this development cycle, you have the option to upload the source
-files, or link to a github repository.  (See PhoneGap Build for
-details.)
+projects remotely. This approach means there is no need to install SDK
+tools or command-line utilities.  As part of this development cycle,
+you have the option to upload an archive of your source files, or link
+to a github repository.  (See PhoneGap Build for details.)  The
+cross-platform command-line tools and PhoneGap Build service offer the
+quickest way overall to deploy a project, but IDEs may offer more
+control to target applications for each platform.
 
 END PG -->
-
-The cross-platform command-line tools and PhoneGap Build service offer
-the quickest way overall to deploy a project, but IDEs may offer more
-control to target applications for each platform.
 
 To build projects on some platforms, you may need to apply digital
 signatures. See Distributing Applications for information on how to
@@ -123,22 +142,23 @@ available for each mobile platform:
 <!-- START HTML -->
 
 <style>
-.compat .n { background-color: pink; }
-.compat .n:before { content: "\2718"; margin-right: 6px; }
-.compat .p { background-color: gold; }
-.compat .p:before { content: "(partial)"; margin-right: 6px; }
-.compat .u { background-color: #dddddd; }
-/* .compat .u:before { content: ""; margin-right: 6px; } */
-.compat .y { background-color: lightgreen; }
-.compat .y:before { content: "\2714"; margin-right: 6px; }
-.compat tr> th:first-of-type { text-align: right }
-.compat td , .compat th[colspan]:first-of-type { text-align: center } 
+
+.p { background-color: gold; }
+.p::before { content: "(partial)";  }
+.u { background-color: #dddddd; }
+/* .u::before { content: "";  } */
+.y { background-color: lightgreen; }
+.y::before { content: "\2714";     margin-right: 6px;  }
+tr> th:first-of-type { text-align: right }
+td , th[colspan]:first-of-type { text-align: center } 
+.n { background-color: pink; }
+.n::before { content: "\2718"; margin-right: 6px;  }
 
 /* each cell is classed one of: y=yes; n=no; p=partial; u=unknown */
 
 </style>
 
-<table class="compat">
+<table class="compat" width="100%">
 
 <thead>
     <tr>
@@ -159,14 +179,14 @@ available for each mobile platform:
 
 <tbody>
     <tr>
-        <th><a href="#">cordova<br/>Command<br/>Interface</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry" class="y"></td>
-        <td data-col="ios"        class="y"></td>
+        <th><a href="#">cordova<br/>CLI</a></th>
+        <td data-col="android"    class="y">Mac, Windows, Linux</td>
+        <td data-col="blackberry" class="y">Mac, Windows</td>
+        <td data-col="ios"        class="y">Mac</td>
         <td data-col="symbian"    class="u"></td>
         <td data-col="webos"      class="u"></td>
-        <td data-col="winphone7"  class="u"></td>
-        <td data-col="winphone8"  class="u"></td>
+        <td data-col="winphone7"  class="y">Windows</td>
+        <td data-col="winphone8"  class="y">Windows</td>
         <td data-col="win8"       class="u"></td>
         <td data-col="bada"       class="u"></td>
         <td data-col="tizen"      class="u"></td>
