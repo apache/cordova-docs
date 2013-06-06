@@ -37,9 +37,9 @@ To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
 platform's SDK. The CLI supports the following combinations:
 
-* iOS (Mac)
-* Android (Mac, Linux)
-* Blackberry (Mac, Windows)
+* iOS             (Mac)
+* Android         (Mac, Linux)
+* Blackberry      (Mac, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
 
@@ -113,14 +113,13 @@ machine supports each SDK.  Run any of these from a Mac:
         $ cordova platform add android
         $ cordova platform add blackberry
 
-Run any of these from a Windows machine:
+Run any of these from a Windows machine, where _wp_ refers to
+different versions of the Windows Phone operating system:
 
         $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add android
         $ cordova platform add blackberry
-
-(The _wp_ options refer to Windows Phone versions 7 and 8.)
 
 Run this to check your current set of platforms:
 
