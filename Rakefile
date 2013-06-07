@@ -17,13 +17,13 @@
 
 require 'rubygems'
 require 'rake'
-require 'rspec/core/rake_task'
+require 'spec/rake/spectask'
 require 'fileutils'
 
 task :default => :spec
 
 desc "Run specs"
-RSpec::Core::RakeTask.new('spec') do |t|
+Spec::Rake::SpecTask.new('spec') do |t|
   t.spec_opts  = %w(-fs --color)
   t.warning    = true
   t.spec_files = FileList['spec/**/*.rb']
