@@ -107,7 +107,8 @@ or any subdirectories within its scope:
 
 Before you can build the project, you need to specify a set of target
 platforms. Your ability to run these commands depends on whether your
-machine supports each SDK.  Run any of these from a Mac:
+machine supports each SDK, and whether you have installed each SDK.
+Run any of these from a Mac:
 
         $ cordova platform add ios
         $ cordova platform add android
@@ -176,10 +177,6 @@ In this case, once you run `prepare`, you can use Apple's Xcode SDK as
 an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' IDEs.
-
-<!-- Q: This implies forking the iOS project from others. Are there
-scenarios where you'd keep running `prepare`, then use Xcode to tweak
-the results in some way without editing source?  -->
 
 ## View the App in a Browser
 

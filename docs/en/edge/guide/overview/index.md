@@ -27,16 +27,6 @@ development language.  Applications execute within wrappers targeted
 to each platform, and rely on standards-compliant API bindings to
 access each device's sensors, data, and network status.
 
-<!-- START PG
-
-PhoneGap is a product offering based on the Cordova framework.  Its
-PhoneGap Build service provides an additional way to build
-applications remotely without having to run local tools.  See the
-[PhoneGap Build documentation](http://docs.phonegap.com/en/edge/phonegap-build.md.html)
-for details.
-
-END PG -->
-
 Use Cordova if you are:
 
 * a mobile developer and want to extend an application across more
@@ -69,10 +59,6 @@ various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings. (See the API
 Reference for an overview, and the API and Configuration Guide for
 examples of how to use them.)
-
-<!-- TEST: is cordova.js necessary even for minimal hello-world apps? -->
-
-<!-- QUERY: are any significant platform features unavailable in cordova? -->
 
 The Cordova-enabled WebView may provide the application with its
 entire user interface. It can also be a component within a larger,
@@ -116,19 +102,6 @@ information.)  You may use the command-line utility to initially
 generate the app, or iteratively thereafter to feed updated code to
 SDK tools.  You may also build the app's configuration file yourself.
 (See Configuration Reference for details.)
-
-<!-- START PG
-
-As a third option, you may use the PhoneGap Build service to compile
-projects remotely. This approach means there is no need to install SDK
-tools or command-line utilities.  As part of this development cycle,
-you have the option to upload an archive of your source files, or link
-to a github repository.  (See PhoneGap Build for details.)  The
-cross-platform command-line tools and PhoneGap Build service offer the
-quickest way overall to deploy a project, but IDEs may offer more
-control to target applications for each platform.
-
-END PG -->
 
 To build projects on some platforms, you may need to apply digital
 signatures. See Distributing Applications for information on how to
