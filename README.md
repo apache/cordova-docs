@@ -82,6 +82,10 @@ __5. Customizing HTML template__
 
 Each language can override the default template in `template/docs/LANGUAGE`.
 
+### Editorial Guidelines
+
+Please see the `STYLESHEET.md` file for guildelines on language and usage.
+
 Generating the Documentation
 ----------------------------
 
