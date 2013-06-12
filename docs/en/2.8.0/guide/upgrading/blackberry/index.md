@@ -22,10 +22,6 @@ Upgrading Cordova BlackBerry
 
 This document describes the process of upgrading Cordova projects to the latest released version
 
-
-
-
-
 ## Upgrading Cordova 2.7.0 projects to 2.8.0 ##
 
 ### BlackBerry10 ###
@@ -85,6 +81,28 @@ Updating the example/ folder or migrating an existing project:
 4. Update the contents of the `ext-qnx/` folder.
 4. Copy the new `cordova-2.6.0.js` into your project.
 5. Update your HTML to use the new `cordova-2.6.0.js` file.
+
+## Upgrade to 2.5.0 from 2.4.0 ##
+
+Updating the PhoneGap download folder:
+
+It is recommended that you download a fresh copy of the entire folder.
+
+However, here are the new parts needed for the piecemeal update:
+1. Update the cordova.blackberry.js file in the ‘Phonegap-2.5.0/lib/blackberry/javascript’ folder
+2. Update the ‘ext’, ‘ext-air’, and ‘ext-qnx’ in the ‘Phonegap-2.5.0/lib/blackberry/framework’ folder
+3. Update the ‘build.xml’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
+4. Update the the ‘Phonegap-2.5.0/lib/blackberry/bin’ folder
+5. Update the ‘VERSION’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
+
+Updating the example/ folder or migrating an existing project:
+
+1. Open your `www/` folder, which contains your app.
+2. Remove and update the .jar file in the `ext/` folder.
+3. Update the contents of the `ext-air/` folder.
+4. Update the contents of the `ext-qnx/` folder.
+4. Copy the new `cordova-2.5.0.js` into your project.
+5. Update your HTML to use the new `cordova-2.5.0.js` file.
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
