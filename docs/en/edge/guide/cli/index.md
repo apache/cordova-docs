@@ -43,6 +43,10 @@ platform's SDK. The CLI supports the following combinations:
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
 
+On the Mac, the command-line is available via the _Terminal_
+application. On the PC, it's available as _Command Prompt_ under
+_Accessories_.
+
 The more likely it is that you run the CLI from different machines,
 the more it makes sense to maintain a remote source code repository,
 whose assets you pull down to local working directories.
@@ -50,11 +54,16 @@ whose assets you pull down to local working directories.
 To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
-   installation, you should be able to run `node` or `npm` on your
+   installation, you should be able to invoke `node` or `npm` on your
    command line.
 
-1. Install the `cordova` utility. The `sudo` command may be necessary
-   to install development utilities in otherwise restricted directories:
+1. On Windows, install the `git` utility. If the command is not
+   available on your command-line, download it from
+   [git-scm.com](http://git-scm.com).
+
+1. Install the `cordova` utility. In Unix, the `sudo` command may be
+   necessary to install development utilities in otherwise restricted
+   directories:
 
         $ sudo npm install -g cordova
 
@@ -62,8 +71,8 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
-1. To ensure permissions are correct, run this command, changing
-   _LOGIN_ to match your account name:
+1. To ensure permissions are correct, run this command on Mac or
+   Linux, changing _LOGIN_ to match your account name:
 
         $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
 
@@ -74,7 +83,7 @@ the latest version by running the following command:
 
 Use this syntax to install a specific version:
 
-        $ sudo npm install -g cordova@2.7.0
+        $ sudo npm install -g cordova@2.8.0
 
 Run the `info` command for a listing of available version numbers:
 
@@ -182,40 +191,27 @@ approach with other platforms' IDEs.
 
 Since the application uses web-based components, you can often use a
 standard web browser to preview them directly from the source _www_
-directory.  For example, run this command to preview the application:
-
-        $ cordova serve ios
-
-By default, the application is available at `http://localhost:8000/`,
-which you can modify with your own optional port number:
-
-        $ cordova serve ios 2013
-
-Either way, you can view the application within a browser window:
-
-![](./scr_serve.png)
-
-The size of the browser window doesn't correspond to how it would
-appear on the device.  Also, the __Connecting to device__ message
-lacks any context, since there is no mobile device to connect to.
-Unlike `serve`, running the alternate `ripple` command displays the
-application within the device's larger context:
+directory.  The `ripple` command previews the application within a
+browser-based emulation environment, in this case mimicking how it
+would appear on an iPhone:
 
         $ cordova ripple ios
 
 ![](./scr_ripple.png)
 
-The _ripple_ emulator provides an outer skin that demonstrates how the
-application works with device-level features. For example, you can
-simulate changes in location, changes to orientation, and other
+The _ripple_ emulator provides an outer skin that demonstrates how
+applications work with many device-level features. For example, you
+can simulate changes in location, changes to orientation, and other
 accelerometer-driven shaking gestures. Other platform features, such
-as access to the camera or user contacts, can _only_ be tested on the
-device.
+as access to the camera or user contacts, can often be tested on the
+SDK's device emulator, or else on the device itself. (See View the App
+in an Emulator, below.)
 
-As a basic example, the default application features a handler for the
-custom `deviceready` event, which ordinarily fires once Cordova
-establishes contact with device-level APIs.  You must fire the event
-manually within the ripple emulator:
+The default application Cordova provides demonstrates a handler for
+the custom `deviceready` event, which ordinarily fires once Cordova
+establishes contact with device-level APIs, at which point an
+application can start running. Within the ripple emulator, you must
+fire the event manually:
 
 ![](./scr_ripple_event.png)
 
@@ -225,33 +221,62 @@ log message:
 ![](./scr_ripple_ready.png)
 
 Specifying a platform, such as `ios` or `android`, makes the
-application run under `serve` or `ripple` with device-specific user
-agent strings. In addition, `ripple` applies the screen size for
-specific devices. After running `ripple`, you also have the option to
-view the application as various other devices, under the __Devices__
-tab at the top left.  For example, here is how an application would
-appear on an iPad that's tipped to its side:
+application run under `ripple` with a user agent string and screen
+size for a particular device.  You also have the option to modify the
+__Devices__ tab at the top left to change the target device.  For
+example, here is how an application would appear on an iPad that's
+tipped to its side:
 
 ![](./scr_ripple_ipad.png)
 
-The `serve` command is only appropriate for web applications that
-_don't_ interact with Cordova APIs, which are detailed in the API
-Reference.  The `ripple` command is appropriate if your application
-responds to location, orientation, and varying network conditions.
-Neither approach is reliable for applications that take photos, record
-audio or video, or access users' contact data. They also don't work
-for hybrid applications that mix cordova WebViews with native
-components, or that use plug-ins. (See Extended Hybrid Applications
-for details.)
-
-<!--
+The `ripple` command is appropriate if your application responds to
+location, orientation, varying network conditions, or if it doesn't
+interact with any of the Cordova APIs. The following section shows how
+to emulate applications that take photos, record audio or video, or
+access users' contact data.
 
 ## View the App in an Emulator
 
-"emulate"
+SDKs for mobile platforms come bundled with device emulators. Unlike
+the browser-based `ripple` environment, these emulators install a full
+image of the device, so that you can launch your app from the home
+screen and see how it interacts with many platform features. Run a
+command such as the following to rebuild the app and view it within a
+specific platform's emulator:
 
-        plugin(s) [add|remove|ls [path]] ..... adds or removes a
-                plugin (from the specified path), or lists all
-                currently-added plugins
+        $ cordova emulate android
+
+Some mobile platforms emulate a particular device by default, such as
+the iPhone for iOS projects. For other platforms, you may need to
+first associate a device with an emulator, as detailed in Installing
+Platform SDKs. For example, you may first run the `android` command to
+launch the Android SDK, then run a particular device image, which
+launches it according to its default behavior:
+
+![](android_emulate_init.png)
+
+Following up with the `cordova emulate` command refreshes the emulator
+image to display the latest application, which is now available for
+launch from the home screen:
+
+![](android_emulate_install.png)
+
+The mobile emulators provided by SDKs may be able to reproduce
+conditions you would encounter on an actual device, such as app that
+accesses the database of contacts or that chooses photos from the
+gallery. (See API and Configuration Guide for details.)
+
+__NOTE:__ You can only use the `emulate` command to preview hybrid
+applications that mix cordova WebViews with native components, or that
+use plug-ins to bridge the two environments. The `ripple` emulator is
+only appropriate for simpler applications that stay confined to the
+scope of their WebView.  (See Extended Hybrid Applications for
+details.)
+
+<!--
+
+plugin(s) [add|remove|ls [path]] ..... adds or removes a
+         plugin (from the specified path), or lists all
+         currently-added plugins
 
 -->
