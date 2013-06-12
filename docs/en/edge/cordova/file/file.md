@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 File
 ==========
 
->  This API is based on the W3C [File API](http://www.w3.org/TR/FileAPI). An API to read, write and navigate file system hierarchies.
+> An API to read, write and navigate file system hierarchies, based on the [W3C File API](http://www.w3.org/TR/FileAPI).
 
 Objects
 -------

@@ -24,11 +24,12 @@ Contains a `Contact` object's organization properties.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
-- __type:__ A string that indicates what type of field this is, _home_ for example. _(DOMString)
-- __name:__ The name of the organization. _(DOMString)_
-- __department:__ The department the contract works for. _(DOMString)_
-- __title:__ The contact's title at the organization. _(DOMString)_
+
+- __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
+- __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)
+- __name__: The name of the organization. _(DOMString)_
+- __department__: The department the contract works for. _(DOMString)_
+- __title__: The contact's title at the organization. _(DOMString)_
 
 Details
 -------
@@ -51,15 +52,15 @@ Quick Example
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			for (var j=0; j<contacts[i].organizations.length; j++) {
-				alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-						"Type: " + contacts[i].organizations[j].type + "\n" +
-						"Name: " + contacts[i].organizations[j].name + "\n" +
-						"Department: "  + contacts[i].organizations[j].department + "\n" +
-						"Title: "  + contacts[i].organizations[j].title);
-			}
-		}
+        for (var i = 0; i < contacts.length; i++) {
+            for (var j = 0; j < contacts[i].organizations.length; j++) {
+                alert("Pref: "      + contacts[i].organizations[j].pref       + "\n" +
+                    "Type: "        + contacts[i].organizations[j].type       + "\n" +
+                    "Name: "        + contacts[i].organizations[j].name       + "\n" +
+                    "Department: "  + contacts[i].organizations[j].department + "\n" +
+                    "Title: "       + contacts[i].organizations[j].title);
+            }
+        }
     };
 
     function onError(contactError) {
@@ -67,8 +68,8 @@ Quick Example
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","organizations"];
+    options.filter = "";
+    filter = ["displayName", "organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -82,33 +83,33 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","organizations"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","organizations"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				for (var j=0; j<contacts[i].organizations.length; j++) {
-					alert("Pref: " + contacts[i].organizations[j].pref + "\n" +
-							"Type: " + contacts[i].organizations[j].type + "\n" +
-							"Name: " + contacts[i].organizations[j].name + "\n" +
-							"Department: "  + contacts[i].organizations[j].department + "\n" +
-							"Title: "  + contacts[i].organizations[j].title);
-				}
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i = 0; i < contacts.length; i++) {
+                for (var j = 0; j < contacts[i].organizations.length; j++) {
+                    alert("Pref: "     + contacts[i].organizations[j].pref       + "\n" +
+                        "Type: "       + contacts[i].organizations[j].type       + "\n" +
+                        "Name: "       + contacts[i].organizations[j].name       + "\n" +
+                        "Department: " + contacts[i].organizations[j].department + "\n" +
+                        "Title: "      + contacts[i].organizations[j].title);
+                }
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {
@@ -122,26 +123,26 @@ Full Example
         <p>Find Contacts</p>
       </body>
     </html>
-	
+
 
 Android 2.X Quirks
 ------------------
 
-- __pref:__ Not supported by Android 2.X devices, returning `false`.
+- __pref__: Not supported by Android 2.X devices, returning `false`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ Not supported by Blackberry devices, returning `false`.
-- __type:__ Not supported by Blackberry devices, returning `null`.
-- __name:__ Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
-- __department:__ Not supported, returning `null`.
-- __title:__ Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
+- __pref__: Not supported by Blackberry devices, returning `false`.
+- __type__: Not supported by Blackberry devices, returning `null`.
+- __name__: Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
+- __department__: Not supported, returning `null`.
+- __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
 
 iOS Quirks
 -----------
-- __pref:__ Not supported on iOS devices, returning `false`.
-- __type:__ Not supported on iOS devices, returning `null`.
-- __name:__ Partially supported.  The first organization name is stored in the iOS __kABPersonOrganizationProperty__ field.
+- __pref__: Not supported on iOS devices, returning `false`.
+- __type__: Not supported on iOS devices, returning `null`.
+- __name__: Partially supported.  The first organization name is stored in the iOS __kABPersonOrganizationProperty__ field.
 - __department__: Partially supported.  The first department name is stored in the iOS __kABPersonDepartmentProperty__ field.
 - __title__: Partially supported.  The first title is stored in the iOS __kABPersonJobTitleProperty__ field.
 

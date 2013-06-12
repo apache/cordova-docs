@@ -20,23 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 openDatabase
 ===============
 
-Returns a new Database object.
+Returns a new `Database` object.
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
 Description
 -----------
 
-window.openDatabase returns a new Database object.
-
-This method will create a new SQL Lite Database and return a Database object.  Use the Database Object to manipulate the data.
+The method creates a new SQL Lite Database and returns a `Database`
+object that allows manipulation of the data.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
-- iPhone
+- iOS
 - webOS
 - Tizen
 
@@ -56,16 +55,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
+            var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
         }
-		
+
         </script>
       </head>
       <body>

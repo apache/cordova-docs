@@ -27,7 +27,7 @@ Displays the splash screen.
 Description
 -----------
 
-navigator.splashscreen.show() displays the applications splash screen.
+This method displays the application's splash screen.
 
 Supported Platforms
 -------------------
@@ -51,16 +51,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			navigator.splashscreen.show();
+            navigator.splashscreen.show();
         }
-		
+
         </script>
       </head>
       <body>

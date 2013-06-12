@@ -112,7 +112,7 @@ Updating the sample folder (ie, updating using the ant tools):
 
 ## Upgrade to 2.3.0 from 2.2.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.

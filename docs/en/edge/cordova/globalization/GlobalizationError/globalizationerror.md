@@ -25,12 +25,12 @@ An object representing a error from the Globalization API.
 Properties
 ----------
 
-- __code:__  One of the following codes representing the error type (`Number`)
+- __code__:  One of the following codes representing the error type _(Number)_
   - GlobalizationError.UNKNOWN\_ERROR: 0
   - GlobalizationError.FORMATTING\_ERROR: 1
   - GlobalizationError.PARSING\_ERROR: 2
   - GlobalizationError.PATTERN\_ERROR: 3
-- __message:__  A text message that includes the error explanation and/or details (`String`)
+- __message__:  A text message that includes the error's explanation and/or details _(String)_
 
 Description
 -----------
@@ -47,9 +47,10 @@ Supported Platforms
 Quick Example
 -------------
 
-When the following error callback is invoked, it should display a popup dialog with the text similar to "code: 3" and "message: ".
+When the following error callback executes, it displays a
+popup dialog with the text similar to `code: 3` and `message:`
 
-    function errorCB(error) {
+    function errorCallback(error) {
         alert('code: ' + error.code + '\n' +
               'message: ' + error.message + '\n');
     };
@@ -60,30 +61,30 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>GlobalizationError Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
-        function successCB(date) {
+
+        function successCallback(date) {
           alert('month:' + date.month +
                 ' day:' + date.day +
                 ' year:' + date.year + '\n');
         }
-                                            
-        function errorCB(error) {
+
+        function errorCallback(error) {
           alert('code: ' + error.code + '\n' +
                 'message: ' + error.message + '\n');
         };
-                                                                  
+
         function checkError() {
           navigator.globalization.stringToDate(
             'notADate',
-            successCB,
-            errorCB,
+            successCallback,
+            errorCallback,
             {selector:'foobar'}
           );
         }
-    
+
         </script>
       </head>
       <body>

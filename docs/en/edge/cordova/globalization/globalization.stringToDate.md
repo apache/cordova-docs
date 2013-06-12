@@ -20,55 +20,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.stringToDate
 ===========
 
-Parses a date formatted as a string according to the client's user
-preferences and calendar using the time zone of the client and returns
-the corresponding date object.
+Parses a date formatted as a string, according to the client's user
+preferences and calendar using the time zone of the client, and
+returns the corresponding date object.
 
-    navigator.globalization.stringToDate(dateString, successCB, errorCB, options);
-    
+    navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
+
 Description
 -----------
 
-It returns the date to the success callback with a properties object as a parameter. That object should have the following properties:
+Returns the date to the success callback with a `properties` object as
+a parameter. That object should have the following properties:
 
-- year {Number}: The four digit year
-- month {Number}: The month from (0 - 11)
-- day {Number}: The day from (1 - 31)
-- hour {Number}: The hour from (0 - 23)
-- minute {Number}: The minute from (0 - 59)
-- second {Number}: The second from (0 - 59)
-- millisecond {Number}: The milliseconds (from 0 - 999), not available on all platforms
+- __year__: The four digit year. _(Number)_
+- __month__: The month from (0 - 11). _(Number)_
+- __day__: The day from (1 - 31). _(Number)_
+- __hour__: The hour from (0 - 23). _(Number)_
+- __minute__: The minute from (0 - 59). _(Number)_
+- __second__: The second from (0 - 59). _(Number)_
+- __millisecond__: The milliseconds (from 0 - 999), not available on all platforms. _(Number)_
 
 The inbound `dateString` parameter should be of type `String`.
 
-`options.formatLength` can be 'short', 'medium', 'long', or 'full'.
-`options.selector` can be 'date', 'time' or 'date and time'.
+The `options` parameter is optional, and defaults to the following
+values:
 
-The default options are `{formatLength:'short', selector:'date and time'}`.
-The options parameter is optional.
+    {formatLength:'short', selector:'date and time'}
 
-If there is an error parsing the date string, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PARSING\_ERROR.
+The `options.formatLength` can be `short`, `medium`, `long`, or
+`full`.  The `options.selector` can be `date`, `time` or `date and
+time`.
+
+If there is an error parsing the date string, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PARSING\_ERROR`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 8
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "month:8 day:25 year:2012". Note that the month integer is one less than the string, as the month integer represents an index.
+When the browser is set to the `en\_US` locale, this displays a
+popup dialog with text similar to `month:8 day:25 year:2012`. Note
+that the month integer is one less than the string, as the month
+integer represents an array index.
 
     navigator.globalization.stringToDate(
-      '9/25/2012',
-      function (date) {alert('month:' + date.month +
-                             ' day:' + date.day +
-                             ' year:' + date.year + '\n');},
-      function () {alert('Error getting date\n');},
-      {selector:'date'}
+        '9/25/2012',
+        function (date) {alert('month:' + date.month +
+                               ' day:'  + date.day   +
+                               ' year:' + date.year  + '\n');},
+        function () {alert('Error getting date\n');},
+        {selector: 'date'}
     );
 
 Full Example
@@ -77,10 +86,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>stringToDate Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                  
+
         function checkStringDate() {
           navigator.globalization.stringToDate(
             '9/25/2012',
@@ -102,4 +111,4 @@ Full Example
 Windows Phone 8 Quirks
 ------------------
 
-- `formatLength` option supports only short and full values
+- The `formatLength` option supports only `short` and `full` values.

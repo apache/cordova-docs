@@ -20,13 +20,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Flags
 =====
 
-This object is used to supply arguments to the `DirectoryEntry` __getFile__ and __getDirectory__ methods, which look up or create files and directories, respectively.
+Supplies arguments to the `DirectoryEntry` object's `getFile()` and
+`getDirectory()` methods, which look up or create files and
+directories, respectively.
 
 Properties
 ----------
 
-- __create:__ Used to indicate that the file or directory should be created, if it does not exist. _(boolean)_
-- __exclusive:__ By itself, exclusive has no effect. Used with create, it causes the file or directory creation to fail if the target path already exists. _(boolean)_
+- __create__: Indicates that the file or directory should be created if it does not already exist. _(boolean)_
+- __exclusive__: Has has no effect by itself, but when used with `create` causes the file or directory creation to fail if the target path already exists. _(boolean)_
 
 Supported Platforms
 -------------------

@@ -20,17 +20,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 online
 ===========
 
-This event fires when a Cordova application is online (connected to the Internet).
+This event fires when an application goes online, and the device
+becomes connected to the Internet.
 
     document.addEventListener("online", yourCallbackFunction, false);
 
 Details
 -------
 
-When the application's network connection changes to being online, the online event is fired.
+The `online` event fires when a previously unconnected device receives
+a network connection to allow an application access to the Internet.
+It relies on the same information as the Connection API, and fires
+when the value of `connection.type` becomes `NONE`.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -57,23 +61,19 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Online Example</title>
+        <title>Online Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("online", onOnline, false);
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
         }
@@ -91,12 +91,15 @@ Full Example
 
 iOS Quirks
 --------------------------
-During initial startup, the first online event (if applicable) will take at least a second to fire.
+
+During initial startup, the first `online` event (if applicable) takes
+at least a second to fire, prior to which `connection.type` is
+`UNKNOWN`.
 
 Windows Phone 7 Quirks
 --------------------------
-When running in the Emulator, the connection.status of the device is always unknown, and this event will NOT fire.
+When running in the Emulator, the `connection.status` is always unknown, so this event will _not_ fire.
 
 Windows Phone 8 Quirks
 --------------------------
-Emulator reports connection type as Cellular, and it will not change, so events will NOT fire.
+The Emulator reports the connection type as `Cellular`, which does not change, so events will _not_ fire.

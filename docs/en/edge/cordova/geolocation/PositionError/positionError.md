@@ -20,13 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 PositionError
 ========
 
-A `PositionError` object is returned to the `geolocationError` callback when an error occurs.
+A `PositionError` object is passed to the `geolocationError` callback when an error occurs.
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ Error message describing the details of the error encountered.
+- __code__: One of the predefined error codes listed below.
+- __message__: Error message describing the details of the error encountered.
 
 Constants
 ---------
@@ -38,7 +38,8 @@ Constants
 Description
 -----------
 
-The `PositionError` object is returned to the user through the `geolocationError` callback function when an error occurs with geolocation.
+The `PositionError` object is passed to the `geolocationError`
+callback function when an error occurs with geolocation.
 
 ### `PositionError.PERMISSION_DENIED`
 
@@ -47,13 +48,13 @@ position information. This is dependent on the platform.
 
 ### `PositionError.POSITION_UNAVAILABLE`
 
-Returned when the device was unable to retrieve a position. In general
+Returned when the device is unable to retrieve a position. In general
 this means the device has no network connectivity and/or cannot get a
 satellite fix.
 
 ### `PositionError.TIMEOUT`
 
-Returned when the device was unable to retrieve a position within the
-time specified in the `geolocationOptions`' `timeout` property. When using
-in conjunction with `geolocation.watchPosition`, this error could be
-called into the `geolocationError` callback every `timeout` milliseconds.
+Returned when the device is unable to retrieve a position within the
+time specified in the `geolocationOptions`' `timeout` property. When
+used with `geolocation.watchPosition`, this error could be passed to
+the `geolocationError` callback every `timeout` milliseconds.

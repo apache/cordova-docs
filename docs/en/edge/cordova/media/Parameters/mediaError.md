@@ -20,7 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 mediaError
 ==========
 
-A user specified callback function that is invoked when there is an error in media functions.
+A user-specified callback function that executes when there is an
+error in media functions.
 
     function(error) {
         // Handle the error
@@ -29,4 +30,4 @@ A user specified callback function that is invoked when there is an error in med
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`MediaError`)
+- __error__: The error returned by the device. _(MediaError)_

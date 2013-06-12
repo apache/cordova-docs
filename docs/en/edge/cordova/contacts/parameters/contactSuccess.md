@@ -29,7 +29,7 @@ Success callback function that provides the `Contact` array resulting from a `co
 Parameters
 ----------
 
-- __contacts:__ The contact array resulting from a find operation. (`Contact`)
+- __contacts__: The contact array resulting from a find operation. _(Contact)_
 
 Example
 -------

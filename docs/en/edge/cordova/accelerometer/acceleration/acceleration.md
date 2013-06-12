@@ -25,16 +25,16 @@ Contains `Accelerometer` data captured at a specific point in time.
 Properties
 ----------
 
-- __x:__  Amount of acceleration on the x-axis. (in m/s^2) (`Number`)
-- __y:__  Amount of acceleration on the y-axis. (in m/s^2) (`Number`)
-- __z:__  Amount of acceleration on the z-axis. (in m/s^2) (`Number`)
-- __timestamp:__ Creation timestamp in milliseconds. (`DOMTimeStamp`)
+- __x__:  Amount of acceleration on the x-axis. (in m/s^2) _(Number)_
+- __y__:  Amount of acceleration on the y-axis. (in m/s^2) _(Number)_
+- __z__:  Amount of acceleration on the z-axis. (in m/s^2) _(Number)_
+- __timestamp__: Creation timestamp in milliseconds. _(DOMTimeStamp)_
 
 Description
 -----------
 
-This object is created and populated by Cordova, and returned by an
-`Accelerometer` method. Acceleration values include the effect of
+An `Acceleration` object is populated and returned by any of the API's
+`Accelerometer` methods. Acceleration values include the effect of
 gravity (9.81 m/s^2), so that when a device lies flat and facing up,
 _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
@@ -77,11 +77,11 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);

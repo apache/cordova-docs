@@ -20,53 +20,53 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Database
 =======
 
-Contains methods that allow the user to manipulate the Database
+Provides access to an SQL database.
 
 Methods
 -------
 
 - __transaction__: Runs a database transaction.
-- __changeVersion__: method allows scripts to atomically verify the version number and change it at the same time as doing a schema update.
+- __changeVersion__: Allows scripts to automatically verify the version number and change it when updating a schema.
 
 Details
 -------
 
-A Database object is returned from a call to `window.openDatabase()`.
+The `window.openDatabase()` method returns a `Database` object.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
-- iPhone
+- iOS
 - webOS
 - Tizen
 
 Transaction Quick Example
 ------------------
-	function populateDB(tx) {
-		 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-		 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-		 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err.code);
-	}
-	
-	function successCB() {
-		alert("success!");
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.transaction(populateDB, errorCB, successCB);
+    function populateDB(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
+
+    function errorCB(err) {
+        alert("Error processing SQL: "+err.code);
+    }
+
+    function successCB() {
+        alert("success!");
+    }
+
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.transaction(populateDB, errorCB, successCB);
 
 Change Version Quick Example
 -------------------
 
-	var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-	db.changeVersion("1.0", "1.1");
+    var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+    db.changeVersion("1.0", "1.1");
 
 Full Example
 ------------
@@ -79,38 +79,38 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+            db.transaction(populateDB, errorCB, successCB);
         }
-		
-		// Populate the database
-		//
-		function populateDB(tx) {
-			 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
-		
-		// Transaction error callback
-		//
-		function errorCB(tx, err) {
-			alert("Error processing SQL: "+err);
-		}
-		
-		// Transaction success callback
-		//
-		function successCB() {
-			alert("success!");
-		}
-	
+
+        // Populate the database
+        //
+        function populateDB(tx) {
+            tx.executeSql('DROP TABLE IF EXISTS DEMO');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+            tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+        }
+
+        // Transaction error callback
+        //
+        function errorCB(tx, err) {
+            alert("Error processing SQL: "+err);
+        }
+
+        // Transaction success callback
+        //
+        function successCB() {
+            alert("success!");
+        }
+
         </script>
       </head>
       <body>
@@ -118,4 +118,3 @@ Full Example
         <p>Database</p>
       </body>
     </html>
-

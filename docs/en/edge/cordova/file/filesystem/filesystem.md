@@ -25,13 +25,16 @@ This object represents a file system.
 Properties
 ----------
 
-- __name:__ The name of the file system. _(DOMString)_
-- __root:__ The root directory of the file system. _(DirectoryEntry)_
+- __name__: The name of the file system. _(DOMString)_
+- __root__: The root directory of the file system. _(DirectoryEntry)_
 
 Details
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+The `FileSystem` object represents information about the file system.
+The name of the file system is unique across the list of exposed
+file systems.  The root property contains a `DirectoryEntry` object
+that represents the file system's root directory.
 
 Supported Platforms
 -------------------
@@ -45,13 +48,13 @@ Supported Platforms
 File System Quick Example
 -------------------------
 
-	function onSuccess(fileSystem) {
-		console.log(fileSystem.name);
-		console.log(fileSystem.root.name);
-	}
-	
-	// request the persistent file system
-	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+        console.log(fileSystem.root.name);
+    }
+
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
 Full Example
 ------------
@@ -64,25 +67,25 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         }
 
-		function onFileSystemSuccess(fileSystem) {
-			console.log(fileSystem.name);
-			console.log(fileSystem.root.name);
-		}
-		
-		function fail(evt) {
-			console.log(evt.target.error.code);
-		}
-		
+        function onFileSystemSuccess(fileSystem) {
+            console.log(fileSystem.name);
+            console.log(fileSystem.root.name);
+        }
+
+        function fail(evt) {
+            console.log(evt.target.error.code);
+        }
+
         </script>
       </head>
       <body>

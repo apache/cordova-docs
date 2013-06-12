@@ -20,20 +20,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureAudio
 ====================
 
-> Start the audio recorder application and return information about captured audio clip file(s).
+> Start the audio recorder application and return information about the captured audio clip file(s).
 
     navigator.device.capture.captureAudio(
-	    CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
-	);
+        CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
+    );
 
 Description
 -----------
 
-This method starts an asynchronous operation to capture audio recordings using the device's default audio recording application.  The operation allows the device user to capture multiple recordings in a single session.
+Starts an asynchronous operation to capture audio recordings using the
+device's default audio recording application.  The operation allows
+the device user to capture multiple recordings in a single session.
 
-The capture operation ends when either the user exits the audio recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureAudioOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single audio clip.
+The capture operation ends when either the user exits the audio
+recording application, or the maximum number of recordings specified
+by `CaptureAudioOptions.limit` is reached.  If no `limit` parameter
+value is specified, it defaults to one (1), and the capture operation
+terminates after the user records a single audio clip.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured audio clip file.  If the operation is terminated by the user before an audio clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation finishes, the `CaptureCallback` executes
+with an array of `MediaFile` objects describing each captured audio
+clip file.  If the user terminates the operation before an audio clip
+is captured, the `CaptureErrorCallback` executes with a `CaptureError`
+object, featuring the `CaptureError.CAPTURE_NO_MEDIA_FILES` error
+code.
 
 Supported Platforms
 -------------------
@@ -82,13 +93,13 @@ Full Example
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	
+            }
         }
 
         // Called if something bad happens.
         //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
+            var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
         }
 
@@ -128,14 +139,14 @@ Full Example
 BlackBerry WebWorks Quirks
 --------------------------
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture the audio recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
 iOS Quirks
 ----------
 
-- iOS does not have a default audio recording application so a simple user interface is provided.
+- iOS does not have a default audio recording application, so a simple user interface is provided.
 
 Windows Phone 7 and 8 Quirks
 ----------
 
-- Windows Phone 7 does not have a default audio recording application so a simple user interface is provided.
+- Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.

@@ -22,35 +22,44 @@ globalization.numberToString
 
 Returns a number formatted as a string according to the client's user preferences.
 
-    navigator.globalization.numberToString(number, successCB, errorCB, options);
-    
+    navigator.globalization.numberToString(number, successCallback, errorCallback, options);
+
 Description
 -----------
 
-It returns the formatted number string to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a String value.
+Returns the formatted number string to the `successCallback` with a
+`properties` object as a parameter. That object should have a `value`
+property with a `String` value.
 
-If there is an error formatting the number, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error formatting the number, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
-`options.type` can be 'decimal', 'percent', or 'currency'. The default options are `{type:'decimal'}`. The `options` parameter is optional.
+The `options` parameter is optional, and its default values are:
+
+    {type:'decimal'}
+
+The `options.type` can be 'decimal', 'percent', or 'currency'.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 8
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "number: 3.142"
+When the browser is set to the `en\_US` locale, this displays a popup
+dialog with text similar to `number: 3.142`:
 
     navigator.globalization.numberToString(
-      3.1415926,
-      function (number) {alert('number: ' + number.value + '\n');},
-      function () {alert('Error getting number\n');},
-      {type:'decimal'}
+        3.1415926,
+        function (number) {alert('number: ' + number.value + '\n');},
+        function () {alert('Error getting number\n');},
+        {type:'decimal'}
     );
 
 Full Example
@@ -59,10 +68,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>numberToString Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkNumber() {
           navigator.globalization.numberToString(
             3.1415926,
@@ -71,7 +80,7 @@ Full Example
             {type:'decimal'}
           );
         }
-                                            
+
         </script>
       </head>
       <body>

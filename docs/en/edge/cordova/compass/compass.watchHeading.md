@@ -44,7 +44,7 @@ Supported Platforms
 -------------------
 
 - Android
-- iPhone
+- iOS
 - Windows Phone 7 and 8 (if available in hardware)
 - Bada 1.2 & 2.x
 - webOS
@@ -60,11 +60,13 @@ Quick Example
     };
 
     function onError(compassError) {
-            alert('Compass error: ' + compassError.code);
+        alert('Compass error: ' + compassError.code);
     };
 
-    var options = { frequency: 3000 };  // Update every 3 seconds
-    
+    var options = {
+        frequency: 3000
+    }; // Update every 3 seconds
+
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
 Full Example
@@ -80,12 +82,12 @@ Full Example
 
         // The watch id references the current `watchHeading`
         var watchID = null;
-        
-        // Wait for Cordova to load
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             startWatch();
@@ -94,13 +96,13 @@ Full Example
         // Start watching the compass
         //
         function startWatch() {
-            
+
             // Update compass every 3 seconds
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.compass.watchHeading(onSuccess, onError, options);
         }
-        
+
         // Stop watching the compass
         //
         function stopWatch() {
@@ -109,7 +111,7 @@ Full Example
                 watchID = null;
             }
         }
-        
+
         // onSuccess: Get the current heading
         //
         function onSuccess(heading) {
@@ -138,7 +140,7 @@ iOS Quirks
 In iOS `compass.watchHeading` can also get the device's current
 heading when it changes by a specified number of degrees. Each time
 the heading changes by the specified number of degrees or more, the
-`headingSuccess` callback function is called. Specify the degrees of
+`headingSuccess` callback function executes. Specify the degrees of
 change via the `filter` parameter in the `compassOptions` object.
 Clear the watch as usual by passing the returned watch ID to
 `compass.clearWatch`.  This functionality replaces the previously

@@ -20,7 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocationError
 ================
 
-The user's callback function that is called when there is an error for geolocation functions.
+The user's callback function that executes when there is an error for
+geolocation functions.
 
     function(error) {
         // Handle the error
@@ -29,4 +30,4 @@ The user's callback function that is called when there is an error for geolocati
 Parameters
 ----------
 
-- __error:__ The error returned by the device. (`PositionError`)
+- __error__: The error returned by the device. _(PositionError)_

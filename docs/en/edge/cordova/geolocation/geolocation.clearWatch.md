@@ -20,19 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 geolocation.clearWatch
 ======================
 
-Stop watching for changes to the device's location referenced by the `watchID` parameter.
+Stop watching for changes to the device's location referenced by the
+`watchID` parameter.
 
     navigator.geolocation.clearWatch(watchID);
 
 Parameters
 ----------
 
-- __watchID:__ The id of the `watchPosition` interval to clear. (String)
+- __watchID__: The id of the `watchPosition` interval to clear. (String)
 
 Description
 -----------
 
-`geolocation.clearWatch` stops watching changes to the device's location by clearing the `geolocation.watchPosition` referenced by `watchID`.
+The `geolocation.clearWatch` stops watching changes to the device's
+location by clearing the `geolocation.watchPosition` referenced by
+`watchID`.
 
 Supported Platforms
 -------------------
@@ -69,13 +72,13 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Get the most accurate position updates available on the
@@ -83,7 +86,7 @@ Full Example
             var options = { enableHighAccuracy: true };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
@@ -101,18 +104,18 @@ Full Example
                 watchID = null;
             }
         }
-    
-	    // onError Callback receives a PositionError object
-	    //
-	    function onError(error) {
-	      alert('code: '    + error.code    + '\n' +
-	            'message: ' + error.message + '\n');
-	    }
+
+            // onError Callback receives a PositionError object
+            //
+            function onError(error) {
+              alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+            }
 
         </script>
       </head>
       <body>
         <p id="geolocation">Watching geolocation...</p>
-    	<button onclick="clearWatch();">Clear Watch</button>
+            <button onclick="clearWatch();">Clear Watch</button>
       </body>
     </html>

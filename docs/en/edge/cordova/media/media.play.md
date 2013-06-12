@@ -27,7 +27,8 @@ Starts or resumes playing an audio file.
 Description
 -----------
 
-Function `media.play` is a synchronous function that starts or resumes playing an audio file.
+The `media.play` method executes synchronously, and starts or resumes
+playing an audio file.
 
 Supported Platforms
 -------------------
@@ -48,14 +49,14 @@ Quick Example
         // Play the audio file at url
         var my_media = new Media(url,
             // success callback
-            function() {
+            function () {
                 console.log("playAudio():Audio Success");
             },
             // error callback
-            function(err) {
-                console.log("playAudio():Audio Error: "+err);
-        });
-
+            function (err) {
+                console.log("playAudio():Audio Error: " + err);
+            }
+        );
         // Play audio
         my_media.play();
     }
@@ -68,35 +69,35 @@ Full Example
         <html>
           <head>
             <title>Media Example</title>
-        
+
             <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
             <script type="text/javascript" charset="utf-8">
-        
-            // Wait for Cordova to load
+
+            // Wait for device API libraries to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-        
-            // Cordova is ready
+
+            // device APIs are available
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
-        
+
             // Audio player
             //
             var my_media = null;
             var mediaTimer = null;
-        
+
             // Play audio
             //
             function playAudio(src) {
-            	if (my_media == null) {
-                	// Create Media object from src
-                	my_media = new Media(src, onSuccess, onError);
-            	} // else play current audio
+                if (my_media == null) {
+                    // Create Media object from src
+                    my_media = new Media(src, onSuccess, onError);
+                } // else play current audio
                 // Play audio
                 my_media.play();
-        
+
                 // Update my_media position every second
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
@@ -117,7 +118,7 @@ Full Example
                     }, 1000);
                 }
             }
-        
+
             // Pause audio
             //
             function pauseAudio() {
@@ -125,7 +126,7 @@ Full Example
                     my_media.pause();
                 }
             }
-        
+
             // Stop audio
             //
             function stopAudio() {
@@ -135,26 +136,26 @@ Full Example
                 clearInterval(mediaTimer);
                 mediaTimer = null;
             }
-        
+
             // onSuccess Callback
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
-        
+
             // onError Callback
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
-        
+
             // Set audio position
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
             }
-        
+
             </script>
           </head>
           <body>
@@ -168,28 +169,32 @@ Full Example
 BlackBerry WebWorks Quirks
 ----------
 
-- BlackBerry devices support a limited number of simultaneous audio channels. CDMA devices only support a single audio channel. Other devices support up to two simultaneous channels. Attempting to play more audio files then the supported amount will result in previous playback being stopped.
+- BlackBerry devices support a limited number of simultaneous audio
+  channels. CDMA devices only support a single audio channel. Other
+  devices support up to two simultaneous channels. An attempt to play
+  more audio files than the supported amount results in previous
+  playback being stopped.
 
-iOS Quirk
----------
+iOS Quirks
+----------
 
-- __numberOfLoops__
- 
-    Pass in this option to the **play** method to specify the number of times you want the media file to play. e.g:
-    
+- __numberOfLoops__: Pass this option to the `play` method to specify
+  the number of times you want the media file to play, e.g.:
+
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
 
-- __playAudioWhenScreenIsLocked__
- 
-    Pass in this option to the **play** method to specify whether you want to play the audio of the media file when the screen is locked (this defaults to true if not set). If this is set to true, it will ignore the state of the hardware mute button. e.g:
-    
+- __playAudioWhenScreenIsLocked__: Pass in this option to the `play`
+  method to specify whether you want to allow playback when the screen
+  is locked.  If set to `true` (the default value), the state of the
+  hardware mute button is ignored, e.g.:
+
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
 
-- __order of file search__
-
-    When only a file name or simple path is provided, iOS will search in the www for the file and then in the application documents/tmp directory.
+- __order of file search__: When only a file name or simple path is
+  provided, iOS searches in the `www` directory for the file, then in
+  the application's `documents/tmp` directory:
 
         var myMedia = new Media("audio/beer.mp3")
-        myMedia.play()  // will first look for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

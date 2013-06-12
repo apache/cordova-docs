@@ -25,12 +25,12 @@ Contains different kinds of information about a `Contact` object's name.
 Properties
 ----------
 
-- __formatted:__ The complete name of the contact. _(DOMString)_
-- __familyName:__ The contact's family name. _(DOMString)_
-- __givenName:__ The contact's given name. _(DOMString)_
-- __middleName:__ The contact's middle name. _(DOMString)_
-- __honorificPrefix:__ The contact's prefix (example _Mr._ or _Dr._) _(DOMString)_
-- __honorificSuffix:__ The contact's suffix (example _Esq._). _(DOMString)_
+- __formatted__: The complete name of the contact. _(DOMString)_
+- __familyName__: The contact's family name. _(DOMString)_
+- __givenName__: The contact's given name. _(DOMString)_
+- __middleName__: The contact's middle name. _(DOMString)_
+- __honorificPrefix__: The contact's prefix (example _Mr._ or _Dr._) _(DOMString)_
+- __honorificSuffix__: The contact's suffix (example _Esq._). _(DOMString)_
 
 Details
 -------
@@ -51,14 +51,14 @@ Quick Example
 -------------
 
     function onSuccess(contacts) {
-		for (var i=0; i<contacts.length; i++) {
-			alert("Formatted: " + contacts[i].name.formatted + "\n" +
-					"Family Name: "  + contacts[i].name.familyName + "\n" +
-					"Given Name: "  + contacts[i].name.givenName + "\n" +
-					"Middle Name: "  + contacts[i].name.middleName + "\n" +
-					"Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-					"Prefix: "  + contacts[i].name.honorificSuffix);
-		}
+        for (var i = 0; i < contacts.length; i++) {
+            alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+                "Family Name: "  + contacts[i].name.familyName      + "\n" +
+                "Given Name: "   + contacts[i].name.givenName       + "\n" +
+                "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+                "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+                "Prefix: "       + contacts[i].name.honorificSuffix);
+        }
     };
 
     function onError(contactError) {
@@ -66,8 +66,8 @@ Quick Example
     };
 
     var options = new ContactFindOptions();
-	options.filter="";
-	filter = ["displayName","name"];
+    options.filter = "";
+    filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 Full Example
@@ -81,32 +81,32 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			var options = new ContactFindOptions();
-			options.filter="";
-			filter = ["displayName","name"];
-			navigator.contacts.find(filter, onSuccess, onError, options);
+            var options = new ContactFindOptions();
+            options.filter="";
+            filter = ["displayName","name"];
+            navigator.contacts.find(filter, onSuccess, onError, options);
         }
-    
+
         // onSuccess: Get a snapshot of the current contacts
         //
-		function onSuccess(contacts) {
-			for (var i=0; i<contacts.length; i++) {
-				alert("Formatted: " + contacts[i].name.formatted + "\n" +
-						"Family Name: "  + contacts[i].name.familyName + "\n" +
-						"Given Name: "  + contacts[i].name.givenName + "\n" +
-						"Middle Name: "  + contacts[i].name.middleName + "\n" +
-						"Suffix: "  + contacts[i].name.honorificSuffix + "\n" +
-						"Prefix: "  + contacts[i].name.honorificPrefix);
-			}
-		};
-    
+        function onSuccess(contacts) {
+            for (var i = 0; i < contacts.length; i ++) {
+                alert("Formatted: " + contacts[i].name.formatted       + "\n" +
+                    "Family Name: " + contacts[i].name.familyName      + "\n" +
+                    "Given Name: "  + contacts[i].name.givenName       + "\n" +
+                    "Middle Name: " + contacts[i].name.middleName      + "\n" +
+                    "Suffix: "      + contacts[i].name.honorificSuffix + "\n" +
+                    "Prefix: "      + contacts[i].name.honorificPrefix);
+            }
+        };
+
         // onError: Failed to get the contacts
         //
         function onError(contactError) {
@@ -123,25 +123,28 @@ Full Example
 
 Android Quirks
 ------------
-- __formatted:__ Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
+
+- __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
-- __formatted:__ Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
-- __familyName:__ Supported.  Stored in BlackBerry __lastName__ field.
-- __givenName:__ Supported.  Stored in BlackBerry __firstName__ field.
-- __middleName:__ Not supported, returning `null`.
-- __honorificPrefix:__ Not supported, returning `null`.
-- __honorificSuffix:__ Not supported, returning `null`.
+- __formatted__: Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
+- __familyName__: Supported.  Stored in BlackBerry __lastName__ field.
+- __givenName__: Supported.  Stored in BlackBerry __firstName__ field.
+- __middleName__: Not supported, returning `null`.
+- __honorificPrefix__: Not supported, returning `null`.
+- __honorificSuffix__: Not supported, returning `null`.
 
 iOS Quirks
 ------------
-- __formatted:__ Partially supported.  Returns iOS Composite Name, but is read-only.
+
+- __formatted__: Partially supported.  Returns iOS Composite Name, but is read-only.
 
 Bada Quirks
 -----------
-- __formatted:__ Not supported
-- __middleName:__ Not supported
-_ __honorificPrefix:__ Not supported
-- __honorificSuffix:__ Not supported
+
+- __formatted__: Not supported
+- __middleName__: Not supported
+_ __honorificPrefix__: Not supported
+- __honorificSuffix__: Not supported

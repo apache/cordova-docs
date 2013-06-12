@@ -256,7 +256,7 @@ references the deprecated invokeString API:
       <script type="text/javascript" src="cordova-2.2.0.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript">
-              app.initialize();
+          app.initialize();
       </script>
 
   **Wait for deviceReady Event**

@@ -20,41 +20,63 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getNumberPattern
 ===========
 
-Returns a pattern string for formatting and parsing numbers according to the client's user preferences.
+Returns a pattern string to format and parse numbers according to the client's user preferences.
 
-    navigator.globalization.getNumberPattern(successCB, errorCB, options);
-    
+    navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
+
 Description
 -----------
 
-It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:
+Returns the pattern to the `successCallback` with a `properties` object
+as a parameter. That object contains the following properties:
 
-- pattern {String}: The number pattern for formatting and parsing numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
-- symbol {String}: The symbol to be used when formatting and parsing e.g., percent or currency symbol.
-- fraction {Number}: The number of fractional digits to use when parsing and formatting numbers.
-- rounding {Number}: The rounding increment to use when parsing and formatting.
-- positive {String}: The symbol to use for positive numbers when parsing and formatting.
-- negative: {String}: The symbol to use for negative numbers when parsing and formatting.
-- decimal: {String}: The decimal symbol to use for parsing and formatting.
-- grouping: {String}: The grouping symbol to use for parsing and formatting.
+- __pattern__: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __symbol__: The symbol to use when formatting and parsing, such as a percent or currency symbol. _(String)_
+- __fraction__: The number of fractional digits to use when parsing and formatting numbers. _(Number)_
+- __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+- __positive__: The symbol to use for positive numbers when parsing and formatting. _(String)_
+- __negative__: The symbol to use for negative numbers when parsing and formatting. _(String)_
+- __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+- __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.PATTERN\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.PATTERN\_ERROR`.
 
-`options.type` can be 'decimal', 'percent', or 'currency'.
-The default options are `{type:'decimal'}`. The `options` parameter is optional.
+The `options` parameter is optional, and default values are:
+
+    {type:'decimal'}
+
+The `options.type` can be `decimal`, `percent`, or `currency`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 8
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to:
+When the browser is set to the `en\_US` locale, this should display a
+popup dialog with text similar to the results that follow:
+
+    navigator.globalization.getNumberPattern(
+        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                  'symbol: '   + pattern.symbol   + '\n' +
+                                  'fraction: ' + pattern.fraction + '\n' +
+                                  'rounding: ' + pattern.rounding + '\n' +
+                                  'positive: ' + pattern.positive + '\n' +
+                                  'negative: ' + pattern.negative + '\n' +
+                                  'decimal: '  + pattern.decimal  + '\n' +
+                                  'grouping: ' + pattern.grouping);},
+        function () {alert('Error getting pattern\n');},
+        {type:'decimal'}
+    );
+
+Results:
 
     pattern: #,##0.###
     symbol: .
@@ -65,56 +87,39 @@ In the case when the browser is set to the en\_US locale, this should display a 
     decimal: .
     grouping: ,
 
-.
-
-    navigator.globalization.getNumberPattern(
-      function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                'symbol: ' + pattern.symbol + '\n' +
-                                'fraction: ' + pattern.fraction + '\n' +
-                                'rounding: ' + pattern.rounding + '\n' +
-                                'positive: ' + pattern.positive + '\n' +
-                                'negative: ' + pattern.negative + '\n' +
-                                'decimal: ' + pattern.decimal + '\n' +
-                                'grouping: ' + pattern.grouping);},
-      function () {alert('Error getting pattern\n');},
-      {type:'decimal'}
-    );
-
 Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getNumberPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkPattern() {
           navigator.globalization.getNumberPattern(
-            function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                      'symbol: ' + pattern.symbol + '\n' +
+            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                      'symbol: '   + pattern.symbol   + '\n' +
                                       'fraction: ' + pattern.fraction + '\n' +
                                       'rounding: ' + pattern.rounding + '\n' +
                                       'positive: ' + pattern.positive + '\n' +
                                       'negative: ' + pattern.negative + '\n' +
-                                      'decimal: ' + pattern.decimal + '\n' +
+                                      'decimal: '  + pattern.decimal  + '\n' +
                                       'grouping: ' + pattern.grouping);},
             function () {alert('Error getting pattern\n');},
             {type:'decimal'}
           );
         }
-                                            
+
         </script>
       </head>
       <body>
         <button onclick="checkPattern()">Click for pattern</button>
       </body>
     </html>
-    
+
 Windows Phone 8 Quirks
 ----------------
-- `pattern` property is not supported; empty string is always returned.
-- `fraction` property is not supported; zero is always returned.
-    
-
+- The `pattern` property is not supported, and retuens an empty string.
+- The `fraction` property is not supported, and returns zero.

@@ -49,7 +49,7 @@ Quick Example
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
     //             Motorola Droid  returns "voles"
     // BlackBerry: Torch 9800      returns "9800"
-    // iOS:     for the iPad Mini, will return iPad2,5. iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
+    // iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
     //
     var model = device.model;
 
@@ -64,20 +64,19 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-    
             element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
-                                'Device Cordova: '  + device.cordova + '<br />' +
+                                'Device Cordova: '  + device.cordova  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
                                 'Device UUID: '     + device.uuid     + '<br />' +
-                                'Device Model: '    + device.model     + '<br />' +
+                                'Device Model: '    + device.model    + '<br />' +
                                 'Device Version: '  + device.version  + '<br />';
         }
 

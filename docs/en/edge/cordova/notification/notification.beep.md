@@ -20,18 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 notification.beep
 =================
 
-The device will play a beep sound.
+The device plays a beep sound.
 
     navigator.notification.beep(times);
 
-- __times:__ The number of times to repeat the beep (`Number`)
+- __times__: The number of times to repeat the beep. _(Number)_
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
@@ -53,11 +53,11 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Empty
@@ -66,11 +66,11 @@ Full Example
         // Show a custom alert
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
         }
 
         // Beep three times
@@ -97,24 +97,25 @@ Full Example
 Android Quirks
 --------------
 
-- Android plays the default "Notification ringtone" specified under the "Settings/Sound & Display" panel.
+- Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
 
-iPhone Quirks
+iOS Quirks
 -------------
 
 - Ignores the beep count argument.
-- There is no native beep API for iPhone.
-  - Cordova implements beep by playing an audio file via the media API.
-  - The user must provide a file with the desired beep tone.
-  - This file must be less than 30 seconds long, located in the www/ root, and must be named `beep.wav`.
+- The iPhone does not feature a native beep API.
+  - Cordova implements beeps by playing an audio file via the media API.
+  - The app must provide a file with the desired beep tone.
+  - This file must be less than 30 seconds long, located in the `www` root directory, and must be named `beep.wav`.
 
 Windows Phone 7 and 8 Quirks
 -------------
 
-- Cordova lib includes a generic beep file that is used.
+- Relies on a generic beep file from the Cordova distribution.
 
 Tizen Quirks
 -------------
 
-  - Tizen implements beep by playing an audio file via the media API.
-  - This beep file must be short, named `beep.wav` and has to be located in a 'sounds' sub-directory of the application root directory.
+- Tizen implements beeps by playing an audio file via the media API.
+- The beep file must be short, must be located in a `sounds` sub-directory of the application's root directory, and must be named `beep.wav`.
+
