@@ -25,7 +25,7 @@ CaptureImageOptions
 Properties
 ----------
 
-- __limit:__ The maximum number of images the device user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
+- __limit__: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).
 
 Quick Example
 -------------
@@ -38,4 +38,4 @@ Quick Example
 iOS Quirks
 ----------
 
-- The __limit__ parameter is not supported. One image is taken per invocation.
+- The __limit__ parameter is not supported, and only one image is taken per invocation.

@@ -20,38 +20,59 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getCurrencyPattern
 ===========
 
-Returns a pattern string for formatting and parsing currency values according
+Returns a pattern string to format and parse currency values according
 to the client's user preferences and ISO 4217 currency code.
 
-     navigator.globalization.getCurrencyPattern(currencyCode, successCB, errorCB);
+     navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
 
 Description
 -----------
 
-It returns the pattern to the successCB callback with a properties object as a parameter. That object should have the following properties:
+Returns the pattern to the `successCallback` with a `properties` object
+as a parameter. That object should contain the following properties:
 
-- pattern {String}: The currency pattern for formatting and parsing currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>
-- code {String}: The ISO 4217 currency code for the pattern.
-- fraction {Number}: The number of fractional digits to use when parsing and formatting currency.
-- rounding {Number}: The rounding increment to use when parsing and formatting.
-- decimal: {String}: The decimal symbol to use for parsing and formatting.
-- grouping: {String}: The grouping symbol to use for parsing and formatting.
+- __pattern__: The currency pattern to format and parse currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __code__: The ISO 4217 currency code for the pattern. _(String)_
+- __fraction__: The number of fractional digits to use when parsing and formatting currency. _(Number)_
+- __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+- __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+- __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
-The inbound `currencyCode` parameter should be a String of one of the ISO 4217 currency codes, for example 'USD'.
+The inbound `currencyCode` parameter should be a `String` of one of
+the ISO 4217 currency codes, for example 'USD'.
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.FORMATTING\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale and the selected currency is United States Dollars, this should display a popup dialog with text similar to:
+When the browser is set to the `en\_US` locale and the selected
+currency is United States Dollars, this example displays a popup
+dialog with text similar to the results that follow:
+
+    navigator.globalization.getCurrencyPattern(
+        'USD',
+        function (pattern) {
+            alert('pattern: '  + pattern.pattern  + '\n' +
+                  'code: '     + pattern.code     + '\n' +
+                  'fraction: ' + pattern.fraction + '\n' +
+                  'rounding: ' + pattern.rounding + '\n' +
+                  'decimal: '  + pattern.decimal  + '\n' +
+                  'grouping: ' + pattern.grouping);
+        },
+        function () { alert('Error getting pattern\n'); }
+    );
+
+Expected result:
 
     pattern: $#,##0.##;($#,##0.##)
     code: USD
@@ -60,46 +81,32 @@ In the case when the browser is set to the en\_US locale and the selected curren
     decimal: .
     grouping: ,
 
-.
-
-    navigator.globalization.getCurrencyPattern(
-      'USD',
-      function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                'code: ' + pattern.code + '\n' +
-                                'fraction: ' + pattern.fraction + '\n' +
-                                'rounding: ' + pattern.rounding + '\n' +
-                                'decimal: ' + pattern.decimal + '\n' +
-                                'grouping: ' + pattern.grouping);},
-      function () {alert('Error getting pattern\n');}
-    );
-
 Full Example
 ------------
 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getCurrencyPattern Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                  
+
         function checkPattern() {
           navigator.globalization.getCurrencyPattern(
             'USD',
-            function (pattern) {alert('pattern: ' + pattern.pattern + '\n' +
-                                      'code: ' + pattern.code + '\n' +
+            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
+                                      'code: '     + pattern.code     + '\n' +
                                       'fraction: ' + pattern.fraction + '\n' +
                                       'rounding: ' + pattern.rounding + '\n' +
-                                      'decimal: ' + pattern.decimal + '\n' +
+                                      'decimal: '  + pattern.decimal  + '\n' +
                                       'grouping: ' + pattern.grouping);},
             function () {alert('Error getting pattern\n');}
           );
         }
-                                            
+
         </script>
       </head>
       <body>
         <button onclick="checkPattern()">Click for pattern</button>
       </body>
     </html>
-

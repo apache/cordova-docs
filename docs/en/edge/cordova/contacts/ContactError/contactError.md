@@ -25,7 +25,7 @@ A `ContactError` object is passed to the `contactError` callback when an error o
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code__: One of the predefined error codes listed below.
 
 Constants
 ---------

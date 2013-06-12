@@ -25,7 +25,7 @@ A `CompassError` object is returned to the `compassError` callback function when
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code__: One of the predefined error codes listed below.
 
 Constants
 ---------
@@ -35,5 +35,5 @@ Constants
 Description
 -----------
 
-The `CompassError` object is returned to the user through the `compassError` callback function when an error occurs.
-
+When an error occurs, the `CompassError` object is passed as a
+parameter to a `compassError` callback function.

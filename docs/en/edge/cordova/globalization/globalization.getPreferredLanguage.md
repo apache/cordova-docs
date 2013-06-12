@@ -22,33 +22,37 @@ globalization.getPreferredLanguage
 
 Get the string identifier for the client's current language.
 
-    navigator.globalization.getPreferredLanguage(successCB, errorCB);
+    navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
 
-    
+
 Description
 -----------
 
-It returns the language identifier string to the successCB callback with a
-properties object as a parameter. That object should have a ``value`` property with a String value.
+Returns the language identifier string to the `successCallback` with a
+`properties` object as a parameter. That object should have a `value`
+property with a `String` value.
 
-If there is an error getting the language, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error getting the language, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 8
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with the text "language: English".
+When the browser is set to the `en\_US` locale, this should display a
+popup dialog with the text `language: English`:
 
     navigator.globalization.getPreferredLanguage(
-      function (language) {alert('language: ' + language.value + '\n');},
-      function () {alert('Error getting language\n');}
+        function (language) {alert('language: ' + language.value + '\n');},
+        function () {alert('Error getting language\n');}
     );
 
 Full Example
@@ -57,10 +61,10 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getPreferredLanguage Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-    
+
         function checkLanguage() {
           navigator.globalization.getPreferredLanguage(
             function (language) {alert('language: ' + language.value + '\n');},

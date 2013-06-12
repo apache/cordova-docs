@@ -25,8 +25,8 @@ CaptureAudioOptions
 Properties
 ----------
 
-- __limit:__ The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
-- __duration:__ The maximum duration of an audio sound clip, in seconds.
+- __limit__: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
+- __duration__: The maximum duration of an audio sound clip, in seconds.
 
 Quick Example
 -------------
@@ -39,14 +39,14 @@ Quick Example
 Android Quirks
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
+- The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
 
 BlackBerry WebWorks Quirks
 --------------------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
+- The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
 
 iOS Quirks
 ----------
 
-- The __limit__ parameter is not supported. One recording can be created for each invocation.
+- The `limit` parameter is not supported, so only one recording can be created for each invocation.

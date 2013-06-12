@@ -20,17 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 offline
 ===========
 
-This event fires when a Cordova application is offline (not connected to the Internet).
+The event fires when an application goes offline, and the device is
+not connected to the Internet.
 
     document.addEventListener("offline", yourCallbackFunction, false);
 
 Details
 -------
 
-When the application's network connection changes to being offline, the offline event is fired.
+The `offline` event fires when a previously connected device loses a
+network connection so that an application can no longer access the
+Internet.  It relies on the same information as the Connection API,
+and fires when the `connection.type` changes from `NONE` to any other
+value.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -57,25 +62,21 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Offline Example</title>
+        <title>Offline Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
-		    document.addEventListener("offline", onOffline, false);
+            document.addEventListener("offline", onOffline, false);
         }
 
         // Handle the offline event
@@ -91,12 +92,12 @@ Full Example
 
 iOS Quirks
 --------------------------
-During initial startup, the first offline event (if applicable) will take at least a second to fire.
+During initial startup, the first offline event (if applicable) takes at least a second to fire.
 
 Windows Phone 7 Quirks
 --------------------------
-When running in the Emulator, the connection.status of the device is always unknown, and this event will NOT fire.
+When running in the Emulator, the `connection.status` is always unknown, so this event does _not_ fire.
 
 Windows Phone 8 Quirks
 --------------------------
-Emulator reports connection type as Cellular, and it will not change, so events will NOT fire.
+The Emulator reports the connection type as `Cellular`, which does not change, so the event does _not_ fire.

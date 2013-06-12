@@ -36,7 +36,8 @@ Properties
 Description
 -----------
 
-The `Coordinates` object is created and populated by Cordova, and attached to the `Position` object. The `Position` object is then returned to the user through a callback function.
+The `Coordinates` object is attached to the `Position` object that is
+available to callback functions in requests for the current position.
 
 Supported Platforms
 -------------------
@@ -84,30 +85,30 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Set an event to wait for Cordova to load
+        // wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is loaded and Ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
-    
+
         // Display `Position` properties from the geolocation
         //
         function onSuccess(position) {
             var div = document.getElementById('myDiv');
-        
-            div.innerHTML = 'Latitude: '             + position.coords.latitude  + '<br/>' +
-                            'Longitude: '            + position.coords.longitude + '<br/>' +
-                            'Altitude: '             + position.coords.altitude  + '<br/>' +
-                            'Accuracy: '             + position.coords.accuracy  + '<br/>' +
-                            'Altitude Accuracy: '    + position.coords.altitudeAccuracy  + '<br/>' +
-                            'Heading: '              + position.coords.heading   + '<br/>' +
-                            'Speed: '                + position.coords.speed     + '<br/>';
+
+            div.innerHTML = 'Latitude: '             + position.coords.latitude         + '<br/>' +
+                            'Longitude: '            + position.coords.longitude        + '<br/>' +
+                            'Altitude: '             + position.coords.altitude         + '<br/>' +
+                            'Accuracy: '             + position.coords.accuracy         + '<br/>' +
+                            'Altitude Accuracy: '    + position.coords.altitudeAccuracy + '<br/>' +
+                            'Heading: '              + position.coords.heading          + '<br/>' +
+                            'Speed: '                + position.coords.speed            + '<br/>';
         }
-    
+
         // Show an alert if there is a problem getting the geolocation
         //
         function onError() {
@@ -124,4 +125,4 @@ Full Example
 Android Quirks
 -------------
 
-__altitudeAccuracy:__ Not supported by Android devices, returning `null`.
+__altitudeAccuracy__: Not supported by Android devices, returning `null`.

@@ -268,6 +268,7 @@ for Playbook and BlackBerry smartphone devices running BlackBerry OS
 any calls to `console.log`) on your device by holding down the ''ALT''
 key from the home screen and typing ''lglg'' keys.
 
+
 ## BlackBerry 10
 
 Command-line tools are based on shell scripts. If you need help with a command, type the command with the `-h` or `-help` arguments, which are supported by all commands and which will provide descriptions for each of the available arguments.

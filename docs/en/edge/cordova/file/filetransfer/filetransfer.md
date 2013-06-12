@@ -20,12 +20,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileTransfer
 ==========
 
-FileTransfer is an object that allows you to upload files to a server or download files from a server.
+The `FileTransfer` object allows you to upload or download files to
+and from a server.
 
 Properties
 ----------
 
-- __onprogress:__ Called with a ProgressEvent whenever a new chunk of data is transferred. _(Function)_
+- __onprogress__: Called with a `ProgressEvent` whenever a new chunk of data is transferred. _(Function)_
 
 Methods
 -------
@@ -37,8 +38,15 @@ Methods
 Details
 -------
 
-The `FileTransfer` object provides a way to upload files to a remote server using an HTTP multi-part POST request.  Both HTTP and HTTPS protocols are supported.  Optional parameters can be specified by passing a FileUploadOptions object to the upload method.  On successful upload, the success callback is called with a FileUploadResult object.  If an error occurs, the error callback will be invoked with a FileTransferError object.
-It is also possible to download a file from remote and save it on the device (only iOS and Android).
+The `FileTransfer` object provides a way to upload files to a remote
+server using an HTTP multi-part POST request.  Both HTTP and HTTPS
+protocols are supported.  Optional parameters can be specified by
+passing a `FileUploadOptions` object to the `upload()` method.  On
+successful upload, a `FileUploadResult` object is passed to the
+success callback.  If an error occurs, a `FileTransferError` object is
+passed to the error callback.  It is also possible (only on iOS and
+Android) to download a file from a remote server and save it on the
+device.
 
 Supported Platforms
 -------------------
@@ -54,32 +62,33 @@ upload
 
 __Parameters:__
 
-- __filePath__ - Full path of the file on the device
-- __server__ - URL of the server to receive the file (must already be encoded using encodeURI())
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
-- __options__ - Optional parameters such as file name and mimetype
-- __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __filePath__: Full path of the file on the device.
+- __server__: URL of the server to receive the file, as encoded by `encodeURI()`.
+- __successCallback__: A callback that is passed a `Metadata` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+- __options__: Optional parameters such as file name and mimetype.
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
-    
-    var win = function(r) {
-      console.log("Code = " + r.responseCode);
-      console.log("Response = " + r.response);
-      console.log("Sent = " + r.bytesSent);
+
+    var win = function (r) {
+        console.log("Code = " + r.responseCode);
+        console.log("Response = " + r.response);
+        console.log("Sent = " + r.bytesSent);
     }
-    var fail = function(error) {
-      alert("An error has occurred: Code = " + error.code);
-      console.log("upload error source " + error.source);
-      console.log("upload error target " + error.target);
+
+    var fail = function (error) {
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
     }
-    
+
     var options = new FileUploadOptions();
-    options.fileKey="file";
-    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-    options.mimeType="text/plain";
+    options.fileKey = "file";
+    options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
+    options.mimeType = "text/plain";
 
     var params = {};
     params.value1 = "test";
@@ -96,56 +105,57 @@ __Full Example__
     <html>
     <head>
         <title>File Transfer Example</title>
-    
+
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-            
-            // Wait for Cordova to load
+
+            // Wait for device API libraries to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-            
-            // Cordova is ready
+
+            // device APIs are available
             //
             function onDeviceReady() {
-                
                 // Retrieve image file location from specified source
-                navigator.camera.getPicture(uploadPhoto,
-                                            function(message) { alert('get picture failed'); },
-                                            { quality: 50,
-                                            destinationType: navigator.camera.DestinationType.FILE_URI,
-                                            sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY }
-                                            );
-                
+                navigator.camera.getPicture(
+                    uploadPhoto,
+                    function(message) { alert('get picture failed'); },
+                    {
+                        quality         : 50,
+                        destinationType : navigator.camera.DestinationType.FILE_URI,
+                        sourceType      : navigator.camera.PictureSourceType.PHOTOLIBRARY
+                    }
+                );
             }
-            
+
             function uploadPhoto(imageURI) {
                 var options = new FileUploadOptions();
                 options.fileKey="file";
                 options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
                 options.mimeType="image/jpeg";
-                
+
                 var params = {};
                 params.value1 = "test";
                 params.value2 = "param";
-                
+
                 options.params = params;
-                
+
                 var ft = new FileTransfer();
                 ft.upload(imageURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
             }
-            
+
             function win(r) {
                 console.log("Code = " + r.responseCode);
                 console.log("Response = " + r.response);
                 console.log("Sent = " + r.bytesSent);
             }
-            
+
             function fail(error) {
                 alert("An error has occurred: Code = " + error.code);
                 console.log("upload error source " + error.source);
                 console.log("upload error target " + error.target);
             }
-            
+
             </script>
     </head>
     <body>
@@ -163,42 +173,43 @@ Supported on Android and iOS
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
     }
-    
+
     function fail(error) {
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-    
+
     var uri = encodeURI("http://some.server.com/upload.php");
-    
+
     var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
     options.mimeType="text/plain";
-        
+
     var headers={'headerParam':'headerValue'};
-    
+
     options.headers = headers;
-    
+
     var ft = new FileTransfer();
     ft.upload(fileURI, uri, win, fail, options);
 
 __Android Quirks__
 
-If you experience problems uploading to a Nginx server then make sure you have the chunkedMode option set to false.
+Set the `chunkedMode` option to `false` to prevent problems uploading
+to a Nginx server.
 
 download
 --------------
 
 __Parameters:__
 
-- __source__ - URL of the server to download the file (must already be encoded using encodeURI())
-- __target__ - Full path of the file on the device
-- __successCallback__ - A callback that is called with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileTransferError object. _(Function)_
-- __trustAllHosts__ - Optional parameter, defaults to false. If set to true then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
-- __options__ - Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
+- __source__: URL of the server to download the file, as encoded by `encodeURI()`.
+- __target__: Full path of the file on the device.
+- __successCallback__: A callback that is passed  a `FileEntry` object. _(Function)_
+- __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true` then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
 __Quick Example__
 
@@ -206,7 +217,7 @@ __Quick Example__
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://some.server.com/download.php");
-    
+
     fileTransfer.download(
         uri,
         filePath,
@@ -229,7 +240,7 @@ __Quick Example__
 abort
 --------------
 
-Aborts an in-progress transfer. The onerror callback is called with a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
+Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
 __Supported Platforms__
 
@@ -237,33 +248,33 @@ __Supported Platforms__
 - iOS
 
 __Quick Example__
-	
+
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
-	
-  	var win = function(r) {
+
+          var win = function(r) {
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
-	}
-	
+        }
+
     var fail = function(error) {
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
-	
-	var options = new FileUploadOptions();
-	options.fileKey="file";
-	options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-	options.mimeType="text/plain";
+
+        var options = new FileUploadOptions();
+        options.fileKey="file";
+        options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+        options.mimeType="text/plain";
 
     var params = {};
-	params.value1 = "test";
-	params.value2 = "param";
-		
-	options.params = params;
-	
-	var ft = new FileTransfer();
+        params.value1 = "test";
+        params.value2 = "param";
+
+        options.params = params;
+
+        var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort(win, fail);
 

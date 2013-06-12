@@ -30,7 +30,11 @@ MediaFile.getFormatData
 Description
 -----------
 
-This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a MediaFileData object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.
+This function asynchronously attempts to retrieve the format
+information for the media file.  If successful, it invokes the
+`MediaFileDataSuccessCB` callback with a `MediaFileData` object.  If
+the attempt fails, this function invokes the `MediaFileDataErrorCB`
+callback.
 
 Supported Platforms
 -------------------
@@ -43,12 +47,18 @@ Supported Platforms
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  Therefore, all MediaFileData objects will be returned with default values.  See MediaFileData documentation.
+
+Does not provide an API for information about media files, so all
+`MediaFileData` objects return with default values.
 
 Android Quirks
 --------------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+
+The API to access media file format information is limited, so not all
+`MediaFileData` properties are supported.
 
 iOS Quirks
 ----------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+
+The API to access media file format information is limited, so not all
+`MediaFileData` properties are supported.

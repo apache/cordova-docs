@@ -24,14 +24,14 @@ Vibrates the device for the specified amount of time.
 
     navigator.notification.vibrate(milliseconds)
 
-- __time:__ Milliseconds to vibrate the device. 1000 milliseconds equals 1 second (`Number`)
+- __time__: Milliseconds to vibrate the device, where 1000 milliseconds equals 1 second. _(Number)_
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 
@@ -44,7 +44,7 @@ Quick Example
 
 Full Example
 ------------
-    
+
     <!DOCTYPE html>
     <html>
       <head>
@@ -53,32 +53,32 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Empty
         }
-    
+
         // Show a custom alert
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
         }
-    
+
         // Beep three times
         //
         function playBeep() {
             navigator.notification.beep(3);
         }
-    
+
         // Vibrate for 2 seconds
         //
         function vibrate() {
@@ -94,10 +94,10 @@ Full Example
       </body>
     </html>
 
-iPhone Quirks
+iOS Quirks
 -------------
 
-- __time:__ Ignores the time and vibrates for a pre-set amount of time.
+- __time__: Ignores the specified time and vibrates for a pre-set amount of time.
 
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored

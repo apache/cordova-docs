@@ -23,17 +23,27 @@ capture.captureImage
 > Start the camera application and return information about captured image file(s).
 
     navigator.device.capture.captureImage(
-	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
-	);
+        CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
+    );
 
 Description
 -----------
 
-This method starts an asynchronous operation to capture images using the device camera application.  The operation allows the device user to capture multiple images in a single session.
+Starts an asynchronous operation to capture images using the device's
+camera application.  The operation allows users to capture more than
+one image in a single session.
 
-The capture operation ends when either the user exits the camera application, or the maximum number of images, specified by the __limit__ parameter in CaptureImageOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user captures a single image.
+The capture operation ends either when the user closes the camera
+application, or the maximum number of recordings specified by
+`CaptureAudioOptions.limit` is reached.  If no `limit` value is
+specified, it defaults to one (1), and the capture operation
+terminates after the user captures a single image.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured image file.  If the operation is terminated by the user before an image is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+When the capture operation finishes, it invokes the `CaptureCB`
+callback with an array of `MediaFile` objects describing each captured
+image file.  If the user terminates the operation before capturing an
+image, the `CaptureErrorCB` callback executes with a `CaptureError`
+object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
 Supported Platforms
 -------------------
@@ -49,7 +59,7 @@ Windows Phone 7 Quirks
 ----------------------
 
 Invoking the native camera application while your device is connected
-via Zune will not work, and the error callback will be triggered.
+via Zune does not work, and the error callback executes.
 
 Quick Example
 -------------
@@ -89,13 +99,13 @@ Full Example
             var i, len;
             for (i = 0, len = mediaFiles.length; i < len; i += 1) {
                 uploadFile(mediaFiles[i]);
-            }	
+            }
         }
 
         // Called if something bad happens.
         //
         function captureError(error) {
-	        var msg = 'An error occurred during capture: ' + error.code;
+            var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
         }
 
@@ -135,24 +145,24 @@ Full Example
 Bada Quirks
 -----------
 
-Bada supports _captureImage_ just like the other platforms. However there is _another_ mode where you can capture a video or an image straight in the webview without launching any camera app. In order to do that you need to:
+Bada supports `captureImage` just like the other platforms, but
+features _another_ mode allowing video or image capture straight into
+the WebView without launching any camera app. Here's how:
 
-1. create a _&#60;div&#62;_ element somewhere in your document and give it an id (such as "preview").
+1. Create an element with an `id` attribute somewhere in the HTML:
 
         <div id="preview"></div>
 
-2. Initialize the camera preview with the following method
+2. Initialize the camera preview as follows:
 
         navigator.camera.showPreview("preview");
 
-3. Once you get the preview you can
-
-    3.1 Capture an image with
+3. Once you the preview displays, capture the image with code such as the following:
 
         var options = { destinationFilename: "images/cam01.jpg", highRes: false};
         navigator.capture.captureImage(success, fail, options);
-    
-3. Hide the camera preview with the following method
+
+4. Dismiss the camera preview as follows:
 
         navigator.camera.hidePreview("preview");
 

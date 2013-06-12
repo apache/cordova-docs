@@ -20,17 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 resume
 ===========
 
-This event fires when a Cordova application is retrieved from the background.
+The event fires when an application is retrieved from the background.
 
     document.addEventListener("resume", yourCallbackFunction, false);
 
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code pulls the application from the background the resume event is fired.
+The `resume` event fires when the native platform pulls the
+application out from the background.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -56,22 +57,18 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Resume Example</title>
+        <title>Resume Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
             document.addEventListener("resume", onResume, false);
@@ -90,17 +87,29 @@ Full Example
 
 iOS Quirks
 --------------------------
-Any calls to console.log during your **pause** event handler will be run now when the app resumes, see the iOS Quirks section for the **pause** event for an explanation.
+
+Any interactive functions called from a `pause` event handler execute
+later when the app resumes, as signaled by the `resume` event. These
+include alerts, `console.log()`, and any calls from plugins or the
+Cordova API, which go through Objective-C.
 
 - __active__ event
 
-    This iOS specific event is available as a variant of the **resume** event, and is often used to detect when the "Lock" button has been pressed to unlock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **resume** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background).
-
-    Under iOS 5,  if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.
-
+    The iOS-specific `active` event is available as an alternative to
+`resume`, and detects when users disable the __Lock__ button to unlock
+the device with the app running in the foreground.  If the app (and
+device) is enabled for multi-tasking, this is paired with a subsequent
+`resume` event, but only under iOS 5. In effect, all locked apps in
+iOS 5 that have multi-tasking enabled are pushed to the background.
+For apps to remain running when locked under iOS 5, disable the app's
+multi-tasking by setting [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)
+to `YES`. To run when locked on iOS 4, this setting does not matter.
+    
 - __resume__ event
 
-    Interactive functions like alert() when the resume event fires will need to be wrapped in a setTimeout call with a timeout value of zero, or else the app will hang. e.g.
+    When called from a `resume` event handler, interactive functions such
+as `alert()` need to be wrapped in a `setTimeout()` call with a
+timeout value of zero, or else the app hangs. For example:
 
         document.addEventListener("resume", onResume, false);
         function onResume() {

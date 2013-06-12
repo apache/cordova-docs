@@ -24,22 +24,24 @@ Shows a custom alert or dialog box.
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message:__ Dialog message (`String`)
-- __alertCallback:__ Callback to invoke when alert dialog is dismissed. (`Function`)
-- __title:__ Dialog title (`String`) (Optional, Default: "Alert")
-- __buttonName:__ Button name (`String`) (Optional, Default: "OK")
-    
+- __message__: Dialog message. _(String)_
+- __alertCallback__: Callback to invoke when alert dialog is dismissed. _(Function)_
+- __title__: Dialog title. _(String)_ (Optional, defaults to `Alert`)
+- __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
+
 Description
 -----------
 
-Most Cordova implementations use a native dialog box for this feature.  However, some platforms simply use the browser's `alert` function, which is typically less customizable.
+Most Cordova implementations use a native dialog box for this feature,
+but some platforms use the browser's `alert` function, which is
+typically less customizable.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
@@ -49,7 +51,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iPhone / Tizen
+    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
     //
     function alertDismissed() {
         // do something
@@ -61,7 +63,7 @@ Quick Example
         'Game Over',            // title
         'Done'                  // buttonName
     );
-        
+
 Full Example
 ------------
 
@@ -73,32 +75,32 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Empty
         }
-    
+
         // alert dialog dismissed
-	    function alertDismissed() {
-	        // do something
-	    }
+            function alertDismissed() {
+                // do something
+            }
 
         // Show a custom alertDismissed
         //
         function showAlert() {
-		    navigator.notification.alert(
-		        'You are the winner!',  // message
-		        alertDismissed,         // callback
-		        'Game Over',            // title
-		        'Done'                  // buttonName
-		    );
+            navigator.notification.alert(
+                'You are the winner!',  // message
+                alertDismissed,         // callback
+                'Game Over',            // title
+                'Done'                  // buttonName
+            );
         }
-    
+
         </script>
       </head>
       <body>
@@ -109,9 +111,12 @@ Full Example
 Windows Phone 7 and 8 Quirks
 -------------
 
-- There is no built in browser alert, so if you want to just write alert('foo'); you can assign window.alert = navigator.notification.alert;
-- alert + confirm calls are non-blocking, and result is only available asynchronously.
+- There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:
+
+        window.alert = navigator.notification.alert;
+
+- Both `alert` and `confirm` are non-blocking calls, results of which are only available asynchronously.
 
 Bada 2.x Quirks
 ---------------
-- alert uses javascript alert
+- Uses JavaScript's `alert` function.

@@ -20,12 +20,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileError
 ========
 
-A 'FileError' object is set when an error occurs in any of the File API methods.
+A `FileError` object is set when an error occurs in any of the File API methods.
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code__: One of the predefined error codes listed below.
 
 Constants
 ---------
@@ -46,4 +46,6 @@ Constants
 Description
 -----------
 
-The `FileError` object is the only parameter of any of the File API's error callbacks.  Developers must read the code property to determine the type of error.
+The `FileError` object is the only parameter provided to any of the
+File API's error callbacks.  To determine the type of error, compare
+its `code` property to any of the listings above.

@@ -31,6 +31,5 @@ contacts returned from the contacts database.
 Options
 -------
 
-- __filter:__ The search string used to filter contacts. _(DOMString)_ (Default: `""`)
-- __multiple:__ Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: `false`)
-
+- __filter__: The search string used to filter contacts. _(DOMString)_ (Default: `""`)
+- __multiple__: Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: `false`)

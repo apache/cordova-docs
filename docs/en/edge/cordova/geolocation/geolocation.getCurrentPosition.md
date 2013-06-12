@@ -29,14 +29,18 @@ Returns the device's current position as a `Position` object.
 Parameters
 ----------
 
-- __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: (Optional) The callback that is called if there was an error.
-- __geolocationOptions__: (Optional) The geolocation options.
+- __geolocationSuccess__: The callback that is passed the current position.
+- __geolocationError__: _(Optional)_ The callback that executes if an error occurs.
+- __geolocationOptions__: _(Optional)_ The geolocation options.
 
 Description
 -----------
 
-`geolocation.getCurrentPosition` is an asynchronous function. It returns the device's current position to the `geolocationSuccess` callback with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.getCurrentPosition` is an asynchronous function. It
+returns the device's current position to the `geolocationSuccess`
+callback with a `Position` object as the parameter.  If there is an
+error, the `geolocationError` callback is passed a
+`PositionError` object.
 
 Supported Platforms
 -------------------
@@ -54,8 +58,8 @@ Quick Example
 -------------
 
     // onSuccess Callback
-    //   This method accepts a `Position` object, which contains
-    //   the current GPS coordinates
+    // This method accepts a Position object, which contains the
+    // current GPS coordinates
     //
     var onSuccess = function(position) {
         alert('Latitude: '          + position.coords.latitude          + '\n' +
@@ -88,16 +92,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
@@ -109,14 +113,14 @@ Full Example
                                 'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
                                 'Heading: '            + position.coords.heading               + '<br />' +
                                 'Speed: '              + position.coords.speed                 + '<br />' +
-                                'Timestamp: '          +                                   position.timestamp          + '<br />';
+                                'Timestamp: '          + position.timestamp                    + '<br />';
         }
-    
+
         // onError Callback receives a PositionError object
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
-                    'message: ' + error.message + '\n');
+                  'message: ' + error.message + '\n');
         }
 
         </script>

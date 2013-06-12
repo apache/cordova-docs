@@ -48,7 +48,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
@@ -69,7 +69,7 @@ Quick Example
     };
 
     var options = { frequency: 3000 };  // Update every 3 seconds
-    
+
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
 Full Example
@@ -85,12 +85,12 @@ Full Example
 
         // The watch id references the current `watchAcceleration`
         var watchID = null;
-        
-        // Wait for Cordova to load
+
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             startWatch();
@@ -99,13 +99,13 @@ Full Example
         // Start watching the acceleration
         //
         function startWatch() {
-            
+
             // Update acceleration every 3 seconds
             var options = { frequency: 3000 };
-            
+
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
         }
-        
+
         // Stop watching the acceleration
         //
         function stopWatch() {
@@ -114,14 +114,14 @@ Full Example
                 watchID = null;
             }
         }
-        
+
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
             var element = document.getElementById('accelerometer');
-            element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
-                                'Acceleration Y: ' + acceleration.y + '<br />' +
-                                'Acceleration Z: ' + acceleration.z + '<br />' +
+            element.innerHTML = 'Acceleration X: ' + acceleration.x         + '<br />' +
+                                'Acceleration Y: ' + acceleration.y         + '<br />' +
+                                'Acceleration Z: ' + acceleration.z         + '<br />' +
                                 'Timestamp: '      + acceleration.timestamp + '<br />';
         }
 
@@ -138,11 +138,11 @@ Full Example
       </body>
     </html>
 
- iPhone Quirks
+iOS Quirks
 -------------
 
-- Cordova calls the success callback function at the interval
-  requested, but restricts the range of requests to the device between
-  40ms and 1000ms. For example, if you request an interval of 3
-  seconds, (3000ms), Cordova requests data from the device every 1
-  second, but only executes the success callback every 3 seconds.
+The API calls the success callback function at the interval requested,
+but restricts the range of requests to the device between 40ms and
+1000ms. For example, if you request an interval of 3 seconds,
+(3000ms), the API requests data from the device every 1 second, but
+only executes the success callback every 3 seconds.

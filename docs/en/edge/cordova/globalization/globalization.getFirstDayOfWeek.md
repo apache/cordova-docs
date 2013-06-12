@@ -20,33 +20,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 globalization.getFirstDayOfWeek
 ===========
 
-Returns the first day of the week according to the client's user preferences and calendar.
+Returns the first day of the week according to the client's user
+preferences and calendar.
 
-    navigator.globalization.getFirstDayOfWeek(successCB, errorCB);
-    
+    navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
+
 Description
 -----------
 
-The days of the week are numbered starting from 1 where 1 is considered to be Sunday. It returns the day to the successCB callback with a properties object as a parameter. That object should have a ``value`` property with a Number value.
+The days of the week are numbered starting from 1, where 1 is assumed
+to be Sunday.  Returns the day to the `successCallback` with a
+`properties` object as a parameter. That object should have a `value`
+property with a `Number` value.
 
-If there is an error obtaining the pattern, then the errorCB callback is invoked with a GlobalizationError object as a parameter. The expected code for this error is GlobalizationError.UNKNOWN\_ERROR.
+If there is an error obtaining the pattern, then the `errorCallback`
+executes with a `GlobalizationError` object as a parameter. The
+error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 8
 
 Quick Example
 -------------
 
-In the case when the browser is set to the en\_US locale, this should display a popup dialog with text similar to "day: 1".
+When the browser is set to the `en\_US` locale, this displays a
+popup dialog with text similar to `day: 1`.
 
     navigator.globalization.getFirstDayOfWeek(
-      function (day) {alert('day: ' + day.value + '\n');},
-      function () {alert('Error getting day\n');}
+        function (day) {alert('day: ' + day.value + '\n');},
+        function () {alert('Error getting day\n');}
     );
 
 Full Example
@@ -55,17 +62,17 @@ Full Example
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Cordova</title>
+        <title>getFirstDayOfWeek Example</title>
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
-                      
+
         function checkFirstDay() {
           navigator.globalization.getFirstDayOfWeek(
             function (day) {alert('day: ' + day.value + '\n');},
             function () {alert('Error getting day\n');}
           );
         }
-        
+
         </script>
       </head>
       <body>

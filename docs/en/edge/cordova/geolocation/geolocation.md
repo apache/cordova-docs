@@ -20,11 +20,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Geolocation
 ===========
 
-> The `geolocation` object provides access to the device's GPS sensor.
+> The `geolocation` object provides access to location data based on the device's GPS sensor or inferred from network signals.
 
-Geolocation provides location information for the device, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs. No guarantee is given that the API returns the device's actual location.
+`Geolocation` provides information about the device's location, such as
+latitude and longitude. Common sources of location information include
+Global Positioning System (GPS) and location inferred from network
+signals such as IP address, RFID, WiFi and Bluetooth MAC addresses,
+and GSM/CDMA cell IDs. There is no guarantee that the API returns the
+device's actual location.
 
-This API is based on the [W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html).  Some devices (Android, BlackBerry, Bada, Windows Phone 7, webOS and Tizen, to be specific) already provide an implementation of this spec.  For those devices, the built-in support is used instead of replacing it with Cordova's implementation.  For devices that don't have geolocation support, the Cordova implementation adheres to the W3C specification.
+This API is based on the
+[W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html),
+and only executes on devices that don't already provide an implementation.
 
 **Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's [privacy policy](guide_getting-started_index.md.html) should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the Privacy Guide.
 

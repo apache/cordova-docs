@@ -155,7 +155,7 @@ application:
         }
     }
 
-Let's take a look at the code. The necessary Cordova `imports` are at
+Let's take a look at the code. The necessary `imports` are at
 the top. Our class extends from `CordovaPlugin`. We override the
 execute() method in order to recieve messages from exec(). Our method
 first compares against `action`: this plugin only supports one action,

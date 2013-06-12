@@ -29,7 +29,7 @@ onSuccess callback function that provides the image data.
 Parameters
 ----------
 
-- __imageData:__ Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. (`String`)
+- __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. _(String)_
 
 Example
 -------

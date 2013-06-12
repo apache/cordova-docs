@@ -29,8 +29,8 @@ Watches for changes to the device's current position.
 Parameters
 ----------
 
-- __geolocationSuccess__: The callback that is called with the current position.
-- __geolocationError__: (Optional) The callback that is called if there was an error.
+- __geolocationSuccess__: The callback that is passed the current position.
+- __geolocationError__: (Optional) The callback that executes if an error occurs.
 - __geolocationOptions__: (Optional) The geolocation options.
 
 Returns
@@ -41,7 +41,12 @@ Returns
 Description
 -----------
 
-`geolocation.watchPosition` is an asynchronous function. It returns the device's current position when a change in position has been detected.  When the device has retrieved a new location, the `geolocationSuccess` callback is invoked with a `Position` object as the parameter.  If there is an error, the `geolocationError` callback is invoked with a `PositionError` object.
+`geolocation.watchPosition` is an asynchronous function. It returns
+the device's current position when a change in position is detected.
+When the device retrieves a new location, the `geolocationSuccess`
+callback executes with a `Position` object as the parameter.  If
+there is an error, the `geolocationError` callback executes with a
+`PositionError` object as the parameter.
 
 Supported Platforms
 -------------------
@@ -91,20 +96,20 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
         var watchID = null;
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             // Throw an error if no update is received every 30 seconds
             var options = { timeout: 30000 };
             watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
         }
-    
+
         // onSuccess Geolocation
         //
         function onSuccess(position) {
@@ -113,13 +118,13 @@ Full Example
                                 'Longitude: ' + position.coords.longitude     + '<br />' +
                                 '<hr />'      + element.innerHTML;
         }
-    
-	    // onError Callback receives a PositionError object
-	    //
-	    function onError(error) {
-	        alert('code: '    + error.code    + '\n' +
-	              'message: ' + error.message + '\n');
-	    }
+
+            // onError Callback receives a PositionError object
+            //
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' +
+                      'message: ' + error.message + '\n');
+            }
 
         </script>
       </head>

@@ -20,25 +20,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 FileUploadOptions
 ========
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the `FileTransfer`
+object's `upload()` method to specify additional parameters to the
+upload script.
 
 Properties
 ----------
 
-- __fileKey:__ The name of the form element.  If not set defaults to "file". (DOMString)
-- __fileName:__ The file name you want the file to be saved as on the server.  If not set defaults to "image.jpg". (DOMString)
-- __mimeType:__ The mime type of the data you are uploading.  If not set defaults to "image/jpeg". (DOMString)
-- __params:__ A set of optional key/value pairs to be passed along in the HTTP request. (Object)
-- __chunkedMode:__ Should the data be uploaded in chunked streaming mode. If not set defaults to "true". (Boolean)
-- __headers:__ A map of header name => header value. To specify multiple values for a header, use an array of values. (Object)
+- __fileKey__: The name of the form element.  Defaults to `file`. (DOMString)
+- __fileName__: The file name to use when saving the file on the server.  Defaults to `image.jpg`. (DOMString)
+- __mimeType__: The mime type of the data to upload.  Defaults to `image/jpeg`. (DOMString)
+- __params__: A set of optional key/value pairs to pass in the HTTP request. (Object)
+- __chunkedMode__: Whether to upload the data in chunked streaming mode. Defaults to `true`. (Boolean)
+- __headers__: A map of header name/header values. Use an array to specify more than one value. (Object)
 
 Description
 -----------
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+A `FileUploadOptions` object can be passed to the `FileTransfer`
+object's `upload()` method to specify additional parameters to the
+upload script.
 
 WP7 Quirk
 ---------
 
-- __chunkedMode:__
-    This parameter is ignored on WP7.
+- __chunkedMode:__: Ignored on WP7.

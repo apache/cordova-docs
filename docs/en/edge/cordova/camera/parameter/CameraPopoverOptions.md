@@ -34,15 +34,15 @@ or album.
 CameraPopoverOptions
 --------------------
 
-- __x:__ x pixel coordinate of screen element onto which to anchor the popover. (`Number`)
+- __x__: x pixel coordinate of screen element onto which to anchor the popover. _(Number)_
 
-- __y:__ y pixel coordinate of screen element onto which to anchor the popover. (`Number`)
+- __y__: y pixel coordinate of screen element onto which to anchor the popover. _(Number)_
 
-- __width:__ width, in pixels, of the screen element onto which to anchor the popover. (`Number`)
+- __width__: width, in pixels, of the screen element onto which to anchor the popover. _(Number)_
 
-- __height:__ height, in pixels, of the screen element onto which to anchor the popover. (`Number`)
+- __height__: height, in pixels, of the screen element onto which to anchor the popover. _(Number)_
 
-- __arrowDir:__ Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` (`Number`)
+- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` _(Number)_
 
             Camera.PopoverArrowDirection = {
                 ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
@@ -60,17 +60,21 @@ location.
 Quick Example
 -------------
 
-     var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
-     var options = { quality: 50, destinationType: Camera.DestinationType.DATA_URL,sourceType: Camera.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
-     
-     navigator.camera.getPicture(onSuccess, onFail, options);
-     
-     function onSuccess(imageData) {
-        var image = document.getElementById('myImage');
-        image.src = "data:image/jpeg;base64," + imageData;
-    }
+     var popover = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
+     var options = {
+         quality         : 50,
+         destinationType : Camera.DestinationType.DATA_URL,
+         sourceType      : Camera.PictureSource.SAVEDPHOTOALBUM,
+         popoverOptions  : popover
+     };
 
-    function onFail(message) {
-        alert('Failed because: ' + message);
-    }
-     
+     navigator.camera.getPicture(onSuccess, onFail, options);
+
+     function onSuccess(imageData) {
+         var image = document.getElementById('myImage');
+         image.src = "data:image/jpeg;base64," + imageData;
+     }
+
+     function onFail(message) {
+         alert('Failed because: ' + message);
+     }

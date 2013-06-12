@@ -24,20 +24,24 @@ Media
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
-Note: The current implementation does not adhere to a W3C specification for media capture, and is provided for convenience only.  A future implementation will adhere to the latest W3C specification and may deprecate the current APIs.
+__NOTE:__ The current implementation does not adhere to a W3C
+specification for media capture, and is provided for convenience only.
+A future implementation will adhere to the latest W3C specification
+and may deprecate the current APIs.
 
 Parameters
 ----------
 
 - __src__: A URI containing the audio content. _(DOMString)_
-- __mediaSuccess__: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. _(Function)_
-- __mediaError__: (Optional) The callback that is invoked if there was an error. _(Function)_
-- __mediaStatus__: (Optional) The callback that is invoked to indicate status changes. _(Function)_
+- __mediaSuccess__: (Optional) The callback that executes after a `Media` object has completed the current play, record, or stop action. _(Function)_
+- __mediaError__: (Optional) The callback that executes if an error occurs. _(Function)_
+- __mediaStatus__: (Optional) The callback that executes to indicate status changes. _(Function)_
 
 Constants
 ---------
 
-The following constants are reported as the only parameter to the __mediaStatus__ callback function.
+The following constants are reported as the only parameter to the
+`mediaStatus` callback:
 
 - `Media.MEDIA_NONE`     = 0;
 - `Media.MEDIA_STARTING` = 1;
@@ -48,23 +52,23 @@ The following constants are reported as the only parameter to the __mediaStatus_
 Methods
 -------
 
-- media.getCurrentPosition: Returns the current position within an audio file.
-- media.getDuration: Returns the duration of an audio file.
-- media.play: Start or resume playing audio file.
-- media.pause: Pause playing audio file.
-- media.release: Releases the underlying OS'es audio resources.
-- media.seekTo: Moves the position within the audio file.
-- media.setVolume: Set the volume for audio playback.
-- media.startRecord: Start recording audio file.
-- media.stopRecord: Stop recording audio file.
-- media.stop: Stop playing audio file.
+- `media.getCurrentPosition`: Returns the current position within an audio file.
+- `media.getDuration`: Returns the duration of an audio file.
+- `media.play`: Start or resume playing an audio file.
+- `media.pause`: Pause playback of an audio file.
+- `media.release`: Releases the underlying operating system's audio resources.
+- `media.seekTo`: Moves the position within the audio file.
+- `media.setVolume`: Set the volume for audio playback.
+- `media.startRecord`: Start recording an audio file.
+- `media.stopRecord`: Stop recording an audio file.
+- `media.stop`: Stop playing an audio file.
 
 Additional ReadOnly Parameters
 ---------------------
 
-- __position__: The position within the audio playback in seconds.
-    - Not automatically updated during play, call `getCurrentPosition` to update.
-- __duration__: The duration of the media in seconds.
+- __position__: The position within the audio playback, in seconds.
+    - Not automatically updated during play; call `getCurrentPosition` to update.
+- __duration__: The duration of the media, in seconds.
 
 Supported Platforms
 -------------------
@@ -135,9 +139,7 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
 ### Windows Phone Quirks
 
-    Only one media file can be played back at a time.
-
-There are strict restrictions as to how your application interacts with other media. See the [Microsoft documentation for details][url].
+- Only one media file can be played back at a time.
+- There are strict restrictions on how your application interacts with other media. See the [Microsoft documentation for details][url].
 
 [url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx
-

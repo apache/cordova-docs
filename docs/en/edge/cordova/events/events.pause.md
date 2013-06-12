@@ -20,17 +20,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 pause
 ===========
 
-This event fires when a Cordova application is put into the background.
+The event fires when an application is put into the background.
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
 Details
 -------
 
-Cordova consists of two code bases: native and JavaScript. While the native code puts the application into the background the pause event is fired.
+
+The `pause` event fires when the native platform puts the application
+into the background, typically when the user switches to a different
+application.
 
 Applications typically should use `document.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -56,25 +59,21 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Pause Example</title>
+        <title>Pause Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
-        //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
+        // Wait for device API libraries to load
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
-		    document.addEventListener("pause", onPause, false);
+            document.addEventListener("pause", onPause, false);
         }
 
         // Handle the pause event
@@ -90,10 +89,19 @@ Full Example
 
 iOS Quirks
 --------------------------
-In the pause handler, any calls that go through Objective-C will not work, nor will any calls that are interactive, like alerts. This means that you cannot call console.log (and its variants), or any calls from Plugins or the Cordova API. These will only be processed when the app resumes (processed on the next run-loop).
 
-- __resign__ event
+In the `pause` handler, any calls to the Cordova API or to native
+plug-ins that go through Objective-C do not work, along with any
+interactive calls, such as alerts or `console.log()`. They are only
+processed when the app resumes, on the next run loop.
 
-    This iOS specific event is available as a variant of the **pause** event, and is often used to detect when the "Lock" button has been pressed to lock the device when your app is the foreground app. If your app (and device) is enabled for multi-tasking, this will be paired with a subsequent **pause** event, but only under iOS 5 (effectively all "locked" apps in iOS 5 that have multi-tasking enabled are put to the background).
-
-    Under iOS 5, if you want your app to still run when the device is locked, you will have to disable multi-tasking (UIApplicationExitsOnSuspend - YES) for your app. This is different when you are on iOS 4 - to have your app run when the device is locked, the multi-tasking setting for your app does not matter.
+The iOS-specific `resign` event is available as an alternative to
+`pause`, and detects when users enable the __Lock__ button to lock the
+device with the app running in the foreground.  If the app (and
+device) is enabled for multi-tasking, this is paired with a subsequent
+`pause` event, but only under iOS 5. In effect, all locked apps in iOS
+5 that have multi-tasking enabled are pushed to the background.  For
+apps to remain running when locked under iOS 5, disable the app's
+multi-tasking by setting
+[UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)
+to `YES`. To run when locked on iOS 4, this setting does not matter.

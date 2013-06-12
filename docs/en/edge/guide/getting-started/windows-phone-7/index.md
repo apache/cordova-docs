@@ -86,6 +86,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - Press the green **play** button next to the drop-down menu to start debugging, or else type __F5__.
 
     ![](img/guide/getting-started/windows-phone-7/wprun.png)
+
     ![](img/guide/getting-started/windows-phone-7/wpfirstrun.png)
 
 6. Build your project for the device
@@ -105,4 +106,3 @@ Done!
 You can also checkout more detailed version of this guide [here](http://wiki.phonegap.com/w/page/48672055/Getting%20Started%20with%20PhoneGap%20Windows%20Phone%207).
 
 [register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
-

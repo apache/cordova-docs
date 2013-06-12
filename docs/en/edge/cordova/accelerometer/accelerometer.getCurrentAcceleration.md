@@ -39,7 +39,7 @@ Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
-- iPhone
+- iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - Tizen
@@ -72,16 +72,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
         }
-    
+
         // onSuccess: Get a snapshot of the current acceleration
         //
         function onSuccess(acceleration) {
@@ -90,7 +90,7 @@ Full Example
                   'Acceleration Z: ' + acceleration.z + '\n' +
                   'Timestamp: '      + acceleration.timestamp + '\n');
         }
-    
+
         // onError: Failed to get the acceleration
         //
         function onError() {
@@ -105,9 +105,9 @@ Full Example
       </body>
     </html>
 
-iPhone Quirks
+iOS Quirks
 -------------
 
-- iPhone doesn't recognize the concept of getting the current acceleration at any given point.
+- iOS doesn't recognize the concept of getting the current acceleration at any given point.
 - You must watch the acceleration and capture the data at given time intervals.
-- Thus, the `getCurrentAcceleration` function yields the last value reported from a Cordova `watchAccelerometer` call.
+- Thus, the `getCurrentAcceleration` function yields the last value reported from a `watchAccelerometer` call.

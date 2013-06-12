@@ -20,26 +20,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 SQLResultSet
 =======
 
-When the executeSql method of a SQLTransaction is called it will invoke it's callback with a SQLResultSet.
+When a `SQLTransaction` object's `executeSql` method is called, the
+specified callback executes with a `SQLResultSet` parameter.
 
 Properties
 -------
 
-- __insertId__: the row ID of the row that the SQLResultSet object's SQL statement inserted into the database
-- __rowsAffected__: the number of rows that were changed by the SQL statement.  If the statement did not affect any rows then it is set to 0.
-- __rows__: a SQLResultSetRowList representing the rows returned.  If no rows are returned the object will be empty.
+- __insertId__: The row ID of the row that the `SQLResultSet` object's SQL statement inserted into the database.
+- __rowsAffected__: The number of rows changed by the SQL statement, zero if the statement did not affect any rows.
+- __rows__: a `SQLResultSetRowList` representing the rows returned, empty if no rows are returned.
 
 Details
 -------
 
-When you call the SQLTransaction executeSql method its callback methods is called with a SQLResultSet object.  The result object has three properties.  The first is the `insertId` which will return the row number of a success SQL insert statement.  If the SQL statement is not an insert then the `insertId` is not set.  The `rowsAffected` is always 0 for a SQL select statement.  For insert or update statements it returns the number of rows that have been modified.  The final property is of type SQLResultSetList and it contains the data returned from a SQL select statement.
+When a `SQLTransaction` object's `executeSql` method is called, the
+specified callback executes with a `SQLResultSet` parameter containing
+three properties:
+
+* The `insertId` returns the row number of a successly SQL insertion
+  statement.  If the SQL does not insert any rows, the `insertId` is
+  not set.
+
+* The `rowsAffected` is always `0` for a SQL `select` statement.  For
+  `insert` or `update` statements it returns the number of modified
+  rows.
+
+* The final `SQLResultSetList` contains the data returned from a SQL
+  select statement.
 
 Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
-- iPhone
+- iOS
 - webOS
 - Tizen
 
@@ -79,7 +93,7 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -124,7 +138,7 @@ Full Example
             db.transaction(queryDB, errorCB);
         }
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
             var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);

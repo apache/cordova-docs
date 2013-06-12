@@ -30,14 +30,14 @@ Details
 This event fires when the percentage of battery charge changes by at
 least 1 percent, or if the device is plugged in or unplugged.
 
-The battery status handler is called with an object that contains two
+The battery status handler is passed an object that contains two
 properties:
 
-- __level:__ The percentage of battery charge (0-100). _(Number)_
-- __isPlugged:__ A boolean that indicates whether the device is plugged in. _(Boolean)_
+- __level__: The percentage of battery charge (0-100). _(Number)_
+- __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `window.addEventListener` to
-attach an event listener once the Cordova `deviceready` event fires.
+attach an event listener once the `deviceready` event fires.
 
 Supported Platforms
 -------------------
@@ -62,7 +62,7 @@ Quick Example
 
     function onBatteryStatus(info) {
         // Handle the online event
-       	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
 Full Example
@@ -71,33 +71,29 @@ Full Example
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Cordova Device Ready Example</title>
+        <title>Device Ready Example</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Call onDeviceReady when Cordova is loaded.
+        // Wait for device API libraries to load
         //
-        // At this point, the document has loaded but cordova-x.x.x.js has not.
-        // When Cordova is loaded and talking with the native device,
-        // it will call the event `deviceready`.
-        //
-	    function onLoad() {
-    	    document.addEventListener("deviceready", onDeviceReady, false);
-    	}
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
 
-        // Cordova is loaded and it is now safe to make calls Cordova methods
+        // device APIs are available
         //
         function onDeviceReady() {
-		    window.addEventListener("batterystatus", onBatteryStatus, false);
+            window.addEventListener("batterystatus", onBatteryStatus, false);
         }
 
         // Handle the batterystatus event
         //
         function onBatteryStatus(info) {
-        	console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+            console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
         }
-        
+
         </script>
       </head>
       <body onload="onLoad()">

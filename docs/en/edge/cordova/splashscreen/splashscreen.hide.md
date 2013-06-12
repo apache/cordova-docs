@@ -27,7 +27,7 @@ Dismiss the splash screen.
 Description
 -----------
 
-navigator.splashscreen.hide() dismisses the applications splash screen.
+This method dismisses the application's splash screen.
 
 Supported Platforms
 -------------------
@@ -51,16 +51,16 @@ Full Example
         <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for Cordova to load
+        // Wait for device API libraries to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Cordova is ready
+        // device APIs are available
         //
         function onDeviceReady() {
-			navigator.splashscreen.hide();
+            navigator.splashscreen.hide();
         }
-		
+
         </script>
       </head>
       <body>
@@ -71,9 +71,10 @@ Full Example
 iOS Quirk
 ------------
 
-1. In your **config.xml**, you need to [modify the value](guide_project-settings_index.md.html#Project%20Settings) for **"AutoHideSplashScreen”** to false
-
-2. Then, if you want to delay hiding the splash screen for 2 seconds, you can do this in your **deviceready** event handler:
+The [`config.xml` file's setting](guide_project-settings_index.md.html#Project%20Settings) for
+`AutoHideSplashScreen` must be `false`. To delay hiding the splash
+screen for two seconds, add a timer such as the following in the
+`deviceready` event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();
