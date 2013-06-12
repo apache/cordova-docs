@@ -1,6 +1,6 @@
 ---
 license: Licensed to the Apache Software Foundation (ASF) under one
-        or more contributor license agreements.  See the NOTICE file
+         or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
          to you under the Apache License, Version 2.0 (the
@@ -56,9 +56,11 @@ images, media files, or other resources are necessary for it to run.
 The app executes as a _WebView_ within the native application wrapper,
 which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
-a `cordova.js` file, which provides API bindings. (See the API
-Reference for an overview, and the API and Configuration Guide for
-examples of how to use them.)
+a `cordova.js` file, which provides API bindings.
+<!-- XREF
+(See the API Reference for an overview, and the API and Configuration
+Guide for examples of how to use them.)
+XREF -->
 
 The Cordova-enabled WebView may provide the application with its
 entire user interface. It can also be a component within a larger,
@@ -80,32 +82,46 @@ the CLI for progressively greater shares of the development cycle:
 
 * For many mobile platforms, you can also use the CLI to set up
   additional project files required to compile within each SDK.  For
-  this to work, you must install each targeted platform's SDK. (See
-  Installing Platform SDKs for instructions.) As indicated in the
-  Platform Support table below, you may need to run the CLI on
-  different operating systems depending on the targeted platform.
+  this to work, you must install each targeted platform's SDK.
+  <!-- XREF
+  (See Installing Platform SDKs for instructions.)
+  XREF -->
+  As indicated in the Platform Support table below, you may need to
+  run the CLI on different operating systems depending on the targeted
+  platform.
 
 * For supporting platforms, the CLI can compile executible
   applications and run them in an SDK- or browser-based device
-  emulator, depending on the device feature you want to test.  (See
-  API and Configuration Guide for details.)  For comprehensive
-  testing, you can also generate application files and install them
-  directly on a device.
+  emulator, depending on the device feature you want to test.
+  <!-- XREF
+  (See API and Configuration Guide for details.)
+  XREF -->
+  For comprehensive testing, you can also generate application files
+  and install them directly on a device.
 
 At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
-options.  (See Platform Development Guide for details about each
-platform's SDK tool set.) An SDK environment is more appropriate if
-you want implement a hybrid app that mixes web-based and native
-application components.  (See Extended Hybrid Applications for more
-information.)  You may use the command-line utility to initially
-generate the app, or iteratively thereafter to feed updated code to
-SDK tools.  You may also build the app's configuration file yourself.
+options. 
+<!-- XREF
+(See Platform Development Guide for details about each platform's SDK tool set.)
+XREF -->
+An SDK environment is more appropriate if you want implement a hybrid
+app that mixes web-based and native application components.
+<!-- XREF
+(See Extended Hybrid Applications for more information.)
+XREF -->
+You may use the command-line utility to initially generate the app, or
+iteratively thereafter to feed updated code to SDK tools.  You may
+also build the app's configuration file yourself.
+<!-- XREF
 (See Configuration Reference for details.)
+XREF -->
 
 To build projects on some platforms, you may need to apply digital
-signatures. See Distributing Applications for information on how to
-upload your app to various store portals.
+signatures.
+<!-- XREF
+See Distributing Applications for information on how to upload your app to various store portals.
+XREF -->
 
 ## Platform Support
 

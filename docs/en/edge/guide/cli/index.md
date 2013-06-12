@@ -30,8 +30,10 @@ use various platforms' IDEs to develop them further.
 ## Prerequisites
 
 Before running any command-line tools, you need to install SDKs for
-each platform you wish to target. See Installing Platform SDKs for
-more details.
+each platform you wish to target.
+<!-- XREF
+(See Installing Platform SDKs for more details.)
+XREF -->
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -153,9 +155,12 @@ If you wish, you can use an SDK at this point to open the project you
 created. However, any edits you make to the project in an SDK affect
 the derivative set of assets, not the original cross-platform source
 files. Use this approach if you simply want to initialize a project.
+<!-- XREF
 (See the Platform Development Guide for information on how to develop
-applications within each SDK.)  Read on if you wish to use
-command-line tools for the entire development cycle.
+applications within each SDK.)
+XREF -->
+Read on if you wish to use command-line tools for the entire
+development cycle.
 
 ## Build the App
 
@@ -163,8 +168,10 @@ By default, the `cordova create` script generates a skeletal web-based
 application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
-default from `www/js/index.js`. (See API and Configuration Guide for
-details.)
+default from `www/js/index.js`.
+<!-- XREF
+(See API and Configuration Guide for details.)
+XREF -->
 
 Run the following command to iteratively build the project:
 
@@ -204,8 +211,10 @@ applications work with many device-level features. For example, you
 can simulate changes in location, changes to orientation, and other
 accelerometer-driven shaking gestures. Other platform features, such
 as access to the camera or user contacts, can often be tested on the
-SDK's device emulator, or else on the device itself. (See View the App
-in an Emulator, below.)
+SDK's device emulator, or else on the device itself.
+<!-- XREF
+(See View the App in an Emulator, below.)
+XREF -->
 
 The default application Cordova provides demonstrates a handler for
 the custom `deviceready` event, which ordinarily fires once Cordova
@@ -264,14 +273,19 @@ launch from the home screen:
 The mobile emulators provided by SDKs may be able to reproduce
 conditions you would encounter on an actual device, such as app that
 accesses the database of contacts or that chooses photos from the
-gallery. (See API and Configuration Guide for details.)
+gallery.
+<!-- XREF
+(See API and Configuration Guide for details.)
+XREF -->
 
 __NOTE:__ You can only use the `emulate` command to preview hybrid
 applications that mix cordova WebViews with native components, or that
 use plug-ins to bridge the two environments. The `ripple` emulator is
 only appropriate for simpler applications that stay confined to the
-scope of their WebView.  (See Extended Hybrid Applications for
-details.)
+scope of their WebView. 
+<!-- XREF
+(See Extended Hybrid Applications for details.)
+XREF -->
 
 <!--
 
