@@ -43,7 +43,7 @@ Methods
 - __abort__: Aborts writing file.
 - __seek__: Moves the file pointer to the byte specified.
 - __truncate__: Shortens the file to the length specified.
-- __write__: Writes data to the file with a UTF-8 encoding.
+- __write__: Writes data to the file.
 
 Details
 -------
@@ -52,12 +52,19 @@ The `FileWriter` object is a way to write files to the device file system (UTF-8
 
 A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
 
+Text data is supported by all platforms listed below. Text is encoded as UTF-8 before being written to the filesystem. Some platforms also support binary data, which can be passed in as either an ArrayBuffer or a Blob.
+
 Supported Platforms
 -------------------
 
+### Text and Binary suport
+
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+
+### Text only support
+
+- BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -102,6 +109,27 @@ Write Quick Example
     	console.log(error.code);
 	};
 	
+    entry.createWriter(win, fail);
+
+Binary Write Quick Example
+--------------------------
+
+    function win(writer) {
+        var data = new ArrayBuffer(5),
+            dataView = new Int8Array(data);
+        for (i=0; i < 5; i++) {
+            dataView[i] = i;
+        }
+        writer.onwrite = function(evt) {
+            console.log("write success");
+        };
+        writer.write(data);
+    };
+
+    var fail = function(evt) {
+        console.log(error.code);
+    };
+
     entry.createWriter(win, fail);
 
 Append Quick Example
