@@ -145,9 +145,10 @@ Run this to check your current set of platforms:
 
 (Note the `platform` and `platforms` commands are synonymous.)
 
-Run the following to remove a platform:
+Run either of the following synonymous commands to remove a platform:
 
         $ cordova platform remove blackberry
+        $ cordova platform rm android
 
 Running commands to add or remove platforms affects the contents of
 the project's _platforms_ directory, where each specified platform
