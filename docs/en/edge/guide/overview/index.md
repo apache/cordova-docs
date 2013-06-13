@@ -154,6 +154,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th></td>
         <th>Android</th>
         <th>Blackberry</th>
+        <th>Blackberry 10</th>
         <th>iOS</th>
         <th>Symbian</th>
         <th>WebOS</th>
@@ -171,6 +172,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="#">cordova<br/>CLI</a></th>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
         <td data-col="blackberry" class="y">Mac, Windows</td>
+        <td data-col="blackberry10" class="y">Mac, Windows</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="symbian"    class="u"></td>
         <td data-col="webos"      class="u"></td>
@@ -185,6 +187,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="#">PhoneGap<br/>Build</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -199,6 +202,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="guide_getting-started_index.md.html">IDE platform support</a></th>
         <td data-col="android"    class="y"><a href="guide_getting-started_android_index.md.html">         </a></td>
         <td data-col="blackberry" class="y"><a href="guide_getting-started_blackberry_index.md.html">      </a></td>
+        <td data-col="blackberry10" class="y"><a href="guide_getting-started_blackberry10_index.md.html">      </a></td>
         <td data-col="ios"        class="y"><a href="guide_getting-started_ios_index.md.html">             </a></td>
         <td data-col="symbian"    class="y"><a href="guide_getting-started_symbian_index.md.html">         </a></td>
         <td data-col="webos"      class="y"><a href="guide_getting-started_webos_index.md.html">           </a></td>
@@ -213,6 +217,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="#">Embedded<br/>WebView</a></th>
         <td data-col="android"    class="y"><a href="guide_cordova-webview_android.md.html"></a></td>
         <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"><a href="guide_cordova-webview_ios.md.html"></a></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -227,6 +232,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="guide_plugin-development_index.md.html">Plug-in<br/>Interface</a></th>
         <td data-col="android"    class="y"><a href="guide_plugin-development_android_index.md.html"></a></td>
         <td data-col="blackberry" class="y"><a href="guide_plugin-development_blackberry_index.md.html"></a></td>
+        <td data-col="blackberry10" class="y"><a href="guide_plugin-development_blackberry10_index.md.html"></a></td>
         <td data-col="ios"        class="y"><a href="guide_plugin-development_ios_index.md.html"></a></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -246,6 +252,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_accelerometer_accelerometer.md.html">Accelerometer</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -260,6 +267,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_camera_camera.md.html">Camera</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -274,6 +282,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_media_capture_capture.md.html">Capture</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -288,6 +297,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_compass_compass.md.html">Compass</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="y"></td>
@@ -302,6 +312,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_connection_connection.md.html">Connection</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -316,6 +327,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_contacts_contacts.md.html">Contacts</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="n"></td>
@@ -330,6 +342,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_device_device.md.html">Device</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -344,6 +357,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_events_events.md.html">Events</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -358,6 +372,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_file_file.md.html">File</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -372,6 +387,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_geolocation_geolocation.md.html">Geolocation</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -386,6 +402,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_globalization_globalization.md.html">Globalization</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="y"></td>
@@ -400,6 +417,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -414,6 +432,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_media_media.md.html">Media</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -428,6 +447,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_notification_notification.md.html">Notification</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
@@ -442,6 +462,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
+        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="n"></td>
         <td data-col="webos"      class="n"></td>
@@ -456,6 +477,7 @@ td , th[colspan]:first-of-type { text-align: center }
         <th><a href="cordova_storage_storage.md.html">Storage</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="symbian"    class="y"></td>
         <td data-col="webos"      class="y"></td>
