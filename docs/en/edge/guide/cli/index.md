@@ -24,8 +24,8 @@ This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
 them on different platforms, and run them within an emulator. You can
-also use the CLI to initially generate project code, after which you
-use various platforms' IDEs to develop them further.
+also use the CLI to initialize project code, after which you use
+various platforms' IDEs to develop them further.
 
 ## Prerequisites
 
@@ -59,13 +59,17 @@ To install the `cordova` command-line tool, follow these steps:
    installation, you should be able to invoke `node` or `npm` on your
    command line.
 
+<!--
+
 1. On Windows, install the `git` utility. If the command is not
    available on your command-line, download it from
    [git-scm.com](http://git-scm.com).
 
-1. Install the `cordova` utility. In Unix, the `sudo` command may be
-   necessary to install development utilities in otherwise restricted
-   directories:
+-->
+
+1. Install the `cordova` utility. In Unix, prefixing the additional
+   `sudo` command may be necessary to install development utilities in
+   otherwise restricted directories:
 
         $ sudo npm install -g cordova
 
@@ -87,7 +91,8 @@ Use this syntax to install a specific version:
 
         $ sudo npm install -g cordova@2.8.0
 
-Run the `info` command for a listing of available version numbers:
+Run the `info` command for a listing that includes the current version
+along with other available version numbers:
 
         $ npm info cordova
 
@@ -98,11 +103,12 @@ command such as the following:
 
         $ cordova create HelloWorld com.example.hello "Hello World"
 
-The first argument specifies a _HelloWorld_ directory that is
-generated for your project. Its `www` subdirectory houses your
-application's home page, along with various resources under `css`,
-`js`, and `img` that are common for web development. The `config.xml`
-file contains important metadata needed to distribute the application.
+The first argument specifies a _HelloWorld_ directory to be generated
+for your project. Its `www` subdirectory houses your application's
+home page, along with various resources under `css`, `js`, and `img`,
+which follow common web development file-naming conventions. The
+`config.xml` file contains important metadata needed to generate and
+distribute the application.
 
 The other two arguments are optional: the `com.example.hello` argument
 provides your project with a reverse-domain-style identifier, and the
@@ -118,8 +124,8 @@ or any subdirectories within its scope:
 
 Before you can build the project, you need to specify a set of target
 platforms. Your ability to run these commands depends on whether your
-machine supports each SDK, and whether you have installed each SDK.
-Run any of these from a Mac:
+machine supports each SDK, and whether you have already installed each
+SDK.  Run any of these from a Mac:
 
         $ cordova platform add ios
         $ cordova platform add android
@@ -143,21 +149,21 @@ Run the following to remove a platform:
 
         $ cordova platform remove blackberry
 
-When you run commands to add or remove platforms, it's reflected in
-the contents of the project's _platforms_ directory, where each
-platform you specify appears as a subdirectory. The _www_ source
-directory is reproduced within each platform's subdirectory, appearing
-for example in _platforms/ios/www_ or _platforms/android/assets/www_.
-By default, each platform's configuration file is set up to be able to
-access all of Cordova's APIs.
+Running commands to add or remove platforms affects the contents of
+the project's _platforms_ directory, where each specified platform
+appears as a subdirectory. The _www_ source directory is reproduced
+within each platform's subdirectory, appearing for example in
+_platforms/ios/www_ or _platforms/android/assets/www_.  By default,
+each platform's configuration file is set up to be able to access all
+of Cordova's APIs.
 
 If you wish, you can use an SDK at this point to open the project you
-created. However, any edits you make to the project in an SDK affect
-the derivative set of assets, not the original cross-platform source
-files. Use this approach if you simply want to initialize a project.
+created. However, any edits you make to the project within an SDK
+affect the derivative set of assets, not the original cross-platform
+source files. Use this approach if you simply want to initialize a
+project.
 <!-- XREF
-(See the Platform Development Guide for information on how to develop
-applications within each SDK.)
+(See the Platform Development Guide for information on how to develop applications within each SDK.)
 XREF -->
 Read on if you wish to use command-line tools for the entire
 development cycle.
@@ -194,6 +200,8 @@ an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' IDEs.
 
+<!-- NOTE: assume `ripple` command will be removed, along with `serve`
+
 ## View the App in a Browser
 
 Since the application uses web-based components, you can often use a
@@ -212,9 +220,7 @@ can simulate changes in location, changes to orientation, and other
 accelerometer-driven shaking gestures. Other platform features, such
 as access to the camera or user contacts, can often be tested on the
 SDK's device emulator, or else on the device itself.
-<!-- XREF
 (See View the App in an Emulator, below.)
-XREF -->
 
 The default application Cordova provides demonstrates a handler for
 the custom `deviceready` event, which ordinarily fires once Cordova
@@ -239,28 +245,33 @@ tipped to its side:
 ![](./scr_ripple_ipad.png)
 
 The `ripple` command is appropriate if your application responds to
-location, orientation, varying network conditions, or if it doesn't
-interact with any of the Cordova APIs. The following section shows how
-to emulate applications that take photos, record audio or video, or
-access users' contact data.
+location, orientation, and varying network conditions, or else if it
+doesn't interact with any of the Cordova APIs at all. The following
+section shows how to run the app in a full platform emulator, which
+may allow access to other device features. Otherwise see Run the App
+on the Device, below.
+
+-->
 
 ## View the App in an Emulator
 
-SDKs for mobile platforms come bundled with device emulators. Unlike
-the browser-based `ripple` environment, these emulators install a full
-image of the device, so that you can launch your app from the home
-screen and see how it interacts with many platform features. Run a
-command such as the following to rebuild the app and view it within a
-specific platform's emulator:
+SDKs for mobile platforms come bundled with emulators that execute a
+device image, so that you can launch the app from the home screen and
+see how it interacts with many platform features.  Run a command such
+as the following to rebuild the app and view it within a specific
+platform's emulator:
 
         $ cordova emulate android
 
 Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
-first associate a device with an emulator, as detailed in Installing
-Platform SDKs. For example, you may first run the `android` command to
-launch the Android SDK, then run a particular device image, which
-launches it according to its default behavior:
+first associate a device with an emulator.
+<!-- XREF
+(See Installing Platform SDKs for details.)
+XREF -->
+For example, you may first run the `android` command to launch the
+Android SDK, then run a particular device image, which launches it
+according to its default behavior:
 
 ![](android_emulate_init.png)
 
@@ -270,24 +281,11 @@ launch from the home screen:
 
 ![](android_emulate_install.png)
 
-The mobile emulators provided by SDKs may be able to reproduce
-conditions you would encounter on an actual device, such as app that
-accesses the database of contacts or that chooses photos from the
-gallery.
-<!-- XREF
-(See API and Configuration Guide for details.)
-XREF -->
-
-__NOTE:__ You can only use the `emulate` command to preview hybrid
-applications that mix cordova WebViews with native components, or that
-use plug-ins to bridge the two environments. The `ripple` emulator is
-only appropriate for simpler applications that stay confined to the
-scope of their WebView. 
-<!-- XREF
-(See Extended Hybrid Applications for details.)
-XREF -->
-
 <!--
+
+## Run the App on the Device
+
+## Add a Plug-in
 
 plugin(s) [add|remove|ls [path]] ..... adds or removes a
          plugin (from the specified path), or lists all
