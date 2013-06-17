@@ -49,6 +49,9 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
         OpenAL
         ImageIO
         
+10. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, edit **"-Obj-C"** to be **"-ObjC"**
+        
+11. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, change **"-all_load"** to be **"-force_load ${TARGET_BUILD_DIR}/libCordova.a"**. You would only need to do this if you have the problem defined in [this issue.](https://issues.apache.org/jira/browse/CB-3458)
 
 ## Upgrading Cordova 2.6.0 projects to 2.7.0 ##
 
