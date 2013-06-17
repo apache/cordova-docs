@@ -44,6 +44,11 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
     	<!-- other <feature> tags -->
         
 8. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
+9. Add these two frameworks to your project:
+        
+        OpenAL
+        ImageIO
+        
 
 ## Upgrading Cordova 2.6.0 projects to 2.7.0 ##
 
