@@ -92,8 +92,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Setup each SDK and create your first Cordova app.</span>
         </li>
         <li>
+            <h2>The Cordova Command-line Interface</h2>
+            <span>Create, build, and deploy from the command-line.</span>
+        </li>
+        <li>
             <h2>Command-Line Usage</h2>
-            <span>Create, build, deploy, and debug from the command-line.</span>
+            <span>More command-line tools.</span>
         </li>
         <li>
             <h2>Privacy Guide</h2>
