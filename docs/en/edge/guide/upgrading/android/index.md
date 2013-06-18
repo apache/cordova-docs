@@ -22,6 +22,9 @@ Upgrading Cordova Android
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova.
 
+## Upgrade to 2.9.0 from 2.8.0
+1. Run bin/update <project_path>
+
 ## Upgrade to 2.8.0 from 2.7.0 ##
 1. Remove cordova-2.7.0.jar from the libs directory in your project
 2. Add cordova-2.8.0.jar to the libs directory in your project
