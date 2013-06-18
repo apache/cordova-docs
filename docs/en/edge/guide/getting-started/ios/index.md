@@ -47,15 +47,14 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 ### Download Cordova
 
-Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/cordova/.  Click on the Download icon and select cordova-X.Y.Z-src.zip to download to your machine. The X, Y and Z represent the version number of Cordova, for example x.x.x.  The download includes the code for all of the Apache Cordova supported platforms.
+Download the latest version of [Apache Cordova](http://www.apache.org/dist/cordova/) from http://www.apache.org/dist/cordova/.  Click on the Download icon and select cordova-x.x.x-src.zip to download to your machine. The download includes the code for all of the Apache Cordova supported platforms.
 ### Extract Cordova
 
 To access the code, it needs to be extracted from the archive (.zip) file:
 
-1. Navigate to the folder where you downloaded the code.  Find the cordova-X.Y.Z-src.zip file.
-    __NOTE:__ The filenames change with each incremental version of Cordova.
+1. Navigate to the folder where you downloaded the code.  Find the version-specific cordova-x.x.x-src.zip file.
 
-2. Using the Finder® app, double-click the file to extract. This creates a directory named `cordova-X.Y.Z`.
+2. Using the Finder® app, double-click the file to extract. This creates a directory named `cordova-x.x.x`.
 
 3. Expand this folder and locate the cordova-ios.zip file and double-click to extract it.
 
@@ -251,9 +250,13 @@ references the deprecated invokeString API:
 
   **Include Cordova**
 
-  All of the code for the sample application is contained within the `www` directory in the Xcode project structure.  The starting page is named index.html.  Any page that uses Cordova must include the cordova-*.js file for the associated Cordova version and platform.  The format of the JavaScript file name is cordova-x.y.z where x represents the major version number, y the minor version and z any point release.  For example, the Cordova 2.2.0 file was named cordova-2.2.0.js.   The sample HelloWorld application includes this file from index.html.
+  All of the code for the sample application is contained within the
+  Xcode project's `www` directory, where the starting page is named
+  `index.html`.  Any page that invokes Cordova APIs must reference the
+  version-specific `cordova-x.x.x.js` file, as shown in the sample
+  `HelloWorld` application's `index.html`:
 
-      <script type="text/javascript" src="cordova-2.2.0.js"></script>
+      <script type="text/javascript" src="cordova-x.x.x.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript">
           app.initialize();
