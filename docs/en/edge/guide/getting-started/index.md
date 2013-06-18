@@ -20,26 +20,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started Guides
 ======================
 
+Before developing for any of the platforms listed below, install
+cordova's command-line interface (CLI).
+(For details, see The Cordova Command-line Interface.)
+
 To develop Cordova applications, you must install SDKs for each mobile
-platform you are targeting. This installation is necessary even if you
-intend to rely on cordova's command-line interface (CLI) for your build
-cycle rather than individual SDK applications.
-<!-- XREF
-(See The Cordova Command-line Interface for details.)
-XREF -->
+platform you are targeting. This installation is necessary regardless
+of whether you do the majority of your work in the SDK or use the CLI
+for your build cycle.
 
 This section tells you all you need to know to set up your development
 environment to support each platform: where to obtain the SDK, how to
-set up device emulators, and how to connect devices for direct
-testing.  There is also information on lower-level command-line
-utilities that are appropriate for development that is focused on
-specific platforms' SDKs rather than the cordova CLI.
-
-Common Requirements
--------------------
-
-To install any of the platforms listed below, download and extract the
-latest version of [Apache Cordova](http://www.apache.org/dist/cordova/).
+set up device emulators, how to connect devices for direct testing,
+and managing signing key requirements.
 
 - Getting Started with Android (Windows, Mac, Linux)
 - Getting Started with BlackBerry (Windows, Mac)
