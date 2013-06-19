@@ -73,11 +73,6 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
-Bada
-----
-
-Bada does not support domain whitelisting. By default, all domains are accessible.
-
 BlackBerry
 ----------
 

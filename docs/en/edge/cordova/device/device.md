@@ -54,14 +54,6 @@ Permissions
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>SYSTEM_SERVICE</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
