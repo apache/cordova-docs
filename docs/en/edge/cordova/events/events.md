@@ -54,14 +54,6 @@ Permissions
 
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>SYSTEM_SERVICE</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml

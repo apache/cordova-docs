@@ -91,14 +91,6 @@ Permissions
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>RECORDING</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml

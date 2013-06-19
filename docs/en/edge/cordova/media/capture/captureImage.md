@@ -52,7 +52,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
-- Bada 2.x
 - Windows 8
 
 Windows Phone 7 Quirks
@@ -141,28 +140,4 @@ Full Example
             <button onclick="captureImage();">Capture Image</button> <br>
         </body>
     </html>
-
-Bada Quirks
------------
-
-Bada supports `captureImage` just like the other platforms, but
-features _another_ mode allowing video or image capture straight into
-the WebView without launching any camera app. Here's how:
-
-1. Create an element with an `id` attribute somewhere in the HTML:
-
-        <div id="preview"></div>
-
-2. Initialize the camera preview as follows:
-
-        navigator.camera.showPreview("preview");
-
-3. Once you the preview displays, capture the image with code such as the following:
-
-        var options = { destinationFilename: "images/cam01.jpg", highRes: false};
-        navigator.capture.captureImage(success, fail, options);
-
-4. Dismiss the camera preview as follows:
-
-        navigator.camera.hidePreview("preview");
 

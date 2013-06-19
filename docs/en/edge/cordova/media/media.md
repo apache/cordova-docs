@@ -94,14 +94,6 @@ Permissions
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>RECORDING</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml

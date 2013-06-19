@@ -50,10 +50,6 @@ Permissions
 
     <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml

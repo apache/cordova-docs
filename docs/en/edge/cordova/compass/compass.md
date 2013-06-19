@@ -48,10 +48,6 @@ Permissions
 
     <plugin name="Compass" value="org.apache.cordova.CompassListener" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
     No permissions are required.

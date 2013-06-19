@@ -53,7 +53,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
-- Bada 2.x
 - Windows 8
 
 Quick Example
@@ -141,31 +140,4 @@ BlackBerry WebWorks Quirks
 --------------------------
 
 - Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
-
-Bada 2.x Quirks
----------------
-
-Bada supports `captureVideo` just like the other platforms, but
-features _another_ mode allowing video or image capture straight into
-the WebView without launching any camera app. Here's how:
-
-1. Create an element with an `id` attribute somewhere in the HTML:
-
-        <div id="preview"></div>
-
-2. Initialize the camera preview as follows:
-
-        navigator.camera.showPreview("preview");
-
-3. Once the preview is available, use code such as this to start capturing a video:
-
-        navigator.capture.startVideoCapture(success, fail, {duration: 5000, destinationFilename: "videos/a.3gp"});
-
-4. Use this to stop the video capture:
-
-        navigator.capture.stopVideoCapture();
-
-5. Dismiss the camera preview as follows:
-
-        navigator.camera.hidePreview("preview");
 

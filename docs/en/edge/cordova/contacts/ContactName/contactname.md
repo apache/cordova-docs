@@ -43,7 +43,6 @@ Supported Platforms
 - Android 2.X
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2 & 2.0
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -141,10 +140,3 @@ iOS Quirks
 
 - __formatted__: Partially supported.  Returns iOS Composite Name, but is read-only.
 
-Bada Quirks
------------
-
-- __formatted__: Not supported
-- __middleName__: Not supported
-_ __honorificPrefix__: Not supported
-- __honorificSuffix__: Not supported

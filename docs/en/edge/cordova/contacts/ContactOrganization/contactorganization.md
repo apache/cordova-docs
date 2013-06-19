@@ -44,7 +44,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -146,6 +145,3 @@ iOS Quirks
 - __department__: Partially supported.  The first department name is stored in the iOS __kABPersonDepartmentProperty__ field.
 - __title__: Partially supported.  The first title is stored in the iOS __kABPersonJobTitleProperty__ field.
 
-Bada 2.0 Quirks
----------------
-- `ContactOrganization` is not supported.

@@ -35,7 +35,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
-- Bada 2.x
 - Windows 8
 
 Quick Example
@@ -117,12 +116,6 @@ iOS Quirks
 
 - iOS cannot detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return `Connection.CELL` in a future release.
-
-Bada Quirks
------------
-
-- Bada can only distinguish a WiFi and cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
 
 Windows Phone Quirks
 --------------------

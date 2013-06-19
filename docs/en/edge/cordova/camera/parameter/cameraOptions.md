@@ -114,8 +114,3 @@ Windows Phone 7 and 8 Quirks
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
 
-Bada 1.2 Quirks
---------------
-- options not supported
-- always returns a FILE URI
-
