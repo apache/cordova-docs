@@ -34,7 +34,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
-- Tizen
 
 Quick Example
 -------------
@@ -112,10 +111,4 @@ Windows Phone 7 and 8 Quirks
 -------------
 
 - Relies on a generic beep file from the Cordova distribution.
-
-Tizen Quirks
--------------
-
-- Tizen implements beeps by playing an audio file via the media API.
-- The beep file must be short, must be located in a `sounds` sub-directory of the application's root directory, and must be named `beep.wav`.
 

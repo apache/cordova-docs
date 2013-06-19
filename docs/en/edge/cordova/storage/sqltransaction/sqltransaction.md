@@ -40,7 +40,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - webOS
-- Tizen
 
 Execute SQL Quick Example
 ------------------

@@ -38,7 +38,6 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
-- Tizen
 - Windows 8
 
 Quick Example
@@ -58,9 +57,6 @@ Quick Example
     // if the user is not defined, a guid is generated and will persist until the app is uninstalled
     //
     // webOS: returns the device NDUID
-    //
-    // Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
-    // unique to every GSM and UMTS mobile phone.
     var deviceID = device.uuid;
 
 Full Example

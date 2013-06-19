@@ -49,7 +49,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - webOS
-- Tizen
 
 Key Quick Example
 -------------

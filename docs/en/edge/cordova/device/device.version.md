@@ -33,7 +33,6 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
-- Tizen
 - Windows 8
 
 Quick Example
@@ -49,7 +48,6 @@ Quick Example
     //
     // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
     // webOS: webOS 2.2.4 return 2.2.4
-    // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
 
 Full Example

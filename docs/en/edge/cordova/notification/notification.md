@@ -76,6 +76,3 @@ Permissions
 
     No permissions are required.
 
-### Tizen
-
-    No permissions are required.

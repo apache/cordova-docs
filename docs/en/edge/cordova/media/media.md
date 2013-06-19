@@ -77,7 +77,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7.5
-- Tizen
 - Windows 8
 
 Permissions
@@ -132,10 +131,6 @@ Permissions
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
-
-### Tizen
-
-    No permissions are required.
 
 ### Windows Phone Quirks
 

@@ -34,7 +34,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
-- Tizen
 - Windows 8
 
 Quick Example

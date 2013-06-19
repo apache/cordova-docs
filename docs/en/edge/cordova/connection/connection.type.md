@@ -37,7 +37,6 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Bada 2.x
 - webOS
-- Tizen
 - Windows 8
 
 Quick Example
@@ -138,8 +137,3 @@ Windows Phone Quirks
 - Windows Phone cannot detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
-Tizen Quirks
---------------------
-
-- Tizen can only detect a WiFi or cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
