@@ -129,23 +129,6 @@ available for each mobile platform:
 
 <!-- START HTML -->
 
-<style>
-
-.p { background-color: gold; }
-.p::before { content: "(partial)";  }
-.u { background-color: #dddddd; }
-/* .u::before { content: "";  } */
-.y { background-color: lightgreen; }
-.y::before { content: "\2714";     margin-right: 6px;  }
-tr> th:first-of-type { text-align: right }
-td , th[colspan]:first-of-type { text-align: center } 
-.n { background-color: pink; }
-.n::before { content: "\2718"; margin-right: 6px;  }
-
-/* each cell is classed one of: y=yes; n=no; p=partial; u=unknown */
-
-</style>
-
 <table class="compat" width="100%">
 
 <thead>
