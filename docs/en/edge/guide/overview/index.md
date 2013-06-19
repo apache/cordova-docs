@@ -129,6 +129,8 @@ available for each mobile platform:
 
 <!-- START HTML -->
 
+<table class="compat" width="100%">
+
 <style>
 
 .p { background-color: gold; }
@@ -145,8 +147,6 @@ td , th[colspan]:first-of-type { text-align: center }
 /* each cell is classed one of: y=yes; n=no; p=partial; u=unknown */
 
 </style>
-
-<table class="compat" width="100%">
 
 <thead>
     <tr>
