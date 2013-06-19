@@ -155,13 +155,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <th>Blackberry</th>
         <th>Blackberry 10</th>
         <th>iOS</th>
-        <th>Symbian</th>
-        <th>WebOS</th>
         <th>Windows<br/>Phone 7</th>
         <th>Windows<br/>Phone 8</th>
         <th>Windows<br/>8</th>
-        <th>Bada</th>
-        <th>Tizen</th>
     </tr>
 
 </thead>
@@ -173,13 +169,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y">Mac, Windows</td>
         <td data-col="blackberry10" class="y">Mac, Windows</td>
         <td data-col="ios"        class="y">Mac</td>
-        <td data-col="symbian"    class="u"></td>
-        <td data-col="webos"      class="u"></td>
         <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
         <td data-col="win8"       class="u"></td>
-        <td data-col="bada"       class="u"></td>
-        <td data-col="tizen"      class="u"></td>
     </tr>
 
     <tr>
@@ -188,13 +180,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="u"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="u"></td>
-        <td data-col="bada"       class="u"></td>
-        <td data-col="tizen"      class="u"></td>
     </tr>
 
     <tr>
@@ -203,13 +191,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"><a href="guide_getting-started_blackberry_index.md.html">      </a></td>
         <td data-col="blackberry10" class="y"><a href="guide_getting-started_blackberry10_index.md.html">      </a></td>
         <td data-col="ios"        class="y"><a href="guide_getting-started_ios_index.md.html">             </a></td>
-        <td data-col="symbian"    class="y"><a href="guide_getting-started_symbian_index.md.html">         </a></td>
-        <td data-col="webos"      class="y"><a href="guide_getting-started_webos_index.md.html">           </a></td>
         <td data-col="winphone7"  class="y"><a href="guide_getting-started_windows-phone-7_index.md.html"> </a></td>
         <td data-col="winphone8"  class="y"><a href="guide_getting-started_windows-phone-8_index.md.html"> </a></td>
         <td data-col="win8"       class="y"><a href="guide_getting-started_windows-8_index.md.html">       </a></td>
-        <td data-col="bada"       class="y"><a href="guide_getting-started_bada_index.md.html">            </a></td>
-        <td data-col="tizen"      class="y"><a href="guide_getting-started_tizen_index.md.html">           </a></td>
     </tr>
 
     <tr>
@@ -218,13 +202,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"><a href="guide_cordova-webview_ios.md.html"></a></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="n"></td>
     </tr>
 
     <tr>
@@ -233,13 +213,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"><a href="guide_plugin-development_blackberry_index.md.html"></a></td>
         <td data-col="blackberry10" class="y"><a href="guide_plugin-development_blackberry10_index.md.html"></a></td>
         <td data-col="ios"        class="y"><a href="guide_plugin-development_ios_index.md.html"></a></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="y"><a href="guide_plugin-development_windows-phone_index.md.html"></a></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="y"><a href="guide_plugin-development_bada_index.md.html"></a></td>
-        <td data-col="tizen"      class="n"></td>
     </tr>
 
     <tr>
@@ -253,13 +229,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -268,13 +240,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -283,13 +251,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="n"></td>
     </tr>
 
     <tr>
@@ -298,13 +262,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -313,13 +273,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -328,13 +284,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -343,13 +295,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -358,13 +306,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -373,13 +317,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -388,13 +328,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -403,13 +339,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="n"></td>
     </tr>
 
     <tr>
@@ -418,13 +350,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -433,13 +361,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -448,13 +372,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="y"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
     <tr>
@@ -463,13 +383,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="n"></td>
-        <td data-col="webos"      class="n"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="n"></td>
     </tr>
 
     <tr>
@@ -478,13 +394,9 @@ td , th[colspan]:first-of-type { text-align: center }
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="symbian"    class="y"></td>
-        <td data-col="webos"      class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
-        <td data-col="bada"       class="n"></td>
-        <td data-col="tizen"      class="y"></td>
     </tr>
 
 </tbody>

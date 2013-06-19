@@ -25,7 +25,6 @@ Upgrading Guides
 - Upgrading Cordova Android
 - Upgrading Cordova BlackBerry
 - Upgrading Cordova iOS
-- Upgrading Cordova webOS
 - Upgrading Cordova Windows Phone
 - Upgrading Cordova Windows 8
-- Upgrading Cordova Bada
+
