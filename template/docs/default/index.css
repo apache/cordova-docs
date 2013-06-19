@@ -402,3 +402,26 @@ a[href].external:after {
   padding:0px 20px;
   width:200px;
 }
+
+/*
+Class compatability tables "compat";
+Apply nested TD classes "y"/"n", "p" (partial), or "u" (unknown).
+Results in green/red/gold/gray background & auto-inserts check/X char.
+Assumes table is 2D grid, with single TH preceding TDs in body of table.
+*/
+
+.compat .y { background-color: lightgreen; }
+.compat .y::before { content: "\2714";     margin-right: 6px;  }
+
+.compat .n { background-color: pink; }
+.compat .n::before { content: "\2718"; margin-right: 6px;  }
+
+.compat .p { background-color: gold; }
+.compat .p::before { content: "(partial)";  }
+
+.compat .u { background-color: #dddddd; }
+
+/* center cell & straddled column heads by default */
+
+.compat td , th[colspan]:first-of-type { text-align: center }
+.compat tr>th:first-of-type { text-align: right }
