@@ -126,11 +126,6 @@ Access to all subdomains and TLDs (`.com`, `.net`, etc):
 
     *.google.*
 
-webOS
------
-
-webOS does not support domain whitelisting. By default, all domains are accessible.
-
 Windows Phone (7 & 8)
 ---------------------
 

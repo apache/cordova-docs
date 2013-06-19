@@ -36,7 +36,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
 - Bada 2.x
-- webOS
 - Windows 8
 
 Quick Example
@@ -124,11 +123,6 @@ Bada Quirks
 
 - Bada can only distinguish a WiFi and cellular connection.
     - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
-
-webOS Quirks
-------------
-
-- Only shows that a connection is available, but not which type.
 
 Windows Phone Quirks
 --------------------

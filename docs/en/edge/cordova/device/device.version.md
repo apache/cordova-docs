@@ -32,7 +32,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
-- webOS
 - Windows 8
 
 Quick Example
@@ -47,7 +46,6 @@ Quick Example
     // iPhone:     iOS 3.2 returns "3.2"
     //
     // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
-    // webOS: webOS 2.2.4 return 2.2.4
     var deviceVersion = device.version;
 
 Full Example

@@ -91,10 +91,6 @@ Permissions
 
     <plugin name="Contacts" value="CDVContacts" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

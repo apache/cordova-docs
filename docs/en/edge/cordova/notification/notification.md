@@ -68,10 +68,6 @@ Permissions
 
     <plugin name="Notification" value="CDVNotification" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
     No permissions are required.

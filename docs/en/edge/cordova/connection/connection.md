@@ -72,10 +72,6 @@ Permissions
 
     <plugin name="NetworkStatus" value="CDVConnection" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

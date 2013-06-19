@@ -114,10 +114,6 @@ Permissions
 
     <plugin name="Media" value="CDVSound" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml
