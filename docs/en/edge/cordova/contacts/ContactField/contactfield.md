@@ -56,7 +56,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2 & 2.0
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -158,7 +157,3 @@ iOS Quirks
 -----------
 - __pref__: Not supported, returning `false`.
 
-Bada Quirks
------------
-
-- __type__: For email or address fields, property must be _WORK_ or _HOME_. For phone fields, must be _WORK_, _HOME_, _VOICE_, _FAX_, _MSG_, _CELL_, _PAGER_, _BBS_, _MODEM_, _CAR_, _ISDN_,_VIDEO_, or _PCS_.

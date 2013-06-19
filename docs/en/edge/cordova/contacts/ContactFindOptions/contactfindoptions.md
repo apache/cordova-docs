@@ -34,7 +34,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2 & 2.0
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -112,7 +111,3 @@ Full Example
       </body>
     </html>
 
-Bada Quirks
------------
-
-__filter__: Property can only apply to the following: _firstName_, _lastName_, _nickname_, _phoneNumber_, _email_, and _address_.

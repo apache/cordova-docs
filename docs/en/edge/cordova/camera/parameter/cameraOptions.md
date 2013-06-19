@@ -101,17 +101,6 @@ BlackBerry Quirks
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
 
-webOS Quirks
------------
-
-- Ignores the `quality` parameter.
-- Ignores the `sourceType` parameter.
-- Ignores the `allowEdit` parameter.
-- `Camera.MediaType` is not supported.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
-- Ignores the `cameraDirection` parameter.
-
 iOS Quirks
 --------------
 
@@ -125,12 +114,3 @@ Windows Phone 7 and 8 Quirks
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
 
-Bada 1.2 Quirks
---------------
-- options not supported
-- always returns a FILE URI
-
-Tizen Quirks
---------------
-- options not supported
-- always returns a FILE URI

@@ -40,9 +40,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
-- Bada 1.2 & 2.x
-- webOS
-- Tizen
 - Windows 8
 
 Quick Example
@@ -99,10 +96,4 @@ Windows Phone 7 and 8 Quirks
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
-Bada Quirks
------------
-- Returns the manufacturer model name, for example, `Samsung Wave S8500`
 
-Tizen Quirks
------------
-- Returns the device model assigned by the vendor, for example, `TIZEN`

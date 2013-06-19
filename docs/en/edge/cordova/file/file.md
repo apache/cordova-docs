@@ -55,10 +55,6 @@ Permissions
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -81,10 +77,6 @@ Permissions
 
     <plugin name="File" value="CDVFile" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

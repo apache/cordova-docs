@@ -36,10 +36,3 @@ Windows Phone 7 and 8 Quirks
 --------------
 - `filter` is not supported.
 
-Bada Quirks
------------
-- `filter` is not supported.
-
-Tizen Quirks
------------
-- `filter` is not supported.

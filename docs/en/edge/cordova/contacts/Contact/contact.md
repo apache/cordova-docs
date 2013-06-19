@@ -66,7 +66,6 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
-- Bada 1.2 & 2.0
 - Windows 8
 
 Save Quick Example
@@ -231,11 +230,3 @@ Windows Phone 7 and 8 Quirks
 - __birthdays__: Not supported, returning `null`.
 - __categories__: Not supported, returning `null`.
 
-Bada Quirks
------------
-
-- __displayName__: Not supported.
-- __birthday__: Not supported.
-- __photos__: This property should be a list with one URL to a photo
-- __categories__: Not supported.
-- __ims__: Not supported.

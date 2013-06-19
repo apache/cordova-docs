@@ -136,7 +136,3 @@ Full Example
       </body>
     </html>
 
-Tizen Quirks
-----------
-
-- Not supported on Tizen devices.

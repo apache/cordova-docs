@@ -43,17 +43,6 @@ Permissions
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>CAMERA</Name>
-    </Privilege>
-    <Privilege>
-        <Name>RECORDING</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -74,10 +63,6 @@ Permissions
 
     <plugin name="Camera" value="CDVCamera" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml
@@ -89,11 +74,3 @@ Permissions
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
-
-#### config.xml
-
-    <feature name="http://tizen.org/api/application" required="true"/>
-    <feature name="http://tizen.org/api/application.launch" required="true"/>
-
-Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

@@ -50,10 +50,6 @@ Permissions
 
     <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -71,10 +67,6 @@ Permissions
 
     <plugin name="Accelerometer" value="CDVAccelerometer" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml
@@ -85,6 +77,3 @@ Permissions
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
-
-    No permissions are required.

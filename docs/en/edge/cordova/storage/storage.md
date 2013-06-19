@@ -61,10 +61,6 @@ Permissions
 
     <plugin name="Storage" value="org.apache.cordova.Storage" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/config.xml
@@ -75,14 +71,7 @@ Permissions
 
     No permissions are required.
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
     No permissions are required.
 
-### Tizen
-
-    No permissions are required.
