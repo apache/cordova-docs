@@ -40,6 +40,3 @@ Bada Quirks
 -----------
 - `filter` is not supported.
 
-Tizen Quirks
------------
-- `filter` is not supported.

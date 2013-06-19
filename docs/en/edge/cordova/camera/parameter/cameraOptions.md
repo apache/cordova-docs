@@ -130,7 +130,3 @@ Bada 1.2 Quirks
 - options not supported
 - always returns a FILE URI
 
-Tizen Quirks
---------------
-- options not supported
-- always returns a FILE URI

@@ -42,7 +42,6 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
-- Tizen
 - Windows 8
 
 Quick Example
@@ -103,6 +102,3 @@ Bada Quirks
 -----------
 - Returns the manufacturer model name, for example, `Samsung Wave S8500`
 
-Tizen Quirks
------------
-- Returns the device model assigned by the vendor, for example, `TIZEN`

@@ -45,13 +45,12 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x
 - webOS
-- Tizen
 - Windows 8
 
 Quick Example
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS
     //
     function alertDismissed() {
         // do something

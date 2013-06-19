@@ -46,7 +46,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
-- Tizen
 
 Windows Phone 7 and 8 Quirks
 ----------------------
