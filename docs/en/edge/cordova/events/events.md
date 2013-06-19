@@ -80,10 +80,6 @@ Permissions
 
     <plugin name="Battery" value="CDVBattery" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
     No permissions are required.

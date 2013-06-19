@@ -93,10 +93,6 @@ Permissions
 
     <plugin name="Geolocation" value="CDVLocation" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

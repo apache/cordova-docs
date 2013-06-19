@@ -62,10 +62,6 @@ Permissions
 
     <plugin name="Compass" value="CDVLocation" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

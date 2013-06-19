@@ -74,10 +74,6 @@ Permissions
 
     <plugin name="Camera" value="CDVCamera" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

@@ -71,10 +71,6 @@ Permissions
 
     <plugin name="Accelerometer" value="CDVAccelerometer" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml

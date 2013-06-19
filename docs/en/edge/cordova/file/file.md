@@ -82,10 +82,6 @@ Permissions
     <plugin name="File" value="CDVFile" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
     No permissions are required.

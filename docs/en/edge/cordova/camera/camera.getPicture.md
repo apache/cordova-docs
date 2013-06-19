@@ -72,7 +72,6 @@ Supported Platforms
 - iOS
 - Windows Phone 7 and 8
 - Bada 1.2
-- webOS
 - Windows 8
 
 Android Quirks

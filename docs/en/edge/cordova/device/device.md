@@ -79,10 +79,6 @@ Permissions
 
     No permissions are required.
 
-### webOS
-
-    No permissions are required.
-
 ### Windows Phone
 
 #### Properties/WPAppManifest.xml
