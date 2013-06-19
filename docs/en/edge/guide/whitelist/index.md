@@ -126,11 +126,6 @@ Access to all subdomains and TLDs (`.com`, `.net`, etc):
 
     *.google.*
 
-Symbian
--------
-
-Symbian does not support domain whitelisting. By default, all domains are accessible.
-
 webOS
 -----
 
