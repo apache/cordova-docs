@@ -47,6 +47,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
+- Tizen
 - Windows Phone 7 and 8
 
 Key Quick Example

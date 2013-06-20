@@ -30,6 +30,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Tizen
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -41,6 +42,7 @@ Quick Example
     //   - "BlackBerry"
     //   - "iOS"
     //   - "WinCE"
+    //   - "Tizen"
     var devicePlatform = device.platform;
 
 Full Example

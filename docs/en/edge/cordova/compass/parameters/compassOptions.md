@@ -32,7 +32,10 @@ Android Quirks
 ______________
 - `filter` is not supported.
 
+Tizen Quirks
+-----------
+- `filter` is not supported.
+
 Windows Phone 7 and 8 Quirks
 --------------
 - `filter` is not supported.
-

@@ -37,6 +37,7 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Tizen
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -89,8 +90,11 @@ Android Quirks
 
 - Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
 
+Tizen Quirks
+-----------
+- Returns the device model assigned by the vendor, for example, `TIZEN`
+
 Windows Phone 7 and 8 Quirks
 -------------
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
-

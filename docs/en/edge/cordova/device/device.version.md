@@ -30,6 +30,7 @@ Supported Platforms
 - Android 2.1+
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
+- Tizen
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -45,6 +46,7 @@ Quick Example
     // iPhone:     iOS 3.2 returns "3.2"
     //
     // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+    // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
 
 Full Example

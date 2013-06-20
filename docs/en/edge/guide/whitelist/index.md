@@ -134,3 +134,39 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
+Tizen
+----------
+
+### Details
+
+The application root directory's `config.xml` file specifies domain
+whitelisting rules, using the `<access origin="..." />` element.
+For a complete reference, see the [Tizen Accessing External Network Resources documentation][10].
+
+### Syntax
+
+Access to [google.com][2]:
+
+    <access origin="http://google.com" subdomains="false" />
+
+Access to the secure [google.com][3] (`https://`):
+
+    <access origin="https://google.com" subdomains="false" />
+
+Access to all the subdomains on [google.com][2]:
+
+    <access origin="http://google.com" subdomains="true" />
+
+Access to all domains, including `file://` protocol:
+
+    <access origin="*" subdomains="true" />
+
+[1]: http://www.w3.org/TR/widgets-access/
+[2]: http://google.com
+[3]: https://google.com
+[4]: http://maps.google.com
+[5]: http://mail.google.com
+[6]: http://docs.google.com
+[7]: http://developer.mozilla.org
+[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[9]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources

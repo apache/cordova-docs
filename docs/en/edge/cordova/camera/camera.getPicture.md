@@ -70,6 +70,7 @@ Supported Platforms
 - Android
 - Blackberry WebWorks (OS 5.0 and higher)
 - iOS
+- Tizen
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -96,6 +97,13 @@ Windows Phone 7 Quirks
 
 Invoking the native camera application while your device is connected
 via Zune does not work, and triggers an error callback.
+
+Tizen Quirks
+----------------------
+
+Tizen only supports a `destinationType` of
+`Camera.DestinationType.FILE_URI` and a `sourceType` of
+`Camera.PictureSourceType.PHOTOLIBRARY`.
 
 Quick Example
 -------------

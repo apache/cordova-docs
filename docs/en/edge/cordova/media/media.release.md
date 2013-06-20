@@ -40,6 +40,7 @@ Supported Platforms
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
+- Tizen
 - Windows 8
 
 Quick Example

@@ -149,3 +149,7 @@ iOS Quirks
 
         var myMedia = new Media("documents://beer.mp3")
 
+Tizen Quirks
+----------
+
+- Not supported on Tizen devices.
