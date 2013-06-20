@@ -22,6 +22,16 @@ Upgrading Cordova iOS
 
 Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 6. The iOS 6 SDK requires Xcode 4.5.
 
+## Upgrading Cordova 2.8.0 projects to 2.9.0 ##
+
+1. **Download and extract the Cordova 2.9.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.9.0)
+2. **Quit Xcode** if it is running.
+3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
+4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+5. **Copy** the **www/cordova.js** (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your **www** folder, and delete your **www/cordova.js** file
+6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
+7. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
+
 ## Upgrading Cordova 2.7.0 projects to 2.8.0 ##
 
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.8.0)
