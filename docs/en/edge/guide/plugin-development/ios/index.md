@@ -36,11 +36,14 @@ more or less boiling down to calling the `action` method on the
 The plugin must be added under the `<plugins>` tag of your Cordova-iOS
 application's project's `config.xml` file.
 
-    <plugin name="service_name" value="PluginClassName" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
 
-The key `service_name` should match what you use in the JavaScript
+The feature name='name' should match what you use in the JavaScript
 `exec` call, and the value matches the name of the plugin's
-Objective-C class. Otherwise the plugin may compile but would not be
+Objective-C class. param name should always be "ios-package".
+Otherwise the plugin may compile but would not be
 reachable by Cordova.
 
 ## Plugin Initialization and Lifetime
