@@ -104,7 +104,7 @@ Once created, here's how to use the SDK to modify it:
 * Select the __New Project__ menu item.
 * Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
     ![](img/guide/getting-started/android/eclipse_new_project.png)
-* Navigate to select `hello`, or whichever directory you created for the project.
+* Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
 * Press __Finish__.
 
 Once the Eclipse window opens, a red __X__ may appear to indicate
@@ -118,26 +118,73 @@ unresolved problems. If so, follow these additional steps:
 
 ## Deploy to Emulator
 
-You can use the `cordova` utility to run an app in an emulator
+You can use the `cordova` utility to run an app in an emulator, or you
+can run it within the SDK.  Either way, the SDK must first be
+configured to display at least one device. To do so, use the Android
+SDK Manager, a Java application that runs separately from Eclipse.
+There are two ways to open it:
 
-- Right-click the project and go to **Run As &rarr; Android Application**
-- Eclipse asks you to select an appropriate AVD. If there isn't one, then you'll need to create it.
+* Run `android` on the command line.
 
-__NOTE:__ For a faster experience, use an Intel-based emulator image.
+* From within Eclipse, press this toolbar icon:
 
-- Open the Android SDK Manager:
   ![](img/guide/getting-started/android/eclipse_android_sdk_button.png)
-- Install one or more `Intel x86 Atom` System Images as well as the `Intel Hardware Accelerated Execution Manager` (under Extras).
-- Run the Intel installer, which has been downloaded to: `extras/intel/Hardware_Accelerated_Execution_Manager` within your Android SDK
-- Create a new AVD with the Target set to an Intel image.
-- When starting the emulator, ensure there are no error messages about the HAX module failing to load.
+
+Once open, the Android SDK Manager displays various runtime libraries:
+
+![](img/guide/getting-started/android/asdk_window.png)
+
+Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
+choose any item from __Device Definitions__ in the resulting dialog
+box:
+
+![](img/guide/getting-started/android/asdk_device.png)
+
+Press __Create AVD__, optionally modifying the name, then press __OK__
+to accept the changes:
+
+![](img/guide/getting-started/android/asdk_newAVD.png)
+
+The AVD then appears in the __Android Virtual Devices__ list:
+
+![](img/guide/getting-started/android/asdk_avds.png)
+
+To open the emulator as a separate application, select the AVD and
+press __Start__. It launches much as it would on the device, with
+additional controls available for hardware buttons:
+
+![](img/guide/getting-started/android/asdk_emulator.png)
+
+At this point you can use the `cordova` utility to deploy the
+application to the emulator from the command line:
+
+        $ cordova emulate android
+
+If instead you are working within Eclipse, right-click the project and
+choose __Run As &rarr; Android Application__. You may be asked to
+specify an AVD if none are already open.
+
+For a faster experience, use an Intel-based emulator image:
+
+* Install one or more `Intel x86 Atom` System Images as well as the
+  `Intel Hardware Accelerated Execution Manager`, available under
+  __Extras__.
+* Run the Intel installer, which is available within your Android SDK
+  at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+* Create a new AVD with the target set to an Intel image.
+* When starting the emulator, ensure there are no error messages
+  indicating a failure to load HAX modules.
 
 ## Deploy to Device
 
-Make sure USB debugging is enabled on your device and plug it into
-your system. Information can be found on the [Android Developer
-Site](http://developer.android.com/tools/device.html)
+To push an app directly to the device, make sure USB debugging is
+enabled on your device as described on the
+[Android Developer Site](http://developer.android.com/tools/device.html),
+and use a mini USB cable to plug it into your system.
 
-Right-click the project and go to **Run As &rarr; Android
-Application**
+You can push the app to the device from the command line:
 
+        $ cordova run android
+
+Alternately within Eclipse, right-click the project and choose __Run
+As &rarr; Android Application__.
