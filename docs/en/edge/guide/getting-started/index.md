@@ -41,3 +41,4 @@ and managing signing key requirements.
 - Getting Started with Windows Phone 7 (Windows 7 or 8)
 - Getting Started with Windows Phone 8 (Windows 8)
 - Getting Started with Windows 8 (Windows 8)
+- Getting Started with Tizen
