@@ -20,96 +20,107 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Getting Started with Android
 ============================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.
+This guide describes how to set up your SDK development environment to
+deploy Cordova apps for Android devices.
 
-1. Minimum Requirements for Development
----------------
-- Identical to [Android Minimum Requirements](http://developer.android.com/sdk/index.html)
+## Requirements and Support
 
-1.1 Supported Android Devices
--------------------------------
-- Android 2.1 (Deprecated May 2013)
-- Android 2.2
-- Android 2.3
-- Android 3.x (Deprecated May 2013)
-- Android 4.x
+See the [System Requirements](http://developer.android.com/sdk/index.html)
+for the Android SDK.
 
-Android 1.x is currently not supported.  In general, superseded
+Cordova supports Android 2.2, 2.3, and 4.x.  As a general rule,
 platforms are deprecated as they dip below 5% on Google's
 [distribution dashboard](http://developer.android.com/about/dashboards/index.html).
 
-2. Install SDK + Cordova
-------------------------
+<!--
+NOTE, doc said:
+- Android 2.1 (Deprecated May 2013)
+- Android 3.x (Deprecated May 2013)
+-->
 
-- Download and install [Android SDK](http://developer.android.com/sdk/index.html)
+Developers should use the the `cordova` utility in conjunction with
+the Android SDK.  See The Cordova Command-line Interface for
+information how to install it, add projects, then build and deploy a
+project.
 
-- Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download). You will be working in the `android` directory.
+## Install the SDK
 
-3A. Set up your PATH environment variable on Mac OS
----------------------------------------
+Install the Android SDK from
+[developer.android.com/sdk](http://developer.android.com/sdk/).  You
+may be presented with a choice of where to install the SDK, otherwise
+move the downloaded `adt-bundle` tree to wherever you store
+development tools.
 
-- Open the Terminal program, by default in your `Applications/Utilities` folder.
-- Run the following command to open the file with your default text editor:
+For Cordova command-line tools to work, you need to include the SDK's
+`tools` and `platform-tools` directories in your PATH environment.  On
+Mac, you can use a text editor to create or modify the
+`~/.bash_profile` file, adding a line such as the following, depending
+on where the SDK installs:
 
-`touch ~/.bash_profile; open ~/.bash_profile`
+    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
-- You need to add the path to your Android SDK `platform-tools` and `tools` directory. This example uses `/Development/android-sdk-macosx` as the SDK's install directory. Add the following line:
+This exposes SDK tools in newly opened terminal windows. Otherwise run
+this to make them available in the current session:
 
-`export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools`
+    $ source ~/.bash_profile
 
-- Save the file and quit the text editor.
-- Execute your `.bash_profile` to update your PATH.
+To modify the PATH environment on Windows 7:
 
-`source ~/.bash_profile`
+* Click on the __Start__ menu in the lower-left corner of the desktop,
+  right-click on __Computer__, then click __Properties__.
 
-- Your PATH now includes the Android SDK, available each time open the Terminal program.
+* Click __Advanced System Settings__ in the column on the left.
 
-3B. Set up your PATH environment variable on Windows
----------------------------------------
+* In the resulting dialog box, press __Environment Variables__.
 
-- From the Desktop, right-click __My Computer__ and click __Properties__.
-- Click the __Advanced System Settings__ link in the left column.
-- In the __System Properties__ window, click the __Environment Variables__ button.
-- Select the PATH variable from the System variables section.
-- Select the __Edit__ button.
-- You need to add the path to your Android SDK platform-tools and tools directory. This example uses `C:\Development\android-sdk-windows` as the SDK's install directory. Append the following into the text box:
+* Select the __PATH__ variable and press __Edit__.
 
-`;C:\Development\android-sdk-windows\platform-tools;C:\Development\android-sdk-windows\tools`
+* Append the following to the PATH based on where you installed the
+  SDK, for example:
 
-- Save your edit and close the Environment Variables dialog.
-- You may also need to include `%JAVA_HOME%\bin` to your PATH. To check if this is required, open a command prompt and type `java`. Add `%JAVA_HOME%\bin` to the PATH if the program can't be found. You may need to specify the full path instead of the `%JAVA_HOME%` environment variable.
-- Finally, you may also need to include `%ANT_HOME%\bin` to your PATH. To check if this is required, open a command prompt and type `ant`. Add `%ANT_HOME%\bin` to the PATH if the program can't be found. You may need to specify the full path instead of the `%ANT_HOME%` environment variable.
+        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-4. Set up New Project
---------------------
+* Save the value and close both dialog boxes.
 
-- In a terminal window, navigate to the Cordova distribution `android/bin` directory.
-- Type `./create <project_folder_path> <package_name> <project_name>`, then press **Enter**
+You may also need to enable Java and Ant. Open a command prompt and
+type `java`, and also type `ant`. Append to the PATH whichever fail to
+run:
 
-        <project_folder_path> is the path to your new Cordova Android project
-        <package_name> is the package name, e.g. com.YourCompany.YourAppName
-        <project_name> is the project name, e.g. YourApp (Must not contain spaces and dashes)
+        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
-- If you get an __An unexpected error occurred__ error, try the command again prefixed with `sudo`
+## Open a Project in the SDK
 
-- Launch Eclipse, and select menu item **New Project**:
+Use the `cordova` utility to set up a new project, as described in The
+Cordova Command-line Interface. For example, in a source-code directory:
+
+        $ cordova create hello com.example.hello "Hello World"
+        $ cd hello
+        $ cordova platform add android
+        $ cordova build
+
+Once created, here's how to use the SDK to modify it:
+
+* Launch the __Eclipse__ application.
+* Select the __New Project__ menu item.
+* Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
     ![](img/guide/getting-started/android/eclipse_new_project.png)
-- Select the directory you used for `<project_folder_path>`
-- Click Finish.
+* Navigate to select `hello`, or whichever directory you created for the project.
+* Press __Finish__.
 
-If your project has a red __X__ indicating there is a problem follow
-these additional steps:
+Once the Eclipse window opens, a red __X__ may appear to indicate
+unresolved problems. If so, follow these additional steps:
 
-- Right-click on the project folder.
-- In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
-- For the project build target, select the highest Android API level you have installed.
-- Click __OK__
-- Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
+* Right-click on the project folder.
+* In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
+* For the project build target, select the highest Android API level you have installed.
+* Click __OK__.
+* Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
-5A. Deploy to Emulator
-----------------------
+## Deploy to Emulator
 
-- Right-click the project and go to **Run As &gt; Android Application**
+You can use the `cordova` utility to run an app in an emulator
+
+- Right-click the project and go to **Run As &rarr; Android Application**
 - Eclipse asks you to select an appropriate AVD. If there isn't one, then you'll need to create it.
 
 __NOTE:__ For a faster experience, use an Intel-based emulator image.
@@ -121,9 +132,12 @@ __NOTE:__ For a faster experience, use an Intel-based emulator image.
 - Create a new AVD with the Target set to an Intel image.
 - When starting the emulator, ensure there are no error messages about the HAX module failing to load.
 
-5B. Deploy to Device
---------------------
+## Deploy to Device
 
-- Make sure USB debugging is enabled on your device and plug it into your system. Information can be found on the [Android Developer Site](http://developer.android.com/tools/device.html)
-- Right-click the project and go to **Run As &gt; Android Application**
+Make sure USB debugging is enabled on your device and plug it into
+your system. Information can be found on the [Android Developer
+Site](http://developer.android.com/tools/device.html)
+
+Right-click the project and go to **Run As &rarr; Android
+Application**
 
