@@ -42,9 +42,6 @@ Cordova projects.
 The Windows Phone command-line tools support creating, building, and
 running new projects. Commands must be run from a cmd or powershell prompt.
 
-The WP8 repo now includes code for building both WP7 + WP8 apps.
-The repo has subfolders for each: wp7/ and wp8/
-
 ### Create a project
 
 Run the `create` command with the following parameters:
@@ -54,11 +51,8 @@ Run the `create` command with the following parameters:
 * Project name
 
 <!-- -->
-    // create a new wp8 Cordova project
-    $ C:\path\to\cordova-wp8\wp8\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
-    
-    // create a new wp7 Cordova project
-    $ C:\path\to\cordova-wp8\wp7\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
+
+    $ C:\path\to\cordova-wp8\bin\create C:\path\to\my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
 ### Building your project (cleans then builds)
 
