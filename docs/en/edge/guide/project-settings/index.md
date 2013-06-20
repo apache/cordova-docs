@@ -37,8 +37,6 @@ properties, characteristics and behaviours are encapsulated as much as possible 
 - Project Settings for Windows Phone 7
 - Project Settings for Windows Phone 8
 - Project Settings for Windows 8
-- Project Settings for webOS
-- Project Settings for Bada
 - Project Settings for FirefoxOS
 
 ## config.xml Elements

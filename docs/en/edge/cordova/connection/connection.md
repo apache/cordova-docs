@@ -54,12 +54,6 @@ Permissions
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-### Bada
-
-    <Privilege>
-        <Name>SYSTEM_SERVICE</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -71,10 +65,6 @@ Permissions
 #### config.xml
 
     <plugin name="NetworkStatus" value="CDVConnection" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

@@ -48,10 +48,6 @@ Permissions
 
     <plugin name="Compass" value="org.apache.cordova.CompassListener" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
     No permissions are required.
@@ -61,10 +57,6 @@ Permissions
 #### config.xml
 
     <plugin name="Compass" value="CDVLocation" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

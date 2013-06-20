@@ -64,14 +64,6 @@ Permissions
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>ADDRESSBOOK</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -90,10 +82,6 @@ Permissions
 #### config.xml
 
     <plugin name="Contacts" value="CDVContacts" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

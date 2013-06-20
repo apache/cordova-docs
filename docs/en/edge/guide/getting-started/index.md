@@ -38,10 +38,7 @@ and managing signing key requirements.
 - Getting Started with BlackBerry (Windows, Mac)
 - Getting Started with BlackBerry 10 (Windows, Mac)
 - Getting Started with iOS (Mac)
-- Getting Started with Symbian (Windows, Mac, Linux)
-- Getting Started with WebOS (Windows, Mac, Linux)
 - Getting Started with Windows Phone 7 (Windows 7 or 8)
 - Getting Started with Windows Phone 8 (Windows 8)
 - Getting Started with Windows 8 (Windows 8)
-- Getting Started with Bada (Windows)
-- Getting Started with Tizen (Windows, Linux)
+- Getting Started with Tizen

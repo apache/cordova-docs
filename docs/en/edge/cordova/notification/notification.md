@@ -44,14 +44,6 @@ Permissions
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>SYSTEM_SERVICE</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -67,10 +59,6 @@ Permissions
 #### config.xml
 
     <plugin name="Notification" value="CDVNotification" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

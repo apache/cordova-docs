@@ -61,10 +61,6 @@ Permissions
 
     <plugin name="Storage" value="org.apache.cordova.Storage" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/config.xml
@@ -72,10 +68,6 @@ Permissions
     <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
 ### iOS
-
-    No permissions are required.
-
-### webOS
 
     No permissions are required.
 

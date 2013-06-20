@@ -43,17 +43,6 @@ Permissions
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### Bada
-
-#### manifest.xml
-
-    <Privilege>
-        <Name>CAMERA</Name>
-    </Privilege>
-    <Privilege>
-        <Name>RECORDING</Name>
-    </Privilege>
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -73,10 +62,6 @@ Permissions
 #### config.xml
 
     <plugin name="Camera" value="CDVCamera" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

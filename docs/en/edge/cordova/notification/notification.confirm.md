@@ -51,9 +51,8 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Windows Phone 7 and 8
-- Bada 1.2 & 2.x
 - Tizen
+- Windows Phone 7 and 8
 - Windows 8
 
 Quick Example
@@ -128,12 +127,3 @@ Windows Phone 7 and 8 Quirks
 
 - Calls to `alert` and `confirm` are non-blocking, so the result is only available asynchronously.
 
-Bada 2.x Quirks
----------------
-
-- Calls to `confirm` uses the browser's built-in `alert` function.
-
-Bada 1.2 Quirks
----------------
-
-- Ignores button names, so always evaluates as `'OK|Cancel'`.

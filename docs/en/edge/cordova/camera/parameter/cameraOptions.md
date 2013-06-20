@@ -101,22 +101,16 @@ BlackBerry Quirks
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
 
-webOS Quirks
------------
-
-- Ignores the `quality` parameter.
-- Ignores the `sourceType` parameter.
-- Ignores the `allowEdit` parameter.
-- `Camera.MediaType` is not supported.
-- Ignores the `correctOrientation` parameter.
-- Ignores the `saveToPhotoAlbum` parameter.
-- Ignores the `cameraDirection` parameter.
-
 iOS Quirks
 --------------
 
 - Set `quality` below 50 to avoid memory errors on some devices.
 - When using `destinationType.FILE_URI`, photos are saved in the application's temporary directory.  You may delete the contents of this directory using the `navigator.fileMgr` APIs if storage space is a concern.
+
+Tizen Quirks
+--------------
+- options not supported
+- always returns a FILE URI
 
 Windows Phone 7 and 8 Quirks
 --------------
@@ -124,13 +118,3 @@ Windows Phone 7 and 8 Quirks
 - Ignores the `allowEdit` parameter.
 - Ignores the `correctOrientation` parameter.
 - Ignores the `cameraDirection` parameter.
-
-Bada 1.2 Quirks
---------------
-- options not supported
-- always returns a FILE URI
-
-Tizen Quirks
---------------
-- options not supported
-- always returns a FILE URI

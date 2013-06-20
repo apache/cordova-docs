@@ -71,10 +71,6 @@ Permissions
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
-### Bada
-
-    No permissions are required.
-
 ### BlackBerry WebWorks
 
 #### www/plugins.xml
@@ -92,10 +88,6 @@ Permissions
 #### config.xml
 
     <plugin name="Geolocation" value="CDVLocation" />
-
-### webOS
-
-    No permissions are required.
 
 ### Windows Phone
 

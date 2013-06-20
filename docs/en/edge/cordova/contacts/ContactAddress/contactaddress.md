@@ -47,7 +47,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
-- Bada 1.2 & 2.0
 - Windows Phone 7 and 8
 - Windows 8
 
@@ -159,7 +158,3 @@ iOS Quirks
 - __pref__: Not supported on iOS devices, returning `false`.
 - __formatted__: Currently not supported.
 
-Bada Quirks
------------
-- __formatted__: Not supported.
-- __type__: Has to be either `WORK` or `HOME`

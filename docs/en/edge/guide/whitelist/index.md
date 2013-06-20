@@ -73,11 +73,6 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
-Bada
-----
-
-Bada does not support domain whitelisting. By default, all domains are accessible.
-
 BlackBerry
 ----------
 
@@ -125,16 +120,6 @@ Wildcards on iOS (`*`) are more flexible than the [W3C Widget Access][1] specifi
 Access to all subdomains and TLDs (`.com`, `.net`, etc):
 
     *.google.*
-
-Symbian
--------
-
-Symbian does not support domain whitelisting. By default, all domains are accessible.
-
-webOS
------
-
-webOS does not support domain whitelisting. By default, all domains are accessible.
 
 Windows Phone (7 & 8)
 ---------------------
