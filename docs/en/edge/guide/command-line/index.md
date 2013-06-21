@@ -22,8 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Cordova now ships with a set of command-line tools that make it easier
 for you to develop cross-platform applications. You can build, clean,
 and launch an emulator with a single command. You can consider these
-instructions as an alternative to the Getting Started guides. Whereas
-the Getting Started guides help you get setup with the default IDEs and
+instructions as an alternative to the Platform Guides. Whereas
+the Platform Guides help you get setup with the default IDEs and
 tooling surrounding the platforms you are working with, the command-line
 tools aim to provide a shell-based approach to creating and working with
 Cordova projects.
