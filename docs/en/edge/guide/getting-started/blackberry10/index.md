@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started with BlackBerry 10
+BlackBerry 10 Platform Guide
 ==================================
 
 Apache Cordova is an application development platform that allows you to use common web technologies, primarily HTML5, JavaScript, and CSS, to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.

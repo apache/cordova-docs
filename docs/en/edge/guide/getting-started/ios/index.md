@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started with iOS
+iOS Platform Guide
 ========================
 
 ## Introduction ##
@@ -41,7 +41,7 @@ Apache Cordova is a library used to create native mobile applications using Web 
 
 - **iOS Device**
 
-    You can test many of the Cordova features using the iOS simulator installed with the iOS SDK and Xcode, but you need an actual device to fully test all of the device features your applications use before submitting to the App Store.  The device must have at least iOS 5.x installed, the minimum iOS version supported as of Cordova 2.3.  Devices that support at least iOS 5 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd Generation or later. To install apps onto a device, you must also be a member of Apple's [iOS Developer Program](https://developer.apple.com/programs/ios/).  The program costs $99 per year. This Getting Started guide shows how to deploy the application to the iOS simulator, in which case developer program registration is not required.
+    You can test many of the Cordova features using the iOS simulator installed with the iOS SDK and Xcode, but you need an actual device to fully test all of the device features your applications use before submitting to the App Store.  The device must have at least iOS 5.x installed, the minimum iOS version supported as of Cordova 2.3.  Devices that support at least iOS 5 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd Generation or later. To install apps onto a device, you must also be a member of Apple's [iOS Developer Program](https://developer.apple.com/programs/ios/).  The program costs $99 per year. This platform guide shows how to deploy the application to the iOS simulator, in which case developer program registration is not required.
 
 ## Install Cordova
 

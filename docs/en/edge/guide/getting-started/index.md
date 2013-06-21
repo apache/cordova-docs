@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started Guides
+Platform Guides
 ======================
 
 Before developing for any of the platforms listed below, install
@@ -34,11 +34,11 @@ environment to support each platform: where to obtain the SDK, how to
 set up device emulators, how to connect devices for direct testing,
 and managing signing key requirements.
 
-- Getting Started with Android (Windows, Mac, Linux)
-- Getting Started with BlackBerry (Windows, Mac)
-- Getting Started with BlackBerry 10 (Windows, Mac)
-- Getting Started with iOS (Mac)
-- Getting Started with Windows Phone 7 (Windows 7 or 8)
-- Getting Started with Windows Phone 8 (Windows 8)
-- Getting Started with Windows 8 (Windows 8)
-- Getting Started with Tizen
+- Android Platform Guide (Windows, Mac, Linux)
+- BlackBerry Platform Guide (Windows, Mac)
+- BlackBerry Platform Guide 10 (Windows, Mac)
+- iOS Platform Guide (Mac)
+- Windows Phone 7 Platform Guide (Windows 7 or 8)
+- Windows Phone 8 Platform Guide (Windows 8)
+- Windows 8 Platform Guide (Windows 8)
+- Tizen Platform Guide

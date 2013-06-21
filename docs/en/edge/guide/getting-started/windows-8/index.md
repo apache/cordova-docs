@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started with Windows 8
+Windows 8 Platform Guide
 ==================================
 
 This guide describes how to set up your Cordova development
