@@ -84,7 +84,7 @@ the CLI for progressively greater shares of the development cycle:
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
   <!-- XREF
-  (See Installing Platform SDKs for instructions.)
+  (See the Platform Guides for instructions.)
   XREF -->
   As indicated in the Platform Support table below, you may need to
   run the CLI on different operating systems depending on the targeted
@@ -103,7 +103,7 @@ At any point in the development cycle, you can also rely on
 platform-specific SDK tools, which may provide a richer set of
 options. 
 <!-- XREF
-(See Platform Development Guide for details about each platform's SDK tool set.)
+(See the Platform Guides for details about each platform's SDK tool set.)
 XREF -->
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
