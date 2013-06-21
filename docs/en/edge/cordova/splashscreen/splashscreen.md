@@ -25,8 +25,8 @@ Splashscreen
 Methods
 -------
 
-- show
-- hide
+- splashscreen.show
+- splashscreen.hide
 
 Permissions
 -----------
