@@ -77,7 +77,7 @@ __Full Example__
     var slice3 = file.slice(120, 135);
     // slice2 and slice3 are equivalent.
 
-__Supported Platforms:__
+__Supported Platforms__
 
 - Android
 - iOS
