@@ -20,88 +20,93 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Tizen Platform Guide
 =========================
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+## Requirements and Support
 
-1. Requirements
----------------
+the Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
+or Windows XP SP3/7 (32-bit).
 
-- Linux Ubuntu 10.04/10.10/11.04/11.10 32-bit, Windows XP SP3/7 32-bit.
+Developers should use the the `cordova` utility in conjunction with
+the Tizen SDK.  See The Cordova Command-line Interface for information
+how to install it, add projects, then build and deploy a project.
 
-2. Install SDK + Cordova
--------------------------
+## Install the SDK
 
-- Download and install the [Tizen SDK](https://developer.tizen.org/sdk).
-- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `tizen` directory.
-- (optional) Install Tizen Cordova template projects: copy the `/templates` directory content into you Tizen Eclipse IDE web templates directory (e.g: `/home/my_username/tizen-sdk/IDE/Templates/web`).
+Download the Tizen SDK from
+[tizen.org](https://developer.tizen.org/sdk).
 
-3. Set up New Project
---------------------
+<!--
 
-- **Method #1: Import a Cordova Tizen project sample**
+- (optional) Install Tizen Cordova template projects: copy the
+  `/templates` directory content into you Tizen Eclipse IDE web
+  templates directory (e.g:
+  `/home/my_username/tizen-sdk/IDE/Templates/web`).
+
+- __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
-    - Select  **File &rarr; Import &rarr; Tizen Web Project**
-
-    ![](img/guide/getting-started/tizen/import_project.png)
-
-    - Click **Next**
-    - Make sure that **Select root directory** is checked
-    - Make sure **Copy projects into workspace** is checked
-    - Click **Browse**
-    - Browse to one of the Cordova Tizen `samples` project directory (e.g: `/cordova-basic`) and select it
-
-    ![](img/guide/getting-started/tizen/import_widget.png)
-
-    - Click **Finish**
-
-    ![](img/guide/getting-started/tizen/project_explorer.png)
-
-    - Your project should now be imported and appear in the **Project Explorer** view
-
-- **Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates**
-    - Launch Tizen Eclipse IDE
-    - Select  **File &rarr; New &rarr; Tizen Web Project**
-    - Select **User Template** and **User defined** items
-    - Select one of the Tizen Cordova template (e.g: **CordovaBasicTemplate**)
-    - Fill the **Project name** and its target **Location**
+    - Select  __File &rarr; New &rarr; Tizen Web Project__
+    - Select __User Template__ and __User defined__ items
+    - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
+    - Fill the __Project name__ and its target __Location__
 
     ![](img/guide/getting-started/tizen/project_template.png)
 
-    - Click **Finish**
+    - Click __Finish__
 
     ![](img/guide/getting-started/tizen/project_explorer.png)
 
-    - Your project should now appear in the **Project Explorer** view
+    - Your project should now appear in the __Project Explorer__ view
 
-4. Hello World
---------------
-- To build your project:
+-->
 
-    - **Right Click** your project in the **Project Explorer** view and Select **Build Project**
 
-    ![](img/guide/getting-started/tizen/build_project.png)
+## Open a Project in the SDK
 
-    - A widget package should be generated in your project root directory (e.g: `cordova-basic.wgt`)
+1. Launch the Tizen Eclipse IDE.
+2. Select __File &rarr; Import &rarr; Tizen Web Project__:
 
-    - __NOTE:__ The sample Tizen Cordova projects provided go beyond basic "hello world" applications, and feature example usage of the Battery API.
+   ![](img/guide/getting-started/tizen/import_project.png)
 
-5A. Deploy to Simulator
------------------------
+3. Press __Next__.
+4. Make sure __Select root directory__ is checked.
+5. Make sure __Copy projects into workspace__ is checked.
+6. Press __Browse__ and select the Cordova Tizen `samples` project directory (such as `/cordova-basic`):
 
-- **Right Click** your project in the **Project Explorer** view and Select **Run As** and **Tizen Web Simulator Application**
+   ![](img/guide/getting-started/tizen/import_widget.png)
 
-    ![](img/guide/getting-started/tizen/runas_web_sim_app.png)
+7. Press __Finish__. Your project should now be imported and appear in
+   the __Project Explorer__ view:
 
-5B. Deploy to Device/Emulator
---------------------
+   ![](img/guide/getting-started/tizen/project_explorer.png)
 
-- Make sure that your target device is properly launched, connected and configured. Its __Date and Time__ settings must be set correctly.
-- Select your application deployment target with the **Connection Explorer** view (Select **Window &rarr; Show View &rarr; Connection Explorer**.)
 
-    ![](img/guide/getting-started/tizen/connection_explorer.png)
+To rebuild the project, right-click in the __Project Explorer__ view
+and Select __Build Project__:
 
-- **Right-click** your project in the **Project Explorer** view and select **Run As** and **Tizen Web Application**
+![](img/guide/getting-started/tizen/build_project.png)
 
-    ![](img/guide/getting-started/tizen/runas_web_app.png)
+A widget package file such as _hello.wgt_ should generate in the
+project's root directory.
 
-Done!
------
+## Deploy to Emulator
+
+Right-click the project in the __Project Explorer__ view and select
+__Run As &rarr; Tizen Web Simulator Application__:
+
+![](img/guide/getting-started/tizen/runas_web_sim_app.png)
+
+## Deploy to Device
+
+* Make sure that the target device is properly launched, connected and
+  configured. Its __Date and Time__ settings must be set correctly.
+
+* Use the __Connection Explorer__ view to select the application
+  deployment target: __Window &rarr; Show View &rarr; Connection
+  Explorer__.
+
+  ![](img/guide/getting-started/tizen/connection_explorer.png)
+
+* Right-click the project in the __Project Explorer__ view, then
+  select __Run As & rarr; Tizen Web Application__:
+
+  ![](img/guide/getting-started/tizen/runas_web_app.png)
+
