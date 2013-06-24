@@ -22,38 +22,39 @@ Getting Started with iOS
 
 ## Requirements and Support
 
-
-- __Intel-based Computer with Mac® OS X® Lion or greater (10.7.4+)__
-    The Apple® tools required for building iOS applications run only on the OS X operating system. The version of the development environment required, Xcode® 4.5, runs only on Mac OS X version 10.7 (Lion) or greater.
-- __Xcode 4.5 and iOS 6 SDK__
-         To submit apps to the Apple App Store℠, you must use the latest versions of the Apple tools. Currently the latest versions are Xcode 4.5.2 and the iOS 6 SDK (Software Development Kit). The download of Xcode 4.5.2 includes the iOS 6 SDK.
-
-- __iOS Device__
+Apple® tools required to build iOS applications run only on the OS X
+operating system on Intel-based Macs. Xcode® 4.5 (the minimum required
+version) runs only on OS X version 10.7 (Lion) or greater, and
+includes the iOS 6 SDK (Software Development Kit).  To submit apps to
+the Apple App Store℠ requires the latest versions of the Apple tools.
 
 You can test many of the Cordova features using the iOS simulator
 installed with the iOS SDK and Xcode, but you need an actual device to
-fully test all of the device features your applications use before
-submitting to the App Store.  The device must have at least iOS 5.x
-installed, the minimum iOS version supported as of Cordova 2.3.
-Devices that support at least iOS 5 include all iPad® models, iPhone®
-3GS and above, and iPod® Touch 3rd Generation or later. To install
-apps onto a device, you must also be a member of Apple's [iOS
-Developer Program](https://developer.apple.com/programs/ios/).  The
-program costs $99 per year. This Getting Started guide shows how to
-deploy the application to the iOS simulator, in which case developer
-program registration is not required.
-
+fully test all of the app's device features before submitting to the
+App Store.  The device must have at least iOS 5.x installed, the
+minimum iOS version supported as of Cordova 2.3.  Supporting devices
+include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
+Generation or later. To install apps onto a device, you must also be a
+member of Apple's
+[iOS Developer Program](https://developer.apple.com/programs/ios/),
+which costs $99 per year. This guide shows how to deploy apps to the
+iOS simulator, for which you don't need to register with the developer
+program.
 
 ## Install the SDK
 
-    - Download from the [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) (https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
-    - Download from [Apple Developer Downloads](https://developer.apple.com/downloads/index.action) (https://developer.apple.com/downloads/index.action).  __NOTE:__  This link requires Apple Developer registration.
+There are two ways to download Xcode:
 
-- __Xcode Command Line Tools__
+* from the [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12),
+  available by searching for "Xcode" in the __App Store__ application.
 
-    Cordova uses the command line to create a new application project.  To access the Xcode tools from the command line an additional download is required.  The tools are downloaded from within Xcode.
-    1. Open Xcode
-    2. Select the following via the Xcode Menus:  __Xcode Preferences &rarr; Downloads &rarr;Command Line Tools__.  This downloads and installs copies of the core command-line tools and system headers into your computer's system folders.
+* from [Apple Developer Downloads](https://developer.apple.com/downloads/index.action),
+  which requires registration as an Apple Developer.
+
+Once Xcode is installed, several command-line tools need to be enabled
+for Cordova to run. From the __Xcode__ menu, select __Preferences__,
+then the __Downloads__ tab. Press the __Install__ button next to the
+__Command Line Tools__ listing.
 
 ## Open a Project in the SDK
 
@@ -96,12 +97,7 @@ Your screen should look similar to:
 
   3. Click the __run__ button to build, deploy and run the application on your device.
 
-## Results
-
-  The running HelloWorld app is shown below.  The Device is Ready line should be slowly pulsating.
-
   ![](img/guide/getting-started/ios/HelloWorldStandard.png)
-
 
 ## Common Problems
 
@@ -144,29 +140,30 @@ Your screen should look similar to:
 
   Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.
 
+
+
 ## Common Problems
 
-
-
-### Deprecation Warnings
-
-When an application programming interface (API) is changed or replaced
-by another API, it is marked as _deprecated_.  The API still works in
-the near term, but is eventually removed.  Some of these deprecated
-interfaces are reflected in Apache Cordova, and Xcode issues warnings
-about them when you build and deploy an application.  The Xcode
-warning about the ‘invokeString’ method concerns functionality that
-launches the app from a custom URL. While the mechanism to load from a
-custom URL has changed, this code is included to provide backwards
-functionality for apps created with older versions of Cordova.  The
-sample app does not use this functionality, so these warnings can be
-ignored.
+__Deprecation Warnings:__ When an application programming interface
+(API) is changed or replaced by another API, it is marked as
+_deprecated_.  The API still works in the near term, but is eventually
+removed.  Some of these deprecated interfaces are reflected in Apache
+Cordova, and Xcode issues warnings about them when you build and
+deploy an application.  The Xcode warning about the ‘invokeString’
+method concerns functionality that launches the app from a custom
+URL. While the mechanism to load from a custom URL has changed, this
+code is included to provide backwards functionality for apps created
+with older versions of Cordova.  The sample app does not use this
+functionality, so these warnings can be ignored.
 
 If you wish to remove the warnings you can remove the code that
 references the deprecated invokeString API:
 
-  1. Edit the `Classes/MainViewController.m` file.
-  2. Find and comment out the following code by surrounding it with the begin, /*,  and end, */, comment characters as highlighted in the code snippet below.
+1. Edit the `Classes/MainViewController.m` file.
+
+2. Find and comment out the following code by surrounding it with the
+   begin, /*, and end, */, comment characters as highlighted in the
+   code snippet below.
 
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
@@ -186,6 +183,7 @@ references the deprecated invokeString API:
         }
 
   3. Press Command s to save the file.
+
   4. Navigate to the AppViewDelegate.m file in the Classes Folder.
 
   5. Comment out the following line by placing a double slash at the beginning of line 73 as shown below:
@@ -201,6 +199,7 @@ references the deprecated invokeString API:
   Some users have encountered compilation errors relating to missing headers.  This refers to a problem in the build location and is fixed via Xcode preferences.
 
   1.  Within the Xcode menus select __Xcode &rarr; Preferences &rarr; Locations__.
+
   2. In the __Derived Data__ section click the __Advanced__ button and select __Unique__ as the __Build Location_ as shown:
 ![](img/guide/getting-started/ios/xcode_build_location.png)
 
