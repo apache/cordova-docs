@@ -35,7 +35,7 @@ Prerequisites
 
 1. **Cordova 2.3.0** or greater
 2. **Xcode 4.5** or greater
-3. `config.xml` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project)
+3. `config.xml` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project or from `CordovaLibTests/CordovaLibApp/config.xml`)
 
 Adding Cleaver to your Xcode project (CordovaLib sub-project)
 -------------------------------------------------------------
@@ -51,7 +51,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 9. Type the **Option-Command-1** key combination to show the **File Inspector**
 10. Choose **Relative to Group** in the **File Inspector** for the drop-down menu for **Location**
 11. Select the **project icon** in the Project Navigator, select your **Target**, then select the **Build Settings** tab
-12. Add `-all_load` and `-Obj-C` for the **Other Linker Flags** value
+12. Add `-all_load` and `-ObjC` for the **Other Linker Flags** value
 13. Click on the **project icon** in the Project Navigator, select your **Target**, then select the **Build Phases** tab
 14. Expand **Link Binaries with Libraries**
 15. Select the **+** button, and add these **frameworks** (and optionally in the Project Navigator, **move** them under the Frameworks group):
@@ -91,7 +91,7 @@ Using CDVViewController in your code
 
 2. Instantiate a **new** `CDVViewController`, and **retain it somewhere** (e.g. to a property in your class):
 
-        CDVViewController* viewController = [CDVViewController new];
+        CDVViewController* viewController = [[CDVViewController alloc] init];
 
 3. (_OPTIONAL_) Set the `wwwFolderName` property (defaults to `www`):
 
@@ -109,13 +109,12 @@ Using CDVViewController in your code
 
         viewController.useSplashScreen = YES;
 
-6. Set the **view frame** (always set this as the last property):
+6. **Add** Cleaver to your view:
 
-        viewController.view.frame = CGRectMake(0, 0, 320, 480);
-
-7. **Add** Cleaver to your view:
-
-        [myView addSubview:viewController.view];
+        [self addChildViewController:viewController];
+        viewController.view.frame = self.view.bounds;
+        [self.view addSubview:viewController.view];
+        [viewController didMoveToParentViewController:self];
 
 Adding your HTML, CSS and JavaScript assets
 -------------------------------------------
