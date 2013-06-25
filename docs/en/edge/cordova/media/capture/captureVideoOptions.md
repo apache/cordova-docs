@@ -45,5 +45,4 @@ iOS Quirks
 ----------
 
 - The __limit__ parameter is not supported.  Only one video is recorded per invocation.
-- The __duration__ parameter is not supported.  The length of recordings cannot be limited programmatically.
 
