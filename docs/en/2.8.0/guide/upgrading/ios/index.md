@@ -45,6 +45,15 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
         
 8. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
+9. Add these two frameworks to your project:
+        
+        OpenAL
+        ImageIO
+        
+10. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, edit **"-Obj-C"** to be **"-ObjC"**
+        
+11. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, change **"-all\_load"** to be **"-force\_load ${TARGET\_BUILD\_DIR}/libCordova.a"**. You would only need to do this if you have the problem defined in [this issue.](https://issues.apache.org/jira/browse/CB-3458)
+
 ## Upgrading Cordova 2.6.0 projects to 2.7.0 ##
 
 1. **Download and extract the Cordova 2.7.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.7.0)
