@@ -35,6 +35,7 @@ Methods
 - addEventListener
 - removeEventListener
 - close
+- show
 - executeScript
 - insertCSS
 
@@ -260,6 +261,62 @@ Full Example
       <body>
       </body>
     </html>
+
+show
+=====
+
+> Displays an InAppBrowser window that was opened hidden. Calling this has no effect if the InAppBrowser was already visible.
+
+    ref.show();
+
+- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+
+Supported Platforms
+-------------------
+
+- Android
+- iOS
+
+Quick Example
+-------------
+
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+    ref.show();
+
+Full Example
+------------
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.show Example</title>
+
+        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             ref.addEventListener('loadstop', function(event) {
+                 alert('background window loaded'); 
+             });
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
+             }, 5000);
+        }
+
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
+
 
 executeScript
 =============

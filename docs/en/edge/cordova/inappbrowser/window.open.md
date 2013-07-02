@@ -40,12 +40,14 @@ instance, or the system browser.
     - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
     
     Android only
-    ------------
-    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button.
+    --------------------
+    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. 
+    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
 
     iOS only
     --------
     - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. Note that you will have to localize this value yourself.
+    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
     - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the InAppBrowser (defaults to 'yes')
     - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
     - __mediaPlaybackRequiresUserAction__: Set to `yes` or `no` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
