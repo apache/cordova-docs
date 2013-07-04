@@ -19,7 +19,7 @@
 #
 -->
 
-Project Settings for Windows 8
+Windows 8 Configuration
 ===================================
 
 Windows 8 does not currently support this feature.

@@ -19,7 +19,7 @@
 #
 -->
 
-Project Settings for BlackBerry
+BlackBerry Configuration
 ===================================
 
 BlackBerry fully supports the

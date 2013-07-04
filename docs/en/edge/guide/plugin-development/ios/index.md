@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Developing a Plugin on iOS
+# iOS Plugins
 
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
 

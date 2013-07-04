@@ -19,7 +19,7 @@
 #
 -->
 
-Project Settings for iOS
+iOS Configuration
 ========================
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.

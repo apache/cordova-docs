@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Developing a Plugin on Android
+# Android Plugins
 
 Writing a plugin requires an understanding of the architecture of Cordova-Android. Cordova-Android consists
 of an Android WebView with hooks attached to it. These plugins are represented as class mappings in the config.xml

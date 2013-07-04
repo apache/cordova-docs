@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Developing a Plugin on Windows Phone
+Windows Phone Plugins
 ====================================
 
 Writing a plugin for Cordova on Windows Phone requires a basic understanding of

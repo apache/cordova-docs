@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Developing a Plugin on BlackBerry
+BlackBerry Plugins
 =================================
 
 ## How to make the Echo plugin on Blackberry
