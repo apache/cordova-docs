@@ -27,7 +27,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.9.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.9.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova.js** (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your **www** folder, and delete your **www/cordova.js** file
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
 7. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
@@ -37,7 +37,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.8.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova.js** (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your **www** folder, and delete your **www/cordova-2.7.0.js** file
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
 7. Update any &lt;plugin&gt; tags that are in your **config.xml** to &lt;feature&gt; tags. Note that existing &lt;plugin&gt; tags will still work, but are deprecated. You can copy this information in the **config.xml** for a new project. For example:
@@ -68,7 +68,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.7.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.7.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools - you will have to grab the assets from this new project
+4. **Create a new project**, as described in iOS Command-line Tools. you need the assets from this new project.
 5. **Copy** the **www/cordova-2.7.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.6.0.js** file
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.7.0.js** file
 7. Update (or replace, if you never changed the file) your **AppDelegate.m** file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23))
@@ -81,7 +81,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.6.0 source** to a **permanent folder location** on your hard drive (say to `~/Documents/Cordova-2.6.0`)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the project's `www/cordova-2.6.0.js` file into your `www` folder, and delete your `www/cordova-2.5.0.js` file.
 6. **Update** the Cordova script reference in your `www/index.html` file (along with any other files that reference the script) to refer to the new `cordova-2.6.0.js` file.
 7. Update (or replace, if you never changed the file) your `AppDelegate.m` file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9))
@@ -96,7 +96,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.5.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.5.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.5.0.js** file from the new project into your **www** folder and delete your **www/cordova-2.4.0.js** file
 6. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.5.0.js** file
 7. Update (or replace, if you never changed the file) your `AppDelegate.m` file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09))
@@ -111,7 +111,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.4.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.4.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.4.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.3.0.js** file
 6. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.4.0.js** file
 7. Update (or replace, if you never changed the files) your `MainViewController.m` file according to the one from the new project (see [this diff](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997)).
@@ -126,7 +126,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 1. **Download and extract the Cordova 2.3.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.3.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.3.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.2.0.js** file
 6. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.3.0.js** file
 7. Update (or replace, if you never changed the file) your `MainViewController.m` according to the one from the new project.
@@ -148,7 +148,7 @@ You can get this by accessing the **userAgent** property off the main view-contr
 1. **Download and extract the Cordova 2.2.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.2.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-4. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.2.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.1.0.js** file
 6. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.2.0.js** file
 7. Update (or replace, if you never changed the file) your `MainViewController.m` according to the one from the new project:
@@ -170,7 +170,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 1. **Download and extract the Cordova 2.1.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-2.1.0)
 2. **Quit Xcode** if it is running.
 3. **Navigate** to the directory where you put the downloaded source above, using **Terminal.app**.
-5. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+5. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 6. **Copy** the **www/cordova-2.1.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.0.0.js** file
 7. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.1.0.js** file
 8. Update (or replace, if you never changed the file) your `AppDelegate.m` according to the one from the new project:
@@ -190,7 +190,7 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 ## Upgrading 1.9.0 projects to 2.0.0 ##
 
 1. **Install** Cordova 2.0.0
-2. [**Create a new project**](guide_command-line_index.md.html#Command-Line%20Usage_ios) from the command-line tools. You need to use the assets from this new project.
+2. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 3. **Copy** the **www/cordova-2.0.0.js** file from the new project into your **www** folder, and delete your **www/cordova-1.9.0.js** file
 4. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.0.0.js** file
 5. Copy the **cordova** folder from the new project into your project's root folder (if you want the project command-line tools)

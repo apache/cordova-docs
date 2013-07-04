@@ -35,7 +35,7 @@ Prerequisites
 
 1. **Cordova 2.3.0** or greater
 2. **Xcode 4.5** or greater
-3. `config.xml` file (from a [newly created](guide_command-line_index.md.html#Command-Line%20Usage_ios) Cordova project)
+3. `config.xml` file (from a newly created iOS project)
 
 Adding Cleaver to your Xcode project (CordovaLib sub-project)
 -------------------------------------------------------------

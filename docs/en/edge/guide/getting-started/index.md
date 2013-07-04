@@ -38,49 +38,49 @@ configuration options, instructions to add plugins, how to upgrade
 each platform, and platform-specific command-line tools that serve as
 a lower-level alternative to the `cordova` command-line utility.
 
-## Android (Windows, Mac, Linux)
+## Android
 
 * Android Platform Guide
 * Android Configuration
 * Android Plugins
-* Android Command-Line Tools
+* Android Command-line Tools
 * Upgrading Android
 
-## BlackBerry (Windows, Mac)
+## BlackBerry
 
 * BlackBerry Platform Guide
 * BlackBerry Configuration
-* Blackberry Command-Line Tools
+* Blackberry Command-line Tools
 * Upgrading BlackBerry
 
-## BlackBerry 10 (Windows, Mac)
+## BlackBerry 10
 
 * BlackBerry 10 Platform Guide
 * BlackBerry 10 Plugins
-* Blackberry 10 Command-Line Tools
+* Blackberry 10 Command-line Tools
 
-## iOS (Mac)
+## iOS
 
 * iOS Platform Guide
 * iOS Configuration
 * iOS Plugins
-* iOS Command-Line Tools
+* iOS Command-line Tools
 * Upgrading iOS
 
 ## Windows Phone
 
-* Windows Phone 8 Platform Guide (Windows 8)
+* Windows Phone 8 Platform Guide
 * Windows Phone 8 Configuration
-* Windows Phone 7 Platform Guide (Windows 7 or 8)
+* Windows Phone 7 Platform Guide
 * Windows Phone 7 Configuration
-* Windows Phone Command-Line Tools
+* Windows Phone Command-line Tools
 * Upgrading Windows Phone
 
 ## Windows 8
 
-* Windows 8 Platform Guide (Windows 8)
+* Windows 8 Platform Guide
 * Windows 8 Configuration
-* Windows 8 Command-Line Tools
+* Windows 8 Command-line Tools
 * Upgrading Windows 8
 
 ## Tizen

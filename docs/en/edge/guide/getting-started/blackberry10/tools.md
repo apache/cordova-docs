@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Blackberry 10 Command-Line Tools
+# Blackberry 10 Command-line Tools
 
 The `cordova` command-line utility is a high-level tool that allows
 you to build applications across several platforms at once. An older
