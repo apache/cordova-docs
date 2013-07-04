@@ -17,12 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Cordova BlackBerry
+Upgrading BlackBerry
 ============================
 
 This document describes the process of upgrading Cordova projects to the latest released version
 
-## Upgrading Cordova 2.8.0 projects to 2.9.0 ##
+## Upgrading 2.8.0 projects to 2.9.0 ##
 
 ### BlackBerry10 ###
 
@@ -45,7 +45,7 @@ This document describes the process of upgrading Cordova projects to the latest 
 8. **Copy** the **lib** folder from the new project into the existing project, overwriting the old **lib** folder
 9. **Copy** the **cordova** folder from the new project into the existing project, overwriting the old **cordova** folder
 
-## Upgrading Cordova 2.7.0 projects to 2.8.0 ##
+## Upgrading 2.7.0 projects to 2.8.0 ##
 
 ### BlackBerry10 ###
 
@@ -71,7 +71,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 8. **Copy** the **lib** folder from the new project into the existing project, overwriting the old **lib** folder
 9. **Copy** the **cordova** folder from the new project into the existing project, overwriting the old **cordova** folder
 
-## Upgrading Cordova 2.6.0 projects to 2.7.0 ##
+## Upgrading 2.6.0 projects to 2.7.0 ##
 
 1. **Download and extract the Cordova 2.7.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.7.0)
 2. **Quit any running IDE's** Eclipse, Momentics and the like.

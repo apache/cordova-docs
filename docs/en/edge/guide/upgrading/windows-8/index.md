@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Cordova Windows 8
+Upgrading Windows 8
 ===============================
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova. This applies to applications targetting Windows 8 and the Windows Store.

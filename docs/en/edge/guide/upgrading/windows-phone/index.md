@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Cordova Windows Phone
+Upgrading Windows Phone
 ===============================
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova. This applies to both WP7 and WP8.

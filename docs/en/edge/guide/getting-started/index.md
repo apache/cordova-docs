@@ -29,20 +29,21 @@ platform you are targeting. This installation is necessary regardless
 of whether you do the majority of your work in the SDK or use the CLI
 for your build cycle.
 
-Each platform guide listed below tells you what you need to know to
-set up each development environment: where to obtain the SDK, how to
-set up device emulators, how to connect devices for direct testing,
-and managing signing key requirements.  Additional guides provide
-information on each platform's available configuration settings,
-instructions to add plugins, how to upgrade each platform, and
-platform-specific command-line tools that serve as an alternative to
-the `cordova` command-line tool.
+Each _Platform Guide_ listed below tells you what you need to know to
+set up each platform's development environment: where to obtain the
+SDK, how to set up device emulators, how to connect devices for direct
+testing, and how to manage signing key requirements.  Additional
+guides provide information on each platform's unique set of
+configuration options, instructions to add plugins, how to upgrade
+each platform, and platform-specific command-line tools that serve as
+a lower-level alternative to the `cordova` command-line utility.
 
 ## Android (Windows, Mac, Linux)
 
 * Android Platform Guide
 * Android Configuration
 * Android Plugins
+* Upgrading Android
 
 ## BlackBerry (Windows, Mac)
 
@@ -50,12 +51,14 @@ the `cordova` command-line tool.
 * BlackBerry 10 Platform Guide
 * BlackBerry Configuration
 * BlackBerry 10 Plugins
+* Upgrading BlackBerry
 
 ## iOS (Mac)
 
 * iOS Platform Guide
 * iOS Configuration
 * iOS Plugins
+* Upgrading iOS
 
 ## Windows Phone
 
@@ -64,9 +67,11 @@ the `cordova` command-line tool.
 
 * Windows Phone 8 Platform Guide (Windows 8)
 * Windows Phone 8 Configuration
+* Upgrading Windows Phone
 
 * Windows 8 Platform Guide (Windows 8)
 * Windows 8 Configuration
+* Upgrading Windows 8
 
 ## Tizen
 
@@ -75,3 +80,4 @@ the `cordova` command-line tool.
 ## FirefoxOS
 
 * FirefoxOS Configuration
+
