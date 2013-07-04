@@ -43,34 +43,44 @@ a lower-level alternative to the `cordova` command-line utility.
 * Android Platform Guide
 * Android Configuration
 * Android Plugins
+* Android Command-Line Tools
 * Upgrading Android
 
 ## BlackBerry (Windows, Mac)
 
 * BlackBerry Platform Guide
-* BlackBerry 10 Platform Guide
 * BlackBerry Configuration
-* BlackBerry 10 Plugins
+* Blackberry Command-Line Tools
 * Upgrading BlackBerry
+
+## BlackBerry 10 (Windows, Mac)
+
+* BlackBerry 10 Platform Guide
+* BlackBerry 10 Plugins
+* Blackberry 10 Command-Line Tools
 
 ## iOS (Mac)
 
 * iOS Platform Guide
 * iOS Configuration
 * iOS Plugins
+* iOS Command-Line Tools
 * Upgrading iOS
 
 ## Windows Phone
 
-* Windows Phone 7 Platform Guide (Windows 7 or 8)
-* Windows Phone 7 Configuration
-
 * Windows Phone 8 Platform Guide (Windows 8)
 * Windows Phone 8 Configuration
+* Windows Phone 7 Platform Guide (Windows 7 or 8)
+* Windows Phone 7 Configuration
+* Windows Phone Command-Line Tools
 * Upgrading Windows Phone
+
+## Windows 8
 
 * Windows 8 Platform Guide (Windows 8)
 * Windows 8 Configuration
+* Windows 8 Command-Line Tools
 * Upgrading Windows 8
 
 ## Tizen
@@ -80,4 +90,3 @@ a lower-level alternative to the `cordova` command-line utility.
 ## FirefoxOS
 
 * FirefoxOS Configuration
-
