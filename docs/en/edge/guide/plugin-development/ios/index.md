@@ -210,7 +210,7 @@ running in the iOS 6 Simulator.
 ## Common Pitfalls
 
 * Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
-* Don't forget to add any hosts you connect to in the [whitelist](guide_whitelist_index.md.html#Domain%20Whitelist%20Guide). If you forget, an error is logged in the Xcode console.
+* Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.
 
 ## Deprecated Plugin Signature Note
 
