@@ -90,6 +90,8 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Tizen Platform Guide
 
+<!--
 ## FirefoxOS
 
 * FirefoxOS Configuration
+-->
