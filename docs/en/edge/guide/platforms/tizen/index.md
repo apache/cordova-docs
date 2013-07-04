@@ -48,11 +48,11 @@ Download the Tizen SDK from
     - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
-    ![](img/guide/getting-started/tizen/project_template.png)
+    ![](img/guide/platforms/tizen/project_template.png)
 
     - Click __Finish__
 
-    ![](img/guide/getting-started/tizen/project_explorer.png)
+    ![](img/guide/platforms/tizen/project_explorer.png)
 
     - Your project should now appear in the __Project Explorer__ view
 
@@ -64,25 +64,25 @@ Download the Tizen SDK from
 1. Launch the Tizen Eclipse IDE.
 2. Select __File &rarr; Import &rarr; Tizen Web Project__:
 
-   ![](img/guide/getting-started/tizen/import_project.png)
+   ![](img/guide/platforms/tizen/import_project.png)
 
 3. Press __Next__.
 4. Make sure __Select root directory__ is checked.
 5. Make sure __Copy projects into workspace__ is checked.
 6. Press __Browse__ and select the Cordova Tizen `samples` project directory (such as `/cordova-basic`):
 
-   ![](img/guide/getting-started/tizen/import_widget.png)
+   ![](img/guide/platforms/tizen/import_widget.png)
 
 7. Press __Finish__. Your project should now be imported and appear in
    the __Project Explorer__ view:
 
-   ![](img/guide/getting-started/tizen/project_explorer.png)
+   ![](img/guide/platforms/tizen/project_explorer.png)
 
 
 To rebuild the project, right-click in the __Project Explorer__ view
 and Select __Build Project__:
 
-![](img/guide/getting-started/tizen/build_project.png)
+![](img/guide/platforms/tizen/build_project.png)
 
 A widget package file such as _hello.wgt_ should generate in the
 project's root directory.
@@ -92,7 +92,7 @@ project's root directory.
 Right-click the project in the __Project Explorer__ view and select
 __Run As &rarr; Tizen Web Simulator Application__:
 
-![](img/guide/getting-started/tizen/runas_web_sim_app.png)
+![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
 ## Deploy to Device
 
@@ -103,10 +103,10 @@ __Run As &rarr; Tizen Web Simulator Application__:
   deployment target: __Window &rarr; Show View &rarr; Connection
   Explorer__.
 
-  ![](img/guide/getting-started/tizen/connection_explorer.png)
+  ![](img/guide/platforms/tizen/connection_explorer.png)
 
 * Right-click the project in the __Project Explorer__ view, then
   select __Run As & rarr; Tizen Web Application__:
 
-  ![](img/guide/getting-started/tizen/runas_web_app.png)
+  ![](img/guide/platforms/tizen/runas_web_app.png)
 

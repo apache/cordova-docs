@@ -59,7 +59,7 @@ Open Visual Studio and choose __Open Project__. Navigate to the
 `hello/platforms/wp7` directory and choose the `Hello_World.sln` file.
 The SDK displays the directory's contents:
 
-![](img/guide/getting-started/windows-phone-7/wp7vs.png)
+![](img/guide/platforms/windows-phone-7/wp7vs.png)
 
 At this point you can modify the app within the SDK, but running the
 `build` or `prepare` commands again wipes out local changes. If Visual
@@ -73,12 +73,12 @@ Within the SDK, select the __Windows Phone Emulator__ target from the
 popup menu in the main menu bar, and press the green button to run the
 emulator:
 
-![](img/guide/getting-started/windows-phone-7/wprun.png)
+![](img/guide/platforms/windows-phone-7/wprun.png)
 
 The app displays on the emulator's home screen as it would on a real
 device:
 
-![](img/guide/getting-started/windows-phone-7/wp7emulator.png)
+![](img/guide/platforms/windows-phone-7/wp7emulator.png)
 
 ## Deploy to Device
 
@@ -91,5 +91,5 @@ Once registered, you need to make sure the phone is connected via USB
 with its screen unlocked. In Visual Studio, choose the __Windows Phone
 Device__ target and press the green button to run it:
 
-![](img/guide/getting-started/windows-phone-7/wpd.png)
+![](img/guide/platforms/windows-phone-7/wpd.png)
 

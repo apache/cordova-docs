@@ -55,11 +55,11 @@ expose the same APIs as on other Cordova-supported platforms.
 - Open Visual Studio 2012 and choose **New Project**.
 - Select **Installed &rarr; Template &rarr; Other Languages &rarr; JavaScript &rarr; Windows Store** from the tree, and then **Blank App** from the projects list. Enter whatever project name you like, such as **CordovaWin8Foo** as in this example.
 
-    ![](img/guide/getting-started/windows-8/wsnewproject.png)
+    ![](img/guide/platforms/windows-8/wsnewproject.png)
 
 - Microsoft continues to use `default.html` as the default home page, but most web developers use `index.html`. (Plus it's likely that in the other platform variants of your project you are using `index.html` as the name of your default page.) To fix this, in Solution Explorer rename the `default.html` file to `index.html`. Then double-click the `package.appxmanifest` file and change the **Start page** value to `index.html`.
 
-	![](img/guide/getting-started/windows-8/wschangemanifest.png)
+	![](img/guide/platforms/windows-8/wschangemanifest.png)
 
 - To include `cordova.js` in your project, right-click on the **js** folder in Solution Explorer and select **Add &rarr; New Item**. Locate the `cordova.js` file in the **lib\windows-8** folder noted above.
 
@@ -102,7 +102,7 @@ expose the same APIs as on other Cordova-supported platforms.
 
 - Run the project from Visual Studio. You'll see the message box appear:
 
-	![](img/guide/getting-started/windows-8/wsalert.png)
+	![](img/guide/platforms/windows-8/wsalert.png)
 
 Done!
 -----
