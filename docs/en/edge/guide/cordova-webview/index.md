@@ -17,11 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Embedding WebView
+Embedding WebViews
 =================
 
 > Implement the Cordova WebView in your own project.
 
-- Embedding Cordova WebView on Android
-- Embedding Cordova WebView on iOS
+- Android WebViews
+- iOS WebViews
 

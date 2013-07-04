@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Embedding Cordova WebView on Android
+Android WebViews
 ====================================
 
 Beginning in Cordova 1.9, with the assistance of the

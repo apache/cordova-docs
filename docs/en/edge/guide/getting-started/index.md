@@ -42,6 +42,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Android Platform Guide
 * Android Configuration
+* Android WebViews
 * Android Plugins
 * Android Command-line Tools
 * Upgrading Android
@@ -55,6 +56,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## BlackBerry 10
 
+<!-- if "BlackBerry 10 Plugins" are available, how about WebViews? -->
 * BlackBerry 10 Platform Guide
 * BlackBerry 10 Plugins
 * Blackberry 10 Command-line Tools
@@ -63,6 +65,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * iOS Platform Guide
 * iOS Configuration
+* iOS WebViews
 * iOS Plugins
 * iOS Command-line Tools
 * Upgrading iOS

@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Embedding Cordova WebView on iOS
+iOS WebViews
 ================================
 
 Beginning with Cordova 1.4, you can use Cordova as a component in your
