@@ -71,10 +71,9 @@ Full Example
 iOS Quirk
 ------------
 
-The [`config.xml` file's setting](guide_project-settings_index.md.html#Project%20Settings) for
-`AutoHideSplashScreen` must be `false`. To delay hiding the splash
-screen for two seconds, add a timer such as the following in the
-`deviceready` event handler:
+The `config.xml` file's `AutoHideSplashScreen` setting must be
+`false`. To delay hiding the splash screen for two seconds, add a
+timer such as the following in the `deviceready` event handler:
 
         setTimeout(function() {
             navigator.splashscreen.hide();

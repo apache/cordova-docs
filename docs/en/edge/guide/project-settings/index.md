@@ -31,13 +31,13 @@ As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet.
 properties, characteristics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
 `config.xml` file. The following sub-sections linked to are guides which go into more details about these preferences.
 
-- Project Settings for iOS
-- Project Settings for Android
-- Project Settings for BlackBerry
-- Project Settings for Windows Phone 7
-- Project Settings for Windows Phone 8
-- Project Settings for Windows 8
-- Project Settings for FirefoxOS
+- iOS Configuration
+- Android Configuration
+- BlackBerry Configuration
+- Windows Phone 7 Configuration
+- Windows Phone 8 Configuration
+- Windows 8 Configuration
+- FirefoxOS Configuration
 
 ## config.xml Elements
 
