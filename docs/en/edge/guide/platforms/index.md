@@ -56,7 +56,6 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## BlackBerry 10
 
-<!-- if "BlackBerry 10 Plugins" are available, how about WebViews? -->
 * BlackBerry 10 Platform Guide
 * BlackBerry 10 Plugins
 * Blackberry 10 Command-line Tools
