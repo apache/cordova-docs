@@ -107,4 +107,4 @@ simple Echo Plugin example discussed above.
 - iOS Plugins
 - Windows Phone Plugins
 
-The webOS and Tizen platforms currently do not support plugins.
+The Tizen platform currently does not support plugins.
