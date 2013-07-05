@@ -39,7 +39,7 @@ NOTE, doc said:
 -->
 
 Developers should use the the `cordova` utility in conjunction with
-the Android SDK.  See The Cordova Command-line Interface for
+the Android SDK.  See The Command-line Interface for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -91,7 +91,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova Command-line Interface. For example, in a source-code directory:
+Cordova The Command-line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "Hello World"
         $ cd hello

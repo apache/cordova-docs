@@ -72,7 +72,7 @@ components to communicate with each other.
 
 The easiest way to set up an application is to run the `cordova`
 command-line utility, also known as the _command-line interface_
-(CLI). (To install the CLI, see The Cordova Command-line Interface.)
+(CLI). (To install the CLI, see The Command-line Interface.)
 Depending on the set of platforms you wish to target, you can rely on
 the CLI for progressively greater shares of the development cycle:
 
