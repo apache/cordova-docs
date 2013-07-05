@@ -79,7 +79,6 @@ a lower-level alternative to the `cordova` command-line utility.
 ## Windows 8
 
 * Windows 8 Platform Guide
-* Windows 8 Configuration
 * Windows 8 Command-line Tools
 * Upgrading Windows 8
 
