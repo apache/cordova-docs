@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# The Cordova Command-line Interface
+# The Command-line Interface
 
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line

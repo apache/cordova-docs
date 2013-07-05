@@ -59,7 +59,7 @@ __Command Line Tools__ listing.
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova Command-line Interface. For example, in a source-code directory:
+Cordova The Command-line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "Hello World"
         $ cd hello

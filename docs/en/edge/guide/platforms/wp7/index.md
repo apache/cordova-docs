@@ -64,7 +64,7 @@ The SDK displays the directory's contents:
 At this point you can modify the app within the SDK, but running the
 `build` or `prepare` commands again wipes out local changes. If Visual
 Studio is open, it alerts you about modified files and offers you the
-option to reload them.  See The Cordova Command-line Interface for
+option to reload them.  See The Command-line Interface for
 more information.
 
 ## Deploy to Emulator

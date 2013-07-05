@@ -22,7 +22,7 @@ Platform Guides
 
 Before developing for any of the platforms listed below, install
 cordova's command-line interface (CLI).
-(For details, see The Cordova Command-line Interface.)
+(For details, see The Command-line Interface.)
 
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless

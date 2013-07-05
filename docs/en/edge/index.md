@@ -96,7 +96,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Setup each SDK and create your first Cordova app.</span>
         </li>
         <li>
-            <h2>The Cordova<br/>Command-line Interface</h2>
+            <h2>The Command-line Interface</h2>
             <span>Create, build, and deploy from the command-line.</span>
         </li>
         <li>
@@ -120,7 +120,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Grant an application access to external domains.</span>
         </li>
         <li>
-            <h2>Embedding WebView</h2>
+            <h2>Embedding WebViews</h2>
             <span>Implement the Cordova WebView in your project.</span>
         </li>
         <li>
