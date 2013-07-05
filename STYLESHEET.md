@@ -44,7 +44,7 @@ editorial guidelines.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
-## Language
+## Language and Tone
 
 * Use present tense. "This happens," not "this will happen." (Future
   tense sounds like a tenuous prediction.)
@@ -73,15 +73,21 @@ editorial guidelines.
   am going to show you now." Likewise avoid "we," as in "We see
   that..."
 
-* OK to refer to "you," the developer, but it should be minimized.
-  E.g., instead of "...for which you need to invoke the `Contact.save`
-  method", try "...for which the `Contact.save` method is required."
+* OK to refer to "you," the developer, but only if necessary, e.g., to
+  avoid passive voice.
+
+* Avoid unnecessarily imperative statements, especially using the word
+  "must." E.g., instead of "Commands must be run from a cmd or
+  powershell prompt," try "You can run commands either from a cmd or
+  powershell prompt."
 
 ## Usage
 
 * "User" may refer to the end user, not to the application's
   developer. Refer to plural "users" as "they" to avoid singular
   he/she pronoun problems.
+
+* WebView, not Webview. (OK to use lowercase webview in code)
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
 
@@ -120,6 +126,12 @@ editorial guidelines.
   sentences. No periods when bullets are sentence fragments. However,
   bullet lists should be internally consistent.
 
+## Common Grammatical Errors
+
+* Do not use use apostrophes for plural, so "...manages core APIs,"
+  not api's or API's. Only use apostrophes for possessives, e.g. "the
+  API's members"
+
 ## Miscellaneous
 
 * For procedure lists, don't break out separate items for (1) do this,
@@ -136,4 +148,3 @@ editorial guidelines.
   matters, or __TIP:__ to pass along useful tricks or context.
 
 * Use titles in link text, never 'click here'
-
