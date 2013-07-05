@@ -221,11 +221,6 @@ p,blockquote,pre,ul {
   margin:1em 0px;
 }
 
-h2:after,
-h3:after {
-	content: ":";
-}
-
 blockquote {
   color:#767573;
 	font-style:normal;
