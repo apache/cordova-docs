@@ -72,16 +72,13 @@ a lower-level alternative to the `cordova` command-line utility.
 ## Windows Phone
 
 * Windows Phone 8 Platform Guide
-* Windows Phone 8 Configuration
 * Windows Phone 7 Platform Guide
-* Windows Phone 7 Configuration
 * Windows Phone Command-line Tools
 * Upgrading Windows Phone
 
 ## Windows 8
 
 * Windows 8 Platform Guide
-* Windows 8 Configuration
 * Windows 8 Command-line Tools
 * Upgrading Windows 8
 
