@@ -93,7 +93,7 @@ However, here are the new parts needed for the piecemeal update:
 1. Update the cordova.blackberry.js file in the ‘Phonegap-2.6.0/lib/blackberry/javascript’ folder
 2. Update the ‘ext’, ‘ext-air’, and ‘ext-qnx’ in the ‘Phonegap-2.6.0/lib/blackberry/framework’ folder
 3. Update the ‘build.xml’ file in the ‘Phonegap-2.6.0/lib/blackberry’ folder
-4. Update the the ‘Phonegap-2.6.0/lib/blackberry/bin’ folder
+4. Update the ‘Phonegap-2.6.0/lib/blackberry/bin’ folder
 5. Update the ‘VERSION’ file in the ‘Phonegap-2.6.0/lib/blackberry’ folder
 
 Updating the example/ folder or migrating an existing project:
@@ -115,7 +115,7 @@ However, here are the new parts needed for the piecemeal update:
 1. Update the cordova.blackberry.js file in the ‘Phonegap-2.5.0/lib/blackberry/javascript’ folder
 2. Update the ‘ext’, ‘ext-air’, and ‘ext-qnx’ in the ‘Phonegap-2.5.0/lib/blackberry/framework’ folder
 3. Update the ‘build.xml’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
-4. Update the the ‘Phonegap-2.5.0/lib/blackberry/bin’ folder
+4. Update the ‘Phonegap-2.5.0/lib/blackberry/bin’ folder
 5. Update the ‘VERSION’ file in the ‘Phonegap-2.5.0/lib/blackberry’ folder
 
 Updating the example/ folder or migrating an existing project:

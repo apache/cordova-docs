@@ -30,7 +30,7 @@ To install the app onto a device or submit it to the market place, you
 need to become an
 [App Hub member](http://create.msdn.com/en-US/home/membership).
 
-Developers should use the the `cordova` utility in conjunction with
+Developers should use the `cordova` utility in conjunction with
 the Windows Phone SDK.  Before installing it on Windows, open a
 command line and type `git` to make sure it is installed. If not,
 download it from [mysysgit.github.io](http://mysysgit.github.io). When
