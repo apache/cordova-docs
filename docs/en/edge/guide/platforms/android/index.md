@@ -38,7 +38,7 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-Developers should use the the `cordova` utility in conjunction with
+Developers should use the `cordova` utility in conjunction with
 the Android SDK.  See The Command-line Interface for
 information how to install it, add projects, then build and deploy a
 project.
