@@ -102,13 +102,13 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
 - Clone [joDoc](http://github.com/davebalmer/jodoc)
 
         git clone http://github.com/davebalmer/joDoc.git
-        
+
 - Add joDoc/ to your path
-    
+
   Open `~/.bashrc` or `~/.profile` (or whatever you use)
 
         export PATH=$PATH:~/path/to/joDoc/
-    
+
 - Install markdown
 
         # Use your package manager
@@ -131,7 +131,7 @@ If all you want to generate is edge/English, then
     bin/generate --edge
 
 ### Problems
-    
+
 Generated a Version Release
 ---------------------------
 
@@ -163,4 +163,18 @@ You may need to add the following line to the joDoc script:
     $markdown_bin = "/path/to/Markdown.pl";
 
 For more details, see the [Issue #590](https://issues.apache.org/jira/browse/CB-590).
+
+### Error with ruby and nokogiri versions
+
+If you get the following error:
+
+    custom_require.rb:36:in `require': /lib/cordova/jodoc.rb:28: syntax error, unexpected tCONSTANT, expecting ']' (SyntaxError)
+    @template_directories = [ File.join TEMPLATE_PATH, 'default' ]
+                                                     ^
+- You may need to downgrade the version of ruby to 1.8.7 and nokogiri to 1.5.2
+  Use rvm and the Gemfile provided to install the dependencies
+
+    rvm install 1.8.7
+    rvm use 1.8.7
+    bundle install
 
