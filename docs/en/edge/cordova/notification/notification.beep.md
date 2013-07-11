@@ -98,15 +98,6 @@ Android Quirks
 
 - Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
 
-iOS Quirks
--------------
-
-- Ignores the beep count argument.
-- The iPhone does not feature a native beep API.
-  - Cordova implements beeps by playing an audio file via the media API.
-  - The app must provide a file with the desired beep tone.
-  - This file must be less than 30 seconds long, located in the `www` root directory, and must be named `beep.wav`.
-
 Windows Phone 7 and 8 Quirks
 -------------
 
