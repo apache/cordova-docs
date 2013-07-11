@@ -116,7 +116,7 @@ iOS Quirks
 ----------
 
 - iOS cannot detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.  This is deprecated as of 2.6.0 and will be changed to return `Connection.CELL` in a future release.
+    - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 Windows Phone Quirks
 --------------------
