@@ -97,18 +97,6 @@ callback does not fire.
  * `messageAsMultipart` expects an `NSArray*` containing any of the other supported types, and sends the whole array as the `arguments` to your JavaScript callback.
    *  Quirk: this is not just syntactic sugar (though it is sweet).  This way, all of the arguments are serialized/deserialized as necessary.  e.g. it is safe to return `NSData*` as multipart, but not as `Array`/`Dictionary`.
 
-## Plugin Signatures
-
-The **new signature** supported beginning in **Cordova 2.1.0** is:
-
-        - (void)myMethod:(CDVInvokedUrlCommand*)command;
-
-The **old (deprecated)** signature is:
-
-        - (void)myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-
-Basically, the options dictionary has been removed for the new signature, and the callbackId is not the 0th index item for the arguments array, but it is now in a separate property.
-
 ## Echo Plugin iOS Plugin
 
 We would add the following to the `<plugins>` tag of the project's `config.xml` file:
@@ -211,20 +199,3 @@ running in the iOS 6 Simulator.
 
 * Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
 * Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.
-
-## Deprecated Plugin Signature Note
-
-The **old (deprecated)** signature is:
-
-        - (void) myMethod:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-
-The Objective-C plugin method's `options` parameter is deprecated, and
-should not be used. For legacy reasons, the last JavaScript object
-passed in the `args` array is passed in as the `options` dictionary of
-the Objective-C method. You must make sure that any JavaScript object
-that is passed in as an element in the `args` appears as the last item
-in the array. Otherwise it throws off the array index for all
-subsequent parameters of the Objective-C array. Only one JavaScript
-object is supported for the options dictionary, and only the last one
-encountered will be passed to the native method. Errors stemming from
-this problem are the reason `options` has been deprecated.
