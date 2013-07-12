@@ -31,9 +31,7 @@ various platforms' IDEs to develop them further.
 
 Before running any command-line tools, you need to install SDKs for
 each platform you wish to target.
-<!-- XREF
 (See the Platform Guides for more details.)
-XREF -->
 
 To add support or rebuild a project for any platform, you need to run
 the command-line interface from the same machine that supports the
@@ -155,9 +153,7 @@ created. However, any edits you make to the project within an SDK
 affect the derivative set of assets, not the original cross-platform
 source files. Use this approach if you simply want to initialize a
 project.
-<!-- XREF
 (See the Platform Guides for information on how to develop applications within each SDK.)
-XREF -->
 Read on if you wish to use command-line tools for the entire
 development cycle.
 
@@ -259,9 +255,7 @@ platform's emulator:
 Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
-<!-- XREF
 (See the Platform Guides for details.)
-XREF -->
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
 according to its default behavior:
