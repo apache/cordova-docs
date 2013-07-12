@@ -134,115 +134,33 @@ To set a target as the default:
 
         $ cordova/target default <name>
 
-<!--
+When debugging on the device or a simulator, you may run a Web
+Inspector remotely to view the application's internal state.  A prompt
+displays the URL that allows you to connect to your app with a
+standard web browser. For more information on using Web Inspector, see
+[Debugging using Web Inspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 
-## Building your app
+## Building a Release Version
 
-To build the app, run the `build` script, either in release or debug
-mode.
-
-* Building the app in release mode, prepares it for distribution
-  through BlackBerry World. The script packages the app's resources
-  and plugins together in a _.bar_ file, then signs the app.
-
-* Building the app in debug mode prepares it to be tested. The script
-  packages the app's resources and plugins together in a _.bar_ file,
-  but does not sign it. The script can also deploy the app onto a
-  previously defined target. If you have not already created and
-  installed a debug token, you can supply the keystore password, and
-  the build script then create and install the debug token for you as
-  well.
-
-Debug mode also enables Web Inspector for the app, which allows you to
-remotely inspect the source code. A prompt displays the URL that you
-can use to connect to and inspect your app. For more information on
-using Web Inspector, see [Debugging using Web
-Inspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
-
-### Build your app in release mode
-
-To build your app in release mode, type the following command:
+By default, running the `cordova build` command creates an unsigned
+_.bar_ package file suitable for testing in a device or simulator.
+You need to run a different `build` command to create a release
+version suitable for distribution through BlackBerry World.  This
+command, also available within `platforms/blackberry`, uses the
+following syntax:
 
         $ cordova/build release -k|--keystorepass <password> [-b|--buildId <number>] [-p|--params <params-JSON-file>]
 
-where
+where:
 
 * `-k|--keystorepass <password>` specifies the password you defined
   when you configured your computer to sign applications.
 
 * `-b|--buildId <number>` specifies the build version number of your
-  application. Typically, this number should be incremented from the
-  previous signed version. This argument is optional.
+  application, which you typically increment from the previously
+  submitted signed version. This argument is optional.
 
 * `-p|--params <params-JSON-file>` specifies a JSON file containing
   additional parameters to pass to downstream tools. This argument is
   optional.
 
-### Build your app in debug mode
-
-To build your app in release mode, on the command line, type the
-following command:
-
-        $ cordova/build debug [<target>] [-k|--keystorepass <password>] [-p|--params <params-JSON-file>] [-ll|--loglevel <error|warn|verbose>]
-
-where
-
-* `<target>` specifies the name of a previously added target. If
-  `<target>` is not specified, the default target is used, if one has
-  been created. This argument is only required if you want the script
-  to deploy your app to a BlackBerry device or simulator and you have
-  not created a default target. Additionally, if `<target>` is a
-  device, then that device must be connected to your computer by USB
-  connection or be connected to the same Wi-Fi network as your
-  computer.
-
-* `-k|--keystorepass <password>` specifies the password you defined
-  when you configured your computer to sign applications. This
-  password is also used to create your debug token. This argument is
-  only required if you want the script to create and install the debug
-  token for you.
-
-* `-p|--params <params-JSON-file>` specifies a JSON file containing
-  additional parameters to pass to downstream tools.
-
-* `-ll|--loglevel <level>` specifies the log level. The log level may
-  be one of `error`, `warn`, or `verbose`.
-
-Note that all of these parameters are optional. If you have previously
-defined a default target (and installed a debug token, if that target
-is a BlackBerry device), you can run the script with no arguments, and
-the script will package your app and deploy it to the default
-target. For example:
-
-        $ cordova/build debug
-
-## Deploying an app
-
-You can test your app using either a BlackBerry device or a simulator.
-Before deploying your app, you must first create a target for the
-device or simulator you want to deploy your app to.
-
-The run script will first build your app. If you intend to deploy an
-app to a physical device for testing, you must first install a debug
-token on that device. If you specify the `--keystorepass <password>`
-argument when running the run script, the script will create and
-install the debug token for you. You do not need a debug token to test
-your app on a simulator, even if that app is unsigned.
-
-To deploy your app to a device or simulator, on a command line type
-the following command:
-
-        $ cordova/run <target> [--no-build]
-
-where:
-
-* `<target>` specifies the name of a previously added target. If
-  `<target>` is a device, then that device must be connected to your
-  computer by USB connection or be connected to the same Wi-Fi network
-  as your computer.
-
-* `-no--build` will use the most recently built version of the
-  application rather than re-building. This is useful to test an
-  application in release mode.
-
--->
