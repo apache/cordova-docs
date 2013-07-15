@@ -20,162 +20,166 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 BlackBerry Platform Guide
 ============================
 
-Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://bdsc.webapps.blackberry.com/html5). BlackBerry WebWorks tooling is available for Windows or Mac environments.
+This guide shows you how to set up an SDK environment to target
+applications for the BlackBerry platform prior to version 10.  If you
+want to target the most recent version, see BlackBerry 10 Platform
+Guide.
 
-WebWorks applications can ONLY be deployed to the following BlackBerry platforms:
+## Requirements and Support
+
+This version of BlackBerry is not supported by the `cordova` utility
+described in The Command-line Interface, but by a separate set of
+command-line tools. Download the Cordova distribution from
+[cordova.apache.org](http://cordova.apache.org/#download).
+
+Cordova for BlackBerry relies on the [BlackBerry WebWorks
+framework](https://bdsc.webapps.blackberry.com/html5), which is
+available for Windows XP (32-bit), Windows 7 (32-bit and 64-bit), and
+Mac (OS X 10.6.4+).  WebWorks applications can _only_ be deployed on
+the following BlackBerry platforms:
 
 * BlackBerry OS 5.0 and higher
 * BlackBerry PlayBook
 * BlackBerry 10 (QNX)
 
-1.  Requirements
----------------
+WebWorks requires the Java Development Kit (JDK). For Windows, use the
+32-bit version of
+[Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk).
+Java in installed by default on Mac OS X up to version 10.7, which
+requires
+[a separate installation](http://support.apple.com/kb/DL1421).
+It also requires Apache Ant, which on Mac is part of the Java
+installation. The Windows version is available from
+[ant.apache.org](http://ant.apache.org/bindownload.cgi).
 
-- Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
-- Java Development Kit (JDK)
-    - Windows: [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html#jdk) (32-Bit Version)
-    - Mac OS X: Versions prior to Mac OS X 10.7 provided Java by default.  OS X 10.7+ requires installation of [Java](http://support.apple.com/kb/DL1421).
--   Apache Ant
-    - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
-    - Mac OS X: Apache Ant is bundled with Java install.
+## Install the SDK
 
-2.  Install the WebWorks SDK
--------------------------
-Download and install the appropriate WebWorks SDKs for your development. BlackBerry 10, BlackBerry PlayBook, and BlackBerry Smartphone WebWorks SDKs can all be downloaded from the following locations.  Please note that BlackBerry PlayBook development requires the Adobe Air SDK as well.
+Download and install the appropriate WebWorks SDK for your
+development. BlackBerry PlayBook and BlackBerry Smartphone WebWorks
+SDKs can be downloaded from the following locations.
 
-- [BlackBerry 10 (QNX) SDK] (https://developer.blackberry.com/html5/download/#blackberry10)
-- [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) & [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
+- [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) and [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
 - [BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)
 
-3.  Register for Signing Keys
--------------------------
-If you wish to publish your application on BlackBerry App World, or deploy on an actual device you’ll need to register for a set of free Code Signing Keys.
+BlackBerry PlayBook also requires the [Adobe Air
+SDK](http://www.adobe.com/devnet/air/air-sdk-download.edu.html).
 
-To register for Signing Keys visit, and complete the [BlackBerry Keys Order Form](https://www.blackberry.com/SignedKeys).
+Along with the SDK, you also need to register for a code signing key
+and debug token. The signing key allows you to distribute apps through
+BlackBerry World. The debug token allows you to test unsigned apps on
+a BlackBerry emulator or device. You do not need to create and
+install the debug token yourself; if you supply the keystore password,
+the build script creates and installs the debug token for you. To set
+up the signing key, go to the Blackberry website to obtain it, making
+sure to retain the password you specify. Then run the
+`blackberry-signer` utility that is included with the SDK. Consult the
+following for more information:
 
-Once you receive your Signing Keys, they'll need to be setup. To learn how to setup your Signing Keys visit the [BlackBerry HTML5/WebWorks website](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html).
+* [Register for your code signing key](https://www.blackberry.com/SignedKeys/codesigning.html)
 
-4.  Install Cordova
--------------------------
+* [Set up your computer for code signing](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
 
-Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download).
+* [Learn more about debug tokens](http://developer.blackberry.com/html5/documentation/running_your_bb10_app_2008471_11.html)
 
-5.  Set up New Project
---------------------
+* [Comprehensive guide to setting up your SDK environment](http://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.quickstart/topic/set_up_your_environment.html)
 
-- Open up a command prompt/terminal and navigate to where you extracted Cordova.
-- There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
-- The blackberry directory contains several directories.  The `example` folder contains a complete Cordova project.  Copy the `example` folder to another location on your computer.
-- Change to the newly created directory.
-- Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
+## Set up a New Project
 
-BlackBerry 10 (QNX)
-- `qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9`
+* Open up a command-line terminal. From the directory where you
+  extracted Cordova, navigate to the `blackberry` subdirectory.
 
-BlackBerry PlayBook
-- `playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp`
+* Copy the `blackberry` directory's `example` subdirectory to another
+  location on your computer and navigate there.
 
-BlackBerry Smartphone (OS5-7)
-- `blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager`
+* Edit the `project.properties` file to specify the WebWorks SDK you
+  are using. For example, here are the respective settings for
+  BlackBerry PlayBook or BlackBerry Smartphone (OS5-7):
 
-6.  Hello World
---------------
+        playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
+        blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
 
-Build the Cordova sample project by typing `./cordova/build <target>` in your command prompt/terminal while you are in your project's directory. Replace `<target>` with either `qnx` `playbook` or `blackberry`. For example...
+These correspond to parameters you specify when building your project.
+The first time you run these commands, they generate a "Hello World"
+application:
 
-BlackBerry 10 (QNX)
-- `./cordova/build qnx`
+    cordova/build playbook
+    cordova/build blackberry
 
-BlackBerry PlayBook
-- `./cordova/build playbook`
+## Deploy to Emulator
 
-BlackBerry Smartphone (OS5-7)
-- `./cordova/build blackberry`
+BlackBerry smartphone emulators are only available on Windows.
+BlackBerry PlayBook emulators require VMWare Player (Windows) or
+VMWare Fusion (Mac OS X). The WebWorks SDK provides a default
+emulator, but additional emulators are [available through
+BlackBerry](http://us.blackberry.com/developers/resources/simulators.jsp).
 
-7A.  Deploy to Simulator
---------------------------------------
+Consult the following for instructions on how to install emulators:
 
-BlackBerry smartphone simulators are only available on Windows. BlackBerry 10, and PlayBook simulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default simulator. Additional simulators are [available](http://us.blackberry.com/developers/resources/simulators.jsp).
+* [BlackBerry PlayBook](https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html)
 
-For instructions on installing simulators, please visit the following link(s):
-- [BlackBerry 10](https://developer.blackberry.com/html5/documentation/using_the_bb10_simulator_2008466_11.html)
-- [BlackBerry PlayBook](https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html)
-- [BlackBerry Smartphone](https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html)
+* [BlackBerry Smartphone](https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html)
 
-- Open the project.properties file with your favorite editor and customize the following properties.
+For BlackBerry Playbook, edit the `project.properties` file to
+customize the `playbook.sim.ip` and `playbook.sim.password`
+properties.  The emulator's IP address is available through the
+__Settings__ application on the home screen. Enable the __Security and
+Privacy &rarr; Development Mode__ option to display the address. The
+password can also be set in the __Security and Privacy__ tab.
 
-BlackBerry 10
-- `qnx.sim.ip`
-- `qnx.sim.password`
-- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+For BlackBerry Smartphone, edit the `project.properties` file to
+customize the `blackberry.sim.dir` and `blackberry.sim.bin`
+properties.  You need to escape path delimiters when specifying
+directory paths on Windows, for example: `C:\\Program
+Files\\BlackBerry\\Simulator`.
 
-Playbook
-- `playbook.sim.ip` :
-- `playbook.sim.password`
-- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+Once the emulator is installed and running, run either of the
+following to install an application to the home screen:
 
-Smartphone (Optional)
-- `blackberry.sim.dir`
-- `blackberry.sim.bin`
-- __NOTE:__ On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.
+    cordova/run playbook
+    cordova/run blackberry
 
-While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the simulator virtual image must already be started.  For example...
+If you are prompted whether a device is connected to your computer,
+answer no.
 
-BlackBerry 10 (QNX)
-- `./cordova/run qnx`
+__NOTE:__ On BlackBerry OS 5, the application is installed in the
+`Downloads` folder.
 
-BlackBerry PlayBook
-- `./cordova/run playbook`
+## Deploy to Device
 
-BlackBerry Smartphone (OS5-7)
-- `./cordova/run blackberry`
+To deploy your app to a device, it must be connected, and you must be
+registered for code signing keys as described above.  Also, to deploy
+apps on BlackBerry PlayBook, the __Settings &rarr; Security &rarr;
+Development Mode__ option must be enabled.
 
-When prompted __Do you have a BlackBerry device connected to your computer? (y/n)__, answer __n__.
+On Blackberry PlayBook, edit the `project.properties` file and modify
+the following to reflect the device's IP and password as descibed
+above, along with the signing key password you set up:
 
-The application is installed to the simulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
+* `playbook.sigtool.csk.password`
+* `playbook.sigtool.p12.password`
+* `playbook.device.ip`
+* `playbook.device.password`
 
-7B.  Deploy to Device (Windows and Mac)
---------------------------------------
+On BlackBerry Smartphone (OS5-7), specify the
+`blackberry.sigtool.password` property as the signing key password.
 
-To deploy your app to a device you must have registered for, and setup BlackBerry Code Signing Keys.  See section 3 for details. Also, to deploy apps on BlackBerry 10 or PlayBook, the device must be set to Development Mode which can be enabled from the __Settings &rarr; Security__ menu.
+Then from the project's directory, run either of the commands you
+would to view the app in an emulator:
 
-- Open the project.properties file with your favorite editor and customize the following properties:
+    cordova/run playbook
+    cordova/run blackberry
 
-BlackBerry 10 (QNX)
-- `qnx.sigtool.password`
-- `qnx.device.ip`
-- `qnx.device.password`
+If you are prompted whether a device is connected to your computer,
+answer yes.
 
-BlackBerry PlayBook
-- `playbook.sigtool.csk.password`
-- `playbook.sigtool.p12.password`
-- `playbook.device.ip`
-- `playbook.device.password`
+__NOTE:__ On BlackBerry OS 5, the application is installed in the
+`Downloads` folder.
 
-BlackBerry Smartphone (OS5-7)
-- Smartphone (Optional)
-- `blackberry.sigtool.password`
+## Additional Information
 
-While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`.  For example...
+The following articles may help resolve common problems when
+developing applications built for the BlackBerry WebWorks framework:
 
-BlackBerry 10 (QNX)
-- `./cordova/run qnx`
+* [BlackBerry WebWorks Development Pitfalls](http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712)
 
-BlackBerry PlayBook
-- `./cordova/run playbook`
-
-BlackBerry Smartphone (OS5-7)
-- `./cordova/run blackberry`
-
-When prompted __Do you have a BlackBerry device connected to your computer? (y/n)__, answer __y__.
-
-The application is installed to the device's home screen. Note, on BlackBerry OS 5 the application is installed in the Downloads folder.
-
-Additional Information
-----------------------
-
-The following articles provide help to issues you may encounter when developing a Cordova application which is based on the BlackBerry WebWorks framework
-
-- [BlackBerry WebWorks Development Pitfalls](http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712)
-
-- [Best practices for packaging WebWorks applications](https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html)
+* [Best practices for packaging WebWorks applications](https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html)
