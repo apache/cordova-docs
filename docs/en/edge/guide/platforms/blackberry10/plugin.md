@@ -36,8 +36,8 @@ To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and 
 
 The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.
 
-- ***name*_js.hpp** - C++ header for the JNEXT code.
-- ***name*_js.cpp** - C++ code for JNEXT.
+- ***name*_js.hpp**: C++ header for the JNEXT code.
+- ***name*_js.cpp**: C++ code for JNEXT.
 
 The native interface for the JNEXT extension can be viewed in the plugin header file located in the public folder of your project. It also contains constants and utility functions that can be used in your native code. Your plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:
 
@@ -117,9 +117,9 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
 
 The JavaScript portion of your plugin must contain the following files:
 
-- **client.js** – This is considered the client side and contains the API that a Cordova application can call. The API in client.js calls makes calls to index.js. The API in client.js also connects callback functions to the events that fire the callbacks.
+- **client.js**: This is considered the client side and contains the API that a Cordova application can call. The API in client.js calls makes calls to index.js. The API in client.js also connects callback functions to the events that fire the callbacks.
 
-- **index.js** – Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
+- **index.js**: Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
 
 The client and server side (client.js and index.js) interacts through the `Cordova.exec `function. So, in client.js you invoke the exec function and provide the necessary arguments. In the Echo plugin, we have the following in the client.js file:
 
