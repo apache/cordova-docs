@@ -28,7 +28,7 @@ version) runs only on OS X version 10.7 (Lion) or greater, and
 includes the iOS 6 SDK (Software Development Kit).  To submit apps to
 the Apple App Store℠ requires the latest versions of the Apple tools.
 
-You can test many of the Cordova features using the iOS simulator
+You can test many of the Cordova features using the iOS emulator
 installed with the iOS SDK and Xcode, but you need an actual device to
 fully test all of the app's device features before submitting to the
 App Store.  The device must have at least iOS 5.x installed, the
@@ -38,7 +38,7 @@ Generation or later. To install apps onto a device, you must also be a
 member of Apple's
 [iOS Developer Program](https://developer.apple.com/programs/ios/),
 which costs $99 per year. This guide shows how to deploy apps to the
-iOS simulator, for which you don't need to register with the developer
+iOS emulator, for which you don't need to register with the developer
 program.
 
 ## Install the SDK

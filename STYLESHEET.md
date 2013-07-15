@@ -109,9 +109,8 @@ editorial guidelines.
 
 * Mac "OS X", not "OSX"
 
-* Prefer "simulator" over "emulator"; clarify when interfaces refer to
-  them differently. (Simulators more robustly model a device's
-  internal state rather than its outward appearance.)
+* Prefer "emulator" over "simulator"; clarify when interfaces refer to
+  them differently.
 
 * Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
   dedicated GUI coding environments such as Eclipse. (OK to refer to

@@ -46,7 +46,7 @@ bin/create <path-to-project>
 ## target
 
 The `target` command allows you to manage the BlackBerry device(s) or
-simulator that you will use to test your app. You can add or remove a
+emulator that you will use to test your app. You can add or remove a
 target, or set a target as the default target.
 
 ### Add a target
@@ -59,9 +59,9 @@ where
 
 - `<name>` specifies a unique name for the target.
 - `<ip-address>` specifies the ip address of the BlackBerry device or
-  simulator.
+  emulator.
 - `-p|--password <password>` specifies the password for the device or
-  simulator. This is required only if the device or simulator is
+  emulator. This is required only if the device or emulator is
   password protected.
 - `--pin <device-pin>` specifies the PIN of the BlackBerry device,
   which identifies that device as a valid host for the debug
@@ -108,7 +108,7 @@ where
 - `<target>` specifies the name of a previously added target. If
   `<target>` is not specified, the default target is used, if one has
   been created. This argument is only required if you want the script
-  to deploy your app to a BlackBerry device or simulator and you have
+  to deploy your app to a BlackBerry device or emulator and you have
   not created a default target. Additionally, if `<target>` is a
   device, then that device must be connected to your computer by USB
   connection or be connected to the same Wi-Fi network as your
@@ -135,8 +135,8 @@ app and deploy it to the default target. For example:
 ## run
 
 The `run` command deploys the app on the specified BlackBerry device
-or a simulator. Before deploying your app, you must first create a
-target for the device or simulator you want to deploy your app to. The
+or an emulator. Before deploying your app, you must first create a
+target for the device or emulator you want to deploy your app to. The
 deploy script will deploy the most recent build of your app.
 
 ```
