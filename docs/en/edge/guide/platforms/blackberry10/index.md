@@ -119,11 +119,11 @@ To deploy to a device, make sure it is plugged into your computer, and
 obtain the IP address using the same procedure as described above.
 Then run a variation of the `target` command such as this:
 
-        $ platforms/blackberry/cordova/target add handset 169.254.0.1 -t device -p unlockme --pin 123456
+        $ platforms/blackberry/cordova/target add handset 169.254.0.1 -t device -p 123456 --pin unlockme
 
-The `--pin` option refers to whatever password you set up when
-requesting a signing key, as described above.  The `-p` option refers
-to whatever local password locks the device itself.  Here is the full
+The `-p` option refers to whatever password you set up when requesting
+a signing key, as described above.  The `--pin` option refers to
+whatever local password locks the device itself.  Here is the full
 syntax:
 
         $ cordova/target add <name> <ip-address> [-t <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
