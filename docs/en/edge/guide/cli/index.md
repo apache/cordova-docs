@@ -25,7 +25,7 @@ various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
 them on different platforms, and run them within an emulator. You can
 also use the CLI to initialize project code, after which you use
-various platforms' IDEs to develop them further.
+various platforms' SDKs to develop them further.
 
 ## Prerequisites
 
@@ -187,7 +187,7 @@ this example is also targeted to a single platform:
 In this case, once you run `prepare`, you can use Apple's Xcode SDK as
 an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
-approach with other platforms' IDEs.
+approach with other platforms' SDKs.
 
 <!-- NOTE: assume `ripple` command will be removed, along with `serve`
 

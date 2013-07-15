@@ -114,7 +114,8 @@ editorial guidelines.
   internal state rather than its outward appearance.)
 
 * Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
-  dedicated GUI coding environments such as Eclipse.
+  dedicated GUI coding environments such as Eclipse. (OK to refer to
+  specific tools as IDEs if that's how they self-identify.)
 
 * Remove superfluous "navigate to" wherever possible, unless you need
   to `cd` to a particular directory to launch a command. Instead of

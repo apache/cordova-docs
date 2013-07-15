@@ -27,7 +27,7 @@ This document describes the process of upgrading Cordova projects to the latest 
 ### BlackBerry10 ###
 
 1. **Download and extract the Cordova 2.9.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.9.0)
-2. **Quit any running IDE's** Eclipse, Momentics and the lik
+2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
 4. **Create a new project**, as described in Blackberry Command-line Tools. This becomes the home of your updated project.
 5. **Copy** your projects source from the old project's /www folder to the new project's /www folder
@@ -36,7 +36,7 @@ This document describes the process of upgrading Cordova projects to the latest 
 ### BlackBerryOS/Playbook ###
 
 1. **Download and extract the Cordova 2.9.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.9.0)
-2. **Quit any running IDE's** Eclipse, Momentics and the like.
+2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
 4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova.js** file from the new project into your **www** folder, and delete your **www/cordova.js** file
@@ -53,7 +53,7 @@ BlackBerry10 uses the new CLI tooling and manages core APIs as plugins. The inst
 Also note that the cordova js script file is now called 'cordova.js' and no longer contains a version string.
 
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.8.0)
-2. **Quit any running IDE's** Eclipse, Momentics and the like.
+2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
 4. **Create a new project**, as described in Blackberry Command-line Tools. This becomes the home of your updated project.
 5. **Copy** your projects source from the old project's /www folder to the new project's /www folder
@@ -62,7 +62,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 ### BlackBerryOS/Playbook ###
 
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.8.0)
-2. **Quit any running IDE's** Eclipse, Momentics and the like.
+2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
 4. **Create a new project**, as described in iOS Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova.js** file from the new project into your **www** folder, and delete your **www/cordova.js** file
@@ -74,7 +74,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 ## Upgrading 2.6.0 projects to 2.7.0 ##
 
 1. **Download and extract the Cordova 2.7.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.7.0)
-2. **Quit any running IDE's** Eclipse, Momentics and the like.
+2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
 4. **Create a new project**, as described in Blackberry Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.7.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.6.0.js** file
