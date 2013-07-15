@@ -35,5 +35,5 @@ Options
 Android Quirks
 --------------
 
-Android 2.x simulators do not return a geolocation result unless the `enableHighAccuracy` option is set to `true`.
+Android 2.x emulators do not return a geolocation result unless the `enableHighAccuracy` option is set to `true`.
 

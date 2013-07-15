@@ -89,8 +89,7 @@ the CLI for progressively greater shares of the development cycle:
   platform.
 
 * For supporting platforms, the CLI can compile executible
-  applications and run them in an SDK- or browser-based device
-  emulator, depending on the device feature you want to test.
+  applications and run them in an SDK-based device emulator.
   <!-- XREF
   (See API and Configuration Guide for details.)
   XREF -->
@@ -165,7 +164,7 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="guide_platforms_index.md.html">IDE platform support</a></th>
+        <th><a href="guide_platforms_index.md.html">SDK platform support</a></th>
         <td data-col="android"    class="y"><a href="guide_platforms_android_index.md.html">         </a></td>
         <td data-col="blackberry" class="y"><a href="guide_platforms_blackberry_index.md.html">      </a></td>
         <td data-col="blackberry10" class="y"><a href="guide_platforms_blackberry10_index.md.html">      </a></td>

@@ -67,12 +67,12 @@ Text data is supported by all platforms listed below. Text is encoded as UTF-8 b
 Supported Platforms
 -------------------
 
-### Text and Binary suport
+Text and Binary Support:
 
 - Android
 - iOS
 
-### Text only support
+Text-only Support:
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8

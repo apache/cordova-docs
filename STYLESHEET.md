@@ -44,6 +44,17 @@ editorial guidelines.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
+## Structure
+
+* Flatten text wherever possible. Avoid nested lists. Avoid
+  third-level subheadings.
+
+* Do not follow a heading with a subheading or a list with no
+  intervening text.
+
+* Avoid too many NOTEs, as it implies too many variables that can go
+  wrong. Try to clarify variations on a procedure within the text.
+
 ## Language and Tone
 
 * Use present tense. "This happens," not "this will happen." (Future
@@ -81,6 +92,11 @@ editorial guidelines.
   powershell prompt," try "You can run commands either from a cmd or
   powershell prompt."
 
+* Avoid em dash clauses--they unnecessarily break up the text--and
+  parenthical statements (which can also be distracting). If you do
+  include either, remove spaces around the dashes (punctuate fragments
+  outside of paren's). (Punctuate full sentences inside of parens.)
+
 ## Usage
 
 * "User" may refer to the end user, not to the application's
@@ -99,6 +115,15 @@ editorial guidelines.
 
 * 'JavaScript' (but lowercase when MIME type)
 
+* Mac "OS X", not "OSX"
+
+* Prefer "emulator" over "simulator"; clarify when interfaces refer to
+  them differently.
+
+* Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
+  dedicated GUI coding environments such as Eclipse. (OK to refer to
+  specific tools as IDEs if that's how they self-identify.)
+
 * Remove superfluous "navigate to" wherever possible, unless you need
   to `cd` to a particular directory to launch a command. Instead of
   "Navigate to the D directory and edit the F file," prefer: "Edit the
@@ -115,6 +140,9 @@ editorial guidelines.
   calling it as a method.)
 
 ## Punctuation
+
+* Initial Cap Words in Headings, Except for Short Prepositions or
+  Conjunctions
 
 * Append colon to text that introduces a code snippet, image, or
   procedure listing.
@@ -148,3 +176,9 @@ editorial guidelines.
   matters, or __TIP:__ to pass along useful tricks or context.
 
 * Use titles in link text, never 'click here'
+
+* __Topic/comment lists__: For bullet lists that provide short topics
+  followed by comments, bold the topic, then merge the comment on the
+  same line, separated with a colon unless the topic features trailing
+  punctuation. The text you are reading provides an example.
+

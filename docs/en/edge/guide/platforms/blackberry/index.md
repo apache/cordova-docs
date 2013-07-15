@@ -95,9 +95,9 @@ BlackBerry Smartphone (OS5-7)
 7A.  Deploy to Simulator
 --------------------------------------
 
-BlackBerry smartphone simulators are only available on Windows. BlackBerry 10, and PlayBook simulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default simulator. Additional simulators are [available](http://us.blackberry.com/developers/resources/simulators.jsp).
+BlackBerry smartphone emulators are only available on Windows. BlackBerry 10, and PlayBook emulators require VMWare Player (Windows) or VMWare Fusion (Mac OS X). The WebWorks SDK provides a default emulator. Additional emulators are [available](http://us.blackberry.com/developers/resources/simulators.jsp).
 
-For instructions on installing simulators, please visit the following link(s):
+For instructions on installing emulators, please visit the following link(s):
 - [BlackBerry 10](https://developer.blackberry.com/html5/documentation/using_the_bb10_simulator_2008466_11.html)
 - [BlackBerry PlayBook](https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html)
 - [BlackBerry Smartphone](https://developer.blackberry.com/html5/documentation/run_your_app_on_smartphone_sim_1876976_11.html)
@@ -107,19 +107,19 @@ For instructions on installing simulators, please visit the following link(s):
 BlackBerry 10
 - `qnx.sim.ip`
 - `qnx.sim.password`
-- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+- __NOTE:__ IP address of emulator obtained when placing the emulator in developer mode through emulator security settings. Simulator password can be set through emulator security settings.
 
 Playbook
 - `playbook.sim.ip` :
 - `playbook.sim.password`
-- __NOTE:__ IP address of simulator obtained when placing the simulator in developer mode through simulator security settings. Simulator password can be set through simulator security settings.
+- __NOTE:__ IP address of emulator obtained when placing the emulator in developer mode through emulator security settings. Simulator password can be set through emulator security settings.
 
 Smartphone (Optional)
 - `blackberry.sim.dir`
 - `blackberry.sim.bin`
 - __NOTE:__ On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.
 
-While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the simulator virtual image must already be started.  For example...
+While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the emulator virtual image must already be started.  For example...
 
 BlackBerry 10 (QNX)
 - `./cordova/run qnx`
@@ -132,7 +132,7 @@ BlackBerry Smartphone (OS5-7)
 
 When prompted __Do you have a BlackBerry device connected to your computer? (y/n)__, answer __n__.
 
-The application is installed to the simulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
+The application is installed to the emulator's home screen. Note that on BlackBerry OS 5, it is installed in the `Downloads` folder.
 
 7B.  Deploy to Device (Windows and Mac)
 --------------------------------------
