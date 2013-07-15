@@ -193,59 +193,6 @@ an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' SDKs.
 
-<!-- NOTE: assume `ripple` command will be removed, along with `serve`
-
-## View the App in a Browser
-
-Since the application uses web-based components, you can often use a
-standard web browser to preview them directly from the source _www_
-directory.  The `ripple` command previews the application within a
-browser-based emulation environment, in this case mimicking how it
-would appear on an iPhone:
-
-        $ cordova ripple ios
-
-![](img/guide/cli/scr_ripple.png)
-
-The _ripple_ emulator provides an outer skin that demonstrates how
-applications work with many device-level features. For example, you
-can simulate changes in location, changes to orientation, and other
-accelerometer-driven shaking gestures. Other platform features, such
-as access to the camera or user contacts, can often be tested on the
-SDK's device emulator, or else on the device itself.
-(See View the App in an Emulator, below.)
-
-The default application Cordova provides demonstrates a handler for
-the custom `deviceready` event, which ordinarily fires once Cordova
-establishes contact with device-level APIs, at which point an
-application can start running. Within the ripple emulator, you must
-fire the event manually:
-
-![](img/guide/cli/scr_ripple_event.png)
-
-As part of its initialization phase, The application displays a new
-log message:
-
-![](img/guide/cli/scr_ripple_ready.png)
-
-Specifying a platform, such as `ios` or `android`, makes the
-application run under `ripple` with a user agent string and screen
-size for a particular device.  You also have the option to modify the
-__Devices__ tab at the top left to change the target device.  For
-example, here is how an application would appear on an iPad that's
-tipped to its side:
-
-![](img/guide/cli/scr_ripple_ipad.png)
-
-The `ripple` command is appropriate if your application responds to
-location, orientation, and varying network conditions, or else if it
-doesn't interact with any of the Cordova APIs at all. The following
-section shows how to run the app in a full platform emulator, which
-may allow access to other device features. Otherwise see Run the App
-on the Device, below.
-
--->
-
 ## View the App in an Emulator
 
 SDKs for mobile platforms often come bundled with emulators that
