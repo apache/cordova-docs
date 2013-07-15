@@ -54,6 +54,7 @@ An example:
                 <plugin name="MyPlugin" value="MyPluginClass" />
             </plugins>
             <access origin="*" />
+            <content src="index.html" />
         </widget>
 
 A list of supported elements across major platforms which are supported in Apache Cordova follow.
@@ -74,5 +75,5 @@ Domain Whitelist Guide for more information.
 ### `<content>`
 
 This element defines your application's start page relative to the
-project's standard web assets root folder. The default is
-`index.html`.
+project's standard web assets root folder. This element is optional,
+the default is `index.html`.
