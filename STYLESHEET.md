@@ -81,6 +81,14 @@ editorial guidelines.
   powershell prompt," try "You can run commands either from a cmd or
   powershell prompt."
 
+* Avoid em dash clauses--they unnecessarily break up the text--and
+  parenthical statements (which can also be distracting). If you do
+  include either, remove spaces around the dashes (punctuate fragments
+  outside of paren's). (Punctuate full sentences inside of parens.)
+
+* Avoid too many NOTEs, as it implies too many variables that can go
+  wrong. Try to clarify variations on a procedure within the text.
+
 ## Usage
 
 * "User" may refer to the end user, not to the application's
@@ -98,6 +106,15 @@ editorial guidelines.
 * 'Handheld' not 'hand held'
 
 * 'JavaScript' (but lowercase when MIME type)
+
+* Mac "OS X", not "OSX"
+
+* Prefer "simulator" over "emulator"; clarify when interfaces refer to
+  them differently. (Simulators more robustly model a device's
+  internal state rather than its outward appearance.)
+
+* Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
+  dedicated GUI coding environments such as Eclipse.
 
 * Remove superfluous "navigate to" wherever possible, unless you need
   to `cd` to a particular directory to launch a command. Instead of
@@ -148,3 +165,9 @@ editorial guidelines.
   matters, or __TIP:__ to pass along useful tricks or context.
 
 * Use titles in link text, never 'click here'
+
+* __Topic/comment lists__: For bullet lists that provide short topics
+  followed by comments, bold the topic, then merge the comment on the
+  same line, separated with a colon unless the topic features trailing
+  punctuation. The text you are reading provides an example.
+
