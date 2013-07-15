@@ -56,7 +56,7 @@ This command creates the folder structure for your project at the specified loca
 Adding and managing targets
 ---------------------------
 
-A target refers to a BlackBerry device or simulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.
+A target refers to a BlackBerry device or emulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.
 
 ###Add a target
 
@@ -69,9 +69,9 @@ To add a target, on the command line, type the following command:
 where
 
 -   `<name>`  specifies a unique name for the target.
--   `<ip-address>`  specifies the ip address of the BlackBerry device or simulator.
+-   `<ip-address>`  specifies the ip address of the BlackBerry device or emulator.
 -   `-t <device | simulator>` specifies the target type. If not provided, the default value is device.
--   `-p|--password <password>`  specifies the password for the device or simulator. This is required only if the device or simulator is password protected.
+-   `-p|--password <password>`  specifies the password for the device or emulator. This is required only if the device or emulator is password protected.
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
 ###Remove a target
@@ -124,7 +124,7 @@ To build your app in release mode, on the command line, type the following comma
 
 where
 
--   `<target>`  specifies the name of a previously added target. If `<target>`  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or simulator and you have not created a default target. Additionally, if `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
+-   `<target>`  specifies the name of a previously added target. If `<target>`  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or emulator and you have not created a default target. Additionally, if `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 -   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools.
 -   `-ll|--loglevel <level>`  specifies the log level. The log level may be one of `error`, `warn`, or `verbose`.
@@ -138,11 +138,11 @@ Note that all of these parameters are optional. If you have previously defined a
 Deploying an app
 -------------------------
 
-You can test your app using either a BlackBerry device or a simulator. Before deploying your app, you must first create a target for the device or simulator you want to deploy your app to.
+You can test your app using either a BlackBerry device or an emulator. Before deploying your app, you must first create a target for the device or emulator you want to deploy your app to.
 
-The run script will first build  your app. If you intend to deploy an app to a physical device for testing, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the run script, the script will create and install the debug token for you. You do not need a debug token to test your app on a simulator, even if that app is unsigned.
+The run script will first build  your app. If you intend to deploy an app to a physical device for testing, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the run script, the script will create and install the debug token for you. You do not need a debug token to test your app on an emulator, even if that app is unsigned.
 
-To deploy your app to a device or simulator, on a command line type the following command:
+To deploy your app to a device or emulator, on a command line type the following command:
 
 ```
 <path-to-project>/cordova/run <target> [--no-build]

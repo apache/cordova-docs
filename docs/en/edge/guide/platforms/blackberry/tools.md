@@ -49,18 +49,18 @@ For BlackBerry projects, please make sure you customize the
 `project.properties` file in your Cordova project's root directory.
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
-simulator executables.
+emulator executables.
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
 
-## Launch simulator
+## Launch emulator
 
 For BlackBerry projects, please make sure you customize the
 `project.properties` file in the root of your Cordova project folder.
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
-simulator executables.
+emulator executables.
 
     $ /path/to/my_new_project/cordova/run <platform>
 
