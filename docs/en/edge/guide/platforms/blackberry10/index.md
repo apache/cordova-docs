@@ -104,8 +104,13 @@ Then run a variation of the `target` command such as this:
 
 The `-p` option refers to whatever password you set up when requesting
 a signing key, as described above.  The `--pin` option refers to
-whatever local password locks the device itself.  Here is the full
-syntax:
+whatever local password locks the device itself. To view the PIN,
+open the __Settings__ app and choose __About__, then choose
+__Hardware__ from the __Category__ menu:
+
+![](img/guide/platforms/blackberry10/bb_pin.png)
+
+Here is the full syntax for `target add`:
 
         $ cordova/target add <name> <ip-address> [-t <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
