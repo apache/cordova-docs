@@ -22,6 +22,24 @@ Upgrading Windows Phone
 
 This document is for people who need to upgrade their Cordova versions from an older version to a current version of Cordova. This applies to both WP7 and WP8.
 
+## Upgrade to 2.9.0 from 3.0.0 ##
+
+### In Visual Studio's Solution Explorer window:
+1. Create a new Apache Cordova WP7 or WP8 3.0.0 Project
+2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+3. Copy and overwrite any splash screen, or icon images.
+4. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project. 
+5. Build and test.
+- **NOTE : all core APIs have been removed and must be installed as plugins**
+
+### Alternate upgrade method using the cordova CLI tool
+1. Create a new Apache Cordova 3.0.0 project using the cordova CLI.
+2. Add your platforms the the cordova cli project (i.e `cordova platform add wp7 wp8`)
+3. Copy the contents of your projects 'www' folder to the www folder at the root of the cordova project you just created.
+4. Copy or overwrite any native assets from your original project (SplashScreen, ApplicationIcon, etc), make sure to add any new files to the .csproj file. Your windows phone project wil be in `<project-root>\platforms\[wp7 | wp8]`.
+5. Use the cordova CLI tool to install any plugins you need, **all core APIs are now plugins and may need to be added**. Only 3.0.0 plugins will be compatible with the CLI.
+6. Build and test.
+
 ## Upgrade to 2.8.0 from 2.9.0 ##
 
 ### In Visual Studio's Solution Explorer window:

@@ -22,7 +22,7 @@ Windows Phone 8 Platform Guide
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-__NOTE:__ Applications built with Apache Cordova for Windows Phone 8 run only on Windows Phone 8 devices. If you want to target both 7.5 'and' 8 devices, then use Apache Cordova for Windows Phone 7, which does not have all the advanced features included in IE10, but implements the same APIs.
+__NOTE:__ Applications built with Apache Cordova for Windows Phone 8 (wp8) run only on Windows Phone 8 devices. If you want to target both 7.5 'and' 8 devices, then use Apache Cordova for Windows Phone 7 (wp7), which does not have all the advanced features included in IE10, but implements the same APIs.
 
 1. System Requirements
 ---------------
@@ -55,7 +55,7 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 ----------------------------
 
 - Download and install [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
-- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8` subfolder.
+- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp8` subfolder, `lib\windows-phone-8\wp7` contains the Windwos Phone 7 version of Cordova.
 - Copy the file CordovaWP8_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
 
 2.1. Building the template
@@ -63,29 +63,17 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 
 __NOTE:__ this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP8_x_x_x.zip then you may skip this step.
 
-In order to simplify the development process, Cordova comes with a Visual Studio template that allows creating a Cordova application rapidly. This template can be modified if needed and the below steps indicate how to proceed if you want to modify and re-generate the template.
+In order to simplify the development process, Cordova comes with a script to build Visual Studio templates. This allows for rapid creation of Cordova applications inside Visual Studio. This template can be modified if needed and the below steps indicate how to proceed if you want to generate the template.
 
-- Open the `lib\windows-phone\templates\standalone\CordovaSolution.sln` file in Visual Studio Express for Windows Phone.
-- Select __Export Template...__ from the __File__ menu.
-- Choose template type __Project template__
-- Give the exported template a name, such as `CordovaStarter-2.1.0`, which produces a `CordovaStarter-2.1.0.zip` archive.
-- Optionally, you may add a description, icon image, and preview image.  These  display in Visual Studio's __New Project__ dialog.
-- __NOTE:__ If you select __Automatically import the template...__, then you don't need to copy the `.zip` file over as outlined in step 2.
-- Press __Finish__
+### Run the batch file to create and install the templates.
 
-2.2 About the different templates
----------------------------------
+- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
+"My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
+- If you run the batch file from the command line, you can also call with a parameter to install automatically
 
-Apache Cordova for Windows Phone 8 only supports the standalone template.
+Run the script :
 
-The 'Stand-Alone' template includes _all_ the source code for Apache
-Cordova.  This project is easier to fine-tune to use just the features
-you need, thereby working around the permissions issues of the 'Full'
-template, however this type of project is more difficult to update, as
-you update individual files within your project and manage any
-dependancies yourself.  In order to exclude an unused API, simply
-right-click-select the __Command__ class file in Visual Studio and
-choose __do not include in project__.
+    >createTemplates.bat -install
 
 3. Set up New Project
 --------------------
