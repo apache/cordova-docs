@@ -44,6 +44,17 @@ editorial guidelines.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
+## Structure
+
+* Flatten text wherever possible. Avoid nested lists. Avoid
+  third-level subheadings.
+
+* Do not follow a heading with a subheading or a list with no
+  intervening text.
+
+* Avoid too many NOTEs, as it implies too many variables that can go
+  wrong. Try to clarify variations on a procedure within the text.
+
 ## Language and Tone
 
 * Use present tense. "This happens," not "this will happen." (Future
@@ -85,9 +96,6 @@ editorial guidelines.
   parenthical statements (which can also be distracting). If you do
   include either, remove spaces around the dashes (punctuate fragments
   outside of paren's). (Punctuate full sentences inside of parens.)
-
-* Avoid too many NOTEs, as it implies too many variables that can go
-  wrong. Try to clarify variations on a procedure within the text.
 
 ## Usage
 
@@ -132,6 +140,9 @@ editorial guidelines.
   calling it as a method.)
 
 ## Punctuation
+
+* Initial Cap Words in Headings, Except for Short Prepositions or
+  Conjunctions
 
 * Append colon to text that introduces a code snippet, image, or
   procedure listing.
