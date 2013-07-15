@@ -107,7 +107,7 @@ Passing results from C# to JS
 
 The base class BaseCommand provides methods for passing data to your JS callback handlers.
 To simply signal that the command has succeeded, when no additional result info is needed,
-you can can simply call:
+you can simply call:
 
     DispatchCommandResult(); // calls back with an empty plugin result, considered a success callback
 

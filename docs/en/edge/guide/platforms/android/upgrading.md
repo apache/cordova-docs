@@ -120,7 +120,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ### Notes about 2.0.0 release
 config.xml will be replacing cordova.xml and plugins.xml.  This new file is a combination of the previous two.  However, the
-old files are deprecated, and and while currently still work, will cease working in a future release.
+old files are deprecated, and while currently still work, will cease working in a future release.
 
 ## Upgrade to 1.9.0 from 1.8.1 ##
 
