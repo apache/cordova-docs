@@ -37,7 +37,7 @@ Download the Tizen SDK from
 <!--
 
 - (optional) Install Tizen Cordova template projects: copy the
-  `/templates` directory content into you Tizen Eclipse IDE web
+  `/templates` directory content into the Tizen Eclipse IDE web
   templates directory (e.g:
   `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
