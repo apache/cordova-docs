@@ -23,7 +23,7 @@ BlackBerry Plugins
 This guide shows how to develop an Echo plugin on BlackBerry.  The
 Plugin Development Guide provides a broad overview with which you
 should already be familiar, and this guide picks up where it leaves
-off.  In addition, download the [Cordova Blackberry
+off.  In addition, download the [Cordova BlackBerry
 repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary).
 
 The `Cordova-BlackBerry` project allows you to deploy to BlackBerry
@@ -85,7 +85,7 @@ and [str] are the arguments we are passing in.
     import org.apache.cordova.json4j.JSONException;
     import org.apache.cordova.json4j.JSONObject;
     /**
-     * A simple plugin to demonstrate how to build a plugin for Blackberry
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
      * Basically echos back the msg that a user calls to this plugin
      */
     public final class Echo extends Plugin {

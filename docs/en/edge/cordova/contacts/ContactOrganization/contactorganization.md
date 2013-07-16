@@ -131,8 +131,8 @@ Android 2.X Quirks
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref__: Not supported by Blackberry devices, returning `false`.
-- __type__: Not supported by Blackberry devices, returning `null`.
+- __pref__: Not supported by BlackBerry devices, returning `false`.
+- __type__: Not supported by BlackBerry devices, returning `null`.
 - __name__: Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
 - __department__: Not supported, returning `null`.
 - __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.

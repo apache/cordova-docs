@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Blackberry Command-line Tools
+# BlackBerry Command-line Tools
 
 The `cordova` command-line utility is a high-level tool that allows
 you to build applications across several platforms at once. An older
@@ -39,7 +39,7 @@ name.  Here is the syntax for both Mac and Windows:
     $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
 
-__NOTE:__ The Blackberry platform ignores the package name placeholder
+__NOTE:__ The BlackBerry platform ignores the package name placeholder
 (`com.example.project_name`), but it's still required for use by
 cross-platform tools.
 

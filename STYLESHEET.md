@@ -117,6 +117,8 @@ editorial guidelines.
 
 * Mac "OS X", not "OSX"
 
+* BlackBerry, not Blackberry
+
 * Prefer "emulator" over "simulator"; clarify when interfaces refer to
   them differently.
 

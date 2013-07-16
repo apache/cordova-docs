@@ -144,7 +144,7 @@ Android 2.X Quirks
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref__: Not supported on Blackberry devices, returning `false`.
+- __pref__: Not supported on BlackBerry devices, returning `false`.
 - __type__: Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
 - __formatted__: Partially supported.  Returns a concatenation of all BlackBerry address fields.
 - __streetAddress__: Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
