@@ -162,6 +162,9 @@ editorial guidelines.
   not api's or API's. Only use apostrophes for possessives, e.g. "the
   API's members"
 
+* Do not hyphenate adverbs, as it's implict they modify verbs.  So,
+  "commonly seen problems," not "commonly-seen problems"
+
 ## Miscellaneous
 
 * For procedure lists, don't break out separate items for (1) do this,

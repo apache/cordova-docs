@@ -223,6 +223,6 @@ launch from the home screen:
 
 plugin(s) [add|remove|ls [path]] ..... adds or removes a
          plugin (from the specified path), or lists all
-         currently-added plugins
+         currently added plugins
 
 -->
