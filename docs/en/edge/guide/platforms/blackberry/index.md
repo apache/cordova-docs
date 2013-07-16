@@ -63,8 +63,8 @@ Download and extract the latest copy of [Cordova](http://cordova.apache.org/#dow
 5.  Set up New Project
 --------------------
 
-- Open up a command prompt/terminal and navigate to where you extracted Cordova.
-- There is a directory for each platform that Cordova supports.  CD into the blackberry directory.
+- Open up a command-line terminal and navigate to where you extracted Cordova.
+- There is a directory for each platform that Cordova supports.  CD into the `blackberry` directory.
 - The blackberry directory contains several directories.  The `example` folder contains a complete Cordova project.  Copy the `example` folder to another location on your computer.
 - Change to the newly created directory.
 - Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
@@ -81,7 +81,7 @@ BlackBerry Smartphone (OS5-7)
 6.  Hello World
 --------------
 
-Build the Cordova sample project by typing `./cordova/build <target>` in your command prompt/terminal while you are in your project's directory. Replace `<target>` with either `qnx` `playbook` or `blackberry`. For example...
+Build the Cordova sample project by typing `./cordova/build <target>` in your command prompt while you are in your project's directory. Replace `<target>` with either `qnx` `playbook` or `blackberry`. For example...
 
 BlackBerry 10 (QNX)
 - `./cordova/build qnx`
@@ -119,7 +119,7 @@ Smartphone (Optional)
 - `blackberry.sim.bin`
 - __NOTE:__ On windows file separator '\' must be escaped when specifying directories.  For example `C:\\Program Files\\BlackBerry\\Simulator`.
 
-While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the emulator virtual image must already be started.  For example...
+While in your project directory, in command prompt type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the emulator virtual image must already be started.  For example...
 
 BlackBerry 10 (QNX)
 - `./cordova/run qnx`
@@ -156,7 +156,7 @@ BlackBerry Smartphone (OS5-7)
 - Smartphone (Optional)
 - `blackberry.sigtool.password`
 
-While in your project directory, in command prompt/terminal type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`.  For example...
+While in your project directory, in command prompt type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`.  For example...
 
 BlackBerry 10 (QNX)
 - `./cordova/run qnx`

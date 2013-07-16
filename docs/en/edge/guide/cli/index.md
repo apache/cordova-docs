@@ -144,7 +144,7 @@ Running commands to add or remove platforms affects the contents of
 the project's _platforms_ directory, where each specified platform
 appears as a subdirectory. The _www_ source directory is reproduced
 within each platform's subdirectory, appearing for example in
-_platforms/ios/www_ or _platforms/android/assets/www_.  By default,
+`platforms/ios/www` or `platforms/android/assets/www`.  By default,
 each platform's configuration file is set up to be able to access all
 of Cordova's APIs.
 

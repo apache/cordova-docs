@@ -61,7 +61,6 @@ Download the Tizen SDK from
 
 -->
 
-
 ## Open a Project in the SDK
 
 1. Launch the Tizen Eclipse IDE.
@@ -80,7 +79,6 @@ Download the Tizen SDK from
    the __Project Explorer__ view:
 
    ![](img/guide/platforms/tizen/project_explorer.png)
-
 
 To rebuild the project, right-click in the __Project Explorer__ view
 and Select __Build Project__:

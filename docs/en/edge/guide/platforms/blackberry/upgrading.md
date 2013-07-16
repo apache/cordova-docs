@@ -129,7 +129,7 @@ Updating the example/ folder or migrating an existing project:
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
@@ -138,7 +138,6 @@ Updating just the www folder:
     - If playbook, then update the .js file in the `playbook/` folder.
     - If BlackBerry10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.4.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -163,7 +162,6 @@ Updating just the `www` folder:
     - If BlackBerry10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.3.0.js` file.
 
-
 Updating the sample folder (ie, updating using the ant tools):
 
 1. Open the `sample/lib/` folder.
@@ -187,7 +185,6 @@ Updating just the www folder:
     - If BlackBerry10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.2.0.js` file.
 
-
 Updating the sample folder (ie, updating using the ant tools):
 
 1. Open the `sample/lib/` folder.
@@ -201,7 +198,7 @@ Updating the sample folder (ie, updating using the ant tools):
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
@@ -209,7 +206,6 @@ Updating just the www folder:
 4. Copy the new `cordova-2.1.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-2.1.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 

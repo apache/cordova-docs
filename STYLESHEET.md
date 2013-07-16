@@ -25,14 +25,14 @@ editorial guidelines.
 ## In-line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
-  interfaces, methods, properties, literal values, Unix commands, etc.
+  interfaces, methods, properties, literal values, Unix commands,
+  pathnames, filenames, etc.
 
 * Use __bold__ for on-screen items, such as the names of menu items,
   buttons, and check boxes.
 
-* Use _italics_ for emphasis, pathnames, filenames, simple
-  mathematical expressions, variable items (e.g., _x_/_y_
-  coordinates).
+* Use _italics_ for emphasis, simple mathematical expressions, and
+  variable items (e.g., _x_/_y_ coordinates).
 
 * Do _not_ use ALL CAPS for emphasis. (Exception: in commented code)
 

@@ -29,7 +29,6 @@ This is a continuation of the Plugin Development Guide for Cordova. Once you hav
 
 A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a plugin.xml file.
 
-
 ## Creating the native part of your plugin ##
 
 To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and select File > New > BlackBerry Project > Native Extension > BlackBerry WebWorks. Enter your desired project name / location and click finish.
