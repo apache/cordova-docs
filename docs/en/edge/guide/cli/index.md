@@ -39,7 +39,7 @@ platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
 * Android         (Mac, Linux)
-* Blackberry      (Mac, Windows)
+* BlackBerry      (Mac, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
 
