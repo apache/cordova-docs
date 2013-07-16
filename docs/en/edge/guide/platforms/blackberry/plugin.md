@@ -20,31 +20,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 BlackBerry Plugins
 =================================
 
-This guide explores how to develop the Echo plugin on BlackBerry.
-If you haven't read the top-level guide about the JavaScript part of
-the plugin, it would be best if you read that first and then this
-guide. In addition, please download the [Cordova Blackberry
-repo](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary).
+This guide shows how to develop an Echo plugin on BlackBerry.  The
+Plugin Development Guide provides a broad overview with which you
+should already be familiar, and this guide picks up where it leaves
+off.  In addition, download the [Cordova Blackberry
+repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary).
 
-The Cordova-BlackBerry project allows you to deploy to BlackBerry
-devices such a the Torch and Bold, as well as the Playbook. There's a
-difference between deploying to normal BlackBerry handheld devices and
-the Playbook. They use two different code bases, so when you develop
-for one, you have to duplicate your efforts for the other!  This guide
-focuses on the handheld devices rather than the tablet. (In the future,
-this guide should cover both platforms.)
+The `Cordova-BlackBerry` project allows you to deploy to BlackBerry
+devices such as the Torch, Bold, and Playbook. The Playbook uses a
+different code base than other BlackBerry handheld devices, for which
+you need to duplicate your development efforts.  This guide focuses on
+the handheld devices rather than tablets. (In the future, this guide
+should cover both platforms.)
 
-Continuing on from the previous guide, the Echo plugin essentially
-returns whatever message a user provides to the `window.echo`
-function.
-
-The Echo function:
+The Echo plugin essentially returns whatever message a user provides
+to the `window.echo` function:
 
     window.echo = function(str, callback) {
-            cordova.exec(callback, function(err) {
-                callback('Nothing to echo.');
-            }, "Echo", "echo", [str]);
-        };
+        cordova.exec(callback, function(err) {
+            callback('Nothing to echo.');
+        }, "Echo", "echo", [str]);
+    };
 
 ## Modifying plugins.xml
 
