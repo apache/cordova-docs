@@ -24,15 +24,17 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.9.0 from 3.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
+
 1. Create a new Apache Cordova WP7 or WP8 3.0.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Copy and overwrite any splash screen, or icon images.
 4. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project. 
 5. Build and test.
-- **NOTE : all core APIs have been removed and must be installed as plugins**
+- __NOTE:__ all core APIs have been removed and must be installed as plugins.
 
-### Alternate upgrade method using the cordova CLI tool
+Alternate upgrade method using the cordova CLI tool:
+
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI.
 2. Add your platforms the the cordova cli project (i.e `cordova platform add wp7 wp8`)
 3. Copy the contents of your projects `www` folder to the `www` folder at the root of the cordova project you just created.
@@ -42,7 +44,8 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.8.0 from 2.9.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
+
 1. Create a new Apache Cordova WP7 or WP8 2.9.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update the name of cordova.js in the HTML tag if it's still using cordova-VERSION.js (should be just cordova.js).
@@ -52,7 +55,8 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.8.0 from 2.7.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
+
 1. Create a new Apache Cordova WP7 or WP8 2.8.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new cordova.js file. ( note that there is no longer a version number in the name )
@@ -62,7 +66,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.7.0 from 2.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.7.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.7.0.js` file.
@@ -72,7 +76,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.6.0 from 2.5.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.6.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.6.0.js` file.
@@ -82,7 +86,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.5.0 from 2.4.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.5.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.5.0.js` file.
@@ -92,7 +96,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.4.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.4.0.js` file.
@@ -102,7 +106,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.3.0 from 2.2.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.3.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.3.0.js` file.
@@ -112,7 +116,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.2.0 from 2.1.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.2.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.2.0.js` file.
@@ -122,7 +126,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.1.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.1.0.js` file.
@@ -134,7 +138,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 There have been considerable changes to the WP7 project structure in Apache Cordova 2.0.0 which make this upgrade a little more involved that the others. Essentially this is not an upgrade but creation of a new project and copy over of existing source files.
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.0 Project
 2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new `cordova-2.0.0.js` file.
@@ -144,7 +148,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.9.0 from 1.8.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -155,7 +159,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -166,7 +170,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.7.0 from 1.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -177,7 +181,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.6.1 from 1.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -188,7 +192,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.6.0 from 1.5.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -199,7 +203,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.5.0 from 1.4.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -210,7 +214,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.4.0 from 1.3.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -221,7 +225,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.3.0 from 1.2.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -232,7 +236,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.2.0 from 1.1.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
@@ -243,7 +247,7 @@ There have been considerable changes to the WP7 project structure in Apache Cord
 
 ## Upgrade to 1.1.0 from 1.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
 3. Right-click on __References__ and select __Add Reference__
