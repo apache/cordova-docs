@@ -75,7 +75,6 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 8. In your **config.xml** file, [remove this line](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc).
 9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
-
 ## Upgrading 2.5.0 projects to 2.6.0 ##
 
 1. **Download and extract the Cordova 2.6.0 source** to a **permanent folder location** on your hard drive (say to `~/Documents/Cordova-2.6.0`)

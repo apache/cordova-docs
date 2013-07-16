@@ -47,7 +47,7 @@ __NOTE:__ Applications built with Apache Cordova for Windows Phone 8 (wp8) run o
 - SDK + IDE ( Visual Studio )
     - Visual Studio 2012 Professional, Premium, or Ultimate. Note that Visual Studio Express for Windows Phone (included in the SDK) is not recommended because you can not build the template (see below) with VS Express, as it does not have the __Export Template__ functionality, which is only in VS Pro or higher.
 
-- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device and/or submit it to Market Place.
+- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
@@ -87,7 +87,7 @@ Run the script :
 4. Review the project structure
 -------------------------------
 
-- The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
+- The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
 - Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual version installed.
 

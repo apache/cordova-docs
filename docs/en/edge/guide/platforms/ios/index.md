@@ -70,7 +70,7 @@ Cordova The Command-line Interface. For example, in a source-code directory:
         $ cordova prepare              # or "cordova build"
 
 Once created, you can open it from within Xcode. Double-click to open
-the _hello/platforms/ios/hello.xcodeproj_ file.  The screen should
+the `hello/platforms/ios/hello.xcodeproj` file.  The screen should
 look like this:
 
 ![](img/guide/platforms/ios/helloworld_project.png)

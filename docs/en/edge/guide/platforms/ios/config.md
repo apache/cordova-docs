@@ -39,7 +39,7 @@ Various preferences (as **&lt;preference&gt;** tags) default on not breaking exi
 
 5. **AutoHideSplashScreen (boolean, defaults to true)** - set to false to control when the splashscreen is hidden through a JavaScript API
 
-6. **FadeSplashScreen (boolean, defaults to true)** - set to false to prevent the splash-screen to fade in and out when showing/hiding it.
+6. **FadeSplashScreen (boolean, defaults to true)** - set to false to prevent the splash-screen to fade in and out when showing or hiding it.
 
 7. **FadeSplashScreenDuration (float, defaults to 2)** - The splash-screen Fade duration in seconds.
 

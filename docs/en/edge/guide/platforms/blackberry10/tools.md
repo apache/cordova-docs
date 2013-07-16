@@ -39,7 +39,11 @@ arguments.
 
 The 'create' command creates a new project:
 
+<<<<<<< HEAD
     bin/create <path-to-project>
+=======
+        bin/create <path-to-project>
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 ## target
 
@@ -49,7 +53,11 @@ target, or set a target as the default target.
 
 ### Add a target
 
+<<<<<<< HEAD
     <path-to-project>/cordova/target add <name> <ip-address> <device | simulator> [-p | --password <password>] [--pin <device-pin>]
+=======
+        <path-to-project>/cordova/target  add  <name>  <ip-address>  <device | simulator>  [-p | --password <password>]  [--pin <device-pin>]
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 where
 
@@ -69,11 +77,19 @@ where
 
 ### Remove a target
 
+<<<<<<< HEAD
     <path-to-project>/cordova/target  remove  <name>
 
 ### Set a target as the default
 
     <path-to-project>/cordova/target  default  <name>
+=======
+        <path-to-project>/cordova/target  remove  <name>
+
+### Set a target as the default
+
+        <path-to-project>/cordova/target  default  <name>
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 ## build
 
@@ -83,9 +99,14 @@ in debug mode (which produces an unsigned .bar file).
 
 ### Build your project in release mode
 
+<<<<<<< HEAD
     <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
 
 where:
+=======
+        <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
+where
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 -   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
 -   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
@@ -93,7 +114,11 @@ where:
 
 ### Build your project in debug mode
 
+<<<<<<< HEAD
     <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
+=======
+        <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 where
 
@@ -123,7 +148,11 @@ installed a debug token, if that target is a BlackBerry device), you
 can run the script with no arguments, and the script will package your
 app and deploy it to the default target. For example:
 
+<<<<<<< HEAD
     <path-to-project>/cordova/build debug
+=======
+        <path-to-project>/cordova/build debug
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 ## run
 
@@ -132,7 +161,11 @@ or an emulator. Before deploying your app, you must first create a
 target for the device or emulator you want to deploy your app to. The
 deploy script will deploy the most recent build of your app.
 
+<<<<<<< HEAD
     <path-to-project>/cordova/run <target>
+=======
+        <path-to-project>/cordova/run <target>
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 where
 
@@ -147,6 +180,7 @@ The `target` command allows you to add and remove plugins
 
 ### Fetch a locally hosted plugin
 
+<<<<<<< HEAD
     <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
 ### View a list of installed plugins
@@ -161,3 +195,18 @@ The `target` command allows you to add and remove plugins
 
     <path-to-project>/cordova/plugin rm <name>
 
+=======
+        <path-to-project>/cordova/plugin fetch <path-to-plugin>
+
+### View a list of installed plugins
+
+        <path-to-project>/cordova/plugin ls
+
+### Add a plugin
+
+        <path-to-project>/cordova/plugin add <name>
+
+### Remove a plugin
+
+        <path-to-project>/cordova/plugin rm <name>
+>>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed

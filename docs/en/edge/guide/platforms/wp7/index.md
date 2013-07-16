@@ -30,10 +30,9 @@ This guide describes how to set up your development environment for Cordova and 
         - The 64-bit version (x64) of Windows is required for the SDK.
         - The Pro version is recommended for running a device emulator.
 
-- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device and/or submit it to Market Place.
+- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
-
 
 2. Install SDK + Cordova
 ----------------------------
@@ -69,7 +68,7 @@ Run the script :
 4. Review the project structure
 -------------------------------
 
-- The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
+- The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
 - Note: This screen capture was from the wp8 cordova-2.3.0 download, your listing will vary based on the actual version installed.
 
