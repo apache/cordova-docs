@@ -20,6 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 iOS Platform Guide
 ========================
 
+This guide describes how to set up your SDK development environment to
+deploy Cordova apps for iOS devices such as iPhone and iPad.
+
 ## Requirements and Support
 
 Apple® tools required to build iOS applications run only on the OS X
@@ -53,8 +56,8 @@ There are two ways to download Xcode:
 
 Once Xcode is installed, several command-line tools need to be enabled
 for Cordova to run. From the __Xcode__ menu, select __Preferences__,
-then the __Downloads__ tab. Press the __Install__ button next to the
-__Command Line Tools__ listing.
+then the __Downloads__ tab. From the __Components__ panel, press the
+__Install__ button next to the __Command Line Tools__ listing.
 
 ## Open a Project in the SDK
 
@@ -91,6 +94,14 @@ To preview the app in the iOS emulator:
    to display the app:
 
    ![](img/guide/platforms/ios/HelloWorldStandard.png)
+
+   Only one emulator may run at a time, so if you want to test the app
+   in a different emulator, you need to quit the emulator application
+   and run a different target within Xcode.
+
+Xcode comes bundled with emulators for the lastest versions of iPhone
+and iPad. Older versions may be available from the __Xcode &rarr;
+Preferences &rarr; Downloads &rarr; Components__ panel.
 
 ## Deploy to Device
 
