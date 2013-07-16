@@ -25,14 +25,14 @@ editorial guidelines.
 ## In-line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
-  interfaces, methods, properties, literal values, Unix commands, etc.
+  interfaces, methods, properties, literal values, Unix commands,
+  pathnames, filenames, etc.
 
 * Use __bold__ for on-screen items, such as the names of menu items,
   buttons, and check boxes.
 
-* Use _italics_ for emphasis, pathnames, filenames, simple
-  mathematical expressions, variable items (e.g., _x_/_y_
-  coordinates).
+* Use _italics_ for emphasis, simple mathematical expressions, and
+  variable items (e.g., _x_/_y_ coordinates).
 
 * Do _not_ use ALL CAPS for emphasis. (Exception: in commented code)
 
@@ -81,8 +81,8 @@ editorial guidelines.
 * Do not start a sentence with a lowercase member name.
 
 * Do not refer to "I," the author of the documentation, as in "What I
-  am going to show you now." Likewise avoid "we," as in "We see
-  that..."
+  am going to show you now." Likewise avoid "we" and "let's," so
+  instead of "We see that..." try "Note that..."
 
 * OK to refer to "you," the developer, but only if necessary, e.g., to
   avoid passive voice.
@@ -116,6 +116,8 @@ editorial guidelines.
 * 'JavaScript' (but lowercase when MIME type)
 
 * Mac "OS X", not "OSX"
+
+* BlackBerry, not Blackberry
 
 * Prefer "emulator" over "simulator"; clarify when interfaces refer to
   them differently.
@@ -159,6 +161,9 @@ editorial guidelines.
 * Do not use use apostrophes for plural, so "...manages core APIs,"
   not api's or API's. Only use apostrophes for possessives, e.g. "the
   API's members"
+
+* Do not hyphenate adverbs, as it's implict they modify verbs.  So,
+  "commonly seen problems," not "commonly-seen problems"
 
 ## Miscellaneous
 

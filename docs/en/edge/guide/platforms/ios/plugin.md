@@ -95,7 +95,7 @@ callback does not fire.
 
  * `messageAsArrayBuffer` expects `NSData*` and converts to an `ArrayBuffer` for your JavaScript callback (and `ArrayBuffers` sent to a plugin from JavaScript are converted to `NSData*`).
  * `messageAsMultipart` expects an `NSArray*` containing any of the other supported types, and sends the whole array as the `arguments` to your JavaScript callback.
-   *  Quirk: this is not just syntactic sugar (though it is sweet).  This way, all of the arguments are serialized/deserialized as necessary.  e.g. it is safe to return `NSData*` as multipart, but not as `Array`/`Dictionary`.
+   *  Quirk: this is not just syntactic sugar (though it is sweet).  This way, all of the arguments are serialized or deserialized as necessary.  e.g. it is safe to return `NSData*` as multipart, but not as `Array`/`Dictionary`.
 
 ## Echo Plugin iOS Plugin
 

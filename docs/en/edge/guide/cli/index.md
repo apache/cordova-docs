@@ -39,7 +39,7 @@ platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
 * Android         (Mac, Linux)
-* Blackberry      (Mac, Windows)
+* BlackBerry      (Mac, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
 
@@ -144,7 +144,7 @@ Running commands to add or remove platforms affects the contents of
 the project's _platforms_ directory, where each specified platform
 appears as a subdirectory. The _www_ source directory is reproduced
 within each platform's subdirectory, appearing for example in
-_platforms/ios/www_ or _platforms/android/assets/www_.  By default,
+`platforms/ios/www` or `platforms/android/assets/www`.  By default,
 each platform's configuration file is set up to be able to access all
 of Cordova's APIs.
 
@@ -223,6 +223,6 @@ launch from the home screen:
 
 plugin(s) [add|remove|ls [path]] ..... adds or removes a
          plugin (from the specified path), or lists all
-         currently-added plugins
+         currently added plugins
 
 -->

@@ -24,12 +24,12 @@ This document describes the process of upgrading Cordova projects to the latest 
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
 
-### BlackBerry10 ###
+BlackBerry 10:
 
 1. **Download and extract the Cordova 2.9.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.9.0)
 2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
-4. **Create a new project**, as described in Blackberry Command-line Tools. This becomes the home of your updated project.
+4. **Create a new project**, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
 5. **Copy** your projects source from the old project's /www folder to the new project's /www folder
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
 
@@ -47,19 +47,19 @@ This document describes the process of upgrading Cordova projects to the latest 
 
 ## Upgrading 2.7.0 projects to 2.8.0 ##
 
-### BlackBerry10 ###
+BlackBerry 10:
 
-BlackBerry10 uses the new CLI tooling and manages core APIs as plugins. The instructions migrate your project to a new project, rather than updating an existing project, due to the complexity of updating an old project.
+BlackBerry 10 uses the new CLI tooling and manages core APIs as plugins. The instructions migrate your project to a new project, rather than updating an existing project, due to the complexity of updating an old project.
 Also note that the cordova js script file is now called 'cordova.js' and no longer contains a version string.
 
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.8.0)
 2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
-4. **Create a new project**, as described in Blackberry Command-line Tools. This becomes the home of your updated project.
+4. **Create a new project**, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
 5. **Copy** your projects source from the old project's /www folder to the new project's /www folder
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
 
-### BlackBerryOS/Playbook ###
+BlackBerryOS/Playbook:
 
 1. **Download and extract the Cordova 2.8.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.8.0)
 2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
@@ -76,7 +76,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 1. **Download and extract the Cordova 2.7.0 source** to a **permanent folder location** on your hard drive (say to ~/Cordova-2.7.0)
 2. **Quit any running SDK tools**: Eclipse, Momentics and the like.
 3. **Navigate** to the directory where you put the downloaded source above, using a unix like terminal: **Terminal.app**, **Bash**, **Cygwin**, etc.
-4. **Create a new project**, as described in Blackberry Command-line Tools. You need the assets from this new project.
+4. **Create a new project**, as described in BlackBerry Command-line Tools. You need the assets from this new project.
 5. **Copy** the **www/cordova-2.7.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.6.0.js** file
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-2.7.0.js** file
 7. **Copy** the **native** folder from the new project into the existing project, overwriting the old **native** folder
@@ -129,16 +129,15 @@ Updating the example/ folder or migrating an existing project:
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
 3. Update the contents of the `ext-air/` folder.
 4. Copy the new `cordova-2.4.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
-    - If BlackBerry10, then update the .js file in the `qnx/` folder.
+    - If BlackBerry 10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.4.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -160,9 +159,8 @@ Updating just the `www` folder:
 3. Update the contents of the `ext-air/` folder.
 4. Copy the new `cordova-2.3.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
-    - If BlackBerry10, then update the .js file in the `qnx/` folder.
+    - If BlackBerry 10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.3.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -184,9 +182,8 @@ Updating just the www folder:
 3. Update the contents of the `ext-air/` folder.
 4. Copy the new `cordova-2.2.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
-    - If BlackBerry10, then update the .js file in the `qnx/` folder.
+    - If BlackBerry 10, then update the .js file in the `qnx/` folder.
 5. Update your HTML to use the new `cordova-2.2.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 
@@ -201,7 +198,7 @@ Updating the sample folder (ie, updating using the ant tools):
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
-Updating just the www folder:
+Updating just the `www` folder:
 
 1. Open your `www/` folder, which contains your app.
 2. Remove and update the .jar file in the `ext/` folder.
@@ -209,7 +206,6 @@ Updating just the www folder:
 4. Copy the new `cordova-2.1.0.js` into your project.
     - If playbook, then update the .js file in the `playbook/` folder.
 5. Update your HTML to use the new `cordova-2.1.0.js` file.
-
 
 Updating the sample folder (ie, updating using the ant tools):
 

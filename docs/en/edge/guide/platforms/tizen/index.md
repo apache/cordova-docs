@@ -20,9 +20,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Tizen Platform Guide
 =========================
 
+This guide describes how to set up your SDK development environment to
+deploy Cordova apps for devices running the Tizen operating system.
+
 ## Requirements and Support
 
-the Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
+The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
 or Windows XP SP3/7 (32-bit).
 
 Developers should use the the `cordova` utility in conjunction with
@@ -58,7 +61,6 @@ Download the Tizen SDK from
 
 -->
 
-
 ## Open a Project in the SDK
 
 1. Launch the Tizen Eclipse IDE.
@@ -77,7 +79,6 @@ Download the Tizen SDK from
    the __Project Explorer__ view:
 
    ![](img/guide/platforms/tizen/project_explorer.png)
-
 
 To rebuild the project, right-click in the __Project Explorer__ view
 and Select __Build Project__:

@@ -75,7 +75,6 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 8. In your **config.xml** file, [remove this line](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc).
 9. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
-
 ## Upgrading 2.5.0 projects to 2.6.0 ##
 
 1. **Download and extract the Cordova 2.6.0 source** to a **permanent folder location** on your hard drive (say to `~/Documents/Cordova-2.6.0`)
@@ -291,7 +290,7 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 5. **Add** all the new **MainViewController** and **AppDelegate** files into your Xcode project
 6. **Copy** the **www/cordova-1.6.1.js** file from the new project into your **www** folder, and delete your **www/cordova-1.5.0.js** file
 7. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-1.6.1.js** file
-8. **Add** the new `Cordova.plist` file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and Blackberry, for a unified Cordova JavaScript file (cordova-js).
+8. **Add** the new `Cordova.plist` file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and BlackBerry, for a unified Cordova JavaScript file (cordova-js).
 9. **Integrate** any settings, **Plugins** and **ExternalHosts** entries that you had in your **backed-up Cordova.plist** into the new `Cordova.plist`
 10. **Integrate** any project-specific code that you have in your **backed-up AppDelegate.h and AppDelegate.m** into the new AppDelegate files. Any **UIWebViewDelegate** or **CDVCommandDelegate** code in `AppDelegate.m` will need to go into MainViewController.m now (see commented out sections in that file)
 11. **Integrate** any project-specific code that you have in your **backed-up MainViewController.h and MainViewController.m** into the new MainViewController files

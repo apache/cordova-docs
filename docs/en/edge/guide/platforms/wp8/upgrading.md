@@ -24,231 +24,234 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 ## Upgrade to 2.9.0 from 3.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Create a new Apache Cordova WP7 or WP8 3.0.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Copy and overwrite any splash screen, or icon images.
-4. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project. 
-5. Build and test.
-- **NOTE : all core APIs have been removed and must be installed as plugins**
+In Visual Studio's Solution Explorer window:
 
-### Alternate upgrade method using the cordova CLI tool
+1. Create a new Apache Cordova WP7 or WP8 3.0.0 Project
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Copy and overwrite any splash screen, or icon images.
+4. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project. 
+5. Build and test.
+- __NOTE:__ all core APIs have been removed and must be installed as plugins.
+
+Alternate upgrade method using the cordova CLI tool:
+
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI.
 2. Add your platforms the the cordova cli project (i.e `cordova platform add wp7 wp8`)
-3. Copy the contents of your projects 'www' folder to the www folder at the root of the cordova project you just created.
+3. Copy the contents of your projects `www` folder to the `www` folder at the root of the cordova project you just created.
 4. Copy or overwrite any native assets from your original project (SplashScreen, ApplicationIcon, etc), make sure to add any new files to the .csproj file. Your windows phone project wil be in `<project-root>\platforms\[wp7 | wp8]`.
 5. Use the cordova CLI tool to install any plugins you need, **all core APIs are now plugins and may need to be added**. Only 3.0.0 plugins will be compatible with the CLI.
 6. Build and test.
 
 ## Upgrade to 2.8.0 from 2.9.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
+
 1. Create a new Apache Cordova WP7 or WP8 2.9.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update the name of cordova.js in the HTML tag if it's still using cordova-VERSION.js (should be just cordova.js).
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the .csproj file.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the .csproj file.
 6. Build and test.
 
 ## Upgrade to 2.8.0 from 2.7.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
+
 1. Create a new Apache Cordova WP7 or WP8 2.8.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
 3. Update your HTML to use the new cordova.js file. ( note that there is no longer a version number in the name )
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.7.0 from 2.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.7.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.7.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.7.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.6.0 from 2.5.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.6.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.6.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.6.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.5.0 from 2.4.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.5.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.5.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.5.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.4.0 from 2.3.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 or WP8 2.4.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.4.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.4.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.3.0 from 2.2.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.3.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.3.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.3.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.2.0 from 2.1.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.2.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.2.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.2.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 2.1.0 from 2.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.1.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.1.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.1.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
-
 
 ## Upgrade to 2.0.0 from 1.9.0 ##
 
 There have been considerable changes to the WP7 project structure in Apache Cordova 2.0.0 which make this upgrade a little more involved that the others. Essentially this is not an upgrade but creation of a new project and copy over of existing source files.
 
-### In Visual Studio's Solution Explorer window:
+In Visual Studio's Solution Explorer window:
 1. Create a new Apache Cordova WP7 2.0 Project
-2. Copy the contents of your 'www' folder to the new project, and be sure these items are added to the VS project.
-3. Update your HTML to use the new cordova-2.0.0.js file.
+2. Copy the contents of your `www` folder to the new project, and be sure these items are added to the VS project.
+3. Update your HTML to use the new `cordova-2.0.0.js` file.
 4. Copy and overwrite any splash screen, or icon images.
-5. Copy over any plugins from the plugins folder to the new project and ensure that they are also added to the VS project.
+5. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project.
 6. Build and test.
 
 ## Upgrade to 1.9.0 from 1.8.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.9.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.9.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.9.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.9.0.js` file.
 
 ## Upgrade to 1.8.0 from 1.7.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.8.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.8.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.8.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.8.0.js` file.
 
 ## Upgrade to 1.7.0 from 1.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.7.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.7.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.7.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.7.0.js` file.
 
 ## Upgrade to 1.6.1 from 1.6.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.6.1.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.6.1.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.6.1.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.6.1.js` file.
 
 ## Upgrade to 1.6.0 from 1.5.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.6.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.6.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.6.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.6.0.js` file.
 
 ## Upgrade to 1.5.0 from 1.4.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.5.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.5.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.5.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.5.0.js` file.
 
 ## Upgrade to 1.4.0 from 1.3.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.4.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.4.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.4.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.4.0.js` file.
 
 ## Upgrade to 1.3.0 from 1.2.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.3.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.3.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.3.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.3.0.js` file.
 
 ## Upgrade to 1.2.0 from 1.1.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.2.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.2.0.js file.
+    - __NOTE:__ You can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.2.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.2.0.js` file.
 
 ## Upgrade to 1.1.0 from 1.0.0 ##
 
-### In Visual Studio's Solution Explorer window:
-1. Delete the file GapLib/WP7CordovaClassLib.dll from your project.
-2. Remove the reference to WP7CordovaClassLib in the References folder.
-3. Right-Click on References and Select 'Add Reference'
+In Visual Studio's Solution Explorer window:
+1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+3. Right-click on __References__ and select __Add Reference__
 4. Navigate to the new distribution and add the file 'WP7CordovaClassLib.dll'
-    - note: you can view the version of the DLL by right-clicking on the reference, and selecting Properties.
-5. Copy the new cordova-1.1.0.js into your project ( be sure it is marked as Content )
-6. Update your HTML to use the new cordova-1.1.0.js file.
+    - __NOTE:__ you can view the version of the DLL by right-clicking on the reference, and selecting __Properties__.
+5. Copy the new `cordova-1.1.0.js` into your project. (Be sure it is marked as Content.)
+6. Update your HTML to use the new `cordova-1.1.0.js` file.

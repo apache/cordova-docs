@@ -62,9 +62,7 @@ A target refers to a BlackBerry device or emulator that you will use to test you
 
 To add a target, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/target  add  <name>  <ip-address>  [-t <device | simulator>]  [-p | --password <password>]  [--pin <device-pin>]
-```
+        <path-to-project>/cordova/target  add  <name>  <ip-address>  [-t <device | simulator>]  [-p | --password <password>]  [--pin <device-pin>]
 
 where
 
@@ -78,17 +76,13 @@ where
 
 To remove a target, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/target  remove  <name>
-```
+        <path-to-project>/cordova/target  remove  <name>
 
 ###Set a target as the default
 
 To specify a specific target as the default, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/target  default  <name>
-```
+        <path-to-project>/cordova/target  default  <name>
 
 Building your app
 -----------------
@@ -104,9 +98,7 @@ To build your app, run the build script. You can build the app in either release
 
 To build your app in release mode, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
-```
+        <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
 
 where
 
@@ -118,9 +110,7 @@ where
 
 To build your app in release mode, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
-```
+        <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
 
 where
 
@@ -131,9 +121,7 @@ where
 
 Note that all of these parameters are optional. If you have previously defined a default target (and installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:
 
-```
-<path-to-project>/cordova/build debug
-```
+        <path-to-project>/cordova/build debug
 
 Deploying an app
 -------------------------
@@ -144,9 +132,7 @@ The run script will first build  your app. If you intend to deploy an app to a p
 
 To deploy your app to a device or emulator, on a command line type the following command:
 
-```
-<path-to-project>/cordova/run <target> [--no-build]
-```
+        <path-to-project>/cordova/run <target> [--no-build]
 
 where
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
@@ -164,22 +150,16 @@ In order to use a plugin, you must first add it into your project. Once added in
 
 To add a plugin, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/plugin add <path to plugin>
-```
+        <path-to-project>/cordova/plugin add <path to plugin>
 
 ###Remove a plugin
 
 To remove a plugin, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/plugin rm <name>
-```
+        <path-to-project>/cordova/plugin rm <name>
 
 ###View a list of installed plugins
 
 To view a list of installed plugins, on the command line, type the following command:
 
-```
-<path-to-project>/cordova/plugin ls
-```
+        <path-to-project>/cordova/plugin ls

@@ -26,14 +26,14 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
 
-1. Remove cordova-2.8.0.js from the www directory in your project.
-2. Add cordova.js file from the source to the www directory in your project. ( note that the file no longer contains a version number in the file name )
+1. Remove `cordova-2.8.0.js` from the project's `www` directory.
+2. Add cordova.js file from the source to the project's `www` directory. (Note that the file no longer contains a version number in the filename.)
 3. Build and test!
 
 ## Upgrade to 2.8.0 from 2.7.0 ##
 
 The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
 
-1. Remove cordova-2.7.0.js from the www directory in your project. 
-2. Add cordova.js file from the source to the www directory in your project. ( note that the file no longer contains a version number in the file name )
+1. Remove `cordova-2.7.0.js` from the project's `www` directory. 
+2. Add cordova.js file from the source to the project's `www` directory. (Note that the file no longer contains a version number in the filename.)
 3. Build and test!

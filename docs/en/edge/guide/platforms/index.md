@@ -51,14 +51,14 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * BlackBerry Platform Guide
 * BlackBerry Configuration
-* Blackberry Command-line Tools
+* BlackBerry Command-line Tools
 * Upgrading BlackBerry
 
 ## BlackBerry 10
 
 * BlackBerry 10 Platform Guide
 * BlackBerry 10 Plugins
-* Blackberry 10 Command-line Tools
+* BlackBerry 10 Command-line Tools
 
 ## iOS
 
