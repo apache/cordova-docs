@@ -20,6 +20,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Upgrading iOS
 =====================
 
+This guide shows how to modify iOS projects to upgrade from older versions of Cordova.
+Most of these instructions apply to projects created with an older set
+of command-line tools that precede the `cordova` CLI utility. See The
+Cordova Command-line Interface for information how to update the
+version of the CLI.
+
 Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 6. The iOS 6 SDK requires Xcode 4.5.
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##

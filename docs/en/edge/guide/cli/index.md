@@ -72,21 +72,7 @@ To install the `cordova` command-line tool, follow these steps:
 
         $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
 
-After installing the `cordova` utility, you can always update it to
-the latest version by running the following command:
-
-        $ sudo npm update -g cordova
-
-Use this syntax to install a specific version:
-
-        $ sudo npm install -g cordova@2.8.0
-
-Run the `info` command for a listing that includes the current version
-along with other available version numbers:
-
-        $ npm info cordova
-
-## Create an App
+## Create the App
 
 Go to the directory where you maintain your source code, and run a
 command such as the following:
@@ -226,3 +212,20 @@ plugin(s) [add|remove|ls [path]] ..... adds or removes a
          currently added plugins
 
 -->
+
+## Update the App
+
+After installing installing the `cordova` utility, you can always
+update it to the latest version by running the following command:
+
+        $ sudo npm update -g cordova
+
+Use this syntax to install a specific version:
+
+        $ sudo npm install -g cordova@2.8.0
+
+Run the `info` command for a listing that includes the current version
+along with other available version numbers:
+
+        $ npm info cordova
+
