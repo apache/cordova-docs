@@ -20,8 +20,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 BlackBerry Plugins
 =================================
 
-## How to make the Echo plugin on Blackberry
-
 This guide explores how to develop the Echo plugin on BlackBerry.
 If you haven't read the top-level guide about the JavaScript part of
 the plugin, it would be best if you read that first and then this
