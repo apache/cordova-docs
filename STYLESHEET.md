@@ -81,8 +81,8 @@ editorial guidelines.
 * Do not start a sentence with a lowercase member name.
 
 * Do not refer to "I," the author of the documentation, as in "What I
-  am going to show you now." Likewise avoid "we," as in "We see
-  that..."
+  am going to show you now." Likewise avoid "we" and "let's," so
+  instead of "We see that..." try "Note that..."
 
 * OK to refer to "you," the developer, but only if necessary, e.g., to
   avoid passive voice.

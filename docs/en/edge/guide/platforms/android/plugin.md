@@ -49,9 +49,9 @@ by Cordova.
 
 ## Writing an Android Java Plugin
 
-We have JavaScript to fire off a plugin request to the native side. We
-have the Android Java plugin mapped properly via the `config.xml` file.
-So what does the final Android Java Plugin class look like?
+JavaScript fires off a plugin request to the native side.  The Android
+Java plugin is mapped properly via the `config.xml` file.  So what
+does the final Android Java Plugin class look like?
 
 What gets dispatched to the plugin via JavaScript's `exec` function gets
 passed into the Plugin class's `execute` method. Most `execute`
@@ -116,11 +116,11 @@ If you do not need to run on the UI thread, but do not want to block the WebCore
 
 ### Echo Android Plugin Example
 
-We would add the following to our config.xml:
+Add the following to our `config.xml` file:
 
     <plugin name="Echo" value="org.apache.cordova.plugin.Echo" />
 
-Then we would add the following file to
+Then add the following file to
 `src/org/apache/cordova/plugin/Echo.java` inside our Cordova-Android
 application:
 
