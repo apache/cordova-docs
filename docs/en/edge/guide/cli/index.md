@@ -255,7 +255,8 @@ Use `plugin ls` (or `plugin list`) to view currently installed plugins:
     [ 'org.apache.cordova.core.console' ]
 
 To remove a plugin, you refer to it by the same name that appears in
-the listing:
+the listing. For example, here is how you would remove support for a
+debug console from a release version:
 
     $ cordova plugin rm org.apache.cordova.core.console        
     $ cordova plugin remove org.apache.cordova.core.console    # same
