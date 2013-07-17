@@ -196,15 +196,73 @@ launch from the home screen:
 
 ![](img/guide/cli/android_emulate_install.png)
 
+## Add Features
+
+When you build and view a new project, the default application that
+appears doesn't do very much. You can modify the app in many ways to
+take advantage of standard web technologies, but for the app to
+communicate closely with various device-level features, you need to
+add plugins that provide access to core Cordova APIs.
+
+A _plugin_ is a bit of add-on code that provides an interface to
+native components. You can design your own plugin interface, for
+example when designing a hybrid app that mixes a Cordova WebView with
+native components. (See Embedding WebViews and Plugin Development
+Guide for details.)  More commonly, you would add a plugin to enable
+one of Cordova's basic device-level features
+<!-- XREF
+discussed in the Application Development Guide and
+XREF -->
+detailed in the API Reference.
+
+The `cordova plugin add` command requires you to specify the
+repository for the plugin code.  Here are examples of features you
+might add:
+
+* Basic device information:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+* Network and battery status:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+* Accelerometer, compass, and geolocation:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+* Camera, media capture, and media playback:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
+* Access files on device or network:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+* Notifications via dialog box or vibration:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+* Contacts:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+* Globalization:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+* Splash Screen:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+* In-app browser:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+* Debug console:
+    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+
+Use `plugin ls` (or `plugin list`) to view currently installed plugins:
+
+    $ cordova plugin ls    # or 'plugin list'
+    [ 'org.apache.cordova.core.console' ]
+
+To remove a plugin, you refer to it by the same name that appears in
+the listing:
+
+    $ cordova plugin rm org.apache.cordova.core.console        
+    $ cordova plugin remove org.apache.cordova.core.console    # same
+
 <!--
 
 ## Run the App on the Device
-
-## Add a Plug-in
-
-plugin(s) [add|remove|ls [path]] ..... adds or removes a
-         plugin (from the specified path), or lists all
-         currently added plugins
 
 -->
 
