@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-         
+
            http://www.apache.org/licenses/LICENSE-2.0
-         
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -39,11 +39,7 @@ arguments.
 
 The 'create' command creates a new project:
 
-<<<<<<< HEAD
     bin/create <path-to-project>
-=======
-        bin/create <path-to-project>
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 ## target
 
@@ -53,11 +49,7 @@ target, or set a target as the default target.
 
 ### Add a target
 
-<<<<<<< HEAD
-    <path-to-project>/cordova/target add <name> <ip-address> <device | simulator> [-p | --password <password>] [--pin <device-pin>]
-=======
-        <path-to-project>/cordova/target  add  <name>  <ip-address>  <device | simulator>  [-p | --password <password>]  [--pin <device-pin>]
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
+    <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
 where
 
@@ -66,7 +58,7 @@ where
 - `<ip-address>` specifies the ip address of the BlackBerry device or
   simulator.
 
-- `-p|--password <password>` specifies the password for the device or
+- `-p | --password <password>` specifies the password for the device or
   emulator. This is required only if the device or emulator is
   password protected.
 
@@ -77,19 +69,11 @@ where
 
 ### Remove a target
 
-<<<<<<< HEAD
-    <path-to-project>/cordova/target  remove  <name>
+    <path-to-project>/cordova/target remove <name>
 
 ### Set a target as the default
 
-    <path-to-project>/cordova/target  default  <name>
-=======
-        <path-to-project>/cordova/target  remove  <name>
-
-### Set a target as the default
-
-        <path-to-project>/cordova/target  default  <name>
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
+    <path-to-project>/cordova/target default <name>
 
 ## build
 
@@ -99,26 +83,17 @@ in debug mode (which produces an unsigned .bar file).
 
 ### Build your project in release mode
 
-<<<<<<< HEAD
-    <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
+    <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
 
-where:
-=======
-        <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
 where
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
--   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
--   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
--   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
+-   `-k | --keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
+-   `-b | --buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
+-   `-p | --params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
 ### Build your project in debug mode
 
-<<<<<<< HEAD
-    <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
-=======
-        <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
+    <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
 
 where
 
@@ -131,16 +106,16 @@ where
   connection or be connected to the same Wi-Fi network as your
   computer.
 
-- `-k|--keystorepass <password>` specifies the password you defined
+- `-k | --keystorepass <password>` specifies the password you defined
   when you configured your computer to sign applications. This
   password is also used to create your debug token. This argument is
   only required if you want the script to create and install the debug
   token for you.
 
-- `-p|--params <params-JSON-file>` specifies a JSON file containing
+- `-p | --params <params-JSON-file>` specifies a JSON file containing
   additional parameters to pass to downstream tools.
 
-- `-ll|--loglevel <level>` specifies the log level. The log level may
+- `-ll | --loglevel <level>` specifies the log level. The log level may
   be one of `error`, `warn`, or `verbose`.
 
 If you have previously defined a default target (and previously
@@ -148,24 +123,16 @@ installed a debug token, if that target is a BlackBerry device), you
 can run the script with no arguments, and the script will package your
 app and deploy it to the default target. For example:
 
-<<<<<<< HEAD
     <path-to-project>/cordova/build debug
-=======
-        <path-to-project>/cordova/build debug
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 ## run
 
 The `run` command deploys the app on the specified BlackBerry device
 or an emulator. Before deploying your app, you must first create a
-target for the device or emulator you want to deploy your app to. The
-deploy script will deploy the most recent build of your app.
+target for the device or emulator you want to deploy your app to using
+the target script. The deploy script will deploy the most recent build of your app.
 
-<<<<<<< HEAD
     <path-to-project>/cordova/run <target>
-=======
-        <path-to-project>/cordova/run <target>
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed
 
 where
 
@@ -180,7 +147,6 @@ The `target` command allows you to add and remove plugins
 
 ### Fetch a locally hosted plugin
 
-<<<<<<< HEAD
     <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
 ### View a list of installed plugins
@@ -194,19 +160,3 @@ The `target` command allows you to add and remove plugins
 ### Remove a plugin
 
     <path-to-project>/cordova/plugin rm <name>
-
-=======
-        <path-to-project>/cordova/plugin fetch <path-to-plugin>
-
-### View a list of installed plugins
-
-        <path-to-project>/cordova/plugin ls
-
-### Add a plugin
-
-        <path-to-project>/cordova/plugin add <name>
-
-### Remove a plugin
-
-        <path-to-project>/cordova/plugin rm <name>
->>>>>>> cc2825e... [CB-3962] monospace for path/dir/file components, changed from italic; no unformatted barewords allowed

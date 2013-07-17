@@ -30,6 +30,11 @@ Cordova for BlackBerry has the following software requirements:
 -   Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
 -   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
 -   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
+-   Setup BlackBerry 10 Native SDK environment variables
+
+    To setup your environment variables, run the following scripts. Please note, the environment variables must be set for each session.
+    -    [Linux/Mac] source [BBNDK directory]/bbndk-env.sh
+    -    [Windows] [BBNDK directory]\bbndk-env.bat
 
 Setting up your signing keys
 ----------------------------
@@ -47,9 +52,8 @@ To create a new project, you use the `create` command to set up the folder struc
 
 1.  On the command line, navigate to the folder where you extracted Cordova.
 2.  Run the `create` command using the following syntax:
-    ```
-	bin/create <path-to-project>
-	```
+
+        bin/create <path-to-project>
 
 This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
 
@@ -62,7 +66,7 @@ A target refers to a BlackBerry device or emulator that you will use to test you
 
 To add a target, on the command line, type the following command:
 
-        <path-to-project>/cordova/target  add  <name>  <ip-address>  [-t <device | simulator>]  [-p | --password <password>]  [--pin <device-pin>]
+        <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
 where
 
@@ -76,13 +80,13 @@ where
 
 To remove a target, on the command line, type the following command:
 
-        <path-to-project>/cordova/target  remove  <name>
+        <path-to-project>/cordova/target remove <name>
 
 ###Set a target as the default
 
 To specify a specific target as the default, on the command line, type the following command:
 
-        <path-to-project>/cordova/target  default  <name>
+        <path-to-project>/cordova/target default <name>
 
 Building your app
 -----------------
@@ -98,7 +102,7 @@ To build your app, run the build script. You can build the app in either release
 
 To build your app in release mode, on the command line, type the following command:
 
-        <path-to-project>/cordova/build  release  -k|--keystorepass <password>  [-b|--buildId <number>]  [-p|--params <params-JSON-file>]
+        <path-to-project>/cordova/build release -k|--keystorepass <password> [-b|--buildId <number>] [-p|--params <params-JSON-file>]
 
 where
 
@@ -110,7 +114,7 @@ where
 
 To build your app in release mode, on the command line, type the following command:
 
-        <path-to-project>/cordova/build  debug  [<target>]  [-k|--keystorepass <password>]  [-p|--params <params-JSON-file>]  [-ll|--loglevel <error|warn|verbose>]
+        <path-to-project>/cordova/build debug [<target>] [-k|--keystorepass <password>] [-p|--params <params-JSON-file>] [-ll|--loglevel <error|warn|verbose>]
 
 where
 
