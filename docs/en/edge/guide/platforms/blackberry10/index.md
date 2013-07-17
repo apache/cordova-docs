@@ -30,6 +30,11 @@ Cordova for BlackBerry has the following software requirements:
 -   Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
 -   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
 -   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
+-   Setup BlackBerry 10 Native SDK environment variables
+
+    To setup your environment variables, run the following scripts. Please note, the environment variables must be set for each session.
+    -    [Linux/Mac] source [BBNDK directory]/bbndk-env.sh
+    -    [Windows] [BBNDK directory]\bbndk-env.bat
 
     After installing the native SDK, its tools must be added to your system path. Either manually add the bin directory to your path or run the following scripts:
     -    [Linux/Mac] source [BBNDK directory]/bbndk-env.sh
