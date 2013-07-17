@@ -67,11 +67,6 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
-1. To ensure permissions are correct, run this command on Mac or
-   Linux, changing _LOGIN_ to match your account name:
-
-        $ sudo chown -R LOGIN /usr/local/lib/node_modules/cordova
-
 ## Create the App
 
 Go to the directory where you maintain your source code, and run a
