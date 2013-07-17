@@ -45,7 +45,7 @@ The following section shows how to upgrade from non-CLI projects.
    added. Only 3.0.0 plugins are compatible with the CLI.
 6. Build and test.
 
-## Upgrade to 3.0.0 from 2.9.0 ##
+## Upgrade to 3.0.0 (non-CLI) from 2.9.0 ##
 
 In Visual Studio's Solution Explorer window:
 
@@ -54,9 +54,11 @@ In Visual Studio's Solution Explorer window:
 3. Copy and overwrite any splash screen, or icon images.
 4. Copy over any plugins from the `plugins` folder to the new project and ensure that they are also added to the VS project. 
 5. Build and test.
-- __NOTE:__ all core APIs have been removed and must be installed as plugins.
 
-Alternate upgrade method using the cordova CLI tool:
+__NOTE:__ all core APIs are removed from Cordova version 3.0, and must
+be installed separately as plugins.  For more information on how to
+re-enable these features in a non-CLI workflow, see Using Plugman to
+Manage Plugins.
 
 ## Upgrade to 2.9.0 from 2.8.0 ##
 
