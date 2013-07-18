@@ -38,7 +38,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Upgrade an application to the latest release.</span>
         </li>
         <li>
-            <h2>Project Settings</h2>
+            <h2>Configuration Reference</h2>
             <span>Customize the features of your app.</span>
         </li>
         <li>
