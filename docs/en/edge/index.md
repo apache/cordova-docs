@@ -26,12 +26,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Start here if you are new to Cordova.</span>
         </li>
         <li>
-            <h2>Platform Guides</h2>
-            <span>Set up each SDK to create your first app.</span>
-        </li>
-        <li>
             <h2>The Command-line Interface</h2>
             <span>Create, build, and deploy from the command-line.</span>
+        </li>
+        <li>
+            <h2>Platform Guides</h2>
+            <span>Set up each SDK to create your first app.</span>
         </li>
         <li>
             <h2>Upgrading Guides</h2>
