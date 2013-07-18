@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Privacy Guide
-=============
+# Privacy Guide
 
 Mobile privacy is a critical issue that every app developer must address. Your users expect that their private information will be collected and treated appropriately by your app. Also, there are an increasing number of jurisdictions that now have legal requirements regarding mobile privacy practices.
 

@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-iOS WebViews
-================================
+# iOS WebViews
 
 Beginning with Cordova 1.4, you can use Cordova as a component in your
 iOS applications. This component is code-named 'Cleaver'.
@@ -30,15 +29,13 @@ Cleaver's reference implementation.)
 Cordova 2.0.0 and subsequent versions only support the sub-project
 based Cleaver implementation.
 
-Prerequisites
--------------
+## Prerequisites
 
 1. **Cordova 2.3.0** or greater
 2. **Xcode 4.5** or greater
 3. `config.xml` file (from a newly created iOS project)
 
-Adding Cleaver to your Xcode project (CordovaLib sub-project)
--------------------------------------------------------------
+## Adding Cleaver to your Xcode project (CordovaLib sub-project)
 
 1. **Download and extract the Cordova source** to a **permanent folder location** on your hard drive (say to `~/Documents/Cordova`)
 2. **Quit Xcode** if it is running.
@@ -82,8 +79,7 @@ Adding Cleaver to your Xcode project (CordovaLib sub-project)
 
     With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Reference Counting (ARC)**. You don't need to upgrade to **ARC** to use CordovaLib, but if you want to upgrade your project to use **ARC**, please use the Xcode migration wizard from the menu: **Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...**, **de-select libCordova.a**, then run the wizard to completion.
 
-Using CDVViewController in your code
-------------------------------------
+## Using CDVViewController in your code
 
 1. Add this **header**:
 
@@ -117,8 +113,7 @@ Using CDVViewController in your code
 
         [myView addSubview:viewController.view];
 
-Adding your HTML, CSS and JavaScript assets
--------------------------------------------
+## Adding your HTML, CSS and JavaScript assets
 
 1. Create a **new folder** in your project **on disk**, `www` for example.
 2. Put your **HTML, CSS and JavaScript** assets into this folder.

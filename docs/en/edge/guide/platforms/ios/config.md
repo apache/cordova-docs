@@ -19,8 +19,7 @@
 #
 -->
 
-iOS Configuration
-========================
+# iOS Configuration
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CDVViewController instance.
 The `config.xml` file is located in your `<project folder>/<appname>` directory.

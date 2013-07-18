@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Windows 8
-===============================
+# Upgrading Windows 8
 
 This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set

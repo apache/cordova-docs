@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-BlackBerry Platform Guide
-============================
+# BlackBerry Platform Guide
 
 This guide shows you how to set up an SDK environment to target
 applications for the BlackBerry platform prior to version 10.  If you
@@ -61,21 +60,19 @@ SDKs can be downloaded from the following locations.
 - [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) and [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
 - [BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)
 
-3.  Register for Signing Keys
--------------------------
+## 3.  Register for Signing Keys
+
 If you wish to publish your application on BlackBerry App World, or deploy on an actual device you’ll need to register for a set of free Code Signing Keys.
 
 To register for Signing Keys visit, and complete the [BlackBerry Keys Order Form](https://www.blackberry.com/SignedKeys).
 
 Once you receive your Signing Keys, they'll need to be setup. To learn how to setup your Signing Keys visit the [BlackBerry HTML5/WebWorks website](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html).
 
-4.  Install Cordova
--------------------------
+## 4.  Install Cordova
 
 Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download).
 
-5.  Set up New Project
---------------------
+## 5.  Set up New Project
 
 - Open up a command-line terminal and navigate to where you extracted Cordova.
 - There is a directory for each platform that Cordova supports.  CD into the `blackberry` directory.

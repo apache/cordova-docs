@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Android WebViews
-====================================
+# Android WebViews
 
 Beginning in Cordova 1.9, with the assistance of the
 `CordovaActivity`, you can use Cordova as a component in a larger
@@ -33,14 +32,12 @@ attempting to include a WebView. It's not the main way to author
 Android Cordova applications. These instructions are currently manual,
 but may be eventually be automated.
 
-Prerequisites
--------------
+## Prerequisites
 
 1. **Cordova 1.9** or greater
 2. Android SDK updated with 15
 
-Guide to using CordovaWebView in an Android Project
----------------------------------------------------
+## Guide to using CordovaWebView in an Android Project
 
 1. Use `bin/create` to fetch the `commons-codec-1.6.jar` file.
 2. `cd` into `/framework` and run `ant jar` to build the cordova jar. It creates the .jar file formed as `cordova-x.x.x.jar` in the `/framework` folder.

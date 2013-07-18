@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-BlackBerry 10 Platform Guide
-==================================
+# BlackBerry 10 Platform Guide
 
 Apache Cordova is an application development platform that allows you to use common web technologies, primarily HTML5, JavaScript, and CSS, to create applications for mobile devices. Cordova uses a standard set of APIs to access common device features. Additional plugins allow you to access BlackBerry specific APIs, so that you can extend your application to tightly integrate with the BlackBerry 10 OS.
 
-Requirements
-------------
+## Requirements
 
 Cordova for BlackBerry has the following software requirements:
 
@@ -31,12 +29,7 @@ Cordova for BlackBerry has the following software requirements:
 -   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
 -   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
 
-    After installing the native SDK, its tools must be added to your system path. Either manually add the bin directory to your path or run the following scripts:
-    -    [Linux/Mac] source [BBNDK directory]/bbndk-env.sh
-    -    [Windows] [BBNDK directory]\bbndk-env.bat
-
-Setting up your signing keys
-----------------------------
+## Setting up your signing keys
 
 Before starting development, you'll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.
 
@@ -44,8 +37,7 @@ Before starting development, you'll need to register for your code signing key a
 -   [Set your computer up for code signing. ](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
 -   [Learn more about debug tokens.](http://developer.blackberry.com/html5/documentation/running_your_bb10_app_2008471_11.html)
 
-Creating your project
--------------------------
+## Creating your project
 
 To create a new project, you use the `create` command to set up the folder structure for your app.
 
@@ -56,8 +48,7 @@ To create a new project, you use the `create` command to set up the folder struc
 
 This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
 
-Adding and managing targets
----------------------------
+## Adding and managing targets
 
 A target refers to a BlackBerry device or emulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.
 
@@ -87,8 +78,7 @@ To specify a specific target as the default, on the command line, type the follo
 
         <path-to-project>/cordova/target default <name>
 
-Building your app
------------------
+## Building your app
 
 To build your app, run the build script. You can build the app in either release mode or in debug mode.
 
@@ -126,8 +116,7 @@ Note that all of these parameters are optional. If you have previously defined a
 
         <path-to-project>/cordova/build debug
 
-Deploying an app
--------------------------
+## Deploying an app
 
 You can test your app using either a BlackBerry device or an emulator. Before deploying your app, you must first create a target for the device or emulator you want to deploy your app to.
 
@@ -142,8 +131,7 @@ where
 
 -   `-no--build` will use the most recently built version of the application rather than re-building. This is useful to test an application in release mode.
 
-Adding and managing plugins
----------------------------
+## Adding and managing plugins
 
 To add additional functionality that is outside of the core features of Cordova, you'll need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform.
 

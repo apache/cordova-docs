@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Embedding WebViews
-=================
+# Embedding WebViews
 
 > Implement the Cordova WebView in your own project.
 

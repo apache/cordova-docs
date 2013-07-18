@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Project Settings
-================
+# Project Settings
 
 You can set various application configuration parameters using a platform-agnostic configuration file, `config.xml`.
 This file is based on the W3C [Packaged Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification.
