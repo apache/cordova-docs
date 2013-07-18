@@ -25,6 +25,30 @@ of command-line tools that precede the `cordova` CLI utility. See The
 Cordova Command-line Interface for information how to update the
 version of the CLI.
 
+## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+
+1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+   described in The Cordova Command-line Interface.
+2. Add your platforms the the cordova project, for example: `cordova
+   platform add android`.
+3. Copy the contents of your project's `www` folder to the `www` folder
+   at the root of the cordova project you just created.
+4. Copy any native assets from your old project into the appropriate
+   directories under `platforms/android`: this directory is where your
+   native cordova-android project exists.
+5. Use the cordova CLI tool to install any plugins you need. Note that
+   the CLI handles all core APIs as plugins, so they may need to be
+   added. Only 3.0.0 plugins are compatible with the CLI.
+
+## Upgrade to 3.0.0 from 2.9.0 ##
+
+1. Create a new Apache Cordova Android project.
+2. Copy the contents of your `www` folder to the new project.
+3. Copy any native Android assets from your `res` folder to the new project.
+4. Copy over any plugins you installed from the `src` subdirectories into the new project.
+5. Make sure to upgrade any deprecated `<plugin>` references from your old `config.xml` file to the new `<feature>` specification. 
+- __NOTE:__ all core APIs have been removed and must be installed as plugins. Please see the Core Plugin Installation Guide for details.
+
 ## Upgrade to 2.9.0 from 2.8.0
 1. Run `bin/update <project_path>`
 
