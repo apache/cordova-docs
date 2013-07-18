@@ -91,7 +91,7 @@ the CLI for progressively greater shares of the development cycle:
 * For supporting platforms, the CLI can compile executible
   applications and run them in an SDK-based device emulator.
   <!-- XREF
-  (See API and Configuration Guide for details.)
+  (See Application Development Guide for details.)
   XREF -->
   For comprehensive testing, you can also generate application files
   and install them directly on a device.
