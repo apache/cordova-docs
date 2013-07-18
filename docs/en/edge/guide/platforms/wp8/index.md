@@ -17,15 +17,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Windows Phone 8 Platform Guide
-==================================
+# Windows Phone 8 Platform Guide
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+This guide shows how to set up your SDK development environment to
+deploy Cordova apps for Windows Phone 8 devices. If you want to target
+both 7.5 and 8 devices, develope for Windows Phone 7 instead as
+detailed in the Windows Phone 7 Platform Guide.  Version 7 does not
+have all the advanced features included in IE10, but implements the
+same set of APIs. Windows Phone 8 apps do _not_ run on Windows Phone 7
+devices.
 
-__NOTE:__ Applications built with Apache Cordova for Windows Phone 8 (wp8) run only on Windows Phone 8 devices. If you want to target both 7.5 'and' 8 devices, then use Apache Cordova for Windows Phone 7 (wp7), which does not have all the advanced features included in IE10, but implements the same APIs.
+See the following for more detailed platform-specific information that
+applies to both versions:
 
-1. System Requirements
----------------
+* Upgrading Windows Phone
+* Windows Phone Plugins
+* Windows Phone Command-line Tools
+
+The command-line tools above refer to versions prior to Cordova 3.0.
+See The Cordova Command-line Interface for information about the
+current interface.
+
+## 1. System Requirements
 
 - Operating System:
     - Windows 8 or Windows 8 Pro
@@ -51,15 +64,13 @@ __NOTE:__ Applications built with Apache Cordova for Windows Phone 8 (wp8) run o
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
-2. Install SDK + Cordova
-----------------------------
+## 2. Install SDK + Cordova
 
 - Download and install [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp8` subfolder, `lib\windows-phone-8\wp7` contains the Windwos Phone 7 version of Cordova.
 - Copy the file CordovaWP8_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
 
-2.1. Building the template
------------------------------
+## 2.1. Building the template
 
 __NOTE:__ this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP8_x_x_x.zip then you may skip this step.
 
@@ -75,8 +86,7 @@ Run the script :
 
     >createTemplates.bat -install
 
-3. Set up New Project
---------------------
+## 3. Set up New Project
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
 - Select **CordovaWP8**. (The version number is displayed in the template description.)
@@ -84,8 +94,7 @@ Run the script :
 
 ![](img/guide/platforms/wp8/StandAloneTemplate.png)
 
-4. Review the project structure
--------------------------------
+## 4. Review the project structure
 
 - The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
@@ -93,16 +102,14 @@ Run the script :
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-5. Build and Deploy to Emulator
--------------------------------
+## 5. Build and Deploy to Emulator
 
 - Make sure **Windows Phone Emulator** is selected in the main drop-down menu.
 - Press the green **play** button next to the drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp8/BuildEmulator.png)
 
-6. Build your project for the device
-------------------------------------
+## 6. Build your project for the device
 
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
 
@@ -112,11 +119,9 @@ In order to test your application on a device, the device must be registered. Cl
 
 ![](img/guide/platforms/wp7/wpd.png)
 
-Done!
------
+## Done!
 
-Further Reading
--------
+## Further Reading
 
 For more details on the specific differences between IE10 and WebKit browsers, and how to support both MS has a helpful [guide here](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 
