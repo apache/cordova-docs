@@ -103,7 +103,7 @@ options.
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
 <!-- XREF
-(See Extended Hybrid Applications for more information.)
+(See Hybrid Application Guide for more information.)
 XREF -->
 You may use the command-line utility to initially generate the app, or
 iteratively thereafter to feed updated code to SDK tools.  You may
