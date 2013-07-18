@@ -18,6 +18,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 <div id="home">
+
+    <h1>Guides</h1>
+    <ul>
+        <li>
+            <h2>Overview</h2>
+            <span>Start here if you are new to Cordova.</span>
+        </li>
+        <li>
+            <h2>Platform Guides</h2>
+            <span>Set up each SDK to create your first app.</span>
+        </li>
+        <li>
+            <h2>The Command-line Interface</h2>
+            <span>Create, build, and deploy from the command-line.</span>
+        </li>
+        <li>
+            <h2>Upgrading Guides</h2>
+            <span>Upgrade an application to the latest release.</span>
+        </li>
+        <li>
+            <h2>Project Settings</h2>
+            <span>Customize the features of your app.</span>
+        </li>
+        <li>
+            <h2>Embedding WebViews</h2>
+            <span>Implement the Cordova WebView in your project.</span>
+        </li>
+        <li>
+            <h2>Plugin Development Guide</h2>
+            <span>Develop your first plugin.</span>
+        </li>
+        <li>
+            <h2>Privacy Guide</h2>
+            <span>Learn about important mobile privacy issues.</span>
+        </li>
+        <li>
+            <h2>Domain Whitelist Guide</h2>
+            <span>Grant an application access to external domains.</span>
+        </li>
+        <li>
+            <h2><a href="_index.html">Keyword Index</a></h2>
+            <span>Full index of the documentation.</span>
+        </li>
+    </ul>
+
     <h1>API Reference</h1>
     <ul>
         <li>
@@ -85,47 +130,5 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Hook into the devices native storage options.</span>
         </li>
     </ul>
-    <h1>Guides</h1>
-    <ul>
-        <li>
-            <h2>Overview</h2>
-            <span>Start here if you are new to Cordova.</span>
-        </li>
-        <li>
-            <h2>Platform Guides</h2>
-            <span>Setup each SDK and create your first Cordova app.</span>
-        </li>
-        <li>
-            <h2>The Command-line Interface</h2>
-            <span>Create, build, and deploy from the command-line.</span>
-        </li>
-        <li>
-            <h2>Privacy Guide</h2>
-            <span>Learn about important mobile privacy issues.</span>
-        </li>
-        <li>
-            <h2>Upgrading Guides</h2>
-            <span>Upgrade an application to the latest Cordova release.</span>
-        </li>
-        <li>
-            <h2>Project Settings</h2>
-            <span>Customize the features of your app.</span>
-        </li>
-        <li>
-            <h2>Plugin Development Guide</h2>
-            <span>Develop your first Cordova plugin.</span>
-        </li>
-        <li>
-            <h2>Domain Whitelist Guide</h2>
-            <span>Grant an application access to external domains.</span>
-        </li>
-        <li>
-            <h2>Embedding WebViews</h2>
-            <span>Implement the Cordova WebView in your project.</span>
-        </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the Cordova Documentation.</span>
-        </li>
-    </ul>
+
 </div>
