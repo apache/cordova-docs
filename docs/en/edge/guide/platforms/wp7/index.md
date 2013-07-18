@@ -19,7 +19,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 7 Platform Guide
 
-This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
+This guide shows how to set up your SDK development environment to
+deploy Cordova apps for Windows Phone 7 devices.  Apps also run on
+Windows Phone 8 devices using the same APIs, but version 7 lacks some
+of IE10's advanced features available on Windows Phone 8. Windows
+Phone 8 apps do _not_ run on Windows Phone 7 devices.
+
+See the following for more detailed platform-specific information that
+applies to both versions:
+
+* Upgrading Windows Phone
+* Windows Phone Plugins
+* Windows Phone Command-line Tools
+
+The command-line tools above refer to versions prior to Cordova 3.0.
+See The Cordova Command-line Interface for information about the
+current interface.
 
 ## 1. System Requirements
 
