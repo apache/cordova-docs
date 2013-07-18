@@ -18,29 +18,56 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 <div id="home">
-
-    <h1>Guides</h1>
+    <h1>Overview</h1>
+    <h1>The Command-line Interface</h1>
+    <h1>Platform Guides</h1>
     <ul>
         <li>
-            <h2>Overview</h2>
-            <span>Start here if you are new to Cordova.</span>
+            <h2>Android Platform Guide</h2>
+            <span>use the CLI with Eclipse or Android SDK tools</span>
         </li>
         <li>
-            <h2>The Command-line Interface</h2>
-            <span>Create, build, and deploy from the command-line.</span>
+            <h2>iOS Platform Guide</h2>
+            <span>use the CLI with Xcode</span>
         </li>
         <li>
-            <h2>Platform Guides</h2>
-            <span>Set up each SDK to create your first app.</span>
+            <h2>Tizen Platform Guide</h2>
+            <span>use the Tizen Eclipse IDE</span>
         </li>
         <li>
-            <h2>Upgrading Guides</h2>
-            <span>Upgrade an application to the latest release.</span>
+            <h2>Windows Phone 7 Platform Guide</h2>
+            <span>use the Windows Phone SDK with Visual Studio</span>
         </li>
         <li>
-            <h2>Configuration Reference</h2>
-            <span>Customize the features of your app.</span>
+            <h2>Windows Phone 8 Platform Guide</h2>
+            <span>use the Windows Phone SDK with Visual Studio</span>
         </li>
+        <li>
+            <h2>Windows 8 Platform Guide</h2>
+            <span>use Visual Studio</span>
+        </li>
+        <li>
+            <h2>BlackBerry Platform Guide</h2>
+            <span>use the Blackberry WebWorks SDK</span>
+        </li>
+        <li>
+            <h2>BlackBerry 10 Platform Guide</h2>
+            <span>use the Blackberry WebWorks SDK</span>
+        </li>
+    </ul>
+    <h1>Application Development Guide</h1>
+    <ul>
+        <li>
+            <h2>Domain Whitelist Guide</h2>
+            <span>Grant an application access to external domains.</span>
+        </li>
+        <li>
+            <h2>Privacy Guide</h2>
+            <span>Learn about important mobile privacy issues.</span>
+        </li>
+    </ul>
+    <h1>Hybrid Application Guide</h1>
+    <ul>
         <li>
             <h2>Embedding WebViews</h2>
             <span>Implement the Cordova WebView in your project.</span>
@@ -49,20 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <h2>Plugin Development Guide</h2>
             <span>Develop your first plugin.</span>
         </li>
-        <li>
-            <h2>Privacy Guide</h2>
-            <span>Learn about important mobile privacy issues.</span>
-        </li>
-        <li>
-            <h2>Domain Whitelist Guide</h2>
-            <span>Grant an application access to external domains.</span>
-        </li>
-        <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the documentation.</span>
-        </li>
     </ul>
-
     <h1>API Reference</h1>
     <ul>
         <li>
@@ -130,5 +144,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Hook into the devices native storage options.</span>
         </li>
     </ul>
-
+    <h1>Configuration Reference</h1>
+    <h1>Plugin Reference</h1>
+    <ul>
+        <li>
+            <h2>Plugin Specification</h2>
+            <span>Details on the <tt>plugins.xml</tt> file</span>
+        </li>
+        <li>
+            <h2>Using Plugman to Manage Plugins</h2>
+            <span>Enabling Cordova APIs for non-CLI Cordova 3.0 projects</span>
+        </li>
+    </ul>
+    <h1><a href="_index.html">Keyword Index</a></h1>
 </div>
