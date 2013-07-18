@@ -21,8 +21,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This guide shows you how to set up an SDK environment to target
 applications for the BlackBerry platform prior to version 10.  If you
-want to target the most recent version, see BlackBerry 10 Platform
-Guide.
+want to target the most recent version, see the BlackBerry 10 Platform
+Guide.  See the following for more detailed platform-specific
+information:
+
+* BlackBerry Configuration
+* Upgrading BlackBerry
+* BlackBerry Plugins
+* BlackBerry Command-line Tools
+
+The command-line tools above refer to versions prior to Cordova 3.0.
+See The Cordova Command-line Interface for information about the
+current interface.
 
 ## Requirements and Support
 
@@ -199,3 +209,4 @@ developing applications built for the BlackBerry WebWorks framework:
 * [BlackBerry WebWorks Development Pitfalls](http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Common-BlackBerry-WebWorks-development-pitfalls-that-can-be/ta-p/624712)
 
 * [Best practices for packaging WebWorks applications](https://bdsc.webapps.blackberrycom/html5/documentation/ww_developing/bestpractice_compiling_ww_apps_1873324_11.html)
+
