@@ -52,8 +52,9 @@ editorial guidelines.
 * Do not follow a heading with a subheading or a list with no
   intervening text.
 
-* Avoid too many NOTEs, as it implies too many variables that can go
-  wrong. Try to clarify variations on a procedure within the text.
+* Avoid too many NOTEs, as it implies too many variable factors that
+  can go wrong. Try to clarify variations on a procedure within the
+  text.
 
 ## Language and Tone
 
@@ -97,6 +98,8 @@ editorial guidelines.
   include either, remove spaces around the dashes (punctuate fragments
   outside of paren's). (Punctuate full sentences inside of parens.)
 
+* This Guide or section, not this document, page, or anything else
+
 ## Usage
 
 * "User" may refer to the end user, not to the application's
@@ -113,11 +116,17 @@ editorial guidelines.
 
 * 'Handheld' not 'hand held'
 
+* Filename, not file name
+
 * 'JavaScript' (but lowercase when MIME type)
+
+* Unix, not unix
 
 * Mac "OS X", not "OSX"
 
 * BlackBerry, not Blackberry
+
+* "BlackBerry 10," not "BlackBerry10"
 
 * Prefer "emulator" over "simulator"; clarify when interfaces refer to
   them differently.
@@ -141,6 +150,13 @@ editorial guidelines.
   (Exception: when assigning a reference to the object rather than
   calling it as a method.)
 
+* Spell out "and" and "or"; do not substitute with "&" or "/" in text
+
+* "and/or" is unnecessary; "or" usually makes that implicit.
+
+* Avoid unnecessary/gratuitous slash-delimited alternators in text, as
+  in this example (but OK to refer to try/catch blocks).
+
 ## Punctuation
 
 * Initial Cap Words in Headings, Except for Short Prepositions or
@@ -162,8 +178,17 @@ editorial guidelines.
   not api's or API's. Only use apostrophes for possessives, e.g. "the
   API's members"
 
+* "applications" not "app's" for plural
+
 * Do not hyphenate adverbs, as it's implict they modify verbs.  So,
   "commonly seen problems," not "commonly-seen problems"
+
+## Content-specific
+
+* Refer to the default app as "Hello World", regardless of what it
+  actually displays.
+
+* Refer to the default plugin demo as "Echo"
 
 ## Miscellaneous
 
