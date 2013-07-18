@@ -82,7 +82,7 @@ which follow common web development file-naming conventions. The
 distribute the application.
 
 The other two arguments are optional: the `com.example.hello` argument
-provides your project with a reverse-domain-style identifier, and the
+provides your project with a reverse domain-style identifier, and the
 `"Hello World!"` provides the application's display text. You can edit
 both of these values later in the `config.xml` file.
 
@@ -248,17 +248,21 @@ might add:
 * Debug console:
     $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
-Use `plugin ls` (or `plugin list`) to view currently installed plugins:
+Use `plugin ls` (or `plugin list`) to view currently installed
+plugins. Each displays by its identifier:
 
     $ cordova plugin ls    # or 'plugin list'
     [ 'org.apache.cordova.core.console' ]
 
-To remove a plugin, you refer to it by the same name that appears in
+To remove a plugin, refer to it by the same identifier that appears in
 the listing. For example, here is how you would remove support for a
 debug console from a release version:
 
     $ cordova plugin rm org.apache.cordova.core.console        
     $ cordova plugin remove org.apache.cordova.core.console    # same
+
+You can batch-remove or add plugins by specifying more than one
+argument for each command.
 
 <!--
 
