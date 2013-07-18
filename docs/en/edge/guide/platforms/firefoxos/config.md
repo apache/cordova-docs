@@ -19,6 +19,5 @@
 #
 -->
 
-FirefoxOS Configuration
-===================================
+# FirefoxOS Configuration
 

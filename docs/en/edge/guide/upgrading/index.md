@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Guides
-================
+# Upgrading Guides
 
 > Learn how to upgrade an application to the latest Apache Cordova release.
 

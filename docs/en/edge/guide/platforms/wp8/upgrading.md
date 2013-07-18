@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading Windows Phone
-===============================
+# Upgrading Windows Phone
 
 This guide shows how to modify Windows Phone projects, both versions 7
 and 8, to upgrade from older versions of Cordova.

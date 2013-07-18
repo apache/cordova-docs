@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Windows Phone Plugins
-====================================
+# Windows Phone Plugins
 
 Writing a plugin for Cordova on Windows Phone requires a basic understanding of
 the architecture of Cordova. Cordova-WP7 consists of a WebBrowser which hosts the
@@ -54,8 +53,7 @@ and it comes with the majority of the 'plumbing' built for you already.
             }
         }
 
-Namespaces
-----------
+## Namespaces
 
 The default namespace for unqualified commands is:
 
@@ -80,8 +78,7 @@ Then, in JS you need to call `exec` like this:
 
     cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
-Interpreting your arguments in C#
-----------------------------------
+## Interpreting your arguments in C#
 
 The data received by your plugin method is a string value, but in actuality
 looking at our JavaScript code, we see our intention was to pass an array of strings.
@@ -102,8 +99,7 @@ We can use simple JSON deserialization.
     string optVal = JsonHelper.Deserialize<string[]>(options)[0];
     // optVal now has the value of "input string"
 
-Passing results from C# to JS
------------------------------
+## Passing results from C# to JS
 
 The base class BaseCommand provides methods for passing data to your JS callback handlers.
 To simply signal that the command has succeeded, when no additional result info is needed,
@@ -123,8 +119,7 @@ If you need to signal that an error has occurred, you can call `DispatchCommandR
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
 
-Handling serialization errors in your plugin's C# method
---------------------------------------------------------
+## Handling serialization errors in your plugin's C# method
 
 When interpreting your arguments, it is a good idea to use a try/catch block
 in case we have bad input. This is a pattern used throughout the Cordova C# code:
@@ -149,8 +144,7 @@ in case we have bad input. This is a pattern used throughout the Cordova C# code
         // ... continue on to do our work
     }
 
-Advanced Plugin Functionality
------------------------------
+## Advanced Plugin Functionality
 
 See other methods that you can override in:
 
@@ -167,8 +161,7 @@ JavaScript is a little more difficult to debug on Windows Phone. You
 need to use `console.log` to output the state of your plugin, or
 inform yourself of errors.
 
-Common Pitfalls
----------------
+## Common Pitfalls
 
 - Be careful when deciding on the arguments you pass to native in your JavaScript
   implementation. Most device platforms expect the args passed to cordova.exec

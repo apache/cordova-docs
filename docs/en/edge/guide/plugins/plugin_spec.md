@@ -32,7 +32,6 @@ A sample plugin element:
         id="com.alunny.foo"
         version="1.0.2">
 
-
 ## &lt;plugin&gt; element
 
 The `plugin` element is the top-level element of the plugin manifest. It has the
@@ -158,7 +157,6 @@ If `src` does not resolve to a file that can be found, plugman will stop/reverse
 
 `<js-module>` elements can also be nested under `<platform>`, to declare platform-specific JavaScript module bindings.
 
-
 ## &lt;dependency&gt;
 
 Dependency tags let you specify plugins on which this plugin depends. In the future there will be plugin repositories to fetch plugins from. In the short term, plugins are directly pointed to by URLs in `<dependency>` tags. These tags have the following format:
@@ -222,7 +220,6 @@ into a project. A couple of examples:
     <source-file src="src/ios/someLib.a" framework="true" />
     <source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
 
-
 ### src (required)
 
 Where the file is located, relative to the `plugin.xml` file.
@@ -271,7 +268,6 @@ Example for XML:
 
 Example for plist:
 
-
     <config-file target="*-Info.plist" parent="CFBundleURLTypes">
         <array>
             <dict>
@@ -315,7 +311,6 @@ iOS Cordova project. Example:
 
     <plugins-plist key="Foo" string="CDVFoo" />
 
-
 ## &lt;resource-file&gt; and &lt;header-file&gt;
 
 Like source files, but specifically for platforms that distinguish between
@@ -335,7 +330,6 @@ Examples:
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
-
 
 ### src (required)
 

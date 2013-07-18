@@ -19,8 +19,7 @@
 #
 -->
 
-Android Configuration
-===================================
+# Android Configuration
 
 The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CordovaWebView Instance.
 

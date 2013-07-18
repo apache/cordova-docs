@@ -19,8 +19,7 @@
 #
 -->
 
-BlackBerry Configuration
-===================================
+# BlackBerry Configuration
 
 BlackBerry fully supports the
 [W3C Widget Specification](http://www.w3.org/TR/widgets/)

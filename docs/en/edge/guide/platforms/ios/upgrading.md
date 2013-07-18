@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Upgrading iOS
-=====================
+# Upgrading iOS
 
 This guide shows how to modify iOS projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
@@ -39,7 +38,6 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 7. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
 NOTE: Starting with Cordova 3.0.0, projects do not come with any plugins, you will have to install the ones you require for your project using the `plugman` CLI utility - see the Core Plugin Install Guide.
-
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
 

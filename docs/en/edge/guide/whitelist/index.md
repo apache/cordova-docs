@@ -17,11 +17,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Domain Whitelist Guide
-======================
+# Domain Whitelist Guide
 
-Overview
---------
+## Overview
 
 Domain whitelisting is a security model that controls access to
 outside domains, such as `http://google.com`.  Apache Cordova's
@@ -29,13 +27,11 @@ default security policy allows access to any site. Before moving your
 application to production, you should review its whitelist and declare
 access to specific network domains and subdomains.
 
-Specification
--------------
+## Specification
 
 Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement its own domain whitelisting.
 
-Syntax
-------
+## Syntax
 
 Access to [google.com][2]:
 
@@ -57,8 +53,7 @@ Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
 
     *
 
-Android
--------
+## Android
 
 ### Details
 
@@ -73,8 +68,7 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
-BlackBerry
-----------
+## BlackBerry
 
 ### Details
 
@@ -121,8 +115,7 @@ Access to all subdomains and TLDs (`.com`, `.net`, etc):
 
     *.google.*
 
-Windows Phone (7 & 8)
----------------------
+## Windows Phone (7 & 8)
 
 The whitelisting rules are found in `config.xml` and declared with the element `<access origin="..." />`.
 
@@ -134,8 +127,7 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
-Tizen
-----------
+## Tizen
 
 ### Details
 

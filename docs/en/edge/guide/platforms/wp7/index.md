@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Windows Phone 7 Platform Guide
-==================================
+# Windows Phone 7 Platform Guide
 
 This guide describes how to set up your development environment for Cordova and run a sample application.  Note that Cordova used to be called PhoneGap, so some of the sites still use the old PhoneGap name.
 
-1. System Requirements
----------------
+## 1. System Requirements
 
 - Operating System:
     - Windows 7 or Windows 8 (Pro) or Windows Vista with SP2
@@ -34,15 +32,13 @@ This guide describes how to set up your development environment for Cordova and 
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
-2. Install SDK + Cordova
-----------------------------
+## 2. Install SDK + Cordova
 
 - Download and install the [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp7` subfolder, `lib\windows-phone-8\wp8` contains the Windwos Phone 8 version of Cordova.
 - Copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
 
-2.1. Building the template
------------------------------
+## 2.1. Building the template
 
 __NOTE:__ this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP7_x_x_x.zip then you may skip this step.
 
@@ -58,15 +54,13 @@ Run the script :
 
     >createTemplates.bat -install
 
-3. Set up New Project
---------------------
+## 3. Set up New Project
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
 - Select **CordovaWP7**. (The version number is displayed in the template description.)
 - Give the project a name, and select __OK__.
 
-4. Review the project structure
--------------------------------
+## 4. Review the project structure
 
 - The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
@@ -74,8 +68,7 @@ Run the script :
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-6. Build your project for the device
-------------------------------------
+## 6. Build your project for the device
 
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 7.
 
@@ -85,8 +78,7 @@ In order to test your application on a device, the device must be registered. Cl
 
 ![](img/guide/platforms/wp7/wpd.png)
 
-Done!
------
+## Done!
 
 [register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
