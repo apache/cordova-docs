@@ -146,7 +146,7 @@ Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
 <!-- XREF
-(See API and Configuration Guide for details.)
+(See Application Development Guide for details.)
 XREF -->
 
 Run the following command to iteratively build the project:
@@ -207,8 +207,7 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development
-Guide for details.)  More commonly, you would add a plugin to enable
+native components. (See Embedding WebViews and Plugin Development Guide for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 <!-- XREF
 discussed in the Application Development Guide and
