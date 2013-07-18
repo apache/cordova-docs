@@ -28,6 +28,25 @@ version of the CLI.
 
 Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, you must use the latest shipped version of the iOS SDK, which is iOS 6. The iOS 6 SDK requires Xcode 4.5.
 
+## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+
+1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
+   described in The Cordova Command-line Interface.
+2. Add your platforms the the cordova project, for example: `cordova
+   platform add ios`.
+3. Copy the contents of the project's `www` folder to the `www` folder
+   at the root of the cordova project you just created.
+4. Copy or overwrite any native assets from your original project
+   (`Resources`, etc.), making sure to add any
+   new files to the `.xcodeproj` project. The iOS project builds
+   inside the `platforms\ios` directory.
+5. Copy your config.xml into the www folder, and remove any plugin definitions. You will modify settings here instead of the platform folder.
+6. Use the cordova CLI tool to install any plugins you need. Note that
+   the CLI handles all core APIs as plugins, so they may need to be
+   added. Only 3.0.0 plugins are compatible with the CLI.
+7. Build and test.
+
+
 ## Upgrading 2.9.0 projects to 3.0.0 ##
 
 1. **Download and extract the Cordova 3.0.0 source** to a **permanent folder location** on your hard drive (say to ~/Documents/Cordova-3.0.0)
@@ -38,7 +57,7 @@ Please note that **Xcode 4.5 is required**. To submit to the Apple App Store, yo
 6. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova.js** file
 7. Delete your **"CordovaLib"** folder, and copy the **"CordovaLib"** folder from the new project into your project's root folder
 
-NOTE: Starting with Cordova 3.0.0, projects do not come with any plugins, you will have to install the ones you require for your project using the `plugman` CLI utility - see the Core Plugin Install Guide.
+NOTE: Starting with Cordova 3.0.0, projects do not come with any plugins, you will have to install the ones you require for your project using the `plugman` CLI utility - see the "Using Plugman to Manage Plugins".
 
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
