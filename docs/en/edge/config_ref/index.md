@@ -19,16 +19,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Configuration Reference
 
-You can set various application configuration parameters using a platform-agnostic configuration file, `config.xml`.
-This file is based on the W3C [Packaged Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification.
+Many aspects of an application's behavior can be controlled with a
+platform-agnostic configuration file, `config.xml`, which is formatted
+based on the W3C's
+[Packaged Web Apps (Widgets)](http://www.w3.org/TR/widgets/)
+specification.
 
-The location of the `config.xml` file is different depending on the platform. The contents, in general, are not.
+For projects created with the Cordova CLI (described in The
+Command-line Interface), this file can be found in the top-level `www`
+directory.  Using the CLI to build projects regenerates versions of
+this file in various subdirectories within `platforms`. For non-CLI
+projects, each platform-specific file serves as a source.
 
-## Platform-Specific Properties
-
-As with any abstraction layer, Apache Cordova cannot be a perfect silver bullet. As such, some native and platform-specific
-properties, characteristics and behaviours are encapsulated as much as possible as `<preference>` elements inside the
-`config.xml` file. The following sub-sections linked to are guides which go into more details about these preferences.
+While the location of the `config.xml` file may change depending on
+the platform, its contents generally do not. Some platform-specific
+features are also specified in the same configuration file. Details
+are listed below:
 
 - iOS Configuration
 - Android Configuration
