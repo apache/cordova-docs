@@ -100,7 +100,7 @@ SDK.  Run any of these from a Mac:
 
         $ cordova platform add ios
         $ cordova platform add android
-        $ cordova platform add blackberry
+        $ cordova platform add blackberry10
 
 Run any of these from a Windows machine, where _wp_ refers to
 different versions of the Windows Phone operating system:
@@ -108,7 +108,7 @@ different versions of the Windows Phone operating system:
         $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add android
-        $ cordova platform add blackberry
+        $ cordova platform add blackberry10
 
 Run this to check your current set of platforms:
 
@@ -118,7 +118,7 @@ Run this to check your current set of platforms:
 
 Run either of the following synonymous commands to remove a platform:
 
-        $ cordova platform remove blackberry
+        $ cordova platform remove blackberry10
         $ cordova platform rm android
 
 Running commands to add or remove platforms affects the contents of
