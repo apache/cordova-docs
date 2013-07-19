@@ -22,15 +22,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to modify Windows Phone projects, both versions 7
 and 8, to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The
-Cordova Command-line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
 version of the CLI.
 The following section shows how to upgrade from non-CLI projects.
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Cordova Command-line Interface.
+   described in The Command-line Interface.
 2. Add your platforms the the cordova project, for example: `cordova
    platform add wp7 wp8`.
 3. Copy the contents of the project's `www` folder to the `www` folder

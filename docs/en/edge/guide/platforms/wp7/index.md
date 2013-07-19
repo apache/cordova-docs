@@ -33,7 +33,7 @@ applies to both versions:
 * Windows Phone Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Cordova Command-line Interface for information about the
+See The Command-line Interface for information about the
 current interface.
 
 ## 1. System Requirements
