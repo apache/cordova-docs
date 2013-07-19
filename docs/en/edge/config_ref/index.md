@@ -33,10 +33,6 @@ properties, characteristics and behaviours are encapsulated as much as possible 
 - iOS Configuration
 - Android Configuration
 - BlackBerry Configuration
-- Windows Phone 7 Configuration
-- Windows Phone 8 Configuration
-- Windows 8 Configuration
-- FirefoxOS Configuration
 
 ## config.xml Elements
 
