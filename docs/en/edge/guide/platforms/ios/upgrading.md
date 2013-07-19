@@ -95,9 +95,9 @@ NOTE: Starting with Cordova 3.0.0, projects do not come with any plugins, you wi
         OpenAL
         ImageIO
         
-10. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, edit **"-Obj-C"** to be **"-ObjC"**
+10. Update your project's target **Build Settings**. Under **Linking &rarr; Other Linker Flags**, edit **"-Obj-C"** to be **"-ObjC"**
         
-11. Update your project's target **Build Settings**. Under **Linking** -> **Other Linker Flags**, change **"-all\_load"** to be **"-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a"**. You would only need to do this if you have the problem defined in [this issue.](https://issues.apache.org/jira/browse/CB-3458)
+11. Update your project's target **Build Settings**. Under **Linking &rarr; Other Linker Flags**, change **"-all\_load"** to be **"-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a"**. You would only need to do this if you have the problem defined in [this issue.](https://issues.apache.org/jira/browse/CB-3458)
 
 ## Upgrading 2.6.0 projects to 2.7.0 ##
 
@@ -209,10 +209,10 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 6. **Copy** the **www/cordova-2.1.0.js** file from the new project into your **www** folder, and delete your **www/cordova-2.0.0.js** file
 7. **Update** the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new **cordova-2.1.0.js** file
 8. Update (or replace, if you never changed the file) your `AppDelegate.m` according to the one from the new project:
-    - Edited -> application:didFinishLaunchingWithOptions:
-	- Added  -> application:supportedInterfaceOrientationsForWindow:
+    - Edited &rarr; application:didFinishLaunchingWithOptions:
+	- Added  &rarr; application:supportedInterfaceOrientationsForWindow:
 9. Update (or replace, if you never changed the file) your `MainViewController.m` according to the one from the new project:
-    - Added -> viewWillAppear
+    - Added &rarr; viewWillAppear
 10. Copy the **cordova** folder from the new project into your project's root folder **(in 2.1.0, this has the updated scripts to support paths with spaces)**
 11. Remove the **VERSION** file reference from your **project** (_not_ the one in CordovaLib)
 12. Next, update your CordovaLib sub-project reference. Beginning with Cordova 2.1.0, we are not using the CORDOVALIB Xcode variable anymore when referencing where CordovaLib resides, the reference is an absolute file reference now.
@@ -259,9 +259,9 @@ With **Cordova 2.1.0**, CordovaLib has been upgraded to use **Automatic Referenc
 25. Locate the **VERSION** file, drag it into your main project (we want to create a link to it, not a copy)
 26. Select the **Create groups for any added folders** radiobutton, then select the **Finish** button
 27. Select the **VERSION** file that you just dragged in a previous step
-28. Type the **Option-Command-1** key combination to show the **File Inspector** (or menuitem **View -> Utilities -> Show File Inspector**)
+28. Type the **Option-Command-1** key combination to show the **File Inspector** (or menuitem **View &rarr; Utilities &rarr; Show File Inspector**)
 29. Choose **Relative to CORDOVALIB** in the **File Inspector** for the drop-down menu for **Location**
-30. Set the Xcode preference **Xcode Preferences -> Locations -> Derived Data -> Advanced...** to **Unique** (this is so the unified headers can be found)
+30. Set the Xcode preference **Xcode Preferences &rarr; Locations &rarr; Derived Data &rarr; Advanced...** to **Unique** (this is so the unified headers can be found)
 31. Select the **project icon** in the Project Navigator, select your **Target**, then select the **Build Settings** tab
 32. Search for **Header Search Paths**. For that setting, add these three values below (with quotes):
 
