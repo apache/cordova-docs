@@ -30,7 +30,7 @@ detailed platform-specific information:
 * Android Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Cordova Command-line Interface for information about the
+See The Command-line Interface for information about the
 current interface.
 
 ## Requirements and Support

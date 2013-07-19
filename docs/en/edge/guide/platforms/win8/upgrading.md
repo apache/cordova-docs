@@ -21,8 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The
-Cordova Command-line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
 version of the CLI.
 
 ## Upgrade to 2.9.0 from 2.8.0 ##
