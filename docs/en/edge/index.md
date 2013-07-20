@@ -31,11 +31,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </li>
         <li>
             <h2>Platform Guides</h2>
-            <span>Set up each SDK to create your first app.</span>
-        </li>
-        <li>
-            <h2>Upgrading Guides</h2>
-            <span>Upgrade an application to the latest release.</span>
+            <span>Set up each SDK and update projects</span>
         </li>
         <li>
             <h2>Configuration Reference</h2>
