@@ -276,6 +276,37 @@ debug console from a release version:
 You can batch-remove or add plugins by specifying more than one
 argument for each command.
 
+## Customize each Platform
+
+While Cordova allows you to easily build apps for different platforms,
+sometimes you need to add customizations.  In that case, you don't
+want to modify the CSS in various `www` directories within the
+top-level `platforms` directory, because they're regularly replaced
+with the top-level `www` directory's cross-platform source.  Instead,
+the top-level `merges` directory offers a place to specify assets to
+be deployed for specific platforms. Any file you place in a platform's
+subdirectory replaces a corresponding file within the top-level `www`
+source tree.
+
+Here is how you might uses `merges` to boost the default font size for
+Android devices:
+
+* Edit the `www/index.html` file, adding a link to an additional CSS
+  file, `overrides.css` in this case:
+
+        <link rel="stylesheet" type="text/css" href="css/overrides.css" />
+
+* Create an empty `www/css/overrides.css` file.
+
+* Edit a corresponding `merges/android/overrides.css` file, adding a
+  line that overrides the 12-point default font size specified within
+  `www/css/index.css`:
+
+        body { font-size:14px; }
+
+When you rebuild the project, the Android version features the custom
+font size.
+
 ## Update the App
 
 After installing installing the `cordova` utility, you can always
