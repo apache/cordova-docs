@@ -72,9 +72,9 @@ To install the `cordova` command-line tool, follow these steps:
 Go to the directory where you maintain your source code, and run a
 command such as the following:
 
-        $ cordova create HelloWorld com.example.hello "Hello World"
+        $ cordova create hello com.example.hello "Hello World"
 
-The first argument specifies a _HelloWorld_ directory to be generated
+The first argument specifies a _hello_ directory to be generated
 for your project. Its `www` subdirectory houses your application's
 home page, along with various resources under `css`, `js`, and `img`,
 which follow common web development file-naming conventions. The
@@ -91,7 +91,7 @@ both of these values later in the `config.xml` file.
 All subsequent commands need to be run within the project's directory,
 or any subdirectories within its scope:
 
-        $ cd HelloWorld
+        $ cd hello
 
 Before you can build the project, you need to specify a set of target
 platforms. Your ability to run these commands depends on whether your
