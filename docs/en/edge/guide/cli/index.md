@@ -170,7 +170,7 @@ an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' SDKs.
 
-## View the App in an Emulator
+## Test the App on an Emulator or Device
 
 SDKs for mobile platforms often come bundled with emulators that
 execute a device image, so that you can launch the app from the home
@@ -195,6 +195,18 @@ image to display the latest application, which is now available for
 launch from the home screen:
 
 ![](img/guide/cli/android_emulate_install.png)
+
+Alternately, you can plug the handset into your computer and test the
+app directly:
+
+        $ cordova run android
+
+Before running this command, you need to set up the device for
+testing, following procedures that vary for each platform. In
+Android's case, you would have to enable a __USB debugging__ option on
+the device, and perhaps add a USB driver depending on your development
+environmnent.
+See Platform Guides for details on each platform's requirements.
 
 ## Add Features
 
@@ -263,12 +275,6 @@ debug console from a release version:
 
 You can batch-remove or add plugins by specifying more than one
 argument for each command.
-
-<!--
-
-## Run the App on the Device
-
--->
 
 ## Update the App
 
