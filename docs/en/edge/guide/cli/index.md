@@ -305,7 +305,7 @@ Android devices:
         body { font-size:14px; }
 
 When you rebuild the project, the Android version features the custom
-font size.
+font size, while others remain unchanged.
 
 ## Update the App
 
