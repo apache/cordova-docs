@@ -316,10 +316,18 @@ update it to the latest version by running the following command:
 
 Use this syntax to install a specific version:
 
-        $ sudo npm install -g cordova@2.8.0
+        $ sudo npm install -g cordova@3.0.0
 
 Run the `info` command for a listing that includes the current version
 along with other available version numbers:
 
         $ npm info cordova
 
+Cordova 3.0 is the first version to support the command-line interface
+described in this section. If you are updating from a version prior to
+3.0, you need to create a new project as described above, then copy
+the older application's assets into the top-level `www` directory.
+Where applicable, further details about upgrading to 3.0 are available
+in the Platform Guides.  Once you upgrade to the `cordova`
+command-line interface, the more time-consuming procedures described
+there are no longer relevant.
