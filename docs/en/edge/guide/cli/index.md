@@ -278,34 +278,43 @@ argument for each command.
 
 ## Customize each Platform
 
-While Cordova allows you to easily build apps for different platforms,
-sometimes you need to add customizations.  In that case, you don't
-want to modify the CSS in various `www` directories within the
-top-level `platforms` directory, because they're regularly replaced
-with the top-level `www` directory's cross-platform source.  Instead,
-the top-level `merges` directory offers a place to specify assets to
-be deployed for specific platforms. Any file you place in a platform's
-subdirectory replaces a corresponding file within the top-level `www`
-source tree.
+While Cordova allows you to easily deploy an app for many different
+platforms, sometimes you need to add customizations.  In that case,
+you don't want to modify the source files in various `www` directories
+within the top-level `platforms` directory, because they're regularly
+replaced with the top-level `www` directory's cross-platform source.
 
-Here is how you might uses `merges` to boost the default font size for
-Android devices:
+Instead, the top-level `merges` directory offers a place to specify
+assets to deploy on specific platforms. Each platform-specific
+subdirectory within `merges` mirrors the directory structure of the
+`www` source tree, allowing you to override or add files as needed.
+For example, here is how you might uses `merges` to boost the default
+font size for Android devices:
 
 * Edit the `www/index.html` file, adding a link to an additional CSS
   file, `overrides.css` in this case:
 
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
 
-* Create an empty `www/css/overrides.css` file.
+* Optionally create an empty `www/css/overrides.css` file, which would
+  apply for all non-Android builds, preventing a missing-file error.
 
-* Edit a corresponding `merges/android/overrides.css` file, adding a
-  line that overrides the 12-point default font size specified within
-  `www/css/index.css`:
+* Create a `css` subdirectory within `merges/android`, then add a
+  corresponding `overrides.css` file. Specify CSS that overrides the
+  12-point default font size specified within `www/css/index.css`, for
+  example:
 
         body { font-size:14px; }
 
 When you rebuild the project, the Android version features the custom
 font size, while others remain unchanged.
+
+You can also use `merges` to add files not present in the original
+`www` directory. For example, an app can incorporate a _back button_
+graphic into the iOS interface, stored in
+`merges/ios/img/back_button.png`, while the Android version can
+instead capture `backbutton` events from the corresponding hardware
+button.
 
 ## Update the App
 
