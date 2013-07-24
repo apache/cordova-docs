@@ -53,9 +53,16 @@ To create a new project, you use the `create` command to set up the folder struc
 1.  On the command line, navigate to the folder where you extracted Cordova.
 2.  Run the `create` command using the following syntax:
 
-        bin/create <path-to-project>
+        bin/create <path-to-project> <project-package> <project-name>
 
 This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
+
+where
+
+- '<path-to-project>' specifies the directory you want the project created in
+- '<project-package>' specifies a reverse domain style identifier
+- '<project-name>' specifies the apps display name
+
 
 ## Adding and managing targets
 

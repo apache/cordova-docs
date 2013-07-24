@@ -39,7 +39,13 @@ arguments.
 
 The 'create' command creates a new project:
 
-    bin/create <path-to-project>
+    bin/create <path-to-project> <project-package> <project-name>
+
+where
+
+- '<path-to-project>' specifies the directory you want the project created in
+- '<project-package>' specifies a reverse domain style identifier
+- '<project-name>' specifies the apps display name
 
 ## target
 
