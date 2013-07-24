@@ -72,7 +72,7 @@ To install the `cordova` command-line tool, follow these steps:
 Go to the directory where you maintain your source code, and run a
 command such as the following:
 
-        $ cordova create hello com.example.hello "Hello World"
+        $ cordova create hello com.example.hello HelloWorld
 
 The first argument specifies a _hello_ directory to be generated
 for your project. Its `www` subdirectory houses your application's
@@ -83,7 +83,7 @@ distribute the application.
 
 The other two arguments are optional: the `com.example.hello` argument
 provides your project with a reverse domain-style identifier, and the
-`"Hello World!"` provides the application's display text. You can edit
+`HelloWorld` provides the application's display text. You can edit
 both of these values later in the `config.xml` file.
 
 ## Add Platforms
