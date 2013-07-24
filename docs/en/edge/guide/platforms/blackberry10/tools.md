@@ -47,6 +47,9 @@ where
 - '<project-package>' specifies a reverse domain style identifier
 - '<project-name>' specifies the apps display name
 
+*Note*: the create command bootstraps dependency installation through the 'npm install' command. Depending on installation directory and system permissions, this may require admin privileges.
+If a problem is encountered on OSX/Linux, run 'sudo npm install' before using the create command. On Windows, run 'npm install' in a command line utility opened with admin privileges.
+
 ## target
 
 The `target` command allows you to manage the BlackBerry device(s) or
