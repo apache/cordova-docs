@@ -69,7 +69,7 @@ Full Example
     <html>
       <head>
         <title>numberToString Example</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         function checkNumber() {

@@ -81,7 +81,7 @@ Full Example
       <head>
         <title>Storage Example</title>
 
-        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
         // Wait for device API libraries to load
