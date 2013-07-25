@@ -1,5 +1,5 @@
 ---
-license: Licensed to the Apache Software Foundation (ASF) under one
+ license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
          regarding copyright ownership.  The ASF licenses this file
@@ -231,52 +231,73 @@ repository for the plugin code.  Here are examples of features you
 might add:
 
 * Basic device information:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+
 * Network and battery status:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+
 * Accelerometer, compass, and geolocation:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+
 * Camera, media capture, and media playback:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
+
 * Access files on device or network:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+
 * Notifications via dialog box or vibration:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+
 * Contacts:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+
 * Globalization:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+
 * Splash Screen:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+
 * In-app browser:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+
 * Debug console:
-    $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
 Use `plugin ls` (or `plugin list`) to view currently installed
 plugins. Each displays by its identifier:
 
-    $ cordova plugin ls    # or 'plugin list'
-    [ 'org.apache.cordova.core.console' ]
+        $ cordova plugin ls    # or 'plugin list'
+        [ 'org.apache.cordova.core.console' ]
 
 To remove a plugin, refer to it by the same identifier that appears in
 the listing. For example, here is how you would remove support for a
 debug console from a release version:
 
-    $ cordova plugin rm org.apache.cordova.core.console        
-    $ cordova plugin remove org.apache.cordova.core.console    # same
+        $ cordova plugin rm org.apache.cordova.core.console        
+        $ cordova plugin remove org.apache.cordova.core.console    # same
 
 You can batch-remove or add plugins by specifying more than one
 argument for each command.
 
-## Customize each Platform
+## Customize Each Platform
 
 While Cordova allows you to easily deploy an app for many different
 platforms, sometimes you need to add customizations.  In that case,
