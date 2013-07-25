@@ -281,8 +281,8 @@ might add:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
-Use `plugin ls` (or `plugin list`) to view currently installed
-plugins. Each displays by its identifier:
+Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
+currently installed plugins. Each displays by its identifier:
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.core.console' ]
