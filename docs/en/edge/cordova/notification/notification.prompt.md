@@ -28,7 +28,7 @@ Shows a customizable prompt dialog box.
 - __promptCallback__: Callback to invoke when a button is pressed. _(Function)_
 - __title__: Dialog title _(String)_ (Optional, defaults to `Prompt`)
 - __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `["OK","Cancel"]`)
-- __defaultText__: Default textbox input value (`String`) (Optional, Default: "Default text")
+- __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)
 
 Description
 -----------
