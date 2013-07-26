@@ -41,29 +41,34 @@ Objects
 - LocalFileSystem
 - Metadata
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+        $ cordova plugin rm org.apache.cordova.core.file
 
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android
+
+    # app/res/xml/config.xml
     <plugin name="File" value="org.apache.cordova.FileUtils" />
     <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
 
-#### app/AndroidManifest.xml
-
+    # app/AndroidManifest.xml
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
-
+    # www/plugins.xml
     <plugin name="File" value="org.apache.cordova.file.FileManager" />
     <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer" />
 
-#### www/config.xml
-
+    # www/config.xml
     <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
     <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
     <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
@@ -71,13 +76,12 @@ Permissions
         <rim:permit>access_shared</rim:permit>
     </rim:permissions>
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="File" value="CDVFile" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
 
-### Windows Phone
+* Windows Phone
 
-    No permissions are required.
+  No special permissions are required.

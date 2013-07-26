@@ -39,47 +39,50 @@ Constants
 - Connection.CELL
 - Connection.NONE
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+        $ cordova plugin rm org.apache.cordova.core.network-information
 
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android
+
+    # app/res/xml/config.xml
     <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
 
-#### app/AndroidManifest.xml
-
+    # app/AndroidManifest.xml
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
-
+    # www/plugins.xml
     <plugin name="Network Status" value="org.apache.cordova.network.Network" />
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="NetworkStatus" value="CDVConnection" />
 
-### Windows Phone
+* Windows Phone
 
-#### Properties/WPAppManifest.xml
-
+    # Properties/WPAppManifest.xml
     <Capabilities>
         <Capability Name="ID_CAP_NETWORKING" />
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
+* Tizen
 
-#### config.xml
-
+    # config.xml
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

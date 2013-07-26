@@ -28,19 +28,26 @@ Methods
 - splashscreen.show
 - splashscreen.hide
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin rm org.apache.cordova.core.splashscreen
 
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android
+
+    # app/res/xml/config.xml
     <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="SplashScreen" value="CDVSplashScreen" />
 
 Setup
