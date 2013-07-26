@@ -32,7 +32,7 @@ Shows a customizable prompt dialog box.
 
 - __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `["OK","Cancel"]`)
 
-- __defaultText__: Default textbox input value (`String`) (Optional, Default: "Default text")
+- __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)
 
 Description
 -----------
