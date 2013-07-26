@@ -41,45 +41,38 @@ Event Types
 - volumedownbutton
 - volumeupbutton
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+* Android
 
-#### app/res/xml/config.xml
-
+    # app/res/xml/config.xml
     <plugin name="Battery" value="org.apache.cordova.BatteryListener" />
 
-#### app/AndroidManifest.xml
-
+    # app/AndroidManifest.xml
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
-
+    # www/plugins.xml
     <plugin name="Battery" value="org.apache.cordova.battery.Battery" />
 
-#### www/config.xml
-
+    # www/config.xml
     <feature id="blackberry.app"          required="true" version="1.0.0.0" />
     <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
     <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="Battery" value="CDVBattery" />
 
-### Windows Phone
+* Windows Phone
 
-    No permissions are required.
+  No special permissions are required.
 
-### Tizen
+* Tizen
 
-#### config.xml
-
+    # config.xml
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

@@ -49,44 +49,47 @@ Objects
 - ContactFindOptions
 - ContactError
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin rm org.apache.cordova.core.contacts
 
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android
+
+    # app/res/xml/config.xml
     <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
 
-#### app/AndroidManifest.xml
-
+    # app/AndroidManifest.xml
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
-
+    # www/plugins.xml
     <plugin name="Contact" value="org.apache.cordova.pim.Contact" />
 
-#### www/config.xml
-
+    # www/config.xml
     <feature id="blackberry.find"        required="true" version="1.0.0.0" />
     <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="Contacts" value="CDVContacts" />
 
-### Windows Phone
+* Windows Phone
 
-#### Properties/WPAppManifest.xml
-
+    # Properties/WPAppManifest.xml
     <Capabilities>
         <Capability Name="ID_CAP_CONTACTS" />
     </Capabilities>

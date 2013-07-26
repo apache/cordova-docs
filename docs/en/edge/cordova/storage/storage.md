@@ -52,29 +52,26 @@ Objects
 - SQLError
 - localStorage
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+* Android
 
-#### app/res/xml/config.xml
-
+    # app/res/xml/config.xml
     <plugin name="Storage" value="org.apache.cordova.Storage" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/config.xml
-
+    # www/config.xml
     <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
-### iOS
+* iOS
 
-    No permissions are required.
+  No special permissions are required.
 
-### Windows Phone
+* Windows Phone
 
-    No permissions are required.
+  No special permissions are required.
 
-### Tizen
+* Tizen
 
-    No permissions are required.
+  No special permissions are required.

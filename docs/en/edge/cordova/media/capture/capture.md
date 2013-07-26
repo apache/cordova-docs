@@ -77,41 +77,44 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/plugins.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+        $ cordova plugin rm org.apache.cordova.core.media-capture
 
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android
+
+    # app/res/xml/plugins.xml
     <plugin name="Capture" value="org.apache.cordova.Capture"/>
 
-#### app/AndroidManifest.xml
-
+    # app/AndroidManifest.xml
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
-
+    # www/plugins.xml
     <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
 
-#### www/config.xml
-
+    # www/config.xml
     <feature id="blackberry.system"  required="true" version="1.0.0.0" />
     <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
-### iOS
+* iOS
 
-#### config.xml
-
+    # config.xml
     <plugin name="Capture" value="CDVCapture" />
 
-### Windows Phone
+* Windows Phone
 
-#### Properties/WPAppManifest.xml
-
+    # Properties/WPAppManifest.xml
     <Capabilities>
         <Capability Name="ID_CAP_MEDIALIB" />
         <Capability Name="ID_CAP_MICROPHONE" />
