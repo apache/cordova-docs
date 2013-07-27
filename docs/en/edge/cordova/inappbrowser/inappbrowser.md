@@ -68,7 +68,7 @@ platform-specific configuration settings described below:
 * Windows Phone 7 + 8
 
     <!-- config.xml -->
-    <plugin name="InAppBrowser" />
+    <feature name="InAppBrowser" />
 
 addEventListener
 ================
