@@ -44,18 +44,22 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <!-- app/res/xml/config.xml -->
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+    </feature>
 
-    # app/AndroidManifest
+    <!-- app/AndroidManifest -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    # www/plugins.xml
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+    <!-- www/plugins.xml -->
+    <feature name="Camera">
+        <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+    </feature>
 
-    # www/config.xml
+    <!-- www/config.xml -->
     <feature id="blackberry.media.camera" />
 
     <rim:permissions>
@@ -64,12 +68,14 @@ platform-specific configuration settings described below:
 
 * iOS
 
-    # config.xml
-    <plugin name="Camera" value="CDVCamera" />
+    <!-- config.xml -->
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
 
 * Windows Phone
 
-    # Properties/WPAppManifest.xml
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_ISV_CAMERA" />
         <Capability Name="ID_HW_FRONTCAMERA" />
@@ -79,7 +85,7 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
 * Tizen
 
-    # config.xml
+    <!-- config.xml -->
     <feature name="http://tizen.org/api/application" required="true"/>
     <feature name="http://tizen.org/api/application.launch" required="true"/>
 

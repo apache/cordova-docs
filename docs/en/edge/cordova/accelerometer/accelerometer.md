@@ -55,26 +55,32 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
+    <!-- app/res/xml/config.xml -->
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.AccelListener" />
+    </feature>
 
 * BlackBerry WebWorks
 
-    # www/plugins.xml
-    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" />
+    <!-- www/plugins.xml -->
+    <feature name="Accelerometer">
+        <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+    </feature>
 
-    # www/config.xml
+    <!-- www/config.xml -->
     <feature id="blackberry.system"  required="true" version="1.0.0.0" />
     <feature id="org.apache.cordova" required="true" version="1.0.0" />
 
 * iOS
 
-    # config.xml
-    <plugin name="Accelerometer" value="CDVAccelerometer" />
+    <!-- config.xml -->
+    <feature name="Accelerometer">
+        <param name="ios-package" value="CDVAccelerometer" />
+    </feature>
 
 * Windows Phone
 
-    # Properties/WPAppManifest.xml
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_SENSORS" />
     </Capabilities>

@@ -55,18 +55,22 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="Device" value="org.apache.cordova.Device" />
+    <!-- app/res/xml/config.xml -->
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.Device" />
+    </feature>
 
-    # app/AndroidManifest.xml
+    <!-- app/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 * BlackBerry WebWorks
 
-    # www/plugins.xml
-    <plugin name="Device" value="org.apache.cordova.device.Device" />
+    <!-- www/plugins.xml -->
+    <feature name="Device">
+        <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+    </feature>
 
-    # www/config.xml
+    <!-- www/config.xml -->
     <feature id="blackberry.app" required="true" version="1.0.0.0" />
     <rim:permissions>
         <rim:permit>read_device_identifying_information</rim:permit>
@@ -78,7 +82,7 @@ platform-specific configuration settings described below:
 
 * Windows Phone
 
-    # Properties/WPAppManifest.xml
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
         <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -89,7 +93,7 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
 * Tizen
 
-    # config.xml
+    <!-- config.xml -->
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
