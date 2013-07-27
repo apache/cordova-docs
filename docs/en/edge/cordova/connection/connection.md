@@ -53,27 +53,33 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+    <!-- app/res/xml/config.xml -->
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.NetworkManager" />
+    </feature>
 
-    # app/AndroidManifest.xml
+    <!-- app/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 * BlackBerry WebWorks
 
-    # www/plugins.xml
-    <plugin name="Network Status" value="org.apache.cordova.network.Network" />
+    <!-- www/plugins.xml -->
+    <feature name="Network Status">
+        <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+    </feature>
 
 * iOS
 
-    # config.xml
-    <plugin name="NetworkStatus" value="CDVConnection" />
+    <!-- config.xml -->
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
 
 * Windows Phone
 
-    # Properties/WPAppManifest.xml
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_NETWORKING" />
     </Capabilities>
@@ -82,7 +88,7 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 
 * Tizen
 
-    # config.xml
+    <!-- config.xml -->
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

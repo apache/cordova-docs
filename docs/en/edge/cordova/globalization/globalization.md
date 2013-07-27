@@ -67,5 +67,7 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="Globalization" value="org.apache.cordova.Globalization" />
+    <!-- app/res/xml/config.xml -->
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.Globalization" />
+    </feature>

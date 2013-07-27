@@ -42,13 +42,17 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    <!-- app/res/xml/config.xml -->
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.SplashScreen" />
+    </feature>
 
 * iOS
 
-    # config.xml
-    <plugin name="SplashScreen" value="CDVSplashScreen" />
+    <!-- config.xml -->
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+    </feature>
 
 Setup
 -----

@@ -48,24 +48,30 @@ platform-specific configuration settings described below:
 
 * Android
 
-    # app/res/xml/config.xml
-    <plugin name="Notification" value="org.apache.cordova.Notification"/>
+    <!-- app/res/xml/config.xml -->
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
 
-    # app/AndroidManifest.xml
+    <!-- app/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
 * BlackBerry WebWorks
 
-    # www/plugins.xml
-    <plugin name="Notification" value="org.apache.cordova.notification.Notification" />
+    <!-- www/plugins.xml -->
+    <feature name="Notification">
+        <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+    </feature>
 
-    # www/config.xml
+    <!-- www/config.xml -->
     <feature id="blackberry.ui.dialog" />
 
 * iOS
 
-    # config.xml
-    <plugin name="Notification" value="CDVNotification" />
+    <!-- config.xml -->
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
 
 * Windows Phone
 
