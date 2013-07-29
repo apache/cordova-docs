@@ -44,7 +44,9 @@ The 'create' command creates a new project:
 where
 
 - '<path-to-project>' specifies the directory you want the project created in
+
 - '<project-package>' specifies a reverse domain style identifier
+
 - '<project-name>' specifies the apps display name
 
 *Note*: the create command bootstraps dependency installation through the 'npm install' command. Depending on installation directory and system permissions, this may require admin privileges.
@@ -97,7 +99,9 @@ in debug mode (which produces an unsigned .bar file).
 where
 
 -   `-k | --keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
+
 -   `-b | --buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
+
 -   `-p | --params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
 ### Build your project in debug mode

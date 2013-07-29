@@ -49,13 +49,16 @@ one of the following formats, depending on the specified
 `cameraOptions`:
 
 - A `String` containing the base64-encoded photo image.
+
 - A `String` representing the image file location on local storage (default).
 
 You can do whatever you want with the encoded image or URI, for
 example:
 
 - Render the image in an `<img>` tag, as in the example below
+
 - Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc.)
+
 - Post the data to a remote server
 
 __NOTE:__ Photo resolution on newer devices is quite good. Photos

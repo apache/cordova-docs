@@ -27,7 +27,9 @@ Properties
 ----------
 
 - __bytesSent__: The number of bytes sent to the server as part of the upload. (long)
+
 - __responseCode__: The HTTP response code returned by the server. (long)
+
 - __response__: The HTTP response returned by the server. (DOMString)
 
 Description

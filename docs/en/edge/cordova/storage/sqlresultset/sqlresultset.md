@@ -27,7 +27,9 @@ Properties
 -------
 
 - __insertId__: The row ID of the row that the `SQLResultSet` object's SQL statement inserted into the database.
+
 - __rowsAffected__: The number of rows changed by the SQL statement, zero if the statement did not affect any rows.
+
 - __rows__: a `SQLResultSetRowList` representing the rows returned, empty if no rows are returned.
 
 Details

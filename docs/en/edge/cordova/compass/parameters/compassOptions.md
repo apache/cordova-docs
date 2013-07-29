@@ -26,16 +26,20 @@ Options
 -------
 
 - __frequency__: How often to retrieve the compass heading in milliseconds. _(Number)_ (Default: 100)
+
 - __filter__: The change in degrees required to initiate a watchHeading success callback. _(Number)_
 
 Android Quirks
 ______________
+
 - `filter` is not supported.
 
 Tizen Quirks
 -----------
+
 - `filter` is not supported.
 
 Windows Phone 7 and 8 Quirks
 --------------
+
 - `filter` is not supported.

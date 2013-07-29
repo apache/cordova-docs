@@ -38,7 +38,7 @@ This marshals a request from the WebView to the Android native side,
 more or less boiling down to calling the `action` method on the
 `service` class, with the arguments passed in the `args` Array.
 
-Whether you distribute your plugin as Java file or as a JAR of its own, the plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` folder.
+Whether you distribute your plugin as Java file or as a JAR of its own, the plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` directory.
 
     <plugin name="<service_name>" value="<full_name_including_namespace>"/>
 
@@ -184,6 +184,7 @@ Eclipse can be used to debug an Android project, and the plugins can be debugged
 * Plugins have access to a `CordovaInterface` object. This object has access to the Android `Activity` that is running the application. This is the `Context` required to launch
 a new Android `Intent`. The `CordovaInterface` allows plugins to start an `Activity` for a result, and to set the callback plugin for when the `Intent` comes back to the application. This is important, since the
 `Intent`s system is how Android communicates between processes.
+
 * Plugins do not have direct access to the `Context` as they have in the past. The legacy `ctx` member is deprecated, and will be removed six months after 2.0 is released. All of `ctx` methods exist on the `Context`, so both `getContext()` and `getActivity()` are capable of returning the proper object required.
 
 ## Use the Source

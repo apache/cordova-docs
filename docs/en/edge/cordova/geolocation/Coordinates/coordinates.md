@@ -26,11 +26,17 @@ Properties
 ----------
 
 * __latitude__: Latitude in decimal degrees. _(Number)_
+
 * __longitude__: Longitude in decimal degrees. _(Number)_
+
 * __altitude__: Height of the position in meters above the ellipsoid. _(Number)_
+
 * __accuracy__: Accuracy level of the latitude and longitude coordinates in meters. _(Number)_
+
 * __altitudeAccuracy__: Accuracy level of the altitude coordinate in meters. _(Number)_
+
 * __heading__: Direction of travel, specified in degrees counting clockwise relative to the true north. _(Number)_
+
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
 Description

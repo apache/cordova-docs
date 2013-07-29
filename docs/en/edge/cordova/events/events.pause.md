@@ -27,7 +27,6 @@ The event fires when an application is put into the background.
 Details
 -------
 
-
 The `pause` event fires when the native platform puts the application
 into the background, typically when the user switches to a different
 application.

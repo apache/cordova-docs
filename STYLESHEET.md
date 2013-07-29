@@ -56,6 +56,16 @@ editorial guidelines.
   can go wrong. Try to clarify variations on a procedure within the
   text.
 
+* Use numbered lists for sequential procedures only, otherwise use
+  bullet lists.
+
+* Punctuation at the end of bullet/number list items that consist of
+  full sentences.
+
+* To improve readability, add vertical space around top-level
+  bullet/numbered list items that consist of full sentences. OK to
+  collapse lists of short, easily scannable items.
+
 ## Language and Tone
 
 * Use present tense. "This happens," not "this will happen." (Future

@@ -26,6 +26,7 @@ Properties
 ----------
 
 - __coords__: A set of geographic coordinates. _(Coordinates)_
+
 - __timestamp__: Creation timestamp for `coords`. _(Date)_
 
 Description

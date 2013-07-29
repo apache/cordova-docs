@@ -33,11 +33,17 @@ Returns the date to the success callback with a `properties` object as
 a parameter. That object should have the following properties:
 
 - __year__: The four digit year. _(Number)_
+
 - __month__: The month from (0 - 11). _(Number)_
+
 - __day__: The day from (1 - 31). _(Number)_
+
 - __hour__: The hour from (0 - 23). _(Number)_
+
 - __minute__: The minute from (0 - 59). _(Number)_
+
 - __second__: The second from (0 - 59). _(Number)_
+
 - __millisecond__: The milliseconds (from 0 - 999), not available on all platforms. _(Number)_
 
 The inbound `dateString` parameter should be of type `String`.

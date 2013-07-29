@@ -38,6 +38,7 @@ setPosition
 Set the position of the popover.
 
 __Parameters:__
+
 - `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
 
 Quick Example

@@ -27,7 +27,7 @@ This is a continuation of the Plugin Development Guide for Cordova. Once you hav
             }, "Echo", "echo", [str]);
         };
 
-A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a plugin.xml file.
+A native BlackBerry 10 plugin for Cordova contains JavaScript code and may also contain native code. The Echo plugin example demonstrates how to invoke native functionality from JavaScript. The native and JavaScript code communicate with each other through a framework provided by JNEXT. Every plugin must also include a `plugin.xml` file.
 
 ## Creating the native part of your plugin ##
 
@@ -35,10 +35,11 @@ To create the native portion of your plugin, open the BlackBerry 10 NDK IDE and 
 
 The project created by the IDE contains sample code for a memory plugin. You may replace or modify these files to include your own functionality.
 
-- ***name*_js.hpp**: C++ header for the JNEXT code.
-- ***name*_js.cpp**: C++ code for JNEXT.
+- `*name*_js.hpp`: C++ header for the JNEXT code.
 
-The native interface for the JNEXT extension can be viewed in the plugin header file located in the public folder of your project. It also contains constants and utility functions that can be used in your native code. Your plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:
+- `*name*_js.cpp`: C++ code for JNEXT.
+
+The native interface for the JNEXT extension can be viewed in the plugin header file located in the public directory of your project. It also contains constants and utility functions that can be used in your native code. Your plugin must be derived from JSExt which is defined in plugin.h. That is, you must implement the following class:
 
     class JSExt
     {
@@ -94,6 +95,7 @@ Now we implement these functions in echo_js.cpp. For the Echo example, we implem
 Your native plugin must also implement the following callback functions:
 
 - `extern char* onGetObjList( void );`
+
 - `extern JSExt* onCreateObject( const string& strClassName, const string& strObjId );`
 
 The `onGetObjList` function returns a comma separated list of classes supported by JNEXT. JNEXT uses this function to determine the set of classes that JNEXT can instantiate. In our Echo plugin, we have the following in `echo_js.cpp`:
@@ -116,11 +118,11 @@ The `onCreateObject ` function takes two parameters. The first parameter is the 
 
 The JavaScript portion of your plugin must contain the following files:
 
-- **client.js**: This is considered the client side and contains the API that a Cordova application can call. The API in client.js calls makes calls to index.js. The API in client.js also connects callback functions to the events that fire the callbacks.
+- `client.js`: This is considered the client side and contains the API that a Cordova application can call. The API in `client.js` calls makes calls to `index.js`. The API in `client.js` also connects callback functions to the events that fire the callbacks.
 
-- **index.js**: Cordova loads index.js and makes it accessible through the cordova.exec bridge. The client.js file makes calls to the API in the index.js file, which in turn makes call to JNEXT to communicate with the native side.
+- `index.js`: Cordova loads `index.js` and makes it accessible through the cordova.exec bridge. The `client.js` file makes calls to the API in the `index.js` file, which in turn makes call to JNEXT to communicate with the native side.
 
-The client and server side (client.js and index.js) interacts through the `Cordova.exec `function. So, in client.js you invoke the exec function and provide the necessary arguments. In the Echo plugin, we have the following in the client.js file:
+The client and server side (`client.js` and `index.js`) interacts through the `Cordova.exec `function. So, in `client.js` you invoke the `exec` function and provide the necessary arguments. In the Echo plugin, we have the following in the `client.js` file:
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
@@ -131,7 +133,7 @@ The client and server side (client.js and index.js) interacts through the `Cordo
         }
     };
 
-Now, index.js interacts with the native side using JNEXT. So you attach a constructor function named Echo to JNEXT. Within the constructor you perform the following key operations using the init function:
+Now, `index.js` interacts with the native side using JNEXT. So you attach a constructor function named Echo to JNEXT. Within the constructor you perform the following key operations using the init function:
 
 - Specify the required module exported by the native side. The name of the required module must match the name of a shared library file (.so file).
 
@@ -139,7 +141,7 @@ Now, index.js interacts with the native side using JNEXT. So you attach a constr
 
 - Create an object by using an acquired module and save the ID that's returned by the call.
 self.m_id = JNEXT.createObject("libecho.Echo");
-When your application calls the echo function in client.js, that call in turn calls the echo function in index.js, where the PluginResult object sends a response (data) back to client.js. Since the args argument passed into the functions was converted by JSON.stringfy() and encoded as a URIcomponent, you must call the following:
+When your application calls the echo function in `client.js`, that call in turn calls the echo function in `index.js`, where the PluginResult object sends a response (data) back to `client.js`. Since the args argument passed into the functions was converted by JSON.stringfy() and encoded as a URIcomponent, you must call the following:
 
 `data = JSON.parse(decodeURIComponent(args.data));`
 
@@ -158,20 +160,30 @@ You can now send the data back. Let’s put it all together:
 
 ## Architecture of the plugin ##
 
-You can place the artifacts of the plugin, which includes the plugin.xml file, the source files (JavaScript, C++), and the binary files (.so) within any directory structure, as long as you correctly specify the file locations in the plugin.xml file. Below we show a typical structure that you can follow:
+You can place the artifacts of the plugin, which includes the
+`plugin.xml` file, the source files (JavaScript, C++), and the binary
+files (`.so`) within any directory structure, as long as you correctly
+specify the file locations in the `plugin.xml` file. A typical structure
+looks like this:
 
-***your_project_folder*** (>plugin.xml)
+***your_project_directory*** (>plugin.xml)
 
 - **www** (>client.js)
 - **src**
   - **blackberry10** (>index.js, **native** >*.cpp, *.hpp)
-  - **device** (>*biary file* *.so)
+  - **device** (>*binary file* *.so)
   - **simulator** (>*binary file* *.so)
 
-(The list shows the hierarchical relationship among the top level folders. The parenthesis shows the contents of a given folder. All folder names appear in bold text. File names are preceded by the '>' sign.)
+(The list shows the hierarchical relationship among the top-level
+folders. The parenthesis shows the contents of a given directory. All
+directory names appear in bold text. File names are preceded by the `>`
+sign.)
 
-## Contents of the plugin.xml file##
-The plugin.xml file contains the namespace of the extension and other metadata. Define the namespace and specify other metadata for the Echo plugin as follows:
+## Contents of the `plugin.xml` file##
+
+The `plugin.xml` file contains the namespace of the extension and other
+metadata. Define the namespace and specify other metadata for the Echo
+plugin as follows:
 
     <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="org.apache.cordova.blackberry.echo"

@@ -26,8 +26,11 @@ Properties
 ----------
 
 - __code__: One of the predefined error codes listed below. (Number)
+
 - __source__: URI to the source. (String)
+
 - __target__: URI to the target. (String)
+
 - __http_status__: HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (Number)
 
 Constants

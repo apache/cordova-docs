@@ -35,7 +35,9 @@ current interface.
 Cordova for BlackBerry has the following software requirements:
 
 -   Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
+
 -   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
+
 -   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
 
 ## Setting up your signing keys
@@ -48,19 +50,22 @@ Before starting development, you'll need to register for your code signing key a
 
 ## Creating your project
 
-To create a new project, you use the `create` command to set up the folder structure for your app.
+To create a new project, you use the `create` command to set up the directory structure for your app.
 
-1.  On the command line, navigate to the folder where you extracted Cordova.
+1.  On the command line, navigate to the directory where you extracted Cordova.
+
 2.  Run the `create` command using the following syntax:
 
         bin/create <path-to-project> <project-package> <project-name>
 
-This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
+This command creates the directory structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www directory, or in a subdirectory within it.
 
 where
 
 - '<path-to-project>' specifies the directory you want the project created in
+
 - '<project-package>' specifies a reverse domain style identifier
+
 - '<project-name>' specifies the apps display name
 
 *Note*: the create command bootstraps dependency installation through the 'npm install' command. Depending on installation directory and system permissions, this may require admin privileges.
@@ -79,9 +84,13 @@ To add a target, on the command line, type the following command:
 where
 
 -   `<name>`  specifies a unique name for the target.
+
 -   `<ip-address>`  specifies the ip address of the BlackBerry device or emulator.
+
 -   `-t <device | simulator>` specifies the target type. If not provided, the default value is device.
+
 -   `-p|--password <password>`  specifies the password for the device or emulator. This is required only if the device or emulator is password protected.
+
 -   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
 
 ###Remove a target
@@ -101,6 +110,7 @@ To specify a specific target as the default, on the command line, type the follo
 To build your app, run the build script. You can build the app in either release mode or in debug mode.
 
 -   When you build the app in release mode, you are preparing it for distribution through BlackBerry World. The script packages your app resources and plugins together in a .bar file, then signs the app.
+
 -   When you build the app in debug mode, you are preparing it to be tested. The script packages your app resources and plugins together in a .bar file, but does not sign it. The script can also deploy the app onto a previously defined target. If you have not already created and installed a debug token, you can supply the keystore password, and the build script will create and install the debug token for you as well.
 
     Debug mode also enables Web Inspector for the app, which allows you to remotely inspect the source code. A prompt displays the URL that you can use to connect to and inspect your app. For more information on using Web Inspector, see [Debugging using Web Inspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
@@ -114,7 +124,9 @@ To build your app in release mode, on the command line, type the following comma
 where
 
 -   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
+
 -   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
+
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
 ###Build your app in debug mode
@@ -126,8 +138,11 @@ To build your app in release mode, on the command line, type the following comma
 where
 
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or emulator and you have not created a default target. Additionally, if `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
+
 -   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.
+
 -   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools.
+
 -   `-ll|--loglevel <level>`  specifies the log level. The log level may be one of `error`, `warn`, or `verbose`.
 
 Note that all of these parameters are optional. If you have previously defined a default target (and installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:
@@ -145,6 +160,7 @@ To deploy your app to a device or emulator, on a command line type the following
         <path-to-project>/cordova/run <target> [--no-build]
 
 where
+
 -   `<target>`  specifies the name of a previously added target. If `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
 
 -   `-no--build` will use the most recently built version of the application rather than re-building. This is useful to test an application in release mode.

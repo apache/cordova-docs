@@ -50,7 +50,9 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 ## 2. Install SDK + Cordova
 
 - Download and install the [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
+
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp7` subfolder, `lib\windows-phone-8\wp8` contains the Windwos Phone 8 version of Cordova.
+
 - Copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
 
 ## 2.1. Building the template
@@ -63,6 +65,7 @@ In order to simplify the development process, Cordova comes with a script to bui
 
 - The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
 "My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
+
 - If you run the batch file from the command line, you can also call with a parameter to install automatically
 
 Run the script :
@@ -72,13 +75,17 @@ Run the script :
 ## 3. Set up New Project
 
 - Open Visual Studio Express for Windows Phone and choose **New Project**.
+
 - Select **CordovaWP7**. (The version number is displayed in the template description.)
+
 - Give the project a name, and select __OK__.
 
 ## 4. Review the project structure
 
 - The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
+
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
+
 - Note: This screen capture was from the wp8 cordova-2.3.0 download, your listing will vary based on the actual version installed.
 
 ![](img/guide/platforms/wp8/projectStructure.png)
@@ -88,7 +95,9 @@ Run the script :
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 7.
 
 - Make sure your phone is connected, and the screen is unlocked.
+
 - In Visual Studio, select 'Device' from the top drop-down menu.
+
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp7/wpd.png)

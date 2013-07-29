@@ -32,4 +32,5 @@ Options
 -------
 
 - __filter__: The search string used to filter contacts. _(DOMString)_ (Default: `""`)
+
 - __multiple__: Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: `false`)

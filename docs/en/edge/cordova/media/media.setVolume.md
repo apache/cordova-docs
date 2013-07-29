@@ -71,7 +71,6 @@ Quick Example
         }, 5000);
     }
 
-
 Full Example
 ------------
 

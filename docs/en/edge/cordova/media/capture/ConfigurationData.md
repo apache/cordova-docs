@@ -41,7 +41,9 @@ Properties
 ----------
 
 - __type__: The ASCII-encoded lowercase string representing the media type. (DOMString)
+
 - __height__: The height of the image or video in pixels.  The value is zero for sound clips. (Number)
+
 - __width__: The width of the image or video in pixels.  The value is zero for sound clips. (Number)
 
 Quick Example

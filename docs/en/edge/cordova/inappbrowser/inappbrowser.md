@@ -78,6 +78,7 @@ addEventListener
     ref.addEventListener(eventname, callback);
 
 - __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+
 - __eventname__: the event to listen for _(String)_
 
   - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
@@ -139,6 +140,7 @@ removeEventListener
     ref.removeEventListener(eventname, callback);
 
 - __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
+
 - __eventname__: the event to stop listening for. _(String)_
 
   - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
@@ -327,7 +329,6 @@ Full Example
       </body>
     </html>
 
-
 executeScript
 =============
 
@@ -336,9 +337,11 @@ executeScript
     ref.executeScript(details, callback);
 
 - __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
+
 - __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
   - __file__: URL of the script to inject.
   - __code__: Text of the script to inject.
+
 - __callback__: the function that executes after the JavaScript code is injected.
     - If the injected script is of type `code`, the callback executes
       with a single parameter, which is the return value of the
@@ -415,9 +418,11 @@ insertCSS
     ref.insertCSS(details, callback);
 
 - __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+
 - __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
   - __file__: URL of the stylesheet to inject.
   - __code__: Text of the stylesheet to inject.
+
 - __callback__: the function that executes after the CSS is injected.
 
 Supported Platforms
@@ -491,6 +496,9 @@ Properties
 ----------
 
 - __type__: the eventname, either `loadstart`, `loadstop`, `loaderror`, or `exit`. _(String)_
+
 - __url__: the URL that was loaded. _(String)_
+
 - __code__: the error code, only in the case of `loaderror`. _(Number)_
+
 - __message__: the error message, only in the case of `loaderror`. _(String)_

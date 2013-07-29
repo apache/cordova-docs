@@ -97,7 +97,7 @@ Windows Phone 7 and 8 Quirks
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
-
 Tizen Quirks
 -----------
+
 - Returns the device model assigned by the vendor, for example, `TIZEN`

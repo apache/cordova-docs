@@ -26,6 +26,7 @@ Properties
 ----------
 
 - __name__: The name of the file system. _(DOMString)_
+
 - __root__: The root directory of the file system. _(DirectoryEntry)_
 
 Details
