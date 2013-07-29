@@ -58,13 +58,12 @@ An example:
 
 A list of supported elements across major platforms which are supported in Apache Cordova follow.
 
-### `<plugin>`
+### `<feature>`
 
 These elements map to native APIs that the application accesses. At
-runtime, the Apache Cordova framework checks the `<plugin>` elements
-and maps them to native code to enable your Cordova application to
-access device APIs otherwise unavailable to typical web-based
-applications.
+runtime, the Apache Cordova framework maps `<feature>` elements to
+native code to enable your Cordova application to access device APIs
+otherwise unavailable to typical web-based applications.
 
 ### `<access>`
 
