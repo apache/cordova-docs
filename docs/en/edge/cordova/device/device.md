@@ -41,40 +41,48 @@ Since `device` is assigned to the `window` object, it is implicitly in the globa
     var phoneName = window.device.name;
     var phoneName = device.name;
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin rm org.apache.cordova.core.device
 
-    <plugin name="Device" value="org.apache.cordova.Device" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
+    <!-- app/res/xml/config.xml -->
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.Device" />
+    </feature>
+
+    <!-- app/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
+    <!-- www/plugins.xml -->
+    <feature name="Device">
+        <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+    </feature>
 
-    <plugin name="Device" value="org.apache.cordova.device.Device" />
-
-#### www/config.xml
-
+    <!-- www/config.xml -->
     <feature id="blackberry.app" required="true" version="1.0.0.0" />
     <rim:permissions>
         <rim:permit>read_device_identifying_information</rim:permit>
     </rim:permissions>
 
-### iOS
+* iOS
 
-    No permissions are required.
+  No special permissions are required.
 
-### Windows Phone
+* Windows Phone
 
-#### Properties/WPAppManifest.xml
-
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
         <Capability Name="ID_CAP_IDENTITY_DEVICE" />
@@ -83,10 +91,9 @@ Permissions
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
+* Tizen
 
-#### config.xml
-
+    <!-- config.xml -->
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

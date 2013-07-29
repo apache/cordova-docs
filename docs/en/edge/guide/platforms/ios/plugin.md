@@ -101,7 +101,9 @@ callback does not fire.
 
 We would add the following to the `<plugins>` tag of the project's `config.xml` file:
 
-    <plugin name="Echo" value="Echo" />
+    <feature name="Echo">
+        <param name="ios-package" value="Echo" />
+    </feature>
 
 Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins folder inside our Cordova-iOS
 application folder:

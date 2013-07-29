@@ -39,35 +39,45 @@ Arguments
 - compassOptions
 - compassHeading
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+        $ cordova plugin rm org.apache.cordova.core.device-orientation
 
-    <plugin name="Compass" value="org.apache.cordova.CompassListener" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-### BlackBerry WebWorks
+* Android
 
-    No permissions are required.
+    <!-- app/res/xml/config.xml -->
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.CompassListener" />
+    </feature>
 
-### iOS
+* BlackBerry WebWorks
 
-#### config.xml
+  No special permissions are required.
 
-    <plugin name="Compass" value="CDVLocation" />
+* iOS
 
-### Windows Phone
+    <!-- config.xml -->
+    <feature name="Compass">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
 
-#### Properties/WPAppManifest.xml
+* Windows Phone
 
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_SENSORS" />
     </Capabilities>
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
+* Tizen
 
-    No permissions are required.
+  No special permissions are required.

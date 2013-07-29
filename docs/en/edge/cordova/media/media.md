@@ -80,37 +80,46 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
 
-    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
+    <!-- app/res/xml/config.xml -->
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.AudioHandler" />
+    </feature>
+
+    <!-- app/AndroidManifest.xml -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
+    <!-- www/plugins.xml -->
+    <feature name="Capture">
+        <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+    </feature>
 
-    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture" />
+* iOS
 
-### iOS
+    <!-- config.xml -->
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
 
-#### config.xml
+* Windows Phone
 
-    <plugin name="Media" value="CDVSound" />
-
-### Windows Phone
-
-#### Properties/WPAppManifest.xml
-
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_MEDIALIB" />
         <Capability Name="ID_CAP_MICROPHONE" />
@@ -121,9 +130,9 @@ Permissions
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
+* Tizen
 
-    No permissions are required.
+  No special permissions are required.
 
 ### Windows Phone Quirks
 

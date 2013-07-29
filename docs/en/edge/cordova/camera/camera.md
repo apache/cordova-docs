@@ -30,43 +30,52 @@ Methods
 - camera.getPicture
 - camera.cleanup
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+        $ cordova plugin rm org.apache.cordova.core.camera
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest
+* Android
 
+    <!-- app/res/xml/config.xml -->
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+    </feature>
+
+    <!-- app/AndroidManifest -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-### BlackBerry WebWorks
+* BlackBerry WebWorks
 
-#### www/plugins.xml
+    <!-- www/plugins.xml -->
+    <feature name="Camera">
+        <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+    </feature>
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
-
-#### www/config.xml
-
+    <!-- www/config.xml -->
     <feature id="blackberry.media.camera" />
 
     <rim:permissions>
         <rim:permit>use_camera</rim:permit>
     </rim:permissions>
 
-### iOS
+* iOS
 
-#### config.xml
+    <!-- config.xml -->
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
 
-    <plugin name="Camera" value="CDVCamera" />
+* Windows Phone
 
-### Windows Phone
-
-#### Properties/WPAppManifest.xml
-
+    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_ISV_CAMERA" />
         <Capability Name="ID_HW_FRONTCAMERA" />
@@ -74,10 +83,9 @@ Permissions
 
 Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-### Tizen
+* Tizen
 
-#### config.xml
-
+    <!-- config.xml -->
     <feature name="http://tizen.org/api/application" required="true"/>
     <feature name="http://tizen.org/api/application.launch" required="true"/>
 

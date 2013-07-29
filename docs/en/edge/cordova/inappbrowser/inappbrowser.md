@@ -39,26 +39,36 @@ Methods
 - executeScript
 - insertCSS
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin rm org.apache.cordova.core.inappbrowser
 
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-### iOS
+* Android
 
-#### config.xml
+    <!-- app/res/xml/config.xml -->
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    </feature>
 
-    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+* iOS
 
-### Windows Phone 7 + 8
+    <!-- config.xml -->
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
 
-#### config.xml
+* Windows Phone 7 + 8
 
-    <plugin name="InAppBrowser" />
+    <!-- config.xml -->
+    <feature name="InAppBrowser" />
 
 addEventListener
 ================

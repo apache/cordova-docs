@@ -51,9 +51,7 @@ An example:
 
         <widget>
             <preference name="MySetting" value="true" />
-            <plugins>
-                <plugin name="MyPlugin" value="MyPluginClass" />
-            </plugins>
+            <feature name="MyPlugin" value="MyPluginClass" />
             <access origin="*" />
             <content src="index.html" />
         </widget>
