@@ -74,6 +74,9 @@ command such as the following:
 
         $ cordova create hello com.example.hello HelloWorld
 
+It may take some time for the command to complete, so be patient. Run
+the `cordova -d` to see information about progress.
+
 The first argument specifies a _hello_ directory to be generated
 for your project. Its `www` subdirectory houses your application's
 home page, along with various resources under `css`, `js`, and `img`,
