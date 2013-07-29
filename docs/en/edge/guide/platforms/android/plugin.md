@@ -118,7 +118,9 @@ If you do not need to run on the UI thread, but do not want to block the WebCore
 
 Add the following to our `config.xml` file:
 
-    <plugin name="Echo" value="org.apache.cordova.plugin.Echo" />
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
 
 Then add the following file to
 `src/org/apache/cordova/plugin/Echo.java` inside our Cordova-Android
