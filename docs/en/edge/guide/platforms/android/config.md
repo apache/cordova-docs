@@ -27,7 +27,7 @@ across the application, and per CordovaWebView instance.
 Various other preferences (as `<preference>` tags) default on not
 breaking existing apps. The available preferences are:
 
-* `useBrowserHistory` (boolean, defaults to true): set to false if you
+* `useBrowserHistory` (boolean, defaults to `true`): set to false if you
   want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
@@ -49,14 +49,14 @@ breaking existing apps. The available preferences are:
 * `loadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
-* `keepRunning` (boolean, defaults to true): Determines whether
+* `keepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
 
 * `splashscreen`: The name of the file minus its extension in the
   `res/drawable` directory.  If you have multiple assets, they all
   must share this common name in their respective directories.
 
-* `disallowOverscroll` (boolean, defaults to false): set to `true` to
+* `disallowOverscroll` (boolean, defaults to `false`): set to `true` to
   disable the glow when a user scrolls beyond the edge of the webview.
 
 ## `<plugin>`

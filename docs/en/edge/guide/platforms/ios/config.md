@@ -29,39 +29,39 @@ directory.
 Various preferences (as `<preference>` tags) default on not breaking
 existing apps. The available preferences are:
 
-* `DisallowOverscroll` (boolean, defaults to false): set to `true` if
+* `DisallowOverscroll` (boolean, defaults to `false`): set to `true` if
   you don't want the WebView to rubber-band.
 
 * `TopActivityIndicator` (string, defaults to `gray`): this is the top
   spinning throbber in the status/battery bar, valid values are
   `whiteLarge`, `white`, and `gray`.
 
-* `EnableLocation` (boolean, defaults to false): set to true, to
+* `EnableLocation` (boolean, defaults to `false`): set to true, to
   initialize the Geolocation plugin at start-up (so the fix on your
   location can be more accurate) **DEPRECATED**: please set the
   `onload` attribute of the `Geolocation` plugin to `true`
   instead.
 
-* `EnableViewportScale` (boolean, defaults to false): set to true to
+* `EnableViewportScale` (boolean, defaults to `false`): set to true to
   prevent viewport scaling through a meta tag.
 
-* `AutoHideSplashScreen` (boolean, defaults to true): set to false to
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to false to
   control when the splashscreen is hidden through a JavaScript API.
 
-* `FadeSplashScreen` (boolean, defaults to true): set to false to
+* `FadeSplashScreen` (boolean, defaults to `true`): set to false to
   prevent the splash-screen to fade in and out when showing or hiding
   it.
 
 * `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
   Fade duration in seconds.
 
-* `ShowSplashScreenSpinner` (boolean, defaults to true): set to false
+* `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to false
   to hide the splash-screen spinner.
 
-* `MediaPlaybackRequiresUserAction` (boolean, defaults to false): set
+* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
   to true to not allow autoplayed HTML5 video.
 
-* `AllowInlineMediaPlayback` (boolean, defaults to false): set to
+* `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
   true to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
   attribute.
@@ -72,20 +72,20 @@ existing apps. The available preferences are:
   allow local backups (iTunes sync). Set to `none` to not allow any
   backups of web storage.
 
-* `KeyboardDisplayRequiresUserAction` (boolean, defaults to true):
+* `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
   set to false to open the keyboard when form elements get focus via
   the JavaScript focus() call.
 
-* `SuppressesIncrementalRendering` (boolean, defaults to false): set
+* `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
   to true to wait until all new view content has been received
   before it is rendered.
 
-* `HideKeyboardFormAccessoryBar` (boolean, defaults to false): set to
+* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set to
   true to hide the additional toolbar that is on top of the
   keyboard. This toolbar features the __Prev__, __Next__, and __Done__
   buttons.
 
-* `KeyboardShrinksView` (boolean, defaults to false): set to `true` to
+* `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
   shrink the WebView when the keyboard comes up. The WebView shrinks
   instead of the viewport shrinking and the page scrollable. This
   applies to apps that position their elements relative to the bottom
