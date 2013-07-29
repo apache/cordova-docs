@@ -75,7 +75,7 @@ directory:
 
 ## Deploy to Emulator
 
-Before testing an app on either on an emulator or a device, you need to add a _target_ to your project. Each is identified with a unique name, and associated with an IP address. You need to get the IP address from the emulator before you use it to view apps.
+Before testing an app on either an emulator or a device, you need to add a _target_ to your project. Each is identified with a unique name, and associated with an IP address. You need to get the IP address from the emulator before you use it to view apps.
 
 Launch the emulator image, then choose __Settings__ from the home screen:
 
@@ -149,10 +149,10 @@ You need to run a different `build` command to create a release version suitable
 
 Windows
 
-    platforms\blackberry10\cordova\build.bat release --keystorepass mysecret
+    platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
 
 Mac/Linux
 
-    platforms/blackberry10/cordova/build release --keystorepass mysecret
+    platforms/blackberry10/cordova/build --release --keystorepass mysecret
 
 --keystorepass specifies the password you defined when you configured your computer to sign applications.
