@@ -51,7 +51,7 @@ features the following attributes:
   A version number for the plugin, that matches the following
   major-minor-patch style regular expression:
 
-    ^\d+[.]\d+[.]\d+$
+        ^\d+[.]\d+[.]\d+$
 
 ## `<engines>` and `<engine>` elements
 
@@ -68,7 +68,7 @@ Similar to the `<plugin>` element's `version` attribute, the specified
 version string should match a major-minor-patch string conforming to
 the regular expression:
 
-    ^\d+[.]\d+[.]\d+$
+        ^\d+[.]\d+[.]\d+$
 
 Engine elements may also specify fuzzy matches to avoid repetition,
 and to reduce maintenance when the underlying platform is updated.
@@ -169,18 +169,18 @@ Details for the `<js-module>` tag:
 
 * Three tags are allowed within `<js-module>`:
 
-    * `<clobbers target="some.value" />` indicates that the
+    * `<clobbers target="some.value"/>` indicates that the
       `module.exports` is inserted into the `window` object as
       `window.some.value`. You can have as many `<clobbers>` as you
       like. Any object not available on `window` is created.
 
-    * `<merges target="some.value" />` indicates that the module
+    * `<merges target="some.value"/>` indicates that the module
       should be merged with any existing value at `window.some.value`.
       If any key already exists, the module's version overrides the
       original. You can have as many `<merges>` as you like. Any
       object not available on `window` is created.
 
-    * `<runs />` means that your code should be specified with
+    * `<runs/>` means that your code should be specified with
       `cordova.require`, but not installed on the `window`
       object. This is useful when initializing the module, attaching
       event handlers or otherwise. You can only have up to one
