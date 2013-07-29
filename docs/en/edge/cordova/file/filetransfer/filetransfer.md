@@ -251,11 +251,11 @@ __Quick Example__
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 
-          var win = function(r) {
+    var win = function(r) {
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
-        }
+    }
 
     var fail = function(error) {
         alert("An error has occurred: Code = " + error.code);
@@ -263,18 +263,18 @@ __Quick Example__
         console.log("upload error target " + error.target);
     }
 
-        var options = new FileUploadOptions();
-        options.fileKey="file";
-        options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-        options.mimeType="text/plain";
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
+    options.mimeType="text/plain";
 
     var params = {};
-        params.value1 = "test";
-        params.value2 = "param";
+    params.value1 = "test";
+    params.value2 = "param";
 
-        options.params = params;
+    options.params = params;
 
-        var ft = new FileTransfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort(win, fail);
 
