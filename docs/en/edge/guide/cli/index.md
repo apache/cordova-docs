@@ -230,33 +230,33 @@ The `cordova plugin add` command requires you to specify the
 repository for the plugin code.  Here are examples of features you
 might add:
 
-* Basic device information:
+* Basic device information (Device API):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
-* Network and battery status:
+* Network Connection and Battery Events:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
 
-* Accelerometer, compass, and geolocation:
+* Accelerometer, Compass, and Geolocation:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
 
-* Camera, media capture, and media playback:
+* Camera, Media playback and Capture:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
 
-* Access files on device or network:
+* Access files on device or network (File API):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
 
-* Notifications via dialog box or vibration:
+* Notification via dialog box or vibration:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
@@ -269,11 +269,11 @@ might add:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-* Splash Screen:
+* Splashscreen:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
 
-* In-app browser:
+* Open new browser windows (InAppBrowser):
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
 
