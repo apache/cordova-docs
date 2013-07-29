@@ -135,31 +135,31 @@ __Quick Example__
 
     function setFolderMetadata(localFileSystem, subFolder, metadataKey, metadataValue)
     {
-            var onSetMetadataWin = function() {
-              console.log("success setting metadata")
-            }
+        var onSetMetadataWin = function() {
+            console.log("success setting metadata")
+        }
         var onSetMetadataFail = function() {
-              console.log("error setting metadata")
+            console.log("error setting metadata")
         }
 
-            var onGetDirectoryWin = function(parent) {
-              var data = {};
-              data[metadataKey] = metadataValue;
-              parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
-            }
-            var onGetDirectoryFail = function() {
-              console.log("error getting dir")
-            }
+        var onGetDirectoryWin = function(parent) {
+            var data = {};
+            data[metadataKey] = metadataValue;
+            parent.setMetadata(onSetMetadataWin, onSetMetadataFail, data);
+        }
+        var onGetDirectoryFail = function() {
+            console.log("error getting dir")
+        }
 
-            var onFSWin = function(fileSystem) {
-              fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
-            }
+        var onFSWin = function(fileSystem) {
+            fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
+        }
 
-            var onFSFail = function(evt) {
-                  console.log(evt.target.error.code);
-            }
+        var onFSFail = function(evt) {
+            console.log(evt.target.error.code);
+        }
 
-            window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
+        window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
     }
 
         setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
@@ -200,7 +200,7 @@ __Quick Example__
         alert(error.code);
     }
 
-        function moveDir(entry) {
+    function moveDir(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
@@ -233,15 +233,15 @@ __Parameters:__
 
 __Quick Example__
 
-        function win(entry) {
-            console.log("New Path: " + entry.fullPath);
-        }
+    function win(entry) {
+        console.log("New Path: " + entry.fullPath);
+    }
 
-        function fail(error) {
-            alert(error.code);
-        }
+    function fail(error) {
+        alert(error.code);
+    }
 
-        function copyDir(entry) {
+    function copyDir(entry) {
         var parent = document.getElementById('parent').value,
             parentName = parent.substring(parent.lastIndexOf('/')+1),
             newName = document.getElementById('newName').value,
