@@ -34,6 +34,7 @@ The battery status handler is passed an object that contains two
 properties:
 
 - __level__: The percentage of battery charge (0-100). _(Number)_
+
 - __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
 
 Applications typically should use `window.addEventListener` to

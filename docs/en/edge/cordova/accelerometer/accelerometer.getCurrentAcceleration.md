@@ -108,5 +108,7 @@ iOS Quirks
 -------------
 
 - iOS doesn't recognize the concept of getting the current acceleration at any given point.
+
 - You must watch the acceleration and capture the data at given time intervals.
+
 - Thus, the `getCurrentAcceleration` function yields the last value reported from a `watchAccelerometer` call.

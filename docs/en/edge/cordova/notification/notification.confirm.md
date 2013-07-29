@@ -25,8 +25,11 @@ Displays a customizable confirmation dialog box.
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
 - __message__: Dialog message. _(String)_
+
 - __confirmCallback__: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). _(Function)_
+
 - __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)
+
 - __buttonLabels__: Comma-separated string specifying button labels. _(String)_ (Optional, defaults to `OK,Cancel`)
 
 Description

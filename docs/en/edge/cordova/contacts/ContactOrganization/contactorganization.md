@@ -26,9 +26,13 @@ Properties
 ----------
 
 - __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
+
 - __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)
+
 - __name__: The name of the organization. _(DOMString)_
+
 - __department__: The department the contract works for. _(DOMString)_
+
 - __title__: The contact's title at the organization. _(DOMString)_
 
 Details
@@ -123,7 +127,6 @@ Full Example
       </body>
     </html>
 
-
 Android 2.X Quirks
 ------------------
 
@@ -131,17 +134,27 @@ Android 2.X Quirks
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
+
 - __pref__: Not supported by BlackBerry devices, returning `false`.
+
 - __type__: Not supported by BlackBerry devices, returning `null`.
+
 - __name__: Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
+
 - __department__: Not supported, returning `null`.
+
 - __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
 
 iOS Quirks
 -----------
+
 - __pref__: Not supported on iOS devices, returning `false`.
+
 - __type__: Not supported on iOS devices, returning `null`.
+
 - __name__: Partially supported.  The first organization name is stored in the iOS __kABPersonOrganizationProperty__ field.
+
 - __department__: Partially supported.  The first department name is stored in the iOS __kABPersonDepartmentProperty__ field.
+
 - __title__: Partially supported.  The first title is stored in the iOS __kABPersonJobTitleProperty__ field.
 

@@ -28,7 +28,9 @@ Properties
 ----------
 
 - __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)_
+
 - __value__: The value of the field, such as a phone number or email address. _(DOMString)_
+
 - __pref__: Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
 Details
@@ -150,10 +152,13 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __type__: Partially supported.  Used for phone numbers.
+
 - __value__: Supported.
+
 - __pref__: Not supported, returning `false`.
 
 iOS Quirks
 -----------
+
 - __pref__: Not supported, returning `false`.
 

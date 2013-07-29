@@ -57,7 +57,7 @@ emulator executables.
 ## Launch emulator
 
 For BlackBerry projects, please make sure you customize the
-`project.properties` file in the root of your Cordova project folder.
+`project.properties` file in the root of your Cordova project directory.
 You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 emulator executables.

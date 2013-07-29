@@ -43,7 +43,7 @@ to the `window.echo` function:
 
 ## Modifying plugins.xml
 
-Your project's `www/plugins.xml` folder contains all of the necessary
+Your project's `www/plugins.xml` directory contains all of the necessary
 references to your Cordova project's plugins. Add an
 additional reference so that when `cordova.exec` is called, Cordova
 knows how to map the `Echo` argument of `cordova.exec` to the `Echo`
@@ -58,12 +58,12 @@ class that we want to write natively:
 ## Adding Echo.java
 
 If you notice the structure of the value attribute, you'll see a
-defined path that leads to the Echo plugin. In the root folder of the
-Cordova BlackBerry WebWorks repo, look for a folder called framework.
-This folder contains all of the source code that runs natively on the
+defined path that leads to the Echo plugin. In the root directory of the
+Cordova BlackBerry WebWorks repo, look for a directory called `framework`.
+This directory contains all of the source code that runs natively on the
 BlackBerry. Navigate to `framework/ext/src/org/apache/cordova`. At
-this point, you'll see all of the plugin folders, inside of which is
-the source code. So add the folder echo to
+this point, you'll see all of the plugin directorys, inside of which is
+the source code. So add the directory echo to
 `framework/ext/src/org/apache/cordova/echo` and create a file called
 `Echo.java` at `framework/ext/src/org/apache/cordova/echo/Echo.java`.
 
@@ -131,7 +131,7 @@ status exceptions like `PluginResult.Status.ERROR`,
 `PluginResult.Status.INVALID_ACTION`. When passed back, these types of
 results fire the fail callback in JavaScript.
 
-## Updating the .jar in your project's www folder
+## Updating the .jar in your project's www directory
 
 The added `Echo.java` needs to be updated in your project.  To build
 the `.jar` file, Navigate to the BlackBerry WebWorks repo's root

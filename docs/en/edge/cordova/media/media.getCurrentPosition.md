@@ -28,6 +28,7 @@ Parameters
 ----------
 
 - __mediaSuccess__: The callback that is passed the current position in seconds.
+
 - __mediaError__: (Optional) The callback to execute if an error occurs.
 
 Description
@@ -41,10 +42,15 @@ Supported Platforms
 -------------------
 
 - Android
+
 - BlackBerry WebWorks (OS 5.0 and higher)
+
 - iOS
+
 - Windows Phone 7 and 8
+
 - Tizen
+
 - Windows 8
 
 Quick Example

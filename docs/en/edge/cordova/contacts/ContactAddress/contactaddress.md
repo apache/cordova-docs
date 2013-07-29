@@ -26,12 +26,19 @@ Properties
 ----------
 
 - __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
+
 - __type__: A string indicating what type of field this is, _home_ for example. _(DOMString)_
+
 - __formatted__: The full address formatted for display. _(DOMString)_
+
 - __streetAddress__: The full street address. _(DOMString)_
+
 - __locality__: The city or locality. _(DOMString)_
+
 - __region__: The state or region. _(DOMString)_
+
 - __postalCode__: The zip code or postal code. _(DOMString)_
+
 - __country__: The country name. _(DOMString)_
 
 Details
@@ -144,17 +151,27 @@ Android 2.X Quirks
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
+
 - __pref__: Not supported on BlackBerry devices, returning `false`.
+
 - __type__: Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
+
 - __formatted__: Partially supported.  Returns a concatenation of all BlackBerry address fields.
+
 - __streetAddress__: Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
+
 - __locality__: Supported.  Stored in BlackBerry __city__ address field.
+
 - __region__: Supported.  Stored in BlackBerry __stateProvince__ address field.
+
 - __postalCode__: Supported.  Stored in BlackBerry __zipPostal__ address field.
+
 - __country__: Supported.
 
 iOS Quirks
 ----------
+
 - __pref__: Not supported on iOS devices, returning `false`.
+
 - __formatted__: Currently not supported.
 

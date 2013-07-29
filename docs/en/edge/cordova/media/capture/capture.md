@@ -58,14 +58,18 @@ Properties
 ----------
 
 - __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
+
 - __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
+
 - __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
 
 Methods
 -------
 
 - `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
+
 - `capture.captureImage`: Launch the device's camera application to take photos.
+
 - `capture.captureVideo`: Launch the device's video recorder application to record videos.
 
 Supported Platforms

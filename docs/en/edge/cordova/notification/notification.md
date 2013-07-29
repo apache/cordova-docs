@@ -42,7 +42,6 @@ Interface, to add or remove this feature for a project:
         $ cordova plugin rm org.apache.cordova.core.dialogs
         $ cordova plugin rm org.apache.cordova.core.vibration
 
-
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 

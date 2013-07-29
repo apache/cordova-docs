@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
 
-Each plugin class must be registered using the config.xml file, as a &lt;plugin&gt; tag under the &lt;plugins&gt; key.
+Each plugin class must be registered using the config.xml file, as a `<plugin>` tag under the `<plugins>` key.
 
 ## Plugin Class Mapping
 
@@ -48,7 +48,7 @@ reachable by Cordova.
 
 ## Plugin Initialization and Lifetime
 
-There is one instance of a plugin object that is created per-UIWebView, and the lifetime of the instance is tied to the UIWebView. Plugins are not instantiated until they are first referenced by a call from JS, unless the `onload` attribute set within config.xml. E.g.:
+There is one instance of a plugin object that is created per-UIWebView, and the lifetime of the instance is tied to the UIWebView. Plugins are not instantiated until they are first referenced by a call from JavaScript, unless the `onload` attribute set within config.xml. E.g.:
 
     <plugin name="Echo" value="Echo" onload="true" />
 
@@ -76,7 +76,9 @@ What gets dispatched to the plugin via JavaScript's `exec` function gets passed 
     }
 
 1. [CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
+
 2. [CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
+
 3. [CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
 
 ## iOS CDVPluginResult message types
@@ -183,6 +185,7 @@ call, you should use a background thread. For example:
 See other methods that you can override in:
 
 1. [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+
 2. [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
 For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
@@ -200,4 +203,5 @@ running in the iOS 6 Simulator.
 ## Common Pitfalls
 
 * Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
+
 * Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.

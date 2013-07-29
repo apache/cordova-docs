@@ -19,22 +19,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Configuration
 
-The `config.xml` settings file controls various settings of Cordova. This is application wide, and not set per CordovaWebView Instance.
+The `config.xml` file controls various Cordova settings. These apply
+across the application, and per CordovaWebView instance.
 
-## &lt;preference&gt;
+## `<preference>`
 
-Various **other** preferences (as **&lt;preference&gt;** tags) default on not breaking existing apps. The available preferences are:
+Various other preferences (as `<preference>` tags) default on not
+breaking existing apps. The available preferences are:
 
-1. **useBrowserHistory (boolean, defaults to true)** - set to false if you want to use the history shim that was used to work around the hashtag error present in Android 3.x prior to the history fix.  (Note: This setting will be deprecated in April 2013)
-2. **loadingDialog** - Display a native loading dialog when loading the app. The value's format is _Title, Message_
-3. **loadingPageDialog** - Display a native loading dialog when loading sub-pages. The value's format is _Title, Message_
-4. **errorUrl** - Set the error page for your application. Should be located in your Android project in file://android_asset/www/
-5. **backgroundColor** - Set the background color for your application.  Supports a four-byte hex value, with the first byte representing alpha value, and the following three bytes with standard RGB values. (i.e. 0x00000000 = Black)
-6. **loadUrlTimeoutValue** - How much time Cordova should wait before throwing a timeout error on the application.
-7. **keepRunning (boolean, defaults to true)** - Determines whether Cordova will keep running in the background or not
-8. **splashscreen** - The name of the file minus its extension in the `res/drawable` directory.  If you have multiple assets, they all must share this common name in their respective directories.
-9. **disallowOverscroll (boolean, defaults to false)** - set to true if you want to disable the glow when a user scrolls beyond the edge of the webview.
+* `useBrowserHistory` (boolean, defaults to true): set to false if you
+  want to use the history shim that was used to work around the
+  hashtag error present in Android 3.x prior to the history fix.
+  (Note: This setting will be deprecated in April 2013)
 
-## &lt;plugin&gt;
+* `loadingDialog`: Display a native loading dialog when loading the
+  app. The value's format is _Title, Message_
 
-Android supports using &lt;feature&gt; as analogues to &lt;plugin&gt; elements.
+* `loadingPageDialog`: Display a native loading dialog when loading
+  sub-pages. The value's format is _Title, Message_
+
+* `errorUrl`: Set the error page for your application. Should be
+  located in your Android project in file://android_asset/www/
+
+* `backgroundColor`: Set the background color for your application.
+  Supports a four-byte hex value, with the first byte representing
+  alpha value, and the following three bytes with standard RGB
+  values. (i.e. 0x00000000 = Black)
+
+* `loadUrlTimeoutValue`: How much time Cordova should wait before
+  throwing a timeout error on the application.
+
+* `keepRunning` (boolean, defaults to true): Determines whether
+  Cordova stays running in the background.
+
+* `splashscreen`: The name of the file minus its extension in the
+  `res/drawable` directory.  If you have multiple assets, they all
+  must share this common name in their respective directories.
+
+* `disallowOverscroll` (boolean, defaults to false): set to `true` to
+  disable the glow when a user scrolls beyond the edge of the webview.
+
+## `<plugin>`
+
+Android supports using `<feature>` as analogues to `<plugin>` elements.
+

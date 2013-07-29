@@ -26,9 +26,13 @@ Properties
 ----------
 
 - __codecs__: The actual format of the audio and video content. (DOMString)
+
 - __bitrate__: The average bitrate of the content.  The value is zero for images. (Number)
+
 - __height__: The height of the image or video in pixels. The value is zero for audio clips. (Number)
+
 - __width__: The width of the image or video in pixels. The value is zero for audio clips. (Number)
+
 - __duration__: The length of the video or sound clip in seconds. The value is zero for images. (Number)
 
 BlackBerry WebWorks Quirks
@@ -39,9 +43,13 @@ No API provides format information for media files, so the
 the following default values:
 
 - __codecs__: Not supported, and returns `null`.
+
 - __bitrate__: Not supported, and returns zero.
+
 - __height__: Not supported, and returns zero.
+
 - __width__: Not supported, and returns zero.
+
 - __duration__: Not supported, and returns zero.
 
 Android Quirks
@@ -49,9 +57,13 @@ Android Quirks
 Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns `null`.
+
 - __bitrate__: Not supported, and returns zero.
+
 - __height__: Supported: image and video files only.
+
 - __width__: Supported: image and video files only.
+
 - __duration__: Supported: audio and video files only.
 
 iOS Quirks
@@ -59,7 +71,11 @@ iOS Quirks
 Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns null.
+
 - __bitrate__: Supported on iOS4 devices for audio only. Returns zero for images and videos.
+
 - __height__: Supported: image and video files only.
+
 - __width__: Supported: image and video files only.
+
 - __duration__: Supported: audio and video files only.

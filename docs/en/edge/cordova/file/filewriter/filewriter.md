@@ -26,14 +26,23 @@ Properties
 ----------
 
 - __readyState__: One of the three possible states, either `INIT`, `WRITING`, or `DONE`.
+
 - __fileName__: The name of the file to be written. _(DOMString)_
+
 - __length__: The length of the file to be written. _(long)_
+
 - __position__: The current position of the file pointer. _(long)_
+
 - __error__: An object containing errors. _(FileError)_
+
 - __onwritestart__: Called when the write starts. _(Function)_
+
 - __onwrite__: Called when the request has completed successfully.  _(Function)_
+
 - __onabort__: Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
+
 - __onerror__: Called when the write has failed. _(Function)_
+
 - __onwriteend__: Called when the request has completed (either in success or failure).  _(Function)_
 
 The following property is _not_ supported:
@@ -43,8 +52,11 @@ Methods
 -------
 
 - __abort__: Aborts writing the file.
+
 - __seek__: Moves the file pointer to the specified byte.
+
 - __truncate__: Shortens the file to the specified length.
+
 - __write__: Writes data to the file.
 
 Details

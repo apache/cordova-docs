@@ -111,19 +111,27 @@ Cordova The Command-line Interface. For example, in a source-code directory:
 Once created, here's how to use the SDK to modify it:
 
 * Launch the __Eclipse__ application.
+
 * Select the __New Project__ menu item.
+
 * Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
     ![](img/guide/platforms/android/eclipse_new_project.png)
+
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
+
 * Press __Finish__.
 
 Once the Eclipse window opens, a red __X__ may appear to indicate
 unresolved problems. If so, follow these additional steps:
 
-* Right-click on the project folder.
+* Right-click on the project directory.
+
 * In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
+
 * For the project build target, select the highest Android API level you have installed.
+
 * Click __OK__.
+
 * Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
 ## Deploy to Emulator
@@ -179,9 +187,12 @@ For a faster experience, use an Intel-based emulator image:
 * Install one or more `Intel x86 Atom` System Images as well as the
   `Intel Hardware Accelerated Execution Manager`, available under
   __Extras__.
+
 * Run the Intel installer, which is available within your Android SDK
   at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+
 * Create a new AVD with the target set to an Intel image.
+
 * When starting the emulator, ensure there are no error messages
   indicating a failure to load HAX modules.
 

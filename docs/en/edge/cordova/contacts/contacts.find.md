@@ -50,8 +50,11 @@ Parameters
 ----------
 
 - __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
+
 - __contactSuccess__: Success callback function invoked with the contacts returned from the database. [Required]
+
 - __contactError__: Error callback function, invoked when an error occurs. [Optional]
+
 - __contactFindOptions__: Search options to filter contacts. [Optional]
 
 Supported Platforms

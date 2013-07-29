@@ -68,6 +68,7 @@ development. BlackBerry PlayBook and BlackBerry Smartphone WebWorks
 SDKs can be downloaded from the following locations.
 
 - [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) and [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
+
 - [BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)
 
 ## 3.  Register for Signing Keys
@@ -85,12 +86,17 @@ Download and extract the latest copy of [Cordova](http://cordova.apache.org/#dow
 ## 5.  Set up New Project
 
 - Open up a command-line terminal and navigate to where you extracted Cordova.
+
 - There is a directory for each platform that Cordova supports.  CD into the `blackberry` directory.
-- The blackberry directory contains several directories.  The `example` folder contains a complete Cordova project.  Copy the `example` folder to another location on your computer.
+
+- The blackberry directory contains several directories.  The `example` directory contains a complete Cordova project.  Copy the `example` directory to another location on your computer.
+
 - Change to the newly created directory.
+
 - Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
 
 BlackBerry 10 (QNX)
+
 - `qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9`
 
 Along with the SDK, you also need to register for a code signing key
@@ -171,7 +177,7 @@ If you are prompted whether a device is connected to your computer,
 answer no.
 
 __NOTE:__ On BlackBerry OS 5, the application is installed in the
-`Downloads` folder.
+`Downloads` directory.
 
 ## Deploy to Device
 
@@ -199,7 +205,7 @@ If you are prompted whether a device is connected to your computer,
 answer yes.
 
 __NOTE:__ On BlackBerry OS 5, the application is installed in the
-`Downloads` folder.
+`Downloads` directory.
 
 ## Additional Information
 

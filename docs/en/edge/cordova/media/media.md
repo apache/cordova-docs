@@ -33,8 +33,11 @@ Parameters
 ----------
 
 - __src__: A URI containing the audio content. _(DOMString)_
+
 - __mediaSuccess__: (Optional) The callback that executes after a `Media` object has completed the current play, record, or stop action. _(Function)_
+
 - __mediaError__: (Optional) The callback that executes if an error occurs. _(Function)_
+
 - __mediaStatus__: (Optional) The callback that executes to indicate status changes. _(Function)_
 
 Constants
@@ -53,14 +56,23 @@ Methods
 -------
 
 - `media.getCurrentPosition`: Returns the current position within an audio file.
+
 - `media.getDuration`: Returns the duration of an audio file.
+
 - `media.play`: Start or resume playing an audio file.
+
 - `media.pause`: Pause playback of an audio file.
+
 - `media.release`: Releases the underlying operating system's audio resources.
+
 - `media.seekTo`: Moves the position within the audio file.
+
 - `media.setVolume`: Set the volume for audio playback.
+
 - `media.startRecord`: Start recording an audio file.
+
 - `media.stopRecord`: Stop recording an audio file.
+
 - `media.stop`: Stop playing an audio file.
 
 Additional ReadOnly Parameters
@@ -68,6 +80,7 @@ Additional ReadOnly Parameters
 
 - __position__: The position within the audio playback, in seconds.
     - Not automatically updated during play; call `getCurrentPosition` to update.
+
 - __duration__: The duration of the media, in seconds.
 
 Supported Platforms
@@ -137,6 +150,7 @@ Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en
 ### Windows Phone Quirks
 
 - Only one media file can be played back at a time.
+
 - There are strict restrictions on how your application interacts with other media. See the [Microsoft documentation for details][url].
 
 [url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx

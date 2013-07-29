@@ -28,9 +28,13 @@ Methods
 -------
 
 - __key__: Returns the name of the key at the specified position.
+
 - __getItem__: Returns the item identified by the specified key.
+
 - __setItem__: Assigns a keyed item's value.
+
 - __removeItem__: Removes the item identified by the specified key.
+
 - __clear__: Removes all of the key/value pairs.
 
 Details

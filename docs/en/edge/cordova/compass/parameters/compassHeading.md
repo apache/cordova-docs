@@ -26,8 +26,11 @@ Properties
 ----------
 
 - __magneticHeading__: The heading in degrees from 0 - 359.99 at a single moment in time. _(Number)_
+
 - __trueHeading__: The heading relative to the geographic North Pole in degrees 0 - 359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  _(Number)_
+
 - __headingAccuracy__: The deviation in degrees between the reported heading and the true heading. _(Number)_
+
 - __timestamp__: The time at which this heading was determined.  _(milliseconds)_
 
 Description
@@ -37,11 +40,14 @@ The `CompassHeading` object is returned to the `compassSuccess` callback functio
 
 Android Quirks
 --------------
+
 - `trueHeading` is not supported, but reports the same value as `magneticHeading`
+
 - `headingAccuracy` is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
 
 iOS Quirks
 ----------
 
 - `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+
 - For iOS 4 devices and above, heading factors in the device's current orientation, not in reference to its absolute position, for apps that supports that orientation.

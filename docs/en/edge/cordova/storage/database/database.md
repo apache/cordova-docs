@@ -26,6 +26,7 @@ Methods
 -------
 
 - __transaction__: Runs a database transaction.
+
 - __changeVersion__: Allows scripts to automatically verify the version number and change it when updating a schema.
 
 Details

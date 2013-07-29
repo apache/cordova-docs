@@ -26,12 +26,19 @@ Properties
 ----------
 
 - __readyState__: One of the reader's three possible states, either `EMPTY`, `LOADING` or `DONE`.
+
 - __result__: The contents of the file that have been read. _(DOMString)_
+
 - __error__: An object containing errors. _(FileError)_
+
 - __onloadstart__: Called when the read starts. _(Function)_
+
 - __onload__: Called when the read has successfully completed. _(Function)_
+
 - __onabort__: Called when the read has been aborted. For instance, by invoking the `abort()` method. _(Function)_
+
 - __onerror__: Called when the read has failed. _(Function)_
+
 - __onloadend__: Called when the request has completed (either in success or failure).  _(Function)_
 
 __NOTE:__ The following porperty is not supported:
@@ -42,9 +49,13 @@ Methods
 -------
 
 - __abort__: Aborts reading file.
+
 - __readAsDataURL__: Read file and return data as a base64-encoded data URL.
+
 - __readAsText__: Reads text file.
+
 - __readAsBinaryString__: Reads file as binary and returns a binary string.
+
 - __readAsArrayBuffer__: Reads file as an `ArrayBuffer`.
 
 Details
@@ -95,6 +106,7 @@ Read As Text
 __Parameters:__
 
 - __file__: the file object to read.
+
 - __encoding__: the encoding to use to encode the file's content. Default is UTF8.
 
 Quick Example
@@ -200,6 +212,7 @@ Full Example
 
 iOS Quirks
 ----------
+
 - The __encoding__ parameter is not supported, and UTF8 encoding is always in effect.
 
 Read As Binary String

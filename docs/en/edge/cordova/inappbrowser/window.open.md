@@ -26,7 +26,9 @@ instance, or the system browser.
     var ref = window.open(url, target, options);
 
 - __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
+
 - __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
+
 - __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
 
     - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
