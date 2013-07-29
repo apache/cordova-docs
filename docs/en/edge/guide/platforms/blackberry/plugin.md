@@ -43,17 +43,15 @@ to the `window.echo` function:
 
 ## Modifying plugins.xml
 
-Your project's `www/plugins.xml` directory contains all of the necessary
-references to your Cordova project's plugins. Add an
+Your project's `www/plugins.xml` directory contains all of the
+necessary references to your Cordova project's plugins. Add an
 additional reference so that when `cordova.exec` is called, Cordova
 knows how to map the `Echo` argument of `cordova.exec` to the `Echo`
 class that we want to write natively:
 
-    <plugins>
-      ...
-      <plugin name="Echo" value="org.apache.cordova.echo.Echo"/>
-      ...
-    </plugins>
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
 
 ## Adding Echo.java
 

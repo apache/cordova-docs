@@ -19,14 +19,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Plugins
 
-Writing a plugin requires an understanding of the architecture of Cordova-Android. Cordova-Android consists
-of an Android WebView with hooks attached to it. These plugins are represented as class mappings in the config.xml
-file.
+Writing a plugin requires an understanding of the architecture of
+Cordova-Android. Cordova-Android consists of an Android WebView with
+hooks attached to it. These plugins are represented as class mappings
+in the `config.xml` file.
 
-A plugin consists of at least one Java class that extends the `CordovaPlugin` class. A plugin must override one
-of the `execute` methods from `CordovaPlugin`.
-As best practice, the plugin should handle `pause` and `resume` events, and any message passing between plugins.
-Plugins with long-running requests, background activity such as media payback, listeners, or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the JavaScript.
+A plugin consists of at least one Java class that extends the
+`CordovaPlugin` class. A plugin must override one of the `execute`
+methods from `CordovaPlugin`.  As best practice, the plugin should
+handle `pause` and `resume` events, and any message passing between
+plugins.  Plugins with long-running requests, background activity such
+as media playback, listeners, or internal state should implement the
+`onReset()` method as well. It executeswhen the `WebView` navigates to
+a new page or refreshes, which reloads the JavaScript.
 
 ## Plugin Class Mapping
 
@@ -38,9 +43,13 @@ This marshals a request from the WebView to the Android native side,
 more or less boiling down to calling the `action` method on the
 `service` class, with the arguments passed in the `args` Array.
 
-Whether you distribute your plugin as Java file or as a JAR of its own, the plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` directory.
+Whether you distribute your plugin as Java file or as a JAR of its
+own, the plugin must be added to the `config.xml` file in your
+Cordova-Android application's `res/xml/` directory.
 
-    <plugin name="<service_name>" value="<full_name_including_namespace>"/>
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
 
 The service name should match the one used in the JavaScript `exec`
 call, and the value is the Java classes full name, including the

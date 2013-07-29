@@ -21,7 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
 
-Each plugin class must be registered using the config.xml file, as a `<plugin>` tag under the `<plugins>` key.
+Each plugin class must be registered as a `<feature>` tag in the
+`config.xml` file.
 
 ## Plugin Class Mapping
 
@@ -33,7 +34,7 @@ This marshals a request from the `UIWebView` to the iOS native side,
 more or less boiling down to calling the `action` method on the
 `service` class, with the arguments passed in the `args` array.
 
-The plugin must be added under the `<plugins>` tag of your Cordova-iOS
+Specifiy the plugin as a `<feature>` tag in your Cordova-iOS
 application's project's `config.xml` file.
 
     <feature name="LocalStorage">
@@ -48,13 +49,23 @@ reachable by Cordova.
 
 ## Plugin Initialization and Lifetime
 
-There is one instance of a plugin object that is created per-UIWebView, and the lifetime of the instance is tied to the UIWebView. Plugins are not instantiated until they are first referenced by a call from JavaScript, unless the `onload` attribute set within config.xml. E.g.:
+One instance of a plugin object is created for the life of each
+`UIWebView`. Plugins are not instantiated until they are first
+referenced by a call from JavaScript, unless the `onload` attribute
+is set within `config.xml`. E.g.:
 
-    <plugin name="Echo" value="Echo" onload="true" />
+    <feature name="Echo" onload="true">
+        <param name="ios-package" value="Echo" />
+    </feature>
 
-There is *no* designated initializer for plugins. Instead, plugins should use the `pluginInitialize` method for their start-up logic.
+There is _no_ designated initializer for plugins. Instead, plugins
+should use the `pluginInitialize` method for their start-up logic.
 
-Plugins with long-running requests, background activity (e.g. playing media), listeners or internal state should implement the `onReset` method and stop or clean up those activities. This method is run when the `UIWebView` navigates to a new page or refreshes, which reloads the JavaScript.
+Plugins with long-running requests, background activity (e.g. playing
+media), listeners or internal state should implement the `onReset`
+method and stop or clean up those activities. This method is run when
+the `UIWebView` navigates to a new page or refreshes, which reloads
+the JavaScript.
 
 ## Writing an iOS Cordova Plugin
 
@@ -101,7 +112,7 @@ callback does not fire.
 
 ## Echo Plugin iOS Plugin
 
-We would add the following to the `<plugins>` tag of the project's `config.xml` file:
+We would add the following to the project's `config.xml` file:
 
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
