@@ -340,7 +340,7 @@ graphic into the iOS interface, stored in
 instead capture `backbutton` events from the corresponding hardware
 button.
 
-## Update the App
+## Updating Cordova
 
 After installing installing the `cordova` utility, you can always
 update it to the latest version by running the following command:
@@ -362,5 +362,5 @@ described in this section. If you are updating from a version prior to
 the older application's assets into the top-level `www` directory.
 Where applicable, further details about upgrading to 3.0 are available
 in the Platform Guides.  Once you upgrade to the `cordova`
-command-line interface, the more time-consuming procedures described
-there are no longer relevant.
+command-line interface and use `npm update` to stay current, the more
+time-consuming procedures described there are no longer relevant.
