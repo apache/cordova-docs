@@ -76,9 +76,7 @@ platform-specific configuration settings described below:
             <rim:permit>read_device_identifying_information</rim:permit>
         </rim:permissions>
 
-* iOS
-
-  No special permissions are required.
+* iOS (no special permissions required)
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 

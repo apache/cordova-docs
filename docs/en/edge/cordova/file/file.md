@@ -93,6 +93,4 @@ platform-specific configuration settings described below:
             <param name="ios-package" value="CDVFileTransfer" />
         </feature>
 
-* Windows Phone
-
-  No special permissions are required.
+* Windows Phone (no special permissions required)

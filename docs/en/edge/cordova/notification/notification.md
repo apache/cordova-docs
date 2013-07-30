@@ -71,10 +71,6 @@ platform-specific configuration settings described below:
             <param name="ios-package" value="CDVNotification" />
         </feature>
 
-* Windows Phone
+* Windows Phone (no special permissions required)
 
-  No special permissions are required.
-
-* Tizen
-
-  No special permissions are required.
+* Tizen (no special permissions required)

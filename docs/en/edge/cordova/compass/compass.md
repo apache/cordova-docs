@@ -57,9 +57,7 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.CompassListener" />
         </feature>
 
-* BlackBerry WebWorks
-
-  No special permissions are required.
+* BlackBerry WebWorks (no special permissions required)
 
 * iOS (in `config.xml`)
 
@@ -75,6 +73,4 @@ platform-specific configuration settings described below:
 
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-* Tizen
-
-  No special permissions are required.
+* Tizen (no special permissions required)
