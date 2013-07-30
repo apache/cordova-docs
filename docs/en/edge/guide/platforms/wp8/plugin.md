@@ -146,6 +146,29 @@ in case we have bad input. This is a pattern used throughout the Cordova C# code
         // ... continue on to do our work
     }
 
+## Plugin XML
+
+These are windows phone specific examples of using the plugin.xml file, refer to the Plugin Specification for more details
+
+### `<source-file>`
+
+On windows phone the `<source-file>` element is currently used to define all plugin resources (ie. .cs, .xaml, .xaml.cs, .dll, image assets etc).
+
+### `<config-file>`
+
+The `<config-file>` element defines what elements get put into a config file. For example to add a plugin to the platforms config.xml, you would do something like this :
+
+    <config-file target="config.xml" parent="/*">
+        <feature name="PluginName">
+            <param name="wp-package" value="PluginName"/>
+        </feature>
+    </config-file>
+If we wanted to add the contacts capability to the WMAppManifest.xml, it would look like this :
+
+    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+        <Capability Name="ID_CAP_CONTACTS" />
+    </config-file>
+
 ## Advanced Plugin Functionality
 
 See other methods that you can override in:
