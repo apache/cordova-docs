@@ -63,39 +63,38 @@ platform-specific configuration settings described below:
 
 * Android
 
-    <!-- app/res/xml/config.xml -->
+    (in app/res/xml/config.xml)
     <feature name="Contacts">
         <param name="android-package" value="org.apache.cordova.ContactManager" />
     </feature>
 
-    <!-- app/AndroidManifest.xml -->
+    (in app/AndroidManifest.xml)
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
 * BlackBerry WebWorks
 
-    <!-- www/plugins.xml -->
+    (in www/plugins.xml)
     <feature name="Contact">
         <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
     </feature>
 
-    <!-- www/config.xml -->
+    (in www/config.xml)
     <feature id="blackberry.find"        required="true" version="1.0.0.0" />
     <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
     <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="Contacts">
         <param name="ios-package" value="CDVContacts" />
     </feature>
 
 * Windows Phone
 
-    <!-- Properties/WPAppManifest.xml -->
+    (in Properties/WPAppManifest.xml)
     <Capabilities>
         <Capability Name="ID_CAP_CONTACTS" />
     </Capabilities>

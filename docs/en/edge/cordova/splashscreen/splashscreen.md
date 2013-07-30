@@ -40,16 +40,14 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-* Android
+* Android (in `app/res/xml/config.xml`)
 
-    <!-- app/res/xml/config.xml -->
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.SplashScreen" />
     </feature>
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
     </feature>

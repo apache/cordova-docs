@@ -54,16 +54,14 @@ Objects
 
 ## Accessing the Feature
 
-* Android
+* Android (in `app/res/xml/config.xml`)
 
-    <!-- app/res/xml/config.xml -->
     <feature name="Storage">
         <param name="android-package" value="org.apache.cordova.Storage" />
     </feature>
 
-* BlackBerry WebWorks
+* BlackBerry WebWorks (in `www/config.xml`)
 
-    <!-- www/config.xml -->
     <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
 * iOS

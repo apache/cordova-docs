@@ -51,9 +51,8 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-* Android
+* Android (in `app/res/xml/config.xml`)
 
-    <!-- app/res/xml/config.xml -->
     <feature name="Compass">
         <param name="android-package" value="org.apache.cordova.CompassListener" />
     </feature>
@@ -62,16 +61,14 @@ platform-specific configuration settings described below:
 
   No special permissions are required.
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="Compass">
         <param name="ios-package" value="CDVLocation" />
     </feature>
 
-* Windows Phone
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_SENSORS" />
     </Capabilities>

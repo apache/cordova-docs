@@ -95,36 +95,34 @@ platform-specific configuration settings described below:
 
 * Android
 
-    <!-- app/res/xml/plugins.xml -->
+    (in app/res/xml/plugins.xml)
     <feature name="Capture">
         <param name="android-package" value="org.apache.cordova.Capture" />
     </feature>
 
-    <!-- app/AndroidManifest.xml -->
+    (in app/AndroidManifest.xml)
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    <!-- www/plugins.xml -->
+    (in www/plugins.xml)
     <feature name="Capture">
         <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
     </feature>
 
-    <!-- www/config.xml -->
+    (in www/config.xml)
     <feature id="blackberry.system"  required="true" version="1.0.0.0" />
     <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="Capture">
         <param name="ios-package" value="CDVCapture" />
     </feature>
 
-* Windows Phone
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_MEDIALIB" />
         <Capability Name="ID_CAP_MICROPHONE" />

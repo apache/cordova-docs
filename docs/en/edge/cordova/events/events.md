@@ -45,29 +45,28 @@ Event Types
 
 * Android
 
-    <!-- app/res/xml/config.xml -->
+    (in app/res/xml/config.xml)
     <feature name="Battery">
         <param name="android-package" value="org.apache.cordova.BatteryListener" />
     </feature>
 
-    <!-- app/AndroidManifest.xml -->
+    (in app/AndroidManifest.xml)
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 * BlackBerry WebWorks
 
-    <!-- www/plugins.xml -->
+    (in www/plugins.xml)
     <feature name="Battery">
         <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
     </feature>
 
-    <!-- www/config.xml -->
+    (in www/config.xml)
     <feature id="blackberry.app"          required="true" version="1.0.0.0" />
     <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
     <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="Battery">
         <param name="ios-package" value="CDVBattery" />
     </feature>
@@ -76,9 +75,8 @@ Event Types
 
   No special permissions are required.
 
-* Tizen
+* Tizen (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
 Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
