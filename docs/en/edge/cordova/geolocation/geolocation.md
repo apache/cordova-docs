@@ -70,38 +70,36 @@ platform-specific configuration settings described below:
 
 * Android
 
-    <!-- app/res/xml/config.xml -->
+    (in app/res/xml/config.xml)
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.GeoBroker" />
     </feature>
 
-    <!-- app/AndroidManifest.xml -->
+    (in app/AndroidManifest.xml)
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
 * BlackBerry WebWorks
 
-    <!-- www/plugins.xml -->
+    (in www/plugins.xml)
     <feature name="Geolocation">
         <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
 
-    <!-- www/config.xml -->
+    (in www/config.xml)
     <rim:permissions>
         <rim:permit>read_geolocation</rim:permit>
     </rim:permissions>
 
-* iOS
+* iOS (in `config.xml`)
 
-    <!-- config.xml -->
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
 
-* Windows Phone
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <!-- Properties/WPAppManifest.xml -->
     <Capabilities>
         <Capability Name="ID_CAP_LOCATION" />
     </Capabilities>

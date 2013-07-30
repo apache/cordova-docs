@@ -55,7 +55,7 @@ platform-specific configuration settings described below:
 
 * Android
 
-    <!-- app/res/xml/config.xml -->
+    (in app/res/xml/config.xml)
     <feature name="File">
         <param name="android-package" value="org.apache.cordova.FileUtils" />
     </feature>
@@ -63,12 +63,12 @@ platform-specific configuration settings described below:
         <param name="android-package" value="org.apache.cordova.FileTransfer" />
     </feature>
 
-    <!-- app/AndroidManifest.xml -->
+    (in app/AndroidManifest.xml)
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    <!-- www/plugins.xml -->
+    (in www/plugins.xml)
     <feature name="File">
         <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
     </feature>
@@ -76,7 +76,7 @@ platform-specific configuration settings described below:
         <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
     </feature>
 
-    <!-- www/config.xml -->
+    (in www/config.xml)
     <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
     <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
     <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
@@ -86,7 +86,7 @@ platform-specific configuration settings described below:
 
 * iOS
 
-    <!-- config.xml -->
+    (in config.xml)
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
     </feature>
