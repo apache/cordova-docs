@@ -95,6 +95,34 @@ name of the plugin. For example:
 
 This element does not (yet) handle localization.
 
+## `<description>` element
+
+A human-readable description for the plugin. The text content of the element contains
+the description of the plugin. An example:
+
+    <description>Foo plugin description</description>
+
+This element does not (yet) handle localization.
+
+## `<author>` element
+
+Plugin author name. The text content of the element contains
+the name of the plugin author. An example:
+
+    <author>Foo plugin description</author>
+
+## `<keywords>` element
+
+Plugin keywords. The text content of the element contains comma separated keywords to describe the plugin. An example:
+
+    <keywords>foo,bar</keywords>
+
+## `<license>` element
+
+Plugin license. The text content of the element contains the plugin license. An example:
+
+    <license>Apache 2.0 License</license>
+
 ## `<asset>` element
 
 One or more elements listing the files or directories to be copied
