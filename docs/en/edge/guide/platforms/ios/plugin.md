@@ -22,7 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 A plugin is an Objective-C class that extends the `CDVPlugin` class.
 
 Each plugin class must be registered as a `<feature>` tag in the
-`config.xml` file.
+`config.xml` file. It is through this mechanism that JavaScript's `exec`
+method's `service` parameter maps to an Objective-C class.
 
 ## Plugin Class Mapping
 
@@ -41,21 +42,22 @@ application's project's `config.xml` file.
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
 
-The feature name='name' should match what you use in the JavaScript
-`exec` call, and the value matches the name of the plugin's
-Objective-C class. param name should always be "ios-package".
-Otherwise the plugin may compile but would not be
+The feature `name` attribute should match what you use in the JavaScript
+`exec` call's `service` parameter, and the `value` attribute should match the name of the plugin's
+Objective-C class. `<param name>` should always be i`"ios-package"`.
+If you do not follow this setup, the plugin may compile but will not be
 reachable by Cordova.
 
 ## Plugin Initialization and Lifetime
 
 One instance of a plugin object is created for the life of each
 `UIWebView`. Plugins are not instantiated until they are first
-referenced by a call from JavaScript, unless the `onload` attribute
-is set within `config.xml`. E.g.:
+referenced by a call from JavaScript, unless `<param>` with an `onload`
+`name` attribute is set to `"true"` in `config.xml`. E.g.:
 
-    <feature name="Echo" onload="true">
+    <feature name="Echo">
         <param name="ios-package" value="Echo" />
+        <param name="onload" value="true" />
     </feature>
 
 There is _no_ designated initializer for plugins. Instead, plugins
