@@ -19,147 +19,146 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # BlackBerry 10 Platform Guide
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for BlackBerry 10 devices. See the following for more
-detailed platform-specific information:
+This guide shows how to set up your development environment to build and deploy Cordova apps for BlackBerry 10 devices.
 
-* BlackBerry 10 Plugins
-* BlackBerry 10 Command-line Tools
-
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Cordova Command-line Interface for information about the
-current interface.
+For previous versions of BlackBerry, you need to use a different set of command-line tools, described in BlackBerry Platform Guide.
 
 ## Requirements
 
-Cordova for BlackBerry has the following software requirements:
+The development environment is available on Windows, Mac and Linux.
 
--   Windows XP (32-bit) or Windows 7 (32-bit and 64-bit) or Mac OSX 10.6.4+
--   node.js (> 0.9.9) [Download node.js now](http://nodejs.org/)
--   BlackBerry 10 Native SDK. [Download the BlackBerry 10 Native SDK now.](http://developer.blackberry.com/native/download/)
+Developers should use the `cordova` utility in conjunction with the Blackberry Native SDK.  See The Command-line Interface for information how to install `cordova`, add projects, then build and deploy.
 
-## Setting up your signing keys
+## Install the BlackBerry Native SDK
 
-Before starting development, you'll need to register for your code signing key and debug token. The signing key allows you to sign your completed app so that you can distribute it through BlackBerry World. The debug token allows you to test an unsigned app on a BlackBerry 10 device. You do not need to create and install the debug token yourself; if you supply the keystore password, the build script will create and install the debug token for you.
+The BlackBerry Native SDK is available from [developer.blackberry.com](http://developer.blackberry.com/native/download/).
 
--   [Register for your code signing key now.](https://www.blackberry.com/SignedKeys/codesigning.html)
--   [Set your computer up for code signing. ](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
--   [Learn more about debug tokens.](http://developer.blackberry.com/html5/documentation/running_your_bb10_app_2008471_11.html)
+After installing the BlackBerry Native SDK, its tools must be added to your system path.
 
-## Creating your project
+### Windows
 
-To create a new project, you use the `create` command to set up the folder structure for your app.
+Go to My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables
 
-1.  On the command line, navigate to the folder where you extracted Cordova.
-2.  Run the `create` command using the following syntax:
+Append to PATH based on where you installed the Native SDK, for example:
 
-        bin/create <path-to-project>
+    ;C:\bbndk\host_10_1_0_132\darwin\x86\usr\bin\
 
-This command creates the folder structure for your project at the specified location. All of your project resource files should be stored in the *<path-to-project>*/www folder, or in a subfolder within it.
+### Mac/Linux
 
-## Adding and managing targets
+Edit the ~/.bash_profile file, adding a line such as the following, depending on where the Native SDK was installed:
 
-A target refers to a BlackBerry device or emulator that you will use to test your app. Targets are added directly to your project; you can add multiple targets to your project, each with a unique name. Then, when you want to deploy your app to a particular target, you can simply refer to that target by name when you run your script.
+    $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
 
-###Add a target
+Then run the following to apply the change immidiately:
 
-To add a target, on the command line, type the following command:
+    $ source ~/.bash_profile
 
-        <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
+## Set up for Signing
 
-where
+If you wish to test on a device or distribute apps through BlackBerry World, your system must be setup for code signing.
 
--   `<name>`  specifies a unique name for the target.
--   `<ip-address>`  specifies the ip address of the BlackBerry device or emulator.
--   `-t <device | simulator>` specifies the target type. If not provided, the default value is device.
--   `-p|--password <password>`  specifies the password for the device or emulator. This is required only if the device or emulator is password protected.
--   `--pin <device-pin>`  specifies the PIN of the BlackBerry device, which identifies that device as a valid host for the debug token. This argument is required only if you are creating a debug token.
+To obtain a signing key, go to the BlackBerry website and make sure to retain the password you specify. Then run the `blackberry-signer` utility that is included with the BlackBerry Native SDK.
 
-###Remove a target
+Detailed instuctions can be found here:
 
-To remove a target, on the command line, type the following command:
+* [Register for your code signing key.](https://www.blackberry.com/SignedKeys/codesigning.html)
+* [Set up your system for code signing.](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html)
 
-        <path-to-project>/cordova/target remove <name>
+## Create a Project
 
-###Set a target as the default
+Use the `cordova` utility to set up a new project, as described in The Command-line Interface. For example, in a source-code
+directory:
+ 
+    $ cordova create hello com.example.hello
+    $ cd hello
+    $ cordova platform add blackberry10
+    $ cordova build
 
-To specify a specific target as the default, on the command line, type the following command:
+## Deploy to Emulator
 
-        <path-to-project>/cordova/target default <name>
+If you wish to run a device emulator, download and install the BlackBerry 10 Simulator.
 
-## Building your app
+* [Download](http://developer.blackberry.com/native/download/)
+* [Getting Started](http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html)
 
-To build your app, run the build script. You can build the app in either release mode or in debug mode.
+Before testing an app on either an emulator or a device, you need to add a _target_ to your project. Each is identified with a unique name, and associated with an IP address. You need to get the IP address from the emulator before you use it to view apps.
 
--   When you build the app in release mode, you are preparing it for distribution through BlackBerry World. The script packages your app resources and plugins together in a .bar file, then signs the app.
--   When you build the app in debug mode, you are preparing it to be tested. The script packages your app resources and plugins together in a .bar file, but does not sign it. The script can also deploy the app onto a previously defined target. If you have not already created and installed a debug token, you can supply the keystore password, and the build script will create and install the debug token for you as well.
+Launch the emulator image, then choose __Settings__ from the home screen:
 
-    Debug mode also enables Web Inspector for the app, which allows you to remotely inspect the source code. A prompt displays the URL that you can use to connect to and inspect your app. For more information on using Web Inspector, see [Debugging using Web Inspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
+![](img/guide/platforms/blackberry10/bb_home.png)
 
-###Build your app in release mode
+Navigate to the __Security and Privacy &rarr; Development Mode__ section, enable the option, and obtain the IP address:
 
-To build your app in release mode, on the command line, type the following command:
+![](img/guide/platforms/blackberry10/bb_devel.png)
 
-        <path-to-project>/cordova/build release -k|--keystorepass <password> [-b|--buildId <number>] [-p|--params <params-JSON-file>]
+An additional set of command-line utilities are included when you set up the BlackBerry 10 platform for your project.  The following command, in this case invoked from the project top-level directory, associates a target named _emu_ with the IP address displayed above.
 
-where
+Windows
 
--   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
--   `-b|--buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
--   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
+    $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
 
-###Build your app in debug mode
+Mac/Linux
 
-To build your app in release mode, on the command line, type the following command:
+    $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
 
-        <path-to-project>/cordova/build debug [<target>] [-k|--keystorepass <password>] [-p|--params <params-JSON-file>] [-ll|--loglevel <error|warn|verbose>]
+Then, run the `emulate` command to view the app:
 
-where
+    $ cordova emulate blackberry10
 
--   `<target>`  specifies the name of a previously added target. If `<target>`  is not specified, the default target is used, if one has been created. This argument is only required if you want the script to deploy your app to a BlackBerry device or emulator and you have not created a default target. Additionally, if `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
--   `-k|--keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications. This password is also used to create your debug token. This argument is only required if you want the script to create and install the debug token for you.
--   `-p|--params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools.
--   `-ll|--loglevel <level>`  specifies the log level. The log level may be one of `error`, `warn`, or `verbose`.
+## Deploy to Device
 
-Note that all of these parameters are optional. If you have previously defined a default target (and installed a debug token, if that target is a BlackBerry device), you can run the script with no arguments, and the script will package your app and deploy it to the default target. For example:
+To deploy to a device, make sure it is plugged into your computer. Enable development mode and obtain the IP address as desribed in the emulator section above. You will also need to obtain the PIN from the the __Settings__ application under __About &rarr; Hardware__.
 
-        <path-to-project>/cordova/build debug
+![](img/guide/platforms/blackberry10/bb_pin.png)
 
-## Deploying an app
+Run the target command-line utility to associate a name with an IP address, device password and PIN.
 
-You can test your app using either a BlackBerry device or an emulator. Before deploying your app, you must first create a target for the device or emulator you want to deploy your app to.
+Windows
 
-The run script will first build  your app. If you intend to deploy an app to a physical device for testing, you must first install a debug token on that device. If you specify the `--keystorepass <password>` argument when running the run script, the script will create and install the debug token for you. You do not need a debug token to test your app on an emulator, even if that app is unsigned.
+    $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
 
-To deploy your app to a device or emulator, on a command line type the following command:
+Mac/Linux
 
-        <path-to-project>/cordova/run <target> [--no-build]
+    $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
 
-where
--   `<target>`  specifies the name of a previously added target. If `<target>`  is a device, then that device must be connected to your computer by USB connection or be connected to the same Wi-Fi network as your computer.
+--password refers to the password to unlock the device
 
--   `-no--build` will use the most recently built version of the application rather than re-building. This is useful to test an application in release mode.
+--pin refers to the device PIN obtained from the Settings application
 
-## Adding and managing plugins
+Then, run the `run` command to view the app:
 
-To add additional functionality that is outside of the core features of Cordova, you'll need to add plugins. A plugin represents a set of APIs that provide access to additional features of the platform.
+    $ cordova run blackberry10
 
-In order to use a plugin, you must first add it into your project. Once added into your project, the plugin will be bundled with your project during the build process, to ensure that your app has access to all the APIs it needs.
+If a debug token has not yet been created for this device, an error message will prompt you to use the platform run script with the password you provided when registering for signing keys.
 
-###Add a plugin
+Windows
 
-To add a plugin, on the command line, type the following command:
+    $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
 
-        <path-to-project>/cordova/plugin add <path to plugin>
+Mac/Linux
 
-###Remove a plugin
+    $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
 
-To remove a plugin, on the command line, type the following command:
+## Debugging with WebInspector
 
-        <path-to-project>/cordova/plugin rm <name>
+When debugging on the device or a simulator, you may run WebInspector remotely to view the application's internal state.
 
-###View a list of installed plugins
+A prompt displays the URL that allows you to connect to your app with a standard web browser.
 
-To view a list of installed plugins, on the command line, type the following command:
+For more information, see [Debugging using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 
-        <path-to-project>/cordova/plugin ls
+## Building a Release Version
+
+By default, running the `cordova build` command creates an unsigned _.bar_ package file suitable for testing on a device or simulator.
+
+You need to run a different `build` command to create a release version suitable for distribution through BlackBerry World.  This command uses the following syntax:
+
+Windows
+
+    $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+
+Mac/Linux
+
+    $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+
+--keystorepass specifies the password you defined when you configured your computer to sign applications.
