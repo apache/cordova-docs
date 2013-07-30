@@ -20,9 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 localStorage
 ===============
 
-Provides access to a [W3C Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
+Provides access to the W3C's
+[Web Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
 
-    var storage = window.localStorage;
+    var permanentStorage = window.localStorage;
+    var tempStorage = window.sessionStorage;
 
 Methods
 -------
@@ -40,10 +42,12 @@ Methods
 Details
 -----------
 
-The `window.localStorage` interface is based on the W3C Web Storage
-interface.  An app can use it to save persistent data using key-value
-pairs.  The `window.sessionStorage` interface works the same way, but
-all data is cleared each time the app closes.
+The `window.localStorage` interface implements the W3C's [Web Storage
+interface](http://dev.w3.org/html5/webstorage/).  An app can use it to
+save persistent data using key-value pairs.  The
+`window.sessionStorage` interface works the same way in every respect,
+except that all data is cleared each time the app closes. Each
+database provides a separate namespace.
 
 Supported Platforms
 -------------------
