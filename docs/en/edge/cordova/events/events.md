@@ -43,9 +43,11 @@ Event Types
 
 ## Accessing the Feature
 
-As of version 3.0, Cordova implements device-level APIs as _plugins_.
-Use the CLI's `plugin` command, described in The Command-line
-Interface, to add or remove this feature for a project:
+As of version 3.0, Cordova implements battery status and other
+device-level APIs as _plugins_. Access to all other events not related
+to battery status are enabled by default.  Use the CLI's `plugin`
+command, described in The Command-line Interface, to enable or disable
+battery events:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
         $ cordova plugin rm org.apache.cordova.core.battery-status
