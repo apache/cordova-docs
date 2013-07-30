@@ -64,14 +64,8 @@ Objects
 
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
-* iOS
+* iOS (no special permissions required)
 
-  No special permissions are required.
+* Windows Phone (no special permissions required)
 
-* Windows Phone
-
-  No special permissions are required.
-
-* Tizen
-
-  No special permissions are required.
+* Tizen (no special permissions required)
