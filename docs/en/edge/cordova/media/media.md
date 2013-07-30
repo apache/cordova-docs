@@ -106,40 +106,40 @@ platform-specific configuration settings described below:
 
 * Android
 
-    (in app/res/xml/config.xml)
-    <feature name="Media">
-        <param name="android-package" value="org.apache.cordova.AudioHandler" />
-    </feature>
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
 
-    (in app/AndroidManifest.xml)
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    (in www/plugins.xml)
-    <feature name="Capture">
-        <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
-    </feature>
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
 
 * iOS (in `config.xml`)
 
-    <feature name="Media">
-        <param name="ios-package" value="CDVSound" />
-    </feature>
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_MEDIALIB" />
-        <Capability Name="ID_CAP_MICROPHONE" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_CAP_CAMERA" />
-    </Capabilities>
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
 
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 * Tizen
 

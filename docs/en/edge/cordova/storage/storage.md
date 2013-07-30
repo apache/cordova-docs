@@ -56,13 +56,13 @@ Objects
 
 * Android (in `app/res/xml/config.xml`)
 
-    <feature name="Storage">
-        <param name="android-package" value="org.apache.cordova.Storage" />
-    </feature>
+        <feature name="Storage">
+            <param name="android-package" value="org.apache.cordova.Storage" />
+        </feature>
 
 * BlackBerry WebWorks (in `www/config.xml`)
 
-    <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
+        <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
 * iOS
 
