@@ -70,41 +70,41 @@ platform-specific configuration settings described below:
 
 * Android
 
-    (in app/res/xml/config.xml)
-    <feature name="Geolocation">
-        <param name="android-package" value="org.apache.cordova.GeoBroker" />
-    </feature>
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
 
-    (in app/AndroidManifest.xml)
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
 * BlackBerry WebWorks
 
-    (in www/plugins.xml)
-    <feature name="Geolocation">
-        <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
-    </feature>
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
 
-    (in www/config.xml)
-    <rim:permissions>
-        <rim:permit>read_geolocation</rim:permit>
-    </rim:permissions>
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
 
 * iOS (in `config.xml`)
 
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_LOCATION" />
-    </Capabilities>
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
 
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 * Tizen
 

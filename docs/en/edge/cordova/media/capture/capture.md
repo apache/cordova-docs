@@ -95,38 +95,38 @@ platform-specific configuration settings described below:
 
 * Android
 
-    (in app/res/xml/plugins.xml)
-    <feature name="Capture">
-        <param name="android-package" value="org.apache.cordova.Capture" />
-    </feature>
+        (in app/res/xml/plugins.xml)
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.Capture" />
+        </feature>
 
-    (in app/AndroidManifest.xml)
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    (in www/plugins.xml)
-    <feature name="Capture">
-        <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
-    </feature>
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
+        </feature>
 
-    (in www/config.xml)
-    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
-    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
 * iOS (in `config.xml`)
 
-    <feature name="Capture">
-        <param name="ios-package" value="CDVCapture" />
-    </feature>
+        <feature name="Capture">
+            <param name="ios-package" value="CDVCapture" />
+        </feature>
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_MEDIALIB" />
-        <Capability Name="ID_CAP_MICROPHONE" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_CAP_CAMERA" />
-    </Capabilities>
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>

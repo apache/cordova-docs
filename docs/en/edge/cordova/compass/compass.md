@@ -53,9 +53,9 @@ platform-specific configuration settings described below:
 
 * Android (in `app/res/xml/config.xml`)
 
-    <feature name="Compass">
-        <param name="android-package" value="org.apache.cordova.CompassListener" />
-    </feature>
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.CompassListener" />
+        </feature>
 
 * BlackBerry WebWorks
 
@@ -63,17 +63,17 @@ platform-specific configuration settings described below:
 
 * iOS (in `config.xml`)
 
-    <feature name="Compass">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_SENSORS" />
-    </Capabilities>
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
 
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 * Tizen
 

@@ -53,19 +53,19 @@ platform-specific configuration settings described below:
 
 * Android (in `app/res/xml/config.xml`)
 
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
 
 * iOS (in `config.xml`)
 
-    <feature name="InAppBrowser">
-        <param name="ios-package" value="CDVInAppBrowser" />
-    </feature>
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
 
 * Windows Phone 7 + 8 (in `config.xml`)
 
-    <feature name="InAppBrowser" />
+        <feature name="InAppBrowser" />
 
 addEventListener
 ================

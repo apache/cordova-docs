@@ -44,46 +44,46 @@ platform-specific configuration settings described below:
 
 * Android
 
-    (in app/res/xml/config.xml)
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-    </feature>
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
 
-    (in app/AndroidManifest)
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
 
-    (in www/plugins.xml)
-    <feature name="Camera">
-        <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
-    </feature>
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
 
-    (in www/config.xml)
-    <feature id="blackberry.media.camera" />
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
 
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
 
 * iOS (in `config.xml`)
 
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
 
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-    </Capabilities>
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
 
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
 * Tizen (in `config.xml`)
 
-    <feature name="http://tizen.org/api/application" required="true"/>
-    <feature name="http://tizen.org/api/application.launch" required="true"/>
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
 
-Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
+  Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)

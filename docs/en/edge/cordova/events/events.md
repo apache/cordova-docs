@@ -43,33 +43,43 @@ Event Types
 
 ## Accessing the Feature
 
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin rm org.apache.cordova.core.battery-status
+
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
 * Android
 
-    (in app/res/xml/config.xml)
-    <feature name="Battery">
-        <param name="android-package" value="org.apache.cordova.BatteryListener" />
-    </feature>
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
 
-    (in app/AndroidManifest.xml)
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
 * BlackBerry WebWorks
 
-    (in www/plugins.xml)
-    <feature name="Battery">
-        <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
-    </feature>
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
 
-    (in www/config.xml)
-    <feature id="blackberry.app"          required="true" version="1.0.0.0" />
-    <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
-    <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
 
 * iOS (in `config.xml`)
 
-    <feature name="Battery">
-        <param name="ios-package" value="CDVBattery" />
-    </feature>
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
 
 * Windows Phone
 
@@ -77,6 +87,6 @@ Event Types
 
 * Tizen (in `config.xml`)
 
-    <feature name="http://tizen.org/api/systeminfo" required="true"/>
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
 
-Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
+  Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
