@@ -55,6 +55,8 @@ version of the CLI.
 
 5. Make sure to upgrade any deprecated `<plugin>` references from your old `config.xml` file to the new `<feature>` specification.
 
+6. Update any references to the `org.apache.cordova.api` package to be `org.apache.cordova`.
+
 - __NOTE:__ all core APIs have been removed and must be installed as plugins. Please see the Using Plugman to Manage Plugins Guide for details.
 
 ## Upgrade to 2.9.0 from 2.8.0
