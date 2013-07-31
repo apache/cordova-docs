@@ -136,6 +136,7 @@ available for each mobile platform:
         <th>Windows<br/>Phone 7</th>
         <th>Windows<br/>Phone 8</th>
         <th>Windows<br/>8</th>
+        <th>Tizen</th>
     </tr>
 
 </thead>
@@ -150,6 +151,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -161,6 +163,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -172,6 +175,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html"></a></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -188,6 +192,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -199,6 +204,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -210,6 +216,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -221,6 +228,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -232,6 +240,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -243,6 +252,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -254,6 +264,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -265,6 +276,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -276,6 +288,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -287,6 +300,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -298,6 +312,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -309,6 +324,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -320,6 +336,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -331,6 +348,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
     <tr>
@@ -342,6 +360,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
@@ -353,6 +372,7 @@ available for each mobile platform:
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
+        <td data-col="tizen"       class="y"></td>
     </tr>
 
 </tbody>
