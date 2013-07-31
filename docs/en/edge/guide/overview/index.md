@@ -223,7 +223,7 @@ available for each mobile platform:
         <th><a href="cordova_compass_compass.md.html">Compass</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
-        <td data-col="blackberry10" class="n"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
