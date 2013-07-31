@@ -149,7 +149,7 @@ available for each mobile platform:
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
-        <td data-col="win8"       class="u"></td>
+        <td data-col="win8"       class="n"></td>
     </tr>
 
     <tr>
