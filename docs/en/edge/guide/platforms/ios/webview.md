@@ -31,11 +31,11 @@ based Cleaver implementation.
 
 ## Prerequisites
 
-1. Cordova 2.3.0 or greater
+* Cordova 2.3.0 or greater
 
-2. Xcode 4.5 or greater
+* Xcode 4.5 or greater
 
-3. `config.xml` file (from a newly created iOS project)
+* `config.xml` file (from a newly created iOS project)
 
 ## Adding Cleaver to your Xcode project (CordovaLib sub-project)
 
@@ -103,11 +103,11 @@ based Cleaver implementation.
 
 ## Using CDVViewController in your code
 
-1. Add this **header**:
+1. Add this header:
 
         #import <Cordova/CDVViewController.h>
 
-2. Instantiate a **new** `CDVViewController`, and **retain it somewhere** (e.g. to a property in your class):
+2. Instantiate a new `CDVViewController`, and retain it somewhere (e.g. to a property in your class):
 
         CDVViewController* viewController = [CDVViewController new];
 
@@ -137,15 +137,15 @@ based Cleaver implementation.
 
 ## Adding your HTML, CSS and JavaScript assets
 
-1. Create a **new folder** in your project **on disk**, `www` for example.
+1. Create a new folder in your project on disk, `www` for example.
 
-2. Put your **HTML, CSS and JavaScript** assets into this folder.
+2. Put your HTML, CSS and JavaScript assets into this folder.
 
 3. Drag and drop the folder into the Project Navigator of Xcode.
 
-4. Choose the **Create folder references for any added folders** radio button.
+4. Choose the __Create folder references for any added folders__ radio button.
 
-5. Set the appropriate `wwwFolderName` and `startPage` properties for the folder you created in **(1)** or use the defaults (see previous section) when you instantiate the `CDVViewController`.
+5. Set the appropriate `wwwFolderName` and `startPage` properties for the folder you initially created, or use the defaults (see previous section) when you instantiate the `CDVViewController`.
 
         /*
          if you created a folder called 'myfolder' and
