@@ -41,6 +41,6 @@ Run the `create` command with the following parameters:
 
 * Path to your new Cordova Windows 8 project
 
-* Package Name, following reverse-domain style convention ( this becomes the default Namespace )
+* Package Name, following reverse-domain style convention. This becomes the default Namespace.
 
 * Project name

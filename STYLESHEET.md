@@ -227,3 +227,6 @@ editorial guidelines.
   same line, separated with a colon unless the topic features trailing
   punctuation. The text you are reading provides an example.
 
+* In body text, no ( extra space inside parens ). OK to increase
+  readability of code.
+

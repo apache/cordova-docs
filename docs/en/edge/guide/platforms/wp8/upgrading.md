@@ -92,7 +92,7 @@ In Visual Studio's Solution Explorer window:
 
 2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
 
-3. Update your HTML to use the new `cordova.js` file. ( note that there is no longer a version number in the name ).
+3. Update your HTML to use the new `cordova.js` file. (Note the lack of a version number in the filename.)
 
 4. Copy and overwrite any splash screen, or icon images.
 
