@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureAudio
 ====================
 
-> Start the audio recorder application and return information about the captured audio clip file(s).
+> Start the audio recorder application and return information about captured audio clip files.
 
     navigator.device.capture.captureAudio(
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]

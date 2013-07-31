@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureVideo
 ====================
 
-> Start the video recorder application and return information about captured video clip file(s).
+> Start the video recorder application and return information about captured video clip files.
 
     navigator.device.capture.captureVideo(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
