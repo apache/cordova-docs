@@ -307,7 +307,7 @@ available for each mobile platform:
         <th><a href="cordova_globalization_globalization.md.html">Globalization</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
+        <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -331,7 +331,7 @@ available for each mobile platform:
         <th><a href="cordova_media_media.md.html">Media</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
-        <td data-col="blackberry10" class="n"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
@@ -355,7 +355,7 @@ available for each mobile platform:
         <th><a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a></th>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry" class="n"></td>
-        <td data-col="blackberry10" class="n"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
