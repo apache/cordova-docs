@@ -25,9 +25,9 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 Properties
 ----------
 
-- __magneticHeading__: The heading in degrees from 0 - 359.99 at a single moment in time. _(Number)_
+- __magneticHeading__: The heading in degrees from 0-359.99 at a single moment in time. _(Number)_
 
-- __trueHeading__: The heading relative to the geographic North Pole in degrees 0 - 359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  _(Number)_
+- __trueHeading__: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading cannot be determined.  _(Number)_
 
 - __headingAccuracy__: The deviation in degrees between the reported heading and the true heading. _(Number)_
 

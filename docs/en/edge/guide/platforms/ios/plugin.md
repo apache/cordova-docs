@@ -157,7 +157,7 @@ application folder:
     @end
 
 Let's take a look at the code. At the top we have all of the necessary
-Cordova imports. Our class extends from `CDVPlugin` - very important.
+Cordova imports. Our class extends from `CDVPlugin` (very important).
 
 This plugin only supports one action, the `echo` action. First, we
 grab the echo string using the `objectAtIndex` method on our `args`,

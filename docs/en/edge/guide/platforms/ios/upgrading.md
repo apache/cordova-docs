@@ -170,7 +170,7 @@ Plugins.
 
 9. In your `config.xml` file, [add this new line](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f).
 
-10. In your `config.xml` file, [UIWebViewBounce has ben changed to DisallowOverscroll - and default values are different](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5).
+10. In your `config.xml` file, [UIWebViewBounce has been changed to DisallowOverscroll, and default values are different](https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5).
 
 10. In your `config.xml` file, the `EnableLocation` preference has been deprecated.
 
@@ -336,7 +336,9 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 5. Copy the `cordova` directory from the new project into your project's root directory (if you want the project command-line tools).
 
-6. Add a new entry under `Plugins` in your `Cordova.plist` file (under the __Supporting Files__ group) - the key is `Device` and the value is `CDVDevice`.
+6. Add a new entry under `Plugins` in your `Cordova.plist` file, under
+   the __Supporting Files__ group. The key is `Device` and the value
+   is `CDVDevice`.
 
 7. Remove `Cordova.framework`.
 
@@ -348,7 +350,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 11. Locate the `CordovaLib` directory that was installed in your hard-drive under your home folder's `Documents` subdirectory.
 
-12. Locate the `CordovaLib.xcodeproj` file in the `CordovaLib` directory, then drag and drop the file into your project - it should appear as a sub-project.
+12. Locate the `CordovaLib.xcodeproj` file in the `CordovaLib` directory, then drag and drop the file into your project. It should appear as a sub-project.
 
 13. Build your project, you should get some errors relating to `#import` directives.
 
@@ -420,20 +422,20 @@ __NOTE:__ If your project is not working as expected in the Simulator, please ta
 
 1. Install Cordova 1.9.0.
 
-2. Create a new project - you will have to grab assets from this new project.
+2. Create a new project. You will need some of the assets from this new project.
 
 3. Copy the `www/cordova-1.9.0.js` file from the new project into your `www` directory, and delete your `www/cordova-1.8.x.js` file.
 
 4. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.9.0.js` file.
 
 __NOTE:__ 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
-`false` to disable it, especially on iOS 6. See [Release Notes - Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
+`false` to disable it, especially on iOS 6. See [Release Notes: Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
 ## Upgrading 1.7.0 projects to 1.8.x ##
 
 1. Install Cordova 1.8.0.
 
-2. Create a new project - you will have to grab assets from this new project.
+2. Create a new project. You will need some of the assets from this new project.
 
 3. Copy the `www/cordova-1.8.0.js` file from the new project into your `www` directory, and delete your `www/cordova-1.7.x.js` file.
 
@@ -451,7 +453,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 1. Install Cordova 1.7.0.
 
-2. Create a new project - you will have to grab assets from this new project.
+2. Create a new project. You will need some of the assets from this new project.
 
 3. Copy the `www/cordova-1.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-1.6.0.js` file.
 
@@ -463,7 +465,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m`, `AppDelegate.h`, `MainViewController.m`, `MainViewController.h`, and `Cordova.plist` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 1.5.0-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -479,7 +481,10 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.6.1.js` file.
 
-8. Add the new `Cordova.plist` file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and BlackBerry, for a unified Cordova JavaScript file (cordova-js).
+8. Add the new `Cordova.plist` file into your project. This is
+   necessary because the core plugin service names must change to
+   match the ones from Android and BlackBerry, for a unified Cordova
+   JavaScript file (`cordova-js`).
 
 9. Integrate any settings, __Plugins__ and __ExternalHosts__ entries that you had in your __backed-up Cordova.plist__ into the new `Cordova.plist`.
 
@@ -497,7 +502,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 1. Install Cordova 1.5.0.
 
-2. Create a new project and run it once - you will have to grab assets from this new project.
+2. Create a new project and run it once. You will need some of the assets from this new project.
 
 3. Copy the `www/cordova-1.5.0.js` file from the new project into your `www` directory, and delete your `www/phonegap-1.4.x.js` file.
 
@@ -557,11 +562,15 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 30. Press __Option-Command-F__, choose __Replace__ from the drop-down on the top left of the Source window.
 
-31. Enter `com.phonegap` for the Find string, and `org.apache.cordova` for the Replace string - then press the __Replace All__ button.
+31. Enter `com.phonegap` for the Find string, and `org.apache.cordova`
+    for the Replace string, then press the __Replace All__ button.
 
-32. Enter __PG__ for the Find string, and __CDV__ for the Replace string - then press the __Replace All__ button.
+32. Enter __PG__ for the Find string, and __CDV__ for the Replace
+    string, then press the __Replace All__ button.
 
-33. Press __Command-B__ to build, you will still have deprecations that you can get rid of in the future (see `CDVDeprecated.h` - replace classes in your code that use PG* to CDV*, for example).
+33. Press __Command-B__ to build, you will still have deprecations
+    that you can get rid of in the future (see `CDVDeprecated.h`. For
+    example, replace classes in your code that use PG* to CDV*).
 
 ## Upgrading 1.4.0 projects to 1.4.1 ##
 
@@ -569,7 +578,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `MainViewController.m`.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy the `MainViewController.m` file from the new project into your 1.4.0-based project folder on disk, replacing the old file (backup your files first from step 2 above).
 
@@ -585,7 +594,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m` and `AppDelegate.h` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 1.3.0-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -601,7 +610,8 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.4.0.js` file.
 
-8. Add a new entry under `Plugins` in your `PhoneGap.plist` file - key is `com.phonegap.battery` and the value is `PGBattery`.
+8. Add a new entry under `Plugins` in your `PhoneGap.plist` file. The
+   key is `com.phonegap.battery` and the value is `PGBattery`.
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
@@ -611,7 +621,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m` and `AppDelegate.h` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 1.2.0-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -627,7 +637,8 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.3.0.js` file.
 
-8. Add a new entry under `Plugins` in your `PhoneGap.plist` file - key is `com.phonegap.battery` and the value is `PGBattery`.
+8. Add a new entry under `Plugins` in your `PhoneGap.plist` file. The
+   key is `com.phonegap.battery` and the value is `PGBattery`.
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
@@ -637,7 +648,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m` and `AppDelegate.h` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 1.1.0-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -653,7 +664,8 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.2.0.js` file.
 
-8. Add a new entry under `Plugins` in your `PhoneGap.plist` file - key is `com.phonegap.battery` and the value is `PGBattery`.
+8. Add a new entry under `Plugins` in your `PhoneGap.plist` file. The
+   key is `com.phonegap.battery` and the value is `PGBattery`.
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
@@ -663,7 +675,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m` and `AppDelegate.h` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 1.0.0-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -679,7 +691,8 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.1.0.js` file.
 
-8. Add a new entry under `Plugins` in your `PhoneGap.plist` file - key is `com.phonegap.battery` and the value is `PGBattery`.
+8. Add a new entry under `Plugins` in your `PhoneGap.plist` file. The
+   key is `com.phonegap.battery` and the value is `PGBattery`.
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
@@ -689,7 +702,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 2. Make a backup of `AppDelegate.m` and `AppDelegate.h` in your project.
 
-3. Create a new project - you will have to grab assets from this new project.
+3. Create a new project. You will need some of the assets from this new project.
 
 4. Copy these files from the new project into your 0.9.6-based project folder on disk, replacing any old files (backup your files first from step 2 above):
 
@@ -705,6 +718,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.0.0.js` file.
 
-8. Add a new entry under `Plugins` in your `PhoneGap.plist` file - key is `com.phonegap.battery` and the value is `PGBattery`.
+8. Add a new entry under `Plugins` in your `PhoneGap.plist` file. The
+   key is `com.phonegap.battery` and the value is `PGBattery`.
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
