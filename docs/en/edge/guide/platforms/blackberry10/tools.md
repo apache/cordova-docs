@@ -58,9 +58,9 @@ command-line utility opened with administrator privileges.
 
 ## target
 
-The `target` command allows you to manage the BlackBerry device(s) or
-emulator that you will use to test your app. You can add or remove a
-target, or set a target as the default target.
+The `target` command allows you to manage the emulator or BlackBerry
+devices that you use to test your app. You can add or remove a target,
+or set a target as the default target.
 
 ### Add a target
 

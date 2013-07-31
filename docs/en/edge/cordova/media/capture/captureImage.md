@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 capture.captureImage
 ====================
 
-> Start the camera application and return information about captured image file(s).
+> Start the camera application and return information about captured image files.
 
     navigator.device.capture.captureImage(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]

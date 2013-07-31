@@ -169,6 +169,9 @@ editorial guidelines.
 * Avoid unnecessary/gratuitous slash-delimited alternators in text, as
   in this example (but OK to refer to try/catch blocks).
 
+* Avoid trailing (s) to denote optional plural. It's usually implicit.
+  E.g., "return information about captured image files", not "file(s)"
+
 ## Punctuation
 
 * Initial Cap Words in Headings, Except for Short Prepositions or
