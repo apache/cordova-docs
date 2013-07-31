@@ -153,17 +153,6 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="guide_platforms_index.md.html">SDK platform support</a></th>
-        <td data-col="android"    class="y"><a href="guide_platforms_android_index.md.html">         </a></td>
-        <td data-col="blackberry" class="y"><a href="guide_platforms_blackberry_index.md.html">      </a></td>
-        <td data-col="blackberry10" class="y"><a href="guide_platforms_blackberry10_index.md.html">      </a></td>
-        <td data-col="ios"        class="y"><a href="guide_platforms_ios_index.md.html">             </a></td>
-        <td data-col="winphone7"  class="y"><a href="guide_platforms_wp7_index.md.html"> </a></td>
-        <td data-col="winphone8"  class="y"><a href="guide_platforms_windows-phone-8_index.md.html"> </a></td>
-        <td data-col="win8"       class="y"><a href="guide_platforms_windows-8_index.md.html">       </a></td>
-    </tr>
-
-    <tr>
         <th><a href="#">Embedded<br/>WebView</a></th>
         <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html"></a></td>
         <td data-col="blackberry" class="n"></td>
