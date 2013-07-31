@@ -34,9 +34,9 @@ but may be eventually be automated.
 
 ## Prerequisites
 
-1. Cordova 1.9 or greater
+* Cordova 1.9 or greater
 
-2. Android SDK updated with 15
+* Android SDK updated with 15
 
 ## Guide to using CordovaWebView in an Android Project
 
