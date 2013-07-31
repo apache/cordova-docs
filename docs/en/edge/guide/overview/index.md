@@ -153,17 +153,6 @@ available for each mobile platform:
     </tr>
 
     <tr>
-        <th><a href="#">PhoneGap<br/>Build</a></th>
-        <td data-col="android"    class="y"></td>
-        <td data-col="blackberry" class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
-        <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="u"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="u"></td>
-    </tr>
-
-    <tr>
         <th><a href="guide_platforms_index.md.html">SDK platform support</a></th>
         <td data-col="android"    class="y"><a href="guide_platforms_android_index.md.html">         </a></td>
         <td data-col="blackberry" class="y"><a href="guide_platforms_blackberry_index.md.html">      </a></td>
