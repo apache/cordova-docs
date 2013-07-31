@@ -180,7 +180,7 @@ __Parameters:__
 
 - __newName__: The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
 
-- __successCallback__: A callback that is passed the new files `FileEntry` object. _(Function)_
+- __successCallback__: A callback that is passed the new file's `FileEntry` object. _(Function)_
 
 - __errorCallback__: A callback that executes if an error occurs when attempting to move the file.  Invoked with a `FileError` object. _(Function)_
 

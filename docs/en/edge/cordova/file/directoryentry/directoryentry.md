@@ -103,8 +103,8 @@ __Quick Example__
 setMetadata
 ----------------
 
-Set metadata on a directory.
-__Currently works only on iOS.__ - this will set the extended attributes of a directory.
+Sets a directory's extended attributes, or metadata. _Currently works
+only on iOS._
 
 __Parameters:__
 

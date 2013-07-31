@@ -80,11 +80,11 @@ based Cleaver implementation.
         MobileCoreServices.framework
         CoreMedia.framework
 
-16. Expand **Target Dependencies** - the top box labeled like this if you have multiple boxes!
+16. Expand **Target Dependencies**, the top box labeled like this if you have multiple boxes!
 
 17. Select the **+** button, and add the `CordovaLib` build product.
 
-18. Expand **Link Binaries with Libraries** - the top box labeled like
+18. Expand **Link Binaries with Libraries**, the top box labeled like
     this if you have multiple boxes!
 
 19. Select the **+** button, and add `libCordova.a`.
