@@ -351,7 +351,8 @@ Use this syntax to install a specific version:
 
         $ sudo npm install -g cordova@3.0.0
 
-Run the `info` command for a listing that includes the current version
+Run `cordova -v` to see the currently running version.  Run the `npm
+info` command for a longer listing that includes the current version
 along with other available version numbers:
 
         $ npm info cordova
