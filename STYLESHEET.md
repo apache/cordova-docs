@@ -120,6 +120,8 @@ editorial guidelines.
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
 
+* Subdirectory, not sub-directory
+
 * 'Press' a button on the screen; 'type' a key; do not 'hit' either.
 
 * 'Set up' as verb, 'setup' as noun.
