@@ -37,20 +37,24 @@ arguments.
 
 ## create
 
-The 'create' command creates a new project:
+The `create` command creates a new project:
 
     bin/create <path-to-project> <project-package> <project-name>
 
 where
 
-- '<path-to-project>' specifies the directory you want the project created in
+- `<path-to-project>` specifies the directory you want the project created in
 
-- '<project-package>' specifies a reverse domain style identifier
+- `<project-package>` specifies a reverse domain style identifier
 
-- '<project-name>' specifies the apps display name
+- `<project-name>` specifies the apps display name
 
-*Note*: the create command bootstraps dependency installation through the 'npm install' command. Depending on installation directory and system permissions, this may require admin privileges.
-If a problem is encountered on OSX/Linux, run 'sudo npm install' before using the create command. On Windows, run 'npm install' in a command line utility opened with admin privileges.
+__NOTE:__ the `create` command bootstraps dependency installation
+through the `npm install` command. Depending on the installation
+directory and system permissions, this may require administrator
+privileges.  If there's problem on OSX/Linux, run `sudo npm install`
+before using the `create` command. On Windows, run `npm install` in a
+command-line utility opened with administrator privileges.
 
 ## target
 
