@@ -369,8 +369,8 @@ available for each mobile platform:
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
+        <td data-col="winphone7"  class="p">localStorage only</td>
+        <td data-col="winphone8"  class="p">localStorage only</td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
     </tr>
