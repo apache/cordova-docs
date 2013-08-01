@@ -412,7 +412,6 @@ Assumes table is 2D grid, with single TH preceding TDs in body of table.
 .compat .n::before { content: "\2718"; margin-right: 6px;  }
 
 .compat .p { background-color: gold; }
-.compat .p::before { content: "(partial)";  }
 
 .compat .u { background-color: #dddddd; }
 
