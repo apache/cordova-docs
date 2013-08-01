@@ -70,3 +70,6 @@ platform-specific configuration settings described below:
         <feature name="Globalization">
             <param name="android-package" value="org.apache.cordova.Globalization" />
         </feature>
+
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

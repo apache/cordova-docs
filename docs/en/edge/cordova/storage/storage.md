@@ -81,3 +81,5 @@ required:
 
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
 
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.
