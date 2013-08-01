@@ -106,4 +106,5 @@ platform-specific configuration settings described below:
 
   Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-* Tizen (no special permissions required)
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

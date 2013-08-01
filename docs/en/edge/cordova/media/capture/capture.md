@@ -130,3 +130,6 @@ platform-specific configuration settings described below:
             <Capability Name="ID_CAP_ISV_CAMERA" />
             <Capability Name="ID_CAP_CAMERA" />
         </Capabilities>
+
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

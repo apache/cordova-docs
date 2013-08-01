@@ -52,6 +52,9 @@ platform-specific configuration settings described below:
             <param name="ios-package" value="CDVSplashScreen" />
         </feature>
 
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.
+
 Setup
 -----
 
