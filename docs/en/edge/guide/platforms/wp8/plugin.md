@@ -207,6 +207,6 @@ inform yourself of errors.
 
 - It is usually a good idea to do parameter checking in your
   JavaScript code, before you call `exec`.  This allows you to re-use
-  more JavaScript code among your plug-in's various native
+  more JavaScript code among your plugin's various native
   implementations.
 
