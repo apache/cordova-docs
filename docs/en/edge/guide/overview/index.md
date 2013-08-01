@@ -156,10 +156,10 @@ available for each mobile platform:
 
     <tr>
         <th><a href="#">Embedded<br/>WebView</a></th>
-        <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html"></a></td>
+        <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html">(see details)</a></td>
         <td data-col="blackberry" class="n"></td>
         <td data-col="blackberry10" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html"></a></td>
+        <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">(see details)</a></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
@@ -168,11 +168,11 @@ available for each mobile platform:
 
     <tr>
         <th><a href="guide_plugin-development_index.md.html">Plug-in<br/>Interface</a></th>
-        <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html"></a></td>
-        <td data-col="blackberry" class="y"><a href="guide_guide_platforms_blackberry_plugin.md.html"></a></td>
-        <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html"></a></td>
-        <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html"></a></td>
-        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html"></a></td>
+        <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html">(see details)</a></td>
+        <td data-col="blackberry" class="y"><a href="guide_guide_platforms_blackberry_plugin.md.html">(see details)</a></td>
+        <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
+        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
