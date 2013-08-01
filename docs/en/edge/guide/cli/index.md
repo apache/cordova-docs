@@ -149,7 +149,7 @@ Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
 <!-- XREF
-(See Application Development Guide for details.)
+(See the Application Development Guide for details.)
 XREF -->
 
 Run the following command to iteratively build the project:
