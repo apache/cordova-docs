@@ -128,7 +128,7 @@ Build the Cordova sample project by typing `./cordova/build <target>` in your co
         blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
 
 These correspond to parameters you specify when building your project.
-The first time you run these commands, they generate a "Hello World"
+The first time you run these commands, they generate a "HelloWorld"
 application:
 
     cordova/build playbook
