@@ -90,7 +90,7 @@ iOS Quirks
 --------------------------
 
 In the `pause` handler, any calls to the Cordova API or to native
-plug-ins that go through Objective-C do not work, along with any
+plugins that go through Objective-C do not work, along with any
 interactive calls, such as alerts or `console.log()`. They are only
 processed when the app resumes, on the next run loop.
 

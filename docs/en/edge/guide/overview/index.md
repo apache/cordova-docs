@@ -38,7 +38,7 @@ Use Cordova if you are:
 
 * a mobile developer interested in mixing native application
   components with a _WebView_ (browser window) that can access
-  device-level APIs, or if you want to develop a plug-in interface
+  device-level APIs, or if you want to develop a plugin interface
   between native and WebView components.
 
 ## Basic Components
@@ -65,7 +65,7 @@ XREF -->
 The Cordova-enabled WebView may provide the application with its
 entire user interface. It can also be a component within a larger,
 hybrid application that mixes the WebView with native application
-components.  Cordova provides a _plug-in_ interface for these
+components.  Cordova provides a _plugin_ interface for these
 components to communicate with each other.
 
 ## Development Paths
