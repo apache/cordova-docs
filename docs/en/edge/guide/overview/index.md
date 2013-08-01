@@ -342,13 +342,13 @@ available for each mobile platform:
     <tr>
         <th><a href="cordova_notification_notification.md.html">Notification</a></th>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry" class="y"></td>
-        <td data-col="blackberry10" class="y"></td>
+        <td data-col="blackberry" class="p">(no custom prompt)</td>
+        <td data-col="blackberry10" class="p">(no custom prompt)</td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
-        <td data-col="tizen"       class="y"></td>
+        <td data-col="winphone7"  class="p">(no custom prompt)</td>
+        <td data-col="winphone8"  class="p">(no custom prompt)</td>
+        <td data-col="win8"       class="p">(alert and confirm only)</td>
+        <td data-col="tizen"       class="p">(no vibration)</td>
     </tr>
 
     <tr>
