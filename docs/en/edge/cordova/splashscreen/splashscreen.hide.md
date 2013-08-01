@@ -33,6 +33,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry 10
 - iOS
 
 Quick Example
