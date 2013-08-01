@@ -58,8 +58,8 @@ which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings.
 <!-- XREF
-(See the API Reference for an overview, and the API and Configuration
-Guide for examples of how to use them.)
+(See the API Reference for an overview, and the Application
+Development Guide for examples of how to use them.)
 XREF -->
 
 The Cordova-enabled WebView may provide the application with its
