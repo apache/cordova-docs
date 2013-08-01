@@ -145,7 +145,7 @@ available for each mobile platform:
     <tr>
         <th><a href="guide_cli_index.md.html">cordova<br/>CLI</a></th>
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
-        <td data-col="blackberry" class="y">Mac, Windows</td>
+        <td data-col="blackberry" class="n">Mac, Windows</td>
         <td data-col="blackberry10" class="y">Mac, Windows</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="winphone7"  class="y">Windows</td>
