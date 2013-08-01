@@ -27,8 +27,10 @@ and it comes with the majority of the 'plumbing' built for you already.
 
 1. Select your project, and right-click to choose __Add &rarr; New Item...__
     - Preferably add it to the 'Plugins' folder, but it is up to you
+
 2. Select 'Class' and name it `Echo.cs`
     - The name of this class must _exactly_ match what you call into `cordova.exec(win, fail, "Echo", ...)`
+
 3. Include the base classes implementation
 
         using WPCordovaClassLib.Cordova;
@@ -42,7 +44,7 @@ and it comes with the majority of the 'plumbing' built for you already.
             // ...
         }
 
-5. Add a method that is callable from JS
+5. Add a method that is callable from JavaScript
 
         public class Echo : BaseCommand
         {
@@ -74,7 +76,7 @@ your C# class like this:
         }
     }
 
-Then, in JS you need to call `exec` like this:
+Then, in JavaScript you need to call `exec` like this:
 
     cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
@@ -82,7 +84,7 @@ Then, in JS you need to call `exec` like this:
 
 The data received by your plugin method is a string value, but in actuality
 looking at our JavaScript code, we see our intention was to pass an array of strings.
-Looking back at our JS call to `cordova.exec`, we see we passed `[str]`:
+Looking back at our JavaScript call to `cordova.exec`, we see we passed `[str]`:
 
     cordova.exec(win, fail, "Echo", "echo", ["input string"]);
 
@@ -91,7 +93,7 @@ we see that the value is actually:
 
     "[\"input string\"]"
 
-All JavaScript exec arguments are JSON encoded before being passed into C#.
+All JavaScript `exec` arguments are JSON encoded before being passed into C#.
 
 If we want to treat this as the string we were expecting, we need to decode it.
 We can use simple JSON deserialization.
@@ -99,9 +101,9 @@ We can use simple JSON deserialization.
     string optVal = JsonHelper.Deserialize<string[]>(options)[0];
     // optVal now has the value of "input string"
 
-## Passing results from C# to JS
+## Passing results from C# to JavaScript
 
-The base class BaseCommand provides methods for passing data to your JS callback handlers.
+The base class BaseCommand provides methods for passing data to your JavaScript callback handlers.
 To simply signal that the command has succeeded, when no additional result info is needed,
 you can simply call:
 
@@ -111,7 +113,7 @@ To pass data back, you need to call a different version of `DispatchCommandResul
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
 
-To pass structured object data back to JS, it should be encoded as a JSON string:
+To pass structured object data back to JavaScript, it should be encoded as a JSON string:
 
     DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
 
@@ -144,11 +146,34 @@ in case we have bad input. This is a pattern used throughout the Cordova C# code
         // ... continue on to do our work
     }
 
+## Plugin XML
+
+These are windows phone specific examples of using the plugin.xml file, refer to the Plugin Specification for more details
+
+### `<source-file>`
+
+On windows phone the `<source-file>` element is currently used to define all plugin resources (ie. .cs, .xaml, .xaml.cs, .dll, image assets etc).
+
+### `<config-file>`
+
+The `<config-file>` element defines what elements get put into a config file. For example to add a plugin to the platforms config.xml, you would do something like this :
+
+    <config-file target="config.xml" parent="/*">
+        <feature name="PluginName">
+            <param name="wp-package" value="PluginName"/>
+        </feature>
+    </config-file>
+If we wanted to add the contacts capability to the WMAppManifest.xml, it would look like this :
+
+    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+        <Capability Name="ID_CAP_CONTACTS" />
+    </config-file>
+
 ## Advanced Plugin Functionality
 
 See other methods that you can override in:
 
-1. [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
+* [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
 
 For example, you can hook into the 'pause' and 'resume' application events.
 
@@ -182,6 +207,6 @@ inform yourself of errors.
 
 - It is usually a good idea to do parameter checking in your
   JavaScript code, before you call `exec`.  This allows you to re-use
-  more JavaScript code among your plug-in's various native
+  more JavaScript code among your plugin's various native
   implementations.
 

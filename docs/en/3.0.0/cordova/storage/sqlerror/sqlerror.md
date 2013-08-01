@@ -26,6 +26,7 @@ Properties
 ----------
 
 - __code__: One of the predefined error codes listed below.
+
 - __message__: A description of the error.
 
 Constants

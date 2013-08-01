@@ -38,9 +38,10 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry 10
 - iOS
 - Tizen
-- Windows Phone 7 and 8 ( if available in hardware )
+- Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
 Quick Example

@@ -44,44 +44,48 @@ front-facing and arguably most important part of your Cordova plugin.
 
 You can structure your plugin's JavaScript however you like. The one
 thing you _must_ use to communicate between the Cordova JavaScript
- and native environments is the `cordova.exec` function. Here is an example:
+and native environments is the `cordova.exec` function. Here is an example:
 
-    cordova.exec(function(winParam) {}, function(error) {}, "service",
-                 "action", ["firstArgument", "secondArgument", 42,
-                 false]);
+        cordova.exec(function(winParam) {}, function(error) {}, "service",
+                     "action", ["firstArgument", "secondArgument", 42,
+                     false]);
 
 The parameters are detailed below:
 
-1. `function(winParam) {}` - Success function callback. Assuming your
-   `exec` call completes successfully, this function is invoked
-    (optionally with any parameters you pass back to it).
-2. `function(error) {}` - Error function callback. If the operation does
-   not complete successfully, this function is invoked (optionally
-   with an error parameter).
-3. `"service"` - The service name to call into on the native side. This
-   is mapped to a native class, about which more information is
-   available in the native guides listed below.
-4. `"action"` - The action name to call into. This is picked up by the
-   native class receiving the `exec` call, and, depending on the
-   platform, essentially maps to a class's method.
-   The native guides listed below provide details.
-5. `[/* arguments */]` - Arguments to pass into the native environment.
+* `function(winParam) {}`: Success function callback. Assuming your
+  `exec` call completes successfully, this function is invoked
+  (optionally with any parameters you pass back to it).
+
+* `function(error) {}`: Error function callback. If the operation does
+  not complete successfully, this function is invoked (optionally with
+  an error parameter).
+
+* `"service"`: The service name to call into on the native side. This
+  is mapped to a native class, about which more information is
+  available in the native guides listed below.
+
+* `"action"`: The action name to call into. This is picked up by the
+  native class receiving the `exec` call, and, depending on the
+  platform, essentially maps to a class's method.  The native guides
+  listed below provide details.
+
+* `[/* arguments */]`: Arguments to pass into the native environment.
 
 ### Echo Plugin JavaScript Example
 
-    window.echo = function(str, callback) {
-        cordova.exec(callback, function(err) {
-            callback('Nothing to echo.');
-        }, "Echo", "echo", [str]);
-    };
+        window.echo = function(str, callback) {
+            cordova.exec(callback, function(err) {
+                callback('Nothing to echo.');
+            }, "Echo", "echo", [str]);
+        };
 
 Let's dive into this. The plugin attaches itself to `window`,
 specifically to the `echo` function. Plugin users would then use it as
 follows:
 
-    window.echo("echome", function(echoValue) {
-        alert(echoValue == "echome"); // should alert true.
-    });
+        window.echo("echome", function(echoValue) {
+            alert(echoValue == "echome"); // should alert true.
+        });
 
 First, let's take a look at the last three arguments to the `exec`
 function. We will be calling the `Echo` "service", requesting the `echo`
@@ -100,7 +104,7 @@ Cordova has a plugin specification available to enable automated
 installation of the plugin for Android, iOS, BlackBerry 10 and Windows
 Phone platforms. By structuring your plugin in a particular way and
 adding a `plugin.xml` manifest file, you can enable users to install
-your plugin via the command line tooling.
+your plugin via the command-line tooling.
 
 - Plugin Specification
 

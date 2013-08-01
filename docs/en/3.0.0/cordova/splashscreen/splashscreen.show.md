@@ -33,7 +33,9 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry 10
 - iOS
+- Windows Phone 7 and 8
 
 Quick Example
 -------------

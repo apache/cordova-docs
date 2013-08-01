@@ -31,12 +31,19 @@ Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object contains the following properties:
 
 - __pattern__: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+
 - __symbol__: The symbol to use when formatting and parsing, such as a percent or currency symbol. _(String)_
+
 - __fraction__: The number of fractional digits to use when parsing and formatting numbers. _(Number)_
+
 - __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+
 - __positive__: The symbol to use for positive numbers when parsing and formatting. _(String)_
+
 - __negative__: The symbol to use for negative numbers when parsing and formatting. _(String)_
+
 - __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
 If there is an error obtaining the pattern, then the `errorCallback`
@@ -121,5 +128,7 @@ Full Example
 
 Windows Phone 8 Quirks
 ----------------
+
 - The `pattern` property is not supported, and retuens an empty string.
+
 - The `fraction` property is not supported, and returns zero.

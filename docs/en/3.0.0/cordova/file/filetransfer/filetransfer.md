@@ -32,7 +32,9 @@ Methods
 -------
 
 - __upload__: sends a file to a server.
+
 - __download__: downloads a file from server.
+
 - __abort__: Aborts an in-progress transfer.
 
 Details
@@ -63,10 +65,15 @@ upload
 __Parameters:__
 
 - __filePath__: Full path of the file on the device.
+
 - __server__: URL of the server to receive the file, as encoded by `encodeURI()`.
+
 - __successCallback__: A callback that is passed a `Metadata` object. _(Function)_
+
 - __errorCallback__: A callback that executes if an error occurs retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+
 - __options__: Optional parameters such as file name and mimetype.
+
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
@@ -205,10 +212,15 @@ download
 __Parameters:__
 
 - __source__: URL of the server to download the file, as encoded by `encodeURI()`.
+
 - __target__: Full path of the file on the device.
+
 - __successCallback__: A callback that is passed  a `FileEntry` object. _(Function)_
+
 - __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
+
 - __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true` then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+
 - __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
 __Quick Example__
@@ -251,32 +263,25 @@ __Quick Example__
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
 
-          var win = function(r) {
-        console.log("Code = " + r.responseCode);
-        console.log("Response = " + r.response);
-        console.log("Sent = " + r.bytesSent);
-        }
+    var win = function(r) {
+        console.log("Should not be called.");
+    }
 
     var fail = function(error) {
+        // error.code == FileTransferError.ABORT_ERR
         alert("An error has occurred: Code = " + error.code);
         console.log("upload error source " + error.source);
         console.log("upload error target " + error.target);
     }
 
-        var options = new FileUploadOptions();
-        options.fileKey="file";
-        options.fileName=fileURI.substr(fileURI.lastIndexOf('/')+1);
-        options.mimeType="text/plain";
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName="myphoto.jpg";
+    options.mimeType="image/jpeg";
 
-    var params = {};
-        params.value1 = "test";
-        params.value2 = "param";
-
-        options.params = params;
-
-        var ft = new FileTransfer();
+    var ft = new FileTransfer();
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
-    ft.abort(win, fail);
+    ft.abort();
 
 onprogress
 --------------

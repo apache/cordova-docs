@@ -37,15 +37,30 @@ arguments.
 
 ## create
 
-The 'create' command creates a new project:
+The `create` command creates a new project:
 
-    bin/create <path-to-project>
+    bin/create <path-to-project> <project-package> <project-name>
+
+where
+
+- `<path-to-project>` specifies the directory you want the project created in
+
+- `<project-package>` specifies a reverse domain style identifier
+
+- `<project-name>` specifies the apps display name
+
+__NOTE:__ the `create` command bootstraps dependency installation
+through the `npm install` command. Depending on the installation
+directory and system permissions, this may require administrator
+privileges.  If there's problem on OSX/Linux, run `sudo npm install`
+before using the `create` command. On Windows, run `npm install` in a
+command-line utility opened with administrator privileges.
 
 ## target
 
-The `target` command allows you to manage the BlackBerry device(s) or
-emulator that you will use to test your app. You can add or remove a
-target, or set a target as the default target.
+The `target` command allows you to manage the emulator or BlackBerry
+devices that you use to test your app. You can add or remove a target,
+or set a target as the default target.
 
 ### Add a target
 
@@ -88,7 +103,9 @@ in debug mode (which produces an unsigned .bar file).
 where
 
 -   `-k | --keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
+
 -   `-b | --buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
+
 -   `-p | --params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
 ### Build your project in debug mode

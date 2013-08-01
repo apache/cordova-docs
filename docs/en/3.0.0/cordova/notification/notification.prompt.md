@@ -25,10 +25,14 @@ Shows a customizable prompt dialog box.
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
 
 - __message__: Dialog message. _(String)_
+
 - __promptCallback__: Callback to invoke when a button is pressed. _(Function)_
+
 - __title__: Dialog title _(String)_ (Optional, defaults to `Prompt`)
+
 - __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `["OK","Cancel"]`)
-- __defaultText__: Default textbox input value (`String`) (Optional, Default: "Default text")
+
+- __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)
 
 Description
 -----------
@@ -44,6 +48,7 @@ in the prompt dialog box. The `results` object passed to the callback
 contains the following properties:
 
 - __buttonIndex__: The index of the pressed button. _(Number)_ Note that the index uses one-based indexing, so the value is `1`, `2`, `3`, etc.
+
 - __input1__: The text entered in the prompt dialog box. _(String)_
 
 Supported Platforms
@@ -121,4 +126,5 @@ Android Quirks
 ----------------------
 
 - Android supports a maximum of three buttons, and ignores any more than that.
+
 - On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.

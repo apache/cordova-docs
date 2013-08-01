@@ -26,6 +26,7 @@ Properties
 ----------
 
 - __limit__: The maximum number of video clips the device's user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
+
 - __duration__: The maximum duration of a video clip, in seconds.
 
 Quick Example

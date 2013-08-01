@@ -63,6 +63,7 @@ Options
         };
 
 - __targetWidth__: Width in pixels to scale image. Must be used with __targetHeight__.  Aspect ratio remains constant. _(Number)_
+
 - __targetHeight__: Height in pixels to scale image. Must be used with __targetWidth__. Aspect ratio remains constant. _(Number)_
 
 - __mediaType__: Set the type of media to select from.  Only works when `PictureSourceType` is `PHOTOLIBRARY` or `SAVEDPHOTOALBUM`. Defined in `nagivator.camera.MediaType` _(Number)_
@@ -74,8 +75,11 @@ Options
 };
 
 - __correctOrientation__: Rotate the image to correct for the orientation of the device during capture. _(Boolean)_
+
 - __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. _(Boolean)_
+
 - __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `CameraPopoverOptions`.
+
 - __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` _(Number)_
 
         Camera.Direction = {
@@ -87,34 +91,47 @@ Android Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
+
 - `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
 BlackBerry Quirks
 -----------------
 
 - Ignores the `quality` parameter.
+
 - Ignores the `sourceType` parameter.
+
 - Ignores the `allowEdit` parameter.
+
 - Application must have key injection permissions to close the native Camera application after the user snaps the photo.
+
 - Using large image sizes may result in the inability to encode images on later-model devices (e.g. Torch 9800) that feature high-resolution cameras.
+
 - `Camera.MediaType` is not supported.
+
 - Ignores the `correctOrientation` parameter.
+
 - Ignores the `cameraDirection` parameter.
 
 iOS Quirks
 --------------
 
 - Set `quality` below 50 to avoid memory errors on some devices.
+
 - When using `destinationType.FILE_URI`, photos are saved in the application's temporary directory.  You may delete the contents of this directory using the `navigator.fileMgr` APIs if storage space is a concern.
 
 Tizen Quirks
 --------------
+
 - options not supported
+
 - always returns a FILE URI
 
 Windows Phone 7 and 8 Quirks
 --------------
 
 - Ignores the `allowEdit` parameter.
+
 - Ignores the `correctOrientation` parameter.
+
 - Ignores the `cameraDirection` parameter.

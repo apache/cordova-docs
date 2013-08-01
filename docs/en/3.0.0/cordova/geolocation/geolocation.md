@@ -56,49 +56,55 @@ Objects (Read-Only)
 - PositionError
 - Coordinates
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin rm org.apache.cordova.core.geolocation
 
-    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Geolocation" value="org.apache.cordova.geolocation.Geolocation" />
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
 
-    <rim:permissions>
-        <rim:permit>read_geolocation</rim:permit>
-    </rim:permissions>
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
 
-#### config.xml
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <plugin name="Geolocation" value="CDVLocation" />
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
 
-### Windows Phone
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_LOCATION" />
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
-
-### Tizen
-
-    No permissions are required.
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

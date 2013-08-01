@@ -39,26 +39,36 @@ Methods
 - executeScript
 - insertCSS
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin rm org.apache.cordova.core.inappbrowser
 
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-### iOS
+* Android (in `app/res/xml/config.xml`)
 
-#### config.xml
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
 
-    <plugin name="InAppBrowser" value="CDVInAppBrowser" />
+* iOS (in `config.xml`)
 
-### Windows Phone 7 + 8
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
 
-#### config.xml
+* Windows Phone 7 and 8 (in `config.xml`)
 
-    <plugin name="InAppBrowser" />
+        <feature name="InAppBrowser" />
+
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.
 
 addEventListener
 ================
@@ -68,6 +78,7 @@ addEventListener
     ref.addEventListener(eventname, callback);
 
 - __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+
 - __eventname__: the event to listen for _(String)_
 
   - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
@@ -81,8 +92,9 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
-- Windows Phone 7 + 8
+- Windows Phone 7 and 8
 
 Quick Example
 -------------
@@ -129,6 +141,7 @@ removeEventListener
     ref.removeEventListener(eventname, callback);
 
 - __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
+
 - __eventname__: the event to stop listening for. _(String)_
 
   - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
@@ -143,8 +156,9 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
-- Windows Phone 7 + 8
+- Windows Phone 7 and 8
 
 Quick Example
 -------------
@@ -221,9 +235,9 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
-- Windows Phone 7 + 8
-- BlackBerry 10
+- Windows Phone 7 and 8
 
 Quick Example
 -------------
@@ -275,6 +289,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
 
 Quick Example
@@ -317,7 +332,6 @@ Full Example
       </body>
     </html>
 
-
 executeScript
 =============
 
@@ -326,9 +340,11 @@ executeScript
     ref.executeScript(details, callback);
 
 - __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
+
 - __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
   - __file__: URL of the script to inject.
   - __code__: Text of the script to inject.
+
 - __callback__: the function that executes after the JavaScript code is injected.
     - If the injected script is of type `code`, the callback executes
       with a single parameter, which is the return value of the
@@ -340,6 +356,7 @@ Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
 
 Quick Example
@@ -405,15 +422,18 @@ insertCSS
     ref.insertCSS(details, callback);
 
 - __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+
 - __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
   - __file__: URL of the stylesheet to inject.
   - __code__: Text of the stylesheet to inject.
+
 - __callback__: the function that executes after the CSS is injected.
 
 Supported Platforms
 -------------------
 
 - Android
+- BlackBerry
 - iOS
 
 Quick Example
@@ -481,6 +501,9 @@ Properties
 ----------
 
 - __type__: the eventname, either `loadstart`, `loadstop`, `loaderror`, or `exit`. _(String)_
+
 - __url__: the URL that was loaded. _(String)_
+
 - __code__: the error code, only in the case of `loaderror`. _(Number)_
+
 - __message__: the error message, only in the case of `loaderror`. _(String)_

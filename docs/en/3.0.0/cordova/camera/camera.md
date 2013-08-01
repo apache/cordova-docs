@@ -30,55 +30,63 @@ Methods
 - camera.getPicture
 - camera.cleanup
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+        $ cordova plugin rm org.apache.cordova.core.camera
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest
+* Android
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
 
-    <feature id="blackberry.media.camera" />
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
 
-    <rim:permissions>
-        <rim:permit>use_camera</rim:permit>
-    </rim:permissions>
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
 
-#### config.xml
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <plugin name="Camera" value="CDVCamera" />
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
 
-### Windows Phone
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-#### Properties/WPAppManifest.xml
+* Tizen (in `config.xml`)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-    </Capabilities>
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
 
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+  Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
 
-### Tizen
-
-#### config.xml
-
-    <feature name="http://tizen.org/api/application" required="true"/>
-    <feature name="http://tizen.org/api/application.launch" required="true"/>
-
-Reference: [Application Manifest for Tizen Web Application](https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures)
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

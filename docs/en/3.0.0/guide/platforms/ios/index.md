@@ -30,7 +30,7 @@ following for more detailed platform-specific information:
 * iOS Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Cordova Command-line Interface for information about the
+See The Command-line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -76,7 +76,7 @@ Cordova The Command-line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
-        $ cordova platform add android
+        $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
 
 Once created, you can open it from within Xcode. Double-click to open

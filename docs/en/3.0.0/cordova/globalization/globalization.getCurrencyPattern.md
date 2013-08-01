@@ -32,10 +32,15 @@ Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object should contain the following properties:
 
 - __pattern__: The currency pattern to format and parse currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+
 - __code__: The ISO 4217 currency code for the pattern. _(String)_
+
 - __fraction__: The number of fractional digits to use when parsing and formatting currency. _(Number)_
+
 - __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+
 - __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+
 - __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
 
 The inbound `currencyCode` parameter should be a `String` of one of

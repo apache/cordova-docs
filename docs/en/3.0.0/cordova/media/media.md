@@ -33,8 +33,11 @@ Parameters
 ----------
 
 - __src__: A URI containing the audio content. _(DOMString)_
+
 - __mediaSuccess__: (Optional) The callback that executes after a `Media` object has completed the current play, record, or stop action. _(Function)_
+
 - __mediaError__: (Optional) The callback that executes if an error occurs. _(Function)_
+
 - __mediaStatus__: (Optional) The callback that executes to indicate status changes. _(Function)_
 
 Constants
@@ -53,14 +56,23 @@ Methods
 -------
 
 - `media.getCurrentPosition`: Returns the current position within an audio file.
+
 - `media.getDuration`: Returns the duration of an audio file.
+
 - `media.play`: Start or resume playing an audio file.
+
 - `media.pause`: Pause playback of an audio file.
+
 - `media.release`: Releases the underlying operating system's audio resources.
+
 - `media.seekTo`: Moves the position within the audio file.
+
 - `media.setVolume`: Set the volume for audio playback.
+
 - `media.startRecord`: Start recording an audio file.
+
 - `media.stopRecord`: Stop recording an audio file.
+
 - `media.stop`: Stop playing an audio file.
 
 Additional ReadOnly Parameters
@@ -68,6 +80,7 @@ Additional ReadOnly Parameters
 
 - __position__: The position within the audio playback, in seconds.
     - Not automatically updated during play; call `getCurrentPosition` to update.
+
 - __duration__: The duration of the media, in seconds.
 
 Supported Platforms
@@ -80,54 +93,61 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
 
-    <plugin name="Media" value="org.apache.cordova.AudioHandler" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Capture" value="org.apache.cordova.media.MediaCapture" />
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
 
-### iOS
+* iOS (in `config.xml`)
 
-#### config.xml
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
 
-    <plugin name="Media" value="CDVSound" />
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-### Windows Phone
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
 
-#### Properties/WPAppManifest.xml
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_MEDIALIB" />
-        <Capability Name="ID_CAP_MICROPHONE" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_CAP_CAMERA" />
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
-
-### Tizen
-
-    No permissions are required.
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.
 
 ### Windows Phone Quirks
 
 - Only one media file can be played back at a time.
+
 - There are strict restrictions on how your application interacts with other media. See the [Microsoft documentation for details][url].
 
 [url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx

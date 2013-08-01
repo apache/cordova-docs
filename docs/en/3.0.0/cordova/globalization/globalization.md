@@ -53,11 +53,23 @@ therefore has global scope.
     // The global globalization object
     var globalization = navigator.globalization;
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin rm org.apache.cordova.core.globalization
 
-    <plugin name="Globalization" value="org.apache.cordova.Globalization" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
+
+* Android (in `app/res/xml/config.xml`)
+
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
+
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

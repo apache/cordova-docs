@@ -24,7 +24,6 @@ Get the string identifier for the client's current language.
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
 
-
 Description
 -----------
 
@@ -80,4 +79,5 @@ Full Example
 
 Windows Phone 8 Quirks
 -------
+
 - Returns the ISO 639-1 two-letter code for the current language.

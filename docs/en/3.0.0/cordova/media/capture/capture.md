@@ -58,14 +58,18 @@ Properties
 ----------
 
 - __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
+
 - __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
+
 - __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
 
 Methods
 -------
 
 - `capture.captureAudio`: Launch the device's audio recording application to record audio clips.
+
 - `capture.captureImage`: Launch the device's camera application to take photos.
+
 - `capture.captureVideo`: Launch the device's video recorder application to record videos.
 
 Supported Platforms
@@ -77,45 +81,55 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/plugins.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+        $ cordova plugin rm org.apache.cordova.core.media-capture
 
-    <plugin name="Capture" value="org.apache.cordova.Capture"/>
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/res/xml/plugins.xml)
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.Capture" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture" />
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
-    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
-    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="Capture">
+            <param name="ios-package" value="CDVCapture" />
+        </feature>
 
-#### config.xml
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-    <plugin name="Capture" value="CDVCapture" />
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
 
-### Windows Phone
-
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_MEDIALIB" />
-        <Capability Name="ID_CAP_MICROPHONE" />
-        <Capability Name="ID_HW_FRONTCAMERA" />
-        <Capability Name="ID_CAP_ISV_CAMERA" />
-        <Capability Name="ID_CAP_CAMERA" />
-    </Capabilities>
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

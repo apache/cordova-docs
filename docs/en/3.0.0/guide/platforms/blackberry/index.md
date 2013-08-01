@@ -31,7 +31,7 @@ information:
 * BlackBerry Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Cordova Command-line Interface for information about the
+See The Command-line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -68,30 +68,49 @@ development. BlackBerry PlayBook and BlackBerry Smartphone WebWorks
 SDKs can be downloaded from the following locations.
 
 - [BlackBerry PlayBook SDK] (https://developer.blackberry.com/html5/download/#playbook) and [Adobe Air SDK](http://www.adobe.com/devnet/air/air-sdk-download.html)
+
 - [BlackBerry Smartphones SDK] (https://developer.blackberry.com/html5/download/#smartphones)
 
-## 3.  Register for Signing Keys
+## Register for Signing Keys
 
-If you wish to publish your application on BlackBerry App World, or deploy on an actual device you’ll need to register for a set of free Code Signing Keys.
+If you wish to publish your application on BlackBerry App World, or on
+an actual device, you’ll need to register for a set of free Code
+Signing Keys.  To do so, complete the [BlackBerry Keys Order
+Form](https://www.blackberry.com/SignedKeys).
+Once you receive your Signing Keys, they require setup. See the [BlackBerry HTML5/WebWorks website](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html) for information.
 
-To register for Signing Keys visit, and complete the [BlackBerry Keys Order Form](https://www.blackberry.com/SignedKeys).
-
-Once you receive your Signing Keys, they'll need to be setup. To learn how to setup your Signing Keys visit the [BlackBerry HTML5/WebWorks website](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html).
-
-## 4.  Install Cordova
+## Install Cordova
 
 Download and extract the latest copy of [Cordova](http://cordova.apache.org/#download).
 
-## 5.  Set up New Project
+## Set up a New Project
 
 - Open up a command-line terminal and navigate to where you extracted Cordova.
-- There is a directory for each platform that Cordova supports.  CD into the `blackberry` directory.
-- The blackberry directory contains several directories.  The `example` folder contains a complete Cordova project.  Copy the `example` folder to another location on your computer.
-- Change to the newly created directory.
-- Open up the project.properties file with your favorite editor and edit the entries for the WebWorks SDKs you are using. For example...
 
-BlackBerry 10 (QNX)
-- `qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9`
+- There is a directory for each platform that Cordova supports.
+  Navigate to the `blackberry` directory.
+
+- The `blackberry` directory contains several subdirectories.  The
+  `example` directory contains a complete Cordova project.  Copy the
+  `example` directory to another location on your computer, and
+  navigate there.
+
+- Edit the `project.properties` file to specify the WebWorks SDK you
+  are using. For example, here are the respective settings for
+  BlackBerry PlayBook, BlackBerry Smartphone (OS5-7), or BlackBerry 10
+  (QNX):
+
+        playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
+        blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
+        qnx.bbwp.dir=C:\\Program Files (x86)\\Research In Motion\\BlackBerry 10 WebWorks SDK 1.0.2.9
+
+These correspond to parameters you specify when building your
+project.  The first time you run these commands, they generate a
+"HelloWorld" application:
+
+        cordova/build playbook
+        cordova/build blackberry
+        cordova/build qnx
 
 Along with the SDK, you also need to register for a code signing key
 and debug token. The signing key allows you to distribute apps through
@@ -99,40 +118,16 @@ BlackBerry World. The debug token allows you to test unsigned apps on
 a BlackBerry emulator or device. You do not need to create and
 install the debug token yourself; if you supply the keystore password,
 the build script creates and installs the debug token for you. To set
-up the signing key, go to the Blackberry website to obtain it, making
+up the signing key, go to the BlackBerry website to obtain it, making
 sure to retain the password you specify. Then run the
-`blackberry-signer` utility that is included with the SDK. Consult the
-following for more information:
+`blackberry-signer` utility that is included with the SDK. 
+BlackBerry provides more information here:
 
 * [Register for your code signing key](https://www.blackberry.com/SignedKeys/codesigning.html)
 
 * [Set up your computer for code signing](http://developer.blackberry.com/html5/documentation/set_up_for_signing.html)
 
-Build the Cordova sample project by typing `./cordova/build <target>` in your command prompt while you are in your project's directory. Replace `<target>` with either `qnx` `playbook` or `blackberry`. For example...
-
-* [Comprehensive guide to setting up your SDK environment](http://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.quickstart/topic/set_up_your_environment.html)
-
-## Set up a New Project
-
-* Open up a command-line terminal. From the directory where you
-  extracted Cordova, navigate to the `blackberry` subdirectory.
-
-* Copy the `blackberry` directory's `example` subdirectory to another
-  location on your computer and navigate there.
-
-* Edit the `project.properties` file to specify the WebWorks SDK you
-  are using. For example, here are the respective settings for
-  BlackBerry PlayBook or BlackBerry Smartphone (OS5-7):
-
-        playbook.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks SDK for TabletOS 2.1.0.6\\bbwp
-        blackberry.bbwp.dir=C:\\Program Files\\Research In Motion\\BlackBerry WebWorks Packager
-
-These correspond to parameters you specify when building your project.
-The first time you run these commands, they generate a "HelloWorld"
-application:
-
-    cordova/build playbook
-    cordova/build blackberry
+* [comprehensive guide to setting up your SDK environment](http://developer.blackberry.com/native/documentation/bb10/com.qnx.doc.native_sdk.quickstart/topic/set_up_your_environment.html)
 
 ## Deploy to Emulator
 
@@ -142,7 +137,12 @@ VMWare Fusion (Mac OS X). The WebWorks SDK provides a default
 emulator, but additional emulators are [available through
 BlackBerry](http://us.blackberry.com/developers/resources/simulators.jsp).
 
-While in your project directory, in command prompt type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`. Note, for BlackBerry 10 and PlayBook, the emulator virtual image must already be started.  For example...
+From your project directory, type `./cordova/run <target>`, replacing
+`<target>` with either `qnx`, `playbook`, or `blackberry`. Note that
+for BlackBerry 10 and PlayBook, the emulator virtual image must
+already be started.
+
+See the following for more information:
 
 * [BlackBerry PlayBook](https://developer.blackberry.com/html5/documentation/using_the_tablet_simulator_1866980_11.html)
 
@@ -164,14 +164,14 @@ Files\\BlackBerry\\Simulator`.
 Once the emulator is installed and running, run either of the
 following to install an application to the home screen:
 
-    cordova/run playbook
-    cordova/run blackberry
+        cordova/run playbook
+        cordova/run blackberry
 
 If you are prompted whether a device is connected to your computer,
 answer no.
 
 __NOTE:__ On BlackBerry OS 5, the application is installed in the
-`Downloads` folder.
+`Downloads` directory.
 
 ## Deploy to Device
 
@@ -180,11 +180,12 @@ registered for code signing keys as described above.  Also, to deploy
 apps on BlackBerry PlayBook, the __Settings &rarr; Security &rarr;
 Development Mode__ option must be enabled.
 
-On Blackberry PlayBook, edit the `project.properties` file and modify
+On BlackBerry PlayBook, edit the `project.properties` file and modify
 the following to reflect the device's IP and password as descibed
 above, along with the signing key password you set up:
 
-While in your project directory, in command prompt type `./cordova/run <target>`. Replace `<target>` with either `qnx`, `playbook`, or `blackberry`.  For example...
+From your project directory, type `./cordova/run <target>`, replacing
+`<target>` with either `qnx`, `playbook`, or `blackberry`. 
 
 On BlackBerry Smartphone (OS5-7), specify the
 `blackberry.sigtool.password` property as the signing key password.
@@ -192,14 +193,14 @@ On BlackBerry Smartphone (OS5-7), specify the
 Then from the project's directory, run either of the commands you
 would to view the app in an emulator:
 
-    cordova/run playbook
-    cordova/run blackberry
+        cordova/run playbook
+        cordova/run blackberry
 
 If you are prompted whether a device is connected to your computer,
 answer yes.
 
 __NOTE:__ On BlackBerry OS 5, the application is installed in the
-`Downloads` folder.
+`Downloads` directory.
 
 ## Additional Information
 

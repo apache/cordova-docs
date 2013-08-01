@@ -31,39 +31,45 @@ Methods
 - `notification.beep`
 - `notification.vibrate`
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+        $ cordova plugin rm org.apache.cordova.core.dialogs
+        $ cordova plugin rm org.apache.cordova.core.vibration
 
-    <plugin name="Notification" value="org.apache.cordova.Notification"/>
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.VIBRATE" />
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Notification" value="org.apache.cordova.notification.Notification" />
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
 
-    <feature id="blackberry.ui.dialog" />
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
 
-#### config.xml
-
-    <plugin name="Notification" value="CDVNotification" />
-
-### Windows Phone
-
-    No permissions are required.
-
-### Tizen
-
-    No permissions are required.
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

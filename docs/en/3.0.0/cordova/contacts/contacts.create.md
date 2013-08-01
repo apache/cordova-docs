@@ -68,7 +68,6 @@ Full Example
             console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
         }
 
-
         </script>
       </head>
       <body>

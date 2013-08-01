@@ -41,42 +41,48 @@ Objects (Read-Only)
 
 - Acceleration
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+        $ cordova plugin rm org.apache.cordova.core.device-motion
 
-    <plugin name="Accelerometer" value="org.apache.cordova.AccelListener" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-### BlackBerry WebWorks
+* Android (in `app/res/xml/config.xml`)
 
-#### www/plugins.xml
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.AccelListener" />
+        </feature>
 
-    <plugin name="Accelerometer" value="org.apache.cordova.accelerometer.Accelerometer" />
+* BlackBerry WebWorks
 
-#### www/config.xml
+        (in www/plugins.xml)
+        <feature name="Accelerometer">
+            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+        </feature>
 
-    <feature id="blackberry.system"  required="true" version="1.0.0.0" />
-    <feature id="org.apache.cordova" required="true" version="1.0.0" />
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="org.apache.cordova" required="true" version="1.0.0" />
 
-### iOS
+* iOS (in `config.xml`)
 
-#### config.xml
+        <feature name="Accelerometer">
+            <param name="ios-package" value="CDVAccelerometer" />
+        </feature>
 
-    <plugin name="Accelerometer" value="CDVAccelerometer" />
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-### Windows Phone
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
 
-#### Properties/WPAppManifest.xml
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-    <Capabilities>
-        <Capability Name="ID_CAP_SENSORS" />
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
-
-### Tizen
-
-    No permissions are required.
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

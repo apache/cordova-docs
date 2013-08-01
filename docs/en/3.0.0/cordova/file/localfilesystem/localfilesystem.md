@@ -26,12 +26,14 @@ Methods
 ----------
 
 - __requestFileSystem__: Requests a filesystem. _(Function)_
+
 - __resolveLocalFileSystemURI__: Retrieve a `DirectoryEntry` or `FileEntry` using local URI. _(Function)_
 
 Constants
 ---------
 
 - `LocalFileSystem.PERSISTENT`: Used for storage that should not be removed by the user agent without application or user permission.
+
 - `LocalFileSystem.TEMPORARY`: Used for storage with no guarantee of persistence.
 
 Details

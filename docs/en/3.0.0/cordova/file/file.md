@@ -41,43 +41,57 @@ Objects
 - LocalFileSystem
 - Metadata
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+        $ cordova plugin rm org.apache.cordova.core.file
 
-    <plugin name="File" value="org.apache.cordova.FileUtils" />
-    <plugin name="FileTransfer" value="org.apache.cordova.FileTransfer" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="File" value="org.apache.cordova.file.FileManager" />
-    <plugin name="FileTransfer" value="org.apache.cordova.http.FileTransfer" />
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
 
-    <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
-    <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
-    <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
-    <rim:permissions>
-        <rim:permit>access_shared</rim:permit>
-    </rim:permissions>
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
 
-#### config.xml
-
-    <plugin name="File" value="CDVFile" />
-    <plugin name="FileTransfer" value="CDVFileTransfer" />
-
-### Windows Phone
-
-    No permissions are required.
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

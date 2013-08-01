@@ -92,6 +92,7 @@ Android Quirks
 
 Tizen Quirks
 -----------
+
 - Returns the device model assigned by the vendor, for example, `TIZEN`
 
 Windows Phone 7 and 8 Quirks

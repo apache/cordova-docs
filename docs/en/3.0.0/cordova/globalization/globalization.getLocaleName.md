@@ -24,7 +24,6 @@ Get the string identifier for the client's current locale setting.
 
     navigator.globalization.getLocaleName(successCallback, errorCallback);
 
-
 Description
 -----------
 
@@ -80,4 +79,5 @@ Full Example
 
 Windows Phone 8 Quirks
 ---------------------
+
 - Returns the two-letter code defined in ISO 3166 for the current country/region.

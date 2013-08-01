@@ -28,6 +28,7 @@ Properties
 ----------
 
 - __create__: Indicates that the file or directory should be created if it does not already exist. _(boolean)_
+
 - __exclusive__: Has has no effect by itself, but when used with `create` causes the file or directory creation to fail if the target path already exists. _(boolean)_
 
 Supported Platforms

@@ -32,7 +32,7 @@ A sample plugin element:
         id="com.alunny.foo"
         version="1.0.2">
 
-## &lt;plugin&gt; element
+## `<plugin>` element
 
 The `plugin` element is the plugin manifest's top-level element. It
 features the following attributes:
@@ -51,9 +51,9 @@ features the following attributes:
   A version number for the plugin, that matches the following
   major-minor-patch style regular expression:
 
-    ^\d+[.]\d+[.]\d+$
+        ^\d+[.]\d+[.]\d+$
 
-## &lt;engines&gt; and &lt;engine&gt; elements
+## `<engines>` and `<engine>` elements
 
 The child elements of the `<engines>` element specify versions of
 Apache Cordova-based frameworks that this plugin supports. An example:
@@ -68,7 +68,7 @@ Similar to the `<plugin>` element's `version` attribute, the specified
 version string should match a major-minor-patch string conforming to
 the regular expression:
 
-    ^\d+[.]\d+[.]\d+$
+        ^\d+[.]\d+[.]\d+$
 
 Engine elements may also specify fuzzy matches to avoid repetition,
 and to reduce maintenance when the underlying platform is updated.
@@ -86,7 +86,7 @@ project does not meet the engine's constraints.
 If no `<engine>` tags are specified, plugman attempts to install into
 the specified cordova project directory blindly.
 
-## &lt;name&gt; element
+## `<name>` element
 
 A human-readable name for the plugin, whose text content contains the
 name of the plugin. For example:
@@ -95,7 +95,35 @@ name of the plugin. For example:
 
 This element does not (yet) handle localization.
 
-## &lt;asset&gt; element
+## `<description>` element
+
+A human-readable description for the plugin. The text content of the element contains
+the description of the plugin. An example:
+
+    <description>Foo plugin description</description>
+
+This element does not (yet) handle localization.
+
+## `<author>` element
+
+Plugin author name. The text content of the element contains
+the name of the plugin author. An example:
+
+    <author>Foo plugin description</author>
+
+## `<keywords>` element
+
+Plugin keywords. The text content of the element contains comma separated keywords to describe the plugin. An example:
+
+    <keywords>foo,bar</keywords>
+
+## `<license>` element
+
+Plugin license. The text content of the element contains the plugin license. An example:
+
+    <license>Apache 2.0 License</license>
+
+## `<asset>` element
 
 One or more elements listing the files or directories to be copied
 into a Cordova app's `www` directory. Examples:
@@ -132,7 +160,7 @@ platform-specific web assets, as described below. Attributes include:
   issues a notification about the conflict, and exits with a non-zero
   code.
 
-## &lt;js-module&gt; element
+## `<js-module>` element
 
 Most plugins include one or more JavaScript files.  Each `<js-module>`
 tag corresponds to a JavaScript file, and prevents the plugin's users
@@ -169,18 +197,18 @@ Details for the `<js-module>` tag:
 
 * Three tags are allowed within `<js-module>`:
 
-    * `<clobbers target="some.value" />` indicates that the
+    * `<clobbers target="some.value"/>` indicates that the
       `module.exports` is inserted into the `window` object as
       `window.some.value`. You can have as many `<clobbers>` as you
       like. Any object not available on `window` is created.
 
-    * `<merges target="some.value" />` indicates that the module
+    * `<merges target="some.value"/>` indicates that the module
       should be merged with any existing value at `window.some.value`.
       If any key already exists, the module's version overrides the
       original. You can have as many `<merges>` as you like. Any
       object not available on `window` is created.
 
-    * `<runs />` means that your code should be specified with
+    * `<runs/>` means that your code should be specified with
       `cordova.require`, but not installed on the `window`
       object. This is useful when initializing the module, attaching
       event handlers or otherwise. You can only have up to one
@@ -198,7 +226,7 @@ exits with a non-zero code.
 Nesting `<js-module>` elements within `<platform>` declares
 platform-specific JavaScript module bindings.
 
-## &lt;dependency&gt;
+## `<dependency>`
 
 The `<dependency>` tag allows you specify other plugins on which the
 current plugin depends. While future versions will access them from
@@ -240,7 +268,7 @@ installed the plugin with a local path directly to it. Plugman finds
 the root of the git repository and then finds the other plugin from
 there.
 
-## &lt;platform&gt;
+## `<platform>`
 
 The `<platform>` tag identifies platforms that have associated native
 code or require modifications to their configuration files. Tools
@@ -271,7 +299,7 @@ chosen, are listed:
 * wp7
 * wp8
 
-## &lt;source-file&gt;
+## `<source-file>`
 
 The `<source-file>` element identifies executable source code that
 should be installed into a project. Examples:
@@ -312,7 +340,7 @@ It supports the following attributes:
   If set, assigns the specified compiler flags for the particular
   source file.
 
-## &lt;config-file&gt;
+## `<config-file>`
 
 Identifies an XML-based configuration file to be modified, where in
 that document the modification should take place, and what should be
@@ -375,7 +403,7 @@ It supports the following attributes:
   document, the tool stops and reverses the installation process,
   issues a warning, and exits with a non-zero code.
 
-## &lt;plugins-plist&gt;
+## `<plugins-plist>`
 
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
 below. Use the `<config-file>` tag for newer versions of Cordova.
@@ -391,7 +419,7 @@ file in an iOS Cordova project. For example:
 
     <plugins-plist key="Foo" string="CDVFoo" />
 
-## &lt;resource-file&gt; and &lt;header-file&gt;
+## `<resource-file>` and `<header-file>`
 
 Like source files, but specifically for platforms such as iOS that
 distinguish between source files, headers, and resources.  Examples:
@@ -400,7 +428,7 @@ distinguish between source files, headers, and resources.  Examples:
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
 
-## &lt;lib-file&gt;
+## `<lib-file>`
 
 Like source, resource, and header files, but specifically for
 platforms such as BlackBerry 10 that use user-generated libraries.
@@ -420,7 +448,7 @@ Supported attributes:
 * `arch`: The architecture for which the `.so` file has been built,
   either `device` or `simulator`.
 
-## &lt;framework&gt;
+## `<framework>`
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
@@ -429,9 +457,6 @@ Examples:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
 
-
-
-
 The `src` attribute identifies the framework, which plugman attempts
 to add to the Cordova project, in the correct fashion for a given
 platform.
@@ -439,7 +464,7 @@ platform.
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-## &lt;info&gt;
+## `<info>`
 
 Additional information provided to users. This is useful when you
 require extra steps that can't be easily automated or are beyond

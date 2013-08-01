@@ -63,13 +63,17 @@ Download the Tizen SDK from
 ## Open a Project in the SDK
 
 1. Launch the Tizen Eclipse IDE.
+
 2. Select __File &rarr; Import &rarr; Tizen Web Project__:
 
    ![](img/guide/platforms/tizen/import_project.png)
 
 3. Press __Next__.
+
 4. Make sure __Select root directory__ is checked.
+
 5. Make sure __Copy projects into workspace__ is checked.
+
 6. Press __Browse__ and select the Cordova Tizen `samples` project directory (such as `/cordova-basic`):
 
    ![](img/guide/platforms/tizen/import_widget.png)

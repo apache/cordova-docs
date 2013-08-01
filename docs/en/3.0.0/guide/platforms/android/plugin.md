@@ -19,14 +19,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Plugins
 
-Writing a plugin requires an understanding of the architecture of Cordova-Android. Cordova-Android consists
-of an Android WebView with hooks attached to it. These plugins are represented as class mappings in the config.xml
-file.
+Writing a plugin requires an understanding of the architecture of
+Cordova-Android. Cordova-Android consists of an Android WebView with
+hooks attached to it. These plugins are represented as class mappings
+in the `config.xml` file.
 
-A plugin consists of at least one Java class that extends the `CordovaPlugin` class. A plugin must override one
-of the `execute` methods from `CordovaPlugin`.
-As best practice, the plugin should handle `pause` and `resume` events, and any message passing between plugins.
-Plugins with long-running requests, background activity such as media playback, listeners, or internal state should implement the `onReset()` method as well. This method is run when the `WebView` navigates to a new page or refreshes, which reloads the JavaScript.
+A plugin consists of at least one Java class that extends the
+`CordovaPlugin` class. A plugin must override one of the `execute`
+methods from `CordovaPlugin`.  As best practice, the plugin should
+handle `pause` and `resume` events, and any message passing between
+plugins.  Plugins with long-running requests, background activity such
+as media playback, listeners, or internal state should implement the
+`onReset()` method as well. It executeswhen the `WebView` navigates to
+a new page or refreshes, which reloads the JavaScript.
 
 ## Plugin Class Mapping
 
@@ -38,9 +43,13 @@ This marshals a request from the WebView to the Android native side,
 more or less boiling down to calling the `action` method on the
 `service` class, with the arguments passed in the `args` Array.
 
-Whether you distribute your plugin as Java file or as a JAR of its own, the plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` folder.
+Whether you distribute your plugin as Java file or as a JAR of its
+own, the plugin must be added to the `config.xml` file in your
+Cordova-Android application's `res/xml/` directory.
 
-    <plugin name="<service_name>" value="<full_name_including_namespace>"/>
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
 
 The service name should match the one used in the JavaScript `exec`
 call, and the value is the Java classes full name, including the
@@ -118,7 +127,9 @@ If you do not need to run on the UI thread, but do not want to block the WebCore
 
 Add the following to our `config.xml` file:
 
-    <plugin name="Echo" value="org.apache.cordova.plugin.Echo" />
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
 
 Then add the following file to
 `src/org/apache/cordova/plugin/Echo.java` inside our Cordova-Android
@@ -184,6 +195,7 @@ Eclipse can be used to debug an Android project, and the plugins can be debugged
 * Plugins have access to a `CordovaInterface` object. This object has access to the Android `Activity` that is running the application. This is the `Context` required to launch
 a new Android `Intent`. The `CordovaInterface` allows plugins to start an `Activity` for a result, and to set the callback plugin for when the `Intent` comes back to the application. This is important, since the
 `Intent`s system is how Android communicates between processes.
+
 * Plugins do not have direct access to the `Context` as they have in the past. The legacy `ctx` member is deprecated, and will be removed six months after 2.0 is released. All of `ctx` methods exist on the `Context`, so both `getContext()` and `getActivity()` are capable of returning the proper object required.
 
 ## Use the Source

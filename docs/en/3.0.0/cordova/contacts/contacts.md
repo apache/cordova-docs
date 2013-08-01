@@ -49,46 +49,57 @@ Objects
 - ContactFindOptions
 - ContactError
 
-Permissions
------------
+## Accessing the Feature
 
-### Android
+As of version 3.0, Cordova implements device-level APIs as _plugins_.
+Use the CLI's `plugin` command, described in The Command-line
+Interface, to add or remove this feature for a project:
 
-#### app/res/xml/config.xml
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin rm org.apache.cordova.core.contacts
 
-    <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
+These commands apply to all targeted platforms, but modify the
+platform-specific configuration settings described below:
 
-#### app/AndroidManifest.xml
+* Android
 
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
+        </feature>
 
-### BlackBerry WebWorks
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
-#### www/plugins.xml
+* BlackBerry WebWorks
 
-    <plugin name="Contact" value="org.apache.cordova.pim.Contact" />
+        (in www/plugins.xml)
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
+        </feature>
 
-#### www/config.xml
+        (in www/config.xml)
+        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
+        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
-    <feature id="blackberry.find"        required="true" version="1.0.0.0" />
-    <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
-    <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-    <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
+* iOS (in `config.xml`)
 
-### iOS
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
+        </feature>
 
-#### config.xml
+* Windows Phone
 
-    <plugin name="Contacts" value="CDVContacts" />
+        (in Properties/WPAppManifest.xml)
+        <Capabilities>
+            <Capability Name="ID_CAP_CONTACTS" />
+        </Capabilities>
 
-### Windows Phone
+  Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
 
-#### Properties/WPAppManifest.xml
-
-    <Capabilities>
-        <Capability Name="ID_CAP_CONTACTS" />
-    </Capabilities>
-
-Reference: [Application Manifest for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx)
+Some platforms may support this feature without requiring any special
+configuration.  See Platform Support for an overview.

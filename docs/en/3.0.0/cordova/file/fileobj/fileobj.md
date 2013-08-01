@@ -26,9 +26,13 @@ Properties
 ----------
 
 - __name__: The name of the file. _(DOMString)_
+
 - __fullPath__: The full path of the file including the file name. _(DOMString)_
+
 - __type__: The mime type of the file. _(DOMString)_
+
 - __lastModifiedDate__: The last time the file was modified. _(Date)_
+
 - __size__: The size of the file in bytes. _(long)_
 
 Methods
@@ -63,6 +67,7 @@ relative to the current slice. (See the full example below.)
 __Parameters:__
 
 - __start__: The index of the first byte to read, inclusive.
+
 - __end__: The index of the byte after the last one to read.
 
 __Quick Example__

@@ -58,6 +58,7 @@ Release, on Mac or Windows:
 The `run` command accepts the following _optional_ parameters:
 
 * Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+
 * Build specification. This includes `--debug`, `--release`, or `--nobuild`.
 
     $ /path/to/project/cordova/run [Target] [Build]
