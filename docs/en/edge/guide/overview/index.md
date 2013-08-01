@@ -173,7 +173,7 @@ available for each mobile platform:
         <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html"></a></td>
         <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html"></a></td>
         <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html"></a></td>
-        <td data-col="winphone8"  class="n"></td>
+        <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
