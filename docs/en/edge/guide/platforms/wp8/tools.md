@@ -71,9 +71,9 @@ name.  Here is the syntax for both Windows Phone 7 and 8:
     >.\wp7\bin\create C:\path\to\my_new_project
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
 
-    Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)
+Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)
 
-    Built and Run it
+Build and Run it
 
 ## Building your project (cleans then builds)
 
