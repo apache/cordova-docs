@@ -24,7 +24,7 @@ Set the volume for an audio file.
 
     media.setVolume(volume);
 
-Paramters
+Parameters
 ---------
 
 - __volume__: The volume to set for playback.  The value must be within the range of 0.0 to 1.0.
