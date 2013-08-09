@@ -30,7 +30,7 @@ methods from `CordovaPlugin`.  As best practice, the plugin should
 handle `pause` and `resume` events, and any message passing between
 plugins.  Plugins with long-running requests, background activity such
 as media playback, listeners, or internal state should implement the
-`onReset()` method as well. It executeswhen the `WebView` navigates to
+`onReset()` method as well. It executes when the `WebView` navigates to
 a new page or refreshes, which reloads the JavaScript.
 
 ## Plugin Class Mapping

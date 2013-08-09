@@ -45,7 +45,7 @@ There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 applicatio
 
 ### Run the batch file to create and install the templates.
 
-- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
+- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where 3.0.0 is the current version number)  To easily use these files in Visual Studio, copy them to 
 "My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
 
 - If you run the batch file from the command line, you can also call with a parameter to install automatically

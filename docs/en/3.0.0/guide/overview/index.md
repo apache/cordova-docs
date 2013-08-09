@@ -120,7 +120,8 @@ XREF -->
 ## Platform Support
 
 The following shows the set of development tools and device APIs
-available for each mobile platform:
+available for each mobile platform. (Column headers display the
+CLI's shorthand stubs.)
 
 <!-- START HTML -->
 
@@ -129,14 +130,14 @@ available for each mobile platform:
 <thead>
     <tr>
         <th></td>
-        <th>Android</th>
-        <th>BlackBerry</th>
-        <th>BlackBerry 10</th>
-        <th>iOS</th>
-        <th>Windows<br/>Phone 7</th>
-        <th>Windows<br/>Phone 8</th>
-        <th>Windows<br/>8</th>
-        <th>Tizen</th>
+        <th><tt>android</tt></th>
+        <th><tt>blackberry</tt> (6)</th>
+        <th><tt>blackberry10</tt></th>
+        <th><tt>ios</tt></th>
+        <th><tt>wp7</tt> (Windows<br/>Phone 7)</th>
+        <th><tt>wp8</tt> (Windows<br/>Phone 8)</th>
+        <th><tt>win8</tt><br/>(Windows 8)</th>
+        <th><tt>tizen</tt></th>
     </tr>
 
 </thead>
@@ -359,7 +360,7 @@ available for each mobile platform:
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 

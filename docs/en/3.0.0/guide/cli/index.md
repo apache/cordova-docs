@@ -342,7 +342,7 @@ button.
 
 ## Updating Cordova
 
-After installing installing the `cordova` utility, you can always
+After installing the `cordova` utility, you can always
 update it to the latest version by running the following command:
 
         $ sudo npm update -g cordova
