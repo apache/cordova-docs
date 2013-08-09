@@ -120,7 +120,8 @@ XREF -->
 ## Platform Support
 
 The following shows the set of development tools and device APIs
-available for each mobile platform:
+available for each mobile platform. (Column headers display the
+CLI's shorthand stubs.)
 
 <!-- START HTML -->
 
