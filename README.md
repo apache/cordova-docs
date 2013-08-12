@@ -55,7 +55,13 @@ We appreciate the use of topic branches.
 
 ### Adding a Language
 
-Do you want the Apache Cordova documentation in another language? We do too!
+Do you want the Apache Cordova documentation in another language? We do too!  With the support of 
+<a href="http://crowdin.net/project/cordova">Crowdin</a>, a translation and localization management platform, 
+translators can login to the easy-to-use tooling and provide as much or as little translation assistance as 
+they would like.  If you know another language please support Cordova and contribute.
+<a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>.
+
+For cordova language administrators, to add the translations back into git, follow these steps:
 
 __1. Create the language directory__
 
