@@ -49,6 +49,11 @@ Interface, to add or remove this feature for a project:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
         $ cordova plugin rm org.apache.cordova.core.file
+        
+To use the file-transfer plugin you must add that separately.
+        
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin rm org.apache.cordova.core.file-transfer
 
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
