@@ -27,9 +27,9 @@ specification.
 Properties
 ----------
 
-- __isFile__: Always true. _(boolean)_
+- __isFile__: Always `true`. _(boolean)_
 
-- __isDirectory__: Always false. _(boolean)_
+- __isDirectory__: Always `false`. _(boolean)_
 
 - __name__: The name of the `FileEntry`, excluding the path leading to it. _(DOMString)_
 

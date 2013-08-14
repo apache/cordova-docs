@@ -27,7 +27,7 @@ across the application, and per CordovaWebView instance.
 Various other preferences (as `<preference>` tags) default on not
 breaking existing apps. The available preferences are:
 
-* `useBrowserHistory` (boolean, defaults to `true`): set to false if you
+* `useBrowserHistory` (boolean, defaults to `true`): set to `false` if you
   want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
@@ -39,12 +39,12 @@ breaking existing apps. The available preferences are:
   sub-pages. The value's format is _Title, Message_
 
 * `errorUrl`: Set the error page for your application. Should be
-  located in your Android project in file://android_asset/www/
+  located in your Android project in `file://android_asset/www/`
 
 * `backgroundColor`: Set the background color for your application.
   Supports a four-byte hex value, with the first byte representing
   alpha value, and the following three bytes with standard RGB
-  values. (i.e. 0x00000000 = Black)
+  values. For example, `0x00000000` is black.
 
 * `loadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.

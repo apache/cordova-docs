@@ -80,26 +80,26 @@ based Cleaver implementation.
         MobileCoreServices.framework
         CoreMedia.framework
 
-16. Expand **Target Dependencies**, the top box labeled like this if you have multiple boxes!
+16. Expand __Target Dependencies__, the top box labeled like this if you have multiple boxes!
 
-17. Select the **+** button, and add the `CordovaLib` build product.
+17. Select the __+__ button, and add the `CordovaLib` build product.
 
-18. Expand **Link Binaries with Libraries**, the top box labeled like
+18. Expand __Link Binaries with Libraries__, the top box labeled like
     this if you have multiple boxes!
 
-19. Select the **+** button, and add `libCordova.a`.
+19. Select the __+__ button, and add `libCordova.a`.
 
-20. Set the Xcode preference **Xcode Preferences &rarr; Locations &rarr; Derived Data &rarr; Advanced...** to **Unique**.
+20. Set the Xcode preference __Xcode Preferences &rarr; Locations &rarr; Derived Data &rarr; Advanced...__ to __Unique__.
 
-21. Select the **project icon** in the Project Navigator, select your **Target**, then select the **Build Settings** tab.
+21. Select the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Settings__ tab.
 
-22. Search for **Header Search Paths**. For that setting, add these three values below (with quotes):
+22. Search for __Header Search Paths__. For that setting, add these three values below (with quotes):
 
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
         "$(BUILT_PRODUCTS_DIR)"
 
-    With Cordova 2.1.0, `CordovaLib` has been upgraded to use **Automatic Reference Counting (ARC)**. You don't need to upgrade to **ARC** to use CordovaLib, but if you want to upgrade your project to use **ARC**, please use the Xcode migration wizard from the menu: **Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...**, **de-select libCordova.a**, then run the wizard to completion.
+    With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference Counting (ARC)__. You don't need to upgrade to __ARC__ to use CordovaLib, but if you want to upgrade your project to use __ARC__, please use the Xcode migration wizard from the menu: __Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...__, __de-select libCordova.a__, then run the wizard to completion.
 
 ## Using CDVViewController in your code
 
@@ -107,7 +107,7 @@ based Cleaver implementation.
 
         #import <Cordova/CDVViewController.h>
 
-2. Instantiate a new `CDVViewController`, and retain it somewhere (e.g. to a property in your class):
+2. Instantiate a new `CDVViewController`, and retain it somewhere (e.g., to a property in your class):
 
         CDVViewController* viewController = [CDVViewController new];
 
@@ -127,7 +127,7 @@ based Cleaver implementation.
 
         viewController.useSplashScreen = YES;
 
-6. Set the **view frame** (always set this as the last property):
+6. Set the __view frame__ (always set this as the last property):
 
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
 

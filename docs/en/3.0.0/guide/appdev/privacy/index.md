@@ -19,11 +19,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Privacy Guide
 
-Mobile privacy is a critical issue that every app developer must address. Your users expect that their private information will be collected and treated appropriately by your app. Also, there are an increasing number of jurisdictions that now have legal requirements regarding mobile privacy practices.
+Mobile privacy is a critical issue that every app developer must
+address. Your users expect that their private information will be
+collected and treated appropriately by your app. Also, there are an
+increasing number of jurisdictions that now have legal requirements
+regarding mobile privacy practices.
 
-This guide on mobile app privacy should be considered a "primer" addressing some the most significant issues. It outlines some broadly accepted best practices and provides references to other more detailed guides and references.
+This guide on mobile app privacy should be considered a _primer_
+addressing some the most significant issues. It outlines some broadly
+accepted best practices and provides references to other more detailed
+guides and references.
 
-* **Privacy Policy**: You app should include a privacy policy that
+* __Privacy Policy__: You app should include a privacy policy that
   addresses topics such as what kind of information your app collects
   from or about your users, how that information is used, with whom it
   is shared, and how users can make privacy-related choices within the
@@ -33,14 +40,14 @@ This guide on mobile app privacy should be considered a "primer" addressing some
   the app marketplace. In addition, you should make your privacy
   policy available within the app itself. The limited size of mobile
   device displays creates challenges for displaying privacy policies
-  to users. Consider developing a "short form" of the policy that
+  to users. Consider developing a _short form_ of the policy that
   includes the most important information, and then provide a link to
   the "long form" policy for those interested in more details. Several
   groups are attempting to develop icon-based standards for
   communicating privacy practices, which you may want to consider once
   these standards mature.
 
-* **Collection of sensitive information**: An app's collection of
+* __Collection of sensitive information__: An app's collection of
   sensitive personal information raises important privacy concerns.
   Examples of sensitive personal information include financial
   information, health information, and information from or about
@@ -61,7 +68,7 @@ This guide on mobile app privacy should be considered a "primer" addressing some
   dialog box text to clarify how the app uses and, if applicable,
   shares such information.
 
-* **Avoiding user surprise**: If your app collects or uses information
+* __Avoiding user surprise__: If your app collects or uses information
   in a way that may be surprising to users in light of the primary
   purpose of your app (for example, a music player that accesses
   stored pictures), you should take similar steps as with the
@@ -70,7 +77,7 @@ This guide on mobile app privacy should be considered a "primer" addressing some
   user about the collection or use of that information and, if
   appropriate, provide a corresponding privacy control.
 
-* **Third party data collection or sharing**: If you app collects
+* __Third party data collection or sharing__: If you app collects
   information that is provided to another company--such as a social
   networking platform or an ad network (for example, if your app
   displays advertising)--you should inform your users of that
@@ -79,7 +86,7 @@ This guide on mobile app privacy should be considered a "primer" addressing some
   offer your users the ability to control or opt-out of such
   collection or sharing.
 
-* **Collection limitation and security**: Your users entrust your app
+* __Collection limitation and security__: Your users entrust your app
   with their information and they expect that you will take
   appropriate security precautions to protect it. One of the best ways
   to avoid security compromises of personal information is not to
