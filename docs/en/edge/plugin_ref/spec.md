@@ -471,7 +471,7 @@ require extra steps that can't be easily automated or are beyond
 plugman's scope.  Examples:
 
     <info>
-    You need to install **Google Play Services** from the `Android Extras` section using the Android SDK manager (run `android`).
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
     You need to add the following line to your `local.properties`
         

@@ -34,7 +34,7 @@ Constants
 
 - `CaptureError.CAPTURE_APPLICATION_BUSY`: The camera or audio capture application is currently serving another capture request.
 
-- `CaptureError.CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g. the value of `limit` is less than one).
+- `CaptureError.CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g., the value of `limit` is less than one).
 
 - `CaptureError.CAPTURE_NO_MEDIA_FILES`: The user exits the camera or audio capture application before capturing anything.
 

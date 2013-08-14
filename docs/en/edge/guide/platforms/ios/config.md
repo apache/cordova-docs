@@ -36,26 +36,26 @@ existing apps. The available preferences are:
   spinning throbber in the status/battery bar, valid values are
   `whiteLarge`, `white`, and `gray`.
 
-* `EnableLocation` (boolean, defaults to `false`): set to true, to
+* `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
-  location can be more accurate) **DEPRECATED**: please set the
+  location can be more accurate) __DEPRECATED__: please set the
   `onload` attribute of the `Geolocation` plugin to `true`
   instead.
 
-* `EnableViewportScale` (boolean, defaults to `false`): set to true to
+* `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
   prevent viewport scaling through a meta tag.
 
-* `AutoHideSplashScreen` (boolean, defaults to `true`): set to false to
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
   control when the splashscreen is hidden through a JavaScript API.
 
-* `FadeSplashScreen` (boolean, defaults to `true`): set to false to
+* `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
   it.
 
 * `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
   Fade duration in seconds.
 
-* `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to false
+* `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
   to hide the splash-screen spinner.
 
 * `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set

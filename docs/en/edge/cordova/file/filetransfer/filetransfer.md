@@ -74,7 +74,7 @@ __Parameters:__
 
 - __options__: Optional parameters such as file name and mimetype.
 
-- __trustAllHosts__: Optional parameter, defaults to `false`. If set to true, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true`, it accepts all security certificates. This is useful since Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 __Quick Example__
 
@@ -305,4 +305,4 @@ __Example__
     fileTransfer.download(...); // or fileTransfer.upload(...);
 
 __Quirks__
-- On both Android an iOS, lengthComputable is false for downloads that use gzip encoding.
+- On both Android an iOS, lengthComputable is `false` for downloads that use gzip encoding.

@@ -91,9 +91,9 @@ Run the script :
 
 ## 3. Set up New Project
 
-- Open Visual Studio Express for Windows Phone and choose **New Project**.
+- Open Visual Studio Express for Windows Phone and choose __New Project__.
 
-- Select **CordovaWP8**. (The version number is displayed in the template description.)
+- Select __CordovaWP8__. (The version number is displayed in the template description.)
 
 - Give the project a name, and select __OK__.
 
@@ -111,9 +111,9 @@ Run the script :
 
 ## 5. Build and Deploy to Emulator
 
-- Make sure **Windows Phone Emulator** is selected in the main drop-down menu.
+- Make sure __Windows Phone Emulator__ is selected in the main drop-down menu.
 
-- Press the green **play** button next to the drop-down menu to start debugging, or type __F5__.
+- Press the green __play__ button next to the drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp8/BuildEmulator.png)
 
@@ -125,7 +125,7 @@ In order to test your application on a device, the device must be registered. Cl
 
 - In Visual Studio, select 'Device' from the top drop-down menu.
 
-- Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
+- Press the green __play__ button next to the main drop-down menu to start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp7/wpd.png)
 
