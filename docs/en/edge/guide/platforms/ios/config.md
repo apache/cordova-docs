@@ -38,7 +38,7 @@ existing apps. The available preferences are:
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
-  location can be more accurate) **DEPRECATED**: please set the
+  location can be more accurate) __DEPRECATED__: please set the
   `onload` attribute of the `Geolocation` plugin to `true`
   instead.
 
