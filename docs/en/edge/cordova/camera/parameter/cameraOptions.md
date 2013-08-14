@@ -42,7 +42,7 @@ Options
         Camera.DestinationType = {
             DATA_URL : 0,      // Return image as base64-encoded string
             FILE_URI : 1,      // Return image file URI
-            NATIVE_URI : 2     // Return image native URI (e.g. assets-library:// on iOS or content:// on Android)
+            NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)
         };
 
 - __sourceType__: Set the source of the picture.  Defined in `navigator.camera.PictureSourceType` _(Number)_
@@ -105,7 +105,7 @@ BlackBerry Quirks
 
 - Application must have key injection permissions to close the native Camera application after the user snaps the photo.
 
-- Using large image sizes may result in the inability to encode images on later-model devices (e.g. Torch 9800) that feature high-resolution cameras.
+- Using large image sizes may result in the inability to encode images on later-model devices (e.g., Torch 9800) that feature high-resolution cameras.
 
 - `Camera.MediaType` is not supported.
 
