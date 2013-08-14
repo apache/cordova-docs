@@ -45,11 +45,11 @@ Access to the subdomain [maps.google.com][4]:
 
     http://maps.google.com
 
-Access to all the subdomains on [google.com][2] (e.g. [mail.google.com][5] and [docs.google.com][6]):
+Access to all the subdomains on [google.com][2] (e.g., [mail.google.com][5] and [docs.google.com][6]):
 
     http://*.google.com
 
-Access to all domains (e.g. [google.com][2] and [developer.mozilla.org][7]):
+Access to all domains (e.g., [google.com][2] and [developer.mozilla.org][7]):
 
     *
 

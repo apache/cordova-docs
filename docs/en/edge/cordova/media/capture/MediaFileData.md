@@ -70,7 +70,7 @@ iOS Quirks
 ----------
 Supports the following `MediaFileData` properties:
 
-- __codecs__: Not supported, and returns null.
+- __codecs__: Not supported, and returns `null`.
 
 - __bitrate__: Supported on iOS4 devices for audio only. Returns zero for images and videos.
 

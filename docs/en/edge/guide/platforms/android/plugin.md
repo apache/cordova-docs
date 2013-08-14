@@ -172,7 +172,7 @@ Let's take a look at the code. The necessary `imports` are at
 the top. Our class extends from `CordovaPlugin`. We override the
 execute() method in order to recieve messages from exec(). Our method
 first compares against `action`: this plugin only supports one action,
-the `echo` action. Any other action returns false, which results in an
+the `echo` action. Any other action returns `false`, which results in an
 error of type `INVALID_ACTION`, which translates into an error
 callback invocation on the JavaScript side. Next, we grab the echo
 string using the `getString` method on our `args`, telling it we want
