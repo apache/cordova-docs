@@ -17,21 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.play
-==========
+# media.play
 
 Starts or resumes playing an audio file.
 
     media.play();
 
-Description
------------
+## Description
 
 The `media.play` method executes synchronously, and starts or resumes
 playing an audio file.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -40,8 +37,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Play audio
     //
@@ -61,8 +57,7 @@ Quick Example
         my_media.play();
     }
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
@@ -166,8 +161,7 @@ Full Example
           </body>
         </html>
 
-BlackBerry WebWorks Quirks
-----------
+## BlackBerry WebWorks Quirks
 
 - BlackBerry devices support a limited number of simultaneous audio
   channels. CDMA devices only support a single audio channel. Other
@@ -175,8 +169,7 @@ BlackBerry WebWorks Quirks
   more audio files than the supported amount results in previous
   playback being stopped.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - __numberOfLoops__: Pass this option to the `play` method to specify
   the number of times you want the media file to play, e.g.:

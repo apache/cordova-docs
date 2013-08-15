@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-MediaFileData
-=============
+# MediaFileData
 
 > Encapsulates format information about a media file.
 
-Properties
-----------
+## Properties
 
 - __codecs__: The actual format of the audio and video content. (DOMString)
 
@@ -35,8 +33,7 @@ Properties
 
 - __duration__: The length of the video or sound clip in seconds. The value is zero for images. (Number)
 
-BlackBerry WebWorks Quirks
---------------------------
+## BlackBerry WebWorks Quirks
 
 No API provides format information for media files, so the
 `MediaFileData` object returned by `MediaFile.getFormatData` features
@@ -52,8 +49,8 @@ the following default values:
 
 - __duration__: Not supported, and returns zero.
 
-Android Quirks
---------------
+## Android Quirks
+
 Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns `null`.
@@ -66,8 +63,8 @@ Supports the following `MediaFileData` properties:
 
 - __duration__: Supported: audio and video files only.
 
-iOS Quirks
-----------
+## iOS Quirks
+
 Supports the following `MediaFileData` properties:
 
 - __codecs__: Not supported, and returns null.

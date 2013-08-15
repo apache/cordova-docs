@@ -17,20 +17,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.pause
-===========
+# media.pause
 
 Pauses playing an audio file.
 
     media.pause();
 
-Description
------------
+## Description
 
 The `media.pause` method executes synchronously, and pauses playing an audio file.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,8 +36,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Play audio
     //
@@ -62,8 +58,7 @@ Quick Example
         }, 10000);
     }
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">

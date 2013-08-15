@@ -17,24 +17,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-SQLResultSetRowList
-=======
+# SQLResultSetRowList
 
 One of the properties of the `SQLResultSet` containing the rows
 returned from a SQL query.
 
-Properties
--------
+## Properties
 
 - __length__: the number of rows returned by the SQL query.
 
-Methods
--------
+## Methods
 
 - __item__: returns the row at the specified index represented by a JavaScript object.
 
-Details
--------
+## Details
 
 The `SQLResultSetRowList` contains the data returned from a SQL
 `select` statement.  The object contains a `length` property
@@ -43,16 +39,14 @@ of data, call the `item` method to specify an index.  It returns a
 JavaScript `Object` whose properties are the database columns the
 `select` statement was executed against.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Tizen
 
-Execute SQL Quick Example
-------------------
+## Execute SQL Quick Example
 
     function queryDB(tx) {
         tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
@@ -73,8 +67,7 @@ Execute SQL Quick Example
         var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
         db.transaction(queryDB, errorCB);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

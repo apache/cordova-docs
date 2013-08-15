@@ -17,20 +17,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-splashscreen.show
-===============
+# splashscreen.show
 
 Displays the splash screen.
 
     navigator.splashscreen.show();
 
-Description
------------
+## Description
 
 This method displays the application's splash screen.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry 10
@@ -38,13 +35,11 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     navigator.splashscreen.show();
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

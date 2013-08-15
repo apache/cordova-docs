@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Geolocation
-===========
+# Geolocation
 
 > The `geolocation` object provides access to location data based on the device's GPS sensor or inferred from network signals.
 
@@ -35,22 +34,19 @@ and only executes on devices that don't already provide an implementation.
 
 **Important privacy note:** Collection and use of geolocation data raises important privacy issues.  Your app's privacy policy should discuss how the app uses geolocation data, whether it is shared with any other parties, and the level of precision of the data (for example, coarse, fine, ZIP code level, etc.).  Geolocation data is generally considered sensitive because it can reveal a person's whereabouts and, if stored, the history of his or her travels.  Therefore, in addition to your app's privacy policy, you should strongly consider providing a just-in-time notice prior to your app accessing geolocation data (if the device operating system doesn't do so already).  That notice should provide the same information noted above, as well as obtaining the user's permission (e.g., by presenting choices for "OK" and "No Thanks").  For more information, please see the Privacy Guide.
 
-Methods
--------
+## Methods
 
 - geolocation.getCurrentPosition
 - geolocation.watchPosition
 - geolocation.clearWatch
 
-Arguments
----------
+## Arguments
 
 - geolocationSuccess
 - geolocationError
 - geolocationOptions
 
-Objects (Read-Only)
--------------------
+## Objects (Read-Only)
 
 - Position
 - PositionError

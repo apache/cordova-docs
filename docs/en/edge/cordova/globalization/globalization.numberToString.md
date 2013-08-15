@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.numberToString
-===========
+# globalization.numberToString
 
 Returns a number formatted as a string according to the client's user preferences.
 
     navigator.globalization.numberToString(number, successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the formatted number string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -41,16 +39,14 @@ The `options` parameter is optional, and its default values are:
 
 The `options.type` can be 'decimal', 'percent', or 'currency'.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this displays a popup
 dialog with text similar to `number: 3.142`:
@@ -62,8 +58,7 @@ dialog with text similar to `number: 3.142`:
         {type:'decimal'}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

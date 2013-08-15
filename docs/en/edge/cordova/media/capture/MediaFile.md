@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-MediaFile
-=========
+# MediaFile
 
 > Encapsulates properties of a media capture file.
 
-Properties
-----------
+## Properties
 
 - __name__: The name of the file, without path information. (DOMString)
 
@@ -35,7 +33,6 @@ Properties
 
 - __size__: The size of the file, in bytes. (Number)
 
-Methods
--------
+## Methods
 
 - __MediaFile.getFormatData__: Retrieves the format information of the media file.

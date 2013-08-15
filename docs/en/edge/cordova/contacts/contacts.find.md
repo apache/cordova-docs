@@ -17,16 +17,14 @@
          under the License.
 ---
 
-contacts.find
-=============
+# contacts.find
 
 Queries the device contacts database and returns one or more `Contact`
 objects, each containing the fields specified.
 
     navigator.contacts.find(contactFields, contactSuccess, contactError, contactFindOptions);
 
-Description
------------
+## Description
 
 The `contacts.find` method executes asynchronously, querying the
 device contacts database and returning an array of `Contact` objects.
@@ -46,8 +44,7 @@ case-insensitive, partial value match is applied to each field
 specified in the __contactFields__ parameter.  If there's a match for
 _any_ of the specified fields, the contact is returned.
 
-Parameters
-----------
+## Parameters
 
 - __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
 
@@ -57,8 +54,7 @@ Parameters
 
 - __contactFindOptions__: Search options to filter contacts. [Optional]
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -66,8 +62,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(contacts) {
         alert('Found ' + contacts.length + ' contacts.');
@@ -84,8 +79,7 @@ Quick Example
     var fields       = ["displayName", "name"];
     navigator.contacts.find(fields, onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

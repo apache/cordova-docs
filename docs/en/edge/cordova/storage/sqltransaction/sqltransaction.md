@@ -17,32 +17,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-SQLTransaction
-=======
+# SQLTransaction
 
 Allows execution of SQL statements against the Database.
 
-Methods
--------
+## Methods
 
 - __executeSql__: executes a SQL statement.
 
-Details
--------
+## Details
 
 Calling a `Database` object's transaction method, passes a
 `SQLTransaction` object to the specified callback method.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Tizen
 
-Execute SQL Quick Example
-------------------
+## Execute SQL Quick Example
 
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -62,8 +57,7 @@ Execute SQL Quick Example
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

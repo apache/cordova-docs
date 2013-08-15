@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-DirectoryEntry
-==============
+# DirectoryEntry
 
 This object represents a directory on a file system, as defined by the
 [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
 specification.
 
-Properties
-----------
+## Properties
 
 - __isFile__: Always false. _(boolean)_
 
@@ -40,8 +38,7 @@ but is _not_ supported:
 
 - __filesystem__: The file system on which the `DirectoryEntry` resides. _(FileSystem)_
 
-Methods
--------
+## Methods
 
 The following methods can be invoked on a `DirectoryEntry` object:
 
@@ -67,8 +64,7 @@ The following methods can be invoked on a `DirectoryEntry` object:
 
 - __removeRecursively__: Delete a directory and all of its contents.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -76,8 +72,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-getMetadata
------------
+## getMetadata
 
 Look up metadata about a directory.
 
@@ -100,8 +95,7 @@ __Quick Example__
     // Request the metadata object for this entry
     entry.getMetadata(success, fail);
 
-setMetadata
-----------------
+## setMetadata
 
 Sets a directory's extended attributes, or metadata. _Currently works
 only on iOS._
@@ -164,8 +158,7 @@ __Quick Example__
 
         setFolderMetadata(LocalFileSystem.PERSISTENT, "Backups", "com.apple.MobileBackup", 1);
 
-moveTo
-------
+## moveTo
 
 Move a directory to a different location on the file system. An error results if the app attempts to:
 
@@ -210,8 +203,7 @@ __Quick Example__
         entry.moveTo(parentEntry, newName, success, fail);
     }
 
-copyTo
-------
+## copyTo
 
 Copy a directory to a different location on the file system.  An error results if the app attempts to:
 
@@ -251,8 +243,7 @@ __Quick Example__
         entry.copyTo(parentEntry, newName, success, fail);
     }
 
-toURL
------
+## toURL
 
 Returns a URL that can be used to locate the directory.
 
@@ -262,8 +253,7 @@ __Quick Example__
     var dirURL = entry.toURL();
     console.log(dirURL);
 
-remove
-------
+## remove
 
 Deletes a directory. An error results if the app attempts to:
 
@@ -290,8 +280,7 @@ __Quick Example__
     // remove this directory
     entry.remove(success, fail);
 
-getParent
----------
+## getParent
 
 Look up the parent `DirectoryEntry` containing the directory.
 
@@ -314,8 +303,7 @@ __Quick Example__
     // Get the parent DirectoryEntry
     entry.getParent(success, fail);
 
-createReader
-------------
+## createReader
 
 Creates a new DirectoryReader to read entries in a directory.
 
@@ -324,8 +312,7 @@ __Quick Example__
     // create a directory reader
     var directoryReader = entry.createReader();
 
-getDirectory
-------------
+## getDirectory
 
 Creates or looks up an existing directory.  An error results if the app attempts to:
 
@@ -354,8 +341,7 @@ __Quick Example__
     // Retrieve an existing directory, or create it if it does not already exist
     entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
 
-getFile
--------
+## getFile
 
 Creates or looks up a file.  An error results if the app attempts to:
 
@@ -384,8 +370,7 @@ __Quick Example__
     // Retrieve an existing file, or create it if it does not exist
     entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
 
-removeRecursively
------------------
+## removeRecursively
 
 Deletes a directory and all of its contents.  In the event of an error (such as trying to delete
 a directory containing a file that cannot be removed), some of the contents of the directory may
@@ -412,8 +397,7 @@ __Quick Example__
     // remove the directory and all it's contents
     entry.removeRecursively(success, fail);
 
-BlackBerry Quirks
------------------
+## BlackBerry Quirks
 
 May fail with a `ControlledAccessException` in the following cases:
 

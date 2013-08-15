@@ -17,28 +17,24 @@
          under the License.
 ---
 
-endcallbutton
-===========
+# endcallbutton
 
 This event fires when the user presses the end call button.
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The event overrides the default end call behavior.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
 
@@ -46,8 +42,7 @@ Quick Example
         // Handle the end call button
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

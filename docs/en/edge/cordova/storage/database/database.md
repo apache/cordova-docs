@@ -17,33 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Database
-=======
+# Database
 
 Provides access to an SQL database.
 
-Methods
--------
+## Methods
 
 - __transaction__: Runs a database transaction.
 
 - __changeVersion__: Allows scripts to automatically verify the version number and change it when updating a schema.
 
-Details
--------
+## Details
 
 The `window.openDatabase()` method returns a `Database` object.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Tizen
 
-Transaction Quick Example
-------------------
+## Transaction Quick Example
+
     function populateDB(tx) {
         tx.executeSql('DROP TABLE IF EXISTS DEMO');
         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
@@ -62,14 +58,12 @@ Transaction Quick Example
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(populateDB, errorCB, successCB);
 
-Change Version Quick Example
--------------------
+## Change Version Quick Example
 
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.changeVersion("1.0", "1.1");
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

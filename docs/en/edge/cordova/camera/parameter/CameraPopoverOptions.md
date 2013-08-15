@@ -17,8 +17,7 @@
          under the License.
 ---
 
-CameraPopoverOptions
-====================
+# CameraPopoverOptions
 
 iOS-only parameters that specify the anchor element location and arrow
 direction of the popover when selecting images from an iPad's library
@@ -31,8 +30,7 @@ or album.
       arrowDir : Camera.PopoverArrowDirection.ARROW_ANY
     };
 
-CameraPopoverOptions
---------------------
+## CameraPopoverOptions
 
 - __x__: x pixel coordinate of screen element onto which to anchor the popover. _(Number)_
 
@@ -57,8 +55,7 @@ direction of the arrow and orientation of the screen.  Make sure to
 account for orientation changes when specifying the anchor element
 location.
 
-Quick Example
--------------
+## Quick Example
 
      var popover = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      var options = {

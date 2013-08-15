@@ -17,15 +17,13 @@
          under the License.
 ---
 
-ContactField
-============
+# ContactField
 
 Supports generic fields in a `Contact` object.  Some properties stored
 as `ContactField` objects include email addresses, phone numbers, and
 URLs.
 
-Properties
-----------
+## Properties
 
 - __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)_
 
@@ -33,8 +31,7 @@ Properties
 
 - __pref__: Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
-Details
--------
+## Details
 
 The `ContactField` object is a reusable component that represents
 contact fields generically.  Each `ContactField` object contains a
@@ -52,8 +49,7 @@ __url__ when the __value__ attribute contains a URL to the photo
 image, or _base64_ when the __value__ contains a base64-encoded image
 string.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -61,8 +57,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
         // create a new contact
         var contact = navigator.contacts.create();
@@ -77,8 +72,7 @@ Quick Example
         // save the contact
         contact.save();
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -143,13 +137,11 @@ Full Example
       </body>
     </html>
 
-Android Quirks
---------------
+## Android Quirks
 
 - __pref__: Not supported, returning `false`.
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
---------------------------------------------
+## BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __type__: Partially supported.  Used for phone numbers.
 
@@ -157,8 +149,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __pref__: Not supported, returning `false`.
 
-iOS Quirks
------------
+## iOS Quirks
 
 - __pref__: Not supported, returning `false`.
 

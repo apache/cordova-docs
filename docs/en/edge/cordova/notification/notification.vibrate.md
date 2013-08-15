@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-notification.vibrate
-====================
+# notification.vibrate
 
 Vibrates the device for the specified amount of time.
 
@@ -26,23 +25,20 @@ Vibrates the device for the specified amount of time.
 
 - __time__: Milliseconds to vibrate the device, where 1000 milliseconds equals 1 second. _(Number)_
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
 
-Quick Example
--------------
+## Quick Example
 
     // Vibrate for 2.5 seconds
     //
     navigator.notification.vibrate(2500);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -93,8 +89,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
--------------
+## iOS Quirks
 
 - __time__: Ignores the specified time and vibrates for a pre-set amount of time.
 

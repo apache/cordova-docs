@@ -17,28 +17,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocation.clearWatch
-======================
+# geolocation.clearWatch
 
 Stop watching for changes to the device's location referenced by the
 `watchID` parameter.
 
     navigator.geolocation.clearWatch(watchID);
 
-Parameters
-----------
+## Parameters
 
 - __watchID__: The id of the `watchPosition` interval to clear. (String)
 
-Description
------------
+## Description
 
 The `geolocation.clearWatch` stops watching changes to the device's
 location by clearing the `geolocation.watchPosition` referenced by
 `watchID`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -47,8 +43,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Options: watch for changes in position, and use the most
     // accurate position acquisition method available.
@@ -59,8 +54,7 @@ Quick Example
 
     navigator.geolocation.clearWatch(watchID);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getDatePattern
-===========
+# globalization.getDatePattern
 
 Returns a pattern string to format and parse dates according to the
 client's user preferences.
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the pattern to the `successCallback`. The object passed in as
 a parameter contains the following properties:
@@ -51,16 +49,14 @@ The `options.formatLength` can be `short`, `medium`, `long`, or
 `full`.  The `options.selector` can be `date`, `time` or `date and
 time`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this example displays
 a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
@@ -73,8 +69,7 @@ a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
         );
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -98,8 +93,7 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
---------------
+## Windows Phone 8 Quirks
 
 - The `formatLength` supports only `short` and `full` values.
 

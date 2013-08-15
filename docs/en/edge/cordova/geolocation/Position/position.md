@@ -17,25 +17,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Position
-========
+# Position
 
 Contains `Position` coordinates and timestamp, created by the geolocation API.
 
-Properties
-----------
+## Properties
 
 - __coords__: A set of geographic coordinates. _(Coordinates)_
 
 - __timestamp__: Creation timestamp for `coords`. _(Date)_
 
-Description
------------
+## Description
 
 The `Position` object is created and populated by Cordova, and returned to the user through a callback function.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -44,8 +40,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // onSuccess Callback
     //
@@ -69,8 +64,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

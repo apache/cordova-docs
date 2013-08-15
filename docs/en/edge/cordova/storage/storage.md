@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Storage
-==========
+# Storage
 
 > Provides access to the device's storage options.
 
@@ -39,21 +38,18 @@ Cordova provides access to both interfaces for the minority of devices
 that don't already support them. Otherwise the built-in
 implementations apply.
 
-Methods
--------
+## Methods
 
 - openDatabase
 
-Arguments
----------
+## Arguments
 
 - database_name
 - database_version
 - database_displayname
 - database_size
 
-Objects
--------
+## Objects
 
 - Database
 - SQLTransaction

@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Splashscreen
-==========
+# Splashscreen
 
 > Displays and hides the application's splash screen.
 
-Methods
--------
+## Methods
 
 - splashscreen.show
 - splashscreen.hide
@@ -55,8 +53,7 @@ platform-specific configuration settings described below:
 Some platforms may support this feature without requiring any special
 configuration.  See Platform Support for an overview.
 
-Setup
------
+## Setup
 
 ### Android
 

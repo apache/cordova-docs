@@ -17,13 +17,11 @@
          under the License.
 ---
 
-ContactName
-===========
+# ContactName
 
 Contains different kinds of information about a `Contact` object's name.
 
-Properties
-----------
+## Properties
 
 - __formatted__: The complete name of the contact. _(DOMString)_
 
@@ -37,13 +35,11 @@ Properties
 
 - __honorificSuffix__: The contact's suffix (example _Esq._). _(DOMString)_
 
-Details
--------
+## Details
 
 The `ContactName` object stores a contact's name properties.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android 2.X
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -51,8 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(contacts) {
         for (var i = 0; i < contacts.length; i++) {
@@ -74,8 +69,7 @@ Quick Example
     filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -125,13 +119,11 @@ Full Example
       </body>
     </html>
 
-Android Quirks
-------------
+## Android Quirks
 
 - __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
----------------------------------------------
+## BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __formatted__: Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
 
@@ -145,8 +137,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __honorificSuffix__: Not supported, returning `null`.
 
-iOS Quirks
-------------
+## iOS Quirks
 
 - __formatted__: Partially supported.  Returns iOS Composite Name, but is read-only.
 

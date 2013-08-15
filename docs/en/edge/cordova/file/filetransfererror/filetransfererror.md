@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileTransferError
-========
+# FileTransferError
 
 A `FileTransferError` object is passed to an error callback when an error occurs.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below. (Number)
 
@@ -33,16 +31,14 @@ Properties
 
 - __http_status__: HTTP status code.  This attribute is only available when a response code is received from the HTTP connection. (Number)
 
-Constants
----------
+## Constants
 
 - `FileTransferError.FILE_NOT_FOUND_ERR`
 - `FileTransferError.INVALID_URL_ERR`
 - `FileTransferError.CONNECTION_ERR`
 - `FileTransferError.ABORT_ERR`
 
-Description
------------
+## Description
 
 The `FileTransferError` object is passed to the error callback when an
 error occurs when uploading or downloading a file.

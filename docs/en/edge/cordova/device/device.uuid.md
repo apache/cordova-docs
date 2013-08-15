@@ -17,20 +17,17 @@
          under the License.
 ---
 
-device.uuid
-===========
+# device.uuid
 
 Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
     var string = device.uuid;
 
-Description
------------
+## Description
 
 The details of how a UUID is generated are determined by the device manufacturer and are specific to the device's platform or model.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,8 +36,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Android: Returns a random 64-bit integer (as a string, again!)
     //          The integer is generated on the device's first boot
@@ -58,8 +54,7 @@ Quick Example
     // unique to every GSM and UMTS mobile phone.
     var deviceID = device.uuid;
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -91,8 +86,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirk
--------------
+## iOS Quirk
 
 The `uuid` on iOS is not unique to a device, but varies for each
 application, for each installation.  It changes if you delete and
@@ -100,8 +94,7 @@ re-install the app, and possibly also when you upgrade iOS, or even
 upgrade your app per version (apparent in iOS 5.1). The `uuid` is not
 a reliable value.
 
-Windows Phone 7 and 8 Quirks
--------------
+## Windows Phone 7 and 8 Quirks
 
 The `uuid` for Windows Phone 7 requires the permission
 `ID_CAP_IDENTITY_DEVICE`.  Microsoft will likely deprecate this

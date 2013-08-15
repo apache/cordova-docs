@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-capture.captureImage
-====================
+# capture.captureImage
 
 > Start the camera application and return information about captured image files.
 
@@ -26,8 +25,7 @@ capture.captureImage
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
 
-Description
------------
+## Description
 
 Starts an asynchronous operation to capture images using the device's
 camera application.  The operation allows users to capture more than
@@ -45,8 +43,7 @@ image file.  If the user terminates the operation before capturing an
 image, the `CaptureErrorCB` callback executes with a `CaptureError`
 object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -54,14 +51,12 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Windows Phone 7 Quirks
-----------------------
+## Windows Phone 7 Quirks
 
 Invoking the native camera application while your device is connected
 via Zune does not work, and the error callback executes.
 
-Quick Example
--------------
+## Quick Example
 
     // capture callback
     var captureSuccess = function(mediaFiles) {
@@ -80,8 +75,7 @@ Quick Example
     // start image capture
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

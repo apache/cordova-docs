@@ -17,13 +17,11 @@
          under the License.
 ---
 
-compassOptions
-==============
+# compassOptions
 
 An optional parameter to customize the retrieval of the compass.
 
-Options
--------
+## Options
 
 - __frequency__: How often to retrieve the compass heading in milliseconds. _(Number)_ (Default: 100)
 
@@ -34,12 +32,10 @@ ______________
 
 - `filter` is not supported.
 
-Tizen Quirks
------------
+## Tizen Quirks
 
 - `filter` is not supported.
 
-Windows Phone 7 and 8 Quirks
---------------
+## Windows Phone 7 and 8 Quirks
 
 - `filter` is not supported.

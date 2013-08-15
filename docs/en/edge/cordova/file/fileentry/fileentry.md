@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileEntry
-==========
+# FileEntry
 
 Represents a file on a file system, as defined in the
 [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
 specification.
 
-Properties
-----------
+## Properties
 
 - __isFile__: Always true. _(boolean)_
 
@@ -40,8 +38,7 @@ but is _not_ supported:
 
 - __filesystem__: The file system on which the `FileEntry` resides. _(FileSystem)_
 
-Methods
--------
+## Methods
 
 - __getMetadata__: Look up metadata about a file.
 
@@ -61,8 +58,7 @@ Methods
 
 - __file__: Creates a `File` object containing file properties.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -70,8 +66,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-getMetadata
-----------------
+## getMetadata
 
 Look up metadata about a file.
 
@@ -94,8 +89,7 @@ __Quick Example__
     // Request the metadata object for this entry
     entry.getMetadata(success, fail);
 
-setMetadata
-----------------
+## setMetadata
 
 Set metadata on a file.
 
@@ -161,8 +155,7 @@ __Quick Example__
 
         setFileMetadata(LocalFileSystem.PERSISTENT, "Backups/sqlite.db", "com.apple.MobileBackup", 1);
 
-moveTo
-------
+## moveTo
 
 Move a file to a different location on the file system. An error
 results if the app attempts to:
@@ -203,8 +196,7 @@ __Quick Example__
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
     }
 
-copyTo
-------
+## copyTo
 
 Copy a file to a new location on the file system.  An error results if
 the app attempts to:
@@ -240,8 +232,7 @@ __Quick Example__
         entry.copyTo(parentEntry, "file.copy", success, fail);
     }
 
-toURL
------
+## toURL
 
 Returns a URL that can be used to locate the file.
 
@@ -251,8 +242,7 @@ __Quick Example__
     var fileURL = entry.toURL();
     console.log(fileURL);
 
-remove
-------
+## remove
 
 Deletes a file.
 
@@ -275,8 +265,7 @@ __Quick Example__
     // remove the file
     entry.remove(success, fail);
 
-getParent
----------
+## getParent
 
 Look up the parent `DirectoryEntry` containing the file.
 
@@ -299,8 +288,7 @@ __Quick Example__
     // Get the parent DirectoryEntry
     entry.getParent(success, fail);
 
-createWriter
-------------
+## createWriter
 
 Create a `FileWriter` object associated with the file represented by the `FileEntry`.
 
@@ -323,8 +311,7 @@ __Quick Example__
     // create a FileWriter to write to the file
     entry.createWriter(success, fail);
 
-file
-----
+## file
 
 Return a `File` object that represents the current state of the file
 that this `FileEntry` represents.

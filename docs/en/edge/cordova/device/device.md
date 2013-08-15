@@ -17,13 +17,11 @@
          under the License.
 ---
 
-Device
-======
+# Device
 
 > The `device` object describes the device's hardware and software.
 
-Properties
-----------
+## Properties
 
 - device.name
 - device.cordova
@@ -32,8 +30,7 @@ Properties
 - device.version
 - device.model
 
-Variable Scope
---------------
+## Variable Scope
 
 Since `device` is assigned to the `window` object, it is implicitly in the global scope.
 

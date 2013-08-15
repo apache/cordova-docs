@@ -17,25 +17,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Metadata
-==========
+# Metadata
 
 An interface that supplies information about the state of a file or directory.
 
-Properties
-----------
+## Properties
 
 - __modificationTime__: The time when the file or directory was last modified. _(Date)_
 
-Details
--------
+## Details
 
 The `Metadata` object represents information about the state of a file
 or directory.  Calling a `DirectoryEntry` or `FileEntry` object's
 `getMetadata()` method results in a `Metadata` instance.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -43,8 +39,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function win(metadata) {
         console.log("Last Modified: " + metadata.modificationTime);

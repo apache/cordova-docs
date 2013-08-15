@@ -17,21 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.stopRecord
-================
+# media.stopRecord
 
 Stops recording an audio file.
 
     media.stopRecord();
 
-Description
------------
+## Description
 
 The `media.stopRecord` method executes synchronously, stopping the
 recording of an audio file.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,8 +36,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Record audio
     //
@@ -67,8 +63,7 @@ Quick Example
         }, 10000);
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -136,7 +131,6 @@ Full Example
       </body>
     </html>
 
-Tizen Quirks
-----------
+## Tizen Quirks
 
 - Not supported on Tizen devices.

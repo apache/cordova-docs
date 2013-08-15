@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getCurrencyPattern
-===========
+# globalization.getCurrencyPattern
 
 Returns a pattern string to format and parse currency values according
 to the client's user preferences and ISO 4217 currency code.
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
 
-Description
------------
+## Description
 
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object should contain the following properties:
@@ -50,15 +48,13 @@ If there is an error obtaining the pattern, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale and the selected
 currency is United States Dollars, this example displays a popup
@@ -86,8 +82,7 @@ Expected result:
     decimal: .
     grouping: ,
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

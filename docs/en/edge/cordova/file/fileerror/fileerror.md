@@ -17,18 +17,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileError
-========
+# FileError
 
 A `FileError` object is set when an error occurs in any of the File API methods.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below.
 
-Constants
----------
+## Constants
 
 - `FileError.NOT_FOUND_ERR`
 - `FileError.SECURITY_ERR`
@@ -43,8 +40,7 @@ Constants
 - `FileError.TYPE_MISMATCH_ERR`
 - `FileError.PATH_EXISTS_ERR`
 
-Description
------------
+## Description
 
 The `FileError` object is the only parameter provided to any of the
 File API's error callbacks.  To determine the type of error, compare

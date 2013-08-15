@@ -17,18 +17,15 @@
          under the License.
 ---
 
-ContactError
-========
+# ContactError
 
 A `ContactError` object is passed to the `contactError` callback when an error occurs.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below.
 
-Constants
----------
+## Constants
 
 - `ContactError.UNKNOWN_ERROR`
 - `ContactError.INVALID_ARGUMENT_ERROR`
@@ -38,8 +35,7 @@ Constants
 - `ContactError.NOT_SUPPORTED_ERROR`
 - `ContactError.PERMISSION_DENIED_ERROR`
 
-Description
------------
+## Description
 
 The `ContactError` object is returned to the user through the
 `contactError` callback function when an error occurs.

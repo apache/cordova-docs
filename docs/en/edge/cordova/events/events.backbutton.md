@@ -17,15 +17,13 @@
          under the License.
 ---
 
-backbutton
-===========
+# backbutton
 
 The event fires when the user presses the back button.
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 To override the default back-button behavior, register an event
 listener for the `backbutton` event, typically by calling
@@ -33,15 +31,13 @@ listener for the `backbutton` event, typically by calling
 It is no longer necessary to call any other method to override the
 back-button behavior.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Windows Phone 7 and 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("backbutton", onBackKeyDown, false);
 
@@ -49,8 +45,7 @@ Quick Example
         // Handle the back button
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

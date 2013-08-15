@@ -17,15 +17,13 @@
          under the License.
 ---
 
-device.platform
-===============
+# device.platform
 
 Get the device's operating system name.
 
     var string = device.platform;
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -34,8 +32,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Depending on the device, a few examples are:
     //   - "Android"
@@ -45,8 +42,7 @@ Quick Example
     //   - "Tizen"
     var devicePlatform = device.platform;
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -78,19 +74,16 @@ Full Example
       </body>
     </html>
 
-BlackBerry Quirks
------------------
+## BlackBerry Quirks
 
 Devices may return the device platform version number instead of the
 platform name.  For example, the Storm2 9550 returns a value such as
 `2.13.0.95`.
 
-Windows Phone 7 Quirks
------------------
+## Windows Phone 7 Quirks
 
 Windows Phone 7 devices report the platform as `WinCE`.
 
-Windows Phone 8 Quirks
------------------
+## Windows Phone 8 Quirks
 
 Windows Phone 8 devices report the platform as `Win32NT`.

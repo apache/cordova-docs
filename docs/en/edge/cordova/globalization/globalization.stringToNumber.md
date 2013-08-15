@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.stringToNumber
-===========
+# globalization.stringToNumber
 
 Parses a number formatted as a string according to the client's user
 preferences and returns the corresponding number.
 
     navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the number to the `successCallback` with a `properties` object
 as a parameter. That object should have a `value` property with a
@@ -44,16 +42,14 @@ values:
 
 The `options.type` can be `decimal`, `percent`, or `currency`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to `number: 1234.56`:
@@ -65,8 +61,7 @@ popup dialog with text similar to `number: 1234.56`:
         {type:'decimal'}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

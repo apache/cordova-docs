@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-searchbutton
-===========
+# searchbutton
 
 The event fires when the user presses the search button on Android.
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 If you need to override the default search button behavior on Android
 you can register an event listener for the 'searchbutton' event.
@@ -33,13 +31,11 @@ you can register an event listener for the 'searchbutton' event.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
 
@@ -47,8 +43,7 @@ Quick Example
         // Handle the search button
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

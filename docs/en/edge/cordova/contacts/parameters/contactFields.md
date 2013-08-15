@@ -17,8 +17,7 @@
          under the License.
 ---
 
-contactFields
-=============
+# contactFields
 
 Required parameter for the `contacts.find` method, used to specify which fields should be included in the `Contact` objects resulting from a find operation.
 

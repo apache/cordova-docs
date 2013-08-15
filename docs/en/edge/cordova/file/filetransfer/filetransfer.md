@@ -17,19 +17,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileTransfer
-==========
+# FileTransfer
 
 The `FileTransfer` object allows you to upload or download files to
 and from a server.
 
-Properties
-----------
+## Properties
 
 - __onprogress__: Called with a `ProgressEvent` whenever a new chunk of data is transferred. _(Function)_
 
-Methods
--------
+## Methods
 
 - __upload__: sends a file to a server.
 
@@ -37,8 +34,7 @@ Methods
 
 - __abort__: Aborts an in-progress transfer.
 
-Details
--------
+## Details
 
 The `FileTransfer` object provides a way to upload files to a remote
 server using an HTTP multi-part POST request.  Both HTTP and HTTPS
@@ -50,8 +46,7 @@ passed to the error callback.  It is also possible (only on iOS and
 Android) to download a file from a remote server and save it on the
 device.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -59,8 +54,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-upload
---------------
+## upload
 
 __Parameters:__
 
@@ -206,8 +200,7 @@ __Android Quirks__
 Set the `chunkedMode` option to `false` to prevent problems uploading
 to a Nginx server.
 
-download
---------------
+## download
 
 __Parameters:__
 
@@ -249,8 +242,7 @@ __Quick Example__
         }
     );
 
-abort
---------------
+## abort
 
 Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
@@ -283,8 +275,7 @@ __Quick Example__
     ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
     ft.abort();
 
-onprogress
---------------
+## onprogress
 
 Called with a ProgressEvent whenever a new chunk of data is transferred.
 

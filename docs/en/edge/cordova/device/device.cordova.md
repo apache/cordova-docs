@@ -17,20 +17,17 @@
          under the License.
 ---
 
-device.cordova
-===============
+# device.cordova
 
 Get the version of Cordova running on the device.
 
     var string = device.cordova;
 
-Description
------------
+## Description
 
 `device.cordova` returns the version of Cordova running on the device.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,13 +36,11 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     var name = device.cordova;
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

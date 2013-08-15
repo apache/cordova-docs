@@ -17,8 +17,7 @@
          under the License.
 ---
 
-cameraError
-===========
+# cameraError
 
 onError callback function that provides an error message.
 
@@ -26,7 +25,6 @@ onError callback function that provides an error message.
         // Show a helpful message
     }
 
-Parameters
-----------
+## Parameters
 
 - __message__: The message is provided by the device's native code. _(String)_

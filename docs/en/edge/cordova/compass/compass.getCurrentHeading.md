@@ -17,15 +17,13 @@
          under the License.
 ---
 
-compass.getCurrentHeading
-=========================
+# compass.getCurrentHeading
 
 Get the current compass heading.
 
     navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
 
-Description
------------
+## Description
 
 The compass is a sensor that detects the direction or heading that the
 device is pointed, typically from the top of the device.  It measures
@@ -34,8 +32,7 @@ the heading in degrees from 0 to 359.99, where 0 is north.
 The compass heading information is returned via a `CompassHeading`
 object using the `compassSuccess` callback function.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry 10
@@ -44,8 +41,7 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(heading) {
         alert('Heading: ' + heading.magneticHeading);
@@ -57,8 +53,7 @@ Quick Example
 
     navigator.compass.getCurrentHeading(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getDateNames
-===========
+# globalization.getDateNames
 
 Returns an array of the names of the months or days of the week,
 depending on the client's user preferences and calendar.
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the array of names to the `successCallback` with a
 `properties` object as a parameter. That object contains a `value`
@@ -46,16 +44,14 @@ The value of `options.type` can be `narrow` or `wide`.
 
 The value of `options.item` can be `months` or `days`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this example displays
 a series of twelve popup dialogs, one per month, with text similar to
@@ -71,8 +67,7 @@ a series of twelve popup dialogs, one per month, with text similar to
         { type: 'wide', item: 'months' }
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

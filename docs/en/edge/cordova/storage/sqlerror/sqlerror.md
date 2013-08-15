@@ -17,20 +17,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-SQLError
-========
+# SQLError
 
 A `SQLError` object is thrown when an error occurs.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below.
 
 - __message__: A description of the error.
 
-Constants
----------
+## Constants
 
 - `SQLError.UNKNOWN_ERR`
 - `SQLError.DATABASE_ERR`
@@ -41,7 +38,6 @@ Constants
 - `SQLError.CONSTRAINT_ERR`
 - `SQLError.TIMEOUT_ERR`
 
-Description
------------
+## Description
 
 The `SQLError` object is thrown when an error occurs when manipulating a database.
