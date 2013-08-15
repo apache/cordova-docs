@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Geolocation
-===========
+# Geolocation
 
 > The `geolocation` object provides access to location data based on the device's GPS sensor or inferred from network signals.
 
@@ -48,22 +47,19 @@ above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
 see the Privacy Guide.
 
-Methods
--------
+## Methods
 
 - geolocation.getCurrentPosition
 - geolocation.watchPosition
 - geolocation.clearWatch
 
-Arguments
----------
+## Arguments
 
 - geolocationSuccess
 - geolocationError
 - geolocationOptions
 
-Objects (Read-Only)
--------------------
+## Objects (Read-Only)
 
 - Position
 - PositionError

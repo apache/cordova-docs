@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-volumeupbutton
-===========
+# volumeupbutton
 
 The event fires when the user presses the volume up button.
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 If you need to override the default volume up behavior you can
 register an event listener for the `volumeupbutton` event.
@@ -33,13 +31,11 @@ register an event listener for the `volumeupbutton` event.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
 
@@ -47,8 +43,7 @@ Quick Example
         // Handle the volume up button
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

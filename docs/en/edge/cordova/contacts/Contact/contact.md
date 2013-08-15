@@ -17,13 +17,11 @@
          under the License.
 ---
 
-Contact
-=======
+# Contact
 
 Contains properties that describe a contact, such as a user's personal or business contact.
 
-Properties
-----------
+## Properties
 
 - __id__: A globally unique identifier. _(DOMString)_
 
@@ -53,8 +51,7 @@ Properties
 
 - __urls__:  An array of web pages associated with the contact. _(ContactField[])_
 
-Methods
--------
+## Methods
 
 - __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
 
@@ -62,8 +59,7 @@ Methods
 
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
-Details
--------
+## Details
 
 The `Contact` object represents a user's contact.  Contacts can be
 created, stored, or removed from the device contacts database.
@@ -74,8 +70,7 @@ __NOTE:__ Not all of the contact fields listed above are supported on
 every device platform.  Please check each platform's _Quirks_ section
 for details.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -83,8 +78,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Save Quick Example
-------------------
+## Save Quick Example
 
     function onSuccess(contact) {
         alert("Save Success");
@@ -108,8 +102,7 @@ Save Quick Example
     // save to device
     contact.save(onSuccess,onError);
 
-Clone Quick Example
--------------------
+## Clone Quick Example
 
         // clone the contact object
         var clone = contact.clone();
@@ -117,8 +110,7 @@ Clone Quick Example
         console.log("Original contact name = " + contact.name.givenName);
         console.log("Cloned contact name = " + clone.name.givenName);
 
-Remove Quick Example
---------------------
+## Remove Quick Example
 
     function onSuccess() {
         alert("Removal Success");
@@ -131,8 +123,7 @@ Remove Quick Example
         // remove the contact from the device
         contact.remove(onSuccess,onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -203,13 +194,11 @@ Full Example
       </body>
     </html>
 
-Android 2.X Quirks
-------------------
+## Android 2.X Quirks
 
 - __categories__:  Not supported on Android 2.X devices, returning `null`.
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
----------------------------------------------
+## BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __id__: Supported.  Assigned by the device when saving the contact.
 
@@ -233,8 +222,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __urls__:  Partially supported. The first URL is stored in BlackBerry __webpage__ field.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - __displayName__: Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
 
@@ -244,8 +232,7 @@ iOS Quirks
 
 - __categories__:  This property is currently not supported, returning `null`.
 
-Windows Phone 7 and 8 Quirks
------------
+## Windows Phone 7 and 8 Quirks
 
 - __displayName__: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
 

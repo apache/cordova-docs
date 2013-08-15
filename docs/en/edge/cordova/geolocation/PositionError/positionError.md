@@ -17,27 +17,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-PositionError
-========
+# PositionError
 
 A `PositionError` object is passed to the `geolocationError` callback when an error occurs.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below.
 
 - __message__: Error message describing the details of the error encountered.
 
-Constants
----------
+## Constants
 
 - `PositionError.PERMISSION_DENIED`
 - `PositionError.POSITION_UNAVAILABLE`
 - `PositionError.TIMEOUT`
 
-Description
------------
+## Description
 
 The `PositionError` object is passed to the `geolocationError`
 callback function when an error occurs with geolocation.

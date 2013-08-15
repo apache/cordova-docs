@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-resume
-===========
+# resume
 
 The event fires when an application is retrieved from the background.
 
     document.addEventListener("resume", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The `resume` event fires when the native platform pulls the
 application out from the background.
@@ -33,8 +31,7 @@ application out from the background.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -42,8 +39,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("resume", onResume, false);
 
@@ -51,8 +47,7 @@ Quick Example
         // Handle the resume event
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -85,8 +80,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
---------------------------
+## iOS Quirks
 
 Any interactive functions called from a `pause` event handler execute
 later when the app resumes, as signaled by the `resume` event. These

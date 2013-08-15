@@ -17,8 +17,7 @@
          under the License.
 ---
 
-Contacts
-========
+# Contacts
 
 > The `contacts` object provides access to the device contacts database.
 
@@ -39,22 +38,19 @@ clear and easy-to-understand user experience surrounding the use of
 contact data will help avoid user confusion and perceived misuse of
 contact data.  For more information, please see the Privacy Guide.
 
-Methods
--------
+## Methods
 
 - contacts.create
 - contacts.find
 
-Arguments
----------
+## Arguments
 
 - contactFields
 - contactSuccess
 - contactError
 - contactFindOptions
 
-Objects
--------
+## Objects
 
 - Contact
 - ContactName

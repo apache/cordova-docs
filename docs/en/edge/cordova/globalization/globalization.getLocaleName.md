@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getLocaleName
-===========
+# globalization.getLocaleName
 
 Get the string identifier for the client's current locale setting.
 
     navigator.globalization.getLocaleName(successCallback, errorCallback);
 
-Description
------------
+## Description
 
 Returns the locale identifier string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -35,16 +33,14 @@ If there is an error getting the locale, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this displays a popup
 dialog with the text `locale: en\_US`.
@@ -54,8 +50,7 @@ dialog with the text `locale: en\_US`.
         function () {alert('Error getting locale\n');}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -77,7 +72,6 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
----------------------
+## Windows Phone 8 Quirks
 
 - Returns the two-letter code defined in ISO 3166 for the current country/region.

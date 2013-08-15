@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileUploadOptions
-========
+# FileUploadOptions
 
 A `FileUploadOptions` object can be passed to the `FileTransfer`
 object's `upload()` method to specify additional parameters to the
 upload script.
 
-Properties
-----------
+## Properties
 
 - __fileKey__: The name of the form element.  Defaults to `file`. (DOMString)
 
@@ -39,14 +37,12 @@ Properties
 
 - __headers__: A map of header name/header values. Use an array to specify more than one value. (Object)
 
-Description
------------
+## Description
 
 A `FileUploadOptions` object can be passed to the `FileTransfer`
 object's `upload()` method to specify additional parameters to the
 upload script.
 
-WP7 Quirk
----------
+## WP7 Quirk
 
 - __chunkedMode:__: Ignored on WP7.

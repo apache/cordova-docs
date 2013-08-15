@@ -17,15 +17,13 @@
          under the License.
 ---
 
-accelerometer.getCurrentAcceleration
-====================================
+# accelerometer.getCurrentAcceleration
 
 Get the current acceleration along the _x_, _y_, and _z_ axes.
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
-Description
------------
+## Description
 
 The accelerometer is a motion sensor that detects the change (_delta_)
 in movement relative to the current device orientation, in three
@@ -34,8 +32,7 @@ dimensions along the _x_, _y_, and _z_ axis.
 These acceleration values are returned to the `accelerometerSuccess`
 callback function.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -44,8 +41,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -60,8 +56,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -104,8 +99,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
--------------
+## iOS Quirks
 
 - iOS doesn't recognize the concept of getting the current acceleration at any given point.
 

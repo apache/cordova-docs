@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-pause
-===========
+# pause
 
 The event fires when an application is put into the background.
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The `pause` event fires when the native platform puts the application
 into the background, typically when the user switches to a different
@@ -34,8 +32,7 @@ application.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -43,8 +40,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("pause", onPause, false);
 
@@ -52,8 +48,7 @@ Quick Example
         // Handle the pause event
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -86,8 +81,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
---------------------------
+## iOS Quirks
 
 In the `pause` handler, any calls to the Cordova API or to native
 plugins that go through Objective-C do not work, along with any

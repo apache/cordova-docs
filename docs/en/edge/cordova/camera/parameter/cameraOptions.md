@@ -17,8 +17,7 @@
          under the License.
 ---
 
-cameraOptions
-=============
+# cameraOptions
 
 Optional parameters to customize the camera settings.
 
@@ -32,8 +31,7 @@ Optional parameters to customize the camera settings.
       popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: false };
 
-Options
--------
+## Options
 
 - __quality__: Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. _(Number)_ (Note that information about the camera's resolution is unavailable.)
 
@@ -87,15 +85,13 @@ Options
             FRONT : 1      // Use the front-facing camera
         };
 
-Android Quirks
---------------
+## Android Quirks
 
 - Ignores the `allowEdit` parameter.
 
 - `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
-BlackBerry Quirks
------------------
+## BlackBerry Quirks
 
 - Ignores the `quality` parameter.
 
@@ -113,22 +109,19 @@ BlackBerry Quirks
 
 - Ignores the `cameraDirection` parameter.
 
-iOS Quirks
---------------
+## iOS Quirks
 
 - Set `quality` below 50 to avoid memory errors on some devices.
 
 - When using `destinationType.FILE_URI`, photos are saved in the application's temporary directory.  You may delete the contents of this directory using the `navigator.fileMgr` APIs if storage space is a concern.
 
-Tizen Quirks
---------------
+## Tizen Quirks
 
 - options not supported
 
 - always returns a FILE URI
 
-Windows Phone 7 and 8 Quirks
---------------
+## Windows Phone 7 and 8 Quirks
 
 - Ignores the `allowEdit` parameter.
 

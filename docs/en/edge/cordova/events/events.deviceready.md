@@ -17,15 +17,13 @@
          under the License.
 ---
 
-deviceready
-===========
+# deviceready
 
 The event fires when Cordova is fully loaded.
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 This event is essential to any application. It signals that Cordova's
 device APIs have loaded and are ready to access.
@@ -45,8 +43,7 @@ The `deviceready` event behaves somewhat differently from others.  Any
 event handler registered after the `deviceready` event fires has its
 callback function called immediately.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -55,8 +52,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -64,8 +60,7 @@ Quick Example
         // Now safe to use device APIs
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

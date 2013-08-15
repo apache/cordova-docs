@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-offline
-===========
+# offline
 
 The event fires when an application goes offline, and the device is
 not connected to the Internet.
 
     document.addEventListener("offline", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The `offline` event fires when a previously connected device loses a
 network connection so that an application can no longer access the
@@ -37,8 +35,7 @@ value.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -47,8 +44,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("offline", onOffline, false);
 
@@ -56,8 +52,7 @@ Quick Example
         // Handle the offline event
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -90,14 +85,14 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
---------------------------
+## iOS Quirks
+
 During initial startup, the first offline event (if applicable) takes at least a second to fire.
 
-Windows Phone 7 Quirks
---------------------------
+## Windows Phone 7 Quirks
+
 When running in the Emulator, the `connection.status` is always unknown, so this event does _not_ fire.
 
-Windows Phone 8 Quirks
---------------------------
+## Windows Phone 8 Quirks
+
 The Emulator reports the connection type as `Cellular`, which does not change, so the event does _not_ fire.

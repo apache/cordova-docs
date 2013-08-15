@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-CaptureErrorCB
-==============
+# CaptureErrorCB
 
 > Invoked if an error occurs during a media capture operation.
 
     function captureError( CaptureError error ) { ... };
 
-Description
------------
+## Description
 
 This function executes if an error occurs when trying to launch a
 media capture operation. Failure scenarios include when the capture
@@ -35,8 +33,7 @@ the user cancels the operation before any media files are captured.
 This function executes with a `CaptureError` object containing an
 appropriate error `code`.
 
-Quick Example
--------------
+## Quick Example
 
     // capture error callback
     var captureError = function(error) {

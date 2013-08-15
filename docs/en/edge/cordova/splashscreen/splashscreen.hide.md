@@ -17,20 +17,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-splashscreen.hide
-===============
+# splashscreen.hide
 
 Dismiss the splash screen.
 
     navigator.splashscreen.hide();
 
-Description
------------
+## Description
 
 This method dismisses the application's splash screen.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry 10
@@ -38,13 +35,11 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     navigator.splashscreen.hide();
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -71,8 +66,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirk
-------------
+## iOS Quirk
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
 `false`. To delay hiding the splash screen for two seconds, add a

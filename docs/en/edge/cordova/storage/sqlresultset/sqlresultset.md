@@ -17,14 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-SQLResultSet
-=======
+# SQLResultSet
 
 When a `SQLTransaction` object's `executeSql` method is called, the
 specified callback executes with a `SQLResultSet` parameter.
 
-Properties
--------
+## Properties
 
 - __insertId__: The row ID of the row that the `SQLResultSet` object's SQL statement inserted into the database.
 
@@ -32,8 +30,7 @@ Properties
 
 - __rows__: a `SQLResultSetRowList` representing the rows returned, empty if no rows are returned.
 
-Details
--------
+## Details
 
 When a `SQLTransaction` object's `executeSql` method is called, the
 specified callback executes with a `SQLResultSet` parameter containing
@@ -50,16 +47,14 @@ three properties:
 * The final `SQLResultSetList` contains the data returned from a SQL
   select statement.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Tizen
 
-Execute SQL Quick Example
-------------------
+## Execute SQL Quick Example
 
     function queryDB(tx) {
         tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
@@ -83,8 +78,7 @@ Execute SQL Quick Example
     var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
     db.transaction(queryDB, errorCB);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

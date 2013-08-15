@@ -17,20 +17,17 @@
          under the License.
 ---
 
-ContactFindOptions
-==================
+# ContactFindOptions
 
 Contains properties that can be used to filter the results of a `contacts.find` operation.
 
-Properties
-----------
+## Properties
 
 - __filter__: The search string used to find contacts. _(DOMString)_ (Default: `""`)
 
 - __multiple__: Determines if the find operation returns multiple contacts. _(Boolean)_ (Default: `false`)
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -38,8 +35,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // success callback
     function onSuccess(contacts) {
@@ -62,8 +58,7 @@ Quick Example
         // find contacts
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

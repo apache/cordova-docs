@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocationOptions
-==================
+# geolocationOptions
 
 Optional parameters to customize the retrieval of the geolocation
 `Position`.
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
-Options
--------
+## Options
 
 - __enableHighAccuracy__: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a `Position` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
 
@@ -34,8 +32,7 @@ Options
 
 - __maximumAge__: Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
 
-Android Quirks
---------------
+## Android Quirks
 
 Android 2.x emulators do not return a geolocation result unless the `enableHighAccuracy` option is set to `true`.
 

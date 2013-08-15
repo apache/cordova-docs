@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-capture.captureAudio
-====================
+# capture.captureAudio
 
 > Start the audio recorder application and return information about captured audio clip files.
 
@@ -26,8 +25,7 @@ capture.captureAudio
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
     );
 
-Description
------------
+## Description
 
 Starts an asynchronous operation to capture audio recordings using the
 device's default audio recording application.  The operation allows
@@ -46,8 +44,7 @@ is captured, the `CaptureErrorCallback` executes with a `CaptureError`
 object, featuring the `CaptureError.CAPTURE_NO_MEDIA_FILES` error
 code.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -55,8 +52,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // capture callback
     var captureSuccess = function(mediaFiles) {
@@ -75,8 +71,7 @@ Quick Example
     // start audio capture
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -136,17 +131,14 @@ Full Example
         </body>
     </html>
 
-BlackBerry WebWorks Quirks
---------------------------
+## BlackBerry WebWorks Quirks
 
 - Cordova for BlackBerry WebWorks attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - iOS does not have a default audio recording application, so a simple user interface is provided.
 
-Windows Phone 7 and 8 Quirks
-----------
+## Windows Phone 7 and 8 Quirks
 
 - Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.

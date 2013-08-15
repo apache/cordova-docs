@@ -17,34 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-openDatabase
-===============
+# openDatabase
 
 Returns a new `Database` object.
 
     var dbShell = window.openDatabase(database_name, database_version, database_displayname, database_size);
 
-Description
------------
+## Description
 
 The method creates a new SQL Lite Database and returns a `Database`
 object that allows manipulation of the data.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iOS
 - Tizen
 
-Quick Example
--------------
+## Quick Example
 
     var db = window.openDatabase("test", "1.0", "Test DB", 1000000);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

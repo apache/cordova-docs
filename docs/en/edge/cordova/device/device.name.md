@@ -17,8 +17,7 @@
          under the License.
 ---
 
-device.name
-===========
+# device.name
 
 __WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
@@ -26,15 +25,13 @@ Get the device's model name.
 
     var string = device.name;
 
-Description
------------
+## Description
 
 `device.name` returns the name of the device's model or product. This
 value is set by the device manufacturer and may be different across
 versions of the same product.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -43,8 +40,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
     //             Motorola Droid  returns "voles"
@@ -53,8 +49,7 @@ Quick Example
     //
     var name = device.name;
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -87,17 +82,14 @@ Full Example
       </body>
     </html>
 
-Android Quirks
---------------
+## Android Quirks
 
 - Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
 
-Windows Phone 7 and 8 Quirks
--------------
+## Windows Phone 7 and 8 Quirks
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
-Tizen Quirks
------------
+## Tizen Quirks
 
 - Returns the device model assigned by the vendor, for example, `TIZEN`

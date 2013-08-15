@@ -70,6 +70,7 @@ expose the same APIs as on other Cordova-supported platforms.
 - Edit the code for `index.html`. Add a reference to `cordova.js`. You can do this manually, or by dragging the file from Solution Explorer.
 
 ### Adding the reference...
+
 	    <!-- WinJS references -->
 	    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
 	    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
@@ -85,6 +86,7 @@ expose the same APIs as on other Cordova-supported platforms.
 - Next, add some code that demonstrates Cordova is working.
 
 ### Adding a 'deviceready' handler...
+
 	<body>
 	    <p>Content goes here</p>
 

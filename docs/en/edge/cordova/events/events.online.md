@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-online
-===========
+# online
 
 This event fires when an application goes online, and the device
 becomes connected to the Internet.
 
     document.addEventListener("online", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The `online` event fires when a previously unconnected device receives
 a network connection to allow an application access to the Internet.
@@ -36,8 +34,7 @@ when the value of `connection.type` becomes `NONE`.
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -46,8 +43,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("online", onOnline, false);
 
@@ -55,8 +51,7 @@ Quick Example
         // Handle the online event
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -89,17 +84,16 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
---------------------------
+## iOS Quirks
 
 During initial startup, the first `online` event (if applicable) takes
 at least a second to fire, prior to which `connection.type` is
 `UNKNOWN`.
 
-Windows Phone 7 Quirks
---------------------------
+## Windows Phone 7 Quirks
+
 When running in the Emulator, the `connection.status` is always unknown, so this event will _not_ fire.
 
-Windows Phone 8 Quirks
---------------------------
+## Windows Phone 8 Quirks
+
 The Emulator reports the connection type as `Cellular`, which does not change, so events will _not_ fire.

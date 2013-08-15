@@ -17,15 +17,13 @@
          under the License.
 ---
 
-batterystatus
-===========
+# batterystatus
 
 The event fires when there is a change in the battery status.
 
     window.addEventListener("batterystatus", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 This event fires when the percentage of battery charge changes by at
 least 1 percent, or if the device is plugged in or unplugged.
@@ -40,8 +38,7 @@ properties:
 Applications typically should use `window.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 - Android
@@ -49,15 +46,13 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Tizen
 
-Windows Phone 7 and 8 Quirks
-----------------------
+## Windows Phone 7 and 8 Quirks
 
 Windows Phone 7 does not provide native APIs to determine battery
 level, so the `level` property is unavailable.  The `isPlugged`
 parameter _is_ supported.
 
-Quick Example
--------------
+## Quick Example
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
 
@@ -66,8 +61,7 @@ Quick Example
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

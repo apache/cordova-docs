@@ -17,23 +17,19 @@
          under the License.
 ---
 
-CameraPopoverHandle
-===================
+# CameraPopoverHandle
 
 A handle to the popover dialog created by `camera.getPicture`.
 
-Methods
--------
+## Methods
 
 - __setPosition__: Set the position of the popover.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 
-setPosition
------------
+## setPosition
 
 Set the position of the popover.
 
@@ -41,14 +37,12 @@ __Parameters:__
 
 - `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
 
-Quick Example
--------------
+## Quick Example
 
      var cameraPopoverOptions = new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
      cameraPopoverHandle.setPosition(cameraPopoverOptions);
 
-Full Example
-------------
+## Full Example
 
      function onSuccess(imageData) {
           // Do stuff with the image!

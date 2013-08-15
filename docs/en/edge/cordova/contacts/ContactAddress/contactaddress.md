@@ -17,13 +17,11 @@
          under the License.
 ---
 
-ContactAddress
-==============
+# ContactAddress
 
 Contains address properties for a `Contact` object.
 
-Properties
-----------
+## Properties
 
 - __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
 
@@ -41,15 +39,13 @@ Properties
 
 - __country__: The country name. _(DOMString)_
 
-Details
--------
+## Details
 
 The `ContactAddress` object stores the properties of a single address
 of a contact.  A `Contact` object may include more than one address in
 a `ContactAddress[]` array.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -57,8 +53,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // display the address information for all contacts
 
@@ -87,8 +82,7 @@ Quick Example
     var filter = ["displayName", "addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -144,13 +138,11 @@ Full Example
       </body>
     </html>
 
-Android 2.X Quirks
-------------------
+## Android 2.X Quirks
 
 - __pref__: Not supported, returning `false` on Android 2.X devices.
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
---------------------------------------------
+## BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __pref__: Not supported on BlackBerry devices, returning `false`.
 
@@ -168,8 +160,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __country__: Supported.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - __pref__: Not supported on iOS devices, returning `false`.
 

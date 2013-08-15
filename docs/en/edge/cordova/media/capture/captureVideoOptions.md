@@ -17,33 +17,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-CaptureVideoOptions
-===================
+# CaptureVideoOptions
 
 > Encapsulates video capture configuration options.
 
-Properties
-----------
+## Properties
 
 - __limit__: The maximum number of video clips the device's user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
 - __duration__: The maximum duration of a video clip, in seconds.
 
-Quick Example
--------------
+## Quick Example
 
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
 
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
-BlackBerry WebWorks Quirks
---------------------------
+## BlackBerry WebWorks Quirks
 
 - The __duration__ parameter is not supported, so the length of recordings cannot be limited programmatically.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - The __limit__ parameter is not supported.  Only one video is recorded per invocation.
 

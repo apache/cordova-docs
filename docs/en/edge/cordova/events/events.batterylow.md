@@ -17,15 +17,13 @@
          under the License.
 ---
 
-batterylow
-===========
+# batterylow
 
 The event fires when the battery has reached the low level threshold.
 
     window.addEventListener("batterylow", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The event fires when the percentage of battery charge has reached the
 low battery threshold, device-specific value.
@@ -40,16 +38,14 @@ properties:
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
--------------
+## Quick Example
 
     window.addEventListener("batterylow", onBatteryLow, false);
 
@@ -58,8 +54,7 @@ Quick Example
         alert("Battery Level Low " + info.level + "%");
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

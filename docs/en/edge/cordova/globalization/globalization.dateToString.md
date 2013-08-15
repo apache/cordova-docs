@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.dateToString
-===========
+# globalization.dateToString
 
 Returns a date formatted as a string according to the client's locale and timezone.
 
     navigator.globalization.dateToString(date, successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the formatted date `String` via a `value` property accessible
 from the object passed as a parameter to the `successCallback`.
@@ -44,16 +42,14 @@ The `options.formatLength` can be `short`, `medium`, `long`, or `full`.
 
 The `options.selector` can be `date`, `time` or `date and time`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 If the browser is set to the `en\_US` locale, this displays a popup
 dialog with text similar to `date: 9/25/2012 4:21PM` using the default
@@ -66,8 +62,7 @@ options:
         { formatLength: 'short', selector: 'date and time' }
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -91,7 +86,6 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
---------------
+## Windows Phone 8 Quirks
 
 - The `formatLength` option supports only `short` and `full` values.

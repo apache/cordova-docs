@@ -17,8 +17,7 @@
          under the License.
 ---
 
-accelerometerSuccess
-====================
+# accelerometerSuccess
 
 onSuccess callback function that provides the `Acceleration` information.
 
@@ -26,13 +25,11 @@ onSuccess callback function that provides the `Acceleration` information.
         // Do something
     }
 
-Parameters
-----------
+## Parameters
 
 - __acceleration__: The acceleration at a single moment in time. (Acceleration)
 
-Example
--------
+## Example
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +

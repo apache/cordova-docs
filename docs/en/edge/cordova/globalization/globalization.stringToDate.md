@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.stringToDate
-===========
+# globalization.stringToDate
 
 Parses a date formatted as a string, according to the client's user
 preferences and calendar using the time zone of the client, and
@@ -26,8 +25,7 @@ returns the corresponding date object.
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the date to the success callback with a `properties` object as
 a parameter. That object should have the following properties:
@@ -61,16 +59,14 @@ If there is an error parsing the date string, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.PARSING\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `month:8 day:25 year:2012`. Note
@@ -86,8 +82,7 @@ integer represents an array index.
         {selector: 'date'}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -114,7 +109,6 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
-------------------
+## Windows Phone 8 Quirks
 
 - The `formatLength` option supports only `short` and `full` values.

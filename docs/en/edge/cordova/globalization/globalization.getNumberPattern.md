@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getNumberPattern
-===========
+# globalization.getNumberPattern
 
 Returns a pattern string to format and parse numbers according to the client's user preferences.
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
 
-Description
------------
+## Description
 
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object contains the following properties:
@@ -56,16 +54,14 @@ The `options` parameter is optional, and default values are:
 
 The `options.type` can be `decimal`, `percent`, or `currency`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to the results that follow:
@@ -94,8 +90,7 @@ Results:
     decimal: .
     grouping: ,
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -126,8 +121,7 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
-----------------
+## Windows Phone 8 Quirks
 
 - The `pattern` property is not supported, and retuens an empty string.
 

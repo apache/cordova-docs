@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getPreferredLanguage
-===========
+# globalization.getPreferredLanguage
 
 Get the string identifier for the client's current language.
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
 
-Description
------------
+## Description
 
 Returns the language identifier string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -35,16 +33,14 @@ If there is an error getting the language, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with the text `language: English`:
@@ -54,8 +50,7 @@ popup dialog with the text `language: English`:
         function () {alert('Error getting language\n');}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>
@@ -77,7 +72,6 @@ Full Example
       </body>
     </html>
 
-Windows Phone 8 Quirks
--------
+## Windows Phone 8 Quirks
 
 - Returns the ISO 639-1 two-letter code for the current language.

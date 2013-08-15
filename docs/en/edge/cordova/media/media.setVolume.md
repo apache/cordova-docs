@@ -17,31 +17,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.setVolume
-===========
+# media.setVolume
 
 Set the volume for an audio file.
 
     media.setVolume(volume);
 
-Parameters
----------
+## Parameters
 
 - __volume__: The volume to set for playback.  The value must be within the range of 0.0 to 1.0.
 
-Description
------------
+## Description
 
 Function `media.setVolume` is an asynchronous function that sets the volume during audio playback.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - iOS
 
-Quick Example
--------------
+## Quick Example
 
     // Play audio
     //
@@ -71,8 +66,7 @@ Quick Example
         }, 5000);
     }
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">

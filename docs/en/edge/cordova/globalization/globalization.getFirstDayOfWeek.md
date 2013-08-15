@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.getFirstDayOfWeek
-===========
+# globalization.getFirstDayOfWeek
 
 Returns the first day of the week according to the client's user
 preferences and calendar.
 
     navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
 
-Description
------------
+## Description
 
 The days of the week are numbered starting from 1, where 1 is assumed
 to be Sunday.  Returns the day to the `successCallback` with a
@@ -37,16 +35,14 @@ If there is an error obtaining the pattern, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `day: 1`.
@@ -56,8 +52,7 @@ popup dialog with text similar to `day: 1`.
         function () {alert('Error getting day\n');}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

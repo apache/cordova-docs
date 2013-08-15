@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Coordinates
-===========
+# Coordinates
 
 A set of properties that describe the geographic coordinates of a position.
 
-Properties
-----------
+## Properties
 
 * __latitude__: Latitude in decimal degrees. _(Number)_
 
@@ -39,14 +37,12 @@ Properties
 
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
-Description
------------
+## Description
 
 The `Coordinates` object is attached to the `Position` object that is
 available to callback functions in requests for the current position.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -55,8 +51,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // onSuccess Callback
     //
@@ -79,8 +74,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -126,7 +120,6 @@ Full Example
       </body>
     </html>
 
-Android Quirks
--------------
+## Android Quirks
 
 __altitudeAccuracy__: Not supported by Android devices, returning `null`.

@@ -17,14 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileUploadResult
-========
+# FileUploadResult
 
 A `FileUploadResult` object is passed to the success callback of the
 `FileTransfer` object's `upload()` method.
 
-Properties
-----------
+## Properties
 
 - __bytesSent__: The number of bytes sent to the server as part of the upload. (long)
 
@@ -32,13 +30,11 @@ Properties
 
 - __response__: The HTTP response returned by the server. (DOMString)
 
-Description
------------
+## Description
 
 The `FileUploadResult` object is returned via the success callback of
 the `FileTransfer` object's `upload()` method.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - Does not support `responseCode` or `bytesSent`.

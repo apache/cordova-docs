@@ -17,12 +17,10 @@
          under the License.
 ---
 
-accelerometerOptions
-====================
+# accelerometerOptions
 
 An optional parameter to customize the retrieval of accelerometer values.
 
-Options
--------
+## Options
 
 - __frequency__: How often to retrieve the `Acceleration` in milliseconds. _(Number)_ (Default: 10000)

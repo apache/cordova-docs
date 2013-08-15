@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Notification
-============
+# Notification
 
 > Visual, audible, and tactile device notifications.
 
-Methods
--------
+## Methods
 
 - `notification.alert`
 - `notification.confirm`

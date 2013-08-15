@@ -17,7 +17,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-database_version
-=============
+# database_version
 
 The version of the database.

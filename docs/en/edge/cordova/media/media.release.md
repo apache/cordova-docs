@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.release
-=================
+# media.release
 
 Releases the underlying operating system's audio resources.
 
     media.release();
 
-Description
------------
+## Description
 
 The `media.release` method executes synchronously, releasing the
 underlying operating system's audio resources.  This is particularly
@@ -33,8 +31,7 @@ important for Android, since there are a finite amount of OpenCore
 instances for media playback. Applications should call the `release`
 function for any `Media` resource that is no longer needed.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -43,8 +40,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Audio player
     //
@@ -54,8 +50,7 @@ Quick Example
     my_media.stop();
     my_media.release();
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">

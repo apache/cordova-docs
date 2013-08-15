@@ -17,36 +17,31 @@
          under the License.
 ---
 
-contacts.create
-===============
+# contacts.create
 
 Returns a new Contact object.
 
     var contact = navigator.contacts.create(properties);
 
-Description
------------
+## Description
 
 The `contacts.create` method is synchronous, and returns a new `Contact` object.
 
 This method does not retain the Contact object in the device contacts
 database, for which you need to invoke the `Contact.save` method.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 7 and 8
 
-Quick Example
--------------
+## Quick Example
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocation.getCurrentPosition
-==============================
+# geolocation.getCurrentPosition
 
 Returns the device's current position as a `Position` object.
 
@@ -26,8 +25,7 @@ Returns the device's current position as a `Position` object.
                                              [geolocationError],
                                              [geolocationOptions]);
 
-Parameters
-----------
+## Parameters
 
 - __geolocationSuccess__: The callback that is passed the current position.
 
@@ -35,8 +33,7 @@ Parameters
 
 - __geolocationOptions__: _(Optional)_ The geolocation options.
 
-Description
------------
+## Description
 
 `geolocation.getCurrentPosition` is an asynchronous function. It
 returns the device's current position to the `geolocationSuccess`
@@ -44,8 +41,7 @@ callback with a `Position` object as the parameter.  If there is an
 error, the `geolocationError` callback is passed a
 `PositionError` object.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -54,8 +50,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // onSuccess Callback
     // This method accepts a Position object, which contains the
@@ -81,8 +76,7 @@ Quick Example
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
