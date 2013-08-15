@@ -17,13 +17,11 @@
          under the License.
 ---
 
-compassError
-==========
+# compassError
 
 onError callback function for compass functions.
 
-Example
--------
+## Example
 
     function(CompassError) {
         // Handle the error

@@ -17,8 +17,7 @@
          under the License.
 ---
 
-contactFindOptions
-==================
+# contactFindOptions
 
 Optional parameter of the `contacts.find` method, used to filter the
 contacts returned from the contacts database.
@@ -28,8 +27,7 @@ contacts returned from the contacts database.
       multiple: true,
     };
 
-Options
--------
+## Options
 
 - __filter__: The search string used to filter contacts. _(DOMString)_ (Default: `""`)
 

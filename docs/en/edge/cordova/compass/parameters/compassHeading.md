@@ -17,13 +17,11 @@
          under the License.
 ---
 
-compassHeading
-==========
+# compassHeading
 
 A `CompassHeading` object is returned to the `compassSuccess` callback function.
 
-Properties
-----------
+## Properties
 
 - __magneticHeading__: The heading in degrees from 0-359.99 at a single moment in time. _(Number)_
 
@@ -33,20 +31,17 @@ Properties
 
 - __timestamp__: The time at which this heading was determined.  _(milliseconds)_
 
-Description
------------
+## Description
 
 The `CompassHeading` object is returned to the `compassSuccess` callback function.
 
-Android Quirks
---------------
+## Android Quirks
 
 - `trueHeading` is not supported, but reports the same value as `magneticHeading`
 
 - `headingAccuracy` is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 

@@ -17,13 +17,11 @@
          under the License.
 ---
 
-Compass
-=======
+# Compass
 
 > Obtains the direction that the device is pointing.
 
-Methods
--------
+## Methods
 
 - compass.getCurrentHeading
 - compass.watchHeading
@@ -31,8 +29,7 @@ Methods
 - compass.watchHeadingFilter (obsolete)
 - compass.clearWatchFilter   (obsolete)
 
-Arguments
----------
+## Arguments
 
 - compassSuccess
 - compassError

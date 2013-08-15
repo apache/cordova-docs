@@ -17,8 +17,7 @@
          under the License.
 ---
 
-compassSuccess
-==============
+# compassSuccess
 
 onSuccess callback function that provides the compass heading information via a `compassHeading` object.
 
@@ -26,13 +25,11 @@ onSuccess callback function that provides the compass heading information via a 
         // Do something
     }
 
-Parameters
-----------
+## Parameters
 
 - __heading__: The heading information. _(compassHeading)_
 
-Example
--------
+## Example
 
     function onSuccess(heading) {
         alert('Heading: ' + heading.magneticHeading);

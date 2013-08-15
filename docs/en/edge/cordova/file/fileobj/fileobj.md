@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-File
-====
+# File
 
 This object contains attributes of a single file.
 
-Properties
-----------
+## Properties
 
 - __name__: The name of the file. _(DOMString)_
 
@@ -35,20 +33,17 @@ Properties
 
 - __size__: The size of the file in bytes. _(long)_
 
-Methods
--------
+## Methods
 
 - __slice__: Select only a portion of the file to be read.
 
-Details
--------
+## Details
 
 The `File` object contains attributes of a single file.  You can get
 an instance of a `File` object by calling a `FileEntry` object's
 `file()` method.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -56,8 +51,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-slice
---------------
+## slice
 
 Return a new `File` object, for which `FileReader` returns only the
 specified portion of the file.  Negative values for `start` or `end`

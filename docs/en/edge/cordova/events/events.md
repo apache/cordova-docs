@@ -17,13 +17,11 @@
          under the License.
 ---
 
-Events
-======
+# Events
 
 > Cordova lifecycle events.
 
-Event Types
------------
+## Event Types
 
 - deviceready
 - pause

@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileReader
-==========
+# FileReader
 
 The `FileReader` allows basic access to a file.
 
-Properties
-----------
+## Properties
 
 - __readyState__: One of the reader's three possible states, either `EMPTY`, `LOADING` or `DONE`.
 
@@ -45,8 +43,7 @@ __NOTE:__ The following porperty is not supported:
 
 - __onprogress__: Called while reading the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
 
-Methods
--------
+## Methods
 
 - __abort__: Aborts reading file.
 
@@ -58,16 +55,14 @@ Methods
 
 - __readAsArrayBuffer__: Reads file as an `ArrayBuffer`.
 
-Details
--------
+## Details
 
 The `FileReader` object offers a way to read files from the device's
 file system.  Files can be read as text or as a base64 data-encoded
 string.  Event listeners receive the `loadstart`, `progress`, `load`,
 `loadend`, `error`, and `abort` events.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -75,15 +70,13 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Read As Data URL
-----------------
+## Read As Data URL
 
 __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
--------------
+## Quick Example
 
     function win(file) {
         var reader = new FileReader();
@@ -100,8 +93,7 @@ Quick Example
 
     entry.file(win, fail);
 
-Read As Text
-------------
+## Read As Text
 
 __Parameters:__
 
@@ -109,8 +101,7 @@ __Parameters:__
 
 - __encoding__: the encoding to use to encode the file's content. Default is UTF8.
 
-Quick Example
--------------
+## Quick Example
 
     function win(file) {
         var reader = new FileReader();
@@ -127,8 +118,7 @@ Quick Example
 
     entry.file(win, fail);
 
-Abort Quick Example
--------------------
+## Abort Quick Example
 
     function win(file) {
         var reader = new FileReader();
@@ -146,8 +136,7 @@ Abort Quick Example
 
     entry.file(win, fail);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -210,13 +199,11 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - The __encoding__ parameter is not supported, and UTF8 encoding is always in effect.
 
-Read As Binary String
----------------------
+## Read As Binary String
 
 Currently supported on iOS and Android only.
 
@@ -224,8 +211,7 @@ __Parameters:__
 
 - __file__: the file object to read.
 
-Quick Example
--------------
+## Quick Example
 
     function win(file) {
         var reader = new FileReader();
@@ -242,8 +228,7 @@ Quick Example
 
     entry.file(win, fail);
 
-Read As Array Buffer
---------------------
+## Read As Array Buffer
 
 Currently supported on iOS and Android only.
 
@@ -251,8 +236,7 @@ __Parameters:__
 
 - __file__:  the file object to read.
 
-Quick Example
--------------
+## Quick Example
 
     function win(file) {
         var reader = new FileReader();

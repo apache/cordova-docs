@@ -17,8 +17,7 @@
          under the License.
 ---
 
-accelerometer.clearWatch
-========================
+# accelerometer.clearWatch
 
 Stop watching the `Acceleration` referenced by the `watchID` parameter.
 
@@ -26,8 +25,7 @@ Stop watching the `Acceleration` referenced by the `watchID` parameter.
 
 - __watchID__: The ID returned by `accelerometer.watchAcceleration`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -36,8 +34,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
@@ -45,8 +42,7 @@ Quick Example
 
     navigator.accelerometer.clearWatch(watchID);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

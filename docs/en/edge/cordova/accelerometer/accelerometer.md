@@ -17,27 +17,23 @@
          under the License.
 ---
 
-Accelerometer
-=============
+# Accelerometer
 
 > Captures device motion in the _x_, _y_, and _z_ direction.
 
-Methods
--------
+## Methods
 
 - accelerometer.getCurrentAcceleration
 - accelerometer.watchAcceleration
 - accelerometer.clearWatch
 
-Arguments
----------
+## Arguments
 
 - accelerometerSuccess
 - accelerometerError
 - accelerometerOptions
 
-Objects (Read-Only)
--------------------
+## Objects (Read-Only)
 
 - Acceleration
 

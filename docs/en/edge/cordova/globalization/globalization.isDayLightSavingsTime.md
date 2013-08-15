@@ -17,16 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-globalization.isDayLightSavingsTime
-===========
+# globalization.isDayLightSavingsTime
 
 Indicates whether daylight savings time is in effect for a given date
 using the client's time zone and calendar.
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
 
-Description
------------
+## Description
 
 Indicates whether or not daylight savings time is in effect to the
 `successCallback` with a `properties` object as a parameter. That object
@@ -39,16 +37,14 @@ The inbound parameter `date` should be of type `Date`.
 If there is an error reading the date, then the `errorCallback`
 executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 - Windows Phone 8
 
-Quick Example
--------------
+## Quick Example
 
 During the summer, and if the browser is set to a DST-enabled
 timezone, this should display a popup dialog with text similar to
@@ -60,8 +56,7 @@ timezone, this should display a popup dialog with text similar to
         function () {alert('Error getting names\n');}
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

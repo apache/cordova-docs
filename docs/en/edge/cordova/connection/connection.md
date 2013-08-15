@@ -17,18 +17,15 @@
          under the License.
 ---
 
-Connection
-==========
+# Connection
 
 > The `connection` object, exposed via `navigator.connection`,  provides information about the device's cellular and wifi connection.
 
-Properties
-----------
+## Properties
 
 - connection.type
 
-Constants
----------
+## Constants
 
 - Connection.UNKNOWN
 - Connection.ETHERNET

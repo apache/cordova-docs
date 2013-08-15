@@ -17,22 +17,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.getDuration
-=================
+# media.getDuration
 
 Returns the duration of an audio file.
 
     media.getDuration();
 
-Description
------------
+## Description
 
 The `media.getDuration` method executes synchronously, returning the
 duration of the audio file in seconds, if known.  If the duration is
 unknown, it returns a value of -1.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -41,8 +38,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Audio player
     //
@@ -62,8 +58,7 @@ Quick Example
         }
     }, 100);
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">

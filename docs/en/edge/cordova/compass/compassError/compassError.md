@@ -17,23 +17,20 @@
          under the License.
 ---
 
-CompassError
-==========
+# CompassError
 
 A `CompassError` object is returned to the `compassError` callback function when an error occurs.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the predefined error codes listed below.
 
-Constants
----------
+## Constants
+
 - `CompassError.COMPASS_INTERNAL_ERR`
 - `CompassError.COMPASS_NOT_SUPPORTED`
 
-Description
------------
+## Description
 
 When an error occurs, the `CompassError` object is passed as a
 parameter to a `compassError` callback function.

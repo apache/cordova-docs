@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-notification.prompt
-====================
+# notification.prompt
 
 Shows a customizable prompt dialog box.
 
@@ -34,14 +33,12 @@ Shows a customizable prompt dialog box.
 
 - __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)
 
-Description
------------
+## Description
 
 The `notification.prompt` method displays a native dialog box that is
 more customizable than the browser's `prompt` function.
 
-promptCallback
----------------
+## promptCallback
 
 The `promptCallback` executes when the user presses one of the buttons
 in the prompt dialog box. The `results` object passed to the callback
@@ -51,14 +48,12 @@ contains the following properties:
 
 - __input1__: The text entered in the prompt dialog box. _(String)_
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - iOS
 
-Quick Example
--------------
+## Quick Example
 
     // process the promp dialog results
     function onPrompt(results) {
@@ -77,8 +72,7 @@ Quick Example
         );
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -122,8 +116,7 @@ Full Example
       </body>
     </html>
 
-Android Quirks
-----------------------
+## Android Quirks
 
 - Android supports a maximum of three buttons, and ignores any more than that.
 

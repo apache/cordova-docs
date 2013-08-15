@@ -17,21 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-DirectoryReader
-===============
+# DirectoryReader
 
 An object that lists files and directories within a directory, as
 defined in the
 [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/)
 specification.
 
-Methods
--------
+## Methods
 
 - __readEntries__: Read the entries in a directory.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,8 +36,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-readEntries
------------
+## readEntries
 
 Read the entries in this directory.
 

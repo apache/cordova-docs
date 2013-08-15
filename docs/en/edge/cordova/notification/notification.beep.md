@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-notification.beep
-=================
+# notification.beep
 
 The device plays a beep sound.
 
@@ -26,8 +25,7 @@ The device plays a beep sound.
 
 - __times__: The number of times to repeat the beep. _(Number)_
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -35,14 +33,12 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Quick Example
--------------
+## Quick Example
 
     // Beep twice!
     navigator.notification.beep(2);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -93,18 +89,15 @@ Full Example
       </body>
     </html>
 
-Android Quirks
---------------
+## Android Quirks
 
 - Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
 
-Windows Phone 7 and 8 Quirks
--------------
+## Windows Phone 7 and 8 Quirks
 
 - Relies on a generic beep file from the Cordova distribution.
 
-Tizen Quirks
--------------
+## Tizen Quirks
 
 - Tizen implements beeps by playing an audio file via the media API.
 

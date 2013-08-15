@@ -17,8 +17,7 @@
          under the License.
 ---
 
-contactSuccess
-==============
+# contactSuccess
 
 Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
 
@@ -26,13 +25,11 @@ Success callback function that provides the `Contact` array resulting from a `co
         // Do something
     }
 
-Parameters
-----------
+## Parameters
 
 - __contacts__: The contact array resulting from a find operation. _(Contact)_
 
-Example
--------
+## Example
 
     function contactSuccess(contacts) {
         for (var i=0; i<contacts.length; i++) {

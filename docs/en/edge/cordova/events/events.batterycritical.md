@@ -17,16 +17,14 @@
          under the License.
 ---
 
-batterycritical
-===========
+# batterycritical
 
 The event fires when the battery has reached the critical level
 threshold.
 
     window.addEventListener("batterycritical", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 The event fires when the percentage of battery charge has reached the
 critical battery threshold. The value is device-specific.
@@ -41,16 +39,14 @@ properties:
 Applications typically should use `window.addEventListener` to attach
 an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - Tizen
 
-Quick Example
--------------
+## Quick Example
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
 
@@ -59,8 +55,7 @@ Quick Example
         alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

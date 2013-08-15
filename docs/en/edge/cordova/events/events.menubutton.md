@@ -17,29 +17,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-menubutton
-===========
+# menubutton
 
 The event fires when the user presses the menu button.
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
 
-Details
--------
+## Details
 
 Applying an event handler overrides the default menu button behavior.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 
-Quick Example
--------------
+## Quick Example
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
 
@@ -47,8 +43,7 @@ Quick Example
         // Handle the back button
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

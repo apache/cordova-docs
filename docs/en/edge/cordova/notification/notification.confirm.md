@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-notification.confirm
-====================
+# notification.confirm
 
 Displays a customizable confirmation dialog box.
 
@@ -32,14 +31,12 @@ Displays a customizable confirmation dialog box.
 
 - __buttonLabels__: Comma-separated string specifying button labels. _(String)_ (Optional, defaults to `OK,Cancel`)
 
-Description
------------
+## Description
 
 The `notification.confirm` method displays a native dialog box that is
 more customizable than the browser's `confirm` function.
 
-confirmCallback
----------------
+## confirmCallback
 
 The `confirmCallback` executes when the user presses one of the
 buttons in the confirmation dialog box.
@@ -48,8 +45,7 @@ The callback takes the argument `buttonIndex` _(Number)_, which is the
 index of the pressed button. Note that the index uses one-based
 indexing, so the value is `1`, `2`, `3`, etc.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -58,8 +54,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // process the confirmation dialog result
     function onConfirm(buttonIndex) {
@@ -77,8 +72,7 @@ Quick Example
         );
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -121,8 +115,7 @@ Full Example
       </body>
     </html>
 
-Windows Phone 7 and 8 Quirks
-----------------------
+## Windows Phone 7 and 8 Quirks
 
 - There is no built-in browser function for `window.confirm`, but you can bind it by assigning:
 

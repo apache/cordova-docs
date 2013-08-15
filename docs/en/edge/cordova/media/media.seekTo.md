@@ -17,27 +17,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.seekTo
-========================
+# media.seekTo
 
 Sets the current position within an audio file.
 
     media.seekTo(milliseconds);
 
-Parameters
-----------
+## Parameters
 
 - __milliseconds__: The position to set the playback position within the audio, in milliseconds.
 
-Description
------------
+## Description
 
 The `media.seekTo` executes asynchronously, updating the current
 playback position within an audio file referenced by a `Media`
 object. Also updates the `Media` object's `position` parameter.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
@@ -46,8 +42,7 @@ Supported Platforms
 - Tizen
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Audio player
     //
@@ -58,8 +53,7 @@ Quick Example
         my_media.seekTo(10000);
     }, 5000);
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
                               "http://www.w3.org/TR/html4/strict.dtd">
@@ -155,7 +149,6 @@ Full Example
           </body>
         </html>
 
-BlackBerry WebWorks Quirks
-----------
+## BlackBerry WebWorks Quirks
 
 - Not supported on BlackBerry OS 5 devices.

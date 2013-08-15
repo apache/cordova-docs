@@ -17,15 +17,13 @@
          under the License.
 ---
 
-compass.watchHeading
-====================
+# compass.watchHeading
 
 At a regular interval, get the compass heading in degrees.
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
 
-Description
------------
+## Description
 
 The compass is a sensor that detects the direction or heading that the
 device is pointed.  It measures the heading in degrees from 0 to
@@ -40,8 +38,7 @@ object.
 The returned watch ID references the compass watch interval. The watch
 ID can be used with `compass.clearWatch` to stop watching the compass.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry 10
@@ -50,8 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(heading) {
         var element = document.getElementById('heading');
@@ -68,8 +64,7 @@ Quick Example
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -133,8 +128,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
---------------
+## iOS Quirks
 
 In iOS `compass.watchHeading` can also get the device's current
 heading when it changes by a specified number of degrees. Each time

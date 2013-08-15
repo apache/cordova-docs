@@ -17,21 +17,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.startRecord
-=================
+# media.startRecord
 
 Starts recording an audio file.
 
     media.startRecord();
 
-Description
------------
+## Description
 
 The `media.startRecord` method executes synchronously, starts a
 recording for an audio file.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -39,8 +36,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Record audio
     //
@@ -61,8 +57,7 @@ Quick Example
         mediaRec.startRecord();
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -130,18 +125,15 @@ Full Example
       </body>
     </html>
 
-Android Quirks
-----------
+## Android Quirks
 
 - Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a _.amr_ extension.
 
-BlackBerry WebWorks Quirks
-----------
+## BlackBerry WebWorks Quirks
 
 - BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a _.amr_ extension.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
 
@@ -151,7 +143,6 @@ iOS Quirks
 
         var myMedia = new Media("documents://beer.mp3")
 
-Tizen Quirks
-----------
+## Tizen Quirks
 
 - Not supported on Tizen devices.

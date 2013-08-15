@@ -17,8 +17,7 @@
          under the License.
 ---
 
-accelerometerError
-==================
+# accelerometerError
 
 onError callback function for acceleration functions.
 

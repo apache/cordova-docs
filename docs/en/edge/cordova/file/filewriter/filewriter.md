@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-FileWriter
-==========
+# FileWriter
 
 As object that allows you to create and write data to a file.
 
-Properties
-----------
+## Properties
 
 - __readyState__: One of the three possible states, either `INIT`, `WRITING`, or `DONE`.
 
@@ -48,8 +46,7 @@ Properties
 The following property is _not_ supported:
 
 - __onprogress__: Called while writing the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
-Methods
--------
+## Methods
 
 - __abort__: Aborts writing the file.
 
@@ -59,8 +56,7 @@ Methods
 
 - __write__: Writes data to the file.
 
-Details
--------
+## Details
 
 The `FileWriter` object offers a way to write UTF-8 encoded files to
 the device file system.  Applications respond to `writestart`,
@@ -76,8 +72,7 @@ write to the end of the file.
 
 Text data is supported by all platforms listed below. Text is encoded as UTF-8 before being written to the filesystem. Some platforms also support binary data, which can be passed in as either an ArrayBuffer or a Blob.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 Text and Binary Support:
 
@@ -90,8 +85,7 @@ Text-only Support:
 - Windows Phone 7 and 8
 - Windows 8
 
-Seek Quick Example
-------------------------------
+## Seek Quick Example
 
     function win(writer) {
         // fast forwards file pointer to end of file
@@ -104,8 +98,7 @@ Seek Quick Example
 
     entry.createWriter(win, fail);
 
-Truncate Quick Example
---------------------------
+## Truncate Quick Example
 
     function win(writer) {
         writer.truncate(10);
@@ -117,8 +110,7 @@ Truncate Quick Example
 
     entry.createWriter(win, fail);
 
-Write Quick Example
--------------------
+## Write Quick Example
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -133,8 +125,7 @@ Write Quick Example
 
     entry.createWriter(win, fail);
 
-Binary Write Quick Example
---------------------------
+## Binary Write Quick Example
 
     function win(writer) {
         var data = new ArrayBuffer(5),
@@ -154,8 +145,7 @@ Binary Write Quick Example
 
     entry.createWriter(win, fail);
 
-Append Quick Example
---------------------
+## Append Quick Example
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -171,8 +161,7 @@ Append Quick Example
 
     entry.createWriter(win, fail);
 
-Abort Quick Example
--------------------
+## Abort Quick Example
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -188,8 +177,8 @@ Abort Quick Example
 
     entry.createWriter(win, fail);
 
-Full Example
-------------
+## Full Example
+
     <!DOCTYPE html>
     <html>
       <head>

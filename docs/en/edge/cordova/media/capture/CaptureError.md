@@ -17,18 +17,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-CaptureError
-============
+# CaptureError
 
 > Encapsulates the error code resulting from a failed media capture operation.
 
-Properties
-----------
+## Properties
 
 - __code__: One of the pre-defined error codes listed below.
 
-Constants
----------
+## Constants
 
 - `CaptureError.CAPTURE_INTERNAL_ERR`: The camera or microphone failed to capture image or sound.
 

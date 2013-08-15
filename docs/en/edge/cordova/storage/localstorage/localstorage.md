@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-localStorage
-===============
+# localStorage
 
 Provides access to the W3C's
 [Web Storage interface](http://dev.w3.org/html5/webstorage/#the-localstorage-attribute)
@@ -26,8 +25,7 @@ Provides access to the W3C's
     var permanentStorage = window.localStorage;
     var tempStorage = window.sessionStorage;
 
-Methods
--------
+## Methods
 
 - __key__: Returns the name of the key at the specified position.
 
@@ -39,8 +37,7 @@ Methods
 
 - __clear__: Removes all of the key/value pairs.
 
-Details
------------
+## Details
 
 The `window.localStorage` interface implements the W3C's [Web Storage
 interface](http://dev.w3.org/html5/webstorage/).  An app can use it to
@@ -49,8 +46,7 @@ save persistent data using key-value pairs.  The
 except that all data is cleared each time the app closes. Each
 database provides a separate namespace.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
@@ -58,34 +54,28 @@ Supported Platforms
 - Tizen
 - Windows Phone 7 and 8
 
-Key Quick Example
--------------
+## Key Quick Example
 
     var keyName = window.localStorage.key(0);
 
-Set Item Quick Example
--------------
+## Set Item Quick Example
 
     window.localStorage.setItem("key", "value");
 
-Get Item Quick Example
--------------
+## Get Item Quick Example
 
         var value = window.localStorage.getItem("key");
         // value is now equal to "value"
 
-Remove Item Quick Example
--------------
+## Remove Item Quick Example
 
         window.localStorage.removeItem("key");
 
-Clear Quick Example
--------------
+## Clear Quick Example
 
         window.localStorage.clear();
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -121,8 +111,7 @@ Full Example
       </body>
     </html>
 
-Windows Phone 7 Quirks
--------------
+## Windows Phone 7 Quirks
 
 Dot notation is _not_ available on Windows Phone 7. Be sure to use
 `setItem` or `getItem`, rather than accessing keys directly from the

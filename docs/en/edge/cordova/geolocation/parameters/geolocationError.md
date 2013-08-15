@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocationError
-================
+# geolocationError
 
 The user's callback function that executes when there is an error for
 geolocation functions.
@@ -27,7 +26,6 @@ geolocation functions.
         // Handle the error
     }
 
-Parameters
-----------
+## Parameters
 
 - __error__: The error returned by the device. _(PositionError)_

@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-ConfigurationData
-=================
+# ConfigurationData
 
 > Encapsulates a set of media capture parameters that a device supports.
 
-Description
------------
+## Description
 
 Describes media capture modes supported by the device.  The
 configuration data includes the MIME type, and capture dimensions for
@@ -37,8 +35,7 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 - `audio/amr`
 - `audio/wav`
 
-Properties
-----------
+## Properties
 
 - __type__: The ASCII-encoded lowercase string representing the media type. (DOMString)
 
@@ -46,8 +43,7 @@ Properties
 
 - __width__: The width of the image or video in pixels.  The value is zero for sound clips. (Number)
 
-Quick Example
--------------
+## Quick Example
 
     // retrieve supported image modes
     var imageModes = navigator.device.capture.supportedImageModes;

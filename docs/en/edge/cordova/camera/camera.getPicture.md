@@ -17,8 +17,7 @@
          under the License.
 ---
 
-camera.getPicture
-=================
+# camera.getPicture
 
 Takes a photo using the camera, or retrieves a photo from the device's
 image gallery.  The image is passed to the success callback as a
@@ -28,8 +27,7 @@ reposition the file selection popover.
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
-Description
------------
+## Description
 
 The `camera.getPicture` function opens the device's default camera
 application that allows users to snap pictures. This behavior occurs
@@ -67,8 +65,7 @@ quality, even if a `quality` parameter is specified.  To avoid common
 memory problems, set `Camera.destinationType` to `FILE_URI` rather
 than `DATA_URL`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -77,14 +74,13 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Android Quirks
------------------
+## Android Quirks
+
 Android uses intents to launch the camera activity on the device to capture
 images, and on phones with low memory, the Cordova activity may be killed.  In this
 scenario, the image may not appear when the cordova activity is restored.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 Including a JavaScript `alert()` in either of the callback functions
 can cause problems.  Wrap the alert within a `setTimeout()` to allow
@@ -95,21 +91,18 @@ displays:
         // do your thing here!
     }, 0);
 
-Windows Phone 7 Quirks
-----------------------
+## Windows Phone 7 Quirks
 
 Invoking the native camera application while your device is connected
 via Zune does not work, and triggers an error callback.
 
-Tizen Quirks
-----------------------
+## Tizen Quirks
 
 Tizen only supports a `destinationType` of
 `Camera.DestinationType.FILE_URI` and a `sourceType` of
 `Camera.PictureSourceType.PHOTOLIBRARY`.
 
-Quick Example
--------------
+## Quick Example
 
 Take a photo and retrieve it as a base64-encoded image:
 
@@ -140,8 +133,7 @@ Take a photo and retrieve the image's file location:
         alert('Failed because: ' + message);
     }
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

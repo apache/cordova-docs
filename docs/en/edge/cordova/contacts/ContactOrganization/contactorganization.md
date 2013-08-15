@@ -17,13 +17,11 @@
          under the License.
 ---
 
-ContactOrganization
-===================
+# ContactOrganization
 
 Contains a `Contact` object's organization properties.
 
-Properties
-----------
+## Properties
 
 - __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
 
@@ -35,15 +33,13 @@ Properties
 
 - __title__: The contact's title at the organization. _(DOMString)_
 
-Details
--------
+## Details
 
 The `ContactOrganization` object stores a contact's organization
 properties.  A `Contact` object stores one or more
 `ContactOrganization` objects in an array.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -51,8 +47,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(contacts) {
         for (var i = 0; i < contacts.length; i++) {
@@ -75,8 +70,7 @@ Quick Example
     filter = ["displayName", "organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -127,13 +121,11 @@ Full Example
       </body>
     </html>
 
-Android 2.X Quirks
-------------------
+## Android 2.X Quirks
 
 - __pref__: Not supported by Android 2.X devices, returning `false`.
 
-BlackBerry WebWorks (OS 5.0 and higher) Quirks
---------------------------------------------
+## BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __pref__: Not supported by BlackBerry devices, returning `false`.
 
@@ -145,8 +137,7 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 - __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
 
-iOS Quirks
------------
+## iOS Quirks
 
 - __pref__: Not supported on iOS devices, returning `false`.
 

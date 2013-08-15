@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocationSuccess
-==================
+# geolocationSuccess
 
 The user's callback function that executes when a geolocation position
 becomes available (when called from `geolocation.getCurrentPosition`),
@@ -29,13 +28,11 @@ or when the position changes (when called from
         // Do something
     }
 
-Parameters
-----------
+## Parameters
 
 - __position__: The geolocation position returned by the device. _(Position)_
 
-Example
--------
+## Example
 
     function geolocationSuccess(position) {
         alert('Latitude: '          + position.coords.latitude          + '\n' +

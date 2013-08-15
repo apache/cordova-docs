@@ -17,8 +17,7 @@
          under the License.
 ---
 
-Camera
-======
+# Camera
 
 > The `camera` object provides access to the device's default camera application.
 
@@ -34,8 +33,7 @@ obtaining the user's permission (e.g., by presenting choices for
 __OK__ and __No Thanks__).  For more information, please see the
 Privacy Guide.
 
-Methods
--------
+## Methods
 
 - camera.getPicture
 - camera.cleanup

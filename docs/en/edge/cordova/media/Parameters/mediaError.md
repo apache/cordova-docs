@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-mediaError
-==========
+# mediaError
 
 A user-specified callback function that executes when there is an
 error in media functions.
@@ -27,7 +26,6 @@ error in media functions.
         // Handle the error
     }
 
-Parameters
-----------
+## Parameters
 
 - __error__: The error returned by the device. _(MediaError)_

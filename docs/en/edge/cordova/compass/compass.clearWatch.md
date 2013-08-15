@@ -17,8 +17,7 @@
          under the License.
 ---
 
-compass.clearWatch
-========================
+# compass.clearWatch
 
 Stop watching the compass referenced by the watch ID parameter.
 
@@ -26,8 +25,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
 - __watchID__: The ID returned by `compass.watchHeading`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry 10
@@ -36,8 +34,7 @@ Supported Platforms
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
@@ -45,8 +42,7 @@ Quick Example
 
     navigator.compass.clearWatch(watchID);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

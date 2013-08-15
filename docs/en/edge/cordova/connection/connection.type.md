@@ -17,19 +17,16 @@
          under the License.
 ---
 
-connection.type
-===================
+# connection.type
 
 Checks the currently active network connection.
 
-Description
------------
+## Description
 
 This property offers a fast way to determine the device's network
 connection state, and type of connection.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 - Android
@@ -38,8 +35,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function checkConnection() {
         var networkState = navigator.connection.type;
@@ -59,8 +55,7 @@ Quick Example
 
     checkConnection();
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -103,8 +98,7 @@ Full Example
       </body>
     </html>
 
-API Change
-----------
+## API Change
 
 Until Cordova 2.3.0, the `Connection` object was accessed via
 `navigator.network.connection`, after which it was changed to
@@ -112,22 +106,19 @@ Until Cordova 2.3.0, the `Connection` object was accessed via
 available at its original location, but is deprecated and will
 eventually be removed.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 - iOS cannot detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
-Windows Phone Quirks
---------------------
+## Windows Phone Quirks
 
 - When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
 - Windows Phone cannot detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
-Tizen Quirks
---------------------
+## Tizen Quirks
 
 - Tizen can only detect a WiFi or cellular connection.
     - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.

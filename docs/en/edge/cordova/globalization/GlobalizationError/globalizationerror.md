@@ -17,13 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-GlobalizationError
-============
+# GlobalizationError
 
 An object representing a error from the Globalization API.
 
-Properties
-----------
+## Properties
 
 - __code__:  One of the following codes representing the error type _(Number)_
   - GlobalizationError.UNKNOWN\_ERROR: 0
@@ -32,20 +30,17 @@ Properties
   - GlobalizationError.PATTERN\_ERROR: 3
 - __message__:  A text message that includes the error's explanation and/or details _(String)_
 
-Description
------------
+## Description
 
 This object is created and populated by Cordova, and returned to a callback in the case of an error.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iOS
 
-Quick Example
--------------
+## Quick Example
 
 When the following error callback executes, it displays a
 popup dialog with the text similar to `code: 3` and `message:`
@@ -55,8 +50,7 @@ popup dialog with the text similar to `code: 3` and `message:`
               'message: ' + error.message + '\n');
     };
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE HTML>
     <html>

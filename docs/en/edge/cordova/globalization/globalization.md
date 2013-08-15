@@ -17,19 +17,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Globalization
-======
+# Globalization
 
 Obtains information and performs operations specific to the user's
 locale and timezone.
 
-Objects
--------
+## Objects
 
 - GlobalizationError
 
-Methods
--------
+## Methods
 
 - globalization.getPreferredLanguage
 - globalization.getLocaleName
@@ -44,8 +41,7 @@ Methods
 - globalization.getNumberPattern
 - globalization.getCurrencyPattern
 
-Variable Scope
---------------
+## Variable Scope
 
 The `globalization` object is a child of the `navigator` object, and
 therefore has global scope.

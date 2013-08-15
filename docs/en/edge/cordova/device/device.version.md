@@ -17,15 +17,13 @@
          under the License.
 ---
 
-device.version
-==============
+# device.version
 
 Get the operating system version.
 
     var string = device.version;
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android 2.1+
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -34,8 +32,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Android:    Froyo OS would return "2.2"
     //             Eclair OS would return "2.1", "2.0.1", or "2.0"
@@ -49,8 +46,7 @@ Quick Example
     // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

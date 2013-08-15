@@ -17,8 +17,7 @@
          under the License.
 ---
 
-contactError
-============
+# contactError
 
 Error callback function for contact functions.
 

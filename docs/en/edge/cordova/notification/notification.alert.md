@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-notification.alert
-==================
+# notification.alert
 
 Shows a custom alert or dialog box.
 
@@ -32,15 +31,13 @@ Shows a custom alert or dialog box.
 
 - __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
 
-Description
------------
+## Description
 
 Most Cordova implementations use a native dialog box for this feature,
 but some platforms use the browser's `alert` function, which is
 typically less customizable.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -49,8 +46,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
     //
@@ -65,8 +61,7 @@ Quick Example
         'Done'                  // buttonName
     );
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -109,8 +104,7 @@ Full Example
       </body>
     </html>
 
-Windows Phone 7 and 8 Quirks
--------------
+## Windows Phone 7 and 8 Quirks
 
 - There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:
 

@@ -17,29 +17,25 @@
          under the License.
 ---
 
-Acceleration
-============
+# Acceleration
 
 Contains `Accelerometer` data captured at a specific point in time.
 
-Properties
-----------
+## Properties
 
 - __x__:  Amount of acceleration on the x-axis. (in m/s^2) _(Number)_
 - __y__:  Amount of acceleration on the y-axis. (in m/s^2) _(Number)_
 - __z__:  Amount of acceleration on the z-axis. (in m/s^2) _(Number)_
 - __timestamp__: Creation timestamp in milliseconds. _(DOMTimeStamp)_
 
-Description
------------
+## Description
 
 An `Acceleration` object is populated and returned by any of the API's
 `Accelerometer` methods. Acceleration values include the effect of
 gravity (9.81 m/s^2), so that when a device lies flat and facing up,
 _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -48,8 +44,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -64,8 +59,7 @@ Quick Example
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

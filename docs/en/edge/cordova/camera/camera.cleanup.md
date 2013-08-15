@@ -17,29 +17,25 @@
          under the License.
 ---
 
-camera.cleanup
-=================
+# camera.cleanup
 
 Removes intermediate photos taken by the camera from temporary
 storage.
 
     navigator.camera.cleanup( cameraSuccess, cameraError );
 
-Description
------------
+## Description
 
 Removes intermediate image files that are kept in temporary storage
 after calling `camera.getPicture`. Applies only when the value of
 `Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
 `Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - iOS
 
-Example
--------------
+## Example
 
     navigator.camera.cleanup(onSuccess, onFail);
 

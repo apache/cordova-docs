@@ -17,29 +17,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-media.getCurrentPosition
-========================
+# media.getCurrentPosition
 
 Returns the current position within an audio file.
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
 
-Parameters
-----------
+## Parameters
 
 - __mediaSuccess__: The callback that is passed the current position in seconds.
 
 - __mediaError__: (Optional) The callback to execute if an error occurs.
 
-Description
------------
+## Description
 
 An asynchronous function that returns the current position of the
 underlying audio file of a `Media` object. Also updates the `Media`
 object's `position` parameter.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 
@@ -53,8 +49,7 @@ Supported Platforms
 
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // Audio player
     //
@@ -77,8 +72,7 @@ Quick Example
         );
     }, 1000);
 
-Full Example
-------------
+## Full Example
 
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                       "http://www.w3.org/TR/html4/strict.dtd">

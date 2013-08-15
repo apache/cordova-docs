@@ -17,8 +17,7 @@
          under the License.
 ---
 
-cameraSuccess
-=============
+# cameraSuccess
 
 onSuccess callback function that provides the image data.
 
@@ -26,13 +25,11 @@ onSuccess callback function that provides the image data.
         // Do something with the image
     }
 
-Parameters
-----------
+## Parameters
 
 - __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. _(String)_
 
-Example
--------
+## Example
 
     // Show image
     //

@@ -17,8 +17,7 @@
          under the License.
 ---
 
-accelerometer.watchAcceleration
-===============================
+# accelerometer.watchAcceleration
 
 At a regular interval, get the acceleration along the _x_, _y_, and _z_ axis.
 
@@ -26,8 +25,7 @@ At a regular interval, get the acceleration along the _x_, _y_, and _z_ axis.
                                                            accelerometerError,
                                                            [accelerometerOptions]);
 
-Description
------------
+## Description
 
 The accelerometer is a motion sensor that detects the change (delta)
 in movement relative to the current position. The accelerometer can
@@ -43,8 +41,7 @@ The returned watch ID references the accelerometer's watch interval,
 and can be used with `accelerometer.clearWatch` to stop watching the
 accelerometer.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -53,8 +50,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -71,8 +67,7 @@ Quick Example
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>
@@ -137,8 +132,7 @@ Full Example
       </body>
     </html>
 
-iOS Quirks
--------------
+## iOS Quirks
 
 The API calls the success callback function at the interval requested,
 but restricts the range of requests to the device between 40ms and

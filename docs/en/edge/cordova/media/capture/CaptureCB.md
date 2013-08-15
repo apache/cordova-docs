@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-CaptureCB
-=========
+# CaptureCB
 
 > Invoked upon a successful media capture operation.
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
-Description
------------
+## Description
 
 This function executes after a successful capture operation completes.
 At this point a media file has been captured, and either the user has
@@ -34,8 +32,7 @@ reached.
 
 Each `MediaFile` object describes a captured media file.
 
-Quick Example
--------------
+## Quick Example
 
     // capture callback
     function captureSuccess(mediaFiles) {

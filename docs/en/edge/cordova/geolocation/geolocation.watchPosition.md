@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-geolocation.watchPosition
-=========================
+# geolocation.watchPosition
 
 Watches for changes to the device's current position.
 
@@ -26,8 +25,7 @@ Watches for changes to the device's current position.
                                                       [geolocationError],
                                                       [geolocationOptions]);
 
-Parameters
-----------
+## Parameters
 
 - __geolocationSuccess__: The callback that is passed the current position.
 
@@ -35,13 +33,11 @@ Parameters
 
 - __geolocationOptions__: (Optional) The geolocation options.
 
-Returns
--------
+## Returns
 
 - __String__: returns a watch id that references the watch position interval. The watch id should be used with `geolocation.clearWatch` to stop watching for changes in position.
 
-Description
------------
+## Description
 
 `geolocation.watchPosition` is an asynchronous function. It returns
 the device's current position when a change in position is detected.
@@ -50,8 +46,7 @@ callback executes with a `Position` object as the parameter.  If
 there is an error, the `geolocationError` callback executes with a
 `PositionError` object as the parameter.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -60,8 +55,7 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-Quick Example
--------------
+## Quick Example
 
     // onSuccess Callback
     //   This method accepts a `Position` object, which contains
@@ -85,8 +79,7 @@ Quick Example
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
 
-Full Example
-------------
+## Full Example
 
     <!DOCTYPE html>
     <html>

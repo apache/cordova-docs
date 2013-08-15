@@ -17,8 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-MediaFile.getFormatData
-=======================
+# MediaFile.getFormatData
 
 > Retrieves format information about the media capture file.
 
@@ -27,8 +26,7 @@ MediaFile.getFormatData
         [MediaFileDataErrorCB errorCallback]
     );
 
-Description
------------
+## Description
 
 This function asynchronously attempts to retrieve the format
 information for the media file.  If successful, it invokes the
@@ -36,8 +34,7 @@ information for the media file.  If successful, it invokes the
 the attempt fails, this function invokes the `MediaFileDataErrorCB`
 callback.
 
-Supported Platforms
--------------------
+## Supported Platforms
 
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
@@ -45,20 +42,17 @@ Supported Platforms
 - Windows Phone 7 and 8
 - Windows 8
 
-BlackBerry WebWorks Quirks
---------------------------
+## BlackBerry WebWorks Quirks
 
 Does not provide an API for information about media files, so all
 `MediaFileData` objects return with default values.
 
-Android Quirks
---------------
+## Android Quirks
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
 
-iOS Quirks
-----------
+## iOS Quirks
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
