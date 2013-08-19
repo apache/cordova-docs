@@ -34,7 +34,7 @@ The available preferences are:
   a color value in the ARGB pixel format using 8 hexadecimal digits.
 
 * `childBrowser`: Disables child browser windows. By default, when the content attempts
-  to open a resource in a new window or tab (by using window.open(), or by specifying _blank
+  to open a resource in a new window or tab (by using window.open(), or by specifying `_blank`
   as the target of an anchor), the WebWorks app will open a secondary browser window
   to display the resource. This feature is enabled by default. The value must specify
   `disable` to prevent the above actions from occuring.
@@ -42,7 +42,7 @@ The available preferences are:
 * `hideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the keyboard form
   accessory bar in an HTML form. The keyboard form accessory bar is a row of
   buttons (Previous, Next, and Submit) that the user can use to navigate through a form.
-  By default, when a WebWorks app contains an HTML form and an <input> element gets
+  By default, when a WebWorks app contains an HTML form and an `<input>` element gets
   focus, WebWorks displays this form accessory bar. This feature allows you to prevent your
   app from displaying the form accessory bar by specifying value as `enable`.
 
@@ -59,4 +59,4 @@ The available preferences are:
   remote content from unknown sources during development. Before packaging your app for
   distribution, you should remove this setting. This feature is intended as a
   development convenience only. In production, all URIs should be known and should be
-  whitelisted using the <access> element. To disable, specify value as `disable`.
+  whitelisted using the `<access>` element. To disable, specify value as `disable`.
