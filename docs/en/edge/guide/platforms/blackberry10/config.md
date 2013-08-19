@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Blackberry10 Configuration
+# BlackBerry 10 Configuration
 
 The `config.xml` file controls various Cordova settings. These apply across the application.
 The `config.xml` file is is located in `<project folder>/<www>` directory.
