@@ -50,7 +50,7 @@ The available preferences are:
   for screens in your app. By default, if you do not specify a screen orientation,
   the orientation is set to auto.
 
-* `popBlocker`: Enables the popup blocker. By default, all popups are displayed by
+* `popupBlocker`: Enables the popup blocker. By default, all popups are displayed by
   BlackBerry WebWorks apps in a child browser window. You can prevent popups from displaying
   without user intervention by enabling the popup blocker. This is done by specifying
   value as `enable`.
