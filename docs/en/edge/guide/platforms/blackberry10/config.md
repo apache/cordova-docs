@@ -27,7 +27,7 @@ The `config.xml` file is is located in `<project folder>/<www>` directory.
 Various preferences (as `<preference>` tags) default on not breaking existing apps.
 The available preferences are:
 
-* `autoHideSplashScreen`: (`true` or `false`): Set to `false` to control when the splashscreen
+* `autoHideSplashScreen`: (`true` or `false`) Set to `false` to control when the splashscreen
   is hidden through a JavaScript API. This preference defaults to true.
 
 * `backgroundColor`: Specifies the background color of your app. The value must specify
@@ -54,6 +54,8 @@ The available preferences are:
   BlackBerry WebWorks apps in a child browser window. You can prevent popups from displaying
   without user intervention by enabling the popup blocker. This is done by specifying
   value as `enable`.
+
+* `theme`: (`bright`, `dark`, `inherit`, or `default`) Specifies the UI theme for your app.
 
 * `webSecurity`: Disables web security. Disabling web security allows you to access
   remote content from unknown sources during development. Before packaging your app for

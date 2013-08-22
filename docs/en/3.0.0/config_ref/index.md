@@ -39,6 +39,7 @@ are listed below:
 - iOS Configuration
 - Android Configuration
 - BlackBerry Configuration
+- BlackBerry 10 Configuration
 
 ## config.xml Elements
 
