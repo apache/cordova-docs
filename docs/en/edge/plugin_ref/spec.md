@@ -61,7 +61,7 @@ Apache Cordova-based frameworks that this plugin supports. An example:
     <engines>
         <engine name="cordova" version="1.7.0" />
         <engine name="cordova" version="1.8.1" />
-        <engine name="worklight" version="1.0.0" />
+        <engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/>
     </engines>
 
 Similar to the `<plugin>` element's `version` attribute, the specified
@@ -79,6 +79,49 @@ example:
         <engine name="cordova" version=">=1.7.0" />
         <engine name="cordova" version="<1.8.1" />
     </engines>
+
+The '<engine>' tags also has default support for all of the main platforms Cordova exists on. 
+Specifying the 'cordova' engine tag means that all versions of Cordova on any platform must
+satisfy the engine version attribute. You may also list specific platforms and their versions
+in order to override the catch-all 'cordova' engine:
+
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova-android" version=">=1.8.0" />
+        <engine name="cordova-ios" version=">=1.7.1" />
+    </engines>
+
+Here's a list of the default engines that the '<engine>' tag supports:
+    * 'cordova' 
+    * 'cordova-plugman' 
+    * 'cordova-android'
+    * 'cordova-ios'
+    * 'cordova-blackberry10' 
+    * 'cordova-wp7'
+    * 'cordova-wp8'
+    * 'cordova-windows8'  
+    
+Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
+
+    <engines>
+        <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
+        <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+        <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+    </engines>
+
+A custom Apache Cordova-based framework requires that an engine element includes the following attributes: 
+'name', 'version', 'scriptSrc', and 'platform'. 
+
+* `name` (required): A human-readable name for your custom framework. 
+
+* `version` (required): The version that your framework must have in order to install.
+
+* `scriptSrc` (required): The script file that tells plugman what version of the custom framework is. 
+Ideally, this file should be within the top level directory of your plugin folder.
+
+* `platform` (required): Which platforms that your framework supports. You may use the wildcard '*'
+to say supported for all platforms, specify multiple with a pipe character like 'android|ios|blackberry10' 
+or just a single platform like 'android'.
 
 plugman aborts with a non-zero code for any plugin whose target
 project does not meet the engine's constraints.
