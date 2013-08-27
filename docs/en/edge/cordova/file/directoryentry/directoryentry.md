@@ -359,8 +359,8 @@ __Parameters:__
 
 __Quick Example__
 
-    function success(parent) {
-        console.log("Parent Name: " + parent.name);
+    function success(fileEntry) {
+        console.log("File Name: " + fileEntry.name);
     }
 
     function fail(error) {
