@@ -122,6 +122,10 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
         # Use your package manager
         brew install markdown
 
+on Linux, Markdown can be installed as follows:
+
+        apt-get install markdown
+
 - Install nokogiri (Ruby HTML parser)
 
         gem install nokogiri
