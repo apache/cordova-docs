@@ -330,8 +330,8 @@ __Parameters:__
 
 __Quick Example__
 
-    function success(parent) {
-        console.log("Parent Name: " + parent.name);
+    function success(dirEntry) {
+        console.log("Directory Name: " + dirEntry.name);
     }
 
     function fail(error) {
