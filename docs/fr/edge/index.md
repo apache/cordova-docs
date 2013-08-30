@@ -134,7 +134,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Dispositif
+        Appareil
       </h2>
       
       <span>Recueillir de l'information spécifique de périphérique.</span>

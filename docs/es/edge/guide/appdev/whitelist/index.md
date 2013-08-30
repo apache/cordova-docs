@@ -14,9 +14,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Guía de la lista blanca de dominio
+# Dominio Whitelist guía
 
-## Resumen
+## Perspectiva general
 
 Listas blancas de dominio es un modelo de seguridad que controla el acceso a dominios externos, tales como `http://google.com`. Directiva de seguridad predeterminada de Apache Cordova permite el acceso a cualquier sitio. Antes de mover la aplicación a la producción, usted debe revisar su lista blanca y declarar el acceso a la red específica de dominios y subdominios.
 
