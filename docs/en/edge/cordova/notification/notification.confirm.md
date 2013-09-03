@@ -68,7 +68,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
 
@@ -104,7 +104,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
 
