@@ -70,7 +70,7 @@ string.  Event listeners receive the `loadstart`, `progress`, `load`,
 - Windows Phone 7 and 8
 - Windows 8
 
-## Read As Data URL
+## readAsDataURL
 
 __Parameters:__
 
@@ -93,7 +93,7 @@ __Parameters:__
 
     entry.file(win, fail);
 
-## Read As Text
+## readAsText
 
 __Parameters:__
 
@@ -118,7 +118,7 @@ __Parameters:__
 
     entry.file(win, fail);
 
-## Abort Quick Example
+## abort 
 
     function win(file) {
         var reader = new FileReader();
@@ -203,7 +203,7 @@ __Parameters:__
 
 - The __encoding__ parameter is not supported, and UTF8 encoding is always in effect.
 
-## Read As Binary String
+## readAsBinaryString
 
 Currently supported on iOS and Android only.
 
@@ -228,7 +228,7 @@ __Parameters:__
 
     entry.file(win, fail);
 
-## Read As Array Buffer
+## readAsArrayBuffer
 
 Currently supported on iOS and Android only.
 
