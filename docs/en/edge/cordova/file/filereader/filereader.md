@@ -87,7 +87,7 @@ __Parameters:__
         reader.readAsDataURL(file);
     };
 
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
 
@@ -112,7 +112,7 @@ __Parameters:__
         reader.readAsText(file);
     };
 
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
 
@@ -187,8 +187,8 @@ __Parameters:__
             reader.readAsText(file);
         }
 
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
 
         </script>
@@ -222,7 +222,7 @@ __Parameters:__
         reader.readAsBinaryString(file);
     };
 
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
 
@@ -247,7 +247,7 @@ __Parameters:__
         reader.readAsArrayBuffer(file);
     };
 
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
 
