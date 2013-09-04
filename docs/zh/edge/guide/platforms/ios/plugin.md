@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 然后我们将添加下列文件 （ `Echo.h` 和 `Echo.m` ） 的插件文件夹里面我们科尔多瓦 iOS 应用程序文件夹中：
 
-    / --- Echo.h 科尔多瓦插件头 * * * / #import < Cordova/CDV.h > @interface 回声： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科尔多瓦插件执行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回声-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回声 = [command.arguments objectAtIndex:0];如果 (回声! = 无 & & [回声长度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
+    / --- Echo.h 科尔多瓦插件头 --- / #import < Cordova/CDV.h > @interface 回声： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科尔多瓦插件执行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回声-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回声 = [command.arguments objectAtIndex:0];如果 (回声! = 无 & & [回声长度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
     
 
 让我们看看代码。在顶部，我们有所有必要的科尔多瓦进口。我们班延伸从 `CDVPlugin` （非常重要）。
