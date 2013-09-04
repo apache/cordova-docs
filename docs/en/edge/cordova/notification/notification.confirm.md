@@ -29,7 +29,7 @@ Displays a customizable confirmation dialog box.
 
 - __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)
 
-- __buttonLabels__: Array of strings specifying button labels. _(Array)_  (Optional, defaults to `OK,Cancel`)
+- __buttonLabels__: Array of strings specifying button labels. _(Array)_  (Optional, defaults to [`OK,Cancel`])
 
 ## Description
 
