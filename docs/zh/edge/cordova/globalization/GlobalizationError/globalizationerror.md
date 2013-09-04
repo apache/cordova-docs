@@ -16,30 +16,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # GlobalizationError
 
-从全球化 API 表示一个错误的对象。
+從全球化 API 表示一個錯誤的物件。
 
-## 属性
+## 屬性
 
-*   **代码**： 表示错误类型的以下代码之一 *（人数）* 
-    *   GlobalizationError.UNKNOWN _ 错误: 0
-    *   GlobalizationError.FORMATTING _ 错误： 1
-    *   GlobalizationError.PARSING _ 错误： 2
-    *   GlobalizationError.PATTERN _ 错误： 3
-*   **消息**： 一条文本消息，包括错误的解释，和/或详细说明*（字符串）*
+*   **代碼**： 表示錯誤類型的以下代碼之一 *（人數）* 
+    *   GlobalizationError.UNKNOWN _ 錯誤: 0
+    *   GlobalizationError.FORMATTING _ 錯誤： 1
+    *   GlobalizationError.PARSING _ 錯誤： 2
+    *   GlobalizationError.PATTERN _ 錯誤： 3
+*   **消息**： 一條文本消息，包括錯誤的解釋，和/或詳細說明*（字串）*
 
-## 说明
+## 說明
 
-此对象创建和填充的科尔多瓦，并返回到出现错误时的回调。
+此物件創建和填充的科爾多瓦，並返回到出現錯誤時的回檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 
 ## 快速的示例
 
-以下错误回调执行时，它会显示弹出式对话框中的文本类似于 `code: 3` 和`message:`
+以下錯誤回檔執行時，它會顯示彈出式對話方塊中的文本類似于 `code: 3` 和`message:`
 
     function errorCallback(error) {
         alert('code: ' + error.code + '\n' +

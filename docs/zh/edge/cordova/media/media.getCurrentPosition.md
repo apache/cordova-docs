@@ -16,26 +16,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.getCurrentPosition
 
-返回一个音频文件内的当前位置。
+返回一個音訊檔內的當前位置。
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
     
 
-## 参数
+## 參數
 
-*   **mediaSuccess**： 传递的当前的位置，以秒为单位的回调。
+*   **mediaSuccess**： 傳遞的當前的位置，以秒為單位的回檔。
 
-*   **mediaError**： （可选） 回调执行如果发生错误。
+*   **mediaError**： （可選） 回檔執行如果發生錯誤。
 
-## 说明
+## 說明
 
-一个异步的函数，它返回的基础音频文件的当前位置 `Media` 对象。此外可以更新 `Media` 对象的 `position` 参数。
+一個非同步函數，它返回的基礎音訊檔的當前位置 `Media` 物件。此外可以更新 `Media` 物件的 `position` 參數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 
 *   iOS
 

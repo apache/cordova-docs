@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 通知
 
-> 可视、 可听，和触觉设备通知。
+> 可視、 可聽，和觸覺設備通知。
 
 ## 方法
 
@@ -26,9 +26,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `notification.beep`
 *   `notification.vibrate`
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
@@ -36,21 +36,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin rm org.apache.cordova.core.vibration
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="通知">< 参数名称 ="android 包"value="org.apache.cordova.Notification"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.VIBRATE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="通知">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.notification.Notification"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.ui.dialog"/ >
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="通知">< 参数名称 ="ios 包"值 ="CDVNotification"/ >< / 功能 >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

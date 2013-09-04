@@ -14,15 +14,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android 系统的命令行工具
+# Android 系統的命令列工具
 
-`cordova`命令行实用程序是一个高级别的工具，允许您在一次跨几个平台生成的应用程序。 旧版本的科尔多瓦框架提供了特定于每个平台的命令行工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的科尔多瓦。 下载文件中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**文件，了解有关更多详细的指示。
+`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
-## 创建一个项目
+## 創建一個專案
 
-运行 `create` 命令，指定的现有路径的项目、 反向域式包标识符和应用程序的显示名称。这里是 Mac 和 Windows 的语法：
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。這裡是 Mac 和 Windows 的語法：
 
     $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
     $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
@@ -30,33 +30,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 生成
 
-此清理，然后生成项目。
+此清理，然後生成專案。
 
-在 Mac 或 Windows 上调试：
+在 Mac 或 Windows 上調試：
 
     $ /path/to/project/cordova/build --debug
     $ C:\path\to\project\cordova\build.bat --debug
     
 
-释放，Mac 或 Windows 上：
+釋放，Mac 或 Windows 上：
 
     $ /path/to/project/cordova/build --release
     $ C:\path\to\project\cordova\build.bat --release
     
 
-## 运行应用程序
+## 運行應用程式
 
-`run`命令接受下列*可选*的参数：
+`run`命令接受下列*可選*的參數：
 
-*   目标规范。这包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
+*   目標規範。這包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
 
-*   生成规范。这包括 `--debug` ， `--release` ，或`--nobuild`.
+*   生成規范。這包括 `--debug` ， `--release` ，或`--nobuild`.
     
-    \[目标\] \[生成\] $ /path/to/project/cordova/run $ C:\path\to\project\cordova\run.bat \[目标\] \[生成\]
+    \[目標\] \[生成\] $ /path/to/project/cordova/run $ C:\path\to\project\cordova\run.bat \[目標\] \[生成\]
 
-请确保您创建至少一个 Android 虚拟设备，否则为系统会提示您这样与做 `android` 命令。 如果多个 AVD 可用作为目标，提示您选择一个。 默认情况下 `run` 命令检测连接的设备或当前正在运行的仿真程序，如果没有设备发现。
+請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
 
-## 日志记录
+## 日誌記錄
 
     $ /path/to/project/cordova/log $ C:\path\to\project\cordova\log.bat
     

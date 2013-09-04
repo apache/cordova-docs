@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaError
 
-A `MediaError` 对象返回到 `mediaError` 时出现错误的回调函数。
+A `MediaError` 物件返回到 `mediaError` 時出現錯誤的回呼函數。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
-*   **消息**： 错误消息描述该错误的详细信息。
+*   **消息**： 錯誤訊息描述該錯誤的詳細資訊。
 
 ## 常量
 
@@ -31,6 +31,6 @@ A `MediaError` 对象返回到 `mediaError` 时出现错误的回调函数。
 *   `MediaError.MEDIA_ERR_DECODE`
 *   `MediaError.MEDIA_ERR_NONE_SUPPORTED`
 
-## 说明
+## 說明
 
-`MediaError`对象传递给 `mediaError` 回调函数时出现错误。
+`MediaError`物件傳遞給 `mediaError` 回呼函數時出現錯誤。

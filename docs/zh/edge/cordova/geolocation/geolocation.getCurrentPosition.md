@@ -16,29 +16,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.getCurrentPosition
 
-返回设备的当前位置作为 `Position` 对象。
+返回設備的當前位置作為 `Position` 物件。
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
                                              [geolocationOptions]);
     
 
-## 参数
+## 參數
 
-*   **geolocationSuccess**： 传递当前位置的回调。
+*   **geolocationSuccess**： 傳遞當前位置的回檔。
 
-*   **geolocationError**： *（可选）*如果错误发生时执行的回调。
+*   **geolocationError**： *（可選）*如果錯誤發生時執行的回檔。
 
-*   **geolocationOptions**： *（可选）*地理定位选项。
+*   **geolocationOptions**： *（可選）*地理定位選項。
 
-## 说明
+## 說明
 
-`geolocation.getCurrentPosition`是一个异步的函数。 它将返回到该设备的当前位置 `geolocationSuccess` 回调与 `Position` 对象作为参数。 如果有错误， `geolocationError` 回调通过 `PositionError` 对象。
+`geolocation.getCurrentPosition`是一個非同步函數。 它將返回到該設備的當前位置 `geolocationSuccess` 回檔與 `Position` 物件作為參數。 如果有錯誤， `geolocationError` 回檔通過 `PositionError` 物件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

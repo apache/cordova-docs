@@ -16,32 +16,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # capture.captureImage
 
-> 启动摄像头应用程序并返回有关捕获的图像文件的信息。
+> 啟動攝像頭應用程式並返回有關捕獲的影像檔的資訊。
 
     navigator.device.capture.captureImage(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
     
 
-## 说明
+## 說明
 
-开始异步操作以捕获图像使用该设备的摄像头应用程序。该操作允许用户在一个会话中捕获多个图像。
+開始非同步作業以捕獲圖像使用該設備的攝像頭應用程式。該操作允許使用者在一個會話中捕獲多個圖像。
 
-在捕获操作结束或者当用户关闭摄像头应用程序或由指定的录音的最大数目 `CaptureAudioOptions.limit` 到达。 如果没有 `limit` 指定的值，它将默认为一 (1) 和捕获操作终止后用户捕获单个图像。
+在捕獲操作結束或者當使用者關閉攝像頭應用程式或由指定的錄音的最大數目 `CaptureAudioOptions.limit` 到達。 如果沒有 `limit` 指定的值，它將預設為一 (1) 和捕獲操作終止後使用者捕獲單個圖像。
 
-在捕获操作完成后，它将调用 `CaptureCB` 回调与数组的 `MediaFile` 对象描述每个捕获的图像文件。 如果用户终止之前捕获图像，操作 `CaptureErrorCB` 回调执行与 `CaptureError` 对象特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 错误代码。
+在捕獲操作完成後，它將調用 `CaptureCB` 回檔與陣列的 `MediaFile` 物件描述每個捕獲的影像檔。 如果使用者終止之前捕獲圖像，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## Windows Phone 7 的怪癖
 
-调用本机摄像头应用程序，同时通过 Zune 连接您的设备不工作，并错误回调执行。
+調用本機攝像頭應用程式，同時通過 Zune 連接您的設備不工作，並錯誤回檔執行。
 
 ## 快速的示例
 

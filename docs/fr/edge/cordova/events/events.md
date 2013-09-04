@@ -14,23 +14,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Événements
+# Évènements
 
-> Événements de cycle de vie de Cordova.
+> Évènements du cycle de vie de Cordova.
 
-## Types d'événements
+## Types d'évènements
 
 *   deviceready
 *   pause
-*   curriculum vitae
-*   en ligne
-*   en mode hors connexion
-*   ButtonBack
+*   resume
+*   online
+*   offline
+*   backbutton
 *   batterycritical
 *   batterylow
 *   batterystatus
-*   bouton menu
-*   bouton recherche
+*   menubutton
+*   searchbutton
 *   startcallbutton
 *   endcallbutton
 *   volumedownbutton
@@ -38,36 +38,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implements état de la batterie et d'autres API de niveau périphérique comme les *plugins*. Accès à tous les autres événements non liés à l'état de la batterie sont activées par défaut. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'activer ou de désactiver les événements de la batterie :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil, telles que l'état de la batterie et autres, en tant que *plugins*. L'accès à tous les autres évènements non liés à l'état de la batterie est actif par défaut. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'activer/désactiver les évènements liés à l'état de la batterie :
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
         $ cordova plugin rm org.apache.cordova.core.battery-status
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "Batterie" >< param name = "android-package" value="org.apache.cordova.BatteryListener" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.BROADCAST_STICKY" / >
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Batterie" >< param nom = "blackberry-package" value="org.apache.cordova.battery.Battery" / >< / fiction > (dans www/config.xml) < id="blackberry.app en vedette" requis = "true" version = "1.0.0.0" / >< id="blackberry.app.event en vedette" requis = "true" version = "1.0.0.0" / >< id="blackberry.system.event en vedette" requis = "true" version = "1.0.0.0" / >
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans `config.xml`)
     
-        < nom de la fonction = « Batterie » >< param name = « ios-paquet » value = « CDVBattery » / >< / fiction >
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
         
 
-*   Paciarelli (dans`config.xml`)
+*   Paciarelli (dans `config.xml`)
     
-        < nom de la fonction = « http://tizen.org/api/systeminfo » requis = « true » / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
-    Référence : [manifeste d'Application pour l'Application Web paciarelli][1]
+    Référence : [Manifeste d'Application pour Applications Web Paciarelli][1]
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent supporter cette fonctionnalité sans pour autant nécessiter de configuration particulière. Se référer au paragraphe "Plateformes supportées" pour une vue d'ensemble.

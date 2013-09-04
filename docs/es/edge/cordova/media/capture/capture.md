@@ -98,7 +98,13 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacidades >< nombre de capacidad = "ID_CAP_MEDIALIB" / >< nombre de capacidad = "ID_CAP_MICROPHONE" / >< nombre de capacidad = "ID_HW_FRONTCAMERA" / >< nombre de capacidad = "ID_CAP_ISV_CAMERA" / >< nombre de capacidad = "ID_CAP_CAMERA" / >< / capacidades >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

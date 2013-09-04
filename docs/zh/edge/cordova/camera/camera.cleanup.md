@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # camera.cleanup
 
-删除中间由从临时存储相机所拍摄的照片。
+刪除中間由從臨時存儲相機所拍攝的照片。
 
     navigator.camera.cleanup( cameraSuccess, cameraError );
     
 
-## 说明
+## 說明
 
-删除中间打完电话后保留在临时存储的图像文件 `camera.getPicture` 。 适用时，才的价值 `Camera.sourceType` 等于 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等于`Camera.DestinationType.FILE_URI`.
+刪除中間打完電話後保留在臨時存儲的影像檔 `camera.getPicture` 。 適用時，才的價值 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 和 `Camera.destinationType` 等於`Camera.DestinationType.FILE_URI`.
 
-## 支持的平台
+## 支援的平臺
 
 *   iOS
 

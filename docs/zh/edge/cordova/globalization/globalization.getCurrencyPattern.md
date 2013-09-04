@@ -16,40 +16,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getCurrencyPattern
 
-返回一个模式字符串格式化和分析根据客户端的用户首选项和 ISO 4217 货币代码货币值。
+返回一個模式字串格式化和分析根據用戶端的使用者首選項和 ISO 4217 貨幣代碼貨幣值。
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
     
 
-## 说明
+## 說明
 
-返回到模式 `successCallback` 与 `properties` 对象作为参数。该对象应包含以下属性：
+返回到模式 `successCallback` 與 `properties` 物件作為參數。該物件應包含以下屬性：
 
-*   **模式**： 要格式化和分析货币值的货币模式。 模式按照 Unicode 技术标准 #35。 <http://unicode.org/reports/tr35/tr35-4.html>。 *（字符串）*
+*   **模式**： 要格式化和分析貨幣值的貨幣模式。 模式按照 Unicode 技術標準 #35。 [HTTP://unicode.org/reports/tr35/tr35-4.html][1]。 *（字串）*
 
-*   **代码**： 模式的 ISO 4217 货币代码。*（字符串）*
+*   **代碼**： 模式的 ISO 4217 貨幣代碼。*（字串）*
 
-*   **分数**： 小数位数解析和货币的格式时要使用的数量。*（人数）*
+*   **分數**： 小數位數解析和貨幣的格式時要使用的數量。*（人數）*
 
-*   **舍**： 舍递增时分析和格式设置使用。*（人数）*
+*   **舍**： 舍遞增時分析和格式設置使用。*（人數）*
 
-*   **十进制**： 小数点符号用于分析和格式设置。*（字符串）*
+*   **十進位**： 小數點符號用於分析和格式設置。*（字串）*
 
-*   **分组**： 分组符号用于分析和格式设置。*（字符串）*
+*   **分組**： 分組符號用於分析和格式設置。*（字串）*
 
-入站 `currencyCode` 参数应该是 `String` 的 ISO 4217 货币代码，例如 '美元' 之一。
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-如果有错误获得该模式，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.FORMATTING\_ERROR`.
+入站 `currencyCode` 參數應該是 `String` 的 ISO 4217 貨幣代碼，例如 '美元' 之一。
 
-## 支持的平台
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+## 支援的平臺
+
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 区域设置和所选的币种是美元，本示例将显示一个弹出对话框与类似的结果，请按照操作的文本：
+當瀏覽器設置為 `en\_US` 地區設定和所選的幣種是美元，本示例將顯示一個彈出對話方塊與類似的結果，請按照操作的文本：
 
     navigator.globalization.getCurrencyPattern(
         'USD',
@@ -65,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     );
     
 
-预期的结果：
+預期的結果：
 
     pattern: $#,##0.##;($#,##0.##)
     code: USD

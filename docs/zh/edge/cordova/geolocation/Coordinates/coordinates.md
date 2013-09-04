@@ -14,34 +14,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 坐标
+# 座標
 
-描述位置的地理坐标的属性集。
+描述位置的地理座標的屬性集。
 
-## 属性
+## 屬性
 
-*   **纬度**： 纬度以十进制度为单位。*（人数）*
+*   **緯度**： 緯度以十進位度為單位。*（人數）*
 
-*   **经度**: 经度以十进制度为单位。*（人数）*
+*   **經度**: 經度以十進位度為單位。*（人數）*
 
-*   **海拔高度**： 高度在米以上椭球体中的位置。*（人数）*
+*   **海拔高度**： 高度在米以上橢球體中的位置。*（人數）*
 
-*   **准确性**： 中米的纬度和经度坐标的精度级别。*（人数）*
+*   **準確性**： 中米的緯度和經度座標的精度級別。*（人數）*
 
-*   **altitudeAccuracy**： 在米的海拔高度坐标的精度级别。*（人数）*
+*   **altitudeAccuracy**： 在米的海拔高度座標的精度級別。*（人數）*
 
-*   **标题**： 旅行，指定以度为单位计数相对于真北顺时针方向。*（人数）*
+*   **標題**： 旅行，指定以度為單位元數目相對於真北順時針方向。*（人數）*
 
-*   **速度**： 当前地面速度的设备，指定在米每秒。*（人数）*
+*   **速度**： 當前地面速度的設備，指定在米每秒。*（人數）*
 
-## 说明
+## 說明
 
-`Coordinates`对象附加到 `Position` 对象，可用于在当前职位的请求中的回调函数。
+`Coordinates`物件附加到 `Position` 物件，可用於在當前職位的請求中的回呼函數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -120,4 +120,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-**altitudeAccuracy**: 不支持的 Android 设备，返回`null`.
+**altitudeAccuracy**: 不支援的 Android 設備，返回`null`.

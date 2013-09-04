@@ -14,49 +14,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 文件传输
+# 檔案傳輸
 
-`FileTransfer`对象允许你上传或下载文件，服务器和客户端。
+`FileTransfer`物件允許你上傳或下載檔案，伺服器和用戶端。
 
-## 属性
+## 屬性
 
-*   **onprogress**： 使用调用 `ProgressEvent` 每当一块新的数据传输。*（函数）*
+*   **onprogress**： 使用調用 `ProgressEvent` 每當一塊新的資料傳輸。*（函數）*
 
 ## 方法
 
-*   **上传**： 将文件发送到服务器。
+*   **上傳**： 將檔發送到伺服器。
 
-*   **下载**： 从服务器上下载文件。
+*   **下載**： 從伺服器上下載檔案。
 
-*   **中止**: 中止正在进行转让。
+*   **中止**: 中止正在進行轉讓。
 
-## 详细信息
+## 詳細資訊
 
-`FileTransfer`对象提供一种方法将文件上载到远程服务器使用多部分的 HTTP POST 请求。 支持 HTTP 和 HTTPS 协议。 可以通过指定可选参数 `FileUploadOptions` 对象的 `upload()` 方法。 上传成功， `FileUploadResult` 对象传递给成功回调。 如果发生错误， `FileTransferError` 对象传递到错误回调。 它也是可能的 （只在 iOS 和 Android） 从远程服务器下载文件并将其保存在设备上。
+`FileTransfer`物件提供一種方法將檔上載到遠端伺服器使用多部分的 HTTP POST 請求。 支援 HTTP 和 HTTPS 協定。 可以通過指定可選參數 `FileUploadOptions` 物件的 `upload()` 方法。 上傳成功， `FileUploadResult` 物件傳遞給成功回檔。 如果發生錯誤， `FileTransferError` 物件傳遞到錯誤回檔。 它也是可能的 （只在 iOS 和 Android） 從遠端伺服器下載檔案並將其保存在設備上。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 上传
+## 上傳
 
-**参数：**
+**參數：**
 
-*   **文件路径**: 设备上的文件的完整路径。
+*   **檔路徑**: 設備上的檔的完整路徑。
 
-*   **服务器**： 服务器以接收该文件，由编码的 URL`encodeURI()`.
+*   **伺服器**： 伺服器以接收該檔，由編碼的 URL`encodeURI()`.
 
-*   **successCallback**： 传递一个回调 `Metadata` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 回调的执行如果出现检索错误 `Metadata` 。调用与 `FileTransferError` 对象。*（函数）*
+*   **errorCallback**： 回檔的執行如果出現檢索錯誤 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
 
-*   **选项**： 文件名称和 mimetype 等可选参数。
+*   **選項**： 檔案名稱和 mimetype 等可選參數。
 
-*   **trustAllHosts**: 可选参数，默认值为 `false` 。 如果设置为 `true` ，它可以接受的所有安全证书。 由于 Android 拒绝自行签署式安全证书，这非常有用。 不建议供生产使用。 在 Android 和 iOS 上受支持。 *(布尔值)*
+*   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` ，它可以接受的所有安全證書。 由於 Android 拒絕自行簽署式安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
 **快速的示例**
 
@@ -155,9 +155,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </html>
     
 
-**设置上传标头**
+**設置上傳標頭**
 
-在 Android 和 iOS 上受支持
+在 Android 和 iOS 上受支援
 
     function win(r) {
         console.log("Code = " + r.responseCode);
@@ -188,50 +188,50 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **Android 的怪癖**
 
-设置 `chunkedMode` 选项 `false` ，防止将上载到 Nginx 服务器的问题。
+設置 `chunkedMode` 選項 `false` ，防止將上載到 Nginx 伺服器的問題。
 
-## 下载
+## 下載
 
-**参数：**
+**參數：**
 
-*   **来源**： 要下载的文件，如由编码的服务器的 URL`encodeURI()`.
+*   **來源**： 要下載的檔，如由編碼的伺服器的 URL`encodeURI()`.
 
-*   **目标**： 在设备上的文件的完整路径。
+*   **目標**： 在設備上的檔的完整路徑。
 
-*   **successCallback**： 传递一个回调 `FileEntry` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果错误发生在检索时将执行的回调 `Metadata` 。调用与 `FileTransferError` 对象。*（函数）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
 
-*   **trustAllHosts**: 可选参数，默认值为 `false` 。 如果设置为 `true` 然后它将接受所有安全证书。 随着 Android 拒绝自我签署的安全证书，这非常有用。 不建议供生产使用。 在 Android 和 iOS 上受支持。 *(布尔值)*
+*   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` 然後它將接受所有安全證書。 隨著 Android 拒絕自我簽署的安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
-*   **选项**： 可选参数，目前只支持标题 （如授权 （基本身份验证） 等）。
+*   **選項**： 可選參數，目前只支援標題 （如授權 （基本驗證） 等）。
 
 **快速的示例**
 
-    // !! 假定文件路径是设备 var 文件传输的有效路径 = 新 FileTransfer() ；var uri = encodeURI ("http://some.server.com/download.php"） ；fileTransfer.download (uri，文件路径，function(entry) {console.log ("下载完成："+ entry.fullPath） ；}，function(error) {console.log ("下载错误源"+ error.source) ；console.log ("下载错误目标"+ error.target) ；console.log ("上传错误代码"+ error.code) ；}，false，{标题： {"授权书"："基本 dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}}) ；
+    // !! 假定檔路徑是設備 var 檔案傳輸的有效路徑 = 新 FileTransfer() ；var uri = encodeURI ("HTTP://some.server.com/download.php"） ；fileTransfer.download (uri，檔路徑，function(entry) {console.log ("下載完成："+ entry.fullPath） ；}，function(error) {console.log ("下載錯誤源"+ error.source) ；console.log ("下載錯誤目標"+ error.target) ；console.log ("上傳錯誤代碼"+ error.code) ；}，false，{標題： {"授權書"："基本 dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA = ="}}) ；
     
 
 ## 中止
 
-中止正在进行转让。Onerror 回调传递的错误代码为 FileTransferError.ABORT_ERR 的 FileTransferError 对象。
+中止正在進行轉讓。Onerror 回檔傳遞的錯誤代碼為 FileTransferError.ABORT_ERR 的 FileTransferError 物件。
 
-**支持的平台**
+**支援的平臺**
 
-*   Android 系统
+*   Android 系統
 *   iOS
 
 **快速的示例**
 
-    // !! 假定变量 fileURI 包含有效的 URI 到一个文本文件中，对设备无功赢 = function(r) {console.log ("不应调用。");}var 失败 = function(error) {/ / error.code = = FileTransferError.ABORT_ERR 警报 ("发生了一个错误： 代码 ="+ error.code） ；console.log （"上传错误源"+ error.source） ；console.log ("上传错误目标"+ error.target);}var 选项 = 新 FileUploadOptions() ；options.fileKey="file"；options.fileName="myphoto.jpg"；options.mimeType="image/jpeg"；var ft = 新 FileTransfer() ；ft.upload （fileURI、 encodeURI ("http://some.server.com/upload.php"）、 赢、 失败、 选项） ；ft.abort() ；
+    // !! 假定變數 fileURI 包含有效的 URI 到一個文字檔中，對設備無功贏 = function(r) {console.log ("不應調用。");}var 失敗 = function(error) {/ / error.code = = FileTransferError.ABORT_ERR 警報 ("發生了一個錯誤： 代碼 ="+ error.code） ；console.log （"上傳錯誤源"+ error.source） ；console.log ("上傳錯誤目標"+ error.target);}var 選項 = 新 FileUploadOptions() ；options.fileKey="file"；options.fileName="myphoto.jpg"；options.mimeType="image/jpeg"；var ft = 新 FileTransfer() ；ft.upload （fileURI、 encodeURI ("HTTP://some.server.com/upload.php"）、 贏、 失敗、 選項） ；ft.abort() ；
     
 
 ## onprogress
 
-每当新的数据区块转移与 ProgressEvent 调用。
+每當新的資料區塊轉移與 ProgressEvent 調用。
 
-**支持的平台**
+**支援的平臺**
 
-*   Android 系统
+*   Android 系統
 *   iOS
 
 **示例**
@@ -246,4 +246,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     fileTransfer.download(...); // or fileTransfer.upload(...);
     
 
-**怪癖**-在这两个一个 iOS，Android 上 lengthComputable 是 `false` 使用 gzip 已编码的下载。
+**怪癖**-在這兩個一個 iOS，Android 上 lengthComputable 是 `false` 使用 gzip 已編碼的下載。

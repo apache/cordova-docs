@@ -20,7 +20,11 @@ Le `plugin.xml` fichier est un document XML dans le `plugins` espace de noms : `
 
 Un élément de plugin sample :
 
-    <? xml version = "1,0" encoding = "UTF-8"? >< plugin xmlns = "http://apache.org/cordova/ns/plugins/1.0" xmlns:android = "http://schemas.android.com/apk/res/android" id="com.alunny.foo" version = "1.0.2" >
+    <?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.alunny.foo"
+        version="1.0.2">
     
 
 ## `<plugin>`élément
@@ -40,7 +44,11 @@ Le `plugin` élément est l'élément de niveau supérieur du manifeste du plugi
 
 Les éléments enfants de le `<engines>` élément spécifier les versions de cadres basé sur Apache Cordova qui prend en charge de ce plugin. Un exemple :
 
-    < moteurs >< moteur nom = « cordova » version = « 1.7.0 » / >< nom moteur = « cordova » version = « 1.8.1 » / >< nom moteur = « baladeuse » version = « 1.0.0 » plate-forme = scriptSrc « android » = « worklight_version » / >< / moteurs >
+    <engines>
+        <engine name="cordova" version="1.7.0" />
+        <engine name="cordova" version="1.8.1" />
+        <engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/>
+    </engines>
     
 
 Semblable à la `<plugin>` de l'élément `version` attribut, la chaîne de version spécifiée doit correspondre à une chaîne de majeur-mineur-patch conforme à l'expression régulière :
@@ -50,19 +58,30 @@ Semblable à la `<plugin>` de l'élément `version` attribut, la chaîne de vers
 
 Éléments de moteur peuvent également spécifier fuzzy matches pour éviter les répétitions et à réduire la maintenance mise à jour de la plate-forme sous-jacente. Outils doivent supporter un minimum de `>` , `>=` , `<` et `<=` , par exemple :
 
-    < moteurs >< moteur nom = « cordova » version = "> = 1.7.0 » / >< nom moteur = « cordova » version =" < 1.8.1 "/ >< / moteurs >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova" version="<1.8.1" />
+    </engines>
     
 
 Le '<engine>' tags possède aussi un support par défaut pour toutes les principales plates-formes Cordova existe sur. Si la balise de moteur « cordova », cela signifie que l'attribut de version du moteur doivent satisfaire à toutes les versions de Cordova sur n'importe quelle plateforme. Vous mai également la liste des plates-formes spécifiques et leurs versions afin de substituer le moteur catch-all "cordova" :
 
-    < moteurs >< nom moteur = « cordova » version = "> = 1.7.0 » / >< nom moteur = « cordova-android » version =" > = 1.8.0 "/ >< nom moteur = « cordova-ios » version =" > = 1.7.1 "/ >< / moteurs >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova-android" version=">=1.8.0" />
+        <engine name="cordova-ios" version=">=1.7.1" />
+    </engines>
     
 
 Voici une liste de la défaillance des moteurs qui les »<engine>' tag prend en charge: * « cordova » * « cordova-plugman » * « cordova-android » * « cordova-ios » * « cordova-blackberry10 » * « cordova-wp7 » * « cordova-wp8 » * « cordova-windows8 »
 
 En spécifiant des cadres personnalisés basé sur Apache Cordova doivent figurer sous la balise de moteur comme suit :
 
-    < moteurs >< moteur nom = « my_custom_framework » version = « 1.0.0 » plate-forme = scriptSrc « android » = « path_to_my_custom_framework_version » / >< nom moteur = « another_framework » version = "> 0.2.0" plate-forme = « ios|android » scriptSrc = « path_to_another_framework_version » / >< nom moteur = « even_more_framework » version = "> = 2.2.0" plate-forme = "*" scriptSrc = « path_to_even_more_framework_version » / >< / moteurs >
+    <engines>
+        <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
+        <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+        <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+    </engines>
     
 
 Un cadre basé sur Apache Cordova personnalisé requiert qu'un élément du moteur inclut les attributs suivants: « nom », « version », « scriptSrc » et « plateforme ».
@@ -83,7 +102,7 @@ Si non `<engine>` les balises sont spécifiées, plugman essaye de s'installer d
 
 Un nom lisible par l'homme pour le plugin, dont le contenu texte contient le nom du plugin. Par exemple :
 
-    < nom > Foo < / nom >
+    <name>Foo</name>
     
 
 Cet élément n'est pas (encore) gérer la localisation.
@@ -92,7 +111,7 @@ Cet élément n'est pas (encore) gérer la localisation.
 
 Une description explicite pour le plugin. Le contenu textuel de l'élément contient la description du plugin. Un exemple :
 
-    < description > Foo plugin description < / description >
+    <description>Foo plugin description</description>
     
 
 Cet élément n'est pas (encore) gérer la localisation.
@@ -101,28 +120,31 @@ Cet élément n'est pas (encore) gérer la localisation.
 
 Nom de l'auteur de plugin. Le contenu textuel de l'élément contient le nom de l'auteur du plugin. Un exemple :
 
-    < auteur > Foo plugin description < / auteur >
+    <author>Foo plugin description</author>
     
 
 ## `<keywords>`élément
 
 Plugin Mots-clés. Le contenu textuel de l'élément contient des mots-clés séparés par des virgules pour décrire le plugin. Un exemple :
 
-    < Mots-clés > foo, bar < / Mots-clés >
+    <keywords>foo,bar</keywords>
     
 
 ## `<license>`élément
 
 Licence de plugin. Le contenu textuel de l'élément contient la licence de plugin. Un exemple :
 
-    < licence > Apache License 2.0 < / licence >
+    <license>Apache 2.0 License</license>
     
 
 ## `<asset>`élément
 
 Un ou plusieurs éléments de liste de fichiers ou répertoires à copier dans un $ $ etAPP Cordova `www` répertoire. Exemples :
 
-    <!--un seul fichier, puisse être entièrement copié dans le répertoire racine--> < atout src = "www/foo.js" target="foo.js" / ><!--un répertoire, aussi puisse être entièrement copié dans le répertoire racine--> < atout src = "www/foo" target = "foo" / >
+    <!-- a single file, to be copied in the root directory -->
+    <asset src="www/foo.js" target="foo.js" />
+    <!-- a directory, also to be copied in the root directory -->
+    <asset src="www/foo" target="foo" />
     
 
 Tous les `<asset>` balises requièrent tous deux `src` et `target` des attributs. Plugins uniquement sur le Web contient principalement `<asset>` éléments. Tout `<asset>` éléments imbriqués dans les `<platform>` éléments spécifient les actifs spécifiques à la plateforme web, tel que décrit ci-dessous. Les attributs incluent :
@@ -141,7 +163,9 @@ Tous les `<asset>` balises requièrent tous deux `src` et `target` des attributs
 
 La plupart des plugins comprennent un ou plusieurs fichiers JavaScript. Chaque `<js-module>` balise correspond à un fichier JavaScript et empêche les utilisateurs du plugin de devoir ajouter un `<script>` tag pour chaque fichier. Alors que `<asset>` étiquettes il suffit de copier un fichier dans le sous-répertoire plugin dans `www` , `<js-module>` tags sont beaucoup plus sophistiqués. Ils ressemblent à ceci :
 
-    < js-module src="socket.js" nom = "Socket" >< bat target="chrome.socket" / >< / js-module >
+    <js-module src="socket.js" name="Socket">
+        <clobbers target="chrome.socket" />
+    </js-module>
     
 
 Lors de l'installation d'un plugin avec l'exemple ci-dessus, `socket.js` est copié dans `www/plugins/my.plugin.id/socket.js` et ajouté une entrée aux `www/cordova_plugins.js` . Au moment du chargement, le code dans `cordova.js` utilise XHR pour lire chaque fichier et y injecter un `<script>` balise en HTML. Il ajoute un mappage pour écraser ou fusionner le cas échéant, tel que décrit ci-dessous.
@@ -172,7 +196,7 @@ Nidification `<js-module>` éléments `<platform>` déclare des liaisons de modu
 
 Le `<dependency>` balise permet de spécifier d'autres plugins dont dépend le plugin actuel. Tandis que les versions futures eux puiseront dans les référentiels de plugin, à court terme les plugins sont directement référencés en tant qu'URL par `<dependency>` tags. Ils sont mis en forme comme suit :
 
-    < id="com.plugin.id dépendance" url = "https://github.com/myuser/someplugin" commit = subdir "428931ada3891801" = "/ chemin/ici quelques" / >
+    <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
 *   `id`: fournit l'ID du plugin. Il doit être unique au monde et exprimée dans le style de revers-domaine. Bien qu'aucune de ces restrictions est appliquée actuellement, qu'ils soient à l'avenir.
@@ -191,7 +215,7 @@ Si vous définissez la `url` d'un `<dependency>` tag à `"."` et fournir un `sub
 
 Notez que les `subdir` toujours spécifie un chemin d'accès relatif à la *racine* du dépôt git, pas le plugin de parent. Cela est vrai même si vous avez installé le plugin avec un chemin d'accès local directement à elle. Plugman trouve la racine du dépôt git et recherche ensuite l'autre plugin de là.
 
-## `< plate-forme >`
+## `<platform>`
 
 Le `<platform>` tag identifie les plates-formes qui sont associées à du code natif ou nécessitent des modifications à leurs fichiers de configuration. Outils à l'aide de cette spécification peuvent identifier les plates-formes prises en charge et installer le code dans les projets de Cordova.
 
@@ -199,7 +223,12 @@ Plugins sans `<platform>` tags sont supposés pour être JavaScript uniquement e
 
 Une balise de plate-forme d'échantillon :
 
-    < nom de plate-forme = « android » ><!--éléments spécifiques android--> < / plate-forme >< nom de plate-forme = "ios" ><!--éléments spécifiques ios--> < / plate-forme >
+    <platform name="android">
+        <!-- android-specific elements -->
+    </platform>
+    <platform name="ios">
+        <!-- ios-specific elements -->
+    </platform>
     
 
 La nécessaire `name` attribut identifie une plate-forme comme pris en charge, les enfants de l'élément comment associer cette plate-forme.
@@ -216,7 +245,13 @@ Noms de la plate-forme doivent être en minuscules. Les noms de plate-forme, com
 
 Le `<source-file>` élément identifie le code source exécutable qui doit être installé dans un projet. Exemples :
 
-    <!--android--> < fichier source src="src/android/Foo.java" cible-dir = "" src/com/alunny/foo / ><!--ios--> < fichier source src="src/ios/CDVFoo.m" / >< fichier source src="src/ios/someLib.a" cadre = "true" / >< fichier source src="src/ios/someLib.a"-des indicateurs de compilateur = "- fno - objc-arc" / >
+    <!-- android -->
+    <source-file src="src/android/Foo.java"
+                    target-dir="src/com/alunny/foo" />
+    <!-- ios -->
+    <source-file src="src/ios/CDVFoo.m" />
+    <source-file src="src/ios/someLib.a" framework="true" />
+    <source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
     
 
 Il prend en charge les attributs suivants :
@@ -231,7 +266,7 @@ Il prend en charge les attributs suivants :
 
 *   `compiler-flags`(iOS uniquement): si défini, assigne les indicateurs de compilateur spécifié pour le fichier source particulière.
 
-## `< fichier de config->`
+## `<config-file>`
 
 Identifie un fichier de configuration XML-basé à modifier, où dans ce document, la modification devrait avoir lieu, et ce qui doit être modifié.
 
@@ -241,12 +276,24 @@ Le `config-file` élément seulement vous permet d'ajouter de nouveaux enfants �
 
 Exemple pour XML :
 
-    < target="AndroidManifest.xml fichier de configuration" parent = "application/manifeste /" >< android:name="com.foo.Foo de l'activité" android:label="@string/app_name" >< intention-filtre >< / intention-filtre >< / activité >< / config-file >
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:name="com.foo.Foo" android:label="@string/app_name">
+            <intent-filter>
+            </intent-filter>
+        </activity>
+    </config-file>
     
 
 Exemple pour `plist` :
 
-    < cible du fichier de configuration = "*-Info.plist" parent = « CFBundleURLTypes » >< tableau >< dict >< clé > PackageName < / clé >< Chaîne > $PACKAGE_NAME < / string >< / dict >< / array >< / config-file >
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <array>
+            <dict>
+                <key>PackageName</key>
+                <string>$PACKAGE_NAME</string>
+            </dict>
+        </array>
+    </config-file>
     
 
 Il prend en charge les attributs suivants :
@@ -267,32 +314,37 @@ Il prend en charge les attributs suivants :
     
     Si le sélecteur ne résout pas à un enfant du document spécifié, l'outil s'arrête et inverse le processus d'installation, émet un avertissement et se termine avec un code différent de zéro.
 
-## `< plugins-plist >`
+## `<plugins-plist>`
 
 Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. Utiliser le `<config-file>` tag pour les versions plus récentes de Cordova.
 
 Exemple :
 
-    < target="config.xml fichier de configuration" parent = "/ widget/plugins" >< plugin nom = "ChildBrowser" value = "ChildBrowserCommand" / >< / config-file >
+    <config-file target="config.xml" parent="/widget/plugins">
+         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+    </config-file>
     
 
 Spécifie une clé et une valeur à ajouter à la bonne `AppInfo.plist` fichier dans un projet de Cordova d'iOS. Par exemple :
 
-    < plugins-plist clé = « Foo » string = « CDVFoo » / >
+    <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## `<resource-file>`et`<header-file>`
 
 Comme fichiers sources, mais spécialement pour les plateformes telles qu'iOS, qui distinguent entre les fichiers sources, en-têtes et ressources. Exemples :
 
-    < fichier ressource src="CDVFoo.bundle" / ><-fichier de ressources src="CDVFooViewController.xib" / ><-fichier d'en-tête src="CDVFoo.h" / >
+    <resource-file src="CDVFoo.bundle" />
+    <resource-file src="CDVFooViewController.xib" />
+    <header-file src="CDVFoo.h" />
     
 
 ## `<lib-file>`
 
 Comme source, ressources et fichiers d'en-tête, mais spécialement pour les plateformes telles que BlackBerry 10 qui utilisent des bibliothèques généré par l'utilisateur. Exemples :
 
-    < src="src/BlackBerry10/native/device/libfoo.so lib-fichier" arch = "dispositif" / >< lib-fichier src="src/BlackBerry10/native/simulator/libfoo.so" arch = "simulateur" / >
+    <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
+    <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
     
 
 Attributs pris en charge :
@@ -307,7 +359,8 @@ Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend
 
 Exemples :
 
-    < cadre src="libsqlite3.dylib « / >< cadre src="social.framework "faible ="true"/ >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
     
 
 Le `src` attribut identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
@@ -318,33 +371,39 @@ Le paramètre optionnel `weak` attribut est une valeur booléenne qui indique si
 
 Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque vous avez besoin des étapes supplémentaires qui ne peuvent pas être facilement automatisées ou sont hors de portée de plugman. Exemples :
 
-    < Info > vous devez installer __Google Services__ jouer de la section « Android Extras » en utilisant le gestionnaire de SDK Android (exécuter « android »).
+    <info>
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Vous devez ajouter la ligne suivante à votre android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib « local.properties » < / info >
+    You need to add the following line to your `local.properties`
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 # Variables
 
 Dans certains cas, un plugin devrez peut-être modifier la configuration dépend de l'application cible. Par exemple, pour vous inscrire à C2DM sur Android, une application dont l'id de package est `com.alunny.message` requerrait une autorisation tels que :
 
-    < android:name="com.alunny.message.permission.C2D_MESSAGE"/ usages-autorisation >
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
 Dans ce cas où le contenu inséré de la `plugin.xml` fichier n'est pas connu avance, variables peuvent être indiquées par un signe dollar suivi d'une série de lettres capitales, des chiffres ou des traits de soulignement. Pour l'exemple ci-dessus, le `plugin.xml` fichier comprendrait cette balise :
 
-    < android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/ usages-autorisation >
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
 plugman remplace les références de variable avec la valeur spécifiée, ou une chaîne vide si elle n'est pas trouvé. La valeur de référence de la variable peut être détectée (dans ce cas, de la `AndroidManifest.xml` fichier) ou spécifié par l'utilisateur de l'outil ; le processus exact dépend de l'outil particulier.
 
 plugman pouvez demander aux utilisateurs de spécifier les variables requises d'un plugin. Par exemple, les clés de l'API pour C2M et Google Maps peuvent être spécifiés comme un argument de ligne de commande :
 
-    plugman--android plate-forme--projet/chemin/vers/plugin--name|git-url|path--API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734 variable du projet
+    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
 Pour rendre la variable obligatoire, la `<platform>` balise doit contenir un `<preference>` tag. Par exemple :
 
-    < nom de l'option = « API_KEY » / >
+    <preference name="API_KEY" />
     
 
 plugman vérifie que ces préférences requis sont passés. Si ce n'est pas le cas, il doit avertir l'utilisateur comment passer la variable dans et sortir avec un code différent de zéro.

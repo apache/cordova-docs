@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureCB
 
-> 在成功的媒体捕获操作时调用。
+> 在成功的媒體捕獲操作時調用。
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
     
 
-## 说明
+## 說明
 
-此函数执行成功捕获操作完成后。 在已捕获的媒体文件，这点，或者用户已退出媒体捕获应用程序，或已达到捕获限制。
+此函數執行成功捕獲操作完成後。 在已捕獲的媒體檔案，這點，或者使用者已退出媒體捕獲應用程式，或已達到捕獲限制。
 
-每个 `MediaFile` 对象描述一个捕捉的媒体文件。
+每個 `MediaFile` 物件描述一個捕捉的媒體檔案。
 
 ## 快速的示例
 

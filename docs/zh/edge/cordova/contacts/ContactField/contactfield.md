@@ -16,26 +16,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ContactField
 
-支持泛型字段在 `Contact` 对象。某些属性存储作为 `ContactField` 对象包括电子邮件地址、 电话号码和 Url。
+支援泛型欄位在 `Contact` 物件。某些屬性存儲作為 `ContactField` 物件包括電子郵件地址、 電話號碼和 Url。
 
-## 属性
+## 屬性
 
-*   **类型**： 一个字符串，例如指示哪种类型的字段这是*回家*。*() DOMString*
+*   **類型**： 一個字串，例如指示哪種類型的欄位這是*回家*。*() DOMString*
 
-*   **值**： 字段的值，如电话号码或电子邮件地址。*() DOMString*
+*   **值**： 欄位的值，如電話號碼或電子郵件地址。*() DOMString*
 
-*   **上一页**: 设置为 `true` 如果此 `ContactField` 包含用户的首选的值。*（布尔）*
+*   **上一頁**: 設置為 `true` 如果此 `ContactField` 包含使用者的首選的值。*（布林）*
 
-## 详细信息
+## 詳細資訊
 
-`ContactField`对象是可重用的组件表示泛指联系人字段。 每个 `ContactField` 对象包含 `value` ， `type` ，和 `pref` 属性。 A `Contact` 对象存储中的几个属性 `ContactField[]` 数组，如电话号码和电子邮件地址。
+`ContactField`物件是可重用的元件表示泛指連絡人欄位。 每個 `ContactField` 物件包含 `value` ， `type` ，和 `pref` 屬性。 A `Contact` 物件存儲中的幾個屬性 `ContactField[]` 陣列，如電話號碼和電子郵件地址。
 
-在大多数情况下，没有任何预先确定的值为 `ContactField` 对象的**type**属性。 例如，电话号码可以指定**类型**的*家庭*、*工作*、*移动*、 *iPhone*或由一个特定的设备平台联系数据库支持的任何其他值的值。 然而，对于 `Contact` **的照片**字段，**类型**字段指示返回图像的格式： **url**的**值**属性包含的照片图像或*base64*的 URL 时的**值**包含一个 base64 编码的图像字符串时。 
+在大多數情況下，沒有任何預先確定的值為 `ContactField` 物件的**type**屬性。 例如，電話號碼可以指定**類型**的*家庭*、*工作*、*移動*、 *iPhone*或由一個特定的設備平臺聯繫資料庫支援的任何其他值的值。 然而，對於 `Contact` **的照片**欄位，**類型**欄位指示返回圖像的格式： **url**的**值**屬性包含的照片圖像或*base64*的 URL 時的**值**包含一個 base64 編碼的圖像字串時。 
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -124,16 +124,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   **上一页**: 不受支持，返回`false`.
+*   **上一頁**: 不受支援，返回`false`.
 
-## 黑莓手机 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **类型**： 部分支持。使用的电话号码。
+*   **類型**： 部分支援。使用的電話號碼。
 
-*   **值**： 支持。
+*   **值**： 支援。
 
-*   **上一页**: 不受支持，返回`false`.
+*   **上一頁**: 不受支援，返回`false`.
 
 ## iOS 的怪癖
 
-*   **上一页**: 不受支持，返回`false`.
+*   **上一頁**: 不受支援，返回`false`.

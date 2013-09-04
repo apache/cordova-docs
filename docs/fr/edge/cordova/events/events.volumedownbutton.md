@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # volumedownbutton
 
-L'événement se déclenche lorsque l'utilisateur clique sur le bouton volume faible.
+L'évènement se déclenche lorsque l'utilisateur clique sur le bouton diminution du volume.
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Si vous devez substituer le comportement de diminution du volume par défaut vous pouvez enregistrer un écouteur d'événements pour le `volumedownbutton` événement.
+Si vous souhaitez modifier le comportement par défaut du bouton diminution du volume, vous pouvez enregistrer un écouteur pour l'évènement `volumedownbutton`.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   BlackBerry WebWorks (OS 5.0 et plus)
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
     

@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaFile.getFormatData
 
-> 检索格式媒体捕获文件的信息。
+> 檢索格式媒體捕獲檔的資訊。
 
     mediaFile.getFormatData （MediaFileDataSuccessCB successCallback） [MediaFileDataErrorCB errorCallback] ；
     
 
-## 说明
+## 說明
 
-此函数以异步方式尝试检索该媒体文件的格式信息。 如果成功，它将调用 `MediaFileDataSuccessCB` 回调与 `MediaFileData` 对象。 如果该尝试失败，此函数将调用 `MediaFileDataErrorCB` 回调。
+此函數以非同步方式嘗試檢索該媒體檔案的格式資訊。 如果成功，它將調用 `MediaFileDataSuccessCB` 回檔與 `MediaFileData` 物件。 如果該嘗試失敗，此函數將調用 `MediaFileDataErrorCB` 回檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## 黑莓 WebWorks 怪癖
 
-不为媒体文件，所以所有有关的信息提供一个 API `MediaFileData` 对象返回的默认值。
+不為媒體檔案，所以所有有關的資訊提供一個 API `MediaFileData` 物件返回的預設值。
 
 ## Android 的怪癖
 
-访问媒体文件格式信息的 API 的限制，所以并不是所有 `MediaFileData` 支持的属性。
+訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。
 
 ## iOS 的怪癖
 
-访问媒体文件格式信息的 API 的限制，所以并不是所有 `MediaFileData` 支持的属性。
+訪問媒體檔案格式資訊的 API 的限制，所以並不是所有 `MediaFileData` 支援的屬性。

@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # deviceready
 
-L'événement se déclenche lorsque Cordova est entièrement chargé.
+L'évènement se déclenche lorsque Cordova est entièrement chargé.
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
 ## Détails
 
-Cet événement est essentiel pour n'importe quelle application. Il signale que dispositif de Cordova API ont chargé et êtes prêt à accéder.
+Cet évènement est essentiel à n'importe quelle application. Il signale que les API matérielles Cordova ont été chargées et sont prêtes à être utilisées.
 
-Cordova est constitué de deux bases de code : native et JavaScript. Alors que le code natif des charges, une image de chargement personnalisé s'affiche. Toutefois, JavaScript charge uniquement une fois que le DOM charge. Cela signifie que votre application web peut potentiellement appeler une fonction Cordova JavaScript, avant que le code natif correspondant est disponible.
+Cordova est constitué de deux bases de code : native et JavaScript. Tant que le code natif est en cours de chargement, une image personnalisée est affichée. Cependant, le code JavaScript est chargé seulement lorsque le DOM charge. Cela signifie que votre application Web peut potentiellement appeler une fonction JavaScript Cordova avant que le code natif correspondant ne soit disponible.
 
-Le `deviceready` événement se déclenche une fois pleinement chargé Cordova. Une fois l'événement se déclenche, vous pouvez en toute sécurité faire appels à Cordova APIs. Les applications en général attachent un écouteur d'événements avec `document.addEventListener` une fois chargé DOM du document HTML.
+L'évènement `deviceready` se déclenche quand Cordova est totalement chargé. Une fois cet évènement déclenché, vous pouvez en toute sécurité faire appels aux API Cordova. Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois le DOM du document HTML chargé.
 
-Le `deviceready` événement se comporte de manière un peu différente des autres. Tout gestionnaire d'événements enregistré après le `deviceready` événement se déclenche a sa fonction de rappel appelée immédiatement.
+L'évènement `deviceready` se comporte différemment des autres évènements. Tout gestionnaire additionnel enregistré après le déclenchement de `deviceready` est appelé immédiatement.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -40,7 +40,7 @@ Le `deviceready` événement se comporte de manière un peu différente des autr
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("deviceready", onDeviceReady, false);
     

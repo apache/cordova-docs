@@ -45,29 +45,44 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "NetworkStatus" >< param name = "android-package" value="org.apache.cordova.NetworkManager" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.INTERNET" / >< permissions des utilisations android:name="android.permission.ACCESS_NETWORK_STATE" / >< permissions des utilisations android:name="android.permission.READ_PHONE_STATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "État du réseau" >< param name = "blackberry-package" value="org.apache.cordova.network.Network" / >< / fiction >
+        (in www/plugins.xml)
+        <feature name="Network Status">
+            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+        </feature>
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « NetworkStatus » >< param name = « ios-paquet » value = « CDVConnection » / >< / fiction >
+        <feature name="NetworkStatus">
+            <param name="ios-package" value="CDVConnection" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< capacité nom = « ID_CAP_NETWORKING » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
         
     
     Référence : [manifeste d'Application pour Windows Phone][1]
 
 *   Paciarelli (dans`config.xml`)
     
-        < nom de la fonction = « http://tizen.org/api/systeminfo » requis = « true » / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     Référence : [manifeste d'Application pour l'Application Web paciarelli][2]

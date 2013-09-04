@@ -14,23 +14,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 脱机
+# 離線
 
-当一个应用程序脱机时，与该设备未连接到互联网时，将触发该事件。
+當一個應用程式離線時，與該設備未連接到互聯網時，將觸發該事件。
 
     document.addEventListener("offline", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-`offline`以前连接的设备失去网络连接，这样，应用程序不再可以访问互联网时激发的事件。 它依赖于连接 API 中，相同的信息和火灾时 `connection.type` 从更改 `NONE` 为其他任何值。
+`offline`以前連接的設備失去網路連接，這樣，應用程式不再可以訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時 `connection.type` 從更改 `NONE` 為其他任何值。
 
-应用程序通常应使用 `document.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen
@@ -81,12 +81,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-在初始启动期间，第一次脱机事件 （如果适用） 需至少一秒的火。
+在初始啟動期間，第一次離線事件 （如果適用） 需至少一秒的火。
 
 ## Windows Phone 7 的怪癖
 
-当运行在仿真器中， `connection.status` 始终是未知的因此此事件不会*不*火。
+當運行在模擬器中， `connection.status` 始終是未知的因此此事件不會*不*火。
 
 ## Windows Phone 8 怪癖
 
-仿真程序报告连接类型为 `Cellular` ，而不会更改，所以该事件不会*不*火。
+模擬程式報告連線類型為 `Cellular` ，而不會更改，所以該事件不會*不*火。

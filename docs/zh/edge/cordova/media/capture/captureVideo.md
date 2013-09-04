@@ -16,25 +16,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # capture.captureVideo
 
-> 启动视频录制器应用程序并返回有关捕获的视频剪辑文件的信息。
+> 啟動視頻錄製器應用程式並返回有關捕獲的視訊短片檔的資訊。
 
     navigator.device.capture.captureVideo(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
     
 
-## 说明
+## 說明
 
-开始异步操作以捕获使用该设备的视频录制应用程序的视频录制。该操作允许用户在一个会话中捕获多个录音。
+開始非同步作業以捕獲使用該設備的視頻錄製應用程式的視頻錄製。該操作允許使用者在一個會話中捕獲多個錄音。
 
-在捕获操作结束时或者在用户退出视频录制应用程序或由指定的录音的最大数目 `CaptureVideoOptions.limit` 到达。 如果没有 `limit` 指定参数的值，它将默认为一 (1) 和捕获操作终止后用户记录单个视频剪辑。
+在捕獲操作結束時或者在使用者退出視頻錄製應用程式或由指定的錄音的最大數目 `CaptureVideoOptions.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個視訊短片。
 
-在捕获操作完成后，它 `CaptureCB` 回调执行与数组的 `MediaFile` 对象描述每个捕获视频剪辑文件。 如果用户终止之前捕获的视频剪辑，操作 `CaptureErrorCB` 回调执行与 `CaptureError` 对象特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 错误代码。
+在捕獲操作完成後，它 `CaptureCB` 回檔執行與陣列的 `MediaFile` 物件描述每個捕獲視訊短片檔。 如果使用者終止之前捕獲的視訊短片，操作 `CaptureErrorCB` 回檔執行與 `CaptureError` 物件特色 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -122,4 +122,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 黑莓 WebWorks 怪癖
 
-*   科尔多瓦的黑莓 WebWorks 尝试启动**视频录像机**提供的应用程序，由 RIM，以捕获视频的录制。 这款应用程序会收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 错误代码，如果应用程序未安装在设备上。
+*   科爾多瓦的黑莓 WebWorks 嘗試啟動**視頻錄影機**提供的應用程式，由 RIM，以捕獲視頻的錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。

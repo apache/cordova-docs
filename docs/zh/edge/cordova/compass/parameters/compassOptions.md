@@ -16,24 +16,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compassOptions
 
-若要自定义的指南针检索一个可选参数。
+若要自訂的指南針檢索一個可選參數。
 
-## 选项
+## 選項
 
-*   **频率**： 经常如何检索以毫秒为单位的罗经航向。*（人数）*（默认值： 100）
+*   **頻率**： 經常如何檢索以毫秒為單位的羅經航向。*（人數）*（預設值： 100）
 
-*   **筛选器**： 启动 watchHeading 成功回调所需的度的变化。*（人数）*
+*   **篩選器**： 啟動 watchHeading 成功回檔所需的度的變化。*（人數）*
 
 Android 的怪癖
 
 ---
 
-*   `filter`不受支持。
+*   `filter`不受支援。
 
 ## Tizen 怪癖
 
-*   `filter`不受支持。
+*   `filter`不受支援。
 
 ## Windows Phone 7 和 8 怪癖
 
-*   `filter`不受支持。
+*   `filter`不受支援。

@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 <div id="home">
   <h1>
-    参考线
+    輔助線
   </h1>
   
   <ul>
@@ -25,182 +25,182 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         概述
       </h2>
       
-      <span>如果你是新的科尔多瓦，启动在这里。</span>
+      <span>如果你是新的科爾多瓦，啟動在這裡。</span>
     </li>
     <li>
       <h2>
-        命令行界面
+        命令列介面
       </h2>
       
-      <span>创建、 构建和部署从命令行。</span>
+      <span>創建、 構建和部署從命令列。</span>
     </li>
     <li>
       <h2>
-        平台指南
+        平臺指南
       </h2>
       
-      <span>设置每个 SDK 和更新项目</span>
+      <span>設置每個 SDK 和更新專案</span>
     </li>
     <li>
       <h2>
-        配置参考
+        配置參考
       </h2>
       
-      <span>自定义您的应用程序的功能。</span>
+      <span>自訂您的應用程式的功能。</span>
     </li>
     <li>
       <h2>
         嵌入 WebViews
       </h2>
       
-      <span>在您的项目中实现科尔多瓦 web 视图。</span>
+      <span>在您的專案中實現科爾多瓦 web 視圖。</span>
     </li>
     <li>
       <h2>
-        插件开发指南
+        外掛程式開發指南
       </h2>
       
-      <span>开发你的第一个插件。</span>
+      <span>開發你的第一個外掛程式。</span>
     </li>
     <li>
       <h2>
-        隐私指南
+        隱私指南
       </h2>
       
-      <span>了解重要手机隐私问题。</span>
+      <span>瞭解重要手機隱私問題。</span>
     </li>
     <li>
       <h2>
-        域白名单指南
+        域白名單指南
       </h2>
       
-      <span>授予应用程序访问权限的外部域。</span>
+      <span>授予應用程式存取權限的外部域。</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">关键字索引</a>
+        <a href="_index.html">關鍵字索引</a>
       </h2>
       
-      <span>完整的文件的索引。</span>
+      <span>完整的檔的索引。</span>
     </li>
   </ul>
   
   <h1>
-    API 参考
+    API 參考
   </h1>
   
   <ul>
     <li>
       <h2>
-        加速度计
+        加速度計
       </h2>
       
-      <span>进入设备的运动传感器。</span>
+      <span>進入設備的動作感應器。</span>
     </li>
     <li>
       <h2>
-        相机
+        相機
       </h2>
       
-      <span>捕获照片使用的设备的相机。</span>
+      <span>捕獲照片使用的設備的相機。</span>
     </li>
     <li>
       <h2>
-        捕获
+        捕獲
       </h2>
       
-      <span>捕获设备的媒体捕获应用程序使用的媒体文件。</span>
+      <span>擷取裝置的媒體捕獲應用程式使用的媒體檔案。</span>
     </li>
     <li>
       <h2>
-        指南针
+        指南針
       </h2>
       
-      <span>获取该设备的指向的方向。</span>
+      <span>獲取該設備的指向的方向。</span>
     </li>
     <li>
       <h2>
-        连接
+        連接
       </h2>
       
-      <span>快速检查网络状态和蜂窝网络的信息。</span>
+      <span>快速檢查網路狀態和蜂窩網路的資訊。</span>
     </li>
     <li>
       <h2>
-        联系人
+        連絡人
       </h2>
       
-      <span>与设备联系人数据库的工作。</span>
+      <span>與設備連絡人資料庫的工作。</span>
     </li>
     <li>
       <h2>
-        设备
+        設備
       </h2>
       
-      <span>收集设备特定信息。</span>
+      <span>收集設備特定資訊。</span>
     </li>
     <li>
       <h2>
         事件
       </h2>
       
-      <span>挂接到本机事件通过 JavaScript。</span>
+      <span>掛接到本機事件通過 JavaScript。</span>
     </li>
     <li>
       <h2>
-        文件
+        檔
       </h2>
       
-      <span>挂接到本机文件系统通过 JavaScript。</span>
+      <span>掛接到本機檔案系統通過 JavaScript。</span>
     </li>
     <li>
       <h2>
         地理定位
       </h2>
       
-      <span>让意识到您应用程序的位置。</span>
+      <span>讓意識到您應用程式的位置。</span>
     </li>
     <li>
       <h2>
         全球化
       </h2>
       
-      <span>启用特定于区域设置的对象表示的形式。</span>
+      <span>啟用特定于地區設定的物件表示的形式。</span>
     </li>
     <li>
       <h2>
         InAppBrowser
       </h2>
       
-      <span>启动另一个应用程序中的浏览器实例的 Url。</span>
+      <span>啟動另一個應用程式中的瀏覽器實例的 Url。</span>
     </li>
     <li>
       <h2>
-        媒体
+        媒體
       </h2>
       
-      <span>录制和播放音频文件。</span>
+      <span>錄製和播放音訊檔。</span>
     </li>
     <li>
       <h2>
         通知
       </h2>
       
-      <span>可视、 可听，和触觉设备通知。</span>
+      <span>可視、 可聽，和觸覺設備通知。</span>
     </li>
     <li>
       <h2>
-        闪屏
+        閃屏
       </h2>
       
-      <span>显示和隐藏的应用程序的初始屏幕。</span>
+      <span>顯示和隱藏的應用程式的初始螢幕。</span>
     </li>
     <li>
       <h2>
-        存储
+        存儲
       </h2>
       
-      <span>挂接到设备本机存储选项。</span>
+      <span>掛接到設備本機存儲選項。</span>
     </li>
   </ul>
 </div>

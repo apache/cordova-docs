@@ -16,23 +16,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-协助下开始在科尔多瓦 1.9， `CordovaActivity` ，你可以使用科尔多瓦作为一个更大的本机 Android 应用程序中的一个组件。 Android 是指这种组件 `CordovaWebView` 。 新的基于科尔多瓦的应用程序从 1.9 起使用 `CordovaWebView` 作为其主要的视图，无论是否遗留下来 `CordovaActivity` 使用方法。
+協助下開始在科爾多瓦 1.9， `CordovaActivity` ，你可以使用科爾多瓦作為一個更大的本機 Android 應用程式中的一個元件。 Android 是指這種元件 `CordovaWebView` 。 新的基於科爾多瓦的應用程式從 1.9 起使用 `CordovaWebView` 作為其主要的視圖，無論是否遺留下來 `CordovaActivity` 使用方法。
 
-如果你熟悉 Android 应用程序的开发，请阅读 Android 平台指南 》 尝试前，包括 web 视图开发科尔多瓦的应用程序。 它不是作者科尔多瓦 Android 应用程序的主要途径。 这些指令是目前手动，但最终可能会实现自动化。
+如果你熟悉 Android 應用程式的開發，請閱讀 Android 平臺指南 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
 
-## 系统必备组件
+## 系統必備元件
 
-*   科尔多瓦 1.9 或更大
+*   科爾多瓦 1.9 或更大
 
 *   Android SDK 更新到最新的 SDK
 
-## 在 android 系统的项目中使用 CordovaWebView 的指南
+## 在 android 系統的專案中使用 CordovaWebView 的指南
 
-1.  `cd`到 `/framework` 并运行 `ant jar` 打造科尔多瓦 jar。 它创建时所形成的.jar 文件 `cordova-x.x.x.jar` 在 `/framework` 目录。
+1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar 檔 `cordova-x.x.x.jar` 在 `/framework` 目錄。
 
-2.  科尔多瓦 jar 复制到您的 Android 项目 `/libs` 目录。
+2.  科爾多瓦 jar 複製到您的 Android 專案 `/libs` 目錄。
 
-3.  编辑您的应用程序的 `main.xml` 文件 (根据 `/res/xml` )，看起来像下面这样，与 `layout_height` ， `layout_width` 和 `id` 修改，以适合您的应用程序：
+3.  編輯您的應用程式的 `main.xml` 檔 (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,23 +40,68 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  修改您的活动，使它实现了 `CordovaInterface` 。 您应该执行包括的方法。 您可能希望将它们从复制 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或执行这些靠你自己。 下面的代码片段显示了一个基本的应用程序，使用该接口。 请注意如何引用的视图 id 匹配 `id` 在上面所示的 XML 片段中指定的属性：
+4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
     
-        CordovaViewTestActivity 延伸活动的公共类实现 CordovaInterface {CordovaWebView cwv ；/ * 当第一次创建活动时调用。 * @Override 公共 void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.main) ；cwv = findViewById(R.id.tutorialView) (CordovaWebView) ；Config.init(this) ；cwv.loadUrl(Config.getStartUrl()) ；}
+        public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+            CordovaWebView cwv;
+            /* Called when the activity is first created. */
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.main);
+                cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+                Config.init(this);
+                cwv.loadUrl(Config.getStartUrl());
+            }
         
 
-如果您使用的相机，你应该也可以实现这：
+如果您使用的相機，你應該也可以實現這：
 
-        @Override 公共 void setActivityResultCallback （CordovaPlugin 插件） {this.activityResultCallback = 插件 ；} / --- 推出，你会喜欢结果当它完成一项活动。 当这种活动退出时，* 调用您的 onActivityResult() 方法。
-         ** @param 命令的命令对象 * @param 意向意向开始 * @param requestCode 传递到回调来识别该活动的请求代码 * / 公共 void startActivityForResult （CordovaPlugin 命令、 意图意图、 int requestCode) {this.activityResultCallback = 命令 ；this.activityResultKeepRunning = this.keepRunning ；/ / 如果开启了多任务处理，然后禁用它如果返回结果的活动 （命令! = null) {this.keepRunning = false;} / / 开始活动 super.startActivityForResult (意图、 requestCode） ；} @Override / --- 当你发起退出，给你你开始的它的 requestCode 活动调用 * resultCode 它返回了，并从它的任何其他数据。
-         请求代码最初提供给 startActivityForResult()，** @param requestCode * 允许您确定谁从这个结果来了。
-         * @param resultCode 通过其 setResult() 的儿童活动所返回的整数结果代码。
-         * @param 数据的意向，可以向调用方返回的结果数据 （各种数据可以附加到"额外"的意图）。
-         * / 保护 void onActivityResult 意图意图 int resultCode int requestCode） {super.onActivityResult requestCode、 resultCode 意图） ；CordovaPlugin 回调 = this.activityResultCallback ；如果 (回调! = null) {callback.onActivityResult requestCode、 resultCode 意图） ；}
+        @Override
+        public void setActivityResultCallback(CordovaPlugin plugin) {
+            this.activityResultCallback = plugin;
+        }
+        /**
+         * Launch an activity for which you would like a result when it finished. When this activity exits,
+         * your onActivityResult() method is called.
+         *
+         * @param command           The command object
+         * @param intent            The intent to start
+         * @param requestCode       The request code that is passed to callback to identify the activity
+         */
+        public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
+            this.activityResultCallback = command;
+            this.activityResultKeepRunning = this.keepRunning;
+    
+            // If multitasking turned on, then disable it for activities that return results
+            if (command != null) {
+                this.keepRunning = false;
+            }
+    
+            // Start activity
+            super.startActivityForResult(intent, requestCode);
+        }   
+    
+        @Override
+        /**
+         * Called when an activity you launched exits, giving you the requestCode you started it with,
+         * the resultCode it returned, and any additional data from it.
+         *
+         * @param requestCode       The request code originally supplied to startActivityForResult(),
+         *                          allowing you to identify who this result came from.
+         * @param resultCode        The integer result code returned by the child activity through its setResult().
+         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+         */
+        protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+            super.onActivityResult(requestCode, resultCode, intent);
+            CordovaPlugin callback = this.activityResultCallback;
+            if (callback != null) {
+                callback.onActivityResult(requestCode, resultCode, intent);
+            }
         }
     
 
-最后，请记住，添加线程池，否则插件有没有线程上运行：
+最後，請記住，添加執行緒池，否則外掛程式有沒有線程上運行：
 
         @Override
         public ExecutorService getThreadPool() {
@@ -64,6 +109,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         }
     
 
-1.  将您的应用程序的 HTML 和 JavaScript 文件复制到您的 Android 项目 `/assets/www` 目录。
+1.  將您的應用程式的 HTML 和 JavaScript 檔案複製到您的 Android 專案 `/assets/www` 目錄。
 
-2.  复制 `config.xml` 从 `/framework/res/xml` 到您的项目的 `/res/xml` 目录。
+2.  複製 `config.xml` 從 `/framework/res/xml` 到您的專案的 `/res/xml` 目錄。

@@ -14,24 +14,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 数据库
+# 資料庫
 
-提供对 SQL 数据库的访问。
+提供對 SQL 資料庫的訪問。
 
 ## 方法
 
-*   **交易记录**： 运行数据库事务。
+*   **交易記錄**： 運行資料庫事務。
 
-*   **changeVersion**: 允许脚本自动验证的版本号和更新架构时更改它。
+*   **changeVersion**: 允許腳本自動驗證的版本號和更新架構時更改它。
 
-## 详细信息
+## 詳細資訊
 
-`window.openDatabase()`方法返回 `Database` 的对象。
+`window.openDatabase()`方法返回 `Database` 的物件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 6.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 

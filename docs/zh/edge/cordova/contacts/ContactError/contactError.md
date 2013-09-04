@@ -16,11 +16,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ContactError
 
-A `ContactError` 对象传递给 `contactError` 回调时出现错误。
+A `ContactError` 物件傳遞給 `contactError` 回檔時出現錯誤。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
 ## 常量
 
@@ -32,6 +32,6 @@ A `ContactError` 对象传递给 `contactError` 回调时出现错误。
 *   `ContactError.NOT_SUPPORTED_ERROR`
 *   `ContactError.PERMISSION_DENIED_ERROR`
 
-## 说明
+## 說明
 
-`ContactError`对象返回到用户通过 `contactError` 回调函数时出现错误。
+`ContactError`物件返回到使用者通過 `contactError` 回呼函數時出現錯誤。

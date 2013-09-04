@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Vue d'ensemble
+        Présentation
       </h2>
       
       <span>Commencez ici si vous êtes nouveau à Cordova.</span>
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Guide de la vie privée
       </h2>
       
-      <span>Découvrez les problèmes de confidentialité mobile important.</span>
+      <span>Découvrez les informations importantes relatives à la confidentialité sur les mobiles.</span>
     </li>
     <li>
       <h2>
@@ -78,15 +78,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        <a href="_index.html">Index de mots-clés</a>
+        <a href="_index.html">Index des mots-clés</a>
       </h2>
       
-      <span>Index complet de la documentation.</span>
+      <span>Index relatif à la documention</span>
     </li>
   </ul>
   
   <h1>
-    QAnywhere
+    Références de l'API
   </h1>
   
   <ul>
@@ -95,14 +95,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Accéléromètre
       </h2>
       
-      <span>Puiser dans le détecteur de mouvement de l'appareil.</span>
+      <span>Utiliser l'accéléromètre du mobile.</span>
     </li>
     <li>
       <h2>
         Appareil photo
       </h2>
       
-      <span>Capturer une photo en utilisant la caméra de l'appareil.</span>
+      <span>Prendre une photo en utilisant la l'appareil photo du terminal.</span>
     </li>
     <li>
       <h2>
@@ -116,21 +116,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Boussole
       </h2>
       
-      <span>Obtenir de la direction qui pointe vers l'appareil.</span>
+      <span>Dans quelle direction pointe le mobile?</span>
     </li>
     <li>
       <h2>
         Connexion
       </h2>
       
-      <span>Vérifier rapidement l'état du réseau et informations de réseau cellulaire.</span>
+      <span>Vérifier rapidement l'état du réseau et les informations du réseau mobile.</span>
     </li>
     <li>
       <h2>
         Contacts
       </h2>
       
-      <span>Travailler avec la base de données contacts périphériques.</span>
+      <span>Interactions avec la base de données contacts du terminal.</span>
     </li>
     <li>
       <h2>
@@ -144,21 +144,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Événements
       </h2>
       
-      <span>Crochet dans les événements natifs via JavaScript.</span>
+      <span>Interactions avec les événements natifs via JavaScript.</span>
     </li>
     <li>
       <h2>
         Fichier
       </h2>
       
-      <span>Crochet dans le système de fichier natif via JavaScript.</span>
+      <span>Interactions avec le système de fichier natif via JavaScript.</span>
     </li>
     <li>
       <h2>
         Géolocalisation
       </h2>
       
-      <span>Sensibilisez votre emplacement de l'application.</span>
+      <span>Localiser le terminal.</span>
     </li>
     <li>
       <h2>
@@ -186,7 +186,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Notification
       </h2>
       
-      <span>Notifications de l'appareil visuel, sonore et tactile.</span>
+      <span>Notifications de visuel, sonore et tactile.</span>
     </li>
     <li>
       <h2>

@@ -16,9 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 全球化
 
-获取的信息并执行操作特定于用户的区域设置和时区。
+獲取的資訊並執行操作特定于使用者的地區設定和時區。
 
-## 对象
+## 物件
 
 *   GlobalizationError
 
@@ -37,27 +37,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   globalization.getNumberPattern
 *   globalization.getCurrencyPattern
 
-## 变量范围
+## 變數範圍
 
-`globalization`对象是一个孩子的 `navigator` 对象，并因此具有全局范围。
+`globalization`物件是一個孩子的 `navigator` 物件，並因此具有全域範圍。
 
     // The global globalization object
     var globalization = navigator.globalization;
     
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
         $ cordova plugin rm org.apache.cordova.core.globalization
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名称 ="全球化">< 参数名称 ="android 包"value="org.apache.cordova.Globalization"/ >< / 功能 >
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
         
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.getDuration
 
-返回一个音频文件的持续时间。
+返回一個音訊檔的持續時間。
 
     media.getDuration();
     
 
-## 说明
+## 說明
 
-`media.getDuration`方法执行同步，以秒为单位，返回该音频文件的持续时间，如果已知。如果持续时间是未知的则返回值为-1。
+`media.getDuration`方法執行同步，以秒為單位，返回該音訊檔的持續時間，如果已知。如果持續時間是未知的則傳回值為-1。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen

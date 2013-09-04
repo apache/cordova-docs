@@ -16,18 +16,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # pause
 
-L'événement se déclenche quand une application est mise dans le fond.
+L'évènement se déclenche quand une application est mise en arrière-plan.
 
     document.addEventListener("pause", yourCallbackFunction, false);
     
 
 ## Détails
 
-Le `pause` événement se déclenche lorsque la plate-forme native met l'application en arrière-plan, généralement lorsque l'utilisateur bascule vers une autre application.
+L'évènement `pause` se déclenche lorsque la plate-forme native met l'application en arrière-plan, généralement lorsque l'utilisateur bascule vers une autre application.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -35,7 +35,7 @@ Les applications doivent généralement utiliser `document.addEventListener` pou
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("pause", onPause, false);
     
@@ -78,10 +78,10 @@ Les applications doivent généralement utiliser `document.addEventListener` pou
     </html>
     
 
-## iOS Quirks
+## Notes au sujet d'iOS
 
-Dans le `pause` Gestionnaire, tous les appels à l'API de Cordoue ou de plugins natifs qui passent par l'Objective-C ne fonctionnent pas, ainsi que tous les appels interactifs, tels que des alertes ou `console.log()` . Elles sont traitées uniquement lorsque l'application reprend, sur la boucle d'exécution suivante.
+Dans un gestionnaire de l'évènement `pause`, tous les appels à l'API Cordova ou vers des plugins natifs passant par l'Objective-C ne fonctionnent pas, de même pour tous les appels interactifs tels que des alertes ou `console.log()`. Ceux-ci sont traités uniquement lorsque l'application revient au premier plan, lors du prochain passage de la boucle d'exécution.
 
-L'iOS spécifiques `resign` événement est disponible comme alternative à `pause` et détecte le moment où les utilisateurs activer le bouton de **verrouillage** pour verrouiller l'appareil avec l'application en cours d'exécution au premier plan. Si le $ $ etAPP (et dispositif) sont activées pour le multitâche, il est jumelé avec un ultérieur `pause` événement, mais seulement sous iOS 5. En effet, toutes les apps verrouillées dans iOS 5 qui ont le multitâche activé sont poussés à l'arrière-plan. Pour les applications de continuer à s'exécuter lorsque verrouillé sous iOS 5, désactiver multitâche l'application en définissant [UIApplicationExitsOnSuspend][1] sur `YES` . Pour exécuter lorsqu'ils sont bloqués sur iOS 4, ce paramètre n'est pas grave.
+Sous iOS, l'évènement spécifique `resign` est disponible comme alternative à `pause` et détecte quand les utilisateurs pressent le bouton de **verrouillage** pour verrouiller l'appareil avec l'application en cours d'exécution au premier plan. Si l'application (et l'appareil) est prévue pour le multitâche, un évènement `pause` lui est ultérieurement associé, mais seulement sous iOS 5. En réalité, sous iOS 5, toutes les applications verrouillées prévues pour le multitâche sont envoyées à l'arrière-plan. Afin qu'une application puisse continuer à s'exécuter lorsque l'appareil est verrouillé sous iOS 5, il faudra désactiver le multitâche pour celle-ci en réglant [UIApplicationExitsOnSuspend][1] sur `YES`. Sous iOS 4, l'application continuera de s'exécuter même si l'appareil est verrouillé, modifier la valeur de ce paramètre n'a aucun effet.
 
  [1]: http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html

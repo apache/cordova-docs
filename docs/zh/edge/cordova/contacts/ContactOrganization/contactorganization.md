@@ -16,28 +16,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ContactOrganization
 
-包含 `Contact` 对象的组织属性。
+包含 `Contact` 物件的組織屬性。
 
-## 属性
+## 屬性
 
-*   **上一页**: 设置为 `true` 如果此 `ContactOrganization` 包含用户的首选的值。*（布尔）*
+*   **上一頁**: 設置為 `true` 如果此 `ContactOrganization` 包含使用者的首選的值。*（布林）*
 
-*   **类型**： 一个字符串，例如指示哪种类型的字段这是*回家*。_(DOMString)
+*   **類型**： 一個字串，例如指示哪種類型的欄位這是*回家*。_(DOMString)
 
-*   **名称**： 组织的名称。*() DOMString*
+*   **名稱**： 組織的名稱。*() DOMString*
 
-*   **部门**： 新闻部的工程合约。*() DOMString*
+*   **部門**： 新聞部的工程合約。*() DOMString*
 
-*   **标题**： 在组织联系人的标题。*() DOMString*
+*   **標題**： 在組織連絡人的標題。*() DOMString*
 
-## 详细信息
+## 詳細資訊
 
-`ContactOrganization`对象存储的联系人的组织属性。A `Contact` 对象存储一个或多个 `ContactOrganization` 数组中的对象。
+`ContactOrganization`物件存儲的連絡人的組織屬性。A `Contact` 物件存儲一個或多個 `ContactOrganization` 陣列中的物件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -120,28 +120,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 2.X 的怪癖
 
-*   **上一页**: 不支持的 Android 2.X 的设备，返回`false`.
+*   **上一頁**: 不支援的 Android 2.X 的設備，返回`false`.
 
-## 黑莓手机 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **上一页**: 不支持的黑莓设备，返回`false`.
+*   **上一頁**: 不支援的黑莓設備，返回`false`.
 
-*   **类型**： 不支持的黑莓设备，返回`null`.
+*   **類型**： 不支援的黑莓設備，返回`null`.
 
-*   **名称**： 部分支持。第一次组织名称存储在黑莓**公司**字段中。
+*   **名稱**： 部分支援。第一次組織名稱存儲在黑莓**公司**欄位中。
 
-*   **部**: 不受支持，返回`null`.
+*   **部**: 不受支援，返回`null`.
 
-*   **标题**: 部分支持。第一次组织标题是黑莓**jobTitle**字段中存储的。
+*   **標題**: 部分支援。第一次組織標題是黑莓**jobTitle**欄位中存儲的。
 
 ## iOS 的怪癖
 
-*   **上一页**： 返回的 iOS 设备上不支持`false`.
+*   **上一頁**： 返回的 iOS 設備上不支援`false`.
 
-*   **类型**： 不支持的 iOS 设备上，返回`null`.
+*   **類型**： 不支援的 iOS 設備上，返回`null`.
 
-*   **名称**： 部分支持。第一次组织名称存储在 iOS **kABPersonOrganizationProperty**字段中。
+*   **名稱**： 部分支援。第一次組織名稱存儲在 iOS **kABPersonOrganizationProperty**欄位中。
 
-*   **新闻部**： 部分支持。第一部名称存储在 iOS **kABPersonDepartmentProperty**字段中。
+*   **新聞部**： 部分支援。第一部名稱存儲在 iOS **kABPersonDepartmentProperty**欄位中。
 
-*   **标题**: 部分支持。第一个标题是 iOS **kABPersonJobTitleProperty**字段中存储的。
+*   **標題**: 部分支援。第一個標題是 iOS **kABPersonJobTitleProperty**欄位中存儲的。

@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # volumeupbutton
 
-当用户按下了按钮卷时，将触发该事件。
+當使用者按下了按鈕卷時，將觸發該事件。
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-如果您需要重写默认卷起来的行为你可以注册为事件侦听器 `volumeupbutton` 事件。
+如果您需要重寫預設卷起來的行為你可以註冊為事件攔截器 `volumeupbutton` 事件。
 
-应用程序通常应使用 `document.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 
 ## 快速的示例
 

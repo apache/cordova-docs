@@ -18,19 +18,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
-获取设备的模型名称。
+獲取設備的模型名稱。
 
     var string = device.name;
     
 
-## 说明
+## 說明
 
-`device.name`返回设备的模型或产品的名称。此值由设备制造商设置的并且可能不同，同一产品的不同版本。
+`device.name`返回設備的模型或產品的名稱。此值由設備製造商設置的並且可能不同，同一產品的不同版本。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -82,15 +82,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   获取[产品名称][1]而不是[产品型号名称][2]，这往往是生产代码名称。 例如，Nexus One 返回 `Passion` ，和摩托罗拉 Droid 返回`voles`.
+*   獲取[產品名稱][1]而不是[產品型號名稱][2]，這往往是生產代碼名稱。 例如，Nexus One 返回 `Passion` ，和摩托羅拉 Droid 返回`voles`.
 
  [1]: http://developer.android.com/reference/android/os/Build.html#PRODUCT
  [2]: http://developer.android.com/reference/android/os/Build.html#MODEL
 
 ## Windows Phone 7 和 8 怪癖
 
-*   返回由制造商指定的设备模型。例如，三星焦点返回`SGH-i917`.
+*   返回由製造商指定的設備模型。例如，三星焦點返回`SGH-i917`.
 
 ## Tizen 怪癖
 
-*   例如，返回与供应商指派的设备模型`TIZEN`
+*   例如，返回與供應商指派的設備模型`TIZEN`

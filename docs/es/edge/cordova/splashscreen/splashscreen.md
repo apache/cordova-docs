@@ -35,12 +35,16 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android (en`app/res/xml/config.xml`)
     
-        < nombre de la función = "SplashScreen" >< nombre param = "android-paquete" value="org.apache.cordova.SplashScreen" / >< / característica >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "SplashScreen" >< nombre param = "ios-paquete" value = "CDVSplashScreen" / >< / característica >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
@@ -72,10 +76,10 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 Copiar tus imágenes en pantalla splash en el proyecto iOS `Resources/splash` Directorio. Sólo agregar las imágenes de los dispositivos que desea apoyar, como el iPad o el iPhone. El tamaño de cada imagen debe ser:
 
-*   Default-568h@2x~iPhone.png (1136 x 640 píxeles)
-*   Default-Landscape@2x~ipad.png (1496 x 2048 píxeles)
-*   Defecto-Landscape~ipad.png (1024 x 748 píxeles)
-*   Default-Portrait@2x~ipad.png (1536 x 2008 píxeles)
-*   Defecto-Portrait~ipad.png (1004 x 768 píxeles)
-*   Default@2x~iPhone.png (640 x 960 píxeles)
-*   Default~iPhone.png (320 x 480 píxeles)
+*   Default-568h@2x~iphone.png (640x1136 pixels)
+*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
+*   Default-Landscape~ipad.png (1024x748 pixels)
+*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
+*   Default-Portrait~ipad.png (768x1004 pixels)
+*   Default@2x~iphone.png (640x960 pixels)
+*   Default~iphone.png (320x480 pixels)

@@ -16,21 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CameraPopoverHandle
 
-由创建的弹出对话框的句柄`camera.getPicture`.
+由創建的彈出對話方塊的控制碼`camera.getPicture`.
 
 ## 方法
 
-*   **setPosition**: 设置弹出的位置。
+*   **setPosition**: 設置彈出的位置。
 
-## 支持的平台
+## 支援的平臺
 
 *   iOS
 
 ## setPosition
 
-设置弹出的位置。
+設置彈出的位置。
 
-**参数：**
+**參數：**
 
 *   `cameraPopoverOptions`： `CameraPopoverOptions` ，指定新的位置
 

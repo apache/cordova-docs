@@ -16,82 +16,82 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileEntry
 
-表示一个文件在文件系统上， [W3C 目录和系统][1]规范中定义。
+表示一個檔在檔案系統上， [W3C 目錄和系統][1]規範中定義。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
-## 属性
+## 屬性
 
-*   **isFile**： 总是 `true` 。*（布尔）*
+*   **isFile**： 總是 `true` 。*（布林）*
 
-*   **isDirectory**： 总是 `false` 。*（布尔）*
+*   **isDirectory**： 總是 `false` 。*（布林）*
 
-*   **名称**： 的名称 `FileEntry` ，不包括导致它的路径。*() DOMString*
+*   **名稱**： 的名稱 `FileEntry` ，不包括導致它的路徑。*() DOMString*
 
-*   **完整路径**： 绝对路径从根到 `FileEntry` 。*() DOMString*
+*   **完整路徑**： 絕對路徑從根到 `FileEntry` 。*() DOMString*
 
-**注：**下面的属性由 W3C 规范定义，但*不是*支持：
+**注：**下面的屬性由 W3C 規範定義，但*不是*支援：
 
-*   **文件系统**： 文件系统的 `FileEntry` 驻留。*（文件系统）*
+*   **檔案系統**： 檔案系統的 `FileEntry` 駐留。*（檔案系統）*
 
 ## 方法
 
-*   **getMetadata**： 查找有关文件的元数据。
+*   **getMetadata**： 查找有關檔的中繼資料。
 
-*   **setMetadata**: 设置文件上的元数据。
+*   **setMetadata**: 設置檔上的中繼資料。
 
-*   **moveTo**： 将文件移动到一个不同的位置，在文件系统上。
+*   **moveTo**： 將檔移動到一個不同的位置，在檔案系統上。
 
-*   **copyTo**： 将文件复制到文件系统上的不同位置。
+*   **copyTo**： 將檔案複製到檔案系統上的不同位置。
 
-*   **toURL**： 返回一个可用于查找的文件的 URL。
+*   **toURL**： 返回一個可用於查找的檔的 URL。
 
-*   **删除**： 删除一个文件。
+*   **刪除**： 刪除一個檔。
 
-*   **getParent**: 查找父目录。
+*   **getParent**: 查找父目錄。
 
-*   **createWriter**: 创建 `FileWriter` 对象，可用于向文件中写入。
+*   **createWriter**: 創建 `FileWriter` 物件，可用於向檔中寫入。
 
-*   **文件**： 创建 `File` 对象，其中包含文件属性。
+*   **檔**： 創建 `File` 物件，其中包含檔案屬性。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## getMetadata
 
-查找有关文件的元数据。
+查找有關檔的中繼資料。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 传递一个回调 `Metadata` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**： 如果错误发生在检索时将执行的回调 `Metadata` 。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函数 success(metadata) {console.log ("上次修改时间:"+ metadata.modificationTime);}函数 fail(error) {alert(error.code);}/ / 请求的元数据对象的此条目 entry.getMetadata （成功、 失败） ；
+    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的中繼資料物件的此條目 entry.getMetadata （成功、 失敗） ；
     
 
 ## setMetadata
 
-上一个文件集的元数据。
+上一個檔集的中繼資料。
 
-**目前仅适用于 iOS。**
+**目前僅適用于 iOS。**
 
-*   这将设置一个文件的扩展的属性。
+*   這將設置一個檔的擴展的屬性。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 当设置该元数据时执行回调。*（函数）*
+*   **successCallback**： 當設置該中繼資料時執行回檔。*（函數）*
 
-*   **errorCallback**： 当不成功地设置该元数据时执行回调。*（函数）*
+*   **errorCallback**： 當不成功地設置該中繼資料時執行回檔。*（函數）*
 
-*   **metadataObject**： 包含元数据的键和值的对象。*（对象）*
+*   **metadataObject**： 包含中繼資料的鍵和值的物件。*（物件）*
 
 **快速的示例**
 
@@ -109,7 +109,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **iOS 怪癖**
 
-*   只有 `com.apple.MobileBackup` 支持扩展的属性。 将该值设置为 `1` ，防止文件被备份到 iCloud。 将该值设置为 `` ，重新启用该文件以将备份到 iCloud。
+*   只有 `com.apple.MobileBackup` 支援擴展的屬性。 將該值設置為 `1` ，防止檔被備份到 iCloud。 將該值設置為 `` ，重新啟用該檔以將備份到 iCloud。
 
 **快速的示例**
 
@@ -147,23 +147,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## moveTo
 
-在文件系统上的文件移到不同的位置。如果应用程序尝试向会导致错误：
+在檔案系統上的檔移到不同的位置。如果應用程式嘗試向會導致錯誤：
 
-*   将文件移到其父，如果没有提供从其当前的一个不同的名称 ；
+*   將檔移到其父，如果沒有提供從其當前的一個不同的名稱 ；
 
-*   将文件移动到被占领 ； 每个目录的路径
+*   將檔移動到被佔領 ； 每個目錄的路徑
 
-此外，在现有文件中移动文件将尝试删除和替换该文件。
+此外，在現有檔中移動檔將嘗試刪除和替換該檔。
 
-**参数：**
+**參數：**
 
-*   **父**： 要将文件移到父目录。*() DirectoryEntry*
+*   **父**： 要將檔移到父目錄。*() DirectoryEntry*
 
-*   **newName**： 该文件的新名称。默认值为当前的名称如果未指定。*() DOMString*
+*   **newName**： 該檔的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 传递新文件回调 `FileEntry` 对象。*（函数）*
+*   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果尝试移动文件时发生错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果嘗試移動檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -187,19 +187,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## copyTo
 
-将文件复制到文件系统上的新位置。如果应用程序尝试向会导致错误：
+將檔案複製到檔案系統上的新位置。如果應用程式嘗試向會導致錯誤：
 
-*   如果未提供从其当前的一个不同的名称，请将文件复制到其父。
+*   如果未提供從其當前的一個不同的名稱，請將檔案複製到其父。
 
-**参数：**
+**參數：**
 
-*   **父**： 要向其复制该文件的父目录。*() DirectoryEntry*
+*   **父**： 要向其複製該檔的父目錄。*() DirectoryEntry*
 
-*   **newName**： 该文件的新名称。默认值为当前的名称如果未指定。*() DOMString*
+*   **newName**： 該檔的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 传递新文件回调 `FileEntry` 对象。*（函数）*
+*   **successCallback**： 傳遞新檔回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果试图复制文件时发生错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果試圖複製檔時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -223,7 +223,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## toURL
 
-返回一个可用于查找的文件的 URL。
+返回一個可用於查找的檔的 URL。
 
 **快速的示例**
 
@@ -232,15 +232,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     console.log(fileURL);
     
 
-## 删除
+## 刪除
 
-删除的文件。
+刪除的檔。
 
-**参数：**
+**參數：**
 
-*   **successCallback**: 在该文件已被删除后执行的回调。不带参数调用。*（函数）*
+*   **successCallback**: 在該檔已被刪除後執行的回檔。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果尝试删除文件时出现错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果嘗試刪除檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -258,13 +258,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## getParent
 
-查找父 `DirectoryEntry` 包含该文件。
+查找父 `DirectoryEntry` 包含該檔。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 传递文件的父的回调 `DirectoryEntry` 。*（函数）*
+*   **successCallback**： 傳遞檔的父的回檔 `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果试图检索父时发生错误执行的回调 `DirectoryEntry` 。 调用与 `FileError` 对象。 *（函数）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -282,13 +282,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## createWriter
 
-创建 `FileWriter` 对象与所代表的文件关联`FileEntry`.
+創建 `FileWriter` 物件與所代表的檔關聯`FileEntry`.
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 传递一个回调 `FileWriter` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `FileWriter` 物件。*（函數）*
 
-*   **errorCallback**： 如果试图创建 FileWriter 而发生错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果試圖創建 FileWriter 而發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -304,15 +304,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.createWriter(success, fail);
     
 
-## 文件
+## 檔
 
-返回 `File` 对象，它表示该文件的当前状态，这 `FileEntry` 表示。
+返回 `File` 物件，它表示該檔的目前狀態，這 `FileEntry` 表示。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 传递一个回调 `File` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `File` 物件。*（函數）*
 
-*   **errorCallback**： 回调的执行如果发生错误时创建 `File` 对象，例如当该文件不再存在。 调用与 `FileError` 对象。 *（函数）*
+*   **errorCallback**： 回檔的執行如果發生錯誤時創建 `File` 物件，例如當該檔不再存在。 調用與 `FileError` 物件。 *（函數）*
 
 **快速的示例**
 

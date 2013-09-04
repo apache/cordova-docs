@@ -16,15 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # device.platform
 
-获取该设备的操作系统名称。
+獲取該設備的作業系統名稱。
 
     var string = device.platform;
     
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -74,14 +74,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </html>
     
 
-## 黑莓手机的怪癖
+## 黑莓手機的怪癖
 
-设备可能会返回而不是平台名称的设备平台版本编号。例如，Storm2 9550 返回一个值如`2.13.0.95`.
+設備可能會返回而不是平臺名稱的設備平臺版本編號。例如，Storm2 9550 返回一個值如`2.13.0.95`.
 
 ## Windows Phone 7 的怪癖
 
-Windows Phone 7 设备报告作为平台`WinCE`.
+Windows Phone 7 設備報告作為平臺`WinCE`.
 
 ## Windows Phone 8 怪癖
 
-Windows Phone 8 设备报告作为平台`Win32NT`.
+Windows Phone 8 設備報告作為平臺`Win32NT`.

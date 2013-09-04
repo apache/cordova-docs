@@ -14,11 +14,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 设备
+# 設備
 
-> `device`对象描述该设备的硬件和软件。
+> `device`物件描述該設備的硬體和軟體。
 
-## 属性
+## 屬性
 
 *   device.name
 *   device.cordova
@@ -27,50 +27,69 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   device.version
 *   device.model
 
-## 变量范围
+## 變數範圍
 
-因为 `device` 分配到 `window` 的对象，它是隐式地在全球范围内。
+因為 `device` 分配到 `window` 的物件，它是隱式地在全球範圍內。
 
     // These reference the same `device`
     var phoneName = window.device.name;
     var phoneName = device.name;
     
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
         $ cordova plugin rm org.apache.cordova.core.device
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="设备">< 参数名称 ="android 包"value="org.apache.cordova.Device"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.READ_PHONE_STATE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="设备">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.device.Device"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.app"所需 ="true"版本 ="1.0.0.0"/ >< rim： 权限 >< rim： 许可证 > read_device_identifying_information < / rim： 许可证 >< / rim： 权限 >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名称 ="ID_CAP_WEBBROWSERCOMPONENT"/ >< 功能名称 ="ID_CAP_IDENTITY_DEVICE"/ >< 功能名称 ="ID_CAP_IDENTITY_USER"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
-    引用：[为 Windows Phone 应用程序清单][1]
+    引用：[為 Windows Phone 應用程式清單][1]
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名称 = 所需的"http://tizen.org/api/systeminfo"="true"/ >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
-    引用： [Tizen Web 应用程序的应用程序清单][2]
+    引用： [Tizen Web 應用程式的應用程式清單][2]
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

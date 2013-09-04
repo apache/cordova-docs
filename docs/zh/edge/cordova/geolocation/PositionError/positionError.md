@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # PositionError
 
-A `PositionError` 对象传递给 `geolocationError` 回调时出现错误。
+A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
-*   **消息**： 描述所遇到的错误的详细信息的错误消息。
+*   **消息**： 描述所遇到的錯誤的詳細資訊的錯誤訊息。
 
 ## 常量
 
@@ -30,18 +30,18 @@ A `PositionError` 对象传递给 `geolocationError` 回调时出现错误。
 *   `PositionError.POSITION_UNAVAILABLE`
 *   `PositionError.TIMEOUT`
 
-## 说明
+## 說明
 
-`PositionError`对象传递给 `geolocationError` 与地理定位发生错误时的回调函数。
+`PositionError`物件傳遞給 `geolocationError` 與地理定位發生錯誤時的回呼函數。
 
 ### `PositionError.PERMISSION_DENIED`
 
-返回当用户不允许您的应用程序检索的位置信息。这是取决于平台。
+返回當使用者不允許您的應用程式檢索的位置資訊。這是取決於平臺。
 
 ### `PositionError.POSITION_UNAVAILABLE`
 
-返回设备时，不能检索的位置。这就意味着该设备没有网络连接和/或不能得到卫星的修复。
+返回設備時，不能檢索的位置。這就意味著該設備沒有網路連接和/或不能得到衛星的修復。
 
 ### `PositionError.TIMEOUT`
 
-返回设备时，无法在指定的时间内检索位置 `geolocationOptions` ' `timeout` 属性。 与一起使用时 `geolocation.watchPosition` ，此错误可能传递给 `geolocationError` 回调每 `timeout` 毫秒为单位）。
+返回設備時，無法在指定的時間內檢索位置 `geolocationOptions` ' `timeout` 屬性。 與一起使用時 `geolocation.watchPosition` ，此錯誤可能傳遞給 `geolocationError` 回檔每 `timeout` 毫秒為單位）。

@@ -46,22 +46,35 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
 *   Android (dans`app/res/xml/config.xml`)
     
-        < nom de la fonction = "Accéléromètre" >< param name = "android-package" value="org.apache.cordova.AccelListener" / >< / fiction >
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.AccelListener" />
+        </feature>
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Accéléromètre" >< param name = "blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" / >< / fiction > (dans www/config.xml) < id="blackberry.system en vedette" requis = "true" version = "1.0.0.0" / >< id="org.apache.cordova en vedette" requis = "true" version = "1.0.0" / >
+        (in www/plugins.xml)
+        <feature name="Accelerometer">
+            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « Accéléromètre » >< param name = « ios-paquet » value = « CDVAccelerometer » / >< / fiction >
+        <feature name="Accelerometer">
+            <param name="ios-package" value="CDVAccelerometer" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< capacité nom = « ID_CAP_SENSORS » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     Référence : [Manifeste d'Application pour Windows Phone][1]

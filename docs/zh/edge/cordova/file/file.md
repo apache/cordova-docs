@@ -14,59 +14,87 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 文件
+# 檔
 
-> 一个 API，用于读取、 写入和导航基于[W3C 文件 API][1]的文件系统层次结构.
+> 一個 API，用於讀取、 寫入和導航基於[W3C 檔 API][1]的檔案系統層次結構.
 
  [1]: http://www.w3.org/TR/FileAPI
 
-## 对象
+## 物件
 
-*   枚举指定工作组或
+*   枚舉指定工作組或
 *   DirectoryReader
-*   文件
+*   檔
 *   FileEntry
 *   FileError
 *   FileReader
-*   文件系统
-*   文件传输
+*   檔案系統
+*   檔案傳輸
 *   FileTransferError
 *   FileUploadOptions
 *   FileUploadResult
 *   FileWriter
-*   标志
-*   场合
-*   元数据
+*   標誌
+*   場合
+*   中繼資料
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
         $ cordova plugin rm org.apache.cordova.core.file
     
 
-要使用的文件传输插件必须单独添加的。
+要使用的檔案傳輸外掛程式必須單獨添加的。
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
         $ cordova plugin rm org.apache.cordova.core.file-transfer
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="文件">< 参数名称 ="android 包"value="org.apache.cordova.FileUtils"/ >< / 功能 >< 功能名称 ="文件传输">< 参数名称 ="android 包"value="org.apache.cordova.FileTransfer"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="文件">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.file.FileManager"/ >< / 功能 >< 功能名称 ="文件传输">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.http.FileTransfer"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.io.file"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.utils"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.io.dir"所需 ="true"版本 ="1.0.0.0"/ >< rim: 权限 >< rim： 许可证 > access_shared < / rim： 许可证 >< / rim： 权限 >
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="文件">< 参数名称 ="ios 包"值 ="CDVFile"/ >< / 功能 >< 功能名称 ="文件传输">< 参数名称 ="ios 包"值 ="CDVFileTransfer"/ >< / 功能 >
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
         
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

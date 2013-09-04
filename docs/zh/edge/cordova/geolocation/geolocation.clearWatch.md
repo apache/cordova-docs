@@ -16,23 +16,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.clearWatch
 
-再看对所引用的设备的位置更改为 `watchID` 参数。
+再看對所引用的設備的位置更改為 `watchID` 參數。
 
     navigator.geolocation.clearWatch(watchID);
     
 
-## 参数
+## 參數
 
-*   **watchID**： 的 id `watchPosition` 清除的时间间隔。（字符串）
+*   **watchID**： 的 id `watchPosition` 清除的時間間隔。（字串）
 
-## 说明
+## 說明
 
-`geolocation.clearWatch`将停止观看对设备的位置的更改通过清除 `geolocation.watchPosition` 引用的`watchID`.
+`geolocation.clearWatch`將停止觀看對設備的位置的更改通過清除 `geolocation.watchPosition` 引用的`watchID`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    / / 选项： 监视的更改的位置，并使用最 / / 准确定位采集方法可用。
+    / / 選項： 監視的更改的位置，並使用最 / / 準確定位採集方法可用。
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     

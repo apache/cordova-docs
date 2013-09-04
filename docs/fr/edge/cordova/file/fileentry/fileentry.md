@@ -26,9 +26,9 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 *   **isDirectory**: toujours `false` . *(booléen)*
 
-*   **nom**: le nom de la `FileEntry` , à l'exclusion de la voie menant à celle-ci. *(DOMString)*
+*   **name**: le nom du `FileEntry` , à l'exclusion du chemin menant à celui-ci. *(DOMString)*
 
-*   **fullPath**: le chemin d'accès complet absolu de la racine à la `FileEntry` . *(DOMString)*
+*   **fullPath**: le chemin d'accès complet absolu de la racine de `FileEntry` . *(DOMString)*
 
 **Remarque :** L'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
 
@@ -36,23 +36,23 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 ## Méthodes
 
-*   **getMetadata**: Rechercher des métadonnées relatives à un fichier.
+*   **getMetadata**: recherche des métadonnées relatives à un fichier.
 
-*   **setMetadata**: définir des métadonnées sur un fichier.
+*   **setMetadata**: définit des métadonnées sur un fichier.
 
-*   **moveTo**: déplacer un fichier vers un autre emplacement sur le système de fichiers.
+*   **moveTo**: déplace un fichier vers un autre emplacement sur le système de fichiers.
 
-*   **copyTo**: copier un fichier vers un autre emplacement sur le système de fichiers.
+*   **copyTo**: copie un fichier vers un autre emplacement sur le système de fichiers.
 
-*   **toURL**: retourner une URL qui peut être utilisée pour localiser un fichier.
+*   **toURL**: retourne une URL qui peut être utilisée pour localiser un fichier.
 
-*   **supprimer**: effacer un fichier.
+*   **supprimer**: efface un fichier.
 
-*   **getParent**: chercher le répertoire parent.
+*   **getParent**: cherche le répertoire parent.
 
-*   **createWriter**: crée un `FileWriter` objet qui peut être utilisé pour écrire dans un fichier.
+*   **createWriter**: crée un objet `FileWriter` qui peut être utilisé pour écrire dans un fichier.
 
-*   **fichier**: crée un `File` objet contenant les propriétés de fichier.
+*   **fichier**: crée un objet `File` contenant les propriétés de fichier.
 
 ## Plates-formes prises en charge
 
@@ -64,13 +64,13 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 ## getMetadata
 
-Rechercher des métadonnées relatives à un fichier.
+Recherche des métadonnées relatives à un fichier.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel passé un `Metadata` objet. *(Fonction)*
+*   **successCallback**: un callback passé à un objet `Metadata`. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un objet `FileError`. *(Fonction)*
 
 **Petit exemple**
 
@@ -91,9 +91,9 @@ Ensemble de métadonnées sur un fichier.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel qui s'exécute lorsque les métadonnées sont définie. *(Fonction)*
+*   **successCallback**: un callback qui s'exécute lorsque les métadonnées sont définie. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute lorsque les métadonnées ne sont pas correctement définie. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute lorsque les métadonnées ne sont pas correctement définies. *(Fonction)*
 
 *   **metadataObject**: un objet qui contient les clés et les valeurs de métadonnées. *(Objet)*
 
@@ -111,9 +111,9 @@ Ensemble de métadonnées sur un fichier.
     entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
     
 
-**iOS Quirk**
+**Spécificités iOS**
 
-*   Seulement le `com.apple.MobileBackup` attribut étendu est pris en charge. Affectez la valeur `1` pour empêcher le fichier en cours de sauvegarde d'iCloud. Affectez la valeur `` pour ré-activer le fichier à sauvegarder vers iCloud.
+*   Seulement l'attribut étendu `com.apple.MobileBackup` est pris en charge. Affectez la valeur `1` pour empêcher le fichier en cours d'être sauvegardé sur iCloud. Affecte la valeur `` pour ré-activer la sauvegarde du fichier vers iCloud.
 
 **Petit exemple**
 
@@ -151,9 +151,9 @@ Ensemble de métadonnées sur un fichier.
 
 ## moveTo
 
-Déplacer un fichier vers un autre emplacement sur le système de fichiers. Une erreur se produit si l'application tente de :
+Déplace un fichier vers un autre emplacement sur le système de fichiers. Une erreur se produit si l'application tente de :
 
-*   déplacer un fichier dans sa société mère, si un nom différent de son actuel n'est pas fourni ;
+*   déplacer un fichier dans son parent, si un nom différent de son nom actuel n'est pas fourni ;
 
 *   déplacer un fichier vers un chemin occupé par un répertoire ;
 

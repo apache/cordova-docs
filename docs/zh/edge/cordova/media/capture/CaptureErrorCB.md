@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureErrorCB
 
-> 如果媒体捕获操作期间发生错误，调用。
+> 如果媒體捕獲操作期間發生錯誤，調用。
 
     function captureError( CaptureError error ) { ... };
     
 
-## 说明
+## 說明
 
-如果发生错误时试图发起一个媒体捕获操作，执行此函数。 故障情形包括捕获应用程序正忙、 捕获操作已经发生，或用户取消该操作之前捕获任何媒体文件时。
+如果發生錯誤時試圖發起一個媒體捕獲操作，執行此函數。 故障情形包括捕獲應用程式正忙、 捕獲操作已經發生，或使用者取消該操作之前捕獲任何媒體檔案時。
 
-此函数执行与 `CaptureError` 对象，其中包含适当的错误`code`.
+此函數執行與 `CaptureError` 物件，其中包含適當的錯誤`code`.
 
 ## 快速的示例
 

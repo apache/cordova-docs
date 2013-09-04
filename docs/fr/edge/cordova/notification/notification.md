@@ -20,11 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Méthodes
 
-*   `notification.Alert`
+*   `notification.alert`
 *   `notification.Confirm`
 *   `notification.prompt`
-*   `notification.Beep`
-*   `notification.VIBRATE`
+*   `notification.beep`
+*   `notification.vibrate`
 
 ## Accéder à la fonctionnalité
 
@@ -40,17 +40,31 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "Notification" >< param name = "android-package" value="org.apache.cordova.Notification" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.VIBRATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Notification" >< param name = "blackberry-package" value="org.apache.cordova.notification.Notification" / >< / fiction > (dans www/config.xml) < disposent id="blackberry.ui.dialog" / >
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « Notification » >< param name = « ios-paquet » value = « CDVNotification » / >< / fiction >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
 Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

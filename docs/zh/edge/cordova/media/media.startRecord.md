@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.startRecord
 
-开始录制的音频文件。
+開始錄製的音訊檔。
 
     media.startRecord() ；
     
 
-## 说明
+## 說明
 
-`media.startRecord`方法同步执行，开始录制的音频文件。
+`media.startRecord`方法同步執行，開始錄製的音訊檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -126,23 +126,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   Android 设备音频格式记录的自适应多速率。指定的文件应以*.amr*扩展名结尾。
+*   Android 設備音訊格式記錄的自我調整多速率。指定的檔應以*.amr*副檔名結尾。
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓设备音频格式记录的自适应多速率。指定的文件必须以*.amr*扩展名结尾。
+*   黑莓設備音訊格式記錄的自我調整多速率。指定的檔必須以*.amr*副檔名結尾。
 
 ## iOS 的怪癖
 
-*   iOS 只记录到文件的类型*.wav*和返回一个错误如果文件扩展名不正确。
+*   iOS 只記錄到檔的類型*.wav*和返回一個錯誤如果檔副檔名不正確。
 
-*   如果未提供的完整路径，录音放在应用程序的 `documents/tmp` 目录。 这可以通过访问 `File` API 使用 `LocalFileSystem.TEMPORARY` 。 在记录时指定的任何子目录中必须已经存在。
+*   如果未提供的完整路徑，錄音放在應用程式的 `documents/tmp` 目錄。 這可以通過訪問 `File` API 使用 `LocalFileSystem.TEMPORARY` 。 在記錄時指定的任何子目錄中必須已經存在。
 
-*   文件可以记录和演奏的后面使用的文件的 URI：
+*   檔可以記錄和演奏的後面使用的檔的 URI：
     
         var myMedia = new Media("documents://beer.mp3")
         
 
 ## Tizen 怪癖
 
-*   Tizen 设备上不支持。
+*   Tizen 設備上不支援。

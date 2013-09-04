@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # contactFindOptions
 
-可选的参数， `contacts.find` 方法，用于筛选从联系人数据库返回的联系人。
+可選的參數， `contacts.find` 方法，用於篩選從連絡人資料庫返回的連絡人。
 
-    {筛选器：""、 多个： true，} ；
+    {篩選器：""、 多個： true，} ；
     
 
-## 选项
+## 選項
 
-*   **筛选器**： 用于过滤联系人的搜索字符串。*() DOMString*（默认值：`""`)
+*   **篩選器**： 用於過濾連絡人的搜索字串。*() DOMString*（預設值：`""`)
 
-*   **多个**： 确定是否查找操作返回多个联系人。*（布尔）*（默认值：`false`)
+*   **多個**： 確定是否查找操作返回多個連絡人。*（布林）*（預設值：`false`)

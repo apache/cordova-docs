@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationError
 
-当有地理定位功能错误时执行的用户的回调函数。
+當有地理定位功能錯誤時執行的使用者的回呼函數。
 
     function(error) {
         // Handle the error
     }
     
 
-## 参数
+## 參數
 
-*   **错误**: 设备所返回的错误。*() PositionError*
+*   **錯誤**: 設備所返回的錯誤。*() PositionError*

@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureError
 
-> 封装失败的媒体捕获操作所引起的错误代码。
+> 封裝失敗的媒體捕獲操作所引起的錯誤代碼。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
 ## 常量
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`： 摄像机或麦克风无法捕获的图像或声音。
+*   `CaptureError.CAPTURE_INTERNAL_ERR`： 攝像機或麥克風無法捕獲的圖像或聲音。
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 相机或音频捕获应用程序正在服另一个捕获请求。
+*   `CaptureError.CAPTURE_APPLICATION_BUSY`： 相機或音訊捕獲應用程式正在服另一個捕獲請求。
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`： API 的使用无效 （例如，价值 `limit` 小于 1)。
+*   `CaptureError.CAPTURE_INVALID_ARGUMENT`： API 的使用無效 （例如，價值 `limit` 小於 1)。
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在用户退出之前捕获任何相机或音频捕获应用程序。
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES`： 在使用者退出之前捕獲任何相機或音訊捕獲應用程式。
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 请求的捕获操作不受支持。
+*   `CaptureError.CAPTURE_NOT_SUPPORTED`： 請求的捕獲操作不受支援。

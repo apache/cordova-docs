@@ -16,6 +16,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # contactFields
 
-所需参数的 `contacts.find` 方法，用来指定哪些字段应包含在 `Contact` 产生的查找操作的对象。
+所需參數的 `contacts.find` 方法，用來指定哪些欄位應包含在 `Contact` 產生的查找操作的物件。
 
-    ["名称"、"手机"、"电子邮件"]
+    ["名稱"、"手機"、"電子郵件"]

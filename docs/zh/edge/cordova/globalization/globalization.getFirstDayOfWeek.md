@@ -16,27 +16,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getFirstDayOfWeek
 
-返回客户端的用户首选项和日历星期的第一天。
+返回用戶端的使用者首選項和日曆星期的第一天。
 
     navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
     
 
-## 说明
+## 說明
 
-周中天的编号 1，从开始位置 1 假定是星期日。 返回到天 `successCallback` 与 `properties` 对象作为参数。 对象应具有 `value` 属性与 `Number` 的值。
+周中天的編號 1，從開始位置 1 假定是星期日。 返回到天 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `Number` 的值。
 
-如果有错误获得该模式，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，这将显示一个弹出对话框与类似的文本`day: 1`.
+當瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本`day: 1`.
 
     navigator.globalization.getFirstDayOfWeek(
         function (day) {alert('day: ' + day.value + '\n');},

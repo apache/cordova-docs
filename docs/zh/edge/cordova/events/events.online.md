@@ -14,23 +14,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 在线
+# 線上
 
-当应用程序进入在线状态，和该设备将成为连接到互联网时触发此事件。
+當應用程式進入線上狀態，和該設備將成為連接到互聯網時觸發此事件。
 
     document.addEventListener("online", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-`online`当先前连接的移动设备接收到一个网络连接以允许应用程序访问互联网时激发的事件。 它依赖于连接 API 中，相同的信息和火灾时的值 `connection.type` 成为`NONE`.
+`online`當先前連接的行動裝置接收到一個網路連接以允許應用程式訪問互聯網時激發的事件。 它依賴于連接 API 中，相同的資訊和火災時的值 `connection.type` 成為`NONE`.
 
-应用程序通常应使用 `document.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen
@@ -81,12 +81,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-在初始启动期间第一次 `online` 事件 （如果适用），至少需一秒的火灾之前的, `connection.type` 是`UNKNOWN`.
+在初始啟動期間第一次 `online` 事件 （如果適用），至少需一秒的火災之前的, `connection.type` 是`UNKNOWN`.
 
 ## Windows Phone 7 的怪癖
 
-当运行在仿真器中， `connection.status` 始终是未知的因此，此事件将*不*火。
+當運行在模擬器中， `connection.status` 始終是未知的因此，此事件將*不*火。
 
 ## Windows Phone 8 怪癖
 
-仿真程序报告连接类型为 `Cellular` ，而不会更改，所以事件将*不*火。
+模擬程式報告連線類型為 `Cellular` ，而不會更改，所以事件將*不*火。

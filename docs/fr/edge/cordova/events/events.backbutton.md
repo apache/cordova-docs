@@ -14,24 +14,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# ButtonBack
+# backbutton
 
-L'événement se déclenche lorsque l'utilisateur appuie sur le bouton back.
+L'évènement se déclenche lorsque l'utilisateur appuie sur le bouton retour.
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Pour substituer le comportement par défaut de la dos case, enregistrer un écouteur d'événements pour le `backbutton` événement, généralement en appelant `document.addEventListener` une fois que vous recevez le `deviceready` événement. Il n'est plus nécessaire d'appeler toute autre méthode pour substituer le comportement de la touche back.
+Afin de modifier le comportement par défaut du bouton retour, attachez un écouteur pour l'évènement `backbutton` généralement en appelant `document.addEventListener` une fois l'évènement `deviceready` reçu. Il n'est désormais plus nécessaire d'appeler d'autres méthodes pour altérer le comportement du bouton retour.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
 *   Windows Phone 7 et 8
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("backbutton", onBackKeyDown, false);
     

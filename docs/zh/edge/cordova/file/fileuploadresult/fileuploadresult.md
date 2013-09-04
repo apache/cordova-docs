@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileUploadResult
 
-A `FileUploadResult` 对象传递给成功回调的 `FileTransfer` 对象的 `upload()` 方法。
+A `FileUploadResult` 物件傳遞給成功回檔的 `FileTransfer` 物件的 `upload()` 方法。
 
-## 属性
+## 屬性
 
-*   **字节发送**： 作为上载的一部分发送到服务器的字节数。(长)
+*   **位元組發送**： 作為上載的一部分發送到伺服器的位元組數。(長)
 
-*   **responseCode**： 由服务器返回的 HTTP 响应代码。(长)
+*   **responseCode**： 由伺服器返回的 HTTP 回應代碼。(長)
 
-*   **响应**： 由服务器返回的 HTTP 响应。() DOMString
+*   **回應**： 由伺服器返回的 HTTP 回應。() DOMString
 
-## 说明
+## 說明
 
-`FileUploadResult`通过成功回调的返回的对象是 `FileTransfer` 对象的 `upload()` 方法。
+`FileUploadResult`通過成功回檔的返回的物件是 `FileTransfer` 物件的 `upload()` 方法。
 
 ## iOS 的怪癖
 
-*   不支持 `responseCode` 或`bytesSent`.
+*   不支援 `responseCode` 或`bytesSent`.

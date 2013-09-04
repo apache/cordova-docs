@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # cameraError
 
-onError 回调函数的函数提供了一条错误消息。
+onError 回呼函數的函數提供了一條錯誤訊息。
 
     function(message) {
         // Show a helpful message
     }
     
 
-## 参数
+## 參數
 
-*   **消息**： 消息提供的设备的本机代码。*（字符串）*
+*   **消息**： 消息提供的設備的本機代碼。*（字串）*

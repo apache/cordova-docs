@@ -16,25 +16,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # capture.captureAudio
 
-> 启动音频录音机应用程序并返回有关捕获音频剪辑文件的信息。
+> 啟動音訊答錄機應用程式並返回有關捕獲音訊剪輯檔的資訊。
 
     navigator.device.capture.captureAudio(
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
     );
     
 
-## 说明
+## 說明
 
-开始异步操作以捕获使用该设备的默认音频录制应用程序的音频录制。 该操作允许设备用户的单个会话中捕获多个录音。
+開始非同步作業以捕獲使用該設備的預設音訊錄製應用程式的音訊錄製。 該操作允許設備使用者的單個會話中捕獲多個錄音。
 
-在捕获操作结束时或者在用户退出音频录音应用程序或由指定的录音的最大数目 `CaptureAudioOptions.limit` 到达。 如果没有 `limit` 指定参数的值，它将默认为一 (1) 和捕获操作终止后用户记录单个音频剪辑。
+在捕獲操作結束時或者在使用者退出音訊錄音應用程式或由指定的錄音的最大數目 `CaptureAudioOptions.limit` 到達。 如果沒有 `limit` 指定參數的值，它將預設為一 (1) 和捕獲操作終止後使用者記錄單個音訊剪輯。
 
-在捕获操作完成后， `CaptureCallback` 执行与数组的 `MediaFile` 对象描述每个捕获音频剪辑文件。 如果用户终止操作之前捕获音频剪辑时， `CaptureErrorCallback` 与执行 `CaptureError` 对象中，设有 `CaptureError.CAPTURE_NO_MEDIA_FILES` 错误代码。
+在捕獲操作完成後， `CaptureCallback` 執行與陣列的 `MediaFile` 物件描述每個捕獲音訊剪輯檔。 如果使用者終止操作之前捕獲音訊剪輯時， `CaptureErrorCallback` 與執行 `CaptureError` 物件中，設有 `CaptureError.CAPTURE_NO_MEDIA_FILES` 錯誤代碼。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -122,12 +122,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 黑莓 WebWorks 怪癖
 
-*   科尔多瓦的黑莓 WebWorks 尝试启动**录音笔记**提供的应用程序，由 RIM，来捕获音频录制。 这款应用程序会收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 错误代码，如果应用程序未安装在设备上。
+*   科爾多瓦的黑莓 WebWorks 嘗試啟動**錄音筆記**提供的應用程式，由 RIM，來捕獲音訊錄製。 這款應用程式會收到 `CaptureError.CAPTURE_NOT_SUPPORTED` 錯誤代碼，如果應用程式未安裝在設備上。
 
 ## iOS 的怪癖
 
-*   iOS 没有默认的音频录音应用程序，因此提供了一个简单的用户界面。
+*   iOS 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。
 
 ## Windows Phone 7 和 8 怪癖
 
-*   Windows Phone 7 没有默认的音频录音应用程序，因此提供了一个简单的用户界面。
+*   Windows Phone 7 沒有預設的音訊錄音應用程式，因此提供了一個簡單的使用者介面。

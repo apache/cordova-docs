@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # volumedownbutton
 
-在用户按下按钮卷时，将触发该事件。
+在使用者按下按鈕卷時，將觸發該事件。
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-如果您需要重写默认音量降低的行为你可以注册为事件侦听器 `volumedownbutton` 事件。
+如果您需要重寫預設音量降低的行為你可以註冊為事件攔截器 `volumedownbutton` 事件。
 
-应用程序通常应使用 `document.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 
 ## 快速的示例
 

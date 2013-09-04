@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.beep
 
-该设备播放提示音声音。
+該設備播放提示音聲音。
 
     navigator.notification.beep(times);
     
 
-*   **时间**： 的次数重复发出蜂鸣音。*（人数）*
+*   **時間**： 的次數重複發出蜂鳴音。*（人數）*
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -91,14 +91,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   Android 系统播放的默认**通知铃声****设置/声音和显示**面板下指定。
+*   Android 系統播放的預設**通知鈴聲****設置/聲音和顯示**面板下指定。
 
 ## Windows Phone 7 和 8 怪癖
 
-*   依赖泛型蜂鸣音文件从科尔多瓦分布。
+*   依賴泛型蜂鳴音檔從科爾多瓦分佈。
 
 ## Tizen 怪癖
 
-*   Tizen 通过播放音频文件通过媒体 API 实现会发出蜂鸣声。
+*   Tizen 通過播放音訊檔通過媒體 API 實現會發出蜂鳴聲。
 
-*   蜂鸣音文件必须很短，必须设在 `sounds` 子目录中的应用程序的根目录中，并且必须命名`beep.wav`.
+*   蜂鳴音檔必須很短，必須設在 `sounds` 子目錄中的應用程式的根目錄中，並且必須命名`beep.wav`.

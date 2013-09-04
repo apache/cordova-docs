@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # contactError
 
-联系函数的错误回调函数。
+聯繫函數的錯誤回呼函數。
 
     function(error) {
         // Handle the error

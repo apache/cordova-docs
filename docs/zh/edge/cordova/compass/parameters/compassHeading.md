@@ -16,30 +16,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compassHeading
 
-A `CompassHeading` 对象返回到 `compassSuccess` 回调函数。
+A `CompassHeading` 物件返回到 `compassSuccess` 回呼函數。
 
-## 属性
+## 屬性
 
-*   **magneticHeading**： 在某一时刻在时间中从 0-359.99 度的标题。*（人数）*
+*   **magneticHeading**： 在某一時刻在時間中從 0-359.99 度的標題。*（人數）*
 
-*   **trueHeading**： 在某一时刻的时间与地理北极在 0-359.99 度标题。 负值表示不能确定真正的标题。 *（人数）*
+*   **trueHeading**： 在某一時刻的時間與地理北極在 0-359.99 度標題。 負值表示不能確定真正的標題。 *（人數）*
 
-*   **headingAccuracy**： 中度报告的标题和真正标题之间的偏差。*（人数）*
+*   **headingAccuracy**： 中度報告的標題和真正標題之間的偏差。*（人數）*
 
-*   **时间戳**： 本项决定在其中的时间。*（毫秒）*
+*   **時間戳記**： 本項決定在其中的時間。*（毫秒）*
 
-## 说明
+## 說明
 
-`CompassHeading`对象返回到 `compassSuccess` 回调函数。
+`CompassHeading`物件返回到 `compassSuccess` 回呼函數。
 
 ## Android 的怪癖
 
-*   `trueHeading`不受支持，但报告相同的值`magneticHeading`
+*   `trueHeading`不受支援，但報告相同的值`magneticHeading`
 
-*   `headingAccuracy`是始终为 0 因为有没有区别 `magneticHeading` 和`trueHeading`.
+*   `headingAccuracy`是始終為 0 因為有沒有區別 `magneticHeading` 和`trueHeading`.
 
 ## iOS 的怪癖
 
 *   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
 
-*   IOS 4 设备及以上标题因素在该设备的当前方向，不涉及其绝对的立场，为应用程序支持的方向。
+*   IOS 4 設備及以上標題因素在該設備的當前方向，不涉及其絕對的立場，為應用程式支援的方向。

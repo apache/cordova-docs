@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # connection.type
 
-检查当前活动的网络连接。
+檢查當前活動的網路連接。
 
-## 说明
+## 說明
 
-此属性提供快速的方法来确定设备的网络连接状态，和连接类型。
+此屬性提供快速的方法來確定設備的網路連接狀態，和連線類型。
 
-## 支持的平台
+## 支援的平臺
 
 *   iOS
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   Tizen
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -98,22 +98,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## API 更改
 
-科尔多瓦 2.3.0，直到 `Connection` 对象的访问通过 `navigator.network.connection` 后才改为其中, `navigator.connection` 以匹配的 W3C 规范。 它在其原始位置，是仍然可用，但已废弃，最终将被删除。
+科爾多瓦 2.3.0，直到 `Connection` 物件的訪問通過 `navigator.network.connection` 後才改為其中, `navigator.connection` 以匹配的 W3C 規範。 它在其原始位置，是仍然可用，但已廢棄，最終將被刪除。
 
 ## iOS 的怪癖
 
-*   iOS 无法检测到蜂窝网络连接的类型。 
+*   iOS 無法檢測到蜂窩網路連接的類型。 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone 怪癖
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone 不能检测的蜂窝网络连接的类型。
+*   Windows Phone 不能檢測的蜂窩網路連接的類型。
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Tizen 怪癖
 
-*   Tizen 只可以检测一个 WiFi 或者蜂窝连接。 
+*   Tizen 只可以檢測一個 WiFi 或者蜂窩連接。 
     *   `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.

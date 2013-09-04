@@ -16,15 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 事件
 
-> 科尔多瓦生命周期事件。
+> 科爾多瓦生命週期事件。
 
-## 事件类型
+## 事件種類
 
 *   deviceready
-*   暂停
-*   简历
-*   在线
-*   脱机
+*   暫停
+*   簡歷
+*   線上
+*   離線
 *   backbutton
 *   batterycritical
 *   batterylow
@@ -36,38 +36,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## 访问功能
+## 訪問功能
 
-版本为 3.0，科尔多瓦实现电池状态和其他设备级 Api 作为*插件*。 默认情况下启用对所有其他不相关的电池状态的事件的访问。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以启用或禁用电池事件：
+版本為 3.0，科爾多瓦實現電池狀態和其他設備級 Api 作為*外掛程式*。 預設情況下啟用對所有其他不相關的電池狀態的事件的訪問。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以啟用或禁用電池事件：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
         $ cordova plugin rm org.apache.cordova.core.battery-status
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="蓄电池">< 参数名称 ="android 包"value="org.apache.cordova.BatteryListener"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.BROADCAST_STICKY"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="蓄电池">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.battery.Battery"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.app"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.app.event"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.system.event"所需 ="true"版本 ="1.0.0.0"/ >
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="蓄电池">< 参数名称 ="ios 包"值 ="CDVBattery"/ >< / 功能 >
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
         
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名称 = 所需的"http://tizen.org/api/systeminfo"="true"/ >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
-    引用： [Tizen Web 应用程序的应用程序清单][1]
+    引用： [Tizen Web 應用程式的應用程式清單][1]
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

@@ -14,35 +14,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 场合
+# 場合
 
-此对象提供一个获取根文件系统方法。
+此物件提供一個獲取根檔案系統方法。
 
 ## 方法
 
-*   **requestFileSystem**: 请求的文件系统。*（函数）*
+*   **requestFileSystem**: 請求的檔案系統。*（函數）*
 
-*   **resolveLocalFileSystemURI**: 检索 `DirectoryEntry` 或 `FileEntry` 使用当地的 URI。*（函数）*
+*   **resolveLocalFileSystemURI**: 檢索 `DirectoryEntry` 或 `FileEntry` 使用當地的 URI。*（函數）*
 
 ## 常量
 
-*   `LocalFileSystem.PERSISTENT`： 用于存储，不应由用户代理不应用程序或用户的权限的情况下删除。
+*   `LocalFileSystem.PERSISTENT`： 用於存儲，不應由使用者代理不應用程式或使用者的許可權的情況下刪除。
 
-*   `LocalFileSystem.TEMPORARY`： 用于不能保证的持久性存储。
+*   `LocalFileSystem.TEMPORARY`： 用於不能保證的持久性存儲。
 
-## 详细信息
+## 詳細資訊
 
-`LocalFileSystem`对象的方法定义在 `window` 对象。
+`LocalFileSystem`物件的方法定義在 `window` 物件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 请求文件系统快速示例
+## 請求檔案系統快速示例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -52,7 +52,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## 解决本地文件系统的 URI 快速示例
+## 解決本地檔案系統的 URI 快速示例
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);

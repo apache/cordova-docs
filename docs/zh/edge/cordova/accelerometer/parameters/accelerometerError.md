@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerError
 
-加速度函数 onError 的回调函数。
+加速度函數 onError 的回呼函數。
 
     function() {
         // Handle the error

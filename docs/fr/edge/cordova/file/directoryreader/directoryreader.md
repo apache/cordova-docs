@@ -38,9 +38,9 @@ Lire les entrées dans ce répertoire.
 
 **Paramètres :**
 
-*   **successCallback**: un rappel qui est passé à un tableau de `FileEntry` et `DirectoryEntry` des objets. *(Fonction)*
+*   **successCallback**: un callback qui est passé à un tableau d'objets `FileEntry` et `DirectoryEntry`. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lors de la récupération de la liste de répertoires. Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute si une erreur se produit lors de la récupération de la liste de répertoires. Appelée avec un objet `FileError`. *(Fonction)*
 
 **Petit exemple**
 

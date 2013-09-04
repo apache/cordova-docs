@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # batterystatus
 
-在电池的状态中的更改时，将触发该事件。
+在電池的狀態中的更改時，將觸發該事件。
 
     window.addEventListener("batterystatus", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-当电池电量的百分比改变了至少 1%，或如果在插入或拔出该设备会触发此事件。
+當電池計量的百分比改變了至少 1%，或如果在插入或拔出該設備會觸發此事件。
 
-电池状态处理程序传递一个对象，包含两个属性：
+電池狀態處理常式傳遞一個物件，包含兩個屬性：
 
-*   **级别**: 电池充电 (0-100) 的百分比。*（人数）*
+*   **級別**: 電池充電 (0-100) 的百分比。*（人數）*
 
-*   **isPlugged**： 一个布尔值，该值指示设备是否插*(布尔值)*
+*   **isPlugged**： 一個布林值，該值指示設備是否插*(布林值)*
 
-应用程序通常应使用 `window.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `window.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
 *   iOS
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   Windows Phone 7 和 8
 *   Tizen
 
 ## Windows Phone 7 和 8 怪癖
 
-Windows Phone 7 并不提供本机 Api 来确定电池电量水平，所以 `level` 是不可用的属性。`isPlugged`参数**支持的。
+Windows Phone 7 並不提供本機 Api 來確定電池計量水準，所以 `level` 是不可用的屬性。`isPlugged`參數**支援的。
 
 ## 快速的示例
 

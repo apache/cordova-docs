@@ -14,42 +14,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 域白名单指南
+# 域白名單指南
 
 ## 概述
 
-域白是一种安全模式，控制访问到外部域，如 `http://google.com` 。 Apache 科尔多瓦默认安全策略允许访问的任何站点。 在移动之前您在生产中的应用，应审查其白名单和声明访问到特定的网络域和子域。
+域白是一種安全模式，控制訪問到外部域，如 `http://google.com` 。 Apache 科爾多瓦預設安全性原則允許訪問的任何網站。 在移動之前您在生產中的應用，應審查其白名單和聲明訪問到特定的網路域和子域。
 
-## 规格
+## 規格
 
-域白为[W3C 构件访问][1]规范奠定了基础。 在构件访问规范中， `<access>` 元素，用来声明对特定的网络域的访问。 在将来，Apache 科尔多瓦将抽象的平台白实现向 W3C 构件访问规范。 然而，现在每个平台必须实现它自己的域白。
+域白為[W3C 構件訪問][1]規範奠定了基礎。 在構件訪問規範中， `<access>` 元素，用來聲明對特定的網路域的訪問。 在將來，Apache 科爾多瓦將抽象的平臺白實現向 W3C 構件訪問規範。 然而，現在每個平臺必須實現它自己的域白。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-## 语法
+## 語法
 
-[Google.com][2]访问：
+[Google.com][2]訪問：
 
  [2]: http://google.com
 
     http://google.com
     
 
-对安全[google.com][3]的访问 ( `https://` ):
+對安全[google.com][3]的訪問 ( `https://` ):
 
  [3]: https://google.com
 
     https://google.com
     
 
-子域[maps.google.com][4]访问：
+子域[maps.google.com][4]訪問：
 
  [4]: http://maps.google.com
 
     http://maps.google.com
     
 
-访问[google.com][2] （例如， [mail.google.com][5]和[docs.google.com][6]） 的所有子域：
+訪問[google.com][2] （例如， [mail.google.com][5]和[docs.google.com][6]） 的所有子域：
 
  [5]: http://mail.google.com
  [6]: http://docs.google.com
@@ -57,115 +57,115 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     http://*.google.com
     
 
-对于所有的域 （例如， [google.com][2]和[developer.mozilla.org][7]） 的访问权限：
+對於所有的域 （例如， [google.com][2]和[developer.mozilla.org][7]） 的存取權限：
 
  [7]: http://developer.mozilla.org
 
     *
     
 
-## Android 系统
+## Android 系統
 
-### 详细信息
+### 詳細資訊
 
-在找到白规则 `res/xml/config.xml` ，并宣布与元素`<access origin="..." />`.
+在找到白規則 `res/xml/config.xml` ，並宣佈與元素`<access origin="..." />`.
 
-Android 系统完全支持白语法。
+Android 系統完全支援白語法。
 
-### 语法
+### 語法
 
-[Google.com][2]访问：
+[Google.com][2]訪問：
 
-    < 访问来源 ="http://google.com"/ >
+    <access origin="http://google.com" />
     
 
-## 黑莓手机
+## 黑莓手機
 
-### 详细信息
+### 詳細資訊
 
-在找到白规则 `www/config.xml` ，并宣布与元素`<access uri="..." />`.
+在找到白規則 `www/config.xml` ，並宣佈與元素`<access uri="..." />`.
 
-完整引用，请参阅的[黑莓 WebWorks 访问元素文档][8].
+完整引用，請參閱的[黑莓 WebWorks 訪問元素文檔][8].
 
  [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-### 语法
+### 語法
 
-[Google.com][2]访问：
+[Google.com][2]訪問：
 
-    < 访问 uri ="http://google.com"的子域 ="false"/ >
+    <access uri="http://google.com" subdomains="false" />
     
 
-对[maps.google.com][4]的访问：
+對[maps.google.com][4]的訪問：
 
-    < 访问 uri ="http://maps.google.com"子域 ="false"/ >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
-对在[google.com][2]上的所有子域的访问：
+對在[google.com][2]上的所有子域的訪問：
 
-    < 访问 uri ="http://google.com"的子域 ="true"/ >
+    <access uri="http://google.com" subdomains="true" />
     
 
-访问到所有的域，包括 `file://` 协议：
+訪問到所有的域，包括 `file://` 協定：
 
-    < 访问 uri ="*"的子域 ="true"/ >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
 
-### 详细信息
+### 詳細資訊
 
-在找到白规则 `AppName/config.xml` ，并宣布与元素`<access origin="..." />`.
+在找到白規則 `AppName/config.xml` ，並宣佈與元素`<access origin="..." />`.
 
-iOS 完全支持白语法。
+iOS 完全支援白語法。
 
-**注：**起源指定没有协议，如 `www.apache.org` 而不是 `http://www.apache.org` ，默认为所有的 `http` ， `https` ， `ftp` ，和 `ftps` 计划。
+**注：**起源指定沒有協定，如 `www.apache.org` 而不是 `http://www.apache.org` ，預設為所有的 `http` ， `https` ， `ftp` ，和 `ftps` 計畫。
 
-### 语法
+### 語法
 
-通配符在 iOS 上的 ( `*` ) 比[W3C 构件访问][1]规范更灵活。
+萬用字元在 iOS 上的 ( `*` ) 比[W3C 構件訪問][1]規範更靈活。
 
-访问所有子域和顶级域名 （ `.com` ， `.net` ，等等）：
+訪問所有子域和頂層網域名 （ `.com` ， `.net` ，等等）：
 
     *.google.*
     
 
 ## Windows Phone (7 和 8)
 
-在找到白规则 `config.xml` ，并宣布与元素`<access origin="..." />`.
+在找到白規則 `config.xml` ，並宣佈與元素`<access origin="..." />`.
 
-Android 系统完全支持白语法。
+Android 系統完全支援白語法。
 
-### 语法
+### 語法
 
-[Google.com][2]访问：
+[Google.com][2]訪問：
 
-    < 访问来源 ="http://google.com"/ >
+    <access origin="http://google.com" />
     
 
 ## Tizen
 
-### 详细信息
+### 詳細資訊
 
-应用程序根目录下的 `config.xml` 文件指定域白规则，使用 `<access origin="..." />` 元素。 完整引用，请参阅 \[Tizen 访问外部网络资源文档\] \[10\]。
+應用程式根目錄下的 `config.xml` 檔指定域白規則，使用 `<access origin="..." />` 元素。 完整引用，請參閱 \[Tizen 訪問外部網路資源文檔\] \[10\]。
 
-### 语法
+### 語法
 
-[Google.com][2]访问：
+[Google.com][2]訪問：
 
-    < 访问来源 ="http://google.com"的子域 ="false"/ >
+    <access origin="http://google.com" subdomains="false" />
     
 
-对安全[google.com][3]的访问 ( `https://` ):
+對安全[google.com][3]的訪問 ( `https://` ):
 
-    < 访问来源 ="https://google.com"的子域 ="false"/ >
+    <access origin="https://google.com" subdomains="false" />
     
 
-对在[google.com][2]上的所有子域的访问：
+對在[google.com][2]上的所有子域的訪問：
 
-    < 访问来源 ="http://google.com"的子域 ="true"/ >
+    <access origin="http://google.com" subdomains="true" />
     
 
-访问到所有的域，包括 `file://` 协议：
+訪問到所有的域，包括 `file://` 協定：
 
-    < 访问来源 ="*"的子域 ="true"/ >
+    <access origin="*" subdomains="true" />

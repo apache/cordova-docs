@@ -16,8 +16,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerOptions
 
-若要自定义的加速度计值检索一个可选参数。
+若要自訂的加速度計值檢索一個可選參數。
 
-## 选项
+## 選項
 
-*   **频率**： 经常如何检索 `Acceleration` 以毫秒为单位。*（人数）*（默认值： 10000）
+*   **頻率**： 經常如何檢索 `Acceleration` 以毫秒為單位。*（人數）*（預設值： 10000）

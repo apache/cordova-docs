@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # cameraSuccess
 
-onSuccess 提供的图像数据的回调函数。
+onSuccess 提供的圖像資料的回呼函數。
 
     function(imageData) {
         // Do something with the image
     }
     
 
-## 参数
+## 參數
 
-*   **把图像数据**： Base64 编码的图像数据，*或*图像文件的 URI，取决于 `cameraOptions` 生效。*（字符串）*
+*   **把圖像資料**： Base64 編碼的圖像資料，*或*影像檔的 URI，取決於 `cameraOptions` 生效。*（字串）*
 
 ## 示例
 

@@ -16,38 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.dateToString
 
-返回一个日期格式设置为一个字符串，根据客户端的区域设置和时区。
+返回一個日期格式設置為一個字串，根據用戶端的地區設定和時區。
 
     navigator.globalization.dateToString(date, successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回格式化的日期 `String` 通过 `value` 属性可从该对象作为一个参数传递`successCallback`.
+返回格式化的日期 `String` 通過 `value` 屬性可從該物件作為一個參數傳遞`successCallback`.
 
-入站 `date` 参数的类型应为`Date`.
+入站 `date` 參數的類型應為`Date`.
 
-如果有错误格式日期，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.FORMATTING\_ERROR`.
+如果有錯誤格式日期，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
 
-`options`参数是可选的且其默认值：
+`options`參數是可選的且其預設值：
 
-    {formatLength: '短'，选择器： 日期和时间}
+    {formatLength: '短'，選擇器： 日期和時間}
     
 
 `options.formatLength`可以是 `short` ， `medium` ， `long` ，或`full`.
 
 `options.selector`可以是 `date` ， `time` 或`date and time`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-如果浏览器设置为 `en\_US` 的区域设置，这将显示一个弹出对话框与类似的文本 `date: 9/25/2012 4:21PM` 使用默认选项：
+如果瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本 `date: 9/25/2012 4:21PM` 使用預設選項：
 
     navigator.globalization.dateToString(
         new Date(),
@@ -84,4 +84,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 8 怪癖
 
-*   `formatLength`选项仅支持 `short` 和 `full` 的值。
+*   `formatLength`選項僅支援 `short` 和 `full` 的值。

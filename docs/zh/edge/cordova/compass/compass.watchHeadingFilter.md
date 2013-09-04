@@ -16,4 +16,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compass.watchHeadingFilter
 
-不再支持 1.6，见 `compass.watchHeading` 为等效的功能。
+不再支援 1.6，見 `compass.watchHeading` 為等效的功能。

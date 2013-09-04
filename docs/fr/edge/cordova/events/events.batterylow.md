@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # batterylow
 
-L'événement se déclenche lorsque la batterie a atteint le seuil de bas niveau.
+L'évènement se déclenche lorsque la batterie a atteint le seuil de bas niveau.
 
     window.addEventListener("batterylow", yourCallbackFunction, false);
     
 
 ## Détails
 
-L'événement se déclenche lorsque le pourcentage de charge de la batterie a atteint pile faible seuil, valeur spécifique au périphérique.
+L'évènement se déclenche lorsque le pourcentage de charge de la batterie a atteint un niveau faible, cette valeur est spécifique à l'appareil.
 
-Le `batterylow` est passé au gestionnaire d'un objet qui contient deux propriétés :
+Le gestionnaire `batterylow` est appelé avec un objet contenant deux propriétés :
 
-*   **niveau**: le pourcentage de charge de la batterie (0-100). *(Nombre)*
+*   **level** : le taux de charge de la batterie (0-100). *(Number)*
 
-*   **isPlugged**: valeur booléenne qui indique si l'appareil n'est branché *(Boolean)*
+*   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   iOS
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
 *   Paciarelli
 
-## Petit exemple
+## Exemple court
 
     window.addEventListener("batterylow", onBatteryLow, false);
     

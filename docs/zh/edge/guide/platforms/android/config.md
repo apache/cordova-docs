@@ -14,32 +14,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android 系统配置
+# Android 系統組態
 
-`config.xml`文件控制科尔多瓦的各种设置。这些应用跨应用程序，和每个 CordovaWebView 实例。
+`config.xml`檔控制科爾多瓦的各種設置。這些應用跨應用程式，和每個 CordovaWebView 實例。
 
-## `< 首选项 >`
+## `< 首選項 >`
 
-各种其他首选项 （作为 `<preference>` 标签） 默认情况下，不打破现有的应用程序。可用的选择是：
+各種其他首選項 （作為 `<preference>` 標籤） 預設情況下，不打破現有的應用程式。可用的選擇是：
 
-*   `useBrowserHistory`(boolean 类型的值，默认值为 `true` ）： 设置为 `false` 如果您想要使用被用来解决目前在之前的历史修复 Android 3.x 中的标签错误历史垫片。 （注意： 此设置将会在 2013 年 4 月已弃用)
+*   `useBrowserHistory`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 如果您想要使用被用來解決目前在之前的歷史修復 Android 3.x 中的標籤錯誤歷史墊片。 （注意： 此設置將會在 2013 年 4 月已棄用)
 
-*   `loadingDialog`： 显示本机加载对话框加载应用程序时。值的格式是*标题、 消息*
+*   `loadingDialog`： 顯示本機載入對話方塊載入應用程式時。值的格式是*標題、 消息*
 
-*   `loadingPageDialog`： 显示本机加载对话框加载的子页面时。值的格式是*标题、 消息*
+*   `loadingPageDialog`： 顯示本機載入對話方塊載入的子頁面時。值的格式是*標題、 消息*
 
-*   `errorUrl`： 设置您的应用程序的错误页。应设在 Android 项目中`file://android_asset/www/`
+*   `errorUrl`： 設置您的應用程式的錯誤頁。應設在 Android 專案中`file://android_asset/www/`
 
-*   `backgroundColor`： 设置您的应用程序的背景色。 支持四个字节的十六进制值，以表示 alpha 值，并采用标准的 RGB 值以下的三个字节的第一个字节。 例如， `0x00000000` 是黑色的。
+*   `backgroundColor`： 設置您的應用程式的背景色。 支援四個位元組的十六進位值，以表示 Alpha 值，並採用標準的 RGB 值以下的三個位元組的第一個位元組。 例如， `0x00000000` 是黑色的。
 
-*   `loadUrlTimeoutValue`： 多少科尔多瓦投掷超时错误的应用程序之前应等待的时间。
+*   `loadUrlTimeoutValue`： 多少科爾多瓦投擲逾時錯誤的應用程式之前應等待的時間。
 
-*   `keepRunning`(boolean 类型的值，默认值为 `true` ）： 确定是否科尔多瓦保持在后台运行。
+*   `keepRunning`(boolean 類型的值，預設值為 `true` ）： 確定是否科爾多瓦保持在後臺運行。
 
-*   `splashscreen`： 减去其扩展名的文件的名称 `res/drawable` 目录。 如果您有多项资产，他们都必须共享此共同在它们各自的目录名称。
+*   `splashscreen`： 減去其副檔名的檔的名稱 `res/drawable` 目錄。 如果您有多項資產，他們都必須共用此共同在它們各自的目錄名稱。
 
-*   `disallowOverscroll`(boolean 类型的值，默认值为 `false` ）： 设置为 `true` 禁用所发出的光芒，当用户滚动 web 视图的边缘之外。
+*   `disallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 禁用所發出的光芒，當使用者滾動 web 視圖的邊緣之外。
 
-## `< 插件 >`
+## `< 外掛程式 >`
 
-Android 系统支持使用 `<feature>` 作为类似物的 `<plugin>` 元素。
+Android 系統支援使用 `<feature>` 作為類似物的 `<plugin>` 元素。

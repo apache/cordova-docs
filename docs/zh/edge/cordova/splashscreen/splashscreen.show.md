@@ -16,18 +16,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # splashscreen.show
 
-显示初始屏幕。
+顯示初始螢幕。
 
     navigator.splashscreen.show();
     
 
-## 说明
+## 說明
 
-此方法显示应用程序的初始屏幕。
+此方法顯示應用程式的初始螢幕。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   黑莓 10
 *   iOS
 *   Windows Phone 7 和 8

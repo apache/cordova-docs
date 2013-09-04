@@ -16,23 +16,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 加速度
 
-包含 `Accelerometer` 在时间中的特定点捕获的数据。
+包含 `Accelerometer` 在時間中的特定點捕獲的資料。
 
-## 属性
+## 屬性
 
-*   **x**： 在 x 轴上的加速度量。（在 m/s ^2)*（人数）*
-*   **y**： 在 y 轴上的加速度量。（在 m/s ^2)*（人数）*
-*   **z**： 在 z 轴上的加速度量。（在 m/s ^2)*（人数）*
-*   **时间戳**： 创建时间戳以毫秒为单位。*() DOMTimeStamp*
+*   **x**： 在 X 軸上的加速度量。（在 m/s ^2)*（人數）*
+*   **y**： 在 y 軸上的加速度量。（在 m/s ^2)*（人數）*
+*   **z**： 在 Z 軸上的加速度量。（在 m/s ^2)*（人數）*
+*   **時間戳記**： 創建時間戳記以毫秒為單位。*() DOMTimeStamp*
 
-## 说明
+## 說明
 
-`Acceleration`对象是填充的返回的任何的 API 的 `Accelerometer` 方法。 加速度值包括引力的影响 (9.81 m/s ^2)，因此当设备谎言平面和面朝上， *x*、 *y*，和*z*返回的值应该是 `` ， `` ，和`9.81`.
+`Acceleration`物件是填充的返回的任何的 API 的 `Accelerometer` 方法。 加速度值包括引力的影響 (9.81 m/s ^2)，因此當設備謊言平面和麵朝上， *x*、 *y*，和*z*返回的值應該是 `` ， `` ，和`9.81`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

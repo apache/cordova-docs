@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.pause
 
-暂停播放音频文件。
+暫停播放音訊檔。
 
     media.pause();
     
 
-## 说明
+## 說明
 
-`media.pause`方法执行同步，并暂停播放音频文件。
+`media.pause`方法執行同步，並暫停播放音訊檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen

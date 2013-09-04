@@ -35,12 +35,16 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
 *   Android (dans`app/res/xml/config.xml`)
     
-        < nom de la fonction = "SplashScreen" >< param name = "android-package" value="org.apache.cordova.SplashScreen" / >< / fiction >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « SplashScreen » >< param name = « ios-paquet » value = « CDVSplashScreen » / >< / fiction >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
@@ -62,8 +66,8 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 1.  Dans la `onCreate` méthode de la classe qui s'étend `DroidGap` , ajoutez les deux lignes suivantes :
     
-        super.setIntegerProperty ("splashscreen", R.drawable.splash) ;
-        super.loadUrl(Config.getStartUrl(), 10000) ;
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        super.loadUrl(Config.getStartUrl(), 10000);
         
     
     La première ligne définit l'image à afficher comme le splashscreen. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne. La deuxième ligne est la normale `super.loadUrl` ligne, mais il a un deuxième paramètre qui spécifie une valeur de délai d'attente pour l'écran de démarrage. Dans cet exemple, l'écran de démarrage affiche pendant 10 secondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.

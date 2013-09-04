@@ -14,47 +14,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 文件
+# 檔
 
-此对象包含的单个文件的属性。
+此物件包含的單個檔的屬性。
 
-## 属性
+## 屬性
 
-*   **名称**： 文件的名称。*() DOMString*
+*   **名稱**： 檔的名稱。*() DOMString*
 
-*   **完整路径**： 包括文件名的文件的完整路径。*() DOMString*
+*   **完整路徑**： 包括檔案名的檔的完整路徑。*() DOMString*
 
-*   **类型**： 文件的 mime 类型。*() DOMString*
+*   **類型**： 檔的 mime 類型。*() DOMString*
 
-*   **lastModifiedDate**： 上次修改该文件的时间。*（日期）*
+*   **lastModifiedDate**： 上次修改該檔的時間。*（日期）*
 
-*   **大小**： 以字节为单位的文件大小。*(长)*
+*   **大小**： 以位元組為單位的檔案大小。*(長)*
 
 ## 方法
 
-*   **切片**: 仅选择了部分要读取的文件。
+*   **切片**: 僅選擇了部分要讀取的檔。
 
-## 详细信息
+## 詳細資訊
 
-`File`对象包含单个文件的属性。您可以获取的实例 `File` 对象通过调用 `FileEntry` 对象的 `file()` 方法。
+`File`物件包含單個檔的屬性。您可以獲取的實例 `File` 物件通過調用 `FileEntry` 物件的 `file()` 方法。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## 切片
 
-返回一个新的 `File` 对象，为其 `FileReader` 返回只有该文件的指定的部分。 负值设置为 `start` 或 `end` 测量从文件的末尾。 相对于当前切片定位的索引。 （请参阅下面的完整示例）。
+返回一個新的 `File` 物件，為其 `FileReader` 返回只有該檔的指定的部分。 負值設置為 `start` 或 `end` 測量從檔的末尾。 相對於當前切片定位的索引。 （請參閱下面的完整示例）。
 
-**参数：**
+**參數：**
 
-*   **开始**： 要阅读，具有包容性的第一个字节的索引。
+*   **開始**： 要閱讀，具有包容性的第一個位元組的索引。
 
-*   **结束**: 后最后一个要读取的字节的索引。
+*   **結束**: 後最後一個要讀取的位元組的索引。
 
 **快速的示例**
 
@@ -70,7 +70,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     // slice2 and slice3 are equivalent.
     
 
-**支持的平台**
+**支援的平臺**
 
-*   Android 系统
+*   Android 系統
 *   iOS

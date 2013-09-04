@@ -48,24 +48,43 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/xml/config.xml) < nombre de la función = "Device" >< nombre param = "android-paquete" value="org.apache.cordova.Device" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.READ_PHONE_STATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.xml) < nombre de la función = "Dispositivo" >< nombre param = "blackberry-paquete" value="org.apache.cordova.device.Device" / >< / característica > (en www/config.xml) < cuentan con id="blackberry.app" requiere = "true" versión = "1.0.0.0" / >< del borde: permisos >< rim: permiso > read_device_identifying_information < / borde: permiso >< / borde: permisos >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacidades >< nombre de capacidad = "ID_CAP_WEBBROWSERCOMPONENT" / >< nombre de capacidad = "ID_CAP_IDENTITY_DEVICE" / >< nombre de capacidad = "ID_CAP_IDENTITY_USER" / >< / capacidades >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
     Referencia: [manifiesto de aplicación para Windows Phone][1]
 
 *   Tizen (en`config.xml`)
     
-        < nombre de la función = "http://tizen.org/api/systeminfo" requerida = "true" / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     Referencia: [aplicación manifiesto de aplicación Web Tizen][2]

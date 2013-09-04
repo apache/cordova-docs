@@ -14,47 +14,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 黑莓手机的命令行工具
+# 黑莓手機的命令列工具
 
-`cordova`命令行实用程序是一个高级别的工具，允许您在一次跨几个平台生成的应用程序。 旧版本的科尔多瓦框架提供了特定于每个平台的命令行工具集。 若要使用它们作为 CLI 的替代，您需要从[cordova.apache.org][1]下载此版本的科尔多瓦。 下载文件中包含单独的档案，为每个平台。 展开您想要的目标平台。 这里描述的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**文件，了解有关更多详细的指示。
+`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
-## 创建一个项目
+## 創建一個專案
 
-运行 `create` 命令，指定的现有路径的项目、 反向域式包标识符和应用程序的显示名称。这里是 Mac 和 Windows 的语法：
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。這裡是 Mac 和 Windows 的語法：
 
     $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
     
 
-**注：**黑莓平台忽略软件包名称的占位符 ( `com.example.project_name` )，但它已仍需使用的跨平台的工具。
+**注：**黑莓平臺忽略套裝軟體名稱的預留位置 ( `com.example.project_name` )，但它已仍需使用的跨平臺的工具。
 
-## 生成项目
+## 生成專案
 
-对于黑莓手机的项目，请确保您自定义 `project.properties` 在科尔多瓦项目的根目录中的文件。 你需要提供你的黑莓手机签名密钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓仿真程序的可执行文件的位置。
+對於黑莓手機的專案，請確保您自訂 `project.properties` 在科爾多瓦專案的根目錄中的檔。 你需要提供你的黑莓手機簽名金鑰的密碼，這樣做並指定黑莓 WebWorks SDK 和黑莓模擬程式的可執行檔的位置。
 
     $ /path/to/my_new_project/cordova/build <platform>
     $ /path/to/my_new_project/cordova/build.bat <platform>
     
 
-## 启动仿真程序
+## 啟動模擬程式
 
-对于黑莓手机的项目，请确保您自定义 `project.properties` 科尔多瓦项目目录的根目录中的文件。 你需要提供你的黑莓手机签名密钥的密码，这样做并指定黑莓 WebWorks SDK 和黑莓仿真程序的可执行文件的位置。
+對於黑莓手機的專案，請確保您自訂 `project.properties` 科爾多瓦專案目錄的根目錄中的檔。 你需要提供你的黑莓手機簽名金鑰的密碼，這樣做並指定黑莓 WebWorks SDK 和黑莓模擬程式的可執行檔的位置。
 
     $ /path/to/my_new_project/cordova/run <platform>
     
 
-然后选择 '否' 时提示您：
+然後選擇 '否' 時提示您：
 
-    你有一个黑莓设备连接到您的计算机吗？(y/n) $ /path/to/my_new_project/cordova/run < 平台 >
+    你有一個黑莓設備連接到您的電腦嗎？(y/n) $ /path/to/my_new_project/cordova/run < 平臺 >
     
 
-然后选择 '否' 时提示您：
+然後選擇 '否' 時提示您：
 
-    你有一个黑莓设备连接到您的计算机吗？(y /) n
+    你有一個黑莓設備連接到您的電腦嗎？(y /) n
     
 
-## 日志记录
+## 日誌記錄
 
-不幸的是，流直接从设备日志是目前不支持的。 然而，黑莓手机提供了内置 Web 检查器支持 Playbook 和黑莓智能手机设备运行黑莓 OS 7.0 及以上。 您还可以访问您的应用程序日志 (包括对任何调用 `console.log` ） 在您的设备，在按住 ALT 键从主屏幕和键入 lglg 键上。
+不幸的是，流直接從設備日誌是目前不支援的。 然而，黑莓手機提供了內置 Web 檢查器支援 Playbook 和黑莓智慧手機設備運行黑莓 OS 7.0 及以上。 您還可以訪問您的應用程式日誌 (包括對任何調用 `console.log` ） 在您的設備，在按住 ALT 鍵從主畫面和鍵入 lglg 鍵上。

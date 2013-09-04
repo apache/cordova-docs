@@ -16,15 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 地理定位
 
-> `geolocation`对象提供对基于设备的 GPS 传感器或推断网络信号的位置数据的访问。
+> `geolocation`物件提供對基於設備的 GPS 感應器或推斷網路信號的位置資料的訪問。
 
-`Geolocation`提供有关该设备的位置，例如纬度和经度信息。 常见的位置信息来源包括全球定位系统 (GPS) 和网络信号，如 IP 地址、 RFID、 WiFi 和蓝牙 MAC 地址和 GSM/CDMA 单元格 Id 从推断出的位置。 没有任何保证，API 返回设备的实际位置。
+`Geolocation`提供有關該設備的位置，例如緯度和經度資訊。 常見的位置資訊來源包括全球定位系統 (GPS) 和網路信號，如 IP 位址、 RFID、 WiFi 和藍牙 MAC 位址和 GSM/CDMA 儲存格 Id 從推斷出的位置。 沒有任何保證，API 返回設備的實際位置。
 
-此 API 基于[W3C 地理定位 API 规范][1]，并只执行已经不提供实现的设备上。
+此 API 基於[W3C 地理定位 API 規範][1]，並只執行已經不提供實現的設備上。
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要的隐私注：**地理定位数据的收集和使用提出了重要的隐私问题。 您的应用程序的隐私策略应该讨论这款应用程序如何使用地理定位数据，数据是否共享它的任何其他缔约方和的数据 （例如，粗、 细，ZIP 代码级别，等等） 的精度水平。 地理定位数据被普遍认为敏感的因为它能揭示一个人的下落，如果存储中，他或她的旅行史。 因此，除了您的应用程序的隐私策略，您应强烈考虑提供在您的应用程序访问地理定位数据 （如果设备操作系统不会这样做已经） 之前的时间只是通知。 该通知应提供相同的信息上文指出的并获取该用户的权限 （例如，通过为**确定**并**不感谢**提出的选择）。 有关详细信息，请参阅隐私指南。
+**重要的隱私注：**地理定位資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論這款應用程式如何使用地理定位資料，資料是否共用它的任何其他締約方和的資料 （例如，粗、 細，ZIP 代碼級別，等等） 的精度水準。 地理定位資料被普遍認為敏感的因為它能揭示一個人的下落，如果存儲中，他或她的旅行史。 因此，除了您的應用程式的隱私權原則，您應強烈考慮提供在您的應用程式訪問地理定位資料 （如果設備作業系統不會這樣做已經） 之前的時間只是通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
 
 ## 方法
 
@@ -32,50 +32,70 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   geolocation.watchPosition
 *   geolocation.clearWatch
 
-## 参数
+## 參數
 
 *   geolocationSuccess
 *   geolocationError
 *   geolocationOptions
 
-## 对象 （只读）
+## 物件 （唯讀）
 
-*   位置
+*   Position
 *   PositionError
-*   坐标
+*   Coordinates
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
         $ cordova plugin rm org.apache.cordova.core.geolocation
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="地理定位">< 参数名称 ="android 包"value="org.apache.cordova.GeoBroker"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.ACCESS_COARSE_LOCATION"/ >< 使用权限 android:name="android.permission.ACCESS_FINE_LOCATION"/ >< 使用权限 android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="地理定位">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.geolocation.Geolocation"/ >< / 功能 > (在 www/config.xml) < rim： 权限 >< rim： 许可证 > read_geolocation < / rim： 许可证 >< / rim： 权限 >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="地理定位">< 参数名称 ="ios 包"值 ="CDVLocation"/ >< / 功能 >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名称 ="ID_CAP_LOCATION"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
-    引用：[为 Windows Phone 应用程序清单][2]
+    引用：[為 Windows Phone 應用程式清單][2]
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

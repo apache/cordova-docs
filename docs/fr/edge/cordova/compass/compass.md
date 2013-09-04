@@ -45,17 +45,23 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 
 *   Android (dans`app/res/xml/config.xml`)
     
-        < nom de la fonction = "Boussole" >< param name = "android-package" value="org.apache.cordova.CompassListener" / >< / fiction >
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.CompassListener" />
+        </feature>
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « Boussole » >< param name = « ios-paquet » value = « CDVLocation » / >< / fiction >
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< capacité nom = « ID_CAP_SENSORS » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     Référence : [manifeste d'Application pour Windows Phone][1]

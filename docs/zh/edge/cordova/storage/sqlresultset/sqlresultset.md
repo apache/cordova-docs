@@ -16,38 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # SQLResultSet
 
-当 `SQLTransaction` 对象的 `executeSql` 方法时，执行指定的回调 `SQLResultSet` 参数。
+當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數。
 
-## 属性
+## 屬性
 
-*   **insertId**： 行的行的 ID， `SQLResultSet` 对象的 SQL 语句插入到数据库中。
+*   **insertId**： 行的行的 ID， `SQLResultSet` 物件的 SQL 語句插入到資料庫中。
 
-*   **rowsAffected**： 由零如果该语句不会影响任何行的 SQL 语句更改的行数。
+*   **rowsAffected**： 由零如果該語句不會影響任何行的 SQL 語句更改的行數。
 
-*   **行**： `SQLResultSetRowList` 表示返回的行，如果未返回行，则为空。
+*   **行**： `SQLResultSetRowList` 表示返回的行，如果未返回行，則為空。
 
-## 详细信息
+## 詳細資訊
 
-当 `SQLTransaction` 对象的 `executeSql` 方法时，执行指定的回调 `SQLResultSet` 参数，其中包含三个属性：
+當 `SQLTransaction` 物件的 `executeSql` 方法時，執行指定的回檔 `SQLResultSet` 參數，其中包含三個屬性：
 
-*   `insertId`返回组装成功的 SQL 插入语句的行号。如果 SQL 不会插入任何行， `insertId` 未设置。
+*   `insertId`返回組裝成功的 SQL 插入語句的行號。如果 SQL 不會插入任何行， `insertId` 未設置。
 
-*   `rowsAffected`始终是 `` 为一个 SQL `select` 语句。为 `insert` 或 `update` 它返回的数的语句修改的行。
+*   `rowsAffected`始終是 `` 為一個 SQL `select` 語句。為 `insert` 或 `update` 它返回的數的語句修改的行。
 
-*   决赛 `SQLResultSetList` 包含从一个 SQL select 语句返回的数据。
+*   決賽 `SQLResultSetList` 包含從一個 SQL select 語句返回的資料。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 6.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Tizen
 
-## 执行 SQL 快速示例
+## 執行 SQL 快速示例
 
-    函数 queryDB(tx) {tx.executeSql (' 选择 * 从演示 '、 []、 querySuccess、 errorCB);}函数 querySuccess （德克萨斯州，结果） {console.log ("返回行 ="+ results.rows.length） ；/ / 这将是真实的因为这是一条 select 语句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('没有行受影响!') ；返回 false ；} / / 的 insert 语句，此属性将返回的最后插入的行 console.log 的 ID （"最后插入的行 ID ="+ results.insertId);}函数 errorCB(err) {警报 （"处理 SQL 时出错:"+ err.code);}var db = window.openDatabase ("数据库"、"1.0"，"科尔多瓦演示"，200000) ；db.transaction errorCB queryDB） ；
+    函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB);}函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId);}函數 errorCB(err) {警報 （"處理 SQL 時出錯:"+ err.code);}var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 头 >< 标题 > 存储示例 < / 标题 >< 脚本类型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 脚本 >< 脚本类型 ="文本/javascript"charset ="utf 8"> / / 等待设备 API 库加载 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 填充数据库 / / 函数 populateDB(tx) {tx.executeSql ('下拉表如果存在演示') ；tx.executeSql (' 创建表如果不存在演示 （id 唯一的数据） ') ；tx.executeSql (' 的值插入到演示 （id、 数据） （1，"第一行"） ') ；tx.executeSql （插入到演示 （id、 数据） 值 （2，"第二行")) ；} / / 查询数据库 / / 函数 queryDB(tx) {tx.executeSql (' 选择 * 从演示 '、 []、 querySuccess、 errorCB） ；} / / 查询成功回调 / / 函数 querySuccess （德克萨斯州，结果） {console.log ("返回行 ="+ results.rows.length） ；/ / 这将是真实的因为这是一条 select 语句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('没有行受影响!') ；返回 false ；} / / 的 insert 语句，此属性将返回的最后插入的行 console.log 的 ID （"最后插入的行 ID ="+ results.insertId） ；} / / 交易错误回调 / / 函数 errorCB(err) {console.log ("处理 SQL 时出错:"+ err.code） ；} / / 交易成功回调 / / 函数 successCB() {var db = window.openDatabase ("数据库"、"1.0"，"科尔多瓦演示"，200000) ；db.transaction errorCB queryDB） ；} / / 设备的 Api 可 / / 函数 onDeviceReady() {var db = window.openDatabase ("数据库"、"1.0"，"科尔多瓦演示"，200000) ；db.transaction （populateDB、 errorCB、 successCB） ；} < / 脚本 >< / 头 >< 身体 >< h1 > 示例 < / h1 >< p > 数据库 </p >< / 身体 >< / html >
+    <!DOCTYPE html >< html >< 頭 >< 標題 > 存儲示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 填充資料庫 / / 函數 populateDB(tx) {tx.executeSql ('下拉表如果存在演示') ；tx.executeSql (' 創建表如果不存在演示 （id 唯一的資料） ') ；tx.executeSql (' 的值插入到演示 （id、 資料） （1，"第一行"） ') ；tx.executeSql （插入到演示 （id、 資料） 值 （2，"第二行")) ；} / / 查詢資料庫 / / 函數 queryDB(tx) {tx.executeSql (' 選擇 * 從演示 '、 []、 querySuccess、 errorCB） ；} / / 查詢成功回檔 / / 函數 querySuccess （德克薩斯州，結果） {console.log ("返回行 ="+ results.rows.length） ；/ / 這將是真實的因為這是一條 select 語句，所以 rowsAffected 是 0，如果 (! results.rowsAffected) {console.log ('沒有行受影響!') ；返回 false ；} / / 的 insert 語句，此屬性將返回的最後插入的行 console.log 的 ID （"最後插入的行 ID ="+ results.insertId） ；} / / 交易錯誤回檔 / / 函數 errorCB(err) {console.log ("處理 SQL 時出錯:"+ err.code） ；} / / 交易成功回檔 / / 函數 successCB() {var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction errorCB queryDB） ；} / / 設備的 Api 可 / / 函數 onDeviceReady() {var db = window.openDatabase ("資料庫"、"1.0"，"科爾多瓦演示"，200000) ；db.transaction （populateDB、 errorCB、 successCB） ；} < / 腳本 >< / 頭 >< 身體 >< h1 > 示例 < / h1 >< p > 資料庫 </p >< / 身體 >< / html >

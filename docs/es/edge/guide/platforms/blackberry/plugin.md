@@ -35,7 +35,9 @@ El plugin de eco esencialmente devuelve el mensaje que un usuario proporciona a 
 
 De su proyecto `www/plugins.xml` directorio contiene todas las referencias necesarias a plugins de su proyecto de Cordova. Agregue una referencia adicional para que cuando se llama a `cordova.exec`, Cordova sabe cómo asignar el argumento de `Eco` de `cordova.exec` a la clase de `Echo` que queremos escribir de forma nativa:
 
-    < nombre de la función = "Echo" >< nombre param = "blackberry-paquete" value="org.apache.cordova.echo.Echo" / >< / característica >
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
     
 
 ## Agregar Echo.java
