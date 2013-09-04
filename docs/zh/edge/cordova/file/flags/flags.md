@@ -14,26 +14,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 标志
+# 標誌
 
-提供的参数 `DirectoryEntry` 对象的 `getFile()` 和 `getDirectory()` 方法，查找或创建的文件和目录，分别。
+提供的參數 `DirectoryEntry` 物件的 `getFile()` 和 `getDirectory()` 方法，查找或創建的檔和目錄，分別。
 
-## 属性
+## 屬性
 
-*   **创建**： 指示应创建的文件或目录，是否它不存在。*（布尔）*
+*   **創建**： 指示應創建的檔或目錄，是否它不存在。*（布林）*
 
-*   **独家**: 已由本身，但与一起使用时不起任何作用 `create` 导致文件或目录的创建，如果已经存在的目标路径失败。*（布尔）*
+*   **獨家**: 已由本身，但與一起使用時不起任何作用 `create` 導致檔或目錄的創建，如果已經存在的目標路徑失敗。*（布林）*
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## 快速的示例
 
-    / / 获取数据目录，如果它不存在，则创建它。
-    dataDir = fileSystem.root.getDirectory （"数据"，{创建: true});/ / 创建锁定文件，当且仅当它不存在。
-    备份的锁定文件 = dataDir.getFile ("lockfile.txt"，{创建: 真实、 独家： true}) ；
+    / / 獲取資料目錄，如果它不存在，則創建它。
+    dataDir = fileSystem.root.getDirectory （"資料"，{創建: true});/ / 創建鎖定檔，當且僅當它不存在。
+    備份的鎖定檔 = dataDir.getFile ("lockfile.txt"，{創建: 真實、 獨家： true}) ；

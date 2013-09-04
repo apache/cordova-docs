@@ -16,25 +16,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileUploadOptions
 
-A `FileUploadOptions` 可以将对象传递给 `FileTransfer` 对象的 `upload()` 方法，以指定上载脚本的附加参数。
+A `FileUploadOptions` 可以將物件傳遞給 `FileTransfer` 物件的 `upload()` 方法，以指定上載腳本的附加參數。
 
-## 属性
+## 屬性
 
-*   **fileKey**： 表单元素的名称。默认值为 `file` 。() DOMString
+*   **fileKey**： 表單元素的名稱。預設值為 `file` 。() DOMString
 
-*   **文件名**： 要保存在服务器上的文件时使用的文件名称。默认值为 `image.jpg` 。() DOMString
+*   **檔案名**： 要保存在伺服器上的檔時使用的檔案名稱。預設值為 `image.jpg` 。() DOMString
 
-*   **mimeType**： 要上传的数据的 mime 类型。默认值为 `image/jpeg` 。() DOMString
+*   **mimeType**： 要上傳的資料的 mime 類型。預設值為 `image/jpeg` 。() DOMString
 
-*   **params**： 一组可选的键/值对中的 HTTP 请求的传递。（对象）
+*   **params**： 一組可選的鍵/值對中的 HTTP 要求的傳遞。（物件）
 
-*   **chunkedMode**： 是否要分块流式处理模式中的数据上载。默认值为 `true` 。(布尔值)
+*   **chunkedMode**： 是否要分塊流式處理模式中的資料上載。預設值為 `true` 。(布林值)
 
-*   **标题**： 一张地图的标头名称/标头值。使用数组来指定多个值。（对象）
+*   **標題**： 一張地圖的標頭名稱/標頭值。使用陣列來指定多個值。（物件）
 
-## 说明
+## 說明
 
-A `FileUploadOptions` 可以将对象传递给 `FileTransfer` 对象的 `upload()` 方法，以指定上载脚本的附加参数。
+A `FileUploadOptions` 可以將物件傳遞給 `FileTransfer` 物件的 `upload()` 方法，以指定上載腳本的附加參數。
 
 ## WP7 怪癖
 

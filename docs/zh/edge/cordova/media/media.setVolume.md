@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.setVolume
 
-设置音频文件的音量。
+設置音訊檔的音量。
 
     media.setVolume(volume) ；
     
 
-## 参数
+## 參數
 
-*   **体积**： 要为播放设置的卷。值必须在 0.0 到 1.0 的范围内。
+*   **體積**： 要為播放設置的卷。值必須在 0.0 到 1.0 的範圍內。
 
-## 说明
+## 說明
 
-函数 `media.setVolume` 是一个异步的函数，在播放音频时设置音量。
+函數 `media.setVolume` 是一個非同步函數，在播放音訊時設置音量。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   iOS
 
 ## 快速的示例

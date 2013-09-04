@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # contactSuccess
 
-提供的成功回调函数 `Contact` 数组产生的 `contacts.find` 操作。
+提供的成功回呼函數 `Contact` 陣列產生的 `contacts.find` 操作。
 
     function(contacts) {
         // Do something
     }
     
 
-## 参数
+## 參數
 
-*   **联系人**： 联系人数组产生的查找操作。*（联系人）*
+*   **連絡人**： 連絡人陣列產生的查找操作。*（連絡人）*
 
 ## 示例
 

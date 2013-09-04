@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerSuccess
 
-提供的 onSuccess 回调函数 `Acceleration` 的信息。
+提供的 onSuccess 回呼函數 `Acceleration` 的資訊。
 
     function(acceleration) {
         // Do something
     }
     
 
-## 参数
+## 參數
 
-*   **加速度**： 在时间中的某一时刻的加速度。(加速度)
+*   **加速度**： 在時間中的某一時刻的加速度。(加速度)
 
 ## 示例
 

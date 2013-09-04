@@ -16,15 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # device.version
 
-获取操作系统版本。
+獲取作業系統版本。
 
     var string = device.version;
     
 
-## 支持的平台
+## 支援的平臺
 
 *   Android 2.1 +
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -32,7 +32,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    / / Android： Froyo OS 将返回"2.2"/ / Eclair OS 将返回"2.1"、"2.0.1"2.0"/ / 版本，也可以返回更新级别"2.1 update1"/ / / / 黑莓手机： 火炬 9800 使用 OS 6.0 将返回"6.0.0.600"/ / / / iPhone： iOS 3.2 返回"3.2"/ / / / Windows Phone 7： 返回当前 OS 版本数，。 on Mango returns 7.10.7720
+    / / Android： Froyo OS 將返回"2.2"/ / Eclair OS 將返回"2.1"、"2.0.1"2.0"/ / 版本，也可以返回更新級別"2.1 update1"/ / / / 黑莓手機： 火炬 9800 使用 OS 6.0 將返回"6.0.0.600"/ / / / iPhone： iOS 3.2 返回"3.2"/ / / / Windows Phone 7： 返回當前 OS 版本數，。 on Mango returns 7.10.7720
     // Tizen: returns "TIZEN_20120425_2"
     var deviceVersion = device.version;
     

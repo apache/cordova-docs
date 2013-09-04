@@ -16,4 +16,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compass.clearWatchFilter
 
-不再支持 1.6。请参阅`compass.clearWatch`.
+不再支援 1.6。請參閱`compass.clearWatch`.

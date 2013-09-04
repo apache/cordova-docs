@@ -16,33 +16,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.watchPosition
 
-对该设备的当前的位置更改的手表。
+對該設備的當前的位置更改的手錶。
 
     var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
                                                       [geolocationError],
                                                       [geolocationOptions]);
     
 
-## 参数
+## 參數
 
-*   **geolocationSuccess**： 传递当前位置的回调。
+*   **geolocationSuccess**： 傳遞當前位置的回檔。
 
-*   **geolocationError**： （可选） 如果错误发生时执行的回调。
+*   **geolocationError**： （可選） 如果錯誤發生時執行的回檔。
 
-*   **geolocationOptions**： （可选） 地理定位选项。
+*   **geolocationOptions**： （可選） 地理定位選項。
 
 ## 返回
 
-*   **字符串**： 返回引用的观看位置间隔的表 id。应与一起使用的表 id `geolocation.clearWatch` 停止了观看中位置的更改。
+*   **字串**： 返回引用的觀看位置間隔的表 id。應與一起使用的表 id `geolocation.clearWatch` 停止了觀看中位置的更改。
 
-## 说明
+## 說明
 
-`geolocation.watchPosition`是一个异步的函数。 当检测到位置更改时，它返回该设备的当前的位置。 当设备中检索一个新的位置， `geolocationSuccess` 回调执行与 `Position` 对象作为参数。 如果有错误， `geolocationError` 回调执行与 `PositionError` 对象作为参数。
+`geolocation.watchPosition`是一個非同步函數。 當檢測到位置更改時，它返回該設備的當前的位置。 當設備中檢索一個新的位置， `geolocationSuccess` 回檔執行與 `Position` 物件作為參數。 如果有錯誤， `geolocationError` 回檔執行與 `PositionError` 物件作為參數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

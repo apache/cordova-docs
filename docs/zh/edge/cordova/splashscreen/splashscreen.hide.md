@@ -16,18 +16,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # splashscreen.hide
 
-解雇的初始屏幕。
+解雇的初始螢幕。
 
     navigator.splashscreen.hide();
     
 
-## 说明
+## 說明
 
-此方法关闭该应用程序的初始屏幕。
+此方法關閉該應用程式的初始螢幕。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   黑莓 10
 *   iOS
 *   Windows Phone 7 和 8
@@ -68,7 +68,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 怪癖
 
-`config.xml`文件的 `AutoHideSplashScreen` 设置必须为 `false` 。 若要延迟两秒钟隐藏的闪屏，添加如下所示在计时器 `deviceready` 事件处理程序：
+`config.xml`檔的 `AutoHideSplashScreen` 設置必須為 `false` 。 若要延遲兩秒鐘隱藏的閃屏，添加如下所示在計時器 `deviceready` 事件處理常式：
 
         setTimeout(function() {
             navigator.splashscreen.hide();

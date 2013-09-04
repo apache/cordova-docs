@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationOptions
 
-若要自定义的地理定位检索的可选参数`Position`.
+若要自訂的地理定位檢索的可選參數`Position`.
 
-    {maximumAge: 3000，超时： 5000，enableHighAccuracy: true} ；
+    {maximumAge: 3000，超時： 5000，enableHighAccuracy: true} ；
     
 
-## 选项
+## 選項
 
-*   **enableHighAccuracy**： 提供应用程序需要最佳的可能结果的提示。 默认情况下，该设备将尝试检索 `Position` 使用基于网络的方法。 将此属性设置为 `true` 告诉要使用更精确的方法，如卫星定位的框架。 *(布尔值)*
+*   **enableHighAccuracy**： 提供應用程式需要最佳的可能結果的提示。 預設情況下，該設備將嘗試檢索 `Position` 使用基於網路的方法。 將此屬性設置為 `true` 告訴要使用更精確的方法，如衛星定位的框架。 *(布林值)*
 
-*   **超时**： 时间 (毫秒) 从调用传递，允许的最大长度 `geolocation.getCurrentPosition` 或 `geolocation.watchPosition` 直到相应的 `geolocationSuccess` 回调执行。 如果 `geolocationSuccess` 不会在此时间内调用回调 `geolocationError` 传递回调 `PositionError.TIMEOUT` 错误代码。 (请注意，与一起使用时 `geolocation.watchPosition` 、 `geolocationError` 的时间间隔可以调用回调每 `timeout` 毫秒!)*（人数）*
+*   **超時**： 時間 (毫秒) 從調用傳遞，允許的最大長度 `geolocation.getCurrentPosition` 或 `geolocation.watchPosition` 直到相應的 `geolocationSuccess` 回檔執行。 如果 `geolocationSuccess` 不會在此時間內調用回檔 `geolocationError` 傳遞回檔 `PositionError.TIMEOUT` 錯誤代碼。 (請注意，與一起使用時 `geolocation.watchPosition` 、 `geolocationError` 的時間間隔可以調用回檔每 `timeout` 毫秒!)*（人數）*
 
-*   **maximumAge**： 接受其年龄大于指定以毫秒为单位的时间没有缓存的位置。*（人数）*
+*   **maximumAge**： 接受其年齡大於指定以毫秒為單位的時間沒有緩存的位置。*（人數）*
 
 ## Android 的怪癖
 
-Android 2.x 仿真器不返回地理定位结果除非 `enableHighAccuracy` 选项设置为`true`.
+Android 2.x 模擬器不返回地理定位結果除非 `enableHighAccuracy` 選項設置為`true`.

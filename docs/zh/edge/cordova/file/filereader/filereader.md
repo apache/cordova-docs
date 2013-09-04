@@ -16,59 +16,59 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileReader
 
-`FileReader`允许基本文件的访问权限。
+`FileReader`允許基本檔的存取權限。
 
-## 属性
+## 屬性
 
-*   **readyState**： 一个读者的三个可能的状态，要么 `EMPTY` ， `LOADING` 或`DONE`.
+*   **readyState**： 一個讀者的三個可能的狀態，要麼 `EMPTY` ， `LOADING` 或`DONE`.
 
-*   **结果**： 已读取文件的内容。*() DOMString*
+*   **結果**： 已讀取檔的內容。*() DOMString*
 
-*   **错误**： 包含错误的对象。*() FileError*
+*   **錯誤**： 包含錯誤的物件。*() FileError*
 
-*   **onloadstart**: 读取启动时调用。*（函数）*
+*   **onloadstart**: 讀取啟動時調用。*（函數）*
 
-*   **onload**： 读取已成功完成时调用。*（函数）*
+*   **onload**： 讀取已成功完成時調用。*（函數）*
 
-*   **onabort**： 当已中止，读取时调用。例如，通过调用 `abort()` 方法。*（函数）*
+*   **onabort**： 當已中止，讀取時調用。例如，通過調用 `abort()` 方法。*（函數）*
 
-*   **onerror**: 当读取已失败时调用。*（函数）*
+*   **onerror**: 當讀取已失敗時調用。*（函數）*
 
-*   **onloadend**： 当请求已完成 （无论成功或失败） 时调用。*（函数）*
+*   **onloadend**： 當請求已完成 （無論成功或失敗） 時調用。*（函數）*
 
-**注：**以下产权不受支持：
+**注：**以下產權不受支援：
 
-*   **onprogress**: 读取该文件，报告进度的角度时称为 `progress.loaded` / `progress.total` 。*（函数）*
+*   **onprogress**: 讀取該檔，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
 
 ## 方法
 
-*   **中止**: 中止读取文件。
+*   **中止**: 中止讀取檔。
 
-*   **readAsDataURL**: 读取文件并返回数据作为 base64 编码的数据的 URL。
+*   **readAsDataURL**: 讀取檔並返回資料作為 base64 編碼的資料的 URL。
 
-*   **readAsText**： 文件中读取文本。
+*   **readAsText**： 檔中讀取文本。
 
-*   **readAsBinaryString**: 读取文件为二进制文件，并返回一个二进制字符串。
+*   **readAsBinaryString**: 讀取檔為二進位檔案，並返回一個二進位字串。
 
-*   **readAsArrayBuffer**: 读取文件作为`ArrayBuffer`.
+*   **readAsArrayBuffer**: 讀取檔作為`ArrayBuffer`.
 
-## 详细信息
+## 詳細資訊
 
-`FileReader`对象提供的方法来从该设备的文件系统中读取文件。 可以读取文件，作为文本或 base64 编码的数据的字符串。 事件侦听器接收 `loadstart` ， `progress` ， `load` ， `loadend` ， `error` ，和 `abort` 的事件。
+`FileReader`物件提供的方法來從該設備的檔案系統中讀取檔。 可以讀取檔，作為文本或 base64 編碼的資料的字串。 事件攔截器接收 `loadstart` ， `progress` ， `load` ， `loadend` ， `error` ，和 `abort` 的事件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 读取数据的 URL 作为
+## 讀取資料的 URL 作為
 
-**参数：**
+**參數：**
 
-*   **文件**： 要读取的文件对象。
+*   **檔**： 要讀取的檔物件。
 
 ## 快速的示例
 
@@ -88,13 +88,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.file(win, fail);
     
 
-## 以文本格式阅读
+## 以文本格式閱讀
 
-**参数：**
+**參數：**
 
-*   **文件**： 要读取的文件对象。
+*   **檔**： 要讀取的檔物件。
 
-*   **编码**： 使用编码的文件内容的编码。默认值为 UTF8。
+*   **編碼**： 使用編碼的檔內容的編碼。預設值為 UTF8。
 
 ## 快速的示例
 
@@ -199,15 +199,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-*   **编码**参数不受支持，并且 UTF8 编码总是在效果。
+*   **編碼**參數不受支援，並且 UTF8 編碼總是在效果。
 
-## 读取的二进制字符串
+## 讀取的二進位字串
 
-目前仅支持 iOS 和 android 系统。
+目前僅支援 iOS 和 android 系統。
 
-**参数：**
+**參數：**
 
-*   **文件**： 要读取的文件对象。
+*   **檔**： 要讀取的檔物件。
 
 ## 快速的示例
 
@@ -227,13 +227,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.file(win, fail);
     
 
-## 作为数组缓冲区中读取
+## 作為陣列緩衝區中讀取
 
-目前仅支持 iOS 和 android 系统。
+目前僅支援 iOS 和 android 系統。
 
-**参数：**
+**參數：**
 
-*   **文件**： 要读取的文件对象。
+*   **檔**： 要讀取的檔物件。
 
 ## 快速的示例
 

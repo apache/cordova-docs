@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compassError
 
-罗盘功能的 onError 回调函数。
+羅盤功能的 onError 回呼函數。
 
 ## 示例
 

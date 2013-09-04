@@ -16,51 +16,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.stringToDate
 
-分析日期格式设置为一个字符串，根据客户端的用户首选项和日历使用时区的客户端，并返回对应的 date 对象。
+分析日期格式設置為一個字串，根據用戶端的使用者首選項和日曆使用時區的用戶端，並返回對應的 date 物件。
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回的日期与成功回调到 `properties` 对象作为参数。该对象应具有以下属性：
+返回的日期與成功回檔到 `properties` 物件作為參數。該物件應具有以下屬性：
 
-*   **一年**： 将四个数字的年份。*（人数）*
+*   **一年**： 將四個數字的年份。*（人數）*
 
-*   **月**： 从 （0-11) 月。*（人数）*
+*   **月**： 從 （0-11) 月。*（人數）*
 
-*   **一天**： 从 （1-31) 天。*（人数）*
+*   **一天**： 從 （1-31) 天。*（人數）*
 
-*   **小时**： 从 (0-23) 小时。*（人数）*
+*   **小時**： 從 (0-23) 小時。*（人數）*
 
-*   **分钟**： 从 (0-59) 分钟。*（人数）*
+*   **分鐘**： 從 (0-59) 分鐘。*（人數）*
 
-*   **第二**： 的第二位 (0-59)。*（人数）*
+*   **第二**： 的第二位 (0-59)。*（人數）*
 
-*   **毫秒**： 的毫秒数 （从 0-999)，在所有平台上不可用。*（人数）*
+*   **毫秒**： 的毫秒數 （從 0-999)，在所有平臺上不可用。*（人數）*
 
-入站 `dateString` 参数的类型应为`String`.
+入站 `dateString` 參數的類型應為`String`.
 
-`options`参数是可选的并且默认为以下值：
+`options`參數是可選的並且預設為以下值：
 
-    {formatLength: '短'，选择器： 日期和时间}
+    {formatLength: '短'，選擇器： 日期和時間}
     
 
 `options.formatLength`可以是 `short` ， `medium` ， `long` ，或 `full` 。 `options.selector`可以是 `date` ， `time` 或`date and
 time`.
 
-如果有错误解析日期字符串，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.PARSING\_ERROR`.
+如果有錯誤解析日期字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，这将显示一个弹出对话框与类似的文本 `month:8 day:25 year:2012` 。 请注意，整数是一个月比少的字符串，作为月整数代表数组索引。
+當瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本 `month:8 day:25 year:2012` 。 請注意，整數是一個月比少的字串，作為月整數代表陣列索引。
 
     navigator.globalization.stringToDate(
         '9/25/2012',
@@ -102,4 +102,4 @@ time`.
 
 ## Windows Phone 8 怪癖
 
-*   `formatLength`选项仅支持 `short` 和 `full` 的值。
+*   `formatLength`選項僅支援 `short` 和 `full` 的值。

@@ -16,26 +16,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compass.watchHeading
 
-固定间隔，在得到中度的罗盘标题。
+固定間隔，在得到中度的羅盤標題。
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
     
 
-## 说明
+## 說明
 
-罗盘是传感器，可检测的方向或设备是针对性的标题。它的措施从 0 到 359.99 度中的标题。
+羅盤是感應器，可檢測的方向或設備是針對性的標題。它的措施從 0 到 359.99 度中的標題。
 
-`compass.watchHeading`获取设备的当前标题在固定的时间间隔。 检索标题时，每次 `headingSuccess` 执行回调函数。 指定的时间间隔，以毫秒为单位通过 `frequency` 参数的 `compassOptions` 对象。
+`compass.watchHeading`獲取設備的當前標題在固定的時間間隔。 檢索標題時，每次 `headingSuccess` 執行回呼函數。 指定的時間間隔，以毫秒為單位通過 `frequency` 參數的 `compassOptions` 物件。
 
-返回的表 ID 引用指南针手表的时间间隔。可以使用 ID 与手表 `compass.clearWatch` 停止了观看指南针。
+返回的表 ID 引用指南針手錶的時間間隔。可以使用 ID 與手錶 `compass.clearWatch` 停止了觀看指南針。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   黑莓 10
 *   iOS
 *   Tizen
-*   Windows Phone 7 和 8 （如果在硬件中可用）
+*   Windows Phone 7 和 8 （如果在硬體中可用）
 *   Windows 8
 
 ## 快速的示例
@@ -123,6 +123,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-IOS 中 `compass.watchHeading` 以指定的度数改变时也可以获得设备的当前标题。 每次的标题更改时由指定数目的度或更多， `headingSuccess` 执行回调函数。 指定度的变化通过 `filter` 参数的 `compassOptions` 对象。 清除手表像往常一样通过传递到返回的表 ID `compass.clearWatch` 。 此功能将替换以前分开，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
+IOS 中 `compass.watchHeading` 以指定的度數改變時也可以獲得設備的當前標題。 每次的標題更改時由指定數目的度或更多， `headingSuccess` 執行回呼函數。 指定度的變化通過 `filter` 參數的 `compassOptions` 物件。 清除手錶像往常一樣通過傳遞到返回的表 ID `compass.clearWatch` 。 此功能將替換以前分開，只有 iOS `watchHeadingFilter` 和 `clearWatchFilter` 功能，1.6 版本中被移除。
 
-只有一个 `watchHeading` 可以在 iOS 中一次效果。 如果 `watchHeading` 使用筛选器中，调用 `getCurrentHeading` 或 `watchHeading` 使用现有的筛选器值来指定标题的更改。 使用筛选器看标题的变化是与时间间隔比效率更高。
+只有一個 `watchHeading` 可以在 iOS 中一次效果。 如果 `watchHeading` 使用篩選器中，調用 `getCurrentHeading` 或 `watchHeading` 使用現有的篩選器值來指定標題的更改。 使用篩選器看標題的變化是與時間間隔比效率更高。

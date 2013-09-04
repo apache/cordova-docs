@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureAudioOptions
 
-> 封装的音频捕获的配置选项。
+> 封裝的音訊捕獲的配置選項。
 
-## 属性
+## 屬性
 
-*   **限制**： 音频剪辑设备用户可以在单个捕获操作中记录的最大数目。值必须是大于或等于 1 （默认为 1）。
+*   **限制**： 音訊剪輯設備使用者可以在單個捕獲操作中記錄的最大數目。值必須是大於或等於 1 （預設為 1）。
 
-*   **持续时间**： 音频的声音剪辑，以秒为单位的最长期限。
+*   **持續時間**： 音訊的音效片段，以秒為單位的最長期限。
 
 ## 快速的示例
 
@@ -34,12 +34,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   `duration`参数不受支持。记录长度不能局限以编程方式。
+*   `duration`參數不受支援。記錄長度不能局限以程式設計方式。
 
 ## 黑莓 WebWorks 怪癖
 
-*   `duration`参数不受支持。记录长度不能局限以编程方式。
+*   `duration`參數不受支援。記錄長度不能局限以程式設計方式。
 
 ## iOS 的怪癖
 
-*   `limit`参数不受支持，所以只有一个记录可以创建的每个调用。
+*   `limit`參數不受支援，所以只有一個記錄可以創建的每個調用。

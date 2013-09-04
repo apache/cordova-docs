@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.stop
 
-停止播放音频文件。
+停止播放音訊檔。
 
     media.stop() ；
     
 
-## 说明
+## 說明
 
-`media.stop`方法同步执行停止播放音频文件。
+`media.stop`方法同步執行停止播放音訊檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen

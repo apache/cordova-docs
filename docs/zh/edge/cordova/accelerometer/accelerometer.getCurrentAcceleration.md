@@ -16,21 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometer.getCurrentAcceleration
 
-获取当前加速沿*x*、 *y*和*z*轴。
+獲取當前加速沿*x*、 *y*和*z*軸。
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
     
 
-## 说明
+## 說明
 
-加速度计是动作感应器检测到的更改 (*三角洲*) 在相对于当前的设备方向，在三个维度沿*x*、 *y*和*z*轴运动。
+加速度計是動作感應器檢測到的更改 (*三角洲*) 在相對於當前的設備方向，在三個維度沿*x*、 *y*和*z*軸運動。
 
-这些加速度值将返回到 `accelerometerSuccess` 回调函数。
+這些加速度值將返回到 `accelerometerSuccess` 回呼函數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -98,8 +98,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-*   iOS 不会认识到在任何给定的点获取当前加速度的概念。
+*   iOS 不會認識到在任何給定的點獲取當前加速度的概念。
 
-*   你必须看加速和捕获的数据在特定的时间间隔。
+*   你必須看加速和捕獲的資料在特定的時間間隔。
 
-*   因此， `getCurrentAcceleration` 收益率从报告的最后一个值的函数 `watchAccelerometer` 调用。
+*   因此， `getCurrentAcceleration` 收益率從報告的最後一個值的函數 `watchAccelerometer` 調用。

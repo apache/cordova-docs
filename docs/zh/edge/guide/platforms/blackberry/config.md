@@ -14,9 +14,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 黑莓手机配置
+# 黑莓手機配置
 
-黑莓手机完全支持[W3C 构件规范][1]以及专有的 RIM 扩展。 请全面[黑莓 WebWorks 文件关于 config.xml][2]的详细信息，参阅。
+黑莓手機完全支援[W3C 構件規範][1]以及專有的 RIM 擴展。 請全面[黑莓 WebWorks 檔關於 config.xml][2]的詳細資訊，參閱。
 
  [1]: http://www.w3.org/TR/widgets/
  [2]: https://developer.blackberry.com/html5/documentation/working_with_config_xml_file_1866970_11.html

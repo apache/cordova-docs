@@ -16,21 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # contacts.create
 
-返回一个新的联系人对象。
+返回一個新的連絡人物件。
 
     var contact = navigator.contacts.create(properties);
     
 
-## 说明
+## 說明
 
-`contacts.create`方法是同步的并返回一个新的 `Contact` 对象。
+`contacts.create`方法是同步的並返回一個新的 `Contact` 物件。
 
-此方法不会保留联系人对象在设备的联系人数据库中，您需要为其调用 `Contact.save` 方法。
+此方法不會保留連絡人物件在設備的連絡人資料庫中，您需要為其調用 `Contact.save` 方法。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 

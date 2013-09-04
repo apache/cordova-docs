@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.release
 
-释放底层操作系统的音频资源。
+釋放底層作業系統的音訊資源。
 
     media.release();
     
 
-## 说明
+## 說明
 
-`media.release`方法执行同步，释放出底层操作系统的音频资源。 这是特别重要的 android 操作系统，因为有了有限数量的 OpenCore 实例播放媒体。 应用程序应当调用 `release` 函数的任何 `Media` 不再需要的资源。
+`media.release`方法執行同步，釋放出底層作業系統的音訊資源。 這是特別重要的 android 作業系統，因為有了有限數量的 OpenCore 實例播放媒體。 應用程式應當調用 `release` 函數的任何 `Media` 不再需要的資源。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen

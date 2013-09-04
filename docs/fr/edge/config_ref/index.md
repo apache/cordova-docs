@@ -20,9 +20,9 @@ De nombreux aspects du comportement d'une application peuvent être contrôlés 
 
  [1]: http://www.w3.org/TR/widgets/
 
-Pour les projets créés avec l'interface en ligne de commande de Cordova (décrite dans le paragraphe "L'interface en Ligne de Commande"), ce fichier peut être trouvé dans le répertoire `www` à la racine du projet. L'utilisation de l'interface en ligne de commandes pour compiler les projets recréé des versions de ce fichier dans les différents sous-répertoires du répertoire `platforms`. Pour les projets créés sans passer par cette interface en ligne de commande, le fichier spécifique à chaque plateforme sert de fichier source.
+Pour les projets créés avec l'interface en ligne de commande de Cordova (décrite dans le paragraphe "L'interface en Ligne de Commande"), ce fichier peut être trouvé dans le répertoire `www` à la racine du projet. L'utilisation de la ligne de commande pour compiler les projets recréé des versions de ce fichier dans les différents sous-répertoires du répertoire `platforms`. Pour les projets créés sans passer par cette interface, le fichier spécifique à chaque plateforme sert de fichier source.
 
-Bien que l'emplacement du fichier `config.xml` puisse varier en fonction de la plateforme, son contenu reste généralement le même. Certaines fonctionnalités spécifiques à une plateforme sont également indiquées dans ce même fichier de configuration. En voici le détail:
+Si l'emplacement du fichier `config.xml` peut changer selon la plateforme, son contenu varie peu en général Certaines fonctionnalités spécifiques à une plateforme sont également indiquées dans ce même fichier de configuration. En voici le détail:
 
 *   Configuration iOS
 *   Configuration Android
@@ -30,24 +30,25 @@ Bien que l'emplacement du fichier `config.xml` puisse varier en fonction de la p
 
 ## Eléments du fichier config.xml
 
-Le projet [Apache Cordova][2] s'efforce d'abstraire les plateformes natives spécifiques en utilisant des abstractions inspirées du web qui sont inspirées des standards et adoptés par la communauté web. Veuillez prendre quelques minutes pour vous familiariser avec la [spécification du fichier config.xml][1], pour comprendre le type de méta-données de l'application que le projet Apache Cordova permet d'abstraire, tout en fournissant des points d'entrée simples.
+Le projet [Apache Cordova][2] s'efforce de s'abstraire de la plate-forme native en utilisant des standards largement façonnés par la communauté web et adoptés par elle. Veuillez prendre quelques minutes pour vous familiariser avec la [spécification du fichier config.xml][1], pour comprendre le type de méta-données de l'application que le projet Apache Cordova permet d'abstraire, tout en fournissant des points d'entrée simples.
 
  [2]: http://cordova.io
 
 Un exemple :
 
         < widget >< nom de préférence = "MySetting" value = "true" / >< nom de la fonction = valeur "MyPlugin" = "MyPluginClass" / >< accéder origine = "*" / >< src="index.html de contenu" / >< / widget >
+    [NOTE : remettre l'original ici]
     
 
 Vous trouverez ci-dessous les éléments supportés sur les différentes plateformes supportées par Apache Cordova.
 
 ### `<feature>`
 
-Ces éléments correspondent aux API natives que l'application utilise. A l'exécution, le framework Apache Cordova lie les éléments `<feature>` au code natif pour permettre à votre application Cordova d'accéder aux interfaces applicatives de votre terminales qui sont autrement indisponibles aux applications web typiques.
+Ces éléments correspondent aux API natives que l'application utilise. A son lancement, le framework Apache Cordova va relier les éléments `<feature>` au code natif pour permettre à votre application Cordova d'accéder aux interfaces natives de votre terminal, usuellement non-disponibles pour les applications web classiques.
 
 ### `<access>`
 
-Ces éléments définissent le fonctionnement de votre liste blanche. Veuillez consulter le Guide de liste blanche de domaines pour plus d'informations.
+Ces éléments définissent le fonctionnement de votre liste blanche. Veuillez consulter le Guide des Liste blanches de Domaines pour plus d'informations.
 
 ### `<content>`
 

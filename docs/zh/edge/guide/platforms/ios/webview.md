@@ -16,128 +16,128 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # WebViews iOS
 
-从科尔多瓦 1.4 开始，可以使用一个组件作为科尔多瓦在 iOS 应用程序中。此组件是代号为 '刀'。
+從科爾多瓦 1.4 開始，可以使用一個元件作為科爾多瓦在 iOS 應用程式中。此元件是代號為 '刀'。
 
-新科尔多瓦基于应用程序使用提供在科尔多瓦 1.4 或更多地使用刀的 Xcode 模板创建的。（模板是刀的参考实现。
+新科爾多瓦基於應用程式使用提供在科爾多瓦 1.4 或更多地使用刀的 Xcode 範本創建的。（範本是刀的參考實現。
 
-科尔多瓦 2.0.0 和后续版本仅支持基于次级项目刀执行。
+科爾多瓦 2.0.0 和後續版本僅支援基於次級專案刀執行。
 
-## 系统必备组件
+## 系統必備元件
 
-*   科尔多瓦 2.3.0 或更大
+*   科爾多瓦 2.3.0 或更大
 
 *   Xcode 4.5 或更大
 
-*   `config.xml`文件 (从新创建的 iOS 项目)
+*   `config.xml`檔 (從新創建的 iOS 專案)
 
-## 克利弗添加到 Xcode 项目 （CordovaLib 子项目）
+## 克利弗添加到 Xcode 專案 （CordovaLib 子專案）
 
-1.  下载并解压缩到您的硬盘驱动器上的永久文件夹位置的科尔多瓦源，例如到`~/Documents/Cordova`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦源，例如到`~/Documents/Cordova`.
 
-2.  如果它正在运行，请退出 Xcode。
+2.  如果它正在運行，請退出 Xcode。
 
-3.  使用终端程序，定位到你放在上面的下载的源的目录。
+3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  复制 `config.xml` 文件到您的项目文件夹在磁盘上 （请参见上面的前提条件）。
+4.  複製 `config.xml` 檔到您的專案資料夾在磁片上 （請參見上面的前提條件）。
 
-5.  拖放式 `config.xml` 到 Xcode 项目导航的文件。
+5.  拖放式 `config.xml` 到 Xcode 專案導航的檔。
 
-6.  选择**创建组的任何添加的文件夹**单选按钮，然后按**完成**.
+6.  選擇**創建組的任何添加的資料夾**選項按鈕，然後按**完成**.
 
-7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 项目导航的文件 （从永久文件夹位置上面，和它应该是在 `CordovaLib` 子目录）。
+7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 專案導航的檔 （從永久資料夾位置上面，和它應該是在 `CordovaLib` 子目錄）。
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
-9.  键入**选项-命令-1**键的组合，以显示**文件检查器**.
+9.  鍵入**選項-命令-1**鍵的組合，以顯示**檔檢查器**.
 
-10. 选择**相对于组****文件检查器**器下拉菜单中的**位置**.
+10. 選擇**相對於組****檔檢查器**器下拉式功能表中的**位置**.
 
-11. 在项目导航器中选择**项目图标**，选择你的**目标**，然后选择**生成设置**选项卡。
+11. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 
-12. 添加 `-all_load` 和 `-Obj-C` 的**其他链接器标志**值。
+12. 添加 `-all_load` 和 `-Obj-C` 的**其他連結器標誌**值。
 
-13. 单击项目导航器中的**项目图标**，选择你的**目标**，然后选择**生成阶段**选项卡。
+13. 按一下專案導航器中的**專案圖示**，選擇你的**目標**，然後選擇**生成階段**選項卡。
 
-14. 展开**链接二进制文件与库**.
+14. 展開**連結二進位檔案與庫**.
 
-15. 选择**+**按钮，然后添加下列**框架**。（可选） 该项目导航器中移动他们的**框架**组下）：
+15. 選擇**+**按鈕，然後添加下列**框架**。（可選） 該專案導航器中移動他們的**框架**組下）：
     
         AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework MediaPlayer.framework QuartzCore.framework SystemConfiguration.framework MobileCoreServices.framework CoreMedia.framework
         
 
-16. 扩展**目标的依赖关系**，标有像这样如果您有多个框的顶部框 ！
+16. 擴展**目標的依賴關係**，標有像這樣如果您有多個框的頂部框 ！
 
-17. 选择**+**按钮，然后添加 `CordovaLib` 生成产品。
+17. 選擇**+**按鈕，然後添加 `CordovaLib` 生成產品。
 
-18. 展开**链接二进制文件与库**，标有像这样如果您有多个框的顶部框 ！
+18. 展開**連結二進位檔案與庫**，標有像這樣如果您有多個框的頂部框 ！
 
-19. 选择**+**按钮，然后添加`libCordova.a`.
+19. 選擇**+**按鈕，然後添加`libCordova.a`.
 
-20. 设置为**独特**Xcode 偏好**Xcode 首选项 → 位置 → 派生数据 → 先进......**.
+20. 設置為**獨特**Xcode 偏好**Xcode 首選項 → 位置 → 派生資料 → 先進......**.
 
-21. 在项目导航器中选择**项目图标**，选择你的**目标**，然后选择**生成设置**选项卡。
+21. 在專案導航器中選擇**專案圖示**，選擇你的**目標**，然後選擇**生成設置**選項卡。
 
-22. 搜索**标题搜索路径**。该设置，添加以下 （带引号） 这三个值：
+22. 搜索**標題搜索路徑**。該設置，添加以下 （帶引號） 這三個值：
     
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
         "$(BUILT_PRODUCTS_DIR)"
         
     
-    与科尔多瓦 2.1.0， `CordovaLib` 已升级为使用**自动引用计数 (弧)**。 你不需要升级到**弧**要使用 CordovaLib，但是如果你想要升级您的项目使用**弧**，请使用 Xcode 迁移向导从菜单中：**编辑 → 重构 → 转换为目标 C 弧...**，**取消选择 libCordova.a**，然后运行向导完成。
+    與科爾多瓦 2.1.0， `CordovaLib` 已升級為使用**自動引用計數 (弧)**。 你不需要升級到**弧**要使用 CordovaLib，但是如果你想要升級您的專案使用**弧**，請使用 Xcode 遷移嚮導從功能表中：**編輯 → 重構 → 轉換為目標 C 弧...**，**取消選擇 libCordova.a**，然後運行嚮導完成。
 
-## 在您的代码中使用 CDVViewController
+## 在您的代碼中使用 CDVViewController
 
-1.  添加此标头：
+1.  添加此標頭：
     
         #import <Cordova/CDVViewController.h>
         
 
-2.  实例化一个新的 `CDVViewController` ，并保留它在某个地方 （例如，向您的类中的属性）：
+2.  具現化一個新的 `CDVViewController` ，並保留它在某個地方 （例如，向您的類中的屬性）：
     
         CDVViewController * viewController = [CDVViewController 新] ；
         
 
-3.  (*可选*）设置 `wwwFolderName` 属性 （默认为 `www` ）：
+3.  (*可選*）設置 `wwwFolderName` 屬性 （預設為 `www` ）：
     
         viewController.wwwFolderName = @"myfolder"；
         
 
-4.  (*可选*）在您的 config.xml 中设置的起始页 `<content>` 标记。
+4.  (*可選*）在您的 config.xml 中設置的起始頁 `<content>` 標記。
     
-        < 内容 src="index.html"/ >
+        < 內容 src="index.html"/ >
         
     
     或
     
-        < 内容 src ="http://apache.org"/ >
+        < 內容 src ="HTTP://apache.org"/ >
         
 
-5.  (*可选*）设置 `useSplashScreen` 属性 （默认为 `NO` ）：
+5.  (*可選*）設置 `useSplashScreen` 屬性 （預設為 `NO` ）：
     
         viewController.useSplashScreen = 否。
         
 
-6.  设置**视图框架**（总是此设置作为最后一个属性）：
+6.  設置**視圖框架**（總是此設置作為最後一個屬性）：
     
         viewController.view.frame = CGRectMake (0、 0、 320、 480） ；
         
 
-7.  将刀添加到您的视图：
+7.  將刀添加到您的視圖：
     
         [myView addSubview:viewController.view] ；
         
 
-## 添加您的 HTML、 CSS 和 JavaScript 资产
+## 添加您的 HTML、 CSS 和 JavaScript 資產
 
-1.  在您在磁盘上的项目中创建一个新的文件夹 `www` 为例。
+1.  在您在磁片上的專案中創建一個新的資料夾 `www` 為例。
 
-2.  将您的 HTML、 CSS 和 JavaScript 资产放入此文件夹。
+2.  將您的 HTML、 CSS 和 JavaScript 資產放入此資料夾。
 
-3.  拖动并放到 Xcode 项目导航的文件夹。
+3.  拖動並放到 Xcode 專案導航的資料夾。
 
-4.  选择**创建文件夹引用的任何添加的文件夹**单选按钮。
+4.  選擇**創建資料夾引用的任何添加的資料夾**選項按鈕。
 
-5.  设置相应的 `wwwFolderName` 和 `startPage` 你最初创建的文件夹的属性，或使用默认设置 （请参阅上一节） 当你实例化`CDVViewController`.
+5.  設置相應的 `wwwFolderName` 和 `startPage` 你最初創建的資料夾的屬性，或使用預設設置 （請參閱上一節） 當你具現化`CDVViewController`.
     
-        / * 如果您创建了一个名为 'myfolder' 文件夹和你想要的文件中它是 Start 的 ' mypage.html' * / viewController.wwwFolderName = @"myfolder"；viewController.startPage = @"mypage.html"
+        / * 如果您創建了一個名為 'myfolder' 資料夾和你想要的檔中它是 Start 的 ' mypage.html' * / viewController.wwwFolderName = @"myfolder"；viewController.startPage = @"mypage.html"

@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.play
 
-开始或重新开始播放音频文件。
+開始或重新開始播放音訊檔。
 
     media.play();
     
 
-## 说明
+## 說明
 
-`media.play`方法执行同步，并开始或继续播放音频文件。
+`media.play`方法執行同步，並開始或繼續播放音訊檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen
@@ -162,23 +162,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓设备支持有限的数量的同时音频通道。 CDMA 设备仅支持单个音频通道。 其他设备都支持最多两个同时播放的频道。 尝试播放音频文件的支持金额多于导致以前播放被停止。
+*   黑莓設備支援有限的數量的同時音訊通道。 CDMA 設備僅支援單個音訊通道。 其他設備都支援最多兩個同時播放的頻道。 嘗試播放音訊檔的支援金額多於導致以前播放被停止。
 
 ## iOS 的怪癖
 
-*   **numberOfLoops**： 传递到此选项 `play` 方法，以指定的次数，你想让媒体文件以播放，例如：
+*   **numberOfLoops**： 傳遞到此選項 `play` 方法，以指定的次數，你想讓媒體檔案以播放，例如：
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
         
 
-*   **playAudioWhenScreenIsLocked**： 通过此选项可在 `play` 方法，以指定您是否要允许播放时屏幕锁定。 如果设置为 `true` （默认值），将忽略硬件静音按钮的状态，例如：
+*   **playAudioWhenScreenIsLocked**： 通過此選項可在 `play` 方法，以指定您是否要允許播放時螢幕鎖定。 如果設置為 `true` （預設值），將忽略硬體靜音按鈕的狀態，例如：
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **文件搜索顺序**： 当只有一个文件的名称或简单路径提供时，搜索中的 iOS `www` 目录为该文件，然后在应用程序中的 `documents/tmp` 目录：
+*   **檔搜索順序**： 當只有一個檔的名稱或簡單路徑提供時，搜索中的 iOS `www` 目錄為該檔，然後在應用程式中的 `documents/tmp` 目錄：
     
         var myMedia = new Media("audio/beer.mp3")
         myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3

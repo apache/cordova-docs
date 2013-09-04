@@ -16,4 +16,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # database_displayname
 
-显示数据库的名称。
+顯示資料庫的名稱。

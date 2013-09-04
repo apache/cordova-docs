@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # backbutton
 
-在用户按后退按钮时，将触发该事件。
+在使用者按後退按鈕時，將觸發該事件。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-要重写后退按钮的默认行为，注册为事件侦听器 `backbutton` 事件，通常通过调用 `document.addEventListener` 一旦您收到 `deviceready` 事件。 不再需要调用任何其他方法重写的后退按钮的行为。
+要重寫後退按鈕的預設行為，註冊為事件攔截器 `backbutton` 事件，通常通過調用 `document.addEventListener` 一旦您收到 `deviceready` 事件。 不再需要調用任何其他方法重寫的後退按鈕的行為。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   Windows Phone 7 和 8
 
 ## 快速的示例

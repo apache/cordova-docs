@@ -14,22 +14,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 媒体
+# 媒體
 
-> 封装媒体捕获文件的属性。
+> 封裝媒體捕獲檔的屬性。
 
-## 属性
+## 屬性
 
-*   **名称**： 文件的名称，不包含路径信息。() DOMString
+*   **名稱**： 檔的名稱，不包含路徑資訊。() DOMString
 
-*   **完整路径**： 文件，包括名称的完整路径。() DOMString
+*   **完整路徑**： 檔，包括名稱的完整路徑。() DOMString
 
-*   **类型**： 文件的 mime 类型 (DOMString)
+*   **類型**： 檔的 mime 類型 (DOMString)
 
-*   **lastModifiedDate**： 日期和文件的上次修改时间。（日期）
+*   **lastModifiedDate**： 日期和檔的上次修改時間。（日期）
 
-*   **大小**： 文件的大小，以字节为单位。（人数）
+*   **大小**： 檔的大小，以位元組為單位。（人數）
 
 ## 方法
 
-*   **MediaFile.getFormatData**: 检索该媒体文件的格式信息。
+*   **MediaFile.getFormatData**: 檢索該媒體檔案的格式資訊。

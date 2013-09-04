@@ -16,28 +16,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # batterycritical
 
-当电池达到临界阈值时，将触发该事件。
+當電池達到臨界閾值時，將觸發該事件。
 
     window.addEventListener("batterycritical", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-当电池电量的百分比已达到关键电池阈值时，将触发该事件。值是特定于设备。
+當電池計量的百分比已達到關鍵電池閾值時，將觸發該事件。值是特定于設備。
 
-`batterycritical`处理程序传递一个对象，包含两个属性：
+`batterycritical`處理常式傳遞一個物件，包含兩個屬性：
 
-*   **级别**: 电池充电 (0-100) 的百分比。*（人数）*
+*   **級別**: 電池充電 (0-100) 的百分比。*（人數）*
 
-*   **isPlugged**： 一个布尔值，该值指示设备是否插*(布尔值)*
+*   **isPlugged**： 一個布林值，該值指示設備是否插*(布林值)*
 
-应用程序通常应使用 `window.addEventListener` 将一个事件侦听器附加一次 `deviceready` 事件火灾。
+應用程式通常應使用 `window.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
 *   iOS
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   Tizen
 
 ## 快速的示例

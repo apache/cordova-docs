@@ -16,4 +16,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # database_size
 
-以字节为单位的数据库的大小。
+以位元組為單位的資料庫的大小。

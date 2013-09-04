@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometer.clearWatch
 
-停止看 `Acceleration` 引用的 `watchID` 参数。
+停止看 `Acceleration` 引用的 `watchID` 參數。
 
     navigator.accelerometer.clearWatch(watchID);
     
 
 *   **watchID**： 由返回的 ID`accelerometer.watchAcceleration`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

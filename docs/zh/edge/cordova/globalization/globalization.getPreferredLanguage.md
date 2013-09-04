@@ -16,27 +16,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getPreferredLanguage
 
-获取客户端的当前语言的字符串标识符。
+獲取用戶端的當前語言的字串識別碼。
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
     
 
-## 说明
+## 說明
 
-返回到的语言标识符字符串 `successCallback` 与 `properties` 对象作为参数。 对象应具有 `value` 属性与 `String` 的值。
+返回到的語言識別項字串 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `String` 的值。
 
-如果有出错的语言，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.UNKNOWN\_ERROR`.
+如果有出錯的語言，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，此时应显示弹出式菜单对话框的文本与 `language: English` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示彈出式功能表對話方塊的文本與 `language: English` ：
 
     navigator.globalization.getPreferredLanguage(
         function (language) {alert('language: ' + language.value + '\n');},
@@ -69,4 +69,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 8 怪癖
 
-*   返回当前语言的 ISO 639-1 两个字母代码。
+*   返回當前語言的 ISO 639-1 兩個字母代碼。

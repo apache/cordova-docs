@@ -14,11 +14,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 连接
+# 連接
 
-> `connection`对象，通过公开 `navigator.connection` ，提供了有关该设备的移动电话和无线网络连接的信息。
+> `connection`物件，通過公開 `navigator.connection` ，提供了有關該設備的行動電話和無線網路連接的資訊。
 
-## 属性
+## 屬性
 
 *   connection.type
 
@@ -33,46 +33,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Connection.CELL
 *   Connection.NONE
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
         $ cordova plugin rm org.apache.cordova.core.network-information
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   Android 系统
+*   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名称 ="网络状态">< 参数名称 ="android 包"value="org.apache.cordova.NetworkManager"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用权限 android:name="android.permission.INTERNET"/ >< 使用权限 android:name="android.permission.ACCESS_NETWORK_STATE"/ >< 使用权限 android:name="android.permission.READ_PHONE_STATE"/ >
+        (in app/res/xml/config.xml) < 功能名稱 ="網路狀態">< 參數名稱 ="android 包"value="org.apache.cordova.NetworkManager"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.INTERNET"/ >< 使用許可權 android:name="android.permission.ACCESS_NETWORK_STATE"/ >< 使用許可權 android:name="android.permission.READ_PHONE_STATE"/ >
         
 
-*   黑莓手机 WebWorks
+*   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名称 ="网络状态">< 参数名称 ="黑莓手机-包"value="org.apache.cordova.network.Network"/ >< / 功能 >
+        (in www/plugins.xml) < 功能名稱 ="網路狀態">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.network.Network"/ >< / 功能 >
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="网络状态">< 参数名称 ="ios 包"值 ="CDVConnection"/ >< / 功能 >
+        < 功能名稱 ="網路狀態">< 參數名稱 ="ios 包"值 ="CDVConnection"/ >< / 功能 >
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名称 ="ID_CAP_NETWORKING"/ >< / 功能 >
+        < 功能 >< 功能名稱 ="ID_CAP_NETWORKING"/ >< / 功能 >
         
     
-    引用：[为 Windows Phone 应用程序清单][1]
+    引用：[為 Windows Phone 應用程式清單][1]
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名称 = 所需的"http://tizen.org/api/systeminfo"="true"/ >
+        < 功能名稱 = 所需的"HTTP://tizen.org/api/systeminfo"="true"/ >
         
     
-    引用： [Tizen Web 应用程序的应用程序清单][2]
+    引用： [Tizen Web 應用程式的應用程式清單][2]
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

@@ -16,25 +16,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometer.watchAcceleration
 
-固定间隔，在获得沿*x*、 *y*和*z*轴加速度。
+固定間隔，在獲得沿*x*、 *y*和*z*軸加速度。
 
     var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
                                                            accelerometerError,
                                                            [accelerometerOptions]);
     
 
-## 说明
+## 說明
 
-加速度计是动作感应器检测到的更改 (delta) 相对于当前位置的运动中。 加速度传感器可以检测到沿*x*、 *y*和*z*轴的三维运动。
+加速度計是動作感應器檢測到的更改 (delta) 相對於當前位置的運動中。 加速度感應器可以檢測到沿*x*、 *y*和*z*軸的三維運動。
 
-`accelerometer.watchAcceleration`方法检索设备的电流 `Acceleration` 间隔时间定期，执行 `accelerometerSuccess` 回调函数每次。 指定的时间间隔，以毫秒为单位通过 `acceleratorOptions` 对象的 `frequency` 参数。
+`accelerometer.watchAcceleration`方法檢索設備的電流 `Acceleration` 間隔時間定期，執行 `accelerometerSuccess` 回呼函數每次。 指定的時間間隔，以毫秒為單位通過 `acceleratorOptions` 物件的 `frequency` 參數。
 
-返回的观看 ID 引用加速度计的手表时间间隔，并可以用 `accelerometer.clearWatch` 来停止看加速度计。
+返回的觀看 ID 引用加速度計的手錶時間間隔，並可以用 `accelerometer.clearWatch` 來停止看加速度計。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -126,4 +126,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-API 调用成功的回调函数的时间间隔的要求，但到 40ms年之间设备限制所请求的范围和 1000ms。 例如，如果请求的时间间隔为 3 秒，(3000ms) API 请求数据从设备每隔 1 秒，但只有执行成功回调每隔 3 秒。
+API 呼叫成功的回呼函數的時間間隔的要求，但到 40ms年之間設備限制所請求的範圍和 1000ms。 例如，如果請求的時間間隔為 3 秒，(3000ms) API 請求資料從設備每隔 1 秒，但只有執行成功回檔每隔 3 秒。

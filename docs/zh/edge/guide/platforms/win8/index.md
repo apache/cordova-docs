@@ -14,65 +14,65 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Windows 8 平台指南
+# Windows 8 平臺指南
 
-本指南介绍如何设置您的 SDK 开发环境为 Windows 8 部署科尔多瓦的应用程序。请参阅下列特定于平台的详细信息：
+本指南介紹如何設置您的 SDK 開發環境為 Windows 8 部署科爾多瓦的應用程式。請參閱下列特定于平臺的詳細資訊：
 
-*   升级 Windows 8
-*   Windows 8 的命令行工具
+*   升級 Windows 8
+*   Windows 8 的命令列工具
 
-上面的命令行工具请参阅科尔多瓦 3.0 以前的版本。关于当前界面的信息，请参阅命令行界面。
+上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
 
-Microsoft 不推荐使用在 Windows 8 和 Windows 室温下*地铁风格的应用程序*名称 MSDN 现在指的是这种类型的应用程序作为*Windows 应用商店*的应用程序，并且本指南跟随该公约 》。 此外，在本指南中*Windows 8*表示 Windows 8 和 Windows 室温下
+Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應用程式*名稱 MSDN 現在指的是這種類型的應用程式作為*Windows 應用商店*的應用程式，並且本指南跟隨該公約 》。 此外，在本指南中*Windows 8*表示 Windows 8 和 Windows 室溫下
 
 ## 1.要求
 
 *   Windows 8
 
-*   Visual Studio 2012 专业或更好或 Visual Studio 2012 表示为 Windows 8
+*   Visual Studio 2012 專業或更好或 Visual Studio 2012 表示為 Windows 8
 
-按照说明[在这里][1]提交您的应用程序 Windows 存储区。
+按照說明[在這裡][1]提交您的應用程式 Windows 存儲區。
 
  [1]: http://www.windowsstore.com/
 
-## 2.安装 SDK + 科尔多瓦
+## 2.安裝 SDK + 科爾多瓦
 
-*   设置您的 Visual Studio 2012 的首选变形。 所有产品的付费版本 (专业、 等) 让您构建 Windows 应用商店的应用程序。 你需要**表达为 Windows 8**来构建 Windows 应用商店应用程序使用的[速成版][2].
+*   設置您的 Visual Studio 2012 的首選變形。 所有產品的付費版本 (專業、 等) 讓您構建 Windows 應用商店的應用程式。 你需要**表達為 Windows 8**來構建 Windows 應用商店應用程式使用的[速成版][2].
 
-*   下载并解压缩[科尔多瓦][3]的最新副本。您将使用的 `lib\windows-8` 子文件夹。
+*   下載並解壓縮[科爾多瓦][3]的最新副本。您將使用的 `lib\windows-8` 子資料夾。
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download
 
-## 3.设置新项目
+## 3.設置新專案
 
-你已经可以生成使用*HTML/JavaScript 跟踪*在 Windows 应用商店的应用程序中可用的 Windows 8 应用程序。 在 Windows 应用商店的应用程序中使用科尔多瓦，正如在其他科尔多瓦支持的平台上公开相同的 Api。
+你已經可以生成使用*HTML/JavaScript 跟蹤*在 Windows 應用商店的應用程式中可用的 Windows 8 應用程式。 在 Windows 應用商店的應用程式中使用科爾多瓦，正如在其他科爾多瓦支援的平臺上公開相同的 Api。
 
-*   打开 Visual Studio 2012 并选择**新的项目**.
+*   打開 Visual Studio 2012 並選擇**新的專案**.
 
-*   从项目列表从树，然后**空白应用程序**选择**安装 → 模板 → 其它语言 → JavaScript → Windows 存储区**。 输入你喜欢的如无论项目名称 `CordovaWin8Foo` 如本示例所示。
+*   從專案清單從樹，然後**空白應用程式**選擇**安裝 → 範本 → 其它語言 → JavaScript → Windows 存儲區**。 輸入你喜歡的如無論專案名稱 `CordovaWin8Foo` 如本示例所示。
     
     ![][4]
 
-*   Microsoft 将继续使用 `default.html` 作为默认的主页，但大多数的 web 开发人员使用 `index.html` 。 （再加上它是有可能的在其他平台变形的您的项目中使用的 `index.html` 作为您的默认页的名称.)若要修复此问题，在解决方案资源管理器中重命名 `default.html` 文件到 `index.html` 。 然后双击 `package.appxmanifest` 文件，并将**起始页**该值更改为`index.html`.
+*   Microsoft 將繼續使用 `default.html` 作為預設的主頁，但大多數的 網頁程式開發人員使用 `index.html` 。 （再加上它是有可能的在其他平臺變形的您的專案中使用的 `index.html` 作為您的預設頁的名稱.)若要修復此問題，在解決方案資源管理器中重命名 `default.html` 檔到 `index.html` 。 然後按兩下 `package.appxmanifest` 檔，並將**起始頁**該值更改為`index.html`.
     
     ![][5]
 
-*   要包括 `cordova.js` 在项目中，右键单击 `js` 目录在解决方案资源管理器并选择**添加 → 新项目**。 找到 `cordova.js` 文件在 `lib\windows-8` 上面指出的目录。
+*   要包括 `cordova.js` 在專案中，按右鍵 `js` 目錄在解決方案資源管理器並選擇**添加 → 新專案**。 找到 `cordova.js` 檔在 `lib\windows-8` 上面指出的目錄。
 
-*   编辑的代码为 `index.html` 。将引用添加到 `cordova.js` 。您可以手动，或通过从解决方案资源管理器中拖动文件。
+*   編輯的代碼為 `index.html` 。將引用添加到 `cordova.js` 。您可以手動，或通過從解決方案資源管理器中拖動檔。
 
  [4]: img/guide/platforms/win8/wsnewproject.png
  [5]: img/guide/platforms/win8/wschangemanifest.png
 
-### 添加引用......
+### 增加參考......
 
-        <! — — WinJS 的引用--> < 链接 href="//Microsoft.WinJS.1.0/css/ui-dark.css"rel ="样式表"/ >< 脚本 src="//Microsoft.WinJS.1.0/js/base.js">< / 脚本 >< 脚本 src="//Microsoft.WinJS.1.0/js/ui.js">< / 脚本 ><! — — 科尔多瓦--> < 脚本 src="/js/cordova.js">< / 脚本 ><! — — CordovaWin8Foo 的引用--> < 链接 href="/css/default.css"rel ="样式表"/ >< 脚本 src="/js/default.js">< / 脚本 >
+        <! — — WinJS 的引用--> < 連結 href="//Microsoft.WinJS.1.0/css/ui-dark.css"rel ="樣式表"/ >< 腳本 src="//Microsoft.WinJS.1.0/js/base.js">< / 腳本 >< 腳本 src="//Microsoft.WinJS.1.0/js/ui.js">< / 腳本 ><! — — 科爾多瓦--> < 腳本 src="/js/cordova.js">< / 腳本 ><! — — CordovaWin8Foo 的引用--> < 連結 href="/css/default.css"rel ="樣式表"/ >< 腳本 src="/js/default.js">< / 腳本 >
     
 
-*   下一步，添加一些代码，演示科尔多瓦工作。
+*   下一步，添加一些代碼，演示科爾多瓦工作。
 
-### 添加 'deviceready' 处理......
+### 添加 'deviceready' 處理......
 
     <body>
         <p>Content goes here</p>
@@ -91,9 +91,9 @@ Microsoft 不推荐使用在 Windows 8 和 Windows 室温下*地铁风格的应�
     </body>
     
 
-## 5.测试项目
+## 5.測試專案
 
-*   从 Visual Studio 中运行该项目。你会看到显示的消息框：
+*   從 Visual Studio 中運行該專案。你會看到顯示的訊息方塊：
     
     ![][6]
 
@@ -101,4 +101,4 @@ Microsoft 不推荐使用在 Windows 8 和 Windows 室温下*地铁风格的应�
 
 ## 完成了 ！
 
-就这么简单 ！你现在准备好建立 Windows 应用商店的应用，科尔多瓦。
+就這麼簡單 ！你現在準備好建立 Windows 應用商店的應用，科爾多瓦。

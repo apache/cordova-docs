@@ -16,66 +16,66 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileWriter
 
-作为对象，它允许您创建和向文件中写入数据。
+作為物件，它允許您創建和向檔中寫入資料。
 
-## 属性
+## 屬性
 
-*   **readyState**： 三种可能状态之一，或者 `INIT` ， `WRITING` ，或`DONE`.
+*   **readyState**： 三種可能狀態之一，或者 `INIT` ， `WRITING` ，或`DONE`.
 
-*   **文件名**: 要写入的文件的名称。*() DOMString*
+*   **檔案名**: 要寫入的檔的名稱。*() DOMString*
 
-*   **长度**： 要写入的文件的长度。*(长)*
+*   **長度**： 要寫入的檔的長度。*(長)*
 
-*   **位置**： 当前文件指针的位置。*(长)*
+*   **位置**： 當前檔指標的位置。*(長)*
 
-*   **错误**： 包含错误的对象。*() FileError*
+*   **錯誤**： 包含錯誤的物件。*() FileError*
 
-*   **onwritestart**： 当写操作开始时调用。*（函数）*
+*   **onwritestart**： 當寫操作開始時調用。*（函數）*
 
-*   **onwrite**： 当请求已成功完成时调用。*（函数）*
+*   **onwrite**： 當請求已成功完成時調用。*（函數）*
 
-*   **onabort**： 当写操作已中止时调用。例如，通过调用 abort () 方法。*（函数）*
+*   **onabort**： 當寫操作已中止時調用。例如，通過調用 abort () 方法。*（函數）*
 
-*   **onerror**： 当写操作已失败时调用。*（函数）*
+*   **onerror**： 當寫操作已失敗時調用。*（函數）*
 
-*   **onwriteend**： 当请求已完成 （无论成功或失败） 时调用。*（函数）*
+*   **onwriteend**： 當請求已完成 （無論成功或失敗） 時調用。*（函數）*
 
-下面的属性*不*受支持：
+下面的屬性*不*受支援：
 
-*   **onprogress**： 写入文件，报告进度的角度时称为 `progress.loaded` / `progress.total` 。*（函数）*
+*   **onprogress**： 寫入檔，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
 
 ## 方法
 
-*   **中止**: 中止写入文件。
+*   **中止**: 中止寫入檔。
 
-*   **寻求**： 将文件指针移到指定的字节。
+*   **尋求**： 將檔指標移到指定的位元組。
 
-*   **截断**： 缩短至指定长度的文件。
+*   **截斷**： 縮短至指定長度的檔。
 
-*   **写**： 将数据写入到该文件。
+*   **寫**： 將資料寫入到該檔。
 
-## 详细信息
+## 詳細資訊
 
-`FileWriter`对象提供 utf-8 编码文件写入设备文件系统的方法。 应用程序响应 `writestart` ， `progress` ， `write` ， `writeend` ， `error` ，和 `abort` 的事件。
+`FileWriter`物件提供 utf-8 編碼檔寫入設備檔案系統的方法。 應用程式回應 `writestart` ， `progress` ， `write` ， `writeend` ， `error` ，和 `abort` 的事件。
 
-每个 `FileWriter` 对应于一个文件中，数据可以被写入许多倍。 `FileWriter`维护的文件 `position` 和 `length` 属性，允许到 app `seek` 和 `write` 文件中的任意位置。 默认情况下， `FileWriter` 将写入到文件中，覆盖现有数据的开始。 设置可选的 `append` 到布尔 `true` 在 `FileWriter` 的构造函数来写入到文件的末尾。
+每個 `FileWriter` 對應于一個檔中，資料可以被寫入許多倍。 `FileWriter`維護的檔 `position` 和 `length` 屬性，允許到 app `seek` 和 `write` 檔中的任意位置。 預設情況下， `FileWriter` 將寫入到檔中，覆蓋現有資料的開始。 設置可選的 `append` 到布林 `true` 在 `FileWriter` 的建構函式來寫入到檔的末尾。
 
-下面列出的所有平台都支持文本数据。 正在写入到文件系统之前文本编码为 utf-8。 一些平台还支持可以作为 ArrayBuffer 或 Blob 传递中的二进制数据。
+下面列出的所有平臺都支援文本資料。 正在寫入到檔案系統之前文本編碼為 utf-8。 一些平臺還支援可以作為 ArrayBuffer 或 Blob 傳遞中的二進位資料。
 
-## 支持的平台
+## 支援的平臺
 
-文本和二进制的支持：
+文本和二進位的支援：
 
-*   Android 系统
+*   Android 系統
 *   iOS
 
-仅限文本的支持：
+僅限文本的支援：
 
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 寻求快速的示例
+## 尋求快速的示例
 
     function win(writer) {
         // fast forwards file pointer to end of file
@@ -89,7 +89,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.createWriter(win, fail);
     
 
-## 截断快速示例
+## 截斷快速示例
 
     function win(writer) {
         writer.truncate(10);
@@ -102,7 +102,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.createWriter(win, fail);
     
 
-## 写快速示例
+## 寫快速示例
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -118,7 +118,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.createWriter(win, fail);
     
 
-## 二进制文件写入快速示例
+## 二進位檔案寫入快速示例
 
     function win(writer) {
         var data = new ArrayBuffer(5),

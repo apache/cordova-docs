@@ -14,52 +14,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 指南针
+# 指南針
 
-> 获取该设备的指向的方向。
+> 獲取該設備的指向的方向。
 
 ## 方法
 
 *   compass.getCurrentHeading
 *   compass.watchHeading
 *   compass.clearWatch
-*   compass.watchHeadingFilter (已过时)
-*   compass.clearWatchFilter (已过时)
+*   compass.watchHeadingFilter (已過時)
+*   compass.clearWatchFilter (已過時)
 
-## 参数
+## 參數
 
 *   compassSuccess
 *   compassError
 *   compassOptions
 *   compassHeading
 
-## 访问功能
+## 訪問功能
 
-从 3.0 版，科尔多瓦作为*插件*实现了设备级 Api。 使用 CLI 的 `plugin` 命令，描述在命令行界面，可以添加或删除一个项目，为此功能：
+從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
         $ cordova plugin rm org.apache.cordova.core.device-orientation
     
 
-这些命令适用于所有有针对性的平台，但修改如下所述的特定于平台的配置设置：
+這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名称 ="罗盘">< 参数名称 ="android 包"value="org.apache.cordova.CompassListener"/ >< / 功能 >
+        < 功能名稱 ="羅盤">< 參數名稱 ="android 包"value="org.apache.cordova.CompassListener"/ >< / 功能 >
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名称 ="罗盘">< 参数名称 ="ios 包"值 ="CDVLocation"/ >< / 功能 >
+        < 功能名稱 ="羅盤">< 參數名稱 ="ios 包"值 ="CDVLocation"/ >< / 功能 >
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名称 ="ID_CAP_SENSORS"/ >< / 功能 >
+        < 功能 >< 功能名稱 ="ID_CAP_SENSORS"/ >< / 功能 >
         
     
-    引用：[为 Windows Phone 应用程序清单][1]
+    引用：[為 Windows Phone 應用程式清單][1]
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平台可能支持此功能，而无需任何特殊的配置。有关概述，请参见平台支持。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

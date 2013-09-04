@@ -16,29 +16,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.isDayLightSavingsTime
 
-指示是否夏令时生效是给定日期使用客户端的时区和日历。
+指示是否夏令時生效是給定日期使用用戶端的時區和日曆。
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
     
 
-## 说明
+## 說明
 
-指示是否夏令时生效的是 `successCallback` 与 `properties` 对象作为参数。 对象应具有 `dst` 属性与 `Boolean` 的值。 A `true` 值指示夏令时实际上是对给定的日期，和 `false` 指示它不是。
+指示是否夏令時生效的是 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `dst` 屬性與 `Boolean` 的值。 A `true` 值指示夏令時實際上是對給定的日期，和 `false` 指示它不是。
 
-入站的参数 `date` 的类型应为`Date`.
+入站的參數 `date` 的類型應為`Date`.
 
-如果有错误读取日期，然后 `errorCallback` 执行。错误的期望的代码`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤讀取日期，然後 `errorCallback` 執行。錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-在夏天的时候，如果浏览器被设置为启用 DST 时区，这应显示一个弹出式对话框与类似的文本和 `dst: true` ：
+在夏天的時候，如果瀏覽器被設置為啟用 DST 時區，這應顯示一個彈出式對話方塊與類似的文本和 `dst: true` ：
 
     navigator.globalization.isDayLightSavingsTime(
         new Date(),

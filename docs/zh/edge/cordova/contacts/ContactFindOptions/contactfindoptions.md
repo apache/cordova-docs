@@ -16,18 +16,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ContactFindOptions
 
-包含可用于筛选结果的属性 `contacts.find` 操作。
+包含可用於篩選結果的屬性 `contacts.find` 操作。
 
-## 属性
+## 屬性
 
-*   **筛选器**： 用来查找联系人的搜索字符串。*() DOMString*（默认值：`""`)
+*   **篩選器**： 用來查找連絡人的搜索字串。*() DOMString*（預設值：`""`)
 
-*   **多个**： 确定是否查找操作返回多个联系人。*（布尔）*（默认值：`false`)
+*   **多個**： 確定是否查找操作返回多個連絡人。*（布林）*（預設值：`false`)
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8

@@ -16,39 +16,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # camera.getPicture
 
-需要使用的相机，一张照片或从设备的图像库检索一张照片。 图像作为 base64 编码传递成功回调到 `String` ，或作为图像文件的 URI。 该方法本身返回 `CameraPopoverHandle` 可以用于重新定位文件选择弹出的对象。
+需要使用的相機，一張照片或從設備的圖像庫檢索一張照片。 圖像作為 base64 編碼傳遞成功回檔到 `String` ，或作為影像檔的 URI。 該方法本身返回 `CameraPopoverHandle` 可以用於重新置放檔選擇彈出的物件。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
     
 
-## 说明
+## 說明
 
-`camera.getPicture`函数将打开该设备的默认摄像头应用程序，使用户能够对齐图片。 默认情况下，会发生此行为时 `Camera.sourceType` 等于 `Camera.PictureSourceType.CAMERA` 。 一旦用户快照照片、 摄像头应用程序关闭，并恢复该应用程序。
+`camera.getPicture`函數將打開該設備的預設攝像頭應用程式，使使用者能夠對齊圖片。 預設情況下，會發生此行為時 `Camera.sourceType` 等於 `Camera.PictureSourceType.CAMERA` 。 一旦使用者快照照片、 攝像頭應用程式關閉，並恢復該應用程式。
 
-如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然后允许用户选择一个现有图像对话框的显示。 `camera.getPicture`函数返回 `CameraPopoverHandle` 对象，可用于设备方向更改时重新定位图像选择对话框，例如。
+如果 `Camera.sourceType` 是 `Camera.PictureSourceType.PHOTOLIBRARY` 或 `Camera.PictureSourceType.SAVEDPHOTOALBUM` ，然後允許使用者選擇一個現有圖像對話方塊的顯示。 `camera.getPicture`函數返回 `CameraPopoverHandle` 物件，可用於設備方向更改時重新置放圖像選擇對話方塊，例如。
 
-返回值发送到 `cameraSuccess` 回调函数，根据指定的以下格式之一 `cameraOptions` ：
+傳回值發送到 `cameraSuccess` 回呼函數，根據指定的以下格式之一 `cameraOptions` ：
 
-*   A `String` 包含的 base64 编码的照片图像。
+*   A `String` 包含的 base64 編碼的照片圖像。
 
-*   A `String` 表示在本地存储 （默认值） 上的图像文件位置。
+*   A `String` 表示在本機存放區 （預設值） 上的影像檔位置。
 
-你可以做任何你想与编码的图像或 URI，例如：
+你可以做任何你想與編碼的圖像或 URI，例如：
 
-*   呈现在图像 `<img>` 标记，如下面的示例所示
+*   呈現在圖像 `<img>` 標記，如下面的示例所示
 
-*   保存本地的数据 （ `LocalStorage` ， [Lawnchair][1]，等等.)
+*   保存本地的資料 （ `LocalStorage` ， [Lawnchair][1]，等等.)
 
-*   将数据发布到远程服务器
+*   將資料發佈到遠端伺服器
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**注：**在较新的设备上的照片分辨率是相当不错的。 从设备的库选择了照片不到较低的质量，压缩屏幕使即使 `quality` 指定参数。 为了避免常见的内存问题，设置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
+**注：**在較新的設備上的照片解析度是相當不錯的。 從設備的庫選擇了照片不到較低的品質，壓縮螢幕使即使 `quality` 指定參數。 為了避免常見的記憶體問題，設置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -56,26 +56,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-Android 使用意向启动捕获图像，在设备上的相机活动和与低内存手机，科尔多瓦活动可能被杀。 在此方案中，可能不会显示图像还原科尔多瓦活动时。
+Android 使用意向啟動捕獲圖像，在設備上的相機活動和與低記憶體手機，科爾多瓦活動可能被殺。 在此方案中，可能不會顯示圖像還原科爾多瓦活動時。
 
 ## iOS 的怪癖
 
-包括 JavaScript `alert()` 中任一回调的函数可能会导致问题。 换行内的警报 `setTimeout()` ，允许 iOS 图像选取器或弹出要完全关闭之前警报将显示：
+包括 JavaScript `alert()` 中任一回檔的函數可能會導致問題。 換行內的警報 `setTimeout()` ，允許 iOS 圖像選取器或彈出要完全關閉之前警報將顯示：
 
     setTimeout(function() {/ / 做你的事!}，0) ；
     
 
 ## Windows Phone 7 的怪癖
 
-调用本机摄像头应用程序，同时通过 Zune 连接您的设备不工作，并触发错误回调。
+調用本機攝像頭應用程式，同時通過 Zune 連接您的設備不工作，並觸發錯誤回檔。
 
 ## Tizen 怪癖
 
-Tizen 仅支持 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sourceType` 的`Camera.PictureSourceType.PHOTOLIBRARY`.
+Tizen 僅支援 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sourceType` 的`Camera.PictureSourceType.PHOTOLIBRARY`.
 
 ## 快速的示例
 
-拍一张照片，并检索它为 base64 编码的图像：
+拍一張照片，並檢索它為 base64 編碼的圖像：
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
@@ -91,7 +91,7 @@ Tizen 仅支持 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sou
     }
     
 
-拍一张照片和检索图像的文件位置：
+拍一張照片和檢索圖像的檔位置：
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });

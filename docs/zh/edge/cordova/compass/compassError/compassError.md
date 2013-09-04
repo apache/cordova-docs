@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CompassError
 
-A `CompassError` 对象返回到 `compassError` 时出现错误的回调函数。
+A `CompassError` 物件返回到 `compassError` 時出現錯誤的回呼函數。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
 ## 常量
 
 *   `CompassError.COMPASS_INTERNAL_ERR`
 *   `CompassError.COMPASS_NOT_SUPPORTED`
 
-## 说明
+## 說明
 
-当错误发生时， `CompassError` 对象作为一个参数传递 `compassError` 回调函数。
+當錯誤發生時， `CompassError` 物件作為一個參數傳遞 `compassError` 回呼函數。

@@ -16,38 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS 配置
 
-`config.xml`设置文件控制科尔多瓦的各种设置。 这是应用广泛，并不设置每个 CDVViewController 实例。 `config.xml`文件位于您 `<project folder>/<appname>` 目录。
+`config.xml`設置檔控制科爾多瓦的各種設置。 這是應用廣泛，並不設置每個 CDVViewController 實例。 `config.xml`檔位於您 `<project folder>/<appname>` 目錄。
 
-## `< 首选项 >`
+## `< 首選項 >`
 
-各种首选项 （作为 `<preference>` 标签） 默认情况下，不打破现有的应用程序。可用的选择是：
+各種首選項 （作為 `<preference>` 標籤） 預設情況下，不打破現有的應用程式。可用的選擇是：
 
-*   `DisallowOverscroll`(boolean 类型的值，默认值为 `false` ）： 设置为 `true` 如果你不想对橡胶带 web 视图。
+*   `DisallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 如果你不想對橡膠帶 web 視圖。
 
-*   `TopActivityIndicator`（字符串，默认值为 `gray` ）： 这是栏中的状态/电池顶部纺 throbber，有效的值是 `whiteLarge` ， `white` ，和`gray`.
+*   `TopActivityIndicator`（字串，預設值為 `gray` ）： 這是欄中的狀態/電池頂部紡 throbber，有效的值是 `whiteLarge` ， `white` ，和`gray`.
 
-*   `EnableLocation`(boolean 类型的值，默认值为 `false` ）： 设置为 `true` 、 初始化启动时的地理定位插件 （以便在您所在的位置上的修补程序可以更准确）**已否决**： 请设置 `onload` 属性的 `Geolocation` 插件的 `true` 相反。
+*   `EnableLocation`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 、 初始化啟動時的地理定位外掛程式 （以便在您所在的位置上的修補程式可以更準確）**已否決**： 請設置 `onload` 屬性的 `Geolocation` 外掛程式的 `true` 相反。
 
-*   `EnableViewportScale`(boolean 类型的值，默认值为 `false` ）： 设置为 `true` ，防止结垢通过 meta 标记的视区。
+*   `EnableViewportScale`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，防止結垢通過 meta 標記的視區。
 
-*   `AutoHideSplashScreen`(boolean 类型的值，默认值为 `true` ）： 设置为 `false` ，控制通过 JavaScript API 闪屏被隐藏时。
+*   `AutoHideSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` ，控制通過 JavaScript API 閃屏被隱藏時。
 
-*   `FadeSplashScreen`(boolean 类型的值，默认值为 `true` ）： 设置为 `false` ，防止出现闪屏，淡出时显示或隐藏它。
+*   `FadeSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` ，防止出現閃屏，淡出時顯示或隱藏它。
 
-*   `FadeSplashScreenDuration`（浮动，默认值为 2）： 初始屏幕淡入淡出时间以秒为单位。
+*   `FadeSplashScreenDuration`（浮動，預設值為 2）： 初始螢幕淡入淡出時間以秒為單位。
 
-*   `ShowSplashScreenSpinner`(boolean 类型的值，默认值为 `true` ）： 设置为 `false` 隐藏初始屏幕微调框。
+*   `ShowSplashScreenSpinner`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 隱藏初始螢幕微調框。
 
-*   `MediaPlaybackRequiresUserAction`(boolean 类型的值，默认值为 `false` ）： 设置为 true，不允许 autoplayed HTML5 视频。
+*   `MediaPlaybackRequiresUserAction`(boolean 類型的值，預設值為 `false` ）： 設置為 true，不允許 autoplayed HTML5 視頻。
 
-*   `AllowInlineMediaPlayback`(boolean 类型的值，默认值为 `false` ）： 设置为 true，以允许内联 HTML5 播放媒体，此外，在 HTML 文档中的视频元素还必须包括 webkit playsinline 属性。
+*   `AllowInlineMediaPlayback`(boolean 類型的值，預設值為 `false` ）： 設置為 true，以允許內聯 HTML5 播放媒體，此外，在 HTML 文檔中的視頻元素還必須包括 webkit playsinline 屬性。
 
-*   `BackupWebStorage`（字符串，默认值为 `cloud` ）： 有效的值为 `none` ， `cloud` 和 `local` 。 设置为 `cloud` ，允许 web 存储数据要备份到 iCloud，并将设置为 `local` ，仅允许本地备份 （iTunes 同步）。 设置为 `none` ，不允许任何备份 web 存储。
+*   `BackupWebStorage`（字串，預設值為 `cloud` ）： 有效的值為 `none` ， `cloud` 和 `local` 。 設置為 `cloud` ，允許 web 存儲資料要備份到 iCloud，並將設置為 `local` ，僅允許本地備份 （iTunes 同步）。 設置為 `none` ，不允許任何備份 web 存儲。
 
-*   `KeyboardDisplayRequiresUserAction`(boolean 类型的值，默认值为 `true` ）： 设置为 false 时窗体元素获得焦点通过 JavaScript focus() 调用打开键盘。
+*   `KeyboardDisplayRequiresUserAction`(boolean 類型的值，預設值為 `true` ）： 設置為 false 時表單元素獲得焦點通過 JavaScript focus() 調用打開鍵盤。
 
-*   `SuppressesIncrementalRendering`(boolean 类型的值，默认值为 `false` ）： 它在呈现之前已收到设置为 true，等待，直到新的所有视图的内容。
+*   `SuppressesIncrementalRendering`(boolean 類型的值，預設值為 `false` ）： 它在呈現之前已收到設置為 true，等待，直到新的所有視圖的內容。
 
-*   `HideKeyboardFormAccessoryBar`(boolean 类型的值，默认值为 `false` ）： 设置为隐藏的附加工具栏的键盘上面是真实。 此工具栏功能**上一页**、**下一页**，和**做**按钮。
+*   `HideKeyboardFormAccessoryBar`(boolean 類型的值，預設值為 `false` ）： 設置為隱藏的附加工具列的鍵盤上面是真實。 此工具列功能**上一頁**、**下一頁**，和**做**按鈕。
 
-*   `KeyboardShrinksView`(boolean 类型的值，默认值为 `false` ）： 设置为 `true` 当键盘后缩小 web 视图。 Web 视图缩小，而不是视区萎缩和可滚动页面。 这适用于应用程序，它们相对于底部的 web 视图的元素的位置。 这是在 android 系统里的默认行为，构建应用程序而不是网页时发出很大的意义。
+*   `KeyboardShrinksView`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 當鍵盤後縮小 web 視圖。 Web 視圖縮小，而不是視區萎縮和可滾動頁面。 這適用于應用程式，它們相對於底部的 web 視圖的元素的位置。 這是在 android 系統裡的預設行為，構建應用程式而不是網頁時發出很大的意義。

@@ -16,33 +16,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.confirm
 
-显示一个可自定义的确认对话框。
+顯示一個可自訂的確認對話方塊。
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
     
 
-*   **消息**： 消息对话框。*（字符串）*
+*   **消息**： 消息對話方塊。*（字串）*
 
-*   **confirmCallback**: 要用索引 （1、 2 或 3） 按下的按钮，或者在没有按下按钮 (0) 驳回了对话框中时调用的回调。*（函数）*
+*   **confirmCallback**: 要用索引 （1、 2 或 3） 按下的按鈕，或者在沒有按下按鈕 (0) 駁回了對話方塊中時調用的回檔。*（函數）*
 
-*   **标题**： 标题对话框。*（字符串）*（可选，默认值为`Confirm`)
+*   **標題**： 標題對話方塊。*（字串）*（可選，預設值為`Confirm`)
 
-*   **buttonLabels**： 指定按钮标签以逗号分隔的字符串。*（字符串）*（可选，默认值为`OK,Cancel`)
+*   **buttonLabels**： 指定按鈕標籤以逗號分隔的字串。*（字串）*（可選，預設值為`OK,Cancel`)
 
-## 说明
+## 說明
 
-`notification.confirm`方法显示一个本机的对话框，更可自定义的浏览器比 `confirm` 函数。
+`notification.confirm`方法顯示一個本機的對話方塊，更可自訂的瀏覽器比 `confirm` 函數。
 
 ## confirmCallback
 
-`confirmCallback`当用户按下确认对话框中的按钮之一的时候执行。
+`confirmCallback`當使用者按下確認對話方塊中的按鈕之一的時候執行。
 
-回调将参数 `buttonIndex` *（编号）*，它是按下的按钮的索引。 请注意索引使用基于 1 的索引，所以值是 `1` ， `2` ， `3` ，等等。
+回檔將參數 `buttonIndex` *（編號）*，它是按下的按鈕的索引。 請注意索引使用基於 1 的索引，所以值是 `1` ， `2` ， `3` ，等等。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -113,9 +113,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 和 8 怪癖
 
-*   有没有内置的浏览器功能的 `window.confirm` ，但你可以将它绑定通过分配：
+*   有沒有內置的瀏覽器功能的 `window.confirm` ，但你可以將它綁定通過分配：
     
         window.confirm = navigator.notification.confirm;
         
 
-*   调用到 `alert` 和 `confirm` 的非阻塞，所以结果就是只可用以异步方式。
+*   調用到 `alert` 和 `confirm` 的非阻塞，所以結果就是只可用以非同步方式。

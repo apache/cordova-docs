@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # device.cordova
 
-获取科尔多瓦在设备上运行的版本。
+獲取科爾多瓦在設備上運行的版本。
 
     var string = device.cordova;
     
 
-## 说明
+## 說明
 
-`device.cordova`返回科尔多瓦在设备上运行的版本。
+`device.cordova`返回科爾多瓦在設備上運行的版本。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

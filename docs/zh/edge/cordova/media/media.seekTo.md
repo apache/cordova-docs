@@ -16,23 +16,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.seekTo
 
-在音频文件中设置的当前的位置。
+在音訊檔中設置的當前的位置。
 
     media.seekTo(milliseconds);
     
 
-## 参数
+## 參數
 
-*   **毫秒为单位）**： 要以毫秒为单位设置中，音频的播放位置的位置。
+*   **毫秒為單位）**： 要以毫秒為單位設置中，音訊的播放位置的位置。
 
-## 说明
+## 說明
 
-`media.seekTo`异步，执行更新引用的音频文件中的当前播放位置 `Media` 对象。 此外可以更新 `Media` 对象的 `position` 参数。
+`media.seekTo`非同步，執行更新引用的音訊檔中的當前播放位置 `Media` 物件。 此外可以更新 `Media` 物件的 `position` 參數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 6.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 6.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen
@@ -149,4 +149,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 黑莓 WebWorks 怪癖
 
-*   黑莓 OS 5 设备上不支持。
+*   黑莓 OS 5 設備上不支援。

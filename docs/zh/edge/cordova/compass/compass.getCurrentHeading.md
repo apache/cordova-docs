@@ -16,24 +16,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compass.getCurrentHeading
 
-获取当前的罗经航向。
+獲取當前的羅經航向。
 
     navigator.compass.getCurrentHeading(compassSuccess, compassError, compassOptions);
     
 
-## 说明
+## 說明
 
-罗盘是传感器，可检测的方向或设备通常指从设备的顶部的标题。它的措施中从 0 度到 359.99，其中 0 是北部的标题。
+羅盤是感應器，可檢測的方向或設備通常指從設備的頂部的標題。它的措施中從 0 度到 359.99，其中 0 是北部的標題。
 
-通过返回的罗经航向信息 `CompassHeading` 对象使用 `compassSuccess` 回调函数。
+通過返回的羅經航向資訊 `CompassHeading` 物件使用 `compassSuccess` 回呼函數。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   黑莓 10
 *   iOS
 *   Tizen
-*   Windows Phone 7 和 8 （如果在硬件中可用）
+*   Windows Phone 7 和 8 （如果在硬體中可用）
 *   Windows 8
 
 ## 快速的示例

@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # DirectoryReader
 
-列出文件和目录在目录中，如[W3C 目录和系统][1]规范中定义的对象。
+列出檔和目錄在目錄中，如[W3C 目錄和系統][1]規範中定義的物件。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
 ## 方法
 
-*   **readEntries**: 读取一个目录中的条目。
+*   **readEntries**: 讀取一個目錄中的條目。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## readEntries
 
-读取此目录中的项。
+讀取此目錄中的項。
 
-**参数：**
+**參數：**
 
-*   **successCallback**: 一个传递的数组的回调 `FileEntry` 和 `DirectoryEntry` 的对象。*（函数）*
+*   **successCallback**: 一個傳遞的陣列的回檔 `FileEntry` 和 `DirectoryEntry` 的物件。*（函數）*
 
-*   **errorCallback**: 如果检索目录列表时发生错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**: 如果檢索目錄清單時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 

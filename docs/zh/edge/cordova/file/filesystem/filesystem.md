@@ -14,29 +14,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 文件系统
+# 檔案系統
 
-此对象表示一个文件系统。
+此物件表示一個檔案系統。
 
-## 属性
+## 屬性
 
-*   **名称**： 文件系统的名称。*() DOMString*
+*   **名稱**： 檔案系統的名稱。*() DOMString*
 
-*   **根**： 文件系统的根目录。*() DirectoryEntry*
+*   **根**： 檔案系統的根目錄。*() DirectoryEntry*
 
-## 详细信息
+## 詳細資訊
 
-`FileSystem`对象表示文件系统的信息。 文件系统的名称的公开的文件系统的列表中是唯一的。 根属性包含 `DirectoryEntry` 对象，表示文件系统的根目录。
+`FileSystem`物件表示檔案系統的資訊。 檔案系統的名稱的公開的檔案系統的清單中是唯一的。 根屬性包含 `DirectoryEntry` 物件，表示檔案系統的根目錄。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 文件系统快速示例
+## 檔案系統快速示例
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

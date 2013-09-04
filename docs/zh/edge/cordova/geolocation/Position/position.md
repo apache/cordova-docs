@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 位置
 
-包含 `Position` 坐标和时间戳，由地理位置 API 创建。
+包含 `Position` 座標和時間戳記，由地理位置 API 創建。
 
-## 属性
+## 屬性
 
-*   **coords**： 一组的地理坐标。*（坐标）*
+*   **coords**： 一組的地理座標。*（座標）*
 
-*   **时间戳**： 创建时间戳为 `coords` 。*（日期）*
+*   **時間戳記**： 創建時間戳記為 `coords` 。*（日期）*
 
-## 说明
+## 說明
 
-`Position`创建和填充的科尔多瓦，并返回到用户通过一个回调函数对象。
+`Position`創建和填充的科爾多瓦，並返回到使用者通過一個回呼函數物件。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

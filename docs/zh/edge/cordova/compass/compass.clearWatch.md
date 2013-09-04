@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compass.clearWatch
 
-再看看 ID 参数所引用的指南针。
+再看看 ID 參數所引用的指南針。
 
     navigator.compass.clearWatch(watchID);
     
 
 *   **watchID**： 由返回的 ID`compass.watchHeading`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
+*   Android 系統
 *   黑莓 10
 *   iOS
 *   Tizen
-*   Windows Phone 7 和 8 （如果在硬件中可用）
+*   Windows Phone 7 和 8 （如果在硬體中可用）
 *   Windows 8
 
 ## 快速的示例

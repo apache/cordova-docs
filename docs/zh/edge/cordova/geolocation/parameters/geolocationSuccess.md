@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationSuccess
 
-用户的地理位置变得可用时执行的回调函数 （当从调用 `geolocation.getCurrentPosition` ），或 （当从调用位置的更改时`geolocation.watchPosition`).
+使用者的地理位置變得可用時執行的回呼函數 （當從調用 `geolocation.getCurrentPosition` ），或 （當從調用位置的更改時`geolocation.watchPosition`).
 
     function(position) {
         // Do something
     }
     
 
-## 参数
+## 參數
 
-*   **位置**： 返回设备的地理位置。*（位置）*
+*   **位置**： 返回設備的地理位置。*（位置）*
 
 ## 示例
 

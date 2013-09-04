@@ -14,32 +14,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 联系人姓名
+# 連絡人姓名
 
-包含有关的不同种类的信息 `Contact` 对象的名称。
+包含有關的不同種類的資訊 `Contact` 物件的名稱。
 
-## 属性
+## 屬性
 
-*   **格式化**： 该联系人的完整名称。*() DOMString*
+*   **格式化**： 該連絡人的完整名稱。*() DOMString*
 
-*   **家族**： 联系人的姓氏。*() DOMString*
+*   **家族**： 連絡人的姓氏。*() DOMString*
 
-*   **givenName**： 联系人的名字。*() DOMString*
+*   **givenName**： 連絡人的名字。*() DOMString*
 
-*   **之间**： 联系人的中间名。*() DOMString*
+*   **之間**： 連絡人的中間名。*() DOMString*
 
-*   **honorificPrefix**： 联系人的前缀 (例如*先生*或*博士*） *(DOMString)*
+*   **honorificPrefix**： 連絡人的首碼 (例如*先生*或*博士*） *(DOMString)*
 
-*   **honorificSuffix**： 联系人的后缀 （如*律师*）。*() DOMString*
+*   **honorificSuffix**： 連絡人的尾碼 （如*律師*）。*() DOMString*
 
-## 详细信息
+## 詳細資訊
 
-`ContactName`对象存储的联系人的名称属性。
+`ContactName`物件存儲的連絡人的名稱屬性。
 
-## 支持的平台
+## 支援的平臺
 
 *   Android 2.X
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -120,22 +120,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
-*   **格式化**： 部分支持，和只读。 返回的串联的 `honorificPrefix` ， `givenName` ， `middleName` ， `familyName` ，和`honorificSuffix`.
+*   **格式化**： 部分支援，和唯讀。 返回的串聯的 `honorificPrefix` ， `givenName` ， `middleName` ， `familyName` ，和`honorificSuffix`.
 
-## 黑莓手机 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **格式化**： 部分支持。返回的串联的黑莓手机**名字**和**姓氏**字段。
+*   **格式化**： 部分支援。返回的串聯的黑莓手機**名字**和**姓氏**欄位。
 
-*   **家族**: 支持。黑莓**姓氏**字段中存储。
+*   **家族**: 支援。黑莓**姓氏**欄位中存儲。
 
-*   **givenName**： 支持。黑莓**名字**字段中存储。
+*   **givenName**： 支援。黑莓**名字**欄位中存儲。
 
-*   **之间**： 不受支持，返回`null`.
+*   **之間**： 不受支援，返回`null`.
 
-*   **honorificPrefix**: 不受支持，返回`null`.
+*   **honorificPrefix**: 不受支援，返回`null`.
 
-*   **honorificSuffix**: 不受支持，返回`null`.
+*   **honorificSuffix**: 不受支援，返回`null`.
 
 ## iOS 的怪癖
 
-*   **格式化**： 部分支持。返回 iOS 复合名称，但为只读。
+*   **格式化**： 部分支援。返回 iOS 複合名稱，但為唯讀。

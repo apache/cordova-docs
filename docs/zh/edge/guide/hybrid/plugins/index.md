@@ -14,38 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 插件开发指南
+# 外掛程式開發指南
 
-科尔多瓦插件桥梁有点之间供电科尔多瓦应用和科尔多瓦应用程序的本机平台 web 视图的功能在运行时。 插件的使用跨所有平台和以下特定于平台的插件接口，JavaScript 调用到本机实现一个单一的 JavaScript 界面组成。 所有的科尔多瓦 Api 的核心是使用这种体系结构实现的。
+科爾多瓦外掛程式橋樑有點之間供電科爾多瓦應用和科爾多瓦應用程式的本機平臺 web 視圖的功能在運行時。 外掛程式的使用跨所有平臺和以下特定于平臺的外掛程式介面，JavaScript 調用到本機實現一個單一的 JavaScript 介面組成。 所有的科爾多瓦 Api 的核心是使用這種體系結構實現的。
 
-本指南的步骤，编写一个简单的 Echo 插件的过程传递一个字符串从 JavaScript，并将它发送到本机环境中有关支持的平台。 本机代码然后回里面的插件 JavaScript 回调返回相同的字符串。
+本指南的步驟，編寫一個簡單的 Echo 外掛程式的過程傳遞一個字串從 JavaScript，並將它發送到本機環境中有關支援的平臺。 本機代碼然後回裡面的外掛程式 JavaScript 回檔返回相同的字串。
 
-本指南提供了足够的概述，您可以生成来编写更复杂的插件。
+本指南提供了足夠的概述，您可以生成來編寫更複雜的外掛程式。
 
 ## JavaScript
 
-任何插件的入口点是 JavaScript。 科尔多瓦是这样他们就可以使用的原因开发人员使用和写 JavaScript，不客观-C，不是 Java，C#。 你的插件的 JavaScript 界面是你的科尔多瓦插件的正面和可以说是最重要的部分。
+任何外掛程式的進入點是 JavaScript。 科爾多瓦是這樣他們就可以使用的原因開發人員使用和寫 JavaScript，不客觀-C，不是 JAVA，C#。 你的外掛程式的 JavaScript 介面是你的科爾多瓦外掛程式的正面和可以說是最重要的部分。
 
-然而你喜欢，可以设计你的插件 JavaScript 的结构。 您*必须*使用科尔多瓦 JavaScript 和本机环境之间进行通信的一件事是 `cordova.exec` 函数。 下面是一个示例：
+然而你喜歡，可以設計你的外掛程式 JavaScript 的結構。 您*必須*使用科爾多瓦 JavaScript 和本機環境之間進行通信的一件事是 `cordova.exec` 函數。 下面是一個示例：
 
         cordova.exec(function(winParam) {}, function(error) {}, "service",
                      "action", ["firstArgument", "secondArgument", 42,
                      false]);
     
 
-参数详述如下：
+參數詳述如下：
 
-*   `function(winParam) {}`： 成功回调函数。 假设您 `exec` 调用成功完成，调用此函数时 （可以选择与您传递回给它的任何参数）。
+*   `function(winParam) {}`： 成功回呼函數。 假設您 `exec` 調用成功完成，調用此函數時 （可以選擇與您傳遞回給它的任何參數）。
 
-*   `function(error) {}`: 错误函数回调。如果该操作未成功完成，调用此函数时 （可以选择与错误参数）。
+*   `function(error) {}`: 錯誤函數回檔。如果該操作未成功完成，調用此函數時 （可以選擇與錯誤參數）。
 
-*   `"service"`： 要调用的本机一边的服务名称。这被映射到本机类，有关的更多资料，可在下面列出的本机指南。
+*   `"service"`： 要調用的本機一邊的服務名稱。這被映射到本機類，有關的更多資料，可在下面列出的本機指南。
 
-*   `"action"`： 要调入的操作名称。 这由本机类接收拾 `exec` 调用，并且，取决于平台，基本上将映射到类的方法。 下面列出的本机指南提供详细信息。
+*   `"action"`： 要調入的操作名稱。 這由本機類接收拾 `exec` 調用，並且，取決於平臺，基本上將映射到類的方法。 下面列出的本機指南提供詳細資訊。
 
-*   `[/* arguments */]`： 要传递到本机环境中的参数。
+*   `[/* arguments */]`： 要傳遞到本機環境中的參數。
 
-### Echo 插件的 JavaScript 示例
+### Echo 外掛程式的 JavaScript 示例
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -54,31 +54,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         };
     
 
-让我们深入到这。该插件的重视本身到 `window` ，具体到 `echo` 函数。插件用户将然后使用，如下所示：
+讓我們深入到這。該外掛程式的重視本身到 `window` ，具體到 `echo` 函數。外掛程式使用者將然後使用，如下所示：
 
         window.echo("echome", function(echoValue) {
             alert(echoValue == "echome"); // should alert true.
         });
     
 
-首先，让我们看看的最后三个参数的 `exec` 函数。 我们将调用 `Echo` "服务、"请求 `echo` "行动"，和传递的参数包含 echo 字符串的数组，这是进入的第一个参数 `window.echo` 函数。
+首先，讓我們看看的最後三個參數的 `exec` 函數。 我們將調用 `Echo` "服務、"請求 `echo` "行動"，和傳遞的參數包含 echo 字串的陣列，這是進入的第一個參數 `window.echo` 函數。
 
-成功回调传递到 `exec` 是只是提到该回调函数的 `window.echo` 需要。 我们多做一点为错误回调： 如果本机端触发错误回调，我们只需调用成功回调函数，并传递到它"的默认"的字符串。
+成功回檔傳遞到 `exec` 是只是提到該回呼函數的 `window.echo` 需要。 我們多做一點為錯誤回檔： 如果本機端觸發錯誤回檔，我們只需調用成功回呼函數，並傳遞到它"的預設"的字串。
 
-## 插件规范
+## 外掛程式規範
 
-科尔多瓦有可用于启用该插件为 Android、 iOS、 黑莓 10 和 Windows Phone 平台的自动的安装一个插件规范。 通过以特定方式构建你的插件，添加 `plugin.xml` 清单文件，您可以使用户能够安装你的插件通过命令行工具。
+科爾多瓦有可用於啟用該外掛程式為 Android、 iOS、 黑莓 10 和 Windows Phone 平臺的自動的安裝一個外掛程式規範。 通過以特定方式構建你的外掛程式，添加 `plugin.xml` 清單檔，您可以使使用者能夠安裝你的外掛程式通過命令列工具。
 
-*   插件规范
+*   外掛程式規範
 
-## 本机
+## 本機
 
-一旦你为你的插件定义 JavaScript，你需要至少一个本机实现，补充。 下面列出了这样做为每个平台的详细信息。 这些指南继续在上文讨论过的简单回声插件示例上。
+一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面列出了這樣做為每個平臺的詳細資訊。 這些指南繼續在上文討論過的簡單回聲外掛程式示例上。
 
-*   Android 插件
-*   黑莓手机的插件
-*   黑莓 10 插件
-*   iOS 插件
-*   Windows Phone 插件
+*   Android 外掛程式
+*   黑莓手機的外掛程式
+*   黑莓 10 外掛程式
+*   iOS 外掛程式
+*   Windows Phone 外掛程式
 
-当前，Tizen 平台不支持插件。
+當前，Tizen 平臺不支援外掛程式。

@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.stringToNumber
 
-分析的数字格式化为根据客户端的用户首选项的字符串并返回相应的号码。
+分析的數位格式化為根據用戶端的使用者首選項的字串並返回相應的號碼。
 
     navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回到数 `successCallback` 与 `properties` 对象作为参数。对象应具有 `value` 属性与 `Number` 的值。
+返回到數 `successCallback` 與 `properties` 物件作為參數。物件應具有 `value` 屬性與 `Number` 的值。
 
-如果有错误解析的字符串，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.PARSING\_ERROR`.
+如果有錯誤解析的字串，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PARSING\_ERROR`.
 
-`options`参数是可选的并且默认为以下值：
+`options`參數是可選的並且預設為以下值：
 
-    {类型： '十进制'}
+    {類型： '十進位'}
     
 
 `options.type`可以是 `decimal` ， `percent` ，或`currency`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，此时应显示与文本类似于弹出式对话框中 `number: 1234.56` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示與文本類似于彈出式對話方塊中 `number: 1234.56` ：
 
     navigator.globalization.stringToNumber(
         '1234.56',

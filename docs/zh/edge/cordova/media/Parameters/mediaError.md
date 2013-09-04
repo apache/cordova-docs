@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # mediaError
 
-当有错误的媒体功能执行用户指定的回调函数。
+當有錯誤的媒體功能執行使用者指定的回呼函數。
 
     function(error) {
         // Handle the error
     }
     
 
-## 参数
+## 參數
 
-*   **错误**: 设备所返回的错误。*() MediaError*
+*   **錯誤**: 設備所返回的錯誤。*() MediaError*

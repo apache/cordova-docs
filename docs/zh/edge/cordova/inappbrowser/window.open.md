@@ -16,52 +16,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # window.open
 
-在一个新的中打开 URL `InAppBrowser` 实例，当前的浏览器实例或系统浏览器。
+在一個新的中打開 URL `InAppBrowser` 實例，當前的瀏覽器實例或系統瀏覽器。
 
     var ref = window.open(url, target, options);
     
 
-*   **ref**： 参考 `InAppBrowser` 窗口。*() InAppBrowser*
+*   **ref**： 參考 `InAppBrowser` 視窗。*() InAppBrowser*
 
-*   **url**： 要加载*（字符串）*的 URL。调用 `encodeURI()` 这个如果 URL 包含 Unicode 字符。
+*   **url**： 要載入*（字串）*的 URL。調用 `encodeURI()` 這個如果 URL 包含 Unicode 字元。
 
-*   **目标**： 目标在其中加载的 URL，可选参数，默认值为 `_self` 。*（字符串）*
+*   **目標**： 目標在其中載入的 URL，可選參數，預設值為 `_self` 。*（字串）*
     
-    *   `_self`： 打开在科尔多瓦 web 视图如果 URL 是在白名单中，否则它在打开`InAppBrowser`.
-    *   `_blank`： 在打开`InAppBrowser`.
-    *   `_system`： 在该系统的 web 浏览器中打开。
+    *   `_self`： 打開在科爾多瓦 web 視圖如果 URL 是在白名單中，否則它在打開`InAppBrowser`.
+    *   `_blank`： 在打開`InAppBrowser`.
+    *   `_system`： 在該系統的 web 瀏覽器中打開。
 
-*   **选项**： 选项为 `InAppBrowser` 。可选，拖欠到： `location=yes` 。*（字符串）*
+*   **選項**： 選項為 `InAppBrowser` 。可選，拖欠到： `location=yes` 。*（字串）*
     
-    `options`字符串必须不包含任何空白的空间，和必须用逗号分隔每个功能的名称/值对。 功能名称区分大小写。 所有平台都支持下面的值：
+    `options`字串必須不包含任何空白的空間，和必須用逗號分隔每個功能的名稱/值對。 功能名稱區分大小寫。 所有平臺都支援下面的值：
     
-    *   **位置**： 设置为 `yes` 或 `no` ，打开 `InAppBrowser` 的位置栏打开或关闭。
-    ## Android 仅
+    *   **位置**： 設置為 `yes` 或 `no` ，打開 `InAppBrowser` 的位置欄打開或關閉。
+    ## Android 僅
     
-    *   **closebuttoncaption** -将设置为一个字符串，它将会在"完成"按钮的标题。 
-    *   **隐藏**-设置为是以创建浏览器和加载页面，但不是显示它。 Load 事件将触发加载完成时。 省略或设置为否 （默认值），以有浏览器打开，然后以正常方式加载。 
-    *   **clearcache** -设置为 'yes' 有浏览器的 cookie 缓存清除之前打开新窗口
-    *   **clearsessioncache** -设置为 'yes' 有会话 cookie 缓存清除之前打开新窗口
+    *   **closebuttoncaption** -將設置為一個字串，它將會在"完成"按鈕的標題。 
+    *   **隱藏**-設置為是以創建瀏覽器和載入頁面，但不是顯示它。 Load 事件將觸發載入完成時。 省略或設置為否 （預設值），以有瀏覽器打開，然後以正常方式載入。 
+    *   **clearcache** -設置為 'yes' 有瀏覽器的 cookie 緩存清除之前打開新視窗
+    *   **clearsessioncache** -設置為 'yes' 有會話 cookie 緩存清除之前打開新視窗
     ## iOS 只
     
-    *   **closebuttoncaption** -将设置为一个字符串，它将会在"完成"按钮的标题。注意你会有自己的本地化此值。
-    *   **隐藏**-设置为是以创建浏览器和加载页面，但不是显示它。 Load 事件将触发加载完成时。 省略或设置为否 （默认值），以有浏览器打开，然后以正常方式加载。 
-    *   **工具栏**-设置为 '是' 或 '否'，打开工具栏或关闭为 InAppBrowser （默认值为是）
-    *   **enableViewportScale**： 将设置为 `yes` 或 `no` ，防止通过 meta 标记 （默认为缩放的视区`no`).
-    *   **mediaPlaybackRequiresUserAction**： 将设置为 `yes` 或 `no` ，防止 HTML5 音频或视频从 autoplaying （默认为`no`).
-    *   **allowInlineMediaPlayback**： 将设置为 `yes` 或 `no` 允许内联 HTML5 播放媒体，在浏览器窗口中，而不是特定于设备播放界面内显示。 HTML 的 `video` 元素还必须包括 `webkit-playsinline` 属性 （默认为`no`)
-    *   **keyboardDisplayRequiresUserAction**： 将设置为 `yes` 或 `no` 时，要打开键盘窗体元素接收焦点通过 JavaScript 的 `focus()` 调用 （默认为`yes`).
-    *   **suppressesIncrementalRendering**： 将设置为 `yes` 或 `no` 等待，直到所有新查看的内容正在呈现 （默认为前收到`no`).
-    *   **presentationstyle**： 将设置为 `pagesheet` ， `formsheet` 或 `fullscreen` 来设置[演示文稿样式][1](默认为`fullscreen`).
-    *   **transitionstyle**： 将设置为 `fliphorizontal` ， `crossdissolve` 或 `coververtical` 设置[过渡样式][2](默认为`coververtical`).
+    *   **closebuttoncaption** -將設置為一個字串，它將會在"完成"按鈕的標題。注意你會有自己的當地語系化此值。
+    *   **隱藏**-設置為是以創建瀏覽器和載入頁面，但不是顯示它。 Load 事件將觸發載入完成時。 省略或設置為否 （預設值），以有瀏覽器打開，然後以正常方式載入。 
+    *   **工具列**-設置為 '是' 或 '否'，打開工具列或關閉為 InAppBrowser （預設值為是）
+    *   **enableViewportScale**： 將設置為 `yes` 或 `no` ，防止通過 meta 標記 （預設為縮放的視區`no`).
+    *   **mediaPlaybackRequiresUserAction**： 將設置為 `yes` 或 `no` ，防止 HTML5 音訊或視頻從 autoplaying （預設為`no`).
+    *   **allowInlineMediaPlayback**： 將設置為 `yes` 或 `no` 允許內聯 HTML5 播放媒體，在瀏覽器視窗中，而不是特定于設備播放介面內顯示。 HTML 的 `video` 元素還必須包括 `webkit-playsinline` 屬性 （預設為`no`)
+    *   **keyboardDisplayRequiresUserAction**： 將設置為 `yes` 或 `no` 時，要打開鍵盤表單元素接收焦點通過 JavaScript 的 `focus()` 調用 （預設為`yes`).
+    *   **suppressesIncrementalRendering**： 將設置為 `yes` 或 `no` 等待，直到所有新查看的內容正在呈現 （預設為前收到`no`).
+    *   **presentationstyle**： 將設置為 `pagesheet` ， `formsheet` 或 `fullscreen` 來設置[演示文稿樣式][1](預設為`fullscreen`).
+    *   **transitionstyle**： 將設置為 `fliphorizontal` ， `crossdissolve` 或 `coververtical` 設置[過渡樣式][2](預設為`coververtical`).
 
  [1]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle
  [2]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机
+*   Android 系統
+*   黑莓手機
 *   iOS
 *   Windows Phone 7 和 8
 

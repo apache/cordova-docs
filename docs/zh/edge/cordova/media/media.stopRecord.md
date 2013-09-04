@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.stopRecord
 
-停止录制音频文件。
+停止錄製音訊檔。
 
     media.stopRecord() ；
     
 
-## 说明
+## 說明
 
-`media.stopRecord`方法执行同步，停止录制的音频文件。
+`media.stopRecord`方法執行同步，停止錄製的音訊檔。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -132,4 +132,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Tizen 怪癖
 
-*   Tizen 设备上不支持。
+*   Tizen 設備上不支援。

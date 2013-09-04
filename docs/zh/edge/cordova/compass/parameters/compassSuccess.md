@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # compassSuccess
 
-提供了通过的罗经航向信息的 onSuccess 回调函数 `compassHeading` 对象。
+提供了通過的羅經航向資訊的 onSuccess 回呼函數 `compassHeading` 物件。
 
     function(heading) {
         // Do something
     }
     
 
-## 参数
+## 參數
 
-*   **标题**： 标题信息。*() compassHeading*
+*   **標題**： 標題資訊。*() compassHeading*
 
 ## 示例
 

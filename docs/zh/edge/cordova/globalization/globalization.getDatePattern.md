@@ -16,43 +16,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getDatePattern
 
-返回一个模式字符串格式化和解析日期根据客户端的用户首选项。
+返回一個模式字串格式化和解析日期根據用戶端的使用者首選項。
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回到模式 `successCallback` 。作为一个参数传递的对象包含以下属性：
+返回到模式 `successCallback` 。作為一個參數傳遞的物件包含以下屬性：
 
-*   **模式**： 要格式化和解析日期的日期和时间模式。 模式按照 Unicode 技术标准 #35。 <http://unicode.org/reports/tr35/tr35-4.html>。 *（字符串）*
+*   **模式**： 要格式化和解析日期的日期和時間模式。 模式按照 Unicode 技術標準 #35。 [HTTP://unicode.org/reports/tr35/tr35-4.html][1]。 *（字串）*
 
-*   **时区**： 在客户端上的时区的缩写的名称。*（字符串）*
+*   **時區**： 在用戶端上的時區的縮寫的名稱。*（字串）*
 
-*   **utc_offset**： 客户端的时区和协调通用时间当前区别秒。*（人数）*
+*   **utc_offset**： 用戶端的時區和協調通用時間當前區別秒。*（人數）*
 
-*   **dst_offset**： 在客户端的夏之间的秒数的当前夏令时偏移量的时区和客户端的夏时制储蓄的时区。*（人数）*
+*   **dst_offset**： 在用戶端的夏之間的秒數的當前夏令時偏移量的時區和用戶端的夏時制儲蓄的時區。*（人數）*
 
-如果您获取该模式，错误 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.PATTERN\_ERROR`.
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-`options`参数是可选的并且默认为以下值：
+如果您獲取該模式，錯誤 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
 
-    {formatLength: '短'，选择器： 日期和时间}
+`options`參數是可選的並且預設為以下值：
+
+    {formatLength: '短'，選擇器： 日期和時間}
     
 
 `options.formatLength`可以是 `short` ， `medium` ， `long` ，或 `full` 。 `options.selector`可以是 `date` ， `time` 或`date and
 time`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，此示例显示弹出式对话框中的文本如 `pattern: M/d/yyyy h:mm a` ：
+當瀏覽器設置為 `en\_US` 的地區設定，此示例顯示彈出式對話方塊中的文本如 `pattern: M/d/yyyy h:mm a` ：
 
     function checkDatePattern() {
         navigator.globalization.getDatePattern(
@@ -90,10 +92,10 @@ time`.
 
 ## Windows Phone 8 怪癖
 
-*   `formatLength`仅支持 `short` 和 `full` 的值。
+*   `formatLength`僅支援 `short` 和 `full` 的值。
 
-*   `pattern`的 `date and time` 模式返回只完整的日期时间格式。
+*   `pattern`的 `date and time` 模式返回只完整的日期時間格式。
 
-*   `timezone`返回全时区名称。
+*   `timezone`返回全時區名稱。
 
-*   `dst_offset`属性不受支持，并且总是返回零。
+*   `dst_offset`屬性不受支援，並且總是返回零。

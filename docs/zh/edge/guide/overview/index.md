@@ -16,40 +16,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 概述
 
-科尔多瓦是一个开放源码移动开发框架。 它允许您使用标准的 web 技术如 HTML5、 CSS3 和 JavaScript 进行跨平台开发，避免每个移动平台的本机开发语言。 应用程序在有针对性的对每个平台的包装内执行，并依靠符合标准的 API 绑定访问每个设备的传感器、 数据和网络状态。
+科爾多瓦是一個開放源碼移動開發框架。 它允許您使用標準的 web 技術如 HTML5、 CSS3 和 JavaScript 進行跨平臺開發，避免每個移動平臺的本機開發語言。 應用程式在有針對性的對每個平臺的包裝內執行，並依靠符合標準的 API 綁定訪問每個設備的感應器、 資料和網路狀態。
 
-如果您是，使用科尔多瓦：
+如果您是，使用科爾多瓦：
 
-*   移动开发人员和想要扩展应用程序跨多个平台，而无需重新实现它与每个平台的语言和工具集。
+*   移動開發人員和想要擴展應用程式跨多個平臺，而無需重新實現它與每個平臺的語言和工具集。
 
-*   web 开发人员和想要部署 web 应用程序打包为分布在各种应用程序中存储的门户。
+*   網頁程式開發人員和想要部署 web 應用程式打包為分佈在各種應用程式中存儲的門戶。
 
-*   移动开发人员感兴趣混合本机应用程序中的组件与*web 视图*（浏览器窗口），可以访问设备级的 Api，或者如果您想要开发的插件界面本机和 web 视图组件之间。
+*   移動開發人員感興趣混合本機應用程式中的元件與*web 視圖*（瀏覽器視窗），可以訪問設備級的 Api，或者如果您想要開發的外掛程式介面本機和 web 視圖元件之間。
 
-## 基本组件
+## 基本元件
 
-科尔多瓦的应用程序都依赖于一个共同的 `config.xml` 文件，提供有关应用程序的信息，并指定参数影响它如何工作，如它是否响应方向转移。 此文件遵循 W3C 的[打包 Web 应用程序][1]或*构件*，规范。
+科爾多瓦的應用程式都依賴于一個共同的 `config.xml` 檔，提供有關應用程式的資訊，並指定參數影響它如何工作，如它是否回應方向轉移。 此檔遵循 W3C 的[打包 Web 應用程式][1]或*構件*，規範。
 
  [1]: http://www.w3.org/TR/widgets/
 
-应用程序本身是作为 web 页来实现，默认情况下，引用任何 CSS、 JavaScript、 图像、 媒体文件，命名*index.html*或其他资源是它运行的必要条件。 这款应用程序作为*web 视图*的本机应用程序中包装，您分发给应用程序商店内执行。 为 web 应用程序进行交互的方式本机应用程序做的各项设备功能，它也必须引用 `cordova.js` 文件，该文件提供 API 绑定。 <!-- XREF
+應用程式本身是作為 web 頁來實現，預設情況下，引用任何 CSS、 JavaScript、 圖像、 媒體檔案，命名*index.html*或其他資源是它運行的必要條件。 這款應用程式作為*web 視圖*的本機應用程式中包裝，您分發給應用程式商店內執行。 為 web 應用程式進行交互的方式本機應用程式做的各項裝置功能，它也必須引用 `cordova.js` 檔，該檔提供 API 綁定。 <!-- XREF
 (See the API Reference for an overview, and the Application
 Development Guide for examples of how to use them.)
 XREF -->
 
-科尔多瓦启用 web 视图可提供具有其整个用户界面的应用程序。 它也可以是更大，混合应用程序与本机应用程序组件混合 web 视图中的一个组件。 科尔多瓦提供*插件*接口，使这些组件，以互相沟通。
+科爾多瓦啟用 web 視圖可提供具有其整個使用者介面的應用程式。 它也可以是更大，混合應用程式與本機應用程式元件混合 web 視圖中的一個元件。 科爾多瓦提供*外掛程式*介面，使這些元件，以互相溝通。
 
-## 发展路径
+## 發展路徑
 
-设置应用程序的最简单方法是运行 `cordova` 命令行实用程序，也称为*命令行界面*(CLI)。 （若要安装 CLI，参见命令行界面。根据您想要的目标的平台的集，您可以依靠逐步更多地共享在开发周期的 CLI：
+設置應用程式的最簡單方法是運行 `cordova` 命令列實用程式，也稱為*命令列介面*(CLI)。 （若要安裝 CLI，參見命令列介面。根據您想要的目標的平臺的集，您可以依靠逐步更多地共用在開發週期的 CLI：
 
-*   在最基本的情况下，你可以使用 CLI 只是为了创建一个新项目填充，您要修改的默认配置。
+*   在最基本的情況下，你可以使用 CLI 只是為了創建一個新專案填充，您要修改的預設配置。
 
-*   对于很多的移动平台，也可以使用 CLI 来设置内部每个 SDK 编译所需的额外的项目文件。 为此，您必须安装每个目标的平台 SDK。 （见平台指南的说明）。如表中所示的平台支持下，您可能需要在目标平台根据不同的操作系统上运行，CLI。
+*   對於很多的移動平臺，也可以使用 CLI 來設置內部每個 SDK 編譯所需的額外的專案檔案。 為此，您必須安裝每個目標的平臺 SDK。 （見平臺指南的說明）。如表中所示的平臺支援下，您可能需要在目標平臺根據不同的作業系統上運行，CLI。
 
-*   为支持平台，CLI 可以编译 executible 的应用程序和基于 SDK 的设备仿真程序中运行它们。 <! — — XREF （请参阅应用程序发展指南的详细信息。） XREF--> 为全面的测试，还可以生成应用程序文件，直接在设备上安装它们。
+*   為支援平臺，CLI 可以編譯 executible 的應用程式和基於 SDK 的設備模擬程式中運行它們。 <! — — XREF （請參閱應用程式發展指南的詳細資訊。） XREF--> 為全面的測試，還可以生成應用程式檔，直接在設備上安裝它們。
 
-在开发周期中的任何点，你也可以依赖特定于平台的 SDK 工具，可提供一组更丰富的选项。 （见有关每个平台 SDK 工具的详细信息平台指南设置）。SDK 环境是更适当的如果你想要实现一个混合本机和基于 web 的应用程序组件的混合应用。 <! — — XREF （请参阅混合应用指南为更多的信息。） XREF--> 你可以使用命令行实用程序最初生成应用程序，或以迭代方式此后要喂 SDK 工具更新的代码。 您也可以自己生成应用程序的配置文件。 <!-- XREF
+在開發週期中的任何點，你也可以依賴特定于平臺的 SDK 工具，可提供一組更豐富的選項。 （見有關每個平臺 SDK 工具的詳細資訊平臺指南設置）。SDK 環境是更適當的如果你想要實現一個混合本機和基於 web 的應用程式元件的混合應用。 <! — — XREF （請參閱混合應用指南為更多的資訊。） XREF--> 你可以使用命令列實用程式最初生成應用程式，或以反覆運算方式此後要喂 SDK 工具更新的代碼。 您也可以自己生成應用程式的設定檔。 <!-- XREF
 (See Configuration Reference for details.)
 XREF -->
 
@@ -58,9 +58,9 @@ To build projects on some platforms, you may need to apply digital signatures.
 See Distributing Applications for information on how to upload your app to various store portals.
 XREF -->
 
-## 平台支持
+## 平臺支援
 
-下面显示一的组开发工具和设备的 Api 可为每个移动平台。（列标题显示的 CLI 速记存根 (stub)。
+下面顯示一的組開發工具和設備的 Api 可為每個移動平臺。（列標題顯示的 CLI 速記存根 (stub)。
 
 <!-- START HTML -->
 
@@ -68,11 +68,11 @@ XREF -->
   <tr>
     <th>
       </td> <th>
-        <tt>android 系统</tt>
+        <tt>android 系統</tt>
       </th>
       
       <th>
-        <tt>黑莓手机</tt>() 6
+        <tt>黑莓手機</tt>() 6
       </th>
       
       <th>
@@ -84,11 +84,11 @@ XREF -->
       </th>
       
       <th>
-        <tt>wp7</tt>(Windows<br />电话 7）
+        <tt>wp7</tt>(Windows<br />電話 7）
       </th>
       
       <th>
-        <tt>wp8</tt>(Windows<br />电话 8）
+        <tt>wp8</tt>(Windows<br />電話 8）
       </th>
       
       <th>
@@ -101,7 +101,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">科尔多瓦<br />CLI</a>
+          <a href="guide_cli_index.md.html">科爾多瓦<br />CLI</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -137,11 +137,11 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">嵌入式<br />Web 视图</a>
+          <a href="guide_hybrid_webviews_index.md.html">嵌入式<br />Web 視圖</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">（请参阅详细信息）</a>
+          <a href="guide_platforms_android_webview.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="blackberry" class="n">
@@ -151,7 +151,7 @@ XREF -->
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">（请参阅详细信息）</a>
+          <a href="guide_platforms_ios_webview.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="winphone7"  class="n">
@@ -169,27 +169,27 @@ XREF -->
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">插件<br />接口</a>
+          <a href="guide_hybrid_plugins_index.md.html">外掛程式<br />介面</a>
         </th>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">（请参阅详细信息）</a>
+          <a href="guide_guide_platforms_android_plugin.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="blackberry" class="y">
-          <a href="guide_guide_platforms_blackberry_plugin.md.html">（请参阅详细信息）</a>
+          <a href="guide_guide_platforms_blackberry_plugin.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">（请参阅详细信息）</a>
+          <a href="guide_guide_platforms_blackberry10_plugin.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">（请参阅详细信息）</a>
+          <a href="guide_guide_platforms_ios_plugin.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">（请参阅详细信息）</a>
+          <a href="guide_guide_platforms_wp8_plugin.md.html">（請參閱詳細資訊）</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -207,43 +207,13 @@ XREF -->
         </th>
         
         <th colspan="20">
-          平台 Api
+          平臺 Api
         </th>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">加速度计</a>
-        </th>
-        
-        <td data-col="android"    class="y">
-        </td>
-        
-        <td data-col="blackberry" class="y">
-        </td>
-        
-        <td data-col="blackberry10" class="y">
-        </td>
-        
-        <td data-col="ios"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-        </td>
-        
-        <td data-col="winphone8"  class="y">
-        </td>
-        
-        <td data-col="win8"       class="y">
-        </td>
-        
-        <td data-col="tizen"       class="y">
-        </td>
-      </tr>
-      
-      <tr>
-        <th>
-          <a href="cordova_camera_camera.md.html">相机</a>
+          <a href="cordova_accelerometer_accelerometer.md.html">加速度計</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -273,7 +243,37 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">捕获</a>
+          <a href="cordova_camera_camera.md.html">相機</a>
+        </th>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry" class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="winphone7"  class="y">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="y">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="cordova_media_capture_capture.md.html">捕獲</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -303,7 +303,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">指南针</a>
+          <a href="cordova_compass_compass.md.html">指南針</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -334,7 +334,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">连接</a>
+          <a href="cordova_connection_connection.md.html">連接</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -364,7 +364,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">联系人</a>
+          <a href="cordova_contacts_contacts.md.html">連絡人</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -394,7 +394,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">设备</a>
+          <a href="cordova_device_device.md.html">設備</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -454,7 +454,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">文件</a>
+          <a href="cordova_file_file.md.html">檔</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -470,11 +470,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          没有文件传输
+          沒有檔案傳輸
         </td>
         
         <td data-col="winphone8"  class="p">
-          没有文件传输
+          沒有檔案傳輸
         </td>
         
         <td data-col="win8"       class="y">
@@ -576,7 +576,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">媒体</a>
+          <a href="cordova_media_media.md.html">媒體</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -636,7 +636,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">闪屏</a>
+          <a href="cordova_splashscreen_splashscreen.md.html">閃屏</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -666,7 +666,7 @@ XREF -->
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">存储</a>
+          <a href="cordova_storage_storage.md.html">存儲</a>
         </th>
         
         <td data-col="android"    class="y">
@@ -682,11 +682,11 @@ XREF -->
         </td>
         
         <td data-col="winphone7"  class="p">
-          认为只有
+          認為只有
         </td>
         
         <td data-col="winphone8"  class="p">
-          认为只有
+          認為只有
         </td>
         
         <td data-col="win8"       class="y">

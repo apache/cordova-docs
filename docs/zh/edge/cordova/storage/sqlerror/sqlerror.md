@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # SQLError
 
-A `SQLError` 对象当发生错误时引发。
+A `SQLError` 物件當發生錯誤時引發。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
-*   **消息**： 错误的说明。
+*   **消息**： 錯誤的說明。
 
 ## 常量
 
@@ -35,6 +35,6 @@ A `SQLError` 对象当发生错误时引发。
 *   `SQLError.CONSTRAINT_ERR`
 *   `SQLError.TIMEOUT_ERR`
 
-## 说明
+## 說明
 
-`SQLError`对象操作数据库时出现错误时引发。
+`SQLError`物件運算元據庫時出現錯誤時引發。

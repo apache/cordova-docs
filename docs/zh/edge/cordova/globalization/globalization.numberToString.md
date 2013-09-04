@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.numberToString
 
-返回一个数字的格式设置为根据客户端的用户首选项的字符串。
+返回一個數位的格式設置為根據用戶端的使用者首選項的字串。
 
     navigator.globalization.numberToString(number, successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回到带格式的数字字符串 `successCallback` 与 `properties` 对象作为参数。 对象应具有 `value` 属性与 `String` 的值。
+返回到帶格式的數位字串 `successCallback` 與 `properties` 物件作為參數。 物件應具有 `value` 屬性與 `String` 的值。
 
-如果有错误格式数，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.FORMATTING\_ERROR`.
+如果有錯誤格式數，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.FORMATTING\_ERROR`.
 
-`options`参数是可选的且其默认值：
+`options`參數是可選的且其預設值：
 
-    {类型： '十进制'}
+    {類型： '十進位'}
     
 
-`options.type`可以是 '十进制'、 '%' 或 '货币'。
+`options.type`可以是 '十進位'、 '%' 或 '貨幣'。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，这将显示一个弹出对话框与类似的文本 `number: 3.142` ：
+當瀏覽器設置為 `en\_US` 的地區設定，這將顯示一個彈出對話方塊與類似的文本 `number: 3.142` ：
 
     navigator.globalization.numberToString(
         3.1415926,

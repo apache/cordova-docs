@@ -14,9 +14,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 黑莓 10 插件
+# 黑莓 10 外掛程式
 
-这是延续科尔多瓦的插件开发指南。 一旦您已经检查过这些内容，现在让我们看看我们需要有黑莓 10 平台的回声插件的事情。 召回的回声插件基本上返回任何字符串用户提供的 `window.echo` 函数：
+這是延續科爾多瓦的外掛程式開發指南。 一旦您已經檢查過這些內容，現在讓我們看看我們需要有黑莓 10 平臺的回聲外掛程式的事情。 召回的回聲外掛程式基本上返回任何字串使用者提供的 `window.echo` 函數：
 
     window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -25,59 +25,59 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         };
     
 
-科尔多瓦本机的黑莓 10 插件包含 JavaScript 代码，还可能包含本机代码。 Echo 插件示例演示如何调用本机功能从 JavaScript。 本机和 JavaScript 代码相互通信通过一个由 JNEXT 提供的框架。 每个插件还必须包含 `plugin.xml` 文件。
+科爾多瓦本機的黑莓 10 外掛程式包含 JavaScript 代碼，還可能包含本機代碼。 Echo 外掛程式示例演示如何調用本機功能從 JavaScript。 本機和 JavaScript 代碼相互通信通過一個由 JNEXT 提供的框架。 每個外掛程式還必須包含 `plugin.xml` 檔。
 
-## 创建你的插件的本机部分
+## 創建你的外掛程式的本機部分
 
-若要创建的本机部分你的插件，打开黑莓 10 NDK IDE 并选择文件 > 新 > 黑莓项目 > 本机扩展 > 黑莓手机 WebWorks。 请输入您的所需的项目名称 / 位置，然后单击完成。
+若要創建的本機部分你的外掛程式，打開黑莓 10 NDK IDE 並選擇檔 > 新 > 黑莓專案 > 本機擴展 > 黑莓手機 WebWorks。 請輸入您的所需的專案名稱 / 位置，然後按一下完成。
 
-由 IDE 创建的项目包含一个内存插件的示例代码。您可以替换或修改这些文件以包括您自己的功能。
+由 IDE 創建的專案包含一個記憶體外掛程式的示例代碼。您可以替換或修改這些檔以包括您自己的功能。
 
-*   `*name*_js.hpp`： JNEXT 代码 c + + 头。
+*   `*name*_js.hpp`： JNEXT 代碼 c + + 頭。
 
-*   `*name*_js.cpp`： JNEXT 的 c + + 代码。
+*   `*name*_js.cpp`： JNEXT 的 c + + 代碼。
 
-JNEXT 扩展的本机界面可以查看插件头文件位于公共的目录中，您的项目中。 它还包含常量和可以在本机代码中使用的实用程序函数。 你的插件必须从 JSExt 在 plugin.h 中定义的派生。这就是，你必须实现下面的类：
+JNEXT 擴展的本機介面可以查看外掛程式標頭檔位於公共的目錄中，您的專案中。 它還包含常量和可以在本機代碼中使用的實用程式函數。 你的外掛程式必須從 JSExt 在 plugin.h 中定義的派生。這就是，你必須實現下面的類：
 
-    类 JSExt {公共： 虚拟 ~JSExt() {} ；虚拟字符串 InvokeMethod (const 字符串 & strCommand) = 0 ；虚拟 bool CanDelete （无效） = 0 ；私人： std::string m_id ；};
+    類 JSExt {公共： 虛擬 ~JSExt() {} ；虛擬字串 InvokeMethod (const 字串 & strCommand) = 0 ；虛擬 bool CanDelete （無效） = 0 ；私人： std::string m_id ；};
     
 
-因此，您的扩展应包含 plugin.h 头文件。在回波的示例中，您使用 JSExt，如下所示在 echo_js.hpp 文件中：
+因此，您的擴展應包含 plugin.h 標頭檔。在回波的示例中，您使用 JSExt，如下所示在 echo_js.hpp 檔中：
 
-    #include"....../ public/plugin.h"< 字符串 > #ifndef ECHO_JS_H_ #define ECHO_JS_H_ #include 类回声： 公共 JSExt {公共： 显式回声 (const std::string & id) ；虚拟 ~ echo () ；虚拟 std::string InvokeMethod (const std::string & 命令) ；虚拟 bool CanDelete() ；私人： std::string m_id ；};#endif / / ECHO_JS_H_
+    #include"....../ public/plugin.h"< 字串 > #ifndef ECHO_JS_H_ #define ECHO_JS_H_ #include 類回聲： 公共 JSExt {公共： 顯式回聲 (const std::string & id) ；虛擬 ~ echo () ；虛擬 std::string InvokeMethod (const std::string & 命令) ；虛擬 bool CanDelete() ；私人： std::string m_id ；};#endif / / ECHO_JS_H_
     
 
-`m_id`是一个包含此对象的 JNEXT id 的属性。 Id 作为构造函数的参数传递到类。 它被需要触发 JavaScript 边从本机上的事件。 JNEXT 规定的 CanDelete 方法用于确定是否可以删除您的本机对象的方法。 从 JavaScript 调用此特定对象的方法的请求结果调用 InvokeMethod 函数。 此函数的唯一参数是从这种方法应分析以确定应该执行哪种方法的本机对象的 JavaScript 传递的字符串。 现在我们在 echo_js.cpp 中实现这些功能。对于回声的示例，我们执行了 InvokeMethod 函数，如下所示：
+`m_id`是一個包含此物件的 JNEXT id 的屬性。 Id 作為建構函式的參數傳遞到類。 它被需要觸發 JavaScript 邊從本機上的事件。 JNEXT 規定的 CanDelete 方法用於確定是否可以刪除您的本機物件的方法。 從 JavaScript 調用此特定物件的方法的請求結果調用 InvokeMethod 函數。 此函數的唯一參數是從這種方法應分析以確定應該執行哪種方法的本機物件的 JavaScript 傳遞的字串。 現在我們在 echo_js.cpp 中實現這些功能。對於回聲的示例，我們執行了 InvokeMethod 函數，如下所示：
 
-    字符串 Echo::InvokeMethod (const 字符串和命令） {//parse 命令，并从字符串 int 索引 args = command.find_first_of("") ；字符串 strCommand = command.substr （0，索引） ；字符串 strValue = command.substr (指数 + 1，command.length()) ；/ / 确定应该执行哪些函数如果 (strCommand = ="回声") {返回 strValue;} 其他 {返回"不支持方法"；}
+    字串 Echo::InvokeMethod (const 字串和命令） {//parse 命令，並從字串 int 索引 args = command.find_first_of("") ；字串 strCommand = command.substr （0，索引） ；字串 strValue = command.substr (指數 + 1，command.length()) ；/ / 確定應該執行哪些函數如果 (strCommand = ="回聲") {返回 strValue;} 其他 {返回"不支援方法"；}
     }
     
 
-你本机的插件还必须实现以下回调函数：
+你本機的外掛程式還必須實現以下回呼函數：
 
-*   `extern char * onGetObjList （无效） ；`
+*   `extern char * onGetObjList （無效） ；`
 
-*   `extern JSExt * onCreateObject (const 字符串 & strClassName、 const 字符串 & strObjId) ；`
+*   `extern JSExt * onCreateObject (const 字串 & strClassName、 const 字串 & strObjId) ；`
 
-`onGetObjList`函数返回支持的 JNEXT 类的逗号分隔列表。 JNEXT 使用此函数来确定的 JNEXT 可以实例化的类的集合。 在我们回波的插件，我们有以下 `echo_js.cpp` ：
+`onGetObjList`函數返回支援的 JNEXT 類的逗號分隔清單。 JNEXT 使用此函數來確定的 JNEXT 可以具現化的類的集合。 在我們回波的外掛程式，我們有以下 `echo_js.cpp` ：
 
-    char * onGetObjList() {静态 char 名称 [] ="回声"；返回的名称 ；}
+    char * onGetObjList() {靜態 char 名稱 [] ="回聲"；返回的名稱 ；}
     
 
-`onCreateObject`函数采用两个参数。 第一个参数是类的请求将从 JavaScript 侧创建的名称。 有效的名称就是那些在中返回 `onGetObjList` 。 第二个参数是类的唯一的对象 id。 此方法返回创建的插件对象的指针。 在我们回波的插件，我们有以下 `echo_js.cpp` ：
+`onCreateObject`函數採用兩個參數。 第一個參數是類的請求將從 JavaScript 側創建的名稱。 有效的名稱就是那些在中返回 `onGetObjList` 。 第二個參數是類的唯一的物件 id。 此方法返回創建的外掛程式物件的指標。 在我們回波的外掛程式，我們有以下 `echo_js.cpp` ：
 
-    JSExt * onCreateObject (const 字符串与类名、 常量字符串 & id) {如果 (className = ="回声") {返回新 Echo(id) ；} 返回 NULL ；}
+    JSExt * onCreateObject (const 字串與類名、 常量字串 & id) {如果 (className = ="回聲") {返回新 Echo(id) ；} 返回 Null ；}
     
 
-## 创建你的插件的 JavaScript 部分
+## 創建你的外掛程式的 JavaScript 部分
 
-你的插件的 JavaScript 部分必须包含以下文件：
+你的外掛程式的 JavaScript 部分必須包含以下檔：
 
-*   `client.js`: 这被认为是在客户端，并包含科尔多瓦应用程序可以调用的 API。 中的 API `client.js` 调用程序调用 `index.js` 。 中的 API `client.js` 也连接到火，回调的事件的回调函数。
+*   `client.js`: 這被認為是在用戶端，並包含科爾多瓦應用程式可以調用的 API。 中的 API `client.js` 調用程式調用 `index.js` 。 中的 API `client.js` 也連接到火，回檔的事件的回呼函數。
 
-*   `index.js`： 科尔多瓦加载 `index.js` 并使其可通过 cordova.exec 桥。 `client.js`文件程序中的 API 调用 `index.js` 文件中，从而使打电话到 JNEXT 与本机端进行通信。
+*   `index.js`： 科爾多瓦載入 `index.js` 並使其可通過 cordova.exec 橋。 `client.js`檔程式中的 API 呼叫 `index.js` 檔中，從而使打電話到 JNEXT 與本機端進行通信。
 
-客户端和服务器端 ( `client.js` 和 `index.js` ) 进行交互，通过 `Cordova.exec` 函数。 所以，在 `client.js` 调用 `exec` 函数并提供必要的参数。 在回声插件，我们有以下 `client.js` 文件：
+用戶端和伺服器端 ( `client.js` 和 `index.js` ) 進行交互，通過 `Cordova.exec` 函數。 所以，在 `client.js` 調用 `exec` 函數並提供必要的參數。 在回聲外掛程式，我們有以下 `client.js` 檔：
 
     var service = "org.apache.cordova.blackberry.echo",
         exec = cordova.require("cordova/exec");
@@ -89,17 +89,17 @@ JNEXT 扩展的本机界面可以查看插件头文件位于公共的目录中�
     };
     
 
-现在， `index.js` 与本机的一面，用 JNEXT 进行交互。 所以您附加命名回显到 JNEXT 的构造函数。 在构造函数内您执行下列关键操作使用 init 函数：
+現在， `index.js` 與本機的一面，用 JNEXT 進行交互。 所以您附加命名回顯到 JNEXT 的建構函式。 在建構函式內您執行下列關鍵操作使用 init 函數：
 
-*   指定导出的本机方面所需的模块。所需的模块的名称必须匹配的共享的库文件 （.so 文件） 的名称。
+*   指定匯出的本機方面所需的模組。所需的模組的名稱必須匹配的共用的庫檔 （.so 檔） 的名稱。
 
 `JNEXT.require("libecho")`
 
-*   通过使用获得的模块创建一个对象并保存调用所返回的 ID。 self.m_id = JNEXT.createObject ("libecho。Echo"） ；当您的应用程序调用中的回波函数 `client.js` ，调用反过来调用的回波函数中 `index.js` 、 凡 PluginResult 对象将 （数据） 的响应发送回 `client.js` 。 由于传递到函数的 args 参数是由 JSON.stringfy() 转换和编码为 URIcomponent，您必须调用以下内容：
+*   通過使用獲得的模組創建一個物件並保存調用所返回的 ID。 self.m_id = JNEXT.createObject ("libecho。Echo"） ；當您的應用程式調用中的回波函數 `client.js` ，調用反過來調用的回波函數中 `index.js` 、 凡 PluginResult 物件將 （資料） 的回應發送回 `client.js` 。 由於傳遞到函數的 args 參數是由 JSON.stringfy() 轉換和編碼為 URIcomponent，您必須調用以下內容：
 
-`数据 = JSON.parse(decodeURIComponent(args.data)) ；`
+`資料 = JSON.parse(decodeURIComponent(args.data)) ；`
 
-现在，您可以发送回来的数据。让我们把它都放在一起：
+現在，您可以發送回來的資料。讓我們把它都放在一起：
 
     module.exports = {
     
@@ -113,22 +113,22 @@ JNEXT 扩展的本机界面可以查看插件头文件位于公共的目录中�
     };
     
 
-## 该插件的体系结构
+## 該外掛程式的體系結構
 
-您可以放置的工件的插件，其中包括 `plugin.xml` 文件、 源文件 （JavaScript、 c + +） 和二进制文件 ( `.so` ) 在任何目录结构内，只要你正确地指定了文件位置在 `plugin.xml` 文件。 典型的结构看起来像这样：
+您可以放置的工件的外掛程式，其中包括 `plugin.xml` 檔、 原始檔案 （JavaScript、 c + +） 和二進位檔案 ( `.so` ) 在任何目錄結構內，只要你正確地指定了檔位置在 `plugin.xml` 檔。 典型的結構看起來像這樣：
 
-***your\_project\_directory***(> 通过)
+***your\_project\_directory***(> 通過)
 
 *   **www**(> client.js)
 *   **src** 
-    *   **blackberry10**(> index.js 的**本机**> *.cpp、 *.hpp)
-    *   **设备**(>*二进制文件**.so)
-    *   **模拟器**(>*二进制文件**.so)
+    *   **blackberry10**(> index.js 的**本機**> *.cpp、 *.hpp)
+    *   **設備**(>*二進位檔案**.so)
+    *   **模擬器**(>*二進位檔案**.so)
 
-(列表显示在顶级文件夹之间的层次关系。 在括号显示给定目录的内容。 所有目录名称都显示为粗体文本。 文件的名称前面有 `>` 标志.)
+(清單顯示在頂級資料夾之間的層次關係。 在括弧顯示給定目錄的內容。 所有目錄名稱都顯示為粗體文本。 檔的名稱前面有 `>` 標誌.)
 
-## 内容的 `plugin.xml` 文件
+## 內容的 `plugin.xml` 檔
 
-`plugin.xml`文件中包含的命名空间的扩展和其他元数据。定义的命名空间和指定的 Echo 插件的其他元数据，如下所示：
+`plugin.xml`檔中包含的命名空間的擴展和其他中繼資料。定義的命名空間和指定的 Echo 外掛程式的其他中繼資料，如下所示：
 
-    < 插件 xmlns ="http://www.phonegap.com/ns/plugins/1.0"id="org.apache.cordova.blackberry.echo"版本 ="1.0.0">< js 模块 src ="www/client.js">< 合并目标 ="导航"/ >< / js 模块 >< 平台名称 ="blackberry10">< 源文件 src="src/blackberry10/index.js"/ >< lib 文件 src="src/blackberry10/native/device/libecho.so"拱 ="设备"/ >< lib 文件 src="src/blackberry10/native/simulator/libecho.so"拱 ="模拟器"/ >< 配置文件目标 ="www/config.xml"父 ="/ widget">< 功能 name="org.apache.cordova.blackberry.echo"value="org.apache.cordova.blackberry.echo"/ >< / 配置文件 >< /平台 >< / 插件 >
+    < 外掛程式 xmlns ="HTTP://www.phonegap.com/ns/plugins/1.0"id="org.apache.cordova.blackberry.echo"版本 ="1.0.0">< js 模組 src ="www/client.js">< 合併目標 ="導航"/ >< / js 模組 >< 平臺名稱 ="blackberry10">< 原始檔案 src="src/blackberry10/index.js"/ >< lib 檔 src="src/blackberry10/native/device/libecho.so"拱 ="設備"/ >< lib 檔 src="src/blackberry10/native/simulator/libecho.so"拱 ="模擬器"/ >< 設定檔目標 ="www/config.xml"父 ="/ widget">< 功能 name="org.apache.cordova.blackberry.echo"value="org.apache.cordova.blackberry.echo"/ >< / 設定檔 >< /平臺 >< / 外掛程式 >

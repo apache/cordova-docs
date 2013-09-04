@@ -16,36 +16,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getDateNames
 
-返回一个数组的几个月的名称或一周内，根据客户端的用户首选项和日历天。
+返回一個陣列的幾個月的名稱或一周內，根據用戶端的使用者首選項和日曆天。
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回的数组的名称为 `successCallback` 与 `properties` 对象作为参数。 该对象包含 `value` 属性与 `Array` 的 `String` 的值。 从任一开始一年或一周内，根据所选的选项的第一天中的第一个月的数组功能名称。
+返回的陣列的名稱為 `successCallback` 與 `properties` 物件作為參數。 該物件包含 `value` 屬性與 `Array` 的 `String` 的值。 從任一開始一年或一周內，根據所選的選項的第一天中的第一個月的陣列功能名稱。
 
-如果有错误取得名字，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.UNKNOWN\_ERROR`.
+如果有錯誤取得名字，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.UNKNOWN\_ERROR`.
 
-`options`参数是可选的且其默认值：
+`options`參數是可選的且其預設值：
 
-    {类型： '宽'、 项目： '月'}
+    {類型： '寬'、 專案： '月'}
     
 
 值 `options.type` 可以是 `narrow` 或`wide`.
 
 值 `options.item` 可以是 `months` 或`days`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，本示例显示一系列的十二个弹出对话框，每个月，与类似的文本一个 `month: January` ：
+當瀏覽器設置為 `en\_US` 的地區設定，本示例顯示一系列的十二個彈出對話方塊，每個月，與類似的文本一個 `month: January` ：
 
     navigator.globalization.getDateNames(
         function (names) {

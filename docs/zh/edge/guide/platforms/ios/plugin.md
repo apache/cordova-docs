@@ -14,46 +14,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS 插件
+# iOS 外掛程式
 
-插件是一个扩展的目标 C 类 `CDVPlugin` 类。
+外掛程式是一個擴展的目標 C 類 `CDVPlugin` 類。
 
-每个插件类必须注册为 `<feature>` 中标签的 `config.xml` 文件。 正是通过这一机制的 JavaScript `exec` 方法的 `service` 参数将映射到目标 C 类。
+每個外掛程式類必須註冊為 `<feature>` 中標籤的 `config.xml` 檔。 正是通過這一機制的 JavaScript `exec` 方法的 `service` 參數將映射到目標 C 類。
 
-## 插件类映射
+## 外掛程式類映射
 
-一个插件的 JavaScript 部分始终使用 `cordova.exec` 方法，如下所示：
+一個外掛程式的 JavaScript 部分始終使用 `cordova.exec` 方法，如下所示：
 
-    exec （< successFunction > < failFunction >、 < 服务 >、 < 行动 > [< args >]) ；
+    exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
     
 
-这封送一个请求从 `UIWebView` 到 iOS 本机侧，更或较不沸腾到调用 `action` 方法 `service` 类，传入的参数中的 `args` 数组。
+這封送一個請求從 `UIWebView` 到 iOS 本機側，更或較不沸騰到調用 `action` 方法 `service` 類，傳入的參數中的 `args` 陣列。
 
-指定插件作为 `<feature>` 在科尔多瓦 iOS 应用程序项目中的标记 `config.xml` 文件。
+指定外掛程式作為 `<feature>` 在科爾多瓦 iOS 應用程式專案中的標記 `config.xml` 檔。
 
-    < 功能名称 ="认为">< 参数名称 ="ios 包"值 ="CDVLocalStorage"/ >< / 功能 >
+    < 功能名稱 ="認為">< 參數名稱 ="ios 包"值 ="CDVLocalStorage"/ >< / 功能 >
     
 
-功能 `name` 属性应匹配您在 JavaScript 中使用 `exec` 调用的 `service` 参数，和 `value` 属性应与插件的目标 C 类的名称相匹配。 `<param name>`应始终是我 `"ios-package"` 。 如果不遵循此安装程序，该插件可能编译，但不是会到达科尔多瓦。
+功能 `name` 屬性應匹配您在 JavaScript 中使用 `exec` 調用的 `service` 參數，和 `value` 屬性應與外掛程式的目標 C 類的名稱相匹配。 `<param name>`應始終是我 `"ios-package"` 。 如果不遵循此安裝程式，該外掛程式可能編譯，但不是會到達科爾多瓦。
 
-## 插件初始化和生存期
+## 外掛程式初始化和存留期
 
-插件对象的一个实例创建为生活的每个 `UIWebView` 。 插件不会实例化之前他们第一次引用通过调用从 JavaScript，除非 `<param>` 与 `onload` `name` 属性设置为 `"true"` 的 `config.xml` 。 例如：
+外掛程式物件的一個實例創建為生活的每個 `UIWebView` 。 外掛程式不會具現化之前他們第一次引用通過調用從 JavaScript，除非 `<param>` 與 `onload` `name` 屬性設置為 `"true"` 的 `config.xml` 。 例如：
 
-    < 功能名称 ="回声">< 参数名称 ="ios 包"值 ="回声"/ >< 参数名称 ="onload"值 ="true"/ >< / 功能 >
+    < 功能名稱 ="回聲">< 參數名稱 ="ios 包"值 ="回聲"/ >< 參數名稱 ="onload"值 ="true"/ >< / 功能 >
     
 
-有*没有*指定插件的初始值设定项。相反，应使用插件 `pluginInitialize` 他们开办的逻辑方法。
+有*沒有*指定外掛程式的初始值設定項。相反，應使用外掛程式 `pluginInitialize` 他們開辦的邏輯方法。
 
-长时间运行的请求，插件背景活动 （例如，播放的媒体），听众或内部状态应执行 `onReset` 方法和停止或清理这些活动。 这种方法运行时 `UIWebView` 定位到新的一页或刷新，重新加载 JavaScript。
+長時間運行的請求，外掛程式背景活動 （例如，播放的媒體），聽眾或內部狀態應執行 `onReset` 方法和停止或清理這些活動。 這種方法運行時 `UIWebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
-## 写作 iOS 科尔多瓦插件
+## 寫作 iOS 科爾多瓦外掛程式
 
-我们有插件请求到本机端 JavaScript 起火燃烧。 我们有通过正确映射的目标 C 的 iOS 插件 `config.xml` 文件。 所以最后的 iOS 目标 C 插件类长什么样子？
+我們有外掛程式請求到本機端 JavaScript 起火燃燒。 我們有通過正確映射的目標 C 的 iOS 外掛程式 `config.xml` 檔。 所以最後的 iOS 目標 C 外掛程式類長什麼樣子？
 
-什么获取调度到该插件通过 JavaScript 的 `exec` 函数获取传递到相应的插件类的 `action` 方法。插件的方法有此签名：
+什麼獲取調度到該外掛程式通過 JavaScript 的 `exec` 函數獲取傳遞到相應的外掛程式類的 `action` 方法。外掛程式的方法有此簽名：
 
-    -（失效） myMethod:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * myarg = [command.arguments objectAtIndex:0];如果 (myarg! = 无) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg 为空"] ；} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；}
+    -（失效） myMethod:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * myarg = [command.arguments objectAtIndex:0];如果 (myarg! = 無) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg 為空"] ；} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；}
     
 
 1.  [CDVInvokedUrlCommand.h][1]
@@ -66,54 +66,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h
  [3]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h
 
-## iOS CDVPluginResult 消息类型
+## iOS CDVPluginResult 訊息類型
 
-使用 CDVPluginResult 可以返回结果类型的各种回您的 JavaScript 回调函数，使用看起来像的类方法：
+使用 CDVPluginResult 可以返回結果類型的各種回您的 JavaScript 回呼函數，使用看起來像的類方法：
 
     + (CDVPluginResult *) resultWithStatus： (CDVCommandStatus) statusOrdinal messageAs......
     
 
-您可以创建 `String` ， `Int` ， `Double` ， `Bool` ， `Array` ， `Dictionary` ， `ArrayBuffer` ，和 `Multipart` 类型。 或者，不附加任何参数 (只是发送状态)。 或者，返回一个错误。 你甚至可以选择不发送任何插件的结果，在这种情况下不会触发回调。
+您可以創建 `String` ， `Int` ， `Double` ， `Bool` ， `Array` ， `Dictionary` ， `ArrayBuffer` ，和 `Multipart` 類型。 或者，不附加任何參數 (只是發送狀態)。 或者，返回一個錯誤。 你甚至可以選擇不發送任何外掛程式的結果，在這種情況下不會觸發回檔。
 
-### 备注
+### 備註
 
-*   `messageAsArrayBuffer`预计 `NSData*` 并将转换为 `ArrayBuffer` 为您的 JavaScript 回调 （和 `ArrayBuffers` 从 JavaScript 发送到一个插件都将转换为`NSData*`).
-*   `messageAsMultipart` 预计 `NSArray *` 包含任何其他支持类型，并将整个数组作为发送 `参数` 给您的 JavaScript 回调。 
-    *   怪癖： 这不是只是语法糖 （尽管它是甜的）。 这种方式，所有参数序列化或反序列化，必要时。 例如，它是能够安全返回 `NSData*` 作为多部分，但不是 `Array` /`Dictionary`.
+*   `messageAsArrayBuffer`預計 `NSData*` 並將轉換為 `ArrayBuffer` 為您的 JavaScript 回檔 （和 `ArrayBuffers` 從 JavaScript 發送到一個外掛程式都將轉換為`NSData*`).
+*   `messageAsMultipart` 預計 `NSArray *` 包含任何其他支援類型，並將整個陣列作為發送 `參數` 給您的 JavaScript 回檔。 
+    *   怪癖： 這不是只是語法糖 （儘管它是甜的）。 這種方式，所有參數序列化或反序列化，必要時。 例如，它是能夠安全返回 `NSData*` 作為多部分，但不是 `Array` /`Dictionary`.
 
-## Echo 插件 iOS 插件
+## Echo 外掛程式 iOS 外掛程式
 
-我们会将以下内容添加到该项目的 `config.xml` 文件：
+我們會將以下內容添加到該專案的 `config.xml` 檔：
 
-    < 功能名称 ="回声">< 参数名称 ="ios 包"值 ="回声"/ >< / 功能 >
+    < 功能名稱 ="回聲">< 參數名稱 ="ios 包"值 ="回聲"/ >< / 功能 >
     
 
-然后我们将添加下列文件 （ `Echo.h` 和 `Echo.m` ） 的插件文件夹里面我们科尔多瓦 iOS 应用程序文件夹中：
+然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 的外掛程式資料夾裡面我們科爾多瓦 iOS 應用程式資料夾中：
 
-    / --- Echo.h 科尔多瓦插件头 --- / #import < Cordova/CDV.h > @interface 回声： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科尔多瓦插件执行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回声-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回声 = [command.arguments objectAtIndex:0];如果 (回声! = 无 & & [回声长度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
+    / --- Echo.h 科爾多瓦外掛程式頭 * * * / #import < Cordova/CDV.h > @interface 回聲： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科爾多瓦外掛程式執行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回聲-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回聲 = [command.arguments objectAtIndex:0];如果 (回聲! = 無 & & [回聲長度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
     
 
-让我们看看代码。在顶部，我们有所有必要的科尔多瓦进口。我们班延伸从 `CDVPlugin` （非常重要）。
+讓我們看看代碼。在頂部，我們有所有必要的科爾多瓦進口。我們班延伸從 `CDVPlugin` （非常重要）。
 
-此插件只支持一个操作， `echo` 的行动。 第一，我们抓住 echo 字符串使用 `objectAtIndex` 方法上的我们 `args` ，告诉它我们想要获取的参数数组中的第十的参数。 我们做一些参数检查： 请确保它不是 `nil` ，并确保它不是一个零长度的字符串。
+此外掛程式只支援一個操作， `echo` 的行動。 第一，我們抓住 echo 字串使用 `objectAtIndex` 方法上的我們 `args` ，告訴它我們想要獲取的參數陣列中的第十的參數。 我們做一些參數檢查： 請確保它不是 `nil` ，並確保它不是一個零長度的字串。
 
-如果是，我们返回 `PluginResult` 与 `ERROR` 状态。 如果所有这些检查通过，然后我们将返回 `PluginResult` 与 `OK` 状态，并通过在 `echo` 我们收到了在第一位作为参数的字符串。
+如果是，我們返回 `PluginResult` 與 `ERROR` 狀態。 如果所有這些檢查通過，然後我們將返回 `PluginResult` 與 `OK` 狀態，並通過在 `echo` 我們收到了在第一位作為參數的字串。
 
-最后，我们发送结果到 `self.commandDelegate` ，其中执行 `exec` 方法的成功或失败回调 JavaScript 一边。 如果成功回调被调用，它将通过在 `echo` 参数。
+最後，我們發送結果到 `self.commandDelegate` ，其中執行 `exec` 方法的成功或失敗回檔 JavaScript 一邊。 如果成功回檔被調用，它將通過在 `echo` 參數。
 
-## 线程处理
+## 執行緒
 
-在相同的 UI 线程中执行的插件方法。如果你的插件需要大量的处理，或者需要一个阻塞调用，则应使用后台线程。例如：
+在相同的 UI 執行緒中執行的外掛程式方法。如果你的外掛程式需要大量的處理，或者需要一個阻塞調用，則應使用後臺執行緒。例如：
 
-    -（失效） myPluginMethod:(CDVInvokedUrlCommand*) 命令 {/ / 检查 command.arguments 在这里。
-        [self.commandDelegate runInBackground: ^ {NSString * 有效载荷 = 零 ；/ 有些阻塞的逻辑......
-            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];/ / SendPluginResult 方法是线程安全的。
+    -（失效） myPluginMethod:(CDVInvokedUrlCommand*) 命令 {/ / 檢查 command.arguments 在這裡。
+        [self.commandDelegate runInBackground: ^ {NSString * 有效載荷 = 零 ；/ 有些阻塞的邏輯......
+            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];/ / SendPluginResult 方法是執行緒安全的。
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；}];}
     
 
-## 高级的插件功能
+## 高級的外掛程式功能
 
-请参阅其他方法时，您可以在重写：
+請參閱其他方法時，您可以在重寫：
 
 *   [CDVPlugin.h][4]
 
@@ -122,19 +122,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-例如，你可以挂接到 `pause` ， `resume` ，应用程序终止和 `handleOpenURL` 事件。
+例如，你可以掛接到 `pause` ， `resume` ，應用程式終止和 `handleOpenURL` 事件。
 
-## 调试插件
+## 調試外掛程式
 
-若要调试的目标 C 侧，您将使用 Xcode 的内置调试器。 对于 JavaScript，在 iOS 5.0 可以使用[Weinre、 Apache 科尔多瓦项目][6]或[iWebInspector、 一个第三方实用程序][7]
+若要調試的目標 C 側，您將使用 Xcode 的內置調試器。 對於 JavaScript，在 iOS 5.0 可以使用[Weinre、 Apache 科爾多瓦專案][6]或[iWebInspector、 一個協力廠商實用程式][7]
 
  [6]: https://github.com/apache/cordova-weinre
  [7]: http://www.iwebinspector.com/
 
-Ios 6，您将使用 Safari 6.0 将简单地附加到您的应用程序运行在 iOS 6 模拟器。
+Ios 6，您將使用 Safari 6.0 將簡單地附加到您的應用程式運行在 iOS 6 模擬器。
 
-## 常见的陷阱
+## 常見的陷阱
 
-*   别忘了向 config.xml 添加您的脚本映射。如果你忘记了，是在 Xcode 控制台中记录错误。
+*   別忘了向 config.xml 添加您的腳本映射。如果你忘記了，是在 Xcode 主控台中記錄錯誤。
 
-*   别忘了添加任何主机，您在白名单中，连接到域白名单指南中所述。如果你忘记了，是在 Xcode 控制台中记录错误。
+*   別忘了添加任何主機，您在白名單中，連接到域白名單指南中所述。如果你忘記了，是在 Xcode 主控台中記錄錯誤。

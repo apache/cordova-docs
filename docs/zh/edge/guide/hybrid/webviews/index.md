@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 嵌入 WebViews
 
-> 在您自己的项目中实现科尔多瓦 web 视图。
+> 在您自己的專案中實現科爾多瓦 web 視圖。
 
 *   Android WebViews
 *   WebViews iOS

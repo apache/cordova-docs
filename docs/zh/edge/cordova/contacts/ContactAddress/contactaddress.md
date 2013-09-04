@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ContactAddress
 
-包含地址属性的 `Contact` 对象。
+包含位址屬性的 `Contact` 物件。
 
-## 属性
+## 屬性
 
-*   **上一页**: 设置为 `true` 如果此 `ContactAddress` 包含用户的首选的值。*（布尔）*
+*   **上一頁**: 設置為 `true` 如果此 `ContactAddress` 包含使用者的首選的值。*（布林）*
 
-*   **类型**： 一个字符串，例如指示哪种类型的字段这是*回家*。*() DOMString*
+*   **類型**： 一個字串，例如指示哪種類型的欄位這是*回家*。*() DOMString*
 
-*   **格式**： 显示格式的完整地址。*() DOMString*
+*   **格式**： 顯示格式的完整位址。*() DOMString*
 
-*   **streetAddress**： 完整的街道地址。*() DOMString*
+*   **streetAddress**： 完整的街道位址。*() DOMString*
 
-*   **地点**： 城市或地点。*() DOMString*
+*   **地點**： 城市或地點。*() DOMString*
 
-*   **区域**： 国家或地区。*() DOMString*
+*   **區域**： 國家或地區。*() DOMString*
 
-*   **邮政编码**： 邮政编码或邮政代码。*() DOMString*
+*   **郵遞區號**： 郵遞區號或郵政代碼。*() DOMString*
 
-*   **国家**： 国家名称。*() DOMString*
+*   **國家**： 國家名稱。*() DOMString*
 
-## 详细信息
+## 詳細資訊
 
-`ContactAddress`对象存储的单一地址的联系人的属性。 A `Contact` 对象可能包括多个地址在 `ContactAddress[]` 数组。
+`ContactAddress`物件存儲的單一位址的連絡人的屬性。 A `Contact` 物件可能包括多個位址在 `ContactAddress[]` 陣列。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -137,28 +137,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 2.X 的怪癖
 
-*   **上一页**: 不受支持，返回 `false` Android 2.X 的设备上。
+*   **上一頁**: 不受支援，返回 `false` Android 2.X 的設備上。
 
-## 黑莓手机 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
 
-*   **上一页**： 返回的黑莓设备上不支持`false`.
+*   **上一頁**： 返回的黑莓設備上不支援`false`.
 
-*   **类型**： 部分支持。*工作*和*家庭*类型地址的每个唯一一个可以存储每个联系人。
+*   **類型**： 部分支援。*工作*和*家庭*類型位址的每個唯一一個可以存儲每個連絡人。
 
-*   **格式化**： 部分支持。返回的串联的所有黑莓手机地址字段。
+*   **格式化**： 部分支援。返回的串聯的所有黑莓手機位址欄位。
 
-*   **streetAddress**: 支持。返回的串联的黑莓**地址 1**和**地址 2**的地址字段。
+*   **streetAddress**: 支援。返回的串聯的黑莓**位址 1**和**位址 2**的位址欄位。
 
-*   **现场**: 支持。黑莓手机**城**地址字段中存储。
+*   **現場**: 支援。黑莓手機**城**位址欄位中存儲。
 
-*   **区域**： 支持。黑莓手机**stateProvince**地址字段中存储。
+*   **區域**： 支援。黑莓手機**stateProvince**位址欄位中存儲。
 
-*   **邮政编码**: 支持。黑莓手机**zipPostal**地址字段中存储。
+*   **郵遞區號**: 支援。黑莓手機**zipPostal**位址欄位中存儲。
 
-*   **国家**： 支持。
+*   **國家**： 支援。
 
 ## iOS 的怪癖
 
-*   **上一页**： 返回的 iOS 设备上不支持`false`.
+*   **上一頁**： 返回的 iOS 設備上不支援`false`.
 
-*   **格式化**： 目前不支持。
+*   **格式化**： 目前不支援。

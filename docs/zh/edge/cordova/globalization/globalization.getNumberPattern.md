@@ -16,50 +16,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getNumberPattern
 
-返回一个模式字符串格式化和分析数字根据客户端的用户首选项。
+返回一個模式字串格式化和分析數位根據用戶端的使用者首選項。
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
     
 
-## 说明
+## 說明
 
-返回到模式 `successCallback` 与 `properties` 对象作为参数。该对象包含以下属性：
+返回到模式 `successCallback` 與 `properties` 物件作為參數。該物件包含以下屬性：
 
-*   **模式**： 要格式化和分析数字的数字模式。 模式按照 Unicode 技术标准 #35。 <http://unicode.org/reports/tr35/tr35-4.html>。 *（字符串）*
+*   **模式**： 要格式化和分析數位的數位模式。 模式按照 Unicode 技術標準 #35。 [HTTP://unicode.org/reports/tr35/tr35-4.html][1]。 *（字串）*
 
-*   **符号**： 符号格式设置和分析过程中，如 %或货币符号时使用。*（字符串）*
+*   **符號**： 符號格式設置和分析過程中，如 %或貨幣符號時使用。*（字串）*
 
-*   **分数**： 小数位数解析和设置数字格式时要使用的数量。*（人数）*
+*   **分數**： 小數位數解析和設置數位格式時要使用的數量。*（人數）*
 
-*   **舍**： 舍递增时分析和格式设置使用。*（人数）*
+*   **舍**： 舍遞增時分析和格式設置使用。*（人數）*
 
-*   **积极**： 积极数字分析和格式时要使用的符号。*（字符串）*
+*   **積極**： 積極數位分析和格式時要使用的符號。*（字串）*
 
-*   **负面**： 要为负数时分析和格式设置使用的符号。*（字符串）*
+*   **負面**： 要為負數時分析和格式設置使用的符號。*（字串）*
 
-*   **十进制**： 小数点符号用于分析和格式设置。*（字符串）*
+*   **十進位**： 小數點符號用於分析和格式設置。*（字串）*
 
-*   **分组**： 分组符号用于分析和格式设置。*（字符串）*
+*   **分組**： 分組符號用於分析和格式設置。*（字串）*
 
-如果有错误获得该模式，然后 `errorCallback` 执行与 `GlobalizationError` 对象作为参数。 错误的期望的代码`GlobalizationError.PATTERN\_ERROR`.
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-`options`参数是可选的并且默认值：
+如果有錯誤獲得該模式，然後 `errorCallback` 執行與 `GlobalizationError` 物件作為參數。 錯誤的期望的代碼`GlobalizationError.PATTERN\_ERROR`.
 
-    {类型： '十进制'}
+`options`參數是可選的並且預設值：
+
+    {類型： '十進位'}
     
 
 `options.type`可以是 `decimal` ， `percent` ，或`currency`.
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 8
 
 ## 快速的示例
 
-当浏览器设置为 `en\_US` 的区域设置，此时应显示一个弹出对话框与类似的结果，请按照操作的文本：
+當瀏覽器設置為 `en\_US` 的地區設定，此時應顯示一個彈出對話方塊與類似的結果，請按照操作的文本：
 
     navigator.globalization.getNumberPattern(
         function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
@@ -75,9 +77,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     );
     
 
-结果:
+結果:
 
-    图案: #，# 0.# # # 符号：。分数： 0 舍入: 0 积极： 消极：-十进制：。分组：，
+    圖案: #，# 0.# # # 符號：。分數： 0 舍入: 0 積極： 消極：-十進位：。分組：，
     
 
 ## 完整的示例
@@ -114,6 +116,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 8 怪癖
 
-*   `pattern`不支持属性，和 retuens 为空字符串。
+*   `pattern`不支援屬性，和 retuens 為空字串。
 
-*   `fraction`不支持属性，并返回零。
+*   `fraction`不支援屬性，並返回零。

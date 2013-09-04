@@ -16,27 +16,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CameraPopoverOptions
 
-iOS 仅指定弹出的锚元素的位置和箭头方向，从 iPad 的库或专辑选择图像时的参数。
+iOS 僅指定彈出的錨元素的位置和箭頭方向，從 iPad 的庫或專輯選擇圖像時的參數。
 
-    {x: 0，y： 32，宽度： 320，高度： 480，arrowDir： Camera.PopoverArrowDirection.ARROW_ANY} ；
+    {x: 0，y： 32，寬度： 320，高度： 480，arrowDir： Camera.PopoverArrowDirection.ARROW_ANY} ；
     
 
 ## CameraPopoverOptions
 
-*   **x**： 像素的 x 坐标上的锚定弹出屏幕元素。*（人数）*
+*   **x**： 圖元的 x 座標上的錨定彈出螢幕元素。*（人數）*
 
-*   **y**： 到其锚定弹出屏幕元素的 y 像素坐标。*（人数）*
+*   **y**： 到其錨定彈出螢幕元素的 y 圖元座標。*（人數）*
 
-*   **宽度**： 宽度以像素为单位），到其锚定弹出屏幕元素。*（人数）*
+*   **寬度**： 寬度以圖元為單位），到其錨定彈出螢幕元素。*（人數）*
 
-*   **高度**： 高度以像素为单位），到其锚定弹出屏幕元素。*（人数）*
+*   **高度**： 高度以圖元為單位），到其錨定彈出螢幕元素。*（人數）*
 
-*   **arrowDir**： 上弹出的箭头应指向的方向。定义在 `Camera.PopoverArrowDirection` *（人数）* 
+*   **arrowDir**： 上彈出的箭頭應指向的方向。定義在 `Camera.PopoverArrowDirection` *（人數）* 
     
             Camera.PopoverArrowDirection = {ARROW_UP: 1，/ / 匹配 iOS UIPopoverArrowDirection 常量 ARROW_DOWN： 2，ARROW_LEFT： 4，ARROW_RIGHT： 8，ARROW_ANY： 15} ；
         
 
-请注意弹出的大小可能会更改箭头的方向和屏幕的方向调整。 请确保帐户方向更改时指定的锚点的元素位置。
+請注意彈出的大小可能會更改箭頭的方向和螢幕的方向調整。 請確保帳戶方向更改時指定的錨點的元素位置。
 
 ## 快速的示例
 

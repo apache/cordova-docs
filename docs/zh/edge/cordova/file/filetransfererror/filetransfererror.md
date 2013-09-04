@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileTransferError
 
-A `FileTransferError` 对象传递到错误回调时出现错误。
+A `FileTransferError` 物件傳遞到錯誤回檔時出現錯誤。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。（人数）
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。（人數）
 
-*   **源**： 源 URI。（字符串）
+*   **源**： 源 URI。（字串）
 
-*   **目标**： 向目标 URI。（字符串）
+*   **目標**： 向目標 URI。（字串）
 
-*   **http_status**： HTTP 状态代码。从 HTTP 连接收到一个响应代码时，此属性才可用。（人数）
+*   **HTTP_status**： HTTP 狀態碼。從 HTTP 連接收到一個回應代碼時，此屬性才可用。（人數）
 
 ## 常量
 
@@ -35,6 +35,6 @@ A `FileTransferError` 对象传递到错误回调时出现错误。
 *   `FileTransferError.CONNECTION_ERR`
 *   `FileTransferError.ABORT_ERR`
 
-## 说明
+## 說明
 
-`FileTransferError`上传或下载文件时出现错误时，将对象传递到错误回调。
+`FileTransferError`上傳或下載檔案時出現錯誤時，將物件傳遞到錯誤回檔。

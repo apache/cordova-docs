@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.vibrate
 
-为指定的时间量振动设备。
+為指定的時間量振動設備。
 
     navigator.notification.vibrate(milliseconds)
     
 
-*   **时间**： 毫秒为单位） 在震动的设备，其中 1000年毫秒等于 1 秒。*（人数）*
+*   **時間**： 毫秒為單位） 在震動的設備，其中 1000年毫秒等於 1 秒。*（人數）*
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 
@@ -91,7 +91,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## iOS 的怪癖
 
-*   **时间**： 忽略指定的时间和震动的预设置的时间量。
+*   **時間**： 忽略指定的時間和震動的預設置的時間量。
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored

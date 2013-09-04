@@ -14,86 +14,86 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 枚举指定工作组或
+# 枚舉指定工作組或
 
-此对象表示一个目录在文件系统上，如由[W3C 目录和系统][1]规范定义的。
+此物件表示一個目錄在檔案系統上，如由[W3C 目錄和系統][1]規範定義的。
 
  [1]: http://www.w3.org/TR/file-system-api/
 
-## 属性
+## 屬性
 
-*   **isFile**： 总是 `false` 。*（布尔）*
+*   **isFile**： 總是 `false` 。*（布林）*
 
-*   **isDirectory**： 总是 `true` 。*（布尔）*
+*   **isDirectory**： 總是 `true` 。*（布林）*
 
-*   **名称**： 的名称 `DirectoryEntry` ，不包括导致它的路径。*() DOMString*
+*   **名稱**： 的名稱 `DirectoryEntry` ，不包括導致它的路徑。*() DOMString*
 
-*   **完整路径**： 绝对路径从根到 `DirectoryEntry` 。*() DOMString*
+*   **完整路徑**： 絕對路徑從根到 `DirectoryEntry` 。*() DOMString*
 
-**注：**下面的属性由 W3C 规范定义，但*不是*支持：
+**注：**下面的屬性由 W3C 規範定義，但*不是*支援：
 
-*   **文件系统**： 文件系统的 `DirectoryEntry` 驻留。*（文件系统）*
+*   **檔案系統**： 檔案系統的 `DirectoryEntry` 駐留。*（檔案系統）*
 
 ## 方法
 
-下面的方法可以上调用 `DirectoryEntry` 对象：
+下面的方法可以上調用 `DirectoryEntry` 物件：
 
-*   **getMetadata**: 查找一个目录有关的元数据。
+*   **getMetadata**: 查找一個目錄有關的中繼資料。
 
-*   **setMetadata**： 在目录上设置的元数据。
+*   **setMetadata**： 在目錄上設置的中繼資料。
 
-*   **moveTo**： 移动到不同的位置在文件系统上的目录。
+*   **moveTo**： 移動到不同的位置在檔案系統上的目錄。
 
-*   **copyTo**： 将一个目录复制到文件系统上的不同位置。
+*   **copyTo**： 將一個目錄複寫到檔案系統上的不同位置。
 
-*   **toURL**： 返回来帮助定位目录的 URL。
+*   **toURL**： 返回來説明定位目錄的 URL。
 
-*   **删除**： 删除一个目录。该目录必须是空的。
+*   **刪除**： 刪除一個目錄。該目錄必須是空的。
 
-*   **getParent**: 查找父目录。
+*   **getParent**: 查找父目錄。
 
-*   **createReader**: 创建一个新的 `DirectoryReader` ，可以从目录中读取条目。
+*   **createReader**: 創建一個新的 `DirectoryReader` ，可以從目錄中讀取條目。
 
-*   **getDirectory**: 创建或者查找一个目录。
+*   **getDirectory**: 創建或者查找一個目錄。
 
-*   **getFile**: 创建或查找文件。
+*   **getFile**: 創建或查找檔。
 
-*   **removeRecursively**： 删除一个目录和其所有内容。
+*   **removeRecursively**： 刪除一個目錄和其所有內容。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android 系统
-*   黑莓手机 WebWorks （OS 5.0 和更高）
+*   Android 系統
+*   黑莓手機 WebWorks （OS 5.0 和更高）
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## getMetadata
 
-查找有关目录的元数据。
+查找有關目錄的中繼資料。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 要与执行的回调函数 `Metadata` 对象。*（函数）*
+*   **successCallback**： 要與執行的回呼函數 `Metadata` 物件。*（函數）*
 
-*   **errorCallback**: 一个回调函数来执行如果检索时出现错误 `Metadata` 。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**: 一個回呼函數來執行如果檢索時出現錯誤 `Metadata` 。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函数 success(metadata) {console.log ("上次修改时间:"+ metadata.modificationTime);}函数 fail(error) {alert(error.code);}/ / 请求的元数据对象的此条目 entry.getMetadata （成功、 失败） ；
+    函數 success(metadata) {console.log ("上次修改時間:"+ metadata.modificationTime);}函數 fail(error) {alert(error.code);}/ / 請求的中繼資料物件的此條目 entry.getMetadata （成功、 失敗） ；
     
 
 ## setMetadata
 
-设置目录的扩展的属性或元数据。*目前仅适用于 iOS。*
+設置目錄的擴展的屬性或中繼資料。*目前僅適用于 iOS。*
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 在成功地设置该元数据时执行回调。*（函数）*
+*   **successCallback**： 在成功地設置該中繼資料時執行回檔。*（函數）*
 
-*   **errorCallback**: 执行元数据失败要设置时的回调。*（函数）*
+*   **errorCallback**: 執行中繼資料失敗要設置時的回檔。*（函數）*
 
-*   **metadataObject**： 包含元数据的键和值的对象。*（对象）*
+*   **metadataObject**： 包含中繼資料的鍵和值的物件。*（物件）*
 
 **快速的示例**
 
@@ -111,7 +111,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **iOS 怪癖**
 
-*   只有 `com.apple.MobileBackup` 支持扩展的属性。 将该值设置为 `1` ，防止该目录从备份到 iCloud。 将该值设置为 `` ，重新启用要备份到 iCloud 的目录。
+*   只有 `com.apple.MobileBackup` 支援擴展的屬性。 將該值設置為 `1` ，防止該目錄從備份到 iCloud。 將該值設置為 `` ，重新啟用要備份到 iCloud 的目錄。
 
 **快速的示例**
 
@@ -149,27 +149,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## moveTo
 
-移动到不同的位置在文件系统上的目录。如果应用程序尝试向会导致错误：
+移動到不同的位置在檔案系統上的目錄。如果應用程式嘗試向會導致錯誤：
 
-*   在任何深度移动一个目录里面本身或任何儿童。
+*   在任何深度移動一個目錄裡面本身或任何兒童。
 
-*   如果不提供不同从其当前目录的名称，则将一个目录移到其父。
+*   如果不提供不同從其目前的目錄的名稱，則將一個目錄移到其父。
 
-*   将一个目录移到被占领的一个文件的路径。
+*   將一個目錄移到被佔領的一個檔的路徑。
 
-*   将一个目录移到被占领的一个不是空的目录的路径。
+*   將一個目錄移到被佔領的一個不是空的目錄的路徑。
 
-移动目录上现有的空目录尝试删除并替换为该目录。
+移動目錄上現有的空目錄嘗試刪除並替換為該目錄。
 
-**参数：**
+**參數：**
 
-*   **父**： 要移动该目录的父目录。*() DirectoryEntry*
+*   **父**： 要移動該目錄的父目錄。*() DirectoryEntry*
 
-*   **newName**： 目录的新名称。默认值为当前的名称如果未指定。*() DOMString*
+*   **newName**： 目錄的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 与执行的回调 `DirectoryEntry` 为新的目录对象。*（函数）*
+*   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**: 如果移动该目录时，会出现一个错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**: 如果移動該目錄時，會出現一個錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -194,23 +194,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## copyTo
 
-将一个目录复制到文件系统上的不同位置。如果应用程序尝试向会导致错误：
+將一個目錄複寫到檔案系統上的不同位置。如果應用程式嘗試向會導致錯誤：
 
-*   复制一个目录里面本身在任何深度。
+*   複製一個目錄裡面本身在任何深度。
 
-*   如果未提供不同从其当前目录的名称，请将一个目录复制到其父。
+*   如果未提供不同從其目前的目錄的名稱，請將一個目錄複寫到其父。
 
-目录副本始终是递归的并将复制的目录的所有内容。
+目錄副本始終是遞迴的並將複製的目錄的所有內容。
 
-**参数：**
+**參數：**
 
-*   **父**： 要向其复制目录的父目录。*() DirectoryEntry*
+*   **父**： 要向其複製目錄的父目錄。*() DirectoryEntry*
 
-*   **newName**： 目录的新名称。默认值为当前的名称如果未指定。*() DOMString*
+*   **newName**： 目錄的新名稱。預設值為當前的名稱如果未指定。*() DOMString*
 
-*   **successCallback**： 与执行的回调 `DirectoryEntry` 为新的目录对象。*（函数）*
+*   **successCallback**： 與執行的回檔 `DirectoryEntry` 為新的目錄物件。*（函數）*
 
-*   **errorCallback**： 如果试图复制基础目录时发生错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果試圖複製基礎目錄時發生錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -235,7 +235,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## toURL
 
-返回一个可以用来找到的目录的 URL。
+返回一個可以用來找到的目錄的 URL。
 
 **快速的示例**
 
@@ -244,34 +244,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     console.log(dirURL);
     
 
-## 删除
+## 刪除
 
-删除一个目录。如果应用程序尝试向会导致错误：
+刪除一個目錄。如果應用程式嘗試向會導致錯誤：
 
-*   删除一个目录，不是空的。
+*   刪除一個目錄，不是空的。
 
-*   删除根目录下的一个文件系统。
+*   刪除根目錄下的一個檔案系統。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 在删除该目录后执行的回调。不带参数调用。*（函数）*
+*   **successCallback**： 在刪除該目錄後執行的回檔。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果要删除的目录时，会出现错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果要刪除的目錄時，會出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函数 success(entry) {console.log ("删除成功");}函数 fail(error) {警报 (' 删除目录时出错: ' + error.code);}/ / 删除此目录 entry.remove （成功、 失败） ；
+    函數 success(entry) {console.log ("刪除成功");}函數 fail(error) {警報 (' 刪除目錄時出錯: ' + error.code);}/ / 刪除此目錄 entry.remove （成功、 失敗） ；
     
 
 ## getParent
 
-查找父 `DirectoryEntry` 包含的目录。
+查找父 `DirectoryEntry` 包含的目錄。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 一个通过目录的父目录的回调 `DirectoryEntry` 。*（函数）*
+*   **successCallback**： 一個通過目錄的父目錄的回檔 `DirectoryEntry` 。*（函數）*
 
-*   **errorCallback**： 如果试图检索父时发生错误执行的回调 `DirectoryEntry` 。 调用与 `FileError` 对象。 *（函数）*
+*   **errorCallback**： 如果試圖檢索父時發生錯誤執行的回檔 `DirectoryEntry` 。 調用與 `FileError` 物件。 *（函數）*
 
 **快速的示例**
 
@@ -289,7 +289,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## createReader
 
-创建新的 DirectoryReader 来读取目录中的条目。
+創建新的 DirectoryReader 來讀取目錄中的條目。
 
 **快速的示例**
 
@@ -299,57 +299,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## getDirectory
 
-创建或查找现有的目录。如果应用程序尝试向会导致错误：
+創建或查找現有的目錄。如果應用程式嘗試向會導致錯誤：
 
-*   创建一个其直接父尚不存在的目录。
+*   創建一個其直接父尚不存在的目錄。
 
-**参数：**
+**參數：**
 
-*   **路径**： 要查找或创建的目录的路径。绝对路径或相对路径从这 `DirectoryEntry` 。*() DOMString*
+*   **路徑**： 要查找或創建的目錄的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
-*   **选项**： 选项，以指定是否要如果它不存在，则创建该目录。*（标志）*
+*   **選項**： 選項，以指定是否要如果它不存在，則創建該目錄。*（標誌）*
 
-*   **successCallback**： 回调的执行的 `DirectoryEntry` 对象。*（函数）*
+*   **successCallback**： 回檔的執行的 `DirectoryEntry` 物件。*（函數）*
 
-*   **errorCallback**： 如果发生错误时创建或查找目录执行的回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果發生錯誤時創建或查找目錄執行的回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函数 success(dirEntry) {console.log ("目录名称："+ dirEntry.name);}函数 fail(error) {警报 ("无法创建新的目录:"+ error.code);}/ / 检索现有的目录，或创建它，如果它不存在 entry.getDirectory ("newDir"，{创建： true，独家: false}，成功，失败） ；
+    函數 success(dirEntry) {console.log ("目錄名稱："+ dirEntry.name);}函數 fail(error) {警報 ("無法創建新的目錄:"+ error.code);}/ / 檢索現有的目錄，或創建它，如果它不存在 entry.getDirectory ("newDir"，{創建： true，獨家: false}，成功，失敗） ；
     
 
 ## getFile
 
-创建或查找文件。如果应用程序尝试向会导致错误：
+創建或查找檔。如果應用程式嘗試向會導致錯誤：
 
-*   创建一个其直接父尚不存在的文件。
+*   創建一個其直接父尚不存在的檔。
 
-**参数：**
+**參數：**
 
-*   **路径**： 要查找或创建的文件的路径。绝对路径或相对路径从这 `DirectoryEntry` 。*() DOMString*
+*   **路徑**： 要查找或創建的檔的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
-*   **选项**： 选项，以指定是否是否它不存在，则创建该文件。*（标志）*
+*   **選項**： 選項，以指定是否是否它不存在，則創建該檔。*（標誌）*
 
-*   **successCallback**： 传递一个回调 `FileEntry` 对象。*（函数）*
+*   **successCallback**： 傳遞一個回檔 `FileEntry` 物件。*（函數）*
 
-*   **errorCallback**: 如果在创建或查找文件时出现错误执行回调。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**: 如果在創建或查找檔時出現錯誤執行回檔。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
-    函数 success(fileEntry) {console.log ("文件的名称："+ fileEntry.name);}函数 fail(error) {警报 ("未能检索文件："+ error.code);}/ / 检索现有的文件，或创建它，如果它不存在 entry.getFile ("newFile.txt"，{创建： true，独家: false}，成功，失败） ；
+    函數 success(fileEntry) {console.log ("檔的名稱："+ fileEntry.name);}函數 fail(error) {警報 ("未能檢索檔："+ error.code);}/ / 檢索現有的檔，或創建它，如果它不存在 entry.getFile ("newFile.txt"，{創建： true，獨家: false}，成功，失敗） ；
     
 
 ## removeRecursively
 
-删除一个目录和其所有内容。 如果发生错误 （例如试图删除包含一个不能被删除的文件的目录），可能会删除一些目录的内容。 如果应用程序尝试向会导致错误：
+刪除一個目錄和其所有內容。 如果發生錯誤 （例如試圖刪除包含一個不能被刪除的檔的目錄），可能會刪除一些目錄的內容。 如果應用程式嘗試向會導致錯誤：
 
-*   删除根目录下的一个文件系统。
+*   刪除根目錄下的一個檔案系統。
 
-**参数：**
+**參數：**
 
-*   **successCallback**： 后执行的回调 `DirectoryEntry` 已被删除。不带参数调用。*（函数）*
+*   **successCallback**： 後執行的回檔 `DirectoryEntry` 已被刪除。不帶參數調用。*（函數）*
 
-*   **errorCallback**： 如果试图删除时发生错误执行的回调 `DirectoryEntry` 。调用与 `FileError` 对象。*（函数）*
+*   **errorCallback**： 如果試圖刪除時發生錯誤執行的回檔 `DirectoryEntry` 。調用與 `FileError` 物件。*（函數）*
 
 **快速的示例**
 
@@ -365,14 +365,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     entry.removeRecursively(success, fail);
     
 
-## 黑莓手机的怪癖
+## 黑莓手機的怪癖
 
-可能会失败， `ControlledAccessException` 在以下情况中：
+可能會失敗， `ControlledAccessException` 在以下情況中：
 
-*   应用程序试图访问由以前安装的应用程序创建一个目录。
+*   應用程式試圖訪問由以前安裝的應用程式創建一個目錄。
 
-> 解决方案： 确保手动，或由前重新安装应用程序的临时目录，清洁。
+> 解決方案： 確保手動，或由前重新安裝應用程式的臨時目錄，清潔。
 
-*   如果该设备通过 USB 连接。
+*   如果該設備通過 USB 連接。
 
-> 解决方案： 从设备拔下 USB 电缆，然后再次运行。
+> 解決方案： 從設備拔下 USB 電纜，然後再次運行。

@@ -16,11 +16,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileError
 
-A `FileError` 对象时出现错误在文件 API 方法中的任何设置。
+A `FileError` 物件時出現錯誤在檔 API 方法中的任何設置。
 
-## 属性
+## 屬性
 
-*   **代码**： 下面列出的预定义的错误代码之一。
+*   **代碼**： 下面列出的預定義的錯誤代碼之一。
 
 ## 常量
 
@@ -37,6 +37,6 @@ A `FileError` 对象时出现错误在文件 API 方法中的任何设置。
 *   `FileError.TYPE_MISMATCH_ERR`
 *   `FileError.PATH_EXISTS_ERR`
 
-## 说明
+## 說明
 
-`FileError`对象是提供给任何文件 API 错误回调的唯一参数。 若要确定错误的类型，比较其 `code` 属性设置为任何上述的节目表。
+`FileError`物件是提供給任何檔 API 錯誤回檔的唯一參數。 若要確定錯誤的類型，比較其 `code` 屬性設置為任何上述的節目表。
