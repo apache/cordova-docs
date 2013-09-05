@@ -87,6 +87,8 @@ Optional parameters to customize the camera settings.
 
 ## Android Quirks
 
+- Any `cameraDirection` value results in a back-facing photo.
+
 - Ignores the `allowEdit` parameter.
 
 - `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
