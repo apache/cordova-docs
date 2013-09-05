@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 的外掛程式資料夾裡面我們科爾多瓦 iOS 應用程式資料夾中：
 
-    / --- Echo.h 科爾多瓦外掛程式頭 * * * / #import < Cordova/CDV.h > @interface 回聲： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科爾多瓦外掛程式執行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回聲-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回聲 = [command.arguments objectAtIndex:0];如果 (回聲! = 無 & & [回聲長度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
+    / --- Echo.h 科爾多瓦外掛程式頭 --- / #import < Cordova/CDV.h > @interface 回聲： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科爾多瓦外掛程式執行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回聲-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回聲 = [command.arguments objectAtIndex:0];如果 (回聲! = 無 & & [回聲長度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
     
 
 讓我們看看代碼。在頂部，我們有所有必要的科爾多瓦進口。我們班延伸從 `CDVPlugin` （非常重要）。
