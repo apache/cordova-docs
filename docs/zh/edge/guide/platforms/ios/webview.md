@@ -95,37 +95,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 2.  具現化一個新的 `CDVViewController` ，並保留它在某個地方 （例如，向您的類中的屬性）：
     
-        CDVViewController * viewController = [CDVViewController 新] ；
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*可選*）設置 `wwwFolderName` 屬性 （預設為 `www` ）：
     
-        viewController.wwwFolderName = @"myfolder"；
+        viewController.wwwFolderName = @"myfolder";
         
 
 4.  (*可選*）在您的 config.xml 中設置的起始頁 `<content>` 標記。
     
-        < 內容 src="index.html"/ >
+        <content src="index.html" />
         
     
     或
     
-        < 內容 src ="HTTP://apache.org"/ >
+        <content src="http://apache.org" />
         
 
 5.  (*可選*）設置 `useSplashScreen` 屬性 （預設為 `NO` ）：
     
-        viewController.useSplashScreen = 否。
+        viewController.useSplashScreen = YES;
         
 
 6.  設置**視圖框架**（總是此設置作為最後一個屬性）：
     
-        viewController.view.frame = CGRectMake (0、 0、 320、 480） ；
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  將刀添加到您的視圖：
     
-        [myView addSubview:viewController.view] ；
+        [myView addSubview:viewController.view];
         
 
 ## 添加您的 HTML、 CSS 和 JavaScript 資產
@@ -140,4 +140,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 5.  設置相應的 `wwwFolderName` 和 `startPage` 你最初創建的資料夾的屬性，或使用預設設置 （請參閱上一節） 當你具現化`CDVViewController`.
     
-        / * 如果您創建了一個名為 'myfolder' 資料夾和你想要的檔中它是 Start 的 ' mypage.html' * / viewController.wwwFolderName = @"myfolder"；viewController.startPage = @"mypage.html"
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
+        viewController.startPage = @"mypage.html"

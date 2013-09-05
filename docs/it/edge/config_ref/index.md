@@ -36,7 +36,12 @@ Il progetto [Apache Cordova][2] si sforza specifiche astratte via piattaforma na
 
 Un esempio:
 
-        < widget >< nome di preferenza = valore "MySetting" = "true" / >< nome funzione = "MyPlugin" value = "MyPluginClass" / >< accesso origine = "*" / >< src="index.html di contenuto" / >< / widget >
+        <widget>
+            <preference name="MySetting" value="true" />
+            <feature name="MyPlugin" value="MyPluginClass" />
+            <access origin="*" />
+            <content src="index.html" />
+        </widget>
     
 
 Seguire un elenco di elementi supportati su piattaforme principali che sono supportati in Apache Cordova.

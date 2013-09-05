@@ -36,7 +36,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 示例：
 
-        < 構件 >< 首選項名稱 ="MySetting"值 ="true"/ >< 功能名稱 = 值"MyPlugin"="MyPluginClass"/ >< 訪問來源 ="*"/ >< 內容 src="index.html"/ >< / 構件 >
+        <widget>
+            <preference name="MySetting" value="true" />
+            <feature name="MyPlugin" value="MyPluginClass" />
+            <access origin="*" />
+            <content src="index.html" />
+        </widget>
     
 
 請按照操作跨主要平臺支援的 Apache 科爾多瓦的支援元素的清單。

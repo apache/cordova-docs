@@ -35,7 +35,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 프로젝트의 `www/plugins.xml` 디렉터리 코르도바 프로젝트에 필요한 참조를 모두 포함 합니다. 그래서 추가 참조를 추가 그 때 `cordova.exec` 는, 코르도바 지도 하는 방법을 알고는 `Echo` 의 인수 `cordova.exec` 에 `Echo` 우리가 기본적으로 쓰려는 클래스:
 
-    < 기능 이름 "에코" = >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.echo.Echo =" / >< / 기능 >
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
     
 
 ## Echo.java 추가
@@ -46,21 +48,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인을 작성 뒤에 기본적인 아이디어는 플러그인 클래스를 확장 하는 클래스를 만들고 메서드 호출을 `execute` 를 반환 하는 `PluginResult` 클래스. 어떤 전화를 `cordova.exec` 인수 뿐만 아니라, 클래스 내에서 실행 하는 작업에 전달 합니다. 이 경우에, "에코" "에코"와 [str] 클래스 내에서 실행 작업 우리는 우리에 전달 하는 인수입니다.
 
-    패키지 org.apache.cordova.echo;
+    package org.apache.cordova.echo;
     
-    가져오기 org.apache.cordova.api.Plugin;
-    가져오기 org.apache.cordova.api.PluginResult;
-    가져오기 org.apache.cordova.json4j.JSONArray;
-    가져오기 org.apache.cordova.json4j.JSONException;
-    가져오기 org.apache.cordova.json4j.JSONObject;
-    / --- 블랙베리에 대 한 플러그인을 구축 하는 방법을 보여 주는 간단한 플러그인 * echos이이 플러그인을 호출 하는 사용자 메시지를 다시 기본적으로 * 공공 최종 클래스 에코 확장 플러그인 / {공용 정적 최종 문자열 에코 = "에코";
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
+     * Basically echos back the msg that a user calls to this plugin
+     */
+    public final class Echo extends Plugin {
     
-        공용 PluginResult 실행 (문자열 작업, JSONArray args 문자열 callbackId) {PluginResult 결과 = 새로운 PluginResult (PluginResult.Status.INVALID_ACTION, "에코: 잘못 된 작업:" + 액션);
-            if(action.equals(echo)) {보십시오 {문자열 theMsg = args.getString(0);
-                    경우 (theMsg! = null | | theMsg.length() > 0) {결과 = 새로운 PluginResult (PluginResult.Status.OK, theMsg);
-                    } 다른 {결과 = 새로운 PluginResult (PluginResult.Status.ERROR, "반향 하 아무것도.");
-                    }} catch (JSONException e) {결과 = 새로운 PluginResult (PluginResult.Status.JSON_EXCEPTION, e.getMessage());
-                }} 반환 결과;
+        public static final String echo = "echo";
+    
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    String theMsg = args.getString(0);
+                    if(theMsg!= null || theMsg.length()>0){
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
+    
+            return result;
         }
     
     }
@@ -76,7 +94,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 추가 `Echo.java` 프로젝트에서 업데이트 해야 합니다. 구축 하는 `.jar` 파일, 블랙베리 WebWorks repo의 루트 디렉터리를 탐색 하 고 실행은 `ant` 명령:
 
-    개미 업데이트-Dproject.path="~/path_to_my_project"
+    ant update -Dproject.path="~/path_to_my_project"
     
 
 이 새로운 빌드 `.jar` 파일에 `build/ext` 디렉터리. 복사는 `build/ext/cordova.jar` 로 파일을 `project/www/ext` 디렉터리.

@@ -40,17 +40,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="通知">< 參數名稱 ="android 包"value="org.apache.cordova.Notification"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.VIBRATE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="通知">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.notification.Notification"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.ui.dialog"/ >
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="通知">< 參數名稱 ="ios 包"值 ="CDVNotification"/ >< / 功能 >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
 一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

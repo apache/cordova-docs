@@ -36,8 +36,12 @@ Le projet [Apache Cordova][2] s'efforce de s'abstraire de la plate-forme native 
 
 Un exemple :
 
-        < widget >< nom de préférence = "MySetting" value = "true" / >< nom de la fonction = valeur "MyPlugin" = "MyPluginClass" / >< accéder origine = "*" / >< src="index.html de contenu" / >< / widget >
-    [NOTE : remettre l'original ici]
+        <widget>
+            <preference name="MySetting" value="true" />
+            <feature name="MyPlugin" value="MyPluginClass" />
+            <access origin="*" />
+            <content src="index.html" />
+        </widget>
     
 
 Vous trouverez ci-dessous les éléments supportés sur les différentes plateformes supportées par Apache Cordova.

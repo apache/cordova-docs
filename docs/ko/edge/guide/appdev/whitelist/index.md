@@ -76,7 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 [Google.com][2]에 대 한 액세스:
 
-    < 원본 액세스 = "http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## 블랙베리
@@ -93,22 +93,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 [Google.com][2]에 대 한 액세스:
 
-    < 액세스 uri 하위 도메인 "http://google.com" = = "false" / >
+    <access uri="http://google.com" subdomains="false" />
     
 
 [Maps.google.com][4]에 대 한 액세스:
 
-    < 액세스 uri 하위 도메인 "http://maps.google.com" = = "false" / >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 [Google.com][2]에 모든 하위 도메인에 대 한 액세스:
 
-    < 액세스 uri 하위 도메인 "http://google.com" = = "true" / >
+    <access uri="http://google.com" subdomains="true" />
     
 
 포함 하 여 모든 도메인에 액세스 권한을 `file://` 프로토콜:
 
-    < 액세스 uri = "*" 하위 도메인 = "true" / >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -127,7 +127,7 @@ IOS에 와일드 카드 ( `*` )는 [W3C 위젯 액세스][1] 사양 보다 더 �
 
 모든 하위 도메인을 Tld ( `.com` , `.net` , 등):
 
-    *. google.*
+    *.google.*
     
 
 ## Windows Phone (7 & 8)
@@ -140,7 +140,7 @@ IOS에 와일드 카드 ( `*` )는 [W3C 위젯 액세스][1] 사양 보다 더 �
 
 [Google.com][2]에 대 한 액세스:
 
-    < 원본 액세스 = "http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## Tizen
@@ -153,19 +153,19 @@ IOS에 와일드 카드 ( `*` )는 [W3C 위젯 액세스][1] 사양 보다 더 �
 
 [Google.com][2]에 대 한 액세스:
 
-    < 출처에 액세스 "http://google.com" 하위 도메인 = = "false" / >
+    <access origin="http://google.com" subdomains="false" />
     
 
 보안 [google.com][3] 에 대 한 액세스 ( `https://` ):
 
-    < 원본 액세스 = "https://google.com" 하위 도메인 = "false" / >
+    <access origin="https://google.com" subdomains="false" />
     
 
 [Google.com][2]에 모든 하위 도메인에 대 한 액세스:
 
-    < 출처에 액세스 "http://google.com" 하위 도메인 = = "true" / >
+    <access origin="http://google.com" subdomains="true" />
     
 
 포함 하 여 모든 도메인에 액세스 권한을 `file://` 프로토콜:
 
-    < 원본 액세스 = "*" 하위 도메인 = "true" / >
+    <access origin="*" subdomains="true" />

@@ -35,7 +35,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 プロジェクトの `www/plugins.xml` ディレクトリには、コルドバ プロジェクトのプラグインに必要な参照のすべてが含まれます。 ので参照を追加するとき `cordova.exec` はコルドバと呼ばれる、マップする方法を知っている、 `Echo` の引数 `cordova.exec` を `Echo` ネイティブは書きたいクラス。
 
-    < 機能名 =「エコー」>< param の名前 =「ブラックベリー パッケージ」value="org.apache.cordova.echo.Echo"/></機能 >
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
     
 
 ## Echo.java を追加します。
@@ -46,7 +48,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 プラグインを書くの背後にある基本的な考え方は、プラグインのクラスを拡張するクラスを作成し、呼び出されるメソッドに `execute` を返す、 `PluginResult` クラス。 すべての呼び出しに `cordova.exec` のクラスと同様に、引数内で実行するアクションで渡します。 この場合、「エコー」です「エコー」と [str] クラス内で実行するアクションで渡している引数。
 
-    パッケージの org.apache.cordova.echo;インポート org.apache.cordova.api.Plugin;インポート org.apache.cordova.api.PluginResult;インポート org.apache.cordova.json4j.JSONArray;インポート org.apache.cordova.json4j.JSONException;インポート org.apache.cordova.json4j.JSONObject;/--- ブラックベリーのプラグインをビルドする方法を示すシンプルなプラグイン * エコーがユーザーが呼び出した msg このプラグインに戻る基本的に * 公共最終クラス エコー拡張プラグイン/{パブリック静的最後の文字列のエコー =「エコー」;公共 PluginResult 実行 (文字列操作、JSONArray args、文字列 callbackId) {PluginResult 結果 = 新しい PluginResult （PluginResult.Status.INVALID_ACTION、"エコー: 無効なアクション:"+ アクション);if(action.equals(echo)) {しようと {文字列 theMsg = args.getString(0);場合 （theMsg! = null | | theMsg.length() > 0) {結果 = 新しい PluginResult (PluginResult.Status.OK、theMsg);} 他 {結果 = 新しい PluginResult （PluginResult.Status.ERROR、"エコーに Nothing");(JSONException e)}} catch {結果 = 新しい PluginResult (PluginResult.Status.JSON_EXCEPTION, e.getMessage());返される結果を}};}
+    package org.apache.cordova.echo;
+    
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
+     * Basically echos back the msg that a user calls to this plugin
+     */
+    public final class Echo extends Plugin {
+    
+        public static final String echo = "echo";
+    
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    String theMsg = args.getString(0);
+                    if(theMsg!= null || theMsg.length()>0){
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
+    
+            return result;
+        }
     
     }
     
@@ -61,7 +94,7 @@ Args パラメーターによって供給されている引数から入ってく
 
 追加された `Echo.java` プロジェクトで更新する必要があります。 構築する、 `.jar` ファイル、ブラックベリー WebWorks レポのルート ディレクトリに移動し、実行、 `ant` コマンド。
 
-    ant の更新 - Dproject.path="~/path_to_my_project"
+    ant update -Dproject.path="~/path_to_my_project"
     
 
 これは、新しい構築します `.jar` ファイルで、 `build/ext` ディレクトリ。コピー、 `build/ext/cordova.jar` にファイルを `project/www/ext` ディレクトリ。

@@ -32,21 +32,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [2]: http://google.com
 
-    HTTP://google.com
+    http://google.com
     
 
 對安全[google.com][3]的訪問 ( `https://` ):
 
  [3]: https://google.com
 
-    HTTPs://google.com
+    https://google.com
     
 
 子域[maps.google.com][4]訪問：
 
  [4]: http://maps.google.com
 
-    HTTP://maps.google.com
+    http://maps.google.com
     
 
 訪問[google.com][2] （例如， [mail.google.com][5]和[docs.google.com][6]） 的所有子域：
@@ -54,7 +54,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [5]: http://mail.google.com
  [6]: http://docs.google.com
 
-    HTTP://*.google.com
+    http://*.google.com
     
 
 對於所有的域 （例如， [google.com][2]和[developer.mozilla.org][7]） 的存取權限：
@@ -76,7 +76,7 @@ Android 系統完全支援白語法。
 
 [Google.com][2]訪問：
 
-    < 訪問來源 ="HTTP://google.com"/ >
+    <access origin="http://google.com" />
     
 
 ## 黑莓手機
@@ -93,22 +93,22 @@ Android 系統完全支援白語法。
 
 [Google.com][2]訪問：
 
-    < 訪問 uri ="HTTP://google.com"的子域 ="false"/ >
+    <access uri="http://google.com" subdomains="false" />
     
 
 對[maps.google.com][4]的訪問：
 
-    < 訪問 uri ="HTTP://maps.google.com"子域 ="false"/ >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 對在[google.com][2]上的所有子域的訪問：
 
-    < 訪問 uri ="HTTP://google.com"的子域 ="true"/ >
+    <access uri="http://google.com" subdomains="true" />
     
 
 訪問到所有的域，包括 `file://` 協定：
 
-    < 訪問 uri ="*"的子域 ="true"/ >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -140,7 +140,7 @@ Android 系統完全支援白語法。
 
 [Google.com][2]訪問：
 
-    < 訪問來源 ="HTTP://google.com"/ >
+    <access origin="http://google.com" />
     
 
 ## Tizen
@@ -153,19 +153,19 @@ Android 系統完全支援白語法。
 
 [Google.com][2]訪問：
 
-    < 訪問來源 ="HTTP://google.com"的子域 ="false"/ >
+    <access origin="http://google.com" subdomains="false" />
     
 
 對安全[google.com][3]的訪問 ( `https://` ):
 
-    < 訪問來源 ="HTTPs://google.com"的子域 ="false"/ >
+    <access origin="https://google.com" subdomains="false" />
     
 
 對在[google.com][2]上的所有子域的訪問：
 
-    < 訪問來源 ="HTTP://google.com"的子域 ="true"/ >
+    <access origin="http://google.com" subdomains="true" />
     
 
 訪問到所有的域，包括 `file://` 協定：
 
-    < 訪問來源 ="*"的子域 ="true"/ >
+    <access origin="*" subdomains="true" />

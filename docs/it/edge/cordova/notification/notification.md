@@ -20,11 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Metodi
 
-*   `Notification.Alert`
+*   `notification.alert`
 *   `Notification.Confirm`
-*   `Notification.prompt`
-*   `Notification.Beep`
-*   `Notification.vibrate`
+*   `notification.prompt`
+*   `notification.beep`
+*   `notification.vibrate`
 
 ## La funzionalità di accesso
 
@@ -40,17 +40,31 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = "Notifica" >< nome param = "android-pacchetto" value="org.apache.cordova.Notification" / >< / caratteristica > (in app/AndroidManifest.xml) < android:name="android.permission.VIBRATE usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Notifica" >< nome param = "blackberry-pacchetto" value="org.apache.cordova.notification.Notification" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.ui.dialog" / >
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "Notifica" >< param nome = valore "ios-pacchetto" = "CDVNotification" / >< / caratteristica >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
 Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

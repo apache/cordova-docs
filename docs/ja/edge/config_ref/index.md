@@ -36,7 +36,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 例:
 
-        < ウィジェット >< 好みの名前 ="MySetting"値 ="true"/>< 機能名 ="MyPlugin"値 ="MyPluginClass"/>< 起源にアクセス ="*"/>< src="index.html コンテンツ"/></ウィジェット >
+        <widget>
+            <preference name="MySetting" value="true" />
+            <feature name="MyPlugin" value="MyPluginClass" />
+            <access origin="*" />
+            <content src="index.html" />
+        </widget>
     
 
 Apache コルドバでサポートされる主要プラットフォーム間でサポートされている要素のリストに従ってください。

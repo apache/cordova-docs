@@ -46,22 +46,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （アンドロイド`app/res/xml/config.xml`)
     
-        < 機能名 =「加速」>< param の名前 =「android パッケージ」value="org.apache.cordova.AccelListener"/></機能 >
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.AccelListener" />
+        </feature>
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「加速」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.accelerometer.Accelerometer ="/></機能 > (www/config.xml) で < id="blackberry.system 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="org.apache.cordova 機能"必要 ="true"のバージョン =「1.0.0」/>
+        (in www/plugins.xml)
+        <feature name="Accelerometer">
+            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =」加速度計「>< param の名前"ios パッケージ"値を = ="CDVAccelerometer"/></機能 >
+        <feature name="Accelerometer">
+            <param name="ios-package" value="CDVAccelerometer" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_SENSORS"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]

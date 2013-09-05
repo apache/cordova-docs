@@ -31,7 +31,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 是否您分發你的外掛程式作為 JAVA 檔或一罐，必須將該外掛程式添加到 `config.xml` 檔在科爾多瓦 Android 應用程式的 `res/xml/` 目錄。
 
-    < 功能名稱 ="< service_name >">< 參數名稱 ="android 包"值 ="< full_name_including_namespace >"/ >< / 功能 >
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
     
 
 服務名稱應與匹配在 JavaScript 中使用 `exec` 的電話和值是 JAVA 類完整名稱，包括命名空間。 否則為該外掛程式可編譯，但仍無法訪問由科爾多瓦。
@@ -56,31 +58,81 @@ JavaScript 觸發外掛程式到本機端的請求。Android JAVA 外掛程式�
 
 如果您需要與使用者介面進行交互，您應該使用以下方法：
 
-    @Override 公共 boolean 類型的值執行最後 CallbackCoNtext callbackCoNtext JSONArray args 字串操作） 將引發 JSONException {如果 ("beep".equals(action)) {最後期限長 = args.getLong(0) ；cordova.getActivity ().runOnUiThread (新 Runnable() run ({公共 void) {......
-                    callbackCoNtext.success() ；/ / 執行緒安全的。
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
-            });則返回 true ；} 返回 false ；}
+            });
+            return true;
+        }
+        return false;
+    }
     
 
 如果你不需要在 UI 執行緒上運行，但不是想阻止測試網線：
 
-    @Override 公共 boolean 類型的值執行最後 CallbackCoNtext callbackCoNtext JSONArray args 字串操作） 將引發 JSONException {如果 ("beep".equals(action)) {最後期限長 = args.getLong(0) ；cordova.getThreadPool ().execute (新 Runnable() run ({公共 void) {......
-                    callbackCoNtext.success() ；/ / 執行緒安全的。
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
-            });則返回 true ；} 返回 false ；}
+            });
+            return true;
+        }
+        return false;
+    }
     
 
 ### 回聲 Android 外掛程式示例
 
 添加以下內容我們 `config.xml` 檔：
 
-    < 功能名稱 ="回聲">< 參數名稱 ="android 包"value="org.apache.cordova.plugin.Echo"/ >< / 功能 >
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
     
 
 然後將添加到下面的檔 `src/org/apache/cordova/plugin/Echo.java` 裡面我們的科爾多瓦 Android 應用程式：
 
-    包 org.apache.cordova.plugin ；導入 org.apache.cordova.CordovaPlugin ；導入 org.apache.cordova.CallbackCoNtext ；導入 org.json.JSONArray ；導入 org.json.JSONException ；導入 org.json.JSONObject ；/ --- 此類回顯從 JavaScript 調用的字串。
-     * / 公共類回聲擴展 CordovaPlugin {@Override 公共 boolean 類型的值執行 CallbackCoNtext callbackCoNtext JSONArray args 字串操作） 將引發 JSONException {如果 (action.equals("echo")) {字串消息 = args.getString(0) ；this.echo （郵件、 callbackCoNtext） ；則返回 true ；} 返回 false ；} 私人 void 回聲 （字串消息，CallbackCoNtext callbackCoNtext） {如果 (消息! = null & & message.length() > 0) {callbackCoNtext.success(message);} 其他 {callbackCoNtext.error ("預期一個非空的字串參數。"） ；}
+    package org.apache.cordova.plugin;
+    
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
+    
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
+    
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
+    
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+    
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
+            }
         }
     }
     

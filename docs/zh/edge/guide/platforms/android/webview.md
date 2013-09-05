@@ -42,17 +42,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
     
-        CordovaViewTestActivity 延伸活動的公共類實現 CordovaInterface {CordovaWebView cwv ；/ * 當第一次創建活動時調用。 * @Override 公共 void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.main) ；cwv = findViewById(R.id.tutorialView) (CordovaWebView) ；Config.init(this) ；cwv.loadUrl(Config.getStartUrl()) ；}
+        public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+            CordovaWebView cwv;
+            /* Called when the activity is first created. */
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.main);
+                cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+                Config.init(this);
+                cwv.loadUrl(Config.getStartUrl());
+            }
         
 
 如果您使用的相機，你應該也可以實現這：
 
-        @Override 公共 void setActivityResultCallback （CordovaPlugin 外掛程式） {this.activityResultCallback = 外掛程式 ；} / --- 推出，你會喜歡結果當它完成一項活動。 當這種活動退出時，* 調用您的 onActivityResult() 方法。
-         ** @param 命令的命令物件 * @param 意向意向開始 * @param requestCode 傳遞到回檔來識別該活動的請求代碼 * / 公共 void startActivityForResult （CordovaPlugin 命令、 意圖意圖、 int requestCode) {this.activityResultCallback = 命令 ；this.activityResultKeepRunning = this.keepRunning ；/ / 如果開啟了多工處理，然後禁用它如果返回結果的活動 （命令! = null) {this.keepRunning = false;} / / 開始活動 super.startActivityForResult (意圖、 requestCode） ；} @Override / --- 當你發起退出，給你你開始的它的 requestCode 活動調用 * resultCode 它返回了，並從它的任何其他資料。
-         請求代碼最初提供給 startActivityForResult()，** @param requestCode * 允許您確定誰從這個結果來了。
-         * @param resultCode 通過其 setResult() 的兒童活動所返回的整數結果代碼。
-         * @param 資料的意向，可以向調用方返回的結果資料 （各種資料可以附加到"額外"的意圖）。
-         * / 保護 void onActivityResult 意圖意圖 int resultCode int requestCode） {super.onActivityResult requestCode、 resultCode 意圖） ；CordovaPlugin 回檔 = this.activityResultCallback ；如果 (回檔! = null) {callback.onActivityResult requestCode、 resultCode 意圖） ；}
+        @Override
+        public void setActivityResultCallback(CordovaPlugin plugin) {
+            this.activityResultCallback = plugin;
+        }
+        /**
+         * Launch an activity for which you would like a result when it finished. When this activity exits,
+         * your onActivityResult() method is called.
+         *
+         * @param command           The command object
+         * @param intent            The intent to start
+         * @param requestCode       The request code that is passed to callback to identify the activity
+         */
+        public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
+            this.activityResultCallback = command;
+            this.activityResultKeepRunning = this.keepRunning;
+    
+            // If multitasking turned on, then disable it for activities that return results
+            if (command != null) {
+                this.keepRunning = false;
+            }
+    
+            // Start activity
+            super.startActivityForResult(intent, requestCode);
+        }   
+    
+        @Override
+        /**
+         * Called when an activity you launched exits, giving you the requestCode you started it with,
+         * the resultCode it returned, and any additional data from it.
+         *
+         * @param requestCode       The request code originally supplied to startActivityForResult(),
+         *                          allowing you to identify who this result came from.
+         * @param resultCode        The integer result code returned by the child activity through its setResult().
+         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+         */
+        protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+            super.onActivityResult(requestCode, resultCode, intent);
+            CordovaPlugin callback = this.activityResultCallback;
+            if (callback != null) {
+                callback.onActivityResult(requestCode, resultCode, intent);
+            }
         }
     
 

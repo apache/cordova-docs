@@ -95,12 +95,12 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 2.  Instanciez une nouvelle `CDVViewController` et d'exercer quelque part (par exemple, d'une propriété dans votre classe) :
     
-        CDVViewController * viewController = [CDVViewController nouveau] ;
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*En option*) Définir la `wwwFolderName` propriété (la valeur par défaut `www` ) :
     
-        viewController.wwwFolderName = @ « myfolder » ;
+        viewController.wwwFolderName = @"myfolder";
         
 
 4.  (*En option*) Définir la page de démarrage dans votre fichier config.xml, le `<content>` tag.
@@ -110,22 +110,22 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
     
     OR
     
-        < contenu src = « http://apache.org » / >
+        <content src="http://apache.org" />
         
 
 5.  (*En option*) Définir la `useSplashScreen` propriété (la valeur par défaut `NO` ) :
     
-        viewController.useSplashScreen = YES ;
+        viewController.useSplashScreen = YES;
         
 
 6.  Définir le **cadre de l'avis** (toujours définir cela comme la dernière propriété) :
     
-        viewController.view.frame = CGRectMake (0, 0, 320, 480) ;
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  Ajouter Cleaver à votre vue :
     
-        [myView addSubview:viewController.view] ;
+        [myView addSubview:viewController.view];
         
 
 ## Ajouter vos actifs HTML, CSS et JavaScript
@@ -140,5 +140,10 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 5.  Le cas échéant la valeur `wwwFolderName` et `startPage` Propriétés pour le dossier que vous avez initialement créé, ou utiliser les valeurs par défaut (voir section précédente) lorsque vous instanciez le`CDVViewController`.
     
-        / * Si vous avez créé un dossier nommé « myfolder » et vous souhaitez le fichier « mapage.html » dans c'est la page d'accueil * / viewController.wwwFolderName = @ « myfolder » ;
-        viewController.startPage = @ « mapage.html »
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
+        viewController.startPage = @"mypage.html"

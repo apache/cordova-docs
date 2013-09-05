@@ -42,31 +42,61 @@ Si vous n'êtes pas familier avec le développement d'applications Android, veui
 
 4.  Modifier votre activité de sorte qu'il met en œuvre le `CordovaInterface`. Vous devez implémenter les méthodes inclus. Vous pouvez les copier de `/framework/src/org/apache/cordova/CordovaActivity.java`, ou leur mise en œuvre sur votre propre. Le fragment de code ci-dessous montre une application qui utilise l'interface de base. Notez comment la vue référencée l'id correspond à l'attribut `id` spécifié dans le fragment XML indiqué ci-dessus :
     
-        public class que cordovaviewtestactivity étend l'activité implémente CordovaInterface {CordovaWebView cwv ;
-            / * Appelée lorsque l'activité est d'abord créée. * / @Override public void onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState) ;
-                setContentView(R.layout.main) ;
-                cwv = findViewById(R.id.tutorialView) (CordovaWebView) ;
-                Config.init(this) ;
-                cwv.loadUrl(Config.getStartUrl()) ;
+        public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+            CordovaWebView cwv;
+            /* Called when the activity is first created. */
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.main);
+                cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+                Config.init(this);
+                cwv.loadUrl(Config.getStartUrl());
             }
         
 
 Si vous utilisez l'appareil photo, vous devez également implémenter ceci :
 
-        @Override public void setActivityResultCallback (plugin CordovaPlugin) {this.activityResultCallback = plugin ;
-        } / ** * Lancer une activité pour laquelle vous désirez un résultat quand il fini. Lorsque le sort de cette activité, * votre méthode onActivityResult() est appelée.
-         ** @param command de l'objet command * @param intention l'intention de commencer * @param requestCode le code de demande qui est passé au rappel pour identifier l'activité * / public void startActivityForResult (commande CordovaPlugin, intention intention, int requestCode) {this.activityResultCallback = command ;
-            this.activityResultKeepRunning = this.keepRunning ;
+        @Override
+        public void setActivityResultCallback(CordovaPlugin plugin) {
+            this.activityResultCallback = plugin;
+        }
+        /**
+         * Launch an activity for which you would like a result when it finished. When this activity exits,
+         * your onActivityResult() method is called.
+         *
+         * @param command           The command object
+         * @param intent            The intent to start
+         * @param requestCode       The request code that is passed to callback to identify the activity
+         */
+        public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
+            this.activityResultCallback = command;
+            this.activityResultKeepRunning = this.keepRunning;
     
-            / / Si le multitâche activé, puis désactivez-le pour des activités qui retournent des résultats si (commande! = null) {this.keepRunning = false ;
-            } / / Début de l'activité super.startActivityForResult (intention, requestCode) ;
-        } @Override / ** * appelée lorsqu'une activité que vous avez lancé sorties, vous donnant la requestCode vous avez commencé avec, * le resultCode il retourné et toute autre donnée d'elle.
-         ** @param requestCode le code de demande fourni à l'origine à startActivityForResult(), * vous permettant de l'identifier venus de ce résultat.
-         @param resultCode le code de résultat entier retourné par l'activité de l'enfant par le biais de ses setResult().
-         @param données une intention, qui peut renvoyer des données de résultat à l'appelant (diverses données peuvent être attachées à l'intention de "extras").
-         * / protected void onActivityResult (int requestCode, int resultCode, intention intention) {super.onActivityResult (requestCode, resultCode, intention) ;
-            Rappel de CordovaPlugin = this.activityResultCallback ;
-            Si (rappel! = null) {callback.onActivityResult (requestCode, resultCode, intention) ;
+            // If multitasking turned on, then disable it for activities that return results
+            if (command != null) {
+                this.keepRunning = false;
+            }
+    
+            // Start activity
+            super.startActivityForResult(intent, requestCode);
+        }   
+    
+        @Override
+        /**
+         * Called when an activity you launched exits, giving you the requestCode you started it with,
+         * the resultCode it returned, and any additional data from it.
+         *
+         * @param requestCode       The request code originally supplied to startActivityForResult(),
+         *                          allowing you to identify who this result came from.
+         * @param resultCode        The integer result code returned by the child activity through its setResult().
+         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+         */
+        protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+            super.onActivityResult(requestCode, resultCode, intent);
+            CordovaPlugin callback = this.activityResultCallback;
+            if (callback != null) {
+                callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
     

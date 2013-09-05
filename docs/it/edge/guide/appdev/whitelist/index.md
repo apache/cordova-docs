@@ -32,14 +32,14 @@ Accesso a [google.com][2]:
 
  [2]: http://google.com
 
-    http://Google.com
+    http://google.com
     
 
 Accesso al sicuro [google.com][3] ( `https://` ):
 
  [3]: https://google.com
 
-    https://Google.com
+    https://google.com
     
 
 Accesso per il sottodominio [maps.google.com][4]:
@@ -76,7 +76,7 @@ Android supporta pienamente la sintassi di whitelisting.
 
 Accesso a [google.com][2]:
 
-    < accesso origine = "http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## BlackBerry
@@ -93,22 +93,22 @@ Per un riferimento completo, vedere la [documentazione di BlackBerry WebWorks ac
 
 Accesso a [google.com][2]:
 
-    < accedere uri = sottodomini "http://google.com" = "false" / >
+    <access uri="http://google.com" subdomains="false" />
     
 
 Accesso a [maps.google.com][4]:
 
-    < accedere uri = sottodomini "http://maps.google.com" = "false" / >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 Accesso a tutti i sottodomini su [Google.it][2]:
 
-    < accedere uri = sottodomini "http://google.com" = "true" / >
+    <access uri="http://google.com" subdomains="true" />
     
 
 Accesso a tutti i domini, tra cui `file://` protocollo:
 
-    < accedere uri = "*" sottodomini = "true" / >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -127,7 +127,7 @@ Caratteri jolly su iOS ( `*` ) sono più flessibili rispetto alla specifica [W3C
 
 Accesso a tutti i sottodomini e TLD ( `.com` , `.net` , ecc):
 
-    *. google.*
+    *.google.*
     
 
 ## Windows Phone (7 & 8)
@@ -140,7 +140,7 @@ Android supporta pienamente la sintassi di whitelisting.
 
 Accesso a [google.com][2]:
 
-    < accesso origine = "http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## Tizen
@@ -153,19 +153,19 @@ Directory radice dell'applicazione `config.xml` file specifica le regole di whit
 
 Accesso a [google.com][2]:
 
-    < accesso origine = sottodomini "http://google.com" = "false" / >
+    <access origin="http://google.com" subdomains="false" />
     
 
 Accesso al sicuro [google.com][3] ( `https://` ):
 
-    < accesso origine = sottodomini di "https://google.com" = "false" / >
+    <access origin="https://google.com" subdomains="false" />
     
 
 Accesso a tutti i sottodomini su [Google.it][2]:
 
-    < accesso origine = sottodomini "http://google.com" = "true" / >
+    <access origin="http://google.com" subdomains="true" />
     
 
 Accesso a tutti i domini, tra cui `file://` protocollo:
 
-    < accesso origine = "*" sottodomini = "true" / >
+    <access origin="*" subdomains="true" />

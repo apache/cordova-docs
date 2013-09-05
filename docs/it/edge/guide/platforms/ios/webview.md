@@ -95,7 +95,7 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 2.  Creare un'istanza di un nuovo `CDVViewController` e conservarlo da qualche parte (ad esempio, a una proprietà nella classe):
     
-        CDVViewController * viewController = [nuovo CDVViewController];
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*Opzionale*) Impostare la `wwwFolderName` Proprietà (valore predefinito è `www` ):
@@ -105,12 +105,12 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 4.  (*Opzionale*) Impostare la pagina iniziale nel tuo config. xml, il `<content>` tag.
     
-        < src="index.html di contenuto" / >
+        <content src="index.html" />
         
     
     OR
     
-        < contenuto src = "http://apache.org" / >
+        <content src="http://apache.org" />
         
 
 5.  (*Opzionale*) Impostare la `useSplashScreen` Proprietà (valore predefinito è `NO` ):
@@ -120,12 +120,12 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 6.  Impostare il **riquadro di visualizzazione** (sempre impostare questo ultimo della proprietà):
     
-        viewController.view.frame = CGRectMake (0, 0, 320, 480);
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  Aggiungi mannaia alla visualizzazione:
     
-        [addSubview:viewController.view myView];
+        [myView addSubview:viewController.view];
         
 
 ## Aggiungendo il vostro patrimonio HTML, CSS e JavaScript
@@ -140,5 +140,10 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 5.  Impostare l'appropriato `wwwFolderName` e `startPage` proprietà per la cartella creata inizialmente, oppure utilizzare le impostazioni predefinite (vedi sezione precedente) quando si crea un'istanza del`CDVViewController`.
     
-        / * Se creato una cartella chiamata 'myfolder' e si desidera che il file 'MyPage' in esso per essere la pagina iniziale * / viewController.wwwFolderName = @"myfolder";
-        viewController.startPage = @"MyPage"
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
+        viewController.startPage = @"mypage.html"

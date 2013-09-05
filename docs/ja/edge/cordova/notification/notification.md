@@ -40,17 +40,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「通知」>< param の名前 =「android パッケージ」value="org.apache.cordova.Notification"/></機能 > (app/AndroidManifest.xml) の < 使用許可 android:name="android.permission.VIBRATE"/>
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「通知」>< param の名前 =「ブラックベリー パッケージ」value="org.apache.cordova.notification.Notification"/></機能 > (www/config.xml) で < id="blackberry.ui.dialog 機能"/>
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「通知」>< param の名前 = 値「ios パッケージ」="CDVNotification"/></機能 >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

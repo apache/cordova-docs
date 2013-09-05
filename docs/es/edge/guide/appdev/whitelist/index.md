@@ -93,22 +93,22 @@ Para una referencia completa, vea la [documentación del elemento de acceso Blac
 
 Acceso a [google.com][2]:
 
-    < accede uri="http://google.com" subdomains = "false" / >
+    <access uri="http://google.com" subdomains="false" />
     
 
 Acceso a [maps.google.com][4]:
 
-    < accede uri="http://maps.google.com" subdomains = "false" / >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 Acceso a todos los subdominios de [google.com][2]:
 
-    < accede uri="http://google.com" subdomains = "true" / >
+    <access uri="http://google.com" subdomains="true" />
     
 
 Acceso a todos los ámbitos, incluyendo el protocolo `file://`:
 
-    < accede uri = "*" subdominios = "true" / >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -127,7 +127,7 @@ Comodines en iOS ( `*` ) son más flexibles que la especificación [W3C Widget d
 
 Acceso a todos los subdominios y TLD (`.com`, `. net`, etc.):
 
-    *. google.*
+    *.google.*
     
 
 ## Windows Phone (7 y 8)
@@ -140,7 +140,7 @@ Android apoya plenamente la sintaxis de las listas blancas.
 
 Acceso a [google.com][2]:
 
-    < accede origen = "http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## Tizen
@@ -153,19 +153,19 @@ Archivo de `config.xml` del directorio raíz de la aplicación especifica las re
 
 Acceso a [google.com][2]:
 
-    < accede origin="http://google.com" subdomains = "false" / >
+    <access origin="http://google.com" subdomains="false" />
     
 
 Acceso a los seguros [google.com][3] ( `https://` ):
 
-    < accede origin="https://google.com" subdomains = "false" / >
+    <access origin="https://google.com" subdomains="false" />
     
 
 Acceso a todos los subdominios de [google.com][2]:
 
-    < accede origin="http://google.com" subdomains = "true" / >
+    <access origin="http://google.com" subdomains="true" />
     
 
 Acceso a todos los dominios, incluyendo `file://` Protocolo:
 
-    < accede origen = "*" subdominios = "true" / >
+    <access origin="*" subdomains="true" />

@@ -31,7 +31,9 @@ Questo esegue il marshalling di una richiesta da WebView sul lato nativo Android
 
 Se si distribuiscono vostro plugin come Java file o come un vaso proprio, deve essere aggiunto il plugin per la `config.xml` file nell'applicazione Android-Cordova `res/xml/` directory.
 
-    < nome funzione = "< NOME_SERVIZIO >" >< param nome = valore "android-pacchetto" = "< full_name_including_namespace >" / >< / caratteristica >
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
     
 
 Il nome del servizio deve corrispondere a quello utilizzato in JavaScript `exec` chiamata e il valore è il nome completo della classi Java, tra cui lo spazio dei nomi. Altrimenti il plugin può compilare ma comunque irraggiungibile di Cordova.
@@ -59,25 +61,37 @@ JavaScript in WebView fa *non* eseguito sul thread dell'interfaccia utente. Esso
 
 Se avete bisogno di interagire con l'interfaccia utente, è necessario utilizzare il seguente:
 
-    @Override boolean pubblica esecuzione (azione String, args JSONArray, finale CallbackContext callbackContext) genera JSONException {se ("beep".equals(action)) {durata lunga finale = args.getLong(0);
-            cordova.getActivity () .runOnUiThread (nuovo Runnable() Run ({public void) {...
-                    callbackContext.success(); / / Thread-safe.
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
             });
-            restituire true;
-        } return false;
+            return true;
+        }
+        return false;
     }
     
 
 Se non è necessario per l'esecuzione sul thread dell'interfaccia utente, ma non voglio bloccare il thread WebCore:
 
-    @Override boolean pubblica esecuzione (azione String, args JSONArray, finale CallbackContext callbackContext) genera JSONException {se ("beep".equals(action)) {durata lunga finale = args.getLong(0);
-            cordova.getThreadPool () .execute (nuovo Runnable() Run ({public void) {...
-                    callbackContext.success(); / / Thread-safe.
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
             });
-            restituire true;
-        } return false;
+            return true;
+        }
+        return false;
     }
     
 
@@ -85,27 +99,42 @@ Se non è necessario per l'esecuzione sul thread dell'interfaccia utente, ma non
 
 Aggiungere quanto segue al nostro `config.xml` file:
 
-    < nome funzione = "Echo" >< nome param = "android-pacchetto" value="org.apache.cordova.plugin.Echo" / >< / caratteristica >
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
     
 
 Quindi aggiungere il seguente file `src/org/apache/cordova/plugin/Echo.java` all'interno della nostra applicazione Android-Cordova:
 
-    pacchetto org.apache.cordova.plugin;
+    package org.apache.cordova.plugin;
     
-    importazione org.apache.cordova.CordovaPlugin;
-    importazione org.apache.cordova.CallbackContext;
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
     
-    importazione org.json.JSONArray;
-    importazione org.json.JSONException;
-    importazione org.json.JSONObject;
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
     
-    / --- Questa classe riecheggia una stringa chiamata da JavaScript.
-     * / CordovaPlugin estende la classe pubblica Echo {@Override boolean pubblica esecuzione (azione String, args JSONArray, CallbackContext callbackContext) genera JSONException {se (action.equals("echo")) {stringa di messaggio = args.getString(0);
-                this.Echo (message, callbackContext);
-                restituire true;
-            } return false;
-        } privata void eco (String message, CallbackContext callbackContext) {se (messaggio! = null & & message.length() > 0) {callbackContext.success(message);
-            } else {callbackContext.error ("attesi una stringa non vuota argomento.");
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
+    
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+    
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
             }
         }
     }

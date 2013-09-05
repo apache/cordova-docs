@@ -31,7 +31,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인에 추가 되어야 합니다 귀하의 플러그인 자바 파일 또는 그것의 자신의 병을 배포 여부는 `config.xml` 코르 도우 바 안 드 로이드 응용 프로그램에서 파일 `res/xml/` 디렉터리.
 
-    < 기능 이름 "< service_name >" = >< param 이름을 = "안 드 로이드 패키지" 값 = "< full_name_including_namespace >" / >< / 기능 >
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
     
 
 서비스 이름은 자바 스크립트에 사용 된 것과 일치 해야 `exec` 전화와 값은 네임 스페이스를 포함 하 여 Java 클래스 전체 이름. 그렇지 않으면 플러그인 컴파일 수 있지만 여전히 코르도바에 의해 접근할 수 있습니다.
@@ -59,25 +61,37 @@ WebView에서 자바 않습니다 *하지* UI 스레드에서 실행 합니다. 
 
 UI와 상호 작용 해야 하는 경우 다음 사용 해야 합니다.
 
-    @Override 공공 부울 실행 (문자열 작업, JSONArray args, 마지막 CallbackContext callbackContext) JSONException을 throw {경우 ("beep".equals(action)) {마지막 긴 기간 = args.getLong(0);
-            cordova.getActivity ().runOnUiThread (새로운 Runnable() run ({공공 무효) {...
-                    callbackContext.success(); / / 스레드로부터 안전 합니다.
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
             });
-            반환 진정한;
-        } 반환 허위;
+            return true;
+        }
+        return false;
     }
     
 
 UI 스레드에서 실행 해야 하는 경우 하지만 WebCore 스레드를 차단 하지 않으려면:
 
-    @Override 공공 부울 실행 (문자열 작업, JSONArray args, 마지막 CallbackContext callbackContext) JSONException을 throw {경우 ("beep".equals(action)) {마지막 긴 기간 = args.getLong(0);
-            cordova.getThreadPool ().execute (새로운 Runnable() run ({공공 무효) {...
-                    callbackContext.success(); / / 스레드로부터 안전 합니다.
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
             });
-            반환 진정한;
-        } 반환 허위;
+            return true;
+        }
+        return false;
     }
     
 
@@ -85,27 +99,42 @@ UI 스레드에서 실행 해야 하는 경우 하지만 WebCore 스레드를 �
 
 다음을 추가 우리의 `config.xml` 파일:
 
-    < 기능 이름 "에코" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.plugin.Echo =" / >< / 기능 >
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
     
 
 그런 다음 다음 파일을 추가 `src/org/apache/cordova/plugin/Echo.java` 코르 도우 바 안 드 로이드 응용 프로그램 안에:
 
-    패키지 org.apache.cordova.plugin;
+    package org.apache.cordova.plugin;
     
-    가져오기 org.apache.cordova.CordovaPlugin;
-    가져오기 org.apache.cordova.CallbackContext;
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
     
-    가져오기 org.json.JSONArray;
-    가져오기 org.json.JSONException;
-    가져오기 org.json.JSONObject;
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
     
-    / ---이 클래스는 JavaScript에서 호출 하는 문자열을 재 탕.
-     * / 공용 클래스 에코 확장 CordovaPlugin {@Override 공용 부울 실행 (문자열 작업, JSONArray args, CallbackContext callbackContext) JSONException을 throw {경우 (action.equals("echo")) {문자열 메시지 = args.getString(0);
-                this.echo (메시지, callbackContext);
-                반환 진정한;
-            } 반환 허위;
-        } 개인 무효 에코 (문자열 메시지, CallbackContext callbackContext) {경우 (메시지! = null & & message.length() > 0) {callbackContext.success(message);
-            } 다른 {callbackContext.error ("예상 하나 비어 있지 않은 문자열 인수입니다.");
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
+    
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+    
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
             }
         }
     }

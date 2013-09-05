@@ -95,7 +95,7 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 2.  Instanciar un nuevo `CDVViewController` y retener en algún lugar (por ejemplo, a una propiedad en su clase):
     
-        CDVViewController * viewController = [CDVViewController nuevo];
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*Opcional*) Fijar la `wwwFolderName` propiedad (por defecto `www` ):
@@ -105,12 +105,12 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 4.  (*Opcional*) Configurar la página de inicio en el archivo config.xml, el `<content>` etiqueta.
     
-        < contenido src="index.html" / >
+        <content src="index.html" />
         
     
     O
     
-        < contenido src = "http://apache.org" / >
+        <content src="http://apache.org" />
         
 
 5.  (*Opcional*) Fijar la `useSplashScreen` propiedad (por defecto `NO` ):
@@ -120,7 +120,7 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 6.  Establecer el **marco de la vista** (siempre establecer esto como la última propiedad):
     
-        viewController.view.frame = CGRectMake (0, 0, 320, 480);
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  Añadir cuchilla a su punto de vista:
@@ -140,5 +140,10 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 5.  Establecer la adecuada `wwwFolderName` y `startPage` las propiedades de la carpeta que creó inicialmente, o utilizar los valores predeterminados (ver sección anterior) cuando crea una instancia del`CDVViewController`.
     
-        / * Si ha creado una carpeta llamada 'MiCarpeta' y desea que el archivo 'mipagina.html' en que sea la página de inicio * / viewController.wwwFolderName = @"myfolder";
-        viewController.startPage = @"mipagina.html"
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
+        viewController.startPage = @"mypage.html"

@@ -33,15 +33,15 @@ Cada *Plataforma guía* a continuación te dice lo que necesitas saber para conf
 
 ## BlackBerry
 
-*   Guía de la plataforma blackBerry
-*   Configuración de blackBerry
-*   Herramientas de línea de comandos de blackBerry
+*   Guía de la plataforma BlackBerry
+*   Configuración de BlackBerry
+*   Herramientas de línea de comandos de BlackBerry
 *   Actualizar BlackBerry
 
 ## BlackBerry 10
 
-*   Guía de la plataforma blackBerry 10
-*   Configuración de blackBerry 10
+*   Guía de la plataforma BlackBerry 10
+*   Configuración de BlackBerry 10
 *   BlackBerry 10 Plugins
 *   BlackBerry 10 herramientas de línea de comandos
 

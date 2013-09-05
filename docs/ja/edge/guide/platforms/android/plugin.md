@@ -31,7 +31,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 プラグインを追加する必要がありますあなたのプラグインを Java ファイルや独自の jar ファイルとして配布するかどうか、 `config.xml` 、コルドバ Android アプリケーションでファイル `res/xml/` ディレクトリ。
 
-    < 機能名 =「< サービス名 >」>< param の名前「android パッケージ」値を = ="< full_name_including_namespace >"/></機能 >
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
     
 
 サービス名、JavaScript で使用されるものと一致する必要があります `exec` 呼び出し、および値は、Java クラスの完全名、名前空間を含みます。 それ以外の場合、プラグイン コンパイルしますが、まだコルドバで到達できません。
@@ -56,31 +58,81 @@ WebView に JavaScript が*なく*UI スレッド上で実行します。WebCore
 
 UI と対話する必要がある場合、次を使用する必要があります。
 
-    @Override 公共のブール値 (文字列操作、JSONArray args、最終的な CallbackContext callbackContext) を実行 JSONException がスローされます {場合 (「beep".equals(action)) {最終的な長い期間 = args.getLong(0);cordova.getActivity （） .runOnUiThread （新しい Runnable() {公共 void run() {.
-                    callbackContext.success();//スレッド セーフ。
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
-            });返します true;} 戻り偽;}
+            });
+            return true;
+        }
+        return false;
+    }
     
 
 UI スレッド上で実行する必要がない場合 WebCore のスレッドをブロックしません。
 
-    @Override 公共のブール値 (文字列操作、JSONArray args、最終的な CallbackContext callbackContext) を実行 JSONException がスローされます {場合 (「beep".equals(action)) {最終的な長い期間 = args.getLong(0);cordova.getThreadPool （） .execute （新しい Runnable() {公共 void run() {.
-                    callbackContext.success();//スレッド セーフ。
+    @Override
+    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+        if ("beep".equals(action)) {
+            final long duration = args.getLong(0);
+            cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                    ...
+                    callbackContext.success(); // Thread-safe.
                 }
-            });返します true;} 戻り偽;}
+            });
+            return true;
+        }
+        return false;
+    }
     
 
 ### エコー Android のプラグインの例
 
 追加するのには、次の `config.xml` ファイル。
 
-    < 機能名 =「エコー」>< param の名前 =「android パッケージ」value="org.apache.cordova.plugin.Echo"/></機能 >
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
     
 
 以下のファイルを追加し、 `src/org/apache/cordova/plugin/Echo.java` コルドバ Android アプリケーション内。
 
-    パッケージの org.apache.cordova.plugin;インポート org.apache.cordova.CordovaPlugin;インポート org.apache.cordova.CallbackContext;インポート org.json.JSONArray;インポート org.json.JSONException;インポート org.json.JSONObject;/--- このクラスは、JavaScript から呼び出す文字列をエコーします。
-     * CordovaPlugin を拡張するパブリック クラス エコー/{@Override パブリック boolean 文字列操作、JSONArray args （CallbackContext callbackContext） を実行 JSONException がスローされます {場合 (action.equals("echo")) {文字列メッセージ = args.getString(0);this.echo メッセージ （callbackContext）;返します true;} 戻り偽;} 文字列メッセージ （CallbackContext callbackContext） 専用の void エコー {場合 (メッセージ ！ null = ＆ ＆ message.length() > 0) {callbackContext.success(message);} 他 {callbackContext.error (「期待される 1 つ空でない文字列引数」);}
+    package org.apache.cordova.plugin;
+    
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
+    
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
+    
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
+    
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+    
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
+            }
         }
     }
     

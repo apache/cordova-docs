@@ -35,7 +35,9 @@ Le plugin Echo renvoie essentiellement quelque message un utilisateur fournit à
 
 De votre projet `www/plugins.xml` répertoire contient toutes les références nécessaires pour les plugins de votre projet de Cordova. Ajouter une référence supplémentaire alors que quand `cordova.exec` est appelé, Cordova sait comment mapper le `Echo` argument de `cordova.exec` à la `Echo` classe que nous voulons écrire en mode natif :
 
-    < nom de la fonction = "Echo" >< param name = "blackberry-package" value="org.apache.cordova.echo.Echo" / >< / fiction >
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
     
 
 ## Ajout de Echo.java
@@ -46,21 +48,37 @@ Si vous remarquez la structure de l'attribut value, vous verrez une trajectoire 
 
 L'idée de base derrière l'écriture d'un plugin consiste à créer une classe qui étend la classe de Plugin et de disposer d'une méthode appelée `execute` pour renvoyer un `PluginResult` classe. Tout appel à `cordova.exec` passe à l'action à exécuter au sein de la classe, ainsi que les arguments. Dans ce cas, « echo » est l'action que nous voulons exécuter au sein de la classe « Echo » et [str] sont les arguments que nous passons dans.
 
-    package org.apache.cordova.echo ;
+    package org.apache.cordova.echo;
     
-    import org.apache.cordova.api.Plugin ;
-    import org.apache.cordova.api.PluginResult ;
-    import org.apache.cordova.json4j.JSONArray ;
-    import org.apache.cordova.json4j.JSONException ;
-    import org.apache.cordova.json4j.JSONObject ;
-    / ** * Un plugin simple pour démontrer comment créer un plugin pour BlackBerry * fondamentalement echos Retournez le msg qu'un utilisateur appelle à ce plugin * / Echo/public final class extends Plugin {public static final écho de String = « echo » ;
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
+     * Basically echos back the msg that a user calls to this plugin
+     */
+    public final class Echo extends Plugin {
     
-        public PluginResult exécuter (cordes, args JSONArray, String callbackId) {PluginResult résultat = new PluginResult (PluginResult.Status.INVALID_ACTION, « Echo : action non valide: "+ action) ;
-            if(action.Equals(ECHO)) {try {String theMsg = args.getString(0) ;
-                    Si (theMsg! = null || theMsg.length() > 0) {résultat = new PluginResult (PluginResult.Status.OK, theMsg) ;
-                    } else {résultat = new PluginResult (PluginResult.Status.ERROR, « Rien à l'écho. ») ;
-                    }} catch (JSONException e) {résultat = new PluginResult (PluginResult.Status.JSON_EXCEPTION, e.getMessage()) ;
-                résultat}} ;
+        public static final String echo = "echo";
+    
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    String theMsg = args.getString(0);
+                    if(theMsg!= null || theMsg.length()>0){
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
+    
+            return result;
         }
     
     }
@@ -76,7 +94,7 @@ Nous ferons une vérification d'erreur et si le message semble correct, on insta
 
 La plus-value `Echo.java` doit être mis à jour dans votre projet. Pour construire le `.jar` fichier, naviguez jusqu'au répertoire racine du BlackBerry WebWorks repo et exécutez le `ant` commande :
 
-    fourmi update - Dproject.path="~/path_to_my_project"
+    ant update -Dproject.path="~/path_to_my_project"
     
 
 Cela génère un nouveau `.jar` du fichier dans le `build/ext` répertoire. Copie le `build/ext/cordova.jar` fichier dans votre `project/www/ext` répertoire.

@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 2.  新しいインスタンス化 `CDVViewController` 、それをどこか （例えば、あなたのクラスでのプロパティ) を保持して。
     
-        CDVViewController * viewController = [新しい CDVViewController];
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*省略可能です*)設定、 `wwwFolderName` プロパティ (既定値は `www` )。
@@ -105,27 +105,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 4.  (*省略可能です*)あなたの config.xml でスタート ページを設定、 `<content>` タグ。
     
-        < コンテンツ src="index.html"/>
+        <content src="index.html" />
         
     
     OR
     
-        < コンテンツ src ="http://apache.org"/>
+        <content src="http://apache.org" />
         
 
 5.  (*省略可能です*)設定、 `useSplashScreen` プロパティ (既定値は `NO` )。
     
-        viewController.useSplashScreen = はい;
+        viewController.useSplashScreen = YES;
         
 
 6.  **ビュー フレーム**を設定 (常に、最後のプロパティとしてこれをセット)。
     
-        viewController.view.frame = CGRectMake (0, 0, 320, 480);
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  包丁のビューに追加します。
     
-        [付ける addSubview:viewController.view];
+        [myView addSubview:viewController.view];
         
 
 ## HTML、CSS、JavaScript の資産を追加します。
@@ -140,4 +140,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 5.  適切な設定 `wwwFolderName` と `startPage` の最初に作成したフォルダーのプロパティ (前のセクションを参照) の既定値を使用またはインスタンスを作成する、`CDVViewController`.
     
-        /* 'myfolder' と呼ばれるフォルダーを作成し、ファイル 'mypage.html' に、スタート ページをされる場合 */viewController.wwwFolderName = @"myfolder";viewController.startPage = @"mypage.html"
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
+        viewController.startPage = @"mypage.html"

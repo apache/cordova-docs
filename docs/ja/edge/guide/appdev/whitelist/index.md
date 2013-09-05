@@ -76,7 +76,7 @@ Android は完全にホワイト リスト構文をサポートします。
 
 [Google.com][2]へのアクセス:
 
-    < アクセス始点 ="http://google.com"/>
+    <access origin="http://google.com" />
     
 
 ## ブラックベリー
@@ -93,22 +93,22 @@ Android は完全にホワイト リスト構文をサポートします。
 
 [Google.com][2]へのアクセス:
 
-    < uri にアクセス サブドメイン"http://google.com"= ="false"/>
+    <access uri="http://google.com" subdomains="false" />
     
 
 [Maps.google.com][4]へのアクセス:
 
-    < uri にアクセス サブドメイン"http://maps.google.com"= ="false"/>
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 [Google.com][2]でのすべてのサブドメインへのアクセス:
 
-    < uri にアクセス サブドメイン"http://google.com"= ="true"/>
+    <access uri="http://google.com" subdomains="true" />
     
 
 含むすべてのドメインへのアクセスを `file://` プロトコル。
 
-    < uri にアクセス ="*"サブドメイン ="true"/>
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -127,7 +127,7 @@ IOS にワイルドカードを使用 ( `*` ) [W3C ウィジェット アクセ�
 
 すべてのサブドメイン、Tld へのアクセス ( `.com` 、 `.net` 、等)。
 
-    ※ google.*
+    *.google.*
     
 
 ## Windows Phone （7 ＆ 8）
@@ -140,7 +140,7 @@ Android は完全にホワイト リスト構文をサポートします。
 
 [Google.com][2]へのアクセス:
 
-    < アクセス始点 ="http://google.com"/>
+    <access origin="http://google.com" />
     
 
 ## Tizen
@@ -153,19 +153,19 @@ Android は完全にホワイト リスト構文をサポートします。
 
 [Google.com][2]へのアクセス:
 
-    < アクセス始点がサブドメイン"http://google.com"= ="false"/>
+    <access origin="http://google.com" subdomains="false" />
     
 
 安全な[google.com][3]へのアクセス ( `https://` )。
 
-    < アクセス始点がサブドメイン"https://google.com"= ="false"/>
+    <access origin="https://google.com" subdomains="false" />
     
 
 [Google.com][2]でのすべてのサブドメインへのアクセス:
 
-    < アクセス始点がサブドメイン"http://google.com"= ="true"/>
+    <access origin="http://google.com" subdomains="true" />
     
 
 含むすべてのドメインへのアクセスを `file://` プロトコル。
 
-    < アクセス始点 ="*"サブドメイン ="true"/>
+    <access origin="*" subdomains="true" />

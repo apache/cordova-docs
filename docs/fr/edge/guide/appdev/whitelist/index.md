@@ -32,21 +32,21 @@ Accès à [google.com][2]:
 
  [2]: http://google.com
 
-    http://Google.com
+    http://google.com
     
 
 Accès sécurisé [google.com][3] ( `https://` ) :
 
  [3]: https://google.com
 
-    https://Google.com
+    https://google.com
     
 
 Accès pour le sous-domaine [maps.google.com][4]:
 
  [4]: http://maps.google.com
 
-    http://Maps.google.com
+    http://maps.google.com
     
 
 Accès à tous les sous-domaines sur [google.com][2] (p. ex., [mail.google.com][5] et [docs.google.com][6]) :
@@ -76,7 +76,7 @@ Android souscrit pleinement la syntaxe de la liste blanche.
 
 Accès à [google.com][2]:
 
-    < accéder origin="http://google.com" / >
+    <access origin="http://google.com" />
     
 
 ## BlackBerry
@@ -93,22 +93,22 @@ Pour une référence complète, consultez la [documentation de l'élément d'acc
 
 Accès à [google.com][2]:
 
-    < accéder uri="http://google.com" sous-domaines = "false" / >
+    <access uri="http://google.com" subdomains="false" />
     
 
 Accès à [maps.google.com][4]:
 
-    < accéder uri="http://maps.google.com" sous-domaines = "false" / >
+    <access uri="http://maps.google.com" subdomains="false" />
     
 
 Accès à tous les sous-domaines sur [Google.fr][2]:
 
-    < accéder uri="http://google.com" sous-domaines = "true" / >
+    <access uri="http://google.com" subdomains="true" />
     
 
 Accès à tous les domaines, y compris `file://` protocole :
 
-    < accès uri = "*" sous-domaines = « true » / >
+    <access uri="*" subdomains="true" />
     
 
 ## iOS
@@ -127,7 +127,7 @@ Caractères génériques sur iOS ( `*` ) sont plus souples que la spécification
 
 Accès à tous les sous-domaines et les TLDs ( `.com` , `.net` , etc.) :
 
-    *. google.*
+    *.google.*
     
 
 ## Windows Phone (7 & 8)
@@ -140,7 +140,7 @@ Android soutient pleinement la syntaxe de la liste blanche.
 
 Accès à [google.com][2]:
 
-    < accéder origine = « http://google.com » / >
+    <access origin="http://google.com" />
     
 
 ## Paciarelli
@@ -153,19 +153,19 @@ Du répertoire racine l'application `config.xml` fichier spécifie les règles d
 
 Accès à [google.com][2]:
 
-    < accéder origin="http://google.com" sous-domaines = "false" / >
+    <access origin="http://google.com" subdomains="false" />
     
 
 Accès sécurisé [google.com][3] ( `https://` ) :
 
-    < accéder origin="https://google.com" sous-domaines = "false" / >
+    <access origin="https://google.com" subdomains="false" />
     
 
 Accès à tous les sous-domaines sur [Google.fr][2]:
 
-    < accéder origin="http://google.com" sous-domaines = "true" / >
+    <access origin="http://google.com" subdomains="true" />
     
 
 Accès à tous les domaines, y compris `file://` protocole :
 
-    < accéder origine = "*" sous-domaines = « true » / >
+    <access origin="*" subdomains="true" />

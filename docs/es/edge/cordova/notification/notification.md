@@ -40,17 +40,31 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/xml/config.xml) < nombre de la función = "Notificación" >< nombre param = "android-paquete" value="org.apache.cordova.Notification" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.VIBRATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.xml) < nombre de la función = "Notificación" >< nombre param = "blackberry-paquete" value="org.apache.cordova.notification.Notification" / >< / característica > (en www/config.xml) < cuentan con id="blackberry.ui.dialog" / >
+        (in www/plugins.xml)
+        <feature name="Notification">
+            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.ui.dialog" />
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "Notificación" >< nombre param = "ios-paquete" value = "CDVNotification" / >< / característica >
+        <feature name="Notification">
+            <param name="ios-package" value="CDVNotification" />
+        </feature>
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

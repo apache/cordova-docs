@@ -36,7 +36,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 예를 들어:
 
-        < 위젯 >< 기본 설정 이름 = "MySetting" 값 = "true" / >< 기능 이름 = "MyPlugin" 값 = "MyPluginClass" / >< 원본 액세스 = "*" / >< src="index.html 콘텐츠" / >< / 위젯 >
+        <widget>
+            <preference name="MySetting" value="true" />
+            <feature name="MyPlugin" value="MyPluginClass" />
+            <access origin="*" />
+            <content src="index.html" />
+        </widget>
     
 
 아파치 코르도바에서 지원 되는 주요 플랫폼에서 지원 되는 요소 목록에 따라.

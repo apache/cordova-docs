@@ -46,22 +46,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   (안 드 로이드`app/res/xml/config.xml`)
     
-        < 기능 이름 "가 속도계" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.AccelListener =" / >< / 기능 >
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.AccelListener" />
+        </feature>
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 = "가 속도계" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.accelerometer.Accelerometer =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.system 기능" 필수 = "true" 버전 "1.0.0.0" = / >< id="org.apache.cordova 기능" 필수 = "true" 버전 = "1.0.0" / >
+        (in www/plugins.xml)
+        <feature name="Accelerometer">
+            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "가 속도계" = >< param 이름을 = "ios 패키지" 값 = "CDVAccelerometer" / >< / 기능 >
+        <feature name="Accelerometer">
+            <param name="ios-package" value="CDVAccelerometer" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_SENSORS" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]

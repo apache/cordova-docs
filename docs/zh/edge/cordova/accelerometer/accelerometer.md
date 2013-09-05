@@ -61,7 +61,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_SENSORS"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]

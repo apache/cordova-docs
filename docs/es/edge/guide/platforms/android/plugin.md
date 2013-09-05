@@ -31,7 +31,9 @@ Esto mariscales una solicitud de la WebView al lado nativo Android, más o menos
 
 Si usted distribuye su plugin como archivo de Java o un frasco de su propio, el plugin debe agregarse a la `config.xml` archivo en de su aplicación Cordova-Android `res/xml/` Directorio.
 
-    < nombre de la función = "< nombreDeServicio >" >< nombre param = "android-paquete" value = "< full_name_including_namespace >" / >< / característica >
+    <feature name="<service_name>">
+        <param name="android-package" value="<full_name_including_namespace>" />
+    </feature>
     
 
 El nombre de servicio debe coincidir con la que se utiliza en la llamada `exec` de JavaScript, y el valor es el nombre completo de clases Java, incluyendo el espacio de nombres. De lo contrario el plugin puede compilar pero siendo inalcanzable por Córdoba.
@@ -84,11 +86,12 @@ Si no tienes que correr en el subproceso de la interfaz de usuario, pero no quer
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     ...
-                    callbackContext.success(); / / Thread-safe.
+                    callbackContext.success(); // Thread-safe.
                 }
             });
-            devuelve true;
-        } return false;
+            return true;
+        }
+        return false;
     }
     
 
@@ -96,27 +99,42 @@ Si no tienes que correr en el subproceso de la interfaz de usuario, pero no quer
 
 Añadir lo siguiente a nuestro archivo `config.xml`:
 
-    < nombre de la función = "Echo" >< nombre param = "android-paquete" value="org.apache.cordova.plugin.Echo" / >< / característica >
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+    </feature>
     
 
 Luego añadir el siguiente archivo a `src/org/apache/cordova/plugin/Echo.java` dentro de nuestra aplicación de Cordova-Android:
 
-    paquete org.apache.cordova.plugin;
+    package org.apache.cordova.plugin;
     
-    Import org.apache.cordova.CordovaPlugin;
-    Import org.apache.cordova.CallbackContext;
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
     
-    Import org.json.JSONArray;
-    Import org.json.JSONException;
-    Import org.json.JSONObject;
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
     
-    / ** * Esta clase se hace eco de una cadena de llamados desde JavaScript.
-     * / public class Eco extends CordovaPlugin {@Override public boolean ejecutar (acción de las cuerdas, JSONArray args, CallbackContext callbackContext) lanza JSONException {si (action.equals("echo")) {cadena de mensaje = args.getString(0);
-                this.echo (mensaje, callbackContext);
-                devuelve true;
-            } devolver false;
-        } privada Eco vacío (cadena de mensaje, CallbackContext callbackContext) {si (mensaje! = null & & message.length() > 0) {callbackContext.success(message);
-            } más {callbackContext.error ("esperado una cadena no vacía discusión.");
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
+    
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
+            }
+            return false;
+        }
+    
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
             }
         }
     }

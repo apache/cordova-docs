@@ -42,17 +42,62 @@ Android アプリケーションの開発に慣れていないしている場合
 
 4.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
     
-        CordovaViewTestActivity 活動を拡張するパブリック クラスを実装 CordovaInterface {CordovaWebView cwv;/* アクティビティが最初に作成されたときに呼び出されます。 */@Override 公共ボイド onCreate(Bundle savedInstanceState) {super.onCreate(savedInstanceState);setContentView(R.layout.main);cwv = (CordovaWebView) findViewById(R.id.tutorialView);Config.init(this);cwv.loadUrl(Config.getStartUrl());}
+        public class CordovaViewTestActivity extends Activity implements CordovaInterface {
+            CordovaWebView cwv;
+            /* Called when the activity is first created. */
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.main);
+                cwv = (CordovaWebView) findViewById(R.id.tutorialView);
+                Config.init(this);
+                cwv.loadUrl(Config.getStartUrl());
+            }
         
 
 カメラを使用する場合もこれを実装する必要があります。
 
-        @Override パブリック void setActivityResultCallback (CordovaPlugin プラグイン) {this.activityResultCallback = プラグイン;}/--- をご希望、結果それが完了したらアクティビティを起動します。 このアクティビティが終了したとき *、onActivityResult() メソッドが呼び出されます。
-         ** @param コマンド コマンド オブジェクト * @param インテントを開始するインテント * @param requestCode アクティビティを識別するためにコールバックに渡される要求コード */公共 void startActivityForResult (CordovaPlugin コマンド、意図的意図、int requestCode) {this.activityResultCallback = コマンド。this.activityResultKeepRunning = this.keepRunning;//マルチタスクがオンの場合の結果を返す場合活動無効し (コマンド! = null) {this.keepRunning = false;}//スタートの活動 super.startActivityForResult (インテント、requestCode）;} @Override/--- アクティビティと、それを開始した requestCode を与えることは終了し、起動したときに呼び出されます * 返されると、resultCode とそれから追加データ。
-         要求コードはもともと startActivityForResult() に供給される ** @param requestCode * この結果から来た人を識別することができます。
-         * @param resultCode 整数結果コードは、setResult() を介して子アクティビティによって返されます。
-         * @param データ、呼び出し元に結果データを返すことができますの意図 (様々 なデータは「エクストラ」の意図に添付することができます)。
-         * void onActivityResult (int requestCode、int resultCode、インテント意図) 保護された/{super.onActivityResult requestCode、resultCode （意図）;CordovaPlugin コールバック = this.activityResultCallback;場合 （コールバック! = null) {callback.onActivityResult requestCode、resultCode （意図）;}
+        @Override
+        public void setActivityResultCallback(CordovaPlugin plugin) {
+            this.activityResultCallback = plugin;
+        }
+        /**
+         * Launch an activity for which you would like a result when it finished. When this activity exits,
+         * your onActivityResult() method is called.
+         *
+         * @param command           The command object
+         * @param intent            The intent to start
+         * @param requestCode       The request code that is passed to callback to identify the activity
+         */
+        public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
+            this.activityResultCallback = command;
+            this.activityResultKeepRunning = this.keepRunning;
+    
+            // If multitasking turned on, then disable it for activities that return results
+            if (command != null) {
+                this.keepRunning = false;
+            }
+    
+            // Start activity
+            super.startActivityForResult(intent, requestCode);
+        }   
+    
+        @Override
+        /**
+         * Called when an activity you launched exits, giving you the requestCode you started it with,
+         * the resultCode it returned, and any additional data from it.
+         *
+         * @param requestCode       The request code originally supplied to startActivityForResult(),
+         *                          allowing you to identify who this result came from.
+         * @param resultCode        The integer result code returned by the child activity through its setResult().
+         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+         */
+        protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+            super.onActivityResult(requestCode, resultCode, intent);
+            CordovaPlugin callback = this.activityResultCallback;
+            if (callback != null) {
+                callback.onActivityResult(requestCode, resultCode, intent);
+            }
         }
     
 

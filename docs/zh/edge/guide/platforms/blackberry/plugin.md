@@ -35,7 +35,9 @@ Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 
 
 您的專案的 `www/plugins.xml` 目錄中包含的所有必要引用到科爾多瓦專案的外掛程式。 添加一個額外的引用，這樣，當 `cordova.exec` 是科爾多瓦叫，知道如何映射 `Echo` 參數的 `cordova.exec` 到 `Echo` 我們想要寫本機的類：
 
-    < 功能名稱 ="回聲">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.echo.Echo"/ >< / 功能 >
+    <feature name="Echo">
+        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+    </feature>
     
 
 ## 添加 Echo.java
@@ -46,7 +48,38 @@ Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 
 
 在編寫外掛程式背後的基本思想是，創建一個擴展外掛程式類的類調用的方法 `execute` 返回 `PluginResult` 類。 任何調用 `cordova.exec` 將傳遞給要在類中，以及參數內執行的操作中。 在這種情況下，"回聲"是我們想要執行的類中"回聲"和 [乙方] 的行動是我們在中傳遞的參數。
 
-    包 org.apache.cordova.echo ；導入 org.apache.cordova.api.Plugin ；導入 org.apache.cordova.api.PluginResult ；導入 org.apache.cordova.json4j.JSONArray ；導入 org.apache.cordova.json4j.JSONException ；導入 org.apache.cordova.json4j.JSONObject ；/ --- 簡單外掛程式來演示如何生成一個外掛程式黑莓 * 基本上回聲回使用者呼叫味精這個外掛程式 * / 公共最後類回聲擴展外掛程式 {公共靜態最終字串回顯 ="echo"；公共 PluginResult 執行字串 callbackId JSONArray args 字串操作） {PluginResult 結果 = 新 PluginResult （PluginResult.Status.INVALID_ACTION，"回聲: 不正確操作："+ 行動） ；if(action.equals(echo)) {試 {字串 theMsg = args.getString(0) ；如果 (theMsg! = null | | theMsg.length() > 0) {結果 = 新 PluginResult （PluginResult.Status.OK，theMsg） ；} 其他 {結果 = 新 PluginResult （PluginResult.Status.ERROR，"沒什麼，回顯"） ；}} catch (JSONException e) {結果 = 新 PluginResult （PluginResult.Status.JSON_EXCEPTION，e.getMessage()) ；}} 返回結果 ；}
+    package org.apache.cordova.echo;
+    
+    import org.apache.cordova.api.Plugin;
+    import org.apache.cordova.api.PluginResult;
+    import org.apache.cordova.json4j.JSONArray;
+    import org.apache.cordova.json4j.JSONException;
+    import org.apache.cordova.json4j.JSONObject;
+    /**
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
+     * Basically echos back the msg that a user calls to this plugin
+     */
+    public final class Echo extends Plugin {
+    
+        public static final String echo = "echo";
+    
+        public PluginResult execute(String action, JSONArray args, String callbackId) {
+            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+            if(action.equals(echo)){
+                try {
+                    String theMsg = args.getString(0);
+                    if(theMsg!= null || theMsg.length()>0){
+                        result = new PluginResult(PluginResult.Status.OK, theMsg);
+                    }else{
+                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                    }
+                } catch (JSONException e) {
+                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
+                }
+            }
+    
+            return result;
+        }
     
     }
     
@@ -61,7 +94,7 @@ Echo 外掛程式基本上是返回使用者不管消息提供給 `window.echo` 
 
 添加的 `Echo.java` 需要更新您的專案中。 若要生成 `.jar` 檔，定位到黑莓 WebWorks 回購根目錄下並運行 `ant` 命令：
 
-    螞蟻更新-Dproject.path="~/path_to_my_project"
+    ant update -Dproject.path="~/path_to_my_project"
     
 
 這將生成新的 `.jar` 檔在 `build/ext` 目錄。複製 `build/ext/cordova.jar` 檔到您 `project/www/ext` 目錄。

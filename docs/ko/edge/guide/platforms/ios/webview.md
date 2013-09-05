@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 2.  새로운 인스턴스화할 `CDVViewController` , (예를 들어, 클래스에 있는 속성)를 어딘가에 그것을 유지:
     
-        CDVViewController * viewController = [새로운 CDVViewController];
+        CDVViewController* viewController = [CDVViewController new];
         
 
 3.  (*선택 사항*) 설정 된 `wwwFolderName` 속성 (기본값은 `www` ):
@@ -105,22 +105,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 4.  (*선택 사항*) 당신의 config.xml에 시작 페이지 설정에서 `<content>` 태그.
     
-        < src="index.html 콘텐츠" / >
+        <content src="index.html" />
         
     
     또는
     
-        < 콘텐츠 src = "http://apache.org" / >
+        <content src="http://apache.org" />
         
 
 5.  (*선택 사항*) 설정 된 `useSplashScreen` 속성 (기본값은 `NO` ):
     
-        viewController.useSplashScreen = 예;
+        viewController.useSplashScreen = YES;
         
 
 6.  **보기 프레임** 설정 (마지막 속성으로 항상 설정이):
     
-        viewController.view.frame = CGRectMake (0, 0, 320, 480);
+        viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
 7.  보기에 식 칼을 추가:
@@ -140,5 +140,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 5.  적절 한 설정 `wwwFolderName` 및 `startPage` 처음 만든 폴더에 대 한 속성 또는 기본값 (이전 단원 참조)를 사용 하 여 인스턴스화할 때는`CDVViewController`.
     
-        / * 'myfolder 라는 폴더를 생성 하 고 그것은 시작 페이지에 ' mypage.html' 파일 * / viewController.wwwFolderName = @"myfolder";
+        /*
+         if you created a folder called 'myfolder' and
+         you want the file 'mypage.html' in it to be
+         the startPage
+        */
+        viewController.wwwFolderName = @"myfolder";
         viewController.startPage = @"mypage.html"
