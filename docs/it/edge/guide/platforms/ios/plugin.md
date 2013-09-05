@@ -96,9 +96,9 @@ Aggiungiamo i seguenti al progetto `config.xml` file:
 
 Poi aggiungiamo i seguenti file ( `Echo.h` e `Echo.m` ) nella cartella plugin all'interno della nostra cartella di applicazione di Cordova-iOS:
 
-    / --- Echo.h Cordova Plugin intestazione * * * / Echo #import < Cordova/CDV.h > @interface: CDVPlugin - comando di:(CDVInvokedUrlCommand*) echo (void);
+    / --- Echo.h Cordova Plugin intestazione --- / Echo #import < Cordova/CDV.h > @interface: CDVPlugin - comando di:(CDVInvokedUrlCommand*) echo (void);
     
-    @end / --- implementazione di Plugin Cordova Echo.m * * * / #import "Echo.h" #import < Cordova/CDV.h > @implementation Echo - comando di:(CDVInvokedUrlCommand*) echo (void) {CDVPluginResult * pluginResult = nil;
+    @end / --- implementazione di Plugin Cordova Echo.m --- / #import "Echo.h" #import < Cordova/CDV.h > @implementation Echo - comando di:(CDVInvokedUrlCommand*) echo (void) {CDVPluginResult * pluginResult = nil;
         NSString * echo = [command.arguments objectAtIndex: 0];
     
         Se (eco! = nil & & [eco lunghezza] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
