@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # batterycritical
 
-L'événement se déclenche lorsque la batterie a atteint le seuil critique.
+L'évènement se déclenche lorsque la batterie a atteint un seuil critique.
 
     window.addEventListener("batterycritical", yourCallbackFunction, false);
     
 
 ## Détails
 
-L'événement se déclenche lorsque le pourcentage de charge de la batterie a atteint le seuil critique de batterie. La valeur est spécifique au périphérique.
+L'évènement se déclenche lorsque le pourcentage de charge de la batterie a atteint un seuil critique. Cette valeur est spécifique à l'appareil.
 
-Le `batterycritical` est passé au gestionnaire d'un objet qui contient deux propriétés :
+Le gestionnaire `batterycritical` est appelé avec un objet contenant deux propriétés :
 
-*   **niveau**: le pourcentage de charge de la batterie (0-100). *(Nombre)*
+*   **level** : le taux de charge de la batterie (0-100). *(Number)*
 
-*   **isPlugged**: valeur booléenne qui indique si l'appareil n'est branché *(Boolean)*
+*   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications doivent généralement utiliser `window.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   iOS
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
 *   Paciarelli
 
-## Petit exemple
+## Exemple court
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
     

@@ -54,22 +54,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="連絡人">< 參數名稱 ="android 包"value="org.apache.cordova.ContactManager"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.GET_ACCOUNTS"/ >< 使用許可權 android:name="android.permission.READ_CONTACTS"/ >< 使用許可權 android:name="android.permission.WRITE_CONTACTS"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="連絡人">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.pim.Contact"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.find"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.identity"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.pim.Address"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.pim.Contact"所需 ="true"版本 ="1.0.0.0"/ >
+        (in www/plugins.xml)
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
+        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="連絡人">< 參數名稱 ="ios 包"值 ="CDVContacts"/ >< / 功能 >
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
+        </feature>
         
 
 *   Windows Phone
     
-        (在 Properties/WPAppManifest.xml) < 功能 >< 功能名稱 ="ID_CAP_CONTACTS"/ >< / 功能 >
+        (in Properties/WPAppManifest.xml)
+        <Capabilities>
+            <Capability Name="ID_CAP_CONTACTS" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]

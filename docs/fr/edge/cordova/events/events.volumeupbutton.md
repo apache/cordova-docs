@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # volumeupbutton
 
-L'événement se déclenche lorsque l'utilisateur clique sur le bouton volume up.
+L'évènement se déclenche lorsque l'utilisateur clique sur le bouton augmentation du volume.
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Si vous devez substituer le comportement augmenter le volume par défaut vous pouvez enregistrer un écouteur d'événements pour le `volumeupbutton` événement.
+Si vous souhaitez modifier le comportement par défaut du bouton augmentation du volume, vous pouvez enregistrer un écouteur pour l'évènement `volumeupbutton`.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   BlackBerry WebWorks (OS 5.0 et plus)
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
     

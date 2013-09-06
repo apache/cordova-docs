@@ -57,7 +57,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名稱 ="全球化">< 參數名稱 ="android 包"value="org.apache.cordova.Globalization"/ >< / 功能 >
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
         
 
 一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

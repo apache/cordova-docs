@@ -37,29 +37,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 = "카메라" >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.CameraLauncher =" / >< / 기능 > (애플 리 케이 션/AndroidManifest)에서 < 사용 권한 android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 = "카메라" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.camera.Camera =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.media.camera 기능" / >< 변죽: 권한 >< 변죽: 허가 > use_camera < / 테두리: 허가 >< / 테두리: 권한 >
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
+        
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 = "카메라" >< param 이름을 = "ios 패키지" 값 = "CDVCamera" / >< / 기능 >
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_ISV_CAMERA" / >< 기능 이름 = "ID_HW_FRONTCAMERA" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]
 
 *   (Tizen`config.xml`)
     
-        < 기능 이름 = "http://tizen.org/api/application" 필수 = "true" / >< 기능 이름 = "http://tizen.org/api/application.launch" 필수 = "true" / >
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
         
     
     참조: [Tizen 웹 응용 프로그램에 대 한 응용 프로그램 매니페스트][2]

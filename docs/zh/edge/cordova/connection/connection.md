@@ -45,29 +45,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="網路狀態">< 參數名稱 ="android 包"value="org.apache.cordova.NetworkManager"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.INTERNET"/ >< 使用許可權 android:name="android.permission.ACCESS_NETWORK_STATE"/ >< 使用許可權 android:name="android.permission.READ_PHONE_STATE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="網路狀態">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.network.Network"/ >< / 功能 >
+        (in www/plugins.xml)
+        <feature name="Network Status">
+            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+        </feature>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="網路狀態">< 參數名稱 ="ios 包"值 ="CDVConnection"/ >< / 功能 >
+        <feature name="NetworkStatus">
+            <param name="ios-package" value="CDVConnection" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_NETWORKING"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名稱 = 所需的"HTTP://tizen.org/api/systeminfo"="true"/ >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     引用： [Tizen Web 應用程式的應用程式清單][2]

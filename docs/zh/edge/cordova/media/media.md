@@ -37,9 +37,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 以下常量作為唯一的參數到據報告 `mediaStatus` 回檔：
 
-*   `Media.MEDIA_NONE`= 0 ；
-*   `Media.MEDIA_STARTING`= 1 ；
-*   `Media.MEDIA_RUNNING`= 2 ；
+*   `Media.MEDIA_NONE` = 0;
+*   `Media.MEDIA_STARTING` = 1;
+*   `Media.MEDIA_RUNNING` = 2;
 *   `Media.MEDIA_PAUSED`= 3 ；
 *   `Media.MEDIA_STOPPED`= 4 ；
 
@@ -93,22 +93,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="媒體">< 參數名稱 ="android 包"value="org.apache.cordova.AudioHandler"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.RECORD_AUDIO"/ >< 使用許可權 android:name="android.permission.MODIFY_AUDIO_SETTINGS"/ >< 使用許可權 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="捕獲">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.media.MediaCapture"/ >< / 功能 >
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="媒體">< 參數名稱 ="ios 包"值 ="CDVSound"/ >< / 功能 >
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_MEDIALIB"/ >< 能力名稱 ="ID_CAP_MICROPHONE"/ >< 功能名稱 ="ID_HW_FRONTCAMERA"/ >< 功能名稱 ="ID_CAP_ISV_CAMERA"/ >< 能力名稱 ="ID_CAP_CAMERA"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]

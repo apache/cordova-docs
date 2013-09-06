@@ -56,17 +56,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 = "파일" >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.FileUtils =" / >< / 기능 >< 기능 이름 "FileTransfer" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.FileTransfer =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 = "파일" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.file.FileManager =" / >< / 기능 >< 기능 이름 = "FileTransfer" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.http.FileTransfer =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.io.file 기능" 필요한 = "true" 버전 "1.0.0.0" = / >< id="blackberry.utils 기능" 필요 = "true" 버전 "1.0.0.0" = / >< id="blackberry.io.dir 기능" 필요한 = "true" 버전 "1.0.0.0" = / >< 변죽: 권한 >< 변죽: 허가 > access_shared < / 테두리: 허가 >< / 테두리: 권한 >
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 = "파일" >< param 이름을 = "ios 패키지" 값 = "CDVFile" / >< / 기능 >< 기능 이름 "FileTransfer" = >< param 이름을 = "ios 패키지" 값 = "CDVFileTransfer" / >< / 기능 >
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
         
 
 일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

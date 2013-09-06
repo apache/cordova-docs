@@ -29,8 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   addEventListener
 *   removeEventListener
-*   閉じる
-*   ショー
+*   close
+*   show
 *   executeScript
 *   insertCSS
 
@@ -46,17 +46,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （アンドロイド`app/res/xml/config.xml`)
     
-        < 機能名 ="InAppBrowser">< param の名前 =「android パッケージ」value="org.apache.cordova.InAppBrowser"/></機能 >
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 ="InAppBrowser">< param の名前 = 値「ios パッケージ」="CDVInAppBrowser"/></機能 >
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
         
 
 *   Windows Phone 7 および 8 (`config.xml`)
     
-        < 機能名 ="InAppBrowser"/>
+        <feature name="InAppBrowser" />
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
@@ -65,7 +69,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > イベントのリスナーを追加します、`InAppBrowser`.
 
-    ref.addEventListener eventname （コールバック）;
+    ref.addEventListener(eventname, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ*(InAppBrowser)*
@@ -88,19 +92,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 場所 ="はい）;ref.addEventListener ('は'、関数 {alert(event.url);});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.addEventListener 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//デバイス Api が利用可能な//onDeviceReady() 関数 {var ref = window.open ('http://apache.org'、'_blank' ' 場所 ="はい）;ref.addEventListener ('は' function(event) {警告 (' 開始: ' + event.url）;});ref.addEventListener ('loadstop'、function(event) {警告 (' 停止： ' + event.url）;});ref.addEventListener ('loaderror'、function(event) {警告 (' エラー: ' + event.message）;});ref.addEventListener ('出口'、function(event) {alert(event.type);});} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.addEventListener Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             ref.addEventListener('exit', function(event) { alert(event.type); });
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # removeEventListener
 
 > イベントのリスナーを削除します、`InAppBrowser`.
 
-    ref.removeEventListener eventname （コールバック）;
+    ref.removeEventListener(eventname, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ。*(InAppBrowser)*
@@ -123,12 +154,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 場所 ="はい）;var myCallback 関数 {alert(event.url);} = ref.addEventListener 'は' （myCallback）;ref.removeEventListener 'は' （myCallback）;
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var myCallback = function() { alert(event.url); }
+    ref.addEventListener('loadstart', myCallback);
+    ref.removeEventListener('loadstart', myCallback);
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.removeEventListener 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//グローバル InAppBrowser 参照 var iabRef = null;iabLoadStart(event) 関数 {警告 (event.type + '-' + event.url);} iabLoadStop(event) 関数 {警告 (event.type + '-' + event.url);} iabLoadError(event) 関数 {警告 (event.type + '-' + event.message);} 機能 iabClose(event) {alert(event.type);iabRef.removeEventListener 'は' （iabLoadStart）;iabRef.removeEventListener 'loadstop' （iabLoadStop）;iabRef.removeEventListener 'loaderror' （iabLoadError）;iabRef.removeEventListener '出口' （iabClose）;}//デバイス Api が利用可能な//onDeviceReady() 関数 {iabRef = window.open ('http://apache.org'、'_blank' ' 場所 ="はい）;iabRef.addEventListener 'は' （iabLoadStart）;iabRef.addEventListener 'loadstop' （iabLoadStop）;iabRef.removeEventListener 'loaderror' （iabLoadError）;iabRef.addEventListener '出口' （iabClose）;} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.removeEventListener Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        function iabLoadStart(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadStop(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadError(event) {
+            alert(event.type + ' - ' + event.message);
+        }
+    
+        function iabClose(event) {
+             alert(event.type);
+             iabRef.removeEventListener('loadstart', iabLoadStart);
+             iabRef.removeEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstart', iabLoadStart);
+             iabRef.addEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # 閉じる
@@ -149,12 +232,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 場所 ="はい）;ref.close();
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.close();
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.close 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//デバイス Api が利用可能な//onDeviceReady() 関数 {var ref = window.open ('http://apache.org'、'_blank' ' 場所 ="はい）;//5 秒 setTimeout(function() {ref.close(); 後 InAppBrowser を閉じる}、5000);} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.close Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
+             }, 5000);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # ショー
@@ -174,19 +284,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 非表示 ="はい）;ref.show();
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+    ref.show();
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.show 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/ロードするコルドバを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//コルドバは準備ができて//onDeviceReady() 関数 {var ref = window.open ('http://apache.org'、'_blank' ' 隠し ="はい）;ref.addEventListener ('loadstop'、function(event) {警告 ('背景ウィンドウ ロード');});//5 秒 setTimeout(function() {ref.close(); 後 InAppBrowser を閉じる}、5000);} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.show Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             ref.addEventListener('loadstop', function(event) {
+                 alert('background window loaded'); 
+             });
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
+             }, 5000);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # executeScript
 
 > JavaScript コードに挿入します、 `InAppBrowser` ウィンドウ
 
-    ref.executeScript 詳細 （コールバック）;
+    ref.executeScript(details, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ。*(InAppBrowser)*
@@ -208,19 +348,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 場所 ="はい）;ref.addEventListener ('loadstop' 関数 {ref.executeSript ({ファイル:」をブロック"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.executeSript({file: "myscript.js"});
+    });
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.executeScript 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//グローバル InAppBrowser 参照 var iabRef = null;/InAppBrowser ウィンドウに当社のカスタム JavaScript を挿入///replaceHeaderImage() 関数 {iabRef.executeScript ({コード:「var img=document.querySelector (「#header img');img.src= 'http://cordova.apache.org/images/cordova_bot.png';"}、関数 {0} 警告 （「イメージ要素が正常にハイジャック」);}} 関数 iabClose(event) {iabRef.removeEventListener 'loadstop' （replaceHeaderImage）;iabRef.removeEventListener '出口' （iabClose）;}//デバイス Api が利用可能な//onDeviceReady() 関数 {iabRef = window.open ('http://apache.org'、'_blank' ' 場所 ="はい）;iabRef.addEventListener 'loadstop' （replaceHeaderImage）;iabRef.addEventListener '出口' （iabClose）;} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom JavaScript into the InAppBrowser window
+        //
+        function replaceHeaderImage() {
+            iabRef.executeScript({
+                code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+            }, function() {
+                alert("Image Element Successfully Hijacked");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', replaceHeaderImage);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', replaceHeaderImage);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # insertCSS
 
 > CSS に注入する、 `InAppBrowser` ウィンドウ。
 
-    ref.insertCSS 詳細 （コールバック）;
+    ref.insertCSS(details, callback);
     
 
 *   **ref**: への参照を `InAppBrowser` ウィンドウ*(InAppBrowser)*
@@ -240,12 +425,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 簡単な例
 
-    var ref = window.open ('http://apache.org'、'_blank'、' 場所 ="はい）;ref.addEventListener ('loadstop' 関数 {ref.insertCSS ({ファイル:「反映」});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.insertCSS({file: "mystyles.css"});
+    });
     
 
 ## 完全な例
 
-    <!DOCTYPE html >< html >< 頭 >< タイトル > InAppBrowser.insertCSS 例 </タイトル >< 型のスクリプト"テキスト/javascript に"charset =「utf-8」src="cordova.js ="></スクリプト >< 型のスクリプト"テキスト/javascript に"charset = =「utf-8」>/デバイス API ライブラリをロードするを待つ///document.addEventListener （"deviceready"、onDeviceReady、false);//グローバル InAppBrowser 参照 var iabRef = null;/InAppBrowser ウィンドウの我々 のカスタム CSS の注入///changeBackgroundColor() 関数 {iabRef.insertCSS ({コード:"体 {背景: #ffff00"}、関数 {0} 警告 （「スタイル変更」）;}} 関数 iabClose(event) {iabRef.removeEventListener 'loadstop' （changeBackgroundColor）;iabRef.removeEventListener '出口' （iabClose）;}//デバイス Api が利用可能な//onDeviceReady() 関数 {iabRef = window.open ('http://apache.org'、'_blank' ' 場所 ="はい）;iabRef.addEventListener 'loadstop' （changeBackgroundColor）;iabRef.addEventListener '出口' （iabClose）;} </スクリプト ></ヘッド >< 本体 ></ボディ ></html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.insertCSS Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom CSS into the InAppBrowser window
+        //
+        function changeBackgroundColor() {
+            iabRef.insertCSS({
+                code: "body { background: #ffff00"
+            }, function() {
+                alert("Styles Altered");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', changeBackgroundColor);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', changeBackgroundColor);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # InAppBrowserEvent

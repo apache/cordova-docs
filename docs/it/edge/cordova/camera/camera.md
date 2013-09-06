@@ -37,29 +37,51 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = «Telecamera» >< nome param = "android-pacchetto" value="org.apache.cordova.CameraLauncher" / >< / caratteristica > (in app/AndroidManifest) < android:name="android.permission.WRITE_EXTERNAL_STORAGE usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = «Telecamera» >< param nome = "blackberry-pacchetto" value="org.apache.cordova.camera.Camera" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.media.camera" / >< orlo: autorizzazioni >< orlo: permesso > use_camera < / orlo: permesso >< / orlo: autorizzazioni >
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
+        
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = «Telecamera» >< param nome = valore "ios-pacchetto" = "CDVCamera" / >< / caratteristica >
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
         
 
 *   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        < funzionalità >< capacità nome = "ID_CAP_ISV_CAMERA" / >< capacità nome = "ID_HW_FRONTCAMERA" / >< / funzionalità >
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
         
     
     Riferimento: il [manifesto dell'applicazione per Windows Phone][1]
 
 *   Tizen (in`config.xml`)
     
-        < nome funzione = "http://tizen.org/api/application" necessaria = "true" / >< nome della feature = "http://tizen.org/api/application.launch" necessaria = "true" / >
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
         
     
     Riferimento: il [manifesto dell'applicazione per applicazione Web Tizen][2]

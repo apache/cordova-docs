@@ -35,12 +35,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （アンドロイド`app/res/xml/config.xml`)
     
-        < 機能名 =「スプラッシュ スクリーン」>< param の名前 =「android パッケージ」value="org.apache.cordova.SplashScreen"/></機能 >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「スプラッシュ スクリーン」>< param の名前 = 値「ios パッケージ」="CDVSplashScreen"/></機能 >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
@@ -62,7 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  `onCreate`を拡張するクラスのメソッド `DroidGap` 、次の 2 行を追加。
     
-        super.setIntegerProperty (「スプラッシュ」、R.drawable.splash）;super.loadUrl(Config.getStartUrl() には、10000);
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        super.loadUrl(Config.getStartUrl(), 10000);
         
     
     最初の行は、splashscreen として表示するイメージを設定します。 場合は任意の名前をあなたのイメージよりも、他 `splash.png` 、この行を変更する必要があります。 2 行目は、通常の `super.loadUrl` ライン、しかしそれはスプラッシュ画面のタイムアウト値を指定する 2 番目のパラメーター。 この例ではスプラッシュ画面が 10 秒間表示されます。 アプリケーションが受信するスプラッシュ画面を却下する、 `deviceready` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。

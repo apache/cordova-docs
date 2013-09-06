@@ -57,7 +57,9 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android (in`app/res/xml/config.xml`)
     
-        < nome funzione = "Globalizzazione" >< nome param = "android-pacchetto" value="org.apache.cordova.Globalization" / >< / caratteristica >
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
         
 
 Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

@@ -45,17 +45,23 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android (en`app/res/xml/config.xml`)
     
-        < nombre de la función = "Compass" >< nombre param = "android-paquete" value="org.apache.cordova.CompassListener" / >< / característica >
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.CompassListener" />
+        </feature>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "Compass" >< nombre param = "ios-paquete" value = "CDVLocation" / >< / característica >
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacidades >< nombre de capacidad = "ID_CAP_SENSORS" / >< / capacidades >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     Referencia: [manifiesto de aplicación para Windows Phone][1]

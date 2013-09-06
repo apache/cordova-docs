@@ -45,29 +45,44 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = "NetworkStatus" >< nome param = "android-pacchetto" value="org.apache.cordova.NetworkManager" / >< / caratteristica > (in app/AndroidManifest.xml) < android:name="android.permission.INTERNET usi-autorizzazione" / >< android:name="android.permission.ACCESS_NETWORK_STATE usi-autorizzazione" / >< android:name="android.permission.READ_PHONE_STATE usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Lo stato della rete" >< nome param = "blackberry-pacchetto" value="org.apache.cordova.network.Network" / >< / caratteristica >
+        (in www/plugins.xml)
+        <feature name="Network Status">
+            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+        </feature>
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "NetworkStatus" >< param nome = valore "ios-pacchetto" = "CDVConnection" / >< / caratteristica >
+        <feature name="NetworkStatus">
+            <param name="ios-package" value="CDVConnection" />
+        </feature>
         
 
 *   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        < funzionalità >< capacità nome = "ID_CAP_NETWORKING" / >< / funzionalità >
+        <Capabilities>
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
         
     
     Riferimento: il [manifesto dell'applicazione per Windows Phone][1]
 
 *   Tizen (in`config.xml`)
     
-        < nome funzione = "http://tizen.org/api/systeminfo" necessaria = "true" / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     Riferimento: il [manifesto dell'applicazione per applicazione Web Tizen][2]

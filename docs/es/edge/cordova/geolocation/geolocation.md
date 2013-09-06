@@ -56,22 +56,42 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/xml/config.xml) < nombre de la función = "Geolocalización" >< nombre param = "android-paquete" value="org.apache.cordova.GeoBroker" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.ACCESS_COARSE_LOCATION" / >< usos-permiso android:name="android.permission.ACCESS_FINE_LOCATION" / >< usos-permiso android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" / >
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.xml) < nombre de la función = "Geolocalización" >< nombre param = "blackberry-paquete" value="org.apache.cordova.geolocation.Geolocation" / >< / característica > (en www/config.xml) < borde: permisos >< rim: permiso > read_geolocation < / borde: permiso >< / borde: permisos >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "Geolocalización" >< nombre param = "ios-paquete" value = "CDVLocation" / >< / característica >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacidades >< nombre de capacidad = "ID_CAP_LOCATION" / >< / capacidades >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
     Referencia: [manifiesto de aplicación para Windows Phone][2]

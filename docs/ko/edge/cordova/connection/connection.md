@@ -45,29 +45,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 "NetworkStatus" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.NetworkManager =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.INTERNET" / >< 사용 권한 android:name="android.permission.ACCESS_NETWORK_STATE" / >< 사용 권한 android:name="android.permission.READ_PHONE_STATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 = "네트워크 상태" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.network.Network =" / >< / 기능 >
+        (in www/plugins.xml)
+        <feature name="Network Status">
+            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+        </feature>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "NetworkStatus" = >< param 이름을 = "ios 패키지" 값 = "CDVConnection" / >< / 기능 >
+        <feature name="NetworkStatus">
+            <param name="ios-package" value="CDVConnection" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_NETWORKING" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]
 
 *   (Tizen`config.xml`)
     
-        < 기능 이름 = "http://tizen.org/api/systeminfo" 필수 = "진정한" / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     참조: [Tizen 웹 응용 프로그램에 대 한 응용 프로그램 매니페스트][2]

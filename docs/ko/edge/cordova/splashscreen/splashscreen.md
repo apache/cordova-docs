@@ -35,12 +35,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   (안 드 로이드`app/res/xml/config.xml`)
     
-        < 기능 이름 "SplashScreen" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.SplashScreen =" / >< / 기능 >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "SplashScreen" = >< param 이름을 = "ios 패키지" 값 = "CDVSplashScreen" / >< / 기능 >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
@@ -62,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  에 `onCreate` 확장 클래스의 메서드 `DroidGap` , 다음 두 줄을 추가:
     
-        super.setIntegerProperty ("splashscreen", R.drawable.splash);
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
         super.loadUrl(Config.getStartUrl(), 10000);
         
     

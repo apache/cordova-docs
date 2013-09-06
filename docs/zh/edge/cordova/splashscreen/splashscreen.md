@@ -35,12 +35,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名稱 ="閃屏">< 參數名稱 ="android 包"value="org.apache.cordova.SplashScreen"/ >< / 功能 >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="閃屏">< 參數名稱 ="ios 包"值 ="CDVSplashScreen"/ >< / 功能 >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
@@ -62,7 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  在 `onCreate` 的擴展的類的方法 `DroidGap` ，添加以下兩行：
     
-        super.setIntegerProperty ("閃屏"，R.drawable.splash） ；super.loadUrl(Config.getStartUrl() 10000） ；
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        super.loadUrl(Config.getStartUrl(), 10000);
         
     
     第一行設置要作為閃屏顯示的圖像。 如果你命名您的圖像什麼除了 `splash.png` ，您需要修改這條線。 第二行是正常 `super.loadUrl` 線，但它有第二個參數指定超時值的初始螢幕。 在此示例中，初始螢幕顯示 10 秒鐘。 遣散閃屏，一旦接收到 app `deviceready` 事件，調用 `navigator.splashscreen.hide()` 方法。
@@ -71,7 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 將您的初始螢幕圖像複製到 iOS 專案 `Resources/splash` 目錄。 僅添加您想要支援的比如 iPad 或者 iPhone 的設備圖像。 每個圖像的大小應為：
 
-*   Default-568h@2x~iphone.png (640 × 1136 圖元為單位）
+*   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 圖元為單位）
 *   預設-Landscape~ipad.png （1024 x 748 圖元）
 *   Default-Portrait@2x~ipad.png (1536 x 2008 圖元為單位）

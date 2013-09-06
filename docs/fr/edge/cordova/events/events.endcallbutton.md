@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # endcallbutton
 
-Cet événement se déclenche lorsque l'utilisateur appuie sur la touche fin d'appel.
+Cet évènement se déclenche lorsque l'utilisateur appuie sur la touche fin d'appel.
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-L'événement substitue le comportement d'appel de fin par défaut.
+L'évènement modifie le comportement par défaut de la touche fin d'appel.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   BlackBerry WebWorks (OS 5.0 et plus)
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
     

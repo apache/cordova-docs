@@ -14,24 +14,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# bouton recherche
+# searchbutton
 
-L'événement se déclenche lorsque l'utilisateur appuie sur le bouton Rechercher sur Android.
+L'évènement se déclenche lorsque l'utilisateur appuie sur le bouton rechercher sous Android.
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Si vous devez substituer le comportement par défaut de bouton recherche sur Android, vous pouvez enregistrer un écouteur d'événements pour l'événement du bouton « recherche ».
+Si vous souhaitez modifier le comportement par défaut de bouton rechercher sous Android, vous pouvez enregistrer un écouteur pour l'événement 'searchbutton'.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
     

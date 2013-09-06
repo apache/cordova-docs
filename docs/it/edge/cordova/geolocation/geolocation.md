@@ -40,9 +40,9 @@ Questa API è basata sulla [Specifica di W3C Geolocation API][1]e viene eseguito
 
 ## Oggetti (sola lettura)
 
-*   Posizione
+*   Position
 *   PositionError
-*   Coordinate
+*   Coordinates
 
 ## La funzionalità di accesso
 
@@ -56,22 +56,42 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = "Geolocalizzazione" >< nome param = "android-pacchetto" value="org.apache.cordova.GeoBroker" / >< / caratteristica > (in app/AndroidManifest.xml) < android:name="android.permission.ACCESS_COARSE_LOCATION usi-autorizzazione" / >< android:name="android.permission.ACCESS_FINE_LOCATION usi-autorizzazione" / >< android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Geolocalizzazione" >< nome param = "blackberry-pacchetto" value="org.apache.cordova.geolocation.Geolocation" / >< / caratteristica > (in www/config.xml) < rim: autorizzazioni >< orlo: permesso > read_geolocation < / orlo: permesso >< / orlo: autorizzazioni >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "Geolocalizzazione" >< param nome = valore "ios-pacchetto" = "CDVLocation" / >< / caratteristica >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        < funzionalità >< capacità nome = "ID_CAP_LOCATION" / >< / funzionalità >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
     Riferimento: il [manifesto dell'applicazione per Windows Phone][2]

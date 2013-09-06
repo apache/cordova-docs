@@ -48,24 +48,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="設備">< 參數名稱 ="android 包"value="org.apache.cordova.Device"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.READ_PHONE_STATE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="設備">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.device.Device"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.app"所需 ="true"版本 ="1.0.0.0"/ >< rim： 許可權 >< rim： 許可證 > read_device_identifying_information < / rim： 許可證 >< / rim： 許可權 >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_WEBBROWSERCOMPONENT"/ >< 功能名稱 ="ID_CAP_IDENTITY_DEVICE"/ >< 功能名稱 ="ID_CAP_IDENTITY_USER"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名稱 = 所需的"HTTP://tizen.org/api/systeminfo"="true"/ >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     引用： [Tizen Web 應用程式的應用程式清單][2]

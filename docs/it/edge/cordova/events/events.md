@@ -48,22 +48,38 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = "Batteria" >< nome param = "android-pacchetto" value="org.apache.cordova.BatteryListener" / >< / caratteristica > (in app/AndroidManifest.xml) < android:name="android.permission.BROADCAST_STICKY usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Batteria" >< param nome = "blackberry-pacchetto" value="org.apache.cordova.battery.Battery" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.app" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.app.event" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.system.event" richiesto = "true" versione = "1.0.0.0" / >
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "Batteria" >< param nome = valore "ios-pacchetto" = "CDVBattery" / >< / caratteristica >
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
         
 
 *   Tizen (in`config.xml`)
     
-        < nome funzione = "http://tizen.org/api/systeminfo" necessaria = "true" / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     Riferimento: il [manifesto dell'applicazione per applicazione Web Tizen][1]

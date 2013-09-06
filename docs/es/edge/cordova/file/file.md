@@ -56,17 +56,45 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/xml/config.xml) < nombre de la función = "File" >< nombre param = "android-paquete" value="org.apache.cordova.FileUtils" / >< / característica de >< nombre de la función = "File Transfer" >< nombre param = "android-paquete" value="org.apache.cordova.FileTransfer" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.xml) < nombre de la función = "File" >< nombre param = "blackberry-paquete" value="org.apache.cordova.file.FileManager" / >< / característica de >< nombre de la función = "File Transfer" >< nombre param = "blackberry-paquete" value="org.apache.cordova.http.FileTransfer" / >< / característica > (en www/config.xml) < cuentan con id="blackberry.io.file" requiere = "true" versión = "1.0.0.0" / >< cuentan con id="blackberry.utils" requiere = "true" versión = "1.0.0.0" / >< cuentan con id="blackberry.io.dir" requiere = "true" versión = "1.0.0.0" / >< borde: permisos >< access_shared rim: permiso > < / borde: permiso >< / borde: permisos >
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "File" >< param nombre = valor "ios-paquete" = "CDVFile" / >< / característica de >< nombre de la función = "File Transfer" >< param nombre = valor "ios-paquete" = "CDVFileTransfer" / >< / característica >
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

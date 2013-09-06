@@ -29,8 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   addEventListener
 *   removeEventListener
-*   關閉
-*   顯示
+*   close
+*   show
 *   executeScript
 *   insertCSS
 
@@ -46,17 +46,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名稱 ="InAppBrowser">< 參數名稱 ="android 包"value="org.apache.cordova.InAppBrowser"/ >< / 功能 >
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="InAppBrowser">< 參數名稱 ="ios 包"值 ="CDVInAppBrowser"/ >< / 功能 >
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
         
 
 *   Windows Phone 7，8 個 （在`config.xml`)
     
-        < 功能名稱 ="InAppBrowser"/ >
+        <feature name="InAppBrowser" />
         
 
 一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
@@ -65,7 +69,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > 為事件添加一個攔截器`InAppBrowser`.
 
-    ref.addEventListener （事件、 回檔） ；
+    ref.addEventListener(eventname, callback);
     
 
 *   **ref**： 參考 `InAppBrowser` 視窗*(InAppBrowser)*
@@ -88,19 +92,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；ref.addEventListener ('loadstart'，function() {alert(event.url);});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.addEventListener 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 設備的 Api 可 / / 函數 onDeviceReady() {var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；ref.addEventListener ('loadstart' function(event) {警報 (' 開始： ' + event.url);});ref.addEventListener ('loadstop' function(event) {警報 (' 停止： ' + event.url);});ref.addEventListener ('loaderror' function(event) {警報 (' 錯誤： ' + event.message);});ref.addEventListener ('出口'，function(event) {alert(event.type);});} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.addEventListener Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             ref.addEventListener('exit', function(event) { alert(event.type); });
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # removeEventListener
 
 > 移除的事件攔截器`InAppBrowser`.
 
-    ref.removeEventListener （事件、 回檔） ；
+    ref.removeEventListener(eventname, callback);
     
 
 *   **ref**： 參考 `InAppBrowser` 視窗。*() InAppBrowser*
@@ -123,19 +154,71 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；var myCallback = function() {alert(event.url) ；} ref.addEventListener ('loadstart'，myCallback);ref.removeEventListener ('loadstart'，myCallback);
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var myCallback = function() { alert(event.url); }
+    ref.addEventListener('loadstart', myCallback);
+    ref.removeEventListener('loadstart', myCallback);
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.removeEventListener 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 全球 InAppBrowser 參考 var iabRef = null;函數 iabLoadStart(event) {警報 (event.type + '-' + event.url） ；} 函數 iabLoadStop(event) {警報 (event.type + '-' + event.url） ；} 函數 iabLoadError(event) {警報 (event.type + '-' + event.message） ；} 函數 iabClose(event) {alert(event.type);iabRef.removeEventListener ('loadstart'，iabLoadStart);iabRef.removeEventListener ('loadstop'，iabLoadStop);iabRef.removeEventListener ('loaderror'，iabLoadError);iabRef.removeEventListener '退出' iabClose） ；} / / 設備的 Api 可 / / 函數 onDeviceReady() {iabRef = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；iabRef.addEventListener ('loadstart'，iabLoadStart);iabRef.addEventListener ('loadstop'，iabLoadStop);iabRef.removeEventListener ('loaderror'，iabLoadError);iabRef.addEventListener '退出' iabClose） ；} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.removeEventListener Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        function iabLoadStart(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadStop(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadError(event) {
+            alert(event.type + ' - ' + event.message);
+        }
+    
+        function iabClose(event) {
+             alert(event.type);
+             iabRef.removeEventListener('loadstart', iabLoadStart);
+             iabRef.removeEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstart', iabLoadStart);
+             iabRef.addEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # 關閉
 
 > 關閉 `InAppBrowser` 視窗。
 
-    ref.close() ；
+    ref.close();
     
 
 *   **ref**： 參考 `InAppBrowser` 視窗*(InAppBrowser)*
@@ -149,19 +232,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；ref.close() ；
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.close();
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.close 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 設備的 Api 可 / / 函數 onDeviceReady() {var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；/ / 關閉後 5 秒 setTimeout(function() {ref.close(); InAppBrowser}，5000） ；} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.close Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
+             }, 5000);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # 顯示
 
 > 顯示打開了隱藏的 InAppBrowser 視窗。調用這沒有任何影響，如果 InAppBrowser 是已經可見。
 
-    ref.show() ；
+    ref.show();
     
 
 *   **ref:**的 InAppBrowser 視窗 (參考`InAppBrowser`)
@@ -174,12 +284,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 隱藏 = 是的） ；ref.show() ；
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+    ref.show();
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.show 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待科爾多瓦載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 科爾多瓦是準備好了 / / 函數 onDeviceReady() {var ref = window.open ('HTTP://apache.org'、 '_blank' ' 隱藏 = 是的） ；ref.addEventListener ('loadstop'，function(event) {警報 ('背景視窗載入') ；});/ / 關閉後 5 秒 setTimeout(function() {ref.close(); InAppBrowser}，5000） ；} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.show Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             ref.addEventListener('loadstop', function(event) {
+                 alert('background window loaded'); 
+             });
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
+             }, 5000);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # executeScript
@@ -208,19 +348,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；ref.addEventListener ('loadstop' function() {ref.executeSript ({檔："myscript.js"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.executeSript({file: "myscript.js"});
+    });
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.executeScript 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 全球 InAppBrowser 參考 var iabRef = null;/ / 我們自訂 JavaScript 注入 InAppBrowser 視窗 / / 函數 replaceHeaderImage() {iabRef.executeScript ({代碼："var img=document.querySelector ('#header img') ；img.src= 'HTTP://cordova.apache.org/images/cordova_bot.png' ；"}，function() {警報 ("圖像元素成功劫持"） ；}} 函數 iabClose(event) {iabRef.removeEventListener ('loadstop'，replaceHeaderImage);iabRef.removeEventListener '退出' iabClose） ；} / / 設備的 Api 可 / / 函數 onDeviceReady() {iabRef = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；iabRef.addEventListener ('loadstop'，replaceHeaderImage);iabRef.addEventListener '退出' iabClose） ；} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom JavaScript into the InAppBrowser window
+        //
+        function replaceHeaderImage() {
+            iabRef.executeScript({
+                code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+            }, function() {
+                alert("Image Element Successfully Hijacked");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', replaceHeaderImage);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', replaceHeaderImage);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # insertCSS
 
 > 注入到 CSS `InAppBrowser` 視窗。
 
-    ref.insertCSS 回檔的詳細資訊） ；
+    ref.insertCSS(details, callback);
     
 
 *   **ref**： 參考 `InAppBrowser` 視窗*(InAppBrowser)*
@@ -240,12 +425,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 快速的示例
 
-    var ref = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；ref.addEventListener ('loadstop' function() {ref.insertCSS ({檔："mystyles.css"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.insertCSS({file: "mystyles.css"});
+    });
     
 
 ## 完整的示例
 
-    <!DOCTYPE html >< html >< 頭 >< 標題 > InAppBrowser.insertCSS 示例 < / 標題 >< 腳本類型 ="文本/javascript"charset ="utf 8"src="cordova.js">< / 腳本 >< 腳本類型 ="文本/javascript"charset ="utf 8"> / / 等待設備 API 庫載入 / / document.addEventListener ("deviceready"，onDeviceReady，false);/ / 全球 InAppBrowser 參考 var iabRef = null;/ / 我們自訂的 CSS 注入 InAppBrowser 視窗 / / 函數 changeBackgroundColor() {iabRef.insertCSS ({代碼："身體 {背景： #ffff00"}，function() {警報 （"樣式更改"） ； 或}} 函數 iabClose(event) {iabRef.removeEventListener ('loadstop'，changeBackgroundColor);iabRef.removeEventListener '退出' iabClose） ；} / / 設備的 Api 可 / / 函數 onDeviceReady() {iabRef = window.open ('HTTP://apache.org'、 '_blank' ' 位置 = 是的） ；iabRef.addEventListener ('loadstop'，changeBackgroundColor);iabRef.addEventListener '退出' iabClose） ；} < / 腳本 >< / 頭 >< 身體 >< / 身體 >< / html >
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.insertCSS Example</title>
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom CSS into the InAppBrowser window
+        //
+        function changeBackgroundColor() {
+            iabRef.insertCSS({
+                code: "body { background: #ffff00"
+            }, function() {
+                alert("Styles Altered");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', changeBackgroundColor);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', changeBackgroundColor);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # InAppBrowserEvent

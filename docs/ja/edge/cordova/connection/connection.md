@@ -45,29 +45,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 ="NetworkStatus">< param の名前 =「android パッケージ」value="org.apache.cordova.NetworkManager"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.INTERNET"/>< 使用許可 android:name="android.permission.ACCESS_NETWORK_STATE"/>< 使用許可 android:name="android.permission.READ_PHONE_STATE"/>
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「ネットワーク ステータス」>< param の名前 ="ブラックベリー パッケージ"value="org.apache.cordova.network.Network"/></機能 >
+        (in www/plugins.xml)
+        <feature name="Network Status">
+            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
+        </feature>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 ="NetworkStatus">< param の名前 = 値「ios パッケージ」="CDVConnection"/></機能 >
+        <feature name="NetworkStatus">
+            <param name="ios-package" value="CDVConnection" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_NETWORKING"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_NETWORKING" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]
 
 *   (Tizen`config.xml`)
     
-        < 機能名に必要な"http://tizen.org/api/systeminfo"= ="true"/>
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     参照: [Tizen Web アプリケーションのアプリケーション マニフェスト][2]

@@ -48,22 +48,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="蓄電池">< 參數名稱 ="android 包"value="org.apache.cordova.BatteryListener"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.BROADCAST_STICKY"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="蓄電池">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.battery.Battery"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.app"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.app.event"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.system.event"所需 ="true"版本 ="1.0.0.0"/ >
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="蓄電池">< 參數名稱 ="ios 包"值 ="CDVBattery"/ >< / 功能 >
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
         
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名稱 = 所需的"HTTP://tizen.org/api/systeminfo"="true"/ >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     引用： [Tizen Web 應用程式的應用程式清單][1]

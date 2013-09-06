@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # startcallbutton
 
-L'événement se déclenche lorsque l'utilisateur appuie sur le bouton d'appel de démarrer.
+L'évènement se déclenche lorsque l'utilisateur appuie sur la touche d'appel.
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Si vous devez substituer le comportement d'appel de démarrage par défaut, vous pouvez enregistrer un écouteur d'événements pour le `startcallbutton` événement.
+Si vous souhaitez modifier le comportement par défaut de la touche d'appel, vous pouvez enregistrer un écouteur pour l'évènement `startcallbutton`.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   BlackBerry WebWorks (OS 5.0 et plus)
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("startcallbutton", onStartCallKeyDown, false);
     

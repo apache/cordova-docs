@@ -45,17 +45,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （アンドロイド`app/res/xml/config.xml`)
     
-        < 機能名 =「コンパス」>< param の名前 =「android パッケージ」value="org.apache.cordova.CompassListener"/></機能 >
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.CompassListener" />
+        </feature>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「コンパス」>< param の名前 = 値「ios パッケージ」="CDVLocation"/></機能 >
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_SENSORS"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]

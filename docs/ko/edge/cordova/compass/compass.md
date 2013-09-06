@@ -50,12 +50,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "나침반" = >< param 이름을 = "ios 패키지" 값 = "CDVLocation" / >< / 기능 >
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_SENSORS" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]

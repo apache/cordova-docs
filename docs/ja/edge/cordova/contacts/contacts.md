@@ -54,22 +54,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「連絡先」>< param の名前 =「android パッケージ」value="org.apache.cordova.ContactManager"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.GET_ACCOUNTS"/>< 使用許可 android:name="android.permission.READ_CONTACTS"/>< 使用許可 android:name="android.permission.WRITE_CONTACTS"/>
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「お問い合わせ」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.pim.Contact ="/></機能 > (www/config.xml) で < id="blackberry.find 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="blackberry.identity 機能"必要 ="true"のバージョン ="1.0.0.0 という"/>< id="blackberry.pim.Address 機能"必要 ="true"のバージョン ="1.0.0.0 という"/>< id="blackberry.pim.Contact 機能"必要 ="true"のバージョン =「1.0.0.0」/>
+        (in www/plugins.xml)
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
+        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「連絡先」>< param の名前 = 値「ios パッケージ」="CDVContacts"/></機能 >
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
+        </feature>
         
 
 *   Windows Phone
     
-        (Properties/WPAppManifest.xml) の < 機能 >< 機能名 ="ID_CAP_CONTACTS"/></機能 >
+        (in Properties/WPAppManifest.xml)
+        <Capabilities>
+            <Capability Name="ID_CAP_CONTACTS" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]

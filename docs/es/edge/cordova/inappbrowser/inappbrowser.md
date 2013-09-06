@@ -46,17 +46,21 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android (en`app/res/xml/config.xml`)
     
-        < nombre de la función = "InAppBrowser" >< nombre param = "android-paquete" value="org.apache.cordova.InAppBrowser" / >< / característica >
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "InAppBrowser" >< nombre param = "ios-paquete" value = "CDVInAppBrowser" / >< / característica >
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
         
 
 *   Windows Phone 7 y 8 (en`config.xml`)
     
-        < nombre de la función = "InAppBrowser" / >
+        <feature name="InAppBrowser" />
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
@@ -65,7 +69,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 > Añade un detector para un evento de la `InAppBrowser`.
 
-    ref.addEventListener (eventname, "callback");
+    ref.addEventListener(eventname, callback);
     
 
 *   **ref**: referencia a la `InAppBrowser` ventana *(InAppBrowser)*
@@ -88,20 +92,39 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-    ref.addEventListener ('loadstart', function() {alert(event.url);});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.addEventListener ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / esperar a librerías de dispositivos API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.addEventListener Example</title>
     
-        / / dispositivo APIs están disponibles / / function onDeviceReady() {var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-             ref.addEventListener ('loadstart', function(event) {alert (' empieza: ' + event.url);});
-             ref.addEventListener ('loadstop', function(event) {alert (' detener: ' + event.url);});
-             ref.addEventListener ('loaderror', function(event) {alert ('error: ' + event.message);});
-             ref.addEventListener ('salida', function(event) {alert(event.type);});
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             ref.addEventListener('exit', function(event) { alert(event.type); });
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # removeEventListener
@@ -131,31 +154,64 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-    var myCallback = function() {alert(event.url)}; ref.addEventListener ('loadstart', myCallback);
-    ref.removeEventListener ('loadstart', myCallback);
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var myCallback = function() { alert(event.url); }
+    ref.addEventListener('loadstart', myCallback);
+    ref.removeEventListener('loadstart', myCallback);
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.removeEventListener ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / esperar a librerías de dispositivos API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.removeEventListener Example</title>
     
-        / / InAppBrowser global reference var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        function iabLoadStart(event) {alert (event.type + '-' + event.url);
-        } function iabLoadStop(event) {alert (event.type + '-' + event.url);
-        } function iabLoadError(event) {alert (event.type + '-' + event.message);
-        } function iabClose(event) {alert(event.type);
-             iabRef.removeEventListener ('loadstart', iabLoadStart);
-             iabRef.removeEventListener ('loadstop', iabLoadStop);
-             iabRef.removeEventListener ('loaderror', iabLoadError);
-             iabRef.removeEventListener ('salida', iabClose);
-        } / / dispositivo APIs están disponibles / / function onDeviceReady() {iabRef = window.open ('http://apache.org', '_blank', ' location = yes');
-             iabRef.addEventListener ('loadstart', iabLoadStart);
-             iabRef.addEventListener ('loadstop', iabLoadStop);
-             iabRef.removeEventListener ('loaderror', iabLoadError);
-             iabRef.addEventListener ('salida', iabClose);
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        function iabLoadStart(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadStop(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadError(event) {
+            alert(event.type + ' - ' + event.message);
+        }
+    
+        function iabClose(event) {
+             alert(event.type);
+             iabRef.removeEventListener('loadstart', iabLoadStart);
+             iabRef.removeEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstart', iabLoadStart);
+             iabRef.addEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # cerrar
@@ -176,18 +232,39 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-    Ref.Close();
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.close();
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.close ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / esperar a librerías de dispositivos API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.close Example</title>
     
-        / / dispositivo APIs están disponibles / / function onDeviceReady() {var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-             / / cerrar InAppBrowser después de 5 segundos setTimeout(function() {ref.close();
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
              }, 5000);
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # Mostrar
@@ -213,14 +290,36 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.show ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / espera a Córdoba cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.show Example</title>
     
-        / / Córdoba está listo / / function onDeviceReady() {var ref = window.open ('http://apache.org', '_blank', ' oculto = yes');
-             ref.addEventListener ('loadstop', function(event) {alert ('ventana en segundo plano cargado'); 
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             ref.addEventListener('loadstop', function(event) {
+                 alert('background window loaded'); 
              });
-             / / cerrar InAppBrowser después de 5 segundos setTimeout(function() {ref.close();
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
              }, 5000);
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # executeScript
@@ -249,23 +348,57 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-    ref.addEventListener ('loadstop', function() {ref.executeSript ({archivo: "myscript.js"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.executeSript({file: "myscript.js"});
+    });
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.executeScript ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / esperar a librerías de dispositivos API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
     
-        / / InAppBrowser global reference var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        / / Inyectar nuestro JavaScript personalizado en la ventana de InAppBrowser / / function replaceHeaderImage() {iabRef.executeScript ({código: "var img=document.querySelector ('#header img'); IMG.src= 'http://cordova.apache.org/images/cordova_bot.png';"}, function() {alert ("imagen elemento exitosamente secuestrado");
-            función de}} iabClose(event) {iabRef.removeEventListener ('loadstop', replaceHeaderImage);
-             iabRef.removeEventListener ('salida', iabClose);
-        } / / dispositivo APIs están disponibles / / function onDeviceReady() {iabRef = window.open ('http://apache.org', '_blank', ' location = yes');
-             iabRef.addEventListener ('loadstop', replaceHeaderImage);
-             iabRef.addEventListener ('salida', iabClose);
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom JavaScript into the InAppBrowser window
+        //
+        function replaceHeaderImage() {
+            iabRef.executeScript({
+                code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+            }, function() {
+                alert("Image Element Successfully Hijacked");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', replaceHeaderImage);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', replaceHeaderImage);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # insertCSS
@@ -292,23 +425,57 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' location = yes');
-    ref.addEventListener ('loadstop', function() {ref.insertCSS ({archivo: "mystyles.css"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.insertCSS({file: "mystyles.css"});
+    });
     
 
 ## Ejemplo completo
 
-    <!DOCTYPE html >< html >< cabeza >< title > InAppBrowser.insertCSS ejemplo < / título >< de la escritura de tipo = "text/javascript" charset = "utf-8" src="cordova.js" >< / script >< de la escritura de tipo = "text/javascript" charset = "utf-8" > / / esperar a librerías de dispositivos API cargar / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.insertCSS Example</title>
     
-        / / InAppBrowser global reference var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        / / Inyectar nuestros CSS personalizado en la ventana de InAppBrowser / / function changeBackgroundColor() {iabRef.insertCSS ({código: "cuerpo {background: #ffff00"}, function() {alert ("estilos alterado");
-            función de}} iabClose(event) {iabRef.removeEventListener ('loadstop', changeBackgroundColor);
-             iabRef.removeEventListener ('salida', iabClose);
-        } / / dispositivo APIs están disponibles / / function onDeviceReady() {iabRef = window.open ('http://apache.org', '_blank', ' location = yes');
-             iabRef.addEventListener ('loadstop', changeBackgroundColor);
-             iabRef.addEventListener ('salida', iabClose);
-        } < /script >< / cabeza >< cuerpo >< cuerpo / >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom CSS into the InAppBrowser window
+        //
+        function changeBackgroundColor() {
+            iabRef.insertCSS({
+                code: "body { background: #ffff00"
+            }, function() {
+                alert("Styles Altered");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', changeBackgroundColor);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', changeBackgroundColor);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # InAppBrowserEvent

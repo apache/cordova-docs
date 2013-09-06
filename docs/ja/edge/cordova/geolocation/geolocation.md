@@ -40,9 +40,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## オブジェクト (読み取り専用)
 
-*   位置
+*   Position
 *   PositionError
-*   座標
+*   Coordinates
 
 ## 機能へのアクセス
 
@@ -56,22 +56,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「地理」>< param の名前 =「android パッケージ」value="org.apache.cordova.GeoBroker"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.ACCESS_COARSE_LOCATION"/>< 使用許可 android:name="android.permission.ACCESS_FINE_LOCATION"/>< 使用許可 android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「地理」>< param の名前 =「ブラックベリー パッケージ」value="org.apache.cordova.geolocation.Geolocation"/></機能 > (www/config.xml) で < 縁: 権限 >< 縁: 許可 > read_geolocation </縁: 許可 ></縁: アクセス許可 >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「地理」>< param の名前 = 値「ios パッケージ」="CDVLocation"/></機能 >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_LOCATION"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][2]

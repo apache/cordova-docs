@@ -39,9 +39,9 @@ Les constantes suivantes sont déclarées comme le seul paramètre à la `mediaS
 
 *   `Media.MEDIA_NONE`= 0 ;
 *   `Media.MEDIA_STARTING`= 1 ;
-*   `Media.MEDIA_RUNNING`= 2 ;
-*   `Media.MEDIA_PAUSED`= 3 ;
-*   `Media.MEDIA_STOPPED`= 4 ;
+*   `Media.MEDIA_RUNNING` = 2;
+*   `Media.MEDIA_PAUSED` = 3;
+*   `Media.MEDIA_STOPPED` = 4;
 
 ## Méthodes
 
@@ -93,22 +93,41 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "Media" >< param name = "android-package" value="org.apache.cordova.AudioHandler" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.RECORD_AUDIO" / >< permissions des utilisations android:name="android.permission.MODIFY_AUDIO_SETTINGS" / >< permissions des utilisations android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Capturer" >< param name = "blackberry-package" value="org.apache.cordova.media.MediaCapture" / >< / fiction >
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « Media » >< param name = « ios-paquet » value = « CDVSound » / >< / fiction >
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< nom de fonctionnalité = « ID_CAP_MEDIALIB » / >< nom de fonctionnalité = « ID_CAP_MICROPHONE » / >< nom de fonctionnalité = « ID_HW_FRONTCAMERA » / >< capacité nom = « ID_CAP_ISV_CAMERA » / >< capacité nom = « ID_CAP_CAMERA » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
     
     Référence : [manifeste d'Application pour Windows Phone][1]

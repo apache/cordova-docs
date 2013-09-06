@@ -37,29 +37,51 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "Camera" >< param name = "android-package" value="org.apache.cordova.CameraLauncher" / >< / fiction > (dans app/AndroidManifest) < permissions des utilisations android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Caméra" >< param name = "blackberry-package" value="org.apache.cordova.camera.Camera" / >< / fiction > (dans www/config.xml) < id="blackberry.media.camera en vedette » / >< jante : autorisations >< jante : permis > use_camera < / jante : permis >< / jante : autorisations >
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
+        
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
         
 
 *   iOS (en`config.xml`)
     
-        < nom de la fonction = « Camera » >< param name = « ios-paquet » value = « CDVCamera » / >< / fiction >
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< capacité nom = « ID_CAP_ISV_CAMERA » / >< capacité nom = « ID_HW_FRONTCAMERA » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
         
     
     Référence : [manifeste d'Application pour Windows Phone][1]
 
 *   Paciarelli (dans`config.xml`)
     
-        < nom de la fonction = « http://tizen.org/api/application » requis = « true » / >< nom de la fonction = « http://tizen.org/api/application.launch » requis = « true » / >
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
         
     
     Référence : [Manifeste d'Application pour Applications Web Paciarelli][2]

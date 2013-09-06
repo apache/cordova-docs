@@ -20,7 +20,7 @@ De nombreux aspects du comportement d'une application peuvent être contrôlés 
 
  [1]: http://www.w3.org/TR/widgets/
 
-Pour les projets créés avec l'interface en ligne de commande de Cordova (décrite dans le paragraphe "L'interface en Ligne de Commande"), ce fichier peut être trouvé dans le répertoire `www` à la racine du projet. L'utilisation de la ligne de commande pour compiler les projets recréé des versions de ce fichier dans les différents sous-répertoires du répertoire `platforms`. Pour les projets créés sans passer par cette interface, le fichier spécifique à chaque plateforme sert de fichier source.
+Pour les projets créés avec l'interface en ligne de commande de Cordova (décrite dans le paragraphe "L'interface en Ligne de Commande"), ce fichier peut être trouvé dans le répertoire `www` à la racine du projet. L'utilisation de l'interface en ligne de commandes pour compiler les projets recrée des versions de ce fichier dans les différents sous-répertoires du répertoire `platforms`. Pour les projets créés sans passer par cette interface, le fichier spécifique à chaque plateforme sert de fichier source.
 
 Si l'emplacement du fichier `config.xml` peut changer selon la plateforme, son contenu varie peu en général Certaines fonctionnalités spécifiques à une plateforme sont également indiquées dans ce même fichier de configuration. En voici le détail:
 

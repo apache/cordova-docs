@@ -93,22 +93,41 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/xml/config.xml) < nombre de la función = "Media" >< nombre param = "android-paquete" value="org.apache.cordova.AudioHandler" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.RECORD_AUDIO" / >< usos-permiso android:name="android.permission.MODIFY_AUDIO_SETTINGS" / >< usos-permiso android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.xml) < nombre de la función = "Capturar" >< nombre param = "blackberry-paquete" value="org.apache.cordova.media.MediaCapture" / >< / característica >
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
         
 
 *   (en iOS`config.xml`)
     
-        < nombre de la función = "Media" >< nombre param = "ios-paquete" value = "CDVSound" / >< / característica >
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacidades >< nombre de capacidad = "ID_CAP_MEDIALIB" / >< nombre de capacidad = "ID_CAP_MICROPHONE" / >< nombre de capacidad = "ID_HW_FRONTCAMERA" / >< nombre de capacidad = "ID_CAP_ISV_CAMERA" / >< nombre de capacidad = "ID_CAP_CAMERA" / >< / capacidades >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
     
     Referencia: [manifiesto de aplicación para Windows Phone][1]

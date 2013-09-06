@@ -40,9 +40,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 物件 （唯讀）
 
-*   位置
+*   Position
 *   PositionError
-*   座標
+*   Coordinates
 
 ## 訪問功能
 
@@ -56,22 +56,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="地理定位">< 參數名稱 ="android 包"value="org.apache.cordova.GeoBroker"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.ACCESS_COARSE_LOCATION"/ >< 使用許可權 android:name="android.permission.ACCESS_FINE_LOCATION"/ >< 使用許可權 android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="地理定位">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.geolocation.Geolocation"/ >< / 功能 > (在 www/config.xml) < rim： 許可權 >< rim： 許可證 > read_geolocation < / rim： 許可證 >< / rim： 許可權 >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="地理定位">< 參數名稱 ="ios 包"值 ="CDVLocation"/ >< / 功能 >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_LOCATION"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][2]

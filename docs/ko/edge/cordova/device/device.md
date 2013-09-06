@@ -48,24 +48,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 = "장치" >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.Device =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.READ_PHONE_STATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 = "장치" >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.device.Device =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.app 기능" 필수 = "true" 버전 "1.0.0.0" = / >< 변죽: 권한 >< 변죽: 허가 > read_device_identifying_information < / 테두리: 허가 >< / 테두리: 권한 >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_WEBBROWSERCOMPONENT" / >< 기능 이름 = "ID_CAP_IDENTITY_DEVICE" / >< 기능 이름 = "ID_CAP_IDENTITY_USER" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]
 
 *   (Tizen`config.xml`)
     
-        < 기능 이름 = "http://tizen.org/api/systeminfo" 필수 = "진정한" / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     참조: [Tizen 웹 응용 프로그램에 대 한 응용 프로그램 매니페스트][2]

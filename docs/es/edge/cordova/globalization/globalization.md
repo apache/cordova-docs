@@ -57,7 +57,9 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android (en`app/res/xml/config.xml`)
     
-        < nombre de la función = "Globalización" >< nombre param = "android-paquete" value="org.apache.cordova.Globalization" / >< / característica >
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
         
 
 Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

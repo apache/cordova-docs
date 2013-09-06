@@ -14,25 +14,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# bouton menu
+# menubutton
 
-L'événement se déclenche lorsque l'utilisateur appuie sur la touche menu.
+L'évènement se déclenche lorsque l'utilisateur appuie sur la touche menu.
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
 ## Détails
 
-Appliquant un gestionnaire d'événements remplace le comportement par défaut du bouton menu.
+Appliquer un gestionnaire d'évènements remplace le comportement par défaut du bouton menu.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
     

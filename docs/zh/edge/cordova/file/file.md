@@ -56,17 +56,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="檔">< 參數名稱 ="android 包"value="org.apache.cordova.FileUtils"/ >< / 功能 >< 功能名稱 ="檔案傳輸">< 參數名稱 ="android 包"value="org.apache.cordova.FileTransfer"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="檔">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.file.FileManager"/ >< / 功能 >< 功能名稱 ="檔案傳輸">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.HTTP.FileTransfer"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.io.file"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.utils"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.io.dir"所需 ="true"版本 ="1.0.0.0"/ >< rim: 許可權 >< rim： 許可證 > access_shared < / rim： 許可證 >< / rim： 許可權 >
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="檔">< 參數名稱 ="ios 包"值 ="CDVFile"/ >< / 功能 >< 功能名稱 ="檔案傳輸">< 參數名稱 ="ios 包"值 ="CDVFileTransfer"/ >< / 功能 >
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
         
 
 一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

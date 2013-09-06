@@ -48,24 +48,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「デバイス」>< param の名前 =「android パッケージ」value="org.apache.cordova.Device"/></機能 > (app/AndroidManifest.xml) の < 使用許可 android:name="android.permission.READ_PHONE_STATE"/>
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「デバイス」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.device.Device ="/></機能 > (www/config.xml) で < id="blackberry.app 機能"必要な ="true"バージョン =「1.0.0.0」/>< 縁: 権限 >< 縁: 許可 > read_device_identifying_information </縁: 許可 ></縁: アクセス許可 >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_WEBBROWSERCOMPONENT"/>< 機能名 ="ID_CAP_IDENTITY_DEVICE"/>< 機能名 ="ID_CAP_IDENTITY_USER"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]
 
 *   (Tizen`config.xml`)
     
-        < 機能名に必要な"http://tizen.org/api/systeminfo"= ="true"/>
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     参照: [Tizen Web アプリケーションのアプリケーション マニフェスト][2]

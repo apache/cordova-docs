@@ -57,7 +57,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （アンドロイド`app/res/xml/config.xml`)
     
-        < 機能名 =「グローバル化」>< param の名前 =「android パッケージ」value="org.apache.cordova.Globalization"/></機能 >
+        <feature name="Globalization">
+            <param name="android-package" value="org.apache.cordova.Globalization" />
+        </feature>
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

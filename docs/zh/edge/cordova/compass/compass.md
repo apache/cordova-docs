@@ -45,17 +45,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   （在 android`app/res/xml/config.xml`)
     
-        < 功能名稱 ="羅盤">< 參數名稱 ="android 包"value="org.apache.cordova.CompassListener"/ >< / 功能 >
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.CompassListener" />
+        </feature>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="羅盤">< 參數名稱 ="ios 包"值 ="CDVLocation"/ >< / 功能 >
+        <feature name="Compass">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_SENSORS"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]

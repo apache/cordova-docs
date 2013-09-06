@@ -98,7 +98,13 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        < funzionalità >< nome funzionalità = "ID_CAP_MEDIALIB" / >< capacità nome = "ID_CAP_MICROPHONE" / >< capacità nome = "ID_HW_FRONTCAMERA" / >< nome funzionalità = "ID_CAP_ISV_CAMERA" / >< nome funzionalità = "ID_CAP_CAMERA" / >< / funzionalità >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
 
 Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

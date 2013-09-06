@@ -98,7 +98,13 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_MEDIALIB"/>< 機能名 ="取得時に ID_CAP_MICROPHONE"/>< 機能名 ="ID_HW_FRONTCAMERA"/>< 機能名 ="ID_CAP_ISV_CAMERA"/>< 機能名 ="ID_CAP_CAMERA"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

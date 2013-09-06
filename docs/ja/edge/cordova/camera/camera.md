@@ -37,29 +37,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「カメラ」>< param の名前 =「android パッケージ」value="org.apache.cordova.CameraLauncher"/></機能 > （アプリ/AndroidManifest） で < 使用許可 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「カメラ」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.camera.Camera ="/></機能 > (www/config.xml) の < id="blackberry.media.camera 機能"/>< 縁: 権限 >< 縁: 許可 > use_camera </縁: 許可 ></縁: アクセス許可 >
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
+        
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「カメラ」>< param の名前 = 値「ios パッケージ」="CDVCamera"/></機能 >
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_ISV_CAMERA"/>< 機能名 ="ID_HW_FRONTCAMERA"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]
 
 *   (Tizen`config.xml`)
     
-        < 機能名に必要な"http://tizen.org/api/application"= ="true"/>< 機能名 ="http://tizen.org/api/application.launch"に必要な ="true"/>
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
         
     
     参照: [Tizen Web アプリケーションのアプリケーション マニフェスト][2]

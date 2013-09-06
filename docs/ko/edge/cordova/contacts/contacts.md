@@ -54,22 +54,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 "연락처" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.ContactManager =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.GET_ACCOUNTS" / >< 사용 권한 android:name="android.permission.READ_CONTACTS" / >< 사용 권한 android:name="android.permission.WRITE_CONTACTS" / >
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 "접촉" = >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.pim.Contact =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.find 기능" 필요한 = "true" 버전 "1.0.0.0" = / >< id="blackberry.identity 기능" 필요한 = "true" 버전 "1.0.0.0" = / >< id="blackberry.pim.Address 기능" 필요한 = "true" 버전 "1.0.0.0" = / >< id="blackberry.pim.Contact 기능" 필요한 = "true" 버전 "1.0.0.0" = / >
+        (in www/plugins.xml)
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
+        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "연락처" = >< param 이름을 = "ios 패키지" 값 = "CDVContacts" / >< / 기능 >
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
+        </feature>
         
 
 *   Windows Phone
     
-        (Properties/WPAppManifest.xml)에서 < 기능 >< 기능 이름 = "ID_CAP_CONTACTS" / >< / 기능 >
+        (in Properties/WPAppManifest.xml)
+        <Capabilities>
+            <Capability Name="ID_CAP_CONTACTS" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]

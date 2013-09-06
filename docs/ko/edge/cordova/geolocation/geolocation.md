@@ -40,9 +40,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## (읽기 전용) 개체
 
-*   위치
+*   Position
 *   PositionError
-*   좌표
+*   Coordinates
 
 ## 기능 액세스
 
@@ -56,22 +56,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 "위치 정보" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.GeoBroker =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.ACCESS_COARSE_LOCATION" / >< 사용 권한 android:name="android.permission.ACCESS_FINE_LOCATION" / >< 사용 권한 android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" / >
+        (in app/res/xml/config.xml)
+        <feature name="Geolocation">
+            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 "위치 정보" = >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.geolocation.Geolocation =" / >< / 기능 > (www/config.xml)에서 < 변죽: 권한 >< 변죽: 허가 > read_geolocation < / 테두리: 허가 >< / 테두리: 권한 >
+        (in www/plugins.xml)
+        <feature name="Geolocation">
+            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
+        </feature>
+        
+        (in www/config.xml)
+        <rim:permissions>
+            <rim:permit>read_geolocation</rim:permit>
+        </rim:permissions>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "위치 정보" = >< param 이름을 = "ios 패키지" 값 = "CDVLocation" / >< / 기능 >
+        <feature name="Geolocation">
+            <param name="ios-package" value="CDVLocation" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_LOCATION" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_LOCATION" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][2]

@@ -54,22 +54,44 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nome funzione = "Contatti" >< nome param = "android-pacchetto" value="org.apache.cordova.ContactManager" / >< / caratteristica > (in app/AndroidManifest.xml) < android:name="android.permission.GET_ACCOUNTS usi-autorizzazione" / >< android:name="android.permission.READ_CONTACTS usi-autorizzazione" / >< android:name="android.permission.WRITE_CONTACTS usi-autorizzazione" / >
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.ContactManager" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nome funzione = "Contatto" >< param nome = "blackberry-pacchetto" value="org.apache.cordova.pim.Contact" / >< / caratteristica > (in www/config.xml) < presentano id="blackberry.find" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.identity" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.pim.Address" richiesto = "true" versione = "1.0.0.0" / >< presentano id="blackberry.pim.Contact" richiesto = "true" versione = "1.0.0.0" / >
+        (in www/plugins.xml)
+        <feature name="Contact">
+            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
+        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "Contatti" >< param nome = valore "ios-pacchetto" = "CDVContacts" / >< / caratteristica >
+        <feature name="Contacts">
+            <param name="ios-package" value="CDVContacts" />
+        </feature>
         
 
 *   Windows Phone
     
-        (in Properties/WPAppManifest.xml) < funzionalità >< capacità nome = "ID_CAP_CONTACTS" / >< / funzionalità >
+        (in Properties/WPAppManifest.xml)
+        <Capabilities>
+            <Capability Name="ID_CAP_CONTACTS" />
+        </Capabilities>
         
     
     Riferimento: il [manifesto dell'applicazione per Windows Phone][1]

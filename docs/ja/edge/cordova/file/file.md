@@ -56,17 +56,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 ="File">< param の名前 =「android パッケージ」value="org.apache.cordova.FileUtils"/></機能 >< 機能名 =「ファイル転送」>< param の名前「android パッケージ」value="org.apache.cordova.FileTransfer ="/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「ファイル」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.file.FileManager ="/></機能 >< 機能名 =「ファイル転送」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.http.FileTransfer ="/></機能 > (www/config.xml) で < id="blackberry.io.file 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="blackberry.utils 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="blackberry.io.dir 機能"必要 ="true"のバージョン ="1.0.0.0 という"/>< 縁: アクセス許可 >< 縁: 許可 > access_shared </リム： 許可 ></リム： アクセス許可 >
+        (in www/plugins.xml)
+        <feature name="File">
+            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>access_shared</rim:permit>
+        </rim:permissions>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「ファイル」>< param の名前「ios パッケージ」値を = ="CDVFile"/></機能 >< 機能名 =「ファイル転送」>< param の名前「ios パッケージ」値を = ="CDVFileTransfer"/></機能 >
+        <feature name="File">
+            <param name="ios-package" value="CDVFile" />
+        </feature>
+        <feature name="FileTransfer">
+            <param name="ios-package" value="CDVFileTransfer" />
+        </feature>
         
 
 いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

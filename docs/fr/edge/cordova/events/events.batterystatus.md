@@ -16,24 +16,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # batterystatus
 
-L'événement se déclenche lorsqu'il y a un changement dans l'état de la batterie.
+L'évènement se déclenche lorsque l'état de la batterie évolue.
 
     window.addEventListener("batterystatus", yourCallbackFunction, false);
     
 
 ## Détails
 
-Cet événement se déclenche lorsque le pourcentage de charge de la batterie passe au moins 1 %, ou si l'appareil est branché ou débranché.
+L'évènement se déclenche lorsque le taux de charge de la batterie gagne ou perd au moins un pourcent, ou quand l'appareil est branché ou débranché.
 
-Le gestionnaire d'état de batterie est passée à un objet qui contient deux propriétés :
+Le gestionnaire est appelé avec un objet contenant deux propriétés :
 
-*   **niveau**: le pourcentage de charge de la batterie (0-100). *(Nombre)*
+*   **level** : le taux de charge de la batterie (0-100). *(Number)*
 
-*   **isPlugged**: valeur booléenne qui indique si l'appareil n'est branché *(Boolean)*
+*   **isPlugged** : un booléen indiquant si l'appareil est en cours de chargement ou non. *(Boolean)*
 
-Les applications doivent généralement utiliser `window.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `window.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   iOS
 *   Android
@@ -41,11 +41,11 @@ Les applications doivent généralement utiliser `window.addEventListener` pour 
 *   Windows Phone 7 et 8
 *   Paciarelli
 
-## Windows Phone 7 et 8 Quirks
+## Notes au sujet de Windows Phone 7 et 8
 
-Windows Phone 7 ne fournit pas d'API natives pour déterminer le niveau de la batterie, donc le `level` propriété n'est pas disponible. Le `isPlugged` paramètre *est* pris en charge.
+Windows Phone 7 ne fournit pas d'API native pour déterminer le niveau de la batterie, de ce fait la propriété `level` n'est pas disponible. La propriété `isPlugged` *est* quant à elle prise en charge.
 
-## Petit exemple
+## Exemple court
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
     

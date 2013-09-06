@@ -37,11 +37,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 다음 상수를 유일한 매개 변수로 보고 되는 `mediaStatus` 콜백:
 
-*   `Media.MEDIA_NONE`= 0;
-*   `Media.MEDIA_STARTING`= 1;
-*   `Media.MEDIA_RUNNING`= 2;
-*   `Media.MEDIA_PAUSED`= 3;
-*   `Media.MEDIA_STOPPED`= 4;
+*   `Media.MEDIA_NONE` = 0;
+*   `Media.MEDIA_STARTING` = 1;
+*   `Media.MEDIA_RUNNING` = 2;
+*   `Media.MEDIA_PAUSED` = 3;
+*   `Media.MEDIA_STOPPED` = 4;
 
 ## 메서드
 
@@ -93,22 +93,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
-        (in app/res/xml/config.xml) < 기능 이름 "미디어" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.AudioHandler =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.RECORD_AUDIO" / >< 사용 권한 android:name="android.permission.MODIFY_AUDIO_SETTINGS" / >< 사용 권한 android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   블랙베리 WebWorks
     
-        (in www/plugins.xml) < 기능 이름 "캡처" = >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.media.MediaCapture =" / >< / 기능 >
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "미디어" = >< param 이름을 = "ios 패키지" 값 = "CDVSound" / >< / 기능 >
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 기능 >< 기능 이름 = "ID_CAP_MEDIALIB" / >< 기능 이름 = "ID_CAP_MICROPHONE" / >< 기능 이름 = "ID_HW_FRONTCAMERA" / >< 기능 이름 = "ID_CAP_ISV_CAMERA" / >< 기능 이름 = "ID_CAP_CAMERA" / >< / 기능 >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
     
     참고: [Windows Phone 대 한 응용 프로그램 매니페스트][1]

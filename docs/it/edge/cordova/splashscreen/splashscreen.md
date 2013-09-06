@@ -35,12 +35,16 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android (in`app/res/xml/config.xml`)
     
-        < nome funzione = "SplashScreen" >< nome param = "android-pacchetto" value="org.apache.cordova.SplashScreen" / >< / caratteristica >
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
         
 
 *   iOS (in`config.xml`)
     
-        < nome funzione = "SplashScreen" >< param nome = valore "ios-pacchetto" = "CDVSplashScreen" / >< / caratteristica >
+        <feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
         
 
 Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
@@ -62,7 +66,7 @@ Alcune piattaforme possono supportare questa funzionalità senza richiedere alcu
 
 1.  Nel `onCreate` metodo della classe che estende `DroidGap` , aggiungere le seguenti due righe:
     
-        super.setIntegerProperty ("splashscreen", R.drawable.splash);
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
         super.loadUrl(Config.getStartUrl(), 10000);
         
     

@@ -37,11 +37,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 次の定数を唯一のパラメーターとして報告されます、 `mediaStatus` コールバック。
 
-*   `Media.MEDIA_NONE`= 0;
-*   `Media.MEDIA_STARTING`= 1;
-*   `Media.MEDIA_RUNNING`= 2;
-*   `Media.MEDIA_PAUSED`= 3;
-*   `Media.MEDIA_STOPPED`= 4;
+*   `Media.MEDIA_NONE` = 0;
+*   `Media.MEDIA_STARTING` = 1;
+*   `Media.MEDIA_RUNNING` = 2;
+*   `Media.MEDIA_PAUSED` = 3;
+*   `Media.MEDIA_STOPPED` = 4;
 
 ## メソッド
 
@@ -93,22 +93,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 ="Media">< param の名前 =「android パッケージ」value="org.apache.cordova.AudioHandler"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.RECORD_AUDIO"/>< 使用許可 android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>< 使用許可 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「キャプチャ」>< param の名前 =「ブラックベリー パッケージ」value="org.apache.cordova.media.MediaCapture"/></機能 >
+        (in www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
+        </feature>
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 ="Media">< param の名前 = 値「ios パッケージ」="CDVSound"/></機能 >
+        <feature name="Media">
+            <param name="ios-package" value="CDVSound" />
+        </feature>
         
 
 *   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 機能 >< 機能名 ="ID_CAP_MEDIALIB"/>< 機能名 ="取得時に ID_CAP_MICROPHONE"/>< 機能名 ="ID_HW_FRONTCAMERA"/>< 機能名 ="ID_CAP_ISV_CAMERA"/>< 機能名 ="ID_CAP_CAMERA"/></機能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_MEDIALIB" />
+            <Capability Name="ID_CAP_MICROPHONE" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_CAP_CAMERA" />
+        </Capabilities>
         
     
     参照: [Windows Phone のアプリケーション マニフェスト][1]

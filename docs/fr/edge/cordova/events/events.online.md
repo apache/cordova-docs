@@ -14,20 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# en ligne
+# online
 
-Cet événement se déclenche lorsqu'une application est en ligne, et l'appareil est connecté à Internet.
+L'évènement se déclenche lorsqu'une application se connecte, quand l'appareil est connecté à Internet.
 
     document.addEventListener("online", yourCallbackFunction, false);
     
 
 ## Détails
 
-Le `online` événement se déclenche lorsqu'un périphérique non-connecté précédemment reçoit une connexion réseau pour permettre un accès aux applications à Internet. Il s'appuie sur les mêmes informations que l'API de connexion et se déclenche lorsque la valeur de `connection.type` devient`NONE`.
+L'évènement `online` se déclenche lorsqu'un appareil précédemment non-connecté se connecte au réseau, permettant ainsi à l'application d'accéder à Internet. Il repose sur les mêmes informations que l'API Connection et se déclenche quand la valeur de `connection.type` devient `NONE`.
 
-Les applications doivent généralement utiliser `document.addEventListener` pour attacher un écouteur d'événements une fois le `deviceready` événement se déclenche.
+Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois l'évènement `deviceready` déclenché.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -36,7 +36,7 @@ Les applications doivent généralement utiliser `document.addEventListener` pou
 *   Paciarelli
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     document.addEventListener("online", onOnline, false);
     
@@ -79,14 +79,14 @@ Les applications doivent généralement utiliser `document.addEventListener` pou
     </html>
     
 
-## iOS Quirks
+## Notes au sujet d'iOS
 
-Durant le démarrage initial, le premier `online` événement (le cas échéant) prend au moins une seconde au feu, avant que `connection.type` est`UNKNOWN`.
+Lors du démarrage initial, le déclenchement du premier évènement `online` (si applicable) prend au moins une seconde avant quoi `connection.type` vaut `UNKNOWN`.
 
-## Windows Phone 7 Quirks
+## Notes au sujet de Windows Phone 7
 
-Lors de l'exécution dans l'émulateur, le `connection.status` est toujours inconnu, de sorte que cet événement sera *pas* feu.
+Lorsque l'application est exécutée dans l'émulateur, la valeur de la propriété `connection.status` est toujours inconnue, ainsi cet évènement n'est *pas* déclenché.
 
-## Windows Phone 8 Quirks
+## Notes au sujet de Windows Phone 8
 
-L'émulateur signale le type de connexion comme `Cellular` , qui ne change pas, donc les événements seront *pas* feu.
+L'émulateur signale le type de connexion comme `Cellular`, type qui ne change jamais, ainsi l'évènement n'est *pas* déclenché.

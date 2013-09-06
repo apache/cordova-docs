@@ -37,29 +37,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Android 系統
     
-        (in app/res/xml/config.xml) < 功能名稱 ="相機">< 參數名稱 ="android 包"value="org.apache.cordova.CameraLauncher"/ >< / 功能 > (在 app/AndroidManifest) < 使用許可權 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         
 
 *   黑莓手機 WebWorks
     
-        (in www/plugins.xml) < 功能名稱 ="相機">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.camera.Camera"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.media.camera"/ >< rim： 許可權 >< rim： 許可證 > use_camera < / rim： 許可證 >< / rim： 許可權 >
+        (in www/plugins.xml)
+        <feature name="Camera">
+            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.media.camera" />
+        
+        <rim:permissions>
+            <rim:permit>use_camera</rim:permit>
+        </rim:permissions>
         
 
 *   （在 iOS`config.xml`)
     
-        < 功能名稱 ="相機">< 參數名稱 ="ios 包"值 ="CDVCamera"/ >< / 功能 >
+        <feature name="Camera">
+            <param name="ios-package" value="CDVCamera" />
+        </feature>
         
 
 *   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        < 功能 >< 功能名稱 ="ID_CAP_ISV_CAMERA"/ >< 功能名稱 ="ID_HW_FRONTCAMERA"/ >< / 功能 >
+        <Capabilities>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+            <Capability Name="ID_HW_FRONTCAMERA" />
+        </Capabilities>
         
     
     引用：[為 Windows Phone 應用程式清單][1]
 
 *   （在 Tizen`config.xml`)
     
-        < 功能名稱 = 所需的"HTTP://tizen.org/api/application"="true"/ >< 功能名稱 ="HTTP://tizen.org/api/application.launch"所需 ="true"/ >
+        <feature name="http://tizen.org/api/application" required="true"/>
+        <feature name="http://tizen.org/api/application.launch" required="true"/>
         
     
     引用： [Tizen Web 應用程式的應用程式清單][2]

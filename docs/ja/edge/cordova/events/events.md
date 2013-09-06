@@ -48,22 +48,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
-        (in app/res/xml/config.xml) < 機能名 =「バッテリー」>< param の名前 =「android パッケージ」value="org.apache.cordova.BatteryListener"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.BROADCAST_STICKY"/>
+        (in app/res/xml/config.xml)
+        <feature name="Battery">
+            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   ブラックベリー WebWorks
     
-        (in www/plugins.xml) < 機能名 =「バッテリー」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.battery.Battery ="/></機能 > (www/config.xml) で < id="blackberry.app 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="blackberry.app.event 機能"必要 ="true"のバージョン ="1.0.0.0 という"/>< id="blackberry.system.event 機能"必要 ="true"のバージョン =「1.0.0.0」/>
+        (in www/plugins.xml)
+        <feature name="Battery">
+            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
+        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
+        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
 *   iOS （`config.xml`)
     
-        < 機能名 =「バッテリー」>< param の名前「ios パッケージ」値を = ="CDVBattery"/></機能 >
+        <feature name="Battery">
+            <param name="ios-package" value="CDVBattery" />
+        </feature>
         
 
 *   (Tizen`config.xml`)
     
-        < 機能名に必要な"http://tizen.org/api/systeminfo"= ="true"/>
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     参照: [Tizen Web アプリケーションのアプリケーション マニフェスト][1]

@@ -29,8 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   addEventListener
 *   removeEventListener
-*   닫기
-*   보기
+*   close
+*   show
 *   executeScript
 *   insertCSS
 
@@ -46,17 +46,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   (안 드 로이드`app/res/xml/config.xml`)
     
-        < 기능 이름 "InAppBrowser" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.InAppBrowser =" / >< / 기능 >
+        <feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
         
 
 *   (iOS`config.xml`)
     
-        < 기능 이름 "InAppBrowser" = >< param 이름을 = "ios 패키지" 값 = "CDVInAppBrowser" / >< / 기능 >
+        <feature name="InAppBrowser">
+            <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
         
 
 *   Windows Phone 7과 (8`config.xml`)
     
-        < 기능 이름 = "InAppBrowser" / >
+        <feature name="InAppBrowser" />
         
 
 일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
@@ -65,7 +69,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > 이벤트에 대 한 수신기를 추가 합니다`InAppBrowser`.
 
-    ref.addEventListener (eventname, 콜백);
+    ref.addEventListener(eventname, callback);
     
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창 *(InAppBrowser)*
@@ -88,27 +92,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-    ref.addEventListener ('loadstart', function() {alert(event.url);});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.addEventListener 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.addEventListener Example</title>
     
-        / 장치 Api 사용할 수 있습니다 / / / onDeviceReady() 기능 {var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-             ref.addEventListener ('loadstart', function(event) {경고 (' 시작: ' + event.url);});
-             ref.addEventListener ('loadstop', function(event) {경고 (' 중지: ' + event.url);});
-             ref.addEventListener ('loaderror', function(event) {경고 (' 오류: ' + event.message);});
-             ref.addEventListener ('출구', function(event) {alert(event.type);});
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             ref.addEventListener('exit', function(event) { alert(event.type); });
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # removeEventListener
 
 > 이벤트에 대 한 수신기를 제거 합니다`InAppBrowser`.
 
-    ref.removeEventListener (eventname, 콜백);
+    ref.removeEventListener(eventname, callback);
     
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창. *(InAppBrowser)*
@@ -131,31 +154,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-    var myCallback = function() {alert(event.url);} ref.addEventListener ('loadstart', myCallback);
-    ref.removeEventListener ('loadstart', myCallback);
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    var myCallback = function() { alert(event.url); }
+    ref.addEventListener('loadstart', myCallback);
+    ref.removeEventListener('loadstart', myCallback);
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.removeEventListener 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.removeEventListener Example</title>
     
-        / / 전역 InAppBrowser 참조 var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        iabLoadStart(event) 함수 {경고 (event.type + '-' + event.url);
-        } iabLoadStop(event) 기능 {경고 (event.type + '-' + event.url);
-        } iabLoadError(event) 기능 {경고 (event.type + '-' + event.message);
-        } iabClose(event) {alert(event.type); 기능
-             iabRef.removeEventListener ('loadstart', iabLoadStart);
-             iabRef.removeEventListener ('loadstop', iabLoadStop);
-             iabRef.removeEventListener ('loaderror', iabLoadError);
-             iabRef.removeEventListener ('종료', iabClose);
-        } / / 장치 Api 사용할 수 있습니다 / / onDeviceReady() 기능 {iabRef = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-             iabRef.addEventListener ('loadstart', iabLoadStart);
-             iabRef.addEventListener ('loadstop', iabLoadStop);
-             iabRef.removeEventListener ('loaderror', iabLoadError);
-             iabRef.addEventListener ('종료', iabClose);
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        function iabLoadStart(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadStop(event) {
+            alert(event.type + ' - ' + event.url);
+        }
+    
+        function iabLoadError(event) {
+            alert(event.type + ' - ' + event.message);
+        }
+    
+        function iabClose(event) {
+             alert(event.type);
+             iabRef.removeEventListener('loadstart', iabLoadStart);
+             iabRef.removeEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstart', iabLoadStart);
+             iabRef.addEventListener('loadstop', iabLoadStop);
+             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # 닫기
@@ -176,18 +232,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.close 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.close Example</title>
     
-        / 장치 Api 사용할 수 있습니다 / / / onDeviceReady() 기능 {var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-             / / 5 초 setTimeout(function() {ref.close(); 후 InAppBrowser
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'location=yes');
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
              }, 5000);
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # 보기
@@ -207,27 +284,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 숨겨진 = 예);
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
     ref.show();
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.show 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 로드 코르 도우 바 기 다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.show Example</title>
     
-        / 코르도바 준비 / / / onDeviceReady() 기능 {var ref = window.open ('http://apache.org', '_blank', ' 숨겨진 = 예);
-             ref.addEventListener ('loadstop', function(event) {경고 ('배경 창 로드'); 
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+    
+        // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+             var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+             ref.addEventListener('loadstop', function(event) {
+                 alert('background window loaded'); 
              });
-             / / 5 초 setTimeout(function() {ref.close(); 후 InAppBrowser
+             // close InAppBrowser after 5 seconds
+             setTimeout(function() {
+                 ref.close();
              }, 5000);
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # executeScript
 
 > 에 자바 스크립트 코드를 삽입는 `InAppBrowser` 창
 
-    ref.executeScript (세부 사항, 콜백);
+    ref.executeScript(details, callback);
     
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창. *(InAppBrowser)*
@@ -249,30 +348,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-    ref.addEventListener ('loadstop', function() {ref.executeSript ({파일: "myscript.js"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.executeSript({file: "myscript.js"});
+    });
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.executeScript 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.executeScript Example</title>
     
-        / / 전역 InAppBrowser 참조 var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        / InAppBrowser 창에 우리의 사용자 정의 JavaScript를 주입 하는 / / / replaceHeaderImage() 기능 {iabRef.executeScript ({코드: "var img=document.querySelector ('#header 그림'); img.src= 'http://cordova.apache.org/images/cordova_bot.png';"}, function() {경고 (" 이미지 요소 성공적으로 납치 ");
-            }} 함수 iabClose(event) {iabRef.removeEventListener ('loadstop', replaceHeaderImage);
-             iabRef.removeEventListener ('종료', iabClose);
-        } / / 장치 Api 사용할 수 있습니다 / / onDeviceReady() 기능 {iabRef = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-             iabRef.addEventListener ('loadstop', replaceHeaderImage);
-             iabRef.addEventListener ('종료', iabClose);
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom JavaScript into the InAppBrowser window
+        //
+        function replaceHeaderImage() {
+            iabRef.executeScript({
+                code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
+            }, function() {
+                alert("Image Element Successfully Hijacked");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', replaceHeaderImage);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', replaceHeaderImage);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # insertCSS
 
 > 주사로 CSS는 `InAppBrowser` 창.
 
-    ref.insertCSS (세부 사항, 콜백);
+    ref.insertCSS(details, callback);
     
 
 *   **심판**:에 대 한 참조는 `InAppBrowser` 창 *(InAppBrowser)*
@@ -292,23 +425,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    var ref = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-    ref.addEventListener ('loadstop', function() {ref.insertCSS ({파일: "mystyles.css"});});
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstop', function() {
+        ref.insertCSS({file: "mystyles.css"});
+    });
     
 
 ## 전체 예제
 
-    <!DOCTYPE html >< html >< 헤드 >< 제목 > InAppBrowser.insertCSS 예제 < / 제목 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" src="cordova.js" >< / 스크립트 >< 스크립트 유형 = "텍스트/자바 스크립트" charset = "은 utf-8" > / 장치 API 라이브러리 로드를 기다립니다 / / / document.addEventListener ("deviceready", onDeviceReady, false);
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>InAppBrowser.insertCSS Example</title>
     
-        / / 전역 InAppBrowser 참조 var iabRef = null;
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
     
-        / InAppBrowser 창에 우리의 사용자 정의 CSS를 삽입 / / / changeBackgroundColor() 기능 {iabRef.insertCSS ({코드: "몸 {배경: #ffff00"}, function() {경고 ("스타일 변경");
-            }} 함수 iabClose(event) {iabRef.removeEventListener ('loadstop', changeBackgroundColor);
-             iabRef.removeEventListener ('종료', iabClose);
-        } / / 장치 Api 사용할 수 있습니다 / / onDeviceReady() 기능 {iabRef = window.open ('http://apache.org', '_blank', ' 위치 = 예);
-             iabRef.addEventListener ('loadstop', changeBackgroundColor);
-             iabRef.addEventListener ('종료', iabClose);
-        } < / 스크립트 >< / 머리 >< 몸 >< / 바디 >< / html >
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+    
+        // Global InAppBrowser reference
+        var iabRef = null;
+    
+        // Inject our custom CSS into the InAppBrowser window
+        //
+        function changeBackgroundColor() {
+            iabRef.insertCSS({
+                code: "body { background: #ffff00"
+            }, function() {
+                alert("Styles Altered");
+            }
+        }
+    
+        function iabClose(event) {
+             iabRef.removeEventListener('loadstop', changeBackgroundColor);
+             iabRef.removeEventListener('exit', iabClose);
+        }
+    
+        // device APIs are available
+        //
+        function onDeviceReady() {
+             iabRef = window.open('http://apache.org', '_blank', 'location=yes');
+             iabRef.addEventListener('loadstop', changeBackgroundColor);
+             iabRef.addEventListener('exit', iabClose);
+        }
+    
+        </script>
+      </head>
+      <body>
+      </body>
+    </html>
     
 
 # InAppBrowserEvent

@@ -48,24 +48,43 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
 *   Android
     
-        (in app/res/XML/config.Xml) < nom de la fonction = "Device" >< param name = "android-package" value="org.apache.cordova.Device" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.READ_PHONE_STATE" / >
+        (in app/res/xml/config.xml)
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.Device" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Device" >< param name = "blackberry-package" value="org.apache.cordova.device.Device" / >< / fiction > (dans www/config.xml) < id="blackberry.app en vedette" requis = "true" version = "1.0.0.0" / >< jante : autorisations >< jante : permis > read_device_identifying_information < / jante : permis >< / jante : autorisations >
+        (in www/plugins.xml)
+        <feature name="Device">
+            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <rim:permissions>
+            <rim:permit>read_device_identifying_information</rim:permit>
+        </rim:permissions>
         
 
 *   Windows Phone (en`Properties/WPAppManifest.xml`)
     
-        < capacités >< nom de fonctionnalité = « ID_CAP_WEBBROWSERCOMPONENT » / >< capacité nom = « ID_CAP_IDENTITY_DEVICE » / >< capacité nom = « ID_CAP_IDENTITY_USER » / >< / capacités >
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+            <Capability Name="ID_CAP_IDENTITY_USER" />
+        </Capabilities>
         
     
     Référence : [manifeste d'Application pour Windows Phone][1]
 
 *   Paciarelli (dans`config.xml`)
     
-        < nom de la fonction = « http://tizen.org/api/systeminfo » requis = « true » / >
+        <feature name="http://tizen.org/api/systeminfo" required="true"/>
         
     
     Référence : [manifeste d'Application pour l'Application Web paciarelli][2]
