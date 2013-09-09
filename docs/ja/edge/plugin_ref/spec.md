@@ -44,7 +44,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 子要素は、 `<engines>` 要素のこのプラグインをサポートしている Apache コルドバ ベースのフレームワークのバージョンを指定します。例:
 
-    < エンジン >< エンジン名 =「コルドバ」バージョン =「1.7.0」/>< エンジン名 =「コルドバ」バージョン =「1.8.1」/>< エンジン名 ="worklight"バージョン =「1.0.0」プラットフォーム =「アンドロイド」scriptSrc ="worklight_version"/></エンジン >
+    <engines>
+        <engine name="cordova" version="1.7.0" />
+        <engine name="cordova" version="1.8.1" />
+        <engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/>
+    </engines>
     
 
 同様に、 `<plugin>` 要素の `version` 属性、指定されたバージョン文字列は正規表現に適合する主要マイナー パッチ文字列と一致する必要があります。
@@ -54,19 +58,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 エンジン要素ファジーマッチの繰り返しを避けるために、基になるプラットフォームが更新されたときにメンテナンスを減らすためにも指定できます。 ツールの最小値をサポートする必要があります `>` 、 `>=` 、 `<` 、 `<=` 、例えば。
 
-    < エンジン >< エンジン名 =「コルドバ」バージョン ="> = 1.7.0"/>< エンジン名 =「コルドバ」バージョン ="< 1.8.1」/></エンジン >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova" version="<1.8.1" />
+    </engines>
     
 
 '<engine>' タグもすべてのコルドバに存在する主要なプラットフォームに対する既定のサポートをしています。 'コルドバ' エンジン タグを指定する任意のプラットフォーム上のコルドバのすべてのバージョンがエンジンのバージョン属性を満たす必要がありますを意味します。 キャッチ オール 'コルドバ' エンジンをオーバーライドするために特定のプラットフォームとバージョンを一覧表示することも可能性があります。
 
-    < エンジン >< エンジン名 =「コルドバ」バージョン ="> = 1.7.0"/>< エンジン名 =「コルドバ アンドロイド」バージョン ="> 1.8.0 ="/>< エンジン名 ="コルドバ ios"バージョン ="> = 1.7.1"/></エンジン >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova-android" version=">=1.8.0" />
+        <engine name="cordova-ios" version=">=1.7.1" />
+    </engines>
     
 
 ここでは、エンジンの既定の一覧を '<engine>'タグをサポートしています： * 'コルドバ' *' コルドバ-plugman' * 'コルドバ人造人間' * 'コルドバ ios' *' コルドバ-blackberry10' * 'コルドバ wp7' *' コルドバ wp8' * ' コルドバ-windows8'
 
 カスタム Apache コルドバ ベース フレームワークはエンジン タグの下に表示する必要がありますを指定しましょう。
 
-    < エンジン >< エンジン名 ="my_custom_framework"バージョン =「1.0.0」プラットフォーム =「アンドロイド」scriptSrc ="path_to_my_custom_framework_version"/>< エンジン名 ="another_framework"バージョン ="> 0.2.0"プラットフォーム ="ios|android"scriptSrc ="path_to_another_framework_version"/>< エンジン名 ="even_more_framework"バージョン ="> = 2.2.0"プラットフォーム ="*"scriptSrc ="path_to_even_more_framework_version"/></エンジン >
+    <engines>
+        <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
+        <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+        <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+    </engines>
     
 
 カスタム Apache コルドバ ベース フレームワーク エンジン要素に次の属性が含まれている必要があります: 'プラットフォーム' 'scriptSrc' や 'バージョン' '名'。
@@ -87,7 +102,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 テキスト コンテンツを持つプラグインの名前が含まれているプラグインを人間が判読できる名前。たとえば。
 
-    < 名前 > Foo </名 >
+    <name>Foo</name>
     
 
 この要素はない （まだ） ローカライズを処理します。
@@ -96,7 +111,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 プラグインを人間が判読できる説明。要素のテキスト コンテンツには、プラグインの説明が含まれます。例:
 
-    < 説明 > Foo プラグイン説明 </説明 >
+    <description>Foo plugin description</description>
     
 
 この要素はない （まだ） ローカライズを処理します。
@@ -105,28 +120,31 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 プラグインの作成者の名前。要素のテキスト コンテンツには、プラグインの作者の名前が含まれます。例:
 
-    < 著者 > Foo プラグインの説明 </著者 >
+    <author>Foo plugin description</author>
     
 
 ## `<keywords>`要素
 
 プラグインのキーワード。要素のテキスト コンテンツには、プラグインを記述するコンマで区切られたキーワードが含まれます。例:
 
-    < キーワード > foo、バー </キーワード >
+    <keywords>foo,bar</keywords>
     
 
 ## `<license>`要素
 
 プラグインのライセンス。要素のテキスト コンテンツには、プラグインのライセンスが含まれます。例:
 
-    < ライセンス > Apache 2.0 ライセンス </ライセンス >
+    <license>Apache 2.0 License</license>
     
 
 ## `<asset>`要素
 
 1 つまたは複数の要素に Cordova アプリをコピーするディレクトリまたはファイル一覧 `www` ディレクトリ。例:
 
-    < ！--ルート ディレクトリにコピーされるの 1 つのファイル--> < 資産 src ="www/foo.js"target="foo.js"/>< ！--ディレクトリもルート ディレクトリにコピーする、--> < 資産 src ="www/foo"ターゲット ="foo"/>
+    <!-- a single file, to be copied in the root directory -->
+    <asset src="www/foo.js" target="foo.js" />
+    <!-- a directory, also to be copied in the root directory -->
+    <asset src="www/foo" target="foo" />
     
 
 すべて `<asset>` タグを両方必要とする `src` と `target` の属性。 Web だけのプラグインが含まれている主 `<asset>` の要素。 どんな `<asset>` 要素内にネストされた `<platform>` 要素プラットフォーム固有の web 資産を指定して、以下のとおりです。 属性は次のとおりです。
@@ -145,7 +163,9 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 ほとんどのプラグインには、1 つまたは複数の JavaScript ファイルが含まれます。 各 `<js-module>` タグ、JavaScript ファイルなどに対応し、なくなりますプラグインのユーザーを追加する、 `<script>` の各ファイルのタグ。 一方 `<asset>` タグは、単にプラグインのサブディレクトリからファイルをコピー `www` 、 `<js-module>` タグは、はるかに洗練されました。 彼らはこのようになります：
 
-    < js モジュール src="socket.js"名前 =「ソケット」>< による target="chrome.socket」/></js モジュール >
+    <js-module src="socket.js" name="Socket">
+        <clobbers target="chrome.socket" />
+    </js-module>
     
 
 上記の例ではプラグインをインストールするとき `socket.js` にコピー `www/plugins/my.plugin.id/socket.js` にエントリとして追加されます `www/cordova_plugins.js` 。 読み込み時にコード `cordova.js` XHR を使用して各ファイルの読み取りを注入、 `<script>` タグを HTML に。 それを壊したくまたは以下に示すように適切なマージ マッピングを追加します。
@@ -176,7 +196,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 `<dependency>`タグは、現在のプラグインが依存している他のプラグインを指定することができます。 中に将来のバージョンにアクセスするそれらのプラグイン ・ リポジトリーから、短期的にプラグインが直接参照 Url として `<dependency>` タグ。 次のようにフォーマットされています。
 
-    < 依存性 id="com.plugin.id"url ="https://github.com/myuser/someplugin"コミット ="428931ada3891801"サブディレクトリ =「いくつか/パス/ここで」/>
+    <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
 *   `id`： プラグインの ID を提供します。 グローバルにユニークで逆ドメイン スタイルで表現をする必要があります。 どちらもこれらの制限は、現在適用されている間彼らは将来的にあるかもしれないです。
@@ -195,7 +215,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 注意してください、 `subdir` 常に親のプラグインではないの git リポジトリの*ルート*からの相対パスを指定します。 これは、それを直接ローカルのパスで、プラグインをインストールする場合でも当てはまります。 Plugman は、git リポジトリのルートを検索し、そこから他のプラグインを検索します。
 
-## `< プラットフォーム >`
+## `<platform>`
 
 `<platform>`タグが関連付けられているネイティブ コードまたはその構成ファイルへの変更を必要とするプラットフォームを識別します。 この仕様を使用してツールはサポートされているプラットフォームを識別およびコルドバのプロジェクトにコードをインストールできます。
 
@@ -203,7 +223,12 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 サンプル プラットフォーム タグ:
 
-    < プラットフォーム名 =「アンドロイド」>< ！--android 特有な要素--> </プラットフォーム >< プラットフォーム名 ="ios">< ！--ios 固有の要素--> </プラットフォーム >
+    <platform name="android">
+        <!-- android-specific elements -->
+    </platform>
+    <platform name="ios">
+        <!-- ios-specific elements -->
+    </platform>
     
 
 必要な `name` 属性を識別します、プラットフォーム サポートされて、そのプラットフォームを要素の子に関連付けます。
@@ -216,11 +241,17 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 *   wp7
 *   wp8
 
-## `< ソース ファイル >`
+## `<source-file>`
 
 `<source-file>`要素をプロジェクトにインストールする必要があります実行可能なソース コードを識別します。例:
 
-    < ！--アンドロイド--> < ソース ファイル src="src/android/Foo.java"ターゲット ディレクトリ ="src/com/alunny/foo"/>< ！--ios--> < ソース ファイル src="src/ios/CDVFoo.m"/>< ソース ファイル src="src/ios/someLib.a"フレームワーク ="true"/>< ソース ファイル src="src/ios/someLib.a"コンパイラ フラグ ="- fno - objc-アーク"/>
+    <!-- android -->
+    <source-file src="src/android/Foo.java"
+                    target-dir="src/com/alunny/foo" />
+    <!-- ios -->
+    <source-file src="src/ios/CDVFoo.m" />
+    <source-file src="src/ios/someLib.a" framework="true" />
+    <source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
     
 
 次の属性をサポートしています。
@@ -235,7 +266,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 *   `compiler-flags`(iOS の場合のみ): 場合設定、特定のソース ファイルの指定したコンパイラ フラグを割り当てます。
 
-## `< ファイル >`
+## `<config-file>`
 
 ドキュメントに変更を行う場所、および何を変更する必要があります変更する XML ベースの構成ファイルを示します。
 
@@ -245,12 +276,24 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 
 XML の例：
 
-    < 設定ファイル target="AndroidManifest.xml"親「/マニフェスト/アプリケーション」= >< 活動 android:name="com.foo.Foo"android:label="@string/app_name">< 意図フィルター ></意図フィルター ></活動 ></config ファイル >
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:name="com.foo.Foo" android:label="@string/app_name">
+            <intent-filter>
+            </intent-filter>
+        </activity>
+    </config-file>
     
 
 たとえば、 `plist` ：
 
-    < config ファイル ターゲット ="*-Info.plist"親"CFBundleURLTypes"= >< アレイ >< dict >< キー > パッケージ名 </キー >< 文字列 > $PACKAGE_NAME </文字列 ></dict ></アレイ ></config ファイル >
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <array>
+            <dict>
+                <key>PackageName</key>
+                <string>$PACKAGE_NAME</string>
+            </dict>
+        </array>
+    </config-file>
     
 
 次の属性をサポートしています。
@@ -277,7 +320,9 @@ XML の例：
 
 例:
 
-    < 設定ファイル target="config.xml"親「ウィジェット/プラグイン」= >< プラグイン名 ="ChildBrowser"値 ="ChildBrowserCommand"/></config ファイル >
+    <config-file target="config.xml" parent="/widget/plugins">
+         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+    </config-file>
     
 
 キーと、適切に追加する値を指定します `AppInfo.plist` iOS コルドバ プロジェクト内のファイル。たとえば。
@@ -289,14 +334,17 @@ XML の例：
 
 ソース ファイルのようなが iOS などのプラットフォームのために特別にソース ファイル、ヘッダー、およびリソース間区別します。例:
 
-    < リソース ファイル src="CDVFoo.bundle"/>< リソース ファイル src="CDVFooViewController.xib"/>< ヘッダー ファイル src="CDVFoo.h"/>
+    <resource-file src="CDVFoo.bundle" />
+    <resource-file src="CDVFooViewController.xib" />
+    <header-file src="CDVFoo.h" />
     
 
 ## `<lib-file>`
 
 ブラックベリー 10 などのプラットフォームのために特別にしかし、ソース、リソース、およびヘッダー ファイルのようなユーザー生成ライブラリを使用します。例:
 
-    < lib ファイル src="src/BlackBerry10/native/device/libfoo.so"アーチ「デバイス」を =/>< lib ファイル src="src/BlackBerry10/native/simulator/libfoo.so"アーチ =「シミュレータ」/>
+    <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
+    <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
     
 
 サポートされている属性:
@@ -311,7 +359,8 @@ XML の例：
 
 例:
 
-    < フレームワーク src="libsqlite3.dylib"/>< フレームワーク src="social.framework"弱い ="true"/>
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
     
 
 `src`属性を plugman 与えられたプラットフォームの正しいファッションでのコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
@@ -322,33 +371,39 @@ XML の例：
 
 追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。例:
 
-    < 情報 > __Google 再生 Services__ （'人造人間'） を実行アンドロイド SDK マネージャーを使用して Android の余分な物セクションからインストールする必要があります。
+    <info>
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    'Local.properties' android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib に次の行を追加する必要があります </情報 >
+    You need to add the following line to your `local.properties`
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 # 変数
 
 特定の場合、プラグインは構成の変更、ターゲット アプリケーションに依存する必要があります。 たとえば、C2DM Android アプリ パッケージ id が上に登録する `com.alunny.message` など、アクセス許可が必要になります。
 
-    < 使用許可 android:name="com.alunny.message.permission.C2D_MESSAGE"/>
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
 このような場合、コンテンツの挿入、 `plugin.xml` ファイルが前もって知られていない、変数はドル記号の後に大文字、数字、またはアンダー スコアの一連によって示されることができます。 上記の例については、 `plugin.xml` ファイルには、このタグが含まれます。
 
-    < 使用許可 android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
 plugman が存在しない、指定された値または空の文字列に変数の参照を置き換えます。 参照変数の値を検出可能性があります (からこの場合は、 `AndroidManifest.xml` ファイル） またはツール; のユーザーによって指定された正確なプロセスは、特定のツールに依存。
 
 plugman は、プラグインの必要な変数を指定するユーザーを要求できます。たとえば、c2m-更新と Google Maps API キーは、コマンドライン引数として指定できます。
 
-    plugman--プラットフォーム アンドロイド - プロジェクト/パス/を/プラグイン-name|git-url|path - 可変 API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734 プロジェクト
+    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
 変数を必須に、 `<platform>` タグが含まれてする必要があります、 `<preference>` タグ。たとえば。
 
-    < 設定名 ="API_KEY"/>
+    <preference name="API_KEY" />
     
 
 plugman はこれらの必要な設定が渡されたことを確認します。それ以外の場合はそれに変数を渡すし、0 以外のコードで終了する方法をユーザーに警告する必要があります。

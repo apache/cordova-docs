@@ -47,38 +47,38 @@ Plugman をインストールするには、[ノード][3]コンピューター�
 
 以下の例はコルドバ Api をプロジェクトで使用するまだ動作バージョン 3.0 にアップグレードした後に必要に応じてプラグインを追加する方法を示します。各コマンド ターゲット プラットフォームを選択し、プラットフォームのプロジェクト ディレクトリを参照する必要があります。
 
-*   コルドバ プラグイン バッテリ ステータス plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+*   cordova-plugin-battery-status plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
 
-*   コルドバ プラグイン カメラ plugman - プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+*   cordova-plugin-camera plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
 
-*   コルドバ プラグイン コンソール plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+*   cordova-plugin-console plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
-*   コルドバ プラグイン連絡先 plugman - プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+*   cordova-plugin-contacts plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
 
-*   コルドバのプラグイン デバイス plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+*   cordova-plugin-device plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
-*   コルドバ-プラグイン デバイス-モーション （加速度） plugman - プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+*   cordova-plugin-device-motion (accelerometer) plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
 
-*   コルドバのプラグイン デバイス向き (コンパス) plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+*   cordova-plugin-device-orientation (compass) plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
 
-*   コルドバ プラグイン ダイアログ plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+*   cordova-plugin-dialogs plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
 
-*   コルドバ プラグインファイル plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+*   cordova-plugin-file plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
 
-*   コルドバ プラグイン ファイル転送 plugman - プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+*   cordova-plugin-file-transfer plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
 
-*   コルドバ プラグイン地理位置情報 plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+*   cordova-plugin-geolocation plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
 
-*   コルドバ プラグイン グローバリゼーション plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+*   cordova-plugin-globalization plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-*   コルドバのプラグイン inappbrowser plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+*   cordova-plugin-inappbrowser plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
 
-*   コルドバ プラグイン メディア plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+*   cordova-plugin-media plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
 
-*   コルドバ プラグイン メディア キャプチャ plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+*   cordova-plugin-media-capture plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
 
-*   コルドバ プラグイン ネットワーク情報 plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+*   cordova-plugin-network-information plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
 
-*   コルドバ プラグイン splashscreen plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+*   cordova-plugin-splashscreen plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
 
-*   コルドバ プラグイン振動 plugman--プロジェクトのプラットフォーム < ios|android|blackberry10|wp7|wp8 >-- <directory> -プラグイン https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+*   cordova-plugin-vibration plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git

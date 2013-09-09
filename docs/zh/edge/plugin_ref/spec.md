@@ -44,7 +44,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 子項目的 `<engines>` 元素指定版本的此外掛程式支援的基於 Apache 科爾多瓦的框架。示例：
 
-    < 引擎 >< 引擎名稱 ="科爾多瓦"版本 ="1.7.0"/ >< 引擎名稱 ="科爾多瓦"版本 ="1.8.1"/ >< 引擎名稱 ="worklight"版本 ="1.0.0"平臺 ="android"scriptSrc ="worklight_version"/ >< / 引擎 >
+    <engines>
+        <engine name="cordova" version="1.7.0" />
+        <engine name="cordova" version="1.8.1" />
+        <engine name="worklight" version="1.0.0" platform="android" scriptSrc="worklight_version"/>
+    </engines>
     
 
 類似于 `<plugin>` 元素的 `version` 屬性中，指定的版本字串應匹配符合正則運算式的字串主要-未成年人-修補程式：
@@ -54,19 +58,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 引擎的元素也可指定模糊比對為了避免重複，並減少維護基礎平臺更新時。 工具應該支援的最低 `>` ， `>=` ， `<` 和 `<=` ，例如：
 
-    < 引擎 >< 引擎名稱 ="科爾多瓦"版本 ="> = 1.7.0"/ >< 引擎名稱 ="科爾多瓦"版本 ="< 1.8.1"/ >< / 引擎 >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova" version="<1.8.1" />
+    </engines>
     
 
 '<engine>' 標籤也有預設支援的所有主要平臺存在的科爾多瓦。 指定的 '科爾多瓦' 引擎標記意味著科爾多瓦在任何平臺上的所有版本必須都滿足發動機版本屬性。 你可能還會列出特定的平臺和它們的版本以覆蓋全部捕獲 '科爾多瓦' 引擎：
 
-    < 引擎 >< 引擎名稱 ="科爾多瓦"版本 ="> = 1.7.0"/ >< 引擎名稱 ="科爾多瓦-android 系統"版本 ="> = 1.8.0"/ >< 引擎名稱 ="科爾多瓦-ios"版本 ="> = 1.7.1"/ >< / 引擎 >
+    <engines>
+        <engine name="cordova" version=">=1.7.0" />
+        <engine name="cordova-android" version=">=1.8.0" />
+        <engine name="cordova-ios" version=">=1.7.1" />
+    </engines>
     
 
 這裡是一個清單的預設引擎，'<engine>'標籤支援： * '科爾多瓦' *' 科爾多瓦-plugman' * '科爾多瓦-android' *' 科爾多瓦-ios' * '科爾多瓦-blackberry10' *' 科爾多瓦-wp7' * '科爾多瓦-wp8' *' 科爾多瓦-windows8'
 
 指定自訂的基於 Apache 科爾多瓦的框架應列出引擎標記下就像這樣：
 
-    < 引擎 >< 引擎名稱 ="my_custom_framework"版本 ="1.0.0"平臺 ="android"scriptSrc ="path_to_my_custom_framework_version"/ >< 引擎名稱 ="another_framework"版本 ="> 0.2.0"平臺 ="ios|android"scriptSrc ="path_to_another_framework_version"/ >< 引擎名稱 ="even_more_framework"版本 ="> = 2.2.0"平臺 ="*"scriptSrc ="path_to_even_more_framework_version"/ >< / 引擎 >
+    <engines>
+        <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
+        <engine name="another_framework" version=">0.2.0" platform="ios|android" scriptSrc="path_to_another_framework_version"/>
+        <engine name="even_more_framework" version=">=2.2.0" platform="*" scriptSrc="path_to_even_more_framework_version"/>
+    </engines>
     
 
 一個自訂的基於 Apache 科爾多瓦框架需要引擎的元素包含以下特性： '名稱'、 '版本'、 'scriptSrc' 和 '平臺'。
@@ -87,7 +102,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 該外掛程式，其文本內容包含外掛程式的名稱人類可讀的名稱。例如：
 
-    < 名稱 > 美孚 < / 名稱 >
+    <name>Foo</name>
     
 
 此元素還不能 () 處理當地語系化。
@@ -96,7 +111,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 對該外掛程式的人類可讀說明。元素的文本內容包含外掛程式的描述。示例：
 
-    < 描述 > 美孚外掛程式描述 < / 說明 >
+    <description>Foo plugin description</description>
     
 
 此元素還不能 () 處理當地語系化。
@@ -105,28 +120,31 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 外掛程式作者姓名。元素的文本內容包含外掛程式作者的姓名。示例：
 
-    < 作者 > 美孚外掛程式描述 < / 作者 >
+    <author>Foo plugin description</author>
     
 
 ## `<keywords>`元素
 
 外掛程式關鍵字。元素的文本內容包含以逗號分隔的關鍵字來描述該外掛程式。示例：
 
-    < 關鍵字 > 美孚、 酒吧 < / 關鍵字 >
+    <keywords>foo,bar</keywords>
     
 
 ## `<license>`元素
 
 外掛程式許可。元素的文本內容包含外掛程式許可證。示例：
 
-    < 許可證 > Apache 2.0 許可證 < / 許可證 >
+    <license>Apache 2.0 License</license>
     
 
 ## `<asset>`元素
 
 一個或多個元素列出檔或目錄複寫到科爾多瓦 app `www` 目錄。例子：
 
-    <! — — 單一檔中，要複製根目錄中--> < 資產 src ="www/foo.js"target="foo.js"/ ><! — — 也要被覆制的根目錄中目錄--> < 資產 src ="www/foo"目標 ="foo"/ >
+    <!-- a single file, to be copied in the root directory -->
+    <asset src="www/foo.js" target="foo.js" />
+    <!-- a directory, also to be copied in the root directory -->
+    <asset src="www/foo" target="foo" />
     
 
 所有 `<asset>` 標籤需要兩個 `src` 和 `target` 的屬性。 只有 web 外掛程式包含主要是 `<asset>` 的元素。 任何 `<asset>` 元素的嵌套在 `<platform>` 元素指定特定于平臺 web 資產，如下所述。 屬性包括：
@@ -145,7 +163,9 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 大多數的外掛程式包括一個或多個 JavaScript 檔。 每個 `<js-module>` 標記對應于一個 JavaScript 檔，並防止外掛程式的使用者不必添加 `<script>` 為每個檔標記。 雖然 `<asset>` 標籤只是將一個檔案複製從外掛程式子目錄到 `www` ， `<js-module>` 標記是複雜得多。 他們看起來像這樣：
 
-    < js 模組 src="socket.js"名稱 ="通訊端">< 黑糊 target="chrome.socket"/ >< / js 模組 >
+    <js-module src="socket.js" name="Socket">
+        <clobbers target="chrome.socket" />
+    </js-module>
     
 
 與上面的例子，安裝一個外掛程式時 `socket.js` 複製到 `www/plugins/my.plugin.id/socket.js` ，並作為對條目添加 `www/cordova_plugins.js` 。 在載入時，代碼在 `cordova.js` 使用 XHR 來讀取每個檔並注入 `<script>` 到 HTML 標籤。 它將添加一個映射，以痛打或合併並酌情按如下所述。
@@ -176,7 +196,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 `<dependency>`標記允許您指定當前外掛程式所依賴的其他外掛程式。 雖然未來的版本將從外掛程式庫訪問它們，在短期內的外掛程式直接引用的 Url 作為 `<dependency>` 的標記。 他們的格式如下：
 
-    < 依賴項 id="com.plugin.id"url ="HTTPs://github.com/myuser/someplugin"commit ="428931ada3891801"子目錄 ="一些/路徑/這裡"/ >
+    <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
 *   `id`： 提供外掛程式的 ID。 它應該是全域唯一的並表示在反向域的樣式。 這些限制，既不當前執行的而他們可能在未來。
@@ -203,7 +223,12 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 平臺標記示例：
 
-    < 平臺名稱 ="android"><! — — android 作業系統特定的元素--> < / 平臺 >< 平臺名稱 ="ios"><! — — ios 特定的元素--> < / 平臺 >
+    <platform name="android">
+        <!-- android-specific elements -->
+    </platform>
+    <platform name="ios">
+        <!-- ios-specific elements -->
+    </platform>
     
 
 所需 `name` 屬性標識一個平臺支援，將與該平臺關聯元素的子級。
@@ -220,7 +245,13 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 `<source-file>`元素標識應安裝到一個專案的可執行檔的原始程式碼。例子：
 
-    <!-android--> < 原始檔案 src="src/android/Foo.java"目標-dir ="src/com/alunny/foo"/ ><! — — ios--> < 原始檔案 src="src/ios/CDVFoo.m"/ >< 原始檔案 src="src/ios/someLib.a"框架 ="true"/ >< 原始檔案 src="src/ios/someLib.a"編譯器標誌 ="-使用者-objc-弧"/ >
+    <!-- android -->
+    <source-file src="src/android/Foo.java"
+                    target-dir="src/com/alunny/foo" />
+    <!-- ios -->
+    <source-file src="src/ios/CDVFoo.m" />
+    <source-file src="src/ios/someLib.a" framework="true" />
+    <source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
     
 
 它支援以下屬性：
@@ -245,12 +276,24 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 XML 的的示例：
 
-    < 設定檔 target="AndroidManifest.xml"父 ="應用程式/清單 /">< 活動 android:name="com.foo.Foo"android:label="@string/app_name">< 意圖-濾清器 >< / 意圖-濾清器 >< / 活動 >< / 設定檔 >
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:name="com.foo.Foo" android:label="@string/app_name">
+            <intent-filter>
+            </intent-filter>
+        </activity>
+    </config-file>
     
 
 例如 `plist` ：
 
-    < config 檔目標 ="*-Info.plist"父 ="CFBundleURLTypes">< 陣列 >< 字典 >< 鍵 > 套裝軟體名稱 < / 鍵 >< 字串 > $PACKAGE_NAME < / 字串 >< / 辭典 >< / 陣列 >< / 設定檔 >
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <array>
+            <dict>
+                <key>PackageName</key>
+                <string>$PACKAGE_NAME</string>
+            </dict>
+        </array>
+    </config-file>
     
 
 它支援以下屬性：
@@ -277,26 +320,31 @@ XML 的的示例：
 
 示例：
 
-    < 設定檔 target="config.xml"父 ="/ 構件/外掛程式">< 外掛程式名稱 = 值"ChildBrowser"="ChildBrowserCommand"/ >< / 設定檔 >
+    <config-file target="config.xml" parent="/widget/plugins">
+         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+    </config-file>
     
 
 指定鍵和值將追加到正確的 `AppInfo.plist` iOS 科爾多瓦專案中的檔。例如：
 
-    < 外掛程式 plist 鍵 = 字串"Foo"="CDVFoo"/ >
+    <plugins-plist key="Foo" string="CDVFoo" />
     
 
 ## `<resource-file>`和`<header-file>`
 
 原始程式碼檔一樣，但專門為 iOS 等平臺，區分原始程式碼檔、 標題和資源。例子：
 
-    < 資源檔 src="CDVFoo.bundle"/ >< 資源檔 src="CDVFooViewController.xib"/ >< 標頭檔 src="CDVFoo.h"/ >
+    <resource-file src="CDVFoo.bundle" />
+    <resource-file src="CDVFooViewController.xib" />
+    <header-file src="CDVFoo.h" />
     
 
 ## `<lib-file>`
 
 像源、 資源和標頭檔，但專門為黑莓 10 這樣的平臺，使用使用者生成的庫。例子：
 
-    < lib 檔 src="src/BlackBerry10/native/device/libfoo.so"拱 ="設備"/ >< lib 檔 src="src/BlackBerry10/native/simulator/libfoo.so"拱 ="模擬器"/ >
+    <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
+    <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
     
 
 支援的屬性：
@@ -311,7 +359,8 @@ XML 的的示例：
 
 例子：
 
-    < 框架 src="libsqlite3.dylib"/ >< 框架 src="social.framework"弱 ="true"/ >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
     
 
 `src`屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦專案中，給定平臺的正確方式。
@@ -322,33 +371,39 @@ XML 的的示例：
 
 向使用者提供的其他資訊。當您需要額外的步驟，不能輕鬆地自動或超出了 plugman 的範圍時，這非常有用。例子：
 
-    < 資訊 > 你需要從使用 Android SDK 管理器 （運行 android） 的 Android 額外部分安裝 __Google 玩 Services__。
+    <info>
+    You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    您需要將以下行添加到您的 'local.properties' android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 資訊 >
+    You need to add the following line to your `local.properties`
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 # 變數
 
 在某些情況下，可能需要一個外掛程式進行配置更改依賴于目標應用程式。 例如，若要為在 android 系統，其包 id 是 app C2DM 註冊 `com.alunny.message` 如需要的許可權：
 
-    < 使用許可權 android:name="com.alunny.message.permission.C2D_MESSAGE"/ >
+    <uses-permission
+    android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
 在這種情況下，從插入內容的位置 `plugin.xml` 檔事先並不知道，變數可以表示一個貨幣符號後面跟隨一系列的大寫英文字母、 數位或底線。 對於上面的示例中， `plugin.xml` 檔將包括此標記：
 
-    < 使用許可權 android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/ >
+    <uses-permission
+    android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
 如果未找到，則 plugman 將指定的值或空字串替換變數引用。 可能檢測到的變數引用的值 （在這種情況下，從 `AndroidManifest.xml` 檔） 或指定的工具 ； 使用者確切的過程是依賴于特定的工具。
 
 plugman 可以要求使用者指定一個外掛程式所需的變數。例如，用於 C2M 和谷歌地圖 API 金鑰可以指定為一個命令列參數：
 
-    plugman — — android 平臺 — — 專案/路徑/到/專案 — — 外掛程式 name|git-url|path-變數 API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
+    plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
 以使變數強制性的 `<platform>` 標記需要包含 `<preference>` 標記。例如：
 
-    < 首選項名稱 ="API_KEY"/ >
+    <preference name="API_KEY" />
     
 
 plugman 檢查這些所需的首選項傳入的。如果不是，它應警告使用者如何傳遞中的變數和以非零代碼退出。

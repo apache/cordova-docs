@@ -47,38 +47,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 下面的示例顯示如何添加外掛程式，如需要，這樣您在您的專案中使用任何科爾多瓦 Api 仍然工作後你升級到 3.0 版本。對於每個命令，你需要選擇目標平臺，並引用該平臺的專案目錄。
 
-*   科爾多瓦-外掛程式-電池-狀態 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+*   cordova-plugin-battery-status plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
 
-*   科爾多瓦-外掛程式-相機 plugman-< ios|android|blackberry10|wp7|wp8 > — — 平臺專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+*   cordova-plugin-camera plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
 
-*   科爾多瓦-外掛程式-主控台 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+*   cordova-plugin-console plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
-*   科爾多瓦-外掛程式-連絡人 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+*   cordova-plugin-contacts plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
 
-*   科爾多瓦-外掛程式-設備 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+*   cordova-plugin-device plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
-*   科爾多瓦-外掛程式-設備-運動 （加速度計） plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+*   cordova-plugin-device-motion (accelerometer) plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
 
-*   科爾多瓦-外掛程式-設備-方向 (指南針) plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+*   cordova-plugin-device-orientation (compass) plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
 
-*   科爾多瓦-外掛程式-對話方塊 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+*   cordova-plugin-dialogs plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
 
-*   科爾多瓦-外掛程式-檔 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+*   cordova-plugin-file plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
 
-*   科爾多瓦的外掛程式檔案傳輸 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+*   cordova-plugin-file-transfer plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
 
-*   科爾多瓦-外掛程式-地理定位 plugman-< ios|android|blackberry10|wp7|wp8 > — — 平臺專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+*   cordova-plugin-geolocation plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
 
-*   科爾多瓦-外掛程式-全球化 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+*   cordova-plugin-globalization plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
 
-*   科爾多瓦-外掛程式-inappbrowser plugman-< ios|android|blackberry10|wp7|wp8 > — — 平臺專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+*   cordova-plugin-inappbrowser plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
 
-*   科爾多瓦-外掛程式-媒體 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+*   cordova-plugin-media plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
 
-*   科爾多瓦-外掛程式-媒體-捕獲 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+*   cordova-plugin-media-capture plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
 
-*   科爾多瓦-外掛程式-網路-資訊 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+*   cordova-plugin-network-information plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
 
-*   科爾多瓦-外掛程式-閃屏 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+*   cordova-plugin-splashscreen plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
 
-*   科爾多瓦-外掛程式-振動 plugman — — 平臺 < ios|android|blackberry10|wp7|wp8 > — — 專案 <directory> — — 外掛程式 HTTPs://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+*   cordova-plugin-vibration plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git

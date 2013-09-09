@@ -26,39 +26,39 @@ Cet objet représente un répertoire sur un système de fichiers, tel que défin
 
 *   **isDirectory**: toujours `true` . *(booléen)*
 
-*   **nom**: le nom de la `DirectoryEntry` , à l'exclusion de la voie menant à celle-ci. *(DOMString)*
+*   **name**: le nom du `DirectoryEntry` , à l'exclusion du chemin menant à celle-ci. *(DOMString)*
 
-*   **fullPath**: le chemin d'accès complet absolu de la racine à la `DirectoryEntry` . *(DOMString)*
+*   **fullPath**: le chemin d'accès complet absolu de la racine au `DirectoryEntry` . *(DOMString)*
 
 **Remarque :** L'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
 
-*   **système de fichiers**: le système de fichiers sur lequel le `DirectoryEntry` réside. *(Système de fichiers)*
+*   **filesystem**: le système de fichiers sur lequel le `DirectoryEntry` réside. *(Système de fichiers)*
 
 ## Méthodes
 
-Les méthodes suivantes peuvent être appelées sur un `DirectoryEntry` objet :
+Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 
-*   **getMetadata**: Rechercher des métadonnées relatives à un répertoire.
+*   **getMetadata**: recherche des métadonnées relatives à un répertoire.
 
-*   **setMetadata**: définir des métadonnées sur un répertoire.
+*   **setMetadata**: définit des métadonnées sur un répertoire.
 
-*   **moveTo**: déplacer un répertoire vers un autre emplacement sur le système de fichiers.
+*   **moveTo**: déplace un répertoire vers un autre emplacement sur le système de fichiers.
 
-*   **copyTo**: copier un répertoire vers un autre emplacement sur le système de fichiers.
+*   **copyTo**: copie un répertoire vers un autre emplacement sur le système de fichiers.
 
-*   **toURL**: renvoyer une URL pour aider à localiser un répertoire.
+*   **toURL**: renvoie une URL pour aider à localiser un répertoire.
 
-*   **supprimer**: supprimer un répertoire. Le répertoire doit être vide.
+*   **remove**: supprime un répertoire. Le répertoire doit être vide.
 
-*   **getParent**: chercher le répertoire parent.
+*   **getParent**: cherche le répertoire parent.
 
-*   **createReader**: créer un nouveau `DirectoryReader` qui peut lire les entrées d'un répertoire.
+*   **createReader**: crée un nouveau `DirectoryReader` qui peut lire les entrées d'un répertoire.
 
-*   **getDirectory**: créer ou Rechercher un répertoire.
+*   **getDirectory**: crée ou recherche un répertoire.
 
-*   **getFile**: créer ou Rechercher un fichier.
+*   **getFile**: crée ou recherche un fichier.
 
-*   **removeRecursively**: supprimer un répertoire et tout son contenu.
+*   **removeRecursively**: supprime un répertoire et tout son contenu.
 
 ## Plates-formes prises en charge
 
@@ -74,9 +74,9 @@ Rechercher des métadonnées relatives à un répertoire.
 
 **Paramètres :**
 
-*   **successCallback**: une fonction de rappel d'exécuter avec un `Metadata` objet. *(Fonction)*
+*   **successCallback**: une fonction de callback pour exécuter avec un objet `Metadata`. *(Fonction)*
 
-*   **errorCallback**: une fonction de rappel à exécuter si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un `FileError` objet. *(Fonction)*
+*   **errorCallback**: une fonction de callback à exécuter si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un objet `FileError`. *(Fonction)*
 
 **Petit exemple**
 
@@ -93,9 +93,9 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
 
 **Paramètres :**
 
-*   **successCallback**: un rappel qui s'exécute lorsque les métadonnées sont correctement définie. *(Fonction)*
+*   **successCallback**: un callback qui s'exécute lorsque les métadonnées sont correctement définies. *(Fonction)*
 
-*   **errorCallback**: un rappel qui s'exécute lorsque les métadonnées ne parvient pas à être définie. *(Fonction)*
+*   **errorCallback**: un callback qui s'exécute lorsque les métadonnées ne parviennent pas à être définie. *(Fonction)*
 
 *   **metadataObject**: un objet qui contient les clés et les valeurs de métadonnées. *(Objet)*
 
@@ -113,9 +113,9 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
     entry.setMetadata(success, fail, { "com.apple.MobileBackup": 1});
     
 
-**iOS Quirk**
+**Spécificités iOS**
 
-*   Seulement le `com.apple.MobileBackup` attribut étendu est pris en charge. Affectez la valeur `1` pour empêcher que le répertoire en cours de sauvegarde d'iCloud. Affectez la valeur `` pour ré-activer le répertoire à sauvegarder vers iCloud.
+*   Seulement l'atttribut étendu `com.apple.MobileBackup` est pris en charge. Affecte la valeur `1` pour empêcher que le répertoire en cours soit sauvegardé sur iCloud. Affecte la valeur `` pour ré-activer la sauvegarde du répertoire sur iCloud.
 
 **Petit exemple**
 
@@ -153,11 +153,11 @@ Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonc
 
 ## moveTo
 
-Déplacer un répertoire vers un autre emplacement sur le système de fichiers. Une erreur se produit si l'application tente de :
+Déplace un répertoire vers un autre emplacement sur le système de fichiers. Une erreur se produit si l'application tente de :
 
 *   déplacer un répertoire à l'intérieur de lui-même ou à n'importe quel enfant à n'importe quelle profondeur.
 
-*   déplacer un répertoire dans sa société mère, si un nom différent de son répertoire en cours n'est pas fourni.
+*   déplacer un répertoire dans son parent, si un nom différent de son répertoire en cours n'est pas fourni.
 
 *   déplacer un répertoire vers un chemin occupé par un fichier.
 

@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileError
 
-A `FileError` objet est défini lorsqu'une erreur se produit dans l'une des méthodes API de fichier.
+Un objet `FileError` est défini lorsqu'une erreur se produit dans l'une des méthodes de l'API File.
 
 ## Propriétés
 
@@ -39,4 +39,4 @@ A `FileError` objet est défini lorsqu'une erreur se produit dans l'une des mét
 
 ## Description
 
-Le `FileError` objet est le seul paramètre fourni à l'un des rappels d'erreur de l'API de fichier. Pour déterminer le type d'erreur, comparer sa `code` propriété à aucune des listes ci-dessus.
+L'objet `FileError` est le seul paramètre fourni à l'un des callbacks d'erreur de l'API File. Pour déterminer le type d'erreur, comparer sa propriété `code` à l'une des propriétés listées ci-dessus.
