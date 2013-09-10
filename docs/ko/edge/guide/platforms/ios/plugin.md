@@ -96,9 +96,9 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
 
 그 후에 다음 파일 추가 ( `Echo.h` 및 `Echo.m` ) 우리의 코르도바 iOS 응용 프로그램 폴더 안의 플러그인 폴더에:
 
-    / --- Echo.h 코르도바 플러그인 헤더 * * * / #import < Cordova/CDV.h > @interface 에코: CDVPlugin-(void) 에코:(CDVInvokedUrlCommand*) 명령;
+    / --- Echo.h 코르도바 플러그인 헤더 --- / #import < Cordova/CDV.h > @interface 에코: CDVPlugin-(void) 에코:(CDVInvokedUrlCommand*) 명령;
     
-    @end / --- Echo.m 코르도바 플러그인 구현 * * * / #import "Echo.h" #import < Cordova/CDV.h > @implementation 에코-(void) 에코:(CDVInvokedUrlCommand*) 명령 {CDVPluginResult * pluginResult = 없음;
+    @end / --- Echo.m 코르도바 플러그인 구현 --- / #import "Echo.h" #import < Cordova/CDV.h > @implementation 에코-(void) 에코:(CDVInvokedUrlCommand*) 명령 {CDVPluginResult * pluginResult = 없음;
         NSString * 에코 = [command.arguments objectAtIndex:0];
     
         경우 (에코! = 대 0 & & [에코 길이] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
