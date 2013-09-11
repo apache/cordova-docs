@@ -138,4 +138,4 @@ platform-specific configuration settings described below:
         </Capabilities>
 
 Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+configuration.  See _Platform Support_ in the Overview section.
