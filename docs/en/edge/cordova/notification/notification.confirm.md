@@ -29,7 +29,7 @@ Displays a customizable confirmation dialog box.
 
 - __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)
 
-- __buttonLabels__: Comma-separated string specifying button labels. _(String)_ (Optional, defaults to `OK,Cancel`)
+- __buttonLabels__: Array of strings specifying button labels. _(Array)_  (Optional, defaults to [`OK,Cancel`])
 
 ## Description
 
@@ -68,7 +68,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
 
@@ -104,7 +104,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
 

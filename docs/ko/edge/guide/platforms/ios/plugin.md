@@ -24,16 +24,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인의 자바 부분 항상 사용 하는 `cordova.exec` 메서드가 다음과 같이:
 
+<<<<<<< HEAD
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+=======
+    exec (< successFunction >, < failFunction >, < 서비스 >, < 작업 > [< args >]);
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 이 요청을 마샬링하는 `UIWebView` iOS 기본 측면, 더 많거나 적은 전화 아래로 끓는 `action` 메서드는 `service` 인수에 전달 된 클래스는 `args` 배열.
 
 지정한 플러그인으로는 `<feature>` 코르도바 iOS 응용 프로그램의 프로젝트에 태그 `config.xml` 파일.
 
+<<<<<<< HEAD
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+=======
+    < 기능 이름 "LocalStorage" = >< param 이름을 = "ios 패키지" 값 = "CDVLocalStorage" / >< / 기능 >
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 기능 `name` 특성은 자바 스크립트의 사용 일치 해야 `exec` 호출의 `service` 매개 변수, 및 `value` 특성 플러그인의 목표-C 클래스의 이름과 일치 해야 합니다. `<param name>`난 항상 이어야 한다 `"ios-package"` . 이 설치를 수행 하지 않으면, 플러그인 컴파일 수 있습니다 하지만 코르도바 연결할 수 수 없습니다.
@@ -42,10 +50,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 각각의 인생에 대 한 플러그인 개체의 인스턴스 생성 `UIWebView` . 플러그인은 인스턴스화되지 않습니다 JavaScript에서 호출 하 여 처음 참조 될 때까지 않는 한 `<param>` 와 `onload` `name` 특성 설정 `"true"` 에 `config.xml` . 예를 들면:
 
+<<<<<<< HEAD
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
         <param name="onload" value="true" />
     </feature>
+=======
+    < 기능 이름 "에코" = >< param 이름을 "ios 패키지" 값 = "에코" = / >< param 이름을 = "onload" 값 = "true" / >< / 기능 >
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 *아니* 플러그인에 대 한 이니셜라이저를 지정입니다. 대신, 플러그인을 사용 해야 합니다에 `pluginInitialize` 그들의 시작 논리에 대 한 방법.
@@ -58,6 +70,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 무슨 자바 스크립트를 통해 플러그인에 파견 되 면 `exec` 함수는 해당 플러그인 클래스에 전달 되 면 `action` 메서드. 플러그인 방법이이 서명을 했다:
 
+<<<<<<< HEAD
     - (void)myMethod:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
@@ -69,6 +82,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
         }
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+=======
+    -(void) myMethod:(CDVInvokedUrlCommand*) 명령 {CDVPluginResult * pluginResult = 없음;
+        NSString * myarg = [command.arguments objectAtIndex:0];
+    
+        경우 (myarg! = nil) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } 다른 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg null 했다"];
+        } [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     }
     
 
@@ -86,7 +107,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 형식 다시 자바 스크립트 콜백을 처럼 클래스 메서드를 사용 하 여:
 
+<<<<<<< HEAD
     + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
+=======
+    + (CDVPluginResult *) resultWithStatus: (CDVCommandStatus) statusOrdinal messageAs...
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 만들 수 있는 `String` , `Int` , `Double` , `Bool` , `Array` , `Dictionary` , `ArrayBuffer` , 및 `Multipart` 형식. 또는 인수 (그냥 송신 상태)를 첨부 하지 않습니다. 또는 오류를 반환 합니다. 선택할 수 있습니다 심지어 어떤 플러그인 결과 전혀 보내지를 어떤 경우에 콜백이 발생 하지 않습니다.
@@ -101,13 +126,18 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
 
 우리는 프로젝트의 다음에 추가할 `config.xml` 파일:
 
+<<<<<<< HEAD
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
+=======
+    < 기능 이름 "에코" = >< param 이름을 "ios 패키지" 값 = "에코" = / >< / 기능 >
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 그 후에 다음 파일 추가 ( `Echo.h` 및 `Echo.m` ) 우리의 코르도바 iOS 응용 프로그램 폴더 안의 플러그인 폴더에:
 
+<<<<<<< HEAD
     /********* Echo.h Cordova Plugin Header *******/
     
     #import <Cordova/CDV.h>
@@ -140,6 +170,17 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
     }
     
     @end
+=======
+    / --- Echo.h 코르도바 플러그인 헤더 --- / #import < Cordova/CDV.h > @interface 에코: CDVPlugin-(void) 에코:(CDVInvokedUrlCommand*) 명령;
+    
+    @end / --- Echo.m 코르도바 플러그인 구현 --- / #import "Echo.h" #import < Cordova/CDV.h > @implementation 에코-(void) 에코:(CDVInvokedUrlCommand*) 명령 {CDVPluginResult * pluginResult = 없음;
+        NSString * 에코 = [command.arguments objectAtIndex:0];
+    
+        경우 (에코! = 대 0 & & [에코 길이] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } 다른 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        } [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    } @end
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 코드를 살펴 봅시다. 상단에 우리는 모든 필요한 코르 도우 바 수입. 우리의 클래스에서 확장 `CDVPlugin` (매우 중요).
@@ -154,6 +195,7 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
 
 플러그인 메서드는 UI와 동일한 스레드에서 실행 됩니다. 귀하의 플러그인 처리의 큰 거래를 필요로 하거나 차단 호출, 백그라운드 스레드를 사용 해야 합니다. 예를 들어:
 
+<<<<<<< HEAD
     - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
     {
         // Check command.arguments here.
@@ -162,6 +204,13 @@ CDVPluginResult를 사용 하 여 돌아갈 수 있습니다 다양 한 결과 �
             // Some blocking logic...
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
             // The sendPluginResult method is thread-safe.
+=======
+    -(void) myPluginMethod:(CDVInvokedUrlCommand*) 명령 {/ / 여기 command.arguments를 확인 합니다.
+        [self.commandDelegate runInBackground: ^ {NSString * 페이로드 = 없음;
+            / / 일부 논리를 차단...
+            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            / / SendPluginResult 메서드는 스레드로부터 안전 합니다.
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }];
     }

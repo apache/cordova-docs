@@ -24,7 +24,11 @@ Cada clase plugin debe estar registrado como un `<feature>` de la etiqueta en el
 
 La porción de JavaScript de un plugin utiliza siempre el `cordova.exec` método como sigue:
 
+<<<<<<< HEAD
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+=======
+    exec (<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 Esto mariscales una solicitud de la `UIWebView` al lado de iOS nativas, más o menos hirviendo a llamar al método de `acción` en la clase de `servicio`, con los argumentos pasados en la matriz de `args`.
@@ -42,10 +46,14 @@ La función `name` atributo debe coincidir con lo que usas en JavaScript `exec` 
 
 Para la vida de cada uno se crea una instancia de un objeto plugin `UIWebView` . Plugins no se instancian hasta que primero se hace referencia mediante una llamada desde JavaScript, a menos que `<param>` con un `onload` `name` atributo se establece en `"true"` en `config.xml` . Por ejemplo:
 
+<<<<<<< HEAD
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
         <param name="onload" value="true" />
     </feature>
+=======
+    < nombre de la función = "Echo" >< param nombre = valor "ios-paquete" = "Echo" / >< param nombre = valor "onload" = "true" / >< / característica >
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 No hay *ningún* señalado a inicializador de plugins. Por el contrario, debe usar plugins el `pluginInitialize` método para su lógica puesta en marcha.
@@ -58,6 +66,7 @@ Tenemos fuego JavaScript apagado una solicitud plugin nativo al lado. Tenemos el
 
 Lo obtiene despachó al plugin vía la función de JavaScript `exec` se pasa al método de `action` de la clase Plugin correspondiente. Un método de plugin tiene esta firma:
 
+<<<<<<< HEAD
     - (void)myMethod:(CDVInvokedUrlCommand*)command
     {
         CDVPluginResult* pluginResult = nil;
@@ -69,6 +78,14 @@ Lo obtiene despachó al plugin vía la función de JavaScript `exec` se pasa al 
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
         }
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+=======
+    -comando:(CDVInvokedUrlCommand*) MiMetodo (void) {CDVPluginResult * pluginResult = nil;
+        NSString * myarg = [command.arguments objectAtIndex:0];
+    
+        Si (myarg! = nil) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } más {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg era nula"];
+        } [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     }
     
 
@@ -86,7 +103,11 @@ Lo obtiene despachó al plugin vía la función de JavaScript `exec` se pasa al 
 
 Usando CDVPluginResult puede volver una variedad de tipos de resultados a su segunda prueba de JavaScript, utilizando métodos de la clase que se parecen:
 
+<<<<<<< HEAD
     + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
+=======
+    + (CDVPluginResult *) resultWithStatus: (CDVCommandStatus) statusOrdinal messageAs...
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 Puede crear `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer` y `Multipart` tipos. O, no conecte ningún argumento (sólo enviar un estado). O, devolverá un Error. Incluso puede elegir no enviar ningún resultado del plugin, en cuyo caso la devolución de llamada no se dispara.
@@ -101,13 +122,18 @@ Puede crear `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuff
 
 Nos gustaría añadir lo siguiente al proyecto de `config.xml` archivo:
 
+<<<<<<< HEAD
     <feature name="Echo">
         <param name="ios-package" value="Echo" />
     </feature>
+=======
+    < nombre de la función = "Eco" >< nombre param = "ios-paquete" value = "Eco" / >< / característica >
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 Entonces nos gustaría añadir los siguientes archivos ( `Echo.h` y `Echo.m` ) a la carpeta Plugins dentro de la carpeta de la aplicación Cordova-iOS:
 
+<<<<<<< HEAD
     /********* Echo.h Cordova Plugin Header *******/
     
     #import <Cordova/CDV.h>
@@ -140,6 +166,17 @@ Entonces nos gustaría añadir los siguientes archivos ( `Echo.h` y `Echo.m` ) a
     }
     
     @end
+=======
+    / *** Echo.h Cordova Plugin encabezado *** / #import < Cordova/CDV.h > @interface Echo: CDVPlugin - comando de:(CDVInvokedUrlCommand*) echo (void);
+    
+    @end / *** Echo.m Cordova Plugin aplicación *** / #import "Echo.h" #import < Cordova/CDV.h > @implementation Eco - comando de:(CDVInvokedUrlCommand*) echo (void) {CDVPluginResult * pluginResult = nil;
+        NSString * Eco = [command.arguments objectAtIndex:0];
+    
+        Si (Eco! = nil & & [Eco longitud] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } más {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        } [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    } @end
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 Echemos un vistazo al código. En la parte superior tenemos todas las necesarias importaciones de Córdoba. Nuestra clase se extiende desde `CDVPlugin` (muy importante).
@@ -154,6 +191,7 @@ Finalmente, enviamos el resultado a `self.commandDelegate` , que ejecuta el `exe
 
 Plugin métodos se ejecutan en el mismo subproceso como la interfaz de usuario. Si tu plugin requiere una gran cantidad de procesamiento o requiere una llamada de bloquea, debe utilizar un subproceso de fondo. Por ejemplo:
 
+<<<<<<< HEAD
     - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
     {
         // Check command.arguments here.
@@ -162,6 +200,13 @@ Plugin métodos se ejecutan en el mismo subproceso como la interfaz de usuario. 
             // Some blocking logic...
             CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
             // The sendPluginResult method is thread-safe.
+=======
+    -comando:(CDVInvokedUrlCommand*) myPluginMethod (void) {/ / Check command.arguments aquí.
+        [self.commandDelegate runInBackground: ^ {NSString * capacidad de carga = nil;
+            / / Algunos bloqueando lógica...
+            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            / / El método sendPluginResult es segura para subprocesos.
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }];
     }

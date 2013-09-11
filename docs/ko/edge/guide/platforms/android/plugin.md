@@ -24,7 +24,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인의 자바 부분 항상 사용 하는 `cordova.exec` 메서드가 다음과 같이:
 
+<<<<<<< HEAD
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+=======
+    exec (< successFunction >, < failFunction >, < 서비스 >, < 작업 > [< args >]);
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 이 요청 전화 내려 더 많거나 적은 끓는 안 드 로이드 네이티브 쪽을 WebView에서 마샬링하는 `action` 메서드는 `service` 클래스에 전달 된 인수는 `args` 배열.

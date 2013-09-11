@@ -20,6 +20,7 @@ Molti aspetti del comportamento di un'applicazione possono essere controllati co
 
  [1]: http://www.w3.org/TR/widgets/
 
+<<<<<<< HEAD
 Per i progetti creati con Cordova CLI (descritto nella interfaccia Command-Line), questo file può essere trovato nella directory `www` di primo livello. Utilizzando la CLI per compilare i progetti vengono rigenerate le versioni di questo file nelle sottodirectory all'interno di `platforms` . Per i progetti non-CLI, ciascun file di specifica della piattaforma funziona come sorgente.
 
 Mentre la posizione del file `config.xml` può cambiare a seconda della piattaforma, i contenuti generalmente no. Alcune caratteristiche specifiche per piattaforma sono inoltre specificati nello stesso file di configurazione. I dettagli sono elencati di seguito:
@@ -27,6 +28,15 @@ Mentre la posizione del file `config.xml` può cambiare a seconda della piattafo
 *   Configurazione iOS
 *   Configurazione Android
 *   Configurazione BlackBerry
+=======
+Per i progetti creati con Cordova CLI (descritto nella interfaccia Command-Line), questo file può essere trovato nel primo livello `www` directory. Utilizzando la CLI per compilare i progetti vengono rigenerate le versioni di questo file nelle sottodirectory all'interno di `platforms` . Per i progetti non-CLI, ciascun file di specifica della piattaforma serve come fonte.
+
+Mentre la posizione del `config.xml` file può cambiare a seconda della piattaforma, i contenuti, generalmente non. Alcune caratteristiche specifiche della piattaforma sono inoltre specificati nello stesso file di configurazione. Dettagli sono elencati di seguito:
+
+*   iOS Configuration
+*   Android configurazione
+*   Configurazione di blackBerry
+>>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
 
 ## config. XML gli elementi
 
