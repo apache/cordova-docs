@@ -14,40 +14,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Coordonnées
+# Koordinaten
 
-Un ensemble de propriétés qui décrivent les coordonnées géographiques d'une position.
+Eine Reihe von Eigenschaften, die die geographischen Koordinaten von einer Position zu beschreiben.
 
-## Propriétés
+## Eigenschaften
 
-*   **latitude**: Latitude en degrés décimaux. *(Nombre)*
+*   **Breitengrad**: Latitude in Dezimalgrad. *(Anzahl)*
 
-*   **longitude**: Longitude en degrés décimaux. *(Nombre)*
+*   **Länge**: Länge in Dezimalgrad. *(Anzahl)*
 
-*   **altitude**: hauteur de la position en mètres au-dessus de l'ellipsoïde. *(Nombre)*
+*   **Höhe**: Höhe der Position in Meter über dem Ellipsoid. *(Anzahl)*
 
-*   **précision**: degré de précision des coordonnées latitude et longitude en mètres. *(Nombre)*
+*   **Genauigkeit**: Genauigkeit der breiten- und Längengrad Koordinaten in Metern. *(Anzahl)*
 
-*   **altitudeAccuracy**: niveau d'exactitude de la coordonnée de l'altitude en mètres. *(Nombre)*
+*   **AltitudeAccuracy**: Genauigkeit der Koordinate Höhe in Metern. *(Anzahl)*
 
-*   **heading**: sens de marche, indiquée en degrés comptage dans le sens horaire par rapport au nord vrai. *(Nombre)*
+*   **Rubrik**: Fahrtrichtung, angegeben in Grad relativ zu den Norden im Uhrzeigersinn gezählt. *(Anzahl)*
 
-*   **vitesse**: vitesse actuelle de l'appareil, indiquée en mètres par seconde. *(Nombre)*
+*   **Geschwindigkeit**: aktuelle Geschwindigkeit über Grund des Geräts, in Metern pro Sekunde angegeben. *(Anzahl)*
 
-## Description
+## Beschreibung
 
-Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de fonctions de rappel dans les requêtes pour la position actuelle.
+Die `Coordinates` Objekt ist angefügt das `Position` -Objekt, das Callback-Funktionen in Anforderungen für die aktuelle Position zur Verfügung steht.
 
-## Plates-formes prises en charge
+## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks (OS 5.0 und höher)
 *   iOS
-*   Paciarelli
-*   Windows Phone 7 et 8
+*   Tizen
+*   Windows Phone 7 und 8
 *   Windows 8
 
-## Petit exemple
+## Kleines Beispiel
 
     // onSuccess Callback
     //
@@ -71,7 +71,7 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
-## Exemple complet
+## Vollständiges Beispiel
 
     <!DOCTYPE html>
     <html>
@@ -118,6 +118,6 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
     </html>
     
 
-## Quirks Android
+## Android Macken
 
-**altitudeAccuracy**: ne pas pris en charge par les appareils Android, retour`null`.
+**AltitudeAccuracy**: von Android-Geräten, Rückgabe nicht unterstützt`null`.

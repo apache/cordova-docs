@@ -14,40 +14,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Coordonnées
+# Координаты
 
-Un ensemble de propriétés qui décrivent les coordonnées géographiques d'une position.
+Набор свойств, которые описывают географические координаты позиции.
 
-## Propriétés
+## Свойства
 
-*   **latitude**: Latitude en degrés décimaux. *(Nombre)*
+*   **Широта**: Широта в десятичных градусах. *(Число)*
 
-*   **longitude**: Longitude en degrés décimaux. *(Nombre)*
+*   **Долгота**: Долгота в десятичных градусах. *(Число)*
 
-*   **altitude**: hauteur de la position en mètres au-dessus de l'ellipsoïde. *(Nombre)*
+*   **Высота**: высота позиции в метрах над эллипсоидом. *(Число)*
 
-*   **précision**: degré de précision des coordonnées latitude et longitude en mètres. *(Nombre)*
+*   **точность**: уровень точности координат широты и долготы в метрах. *(Число)*
 
-*   **altitudeAccuracy**: niveau d'exactitude de la coordonnée de l'altitude en mètres. *(Nombre)*
+*   **altitudeAccuracy**: уровень точности координат высоты в метрах. *(Число)*
 
-*   **heading**: sens de marche, indiquée en degrés comptage dans le sens horaire par rapport au nord vrai. *(Nombre)*
+*   **заголовок**: направление движения, указанный в градусах, считая по часовой стрелке относительно истинного севера. *(Число)*
 
-*   **vitesse**: vitesse actuelle de l'appareil, indiquée en mètres par seconde. *(Nombre)*
+*   **скорость**: Текущая скорость земли устройства, указанного в метрах в секунду. *(Число)*
 
-## Description
+## Описание
 
-Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de fonctions de rappel dans les requêtes pour la position actuelle.
+`Coordinates`Объект присоединен к `Position` объект, который доступен для обратного вызова функций в запросы для текущей позиции.
 
-## Plates-formes prises en charge
+## Поддерживаемые платформы
 
-*   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   Андроид
+*   WebWorks ежевики (OS 5.0 и выше)
 *   iOS
-*   Paciarelli
-*   Windows Phone 7 et 8
-*   Windows 8
+*   Tizen
+*   Windows Phone 7 и 8
+*   ОС Windows 8
 
-## Petit exemple
+## Быстрый пример
 
     // onSuccess Callback
     //
@@ -71,7 +71,7 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
     
 
-## Exemple complet
+## Полный пример
 
     <!DOCTYPE html>
     <html>
@@ -118,6 +118,6 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
     </html>
     
 
-## Quirks Android
+## Андроид причуды
 
-**altitudeAccuracy**: ne pas pris en charge par les appareils Android, retour`null`.
+**altitudeAccuracy**: не поддерживается Android устройств, возвращая`null`.
