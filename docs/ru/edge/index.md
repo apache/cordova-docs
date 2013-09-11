@@ -99,70 +99,70 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Camera
+        Камера
       </h2>
       
       <span>Делайте снимки, используя фотокамеру.</span>
     </li>
     <li>
       <h2>
-        Capture
+        Захват
       </h2>
       
       <span>Запись видео и аудио.</span>
     </li>
     <li>
       <h2>
-        Compass
+        Компас
       </h2>
       
       <span>Получите направление, указываемое устройством.</span>
     </li>
     <li>
       <h2>
-        Connection
+        Подключение
       </h2>
       
       <span>Проверка наличия и состояние интенита и получение информации о сотовой сети.</span>
     </li>
     <li>
       <h2>
-        Contacts
+        Контакты
       </h2>
       
       <span>Работа со списком контактов из адресной книги.</span>
     </li>
     <li>
       <h2>
-        Device
+        Устройство
       </h2>
       
       <span>Специальная информация об устройстве.</span>
     </li>
     <li>
       <h2>
-        Events
+        События
       </h2>
       
       <span>Перехват в нативных события через JavaScript.</span>
     </li>
     <li>
       <h2>
-        File
+        Файл
       </h2>
       
       <span>Обращение в файловой системе через JavaScript.</span>
     </li>
     <li>
       <h2>
-        Geolocation
+        Географическое положение
       </h2>
       
       <span>Предоставляет приложению доступ к географическому местоположению.</span>
     </li>
     <li>
       <h2>
-        Globalization
+        Глобализация
       </h2>
       
       <span>Включите представление объектов, определенных для локали.</span>
@@ -176,28 +176,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Media
+        Средства массовой информации
       </h2>
       
       <span>Запись и воспроизведение видео и аудио.</span>
     </li>
     <li>
       <h2>
-        Notification
+        Уведомление
       </h2>
       
       <span>Визуальные, звуковые, и тактильные уведомления на устройстве</span>
     </li>
     <li>
       <h2>
-        Splashscreen
+        Экран-заставка
       </h2>
       
       <span>Управление заставкой приложения.</span>
     </li>
     <li>
       <h2>
-        Storage
+        Хранения
       </h2>
       
       <span>Доступ к свойствам нативного хранилища данных .</span>
