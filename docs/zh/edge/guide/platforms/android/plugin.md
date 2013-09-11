@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 一個外掛程式的 JavaScript 部分始終使用 `cordova.exec` 方法，如下所示：
 
-    exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
+    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 這封送從 web 視圖到 Android 的本機方面，更多或更少沸騰到調用請求 `action` 上的方法 `service` 類，傳入的參數中的 `args` 陣列。

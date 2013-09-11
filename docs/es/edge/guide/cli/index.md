@@ -159,67 +159,76 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
 
 *   Información básica del dispositivo (dispositivo API):
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
         
 
 *   Conexión de red y eventos de batería:
     
-        $ cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
         
 
 *   Acelerómetro, brújula y geolocalización:
     
-        $ cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
         
 
 *   Cámara, reproducción multimedia y captura:
     
-        $ cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
             
 
 *   Acceder a archivos en el dispositivo o red (archivo API):
     
-        $ cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
         
 
 *   Notificación mediante vibración o cuadro de diálogo:
     
-        $ cordova plugin añade $ https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
         
 
 *   Contactos:
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
         
 
 *   Globalización:
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
         
 
 *   SplashScreen:
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
         
 
 *   Abrir nuevas ventanas del navegador (InAppBrowser):
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
         
 
 *   Consola de depuración:
     
-        $ cordova plugin agregar https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
         
 
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
-        $ cordova plugin ls # o ' plugin' ['org.apache.cordova.core.console']
+        $ cordova plugin ls    # or 'plugin list'
+        [ 'org.apache.cordova.core.console' ]
     
 
 Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo le quita apoyo para una consola de depuración de una versión:
 
-        $ cordova plugin rm org.apache.cordova.core.console $ cordova plugin quitar org.apache.cordova.core.console # mismo
+        $ cordova plugin rm org.apache.cordova.core.console        
+        $ cordova plugin remove org.apache.cordova.core.console    # same
     
 
 Puede lote-quitar o agregar plugins por especificar más de un argumento para cada comando.
@@ -232,14 +241,14 @@ En cambio, el nivel superior `merges` Directorio ofrece un lugar para especifica
 
 *   Editar el `www/index.html` archivo, añadir un enlace a un archivo CSS adicional, `overrides.css` en este caso:
     
-        < link rel = "stylesheet" type = "text/css" href="css/overrides.css" / >
+        <link rel="stylesheet" type="text/css" href="css/overrides.css" />
         
 
 *   Opcionalmente crear un vacío `www/css/overrides.css` archivo, que se aplicaría para todas las versiones no-Android, evitando un error de archivo que falta.
 
 *   Crear un `css` subdirectorio dentro de `merges/android` , luego añadir un correspondiente `overrides.css` archivo. Especificar CSS que reemplaza el tamaño de letra de 12 puntos por defecto especificado dentro de `www/css/index.css` , por ejemplo:
     
-        cuerpo {font-tamaño: 14px;}
+        body { font-size:14px; }
         
 
 Al reconstruir el proyecto, la versión para Android cuenta con el tamaño de fuente personalizada, mientras que otros permanecen inalterados.
@@ -250,18 +259,18 @@ También se puede utilizar `merges` para agregar archivos no presenten en el ori
 
 Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la versión más reciente ejecutando el siguiente comando:
 
-        $ sudo npm actualizar cordova -g
+        $ sudo npm update -g cordova
     
 
 Para instalar una versión específica, utilice esta sintaxis:
 
-        $ sudo npm instalar cordova@3.0.0 -g
+        $ sudo npm install -g cordova@3.0.0
     
 
 Ejecute `cordova -v` para ver la versión actualmente en ejecución. Ejecute el `npm
 info` comando para obtener una lista más larga que incluye la versión actual junto con otros números de la versión disponible:
 
-        $ npm información cordova
+        $ npm info cordova
     
 
 Cordova 3.0 es la primera versión compatible con la interfaz de línea de comandos descrita en esta sección. Si actualiza desde una versión anterior a 3.0, tienes que crear un nuevo proyecto como se describió anteriormente, luego copie los activos de la mayor aplicación en el nivel superior `www` Directorio. En su caso, más detalles sobre la actualización a 3.0 están disponibles en las guías de la plataforma. Una vez que se actualiza a la `cordova` interfaz de línea de comandos y uso `npm update` para estar al día, los más lentos procedimientos descritos allí ya no son relevantes.

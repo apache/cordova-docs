@@ -24,14 +24,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 プラグインの JavaScript の部分を常に使用して、 `cordova.exec` メソッドは次のように。
 
-    exec (< successFunction > < failFunction >, < サービス > < アクション > [< 引数 >]);
+    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 これから要求をマーシャ リングします、 `UIWebView` 、iOS ネイティブ側にもっとまたはより少なく通話にダウン沸騰、 `action` メソッド、 `service` に渡された引数を持つクラス、 `args` 配列。
 
 指定のプラグインとして、 `<feature>` 、コルドバ iOS アプリケーションのプロジェクトのタグ `config.xml` ファイル。
 
-    < 機能名 ="LocalStorage">< param の名前 = 値「ios パッケージ」="CDVLocalStorage"/></機能 >
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
     
 
 機能は、 `name` 属性は、JavaScript で使用すると一致する必要があります `exec` コールの `service` パラメーターと、 `value` 属性は、プラグインの Objective-C のクラスの名前と一致する必要があります。 `<param name>`私はする必要があります常に `"ios-package"` 。 このセットアップに従っていない場合、プラグイン コンパイル可能性がありますが、コルドバ到達されませんされます。
@@ -40,7 +42,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 それぞれの人生のためのプラグイン オブジェクトの 1 つのインスタンスが作成されます `UIWebView` 。 プラグインはまでインスタンス化されない最初、JavaScript から呼び出しによって参照されている場合を除き `<param>` と、 `onload` `name` 属性を設定する `"true"` で `config.xml` 。 例えば。
 
-    < 機能名 =「エコー」>< param の名前「ios パッケージ」値を = =「エコー」/>< param の名前"onload"値を = ="true"/></機能 >
+    <feature name="Echo">
+        <param name="ios-package" value="Echo" />
+        <param name="onload" value="true" />
+    </feature>
     
 
 *ない*プラグインの初期化子を指定します。代わりに、プラグインを使用する必要があります、 `pluginInitialize` 、スタート アップ ロジックのメソッド。
@@ -53,7 +58,18 @@ Java スクリプトの設定をネイティブ側に要求するプラグイン
 
 どのような JavaScript の経由でプラグインにディスパッチを取得 `exec` 関数で渡される対応するプラグイン クラスの `action` メソッド。プラグインのメソッドは、この署名。
 
-    -(void) myMethod:(CDVInvokedUrlCommand*) コマンド {CDVPluginResult * pluginResult = nil;NSString * myarg = [command.arguments objectAtIndex:0];場合 （myarg! = nil) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];} 他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg が null"];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];}
+    - (void)myMethod:(CDVInvokedUrlCommand*)command
+    {
+        CDVPluginResult* pluginResult = nil;
+        NSString* myarg = [command.arguments objectAtIndex:0];
+    
+        if (myarg != nil) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+        }
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }
     
 
 1.  [CDVInvokedUrlCommand.h][1]
@@ -70,7 +86,7 @@ Java スクリプトの設定をネイティブ側に要求するプラグイン
 
 CDVPluginResult を使用してを返すことができますさまざまな結果型を JavaScript コールバックに戻るのようなクラスのメソッドを使用しています。
 
-    + (CDVPluginResult *) resultWithStatus: (CDVCommandStatus) statusOrdinal messageAs.
+    + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
     
 
 作成することができます `String` 、 `Int` 、 `Double` 、 `Bool` 、 `Array` 、 `Dictionary` 、 `ArrayBuffer` 、および `Multipart` の種類。 または、任意の引数 (ちょうど送信ステータス) を添付しないでください。 または、エラーを返します。 その場合、コールバックは発生しませんないすべてで任意のプラグインの結果を送信することもできます。
@@ -85,12 +101,45 @@ CDVPluginResult を使用してを返すことができますさまざまな結�
 
 我々 は、次のプロジェクトに追加の `config.xml` ファイル。
 
-    < 機能名 =「エコー」>< param の名前 = 値「ios パッケージ」=「エコー」/></機能 >
+    <feature name="Echo">
+        <param name="ios-package" value="Echo" />
+    </feature>
     
 
 我々 は、次のファイルを追加し、( `Echo.h` および `Echo.m` ) 私たちコルドバ iOS アプリケーション フォルダー内にプラグインのフォルダーに：
 
-    /--- Echo.h コルドバ プラグイン ヘッダー ---/#import < Cordova/CDV.h > @interface エコー： CDVPlugin - (void) エコー:(CDVInvokedUrlCommand*) コマンド;@end/--- Echo.m コルドバのプラグイン実装 * * */#import"Echo.h"#import < Cordova/CDV.h > @implementation エコー - (void) エコー:(CDVInvokedUrlCommand*) コマンド {CDVPluginResult * pluginResult = nil;NSString * エコー = [command.arguments objectAtIndex:0];場合 (エコー ！ = nil & & [エコー長さ] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];} @end
+    /********* Echo.h Cordova Plugin Header *******/
+    
+    #import <Cordova/CDV.h>
+    
+    @interface Echo : CDVPlugin
+    
+    - (void)echo:(CDVInvokedUrlCommand*)command;
+    
+    @end
+    
+    /********* Echo.m Cordova Plugin Implementation *******/
+    
+    #import "Echo.h"
+    #import <Cordova/CDV.h>
+    
+    @implementation Echo
+    
+    - (void)echo:(CDVInvokedUrlCommand*)command
+    {
+        CDVPluginResult* pluginResult = nil;
+        NSString* echo = [command.arguments objectAtIndex:0];
+    
+        if (echo != nil && [echo length] > 0) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        }
+    
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }
+    
+    @end
     
 
 コードを見てをみましょう。上部に我々 はすべての必要なコルドバ輸入があります。私たちのクラスから拡張 `CDVPlugin` (非常に重要）。
@@ -105,10 +154,17 @@ CDVPluginResult を使用してを返すことができますさまざまな結�
 
 プラグインのメソッドは、UI と同じスレッドで実行されます。あなたのプラグイン大量の処理が必要です、ブロッキング呼び出しを必要とする場合は、バック グラウンド スレッドを使用してください。たとえば。
 
-    -(void) myPluginMethod:(CDVInvokedUrlCommand*) コマンド {//command.arguments をここでチェックします。
-        [self.commandDelegate runInBackground: ^ {NSString * ペイロード = nil;//いくつかのロジックをブロック.
-            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];//SendPluginResult メソッドはスレッド セーフです。
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];}];}
+    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+    {
+        // Check command.arguments here.
+        [self.commandDelegate runInBackground:^{
+            NSString* payload = nil;
+            // Some blocking logic...
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            // The sendPluginResult method is thread-safe.
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }];
+    }
     
 
 ## 高度なプラグイン機能
