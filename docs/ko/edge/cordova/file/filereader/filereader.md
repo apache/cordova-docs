@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 7과 8
 *   윈도우 8
 
-## 데이터 URL로 읽기
+## readAsDataURL
 
 **매개 변수:**
 
@@ -81,14 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 텍스트로 읽기
+## readAsText
 
 **매개 변수:**
 
@@ -107,14 +107,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 빠른 예를 들어 중단
+## 중단
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **인코딩** 매개 변수는 지원 되지 않습니다, 및 효과에 항상 UTF8 인코딩.
 
-## 이진 문자열 읽기
+## readAsBinaryString
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
@@ -220,14 +220,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 배열 버퍼 읽기
+## readAsArrayBuffer
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
@@ -246,7 +246,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

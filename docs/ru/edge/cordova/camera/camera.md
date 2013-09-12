@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Камеры
+# Камера
 
 > `camera`Объект предоставляет доступ к приложение камеры устройства по умолчанию.
 

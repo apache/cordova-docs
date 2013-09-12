@@ -101,3 +101,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <p>Local File System</p>
       </body>
     </html>
+    
+
+# requestFileSystem
+
+> Запросить файловую систему для хранения данных приложения.
+
+     window.requestFileSystem(type, size, successCallback, errorCallback)
+    
+
+*   **окно**: ссылка на объект глобального окна
+*   **тип**: местные системы тип файла, см. LocalFileSystem константы
+*   **Размер**: указывает, сколько места, в байтах, приложение и ожидает ее нужно
+*   **successCallback**: вызывается с помощью объекта файловой системы
+*   **errorCallback**: вызывается, если ошибка происходит извлечение файловой системы
+
+## Запрос файловой системы быстрый пример
+
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+    
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);

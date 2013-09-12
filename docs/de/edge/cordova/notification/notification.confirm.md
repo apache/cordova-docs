@@ -27,7 +27,7 @@ Zeigt das Dialogfeld anpassbare Bestätigung.
 
 *   **Titel**: Dialog "Titel". *(String)* (Optional, Standard ist`Confirm`)
 
-*   **ButtonLabels**: Komma-getrennter String Schaltflächenbeschriftungen angeben. *(String)* (Optional, Standard ist`OK,Cancel`)
+*   **ButtonLabels**: Array von Zeichenfolgen, die Schaltflächenbezeichnungen angeben. *(Array)* (Optional, Standard ist [ `OK,Cancel` ])
 
 ## Beschreibung
 
@@ -62,7 +62,7 @@ Der Rückruf dauert das Argument `buttonIndex` *(Anzahl)*, die der Index der Sch
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ Der Rückruf dauert das Argument `buttonIndex` *(Anzahl)*, die der Index der Sch
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

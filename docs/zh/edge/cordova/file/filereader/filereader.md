@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 7 和 8
 *   Windows 8
 
-## 讀取資料的 URL 作為
+## readAsDataURL
 
 **參數：**
 
@@ -81,14 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 以文本格式閱讀
+## readAsText
 
 **參數：**
 
@@ -107,14 +107,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 中止快速示例
+## 中止
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **編碼**參數不受支援，並且 UTF8 編碼總是在效果。
 
-## 讀取的二進位字串
+## readAsBinaryString
 
 目前僅支援 iOS 和 android 系統。
 
@@ -220,14 +220,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 作為陣列緩衝區中讀取
+## readAsArrayBuffer
 
 目前僅支援 iOS 和 android 系統。
 
@@ -246,7 +246,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

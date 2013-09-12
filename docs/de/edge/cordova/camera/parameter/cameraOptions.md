@@ -66,6 +66,8 @@ Optionale Parameter die Kameraeinstellungen anpassen.
 
 ## Android Macken
 
+*   `cameraDirection`Ergebnisse in einem hinten gerichteter Foto Wert.
+
 *   Ignoriert die `allowEdit` Parameter.
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY`und `Camera.PictureSourceType.SAVEDPHOTOALBUM` beide das gleiche Fotoalbum anzuzeigen.

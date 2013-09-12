@@ -24,11 +24,7 @@ Un plugin è costituito da almeno una classe Java che estende la `CordovaPlugin`
 
 La parte di JavaScript di un plugin utilizza sempre il `cordova.exec` metodo come segue:
 
-<<<<<<< HEAD
     exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
-=======
-    exec (< successFunction >, < failFunction >, < servizio >, < azione >, [< args >]);
->>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
     
 
 Questo esegue il marshalling di una richiesta da WebView sul lato nativo Android, più o meno bollente giù a chiamare il `action` metodo sul `service` classe, con gli argomenti passati nella `args` matrice.

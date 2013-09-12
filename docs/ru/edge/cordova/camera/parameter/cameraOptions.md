@@ -66,6 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Андроид причуды
 
+*   Любые `cameraDirection` значение результатов в задней стороне фото.
+
 *   Игнорирует `allowEdit` параметр.
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY`и `Camera.PictureSourceType.SAVEDPHOTOALBUM` оба отображения же фотоальбом.

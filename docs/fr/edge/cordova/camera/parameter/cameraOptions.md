@@ -85,9 +85,11 @@ Paramètres optionnels de personnalisation des réglages de l'appareil photo.
 
 ## Spécificités Android
 
-*   Ignore le paramètre `allowEdit`.
+*   Tout `cameraDirection` résultats dans le back-face photo de valeur.
 
-*   `Camera.PictureSourceType.PHOTOLIBRARY`et `Camera.PictureSourceType.SAVEDPHOTOALBUM` affichent tous deux le même album photo.
+*   Ignore la `allowEdit` paramètre.
+
+*   `Camera.PictureSourceType.PHOTOLIBRARY`et `Camera.PictureSourceType.SAVEDPHOTOALBUM` les deux affichent le même album photo.
 
 ## Spécificités de BlackBerry
 

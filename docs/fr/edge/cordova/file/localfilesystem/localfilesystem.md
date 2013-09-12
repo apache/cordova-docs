@@ -101,3 +101,26 @@ Les `LocalFileSystem` méthodes de l'objet sont définis sur le `window` objet.
         <p>Local File System</p>
       </body>
     </html>
+    
+
+# requestFileSystem
+
+> Demander un système de fichier dans lequel stocker les données d'application.
+
+     window.requestFileSystem(type, size, successCallback, errorCallback)
+    
+
+*   **fenêtre**: référence à l'objet global window
+*   **type**: local type de système de fichiers, voir local constantes
+*   **taille**: indique la quantité d'espace stockage, en octets, l'application attend d'avoir besoin
+*   **successCallback**: appelée avec un objet système de fichiers
+*   **errorCallback**: invoquée si l'erreur produit de récupération système de fichiers
+
+## Demande de fichier système exemple rapide
+
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+    
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);

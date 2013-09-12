@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 7 и 8
 *   ОС Windows 8
 
-## Читать как URL данных
+## readAsDataURL
 
 **Параметры:**
 
@@ -81,14 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Читать текст
+## readAsText
 
 **Параметры:**
 
@@ -107,14 +107,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Прервать быстрый пример
+## прервать
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Параметр **Кодировка** не поддерживается, и кодировку UTF8 действует всегда.
 
-## Читать как двоичная строка
+## readAsBinaryString
 
 В настоящее время поддерживается только на iOS и Android.
 
@@ -220,14 +220,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Читать как буфер массива
+## readAsArrayBuffer
 
 В настоящее время поддерживается только на iOS и Android.
 
@@ -246,7 +246,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

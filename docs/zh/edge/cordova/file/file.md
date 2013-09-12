@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 檔
 
-> 一個 API，用於讀取、 寫入和導航基於[W3C 檔 API][1]的檔案系統層次結構.
+> 一個 API，用於讀取、 寫入和導航基於[w3c 檔 api][1]的檔案系統層次結構.
 
  [1]: http://www.w3.org/TR/FileAPI
 

@@ -66,6 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 안 드 로이드 단점
 
+*   어떤 `cameraDirection` 다시 연결 사진에 결과 값.
+
 *   무시는 `allowEdit` 매개 변수.
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY`그리고 `Camera.PictureSourceType.SAVEDPHOTOALBUM` 둘 다 동일한 사진 앨범을 표시 합니다.

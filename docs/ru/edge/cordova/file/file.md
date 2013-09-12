@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Файл
 
-> API-интерфейс для чтения, записи и перемещения файловой системы иерархии, основываясь на [Файле API W3C][1].
+> Интерфейс API, чтобы читать, писать и навигации по иерархиям файловой системы, основанные на [w3c файла api][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 

@@ -20,11 +20,7 @@ Un ensemble de propriétés qui décrivent les coordonnées géographiques d'une
 
 ## Propriétés
 
-<<<<<<< HEAD
 *   **latitude**: Latitude en degrés décimaux. *(Nombre)*
-=======
-*   **Latitude**: Latitude en degrés décimaux. *(Nombre)*
->>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
 
 *   **longitude**: Longitude en degrés décimaux. *(Nombre)*
 
@@ -34,11 +30,7 @@ Un ensemble de propriétés qui décrivent les coordonnées géographiques d'une
 
 *   **altitudeAccuracy**: niveau d'exactitude de la coordonnée de l'altitude en mètres. *(Nombre)*
 
-<<<<<<< HEAD
 *   **heading**: sens de marche, indiquée en degrés comptage dans le sens horaire par rapport au nord vrai. *(Nombre)*
-=======
-*   **rubrique**: sens de marche, indiquée en degrés comptage dans le sens horaire par rapport au nord vrai. *(Nombre)*
->>>>>>> e7168dd7e82a8aab11a01117413dfd91486e029e
 
 *   **vitesse**: vitesse actuelle de l'appareil, indiquée en mètres par seconde. *(Nombre)*
 

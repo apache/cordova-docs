@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Connection
+# Подключение
 
 > `connection`Объектов, через `navigator.connection` , предоставляет информацию о сотовых и wifi подключение устройства.
 

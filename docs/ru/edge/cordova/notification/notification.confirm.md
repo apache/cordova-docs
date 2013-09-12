@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **название**: диалоговое окно название. *(Строка)* (Обязательно, по умолчанию`Confirm`)
 
-*   **buttonLabels**: запятыми строку, указывающую метки кнопок. *(Строка)* (Обязательно, по умолчанию`OK,Cancel`)
+*   **buttonLabels**: массив строк, указание метки кнопок. *(Массив)* (Обязательно, по умолчанию [ `OK,Cancel` ])
 
 ## Описание
 
@@ -62,7 +62,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

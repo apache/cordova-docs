@@ -101,3 +101,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <p>Local File System</p>
       </body>
     </html>
+    
+
+# requestFileSystem
+
+> アプリケーション データを格納するファイル システムを要求します。
+
+     window.requestFileSystem(type, size, successCallback, errorCallback)
+    
+
+*   **ウィンドウ**: グローバル ウィンドウ オブジェクトへの参照
+*   **タイプ**: ローカル ファイル システムの種類、LocalFileSystem 定数を参照ください
+*   **サイズ**: どのくらいのストレージ容量をバイト、必要とするアプリケーションで想定されることを示します。
+*   **successCallback**: ファイルシステム ・ オブジェクトを使って呼び出されます
+*   **解り**: エラー取得するファイルシステムが発生した場合に呼び出されます
+
+## ファイル システムの簡単な例を要求します。
+
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+    
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);

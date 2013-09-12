@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Геолокация
+# Географическое положение
 
 > `geolocation`Объект предоставляет доступ к данным местонахождение на основе GPS-датчик устройства или выведен из сети сигналов.
 
