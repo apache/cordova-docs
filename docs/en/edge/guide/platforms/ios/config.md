@@ -24,6 +24,37 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to iOS builds. See The config.xml
 File for information about global configuration options.
 
+## Icons and Splash Screens
+
+We support classic, retina, iPad displays (and retina iPad displays in
+PhoneGap 2.5.0+). The following will define icons for each specific
+screen type.
+
+        <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+        <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+
+	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
+	<icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+
+We support classic, retina, iPhone 5 and iPad displays; the following
+will define splash screens for each of those. Standard iPads have two
+different splash screens, portrait, landscape. Retina iPads have two
+additional splash screens, retina portrait and retina landscape
+(PhoneGap 2.5.0+ only).
+
+        <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+        <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+        <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+        <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
+        <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+
+	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
+        <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+        <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+
+## iOS Preferences
+
 * `DisallowOverscroll` (boolean, defaults to `false`): set to `true` if
   you don't want the WebView to rubber-band.
 
