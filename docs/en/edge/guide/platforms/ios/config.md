@@ -35,7 +35,7 @@ File for information about global configuration options.
 
         <preference name="TopActivityIndicator" value="white"/>
 
-<!-- QUERY: ??? -->
+<!-- QUERY I: describe TopActivityIndicator top spinning throbber -->
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
@@ -45,14 +45,16 @@ File for information about global configuration options.
 
         <preference name="EnableLocation" value="true"/>
 
-<!-- QUERY: deprecated? -->
+<!-- QUERY I: is deprecated EnableLocation still functional? -->
 
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
   prevent viewport scaling through a meta tag.
 
         <preference name="EnableViewportScale" value="true"/>
 
-<!-- QUERY: Do viewport tags work in other environments? -->
+<!-- QUERY I: confirm EnableViewportScale allows viewport metatag to control range of scale, including disabling? -->
+
+<!-- QUERY: Do viewport meta tags work as expected in other environments? -->
 
 * `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
   control when the splashscreen is hidden through a JavaScript API.
@@ -75,13 +77,17 @@ File for information about global configuration options.
 
         <preference name="ShowSplashScreenSpinner" value="false"/>
 
+<!-- QUERY I: for ShowSplashScreenSpinner describe spinner -->
+
 * `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
-  to true to not allow autoplayed HTML5 video.
+  to `true` to not allow autoplayed HTML5 video.
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
+<!-- QUERY I: does MediaPlaybackRequiresUserAction also apply to audio? -->
+
 * `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
-  true to allow inline HTML5 media playback, also, the video element
+  `true` to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
   attribute.
 
@@ -96,25 +102,25 @@ File for information about global configuration options.
         <preference name="BackupWebStorage" value="local"/>
 
 * `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
-  set to false to open the keyboard when form elements get focus via
+  set to `false` to open the keyboard when form elements get focus via
   the JavaScript focus() call.
 
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
 
 * `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
-  to true to wait until all new view content has been received
+  to `true` to wait until all new view content has been received
   before it is rendered.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
-* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set to
-  true to hide the additional toolbar that is on top of the
-  keyboard. This toolbar features the __Prev__, __Next__, and __Done__
-  buttons.
+* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
+  to `true` to hide the additional toolbar that is on top of the
+  keyboard.  This toolbar features the __Prev__, __Next__, and
+  __Done__ buttons.
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
-<!-- QUERY: do form helpers only appear when there's >1 input? -->
+<!-- QUERY: for HideKeyboardFormAccessoryBar, does form-helper UI only appear when there's >1 input? -->
 
 * `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
   shrink the WebView when the keyboard comes up. The WebView shrinks
@@ -124,6 +130,8 @@ File for information about global configuration options.
   a lot of sense when building apps as opposed to webpages.
 
         <preference name="KeyboardShrinksView" value="true"/>
+
+<!-- QUERY I: ___ -->
 
 <!--
 

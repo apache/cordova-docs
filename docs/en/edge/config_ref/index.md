@@ -159,7 +159,7 @@ the Plugin Development Guide for more information about plugins.
 
  # Using config.xml
 
-Apps built using Adobe® PhoneGap™ Build can be set up either through
+Apps built using Adobe PhoneGap Build can be set up either through
 our web interface, or by using a `config.xml`. The `config.xml` file,
 as specified in the [W3C widget
 specification](http://www.w3.org/TR/widgets/), allows developers to
@@ -252,7 +252,7 @@ image.
 
  #### WebOS 
 
-WebOs supports a default icon and a mini icon which can be used for
+WebOS supports a default icon and a mini icon which can be used for
 notifications.
 
         <icon src="icons/webos/icon.png" gap:platform="webos" />
@@ -272,6 +272,8 @@ files, your splash screens should be saved as `png` files.
 Unless otherwise specified in a config.xml, each platform will try to
 use the default `splash.png` during compilation. To define platform
 specific splash screens please use the guide provided below.
+
+<!-- QUERY: is there a default splash.png, like icon.png? -->
 
 Splash files should be the file formats specified in the examples
 below. Any other file type is not guaranteed to work across platforms.
