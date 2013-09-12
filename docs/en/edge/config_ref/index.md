@@ -154,10 +154,31 @@ Here is how the element appears for iOS projects:
             <param name="ios-package" value="CDVDevice" />
         </feature>
 
-See the API Reference for details on how to access each feature. See
-the Plugin Development Guide for more information about plugins.
+See the API Reference for details on how to specify each feature. See
+the Plugin Development Guide for more information on plugins.
 
 ## Icons and Splash Screens
+
+By default, Cordova generates icons based on the root application
+directory's `icon.png` file. Otherwise, adding the `<icon>` tag to the
+`config.xml` file allows you to specify a different filename:
+
+        <icon src="app.png" />
+
+To define platform-specific icons, consult each platform's
+configuration options:
+
+- iOS Configuration
+- Android Configuration
+- BlackBerry Configuration
+
+
+Icon files should be the file formats specified in the examples below,
+other file types are not guaranteed to work across platforms.
+
+<!-- QUERY: fishes for icon.png by default? Or is cordova icon the default? -->
+
+Add the `<icon> element`
 
 <!-- !!!
 
@@ -176,12 +197,6 @@ the Plugin Development Guide for more information about plugins.
 
  #### Usage and Additional Information:
 
-Unless otherwise specified in a config.xml, each platform will try to
-use the default `icon.png` during compilation. To define platform
-specific icons please use the guide provided below.
-
-Icon files should be the file formats specified in the examples below,
-other file types are not guaranteed to work across platforms.
 
  #### Default
 
