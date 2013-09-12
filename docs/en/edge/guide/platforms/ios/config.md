@@ -21,8 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 The `config.xml` settings file controls various Cordova settings.
 This is application wide, and not set per CDVViewController instance.
-The `config.xml` file is located in your `<project folder>/<appname>`
-directory.
+The `config.xml` file is located within the `<project
+folder>/<appname>` directory.
 
 ## `<preference>`
 
@@ -91,3 +91,116 @@ existing apps. The available preferences are:
   applies to apps that position their elements relative to the bottom
   of the WebView. This is the default behaviour on Android, and makes
   a lot of sense when building apps as opposed to webpages.
+
+<!--
+
+ #### Target a Specific Device
+
+* `target-device` with possible values `handset`, `tablet`, or
+  `universal`
+
+  * example: `<preference name="target-device" value="universal" />`
+
+  * please note that this currently only applies to iOS builds; by
+    default all builds are universal
+
+ #### WebView Bounce
+
+* `webviewbounce` with values `true` or `false`
+
+  * example: `<preference name="webviewbounce" value="false" />`
+
+  * controls whether the screen "bounces" when scrolled beyond the top
+    or bottom on iOS. By default, the bounce is _on_
+
+ #### Prerendered Icon
+
+* `prerendered-icon` with values `true` or `false`
+
+  * example: `<preference name="prerendered-icon" value="true" />`
+
+  * if icon is prerendered, iOS will not apply it's gloss to the app's
+    icon on the user's home screen
+
+  * default is _false_
+
+ #### Open all links in WebView
+
+* __Deprecated__ -- use <a
+  href="http://docs.phonegap.com/en/2.9.0/cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a>
+  with target equal to '_self' (webview), '_blank' (InAppBrowser),
+  '_system' (system web browser)
+
+* `stay-in-webview` with values `true` or `false`
+
+  * example: `<preference name="stay-in-webview" value="true" />`
+
+  * if set to true, all links (even with target set to blank) will
+    open in the app's webview
+
+  * only use this preference if you want pages from your server to
+    take over your entire app
+
+  * default is _false_
+
+ #### Status Bar Style
+
+* `ios-statusbarstyle` with values `default`, `black-opaque` or
+  `black-translucent`
+
+  * example: `<preference name="ios-statusbarstyle" value="black-opaque" />`
+
+  * default is a grey status bar, `black-opaque` will appear black
+
+  * although `black-translucent` is supported, the PhoneGap webview
+    does not extend beneath the status bar, so it will appear
+    identical to `black-opaque` once your app is running
+
+ #### Detect Data Types
+
+* `detect-data-types` with values `true` or `false`
+
+  * example: `<preference name="detect-data-types" value="false" />`
+
+  * controls whether certain data types (such as phone numbers and
+    dates) are automatically turned into links by the system. Defaults
+    to "true" (as does the system web view)
+
+  * supported on PhoneGap 2.0.0 and above
+
+ #### Exit On Suspend
+
+* `exit-on-suspend` with values `true` or `false`
+
+  * example: `<preference name="exit-on-suspend" value="true" />`
+
+  * if set to true, app will terminate when suspended, for example
+    when home button is pressed
+
+  * default is _false_
+
+ #### Show Splash Screen Spinner
+
+* `show-splash-screen-spinner` with values `true` or `false`
+
+  * example: `<preference name="show-splash-screen-spinner"
+    value="false" />`
+
+  * if set to false, the spinner won't appear on the splash screen
+    during app loading
+
+  * default is _true_
+
+ #### Auto-Hide Splash Screen
+
+* `auto-hide-splash-screen` with values `true` or `false`
+
+  * example: `<preference name="auto-hide-splash-screen" value="false"
+    />`
+
+  * if set to false, the splash screen must be hidden using a
+    JavaScript API
+
+  * default is _true_
+
+-->
