@@ -34,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Set up each SDK and update projects</span>
         </li>
         <li>
-            <h2>Configuration Reference</h2>
+            <h2>The config.xml File</h2>
             <span>Customize the features of your app.</span>
         </li>
         <li>
