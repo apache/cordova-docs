@@ -19,8 +19,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # BlackBerry 10 Configuration
 
-The `config.xml` file controls various Cordova settings. These apply across the application.
-The `config.xml` file is is located in `<project folder>/<www>` directory.
+The `config.xml` file controls an app's basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to BlackBerry 10 builds. See The
+config.xml File for information about global configuration options.
 
 ## `<preference>`
 
@@ -60,3 +62,20 @@ The available preferences are:
   distribution, you should remove this setting. This feature is intended as a
   development convenience only. In production, all URIs should be known and should be
   whitelisted using the `<access>` element. To disable, specify value as `disable`.
+
+<!--
+
+ #### Disable Cursor
+
+* `disable-cursor` with values `true` or `false`
+
+  * example: `<preference name="disable-cursor" value="true" />`
+
+  * prevents a mouse-icon/cursor from being displayed on the app -
+    desugars to `<rim:navigation />`. See [the BlackBerry
+    documentation](https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/rim_navigation_element_1582456_11.html)
+    for more details
+
+  * default is _false_
+
+-->

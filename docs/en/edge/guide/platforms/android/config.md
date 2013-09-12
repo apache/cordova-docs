@@ -19,8 +19,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Configuration
 
-The `config.xml` file controls various Cordova settings. These
-apply to each application and CordovaWebView instance.
+The `config.xml` file controls an app's basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to Android builds. See The
+config.xml File for information about global configuration options.
 
 ## `<preference>`
 

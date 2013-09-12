@@ -19,10 +19,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS Configuration
 
-The `config.xml` settings file controls various Cordova settings.
-This is application wide, and not set per CDVViewController instance.
-The `config.xml` file is located within the `<project
-folder>/<appname>` directory.
+The `config.xml` file controls an app's basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to iOS builds. See The config.xml
+File for information about global configuration options.
 
 ## `<preference>`
 
