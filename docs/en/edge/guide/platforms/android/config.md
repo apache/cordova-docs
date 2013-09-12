@@ -26,20 +26,19 @@ config.xml File for information about global configuration options.
 
 ## Icons and Splash Screens
 
-We support ldpi, mdpi, hdpi, and xhdpi displays; the following will
-define icons for each specific screen type.
+Cordova supports images for _ldpi_, _mdpi_, _hdpi_, and _xhdpi_
+displays. The following defines icons for each type of screen:
 
-        <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-        <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-        <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <icon src="icons/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
+        <icon src="icons/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
+        <icon src="icons/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
         <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
-We support ldpi, mdpi, hdpi and xhdpi displays; the following will
-define splash screens for each specific screen type.
+The following defines splash screens for each screen type:
 
-        <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
-        <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
-        <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <gap:splash src="splash/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
+        <gap:splash src="splash/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
+        <gap:splash src="splash/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
         <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
 ## Android Preferences
