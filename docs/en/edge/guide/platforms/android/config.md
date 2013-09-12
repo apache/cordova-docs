@@ -24,42 +24,55 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information about global configuration options.
 
-## `<preference>`
-
-Various other preferences (as `<preference>` tags) default on not
-breaking existing apps. The available preferences are:
-
 * `useBrowserHistory` (boolean, defaults to `true`): set to `false` if you
   want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
 
+        <preference name="useBrowserHistory" value="fubar"/>
+
 * `loadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
+
+        <preference name="loadingDialog" value="fubar"/>
 
 * `loadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
+        <preference name="loadingPageDialog" value="fubar"/>
+
 * `errorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
+
+        <preference name="errorUrl" value="fubar"/>
 
 * `backgroundColor`: Set the background color for your application.
   Supports a four-byte hex value, with the first byte representing
   alpha value, and the following three bytes with standard RGB
   values. For example, `0x00000000` is black.
 
+        <preference name="backgroundColor" value="fubar"/>
+
 * `loadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
+        <preference name="loadUrlTimeoutValue" value="fubar"/>
+
 * `keepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
+
+        <preference name="keepRunning" value="fubar"/>
 
 * `splashscreen`: The name of the file minus its extension in the
   `res/drawable` directory.  If you have multiple assets, they all
   must share this common name in their respective directories.
 
+        <preference name="splashscreen" value="fubar"/>
+
 * `disallowOverscroll` (boolean, defaults to `false`): set to `true` to
   disable the glow when a user scrolls beyond the edge of the webview.
+
+        <preference name="disallowOverscroll" value="fubar"/>
 
 ## `<plugin>`
 
