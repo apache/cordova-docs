@@ -63,3 +63,62 @@ breaking existing apps. The available preferences are:
 
 Android supports using `<feature>` as analogues to `<plugin>` elements.
 
+<!--
+
+ ### Android Specific
+
+ #### Minimum and Maximum SDK Version
+
+* `android-minSdkVersion` and/or `android-maxSdkVersion`, with integer
+  values
+
+  * minSdkVersion example: `<preference name="android-minSdkVersion" value="10" />`
+
+  * maxSdkVersion example: `<preference name="android-maxSdkVersion" value="15" />`
+
+  * corresponds to the `usesSdk` attributes in the
+    `AndroidManifest.xml` file - more details are in [the Android
+    documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
+
+  * minSdkVersion defaults to 7 (Android 2.1); maxSdkVersion is unset
+    by default
+
+ #### Install Location
+
+* `android-installLocation` with values `internalOnly`, `auto` or `preferExternal`
+
+  * example: `<preference name="android-installLocation" value="auto"
+    />`
+
+  * where an app can be installed - defaults to `internalOnly` (as the
+    Android SDK)
+
+  * `auto` or `preferExternal` allow the app to be installed on an SD
+    card - this can lead to unexpected behavior
+
+  * more details available in [the Android
+    documentation](http://developer.android.com/guide/appendix/install-location.html)
+
+ #### Splash Screen Duration
+
+  * `splash-screen-duration` with a value in milliseconds
+
+  * defaults to 5000 (5 seconds)
+
+  * example: `<preference name="splash-screen-duration" value="10000"
+    />`
+
+  * for auto-hide behaviour call `navigator.splashscreen.hide();` in
+    the device-ready method
+
+  * supported on PhoneGap 2.1.0 and above
+  
+ #### Load URL timeout
+
+  * `load-url-timeout` with a value in milliseconds
+
+  * defaults to 20000 (20 seconds)
+
+  * example: `<preference name="load-url-timeout" value="15000" />`
+
+-->

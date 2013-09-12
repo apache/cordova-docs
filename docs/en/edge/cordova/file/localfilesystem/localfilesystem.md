@@ -103,7 +103,6 @@ The `LocalFileSystem` object methods are defined on the `window` object.
       </body>
     </html>
 
-
 # requestFileSystem
 
 > Request a file system in which to store application data.
