@@ -24,53 +24,67 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
 config.xml File for information about global configuration options.
 
-* `autoHideSplashScreen`: (`true` or `false`): Set to `false` to control when the splashscreen
-  is hidden through a JavaScript API. This preference defaults to true.
+* `autoHideSplashScreen`: (`true` or `false`): Set to `false` to
+  control when the splashscreen is hidden through a JavaScript
+  API. This preference defaults to true.
 
-        <preference name="autoHideSplashScreen" value="fubar"/>
+        <preference name="autoHideSplashScreen" value="false"/>
 
-* `backgroundColor`: Specifies the background color of your app. The value must specify
-  a color value in the ARGB pixel format using 8 hexadecimal digits.
+* `backgroundColor`: Specifies the background color of your app. The
+  value must specify a color value in the ARGB pixel format using 8
+  hexadecimal digits.
 
-        <preference name="backgroundColor" value="fubar"/>
+        <preference name="backgroundColor" value="0x00000000"/>
 
-* `childBrowser`: Disables child browser windows. By default, when the content attempts
-  to open a resource in a new window or tab (by using window.open(), or by specifying `_blank`
-  as the target of an anchor), the WebWorks app will open a secondary browser window
-  to display the resource. This feature is enabled by default. The value must specify
-  `disable` to prevent the above actions from occuring.
+<!-- QUERY: remove "0x" from above? Varies from Android -->
 
-        <preference name="childBrowser" value="fubar"/>
+* `childBrowser`: Disables child browser windows. By default, when the
+  content attempts to open a resource in a new window or tab (by using
+  window.open(), or by specifying `_blank` as the target of an
+  anchor), the WebWorks app will open a secondary browser window to
+  display the resource. This feature is enabled by default. The value
+  must specify `disable` to prevent the above actions from occuring.
 
-* `hideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the keyboard form
-  accessory bar in an HTML form. The keyboard form accessory bar is a row of
-  buttons (Previous, Next, and Submit) that the user can use to navigate through a form.
-  By default, when a WebWorks app contains an HTML form and an `<input>` element gets
-  focus, WebWorks displays this form accessory bar. This feature allows you to prevent your
-  app from displaying the form accessory bar by specifying value as `enable`.
+        <preference name="childBrowser" value="disable"/>
 
-        <preference name="hideKeyboardFormAccessoryBar" value="fubar"/>
+* `hideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the
+  keyboard form accessory bar in an HTML form. The keyboard form
+  accessory bar is a row of buttons (__Previous__, __Next__, and
+  __Submit__) that the user can use to navigate through a form.  By
+  default, when a WebWorks app contains an HTML form and an `<input>`
+  element gets focus, WebWorks displays this form accessory bar. This
+  feature allows you to prevent your app from displaying the form
+  accessory bar by specifying value as `enable`.
 
-* `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the persistent orientation
-  for screens in your app. By default, if you do not specify a screen orientation,
-  the orientation is set to auto.
+        <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
 
-        <preference name="orientation" value="fubar"/>
+<!-- QUERY: appears for >1 input? -->
 
-* `popupBlocker`: Enables the popup blocker. By default, all popups are displayed by
-  BlackBerry WebWorks apps in a child browser window. You can prevent popups from displaying
-  without user intervention by enabling the popup blocker. This is done by specifying
-  value as `enable`.
+* `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the
+  persistent orientation for screens in your app. By default, if you
+  do not specify a screen orientation, the orientation is set to auto.
 
-        <preference name="popupBlocker" value="fubar"/>
+        <preference name="orientation" value="landscape"/>
 
-* `webSecurity`: Disables web security. Disabling web security allows you to access
-  remote content from unknown sources during development. Before packaging your app for
-  distribution, you should remove this setting. This feature is intended as a
-  development convenience only. In production, all URIs should be known and should be
-  whitelisted using the `<access>` element. To disable, specify value as `disable`.
+<!-- QUERY: different from default? -->
 
-        <preference name="webSecurity" value="fubar"/>
+* `popupBlocker`: Enables the popup blocker. By default, all popups
+  are displayed by BlackBerry WebWorks apps in a child browser
+  window. You can prevent popups from displaying without user
+  intervention by enabling the popup blocker. This is done by
+  specifying value as `enable`.
+
+        <preference name="popupBlocker" value="enable"/>
+
+* `webSecurity`: Disables web security. Disabling web security allows
+  you to access remote content from unknown sources during
+  development.  Before packaging your app for distribution, you should
+  remove this setting. This feature is intended as a development
+  convenience only. In production, all URIs should be known and should
+  be whitelisted using the `<access>` element. To disable, specify
+  value as `disable`.
+
+        <preference name="webSecurity" value="disable"/>
 
 <!--
 

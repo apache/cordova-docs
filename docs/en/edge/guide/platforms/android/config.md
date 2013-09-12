@@ -24,63 +24,84 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information about global configuration options.
 
-* `useBrowserHistory` (boolean, defaults to `true`): set to `false` if you
-  want to use the history shim that was used to work around the
+<!-- QUERY: deprecated?
+
+* `useBrowserHistory` (boolean, defaults to `true`): set to `false` if
+  you want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
 
-        <preference name="useBrowserHistory" value="fubar"/>
+        <preference name="useBrowserHistory" value="false"/>
+
+-->
 
 * `loadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
-        <preference name="loadingDialog" value="fubar"/>
+        <preference name="loadingDialog" value="Loading, Please wait for application"/>
 
 * `loadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
-        <preference name="loadingPageDialog" value="fubar"/>
+        <preference name="loadingPageDialog" value="Loading, Please wait for data"/>
+
+<!-- QUERY: when do these apply? -->
 
 * `errorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
-        <preference name="errorUrl" value="fubar"/>
+        <preference name="errorUrl" value="error.html"/>
 
-* `backgroundColor`: Set the background color for your application.
-  Supports a four-byte hex value, with the first byte representing
-  alpha value, and the following three bytes with standard RGB
-  values. For example, `0x00000000` is black.
-
-        <preference name="backgroundColor" value="fubar"/>
+<!-- QUERY: when do these apply? -->
 
 * `loadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
-        <preference name="loadUrlTimeoutValue" value="fubar"/>
+        <preference name="loadUrlTimeoutValue" value="20000"/>
+
+<!-- QUERY: expressed in milliseconds? 20000 default?-->
+
+<!-- QUERY
+
+ #### Load URL timeout
+
+  * `load-url-timeout` with a value in milliseconds
+
+  * defaults to 20000 (20 seconds)
+
+  * example: `<preference name="load-url-timeout" value="15000" />`
+
+-->
+
+* `backgroundColor`: Set the app's background color.  Supports a
+  four-byte hex value, with the first byte representing and alpha
+  value, and standard RGB values for the following three bytes.  The
+  example below is black:
+
+        <preference name="backgroundColor" value="0x00000000"/>
 
 * `keepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
 
-        <preference name="keepRunning" value="fubar"/>
+        <preference name="keepRunning" value="false"/>
+
+<!-- QUERY: does that mean in effect the app continues to execute following pause event? -->
 
 * `splashscreen`: The name of the file minus its extension in the
-  `res/drawable` directory.  If you have multiple assets, they all
-  must share this common name in their respective directories.
+  `res/drawable` directory.  Multiple assets must share this common
+  name in various subdirectories.  For details, see the _Icons_
+  section in The config.xml File.
 
-        <preference name="splashscreen" value="fubar"/>
+        <preference name="splashscreen" value="splash"/>
 
 * `disallowOverscroll` (boolean, defaults to `false`): set to `true` to
   disable the glow when a user scrolls beyond the edge of the webview.
 
-        <preference name="disallowOverscroll" value="fubar"/>
+        <preference name="disallowOverscroll" value="true"/>
 
-## `<plugin>`
-
-Android supports using `<feature>` as analogues to `<plugin>` elements.
+<!-- QUERY: glow? -->
 
 <!--
-
- ### Android Specific
 
  #### Minimum and Maximum SDK Version
 
@@ -128,12 +149,5 @@ Android supports using `<feature>` as analogues to `<plugin>` elements.
 
   * supported on PhoneGap 2.1.0 and above
   
- #### Load URL timeout
-
-  * `load-url-timeout` with a value in milliseconds
-
-  * defaults to 20000 (20 seconds)
-
-  * example: `<preference name="load-url-timeout" value="15000" />`
-
 -->
+

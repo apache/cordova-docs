@@ -27,13 +27,15 @@ File for information about global configuration options.
 * `DisallowOverscroll` (boolean, defaults to `false`): set to `true` if
   you don't want the WebView to rubber-band.
 
-        <preference name="DisallowOverscroll" value="fubar"/>
+        <preference name="DisallowOverscroll" value="true"/>
 
 * `TopActivityIndicator` (string, defaults to `gray`): this is the top
   spinning throbber in the status/battery bar, valid values are
   `whiteLarge`, `white`, and `gray`.
 
-        <preference name="TopActivityIndicator" value="fubar"/>
+        <preference name="TopActivityIndicator" value="white"/>
+
+<!-- QUERY: ??? -->
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
@@ -41,45 +43,49 @@ File for information about global configuration options.
   `onload` attribute of the `Geolocation` plugin to `true`
   instead.
 
-        <preference name="EnableLocation" value="fubar"/>
+        <preference name="EnableLocation" value="true"/>
+
+<!-- QUERY: deprecated? -->
 
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
   prevent viewport scaling through a meta tag.
 
-        <preference name="EnableViewportScale" value="fubar"/>
+        <preference name="EnableViewportScale" value="true"/>
+
+<!-- QUERY: Do viewport tags work in other environments? -->
 
 * `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
   control when the splashscreen is hidden through a JavaScript API.
 
-        <preference name="AutoHideSplashScreen" value="fubar"/>
+        <preference name="AutoHideSplashScreen" value="false"/>
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
   it.
 
-        <preference name="FadeSplashScreen" value="fubar"/>
+        <preference name="FadeSplashScreen" value="false"/>
 
 * `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
   Fade duration in seconds.
 
-        <preference name="FadeSplashScreenDuration" value="fubar"/>
+        <preference name="FadeSplashScreenDuration" value="4"/>
 
 * `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
   to hide the splash-screen spinner.
 
-        <preference name="ShowSplashScreenSpinner" value="fubar"/>
+        <preference name="ShowSplashScreenSpinner" value="false"/>
 
 * `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
   to true to not allow autoplayed HTML5 video.
 
-        <preference name="MediaPlaybackRequiresUserAction" value="fubar"/>
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
 * `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
   true to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
   attribute.
 
-        <preference name="AllowInlineMediaPlayback" value="fubar"/>
+        <preference name="AllowInlineMediaPlayback" value="true"/>
 
 * `BackupWebStorage` (string, defaults to `cloud`): valid values are
   `none`, `cloud` and `local`. Set to `cloud` to allow the web
@@ -87,26 +93,28 @@ File for information about global configuration options.
   allow local backups (iTunes sync). Set to `none` to not allow any
   backups of web storage.
 
-        <preference name="BackupWebStorage" value="fubar"/>
+        <preference name="BackupWebStorage" value="local"/>
 
 * `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
   set to false to open the keyboard when form elements get focus via
   the JavaScript focus() call.
 
-        <preference name="KeyboardDisplayRequiresUserAction" value="fubar"/>
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
 
 * `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
   to true to wait until all new view content has been received
   before it is rendered.
 
-        <preference name="SuppressesIncrementalRendering" value="fubar"/>
+        <preference name="SuppressesIncrementalRendering" value="true"/>
 
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set to
   true to hide the additional toolbar that is on top of the
   keyboard. This toolbar features the __Prev__, __Next__, and __Done__
   buttons.
 
-        <preference name="HideKeyboardFormAccessoryBar" value="fubar"/>
+        <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+
+<!-- QUERY: do form helpers only appear when there's >1 input? -->
 
 * `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
   shrink the WebView when the keyboard comes up. The WebView shrinks
@@ -115,7 +123,7 @@ File for information about global configuration options.
   of the WebView. This is the default behaviour on Android, and makes
   a lot of sense when building apps as opposed to webpages.
 
-        <preference name="KeyboardShrinksView" value="fubar"/>
+        <preference name="KeyboardShrinksView" value="true"/>
 
 <!--
 
@@ -231,3 +239,4 @@ File for information about global configuration options.
   * default is _true_
 
 -->
+
