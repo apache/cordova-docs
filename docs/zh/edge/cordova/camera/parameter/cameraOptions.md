@@ -66,6 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android 的怪癖
 
+*   任何 `cameraDirection` 值回朝的照片中的結果。
+
 *   忽略 `allowEdit` 參數。
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY`和 `Camera.PictureSourceType.SAVEDPHOTOALBUM` 都顯示相同的相冊。

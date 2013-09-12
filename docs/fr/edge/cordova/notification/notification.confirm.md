@@ -27,7 +27,7 @@ Affiche une boîte de dialogue de confirmation personnalisable.
 
 *   **titre**: titre de dialogue. *(String)* (Facultatif, par défaut`Confirm`)
 
-*   **buttonLabels**: chaîne séparée par des virgules qui spécifie les étiquettes des boutons. *(String)* (Facultatif, par défaut`OK,Cancel`)
+*   **buttonLabels**: tableau de chaînes spécifiant les étiquettes des boutons. *(Array)* (Optionnel, par défaut, [ `OK,Cancel` ])
 
 ## Description
 
@@ -62,7 +62,7 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

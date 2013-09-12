@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **標題**： 標題對話方塊。*（字串）*（可選，預設值為`Confirm`)
 
-*   **buttonLabels**： 指定按鈕標籤以逗號分隔的字串。*（字串）*（可選，預設值為`OK,Cancel`)
+*   **buttonLabels**： 指定按鈕標籤的字串陣列。*（陣列）*（可選，預設值為 [ `OK,Cancel` ])
 
 ## 說明
 
@@ -62,7 +62,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

@@ -66,6 +66,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Android の癖
 
+*   任意 `cameraDirection` 背面写真で結果の値します。
+
 *   無視、 `allowEdit` パラメーター。
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY``Camera.PictureSourceType.SAVEDPHOTOALBUM`両方のアルバムが表示されます同じ写真。

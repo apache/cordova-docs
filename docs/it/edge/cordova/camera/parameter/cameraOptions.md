@@ -66,6 +66,8 @@ Parametri opzionali per personalizzare le impostazioni della fotocamera.
 
 ## Stranezze Android
 
+*   Qualsiasi `cameraDirection` valore i risultati in una foto di lamatura.
+
 *   Ignora il `allowEdit` parametro.
 
 *   `Camera.PictureSourceType.PHOTOLIBRARY`e `Camera.PictureSourceType.SAVEDPHOTOALBUM` entrambi visualizzare l'album fotografico stesso.

@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # File
 
-> Un'API per leggere, scrivere e navigare gerarchie file di sistema, basati su [File API di W3C][1].
+> Un'API per leggere, scrivere e navigare gerarchie file di sistema, basati sul [w3c file api][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 
