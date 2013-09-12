@@ -26,16 +26,15 @@ config.xml File for information about global configuration options.
 
 ## Icons and Splash Screens
 
-BlackBerry icons __must be smaller__ then 16kb. BlackBerry also
-defines an optional hover state; this state allows for a separate icon
-to be displayed when a user uses the trackpad to roll over your icon
-image. By default the non-hover icon will be used as the hover state.
+BlackBerry icons __must be smaller__ than 16K. BlackBerry also defines
+an optional hover state that allows a separate icon to display when
+users roll a trackpad cursor over the icon image. By default, the
+non-hover icon displays for the hover state. Define icons as follows:
 
-        <icon src="icons/bb/icon.png" gap:platform="blackberry" />
+        <icon src="icons/bb/icon.png"       gap:platform="blackberry" />
         <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
 
-
-BlackBerry supports a single splash image and can be defined as below.
+BlackBerry supports a single splash screen image:
 
         <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
 
