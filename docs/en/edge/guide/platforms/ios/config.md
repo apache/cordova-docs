@@ -24,17 +24,16 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to iOS builds. See The config.xml
 File for information about global configuration options.
 
-## `<preference>`
-
-Various preferences (as `<preference>` tags) default on not breaking
-existing apps. The available preferences are:
-
 * `DisallowOverscroll` (boolean, defaults to `false`): set to `true` if
   you don't want the WebView to rubber-band.
+
+        <preference name="DisallowOverscroll" value="fubar"/>
 
 * `TopActivityIndicator` (string, defaults to `gray`): this is the top
   spinning throbber in the status/battery bar, valid values are
   `whiteLarge`, `white`, and `gray`.
+
+        <preference name="TopActivityIndicator" value="fubar"/>
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
@@ -42,29 +41,45 @@ existing apps. The available preferences are:
   `onload` attribute of the `Geolocation` plugin to `true`
   instead.
 
+        <preference name="EnableLocation" value="fubar"/>
+
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
   prevent viewport scaling through a meta tag.
 
+        <preference name="EnableViewportScale" value="fubar"/>
+
 * `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
   control when the splashscreen is hidden through a JavaScript API.
+
+        <preference name="AutoHideSplashScreen" value="fubar"/>
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
   it.
 
+        <preference name="FadeSplashScreen" value="fubar"/>
+
 * `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
   Fade duration in seconds.
+
+        <preference name="FadeSplashScreenDuration" value="fubar"/>
 
 * `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
   to hide the splash-screen spinner.
 
+        <preference name="ShowSplashScreenSpinner" value="fubar"/>
+
 * `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
   to true to not allow autoplayed HTML5 video.
+
+        <preference name="MediaPlaybackRequiresUserAction" value="fubar"/>
 
 * `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
   true to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
   attribute.
+
+        <preference name="AllowInlineMediaPlayback" value="fubar"/>
 
 * `BackupWebStorage` (string, defaults to `cloud`): valid values are
   `none`, `cloud` and `local`. Set to `cloud` to allow the web
@@ -72,18 +87,26 @@ existing apps. The available preferences are:
   allow local backups (iTunes sync). Set to `none` to not allow any
   backups of web storage.
 
+        <preference name="BackupWebStorage" value="fubar"/>
+
 * `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
   set to false to open the keyboard when form elements get focus via
   the JavaScript focus() call.
+
+        <preference name="KeyboardDisplayRequiresUserAction" value="fubar"/>
 
 * `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
   to true to wait until all new view content has been received
   before it is rendered.
 
+        <preference name="SuppressesIncrementalRendering" value="fubar"/>
+
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set to
   true to hide the additional toolbar that is on top of the
   keyboard. This toolbar features the __Prev__, __Next__, and __Done__
   buttons.
+
+        <preference name="HideKeyboardFormAccessoryBar" value="fubar"/>
 
 * `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
   shrink the WebView when the keyboard comes up. The WebView shrinks
@@ -91,6 +114,8 @@ existing apps. The available preferences are:
   applies to apps that position their elements relative to the bottom
   of the WebView. This is the default behaviour on Android, and makes
   a lot of sense when building apps as opposed to webpages.
+
+        <preference name="KeyboardShrinksView" value="fubar"/>
 
 <!--
 
@@ -107,6 +132,8 @@ existing apps. The available preferences are:
  #### WebView Bounce
 
 * `webviewbounce` with values `true` or `false`
+
+        <preference name="webviewbounce" value="fubar"/>
 
   * example: `<preference name="webviewbounce" value="false" />`
 
