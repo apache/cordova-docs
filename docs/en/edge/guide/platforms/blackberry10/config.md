@@ -30,13 +30,15 @@ config.xml File for information about global configuration options.
 
         <preference name="autoHideSplashScreen" value="false"/>
 
+<!-- autoHideSplashScreen vs iOS AutoHideSplashScreen: -->
+
 * `backgroundColor`: Specifies the background color of your app. The
   value must specify a color value in the ARGB pixel format using 8
   hexadecimal digits.
 
         <preference name="backgroundColor" value="0x00000000"/>
 
-<!-- QUERY: remove "0x" from above? Varies from Android -->
+<!-- QUERY BB: does backgroundColor take 00000000 or 0x00000000 as Android does? If former, how to spec? -->
 
 * `childBrowser`: Disables child browser windows. By default, when the
   content attempts to open a resource in a new window or tab (by using
@@ -58,7 +60,7 @@ config.xml File for information about global configuration options.
 
         <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
 
-<!-- QUERY: appears for >1 input? -->
+<!-- QUERY BB: hideKeyboardFormAccessoryBar vs iOS -->
 
 * `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the
   persistent orientation for screens in your app. By default, if you
@@ -66,7 +68,7 @@ config.xml File for information about global configuration options.
 
         <preference name="orientation" value="landscape"/>
 
-<!-- QUERY: different from default? -->
+<!-- QUERY: BB doc specifies its own "orientation" pref; Does it not recognize "default" as a value? Do no other platforms recognize "auto"?  -->
 
 * `popupBlocker`: Enables the popup blocker. By default, all popups
   are displayed by BlackBerry WebWorks apps in a child browser
@@ -75,6 +77,8 @@ config.xml File for information about global configuration options.
   specifying value as `enable`.
 
         <preference name="popupBlocker" value="enable"/>
+
+<!-- QUERY BB: for popupBlocker, clarify "popup" -->
 
 * `webSecurity`: Disables web security. Disabling web security allows
   you to access remote content from unknown sources during
@@ -86,7 +90,7 @@ config.xml File for information about global configuration options.
 
         <preference name="webSecurity" value="disable"/>
 
-<!--
+<!-- QUERY BB: does disable-cursor work?
 
  #### Disable Cursor
 

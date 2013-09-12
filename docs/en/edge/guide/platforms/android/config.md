@@ -24,7 +24,7 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information about global configuration options.
 
-<!-- QUERY: deprecated?
+<!-- QUERY A: is useBrowserHistory deprecated?
 
 * `useBrowserHistory` (boolean, defaults to `true`): set to `false` if
   you want to use the history shim that was used to work around the
@@ -38,30 +38,30 @@ config.xml File for information about global configuration options.
 * `loadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
-        <preference name="loadingDialog" value="Loading, Please wait for application"/>
+        <preference name="loadingDialog" value="Please wait, the app is loading"/>
 
 * `loadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
-        <preference name="loadingPageDialog" value="Loading, Please wait for data"/>
+        <preference name="loadingPageDialog" value="Please wait, the data is loading"/>
 
-<!-- QUERY: when do these apply? -->
+<!-- QUERY A: unclear when loadingDialog & loadingPageDialog would appear. Any examples? -->
 
 * `errorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
         <preference name="errorUrl" value="error.html"/>
 
-<!-- QUERY: when do these apply? -->
+<!-- QUERY A: under what conditions does the errorUrl page display? -->
 
 * `loadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
         <preference name="loadUrlTimeoutValue" value="20000"/>
 
-<!-- QUERY: expressed in milliseconds? 20000 default?-->
+<!-- QUERY A: is loadUrlTimeoutValue expressed in milliseconds? is 20000 the default?-->
 
-<!-- QUERY
+<!-- QUERY A: confirm loadUrlTimeoutValue replaces PGB's load-url-timeout
 
  #### Load URL timeout
 
@@ -85,7 +85,7 @@ config.xml File for information about global configuration options.
 
         <preference name="keepRunning" value="false"/>
 
-<!-- QUERY: does that mean in effect the app continues to execute following pause event? -->
+<!-- QUERY A: does keepRunning mean in effect the app continues to execute following pause event? Does event still fire? -->
 
 * `splashscreen`: The name of the file minus its extension in the
   `res/drawable` directory.  Multiple assets must share this common
@@ -99,9 +99,9 @@ config.xml File for information about global configuration options.
 
         <preference name="disallowOverscroll" value="true"/>
 
-<!-- QUERY: glow? -->
+<!-- QUERY A: describe the disallowOverscroll glow effect, or provide example -->
 
-<!--
+<!-- QUERY PGB A: do android-minSdkVersion, android-maxSdkVersion apply outside PG Build?
 
  #### Minimum and Maximum SDK Version
 
@@ -119,6 +119,10 @@ config.xml File for information about global configuration options.
   * minSdkVersion defaults to 7 (Android 2.1); maxSdkVersion is unset
     by default
 
+-->
+
+<!-- QUERY A: does android-installLocation apply outside PGB?
+
  #### Install Location
 
 * `android-installLocation` with values `internalOnly`, `auto` or `preferExternal`
@@ -135,6 +139,10 @@ config.xml File for information about global configuration options.
   * more details available in [the Android
     documentation](http://developer.android.com/guide/appendix/install-location.html)
 
+-->
+
+<!-- QUERY A: does splash-screen-duration apply outside PGB?
+
  #### Splash Screen Duration
 
   * `splash-screen-duration` with a value in milliseconds
@@ -150,4 +158,3 @@ config.xml File for information about global configuration options.
   * supported on PhoneGap 2.1.0 and above
   
 -->
-
