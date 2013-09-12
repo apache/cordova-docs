@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 파일
 
-> 읽기, 쓰기 및 [W3C 파일 API][1] 를 기반 파일 시스템 계층 구조를 탐색 하기 위한 API.
+> 읽기, API 작성 하 고 [w3c 파일 api][1] 기반 파일 시스템 계층 구조 탐색.
 
  [1]: http://www.w3.org/TR/FileAPI
 

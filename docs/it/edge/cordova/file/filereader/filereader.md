@@ -64,7 +64,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
 *   Windows Phone 7 e 8
 *   Windows 8
 
-## Leggere come dati URL
+## readAsDataURL
 
 **Parametri:**
 
@@ -81,14 +81,14 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Leggere come testo
+## readAsText
 
 **Parametri:**
 
@@ -107,14 +107,14 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Abortire rapido esempio
+## Abort
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ Il `FileReader` oggetto offre un modo per leggere i file dal sistema di file del
 
 *   Il parametro di **codifica** non è supportato, e codifica UTF8 è sempre attivo.
 
-## Letto come stringa binaria
+## readAsBinaryString
 
 Attualmente supportato solo su iOS e Android.
 
@@ -220,14 +220,14 @@ Attualmente supportato solo su iOS e Android.
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Leggere come matrice Buffer
+## readAsArrayBuffer
 
 Attualmente supportato solo su iOS e Android.
 
@@ -246,7 +246,7 @@ Attualmente supportato solo su iOS e Android.
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

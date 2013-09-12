@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **제목**: 제목 대화 상자. *(문자열)* (옵션, 기본값:`Confirm`)
 
-*   **buttonLabels**: 단추 레이블을 지정 하는 쉼표로 구분 된 문자열. *(문자열)* (옵션, 기본값:`OK,Cancel`)
+*   **buttonLabels**: 단추 레이블을 지정 하는 문자열 배열입니다. *(배열)* (옵션, 기본값은 [ `OK,Cancel` ])
 
 ## 설명
 
@@ -62,7 +62,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

@@ -64,7 +64,7 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Lire comme données URL
+## readAsDataURL
 
 **Paramètres :**
 
@@ -81,14 +81,14 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Lire sous forme de texte
+## readAsText
 
 **Paramètres :**
 
@@ -107,14 +107,14 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Abandon rapide exemple
+## abandonner.
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
 
 *   Le paramètre **encoding** n'est pas pris en charge, et le codage UTF8 est toujours en vigueur.
 
-## Lire comme chaîne binaire
+## readAsBinaryString
 
 Actuellement pris en charge sur iOS et Android uniquement.
 
@@ -220,14 +220,14 @@ Actuellement pris en charge sur iOS et Android uniquement.
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## Lu dans le tampon de tableau
+## readAsArrayBuffer
 
 Actuellement pris en charge sur iOS et Android uniquement.
 
@@ -246,7 +246,7 @@ Actuellement pris en charge sur iOS et Android uniquement.
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

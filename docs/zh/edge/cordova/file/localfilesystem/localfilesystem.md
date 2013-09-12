@@ -101,3 +101,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <p>Local File System</p>
       </body>
     </html>
+    
+
+# requestFileSystem
+
+> 請求一個檔案系統，用來存儲應用程式資料。
+
+     window.requestFileSystem(type, size, successCallback, errorCallback)
+    
+
+*   **視窗**： 對全球視窗物件的引用
+*   **類型**： 本地檔案系統類型，請參見場合常數
+*   **大小**： 指示應用程式期望需要多少存儲空間，以位元組為單位，
+*   **successCallback**： 使用一個檔案系統物件調用
+*   **errorCallback**： 如果發生錯誤的檢索檔案系統調用
+
+## 請求檔案系統快速示例
+
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+    
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);

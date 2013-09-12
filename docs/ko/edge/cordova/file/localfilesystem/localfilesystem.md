@@ -101,3 +101,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <p>Local File System</p>
       </body>
     </html>
+    
+
+# requestFileSystem
+
+> 응용 프로그램 데이터를 저장 하는 파일 시스템을 요청 합니다.
+
+     window.requestFileSystem(type, size, successCallback, errorCallback)
+    
+
+*   **창**: 글로벌 window 개체에 대 한 참조
+*   **형식**: 로컬 파일 시스템 형식, LocalFileSystem 상수 참조
+*   **크기**: 바이트에서 저장 공간이 얼마나 필요 기대 하는 응용 프로그램을 나타냅니다
+*   **successCallback**: 파일 시스템 개체와 호출
+*   **errorCallback**: 오류가 발생 하면 검색 파일 시스템 호출
+
+## 파일 시스템 빠른 예를 들어 요청
+
+    function onSuccess(fileSystem) {
+        console.log(fileSystem.name);
+    }
+    
+    // request the persistent file system
+    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);

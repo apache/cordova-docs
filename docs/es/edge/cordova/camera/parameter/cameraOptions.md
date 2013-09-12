@@ -66,9 +66,11 @@ Parámetros opcionales para personalizar la configuración de la cámara.
 
 ## Rarezas Android
 
+*   Cualquier valor de `cameraDirection` da como resultado una foto orientada hacia atrás.
+
 *   Ignora el `allowEdit` parámetro.
 
-*   `Camera.PictureSourceType.PHOTOLIBRARY`y `Camera.PictureSourceType.SAVEDPHOTOALBUM` ambas muestran el mismo álbum de fotos.
+*   `Camera.PictureSourceType.PHOTOLIBRARY` y `Camera.PictureSourceType.SAVEDPHOTOALBUM` Mostrar el mismo álbum de fotos.
 
 ## Rarezas de blackBerry
 

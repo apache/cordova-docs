@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 7 と 8
 *   Windows 8
 
-## データ URL として読む
+## readAsDataURL
 
 **パラメーター:**
 
@@ -81,14 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsDataURL(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## テキストとしての読み取り
+## readAsText
 
 **パラメーター:**
 
@@ -107,14 +107,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsText(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 簡単な例を中止します。
+## 中止
 
     function win(file) {
         var reader = new FileReader();
@@ -184,8 +184,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             reader.readAsText(file);
         }
     
-        function fail(evt) {
-            console.log(evt.target.error.code);
+        function fail(error) {
+            console.log(error.code);
         }
     
         </script>
@@ -201,7 +201,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **Encoding**パラメーターはサポートされていません、UTF8 エンコーディングが常に有効です。
 
-## バイナリ文字列として読み取る
+## readAsBinaryString
 
 現在 iOS と Android でのみサポートされています。
 
@@ -220,14 +220,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsBinaryString(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     
     entry.file(win, fail);
     
 
-## 配列バッファーとして読む
+## readAsArrayBuffer
 
 現在 iOS と Android でのみサポートされています。
 
@@ -246,7 +246,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         reader.readAsArrayBuffer(file);
     };
     
-    var fail = function (evt) {
+    var fail = function (error) {
         console.log(error.code);
     };
     

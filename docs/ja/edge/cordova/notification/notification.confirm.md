@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **タイトル**: ダイアログのタイトル。*(文字列)*(省略可能、既定値は`Confirm`)
 
-*   **buttonLabels**: ボタンのラベルを指定するコンマ区切り文字列。*(文字列)*(省略可能、既定値は`OK,Cancel`)
+*   **buttonLabels**: ボタンのラベルを指定する文字列の配列。*(配列)*(省略可能、既定値は [ `OK,Cancel` ])
 
 ## 説明
 
@@ -62,7 +62,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

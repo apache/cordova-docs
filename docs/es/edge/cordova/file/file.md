@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Archivo
 
-> Una API para leer, escribir y navegar por las jerarquías de sistema de archivo, basadas en la [API de archivo W3C][1].
+> Una API para leer, escribir y navegar por las jerarquías de sistema de archivo, basadas en la [api de archivo w3c][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 
@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   DirectoryEntry
 *   DirectoryReader
-*   File
+*   Archivo
 *   FileEntry
 *   FileError
 *   FileReader

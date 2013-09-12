@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ---
 
-# Vue d'ensemble
+# Présentation
 
 Cordova est un framework de développement mobile open-source. Il vous permet d'utiliser des technologies web standard tels que HTML5, CSS3 et JavaScript pour le développement multi-plateforme, en évitant de langue native development chaque mobile platforms. Les applications s'exécutent dans les wrappers ciblées pour chaque plate-forme et s'appuient sur les liaisons conforme aux normes d'API pour accéder aux capteurs de chaque appareil, les données et état du réseau.
 

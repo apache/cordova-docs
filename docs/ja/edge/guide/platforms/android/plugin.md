@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 プラグインの JavaScript の部分を常に使用して、 `cordova.exec` メソッドは次のように。
 
-    exec (< successFunction > < failFunction >, < サービス > < アクション > [< 引数 >]);
+    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 これは、アンドロイド ネイティブ側には、もっとまたはより少なく通話にダウン沸騰、WebView から要求をマーシャ リングします、 `action` 法、 `service` に渡された引数を持つクラス、 `args` 配列。

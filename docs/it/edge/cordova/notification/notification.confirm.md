@@ -27,7 +27,7 @@ Visualizza una finestra di dialogo conferma personalizzabile.
 
 *   **titolo**: titolo di dialogo. *(String)* (Opzionale, default è`Confirm`)
 
-*   **buttonLabels**: stringa separata da virgole che specifica etichette dei pulsanti. *(String)* (Opzionale, default è`OK,Cancel`)
+*   **buttonLabels**: matrice di stringhe che specificano le etichette dei pulsanti. *(Matrice)* (Opzionale, default è [ `OK,Cancel` ])
 
 ## Descrizione
 
@@ -62,7 +62,7 @@ Il callback accetta l'argomento `buttonIndex` *(numero)*, che è l'indice del pu
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ Il callback accetta l'argomento `buttonIndex` *(numero)*, che è l'indice del pu
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

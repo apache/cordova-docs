@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ファイル
 
-> 読み取り、書き込みおよび[W3C の File API][1]に基づくファイル システム階層をナビゲートする API.
+> 読んで、API を書くし、 [w3c ファイル api][1]に基づくファイル システム階層の移動.
 
  [1]: http://www.w3.org/TR/FileAPI
 

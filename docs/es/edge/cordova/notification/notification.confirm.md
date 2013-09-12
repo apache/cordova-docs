@@ -27,7 +27,7 @@ Muestra un cuadro de diálogo de confirmación personalizables.
 
 *   **título**: título de diálogo. *(String)* (Opcional, por defecto`Confirm`)
 
-*   **buttonLabels**: cadena separados por comas que especifica las etiquetas de botón. *(String)* (Opcional, por defecto`OK,Cancel`)
+*   **buttonLabels**: matriz de cadenas especificando las etiquetas de botón. *(Matriz)* (Opcional, por defecto [`OK, cancelar`])
 
 ## Descripción
 
@@ -62,7 +62,7 @@ La devolución de llamada toma el argumento `buttonIndex` *(número)*, que es el
             'You are the winner!', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Game Over',           // title
-            'Restart,Exit'         // buttonLabels
+            ['Restart','Exit']         // buttonLabels
         );
     }
     
@@ -99,7 +99,7 @@ La devolución de llamada toma el argumento `buttonIndex` *(número)*, que es el
                 'You are the winner!', // message
                  onConfirm,            // callback to invoke with index of button pressed
                 'Game Over',           // title
-                'Restart,Exit'         // buttonLabels
+                ['Restart','Exit']         // buttonLabels
             );
         }
     

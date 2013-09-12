@@ -24,14 +24,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 一個外掛程式的 JavaScript 部分始終使用 `cordova.exec` 方法，如下所示：
 
-    exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
+    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 這封送一個請求從 `UIWebView` 到 iOS 本機側，更或較不沸騰到調用 `action` 方法 `service` 類，傳入的參數中的 `args` 陣列。
 
 指定外掛程式作為 `<feature>` 在科爾多瓦 iOS 應用程式專案中的標記 `config.xml` 檔。
 
-    < 功能名稱 ="認為">< 參數名稱 ="ios 包"值 ="CDVLocalStorage"/ >< / 功能 >
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
     
 
 功能 `name` 屬性應匹配您在 JavaScript 中使用 `exec` 調用的 `service` 參數，和 `value` 屬性應與外掛程式的目標 C 類的名稱相匹配。 `<param name>`應始終是我 `"ios-package"` 。 如果不遵循此安裝程式，該外掛程式可能編譯，但不是會到達科爾多瓦。
@@ -40,7 +42,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 外掛程式物件的一個實例創建為生活的每個 `UIWebView` 。 外掛程式不會具現化之前他們第一次引用通過調用從 JavaScript，除非 `<param>` 與 `onload` `name` 屬性設置為 `"true"` 的 `config.xml` 。 例如：
 
-    < 功能名稱 ="回聲">< 參數名稱 ="ios 包"值 ="回聲"/ >< 參數名稱 ="onload"值 ="true"/ >< / 功能 >
+    <feature name="Echo">
+        <param name="ios-package" value="Echo" />
+        <param name="onload" value="true" />
+    </feature>
     
 
 有*沒有*指定外掛程式的初始值設定項。相反，應使用外掛程式 `pluginInitialize` 他們開辦的邏輯方法。
@@ -53,7 +58,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 什麼獲取調度到該外掛程式通過 JavaScript 的 `exec` 函數獲取傳遞到相應的外掛程式類的 `action` 方法。外掛程式的方法有此簽名：
 
-    -（失效） myMethod:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * myarg = [command.arguments objectAtIndex:0];如果 (myarg! = 無) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg 為空"] ；} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；}
+    - (void)myMethod:(CDVInvokedUrlCommand*)command
+    {
+        CDVPluginResult* pluginResult = nil;
+        NSString* myarg = [command.arguments objectAtIndex:0];
+    
+        if (myarg != nil) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+        }
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }
     
 
 1.  [CDVInvokedUrlCommand.h][1]
@@ -70,7 +86,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 使用 CDVPluginResult 可以返回結果類型的各種回您的 JavaScript 回呼函數，使用看起來像的類方法：
 
-    + (CDVPluginResult *) resultWithStatus： (CDVCommandStatus) statusOrdinal messageAs......
+    + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
     
 
 您可以創建 `String` ， `Int` ， `Double` ， `Bool` ， `Array` ， `Dictionary` ， `ArrayBuffer` ，和 `Multipart` 類型。 或者，不附加任何參數 (只是發送狀態)。 或者，返回一個錯誤。 你甚至可以選擇不發送任何外掛程式的結果，在這種情況下不會觸發回檔。
@@ -85,12 +101,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 我們會將以下內容添加到該專案的 `config.xml` 檔：
 
-    < 功能名稱 ="回聲">< 參數名稱 ="ios 包"值 ="回聲"/ >< / 功能 >
+    <feature name="Echo">
+        <param name="ios-package" value="Echo" />
+    </feature>
     
 
 然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 的外掛程式資料夾裡面我們科爾多瓦 iOS 應用程式資料夾中：
 
-    / --- Echo.h 科爾多瓦外掛程式頭 * * * / #import < Cordova/CDV.h > @interface 回聲： CDVPlugin-(void) echo:(CDVInvokedUrlCommand*) 命令 ；@end / * * * Echo.m 科爾多瓦外掛程式執行 * * * / #import"Echo.h"#import < Cordova/CDV.h > @implementation 回聲-（失效） echo:(CDVInvokedUrlCommand*) 命令 {CDVPluginResult * pluginResult = 零 ；NSString * 回聲 = [command.arguments objectAtIndex:0];如果 (回聲! = 無 & & [回聲長度] > 0) {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];} 其他 {pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];} [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；} @end
+    /********* Echo.h Cordova Plugin Header *******/
+    
+    #import <Cordova/CDV.h>
+    
+    @interface Echo : CDVPlugin
+    
+    - (void)echo:(CDVInvokedUrlCommand*)command;
+    
+    @end
+    
+    /********* Echo.m Cordova Plugin Implementation *******/
+    
+    #import "Echo.h"
+    #import <Cordova/CDV.h>
+    
+    @implementation Echo
+    
+    - (void)echo:(CDVInvokedUrlCommand*)command
+    {
+        CDVPluginResult* pluginResult = nil;
+        NSString* echo = [command.arguments objectAtIndex:0];
+    
+        if (echo != nil && [echo length] > 0) {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+        } else {
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        }
+    
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }
+    
+    @end
     
 
 讓我們看看代碼。在頂部，我們有所有必要的科爾多瓦進口。我們班延伸從 `CDVPlugin` （非常重要）。
@@ -105,10 +154,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 在相同的 UI 執行緒中執行的外掛程式方法。如果你的外掛程式需要大量的處理，或者需要一個阻塞調用，則應使用後臺執行緒。例如：
 
-    -（失效） myPluginMethod:(CDVInvokedUrlCommand*) 命令 {/ / 檢查 command.arguments 在這裡。
-        [self.commandDelegate runInBackground: ^ {NSString * 有效載荷 = 零 ；/ 有些阻塞的邏輯......
-            CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];/ / SendPluginResult 方法是執行緒安全的。
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId] ；}];}
+    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+    {
+        // Check command.arguments here.
+        [self.commandDelegate runInBackground:^{
+            NSString* payload = nil;
+            // Some blocking logic...
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+            // The sendPluginResult method is thread-safe.
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }];
+    }
     
 
 ## 高級的外掛程式功能
