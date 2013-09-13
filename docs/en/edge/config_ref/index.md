@@ -140,21 +140,13 @@ The following global preferences apply to all platforms:
 The following preferences apply to more than one platform, but not to
 all of them:
 
-* `DisallowOverscroll` (boolean, defaults to `false`):
-  set to `true` if you don't want the WebView to rubber-band.
+* `DisallowOverscroll` (boolean, defaults to `false`): set to `true`
+  if you don't want the WebView to bounce and snap back when scrolling
+  past the beginning or end of the content.
 
         <preference name="DisallowOverscroll" value="true"/>
 
   Applies to Android and iOS.
-
-<!-- QUERY A: describe the disallowOverscroll glow effect, or provide example 
-
-* `DisallowOverscroll` (boolean, defaults to `false`): set to `true` to
-  disable the glow when a user scrolls beyond the edge of the webview.
-
-        <preference name="disallowOverscroll" value="true"/>
-
--->
 
 * `BackgroundColor`: Set the app's background color.  Supports a
   four-byte hex value, with the first byte representing an alpha
