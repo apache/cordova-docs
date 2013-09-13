@@ -160,9 +160,9 @@ following defines splash screens for each type of screen:
 
         <preference name="KeyboardShrinksView" value="true"/>
 
-<!-- QUERY I: ___ -->
+<!-- QUERY I: describe KeyboardShrinksView; shrink webview when keyboard appears -->
 
-<!--
+<!-- QUERY I: is target-device OK? 
 
  #### Target a Specific Device
 
@@ -173,6 +173,10 @@ following defines splash screens for each type of screen:
 
   * please note that this currently only applies to iOS builds; by
     default all builds are universal
+
+-->
+
+<!-- QUERY I: Is webviewbounce OK? 
 
  #### WebView Bounce
 
@@ -185,6 +189,10 @@ following defines splash screens for each type of screen:
   * controls whether the screen "bounces" when scrolled beyond the top
     or bottom on iOS. By default, the bounce is _on_
 
+-->
+
+<!-- QUERY I: Is prerendered-icon OK?
+
  #### Prerendered Icon
 
 * `prerendered-icon` with values `true` or `false`
@@ -195,6 +203,10 @@ following defines splash screens for each type of screen:
     icon on the user's home screen
 
   * default is _false_
+
+-->
+
+<!-- QUERY I: Is deprecated stay-in-webview still enabled? 
 
  #### Open all links in WebView
 
@@ -215,6 +227,10 @@ following defines splash screens for each type of screen:
 
   * default is _false_
 
+-->
+
+<!-- QUERY I: Is ios-statusbarstyle OK?
+
  #### Status Bar Style
 
 * `ios-statusbarstyle` with values `default`, `black-opaque` or
@@ -228,6 +244,10 @@ following defines splash screens for each type of screen:
     does not extend beneath the status bar, so it will appear
     identical to `black-opaque` once your app is running
 
+-->
+
+<!-- QUERY I: Is detect-data-types OK?
+
  #### Detect Data Types
 
 * `detect-data-types` with values `true` or `false`
@@ -240,6 +260,10 @@ following defines splash screens for each type of screen:
 
   * supported on PhoneGap 2.0.0 and above
 
+-->
+
+<!-- QUERY I: Is exit-on-suspend OK?
+
  #### Exit On Suspend
 
 * `exit-on-suspend` with values `true` or `false`
@@ -250,6 +274,10 @@ following defines splash screens for each type of screen:
     when home button is pressed
 
   * default is _false_
+
+-->
+
+<!-- QUERY I: Is show-splash-screen-spinner OK?
 
  #### Show Splash Screen Spinner
 
@@ -262,6 +290,10 @@ following defines splash screens for each type of screen:
     during app loading
 
   * default is _true_
+
+-->
+
+<!-- QUERY I: Is auto-hide-splash-screen OK?
 
  #### Auto-Hide Splash Screen
 
@@ -276,4 +308,20 @@ following defines splash screens for each type of screen:
   * default is _true_
 
 -->
+
+## Custom URL Schemes
+
+On iOS, adding a `<gap:url-scheme>` element allows you to register
+[custom URL schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50), as in the following example:
+
+        <gap:url-scheme name="com.acme.myscheme" role="None">
+          <scheme>pgbr</scheme>
+          <scheme>pgbw</scheme>
+        </gap:url-scheme>
+
+The optional `name` attribute defaults to the app's bundle id. It must
+be unique, otherwise the build fails.  The optional `role` must be
+either `Editor`, `Viewer`, `Shell`, or `None`.  At least one `scheme`
+must be registered.
+
 

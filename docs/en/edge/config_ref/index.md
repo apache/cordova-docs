@@ -160,75 +160,42 @@ the Plugin Development Guide for more information on plugins.
 ## Icons and Splash Screens
 
 By default, Cordova generates icons based on the root application
-directory's `icon.png` file. Otherwise, adding the `<icon>` tag to the
-`config.xml` file allows you to specify a different filename:
+directory's `icon.png` file. Otherwise, adding `<icon>` elements to
+the `config.xml` file allows you to specify a different default
+filename, or platform-specific icons.  The `width` and `height`
+attributes are optional:
 
-        <icon src="app.png" />
+        <icon src="app.png" width="128" height="128"/>
 
-To define platform-specific icons, consult each platform's
-configuration options:
+Likewise, the default splash screen must be named `splash.png` and
+must reside in the root of your application folder in _png_
+format. Otherwise, use the `gap:splash` tag to specify a different
+filename:
+
+        <gap:splash src="app_splash.png" />
+
+The `gap:platform` attribute specifies custom splash screens for
+target platforms. For example:
+
+        <gap:splash src="splash/ios/Default-568h@2x~iphone.png"
+                gap:platform="ios" width="320" height="480" />
+
+If the `gap:platform` attribute is not specified, the referenced file
+is copied to _all_ platforms, unnecessarily increasing the size of the
+application package.
+
+<!-- QUERY: confirm default icon.png, splash.png; or is cordova icon the default? -->
+
+To define platform-specific icons and splash screens, consult each
+platform's configuration options:
 
 - iOS Configuration
 - Android Configuration
 - BlackBerry Configuration
 
-
-Icon files should be the file formats specified in the examples below,
-other file types are not guaranteed to work across platforms.
-
-<!-- QUERY: fishes for icon.png by default? Or is cordova icon the default? -->
-
-Add the `<icon> element`
-
 <!-- !!!
 
- ### Icon Support
-
-* `<icon>`: You can have zero or more of these elements present in
-  your `config.xml`. If you do not specify a icon then the PhoneGap
-  logo will be used as your application's icon.
-
-  * `src`: (required) specifies the location of the image file,
-    relative to your `www` directory
-
-  * `width`: (optional) but recommended to include, width in pixels
-
-  * `height`: (optional) but recommended to include, height in pixels
-
- #### Usage and Additional Information:
-
-
- #### Default
-
-The default icon must be named `icon.png` and must reside in the root
-of your application folder.
-
-        <icon src="icon.png" />
-
-
-
  # Using config.xml
-
-Apps built using Adobe PhoneGap Build can be set up either through
-our web interface, or by using a `config.xml`. The `config.xml` file,
-as specified in the [W3C widget
-specification](http://www.w3.org/TR/widgets/), allows developers to
-easily specify metadata about their applications. You can see a sample
-`config.xml` with our [PhoneGap
-Start](https://github.com/phonegap/phonegap-start/blob/master/www/config.xml)
-application.
-
-One thing to note: please ensure that your `config.xml` file is at the
-top level of your application (the same level as your `index.html`
-file). Otherwise it will not be loaded correctly.
-
-We're continually adding features to cour `config.xml` support, to
-give PhoneGap Build developers more power to customize their apps. If
-there are any specific features you'd like to see support for, [please
-let us
-know](http://getsatisfaction.com/nitobi/products/nitobi_phonegap_build).
-
- ## Other Useful Elements
 
  #### Windows Phone
 
@@ -248,37 +215,6 @@ notifications.
 
  ### Splash Screens
 
-You can have zero or more of these elements present in your
-`config.xml`. This element can have `src`, `gap:platform`, `width` and
-`height` attributes, just like the `<icon>` element above. Like icon
-files, your splash screens should be saved as `png` files.
-
-	<gap:splash src="splash/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />
-
- #### Usage and Additional Information:
-
-Unless otherwise specified in a config.xml, each platform will try to
-use the default `splash.png` during compilation. To define platform
-specific splash screens please use the guide provided below.
-
-<!-- QUERY: is there a default splash.png, like icon.png? -->
-
-Splash files should be the file formats specified in the examples
-below. Any other file type is not guaranteed to work across platforms.
-
- ##### Warning:
-
-If you do not supply the `gap:platform` attribute, the referenced
-image will be copied to ALL platforms, increasing the size of their
-application packages.
-
- #### Default
-
-The default splash must be named `splash.png` and must reside in the
-root of your application folder.
-
-        <gap:splash src="splash.png" />
-
  #### Windows Phone
 
 Windows Phone supports a single splash image and can be defined as
@@ -286,33 +222,6 @@ below.  Unlike the other supported platforms, Windows Phone splash
 screen should be in `jpg` format
 
         <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
-
- ### Custom URL Schemes
-
-iOS Only. Allows registration of [custom URL
-schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50).
-
-        <gap:url-scheme name="com.acme.myscheme" role="None">
-          <scheme>pgbr</scheme>
-          <scheme>pgbw</scheme>
-        </gap:url-scheme>
-
-* multiple `gap:url-scheme` elements can be present.
-
-* `name`, optional, defaults to the application bundle id. This has to
-  be unique. If a duplicate is found the build will fail.
-
-* `role` must be `Editor`, `Viewer`, `Shell` or `None`, optional,
-  defaults to `None`.
-
-* at least one `scheme` must be present.
-
- ### Features 
-
-* `<feature>`: the feature element can be used to specify which
-features your application is using. If you specify features of the
-PhoneGap API, those will be expanded to the appropriate permissions
-for you application.
 
  #### Custom Debug Server
 
@@ -322,7 +231,7 @@ for your application. By default PhoneGap Build uses
 adding the following to your `config.xml`.
 
         <feature name="debug-server" required="true">
-           <param name="domain" value="http://debug.custom.com"/>
+           <param name="domain" value="http://debug.example.com"/>
            <param name="key" value="some_unique_key"/>
         </feature>
 
