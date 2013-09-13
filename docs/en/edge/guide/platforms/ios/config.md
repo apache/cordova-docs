@@ -80,6 +80,11 @@ following defines splash screens for each type of screen:
 
 <!-- QUERY: Do viewport meta tags work as expected in other environments? -->
 
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
+  control when the splashscreen is hidden through a JavaScript API.
+
+        <preference name="AutoHideSplashScreen" value="false"/>
+
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
   it.

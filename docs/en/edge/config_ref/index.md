@@ -140,10 +140,12 @@ The following global preferences apply to all platforms:
 The following preferences apply to more than one platform, but not to
 all of them:
 
-* `DisallowOverscroll` (boolean, defaults to `false`; Android, iOS):
+* `DisallowOverscroll` (boolean, defaults to `false`):
   set to `true` if you don't want the WebView to rubber-band.
 
         <preference name="DisallowOverscroll" value="true"/>
+
+  Applies to Android and iOS.
 
 <!-- QUERY A: describe the disallowOverscroll glow effect, or provide example 
 
@@ -162,22 +164,6 @@ all of them:
         <preference name="backgroundColor" value="0xffff0000"/>
 
   Applies to Android and BlackBerry.
-
-* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false`
-  to control when the splash screen image is hidden through a
-  JavaScript API.
-
-        <preference name="AutoHideSplashScreen" value="false"/>
-
-<!-- autoHideSplashScreen vs iOS AutoHideSplashScreen:
-
-* `AutoHideSplashScreen`: (`true` or `false`): Set to `false` to
-  control when the splash screen image is hidden through a JavaScript
-  API. This preference defaults to true.
-
-        <preference name="autoHideSplashScreen" value="false"/>
-
--->
 
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
   to `true` to hide the additional toolbar that is on top of the
@@ -202,8 +188,6 @@ all of them:
         <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
 
 -->
-
-<!-- @@@ -->
 
 ## The `<feature>` Element
 
