@@ -110,18 +110,10 @@ The following global preferences apply to all platforms:
 
   __NOTE:__ The `default` value means _both_ landscape and portrait
   orientations are enabled.  If you want to use each platform's
-  default settings (usually portrait-only), leave this tag out of
-  the `config.xml` file.
-
-<!-- QUERY: BB doc specifies its own "orientation" pref; Does it not recognize "default" as a value? Do no other platforms recognize "auto"?  
-
-* `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the
-  persistent orientation for screens in your app. By default, if you
-  do not specify a screen orientation, the orientation is set to auto.
-
-        <preference name="orientation" value="landscape"/>
-
--->
+  default settings (usually portrait-only), leave this tag out of the
+  `config.xml` file. Also, BlackBerry uses `auto` instead of `default`
+  in its `config.xml` file. If you specify `default` in the global
+  `config.xml`, it translates to `auto` in the BlackBerry build.
 
 - `fullscreen` allows you to hide the status bar at the top of the
   screen. The default value is `false`. Example:
