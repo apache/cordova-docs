@@ -163,21 +163,13 @@ all of them:
 -->
 
 * `BackgroundColor`: Set the app's background color.  Supports a
-  four-byte hex value, with the first byte representing and alpha
-  channel, and standard RGB values for the following three bytes.  The
-  example below defines black:
+  four-byte hex value, with the first byte representing an alpha
+  channel, and standard RGB values for the following three bytes.  This
+  example specifies red:
 
-        <preference name="backgroundColor" value="0x00000000"/>
+        <preference name="backgroundColor" value="0xffff0000"/>
 
-<!-- QUERY BB: does backgroundColor take 00000000 or 0x00000000 as Android does? If former, how to spec?
-
-* `BackgroundColor`: Specifies the background color of your app. The
-  value must specify a color value in the ARGB pixel format using 8
-  hexadecimal digits.
-
-        <preference name="backgroundColor" value="0x00000000"/>
-
--->
+  Applies to Android and BlackBerry.
 
 * `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false`
   to control when the splash screen image is hidden through a
