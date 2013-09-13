@@ -164,6 +164,8 @@ all of them:
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
+  Applies to iOS and BlackBerry.
+
 <!-- QUERY: for HideKeyboardFormAccessoryBar, does form-helper UI only appear when there's >1 input? -->
 
 <!-- BB version:
