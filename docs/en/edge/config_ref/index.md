@@ -34,8 +34,8 @@ this file in various subdirectories within `platforms`. If you use the
 CLI to create a project, but then shift your workflow to an SDK, the
 platform-specific file serves as a source.
 
-This section details global configuration options. See the following
-sections for platform-specific options:
+This section details global and cross-platform configuration options.
+See the following sections for platform-specific options:
 
 - iOS Configuration
 - Android Configuration
