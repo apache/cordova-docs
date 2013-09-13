@@ -95,39 +95,130 @@ platforms:
   to access any server. See the Domain Whitelist Guide for details.
 
 - The `<preference>` tag sets various options, many of which are
-  unique to specific platforms. The following preferences apply
-  globally:
+  unique to specific platforms. The following sections detail
+  preferences that apply to more than one platform.
 
-<!-- PGB 
+## Global Preferences
 
-  - `phonegap-version` specifies the version of PhoneGap to use when
-    building the app using the PhoneGap Build interface, or the CLI's
-    `remote` feature described in The Command-line Interface. Example:
+The following global preferences apply to all platforms:
 
-        <preference name="phonegap-version" value="2.9.0" />
-
-    Currently supported versions are __2.0.0__, __2.1.0__, __2.2.0__,
-    __2.3.0__, __2.5.0__, __2.7.0__, and __2.9.0__ (the default).  all
-    versions prior to __2.0.0__ are deprecated. Specifying an
-    unsupported version number prevents the project from building.
-
--->
-
-  - `orientation` allows you to fix orientation and prevent changes
-    from rotating the interface. Possible values are `default`,
-    `landscape`, or `portrait`. Example:
+- `orientation` allows you to fix orientation and prevent changes
+  from rotating the interface. Possible values are `default`,
+  `landscape`, or `portrait`. Example:
 
         <preference name="orientation" value="landscape" />
 
-    __NOTE:__ The `default` value means _both_ landscape and portrait
-    orientations are enabled.  If you want to use each platform's
-    default settings (usually portrait-only), leave this tag out of
-    the `config.xml` file.
+  __NOTE:__ The `default` value means _both_ landscape and portrait
+  orientations are enabled.  If you want to use each platform's
+  default settings (usually portrait-only), leave this tag out of
+  the `config.xml` file.
 
-  - `fullscreen` allows you to hide the status bar at the top of the
-    screen. The default value is `false`. Example:
+<!-- QUERY: BB doc specifies its own "orientation" pref; Does it not recognize "default" as a value? Do no other platforms recognize "auto"?  
+
+* `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the
+  persistent orientation for screens in your app. By default, if you
+  do not specify a screen orientation, the orientation is set to auto.
+
+        <preference name="orientation" value="landscape"/>
+
+-->
+
+- `fullscreen` allows you to hide the status bar at the top of the
+  screen. The default value is `false`. Example:
 
         <preference name="fullscreen" value="true" />
+
+<!-- PGB 
+
+- `phonegap-version` specifies the version of PhoneGap to use when
+  building the app using the PhoneGap Build interface, or the CLI's
+  `remote` feature described in The Command-line Interface. Example:
+
+        <preference name="phonegap-version" value="2.9.0" />
+
+  Currently supported versions are __2.0.0__, __2.1.0__, __2.2.0__,
+  __2.3.0__, __2.5.0__, __2.7.0__, and __2.9.0__ (the default).  all
+  versions prior to __2.0.0__ are deprecated. Specifying an
+  unsupported version number prevents the project from building.
+
+-->
+
+## Multi-platform Preferences
+
+The following preferences apply to more than one platform, but not to
+all of them:
+
+* `DisallowOverscroll` (boolean, defaults to `false`; Android, iOS):
+  set to `true` if you don't want the WebView to rubber-band.
+
+        <preference name="DisallowOverscroll" value="true"/>
+
+<!-- QUERY A: describe the disallowOverscroll glow effect, or provide example 
+
+* `DisallowOverscroll` (boolean, defaults to `false`): set to `true` to
+  disable the glow when a user scrolls beyond the edge of the webview.
+
+        <preference name="disallowOverscroll" value="true"/>
+
+-->
+
+* `BackgroundColor`: Set the app's background color.  Supports a
+  four-byte hex value, with the first byte representing and alpha
+  channel, and standard RGB values for the following three bytes.  The
+  example below defines black:
+
+        <preference name="backgroundColor" value="0x00000000"/>
+
+<!-- QUERY BB: does backgroundColor take 00000000 or 0x00000000 as Android does? If former, how to spec?
+
+* `BackgroundColor`: Specifies the background color of your app. The
+  value must specify a color value in the ARGB pixel format using 8
+  hexadecimal digits.
+
+        <preference name="backgroundColor" value="0x00000000"/>
+
+-->
+
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
+  control when the splashscreen is hidden through a JavaScript API.
+
+        <preference name="AutoHideSplashScreen" value="false"/>
+
+<!-- autoHideSplashScreen vs iOS AutoHideSplashScreen:
+
+* `AutoHideSplashScreen`: (`true` or `false`): Set to `false` to
+  control when the splashscreen is hidden through a JavaScript
+  API. This preference defaults to true.
+
+        <preference name="autoHideSplashScreen" value="false"/>
+
+-->
+
+* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
+  to `true` to hide the additional toolbar that is on top of the
+  keyboard.  This toolbar features the __Prev__, __Next__, and
+  __Done__ buttons.
+
+        <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+
+<!-- QUERY: for HideKeyboardFormAccessoryBar, does form-helper UI only appear when there's >1 input? -->
+
+<!-- BB version:
+
+* `HideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the
+  keyboard form accessory bar in an HTML form. The keyboard form
+  accessory bar is a row of buttons (__Previous__, __Next__, and
+  __Submit__) that the user can use to navigate through a form.  By
+  default, when a WebWorks app contains an HTML form and an `<input>`
+  element gets focus, WebWorks displays this form accessory bar. This
+  feature allows you to prevent your app from displaying the form
+  accessory bar by specifying value as `enable`.
+
+        <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
+
+-->
+
+<!-- @@@ -->
 
 ## The `<feature>` Element
 
@@ -190,7 +281,7 @@ application package.
 To define platform-specific icons and splash screens, consult each
 platform's configuration options listed at the top of this section.
 
-<!-- !!!
+<!-- remaining PGB doc for config.xml:
 
  #### Custom Debug Server
 

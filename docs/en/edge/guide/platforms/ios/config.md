@@ -53,11 +53,6 @@ following defines splash screens for each type of screen:
 
 ## iOS Preferences
 
-* `DisallowOverscroll` (boolean, defaults to `false`): set to `true` if
-  you don't want the WebView to rubber-band.
-
-        <preference name="DisallowOverscroll" value="true"/>
-
 * `TopActivityIndicator` (string, defaults to `gray`): this is the top
   spinning throbber in the status/battery bar, valid values are
   `whiteLarge`, `white`, and `gray`.
@@ -84,11 +79,6 @@ following defines splash screens for each type of screen:
 <!-- QUERY I: confirm EnableViewportScale allows viewport metatag to control range of scale, including disabling? -->
 
 <!-- QUERY: Do viewport meta tags work as expected in other environments? -->
-
-* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
-  control when the splashscreen is hidden through a JavaScript API.
-
-        <preference name="AutoHideSplashScreen" value="false"/>
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
@@ -141,15 +131,6 @@ following defines splash screens for each type of screen:
   before it is rendered.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
-
-* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
-  to `true` to hide the additional toolbar that is on top of the
-  keyboard.  This toolbar features the __Prev__, __Next__, and
-  __Done__ buttons.
-
-        <preference name="HideKeyboardFormAccessoryBar" value="true"/>
-
-<!-- QUERY: for HideKeyboardFormAccessoryBar, does form-helper UI only appear when there's >1 input? -->
 
 * `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
   shrink the WebView when the keyboard comes up. The WebView shrinks

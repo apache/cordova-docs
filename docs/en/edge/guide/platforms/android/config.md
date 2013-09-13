@@ -45,7 +45,7 @@ The following defines splash screens for each screen type:
 
 <!-- QUERY A: is useBrowserHistory deprecated?
 
-* `useBrowserHistory` (boolean, defaults to `true`): set to `false` if
+* `UseBrowserHistory` (boolean, defaults to `true`): set to `false` if
   you want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
@@ -54,26 +54,26 @@ The following defines splash screens for each screen type:
 
 -->
 
-* `loadingDialog`: Display a native loading dialog when loading the
+* `LoadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
         <preference name="loadingDialog" value="Please wait, the app is loading"/>
 
-* `loadingPageDialog`: Display a native loading dialog when loading
+* `LoadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
         <preference name="loadingPageDialog" value="Please wait, the data is loading"/>
 
 <!-- QUERY A: unclear when loadingDialog & loadingPageDialog would appear. Any examples? -->
 
-* `errorUrl`: Set the error page for your application. Should be
+* `ErrorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
         <preference name="errorUrl" value="error.html"/>
 
 <!-- QUERY A: under what conditions does the errorUrl page display? -->
 
-* `loadUrlTimeoutValue`: How much time Cordova should wait before
+* `LoadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
         <preference name="loadUrlTimeoutValue" value="20000"/>
@@ -92,33 +92,19 @@ The following defines splash screens for each screen type:
 
 -->
 
-* `backgroundColor`: Set the app's background color.  Supports a
-  four-byte hex value, with the first byte representing and alpha
-  value, and standard RGB values for the following three bytes.  The
-  example below is black:
-
-        <preference name="backgroundColor" value="0x00000000"/>
-
-* `keepRunning` (boolean, defaults to `true`): Determines whether
+* `KeepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
 
         <preference name="keepRunning" value="false"/>
 
 <!-- QUERY A: does keepRunning mean in effect the app continues to execute following pause event? Does event still fire? -->
 
-* `splashscreen`: The name of the file minus its extension in the
-  `res/drawable` directory.  Multiple assets must share this common
-  name in various subdirectories.  For details, see the _Icons_
-  section in The config.xml File.
+* `SplashScreen`: The name of the file minus its extension in the
+  `res/drawable` directory.  Various assets must share this common
+  name in various subdirectories.  For details, see the _Icons and
+  Splash Screens_ section in The config.xml File.
 
         <preference name="splashscreen" value="splash"/>
-
-* `disallowOverscroll` (boolean, defaults to `false`): set to `true` to
-  disable the glow when a user scrolls beyond the edge of the webview.
-
-        <preference name="disallowOverscroll" value="true"/>
-
-<!-- QUERY A: describe the disallowOverscroll glow effect, or provide example -->
 
 <!-- QUERY PGB A: do android-minSdkVersion, android-maxSdkVersion apply outside PG Build?
 
