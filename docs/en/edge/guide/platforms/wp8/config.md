@@ -17,10 +17,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry Configuration
+# Windows Phone Configuration
 
-BlackBerry fully supports the
-[W3C Widget Specification](http://www.w3.org/TR/widgets/)
-as well as proprietary RIM extensions. Please see the full
-[BlackBerry WebWorks documentation regarding config.xml](https://developer.blackberry.com/html5/documentation/working_with_config_xml_file_1866970_11.html)
-for details.
+The `config.xml` file controls an app's basic settings that apply
+across each application and CordovaWebView instance. This section
+lists image-related settings that only apply to Windows Phone builds.
+See The config.xml File for information on global configuration
+options.
+
+Cordova supports two kinds of Windows Phone icons, a regular icon and
+a background tile image:
+
+        <icon src="icons/winphone/icon.png"     gap:platform="winphone" />
+        <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+
+Windows Phone supports a single splash screen image as shown below.
+Unlike other platforms, the image should be in _jpg_ format:
+
+        <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
+

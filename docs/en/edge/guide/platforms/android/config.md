@@ -19,47 +19,147 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Configuration
 
-The `config.xml` file controls various Cordova settings. These apply
-across the application, and per CordovaWebView instance.
+The `config.xml` file controls an app's basic settings that apply
+across each application and CordovaWebView instance. This section
+details preferences that only apply to Android builds. See The
+config.xml File for information on global configuration options.
 
-## `<preference>`
+## Icons and Splash Screens
 
-Various other preferences (as `<preference>` tags) default on not
-breaking existing apps. The available preferences are:
+Cordova supports images for _ldpi_, _mdpi_, _hdpi_, and _xhdpi_
+displays. The following defines icons for each type of screen:
 
-* `useBrowserHistory` (boolean, defaults to `true`): set to `false` if you
-  want to use the history shim that was used to work around the
+        <icon src="icons/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
+        <icon src="icons/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
+        <icon src="icons/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
+        <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+The following defines splash screens for each screen type:
+
+        <gap:splash src="splash/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
+        <gap:splash src="splash/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
+        <gap:splash src="splash/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
+        <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+## Android Preferences
+
+<!-- QUERY A: is useBrowserHistory deprecated?
+
+* `UseBrowserHistory` (boolean, defaults to `true`): set to `false` if
+  you want to use the history shim that was used to work around the
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
 
-* `loadingDialog`: Display a native loading dialog when loading the
+        <preference name="useBrowserHistory" value="false"/>
+
+-->
+
+* `LoadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
-* `loadingPageDialog`: Display a native loading dialog when loading
+        <preference name="loadingDialog" value="Please wait, the app is loading"/>
+
+* `LoadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
-* `errorUrl`: Set the error page for your application. Should be
+        <preference name="loadingPageDialog" value="Please wait, the data is loading"/>
+
+<!-- QUERY A: unclear when loadingDialog & loadingPageDialog would appear. Any examples? -->
+
+* `ErrorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
-* `backgroundColor`: Set the background color for your application.
-  Supports a four-byte hex value, with the first byte representing
-  alpha value, and the following three bytes with standard RGB
-  values. For example, `0x00000000` is black.
+        <preference name="errorUrl" value="error.html"/>
 
-* `loadUrlTimeoutValue`: How much time Cordova should wait before
+<!-- QUERY A: under what conditions does the errorUrl page display? -->
+
+* `LoadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
-* `keepRunning` (boolean, defaults to `true`): Determines whether
+        <preference name="loadUrlTimeoutValue" value="20000"/>
+
+<!-- QUERY A: is loadUrlTimeoutValue expressed in milliseconds? is 20000 the default?-->
+
+<!-- QUERY A: confirm loadUrlTimeoutValue replaces PGB's load-url-timeout
+
+ #### Load URL timeout
+
+  * `load-url-timeout` with a value in milliseconds
+
+  * defaults to 20000 (20 seconds)
+
+  * example: `<preference name="load-url-timeout" value="15000" />`
+
+-->
+
+* `KeepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
 
-* `splashscreen`: The name of the file minus its extension in the
-  `res/drawable` directory.  If you have multiple assets, they all
-  must share this common name in their respective directories.
+        <preference name="keepRunning" value="false"/>
 
-* `disallowOverscroll` (boolean, defaults to `false`): set to `true` to
-  disable the glow when a user scrolls beyond the edge of the webview.
+<!-- QUERY A: does keepRunning mean in effect the app continues to execute following pause event? Does event still fire? -->
 
-## `<plugin>`
+* `SplashScreen`: The name of the file minus its extension in the
+  `res/drawable` directory.  Various assets must share this common
+  name in various subdirectories.  For details, see the _Icons and
+  Splash Screens_ section in The config.xml File.
 
-Android supports using `<feature>` as analogues to `<plugin>` elements.
+        <preference name="splashscreen" value="splash"/>
 
+<!-- QUERY PGB A: do android-minSdkVersion, android-maxSdkVersion apply outside PG Build?
+
+ #### Minimum and Maximum SDK Version
+
+* `android-minSdkVersion` and/or `android-maxSdkVersion`, with integer
+  values
+
+  * minSdkVersion example: `<preference name="android-minSdkVersion" value="10" />`
+
+  * maxSdkVersion example: `<preference name="android-maxSdkVersion" value="15" />`
+
+  * corresponds to the `usesSdk` attributes in the
+    `AndroidManifest.xml` file - more details are in [the Android
+    documentation](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
+
+  * minSdkVersion defaults to 7 (Android 2.1); maxSdkVersion is unset
+    by default
+
+-->
+
+<!-- QUERY A: does android-installLocation apply outside PGB?
+
+ #### Install Location
+
+* `android-installLocation` with values `internalOnly`, `auto` or `preferExternal`
+
+  * example: `<preference name="android-installLocation" value="auto"
+    />`
+
+  * where an app can be installed - defaults to `internalOnly` (as the
+    Android SDK)
+
+  * `auto` or `preferExternal` allow the app to be installed on an SD
+    card - this can lead to unexpected behavior
+
+  * more details available in [the Android
+    documentation](http://developer.android.com/guide/appendix/install-location.html)
+
+-->
+
+<!-- QUERY A: does splash-screen-duration apply outside PGB?
+
+ #### Splash Screen Duration
+
+  * `splash-screen-duration` with a value in milliseconds
+
+  * defaults to 5000 (5 seconds)
+
+  * example: `<preference name="splash-screen-duration" value="10000"
+    />`
+
+  * for auto-hide behaviour call `navigator.splashscreen.hide();` in
+    the device-ready method
+
+  * supported on PhoneGap 2.1.0 and above
+  
+-->
