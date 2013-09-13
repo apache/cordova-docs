@@ -308,12 +308,12 @@ Currently supported through this interface are the following feature names:
 
  #### Usage
 
-        <!-- If you do not want any permissions to be added to your app, add the
+         If you do not want any permissions to be added to your app, add the
             following tag to your config.xml; you will still have the INTERNET
-            permission on your app, which PhoneGap requires. -->
+            permission on your app, which PhoneGap requires. 
         <preference name="permissions" value="none"/>
 
-        <!-- to enable individual permissions use the following examples -->
+         to enable individual permissions use the following examples 
         <feature name="http://api.phonegap.com/1.0/battery"/>
         <feature name="http://api.phonegap.com/1.0/camera"/>
         <feature name="http://api.phonegap.com/1.0/contacts"/>
