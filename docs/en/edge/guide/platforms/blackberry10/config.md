@@ -40,23 +40,7 @@ BlackBerry supports a single splash screen image:
 
 ## BlackBerry 10 Preferences
 
-* `autoHideSplashScreen`: (`true` or `false`): Set to `false` to
-  control when the splashscreen is hidden through a JavaScript
-  API. This preference defaults to true.
-
-        <preference name="autoHideSplashScreen" value="false"/>
-
-<!-- autoHideSplashScreen vs iOS AutoHideSplashScreen: -->
-
-* `backgroundColor`: Specifies the background color of your app. The
-  value must specify a color value in the ARGB pixel format using 8
-  hexadecimal digits.
-
-        <preference name="backgroundColor" value="0x00000000"/>
-
-<!-- QUERY BB: does backgroundColor take 00000000 or 0x00000000 as Android does? If former, how to spec? -->
-
-* `childBrowser`: Disables child browser windows. By default, when the
+* `ChildBrowser`: Disables child browser windows. By default, when the
   content attempts to open a resource in a new window or tab (by using
   window.open(), or by specifying `_blank` as the target of an
   anchor), the WebWorks app will open a secondary browser window to
@@ -65,28 +49,7 @@ BlackBerry supports a single splash screen image:
 
         <preference name="childBrowser" value="disable"/>
 
-* `hideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the
-  keyboard form accessory bar in an HTML form. The keyboard form
-  accessory bar is a row of buttons (__Previous__, __Next__, and
-  __Submit__) that the user can use to navigate through a form.  By
-  default, when a WebWorks app contains an HTML form and an `<input>`
-  element gets focus, WebWorks displays this form accessory bar. This
-  feature allows you to prevent your app from displaying the form
-  accessory bar by specifying value as `enable`.
-
-        <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
-
-<!-- QUERY BB: hideKeyboardFormAccessoryBar vs iOS -->
-
-* `orientation`: (`auto`, `portrait`, or `landscape`) Specifies the
-  persistent orientation for screens in your app. By default, if you
-  do not specify a screen orientation, the orientation is set to auto.
-
-        <preference name="orientation" value="landscape"/>
-
-<!-- QUERY: BB doc specifies its own "orientation" pref; Does it not recognize "default" as a value? Do no other platforms recognize "auto"?  -->
-
-* `popupBlocker`: Enables the popup blocker. By default, all popups
+* `PopupBlocker`: Enables the popup blocker. By default, all popups
   are displayed by BlackBerry WebWorks apps in a child browser
   window. You can prevent popups from displaying without user
   intervention by enabling the popup blocker. This is done by
@@ -96,7 +59,7 @@ BlackBerry supports a single splash screen image:
 
 <!-- QUERY BB: for popupBlocker, clarify "popup" -->
 
-* `webSecurity`: Disables web security. Disabling web security allows
+* `WebSecurity`: Disables web security. Disabling web security allows
   you to access remote content from unknown sources during
   development.  Before packaging your app for distribution, you should
   remove this setting. This feature is intended as a development
