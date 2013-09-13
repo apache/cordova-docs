@@ -324,4 +324,3 @@ be unique, otherwise the build fails.  The optional `role` must be
 either `Editor`, `Viewer`, `Shell`, or `None`.  At least one `scheme`
 must be registered.
 
-

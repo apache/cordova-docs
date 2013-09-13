@@ -195,34 +195,6 @@ platform's configuration options:
 
 <!-- !!!
 
- # Using config.xml
-
- #### Windows Phone
-
-We support two icons for Windows Phone, a regular icon and a tile
-image.
-
-        <icon src="icons/winphone/icon.png" gap:platform="winphone" />
-        <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
-
- #### WebOS 
-
-WebOS supports a default icon and a mini icon which can be used for
-notifications.
-
-        <icon src="icons/webos/icon.png" gap:platform="webos" />
-        <icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
-
- ### Splash Screens
-
- #### Windows Phone
-
-Windows Phone supports a single splash image and can be defined as
-below.  Unlike the other supported platforms, Windows Phone splash
-screen should be in `jpg` format
-
-        <gap:splash src="splash/winphone/splash.jpg" gap:platform="winphone" />
-
  #### Custom Debug Server
 
 The `debug-server` feature allows you to use a custom Weinre instance
