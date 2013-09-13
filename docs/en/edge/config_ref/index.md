@@ -40,6 +40,7 @@ sections for platform-specific options:
 - iOS Configuration
 - Android Configuration
 - BlackBerry Configuration
+- Windows Phone Configuration
 
 ## Core Configuration Elements
 
@@ -187,11 +188,7 @@ application package.
 <!-- QUERY: confirm default icon.png, splash.png; or is cordova icon the default? -->
 
 To define platform-specific icons and splash screens, consult each
-platform's configuration options:
-
-- iOS Configuration
-- Android Configuration
-- BlackBerry Configuration
+platform's configuration options listed at the top of this section.
 
 <!-- !!!
 
