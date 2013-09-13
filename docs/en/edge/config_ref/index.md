@@ -376,4 +376,12 @@ At present, to include a plugin, you will to ensure:
 More details, including a list of available plugins, are in our
 [plugins documentation](/docs/plugins).
 
+ #### WebOS 
+
+WebOS supports a default icon and a mini icon which can be used for
+notifications.
+
+        <icon src="icons/webos/icon.png" gap:platform="webos" />
+        <icon src="icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" />
+
 -->
