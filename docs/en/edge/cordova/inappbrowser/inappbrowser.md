@@ -19,9 +19,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # InAppBrowser
 
-> The `InAppBrowser` is a web browser that displays in the app when calling `window.open`.
+> The `InAppBrowser` is a web browser view that displays when calling `window.open`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
+
+__NOTE:__ The InAppBrowser window behaves like a standard web browser,
+and cannot access Cordova APIs.
 
 ## Description
 
