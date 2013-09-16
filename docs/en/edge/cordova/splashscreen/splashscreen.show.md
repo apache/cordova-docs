@@ -30,7 +30,6 @@ This method displays the application's splash screen.
 ## Supported Platforms
 
 - Android
-- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8

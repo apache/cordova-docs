@@ -88,3 +88,12 @@ should be:
 - Default-Portrait~ipad.png (768x1004 pixels)
 - Default@2x~iphone.png (640x960 pixels)
 - Default~iphone.png (320x480 pixels)
+
+### BlackBerry 10
+
+Copy your splash screen images into the project's
+'res/screen/blackberry10' directory. The file names should be:
+
+- splash-1280x768.png (1280x768 pixels)
+- splash-720x720.png (720x720 pixels)
+- splash-768x1280.png (768x1280 pixels)
