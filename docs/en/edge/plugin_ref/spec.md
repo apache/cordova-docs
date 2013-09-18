@@ -117,7 +117,7 @@ A custom Apache Cordova-based framework requires that an engine element includes
 * `version` (required): The version that your framework must have in order to install.
 
 * `scriptSrc` (required): The script file that tells plugman what version of the custom framework is. 
-Ideally, this file should be within the top level directory of your plugin folder.
+Ideally, this file should be within the top level directory of your plugin directory.
 
 * `platform` (required): Which platforms that your framework supports. You may use the wildcard '*'
 to say supported for all platforms, specify multiple with a pipe character like 'android|ios|blackberry10' 

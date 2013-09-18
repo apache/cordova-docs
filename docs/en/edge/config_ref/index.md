@@ -261,7 +261,7 @@ attributes are optional:
         <icon src="app.png" width="128" height="128"/>
 
 Likewise, the default splash screen must be named `splash.png` and
-must reside in the root of your application folder in _png_
+must reside in the root of your application directory in _png_
 format. Otherwise, use the `gap:splash` tag to specify a different
 filename:
 

@@ -175,7 +175,7 @@ looks like this:
   - **simulator** (>*binary file* *.so)
 
 (The list shows the hierarchical relationship among the top-level
-folders. The parenthesis shows the contents of a given directory. All
+directories. The parenthesis shows the contents of a given directory. All
 directory names appear in bold text. File names are preceded by the `>`
 sign.)
 

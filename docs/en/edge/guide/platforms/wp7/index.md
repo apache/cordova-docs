@@ -51,9 +51,9 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 
 - Download and install the [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
 
-- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp7` subfolder, `lib\windows-phone-8\wp8` contains the Windwos Phone 8 version of Cordova.
+- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp7` subdirectory, `lib\windows-phone-8\wp8` contains the Windwos Phone 8 version of Cordova.
 
-- Copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates\
+- Copy the file CordovaWP7_x_x_x.zip to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
 
 ## 2.1. Building the template
 
@@ -82,7 +82,7 @@ Run the script :
 
 ## 4. Review the project structure
 
-- The `www` folder contains your Cordova `html/js/css` and any other resources included in your app.
+- The `www` directory contains your Cordova `html/js/css` and any other resources included in your app.
 
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
 

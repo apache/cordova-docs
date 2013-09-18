@@ -236,7 +236,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -253,7 +253,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -270,7 +270,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -287,7 +287,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -304,7 +304,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -321,7 +321,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -338,7 +338,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -355,7 +355,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -372,7 +372,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 
@@ -389,7 +389,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Delete `GapLib/WP7CordovaClassLib.dll` from your project.
 
-2. Remove the reference to `WP7CordovaClassLib` in the __References__ folder.
+2. Remove the reference to `WP7CordovaClassLib` in the __References__ directory.
 
 3. Right-click on __References__ and select __Add Reference__.
 

@@ -37,7 +37,7 @@ running new projects. Commands must be run from a cmd or powershell
 prompt.
 
 The WP8 repo now includes code for building both WP7 + WP8 apps.  The
-repo has subfolders for each: wp7/ and wp8/
+repo has subdirectories for each: `wp7/` and `wp8/`.
 
 ## Create a project
 
