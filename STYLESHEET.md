@@ -84,6 +84,9 @@ editorial guidelines.
 * Possessives are OK: "the device's home screen" rather than clumsier:
   "the home screen of the device"
 
+* 'The FOO file', not 'the file FOO', no matter how long FOO's
+  filename is.
+
 * Hyphenate adjective phrases: "command-line tools", but not when it's
   a noun, as in "the command line."
 
