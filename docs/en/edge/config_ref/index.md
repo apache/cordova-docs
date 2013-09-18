@@ -179,15 +179,16 @@ all of them:
 
 -->
 
-* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
-  control when the splashscreen is hidden through a JavaScript API.
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false`
+  to control when the splash screen image is hidden through a
+  JavaScript API.
 
         <preference name="AutoHideSplashScreen" value="false"/>
 
 <!-- autoHideSplashScreen vs iOS AutoHideSplashScreen:
 
 * `AutoHideSplashScreen`: (`true` or `false`): Set to `false` to
-  control when the splashscreen is hidden through a JavaScript
+  control when the splash screen image is hidden through a JavaScript
   API. This preference defaults to true.
 
         <preference name="autoHideSplashScreen" value="false"/>

@@ -71,7 +71,7 @@ configuration.  See _Platform Support_ in the Overview section.
         super.setIntegerProperty("splashscreen", R.drawable.splash);
         super.loadUrl(Config.getStartUrl(), 10000);
 
-    The first line sets the image to display as the splashscreen. If you name your image anything other than `splash.png`, you need to modify this line.
+    The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
     The second line is the normal `super.loadUrl` line, but it has a second parameter that specifies a timeout value for the splash screen. In this example the splash screen displays for 10 seconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.
 
 ### iOS

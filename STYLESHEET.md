@@ -118,6 +118,8 @@ editorial guidelines.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
+* "splash screen" unless specifically referring to API.
+
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
 
 * Subdirectory, not sub-directory
