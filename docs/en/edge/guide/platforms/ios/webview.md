@@ -39,19 +39,19 @@ based Cleaver implementation.
 
 ## Adding Cleaver to your Xcode project (CordovaLib sub-project)
 
-1. Download and extract the Cordova source to a permanent folder location on your hard drive, for example to `~/Documents/Cordova`.
+1. Download and extract the Cordova source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova`.
 
 2. Quit Xcode if it is running.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Copy the `config.xml` file into your project folder on disk (see the Prerequisites above).
+4. Copy the `config.xml` file into your project directory on disk (see the Prerequisites above).
 
 5. Drag and drop the `config.xml` file into the Project Navigator of Xcode.
 
 6. Choose the __Create groups for any added folders__ radio button and press __Finish__.
 
-7. Drag and drop the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent folder location above, and it should be in the `CordovaLib` subdirectory).
+7. Drag and drop the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent directory location above, and it should be in the `CordovaLib` subdirectory).
 
 8. Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -137,11 +137,11 @@ based Cleaver implementation.
 
 ## Adding your HTML, CSS and JavaScript assets
 
-1. Create a new folder in your project on disk, `www` for example.
+1. Create a new directory in your project on disk, `www` for example.
 
-2. Put your HTML, CSS and JavaScript assets into this folder.
+2. Put your HTML, CSS and JavaScript assets into this directory.
 
-3. Drag and drop the folder into the Project Navigator of Xcode.
+3. Drag and drop the directory into the Project Navigator of Xcode.
 
 4. Choose the __Create folder references for any added folders__ radio button.
 

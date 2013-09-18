@@ -120,8 +120,8 @@ We would add the following to the project's `config.xml` file:
         <param name="ios-package" value="Echo" />
     </feature>
 
-Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins folder inside our Cordova-iOS
-application folder:
+Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins directory inside our Cordova-iOS
+application directory:
 
     /********* Echo.h Cordova Plugin Header *******/
 
