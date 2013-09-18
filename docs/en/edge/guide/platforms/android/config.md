@@ -64,8 +64,6 @@ The following defines splash screens for each screen type:
 
         <preference name="loadingPageDialog" value="Please wait, the data is loading"/>
 
-<!-- QUERY A: unclear when loadingDialog & loadingPageDialog would appear. Any examples? -->
-
 * `ErrorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
