@@ -158,28 +158,16 @@ all of them:
   Applies to Android and BlackBerry.
 
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
-  to `true` to hide the additional toolbar that is on top of the
-  keyboard.  This toolbar features the __Prev__, __Next__, and
-  __Done__ buttons.
+  to `true` to hide the additional toolbar that appears above the
+  keyboard and helps users navigate from one form input to the next.
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
   Applies to iOS and BlackBerry.
 
-<!-- QUERY: for HideKeyboardFormAccessoryBar, does form-helper UI only appear when there's >1 input? -->
-
 <!-- BB version:
 
-* `HideKeyboardFormAccessoryBar`: (`enable` or `disable`) Disables the
-  keyboard form accessory bar in an HTML form. The keyboard form
-  accessory bar is a row of buttons (__Previous__, __Next__, and
-  __Submit__) that the user can use to navigate through a form.  By
-  default, when a WebWorks app contains an HTML form and an `<input>`
-  element gets focus, WebWorks displays this form accessory bar. This
-  feature allows you to prevent your app from displaying the form
-  accessory bar by specifying value as `enable`.
-
-        <preference name="hideKeyboardFormAccessoryBar" value="enable"/>
+* `HideKeyboardFormAccessoryBar`: (`enable` or `disable`) 
 
 -->
 
