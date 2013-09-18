@@ -53,13 +53,12 @@ following defines splash screens for each type of screen:
 
 ## iOS Preferences
 
-* `TopActivityIndicator` (string, defaults to `gray`): this is the top
-  spinning throbber in the status/battery bar, valid values are
-  `whiteLarge`, `white`, and `gray`.
+* `TopActivityIndicator` (string, defaults to `gray`): controls the
+  appearance of the small spinning icon that appears in the
+  status/battery bar to indicate a demanding process is executing.
+  Valid values are `whiteLarge`, `white`, and `gray`.
 
         <preference name="TopActivityIndicator" value="white"/>
-
-<!-- QUERY I: describe TopActivityIndicator top spinning throbber -->
 
 * `EnableLocation` (boolean, defaults to `false`): set to `true`, to
   initialize the Geolocation plugin at start-up (so the fix on your
