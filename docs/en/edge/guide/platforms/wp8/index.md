@@ -70,7 +70,7 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp8` subdirectory, `lib\windows-phone-8\wp7` contains the Windwos Phone 7 version of Cordova.
 
-- Copy the file CordovaWP8_x_x_x.zip to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
+- Copy the `CordovaWP8_x_x_x.zip` file to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
 
 ## 2.1. Building the template
 
