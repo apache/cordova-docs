@@ -102,8 +102,9 @@ following defines splash screens for each type of screen:
 
 <!-- QUERY I: for ShowSplashScreenSpinner describe spinner -->
 
-* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
-  to `true` to not allow autoplayed HTML5 video.
+* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
+  set to `true` to prevent HTML5 video from playing automatically with
+  the `autoplay` attribute.
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
