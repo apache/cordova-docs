@@ -136,7 +136,7 @@ all of them:
 
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
   to `true` to hide the additional toolbar that appears above the
-  keyboard and helps users navigate from one form input to the next.
+  keyboard, helping users navigate from one form input to another.
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
