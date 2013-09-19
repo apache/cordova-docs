@@ -235,54 +235,54 @@ might add:
 
 * Basic device information (Device API):
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
 
 * Network Connection and Battery Events:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
 
 * Accelerometer, Compass, and Geolocation:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
 
 * Camera, Media playback and Capture:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git    
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media    
 
 * Access files on device or network (File API):
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
 
 * Notification via dialog box or vibration:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
 
 * Contacts:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
 
 * Globalization:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
 
 * Splashscreen:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
 
 * Open new browser windows (InAppBrowser):
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
 
 * Debug console:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
 
 Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
 currently installed plugins. Each displays by its identifier:
