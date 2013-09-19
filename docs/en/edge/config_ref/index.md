@@ -40,7 +40,6 @@ See the following sections for platform-specific options:
 - iOS Configuration
 - Android Configuration
 - BlackBerry Configuration
-- Windows Phone Configuration
 
 ## Core Configuration Elements
 
