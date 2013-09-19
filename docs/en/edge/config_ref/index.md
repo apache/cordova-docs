@@ -115,12 +115,15 @@ The following preferences apply to more than one platform, but not to
 all of them:
 
 * `DisallowOverscroll` (boolean, defaults to `false`): set to `true`
-  if you don't want the WebView to bounce and snap back when scrolling
-  past the beginning or end of the content.
+  if you don't want the interface to display any feedback when users
+  scroll past the beginning or end of content.
 
         <preference name="DisallowOverscroll" value="true"/>
 
-  Applies to Android and iOS.
+  Applies to Android and iOS. On iOS, overscroll gestures cause
+  content to bounce back to its original position.  On Android, they
+  produce a more subtle glowing effect along the top or bottom edge of
+  the content.
 
 * `BackgroundColor`: Set the app's background color.  Supports a
   four-byte hex value, with the first byte representing an alpha
