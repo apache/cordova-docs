@@ -97,15 +97,7 @@ Please see the `STYLESHEET.md` file for guildelines on language and usage.
 Generating the Documentation
 ----------------------------
 
-### Quick Preview
-
-When making minor edits, it is usually safe to simply render the edited from
-Markdown to HTML. Many code editors have plugins to render Markdown to HTML
-and there are a handful of [good](http://dillinger.io/) online editors.
-
-Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are used to generate the HTML documentation.
-
-### Install joDoc
+### Install
 
 - Clone [joDoc](http://github.com/davebalmer/jodoc)
 
@@ -119,30 +111,36 @@ Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are use
 
 - Install markdown
 
-        # Use your package manager
+        # OS X
         brew install markdown
 
-on Linux, Markdown can be installed as follows:
-
+        # Linux
         apt-get install markdown
 
-- Install nokogiri (Ruby HTML parser)
+- Install Ruby gems
 
-        gem install nokogiri
+  Install [bundler](http://bundler.io/#getting-started) then
 
-- Install json (Ruby JSON parser)
-
-        gem install json
+        bundle install
 
 ### Run the Script
 
+Generate all versions
+
     bin/generate
 
-If all you want to generate is edge/English, then
+Generate a specific language and version
 
-    bin/generate --edge
+    bin/generate en edge
 
-### Problems
+### Quick Preview
+
+When making minor edits, it is usually safe to simply render the edited from
+Markdown to HTML. Many code editors have plugins to render Markdown to HTML
+and there are a handful of [good](http://dillinger.io/) online editors.
+
+Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are
+used to generate the HTML documentation.
 
 Generated a Version Release
 ---------------------------
