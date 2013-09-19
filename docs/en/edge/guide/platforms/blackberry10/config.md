@@ -53,19 +53,3 @@ config.xml File for information on global configuration options.
 
         <preference name="webSecurity" value="disable"/>
 
-<!-- QUERY BB: does disable-cursor work?
-
- #### Disable Cursor
-
-* `disable-cursor` with values `true` or `false`
-
-  * example: `<preference name="disable-cursor" value="true" />`
-
-  * prevents a mouse-icon/cursor from being displayed on the app -
-    desugars to `<rim:navigation />`. See [the BlackBerry
-    documentation](https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/rim_navigation_element_1582456_11.html)
-    for more details
-
-  * default is _false_
-
--->
