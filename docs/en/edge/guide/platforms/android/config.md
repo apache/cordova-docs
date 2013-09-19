@@ -24,17 +24,6 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information on global configuration options.
 
-<!-- QUERY A: is useBrowserHistory deprecated?
-
-* `UseBrowserHistory` (boolean, defaults to `true`): set to `false` if
-  you want to use the history shim that was used to work around the
-  hashtag error present in Android 3.x prior to the history fix.
-  (Note: This setting will be deprecated in April 2013)
-
-        <preference name="UseBrowserHistory" value="false"/>
-
--->
-
 * `LoadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
