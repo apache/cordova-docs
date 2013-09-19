@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # InAppBrowser
 
-> The `InAppBrowser` is a web browser view that displays when calling `window.open`.
+> The `InAppBrowser` is a web browser view that displays when calling `window.open()`, or when opening a link formed as `<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
