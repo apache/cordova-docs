@@ -69,19 +69,11 @@ platforms:
   reverse-domain identifier, and the `version` its full version number
   expressed in major/minor/patch notation.
 
-  For Android builds, an optional `versionCode` attribute allows you
-  to express the version number
-  [as an integer](http://developer.android.com/guide/publishing/versioning.html).
-
 - The `<name>` element specifies the app's formal name, as it appears
   on the device's home screen and within app-store interfaces.
 
-  If you are targeting the BlackBerry platform, use only Latin characters.
-
 - The `<description>` and `<author>` elements specify metadata and
   contact information that may appear within app-store listings.
-
-  If you are targeting the BlackBerry platform, keep the description short.
 
 - The optional `<content>` element defines your application's starting
   page in the top-level web assets directory. The default value is
@@ -100,9 +92,9 @@ platforms:
 
 The following global preferences apply to all platforms:
 
-- `orientation` allows you to fix orientation and prevent changes
-  from rotating the interface. Possible values are `default`,
-  `landscape`, or `portrait`. Example:
+- `orientation` allows you to lock orientation and prevent the
+  interface from rotating in response to changes in orientation.
+  Possible values are `default`, `landscape`, or `portrait`. Example:
 
         <preference name="orientation" value="landscape" />
 
@@ -117,21 +109,6 @@ The following global preferences apply to all platforms:
   screen. The default value is `false`. Example:
 
         <preference name="fullscreen" value="true" />
-
-<!-- PGB 
-
-- `phonegap-version` specifies the version of PhoneGap to use when
-  building the app using the PhoneGap Build interface, or the CLI's
-  `remote` feature described in The Command-line Interface. Example:
-
-        <preference name="phonegap-version" value="2.9.0" />
-
-  Currently supported versions are __2.0.0__, __2.1.0__, __2.2.0__,
-  __2.3.0__, __2.5.0__, __2.7.0__, and __2.9.0__ (the default).  all
-  versions prior to __2.0.0__ are deprecated. Specifying an
-  unsupported version number prevents the project from building.
-
--->
 
 ## Multi-platform Preferences
 
