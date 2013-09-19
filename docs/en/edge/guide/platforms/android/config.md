@@ -46,12 +46,11 @@ config.xml File for information on global configuration options.
 
         <preference name="LoadUrlTimeoutValue" value="10000"/>
 
-* `KeepRunning` (boolean, defaults to `true`): Determines whether
-  Cordova stays running in the background.
+* `KeepRunning` (boolean, defaults to `true`): Determines whether the
+  application stays running in the background even after a `pause`
+  event fires.
 
         <preference name="KeepRunning" value="false"/>
-
-<!-- QUERY A: does keepRunning mean in effect the app continues to execute following pause event? Does event still fire? -->
 
 * `SplashScreen`: The name of the file minus its extension in the
   `res/drawable` directory.  Various assets must share this common
