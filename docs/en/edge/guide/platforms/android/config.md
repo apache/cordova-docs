@@ -41,24 +41,10 @@ config.xml File for information on global configuration options.
 
         <preference name="ErrorUrl" value="error.html"/>
 
-* `LoadUrlTimeoutValue`: How much time Cordova should wait before
-  throwing a timeout error on the application.
+* `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
+  page, the amount of time to wait before throwing a timeout error.
 
-        <preference name="LoadUrlTimeoutValue" value="20000"/>
-
-<!-- QUERY A: is loadUrlTimeoutValue expressed in milliseconds? is 20000 the default?-->
-
-<!-- QUERY A: confirm loadUrlTimeoutValue replaces PGB's load-url-timeout
-
- #### Load URL timeout
-
-  * `load-url-timeout` with a value in milliseconds
-
-  * defaults to 20000 (20 seconds)
-
-  * example: `<preference name="load-url-timeout" value="15000" />`
-
--->
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
 
 * `KeepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
