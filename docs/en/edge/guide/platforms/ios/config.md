@@ -266,18 +266,3 @@ File for information on global configuration options.
 
 -->
 
-## Custom URL Schemes
-
-On iOS, adding a `<gap:url-scheme>` element allows you to register
-[custom URL schemes](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50), as in the following example:
-
-        <gap:url-scheme name="com.acme.myscheme" role="None">
-          <scheme>pgbr</scheme>
-          <scheme>pgbw</scheme>
-        </gap:url-scheme>
-
-The optional `name` attribute defaults to the app's bundle id. It must
-be unique, otherwise the build fails.  The optional `role` must be
-either `Editor`, `Viewer`, `Shell`, or `None`.  At least one `scheme`
-must be registered.
-
