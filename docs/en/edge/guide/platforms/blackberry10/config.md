@@ -24,12 +24,10 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
 config.xml File for information on global configuration options.
 
-* `ChildBrowser`: Disables child browser windows. By default, when the
-  content attempts to open a resource in a new window or tab (by using
-  window.open(), or by specifying `_blank` as the target of an
-  anchor), the WebWorks app will open a secondary browser window to
-  display the resource. This feature is enabled by default. The value
-  must specify `disable` to prevent the above actions from occuring.
+* `ChildBrowser`: Disables child browser windows. By default, apps
+  launch a secondary browser window to display resources accessed via
+  `window.open()` or by specifying a `_blank` anchor target. Specify
+  `disable` to override this default behavior.
 
         <preference name="childBrowser" value="disable"/>
 
