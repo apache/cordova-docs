@@ -34,12 +34,12 @@ config.xml File for information on global configuration options.
 
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
 
-* `ErrorUrl`: Set the error page for your application. Should be
-  located in your Android project in `file://android_asset/www/`
+* `ErrorUrl`: Specifies an error page that displays in response to
+  standard HTTP errors in the 400-500 range. The specified file needs
+  to be placed in the top-level directory containing the home page and
+  other web assets.
 
         <preference name="ErrorUrl" value="error.html"/>
-
-<!-- QUERY A: under what conditions does the errorUrl page display? -->
 
 * `LoadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
