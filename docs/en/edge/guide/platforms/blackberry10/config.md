@@ -24,22 +24,6 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
 config.xml File for information on global configuration options.
 
-## Icons and Splash Screens
-
-BlackBerry icons __must be smaller__ than 16K. BlackBerry also defines
-an optional hover state that allows a separate icon to display when
-users roll a trackpad cursor over the icon image. By default, the
-non-hover icon displays for the hover state. Define icons as follows:
-
-        <icon src="icons/bb/icon.png"       gap:platform="blackberry" />
-        <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
-
-BlackBerry supports a single splash screen image:
-
-        <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
-
-## BlackBerry 10 Preferences
-
 * `ChildBrowser`: Disables child browser windows. By default, when the
   content attempts to open a resource in a new window or tab (by using
   window.open(), or by specifying `_blank` as the target of an

@@ -24,25 +24,6 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information on global configuration options.
 
-## Icons and Splash Screens
-
-Cordova supports images for _ldpi_, _mdpi_, _hdpi_, and _xhdpi_
-displays. The following defines icons for each type of screen:
-
-        <icon src="icons/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
-        <icon src="icons/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
-        <icon src="icons/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
-        <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-
-The following defines splash screens for each screen type:
-
-        <gap:splash src="splash/android/ldpi.png"  gap:platform="android" gap:density="ldpi"  />
-        <gap:splash src="splash/android/mdpi.png"  gap:platform="android" gap:density="mdpi"  />
-        <gap:splash src="splash/android/hdpi.png"  gap:platform="android" gap:density="hdpi"  />
-        <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-
-## Android Preferences
-
 <!-- QUERY A: is useBrowserHistory deprecated?
 
 * `UseBrowserHistory` (boolean, defaults to `true`): set to `false` if
