@@ -31,31 +31,31 @@ config.xml File for information on global configuration options.
   hashtag error present in Android 3.x prior to the history fix.
   (Note: This setting will be deprecated in April 2013)
 
-        <preference name="useBrowserHistory" value="false"/>
+        <preference name="UseBrowserHistory" value="false"/>
 
 -->
 
 * `LoadingDialog`: Display a native loading dialog when loading the
   app. The value's format is _Title, Message_
 
-        <preference name="loadingDialog" value="Please wait, the app is loading"/>
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
 
 * `LoadingPageDialog`: Display a native loading dialog when loading
   sub-pages. The value's format is _Title, Message_
 
-        <preference name="loadingPageDialog" value="Please wait, the data is loading"/>
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
 
 * `ErrorUrl`: Set the error page for your application. Should be
   located in your Android project in `file://android_asset/www/`
 
-        <preference name="errorUrl" value="error.html"/>
+        <preference name="ErrorUrl" value="error.html"/>
 
 <!-- QUERY A: under what conditions does the errorUrl page display? -->
 
 * `LoadUrlTimeoutValue`: How much time Cordova should wait before
   throwing a timeout error on the application.
 
-        <preference name="loadUrlTimeoutValue" value="20000"/>
+        <preference name="LoadUrlTimeoutValue" value="20000"/>
 
 <!-- QUERY A: is loadUrlTimeoutValue expressed in milliseconds? is 20000 the default?-->
 
@@ -74,7 +74,7 @@ config.xml File for information on global configuration options.
 * `KeepRunning` (boolean, defaults to `true`): Determines whether
   Cordova stays running in the background.
 
-        <preference name="keepRunning" value="false"/>
+        <preference name="KeepRunning" value="false"/>
 
 <!-- QUERY A: does keepRunning mean in effect the app continues to execute following pause event? Does event still fire? -->
 
@@ -83,7 +83,12 @@ config.xml File for information on global configuration options.
   name in various subdirectories.  For details, see the _Icons and
   Splash Screens_ section in The config.xml File.
 
-        <preference name="splashscreen" value="splash"/>
+        <preference name="SplashScreen" value="splash"/>
+
+* `SplashScreenDelay` (number, defaults to `5000`): The amount of
+  time the splash screen image displays.
+
+        <preference name="SplashScreenDelay" value="10000"/>
 
 <!-- QUERY PGB A: do android-minSdkVersion, android-maxSdkVersion apply outside PG Build?
 
@@ -125,20 +130,3 @@ config.xml File for information on global configuration options.
 
 -->
 
-<!-- QUERY A: does splash-screen-duration apply outside PGB?
-
- #### Splash Screen Duration
-
-  * `splash-screen-duration` with a value in milliseconds
-
-  * defaults to 5000 (5 seconds)
-
-  * example: `<preference name="splash-screen-duration" value="10000"
-    />`
-
-  * for auto-hide behaviour call `navigator.splashscreen.hide();` in
-    the device-ready method
-
-  * supported on PhoneGap 2.1.0 and above
-  
--->
