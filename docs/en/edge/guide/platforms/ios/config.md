@@ -50,18 +50,19 @@ File for information on global configuration options.
 
 <!-- QUERY: Do viewport meta tags work as expected in other environments? -->
 
-* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false` to
-  control when the splashscreen is hidden through a JavaScript API.
+* `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false`
+  to use the SplashScreen API to control when the opening image stops
+  displaying.
 
         <preference name="AutoHideSplashScreen" value="false"/>
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
-  prevent the splash-screen to fade in and out when showing or hiding
-  it.
+  prevent the splash-screen from fading in or out when showing or
+  hiding it.
 
         <preference name="FadeSplashScreen" value="false"/>
 
-* `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
+* `FadeSplashScreenDuration` (float, defaults to `2`): The splash-screen
   Fade duration in seconds.
 
         <preference name="FadeSplashScreenDuration" value="4"/>
@@ -98,21 +99,21 @@ File for information on global configuration options.
 
 * `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
   set to `false` to open the keyboard when form elements get focus via
-  the JavaScript focus() call.
+  the JavaScript `focus()` call.
 
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
 
 * `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
   to `true` to wait until all new view content has been received
-  before it is rendered.
+  before it renders.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
 * `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
-  shrink the WebView when the keyboard comes up. The WebView shrinks
+  shrink the webview when the keyboard comes up. The webview shrinks
   instead of the viewport shrinking and the page scrollable. This
   applies to apps that position their elements relative to the bottom
-  of the WebView. This is the default behaviour on Android, and makes
+  of the webview. This is the default behaviour on Android, and makes
   a lot of sense when building apps as opposed to webpages.
 
         <preference name="KeyboardShrinksView" value="true"/>
