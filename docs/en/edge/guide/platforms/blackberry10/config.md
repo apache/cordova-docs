@@ -31,15 +31,12 @@ config.xml File for information on global configuration options.
 
         <preference name="childBrowser" value="disable"/>
 
-* `PopupBlocker`: Enables the popup blocker. By default, all popups
-  are displayed by BlackBerry WebWorks apps in a child browser
-  window. You can prevent popups from displaying without user
-  intervention by enabling the popup blocker. This is done by
-  specifying value as `enable`.
+* `PopupBlocker`: Enables the popup blocker, which prevents calls to
+  `window.open()`. By default, popups display in a child browser
+  window. Setting the preference to `enable` prevents it from
+  displaying at all.
 
         <preference name="popupBlocker" value="enable"/>
-
-<!-- QUERY BB: for popupBlocker, clarify "popup" -->
 
 * `WebSecurity`: Disables web security. Disabling web security allows
   you to access remote content from unknown sources during
