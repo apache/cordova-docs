@@ -24,6 +24,28 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
 version of the CLI.
 
+## Upgrade to 3.1.0 from 3.0.0 ##
+
+1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
+   described in The Command-line Interface.
+
+2. Add your platforms to the cordova project, for example: `cordova
+   platform add blackberry10`.
+
+3. Copy the contents of the original project's `www` directory to the `www` directory
+   at the root of the cordova project you just created.
+
+4. Copy or overwrite any native assets from your original project
+   (`Resources`, etc.)
+
+5. Copy your `config.xml` into the `www` directory, and remove any plugin definitions. You will modify settings here instead of the platform directory.
+
+6. Use the cordova CLI tool to install any plugins you need. Note that
+   the CLI handles all core APIs as plugins, so they may need to be
+   added. Only plugins marked 3.0.0 and above are compatible with the CLI.
+
+7. Build and test.
+
 Please note that the CLI supports the BlackBerry10 platform exclusively. For PlayBook and BBOS, please see Cordova version 2.9.0 and below.
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
