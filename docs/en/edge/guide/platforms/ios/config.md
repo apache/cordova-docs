@@ -80,8 +80,6 @@ File for information on global configuration options.
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
-<!-- QUERY I: does MediaPlaybackRequiresUserAction also apply to audio? -->
-
 * `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
   `true` to allow inline HTML5 media playback, also, the video element
   in the HTML document must also include the webkit-playsinline
@@ -109,16 +107,13 @@ File for information on global configuration options.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
-* `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
-  shrink the webview when the keyboard comes up. The webview shrinks
-  instead of the viewport shrinking and the page scrollable. This
-  applies to apps that position their elements relative to the bottom
-  of the webview. This is the default behaviour on Android, and makes
-  a lot of sense when building apps as opposed to webpages.
+* `KeyboardShrinksView` (boolean, defaults to `false`): set to `true`
+  to scale down the webview when the keyboard appears rather than
+  shrinking the viewport, matching the default behaviour for Android.
+  This applies to apps that position their elements relative to the
+  bottom of the webview.
 
         <preference name="KeyboardShrinksView" value="true"/>
-
-<!-- QUERY I: describe KeyboardShrinksView; shrink webview when keyboard appears -->
 
 <!-- QUERY I: is target-device OK? 
 
