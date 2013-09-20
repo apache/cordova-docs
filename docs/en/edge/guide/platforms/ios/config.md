@@ -31,16 +31,6 @@ File for information on global configuration options.
 
         <preference name="TopActivityIndicator" value="white"/>
 
-* `EnableLocation` (boolean, defaults to `false`): set to `true`, to
-  initialize the Geolocation plugin at start-up (so the fix on your
-  location can be more accurate) __DEPRECATED__: please set the
-  `onload` attribute of the `Geolocation` plugin to `true`
-  instead.
-
-        <preference name="EnableLocation" value="true"/>
-
-<!-- QUERY I: is deprecated EnableLocation still functional? -->
-
 * `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
   prevent viewport scaling through a meta tag.
 
