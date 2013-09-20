@@ -24,27 +24,28 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
 config.xml File for information on global configuration options.
 
-* `ChildBrowser`: Disables child browser windows. By default, apps
-  launch a secondary browser window to display resources accessed via
-  `window.open()` or by specifying a `_blank` anchor target. Specify
-  `disable` to override this default behavior.
+* `ChildBrowser` (`disable` or the default `enable`): Disables child
+  browser windows. By default, apps launch a secondary browser window
+  to display resources accessed via `window.open()` or by specifying a
+  `_blank` anchor target. Specify `disable` to override this default
+  behavior.
 
         <preference name="ChildBrowser" value="disable"/>
 
-* `PopupBlocker`: Enables the popup blocker, which prevents calls to
-  `window.open()`. By default, popups display in a child browser
-  window. Setting the preference to `enable` prevents it from
-  displaying at all.
+* `PopupBlocker` (`enable` or the default `disable`): Enables the
+  popup blocker, which prevents calls to `window.open()`. By default,
+  popups display in a child browser window. Setting the preference to
+  `enable` prevents it from displaying at all.
 
         <preference name="PopupBlocker" value="enable"/>
 
-* `WebSecurity`: Disables web security. Disabling web security allows
-  you to access remote content from unknown sources during
-  development.  Before packaging your app for distribution, you should
-  remove this setting. This feature is intended as a development
-  convenience only. In production, all URIs should be known and should
-  be whitelisted using the `<access>` element. To disable, specify
-  value as `disable`.
+* `WebSecurity` (`disable` or the default `enable`): Set to `disable`
+  to override web security settings, allowing access to remote content
+  from unknown sources. This preference is intended as a development
+  convenience only, so remove it before packaging your app for
+  distribution.  For the released app, all URIs should be known and
+  whitelisted using the `<access>` element, described in the Domain
+  Whitelist Guide.
 
         <preference name="WebSecurity" value="disable"/>
 
