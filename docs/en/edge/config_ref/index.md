@@ -126,15 +126,14 @@ all of them:
   the content.
 
 * `BackgroundColor`: Set the app's background color.  Supports a
-  four-byte hex value, with the first byte representing an alpha
+  four-byte hex value, with the first byte representing the alpha
   channel, and standard RGB values for the following three bytes.  This
-  example specifies red:
+  example specifies blue:
 
-        <preference name="backgroundColor" value="0xffff0000"/>
+        <preference name="backgroundColor" value="0xff0000ff"/>
 
-  Applies to Android and BlackBerry.
-
-<!-- QUERY: does this override CSS such as "body {background-color:black}"? -->
+  Applies to Android and BlackBerry. Overrides CSS otherwise available
+  across _all_ platforms, for example: `body{background-color:blue}`.
 
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
   to `true` to hide the additional toolbar that appears above the
