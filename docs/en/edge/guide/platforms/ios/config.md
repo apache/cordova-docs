@@ -101,19 +101,6 @@ File for information on global configuration options.
 
         <preference name="KeyboardShrinksView" value="true"/>
 
-<!-- QUERY I: is target-device OK? 
-
- #### Target a Specific Device
-
-* `target-device` with possible values `handset`, `tablet`, or
-  `universal`
-
-  * example: `<preference name="target-device" value="universal" />`
-
-  * please note that this currently only applies to iOS builds; by
-    default all builds are universal
-
--->
 
 <!-- QUERY I: Is webviewbounce OK? 
 
