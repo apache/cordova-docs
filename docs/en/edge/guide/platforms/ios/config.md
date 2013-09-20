@@ -101,20 +101,3 @@ File for information on global configuration options.
 
         <preference name="KeyboardShrinksView" value="true"/>
 
-
-<!-- QUERY I: Is auto-hide-splash-screen OK?
-
- #### Auto-Hide Splash Screen
-
-* `auto-hide-splash-screen` with values `true` or `false`
-
-  * example: `<preference name="auto-hide-splash-screen" value="false"
-    />`
-
-  * if set to false, the splash screen must be hidden using a
-    JavaScript API
-
-  * default is _true_
-
--->
-
