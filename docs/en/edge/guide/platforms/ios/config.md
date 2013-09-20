@@ -102,21 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is prerendered-icon OK?
-
- #### Prerendered Icon
-
-* `prerendered-icon` with values `true` or `false`
-
-  * example: `<preference name="prerendered-icon" value="true" />`
-
-  * if icon is prerendered, iOS will not apply it's gloss to the app's
-    icon on the user's home screen
-
-  * default is _false_
-
--->
-
 <!-- QUERY I: Is deprecated stay-in-webview still enabled? 
 
  #### Open all links in WebView
