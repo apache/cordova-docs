@@ -37,62 +37,60 @@ File for information on global configuration options.
 
         <preference name="EnableViewportScale" value="true"/>
 
-* `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
-  prevent the splash-screen to fade in and out when showing or hiding
-  it.
+* `FadeSplashScreen` (boolean, defaults to `true`): Set to `false` to
+  prevent the splash screen from fading in and out when its display
+  state changes.
 
         <preference name="FadeSplashScreen" value="false"/>
 
-* `FadeSplashScreenDuration` (float, defaults to 2): The splash-screen
-  Fade duration in seconds.
+* `FadeSplashScreenDuration` (float, defaults to `2`): Specifies the
+  number of seconds for the splash screen fade effect to execute.
 
         <preference name="FadeSplashScreenDuration" value="4"/>
 
-* `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
+* `ShowSplashScreenSpinner` (boolean, defaults to `true`): Set to `false`
   to hide the splash-screen spinner.
 
         <preference name="ShowSplashScreenSpinner" value="false"/>
 
-* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`): set
-  to `true` to not allow autoplayed HTML5 video.
+* `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
+  Set to `true` to prevent HTML5 videos from playing automatically
+  with the `autoplay` attribute. Does not apply when calling `play()`
+  on a video object.
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
-* `AllowInlineMediaPlayback` (boolean, defaults to `false`): set to
-  `true` to allow inline HTML5 media playback, also, the video element
-  in the HTML document must also include the webkit-playsinline
-  attribute.
+* `AllowInlineMediaPlayback` (boolean, defaults to `false`): Set to
+  `true` to allow HTML5 media playback to appear _inline_ within the
+  screen layout, using browser-supplied controls rather than native
+  controls. For this to work, add the `webkit-playsinline` attribute
+  to any `<video>` elements.
 
         <preference name="AllowInlineMediaPlayback" value="true"/>
 
-* `BackupWebStorage` (string, defaults to `cloud`): valid values are
-  `none`, `cloud` and `local`. Set to `cloud` to allow the web
-  storage data to be backed up to iCloud, and set to `local` to only
-  allow local backups (iTunes sync). Set to `none` to not allow any
-  backups of web storage.
+* `BackupWebStorage` (string, either `none`, `local`, or the default
+  `cloud`): Set to `cloud` to allow web storage data to backup via
+  iCloud. Set to `local` to allow only local backups via iTunes
+  sync. Set to `none` prevent web storage backups.
 
         <preference name="BackupWebStorage" value="local"/>
 
 * `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
-  set to `false` to open the keyboard when form elements get focus via
-  the JavaScript focus() call.
+  Set to `false` to allow the keyboard to appear when calling
+  `focus()` on form inputs.
 
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
 
-* `SuppressesIncrementalRendering` (boolean, defaults to `false`): set
-  to `true` to wait until all new view content has been received
-  before it is rendered.
+* `SuppressesIncrementalRendering` (boolean, defaults to `false`): Set
+  to `true` to wait until all content has been received before it
+  renders to the screen.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
-* `KeyboardShrinksView` (boolean, defaults to `false`): set to `true` to
-  shrink the WebView when the keyboard comes up. The WebView shrinks
-  instead of the viewport shrinking and the page scrollable. This
-  applies to apps that position their elements relative to the bottom
-  of the WebView. This is the default behaviour on Android, and makes
-  a lot of sense when building apps as opposed to webpages.
+* `KeyboardShrinksView` (boolean, defaults to `false`): Set to `true`
+  to scale down the webview when the keyboard appears, overriding the
+  default beavior that shrinks the viewport vertically. This matches
+  the default behaviour for Android apps.
 
         <preference name="KeyboardShrinksView" value="true"/>
-
-
 
