@@ -56,11 +56,9 @@ File for information on global configuration options.
         <preference name="FadeSplashScreenDuration" value="4"/>
 
 * `ShowSplashScreenSpinner` (boolean, defaults to `true`): set to `false`
-  to hide the splash-screen spinner.
+  to hide the splash screen spinner element.
 
         <preference name="ShowSplashScreenSpinner" value="false"/>
-
-<!-- QUERY I: for ShowSplashScreenSpinner describe spinner -->
 
 * `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
   set to `true` to prevent HTML5 video from playing automatically with
