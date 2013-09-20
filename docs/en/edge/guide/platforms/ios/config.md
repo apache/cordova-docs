@@ -24,18 +24,18 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to iOS builds. See The config.xml
 File for information on global configuration options.
 
-* `TopActivityIndicator` (string, defaults to `gray`): this is the top
-  spinning throbber in the status/battery bar, valid values are
+* `TopActivityIndicator` (string, defaults to `gray`): Controls the
+  appearance of the small spinning icon in the status bar that
+  indicates significant processor activity.  Valid values are
   `whiteLarge`, `white`, and `gray`.
 
         <preference name="TopActivityIndicator" value="white"/>
 
-* `EnableViewportScale` (boolean, defaults to `false`): set to `true` to
-  prevent viewport scaling through a meta tag.
+* `EnableViewportScale` (boolean, defaults to `false`): Set to `true`
+  to use a viewport meta tag to either disable or restrict the range
+  of user scaling. 
 
         <preference name="EnableViewportScale" value="true"/>
-
-<!-- QUERY I: confirm EnableViewportScale allows viewport metatag to control range of scale, including disabling? -->
 
 * `FadeSplashScreen` (boolean, defaults to `true`): set to `false` to
   prevent the splash-screen to fade in and out when showing or hiding
