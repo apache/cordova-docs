@@ -102,23 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is ios-statusbarstyle OK?
-
- #### Status Bar Style
-
-* `ios-statusbarstyle` with values `default`, `black-opaque` or
-  `black-translucent`
-
-  * example: `<preference name="ios-statusbarstyle" value="black-opaque" />`
-
-  * default is a grey status bar, `black-opaque` will appear black
-
-  * although `black-translucent` is supported, the PhoneGap webview
-    does not extend beneath the status bar, so it will appear
-    identical to `black-opaque` once your app is running
-
--->
-
 <!-- QUERY I: Is detect-data-types OK?
 
  #### Detect Data Types
