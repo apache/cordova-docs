@@ -102,29 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is deprecated stay-in-webview still enabled? 
-
- #### Open all links in WebView
-
-* __Deprecated__ -- use <a
-  href="http://docs.phonegap.com/en/2.9.0/cordova_inappbrowser_inappbrowser.md.html#InAppBrowser">InAppBrowser</a>
-  with target equal to '_self' (webview), '_blank' (InAppBrowser),
-  '_system' (system web browser)
-
-* `stay-in-webview` with values `true` or `false`
-
-  * example: `<preference name="stay-in-webview" value="true" />`
-
-  * if set to true, all links (even with target set to blank) will
-    open in the app's webview
-
-  * only use this preference if you want pages from your server to
-    take over your entire app
-
-  * default is _false_
-
--->
-
 <!-- QUERY I: Is ios-statusbarstyle OK?
 
  #### Status Bar Style
