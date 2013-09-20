@@ -102,21 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is webviewbounce OK? 
-
- #### WebView Bounce
-
-* `webviewbounce` with values `true` or `false`
-
-        <preference name="webviewbounce" value="fubar"/>
-
-  * example: `<preference name="webviewbounce" value="false" />`
-
-  * controls whether the screen "bounces" when scrolled beyond the top
-    or bottom on iOS. By default, the bounce is _on_
-
--->
-
 <!-- QUERY I: Is prerendered-icon OK?
 
  #### Prerendered Icon
