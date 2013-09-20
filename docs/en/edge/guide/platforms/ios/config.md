@@ -38,8 +38,6 @@ File for information on global configuration options.
 
 <!-- QUERY I: confirm EnableViewportScale allows viewport metatag to control range of scale, including disabling? -->
 
-<!-- QUERY: Do viewport meta tags work as expected in other environments? -->
-
 * `AutoHideSplashScreen` (boolean, defaults to `true`): set to `false`
   to use the SplashScreen API to control when the opening image stops
   displaying.
