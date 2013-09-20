@@ -24,25 +24,26 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to Android builds. See The
 config.xml File for information on global configuration options.
 
-* `LoadingDialog`: Display a native loading dialog when loading the
-  app. The value's format is _Title, Message_
+* `LoadingDialog`: Display a native dialog when loading the app. The
+  value's format is _Title, Message_
 
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
 
-* `LoadingPageDialog`: Display a native loading dialog when loading
-  sub-pages. The value's format is _Title, Message_
+* `LoadingPageDialog`: Display a native dialog when loading sub-pages
+  within an app. The value's format is _Title, Message_
 
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
 
 * `ErrorUrl`: Specifies an error page that displays in response to
-  standard HTTP errors in the 400-500 range. The specified file needs
-  to be placed in the top-level directory containing the home page and
-  other web assets.
+  standard HTTP errors in the 400-500 range. Place the specified file
+  in the top-level directory containing the home page and other web
+  assets.
 
         <preference name="ErrorUrl" value="error.html"/>
 
 * `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
   page, the amount of time to wait before throwing a timeout error.
+  This example specifies 10 seconds rather than 20:
 
         <preference name="LoadUrlTimeoutValue" value="10000"/>
 
@@ -54,8 +55,7 @@ config.xml File for information on global configuration options.
 
 * `SplashScreen`: The name of the file minus its extension in the
   `res/drawable` directory.  Various assets must share this common
-  name in various subdirectories.  For details, see the _Icons and
-  Splash Screens_ section in The config.xml File.
+  name in various subdirectories.
 
         <preference name="SplashScreen" value="splash"/>
 
