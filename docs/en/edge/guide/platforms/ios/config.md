@@ -102,22 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is detect-data-types OK?
-
- #### Detect Data Types
-
-* `detect-data-types` with values `true` or `false`
-
-  * example: `<preference name="detect-data-types" value="false" />`
-
-  * controls whether certain data types (such as phone numbers and
-    dates) are automatically turned into links by the system. Defaults
-    to "true" (as does the system web view)
-
-  * supported on PhoneGap 2.0.0 and above
-
--->
-
 <!-- QUERY I: Is exit-on-suspend OK?
 
  #### Exit On Suspend
