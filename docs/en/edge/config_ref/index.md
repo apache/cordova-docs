@@ -95,6 +95,11 @@ platforms:
 
 The following global preferences apply to all platforms:
 
+- `Fullscreen` allows you to hide the status bar at the top of the
+  screen. The default value is `false`. Example:
+
+        <preference name="Fullscreen" value="true" />
+
 - `Orientation` allows you to lock orientation and prevent the
   interface from rotating in response to changes in orientation.
   Possible values are `default`, `landscape`, or `portrait`. Example:
@@ -108,17 +113,12 @@ The following global preferences apply to all platforms:
   in its `config.xml` file. If you specify `default` in the global
   `config.xml`, it translates to `auto` in the BlackBerry build.
 
-- `Fullscreen` allows you to hide the status bar at the top of the
-  screen. The default value is `false`. Example:
-
-        <preference name="Fullscreen" value="true" />
-
 ## Multi-platform Preferences
 
 The following preferences apply to more than one platform, but not to
 all of them:
 
-* `DisallowOverscroll` (boolean, defaults to `false`): set to `true`
+- `DisallowOverscroll` (boolean, defaults to `false`): set to `true`
   if you don't want the interface to display any feedback when users
   scroll past the beginning or end of content.
 
@@ -129,7 +129,7 @@ all of them:
   produce a more subtle glowing effect along the top or bottom edge of
   the content.
 
-* `BackgroundColor`: Set the app's background color.  Supports a
+- `BackgroundColor`: Set the app's background color.  Supports a
   four-byte hex value, with the first byte representing the alpha
   channel, and standard RGB values for the following three bytes.  This
   example specifies blue:
@@ -139,7 +139,7 @@ all of them:
   Applies to Android and BlackBerry. Overrides CSS otherwise available
   across _all_ platforms, for example: `body{background-color:blue}`.
 
-* `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
+- `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
   to `true` to hide the additional toolbar that appears above the
   keyboard, helping users navigate from one form input to another.
 
