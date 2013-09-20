@@ -454,7 +454,9 @@ below. Use the `<config-file>` tag for newer versions of Cordova.
 Example:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
 
 Specifies a key and value to append to the correct `AppInfo.plist`
