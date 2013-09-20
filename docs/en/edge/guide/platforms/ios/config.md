@@ -102,22 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is show-splash-screen-spinner OK?
-
- #### Show Splash Screen Spinner
-
-* `show-splash-screen-spinner` with values `true` or `false`
-
-  * example: `<preference name="show-splash-screen-spinner"
-    value="false" />`
-
-  * if set to false, the spinner won't appear on the splash screen
-    during app loading
-
-  * default is _true_
-
--->
-
 <!-- QUERY I: Is auto-hide-splash-screen OK?
 
  #### Auto-Hide Splash Screen
