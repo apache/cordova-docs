@@ -29,14 +29,14 @@ config.xml File for information on global configuration options.
   `window.open()` or by specifying a `_blank` anchor target. Specify
   `disable` to override this default behavior.
 
-        <preference name="childBrowser" value="disable"/>
+        <preference name="ChildBrowser" value="disable"/>
 
 * `PopupBlocker`: Enables the popup blocker, which prevents calls to
   `window.open()`. By default, popups display in a child browser
   window. Setting the preference to `enable` prevents it from
   displaying at all.
 
-        <preference name="popupBlocker" value="enable"/>
+        <preference name="PopupBlocker" value="enable"/>
 
 * `WebSecurity`: Disables web security. Disabling web security allows
   you to access remote content from unknown sources during
@@ -46,5 +46,5 @@ config.xml File for information on global configuration options.
   be whitelisted using the `<access>` element. To disable, specify
   value as `disable`.
 
-        <preference name="webSecurity" value="disable"/>
+        <preference name="WebSecurity" value="disable"/>
 
