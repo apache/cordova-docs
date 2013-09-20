@@ -102,21 +102,6 @@ File for information on global configuration options.
         <preference name="KeyboardShrinksView" value="true"/>
 
 
-<!-- QUERY I: Is exit-on-suspend OK?
-
- #### Exit On Suspend
-
-* `exit-on-suspend` with values `true` or `false`
-
-  * example: `<preference name="exit-on-suspend" value="true" />`
-
-  * if set to true, app will terminate when suspended, for example
-    when home button is pressed
-
-  * default is _false_
-
--->
-
 <!-- QUERY I: Is show-splash-screen-spinner OK?
 
  #### Show Splash Screen Spinner
