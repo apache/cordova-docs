@@ -134,6 +134,8 @@ all of them:
 
   Applies to Android and BlackBerry.
 
+<!-- QUERY: does this override CSS such as "body {background-color:black}"? -->
+
 * `HideKeyboardFormAccessoryBar` (boolean, defaults to `false`): set
   to `true` to hide the additional toolbar that appears above the
   keyboard, helping users navigate from one form input to another.
