@@ -43,10 +43,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Referencia de la configuración
+        El archivo config.xml
       </h2>
       
-      <span>Personalizar las características de su aplicación.</span>
+      <span>Personalizar las características de la bobina</span>
     </li>
     <li>
       <h2>

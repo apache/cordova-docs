@@ -24,7 +24,7 @@ El `cordova` la utilidad de línea de comandos es una herramienta de alto nivel 
 
 Las herramientas de línea de comandos de Windows Phone apoyan la creación, construcción y ejecución de nuevos proyectos. Los comandos deben ejecutarse desde un símbolo del sistema cmd o powershell.
 
-El repo WP8 ahora incluye código para la construcción tanto WP7 + WP8 apps. El repo tiene subcarpetas para cada uno: wp7 / y wp8 /
+El repo WP8 ahora incluye código para construir tanto WP7 + WP8 apps. El repositorio tiene subdirectorios para cada uno: `wp7 /` y `wp8 /`.
 
 ## Crear un proyecto
 

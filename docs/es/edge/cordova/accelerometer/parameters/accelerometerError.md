@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerError
 
-función de devolución de llamada onError para las funciones de aceleración.
+función callback onError para las funciones de aceleración.
 
     function() {
         // Handle the error

@@ -20,7 +20,7 @@ Escribir un plugin para Cordova de Windows Phone requiere un entendimiento bási
 
 1.  Seleccione su proyecto y con el botón derecho para elegir **Add → New Item...**
     
-    *   Preferiblemente agregarlo a la carpeta 'Plugins', pero depende de ti
+    *   Preferiblemente añadirlo al directorio 'Plugins', pero depende de ti
 
 2.  Seleccione 'Class' y asígnele el nombre `Echo.cs`
     

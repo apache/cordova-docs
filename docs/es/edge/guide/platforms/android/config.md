@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Configuración de Android
 
-El `config.xml` archivo controla varias configuraciones de Córdoba. Éstos se aplican a través de la aplicación y por ejemplo CordovaWebView.
+El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-## `<preference>`
+*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena.
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-Varias otras preferencias (como `<preference>` etiquetas) por defecto en no romper aplicaciones existentes. Las preferencias disponibles son:
+*   `ErrorUrl`: especifica una página de error que aparece en respuesta a los errores estándar HTTP en el rango de 400-500. Coloque el archivo especificado en el nivel de directorio que contiene la página de inicio y otros activos de la web.
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(por defecto es booleano, `true` ): a `false` si desea utilizar el calce de la historia que se utilizó para solucionar el error hashtag presente en Android 3.x antes de la revisión de la historia. (Nota: este ajuste a ser desaprobado en abril de 2013)
+*   `LoadingDialog`: muestra un diálogo nativo cuando se carga la aplicación. El formato del valor es *título, mensaje*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`: Muestra un diálogo nativa de carga cuando se carga la aplicación. El formato del valor es *título, mensaje*
+*   `LoadingPageDialog`: muestra un diálogo nativo al cargar subpáginas dentro de una aplicación. El formato del valor es *título, mensaje*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`: Mostrar un diálogo de carga nativa al cargar subpáginas. El formato del valor es *título, mensaje*
+*   `LoadUrlTimeoutValue` (número, el valor predeterminado es `20000`): cuando se carga una página, la cantidad de tiempo de espera antes de tirar un error de tiempo de espera. Este ejemplo especifica 10 segundos en lugar de 20:
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`: Establecer la página de error para su aplicación. Debe estar ubicado en tu proyecto Android`file://android_asset/www/`
+*   `SplashScreen`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`: Ajusta el color de fondo para su aplicación. Admite un valor hexadecimal de cuatro bytes, con el primer byte que representa el valor de alfa y los siguientes tres bytes con valores RGB estándar. Por ejemplo, `0x00000000` es de color negro.
-
-*   `loadUrlTimeoutValue`: Cuánto tiempo Cordova debe esperar antes de tirar un error de tiempo de espera de la aplicación.
-
-*   `keepRunning`(por defecto es booleano, `true` ): determina si Cordova permanece en segundo plano.
-
-*   `splashscreen`: El nombre del archivo sin su extensión en el `res/drawable` Directorio. Si usted tiene múltiples activos, todos ellos deben compartir este nombre común en sus respectivos directorios.
-
-*   `disallowOverscroll`(boolean, por defecto `false` ): a `true` para desactivar el resplandor cuando un usuario se desplaza más allá del borde de la vista Web.
-
-## `<plugin>`
-
-Android apoya el uso `<feature>` como análogos a `<plugin>` elementos.
+*   `SplashScreenDelay` (número, el valor predeterminado de `5000`): la cantidad de tiempo que muestra la imagen en pantalla splash.
+    
+        <preference name="SplashScreenDelay" value="10000"/>

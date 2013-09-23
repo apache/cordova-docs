@@ -18,14 +18,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta guía le muestra cómo modificar los proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
-Por favor tenga en cuenta que el CLI compatible con la plataforma BlackBerry10 exclusivamente. Para el libro de jugadas y BBOS, ver Cordova versión 2.9.0 magnetohidrodinámica y por debajo.
+## Actualizar a 3.1.0 desde 3.0.0
 
-## Actualícese a la CLI (3.0.0) de 2.9.0 magnetohidrodinámica
+1.  Crear un nuevo proyecto de Apache Cordova 3.1.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
 
-1.  Crear un nuevo proyecto de Apache Cordova 3.0.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
-
-2.  Agregar tus plataformas el proyecto de la Córdoba, por ejemplo:`cordova
-platform add blackberry10`.
+2.  Agregue sus plataformas al proyecto cordova, por ejemplo: `cordova platform add blackberry10`.
 
 3.  Copiar el contenido del proyecto original `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
 
@@ -33,7 +30,25 @@ platform add blackberry10`.
 
 5.  Copia tus `config.xml` en el `www` Directorio y eliminar cualquier plugin definiciones. Usted modificar ajustes aquí en lugar del directorio de la plataforma.
 
-6.  Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Sólo 3.0.0 plugins son compatibles con la CLI.
+6.  Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Solo plugins marcó 3.0.0 y encima son compatibles con la CLI.
+
+7.  Construir y probar.
+
+Por favor tenga en cuenta que el CLI compatible con la plataforma BlackBerry10 exclusivamente. Para el libro de jugadas y BBOS, ver Cordova versión 2.9.0 magnetohidrodinámica y por debajo.
+
+## Actualícese a la CLI (3.0.0) de 2.9.0 magnetohidrodinámica
+
+1.  Crear un nuevo proyecto de Apache Cordova 3.0.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
+
+2.  Agregar tus plataformas el la Córdoba del proyecto, por ejemplo: `cordova platform add blackberry10`.
+
+3.  Copiar el contenido del proyecto original `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
+
+4.  Copiar o sobrescribir ningún activo nativo de su proyecto original ( `Resources` , etc..)
+
+5.  Copia tus `config.xml` en el `www` Directorio y eliminar cualquier plugin definiciones. Usted modificar ajustes aquí en lugar del directorio de la plataforma.
+
+6.  Utilice la herramienta CLI cordova instalar algún plugin que necesitas. Tenga en cuenta que el CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser añadido. Sólo 3.0.0 plugins son compatibles con el CLI.
 
 7.  Construir y probar.
 
@@ -49,7 +64,7 @@ BlackBerry 10:
 
 4.  Crear un nuevo proyecto, como se describe en las herramientas de línea de comandos de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.
 
-5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del proyecto nuevo directorio `/www` Directorio.
+5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del nuevo proyecto directorio `/www` directorio.
 
 6.  Actualizar la referencia de script Cordova en su `www/index.html` archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva `cordova.js` archivo.
 
@@ -87,7 +102,7 @@ BlackBerry 10 utiliza las nuevas herramientas de CLI y gestiona núcleo APIs com
 
 4.  Crear un nuevo proyecto, como se describe en las herramientas de línea de comandos de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.
 
-5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del proyecto nuevo directorio `/www` Directorio.
+5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del nuevo proyecto directorio `/www` directorio.
 
 6.  Actualizar la referencia de script Cordova en su `www/index.html` archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva `cordova.js` archivo.
 
@@ -111,9 +126,9 @@ BlackBerryOS/Playbook:
 
 9.  Copia el `cordova` directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo `cordova` Directorio.
 
-## Proyectos de modernización 2.6.0 a 2.7.0
+## 2.6.0 Actualizar proyectos a 2.7.0
 
-1.  Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a`~/Cordova-2.7.0`.
+1.  Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a `~/Cordova-2.7.0`.
 
 2.  Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.
 
@@ -161,7 +176,7 @@ Actualizando el ejemplo / proyecto de directorio o migrar existente:
 
 5.  Copie el nuevo `cordova-2.6.0.js` en su proyecto.
 
-6.  Actualizar el código HTML para usar el nuevo `cordova-2.6.0.js` archivo.
+6.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.6.0.js`.
 
 ## Actualizar a 2.5.0 desde 2.4.0
 
@@ -193,7 +208,7 @@ Actualizando el ejemplo / proyecto de directorio o migrar existente:
 
 5.  Copie el nuevo `cordova-2.5.0.js` en su proyecto.
 
-6.  Actualizar el código HTML para usar el nuevo `cordova-2.5.0.js` archivo.
+6.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.5.0.js`.
 
 ## Actualizar a 2.4.0 desde 2.3.0
 
@@ -210,7 +225,7 @@ Actualizar el `www` Directorio:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.4.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.4.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -245,7 +260,7 @@ Actualizar el `www` Directorio:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.3.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.3.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -265,7 +280,7 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
 
 8.  Abierta la `www/` Directorio y actualizar el código HTML para usar el nuevo `cordova-2.3.0.js` archivo.
 
-## Actualizar a 2.2.0 desde 2.1.0
+## Actualizar a 2.2.0 de 2.1.0
 
 Actualizar sólo el directorio www:
 
@@ -280,7 +295,7 @@ Actualizar sólo el directorio www:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.2.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.2.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -314,7 +329,7 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.1.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.1.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -346,16 +361,18 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.0.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.0.0.js`.
 
-6.  Actualizar su `www/plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
+6.  Actualizar el archivo `www/plugins.xml`. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las viejas entradas para los plugins de captura y contacto de:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Para:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
@@ -376,12 +393,13 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
 
 8.  Abierta la `www/` Directorio y actualizar el `plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Para:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+         < nombre del plugin = value="org.apache.cordova.capture.MediaCapture"/ "Capturar" >< plugin nombre = "Contactos" value="org.apache.cordova.pim.Contact"/ >
         
 
 *   Para actualizar a 1.8.0, por favor vaya de 1.7.0
@@ -400,16 +418,18 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.8.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-1.8.0.js`.
 
-6.  Actualizar su `www/plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
+6.  Actualizar el archivo `www/plugins.xml`. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las viejas entradas para los plugins de captura y contacto de:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Para:
     
-        < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
@@ -430,9 +450,10 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
 
 8.  Abierta la `www/` Directorio y actualizar el `plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Para:
     
-         < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
+         < nombre del plugin = value="org.apache.cordova.capture.MediaCapture"/ "Capturar" >< plugin nombre = "Contactos" value="org.apache.cordova.pim.Contact"/ >
