@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerSuccess
 
-Fonction de callback onSuccess qui fournit les informations d'`Acceleration`.
+Function callback onSuccess qui fournit les informations d'`Acceleration`.
 
     function(acceleration) {
         // Do something

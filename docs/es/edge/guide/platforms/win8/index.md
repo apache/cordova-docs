@@ -39,7 +39,7 @@ Siga las instrucciones [aquí][1] para enviar sus aplicaciones Windows Store.
 
 *   Configure su variante preferida de Visual Studio 2012. Todas las versiones del producto pagado (profesional, etc.) a dejarte construir aplicaciones Windows Store. Necesita **expresar para Windows 8** para construir aplicaciones Windows Store usando las [ediciones Express][2].
 
-*   Descargar y descomprimir la copia más reciente de [Córdoba][3]. Se trabajará la `lib\windows-8` subcarpeta.
+*   Descargar y descomprimir la copia más reciente de [Córdoba][3]. Trabajará en el subdirectorio `lib\windows-8`.
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

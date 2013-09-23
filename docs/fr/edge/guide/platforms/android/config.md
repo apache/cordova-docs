@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Configuration Android
 
-Le `config.xml` fichier contrôle les différents paramètres de Cordova. Elles s'appliquent dans toute l'application et par l'instance de CordovaWebView.
+The `config.xml` file controls an app's basic settings that apply across each application and CordovaWebView instance. This section details preferences that only apply to Android builds. See The config.xml File for information on global configuration options.
 
-## `<preference>`
+*   `KeepRunning` (boolean, defaults to `true`): Determines whether the application stays running in the background even after a `pause` event fires.
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-Divers autres préférences (comme `<preference>` tags) par défaut sur la rupture ne pas les applications existantes. Les préférences disponibles sont :
+*   `ErrorUrl`: Specifies an error page that displays in response to standard HTTP errors in the 400-500 range. Place the specified file in the top-level directory containing the home page and other web assets.
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(boolean, la valeur par défaut `true` ): la valeur `false` si vous souhaitez utiliser la cale de l'histoire qui a été utilisée pour contourner l'erreur hashtag présent dans Android 3.x avant la correction de l'histoire. (Remarque : ce paramètre sera déconseillé en avril 2013)
+*   `LoadingDialog`: Display a native dialog when loading the app. The value's format is *Title, Message*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`: Afficher une boîte de dialogue chargement native lors du chargement de l'application. Le format de la valeur est *titre, Message*
+*   `LoadingPageDialog`: Display a native dialog when loading sub-pages within an app. The value's format is *Title, Message*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`: Afficher une boîte de dialogue chargement native lors du chargement des sous-pages. Le format de la valeur est *titre, Message*
+*   `LoadUrlTimeoutValue` (number, default is `20000`): When loading a page, the amount of time to wait before throwing a timeout error. This example specifies 10 seconds rather than 20:
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`: Définir la page d'erreur pour votre application. Doit se trouver dans votre projet Android dans`file://android_asset/www/`
+*   `SplashScreen`: The name of the file minus its extension in the `res/drawable` directory. Various assets must share this common name in various subdirectories.
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`: Définir la couleur d'arrière-plan pour votre application. Prend en charge une valeur hexadécimale de quatre octets, le premier octet représentant la valeur alpha et les trois octets suivants avec les valeurs RGB standard. Par exemple, `0x00000000` est noir.
-
-*   `loadUrlTimeoutValue`: Combien temps Cordova doit attendre avant de lancer une erreur de délai d'attente relatif à l'application.
-
-*   `keepRunning`(boolean, la valeur par défaut `true` ): détermine si Cordova reste en cours d'exécution en arrière-plan.
-
-*   `splashscreen`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Si vous avez plusieurs actifs, ils sont tous doivent partager ce nom commun dans leur répertoire respectif.
-
-*   `disallowOverscroll`(boolean, la valeur par défaut `false` ): la valeur `true` pour désactiver la lueur lorsqu'un utilisateur fait défiler au-delà du bord de l'affichage Web.
-
-## `<plugin>`
-
-Android prend en charge à l'aide de `<feature>` comme analogues aux `<plugin>` des éléments.
+*   `SplashScreenDelay` (number, defaults to `5000`): The amount of time the splash screen image displays.
+    
+        <preference name="SplashScreenDelay" value="10000"/>

@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileUploadResult
 
-A `FileUploadResult` objet est passé au rappel de succès la `FileTransfer` de l'objet `upload()` méthode.
+Un objet `FileUploadResult` est passé à la callback de succès de la méthode `upload()` de l'objet `FileTransfer`.
 
 ## Propriétés
 
-*   **bytesSent**: le nombre d'octets envoyés au serveur dans le cadre du téléchargement. (long)
+*   **bytesSent** : le nombre d'octets envoyés au serveur dans le cadre du téléchargement. (long)
 
-*   **responseCode**: code de réponse HTTP le retourné par le serveur. (long)
+*   **responseCode** : le code de réponse HTTP retourné par le serveur. (long)
 
-*   **réponse**: réponse The HTTP renvoyé par le serveur. (DOMString)
+*   **response** : la réponse HTTP renvoyée par le serveur. (DOMString)
 
 ## Description
 
-Le `FileUploadResult` objet est retourné par le rappel de la réussite de la `FileTransfer` de l'objet `upload()` méthode.
+Un objet `FileUploadResult` est retourné par la callback de succès de la méthode `upload()` de l'objet `FileTransfer`.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   Ne prend pas en charge `responseCode` ou`bytesSent`.
+*   Ne prend pas en charge les propriétés `responseCode` et `bytesSent`.

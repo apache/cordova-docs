@@ -16,66 +16,66 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileWriter
 
-En tant qu'objet permet de créer et d'écrire des données dans un fichier.
+Un objet permettant de créer et d'écrire des données dans un fichier.
 
 ## Propriétés
 
-*   **readyState**: un des trois États possibles, soit `INIT` , `WRITING` , ou`DONE`.
+*   **readyState** : un des trois états suivants, `INIT`, `WRITING` ou `DONE`.
 
-*   **fileName**: le nom du fichier à écrire. *(DOMString)*
+*   **fileName** : le nom du fichier à écrire. *(DOMString)*
 
-*   **longueur**: la longueur du fichier à écrire. *(long)*
+*   **length** : la longueur du fichier à écrire. *(long)*
 
-*   **position**: la position actuelle du pointeur de la file. *(long)*
+*   **position** : la position actuelle du pointeur dans le fichier. *(long)*
 
-*   **erreur**: un objet contenant des erreurs. *(FileError)*
+*   **error** : un objet contenant des erreurs. *(FileError)*
 
-*   **onwritestart**: appelé au démarrage de l'écriture. *(Fonction)*
+*   **onwritestart** : fonction appelée lors du démarrage de l'écriture. *(Function)*
 
-*   **onwrite**: appelé lorsque la requête s'est terminée correctement. *(Fonction)*
+*   **onwrite** : fonction appelée lorsque l'écriture s'est terminée correctement. *(Function)*
 
-*   **OnAbort**: appelé lorsque l'écriture a été abandonnée. Par exemple, en appelant la méthode abort(). *(Fonction)*
+*   **onabort** : fonction appelée lorsque l'écriture a été abandonnée. Par exemple en appelant la méthode abort(). *(Function)*
 
-*   **OnError**: appelé lorsque l'écriture a échoué. *(Fonction)*
+*   **onerror** : fonction appelé lorsque l'écriture a échoué. *(Function)*
 
-*   **onwriteend**: appelé lorsque la demande est terminée (que ce soit dans le succès ou l'échec). *(Fonction)*
+*   **onwriteend** : fonction appelée lorsque l'écriture est terminée (avec succès ou non). *(Function)*
 
 La propriété suivante n'est *pas* supportée :
 
-*   **OnProgress**: appelée lors de l'écriture du fichier, faisant état de progrès en termes de `progress.loaded` / `progress.total` . *(Fonction)*
+*   **onprogress** : fonction appelée lors de l'écriture du fichier, faisant état de la progression par le biais de `progress.loaded`/`progress.total`. *(Function)*
 
 ## Méthodes
 
-*   **Annuler**: annule l'écriture du fichier.
+*   **abort** : annule l'écriture du fichier.
 
-*   **Rechercher**: déplace le pointeur de fichier à l'octet spécifié.
+*   **seek** : déplace le pointeur dans le fichier à l'octet spécifié.
 
-*   **tronquer**: raccourcit le fichier à la longueur spécifiée.
+*   **truncate** : raccourcit le fichier à la longueur spécifiée.
 
-*   **écrire**: écrit les données dans le fichier.
+*   **write** : écrit des données dans le fichier.
 
 ## Détails
 
-Le `FileWriter` objet offre la possibilité d'écrire des fichiers codés en UTF-8 pour le système de fichiers du périphérique. Les applications répondent aux `writestart` , `progress` , `write` , `writeend` , `error` , et `abort` des événements.
+L'objet `FileWriter` permet d'écrire des fichiers encodés en UTF-8 dans le système de fichiers de l'appareil. Les applications répondent aux évènements `writestart`, `progress`, `write`, `writeend`, `error` et `abort`.
 
-Chaque `FileWriter` correspond à un fichier unique, à laquelle les données peuvent être écrites plusieurs fois. La `FileWriter` maintient du fichier `position` et `length` attributs, qui permettent l'application pour `seek` et `write` n'importe où dans le fichier. Par défaut, le `FileWriter` écrit au début du fichier, en remplaçant les données existantes. Définissez le paramètre optionnel `append` booléen à `true` dans la `FileWriter` de constructeur pour écrire à la fin du fichier.
+Chaque objet `FileWriter` correspond à un fichier unique dans lequel des données peuvent être écrites plusieurs fois. L'objet `FileWriter` conserve les attributs `position` et `length` du fichier, permettant ainsi à l'application de `rechercher (seek)` et `écrire (write)` n'importe où dans celui-ci. Par défaut, l'objet `FileWriter` écrit au début du fichier, écrasant alors les données existantes. Spécifiez la valeur du paramètre optionnel `append` (Boolean) à `true` dans le constructeur d'un `FileWriter` pour écrire à la fin d'un fichier.
 
-Données textuelles sont pris en charge par toutes les plates-formes répertoriées ci-dessous. Texte est codé au format UTF-8 avant d'être écrites sur le système de fichiers. Certaines plates-formes soutiennent également les données binaires, qui peuvent être passées comme un ArrayBuffer ou un objet Blob.
+Les données sous forme textuelle sont prise en charge par toutes les plates-formes répertoriées ci-dessous. Chaque texte est encodé au format UTF-8 avant d'être écrit dans le système de fichiers. Certaines plates-formes supportent également les données sous forme binaire, qui peuvent être passées comme un ArrayBuffer ou un objet Blob.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
-Texte et binaire Support :
+Support des formats texte et binaire :
 
 *   Android
 *   iOS
 
-Support de texte uniquement :
+Support du format texte uniquement :
 
 *   BlackBerry WebWorks (OS 5.0 et plus)
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Chercher petit exemple
+## Exemple court de recherche
 
     function win(writer) {
         // fast forwards file pointer to end of file
@@ -89,7 +89,7 @@ Support de texte uniquement :
     entry.createWriter(win, fail);
     
 
-## Petit exemple de tronquer
+## Exemple court de troncature
 
     function win(writer) {
         writer.truncate(10);
@@ -102,7 +102,7 @@ Support de texte uniquement :
     entry.createWriter(win, fail);
     
 
-## Écrire exemple rapide
+## Exemple court d'écriture
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -118,7 +118,7 @@ Support de texte uniquement :
     entry.createWriter(win, fail);
     
 
-## Binaire écrire exemple rapide
+## Exemple court d'écriture binaire
 
     function win(writer) {
         var data = new ArrayBuffer(5),
@@ -139,7 +139,7 @@ Support de texte uniquement :
     entry.createWriter(win, fail);
     
 
-## Ajouter exemple rapide
+## Exemple court d'ajout
 
     function win(writer) {
         writer.onwrite = function(evt) {
@@ -156,7 +156,7 @@ Support de texte uniquement :
     entry.createWriter(win, fail);
     
 
-## Abandon rapide exemple
+## Exemple court d'abandon
 
     function win(writer) {
         writer.onwrite = function(evt) {

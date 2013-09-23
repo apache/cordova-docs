@@ -62,4 +62,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.

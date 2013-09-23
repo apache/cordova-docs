@@ -134,7 +134,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.
 
 ### Windows Phone Quirks
 

@@ -41,7 +41,7 @@ Cada *Plataforma guía* a continuación te dice lo que necesitas saber para conf
 ## BlackBerry 10
 
 *   Guía de la plataforma BlackBerry 10
-*   Configuración de BlackBerry 10
+*   Configuración de blackBerry 10
 *   BlackBerry 10 Plugins
 *   BlackBerry 10 herramientas de línea de comandos
 
@@ -58,6 +58,7 @@ Cada *Plataforma guía* a continuación te dice lo que necesitas saber para conf
 
 *   Guía de la plataforma de Windows Phone 8
 *   Guía de la plataforma de Windows Phone 7
+*   Configuración de Windows Phone
 *   Windows Phone herramientas de línea de comandos
 *   Actualización de Windows Phone
 
@@ -70,9 +71,3 @@ Cada *Plataforma guía* a continuación te dice lo que necesitas saber para conf
 ## Tizen
 
 *   Guía de la plataforma Tizen
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

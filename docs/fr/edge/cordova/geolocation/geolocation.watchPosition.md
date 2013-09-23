@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.watchPosition
 
-Montres pour faire modifier la position actuelle de l'appareil.
+Observer les changements de localisation de l'appareil.
 
     var watchId = navigator.geolocation.watchPosition(geolocationSuccess,
                                                       [geolocationError],
@@ -25,21 +25,21 @@ Montres pour faire modifier la position actuelle de l'appareil.
 
 ## Paramètres
 
-*   **geolocationSuccess**: la fonction de rappel qui est passée de la position actuelle.
+*   **geolocationSuccess** : la fonction callback à laquelle la position actuelle de l'appareil est transmise.
 
-*   **geolocationError**: (en option) la fonction de rappel qui s'exécute si une erreur survient.
+*   **geolocationError** : (facultative) la fonction callback s'exécutant lorsqu'une erreur survient.
 
-*   **geolocationOptions**: options (facultatif) la géolocalisation.
+*   **geolocationOptions** : (facultatives) options de personnalisation de la géolocalisation.
 
-## Retours
+## Retourne
 
-*   **Chaîne**: retourne un id de montre qui fait référence à l'intervalle de position montre. L'id de la montre doit être utilisé avec `geolocation.clearWatch` d'arrêter de regarder pour les changements de position.
+*   **String** : retourne un identifiant faisant référence à l'intervalle d'observation de la position. Cet identifiant est prévu pour être utilisé avec `geolocation.clearWatch` afin de pouvoir arrêter ultérieurement l'observation des changements de position.
 
 ## Description
 
-`geolocation.watchPosition`est une fonction asynchrone. Elle retourne la position actuelle de l'appareil lorsqu'un changement de position est détecté. Lorsque l'appareil récupère un nouvel emplacement, le `geolocationSuccess` rappel s'exécute avec un `Position` objet comme paramètre. Si une erreur se produit, le `geolocationError` rappel s'exécute avec un `PositionError` objet comme paramètre.
+`geolocation.watchPosition` est une fonction asynchrone. Elle renvoie la position actuelle de l'appareil lorsqu'un changement de position est détecté. Lorsque l'appareil récupère un nouvelle position, la fonction callback `geolocationSuccess` est exécutée avec un objet `Position` comme paramètre. Si une erreur se produit, la fonction callback `geolocationError` est appelée avec un obet `PositionError` comme paramètre.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -48,7 +48,7 @@ Montres pour faire modifier la position actuelle de l'appareil.
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     // onSuccess Callback
     //   This method accepts a `Position` object, which contains

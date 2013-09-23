@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Position
 
-Contient `Position` coordonnées et timestamp, créé par l'API de géolocalisation.
+Contient les coordonnées et l'horodatage de `Position` créés par l'API geolocation.
 
 ## Propriétés
 
-*   **CoOrds**: un système de coordonnées géographiques. *(Coordonnées)*
+*   **coords** : un ensemble de coordonnées géographiques. *(Coordinates)*
 
-*   **timestamp**: horodatage de création pour `coords` . *(Date)*
+*   **timestamp** : horodatage de la création de `coords`. *(Date)*
 
 ## Description
 
-Le `Position` objet est créé et peuplé de Cordova et retourné à l'utilisateur via une fonction de rappel.
+L'objet `Position` est créé et peuplé par Cordova, puis retourné à l'utilisateur via une fonction callback.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -37,7 +37,7 @@ Le `Position` objet est créé et peuplé de Cordova et retourné à l'utilisate
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     // onSuccess Callback
     //

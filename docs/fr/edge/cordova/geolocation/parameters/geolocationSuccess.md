@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationSuccess
 
-Fonction de rappel de l'utilisateur qui s'exécute lorsqu'une position de géolocalisation sera disponible (lorsqu'elle est appelée de `geolocation.getCurrentPosition` ), ou lorsque la position de change (lorsqu'il est appelé par`geolocation.watchPosition`).
+Fonction callback s'exécutant lorsqu'une position géolocalisée est disponible (via un appel à `geolocation.getCurrentPosition`), ou lorsque la position change (via un appel à `geolocation.watchPosition`).
 
     function(position) {
         // Do something
@@ -25,7 +25,7 @@ Fonction de rappel de l'utilisateur qui s'exécute lorsqu'une position de géolo
 
 ## Paramètres
 
-*   **position**: la position de géolocalisation retournée par le périphérique. *(Position)*
+*   **position** : la position géolocalisée retournée par l'appareil. *(Position)*
 
 ## Exemple
 

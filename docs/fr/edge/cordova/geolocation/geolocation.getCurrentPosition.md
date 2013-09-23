@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.getCurrentPosition
 
-Retourne la position actuelle de l'appareil comme un `Position` objet.
+Renvoie la position actuelle de l'appareil sous la forme d'un objet `Position`.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess,
                                              [geolocationError],
@@ -25,17 +25,17 @@ Retourne la position actuelle de l'appareil comme un `Position` objet.
 
 ## Paramètres
 
-*   **geolocationSuccess**: la fonction de rappel qui est passée de la position actuelle.
+*   **geolocationSuccess** : la fonction callback à laquelle est transmise la position actuelle.
 
-*   **geolocationError**: *(facultatif)* la fonction de rappel qui s'exécute si une erreur survient.
+*   **geolocationError** : *(facultative)* la fonction callback s'exécutant si une erreur survient.
 
-*   **geolocationOptions**: *(facultatif)* les options de géolocalisation.
+*   **geolocationOptions** : *(facultatives)* des préférences de géolocalisation.
 
 ## Description
 
-`geolocation.getCurrentPosition`est une fonction asynchrone. Elle retourne la position actuelle de l'appareil à la `geolocationSuccess` rappel avec un `Position` objet comme paramètre. Si une erreur se produit, le `geolocationError` rappel est passé un `PositionError` objet.
+`geolocation.getCurrentPosition` est une fonction asynchrone. Elle transmet la position actuelle de l'appareil à la fonction callback `geolocationSuccess` sous la forme d'un objet `Position`. Si une erreur se produit, un objet `PositionError` est passé en paramètre à la fonction callback `geolocationError`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -44,7 +44,7 @@ Retourne la position actuelle de l'appareil comme un `Position` objet.
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     // onSuccess Callback
     // This method accepts a Position object, which contains the

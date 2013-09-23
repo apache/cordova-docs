@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationError
 
-Fonction de rappel de l'utilisateur qui s'exécute lorsqu'une erreur se produit pour les fonctions de géolocalisation.
+Fonction callback s'exécutant si une erreur se produit lors de l'usage des méthodes de géolocalisation.
 
     function(error) {
         // Handle the error
@@ -25,4 +25,4 @@ Fonction de rappel de l'utilisateur qui s'exécute lorsqu'une erreur se produit 
 
 ## Paramètres
 
-*   **erreur**: l'erreur retournée par le périphérique. *(PositionError)*
+*   **error** : l'erreur renvoyée par l'appareil. *(PositionError)*

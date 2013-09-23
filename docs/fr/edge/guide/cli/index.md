@@ -159,64 +159,64 @@ Le `cordova plugin add` commande nécessite vous permet de spécifier le référ
 
 *   Informations de base périphérique (Device API) :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
         
 
 *   Connexion réseau et événements de la batterie :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
         
 
 *   Accéléromètre, boussole et géolocalisation :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
         
 
 *   Appareil photo, lecture et Capture :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media
             
 
 *   Accéder aux fichiers sur un périphérique réseau (fichier API) :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
         
 
 *   Notification via la boîte de dialogue ou de vibration :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
         
 
 *   Contacts :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
         
 
 *   Mondialisation :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
         
 
 *   SplashScreen :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
 *   Fenêtres ouvertes du navigateur nouvelle (InAppBrowser) :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
         
 
 *   Console de débogage :
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
         
 
 Utilisation `plugin ls` (ou `plugin list` , ou `plugin` en soi) à Découvre actuellement les plugins installés. Chacun affiche par son identificateur :
