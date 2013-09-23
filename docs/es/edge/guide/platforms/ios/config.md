@@ -16,38 +16,58 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS configuración
 
-El `config.xml` archivo de configuración controla varias configuraciones de Córdoba. Esta es la aplicación amplia y no establecer por ejemplo CDVViewController. El `config.xml` archivo se encuentra en su `<project folder>/<appname>` Directorio.
+El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras de iOS. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-## `< preferencia >`
+*   `EnableViewportScale` (boolean, valor predeterminado `false`): establece en `true` para usar una etiqueta meta viewport para deshabilitar o restringir el intervalo de usuario escalar.
+    
+        <preference name="EnableViewportScale" value="true"/>
+        
 
-Varias preferencias (como `<preference>` etiquetas) por defecto en no romper aplicaciones existentes. Las preferencias disponibles son:
+*   `MediaPlaybackRequiresUserAction` (boolean, valor predeterminado `false`): establece en `true` para impedir que HTML5 vídeos jugar automáticamente con el atributo `autoplay`. No se aplica cuando se llama a `play()` en un objeto de vídeo.
+    
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        
 
-*   `DisallowOverscroll`(por defecto es booleano, `false` ): establece en `true` si no quieres la WebView de goma.
+*   `AllowInlineMediaPlayback` (boolean, valor predeterminado `false`): establece en `true` para permitir la reproducción multimedia HTML5 aparecer *en línea* en el diseño de pantalla, utilizando el navegador proporciona controles más controles nativos. Para que ello, agregue el atributo `webkit-playsinline` a cualquier elemento `< video >`.
+    
+        <preference name="AllowInlineMediaPlayback" value="true"/>
+        
 
-*   `TopActivityIndicator`(string, el valor predeterminado de `gray` ): este es el throbber superior girando en la barra de estado/batería, los valores válidos son `whiteLarge` , `white` , y`gray`.
+*   `BackupWebStorage` (string, `none`, `local` o la de por defecto `cloud`): establece en `cloud` para permitir que los datos de backup mediante iCloud almacenamiento web. Establece en `local` para permitir a sólo locales backups mediante sincronización de iTunes. Set para `none` evitar copias de almacenamiento web.
+    
+        <preference name="BackupWebStorage" value="local"/>
+        
 
-*   `EnableLocation`(booleano, el valor predeterminado `false` ): establece en `true` , para inicializar el plugin de geolocalización en el arranque (para el arreglo de su ubicación puede ser más exacto) **DEPRECATED**: configure el `onload` atributo de la `Geolocation` plugin para `true` en su lugar.
+*   `TopActivityIndicator` (string, el valor predeterminado de `gray`): controla la apariencia del icono en la barra de estado que indica actividad significativa procesador pequeño giro. Los valores válidos son `whiteLarge`, `white` y `gray`.
+    
+        <preference name="TopActivityIndicator" value="white"/>
+        
 
-*   `EnableViewportScale`(por defecto es booleano, `false` ): a `true` para evitar viewport escala a través de una etiqueta meta.
+*   `FadeSplashScreen` (por defecto valor booleano, `true`): establecida en `false` para evitar que la pantalla de bienvenida descoloramiento entrar y salir cuando cambia su estado de presentación.
+    
+        <preference name="FadeSplashScreen" value="false"/>
+        
 
-*   `AutoHideSplashScreen`(por defecto es booleano, `true` ): a `false` para controlar cuando se oculta el splashscreen a través de una API de JavaScript.
+*   `FadeSplashScreenDuration` (float, el valor predeterminado de `2`): especifica el número de segundos para que la pantalla de bienvenida se desvanecen efecto de ejecutar.
+    
+        <preference name="FadeSplashScreenDuration" value="4"/>
+        
 
-*   `FadeSplashScreen`(por defecto es booleano, `true` ): establece en `false` para evitar que la pantalla se desvanezca entrar y salir cuando Mostrar u ocultarlo.
+*   `ShowSplashScreenSpinner` (por defecto valor booleano, `true`): establecida en `false` para ocultar el hilandero de la pantalla.
+    
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+        
 
-*   `FadeSplashScreenDuration`(float, el valor predeterminado de 2): la duración de transición pantalla en segundos.
+*   `KeyboardDisplayRequiresUserAction` (por defecto valor booleano, `true`): establecida en `false` para permitir que el teclado que aparece cuando se llama `focus()` en entradas del formulario.
+    
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+        
 
-*   `ShowSplashScreenSpinner`(por defecto es booleano, `true` ): a `false` para ocultar la ruleta pantalla.
+*   `SuppressesIncrementalRendering` (boolean, valor predeterminado `false`): establece en `true` para esperar a que todo el contenido ha sido recibido antes que presta a la pantalla.
+    
+        <preference name="SuppressesIncrementalRendering" value="true"/>
+        
 
-*   `MediaPlaybackRequiresUserAction`(por defecto es booleano, `false` ): establecido en true para no permitir autoplayed HTML5 video.
-
-*   `AllowInlineMediaPlayback`(por defecto es booleano, `false` ): establece en true para permitir la reproducción de los medios de comunicación en línea HTML5, también, el elemento en el documento HTML video también debe incluir el atributo webkit-playsinline.
-
-*   `BackupWebStorage`(string, el valor predeterminado de `cloud` ): los valores válidos son `none` , `cloud` y `local` . A `cloud` para permitir que los datos de almacenamiento web backup de iCloud, y establecer `local` para sólo permitir backups locales (sincronización de iTunes). A `none` para no permitir ninguna copias de seguridad de almacenamiento web.
-
-*   `KeyboardDisplayRequiresUserAction`(por defecto es booleano, `true` ): establece en false para abrir el teclado cuando elementos de la forma se enfoque mediante la llamada teclado JavaScript.
-
-*   `SuppressesIncrementalRendering`(por defecto es booleano, `false` ): establecido en true para esperar a que todo nuevo ver contenido ha sido recibida antes de que se emita.
-
-*   `HideKeyboardFormAccessoryBar`(por defecto es booleano, `false` ): set para fiel a ocultar la barra de herramientas adicional que está en la parte superior del teclado. Esta barra de herramientas incluye los botones **Prev**, **Next**y **listo** .
-
-*   `KeyboardShrinksView`(por defecto es booleano, `false` ): a `true` para achicar la WebView cuando aparezca el teclado. El WebView se contrae en lugar de la disminución de la visión y la página de desplazamiento. Esto se aplica a las apps que coloque sus elementos relativos a la parte inferior de la vista Web. Este es el comportamiento por defecto en Android y hace mucho sentido cuando la construcción de aplicaciones en comparación con las páginas Web.
+*   `KeyboardShrinksView` (boolean, valor predeterminado `false`): establece en `true` para achicar la webview cuando aparezca el teclado, anulando el beavior por defecto que se contrae el viewport verticalmente. Esto coincide con el comportamiento por defecto para las aplicaciones Android.
+    
+        <preference name="KeyboardShrinksView" value="true"/>
