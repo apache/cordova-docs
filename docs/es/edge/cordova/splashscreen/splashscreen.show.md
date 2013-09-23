@@ -28,7 +28,6 @@ Este método muestra la pantalla de la aplicación.
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry 10
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8

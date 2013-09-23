@@ -52,7 +52,7 @@ Es la forma más fácil de configurar una aplicación ejecutar el `cordova` util
 En cualquier punto en el ciclo de desarrollo, también puede confiar en herramientas específicas para la plataforma SDK, que pueden proporcionar un rico conjunto de opciones. (Vea las guías de plataforma para obtener más información sobre herramienta de SDK de la plataforma cada conjunto). Un entorno SDK es más apropiado si desea implementar una aplicación híbrida que combina componentes de la aplicación basada en web y nativas. <!--XREF XREF (Ver Híbrido Guía de Aplicación para más información. de)--> puede utilizar la utilidad de línea de comandos para generar inicialmente la aplicación, o iterativamente posteriormente para alimentar el código actualizado a SDK tools. Usted puede también constrúyete archivo de configuración de la aplicación. 
 
 <!-- XREF
-(See Configuration Reference for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF

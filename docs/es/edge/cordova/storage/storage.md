@@ -64,4 +64,4 @@ Si usted está usando el mayor conjunto de herramientas de Córdoba que preceden
         < cuentan con id="blackberry.widgetcache" requerida = "true" version = "1.0.0.0" / >
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.

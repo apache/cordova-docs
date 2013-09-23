@@ -52,7 +52,7 @@ La meilleure façon de mettre en place une application doit exécuter le `cordov
 À tout moment dans le cycle de développement, vous pouvez également compter sur les outils spécifiques à la plate-forme SDK, qui peuvent offrir un ensemble plus large d'options. (Voir les Guides de la plate-forme pour plus d'informations sur l'outil du SDK de la plate-forme chaque jeu). Un environnement SDK est plus approprié si vous voulez implémenter une application hybride qui mêle des composants d'applications web et natives. <!--XRÉF XRÉF (Voir Hybride Guide d'Application pour plus d'informations.)--> vous pouvez utiliser l'utilitaire de ligne de commande pour générer initialement l'app, ou de manière itérative par la suite pour nourrir code mis à jour pour les outils du kit de développement logiciel. Vous pouvez également créer fichier de configuration de l'application vous-même. 
 
 <!-- XREF
-(See Configuration Reference for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF

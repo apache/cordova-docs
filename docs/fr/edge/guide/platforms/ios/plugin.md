@@ -106,7 +106,7 @@ Nous aimerions ajouter ce qui suit pour le projet `config.xml` fichier :
     </feature>
     
 
-Puis nous aimerions ajouter les fichiers suivants ( `Echo.h` et `Echo.m` ) dans le dossier Plugins dans notre dossier de demande de Cordova-iOS :
+Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins directory inside our Cordova-iOS application directory:
 
     /********* Echo.h Cordova Plugin Header *******/
     

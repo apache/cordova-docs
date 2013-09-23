@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Accéléromètre
 
-> Capture le mouvement d'un appareil dans l'espace sur les axes *x*, *y* et *z* .
+> Capture le mouvement d'un appareil sur les axes *x*, *y* et *z* .
 
 ## Méthodes
 
@@ -63,14 +63,14 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
         </feature>
         
 
-*   Windows Phone (en`Properties/WPAppManifest.xml`)
+*   Windows Phone (dans`Properties/WPAppManifest.xml`)
     
         <Capabilities>
             <Capability Name="ID_CAP_SENSORS" />
@@ -81,4 +81,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.

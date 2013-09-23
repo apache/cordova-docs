@@ -16,25 +16,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Transfert de fichiers
 
-Le `FileTransfer` objet permet de charger ou télécharger des fichiers vers et depuis un serveur.
+L'objet `FileTransfer` permet de charger ou télécharger des fichiers vers et depuis un serveur.
 
 ## Propriétés
 
-*   **OnProgress**: appelée avec une `ProgressEvent` chaque fois qu'un nouveau segment de données est transféré. *(Fonction)*
+*   **onprogress** : fonction appelée avec un `ProgressEvent` à chaque fois qu'un nouveau segment de données est transféré. *(Function)*
 
 ## Méthodes
 
-*   **Télécharger**: envoie un fichier sur un serveur.
+*   **upload** : envoie un fichier à un serveur.
 
-*   **Télécharger**: télécharge un fichier de serveur.
+*   **download** : télécharge un fichier depuis un serveur.
 
-*   **Annuler**: annule un transfert en cours.
+*   **abort** : annule le transfert en cours.
 
 ## Détails
 
-Le `FileTransfer` objet fournit un moyen de télécharger des fichiers sur un serveur distant à l'aide d'une requête HTTP de la poste multi-partie. Les protocoles HTTP et HTTPS sont supportés. Paramètres optionnels peuvent être spécifiés en passant une `FileUploadOptions` s'opposer à la `upload()` méthode. Le téléchargement réussi, un `FileUploadResult` objet est passé au rappel succès. Si une erreur survient, un `FileTransferError` objet est passé au rappel erreur. Il est également possible (uniquement sur iOS et Android) pour télécharger un fichier depuis un serveur distant et l'enregistrer sur l'appareil.
+L'objet `FileTransfer` offre un moyen d'envoyer des fichiers vers un serveur distant à l'aide d'une requête HTTP de type POST multi-part. Les protocoles HTTP et HTTPS sont tous deux supportés. Des paramètres optionnels peuvent être spécifiés en passant un objet `FileUploadOptions` à la méthode `upload()`. Dans le cas d'un téléchargement réussi, un objet `FileUploadResult` est passé à la callback de succès. Si une erreur survient, un objet `FileTransferError` objet est passé à la callback d'erreur. Il est également possible (uniquement sur iOS et Android) de télécharger un fichier depuis un serveur distant et l'enregistrer sur l'appareil.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -42,23 +42,23 @@ Le `FileTransfer` objet fournit un moyen de télécharger des fichiers sur un se
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Télécharger
+## upload
 
 **Paramètres :**
 
-*   **filePath**: chemin d'accès complet du fichier sur le périphérique.
+*   **filePath** : chemin d'accès complet au fichier sur l'appareil.
 
-*   **serveur**: URL du serveur de réception du fichier, tel qu'il est codé par`encodeURI()`.
+*   **server** : l'URL du serveur destiné à recevoir le fichier, encodée via `encodeURI()`.
 
-*   **successCallback**: un rappel passé un `Metadata` objet. *(Fonction)*
+*   **successCallback** : callback de succès à laquelle est passé un objet `Metadata`. *(Function)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur survient récupérer la `Metadata` . Appelée avec un `FileTransferError` objet. *(Fonction)*
+*   **errorCallback** : callback d'erreur s'exécutant si une erreur survient lors de la récupération de l'objet `Metadata` . Appelée avec un objet `FileTransferError`. *(Function)*
 
-*   **options**: paramètres facultatifs tels que le nom de fichier et le type MIME.
+*   **options** : paramètres facultatifs tels que le nom du fichier et son type mime.
 
-*   **trustAllHosts**: paramètre facultatif, valeur par défaut est `false` . Si la valeur `true` , il accepte tous les certificats de sécurité. Ceci est utile car Android rejette des certificats auto-signés. Non recommandé pour une utilisation de production. Supporté sur Android et iOS. *(boolean)*
+*   **trustAllHosts** : paramètre facultatif, sa valeur par défaut est `false`. Si sa valeur est réglée à `true`, tous les certificats de sécurité sont acceptés. Ceci peut être utile car Android rejette les certificats auto-signés. N'est pas recommandé pour une utilisation en production. Supporté sous Android et iOS. *(boolean)*
 
-**Petit exemple**
+**Exemple court**
 
     // !! Assumes variable fileURI contains a valid URI to a text file on the device
     
@@ -155,9 +155,9 @@ Le `FileTransfer` objet fournit un moyen de télécharger des fichiers sur un se
     </html>
     
 
-**Réglage Télécharger en-têtes**
+**Réglage des en-têtes de téléchargement**
 
-Prise en charge par Android et iOS
+Supporté par Android et iOS
 
     function win(r) {
         console.log("Code = " + r.responseCode);
@@ -186,70 +186,92 @@ Prise en charge par Android et iOS
     ft.upload(fileURI, uri, win, fail, options);
     
 
-**Quirks Android**
+**Particularités d'Android**
 
-Définir la `chunkedMode` option pour `false` pour prévenir les problèmes de téléchargement sur un serveur Nginx.
+Régler la valeur de l'option `chunkedMode` à `false` afin d'éviter les problèmes de téléchargement vers un serveur Nginx.
 
-## Télécharger
+## download
 
 **Paramètres :**
 
-*   **source**: URL du serveur pour télécharger le fichier, tel qu'il est codé par`encodeURI()`.
+*   **source** : l'URL du serveur depuis lequel télécharger le fichier, encodée via `encodeURI()`.
 
-*   **cible**: chemin d'accès complet du fichier sur le périphérique.
+*   **target** : chemin d'accès complet au fichier sur l'appareil.
 
-*   **successCallback**: un rappel passé un `FileEntry` objet. *(Fonction)*
+*   **successCallback** : une callback de succès à laquelle est passée un objet `FileEntry`. *(Function)*
 
-*   **errorCallback**: un rappel qui s'exécute si une erreur se produit lors de la récupération du `Metadata` . Appelée avec un `FileTransferError` objet. *(Fonction)*
+*   **errorCallback** : une callback d'erreur s'exécutant si une erreur se produit lors de la récupération de l'objet `Metadata`. Appelée avec un objet `FileTransferError`. *(Function)*
 
-*   **trustAllHosts**: paramètre facultatif, valeur par défaut est `false` . Si la valeur `true` puis il acceptera tous les certificats de sécurité. Ceci est utile comme Android rejette les certificats de sécurité signé libre. Non recommandé pour une utilisation de production. Supporté sur Android et iOS. *(boolean)*
+*   **trustAllHosts** : paramètre facultatif, sa valeur par défaut est `false`. Si sa valeur est réglée à `true`, tous les certificats de sécurité sont acceptés. Ceci peut être utile car Android rejette les certificats auto-signés. N'est pas recommandé pour une utilisation en production. Supporté sous Android et iOS. *(boolean)*
 
-*   **options**: paramètres facultatifs, actuellement uniquement les supports en-têtes (par exemple l'autorisation (authentification de base), etc.).
+*   **options** : paramètres facultatifs, seules les en-têtes sont actuellement supportées (par exemple l'autorisation (authentification basique), etc.).
 
-**Petit exemple**
+**Exemple court**
 
-    // !! Suppose filePath est un chemin d'accès valide sur le transfert de fichiers périphérique var = new FileTransfer() ;
-    var uri = encodeURI ("http://some.server.com/download.php") ;
+    // !! Suppose que filePath est un chemin valide sur l'appareil
     
-    fileTransfer.download (uri, filePath, function(entry) {console.log ("téléchargement complet:" + entry.fullPath) ;
-        }, function(error) {console.log (« source de l'erreur de téléchargement » + error.source) ;
-            Console.log (« erreur de téléchargement cible » + error.target) ;
-            Console.log (« code d'erreur de téléchargement » + error.code) ;
-        }, faux, {en-têtes: {« Autorisation »: « dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA base == "}}) ;
+    var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://some.server.com/download.php");
+    
+    fileTransfer.download(
+        uri,
+        filePath,
+        function(entry) {
+            console.log("Téléchargement terminé : " + entry.fullPath);
+        },
+        function(error) {
+            console.log("Source pour l'erreur de téléchargement : " + error.source);
+            console.log("Destination pour l'erreur de téléchargement : " + error.target);
+            console.log("Code de l'erreur de téléchargement : " + error.code);
+        },
+        false,
+        {
+            headers: {
+                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+            }
+        }
+    );
     
 
-## abandonner.
+## abort
 
-Abandonne un transfert en cours. Le rappel onerror est passé à un objet FileTransferError qui a un code d'erreur de FileTransferError.ABORT_ERR.
+Abandonne un transfert en cours. Un objet FileTransferError avec un code d'erreur FileTransferError.ABORT_ERR est passé à la callback d'erreur onerror.
 
-**Plates-formes prises en charge**
+**Plates-formes supportées**
 
 *   Android
 *   iOS
 
-**Petit exemple**
+**Exemple court**
 
-    // !! Suppose que la variable fileURI contient un URI valide dans un fichier de texte sur la victoire de var périphérique = function(r) {console.log ("ne devrait pas être appelée.");}
+    // !! Suppose que la variable fileURI contient l'URI valide d'un fichier texte sur l'appareil
     
-    var fail = function(error) {/ / error.code == FileTransferError.ABORT_ERR alert ("une erreur est survenue : Code =" + error.code) ;
-        Console.log (« source de l'erreur de téléchargement » + error.source) ;
-        Console.log ("erreur de téléchargement cible" + error.target);}
+    var win = function(r) {
+        console.log("Ne devrait pas être appelée.");
+    }
     
-    options de var = new FileUploadOptions() ;
-    options.fileKey="file" ;
-    options.fileName="myphoto.jpg" ;
-    options.mimeType="image/jpeg" ;
+    var fail = function(error) {
+        // error.code == FileTransferError.ABORT_ERR
+        alert("Une erreur est survenue : code = " + error.code);
+        console.log("Source pour l'erreur de téléchargement : " + error.source);
+        console.log("Destination pour l'erreur de téléchargement : " + error.target);
+    }
     
-    ft var = new FileTransfer() ;
-    ft.upload (fileURI, encodeURI ("http://some.server.com/upload.php"), win, fail, options) ;
-    ft.Abort() ;
+    var options = new FileUploadOptions();
+    options.fileKey="file";
+    options.fileName="myphoto.jpg";
+    options.mimeType="image/jpeg";
+    
+    var ft = new FileTransfer();
+    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+    ft.abort();
     
 
-## OnProgress
+## onprogress
 
-Appelée avec un ProgressEvent chaque fois qu'un nouveau segment de données est transféré.
+Fonction appelée avec un objet ProgressEvent à chaque fois qu'un nouveau segment de données est transféré.
 
-**Plates-formes prises en charge**
+**Plates-formes supportées**
 
 *   Android
 *   iOS
@@ -266,4 +288,4 @@ Appelée avec un ProgressEvent chaque fois qu'un nouveau segment de données est
     fileTransfer.download(...); // or fileTransfer.upload(...);
     
 
-**Quirks** - sur les deux Android un iOS, lengthComputable est `false` pour les téléchargements qui utilisent l'encodage gzip.
+**Particularités** - sous Android et iOS, la valeur de la propriété lengthComputable est `false` pour les téléchargements qui utilisent l'encodage gzip.

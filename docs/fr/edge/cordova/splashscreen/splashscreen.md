@@ -47,7 +47,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.
 
 ## Programme d'installation
 
@@ -70,7 +70,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
         super.loadUrl(Config.getStartUrl(), 10000);
         
     
-    La première ligne définit l'image à afficher comme le splashscreen. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne. La deuxième ligne est la normale `super.loadUrl` ligne, mais il a un deuxième paramètre qui spécifie une valeur de délai d'attente pour l'écran de démarrage. Dans cet exemple, l'écran de démarrage affiche pendant 10 secondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
+    The first line sets the image to display as the splash screen. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne. La deuxième ligne est la normale `super.loadUrl` ligne, mais il a un deuxième paramètre qui spécifie une valeur de délai d'attente pour l'écran de démarrage. Dans cet exemple, l'écran de démarrage affiche pendant 10 secondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
 
 ### iOS
 
@@ -83,3 +83,11 @@ Copiez-y votre images écran de démarrage du projet iOS `Resources/splash` rép
 *   Par défaut-Portrait~ipad.png (768 x 1004 pixels)
 *   Default@2x~iPhone.png (640 x 960 pixels)
 *   Default~iPhone.png (320 x 480 pixels)
+
+### BlackBerry 10
+
+Copy your splash screen images into the project's 'res/screen/blackberry10' directory. The file names should be:
+
+*   splash-1280x768.png (1280x768 pixels)
+*   splash-720x720.png (720x720 pixels)
+*   splash-768x1280.png (768x1280 pixels)

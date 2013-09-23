@@ -32,19 +32,19 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 ## Cleaver agregando a su proyecto Xcode (subproyecto CordovaLib)
 
-1.  Descargue y extraiga la fuente Córdoba a una ubicación de carpeta permanente en tu disco duro, por ejemplo a`~/Documents/Cordova`.
+1.  Descargue y extraiga la fuente Córdoba a una ubicación de directorio permanente en tu disco duro, por ejemplo a `~/Documents/Cordova`.
 
 2.  Deja de Xcode si se está ejecutando.
 
 3.  Usar Terminal.app, desplácese hasta el directorio donde pusiste la fuente descargada anteriormente.
 
-4.  Copia el `config.xml` archivo en la carpeta del proyecto en el disco (vea los requisitos anteriores).
+4.  Copie el archivo `config.xml` en el directorio de tu proyecto en disco (consulte los requisitos anteriores).
 
 5.  Arrastre y suelte el `config.xml` archivo en el navegador de proyecto de Xcode.
 
 6.  Elegir el botón **Crear grupo para cualquier añadidas carpetas** y pulse **Finalizar**.
 
-7.  Arrastre y suelte el `CordovaLib.xcodeproj` archivo en el navegador de proyecto de Xcode (desde la carpeta permanente ubicación anterior y deberían estar en el `CordovaLib` subdirectorio).
+7.  Arrastrar y soltar el archivo `CordovaLib.xcodeproj` en el navegador de proyecto de Xcode (desde el directorio permanente ubicación anterior y deben ser en el subdirectorio `CordovaLib`).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ Cordova 2.0.0 y versiones posteriores sólo apoyan la implementación de la cuch
 
 ## Añadiendo sus activos de HTML, CSS y JavaScript
 
-1.  Crear una nueva carpeta en su proyecto en el disco, `www` por ejemplo.
+1.  Crear un nuevo directorio en tu proyecto en disco, `www`, por ejemplo.
 
-2.  Pon tus HTML, CSS y JavaScript activos en esta carpeta.
+2.  Pon tus HTML, CSS y JavaScript activos en este directorio.
 
-3.  Arrastrar y soltar la carpeta en el navegador de proyecto de Xcode.
+3.  Arrastrar y soltar el directorio en el navegador de proyecto de Xcode.
 
 4.  Elegir el botón **crear referencias de carpeta para cualquier añadidas carpetas** .
 

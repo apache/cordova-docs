@@ -43,10 +43,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Référence de configuration
+        The config.xml File
       </h2>
       
-      <span>Personnaliser les fonctionnalités de votre application.</span>
+      <span>Customize the features of your app.</span>
     </li>
     <li>
       <h2>

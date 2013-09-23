@@ -14,31 +14,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Fichier
+# File
 
-Cet objet contient des attributs d'un fichier unique.
+Cet objet contient les attributs se référant à un fichier.
 
 ## Propriétés
 
-*   **nom**: le nom du fichier. *(DOMString)*
+*   **name** : le nom du fichier. *(DOMString)*
 
-*   **fullPath**: le chemin d'accès complet du fichier dont le nom de fichier. *(DOMString)*
+*   **fullPath** : le chemin d'accès complet incluant le nom du fichier. *(DOMString)*
 
-*   **type**: le type mime du fichier. *(DOMString)*
+*   **type** : le type mime du fichier. *(DOMString)*
 
-*   **lastModifiedDate**: la dernière fois que le fichier a été modifié. *(Date)*
+*   **lastModifiedDate** : la date de la dernière modification du fichier. *(Date)*
 
-*   **taille**: la taille du fichier en octets. *(long)*
+*   **size** : la taille du fichier en octets. *(long)*
 
 ## Méthodes
 
-*   **tranche**: ne sélectionner qu'une partie du fichier à lire.
+*   **slice** : ne sélectionner qu'une partie du fichier à lire.
 
 ## Détails
 
-Le `File` objet contient des attributs d'un fichier unique. Vous pouvez obtenir une instance d'un `File` objet en appelant une `FileEntry` de l'objet `file()` méthode.
+L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une instance d'un objet `File` en appelant la méthode `file()` d'un objet `FileEntry`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -46,17 +46,17 @@ Le `File` objet contient des attributs d'un fichier unique. Vous pouvez obtenir 
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## tranche
+## slice
 
-Retourner un nouveau `File` objet, dont `FileReader` retourne uniquement la partie spécifiée du fichier. Négatif pour les valeurs `start` ou `end` sont mesurées à partir de la fin du fichier. Les index sont positionnés par rapport à la tranche actuelle. (Voir l'exemple complet ci-dessous.)
+Retourne un nouvel objet `File` pour lequel `FileReader` renvoie uniquement la partie spécifiée du fichier. Toute valeur négative pour `start` ou `end` est mesurée à partir de la fin du fichier. Les index sont positionnés par rapport à la tranche actuelle. (Voir l'exemple complet ci-dessous.)
 
 **Paramètres :**
 
-*   **Démarrer**: l'index du premier octet à lire, inclusivement.
+*   **start** : l'index du premier octet à lire, inclusif.
 
-*   **fin**: l'index de l'octet après une dernière lecture.
+*   **end** : l'index de l'octet situé après le dernier à lire.
 
-**Petit exemple**
+**Exemple court**
 
     var slicedFile = file.slice(10, 30);
     
@@ -70,7 +70,7 @@ Retourner un nouveau `File` objet, dont `FileReader` retourne uniquement la part
     // slice2 and slice3 are equivalent.
     
 
-**Plates-formes prises en charge**
+**Plates-formes supportées**
 
 *   Android
 *   iOS

@@ -90,7 +90,7 @@ Un cadre basé sur Apache Cordova personnalisé requiert qu'un élément du mote
 
 *   `version`(obligatoire): la version que votre cadre doit avoir pour installer.
 
-*   `scriptSrc`(obligatoire): le fichier de script qui indique à quelle version du cadre personnalisé est plugman. Idéalement, ce fichier doit être dans le répertoire de niveau supérieur de votre répertoire de plugin.
+*   `scriptSrc` (required): The script file that tells plugman what version of the custom framework is. Ideally, this file should be within the top level directory of your plugin directory.
 
 *   `platform`(obligatoire): quelles plates-formes supportant votre cadre. Vous pouvez utiliser le caractère générique ' *' pour dire pris en charge pour toutes les plates-formes, spécifiez plusieurs avec un caractère de pipe comme « android|ios|blackberry10 » ou juste une seule plate-forme comme « android ».
 
@@ -321,7 +321,9 @@ Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. 
 Exemple :
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

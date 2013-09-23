@@ -16,14 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> Le `InAppBrowser` est un navigateur web qui s'affiche dans l'application lors de l'appel`window.open`.
+> The `InAppBrowser` is a web browser view that displays when calling `window.open()`, or when opening a link formed as `<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
+**NOTE:** The InAppBrowser window behaves like a standard web browser, and cannot access Cordova APIs.
+
 ## Description
 
-L'objet retourné par un appel à`window.open`.
+The object returned from a call to `window.open`.
 
 ## Méthodes
 
@@ -36,13 +38,13 @@ L'objet retourné par un appel à`window.open`.
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
         $ cordova plugin rm org.apache.cordova.core.inappbrowser
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
 *   Android (dans`app/res/xml/config.xml`)
     
@@ -63,7 +65,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         <feature name="InAppBrowser" />
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.
 
 # addEventListener
 
@@ -480,7 +482,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 # InAppBrowserEvent
 
-L'objet qui est passé à la fonction de rappel d'un `addEventListener` donne la parole à un `InAppBrowser` objet.
+The object that is passed to the callback function from an `addEventListener` call on an `InAppBrowser` object.
 
 ## Propriétés
 

@@ -86,4 +86,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Certaines plates-formes peuvent supporter cette fonctionnalité sans pour autant nécessiter de configuration particulière. Se référer au paragraphe "Plateformes supportées" pour une vue d'ensemble.
+Some platforms may support this feature without requiring any special configuration. See *Platform Support* in the Overview section.

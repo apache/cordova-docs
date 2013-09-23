@@ -32,19 +32,19 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 ## Ajout de Cleaver à votre projet Xcode (sous-projet CordovaLib)
 
-1.  Téléchargez et extrayez la source Cordova dans un dossier permanent sur votre disque dur, par exemple à`~/Documents/Cordova`.
+1.  Download and extract the Cordova source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova`.
 
 2.  Quittez Xcode s'exécute.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Copie le `config.xml` fichier dans votre dossier de projet sur le disque (voir celles décrites ci-dessus).
+4.  Copy the `config.xml` file into your project directory on disk (see the Prerequisites above).
 
 5.  Faites glisser et déposez le `config.xml` fichier dans le navigateur de projet de Xcode.
 
 6.  Cliquez sur le bouton radio de **créer des groupes pour tous les dossiers ajoutés** , puis appuyez sur **Terminer**.
 
-7.  Faites glisser et déposez le `CordovaLib.xcodeproj` fichier dans le navigateur de projet de Xcode (depuis le dossier permanent emplacement ci-dessus et il devrait être dans le `CordovaLib` sous-répertoire).
+7.  Drag and drop the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent directory location above, and it should be in the `CordovaLib` subdirectory).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 ## Ajouter vos actifs HTML, CSS et JavaScript
 
-1.  Créez un nouveau dossier dans votre projet sur disque, `www` par exemple.
+1.  Create a new directory in your project on disk, `www` for example.
 
-2.  Mettez vos actifs HTML, CSS et JavaScript dans ce dossier.
+2.  Put your HTML, CSS and JavaScript assets into this directory.
 
-3.  Glissez et déposez le dossier dans le navigateur de projet de Xcode.
+3.  Drag and drop the directory into the Project Navigator of Xcode.
 
 4.  Cliquez sur le bouton radio de **créer des références de dossier pour tous les dossiers ajoutés** .
 

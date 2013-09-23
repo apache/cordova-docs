@@ -90,7 +90,7 @@ Un marco personalizado basado en Apache Cordova exige que un elemento motor incl
 
 *   `version`(obligatorio): la versión de que su marco debe tener para poder instalar.
 
-*   `scriptSrc`(obligatorio): el archivo de script que dice plugman qué versión del marco personalizado. Idealmente, este archivo debe estar dentro del directorio de nivel superior de la carpeta plugin.
+*   `scriptSrc` (obligatorio): el archivo de script que dice plugman qué versión del marco personalizado. Idealmente, este archivo debe estar dentro del directorio de nivel superior de su directorio.
 
 *   `platform`(requerido): Qué plataformas que soporta su marco. Usted puede utilizar el comodín ' *' para decir para todas las plataformas soportadas, especificar múltiples con un caracter como 'android|ios|blackberry10' o sólo una única plataforma como 'android'.
 
@@ -321,7 +321,9 @@ Es *anticuado* ya que sólo se aplica a cordova-ios 2.2.0 y por debajo. Uso el `
 Ejemplo:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

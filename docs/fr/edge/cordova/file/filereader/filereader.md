@@ -16,47 +16,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileReader
 
-Le `FileReader` permet l'accès à un fichier de base.
+L'objet `FileReader` permet l'accès basique à un fichier.
 
 ## Propriétés
 
-*   **readyState**: un des lecteur de trois possible précise, soit `EMPTY` , `LOADING` ou`DONE`.
+*   **readyState** : un trois états possibles du lecteur ; soit `EMPTY`, `LOADING` ou `DONE`.
 
-*   **résultat**: le contenu du fichier qui ont été lus. *(DOMString)*
+*   **result** : le contenu du fichier qui a été lu. *(DOMString)*
 
-*   **erreur**: un objet contenant des erreurs. *(FileError)*
+*   **error** : un objet contenant des erreurs. *(FileError)*
 
-*   **onloadstart**: appelé au démarrage de la lecture. *(Fonction)*
+*   **onloadstart** : fonction appelée lors du démarrage de la lecture. *(Function)*
 
-*   **OnLoad**: appelé lorsque la lecture a complété avec succès. *(Fonction)*
+*   **onload** : fonction appelée lorsque la lecture a été complétée avec succès. *(Function)*
 
-*   **OnAbort**: appelé lorsque la lecture a été abandonnée. Par exemple, en appelant le `abort()` méthode. *(Fonction)*
+*   **onabort** : fonction appelée lorsque la lecture a été abandonnée. Par exemple, en appelant la méthode `abort()`. *(Function)*
 
-*   **OnError**: appelé lorsque la lecture a échoué. *(Fonction)*
+*   **onerror** : fonction appelée lorsque la lecture a échoué. *(Function)*
 
-*   **onloadend**: appelé lorsque la demande est terminée (que ce soit dans le succès ou l'échec). *(Fonction)*
+*   **onloadend** : fonction appelée lorsque l'opération de lecture est terminée (avec succès ou non). *(Function)*
 
-**Remarque :** Le porperty suivant n'est pas pris en charge :
+**Remarque :** la propriété suivante n'est pas prise en charge
 
-*   **OnProgress**: appelée lors de la lecture du fichier, faisant état de progrès en termes de `progress.loaded` / `progress.total` . *(Fonction)*
+*   **onprogress** : fonction appelée lors de la lecture du fichier, faisant état de la progression par le biais de `progress.loaded`/`progress.total`. *(Function)*
 
 ## Méthodes
 
-*   **Abort**: abandons de lecture du fichier.
+*   **abort** : abandonne la lecture du fichier.
 
-*   **readAsDataURL**: lire le fichier et renvoyer les données sous forme d'une URL de données codées en base64.
+*   **readAsDataURL** : lit le fichier et renvoie son contenu sous la forme d'une URL de données encodée en base64.
 
-*   **readAsText**: lectures du fichier texte.
+*   **readAsText** : lit le fichier texte.
 
-*   **readAsBinaryString**: lit le fichier binaire et retourne une chaîne binaire.
+*   **readAsBinaryString** : lit le fichier en mode binaire et retourne une chaîne binaire.
 
-*   **readAsArrayBuffer**: lectures du fichier comme un`ArrayBuffer`.
+*   **readAsArrayBuffer** : lit le fichier en tant qu'`ArrayBuffer`.
 
 ## Détails
 
-Le `FileReader` objet offre un moyen de lire les fichiers de système de fichiers de l'appareil. Les fichiers peuvent être lus sous forme de texte ou comme une chaîne de données codées en base64. Écouteurs d'événements recevoir la `loadstart` , `progress` , `load` , `loadend` , `error` , et `abort` des événements.
+L'objet `FileReader` offre un moyen de lire les fichiers appartenant au système de fichiers de l'appareil. Les fichiers peuvent être lus en tant que texte ou comme une chaîne de données encodée en base64. Les écouteurs attachés reçoivent les évènements `loadstart`, `progress`, `load`, `loadend`, `error` et `abort`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -68,9 +68,9 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
 
 **Paramètres :**
 
-*   **fichier**: l'objet du fichier à lire.
+*   **file** : l'objet représentant le fichier à lire.
 
-## Petit exemple
+## Exemple court
 
     function win(file) {
         var reader = new FileReader();
@@ -92,11 +92,11 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
 
 **Paramètres :**
 
-*   **fichier**: l'objet du fichier à lire.
+*   **file** : l'objet représentant le fichier à lire.
 
-*   **codage**: le codage à utiliser pour coder le contenu du fichier. Valeur par défaut est UTF8.
+*   **encoding** : l'encodage à utiliser pour le contenu du fichier. La valeur par défaut est UTF8.
 
-## Petit exemple
+## Exemple court
 
     function win(file) {
         var reader = new FileReader();
@@ -114,7 +114,7 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
     entry.file(win, fail);
     
 
-## abandonner.
+## abort
 
     function win(file) {
         var reader = new FileReader();
@@ -197,19 +197,19 @@ Le `FileReader` objet offre un moyen de lire les fichiers de système de fichier
     </html>
     
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   Le paramètre **encoding** n'est pas pris en charge, et le codage UTF8 est toujours en vigueur.
+*   Le paramètre **encoding** n'est pas pris en charge, le type d'encodage est toujours UTF8.
 
 ## readAsBinaryString
 
-Actuellement pris en charge sur iOS et Android uniquement.
+Actuellement pris en charge uniquement sur iOS et Android.
 
 **Paramètres :**
 
-*   **fichier**: l'objet du fichier à lire.
+*   **file** : l'objet représentant le fichier à lire.
 
-## Petit exemple
+## Exemple court
 
     function win(file) {
         var reader = new FileReader();
@@ -229,13 +229,13 @@ Actuellement pris en charge sur iOS et Android uniquement.
 
 ## readAsArrayBuffer
 
-Actuellement pris en charge sur iOS et Android uniquement.
+Actuellement pris en charge uniquement sur iOS et Android.
 
 **Paramètres :**
 
-*   **fichier**: l'objet du fichier à lire.
+*   **file** : l'objet représentant le fichier à lire.
 
-## Petit exemple
+## Exemple court
 
     function win(file) {
         var reader = new FileReader();

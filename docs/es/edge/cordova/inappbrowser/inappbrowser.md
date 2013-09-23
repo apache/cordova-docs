@@ -16,10 +16,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> El `InAppBrowser` es un navegador web que se muestra en la aplicación cuando se llama `window.open`.
+> El `InAppBrowser` es una vista de navegador web que se muestra cuando se llama a `window.open()`, o cuando abre un enlace formado como `<a target = "_blank" >`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
+
+**NOTA:** La ventana de InAppBrowser se comporta como un navegador web estándar y no puede acceder a Cordova APIs.
 
 ## Descripción
 
@@ -36,7 +38,7 @@ El objeto devuelto desde una llamada a `window.open`.
 
 ## Acceso a la función
 
-A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Uso de la CLI `plugin` comando, que se describe en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
+A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Utilice el comando `plugin` de la CLI, descrito en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
         $ cordova plugin rm org.apache.cordova.core.inappbrowser
@@ -63,7 +65,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         <feature name="InAppBrowser" />
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
 
 # addEventListener
 
@@ -480,7 +482,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 # InAppBrowserEvent
 
-El objeto que se pasa a la función de devolución de llamada de un `addEventListener` llamado a un `InAppBrowser` objeto.
+El objeto que se pasa a la función de callback de una llamada `addEventListener` en un objeto `InAppBrowser`.
 
 ## Propiedades
 

@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometer.clearWatch
 
-Arrêter la surveillance de le `Acceleration` référencée par le paramètre `watchID`.
+Arrêter la surveillance du `Acceleration` référencée par le paramètre `watchID`.
 
     navigator.accelerometer.clearWatch(watchID);
     
@@ -32,7 +32,7 @@ Arrêter la surveillance de le `Acceleration` référencée par le paramètre `w
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple rapide
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     

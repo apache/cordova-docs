@@ -47,7 +47,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         </feature>
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
 
 ## Configuración
 
@@ -70,7 +70,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
         super.loadUrl(Config.getStartUrl(), 10000);
         
     
-    La primera línea establece la imagen que se mostrará como el splashscreen. Si llama a `splash.png` que no sea tu imagen, tienes que modificar esta línea. La segunda línea es la normal `super.loadUrl`, pero tiene un segundo parámetro que especifica un valor de tiempo de espera para la pantalla de bienvenida. En este ejemplo, la pantalla muestra durante 10 segundos. Para despedir a la pantalla una vez que la aplicación recibe el evento `deviceready`, llame al método `navigator.splashscreen.hide()`.
+    La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Si llama a `splash.png` que no sea tu imagen, tienes que modificar esta línea. La segunda línea es la normal `super.loadUrl`, pero tiene un segundo parámetro que especifica un valor de tiempo de espera para la pantalla de bienvenida. En este ejemplo, la pantalla muestra durante 10 segundos. Para despedir a la pantalla una vez que la aplicación recibe el evento `deviceready`, llame al método `navigator.splashscreen.hide()`.
 
 ### iOS
 
@@ -83,3 +83,11 @@ Copiar tus imágenes en pantalla splash en el proyecto iOS `Resources/splash` Di
 *   Default-Portrait~ipad.png (768x1004 pixels)
 *   Default@2x~iphone.png (640x960 pixels)
 *   Default~iphone.png (320x480 pixels)
+
+### BlackBerry 10
+
+Copiar tus imágenes en pantalla splash ' res/screen/blackberry10' en el proyecto. Los nombres de archivo deben ser:
+
+*   splash-1280x768.png (1280x768 pixels)
+*   splash-720x720.png (720x720 pixels)
+*   splash-768x1280.png (768x1280 pixels)

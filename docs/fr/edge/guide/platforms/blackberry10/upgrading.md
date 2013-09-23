@@ -18,13 +18,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ce guide montre comment modifier des projets BlackBerry mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
+## Upgrade to 3.1.0 from 3.0.0
+
+1.  Create a new Apache Cordova 3.1.0 project using the cordova CLI, as described in The Command-line Interface.
+
+2.  Add your platforms to the cordova project, for example: `cordova
+platform add blackberry10`.
+
+3.  Copiez le contenu du projet original `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
+
+4.  Copier ou écraser tout actif natif de votre projet d'origine ( `Resources` , etc..)
+
+5.  Copie votre `config.xml` dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous allez modifier les paramètres ici au lieu du répertoire de la plate-forme.
+
+6.  Use the cordova CLI tool to install any plugins you need. Note that the CLI handles all core APIs as plugins, so they may need to be added. Only plugins marked 3.0.0 and above are compatible with the CLI.
+
+7.  Générer et tester.
+
 Veuillez noter que la CLI prend en charge la plate-forme BlackBerry10 exclusivement. Pour PlayBook et BBOS, s'il vous plaît voir Cordova version 2.9.0 et en dessous.
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
 1.  Créez un projet Apache Cordova 3.0.0 utilisant le cordova CLI, tel que décrit dans l'Interface de ligne de commande.
 
-2.  Ajouter vos plates-formes le projet de la Cordoue, par exemple :`cordova
+2.  Add your platforms the the cordova project, for example: `cordova
 platform add blackberry10`.
 
 3.  Copiez le contenu du projet original `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
@@ -49,7 +66,7 @@ BlackBerry 10 :
 
 4.  Créez un nouveau projet, comme décrit dans BlackBerry Command-line Tools. Cela devient la maison de votre projet mis à jour.
 
-5.  Copiez votre source de projets de l'ancien projet `/www` répertoire vers du nouveau projet `/www` répertoire.
+5.  Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
@@ -87,7 +104,7 @@ BlackBerry 10 utilise les nouveaux outils CLI et gère la base API comme plugins
 
 4.  Créez un nouveau projet, comme décrit dans BlackBerry Command-line Tools. Cela devient la maison de votre projet mis à jour.
 
-5.  Copiez votre source de projets de l'ancien projet `/www` répertoire vers du nouveau projet `/www` répertoire.
+5.  Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
@@ -113,7 +130,7 @@ BlackBerryOS/Playbook :
 
 ## Projets de modernisation 2.6.0 à 2.7.0
 
-1.  Téléchargez et extrayez la source Cordova 2.7.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Cordova-2.7.0`.
+1.  Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.7.0`.
 
 2.  Quittez tous les outils SDK en cours d'exécution : Eclipse, Momentics et autres.
 
@@ -348,7 +365,7 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-2.0.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
@@ -402,7 +419,7 @@ Mise à jour juste le `www` répertoire :
 
 5.  Mettre à jour votre code HTML pour utiliser le nouveau `cordova-1.8.0.js` fichier.
 
-6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette d'espace de noms/service. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
+6.  Mise à jour de votre `www/plugins.xml` fichier. Deux plugins changé leur étiquette de service/de l'espace de noms. Changer les anciennes entrées pour les plugins de Capture et de Contact de :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
