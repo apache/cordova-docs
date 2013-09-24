@@ -68,31 +68,42 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" />
 
-## BlackBerry
+## BlackBerry 10
 
 ### Details
 
-The whitelisting rules are found in `www/config.xml` and declared with the element `<access uri="..." />`.
+The whitelisting rules are found in `www/config.xml` and declared with 
+the element `<access origin="..." />`.
 
-For a complete reference, see the [BlackBerry WebWorks Access Element documentation][8].
+BlackBerry 10 handles wildcards differently than other platforms in two ways:
+
+1) Content accessed by XMLHttpRequest must be declared explicity. origin="*" will
+   not be respected for this use case. Alternatively, all web security may be
+   disabled using a preference.
+ 
+2) subdomains="true" may be used in place of "*.domain"
 
 ### Syntax
 
 Access to [google.com][2]:
 
-    <access uri="http://google.com" subdomains="false" />
+    <access origin="http://google.com" subdomains="false" />
 
 Access to  [maps.google.com][4]:
 
-    <access uri="http://maps.google.com" subdomains="false" />
+    <access origin="http://maps.google.com" subdomains="false" />
 
 Access to all the subdomains on [google.com][2]:
 
-    <access uri="http://google.com" subdomains="true" />
+    <access origin="http://google.com" subdomains="true" />
 
 Access to all domains, including `file://` protocol:
 
-    <access uri="*" subdomains="true" />
+    <access origin="*" subdomains="true" />
+
+Disable all web security:
+
+    <preference name="websecurity" value="disable" />
 
 iOS
 ---
