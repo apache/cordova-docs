@@ -24,64 +24,28 @@ across each application and CordovaWebView instance. This section
 details preferences that only apply to BlackBerry 10 builds. See The
 config.xml File for information on global configuration options.
 
-## Icons and Splash Screens
+- `ChildBrowser` (`disable` or the default `enable`): Disables child
+  browser windows. By default, apps launch a secondary browser window
+  to display resources accessed via `window.open()` or by specifying a
+  `_blank` anchor target. Specify `disable` to override this default
+  behavior.
 
-BlackBerry icons __must be smaller__ than 16K. BlackBerry also defines
-an optional hover state that allows a separate icon to display when
-users roll a trackpad cursor over the icon image. By default, the
-non-hover icon displays for the hover state. Define icons as follows:
+        <preference name="ChildBrowser" value="disable"/>
 
-        <icon src="icons/bb/icon.png"       gap:platform="blackberry" />
-        <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+- `PopupBlocker` (`enable` or the default `disable`): Enables the
+  popup blocker, which prevents calls to `window.open()`. By default,
+  popups display in a child browser window. Setting the preference to
+  `enable` prevents it from displaying at all.
 
-BlackBerry supports a single splash screen image:
+        <preference name="PopupBlocker" value="enable"/>
 
-        <gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
+- `WebSecurity` (`disable` or the default `enable`): Set to `disable`
+  to override web security settings, allowing access to remote content
+  from unknown sources. This preference is intended as a development
+  convenience only, so remove it before packaging your app for
+  distribution.  For the released app, all URIs should be known and
+  whitelisted using the `<access>` element, described in the Domain
+  Whitelist Guide.
 
-## BlackBerry 10 Preferences
+        <preference name="WebSecurity" value="disable"/>
 
-* `ChildBrowser`: Disables child browser windows. By default, when the
-  content attempts to open a resource in a new window or tab (by using
-  window.open(), or by specifying `_blank` as the target of an
-  anchor), the WebWorks app will open a secondary browser window to
-  display the resource. This feature is enabled by default. The value
-  must specify `disable` to prevent the above actions from occuring.
-
-        <preference name="childBrowser" value="disable"/>
-
-* `PopupBlocker`: Enables the popup blocker. By default, all popups
-  are displayed by BlackBerry WebWorks apps in a child browser
-  window. You can prevent popups from displaying without user
-  intervention by enabling the popup blocker. This is done by
-  specifying value as `enable`.
-
-        <preference name="popupBlocker" value="enable"/>
-
-<!-- QUERY BB: for popupBlocker, clarify "popup" -->
-
-* `WebSecurity`: Disables web security. Disabling web security allows
-  you to access remote content from unknown sources during
-  development.  Before packaging your app for distribution, you should
-  remove this setting. This feature is intended as a development
-  convenience only. In production, all URIs should be known and should
-  be whitelisted using the `<access>` element. To disable, specify
-  value as `disable`.
-
-        <preference name="webSecurity" value="disable"/>
-
-<!-- QUERY BB: does disable-cursor work?
-
- #### Disable Cursor
-
-* `disable-cursor` with values `true` or `false`
-
-  * example: `<preference name="disable-cursor" value="true" />`
-
-  * prevents a mouse-icon/cursor from being displayed on the app -
-    desugars to `<rim:navigation />`. See [the BlackBerry
-    documentation](https://bdsc.webapps.blackberry.com/html5/documentation/ww_developing/rim_navigation_element_1582456_11.html)
-    for more details
-
-  * default is _false_
-
--->
