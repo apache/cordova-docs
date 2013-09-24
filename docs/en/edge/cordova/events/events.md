@@ -47,8 +47,8 @@ to battery status are enabled by default.  Use the CLI's `plugin`
 command, described in The Command-line Interface, to enable or disable
 battery events:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
-        $ cordova plugin rm org.apache.cordova.core.battery-status
+        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin rm org.apache.cordova.battery-status
 
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:

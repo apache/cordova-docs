@@ -45,13 +45,13 @@ As of version 3.0, Cordova implements device-level APIs as _plugins_.
 Use the CLI's `plugin` command, described in The Command-line
 Interface, to add or remove this feature for a project:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin rm org.apache.cordova.core.file
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin rm org.apache.cordova.file
         
 To use the file-transfer plugin you must add that separately.
         
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
-        $ cordova plugin rm org.apache.cordova.core.file-transfer
+        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin rm org.apache.cordova.file-transfer
 
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
