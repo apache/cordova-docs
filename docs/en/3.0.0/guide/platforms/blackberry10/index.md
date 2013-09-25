@@ -55,6 +55,10 @@ On Mac and Linux:
 
     $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
 
+  or for the 10.2 Native SDK:
+
+    $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+
 * Run the following to apply the change in the current session:
 
     $ source ~/.bash_profile
