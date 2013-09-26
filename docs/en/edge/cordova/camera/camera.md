@@ -73,7 +73,7 @@ platform-specific configuration settings described below:
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
