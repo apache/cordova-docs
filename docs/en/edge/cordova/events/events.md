@@ -48,6 +48,8 @@ command, described in The Command-line Interface, to enable or disable
 battery events:
 
         $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin ls
+        [ 'org.apache.cordova.battery-status' ]
         $ cordova plugin rm org.apache.cordova.battery-status
 
 These commands apply to all targeted platforms, but modify the

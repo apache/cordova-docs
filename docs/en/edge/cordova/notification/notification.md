@@ -37,6 +37,9 @@ Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin ls
+        [ 'org.apache.cordova.dialogs',
+          'org.apache.cordova.vibration' ]
         $ cordova plugin rm org.apache.cordova.dialogs
         $ cordova plugin rm org.apache.cordova.vibration
 

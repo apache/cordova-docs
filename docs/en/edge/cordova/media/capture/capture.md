@@ -94,6 +94,8 @@ Use the CLI's `plugin` command, described in The Command-line
 Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin ls
+        [ 'org.apache.cordova.media-capture' ]
         $ cordova plugin rm org.apache.cordova.media-capture
 
 These commands apply to all targeted platforms, but modify the
