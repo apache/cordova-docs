@@ -67,11 +67,12 @@
         ],
         "device.md": [
             "cordova/device/device.md",
-            "cordova/device/device.name.md",
+            "cordova/device/device.model.md",
             "cordova/device/device.cordova.md",
             "cordova/device/device.platform.md",
             "cordova/device/device.uuid.md",
-            "cordova/device/device.version.md"
+            "cordova/device/device.version.md",
+            "cordova/device/device.name.md"
         ],
         "events.md": [
             "cordova/events/events.md",

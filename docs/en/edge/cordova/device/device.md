@@ -23,20 +23,20 @@
 
 ## Properties
 
-- device.name
+- device.model
 - device.cordova
 - device.platform
 - device.uuid
 - device.version
-- device.model
+- device.name
 
 ## Variable Scope
 
 Since `device` is assigned to the `window` object, it is implicitly in the global scope.
 
     // These reference the same `device`
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
 
 ## Accessing the Feature
 
