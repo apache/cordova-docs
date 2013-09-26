@@ -51,7 +51,7 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-* Android (in `app/res/xml/config.xml`)
+* Android (in `res/xml/config.xml`)
 
         <feature name="InAppBrowser">
             <param name="android-package" value="org.apache.cordova.InAppBrowser" />
