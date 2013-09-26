@@ -69,7 +69,6 @@ platform-specific configuration settings described below:
 
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>

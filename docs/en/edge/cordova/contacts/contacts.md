@@ -103,9 +103,8 @@ platform-specific configuration settings described below:
             <param name="ios-package" value="CDVContacts" />
         </feature>
 
-* Windows Phone
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>
