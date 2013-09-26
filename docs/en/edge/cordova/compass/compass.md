@@ -54,7 +54,7 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.CompassListener" />
         </feature>
 
-* iOS (in `config.xml`)
+* iOS (in the application directory's `config.xml`)
 
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />

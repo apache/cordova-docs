@@ -66,7 +66,7 @@ platform-specific configuration settings described below:
         <feature id="blackberry.system"  required="true" version="1.0.0.0" />
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
 
-* iOS (in `config.xml`)
+* iOS (in the application directory's `config.xml`)
 
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
