@@ -69,7 +69,7 @@ platform-specific configuration settings described below:
         (in www/config.xml)
         <feature id="blackberry.ui.dialog" />
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />

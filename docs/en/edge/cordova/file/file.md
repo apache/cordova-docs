@@ -102,7 +102,7 @@ platform-specific configuration settings described below:
             <rim:permit>access_shared</rim:permit>
         </rim:permissions>
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="File">
             <param name="ios-package" value="CDVFile" />

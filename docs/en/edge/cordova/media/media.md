@@ -120,7 +120,7 @@ platform-specific configuration settings described below:
             <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
         </feature>
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />

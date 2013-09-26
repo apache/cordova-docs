@@ -102,7 +102,7 @@ platform-specific configuration settings described below:
             <rim:permit>read_geolocation</rim:permit>
         </rim:permissions>
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />

@@ -99,7 +99,7 @@ platform-specific configuration settings described below:
         <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />

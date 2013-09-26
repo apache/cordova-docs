@@ -67,7 +67,7 @@ platform-specific configuration settings described below:
             <param name="blackberry-package" value="org.apache.cordova.network.Network" />
         </feature>
 
-* iOS (in the application directory's `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="NetworkStatus">
             <param name="ios-package" value="CDVConnection" />
