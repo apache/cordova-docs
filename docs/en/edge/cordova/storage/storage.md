@@ -67,7 +67,7 @@ If you are using the older set of Cordova tools that precede the CLI,
 the following platform-specific configuration settings are still
 required:
 
-* Android (in `app/res/xml/config.xml`)
+* Android (in `res/xml/config.xml`)
 
         <feature name="Storage">
             <param name="android-package" value="org.apache.cordova.Storage" />
