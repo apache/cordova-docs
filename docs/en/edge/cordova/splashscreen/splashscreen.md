@@ -55,47 +55,4 @@ platform-specific configuration settings described below:
 Some platforms may support this feature without requiring any special
 configuration.  See _Platform Support_ in the Overview section.
 
-## Setup
-
-### Android
-
-1. Copy the splash screen image into the Android project's `res/drawable` directory. The size for each image should be:
-
-   - xlarge (xhdpi): at least 960 &times; 720
-   - large (hdpi): at least 640 &times; 480
-   - medium (mdpi): at least 470 &times; 320
-   - small (ldpi): at least 426 &times; 320
-
-   You should use a [9-patch image](https://developer.android.com/tools/help/draw9patch.html) for your splash screen.
-
-2. In config.xml, add the following preferences:
-
-        <preference name="splashscreen", "splash" />
-        <preference name="splashScreenDelay", 10000 />
-      
-      The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
-    The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.
-
-### iOS
-
-Copy your splash screen images into the iOS project's
-`Resources/splash` directory. Only add the images for the devices you
-want to support, such as iPad or iPhone. The size of each image
-should be:
-
-- Default-568h@2x~iphone.png (640x1136 pixels)
-- Default-Landscape@2x~ipad.png (2048x1496 pixels)
-- Default-Landscape~ipad.png (1024x748 pixels)
-- Default-Portrait@2x~ipad.png (1536x2008 pixels)
-- Default-Portrait~ipad.png (768x1004 pixels)
-- Default@2x~iphone.png (640x960 pixels)
-- Default~iphone.png (320x480 pixels)
-
-### BlackBerry 10
-
-Copy your splash screen images into the project's
-'res/screen/blackberry10' directory. The file names should be:
-
-- splash-1280x768.png (1280x768 pixels)
-- splash-720x720.png (720x720 pixels)
-- splash-768x1280.png (768x1280 pixels)
+See Icons and Splash Screens for information on how to configures these images.
