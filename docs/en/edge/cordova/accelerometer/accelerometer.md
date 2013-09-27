@@ -51,7 +51,7 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-* Android (in `app/res/xml/config.xml`)
+* Android (in `res/xml/config.xml`)
 
         <feature name="Accelerometer">
             <param name="android-package" value="org.apache.cordova.AccelListener" />
@@ -68,7 +68,7 @@ platform-specific configuration settings described below:
         <feature id="blackberry.system"  required="true" version="1.0.0.0" />
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
 
-* iOS (in `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />

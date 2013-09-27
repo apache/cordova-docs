@@ -99,15 +99,14 @@ platform-specific configuration settings described below:
         <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
 
-* iOS (in `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />
         </feature>
 
-* Windows Phone
+* Windows Phone (in `Properties/WPAppManifest.xml`)
 
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>

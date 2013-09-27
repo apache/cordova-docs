@@ -123,7 +123,7 @@ platform-specific configuration settings described below:
         <feature id="blackberry.system"  required="true" version="1.0.0.0" />
         <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
 
-* iOS (in `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Capture">
             <param name="ios-package" value="CDVCapture" />

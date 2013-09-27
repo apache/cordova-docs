@@ -29,10 +29,28 @@ platform-specific settings.
 
 For projects created with the Cordova CLI (described in The
 Command-line Interface), this file can be found in the top-level `www`
-directory.  Using the CLI to build a project regenerates versions of
-this file in various subdirectories within `platforms`. If you use the
-CLI to create a project, but then shift your workflow to an SDK, the
-platform-specific file serves as a source.
+directory:
+
+        app/www/config.xml
+
+When using the CLI to build a project, versions of this file are
+passively copied along with other web-asset source files into various
+`platforms/*/www` subdirectories, for example:
+
+        app/platforms/ios/www/config.xml
+        app/platforms/blackberry10/www/config.xml
+
+An exception is Android, whose path specifies an additional `assets`
+subdirectory:
+
+        app/platforms/android/assets/www/config.xml
+
+If you use the CLI to create a project, but then shift your workflow
+to an SDK, you need to use an alternate set of source files for
+Android and iOS:
+
+        app/platforms/android/res/www/config.xml
+        app/platforms/ios/<APP_NAME>/config.xml
 
 This section details global and cross-platform configuration options.
 See the following sections for platform-specific options:

@@ -77,7 +77,7 @@ platform-specific configuration settings described below:
         <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
         <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
 
-* iOS (in `config.xml`)
+* iOS (in the named application directory's `config.xml`)
 
         <feature name="Battery">
             <param name="ios-package" value="CDVBattery" />
