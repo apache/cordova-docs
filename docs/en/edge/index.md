@@ -38,6 +38,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Customize the features of your app.</span>
         </li>
         <li>
+            <h2>Icons and Splash Screens</h2>
+            <span>Customize the app's displaying images.</span>
+        </li>
+        <li>
             <h2>Embedding WebViews</h2>
             <span>Implement the Cordova WebView in your project.</span>
         </li>
