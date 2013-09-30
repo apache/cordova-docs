@@ -29,7 +29,12 @@ access to specific network domains and subdomains.
 
 ## Specification
 
-Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement its own domain whitelisting.
+Domain whitelisting lays the groundwork for the [W3C Widget Access][1]
+specification. In the Widget Access specification, the `<access>`
+element is used to declare access to specific network domains. In the
+future, Apache Cordova will abstract the platform whitelisting
+implementations to the W3C Widget Access specification. However, for
+now each platform must implement its own domain whitelisting.
 
 ## Syntax
 
