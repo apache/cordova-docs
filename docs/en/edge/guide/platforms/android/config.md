@@ -30,13 +30,6 @@ config.xml File for information on global configuration options.
 
         <preference name="KeepRunning" value="false"/>
 
-- `ErrorUrl`: Specifies an error page that displays in response to
-  standard HTTP errors in the 400-500 range. Place the specified file
-  in the top-level directory containing the home page and other web
-  assets.
-
-        <preference name="ErrorUrl" value="error.html"/>
-
 - `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
   page, the amount of time to wait before throwing a timeout error.
   This example specifies 10 seconds rather than 20:
