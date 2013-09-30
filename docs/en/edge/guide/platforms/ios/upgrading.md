@@ -25,9 +25,26 @@ created with an older set of command-line tools that precede the
 `cordova` CLI utility. See The Command-line Interface for information
 how to update the version of the CLI.
 
-__NOTE:__ Xcode 4.5 is required. To submit to the Apple App Store, you
-must use the latest shipped version of the iOS SDK, which is iOS 6.
-The iOS 6 SDK requires Xcode 4.5.
+__NOTE:__ Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
+Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
+iOS 7 SDK is not required yet, but this may change quickly.
+
+## Upgrading 3.0.0 projects to 3.1.0 ##
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects, run: 
+
+        1. Update the `cordova` CLI version - see The Command-line Interface 
+        2. Run `cordova platform update ios`
+        
+### iOS 7 Issues
+
+	1. Remove the values "width=device-width, height=device-height" from your meta tag 
+	"viewport" attribute in your index.html file, see https://issues.apache.org/jira/browse/CB-4323
+	2. Update your media, media-capture and splashscreen core plugins for iOS 7 support
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
