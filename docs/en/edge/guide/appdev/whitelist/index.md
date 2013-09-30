@@ -64,8 +64,10 @@ The following examples demonstrate whitelist syntax:
 Platform-soecific whitelisting rules are found in
 `res/xml/config.xml`.
 
-For Android versions prior to 3.0, domain whitelisting only works for
-`href` hyperlinks, not embedded resources such as images and scripts.
+__NOTE:__ On Android 2.3 and before, domain whitelisting only works
+for `href` hyperlinks, not referenced resources such as images and
+scripts. Take steps to avoid scripts from being injected into the
+application.
 
 ## iOS Whitelisting
 
