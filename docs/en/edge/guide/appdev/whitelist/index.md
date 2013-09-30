@@ -62,13 +62,17 @@ The following examples demonstrate whitelist syntax:
 
 ## Android Whitelisting
 
-Platform-soecific whitelisting rules are found in
+Platform-specific whitelisting rules are found in
 `res/xml/config.xml`.
 
 __NOTE:__ On Android 2.3 and before, domain whitelisting only works
 for `href` hyperlinks, not referenced resources such as images and
 scripts. Take steps to avoid scripts from being injected into the
 application.
+
+Navigating to non-whitelisted domains via `href` hyperlink causes the
+page to open in the default browser rather than within the
+application.  (Compare this to iOS's behavior noted below.)
 
 ## iOS Whitelisting
 
@@ -80,12 +84,14 @@ than `http://www.apache.org`, default to all of the `http`, `https`,
 `ftp`, and `ftps` schemes.
 
 Wildcards on the iOS platform are more flexible than in the [W3C
-Widget Access][1] specification.
-
-The following accesses all subdomains and top-level domains such as
-`.com` and `.net`:
+Widget Access][1] specification.  For example, the following accesses
+all subdomains and top-level domains such as `.com` and `.net`:
 
         <access origin="*.google.*" />
+
+Unlike the Android platform noted above, navigating to non-whitelisted
+domains via `href` hyperlink on iOS prevents the page from opening at
+all.
 
 ## BlackBerry 10 Whitelisting
 
