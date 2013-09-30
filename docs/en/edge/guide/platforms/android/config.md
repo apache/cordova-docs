@@ -47,3 +47,7 @@ config.xml File for information on global configuration options.
 
         <preference name="SplashScreenDelay" value="10000"/>
 
+- `InAppBrowserStorageEnabled` (boolean, defaults to `true`): Controls
+  whether pages opened within an InAppBrowser can access the same
+  localStorage and WebSQL storage as pages opened with the default
+  browser.
