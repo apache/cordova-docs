@@ -37,11 +37,6 @@ config.xml File for information on global configuration options.
 
         <preference name="ErrorUrl" value="error.html"/>
 
-- `LoadingDialog`: Display a native dialog when loading the app. The
-  value's format is _Title, Message_
-
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-
 - `LoadingPageDialog`: Display a native dialog when loading sub-pages
   within an app. The value's format is _Title, Message_
 
