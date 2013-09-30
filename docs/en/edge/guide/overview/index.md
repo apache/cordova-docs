@@ -137,6 +137,7 @@ CLI's shorthand stubs.)
         <th><tt>wp7</tt> (Windows<br/>Phone 7)</th>
         <th><tt>wp8</tt> (Windows<br/>Phone 8)</th>
         <th><tt>win8</tt><br/>(Windows 8)</th>
+        <th><tt>firefoxos</tt></th>
         <th><tt>tizen</tt></th>
     </tr>
 
