@@ -42,6 +42,7 @@ platform's SDK. The CLI supports the following combinations:
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
+* Windows 8       (Windows)
 * Firefox OS      (Mac, Linux, Windows)
 
 On the Mac, the command-line is available via the _Terminal_
@@ -112,6 +113,7 @@ different versions of the Windows Phone operating system:
 
         $ cordova platform add wp7
         $ cordova platform add wp8
+        $ cordova platform add windows8
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
