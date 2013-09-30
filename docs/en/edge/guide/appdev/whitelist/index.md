@@ -19,112 +19,102 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Whitelist Guide
 
-## Overview
+Domain whitelisting is a security model that controls access to
+external domains over which you application has no control.  Cordova's
+default security policy allows access to any site. Before moving your
+application to production, you should formulate a whitelist and allow
+access to specific network domains and subdomains.
 
-Resource whitelisting is a security model that controls access to
-external network resources, such as `http://google.com`.  Apache Cordova's
-default security policy allows access to any resource on any site on the
-Internet. Before moving your application to production, you should review
-its whitelist and declare access to specific network domains and subdomains.
+Cordova adheres to the [W3C Widget Access][1] specification, which
+relies on the `<access>` element within the app's `config.xml` file to
+enable network access to specific domains. For projects that rely on
+the CLI workflow described in The Command-line Interface, this file is
+located in the project's top-level `www` directory. Otherwise for
+platform-specific development paths, locations are listed in the
+sections below.
 
-## Specification
+The following examples demonstrate whitelist syntax:
 
-Domain whitelisting lays the groundwork for the [W3C Widget Access][1]
-specification. In the Widget Access specification, the `<access>`
-element is used to declare access to specific network domains. In the
-future, Apache Cordova will abstract the platform whitelisting
-implementations to the W3C Widget Access specification. However, for
-now each platform must implement its own domain whitelisting.
+* Access to [google.com][2]:
 
-## Syntax
+        <access origin="http://google.com" />
 
-Access to all resources at [google.com][2]:
+* Access to the secure [google.com][3] (`https://`):
 
-    http://google.com/*
+        <access origin="https://google.com" />
 
-Access to all resources at the secure [google.com][3] (`https://`):
+* Access to the subdomain [maps.google.com][4]:
 
-    https://google.com/*
+        <access origin="http://maps.google.com" />
 
-Access to the specific subdomain [maps.google.com][5]:
+* Access to all the subdomains on [google.com][2], for example
+  [mail.google.com][5] and [docs.google.com][6]:
 
-    http://maps.google.com/*
+        <access origin="http://*.google.com" />
 
-Access to all the subdomains on [google.com][2] (e.g., [mail.google.com][6] and [docs.google.com][7]):
+* Access to _all_ domains, for example, [google.com][2] and
+  [developer.mozilla.org][7]:
 
-    http://*.google.com/*
+        <access origin="*" />
 
-Access to all resources on [www.google.com][4] under the "/mobile" path:
+  This is the default value for newly created CLI projects.
 
-    http://www.google.com/mobile/*
+## Android Whitelisting
 
-Access to [google.com][2] on any protocol (e.g., HTTP, HTTPS, FTP, etc):
+Platform-soecific whitelisting rules are found in
+`res/xml/config.xml`.
 
-    *://google.com/*
+## iOS Whitelisting
 
-Access to all resouces on the Internet (e.g., [google.com][2] and [developer.mozilla.org][8]):
+The platform's whitelisting rules are found in the named application
+directory's `config.xml` file.
 
-    *
+Origins specified without a protocol, such as `www.apache.org` rather
+than `http://www.apache.org`, default to all of the `http`, `https`,
+`ftp`, and `ftps` schemes.
 
-## Android
+Wildcards on the iOS platform are more flexible than in the [W3C
+Widget Access][1] specification.
 
-### Details
+The following accesses all subdomains and top-level domains such as
+`.com` and `.net`:
 
-The whitelisting rules are found in `res/xml/config.xml` and declared
-with the element `<access origin="..." />`.
+        <access origin="*.google.*" />
 
-Android fully supports whitelisting syntax.
+## BlackBerry 10 Whitelisting
 
-### Syntax
+The whitelisting rules are found in `www/config.xml`.
 
-Access to [google.com][2]:
+BlackBerry 10's use of wildcards differs from other platforms in two
+ways:
 
-    <access origin="http://google.com/*" />
-
-## BlackBerry 10
-
-### Details
-
-The whitelisting rules are found in `www/config.xml` and declared with 
-the element `<access origin="..." />`.
-
-BlackBerry 10 handles wildcards differently than other platforms in two ways:
-
-1) Content accessed by XMLHttpRequest must be declared explicity. origin="\*" will
-   not be respected for this use case. Alternatively, all web security may be
-   disabled using a preference.
+* Any content accessed by `XMLHttpRequest` must be declared
+  explicity. Setting `origin="*"` does not work in this case.
+  Alternatively, all web security may be disabled using the
+  `WebSecurity` preference described in BlackBerry Configuration:
  
-2) subdomains="true" may be used in place of "\*.domain"
+        <preference name="websecurity" value="disable" />
 
-### Syntax
+* As an alternative to setting `*.domain`, set an additional
+  `subdomains` attribute to `true`. It should be set to `false` by
+  default. For example, the following allows access to `google.com`,
+  `maps.google.com`, and `docs.google.com`:
 
-Access to [google.com][2]:
+        <access origin="http://google.com" subdomains="true" />
 
-    <access origin="http://google.com" subdomains="false" />
+  The following narrows access to `google.com`:
 
-Access to  [maps.google.com][5]:
+        <access origin="http://google.com" subdomains="false" />
 
-    <access origin="http://maps.google.com" subdomains="false" />
-
-Access to all the subdomains on [google.com][2]:
-
-    <access origin="http://google.com" subdomains="true" />
-
-Access to all domains, including `file://` protocol:
+  Specify access to all domains, including the local `file://`
+  protocol:
 
     <access origin="*" subdomains="true" />
 
-Disable all web security:
-
-    <preference name="websecurity" value="disable" />
+(For more information on support, see BlackBerry's documentation on the
+[access element][8].)
 
 ## iOS
-
-### Details
-
-The whitelisting rules are found in `AppName/config.xml` and declared with the element `<access origin="..." />`.
-
-iOS fully supports whitelisting syntax.
 
 ### Changed in 3.1.0:
 
@@ -138,56 +128,26 @@ Specifically, these patterns need to be updated:
 
   * "`h*t*://ap*he.o*g`" (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
 
-### Syntax
+## Windows Phone Whitelisting
 
-Access to [google.com][2]:
+The whitelisting rules for Windows Phone 7 and 8 are found in the
+app's `config.xml` file.
 
-    <access origin="http://google.com/*" />
+## Tizen Whitelisting
 
-## Windows Phone (7 & 8)
-
-The whitelisting rules are found in `config.xml` and declared with the element `<access origin="..." />`.
-
-### Syntax
-
-Access to [google.com][2]:
-
-    <access origin="http://google.com" />
-
-## Tizen
-
-### Details
-
-The application root directory's `config.xml` file specifies domain
-whitelisting rules, using the `<access origin="..." />` element.
-For a complete reference, see the [Tizen Accessing External Network Resources documentation][10].
-
-### Syntax
-
-Access to [google.com][2]:
-
-    <access origin="http://google.com" subdomains="false" />
-
-Access to the secure [google.com][3] (`https://`):
-
-    <access origin="https://google.com" subdomains="false" />
-
-Access to all the subdomains on [google.com][2]:
-
-    <access origin="http://google.com" subdomains="true" />
-
-Access to all domains, including `file://` protocol:
-
-    <access origin="*" subdomains="true" />
+Whitelisting rules are found in the app's `config.xml` file. The
+platform relies on the same `subdomains` attribute as the BlackBerry
+platform.
+(For more information on support, see Tizen's documentation on the
+[access element][9].)
 
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com
-[4]: http://www.google.com
-[5]: http://maps.google.com
-[6]: http://mail.google.com
-[7]: http://docs.google.com
-[8]: http://developer.mozilla.org
-[9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
-[10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
-[11]: http://developer.chrome.com/apps/match_patterns.html
+[4]: http://maps.google.com
+[5]: http://mail.google.com
+[6]: http://docs.google.com
+[7]: http://developer.mozilla.org
+[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
+
