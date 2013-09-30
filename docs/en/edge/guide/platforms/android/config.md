@@ -37,11 +37,6 @@ config.xml File for information on global configuration options.
 
         <preference name="ErrorUrl" value="error.html"/>
 
-- `LoadingPageDialog`: Display a native dialog when loading sub-pages
-  within an app. The value's format is _Title, Message_
-
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-
 - `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
   page, the amount of time to wait before throwing a timeout error.
   This example specifies 10 seconds rather than 20:
