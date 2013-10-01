@@ -45,6 +45,12 @@ For CLI projects, run:
 	1. Remove the values "width=device-width, height=device-height" from your meta tag 
 	"viewport" attribute in your index.html file, see https://issues.apache.org/jira/browse/CB-4323
 	2. Update your media, media-capture and splashscreen core plugins for iOS 7 support
+	
+### Xcode 5 Issues	
+
+	1. Update your Project Settings if Xcode 5 prompts you to do so (in the Issues Navigator)
+	2. Update your "Compiler for C/C++/Objective-C" setting, under the "Build Settings" 
+	tab, "Build Options" section. Choose "Default compiler (Apple LLVM 5.0)"
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
