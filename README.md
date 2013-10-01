@@ -133,6 +133,10 @@ Generate a specific language and version
 
     bin/generate en edge
 
+or as a shortcut
+
+    bin/generate --edge
+
 ### Quick Preview
 
 When making minor edits, it is usually safe to simply render the edited from
@@ -149,6 +153,14 @@ There is a Rake task to increment the version, generate the version directory, a
 
     # generate version 1.7.0
     rake version[1.7.0]
+
+If while running rake you get the error 
+
+    no such file to load -- spec/rake/spectask 
+
+then run
+
+    sudo gem install rspec -v 1.3.0
 
 FAQ
 ---
