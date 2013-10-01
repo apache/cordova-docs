@@ -27,6 +27,17 @@ Command-line Interface for information how to update the version of
 the CLI.  The following section shows how to upgrade from non-CLI
 projects.
 
+## Upgrade to 3.1.0 from 3.0.0 ##
+
+For projects that were created with the cordova CLI: 
+
+1. Update the `cordova` CLI version - see The Command-line Interface 
+2. Run `cordova platform update wp8` (or `wp7`, per the platforms you added to your project).
+        
+For projects not created with the cordova CLI, run:
+
+1. `bin\update <project_path>`
+
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
