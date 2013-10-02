@@ -116,21 +116,14 @@ each should be:
 - medium (mdpi): at least 470 &times; 320
 - small (ldpi): at least 426 &times; 320
 
-In the `onCreate` method of the class that extends `DroidGap`, add the
-following two lines:
+In `config.xml`, add the following preferences:
 
-        super.setIntegerProperty("splashscreen", R.drawable.splash);
-        super.loadUrl(Config.getStartUrl(), 10000);
+    <preference name="splashscreen", "splash" />
+    <preference name="splashScreenDelay", 10000 />
 
-The first line sets the image to display as the splash screen. If you
-name your image anything other than `splash.png`, you need to modify
-this line.
+The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
 
-The second line is the normal `super.loadUrl` line, but its second
-parameter specifies a timeout value to display the splash screen. In
-this example the splash screen displays for 10 seconds. To dismiss the
-splash screen once the app receives the `deviceready` event, call the
-`navigator.splashscreen.hide()` method.
+The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.
 
 ## Splash Screens for the iOS Platform 
 
