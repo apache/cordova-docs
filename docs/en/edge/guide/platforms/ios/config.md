@@ -87,13 +87,6 @@ File for information on global configuration options.
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
-- `KeyboardShrinksView` (boolean, defaults to `false`): Set to `true`
-  to scale down the webview when the keyboard appears, overriding the
-  default beavior that shrinks the viewport vertically. This matches
-  the default behaviour for Android apps.
-
-        <preference name="KeyboardShrinksView" value="true"/>
-
 - `GapBetweenPages` (float, defaults to `0`): The size of the gap, in points, between pages.
 
         <preference name="GapBetweenPages" value="0"/>
