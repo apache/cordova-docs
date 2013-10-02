@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 가이드에서는 두 버전 7과 8, 코르도바의 이전 버전에서 업그레이드 하려면 Windows Phone 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 명령줄 인터페이스를 참조. 다음 섹션에서는 비 CLI 프로젝트에서 업그레이드 하는 방법을 보여 줍니다.
 
+## 3.1.0 3.0.0에서 업그레이드
+
+코르 도우 바 CLI로 만든 프로젝트의 경우:
+
+1.  업데이트는 `cordova` CLI 버전-명령줄 인터페이스 참조 
+2.  실행 `cordova platform update wp8` (또는 `wp7` , 프로젝트에 추가한 플랫폼 당).
+
+아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
+
+1.  `bin\update <project_path>`
+
 ## 2.9.0에서 CLI (3.0.0) 업그레이드
 
 1.  명령줄 인터페이스에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
@@ -217,11 +228,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -235,11 +246,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -253,11 +264,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -271,11 +282,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -289,11 +300,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -307,11 +318,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -325,11 +336,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -343,11 +354,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -361,11 +372,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다..
 
@@ -379,11 +390,11 @@ Visual Studio의 솔루션 탐색기 창에서:
 
 1.  삭제 `GapLib/WP7CordovaClassLib.dll` 프로젝트에서.
 
-2.  참조를 제거 `WP7CordovaClassLib` **참조** 폴더에 있습니다.
+2.  참조를 제거 `WP7CordovaClassLib` **참조** 디렉터리에.
 
 3.  **참조** 에서 오른쪽 클릭 하 고 **참조 추가** 선택.
 
-4.  새 메일을 이동한 파일 추가`WP7CordovaClassLib.dll`.
+4.  새 배포로 이동 하 고 추가 `WP7CordovaClassLib.dll` 파일.
     
     *   **참고:** 참조를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 DLL의 버전을 볼 수 있습니다.
 

@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Windows Phone 명령줄 도구 지원 만드는 건물과 새로운 프로젝트를 실행 합니다. 명령을은 cmd 또는 powershell 프롬프트에서 실행 해야 합니다.
 
-WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리 케이 션. Repo 각 하위 폴더에는: wp7 /와 wp8 /
+WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리 케이 션. Repo 각 하위 디렉터리는: `wp7/` 및`wp8/`.
 
 ## 프로젝트 만들기
 

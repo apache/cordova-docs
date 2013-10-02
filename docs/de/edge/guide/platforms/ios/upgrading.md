@@ -18,7 +18,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Diese Anleitung zeigt wie iOS-Projekte von älteren Versionen von Cordova upgedatet werden. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Aktualisieren Sie die Version der CLI.
 
-**Hinweis:** Xcode 4.5 ist erforderlich. Um die Apple-App-Store zu übermitteln, müssen Sie verwenden die neueste ausgelieferte Version des iOS SDK, welches ist iOS 6. Das iOS 6 SDK muss Xcode 4.5.
+**Hinweis:** Xcode 4.6 erforderlich ist, empfiehlt sich Xcode-5. Derzeit um die Apple-App-Store zu übermitteln, verwenden Sie die neueste ausgelieferte Version des iOS SDK, welches ist iOS 7. iOS 7 SDK noch nicht erforderlich, aber dies kann sich schnell ändern.
+
+## Upgrade 3.0.0 Projekte zu 3.1.0
+
+Für nicht-CLI Projekte führen:
+
+        bin/Pfad/zu/Projekt-update
+    
+
+Führen Sie für CLI-Projekte:
+
+        1. Aktualisieren Sie die 'Cordoba' CLI-Version - siehe The Command-Line Interface 2. Führen Sie 'Cordova Plattform Update Ios'
+    
+
+### iOS 7 Fragen
+
+    1. Entfernen Sie die Werte "Breite = Geräte-Breite, Höhe = Device-Height" entnehmen Sie Ihre Meta-Tag "Viewport" Attribut in der Datei "index.html", https://issues.apache.org/jira/browse/CB-4323 2. Aktualisieren Sie Ihre Medien, Medien-Capture und Splashscreen Core-Plugins für iOS 7 Unterstützung
+    
+
+### Xcode 5 Fragen
+
+    1. Aktualisieren Sie die Projekteinstellungen, wenn Xcode 5 Sie ja (in den Themen-Navigator) 2 dazu aufgefordert werden. Update Ihrer "Compiler für C / C + + / Objective-C" festlegen, unter dem Reiter "Build Settings" Abschnitt "Build Options". Wählen Sie "Standard-Compiler (Apple LLVM 5.0)"
+    
 
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
 
@@ -31,15 +53,15 @@ platform add ios`.
 
 4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` usw.), die sicher um jede neuen Dateien zu den `.xcodeproj` Projekt. Das iOS-Projekt erstellt, in das `platforms\ios` Verzeichnis.
 
-5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie die Einstellungen hier nicht die Plattform-Ordner.
+5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie die Einstellungen hier anstelle des Plattform-Verzeichnisses.
 
-6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
+6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie unter Umständen hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
 7.  Erstellen und testen.
 
 ## Upgrade 2.9.0 Projekte 3.0.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 3.0.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-3.0.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -57,7 +79,7 @@ platform add ios`.
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.9.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -73,7 +95,7 @@ platform add ios`.
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.8.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -105,7 +127,7 @@ platform add ios`.
 
 ## Upgrade 2.6.0 Projekte 2.7.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.7.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.7.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -128,7 +150,7 @@ platform add ios`.
 
 ## Upgrade 2.5.0 Projekte 2.6.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.6.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.6.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -159,7 +181,7 @@ platform add ios`.
 
 ## Upgrade 2.4.0 Projekte 2.5.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.5.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.5.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -190,7 +212,7 @@ platform add ios`.
 
 ## Upgrade 2.3.0 Projekte 2.4.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.4.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.4.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -221,7 +243,7 @@ platform add ios`.
 
 ## Upgrade 2.2.0 Projekte 2.3.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.3.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.3.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -256,7 +278,7 @@ platform add ios`.
 
 ## Upgrade 2.1.0 Projekte 2.2.0
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.2.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.2.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -282,13 +304,13 @@ platform add ios`.
         
         `Update_cordova_subproject Pfad/zu/Ihrem/Projekt/xcodeproj`
 
-**Hinweis:** In 2.2.0 das `bin/create` Skript-Kopie in der `CordovaLib` Teilprojekt in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in der rechten `CordovaLib` in Ihrem Projektordner und Update der `CordovaLib` Teilprojekt Lage (bezogen auf "Projekt") in der Xcode-Datei-Inspektor.
+**Hinweis:** In 2.2.0 das `bin/create` Skript-Kopie in der `CordovaLib` Teilprojekt in Ihr Projekt. Um die gleiche Art der Installation haben, kopieren Sie einfach in der rechten `CordovaLib` in Ihr Projektverzeichnis, und Update der `CordovaLib` Teilprojekt Lage (bezogen auf "Projekt") in der Xcode-Datei-Inspektor.
 
 ## Upgrade 2.0.0 Projekte auf 2.1.0
 
 Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**verwenden aktualisiert wurde. Sie nicht müssen upgrade auf **ARC** mithilfe von CordovaLib, aber wenn Sie, aktualisieren Sie das Projekt zur Verwendung von **ARC möchten**, verwenden Sie bitte den Xcode-Migrations-Assistenten aus dem Menü: **Bearbeiten → → umgestalten Convert in Objective-C-Bogen...**, libCordova.a aufzuheben, dann führen Sie den Assistenten bis zum Abschluss.
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova 2.1.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova-2.1.0`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
@@ -443,7 +465,7 @@ Mit Cordova 2.1.0 `CordovaLib` zur **Automatischen Reference Counting (ARC)**ver
 
 Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **iPad Retina-Display** -Vermögen:
 
-1.  Kopie der `Resources/Capture.bundle` Element aus dem neuen Projekt in den Projektordner zu schreiben, Ihre bestehende `Resources/Capture.bundle` Element.
+1.  Kopie der `Resources/Capture.bundle` Element aus dem neuen Projekt in Ihrem Projektverzeichnis, schreiben über Ihre bestehende `Resources/Capture.bundle` Element.
 
 2.  Wählen Sie in Ihrem Projekt, das `Capture.bundle` Element in Ihrem Projekt-Navigator in Xcode, geben Sie die **Entf** -Taste, und wählen Sie im daraufhin angezeigten Dialogfeld **Verweis entfernen** .
 
@@ -467,7 +489,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 1.5.0-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.5.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
@@ -571,7 +593,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopie der `MainViewController.m` Datei aus dem neuen Projekt in den 1.4.0-based-Projektordner auf dem Datenträger, die alte Datei ersetzen (backup Ihrer Dateien zuerst aus Schritt 2 oben).
+4.  Kopie der `MainViewController.m` Datei aus dem neuen Projekt in das 1.4.0-based-Projekt-Verzeichnis auf der Festplatte, die alte Datei ersetzen (backup Ihrer Dateien zuerst aus Schritt 2 oben).
 
 5.  Fügen Sie die `MainViewController.m` Datei in das Xcode-Projekt.
 
@@ -587,7 +609,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 1.3.0-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.3.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -610,7 +632,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 1.2.0-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.2.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -633,7 +655,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 1.1.0-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.1.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -656,7 +678,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 1.0.0-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 1.0.0-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -671,7 +693,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 9.  Integrieren Sie Projekt-spezifischen Code, die Sie in Ihrem gesicherten `AppDelegate.h` und `AppDelegate.m` in die neuen AppDelegate-Dateien.
 
-## Aktualisierung 0.9.6 Projekte 1.0.0
+## Upgrade 0.9.6 Projekte 1.0.0
 
 1.  Cordova 1.0.0 installiert.
 
@@ -679,7 +701,7 @@ Wollen Sie über die Verwendung der API zu erfassen, benötigen Sie die neue **i
 
 3.  Erstellen Sie ein neues Projekt. Sie benötigen einen Teil der Vermögensgegenstände aus diesem neuen Projekt.
 
-4.  Kopieren Sie diese Dateien aus dem neuen Projekt in den 0.9.6-based-Projektordner auf dem Datenträger ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
+4.  Kopieren Sie diese Dateien aus dem neuen Projekt in Ihr 0.9.6-based-Projekt-Verzeichnis auf der Festplatte ersetzt alle alten Dateien (sichern Sie Ihre Dateien zuerst aus Schritt 2 oben):
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         

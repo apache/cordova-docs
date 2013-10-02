@@ -66,9 +66,9 @@ Gli strumenti della riga di comando qui sopra si riferiscono a versioni preceden
 
 *   Scaricare e installare il [SDK di Windows Phone][5]
 
-*   Scaricare ed estrarre l'ultima copia di [Cordova][6]. Lavorerete `lib\windows-phone-8\wp8` sottocartella, `lib\windows-phone-8\wp7` contiene la versione di Windwos Phone 7 di Cordova.
+*   Scaricare ed estrarre l'ultima copia di [Cordova][6]. Lavorerete `lib\windows-phone-8\wp8` sottodirectory, `lib\windows-phone-8\wp7` contiene la versione di Windwos Phone 7 di Cordova.
 
-*   Copiare il file CordovaWP8\_x\_x_x.zip nella cartella: \My 2012\Templates\ProjectTemplates\ Studio
+*   Copia il `CordovaWP8_x_x_x.zip` del file per il `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
 
  [5]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [6]: http://phonegap.com/download
@@ -104,7 +104,7 @@ Eseguire lo script:
 
 ## 4. Esaminare la struttura del progetto
 
-*   Il `www` cartella contiene il Cordova `html/js/css` e altre risorse incluse nell'app.
+*   Il `www` directory contiene il Cordova `html/js/css` e altre risorse incluse nell'app.
 
 *   Qualsiasi contenuto che aggiunge qui deve essere una parte del progetto di Visual Studio, e deve essere impostato come contenuto.
 

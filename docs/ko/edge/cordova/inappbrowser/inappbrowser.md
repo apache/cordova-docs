@@ -16,10 +16,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> `InAppBrowser`를 호출할 때 응용 프로그램에서 표시 하는 웹 브라우저입니다`window.open`.
+> `InAppBrowser`때 표시 하는 웹 브라우저 보기 전화 `window.open()` , 또는 때로 형성 된 링크 열기`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
+
+**참고:** InAppBrowser 창 표준 웹 브라우저 처럼 동작 및 코르도바 Api에 액세스할 수 없습니다.
 
 ## 설명
 
@@ -38,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-        $ cordova plugin rm org.apache.cordova.core.inappbrowser
+        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin ls
+        [ 'org.apache.cordova.inappbrowser' ]
+        $ cordova plugin rm org.apache.cordova.inappbrowser
     
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
@@ -63,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
 
 # addEventListener
 

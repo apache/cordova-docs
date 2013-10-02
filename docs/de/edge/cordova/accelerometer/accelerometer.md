@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Beschleunigungsmesser
 
-> Erfasst die Bewegung Gerät in der *x-*, *y-*und *Z* -Richtung.
+> Erfasst die Bewegung des Geräts in der *x-*, *y-* und *Z*-Richtung.
 
 ## Methoden
 
@@ -36,13 +36,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie den CLI `plugin` Befehl, welche im Command-Line Interface beschrieben ist, zum hinzufügen oder entfernen dieses Features für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin rm org.apache.cordova.core.device-motion
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-motion' ]
+        $ cordova plugin rm org.apache.cordova.device-motion
     
 
-Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
+Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen Konfigurationseinstellungen müssen, wie unten beschrieben, geändert werden:
 
 *   Android (in`app/res/xml/config.xml`)
     
@@ -81,4 +83,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature auch ohne besondere Konfiguration unterstützen. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der Übersicht.

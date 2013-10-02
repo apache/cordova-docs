@@ -16,10 +16,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> `InAppBrowser`Это веб-браузер, который отображается в приложении, при вызове`window.open`.
+> `InAppBrowser`Зовет представление веб-браузера, который отображает при `window.open()` , или когда открытие ссылки формируется как`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
+
+**Примечание:** InAppBrowser окно ведет себя как стандартный веб-браузер и не может получить доступ к Cordova интерфейсов API.
 
 ## Описание
 
@@ -38,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-        $ cordova plugin rm org.apache.cordova.core.inappbrowser
+        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin ls
+        [ 'org.apache.cordova.inappbrowser' ]
+        $ cordova plugin rm org.apache.cordova.inappbrowser
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -63,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
 
 # addEventListener
 

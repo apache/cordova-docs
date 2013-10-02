@@ -25,7 +25,7 @@ Renvoie l'accélération en cours sur les axes *x*, *y*et *z* .
 
 L'accéléromètre est un capteur de mouvement qui détecte la modification (*delta*) en mouvement relatif à l'orientation actuelle de l'appareil, en trois dimensions le long de l'axe *x*, *y* et *z* .
 
-Ces valeurs d'accélération sont retournées à la fonction callback `accelerometerSuccess`.
+Ces valeurs d'accélération sont retournées par la fonction callback `accelerometerSuccess`.
 
 ## Plates-formes supportées
 
@@ -96,7 +96,7 @@ Ces valeurs d'accélération sont retournées à la fonction callback `accelerom
     </html>
     
 
-## Notes au sujet d'iOS
+## Caprices d'iOS
 
 *   iOS ne permet pas d'obtenir l'accélération en cours à un instant donné.
 

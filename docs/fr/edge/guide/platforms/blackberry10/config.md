@@ -14,24 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Configuration de blackBerry 10
+# Configuration de blackBerry
 
-Le `config.xml` fichier contrôle les différents paramètres de Cordova. Elles s'appliquent dans toute l'application. Le `config.xml` fichier est se trouve dans `<project folder>/<www>` répertoire.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails d'article s'appliquant uniquement aux BlackBerry 10 construit. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-## `<preference>`
+*   `ChildBrowser`( `disable` ou la valeur par défaut `enable` ): désactive les fenêtres de navigateur d'enfants. Par défaut, les apps pour lancent une fenêtre de navigateur secondaire pour afficher les ressources accédés via `window.open()` ou en spécifiant une `_blank` cible de l'ancre. Spécifiez `disable` pour substituer ce comportement par défaut.
+    
+        <preference name="ChildBrowser" value="disable"/>
+        
 
-Diverses préférences (comme `<preference>` tags) par défaut sur la rupture ne pas les applications existantes. Les préférences disponibles sont :
+*   `PopupBlocker`( `enable` ou la valeur par défaut `disable` ): permet le bloqueur de popups, qui empêche les appels à `window.open()` . Par défaut, les fenêtres pop-up affiche dans une fenêtre enfant. Affectant la préférence `enable` l'empêche de s'afficher du tout.
+    
+        <preference name="PopupBlocker" value="enable"/>
+        
 
-*   `autoHideSplashScreen`: ( `true` ou `false` ): la valeur `false` pour contrôler quand il est caché le splashscreen via une API JavaScript. Cette préférence par défaut est true.
-
-*   `backgroundColor`: Spécifie la couleur d'arrière-plan de votre application. La valeur doit spécifier une valeur de couleur dans le format de pixel ARGB en utilisant 8 chiffres hexadécimaux.
-
-*   `childBrowser`: Désactive les fenêtres de navigateur d'enfants. Par défaut, lorsque le contenu tente d'ouvrir une ressource dans une nouvelle fenêtre ou onglet (à l'aide de Window.Open (), ou en spécifiant `_blank` comme cible d'une ancre), l'app WebWorks ouvrira une fenêtre de navigateur secondaire pour afficher les ressources. Cette fonctionnalité est activée par défaut. La valeur doit spécifier `disable` pour empêcher les actions ci-dessus se produise.
-
-*   `hideKeyboardFormAccessoryBar`: ( `enable` ou `disable` ) désactive la barre accessoire de forme de clavier dans un formulaire HTML. Le bar accessoire de forme de clavier est une rangée de boutons (précédent, suivant et Submit) que l'utilisateur peut utiliser pour naviguer dans un formulaire. Par défaut, lorsqu'une application WebWorks contienne un formulaire HTML et un `<input>` élément obtient le focus, WebWorks affiche cette barre accessoire de forme. Cette fonctionnalité vous permet d'empêcher votre application d'afficher la barre accessoire forme en spécifiant la valeur comme`enable`.
-
-*   `orientation`: ( `auto` , `portrait` , ou `landscape` ) spécifie l'orientation persistante pour écrans dans votre application. Par défaut, si vous ne spécifiez pas une orientation de l'écran, l'orientation est définie sur auto.
-
-*   `popupBlocker`: Permet le blocage des fenêtres popup. Par défaut, toutes les fenêtres pop-up est affichées par apps BlackBerry WebWorks dans une fenêtre enfant. Vous pouvez empêcher les fenêtres pop-up de s'afficher sans intervention de l'utilisateur en permettant le blocage des fenêtres popup. Cela se fait en spécifiant la valeur comme`enable`.
-
-*   `webSecurity`: Désactive sécurité web. Désactivation de la sécurité web vous permet d'accéder contenu distant provenant de sources inconnues au cours du développement. Avant l'emballage de votre application pour la distribution, vous devez supprimer ce réglage. Cette fonctionnalité est conçue comme une commodité de développement uniquement. En production, tous les URI doivent être connue et devrait être dans la liste blanche en utilisant le `<access>` élément. Pour désactiver, spécifiez la valeur que`disable`.
+*   `WebSecurity`( `disable` ou la valeur par défaut `enable` ): la valeur `disable` pour substituer les paramètres de sécurité web, permettant d'accéder à un contenu distant provenant de sources inconnues. Cette préférence est conçue comme une commodité de développement uniquement, alors Retirez-le avant l'empaquetage de votre application pour la distribution. L'application publiée, tous les URI doivent être connu et à l'aide de la liste blanche les `<access>` élément, décrit dans le Guide de liste blanche du domaine.
+    
+        <preference name="WebSecurity" value="disable"/>

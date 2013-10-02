@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocation.clearWatch
 
-Arrêter de regarder pour les modifications à l'emplacement de l'appareil référencé par le `watchID` paramètre.
+Arrêter d'observer les changements de position de l'appareil référencés par le paramètre `watchID`.
 
     navigator.geolocation.clearWatch(watchID);
     
 
 ## Paramètres
 
-*   **watchID**: l'id de la `watchPosition` intervalle à effacer. (String)
+*   **watchID** : l'identifiant de l'intervalle `watchPosition` à effacer. (String)
 
 ## Description
 
-Le `geolocation.clearWatch` cesse de regarder les modifications apportées à l'emplacement de l'appareil en désactivant le `geolocation.watchPosition` référencé par`watchID`.
+La méthode `geolocation.clearWatch` permet de cesser d'observer les modifications apportées à l'emplacement de l'appareil en désactivant l'observateur associé `geolocation.watchPosition` identifié par le `watchID` donné.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -38,9 +38,10 @@ Le `geolocation.clearWatch` cesse de regarder les modifications apportées à l'
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    / / Options : suivi des modifications dans la position et utilise le plus / / exacte position méthode d'acquisition disponible.
+    // Options : observer les changements de position, et utiliser
+    // la méthode d'acquisition la plus précise disponible.
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
     

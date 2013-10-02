@@ -18,6 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 本指南演示如何修改 Windows 8 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
 
+## 升級到 3.1.0
+
+在科爾多瓦 3.1.0 引入了對 Windows 8 的科爾多瓦 CLI 支援。若要升級，我們建議創建新的科爾多瓦 CLI 專案和所有必要的資產轉移。
+
 ## 從 2.8.0 升級到 2.9.0
 
 下面的命令應當從內進行 Visual Studio 可以肯定任何專案引用是更新刪除。

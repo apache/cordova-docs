@@ -14,19 +14,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Métadonnées
+# Metadata
 
-Une interface qui fournit des informations sur l'état d'un fichier ou un répertoire.
+Une interface fournissant des informations sur l'état d'un fichier ou un répertoire.
 
 ## Propriétés
 
-*   **modificationTime**: le temps où le fichier ou le répertoire a été modifié. *(Date)*
+*   **modificationTime** : la date à laquelle le fichier ou le répertoire a été modifié pour la dernière fois. *(Date)*
 
 ## Détails
 
-Le `Metadata` objet représente des informations sur l'état d'un fichier ou un répertoire. Appeler un `DirectoryEntry` ou `FileEntry` de l'objet `getMetadata()` méthode se traduit par une `Metadata` instance.
+L'objet `Metadata` fournit des informations sur l'état d'un fichier ou un répertoire. Appeler la méthode `getMetadata()` d'un objet `DirectoryEntry` ou `FileEntry` retourne une instance de `Metadata`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -34,7 +34,7 @@ Le `Metadata` objet représente des informations sur l'état d'un fichier ou un 
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     function win(metadata) {
         console.log("Last Modified: " + metadata.modificationTime);

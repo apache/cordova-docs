@@ -106,7 +106,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </feature>
     
 
-Тогда мы хотели бы добавить следующие файлы ( `Echo.h` и `Echo.m` ) в папку плагинов внутри нашей Cordova-iOS папки приложения:
+Тогда мы хотели бы добавить следующие файлы ( `Echo.h` и `Echo.m` ) в директорию плагинов внутри нашего каталога приложений Cordova-iOS:
 
     /********* Echo.h Cordova Plugin Header *******/
     

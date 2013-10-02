@@ -29,6 +29,8 @@ Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesi
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
+*   Windows 8 (Windows)
+*   Firefox OS (Mac, Linux, Windows)
 
 En el Mac, es disponible a través de la aplicación de *Terminal de* la línea de comandos. En el PC, se encuentra disponible como *símbolo* en *accesorios*.
 
@@ -72,14 +74,17 @@ Antes de que usted puede construir el proyecto, tienes que especificar un conjun
         $ cordova platform add ios
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere a diferentes versiones del sistema operativo Windows Phone:
 
         $ cordova platform add wp7
         $ cordova platform add wp8
+        $ cordova platform add windows8
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 Ejecutar para comprobar su sistema actual de plataformas:
@@ -159,76 +164,76 @@ El `cordova plugin add` comando requiere especificar el repositorio para el cód
 
 *   Información básica del dispositivo (dispositivo API):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
         
 
 *   Conexión de red y eventos de batería:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
         
 
 *   Acelerómetro, brújula y geolocalización:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
         
 
 *   Cámara, reproducción multimedia y captura:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media
             
 
 *   Acceder a archivos en el dispositivo o red (archivo API):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
         
 
 *   Notificación mediante vibración o cuadro de diálogo:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
         
 
 *   Contactos:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
         
 
 *   Globalización:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
         
 
 *   SplashScreen:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
 *   Abrir nuevas ventanas del navegador (InAppBrowser):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
         
 
 *   Consola de depuración:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
         
 
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.core.console' ]
+        [ 'org.apache.cordova.console' ]
     
 
 Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo le quita apoyo para una consola de depuración de una versión:
 
-        $ cordova plugin rm org.apache.cordova.core.console        
-        $ cordova plugin remove org.apache.cordova.core.console    # same
+        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin remove org.apache.cordova.console    # same
     
 
 Puede lote-quitar o agregar plugins por especificar más de un argumento para cada comando.
@@ -264,7 +269,7 @@ Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la vers
 
 Para instalar una versión específica, utilice esta sintaxis:
 
-        $ sudo npm install -g cordova@3.0.0
+        $ sudo npm instalar cordova@3.1.0 -g
     
 
 Ejecute `cordova -v` para ver la versión actualmente en ejecución. Ejecute el `npm

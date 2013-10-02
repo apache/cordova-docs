@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Diese Anleitung zeigt wie zum Ändern von Windows Phone-Projekten, beide Versionen 7 und 8, Upgrade von älteren Versionen von Cordova. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Aktualisieren Sie die Version der CLI. Der folgende Abschnitt zeigt wie von nicht-CLI Projekte aktualisiert.
 
+## Ein Upgrade auf 3.1.0 von 3.0.0
+
+Für Projekte, die mit Cordova CLI erstellt wurden:
+
+1.  Update der `cordova` CLI-Version - siehe The Command-Line Interface 
+2.  Führen Sie `cordova platform update wp8` (oder `wp7` , pro die Plattformen, die Sie dem Projekt hinzugefügt).
+
+Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
+
+1.  `bin\update <project_path>`
+
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
 
 1.  Erstellen Sie ein neues Apache Cordova 3.0.0-Projekt mit Cordova CLI, wie in der Command-Line Interface beschrieben.
@@ -47,7 +58,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 5.  Erstellen und testen.
 
-**Hinweis:** alle Core APIs aus Cordova Version 3.0 entfernt werden und müssen separat als Plugins installiert werden. Weitere Informationen zum Aktivieren dieser Features in einem nicht-CLI-Workflow finden Sie unter Verwendung von Plugman zu Plugins verwalten.
+**Hinweis:** alle zentralen APIs aus Cordova Version 3.0 entfernt werden und müssen separat als Plugins installiert werden. Weitere Informationen zum Aktivieren dieser Features in einem nicht-CLI-Workflow neu finden Sie unter Verwendung von Plugman zu Plugins verwalten.
 
 ## Ein Upgrade auf 2.9.0 von 2.8.0
 
@@ -195,7 +206,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 ## Ein Upgrade auf 2.0.0 von 1.9.0
 
-Es gab erhebliche Änderungen an der WP7-Projektstruktur im Apache Cordova 2.0.0 welche machen dieses Aufsteigen ein wenig mehr die Beteiligten die anderen. Im Wesentlichen ist dies kein Upgrade aber die Schaffung eines neuen Projekts und Kopie über der vorhandenen Quelldateien.
+Es gab erhebliche Änderungen an der WP7-Projektstruktur im Apache Cordova 2.0.0 welche machen dieses Aufsteigen ein wenig mehr, die eingebunden die anderen. Im Wesentlichen ist dies kein Upgrade sondern schaffen ein neues Projekt und Kopie über der vorhandenen Quelldateien.
 
 Im Projektmappen-Explorer-Fenster von Visual Studio:
 
@@ -217,13 +228,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.9.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -235,13 +246,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -253,13 +264,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.7.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -271,13 +282,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.6.1.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -289,13 +300,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.6.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -307,13 +318,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.5.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -325,13 +336,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.4.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -343,13 +354,13 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.3.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
@@ -361,31 +372,31 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** Sie können die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** Sie können die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.2.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 
 6.  Aktualisieren Sie den HTML-Code um das neue `cordova-1.2.0.js` Datei.
 
-## Aktualisieren Sie von 1.0.0 auf 1.1.0
+## Von 1.0.0 auf 1.1.0 aktualisieren
 
 Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 1.  Löschen von `GapLib/WP7CordovaClassLib.dll` aus dem Projekt.
 
-2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` in den Ordner " **Verweise** ".
+2.  Entfernen Sie den Verweis auf `WP7CordovaClassLib` im Verzeichnis **verweisen** .
 
 3.  Mit der rechten Maustaste auf **Verweise** , und wählen Sie **Verweis hinzufügen**.
 
-4.  Navigieren Sie zu der neuen Distribution und fügen Sie die Datei`WP7CordovaClassLib.dll`.
+4.  Navigieren Sie zu der neuen Distribution und fügen Sie die `WP7CordovaClassLib.dll` Datei.
     
-    *   **Hinweis:** können Sie die Version der DLL anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
+    *   **Hinweis:** können Sie die DLL-Version anzeigen, indem mit der rechten Maustaste auf den Verweis und **Eigenschaften** auswählen.
 
 5.  Kopieren Sie die neue `cordova-1.1.0.js` in Ihr Projekt. (Sein Sie sicher, dass er als Inhalt markiert wird.)
 

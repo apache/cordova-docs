@@ -146,7 +146,7 @@ Vous pouvez placer les artefacts du plugin, qui comprend le `plugin.xml` fichier
     *   **dispositif** (>*fichier binaire* * .so)
     *   **simulateur** (>*fichier binaire* * .so)
 
-(La liste montre la relation hiérarchique entre les dossiers de niveau supérieur. La parenthèse montre le contenu d'un répertoire donné. Tous les noms de répertoires apparaissent en gras. Les noms de fichier sont précédés par le `>` signe.)
+(La liste montre la relation hiérarchique entre les répertoires de niveau supérieur. La parenthèse montre le contenu d'un répertoire donné. Tous les noms de répertoires apparaissent en gras. Les noms de fichier sont précédés par le `>` signe.)
 
 ## Contenu de la `plugin.xml` fichier
 

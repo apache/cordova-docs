@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
 
+## 從 3.0.0 升級到 3.1.0
+
+為創建的科爾多瓦 CLI 的專案：
+
+1.  更新 `cordova` CLI 版本-請參閱命令列介面 
+2.  運行`cordova platform update android`
+
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
+
+1.  `bin/更新 < project_path >`
+
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
 1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。

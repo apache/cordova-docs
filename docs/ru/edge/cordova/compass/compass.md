@@ -37,8 +37,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin rm org.apache.cordova.core.device-orientation
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-orientation' ]
+        $ cordova plugin rm org.apache.cordova.device-orientation
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -68,4 +70,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.

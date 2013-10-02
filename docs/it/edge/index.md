@@ -43,10 +43,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Riferimento di configurazione
+        Il File config. Xml
       </h2>
       
       <span>Personalizzare le funzionalità della tua app.</span>
+    </li>
+    <li>
+      <h2>
+        Icone e Splash screen
+      </h2>
+      
+      <span>Personalizzare immagini visualizzazione dell'app.</span>
     </li>
     <li>
       <h2>
@@ -71,10 +78,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Dominio Whitelist guida
+        Guida di whitelist
       </h2>
       
-      <span>Concedere un accesso alle applicazioni a domini esterni.</span>
+      <span>Concedere un'accesso di applicazione a risorse esterne.</span>
     </li>
     <li>
       <h2>

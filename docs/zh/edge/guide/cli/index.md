@@ -29,6 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   黑莓 10 （Mac、 Linux、 Windows）
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
+*   Windows 8 (Windows)
+*   火狐瀏覽器作業系統 （Mac、 Linux、 Windows）
 
 在 Mac 上，命令列是可通過*終端*應用的。在 PC 上，它是可作為*命令提示符*下*配件*.
 
@@ -72,14 +74,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add ios
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 運行的這些 Windows 機器上，從任何地方*wp*指的是不同版本的 Windows Phone 作業系統：
 
         $ cordova platform add wp7
         $ cordova platform add wp8
+        $ cordova platform add windows8
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 運行此檢查當前設置的平臺：
@@ -159,76 +164,76 @@ XREF -->
 
 *   基本設備資訊 （設備 API）：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
         
 
 *   網路連接和電池事件：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
         
 
 *   加速度計、 指南針、 和地理定位：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
         
 
 *   相機、 媒體重播和捕獲：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media
             
 
 *   訪問設備或網路 （檔 API） 上的檔：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
         
 
 *   通過對話方塊或振動發出通知：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
         
 
 *   連絡人：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
         
 
 *   全球化：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
         
 
 *   閃屏：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
 *   打開新的瀏覽器視窗 (InAppBrowser):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
         
 
 *   調試主控台：
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
         
 
 使用 `plugin ls` （或 `plugin list` ，或 `plugin` 本身） 查看當前已安裝的外掛程式。每個顯示由其識別碼：
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.core.console' ]
+        [ 'org.apache.cordova.console' ]
     
 
 若要刪除某個外掛程式，它通過引用相同的識別碼出現在該清單中。例如，這裡是你會怎麼移除調試主控台支援從一個發佈版本：
 
-        $ cordova plugin rm org.apache.cordova.core.console        
-        $ cordova plugin remove org.apache.cordova.core.console    # same
+        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin remove org.apache.cordova.console    # same
     
 
 你可以大量刪除或添加的外掛程式通過指定多個參數的每個命令。
@@ -264,7 +269,7 @@ XREF -->
 
 使用此語法來安裝特定的版本：
 
-        $ sudo npm install -g cordova@3.0.0
+        $ sudo 故宮安裝-g cordova@3.1.0
     
 
 運行 `cordova -v` ，查看當前運行的版本。 運行 `npm

@@ -62,7 +62,7 @@ UUID 생성 방법의 자세한 내용은 장치 제조업체에 의해 결정 �
         //
         function onDeviceReady() {
             var element = document.getElementById('deviceProperties');
-            element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+            element.innerHTML = 'Device Model: '    + device.model    + '<br />' +
                                 'Device Cordova: '  + device.cordova  + '<br />' +
                                 'Device Platform: ' + device.platform + '<br />' +
                                 'Device UUID: '     + device.uuid     + '<br />' +

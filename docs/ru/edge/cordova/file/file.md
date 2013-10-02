@@ -42,14 +42,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin rm org.apache.cordova.core.file
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file' ]
+        $ cordova plugin rm org.apache.cordova.file
     
 
 Чтобы использовать плагин передачи файлов необходимо добавить что отдельно.
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
-        $ cordova plugin rm org.apache.cordova.core.file-transfer
+        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file-transfer' ]
+        $ cordova plugin rm org.apache.cordova.file-transfer
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -97,4 +101,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.

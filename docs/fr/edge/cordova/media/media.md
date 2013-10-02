@@ -86,8 +86,8 @@ Les constantes suivantes sont déclarées comme le seul paramètre à la `mediaS
 
 Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
-        
+        Ajouter des plugin de cordova $ org.apache.cordova.media $ cordova plugin ls ['org.apache.cordova.media'] $ cordova plugin rm org.apache.cordova.media
+     
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
 
@@ -134,7 +134,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
 
 ### Windows Phone Quirks
 

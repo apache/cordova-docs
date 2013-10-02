@@ -43,6 +43,10 @@ Su Mac e Linux:
 *   Modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove è stato installato il SDK nativo:
     
     esportazione $ PATH = ${PATH}: / applicazioni/bbndk/host\_10\_1\_0\_132/darwin/x86/usr/bin /
+    
+    o per il SDK nativo 10.2:
+    
+    esportazione di $ PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Eseguire le operazioni seguenti per applicare la modifica nella sessione corrente:
     

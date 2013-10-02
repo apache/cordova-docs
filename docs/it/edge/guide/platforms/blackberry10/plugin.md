@@ -146,7 +146,7 @@ Ora, `index.js` interagisce con il lato nativo utilizzando JNEXT. Così allegare
     *   **dispositivo** (>*binario file* *. so)
     *   **simulatore** (>*binario file* *. so)
 
-(L'elenco Mostra la relazione gerarchica tra le cartelle di livello superiore. La parentesi indica il contenuto di una directory specificata. Tutti i nomi di directory vengono visualizzati in grassetto. I nomi dei file sono preceduti dalla `>` segno.)
+(L'elenco Mostra la relazione gerarchica tra le directory di livello superiore. La parentesi indica il contenuto di una directory specificata. Tutti i nomi di directory vengono visualizzati in grassetto. I nomi dei file sono preceduti dalla `>` segno.)
 
 ## Contenuto della `plugin.xml` file
 

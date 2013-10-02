@@ -43,10 +43,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Referencia de la configuración
+        El archivo config.xml
       </h2>
       
-      <span>Personalizar las características de su aplicación.</span>
+      <span>Personalizar las características de la bobina</span>
+    </li>
+    <li>
+      <h2>
+        Los iconos y las pantallas Splash
+      </h2>
+      
+      <span>Personalizar imágenes muestra la aplicación.</span>
     </li>
     <li>
       <h2>
@@ -67,14 +74,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Guía de privacidad
       </h2>
       
-      <span>Aprender sobre cuestiones de privacidad móvil importante.</span>
+      <span>Aprenda sobre cuestiones de privacidad móvil importante.</span>
     </li>
     <li>
       <h2>
-        Dominio Whitelist guía
+        Guía de lista blanca
       </h2>
       
-      <span>Conceder una solicitud acceso a dominios externos.</span>
+      <span>Conceder una solicitud acceso a recursos externos.</span>
     </li>
     <li>
       <h2>

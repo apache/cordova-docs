@@ -49,8 +49,10 @@ Le `globalization` objet est un enfant de la `navigator` s'opposent, et a donc u
 
 Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
-        $ cordova plugin rm org.apache.cordova.core.globalization
+        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin ls
+        [ 'org.apache.cordova.globalization' ]
+        $ cordova plugin rm org.apache.cordova.globalization
     
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
@@ -62,4 +64,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

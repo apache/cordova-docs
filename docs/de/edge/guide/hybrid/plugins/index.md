@@ -82,3 +82,19 @@ Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens ei
 *   Windows Phone Plugins
 
 Tizen-Plattform unterstützt derzeit keine Plugins.
+
+## Publishing plugins
+
+Sobald Sie Ihr Plugin entwickelt, empfiehlt es sich, zu veröffentlichen und mit der Community teilen. Sie können Ihr Plugin auf der Cordova-Registrierung (basierend auf [Npmjs][1]) veröffentlichen oder zu jeder anderen Npmjs basierte Registrierung. Benutzer werden automatisch mit Plugman oder Cordova-Cli installieren können.
+
+ [1]: https://github.com/isaacs/npmjs.org
+
+Um ein Plugin zu veröffentlichen müssen Sie mit dem Plugman-Tool und gehen Sie durch die folgenden Schritte aus:
+
+    $ plugman adduser # that is if you don't have an account yet
+    $ plugman publish /path/to/your/plugin
+    
+
+Das ist es!
+
+Andere registrierungsbasierte Befehle stehen zur Verfügung und `plugman --help` wird Ihnen eine Liste welche Befehle verfügbar sind und wie man sie benutzt.

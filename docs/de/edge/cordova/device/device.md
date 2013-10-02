@@ -20,28 +20,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Eigenschaften
 
-*   Device.Name
+*   device.model
 *   Device.Cordova
 *   Device.Platform
 *   Device.UUID
 *   Device.Version
-*   Device.Model
+*   device.name
 
 ## Geltungsbereich von Variablen
 
 Da `device` zugewiesen ist das `window` -Objekt, es ist implizit im globalen Gültigkeitsbereich.
 
     // These reference the same `device`
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
     
 
 ## Zugriff auf die Funktion
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
-        $ cordova plugin rm org.apache.cordova.core.device
+        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device' ]
+        $ cordova plugin rm org.apache.cordova.device
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
@@ -92,4 +94,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

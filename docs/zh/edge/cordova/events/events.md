@@ -40,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 版本為 3.0，科爾多瓦實現電池狀態和其他設備級 Api 作為*外掛程式*。 預設情況下啟用對所有其他不相關的電池狀態的事件的訪問。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以啟用或禁用電池事件：
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
-        $ cordova plugin rm org.apache.cordova.core.battery-status
+        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin ls
+        [ 'org.apache.cordova.battery-status' ]
+        $ cordova plugin rm org.apache.cordova.battery-status
     
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
@@ -86,4 +88,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

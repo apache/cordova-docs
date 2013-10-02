@@ -49,8 +49,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
-        $ cordova plugin rm org.apache.cordova.core.globalization
+        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin ls
+        [ 'org.apache.cordova.globalization' ]
+        $ cordova plugin rm org.apache.cordova.globalization
     
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
@@ -62,4 +64,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

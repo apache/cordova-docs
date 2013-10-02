@@ -46,8 +46,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Depuis la version 3.0, Cordova implémente les APIs au niveau de l'appareil comme des *plugins*. Utilisez le plugin `plugin` CLI, décrit dans l'Interface de ligne de commande, pour ajouter ou supprimer cette fonctionnalité pour un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
-        $ cordova plugin rm org.apache.cordova.core.contacts
+        $ cordova plugin add org.apache.cordova.contacts
+        $ cordova plugin ls
+        [ 'org.apache.cordova.contacts' ]
+        $ cordova plugin rm org.apache.cordova.contacts
     
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
@@ -98,4 +100,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

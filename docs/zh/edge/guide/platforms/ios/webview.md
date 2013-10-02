@@ -32,19 +32,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 克利弗添加到 Xcode 專案 （CordovaLib 子專案）
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦源，例如到`~/Documents/Cordova`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦源，例如到`~/Documents/Cordova`.
 
 2.  如果它正在運行，請退出 Xcode。
 
 3.  使用終端程式，定位到你放在上面的下載的源的目錄。
 
-4.  複製 `config.xml` 檔到您的專案資料夾在磁片上 （請參見上面的前提條件）。
+4.  複製 `config.xml` 檔到你的專案目錄在磁片上 （請參見上面的前提條件）。
 
 5.  拖放式 `config.xml` 到 Xcode 專案導航的檔。
 
 6.  選擇**創建組的任何添加的資料夾**選項按鈕，然後按**完成**.
 
-7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 專案導航的檔 （從永久資料夾位置上面，和它應該是在 `CordovaLib` 子目錄）。
+7.  拖放式 `CordovaLib.xcodeproj` 到 Xcode 專案導航的檔 （從永久目錄以上，位置和它應該在 `CordovaLib` 子目錄）。
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 添加您的 HTML、 CSS 和 JavaScript 資產
 
-1.  在您在磁片上的專案中創建一個新的資料夾 `www` 為例。
+1.  在您在磁片上的專案中創建一個新的目錄 `www` 為例。
 
-2.  將您的 HTML、 CSS 和 JavaScript 資產放入此資料夾。
+2.  將您的 HTML、 CSS 和 JavaScript 資產放入此目錄。
 
-3.  拖動並放到 Xcode 專案導航的資料夾。
+3.  拖動並放到 Xcode 專案導航器的目錄。
 
 4.  選擇**創建資料夾引用的任何添加的資料夾**選項按鈕。
 

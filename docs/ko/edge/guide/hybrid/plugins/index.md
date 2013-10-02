@@ -82,3 +82,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 플러그인
 
 Tizen 플랫폼은 현재 플러그인을 지원 하지 않습니다.
+
+## 게시 플러그인
+
+일단 귀하의 플러그인을 개발 하려는 그것을 간행 하 고 지역 사회와 공유. 당신은 코르도바 레지스트리 ( [npmjs][1]기준)에 귀하의 플러그인을 게시할 수 있습니다 또는 다른 npmjs 레지스트리를 기반으로 합니다. 사용자가 plugman 또는 코르도바 cli를 사용 하 여 자동으로 설치할 수 있을 것입니다.
+
+ [1]: https://github.com/isaacs/npmjs.org
+
+플러그인을 게시 하려면 plugman 도구를 사용 하 여 다음 단계를 통해 이동 해야 합니다.
+
+    $ plugman adduser # that is if you don't have an account yet
+    $ plugman publish /path/to/your/plugin
+    
+
+그 거 야!
+
+다른 레지스트리 기반 명령을 사용할 수 있습니다 및 `plugman --help` 어떤 명령을 사용할 수 있습니다 그리고 그들을 사용 하는 방법의 목록을 줄 것 이다.

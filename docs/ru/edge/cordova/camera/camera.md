@@ -29,8 +29,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin rm org.apache.cordova.core.camera
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin ls
+        [ 'org.apache.cordova.camera' ]
+        $ cordova plugin rm org.apache.cordova.camera
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -89,4 +91,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.

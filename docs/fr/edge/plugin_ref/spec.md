@@ -321,7 +321,9 @@ Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. 
 Exemple :
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

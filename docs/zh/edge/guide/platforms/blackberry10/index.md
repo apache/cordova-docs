@@ -43,6 +43,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   編輯 `~/.bash_profile` 檔，添加如下所示，根據安裝本機的 SDK 了一行：
     
     $ 匯出路徑 = ${路徑}：/應用程式/bbndk/host\_10\_1\_0\_132 達爾文/x 86 usr/bin /
+    
+    或為 10.2 本機 SDK：
+    
+    $ 出口 PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   運行下面的命令將在當前會話中的更改應用：
     

@@ -29,6 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Ежевика 10 (Mac, Linux, Windows)
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
+*   Windows 8 (Windows)
+*   Firefox OS (Mac, Linux, Windows)
 
 На Mac доступны через *терминал* приложения командной строки. На ПК он доступен как *командной строки* под *Аксессуары*.
 
@@ -72,14 +74,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova platform add ios
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 Выполните любую из этих из окна машины, где *wp* относится к различных версий операционной системы Windows Phone:
 
         $ cordova platform add wp7
         $ cordova platform add wp8
+        $ cordova platform add windows8
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 Выполните это, чтобы проверить ваш текущий набор платформ:
@@ -159,76 +164,76 @@ SDK для мобильных платформ, которые часто пос
 
 *   Информация основные устройства (устройства API):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
         
 
 *   Сетевое подключение и батарея события:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
         
 
 *   Акселерометр, компас и географического расположения:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
         
 
 *   Камера, воспроизведение мультимедиа и захват:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media
             
 
 *   Доступ к файлам на устройстве или сети (файл API):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
         
 
 *   Уведомление через диалоговое окно или вибрации:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
         
 
 *   Контакты:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
         
 
 *   Глобализация:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
         
 
 *   Экран-заставка:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
 *   Открывать новые окна браузера (InAppBrowser):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
         
 
 *   Отладка консоли:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
         
 
 Использование `plugin ls` (или `plugin list` , или `plugin` сама по себе) для просмотра в настоящее время установленные плагины. Каждый отображает по его идентификатору:
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.core.console' ]
+        [ 'org.apache.cordova.console' ]
     
 
 Чтобы удалить плагин, относятся к нему, тот же идентификатор, который отображается в списке. Например вот как бы удалить поддержка консоли отладки версии:
 
-        $ cordova plugin rm org.apache.cordova.core.console        
-        $ cordova plugin remove org.apache.cordova.core.console    # same
+        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin remove org.apache.cordova.console    # same
     
 
 Можно удалить пакет или добавлять плагины, указав более одного аргумента, для каждой команды.
@@ -264,7 +269,7 @@ SDK для мобильных платформ, которые часто пос
 
 Используйте этот синтаксис для установки определенной версии:
 
-        $ sudo npm install -g cordova@3.0.0
+        $ sudo npm установить -g cordova@3.1.0
     
 
 Запуск `cordova -v` чтобы увидеть текущие версии. Запустите `npm

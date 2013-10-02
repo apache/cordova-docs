@@ -28,7 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー 10
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8

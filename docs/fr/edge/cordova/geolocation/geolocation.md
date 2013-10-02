@@ -14,17 +14,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Géolocalisation
+# Geolocation
 
-> Le `geolocation` objet fournit l'accès aux données de localisation basée sur le capteur du dispositif GPS ou déduit de signaux de réseaux.
+> L'objet `geolocation` permet l'accès aux données de localisation basées sur le capteur GPS de l'appareil ou déduites des signaux du réseau.
 
-`Geolocation`fournit des informations sur l'emplacement de l'appareil, tels que la latitude et la longitude. Des sources communes d'information incluent système de positionnement Global (GPS) et l'emplacement déduit de signaux de réseaux tels qu'adresse IP, RFID, WiFi et Bluetooth MAC adresses et GSM/CDMA cell ID. Il n'y a aucune garantie que l'API retourne la position réelle de l'appareil.
+`Geolocation` fournit des informations sur l'emplacement de l'appareil, telles que la latitude et la longitude. Les sources habituelles d'information incluent le Système de Positionnement Global (GPS) et la position déduite de signaux des réseaux tels que l'adresse IP, RFID, les adresses MAC WiFi et Bluetooth et les IDs cellulaires GSM/CDMA. Il n'y a cependant aucune garantie que cette API renvoie la position réelle de l'appareil.
 
-Cette API est basée sur la [Spécification de W3C Geolocation API][1]et s'exécute uniquement sur les périphériques qui ne fournissent déjà une implémentation.
+Cette API est basée sur la [Spécification de l'API Geolocation du W3C][1] et s'exécute uniquement sur les appareils qui n'en proposent pas déjà une implémentation.
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**Remarque importante de la vie privée :** Collecte et utilisation des données de géolocalisation soulève des questions importantes de la vie privée. Politique de confidentialité de votre application devrait discuter de comment l'application utilise les données de géolocalisation, si elle est partagée avec d'autres parties et le niveau de précision des données (par exemple, grossière et fine, ZIP code niveau, etc.). Données de géolocalisation sont généralement considéré comme sensibles car elle peut révéler l'endroit où se trouve une personne et, si stocké, l'histoire de ses voyages. Par conséquent, en plus de la politique de confidentialité de votre application, vous devez envisager fortement fournissant un avis de juste-à-temps avant votre application pour accéder aux données de géolocalisation (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Pour plus d'informations, consultez le Guide de la vie privée.
+**Remarque importante concernant le respect de la vie privée :** la collecte et l'utilisation des données de géolocalisation soulève des questions importantes concernant le respect de la vie privée. La politique de confidentialité de votre application devrait traiter de la manière dont l'application utilise les données de géolocalisation, si elle les partage avec d'autres parties ou non et définir le niveau de précision de celles-ci (par exemple grossier, fin, restreint au code postal, etc.). Les données de géolocalisation sont généralement considérées comme sensibles car elle peuvent révéler l'endroit où se trouve une personne et, si stockées, l'historique de ses voyages. Par conséquent, en plus de la politique de confidentialité de votre application, vous devriez par exemple fortement envisager d'afficher une notice juste avant d'accéder aux données de géolocalisation (si le système d'exploitation de l'appareil ne le fait pas déjà). Cette notice devrait contenir les informations susmentionnées, ainsi que permettre de recueillir l'autorisation de l'utilisateur (par exemple, en offrant les possibilités **OK** et **Non merci**). Pour plus d'informations, veuillez vous référer à la section "Guide du respect de la vie privée".
 
 ## Méthodes
 
@@ -46,13 +46,15 @@ Cette API est basée sur la [Spécification de W3C Geolocation API][1]et s'exéc
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
-        $ cordova plugin rm org.apache.cordova.core.geolocation
+        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin ls
+        [ 'org.apache.cordova.geolocation' ]
+        $ cordova plugin rm org.apache.cordova.geolocation
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
 *   Android
     
@@ -80,22 +82,22 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </rim:permissions>
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans `config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
         </feature>
         
 
-*   Windows Phone (en`Properties/WPAppManifest.xml`)
+*   Windows Phone (dans `Properties/WPAppManifest.xml`)
     
         <Capabilities>
             <Capability Name="ID_CAP_LOCATION" />
         </Capabilities>
         
     
-    Référence : [manifeste d'Application pour Windows Phone][2]
+    Référence : [Manifeste d'Application pour Windows Phone][2]
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileTransferError
 
-A `FileTransferError` objet est passé à un rappel d'erreur lorsqu'une erreur survient.
+Un objet `FileTransferError` est passé à une callback d'erreur lorsqu'une erreur survient.
 
 ## Propriétés
 
-*   **code**: l'un des codes d'erreur prédéfinis énumérés ci-dessous. (Nombre)
+*   **code** : l'un des codes d'erreur prédéfinis énumérés ci-dessous. (Number)
 
-*   **source**: URI à la source. (String)
+*   **source** : l'URI de la source. (String)
 
-*   **cible**: URI à la cible. (String)
+*   **target**: l'URI de la destination. (String)
 
-*   **HTTP_STATUS**: code d'état HTTP. Cet attribut n'est disponible que lorsqu'un code de réponse est reçu de la connexion HTTP. (Nombre)
+*   **http_status** : code d'état HTTP. Cet attribut n'est disponible que lorsqu'un code de réponse est fourni via la connexion HTTP. (Number)
 
 ## Constantes
 
@@ -37,4 +37,4 @@ A `FileTransferError` objet est passé à un rappel d'erreur lorsqu'une erreur s
 
 ## Description
 
-Le `FileTransferError` objet est passé au rappel erreur lorsqu'une erreur se produit lorsque le chargement ou le téléchargement d'un fichier.
+L'objet `FileTransferError` est passé à la callback d'erreur si une erreur se produit lors de l'envoi ou la réception d'un fichier.

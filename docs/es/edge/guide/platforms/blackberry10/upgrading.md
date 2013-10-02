@@ -18,14 +18,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta guía le muestra cómo modificar los proyectos de BlackBerry para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
+## Actualizar a 3.1.0 desde 3.0.0
+
+1.  Crear un nuevo proyecto de Apache Cordova 3.1.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
+
+2.  Agregue sus plataformas al proyecto cordova, por ejemplo: `cordova platform add blackberry10`.
+
+3.  Copiar el contenido del proyecto original `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
+
+4.  Copiar o sobrescribir ningún activo nativo de su proyecto original ( `Resources` , etc..)
+
+5.  Copia tus `config.xml` en el `www` Directorio y eliminar cualquier plugin definiciones. Usted modificar ajustes aquí en lugar del directorio de la plataforma.
+
+6.  Utilice la herramienta CLI cordova instalar algún plugin que necesita. Tenga en cuenta que la CLI maneja todo núcleo APIs como plugins, así pueden necesitar ser agregado. Solo plugins marcó 3.0.0 y encima son compatibles con la CLI.
+
+7.  Construir y probar.
+
 Por favor tenga en cuenta que el CLI compatible con la plataforma BlackBerry10 exclusivamente. Para el libro de jugadas y BBOS, ver Cordova versión 2.9.0 magnetohidrodinámica y por debajo.
 
 ## Actualícese a la CLI (3.0.0) de 2.9.0 magnetohidrodinámica
 
 1.  Crear un nuevo proyecto de Apache Cordova 3.0.0 usando el cordova CLI, tal como se describe en la interfaz de línea de comandos.
 
-2.  Agregar tus plataformas el proyecto de la Córdoba, por ejemplo:`cordova
-platform add blackberry10`.
+2.  Agregar tus plataformas el la Córdoba del proyecto, por ejemplo: `cordova platform add blackberry10`.
 
 3.  Copiar el contenido del proyecto original `www` Directorio del `www` Directorio en la raíz del proyecto cordova que acaba de crear.
 
@@ -49,7 +64,7 @@ BlackBerry 10:
 
 4.  Crear un nuevo proyecto, como se describe en las herramientas de línea de comandos de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.
 
-5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del proyecto nuevo directorio `/www` Directorio.
+5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del nuevo proyecto directorio `/www` directorio.
 
 6.  Actualizar la referencia de script Cordova en su `www/index.html` archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva `cordova.js` archivo.
 
@@ -87,7 +102,7 @@ BlackBerry 10 utiliza las nuevas herramientas de CLI y gestiona núcleo APIs com
 
 4.  Crear un nuevo proyecto, como se describe en las herramientas de línea de comandos de BlackBerry. Esto se convierte en la página de inicio de tu proyecto actualizado.
 
-5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del proyecto nuevo directorio `/www` Directorio.
+5.  Copie su fuente de proyectos desde el viejo proyecto `/www` del nuevo proyecto directorio `/www` directorio.
 
 6.  Actualizar la referencia de script Cordova en su `www/index.html` archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva `cordova.js` archivo.
 
@@ -113,7 +128,7 @@ BlackBerryOS/Playbook:
 
 ## Proyectos de modernización 2.6.0 a 2.7.0
 
-1.  Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a`~/Cordova-2.7.0`.
+1.  Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación de directorio permanente en tu disco duro, por ejemplo a `~/Cordova-2.7.0`.
 
 2.  Dejar cualquier corriente SDK Herramientas: Eclipse, Momentics y similares.
 

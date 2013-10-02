@@ -142,7 +142,7 @@ Actualización de la `example/` directorio o migrar un proyecto existente:
 
 5.  Copie el nuevo `cordova-2.6.0.js` en su proyecto.
 
-6.  Actualizar el código HTML para usar el nuevo `cordova-2.6.0.js` archivo.
+6.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.6.0.js`.
 
 ## Actualizar a 2.5.0 desde 2.4.0
 
@@ -174,7 +174,7 @@ Actualizando el ejemplo / proyecto de directorio o migrar existente:
 
 5.  Copie el nuevo `cordova-2.5.0.js` en su proyecto.
 
-6.  Actualizar el código HTML para usar el nuevo `cordova-2.5.0.js` archivo.
+6.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.5.0.js`.
 
 ## Actualizar a 2.4.0 desde 2.3.0
 
@@ -191,7 +191,7 @@ Actualizar el `www` Directorio:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.4.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.4.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -226,7 +226,7 @@ Actualizar el `www` Directorio:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.3.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.3.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -261,7 +261,7 @@ Actualizar sólo el directorio www:
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
     *   Si BlackBerry 10, luego actualizar el archivo .js en el `qnx/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.2.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.2.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -295,7 +295,7 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.1.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.1.0.js`.
 
 Actualizar el directorio de muestra (es decir, actualización usando las herramientas de hormiga):
 
@@ -327,7 +327,7 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-2.0.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-2.0.0.js`.
 
 6.  Actualizar el archivo `www/plugins.xml`. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las viejas entradas para los plugins de captura y contacto de:
     
@@ -384,7 +384,7 @@ Actualizar el `www` Directorio:
     
     *   Si el libro de jugadas, luego actualizar el .js archivo en el `playbook/` Directorio.
 
-5.  Actualizar el código HTML para usar el nuevo `cordova-1.8.0.js` archivo.
+5.  Actualizar el código HTML para usar el nuevo archivo de `cordova-1.8.0.js`.
 
 6.  Actualizar su `www/plugins.xml` archivo. Dos plugins cambió su etiqueta de servicio de nombres. Cambiar las entradas viejas para los plugins de captura y contacto:
     

@@ -50,7 +50,7 @@ Il modo più semplice per impostare un'applicazione è quello di eseguire il `co
 *   Per il supporto di piattaforme, CLI può compilare applicazioni eseguibile ed eseguirli in un emulatore di dispositivo basato su SDK. <!-XRIF XRIF (Vedere Applicazione Guida allo Sviluppo per i dettagli.)--> per la prova completa, si può anche generare file di applicazione e installarli direttamente su un dispositivo.
 
 In qualsiasi punto del ciclo di sviluppo, può anche contare su strumenti SDK specifico della piattaforma, che possono fornire un insieme più ricco di opzioni. (Vedi le guide di piattaforma per ulteriori informazioni sullo strumento SDK su ogni piattaforma impostato). Un ambiente SDK è più appropriato se si desidera implementare un'applicazione ibrida che mescola i componenti dell'applicazione web-based e nativo. <!-XRIF XRIF (Vedi Ibrido Applicazione Guida per maggiori informazioni.)--> si possono utilizzare l'utilità della riga di comando per generare inizialmente l'app, o in modo iterativo successivamente per alimentare il codice aggiornato a strumenti SDK. Si può anche costruire il file di configurazione dell'app te stesso. <!-- XREF
-(See Configuration Reference for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF
@@ -93,6 +93,10 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <th>
         <tt>Win8</tt><br />(Windows 8)
+      </th>
+      
+      <th>
+        <tt>firefoxos</tt>
       </th>
       
       <th>

@@ -64,4 +64,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         < 功能 id="blackberry.widgetcache"所需 ="true"版本 ="1.0.0.0"/ >
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

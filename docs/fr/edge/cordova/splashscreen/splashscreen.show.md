@@ -28,7 +28,6 @@ Cette méthode affiche écran de démarrage de l'application.
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry 10
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8

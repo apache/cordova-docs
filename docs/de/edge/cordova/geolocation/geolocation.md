@@ -48,8 +48,10 @@ Diese API basiert auf der [W3C Geolocation API-Spezifikation][1], und nur auf Ge
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
-        $ cordova plugin rm org.apache.cordova.core.geolocation
+        $ cordova plugin add org.apache.cordova.geolocation
+        $ cordova plugin ls
+        [ 'org.apache.cordova.geolocation' ]
+        $ cordova plugin rm org.apache.cordova.geolocation
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
@@ -98,4 +100,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

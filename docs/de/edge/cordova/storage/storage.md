@@ -66,4 +66,4 @@ Wenn Sie einen älteren Satz der Cordova Werkzeuge, die die CLI vorangehen verwe
         <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

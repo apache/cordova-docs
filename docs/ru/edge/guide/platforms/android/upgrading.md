@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 В этом руководстве показано, как изменить Android проектов для обновления старых версий Кордова. Большинство этих инструкций применимы для проектов, созданных с старого набора средств командной строки, которые предшествуют `cordova` утилиты CLI. Увидеть интерфейс командной строки для информации как обновить версию инфраструктуры CLI.
 
+## Обновление с 3.0.0 до 3.1.0
+
+Для проектов, которые были созданы с cordova CLI:
+
+1.  Обновление `cordova` CLI-версия - видеть интерфейс командной строки 
+2.  Запуск`cordova platform update android`
+
+Для проектов, не создан с cordova CLI выполните:
+
+1.  `bin/обновить < project_path >`
+
 ## Обновление к CLI (3.0.0) с 2.9.0
 
 1.  Создайте новый проект Apache Cordova 3.0.0, используя cordova CLI, как описано в интерфейс командной строки.
@@ -51,7 +62,7 @@ platform add android`.
 
 1.  Запуск`bin/update <project_path>`.
 
-## Обновление до 2.8.0 от 2.7.0
+## Обновить до 2.8.0 2.7.0
 
 1.  Удалить `cordova-2.7.0.jar` из проекта `libs` каталог.
 
@@ -279,7 +290,7 @@ platform add android`.
 
 5.  Обновление `res/xml/plugins.xml` для соответствия`framework/res/xml/plugins.xml`.
 
-## Обновление до 1.6.1 от 1.6.0
+## Обновить до 1.6.1 1.6.0
 
 1.  Удалить `cordova-1.6.0.jar` из проекта `libs` каталог.
 
@@ -307,7 +318,7 @@ platform add android`.
 
 7.  Заменить `res/xml/phonegap.xml` с `res/xml/cordova.xml` для соответствия`framework/res/xml/cordova.xml`.
 
-## Обновление 1.5.0 с 1.4.0
+## Обновление до 1.5.0 с 1.4.0
 
 1.  Удалить `phonegap-1.4.0.jar` из проекта `libs` каталог.
 
@@ -339,7 +350,7 @@ platform add android`.
 
 7.  Обновление `res/xml/phonegap.xml` для соответствия`framework/res/xml/phonegap.xml`.
 
-## Обновление 1.3.0 от 1.2.0
+## Обновления 1.3.0 из 1.2.0
 
 1.  Удалить `phonegap-1.2.0.jar` из проекта `libs` каталог.
 
@@ -371,7 +382,7 @@ platform add android`.
 
 7.  Обновление `res/xml/phonegap.xml` для соответствия`framework/res/xml/phonegap.xml`.
 
-## Обновление от 1.0.0 1.1.0
+## Обновление 1.1.0 1.0.0
 
 1.  Удалить `phonegap-1.0.0.jar` из проекта `libs` каталог.
 

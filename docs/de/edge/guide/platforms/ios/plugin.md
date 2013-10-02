@@ -106,7 +106,7 @@ Wir würden fügen Sie Folgendes in des Projekts `config.xml` Datei:
     </feature>
     
 
-Dann wir die folgenden Dateien fügen würden ( `Echo.h` und `Echo.m` ) in den Plugins-Ordner unserer Cordova-iOS-Anwendungsordners:
+Dann wir die folgenden Dateien fügen würden ( `Echo.h` und `Echo.m` ) in das Plugins-Verzeichnis unserer Cordova-iOS-Anwendung-Verzeichnis:
 
     /********* Echo.h Cordova Plugin Header *******/
     

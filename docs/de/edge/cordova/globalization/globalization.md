@@ -49,8 +49,10 @@ Das `globalization` -Objekt ist ein untergeordnetes Element des der `navigator` 
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
-        $ cordova plugin rm org.apache.cordova.core.globalization
+        $ cordova plugin add org.apache.cordova.globalization
+        $ cordova plugin ls
+        [ 'org.apache.cordova.globalization' ]
+        $ cordova plugin rm org.apache.cordova.globalization
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
@@ -62,4 +64,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

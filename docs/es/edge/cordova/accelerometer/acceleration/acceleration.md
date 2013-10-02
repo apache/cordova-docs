@@ -23,11 +23,11 @@ Contiene data del `Accelerometer` capturada en un punto específico en el tiempo
 *   **x**: Cantidad de aceleración en el eje X. (en m/s^2) *(Number)*
 *   **y**: Cantidad de aceleración en el eje Y. (en m/s^2) *(Number)*
 *   **z**: Cantidad de aceleración en el eje Z. (en m/s^2) *(Number)*
-*   **timestamp**: Timestamp de la captura en milisegundos. *(DOMTimeStamp)*
+*   **timestamp**: Momento de la captura en milisegundos.*(DOMTimeStamp)*
 
 ## Descripción
 
-Un objeto del tipo `Acceleration` se rellena y es devuelto por cualquiera de los métodos de la API `Accelerometer`. Los valores de aceleración incluyen el efecto de la gravedad (9.81 m/s^2), así que cuando un dispositivo esta en posición horizontal con la pantalla hacia arriba, los valores *x*, *y*, y *z* devueltos serían ``, ``, y `9.81`.
+Un objeto del tipo `Acceleration` se rellena y es devuelto por cualquier método de la API `Accelerometer`. Los valores de aceleración incluyen el efecto de la gravedad (9.81 m/s^2), así que cuando un dispositivo esta en posición horizontal con la pantalla hacia arriba, los valores *x*, *y*, y *z* devueltos deberían ser ``, ``, y `9.81`, respectivamente..
 
 ## Plataformas soportadas
 

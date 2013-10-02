@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Visual Studio 2012 の最寄りのバリアントを設定します。 製品の有償版 （プロなど） のすべての Windows ストア アプリを構築できます。 **Windows 8 のエクスプレス** [Express エディション][2]を使用して Windows ストア アプリを構築する必要があります。.
 
-*   ダウンロードし、[コルドバ][3]の最新のコピーを抽出します。作業をして、 `lib\windows-8` サブフォルダー。
+*   ダウンロードし、[コルドバ][3]の最新のコピーを抽出します。作業をして、 `lib\windows-8` サブディレクトリ。
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

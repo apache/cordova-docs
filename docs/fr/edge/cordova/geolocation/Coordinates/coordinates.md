@@ -14,31 +14,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Coordonnées
+# Coordinates
 
-Un ensemble de propriétés qui décrivent les coordonnées géographiques d'une position.
+Un ensemble de propriétés décrivant les coordonnées géographiques d'une position.
 
 ## Propriétés
 
-*   **latitude**: Latitude en degrés décimaux. *(Nombre)*
+*   **latitude** : latitude en degrés décimaux. *(Number)*
 
-*   **longitude**: Longitude en degrés décimaux. *(Nombre)*
+*   **longitude** : longitude en degrés décimaux. *(Number)*
 
-*   **altitude**: hauteur de la position en mètres au-dessus de l'ellipsoïde. *(Nombre)*
+*   **altitude** : hauteur de la position en mètres au-dessus de l'ellipsoïde. *(Number)*
 
-*   **précision**: degré de précision des coordonnées latitude et longitude en mètres. *(Nombre)*
+*   **accuracy** : niveau de précision des valeurs de latitude et longitude, en mètres. *(Number)*
 
-*   **altitudeAccuracy**: niveau d'exactitude de la coordonnée de l'altitude en mètres. *(Nombre)*
+*   **altitudeAccuracy** : niveau de précision de la valeur d'altitude, en mètres. *(Number)*
 
-*   **heading**: sens de marche, indiquée en degrés comptage dans le sens horaire par rapport au nord vrai. *(Nombre)*
+*   **heading** : direction du trajet, indiquée en degrés comptés dans le sens horaire par rapport au vrai Nord. *(Number)*
 
-*   **vitesse**: vitesse actuelle de l'appareil, indiquée en mètres par seconde. *(Nombre)*
+*   **speed** : vitesse au sol actuelle de l'appareil, indiquée en mètres par seconde. *(Number)*
 
 ## Description
 
-Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de fonctions de rappel dans les requêtes pour la position actuelle.
+L'objet `Coordinates` est attaché à l'objet `Position`, lui-même rendu disponible dans les fonctions callback faisant appel à la position actuelle.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -47,7 +47,7 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
     // onSuccess Callback
     //
@@ -118,6 +118,6 @@ Le `Coordinates` objet est attaché à la `Position` objet qui n'existe pas de f
     </html>
     
 
-## Quirks Android
+## Particularités d'Android
 
-**altitudeAccuracy**: ne pas pris en charge par les appareils Android, retour`null`.
+**altitudeAccuracy** : n'est pas prise en charge par les appareils Android, renvoie alors `null`.

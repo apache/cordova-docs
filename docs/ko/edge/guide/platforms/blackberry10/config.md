@@ -14,24 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 블랙베리 10 구성
+# 블랙베리 구성
 
-`config.xml`파일을 다양 한 코르도바 설정을 제어 합니다. 이러한 응용 프로그램에서 적용 됩니다. `config.xml`파일은 위치에서 `<project folder>/<www>` 디렉터리.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 블랙베리 10에만 적용이 섹션 세부 환경 설정을 작성 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
 
-## `< 기본 설정 >`
+*   `ChildBrowser`( `disable` 기본 `enable` ): 아이 브라우저 창을 사용 하지 않도록 설정 합니다. 기본적으로 애플 리 케이 션을 통해 액세스 하는 리소스를 표시 하려면 보조 브라우저 창을 시작 `window.open()` 또는 지정 하는 `_blank` 앵커 대상. 지정 `disable` 이 기본 동작을 재정의 합니다.
+    
+        <preference name="ChildBrowser" value="disable"/>
+        
 
-다양 한 환경 설정 (로 `<preference>` 태그) 소멸 되지 않고 기존 애플 리 케이 션에 기본. 사용할 수 특혜는:
+*   `PopupBlocker`( `enable` 기본 `disable` ): 팝업 차단기에 대 한 호출을 방지 수 있습니다 `window.open()` . 기본적으로 팝업 하위 브라우저 창에 표시 됩니다. 기본 설정 `enable` 전혀 표시 되지 않도록 방지 합니다.
+    
+        <preference name="PopupBlocker" value="enable"/>
+        
 
-*   `autoHideSplashScreen`: ( `true` 또는 `false` ): 설정 `false` 는 splashscreen 자바 스크립트 API를 통해 숨겨진 때 제어할 수 있습니다. 이 기본 설정은 true로 기본값입니다.
-
-*   `backgroundColor`: 앱의 배경 색상을 지정합니다. 값은 ARGB 픽셀 형식 8 진수를 사용 하 여 색상 값을 지정 해야 합니다.
-
-*   `childBrowser`: 아이 브라우저 창을 비활성화합니다. 기본적으로 콘텐츠 새 창 또는 탭에서 리소스를 열려고 하면 (window.open ()를 사용 하 여 또는 지정 하 여 `_blank` 앵커의 대상으로), WebWorks 응용 프로그램 리소스를 표시 하려면 보조 브라우저 창이 열립니다. 이 기능은 기본적으로 활성화 됩니다. 값을 지정 해야 합니다 `disable` 발생에서 위의 작업을 방지 하기 위해.
-
-*   `hideKeyboardFormAccessoryBar`: ( `enable` 또는 `disable` ) HTML 폼에 키보드 모양 액세서리 막대를 사용 하지 않습니다. 키보드 모양 액세서리 바는 버튼 (이전, 다음, 및 제출) 사용자가 양식을 통해 탐색 하는 데 사용할 수 있는 행입니다. 기본적으로 WebWorks 응용 프로그램 포함 된 HTML 폼 및 `<input>` 요소 초점, WebWorks이 양식을 액세서리 막대가 표시 됩니다. 이 기능을 사용 하면 응용 프로그램으로 값을 지정 하 여 양식을 액세서리 막대를 표시 하지 않도록`enable`.
-
-*   `orientation`: ( `auto` , `portrait` , 또는 `landscape` ) 응용 프로그램에서 화면에 대 한 영구 방향을 지정 합니다. 기본적으로 화면 방향을 지정 하지 않으면 방향이 자동으로 설정 됩니다.
-
-*   `popupBlocker`: 팝업 차단기를 사용 하면 수 있습니다. 기본적으로 모든 팝업 하위 브라우저 창에 블랙베리 WebWorks 애플 리 케이 션에 의해 표시 됩니다. 팝업에서 팝업 차단기를 사용 하 여 사용자의 개입 없이 표시 방지할 수 있습니다. 이 값을 지정 하 여 이루어집니다.`enable`.
-
-*   `webSecurity`: 비활성화 웹 보안. 웹 보안을 비활성화 하면 개발 하는 동안 알 수 없는 소스에서 원격 콘텐츠를 액세스할 수 있습니다. 배포에 대 한 귀하의 응용 프로그램을 포장 하기 전에 당신이이 설정을 제거 해야 합니다. 이 기능은 개발 편의 것입니다. 생산, 모든 Uri 알려져야 하 고 허용 사용 해야는 `<access>` 요소. 로 값을 지정 하지 않으려면,`disable`.
+*   `WebSecurity`( `disable` 기본 `enable` ): 설정 `disable` 알 수 없는 소스에서 원격 콘텐츠에 액세스할 수 있도록 웹 보안 설정을 무시 합니다. 이 기본 설정은 개발 편의, 그래서 제거 배포에 대 한 귀하의 응용 프로그램을 포장 하기 전에 것입니다. 출시 애플 리 케이 션에 대 한 모든 Uri 해야 알려진 허용을 사용 하는 `<access>` 도메인 화이트 리스트 가이드에 설명 된 요소.
+    
+        <preference name="WebSecurity" value="disable"/>

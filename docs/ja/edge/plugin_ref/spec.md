@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `version`（必須）： バージョンをインストールするために、フレームワークがあります。
 
-*   `scriptSrc`(必須): カスタム フレームワークのバージョンは plugman に指示するスクリプト ファイルです。理想的には、このファイルはプラグイン フォルダーの最上位レベルのディレクトリ内にする必要があります。
+*   `scriptSrc`(必須): カスタム フレームワークのバージョンは plugman に指示するスクリプト ファイルです。理想的には、このファイルは、プラグイン ディレクトリの最上位レベル ディレクトリ内する必要があります。
 
 *   `platform`(必須): あなたのフレームワークをサポートするプラットフォーム。 ワイルドカードを使用することがあります ' *' すべてのプラットフォームのサポートされていると言って、'android|ios|blackberry10' のようなパイプ文字または '人造人間' のような単一のプラットフォームだけで複数指定します。
 
@@ -321,7 +321,9 @@ XML の例：
 例:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

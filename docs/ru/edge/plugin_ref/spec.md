@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `version`(обязательно): версия, чтобы установить должны иметь ваши рамки.
 
-*   `scriptSrc`(обязательно): файл сценария, который говорит plugman, какая версия пользовательской базы. В идеале этот файл должен быть в каталоге верхнего уровня папки плагина.
+*   `scriptSrc`(обязательно): файл сценария, который говорит plugman, какая версия пользовательской базы. В идеале этот файл должен быть в каталоге верхнего уровня плагин каталога.
 
 *   `platform`(обязательно): какие платформы, которые поддерживает ваш рамки. Вы можете использовать подстановочный знак ' *' сказать поддерживается для всех платформ, укажите несколько с символом как «android|ios|blackberry10» или просто одной платформы, как «андроид».
 
@@ -321,7 +321,9 @@ plugman прерывает с ненулевой код для любой пла
 Пример:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

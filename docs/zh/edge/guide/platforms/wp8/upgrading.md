@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 本指南演示如何修改 Windows Phone 的專案，這兩個版本 7 和 8，從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
 
+## 從 3.0.0 升級到 3.1.0
+
+為創建的科爾多瓦 CLI 的專案：
+
+1.  更新 `cordova` CLI 版本-請參閱命令列介面 
+2.  運行 `cordova platform update wp8` （或 `wp7` ，每添加到您的專案的平臺）。
+
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
+
+1.  `bin\update <project_path>`
+
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
 1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
@@ -217,13 +228,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.9.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -235,13 +246,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.8.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -253,13 +264,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.7.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -271,13 +282,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.6.1.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -289,13 +300,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.6.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -307,13 +318,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.5.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -325,13 +336,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.4.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -343,13 +354,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.3.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -361,13 +372,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**您可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.2.0.js` 到您的專案。（請確定它被標記為內容）。
 
@@ -379,13 +390,13 @@ platform add wp7 wp8`.
 
 1.  刪除 `GapLib/WP7CordovaClassLib.dll` 從您的專案。
 
-2.  移除對引用 `WP7CordovaClassLib` **引用**資料夾中。
+2.  移除對的引用 `WP7CordovaClassLib` **的引用**的目錄中。
 
 3.  **引用**上按一下滑鼠右鍵，然後選擇**增加參考**.
 
-4.  導航到新分配並將該檔添加`WP7CordovaClassLib.dll`.
+4.  導航到新分佈和添加 `WP7CordovaClassLib.dll` 檔。
     
-    *   **注：**你可以通過在引用上右擊並選擇**屬性**查看 DLL 的版本.
+    *   **注：**你可以通過引用，按右鍵並選擇**屬性**來查看該 DLL 的版本.
 
 5.  複製新 `cordova-1.1.0.js` 到您的專案。（請確定它被標記為內容）。
 

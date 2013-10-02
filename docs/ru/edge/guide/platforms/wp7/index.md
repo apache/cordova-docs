@@ -46,9 +46,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Скачать и установить [Windows Phone SDK][3]
 
-*   Загрузите и распакуйте последнюю копию [Cordova][4]. Вы будете работать `lib\windows-phone-8\wp7` подпапки, `lib\windows-phone-8\wp8` содержит версию Windwos телефон 8 Cordova.
+*   Загрузите и распакуйте последнюю копию [Cordova][4]. Вы будете работать `lib\windows-phone-8\wp7` подкаталог, `lib\windows-phone-8\wp8` содержит версию Windwos телефон 8 Cordova.
 
-*   Скопируйте файл CordovaWP7\_x\_x_x.zip в папку: \My Documents\Visual студия 2012\Templates\ProjectTemplates\
+*   Копия `CordovaWP7_x_x_x.zip` файл `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` каталог.
 
  [3]: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27570/
  [4]: http://phonegap.com/download
@@ -80,7 +80,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 4. Обзор структуры проекта
 
-*   `www`Папка содержит ваше Cordova `html/js/css` и любые другие ресурсы, включенные в вашем приложении.
+*   `www`Каталог содержит ваше Cordova `html/js/css` и любые другие ресурсы, включенные в вашем приложении.
 
 *   Любое содержание, которое вы добавляете, здесь должен быть частью проекта Visual Studio, и он должен быть задан как содержание.
 

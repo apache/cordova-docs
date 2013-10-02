@@ -58,6 +58,7 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 
 *   Guida di Windows Phone 8 piattaforma
 *   Guida di piattaforma Windows Phone 7
+*   Configurazione di Windows Phone
 *   Windows Phone strumenti da riga di comando
 *   L'aggiornamento di Windows Phone
 
@@ -70,9 +71,3 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 ## Tizen
 
 *   Tizen piattaforma guida
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

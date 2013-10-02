@@ -30,10 +30,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo come *plugin*. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, aggiungere o rimuovere questa funzionalità per un progetto:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin rm org.apache.cordova.core.dialogs
-        $ cordova plugin rm org.apache.cordova.core.vibration
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin ls
+        [ 'org.apache.cordova.dialogs',
+          'org.apache.cordova.vibration' ]
+        $ cordova plugin rm org.apache.cordova.dialogs
+        $ cordova plugin rm org.apache.cordova.vibration
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
@@ -67,4 +70,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         </feature>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

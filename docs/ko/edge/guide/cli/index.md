@@ -29,6 +29,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   블랙베리 10 (맥, 리눅스, 윈도우)
 *   Windows Phone 7 (윈도 즈)
 *   Windows Phone 8 (Windows)
+*   윈도우 8 (Windows)
+*   파이어 폭스 OS (맥, 리눅스, 윈도우)
 
 Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니다. Pc, 그것은 가능한 *액세서리* 아래 *명령 프롬프트*.
 
@@ -72,14 +74,17 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
         $ cordova platform add ios
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다른 버전을 말합니다.
 
         $ cordova platform add wp7
         $ cordova platform add wp8
+        $ cordova platform add windows8
         $ cordova platform add android
         $ cordova platform add blackberry10
+        $ cordova platform add firefoxos
     
 
 이 플랫폼의 현재 집합을 확인 하려면 실행:
@@ -159,76 +164,76 @@ XREF -->
 
 *   기본 장치 정보 (장치 API):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+        $ cordova plugin add org.apache.cordova.device
         
 
 *   네트워크 연결 및 배터리 이벤트:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin add org.apache.cordova.battery-status
         
 
 *   가 속도계, 나침반, 및 지리적 위치:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-geolocation.git
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin add org.apache.cordova.geolocation
         
 
 *   카메라, 미디어 재생 및 캡처:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin add org.apache.cordova.media
             
 
 *   장치 또는 네트워크 (파일 API) 액세스 파일:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin add org.apache.cordova.file-transfer
         
 
 *   대화 상자 또는 진동 알림:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
         
 
 *   연락처:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-contacts.git
+        $ cordova plugin add org.apache.cordova.contacts
         
 
 *   세계화:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-globalization.git
+        $ cordova plugin add org.apache.cordova.globalization
         
 
 *   Splashscreen:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+        $ cordova plugin add org.apache.cordova.splashscreen
         
 
 *   새로운 브라우저 윈도우 열기 (InAppBrowser):
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+        $ cordova plugin add org.apache.cordova.inappbrowser
         
 
 *   콘솔 디버깅:
     
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
+        $ cordova plugin add org.apache.cordova.console
         
 
 사용 `plugin ls` (또는 `plugin list` , 또는 `plugin` 자체) 현재 보려면 플러그인을 설치 합니다. 각 식별자에 의해 표시 됩니다.
 
         $ cordova plugin ls    # or 'plugin list'
-        [ 'org.apache.cordova.core.console' ]
+        [ 'org.apache.cordova.console' ]
     
 
 플러그인을 제거 하려면 목록에서 나타나는 같은 식별자로 그것을 참조 하십시오. 예를 들어, 여기에 어떻게 릴리스 버전에서 디버그 콘솔에 대 한 지원을 제거할 것입니다.
 
-        $ cordova plugin rm org.apache.cordova.core.console        
-        $ cordova plugin remove org.apache.cordova.core.console    # same
+        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin remove org.apache.cordova.console    # same
     
 
 일괄 제거 하거나 추가할 수 있습니다 플러그인 각 명령에 대 한 하나 이상의 인수를 지정 하 여.
@@ -264,7 +269,7 @@ XREF -->
 
 이 구문을 사용 하 여 특정 버전을 설치.
 
-        $ sudo npm install -g cordova@3.0.0
+        $ sudo npm 설치-g cordova@3.1.0
     
 
 실행 `cordova -v` 현재 실행 중인 버전을 볼 수 있습니다. 실행은 `npm

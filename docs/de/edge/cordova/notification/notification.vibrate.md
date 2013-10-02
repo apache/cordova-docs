@@ -95,3 +95,10 @@ Vibriert das Gerät für den angegebenen Zeitraum.
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored
+        
+
+## BB10 Macken
+
+Vibrieren Sie Funktion, die im Besitz von Navigatorobjekt
+
+        navigator.vibrate(1000);  // vibrate for 1 second

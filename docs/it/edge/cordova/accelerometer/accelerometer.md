@@ -38,8 +38,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo come *plugin*. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, aggiungere o rimuovere questa funzionalità per un progetto:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin rm org.apache.cordova.core.device-motion
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-motion' ]
+        $ cordova plugin rm org.apache.cordova.device-motion
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
@@ -81,4 +83,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

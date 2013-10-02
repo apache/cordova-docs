@@ -50,7 +50,7 @@ XREF -->
 *   為支援平臺，CLI 可以編譯 executible 的應用程式和基於 SDK 的設備模擬程式中運行它們。 <! — — XREF （請參閱應用程式發展指南的詳細資訊。） XREF--> 為全面的測試，還可以生成應用程式檔，直接在設備上安裝它們。
 
 在開發週期中的任何點，你也可以依賴特定于平臺的 SDK 工具，可提供一組更豐富的選項。 （見有關每個平臺 SDK 工具的詳細資訊平臺指南設置）。SDK 環境是更適當的如果你想要實現一個混合本機和基於 web 的應用程式元件的混合應用。 <! — — XREF （請參閱混合應用指南為更多的資訊。） XREF--> 你可以使用命令列實用程式最初生成應用程式，或以反覆運算方式此後要喂 SDK 工具更新的代碼。 您也可以自己生成應用程式的設定檔。 <!-- XREF
-(See Configuration Reference for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF
@@ -93,6 +93,10 @@ XREF -->
       
       <th>
         <tt>win8</tt><br />（Windows 8）
+      </th>
+      
+      <th>
+        <tt>firefoxos</tt>
       </th>
       
       <th>

@@ -58,6 +58,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Windows Phone 8 平臺指南
 *   Windows Phone 7 平臺指南
+*   Windows Phone 配置
 *   Windows Phone 的命令列工具
 *   升級 Windows Phone
 
@@ -70,9 +71,3 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Tizen
 
 *   Tizen 平臺指南
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

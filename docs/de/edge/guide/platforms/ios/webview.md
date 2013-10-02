@@ -32,19 +32,19 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
 
 ## Hinzufügen von Cleaver zum Xcode Projekt (CordovaLib-Teilprojekt)
 
-1.  Herunterladen Sie und extrahieren Sie die Cordova-Quelle an einen permanenten Ordner auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova`.
+1.  Herunterladen Sie und extrahieren Sie die Cordova-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Documents/Cordova`.
 
 2.  Beenden Sie Xcode, wenn es geöffnet ist.
 
 3.  Terminal.app verwenden, navigieren Sie zu dem Verzeichnis, in dem Sie die heruntergeladene Quelle oben setzen.
 
-4.  Kopie der `config.xml` Datei in den Projektordner auf dem Datenträger (siehe die oben genannten Voraussetzungen).
+4.  Kopie der `config.xml` Datei in das Projektverzeichnis auf der Festplatte (siehe die oben genannten Voraussetzungen).
 
 5.  Drag & drop die `config.xml` Datei in das Projekt-Navigator Xcode.
 
 6.  Wählen Sie das Optionsfeld **erstellen Gruppen für alle hinzugefügten Ordner** und drücken Sie die Taste **Beenden**.
 
-7.  Drag & drop die `CordovaLib.xcodeproj` Datei in das Projekt-Navigator Xcode (vom Ordner permanent Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
+7.  Drag & drop die `CordovaLib.xcodeproj` Datei in das Projekt-Navigator Xcode (aus dem ständigen Verzeichnis Lage oben, und es sollte in der `CordovaLib` Unterverzeichnis).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -139,11 +139,11 @@ Cordova 2.0.0 und nachfolgende Versionen unterstützen nur die Teilprojekt-basie
 
 ## Hinzufügen Ihres Vermögens HTML, CSS und JavaScript
 
-1.  Erstellen Sie einen neuen Ordner in Ihrem Projekt auf der Festplatte, `www` zum Beispiel.
+1.  Erstellen Sie ein neues Verzeichnis in Ihrem Projekt auf der Festplatte, `www` zum Beispiel.
 
-2.  Setzen Sie Ihr Vermögen für HTML, CSS und JavaScript in diesen Ordner.
+2.  Setzen Sie Ihr Vermögen für HTML, CSS und JavaScript, in dieses Verzeichnis.
 
-3.  Drag & drop den Ordner in dem Projekt-Navigator Xcode.
+3.  Drag & drop das Verzeichnis in dem Projekt-Navigator Xcode.
 
 4.  Wählen Sie das Optionsfeld **Erstellen Ordner Verweise für alle hinzugefügten Ordner** .
 

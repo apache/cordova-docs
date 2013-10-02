@@ -90,7 +90,7 @@ Un quadro personalizzato basato su Apache Cordova richiede che un elemento motor
 
 *   `version`(obbligatorio): la versione del vostro quadro deve avere per installare.
 
-*   `scriptSrc`(obbligatorio): file di script che dice plugman è quale versione del framework personalizzato. Idealmente, questo file dovrebbe essere all'interno della directory di livello superiore della cartella plugin.
+*   `scriptSrc`(obbligatorio): file di script che dice plugman è quale versione del framework personalizzato. Idealmente, questo file dovrebbe essere all'interno della directory di livello superiore della directory dei plugin.
 
 *   `platform`(obbligatorio): quali piattaforme che supporta il vostro quadro. Si può utilizzare il carattere jolly ' *' per dire supportati per tutte le piattaforme, specificare multiplo con un carattere come 'android|ios|blackberry10' o solo una singola piattaforma come 'android'.
 
@@ -321,7 +321,9 @@ Questo è *superata* in quanto si applica solo a cordova-ios 2.2.0 e sotto. Uso 
 Esempio:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

@@ -43,10 +43,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        配置參考
+        Config.xml 檔
       </h2>
       
       <span>自訂您的應用程式的功能。</span>
+    </li>
+    <li>
+      <h2>
+        圖示和啟動畫面
+      </h2>
+      
+      <span>自訂應用程式的圖像顯示。</span>
     </li>
     <li>
       <h2>
@@ -71,10 +78,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        域白名單指南
+        白名單指南
       </h2>
       
-      <span>授予應用程式存取權限的外部域。</span>
+      <span>授予應用程式對外部資源的訪問。</span>
     </li>
     <li>
       <h2>

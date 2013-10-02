@@ -16,38 +16,78 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS Konfiguration
 
-Die Datei `config.xml` steuert verschiedene Cordova-Einstellungen. Dies ist breit und nicht Set pro CDVViewController Instanz Anwendung. Die `config.xml` Datei befindet sich Ihr `<project folder>/<appname>` Verzeichnis.
+Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-## `<preference>`
+*   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` ein Viewport Meta-Tag verwenden, um entweder deaktivieren oder den Bereich der Benutzer Skalierung zu beschränken.
+    
+        <preference name="EnableViewportScale" value="true"/>
+        
 
-Verschiedene Einstellungen (als `<preference>` Markierungen) Standard auf vorhandene Anwendungen nicht zu brechen. Die verfügbaren Einstellungen sind:
+*   `MediaPlaybackRequiresUserAction`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` um zu verhindern, dass HTML5-Videos automatisch mit spielen die `autoplay` Attribut. Gilt nicht beim Aufrufen von `play()` für ein video-Objekt.
+    
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        
 
-*   `DisallowOverscroll`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` Wenn Sie nicht, dass die WebView Gummi-Band möchten.
+*   `AllowInlineMediaPlayback`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` HTML5 Medienwiedergabe *Inline* innerhalb des Bildschirm-Layouts, mit Browser bereitgestellten Steuerelemente anstelle von native Steuerelemente angezeigt werden können. Damit dies funktioniert, fügen Sie das `webkit-playsinline` -Attribut auf eine `<video>` Elemente.
+    
+        <preference name="AllowInlineMediaPlayback" value="true"/>
+        
 
-*   `TopActivityIndicator`(string, der Standardwert ist `gray` ): Dies ist die oben drehenden Throbber in der Status/Batterie-Bar, gültige Werte sind `whiteLarge` , `white` , und`gray`.
+*   `BackupWebStorage`(string, entweder `none` , `local` , oder den Standardwert `cloud` ): Legen Sie auf `cloud` Web-Speicherdaten-Backup über iCloud können. Legen Sie auf `local` um nur lokale Backups über iTunes Sync zu ermöglichen. Legen Sie auf `none` zu verhindern, dass Web-Speicher-Backup.
+    
+        <preference name="BackupWebStorage" value="local"/>
+        
 
-*   `EnableLocation`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` , initialisiert das Geolocation-Plugin beim Start (also das Update auf Ihrer Position genauer sein kann) **veraltet**: setzen Sie bitte die `onload` Attribut des der `Geolocation` Plugin zu `true` statt.
+*   `TopActivityIndicator`(string, der Standardwert ist `gray` ): steuert die Anzeige von das kleine rotierende-Symbol in der Statusleiste, der bedeutende Prozessoraktivitäten angibt. Gültige Werte sind `whiteLarge` , `white` , und`gray`.
+    
+        <preference name="TopActivityIndicator" value="white"/>
+        
 
-*   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` , Viewport Skalierung durch ein Meta-Tag zu verhindern.
+*   `FadeSplashScreen`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` um zu verhindern, dass den Begrüßungsbildschirm ein-und ausblenden wenn seinen Anzeigezustand ändert.
+    
+        <preference name="FadeSplashScreen" value="false"/>
+        
 
-*   `AutoHideSplashScreen`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` zu steuern, wenn das Splashscreen über eine JavaScript-API ausgeblendet ist.
-
-*   `FadeSplashScreen`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` um den Begrüßungsbildschirm zu ein-und ausgeblendet, wenn ein- oder Ausblenden von es zu verhindern.
-
-*   `FadeSplashScreenDuration`(float, der Standardwert ist 2): der Begrüßungsbildschirm Fade Dauer in Sekunden.
+*   `FadeSplashScreenDuration`(float, der Standardwert ist `2` ): gibt die Anzahl der Sekunden für den Begrüßungsbildschirm fade Effekt ausgeführt.
+    
+        <preference name="FadeSplashScreenDuration" value="4"/>
+        
 
 *   `ShowSplashScreenSpinner`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` den Begrüßungsbildschirm Spinner zu verstecken.
+    
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+        
 
-*   `MediaPlaybackRequiresUserAction`(Boolean, wird standardmäßig auf `false` ): auf True, nicht Autoplayed HTML5 video erlauben.
+*   `KeyboardDisplayRequiresUserAction`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` erlauben die Tastatur angezeigt werden, beim Aufrufen von `focus()` auf Formularfelder.
+    
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+        
 
-*   `AllowInlineMediaPlayback`(Boolean, wird standardmäßig auf `false` ): auf true festgelegt, um Inline HTML5 Media-Wiedergabe zu ermöglichen, auch das video-Element im HTML-Dokument muss auch das Webkit-Playsinline-Attribut.
+*   `SuppressesIncrementalRendering`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` zu warten, bis alle Inhalte eingegangen ist, bevor es auf dem Bildschirm gerendert wird.
+    
+        <preference name="SuppressesIncrementalRendering" value="true"/>
+        
 
-*   `BackupWebStorage`(string, der Standardwert ist `cloud` ): gültige Werte sind `none` , `cloud` und `local` . Legen Sie auf `cloud` ermöglichen die Web-Speicherdaten werden in iCloud gesichert, und auf `local` nur lokale Backups (iTunes Sync) erlauben. Legen Sie auf `none` , keine Sicherungen von Web-Speicher erlauben.
+*   `KeyboardShrinksView`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` , die Webview zu reduzieren, wenn die Tastatur angezeigt wird, überschreiben die Standard-Beavior, die den Viewport vertikal verkleinert,. Dies entspricht dem Standardverhalten für Android apps.
+    
+        <preference name="KeyboardShrinksView" value="true"/>
+        
 
-*   `KeyboardDisplayRequiresUserAction`(Boolean, wird standardmäßig auf `true` ): auf False festgelegt, um die Tastatur zu öffnen, wenn Formularelemente Fokus über den JavaScript focus() Aufruf erhalten.
+*   `GapBetweenPages`(float, der Standardwert ist `` ): die Größe der Lücke, zwischen Seiten in Punkt.
+    
+        < Einstellungsname = "GapBetweenPages" Value = "0" / >
+        
 
-*   `SuppressesIncrementalRendering`(Boolean, wird standardmäßig auf `false` ): auf True zu warten, bis alle neuen Inhalte anzeigen eingegangen, bevor es wiedergegeben wird.
+*   `PageLength`(float, der Standardwert ist `` ): die Größe jeder Seite in Punkt in die Richtung, die die Seiten fließen. Wenn PaginationMode rechts nach links oder von links nach rechts, diese Eigenschaft stellt die Breite auf jeder Seite. Diese Eigenschaft stellt beim PaginationMode TopToBottom oder BottomToTop ist, die Höhe der einzelnen Seiten dar. Der Standardwert ist 0, was, dass das Layout die Größe des Viewports wird verwendet bedeutet, um die Dimensionen der Seite zu bestimmen.
+    
+        < Einstellungsname = "SeitenLaenge" Value = "0" / >
+        
 
-*   `HideKeyboardFormAccessoryBar`(Boolean, wird standardmäßig auf `false` ): Set zu treu ausblenden die zusätzliche Symbolleiste, die am oberen Rand der Tastatur befindet. Diese Symbolleiste enthält die Schaltflächen **zurück**, **weiter**und **fertig** .
+*   `PaginationBreakingMode`(string, der Standardwert ist `page` ): gültige Werte sind `page` und `column` .Die Art und Weise, in der Spalte oder Seitenumbruch auftritt. Diese Eigenschaft legt fest, ob bestimmte CSS-Eigenschaften zur Spalte und Seitenumbruch berücksichtigt oder ignoriert werden. Wenn diese Eigenschaft auf festgelegt ist `column` , der Inhalt steht im Einklang mit der CSS-Eigenschaften, die im Zusammenhang mit Spalte aktuelle an Stelle der Seitenumbruch.
+    
+        < Einstellungsname = "PaginationBreakingMode" Value = "Seite" / >
+        
 
-*   `KeyboardShrinksView`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` , die WebView zu verkleinern, wenn die Tastatur kommt. Die WebView verkleinert statt der Viewport schrumpfen und der bildlauffähigen Seite. Dies gilt für Anwendungen, die ihre Elemente relativ zu Fuße der WebView positionieren. Dies ist das Standardverhalten auf Android und macht sehr viel Sinn, wenn apps im Gegensatz zu Webseiten erstellen.
+*   `PaginationMode`(string, der Standardwert ist `unpaginated` ): gültige Werte sind `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , und `rightToLeft` . Diese Eigenschaft bestimmt, ob Inhalte in der Webansicht aufgebrochen in Seiten, die die eine Ansicht zu einer Zeit zu füllen, oder als eine lange durchlaufende Ansicht angezeigt. Wenn der Satz zu einem paginierten Formular, diese Eigenschaft ein paginiertes Layouts zum Inhalt: verursacht die Webansicht zu verwenden, die Werte der SeitenLaenge und GapBetweenPages zu Relayout inhaltlich schaltet.
+    
+        < Einstellungsname = "PaginationMode" Value = "unpaginated" / >

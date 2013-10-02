@@ -32,19 +32,19 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 ## Ajout de Cleaver à votre projet Xcode (sous-projet CordovaLib)
 
-1.  Téléchargez et extrayez la source Cordova dans un dossier permanent sur votre disque dur, par exemple à`~/Documents/Cordova`.
+1.  Téléchargez et extrayez la source Cordova à un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Documents/Cordova`.
 
 2.  Quittez Xcode s'exécute.
 
 3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
 
-4.  Copie le `config.xml` fichier dans votre dossier de projet sur le disque (voir celles décrites ci-dessus).
+4.  Copie le `config.xml` fichier dans votre répertoire de projet sur le disque (voir celles décrites ci-dessus).
 
 5.  Faites glisser et déposez le `config.xml` fichier dans le navigateur de projet de Xcode.
 
 6.  Cliquez sur le bouton radio de **créer des groupes pour tous les dossiers ajoutés** , puis appuyez sur **Terminer**.
 
-7.  Faites glisser et déposez le `CordovaLib.xcodeproj` fichier dans le navigateur de projet de Xcode (depuis le dossier permanent emplacement ci-dessus et il devrait être dans le `CordovaLib` sous-répertoire).
+7.  Faites glisser et déposez le `CordovaLib.xcodeproj` fichier dans le navigateur de projet de Xcode (à partir du répertoire permanent emplacement ci-dessus et il devrait être dans le `CordovaLib` sous-répertoire).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuv
 
 ## Ajouter vos actifs HTML, CSS et JavaScript
 
-1.  Créez un nouveau dossier dans votre projet sur disque, `www` par exemple.
+1.  Créez un nouveau répertoire dans votre projet sur disque, `www` par exemple.
 
-2.  Mettez vos actifs HTML, CSS et JavaScript dans ce dossier.
+2.  Mettez vos actifs HTML, CSS et JavaScript dans ce répertoire.
 
-3.  Glissez et déposez le dossier dans le navigateur de projet de Xcode.
+3.  Glissez et déposez le répertoire dans le navigateur de projet de Xcode.
 
 4.  Cliquez sur le bouton radio de **créer des références de dossier pour tous les dossiers ajoutés** .
 

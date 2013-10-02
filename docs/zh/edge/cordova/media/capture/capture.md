@@ -75,8 +75,10 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin rm org.apache.cordova.core.media-capture
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin ls
+        [ 'org.apache.cordova.media-capture' ]
+        $ cordova plugin rm org.apache.cordova.media-capture
     
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
@@ -107,4 +109,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

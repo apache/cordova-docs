@@ -28,7 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓 10
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8

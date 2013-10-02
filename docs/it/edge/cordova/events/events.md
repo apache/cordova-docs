@@ -40,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 A partire dalla versione 3.0, stato batteria implementa di Cordova e altre API a livello di dispositivo come *plugin*. Accesso a tutti gli altri eventi non correlati allo stato della batteria sono abilitati per impostazione predefinita. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, per abilitare o disabilitare gli eventi batteria:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
-        $ cordova plugin rm org.apache.cordova.core.battery-status
+        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin ls
+        [ 'org.apache.cordova.battery-status' ]
+        $ cordova plugin rm org.apache.cordova.battery-status
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
@@ -86,4 +88,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

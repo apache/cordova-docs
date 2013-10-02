@@ -28,7 +28,6 @@ Diese Methode zeigt Begrüßungsbildschirm der Anwendung.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry 10
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8

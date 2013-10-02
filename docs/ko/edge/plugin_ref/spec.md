@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `version`(필수): 당신의 프레임 워크 설치 해야 하는 버전.
 
-*   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 폴더의 최상위 수준 디렉터리 내에서 해야 합니다.
+*   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 디렉토리의 최상위 수준 디렉터리 내에서 해야 합니다.
 
 *   `platform`(필수): 어떤 플랫폼을 당신의 프레임 워크를 지원 합니다. 와일드 카드를 사용할 수 있습니다 ' *' 모든 플랫폼에 대 한 지원 말, 'android|ios|blackberry10' 같은 파이프 문자 또는 '안 드 로이드'와 같은 단일 플랫폼으로 여러 개를 지정 합니다.
 
@@ -321,7 +321,9 @@ XML에 대 한 예제:
 예를 들어:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

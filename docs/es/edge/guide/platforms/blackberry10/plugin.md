@@ -166,7 +166,7 @@ Usted puede colocar los artefactos del plugin, que incluye el `plugin.xml` archi
     *   **dispositivo** (>*archivo binario* * así)
     *   **simulador** (>*archivo binario* * así)
 
-(La lista muestra la relación jerárquica entre las carpetas de nivel superior. El paréntesis muestra el contenido de un directorio determinado. Todos los nombres de directorio aparecen en negrita. Nombres de archivo son precedidos por el `>` signo.)
+(La lista muestra la relación jerárquica entre los directorios de nivel superior. El paréntesis muestra el contenido de un directorio determinado. Todos los nombres de directorio aparecen en negrita. Nombres de archivo son precedidos por el `>` signo.)
 
 ## Contenido de la `plugin.xml` archivo
 

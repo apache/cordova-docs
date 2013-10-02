@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android configurazione
 
-La `config.xml` file controlla varie impostazioni di Cordova. Questi si applicano in tutta l'applicazione e per ogni istanza di CordovaWebView.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
-## `< preferenza >`
+*   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi.
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-Varie altre preferenze (come `<preference>` tag) predefinita su non rompere le applicazioni esistenti. Le preferenze disponibili sono:
+*   `ErrorUrl`: Specifica di una pagina di errore che viene visualizzato in risposta agli errori HTTP standard nella gamma 400-500. Posizionare il file specificato nella directory principale che contiene la home page e altre risorse web.
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(boolean, impostazioni predefinite a `true` ): impostare su `false` se si desidera utilizzare lo spessore della storia che è stato utilizzato per aggirare l'hashtag # errore presente in Android 3. x prima la correzione della storia. (Nota: questa impostazione verrà rimossa in aprile 2013)
+*   `LoadingDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento dell'app. Il formato del valore è il *titolo, messaggio*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`: Visualizzare una finestra di dialogo nativa di caricamento durante il caricamento dell'app. Il formato del valore è il *titolo, messaggio*
+*   `LoadingPageDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento di pagine secondarie all'interno di un'app. Il formato del valore è il *titolo, messaggio*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`: Visualizzare una finestra di dialogo nativa di caricamento durante il caricamento di pagine secondarie. Il formato del valore è il *titolo, messaggio*
+*   `LoadUrlTimeoutValue`(numero, valore di default è `20000` ): durante il caricamento di una pagina, la quantità di tempo di attesa prima di generare un errore di timeout. Questo esempio specifica 10 secondi anziché 20:
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`: Impostare la pagina di errore dell'applicazione. Dovrebbe trovarsi nel progetto Android in`file://android_asset/www/`
+*   `SplashScreen`: Il nome del file meno sua estensione nella `res/drawable` directory. Vari beni devono condividere questo nome comune nelle varie sottodirectory.
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`: Impostare il colore di sfondo per la vostra applicazione. Supporta un valore esadecimale di quattro byte, con il primo byte che rappresenta il valore alfa e i seguenti tre byte con valori RGB standard. Ad esempio, `0x00000000` è nero.
-
-*   `loadUrlTimeoutValue`: Quanto tempo deve attendere prima di generare un errore di timeout sull'applicazione di Cordova.
-
-*   `keepRunning`(boolean, impostazioni predefinite a `true` ): determina se Cordova rimane in esecuzione in background.
-
-*   `splashscreen`: Il nome del file meno sua estensione nella `res/drawable` directory. Se si dispone di più asset, tutti devono condividere questo nome comune nelle rispettive directory.
-
-*   `disallowOverscroll`(boolean, impostazioni predefinite a `false` ): impostare su `true` per disabilitare il bagliore quando un utente scorre oltre il bordo della webview.
-
-## `< plugin >`
-
-Android supporta usando `<feature>` come analoghi a `<plugin>` elementi.
+*   `SplashScreenDelay`(numero, di default è `5000` ): la quantità di tempo consente di visualizzare l'immagine della schermata iniziale.
+    
+        <preference name="SplashScreenDelay" value="10000"/>

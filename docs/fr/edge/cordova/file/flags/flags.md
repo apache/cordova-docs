@@ -14,17 +14,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Drapeaux
+# Flags
 
-Fournit des arguments à la `DirectoryEntry` de l'objet `getFile()` et `getDirectory()` méthodes qui chercher ou créent des fichiers et des répertoires, respectivement.
+Fournit des arguments aux méthodes `getFile()` et `getDirectory()` de l'objet `DirectoryEntry` qui se chargent respectivement de rechercher ou créer des fichiers et des répertoires.
 
 ## Propriétés
 
-*   **créer**: indique que le fichier ou le répertoire doit être créé s'il n'existe pas déjà. *(booléen)*
+*   **create** : indique que le fichier ou le répertoire doit être créé s'il n'existe pas déjà. *(Boolean)*
 
-*   **exclusif**: A n'a aucun effet en soi, mais lorsqu'il est utilisé avec `create` provoque la création de fichier ou de répertoire échoue si le chemin d'accès cible existe déjà. *(booléen)*
+*   **exclusive** : a n'a aucun effet seul mais, s'il est utilisé avec `create`, provoque l'échec de la création d'un fichier ou d'un répertoire lorsque le chemin d'accès visé existe déjà. *(Boolean)*
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -32,10 +32,10 @@ Fournit des arguments à la `DirectoryEntry` de l'objet `getFile()` et `getDirec
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    / / Obtenir le répertoire de données, créant si elle n'existe pas.
-    dataDir = fileSystem.root.getDirectory (« données », {créer : true}) ;
+    / / Obtenir le répertoire des données, le créant s'il n'existe pas.
+    dataDir = fileSystem.root.getDirectory("data", {create: true});
     
-    / / Créer le fichier de verrouillage, si et seulement s'il n'existe pas.
-    lockFile = dataDir.getFile (« lockfile.txt », {créer : vrai, exclusif : true}) ;
+    // Créer le fichier de verrouillage uniquement s'il n'existe pas déjà.
+    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});

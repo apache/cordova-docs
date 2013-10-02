@@ -75,8 +75,10 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo come *plugin*. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, aggiungere o rimuovere questa funzionalità per un progetto:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-media-capture.git
-        $ cordova plugin rm org.apache.cordova.core.media-capture
+        $ cordova plugin add org.apache.cordova.media-capture
+        $ cordova plugin ls
+        [ 'org.apache.cordova.media-capture' ]
+        $ cordova plugin rm org.apache.cordova.media-capture
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
@@ -107,4 +109,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         </Capabilities>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

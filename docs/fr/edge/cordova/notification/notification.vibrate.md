@@ -95,3 +95,10 @@ Vibre le dispositif pour la durée spécifiée.
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored
+        
+
+## BB10 Quirks
+
+vibreur fonction appartenue à l'objet navigator
+
+        navigator.vibrate(1000);  // vibrate for 1 second

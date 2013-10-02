@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  選擇您的專案，並按一下滑鼠右鍵，選擇**添加 → 新專案......**
     
-    *   最好是將它添加到外掛程式資料夾中，但它是由你
+    *   最好是將它添加到外掛程式目錄中，但它是由你
 
 2.  選擇類和它的名字`Echo.cs`
     

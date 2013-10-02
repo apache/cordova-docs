@@ -16,14 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> Le `InAppBrowser` est un navigateur web qui s'affiche dans l'application lors de l'appel`window.open`.
+> `InAppBrowser` désigne une vue de navigateur Web s'affichant après un appel à `window.open()`, ou via un lien formulé de la façon suivante `<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
+**Remarque :** une fenêtre InAppBrowser se comporte comme un navigateur Web standard et ne peut pas accéder aux API Cordova.
+
 ## Description
 
-L'objet retourné par un appel à`window.open`.
+L'objet retourné par un appel à `window.open`.
 
 ## Méthodes
 
@@ -36,54 +38,56 @@ L'objet retourné par un appel à`window.open`.
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-        $ cordova plugin rm org.apache.cordova.core.inappbrowser
+        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin ls
+        [ 'org.apache.cordova.inappbrowser' ]
+        $ cordova plugin rm org.apache.cordova.inappbrowser
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
-*   Android (dans`app/res/xml/config.xml`)
+*   Android (dans `app/res/xml/config.xml`)
     
         <feature name="InAppBrowser">
             <param name="android-package" value="org.apache.cordova.InAppBrowser" />
         </feature>
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans `config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
         </feature>
         
 
-*   Windows Phone 7 et 8 (en`config.xml`)
+*   Windows Phone 7 et 8 (dans `config.xml`)
     
         <feature name="InAppBrowser" />
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
 
 # addEventListener
 
-> Ajoute un écouteur pour un événement de la`InAppBrowser`.
+> Ajoute un écouteur pour un évènement de la fenêtre `InAppBrowser`.
 
     ref.addEventListener(eventname, callback);
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-*   **EventName**: l'événement pour écouter les *(String)*
+*   **eventname** : l'évènement à écouter *(String)*
     
-    *   **loadstart**: événement déclenche quand le `InAppBrowser` commence à charger une URL.
-    *   **loadstop**: événement déclenche lorsque la `InAppBrowser` finit de charger une URL.
-    *   **LoadError**: événement déclenche lorsque la `InAppBrowser` rencontre une erreur lors du chargement d'une URL.
-    *   **sortie**: événement déclenche quand le `InAppBrowser` fenêtre est fermée.
+    *   **loadstart** : évènement déclenché lorsque le chargement d'une URL débute dans la fenêtre `InAppBrowser`.
+    *   **loadstop** : évènement déclenché lorsque la fenêtre `InAppBrowser` finit de charger une URL.
+    *   **loaderror** : évènement déclenché si la fenêtre `InAppBrowser` rencontre une erreur lors du chargement d'une URL.
+    *   **exit** : évènement déclenché lorsque la fenêtre `InAppBrowser` est fermée.
 
-*   **rappel**: la fonction qui s'exécute lorsque l'événement se déclenche. La fonction est passée un `InAppBrowserEvent` objet comme paramètre.
+*   **callback** : la fonction à exécuter lorsque l'évènement se déclenche. Un objet `InAppBrowserEvent` lui est transmis comme paramètre.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
@@ -129,30 +133,30 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 # removeEventListener
 
-> Supprime un écouteur pour un événement de la`InAppBrowser`.
+> Supprime un écouteur pour un évènement de la fenêtre `InAppBrowser`.
 
     ref.removeEventListener(eventname, callback);
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre. *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-*   **EventName**: l'événement pour arrêter l'écoute. *(String)*
+*   **eventname** : l'évènement pour lequel arrêter l'écoute. *(String)*
     
-    *   **loadstart**: événement déclenche quand le `InAppBrowser` commence à charger une URL.
-    *   **loadstop**: événement déclenche lorsque la `InAppBrowser` finit de charger une URL.
-    *   **LoadError**: événement déclenche lorsque la `InAppBrowser` rencontre une erreur lors du chargement d'une URL.
-    *   **sortie**: événement déclenche quand le `InAppBrowser` fenêtre est fermée.
+    *   **loadstart** : évènement déclenché lorsque le chargement d'une URL débute dans la fenêtre `InAppBrowser`.
+    *   **loadstop** : évènement déclenché lorsque la fenêtre `InAppBrowser` finit de charger une URL.
+    *   **loaderror** : évènement déclenché si la fenêtre `InAppBrowser` rencontre une erreur lors du chargement d'une URL.
+    *   **exit** : évènement déclenché lorsque la fenêtre `InAppBrowser` est fermée.
 
-*   **rappel**: la fonction à exécuter lorsque l'événement se déclenche. La fonction est passée un `InAppBrowserEvent` objet.
+*   **callback** : la fonction à exécuter lorsque l'évènement se déclenche. Un objet `InAppBrowserEvent` lui est transmis comme paramètre.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 *   Windows Phone 7 et 8
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
@@ -214,23 +218,23 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
     </html>
     
 
-# fermer
+# close
 
-> Ferme la `InAppBrowser` fenêtre.
+> Ferme la fenêtre `InAppBrowser`.
 
     ref.close();
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 *   Windows Phone 7 et 8
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
@@ -267,22 +271,22 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
     </html>
     
 
-# Voir l'établissement
+# show
 
-> Afficher une fenêtre de InAppBrowser qui ouvrit ses portes cachée. Appeler cela n'a aucun effet si la InAppBrowser était déjà visible.
+> Affiche une fenêtre InAppBrowser qui a été ouverte cachée. Appeler cette méthode n'a aucun effet si la fenêtre en question est déjà visible.
 
     ref.show();
     
 
-*   **Réf :** référence à la fenêtre () InAppBrowser`InAppBrowser`)
+*   **ref :** référence à la fenêtre InAppBrowser. (`InAppBrowser`)
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
     ref.show();
@@ -324,29 +328,29 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 # executeScript
 
-> Injecte du code JavaScript dans la `InAppBrowser` fenêtre
+> Injecte du code JavaScript dans la fenêtre `InAppBrowser`
 
     ref.executeScript(details, callback);
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre. *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-*   **injectDetails**: Détails du script à exécuter, spécifiant soit un `file` ou `code` clés. *(Objet)*
+*   **injectDetails** : détails du script à exécuter, requérant une propriété `file` ou `code`. *(Object)*
     
-    *   **fichier**: URL du script à injecter.
-    *   **code**: texte du script à injecter.
+    *   **file** : URL du script à injecter.
+    *   **code** : texte du script à injecter.
 
-*   **rappel**: la fonction qui s'exécute après le code JavaScript est injecté.
+*   **callback** : une fonction exécutée après l'injection du code JavaScript.
     
-    *   Si le script injecté est de type `code` , le rappel s'exécute avec un seul paramètre, qui est la valeur renvoyée par le script, enveloppé dans une `Array` . Pour les scripts multilignes, c'est la valeur de retour de la dernière instruction, ou la dernière expression évaluée.
+    *   Si le script injecté est de type `code`, un seul paramètre est transmis à la fonction callback, correspondant à la valeur de retour du script enveloppée dans un `Array`. Pour les scripts multilignes, il s'agit de la valeur renvoyée par la dernière instruction ou la dernière expression évaluée.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
@@ -403,27 +407,27 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 # insertCSS
 
-> Injecte CSS dans le `InAppBrowser` fenêtre.
+> Injecte des règles CSS dans la fenêtre `InAppBrowser`.
 
     ref.insertCSS(details, callback);
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-*   **injectDetails**: Détails du script à exécuter, spécifiant soit un `file` ou `code` clés. *(Objet)*
+*   **injectDetails** : détails du fichier à injecter, requérant une propriété `file` ou `code`. *(Object)*
     
-    *   **fichier**: URL de la feuille de style à injecter.
-    *   **code**: texte de la feuille de style à injecter.
+    *   **file** : URL de la feuille de style à injecter.
+    *   **code** : contenu de la feuille de style à injecter.
 
-*   **rappel**: la fonction qui s'exécute après que le CSS est injecté.
+*   **callback** : une fonction exécutée après l'injection du fichier CSS.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
@@ -480,14 +484,14 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
 # InAppBrowserEvent
 
-L'objet qui est passé à la fonction de rappel d'un `addEventListener` donne la parole à un `InAppBrowser` objet.
+L'objet passé à la fonction callback d'un écouteur d'évènement ajouté via un appel à `addEventListener` sur un objet `InAppBrowser`.
 
 ## Propriétés
 
-*   **type**: l'eventname, soit `loadstart` , `loadstop` , `loaderror` , ou `exit` . *(String)*
+*   **type** : le nom de l'évènement, soit `loadstart`, `loadstop`, `loaderror` ou `exit`. *(String)*
 
-*   **URL**: l'URL qui a été chargé. *(String)*
+*   **url** : l'URL ayant été chargée. *(String)*
 
-*   **code**: le code d'erreur, que dans le cas de `loaderror` . *(Nombre)*
+*   **code** : le code d'erreur, seulement pour `loaderror`. *(Number)*
 
-*   **message**: le message d'erreur que dans le cas de `loaderror` . *(String)*
+*   **message** : un message d'erreur, seulement pour `loaderror`. *(String)*

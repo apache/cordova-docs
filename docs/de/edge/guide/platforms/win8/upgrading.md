@@ -18,6 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Diese Anleitung zeigt, wie Windows 8 Projekte Upgrade von älteren Versionen von Cordova ändern. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Aktualisieren Sie die Version der CLI.
 
+## Upgrade auf 3.1.0
+
+Cordova CLI-Unterstützung für Windows 8 wurde in Cordova 3.1.0 eingeführt. Um ein Upgrade durchzuführen, empfehlen wir, erstellen eine neue Cordova CLI Projekt und Sie über alle erforderlichen Assets bewegen.
+
 ## Ein Upgrade auf 2.9.0 von 2.8.0
 
 Die folgenden Befehle sollten aus innerhalb von Visual Studio gewiss geschehen, dass das Projektverweise aktualisiert/gelöscht werden.

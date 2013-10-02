@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Accéléromètre
 
-> Capture le mouvement d'un appareil dans l'espace sur les axes *x*, *y* et *z* .
+> Capture le mouvement d'un appareil sur les axes *x*, *y* et *z* .
 
 ## Méthodes
 
@@ -38,8 +38,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin rm org.apache.cordova.core.device-motion
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-motion' ]
+        $ cordova plugin rm org.apache.cordova.device-motion
     
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
@@ -63,14 +65,14 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
         </feature>
         
 
-*   Windows Phone (en`Properties/WPAppManifest.xml`)
+*   Windows Phone (dans`Properties/WPAppManifest.xml`)
     
         <Capabilities>
             <Capability Name="ID_CAP_SENSORS" />
@@ -81,4 +83,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

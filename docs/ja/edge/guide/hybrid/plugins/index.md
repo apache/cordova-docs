@@ -82,3 +82,19 @@ JavaScript の任意のプラグインのエントリ ポイントです。 コ�
 *   Windows Phone のプラグイン
 
 Tizen プラットフォームでは、現在のプラグインをサポートしていません。
+
+## 公開プラグイン
+
+あなたのプラグインを開発した後それを公開し、コミュニティと共有する場合があります。 あなたあなたのプラグイン （ [npmjs][1]に基づく） コルドバ レジストリに公開したり、他の npmjs に基づくレジストリ。 ユーザーは自動的に plugman またはコルドバ cli を使用してそれをインストールすることができます。
+
+ [1]: https://github.com/isaacs/npmjs.org
+
+プラグインを公開するには、plugman ツールを使用して、次の手順を通過する必要があります。
+
+    $ plugman adduser # that is if you don't have an account yet
+    $ plugman publish /path/to/your/plugin
+    
+
+だよ ！
+
+レジストリ ベースのコマンドは利用可能な `plugman --help` は、使用できるコマンドは何およびそれらを使用する方法のリストを与えます。

@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Windows Phone 的命令列工具支援創建、 構建和運行的新專案。必須從 cmd 或 powershell 的提示符下運行命令。
 
-WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為每個有子資料夾： wp7 / 和 wp8 /
+WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為每個具有的子目錄： `wp7/` 和`wp8/`.
 
 ## 創建一個專案
 

@@ -43,6 +43,10 @@ Mac および Linux:
 *   編集、 `~/.bash_profile` ネイティブ SDK のインストール先に応じて、次のような行を追加するファイル。
     
     $ エクスポート パス ${path} =：/アプリケーション/bbndk/host\_10\_1\_0\_132/ダーウィン/x 86/usr/bin/
+    
+    または 10.2 ネイティブ SDK:
+    
+    $ 輸出 PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   現在のセッションで変更を適用するのには、次を実行します。
     

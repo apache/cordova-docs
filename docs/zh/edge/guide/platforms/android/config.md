@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android 系統組態
 
-`config.xml`檔控制科爾多瓦的各種設置。這些應用跨應用程式，和每個 CordovaWebView 實例。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-## `< 首選項 >`
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-各種其他首選項 （作為 `<preference>` 標籤） 預設情況下，不打破現有的應用程式。可用的選擇是：
+*   `ErrorUrl`： 指定顯示在 400-500 範圍內的標準 HTTP 錯誤回應的錯誤頁。 將指定的檔放在包含主頁和其他 web 資產的頂級目錄。
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 如果您想要使用被用來解決目前在之前的歷史修復 Android 3.x 中的標籤錯誤歷史墊片。 （注意： 此設置將會在 2013 年 4 月已棄用)
+*   `LoadingDialog`： 顯示本機對話方塊載入應用程式時。值的格式是*標題、 消息*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`： 顯示本機載入對話方塊載入應用程式時。值的格式是*標題、 消息*
+*   `LoadingPageDialog`： 載入一個應用程式內的子頁面時顯示本機的對話方塊。值的格式是*標題、 消息*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`： 顯示本機載入對話方塊載入的子頁面時。值的格式是*標題、 消息*
+*   `LoadUrlTimeoutValue`（數，預設值是 `20000` ）： 當載入一個頁面，在引發逾時錯誤之前等待的時間量。 此示例指定 10 秒，而不是 20：
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`： 設置您的應用程式的錯誤頁。應設在 Android 專案中`file://android_asset/www/`
+*   `SplashScreen`： 減去其副檔名的檔的名稱 `res/drawable` 目錄。各種資產必須共用此各子目錄中的共同名稱。
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`： 設置您的應用程式的背景色。 支援四個位元組的十六進位值，以表示 Alpha 值，並採用標準的 RGB 值以下的三個位元組的第一個位元組。 例如， `0x00000000` 是黑色的。
-
-*   `loadUrlTimeoutValue`： 多少科爾多瓦投擲逾時錯誤的應用程式之前應等待的時間。
-
-*   `keepRunning`(boolean 類型的值，預設值為 `true` ）： 確定是否科爾多瓦保持在後臺運行。
-
-*   `splashscreen`： 減去其副檔名的檔的名稱 `res/drawable` 目錄。 如果您有多項資產，他們都必須共用此共同在它們各自的目錄名稱。
-
-*   `disallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 禁用所發出的光芒，當使用者滾動 web 視圖的邊緣之外。
-
-## `< 外掛程式 >`
-
-Android 系統支援使用 `<feature>` 作為類似物的 `<plugin>` 元素。
+*   `SplashScreenDelay`(編號，預設值為 `5000` ）： 所需的時間初始螢幕圖像顯示。
+    
+        <preference name="SplashScreenDelay" value="10000"/>

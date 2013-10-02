@@ -106,7 +106,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </feature>
     
 
-然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 的外掛程式資料夾裡面我們科爾多瓦 iOS 應用程式資料夾中：
+然後我們將添加下列檔 （ `Echo.h` 和 `Echo.m` ） 到我們科爾多瓦 iOS 應用程式目錄裡面的外掛程式目錄：
 
     /********* Echo.h Cordova Plugin Header *******/
     

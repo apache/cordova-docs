@@ -14,24 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Configurazione di blackBerry 10
+# Configurazione di blackBerry
 
-La `config.xml` file controlla varie impostazioni di Cordova. Questi si applicano in tutta l'applicazione. Il `config.xml` è file si trova in `<project folder>/<www>` directory.
+La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. Le preferenze di dettagli questa sezione che si applicano solo a BlackBerry 10 costruisce. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
-## `< preferenza >`
+*   `ChildBrowser`( `disable` o default `enable` ): disattiva windows browser bambino. Per impostazione predefinita, apps lanciare una finestra del browser secondario per visualizzare risorse accessibili tramite `window.open()` o specificando un `_blank` obiettivo di ancoraggio. Specificare `disable` per eseguire l'override di questo comportamento predefinito.
+    
+        <preference name="ChildBrowser" value="disable"/>
+        
 
-Varie preferenze (come `<preference>` tag) predefinita su non rompere le applicazioni esistenti. Le preferenze disponibili sono:
+*   `PopupBlocker`( `enable` o default `disable` ): consente il blocco dei popup, che impedisce che le chiamate a `window.open()` . Per impostazione predefinita, popup visualizzano in una finestra del browser di bambino. L'impostazione della preferenza `enable` impedisce la visualizzazione a tutti.
+    
+        <preference name="PopupBlocker" value="enable"/>
+        
 
-*   `autoHideSplashScreen`: ( `true` o `false` ): impostare su `false` per controllare quando lo splashscreen è nascosto attraverso un API JavaScript. Questa preferenza impostazioni predefinite su true.
-
-*   `backgroundColor`: Specifica il colore di sfondo della tua app. Il valore deve specificare un valore di colore in formato pixel ARGB utilizzando 8 cifre esadecimali.
-
-*   `childBrowser`: Disattiva windows browser bambino. Per impostazione predefinita, quando si tenta di aprire una risorsa in una nuova finestra o scheda contenuto (usando Window o specificando `_blank` come destinazione di un ancoraggio), l'app WebWorks aprirà una finestra del browser secondario per visualizzare la risorsa. Questa funzionalità è abilitata per impostazione predefinita. Deve specificare il valore `disable` per impedire le azioni di cui sopra da occuring.
-
-*   `hideKeyboardFormAccessoryBar`: ( `enable` o `disable` ) disattiva la barra accessoria tastiera form in un form HTML. La barra accessoria del modulo tastiera è una fila di pulsanti (precedente, successivo e Submit) che l'utente può utilizzare per navigare attraverso una forma. Per impostazione predefinita, quando un app WebWorks contiene un modulo HTML e un `<input>` elemento ottiene lo stato attivo, WebWorks Visualizza questa barra accessoria di forma. Questa funzionalità consente di impedire la visualizzazione barra accessoria il form specificando il valore come app`enable`.
-
-*   `orientation`: ( `auto` , `portrait` , o `landscape` ) specifica l'orientamento persistente per schermi in app. Per impostazione predefinita, se non si specifica un orientamento dello schermo, l'orientamento è impostato su auto.
-
-*   `popupBlocker`: Consente il blocco popup. Per impostazione predefinita, vengono visualizzati tutti i popup di applicazioni BlackBerry WebWorks in una finestra del browser di bambino. È possibile impedire popup visualizzati senza intervento dell'utente consentendo il blocco popup. Questo è fatto specificando il valore come`enable`.
-
-*   `webSecurity`: Disattiva web security. Disabilitando la protezione web consente di accedere ai contenuti remoti da fonti sconosciute durante lo sviluppo. Prima di imballaggio app per la distribuzione, è necessario rimuovere questa impostazione. Questa caratteristica è inteso come solo una convenienza di sviluppo. In produzione, tutti gli URI dovrebbero essere noto e dovrebbe essere whitelisted utilizzando il `<access>` elemento. Per disabilitare, specificare il valore come`disable`.
+*   `WebSecurity`( `disable` o default `enable` ): impostare su `disable` per ignorare le impostazioni di protezione web, consentendo l'accesso ai contenuti remoti da fonti sconosciute. Questa preferenza è inteso come una comodità di sviluppo solo, quindi rimuoverla prima app per la distribuzione di imballaggio. Per l'app rilasciata, tutti gli URI devono essere conosciuto e whitelisted utilizzando il `<access>` elemento, descritto nella guida alla Whitelist di dominio.
+    
+        <preference name="WebSecurity" value="disable"/>

@@ -14,52 +14,68 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# ドメイン ホワイト リスト ガイド
+# ホワイト リスト ガイド
 
 ## 概要
 
-ドメイン ホワイト リストを制御するセキュリティ モデルなど、外部ドメインにアクセスが `http://google.com` 。 Apache コルドバの既定のセキュリティ ポリシーは、任意のサイトにアクセスをできます。 運用環境にアプリケーションを移動する前にそのホワイト リストを確認し、特定のネットワーク ドメインおよびサブドメインへのアクセスを宣言する必要があります。
+リソースのホワイト リストを制御するセキュリティ モデルなど、外部ネットワーク リソースにアクセスが `http://google.com` 。 Apache コルドバの既定のセキュリティ ポリシーは、インターネット上の任意のサイト上の任意のリソースにアクセスできます。 運用環境にアプリケーションを移動する前にそのホワイト リストを確認し、特定のネットワーク ドメインおよびサブドメインへのアクセスを宣言する必要があります。
 
 ## 仕様
 
-ドメイン ホワイト[W3C ウィジェット アクセス][1]仕様の土台となります。 ウィジェット アクセス仕様で、 `<access>` 要素を使用する特定のネットワーク ドメインにアクセスを宣言します。 将来的には、Apache コルドバは W3C のウィジェットのアクセス仕様にプラットフォームのホワイト リストの実装を抽象化します。 ただし、今のところ各プラットフォーム独自ドメイン ホワイト リストを実装する必要があります。
+ドメイン ホワイト[W3C ウィジェット アクセス][1]仕様の土台となります。 ウィジェット アクセス仕様で、 `<access>` 要素を使用する特定のネットワーク リソースへのアクセスを宣言します。 Apache コルドバは個々 のネットワーク リソース (Url) のホワイト リスト登録を許可するようにこの概念を拡張します。 将来的には、Apache コルドバはプラットフォームのホワイト リストの実装を抽象化します。 しかし、今のところ各プラットフォーム独自のリソースまたはドメイン ホワイト リストを実装します。 プラットフォームの実装の違いは、このドキュメントに記載されています。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
+ホワイト リストのエントリーの一般的な形式の Google クロム パッケージ アプリ「[パターン一致][2]」仕様に従います。 リソースは、URL がアスタリスクによって指定されます (*) を示す任意の値が「行く」ここでいくつかの場所で「ワイルドカード」として文字を使用可能性があります。 具体的な例を紹介します。
+
+ [2]: http://developer.chrome.com/apps/match_patterns.html
+
 ## 構文
 
-[Google.com][2]へのアクセス:
+[Google.com][3]ですべてのリソースへのアクセス:
 
- [2]: http://google.com
+ [3]: http://google.com
 
-    http://google.com
+    http://google.com/*
     
 
-安全な[google.com][3]へのアクセス ( `https://` )。
+安全な[google.com][4]ですべてのリソースへのアクセス ( `https://` )。
 
- [3]: https://google.com
+ [4]: https://google.com
 
-    https://google.com
+    https://google.com/*
     
 
-サブドメイン[maps.google.com][4]へのアクセス:
+特定のサブドメイン[maps.google.com][5]へのアクセス:
 
- [4]: http://maps.google.com
+ [5]: http://maps.google.com
 
-    http://maps.google.com
+    http://maps.google.com/*
     
 
-[Google.com][2] (例えば、[接続][5]および[docs.google.com][6]) 上のすべてのサブドメインへのアクセス:
+[Google.com][3] (例えば、[接続][6]および[docs.google.com][7]) 上のすべてのサブドメインへのアクセス:
 
- [5]: http://mail.google.com
- [6]: http://docs.google.com
+ [6]: http://mail.google.com
+ [7]: http://docs.google.com
 
-    http://*.google.com
+    http://*.google.com/*
     
 
-（例えば、 [google.com][2]と[developer.mozilla.org][7]） のすべてのドメインへのアクセス:
+[Www.google.com][8] 「/モバイル」のパスの下にすべてのリソースへのアクセス:
 
- [7]: http://developer.mozilla.org
+ [8]: http://www.google.com
+
+    http://www.google.com/mobile/*
+    
+
+任意のプロトコル (例えば、HTTP、HTTPS、FTP など) で[google.com][3]へのアクセス:
+
+    *://google.com/*
+    
+
+（例えば、 [google.com][3]と[developer.mozilla.org][9]） のインターネット上のすべての資源へのアクセス:
+
+ [9]: http://developer.mozilla.org
 
     *
     
@@ -74,41 +90,48 @@ Android は完全にホワイト リスト構文をサポートします。
 
 ### 構文
 
-[Google.com][2]へのアクセス:
+[Google.com][3]へのアクセス:
 
-    <access origin="http://google.com" />
+    <access origin="http://google.com/*" />
     
 
-## ブラックベリー
+## ブラックベリー 10
 
 ### 詳細
 
-ホワイト リスト登録の規則は、 `www/config.xml` 要素で宣言されていると`<access uri="..." />`.
+ホワイト リスト登録の規則は、 `www/config.xml` 要素で宣言されていると`<access origin="..." />`.
 
-完全なリファレンス[はブラックベリー WebWorks アクセス要素のドキュメント][8]を参照してください。.
+ブラックベリー 10 2 つの方法で他のプラットフォームとは異なるワイルドカードを処理します。
 
- [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+1） XMLHttpRequest によってアクセスされるコンテンツは、明示的に宣言されなければなりません。起源 ="*"このユースケースは尊敬できません。また、web のすべてのセキュリティが好みを使用して無効になります。
+
+サブドメイン 2) ="true"の代わりに使用される可能性があります"* .domain"
 
 ### 構文
 
-[Google.com][2]へのアクセス:
+[Google.com][3]へのアクセス:
 
-    <access uri="http://google.com" subdomains="false" />
+    <access origin="http://google.com" subdomains="false" />
     
 
-[Maps.google.com][4]へのアクセス:
+[Maps.google.com][5]へのアクセス:
 
-    <access uri="http://maps.google.com" subdomains="false" />
+    <access origin="http://maps.google.com" subdomains="false" />
     
 
-[Google.com][2]でのすべてのサブドメインへのアクセス:
+[Google.com][3]でのすべてのサブドメインへのアクセス:
 
-    <access uri="http://google.com" subdomains="true" />
+    <access origin="http://google.com" subdomains="true" />
     
 
 含むすべてのドメインへのアクセスを `file://` プロトコル。
 
-    <access uri="*" subdomains="true" />
+    <access origin="*" subdomains="true" />
+    
+
+すべての web セキュリティを無効にします。
+
+    <preference name="websecurity" value="disable" />
     
 
 ## iOS
@@ -119,26 +142,32 @@ Android は完全にホワイト リスト構文をサポートします。
 
 iOS は完全にホワイト リスト構文をサポートします。
 
-**注:**起源のようなプロトコルを使わずに指定 `www.apache.org` よりもむしろ `http://www.apache.org` 、すべてのデフォルト、 `http` 、 `https` 、 `ftp` と `ftps` スキーム。
+### 3.1.0 で変更されました。
+
+前のバージョン 3.1.0、コルドバ iOS 他コルドバのプラットフォームでサポートされているドメイン whilelisting スキームをいくつかの非標準の拡張含まれています。 3.1.0、現在 iOS のホワイト リストは今このドキュメントの上部に記載されているリソースのホワイト リストの構文に準拠します。 変更する必要があります前 3.1.0 からアップグレードする場合にこれらの拡張機能を使用していた、 `config.xml` として前にホワイト リスト登録リソースの同じセットを続行するためにファイル。
+
+具体的には、これらのパターンを更新する必要があります。
+
+*   " `apache.org` "(プロトコル): これは以前と一致 `http` 、 `https` 、 `ftp` 、および `ftps` プロトコル。 変更" `*://apache.org/*` "に、すべてのプロトコルを含めたり、各プロトコルをサポートする必要がある行が含まれます。
+
+*   " `http://apache.*` "(ワイルドカード ドメインの終わりに): これは以前すべて上位-レベルの-ドメイン、すべての可能な 2 文字の Tld を含むと一致 (有用ではないドメインのようにしかし。 co.uk)。 行することが実際に制御、ホワイト リストに登録する必要がある各 TLD を含めます。
+
+*   " `h*t*://ap*he.o*g` "(行方不明のランダムな文字のワイルドカード文字): これらはサポートされていません; ドメインごとに行を含めるし、したプロトコルへの変更は、実際にホワイト リストする必要があります。
 
 ### 構文
 
-IOS にワイルドカードを使用 ( `*` ) [W3C ウィジェット アクセス][1]仕様よりも柔軟性します。
+[Google.com][3]へのアクセス:
 
-すべてのサブドメイン、Tld へのアクセス ( `.com` 、 `.net` 、等)。
-
-    *.google.*
+    <access origin="http://google.com/*" />
     
 
 ## Windows Phone （7 ＆ 8）
 
 ホワイト リスト登録の規則は、 `config.xml` 要素で宣言されていると`<access origin="..." />`.
 
-Android は完全にホワイト リスト構文をサポートします。
-
 ### 構文
 
-[Google.com][2]へのアクセス:
+[Google.com][3]へのアクセス:
 
     <access origin="http://google.com" />
     
@@ -147,21 +176,23 @@ Android は完全にホワイト リスト構文をサポートします。
 
 ### 詳細
 
-アプリケーションのルート ディレクトリの `config.xml` ファイルを使用してドメイン ホワイト リスト登録のルールを指定します、 `<access origin="..." />` の要素。 完全なリファレンス [Tizen 外部ネットワーク リソースへのアクセス マニュアル」を参照してください。 [10]。
+アプリケーションのルート ディレクトリの `config.xml` ファイルを使用してドメイン ホワイト リスト登録のルールを指定します、 `<access origin="..." />` の要素。 完全なリファレンス[Tizen 外部ネットワーク リソースへのアクセスのドキュメント][10]を参照してください。.
+
+ [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 
 ### 構文
 
-[Google.com][2]へのアクセス:
+[Google.com][3]へのアクセス:
 
     <access origin="http://google.com" subdomains="false" />
     
 
-安全な[google.com][3]へのアクセス ( `https://` )。
+安全な[google.com][4]へのアクセス ( `https://` )。
 
     <access origin="https://google.com" subdomains="false" />
     
 
-[Google.com][2]でのすべてのサブドメインへのアクセス:
+[Google.com][3]でのすべてのサブドメインへのアクセス:
 
     <access origin="http://google.com" subdomains="true" />
     

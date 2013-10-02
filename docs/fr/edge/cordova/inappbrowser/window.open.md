@@ -16,56 +16,56 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # window.open
 
-Ouvre une URL dans une nouvelle `InAppBrowser` instance, l'instance de navigateur actuelle ou dans l'Explorateur du système.
+Ouvre une URL dans une nouvelle instance de la classe `InAppBrowser`, une instance déjà existante ou dans le navigateur système.
 
     var ref = window.open(url, target, options);
     
 
-*   **Réf**: référence à la `InAppBrowser` fenêtre. *(InAppBrowser)*
+*   **ref** : référence à la fenêtre `InAppBrowser`. *(InAppBrowser)*
 
-*   **URL**: URL pour charger *(String)*. Appelez `encodeURI()` sur cette option si l'URL contient des caractères Unicode.
+*   **url** : l'URL à charger *(String)*. À encoder au préalable via `encodeURI()` si celle-ci contient des caractères Unicode.
 
-*   **cible**: la cible dans lequel charger l'URL, un paramètre optionnel qui par défaut est `_self` . *(String)*
+*   **target** : la cible du chargement de l'URL, ce paramètre est optionnel, sa valeur par défaut est `_self`. *(String)*
     
-    *   `_self`: Ouvre le Cordova WebView si l'URL figure dans la liste blanche, dans le cas contraire, il s'ouvre dans le`InAppBrowser`.
-    *   `_blank`: S'ouvre dans le`InAppBrowser`.
-    *   `_system`: S'ouvre dans le navigateur web du système.
+    *   `_self` : dirige le chargement vers la WebView Cordova si l'URL figure dans la liste blanche, sinon dans une fenêtre `InAppBrowser`.
+    *   `_blank` : dirige le chargement vers une fenêtre `InAppBrowser`.
+    *   `_system` : dirige le chargement vers le navigateur Web du système.
 
-*   **options**: Options pour le `InAppBrowser` . En option, défaillant à: `location=yes` . *(String)*
+*   **options** : permet de personnaliser la fenêtre `InAppBrowser`. Paramètre facultatif dont la valeur par défaut est `location=yes`. *(String)*
     
-    La `options` chaîne ne doit pas contenir n'importe quel espace vide et paires nom/valeur de chaque fonctionnalité doivent être séparés par une virgule. Les noms de fonction respectent la casse. Toutes les plates-formes prennent en charge la valeur ci-dessous :
+    La chaîne `options` ne doit contenir aucun caractère vide, chaque paire nom/valeur représentant une fonctionnalité doit être séparée de la précédente par une virgule. Les noms de fonctionnalités sont sensibles à la casse. Toutes les plates-formes prennent en charge la valeur ci-dessous :
     
-    *   **localisation**: la valeur `yes` ou `no` pour mettre le `InAppBrowser` de barre d'adresses ou désactiver.
-    ## Android seulement
+    *   **location** : régler à `yes` ou `no` afin d'afficher ou masquer la barre d'adresse de la fenêtre `InAppBrowser`.
+    ## Android uniquement
     
-    *   **closebuttoncaption** - définir une chaîne qui sera la légende pour le bouton "Terminé". 
-    *   **cachée** -' Yes ' pour créer le navigateur et charger la page, mais ne pas le montrer. L'événement load se déclenche lorsque le chargement est terminé. Omettre ou la valeur « non » (par défaut) pour que le navigateur ouvrir et charger normalement. 
-    *   **clearcache** - ' Yes ' pour avoir le cache du navigateur cookie effacé avant l'ouverture de la nouvelle fenêtre
-    *   **clearsessioncache** - ' Yes ' pour avoir le cache de cookie de session autorisé avant l'ouverture de la nouvelle fenêtre
-    ## iOS seulement
+    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". 
+    *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
+    *   **clearcache** : régler sur 'yes' pour que les cookies du navigateur soient effacés avant l'ouverture de la nouvelle fenêtre
+    *   **clearsessioncache** : régler sur 'yes' afin que les cookies de session soient supprimés avant l'ouverture de la nouvelle fenêtre
+    ## iOS uniquement
     
-    *   **closebuttoncaption** - définir une chaîne qui sera la légende pour le bouton "Terminé". Notez que vous devrez localiser cette valeur vous-même.
-    *   **cachée** -' Yes ' pour créer le navigateur et charger la page, mais ne pas le montrer. L'événement load se déclenche lorsque le chargement est terminé. Omettre ou la valeur « non » (par défaut) pour que le navigateur ouvrir et charger normalement. 
-    *   **barre d'outils** - la valeur "Oui" ou "non" pour activer ou désactiver la la barre d'outils pour la InAppBrowser (par défaut sur 'yes')
-    *   **enableViewportScale**: la valeur `yes` ou `no` pour empêcher la fenêtre de mise à l'échelle par une balise meta (par défaut,`no`).
-    *   **mediaPlaybackRequiresUserAction**: la valeur `yes` ou `no` pour empêcher le HTML5 audio ou vidéo de la lecture automatique (par défaut,`no`).
-    *   **allowInlineMediaPlayback**: la valeur `yes` ou `no` pour permettre la lecture du média inline HTML5, affichage dans la fenêtre du navigateur plutôt que d'une interface de lecture spécifique au périphérique. L'HTML `video` élément doit également inclure la `webkit-playsinline` attribut (par défaut,`no`)
-    *   **keyboardDisplayRequiresUserAction**: la valeur `yes` ou `no` pour ouvrir le clavier lorsque les éléments reçoivent le focus par l'intermédiaire de JavaScript `focus()` appel (par défaut,`yes`).
-    *   **suppressesIncrementalRendering**: la valeur `yes` ou `no` d'attendre que toutes les nouveautés de vue sont reçue avant d'être restitué (par défaut,`no`).
-    *   **presentationstyle**: la valeur `pagesheet` , `formsheet` ou `fullscreen` pour définir le [style de présentation][1] (par défaut,`fullscreen`).
-    *   **transitionstyle**: la valeur `fliphorizontal` , `crossdissolve` ou `coververtical` pour définir le [style de transition][2] (par défaut,`coververtical`).
+    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". Dans le cas d'une application multilingue, vous devrez localiser cette valeur par vos propres moyens.
+    *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
+    *   **toolbar** : régler sur 'yes' ou 'no' afin d'afficher ou masquer la barre d'outils de la fenêtre InAppBrowser ('yes' par défaut).
+    *   **enableViewportScale** : selon si la valeur est `yes` ou `no`, une balise meta est injectée avec pour but de permettre ou empêcher l'utilisateur de zoomer dans le viewport (`no` par défaut).
+    *   **mediaPlaybackRequiresUserAction** : selon si la valeur est `yes` ou `no`, la lecture automatique de contenus HTML5 audio ou vidéo (c'est à dire sans action préalable de l'utilisateur) est désactivée ou activée (`no` par défaut).
+    *   **allowInlineMediaPlayback** : régler sur `yes` ou `no` pour permettre ou interdire la lecture de contenu HTML5 audio ou vidéo directement au sein du navigateur plutôt que dans une fenêtre de lecture spécifique à l'appareil. L'élément HTML `video` doit également comporter l'attribut `webkit-playsinline` (`no` par défaut)
+    *   **keyboardDisplayRequiresUserAction** : régler sur `yes` ou `no` pour interdire ou autoriser l'ouverture du clavier lorsque des éléments de formulaire reçoivent le focus par l'intermédiaire d'un appel à la méthode JavaScript `focus()` (`yes` par défaut).
+    *   **suppressesIncrementalRendering** : selon si la valeur est `yes` ou `no`, le rendu de la vue attendra ou non que tout nouveau contenu soit reçu (`no` par défaut).
+    *   **presentationstyle** : régler sur `pagesheet`, `formsheet` ou `fullscreen` afin d'obtenir le [style de présentation][1] de fenêtre souhaité (`fullscreen` par défaut).
+    *   **transitionstyle**: régler la valeur à `fliphorizontal`, `crossdissolve` ou `coververtical` afin de définir le [style de transition][2] de fenêtre souhaité (`coververtical` par défaut).
 
  [1]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle
  [2]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry
 *   iOS
 *   Windows Phone 7 et 8
 
-## Petit exemple
+## Exemple court
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');

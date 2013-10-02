@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  Sélectionnez votre projet et faites un clic droit pour sélectionner **Ajouter → nouveau Item...**
     
-    *   Préférence ajoutez-le dans le dossier « Plugins », mais c'est à vous
+    *   Préférence l'ajouter dans le répertoire « Plugins », mais c'est à vous
 
 2.  Sélectionnez « Classe » et nommez-le`Echo.cs`
     

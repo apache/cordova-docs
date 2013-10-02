@@ -39,7 +39,7 @@ Folgen Sie den Anweisungen [hier][1] , um Ihre apps Windows Store einreichen.
 
 *   Richten Sie Ihre bevorzugte Variante der Visual Studio-2012. Alle das Produkt bezahlten Versionen (Professional, usw.) können Sie Windows Store apps zu bauen. Sie benötigen **Express für Windows 8** baut Windows Store apps mit der [Express-Editionen][2].
 
-*   Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][3]. Arbeiten Sie den `lib\windows-8` Unterordner.
+*   Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][3]. Arbeiten Sie der `lib\windows-8` Unterverzeichnis.
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

@@ -37,8 +37,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-orientation.git
-        $ cordova plugin rm org.apache.cordova.core.device-orientation
+        $ cordova plugin add org.apache.cordova.device-orientation
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-orientation' ]
+        $ cordova plugin rm org.apache.cordova.device-orientation
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
@@ -68,4 +70,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
