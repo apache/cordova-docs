@@ -17,39 +17,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Domain Whitelist Guide
+# Whitelist Guide
 
 ## Overview
 
-Domain whitelisting is a security model that controls access to
-outside domains, such as `http://google.com`.  Apache Cordova's
-default security policy allows access to any site. Before moving your
-application to production, you should review its whitelist and declare
-access to specific network domains and subdomains.
+Resource whitelisting is a security model that controls access to
+external network resources, such as `http://google.com`.  Apache Cordova's
+default security policy allows access to any resource on any site on the
+Internet. Before moving your application to production, you should review
+its whitelist and declare access to specific network domains and subdomains.
 
 ## Specification
 
-Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network domains. In the future, Apache Cordova will abstract the platform whitelisting implementations to the W3C Widget Access specification. However, for now each platform must implement its own domain whitelisting.
+Domain whitelisting lays the groundwork for the [W3C Widget Access][1] specification. In the Widget Access specification, the `<access>` element is used to declare access to specific network resources. Apache Cordova extends this concept to allow whitelisting of individual network resources (URLs). In the future, Apache Cordova will abstract the platform whitelisting implementations. However, for now each platform implements its own resource or domain whitelisting. The differences between platform implementations are described later in this document.
+
+The general format for whitelist entries follows the "[match pattern][11]" specification for Google Chrome Packaged Apps. Resources are specified by URL, but an asterisk (\*) character may be used as a "wildcard" in several places to indicate "any value may go here". Specific examples are shown below.
 
 ## Syntax
 
-Access to [google.com][2]:
+Access to all resources at [google.com][2]:
 
-    http://google.com
+    http://google.com/*
 
-Access to the secure [google.com][3] (`https://`):
+Access to all resources at the secure [google.com][3] (`https://`):
 
-    https://google.com
+    https://google.com/*
 
-Access to the subdomain [maps.google.com][4]:
+Access to the specific subdomain [maps.google.com][5]:
 
-    http://maps.google.com
+    http://maps.google.com/*
 
-Access to all the subdomains on [google.com][2] (e.g., [mail.google.com][5] and [docs.google.com][6]):
+Access to all the subdomains on [google.com][2] (e.g., [mail.google.com][6] and [docs.google.com][7]):
 
-    http://*.google.com
+    http://*.google.com/*
 
-Access to all domains (e.g., [google.com][2] and [developer.mozilla.org][7]):
+Access to all resources on [www.google.com][4] under the "/mobile" path:
+
+    http://www.google.com/mobile/*
+
+Access to [google.com][2] on any protocol (e.g., HTTP, HTTPS, FTP, etc):
+
+    *://google.com/*
+
+Access to all resouces on the Internet (e.g., [google.com][2] and [developer.mozilla.org][8]):
 
     *
 
@@ -66,7 +76,7 @@ Android fully supports whitelisting syntax.
 
 Access to [google.com][2]:
 
-    <access origin="http://google.com" />
+    <access origin="http://google.com/*" />
 
 ## BlackBerry 10
 
@@ -77,11 +87,11 @@ the element `<access origin="..." />`.
 
 BlackBerry 10 handles wildcards differently than other platforms in two ways:
 
-1) Content accessed by XMLHttpRequest must be declared explicity. origin="*" will
+1) Content accessed by XMLHttpRequest must be declared explicity. origin="\*" will
    not be respected for this use case. Alternatively, all web security may be
    disabled using a preference.
  
-2) subdomains="true" may be used in place of "*.domain"
+2) subdomains="true" may be used in place of "\*.domain"
 
 ### Syntax
 
@@ -89,7 +99,7 @@ Access to [google.com][2]:
 
     <access origin="http://google.com" subdomains="false" />
 
-Access to  [maps.google.com][4]:
+Access to  [maps.google.com][5]:
 
     <access origin="http://maps.google.com" subdomains="false" />
 
@@ -105,8 +115,7 @@ Disable all web security:
 
     <preference name="websecurity" value="disable" />
 
-iOS
----
+## iOS
 
 ### Details
 
@@ -114,23 +123,15 @@ The whitelisting rules are found in `AppName/config.xml` and declared with the e
 
 iOS fully supports whitelisting syntax.
 
-__NOTE:__ origins specified without a protocol, such as
-`www.apache.org` rather than `http://www.apache.org`, default to all
-of the `http`, `https`, `ftp`, and `ftps` schemes.
-
 ### Syntax
 
-Wildcards on iOS (`*`) are more flexible than the [W3C Widget Access][1] specification.
+Access to [google.com][2]:
 
-Access to all subdomains and TLDs (`.com`, `.net`, etc):
-
-    *.google.*
+    <access origin="http://google.com/*" />
 
 ## Windows Phone (7 & 8)
 
 The whitelisting rules are found in `config.xml` and declared with the element `<access origin="..." />`.
-
-Android fully supports whitelisting syntax.
 
 ### Syntax
 
@@ -167,9 +168,11 @@ Access to all domains, including `file://` protocol:
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com
 [3]: https://google.com
-[4]: http://maps.google.com
-[5]: http://mail.google.com
-[6]: http://docs.google.com
-[7]: http://developer.mozilla.org
-[8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
-[9]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
+[4]: http://www.google.com
+[5]: http://maps.google.com
+[6]: http://mail.google.com
+[7]: http://docs.google.com
+[8]: http://developer.mozilla.org
+[9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+[10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
+[11]: http://developer.chrome.com/apps/match_patterns.html
