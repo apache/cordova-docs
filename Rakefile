@@ -31,20 +31,21 @@ end
 task :spec
 
 desc "Increment the version - generates a release and updates the edge documentation"
-task :version, :nextVersion do |t, args|
+task :version, :nextVersion, :lang do |t, args|
     # get current and next version
     nextVersion = args[:nextVersion].strip
+    lang = args[:lang].strip
     prevVersion = File.read('VERSION').sub(/rc\d+$/, '').strip # remove release candidate
     
     # generate a release
-    edge_dir = File.join('docs', 'en', 'edge')
-    release_dir = File.join('docs', 'en', nextVersion)
+    edge_dir = File.join('docs', lang, 'edge')
+    release_dir = File.join('docs', lang, nextVersion)
     FileUtils.cp_r(edge_dir, release_dir)
     
     # update version number in new release directory
     _nextVersion = nextVersion.sub(/rc\d+$/, '') # cordova file references do not include the RC
     unless prevVersion == _nextVersion
-        files = Dir.glob(File.join('docs', 'en', nextVersion, '**', '*'))
+        files = Dir.glob(File.join('docs', lang, nextVersion, '**', '*'))
         
         files.sort.each do |file|
           next if File.directory?(file) or file !~ /md|html/

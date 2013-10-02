@@ -151,8 +151,8 @@ Generated a Version Release
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
 
-    # generate version 1.7.0
-    rake version[1.7.0]
+    # generate version 1.7.0 for english.
+    rake version[1.7.0,en]
 
 If while running rake you get the error 
 
