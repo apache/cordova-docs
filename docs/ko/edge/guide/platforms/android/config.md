@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 안 드 로이드 구성
 
-`config.xml`파일을 다양 한 코르도바 설정을 제어 합니다. 이 응용 프로그램에서와 CordovaWebView 인스턴스 당 적용 됩니다.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
 
-## `< 기본 설정 >`
+*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다.
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-다른 다양 한 환경 설정 (로 `<preference>` 태그) 소멸 되지 않고 기존 애플 리 케이 션에 기본. 사용할 수 특혜는:
+*   `ErrorUrl`: 표준 HTTP 오류 400-500 범위에 대 한 응답에서을 표시 하는 오류 페이지를 지정 합니다. 홈 페이지와 다른 웹 자산을 포함 하는 최상위 디렉터리에서 지정된 된 파일을 놓습니다.
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(boolean, 기본값은 `true` ): 설정 `false` 역사 수정 전에 안 드 로이드 3.x에 hashtag 오류를 해결 하는 데 사용 된 역사 shim을 사용 하려는 경우. (참고:이 설정은 2013 년 4에서에서 사용 되지 않는 것입니다)
+*   `LoadingDialog`: 응용 프로그램을 로드할 때 기본 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`: 응용 프로그램을 로드할 때 기본 로드 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
+*   `LoadingPageDialog`: 애플 리 케이 션 내에서 하위 페이지를 로드할 때 기본 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`: 하위 페이지를 로드할 때 기본 로드 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
+*   `LoadUrlTimeoutValue`(숫자, 기본값은 `20000` ): 시간 초과 오류를 throw 하기 전에 대기할 시간을 페이지를 로드할 때. 이 예제에서는 10 초 보다는 오히려 20를 지정합니다.
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`: 응용 프로그램에 대 한 오류 페이지를 설정 합니다. 안 드 로이드 프로젝트에 있어야`file://android_asset/www/`
+*   `SplashScreen`: 파일에 확장명 뺀 이름에 `res/drawable` 디렉터리. 다양 한 자산에는 다양 한 하위 디렉터리에이 일반적인 이름을 공유 해야 합니다.
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`: 응용 프로그램에 대 한 배경 색을 설정 합니다. 첫 번째 바이트를 대표 하는 알파 값, 표준 RGB 값으로 다음 3 바이트와 4 바이트 16 진수 값을 지원 합니다. 예를 들어, `0x00000000` 은 검은색.
-
-*   `loadUrlTimeoutValue`: 코르 도우 바 응용 프로그램에서 시간 초과 오류를 던지기 전에 기다려야 한다 얼마나 많은 시간.
-
-*   `keepRunning`(boolean, 기본값은 `true` ): 코르도바 숙박 백그라운드에서 실행 여부를 결정 합니다.
-
-*   `splashscreen`: 파일에 확장명 뺀 이름에 `res/drawable` 디렉터리. 여러 자산을가지고 그들은 모두 그들의 각각 디렉터리에이 일반적인 이름을 공유 해야 합니다.
-
-*   `disallowOverscroll`(boolean, 기본값은 `false` ): 설정 `true` 사용자는 webview의 가장자리를 넘어 스크롤할 때 광선을 비활성화 하려면.
-
-## `< 플러그인 >`
-
-안 드 로이드 지원 사용 하 여 `<feature>` 를 아날로그로 `<plugin>` 요소.
+*   `SplashScreenDelay`(번호, 기본값: `5000` ): 시간 시작 화면 이미지를 표시 합니다.
+    
+        <preference name="SplashScreenDelay" value="10000"/>

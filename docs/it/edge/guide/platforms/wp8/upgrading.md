@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Questa guida Mostra come modificare i progetti Windows Phone, entrambe le versioni 7 e 8, eseguire l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI. La sezione seguente viene illustrato come eseguire l'aggiornamento da progetti non-CLI.
 
+## Aggiornamento a 3.1.0 da 3.0.0
+
+Per i progetti creati con il cordova CLI:
+
+1.  Aggiornamento del `cordova` versione CLI - vedere l'interfaccia della riga di comando 
+2.  Eseguire `cordova platform update wp8` (o `wp7` , per le piattaforme che hai aggiunto al progetto).
+
+Per i progetti non creati con la CLI di cordova, eseguire:
+
+1.  `bin\update <project_path>`
+
 ## Aggiornamento per il CLI (3.0.0) da 2.9.0
 
 1.  Creare un nuovo progetto di Apache Cordova 3.0.0 utilizzando la CLI, cordova, come descritto in l'interfaccia della riga di comando.
@@ -217,11 +228,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -235,11 +246,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -253,11 +264,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -271,11 +282,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -289,11 +300,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -307,11 +318,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -325,11 +336,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -343,11 +354,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -361,11 +372,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** È possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 
@@ -379,11 +390,11 @@ Nella finestra Esplora soluzioni di Visual Studio:
 
 1.  Eliminare `GapLib/WP7CordovaClassLib.dll` dal progetto.
 
-2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella cartella **riferimenti** .
+2.  Rimuovere il riferimento a `WP7CordovaClassLib` nella directory **riferimenti** .
 
 3.  Tasto destro del mouse su **riferimenti** e scegliere **Aggiungi riferimento**.
 
-4.  Passare alla nuova distribuzione e aggiungere il file.`WP7CordovaClassLib.dll`.
+4.  Passare alla nuova distribuzione e aggiungere il `WP7CordovaClassLib.dll` file.
     
     *   **Nota:** è possibile visualizzare la versione della DLL cliccando col tasto destro sul riferimento e selezionando **Proprietà**.
 

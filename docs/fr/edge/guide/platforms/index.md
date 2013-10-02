@@ -58,6 +58,7 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 *   Guide de plateforme Windows Phone 8
 *   Guide de plateforme Windows Phone 7
+*   Configuration de Windows Phone
 *   Windows Phone outils de ligne de commande
 *   La mise à niveau de Windows Phone
 
@@ -70,9 +71,3 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 ## Paciarelli
 
 *   Guide de la plate-forme paciarelli
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

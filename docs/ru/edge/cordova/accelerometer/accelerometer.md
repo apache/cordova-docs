@@ -38,8 +38,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Cordova реализует интерфейсы API как *plugins*. Используйте команду CLI `plugin`, описанные в интерфейс командной строки, чтобы добавить или удалить расширения для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device-motion.git
-        $ cordova plugin rm org.apache.cordova.core.device-motion
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-motion' ]
+        $ cordova plugin rm org.apache.cordova.device-motion
     
 
 Эти команды применяются для всех платформ, но имеют отличия конфигурации для платформ описанных ниже:
@@ -81,4 +83,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Некоторые платформы могут поддерживать эти функцию без необходимости специальной настройки. Смотрите описание "Поддержка платформ".
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.

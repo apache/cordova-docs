@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Visual Studio 2012의 당신의 선호 variant를 설정 합니다. 제품의 유료 버전 (전문, 등)의 모든 Windows 스토어 애플 리 케이 션을 만들 수 있도록. **윈도우 8에 대 한 익스프레스** [Express 버전][2] 을 사용 하 여 Windows 스토어 애플 리 케이 션을 구축 해야.
 
-*   다운로드 및 [코르도바][3]의 최신 복사본을 추출 합니다. 일 하 게 될 것입니다는 `lib\windows-8` 하위 폴더.
+*   다운로드 및 [코르도바][3]의 최신 복사본을 추출 합니다. 당신은에서 작업 하는 것은 `lib\windows-8` 하위 디렉터리.
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

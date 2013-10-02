@@ -32,19 +32,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 칼은 Xcode 프로젝트 (CordovaLib 하위 프로젝트)에 추가
 
-1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 폴더 위치에 코르 도우 바 소스 예`~/Documents/Cordova`.
+1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구 디렉터리 위치로 코르도바 소스 예`~/Documents/Cordova`.
 
 2.  실행 중인 경우 Xcode를 종료 합니다.
 
 3.  위의 다운로드 한 소스를 넣으면 디렉터리로 이동 Terminal.app을 사용 하 여.
 
-4.  복사는 `config.xml` 디스크의 프로젝트 폴더에 파일 (위의 필수 구성 요소 참조).
+4.  복사는 `config.xml` 디스크에 프로젝트 디렉터리에 파일 (위의 필수 구성 요소 참조).
 
 5.  끌어서 놓기는 `config.xml` Xcode 프로젝트 탐색기에 파일.
 
 6.  **어떤 추가 된 폴더에 대 한 그룹 만들기** 라디오 단추를 선택 하 고 **완료** 를 누릅니다.
 
-7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 파일 (영구 폴더에서 위의 위치와 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
+7.  끌어서 놓기는 `CordovaLib.xcodeproj` Xcode 프로젝트 탐색기에 파일 (영구 디렉터리에서 위에 위치 하 고 그것에 있어야 한다는 `CordovaLib` 하위 디렉터리).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## HTML, CSS, 자바 스크립트 자산 추가
 
-1.  디스크에서 프로젝트에 새 폴더를 만들려면 `www` 예를 들면.
+1.  디스크에서 프로젝트에 새 디렉터리를 만들 `www` 예를 들면.
 
-2.  이 폴더에 HTML, CSS, 자바 스크립트 자산을 넣어.
+2.  이 디렉토리에 귀하의 HTML, CSS, 자바 스크립트 자산을 넣어.
 
-3.  Xcode 프로젝트 탐색기에는 폴더를 끌어서 설정 합니다.
+3.  Xcode 프로젝트 탐색기에 디렉토리를 끌어서 설정 합니다.
 
 4.  **어떤 추가 된 폴더에 대 한 폴더 참조 만들기** 라디오 단추를 선택 하십시오.
 

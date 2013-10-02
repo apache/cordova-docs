@@ -24,7 +24,7 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
 Die Windows Phone-Befehlszeilen-Tools unterstützen, erstellen, Erstellung und Ausführung von neue Projekten. Befehle müssen über eine Cmd oder Powershell-Eingabeaufforderung ausgeführt werden.
 
-WP8-Repo jetzt enthält Code zum Erstellen von WP7 + WP8 apps. Das Repo enthält Unterordner für jede: wp7 / und wp8 /
+WP8-Repo jetzt enthält Code zum Erstellen von WP7 + WP8 apps. Das Repo hat Unterverzeichnisse für die einzelnen: `wp7/` und`wp8/`.
 
 ## Erstellen Sie ein Projekt
 

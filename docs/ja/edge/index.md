@@ -43,10 +43,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        構成のリファレンス
+        Config.xml ファイル
       </h2>
       
       <span>アプリの機能をカスタマイズします。</span>
+    </li>
+    <li>
+      <h2>
+        アイコンとスプラッシュ画面
+      </h2>
+      
+      <span>イメージを表示するアプリをカスタマイズします。</span>
     </li>
     <li>
       <h2>
@@ -71,10 +78,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        ドメイン ホワイト リスト ガイド
+        ホワイト リスト ガイド
       </h2>
       
-      <span>外部ドメインへのアプリケーション アクセスを付与します。</span>
+      <span>外部リソースへのアプリケーション アクセスを付与します。</span>
     </li>
     <li>
       <h2>

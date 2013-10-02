@@ -42,14 +42,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin rm org.apache.cordova.core.file
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file' ]
+        $ cordova plugin rm org.apache.cordova.file
     
 
 ファイル転送プラグインを使用するには、を個別に追加する必要があります。
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
-        $ cordova plugin rm org.apache.cordova.core.file-transfer
+        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file-transfer' ]
+        $ cordova plugin rm org.apache.cordova.file-transfer
     
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
@@ -97,4 +101,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

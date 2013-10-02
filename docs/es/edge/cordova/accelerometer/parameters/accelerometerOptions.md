@@ -16,8 +16,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # accelerometerOptions
 
-Un parámetro opcional para personalizar la recuperación de los valores del acelerómetro.
+Parámetro opcional para personalizar la obtención de valores del acelerómetro.
 
 ## Opciones
 
-*   **frequency**: ¿Con qué frecuencia se debe recuperar el `Acceleration` en milisegundos. *(Número)* (por defecto: 10000)
+*   **frequency**: Con qué frecuencia (en segundos) se debe recuperar la `Acceleration`.*(Número)* (por defecto: 10000)

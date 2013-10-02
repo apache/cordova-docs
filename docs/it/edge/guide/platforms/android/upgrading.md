@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Questa guida Mostra come modificare progetti Android per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
 
+## L'aggiornamento a 3.1.0 da 3.0.0
+
+Per i progetti creati con il cordova CLI:
+
+1.  Aggiornamento del `cordova` versione CLI - vedere l'interfaccia della riga di comando 
+2.  Eseguire`cordova platform update android`
+
+Per i progetti non creati con la CLI di cordova, eseguire:
+
+1.  `bin/aggiornamento < project_path >`
+
 ## Aggiornamento per il CLI (3.0.0) da 2.9.0
 
 1.  Creare un nuovo progetto di Apache Cordova 3.0.0 utilizzando la CLI, cordova, come descritto in l'interfaccia della riga di comando.

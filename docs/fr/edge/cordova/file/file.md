@@ -14,9 +14,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Fichier
+# File
 
-> Une API pour lire, écrire et naviguer dans les hiérarchies de système de fichiers, basés sur l' [api du fichier w3c][1].
+> Une API permettant de lire, écrire et naviguer dans les hiérarchies d'un système de fichiers, basée sur [celle du w3c][1].
 
  [1]: http://www.w3.org/TR/FileAPI
 
@@ -40,19 +40,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-        $ cordova plugin rm org.apache.cordova.core.file
+        $ cordova plugin add org.apache.cordova.file
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file' ]
+        $ cordova plugin rm org.apache.cordova.file
     
 
-Pour utiliser le plugin de transfert de fichiers vous devez ajouter séparément.
+Pour utiliser le plugin de transfert de fichiers vous devez ajouter celui-ci séparément :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
-        $ cordova plugin rm org.apache.cordova.core.file-transfer
+        $ cordova plugin add org.apache.cordova.file-transfer
+        $ cordova plugin ls
+        [ 'org.apache.cordova.file-transfer' ]
+        $ cordova plugin rm org.apache.cordova.file-transfer
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
 *   Android
     
@@ -87,7 +91,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </rim:permissions>
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans `config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -97,4 +101,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

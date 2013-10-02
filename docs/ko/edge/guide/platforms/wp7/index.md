@@ -46,9 +46,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   다운로드 하 고 [Windows Phone SDK][3] 설치
 
-*   다운로드 및 [코르도바][4]의 최신 복사본을 추출 합니다. 일 하 게 될 것입니다는 `lib\windows-phone-8\wp7` 하위 폴더, `lib\windows-phone-8\wp8` 코르도바의 Windwos 전화 8 버전이 포함 되어 있습니다.
+*   다운로드 및 [코르도바][4]의 최신 복사본을 추출 합니다. 일 하 게 될 것입니다는 `lib\windows-phone-8\wp7` 하위 디렉터리, `lib\windows-phone-8\wp8` 코르도바의 Windwos 전화 8 버전이 포함 되어 있습니다.
 
-*   폴더에 CordovaWP7\_x\_x_x.zip 파일 복사: \My Documents\Visual 스튜디오 2012\Templates\ProjectTemplates\
+*   복사는 `CordovaWP7_x_x_x.zip` 파일은 `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` 디렉터리.
 
  [3]: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27570/
  [4]: http://phonegap.com/download
@@ -80,7 +80,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 4. 프로젝트 구조를 검토
 
-*   `www`폴더 포함 당신의 코르도바 `html/js/css` 및 응용 프로그램에 포함 된 기타 리소스.
+*   `www`디렉터리에 당신의 코르도바 `html/js/css` 및 응용 프로그램에 포함 된 기타 리소스.
 
 *   여기에 추가 하는 콘텐츠 Visual Studio 프로젝트의 일부가 될 필요가 있고 내용으로 설정 해야 합니다.
 

@@ -29,8 +29,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Depuis la version 3.0, Cordova implémente des APIs au niveau du périphérique en tant que *plugins*. Utilisez le `plugin` de l'interface en ligne de commande, décrite dans l'Interface de ligne de commande, pour ajouter ou supprimer cette fonction pour un projet :
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
-        $ cordova plugin rm org.apache.cordova.core.camera
+        $ cordova plugin add org.apache.cordova.camera
+        $ cordova plugin ls
+        [ 'org.apache.cordova.camera' ]
+        $ cordova plugin rm org.apache.cordova.camera
     
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
@@ -89,4 +91,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

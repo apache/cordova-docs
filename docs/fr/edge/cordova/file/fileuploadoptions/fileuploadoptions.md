@@ -16,26 +16,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # FileUploadOptions
 
-A `FileUploadOptions` objet peut être passé à la `FileTransfer` de l'objet `upload()` pour spécifier des paramètres supplémentaires pour le script d'upload.
+Un objet `FileUploadOptions` peut être passé à la méthode `upload()` de l'objet `FileTransfer` pour spécifier des paramètres supplémentaires au script d'upload.
 
 ## Propriétés
 
-*   **fileKey**: le nom de l'élément form. Valeur par défaut est `file` . (DOMString)
+*   **fileKey** : le nom de l'élément form. La valeur par défaut est `file`. (DOMString)
 
-*   **fileName**: le nom de fichier à utiliser lorsque vous enregistrez le fichier sur le serveur. Valeur par défaut est `image.jpg` . (DOMString)
+*   **fileName** : le nom de fichier à utiliser pour l'enregistrement sur le serveur. La valeur par défaut est `image.jpg`. (DOMString)
 
-*   **type MIME**: le type mime des données à télécharger. Valeur par défaut est `image/jpeg` . (DOMString)
+*   **mimeType** : le type mime des données à envoyer. La valeur par défaut est `image/jpeg`. (DOMString)
 
-*   **params**: un ensemble de paires clé/valeur facultative pour passer dans la requête HTTP. (Objet)
+*   **params** : un ensemble de paires clé/valeur facultative à passer dans la requête HTTP. (Objet)
 
-*   **chunkedMode**: s'il faut télécharger les données en mode streaming mémorisé en bloc. Valeur par défaut est `true` . (Boolean)
+*   **chunkedMode** : s'il faut transmettre ou non les données en mode streaming de bloc. La valeur par défaut est `true`. (Boolean)
 
-*   **en-têtes**: une carte des valeurs d'en-tête en-tête/nom. Un tableau permet de spécifier plusieurs valeurs. (Objet)
+*   **headers** : un objet représentant les noms et valeurs d'en-têtes à transmettre. Utiliser un tableau permet de spécifier plusieurs valeurs. (Objet)
 
 ## Description
 
-A `FileUploadOptions` objet peut être passé à la `FileTransfer` de l'objet `upload()` pour spécifier des paramètres supplémentaires pour le script d'upload.
+Un objet `FileUploadOptions` peut être passé à la méthode `upload()` de l'objet `FileTransfer` pour spécifier des paramètres supplémentaires au script d'upload.
 
-## Bizarrerie de WP7
+## Particularités de WP7
 
-*   **chunkedMode :**: ignoré sur WP7.
+*   la propriété **chunkedMode** est simplement ignorée sous WP7.

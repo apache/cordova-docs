@@ -25,11 +25,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Description
 
-L'accéléromètre est un capteur de mouvement qui détecte la modification (delta) en mouvement par rapport à la position actuelle. L'accéléromètre permet de détecter un mouvement 3D le long de l'axe *x*, *y*et *z*.
+L'accéléromètre est un capteur de mouvement qui détecte la modification (delta) en mouvement par rapport à la position actuelle. L'accéléromètre permet de détecter un mouvement 3D le long des axes *x*, *y*et *z*.
 
-La méthode `accelerometer.watchAcceleration` récupère l'`Acceleration` actuelle de l'appareil à intervalle régulier, exécutant la fonction de callback `accelerometerSuccess` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
+La méthode `accelerometer.watchAcceleration` récupère `Acceleration` de l'appareil à intervalle régulier, exécutant la fonction de callback `accelerometerSuccess` à chaque fois. Spécifiez l'intervalle, en millisecondes, via le paramètre `frequency` de l'objet `acceleratorOptions`.
 
-L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `accelerometer.clearWatch` d'arrêter de surveiller l'accéléromètre.
+L'ID de surveillance référence les intervalles de surveillance de l'accéléromètre et peut être utilisé avec `accelerometer.clearWatch` pour arrêter de surveiller l'accéléromètre.
 
 ## Plates-formes prises en charge
 
@@ -40,7 +40,7 @@ L'ID de surveillance référence les intervalles de surveillance de l'accéléro
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple rapide
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -124,6 +124,6 @@ L'ID de surveillance référence les intervalles de surveillance de l'accéléro
     </html>
     
 
-## Particularités iOS
+## Caprices d'iOS
 
 L'API appelle la fonction de callback de succès à l'intervalle demandé mais restreint l'éventail des demandes à l'appareil entre 40ms et 1000ms. Par exemple, si vous demandez un intervalle de 3 secondes, (3000ms), l'API demande des données de l'appareil toutes les 1 seconde, mais exécute seulement le callback de succès toutes les 3 secondes.

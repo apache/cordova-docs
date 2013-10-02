@@ -24,7 +24,7 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
 Les outils de ligne de commande Windows Phone prend en charge la création, génération et l'exécution de nouveaux projets. Commandes doivent être exécutées à partir d'une invite cmd ou powershell.
 
-Le repo WP8 inclut maintenant le code pour construire les deux WP7 + WP8 apps. Le repo a des sous-dossiers pour chaque : wp7 / et wp8 /
+Le repo WP8 inclut maintenant le code pour construire les deux WP7 + WP8 apps. Le repo a des sous-répertoires pour chaque : `wp7/` et`wp8/`.
 
 ## Créer un projet
 

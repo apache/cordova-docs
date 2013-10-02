@@ -95,3 +95,10 @@ Vibra il dispositivo per il periodo di tempo specificato.
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored
+        
+
+## BB10 stranezze
+
+vibrare la funzione dell'oggetto navigator
+
+        navigator.vibrate(1000);  // vibrate for 1 second

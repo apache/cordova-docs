@@ -14,52 +14,68 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Domain-Whitelist-Guide
+# Whitelist-Guide
 
 ## Übersicht
 
-Domäne Whitelisting ist ein Sicherheitsmodell, das steuert Zugang zu externen Domänen, wie z. B. `http://google.com` . Apache Cordova Standardsicherheitsrichtlinien ermöglicht Zugriff auf jeder Website. Vor dem Umzug Ihre Anwendung auf die Produktion, sollten Sie überprüfen ihre Whitelist und deklarieren Zugang zu bestimmten Netzwerk-Domains und Subdomains.
+Ressource Whitelisting ist ein Sicherheitsmodell, das steuert Zugang zu externen Netzwerk-Ressourcen, wie z. B. `http://google.com` . Apache Cordova Standardsicherheitsrichtlinien ermöglicht den Zugriff auf eine Ressource auf einer beliebigen Website im Internet. Bevor Sie Ihre Anwendung auf die Produktion verschieben, sollten Sie überprüfen ihrer Whitelist und deklarieren Zugang zu bestimmten Netzwerk-Domains und Sub-Domains.
 
 ## Spezifikation
 
-Domäne Whitelisting legt den Grundstein für die Spezifikation des [W3C Widget Zugang][1] . In der Widget-Zugang-Spezifikation die `<access>` Element wird verwendet, um Zugriff auf bestimmte Netzwerkdomänen zu deklarieren. Apache Cordova wird in Zukunft die Plattform-Whitelisting-Implementierungen der Spezifikation des W3C Widget Zugang abstrahieren. Jedoch muss jede Plattform vorerst seine eigene Domäne-Whitelisting implementieren.
+Domäne Whitelisting legt den Grundstein für die Spezifikation des [W3C Widget Zugang][1] . In der Widget-Zugang-Spezifikation die `<access>` Element wird verwendet, um Zugriff auf bestimmte Netzwerkressourcen zu deklarieren. Apache Cordova erweitert dieses Konzept um Whitelisting der einzelnen Netzwerk-Ressourcen (URLs) zu ermöglichen. Apache Cordova wird in Zukunft die Plattform-Whitelisting-Implementierungen abstrahieren. Jedoch vorerst implementiert jede Plattform eine eigene Ressource oder Domäne Whitelisting. Die Unterschiede zwischen Plattform-Implementierungen werden später in diesem Dokument beschrieben.
 
  [1]: http://www.w3.org/TR/widgets-access/
 
+Das allgemeine Format für Whitelist-Einträge folgt der "[Mustervergleich][2]" Spezifikation für Google Chrome verpackt Apps. Ressourcen werden durch die URL, aber Sternchen angegeben (*) Zeichen kann als "Platzhalter" an mehreren Stellen verwendet werden, um anzuzeigen, "hier kann jeder beliebige Wert gehen". Konkrete Beispiele sind unten aufgeführt.
+
+ [2]: http://developer.chrome.com/apps/match_patterns.html
+
 ## Syntax
 
-Zugang zu [google.com][2]:
+Zugriff auf alle Ressourcen unter [google.com][3]:
 
- [2]: http://google.com
+ [3]: http://google.com
 
-    http://google.com
+    http://google.com/*
     
 
-Zugriff auf die sicheren [google.com][3] ( `https://` ):
+Zugriff auf alle Ressourcen auf die sichere [google.com][4] ( `https://` ):
 
- [3]: https://google.com
+ [4]: https://google.com
 
-    https://google.com
+    https://Google.com/ *
     
 
-Zugriff auf die Sub-Domain [maps.google.com][4]:
+Zugriff auf die bestimmte Subdomäne [maps.google.com][5]:
 
- [4]: http://maps.google.com
+ [5]: http://maps.google.com
 
-    http://maps.google.com
+    http://maps.google.com/*
     
 
-Zugriff auf alle Sub-Domains auf [google.com][2] (z.B. [mail.google.com][5] und [docs.google.com][6]):
+Zugriff auf alle Sub-Domains auf [google.com][3] (z.B. [mail.google.com][6] und [docs.google.com][7]):
 
- [5]: http://mail.google.com
- [6]: http://docs.google.com
+ [6]: http://mail.google.com
+ [7]: http://docs.google.com
 
-    http://*.google.com
+    http://*.google.com/*
     
 
-Zugriff auf alle Domänen (z.B. [google.com][2] und [developer.mozilla.org][7]):
+Zugriff auf alle Ressourcen auf [www.google.com][8] unter dem Pfad "/ mobile":
 
- [7]: http://developer.mozilla.org
+ [8]: http://www.google.com
+
+    http://www.google.com/mobile/*
+    
+
+Zugang zu [google.com][3] auf beliebige Protokolle (z. B. HTTP, HTTPS, FTP, etc.):
+
+    *://google.com/*
+    
+
+Zugriff auf alle Ressourcen im Internet (z.B. [google.com][3] und [developer.mozilla.org][9]):
+
+ [9]: http://developer.mozilla.org
 
     *
     
@@ -74,41 +90,48 @@ Android unterstützt Whitelisting-Syntax.
 
 ### Syntax
 
-Zugang zu [google.com][2]:
+Zugang zu [google.com][3]:
 
-    <access origin="http://google.com" />
+    <access origin="http://google.com/*" />
     
 
-## BlackBerry
+## BlackBerry 10
 
 ### Informationen
 
-Die Whitelist-Regeln finden sich in `www/config.xml` und mit dem Element deklariert`<access uri="..." />`.
+Die Whitelist-Regeln finden sich in `www/config.xml` und mit dem Element deklariert`<access origin="..." />`.
 
-Eine vollständige Referenz finden Sie in der [BlackBerry WebWorks-Access-Element Dokumentation][8].
+BlackBerry 10 behandelt Platzhalter anders als andere Plattformen auf zwei Arten:
 
- [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+1) Von XMLHttpRequest abgerufene Inhalte muss ausdrücklich deklariert werden. Herkunft = "*" wird nicht für diesen Anwendungsfall respektiert werden. Alternativ kann alle Web-Sicherheit mit einer Vorliebe deaktiviert werden.
+
+2) Subdomains = "true" kann anstelle von verwendet werden "* .domain"
 
 ### Syntax
 
-Zugang zu [google.com][2]:
+Zugang zu [google.com][3]:
 
-    <access uri="http://google.com" subdomains="false" />
+    <access origin="http://google.com" subdomains="false" />
     
 
-Zugriff auf [maps.google.com][4]:
+Zugriff auf [maps.google.com][5]:
 
-    <access uri="http://maps.google.com" subdomains="false" />
+    <access origin="http://maps.google.com" subdomains="false" />
     
 
-Zugriff auf alle Sub-Domains auf [google.com][2]:
+Zugriff auf alle Sub-Domains auf [google.com][3]:
 
-    <access uri="http://google.com" subdomains="true" />
+    <access origin="http://google.com" subdomains="true" />
     
 
 Zugriff auf alle Domänen, einschließlich `file://` Protokoll:
 
-    <access uri="*" subdomains="true" />
+    <access origin="*" subdomains="true" />
+    
+
+Deaktivieren Sie alle Web-Sicherheit:
+
+    <preference name="websecurity" value="disable" />
     
 
 ## iOS
@@ -119,26 +142,32 @@ Die Whitelist-Regeln finden sich in `AppName/config.xml` und mit dem Element dek
 
 iOS unterstützt Whitelisting-Syntax.
 
-**Hinweis:** Ursprung angegeben ohne Protokoll, wie z. B. `www.apache.org` statt `http://www.apache.org` , standardmäßig auf alle die `http` , `https` , `ftp` , und `ftps` Systeme.
+### In 3.1.0 geändert:
+
+Vor Version 3.1.0 enthalten Cordova-iOS einige nicht-standard-Erweiterungen für die Domäne Whilelisting Regelung von anderen Cordova-Plattformen unterstützt. Ab 3.1.0 entspricht die iOS-Whitelist jetzt die Ressource-Whitelist-Syntax an der Spitze dieses Dokuments beschrieben. Wenn Sie ein von Pre-3.1.0 Upgrade und Sie wurden diese Erweiterungen verwenden, müssen Sie möglicherweise ändern Ihre `config.xml` Datei um Whitelisting dieselben Ressourcen wie bisher weiter.
+
+Insbesondere diese Muster müssen aktualisiert werden:
+
+*   " `apache.org` " (kein Protokoll): dieser zuvor übereinstimmen würde, `http` , `https` , `ftp` , und `ftps` Protokolle. Ändern Sie in " `*://apache.org/*` " gehören alle Protokolle oder eine Zeile für jedes Protokoll unterstützt werden müssen.
+
+*   " `http://apache.*` " (Wildcard am Ende der Domäne): Dies würde zuvor übereinstimmen, alle top-level-Domains, einschließlich alle mögliche zwei-Buchstaben-TLDs (aber nicht nützliche Domänen mag. co.uk). Zusätzlich eine Zeile für jede TLD, die Sie eigentlich kontrollieren und müssen auf die Whitelist.
+
+*   " `h*t*://ap*he.o*g` " (Platzhalter für zufällige Buchstaben fehlen): Diese werden nicht mehr unterstützt; Änderung eine Zeile für jede Domäne zu Protokoll, dass Sie tatsächlich auf die Whitelist benötigen.
 
 ### Syntax
 
-Platzhalter auf iOS ( `*` ) sind flexibler als die [Widget-Access W3C][1] -Spezifikation.
+Zugang zu [google.com][3]:
 
-Zugriff auf alle Subdomains und TLDs ( `.com` , `.net` , etc.):
-
-    *.google.*
+    <access origin="http://google.com/*" />
     
 
 ## Windows Phone (7 & 8)
 
 Die Whitelist-Regeln finden sich in `config.xml` und mit dem Element deklariert`<access origin="..." />`.
 
-Android unterstützt Whitelisting-Syntax.
-
 ### Syntax
 
-Zugang zu [google.com][2]:
+Zugang zu [google.com][3]:
 
     <access origin="http://google.com" />
     
@@ -147,21 +176,23 @@ Zugang zu [google.com][2]:
 
 ### Informationen
 
-Stammverzeichnis des Anwendung `config.xml` Datei gibt Whitelisting Domänenregeln, mit dem `<access origin="..." />` Element. Eine vollständige Referenz finden Sie unter \[Tizen zugreifen auf externe Netzwerkressourcen Dokumentation\] \[10\].
+Stammverzeichnis der Anwendung `config.xml` Datei gibt Whitelisting Domänenregeln, mit dem `<access origin="..." />` Element. Eine vollständige Referenz finden Sie in der [Dokumentation Tizen zugreifen auf externe Netzwerkressourcen][10].
+
+ [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
 
 ### Syntax
 
-Zugang zu [google.com][2]:
+Zugang zu [google.com][3]:
 
     <access origin="http://google.com" subdomains="false" />
     
 
-Zugriff auf die sicheren [google.com][3] ( `https://` ):
+Zugriff auf die sicheren [google.com][4] ( `https://` ):
 
     <access origin="https://google.com" subdomains="false" />
     
 
-Zugriff auf alle Sub-Domains auf [google.com][2]:
+Zugriff auf alle Sub-Domains auf [google.com][3]:
 
     <access origin="http://google.com" subdomains="true" />
     

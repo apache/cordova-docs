@@ -43,6 +43,10 @@ Mac 및 Linux:
 *   편집은 `~/.bash_profile` 파일을 네이티브 SDK 설치 된에 따라 다음과 같은 줄을 추가:
     
     $ 수출 경로 = ${경로}: / 응용 프로그램/bbndk/host\_10\_1\_0\_132/다윈/x 86/usr/빈 /
+    
+    또는 10.2 네이티브 SDK에 대 한:
+    
+    $ 수출 PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   현재 세션에서 변경 내용을 적용 하려면 다음을 실행:
     

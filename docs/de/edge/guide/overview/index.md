@@ -52,7 +52,7 @@ Die einfachste Möglichkeit, eine Anwendung eingerichtet ist, führen Sie die `c
 Zu jedem Zeitpunkt im Entwicklungszyklus können Sie sich auf Plattform-spezifischen SDK Tools verlassen, die eine umfangreichere Optionen bieten. (Siehe die Plattform-Führer für Details über jede Plattform-SDK-Tool festgelegt.) Eine SDK-Umgebung ist besser geeignet, wenn Sie möchten, eine Hybrid-app zu implementieren, die Web-basierte und native Anwendungskomponenten mischt. <!--XREF (Siehe Hybrid Application Guide für mehr informationen.) XREF--> Sie können das Befehlszeile-Dienstprogramm verwenden, um zunächst die app generieren oder iterativ danach, aktualisierten Code zu SDK-Tools zu ernähren. Sie können die app-Konfigurationsdatei auch selbst erstellen. 
 
 <!-- XREF
-(See Configuration Reference for details.)
+(See The config.xml File for details.)
 XREF -->
 
 <!-- XREF
@@ -95,6 +95,10 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <th>
         <tt>win8</tt><br />(Windows 8)
+      </th>
+      
+      <th>
+        <tt>firefoxos</tt>
       </th>
       
       <th>

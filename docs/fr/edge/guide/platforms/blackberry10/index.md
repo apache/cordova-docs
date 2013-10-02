@@ -43,6 +43,10 @@ Sur Mac et Linux :
 *   Modifier la `~/.bash_profile` fichier, en ajoutant une ligne semblable à la suivante, selon lequel le kit de développement natif a été installé :
     
     $ export PATH = ${chemin}: / Applications/bbndk/host\_10\_1\_0\_132/darwin/x 86/usr/bin /
+    
+    ou pour le kit de développement natif 10.2 :
+    
+    $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Exécutez la commande suivante pour appliquer la modification à la présente session :
     

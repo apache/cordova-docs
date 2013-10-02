@@ -30,10 +30,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin rm org.apache.cordova.core.dialogs
-        $ cordova plugin rm org.apache.cordova.core.vibration
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin ls
+        [ 'org.apache.cordova.dialogs',
+          'org.apache.cordova.vibration' ]
+        $ cordova plugin rm org.apache.cordova.dialogs
+        $ cordova plugin rm org.apache.cordova.vibration
     
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
@@ -67,4 +70,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。

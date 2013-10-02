@@ -82,3 +82,19 @@ Une fois que vous définissez JavaScript pour votre plugin, vous devez compléte
 *   Windows Phone Plugins
 
 La plate-forme paciarelli ne supporte actuellement pas de plugins.
+
+## Plugins édition
+
+Une fois que vous avez développé votre plugin, vous pouvez publier et partager avec la communauté. Vous pouvez publier votre plugin dans le registre de cordova (basé sur [npmjs][1]) ou à toute autre npmjs base de Registre. Utilisateurs seront en mesure de l'installer automatiquement en utilisant plugman ou cordova-cli.
+
+ [1]: https://github.com/isaacs/npmjs.org
+
+Pour publier un plugin, vous devez utiliser l'outil plugman et passer par les étapes suivantes :
+
+    $ plugman adduser # that is if you don't have an account yet
+    $ plugman publish /path/to/your/plugin
+    
+
+C'est tout !
+
+Autres commandes basées sur le Registre sont disponibles et `plugman --help` vous donnera une liste de ce que les commandes sont disponibles et comment les utiliser.

@@ -46,9 +46,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   ダウンロードして、 [Windows Phone SDK][3]のインストール
 
-*   ダウンロードし、[コルドバ][4]の最新のコピーを抽出します。 作業をして、 `lib\windows-phone-8\wp7` サブフォルダー、 `lib\windows-phone-8\wp8` コルドバの Windwos 電話 8 のバージョンが含まれています。
+*   ダウンロードし、[コルドバ][4]の最新のコピーを抽出します。 作業をして、 `lib\windows-phone-8\wp7` サブディレクトリ、 `lib\windows-phone-8\wp8` コルドバの Windwos 電話 8 のバージョンが含まれています。
 
-*   フォルダーに CordovaWP7\_x\_x_x.zip ファイルをコピー: \My Documents\Visual スタジオ 2012\Templates\ProjectTemplates\
+*   コピー、 `CordovaWP7_x_x_x.zip` ファイルを `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
 
  [3]: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27570/
  [4]: http://phonegap.com/download
@@ -80,7 +80,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 4. プロジェクトの構造を確認します。
 
-*   `www`フォルダーに、コルドバが含まれています `html/js/css` と、アプリに含まれるその他のリソース。
+*   `www`ディレクトリには、コルドバが含まれています `html/js/css` と、アプリに含まれるその他のリソース。
 
 *   Visual Studio プロジェクトの一部である必要がありますここで追加するコンテンツとコンテンツとして設定する必要があります。
 

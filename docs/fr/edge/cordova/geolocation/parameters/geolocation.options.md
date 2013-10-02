@@ -16,19 +16,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # geolocationOptions
 
-Paramètres optionnels pour personnaliser la récupération de la géolocalisation`Position`.
+Paramètres optionnels permettant la personnalisation de la récupération d'une `Position` géolocalisée.
 
-    {maximumAge : 3000, délai d'attente : 5000, enableHighAccuracy : true} ;
+    { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
     
 
 ## Options
 
-*   **enableHighAccuracy**: fournit une indication que l'application doit les meilleurs résultats possibles. Par défaut, l'appareil tente de récupérer un `Position` à l'aide de méthodes basées sur le réseau. Définition de cette propriété `true` indique à l'infrastructure d'utiliser des méthodes plus précises, telles que la localisation par satellite. *(Boolean)*
+*   **enableHighAccuracy** : indique que l'application nécessite les meilleurs résultats possibles. Par défaut, l'appareil tente de récupérer une `Position` à l'aide de méthodes basées sur le réseau. Définir cette propriété à `true` demande à Cordova d'utiliser des méthodes plus précises, telles que la localisation par satellite. *(Boolean)*
 
-*   **délai d'attente**: la longueur maximale de temps (en millisecondes) qui peut passer de l'appel à `geolocation.getCurrentPosition` ou `geolocation.watchPosition` jusqu'à ce que le correspondant `geolocationSuccess` rappel s'exécute. Si le `geolocationSuccess` rappel n'est pas appelé dans ce délai, le `geolocationError` rappel est passé un `PositionError.TIMEOUT` code d'erreur. (Notez que lorsqu'il est utilisé en conjonction avec `geolocation.watchPosition` , le `geolocationError` rappel pourrait être appelé sur un intervalle tous `timeout` millisecondes!) *(Nombre)*
+*   **timeout** : la durée maximale (en millisecondes) allouée depuis l'appel à `geolocation.getCurrentPosition` ou `geolocation.watchPosition` jusqu'à ce que la fonction callback `geolocationSuccess` correspondante soit exécutée. Si `geolocationSuccess` n'est pas appelée dans ce délai, le code d'erreur `PositionError.TIMEOUT` est transmis à la fonction callback `geolocationError`. (Notez que, dans le cas de `geolocation.watchPosition`, la fonction callback `geolocationError` pourrait être appelée à un intervalle régulier de `timeout` millisecondes !) *(Number)*
 
-*   **maximumAge**: accepter un poste en cache dont l'âge ne dépasse pas le délai en millisecondes. *(Nombre)*
+*   **maximumAge** : accepter une position mise en cache dont l'âge ne dépasse pas le délai spécifié en millisecondes. *(Number)*
 
-## Quirks Android
+## Particularités d'Android
 
-Émulateurs Android 2.x ne pas retournent un résultat de géolocalisation, à moins que le `enableHighAccuracy` option est définie sur`true`.
+Les émulateurs d'Android 2.x ne retournent aucun résultat de géolocalisation à moins que l'option `enableHighAccuracy` ne soit réglée sur `true`.

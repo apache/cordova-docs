@@ -16,30 +16,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android の構成
 
-`config.xml`ファイルは、コルドバのさまざまな設定を制御します。これらは、アプリケーション全体で、CordovaWebView のインスタンスごとに適用されます。
+`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-## `< 優先順位 >`
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。
+    
+        <preference name="KeepRunning" value="false"/>
+        
 
-その他の環境設定 (として `<preference>` タグ) 既存のアプリケーションを壊さずに既定します。利用可能な設定は次のとおりです。
+*   `ErrorUrl`: 400-500 の範囲で標準的な HTTP エラーへの応答に表示するエラー ページを指定します。 ホーム ページおよびその他の web 資産を含む最上位ディレクトリで指定されたファイルを配置します。
+    
+        <preference name="ErrorUrl" value="error.html"/>
+        
 
-*   `useBrowserHistory`(ブール値、既定値は `true` ): に設定されている `false` 歴史修正前の人造人間 3.x で現在のハッシュ エラーを回避するために使用された歴史 shim を使用する場合。 （注： この設定は 2013 年 4 月で廃止）
+*   `LoadingDialog`： アプリをロードするとき、ネイティブのダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+    
+        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
+        
 
-*   `loadingDialog`: アプリの読み込み時にネイティブの読み込み] ダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+*   `LoadingPageDialog`: サブ ・ ページは、アプリ内での読み込み時ネイティブ ダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+    
+        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
+        
 
-*   `loadingPageDialog`: サブ ・ ページの読み込み時のネイティブの読み込み] ダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+*   `LoadUrlTimeoutValue`（番号、既定値は `20000` ): タイムアウト エラーをスローする前に待機する時間の量、ページの読み込み中。 この例では 20 よりもむしろ 10 秒を指定します。
+    
+        <preference name="LoadUrlTimeoutValue" value="10000"/>
+        
 
-*   `errorUrl`: アプリケーションのエラー ページを設定します。人造人間プロジェクトである必要があります。`file://android_asset/www/`
+*   `SplashScreen`: からの拡張子を除いたファイル名、 `res/drawable` ディレクトリ。様々 な資産は、さまざまなサブディレクトリでこの共通名を共有しなければなりません。
+    
+        <preference name="SplashScreen" value="splash"/>
+        
 
-*   `backgroundColor`: アプリケーションの背景色を設定します。 最初のバイトを表すアルファ値、および標準的な RGB 値を持つ次の 3 バイト、4 バイトの 16 進値をサポートします。 たとえば、 `0x00000000` は黒です。
-
-*   `loadUrlTimeoutValue`： コルドバは、アプリケーションでタイムアウト エラーをスローする前に待つ必要がありますどのくらいの時間。
-
-*   `keepRunning`(ブール値、既定値は `true` ): コルドバまま、バック グラウンドで実行されているかどうかを決定します。
-
-*   `splashscreen`: からの拡張子を除いたファイル名、 `res/drawable` ディレクトリ。 複数の資産がある場合彼らはすべて、それぞれのディレクトリにこの共通名を共有する必要があります。
-
-*   `disallowOverscroll`(ブール値、既定値は `false` ): に設定されている `true` 、webview の端を超えてスクロール時、グローを無効にします。
-
-## `< プラグイン >`
-
-アンドロイドの使用をサポートする `<feature>` へのアナログとして `<plugin>` の要素。
+*   `SplashScreenDelay`(数は、既定値は `5000` ): 時間量スプラッシュ スクリーンのイメージが表示されます。
+    
+        <preference name="SplashScreenDelay" value="10000"/>

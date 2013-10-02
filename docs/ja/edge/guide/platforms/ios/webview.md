@@ -32,19 +32,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 包丁、Xcode プロジェクト (CordovaLib サブ プロジェクト) に追加します。
 
-1.  ダウンロード ソース展開と、コルドバ、ハード ドライブ上の永続的なフォルダーの場所を例に`~/Documents/Cordova`.
+1.  ダウンロード ソース展開と、コルドバ、ハード ドライブ上の永続的なディレクトリの場所を例に`~/Documents/Cordova`.
 
 2.  それが実行されている場合は、Xcode を終了します。
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  コピー、 `config.xml` をプロジェクト フォルダーにディスク上のファイル (上記の前提条件を参照してください)。
+4.  コピー、 `config.xml` ディスク上のプロジェクトのディレクトリにファイル (上記の前提条件を参照してください)。
 
 5.  ドラッグ アンド ドロップ、 `config.xml` Xcode プロジェクト ナビゲーターにファイル。
 
 6.  **追加フォルダーを作成するグループ**のオプション ボタンを選択し、**終了**キーを押します.
 
-7.  ドラッグ アンド ドロップ、 `CordovaLib.xcodeproj` Xcode プロジェクト ナビゲーターにファイル (永続的なフォルダーから、上記の場所およびそれべきで、 `CordovaLib` サブディレクトリ)。
+7.  ドラッグ アンド ドロップ、 `CordovaLib.xcodeproj` Xcode プロジェクト ナビゲーターにファイル (永続的なディレクトリから、上記の場所およびそれべきで、 `CordovaLib` サブディレクトリ)。
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## HTML、CSS、JavaScript の資産を追加します。
 
-1.  ハード_ディスクでは、プロジェクトに新しいフォルダーを作成 `www` 例えば。
+1.  ディスクのプロジェクトで新しいディレクトリを作成 `www` 例えば。
 
-2.  このフォルダーに、HTML、CSS、JavaScript の資産を置きます。
+2.  このディレクトリに、HTML、CSS、JavaScript の資産を置きます。
 
-3.  ドラッグ アンド ドロップ フォルダー Xcode プロジェクト ナビゲーター。
+3.  ドラッグ アンド ドロップ ディレクトリ Xcode プロジェクト ナビゲーター。
 
 4.  **追加フォルダーを作成するフォルダーの参照**オプション ボタンを選択します。
 

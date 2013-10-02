@@ -18,6 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta guía le muestra cómo modificar los proyectos de Windows 8 para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un conjunto mayor de herramientas de línea de comandos que preceden a la `cordova` utilidad CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
+## Actualizar a 3.1.0
+
+Soporte Cordova CLI para Windows 8 fue introducido en Cordova 3.1.0. Para actualizar, le sugerimos crear una nueva Cordova CLI proyecto y mover sobre todos los bienes necesarios.
+
 ## Actualizar a 2.9.0 magnetohidrodinámica de 2.8.0
 
 Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizadas o borradas.
@@ -30,7 +34,7 @@ Los siguientes comandos deben realizarse desde dentro de Visual Studio para aseg
 
 ## Actualizar a 2.8.0 desde 2.7.0
 
-Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizadas o borradas.
+Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizados o borrados.
 
 1.  Quitar `cordova-2.7.0.js` del proyecto de `www` Directorio.
 

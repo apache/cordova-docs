@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Windows Phone のコマンド ライン ツールの作成、構築、および新規プロジェクトの実行をサポートします。Cmd または powershell プロンプトからコマンドを実行する必要があります。
 
-WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれていますアプリ。レポは、それぞれのサブフォルダーを持つ: wp7/と wp8/
+WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれていますアプリ。レポは、それぞれのサブディレクトリを持つ： `wp7/` と`wp8/`.
 
 ## プロジェクトを作成します。
 

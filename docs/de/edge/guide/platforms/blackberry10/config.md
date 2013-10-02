@@ -14,24 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# BlackBerry 10 Konfiguration
+# BlackBerry Configuration
 
-Die `config.xml` Datei steuert verschiedene Cordova-Einstellungen. Diese gelten für die Anwendung. Die `config.xml` -Datei befindet sich im `<project folder>/<www>` Verzeichnis.
+Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. In diesem Abschnitt Informationen-Einstellungen, die nur für BlackBerry 10 gelten baut. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-## `<preference>`
+*   `ChildBrowser`( `disable` oder Standard `enable` ): Kind-Browser-Fenster deaktiviert. Standardmäßig starten apps ein sekundäre Browser-Fenster zum Anzeigen von Ressourcen Zugriff über `window.open()` oder durch Angabe eines `_blank` Anker Ziel. Geben Sie `disable` dieses Standardverhalten überschreiben.
+    
+        <preference name="ChildBrowser" value="disable"/>
+        
 
-Verschiedene Einstellungen (als `<preference>` Markierungen) Standard auf vorhandene Anwendungen nicht zu brechen. Die verfügbaren Einstellungen sind:
+*   `PopupBlocker`( `enable` oder Standard `disable` ): ermöglicht den Popup-Blocker, die Aufrufe von verhindert `window.open()` . Standardmäßig zeigen Popups in einem Kind-Browserfenster. Wenn Sie die Einstellung auf `enable` verhindert, dass es überhaupt anzeigt.
+    
+        <preference name="PopupBlocker" value="enable"/>
+        
 
-*   `autoHideSplashScreen`: ( `true` oder `false` ): Legen Sie auf `false` zu steuern, wenn das Splashscreen über eine JavaScript-API ausgeblendet ist. Diese Einstellung wird standardmäßig auf true fest.
-
-*   `backgroundColor`: Gibt die Hintergrundfarbe Ihrer Anwendung. Der Wert muss einen Farbwert in der ARGB-Pixel-Format mit 8 hexadezimale Ziffern angeben.
-
-*   `childBrowser`: Kind-Browser-Fenster deaktiviert. Standardmäßig, wenn der Inhalt versucht, eine Ressource in einem neuen Fenster oder Tab öffnen (mithilfe von window.open() oder durch Angabe von `_blank` als Ziel eines Ankers), die WebWorks app öffnet sich eine sekundäre Browser-Fenster, um die Ressource anzuzeigen. Dieses Feature ist standardmäßig aktiviert. Der Wert muss angeben `disable` , die oben genannten Maßnahmen von Auftritt zu verhindern.
-
-*   `hideKeyboardFormAccessoryBar`: ( `enable` oder `disable` ) deaktiviert die Tastatur Form Zubehör Bar in ein HTML-Formular. Die Tastatur-Form-Zubehör-Bar ist eine Reihe Tasten ("zurück", "Next" und "Absenden"), mit der Benutzer ein Formular navigieren kann. Standardmäßig Wenn eine WebWorks app ein HTML-Formular enthält, und ein `<input>` Element den Fokus erhält, WebWorks zeigt diese Form-Zubehör-Bar. Mit dieser Funktion können Sie verhindern, dass Ihre app anzeigt die Form Zubehör Bar indem Wert als`enable`.
-
-*   `orientation`: ( `auto` , `portrait` , oder `landscape` ) gibt die beständige Ausrichtung für Bildschirme in Ihrer app. Standardmäßig Wenn Sie eine Bildschirm-Ausrichtung nicht angeben ist die Ausrichtung auf auto festgelegt.
-
-*   `popupBlocker`: Ermöglicht den Popup-Blocker. Standardmäßig werden alle Popups von BlackBerry WebWorks apps in einem Kind-Browserfenster angezeigt. Sie können verhindern, dass Pop-ups anzeigen ohne Eingreifen des Benutzers durch den Popup-Blocker aktivieren. Dies geschieht indem Wert als`enable`.
-
-*   `webSecurity`: Deaktiviert web-Sicherheit. Web-Sicherheit deaktivieren, können Sie auf Remoteinhalt aus unbekannten Quellen während der Entwicklung. Vor dem Verpacken Ihre app für den Vertrieb, sollten Sie diese Einstellung entfernen. Dieses Feature soll lediglich eine Entwicklung der Bequemlichkeit. In der Produktion, sollten alle URIs bekannt sein und sollte auf der weißen Liste werden mithilfe der `<access>` Element. Deaktivieren, geben Sie Wert als`disable`.
+*   `WebSecurity`( `disable` oder Standard `enable` ): Legen Sie auf `disable` Web-Sicherheits-Einstellungen, den Zugriff auf remote-Inhalte aus unbekannten Quellen zu überschreiben. Diese Einstellung soll wie vor Entwicklung Bequemlichkeit nur, also dem Entfernen Verpackung Ihrer app für den Vertrieb. Für die veröffentlichten app sollte alle URIs bekannt und auf der weißen Liste mithilfe der `<access>` in die Domain-Whitelist-Guide beschriebene Element.
+    
+        <preference name="WebSecurity" value="disable"/>

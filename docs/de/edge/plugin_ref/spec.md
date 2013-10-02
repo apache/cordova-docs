@@ -90,7 +90,7 @@ Ein benutzerdefinierter Apache Cordova-basiertes Framework erfordert, dass ein M
 
 *   `version`(erforderlich): die Version, die Ihr Framework verfügen muss, um zu installieren.
 
-*   `scriptSrc`(erforderlich): der Skript-Datei, die Plugman sagt, welche Version von benutzerdefinierten Rahmen ist. Im Idealfall sollte diese Datei innerhalb des Verzeichnisses der obersten Ebene des Plugin-Ordners.
+*   `scriptSrc`(erforderlich): der Skript-Datei, die Plugman sagt, welche Version von benutzerdefinierten Rahmen ist. Im Idealfall sollte diese Datei innerhalb des Verzeichnisses der obersten Ebene für Ihr Pluginverzeichnis.
 
 *   `platform`(erforderlich): Welche Plattformen, Ihr Framework unterstützt. Sie können den Platzhalter ' *' um zu sagen, für alle Plattformen unterstützt, geben Sie mehrere mit ein Pipe-Zeichen wie 'android|ios|blackberry10' oder nur einer einzigen Plattform wie 'Android'.
 
@@ -321,7 +321,9 @@ Dies ist *veraltet* , da es nur Cordova-Ios 2.2.0 und unterhalb gilt. Verwendung
 Beispiel:
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

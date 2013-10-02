@@ -24,7 +24,7 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
 Gli strumenti della riga di comando di Windows Phone supportano la creazione, costruzione ed esecuzione di nuovi progetti. Comandi devono essere eseguiti da un prompt cmd o powershell.
 
-Il repo WP8 ora include il codice per la costruzione sia WP7 + WP8 apps. Repo ha sottocartelle per ciascuno: wp7 / e wp8 /
+Il repo WP8 ora include il codice per la costruzione sia WP7 + WP8 apps. Repo ha sottodirectory per ciascuna: `wp7/` e`wp8/`.
 
 ## Creare un progetto
 

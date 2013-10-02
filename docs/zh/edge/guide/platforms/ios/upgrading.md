@@ -18,7 +18,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 本指南演示如何修改 iOS 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 命令列介面資訊，請參閱如何更新的 CLI 版本。
 
-**注：**Xcode 4.5 是必需的。要提交到蘋果 App Store，必須使用最新的產品出廠的版本的 iOS SDK，這是 iOS 6。IOS 6 SDK 需要 Xcode 4.5。
+**注：**Xcode 4.6 是必需的建議 Xcode 5。 目前，以提交到蘋果 App Store，你應使用最新的產品出廠的版本的 iOS SDK，這是 iOS 7。 iOS 7 SDK 尚不需要，但這可能會很快改變。
+
+## 升級 3.0.0 專案到 3.1.0
+
+對於非 CLI 的專案，請運行：
+
+        bin/更新路徑/到專案
+    
+
+對於 CLI 的專案，請運行：
+
+        1.更新的 '科爾多瓦' CLI 版本--請參閱命令列介面 2。運行 '科爾多瓦平臺更新 ios'
+    
+
+### iOS 7 問題
+
+    1。 刪除的值"寬度 = 設備-寬度、 高度 = 設備高度"從您 meta 標記"視口"index.html 檔中的屬性，請參閱 HTTPs://issues.apache.org/jira/browse/CB-4323 2。 更新 iOS 7 支援您媒體、 媒體捕獲和閃屏核心的外掛程式
+    
+
+### Xcode 5 問題
+
+    1。 如果 Xcode 5 提示您要做如此 （在問題導航器） 2，請更新您的專案設置。 更新您"編譯器為 C / C + + / 目標 C"下的"生成設置"選項卡中，設置"生成選項"一節。 選擇"預設編譯器 (蘋果 LLVM 5.0)"
+    
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
@@ -31,7 +53,7 @@ platform add ios`.
 
 4.  複製或覆蓋任何本機資產從原始專案 （ `Resources` 等），這讓肯定要添加任何新檔到 `.xcodeproj` 專案。 IOS 專案內生成 `platforms\ios` 目錄。
 
-5.  複製您 `config.xml` 到 `www` 目錄中，並刪除任何外掛程式定義。修改設置在這裡而不是平臺資料夾。
+5.  複製您 `config.xml` 到 `www` 目錄中，並刪除任何外掛程式定義。修改設置在這裡而不是平臺目錄。
 
 6.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
@@ -39,7 +61,7 @@ platform add ios`.
 
 ## 升級 2.9.0 專案到 3.0.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 3.0.0 源，例如到`~/Documents/Cordova-3.0.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 3.0.0 源，例如到`~/Documents/Cordova-3.0.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -57,7 +79,7 @@ platform add ios`.
 
 ## 升級 2.8.0 專案到 2.9.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.9.0 源，例如到`~/Documents/Cordova-2.9.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.9.0 源，例如到`~/Documents/Cordova-2.9.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -73,7 +95,7 @@ platform add ios`.
 
 ## 升級 2.7.0 專案到 2.8.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.8.0 源，例如到`~/Documents/Cordova-2.8.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.8.0 源，例如到`~/Documents/Cordova-2.8.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -105,7 +127,7 @@ platform add ios`.
 
 ## 升級 2.6.0 專案到 2.7.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.7.0 源，例如到`~/Documents/Cordova-2.7.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.7.0 源，例如到`~/Documents/Cordova-2.7.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -128,7 +150,7 @@ platform add ios`.
 
 ## 升級 2.5.0 專案到 2.6.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.6.0 源，例如到`~/Documents/Cordova-2.6.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.6.0 源，例如到`~/Documents/Cordova-2.6.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -159,7 +181,7 @@ platform add ios`.
 
 ## 升級 2.4.0 專案到 2.5.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.5.0 源，例如到`~/Documents/Cordova-2.5.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.5.0 源，例如到`~/Documents/Cordova-2.5.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -190,7 +212,7 @@ platform add ios`.
 
 ## 升級 2.3.0 專案到 2.4.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.4.0 源，例如到`~/Documents/Cordova-2.4.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.4.0 源，例如到`~/Documents/Cordova-2.4.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -221,7 +243,7 @@ platform add ios`.
 
 ## 升級 2.2.0 專案到 2.3.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.3.0 源，例如到`~/Documents/Cordova-2.3.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.3.0 源，例如到`~/Documents/Cordova-2.3.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -256,7 +278,7 @@ platform add ios`.
 
 ## 升級 2.1.0 專案到 2.2.0
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.2.0 源，例如到`~/Documents/Cordova-2.2.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.2.0 源，例如到`~/Documents/Cordova-2.2.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -282,13 +304,13 @@ platform add ios`.
         
         `update_cordova_subproject 路徑/為/您/專案/xcodeproj`
 
-**注：**2.2.0，在 `bin/create` 腳本中的副本 `CordovaLib` 分專案到您的專案。 要有相同種類的安裝程式，只是複製的權利 `CordovaLib` 到您的專案資料夾中，並更新 `CordovaLib` 分專案 （相對於專案) 在 Xcode 檔檢查器中的位置。
+**注：**2.2.0，在 `bin/create` 腳本中的副本 `CordovaLib` 分專案到您的專案。 要有相同種類的安裝程式，只是複製權在 `CordovaLib` 到你的專案目錄和更新 `CordovaLib` 分專案 （相對於專案) 在 Xcode 檔檢查器中的位置。
 
 ## 升級 2.0.0 專案到 2.1.0
 
 與科爾多瓦 2.1.0， `CordovaLib` 已升級為使用**自動引用計數 (弧)**。 你不需要升級到**弧**要使用 CordovaLib，但是如果你想要升級您的專案使用**弧**，請使用 Xcode 遷移嚮導從功能表中：**編輯 → 重構 → 轉換為目標 C 弧...**，取消選擇 libCordova.a，然後運行嚮導完成。
 
-1.  下載並解壓縮到您的硬碟磁碟機上的永久資料夾位置的科爾多瓦 2.1.0 源，例如到`~/Documents/Cordova-2.1.0`.
+1.  下載並解壓縮到您的硬碟磁碟機上的永久目錄位置的科爾多瓦 2.1.0 源，例如到`~/Documents/Cordova-2.1.0`.
 
 2.  如果它正在運行，請退出 Xcode。
 
@@ -443,7 +465,7 @@ platform add ios`.
 
 如果您打算使用捕獲 API，您將需要在新的**iPad 視網膜顯示**資產：
 
-1.  複製 `Resources/Capture.bundle` 從新專案到專案資料夾中，覆蓋您現有的專案 `Resources/Capture.bundle` 專案。
+1.  複製 `Resources/Capture.bundle` 從新專案到專案目錄中，覆蓋您現有的專案 `Resources/Capture.bundle` 專案。
 
 2.  在您的專案中選擇 `Capture.bundle` 專案到您的專案在 Xcode 中導航，鍵入**Delete**鍵，然後從出現的對話方塊中選擇**移除引用**。
 
@@ -467,7 +489,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 1.5.0-based：
+4.  將這些檔從新專案複製到您的 1.5.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
         
@@ -571,7 +593,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  複製 `MainViewController.m` 到 1.4.0-based 的專案資料夾中的新專案從磁片上的檔，替換舊檔 （備份您的檔第一次從上面的步驟 2）。
+4.  複製 `MainViewController.m` 到 1.4.0-based 專案目錄中的新專案從磁片上的檔，替換舊檔 （備份您的檔第一次從上面的步驟 2）。
 
 5.  添加 `MainViewController.m` 到 Xcode 專案檔案。
 
@@ -587,7 +609,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 1.3.0-based：
+4.  將這些檔從新專案複製到您的 1.3.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -610,7 +632,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 1.2.0-based：
+4.  將這些檔從新專案複製到您的 1.2.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -633,7 +655,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 1.1.0-based：
+4.  將這些檔從新專案複製到您的 1.1.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -656,7 +678,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 1.0.0-based：
+4.  將這些檔從新專案複製到您的 1.0.0-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
@@ -679,7 +701,7 @@ platform add ios`.
 
 3.  創建一個新專案。您將需要的一些資產從這個新的專案。
 
-4.  將這些檔從新專案複製到磁片，替換任何舊的檔 （備份您的檔首次從上述步驟 2） 上的專案資料夾中 0.9.6-based：
+4.  將這些檔從新專案複製到您的 0.9.6-based 專案目錄在磁片上，取代任何舊的檔 （備份您的檔首次從上述步驟 2）：
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         

@@ -18,6 +18,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Diese Anleitung zeigt wie zum Ändern von BlackBerry Projekten Upgrade von älteren Versionen von Cordova. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Aktualisieren Sie die Version der CLI.
 
+## Ein Upgrade auf 3.1.0 von 3.0.0
+
+1.  Erstellen Sie ein neues Apache Cordova 3.1.0-Projekt mit Cordova CLI, wie in der Command-Line Interface beschrieben.
+
+2.  Die Plattformen der Cordova Projekt fügen Sie hinzu, zum Beispiel:`cordova
+platform add blackberry10`.
+
+3.  Kopieren Sie den Inhalt des ursprünglichen Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
+
+4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` , etc..)
+
+5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie Einstellungen hier anstelle des Plattform-Verzeichnisses.
+
+6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur Plugins markiert 3.0.0 und oben sind kompatibel mit CLI.
+
+7.  Erstellen und testen.
+
 Bitte beachten Sie, dass die CLI die BlackBerry10-Plattform ausschließlich unterstützt. Textbuch und BBOS, finden Sie unter Cordova Version 2.9.0 und unten.
 
 ## Upgrade auf die CLI (3.0.0) von 2.9.0

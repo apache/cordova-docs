@@ -14,21 +14,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Système de fichiers
+# FileSystem
 
 Cet objet représente un système de fichiers.
 
 ## Propriétés
 
-*   **nom**: le nom du système de fichiers. *(DOMString)*
+*   **name** : le nom du système de fichiers. *(DOMString)*
 
-*   **racine**: le répertoire racine du système de fichiers. *(DirectoryEntry)*
+*   **root** : le répertoire racine du système de fichiers. *(DirectoryEntry)*
 
 ## Détails
 
-Le `FileSystem` objet représente des informations sur le système de fichiers. Le nom du système de fichiers est unique dans l'ensemble de la liste des systèmes de fichiers exposées. La propriété root contient un `DirectoryEntry` objet qui représente le répertoire racine du système fichier.
+L'objet `FileSystem` divulgue des informations à propos du système de fichiers. Le nom du système de fichiers est unique pour l'ensemble des systèmes de fichiers exposés. La propriété root contient un objet `DirectoryEntry` représentant le répertoire racine du système de fichiers.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -36,7 +36,7 @@ Le `FileSystem` objet représente des informations sur le système de fichiers. 
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Exemple de fichier rapide de système
+## Exemple court
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

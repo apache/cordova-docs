@@ -20,28 +20,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Proprietà
 
-*   Device.Name
+*   device.model
 *   Device.Cordova
 *   Device
 *   Device.UUID
 *   Device.Version
-*   Device.Model
+*   device.name
 
 ## Portata variabile
 
 Poiché `device` viene assegnato il `window` dell'oggetto, è implicitamente in ambito globale.
 
     // These reference the same `device`
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
     
 
 ## La funzionalità di accesso
 
 A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo come *plugin*. Utilizzare la CLI `plugin` comando, descritto in Command-Line Interface, aggiungere o rimuovere questa funzionalità per un progetto:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
-        $ cordova plugin rm org.apache.cordova.core.device
+        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device' ]
+        $ cordova plugin rm org.apache.cordova.device
     
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
@@ -92,4 +94,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

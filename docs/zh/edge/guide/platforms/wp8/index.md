@@ -66,9 +66,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   下載並安裝[Windows Phone SDK][5]
 
-*   下載並解壓縮[科爾多瓦][6]的最新副本。 您將使用的 `lib\windows-phone-8\wp8` 子資料夾， `lib\windows-phone-8\wp7` 包含科爾多瓦的視窗手機 7 版本。
+*   下載並解壓縮[科爾多瓦][6]的最新副本。 你將會工作 `lib\windows-phone-8\wp8` 子目錄中， `lib\windows-phone-8\wp7` 包含科爾多瓦的視窗手機 7 版本。
 
-*   將 CordovaWP8\_x\_x_x.ZIP 檔案複製到該資料夾： \My Documents\Visual 工作室 2012\Templates\ProjectTemplates\
+*   複製 `CordovaWP8_x_x_x.zip` 檔到 `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` 目錄。
 
  [5]: http://www.microsoft.com/en-us/download/details.aspx?id=35471
  [6]: http://phonegap.com/download
@@ -104,7 +104,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 4.審查的專案結構
 
-*   `www`資料夾包含您科爾多瓦 `html/js/css` 和包含在您的應用程式中的任何其他資源。
+*   `www`目錄包含您科爾多瓦 `html/js/css` 和包含在您的應用程式中的任何其他資源。
 
 *   您在此處添加的任何內容需要的 Visual Studio 專案的一部分，必須將它設置為內容。
 

@@ -64,4 +64,4 @@ Se si utilizza il vecchio set di strumenti di Cordova che precedono la CLI, le s
         < presentano id="blackberry.widgetcache" richiesto = versione "vero" = "1.0.0.0" / >
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.

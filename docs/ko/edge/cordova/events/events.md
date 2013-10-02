@@ -40,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 버전 3.0, 코르도바 구현 배터리 상태 및 기타 장치 수준 Api *플러그인*으로. 배터리 상태와 관련이 없는 다른 모든 이벤트에 대 한 액세스는 기본적으로 사용 됩니다. CLI의 사용 `plugin` 에 명령줄 인터페이스를 설정 하거나 해제 하려면 배터리 이벤트를 설명 하는 명령:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-battery-status.git
-        $ cordova plugin rm org.apache.cordova.core.battery-status
+        $ cordova plugin add org.apache.cordova.battery-status
+        $ cordova plugin ls
+        [ 'org.apache.cordova.battery-status' ]
+        $ cordova plugin rm org.apache.cordova.battery-status
     
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
@@ -86,4 +88,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.

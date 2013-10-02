@@ -95,3 +95,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         navigator.notification.vibrate();
         navigator.notification.vibrate(2500);   // 2500 is ignored
+        
+
+## BB10 단점
+
+진동 기능 네비게이터 개체가 소유 하 고
+
+        navigator.vibrate(1000);  // vibrate for 1 second

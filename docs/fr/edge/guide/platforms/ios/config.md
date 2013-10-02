@@ -16,38 +16,78 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS Configuration
 
-Le `config.xml` fichier de paramètres de contrôle divers paramètres de Cordova. Il s'agit d'application large et non réglage par instance de CDVViewController. Le `config.xml` fichier se trouve dans votre `<project folder>/<appname>` répertoire.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-## `< préférence >`
+*   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` d'utiliser une balise meta de fenêtre d'affichage pour désactiver ou limiter la plage de mise à l'échelle de l'utilisateur.
+    
+        <preference name="EnableViewportScale" value="true"/>
+        
 
-Diverses préférences (comme `<preference>` tags) par défaut sur la rupture ne pas les applications existantes. Les préférences disponibles sont :
+*   `MediaPlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher les vidéos HTML5 de jouer automatiquement avec le `autoplay` attribut. Ne s'applique pas lorsque vous appelez `play()` sur un objet vidéo.
+    
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        
 
-*   `DisallowOverscroll`(boolean, la valeur par défaut `false` ): la valeur `true` si vous ne voulez pas le WebView à élastique.
+*   `AllowInlineMediaPlayback`(boolean, la valeur par défaut `false` ): la valeur `true` pour permettre la lecture multimédia HTML5 à comparaître *inline* dans la disposition de l'écran, à l'aide de contrôles fournis par navigateur plutôt que des contrôles natifs. Pour ce faire, ajoutez les `webkit-playsinline` attribuent à aucun `<video>` éléments.
+    
+        <preference name="AllowInlineMediaPlayback" value="true"/>
+        
 
-*   `TopActivityIndicator`(string, la valeur par défaut `gray` ): il s'agit de l'indicateur d'activité spinning haut de la page dans la barre de statut/batterie, les valeurs valides sont `whiteLarge` , `white` , et`gray`.
+*   `BackupWebStorage`(cordes, soit `none` , `local` , ou la valeur par défaut `cloud` ): la valeur `cloud` afin que les données de stockage web de sauvegarde via iCloud. La valeur `local` pour permettre uniquement les sauvegardes locales via iTunes sync. La valeur `none` empêcher les sauvegardes de stockage web.
+    
+        <preference name="BackupWebStorage" value="local"/>
+        
 
-*   `EnableLocation`(boolean, la valeur par défaut `false` ): la valeur `true` , pour initialiser le plugin géolocalisation au démarrage (donc le correctif sur votre emplacement peut être plus précis) **DEPRECATED**: veuillez régler le `onload` attribut de la `Geolocation` plugin pour `true` à la place.
+*   `TopActivityIndicator`(string, la valeur par défaut `gray` ): contrôle l'apparence de l'icône de la petite filature dans la barre d'État qui indique l'activité du processeur importante. Les valeurs valides sont `whiteLarge` , `white` , et`gray`.
+    
+        <preference name="TopActivityIndicator" value="white"/>
+        
 
-*   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher la fenêtre de mise à l'échelle par une balise meta.
+*   `FadeSplashScreen`(boolean, la valeur par défaut `true` ): la valeur `false` pour empêcher l'écran de démarrage de fading in et out lorsque son état d'affichage est modifié.
+    
+        <preference name="FadeSplashScreen" value="false"/>
+        
 
-*   `AutoHideSplashScreen`(boolean, la valeur par défaut `true` ): la valeur `false` pour contrôler quand il est caché le splashscreen via une API JavaScript.
-
-*   `FadeSplashScreen`(boolean, la valeur par défaut `true` ): la valeur `false` pour empêcher l'écran de démarrage se faner dedans et dehors en affichant ou en masquant.
-
-*   `FadeSplashScreenDuration`(float, la valeur par défaut 2): la durée de fondu d'écran de démarrage en quelques secondes.
+*   `FadeSplashScreenDuration`(float, la valeur par défaut `2` ): spécifie le nombre de secondes que l'écran de démarrage s'estomper l'effet d'exécuter.
+    
+        <preference name="FadeSplashScreenDuration" value="4"/>
+        
 
 *   `ShowSplashScreenSpinner`(boolean, la valeur par défaut `true` ): la valeur `false` pour cacher le cône de l'écran de démarrage.
+    
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+        
 
-*   `MediaPlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur true pour ne pas autoriser autoplayed HTML5 vidéo.
+*   `KeyboardDisplayRequiresUserAction`(boolean, la valeur par défaut `true` ): la valeur `false` pour permettre le clavier à comparaître lors de l'appel `focus()` sur les entrées de formulaire.
+    
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+        
 
-*   `AllowInlineMediaPlayback`(boolean, la valeur par défaut `false` ): la valeur true pour permettre la lecture du média en ligne HTML5, et en outre, l'élément vidéo dans le document HTML doit inclure également l'attribut webkit-playsinline.
+*   `SuppressesIncrementalRendering`(boolean, la valeur par défaut `false` ): la valeur `true` d'attendre que tout le contenu a été reçu avant il restitue à l'écran.
+    
+        <preference name="SuppressesIncrementalRendering" value="true"/>
+        
 
-*   `BackupWebStorage`(string, la valeur par défaut `cloud` ): les valeurs valides sont `none` , `cloud` et `local` . La valeur `cloud` afin que les données de stockage web à être sauvegardé sur iCloud et la valeur `local` pour autoriser uniquement les sauvegardes locales (iTunes sync). La valeur `none` de ne pas permettre des sauvegardes de stockage web.
+*   `KeyboardShrinksView`(boolean, la valeur par défaut `false` ): la valeur `true` pour réduire l'affichage Web lorsque le clavier apparaît, la substitution de la beavior par défaut qui rétrécit le viewport verticalement. Ceci renverra le comportement par défaut pour les applications Android.
+    
+        <preference name="KeyboardShrinksView" value="true"/>
+        
 
-*   `KeyboardDisplayRequiresUserAction`(boolean, la valeur par défaut `true` ): la valeur false pour ouvrir le clavier lorsque les éléments de formulaire se concentrer via l'appel de focus() JavaScript.
+*   `GapBetweenPages`(float, la valeur par défaut `` ): la taille de l'espace, en points, entre les pages.
+    
+        < nom de l'option = « GapBetweenPages » value = « 0 » / >
+        
 
-*   `SuppressesIncrementalRendering`(boolean, la valeur par défaut `false` ): la valeur true à attendre jusqu'à ce que tout nouveau afficher le contenu a été reçue avant sa restitution.
+*   `PageLength`(float, la valeur par défaut `` ): la taille de chaque page, en points, dans le sens qui découlent des pages. Quand PaginationMode est juste à gauche ou de gauche à droite, cette propriété représente la largeur de chaque page. Lorsque PaginationMode est topToBottom ou bottomToTop, cette propriété représente la taille de chaque page. La valeur par défaut est 0, ce qui signifie que la disposition utilise la taille de la fenêtre d'affichage pour déterminer les dimensions de la page.
+    
+        < nom de l'option = « LongueurPage » value = « 0 » / >
+        
 
-*   `HideKeyboardFormAccessoryBar`(boolean, la valeur par défaut `false` ): définie sur true pour masquer la barre d'outils supplémentaire située au dessus du clavier. Cette barre d'outils comporte les boutons **Prev**, **Next**et **fait** .
+*   `PaginationBreakingMode`(string, la valeur par défaut `page` ): les valeurs valides sont `page` et `column` .La manière dans laquelle se produit la rupture de colonne ou de page. Cette propriété détermine si certaines propriétés CSS sur colonne et page-rupture sont à l'honneur ou ignorées. Lorsque cette propriété est définie `column` , le contenu respecte les propriétés CSS associées à colonne-rupture au lieu de saut de page.
+    
+        < nom de l'option = « PaginationBreakingMode » value = « page » / >
+        
 
-*   `KeyboardShrinksView`(boolean, la valeur par défaut `false` ): la valeur `true` à rétrécir l'affichage Web lorsque le clavier est en place. Le mode Web se contracte au lieu du rétrécissement de la fenêtre d'affichage et la défilement de page. Cela vaut pour les apps qui placent leurs éléments par rapport à la partie inférieure de l'affichage Web. C'est le comportement par défaut sur Android et fait beaucoup de sens lorsque vous générez des applications plutôt que des pages Web.
+*   `PaginationMode`(string, la valeur par défaut `unpaginated` ): les valeurs valides sont `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , et `rightToLeft` . Cette propriété détermine si contenu dans l'affichage web est divisé en pages qui remplissent l'une écran vue à la fois, ou montré comme un point de vue long défilement. Si un formulaire paginé, cette propriété la valeur active/désactive une présentation paginée sur le contenu, provoquant l'affichage de web à utiliser les valeurs de LongueurPage et GapBetweenPages à la nouvelle disposition de son contenu.
+    
+        < nom de l'option = « PaginationMode » value = « non paginé » / >

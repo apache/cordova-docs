@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Настройте ваш предпочтительный вариант Visual Studio 2012. Все платные версии продукта (профессиональный, и т.д.) позволяют создавать приложения Магазина Windows. Вам нужно **Express для Windows 8** для построения приложений Магазина Windows с использованием [Экспресс издания][2].
 
-*   Загрузите и распакуйте последнюю копию [Cordova][3]. Вы будете работать `lib\windows-8` подпапку.
+*   Загрузите и распакуйте последнюю копию [Cordova][3]. Вы будете работать `lib\windows-8` подкаталог.
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

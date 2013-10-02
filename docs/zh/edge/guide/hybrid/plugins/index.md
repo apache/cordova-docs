@@ -82,3 +82,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Windows Phone 外掛程式
 
 當前，Tizen 平臺不支援外掛程式。
+
+## 發佈外掛程式
+
+一旦你制定你的外掛程式，你可能想要發佈它，並與社區共用它。 你可以將你的外掛程式發佈到科爾多瓦註冊表 （基於[npmjs][1]） 或任何其他 npmjs 的基於註冊表。 使用者將能夠將它使用 plugman 或科爾多瓦 cli 自動安裝。
+
+ [1]: https://github.com/isaacs/npmjs.org
+
+要發佈一個外掛程式你需要使用 plugman 工具，並通過以下步驟：
+
+    $ plugman adduser # that is if you don't have an account yet
+    $ plugman publish /path/to/your/plugin
+    
+
+就這麼簡單 ！
+
+其他基於註冊表的命令都可用和 `plugman --help` 會給你什麼命令都可以使用和如何使用它們的清單。

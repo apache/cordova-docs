@@ -64,4 +64,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         < id="blackberry.widgetcache 기능" 필수 = "진정한" 버전 "1.0.0.0" = / >
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.

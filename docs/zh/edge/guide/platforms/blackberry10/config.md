@@ -14,24 +14,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 黑莓 10 配置
+# 黑莓手機配置
 
-`config.xml`檔控制科爾多瓦的各種設置。 這些跨應用程式應用。 `config.xml`檔是位於在 `<project folder>/<www>` 目錄。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 僅適用于黑莓 10 此節的詳細資訊偏好生成。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-## `< 首選項 >`
+*   `ChildBrowser`( `disable` 或預設的 `enable` ）： 禁用兒童瀏覽器視窗。 預設情況下，應用程式啟動一個輔助瀏覽器視窗以顯示資源通過訪問 `window.open()` 或通過指定 `_blank` 錨點目標。 指定 `disable` 重寫此預設行為。
+    
+        <preference name="ChildBrowser" value="disable"/>
+        
 
-各種首選項 （作為 `<preference>` 標籤） 預設情況下，不打破現有的應用程式。可用的選擇是：
+*   `PopupBlocker`( `enable` 或預設的 `disable` ）： 啟用快顯視窗阻止程式，這樣可以防止對調用 `window.open()` 。 預設情況下，快顯視窗在兒童瀏覽器視窗中顯示。 將首選項設置為 `enable` 防止它顯示在所有。
+    
+        <preference name="PopupBlocker" value="enable"/>
+        
 
-*   `autoHideSplashScreen`: ( `true` 或 `false` ）： 設置為 `false` ，控制通過 JavaScript API 閃屏被隱藏時。 此首選項預設設置為 true。
-
-*   `backgroundColor`： 指定你的應用程式的背景色。值必須在使用 8 位十六進位數位的 ARGB 像素格式中指定的顏色值。
-
-*   `childBrowser`: 禁用兒童瀏覽器視窗。 預設情況下，當內容嘗試在新的視窗或選項卡中打開資源時 （通過使用 window.open ()，或者通過指定 `_blank` 作為錨點的目標），WebWorks 應用程式將會打開一個輔助瀏覽器視窗以顯示該資源。 預設情況下啟用此功能。 值必須指定 `disable` ，防止出現上述行動。
-
-*   `hideKeyboardFormAccessoryBar`: ( `enable` 或 `disable` ） 禁用鍵盤表單附件欄中的 HTML 表單。 鍵盤表單配件欄是一行的按鈕 （上一頁、 下一頁和提交），使用者可以使用一個表單中導航。 預設情況下，當一個 WebWorks 應用程式包含一個 HTML 表單，並且 `<input>` 元素獲取焦點，WebWorks 將顯示此表單的附件欄。 此功能允許您以防止您的應用程式通過指定的值顯示表單配件欄`enable`.
-
-*   `orientation`: ( `auto` ， `portrait` ，或 `landscape` ） 在您的應用程式中指定螢幕的持久性方向。預設情況下，如果您不指定螢幕方向，方向是設置為自動。
-
-*   `popupBlocker`： 啟用快顯視窗阻止程式。 預設情況下，按黑莓 WebWorks 應用程式在一個兒童的瀏覽器視窗中顯示所有快顯視窗。 您可以阻止快顯視窗顯示無需使用者干預通過啟用快顯視窗阻止程式。 這是由指定的值`enable`.
-
-*   `webSecurity`: 禁用 web 安全。 禁用 web 安全性允許您在開發過程中從未知的來源訪問遠端內容。 在打包您的應用程式，分發之前，您應該刪除此設置。 此功能被作為只發展提供便利。 應在生產中，已知所有 Uri 和應使用白名單 `<access>` 元素。 若要禁用，指定的值`disable`.
+*   `WebSecurity`( `disable` 或預設的 `enable` ）： 設置為 `disable` 重寫 web 安全設置，允許訪問遠端內容從未知的來源。 此首選項的目的是作為發展方便只，所以之前將它刪除包裝分發您的應用程式。 發佈應用程式，所有 Uri 都應已知和白名單使用 `<access>` 元素，域白名單指南中所述。
+    
+        <preference name="WebSecurity" value="disable"/>

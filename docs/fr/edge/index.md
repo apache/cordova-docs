@@ -43,10 +43,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Référence de configuration
+        Le fichier config.xml File
       </h2>
       
       <span>Personnaliser les fonctionnalités de votre application.</span>
+    </li>
+    <li>
+      <h2>
+        Icones et Splash Screen
+      </h2>
+      
+      <span>Personnaliser les images affichage de l'application.</span>
     </li>
     <li>
       <h2>
@@ -67,21 +74,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Guide de la vie privée
       </h2>
       
-      <span>Découvrez les informations importantes relatives à la confidentialité sur les mobiles.</span>
+      <span>Découvrez les problèmes de confidentialité mobile important.</span>
     </li>
     <li>
       <h2>
-        Domain Whitelist Guide
+        Guide de la liste blanche
       </h2>
       
-      <span>Accorder un accès aux applications à des domaines externes.</span>
+      <span>Accorder un accès aux applications à des ressources externes.</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">Index des mots-clés</a>
+        <a href="_index.html">Index de mots-clés</a>
       </h2>
       
-      <span>Index relatif à la documention</span>
+      <span>Index complet de la documentation.</span>
     </li>
   </ul>
   

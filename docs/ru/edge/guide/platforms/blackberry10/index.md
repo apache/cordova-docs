@@ -43,6 +43,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Редактировать `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где была установлена родного SDK:
     
     экспорт $ PATH = ${путь}: / приложения/bbndk/host\_10\_1\_0\_132/Дарвина/x 86/usr/bin /
+    
+    или для 10,2 родного SDK:
+    
+    экспорт $ PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
     

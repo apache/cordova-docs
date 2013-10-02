@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이 드 안 드 로이드 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 명령줄 인터페이스를 참조.
 
+## 3.1.0 3.0.0에서 업그레이드
+
+코르 도우 바 CLI로 만든 프로젝트의 경우:
+
+1.  업데이트는 `cordova` CLI 버전-명령줄 인터페이스 참조 
+2.  실행`cordova platform update android`
+
+아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
+
+1.  `빈/업데이트 < project_path >`
+
 ## 2.9.0에서 CLI (3.0.0) 업그레이드
 
 1.  명령줄 인터페이스에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.

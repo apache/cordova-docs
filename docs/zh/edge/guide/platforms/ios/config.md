@@ -16,38 +16,78 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS 配置
 
-`config.xml`設置檔控制科爾多瓦的各種設置。 這是應用廣泛，並不設置每個 CDVViewController 實例。 `config.xml`檔位於您 `<project folder>/<appname>` 目錄。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-## `< 首選項 >`
+*   `EnableViewportScale`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 使用視區的元標記來禁用或限制的使用者縮放的範圍。
+    
+        <preference name="EnableViewportScale" value="true"/>
+        
 
-各種首選項 （作為 `<preference>` 標籤） 預設情況下，不打破現有的應用程式。可用的選擇是：
+*   `MediaPlaybackRequiresUserAction`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 以防止 HTML5 視頻自動播放的 `autoplay` 屬性。 調用時，不適用 `play()` 視頻物件上。
+    
+        <preference name="MediaPlaybackRequiresUserAction" value="true"/>
+        
 
-*   `DisallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 如果你不想對橡膠帶 web 視圖。
+*   `AllowInlineMediaPlayback`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，讓 HTML5 播放媒體顯示*內聯*的螢幕佈局，使用瀏覽器提供的控制項，而不是本機控制項內。 為此，添加 `webkit-playsinline` 歸咎于任何 `<video>` 的元素。
+    
+        <preference name="AllowInlineMediaPlayback" value="true"/>
+        
 
-*   `TopActivityIndicator`（字串，預設值為 `gray` ）： 這是欄中的狀態/電池頂部紡 throbber，有效的值是 `whiteLarge` ， `white` ，和`gray`.
+*   `BackupWebStorage`（字串，或者 `none` ， `local` ，或預設的 `cloud` ）： 設置為 `cloud` 允許通過 iCloud 備份到 web 存儲資料。 設置為 `local` ，使得只有本地備份通過 iTunes 同步。 設置為 `none` 防止 web 存儲備份。
+    
+        <preference name="BackupWebStorage" value="local"/>
+        
 
-*   `EnableLocation`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 、 初始化啟動時的地理定位外掛程式 （以便在您所在的位置上的修補程式可以更準確）**已否決**： 請設置 `onload` 屬性的 `Geolocation` 外掛程式的 `true` 相反。
+*   `TopActivityIndicator`（字串，預設值為 `gray` ）： 控制指示大量的處理器活動的狀態列中的旋轉的小圖示的外觀。 有效的值為 `whiteLarge` ， `white` ，和`gray`.
+    
+        <preference name="TopActivityIndicator" value="white"/>
+        
 
-*   `EnableViewportScale`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，防止結垢通過 meta 標記的視區。
+*   `FadeSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 以防止褪色和縮小其顯示狀態發生更改時初始螢幕。
+    
+        <preference name="FadeSplashScreen" value="false"/>
+        
 
-*   `AutoHideSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` ，控制通過 JavaScript API 閃屏被隱藏時。
-
-*   `FadeSplashScreen`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` ，防止出現閃屏，淡出時顯示或隱藏它。
-
-*   `FadeSplashScreenDuration`（浮動，預設值為 2）： 初始螢幕淡入淡出時間以秒為單位。
+*   `FadeSplashScreenDuration`（浮動，預設值為 `2` ）： 指定的初始螢幕的秒數淡出效果來執行。
+    
+        <preference name="FadeSplashScreenDuration" value="4"/>
+        
 
 *   `ShowSplashScreenSpinner`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` 隱藏初始螢幕微調框。
+    
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+        
 
-*   `MediaPlaybackRequiresUserAction`(boolean 類型的值，預設值為 `false` ）： 設置為 true，不允許 autoplayed HTML5 視頻。
+*   `KeyboardDisplayRequiresUserAction`(boolean 類型的值，預設值為 `true` ）： 設置為 `false` ，允許鍵盤出現在調用時 `focus()` 形式投入。
+    
+        <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+        
 
-*   `AllowInlineMediaPlayback`(boolean 類型的值，預設值為 `false` ）： 設置為 true，以允許內聯 HTML5 播放媒體，此外，在 HTML 文檔中的視頻元素還必須包括 webkit playsinline 屬性。
+*   `SuppressesIncrementalRendering`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 等待，直到在呈現到螢幕之前已收到的所有內容。
+    
+        <preference name="SuppressesIncrementalRendering" value="true"/>
+        
 
-*   `BackupWebStorage`（字串，預設值為 `cloud` ）： 有效的值為 `none` ， `cloud` 和 `local` 。 設置為 `cloud` ，允許 web 存儲資料要備份到 iCloud，並將設置為 `local` ，僅允許本地備份 （iTunes 同步）。 設置為 `none` ，不允許任何備份 web 存儲。
+*   `KeyboardShrinksView`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 規模 web 視圖，當鍵盤出現時，重寫預設 beavior，沿垂直方向縮小視區。 這與匹配 Android 應用程式的預設的行為。
+    
+        <preference name="KeyboardShrinksView" value="true"/>
+        
 
-*   `KeyboardDisplayRequiresUserAction`(boolean 類型的值，預設值為 `true` ）： 設置為 false 時表單元素獲得焦點通過 JavaScript focus() 調用打開鍵盤。
+*   `GapBetweenPages`（浮動，預設值為 `` ）： 的大小，以磅為單位，頁面之間的差距。
+    
+        < 首選項名稱 = 值"GapBetweenPages"="0"/ >
+        
 
-*   `SuppressesIncrementalRendering`(boolean 類型的值，預設值為 `false` ）： 它在呈現之前已收到設置為 true，等待，直到新的所有視圖的內容。
+*   `PageLength`（浮動，預設值為 `` ）： 中點，在頁面流的方向每個頁面的大小。 當 PaginationMode 是從右至左或從左至右，此屬性工作表示每個頁面的寬度。 PaginationMode topToBottom 或 bottomToTop 時，此屬性工作表示每個頁面的高度。 預設值為 0，這意味著佈局使用視區的大小來確定頁面的尺寸。
+    
+        < 首選項名稱 = 值"PageLength"="0"/ >
+        
 
-*   `HideKeyboardFormAccessoryBar`(boolean 類型的值，預設值為 `false` ）： 設置為隱藏的附加工具列的鍵盤上面是真實。 此工具列功能**上一頁**、**下一頁**，和**做**按鈕。
+*   `PaginationBreakingMode`（字串，預設值為 `page` ）： 有效的值為 `page` 和 `column` 。在列或頁斷發生的方式。 此屬性確定是否某些 CSS 屬性關於列和頁打破是榮幸還是忽略。 當此屬性設置為 `column` ，內容尊重相關的頁斷的地方斷列的 CSS 屬性。
+    
+        < 首選項名稱 = 值"PaginationBreakingMode"="第頁"/ >
+        
 
-*   `KeyboardShrinksView`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 當鍵盤後縮小 web 視圖。 Web 視圖縮小，而不是視區萎縮和可滾動頁面。 這適用于應用程式，它們相對於底部的 web 視圖的元素的位置。 這是在 android 系統裡的預設行為，構建應用程式而不是網頁時發出很大的意義。
+*   `PaginationMode`（字串，預設值為 `unpaginated` ）： 有效的值為 `unpaginated` ， `leftToRight` ， `topToBottom` ， `bottomToTop` ，和 `rightToLeft` 。 此屬性確定是否在 web 視圖中的內容劃分為一次填充視圖一螢幕的頁或一個長的滾動視圖所示。 如果設置為一個分頁的表單，此屬性切換分頁的佈局上的內容，導致其內容的 web 視圖使用重新佈局的 PageLength 和 GapBetweenPages 的值。
+    
+        < 首選項名稱 = 值"PaginationMode"="分頁"/ >

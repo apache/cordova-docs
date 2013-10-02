@@ -37,8 +37,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ab Version 3.0 implementiert Cordova APIs auf Geräteebene als *Plugins*. Verwenden Sie den `plugin` Befehl des CLI, wie beschrieben in Die Kommandozeile-Schnittstelle, um dieses Feature für ein Projekt hinzuzufügen oder zu entfernen:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin rm org.apache.cordova.core.network-information
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin ls
+        [ 'org.apache.cordova.network-information' ]
+        $ cordova plugin rm org.apache.cordova.network-information
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifische Konfigurationseinstellungen müssen, wie unten beschriebenen, geändert werden:
@@ -90,4 +92,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifische Ko
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.

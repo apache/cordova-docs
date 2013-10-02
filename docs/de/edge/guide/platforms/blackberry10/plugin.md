@@ -150,7 +150,7 @@ Kann man die Artefakte des Plugins, die enthält die `plugin.xml` -Datei, die Qu
     *   **Gerät** (>*Binärdatei* * .so)
     *   **Simulator** (>*Binärdatei* * .so)
 
-(Die Liste zeigt die hierarchische Beziehung zwischen den Ordner der obersten Ebene. Die Klammer zeigt den Inhalt eines angegebenen Verzeichnisses. Alle Verzeichnisnamen werden in Fettschrift angezeigt. Dateinamen vorangestellt sind die `>` Zeichen.)
+(Die Liste zeigt die hierarchische Beziehung zwischen den Verzeichnissen der obersten Ebene. Die Klammer zeigt den Inhalt eines angegebenen Verzeichnisses. Alle Verzeichnisnamen werden in Fettschrift angezeigt. Dateinamen vorangestellt sind die `>` Zeichen.)
 
 ## Inhalt der `plugin.xml` Datei
 

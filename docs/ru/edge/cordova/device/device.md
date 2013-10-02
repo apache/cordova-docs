@@ -20,28 +20,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Свойства
 
-*   device.name
+*   device.model
 *   device.cordova
 *   device.platform
 *   device.uuid
 *   device.version
-*   device.model
+*   device.name
 
 ## Область действия переменной
 
 Поскольку `device` присваивается `window` объект, это неявно в глобальной области.
 
     // These reference the same `device`
-    var phoneName = window.device.name;
-    var phoneName = device.name;
+    var phoneModel = window.device.model;
+    var phoneModel = device.model;
     
 
 ## Доступ к функции
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
-        $ cordova plugin rm org.apache.cordova.core.device
+        $ cordova plugin add org.apache.cordova.device
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device' ]
+        $ cordova plugin rm org.apache.cordova.device
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -92,4 +94,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.

@@ -58,6 +58,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Windows Phone 플랫폼 가이드 8
 *   Windows Phone 7 플랫폼 가이드
+*   Windows Phone 구성
 *   Windows Phone 명령줄 도구
 *   Windows Phone 업그레이드
 
@@ -70,9 +71,3 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Tizen
 
 *   Tizen 플랫폼 가이드
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

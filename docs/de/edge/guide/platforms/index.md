@@ -58,6 +58,7 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 *   Handbuch für die Plattform von Windows Phone-8
 *   Windows Phone 7 Plattform Guide
+*   Windows Phone-Konfiguration
 *   Windows Phone Befehlszeilentools
 *   Aktualisieren von Windows Phone
 
@@ -70,9 +71,3 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 ## Tizen
 
 *   Tizen Plattform Guide
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

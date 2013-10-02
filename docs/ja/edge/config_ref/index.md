@@ -14,46 +14,119 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 構成のリファレンス
+# Config.xml ファイル
 
-プラットフォームに依存しない構成ファイルを使って、アプリケーションの動作の多くの側面を制御できる `config.xml` 、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]の仕様に基づいたフォーマットを。
+グローバル構成ファイルを使って、アプリの動作の多くの側面を制御できる `config.xml` は、アプリのホーム ページと共にトップレベル web アセット ディレクトリに配置されます。 このプラットフォームに依存しない XML ファイルは、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]仕様に基づいてフォーマットされ、拡張コア コルドバ API 機能、プラグイン、およびプラットフォームに固有の設定を指定します。
 
  [1]: http://www.w3.org/TR/widgets/
 
-コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクト、このファイルは、トップレベルで発見ことができます `www` ディレクトリ。 CLI を使用してプロジェクトをビルドする内のさまざまなサブディレクトリにこのファイルのバージョンを再生する `platforms` 。 非 CLI プロジェクトの場合、各プラットフォーム固有のファイルは、ソースとして機能します。
+コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクト、このファイルは、トップレベルで発見ことができます `www` ディレクトリ。 内のさまざまなサブディレクトリにこのファイルのバージョンを再生、CLI を使用してプロジェクトをビルドする `platforms` 。 作成するプロジェクトが SDK にあなたのワークフローをシフトし、CLI を使用する場合、プラットフォーム固有のファイルは、ソースとして機能します。
 
-場所をしながら、 `config.xml` プラットフォームに応じてファイルを変更可能性があります、その内容は、一般的にしないでください。 いくつかのプラットフォーム固有の機能も同じ構成ファイルで指定されます。 詳細は以下の通りです。
+このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
 *   iOS 構成
 *   Android の構成
 *   ブラックベリーの構成
 
-## config.xml の要素
+以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、アイコンとスプラッシュ画面を参照してください。
 
-[Apache コルドバ][2]プロジェクト基準があります大きく駆動し、web コミュニティによって採用された web をほうふつし、web ベースの抽象化を介して抽象的な離れてネイティブ プラットフォーム仕様を努めています。 [Config.xml 仕様][1]に慣れるには数分してください、アプリケーション メタデータ コルドバ Apache プロジェクトのタイプを理解する抽象化しのための単純なエントリ ポイントを提供することを目指しています。
+## コア構成要素
 
- [2]: http://cordova.io
+この例では、既定の `config.xml` は CLI によって生成される `create` コマンドは、コマンド ライン インターフェイスで記述されています。
 
-例:
-
-        <widget>
-            <preference name="MySetting" value="true" />
-            <feature name="MyPlugin" value="MyPluginClass" />
-            <access origin="*" />
+        <widget id="com.example.hello" version="0.0.1">
+            <name>HelloWorld</name>
+            <description>
+                A sample Apache Cordova application that responds to the deviceready event.
+            </description>
+            <author email="dev@callback.apache.org" href="http://cordova.io">
+                Apache Cordova Team
+            </author>
             <content src="index.html" />
+            <access origin="*" />
+            <preference name="Fullscreen" value="true" />
+            <preference name="WebViewBounce" value="true" />
         </widget>
     
 
-Apache コルドバでサポートされる主要プラットフォーム間でサポートされている要素のリストに従ってください。
+<!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
-### `<feature>`
+次の構成要素は最上位レベルに表示されます `config.xml` ファイル、およびすべてのサポートされているコルドバ プラットフォームがサポートされています。
 
-これらの要素は、アプリケーションにアクセスするネイティブ Api にマップします。 実行時に、Apache コルドバ フレームワーク マップ `<feature>` 、コルドバのアプリケーション デバイスできない典型的な web ベースのアプリケーションの Api へのアクセスを有効にするネイティブ コードへの要素。
+*   `<widget>`要素の `id` 属性をアプリの逆ドメイン識別子を提供します、 `version` その完全なバージョン番号のメジャー/マイナー/パッチ表記で表されます。
 
-### `<access>`
+*   `<name>`要素をデバイスのホーム画面とアプリ ストア インターフェイス内が表示されますアプリケーションの正式な名前を指定します。
 
-これらの要素はあなたのホワイト リストの動作を定義します。詳細についてはドメイン ホワイト リスト ガイドを参照してください。
+*   `<description>`と `<author>` 要素メタデータおよび app の店のリスト内に表示される連絡先の情報を指定します。
 
-### `<content>`
+*   省略可能な `<content>` 要素の最上位の web 資産ディレクトリに、アプリケーションの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
 
-この要素は、プロジェクトの標準的な web 資産ルート ディレクトリを基準にして、アプリケーションのスタート ページを定義します。この要素は省略可能、既定値は`index.html`.
+*   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン ホワイト リスト ガイドを参照してください。
+
+*   `<preference>`タグのペアとして様々 なオプションを設定します `name` / `value` の属性。 各設定項目 `name` 小文字は区別されません。 多くの設定は、このページの上部に記載されている特定のプラットフォームに固有です。 次のセクションでは、1 つ以上のプラットフォームに適用される設定を詳細します。
+
+## グローバル設定
+
+次のグローバル設定がすべてのプラットフォームに適用されます。
+
+*   `Fullscreen`画面の上部のステータス バーを非表示にすることができます。既定値は `false` です。例:
+    
+        <preference name="Fullscreen" value="true" />
+        
+
+*   `Orientation`向きをロックし、インターフェイスから回転の向きの変更に応答しないようにすることができます。 可能な値は `default` 、 `landscape` 、または `portrait` 。 例:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    **注：**`default`値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。 また、ブラックベリーを使用して `auto` の代わりに `default` でその `config.xml` ファイル。 指定した場合 `default` 、グローバルで `config.xml` 、それに変換 `auto` ブラックベリー ビルドで。
+
+## マルチプラット フォーム環境の設定
+
+次の設定を 1 つ以上のプラットフォームができないそれらのすべてが適用されます。
+
+*   `DisallowOverscroll`(ブール値、既定値は `false` ): に設定されている `true` ユーザーは過去の先頭または末尾のコンテンツのスクロール時に任意のフィードバックを表示するインターフェイスをしたくないかどうか。
+    
+        <preference name="DisallowOverscroll" value="true"/>
+        
+    
+    人造人間と iOS に適用されます。 IOS の overscroll ジェスチャー原因コンテンツは元の位置に戻って跳ねます。 Android 上で彼らはコンテンツの上部または下部のエッジに沿ってより微妙な光る効果を生成します。
+
+*   `BackgroundColor`: アプリケーションの背景色を設定します。 次の 3 バイトは、アルファ チャネルを表す最初のバイトと 4 バイトの 16 進値と標準の RGB 値をサポートしています。 この例では、青を指定します。
+    
+        <preference name="BackgroundColor" value="0xff0000ff"/>
+        
+    
+    アンドロイドおよびブラックベリーに適用されます。たとえば、*すべて*のプラットフォームそれ以外の場合利用可能な CSS をオーバーライドします。`body{background-color:blue}`.
+
+*   `HideKeyboardFormAccessoryBar`(ブール値、既定値は `false` ): に設定されている `true` 貢献、キーボード上に表示される追加のツールバーを非表示にするユーザーを別の 1 つのフォーム入力から移動します。
+    
+        <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+        
+    
+    IOS とブラックベリーに適用されます。
+    
+    **注：**有効値は、BlackBerry のため `enable` または`disable`.
+
+## `<feature>`要素
+
+使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 かどうか SDK で直接作業している特定のプラットフォームを使用して `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
+
+        <feature name="Plugin" value="PluginID" />
+    
+
+プラットフォーム固有のカスタム値とともに表示されます多くの場合 `config.xml` ファイル。たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
+
+        <feature name="Device">
+            <param name="android-package" value="org.apache.cordova.device.Device" />
+        </feature>
+    
+
+ここでは、iOS のプロジェクトのための要素の表示方法です。
+
+        <feature name="Device">
+            <param name="ios-package" value="CDVDevice" />
+        </feature>
+    
+
+各機能を指定する方法の詳細については API リファレンスを参照してください。プラグインの詳細については、プラグイン開発ガイドを参照してください。

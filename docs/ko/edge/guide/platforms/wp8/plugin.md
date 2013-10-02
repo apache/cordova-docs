@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 1.  프로젝트를 선택 하 고 **추가 → 새 항목...** 을 선택 마우스 오른쪽 단추로 클릭
     
-    *   가급적 이면 '플러그인' 폴더를 추가 하지만 그것은 당신에 게
+    *   가급적 이면 '플러그인' 디렉토리를 추가 하지만 그것은 당신에 게
 
 2.  '클래스'를 선택 하 고 이름을`Echo.cs`
     

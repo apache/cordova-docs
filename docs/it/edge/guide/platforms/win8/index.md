@@ -39,7 +39,7 @@ Seguire le istruzioni [qui][1] a presentare le tue applicazioni Windows Store.
 
 *   Impostare il tuo preferito variante di Visual Studio 2012. Tutte le versioni a pagamento del prodotto (professionale, ecc.) ti consentono di costruire applicazioni Windows Store. È necessario **esprimere per Windows 8** costruire Windows App Store l' [Express edizioni][2].
 
-*   Scaricare ed estrarre l'ultima copia di [Cordova][3]. Lavorerete `lib\windows-8` sottocartella.
+*   Scaricare ed estrarre l'ultima copia di [Cordova][3]. Lavorerete `lib\windows-8` sottodirectory.
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

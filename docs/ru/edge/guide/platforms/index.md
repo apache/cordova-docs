@@ -58,6 +58,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Руководство по платформы Windows Phone 8
 *   Руководство по платформы Windows Phone 7
+*   Конфигурация Windows Phone
 *   Windows Phone средств командной строки
 *   Обновление Windows Phone
 
@@ -70,9 +71,3 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Tizen
 
 *   Руководство по Tizen платформы
-
-<!--
-## FirefoxOS
-
-* FirefoxOS Configuration
--->

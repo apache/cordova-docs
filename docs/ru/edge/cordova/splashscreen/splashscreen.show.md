@@ -28,7 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   Ежевика 10
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8

@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `version`（必填）： 您的框架必須要安裝的版本。
 
-*   `scriptSrc`（必填）： 告訴 plugman 是什麼版本的自訂框架的指令檔。理想情況下，此檔應該在你的外掛程式資料夾的頂層目錄內。
+*   `scriptSrc`（必填）： 告訴 plugman 是什麼版本的自訂框架的指令檔。理想情況下，此檔應該在你的外掛程式目錄的頂層目錄內。
 
 *   `platform`（必填）： 您的框架支援哪些平臺。 您可以使用萬用字元 ' *' 說支援所有平臺，指定多個具有像 'android|ios|blackberry10' 的管道字元或像 'android' 只是一個單一的平臺。
 
@@ -321,7 +321,9 @@ XML 的的示例：
 示例：
 
     <config-file target="config.xml" parent="/widget/plugins">
-         <plugin name="ChildBrowser" value="ChildBrowserCommand"/>
+        <feature name="ChildBrowser">
+            <param name="ios-package" value="ChildBrowserCommand"/>
+        </feature>
     </config-file>
     
 

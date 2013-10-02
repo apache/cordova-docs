@@ -18,6 +18,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ce guide montre comment modifier des projets BlackBerry mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
+## Mise à niveau vers 3.1.0 de 3.0.0
+
+1.  Créez un projet Apache Cordova 3.1.0 utilisant le cordova CLI, tel que décrit dans l'Interface de ligne de commande.
+
+2.  Ajoutez vos plates-formes cordova au projet, par exemple :`cordova
+platform add blackberry10`.
+
+3.  Copiez le contenu du projet original `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
+
+4.  Copier ou écraser tout actif natif de votre projet d'origine ( `Resources` , etc..)
+
+5.  Copie votre `config.xml` dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous allez modifier les paramètres ici au lieu du répertoire de la plate-forme.
+
+6.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme plugins, donc ils peuvent avoir besoin d'être ajouté. Uniquement les plugins marqué 3.0.0 et ci-dessus sont compatibles avec l'interface CLI.
+
+7.  Générer et tester.
+
 Veuillez noter que la CLI prend en charge la plate-forme BlackBerry10 exclusivement. Pour PlayBook et BBOS, s'il vous plaît voir Cordova version 2.9.0 et en dessous.
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
@@ -379,7 +396,7 @@ Mise à jour le répertoire de l'exemple (c.-à-d., mise à jour grâce aux outi
          < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
     
-    À:
+    VOX
     
          < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
         

@@ -64,4 +64,4 @@ Si vous utilisez l'ancienne ensemble d'outils de Cordova qui précèdent le CLI,
         < id="blackberry.widgetcache en vedette" requis = "true" version = "1.0.0.0" / >
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.

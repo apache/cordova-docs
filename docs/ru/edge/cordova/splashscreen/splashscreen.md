@@ -27,8 +27,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
-        $ cordova plugin rm org.apache.cordova.core.splashscreen
+        $ cordova plugin add org.apache.cordova.splashscreen
+        $ cordova plugin ls
+        [ 'org.apache.cordova.splashscreen' ]
+        $ cordova plugin rm org.apache.cordova.splashscreen
     
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
@@ -47,39 +49,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите поддержку платформы обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
 
-## Установка
-
-### Андроид
-
-1.  Скопировать изображение экрана-заставки в Android-проект `res/drawable` каталог. Размер для каждого изображения должны быть:
-
-*   девочки (xhdpi): по крайней мере 960 × 720
-*   большой (hdpi): по крайней мере 640 × 480
-*   Средний (mdpi): по крайней мере 470 × 320
-*   малые (ldpi): по крайней мере 426 × 320
-    
-    Следует использовать [9-патч изображение][1] для экрана-заставки.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-1.  В `onCreate` метод класса, который расширяет `DroidGap` , добавьте следующие две строки:
-    
-        super.setIntegerProperty("splashscreen", R.drawable.splash);
-        super.loadUrl(Config.getStartUrl(), 10000);
-        
-    
-    Первая строка задает изображение для отображения в виде splashscreen. Если имя изображения ничего не `splash.png` , вам необходимо изменить эту строку. Вторая строка является нормальной `super.loadUrl` линию, но он имеет второй параметр, который указывает значение времени ожидания для экрана-заставки. В этом примере экран-заставка отображается 10 секунд. Чтобы закрыть экран-заставка после этого приложение получает `deviceready` событий, вызов `navigator.splashscreen.hide()` метод.
-
-### iOS
-
-Скопируйте ваши изображения экрана заставки в iOS проект `Resources/splash` каталог. Добавьте только изображения для устройств, которые вы хотите поддерживать, такие как iPad или iPhone. Размер каждого изображения должны быть:
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
+Смотрите информацию о том, как настраивает эти образы иконки и заставки.

@@ -16,10 +16,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> `InAppBrowser`是一個 web 瀏覽器顯示在應用程式中調用時`window.open`.
+> `InAppBrowser`一個 web 瀏覽器視圖，顯示時調用 `window.open()` ，或當打開連結形成的作為`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
+
+**注：**InAppBrowser 視窗類似于一個標準的 web 瀏覽器，並且無法訪問科爾多瓦的 Api。
 
 ## 說明
 
@@ -38,8 +40,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-        $ cordova plugin rm org.apache.cordova.core.inappbrowser
+        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin ls
+        [ 'org.apache.cordova.inappbrowser' ]
+        $ cordova plugin rm org.apache.cordova.inappbrowser
     
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
@@ -63,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
 
 # addEventListener
 

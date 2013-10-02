@@ -43,45 +43,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        설정 참조
+        Config.xml 파일
       </h2>
       
-      <span>앱 기능 커스터마이징하기</span>
+      <span>응용 프로그램의 기능을 사용자 지정 합니다.</span>
     </li>
     <li>
       <h2>
-        웹뷰 삽입
+        아이콘 및 시작 화면
       </h2>
       
-      <span>프로젝트에 Cordova 웹뷰 구현하기</span>
+      <span>애플 리 케이 션의 표시 이미지를 사용자 지정 합니다.</span>
+    </li>
+    <li>
+      <h2>
+        WebViews 포함
+      </h2>
+      
+      <span>프로젝트에서 코르도바 WebView를 구현 합니다.</span>
     </li>
     <li>
       <h2>
         플러그인 개발 가이드
       </h2>
       
-      <span>첫 플러그인 개발하기</span>
+      <span>첫 번째 플러그인을 개발 합니다.</span>
     </li>
     <li>
       <h2>
-        개인정보보호 가이드
+        개인 정보 보호 가이드
       </h2>
       
-      <span>모바일 개인정보보호 이슈에 대해 알아보기</span>
+      <span>중요 한 모바일 개인 정보 보호 문제에 대해 자세히 알아보기</span>
     </li>
     <li>
       <h2>
-        도메인 허용목록 가이드
+        화이트 리스트 가이드
       </h2>
       
-      <span>외부 도메인인에 어플리케이션 접근 허용하기</span>
+      <span>외부 리소스에 대 한 응용 프로그램 액세스를 부여 합니다.</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">키워드 색인</a>
+        <a href="_index.html">키워드 인덱스</a>
       </h2>
       
-      <span>문서내 전체 색인 보기</span>
+      <span>설명서의 전체 인덱스입니다.</span>
     </li>
   </ul>
   

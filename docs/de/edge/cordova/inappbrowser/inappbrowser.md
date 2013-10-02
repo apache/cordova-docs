@@ -16,10 +16,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # InAppBrowser
 
-> Die `InAppBrowser` ist ein Web-Browser, die in der app beim Aufruf zeigt`window.open`.
+> Die `InAppBrowser` ist eine Web-Browser-Ansicht, die anzeigt, wann der Aufruf `window.open()` , oder als als bildeten einen Link öffnen`<a target="_blank">`.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
+
+**Hinweis:** Das InAppBrowser-Fenster verhält sich wie einen standard-Webbrowser und Cordova APIs kann nicht zugegriffen werden kann.
 
 ## Beschreibung
 
@@ -38,8 +40,10 @@ Aus einem Aufruf zurückgegebenen Objekts`window.open`.
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-        $ cordova plugin rm org.apache.cordova.core.inappbrowser
+        $ cordova plugin add org.apache.cordova.inappbrowser
+        $ cordova plugin ls
+        [ 'org.apache.cordova.inappbrowser' ]
+        $ cordova plugin rm org.apache.cordova.inappbrowser
     
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
@@ -63,7 +67,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="InAppBrowser" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
 
 # addEventListener
 

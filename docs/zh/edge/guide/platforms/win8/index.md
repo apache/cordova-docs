@@ -39,7 +39,7 @@ Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應�
 
 *   設置您的 Visual Studio 2012 的首選變形。 所有產品的付費版本 (專業、 等) 讓您構建 Windows 應用商店的應用程式。 你需要**表達為 Windows 8**來構建 Windows 應用商店應用程式使用的[速成版][2].
 
-*   下載並解壓縮[科爾多瓦][3]的最新副本。您將使用的 `lib\windows-8` 子資料夾。
+*   下載並解壓縮[科爾多瓦][3]的最新副本。你將會工作 `lib\windows-8` 子目錄。
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
  [3]: http://phonegap.com/download

@@ -37,8 +37,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 從 3.0 版，科爾多瓦作為*外掛程式*實現了設備級 Api。 使用 CLI 的 `plugin` 命令，描述在命令列介面，可以添加或刪除一個專案，為此功能：
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-        $ cordova plugin rm org.apache.cordova.core.network-information
+        $ cordova plugin add org.apache.cordova.network-information
+        $ cordova plugin ls
+        [ 'org.apache.cordova.network-information' ]
+        $ cordova plugin rm org.apache.cordova.network-information
     
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
@@ -90,4 +92,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
+一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。

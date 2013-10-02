@@ -14,27 +14,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Local
+# LocalFileSystem
 
-Cet objet fournit un moyen d'obtenir des systèmes de fichiers racine.
+Cet objet fournit un moyen d'obtenir la racine de systèmes de fichiers.
 
 ## Méthodes
 
-*   **requestFileSystem**: demande un système de fichiers. *(Fonction)*
+*   **requestFileSystem** : demande un système de fichiers. *(Function)*
 
-*   **resolveLocalFileSystemURI**: récupérer un `DirectoryEntry` ou `FileEntry` à l'aide d'URI local. *(Fonction)*
+*   **resolveLocalFileSystemURI** : récupère un objet `DirectoryEntry` ou `FileEntry` à partir d'un URI local. *(Function)*
 
 ## Constantes
 
-*   `LocalFileSystem.PERSISTENT`: Utilisé pour le stockage, ce qui ne devrait pas être retiré par l'agent utilisateur sans autorisation d'application ou utilisateur.
+*   `LocalFileSystem.PERSISTENT` : constante faisant référence à un stockage qui ne devrait pas être supprimé par l'agent utilisateur sans l'autorisation de application ou de l'utilisateur.
 
-*   `LocalFileSystem.TEMPORARY`: Utilisé pour le stockage sans garantie de persistance.
+*   `LocalFileSystem.TEMPORARY` : constante faisant référence à un stockage sans garantie de persistance.
 
 ## Détails
 
-Les `LocalFileSystem` méthodes de l'objet sont définis sur le `window` objet.
+Les méthodes de l'objet `LocalFileSystem` sont définies directement sur l'objet global `window`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 5.0 et plus)
@@ -42,7 +42,7 @@ Les `LocalFileSystem` méthodes de l'objet sont définis sur le `window` objet.
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Demande de fichier système exemple rapide
+## Exemple court de demande d'un système de fichiers
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);
@@ -52,7 +52,7 @@ Les `LocalFileSystem` méthodes de l'objet sont définis sur le `window` objet.
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
     
 
-## Résoudre le système de fichiers Local URI petit exemple
+## Exemple court de résolution d'un système de fichiers via un URI local
 
     function onSuccess(fileEntry) {
         console.log(fileEntry.name);
@@ -105,18 +105,18 @@ Les `LocalFileSystem` méthodes de l'objet sont définis sur le `window` objet.
 
 # requestFileSystem
 
-> Demander un système de fichier dans lequel stocker les données d'application.
+> Demande un système de fichier dans lequel stocker les données de l'application.
 
      window.requestFileSystem(type, size, successCallback, errorCallback)
     
 
-*   **fenêtre**: référence à l'objet global window
-*   **type**: local type de système de fichiers, voir local constantes
-*   **taille**: indique la quantité d'espace stockage, en octets, l'application attend d'avoir besoin
-*   **successCallback**: appelée avec un objet système de fichiers
-*   **errorCallback**: invoquée si l'erreur produit de récupération système de fichiers
+*   **window** : référence à l'objet global window
+*   **type** : type du système de fichiers local, voir les constantes associées à l'objet LocalFileSystem
+*   **size** : indique la quantité d'espace stockage, en octets, requise par l'application
+*   **successCallback** : fonction appelée avec un objet FileSystem
+*   **errorCallback** : fonction invoquée si une erreur se produit lors de la récupération du système de fichiers
 
-## Demande de fichier système exemple rapide
+## Exemple court de demande d'un système de fichiers
 
     function onSuccess(fileSystem) {
         console.log(fileSystem.name);

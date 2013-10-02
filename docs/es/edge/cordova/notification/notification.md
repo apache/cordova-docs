@@ -30,10 +30,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Uso de la CLI `plugin` comando, que se describe en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
 
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git
-        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
-        $ cordova plugin rm org.apache.cordova.core.dialogs
-        $ cordova plugin rm org.apache.cordova.core.vibration
+        $ cordova plugin add org.apache.cordova.dialogs
+        $ cordova plugin add org.apache.cordova.vibration
+        $ cordova plugin ls
+        [ 'org.apache.cordova.dialogs',
+          'org.apache.cordova.vibration' ]
+        $ cordova plugin rm org.apache.cordova.dialogs
+        $ cordova plugin rm org.apache.cordova.vibration
     
 
 Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
@@ -67,4 +70,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         </feature>
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.

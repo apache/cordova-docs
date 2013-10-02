@@ -28,7 +28,6 @@ Questo metodo visualizza la schermata iniziale dell'applicazione.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry 10
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8

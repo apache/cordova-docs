@@ -18,6 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Diese Anleitung zeigt wie Android Projekte Upgrade von älteren Versionen von Cordova zu ändern. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Die Command-Line Interface Informationen finden Sie unter Gewusst wie: Aktualisieren Sie die Version der CLI.
 
+## Upgrade von 3.0.0 auf 3.1.0
+
+Für Projekte, die mit Cordova CLI erstellt wurden:
+
+1.  Update der `cordova` CLI-Version - siehe The Command-Line Interface 
+2.  Ausführen`cordova platform update android`
+
+Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
+
+1.  `Aktualisieren Sie bin/< Project_path >`
+
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
 
 1.  Erstellen Sie ein neues Apache Cordova 3.0.0-Projekt mit Cordova CLI, wie in der Command-Line Interface beschrieben.
@@ -29,7 +40,7 @@ platform add android`.
 
 4.  Nativen Vermögen aus dem alten Projekt kopieren, in die entsprechenden Verzeichnisse unter `platforms/android` : in diesem Verzeichnis werden in dem systemeigene Cordova-Android Projekt vorhanden ist.
 
-5.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie unter Umständen hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
+5.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
 ## Ein Upgrade auf 3.0.0 von 2.9.0
 
@@ -85,7 +96,7 @@ platform add android`.
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+8.  
 
 ## Ein Upgrade auf 2.6.0 von 2.5.0
 
@@ -123,7 +134,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  
+8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.4.0 von 2.3.0
 
@@ -371,7 +382,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 7.  Update `res/xml/phonegap.xml` entsprechend`framework/res/xml/phonegap.xml`.
 
-## Von 1.0.0 auf 1.1.0 aktualisieren
+## Aktualisieren Sie von 1.0.0 auf 1.1.0
 
 1.  Entfernen von `phonegap-1.0.0.jar` aus des Projekts `libs` Verzeichnis.
 

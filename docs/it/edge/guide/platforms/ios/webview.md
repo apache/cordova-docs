@@ -32,19 +32,19 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 ## Aggiunta di mannaia al progetto Xcode (sub-progetto CordovaLib)
 
-1.  Scaricare ed estrarre la sorgente di Cordova in un percorso di cartella permanente sul disco rigido, ad esempio`~/Documents/Cordova`.
+1.  Scaricare ed estrarre la sorgente di Cordova in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova`.
 
 2.  Se è in esecuzione, chiudere Xcode.
 
 3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
 
-4.  Copia il `config.xml` file nella cartella del progetto su disco (vedere i prerequisiti di cui sopra).
+4.  Copia il `config.xml` file nella directory del progetto su disco (vedere i prerequisiti di cui sopra).
 
 5.  Trascinare e rilasciare il `config.xml` file nel navigatore il progetto di Xcode.
 
 6.  Scegliere il pulsante **crea gruppi per eventuali aggiunte cartelle** e premere **fine**.
 
-7.  Trascinare e rilasciare il `CordovaLib.xcodeproj` file nel navigatore il progetto di Xcode (dalla cartella permanente posizione sopra e dovrebbe essere nel `CordovaLib` sottodirectory).
+7.  Trascinare e rilasciare il `CordovaLib.xcodeproj` file nel navigatore il progetto di Xcode (dalla directory permanente posizione sopra e dovrebbe essere nel `CordovaLib` sottodirectory).
 
 8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
 
@@ -130,11 +130,11 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
 
 ## Aggiungendo il vostro patrimonio HTML, CSS e JavaScript
 
-1.  Creare una nuova cartella nel progetto su disco, `www` per esempio.
+1.  Creare una nuova directory nel progetto su disco, `www` per esempio.
 
-2.  Mettere il vostro patrimonio HTML, CSS e JavaScript in questa cartella.
+2.  Mettere il vostro patrimonio HTML, CSS e JavaScript in questa directory.
 
-3.  E trascinare la cartella nel navigatore il progetto di Xcode.
+3.  Trascinare e rilasciare la directory nel navigatore il progetto di Xcode.
 
 4.  Scegliere il pulsante di opzione **crea riferimenti di cartella per eventuali cartelle aggiunte** .
 
