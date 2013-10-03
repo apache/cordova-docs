@@ -26,7 +26,7 @@ File for information on global configuration options.
 
 - `EnableViewportScale` (boolean, defaults to `false`): Set to `true`
   to use a viewport meta tag to either disable or restrict the range
-  of user scaling. 
+  of user scaling, which is enabled by default.
 
         <preference name="EnableViewportScale" value="true"/>
 
