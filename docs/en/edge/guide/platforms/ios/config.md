@@ -25,10 +25,15 @@ details preferences that only apply to iOS builds. See The config.xml
 File for information on global configuration options.
 
 - `EnableViewportScale` (boolean, defaults to `false`): Set to `true`
-  to use a viewport meta tag to either disable or restrict the range
+  to allow a viewport meta tag to either disable or restrict the range
   of user scaling, which is enabled by default.
 
         <preference name="EnableViewportScale" value="true"/>
+
+  Place a viewport such as the following in the HTML to disable
+  scaling and fit content flexibly within the rendering WebView:
+
+        <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 
 - `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
   Set to `true` to prevent HTML5 videos or audios from playing
