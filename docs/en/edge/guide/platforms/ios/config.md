@@ -31,9 +31,8 @@ File for information on global configuration options.
         <preference name="EnableViewportScale" value="true"/>
 
 - `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
-  Set to `true` to prevent HTML5 videos from playing automatically
-  with the `autoplay` attribute. Does not apply when calling `play()`
-  on a video object.
+  Set to `true` to prevent HTML5 videos or audios from playing
+  automatically with the `autoplay` attribute or via JavaScript.
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
