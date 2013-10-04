@@ -26,6 +26,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Start here if you are new to Cordova.</span>
         </li>
         <li>
+            <h2>Platform Support</h2>
+            <span>Compatibility table for all major features.</span>
+        </li>
+        <li>
             <h2>The Command-line Interface</h2>
             <span>Create, build, and deploy from the command-line.</span>
         </li>
