@@ -84,7 +84,7 @@ the CLI for progressively greater shares of the development cycle:
   additional project files required to compile within each SDK.  For
   this to work, you must install each targeted platform's SDK.
   (See the Platform Guides for instructions.)
-  As indicated in the Platform Support table below, you may need to
+  As indicated in the Platform Support table, you may need to
   run the CLI on different operating systems depending on the targeted
   platform.
 
