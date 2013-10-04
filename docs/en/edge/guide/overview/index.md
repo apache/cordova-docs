@@ -108,9 +108,7 @@ XREF -->
 You may use the command-line utility to initially generate the app, or
 iteratively thereafter to feed updated code to SDK tools.  You may
 also build the app's configuration file yourself.
-<!-- XREF
 (See The config.xml File for details.)
-XREF -->
 
 <!-- XREF
 To build projects on some platforms, you may need to apply digital signatures.
