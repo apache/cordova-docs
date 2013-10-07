@@ -21,41 +21,81 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 A _plugin_ is a bit of injected code that allows the webview within
 which your app renders to communicate with the native platform on
-which it runs.  Plugins thus provide access to device and platform
+which it runs.  Plugins provide access to device and platform
 functionality that is ordinarily unavailable to web-based apps.  All
 the main Cordova API features are implemented as plugins, and many
 others are available that enable features such as bar code scanners,
 NFC communication, or to tailor calendar interfaces.
 
-This section steps through how to write a simple _echo_ plugin that
-passes a string from JavaScript to the native platform and back.  You
-can build far more complex plugins based on this simple model.  This
-section discusses the outward-facing JavaScript interface. For each
-corresponding native interface, see the list at the end of this
-section.  For detailed information on the plugin format, see the
-Plugin Specification.  For information on how to add existing plugins
-to an app, see The Command-line Interface.
+Plugins comprise a single JavaScript interface along with
+corresponding native code libraries for each supported platform.  This
+section steps through a simple _echo_ plugin that passes a string from
+JavaScript to the native platform and back, one that you can use as a
+model to build far more complex features.  This section discusses the
+basic plugin structure and the outward-facing JavaScript interface.
+For each corresponding native interface, see the list at the end of
+this section.
 
-<!-- ## File and Directory Structure -->
+## Building a Plugin
+
+Application developers use the CLI's `plugin add` command (discussed
+in The Command-line Interface) to apply a plugin to a project. The
+argument to that command is the URL for a _git_ repository containing
+the plugin code.  This example implements Cordova's Device API:
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+
+The plugin repository must feature a top-level `plugin.xml` manifest
+file. There are many ways to configure this file, details for which
+are available in the Plugin Specification. This abbreviated version of
+the `Device` plugin provides a simple example to use as a model:
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+                id="org.apache.cordova.device" version="0.2.3">
+            <name>Device</name>
+            <description>Cordova Device Plugin</description>
+            <license>Apache 2.0</license>
+            <keywords>cordova,device</keywords>
+            <js-module src="www/device.js" name="device">
+                <clobbers target="device" />
+            </js-module>
+            <platform name="ios">
+                <config-file target="config.xml" parent="/*">
+                    <feature name="Device">
+                        <param name="ios-package" value="CDVDevice"/>
+                    </feature>
+                </config-file>
+                <header-file src="src/ios/CDVDevice.h" />
+                <source-file src="src/ios/CDVDevice.m" />
+            </platform>
+        </plugin>
+
+The top-level `plugin` tag's `id` attribute uses the same
+reverse-domain format to identify the plugin package as the apps to
+they're added.  The `js-module` tag specifies the path to the common
+JavaScript interface.  The `platform` tag specifies a corresponding
+set of native code, for the `ios` platform in this case.  The
+`config-file` tag encapsulates a `feature` tag that is injected into
+the platform-specific `config.xml` file to make the platform aware of
+the additional code library.  The `header-file` and `source-file` tags
+specify the path to the library's component files.
 
 ## The JavaScript Interface
 
-Plugins comprise a single JavaScript interface along with
-corresponding native code libraries for each supported platform.  The
-JavaScript provides the provides the front-facing interface, making it
-perhaps the most important part of the plugin.
+The JavaScript provides the front-facing interface, making it perhaps
+the most important part of the plugin.  You can structure your
+plugin's JavaScript however you like, but you need to call
+`cordova.exec` to communicate with the native platform, using the
+following syntax:
 
-You can structure your plugin's JavaScript however you like, but you
-need to call `cordova.exec` to communicate with the native platform,
-as in the following example:
-
-        cordova.exec(function(winParam) {}, 
-                     function(error) {}, 
+        cordova.exec(function(winParam) {},
+                     function(error) {},
                      "service",
-                     "action", 
+                     "action",
                      ["firstArgument", "secondArgument", 42, false]);
 
-The parameters work as follows:
+Here is how each parameter works:
 
 - `function(winParam) {}`: A success callback function. Assuming your
   `exec` call completes successfully, this function executes along
@@ -78,7 +118,8 @@ The parameters work as follows:
 
 ## Sample JavaScript
 
-This example shows how to specify the plugin's JavaScript interface:
+This example shows one way to implement the plugin's JavaScript
+interface:
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -94,9 +135,10 @@ the `echo` function, which plugin users would call as follows:
         });
 
 Look at the last three arguments to the `cordova.exec` function. The
-first calls the `Echo` _service_. The second requests the `echo`
-_action_. The third is an array of arguments containing the echo
-string, which is the `window.echo` function's the first parameter.
+first calls the `Echo` _service_, a class name. The second requests
+the `echo` _action_, a method within that class. The third is an array
+of arguments containing the echo string, which is the `window.echo`
+function's the first parameter.
 
 The success callback passed into `exec` is simply a reference to the
 callback function `window.echo` takes. If the native platform fires
@@ -116,12 +158,3 @@ listed below, and each builds on the simple Echo Plugin example above:
 - Windows Phone Plugins
 
 The Tizen platform does not support plugins.
-
-## Plugin Specification
-
-Cordova's plugin specification allows plugins to be installed
-automatically for Android, iOS, BlackBerry 10 and Windows Phone
-platforms. If you specify a `plugin.xml` manifest file and follow the
-specification's conventions for filename and directory structure,
-users can install your plugin using platform-specific command-line
-tooling.  See Plugin Specification for details.
