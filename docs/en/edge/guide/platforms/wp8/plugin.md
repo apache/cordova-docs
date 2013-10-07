@@ -19,6 +19,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone Plugins
 
+The section provides details for how to implement plugin code on the
+Windows Phone platform. See Application Plugins for an overview of how
+to structure the plugin and implement its common JavaScript interface.
+
 Writing a plugin for Cordova on Windows Phone requires a basic understanding of
 the architecture of Cordova. Cordova-WP7 consists of a WebBrowser which hosts the
 application JavaScript code and manages native API calls. There is a BaseCommand
@@ -59,26 +63,26 @@ and it comes with the majority of the 'plumbing' built for you already.
 
 The default namespace for unqualified commands is:
 
-    namespace Cordova.Extension.Commands
-    {
-        // ...
-    }
+        namespace Cordova.Extension.Commands
+        {
+            // ...
+        }
 
 If you want to use your own namespace, you need to make a fully
 qualified call to `cordova.exec`. For example, if you want to define
 your C# class like this:
 
-    namespace com.mydomain.cordovaExtensions
-    {
-        public class Echo : BaseCommand
+        namespace com.mydomain.cordovaExtensions
         {
-            // ...
+            public class Echo : BaseCommand
+            {
+                // ...
+            }
         }
-    }
 
 Then, in JavaScript you need to call `exec` like this:
 
-    cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
+        cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
 ## Interpreting your arguments in C#
 
@@ -86,20 +90,20 @@ The data received by your plugin method is a string value, but in actuality
 looking at our JavaScript code, we see our intention was to pass an array of strings.
 Looking back at our JavaScript call to `cordova.exec`, we see we passed `[str]`:
 
-    cordova.exec(win, fail, "Echo", "echo", ["input string"]);
+        cordova.exec(win, fail, "Echo", "echo", ["input string"]);
 
 If we inspect the options string passed in to our `Echo.echo` method,
 we see that the value is actually:
 
-    "[\"input string\"]"
+        "[\"input string\"]"
 
 All JavaScript `exec` arguments are JSON encoded before being passed into C#.
 
 If we want to treat this as the string we were expecting, we need to decode it.
 We can use simple JSON deserialization.
 
-    string optVal = JsonHelper.Deserialize<string[]>(options)[0];
-    // optVal now has the value of "input string"
+        string optVal = JsonHelper.Deserialize<string[]>(options)[0];
+        // optVal now has the value of "input string"
 
 ## Passing results from C# to JavaScript
 
@@ -107,44 +111,44 @@ The base class BaseCommand provides methods for passing data to your JavaScript 
 To simply signal that the command has succeeded, when no additional result info is needed,
 you can simply call:
 
-    DispatchCommandResult(); // calls back with an empty plugin result, considered a success callback
+        DispatchCommandResult(); // calls back with an empty plugin result, considered a success callback
 
 To pass data back, you need to call a different version of `DispatchCommandResult`:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
 
 To pass structured object data back to JavaScript, it should be encoded as a JSON string:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
 
 If you need to signal that an error has occurred, you can call `DispatchCommandResult` with a `PluginResult` object:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
 
 ## Handling serialization errors in your plugin's C# method
 
 When interpreting your arguments, it is a good idea to use a try/catch block
 in case we have bad input. This is a pattern used throughout the Cordova C# code:
 
-    string optVal = null;
+        string optVal = null;
 
-    try
-    {
-        optVal = JsonHelper.Deserialize<string[]>(options)[0];
-    }
-    catch(Exception)
-    {
-        // simply catch the exception, we handle null values and exceptions together
-    }
+        try
+        {
+            optVal = JsonHelper.Deserialize<string[]>(options)[0];
+        }
+        catch(Exception)
+        {
+            // simply catch the exception, we handle null values and exceptions together
+        }
 
-    if (optVal == null)
-    {
-        DispatchCommandResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
-    }
-    else
-    {
-        // ... continue on to do our work
-    }
+        if (optVal == null)
+        {
+            DispatchCommandResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
+        }
+        else
+        {
+            // ... continue on to do our work
+        }
 
 ## Plugin XML
 
@@ -158,16 +162,16 @@ On windows phone the `<source-file>` element is currently used to define all plu
 
 The `<config-file>` element defines what elements get put into a config file. For example to add a plugin to the platforms config.xml, you would do something like this :
 
-    <config-file target="config.xml" parent="/*">
-        <feature name="PluginName">
-            <param name="wp-package" value="PluginName"/>
-        </feature>
-    </config-file>
+        <config-file target="config.xml" parent="/*">
+            <feature name="PluginName">
+                <param name="wp-package" value="PluginName"/>
+            </feature>
+        </config-file>
 If we wanted to add the contacts capability to the WMAppManifest.xml, it would look like this :
 
-    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
-        <Capability Name="ID_CAP_CONTACTS" />
-    </config-file>
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_CONTACTS" />
+        </config-file>
 
 ## Advanced Plugin Functionality
 
@@ -197,13 +201,13 @@ inform yourself of errors.
 
     - This means that your C# code receives a difficult to decode string value, such as:
 
-            "[\"this is a string\", 54, { literal:'trouble' }]"
+        "[\"this is a string\", 54, { literal:'trouble' }]"
 
     - Consider converting ALL parameters to strings before calling exec:
 
-            cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"])	;
+        cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"]);
 
-            string[] optValues = JsonHelper.Deserialize<string[]>(options);
+        string[] optValues = JsonHelper.Deserialize<string[]>(options);
 
 - It is usually a good idea to do parameter checking in your
   JavaScript code, before you call `exec`.  This allows you to re-use

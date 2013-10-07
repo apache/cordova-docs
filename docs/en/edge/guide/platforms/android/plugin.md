@@ -19,6 +19,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Plugins
 
+The section provides details for how to implement plugin code on the
+Android platform. See Application Plugins for an overview of how to
+structure the plugin and implement its common JavaScript interface.
+
 Writing a plugin requires an understanding of the architecture of
 Cordova-Android. Cordova-Android consists of an Android WebView with
 hooks attached to it. These plugins are represented as class mappings
@@ -37,7 +41,7 @@ a new page or refreshes, which reloads the JavaScript.
 
 The JavaScript portion of a plugin always uses the `cordova.exec` method as follows:
 
-    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
 This marshals a request from the WebView to the Android native side,
 more or less boiling down to calling the `action` method on the
@@ -47,9 +51,9 @@ Whether you distribute your plugin as Java file or as a JAR of its
 own, the plugin must be added to the `config.xml` file in your
 Cordova-Android application's `res/xml/` directory.
 
-    <feature name="<service_name>">
-        <param name="android-package" value="<full_name_including_namespace>" />
-    </feature>
+        <feature name="<service_name>">
+            <param name="android-package" value="<full_name_including_namespace>" />
+        </feature>
 
 The service name should match the one used in the JavaScript `exec`
 call, and the value is the Java classes full name, including the
@@ -66,15 +70,15 @@ What gets dispatched to the plugin via JavaScript's `exec` function gets
 passed into the Plugin class's `execute` method. Most `execute`
 implementations look like this:
 
-    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("beep".equals(action)) {
-            this.beep(args.getLong(0));
-            callbackContext.success();
-            return true;
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if ("beep".equals(action)) {
+                this.beep(args.getLong(0));
+                callbackContext.success();
+                return true;
+            }
+            return false;  // Returning false results in a "MethodNotFound" error.
         }
-        return false;  // Returning false results in a "MethodNotFound" error.
-    }
 
 We compare the value of the `action` parameter, and dispatch the
 request off to a (private) method in the class, optionally passing
@@ -91,82 +95,82 @@ the WebCore thread. The `execute` method also runs on the WebCore thread.
 
 If you need to interact with the UI, you should use the following:
 
-    @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if ("beep".equals(action)) {
-            final long duration = args.getLong(0);
-            cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    ...
-                    callbackContext.success(); // Thread-safe.
-                }
-            });
-            return true;
-        }
-        return false;
-    }
-
-If you do not need to run on the UI thread, but do not want to block the WebCore thread:
-
-    @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if ("beep".equals(action)) {
-            final long duration = args.getLong(0);
-            cordova.getThreadPool().execute(new Runnable() {
-                public void run() {
-                    ...
-                    callbackContext.success(); // Thread-safe.
-                }
-            });
-            return true;
-        }
-        return false;
-    }
-
-### Echo Android Plugin Example
-
-Add the following to our `config.xml` file:
-
-    <feature name="Echo">
-        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
-    </feature>
-
-Then add the following file to
-`src/org/apache/cordova/plugin/Echo.java` inside our Cordova-Android
-application:
-
-    package org.apache.cordova.plugin;
-
-    import org.apache.cordova.CordovaPlugin;
-    import org.apache.cordova.CallbackContext;
-
-    import org.json.JSONArray;
-    import org.json.JSONException;
-    import org.json.JSONObject;
-
-    /**
-     * This class echoes a string called from JavaScript.
-     */
-    public class Echo extends CordovaPlugin {
-
         @Override
-        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if (action.equals("echo")) {
-                String message = args.getString(0);
-                this.echo(message, callbackContext);
+        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+            if ("beep".equals(action)) {
+                final long duration = args.getLong(0);
+                cordova.getActivity().runOnUiThread(new Runnable() {
+                    public void run() {
+                        ...
+                        callbackContext.success(); // Thread-safe.
+                    }
+                });
                 return true;
             }
             return false;
         }
 
-        private void echo(String message, CallbackContext callbackContext) {
-            if (message != null && message.length() > 0) {
-                callbackContext.success(message);
-            } else {
-                callbackContext.error("Expected one non-empty string argument.");
+If you do not need to run on the UI thread, but do not want to block the WebCore thread:
+
+        @Override
+        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+            if ("beep".equals(action)) {
+                final long duration = args.getLong(0);
+                cordova.getThreadPool().execute(new Runnable() {
+                    public void run() {
+                        ...
+                        callbackContext.success(); // Thread-safe.
+                    }
+                });
+                return true;
+            }
+            return false;
+        }
+
+### Echo Android Plugin Example
+
+Add the following to our `config.xml` file:
+
+        <feature name="Echo">
+            <param name="android-package" value="org.apache.cordova.plugin.Echo" />
+        </feature>
+
+Then add the following file to
+`src/org/apache/cordova/plugin/Echo.java` inside our Cordova-Android
+application:
+
+        package org.apache.cordova.plugin;
+
+        import org.apache.cordova.CordovaPlugin;
+        import org.apache.cordova.CallbackContext;
+
+        import org.json.JSONArray;
+        import org.json.JSONException;
+        import org.json.JSONObject;
+
+        /**
+         * This class echoes a string called from JavaScript.
+         */
+        public class Echo extends CordovaPlugin {
+
+            @Override
+            public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+                if (action.equals("echo")) {
+                    String message = args.getString(0);
+                    this.echo(message, callbackContext);
+                    return true;
+                }
+                return false;
+            }
+
+            private void echo(String message, CallbackContext callbackContext) {
+                if (message != null && message.length() > 0) {
+                    callbackContext.success(message);
+                } else {
+                    callbackContext.error("Expected one non-empty string argument.");
+                }
             }
         }
-    }
 
 Let's take a look at the code. The necessary `imports` are at
 the top. Our class extends from `CordovaPlugin`. We override the
