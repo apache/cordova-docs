@@ -75,9 +75,13 @@ the JavaScript.
 
 ## Writing an iOS Cordova Plugin
 
-We have JavaScript fire off a plugin request to the native side. We have the iOS Objective-C plugin mapped properly via the `config.xml` file. So what does the final iOS Objective-C Plugin class look like?
+We have JavaScript fire off a plugin request to the native side. We
+have the iOS Objective-C plugin mapped properly via the `config.xml`
+file. So what does the final iOS Objective-C Plugin class look like?
 
-What gets dispatched to the plugin via JavaScript's `exec` function gets passed into the corresponding Plugin class's `action` method. A plugin method has this signature:
+What gets dispatched to the plugin via JavaScript's `exec` function
+gets passed into the corresponding Plugin class's `action` method. A
+plugin method has this signature:
 
         - (void)myMethod:(CDVInvokedUrlCommand*)command
         {
@@ -100,7 +104,8 @@ What gets dispatched to the plugin via JavaScript's `exec` function gets passed 
 
 ## iOS CDVPluginResult message types
 
-Using CDVPluginResult you can return a variety of result types back to your JavaScript callbacks, using class methods that look like:
+Using CDVPluginResult you can return a variety of result types back to
+your JavaScript callbacks, using class methods that look like:
 
         + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
 
@@ -112,9 +117,18 @@ callback does not fire.
 
 ### Notes
 
- * `messageAsArrayBuffer` expects `NSData*` and converts to an `ArrayBuffer` for your JavaScript callback (and `ArrayBuffers` sent to a plugin from JavaScript are converted to `NSData*`).
- * `messageAsMultipart` expects an `NSArray*` containing any of the other supported types, and sends the whole array as the `arguments` to your JavaScript callback.
-   *  Quirk: this is not just syntactic sugar (though it is sweet).  This way, all of the arguments are serialized or deserialized as necessary.  E.g., it is safe to return `NSData*` as multipart, but not as `Array`/`Dictionary`.
+ * `messageAsArrayBuffer` expects `NSData*` and converts to an
+   `ArrayBuffer` for your JavaScript callback (and `ArrayBuffers` sent
+   to a plugin from JavaScript are converted to `NSData*`).
+
+ * `messageAsMultipart` expects an `NSArray*` containing any of the
+   other supported types, and sends the whole array as the `arguments`
+   to your JavaScript callback.
+
+   * Quirk: this is not just syntactic sugar (though it is sweet).
+     This way, all of the arguments are serialized or deserialized as
+     necessary.  E.g., it is safe to return `NSData*` as multipart,
+     but not as `Array`/`Dictionary`.
 
 ## Echo Plugin iOS Plugin
 
@@ -124,8 +138,8 @@ We would add the following to the project's `config.xml` file:
             <param name="ios-package" value="Echo" />
         </feature>
 
-Then we would add the following files (`Echo.h` and `Echo.m`) to the Plugins directory inside our Cordova-iOS
-application directory:
+Then we would add the following files (`Echo.h` and `Echo.m`) to the
+Plugins folder inside our Cordova-iOS application folder:
 
         /********* Echo.h Cordova Plugin Header *******/
 
@@ -201,9 +215,9 @@ call, you should use a background thread. For example:
 
 See other methods that you can override in:
 
-* [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+- [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
 
-* [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+- [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
 
 For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
 
@@ -219,6 +233,9 @@ running in the iOS 6 Simulator.
 
 ## Common Pitfalls
 
-* Don't forget to add your plugin's mapping to config.xml. If you forget, an error is logged in the Xcode console.
+- Don't forget to add your plugin's mapping to config.xml. If you
+  forget, an error is logged in the Xcode console.
 
-* Don't forget to add any hosts you connect to in the whitelist, as described in Domain Whitelist Guide. If you forget, an error is logged in the Xcode console.
+- Don't forget to add any hosts you connect to in the whitelist, as
+  described in Domain Whitelist Guide. If you forget, an error is
+  logged in the Xcode console.
