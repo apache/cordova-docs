@@ -36,6 +36,11 @@ basic plugin structure and the outward-facing JavaScript interface.
 For each corresponding native interface, see the list at the end of
 this section.
 
+In addition to these instructions, when preparing to write a plugin it
+is best to look over
+[existing plugins](https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova)
+for guidance.
+
 ## Building a Plugin
 
 Application developers use the CLI's `plugin add` command (discussed
@@ -158,3 +163,4 @@ listed below, and each builds on the simple Echo Plugin example above:
 - Windows Phone Plugins
 
 The Tizen platform does not support plugins.
+
