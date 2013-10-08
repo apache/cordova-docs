@@ -23,41 +23,45 @@ The section provides details for how to implement plugin code on the
 iOS platform. See Application Plugins for an overview of how to
 structure the plugin and implement its common JavaScript interface.
 
-A plugin is an Objective-C class that extends the `CDVPlugin` class.
-
-Each plugin class must be registered as a `<feature>` tag in the
-`config.xml` file. It is through this mechanism that JavaScript's `exec`
-method's `service` parameter maps to an Objective-C class.
+An iOS plugin is implemented as an Objective-C class that extends the
+`CDVPlugin` class.  For JavaScript's `exec` method's `service`
+parameter to map to an Objective-C class, each plugin class must be
+registered as a `<feature>` tag in the named application directory's
+`config.xml` file.
 
 ## Plugin Class Mapping
 
-The JavaScript portion of a plugin always uses the `cordova.exec` method as follows:
+The JavaScript portion of a plugin uses the `cordova.exec` method as
+follows:
 
         exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
 This marshals a request from the `UIWebView` to the iOS native side,
-more or less boiling down to calling the `action` method on the
-`service` class, with the arguments passed in the `args` array.
+effectively calling the `action` method on the `service` class, with
+the arguments passed in the `args` array.
 
-Specifiy the plugin as a `<feature>` tag in your Cordova-iOS
-application's project's `config.xml` file.
+Specify the plugin as a `<feature>` tag in your Cordova-iOS
+application's project's `config.xml` file, using the `plugin.xml` file
+to inject this markup automatically, as described in Application
+Plugins:
 
         <feature name="LocalStorage">
             <param name="ios-package" value="CDVLocalStorage" />
         </feature>
 
-The feature `name` attribute should match what you use in the JavaScript
-`exec` call's `service` parameter, and the `value` attribute should match the name of the plugin's
-Objective-C class. `<param name>` should always be i`"ios-package"`.
-If you do not follow this setup, the plugin may compile but will not be
-reachable by Cordova.
+The feature's `name` attribute should match what you specify as the
+JavaScript `exec` call's `service` parameter. The `value` attribute
+should match the name of the plugin's Objective-C class. The `<param>`
+element's `name` should always be `ios-package`.  If you do not follow
+these guidelines, the plugin may compile, but Cordova may still not be
+able to access it.
 
 ## Plugin Initialization and Lifetime
 
 One instance of a plugin object is created for the life of each
-`UIWebView`. Plugins are not instantiated until they are first
-referenced by a call from JavaScript, unless `<param>` with an `onload`
-`name` attribute is set to `"true"` in `config.xml`. E.g.:
+`UIWebView`. Plugins are ordinarily instantiated when first referenced
+by a call from JavaScript. Otherwise they can be instantiated by
+setting a `param` named `onload` to `true` in the `config.xml` file:
 
         <feature name="Echo">
             <param name="ios-package" value="Echo" />
@@ -65,23 +69,22 @@ referenced by a call from JavaScript, unless `<param>` with an `onload`
         </feature>
 
 There is _no_ designated initializer for plugins. Instead, plugins
-should use the `pluginInitialize` method for their start-up logic.
+should use the `pluginInitialize` method for their startup logic.
 
-Plugins with long-running requests, background activity (e.g., playing
-media), listeners or internal state should implement the `onReset`
-method and stop or clean up those activities. This method is run when
-the `UIWebView` navigates to a new page or refreshes, which reloads
-the JavaScript.
+Plugins with long-running requests, background activity such as media
+playback, listeners, or that maintain internal state should implement
+the `onReset` method to clean up those activities. The method runs
+when the `UIWebView` navigates to a new page or refreshes, which
+reloads the JavaScript.
 
 ## Writing an iOS Cordova Plugin
 
-We have JavaScript fire off a plugin request to the native side. We
-have the iOS Objective-C plugin mapped properly via the `config.xml`
-file. So what does the final iOS Objective-C Plugin class look like?
-
-What gets dispatched to the plugin via JavaScript's `exec` function
-gets passed into the corresponding Plugin class's `action` method. A
-plugin method has this signature:
+A JavaScript call fires off a plugin request to the native side, and
+the corresponding iOS Objective-C plugin is mapped properly in the
+`config.xml` file, but what does the final iOS Objective-C plugin
+class look like?  Whatever is dispatched to the plugin with
+JavaScript's `exec` function is passed into the corresponding plugin
+class's `action` method. A plugin method has this signature:
 
         - (void)myMethod:(CDVInvokedUrlCommand*)command
         {
@@ -96,50 +99,54 @@ plugin method has this signature:
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
 
-1. [CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)
-
-2. [CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)
-
-3. [CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)
+For more details, see
+ `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)`,
+ `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)`,
+and
+ `[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
 
 ## iOS CDVPluginResult message types
 
-Using CDVPluginResult you can return a variety of result types back to
-your JavaScript callbacks, using class methods that look like:
+You can use `CDVPluginResult` to return a variety of result types back to
+the JavaScript callbacks, using class methods that follow this pattern:
 
         + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
 
 You can create `String`, `Int`, `Double`, `Bool`, `Array`,
-`Dictionary`, `ArrayBuffer`, and `Multipart` types.  Or, don't attach
-any arguments (just send a status).  Or, return an Error.  You can
-even choose to not send any plugin result at all, in which case the
-callback does not fire.
+`Dictionary`, `ArrayBuffer`, and `Multipart` types. You can also leave
+out any arguments to send a status, or return an error, or even choose
+not to send any plugin result, in which case neither callback fires.
 
-### Notes
+Note the following for complex return values:
 
- * `messageAsArrayBuffer` expects `NSData*` and converts to an
-   `ArrayBuffer` for your JavaScript callback (and `ArrayBuffers` sent
-   to a plugin from JavaScript are converted to `NSData*`).
+- `messageAsArrayBuffer` expects `NSData*` and converts to an
+  `ArrayBuffer` in the JavaScript callback. Likewise, any
+  `ArrayBuffer` the JavaScript sends to a plugin are converted to
+  `NSData*`.
 
- * `messageAsMultipart` expects an `NSArray*` containing any of the
-   other supported types, and sends the whole array as the `arguments`
-   to your JavaScript callback.
+- `messageAsMultipart` expects an `NSArray*` containing any of the
+  other supported types, and sends the entire array as the `arguments`
+  to your JavaScript callback.  This way, all of the arguments are
+  serialized or deserialized as necessary, so it is safe to return
+  `NSData*` as multipart, but not as `Array`/`Dictionary`.
 
-   * Quirk: this is not just syntactic sugar (though it is sweet).
-     This way, all of the arguments are serialized or deserialized as
-     necessary.  E.g., it is safe to return `NSData*` as multipart,
-     but not as `Array`/`Dictionary`.
+## Echo iOS Plugin Example
 
-## Echo Plugin iOS Plugin
+To match the JavaScript interface's _echo_ feature described in
+Application Plugins, use the `plugin.xml` to inject a `feature`
+specification to the local platform's `config.xml` file:
 
-We would add the following to the project's `config.xml` file:
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Echo">
+                    <param name="ios-package" value="Echo" />
+                </feature>
+            </config-file>
+        </platform>
 
-        <feature name="Echo">
-            <param name="ios-package" value="Echo" />
-        </feature>
 
-Then we would add the following files (`Echo.h` and `Echo.m`) to the
-Plugins folder inside our Cordova-iOS application folder:
+Then we would add the following `Echo.h` and `Echo.m` files to the
+`Plugins` folder within the Cordova-iOS application directory:
 
         /********* Echo.h Cordova Plugin Header *******/
 
@@ -174,30 +181,37 @@ Plugins folder inside our Cordova-iOS application folder:
 
         @end
 
-Let's take a look at the code. At the top we have all of the necessary
-Cordova imports. Our class extends from `CDVPlugin` (very important).
+The necessary imports at the top of the file extends the class from
+`CDVPlugin`.  In this case, the plugin only supports a single `echo`
+action. It obtains the echo string by calling the `objectAtIndex`
+method get the first parameter of the `arguments` array, which
+corresponds to the arguments passed in by the JavaScript `exec()`
+function.
 
-This plugin only supports one action, the `echo` action. First, we
-grab the echo string using the `objectAtIndex` method on our `args`,
-telling it we want to get the 0th parameter in the arguments array. We
-do a bit of parameter checking: make sure it is not `nil`, and make
-sure it is not a zero-length string.
+It checks the parameter to make sure it is not `nil` or an empty
+string, returning a `PluginResult` with an `ERROR` status if so.  If
+the parameter passes the check, it returns a `PluginResult` with an
+`OK` status, passing in the original `echo` string.  Finally, it sends
+the result to `self.commandDelegate`, which executes the `exec`
+method's success or failure callbacks on the JavaScript side. If the
+success callback is called, it passes in the `echo` parameter.
 
-If it is, we return a `PluginResult` with an `ERROR` status. If all of
-those checks pass, then we return a `PluginResult` with an `OK`
-status, and pass in the `echo` string we received in the first place
-as a parameter.
+## iOS Integration
 
-Finally, we send the result to `self.commandDelegate`, which executes
-the `exec` method's success or failure callbacks on the JavaScript
-side. If the success callback is called, it passes in the `echo`
-parameter.
+The `CDVPlugin` class features other methods that your plugin can
+override.  For example, you can capture the `pause`, `resume`, app
+terminate and `handleOpenURL` events. See the
+[CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
+and
+[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
+class for guidance.
 
 ## Threading
 
-Plugin methods are executed in the same thread as the UI. If your
-plugin requires a great deal of processing or requires a blocking
-call, you should use a background thread. For example:
+Plugin methods ordinarily execute in the same thread as the main
+interface. If your plugin requires a great deal of processing or
+requires a blocking call, you should use a background thread. For
+example:
 
         - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
         {
@@ -211,29 +225,17 @@ call, you should use a background thread. For example:
             }];
         }
 
-## Advanced Plugin Functionality
+## Debugging iOS Plugins
 
-See other methods that you can override in:
-
-- [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-
-- [CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
-
-For example, you can hook into the `pause`, `resume`, app terminate and `handleOpenURL` events.
-
-## Debugging Plugins
-
-To debug the Objective-C side, you would use Xcode's built-in debugger.
-For JavaScript, on iOS 5.0 you can use
-[Weinre, an Apache Cordova Project](https://github.com/apache/cordova-weinre) or
-[iWebInspector, a third-party utility](http://www.iwebinspector.com/)
-
-For iOS 6, you would use Safari 6.0 to simply attach to your app
-running in the iOS 6 Simulator.
+To debug on the Objective-C side, you need Xcode's built-in debugger.
+For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova
+Project](https://github.com/apache/cordova-weinre) or [iWebInspector,
+a third-party utility](http://www.iwebinspector.com/).  For iOS 6, you
+can attach Safari 6.0 to your app running within the iOS 6 Simulator.
 
 ## Common Pitfalls
 
-- Don't forget to add your plugin's mapping to config.xml. If you
+- Don't forget to add your plugin's mapping to `config.xml`. If you
   forget, an error is logged in the Xcode console.
 
 - Don't forget to add any hosts you connect to in the whitelist, as
