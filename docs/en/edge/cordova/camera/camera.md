@@ -56,7 +56,7 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
 
         (in app/AndroidManifest)
