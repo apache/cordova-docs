@@ -22,6 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 The section provides details for how to implement plugin code on the
 Android platform. See Application Plugins for an overview of how to
 structure the plugin and implement its common JavaScript interface.
+See also the comments in
+[CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java) for sample code.
 
 Android plugins are based on Cordova-Android, which consists of an
 Android WebView with hooks attached to it.  Plugins are represented as
@@ -51,7 +53,8 @@ additional arguments passed in the `args` array.
 Whether you distribute a plugin as Java file or as a _jar_ file of its
 own, the plugin must be specified in your Cordova-Android
 application's `res/xml/config.xml` file. See Application Plugins for
-more information.
+more information on how to use the `plugin.xml` file to inject this
+`feature` element:
 
         <feature name="<service_name>">
             <param name="android-package" value="<full_name_including_namespace>" />
@@ -194,33 +197,24 @@ callback.  If the various checks pass, the `callbackContext.success()`
 passes the original `message` string back to JavaScript's success
 callback as a parameter.
 
+## Android Integration
+
+Android features an `Intent` system that allows processes to
+communicate with each other.  Plugins have access to a
+`CordovaInterface` object, which can access the Android `Activity`
+that runs the application.  This is the `Context` required to launch a
+new Android `Intent`.  The `CordovaInterface` allows plugins to start
+an `Activity` for a result, and to set the callback plugin for when
+the `Intent` returns to the application.
+
+As of Cordova 2.0, Plugins can no longer directly access the
+`Context`, and the legacy `ctx` member is deprecated. All `ctx`
+methods exist on the `Context`, so both `getContext()` and
+`getActivity()` can return the required object.
+
 ## Debugging Android Plugins
 
-You can use Eclipse to debug plugins as Java source included in the
-project.  Only the latest version of the Android Developer Tools is
-known to allow source code attachment to _JAR_ dependencies, so this
-is not yet fully supported.
-
-## Common Pitfalls
-
-- Plugins have access to a `CordovaInterface` object. This object has
-  access to the Android `Activity` that is running the application.
-  This is the `Context` required to launch a new Android `Intent`. The
-  `CordovaInterface` allows plugins to start an `Activity` for a
-  result, and to set the callback plugin for when the `Intent` comes
-  back to the application. This is important, since the `Intent`s
-  system is how Android communicates between processes.
-
-- Plugins do not have direct access to the `Context` as they have in
-  the past. The legacy `ctx` member is deprecated, and will be removed
-  six months after 2.0 is released. All of `ctx` methods exist on the
-  `Context`, so both `getContext()` and `getActivity()` are capable of
-  returning the proper object required.
-
-## Use the Source
-
-One of the best ways to prepare yourself to write your own plugin is to
-[look over existing plugins](https://github.com/search?q=%40apache+cordova-plugin).
-
-You should also read through the comments in
-[CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java).
+Eclipse allows you to debug plugins as Java source included in the
+project.  Only the latest version of the Android Developer Tools
+allows you to attach source code to _JAR_ dependencies, so this
+feature is not yet fully supported.
