@@ -232,7 +232,9 @@ one of Cordova's basic device-level features
 <!-- XREF
 discussed in the Application Development Guide and
 XREF -->
-detailed in the API Reference.
+detailed in the API Reference. A list of these plugins, including additional plugins provided by the community, can be found at  [http://plugins.cordova.io/](http://plugins.cordova.io/). You can use the CLI to search for plugins from this registry:
+
+        $ cordova plugin search <term1 term2 term3>
 
 The `cordova plugin add` command requires you to specify the
 repository for the plugin code.  Here are examples of features you
@@ -344,6 +346,18 @@ graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
 instead capture `backbutton` events from the corresponding hardware
 button.
+
+## Updating the App
+
+When a new version of Cordova is released, you should update your 
+`cordova` utility by following the Updating Cordova section below.
+Once you have updated Cordova, you can update the Cordova resources that
+your project uses by typing:
+
+        $ cordova platform update <PLATFORM>
+This will replace the old cordova resources with new ones for the
+specified PLATFORM. You should do this for every platform that you
+are developing for. 
 
 ## Updating Cordova
 
