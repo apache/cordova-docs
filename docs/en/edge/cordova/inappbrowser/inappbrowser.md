@@ -56,7 +56,7 @@ platform-specific configuration settings described below:
 * Android (in `app/res/xml/config.xml`)
 
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
 
 * iOS (in `config.xml`)
