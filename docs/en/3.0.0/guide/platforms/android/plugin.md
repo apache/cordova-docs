@@ -201,6 +201,6 @@ a new Android `Intent`. The `CordovaInterface` allows plugins to start an `Activ
 ## Use the Source
 
 One of the best ways to prepare yourself to write your own plugin is to
-[look over existing plugins](https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova).
+[look over existing plugins](https://github.com/search?q=%40apache+cordova-plugin).
 
 You should also read through the comments in [CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java).
