@@ -41,7 +41,7 @@ to invoke native functionality from JavaScript. The native and
 JavaScript code communicate with each other through a framework
 provided by JNEXT. Every plugin must also include a `plugin.xml` file.
 
-## Creating the native part of your plugin ##
+## Creating the native part of your plugin
 
 To create the native portion of your plugin, open the BlackBerry 10
 NDK IDE and select File > New > BlackBerry Project > Native Extension
@@ -152,7 +152,7 @@ our Echo plugin, we have the following in `echo_js.cpp`:
             return NULL;
         }
 
-##Creating the JavaScript part of your plugin##
+##Creating the JavaScript part of your plugin
 
 The JavaScript portion of your plugin must contain the following files:
 
@@ -215,7 +215,7 @@ You can now send the data back. Let’s put it all together:
             }
         };
 
-## Architecture of the plugin ##
+## Architecture of the plugin
 
 You can place the artifacts of the plugin, which includes the
 `plugin.xml` file, the source files (JavaScript, C++), and the binary
@@ -236,7 +236,7 @@ folders. The parenthesis shows the contents of a given directory. All
 directory names appear in bold text. File names are preceded by the `>`
 sign.)
 
-## Contents of the `plugin.xml` file##
+## Contents of the `plugin.xml` file
 
 The `plugin.xml` file contains the namespace of the extension and other
 metadata. Define the namespace and specify other metadata for the Echo
