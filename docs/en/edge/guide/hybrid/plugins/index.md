@@ -86,6 +86,18 @@ the platform-specific `config.xml` file to make the platform aware of
 the additional code library.  The `header-file` and `source-file` tags
 specify the path to the library's component files.
 
+You can use the `plugman` utility to validate whether the plugin
+installs correctly for each platform. Install `plugman` with the
+following [node](http://nodejs.org/) command:
+
+    $ npm install -g plugman
+
+Then run the following to test whether iOS dependencies load:
+
+    $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+
+For details, see Using Plugman to Manage Plugins.
+
 ## The JavaScript Interface
 
 The JavaScript provides the front-facing interface, making it perhaps

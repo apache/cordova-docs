@@ -95,8 +95,8 @@ For CLI projects, run:
 
 __NOTE:__ Starting with Cordova 3.0.0, projects do not come with any
 plugins, you will have to install the ones you require for your
-project using the `plugman` CLI utility. See Using Plugman to Manage
-Plugins.
+project using the `plugman` command-line utility. See Using Plugman to
+Manage Plugins.
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
 
