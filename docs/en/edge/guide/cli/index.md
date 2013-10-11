@@ -303,7 +303,50 @@ debug console from a release version:
         $ cordova plugin remove org.apache.cordova.console    # same
 
 You can batch-remove or add plugins by specifying more than one
-argument for each command.
+argument for each command:
+
+        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+
+When adding a plugin, there are several options for specifying where
+the plugin should be fetched from. The examples above use a well-known
+registry (registry.cordova.io), and the plugin is specified by the id:
+
+        $ cordova plugin add org.apache.cordova.console
+
+The id may also include the version number of the plugin, which can be
+specified following an `@` character. The version `latest` is an alias
+for the most recent version. For example:
+
+        $ cordova plugin add org.apache.cordova.console@latest
+        $ cordova plugin add org.apache.cordova.console@0.2.1
+
+If your plugin is not registered at registry.cordova.io, but is located in
+a git repository, you may specify a url to the git repository:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+
+The git example above assumes that the plugin should be fetched from the
+end of the master branch. If you want the plugin to be fetched using a git-ref
+such as a tag or branch, that can be specified by appending it after a `#`
+character.
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+
+If the plugin (and its `plugin.xml` file) is in a subdirectory of the git
+repo instead of the root directory, you can specify the subdirectory in the
+git repo by using a `:` character (note that a `#` is still needed):
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+
+You can also combine both the git-ref and the subdir:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+
+You can also add a plugin from your local filesystem. 
+As the parameter to the `add` command, specify the
+local directory where the `plugin.xml` file is located:
+
+        $ cordova plugin add ../my_plugin_dir
 
 ## Customize Each Platform
 
