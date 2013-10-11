@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Plugin Development Guide
 
-A _plugin_ is a bit of injected code that allows the webview within
+A _plugin_ is a package of injected code that allows the Cordova webview within
 which your app renders to communicate with the native platform on
 which it runs.  Plugins provide access to device and platform
 functionality that is ordinarily unavailable to web-based apps.  All
