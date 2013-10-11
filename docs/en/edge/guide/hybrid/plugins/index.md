@@ -92,11 +92,13 @@ following [node](http://nodejs.org/) command:
 
     $ npm install -g plugman
 
-Then run the following to test whether iOS dependencies load:
+Then run a command such as the following to test whether iOS
+dependencies load, optionally using a default CLI-generated project as
+described in The Command-line Interface:
 
     $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
 
-For details, see Using Plugman to Manage Plugins.
+For details on `plugman` options, see Using Plugman to Manage Plugins.
 
 ## The JavaScript Interface
 
