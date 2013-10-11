@@ -30,6 +30,10 @@ target. The tools described here are typically available in the
 top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
+For information on the low-level command-line interface that enables
+plugins, see Using Plugman to Manage Plugins. See Application Plugins
+for an overview.
+
 ## Create a project
 
 Run the `create` command, specifying the existing path to the project,

@@ -30,6 +30,10 @@ target. The tools described here are typically available in the
 top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
+For information on the low-level command-line interface that enables
+plugins, see Using Plugman to Manage Plugins. See Application Plugins
+for an overview.
+
 If you need help with any command listed below, type the command along
 with the `-h` or `-help` arguments, which are supported by all
 commands and which provide descriptions for each of the available

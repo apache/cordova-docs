@@ -30,6 +30,10 @@ target. The tools described here are typically available in the
 top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
+For information on the low-level command-line interface that enables
+plugins, see Using Plugman to Manage Plugins. See Application Plugins
+for an overview.
+
 ## Windows Phone
 
 The Windows Phone command-line tools support creating, building, and

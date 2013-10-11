@@ -33,6 +33,10 @@ more detailed directions.
 The iOS command-line tools are built upon shell scripts and rely on
 Xcode command-line tools such as `xcode-select` and `xcodebuild`.
 
+For information on the low-level command-line interface that enables
+plugins, see Using Plugman to Manage Plugins. See Application Plugins
+for an overview.
+
 ## Create a project
 
 Run the `create` command, specifying the existing path to the project,
