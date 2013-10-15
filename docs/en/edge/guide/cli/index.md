@@ -257,7 +257,7 @@ might add:
 
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
-        $ cordova plugin add org.apache.cordova.media    
+        $ cordova plugin add org.apache.cordova.media
 
 * Access files on device or network (File API):
 
@@ -299,7 +299,7 @@ To remove a plugin, refer to it by the same identifier that appears in
 the listing. For example, here is how you would remove support for a
 debug console from a release version:
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
 
 You can batch-remove or add plugins by specifying more than one
@@ -342,7 +342,7 @@ You can also combine both the git-ref and the subdir:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
 
-You can also add a plugin from your local filesystem. 
+You can also add a plugin from your local filesystem.
 As the parameter to the `add` command, specify the
 local directory where the `plugin.xml` file is located:
 
@@ -387,6 +387,18 @@ graphic into the iOS interface, stored in
 `merges/ios/img/back_button.png`, while the Android version can
 instead capture `backbutton` events from the corresponding hardware
 button.
+
+## Help Commands
+
+If at any point you get stuck, Cordova has a couple global "help" commands.
+
+The first, `help` will print out a list of all available actions that Cordova can do
+
+    $ cordova help
+
+The second, `info` will print out useful information, such as installed platforms, node.js version, etc.., that are helpful for submitting bug reports and getting help.  It will also create an info.txt file at the base of your project. __Note: Currently iOS and Android platforms are output__
+
+    $ cordova info
 
 ## Updating Cordova
 
