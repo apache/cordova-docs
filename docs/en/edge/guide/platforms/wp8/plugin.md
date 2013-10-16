@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone Plugins
 
-The section provides details for how to implement native plugin code
+This section provides details for how to implement native plugin code
 on the Windows Phone platform. Before reading this, see Application
 Plugins for an overview of the plugin's structure and its common
 JavaScript interface. This section continues to demonstrate the sample
