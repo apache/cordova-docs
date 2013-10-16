@@ -62,9 +62,6 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.BatteryListener" />
         </feature>
 
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-
 * BlackBerry WebWorks
 
         (in www/plugins.xml)
