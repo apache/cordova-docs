@@ -19,25 +19,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Plugins
 
-The section provides details for how to implement plugin code on the
-Android platform. See Application Plugins for an overview of how to
-structure the plugin and implement its common JavaScript interface.
-See also the comments in
-[CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java) for sample code.
+The section provides details for how to implement native plugin code
+on the Android platform. Before reading this, see Application Plugins
+for an overview of the plugin's structure and its common JavaScript
+interface. This section continues to demonstrate the sample _echo_
+plugin that communicates from the Cordova webview to the native
+platform and back.  For another sample, see also the comments in
+[CordovaPlugin.java](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java).
 
 Android plugins are based on Cordova-Android, which consists of an
 Android WebView with hooks attached to it.  Plugins are represented as
-class mappings in the `config.xml` file.
-
-A plugin consists of at least one Java class that extends the
-`CordovaPlugin` class. A plugin must override one of the `execute`
-methods from `CordovaPlugin`. As best practice, the plugin should also
-handle `pause` and `resume` events, along with any message passing
-between plugins.  Plugins with long-running requests, background
-activity such as media playback, listeners, or internal state should
-implement the `onReset()` method as well. It executes when the
-`WebView` navigates to a new page or refreshes, which reloads the
-JavaScript.
+class mappings in the `config.xml` file.  A plugin consists of at
+least one Java class that extends the `CordovaPlugin` class,
+overriding one of its `execute` methods. As best practice, the plugin
+should also handle `pause` and `resume` events, along with any message
+passing between plugins.  Plugins with long-running requests,
+background activity such as media playback, listeners, or internal
+state should implement the `onReset()` method as well. It executes
+when the `WebView` navigates to a new page or refreshes, which reloads
+the JavaScript.
 
 ## Plugin Class Mapping
 
@@ -93,8 +93,8 @@ exception names as much as possible.
 ## Threading
 
 The plugin's JavaScript does _not_ run in the main thread of the
-WebView interface; instead, it runs on the the WebCore thread, as does
-the `execute` method.  If you need to interact with the user
+`WebView` interface; instead, it runs on the the `WebCore` thread, as
+does the `execute` method.  If you need to interact with the user
 interface, you should use the following variation:
 
         @Override
@@ -113,7 +113,7 @@ interface, you should use the following variation:
         }
 
 Use the following if you do not need to run on the main interface's
-thread, but do not want to block the WebCore thread either:
+thread, but do not want to block the `WebCore` thread either:
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
