@@ -19,9 +19,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # BlackBerry 10 Plugins
 
-The section provides details for how to implement plugin code on the
-BlackBerry 10 platform. See Application Plugins for an overview of how to
-structure the plugin and implement its common JavaScript interface.
+The section provides details for how to implement native plugin code
+on the BlackBerry 10 platform. Before reading this, see Application
+Plugins for an overview of the plugin's structure and its common
+JavaScript interface. This section continues to demonstrate the sample
+_echo_ plugin that communicates from the Cordova webview to the native
+platform and back.
 
 This is a continuation of the Plugin Development Guide for
 Cordova. Once you have reviewed that content, now let's look at things

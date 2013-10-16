@@ -19,9 +19,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone Plugins
 
-The section provides details for how to implement plugin code on the
-Windows Phone platform. See Application Plugins for an overview of how
-to structure the plugin and implement its common JavaScript interface.
+The section provides details for how to implement native plugin code
+on the Windows Phone platform. Before reading this, see Application
+Plugins for an overview of the plugin's structure and its common
+JavaScript interface. This section continues to demonstrate the sample
+_echo_ plugin that communicates from the Cordova webview to the native
+platform and back.
 
 Writing a plugin for Cordova on Windows Phone requires a basic
 understanding of Cordova's architecture. Cordova-WP7 consists of a
