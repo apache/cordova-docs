@@ -216,7 +216,7 @@ the device, and perhaps add a USB driver depending on your development
 environmnent.
 See Platform Guides for details on each platform's requirements.
 
-## Add Features
+## Add Plugin Features
 
 When you build and view a new project, the default application that
 appears doesn't do very much. You can modify the app in many ways to
@@ -307,44 +307,45 @@ argument for each command:
 
         $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
 
-When adding a plugin, there are several options for specifying where
-the plugin should be fetched from. The examples above use a well-known
-registry (registry.cordova.io), and the plugin is specified by the id:
+## Advanced Plugin Options
+
+When adding a plugin, several options allow you to specify from where
+to fetch the plugin. The examples above use a well-known
+`registry.cordova.io` registry, and the plugin is specified by the
+`id`:
 
         $ cordova plugin add org.apache.cordova.console
 
-The id may also include the version number of the plugin, which can be
-specified following an `@` character. The version `latest` is an alias
-for the most recent version. For example:
+The `id` may also include the plugin's version number, appended after
+an `@` character. The `latest` version is an alias for the most recent
+version. For example:
 
         $ cordova plugin add org.apache.cordova.console@latest
         $ cordova plugin add org.apache.cordova.console@0.2.1
 
-If your plugin is not registered at registry.cordova.io, but is located in
-a git repository, you may specify a url to the git repository:
+If the plugin is not registered at `registry.cordova.io` but is located in
+another git repository, you can specify an alternate URL:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
 
-The git example above assumes that the plugin should be fetched from the
-end of the master branch. If you want the plugin to be fetched using a git-ref
-such as a tag or branch, that can be specified by appending it after a `#`
-character.
+The git example above fetches the plugin from the end of the master
+branch, but an alternate git-ref such as a tag or branch can be
+appended after a `#` character:
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
 
-If the plugin (and its `plugin.xml` file) is in a subdirectory of the git
-repo instead of the root directory, you can specify the subdirectory in the
-git repo by using a `:` character (note that a `#` is still needed):
+If the plugin (and its `plugin.xml` file) is in a subdirectory within
+the git repo, you can specify it with a `:` character. Note that the
+`#` character is still needed:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
 
-You can also combine both the git-ref and the subdir:
+You can also combine both the git-ref and the subdirectory:
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
 
-You can also add a plugin from your local filesystem.
-As the parameter to the `add` command, specify the
-local directory where the `plugin.xml` file is located:
+Alternately, specify a local path to the plugin directory that
+contains the `plugin.xml` file:
 
         $ cordova plugin add ../my_plugin_dir
 
