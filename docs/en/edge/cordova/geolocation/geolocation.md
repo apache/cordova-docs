@@ -83,13 +83,12 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
 
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
 * BlackBerry WebWorks
 

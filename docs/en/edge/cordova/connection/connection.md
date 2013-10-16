@@ -54,11 +54,10 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="NetworkStatus">
-            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+            <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
         </feature>
 
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 * BlackBerry WebWorks

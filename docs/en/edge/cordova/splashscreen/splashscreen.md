@@ -43,7 +43,7 @@ platform-specific configuration settings described below:
 * Android (in `app/res/xml/config.xml`)
 
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
 
 * iOS (in `config.xml`)
