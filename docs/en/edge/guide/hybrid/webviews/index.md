@@ -19,7 +19,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Embedding WebViews
 
-> Implement the Cordova WebView in your own project.
+Cordova applications are ordinarily implemented as a browser-based
+_WebView_ within the native mobile platform. This section shows how,
+for supporting platforms, to create your own WebView components that
+make full use of Cordova APIs. You can then deploy these Cordova
+application components along with native components in a hybrid
+application.
+
+To deploy a WebView, you will need to be familiar with each native
+programming environment. The following provides instructions for
+supported platforms:
 
 - Android WebViews
 - iOS WebViews
