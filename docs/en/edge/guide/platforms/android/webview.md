@@ -19,39 +19,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android WebViews
 
-Beginning in Cordova 1.9, with the assistance of the
-`CordovaActivity`, you can use Cordova as a component in a larger
-native Android application. Android refers to this component as the
-`CordovaWebView`. New Cordova-based applications from 1.9 onwards use
-the `CordovaWebView` as its main view, regardless of whether the
-legacy `CordovaActivity` approach is used.
+This section shows how to embed a Cordova-enabled WebView component
+within a larger Android application. For details on how these
+components can communicate with each other, see Application Plugins.
 
-If you're unfamiliar with Android application development, please read
-the Android Platform Guide to developing a Cordova Application before
-attempting to include a WebView. It's not the main way to author
-Android Cordova applications. These instructions are currently manual,
-but may be eventually be automated.
+If you're unfamiliar with Android, you should first familiarize
+yourself with the Android Platform Guide and have the latest Android
+SDK installed before you attempt the more unusual development option
+of embedding a WebView.  Starting with Cordova 1.9, the Android
+platform relies on a `CordovaWebView` component, which builds on a
+legacy `CordovaActivity` component that pre-dates the 1.9 release.
 
-## Prerequisites
+1. To follow these instructions, make sure you have the latest Cordova
+   distribution. Download it from
+   [cordova.apache.org](http://cordova.apache.org) and unzip its
+   Android package.
 
-* Cordova 1.9 or greater
+1. Navigate to the Android package's `/framework` directory and run
+   `ant jar`. It creates the Cordova `.jar` file, formed as
+   `/framework/cordova-x.x.x.jar`.
 
-* Android SDK updated to the latest SDK
+1. Copy the `.jar` file into the Android project's `/libs` directory.
 
-## Guide to using CordovaWebView in an Android Project
-
-1. `cd` into `/framework` and run `ant jar` to build the cordova jar. It creates the .jar file formed as `cordova-x.x.x.jar` in the `/framework` directory.
-
-2. Copy the cordova jar into your Android project's `/libs` directory.
-
-3. Edit your application's `main.xml` file (under `/res/xml`) to look like the following, with the `layout_height`, `layout_width` and `id` modified to suit your application:
+1. Add the following to the application's `/res/xml/main.xml` file,
+   with the `layout_height`, `layout_width` and `id` modified to suit
+   the application:
 
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
+1. Modify the activity so that it implements the `CordovaInterface`.
+   It should implement the included methods.  You may wish to copy
+   them from `/framework/src/org/apache/cordova/CordovaActivity.java`,
+   or else implement them on your own.  The following code fragment
+   shows a basic application that relies on the interface. Note how
+   the referenced view id matches the `id` attribute specified in the
+   XML fragment shown above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -65,7 +70,8 @@ but may be eventually be automated.
                 cwv.loadUrl(Config.getStartUrl());
             }
 
-If you use the camera, you should also implement this:
+1. If the application needs to use the camera, implement the
+   following:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -110,13 +116,16 @@ If you use the camera, you should also implement this:
             }
         }
 
-Finally, remember to add the thread pool, otherwise the plugins have no threads to run on:
+1. Finally, remember to add the thread pool, otherwise plugins
+   have no threads on which to run:
 
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
 
-6. Copy your application's HTML and JavaScript files to your Android project's `/assets/www` directory.
+1. Copy the application's HTML and JavaScript files to the Android
+   project's `/assets/www` directory.
 
-7. Copy `config.xml` from `/framework/res/xml` to your project's `/res/xml` directory.
+1. Copy the `config.xml` file from `/framework/res/xml` to the
+   project's `/res/xml` directory.
