@@ -19,55 +19,66 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS WebViews
 
-Beginning with Cordova 1.4, you can use Cordova as a component in your
-iOS applications. This component is code-named 'Cleaver'.
+This section shows how to embed a Cordova-enabled WebView component
+within a larger iOS application. For details on how these components
+can communicate with each other, see Application Plugins.
 
-New Cordova-based applications created using the Xcode template
-provided in Cordova 1.4 or greater use Cleaver. (The template is
-Cleaver's reference implementation.)
+Support for iOS WebViews started with Cordova version 1.4, using a
+`Cleaver` component for which the Xcode template serves as a reference
+implementation.  Cordova 2.0 and later versions only support the
+subproject-based Cleaver implementation.
 
-Cordova 2.0.0 and subsequent versions only support the sub-project
-based Cleaver implementation.
+These instructions require at least Cordova 2.3 and Xcode 4.5, along
+with a `config.xml` file from a newly created iOS project. You can use
+the procedure in The Command-line Interface to create a new project,
+then obtain the `config.xml` file from within the named application's
+subdirectory within `platforms/ios`.
 
-## Prerequisites
+To follow these instructions, make sure you have the latest Cordova
+distribution. Download it from
+[cordova.apache.org](http://cordova.apache.org) and unzip its iOS
+package.
 
-* Cordova 2.3.0 or greater
+## Adding Cleaver to the Xcode project (CordovaLib sub-project)
 
-* Xcode 4.5 or greater
+1. Quit Xcode if it is running.
 
-* `config.xml` file (from a newly created iOS project)
+1. Open a terminal and navigate to the source directory for Cordova
+   iOS.
 
-## Adding Cleaver to your Xcode project (CordovaLib sub-project)
+1. Copy the `config.xml` file described above into the project
+   directory.
 
-1. Download and extract the Cordova source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova`.
+1. Open Xcode and use the Finder to copy the `config.xml` file into
+   its __Project Navigator__ window.
 
-2. Quit Xcode if it is running.
+1. Choose __Create groups for any added folders__ and press
+   __Finish__.
 
-3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
+1. Use the Finder to copy the `CordovaLib/CordovaLib.xcodeproj` file
+   into Xcode's __Project Navigator__
 
-4. Copy the `config.xml` file into your project directory on disk (see the Prerequisites above).
+1. Select `CordovaLib.xcodeproj` within the __Project Navigator__.
 
-5. Drag and drop the `config.xml` file into the Project Navigator of Xcode.
+1. Type the __Option-Command-1__ key combination to show the __File
+   Inspector__.
 
-6. Choose the __Create groups for any added folders__ radio button and press __Finish__.
+1. Choose __Relative to Group__ in the __File Inspector__ for the
+   drop-down menu for __Location__.
 
-7. Drag and drop the `CordovaLib.xcodeproj` file into the Project Navigator of Xcode (from the permanent directory location above, and it should be in the `CordovaLib` subdirectory).
+1. Select the __project icon__ in the __Project Navigator__, select
+   the __Target__, then select the __Build Settings__ tab.
 
-8. Select `CordovaLib.xcodeproj` in the Project Navigator.
+1. Add `-all_load` and `-Obj-C` for the __Other Linker Flags__ value.
 
-9. Type the __Option-Command-1__ key combination to show the __File Inspector__.
+1. Click on the __project icon__ in the Project Navigator, select the
+   __Target__, then select the __Build Phases__ tab.
 
-10. Choose __Relative to Group__ in the __File Inspector__ for the drop-down menu for __Location__.
+1. Expand __Link Binaries with Libraries__.
 
-11. Select the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Settings__ tab.
-
-12. Add `-all_load` and `-Obj-C` for the __Other Linker Flags__ value.
-
-13. Click on the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Phases__ tab.
-
-14. Expand __Link Binaries with Libraries__.
-
-15. Select the __+__ button, and add the following __frameworks__. Optionally in the Project Navigator, move them under the __Frameworks__ group):
+1. Select the __+__ button, and add the following __frameworks__.
+   Optionally within the __Project Navigator__, move them under the
+   __Frameworks__ group:
 
         AddressBook.framework
         AddressBookUI.framework
@@ -80,72 +91,89 @@ based Cleaver implementation.
         MobileCoreServices.framework
         CoreMedia.framework
 
-16. Expand __Target Dependencies__, the top box labeled like this if you have multiple boxes!
+1. Expand __Target Dependencies__, the top box with that label if
+   there's more than one box.
 
-17. Select the __+__ button, and add the `CordovaLib` build product.
+1. Select the __+__ button, and add the `CordovaLib` build product.
 
-18. Expand __Link Binaries with Libraries__, the top box labeled like
-    this if you have multiple boxes!
+1. Expand __Link Binaries with Libraries__, the top box with that label
+  if there's more than one box.
 
-19. Select the __+__ button, and add `libCordova.a`.
+1. Select the __+__ button, and add `libCordova.a`.
 
-20. Set the Xcode preference __Xcode Preferences &rarr; Locations &rarr; Derived Data &rarr; Advanced...__ to __Unique__.
+1. Set the __Xcode Preferences &rarr; Locations &rarr; Derived Data
+   &rarr; Advanced...__ to __Unique__.
 
-21. Select the __project icon__ in the Project Navigator, select your __Target__, then select the __Build Settings__ tab.
+1. Select the __project icon__ in the Project Navigator, select your
+   __Target__, then select the __Build Settings__ tab.
 
-22. Search for __Header Search Paths__. For that setting, add these three values below (with quotes):
+1. Search for __Header Search Paths__. For that setting, add these
+   three values below, including the quotes:
 
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
         "$(BUILT_PRODUCTS_DIR)"
 
-    With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference Counting (ARC)__. You don't need to upgrade to __ARC__ to use CordovaLib, but if you want to upgrade your project to use __ARC__, please use the Xcode migration wizard from the menu: __Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...__, __de-select libCordova.a__, then run the wizard to completion.
+    As of Cordova 2.1.0, `CordovaLib` has been upgraded to use
+    __Automatic Reference Counting (ARC)__. You don't need to upgrade
+    to __ARC__ to use `CordovaLib`, but if you want to upgrade your
+    project to use __ARC__, you should use the Xcode migration wizard
+    from the __Edit &rarr; Refactor &rarr; Convert to Objective-C
+    ARC...__ menu, __de-select libCordova.a__, then run the wizard to
+    completion.
 
-## Using CDVViewController in your code
+## Using CDVViewController
 
-1. Add this header:
+1. Add the following header:
 
         #import <Cordova/CDVViewController.h>
 
-2. Instantiate a new `CDVViewController`, and retain it somewhere (e.g., to a property in your class):
+1. Instantiate a new `CDVViewController` and retain it somewhere,
+   e.g., to a class property:
 
         CDVViewController* viewController = [CDVViewController new];
 
-3. (_OPTIONAL_) Set the `wwwFolderName` property (defaults to `www`):
+1. Optionally, set the `wwwFolderName` property, which defaults to `www`:
 
         viewController.wwwFolderName = @"myfolder";
 
-4. (_OPTIONAL_) Set the start page in your config.xml, the `<content>` tag.
+1. Optionally, set the start page in the `config.xml` file's
+   `<content>` tag, either a local file:
 
         <content src="index.html" />
 
-    OR
+    ...or a remote site:
 
         <content src="http://apache.org" />
 
-5. (_OPTIONAL_) Set the `useSplashScreen` property (defaults to `NO`):
+1. Optionally, set the `useSplashScreen` property, which defaults to
+   `NO`:
 
         viewController.useSplashScreen = YES;
 
-6. Set the __view frame__ (always set this as the last property):
+1. Set the __view frame__. Always set this as the last property:
 
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
 
-7. Add Cleaver to your view:
+1. Add Cleaver to the view:
 
         [myView addSubview:viewController.view];
 
-## Adding your HTML, CSS and JavaScript assets
+## Adding HTML, CSS and JavaScript assets
 
-1. Create a new directory in your project on disk, `www` for example.
+1. Create a new directory within the project, `www` for example.
 
-2. Put your HTML, CSS and JavaScript assets into this directory.
+1. Place HTML, CSS and JavaScript assets into this directory.
 
-3. Drag and drop the directory into the Project Navigator of Xcode.
+1. Use the Finder to copy the directory into Xcode's __Project
+   Navigator__ window.
 
-4. Choose the __Create folder references for any added folders__ radio button.
+1. Select __Create folder references for any added folders__.
 
-5. Set the appropriate `wwwFolderName` and `startPage` properties for the folder you initially created, or use the defaults (see previous section) when you instantiate the `CDVViewController`.
+1. Set the appropriate `wwwFolderName` and `startPage` properties for
+   the directory you initially created, or use the defaults (specified
+   in the previous section) when instantiating the
+   `CDVViewController`.
 
         /*
          if you created a folder called 'myfolder' and
