@@ -50,6 +50,7 @@ contains the following properties:
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - iOS
 

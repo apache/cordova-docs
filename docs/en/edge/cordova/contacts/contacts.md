@@ -74,6 +74,18 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="Contacts">
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+        </feature>
+
+        (in app/AndroidManifest.xml)      
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
 * Android
 
         (in app/res/xml/config.xml)
@@ -81,10 +93,10 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
 
-        (in app/AndroidManifest.xml)
-            <uses-permission android:name="android.permission.READ_CONTACTS" />
-            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        (in app/AndroidManifest.xml)      
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
 * BlackBerry WebWorks
 

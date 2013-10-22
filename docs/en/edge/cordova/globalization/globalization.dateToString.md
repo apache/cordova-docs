@@ -44,6 +44,7 @@ The `options.selector` can be `date`, `time` or `date and time`.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

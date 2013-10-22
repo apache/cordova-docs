@@ -39,6 +39,7 @@ executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

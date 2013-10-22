@@ -46,6 +46,7 @@ The value of `options.item` can be `months` or `days`.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

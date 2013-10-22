@@ -46,6 +46,19 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        </feature>
+        <feature name="Vibration">
+            <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+        </feature>
+
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.VIBRATE" />
+
 * Android
 
         (in app/res/xml/config.xml)

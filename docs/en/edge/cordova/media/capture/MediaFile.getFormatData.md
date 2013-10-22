@@ -36,11 +36,17 @@ callback.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
+
+##  Amazon Fire OS Quirks
+
+The API to access media file format information is limited, so not all
+`MediaFileData` properties are supported.
 
 ## BlackBerry WebWorks Quirks
 

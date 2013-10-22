@@ -45,6 +45,7 @@ object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

@@ -27,6 +27,10 @@ An optional parameter to customize the retrieval of the compass.
 
 - __filter__: The change in degrees required to initiate a watchHeading success callback. _(Number)_
 
+##  Amazon Fire OS Quirks
+
+- `filter` is not supported.
+
 ## Android Quirks
 
 - No support for `filter`.

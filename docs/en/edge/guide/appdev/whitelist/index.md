@@ -60,6 +60,11 @@ The following examples demonstrate whitelist syntax:
 
   This is the default value for newly created CLI projects.
 
+## Amazon Fire OS Whitelisting
+
+Platform-specific whitelisting rules are found in
+`res/xml/config.xml`.
+
 ## Android Whitelisting
 
 Platform-specific whitelisting rules are found in

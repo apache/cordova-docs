@@ -29,6 +29,7 @@ This method displays the application's splash screen.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 7 and 8

@@ -34,6 +34,7 @@ object using the `compassSuccess` callback function.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS

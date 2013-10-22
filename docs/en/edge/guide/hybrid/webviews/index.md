@@ -30,6 +30,7 @@ To deploy a WebView, you need to be familiar with each native
 programming environment. The following provides instructions for
 supported platforms:
 
+- Amazon Fire OS WebViews
 - Android WebViews
 - iOS WebViews
 

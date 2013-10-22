@@ -36,6 +36,7 @@ This object is created and populated by Cordova, and returned to a callback in t
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

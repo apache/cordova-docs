@@ -76,6 +76,7 @@ Text data is supported by all platforms listed below. Text is encoded as UTF-8 b
 
 Text and Binary Support:
 
+- Amazon Fire OS
 - Android
 - iOS
 
