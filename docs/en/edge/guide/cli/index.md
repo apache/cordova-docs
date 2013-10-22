@@ -39,6 +39,7 @@ the command-line interface from the same machine that supports the
 platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
+* Amazon Fire OS  (Mac, Linux, Windows)
 * Android         (Mac, Linux)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 7 (Windows)
@@ -111,6 +112,7 @@ machine supports each SDK, and whether you have already installed each
 SDK.  Run any of these from a Mac:
 
         $ cordova platform add ios
+        $ cordova platform add amazon-fireos
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
@@ -121,6 +123,7 @@ different versions of the Windows Phone operating system:
         $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
+        $ cordova platform add amazon-fireos
         $ cordova platform add android
         $ cordova platform add blackberry10
         $ cordova platform add firefoxos
@@ -134,6 +137,7 @@ Run this to check your current set of platforms:
 Run either of the following synonymous commands to remove a platform:
 
         $ cordova platform remove blackberry10
+        $ cordova platform rm amazon-fireos
         $ cordova platform rm android
 
 Running commands to add or remove platforms affects the contents of
@@ -205,6 +209,9 @@ specific platform's emulator:
 Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
+
+Note- Emulator support is currently not available for Amazon Fire OS
+
 (See the Platform Guides for details.)
 For example, you may first run the `android` command to launch the
 Android SDK, then run a particular device image, which launches it
@@ -225,7 +232,7 @@ app directly:
 
 Before running this command, you need to set up the device for
 testing, following procedures that vary for each platform. In
-Android's case, you would have to enable a __USB debugging__ option on
+Android and Amazon Fire OS devices, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
 See Platform Guides for details on each platform's requirements.
@@ -392,7 +399,7 @@ assets to deploy on specific platforms. Each platform-specific
 subdirectory within `merges` mirrors the directory structure of the
 `www` source tree, allowing you to override or add files as needed.
 For example, here is how you might uses `merges` to boost the default
-font size for Android devices:
+font size for Android and Amazon Fire OS devices:
 
 * Edit the `www/index.html` file, adding a link to an additional CSS
   file, `overrides.css` in this case:

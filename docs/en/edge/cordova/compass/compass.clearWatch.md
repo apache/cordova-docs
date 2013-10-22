@@ -27,6 +27,7 @@ Stop watching the compass referenced by the watch ID parameter.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS

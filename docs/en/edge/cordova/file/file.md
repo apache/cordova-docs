@@ -63,26 +63,39 @@ need to add it separately:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        (after adding just the file-transfer plugin)
+        (in app/res/xml/config.xml)
+        <feature name="FileTransfer">
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+        </feature>
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 * Android
 
         (after adding just the file plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
-            <param name="android-package" value="org.apache.cordova.FileUtils" />
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         </feature>
-
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        
+
         (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
-        <feature name="File">
-            <param name="android-package" value="org.apache.cordova.FileUtils" />
-        </feature>
         <feature name="FileTransfer">
             <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
-        
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 

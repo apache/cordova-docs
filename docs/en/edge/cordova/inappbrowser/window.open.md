@@ -62,6 +62,7 @@ instance, or the system browser.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry
 - iOS

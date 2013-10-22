@@ -50,6 +50,16 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="NetworkStatus">
+            <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+        </feature>
+
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 * Android
 
         (in app/res/xml/config.xml)

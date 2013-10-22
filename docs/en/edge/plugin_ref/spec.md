@@ -91,22 +91,21 @@ in order to override the catch-all `cordova` engine:
         <engine name="cordova-ios" version=">=1.7.1" />
     </engines>
 
-Here's a list of the default engines that the `<engine>` tag supports:
-* `cordova` 
-* `cordova-plugman` 
-* `cordova-android`
-* `cordova-ios`
-* `cordova-blackberry10` 
-* `cordova-wp7`
-* `cordova-wp8`
-* `cordova-windows8`  
-* `android-sdk` // returns the highest Android api level installed
-* `apple-xcode` // returns the xcode version 
-* `apple-ios` // returns the highest iOS version installed
-* `apple-osx` // returns the OSX version
-* `blackberry-ndk` // returns the native blackberry SDK version
-* `windows-os` // returns the Windows OS version
-* `windows-sdk` // returns the MSBuild version
+Here's a list of the default engines that the '<engine>' tag supports:
+* 'cordova' 
+* 'cordova-plugman' 
+* 'cordova-amazon-fireos'
+* 'cordova-android'
+* 'cordova-ios'
+* 'cordova-blackberry10' 
+* 'cordova-wp7'
+* 'cordova-wp8'
+* 'cordova-windows8'  
+* 'android-sdk' // returns the highest Android api level installed
+* 'apple-xcode' // returns the xcode version 
+* 'apple-ios' // returns the highest iOS version installed
+* 'apple-osx' // returns the OSX version
+* 'blackberry-ndk' // returns the native blackberry SDK version
         
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
@@ -343,6 +342,7 @@ associating the element's children with that platform.
 Platform names should be lowercase. Platform names, as arbitrarily
 chosen, are listed:
 
+* amazon-fireos
 * android
 * bb10
 * ios

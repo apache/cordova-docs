@@ -80,6 +80,7 @@ The following constants are reported as the only parameter to the
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
@@ -100,6 +101,18 @@ Interface, to add or remove this feature for a project:
 
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
+
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="Media">
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+        </feature>
+
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * Android
 

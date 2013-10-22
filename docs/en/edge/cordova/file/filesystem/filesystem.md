@@ -36,6 +36,7 @@ that represents the file system's root directory.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

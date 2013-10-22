@@ -39,6 +39,7 @@ typically less customizable.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
@@ -48,7 +49,7 @@ typically less customizable.
 
 ## Quick Example
 
-    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
+    //Amazon Fire OS/ Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
     //
     function alertDismissed() {
         // do something

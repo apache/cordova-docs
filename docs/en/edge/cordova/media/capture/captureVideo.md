@@ -46,6 +46,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

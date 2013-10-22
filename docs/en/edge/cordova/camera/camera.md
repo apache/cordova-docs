@@ -52,6 +52,16 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="Camera">
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+        </feature>
+
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 * Android
 
         (in app/res/xml/config.xml)
@@ -71,6 +81,7 @@ platform-specific configuration settings described below:
 
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
+
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>

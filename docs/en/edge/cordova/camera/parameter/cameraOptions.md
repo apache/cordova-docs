@@ -85,6 +85,14 @@ Optional parameters to customize the camera settings.
             FRONT : 1      // Use the front-facing camera
         };
 
+##  Amazon Fire OSQuirks
+
+- Any `cameraDirection` value results in a back-facing photo.
+
+- Ignores the `allowEdit` parameter.
+
+- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+
 ## Android Quirks
 
 - Any `cameraDirection` value results in a back-facing photo.

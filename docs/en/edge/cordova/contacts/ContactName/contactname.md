@@ -41,6 +41,7 @@ The `ContactName` object stores a contact's name properties.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android 2.X
 - BlackBerry WebWorks 5.0+
 - iOS

@@ -48,6 +48,7 @@ device.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
@@ -248,6 +249,7 @@ Aborts an in-progress transfer. The onerror callback is passed a FileTransferErr
 
 __Supported Platforms__
 
+- Amazon Fire OS
 - Android
 - iOS
 
@@ -281,6 +283,7 @@ Called with a ProgressEvent whenever a new chunk of data is transferred.
 
 __Supported Platforms__
 
+- Amazon Fire OS
 - Android
 - iOS
 
