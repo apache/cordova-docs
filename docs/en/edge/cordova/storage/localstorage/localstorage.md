@@ -43,8 +43,7 @@ The `window.localStorage` interface implements the W3C's [Web Storage
 interface](http://dev.w3.org/html5/webstorage/).  An app can use it to
 save persistent data using key-value pairs.  The
 `window.sessionStorage` interface works the same way in every respect,
-except that all data is cleared each time the app closes. Each
-database provides a separate namespace.
+except that all data is cleared each time the app closes.
 
 ## Supported Platforms
 
