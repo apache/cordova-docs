@@ -238,7 +238,7 @@ additional plugins provided by the community, can be found at
 [plugins.cordova.io](http://plugins.cordova.io/). You can use
 the CLI to search for plugins from this registry. For example,
 searching for `bar` and `code` produces a single result that matches
-both terms:
+both substrings:
 
         $ cordova plugin search bar code
 
