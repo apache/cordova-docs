@@ -179,18 +179,7 @@
             "cordova/splashscreen/splashscreen.hide.md"
         ],
         "storage.md": [
-            "cordova/storage/storage.md",
-            "cordova/storage/storage.opendatabase.md",
-            "cordova/storage/parameters/name.md",
-            "cordova/storage/parameters/version.md",
-            "cordova/storage/parameters/display_name.md",
-            "cordova/storage/parameters/size.md",
-            "cordova/storage/database/database.md",
-            "cordova/storage/sqltransaction/sqltransaction.md",
-            "cordova/storage/sqlresultset/sqlresultset.md",
-            "cordova/storage/sqlresultsetrowlist/sqlresultsetrowlist.md",
-            "cordova/storage/sqlerror/sqlerror.md",
-            "cordova/storage/localstorage/localstorage.md"
+            "cordova/storage/storage.md"
         ],
         "inappbrowser.md": [
             "cordova/inappbrowser/inappbrowser.md",

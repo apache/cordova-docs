@@ -19,63 +19,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Storage
 
-> Provides access to the device's storage options.
+> An overview of storage options for Cordova.
 
-This API offers storage options based on two different W3C
-specifications:
+There are several storage APIs that are available to Cordova applications. For
+a more complete overview and examples, see
+[http://www.html5rocks.com/en/features/storage](http://www.html5rocks.com/en/features/storage).
 
-* The
-  [Web Storage API Specification](http://dev.w3.org/html5/webstorage/)
-  allows you to access data via simple key/value pairs.  See the
-  section on localStorage for complete details on this interface.
+## LocalStorage
 
-* The
-  [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
-  offers more full-featured database tables accessed via SQL queries.
-  A summary of this interface appears immediately below.
+This API is provided by the underlying WebView implementations. It provides
+synchronous key/value pair storage. Refer to [the spec](http://www.w3.org/TR/webstorage/) for more details.
 
-Cordova provides access to both interfaces for the minority of devices
-that don't already support them. Otherwise the built-in
-implementations apply.
+### Platform Support
 
-## Methods
+- All of them :)
 
-- openDatabase
+### Windows Phone 7 Quirks
 
-## Arguments
+Dot notation is _not_ available on Windows Phone 7. Be sure to use
+`setItem` or `getItem`, rather than accessing keys directly from the
+storage object, such as `window.localStorage.someKey`.
 
-- database_name
-- database_version
-- database_displayname
-- database_size
+## WebSQL
 
-## Objects
+This API is provided by the underlying WebView.
+The [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
+offers more full-featured database tables accessed via SQL queries.
 
-- Database
-- SQLTransaction
-- SQLResultSet
-- SQLResultSetRowList
-- SQLError
+### Platform Support
 
-## Accessing the Feature
+- Android
+- BlackBerry 10
+- iOS
+- Tizen
 
-As of version 3.0, access to Storage APIs is built into Cordova, and
-does not require using the CLI to add plugins as described in The
-Command-line Interface.
+## IndexedDB
 
-If you are using the older set of Cordova tools that precede the CLI,
-the following platform-specific configuration settings are still
-required:
+This API is provided by the underlying WebView.
+[Indexed DB](http://www.w3.org/TR/IndexedDB/) offers more features than LocalStorage but fewer than WebSQL.
 
-* Android (in `res/xml/config.xml`)
+### Platform Support
 
-        <feature name="Storage">
-            <param name="android-package" value="org.apache.cordova.Storage" />
-        </feature>
+- Windows Phone 8
+- BlackBerry 10
 
-* BlackBerry WebWorks (in `www/config.xml`)
+## Plugin-Based Options
 
-        <feature id="blackberry.widgetcache" required="true" version="1.0.0.0" />
-
-Some platforms may support this feature without requiring any special
-configuration.  See Platform Support for an overview.
+* Most notably - The File API.
+* More storage options exist through [Cordova plugins](http://plugins.cordova.io/).
