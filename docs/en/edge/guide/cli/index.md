@@ -227,14 +227,26 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development Guide for details.)  More commonly, you would add a plugin to enable
+native components. (See Embedding WebViews and Plugin Development
+Guide for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 <!-- XREF
 discussed in the Application Development Guide and
 XREF -->
-detailed in the API Reference. A list of these plugins, including additional plugins provided by the community, can be found at  [http://plugins.cordova.io/](http://plugins.cordova.io/). You can use the CLI to search for plugins from this registry:
+detailed in the API Reference. A list of these plugins, including
+additional plugins provided by the community, can be found at
+[http://plugins.cordova.io/](http://plugins.cordova.io/). You can use
+the CLI to search for plugins from this registry. For example,
+searching for `bar` and `code` produces a single result that matches
+both terms:
 
-        $ cordova plugin search <term1 term2 term3>
+        $ cordova plugin search bar code
+
+        com.phonegap.plugins.barcodescanner - Scans Barcodes
+
+Searching for only the `bar` term yields and additional result:
+
+        org.apache.cordova.statusbar - Cordova StatusBar Plugin
 
 The `cordova plugin add` command requires you to specify the
 repository for the plugin code.  Here are examples of features you
