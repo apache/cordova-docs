@@ -92,15 +92,20 @@ in order to override the catch-all 'cordova' engine:
     </engines>
 
 Here's a list of the default engines that the '<engine>' tag supports:
-    * 'cordova' 
-    * 'cordova-plugman' 
-    * 'cordova-android'
-    * 'cordova-ios'
-    * 'cordova-blackberry10' 
-    * 'cordova-wp7'
-    * 'cordova-wp8'
-    * 'cordova-windows8'  
-    
+* 'cordova' 
+* 'cordova-plugman' 
+* 'cordova-android'
+* 'cordova-ios'
+* 'cordova-blackberry10' 
+* 'cordova-wp7'
+* 'cordova-wp8'
+* 'cordova-windows8'  
+* 'android-sdk' // returns the highest Android api level installed
+* 'apple-xcode' // returns the xcode version 
+* 'apple-ios' // returns the highest iOS version installed
+* 'apple-osx' // returns the OSX version
+* 'blackberry-ndk' // returns the native blackberry SDK version
+        
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
     <engines>
