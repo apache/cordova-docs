@@ -105,6 +105,8 @@ Here's a list of the default engines that the '<engine>' tag supports:
 * 'apple-ios' // returns the highest iOS version installed
 * 'apple-osx' // returns the OSX version
 * 'blackberry-ndk' // returns the native blackberry SDK version
+* 'windows-os' // returns the Windows OS version
+* 'windows-sdk' // returns the MSBuild version
         
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
