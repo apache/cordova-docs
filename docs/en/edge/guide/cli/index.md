@@ -405,15 +405,24 @@ button.
 
 ## Help Commands
 
-If at any point you get stuck, Cordova has a couple global "help" commands.
-
-The first, `help` will print out a list of all available actions that Cordova can do
+Cordova features a couple of global commands, which may help you if
+you get stuck or experience a problem.  The `help` command displays
+all available Cordova commands and their syntax:
 
     $ cordova help
+    $ cordova        # same
 
-The second, `info` will print out useful information, such as installed platforms, node.js version, etc.., that are helpful for submitting bug reports and getting help.  It will also create an info.txt file at the base of your project. __Note: Currently iOS and Android platforms are output__
+The `info` command produces a listing of potentially useful details,
+such as currently installed platforms and plugins, SDK versions for
+each platform, and versions of the CLI and `node.js`:
 
     $ cordova info
+
+It both presents the information to screen and captures the output in
+a local `info.txt` file.
+
+__NOTE:__ Currently, only details on iOS and Android platforms are
+available.
 
 ## Updating the App
 
