@@ -83,7 +83,7 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
 
         (in app/AndroidManifest.xml)
