@@ -139,7 +139,7 @@ you should only change files in the main _www_ source directory and not
 in the _www_ folder in the project's subdirectory: the subdirectory
 will continuously be overwritten by the CLI. 
 
-At this point, if you wish, you can use an IDE such as Eclipse or xCode
+At this point, if you wish, you can use an IDE such as Eclipse or Xcode
 to open the project you created. However, any edits you make to the project 
 within an SDK affect the derivative set of assets (stored in the `/platforms/` directory),
 not the original cross-platform source files (the top level `/www/` directory.) 

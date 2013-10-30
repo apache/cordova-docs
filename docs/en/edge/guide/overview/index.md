@@ -70,8 +70,8 @@ components to communicate with each other.
 
 ## Development Paths
 
-As of Cordova 3.X, there are two basic workflows you can use to create
-a mobile application using Cordova. While you can accomplish the same
+As of version 3.X, there are two basic workflows you can use to create
+a mobile application. While you can accomplish the same
 thing using both workflows, certain tasks are better suited to using one workflow 
 over the other. For this reason, you should understand both perscribed workflows so
 that you can use the best tool for the best situation.
@@ -93,12 +93,12 @@ workflow.
 
 2. Native Platform Dev
 The second workflow is called the "Native Platform Dev" workflow. It should be used
-you want to focus on building an application for a single platform and are 
+when you want to focus on building an application for a single platform and are 
 interested in changing the lower level platform details. While you can still build a hybrid
-application on multiple platforms using this workflow, it will be more difficult there are no
+application on multiple platforms using this workflow, it will be more difficult because there are no
 tools that abstract away the build steps for you. For example, you will have to use Plugman to
 install the same plugin multiple times, once for each platform that you want to support. The 
-benifit to using this "Native Platform Dev" workflow is that it gives you access to the lower
+benefit to using this "Native Platform Dev" workflow is that it gives you access to the lower
 level /bin/ scripts to build and test the application, so if you are hacking on the native 
 side of things, this workflow is the most efficient way to test your changes. This workflow
 will also be used if you want to use the CordovaWebView as a small part in a larger native
@@ -107,7 +107,7 @@ has slightly different commands and procedures depending on which platform you a
 with. For this reason, you can read about this workflow in the "Command-line tools" guide
 for each platform you are working on, for instance, iOS Platform Guide and Android Platform Guide.
 
-When first starting out, it might be easiest to use the "Web Project Dev" workflow, aka, the CLI, 
+When first starting out, it might be easiest to use the "Web Project Dev" workflow
 to create an application. (To install the CLI, see The Command-line Interface.)
 Depending on the set of platforms you wish to target, you can rely on
 the CLI for progressively greater shares of the development cycle:
