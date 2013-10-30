@@ -104,7 +104,7 @@ platform-specific configuration settings described below:
 
 * Android
 
-        (in app/res/xml/plugins.xml)
+        (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         </feature>
