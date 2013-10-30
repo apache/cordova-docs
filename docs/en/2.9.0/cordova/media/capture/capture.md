@@ -82,7 +82,7 @@ Permissions
 
 ### Android
 
-#### app/res/xml/plugins.xml
+#### app/res/xml/config.xml
 
     <plugin name="Capture" value="org.apache.cordova.Capture"/>
 
