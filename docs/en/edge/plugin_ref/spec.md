@@ -32,7 +32,7 @@ A sample plugin element:
         id="com.alunny.foo"
         version="1.0.2">
 
-## `<plugin>` element
+## _plugin_ Element
 
 The `plugin` element is the plugin manifest's top-level element. It
 features the following attributes:
@@ -53,7 +53,7 @@ features the following attributes:
 
         ^\d+[.]\d+[.]\d+$
 
-## `<engines>` and `<engine>` elements
+## _engines_ and _engine_ Elements
 
 The child elements of the `<engines>` element specify versions of
 Apache Cordova-based frameworks that this plugin supports. An example:
@@ -80,10 +80,10 @@ example:
         <engine name="cordova" version="<1.8.1" />
     </engines>
 
-The '<engine>' tags also has default support for all of the main platforms Cordova exists on. 
-Specifying the 'cordova' engine tag means that all versions of Cordova on any platform must
+The `<engine>` tags also has default support for all of the main platforms Cordova exists on. 
+Specifying the `cordova` engine tag means that all versions of Cordova on any platform must
 satisfy the engine version attribute. You may also list specific platforms and their versions
-in order to override the catch-all 'cordova' engine:
+in order to override the catch-all `cordova` engine:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -91,22 +91,22 @@ in order to override the catch-all 'cordova' engine:
         <engine name="cordova-ios" version=">=1.7.1" />
     </engines>
 
-Here's a list of the default engines that the '<engine>' tag supports:
-* 'cordova' 
-* 'cordova-plugman' 
-* 'cordova-android'
-* 'cordova-ios'
-* 'cordova-blackberry10' 
-* 'cordova-wp7'
-* 'cordova-wp8'
-* 'cordova-windows8'  
-* 'android-sdk' // returns the highest Android api level installed
-* 'apple-xcode' // returns the xcode version 
-* 'apple-ios' // returns the highest iOS version installed
-* 'apple-osx' // returns the OSX version
-* 'blackberry-ndk' // returns the native blackberry SDK version
-* 'windows-os' // returns the Windows OS version
-* 'windows-sdk' // returns the MSBuild version
+Here's a list of the default engines that the `<engine>` tag supports:
+* `cordova` 
+* `cordova-plugman` 
+* `cordova-android`
+* `cordova-ios`
+* `cordova-blackberry10` 
+* `cordova-wp7`
+* `cordova-wp8`
+* `cordova-windows8`  
+* `android-sdk` // returns the highest Android api level installed
+* `apple-xcode` // returns the xcode version 
+* `apple-ios` // returns the highest iOS version installed
+* `apple-osx` // returns the OSX version
+* `blackberry-ndk` // returns the native blackberry SDK version
+* `windows-os` // returns the Windows OS version
+* `windows-sdk` // returns the MSBuild version
         
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
@@ -117,7 +117,7 @@ Specifying custom Apache Cordova-based frameworks should be listed under the eng
     </engines>
 
 A custom Apache Cordova-based framework requires that an engine element includes the following attributes: 
-'name', 'version', 'scriptSrc', and 'platform'. 
+`name`, `version`, `scriptSrc`, and `platform`. 
 
 * `name` (required): A human-readable name for your custom framework. 
 
@@ -126,9 +126,9 @@ A custom Apache Cordova-based framework requires that an engine element includes
 * `scriptSrc` (required): The script file that tells plugman what version of the custom framework is. 
 Ideally, this file should be within the top level directory of your plugin directory.
 
-* `platform` (required): Which platforms that your framework supports. You may use the wildcard '*'
-to say supported for all platforms, specify multiple with a pipe character like 'android|ios|blackberry10' 
-or just a single platform like 'android'.
+* `platform` (required): Which platforms that your framework supports. You may use the wildcard `*`
+to say supported for all platforms, specify multiple with a pipe character like `android|ios|blackberry10` 
+or just a single platform like `android`.
 
 plugman aborts with a non-zero code for any plugin whose target
 project does not meet the engine's constraints.
@@ -136,7 +136,7 @@ project does not meet the engine's constraints.
 If no `<engine>` tags are specified, plugman attempts to install into
 the specified cordova project directory blindly.
 
-## `<name>` element
+## _name_ Element
 
 A human-readable name for the plugin, whose text content contains the
 name of the plugin. For example:
@@ -145,7 +145,7 @@ name of the plugin. For example:
 
 This element does not (yet) handle localization.
 
-## `<description>` element
+## _description_ Element
 
 A human-readable description for the plugin. The text content of the element contains
 the description of the plugin. An example:
@@ -154,26 +154,26 @@ the description of the plugin. An example:
 
 This element does not (yet) handle localization.
 
-## `<author>` element
+## _author_ Element
 
 Plugin author name. The text content of the element contains
 the name of the plugin author. An example:
 
     <author>Foo plugin description</author>
 
-## `<keywords>` element
+## _keywords_ Element
 
 Plugin keywords. The text content of the element contains comma separated keywords to describe the plugin. An example:
 
     <keywords>foo,bar</keywords>
 
-## `<license>` element
+## _license_ Element
 
 Plugin license. The text content of the element contains the plugin license. An example:
 
     <license>Apache 2.0 License</license>
 
-## `<asset>` element
+## _asset_ Element
 
 One or more elements listing the files or directories to be copied
 into a Cordova app's `www` directory. Examples:
@@ -210,7 +210,7 @@ platform-specific web assets, as described below. Attributes include:
   issues a notification about the conflict, and exits with a non-zero
   code.
 
-## `<js-module>` element
+## _js-module_ Element
 
 Most plugins include one or more JavaScript files.  Each `<js-module>`
 tag corresponds to a JavaScript file, and prevents the plugin's users
@@ -276,7 +276,7 @@ exits with a non-zero code.
 Nesting `<js-module>` elements within `<platform>` declares
 platform-specific JavaScript module bindings.
 
-## `<dependency>`
+## _dependency_ element
 
 The `<dependency>` tag allows you specify other plugins on which the
 current plugin depends. While future versions will access them from
@@ -318,7 +318,7 @@ installed the plugin with a local path directly to it. Plugman finds
 the root of the git repository and then finds the other plugin from
 there.
 
-## `<platform>`
+## _platform_ Element
 
 The `<platform>` tag identifies platforms that have associated native
 code or require modifications to their configuration files. Tools
@@ -349,7 +349,7 @@ chosen, are listed:
 * wp7
 * wp8
 
-## `<source-file>`
+## _source-file_ Element
 
 The `<source-file>` element identifies executable source code that
 should be installed into a project. Examples:
@@ -390,7 +390,7 @@ It supports the following attributes:
   If set, assigns the specified compiler flags for the particular
   source file.
 
-## `<config-file>`
+## _config-file_ Element
 
 Identifies an XML-based configuration file to be modified, where in
 that document the modification should take place, and what should be
@@ -453,7 +453,7 @@ It supports the following attributes:
   document, the tool stops and reverses the installation process,
   issues a warning, and exits with a non-zero code.
 
-## `<plugins-plist>`
+## _plugins-plist_ Element
 
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
 below. Use the `<config-file>` tag for newer versions of Cordova.
@@ -471,7 +471,7 @@ file in an iOS Cordova project. For example:
 
     <plugins-plist key="Foo" string="CDVFoo" />
 
-## `<resource-file>` and `<header-file>`
+## _resource-file_ and _header-file_ Elements
 
 Like source files, but specifically for platforms such as iOS that
 distinguish between source files, headers, and resources.  Examples:
@@ -480,7 +480,7 @@ distinguish between source files, headers, and resources.  Examples:
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
 
-## `<lib-file>`
+## _lib-file_ Element
 
 Like source, resource, and header files, but specifically for
 platforms such as BlackBerry 10 that use user-generated libraries.
@@ -500,7 +500,7 @@ Supported attributes:
 * `arch`: The architecture for which the `.so` file has been built,
   either `device` or `simulator`.
 
-## `<framework>`
+## _framework_ Element
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
 
@@ -516,7 +516,7 @@ platform.
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-## `<info>`
+## _info_ Element
 
 Additional information provided to users. This is useful when you
 require extra steps that can't be easily automated or are beyond

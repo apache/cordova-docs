@@ -233,7 +233,7 @@ folders. The parenthesis shows the contents of a given directory. All
 directory names appear in bold text. File names are preceded by the `>`
 sign.
 
-## The `plugin.xml` file
+## The _plugin.xml_ file
 
 The `plugin.xml` file contains the extension's namespace and other
 metadata. Set up the `Echo` plugin as follows:

@@ -171,7 +171,7 @@ all of them:
 
   __NOTE:__ For BlackBerry, valid values are `enable` or `disable`.
 
-## The `<feature>` Element
+## The _feature_ Element
 
 If you use the CLI to build applications, you use the `plugin` command
 to enable device APIs. This does not modify the top-level `config.xml`
