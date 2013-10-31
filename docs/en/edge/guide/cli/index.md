@@ -178,7 +178,7 @@ an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' SDKs.
 
-## Test the App on an Emulator or Device
+## Test the App on an Emulator, Device, or Browser
 
 SDKs for mobile platforms often come bundled with emulators that
 execute a device image, so that you can launch the app from the home
@@ -215,6 +215,22 @@ Android's case, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
 See Platform Guides for details on each platform's requirements.
+
+Both of these options offer ideal ways to test parts of the app that
+rely on Cordova API features. If all you want to do is test its basic
+web programming, you also have the option to preview the app in your
+default web browser. Run a commands such as the following:
+
+        $ cordova serve android
+
+That launches a local web server to enable networking capabilities,
+which may otherwise be disabled when previewed locally using the
+`file://` protocol. It also displays any platform-specific
+customizations implemented as _merges_, described below. By default,
+the server runs on port 8000, but an additonal optional argument
+allows you to set it explicitly:
+
+        $ cordova serve android 8000 
 
 ## Add Plugin Features
 
