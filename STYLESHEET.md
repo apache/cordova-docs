@@ -64,6 +64,10 @@ editorial guidelines.
   to indicate a clear set of choices that you introduce, not as a
   substitute for regular body text.
 
+* Try to match verb tense in headings. That is, if one is task-based
+  and reads "Adding a Platform," the other should be "Developing for
+  Android" rather than "Android Development"
+
 * Avoid too many NOTEs, as it implies too many variable factors that
   can go wrong. Try to clarify variations on a procedure within the
   text.
