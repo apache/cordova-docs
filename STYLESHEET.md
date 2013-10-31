@@ -44,13 +44,29 @@ editorial guidelines.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
+* Use italics for any in-line font changes within headings. This only
+  applies to font _changes_, not e.g. to standalone API members that
+  would ordinarily be monospaced within text.  Still, try to avoid any
+  font changes within headings, especially top-level headings.
+
 ## Structure
 
 * Flatten text wherever possible. Avoid nested lists. Avoid
   third-level subheadings.
 
+* Only one top-level heading allowed: the page's title.
+
+* No punctuation at the end of a heading; avoid punctuation within
+  headings
+
 * Do not follow a heading with a subheading or a list with no
-  intervening text.
+  intervening introductory text.  In particular, use bullet lists only
+  to indicate a clear set of choices that you introduce, not as a
+  substitute for regular body text.
+
+* Try to match verb tense in headings. That is, if one is task-based
+  and reads "Adding a Platform," the other should be "Developing for
+  Android" rather than "Android Development"
 
 * Avoid too many NOTEs, as it implies too many variable factors that
   can go wrong. Try to clarify variations on a procedure within the
@@ -58,6 +74,10 @@ editorial guidelines.
 
 * Use numbered lists for sequential procedures only, otherwise use
   bullet lists.
+
+* Single-item lists are silly. Do not use them.
+
+* Do not prefix headings with numbers.
 
 * Punctuation at the end of bullet/number list items that consist of
   full sentences.
@@ -68,13 +88,23 @@ editorial guidelines.
 
 ## Language and Tone
 
-* Use present tense. "This happens," not "this will happen." (Future
-  tense sounds like a tenuous prediction.)
+* Use present tense. "This happens," not "this will happen." Future
+  tense off as a tenuous prediction. Rule of thumb: avoid the word
+  "will." Tech writers derisively refer to this problem as "the
+  willies."
 
-* Passive voice is to be avoided. E.g., "the pause event fires
-  when..."  rather than "the pause event is fired when..."
+* Past-tense passive voice is to be avoided. E.g., "the pause event
+  fires when..."  rather than "the pause event is fired when..." Rule
+  of thumb: banish verbs ending in "ed".
 
 * Prefer action verbs over weak verbs like "is" or "has."
+
+* Avoid noun modification concatenation somnambulation obfuscation.
+  Use your judgement and ask yourself if readers might not actually
+  know what some noun phrase means. If so, explain the actual concept
+  it represents, in this case: "Avoid stringing nouns together into
+  long phrases that come off as impenetrable shop talk that puts
+  everybody to sleep."
 
 * Minimize verbs ending with "ing": "This is necessary to provide...",
   not "This is necessary for providing..."
@@ -96,10 +126,11 @@ editorial guidelines.
 
 * Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so
-  instead of "We see that..." try "Note that..."
+  instead of "We see that..." try "Note that..." Readers want to focus
+  on the thing they're working on, not on you.
 
-* OK to refer to "you," the developer, but only if necessary, e.g., to
-  avoid passive voice.
+* OK to refer to "you," the developer, but only sparingly, e.g., to
+  avoid passive voice. Also do not use "your" as a substitute for "the."
 
 * Avoid unnecessarily imperative statements, especially using the word
   "must." E.g., instead of "Commands must be run from a cmd or
@@ -148,6 +179,13 @@ editorial guidelines.
 * Prefer "emulator" over "simulator"; clarify when interfaces refer to
   them differently.
 
+* Use "app" for mobile apps, and "application" for desktop. E.g., you
+  may use the Xcode application to help you write an iOS Cordova app.
+  Consider "app" a valid word rather than a contraction, so use "apps"
+  rather than "app's" as plural.
+
+* Likewise, "repo" is OK to substitute for "repository"
+
 * Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
   dedicated GUI coding environments such as Eclipse. (OK to refer to
   specific tools as IDEs if that's how they self-identify.)
@@ -177,6 +215,10 @@ editorial guidelines.
 * Avoid trailing (s) to denote optional plural. It's usually implicit.
   E.g., "return information about captured image files", not "file(s)"
 
+* Avoid the word "multiple" wherever possible.  It's one of those
+  unnecessary words up there with "myriad" or "plethora." What's wrong
+  with "several"?
+
 ## Punctuation
 
 * Initial Cap Words in Headings, Except for Short Prepositions or
@@ -203,12 +245,41 @@ editorial guidelines.
 * Do not hyphenate adverbs, as it's implict they modify verbs.  So,
   "commonly seen problems," not "commonly-seen problems"
 
+* Use semicolons to separate short, closely related clauses that can
+  stand alone gramattically as full sentences. Use commas to separate
+  clauses where one is a sentence fragment. E.g., "This is a clause,
+  along with this." vs.  "This can serve as a sentence; this can too."
+
+* If a sentence with semicolons runs on tool long, it's time to break
+  it out into separate sentences. Rewrite this...  "This can serve as
+  a sentence; this can too, along with related information."  ...as...
+  "This can serve as a sentence. This can too, along with related
+  information."
+
+* This is can serve as a sentence and this can also serve as a
+  sentence but you need to use commas to separate this big mess.
+
 ## Content-specific
 
 * Refer to the default app as "Hello World", regardless of what it
   actually displays.
 
 * Refer to the default plugin demo as "Echo"
+
+* Keep the term "hybrid" app confined to two scenarios: (1) an app
+  whose developer has to supply components that bridge native &
+  webview, e.g., custom plugins, or an embedded webview component. (2)
+  An app with an InAppBrowser, that is a web-based app that itself
+  opens a web page. Don't apply to a garden-variety "cross-platform"
+  app that is Cordova's bread & butter.
+
+## Links
+
+* Use titles in link text, never 'click here'. Consider using the
+  link's domain name as a substitute.
+
+* Domain names are OK as a link's display text, but not full
+  scheme-qualified URLs.
 
 ## Miscellaneous
 
@@ -225,8 +296,6 @@ editorial guidelines.
 * As an alternative to __NOTE:__, use __WARNING:__ for serious
   matters, or __TIP:__ to pass along useful tricks or context.
 
-* Use titles in link text, never 'click here'
-
 * __Topic/comment lists__: For bullet lists that provide short topics
   followed by comments, bold the topic, then merge the comment on the
   same line, separated with a colon unless the topic features trailing
@@ -234,4 +303,11 @@ editorial guidelines.
 
 * In body text, no ( extra space inside parens ). OK to increase
   readability of code.
+
+* OK to use shorthand notation for version ranges, e.g. "5.0+" rather
+  than "(OS 5.0 and higher)"
+
+* Use space characters rather than tabs in code blocks.
+
+
 

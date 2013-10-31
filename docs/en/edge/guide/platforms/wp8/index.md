@@ -21,24 +21,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 8 devices. If you want to target
-both 7.5 and 8 devices, develope for Windows Phone 7 instead as
+both 7.5 and 8 devices, develop for Windows Phone 7 instead as
 detailed in the Windows Phone 7 Platform Guide.  Version 7 does not
-have all the advanced features included in IE10, but implements the
-same set of APIs. Windows Phone 8 apps do _not_ run on Windows Phone 7
-devices.
+have all the advanced features included in Internet Explorer 10, but
+implements the same set of APIs. Windows Phone 8 apps do _not_ run on
+Windows Phone 7 devices.
 
 See the following for more detailed platform-specific information that
 applies to both versions:
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+- Upgrading Windows Phone
+- Windows Phone Plugins
+- Windows Phone Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the
 current interface.
 
-## 1. System Requirements
+## System Requirements
 
 - Operating System:
     - Windows 8 or Windows 8 Pro
@@ -57,82 +57,106 @@ current interface.
         - See the [list of Intel processors that support VT-x (virtualization) and EPT (SLAT)](http://ark.intel.com/Products/VirtualizationTechnology)
     - Enable the virtualization capability (i.e., VT-x on Intel) in your BIOS settings, as usually this is disabled by default.
 
-- SDK + IDE (Visual Studio)
+- SDK and IDE (Visual Studio)
     - Visual Studio 2012 Professional, Premium, or Ultimate. Note that Visual Studio Express for Windows Phone (included in the SDK) is not recommended because you can not build the template (see below) with VS Express, as it does not have the __Export Template__ functionality, which is only in VS Pro or higher.
 
 - Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
-## 2. Install SDK + Cordova
+## Install SDK and Cordova
 
-- Download and install [Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
+Download and install [Windows Phone
+SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471).
 
-- Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone-8\wp8` subdirectory, `lib\windows-phone-8\wp7` contains the Windwos Phone 7 version of Cordova.
+Download and extract the latest copy of
+[Cordova](http://phonegap.com/download). The `lib\windows-phone-8\wp8`
+subdirectory is where you will do your work.
 
-- Copy the `CordovaWP8_x_x_x.zip` file to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
+Copy the `CordovaWP8_x_x_x.zip` file to the `\My Documents\Visual
+Studio 2012\Templates\ProjectTemplates\` directory.
 
-## 2.1. Building the template
+## Building the Template
 
-__NOTE:__ this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP8_x_x_x.zip then you may skip this step.
+__NOTE:__ Skip this step if the `lib\windows-phone` directory already
+contains a `CordovaWP8_x_x_x.zip` file.
 
-In order to simplify the development process, Cordova comes with a script to build Visual Studio templates. This allows for rapid creation of Cordova applications inside Visual Studio. This template can be modified if needed and the below steps indicate how to proceed if you want to generate the template.
+To simplify development, Cordova bundles a script to build Visual
+Studio templates. These allow you to rapidly generate Cordova apps,
+and you can modify them if necessary.  The steps below show how to
+generate it.
 
-### Run the batch file to create and install the templates.
+### Run the Batch File to Create and Install the Templates
 
-- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
-"My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
+The repo's root directory contains a `createTemplates.bat` file.
+Double-click this to generate two `.zip` files: `CordovaWP7_x_x_x.zip`
+and `CordovaWP8_x_x_x.zip`, where _x.x.x_ is the current version
+number. To use these files easily in Visual Studio, copy them to `My
+Documents\Visual Studio 2012\Templates\ProjectTemplates\`. You are
+then able to create new Apache Cordova Windows Phone apps from the
+__Visual Studio File &rarr; New Project__ menu.
 
-- If you run the batch file from the command line, you can also call with a parameter to install automatically
+If you run the batch file from the command line, you can also call it
+with a parameter to install automatically:
 
-Run the script :
+        >createTemplates.bat -install
 
-    >createTemplates.bat -install
+## Set up a New Project
 
-## 3. Set up New Project
+Open Visual Studio Express for Windows Phone and choose __New
+Project__.
 
-- Open Visual Studio Express for Windows Phone and choose __New Project__.
+Select __CordovaWP8__. The version number is displayed in the
+template description.
 
-- Select __CordovaWP8__. (The version number is displayed in the template description.)
-
-- Give the project a name, and select __OK__.
+Give the project a name, and select __OK__.
 
 ![](img/guide/platforms/wp8/StandAloneTemplate.png)
 
-## 4. Review the project structure
+## Review the Project Structure
 
-- The `www` directory contains your Cordova `html/js/css` and any other resources included in your app.
+The `www` directory features `html`, `js`, and `css` subdirectories
+and any other resources your app requires.
+Any additional content needs to be a part of the Visual Studio
+project, and it must be set as content.
 
-- Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content.
-
-- Note: This screen capture was from the cordova-2.3.0 download, your listing will vary based on the actual version installed.
+The following sample structure represents a 2.3.0 project, but may
+vary depending on the installed version:
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-## 5. Build and Deploy to Emulator
+## Build and Deploy to Emulator
 
-- Make sure __Windows Phone Emulator__ is selected in the main drop-down menu.
+Make sure __Windows Phone Emulator__ is selected in the main drop-down menu.
 
-- Press the green __play__ button next to the drop-down menu to start debugging, or type __F5__.
+Then press the green __play__ button next to the drop-down menu to
+start debugging, or type __F5__.
 
 ![](img/guide/platforms/wp8/BuildEmulator.png)
 
-## 6. Build your project for the device
+## Build the Project for the Device
 
-In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 8.
+Before testing your application on a device, the device must be
+registered. Consult
+[Microsoft's documentation][http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx]
+for details on how to deploy and test on Windows Phone 8. These are
+the basic steps:
 
 - Make sure your phone is connected, and the screen is unlocked.
 
-- In Visual Studio, select 'Device' from the top drop-down menu.
+- In Visual Studio, select __Device__ from the drop-down menu at the top.
 
-- Press the green __play__ button next to the main drop-down menu to start debugging, or type __F5__.
+- Press the green __play__ button next to the main drop-down menu to
+  start debugging, or else type __F5__.
 
 ![](img/guide/platforms/wp7/wpd.png)
 
-## Done!
+At this point, you're done.
 
 ## Further Reading
 
-For more details on the specific differences between IE10 and WebKit browsers, and how to support both MS has a helpful [guide here](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+The Windows Phone Developer Blog provides
+[helpful details](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+on differences between IE10 and WebKit browsers, and how to support
+both.
 
-[register-url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx

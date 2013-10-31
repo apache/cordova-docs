@@ -363,7 +363,7 @@ contains the `plugin.xml` file:
 
         $ cordova plugin add ../my_plugin_dir
 
-## Customize Each Platform
+## Using _merges_ to Customize Each Platform
 
 While Cordova allows you to easily deploy an app for many different
 platforms, sometimes you need to add customizations.  In that case,

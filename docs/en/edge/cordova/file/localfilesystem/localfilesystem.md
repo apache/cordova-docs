@@ -40,7 +40,7 @@ The `LocalFileSystem` object methods are defined on the `window` object.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
