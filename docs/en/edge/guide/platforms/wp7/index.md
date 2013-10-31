@@ -36,7 +36,7 @@ The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the
 current interface.
 
-## 1. System Requirements
+## System Requirements
 
 - Operating System:
     - Windows 7 or Windows 8 (Pro) or Windows Vista with SP2
@@ -47,7 +47,7 @@ current interface.
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
-## 2. Install SDK + Cordova
+## Install SDK and Cordova
 
 - Download and install the [Windows Phone SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
 
@@ -55,7 +55,7 @@ __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You 
 
 - Copy the `CordovaWP7_x_x_x.zip` file to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` directory.
 
-## 2.1. Building the template
+## Building the Template
 
 __NOTE:__ this step may not be required.  If the lib\windows-phone directory already contains a file CordovaWP7_x_x_x.zip then you may skip this step.
 
@@ -72,7 +72,7 @@ Run the script :
 
     >createTemplates.bat -install
 
-## 3. Set up New Project
+## Set up New Project
 
 - Open Visual Studio Express for Windows Phone and choose __New Project__.
 
@@ -80,7 +80,7 @@ Run the script :
 
 - Give the project a name, and select __OK__.
 
-## 4. Review the project structure
+## Review the project structure
 
 - The `www` directory contains your Cordova `html/js/css` and any other resources included in your app.
 
@@ -90,7 +90,7 @@ Run the script :
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-## 6. Build your project for the device
+## Build the Project for the Device
 
 In order to test your application on a device, the device must be registered. Click [here][register-url] to read documentation on deploying and testing on your Windows Phone 7.
 

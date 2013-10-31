@@ -35,7 +35,7 @@ Windows RT. MSDN now refers to this type of app as a _Windows Store_
 app, and this guide follows that convention. Also, in this guide
 _Windows 8_ signifies both Windows 8 and Windows RT.
 
-## 1. Requirements
+## Requirements
 
 - Windows 8
 
@@ -43,13 +43,13 @@ _Windows 8_ signifies both Windows 8 and Windows RT.
 
 Follow the instructions [here](http://www.windowsstore.com/) to submit your apps Windows Store.
 
-## 2. Install SDK + Cordova
+## Install SDK + Cordova
 
 - Set up your preferred variant of Visual Studio 2012. All of the product's paid versions (Professional, etc.) let you build Windows Store apps. You need __Express for Windows 8__ to build Windows Store apps using the [Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products).
 
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-8` subdirectory.
 
-## 3. Set up New Project
+## Set up New Project
 
 You can already build Windows 8 apps using the _HTML/JavaScript track_
 available in Windows Store apps. Use Cordova in Windows Store apps to
@@ -103,7 +103,7 @@ expose the same APIs as on other Cordova-supported platforms.
 
 	</body>
 
-## 5. Test the Project
+## Test the Project
 
 - Run the project from Visual Studio. You'll see the message box appear:
 
