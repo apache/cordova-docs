@@ -242,7 +242,7 @@ editorial guidelines.
   "commonly seen problems," not "commonly-seen problems"
 
 * Use semicolons to separate short, closely related clauses that can
-  stand alone gramattically as full sentences. Use commas to separate
+  stand alone grammatically as full sentences. Use commas to separate
   clauses where one is a sentence fragment. E.g., "This is a clause,
   along with this." vs.  "This can serve as a sentence; this can too."
 
