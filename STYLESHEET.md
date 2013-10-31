@@ -56,8 +56,13 @@ editorial guidelines.
 
 * Only one top-level heading allowed: the page's title.
 
+* No punctuation at the end of a heading; avoid punctuation within
+  headings
+
 * Do not follow a heading with a subheading or a list with no
-  intervening text.
+  intervening introductory text.  In particular, use bullet lists only
+  to indicate a clear set of choices that you introduce, not as a
+  substitute for regular body text.
 
 * Avoid too many NOTEs, as it implies too many variable factors that
   can go wrong. Try to clarify variations on a procedure within the
@@ -65,6 +70,8 @@ editorial guidelines.
 
 * Use numbered lists for sequential procedures only, otherwise use
   bullet lists.
+
+* Single-item lists are silly. Do not use them.
 
 * Do not prefix headings with numbers.
 
@@ -77,13 +84,22 @@ editorial guidelines.
 
 ## Language and Tone
 
-* Use present tense. "This happens," not "this will happen." (Future
-  tense sounds like a tenuous prediction.)
+* Use present tense. "This happens," not "this will happen." Future
+  tense off as a tenuous prediction. Rule of thumb: avoid the word
+  "will." Tech writers derisively refer to this problem as "the
+  willies."
 
-* Passive voice is to be avoided. E.g., "the pause event fires
-  when..."  rather than "the pause event is fired when..."
+* Past-tense passive voice is to be avoided. E.g., "the pause event
+  fires when..."  rather than "the pause event is fired when..." Rule
+  of thumb: banish verbs ending in "ed".
 
 * Prefer action verbs over weak verbs like "is" or "has."
+
+* Avoid noun modification concatenation somnambulation obfuscation.
+  Assume the reader doesn't know what it means, and explain the actual
+  concept. In this case: "Avoid stringing nouns together into long
+  phrases that come off as impenetrable shop talk that puts everybody
+  to sleep."
 
 * Minimize verbs ending with "ing": "This is necessary to provide...",
   not "This is necessary for providing..."
@@ -105,10 +121,11 @@ editorial guidelines.
 
 * Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so
-  instead of "We see that..." try "Note that..."
+  instead of "We see that..." try "Note that..." Readers want to focus
+  on the thing they're working on, not on you.
 
-* OK to refer to "you," the developer, but only if necessary, e.g., to
-  avoid passive voice.
+* OK to refer to "you," the developer, but only sparingly, e.g., to
+  avoid passive voice. Also do not use "your" as a substitute for "the."
 
 * Avoid unnecessarily imperative statements, especially using the word
   "must." E.g., instead of "Commands must be run from a cmd or
@@ -211,6 +228,20 @@ editorial guidelines.
 
 * Do not hyphenate adverbs, as it's implict they modify verbs.  So,
   "commonly seen problems," not "commonly-seen problems"
+
+* Use semicolons to separate short, closely related clauses that can
+  stand alone gramattically as full sentences. Use commas to separate
+  clauses where one is a sentence fragment. E.g., "This is a clause,
+  along with this." vs.  "This can serve as a sentence; this can too."
+
+* If a sentence with semicolons runs on tool long, it's time to break
+  it out into separate sentences. Rewrite this...  "This can serve as
+  a sentence; this can too, along with related information."  ...as...
+  "This can serve as a sentence. This can too, along with related
+  information."
+
+* This is can serve as a sentence and this can also serve as a
+  sentence but you need to use commas to separate this big mess.
 
 ## Content-specific
 
