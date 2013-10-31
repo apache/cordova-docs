@@ -450,7 +450,7 @@ in the Platform Guides.  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
 
-Cordova versions 3.0 and later may still require various changes to
+Cordova 3.0+ may still require various changes to
 project-level directory structures and other dependencies. After you
 run the `npm` command above to update Cordova itself, you may need to
 ensure your project's resources conform to the latest version's
