@@ -174,6 +174,13 @@ editorial guidelines.
 * Prefer "emulator" over "simulator"; clarify when interfaces refer to
   them differently.
 
+* Use "app" for mobile apps, and "application" for desktop. E.g., you
+  may use the Xcode application to help you write an iOS Cordova app.
+  Consider "app" a valid word rather than a contraction, so use "apps"
+  rather than "app's" as plural.
+
+* Likewise, "repo" is OK to substitute for "repository"
+
 * Prefer generic "SDK" over "IDE", or "SDK tools" when referring to
   dedicated GUI coding environments such as Eclipse. (OK to refer to
   specific tools as IDEs if that's how they self-identify.)
