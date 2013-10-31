@@ -96,10 +96,11 @@ editorial guidelines.
 * Prefer action verbs over weak verbs like "is" or "has."
 
 * Avoid noun modification concatenation somnambulation obfuscation.
-  Assume the reader doesn't know what it means, and explain the actual
-  concept. In this case: "Avoid stringing nouns together into long
-  phrases that come off as impenetrable shop talk that puts everybody
-  to sleep."
+  Use your judgement and ask yourself if readers might not actually
+  know what some noun phrase means. If so, explain the actual concept
+  it represents, in this case: "Avoid stringing nouns together into
+  long phrases that come off as impenetrable shop talk that puts
+  everybody to sleep."
 
 * Minimize verbs ending with "ing": "This is necessary to provide...",
   not "This is necessary for providing..."
