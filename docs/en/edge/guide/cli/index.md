@@ -134,18 +134,19 @@ Running commands to add or remove platforms affects the contents of
 the project's _platforms_ directory, where each specified platform
 appears as a subdirectory. The _www_ source directory is reproduced
 within each platform's subdirectory, appearing for example in
-`platforms/ios/www` or `platforms/android/assets/www`. This is why
-you should only change files in the main _www_ source directory and not
-in the _www_ folder in the project's subdirectory: the subdirectory
-will continuously be overwritten by the CLI. 
+`platforms/ios/www` or `platforms/android/assets/www`. Because the CLI
+constantly copies over files from the source _www_ folder, you should only
+be editing these files and not the ones located under the _platforms_ subdirectories.
 
-At this point, if you wish, you can use an IDE such as Eclipse or Xcode
-to open the project you created. However, any edits you make to the project 
-within an SDK affect the derivative set of assets (stored in the `/platforms/` directory),
-not the original cross-platform source files (the top level `/www/` directory.) 
-Use this approach if you simply want to initialize a project using the CLI and 
-then switch to an IDE for native work.
+At this point, if you wish, you can use an SDK such as Eclipse or xCode
+to open the project you created. You will only be able to open the project in an SDK
+if you point the SDK to the derivative set of assets (stored in the `/platforms/` directory),
+not the original cross-platform source files (the top level `/www/` directory). This is because
+the SDK specific meta data files are stored within the appropriate `/platform/` subdirectory.
 (See the Platform Guides for information on how to develop applications within each IDE.)
+Use this approach if you simply want to initialize a project using the CLI and 
+then switch to an SDK for native work.
+
 Read on if you wish to use the Web Project Dev workflow (the CLI) for the entire
 development cycle.
 

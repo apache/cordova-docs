@@ -38,7 +38,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Set up each SDK and update projects</span>
         </li>
         <li>
-            <h2>Using Plugman</h2>
+            <h2>Using Plugman to Manage Plugins</h2>
             <span>Using Plugman to manage Plugins without the CLI</span>
         </li>
         <li>
