@@ -530,7 +530,7 @@ plugman's scope.  Examples:
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>
 
-# Variables
+## Variables
 
 In certain cases, a plugin may need to make configuration changes
 dependent on the target application. For example, to register for C2DM

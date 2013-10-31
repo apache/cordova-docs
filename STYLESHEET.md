@@ -54,6 +54,8 @@ editorial guidelines.
 * Flatten text wherever possible. Avoid nested lists. Avoid
   third-level subheadings.
 
+* Only one top-level heading allowed: the page's title.
+
 * Do not follow a heading with a subheading or a list with no
   intervening text.
 
