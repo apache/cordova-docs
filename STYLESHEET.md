@@ -262,6 +262,13 @@ editorial guidelines.
 
 * Refer to the default plugin demo as "Echo"
 
+* Keep the term "hybrid" app confined to two scenarios: (1) an app
+  whose developer has to supply components that bridge native &
+  webview, e.g., custom plugins, or an embedded webview component. (2)
+  An app with an InAppBrowser, that is a web-based app that itself
+  opens a web page. Don't apply to a garden-variety "cross-platform"
+  app that is Cordova's bread & butter.
+
 ## Links
 
 * Use titles in link text, never 'click here'. Consider using the
@@ -297,4 +304,6 @@ editorial guidelines.
   than "(OS 5.0 and higher)"
 
 * Use space characters rather than tabs in code blocks.
+
+
 
