@@ -57,7 +57,7 @@ current interface.
         - See the [list of Intel processors that support VT-x (virtualization) and EPT (SLAT)](http://ark.intel.com/Products/VirtualizationTechnology)
     - Enable the virtualization capability (i.e., VT-x on Intel) in your BIOS settings, as usually this is disabled by default.
 
-- SDK + IDE (Visual Studio)
+- SDK and IDE (Visual Studio)
     - Visual Studio 2012 Professional, Premium, or Ultimate. Note that Visual Studio Express for Windows Phone (included in the SDK) is not recommended because you can not build the template (see below) with VS Express, as it does not have the __Export Template__ functionality, which is only in VS Pro or higher.
 
 - Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
@@ -80,7 +80,7 @@ In order to simplify the development process, Cordova comes with a script to bui
 
 ### Run the batch file to create and install the templates.
 
-- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
+- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip and CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
 "My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
 
 - If you run the batch file from the command line, you can also call with a parameter to install automatically

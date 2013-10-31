@@ -219,6 +219,14 @@ editorial guidelines.
 
 * Refer to the default plugin demo as "Echo"
 
+## Links
+
+* Use titles in link text, never 'click here'. Consider using the
+  link's domain name as a substitute.
+
+* Domain names are OK as a link's display text, but not full
+  scheme-qualified URLs.
+
 ## Miscellaneous
 
 * For procedure lists, don't break out separate items for (1) do this,
@@ -234,8 +242,6 @@ editorial guidelines.
 * As an alternative to __NOTE:__, use __WARNING:__ for serious
   matters, or __TIP:__ to pass along useful tricks or context.
 
-* Use titles in link text, never 'click here'
-
 * __Topic/comment lists__: For bullet lists that provide short topics
   followed by comments, bold the topic, then merge the comment on the
   same line, separated with a colon unless the topic features trailing
@@ -246,3 +252,6 @@ editorial guidelines.
 
 * OK to use shorthand notation for version ranges, e.g. "5.0+" rather
   than "(OS 5.0 and higher)"
+
+* Use space characters rather than tabs in code blocks.
+
