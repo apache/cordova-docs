@@ -37,7 +37,7 @@ This object is created and populated by Cordova, and returned to a callback in t
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 
 ## Quick Example

@@ -48,7 +48,7 @@ a `ContactAddress[]` array.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -142,7 +142,7 @@ a `ContactAddress[]` array.
 
 - __pref__: Not supported, returning `false` on Android 2.X devices.
 
-## BlackBerry WebWorks (OS 5.0 and higher) Quirks
+## BlackBerry WebWorks 5.0+ Quirks
 
 - __pref__: Not supported on BlackBerry devices, returning `false`.
 

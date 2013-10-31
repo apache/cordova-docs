@@ -30,7 +30,7 @@ The details of how a UUID is generated are determined by the device manufacturer
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Tizen
 - Windows Phone 7 and 8

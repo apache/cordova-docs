@@ -62,7 +62,7 @@ error's expected code is `GlobalizationError.PARSING\_ERROR`.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 8
 

@@ -42,7 +42,7 @@ attach an event listener once the `deviceready` event fires.
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - Tizen
 
 ## Quick Example
