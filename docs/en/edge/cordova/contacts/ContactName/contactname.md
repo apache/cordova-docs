@@ -42,7 +42,7 @@ The `ContactName` object stores a contact's name properties.
 ## Supported Platforms
 
 - Android 2.X
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -123,7 +123,7 @@ The `ContactName` object stores a contact's name properties.
 
 - __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
 
-## BlackBerry WebWorks (OS 5.0 and higher) Quirks
+## BlackBerry WebWorks 5.0+ Quirks
 
 - __formatted__: Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
 

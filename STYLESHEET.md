@@ -242,3 +242,5 @@ editorial guidelines.
 * In body text, no ( extra space inside parens ). OK to increase
   readability of code.
 
+* OK to use shorthand notation for version ranges, e.g. "5.0+" rather
+  than "(OS 5.0 and higher)"

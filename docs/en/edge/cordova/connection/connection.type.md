@@ -30,7 +30,7 @@ connection state, and type of connection.
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - Tizen
 - Windows Phone 7 and 8
 - Windows 8
