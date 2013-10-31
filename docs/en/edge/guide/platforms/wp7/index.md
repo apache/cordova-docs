@@ -65,13 +65,13 @@ Studio 2012\Templates\ProjectTemplates\` directory.
 
 ## Building the Template
 
-__NOTE:__ this step may not be required.  Skip this step if the
-`lib\windows-phone` directory already contains a
-`CordovaWP7_x_x_x.zip` file.
+__NOTE:__ Skip this step if the `lib\windows-phone` directory already
+contains a `CordovaWP7_x_x_x.zip` file.
 
 To simplify development, Cordova bundles a script to build Visual
-Studio templates, which you can modify if necessary.  The steps below
-show how to generate it.
+Studio templates. These allow you to rapidly generate Cordova apps,
+and you can modify them if necessary.  The steps below show how to
+generate it.
 
 ### Run the Batch File to Create and Install the Templates
 
