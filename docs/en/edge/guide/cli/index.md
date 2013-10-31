@@ -178,7 +178,7 @@ an alternative to modify and compile the platform-specific code that
 Cordova generates within `platforms/ios`. You can use the same
 approach with other platforms' SDKs.
 
-## Test the App on an Emulator or Device
+## Test the App on an Emulator, Device, or Browser
 
 SDKs for mobile platforms often come bundled with emulators that
 execute a device image, so that you can launch the app from the home
@@ -215,6 +215,22 @@ Android's case, you would have to enable a __USB debugging__ option on
 the device, and perhaps add a USB driver depending on your development
 environmnent.
 See Platform Guides for details on each platform's requirements.
+
+Both of these options offer ideal ways to test parts of the app that
+rely on Cordova API features. If all you want to do is test its basic
+web programming, you also have the option to preview the app in your
+default web browser. Run a commands such as the following:
+
+        $ cordova serve android
+
+That launches a local web server to enable networking capabilities,
+which may otherwise be disabled when previewed locally using the
+`file://` protocol. It also displays any platform-specific
+customizations implemented as _merges_, described below. By default,
+the server runs on port 8000, but an additonal optional argument
+allows you to set it explicitly:
+
+        $ cordova serve android 8000 
 
 ## Add Plugin Features
 
@@ -363,7 +379,7 @@ contains the `plugin.xml` file:
 
         $ cordova plugin add ../my_plugin_dir
 
-## Customize Each Platform
+## Using _merges_ to Customize Each Platform
 
 While Cordova allows you to easily deploy an app for many different
 platforms, sometimes you need to add customizations.  In that case,
@@ -424,22 +440,10 @@ a local `info.txt` file.
 __NOTE:__ Currently, only details on iOS and Android platforms are
 available.
 
-## Updating the App
+## Updating Cordova and Your Project
 
-When a new version of Cordova is released, you should update your 
-`cordova` utility by following the Updating Cordova section below.
-Once you have updated Cordova, you can update the Cordova resources that
-your project uses by typing:
-
-        $ cordova platform update <PLATFORM>
-This will replace the old cordova resources with new ones for the
-specified PLATFORM. You should do this for every platform that you
-are developing for. 
-
-## Updating Cordova
-
-After installing the `cordova` utility, you can always
-update it to the latest version by running the following command:
+After installing the `cordova` utility, you can always update it to
+the latest version by running the following command:
 
         $ sudo npm update -g cordova
 
@@ -447,7 +451,7 @@ Use this syntax to install a specific version:
 
         $ sudo npm install -g cordova@3.1.0
 
-Run `cordova -v` to see the currently running version.  Run the `npm
+Run `cordova -v` to see which version is currently running.  Run the `npm
 info` command for a longer listing that includes the current version
 along with other available version numbers:
 
@@ -461,3 +465,15 @@ Where applicable, further details about upgrading to 3.0 are available
 in the Platform Guides.  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
+
+Cordova versions 3.0 and later may still require various changes to
+project-level directory structures and other dependencies. After you
+run the `npm` command above to update Cordova itself, you may need to
+ensure your project's resources conform to the latest version's
+requirements. Run a command such as the following for each platform
+you're building:
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.
+
