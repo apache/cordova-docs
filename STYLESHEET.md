@@ -66,6 +66,8 @@ editorial guidelines.
 * Use numbered lists for sequential procedures only, otherwise use
   bullet lists.
 
+* Do not prefix headings with numbers.
+
 * Punctuation at the end of bullet/number list items that consist of
   full sentences.
 
