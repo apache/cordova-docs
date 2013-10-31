@@ -215,6 +215,10 @@ editorial guidelines.
 * Avoid trailing (s) to denote optional plural. It's usually implicit.
   E.g., "return information about captured image files", not "file(s)"
 
+* Avoid the word "multiple" wherever possible.  It's one of those
+  unnecessary words up there with "myriad" or "plethora." What's wrong
+  with "several"?
+
 ## Punctuation
 
 * Initial Cap Words in Headings, Except for Short Prepositions or
