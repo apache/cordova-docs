@@ -44,6 +44,11 @@ editorial guidelines.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
+* Use italics for any in-line font changes within headings. This only
+  applies to font _changes_, not e.g. to standalone API members that
+  would ordinarily be monospaced within text.  Still, try to avoid any
+  font changes within headings, especially top-level headings.
+
 ## Structure
 
 * Flatten text wherever possible. Avoid nested lists. Avoid
