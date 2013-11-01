@@ -159,7 +159,7 @@ immensely.
 * Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so
   instead of "We see that..." try "Note that..." Readers want to focus
-  on the thing they're working on, not on you.
+  on the thing they're working on, not on you. <!--RE \bI\b-->
 
 * OK to refer to "you," the developer, but only sparingly, e.g., to
   avoid passive voice. Also do not use "your" as a substitute for "the."
