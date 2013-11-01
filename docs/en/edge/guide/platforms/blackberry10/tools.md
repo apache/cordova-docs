@@ -83,7 +83,7 @@ where
 
 - `--pin <device-pin>` specifies the PIN of the BlackBerry device,
   which identifies that device as a valid host for the debug
-  token. This argument is required only if you are creating a debug
+  token. This argument is required only when creating a debug
   token.
 
 ### Remove a target

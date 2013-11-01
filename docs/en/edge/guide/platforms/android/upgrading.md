@@ -28,12 +28,13 @@ version of the CLI.
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version - see The Command-line Interface 
+1. Update the `cordova` CLI version. See The Command-line Interface.
+
 2. Run `cordova platform update android`
         
 For projects not created with the cordova CLI, run:
 
-1. `bin/update <project_path>`
+        bin/update <project_path>
         
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 
@@ -80,7 +81,9 @@ For projects not created with the cordova CLI, run:
 
 2. Add `cordova-2.8.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+
+<!-- SS Eclipse -->
 
 4. Copy the new `cordova.js` into your project.
 
@@ -98,7 +101,7 @@ For projects not created with the cordova CLI, run:
 
 2. Add `cordova-2.7.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.7.0.js` into your project.
 
@@ -116,7 +119,7 @@ For projects not created with the cordova CLI, run:
 
 2. Add `cordova-2.6.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.6.0.js` into your project.
 
@@ -136,7 +139,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.5.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.5.0.js` into your project.
 
@@ -154,7 +157,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.4.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.4.0.js` into your project.
 
@@ -170,7 +173,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.3.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.3.0.js` into your project.
 
@@ -186,7 +189,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.2.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.2.0.js` into your project.
 
@@ -202,7 +205,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.1.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.1.0.js` into your project.
 
@@ -218,7 +221,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 2. Add `cordova-2.0.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-2.0.0.js` into your project.
 
@@ -239,7 +242,7 @@ a future release.
 
 2. Add `cordova-1.9.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.9.0.js` into your project.
 
@@ -261,7 +264,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.8.1.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.8.1.js` into your project.
 
@@ -275,7 +278,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.8.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.8.0.js` into your project.
 
@@ -289,7 +292,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.8.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.8.0.js` into your project.
 
@@ -303,7 +306,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.7.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.7.0.js` into your project.
 
@@ -315,7 +318,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.6.1.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.6.1.js` into your project.
 
@@ -327,7 +330,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.6.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.6.0.js` into your project.
 
@@ -343,7 +346,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `cordova-1.5.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `cordova-1.5.0.js` into your project.
 
@@ -359,7 +362,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `phonegap-1.4.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `phonegap-1.4.0.js` into your project.
 
@@ -375,7 +378,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `phonegap-1.3.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `phonegap-1.3.0.js` into your project.
 
@@ -391,7 +394,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `phonegap-1.2.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `phonegap-1.2.0.js` into your project.
 
@@ -407,7 +410,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `phonegap-1.1.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `phonegap-1.1.0.js` into your project.
 
@@ -421,7 +424,7 @@ maintainer and add this task to their bug tracker.
 
 2. Add `phonegap-1.0.0.jar` to the project's `libs` directory.
 
-3. If you are using Eclipse, please refresh your eclipse project and do a clean.
+3. If you use Eclipse, please refresh your Eclipse project and do a clean.
 
 4. Copy the new `phonegap-1.0.0.js` into your project.
 

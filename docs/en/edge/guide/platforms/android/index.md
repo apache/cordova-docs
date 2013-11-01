@@ -178,7 +178,7 @@ application to the emulator from the command line:
 
         $ cordova emulate android
 
-If instead you are working within Eclipse, right-click the project and
+If instead you work within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
 specify an AVD if none are already open.
 

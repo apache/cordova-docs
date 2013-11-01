@@ -36,7 +36,7 @@ For projects that were created with the cordova CLI:
         
 For projects not created with the cordova CLI, run:
 
-1. `bin\update <project_path>`
+        bin\update <project_path>
 
 ## Upgrade to the CLI (3.0.0) from 2.9.0 ##
 

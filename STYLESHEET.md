@@ -127,9 +127,9 @@ immensely.
   E.g., "the pause event fires when..."  rather than "the pause event
   is fired when..." Rule of thumb: banish verbs ending in "ed".
 
-* __Not Kidding, Use Present Tense__: Minimize verbs ending with
+- __Not Kidding, Use Present Tense__: Minimize verbs ending with
   "ing": "This is necessary to provide...", not "This is necessary for
-  providing..."
+  providing..." <!-- are\s-+[a-z]+ing\b -->
 
 * __Use Action Verbs__: Avoid weak verbs like "is" or "has." The
   sentence in the item above could stand improvement.

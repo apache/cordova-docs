@@ -176,7 +176,7 @@ all of them:
 If you use the CLI to build applications, you use the `plugin` command
 to enable device APIs. This does not modify the top-level `config.xml`
 file, so the `<feature>` element does not apply to your workflow. If
-you are working directly in an SDK and using the platform-specific
+you work directly in an SDK and using the platform-specific
 `config.xml` file as source, you use the `<feature>` tag to enable
 device-level APIs and external plugins. They typically appear in this
 form:
