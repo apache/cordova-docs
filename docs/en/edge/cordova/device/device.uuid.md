@@ -46,7 +46,7 @@ The details of how a UUID is generated are determined by the device manufacturer
     //
     // iPhone: (Paraphrased from the UIDevice Class documentation)
     //         Returns a string of hash values created from multiple hardware identifies.
-    //         It is guaranteed to be unique for every device and cannot be tied
+    //         It is guaranteed to be unique for every device and can't be tied
     //         to the user account.
     // Windows Phone 7 : Returns a hash of device+current user,
     // if the user is not defined, a guid is generated and will persist until the app is uninstalled

@@ -209,6 +209,8 @@ immensely.
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
 
+- Prefer "can't" over "cannot"; sounds more relaxed. <!--RE cannot-->
+
 * Subdirectory, not sub-directory
 
 * 'Press' a button on the screen; 'type' a key; do not 'hit' either.
