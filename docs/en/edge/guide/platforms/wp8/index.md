@@ -138,7 +138,7 @@ start debugging, or type __F5__.
 
 Before testing your application on a device, the device must be
 registered. Consult
-[Microsoft's documentation][http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx]
+[Microsoft's documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx)
 for details on how to deploy and test on Windows Phone 8. These are
 the basic steps:
 

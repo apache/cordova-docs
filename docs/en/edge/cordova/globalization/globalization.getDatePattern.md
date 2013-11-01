@@ -29,7 +29,7 @@ client's user preferences.
 Returns the pattern to the `successCallback`. The object passed in as
 a parameter contains the following properties:
 
-- __pattern__: The date and time pattern to format and parse dates.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __pattern__: The date and time pattern to format and parse dates. The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). _(String)_
 
 - __timezone__: The abbreviated name of the time zone on the client. _(String)_
 
