@@ -83,9 +83,9 @@ immensely.
   scannable items.
 
 * __Procedure Lists__: Don't break out separate procedure items for
-  (1) do this, followed by (2) this describes what just
-  happened. Prefer (1) Do this. It does so-and-so, which you might see
-  in some result. (2) Do that...
+  (1) do this, followed by (2) this describes what just happened.
+  Prefer (1) Do this. It does so-and-so, which you might see in some
+  result. (2) Do that...
 
 * __Topic/Comment Lists__: For bullet lists that provide short topics
   followed by comments, bold the topic, then merge the comment on the
@@ -112,6 +112,64 @@ immensely.
 * __Platform-Specific Notes__ __ios:__ ???
 -->
 
+## Language and Tone
+
+* __Not So Imperitive__: As a rule of thumb, avoid the word "must" and
+  unnecessarily imperative statements in general.  E.g., instead of
+  "Commands must be run from a cmd or powershell prompt," try "You can
+  run commands either from a cmd or powershell prompt."
+
+* __Avoid the Willies__: Use present tense. "This happens," not "this
+  will happen." Future tense comes off as a tenuous prediction. Rule
+  of thumb: avoid the word "will."
+
+* __Avoid Passive Voice__: Past-tense passive voice is to be avoided.
+  E.g., "the pause event fires when..."  rather than "the pause event
+  is fired when..." Rule of thumb: banish verbs ending in "ed".
+
+* __Not Kidding, Use Present Tense__: Minimize verbs ending with
+  "ing": "This is necessary to provide...", not "This is necessary for
+  providing..."
+
+* __Use Action Verbs__: Avoid weak verbs like "is" or "has." The
+  sentence in the item above could stand improvement.
+
+* __Noun Phrase Jargon__: Avoid noun modification concatenation
+  somnambulation obfuscation.  Use your judgement and ask yourself if
+  readers might not actually know what some noun phrase means. If so,
+  explain the actual concept it represents, in this case: "Avoid
+  stringing nouns together into long phrases that come off as
+  impenetrable shop talk that puts everybody to sleep."
+
+* __Use Possessives:__ Possessives sound more familiar and colloquial:
+  "the device's home screen" rather than clumsier: "the home screen of
+  the device"
+
+* __The Brothers Karmazov:__ 'The FOO file', not 'the file FOO', no
+  matter how long FOO's path is.
+
+* __Serial comma:__ This, that, and the other.
+
+* Do not drop articles: "In the Bada IDE", not "In Bada IDE"
+
+* Do not start a sentence with a lowercase member name. E.g., "Does
+  not support `filter`" rather than "`filter` is not supported"
+
+* Do not refer to "I," the author of the documentation, as in "What I
+  am going to show you now." Likewise avoid "we" and "let's," so
+  instead of "We see that..." try "Note that..." Readers want to focus
+  on the thing they're working on, not on you.
+
+* OK to refer to "you," the developer, but only sparingly, e.g., to
+  avoid passive voice. Also do not use "your" as a substitute for "the."
+
+* Avoid em dash clauses--they unnecessarily break up the text--and
+  parenthical statements (which can also be distracting). If you do
+  include either, remove spaces around the dashes (punctuate fragments
+  outside of paren's). (Punctuate full sentences inside of parens.)
+
+* This Guide or section, not this document, page, or anything else
+
 ## In-line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
@@ -134,62 +192,8 @@ immensely.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
-## Language and Tone
-
-* __Not So Imperitive__: As a rule of thumb, avoid the word "must" and
-  any unnecessarily imperative statements in general.  E.g., instead
-  of "Commands must be run from a cmd or powershell prompt," try "You
-  can run commands either from a cmd or powershell prompt."
-
-* __Avoid the Willies__: Use present tense. "This happens," not "this
-  will happen." Future tense comes off as a tenuous prediction. Rule
-  of thumb: avoid the word "will."
-
-* Past-tense passive voice is to be avoided. E.g., "the pause event
-  fires when..."  rather than "the pause event is fired when..." Rule
-  of thumb: banish verbs ending in "ed".
-
-* __Action Verbs__: Avoid weak verbs like "is" or "has."
-
-* Avoid noun modification concatenation somnambulation obfuscation.
-  Use your judgement and ask yourself if readers might not actually
-  know what some noun phrase means. If so, explain the actual concept
-  it represents, in this case: "Avoid stringing nouns together into
-  long phrases that come off as impenetrable shop talk that puts
-  everybody to sleep."
-
-* Minimize verbs ending with "ing": "This is necessary to provide...",
-  not "This is necessary for providing..."
-
-* Do not drop articles: "In the Bada IDE", not "In Bada IDE"
-
-* Possessives are OK: "the device's home screen" rather than clumsier:
-  "the home screen of the device"
-
-* 'The FOO file', not 'the file FOO', no matter how long FOO's
-  filename is.
-
-* Hyphenate adjective phrases: "command-line tools", but not when it's
-  a noun, as in "the command line."
-
-* Use serial comma: this, that, and the other.
-
-* Do not start a sentence with a lowercase member name.
-
-* Do not refer to "I," the author of the documentation, as in "What I
-  am going to show you now." Likewise avoid "we" and "let's," so
-  instead of "We see that..." try "Note that..." Readers want to focus
-  on the thing they're working on, not on you.
-
-* OK to refer to "you," the developer, but only sparingly, e.g., to
-  avoid passive voice. Also do not use "your" as a substitute for "the."
-
-* Avoid em dash clauses--they unnecessarily break up the text--and
-  parenthical statements (which can also be distracting). If you do
-  include either, remove spaces around the dashes (punctuate fragments
-  outside of paren's). (Punctuate full sentences inside of parens.)
-
-* This Guide or section, not this document, page, or anything else
+* Use the markup system's shorthand characters rather than embedded
+  HTML `<em>...</em>` or `<code>...</code>`.
 
 ## Usage
 
@@ -274,6 +278,15 @@ immensely.
   sequences of nested dialog boxes.
 
 ## Common Grammatical Errors
+
+* __Hyphenate Adjective Phrases:__ E.g., "command-line tools", but not
+  when it's a noun, as in "the command line."
+
+* __It's a Crazy Language, but its Rules Eventually Make Sense__:
+  Hyphenate "it's" only for "it is," not for possessive.
+
+* __Plural Possessives__: E.g., Obtain a user's permission, but
+  collectively, get users' permission.
 
 * Do not use use apostrophes for plural, so "...manages core APIs,"
   not api's or API's. Only use apostrophes for possessives, e.g. "the
