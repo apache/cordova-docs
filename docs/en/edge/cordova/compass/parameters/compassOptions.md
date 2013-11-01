@@ -27,15 +27,14 @@ An optional parameter to customize the retrieval of the compass.
 
 - __filter__: The change in degrees required to initiate a watchHeading success callback. _(Number)_
 
-Android Quirks
-______________
+## Android Quirks
 
-- `filter` is not supported.
+- No support for `filter`.
 
 ## Tizen Quirks
 
-- `filter` is not supported.
+- No support for `filter`.
 
 ## Windows Phone 7 and 8 Quirks
 
-- `filter` is not supported.
+- No support for `filter`.
