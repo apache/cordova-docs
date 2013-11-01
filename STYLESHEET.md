@@ -35,6 +35,83 @@ workflows.  It may not be obvious, but if you first ask yourself what
 purpose the doc you're editing serves, it improves its quality
 immensely.
 
+## Structure and Flow
+
+* __Valid Heading Structure__: One title only (an A-head) at the top
+  of the page.  No jumps to C-heads. Do not follow a heading with a
+  subheading with no intervening introductory text.
+
+* __Flatten Content__: Use B-heads to divide each page's content. Please
+  avoid C-heads; readers tend to lose context once content gets that
+  nested.
+
+* __Provide Context__: Each page of expository doc should start with a
+  short paragraph summarizing the subject matter, and serving as
+  necessary connective tissue.  Link to other related & prerequisite
+  topics, especially for likely workflow scenarios.  E.g., Plugman doc
+  is most appropriate for platform-specific shell-tool workflow, not
+  for CLI users even though it underlies it invisibly.
+
+* __Consistent Headings__: Try to match verb tense in headings. That
+  is, if one is task-based and reads "Adding a Platform," the other
+  should be "Developing for Android" rather than "Android Development"
+
+* __Heading Content__: In reference doc, preserve case in titles and
+  headings.  In guide doc: Initial Cap Words in Headings, Except for
+  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens.
+  No punctuation at the end of a heading; avoid punctuation within
+  headings.  Do not prefix headings with numbers.
+
+* __Heading Fonts__: In reference doc, do not apply font formatting to
+  standalone member names such as compass.getCurrentHeading. Minimize
+  font changes within headings. If necessary, only apply italic.
+
+* __Listings__: Use numbered lists for sequential procedures or ranked
+  content only, otherwise use bullet lists.  Precede lists with text
+  that introduces them, preferably ending with a colon (:).  Do not
+  allow single-item lists.  Use bullet lists only to indicate a clear
+  set of choices that you first introduce, not as a substitute for
+  regular paragraphs.  Avoid nested lists, for the same reason you
+  avoid C-heads.
+
+* __Punctuating and Formatting Lists__: Append periods to bullet and
+  number list items that consist of full sentences. No periods when
+  bullet items are sentence fragments, except in bullet lists that
+  need internal consistency. To improve readability, add vertical
+  space around top-level bullet/numbered list items that consist of
+  full sentences. OK to vertically collapse lists of short, easily
+  scannable items.
+
+* __Procedure Lists__: Don't break out separate procedure items for
+  (1) do this, followed by (2) this describes what just
+  happened. Prefer (1) Do this. It does so-and-so, which you might see
+  in some result. (2) Do that...
+
+* __Topic/Comment Lists__: For bullet lists that provide short topics
+  followed by comments, bold the topic, then merge the comment on the
+  same line, separated with a colon unless the topic features trailing
+  punctuation. This list item provides an example. Bolded Topic Text
+  Follows Same Init-Cap Rule as Headings.
+
+* __Notes__: Bold & all-cap __NOTE:__, with colon inside, always at
+  the start of a paragraph, never mid-paragraph. Do not incorporate
+  this font change into a sentence as in "__Note__ that..." but OK to
+  start a sentence: "Note that..." when the information is less
+  consequential. Do not apply bullet/number list formatting.
+
+* __Warnings/Tips__: As an alternative to __NOTE:__, use __WARNING:__
+  for serious matters, or __TIP:__ to pass along useful tricks or
+  context.
+
+* __Minimize Notes__: Avoid too many notes and warnings, as it implies
+  a haphazard development environment with too many variable factors
+  that divert the reader's attention. Try to clarify variations on a
+  procedure within the text.
+
+<!--
+* __Platform-Specific Notes__ __ios:__ ???
+-->
+
 ## In-line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
@@ -57,60 +134,22 @@ immensely.
 
 * Do not combine in-line formatting such as _`monospace italic`_.
 
-* Use italics for any in-line font changes within headings. This only
-  applies to font _changes_, not e.g. to standalone API members that
-  would ordinarily be monospaced within text.  Still, try to avoid any
-  font changes within headings, especially top-level headings.
-
-## Structure
-
-* Flatten text wherever possible. Avoid nested lists. Avoid
-  third-level subheadings.
-
-* Only one top-level heading allowed: the page's title.
-
-* No punctuation at the end of a heading; avoid punctuation within
-  headings
-
-* Do not follow a heading with a subheading or a list with no
-  intervening introductory text.  In particular, use bullet lists only
-  to indicate a clear set of choices that you introduce, not as a
-  substitute for regular body text.
-
-* Try to match verb tense in headings. That is, if one is task-based
-  and reads "Adding a Platform," the other should be "Developing for
-  Android" rather than "Android Development"
-
-* Avoid too many NOTEs, as it implies too many variable factors that
-  can go wrong. Try to clarify variations on a procedure within the
-  text.
-
-* Use numbered lists for sequential procedures only, otherwise use
-  bullet lists.
-
-* Single-item lists are silly. Do not use them.
-
-* Do not prefix headings with numbers.
-
-* Punctuation at the end of bullet/number list items that consist of
-  full sentences.
-
-* To improve readability, add vertical space around top-level
-  bullet/numbered list items that consist of full sentences. OK to
-  collapse lists of short, easily scannable items.
-
 ## Language and Tone
 
-* Use present tense. "This happens," not "this will happen." Future
-  tense off as a tenuous prediction. Rule of thumb: avoid the word
-  "will." Tech writers derisively refer to this problem as "the
-  willies."
+* __Not So Imperitive__: As a rule of thumb, avoid the word "must" and
+  any unnecessarily imperative statements in general.  E.g., instead
+  of "Commands must be run from a cmd or powershell prompt," try "You
+  can run commands either from a cmd or powershell prompt."
+
+* __Avoid the Willies__: Use present tense. "This happens," not "this
+  will happen." Future tense comes off as a tenuous prediction. Rule
+  of thumb: avoid the word "will."
 
 * Past-tense passive voice is to be avoided. E.g., "the pause event
   fires when..."  rather than "the pause event is fired when..." Rule
   of thumb: banish verbs ending in "ed".
 
-* Prefer action verbs over weak verbs like "is" or "has."
+* __Action Verbs__: Avoid weak verbs like "is" or "has."
 
 * Avoid noun modification concatenation somnambulation obfuscation.
   Use your judgement and ask yourself if readers might not actually
@@ -144,11 +183,6 @@ immensely.
 
 * OK to refer to "you," the developer, but only sparingly, e.g., to
   avoid passive voice. Also do not use "your" as a substitute for "the."
-
-* Avoid unnecessarily imperative statements, especially using the word
-  "must." E.g., instead of "Commands must be run from a cmd or
-  powershell prompt," try "You can run commands either from a cmd or
-  powershell prompt."
 
 * Avoid em dash clauses--they unnecessarily break up the text--and
   parenthical statements (which can also be distracting). If you do
@@ -234,18 +268,10 @@ immensely.
 
 ## Punctuation
 
-* Initial Cap Words in Headings, Except for Short Prepositions or
-  Conjunctions
-
-* Append colon to text that introduces a code snippet, image, or
-  procedure listing.
+* Append colon to text that introduces a code snippet or image.
 
 * Use `&amp;rarr;` arrow entities (&rarr;) for hierarchical menus or
   sequences of nested dialog boxes.
-
-* Add periods at end of bullet items when they consist of complete
-  sentences. No periods when bullets are sentence fragments. However,
-  bullet lists should be internally consistent.
 
 ## Common Grammatical Errors
 
@@ -295,24 +321,6 @@ immensely.
   scheme-qualified URLs.
 
 ## Miscellaneous
-
-* For procedure lists, don't break out separate items for (1) do this,
-  followed by (2) this describes what just happened. Prefer (1) Do
-  this. It does so-and-so, which you might see in some result. (2) Do
-  that...
-
-* Bold & all-cap __NOTE:__, with colon inside, always at the start of
-  a paragraph, never mid-paragraph. Do not incorporate font change
-  into sentences as in "__Note__ that..." but OK to start a sentence:
-  "Note that..." when the information is less consequential.
-
-* As an alternative to __NOTE:__, use __WARNING:__ for serious
-  matters, or __TIP:__ to pass along useful tricks or context.
-
-* __Topic/comment lists__: For bullet lists that provide short topics
-  followed by comments, bold the topic, then merge the comment on the
-  same line, separated with a colon unless the topic features trailing
-  punctuation. The text you are reading provides an example.
 
 * In body text, no ( extra space inside parens ). OK to increase
   readability of code.
