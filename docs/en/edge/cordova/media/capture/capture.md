@@ -21,13 +21,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 > Provides access to the device's audio, image, and video capture capabilities.
 
-__Important privacy note:__ Collection and use of images, video, or
+__WARNING:__ Collection and use of images, video, or
 audio from the device's camera or microphone raises important privacy
 issues.  Your app's privacy policy should discuss how the app uses
 such sensors and whether the data recorded is shared with any other
 parties.  In addition, if the app's use of the camera or microphone is
 not apparent in the user interface, you should provide a just-in-time
-notice prior to your app accessing the camera or microphone (if the
+notice before the app accesses the camera or microphone (if the
 device operating system doesn't do so already). That notice should
 provide the same information noted above, as well as obtaining the
 user's permission (e.g., by presenting choices for __OK__ and __No

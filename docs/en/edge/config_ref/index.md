@@ -98,7 +98,7 @@ platforms:
 - The `<description>` and `<author>` elements specify metadata and
   contact information that may appear within app-store listings.
 
-- The optional `<content>` element defines your application's starting
+- The optional `<content>` element defines the app's starting
   page in the top-level web assets directory. The default value is
   `index.html`, which customarily appears in a project's top-level
   `www` directory.

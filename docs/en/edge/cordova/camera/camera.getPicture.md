@@ -93,7 +93,7 @@ displays:
 
 ## Windows Phone 7 Quirks
 
-Invoking the native camera application while your device is connected
+Invoking the native camera application while the device is connected
 via Zune does not work, and triggers an error callback.
 
 ## Tizen Quirks
