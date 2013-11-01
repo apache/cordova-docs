@@ -35,16 +35,20 @@ For non-CLI projects, run:
 
         bin/update path/to/project
         
-For CLI projects, run: 
+For CLI projects:
 
-        1. Update the `cordova` CLI version - see The Command-line Interface 
-        2. Run `cordova platform update ios`
+1. Update the `cordova` CLI version. See The Command-line Interface.
+
+2. Run `cordova platform update ios`
         
 ### iOS 7 Issues
 
-	1. Remove the values "width=device-width, height=device-height" from your meta tag 
-	"viewport" attribute in your index.html file, see https://issues.apache.org/jira/browse/CB-4323
-	2. Update your media, media-capture and splashscreen core plugins for iOS 7 support
+1. Remove `width=device-width, height=device-height` from the
+   `index.html` file's `viewport` `meta` tag. (See [the relevent
+   bug](https://issues.apache.org/jira/browse/CB-4323).)
+
+2. Update your media, media-capture and splashscreen core plugins for
+iOS 7 support
 	
 ### Xcode 5 Issues	
 
@@ -249,7 +253,7 @@ Manage Plugins.
 
 11. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-12. Add AssetsLibrary.framework as a resource to your project.  (Go [here](https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) for instructions on how to do so.).
+12. Add AssetsLibrary.framework as a resource to your project.  (See [Apple's documentation](https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) for instructions on how to do so.).
 
 ## Upgrading 2.2.0 projects to 2.3.0 ##
 
