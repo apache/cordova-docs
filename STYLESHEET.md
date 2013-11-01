@@ -72,7 +72,8 @@ immensely.
   allow single-item lists.  Use bullet lists only to indicate a clear
   set of choices that you first introduce, not as a substitute for
   regular paragraphs.  Avoid nested lists, for the same reason you
-  avoid C-heads.
+  avoid C-heads. Do not nest top-level lists for additional
+  indentation.
 
 * __Punctuating and Formatting Lists__: Append periods to bullet and
   number list items that consist of full sentences. No periods when
@@ -202,7 +203,8 @@ immensely.
 
 * "User" may refer to the end user, not to the application's
   developer. Refer to plural "users" as "they" to avoid singular
-  he/she pronoun problems.
+  he/she pronoun problems. Also avoid "his" and "her".
+  <!--RE\bs?he\b--> <!--RE\b(his|her)\b-->
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
