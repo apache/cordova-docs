@@ -17,10 +17,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Style Sheet
+# Editorial Style Sheet
 
-Before adding or editing documentation, please review these basic
-editorial guidelines.
+Developers contributing to Cordova are already familiar with coding
+best practices.  What you'll find here are best practices when writing
+tech doc addressed to Cordova's end users.
+
+There are two basic kinds of tech doc: reference content and
+expository "guide" content. Reference doc tends to be self-contained,
+descriptive, and scoped without context: e.g., detailing an API
+interface and its members.  Guide content is prescriptive, linear, and
+part of a larger story. How do you typically use the API (or
+whatever), what do you need to know first, what are the limits to what
+you can use it for, etc. Guide content is oriented more around tasks,
+common use cases, or especially now in Cordova's case, alternative
+workflows.  It may not be obvious, but if you first ask yourself what
+purpose the doc you're editing serves, it improves its quality
+immensely.
 
 ## In-line Font Formatting
 
