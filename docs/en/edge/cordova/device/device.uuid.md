@@ -91,7 +91,7 @@ The details of how a UUID is generated are determined by the device manufacturer
 The `uuid` on iOS is not unique to a device, but varies for each
 application, for each installation.  It changes if you delete and
 re-install the app, and possibly also when you upgrade iOS, or even
-upgrade your app per version (apparent in iOS 5.1). The `uuid` is not
+upgrade the app per version (apparent in iOS 5.1). The `uuid` is not
 a reliable value.
 
 ## Windows Phone 7 and 8 Quirks

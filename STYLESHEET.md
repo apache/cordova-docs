@@ -152,17 +152,18 @@ immensely.
 
 * Do not drop articles: "In the Bada IDE", not "In Bada IDE"
 
-* Do not start a sentence with a lowercase member name. E.g., "Does
+- Do not start a sentence with a lowercase member name. E.g., "Does
   not support `filter`" rather than "`filter` is not supported"
   <!--RE \. `-->
 
-* Do not refer to "I," the author of the documentation, as in "What I
+- Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so
   instead of "We see that..." try "Note that..." Readers want to focus
   on the thing they're working on, not on you. <!--RE \bI\b-->
 
-* OK to refer to "you," the developer, but only sparingly, e.g., to
-  avoid passive voice. Also do not use "your" as a substitute for "the."
+- OK to refer to "you," the developer, but only sparingly, e.g., to
+  avoid passive voice. Also do not use "your" as a routine substitute
+  for "the" or "a" when referring to a noun.
 
 * Avoid em dash clauses--they unnecessarily break up the text--and
   parenthical statements (which can also be distracting). If you do

@@ -30,9 +30,9 @@ device APIs have loaded and are ready to access.
 
 Cordova consists of two code bases: native and JavaScript. While the
 native code loads, a custom loading image displays. However,
-JavaScript only loads once the DOM loads. This means your web
-application may potentially call a Cordova JavaScript function before
-the corresponding native code is available.
+JavaScript only loads once the DOM loads. This means the web app may
+potentially call a Cordova JavaScript function before the
+corresponding native code becomes available.
 
 The `deviceready` event fires once Cordova has fully loaded. Once the
 event fires, you can safely make calls to Cordova APIs.  Applications
