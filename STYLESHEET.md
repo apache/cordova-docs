@@ -154,6 +154,7 @@ immensely.
 
 * Do not start a sentence with a lowercase member name. E.g., "Does
   not support `filter`" rather than "`filter` is not supported"
+  <!--RE \. `-->
 
 * Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so

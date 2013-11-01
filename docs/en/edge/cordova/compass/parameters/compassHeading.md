@@ -37,12 +37,12 @@ The `CompassHeading` object is returned to the `compassSuccess` callback functio
 
 ## Android Quirks
 
-- `trueHeading` is not supported, but reports the same value as `magneticHeading`
+- The `trueHeading` property is not supported, but reports the same value as `magneticHeading`.
 
-- `headingAccuracy` is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
+- The `headingAccuracy` property is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
 
 ## iOS Quirks
 
-- `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+- The `trueHeading` property is only returned for location services enabled via `navigator.geolocation.watchLocation()`.
 
-- For iOS 4 devices and above, heading factors in the device's current orientation, not in reference to its absolute position, for apps that supports that orientation.
+- For iOS 4 devices and above, heading factors in the device's current orientation, and does not reference its absolute position, for apps that supports that orientation.

@@ -155,12 +155,10 @@ the target script. The deploy script will deploy the most recent build of your a
 
     <path-to-project>/cordova/run <target>
 
-where
-
-- `<target> `specifies the name of a previously added target. If
-  `<target> `is a device, then that device must be connected to your
-  computer by USB connection or be connected to the same Wi-Fi network
-  as your computer.
+where `<target> `specifies the name of a previously added target. If
+`<target> `is a device, then that device must be connected to your
+computer by USB connection or be connected to the same Wi-Fi network
+as your computer.
 
 ## plugin
 
