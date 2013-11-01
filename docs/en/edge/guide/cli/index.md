@@ -434,7 +434,7 @@ your project uses by typing:
         $ cordova platform update <PLATFORM>
 This will replace the old cordova resources with new ones for the
 specified PLATFORM. You should do this for every platform that you
-are developing for. 
+develop for. 
 
 ## Updating Cordova
 
