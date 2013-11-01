@@ -66,5 +66,5 @@ This API is provided by the underlying WebView.
 
 ## Plugin-Based Options
 
-* Most notably - The File API.
+* Most notably, the File API.
 * More storage options exist through [Cordova plugins](http://plugins.cordova.io/).

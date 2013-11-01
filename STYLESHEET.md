@@ -331,8 +331,8 @@ immensely.
 
 ## Links
 
-* Use titles in link text, never 'click here'. Consider using the
-  link's domain name as a substitute.
+- Use titles in link text, never 'click here'. Consider using the
+  link's domain name as a substitute. <!--RE here]-->
 
 - Domain names are OK as a link's display text, but not full
   scheme-qualified URLs. No bare URLs in text outside of code.
