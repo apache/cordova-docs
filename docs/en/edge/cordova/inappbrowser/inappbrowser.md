@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
 __NOTE:__ The InAppBrowser window behaves like a standard web browser,
-and cannot access Cordova APIs.
+and can't access Cordova APIs.
 
 ## Description
 

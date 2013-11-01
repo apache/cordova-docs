@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## BlackBerry WebWorks Quirks
 
-- The __duration__ parameter is not supported, so the length of recordings cannot be limited programmatically.
+- The __duration__ parameter is not supported, so the length of recordings can't be limited programmatically.
 
 ## iOS Quirks
 

@@ -366,7 +366,7 @@ It supports the following attributes:
 
 * `src` (required):
   Location of the file relative to `plugin.xml`.  If the `src` file
-  cannot be found, plugman stops and reverses the installation, issues
+  can't be found, plugman stops and reverses the installation, issues
   a notification about the problem, and exits with a non-zero code.
 
 * `target-dir`:
@@ -493,7 +493,7 @@ Supported attributes:
 
 * `src` (required):
   The location of the file relative to `plugin.xml`.
-  If `src` cannot be found, plugman stops and reverses the
+  If `src` can't be found, plugman stops and reverses the
   installation, issues a warning about the problem, and exits with a
   non-zero code.
 

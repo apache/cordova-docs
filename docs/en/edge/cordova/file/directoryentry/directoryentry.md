@@ -373,7 +373,7 @@ __Quick Example__
 ## removeRecursively
 
 Deletes a directory and all of its contents.  In the event of an error (such as trying to delete
-a directory containing a file that cannot be removed), some of the contents of the directory may
+a directory containing a file that can't be removed), some of the contents of the directory may
 be deleted.   An error results if the app attempts to:
 
 - delete the root directory of a filesystem.
