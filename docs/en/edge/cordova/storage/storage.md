@@ -21,9 +21,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 > An overview of storage options for Cordova.
 
-There are several storage APIs that are available to Cordova applications. For
-a more complete overview and examples, see
-[http://www.html5rocks.com/en/features/storage](http://www.html5rocks.com/en/features/storage).
+There are several storage APIs that are available to Cordova applications. 
+See
+[html5rocks](http://www.html5rocks.com/en/features/storage).
+for a more complete overview and examples.
 
 ## LocalStorage
 

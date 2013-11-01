@@ -29,7 +29,7 @@ to the client's user preferences and ISO 4217 currency code.
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object should contain the following properties:
 
-- __pattern__: The currency pattern to format and parse currency values.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __pattern__: The currency pattern to format and parse currency values.  The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). _(String)_
 
 - __code__: The ISO 4217 currency code for the pattern. _(String)_
 

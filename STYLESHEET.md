@@ -334,8 +334,9 @@ immensely.
 * Use titles in link text, never 'click here'. Consider using the
   link's domain name as a substitute.
 
-* Domain names are OK as a link's display text, but not full
-  scheme-qualified URLs.
+- Domain names are OK as a link's display text, but not full
+  scheme-qualified URLs. No bare URLs in text outside of code.
+  <!--RE \[http -->
 
 ## Miscellaneous
 
