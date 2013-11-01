@@ -421,7 +421,7 @@ each platform, and versions of the CLI and `node.js`:
 It both presents the information to screen and captures the output in
 a local `info.txt` file.
 
-__NOTE:__ Currently, only details on iOS and Android platforms are
+__NOTE__: Currently, only details on iOS and Android platforms are
 available.
 
 ## Updating Cordova and Your Project

@@ -21,7 +21,7 @@
 
 > The `camera` object provides access to the device's default camera application.
 
-__WARNING:__ Collection and use of images from a
+__WARNING__: Collection and use of images from a
 device's camera raises important privacy issues.  Your app's privacy
 policy should discuss how the app uses the camera and whether the
 images recorded are shared with any other parties.  In addition, if

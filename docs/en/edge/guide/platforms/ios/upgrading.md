@@ -25,7 +25,7 @@ created with an older set of command-line tools that precede the
 `cordova` CLI utility. See The Command-line Interface for information
 how to update the version of the CLI.
 
-__NOTE:__ Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
+__NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
 Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
 iOS 7 SDK is not required yet, but this may change quickly.
 
@@ -97,7 +97,7 @@ iOS 7 support
 
 7. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-__NOTE:__ Starting with Cordova 3.0.0, projects do not come with any
+__NOTE__: Starting with Cordova 3.0.0, projects do not come with any
 plugins, you will have to install the ones you require for your
 project using the `plugman` command-line utility. See Using Plugman to
 Manage Plugins.
@@ -315,7 +315,7 @@ You can get this by accessing the `userAgent` property off the main view-control
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-__NOTE:__ In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
+__NOTE__: In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
 
 ## Upgrading 2.0.0 projects to 2.1.0 ##
 
@@ -443,7 +443,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 36. Select the __Run__ button.
 
-__NOTE:__ If your project is not working as expected in the Simulator, please take a note of any errors in the console log in Xcode for clues.
+__NOTE__: If your project is not working as expected in the Simulator, please take a note of any errors in the console log in Xcode for clues.
 
 ## Upgrading 1.8.x projects to 1.9.0 ##
 
@@ -455,7 +455,7 @@ __NOTE:__ If your project is not working as expected in the Simulator, please ta
 
 4. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.9.0.js` file.
 
-__NOTE:__ 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
+__NOTE__: 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
 `false` to disable it, especially on iOS 6. See [Release Notes: Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
 ## Upgrading 1.7.0 projects to 1.8.x ##

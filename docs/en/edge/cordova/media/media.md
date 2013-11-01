@@ -23,7 +23,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
-__NOTE:__ The current implementation does not adhere to a W3C
+__NOTE__: The current implementation does not adhere to a W3C
 specification for media capture, and is provided for convenience only.
 A future implementation will adhere to the latest W3C specification
 and may deprecate the current APIs.

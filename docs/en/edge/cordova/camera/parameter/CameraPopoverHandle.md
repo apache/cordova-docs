@@ -33,7 +33,7 @@ A handle to the popover dialog created by `camera.getPicture`.
 
 Set the position of the popover.
 
-__Parameters:__
+__Parameters__:
 
 - `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
 

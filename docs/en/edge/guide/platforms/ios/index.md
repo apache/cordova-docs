@@ -148,7 +148,7 @@ To deploy to the device:
 
 ## Common Problems
 
-__Deprecation Warnings:__ When an application programming interface
+__Deprecation Warnings__: When an application programming interface
 (API) is changed or replaced by another API, it is marked as
 _deprecated_.  The API still works in the near term, but is eventually
 removed.  Some of these deprecated interfaces are reflected in Apache

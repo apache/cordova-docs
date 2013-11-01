@@ -43,7 +43,7 @@ name.  Here is the syntax for both Mac and Windows:
     $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
 
-__NOTE:__ The BlackBerry platform ignores the package name placeholder
+__NOTE__: The BlackBerry platform ignores the package name placeholder
 (`com.example.project_name`), but it's still required for use by
 cross-platform tools.
 

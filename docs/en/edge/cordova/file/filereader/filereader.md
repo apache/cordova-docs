@@ -39,7 +39,7 @@ The `FileReader` allows basic access to a file.
 
 - __onloadend__: Called when the request has completed (either in success or failure).  _(Function)_
 
-__NOTE:__ The following porperty is not supported:
+__NOTE__: The following porperty is not supported:
 
 - __onprogress__: Called while reading the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
 
@@ -72,7 +72,7 @@ string.  Event listeners receive the `loadstart`, `progress`, `load`,
 
 ## readAsDataURL
 
-__Parameters:__
+__Parameters__:
 
 - __file__: the file object to read.
 
@@ -95,7 +95,7 @@ __Parameters:__
 
 ## readAsText
 
-__Parameters:__
+__Parameters__:
 
 - __file__: the file object to read.
 
@@ -207,7 +207,7 @@ __Parameters:__
 
 Currently supported on iOS and Android only.
 
-__Parameters:__
+__Parameters__:
 
 - __file__: the file object to read.
 
@@ -232,7 +232,7 @@ __Parameters:__
 
 Currently supported on iOS and Android only.
 
-__Parameters:__
+__Parameters__:
 
 - __file__:  the file object to read.
 

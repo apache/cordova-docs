@@ -19,7 +19,7 @@
 
 # device.name
 
-__WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+__WARNING__: `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
 Get the device's model name.
 
