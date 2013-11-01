@@ -31,7 +31,8 @@ projects.
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version - see The Command-line Interface 
+1. Update the `cordova` CLI version. See The Command-line Interface. 
+
 2. Run `cordova platform update wp8` (or `wp7`, per the platforms you added to your project).
         
 For projects not created with the cordova CLI, run:
@@ -252,7 +253,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.9.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -269,7 +271,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.8.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -286,7 +289,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.7.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -303,7 +307,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.6.1.js` into your project. (Be sure it is marked as Content.)
 
@@ -320,7 +325,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.6.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -337,7 +343,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.5.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -354,7 +361,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.4.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -371,7 +379,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.3.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -388,7 +397,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.2.0.js` into your project. (Be sure it is marked as Content.)
 
@@ -405,7 +415,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ you can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE:__ you can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.1.0.js` into your project. (Be sure it is marked as Content.)
 
