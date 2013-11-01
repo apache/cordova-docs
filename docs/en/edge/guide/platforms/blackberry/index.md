@@ -170,7 +170,7 @@ following to install an application to the home screen:
 If you are prompted whether a device is connected to your computer,
 answer no.
 
-__NOTE:__ On BlackBerry OS 5, the application is installed in the
+__NOTE__: On BlackBerry OS 5, the application is installed in the
 `Downloads` directory.
 
 ## Deploy to Device
@@ -199,7 +199,7 @@ would to view the app in an emulator:
 If you are prompted whether a device is connected to your computer,
 answer yes.
 
-__NOTE:__ On BlackBerry OS 5, the application is installed in the
+__NOTE__: On BlackBerry OS 5, the application is installed in the
 `Downloads` directory.
 
 ## Additional Information

@@ -66,7 +66,7 @@ created, stored, or removed from the device contacts database.
 Contacts can also be retrieved (individually or in bulk) from the
 database by invoking the `contacts.find` method.
 
-__NOTE:__ Not all of the contact fields listed above are supported on
+__NOTE__: Not all of the contact fields listed above are supported on
 every device platform.  Please check each platform's _Quirks_ section
 for details.
 

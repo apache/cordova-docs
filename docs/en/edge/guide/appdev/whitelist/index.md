@@ -65,7 +65,7 @@ The following examples demonstrate whitelist syntax:
 Platform-specific whitelisting rules are found in
 `res/xml/config.xml`.
 
-__NOTE:__ On Android 2.3 and before, domain whitelisting only works
+__NOTE__: On Android 2.3 and before, domain whitelisting only works
 for `href` hyperlinks, not referenced resources such as images and
 scripts. Take steps to avoid scripts from being injected into the
 application.

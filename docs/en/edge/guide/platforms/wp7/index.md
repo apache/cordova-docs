@@ -46,7 +46,7 @@ Register and pay for a [Windows Phone Dev
 Center](http://dev.windowsphone.com/en-us/publish) account if you want
 to install an app on a real device or submit it to Market Place.
 
-__NOTE:__ Running the SDK in Virtual Machine may present challenges.
+__NOTE__: Running the SDK in Virtual Machine may present challenges.
 Read [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac) for
 insights on developing solutions.
 
@@ -65,7 +65,7 @@ Studio 2012\Templates\ProjectTemplates\` directory.
 
 ## Building the Template
 
-__NOTE:__ Skip this step if the `lib\windows-phone` directory already
+__NOTE__: Skip this step if the `lib\windows-phone` directory already
 contains a `CordovaWP7_x_x_x.zip` file.
 
 To simplify development, Cordova bundles a script to build Visual

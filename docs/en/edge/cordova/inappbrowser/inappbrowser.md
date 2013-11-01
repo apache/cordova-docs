@@ -23,7 +23,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
-__NOTE:__ The InAppBrowser window behaves like a standard web browser,
+__NOTE__: The InAppBrowser window behaves like a standard web browser,
 and can't access Cordova APIs.
 
 ## Description
@@ -272,7 +272,7 @@ The function is passed an `InAppBrowserEvent` object.
 
     ref.show();
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
 
 ## Supported Platforms
 

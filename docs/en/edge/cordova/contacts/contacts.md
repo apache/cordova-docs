@@ -21,7 +21,7 @@
 
 > The `contacts` object provides access to the device contacts database.
 
-__WARNING:__ Collection and use of contact data raises
+__WARNING__: Collection and use of contact data raises
 important privacy issues.  Your app's privacy policy should discuss
 how the app uses contact data and whether it is shared with any other
 parties.  Contact information is considered sensitive because it

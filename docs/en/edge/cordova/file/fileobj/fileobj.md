@@ -58,7 +58,7 @@ specified portion of the file.  Negative values for `start` or `end`
 are measured from the end of the file.  Indexes are positioned
 relative to the current slice. (See the full example below.)
 
-__Parameters:__
+__Parameters__:
 
 - __start__: The index of the first byte to read, inclusive.
 

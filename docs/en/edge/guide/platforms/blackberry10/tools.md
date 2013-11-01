@@ -53,7 +53,7 @@ where
 
 - `<project-name>` specifies the apps display name
 
-__NOTE:__ the `create` command bootstraps dependency installation
+__NOTE__: the `create` command bootstraps dependency installation
 through the `npm install` command. Depending on the installation
 directory and system permissions, this may require administrator
 privileges.  If there's problem on OSX/Linux, run `sudo npm install`

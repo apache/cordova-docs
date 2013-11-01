@@ -93,14 +93,15 @@ immensely.
   punctuation. This list item provides an example. Bolded Topic Text
   Follows Same Init-Cap Rule as Headings.
 
-* __Notes__: Bold & all-cap __NOTE:__, with colon inside, always at
-  the start of a paragraph, never mid-paragraph. Do not incorporate
-  this font change into a sentence as in "__Note__ that..." but OK to
-  start a sentence: "Note that..." when the information is less
-  consequential. Do not apply bullet/number list formatting.
+* __Notes__: Bold & all-cap __NOTE__:, with colon outside, always at
+  the start of a paragraph, never mid-paragraph. <!--RE :__--> Do not
+  incorporate this font change into a sentence as in "__Note__
+  that..." but OK to start a sentence: "Note that..." when the
+  information is less consequential. Do not apply bullet/number list
+  formatting.  <!--RE- __NOTE-->
 
-* __Warnings/Tips__: As an alternative to __NOTE:__, use __WARNING:__
-  for serious matters, or __TIP:__ to pass along useful tricks or
+* __Warnings/Tips__: As an alternative to __NOTE__:, use __WARNING__:
+  for serious matters, or __TIP__: to pass along useful tricks or
   context.
 
 * __Minimize Notes__: Avoid too many notes and warnings, as it implies
@@ -109,7 +110,7 @@ immensely.
   procedure within the text.
 
 <!--
-* __Platform-Specific Notes__ __ios:__ ???
+* __Platform-Specific Notes__ __ios__: ???
 -->
 
 ## Language and Tone
@@ -141,14 +142,14 @@ immensely.
   stringing nouns together into long phrases that come off as
   impenetrable shop talk that puts everybody to sleep."
 
-* __Use Possessives:__ Possessives sound more familiar and colloquial:
+* __Use Possessives__: Possessives sound more familiar and colloquial:
   "the device's home screen" rather than clumsier: "the home screen of
   the device"
 
-* __The Brothers Karmazov:__ 'The FOO file', not 'the file FOO', no
+* __The Brothers Karmazov__: 'The FOO file', not 'the file FOO', no
   matter how long FOO's path is.
 
-* __Serial comma:__ This, that, and the other.
+* __Serial comma__: This, that, and the other.
 
 * Do not drop articles: "In the Bada IDE", not "In Bada IDE"
 
@@ -283,7 +284,7 @@ immensely.
 
 ## Common Grammatical Errors
 
-* __Hyphenate Adjective Phrases:__ E.g., "command-line tools", but not
+* __Hyphenate Adjective Phrases__: E.g., "command-line tools", but not
   when it's a noun, as in "the command line."
 
 * __It's a Crazy Language, but its Rules Eventually Make Sense__:

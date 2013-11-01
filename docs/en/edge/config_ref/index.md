@@ -128,7 +128,7 @@ The following global preferences apply to all platforms:
 
         <preference name="Orientation" value="landscape" />
 
-  __NOTE:__ The `default` value means _both_ landscape and portrait
+  __NOTE__: The `default` value means _both_ landscape and portrait
   orientations are enabled.  If you want to use each platform's
   default settings (usually portrait-only), leave this tag out of the
   `config.xml` file. Also, BlackBerry uses `auto` instead of `default`
@@ -169,7 +169,7 @@ all of them:
 
   Applies to iOS and BlackBerry. 
 
-  __NOTE:__ For BlackBerry, valid values are `enable` or `disable`.
+  __NOTE__: For BlackBerry, valid values are `enable` or `disable`.
 
 ## The _feature_ Element
 

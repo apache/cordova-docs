@@ -40,7 +40,7 @@ specification.
 
 Read the entries in this directory.
 
-__Parameters:__
+__Parameters__:
 
 - __successCallback__: A callback that is passed an array of `FileEntry` and `DirectoryEntry` objects. _(Function)_
 

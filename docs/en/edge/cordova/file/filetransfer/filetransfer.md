@@ -56,7 +56,7 @@ device.
 
 ## upload
 
-__Parameters:__
+__Parameters__:
 
 - __filePath__: Full path of the file on the device.
 
@@ -202,7 +202,7 @@ to a Nginx server.
 
 ## download
 
-__Parameters:__
+__Parameters__:
 
 - __source__: URL of the server to download the file, as encoded by `encodeURI()`.
 
