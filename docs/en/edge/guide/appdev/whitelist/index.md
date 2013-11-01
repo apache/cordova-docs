@@ -134,11 +134,11 @@ Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the
 
 Specifically, these patterns need to be updated:
 
-  * "`apache.org`" (no protocol): This would previously match `http`, `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`" to include all protocols, or include a line for each protocol you need to support.
+- `apache.org` (no protocol): This would previously match `http`, `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`" to include all protocols, or include a line for each protocol you need to support.
 
-  * "`http://apache.*`" (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.
+- `http://apache.*` (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.
 
-  * "`h*t*://ap*he.o*g`" (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
+- `h*t*://ap*he.o*g` (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
 
 ## Windows Phone Whitelisting
 

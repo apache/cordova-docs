@@ -40,15 +40,15 @@ instance, or the system browser.
 
     - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
     
-    Android only
-    --------------------
+    Android only:
+
     - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. 
     - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
     - __clearcache__ - set to 'yes' to have the browser's cookie cache cleared before the new window is opened
     - __clearsessioncache__ - set to 'yes' to have the session cookie cache cleared before the new window is opened
 
-    iOS only
-    --------
+    iOS only:
+
     - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. Note that you will have to localize this value yourself.
     - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
     - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the InAppBrowser (defaults to 'yes')
