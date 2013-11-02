@@ -83,7 +83,7 @@ images for low, medium, high, and extra-high resolutions:
 
 The iOS platform specifies variants for iPhone/iPod and iPad, with
 variants for retina displays and different orientations. The _568h_
-file is customized for the iPhone 5's taller screen:
+file applies to the iPhone 5's taller screen:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png

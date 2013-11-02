@@ -20,9 +20,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # The config.xml File
 
 Many aspects of an app's behavior can be controlled with a global
-configuration file, `config.xml`, that is placed in the top-level web
+configuration file, `config.xml`, that belongs in the top-level web
 asset directory along with the app's home page.  This
-platform-agnostic XML file is formatted based on the W3C's [Packaged
+platform-agnostic XML file is arranged based on the W3C's [Packaged
 Web Apps (Widgets)](http://www.w3.org/TR/widgets/) specification, and
 extended to specify core Cordova API features, plugins, and
 platform-specific settings.
@@ -104,8 +104,8 @@ platforms:
   `www` directory.
 
 - `<access>` elements define the set of external domains the app is
-  allowed to communicate with. The default value shown above allows it
-  to access any server. See the Domain Whitelist Guide for details.
+  allowed to communicate with. The default value shown above allows
+  it to access any server. See the Domain Whitelist Guide for details.
 
 - The `<preference>` tag sets various options as pairs of
   `name`/`value` attributes. Each preference's `name` is
