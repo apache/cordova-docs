@@ -92,8 +92,8 @@ at least a second to fire, prior to which `connection.type` is
 
 ## Windows Phone 7 Quirks
 
-When running in the Emulator, the `connection.status` is always unknown, so this event will _not_ fire.
+When running in the Emulator, the `connection.status` is always unknown, so this event does _not_ fire.
 
 ## Windows Phone 8 Quirks
 
-The Emulator reports the connection type as `Cellular`, which does not change, so events will _not_ fire.
+The Emulator reports the connection type as `Cellular`, which does not change, so events does _not_ fire.

@@ -71,7 +71,7 @@ SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471).
 
 Download and extract the latest copy of
 [Cordova](http://phonegap.com/download). The `lib\windows-phone-8\wp8`
-subdirectory is where you will do your work.
+subdirectory is where you need to do your work.
 
 Copy the `CordovaWP8_x_x_x.zip` file to the `\My Documents\Visual
 Studio 2012\Templates\ProjectTemplates\` directory.

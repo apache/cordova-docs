@@ -131,8 +131,8 @@ Then, run the `emulate` command to view the app:
 
 To deploy to a device, make sure it is plugged into your computer.
 Enable development mode and obtain the IP address as desribed in the
-emulator section above. You will also need to obtain the PIN from the
-the __Settings__ application under __About &rarr; Hardware__:
+emulator section above. You also need to obtain the PIN from the
+__Settings__ application under __About &rarr; Hardware__:
 
 ![](img/guide/platforms/blackberry10/bb_pin.png)
 

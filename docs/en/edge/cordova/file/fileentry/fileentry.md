@@ -95,7 +95,7 @@ Set metadata on a file.
 
 __Currently works only on iOS.__
 
-- this will set the extended attributes of a file.
+- This sets the extended attributes of a file.
 
 __Parameters__:
 

@@ -99,10 +99,9 @@ For CLI projects:
 
 7. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-__NOTE__: Starting with Cordova 3.0.0, projects do not come with any
-plugins, you will have to install the ones you require for your
-project using the `plugman` command-line utility. See Using Plugman to
-Manage Plugins.
+__NOTE__: Starting with Cordova 3.0.0, plugins are not pre-installed,
+and you need to use the `plugman` command-line utility to install them
+yourself. See Using Plugman to Manage Plugins.
 
 ## Upgrading 2.8.0 projects to 2.9.0 ##
 
@@ -134,7 +133,7 @@ Manage Plugins.
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-7. Update any `<plugin>` tags that are in your `config.xml` to `<feature>` tags. Note that existing `<plugin>` tags will still work, but are deprecated. You can copy this information in the `config.xml` for a new project. For example:
+7. Update any `<plugin>` tags in the `config.xml` file to `<feature>` tags. Note that existing `<plugin>` tags still work, but are deprecated. You can copy this information in the `config.xml` file for a new project. For example:
 
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />
@@ -148,7 +147,7 @@ Manage Plugins.
     	<!-- other <feature> tags -->
         
 
-8. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
+8. Delete the `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
 9. Add these two frameworks to your project:
         
@@ -283,13 +282,13 @@ Manage Plugins.
 
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
-12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
-You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (CDVViewController) also has a `URLisAllowed` method for you to check whether a URL will pass the whitelist.
+12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
+You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (`CDVViewController`) also has a `URLisAllowed` method for you to check whether a URL passes the whitelist.
 
 13. Device API changes:
-    * For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
-    * For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
-    * For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
+    - For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
+    - For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
+    - For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
 
 ## Upgrading 2.1.0 projects to 2.2.0 ##
 
@@ -517,7 +516,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any settings, __Plugins__ and __ExternalHosts__ entries that you had in your __backed-up Cordova.plist__ into the new `Cordova.plist`.
 
-10. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files. Any `UIWebViewDelegate` or `CDVCommandDelegate` code in `AppDelegate.m` will need to go into `MainViewController.m` now (see commented out sections in that file).
+10. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new `AppDelegate` files. Any `UIWebViewDelegate` or `CDVCommandDelegate` code in `AppDelegate.m` needs to go into `MainViewController.m` now (see commented-out sections in that file).
 
 11. Integrate any project-specific code that you have in your backed-up `MainViewController.h` and `MainViewController.m` into the new MainViewController files.
 
@@ -597,7 +596,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 32. Enter __PG__ for the Find string, and __CDV__ for the Replace
     string, then press the __Replace All__ button.
 
-33. Press __Command-B__ to build, you will still have deprecations
+33. Press __Command-B__ to build. You still have deprecations
     that you can get rid of in the future (see `CDVDeprecated.h`. For
     example, replace classes in your code that use PG* to CDV*).
 

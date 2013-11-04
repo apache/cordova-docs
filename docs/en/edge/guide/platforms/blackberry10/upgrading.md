@@ -38,7 +38,9 @@ version of the CLI.
 4. Copy or overwrite any native assets from your original project
    (`Resources`, etc.)
 
-5. Copy your `config.xml` into the `www` directory, and remove any plugin definitions. You will modify settings here instead of the platform directory.
+5. Copy the `config.xml` file into the `www` directory, and remove any
+   plugin definitions. You need to modify settings here rather than
+   within the platform directory.
 
 6. Use the cordova CLI tool to install any plugins you need. Note that
    the CLI handles all core APIs as plugins, so they may need to be
@@ -62,7 +64,9 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 4. Copy or overwrite any native assets from your original project
    (`Resources`, etc.)
 
-5. Copy your `config.xml` into the `www` directory, and remove any plugin definitions. You will modify settings here instead of the platform directory.
+5. Copy the `config.xml` file into the `www` directory, and remove any
+   plugin definitions. You need to modify settings here rather than
+   within the platform directory.
 
 6. Use the cordova CLI tool to install any plugins you need. Note that
    the CLI handles all core APIs as plugins, so they may need to be
