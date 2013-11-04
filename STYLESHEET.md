@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Developers contributing to Cordova are already familiar with coding
 best practices.  What you'll find here are best practices when writing
-tech doc addressed to Cordova's end users.
+tech doc addressed to Cordova developers.
 
 There are two basic kinds of tech doc: reference content and
 expository "guide" content. Reference doc tends to be self-contained,
@@ -50,7 +50,7 @@ immensely.
   necessary connective tissue.  Link to other related & prerequisite
   topics, especially for likely workflow scenarios.  E.g., Plugman doc
   is most appropriate for platform-specific shell-tool workflow, not
-  for CLI users even though it underlies it invisibly.
+  for the CLI even though it underlies it invisibly.
 
 * __Consistent Headings__: Try to match verb tense in headings. That
   is, if one is task-based and reads "Adding a Platform," the other
@@ -201,8 +201,8 @@ immensely.
 
 ## Usage
 
-* "User" may refer to the end user, not to the application's
-  developer. Refer to plural "users" as "they" to avoid singular
+* "User" may refer to the end user, not to an application's
+  "developer." Refer to plural "users" as "they" to avoid singular
   he/she pronoun problems. Also avoid "his" and "her".
   <!--RE\bs?he\b--> <!--RE\b(his|her)\b-->
 
