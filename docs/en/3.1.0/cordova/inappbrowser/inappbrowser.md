@@ -374,7 +374,7 @@ The function is passed an `InAppBrowserEvent` object.
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
 
         function iabClose(event) {
