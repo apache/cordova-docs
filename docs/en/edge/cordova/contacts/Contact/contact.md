@@ -25,7 +25,7 @@ Contains properties that describe a contact, such as a user's personal or busine
 
 - __id__: A globally unique identifier. _(DOMString)_
 
-- __displayName__: The name of this Contact, suitable for display to end-users. _(DOMString)_
+- __displayName__: The name of this Contact, suitable for display to end users. _(DOMString)_
 
 - __name__: An object containing all components of a persons name. _(ContactName)_
 
@@ -236,7 +236,7 @@ for details.
 
 - __displayName__: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
 
-- __urls__: When creating a contact, users can input and save more than one web address, but only one is available is available when searching the contact.
+- __urls__: When creating a contact, users can input and save more than one web address, but only one is available when searching the contact.
 
 - __phoneNumbers__: The _pref_ option is not supported. The _type_ is not supported in a _find_ operation. Only one `phoneNumber` is allowed for each _type_.
 
