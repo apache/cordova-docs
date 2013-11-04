@@ -27,12 +27,12 @@ how the app uses contact data and whether it is shared with any other
 parties.  Contact information is considered sensitive because it
 reveals the people with whom a person communicates.  Therefore, in
 addition to your app's privacy policy, you should strongly consider
-providing a just-in-time notice prior to your app accessing or using
-contact data (if the device operating system doesn't do so
-already). That notice should provide the same information noted above,
+providing a just-in-time notice before the app accesses or uses
+contact data, if the device operating system doesn't do so
+already. That notice should provide the same information noted above,
 as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  Note that some app
-marketplaces may require your app to provide just-in-time notice and
+marketplaces may require the app to provide a just-in-time notice and
 obtain permission from the user prior to accessing contact data.  A
 clear and easy-to-understand user experience surrounding the use of
 contact data will help avoid user confusion and perceived misuse of

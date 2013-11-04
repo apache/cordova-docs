@@ -43,7 +43,7 @@ _Windows 8_ signifies both Windows 8 and Windows RT.
 
 Follow the instructions at
 [windowsstore.com](http://www.windowsstore.com/)
-to submit your app to Windows Store.
+to submit the app to Windows Store.
 
 ## Install SDK and Cordova
 

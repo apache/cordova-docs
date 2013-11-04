@@ -112,6 +112,6 @@ also build the app's configuration file yourself.
 
 <!-- XREF
 To build projects on some platforms, you may need to apply digital signatures.
-See Distributing Applications for information on how to upload your app to various store portals.
+See Distributing Applications for information on how to upload the app to various store portals.
 XREF -->
 

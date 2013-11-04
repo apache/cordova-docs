@@ -173,7 +173,7 @@ provided when registering for signing keys.
 
 When debugging on the device or an emulator, you may run WebInspector
 remotely to view the application's internal state.  A prompt displays
-the URL that allows you to connect to your app with a standard web
+the URL that allows you to connect to the app with a standard web
 browser.  For more information, see
 [Debugging using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 

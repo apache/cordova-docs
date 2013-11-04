@@ -525,7 +525,7 @@ plugman's scope.  Examples:
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
-    You need to add the following line to your `local.properties`
+    You need to add the following line to the `local.properties`:
         
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>

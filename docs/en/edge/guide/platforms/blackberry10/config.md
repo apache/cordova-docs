@@ -42,7 +42,7 @@ config.xml File for information on global configuration options.
 - `WebSecurity` (`disable` or the default `enable`): Set to `disable`
   to override web security settings, allowing access to remote content
   from unknown sources. This preference is intended as a development
-  convenience only, so remove it before packaging your app for
+  convenience only, so remove it before packaging the app for
   distribution.  For the released app, all URIs should be known and
   whitelisted using the `<access>` element, described in the Domain
   Whitelist Guide.

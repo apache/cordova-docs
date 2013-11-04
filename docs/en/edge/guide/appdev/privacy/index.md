@@ -31,7 +31,7 @@ accepted best practices and provides references to other more detailed
 guides and references.
 
 * __Privacy Policy__: You app should include a privacy policy that
-  addresses topics such as what kind of information your app collects
+  addresses topics such as what kind of information the app collects
   from or about your users, how that information is used, with whom it
   is shared, and how users can make privacy-related choices within the
   app. To aid understanding, you should use plain language and avoid
@@ -68,7 +68,7 @@ guides and references.
   dialog box text to clarify how the app uses and, if applicable,
   shares such information.
 
-* __Avoiding user surprise__: If your app collects or uses information
+* __Avoiding user surprise__: If the app collects or uses information
   in a way that may be surprising to users in light of the primary
   purpose of your app (for example, a music player that accesses
   stored pictures), you should take similar steps as with the

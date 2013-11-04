@@ -60,7 +60,7 @@ current interface.
 - SDK and IDE (Visual Studio)
     - Visual Studio 2012 Professional, Premium, or Ultimate. Note that Visual Studio Express for Windows Phone (included in the SDK) is not recommended because you can not build the template (see below) with VS Express, as it does not have the __Export Template__ functionality, which is only in VS Pro or higher.
 
-- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
+- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install the app on a real device or submit it to Market Place.
 
 __NOTE:__ Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
 
@@ -116,7 +116,7 @@ Give the project a name, and select __OK__.
 ## Review the Project Structure
 
 The `www` directory features `html`, `js`, and `css` subdirectories
-and any other resources your app requires.
+and any other resources the app requires.
 Any additional content needs to be a part of the Visual Studio
 project, and it must be set as content.
 

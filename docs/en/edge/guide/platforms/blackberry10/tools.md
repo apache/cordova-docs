@@ -63,7 +63,7 @@ command-line utility opened with administrator privileges.
 ## target
 
 The `target` command allows you to manage the emulator or BlackBerry
-devices that you use to test your app. You can add or remove a target,
+devices that you use to test the app. You can add or remove a target,
 or set a target as the default target.
 
 ### Add a target
@@ -97,7 +97,7 @@ where
 ## build
 
 The `build` command builds the project as a .bar file. You can build
-your app in either release mode (which produces a signed .bar file) or
+the app in either release mode (which produces a signed .bar file) or
 in debug mode (which produces an unsigned .bar file).
 
 ### Build your project in release mode
@@ -121,7 +121,7 @@ where
 - `<target>` specifies the name of a previously added target. If
   `<target>` is not specified, the default target is used, if one has
   been created. This argument is only required if you want the script
-  to deploy your app to a BlackBerry device or emulator and you have
+  to deploy the app to a BlackBerry device or emulator and you have
   not created a default target. Additionally, if `<target>` is a
   device, then that device must be connected to your computer by USB
   connection or be connected to the same Wi-Fi network as your
@@ -149,9 +149,9 @@ app and deploy it to the default target. For example:
 ## run
 
 The `run` command deploys the app on the specified BlackBerry device
-or an emulator. Before deploying your app, you must first create a
-target for the device or emulator you want to deploy your app to using
-the target script. The deploy script will deploy the most recent build of your app.
+or an emulator. Before deploying the app, you must first create a
+target for the device or emulator you want to deploy the app to using
+the target script. The deploy script will deploy the most recent build of the app.
 
     <path-to-project>/cordova/run <target>
 

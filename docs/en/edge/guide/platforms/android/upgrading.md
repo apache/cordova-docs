@@ -58,9 +58,9 @@ For projects not created with the cordova CLI, run:
 
 1. Create a new Apache Cordova Android project.
 
-2. Copy the contents of your `www` directory to the new project.
+2. Copy the contents of the `www` directory to the new project.
 
-3. Copy any native Android assets from your `res` directory to the new project.
+3. Copy any native Android assets from the `res` directory to the new project.
 
 4. Copy over any plugins you installed from the `src` subdirectories into the new project.
 

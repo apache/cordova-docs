@@ -40,9 +40,9 @@ example, coarse, fine, ZIP code level, etc.).  Geolocation data is
 generally considered sensitive because it can reveal a person's
 whereabouts and, if stored, the history of his or her travels.
 Therefore, in addition to your app's privacy policy, you should
-strongly consider providing a just-in-time notice prior to your app
-accessing geolocation data (if the device operating system doesn't do
-so already).  That notice should provide the same information noted
+strongly consider providing a just-in-time notice before the app
+accesses geolocation data, if the device operating system doesn't do
+so already.  That notice should provide the same information noted
 above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
 see the Privacy Guide.

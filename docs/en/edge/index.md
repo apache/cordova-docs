@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </li>
         <li>
             <h2>The config.xml File</h2>
-            <span>Customize the features of your app.</span>
+            <span>Customize the app's features.</span>
         </li>
         <li>
             <h2>Icons and Splash Screens</h2>

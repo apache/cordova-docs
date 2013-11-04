@@ -66,7 +66,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 3.0.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Copy and overwrite any splash screen, or icon images.
 
@@ -85,7 +85,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.9.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update the name of `cordova.js` in the HTML tag if it's still using cordova-VERSION.js (should be just `cordova.js`).
 
@@ -101,7 +101,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.8.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova.js` file. (Note the lack of a version number in the filename.)
 
@@ -117,7 +117,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.7.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.7.0.js` file.
 
@@ -133,7 +133,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.6.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.6.0.js` file.
 
@@ -149,7 +149,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.5.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.5.0.js` file.
 
@@ -165,7 +165,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 or WP8 2.4.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.4.0.js` file.
 
@@ -181,7 +181,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 2.3.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.3.0.js` file.
 
@@ -197,7 +197,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 2.2.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.2.0.js` file.
 
@@ -213,7 +213,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 2.1.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.1.0.js` file.
 
@@ -231,7 +231,7 @@ In Visual Studio's Solution Explorer window:
 
 1. Create a new Apache Cordova WP7 2.0 Project.
 
-2. Copy the contents of your `www` directory to the new project, and be sure these items are added to the VS project.
+2. Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
 
 3. Update your HTML to use the new `cordova-2.0.0.js` file.
 

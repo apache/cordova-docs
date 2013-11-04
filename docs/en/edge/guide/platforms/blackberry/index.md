@@ -175,7 +175,7 @@ __NOTE:__ On BlackBerry OS 5, the application is installed in the
 
 ## Deploy to Device
 
-To deploy your app to a device, it must be connected, and you must be
+To deploy the app to a device, it must be connected, and you must be
 registered for code signing keys as described above.  Also, to deploy
 apps on BlackBerry PlayBook, the __Settings &rarr; Security &rarr;
 Development Mode__ option must be enabled.

@@ -102,7 +102,7 @@ with a parameter to install automatically:
 ## Review the Project Structure
 
 The `www` directory features `html`, `js`, and `css` subdirectories
-and any other resources your app requires.
+and any other resources the app requires.
 Any additional content needs to be a part of the Visual Studio
 project, and it must be set as content.
 
