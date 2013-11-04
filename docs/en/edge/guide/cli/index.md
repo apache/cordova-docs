@@ -432,9 +432,10 @@ Once you have updated Cordova, you can update the Cordova resources that
 your project uses by typing:
 
         $ cordova platform update <PLATFORM>
+
 This will replace the old cordova resources with new ones for the
 specified PLATFORM. You should do this for every platform that you
-develop for. 
+develop for.
 
 ## Updating Cordova
 

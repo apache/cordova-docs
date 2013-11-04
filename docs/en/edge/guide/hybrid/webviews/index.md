@@ -26,7 +26,7 @@ make full use of Cordova APIs. You can then deploy these Cordova
 application components along with native components in a hybrid
 application.
 
-To deploy a WebView, you will need to be familiar with each native
+To deploy a WebView, you need to be familiar with each native
 programming environment. The following provides instructions for
 supported platforms:
 

@@ -247,18 +247,18 @@ Details for the `<js-module>` tag:
 
 * Three tags are allowed within `<js-module>`:
 
-    * `<clobbers target="some.value"/>` indicates that the
+    - `<clobbers target="some.value"/>` indicates that the
       `module.exports` is inserted into the `window` object as
       `window.some.value`. You can have as many `<clobbers>` as you
       like. Any object not available on `window` is created.
 
-    * `<merges target="some.value"/>` indicates that the module
+    - `<merges target="some.value"/>` indicates that the module
       should be merged with any existing value at `window.some.value`.
       If any key already exists, the module's version overrides the
       original. You can have as many `<merges>` as you like. Any
       object not available on `window` is created.
 
-    * `<runs/>` means that your code should be specified with
+    - `<runs/>` means that your code should be specified with
       `cordova.require`, but not installed on the `window`
       object. This is useful when initializing the module, attaching
       event handlers or otherwise. You can only have up to one
@@ -266,7 +266,7 @@ Details for the `<js-module>` tag:
       `<clobbers/>` or `<merges/>` is redundant, since they also
       `cordova.require` your module.
 
-    * An empty `<js-module>` still loads and can be acccessed in other
+    - An empty `<js-module>` still loads and can be acccessed in other
       modules via `cordova.require`.
 
 If `src` does not resolve to an existing file, plugman stops and
@@ -278,7 +278,7 @@ platform-specific JavaScript module bindings.
 
 ## _dependency_ element
 
-The `<dependency>` tag allows you specify other plugins on which the
+The `<dependency>` tag allows you to specify other plugins on which the
 current plugin depends. While future versions will access them from
 plugin repositories, in the short term plugins are directly referenced
 as URLs by `<dependency>` tags. They are formatted as follows:

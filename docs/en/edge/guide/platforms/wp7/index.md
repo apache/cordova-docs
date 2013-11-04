@@ -56,7 +56,7 @@ Download and install the [Windows Phone
 SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/).
 
 Download and extract the latest copy of
-[Cordova](http://phonegap.com/download). You will be working in the
+[Cordova](http://phonegap.com/download). You need to work in the
 `lib\windows-phone-8\wp7` subdirectory, `lib\windows-phone-8\wp8`
 contains the Windwos Phone 8 version of Cordova.
 

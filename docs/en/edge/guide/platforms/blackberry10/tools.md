@@ -141,24 +141,22 @@ where
 
 If you have previously defined a default target (and previously
 installed a debug token, if that target is a BlackBerry device), you
-can run the script with no arguments, and the script will package your
-app and deploy it to the default target. For example:
+can run the script with no arguments, and the script packages your
+app and deploys it to the default target. For example:
 
     <path-to-project>/cordova/build debug
 
 ## run
 
-The `run` command deploys the app on the specified BlackBerry device
-or an emulator. Before deploying your app, you must first create a
-target for the device or emulator you want to deploy your app to using
-the target script. The deploy script will deploy the most recent build of your app.
+The `run` command deploys the app's most recent build on the specified
+BlackBerry device or an emulator. To deploy your app, you need to
+specify a target for the device or emulator:
 
     <path-to-project>/cordova/run <target>
 
-where `<target> `specifies the name of a previously added target. If
-`<target> `is a device, then that device must be connected to your
-computer by USB connection or be connected to the same Wi-Fi network
-as your computer.
+...where `<target> `specifies the name of a previously added target.
+If `<target>` is a device, then it must be connected to your computer
+via USB cable, or else over the same Wi-Fi network as your computer.
 
 ## plugin
 

@@ -231,10 +231,10 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 ### Notes about 2.0.0 release
 
-`config.xml` will be replacing `cordova.xml` and `plugins.xml`.  This
-new file is a combination of the previous two.  However, the old files
-are deprecated, and while currently still work, will cease working in
-a future release.
+The `config.xml` file will replace `cordova.xml` and `plugins.xml`.
+This new file is a combination of the previous two.  However, the old
+files are deprecated, and while currently still work, will cease
+working in a future release.
 
 ## Upgrade to 1.9.0 from 1.8.1 ##
 

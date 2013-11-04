@@ -50,8 +50,10 @@ Interface, to add or remove this feature for a project:
         [ 'org.apache.cordova.file' ]
         $ cordova plugin rm org.apache.cordova.file
         
-To use the file-transfer plugin you must add that separately. Do not add the file plugin manually because it will be automatically added as a dependency plugin by the CLI. 
-        
+You must add the `file-transfer` plugin separately. The CLI
+automatically adds the `file` plugin as a dependency, so there is no
+need to add it separately:
+
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
         [ 'org.apache.cordova.file',

@@ -129,7 +129,7 @@ immensely.
   E.g., "the pause event fires when..."  rather than "the pause event
   is fired when..." Rule of thumb: banish verbs ending in "ed".
 
-- __Not Kidding, Use Present Tense__: Minimize verbs ending with
+* __Not Kidding, Use Present Tense__: Minimize verbs ending with
   "ing": "This is necessary to provide...", not "This is necessary for
   providing..." <!-- are\s-+[a-z]+ing\b -->
 
@@ -154,16 +154,16 @@ immensely.
 
 * Do not drop articles: "In the Bada IDE", not "In Bada IDE"
 
-- Do not start a sentence with a lowercase member name. E.g., "Does
+* Do not start a sentence with a lowercase member name. E.g., "Does
   not support `filter`" rather than "`filter` is not supported"
   <!--RE \. `-->
 
-- Do not refer to "I," the author of the documentation, as in "What I
+* Do not refer to "I," the author of the documentation, as in "What I
   am going to show you now." Likewise avoid "we" and "let's," so
   instead of "We see that..." try "Note that..." Readers want to focus
   on the thing they're working on, not on you. <!--RE \bI\b-->
 
-- OK to refer to "you," the developer, but only sparingly, e.g., to
+* OK to refer to "you," the developer, but only sparingly, e.g., to
   avoid passive voice. Also do not use "your" as a routine substitute
   for "the" or "a" when referring to a noun.
 
@@ -212,7 +212,7 @@ immensely.
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
 
-- Prefer "can't" over "cannot"; sounds more relaxed. <!--RE cannot-->
+* Prefer "can't" over "cannot"; sounds more relaxed. <!--RE cannot-->
 
 * Subdirectory, not sub-directory
 
@@ -334,10 +334,10 @@ immensely.
 
 ## Links
 
-- Use titles in link text, never 'click here'. Consider using the
+* Use titles in link text, never 'click here'. Consider using the
   link's domain name as a substitute. <!--RE here]-->
 
-- Domain names are OK as a link's display text, but not full
+* Domain names are OK as a link's display text, but not full
   scheme-qualified URLs. No bare URLs in text outside of code.
   <!--RE \[http -->
 
