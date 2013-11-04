@@ -23,11 +23,11 @@ This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Android devices. See the following for more
 detailed platform-specific information:
 
+* Android Development Guide
 * Android Configuration
 * Android WebViews
 * Android Plugins
 * Upgrading Android
-* Android Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the

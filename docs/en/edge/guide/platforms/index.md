@@ -40,47 +40,46 @@ a lower-level alternative to the `cordova` command-line utility.
 ## Android
 
 * Android Installation Guide
+* Android Development Guide
 * Android Configuration
-* Android WebViews
 * Android Plugins
-* Android Command-line Tools
+* Android WebViews
 * Upgrading Android
 
 ## BlackBerry
 
 * BlackBerry Installation Guide
+* BlackBerry Development Guide
 * BlackBerry Configuration
-* BlackBerry Command-line Tools
 * Upgrading BlackBerry
 
 ## BlackBerry 10
 
 * BlackBerry 10 Installation Guide
-* BlackBerry 10 Configuration
+* BlackBerry 10 Development Guide
+* BlackBerry Configuration
 * BlackBerry 10 Plugins
-* BlackBerry 10 Command-line Tools
 
 ## iOS
 
 * iOS Installation Guide
+* iOS Development Guide
 * iOS Configuration
-* iOS WebViews
 * iOS Plugins
-* iOS Command-line Tools
+* iOS WebViews
 * Upgrading iOS
 
 ## Windows Phone
 
 * Windows Phone 8 Installation Guide
 * Windows Phone 7 Installation Guide
-* Windows Phone Configuration
-* Windows Phone Command-line Tools
+* Windows Phone Development Guide
 * Upgrading Windows Phone
 
 ## Windows 8
 
 * Windows 8 Installation Guide
-* Windows 8 Command-line Tools
+* Windows 8 Development Guide
 * Upgrading Windows 8
 
 ## Tizen

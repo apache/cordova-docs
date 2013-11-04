@@ -24,7 +24,7 @@ deploy Cordova apps for Windows 8. See the following for more
 detailed platform-specific information:
 
 * Upgrading Windows 8
-* Windows 8 Command-line Tools
+* Windows 8 Development Guide
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the

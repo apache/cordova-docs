@@ -85,7 +85,7 @@ For CLI projects, run:
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -106,7 +106,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova.js` file.
 
@@ -122,7 +122,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova.js` (note that it does not have a version suffix anymore, the version is in the file itself in the header) file from the new project into your `www` directory, and delete your `www/cordova-2.7.0.js` file.
 
@@ -161,7 +161,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. you need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. you need the assets from this new project.
 
 5. Copy the `www/cordova-2.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.6.0.js` file.
 
@@ -181,7 +181,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the project's `www/cordova-2.6.0.js` file into your `www` directory, and delete your `www/cordova-2.5.0.js` file.
 
@@ -207,7 +207,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.5.0.js` file from the new project into your `www` directory and delete your `www/cordova-2.4.0.js` file.
 
@@ -233,7 +233,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.4.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.3.0.js` file.
 
@@ -259,7 +259,7 @@ Manage Plugins.
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.3.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.2.0.js` file.
 
@@ -293,7 +293,7 @@ You can get this by accessing the `userAgent` property off the main view-control
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 5. Copy the `www/cordova-2.2.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.1.0.js` file.
 
@@ -323,7 +323,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 3. Using Terminal.app, navigate to the directory where you put the downloaded source above.
 
-5. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+5. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 6. Copy the `www/cordova-2.1.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.0.0.js` file.
 
@@ -351,7 +351,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 1. Install Cordova 2.0.0.
 
-2. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+2. Create a new project, as described in iOS Development Guide. You need the assets from this new project.
 
 3. Copy the `www/cordova-2.0.0.js` file from the new project into your `www` directory, and delete your `www/cordova-1.9.0.js` file.
 

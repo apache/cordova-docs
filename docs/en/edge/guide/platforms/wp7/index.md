@@ -30,7 +30,7 @@ applies to both versions:
 
 * Upgrading Windows Phone
 * Windows Phone Plugins
-* Windows Phone Command-line Tools
+* Windows Phone Development Guide
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the

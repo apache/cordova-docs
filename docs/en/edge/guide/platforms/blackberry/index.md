@@ -25,10 +25,10 @@ want to target the most recent version, see the BlackBerry 10 Platform
 Guide.  See the following for more detailed platform-specific
 information:
 
+* BlackBerry Development Guide
 * BlackBerry Configuration
 * Upgrading BlackBerry
 * BlackBerry Plugins
-* BlackBerry Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-line Interface for information about the
