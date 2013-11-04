@@ -128,6 +128,8 @@ immensely.
 * __Avoid Passive Voice__: Past-tense passive voice is to be avoided.
   E.g., "the pause event fires when..."  rather than "the pause event
   is fired when..." Rule of thumb: banish verbs ending in "ed".
+  Passive voice is more appropriate for reference doc, you should
+  still avoid it when there's a better active-voice alternative.
 
 * __Not Kidding, Use Present Tense__: Minimize verbs ending with
   "ing": "This is necessary to provide...", not "This is necessary for
