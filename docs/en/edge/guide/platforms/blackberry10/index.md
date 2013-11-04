@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Platform Guide
+# BlackBerry 10 Installation Guide
 
 This guide shows how to set up your development environment to build
 and deploy Cordova apps for BlackBerry 10 devices.  For previous

@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry Platform Guide
+# BlackBerry Installation Guide
 
 This guide shows you how to set up an SDK environment to target
 applications for the BlackBerry platform prior to version 10.  If you
