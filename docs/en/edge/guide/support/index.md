@@ -53,7 +53,7 @@ CLI's shorthand stubs.)
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="y"></td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -78,8 +78,8 @@ CLI's shorthand stubs.)
         <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
         <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
         <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
-        <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
+        <td data-col="win8"       class="y"></td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -162,7 +162,7 @@ CLI's shorthand stubs.)
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="win8"       class="n"></td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -199,8 +199,8 @@ CLI's shorthand stubs.)
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="p">no FileTransfer</td>
-        <td data-col="winphone8"  class="p">no FileTransfer</td>
+        <td data-col="winphone7"  class="y"></td>
+        <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="n"></td>
@@ -225,7 +225,7 @@ CLI's shorthand stubs.)
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="n"></td>
+        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
@@ -240,7 +240,7 @@ CLI's shorthand stubs.)
         <td data-col="ios"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="p">uses iframe</td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="n"></td>
     </tr>
@@ -290,9 +290,9 @@ CLI's shorthand stubs.)
         <td data-col="blackberry" class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
-        <td data-col="winphone7"  class="p">localStorage only</td>
-        <td data-col="winphone8"  class="p">localStorage only</td>
-        <td data-col="win8"       class="y"></td>
+        <td data-col="winphone7"  class="y">localStorage &amp; indexedDB</td>
+        <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
+        <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
 <!--        <td data-col="firefoxos"  class="n"></td> -->
         <td data-col="tizen"       class="y"></td>
     </tr>
