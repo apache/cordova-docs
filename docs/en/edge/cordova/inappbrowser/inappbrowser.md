@@ -444,10 +444,10 @@ The function is passed an `InAppBrowserEvent` object.
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
 
         function iabClose(event) {
