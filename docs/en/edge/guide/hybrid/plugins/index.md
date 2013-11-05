@@ -189,7 +189,7 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 The Tizen platform does not support plugins.
 
-## Publishing plugins
+## Publishing Plugins
 
 Once you develop your plugin, you may want to publish and share it
 with the community. You can publish your plugin to the cordova

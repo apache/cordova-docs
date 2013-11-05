@@ -276,7 +276,7 @@ exits with a non-zero code.
 Nesting `<js-module>` elements within `<platform>` declares
 platform-specific JavaScript module bindings.
 
-## _dependency_ element
+## _dependency_ Element
 
 The `<dependency>` tag allows you to specify other plugins on which the
 current plugin depends. While future versions will access them from

@@ -39,7 +39,7 @@ A Cordova plugin for BlackBerry 10 contains both JavaScript and native
 code, which communicate with each other through a framework provided
 by JNEXT. Every plugin must also include a `plugin.xml` file.
 
-## Creating the native class
+## Creating the Native Class
 
 To create the native portion of your plugin, open the BlackBerry 10
 NDK IDE and select __File &rarr; New &rarr; BlackBerry Project &rarr;
@@ -150,7 +150,7 @@ following in `echo_js.cpp`:
             return NULL;
         }
 
-## Creating the plugin's JavaScript
+## Creating the Plugin's JavaScript
 
 The plugin must contain the following JavaScript files:
 

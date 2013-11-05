@@ -39,7 +39,7 @@ distribution. Download it from
 [cordova.apache.org](http://cordova.apache.org) and unzip its iOS
 package.
 
-## Adding Cleaver to the Xcode project (CordovaLib sub-project)
+## Adding Cleaver to the Xcode Project (CordovaLib Sub-Project)
 
 1. Quit Xcode if it is running.
 
@@ -159,7 +159,7 @@ package.
 
         [myView addSubview:viewController.view];
 
-## Adding HTML, CSS and JavaScript assets
+## Adding HTML, CSS and JavaScript Assets
 
 1. Create a new directory within the project, `www` for example.
 

@@ -43,11 +43,11 @@ prompt.
 The WP8 repo now includes code for building both WP7 + WP8 apps.  The
 repo has subdirectories for each: `wp7/` and `wp8/`.
 
-## Create a project
+## Create a Project
 
 There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 application.
 
-### Run the batch file to create and install the templates.
+### Run the Batch File to Create and Install the Templates
 
 - The root of the repo contains a `createTemplates.bat` file.
   Double-clicking it generates two `.zip` files:
@@ -64,7 +64,7 @@ Run the script :
 
     >createTemplates.bat -install
 
-### Use the create scripts on the command line
+### Use the Create Scripts on the Command Line
 
 Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
@@ -85,7 +85,7 @@ Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project
 
 Build and Run it
 
-## Building your project (cleans then builds)
+## Building the Project (Clean, then Build)
 
 * Debug
 
@@ -95,7 +95,7 @@ Build and Run it
 
     $ C:\path\to\my_new_project\cordova\build --release
 
-## Running your application
+## Running the App
 
 Run the 'run' command with the following *optional* parameters
 
