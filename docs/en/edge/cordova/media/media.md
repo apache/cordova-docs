@@ -141,7 +141,7 @@ platform-specific configuration settings described below:
 Some platforms may support this feature without requiring any special
 configuration.  See Platform Support for an overview.
 
-### Windows Phone Quirks
+## Windows Phone Quirks
 
 - Only one media file can be played back at a time.
 

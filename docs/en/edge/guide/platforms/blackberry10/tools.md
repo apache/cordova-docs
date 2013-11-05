@@ -39,7 +39,7 @@ with the `-h` or `-help` arguments, which are supported by all
 commands and which provide descriptions for each of the available
 arguments.
 
-## create
+## Create an App
 
 The `create` command creates a new project:
 
@@ -60,13 +60,13 @@ privileges.  If there's problem on OSX/Linux, run `sudo npm install`
 before using the `create` command. On Windows, run `npm install` in a
 command-line utility opened with administrator privileges.
 
-## target
+## Create a Target
 
 The `target` command allows you to manage the emulator or BlackBerry
 devices that you use to test your app. You can add or remove a target,
 or set a target as the default target.
 
-### Add a target
+### Add a Target
 
     <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
@@ -86,21 +86,21 @@ where
   token. This argument is required only when creating a debug
   token.
 
-### Remove a target
+### Remove a Target
 
     <path-to-project>/cordova/target remove <name>
 
-### Set a target as the default
+### Set a Target as the Default
 
     <path-to-project>/cordova/target default <name>
 
-## build
+## Build the App
 
 The `build` command builds the project as a .bar file. You can build
 your app in either release mode (which produces a signed .bar file) or
 in debug mode (which produces an unsigned .bar file).
 
-### Build your project in release mode
+### Build the App in Release Mode
 
     <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
 
@@ -112,7 +112,7 @@ where
 
 -   `-p | --params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
 
-### Build your project in debug mode
+### Build the Project in Debug Mode
 
     <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
 
@@ -146,7 +146,7 @@ app and deploys it to the default target. For example:
 
     <path-to-project>/cordova/build debug
 
-## run
+## Run the App
 
 The `run` command deploys the app's most recent build on the specified
 BlackBerry device or an emulator. To deploy your app, you need to
@@ -158,22 +158,21 @@ specify a target for the device or emulator:
 If `<target>` is a device, then it must be connected to your computer
 via USB cable, or else over the same Wi-Fi network as your computer.
 
-## plugin
+## Handle Plugins
 
-The `target` command allows you to add and remove plugins
-
-### Fetch a locally hosted plugin
+The `target` command allows you to add and remove plugins.  To fetch a
+locally hosted plugin:
 
     <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
-### View a list of installed plugins
+View a list of installed plugins:
 
     <path-to-project>/cordova/plugin ls
 
-### Add a plugin
+Add a plugin:
 
     <path-to-project>/cordova/plugin add <name>
 
-### Remove a plugin
+Remove a plugin:
 
     <path-to-project>/cordova/plugin rm <name>

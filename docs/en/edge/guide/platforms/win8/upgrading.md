@@ -28,7 +28,7 @@ version of the CLI.
 
 Cordova CLI support for Windows 8 was introduced in Cordova 3.1.0. To upgrade, we suggest creating a new Cordova CLI project and moving over all necessary assets.  
 
-## Upgrade to 2.9.0 from 2.8.0 ##
+## Upgrade to 2.9.0 from 2.8.0
 
 The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
 
@@ -38,7 +38,7 @@ The following commands should be done from within Visual Studio to be sure that 
 
 3. Build and test!
 
-## Upgrade to 2.8.0 from 2.7.0 ##
+## Upgrade to 2.8.0 from 2.7.0
 
 The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
 

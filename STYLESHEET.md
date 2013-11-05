@@ -176,7 +176,7 @@ immensely.
 
 * This Guide or section, not this document, page, or anything else
 
-## In-line Font Formatting
+## In-Line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
   interfaces, methods, properties, literal values, Unix commands,

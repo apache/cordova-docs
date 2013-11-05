@@ -135,7 +135,7 @@ The following global preferences apply to all platforms:
   in its `config.xml` file. If you specify `default` in the global
   `config.xml`, it translates to `auto` in the BlackBerry build.
 
-## Multi-platform Preferences
+## Multi-Platform Preferences
 
 The following preferences apply to more than one platform, but not to
 all of them:
