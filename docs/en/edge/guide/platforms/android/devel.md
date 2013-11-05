@@ -23,19 +23,21 @@ This section shows how to use Cordova's set of platform-centered shell
 tools to develop Android apps. This development path, discussed in the
 Overview, may offer you a greater range of development options than
 the cross-platform CLI tool described in The Command-Line Interface.
-Before using either development path, you must first configure the SDK
-environment as described in the Android Installation Guide.
+Before using either development path, you must first configure the
+Android SDK environment as described in the Android Installation
+Guide.
 
-To enable the shell tools detailed here, download Cordova from
+To enable shell tools for Android, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand each platform you wish to
-target, `android` in this case. The tools described here are typically
-available in the top-level `bin` directory, otherwise consult the
-__README__ file for more detailed directions.
+separate archives for each platform. Expand each you wish to target,
+`android` in this case. The relevant tools are typically available in
+the top-level `bin` directory, otherwise consult the __README__ file
+for more detailed directions.
 
 These tools allow you to create, build, and run apps.  For information
 on the command-line interface that enables plugin features, see Using
-Plugman to Manage Plugins. See Application Plugins for an overview.
+Plugman to Manage Plugins. See Application Plugins for details on how
+to develop plugins.
 
 ## Create a project
 

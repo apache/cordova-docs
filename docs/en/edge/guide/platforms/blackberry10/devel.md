@@ -32,7 +32,7 @@ more detailed directions.
 
 For information on the low-level command-line interface that enables
 plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+for details on how to develop plugins.
 
 If you need help with any command listed below, type the command along
 with the `-h` or `-help` arguments, which are supported by all
