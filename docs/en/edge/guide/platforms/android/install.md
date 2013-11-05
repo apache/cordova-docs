@@ -29,8 +29,7 @@ Android Development Guide.
 
 ## Requirements and Support
 
-See the [System Requirements](http://developer.android.com/sdk/index.html)
-for the Android SDK.
+See the Android SDK's [System Requirements](http://developer.android.com/sdk/index.html).
 
 Cordova supports Android 2.2, 2.3, and 4.x.  As a general rule,
 platforms are deprecated as they dip below 5% on Google's
@@ -42,11 +41,6 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-Developers should use the `cordova` utility in conjunction with
-the Android SDK.  See The Command-line Interface for
-information how to install it, add projects, then build and deploy a
-project.
-
 ## Install the SDK
 
 Install the Android SDK from
@@ -55,11 +49,11 @@ may be presented with a choice of where to install the SDK, otherwise
 move the downloaded `adt-bundle` tree to wherever you store
 development tools.
 
-For Cordova command-line tools to work, you need to include the SDK's
-`tools` and `platform-tools` directories in your PATH environment.  On
-Mac, you can use a text editor to create or modify the
-`~/.bash_profile` file, adding a line such as the following, depending
-on where the SDK installs:
+For Cordova command-line tools to work, or the CLI that is based upon
+them, you need to include the SDK's `tools` and `platform-tools`
+directories in your `PATH`.  On a Mac, you can use a text editor to
+create or modify the `~/.bash_profile` file, adding a line such as the
+following, depending on where the SDK installs:
 
         export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
@@ -68,18 +62,18 @@ this to make them available in the current session:
 
         $ source ~/.bash_profile
 
-To modify the PATH environment on Windows 7:
+To modify the `PATH` environment on Windows 7:
 
 * Click on the __Start__ menu in the lower-left corner of the desktop,
-  right-click on __Computer__, then click __Properties__.
+  right-click on __Computer__, then select __Properties__.
 
-* Click __Advanced System Settings__ in the column on the left.
+* Select __Advanced System Settings__ in the column on the left.
 
 * In the resulting dialog box, press __Environment Variables__.
 
 * Select the __PATH__ variable and press __Edit__.
 
-* Append the following to the PATH based on where you installed the
+* Append the following to the `PATH` based on where you installed the
   SDK, for example:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
@@ -87,31 +81,45 @@ To modify the PATH environment on Windows 7:
 * Save the value and close both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
-type `java`, and also type `ant`. Append to the PATH whichever fail to
-run:
+type `java`, and also type `ant`. Append to the `PATH` whichever of
+these fails to run:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
-## Open a Project in the SDK
+## Open a New Project in the SDK
 
-Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+At this point, to create a new project you can choose between the
+cross-platform CLI tool described in The Command-Line Interface, or
+the set of Android-specific shell tools detailed in the Android
+Development Guide. From within a source-code directory, here's the CLI
+approach:
 
-        $ cordova create hello com.example.hello "HelloWorld"
+        $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
         $ cordova build
 
-Once created, here's how to use the SDK to modify it:
+Here's the corresponding lower-level shell-tool approach for both Unix
+and Windows:
+
+        $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
+        C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+
+Here's how to use the SDK to modify it:
 
 * Launch the __Eclipse__ application.
 
 * Select the __New Project__ menu item.
 
-* Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
-        ![](img/guide/platforms/android/eclipse_new_project.png)
+* Choose __Android Project from Existing Code__ from the resulting
+  dialog box, and press __Next__:
 
-* Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
+  ![](img/guide/platforms/android/eclipse_new_project.png)
+
+* If you're using the CLI, navigate to the `hello` directory you
+  created for the project, then to the `platforms/android`
+  subdirectory. Alternately, if you use the `create` shell utility,
+  simply navigate to the `hello` directory.
 
 * Press __Finish__.
 
@@ -130,36 +138,37 @@ unresolved problems. If so, follow these additional steps:
 
 ## Deploy to Emulator
 
-You can use the `cordova` utility to run an app in an emulator, or you
-can run it within the SDK.  Either way, the SDK must first be
+You can use the `cordova` CLI utility to run an app in an emulator, or
+you can run it within the SDK.  Either way, the SDK must first be
 configured to display at least one device. To do so, use the Android
 SDK Manager, a Java application that runs separately from Eclipse.
 There are two ways to open it:
 
-* Run `android` on the command line.
+1. Run `android` on the command line.
 
-* From within Eclipse, press this toolbar icon:
+1. From within Eclipse, press this toolbar icon:
 
   ![](img/guide/platforms/android/eclipse_android_sdk_button.png)
 
-Once open, the Android SDK Manager displays various runtime libraries:
+1. Once open, the Android SDK Manager displays various runtime
+   libraries:
 
-![](img/guide/platforms/android/asdk_window.png)
+  ![](img/guide/platforms/android/asdk_window.png)
 
-Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
-choose any item from __Device Definitions__ in the resulting dialog
-box:
+1. Choose __Tools &rarr; Manage AVDs__ (Android Virtual Devices), then
+   choose any item from __Device Definitions__ in the resulting dialog
+   box:
 
-![](img/guide/platforms/android/asdk_device.png)
+  ![](img/guide/platforms/android/asdk_device.png)
 
-Press __Create AVD__, optionally modifying the name, then press __OK__
-to accept the changes:
+1. Press __Create AVD__, optionally modifying the name, then press
+   __OK__ to accept the changes:
 
-![](img/guide/platforms/android/asdk_newAVD.png)
+  ![](img/guide/platforms/android/asdk_newAVD.png)
 
-The AVD then appears in the __Android Virtual Devices__ list:
+  The AVD then appears in the __Android Virtual Devices__ list:
 
-![](img/guide/platforms/android/asdk_avds.png)
+  ![](img/guide/platforms/android/asdk_avds.png)
 
 To open the emulator as a separate application, select the AVD and
 press __Start__. It launches much as it would on the device, with
@@ -167,10 +176,14 @@ additional controls available for hardware buttons:
 
 ![](img/guide/platforms/android/asdk_emulator.png)
 
-At this point you can use the `cordova` utility to deploy the
+At this point you can use the `cordova` CLI utility to deploy the
 application to the emulator from the command line:
 
         $ cordova emulate android
+
+Otherwise use the alternate shell interface:
+
+        $ /path/to/project/cordova/run --emulator
 
 If instead you are working within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
@@ -178,17 +191,17 @@ specify an AVD if none are already open.
 
 For a faster experience, use an Intel-based emulator image:
 
-* Install one or more `Intel x86 Atom` System Images as well as the
-  `Intel Hardware Accelerated Execution Manager`, available under
-  __Extras__.
+1. Install one or more `Intel x86 Atom` System Images as well as the
+   `Intel Hardware Accelerated Execution Manager`, available under
+   __Extras__.
 
-* Run the Intel installer, which is available within your Android SDK
-  at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+1. Run the Intel installer, which is available within your Android SDK
+   at `extras/intel/Hardware_Accelerated_Execution_Manager`.
 
-* Create a new AVD with the target set to an Intel image.
+1. Create a new AVD with the target set to an Intel image.
 
-* When starting the emulator, ensure there are no error messages
-  indicating a failure to load HAX modules.
+1. When starting the emulator, ensure there are no error messages
+   indicating a failure to load HAX modules.
 
 ## Deploy to Device
 
