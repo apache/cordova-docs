@@ -19,20 +19,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone Development Guide
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+This section shows how to use Cordova's set of platform-centered shell
+tools to develop Windows Phone apps for both versions 7 and 8. This
+development path, discussed in the Overview, may offer you a greater
+range of development options for the Windows Phone platform than the
+cross-platform CLI tool described in The Command-Line Interface.
+Before using either development path, you must first configure the SDK
+environment as described in the Windows Phone 7 Installation Guide or
+the Windows Phone 8 Installation Guide.
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+To enable shell tools for Windows Phone development, download Cordova
+from [cordova.apache.org](http://cordova.apache.org). The download
+contains separate archives for each platform. Expand each you wish to
+target, `wp8` in this case, which in turn is forked into `wp7` and
+`wp8` subdirectories. The relevant tools are typically available
+in the top-level `bin` directory, otherwise consult the __README__
+file for more detailed directions.
+
+These tools allow you to create, build, and run apps.  For information
+on the command-line interface that enables plugin features, see Using
+Plugman to Manage Plugins. See Application Plugins for details on how
+to develop plugins.
 
 ## Windows Phone
 
@@ -40,7 +47,7 @@ The Windows Phone command-line tools support creating, building, and
 running new projects. Commands must be run from a cmd or powershell
 prompt.
 
-The WP8 repo now includes code for building both WP7 + WP8 apps.  The
+The `WP8` repo now includes code to build both WP7 and WP8 apps.  The
 repo has subdirectories for each: `wp7/` and `wp8/`.
 
 ## Create a project
