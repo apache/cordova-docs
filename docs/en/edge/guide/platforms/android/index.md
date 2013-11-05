@@ -56,10 +56,12 @@ project.
 ## Install the SDK
 
 Install the Android SDK from
-[developer.android.com/sdk](http://developer.android.com/sdk/).  You
-may be presented with a choice of where to install the SDK, otherwise
-move the downloaded `adt-bundle` tree to wherever you store
-development tools.
+[developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
+is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file.
+On windows, the adt-bundle is packaged with an installer.
+On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
+[More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
+
 
 For Cordova command-line tools to work, you need to include the SDK's
 `tools` and `platform-tools` directories in your PATH environment.  On
