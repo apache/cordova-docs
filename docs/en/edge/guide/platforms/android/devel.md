@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Development Guide
 
-This section shows how to use Cordova's set of platform-centered shell
+This guide shows how to use Cordova's set of platform-centered shell
 tools to develop Android apps. This development path, discussed in the
 Overview, may offer you a greater range of development options than
 the cross-platform CLI tool described in The Command-Line Interface.

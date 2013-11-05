@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone Development Guide
 
-This section shows how to use Cordova's set of platform-centered shell
+This guide shows how to use Cordova's set of platform-centered shell
 tools to develop Windows Phone apps for both versions 7 and 8. This
 development path, discussed in the Overview, may offer you a greater
 range of development options for the Windows Phone platform than the

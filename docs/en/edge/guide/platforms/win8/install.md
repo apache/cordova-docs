@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows 8 Installation Guide
 
-This section shows how to set up your SDK environment to deploy
+This guide shows how to set up your SDK environment to deploy
 Cordova apps for Windows 8. You need to install Visual Studio, the
 Windows SDK, regardless of whether you want to use the cross-platform
 Cordova CLI for development, or a narrower set of platform-centered

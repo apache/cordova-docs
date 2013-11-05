@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android WebViews
 
-This section shows how to embed a Cordova-enabled WebView component
+This guide shows how to embed a Cordova-enabled WebView component
 within a larger Android application. For details on how these
 components can communicate with each other, see Application Plugins.
 
