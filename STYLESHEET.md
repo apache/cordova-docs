@@ -210,6 +210,9 @@ immensely.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
+* "Plugman" in generic references, "plugman" when referring to actual
+  utility.
+
 * metadata.
 
 * Xcode.
