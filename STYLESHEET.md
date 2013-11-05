@@ -210,6 +210,8 @@ immensely.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
+* metadata.
+
 * Xcode.
 
 * "splash screen" unless specifically referring to API.
@@ -299,7 +301,7 @@ immensely.
 * __Plural Possessives__: E.g., Obtain a user's permission, but
   collectively, get users' permission.
 
-* Do not use use apostrophes for plural, so "...manages core APIs,"
+* Do not use apostrophes for plural, so "...manages core APIs,"
   not api's or API's. Only use apostrophes for possessives, e.g. "the
   API's members"
 

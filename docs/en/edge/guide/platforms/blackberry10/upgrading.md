@@ -55,7 +55,7 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
    described in The Command-line Interface.
 
-2. Add your platforms the the cordova project, for example: `cordova
+2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
 
 3. Copy the contents of the original project's `www` directory to the `www` directory
