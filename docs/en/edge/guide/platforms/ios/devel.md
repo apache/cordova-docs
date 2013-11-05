@@ -36,9 +36,9 @@ top-level `bin` directory, otherwise consult the __README__ file for
 more detailed directions.
 
 These tools allow you to create, build, and run apps.  For information
-on the command-line interface that enables plugin features, see Using
-Plugman to Manage Plugins. See Application Plugins for details on how
-to develop plugins.
+on the all-purpose command-line interface that enables plugin
+features, see Using Plugman to Manage Plugins. See Application Plugins
+for details on how to develop plugins.
 
 ## Create a project
 
