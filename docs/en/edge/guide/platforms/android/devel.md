@@ -19,20 +19,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Development Guide
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+This section shows how to use Cordova's set of platform-centered shell
+tools to develop Android apps. This development path, discussed in the
+Overview, may offer you a greater range of development options than
+the cross-platform CLI tool described in The Command-Line Interface.
+Before using either development path, you must first configure the SDK
+environment as described in the Android Installation Guide.
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+To enable the shell tools detailed here, download Cordova from
+[cordova.apache.org](http://cordova.apache.org). The download contains
+separate archives for each platform. Expand each platform you wish to
+target, `android` in this case. The tools described here are typically
+available in the top-level `bin` directory, otherwise consult the
+__README__ file for more detailed directions.
+
+These tools allow you to create, build, and run apps.  For information
+on the command-line interface that enables plugin features, see Using
+Plugman to Manage Plugins. See Application Plugins for an overview.
 
 ## Create a project
 
