@@ -210,6 +210,8 @@ immensely.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
+* Xcode.
+
 * "splash screen" unless specifically referring to API.
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
