@@ -26,7 +26,9 @@ config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
   application stays running in the background even after a `pause`
-  event fires.
+  event fires. Note: setting this to false will not kill the app after
+  a pause event, it will only halt execution of code in the cordova
+  webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>
 
