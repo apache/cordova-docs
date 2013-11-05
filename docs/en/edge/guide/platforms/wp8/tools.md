@@ -56,7 +56,7 @@ There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 applicatio
 
 Run the script :
 
-    >createTemplates.bat -install
+        >createTemplates.bat -install
 
 ### Use the create scripts on the command line
 
@@ -64,16 +64,16 @@ Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
 name.  Here is the syntax for both Windows Phone 7 and 8:
 
-    >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
-    >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
+        >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
+        >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
 
-    >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
-    >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
+        >PathToNewProject : The path to where you wish to create the project
+        >PackageName      : The namespace for the project (default is Cordova.Example)
+        >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
 
-    >examples:
-    >.\wp7\bin\create C:\path\to\my_new_project
-    >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
+        >examples:
+        >.\wp7\bin\create C:\path\to\my_new_project
+        >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
 
 Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)
 
@@ -83,11 +83,11 @@ Build and Run it
 
 * Debug
 
-    $ C:\path\to\my_new_project\cordova\build --debug
+        $ C:\path\to\my_new_project\cordova\build --debug
 
 * Release
 
-    $ C:\path\to\my_new_project\cordova\build --release
+        $ C:\path\to\my_new_project\cordova\build --release
 
 ## Running your application
 
@@ -97,11 +97,11 @@ Run the 'run' command with the following *optional* parameters
 
 * Build specification. This includes `--debug`, `--release`, or `--nobuild`.
 
-    $ C:\path\to\my_new_project\cordova\run [Target] [Build]
+        $ C:\path\to\my_new_project\cordova\run [Target] [Build]
 
 By default the `run` command will be called with `--emulator --debug` if flags are not provided.
 
 ## Cleaning
 
-    $ C:\path\to\my_new_project\cordova\clean
+        $ C:\path\to\my_new_project\cordova\clean
 

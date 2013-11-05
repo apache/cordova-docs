@@ -43,21 +43,21 @@ Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
 name.
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
 
 ## Build a project
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
 
 ## Run app on emulator
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
 
 ## Releasing
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
 
 ## Logging
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log
 

@@ -52,22 +52,22 @@ On Windows:
 
 * Append the Native SDK's install directory to the PATH, for example:
 
-    ;C:\bbndk\host_10_1_0_132\darwin\x86\usr\bin\
+        ;C:\bbndk\host_10_1_0_132\darwin\x86\usr\bin\
 
 On Mac and Linux:
 
 * Edit the `~/.bash_profile` file, adding a line such as the
   following, depending on where the Native SDK was installed:
 
-    $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
+        $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
 
   or for the 10.2 Native SDK:
 
-    $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
+        $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
 
 * Run the following to apply the change in the current session:
 
-    $ source ~/.bash_profile
+        $ source ~/.bash_profile
 
 ## Set up for Signing
 
@@ -89,10 +89,10 @@ Detailed instuctions can be found here:
 Use the `cordova` utility to set up a new project, as described in The
 Command-line Interface. For example, in a source-code directory:
  
-    $ cordova create hello com.example.hello
-    $ cd hello
-    $ cordova platform add blackberry10
-    $ cordova build
+        $ cordova create hello com.example.hello
+        $ cd hello
+        $ cordova platform add blackberry10
+        $ cordova build
 
 ## Deploy to Emulator
 
@@ -123,15 +123,15 @@ associates a target named _emu_ with the IP address displayed above.
 
 * On Windows:
 
-    $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
+        $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
 
 * On Mac/Linux:
 
-    $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
+        $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
 
 Then, run the `emulate` command to view the app:
 
-    $ cordova emulate blackberry10
+        $ cordova emulate blackberry10
 
 ## Deploy to Device
 
@@ -147,11 +147,11 @@ address, device password and PIN.
 
 * On Windows:
 
-    $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+        $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
 
 * On Mac/Linux:
 
-    $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
+        $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
 
 where:
 
@@ -161,7 +161,7 @@ where:
 
 Then, run the `run` command to view the app:
 
-    $ cordova run blackberry10
+        $ cordova run blackberry10
 
 If a debug token is not yet set up for the device, an error message
 prompts you to use the platform run script with the password you
@@ -169,11 +169,11 @@ provided when registering for signing keys.
 
 * On Windows:
 
-    $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
+        $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
 
 * On Mac/Linux:
 
-    $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
+        $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
 
 ## Debugging with WebInspector
 
@@ -195,11 +195,11 @@ syntax:
 
 * On Windows:
 
-    $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+        $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
 
 * On Mac/Linux:
 
-    $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+        $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
 
 The `--keystorepass` option specifies the password you defined when
 configuring your computer to sign applications.

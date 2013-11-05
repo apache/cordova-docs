@@ -43,7 +43,7 @@ arguments.
 
 The `create` command creates a new project:
 
-    bin/create <path-to-project> <project-package> <project-name>
+        bin/create <path-to-project> <project-package> <project-name>
 
 where
 
@@ -68,7 +68,7 @@ or set a target as the default target.
 
 ### Add a target
 
-    <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
+        <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
 where
 
@@ -88,11 +88,11 @@ where
 
 ### Remove a target
 
-    <path-to-project>/cordova/target remove <name>
+        <path-to-project>/cordova/target remove <name>
 
 ### Set a target as the default
 
-    <path-to-project>/cordova/target default <name>
+        <path-to-project>/cordova/target default <name>
 
 ## build
 
@@ -102,7 +102,7 @@ in debug mode (which produces an unsigned .bar file).
 
 ### Build your project in release mode
 
-    <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
+        <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
 
 where
 
@@ -114,7 +114,7 @@ where
 
 ### Build your project in debug mode
 
-    <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
+        <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
 
 where
 
@@ -144,7 +144,7 @@ installed a debug token, if that target is a BlackBerry device), you
 can run the script with no arguments, and the script will package your
 app and deploy it to the default target. For example:
 
-    <path-to-project>/cordova/build debug
+        <path-to-project>/cordova/build debug
 
 ## run
 
@@ -153,7 +153,7 @@ or an emulator. Before deploying the app, you must first create a
 target for the device or emulator you want to deploy the app to using
 the target script. The deploy script will deploy the most recent build of the app.
 
-    <path-to-project>/cordova/run <target>
+        <path-to-project>/cordova/run <target>
 
 where
 
@@ -168,16 +168,16 @@ The `target` command allows you to add and remove plugins
 
 ### Fetch a locally hosted plugin
 
-    <path-to-project>/cordova/plugin fetch <path-to-plugin>
+        <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
 ### View a list of installed plugins
 
-    <path-to-project>/cordova/plugin ls
+        <path-to-project>/cordova/plugin ls
 
 ### Add a plugin
 
-    <path-to-project>/cordova/plugin add <name>
+        <path-to-project>/cordova/plugin add <name>
 
 ### Remove a plugin
 
-    <path-to-project>/cordova/plugin rm <name>
+        <path-to-project>/cordova/plugin rm <name>

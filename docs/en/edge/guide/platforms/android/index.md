@@ -61,12 +61,12 @@ Mac, you can use a text editor to create or modify the
 `~/.bash_profile` file, adding a line such as the following, depending
 on where the SDK installs:
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+        export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
 This exposes SDK tools in newly opened terminal windows. Otherwise run
 this to make them available in the current session:
 
-    $ source ~/.bash_profile
+        $ source ~/.bash_profile
 
 To modify the PATH environment on Windows 7:
 
@@ -109,7 +109,7 @@ Once created, here's how to use the SDK to modify it:
 * Select the __New Project__ menu item.
 
 * Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
-    ![](img/guide/platforms/android/eclipse_new_project.png)
+        ![](img/guide/platforms/android/eclipse_new_project.png)
 
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
 
