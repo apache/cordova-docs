@@ -19,19 +19,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Android Installation Guide
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Android devices. See the following for more
-detailed platform-specific information:
-
-* Android Development Guide
-* Android Configuration
-* Android WebViews
-* Android Plugins
-* Upgrading Android
-
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
-current interface.
+This section shows how to set up your SDK environment to deploy
+Cordova apps for Android devices. You need to install the Android SDK
+regardless of whether you want to use the cross-platform Cordova CLI
+for development, or a narrower set of platform-centered command-line
+tools.  For a comparison of the two development paths, see the
+Overview.  For details on each, see The Command-Line Interface and the
+Android Development Guide.
 
 ## Requirements and Support
 

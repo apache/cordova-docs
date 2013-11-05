@@ -19,19 +19,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS Installation Guide
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for iOS devices such as iPhone and iPad. See the
-following for more detailed platform-specific information:
-
-* iOS Configuration
-* Upgrading iOS
-* iOS WebViews
-* iOS Plugins
-* iOS Development Guide
-
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
-current interface.
+This section shows how to set up your SDK environment to deploy
+Cordova apps for iOS devices. You need to install Xcode, iOS's SDK,
+regardless of whether you want to use the cross-platform Cordova CLI
+for development, or a narrower set of platform-centered command-line
+tools.  For a comparison of the two development paths, see the
+Overview.  For details on each, see The Command-Line Interface and the
+iOS Development Guide.
 
 ## Requirements and Support
 

@@ -19,17 +19,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows 8 Installation Guide
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Windows 8. See the following for more
-detailed platform-specific information:
+This section shows how to set up your SDK environment to deploy
+Cordova apps for Windows 8. You need to install Visual Studio, the
+Windows SDK, regardless of whether you want to use the cross-platform
+Cordova CLI for development, or a narrower set of platform-centered
+command-line tools.  For a comparison of the two development paths,
+see the Overview.  For details on each, see The Command-Line Interface
+and the Android Development Guide.
 
-* Upgrading Windows 8
-* Windows 8 Development Guide
-
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
-current interface.
-
+__NOTE__:
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
 Windows RT. MSDN now refers to this type of app as a _Windows Store_
 app, and this guide follows that convention. Also, in this guide

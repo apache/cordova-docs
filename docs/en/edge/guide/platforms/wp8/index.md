@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 8 devices. If you want to target
 both 7.5 and 8 devices, develop for Windows Phone 7 instead as
-detailed in the Windows Phone 7 Platform Guide.  Version 7 does not
+detailed in the Windows Phone 7 Installation Guide.  Version 7 does not
 have all the advanced features included in Internet Explorer 10, but
 implements the same set of APIs. Windows Phone 8 apps do _not_ run on
 Windows Phone 7 devices.
