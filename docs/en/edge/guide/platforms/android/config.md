@@ -30,7 +30,7 @@ config.xml File for information on global configuration options.
 
         <preference name="KeepRunning" value="false"/>
 
-- `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
+- `LoadUrlTimeoutValue` (number, default to `20000`, 20 seconds): When loading a
   page, the amount of time to wait before throwing a timeout error.
   This example specifies 10 seconds rather than 20:
 
