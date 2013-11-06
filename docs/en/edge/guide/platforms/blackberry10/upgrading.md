@@ -76,7 +76,7 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 
 ## Upgrading 2.8.0 Projects to 2.9.0
 
-BlackBerry 10:
+For BlackBerry 10:
 
 1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
 
@@ -90,7 +90,7 @@ BlackBerry 10:
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-### BlackBerryOS/Playbook
+For BlackBerryOS/Playbook:
 
 1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
 
@@ -112,8 +112,6 @@ BlackBerry 10:
 
 ## Upgrading 2.7.0 Projects to 2.8.0
 
-BlackBerry 10:
-
 BlackBerry 10 uses the new CLI tooling and manages core APIs as plugins. The instructions migrate your project to a new project, rather than updating an existing project, due to the complexity of updating an old project.
 Also note that the cordova js script file is now called 'cordova.js' and no longer contains a version string.
 
@@ -129,7 +127,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-BlackBerryOS/Playbook:
+For BlackBerryOS/Playbook:
 
 1. Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.8.0`.
 

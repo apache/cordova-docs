@@ -229,12 +229,9 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
 
-### Notes About the 2.0.0 Release
-
-The `config.xml` file will replace `cordova.xml` and `plugins.xml`.
-This new file is a combination of the previous two.  However, the old
-files are deprecated, and while currently still work, will cease
-working in a future release.
+In the 2.0.0 release, the `config.xml` file combines and replaces
+`cordova.xml` and `plugins.xml`.  The old files are deprecated, and
+while they still work in 2.0.0, will stop working in a future release.
 
 ## Upgrade to 1.9.0 from 1.8.1
 
@@ -250,13 +247,11 @@ working in a future release.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-### Notes About 1.9.0 Release
-
-Due to the introduction of the `CordovaWebView`, third-Party plugins
-may not work.  These plugins need to get a context from the
-`CordovaInterface` using `getContext()` or `getActivity()`.  If you
-are not an experienced Android developer, please contact the plugin
-maintainer and add this task to their bug tracker.
+Due to the introduction of the `CordovaWebView` in the 1.9.0 release,
+third-Party plugins may not work.  These plugins need to get a context
+from the `CordovaInterface` using `getContext()` or `getActivity()`.
+If you are not an experienced Android developer, please contact the
+plugin maintainer and add this task to their bug tracker.
 
 ## Upgrade to 1.8.0 from 1.8.0
 
