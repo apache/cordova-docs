@@ -172,7 +172,7 @@ Take a photo and retrieve the image's file location:
           smallImage.style.display = 'block';
 
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -192,7 +192,7 @@ Take a photo and retrieve the image's file location:
           largeImage.style.display = 'block';
 
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

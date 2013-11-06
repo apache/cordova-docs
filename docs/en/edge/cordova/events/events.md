@@ -44,7 +44,7 @@
 As of version 3.0, Cordova implements battery status and other
 device-level APIs as _plugins_. Access to all other events not related
 to battery status are enabled by default.  Use the CLI's `plugin`
-command, described in The Command-line Interface, to enable or disable
+command, described in The Command-Line Interface, to enable or disable
 battery events:
 
         $ cordova plugin add org.apache.cordova.battery-status

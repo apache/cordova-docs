@@ -58,8 +58,9 @@ immensely.
 
 * __Heading Content__: In reference doc, preserve case in titles and
   headings.  In guide doc: Initial Cap Words in Headings, Except for
-  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens.
-  No punctuation at the end of a heading; avoid punctuation within
+  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens,
+  when each segment is a word rather than a prefix, e.g.:. No
+  punctuation at the end of a heading; avoid punctuation within
   headings.  Do not prefix headings with numbers.
 
 * __Heading Fonts__: In reference doc, do not apply font formatting to
@@ -210,6 +211,16 @@ immensely.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
+* "In-line" rather than "inline" in ordinary text, e.g., outside of
+  technical terms.
+
+* "Plugman" in generic references, "plugman" when referring to actual
+  utility.
+
+* metadata.
+
+* Xcode.
+
 * "splash screen" unless specifically referring to API.
 
 * 'Directory', not 'folder'; may be exceptions in some GUI contexts
@@ -297,7 +308,7 @@ immensely.
 * __Plural Possessives__: E.g., Obtain a user's permission, but
   collectively, get users' permission.
 
-* Do not use use apostrophes for plural, so "...manages core APIs,"
+* Do not use apostrophes for plural, so "...manages core APIs,"
   not api's or API's. Only use apostrophes for possessives, e.g. "the
   API's members"
 

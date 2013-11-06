@@ -28,7 +28,7 @@ access to specific network domains and subdomains.
 Cordova adheres to the [W3C Widget Access][1] specification, which
 relies on the `<access>` element within the app's `config.xml` file to
 enable network access to specific domains. For projects that rely on
-the CLI workflow described in The Command-line Interface, this file is
+the CLI workflow described in The Command-Line Interface, this file is
 located in the project's top-level `www` directory. Otherwise for
 platform-specific development paths, locations are listed in the
 sections below. (See the various Platform Guides for more information
@@ -126,9 +126,7 @@ ways:
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)
 
-## iOS
-
-### Changed in 3.1.0:
+## iOS Changes in 3.1.0
 
 Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whilelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change your `config.xml` file in order to continue whitelisting the same set of resources as before.
 

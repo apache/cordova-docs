@@ -21,14 +21,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This guide shows how to modify Android projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
-## Upgrading to 3.1.0 from 3.0.0 ##
+## Upgrading to 3.1.0 from 3.0.0
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version. See The Command-line Interface.
+1. Update the `cordova` CLI version. See The Command-Line Interface.
 
 2. Run `cordova platform update android`
         
@@ -36,12 +36,12 @@ For projects not created with the cordova CLI, run:
 
         bin/update <project_path>
         
-## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in The Command-Line Interface.
 
-2. Add your platforms the the cordova project, for example: `cordova
+2. Add your platforms the cordova project, for example: `cordova
    platform add android`.
 
 3. Copy the contents of your project's `www` directory to the `www` directory
@@ -55,7 +55,7 @@ For projects not created with the cordova CLI, run:
    the CLI handles all core APIs as plugins, so they may need to be
    added. Only 3.0.0 plugins are compatible with the CLI.
 
-## Upgrade to 3.0.0 from 2.9.0 ##
+## Upgrade to 3.0.0 from 2.9.0
 
 1. Create a new Apache Cordova Android project.
 
@@ -75,7 +75,7 @@ For projects not created with the cordova CLI, run:
 
 1. Run `bin/update <project_path>`.
 
-## Upgrade to 2.8.0 from 2.7.0 ##
+## Upgrade to 2.8.0 from 2.7.0
 
 1. Remove `cordova-2.7.0.jar` from the project's `libs` directory.
 
@@ -95,7 +95,7 @@ For projects not created with the cordova CLI, run:
 
 8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.7.0 from 2.6.0 ##
+## Upgrade to 2.7.0 from 2.6.0
 
 1. Remove `cordova-2.6.0.jar` from the project's `libs` directory.
 
@@ -113,7 +113,7 @@ For projects not created with the cordova CLI, run:
 
 8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.6.0 from 2.5.0 ##
+## Upgrade to 2.6.0 from 2.5.0
 
 1. Remove `cordova-2.5.0.jar` from the project's `libs` directory.
 
@@ -133,7 +133,7 @@ For projects not created with the cordova CLI, run:
 
 Run `bin/update <project>` with the project path listed in the Cordova Source directory.
 
-## Upgrade to 2.5.0 from 2.4.0 ##
+## Upgrade to 2.5.0 from 2.4.0
 
 1. Remove `cordova-2.4.0.jar` from the project's `libs` directory.
 
@@ -151,7 +151,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.4.0 from 2.3.0 ##
+## Upgrade to 2.4.0 from 2.3.0
 
 1. Remove `cordova-2.3.0.jar` from the project's `libs` directory.
 
@@ -167,7 +167,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.3.0 from 2.2.0 ##
+## Upgrade to 2.3.0 from 2.2.0
 
 1. Remove `cordova-2.2.0.jar` from the project's `libs` directory.
 
@@ -183,7 +183,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.2.0 from 2.1.0 ##
+## Upgrade to 2.2.0 from 2.1.0
 
 1. Remove `cordova-2.1.0.jar` from the project's `libs` directory.
 
@@ -199,7 +199,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.1.0 from 2.0.0 ##
+## Upgrade to 2.1.0 from 2.0.0
 
 1. Remove `cordova-2.0.0.jar` from the project's `libs` directory.
 
@@ -215,7 +215,7 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
 
-## Upgrade to 2.0.0 from 1.9.0 ##
+## Upgrade to 2.0.0 from 1.9.0
 
 1. Remove `cordova-1.9.0.jar` from the project's `libs` directory.
 
@@ -229,14 +229,11 @@ Run `bin/update <project>` with the project path listed in the Cordova Source di
 
 6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
 
-### Notes about 2.0.0 release
+In the 2.0.0 release, the `config.xml` file combines and replaces
+`cordova.xml` and `plugins.xml`.  The old files are deprecated, and
+while they still work in 2.0.0, will stop working in a future release.
 
-The `config.xml` file will replace `cordova.xml` and `plugins.xml`.
-This new file is a combination of the previous two.  However, the old
-files are deprecated, and while currently still work, will cease
-working in a future release.
-
-## Upgrade to 1.9.0 from 1.8.1 ##
+## Upgrade to 1.9.0 from 1.8.1
 
 1. Remove `cordova-1.8.0.jar` from the project's `libs` directory.
 
@@ -250,15 +247,13 @@ working in a future release.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-### Notes about 1.9.0 release
+Due to the introduction of the `CordovaWebView` in the 1.9.0 release,
+third-Party plugins may not work.  These plugins need to get a context
+from the `CordovaInterface` using `getContext()` or `getActivity()`.
+If you are not an experienced Android developer, please contact the
+plugin maintainer and add this task to their bug tracker.
 
-Due to the introduction of the `CordovaWebView`, third-Party plugins
-may not work.  These plugins need to get a context from the
-`CordovaInterface` using `getContext()` or `getActivity()`.  If you
-are not an experienced Android developer, please contact the plugin
-maintainer and add this task to their bug tracker.
-
-## Upgrade to 1.8.0 from 1.8.0 ##
+## Upgrade to 1.8.0 from 1.8.0
 
 1. Remove `cordova-1.8.0.jar` from the project's `libs` directory.
 
@@ -272,7 +267,7 @@ maintainer and add this task to their bug tracker.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.8.0 from 1.7.0
 
 1. Remove `cordova-1.7.0.jar` from the project's `libs` directory.
 
@@ -286,7 +281,7 @@ maintainer and add this task to their bug tracker.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.8.0 from 1.7.0
 
 1. Remove `cordova-1.7.0.jar` from the project's `libs` directory.
 
@@ -300,7 +295,7 @@ maintainer and add this task to their bug tracker.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.7.0 from 1.6.1 ##
+## Upgrade to 1.7.0 from 1.6.1
 
 1. Remove `cordova-1.6.1.jar` from the project's `libs` directory.
 
@@ -312,7 +307,7 @@ maintainer and add this task to their bug tracker.
 
 5. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.6.1 from 1.6.0 ##
+## Upgrade to 1.6.1 from 1.6.0
 
 1. Remove `cordova-1.6.0.jar` from the project's `libs` directory.
 
@@ -324,7 +319,7 @@ maintainer and add this task to their bug tracker.
 
 5. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.6.0 from 1.5.0 ##
+## Upgrade to 1.6.0 from 1.5.0
 
 1. Remove `cordova-1.5.0.jar` from the project's `libs` directory.
 
@@ -340,7 +335,7 @@ maintainer and add this task to their bug tracker.
 
 7. Replace `res/xml/phonegap.xml` with `res/xml/cordova.xml` to match `framework/res/xml/cordova.xml`.
 
-## Upgrade to 1.5.0 from 1.4.0##
+## Upgrade to 1.5.0 from 1.4.0
 
 1. Remove `phonegap-1.4.0.jar` from the project's `libs` directory.
 
@@ -356,7 +351,7 @@ maintainer and add this task to their bug tracker.
 
 7. Replace `res/xml/phonegap.xml` with `res/xml/cordova.xml` to match `framework/res/xml/cordova.xml`.
 
-## Upgrade to 1.4.0 from 1.3.0 ##
+## Upgrade to 1.4.0 from 1.3.0
 
 1. Remove `phonegap-1.3.0.jar` from the project's `libs` directory.
 
@@ -372,7 +367,7 @@ maintainer and add this task to their bug tracker.
 
 7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
 
-## Upgrade to 1.3.0 from 1.2.0 ##
+## Upgrade to 1.3.0 from 1.2.0
 
 1. Remove `phonegap-1.2.0.jar` from the project's `libs` directory.
 
@@ -388,7 +383,7 @@ maintainer and add this task to their bug tracker.
 
 7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
 
-## Upgrade to 1.2.0 from 1.1.0 ##
+## Upgrade to 1.2.0 from 1.1.0
 
 1. Remove `phonegap-1.1.0.jar` from the project's `libs` directory.
 
@@ -404,7 +399,7 @@ maintainer and add this task to their bug tracker.
 
 7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
 
-## Upgrade to 1.1.0 from 1.0.0 ##
+## Upgrade to 1.1.0 from 1.0.0
 
 1. Remove `phonegap-1.0.0.jar` from the project's `libs` directory.
 
@@ -418,7 +413,7 @@ maintainer and add this task to their bug tracker.
 
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
-## Upgrade to 1.0.0 from 0.9.6 ##
+## Upgrade to 1.0.0 from 0.9.6
 
 1. Remove `phonegap-0.9.6.jar` from the project's `libs` directory.
 

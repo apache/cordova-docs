@@ -21,13 +21,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the
+of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
-## Upgrade to 3.1.0 from 3.0.0 ##
+## Upgrade to 3.1.0 from 3.0.0
 
 1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in The Command-Line Interface.
 
 2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
@@ -50,12 +50,12 @@ version of the CLI.
 
 Please note that the CLI supports the BlackBerry10 platform exclusively. For PlayBook and BBOS, please see Cordova version 2.9.0 and below.
 
-## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in The Command-Line Interface.
 
-2. Add your platforms the the cordova project, for example: `cordova
+2. Add your platforms to the cordova project, for example: `cordova
    platform add blackberry10`.
 
 3. Copy the contents of the original project's `www` directory to the `www` directory
@@ -74,9 +74,9 @@ Please note that the CLI supports the BlackBerry10 platform exclusively. For Pla
 
 7. Build and test.
 
-## Upgrading 2.8.0 projects to 2.9.0 ##
+## Upgrading 2.8.0 Projects to 2.9.0
 
-BlackBerry 10:
+For BlackBerry 10:
 
 1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
 
@@ -90,7 +90,7 @@ BlackBerry 10:
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-### BlackBerryOS/Playbook ###
+For BlackBerryOS/Playbook:
 
 1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
 
@@ -110,9 +110,7 @@ BlackBerry 10:
 
 9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
 
-## Upgrading 2.7.0 projects to 2.8.0 ##
-
-BlackBerry 10:
+## Upgrading 2.7.0 Projects to 2.8.0
 
 BlackBerry 10 uses the new CLI tooling and manages core APIs as plugins. The instructions migrate your project to a new project, rather than updating an existing project, due to the complexity of updating an old project.
 Also note that the cordova js script file is now called 'cordova.js' and no longer contains a version string.
@@ -129,7 +127,7 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-BlackBerryOS/Playbook:
+For BlackBerryOS/Playbook:
 
 1. Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.8.0`.
 
@@ -149,7 +147,7 @@ BlackBerryOS/Playbook:
 
 9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
 
-## Upgrading 2.6.0 projects to 2.7.0 ##
+## Upgrading 2.6.0 Projects to 2.7.0
 
 1. Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.7.0`.
 
@@ -169,7 +167,7 @@ BlackBerryOS/Playbook:
 
 9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
 
-## Upgrade to 2.6.0 from 2.5.0 ##
+## Upgrade to 2.6.0 from 2.5.0
 
 Updating the PhoneGap download directory:
 
@@ -201,7 +199,7 @@ Updating the example/ directory or migrating an existing project:
 
 5. Update your HTML to use the new `cordova-2.6.0.js` file.
 
-## Upgrade to 2.5.0 from 2.4.0 ##
+## Upgrade to 2.5.0 from 2.4.0
 
 Updating the PhoneGap download directory:
 
@@ -233,7 +231,7 @@ Updating the example/ directory or migrating an existing project:
 
 5. Update your HTML to use the new `cordova-2.5.0.js` file.
 
-## Upgrade to 2.4.0 from 2.3.0 ##
+## Upgrade to 2.4.0 from 2.3.0
 
 Updating just the `www` directory:
 
@@ -267,7 +265,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 8. Open the `www/` directory and update your HTML to use the new `cordova-2.4.0.js` file.
 
-## Upgrade to 2.3.0 from 2.2.0 ##
+## Upgrade to 2.3.0 from 2.2.0
 
 Updating just the `www` directory:
 
@@ -301,7 +299,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 8. Open the `www/` directory and update your HTML to use the new `cordova-2.3.0.js` file.
 
-## Upgrade to 2.2.0 from 2.1.0 ##
+## Upgrade to 2.2.0 from 2.1.0
 
 Updating just the www directory:
 
@@ -335,7 +333,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 8. Open the `www/` directory and update your HTML to use the new `cordova-2.2.0.js` file.
 
-## Upgrade to 2.1.0 from 2.0.0 ##
+## Upgrade to 2.1.0 from 2.0.0
 
 Updating just the `www` directory:
 
@@ -366,7 +364,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 7. Open the `www/` directory and update your HTML to use the new `cordova-2.1.0.js` file.
 
-## Upgrade to 2.0.0 from 1.9.0 ##
+## Upgrade to 2.0.0 from 1.9.0
 
 Updating just the `www` directory:
 
@@ -423,7 +421,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 - To upgrade to 1.8.0, please go from 1.7.0
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.8.0 from 1.7.0
 
 Updating just the `www` directory:
 
