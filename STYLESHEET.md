@@ -176,7 +176,7 @@ immensely.
 
 * This Guide or section, not this document, page, or anything else
 
-## In-Line Font Formatting
+## Inline Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
   interfaces, methods, properties, literal values, Unix commands,
@@ -190,13 +190,13 @@ immensely.
 
 * Do _not_ use ALL CAPS for emphasis. (Exception: in commented code)
 
-* Do _not_ use "quote characters" to deliniate in-line text unless
+* Do _not_ use "quote characters" to deliniate inline text unless
   required as part of a value. E.g., not OK to refer to the
   "text-align" property. OK to set the CSS `text-align` property to
   `left`, and the `content` property to `"This is some text."`
   (Exception: within code comments)
 
-* Do not combine in-line formatting such as _`monospace italic`_.
+* Do not combine inline formatting such as _`monospace italic`_.
 
 * Use the markup system's shorthand characters rather than embedded
   HTML `<em>...</em>` or `<code>...</code>`.
@@ -209,6 +209,8 @@ immensely.
   <!--RE\bs?he\b--> <!--RE\b(his|her)\b-->
 
 * WebView, not Webview. (OK to use lowercase webview in code)
+
+* Inline, not in-line
 
 * "Plugman" in generic references, "plugman" when referring to actual
   utility.
