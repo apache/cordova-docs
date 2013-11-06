@@ -41,7 +41,7 @@ For CLI projects:
 
 2. Run `cordova platform update ios`
         
-### iOS 7 Issues
+iOS 7 Issues:
 
 1. Remove `width=device-width, height=device-height` from the
    `index.html` file's `viewport` `meta` tag. (See [the relevent
@@ -50,7 +50,7 @@ For CLI projects:
 2. Update your media, media-capture and splashscreen core plugins for
    iOS 7 support.
 
-### Xcode 5 Issues
+Xcode 5 Issues:
 
 1. Update your Project Settings if Xcode 5 prompts you to do so (in the Issues Navigator).
 
