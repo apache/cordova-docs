@@ -64,21 +64,21 @@ this to make them available in the current session:
 
 To modify the `PATH` environment on Windows 7:
 
-* Click on the __Start__ menu in the lower-left corner of the desktop,
-  right-click on __Computer__, then select __Properties__.
+1. Click on the __Start__ menu in the lower-left corner of the desktop,
+   right-click on __Computer__, then select __Properties__.
 
-* Select __Advanced System Settings__ in the column on the left.
+1. Select __Advanced System Settings__ in the column on the left.
 
-* In the resulting dialog box, press __Environment Variables__.
+1. In the resulting dialog box, press __Environment Variables__.
 
-* Select the __PATH__ variable and press __Edit__.
+1. Select the __PATH__ variable and press __Edit__.
 
-* Append the following to the `PATH` based on where you installed the
-  SDK, for example:
+1. Append the following to the `PATH` based on where you installed the
+   SDK, for example:
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+1. Save the value and close both dialog boxes.
 
 You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the `PATH` whichever of
@@ -107,34 +107,34 @@ and Windows:
 
 Here's how to use the SDK to modify it:
 
-* Launch the __Eclipse__ application.
+1. Launch the __Eclipse__ application.
 
-* Select the __New Project__ menu item.
+1. Select the __New Project__ menu item.
 
-* Choose __Android Project from Existing Code__ from the resulting
-  dialog box, and press __Next__:
+1. Choose __Android Project from Existing Code__ from the resulting
+   dialog box, and press __Next__:
 
   ![](img/guide/platforms/android/eclipse_new_project.png)
 
-* If you're using the CLI, navigate to the `hello` directory you
-  created for the project, then to the `platforms/android`
-  subdirectory. Alternately, if you use the `create` shell utility,
-  simply navigate to the `hello` directory.
+1. If you're using the CLI, navigate to the `hello` directory you
+   created for the project, then to the `platforms/android`
+   subdirectory. Alternately, if you use the `create` shell utility,
+   simply navigate to the `hello` directory.
 
-* Press __Finish__.
+1. Press __Finish__.
 
 Once the Eclipse window opens, a red __X__ may appear to indicate
 unresolved problems. If so, follow these additional steps:
 
-* Right-click on the project directory.
+1. Right-click on the project directory.
 
-* In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
+1. In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
 
-* For the project build target, select the highest Android API level you have installed.
+1. For the project build target, select the highest Android API level you have installed.
 
-* Click __OK__.
+1. Click __OK__.
 
-* Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
+1. Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
 ## Deploy to Emulator
 
