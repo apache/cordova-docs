@@ -27,7 +27,7 @@ detailed platform-specific information:
 * Windows 8 Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and

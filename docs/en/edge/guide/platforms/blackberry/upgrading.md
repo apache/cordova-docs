@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to modify BlackBerry projects to upgrade from
 older versions of Cordova.  These instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See The Command-line Interface for information
+`cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
 ## Upgrading 2.8.0 Projects to 2.9.0
