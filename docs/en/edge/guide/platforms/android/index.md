@@ -30,7 +30,7 @@ detailed platform-specific information:
 * Android Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -49,7 +49,7 @@ NOTE, doc said:
 -->
 
 Developers should use the `cordova` utility in conjunction with
-the Android SDK.  See The Command-line Interface for
+the Android SDK.  See The Command-Line Interface for
 information how to install it, add projects, then build and deploy a
 project.
 
@@ -103,7 +103,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello

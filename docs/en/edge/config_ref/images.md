@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This section shows how to configure an app's icon and optional splash
 screen for various platforms, both when working in the Cordova CLI
-(described in The Command-line Interface) or using platform-specific
+(described in The Command-Line Interface) or using platform-specific
 SDK tools (detailed in the Platform Guides).
 
 ## Configuring Icons in the CLI

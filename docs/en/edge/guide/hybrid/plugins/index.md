@@ -44,7 +44,7 @@ for guidance.
 ## Building a Plugin
 
 Application developers use the CLI's `plugin add` command (discussed
-in The Command-line Interface) to apply a plugin to a project. The
+in The Command-Line Interface) to apply a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
@@ -96,7 +96,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-The Command-line Interface.  Make sure the app's `index.html` home
+The Command-Line Interface.  Make sure the app's `index.html` home
 page reference the name of the plugin's JavaScript interface, as if it
 were in the same source directory:
 
@@ -197,7 +197,7 @@ registry (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
 to any other `npmjs`-based registry. Other developers can install it
 automatically using either `plugman` or the Cordova CLI.  (For details
 on each development path, see Using Plugman to Manage Plugins and The
-Command-line Interface.)
+Command-Line Interface.)
 
 To publish a plugin you need to use the `plugman` tool and go through
 the following steps:

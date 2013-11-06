@@ -58,8 +58,9 @@ immensely.
 
 * __Heading Content__: In reference doc, preserve case in titles and
   headings.  In guide doc: Initial Cap Words in Headings, Except for
-  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens.
-  No punctuation at the end of a heading; avoid punctuation within
+  Short Prepositions or Conjunctions. Also Init-Cap Around Hyphens,
+  when each segment is a word rather than a prefix, e.g.:. No
+  punctuation at the end of a heading; avoid punctuation within
   headings.  Do not prefix headings with numbers.
 
 * __Heading Fonts__: In reference doc, do not apply font formatting to
@@ -176,7 +177,7 @@ immensely.
 
 * This Guide or section, not this document, page, or anything else
 
-## Inline Font Formatting
+## In-line Font Formatting
 
 * Use `monospace` for all-purpose nouns used in programming, e.g.: API
   interfaces, methods, properties, literal values, Unix commands,
@@ -190,13 +191,13 @@ immensely.
 
 * Do _not_ use ALL CAPS for emphasis. (Exception: in commented code)
 
-* Do _not_ use "quote characters" to deliniate inline text unless
+* Do _not_ use "quote characters" to deliniate in-line text unless
   required as part of a value. E.g., not OK to refer to the
   "text-align" property. OK to set the CSS `text-align` property to
   `left`, and the `content` property to `"This is some text."`
   (Exception: within code comments)
 
-* Do not combine inline formatting such as _`monospace italic`_.
+* Do not combine in-line formatting such as _`monospace italic`_.
 
 * Use the markup system's shorthand characters rather than embedded
   HTML `<em>...</em>` or `<code>...</code>`.
@@ -210,7 +211,8 @@ immensely.
 
 * WebView, not Webview. (OK to use lowercase webview in code)
 
-* Inline, not in-line
+* "In-line" rather than "inline" in ordinary text, e.g., outside of
+  technical terms.
 
 * "Plugman" in generic references, "plugman" when referring to actual
   utility.
