@@ -25,8 +25,7 @@ For BlackBerry 10, you need to use a different SDK environment,
 described in the BlackBerry 10 Platform Guide. You can't use the
 Cordova CLI (described in The Command-Line Interface) for development
 prior to version 10. Instead, you develop with a set of
-platform-centered shell tools described in BlackBerry Development
-Guide.
+platform-centered shell tools described in the BlackBerry Shell Tool Guide.
 
 ## Requirements and Support
 

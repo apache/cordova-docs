@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Development Guide
+# Android Shell Tool Guide
 
 This guide shows how to use Cordova's set of platform-centered shell
 tools to develop Android apps. This development path, discussed in the

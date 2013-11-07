@@ -40,7 +40,7 @@ a lower-level alternative to the `cordova` command-line utility.
 ## Android
 
 * Android Platform Guide
-* Android Development Guide
+* Android Shell Tool Guide
 * Android Configuration
 * Android Plugins
 * Android WebViews
@@ -49,21 +49,21 @@ a lower-level alternative to the `cordova` command-line utility.
 ## BlackBerry
 
 * BlackBerry Platform Guide
-* BlackBerry Development Guide
+* BlackBerry Shell Tool Guide
 * BlackBerry Configuration
 * Upgrading BlackBerry
 
 ## BlackBerry 10
 
 * BlackBerry 10 Platform Guide
-* BlackBerry 10 Development Guide
+* BlackBerry 10 Shell Tool Guide
 * BlackBerry Configuration
 * BlackBerry 10 Plugins
 
 ## iOS
 
 * iOS Platform Guide
-* iOS Development Guide
+* iOS Shell Tool Guide
 * iOS Configuration
 * iOS Plugins
 * iOS WebViews
@@ -73,13 +73,13 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Windows Phone 8 Platform Guide
 * Windows Phone 7 Platform Guide
-* Windows Phone Development Guide
+* Windows Phone Shell Tool Guide
 * Upgrading Windows Phone
 
 ## Windows 8
 
 * Windows 8 Platform Guide
-* Windows 8 Development Guide
+* Windows 8 Shell Tool Guide
 * Upgrading Windows 8
 
 ## Tizen

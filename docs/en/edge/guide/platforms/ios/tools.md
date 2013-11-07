@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# iOS Development Guide
+# iOS Shell Tool Guide
 
 This guide shows how to use Cordova's set of platform-centered shell
 tools to develop iOS apps. This development path, discussed in the

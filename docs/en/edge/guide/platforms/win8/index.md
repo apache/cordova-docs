@@ -25,7 +25,7 @@ Windows SDK, regardless of whether you want to use the cross-platform
 Cordova CLI for development, or a narrower set of platform-centered
 command-line tools.  For a comparison of the two development paths,
 see the Overview.  For details on each, see The Command-Line Interface
-and the Android Development Guide.
+and the Android Shell Tool Guide.
 
 __NOTE__:
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
