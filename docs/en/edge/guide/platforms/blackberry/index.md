@@ -17,12 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry Installation Guide
+# BlackBerry Platform Guide
 
 This guide shows how to set up your SDK environment to deploy
 Cordova apps for BlackBerry devices prior to BlackBerry version 10.
 For BlackBerry 10, you need to use a different SDK environment,
-described in the BlackBerry 10 Installation Guide. You can't use the
+described in the BlackBerry 10 Platform Guide. You can't use the
 Cordova CLI (described in The Command-Line Interface) for development
 prior to version 10. Instead, you develop with a set of
 platform-centered shell tools described in BlackBerry Development

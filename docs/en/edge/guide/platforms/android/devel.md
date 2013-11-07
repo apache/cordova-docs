@@ -26,7 +26,7 @@ the cross-platform CLI tool described in The Command-Line Interface.
 For example, you need to use shell tools when deploying a custom
 Cordova WebView alongside native components.  Before using either
 development path, you must first configure the Android SDK environment
-as described in the Android Installation Guide.
+as described in the Android Platform Guide.
 
 To enable shell tools for Android, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). The download contains

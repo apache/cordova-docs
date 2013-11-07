@@ -39,7 +39,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## Android
 
-* Android Installation Guide
+* Android Platform Guide
 * Android Development Guide
 * Android Configuration
 * Android Plugins
@@ -48,21 +48,21 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## BlackBerry
 
-* BlackBerry Installation Guide
+* BlackBerry Platform Guide
 * BlackBerry Development Guide
 * BlackBerry Configuration
 * Upgrading BlackBerry
 
 ## BlackBerry 10
 
-* BlackBerry 10 Installation Guide
+* BlackBerry 10 Platform Guide
 * BlackBerry 10 Development Guide
 * BlackBerry Configuration
 * BlackBerry 10 Plugins
 
 ## iOS
 
-* iOS Installation Guide
+* iOS Platform Guide
 * iOS Development Guide
 * iOS Configuration
 * iOS Plugins
@@ -71,18 +71,18 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## Windows Phone
 
-* Windows Phone 8 Installation Guide
-* Windows Phone 7 Installation Guide
+* Windows Phone 8 Platform Guide
+* Windows Phone 7 Platform Guide
 * Windows Phone Development Guide
 * Upgrading Windows Phone
 
 ## Windows 8
 
-* Windows 8 Installation Guide
+* Windows 8 Platform Guide
 * Windows 8 Development Guide
 * Upgrading Windows 8
 
 ## Tizen
 
-* Tizen Installation Guide
+* Tizen Platform Guide
 

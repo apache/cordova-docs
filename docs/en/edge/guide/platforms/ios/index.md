@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# iOS Installation Guide
+# iOS Platform Guide
 
 This guide shows how to set up your SDK environment to deploy
 Cordova apps for iOS devices. You need to install Xcode, iOS's SDK,

@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone 7 Installation Guide
+# Windows Phone 7 Platform Guide
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 7 devices.  Apps also run on

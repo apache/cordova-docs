@@ -25,8 +25,8 @@ development path, discussed in the Overview, may offer you a greater
 range of development options for the Windows Phone platform than the
 cross-platform CLI tool described in The Command-Line Interface.
 Before using either development path, you must first configure the SDK
-environment as described in the Windows Phone 7 Installation Guide or
-the Windows Phone 8 Installation Guide.
+environment as described in the Windows Phone 7 Platform Guide or
+the Windows Phone 8 Platform Guide.
 
 To enable shell tools for Windows Phone development, download Cordova
 from [cordova.apache.org](http://cordova.apache.org). The download

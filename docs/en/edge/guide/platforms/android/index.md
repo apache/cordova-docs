@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Installation Guide
+# Android Platform Guide
 
 This guide shows how to set up your SDK environment to deploy Cordova
 apps for Android devices, and how to optionally use Android-centered

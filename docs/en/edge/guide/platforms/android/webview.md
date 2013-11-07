@@ -24,7 +24,7 @@ within a larger Android application. For details on how these
 components can communicate with each other, see Application Plugins.
 
 If you're unfamiliar with Android, you should first familiarize
-yourself with the Android Installation Guide and have the latest Android
+yourself with the Android Platform Guide and have the latest Android
 SDK installed before you attempt the more unusual development option
 of embedding a WebView.  Starting with Cordova 1.9, the Android
 platform relies on a `CordovaWebView` component, which builds on a
