@@ -91,6 +91,9 @@ provides your project with a reverse domain-style identifier, and the
 `HelloWorld` provides the application's display text. You can edit
 both of these values later in the `config.xml` file.
 
+## Project Directory Structure
+
+
 ## Add Platforms
 
 All subsequent commands need to be run within the project's directory,
