@@ -131,9 +131,7 @@ The following global preferences apply to all platforms:
   __NOTE__: The `default` value means _both_ landscape and portrait
   orientations are enabled.  If you want to use each platform's
   default settings (usually portrait-only), leave this tag out of the
-  `config.xml` file. Also, BlackBerry uses `auto` instead of `default`
-  in its `config.xml` file. If you specify `default` in the global
-  `config.xml`, it translates to `auto` in the BlackBerry build.
+  `config.xml` file.
 
 ## Multi-Platform Preferences
 
