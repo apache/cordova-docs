@@ -82,27 +82,6 @@ To uninstall a plugin, you simply pass the `--uninstall` flag and provide the pl
 
     $ plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
 
-## Searching for a Plugin
-
-You can use Plugman to search the [Plugin registry](http://plugins.cordova.io) for plugin id's that match the given space separated list of keywords.
-
-    plugman search <plugin keywords>
-
-## Changing the Plugin Registry
-
-You can get or set the URL of the current plugin registry that plugman is using. Generally you should leave this set at http://registry.cordova.io unless you want to use a third party plugin registry.
-
-    plugman config set registry <url-to-registry>
-    plugman config get registry
-
-## Get Plugin Information
-
-You can get information about any specific plugin stored in the plugin repository with:
-
-    plugman info <id>
-
-This will contact the plugin registry and fetch information such as the plugin's version number.
-
 ## Help Commands
 
 Plugman features a global help command which may help you if you get stuck or are experiencing problems. It will display
@@ -110,7 +89,10 @@ a list of all available Plugman commands and their syntax:
 
     plugman -help
     plugman  # same as above
-    
+
+   **NOTE**: `plugman -help` may show some additional registry-related commands. These commands are for plugin developers and may not be implemented on third-party plugin registries.
+
+
 You can also append the `--debug|-d` flag to any Plugman command to run that command in verbose mode, which will display
 any internal debugging messages as they are emitted and may help you track down problems like missing files. 
 
@@ -120,6 +102,33 @@ any internal debugging messages as they are emitted and may help you track down 
 Finally, you can use the `--version|-v` flag to see which version of Plugman you are using.
 
     plugman -v
+    
+## Registry Actions
+
+There are a number of plugman commands that can be used for interacting with the [Plugin registry](http://plugins.cordova.io).
+Please note that these registry commands are specific to the _plugins.cordova.io_ plugin registry and may not be implemented by
+third-party plugin registries.
+
+### Searching for a Plugin
+
+You can use Plugman to search the [Plugin registry](http://plugins.cordova.io) for plugin id's that match the given space separated list of keywords.
+
+    plugman search <plugin keywords>
+
+### Changing the Plugin Registry
+
+You can get or set the URL of the current plugin registry that plugman is using. Generally you should leave this set at http://registry.cordova.io unless you want to use a third party plugin registry.
+
+    plugman config set registry <url-to-registry>
+    plugman config get registry
+
+### Get Plugin Information
+
+You can get information about any specific plugin stored in the plugin repository with:
+
+    plugman info <id>
+
+This will contact the plugin registry and fetch information such as the plugin's version number.
 
 ## Installing Core Plugins
 

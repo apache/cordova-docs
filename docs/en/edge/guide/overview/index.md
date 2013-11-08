@@ -70,44 +70,43 @@ components to communicate with each other.
 
 ## Development Paths
 
-As of version 3.X, you can use two basic basic workflows to create
+As of version 3.0, you can use two basic workflows to create
 a mobile application. While you can accomplish the same
 thing using both workflows, certain tasks are better suited to using one workflow 
-over the other. For this reason, you should understand both perscribed workflows so
+over the other. For this reason, you should understand both workflows so
 that you can use the best tool for the best situation.
+
 The two main workflows that are supported are:
 
-### Web Project Dev
+* Web Project Dev
 
 You can think of the first workflow as the _Web Project Dev_ workflow. You should use
 this workflow when you want to create a Cordova application that runs on 
 as many mobile operating systems as possible with as little platform-specific
 development work as possible. This workflow came into existence with Cordova 3.0
 and the creation of the Cordova _Command-line Interface_ (CLI). The CLI abstracts
-away a lot of the functionality of lower level /bin/ scripts that take care of the
+away a lot of the functionality of lower-level shell scripts that take care of the
 details involved with building your app, such as copying your web assets into 
 the correct folders for each mobile platform, making platform specific configuration
 changes, or running specific build scripts to generate application binaries. You can read 
-more about the "Web Project Dev" workflow in The Command-line Interface. Please note
+more about the _Web Project Dev_ workflow in The Command-line Interface. Please note
 that often when people speak of the "CLI," they are talking about this _Web Project Dev_
 workflow.
 
-### Native Platform Dev
+* Native Platform Dev
 
 The second workflow can be thought of as a _Native Platform Dev_ workflow. You should use it
 when you want to focus on building an application for a single platform and are 
-interested in changing the "lower level" platform details. While you can still use this workflow
+interested in changing the lower-level platform details. While you can still use this workflow
 to build cross-platform apps, the lack of tools to abstract away the various build steps will
 make it more difficult. For example, you will have to use Plugman to
 install the same plugin once for each platform that you want to support. The 
-benefit to using this _Native Platform Dev_ workflow is that it gives you access to the "lower
-level" shell scripts to build and test the application, so if you are hacking on the native 
+benefit to using this _Native Platform Dev_ workflow is that it gives you access to the lower-level
+shell scripts to build and test the application, so if you are hacking on the native 
 side of things, this workflow is the most efficient way to test your changes. This workflow
 is also appropriate if you want to use the CordovaWebView as a small part in a larger native
-application (See the Embedding WebViews guide.) This workflow has not been written into a guide per se because this workflow
-has slightly different commands and procedures depending on which platform you are working 
-with. For this reason, you can read about this workflow in the "Command-line tools" guide
-for each platform you are working on, for instance, iOS Platform Guide and Android Platform Guide.
+application (See the Embedding WebViews guide.)  You can read about this workflow in the different
+Shell Tool guides, for instance, Android Shell Tool Guide and iOS Shell Tool Guide.
 
 When first starting out, it might be easiest to use the _Web Project Dev_ workflow
 to create an application. (To install the CLI, see The Command-line Interface.)
@@ -134,8 +133,8 @@ the CLI for progressively greater shares of the development cycle:
   For comprehensive testing, you can also generate application files
   and install them directly on a device.
 
-At any point in the development cycle, you can switch to using more of the "Native Platform
-Dev" workflow. The platform-specific SDK tools provided may may provide a richer set of
+At any point in the development cycle, you can switch to using more of the _Native Platform
+Dev_ workflow. The platform-specific SDK tools provided may provide a richer set of
 options. (See the Platform Guides for details about each platform's SDK tool set.)
 
 An SDK environment is more appropriate if you want implement a hybrid

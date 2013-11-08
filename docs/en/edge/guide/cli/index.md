@@ -24,9 +24,9 @@ This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
 them on different platforms, and run on real devices or within emulators. The CLI
-is the main tool you will use when following the "Web Project DeV" workfow
-style. However, you can also use the CLI to initialize project code, after
-which you use various platforms' SDKs to develop them further.
+is the main tool to use for the cross-platform workflow (See the Overview for a description
+of the various workflows.)  However, you can also use the CLI to initialize project code, after
+which you use various platforms' SDKs and shell tools for continued development.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
    installation, you should be able to invoke `node` or `npm` on your
-   command line.
+   command line. 
 
 1. Install the `cordova` utility. In Unix, prefixing the additional
    `sudo` command may be necessary to install development utilities in
@@ -70,6 +70,12 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
+   **NOTE**: The `-g` flag above tells npm to install cordova globally. 
+   You may need to add the npm directory to your PATH in order to invoke
+   globally installed npm modules. On Windows, npm can usually be found at
+   `C:\Users\username\AppData\Roaming\npm` and on Unix at
+   `/usr/local/share/npm`.
+   
 ## Create the App
 
 Go to the directory where you maintain your source code, and run a
@@ -77,8 +83,8 @@ command such as the following:
 
         $ cordova create hello com.example.hello HelloWorld
 
-It may take some time for the command to complete, so be patient. You can 
-run the command with ` -d` paramater to see information about progress.
+It may take some time for the command to complete, so be patient. Running
+the command with the ` -d` option displays information about its progress.
 
 The first argument specifies a _hello_ directory to be generated
 for your project. Its `www` subdirectory houses your application's
@@ -136,18 +142,20 @@ appears as a subdirectory. The _www_ source directory is reproduced
 within each platform's subdirectory, appearing for example in
 `platforms/ios/www` or `platforms/android/assets/www`. Because the CLI
 constantly copies over files from the source _www_ folder, you should only
-be editing these files and not the ones located under the _platforms_ subdirectories.
+edit these files and not the ones located under the _platforms_ subdirectories.
+If you use version control software, you should add this source _www_ folder, 
+along with the _merges_ folder, to your version control system. (More information
+about the _merges_ folder can be found in the Customize Each Platform section below.)
 
-At this point, if you wish, you can use an SDK such as Eclipse or xCode
-to open the project you created. You will only be able to open the project in an SDK
-if you point the SDK to the derivative set of assets (stored in the `/platforms/` directory),
-not the original cross-platform source files (the top level `/www/` directory). This is because
-the SDK specific meta data files are stored within the appropriate `/platform/` subdirectory.
+If you wish at this point, you can use an SDK such as Eclipse or Xcode
+to open the project you created. You will need to open the derivative set of assets
+from the `/platforms/` directory to develop with an SDK. This is because
+the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
 (See the Platform Guides for information on how to develop applications within each IDE.)
 Use this approach if you simply want to initialize a project using the CLI and 
 then switch to an SDK for native work.
 
-Read on if you wish to use the Web Project Dev workflow (the CLI) for the entire
+Read on if you wish to use the cross-platform workflow approach (the CLI) for the entire
 development cycle.
 
 ## Build the App
@@ -259,7 +267,7 @@ the plugin code to the appropriate place for each platform. (If you are followin
 Native Project Dev Workflow, you will have to add plugins using Plugman (guide link here),
 multiple times for each platform.)
 
-Here are examples of how you might add features using the CLI:
+Here are examples of how you might use the CLI to add features to the app:
 
 * Basic device information (Device API):
 

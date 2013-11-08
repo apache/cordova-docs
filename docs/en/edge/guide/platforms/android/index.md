@@ -1,4 +1,4 @@
----
+u---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -24,7 +24,7 @@ deploy Cordova apps for Android devices. It walks you through the process
 of installing the Android SDK, opening an Android project in Eclipse SDK, 
 and deploying to an emulator or device. You will need to follow this guide 
 to at least Install the Android SDK, regardless of which workflow you
-are following. (Both the "Web Project Dev" and "Native Platform Dev" workflows
+are following. (Both the _Web Project Dev_ and _Native Platform Dev_ workflows
 require the Android SDK to be installed and accessable via your PATH.)
 
 See the following for more detailed platform-specific information:
