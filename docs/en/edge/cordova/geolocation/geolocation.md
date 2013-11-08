@@ -102,6 +102,12 @@ platform-specific configuration settings described below:
             <rim:permit>read_geolocation</rim:permit>
         </rim:permissions>
 
+* FirefoxOS (in the manifest.webapp file)
+
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+
 * iOS (in the named application directory's `config.xml`)
 
         <feature name="Geolocation">
