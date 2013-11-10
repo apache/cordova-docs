@@ -68,15 +68,18 @@ On Mac and Linux:
 If you wish to test on a device or distribute apps through BlackBerry
 World, your system must be setup for code signing.
 
-To obtain a signing key, go to the BlackBerry website and make sure to
-retain the password you specify. Then run the `blackberry-signer`
-utility that is included with the BlackBerry Native SDK.
+To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).
 
-Detailed instuctions can be found here:
+Select the first checkbox: "for BlackBerry10 apps developed using BlackBerry 
+NDK" and then sign in or create a BBID.
 
-* [Register for your code signing key.](https://www.blackberry.com/SignedKeys/codesigning.html)
+Enter a password and click "Get Token" to download bbidtoken.csk. Save this
+file to the default location for your OS which will be displayed on the
+download page.
 
-* [Set up your system for code signing.](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html)
+The final step is to generate a signing certificate:
+
+    $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
 
 ## Create a Project
 
