@@ -46,16 +46,12 @@ On Windows:
 
 * Append the Native SDK's install directory to the PATH, for example:
 
-    ;C:\bbndk\host_10_1_0_132\darwin\x86\usr\bin\
+    ;C:\bbndk\host_10_2_0_132\darwin\x86\usr\bin\
 
 On Mac and Linux:
 
 * Edit the `~/.bash_profile` file, adding a line such as the
   following, depending on where the Native SDK was installed:
-
-    $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
-
-  or for the 10.2 Native SDK:
 
     $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
 
@@ -100,77 +96,35 @@ BlackBerry 10 Simulator.
 * [Getting Started](http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html)
 
 Before testing an app on either an emulator or a device, you need to
-add a _target_ to your project. Each is identified with a unique name,
-and associated with an IP address. You need to get the IP address from
-the emulator before you use it to view apps.
+enable development mode.
 
 Launch the emulator image, then choose __Settings__ from the home screen:
 
 ![](img/guide/platforms/blackberry10/bb_home.png)
 
 Navigate to the __Security and Privacy &rarr; Development Mode__
-section, enable the option, and obtain the IP address:
+section and enable the option:
 
 ![](img/guide/platforms/blackberry10/bb_devel.png)
 
-An additional set of command-line utilities are included when you set
-up the BlackBerry 10 platform for your project.  The following
-command, in this case invoked from the project top-level directory,
-associates a target named _emu_ with the IP address displayed above.
-
-* On Windows:
-
-    $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-
-* On Mac/Linux:
-
-    $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
-
 Then, run the `emulate` command to view the app:
 
-    $ cordova emulate blackberry10
+    $ cordova emulate blackberry10 --devicepass <password>
 
 ## Deploy to Device
 
-To deploy to a device, make sure it is plugged into your computer.
-Enable development mode and obtain the IP address as desribed in the
-emulator section above. You also need to obtain the PIN from the
-__Settings__ application under __About &rarr; Hardware__:
-
-![](img/guide/platforms/blackberry10/bb_pin.png)
-
-Run the target command-line utility to associate a name with an IP
-address, device password and PIN.
-
-* On Windows:
-
-    $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-
-* On Mac/Linux:
-
-    $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-
-where:
-
-* `--password` refers to the password to unlock the device.
-
-* `--pin` refers to the device PIN obtained from the __Settings__ application.
+To deploy to a device, make sure it is plugged into your computer and
+development mode is enabled.
 
 Then, run the `run` command to view the app:
 
-    $ cordova run blackberry10
+    $ cordova run blackberry10 --devicepass <password>
 
 If a debug token is not yet set up for the device, an error message
-prompts you to use the platform run script with the password you
-provided when registering for signing keys.
+prompts you to provide the password you defined when configuring your
+computer to sign applications.
 
-* On Windows:
-
-    $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-
-* On Mac/Linux:
-
-    $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
+    $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
 
 ## Debugging with WebInspector
 
@@ -185,18 +139,35 @@ browser.  For more information, see
 By default, running the `cordova build` command creates an unsigned
 _.bar_ package file suitable for testing on a device or simulator.
 
-You need to run a different `build` command to create a release
-version suitable for distribution through BlackBerry World.  It does
-not rely on the `cordova` CLI tool, and instead uses the following
-syntax:
+Use `--release` to create a release version suitable for distribution
+through BlackBerry World.
 
-* On Windows:
-
-    $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
-
-* On Mac/Linux:
-
-    $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+    $ cordova build --release --keystorepass <signing password>
 
 The `--keystorepass` option specifies the password you defined when
 configuring your computer to sign applications.
+
+
+## Deploy to Other Locations
+
+The instructions above assume a device is plugged in via USB or a
+simulator is running on the local machine. It is also possible to
+deploy to other locations.
+
+An additional set of command-line utilities are included when you set
+up the BlackBerry 10 platform for your project.  The following
+command, in this case invoked from the project top-level directory,
+associates a target named _emu_ with an IP address.
+
+* On Windows:
+
+    $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
+
+* On Mac/Linux:
+
+    $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
+
+Once the target is defined, you can provide it to the run command using
+`--target`:
+
+    $ cordova run blackberry10 --target=emu
