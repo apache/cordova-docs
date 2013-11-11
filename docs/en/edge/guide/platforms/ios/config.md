@@ -63,22 +63,6 @@ File for information on global configuration options.
 
         <preference name="TopActivityIndicator" value="white"/>
 
-- `FadeSplashScreen` (boolean, defaults to `true`): Set to `false` to
-  prevent the splash screen from fading in and out when its display
-  state changes.
-
-        <preference name="FadeSplashScreen" value="false"/>
-
-- `FadeSplashScreenDuration` (float, defaults to `2`): Specifies the
-  number of seconds for the splash screen fade effect to execute.
-
-        <preference name="FadeSplashScreenDuration" value="4"/>
-
-- `ShowSplashScreenSpinner` (boolean, defaults to `true`): Set to `false`
-  to hide the splash-screen spinner.
-
-        <preference name="ShowSplashScreenSpinner" value="false"/>
-
 - `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
   Set to `false` to allow the keyboard to appear when calling
   `focus()` on form inputs.
