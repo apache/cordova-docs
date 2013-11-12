@@ -408,7 +408,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 22. Select the __project icon__ in the Project Navigator, select your project __Target__, then select the __Build Settings__ tab.
 
-23. Search for __Other Linker Flags__, and add the values __-all_load__ and __-Obj-C__.
+23. Search for __Other Linker Flags__, and add the values __-force_load__ and __-Obj-C__.
 
 24. Expand the `CordovaLib` sub-project.
 
