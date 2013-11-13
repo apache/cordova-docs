@@ -153,9 +153,6 @@ application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
-<!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
 
 Run the following command to iteratively build the project:
 
@@ -230,9 +227,6 @@ example when designing a hybrid app that mixes a Cordova WebView with
 native components. (See Embedding WebViews and Plugin Development
 Guide for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
-<!-- XREF
-discussed in the Application Development Guide and
-XREF -->
 detailed in the API Reference. A list of these plugins, including
 additional plugins provided by the community, can be found at
 [plugins.cordova.io](http://plugins.cordova.io/). You can use

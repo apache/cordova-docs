@@ -57,10 +57,6 @@ The app executes as a _WebView_ within the native application wrapper,
 which you distribute to app stores.  For the web app to interact with
 various device features the way native apps do, it must also reference
 a `cordova.js` file, which provides API bindings.
-<!-- XREF
-(See the API Reference for an overview, and the Application
-Development Guide for examples of how to use them.)
-XREF -->
 
 The Cordova-enabled WebView may provide the application with its
 entire user interface. It can also be a component within a larger,
@@ -90,9 +86,6 @@ the CLI for progressively greater shares of the development cycle:
 
 * For supporting platforms, the CLI can compile executible
   applications and run them in an SDK-based device emulator.
-  <!-- XREF
-  (See Application Development Guide for details.)
-  XREF -->
   For comprehensive testing, you can also generate application files
   and install them directly on a device.
 
@@ -102,16 +95,8 @@ options.
 (See the Platform Guides for details about each platform's SDK tool set.)
 An SDK environment is more appropriate if you want implement a hybrid
 app that mixes web-based and native application components.
-<!-- XREF
-(See Hybrid Application Guide for more information.)
-XREF -->
 You may use the command-line utility to initially generate the app, or
 iteratively thereafter to feed updated code to SDK tools.  You may
 also build the app's configuration file yourself.
 (See The config.xml File for details.)
-
-<!-- XREF
-To build projects on some platforms, you may need to apply digital signatures.
-See Distributing Applications for information on how to upload your app to various store portals.
-XREF -->
 
