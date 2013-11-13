@@ -98,4 +98,4 @@ If you want to write a customized plugin for the Amazon Fire OS platform then cr
 
 Cordova for Amazon Fire OS makes use of custom Amazon WebView that is built on the open-source Chromium project. It is GPU accelerated and optimized for fluid performance on Kindle Fire.
 
-To understand how to best use Amazon WebView in your project, check out the [Amazon Developer Portal](http://developer.amazon.com).
+To understand how to best use Amazon WebView in your project, check out the [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html).
