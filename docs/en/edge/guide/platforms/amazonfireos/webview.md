@@ -31,7 +31,7 @@ Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS appli
 
 ## Guide to using CordovaWebView in a Amazon Fire OS Project
 
-1. Download and expand the [Amazon WebView SDK](http://developer.amazon.com) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
+1. Download and expand the [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
 
 2. `cd` into `/framework` and run `ant jar` to build the cordova jar. It creates the .jar file formed as `cordova-x.x.x.jar` in the `/framework` directory.
 

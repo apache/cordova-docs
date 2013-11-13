@@ -34,7 +34,7 @@ Developing Cordova apps for Amazon Fire OS requires the Android SDK and the Amaz
 
 * [Android SDK System](http://developer.android.com/sdk/)
 
-* [Amazon WebView SDK](https://developer.amazon.com/sdk.html)
+* [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv)
 
 ## Installation
 
@@ -87,10 +87,10 @@ run:
 
 ### Amazon WebView SDK
 
-Download the Amazon WebView SDK from the [Amazon Developer Portal](https://developer.amazon.com/sdk.html).
+Download the Amazon WebView SDK from the [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv).
 
 * Create a `libs/` folder in `~/.cordova/lib/amazon-fireos/cordova/3.1.0/` folder.
-* Add the `awv_interface.jar` from the download SDK to  `~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/`
+* Add the `awv_interface.jar` from the downloaded SDK to  `~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/`
 
 
 ## Open a Project in the SDK
