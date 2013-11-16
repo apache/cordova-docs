@@ -64,6 +64,26 @@ The service name matches the one used in the JavaScript `exec` call.
 The value is the Java class's fully qualified namespace identifier.
 Otherwise, the plugin may compile but still be unavailable to Cordova.
 
+## Plugin Initialization and Lifetime
+
+One instance of a plugin object is created for the life of each
+`WebView`. Plugins are not instantiated until they are first
+referenced by a call from JavaScript, unless `<param>` with an `onload`
+`name` attribute is set to `"true"` in `config.xml`. E.g.:
+
+    <feature name="Echo">
+        <param name="android-package" value="<full_name_including_namespace>" />
+        <param name="onload" value="true" />
+    </feature>
+
+Plugins should use the `initialize` method for their start-up logic.
+
+    @override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+        // your init code here
+    }
+
 ## Writing an Android Java Plugin
 
 A JavaScript call fires off a plugin request to the native side, and
