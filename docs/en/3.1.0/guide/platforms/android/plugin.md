@@ -56,6 +56,26 @@ call, and the value is the Java classes full name, including the
 namespace.  Otherwise the plugin may compile but still be unreachable
 by Cordova.
 
+## Plugin Initialization and Lifetime
+
+One instance of a plugin object is created for the life of each
+`WebView`. Plugins are not instantiated until they are first
+referenced by a call from JavaScript, unless `<param>` with an `onload`
+`name` attribute is set to `"true"` in `config.xml`. E.g.:
+
+    <feature name="Echo">
+        <param name="android-package" value="<full_name_including_namespace>" />
+        <param name="onload" value="true" />
+    </feature>
+
+Plugins should use the `initialize` method for their start-up logic.
+
+    @override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+      super.initialize(cordova, webView);
+      // your init code here
+    }
+
 ## Writing an Android Java Plugin
 
 JavaScript fires off a plugin request to the native side.  The Android
