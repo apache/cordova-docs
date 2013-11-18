@@ -64,3 +64,15 @@ This method displays the application's splash screen.
         <h1>Example</h1>
       </body>
     </html>
+
+Your application can not call `navigator.splashscreen.show()` until
+the app has started and the `deviceready` event has fired. But since
+typically the
+splash screen is meant to be visible before your app has started, that would
+seem to defeat the purpose of the splash screen.
+Providing some configuration in `config.xml` will automatically `show` the
+splash screen immediately after your app launch and before it has fully
+started and received the `deviceready` event. See Icons and Splash Screens
+for more information on doing this configuration. For this reason, it is
+unlikely you need to call `navigator.splashscreen.show()` to make the
+splash screen visible for app startup.
