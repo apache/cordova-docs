@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Guías de plataforma
+# Guías de plataformas
 
 Antes de desarrollar para cualquiera de las plataformas que se enumeran a continuación, instalar la interfaz de línea de comandos de cordova (CLI). (Para más detalles, ver la interfaz de línea de comandos).
 
