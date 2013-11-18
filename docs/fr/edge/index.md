@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Intégration WebViews
+        Intégrer des WebViews
       </h2>
       
       <span>Mettre en œuvre le Cordova WebView dans votre projet.</span>
@@ -176,7 +176,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Mondialisation
+        Globalization
       </h2>
       
       <span>Permettre la représentation d'objets spécifiques aux paramètres régionaux.</span>
