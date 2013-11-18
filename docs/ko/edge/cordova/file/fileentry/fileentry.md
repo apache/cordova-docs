@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **fullPath**: 하 루트에서의 전체 절대 경로 `FileEntry` . *(DOMString)*
 
-**참고:** 다음 특성 W3C 사양에 정의 되어 있지만 지원 *되지* 않습니다.
+**참고**: 다음 특성 W3C 사양에 정의 되어 있지만 지원 *되지* 않습니다:
 
 *   **파일 시스템**: 파일 시스템에는 `FileEntry` 거주. *(파일 시스템)*
 
@@ -57,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -66,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 파일에 대 한 메타 데이터를 조회.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 콜백 전달 되는 `Metadata` 개체. *(기능)*
 
@@ -87,9 +87,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **현재 iOS 에서만 작동합니다.**
 
-*   이 파일의 확장된 특성을 설정 합니다.
+*   이 파일의 확장된 특성을 설정합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 메타 데이터를 설정 하는 콜백. *(기능)*
 
@@ -159,7 +159,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 또한, 기존 파일 위에 파일을 이동 하려고 삭제 하 고 해당 파일을 대체 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **부모**: 부모 디렉터리를 파일을 이동 합니다. *(DirectoryEntry)*
 
@@ -195,7 +195,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   현재 하나에서 다른 이름이 제공 되지 않은 경우 부모에 파일을 복사 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **부모**: 부모 디렉터리를 파일을 복사 합니다. *(DirectoryEntry)*
 
@@ -240,7 +240,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 파일을 삭제합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 파일 삭제 후 실행 되는 콜백. 매개 변수 없이 호출 됩니다. *(기능)*
 
@@ -264,7 +264,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 부모를 보면 `DirectoryEntry` 파일이 포함 된.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 파일의 부모에 전달 된 콜백 `DirectoryEntry` . *(기능)*
 
@@ -288,7 +288,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 생성 한 `FileWriter` 개체가 나타내는 파일은`FileEntry`.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 콜백 전달 되는 `FileWriter` 개체. *(기능)*
 
@@ -312,7 +312,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 반환 된 `File` 파일의 현재 상태를 나타내는 개체가 `FileEntry` 나타냅니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 콜백 전달 되는 `File` 개체. *(기능)*
 

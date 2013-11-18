@@ -57,11 +57,11 @@ A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android (in`res/xml/config.xml`)
     
         <feature name="Globalization">
-            <param name="android-package" value="org.apache.cordova.Globalization" />
+            <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
         </feature>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

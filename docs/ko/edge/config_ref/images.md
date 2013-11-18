@@ -1,6 +1,6 @@
 ---
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. NOTICE 파일 저작권 소유권에 관한 자세한 내용은이 작업 배포를 참조 하십시오. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 CLI에서 작업할 때 아이콘 소스 파일은 프로젝트 내에서 다양 한 플랫폼 관련 하위 디렉터리 내에 있는 `www/res/icons` 디렉터리. 새로 만든된 프로젝트 대상으로 하고자 하는 플랫폼에 대 한 대체 수 코르 도우 바 아이콘의 기본 집합을 갖추고 있습니다.
 
-안 드 로이드는 낮은, 중간, 높은, 매우 높은 해상도 대 한 아이콘을 지정합니다.
+안드로이드에서는 아이콘을 저해상도, 중간 해상도, 고해성도, 그리고 초고해상도로 나눕니다:
 
         android/icon-36-ldpi.png
         android/icon-48-mdpi.png
@@ -71,7 +71,7 @@ Splashscreen API를 사용 하 여 여러 플랫폼에서 애플 리 케이 션�
         android/screen-xhdpi-portrait.png
     
 
-IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이폰/아이팟과 아이 패드에 대 한 이체를 지정합니다. *568 H* 파일 아이폰 5의 키가 화면에 대 한 사용자 지정:
+IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이폰/아이팟과 아이 패드에 대 한 이체를 지정합니다. *568 H* 파일 아이폰 5의 키가 화면에 적용 됩니다.
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,7 +109,7 @@ IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이�
     <preference name="splashScreenDelay", 10000 />
     
 
-첫 줄 시작 화면으로 표시 하려면 이미지를 설정 합니다. 당신이 이름을 이미지 아무것도 이외의 경우 `splash.png` ,이 줄을 수정 해야 합니다.
+첫 줄 시작 화면으로 표시 하려면 이미지를 설정 합니다. 만약 당신이 이름을 이미지 아무것도 아닌 다른 `splash.png` ,이 줄을 수정 해야 합니다.
 
 두 번째 줄에는 얼마나 오래는 splashscreen 나타납니다 밀리초에서의 지연 설정 합니다. App 받게 되 면 스플래시 화면을 해제 하는 `deviceready` 이벤트, 전화는 `navigator.splashscreen.hide()` 방법.
 

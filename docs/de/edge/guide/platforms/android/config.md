@@ -18,27 +18,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf Android Builds gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst.
+*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst. Hinweis: Diese Einstellung auf False wird nicht töten die app nach einer Pause, wird es nur Ausführung von Code in der Webview Cordova zu stoppen, während die app im Hintergrund ist.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Gibt eine Fehlerseite, die als Reaktion auf standard-HTTP-Fehler im Bereich von 400-500 anzeigt. Platzieren Sie die angegebene Datei im obersten Verzeichnis enthält die Homepage und andere Web-Ressourcen.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: Zeigen Sie einen nativen Dialog, wenn die app laden. Der Wert Format ist *Titel, Nachricht*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: Zeigen Sie einen nativen Dialog, wenn Unterseiten innerhalb einer app laden. Der Wert Format ist *Titel, Nachricht*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`(Anzahl, Standard ist `20000` ): beim Laden einer Seite, die Zeitspanne zu warten, bevor ein Timeoutfehler auslösen. In diesem Beispiel gibt 10 Sekunden anstatt 20:
+*   `LoadUrlTimeoutValue`(Nummer, Standard, `20000` , 20 Sekunden): beim Laden einer Seite, die Zeitspanne zu warten, bevor ein Timeoutfehler auslösen. In diesem Beispiel gibt 10 Sekunden anstatt 20:
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
@@ -51,3 +36,6 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
 *   `SplashScreenDelay`(Nummer, der Standardwert ist `5000` ): die Zeitspanne zeigt das Bild des Begrüßungsbildschirms.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(Boolean, wird standardmäßig auf `true` ): Steuerelemente ob Seiten innerhalb einer InAppBrowser geöffnet können Zugriff auf die gleichen LocalStorage und WebSQL Speicher als Seiten mit Standardbrowser geöffnet.

@@ -34,12 +34,12 @@ A `CompassHeading` 物件返回到 `compassSuccess` 回呼函數。
 
 ## Android 的怪癖
 
-*   `trueHeading`不受支援，但報告相同的值`magneticHeading`
+*   `trueHeading`屬性不受支援，但報告相同的值`magneticHeading`.
 
-*   `headingAccuracy`是始終為 0 因為有沒有區別 `magneticHeading` 和`trueHeading`.
+*   `headingAccuracy`屬性始終是 0 因為有沒有區別 `magneticHeading` 和`trueHeading`.
 
 ## iOS 的怪癖
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   `trueHeading`屬性只返回位置服務通過以下方式啟用`navigator.geolocation.watchLocation()`.
 
-*   IOS 4 設備及以上標題因素在該設備的當前方向，不涉及其絕對的立場，為應用程式支援的方向。
+*   IOS 4 設備及以上，標題中設備的當前方向的因素，也不引用其絕對的位置，用於支援該方向的應用程式。

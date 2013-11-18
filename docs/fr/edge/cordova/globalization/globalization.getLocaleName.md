@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getLocaleName
 
-Obtenir l'identificateur de chaîne pour paramètre de langue actuel du client.
+Retourne l'identifiant correspondant au réglage de langue actuel du client.
 
     navigator.globalization.getLocaleName(successCallback, errorCallback);
     
 
 ## Description
 
-Retourne la chaîne d'identificateur de paramètres régionaux pour le `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
+Transmet l'identifiant de langue en paramètre à la fonction `successCallback` sous la forme d'un objet `properties`. Cet objet contient une propriété `value` dont la valeur est de type `String`.
 
-S'il y a une erreur d'obtenir les paramètres régionaux, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+Si une erreur survient lors de l'obtention de l'identifiant, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est `GlobalizationError.UNKNOWN_ERROR`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, ceci pour afficher une fenêtre popup avec le texte`locale: en\_US`.
+Si la langue du navigateur est réglée sur `fr_FR`, une fenêtre popup contenant le texte `locale : fr_FR` est affichée.
 
     navigator.globalization.getLocaleName(
-        function (locale) {alert('locale: ' + locale.value + '\n');},
-        function () {alert('Error getting locale\n');}
+        function (locale) {alert('locale : ' + locale.value + '\n');},
+        function () {alert('Erreur lors de l\'obtention de l\'identifiant de langue\n');}
     );
     
 
@@ -49,24 +49,24 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, ceci pour afficher
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getLocaleName Example</title>
+        <title>Exemple getLocaleName</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkLocale() {
           navigator.globalization.getLocaleName(
             function (locale) {alert('locale: ' + locale.value + '\n');},
-            function () {alert('Error getting locale\n');}
+            function () {alert('Erreur lors de l\'obtention de l\'identifiant de langue\n');}
           );
         }
         </script>
       </head>
       <body>
-        <button onclick="checkLocale()">Click for locale</button>
+        <button onclick="checkLocale()">Cliquer ici pour obtenir l'identifiant de langue</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
-*   Retourne le code à deux lettres défini dans ISO 3166 pour le pays/la région actuelle.
+*   Renvoie le code à deux lettres ISO 3166 correspondant au pays ou la région actuel(le).

@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **fullPath**: 하 루트에서의 전체 절대 경로 `DirectoryEntry` . *(DOMString)*
 
-**참고:** 다음 특성 W3C 사양에 정의 되어 있지만 지원 *되지* 않습니다.
+**참고**: 다음 특성 W3C 사양에 정의 되어 있지만 지원 *되지* 않습니다:
 
 *   **파일 시스템**: 파일 시스템에는 `DirectoryEntry` 거주. *(파일 시스템)*
 
@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -72,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 디렉터리에 대 한 메타 데이터를 조회 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 함께 실행할 콜백 함수를 `Metadata` 개체. *(기능)*
 
@@ -91,7 +91,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 디렉토리의 확장 된 특성 또는 메타 데이터를 설정합니다. *현재 iOS 에서만 작동 합니다.*
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 메타 데이터가 성공적으로 설정 될 때 실행 되는 콜백. *(기능)*
 
@@ -165,7 +165,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 삭제 하 고 해당 디렉토리를 교체 하려고 기존 빈 디렉터리 위에 디렉터리를 이동 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **부모**: 부모 디렉터리를 디렉터리로 이동 합니다. *(DirectoryEntry)*
 
@@ -206,7 +206,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 디렉터리 복사본 항상 재귀, 있으며, 디렉터리의 모든 내용을 복사 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **부모**: 부모 디렉터리 대상 디렉터리를 복사 합니다. *(DirectoryEntry)*
 
@@ -256,7 +256,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   파일 시스템의 루트 디렉터리를 삭제 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 디렉터리 삭제 후 실행 되는 콜백. 매개 변수 없이 호출 됩니다. *(기능)*
 
@@ -275,7 +275,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 부모를 조회 `DirectoryEntry` 디렉터리를 포함 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 디렉토리의 부모 전달 된 콜백 `DirectoryEntry` . *(기능)*
 
@@ -311,7 +311,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   아직 존재 하지 않습니다 즉각적인 부모 디렉터리를 만듭니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **경로**: 조회를 만든 디렉터리 경로를 합니다. 절대 경로 또는 상대 경로에서 `DirectoryEntry` . *(DOMString)*
 
@@ -336,7 +336,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   아직 존재 하지 않습니다 즉각적인 부모 파일을 만듭니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **경로**: 조회 하 여 만든 파일의 경로를. 절대 경로 또는 상대 경로에서 `DirectoryEntry` . *(DOMString)*
 
@@ -361,7 +361,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   파일 시스템의 루트 디렉터리를 삭제 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 콜백 후 실행 되는 `DirectoryEntry` 삭제 되었습니다. 매개 변수 없이 호출 됩니다. *(기능)*
 

@@ -30,7 +30,7 @@ La façon dont est généré l'UUID est déterminée par le fabricant et est sp�
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Paciarelli
 *   Windows Phone 7 et 8
@@ -46,8 +46,7 @@ La façon dont est généré l'UUID est déterminée par le fabricant et est sp�
     //
     // iPhone : (copié depuis la documentation de la classe UIDevice)
     // Retourne une chaîne de caractères générée à partir de plusieurs caractéristiques matérielles.
-    // Il est garanti unique pour chaque appareil et ne peut être lié
-    // à un compte utilisateur.
+    / / Il est garanti pour être unique pour chaque appareil et ne peut pas être lié / / pour le compte d'utilisateur.
     // Windows Phone 7 : retourne un hashage généré à partir de appareil+utilisateur actuel,
     // si aucun utilisateur n'est défini, un guid est généré persistera jusqu'à ce que l'application soit désinstallée
     // Tizen : retourne le numéro IMEI (International Mobile Equipment Identity) de l'appareil, ce numéro est
@@ -90,7 +89,7 @@ La façon dont est généré l'UUID est déterminée par le fabricant et est sp�
 
 ## Notes au sujet d'iOS
 
-Sur iOS, l'`uuid` n'est pas propre à un appareil mais varie pour chaque application et pour chaque installation d'une même application. Il changera ainsi si une application est supprimée puis réinstallée, et éventuellement aussi lorsqu'iOS est mis à jour ; ou même lorsque l'application est mise à jour (notamment sous iOS 5.1). Par conséquent, l'`uuid` n'est pas considéré comme fiable.
+Sur iOS, l'`uuid` n'est pas propre à un appareil mais varie pour chaque application et pour chaque installation d'une même application. Elle change si vous supprimez, puis réinstallez l'application, et éventuellement aussi quand vous mettre à jour d'iOS, ou même mettre à jour le soft par version (apparent dans iOS 5.1). Par conséquent, l'`uuid` n'est pas considéré comme fiable.
 
 ## Notes au sujet de Windows Phone 7 et 8
 

@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -50,7 +50,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 返回一個新的 `File` 物件，為其 `FileReader` 返回只有該檔的指定的部分。 負值設置為 `start` 或 `end` 測量從檔的末尾。 相對於當前切片定位的索引。 （請參閱下面的完整示例）。
 
-**參數：**
+**參數**：
 
 *   **開始**： 要閱讀，具有包容性的第一個位元組的索引。
 

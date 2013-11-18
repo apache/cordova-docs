@@ -35,7 +35,7 @@ Una función asincrónica que devuelve la posición actual del archivo de audio 
 
 *   Android
 
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 
 *   iOS
 

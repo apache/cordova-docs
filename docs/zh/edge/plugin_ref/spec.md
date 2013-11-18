@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         version="1.0.2">
     
 
-## `<plugin>`元素
+## *外掛程式*元素
 
 `plugin`元素是外掛程式清單的頂級元素。它具有下列屬性：
 
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         ^\d+[.]\d+[.]\d+$
         
 
-## `<engines>`和 `<engine>` 的元素
+## *發動機*和*引擎*的元素
 
 子項目的 `<engines>` 元素指定版本的此外掛程式支援的基於 Apache 科爾多瓦的框架。示例：
 
@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-'<engine>' 標籤也有預設支援的所有主要平臺存在的科爾多瓦。 指定的 '科爾多瓦' 引擎標記意味著科爾多瓦在任何平臺上的所有版本必須都滿足發動機版本屬性。 你可能還會列出特定的平臺和它們的版本以覆蓋全部捕獲 '科爾多瓦' 引擎：
+`<engine>`標籤也有預設支援的所有主要平臺存在的科爾多瓦。 指定 `cordova` 引擎標記，則意味著所有版本的科爾多瓦在任何平臺上必須都滿足發動機版本屬性。 你可能還會列出特定的平臺和它們的版本以覆蓋全部捕獲 `cordova` 引擎：
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -73,7 +73,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-這裡是一個清單的預設引擎，'<engine>'標籤支援： * '科爾多瓦' *' 科爾多瓦-plugman' * '科爾多瓦-android' *' 科爾多瓦-ios' * '科爾多瓦-blackberry10' *' 科爾多瓦-wp7' * '科爾多瓦-wp8' *' 科爾多瓦-windows8'
+這裡是一個清單的預設引擎， `<engine>` 標記支援： * `cordova` * `cordova-plugman` * `cordova-android` * `cordova-ios` * `cordova-blackberry10` * `cordova-wp7` * `cordova-wp8` *`cordova-windows8`  
+* `android-sdk` / / 返回的最高的 Android api 級別安裝 * `apple-xcode` / / 返回的 xcode 版本 * `apple-ios` / / 返回的最高的 iOS 版本，安裝 * `apple-osx` / / 返回的 OSX 版本 * `blackberry-ndk` / / 返回本機黑莓 SDK 版本 * `windows-os` / / 返回的 Windows 作業系統版本 * `windows-sdk` / / 返回 MSBuild 版本
 
 指定自訂的基於 Apache 科爾多瓦的框架應列出引擎標記下就像這樣：
 
@@ -84,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-一個自訂的基於 Apache 科爾多瓦框架需要引擎的元素包含以下特性： '名稱'、 '版本'、 'scriptSrc' 和 '平臺'。
+一個自訂的基於 Apache 科爾多瓦框架需要引擎的元素包含以下特性： `name` ， `version` ， `scriptSrc` ，和`platform`.
 
 *   `name`（必填）： 人類可讀的名稱為您自訂的框架。
 
@@ -92,13 +93,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `scriptSrc`（必填）： 告訴 plugman 是什麼版本的自訂框架的指令檔。理想情況下，此檔應該在你的外掛程式目錄的頂層目錄內。
 
-*   `platform`（必填）： 您的框架支援哪些平臺。 您可以使用萬用字元 ' *' 說支援所有平臺，指定多個具有像 'android|ios|blackberry10' 的管道字元或像 'android' 只是一個單一的平臺。
+*   `platform`（必填）： 您的框架支援哪些平臺。 您可以使用萬用字元 `*` 說支援所有平臺，指定多個與管道字元 （如 `android|ios|blackberry10` 或像只是一個單一的平臺`android`.
 
 plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任何外掛程式。
 
 如果不是 `<engine>` 指定的標記、 plugman 嘗試盲目地安裝到指定的科爾多瓦的專案目錄。
 
-## `<name>`元素
+## *名稱*元素
 
 該外掛程式，其文本內容包含外掛程式的名稱人類可讀的名稱。例如：
 
@@ -107,7 +108,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 此元素還不能 () 處理當地語系化。
 
-## `<description>`元素
+## *說明*元素
 
 對該外掛程式的人類可讀說明。元素的文本內容包含外掛程式的描述。示例：
 
@@ -116,28 +117,28 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 此元素還不能 () 處理當地語系化。
 
-## `<author>`元素
+## *作者*元素
 
 外掛程式作者姓名。元素的文本內容包含外掛程式作者的姓名。示例：
 
     <author>Foo plugin description</author>
     
 
-## `<keywords>`元素
+## *關鍵字*元素
 
 外掛程式關鍵字。元素的文本內容包含以逗號分隔的關鍵字來描述該外掛程式。示例：
 
     <keywords>foo,bar</keywords>
     
 
-## `<license>`元素
+## *許可證*元素
 
 外掛程式許可。元素的文本內容包含外掛程式許可證。示例：
 
     <license>Apache 2.0 License</license>
     
 
-## `<asset>`元素
+## *資產*元素
 
 一個或多個元素列出檔或目錄複寫到科爾多瓦 app `www` 目錄。例子：
 
@@ -159,7 +160,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     
     創建 `js/experimental` 目錄內 `www` 目錄中，除非已經存在，然後拷貝 `new-foo.js` 檔並將它重命名 `foo.js` 。 如果在目標位置已存在的檔，plugman 將停止反轉安裝過程、 發出一個通知有關衝突，並以非零代碼退出。
 
-## `<js-module>`元素
+## *js 模組*元素
 
 大多數的外掛程式包括一個或多個 JavaScript 檔。 每個 `<js-module>` 標記對應于一個 JavaScript 檔，並防止外掛程式的使用者不必添加 `<script>` 為每個檔標記。 雖然 `<asset>` 標籤只是將一個檔案複製從外掛程式子目錄到 `www` ， `<js-module>` 標記是複雜得多。 他們看起來像這樣：
 
@@ -192,9 +193,9 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 嵌套 `<js-module>` 內的元素 `<platform>` 聲明特定平臺 JavaScript 模組綁定。
 
-## `<dependency>`
+## *依賴項*元素
 
-`<dependency>`標記允許您指定當前外掛程式所依賴的其他外掛程式。 雖然未來的版本將從外掛程式庫訪問它們，在短期內的外掛程式直接引用的 Url 作為 `<dependency>` 的標記。 他們的格式如下：
+`<dependency>`標記使您可以指定當前外掛程式所依賴的其他外掛程式。 雖然未來的版本將從外掛程式庫訪問它們，在短期內的外掛程式直接引用的 Url 作為 `<dependency>` 的標記。 他們的格式如下：
 
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
@@ -215,7 +216,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 請注意， `subdir` 總是指定*根*的 git 資源庫，不該父外掛程式的相對路徑。 即使你安裝的外掛程式與直接向它的本地路徑，也是如此。 Plugman 發現 git 資源庫的根目錄，然後查找其他外掛程式從那裡。
 
-## `< 平臺 >`
+## *平臺*元素
 
 `<platform>`標記標識平臺有關聯的本機代碼或需要對它們的設定檔進行修改。 使用此規範的工具可以標識支援的平臺和科爾多瓦專案中安裝代碼。
 
@@ -241,7 +242,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 *   wp7
 *   wp8
 
-## `< 原始檔案 >`
+## *原始程式碼檔*元素
 
 `<source-file>`元素標識應安裝到一個專案的可執行檔的原始程式碼。例子：
 
@@ -266,7 +267,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
 
 *   `compiler-flags`(僅適用于 iOS)： 如果設置，分配特定的原始程式碼檔的指定的編譯器標誌。
 
-## `< 設定檔 >`
+## *設定檔*元素
 
 標識要進行修改，在該檔中修改應考慮的地方，和什麼應修改基於 XML 的設定檔。
 
@@ -314,7 +315,7 @@ XML 的的示例：
     
     如果選擇器不能解決對指定文檔的一個孩子，工具停止和挫折安裝過程中，會發出警告，並以非零代碼退出。
 
-## `< 外掛程式-plist >`
+## *外掛程式-plist*元素
 
 這是*過時*，因為它僅適用于科爾多瓦-ios 2.2.0 和下面。使用 `<config-file>` 標記科爾多瓦的較新版本。
 
@@ -332,7 +333,7 @@ XML 的的示例：
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
-## `<resource-file>`和`<header-file>`
+## *資源檔*和*標頭檔*元素
 
 原始程式碼檔一樣，但專門為 iOS 等平臺，區分原始程式碼檔、 標題和資源。例子：
 
@@ -341,7 +342,7 @@ XML 的的示例：
     <header-file src="CDVFoo.h" />
     
 
-## `<lib-file>`
+## *lib 檔*元素
 
 像源、 資源和標頭檔，但專門為黑莓 10 這樣的平臺，使用使用者生成的庫。例子：
 
@@ -355,7 +356,7 @@ XML 的的示例：
 
 *   `arch`： 其中的體系結構 `.so` 檔已生成了，要麼 `device` 或`simulator`.
 
-## `< 框架 >`
+## *框架*元素
 
 標識該外掛程式所依賴的一個框架 （通常的 OS 平臺的一部分）。
 
@@ -369,7 +370,7 @@ XML 的的示例：
 
 可選的 `weak` 屬性是一個布林值，該值指示是否應弱連結框架。預設值是`false`.
 
-## `<info>`
+## *資訊*元素
 
 向使用者提供的其他資訊。當您需要額外的步驟，不能輕鬆地自動或超出了 plugman 的範圍時，這非常有用。例子：
 
@@ -382,7 +383,7 @@ XML 的的示例：
     </info>
     
 
-# 變數
+## 變數
 
 在某些情況下，可能需要一個外掛程式進行配置更改依賴于目標應用程式。 例如，若要為在 android 系統，其包 id 是 app C2DM 註冊 `com.alunny.message` 如需要的許可權：
 

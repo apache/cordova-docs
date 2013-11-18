@@ -30,17 +30,17 @@ Plugman をインストールするには、[ノード][3]コンピューター�
 
  [3]: http://nodejs.org/
 
-    npm install -g plugman
+    $ npm install -g plugman
     
 
 ここでは、各プラットフォーム用のプラグインを追加する構文です。
 
-    plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+    $ plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
     
 
 プラグインのアンインストール手順。
 
-    plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+    $ plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
     
 
 ## コアのプラグインをインストールします。

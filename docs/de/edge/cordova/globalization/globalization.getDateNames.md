@@ -39,7 +39,7 @@ Der Wert des `options.item` kann `months` oder`days`.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

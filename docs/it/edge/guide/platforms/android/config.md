@@ -18,27 +18,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 
-*   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi.
+*   `KeepRunning`(boolean, impostazioni predefinite a `true` ): determina se l'applicazione rimane in esecuzione in background anche dopo un `pause` evento incendi. Nota: questa impostazione su false non ucciderà l'app dopo un evento di pausa, arresterà solo l'esecuzione di codice in webview cordova mentre l'app è in background.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Specifica di una pagina di errore che viene visualizzato in risposta agli errori HTTP standard nella gamma 400-500. Posizionare il file specificato nella directory principale che contiene la home page e altre risorse web.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento dell'app. Il formato del valore è il *titolo, messaggio*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: Visualizzare una finestra di dialogo nativo durante il caricamento di pagine secondarie all'interno di un'app. Il formato del valore è il *titolo, messaggio*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`(numero, valore di default è `20000` ): durante il caricamento di una pagina, la quantità di tempo di attesa prima di generare un errore di timeout. Questo esempio specifica 10 secondi anziché 20:
+*   `LoadUrlTimeoutValue`(numero, per impostazione predefinita `20000` , 20 secondi): durante il caricamento di una pagina, la quantità di tempo di attesa prima di generare un errore di timeout. Questo esempio specifica 10 secondi anziché 20:
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
@@ -51,3 +36,6 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
 *   `SplashScreenDelay`(numero, di default è `5000` ): la quantità di tempo consente di visualizzare l'immagine della schermata iniziale.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(boolean, impostazioni predefinite a `true` ): controlli se pagine aperto all'interno di un InAppBrowser possono accedere la stessa localStorage e archiviazione WebSQL come pagine aperte con il browser predefinito.

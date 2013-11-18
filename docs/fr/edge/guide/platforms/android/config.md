@@ -14,40 +14,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Configuration Android
+# Configuration d'Android
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions Android. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'application ainsi qu'à chaque instance de la classe CordovaWebView. Cette section décrit en détail les préférences uniquement liées à la compilation pour Android. Voir Le fichier config.xml pour plus d'informations concernant les options de configuration globales.
 
-*   `KeepRunning`(boolean, la valeur par défaut `true` ): détermine si l'application reste en cours d'exécution en arrière-plan même après une `pause` événement se déclenche.
+*   `KeepRunning` (boolean, vaut `true` par défaut) : détermine si l'application doit continuer de s'exécuter en arrière-plan ou non, même après le déclenchement d'un évènement `pause`. Remarque : régler la valeur à false ne provoquera pas la fermeture complète de l'application après le déclenchement d'un évènement pause, l'exécution de tout code dans la WebView Cordova sera simplement stoppée tant que l'application restera à l'arrière plan.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Spécifie une page d'erreur qui s'affiche en réponse à des erreurs HTTP standards dans la gamme de 400-500. Placez le fichier spécifié dans le répertoire contenant la page d'accueil et d'autres ressources web.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: Afficher une boîte de dialogue native lors du chargement de l'application. Le format de la valeur est *titre, Message*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: Afficher une boîte de dialogue native lors du chargement des pages secondaires au sein d'une application. Le format de la valeur est *titre, Message*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`(nombre, valeur par défaut est `20000` ): lors du chargement d'une page, la quantité de temps à attendre avant de lancer une erreur de délai d'attente. Cet exemple spécifie les 10 secondes au lieu de 20 :
+*   `LoadUrlTimeoutValue` (number, vaut `20000` par défaut, soit 20 secondes) : correspond, lors du chargement d'une page, au temps d'attente avant le déclenchement d'une erreur liée au délai. Cet exemple définit un délai de 10 secondes au lieu de 20 :
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: Le nom du fichier moins son extension dans le `res/drawable` répertoire. Divers éléments d'actif doivent partager ce nom commun dans les différents sous-répertoires.
+*   `SplashScreen` : le nom du fichier image correspondant (hors extension) situé dans le répertoire `res/drawable`. Plusieurs ressources doivent partager ce nom dans les différents sous-répertoires.
     
         <preference name="SplashScreen" value="splash"/>
         
 
-*   `SplashScreenDelay`(numéro, par défaut, `5000` ): affiche de l'image de l'écran splash le laps de temps.
+*   `SplashScreenDelay` (number, vaut `5000` par défaut, soit 5 secondes) : le laps de temps durant lequel l'image de chargement sera affichée.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled` (boolean, vaut `true` par défaut) : contrôle si les pages ouvertes dans une fenêtre InAppBrowser accèderont ou non aux même espaces de stockage (localStorage et WebSQL) que celles ouvertes avec le navigateur par défaut.

@@ -32,16 +32,10 @@ A `PositionError` 物件傳遞給 `geolocationError` 回檔時出現錯誤。
 
 ## 說明
 
-`PositionError`物件傳遞給 `geolocationError` 與地理定位發生錯誤時的回呼函數。
+`PositionError`物件傳遞給 `geolocationError` 與地理定位發生錯誤時的回呼函數。它具有以下錯誤代碼：
 
-### `PositionError.PERMISSION_DENIED`
+*   `PositionError.PERMISSION_DENIED`： 返回時使用者不允許應用程式檢索的位置資訊。這是取決於平臺。
 
-返回當使用者不允許您的應用程式檢索的位置資訊。這是取決於平臺。
+*   `PositionError.POSITION_UNAVAILABLE`： 返回設備時，不能檢索的位置。 一般情況下，這意味著該設備未連接到網路或無法獲取衛星的修復。
 
-### `PositionError.POSITION_UNAVAILABLE`
-
-返回設備時，不能檢索的位置。這就意味著該設備沒有網路連接和/或不能得到衛星的修復。
-
-### `PositionError.TIMEOUT`
-
-返回設備時，無法在指定的時間內檢索位置 `geolocationOptions` ' `timeout` 屬性。 與一起使用時 `geolocation.watchPosition` ，此錯誤可能傳遞給 `geolocationError` 回檔每 `timeout` 毫秒為單位）。
+*   `PositionError.TIMEOUT`： 返回設備時，無法在指定的時間內檢索位置 `timeout` 中包含 `geolocationOptions` 。 與一起使用時 `geolocation.watchPosition` ，此錯誤可能反復傳遞給 `geolocationError` 回檔每 `timeout` 毫秒為單位）。

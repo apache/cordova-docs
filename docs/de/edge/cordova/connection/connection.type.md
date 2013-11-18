@@ -26,7 +26,7 @@ Diese Eigenschaft bietet eine schnelle Möglichkeit, um den Netzwerkverbindungss
 
 *   iOS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   Tizen
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -102,14 +102,14 @@ Bis Cordova 2.3.0 wurde auf das `Connection` Objekt über `navigator.network.con
 
 ## iOS Macken
 
-*   iOS kann den Verbindungstyp des Mobilfunknetzes nicht erkennen. 
+*   iOS kann Mobilfunknetz Verbindungstyp nicht erkennen. 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone Macken
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone kann den Verbindungstyp des Mobilfunknetzes nicht erkennen.
+*   Windows Phone kann Mobilfunknetz Verbindungstyp nicht erkennen.
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 

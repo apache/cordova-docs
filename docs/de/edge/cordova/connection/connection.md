@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova APIs auf Geräteebene als *Plugins*. Verwenden Sie den `plugin` Befehl des CLI, wie beschrieben in Die Kommandozeile-Schnittstelle, um dieses Feature für ein Projekt hinzuzufügen oder zu entfernen:
+Ab Version 3.0 implementiert Cordova APIs auf Geräteebene als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin ls
@@ -49,13 +49,11 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifische Ko
     
         (in app/res/xml/config.xml)
         <feature name="NetworkStatus">
-            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+            <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   BlackBerry WebWorks
@@ -66,7 +64,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifische Ko
         </feature>
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="NetworkStatus">
             <param name="ios-package" value="CDVConnection" />
@@ -92,4 +90,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifische Ko
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

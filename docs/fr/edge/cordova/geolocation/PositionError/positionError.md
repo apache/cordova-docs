@@ -32,16 +32,10 @@ Un objet `PositionError` est passé à la fonction callback `geolocationError` l
 
 ## Description
 
-L'objet `PositionError` est passé à la fonction callback `geolocationError` lorsqu'une erreur de géolocalisation se produit.
+Le `PositionError` objet est passé à la `geolocationError` fonction de rappel lorsqu'une erreur se produit avec géolocalisation. Il dispose des codes d'erreur suivants :
 
-### `PositionError.PERMISSION_DENIED`
+*   `PositionError.PERMISSION_DENIED`: Retourné lorsque les utilisateurs ne permettent pas l'application extraire des informations de position. Cela dépend de la plate-forme.
 
-Code renvoyé lorsque l'utilisateur n'autorise pas de votre application à récupérer des informations de position. Varie selon les plates-formes.
+*   `PositionError.POSITION_UNAVAILABLE`: Retourné lorsque le périphérique n'est pas en mesure de récupérer une position. En général, cela signifie que l'appareil n'est pas connecté à un réseau ou ne peut pas obtenir un correctif de satellite.
 
-### `PositionError.POSITION_UNAVAILABLE`
-
-Renvoyé lorsque l'appareil n'est pas en mesure de récupérer une position. En général cela signifie que celui-ci n'est connecté à aucun réseau et/ou ne peut pas obtenir un correctif satellite.
-
-### `PositionError.TIMEOUT`
-
-Retourné lorsque l'appareil n'est pas en mesure de récupérer une position dans le délai précisé par la propriété `timeout` de l'objet `geolocationOptions` associé. Dans le cas de l'utilisation de `geolocation.watchPosition`, cette erreur pourrait être transmise à la fonction callback `geolocationError` chaque `timeout` millisecondes.
+*   `PositionError.TIMEOUT`: Retourné lorsque le périphérique n'est pas en mesure de récupérer une position dans le délai précisé par le `timeout` inclus dans `geolocationOptions` . Lorsqu'il est utilisé avec `geolocation.watchPosition` , cette erreur pourrait être transmise à plusieurs reprises à la `geolocationError` rappel chaque `timeout` millisecondes.

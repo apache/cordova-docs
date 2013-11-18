@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Использование Plugman для управления расширениями
 
-Начиная с версии 3.0 Cordova реализует все API устройства как плагины и оставляет их не подключенными по умолчанию. Также поддерживается два различных способа добавления и удаления плагинов. Во-первых, с помощью `cordova CLI` через интерфейс командной строки. Во-вторых, с помощью интерфейса командной строки нижнего уровня [plugman][1]. Это руководство основано на втором подходе, который может быть полезен для разработчиков, желающих обновить свою версию Cordova, но которые еще не применяли Cordova CLI на практике.
+Начиная с версии 3.0 Cordova реализует все API устройства как плагины и оставляет их не подключенными по умолчанию. Также поддерживается два различных способа добавления и удаления плагинов. Во-первых, с помощью `cordova` описано в интерфейс командной строки CLI. Во-вторых, с помощью интерфейса командной строки нижнего уровня [plugman][1]. Это руководство основано на втором подходе, который может быть полезен для разработчиков, желающих обновить свою версию Cordova, но которые еще не применяли Cordova CLI на практике.
 
  [1]: https://github.com/apache/cordova-plugman/
 
@@ -30,17 +30,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [3]: http://nodejs.org/
 
-    npm install -g plugman
+    $ npm install -g plugman
     
 
 Вот синтаксис добавления плагина вне зависимости от выбранной платформы:
 
-    plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+    $ plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
     
 
 Для удаления плагина:
 
-    plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+    $ plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
     
 
 ## Установка модулей ядра

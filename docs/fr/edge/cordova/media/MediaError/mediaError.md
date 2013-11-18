@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaError
 
-A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'une erreur survient.
+Un objet `MediaError` est transmis à la fonction callback `mediaError` lorsqu'une erreur survient.
 
 ## Propriétés
 
-*   **code**: l'un des codes d'erreur prédéfinis énumérés ci-dessous.
+*   **code** : l'un des codes d'erreur prédéfinis énumérés ci-dessous.
 
-*   **message**: un message d'erreur décrivant les détails de l'erreur.
+*   **message** : un message donnant davantage de détails sur l'erreur en question.
 
 ## Constantes
 
@@ -33,4 +33,4 @@ A `MediaError` objet est retourné à la `mediaError` fonction de rappel lorsqu'
 
 ## Description
 
-Le `MediaError` objet est passé à une `mediaError` fonction de rappel lorsqu'une erreur survient.
+L'objet `MediaError` est transmis en paramètre à une fonction callback `mediaError` lorsqu'une erreur survient.

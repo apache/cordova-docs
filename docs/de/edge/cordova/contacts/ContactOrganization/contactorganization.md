@@ -37,7 +37,7 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -122,7 +122,7 @@ Das `ContactOrganization` -Objekt speichert Organisationseigenschaften eines Kon
 
 *   **Pref**: von Android 2.X-Geräte, Rückgabe nicht unterstützt`false`.
 
-## BlackBerry WebWorks (OS 5.0 und höher) Macken
+## BlackBerry WebWorks 5.0 + Macken
 
 *   **Pref**: von BlackBerry-Geräten zurückgeben nicht unterstützt`false`.
 

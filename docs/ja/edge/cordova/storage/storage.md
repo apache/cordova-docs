@@ -16,52 +16,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ストレージ
 
-> デバイスの記憶域オプションへのアクセスを提供します。
+> コルドバの記憶域オプションの概要です。
 
-この API は 2 つの異なる W3C 仕様に基づくストレージ オプションを提供：
+いくつかのストレージ Api は、コルドバのアプリケーションで使用できます。[Html5rocks][1]を参照してください。完全な概要と例。
 
-*   [Web ストレージ API 仕様][1]では、単純なキーと値のペアを使用してデータにアクセスすることができます。 LocalStorage このインターフェイスの詳細についてを参照してください。
+ [1]: http://www.html5rocks.com/en/features/storage
 
-*   [Web SQL データベースの仕様][2]では、SQL クエリを通じてより多くのフル機能を備えたデータベース テーブルにアクセスを提供しています。 このインタ フェースの概要下にすぐに表示されます。
+## LocalStorage
 
- [1]: http://dev.w3.org/html5/webstorage/
- [2]: http://dev.w3.org/html5/webdatabase/
+*Web ストレージ*、*シンプルなストレージ*、またはその代替*セッション ストレージ*インターフェイスによってまた知られている、この API 同期キー/値ペアの記憶域を提供し、WebView の基になる実装で利用可能です。 詳細については[、W3C 仕様][2]を参照してください。
 
-コルドバは既にそれらをサポートしていないデバイスの少数派の両方のインターフェイスへのアクセスを提供します。それ以外の場合、組み込みの実装を適用します。
+ [2]: http://www.w3.org/TR/webstorage/
 
-## メソッド
+**Windows Phone 7 気まぐれ**: ドット表記は*いない*利用可能な必ずを使用 `setItem` または `getItem` としてのストレージ オブジェクトから直接キーにアクセスするのではなく`window.localStorage.someKey`.
 
-*   openDatabase
+## WebSQL
 
-## 引数
+この API は、基になる web ビューで利用可能です。 [Web SQL データベースの仕様][3]では、SQL クエリを通じてより多くのフル機能を備えたデータベース テーブルにアクセスを提供しています。
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+ [3]: http://dev.w3.org/html5/webdatabase/
 
-## オブジェクト
+次のプラットフォームをサポートして WebSQL：
 
-*   データベース
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   Sqlerror 関数
+*   アンドロイド
+*   ブラックベリー 10
+*   iOS
+*   Tizen
 
-## 機能へのアクセス
+## IndexedDB
 
-バージョン 3.0 は、現在ストレージ Api へのアクセスはコルドバに組み込まれてし、プラグインを追加するコマンド ライン インターフェイスでの説明に従って、CLI の使用を必要としません。
+この API は、基になる web ビューで利用可能です。[Indexeddb][4]は LocalStorage より多くの機能よりも少ない WebSQL を提供しています。
 
-それ以上の年齢の一連の CLI に先行するコルドバ ツールを使用している場合、次のプラットフォームに固有の構成設定がまだ必要です。
+ [4]: http://www.w3.org/TR/IndexedDB/
 
-*   （アンドロイド`app/res/xml/config.xml`)
-    
-        < 機能名 =「記憶域」>< param の名前 =「android パッケージ」value="org.apache.cordova.Storage"/></機能 >
-        
+次のプラットフォームでは、IndexedDB をサポートします。
 
-*   （ブラックベリー WebWorks`www/config.xml`)
-    
-        < id="blackberry.widgetcache 機能"必要な ="true"バージョン =「1.0.0.0」/>
-        
+*   Windows Phone 8
+*   ブラックベリー 10
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+## プラグイン ベースのオプション
+
+Api が上記保存だけでなく、ファイル API できますローカル ファイル システム上のデータをキャッシュします。 [コルドバのプラグイン][5]の他の同様のストレージ オプションを提供します。
+
+ [5]: http://plugins.cordova.io/

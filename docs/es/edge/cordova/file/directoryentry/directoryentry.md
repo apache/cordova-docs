@@ -30,7 +30,7 @@ Este objeto representa un directorio en un sistema de archivos, como se define e
 
 *   **fullPath**: la ruta absoluta completa desde la raíz a la `DirectoryEntry` . *(DOMString)*
 
-**Nota:** El siguiente atributo está definido por la especificación del W3C, pero *no* es compatible:
+**Nota**: el siguiente atributo está definido por la especificación del W3C, pero *no* es compatible:
 
 *   **sistema de archivos**: el sistema de archivo en el cual el `DirectoryEntry` reside. *(FileSystem)*
 
@@ -63,7 +63,7 @@ Los métodos siguientes pueden invocarse en un `DirectoryEntry` objeto:
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -72,7 +72,7 @@ Los métodos siguientes pueden invocarse en un `DirectoryEntry` objeto:
 
 Ver metadatos de un directorio.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una función de devolución de llamada para ejecutar con un `Metadata` objeto. *(Función)*
 
@@ -80,18 +80,23 @@ Ver metadatos de un directorio.
 
 **Ejemplo rápido**
 
-    function success(metadata) {console.log ("última modificación:" + metadata.modificationTime);}
+    function success(metadata) {
+        console.log("Last Modified: " + metadata.modificationTime);
+    }
     
-    function fail(error) {alert(error.code)};
+    function fail(error) {
+        alert(error.code);
+    }
     
-    / / Solicitud objeto de metadatos para esta entrada entry.getMetadata (éxito, fail);
+    // Request the metadata object for this entry
+    entry.getMetadata(success, fail);
     
 
 ## setMetadata
 
 Establece los atributos extendidos de un directorio, o metadatos. *Actualmente sólo funciona en iOS.*
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se ejecuta cuando los metadatos es fijado con éxito. *(Función)*
 
@@ -165,7 +170,7 @@ Mover un directorio a una ubicación diferente en el sistema de archivos. Un err
 
 Mover un directorio en la cima de un directorio vacío existente intenta eliminar y reemplazar ese directorio.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **padres**: el directorio al que se mueva el directorio padre. *(DirectoryEntry)*
 
@@ -206,7 +211,7 @@ Copiar un directorio en una ubicación diferente en el sistema de archivos. Un e
 
 Directorio copias son siempre recursivo y copiar todo el contenido del directorio.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **padres**: el directorio al que copiar el directorio padre. *(DirectoryEntry)*
 
@@ -256,7 +261,7 @@ Elimina un directorio. Un error de los resultados si la aplicación intenta:
 
 *   eliminar el directorio raíz de un sistema de archivos.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de que el directorio se borra. Se invoca sin parámetros. *(Función)*
 
@@ -264,18 +269,23 @@ Elimina un directorio. Un error de los resultados si la aplicación intenta:
 
 **Ejemplo rápido**
 
-    function success(entry) {console.log ("retiro tuvo éxito");}
+    function success(entry) {
+        console.log("Removal succeeded");
+    }
     
-    function fail(error) {alert ('Error eliminar directorio: ' + error.code);}
+    function fail(error) {
+        alert('Error removing directory: ' + error.code);
+    }
     
-    / / quitar este directorio entry.remove (éxito, fail);
+    // remove this directory
+    entry.remove(success, fail);
     
 
 ## getParent
 
 Ver el padre `DirectoryEntry` que contiene el directorio.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa a los padres del directorio `DirectoryEntry` . *(Función)*
 
@@ -311,7 +321,7 @@ Crea o busca un directorio existente. Un error de los resultados si la aplicaci�
 
 *   Cree un directorio cuyo primario inmediato todavía no existe.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **ruta**: la ruta al directorio que admiraba o creado. Una ruta absoluta, o una ruta de acceso relativa de este `DirectoryEntry` . *(DOMString)*
 
@@ -323,11 +333,16 @@ Crea o busca un directorio existente. Un error de los resultados si la aplicaci�
 
 **Ejemplo rápido**
 
-    function success(dirEntry) {console.log ("nombre del directorio:" + dirEntry.name);}
+    function success(dirEntry) {
+        console.log("Directory Name: " + dirEntry.name);
+    }
     
-    function fail(error) {alert ("no se puede crear nuevo directorio:" + error.code);}
+    function fail(error) {
+        alert("Unable to create new directory: " + error.code);
+    }
     
-    / / Recuperar un directorio existente, o crearlo si no existe ya entry.getDirectory ("newDir", {crear: verdadero, exclusivo: false}, éxito, fail);
+    // Retrieve an existing directory, or create it if it does not already exist
+    entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);
     
 
 ## getFile
@@ -336,7 +351,7 @@ Crea o busca un archivo. Un error de los resultados si la aplicación intenta:
 
 *   crear un archivo cuyo primario inmediato todavía no existe.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **ruta**: la ruta del archivo que admiraba o creado. Una ruta absoluta, o una ruta de acceso relativa de este `DirectoryEntry` . *(DOMString)*
 
@@ -348,11 +363,16 @@ Crea o busca un archivo. Un error de los resultados si la aplicación intenta:
 
 **Ejemplo rápido**
 
-    function success(fileEntry) {console.log ("nombre de archivo:" + fileEntry.name);}
+    function success(fileEntry) {
+        console.log("File Name: " + fileEntry.name);
+    }
     
-    function fail(error) {alert ("error al recuperar el archivo:" + error.code);}
+    function fail(error) {
+        alert("Failed to retrieve file: " + error.code);
+    }
     
-    / / Recuperar un archivo existente, o crearlo si no existe entry.getFile ("newFile.txt", {crear: verdadero, exclusivo: false}, éxito, fail);
+    // Retrieve an existing file, or create it if it does not exist
+    entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);
     
 
 ## removeRecursively
@@ -361,7 +381,7 @@ Elimina un directorio y todo su contenido. En caso de error (por ejemplo, tratan
 
 *   eliminar el directorio raíz de un sistema de archivos.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de la `DirectoryEntry` ha sido eliminado. Se invoca sin parámetros. *(Función)*
 

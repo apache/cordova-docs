@@ -37,7 +37,7 @@ Il `ContactOrganization` oggetto memorizza la proprietà di organizzazione di un
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -122,7 +122,7 @@ Il `ContactOrganization` oggetto memorizza la proprietà di organizzazione di un
 
 *   **pref**: non supportato dai dispositivi Android 2. x, restituendo`false`.
 
-## Stranezze di blackBerry WebWorks (OS 5.0 e superiori)
+## BlackBerry WebWorks 5.0 + stranezze
 
 *   **pref**: non supportato dai dispositivi BlackBerry, restituendo`false`.
 

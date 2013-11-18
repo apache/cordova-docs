@@ -43,12 +43,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**注：**在較新的設備上的照片解析度是相當不錯的。 從設備的庫選擇了照片不到較低的品質，壓縮螢幕使即使 `quality` 指定參數。 為了避免常見的記憶體問題，設置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
+**注**： 在較新的設備上的照片解析度是相當好。 從設備的庫選擇了照片不到較低的品質，壓縮螢幕使即使 `quality` 指定參數。 為了避免常見的記憶體問題，設置 `Camera.destinationType` 到 `FILE_URI` 而不是`DATA_URL`.
 
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8
@@ -67,7 +67,7 @@ Android 使用意向啟動捕獲圖像，在設備上的相機活動和與低記
 
 ## Windows Phone 7 的怪癖
 
-調用本機攝像頭應用程式，同時通過 Zune 連接您的設備不工作，並觸發錯誤回檔。
+調用本機攝像頭應用程式，同時通過 Zune 連接設備不工作，並觸發錯誤回檔。
 
 ## Tizen 怪癖
 
@@ -145,7 +145,7 @@ Tizen 僅支援 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sou
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -165,7 +165,7 @@ Tizen 僅支援 `destinationType` 的 `Camera.DestinationType.FILE_URI` 和 `sou
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

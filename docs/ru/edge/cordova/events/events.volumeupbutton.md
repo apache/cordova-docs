@@ -29,7 +29,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Поддерживаемые платформы
 
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 
 ## Быстрый пример
 

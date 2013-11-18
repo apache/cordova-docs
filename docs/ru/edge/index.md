@@ -29,17 +29,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Интерфейс командной строки
+        Поддержка платформ
       </h2>
       
-      <span>Создание, сборка и развертывание из командной строки.</span>
+      <span>Таблица совместимости для всех основных функций.</span>
     </li>
     <li>
       <h2>
-        Руководство по поддерживаемым платформам
+        Интерфейс командной строки
       </h2>
       
-      <span>Настройка SDK и обновление существующих проектов</span>
+      <span>Создание, построение и развертывание из командной строки.</span>
+    </li>
+    <li>
+      <h2>
+        Платформа гиды
+      </h2>
+      
+      <span>Настройка каждого пакета SDK и обновление проектов</span>
     </li>
     <li>
       <h2>
@@ -53,7 +60,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Иконки и заставки
       </h2>
       
-      <span>Настройка приложения и отображения изображений.</span>
+      <span>Настройка приложения отображения изображений.</span>
     </li>
     <li>
       <h2>
@@ -67,7 +74,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Руководство по разработке плагинов
       </h2>
       
-      <span>Разработка ваш первый плагин.</span>
+      <span>Разработать ваш первый плагин.</span>
     </li>
     <li>
       <h2>

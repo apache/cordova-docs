@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Возвращает шаблон для `successCallback` с `properties` объект в качестве параметра. Этот объект должен содержать следующие свойства:
 
-*   **шаблон**: валюты шаблон для форматирования и синтаксического анализа значения валюты. Шаблоны следуют технического стандарта Unicode #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(Строка)*
+*   **шаблон**: валюты шаблон для форматирования и синтаксического анализа значения валюты. Шаблоны следуют [технического стандарта Unicode #35][1]. *(Строка)*
 
 *   **код**: код валюты ISO 4217 для шаблона. *(Строка)*
 
@@ -37,6 +37,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **Группировка**: символ группировки использовать для синтаксического анализа и форматирования. *(Строка)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Входящий `currencyCode` параметр должен быть `String` одной из ISO 4217 кодов валют, например «USD».
 
 Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 
 ## Быстрый пример

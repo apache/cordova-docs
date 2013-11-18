@@ -106,9 +106,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 構建應用程式
 
-預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用 `www/js/index.js` 。 <!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
+預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用`www/js/index.js`.
 
 運行以下命令以反覆運算方式生成專案：
 
@@ -154,11 +152,23 @@ XREF -->
 
 在運行此命令之前, 您需要設置的設備進行測試，之後會發生變化，為每個平臺的程式。 在 Android 的情況下，你將必須啟用設備上的**USB 調試**的選項和或許添加 USB 驅動程式根據您發展導讀工作。 每個平臺的要求的詳細資訊，請參閱平臺指南。
 
-## 添加功能
+## 添加外掛程式的功能
 
 生成和查看一個新專案時，將顯示預設的應用程式不會很多。 您可以修改該應用程式在許多方面，利用標準的 web 技術，但應用程式緊密的聯繫，與各種設備級功能，您需要添加外掛程式，提供對核心科爾多瓦 Api 的訪問。
 
-*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱嵌入 WebViews 和外掛程式開發指南的詳細資訊。更常見的是，您將添加外掛程式，使科爾多瓦的基本設備級功能之一 <!--應用程式開發指南中討論的 XREF 和--> XREF 詳細的 API Reference 中。
+*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱嵌入 WebViews 和外掛程式開發指南的詳細資訊。更常見的是，您將添加外掛程式，以便啟用科爾多瓦的基本設備級功能詳細的 API Reference 中之一。 可以在[plugins.cordova.io][4]發現這些外掛程式，包括社會，所提供的附加外掛程式的清單。 你可以使用 CLI 來搜索外掛程式從此註冊表。 例如，搜索 `bar` 和 `code` 產生單個結果相匹配這兩個詞作為子字串不區分大小寫：
+
+ [4]: http://plugins.cordova.io/
+
+        $ cordova plugin search bar code
+    
+        com.phonegap.plugins.barcodescanner - Scans Barcodes
+    
+
+僅搜索 `bar` 期限國債收益率和更多的結果：
+
+        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+    
 
 `cordova plugin add`命令需要您指定的外掛程式代碼的存儲庫。以下是您可能會添加的功能的示例：
 
@@ -185,7 +195,7 @@ XREF -->
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+        
 
 *   訪問設備或網路 （檔 API） 上的檔：
     
@@ -232,13 +242,54 @@ XREF -->
 
 若要刪除某個外掛程式，它通過引用相同的識別碼出現在該清單中。例如，這裡是你會怎麼移除調試主控台支援從一個發佈版本：
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
     
 
-你可以大量刪除或添加的外掛程式通過指定多個參數的每個命令。
+你可以大量刪除或添加的外掛程式通過指定多個參數的每個命令：
 
-## 自訂每個平臺
+        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+    
+
+## 高級的外掛程式選項
+
+當添加外掛程式，幾個選項允許您指定從何處獲取該外掛程式。 上面的示例使用知名 `registry.cordova.io` 註冊表和外掛程式指定的 `id` ：
+
+        $ cordova plugin add org.apache.cordova.console
+    
+
+`id`還可能包括外掛程式的版本號碼後, 追加 `@` 字元。`latest`版本是最新版本的別名。例如：
+
+        $ cordova plugin add org.apache.cordova.console@latest
+        $ cordova plugin add org.apache.cordova.console@0.2.1
+    
+
+如果在沒有註冊該外掛程式 `registry.cordova.io` 位於另一個 git 資源庫中，但您可以指定一個備用的 URL：
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+    
+
+上面的 git 示例讀取外掛程式末尾的主分支上，但可以後追加一個標記或分支如備用 git ref `#` 字元：
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+如果外掛程式 (和其 `plugin.xml` 檔） 是在 git 回購協定內的子目錄中，您可以指定它與 `:` 的字元。 請注意， `#` 字元仍然需要：
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+    
+
+您也可以組合 git ref 和子目錄：
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+    
+
+或者，指定包含的外掛程式目錄的本地路徑 `plugin.xml` 檔：
+
+        $ cordova plugin add ../my_plugin_dir
+    
+
+## 使用*合併*到自訂的每個平臺
 
 而科爾多瓦允許您輕鬆地部署許多不同平臺的應用程式，有時需要添加自訂項。 在這種情況下，你不想修改中各項的原始程式碼檔 `www` 內的頂級目錄 `platforms` 目錄，，因為他們定期更換與頂級 `www` 目錄的跨平臺源。
 
@@ -260,7 +311,24 @@ XREF -->
 
 您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `backbutton` 從相應的硬體按鈕的事件。
 
-## 更新科爾多瓦
+## 説明命令
+
+科爾多瓦特點兩三個全域命令，可以説明你如果你卡住或遇到的問題。`help`命令顯示所有可用的科爾多瓦命令和它們的語法：
+
+    $ cordova help
+    $ cordova        # same
+    
+
+`info`命令產生的潛在的有用的詳細資訊，如當前安裝的平臺，為每個平臺 SDK 版本和外掛程式的 CLI 版本的清單和 `node.js` ：
+
+    $ cordova info
+    
+
+它既呈現到螢幕資訊並捕獲在本地輸出 `info.txt` 檔。
+
+**注**： 目前，僅在 iOS 和 Android 平臺上的詳細資訊都可用。
+
+## 更新科爾多瓦和您的專案
 
 安裝後 `cordova` 實用程式，您可以始終進行更新到最新版本通過運行以下命令：
 
@@ -269,13 +337,19 @@ XREF -->
 
 使用此語法來安裝特定的版本：
 
-        $ sudo 故宮安裝-g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0
     
 
-運行 `cordova -v` ，查看當前運行的版本。 運行 `npm
+運行 `cordova -v` 查看當前運行的版本。 運行 `npm
 info` 命令長清單，其中包含當前版本以及其他可用的版本號：
 
         $ npm info cordova
     
 
 科爾多瓦 3.0 是要支援這一節中描述的命令列介面的第一個版本。 如果您正在從 3.0 以前的版本更新，您需要創建一個新專案，如以上所述，然後將舊應用程式的資源複製到頂級 `www` 目錄。 在適用的情況，進一步有關升級到 3.0 的詳細資訊是可用的平臺指南中。 一旦你升級到 `cordova` 的命令列介面和使用 `npm update` 待當前，那裡所描述的更耗時過程不再相關。
+
+科爾多瓦 3.0 + 可能仍然需要對專案級別的目錄結構和其他依賴關係的各種變化。 在您運行 `npm` 命令上面更新科爾多瓦本身，您可能需要確保您的專案資源符合最新的版本要求。 運行下面這樣的命令為每個平臺您正在構建：
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.

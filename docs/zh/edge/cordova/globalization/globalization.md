@@ -57,11 +57,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   （在 android`app/res/xml/config.xml`)
+*   （在 android`res/xml/config.xml`)
     
         <feature name="Globalization">
-            <param name="android-package" value="org.apache.cordova.Globalization" />
+            <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
         </feature>
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

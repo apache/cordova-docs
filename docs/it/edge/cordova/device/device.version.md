@@ -24,7 +24,7 @@ Ottenere la versione del sistema operativo.
 ## Piattaforme supportate
 
 *   Android 2.1 +
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 e 8

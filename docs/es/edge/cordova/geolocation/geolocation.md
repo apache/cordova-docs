@@ -24,7 +24,7 @@ Esta API se basa en la [Especificación de API de geolocalización W3C][1] y só
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**Nota de privacidad importante:** Recopilación y uso de datos de geolocalización plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza los datos de geolocalización, si se comparte con cualquiera de las partes y el nivel de precisión de los datos (por ejemplo, código postal grueso, fino, nivel, etc.). Datos de geolocalización es generalmente considerados sensibles porque puede revelar paradero de una persona y, si está almacenado, la historia de sus viajes. Por lo tanto, además de política de privacidad de tu app, fuertemente considere dar un aviso de just-in-time antes de su aplicación acceder a los datos de geolocalización (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Para obtener más información, por favor consulte a la guía de privacidad.
+**ADVERTENCIA**: recopilación y uso de datos de geolocalización plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza los datos de geolocalización, si se comparte con cualquiera de las partes y el nivel de precisión de los datos (por ejemplo, código postal grueso, fino, nivel, etc.). Datos de geolocalización es generalmente considerados sensibles porque puede revelar paradero del usuario y, si está almacenado, la historia de sus viajes. Por lo tanto, además de política de privacidad de la app, fuertemente considere dar un aviso de just-in-time antes de la aplicación tiene acceso a datos de geolocalización (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Para obtener más información, por favor consulte a la guía de privacidad.
 
 ## Métodos
 
@@ -60,13 +60,12 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
     
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
         
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   BlackBerry WebWorks
@@ -82,7 +81,14 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         </rim:permissions>
         
 
-*   (en iOS`config.xml`)
+*   FirefoxOS (en el archivo manifest.webapp)
+    
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+        
+
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
@@ -100,4 +106,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

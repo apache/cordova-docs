@@ -24,7 +24,7 @@ Cette API est basée sur la [Spécification de l'API Geolocation du W3C][1] et s
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**Remarque importante concernant le respect de la vie privée :** la collecte et l'utilisation des données de géolocalisation soulève des questions importantes concernant le respect de la vie privée. La politique de confidentialité de votre application devrait traiter de la manière dont l'application utilise les données de géolocalisation, si elle les partage avec d'autres parties ou non et définir le niveau de précision de celles-ci (par exemple grossier, fin, restreint au code postal, etc.). Les données de géolocalisation sont généralement considérées comme sensibles car elle peuvent révéler l'endroit où se trouve une personne et, si stockées, l'historique de ses voyages. Par conséquent, en plus de la politique de confidentialité de votre application, vous devriez par exemple fortement envisager d'afficher une notice juste avant d'accéder aux données de géolocalisation (si le système d'exploitation de l'appareil ne le fait pas déjà). Cette notice devrait contenir les informations susmentionnées, ainsi que permettre de recueillir l'autorisation de l'utilisateur (par exemple, en offrant les possibilités **OK** et **Non merci**). Pour plus d'informations, veuillez vous référer à la section "Guide du respect de la vie privée".
+**Avertissement**: collecte et utilisation des données de géolocalisation soulève des questions importantes de la vie privée. La politique de confidentialité de votre application devrait traiter de la manière dont l'application utilise les données de géolocalisation, si elle les partage avec d'autres parties ou non et définir le niveau de précision de celles-ci (par exemple grossier, fin, restreint au code postal, etc.). Données de géolocalisation sont généralement considéré comme sensibles car elle peut révéler la localisation de l'utilisateur et, si stocké, l'histoire de leurs voyages. Par conséquent, en plus de la politique de confidentialité de l'application, vous devez envisager fortement fournissant un avis juste-à-temps, avant que l'application accède aux données de géolocalisation (si le système d'exploitation de périphérique n'est pas faire déjà). Cette notice devrait contenir les informations susmentionnées, ainsi que permettre de recueillir l'autorisation de l'utilisateur (par exemple, en offrant les possibilités **OK** et **Non merci**). Pour plus d'informations, veuillez vous référer à la section "Guide du respect de la vie privée".
 
 ## Méthodes
 
@@ -46,7 +46,7 @@ Cette API est basée sur la [Spécification de l'API Geolocation du W3C][1] et s
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.geolocation
         $ cordova plugin ls
@@ -60,13 +60,12 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
     
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
         
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   BlackBerry WebWorks
@@ -82,22 +81,29 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
         </rim:permissions>
         
 
-*   iOS (dans `config.xml`)
+*   FirefoxOS (dans le fichier manifest.webapp)
+    
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+        
+
+*   iOS (dans du répertoire application nommé`config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
         </feature>
         
 
-*   Windows Phone (dans `Properties/WPAppManifest.xml`)
+*   Windows Phone (en`Properties/WPAppManifest.xml`)
     
         <Capabilities>
             <Capability Name="ID_CAP_LOCATION" />
         </Capabilities>
         
     
-    Référence : [Manifeste d'Application pour Windows Phone][2]
+    Référence : [manifeste d'Application pour Windows Phone][2]
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

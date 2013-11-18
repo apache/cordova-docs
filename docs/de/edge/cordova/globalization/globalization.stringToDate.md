@@ -54,7 +54,7 @@ Wenn es ist ein Fehler beim Analysieren der Datumszeichenfolge dann die `errorCa
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

@@ -41,7 +41,7 @@ Il `options.selector` può essere `date` , `time` o`date and time`.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

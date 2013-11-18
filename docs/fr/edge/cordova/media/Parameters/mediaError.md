@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # mediaError
 
-Une fonction de rappel spécifiée par l'utilisateur qui s'exécute lorsqu'il y a une erreur dans les fonctions des médias.
+Une fonction callback, définie par l'utilisateur, exécutée si une erreur survient lors de l'appel aux fonctions de l'API Media.
 
     function(error) {
-        // Handle the error
+        // Gère l'erreur en question
     }
     
 
 ## Paramètres
 
-*   **erreur**: l'erreur retournée par le périphérique. *(MediaError)*
+*   **error** : l'erreur renvoyée par l'appareil. *(MediaError)*

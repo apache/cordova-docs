@@ -54,7 +54,7 @@ time`.
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

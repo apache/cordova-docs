@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **полный путь**: полный абсолютный путь от корня к `FileEntry` . *(DOMString)*
 
-**Примечание:** Следующий атрибут определен в спецификации W3C, но *не* поддерживается:
+**Примечание**: следующий атрибут определен в спецификации W3C, но *не* поддерживается:
 
 *   **Файловая система**: файловая система, на которой `FileEntry` проживает. *(Файловая система)*
 
@@ -57,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8
@@ -66,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Искать метаданные о файле.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, передаваемого `Metadata` объект. *(Функция)*
 
@@ -87,9 +87,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **В настоящее время работает только на iOS.**
 
-*   Это установит расширенных атрибутов файла.
+*   Устанавливает дополнительные атрибуты файла.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, который выполняется, когда метаданные набора. *(Функция)*
 
@@ -159,7 +159,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Кроме того перемещение файла поверх существующего файла пытается удалить и заменить этот файл.
 
-**Параметры:**
+**Параметры**:
 
 *   **родитель**: родительский каталог, в который необходимо переместить файл. *(DirectoryEntry)*
 
@@ -195,7 +195,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Скопируйте файл в его родителя, если не указано имя, отличное от его текущего.
 
-**Параметры:**
+**Параметры**:
 
 *   **родитель**: родительский каталог, в который необходимо скопировать файл. *(DirectoryEntry)*
 
@@ -240,7 +240,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Удаляет файл.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, который выполняется после того, как файл был удален. Вызывается без параметров. *(Функция)*
 
@@ -264,7 +264,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Посмотрите вверх родительского `DirectoryEntry` файл.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, передаваемого файла родительского `DirectoryEntry` . *(Функция)*
 
@@ -288,7 +288,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Создание `FileWriter` объект, связанный с файла, представленного`FileEntry`.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, передаваемого `FileWriter` объект. *(Функция)*
 
@@ -312,7 +312,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Возвращение `File` объект, представляющий текущее состояние файла что это `FileEntry` представляет.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, передаваемого `File` объект. *(Функция)*
 

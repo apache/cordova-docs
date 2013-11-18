@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > El objeto de la `cámara` proporciona acceso a la aplicación de cámara del dispositivo por defecto.
 
-**Nota de privacidad importante:** Recopilación y uso de imágenes desde cámara de un dispositivo plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza la cámara y si se comparten las imágenes grabadas con cualquiera de las partes. Además, si el uso de la aplicación de la cámara no es aparente en la interfaz de usuario, debe proporcionar un aviso de just-in-time antes de su aplicación accediendo a la cámara (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Para obtener más información, por favor consulte a la guía de privacidad.
+**ADVERTENCIA**: recopilación y uso de imágenes desde cámara de un dispositivo plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza la cámara y si se comparten las imágenes grabadas con cualquiera de las partes. Además, si el uso de la aplicación de la cámara no es aparente en la interfaz de usuario, debe proporcionar un aviso de just-in-time antes de la aplicación tiene acceso a la cámara (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Para obtener más información, por favor consulte a la guía de privacidad.
 
 ## Métodos
 
@@ -41,7 +41,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
     
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
         
         (in app/AndroidManifest)
@@ -57,13 +57,12 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-        
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
@@ -91,4 +90,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

@@ -41,7 +41,7 @@ El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -50,7 +50,7 @@ El `File` objeto contiene atributos de un solo archivo. Usted puede obtener una 
 
 Devolver un nuevo `File` objeto, para que `FileReader` devuelve sólo la porción especificada del archivo. Para valores negativos `start` o `end` se miden desde el final del archivo. Los índices se colocan en relación con el segmento actual. (Véase el siguiente ejemplo completo).
 
-**Parámetros:**
+**Parámetros**:
 
 *   **Inicio**: el índice del primer byte para leer, inclusive.
 

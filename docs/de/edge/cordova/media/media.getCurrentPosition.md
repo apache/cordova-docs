@@ -35,7 +35,7 @@ Eine asynchrone Funktion, die die aktuelle Position der zugrunde liegenden Audio
 
 *   Android
 
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 
 *   iOS
 

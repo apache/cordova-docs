@@ -27,7 +27,7 @@ Un objeto que enumera los archivos y directorios dentro de un directorio, tal co
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -36,7 +36,7 @@ Un objeto que enumera los archivos y directorios dentro de un directorio, tal co
 
 Leer las entradas en este directorio.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa una matriz de `FileEntry` y `DirectoryEntry` los objetos. *(Función)*
 

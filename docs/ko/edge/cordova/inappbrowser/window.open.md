@@ -36,20 +36,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     `options`문자열 텅 빈 어떤 스페이스 포함 해서는 안 그리고 쉼표 각 기능의 이름/값 쌍을 구분 합니다. 기능 이름은 대/소문자입니다. 모든 플랫폼 지원 아래 값:
     
     *   **위치**: 설정 `yes` 또는 `no` 설정 하는 `InAppBrowser` 의 위치 표시줄 켜거나 끕니다.
-    ## 안 드 로이드만
     
-    *   **closebuttoncaption** -것입니다 "완료" 버튼에 대 한 캡션 문자열을 설정 합니다. 
-    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
-    *   **clearcache** -브라우저의 쿠키 캐시 새 창을 열기 전에 허가를 '예'로 설정
-    *   **clearsessioncache** -새 창 열기 전에 해제 세션 쿠키 캐시를 '예'로 설정
-    ## iOS만
+    안 드 로이드만:
     
-    *   **closebuttoncaption** -것입니다 "완료" 버튼에 대 한 캡션 문자열을 설정 합니다. 참고 직접이 값을 지역화 해야 합니다.
-    *   **숨겨진** -'예'를 만들고 브라우저에서 페이지를 로드할 준비가 있지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 또는 브라우저를 열고 정상적으로 로드 '아니오' (기본값)으로 설정 합니다. 
-    *   **도구 모음** -'예' 또는 '아니요'를 InAppBrowser (기본값은 '예')에 대 한 도구 모음 설정 또는 해제 설정
+    *   **closebuttoncaption**: **수행** 하는 단추의 캡션으로 사용할 문자열을 설정 합니다.
+    *   **숨겨진**: 설정 `yes` 브라우저를 만들 페이지를 로드 하면, 하지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 하거나 설정 `no` (기본값) 브라우저 열고 정상적으로 로드 해야 합니다. 
+    *   **clearcache**: 설정 `yes` 브라우저를 쿠키 캐시 삭제 하기 전에 새 창이 열립니다
+    *   **clearsessioncache**: 설정 `yes` 세션 쿠키 캐시를 삭제 하기 전에 새 창이 열립니다
+    
+    iOS만:
+    
+    *   **closebuttoncaption**: **수행** 하는 단추의 캡션으로 사용할 문자열을 설정 합니다. 참고 직접이 값을 지역화 해야 합니다.
+    *   **숨겨진**: 설정 `yes` 브라우저를 만들 페이지를 로드 하면, 하지만 그것을 보여주지. Load 이벤트는 로드가 완료 되 면 발생 합니다. 생략 하거나 설정 `no` (기본값) 브라우저 열고 정상적으로 로드 해야 합니다. 
+    *   **도구 모음**: 설정 `yes` 또는 `no` InAppBrowser (기본값:에 대 한 도구 모음 온 / 오프를 돌기 위하여`yes`)
     *   **enableViewportScale**: 설정 `yes` 또는 `no` 뷰포트 메타 태그 (기본값:를 통해 확장을 방지 하기 위해`no`).
     *   **mediaPlaybackRequiresUserAction**: 설정 `yes` 또는 `no` HTML5 오디오 또는 비디오 자동 재생 (기본값에서에서 방지 하기 위해`no`).
-    *   **allowInlineMediaPlayback**: 설정 `yes` 또는 `no` 장치 전용 재생 인터페이스 보다는 브라우저 창 내에서 표시 하는 인라인 HTML5 미디어 재생 허용. HTML의 `video` 요소가 포함 되어야 합니다는 `webkit-playsinline` 특성 (기본값:`no`)
+    *   **allowInlineMediaPlayback**: 설정 `yes` 또는 `no` 인라인 HTML5 미디어 재생, 장치 전용 재생 인터페이스 보다는 브라우저 창 내에서 표시할 수 있도록 합니다. HTML의 `video` 요소가 포함 되어야 합니다는 `webkit-playsinline` 특성 (기본값:`no`)
     *   **keyboardDisplayRequiresUserAction**: 설정 `yes` 또는 `no` 양식 요소는 자바 스크립트를 통해 포커스를 받을 때 키보드를 열고 `focus()` 전화 (기본값:`yes`).
     *   **suppressesIncrementalRendering**: 설정 `yes` 또는 `no` (기본값을 렌더링 하기 전에 모든 새로운 보기 콘텐츠를 받을 때까지 기다려야`no`).
     *   **presentationstyle**: 설정 `pagesheet` , `formsheet` 또는 `fullscreen` [프레 젠 테이 션 스타일][1] (기본값을 설정 하려면`fullscreen`).

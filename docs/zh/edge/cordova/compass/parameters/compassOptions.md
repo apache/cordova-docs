@@ -24,16 +24,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **篩選器**： 啟動 watchHeading 成功回檔所需的度的變化。*（人數）*
 
-Android 的怪癖
+## Android 的怪癖
 
----
-
-*   `filter`不受支援。
+*   不支援`filter`.
 
 ## Tizen 怪癖
 
-*   `filter`不受支援。
+*   不支援`filter`.
 
 ## Windows Phone 7 和 8 怪癖
 
-*   `filter`不受支援。
+*   不支援`filter`.

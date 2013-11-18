@@ -41,7 +41,7 @@ El `Coordinates` objeto está unido a la `Position` objeto que está disponible 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8

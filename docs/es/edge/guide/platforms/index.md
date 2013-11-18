@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guías de plataforma
 
-Antes de desarrollar para cualquiera de las plataformas que se enumeran a continuación, instalar la interfaz de cordova de comandos (CLI). (Para más detalles, ver la interfaz de línea de comandos).
+Antes de desarrollar para cualquiera de las plataformas que se enumeran a continuación, instalar la interfaz de línea de comandos de cordova (CLI). (Para más detalles, ver la interfaz de línea de comandos).
 
 Para desarrollar aplicaciones de Cordova, debe instalar los SDK para cada plataforma móvil que usted está apuntando. Esta instalación es necesaria independientemente de los hacen la mayoría de su trabajo en el SDK o utiliza la CLI para su ciclo de construir.
 

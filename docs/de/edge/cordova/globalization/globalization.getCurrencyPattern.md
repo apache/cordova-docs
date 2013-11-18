@@ -25,7 +25,7 @@ Gibt eine Musterzeichenfolge zum Formatieren und Analysieren von Währungswerten
 
 Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Parameter. Das Objekt sollte die folgenden Eigenschaften enthalten:
 
-*   **Muster**: das Währung-Muster zur Formatierung und zum Analysieren von Währungswerten. Die Muster folgen Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **Muster**: das Währung-Muster zur Formatierung und zum Analysieren von Währungswerten. Die Muster folgen [Unicode Technical Standard #35][1]. *(String)*
 
 *   **Code**: der ISO-4217-Währungscode für das Muster. *(String)*
 
@@ -37,6 +37,8 @@ Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Par
 
 *   **Gruppieren**: das Symbol für Zifferngruppierung zum analysieren und formatieren verwenden. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Die eingehende `currencyCode` Parameter sollte ein `String` einer der ISO 4217 Währungscodes, z. B. 'USD'.
 
 Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mi
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Kleines Beispiel

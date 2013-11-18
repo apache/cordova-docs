@@ -34,7 +34,7 @@ Dieses Objekt ist erstellt und bevölkert von Cordova und kehrte nach einem Rüc
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Kleines Beispiel

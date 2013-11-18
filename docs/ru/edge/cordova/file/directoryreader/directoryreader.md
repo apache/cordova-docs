@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8
@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Чтение записей в этом каталоге.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратный вызов, который передается массив из `FileEntry` и `DirectoryEntry` объектов. *(Функция)*
 

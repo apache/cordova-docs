@@ -22,7 +22,7 @@ Un objet `CompassHeading` est retourné à la fonction de callback `compassSucce
 
 *   **magneticHeading**: la position en degrés de 0-359,99 à un instant donné. *(Nombre)*
 
-*   **trueHeading**: la position par rapport au pôle Nord géographique en degrés 0-359,99 à un instant donné. Une valeur négative indique que la véritable direction ne peut pas être déterminée. *(Nombre)*
+*   **trueHeading**: la position par rapport au pôle Nord géographique en degrés 0-359,99 à un instant donné. Une valeur négative indique que le cap vrai ne peut être déterminée. *(Nombre)*
 
 *   **headingAccuracy**: la déviation en degrés entre la direction signalée et la véritable direction. *(Nombre)*
 
@@ -34,12 +34,12 @@ L'objet `CompassHeading` est retourné à la fonction de callback `compassSucces
 
 ## Spécificités Android
 
-*   `trueHeading`n'est pas pris en charge, mais retourne la même valeur que `magneticHeading`
+*   La `trueHeading` propriété n'est pas pris en charge, mais la même valeur que des rapports`magneticHeading`.
 
-*   `headingAccuracy` est toujours égal à 0 car il n'y a pas de différence entre `magneticHeading` et `trueHeading`.
+*   La `headingAccuracy` propriété est toujours 0 car il n'y a pas de différence entre la `magneticHeading` et`trueHeading`.
 
 ## Spécificités iOS
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   La `trueHeading` propriété est retournée uniquement pour les services de localisation activées via`navigator.geolocation.watchLocation()`.
 
-*   Pour les appareils sous iOS 4 et suivants, les facteurs de direction de l'orientation actuelle de l'appareil, pas en référence à sa position absolue, pour les applications prenant en charge cette orientation.
+*   Pour les appareils iOS 4 et au-dessus, rubrique facteurs dans l'orientation actuelle de l'appareil et ne fait pas référence à sa position absolue, pour les applications prenant en charge cette orientation.

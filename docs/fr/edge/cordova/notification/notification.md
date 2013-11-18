@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Notification
 
-> Notifications de l'appareil visuel, sonore et tactile.
+> Notifications visuelles, sonores et tactiles de l'appareil.
 
 ## Méthodes
 
@@ -28,7 +28,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente l'API au niveau du périphérique comme des *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
@@ -39,13 +39,16 @@ Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme
         $ cordova plugin rm org.apache.cordova.vibration
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifie les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
 
 *   Android
     
         (in app/res/xml/config.xml)
         <feature name="Notification">
-            <param name="android-package" value="org.apache.cordova.Notification" />
+            <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        </feature>
+        <feature name="Vibration">
+            <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -63,11 +66,11 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         <feature id="blackberry.ui.dialog" />
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans du répertoire application nommé`config.xml`)
     
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

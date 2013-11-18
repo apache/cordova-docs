@@ -29,7 +29,7 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## Piattaforme supportate
 
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 
 ## Esempio rapido
 

@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Андроид
 
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 
 *   iOS
 

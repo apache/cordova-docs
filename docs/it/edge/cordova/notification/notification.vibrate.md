@@ -26,7 +26,7 @@ Vibra il dispositivo per il periodo di tempo specificato.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 
@@ -97,7 +97,7 @@ Vibra il dispositivo per il periodo di tempo specificato.
         navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
-## BB10 stranezze
+## BlackBerry 10 capricci
 
 vibrare la funzione dell'oggetto navigator
 

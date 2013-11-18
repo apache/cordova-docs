@@ -16,17 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.VIBRATE
 
-Vibre le dispositif pour la durée spécifiée.
+Fait vibrer l'appareil pendant la durée spécifiée.
 
     navigator.notification.vibrate(milliseconds)
     
 
-*   **temps**: millisecondes à vibrer l'appareil, où 1000 millisecondes est égal à 1 seconde. *(Nombre)*
+*   **temps**: millisecondes de vibration de l'appareil, où 1000 millisecondes est égal à 1 seconde. *(Nombre)*
 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 
@@ -89,7 +89,7 @@ Vibre le dispositif pour la durée spécifiée.
     </html>
     
 
-## iOS Quirks
+## Spécificités iOS
 
 *   **temps**: ne tient pas compte de la durée spécifiée et vibre pendant un temps prédéterminé.
     
@@ -97,8 +97,8 @@ Vibre le dispositif pour la durée spécifiée.
         navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
-## BB10 Quirks
+## BlackBerry 10 Quirks
 
-vibreur fonction appartenue à l'objet navigator
+fonction de vibration qui appartient à l'objet navigator
 
         navigator.vibrate(1000);  // vibrate for 1 second

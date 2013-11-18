@@ -36,7 +36,7 @@ La maggior parte delle implementazioni di Cordova una dialogo nativa per questa 
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 e 8
@@ -44,7 +44,7 @@ La maggior parte delle implementazioni di Cordova una dialogo nativa per questa 
 
 ## Esempio rapido
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something

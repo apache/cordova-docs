@@ -106,9 +106,7 @@ Se lo si desidera, è possibile utilizzare un SDK a questo punto aprire il proge
 
 ## Costruire l'App
 
-Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da `www/js/index.js` . <!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
+Per impostazione predefinita, il `cordova create` script genera una scheletrica applicazione web-based in cui home page è il progetto `www/index.html` file. Modificare questa applicazione, tuttavia si desidera, ma qualsiasi inizializzazione deve essere specificato come parte della `deviceready` gestore di eventi, a cui fa riferimento predefinito da`www/js/index.js`.
 
 Eseguire il comando seguente per costruire in modo iterativo del progetto:
 
@@ -154,11 +152,23 @@ Alternativamente, è possibile collegare il telefono al computer e testare le ap
 
 Prima di eseguire questo comando, è necessario impostare il dispositivo per la prova, seguendo procedure che variano per ogni piattaforma. Nel caso di Android, dovete abilitare un'opzione di **debug USB** sul dispositivo e magari aggiungere un driver USB a seconda del vostro sviluppo di Francia. Vedere piattaforma guide per informazioni dettagliate sui requisiti di ogni piattaforma.
 
-## Aggiungere funzionalità
+## Aggiungere funzionalità di Plugin
 
 Quando si compila e Mostra un nuovo progetto, l'applicazione predefinita che appare non fa molto molto. È possibile modificare l'applicazione in molti modi per sfruttare tecnologie web standard, ma per le app comunicare strettamente con varie funzionalità a livello di dispositivo, è necessario aggiungere plugins che forniscono accesso al nucleo Cordova APIs.
 
-Un *plugin* è un po ' di codice del componente aggiuntivo che fornisce un'interfaccia per i componenti nativi. È possibile progettare la propria interfaccia plugin, per esempio, quando si progetta un'applicazione ibrida che mescola una Cordova WebView con componenti nativi. (Vedere visualizzazioni Web Embedding e guida allo sviluppo di Plugin per dettagli). Più comunemente, si dovrebbe aggiungere un plugin per abilitare una delle funzionalità a livello di dispositivo base di Cordova <!- - XRIF discusso nella Guida Sviluppo Applicazione e XRIF--> dettagliate nel riferimento all'API.
+Un *plugin* è un po ' di codice del componente aggiuntivo che fornisce un'interfaccia per i componenti nativi. È possibile progettare la propria interfaccia plugin, per esempio, quando si progetta un'applicazione ibrida che mescola una Cordova WebView con componenti nativi. (Vedere visualizzazioni Web Embedding e guida allo sviluppo di Plugin per dettagli). Più comunemente, è necessario aggiungere un plugin per abilitare una delle caratteristiche fondamentali di Cordova dispositivo-livello dettagliati in riferimento all'API. Un elenco di questi plugin, tra cui il plugin aggiuntivi forniti dalla Comunità, può essere trovato alla [plugins.cordova.io][4]. È possibile utilizzare la CLI per la ricerca di plugin da questo registro. Ad esempio, alla ricerca di `bar` e `code` produce un singolo risultato che corrisponde a entrambi i termini come minuscole sottostringhe:
+
+ [4]: http://plugins.cordova.io/
+
+        $ cordova plugin search bar code
+    
+        com.phonegap.plugins.barcodescanner - Scans Barcodes
+    
+
+Cercando solo il `bar` termine rendimenti e risultati aggiuntivi:
+
+        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+    
 
 Il `cordova plugin add` comando richiede di specificare il repository per il codice del plugin. Qui ci sono esempi di funzioni che potrebbero aggiungere:
 
@@ -185,7 +195,7 @@ Il `cordova plugin add` comando richiede di specificare il repository per il cod
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+        
 
 *   Accedere ai file sul dispositivo o rete (File API):
     
@@ -232,13 +242,54 @@ Uso `plugin ls` (o `plugin list` , o `plugin` da sola) alla Mostra attualmente i
 
 Per rimuovere un plugin, si riferiscono ad esso dall'identificatore stesso che compare nell'elenco. Ad esempio, ecco come si vuoi rimuovere il supporto per una console di debug da una versione di rilascio:
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
     
 
-È possibile rimuovere-lotto o aggiungere plugins specificando più argomenti per ogni comando.
+È possibile rimuovere-lotto o aggiungere plugins specificando più argomenti per ogni comando:
 
-## Personalizzare ogni piattaforma
+        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+    
+
+## Opzioni avanzate del Plugin
+
+Quando si aggiunge un plugin, diverse opzioni consentono di specificare da dove scaricare il plugin. Gli esempi sopra utilizzano un noto `registry.cordova.io` Registro di sistema e il plugin è specificato dal `id` :
+
+        $ cordova plugin add org.apache.cordova.console
+    
+
+Il `id` può anche includere il numero di versione del plugin, dopo un `@` personaggio. Il `latest` versione è un alias per la versione più recente. Ad esempio:
+
+        $ cordova plugin add org.apache.cordova.console@latest
+        $ cordova plugin add org.apache.cordova.console@0.2.1
+    
+
+Se il plugin non è registrato presso `registry.cordova.io` , ma si trova in un altro repository git, è possibile specificare un URL alternativo:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+    
+
+Git esempio precedente recupera il plugin dalla fine del ramo principale, ma può essere aggiunto un git-rif alternativo come ad esempio un tag o ramo dopo un `#` personaggio:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+Se il plugin (e la sua `plugin.xml` file) è in una sottodirectory all'interno della repo git, è possibile specificare con un `:` personaggio. Si noti che il `#` personaggio è ancora necessaria:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+    
+
+È inoltre possibile combinare il git-ref sia nella sottodirectory:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+    
+
+In alternativa, specificare un percorso locale plugin nella directory che contiene il `plugin.xml` file:
+
+        $ cordova plugin add ../my_plugin_dir
+    
+
+## Utilizzando *si fonde* a personalizzare ogni piattaforma
 
 Mentre Cordova consente di implementare facilmente un app per molte piattaforme diverse, a volte è necessario aggiungere personalizzazioni. In tal caso, non si vuole modificare i file di origine in varie `www` directory all'interno del primo livello `platforms` directory, perché essi stanno regolarmente sostituiti con il primo livello `www` source multipiattaforma della directory.
 
@@ -260,7 +311,24 @@ Quando si ricostruisce il progetto, la versione di Android presenta la dimension
 
 È inoltre possibile utilizzare `merges` per aggiungere file non presenti nell'originale `www` directory. Ad esempio, un'app può incorporare una grafica del *pulsante indietro* nell'interfaccia di iOS, memorizzato `merges/ios/img/back_button.png` , mentre la versione di Android invece può catturare `backbutton` eventi dal corrispondente pulsante hardware.
 
-## Aggiornamento di Cordova
+## Aiuto comandi
+
+Cordova dispone di un paio di comandi globali, che possono aiutarvi se rimani bloccato o un problema di esperienza. Il `help` comando consente di visualizzare tutti i comandi disponibili di Cordova e la loro sintassi:
+
+    $ cordova help
+    $ cordova        # same
+    
+
+Il `info` comando produce un elenco di dettagli potenzialmente utili, quali piattaforme attualmente installate e plugins, versioni SDK per ogni piattaforma e versioni di CLI e `node.js` :
+
+    $ cordova info
+    
+
+Esso presenta le informazioni a schermo e catturare l'output in un locale `info.txt` file.
+
+**Nota**: attualmente sono disponibili solo i dettagli su piattaforme Android e iOS.
+
+## Aggiornamento di Cordova e progetto
 
 Dopo aver installato il `cordova` utilità, si può sempre aggiornare all'ultima versione eseguendo il seguente comando:
 
@@ -269,13 +337,19 @@ Dopo aver installato il `cordova` utilità, si può sempre aggiornare all'ultima
 
 Per installare una versione specifica, utilizzare questa sintassi:
 
-        $ sudo npm installare -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0
     
 
-Eseguire `cordova -v` per vedere la versione attualmente in esecuzione. Eseguire il `npm
+Eseguire `cordova -v` per vedere quale versione è attualmente in esecuzione. Eseguire il `npm
 info` comando per un elenco più lungo che include la versione corrente, insieme ad altri numeri di versione disponibile:
 
         $ npm info cordova
     
 
 Cordova 3.0 è la prima versione a supportare l'interfaccia della riga di comando descritta in questa sezione. Se si sta aggiornando da una versione precedente alla 3.0, è necessario creare un nuovo progetto, come descritto sopra, poi copiare risorse dell'applicazione più anziani nel primo livello `www` directory. Dove applicabile, maggiori dettagli sull'aggiornamento a 3.0 sono disponibili nelle guide piattaforma. Una volta che si aggiorna alla `cordova` interfaccia della riga di comando e uso `npm update` per rimanere attuale, richiede più tempo procedure descritte ci non sono più pertinenti.
+
+Cordova 3.0 + possa ancora richiedere varie modifiche alle strutture di directory a livello di progetto e altre dipendenze. Dopo aver eseguito il `npm` comando sopra per aggiornare Cordova stessa, potrebbe essere necessario per assicurare le risorse del progetto conformano ai requisiti dell'ultima versione. Eseguire un comando simile al seguente per ogni piattaforma che si sta costruendo:
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.

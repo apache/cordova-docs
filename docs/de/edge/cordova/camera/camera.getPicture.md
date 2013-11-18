@@ -43,12 +43,12 @@ Sie können tun, was Sie wollen, mit dem codierten Bildes oder URI, zum Beispiel
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**Hinweis:** Fotoauflösung auf neueren Geräten ist recht gut. Fotos aus dem Gerät Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um Speicherprobleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
+**Hinweis**: Fotoauflösung auf neueren Geräten ist ganz gut. Fotos aus dem Gerät Galerie ausgewählt sind nicht zu einer niedrigeren Qualität herunterskaliert auch wenn ein `quality` -Parameter angegeben wird. Um Speicherprobleme zu vermeiden, legen Sie `Camera.destinationType` auf `FILE_URI` statt`DATA_URL`.
 
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8
@@ -67,7 +67,7 @@ Darunter eine JavaScript `alert()` entweder des Rückrufs Funktionen können Pro
 
 ## Windows Phone 7 Macken
 
-Die native Kameraanwendung aufrufen, während Ihr Gerät über Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
+Die native Kameraanwendung aufrufen, während das Gerät via Zune angeschlossen ist funktioniert nicht und löst eine Fehler-Callback.
 
 ## Tizen Macken
 
@@ -145,7 +145,7 @@ Nehmen Sie ein Foto und rufen Sie das Bild-Datei-Speicherort:
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -165,7 +165,7 @@ Nehmen Sie ein Foto und rufen Sie das Bild-Datei-Speicherort:
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

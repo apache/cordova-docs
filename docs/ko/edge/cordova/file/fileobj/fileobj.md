@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -50,7 +50,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 반환 된 새 `File` 개체를 `FileReader` 파일의 지정 된 부분만 반환 합니다. 음수 값에 대 한 `start` 또는 `end` 파일의 끝에서 측정 됩니다. 인덱스는 현재 슬라이스를 기준으로 배치 됩니다. (아래 전체 예제를 참조 하십시오.)
 
-**매개 변수:**
+**매개 변수**:
 
 *   **시작**:을 읽고, 포함 된 첫 번째 바이트의 인덱스.
 

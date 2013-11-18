@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**NOTA:** La implementación actual no se adhiere a una especificación del W3C para la captura de los medios de comunicación y se proporciona únicamente para su comodidad. Una futura implementación se adherirá a la más reciente especificación W3C y puede desaprueban las API actuales.
+**Nota**: la implementación actual no se adhiere a una especificación del W3C para la captura de los medios de comunicación y se proporciona únicamente para su comodidad. Una futura implementación se adherirá a la más reciente especificación W3C y puede desaprueban las API actuales.
 
 ## Parámetros
 
@@ -76,7 +76,7 @@ Las siguientes constantes son reportadas como el único parámetro para la devol
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7.5
 *   Tizen
@@ -86,8 +86,8 @@ Las siguientes constantes son reportadas como el único parámetro para la devol
 
 A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Uso de la CLI `plugin` comando, que se describe en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
 
-        $ cordova plugin añadir org.apache.cordova.media $ cordova plugin ls ['org.apache.cordova.media'] $ cordova plugin rm org.apache.cordova.media
-     
+        $ cordova plugin añadir org.apache.cordova.media $ cordova plugin ls ['org.apache.cordova.media'] $ cordova plugin rm org.apache.cordova.media 
+    
 
 Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
 
@@ -95,7 +95,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
     
         (in app/res/xml/config.xml)
         <feature name="Media">
-            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -112,7 +112,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         </feature>
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />
@@ -134,9 +134,9 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
 
-### Windows Phone rarezas
+## Windows Phone rarezas
 
 *   Archivo sólo multimedia puede reproducir en un momento.
 

@@ -35,20 +35,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
 
-*   Android (в`app/res/xml/config.xml`)
+*   Android (в`res/xml/config.xml`)
     
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="SplashScreen">
             <param name="ios-package" value="CDVSplashScreen" />
         </feature>
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.
 
 Смотрите информацию о том, как настраивает эти образы иконки и заставки.

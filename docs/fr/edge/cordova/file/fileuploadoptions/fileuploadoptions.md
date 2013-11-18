@@ -38,4 +38,4 @@ Un objet `FileUploadOptions` peut être passé à la méthode `upload()` de l'ob
 
 ## Particularités de WP7
 
-*   la propriété **chunkedMode** est simplement ignorée sous WP7.
+*   **chunkedMode**: ignoré sur WP7.

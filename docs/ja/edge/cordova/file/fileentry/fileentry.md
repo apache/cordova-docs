@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **fullPath**: 完全絶対パスをルートから、 `FileEntry` 。*（，）*
 
-**注：**次の属性は、W3C の仕様によって定義されますが*サポートされます*。
+**注**: 次の属性は、W3C 仕様で定義されるはサポートされて*いません*。
 
 *   **ファイルシステム**: ファイルシステムを `FileEntry` が存在します。*(ファイルシステム)*
 
@@ -57,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -66,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ファイルについてのメタデータをご覧ください。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: 渡されたコールバックを `Metadata` オブジェクト。*(機能)*
 
@@ -85,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   これは、ファイルの拡張属性を設定します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: メタデータが設定時に実行されるコールバック。*(機能)*
 
@@ -155,7 +155,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 さらに、既存のファイルの上に移動したファイルを削除し、そのファイルを置き換えるを試みます。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **親**： ファイルの移動先となる親ディレクトリ。*(DirectoryEntry)*
 
@@ -191,7 +191,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   その現在のものとは異なる名前を指定しない場合、親にファイルをコピーします。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **親**： 親ディレクトリにファイルをコピーします。*(DirectoryEntry)*
 
@@ -236,7 +236,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ファイルを削除します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**： ファイルが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
@@ -260,7 +260,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 親を検索 `DirectoryEntry` ファイルを含みます。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**： ファイルの親に渡されるコールバック `DirectoryEntry` 。*(機能)*
 
@@ -284,7 +284,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 作成する、 `FileWriter` オブジェクトによって表されるファイルに関連付けられている、`FileEntry`.
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: 渡されたコールバックを `FileWriter` オブジェクト。*(機能)*
 
@@ -308,7 +308,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 返す、 `File` ファイルの現在の状態を表すオブジェクトは、この `FileEntry` を表します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: 渡されたコールバックを `File` オブジェクト。*(機能)*
 

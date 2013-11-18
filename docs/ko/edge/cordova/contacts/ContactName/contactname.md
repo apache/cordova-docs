@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드 2.X
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **포맷**: 부분적으로 지원 되 고 읽기 전용. 연결을 반환 합니다 `honorificPrefix` , `givenName` , `middleName` , `familyName` , 그리고`honorificSuffix`.
 
-## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
+## 블랙베리 WebWorks 5.0 + 특수
 
 *   **포맷**: 부분적으로 지원 합니다. 블랙베리 **firstName** 및 **lastName** 필드의 연결을 반환합니다.
 

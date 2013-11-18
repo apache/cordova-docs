@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 
@@ -97,7 +97,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
-## BB10 的怪癖
+## 黑莓 10 怪癖
 
 震動功能導航器物件所擁有的
 

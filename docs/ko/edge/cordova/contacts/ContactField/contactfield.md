@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -126,7 +126,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **pref**: 지원 되지 않는 반환`false`.
 
-## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
+## 블랙베리 WebWorks 5.0 + 특수
 
 *   **유형**: 부분적으로 지원 합니다. 전화 번호에 대 한 사용.
 

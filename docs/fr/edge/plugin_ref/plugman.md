@@ -30,17 +30,17 @@ Pour installer plugman, vous devez posséder le [nœud][3] installé sur votre m
 
  [3]: http://nodejs.org/
 
-    npm install -g plugman
+    $ npm install -g plugman
     
 
 Voici la syntaxe pour ajouter un plugin pour chaque plateforme :
 
-    plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+    $ plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
     
 
 Pour désinstaller un plugin :
 
-    plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+    $ plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
     
 
 ## Installation des Plugins du Core

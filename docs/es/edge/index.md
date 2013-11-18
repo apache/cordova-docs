@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Soporte de plataformas
+      </h2>
+      
+      <span>Tabla de compatibilidad para todas las funciones principales.</span>
+    </li>
+    <li>
+      <h2>
         La interfaz de línea de comandos
       </h2>
       
@@ -36,7 +43,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Guías de plataforma
+        Guías de plataformas
       </h2>
       
       <span>Configurar cada SDK y actualización de proyectos</span>
@@ -46,7 +53,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         El archivo config.xml
       </h2>
       
-      <span>Personalizar las características de la bobina</span>
+      <span>Personalizar las características de su aplicación.</span>
     </li>
     <li>
       <h2>
@@ -74,7 +81,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Guía de privacidad
       </h2>
       
-      <span>Aprenda sobre cuestiones de privacidad móvil importante.</span>
+      <span>Aprender sobre cuestiones de privacidad móvil importante.</span>
     </li>
     <li>
       <h2>

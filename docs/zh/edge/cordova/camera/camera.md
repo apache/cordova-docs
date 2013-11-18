@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > `camera`物件提供對該設備的預設攝像頭應用程式的訪問。
 
-**重要的隱私注：**圖像從一個設備觀景窗的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論應用程式如何使用相機和是否與任何其他方共用錄製的影像。 此外，如果相機的應用程式的使用在使用者介面中不是明顯的應在您的應用程式訪問相機 （如果設備作業系統不會這樣做已經） 之前提供只是在時間的通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
+**警告**： 圖像從一個設備觀景窗的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論應用程式如何使用相機和是否與任何其他方共用錄製的影像。 此外，如果相機的應用程式的使用在使用者介面中不是明顯的你應該之前 app 訪問相機 （如果設備作業系統不會這樣做已經) 提供在時間的通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
 
 ## 方法
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
         
         (in app/AndroidManifest)
@@ -57,13 +57,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-        
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
@@ -91,4 +90,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

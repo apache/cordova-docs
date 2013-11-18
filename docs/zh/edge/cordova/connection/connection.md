@@ -49,13 +49,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="NetworkStatus">
-            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+            <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   黑莓手機 WebWorks
@@ -66,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="NetworkStatus">
             <param name="ios-package" value="CDVConnection" />
@@ -92,4 +90,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

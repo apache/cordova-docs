@@ -32,16 +32,10 @@ A `PositionError` オブジェクトに渡されます、 `geolocationError` コ
 
 ## 説明
 
-`PositionError`オブジェクトに渡されます、 `geolocationError` 地理位置情報と、エラーが発生した場合のコールバック関数。
+`PositionError`オブジェクトに渡されます、 `geolocationError` 地理位置情報と、エラーが発生した場合のコールバック関数。エラー コードは次の機能：
 
-### `PositionError.PERMISSION_DENIED`
+*   `PositionError.PERMISSION_DENIED`: ユーザーの位置情報を取得するアプリを許可しない場合に返されます。これはプラットフォームに依存します。
 
-ユーザーの位置情報を取得するアプリケーションを許可していない場合に返されます。これはプラットフォームに依存します。
+*   `PositionError.POSITION_UNAVAILABLE`: デバイスが、位置を取得することができます返されます。 一般に、つまり、デバイスがネットワークに接続されていないまたは衛星の修正を得ることができません。
 
-### `PositionError.POSITION_UNAVAILABLE`
-
-デバイスが、位置を取得することができます返されます。一般にこれは、デバイスのネットワーク接続や衛星の修正を得ることができません。
-
-### `PositionError.TIMEOUT`
-
-デバイスがで指定された時間内の位置を取得することができるときに返される、 `geolocationOptions` ' `timeout` プロパティ。 使用すると `geolocation.watchPosition` 、このエラーを渡すことができます、 `geolocationError` コールバックごと `timeout` (ミリ秒単位)。
+*   `PositionError.TIMEOUT`： デバイスがで指定された時間内の位置を取得することができるときに返される、 `timeout` に含まれている `geolocationOptions` 。 使用すると `geolocation.watchPosition` 、このエラーが繰り返しに渡すことが、 `geolocationError` コールバックごと `timeout` (ミリ秒単位)。

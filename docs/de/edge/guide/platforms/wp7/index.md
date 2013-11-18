@@ -26,84 +26,79 @@ Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen, die f
 
 Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. Informationen über die aktuelle Schnittstelle finden Sie unter The Command-Line Interface.
 
-## 1. Systemanforderungen
+## Systemanforderungen
 
-*   Betriebssystem:
-    
-    *   Windows 7, Windows 8 (Pro) oder Windows Vista mit SP2 
-        *   Die 64-Bit Version (X 64) von Windows ist für das SDK erforderlich.
-        *   Die Pro-Version wird empfohlen, für die Ausführung von eines Geräteemulators.
+Verwenden Sie Windows 7 oder Windows 8 (Pro) oder Windows Vista mit SP2. Die 64-Bit Version (X 64) von Windows ist für das SDK erforderlich. Die Pro-Version wird empfohlen, für die Ausführung von eines Geräteemulators.
 
-*   Anmelden und bezahlen für ein [Windows Phone Dev Center][1] -Konto, wenn Sie Ihre app auf einem echten Gerät anbringen oder an Marktplatz übermitteln möchten.
+Anmelden und bezahlen für ein [Windows Phone Dev Center][1] -Konto, wenn Sie eine app auf einem echten Gerät anbringen oder an Marktplatz übermitteln möchten.
 
  [1]: http://dev.windowsphone.com/en-us/publish
 
-**Hinweis:** Das SDK in der virtuellen Maschine ausführen könnte einige Herausforderung dar. Sie können dieses Blog-Post lesen, die einen Einblick auf die Lösungen zur Entwicklung für [Windows Phone auf einem Mac][2] gibt.
+**Hinweis**: das SDK in der virtuellen Maschine ausführen kann stellt eine Herausforderung dar. Lesen Sie [Windows Phone auf einem Mac][2] für Einblicke in die Entwicklung von Lösungen.
 
  [2]: http://aka.ms/BuildaWP8apponaMac
 
-## 2. Installieren Sie SDK + Cordova
+## Installieren SDK und Cordova
 
-*   Downloaden Sie und installieren Sie das [Windows Phone SDK][3]
-
-*   Unterladen Sie her und extrahieren Sie die neueste Kopie von [Cordova][4]. Arbeiten Sie der `lib\windows-phone-8\wp7` Unterverzeichnis `lib\windows-phone-8\wp8` enthält die Windwos Phone 8 Version von Cordova.
-
-*   Kopie der `CordovaWP7_x_x_x.zip` -Datei in das `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` Verzeichnis.
+Downloaden Sie und installieren Sie das [Windows Phone SDK][3].
 
  [3]: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27570/
+
+Herunterladen Sie und extrahieren Sie die neueste Kopie von [Cordova][4]. Du musst Arbeiten der `lib\windows-phone-8\wp7` Unterverzeichnis `lib\windows-phone-8\wp8` enthält die Windwos Phone 8 Version von Cordova.
+
  [4]: http://phonegap.com/download
 
-## 2.1. Aufbau der Vorlage
+Kopie der `CordovaWP7_x_x_x.zip` -Datei in das `\My Documents\Visual
+Studio 2012\Templates\ProjectTemplates\` Verzeichnis.
 
-**Hinweis:** dieser Schritt kann nicht verlangt werden. Wenn das Lib\windows-Telefon-Verzeichnis bereits eine CordovaWP7\_x\_x_x.zip-Datei enthält, können Sie diesen Schritt überspringen.
+## Aufbau der Vorlage
 
-Um den Entwicklungsprozess zu vereinfachen, kommt Cordova mit einem Skript zum Erstellen der Visual Studio-Vorlagen. Dies ermöglicht schnelle Erstellung von Cordova-Anwendungen in Visual Studio. Diese Vorlage kann bei Bedarf geändert werden und die unten aufgeführten Schritte zeigen wie Sie vorgehen, wenn Sie die Vorlage generieren möchten.
+**Hinweis**: überspringen Sie diesen Schritt, wenn das `lib\windows-phone` Verzeichnis enthält bereits eine `CordovaWP7_x_x_x.zip` Datei.
 
-### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen.
+Zur Vereinfachung der Entwicklung bündelt Cordova ein Skript zum Erstellen der Visual Studio-Vorlagen. Diese ermöglichen es Ihnen, rasch Cordova apps generieren, und Sie können sie ändern, wenn nötig. Die folgenden Schritte zeigen, wie es zu generieren.
 
-*   Der Stamm der Repo enthält eine Datei createTemplates.bat. Doppelklick auf diese Datei wird 2 Zip-Dateien generieren. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
+### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen
 
-*   Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
+Der Stamm der Repo enthält eine `createTemplates.bat` Datei. Doppelklick auf diese Datei erzeugt zwei `.zip` Dateien: `CordovaWP7_x_x_x.zip` und `CordovaWP8_x_x_x.zip` , wobei *x.x.x* die aktuelle Versionsnummer ist. Um diese Dateien einfach in Visual Studio zu verwenden, kopieren sie die `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` Unterverzeichnis. Sie können dann neues **Apache Cordova Windows Phone_ Anwendungen von Visual Studio __File → neu Projekt** -Menü zu erstellen.
 
-Führen Sie das Skript:
+Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen:
 
-    > createTemplates.bat-installieren
+        > createTemplates.bat-installieren
     
 
-## 3. Einrichten des neuen Projekts
+## Einrichten eines neuen Projekts
 
 *   Öffnen Sie Visual Studio Express für Windows Phone, und wählen Sie **Neues Projekt**.
 
-*   Wählen Sie **CordovaWP7**. (Die Versionsnummer wird in der Vorlagenbeschreibung angezeigt.)
+*   Wählen Sie **CordovaWP7**. Die Version Anzahl Displays in der Beschreibung der Vorlage.
 
 *   Geben Sie dem Projekt einen Namen, und wählen Sie **OK**.
 
-## 4. Überprüfung der Projektstruktur
+## Überprüfung der Projektstruktur
 
-*   Das `www` Verzeichnis enthält Ihre Cordova `html/js/css` und andere Ressourcen, die in Ihrer Anwendung enthalten.
+Die `www` Directory-Funktionen `html` , `js` , und `css` Unterverzeichnisse und andere Ressourcen Ihre Anwendung erfordert. Alle zusätzlichen Inhalte muss ein Teil der Visual Studio-Projekt sein, und als Inhalt festgelegt werden.
 
-*   Alle Inhalte, die Sie hinzufügen, muss hier ein Teil der Visual Studio-Projekt zu sein, und als Inhalt festgelegt werden.
-
-*   Hinweis: Diese Bildschirmaufnahme war aus dem wp8-Cordova-2.3.0-Download, Ihr Angebot variiert basierend auf der aktuellen Version installiert.
+Die folgende Beispiel-Struktur stellt eine 2.3.0 Projekt, sondern variieren je nach der installierten Version:
 
 ![][5]
 
  [5]: img/guide/platforms/wp8/projectStructure.png
 
-## 6. Erstellen Sie das Projekt für das Gerät
+## Erstellen Sie das Projekt für das Gerät
 
-Um die Anwendung auf einem Gerät zu testen, muss das Gerät registriert werden. Klicken Sie [hier][6] , um Dokumentation zu lesen, auf bereitstellen und Testen auf Ihrem Windows Phone 7.
+Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werden. [Microsoft][6] Dokumentation weitere Informationen zum Bereitstellen und Testen auf Windows Phone 7. Dies sind die grundlegenden Schritte:
 
  [6]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
 *   Stellen Sie sicher, Ihr Telefon angeschlossen ist, und der Bildschirm ist entsperrt.
 
-*   Wählen Sie in Visual Studio 'Gerät' aus dem oberen Dropdown-Menü.
+*   Wählen Sie in Visual Studio **Gerät** aus dem Dropdown-Menü oben.
 
-*   Drücken Sie die Taste grün **spielen** neben dem Haupt-Dropdown-Menü Debuggen zu beginnen, oder geben Sie **F5**.
+*   Drücken Sie die Taste grün **spielen** neben dem wichtigsten Dropdown-Menü Debuggen zu beginnen, sonst geben Sie **F5**.
 
 ![][7]
 
  [7]: img/guide/platforms/wp7/wpd.png
 
-## Fertig!
+Zu diesem Zeitpunkt sind Sie fertig.

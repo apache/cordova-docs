@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 popover의 위치를 설정 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   `cameraPopoverOptions`:는 `CameraPopoverOptions` 새 위치를 지정 하는
 

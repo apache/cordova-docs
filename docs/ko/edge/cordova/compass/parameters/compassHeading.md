@@ -34,12 +34,12 @@ A `CompassHeading` 개체에 반환 되는 `compassSuccess` 콜백 함수.
 
 ## 안 드 로이드 단점
 
-*   `trueHeading`지원 되지 않습니다 하지만 같은 값으로 보고`magneticHeading`
+*   `trueHeading`속성은 지원 되지 않습니다 하지만 같은 값으로 보고`magneticHeading`.
 
-*   `headingAccuracy`항상 0 사이 차이가 있기 때문에 `magneticHeading` 와`trueHeading`.
+*   `headingAccuracy`속성은 항상 0 사이 차이가 있기 때문에 `magneticHeading` 와`trueHeading`.
 
 ## iOS 단점
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   `trueHeading`속성을 통해 위치 서비스에 대 한 반환만`navigator.geolocation.watchLocation()`.
 
-*   IOS 4 기기 및 디바이스의 현재 방향 절대 위치로 참조 하지 머리글 요소 위에 애플 리 케이 션을 위해 지 원하는 그 방향.
+*   IOS 4 장치에 대 한 위의 제목 소자의 현재 방향에서 요인 그리고, 그 방향을 지 원하는 애플 리 케이 션에 대 한 그것의 절대 위치를 참조 하지 않습니다.

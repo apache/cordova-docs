@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # capture.captureAudio
 
-> Démarrez l'application enregistreur audionumérique et renvoyer des informations sur les fichiers de clips audio capturés.
+> Ouvre l'application enregistreur audio et fournit des informations sur les fichiers audio capturés.
 
     navigator.device.capture.captureAudio(
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
@@ -25,37 +25,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Description
 
-Commence une opération asynchrone pour capturer les enregistrements audio à l'aide d'application d'enregistrement audio de l'appareil par défaut. L'opération permet à l'utilisateur de l'appareil capturer des enregistrements multiples en une seule séance.
+Débute une opération asynchrone de capture audio via l'application d'enregistrement audio par défaut de l'appareil. Cette opération permet à l'utilisateur de l'appareil d'enregistrer plusieurs prises en une seule séance de capture.
 
-L'opération de capture se termine lorsque l'utilisateur quitte l'enregistrement demande, ou le nombre maximal d'enregistrements spécifié par audio `CaptureAudioOptions.limit` est atteinte. Si aucun `limit` valeur du paramètre est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur enregistre un clip audio unique.
+L'opération de capture se termine lorsque l'utilisateur quitte l'application d'enregistrement audio, ou quand le nombre maximal d'enregistrements spécifié par `CaptureAudioOptions.limit` est atteint. Si aucune valeur n'est fournie pour le paramètre `limit` celle utilisée par défaut est un (1), l'opération de capture se terminerait donc après que l'utilisateur ait enregistré un seul clip audio.
 
-Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau de `MediaFile` objets décrivant chacune capturé fichiers clip audio. Si l'utilisateur annule l'opération avant un clip audio est capturé, le `CaptureErrorCallback` s'exécute avec un `CaptureError` objet, mettant en vedette le `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Une fois l'opération de capture terminée, la fonction callback `CaptureCallback` est exécutée et un tableau contenant des objets `MediaFile` décrivant chaque clip audio capturé lui est passé en paramètre. Si l'utilisateur annule l'opération avant qu'un clip audio ne soit capturé, la fonction callback `CaptureErrorCallback` est exécutée et un objet `CaptureError` comprenant le code d'erreur `CaptureError.CAPTURE_NO_MEDIA_FILES` lui est passé en paramètre.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // capture callback
+    // fonction callback de capture
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // faire quelque chose d'intéressant avec le fichier
         }
     };
     
-    // capture error callback
+    // fonction callback d'erreur de capture
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Code d\'erreur : ' + error.code, null, 'Erreur de capture');
     };
     
-    // start audio capture
+    // débute la capture audio
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
     
 
@@ -70,7 +70,7 @@ Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau 
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // Called when capture operation is finished
+        // appelée lorsque l'opération de capture est terminée
         //
         function captureSuccess(mediaFiles) {
             var i, len;
@@ -79,22 +79,22 @@ Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau 
             }
         }
     
-        // Called if something bad happens.
+        // appelée si un problème survient
         //
         function captureError(error) {
-            var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            var msg = 'Une erreur est survenue durant la capture : ' + error.code;
+            navigator.notification.alert(msg, null, 'Oh oh !');
         }
     
-        // A button will call this function
+        // un bouton appellera cette fonction
         //
         function captureAudio() {
-            // Launch device audio recording application,
-            // allowing user to capture up to 2 audio clips
+            // ouvre l'application d'enregistrement audio,
+            // en permettant à l'utilisateur de capturer deux clips audio
             navigator.device.capture.captureAudio(captureSuccess, captureError, {limit: 2});
         }
     
-        // Upload files to server
+        // envoie les fichiers sur le serveur
         function uploadFile(mediaFile) {
             var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
@@ -103,11 +103,11 @@ Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau 
             ft.upload(path,
                 "http://my.domain.com/upload.php",
                 function(result) {
-                    console.log('Upload success: ' + result.responseCode);
-                    console.log(result.bytesSent + ' bytes sent');
+                    console.log('Succès de l\'upload : ' + result.responseCode);
+                    console.log(result.bytesSent + ' octets envoyés');
                 },
                 function(error) {
-                    console.log('Error uploading file ' + path + ': ' + error.code);
+                    console.log('Erreur lors de l\'upload du fichier ' + path + ' : ' + error.code);
                 },
                 { fileName: name });
         }
@@ -120,14 +120,14 @@ Fin de l'opération de capture, le `CaptureCallback` s'exécute avec un tableau 
     </html>
     
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone Notes** , fournie par RIM, pour capturer des enregistrements audio. L'application reçoit un `CaptureError.CAPTURE_NOT_SUPPORTED` code d'erreur si l'application n'est pas installée sur l'appareil.
+*   Cordova pour BlackBerry WebWorks tente de lancer l'application **Dictaphone**, fournie par RIM, pour capturer des enregistrements audio. Le code d'erreur `CaptureError.CAPTURE_NOT_SUPPORTED` est renvoyé si celle-ci n'est pas installée sur l'appareil.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   iOS n'a pas une application d'enregistrement audio par défaut, donc une interface utilisateur simple est fournie.
+*   iOS ne possède pas d'application d'enregistrement audio par défaut, par conséquent une interface utilisateur simple est fournie.
 
-## Windows Phone 7 et 8 Quirks
+## Particularités de Windows Phone 7 et 8
 
-*   Windows Phone 7 n'a pas une application d'enregistrement audio par défaut, donc une interface utilisateur simple est fournie.
+*   Windows Phone 7 ne possède pas d'application d'enregistrement audio par défaut, par conséquent une interface utilisateur simple est fournie.

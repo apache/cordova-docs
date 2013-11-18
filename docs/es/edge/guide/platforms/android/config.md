@@ -18,36 +18,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Nota: si se establece en false no matará la aplicación después de una pausa, sólo detendrá la ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: especifica una página de error que aparece en respuesta a los errores estándar HTTP en el rango de 400-500. Coloque el archivo especificado en el nivel de directorio que contiene la página de inicio y otros activos de la web.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: muestra un diálogo nativo cuando se carga la aplicación. El formato del valor es *título, mensaje*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: muestra un diálogo nativo al cargar subpáginas dentro de una aplicación. El formato del valor es *título, mensaje*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue` (número, el valor predeterminado es `20000`): cuando se carga una página, la cantidad de tiempo de espera antes de tirar un error de tiempo de espera. Este ejemplo especifica 10 segundos en lugar de 20:
+*   `LoadUrlTimeoutValue`(de forma predeterminada, el número `20000` , 20 segundos): cuando se carga una página, la cantidad de tiempo de espera antes de tirar un error de tiempo de espera. Este ejemplo especifica 10 segundos en lugar de 20:
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
+*   `SplashScreen`: El nombre del archivo sin su extensión en el `res/drawable` Directorio. Varios activos deben compartir este nombre común en diferentes subdirectorios.
     
         <preference name="SplashScreen" value="splash"/>
         
 
-*   `SplashScreenDelay` (número, el valor predeterminado de `5000`): la cantidad de tiempo que muestra la imagen en pantalla splash.
+*   `SplashScreenDelay`(número, por defecto `5000` ): la cantidad de tiempo que muestra la imagen en pantalla splash.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo localStorage y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.

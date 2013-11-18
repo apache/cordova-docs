@@ -22,7 +22,7 @@ Enthält Eigenschaften, die einen Kontakt, z. B. eines Benutzers persönlicher o
 
 *   **ID**: einen globally unique Identifier. *(DOM-String und enthält)*
 
-*   **DisplayName**: der Name dieses Kontakts, geeignet für die Anzeige an Endverbraucher. *(DOM-String und enthält)*
+*   **DisplayName**: der Name dieses Kontakts, geeignet für die Anzeige für Endbenutzer. *(DOM-String und enthält)*
 
 *   **Name**: ein Objekt, das alle Komponenten eines Personen-Namen enthält. *(Kontaktperson)*
 
@@ -60,12 +60,12 @@ Enthält Eigenschaften, die einen Kontakt, z. B. eines Benutzers persönlicher o
 
 Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können erstellt, gespeichert oder aus der Gerät-Kontakte-Datenbank entfernt werden. Kontakte können auch abgerufen werden (einzeln oder als Gruppe) aus der Datenbank durch den Aufruf der `contacts.find` Methode.
 
-**Hinweis:** Nicht alle oben aufgeführten Kontaktfelder sind auf jedem Geräteplattform unterstützt. Bitte überprüfen Sie jede Plattform *Quirks* Abschnitt für Details.
+**Hinweis**: nicht alle oben aufgeführten Kontaktfelder werden auf jedes Geräteplattform unterstützt. Bitte überprüfen Sie jede Plattform *Quirks* Abschnitt für Details.
 
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -194,7 +194,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 *   **Kategorien**: Android 2.X Geräten, Rückgabe nicht unterstützt`null`.
 
-## BlackBerry WebWorks (OS 5.0 und höher) Macken
+## BlackBerry WebWorks 5.0 + Macken
 
 *   **ID**: unterstützt. Durch das Gerät zugewiesen, wenn Sie den Kontakt zu speichern.
 
@@ -232,7 +232,7 @@ Das `Contact` -Objekt repräsentiert einen Benutzer Kontakt. Kontakte können er
 
 *   **DisplayName**: Wenn Sie einen Kontakt erstellen, der Nutzen für den Anzeigenamen der Display-Name-Parameter unterscheidet abgerufen, wenn den Kontakt zu finden.
 
-*   **URLs**: Wenn Sie einen Kontakt erstellen, können Benutzer eingegeben und mehrere Web-Adressen zu speichern, aber einzige steht ist verfügbar, wenn den Kontakt zu suchen.
+*   **URLs**: Wenn Sie einen Kontakt erstellen, können Benutzer eingegeben und mehrere Web-Adressen zu speichern, aber nur einer ist verfügbar, wenn Sie den Kontakt zu suchen.
 
 *   **Telefonnummern**: die *Pref* -Option wird nicht unterstützt. Der *Typ* wird in eine *find* -Operation nicht unterstützt. Nur ein `phoneNumber` ist erlaubt für jeden *Typ*.
 

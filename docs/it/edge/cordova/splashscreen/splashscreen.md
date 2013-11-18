@@ -35,20 +35,20 @@ A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android (in`res/xml/config.xml`)
     
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="SplashScreen">
             <param name="ios-package" value="CDVSplashScreen" />
         </feature>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.
 
 Per informazioni su come configurare queste immagini, vedere icone e schermate iniziali.

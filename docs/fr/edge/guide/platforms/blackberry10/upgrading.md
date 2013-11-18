@@ -29,7 +29,7 @@ platform add blackberry10`.
 
 4.  Copier ou écraser tout actif natif de votre projet d'origine ( `Resources` , etc..)
 
-5.  Copie votre `config.xml` dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous allez modifier les paramètres ici au lieu du répertoire de la plate-forme.
+5.  Copie le `config.xml` fichier dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous devez modifier les paramètres ICIS plutôt que dans le répertoire de la plate-forme.
 
 6.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme plugins, donc ils peuvent avoir besoin d'être ajouté. Uniquement les plugins marqué 3.0.0 et ci-dessus sont compatibles avec l'interface CLI.
 
@@ -41,14 +41,14 @@ Veuillez noter que la CLI prend en charge la plate-forme BlackBerry10 exclusivem
 
 1.  Créez un projet Apache Cordova 3.0.0 utilisant le cordova CLI, tel que décrit dans l'Interface de ligne de commande.
 
-2.  Ajouter vos plates-formes le projet de la Cordoue, par exemple :`cordova
+2.  Ajoutez vos plates-formes cordova au projet, par exemple :`cordova
 platform add blackberry10`.
 
 3.  Copiez le contenu du projet original `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
 
 4.  Copier ou écraser tout actif natif de votre projet d'origine ( `Resources` , etc..)
 
-5.  Copie votre `config.xml` dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous allez modifier les paramètres ici au lieu du répertoire de la plate-forme.
+5.  Copie le `config.xml` fichier dans le `www` répertoire et supprimer les définitions de n'importe quel plugin. Vous devez modifier les paramètres ICIS plutôt que dans le répertoire de la plate-forme.
 
 6.  Utilisez l'outil CLI de cordova pour installer des plugins dont vous avez besoin. Notez que la CLI gère toutes les principales API comme plugins, donc ils peuvent avoir besoin d'être ajouté. Seulement 3.0.0 plugins sont compatibles avec l'interface CLI.
 
@@ -56,7 +56,7 @@ platform add blackberry10`.
 
 ## 2.8.0 Mise à niveau de projets à 2.9.0
 
-BlackBerry 10 :
+Pour BlackBerry 10 :
 
 1.  Téléchargez et extrayez la source Cordova 2.9.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Cordova-2.9.0`.
 
@@ -70,7 +70,7 @@ BlackBerry 10 :
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
-### BlackBerryOS/Playbook
+Pour BlackBerryOS/Playbook :
 
 1.  Téléchargez et extrayez la source Cordova 2.9.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Cordova-2.9.0`.
 
@@ -90,9 +90,7 @@ BlackBerry 10 :
 
 9.  Copie le `cordova` répertoire du nouveau projet dans le projet existant, en écrasant l'ancienne `cordova` répertoire.
 
-## Projets de modernisation 2.7.0 pour 2.8.0
-
-BlackBerry 10 :
+## 2.7.0 Mise à niveau de projets à 2.8.0
 
 BlackBerry 10 utilise les nouveaux outils CLI et gère la base API comme plugins. Les instructions de migrent votre projet pour un nouveau projet, plutôt que de mettre à jour un projet existant, en raison de la complexité de la mise à jour d'un ancien projet. Aussi remarque que la js cordova script file s'appelle maintenant « cordova.js » et ne contienne plus une chaîne de version.
 
@@ -108,7 +106,7 @@ BlackBerry 10 utilise les nouveaux outils CLI et gère la base API comme plugins
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
-BlackBerryOS/Playbook :
+Pour BlackBerryOS/Playbook :
 
 1.  Téléchargez et extrayez la source Cordova 2.8.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Cordova-2.8.0`.
 

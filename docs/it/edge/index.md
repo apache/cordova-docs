@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Supporto di piattaforma
+      </h2>
+      
+      <span>Tabella di compatibilità per tutte le principali caratteristiche.</span>
+    </li>
+    <li>
+      <h2>
         L'interfaccia della riga di comando
       </h2>
       

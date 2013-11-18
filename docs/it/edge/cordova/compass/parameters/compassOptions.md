@@ -24,16 +24,14 @@ Parametro facoltativo per personalizzare il recupero della bussola.
 
 *   **filtro**: il cambiamento in gradi necessari per avviare un callback di successo watchHeading. *(Numero)*
 
-Stranezze Android
+## Stranezze Android
 
----
-
-*   `filter`non è supportato.
+*   Nessun supporto per`filter`.
 
 ## Tizen stranezze
 
-*   `filter`non è supportato.
+*   Nessun supporto per`filter`.
 
 ## Windows Phone 7 e 8 stranezze
 
-*   `filter`non è supportato.
+*   Nessun supporto per`filter`.

@@ -37,14 +37,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## 上傳
 
-**參數：**
+**參數**：
 
 *   **檔路徑**: 設備上的檔的完整路徑。
 
@@ -192,7 +192,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 下載
 
-**參數：**
+**參數**：
 
 *   **來源**： 要下載的檔，如由編碼的伺服器的 URL`encodeURI()`.
 
@@ -202,7 +202,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **errorCallback**： 如果錯誤發生在檢索時將執行的回檔 `Metadata` 。調用與 `FileTransferError` 物件。*（函數）*
 
-*   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` 然後它將接受所有安全證書。 隨著 Android 拒絕自我簽署的安全證書，這非常有用。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
+*   **trustAllHosts**: 可選參數，預設值為 `false` 。 如果設置為 `true` ，它可以接受的所有安全證書。 這是有用的因為 Android 拒絕自行簽署式安全證書。 不建議供生產使用。 在 Android 和 iOS 上受支援。 *(布林值)*
 
 *   **選項**： 可選參數，目前只支援標題 （如授權 （基本驗證） 等）。
 

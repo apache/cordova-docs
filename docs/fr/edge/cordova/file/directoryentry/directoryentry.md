@@ -30,7 +30,7 @@ Cet objet représente un répertoire sur un système de fichiers, tel que défin
 
 *   **fullPath**: le chemin d'accès complet absolu de la racine au `DirectoryEntry` . *(DOMString)*
 
-**Remarque :** L'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
+**Remarque**: l'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
 
 *   **filesystem**: le système de fichiers sur lequel le `DirectoryEntry` réside. *(Système de fichiers)*
 
@@ -63,7 +63,7 @@ Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -72,7 +72,7 @@ Les méthodes suivantes peuvent être appelées sur un objet `DirectoryEntry` :
 
 Rechercher des métadonnées relatives à un répertoire.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: une fonction de callback pour exécuter avec un objet `Metadata`. *(Fonction)*
 
@@ -91,7 +91,7 @@ Rechercher des métadonnées relatives à un répertoire.
 
 Définit les attributs étendus d'un répertoire, ou les métadonnées. *Ne fonctionne actuellement que sur iOS.*
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un callback qui s'exécute lorsque les métadonnées sont correctement définies. *(Fonction)*
 
@@ -165,7 +165,7 @@ Déplace un répertoire vers un autre emplacement sur le système de fichiers. U
 
 Déplacer un répertoire sur le dessus un répertoire vide existant tente de supprimer et de remplacer ce répertoire.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **parent**: le répertoire parent vers laquelle déplacer le répertoire. *(DirectoryEntry)*
 
@@ -206,7 +206,7 @@ Copier un répertoire vers un autre emplacement sur le système de fichiers. Une
 
 Répertoire des copies sont toujours récursifs et copiez tout le contenu du répertoire.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **parent**: le répertoire parent dans lequel copier le répertoire. *(DirectoryEntry)*
 
@@ -256,7 +256,7 @@ Supprime un répertoire. Une erreur se produit si l'application tente de :
 
 *   Supprimez le répertoire racine du système de fichiers.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: une fonction de rappel qui s'exécute après que le répertoire est supprimé. Appelé sans paramètre. *(Fonction)*
 
@@ -275,7 +275,7 @@ Supprime un répertoire. Une erreur se produit si l'application tente de :
 
 Rechercher le parent `DirectoryEntry` contenant le répertoire.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un rappel passé parent du répertoire `DirectoryEntry` . *(Fonction)*
 
@@ -311,7 +311,7 @@ Crée ou lève les yeux un répertoire existant. Une erreur se produit si l'appl
 
 *   Créez un répertoire dont le parent immédiat n'existe pas encore.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **chemin d'accès**: le chemin vers le répertoire leva ou créé. Un chemin absolu ou un chemin d'accès relatif de cette `DirectoryEntry` . *(DOMString)*
 
@@ -336,7 +336,7 @@ Crée ou lève les yeux un fichier. Une erreur se produit si l'application tente
 
 *   Créez un fichier dont le parent immédiat n'existe pas encore.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **chemin d'accès**: le chemin d'accès au fichier pour être levé ou créé. Un chemin absolu ou un chemin d'accès relatif de cette `DirectoryEntry` . *(DOMString)*
 
@@ -361,7 +361,7 @@ Supprime un répertoire et tout son contenu. En cas d'erreur (par exemple en ess
 
 *   Supprimez le répertoire racine du système de fichiers.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un rappel qui s'exécute après le `DirectoryEntry` a été supprimé. Appelé sans paramètre. *(Fonction)*
 

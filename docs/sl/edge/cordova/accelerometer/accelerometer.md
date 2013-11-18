@@ -1,0 +1,86 @@
+---
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+    
+
+   under the License.
+---
+
+# Accelerometer
+
+> Zajema gibanje naprave v smereh *x*, *y* in *z*.
+
+## Metode
+
+*   accelerometer.getCurrentAcceleration
+*   accelerometer.watchAcceleration
+*   accelerometer.clearWatch
+
+## Argumenti
+
+*   accelerometerSuccess
+*   accelerometerError
+*   accelerometerOptions
+
+## Predmeti (samo za branje)
+
+*   Acceleration
+
+## Dostop do funkcionalnosti
+
+Od različice 3.0 naprej, so API-ji na nivoju naprave izvedeni kot *vtičniki* Cordova. Uporabite CLI je `plugin` ukaz, opisane v The vmesnik ukazne vrstice, da dodate ali odstranite to funkcijo za projekt:
+
+        $ cordova plugin add org.apache.cordova.device-motion
+        $ cordova plugin ls
+        [ 'org.apache.cordova.device-motion' ]
+        $ cordova plugin rm org.apache.cordova.device-motion
+    
+
+Ti ukazi se uporablajo za vse ciljane platforme, vendar spremenijo konfiguracijo specifično za posamezne platforme, kot je opisano spodaj:
+
+*   Android (v`res/xml/config.xml`)
+    
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+        </feature>
+        
+
+*   BlackBerry WebWorks
+    
+        (in www/plugins.xml)
+        <feature name="Accelerometer">
+            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
+        </feature>
+        
+        (in www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="org.apache.cordova" required="true" version="1.0.0" />
+        
+
+*   iOS (v imeniku imenovan uporabe`config.xml`)
+    
+        <feature name="Accelerometer">
+            <param name="ios-package" value="CDVAccelerometer" />
+        </feature>
+        
+
+*   Windows Phone (v `Properties/WPAppManifest.xml`)
+    
+        <Capabilities>
+            <Capability Name="ID_CAP_SENSORS" />
+        </Capabilities>
+        
+    
+    Referenca: [Application Manifest for Windows Phone][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
+
+Nekatere platforme lahko podpira to funkcijo ne zahtevati poljuben poseben zunanja podoba. Videti podpora platformo za pregled.

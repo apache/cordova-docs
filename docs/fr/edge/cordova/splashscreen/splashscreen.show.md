@@ -23,7 +23,7 @@ Affiche l'écran de démarrage.
 
 ## Description
 
-Cette méthode affiche écran de démarrage de l'application.
+Cette méthode affiche l'écran de démarrage de l'application.
 
 ## Plates-formes prises en charge
 

@@ -16,7 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Einbetten von Webansichten für
 
-> Implementieren Sie die Cordova WebView in Ihr eigenes Projekt.
+Cordova-Anwendungen werden normalerweise als eine Browser-basierte *WebView* innerhalb der native mobile Plattform implementiert. In diesem Abschnitt zeigt, wie, Stütz-Plattformen, um eigene WebView erstellen Komponenten, die voll von Cordova APIs verwenden. Sie können dann diese Cordova-Anwendungskomponenten zusammen mit systemeigenen Komponenten in einer Hybridanwendung bereitstellen.
+
+Wenn einen WebView bereitstellen möchten, müssen Sie mit jedem native Programmierumgebung vertraut sein. Im folgenden finden Sie Anweisungen für die unterstützten Plattformen:
 
 *   Android Webansichten für
 *   iOS Webansichten für

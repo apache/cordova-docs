@@ -25,7 +25,7 @@ Devuelve una cadena de patrón para analizar números según las preferencias de
 
 Devuelve el patrón a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto contiene las siguientes propiedades:
 
-*   **patrón**: el patrón del número a analizar números y el formato. Los patrones siguen Unicode técnica estándar #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **patrón**: el patrón del número a analizar números y el formato. Los patrones siguen [Unicode técnica estándar #35][1]. *(String)*
 
 *   **símbolo**: el símbolo a usar cuando formateo y análisis, como un símbolo por ciento o moneda. *(String)*
 
@@ -41,6 +41,8 @@ Devuelve el patrón a la `successCallback` con un objeto de `properties` como un
 
 *   **agrupación**: el símbolo de la agrupación para analizar y dar formato. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Si hay un error obteniendo el patrón, entonces el `errorCallback` ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
 
 El parámetro `options` es opcional, y los valores por defecto son:
@@ -53,7 +55,7 @@ El `options.type` puede ser `decimal`, `percent` o `currency`.
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

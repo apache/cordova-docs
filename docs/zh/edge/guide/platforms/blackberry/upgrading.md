@@ -34,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 6.  更新中的科爾多瓦腳本引用您 `www/index.html` 檔 （以及包含該腳本引用的任何其他檔） 以指向新 `cordova.js` 檔。
 
-### BlackBerryOS/操作手冊
+為 BlackBerryOS/行動手冊：
 
 1.  下載並解壓縮到您的硬碟磁碟機上永久位置的科爾多瓦 2.9.0 源，例如到`~/Cordova-2.9.0`.
 

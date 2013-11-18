@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 返回到模式 `successCallback` 與 `properties` 物件作為參數。該物件包含以下屬性：
 
-*   **模式**： 要格式化和分析數位的數位模式。 模式按照 Unicode 技術標準 #35。 [HTTP://unicode.org/reports/tr35/tr35-4.html][1]。 *（字串）*
+*   **模式**： 要格式化和分析數位的數位模式。 模式按照[Unicode 技術標準 #35][1]。 *（字串）*
 
 *   **符號**： 符號格式設置和分析過程中，如 %或貨幣符號時使用。*（字串）*
 
@@ -55,7 +55,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

@@ -34,7 +34,7 @@ BlackBerry 10:
 
 6.  Aggiornare il riferimento allo script di Cordova nel tuo `www/index.html` file (e qualsiasi altro file che contengono il riferimento allo script) per puntare al nuovo `cordova.js` file.
 
-### BlackBerryOS/Playbook
+Per BlackBerryOS/Playbook:
 
 1.  Scaricare ed estrarre la sorgente di Cordova 2.9.0 a una posizione permanente sul disco rigido, ad esempio`~/Cordova-2.9.0`.
 

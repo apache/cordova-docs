@@ -60,12 +60,12 @@ Contiene propiedades que describen un contacto, como el contacto personal o del 
 
 El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser creados, almacenados o eliminados de la base de datos de contactos de dispositivo. Contactos pueden también ser obtenidos (individualmente o a granel) de la base de datos invocando el `contacts.find` método.
 
-**Nota:** No todos los campos de contacto mencionados son compatibles con la plataforma de cada dispositivo. Consulte sección *peculiaridades* de cada plataforma para más detalles.
+**Nota**: no todos los campos de contacto mencionados son compatibles con la plataforma de cada dispositivo. Consulte sección *peculiaridades* de cada plataforma para más detalles.
 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -194,7 +194,7 @@ El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser c
 
 *   **categories**: no compatible con dispositivos Android 2.X, devolver `null`.
 
-## Rarezas blackBerry WebWorks (OS 5.0 y superiores)
+## BlackBerry WebWorks 5.0 + rarezas
 
 *   **id**: apoyado. Asignado por el dispositivo cuando se guarda el contacto.
 
@@ -232,7 +232,7 @@ El `Contact` objeto representa el contacto de un usuario. Contactos pueden ser c
 
 *   **displayName**: cuando se crea un contacto, previsto para el parámetro de nombre pantalla difiere el nombre para mostrar el valor obtenido al encontrar el contacto.
 
-*   **URL**: cuando crea un contacto, los usuarios pueden ingresar y salvar más de una dirección web, pero sólo uno está disponible está disponible al buscar el contacto.
+*   **URL**: cuando se crea un contacto, los usuarios pueden ingresar y salvar más de una dirección web, pero sólo está disponible cuando busque el contacto.
 
 *   **números**: no se admite la opción *pref* . El *tipo* no se admite en una operación de *encontrar* . Solamente un `phoneNumber` está permitido para cada *tipo*.
 

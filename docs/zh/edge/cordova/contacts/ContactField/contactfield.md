@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -126,7 +126,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **上一頁**: 不受支援，返回`false`.
 
-## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓 WebWorks 5.0 + 怪癖
 
 *   **類型**： 部分支援。使用的電話號碼。
 

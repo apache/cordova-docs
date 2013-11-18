@@ -38,4 +38,4 @@ A `FileUploadOptions` oggetto può essere passato per il `FileTransfer` dell'ogg
 
 ## WP7 Quirk
 
-*   **chunkedMode:**: ignorato su WP7.
+*   **chunkedMode**: ignorato su WP7.

@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > `camera`オブジェクトは、デバイスのデフォルト カメラ アプリケーションへのアクセスを提供します。
 
-**重要なプライバシーの注意：**デバイスのカメラからの画像の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、カメラを使う方法と他の当事者との記録された画像の共有かどうかを議論すべき。 さらに、カメラのアプリの使用がない場合明らかに、ユーザー インターフェイスで、(デバイス オペレーティング システム既にそうしない） 場合、カメラへのアクセス、アプリの前に、ジャスト イン タイム通知を提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
+**警告**: デバイスのカメラからの画像の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、カメラを使う方法と他の当事者との記録された画像の共有かどうかを議論すべき。 さらに、カメラのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリを (デバイスのオペレーティング システムしない場合そう既に) カメラにアクセスする前に - 時間のお知らせを提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## メソッド
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
         
         (in app/AndroidManifest)
@@ -57,13 +57,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-        
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
@@ -91,4 +90,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

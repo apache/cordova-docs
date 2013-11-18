@@ -37,14 +37,14 @@ Das `FileTransfer` Objekt bietet eine Möglichkeit zum Hochladen von Dateien auf
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
 
 ## Upload
 
-**Parameter:**
+**Parameter**:
 
 *   **FilePath**: vollständigen Pfad der Datei auf das Gerät.
 
@@ -192,7 +192,7 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 ## Download
 
-**Parameter:**
+**Parameter**:
 
 *   **Quelle**: URL des Servers, um die Datei herunterzuladen, wie kodiert`encodeURI()`.
 
@@ -202,7 +202,7 @@ Legen Sie die `chunkedMode` -option, um `false` Probleme beim Hochladen auf eine
 
 *   **ErrorCallback**: ein Rückruf, der ausgeführt wird, tritt ein Fehler beim Abrufen der `Metadata` . Aufgerufene mit einem `FileTransferError` Objekt. *(Funktion)*
 
-*   **TrustAllHosts**: Optionaler Parameter, wird standardmäßig auf `false` . Wenn legen Sie auf `true` , dann es alle Sicherheitszertifikate akzeptieren wird. Dies ist nützlich, da Android selbst signierte Zertifikate ablehnt. Nicht für den produktiven Einsatz empfohlen. Auf Android und iOS unterstützt. *(Boolean)*
+*   **TrustAllHosts**: Optionaler Parameter, wird standardmäßig auf `false` . Wenn legen Sie auf `true` , es akzeptiert alle Sicherheitszertifikate. Dies ist nützlich, da Android selbstsignierte Zertifikate ablehnt. Nicht für den produktiven Einsatz empfohlen. Auf Android und iOS unterstützt. *(Boolean)*
 
 *   **Optionen**: optionale Parameter, derzeit nur unterstützt Kopfzeilen (z. B. Autorisierung (Standardauthentifizierung), etc.).
 

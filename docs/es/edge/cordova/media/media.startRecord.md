@@ -28,7 +28,7 @@ El método `media.startRecord` se ejecuta sincrónicamente, comienza la grabaci�
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8

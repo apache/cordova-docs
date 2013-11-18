@@ -30,7 +30,7 @@ Questo oggetto rappresenta una directory in un file system, come definita dalla 
 
 *   **fullPath**: il percorso completo assoluto dalla radice per il `DirectoryEntry` . *(DOMString)*
 
-**Nota:** Il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
+**Nota**: il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
 
 *   **filesystem**: il filesystem su cui il `DirectoryEntry` risiede. *(FileSystem)*
 
@@ -63,7 +63,7 @@ I seguenti metodi possono essere richiamati su un `DirectoryEntry` oggetto:
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -72,7 +72,7 @@ I seguenti metodi possono essere richiamati su un `DirectoryEntry` oggetto:
 
 Cercare i metadati relativi a una directory.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: una funzione di callback da eseguire con un `Metadata` oggetto. *(Funzione)*
 
@@ -91,7 +91,7 @@ Cercare i metadati relativi a una directory.
 
 Imposta gli attributi estesi di una directory, o metadati. *Attualmente funziona solo con iOS.*
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene eseguito quando i metadati sono impostato correttamente. *(Funzione)*
 
@@ -165,7 +165,7 @@ Spostare una directory in un'altra posizione nel file System. Un errore risultat
 
 Lo spostamento di una directory in cima a una directory vuota esistente tenta di eliminare e sostituire quella directory.
 
-**Parametri:**
+**Parametri**:
 
 *   **padre**: directory a cui spostare la directory padre. *(DirectoryEntry)*
 
@@ -206,7 +206,7 @@ Copiare una directory in un'altra posizione nel file System. Un errore risultati
 
 Directory copie sono sempre ricorsivi e copiare tutto il contenuto della directory.
 
-**Parametri:**
+**Parametri**:
 
 *   **padre**: directory in cui copiare la directory padre. *(DirectoryEntry)*
 
@@ -256,7 +256,7 @@ Elimina una directory. Un errore risultati se tenta di app:
 
 *   eliminare la directory radice di un filesystem.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene eseguito dopo che la directory viene eliminata. Richiamato senza parametri. *(Funzione)*
 
@@ -275,7 +275,7 @@ Elimina una directory. Un errore risultati se tenta di app:
 
 Cercare il padre `DirectoryEntry` contenente la directory.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback passato padre della directory `DirectoryEntry` . *(Funzione)*
 
@@ -311,7 +311,7 @@ Crea o cerca una directory esistente. Un errore risultati se tenta di app:
 
 *   creare una directory in cui padre immediato non esiste ancora.
 
-**Parametri:**
+**Parametri**:
 
 *   **percorso**: il percorso della directory di essere cercati o creato. Un percorso assoluto o un percorso relativo da questo `DirectoryEntry` . *(DOMString)*
 
@@ -336,7 +336,7 @@ Crea o cerca un file. Un errore risultati se tenta di app:
 
 *   creare un file di cui padre immediato non esiste ancora.
 
-**Parametri:**
+**Parametri**:
 
 *   **percorso**: il percorso del file per essere guardato o creato. Un percorso assoluto o un percorso relativo da questo `DirectoryEntry` . *(DOMString)*
 
@@ -361,7 +361,7 @@ Elimina una directory e tutti i suoi contenuti. In caso di errore (ad esempio ce
 
 *   eliminare la directory radice di un filesystem.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene eseguito dopo il `DirectoryEntry` è stato eliminato. Richiamato senza parametri. *(Funzione)*
 

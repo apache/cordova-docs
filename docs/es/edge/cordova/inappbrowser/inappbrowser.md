@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**NOTA:** La ventana de InAppBrowser se comporta como un navegador web estándar y no puede acceder a Cordova APIs.
+**Nota**: InAppBrowser la ventana se comporta como un navegador web estándar y no pueden acceder a Cordova APIs.
 
 ## Descripción
 
@@ -48,14 +48,14 @@ A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *
 
 Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
 
-*   Android (en`app/res/xml/config.xml`)
+*   Android (en`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         <feature name="InAppBrowser" />
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.
 
 # addEventListener
 
@@ -135,7 +135,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 > Elimina un detector para un evento de la `InAppBrowser`.
 
-    ref.removeEventListener (eventname, "callback");
+    ref.removeEventListener(eventname, callback);
     
 
 *   **ref**: referencia a la `InAppBrowser` ventana. *(InAppBrowser)*
@@ -207,7 +207,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
     Ref.Show();
     
 
-*   **ref:** referencia a la (ventana) InAppBrowser`InAppBrowser`)
+*   **ref**: referencia a la (ventana) InAppBrowser`InAppBrowser`)
 
 ## Plataformas soportadas
 
@@ -288,8 +288,8 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 ## Ejemplo rápido
 
-    var ref = window.open ('http://apache.org', '_blank', ' oculto = yes');
-    Ref.Show();
+    var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
+    ref.show();
     
 
 ## Ejemplo completo
@@ -330,7 +330,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 > Inyecta código JavaScript en la ventana de `InAppBrowser`
 
-    ref.executeScript (datos, "callback");
+    ref.executeScript(details, callback);
     
 
 *   **ref**: referencia a la `InAppBrowser` ventana. *(InAppBrowser)*
@@ -354,7 +354,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -409,7 +409,7 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
 
 > Inyecta CSS en la ventana de `InAppBrowser`.
 
-    ref.insertCSS (datos, "callback");
+    ref.insertCSS(details, callback);
     
 
 *   **ref**: referencia a la `InAppBrowser` ventana *(InAppBrowser)*
@@ -456,10 +456,10 @@ Algunas plataformas que soportan esta característica sin necesidad de ninguna c
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   Tizen
@@ -85,8 +85,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 причуды
 
-Когда заработает в эмуляторе, `connection.status` всегда является неизвестным, так что это событие будет *не* огонь.
+Когда заработает в эмуляторе, `connection.status` не всегда известно, так это событие не *не* огонь.
 
 ## Windows Phone 8 причуды
 
-Эмулятор сообщает тип подключения как `Cellular` , которая не меняется, поэтому события будет *не* огонь.
+Эмулятор сообщает тип подключения как `Cellular` , который не меняется, поэтому не события *не* огонь.

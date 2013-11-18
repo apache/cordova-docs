@@ -43,12 +43,12 @@ Puedes hacer lo que quieras con la imagen codificada o URI, por ejemplo:
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**NOTA:** La resolución de la foto en dispositivos nuevos es bastante buena. Fotos seleccionadas de la Galería del dispositivo no son degradadas a una calidad más baja, incluso si se especifica un parámetro de `quality`. Para evitar problemas comunes de memoria, establezca `Camera.destinationType` como `FILE_URI` en lugar de `DATA_URL`.
+**Nota**: resolución de la foto en los nuevos dispositivos es bastante bueno. Fotos seleccionadas de la Galería del dispositivo no son degradadas a una calidad más baja, incluso si se especifica un parámetro de `quality`. Para evitar problemas comunes de memoria, establezca `Camera.destinationType` como `FILE_URI` en lugar de `DATA_URL`.
 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superior)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8
@@ -69,7 +69,7 @@ Incluyendo un JavaScript `alert()` en cualquiera de las funciones de devolución
 
 ## Peculiaridades de Windows Phone 7
 
-Invocando la aplicación de cámara nativa mientras el dispositivo está conectado via Zune no funciona y desencadena un callback de error.
+Invocando la aplicación de cámara nativa mientras el dispositivo está conectado vía Zune no funciona y desencadena un callback de error.
 
 ## Peculiaridades de Tizen
 
@@ -147,7 +147,7 @@ Tomar una foto y recuperar la ubicación del archivo de la imagen:
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -167,7 +167,7 @@ Tomar una foto y recuperar la ubicación del archivo de la imagen:
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   Tizen
@@ -85,8 +85,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 단점
 
-에뮬레이터에서 실행 하는 경우는 `connection.status` 항상 불명 하다, 그래서이 이벤트에는 *없는* 불.
+에뮬레이터에서 실행 하는 경우는 `connection.status` 항상 불명 하다, 그래서이 이벤트는 *없는* 불.
 
 ## Windows Phone 8 단점
 
-에뮬레이터도 연결 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트에는 *없는* 불.
+에뮬레이터도 연결 형식을 보고 `Cellular` 는 변경 되지 않습니다, 그래서 이벤트 않습니다 *하지* 불.

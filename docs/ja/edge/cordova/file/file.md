@@ -48,11 +48,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin rm org.apache.cordova.file
     
 
-ファイル転送プラグインを使用するには、を個別に追加する必要があります。
+追加する必要があります、 `file-transfer` プラグイン個別に。CLI が自動的に追加されます、 `file` プラグインを個別に追加する必要はありませんので、依存関係として。
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
-        [ 'org.apache.cordova.file-transfer' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.file-transfer' ]
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
@@ -60,12 +61,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   アンドロイド
     
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+        (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
         <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -91,7 +102,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -101,4 +112,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

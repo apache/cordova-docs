@@ -27,7 +27,7 @@ Un oggetto che elenca i file e le directory all'interno di una directory, come d
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -36,7 +36,7 @@ Un oggetto che elenca i file e le directory all'interno di una directory, come d
 
 Leggere le voci in questa directory.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene passato un array di `FileEntry` e `DirectoryEntry` oggetti. *(Funzione)*
 

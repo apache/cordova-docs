@@ -71,7 +71,7 @@ Android は両方の肖像画および横向きスプラッシュ画面画像の
         android/screen-xhdpi-portrait.png
     
 
-IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面のカスタマイズされます。
+IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面に適用されます。
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,13 +109,13 @@ Android プロジェクトで[9 patch 画像][1]ファイルを置きます `res
     <preference name="splashScreenDelay", 10000 />
     
 
-最初の行ではスプラッシュ画面として表示するイメージを設定します。場合は任意の名前をあなたのイメージよりも、他 `splash.png` 、この行を変更する必要があります。
+最初の行ではスプラッシュ画面として表示するイメージを設定します。場合は任意の名前をイメージ以外 `splash.png` 、この行を変更する必要があります。
 
 2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `deviceready` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。
 
 ## IOS プラットフォーム用のスプラッシュ画面
 
-IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのイメージだけを追加します。 各イメージのサイズをする必要があります。
+IOS プロジェクトにスプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのためのこれらの画像を追加のみです。 各イメージのサイズをする必要があります。
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 ピクセル)

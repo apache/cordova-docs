@@ -36,20 +36,22 @@ Se abre una dirección URL en una nueva instancia de `InAppBrowser`, la instanci
     La cadena de `options` no debe contener ningún espacio en blanco, y los pares de nombre y valor de cada característica deben estar separados por una coma. Los nombres de función son minúsculas. Todas las plataformas admiten el valor siguiente:
     
     *   **location**: se establece en `yes` o `no` para activar o desactivar la barra de ubicación de la `InAppBrowser`.
-    ## Android sólo
     
-    *   **closebuttoncaption** - establece en una cadena que será el título para el botón "Done". 
-    *   **hidden** - set ' Yes ' para crear el navegador y cargar la página, pero no lo demuestra. El evento load se activará cuando la carga está completa. Omitir o establecer que 'no' (por defecto) para que el navegador abra y carga normalmente. 
-    *   **clearcache** - set ' Yes ' para tener la caché del navegador cookies antes de que se abra la nueva ventana
-    *   **clearsessioncache** - set ' Yes ' para tener la caché de cookie de sesión antes de que se abra la nueva ventana
-    ## iOS sólo
+    Android sólo:
     
-    *   **closebuttoncaption** - establece en una cadena que será el título para el botón "Done". Tenga en cuenta que deberás localizar este valor por sí mismo.
-    *   **hidden** - set ' Yes ' para crear el navegador y cargar la página, pero no lo demuestra. El evento load se activará cuando la carga está completa. Omitir o establecer que 'no' (por defecto) para que el navegador abra y carga normalmente. 
-    *   **barra de herramientas** - set al 'yes' o 'no' para activar o desactivar el la barra de herramientas para el InAppBrowser (por defecto 'yes')
+    *   **closebuttoncaption**: establecer una cadena para usar como título del botón **hecho** .
+    *   **oculta**: a `yes` para crear el navegador y cargar la página, pero no lo demuestra. El evento load se desencadena cuando termine la carga. Omitir o a `no` (por defecto) para que el navegador abra y carga normalmente. 
+    *   **clearcache**: a `yes` para que el navegador es caché de galleta despejado antes de que se abra la nueva ventana
+    *   **clearsessioncache**: a `yes` que la caché de cookie de sesión despejado antes de que se abra la nueva ventana
+    
+    Sólo iOS:
+    
+    *   **closebuttoncaption**: establecer una cadena para usar como título del botón **hecho** . Tenga en cuenta que necesitas localizar este valor por sí mismo.
+    *   **oculta**: a `yes` para crear el navegador y cargar la página, pero no lo demuestra. El evento load se desencadena cuando termine la carga. Omitir o a `no` (por defecto) para que el navegador abra y carga normalmente. 
+    *   **barra de herramientas**: a `yes` o `no` para activar la barra de herramientas on u off para el InAppBrowser (por defecto`yes`)
     *   **enableViewportScale**: Set a `yes` o `no` para evitar viewport escalar a través de una etiqueta meta (por defecto a `no`).
     *   **mediaPlaybackRequiresUserAction**: Set a `yes` o `no` para evitar HTML5 audio o vídeo de reproducción automática (por defecto a `no`).
-    *   **allowInlineMediaPlayback**: establecer a `yes` o `no` permiten la reproducción de medios en línea HTML5, mostrando en la ventana del navegador en lugar de una interfaz específica del dispositivo de reproducción. Elemento `video` de HTML también debe incluir el atributo de `webkit-playsinline` (por defecto a `no`)
+    *   **allowInlineMediaPlayback**: A `yes` o `no` para permitir la reproducción de los medios de comunicación en línea HTML5, mostrando en la ventana del navegador en lugar de una interfaz específica del dispositivo de reproducción. Elemento `video` de HTML también debe incluir el atributo de `webkit-playsinline` (por defecto a `no`)
     *   **keyboardDisplayRequiresUserAction**: se establece en `yes` o `no` para abrir el teclado cuando elementos de formulario reciben el foco mediante llamada de JavaScript de `focus()` (por defecto a `yes`).
     *   **suppressesIncrementalRendering**: se establece en `yes` o `no` para esperar hasta que todos los nuevos contenidos de vista se recibieron antes de ser prestados (por defecto a `no`).
     *   **presentationstyle**: se establece en `pagesheet`, `formsheet` o `fullscreen` para definir el [estilo de la presentación][1] (por defecto a `fullscreen`).

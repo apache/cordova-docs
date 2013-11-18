@@ -26,10 +26,11 @@ Das Gerät spielt einen Signalton sound.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8
+*   Windows 8
 
 ## Kleines Beispiel
 

@@ -49,13 +49,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="NetworkStatus">
-            <param name="android-package" value="org.apache.cordova.NetworkManager" />
+            <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   블랙베리 WebWorks
@@ -66,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="NetworkStatus">
             <param name="ios-package" value="CDVConnection" />
@@ -92,4 +90,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

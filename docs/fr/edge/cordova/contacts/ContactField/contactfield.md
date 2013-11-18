@@ -35,7 +35,7 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -126,7 +126,7 @@ Dans la plupart des cas, il n'y a pas de valeurs prédéterminées pour un attri
 
 *   **pref** : nonpas pris en charge, retourne `false`.
 
-## Spécificités BlackBerry WebWorks (OS 5.0 et plus)
+## BlackBerry WebWorks 5.0 + Quirks
 
 *   **type** : partiellement pris en charge. Utilisé pour les numéros de téléphone.
 

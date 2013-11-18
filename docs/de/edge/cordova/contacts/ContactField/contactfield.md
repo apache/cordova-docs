@@ -35,7 +35,7 @@ In den meisten Fällen gibt es keine vorher festgelegten Werte für ein `Contact
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -126,7 +126,7 @@ In den meisten Fällen gibt es keine vorher festgelegten Werte für ein `Contact
 
 *   **Pref**: nicht unterstützt, Rückgabe`false`.
 
-## BlackBerry WebWorks (OS 5.0 und höher) Macken
+## BlackBerry WebWorks 5.0 + Macken
 
 *   **Typ**: teilweise unterstützt. Für Telefonnummern verwendet.
 

@@ -18,7 +18,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > El formato recupera información sobre el archivo de captura de los medios de comunicación.
 
-    mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB errorCallback]);
+    mediaFile.getFormatData(
+        MediaFileDataSuccessCB successCallback,
+        [MediaFileDataErrorCB errorCallback]
+    );
     
 
 ## Descripción
@@ -28,7 +31,7 @@ Esta función asincrónica intentará recuperar la información de formato para 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8

@@ -34,12 +34,12 @@ El `CompassHeading` objeto es devuelto a la `compassSuccess` función de callbac
 
 ## Rarezas Android
 
-*   `trueHeading`No es compatible, pero el mismo valor que los informes`magneticHeading`
+*   El `trueHeading` propiedad no es compatible, pero el mismo valor que los informes`magneticHeading`.
 
-*   `headingAccuracy`es siempre 0 porque no hay ninguna diferencia entre el `magneticHeading` y`trueHeading`.
+*   El `headingAccuracy` propiedad es siempre 0 porque no hay ninguna diferencia entre el `magneticHeading` y`trueHeading`.
 
 ## iOS rarezas
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   El `trueHeading` propiedad es devuelto sólo para servicios de localización habilitados mediante`navigator.geolocation.watchLocation()`.
 
-*   Para los dispositivos iOS 4 y superiores, factores de rumbo en la orientación actual del dispositivo, no en referencia a su posición absoluta, para aplicaciones que apoya esa orientación.
+*   Para los dispositivos iOS 4 arriba, rumbo factores en la orientación actual del dispositivo y no hace referencia a su posición absoluta, para aplicaciones que apoya esa orientación.

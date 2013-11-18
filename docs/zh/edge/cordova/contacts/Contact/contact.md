@@ -60,12 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `Contact`物件表示使用者的連絡人。 可以創建、 存儲，或從設備的連絡人資料庫中刪除的連絡人。 連絡人可以還 (單獨或批量） 從資料庫中檢索通過調用 `contacts.find` 方法。
 
-**注：**不是所有的上面列出的連絡人欄位平臺支援的每個設備。請檢查每個平臺*的怪癖*節瞭解詳細資訊。
+**注**： 以上列出的連絡人欄位並不是所有平臺支援的每個設備。請檢查每個平臺*的怪癖*節瞭解詳細資訊。
 
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -194,7 +194,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **類別**： 不支援 Android 2.X 設備上，返回`null`.
 
-## 黑莓手機 WebWorks （OS 5.0 和更高） 的怪癖
+## 黑莓 WebWorks 5.0 + 怪癖
 
 *   **id**： 支援。由該設備分配時保存該連絡人。
 
@@ -232,7 +232,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **顯示名稱**： 當創建一個連絡人，提供的顯示名稱參數不同于顯示名稱的值檢索查找連絡人時。
 
-*   **url**： 當創建一個連絡人，使用者可以輸入和保存多個 web 位址，但只有一個是可用時，可以使用搜索連絡人。
+*   **url**： 當創建一個連絡人，使用者可以輸入和保存多個 web 位址，但只有一個是可用的搜索連絡人時。
 
 *   **手機**： 不支援*參照*選項。 在*查找*操作中不是支援的*類型*。 只有一個 `phoneNumber` 允許為每個*類型*.
 

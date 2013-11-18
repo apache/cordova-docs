@@ -16,52 +16,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Almacenamiento de información
 
-> Proporciona acceso a las opciones de almacenamiento del dispositivo.
+> Un Resumen de las opciones de almacenamiento para Córdoba.
 
-Esta API ofrece opciones de almacenamiento basadas en dos diferentes especificaciones de W3C:
+Almacenamiento varias APIs están disponibles para aplicaciones de Córdoba. Ver [html5rocks][1]. para una visión más completa y ejemplos.
 
-*   La [Especificación del API almacenamiento Web][1] le permite acceder a datos a través de pares clave/valor simple. Consulte la sección sobre localStorage para obtener detalles completos sobre esta interfaz.
+ [1]: http://www.html5rocks.com/en/features/storage
 
-*   La [Especificación de base de datos de SQL Web][2] ofrece más tablas de base de datos completa accede a través de consultas SQL. Un Resumen de esta interfaz aparece inmediatamente debajo.
+## LocalStorage
 
- [1]: http://dev.w3.org/html5/webstorage/
- [2]: http://dev.w3.org/html5/webdatabase/
+También conocido como *web storage*, *almacenamiento de información simple*, o por su interfaz alternativa de *almacenamiento de las sesiones* , esta API proporciona almacenamiento par clave-valor síncrono y está disponible en implementaciones WebView subyacentes. Consulte [la especificación W3C][2] para más detalles.
 
-Cordova proporciona acceso a ambas interfaces para la minoría de los dispositivos que ya no los apoyan. De lo contrario se aplican las implementaciones integradas.
+ [2]: http://www.w3.org/TR/webstorage/
 
-## Métodos
+**Windows Phone 7 chanfle**: notación de puntos es *no* disponible, así que asegúrate de usar `setItem` o `getItem` en lugar de acceder a las teclas directamente desde el objeto de almacenamiento, como en`window.localStorage.someKey`.
 
-*   openDatabase
+## WebSQL
 
-## Argumentos
+Esta API está disponible en la vista Web subyacente. La [Especificación de base de datos de SQL Web][3] ofrece más tablas de base de datos completa accede a través de consultas SQL.
 
-*   nombre\_base\_de_datos
-*   database_version
-*   database_displayname
-*   database_size
+ [3]: http://dev.w3.org/html5/webdatabase/
 
-## Objetos
+WebSQL de la ayuda de las siguientes plataformas:
 
-*   Base de datos
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   Android
+*   BlackBerry 10
+*   iOS
+*   Tizen
 
-## Acceso a la función
+## IndexedDB
 
-A partir de la versión 3.0, acceso a las API de almacenamiento está construido en Córdoba y no requiere usar la CLI para agregar plugins como se describe en la interfaz de línea de comandos.
+Esta API está disponible en la vista Web subyacente. [Indexadas DB][4] ofrece más funciones que LocalStorage pero menos de WebSQL.
 
-Si usted está usando el mayor conjunto de herramientas de Córdoba que preceden a la CLI, los siguientes valores de configuración específicos de la plataforma están siendo necesarios:
+ [4]: http://www.w3.org/TR/IndexedDB/
 
-*   Android (en`app/res/xml/config.xml`)
-    
-        < nombre de la función = "Almacenamiento" >< nombre param = "android-paquete" value="org.apache.cordova.Storage" / >< / característica >
-        
+Las siguientes plataformas soportan IndexedDB:
 
-*   BlackBerry WebWorks (en`www/config.xml`)
-    
-        < cuentan con id="blackberry.widgetcache" requerida = "true" version = "1.0.0.0" / >
-        
+*   Windows Phone 8
+*   BlackBerry 10
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+## Opciones basadas en plugin
+
+Además el almacenamiento que APIs mencionadas anteriormente, el archivo API permite a los datos del caché en el sistema de archivos local. Otros [plugins Cordova][5] proporcionan opciones de almacenamiento similares.
+
+ [5]: http://plugins.cordova.io/

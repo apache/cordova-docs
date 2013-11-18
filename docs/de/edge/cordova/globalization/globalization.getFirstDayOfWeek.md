@@ -30,7 +30,7 @@ Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mi
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

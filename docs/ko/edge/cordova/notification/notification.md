@@ -45,7 +45,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Notification">
-            <param name="android-package" value="org.apache.cordova.Notification" />
+            <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        </feature>
+        <feature name="Vibration">
+            <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -63,11 +66,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.ui.dialog" />
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

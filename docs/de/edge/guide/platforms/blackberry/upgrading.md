@@ -34,7 +34,7 @@ BlackBerry 10:
 
 6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
-### BlackBerryOS/Textbuch
+Für BlackBerryOS/Textbuch:
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
 
@@ -58,7 +58,7 @@ BlackBerry 10:
 
 BlackBerry 10:
 
-BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Versionszeichenfolge enthält.
+BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Zeichenfolge enthält.
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle an einen permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 

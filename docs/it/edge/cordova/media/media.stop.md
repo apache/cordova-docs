@@ -28,7 +28,7 @@ Il `media.stop` metodo viene eseguito in modo sincrono per interrompere la ripro
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Tizen

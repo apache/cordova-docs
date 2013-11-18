@@ -36,7 +36,7 @@ El `FileReader` permite el acceso básico a un archivo.
 
 *   **onloadend**: llamado cuando se haya completado la solicitud (ya sea en el éxito o el fracaso). *(Función)*
 
-**Nota:** No se admite la propiedad siguiente:
+**Nota**: no se admite la propiedad siguiente:
 
 *   **OnProgress**: llamado al leer el archivo, informe de progreso en términos de `progress.loaded` / `progress.total` . *(Función)*
 
@@ -59,14 +59,14 @@ El `FileReader` objeto ofrece una manera de leer los archivos de sistema de arch
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
 
 ## readAsDataURL
 
-**Parámetros:**
+**Parámetros**:
 
 *   **archivo**: el objeto de archivo a leer.
 
@@ -90,7 +90,7 @@ El `FileReader` objeto ofrece una manera de leer los archivos de sistema de arch
 
 ## readAsText
 
-**Parámetros:**
+**Parámetros**:
 
 *   **archivo**: el objeto de archivo a leer.
 
@@ -205,7 +205,7 @@ El `FileReader` objeto ofrece una manera de leer los archivos de sistema de arch
 
 Actualmente apoyado sólo en iOS y Android.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **archivo**: el objeto de archivo a leer.
 
@@ -231,7 +231,7 @@ Actualmente apoyado sólo en iOS y Android.
 
 Actualmente apoyado sólo en iOS y Android.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **archivo**: el objeto de archivo a leer.
 

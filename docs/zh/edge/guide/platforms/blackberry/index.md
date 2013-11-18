@@ -125,7 +125,7 @@ Files\\BlackBerry\\Simulator`.
 
 如果設備連接到您的電腦是否提示您時，回答否。
 
-**注：**上黑莓 OS 5，該應用程式安裝在 `Downloads` 目錄。
+**注**： 關於黑莓 OS 5，應用程式安裝在 `Downloads` 目錄。
 
 ## 將部署到設備
 
@@ -144,7 +144,7 @@ Files\\BlackBerry\\Simulator`.
 
 如果設備連接到您的電腦是否提示您時，回答是。
 
-**注：**上黑莓 OS 5，該應用程式安裝在 `Downloads` 目錄。
+**注**： 關於黑莓 OS 5，應用程式安裝在 `Downloads` 目錄。
 
 ## 附加資訊
 

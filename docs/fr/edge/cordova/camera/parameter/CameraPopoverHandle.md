@@ -30,7 +30,7 @@ Agit sur la boîte de dialogue créée par `camera.getPicture`.
 
 Définit la position de la boite de dialogue.
 
-**Paramètres :**
+**Paramètres**:
 
 *   `cameraPopoverOptions`: l'objet `CameraPopoverOptions` spécifiant la nouvelle position
 

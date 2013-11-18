@@ -30,7 +30,7 @@ Dieses Objekt stellt ein Verzeichnis auf einem Dateisystem, wie durch die [W3C-V
 
 *   **FullPath**: der vollständige absolute Pfad von der Wurzel an der `DirectoryEntry` . *(DOM-String und enthält)*
 
-**Hinweis:** Das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
+**Hinweis**: das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
 
 *   **Dateisystem**: das Dateisystem, auf dem der `DirectoryEntry` befindet. *(FileSystem)*
 
@@ -63,7 +63,7 @@ Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objek
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -72,7 +72,7 @@ Die folgenden Methoden aufgerufen werden können, auf ein `DirectoryEntry` Objek
 
 Metadaten über ein Verzeichnis nachschlagen.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: eine Callback-Funktion mit einem `Metadata` Objekt. *(Funktion)*
 
@@ -91,7 +91,7 @@ Metadaten über ein Verzeichnis nachschlagen.
 
 Legt ein Verzeichnis erweiterte Attribute oder Metadaten. *Funktioniert derzeit nur auf iOS.*
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten erfolgreich festgelegt ist. *(Funktion)*
 
@@ -165,7 +165,7 @@ Verschieben Sie ein Verzeichnis an einen anderen Speicherort im Dateisystem. Ein
 
 Verschieben eines Verzeichnisses auf einem vorhandenen leeren Verzeichnis versucht löschen und ersetzen dieses Verzeichnis.
 
-**Parameter:**
+**Parameter**:
 
 *   **Eltern**: das übergeordnete Verzeichnis, in das Verzeichnis verschoben. *(DirectoryEntry)*
 
@@ -206,7 +206,7 @@ Kopieren Sie ein Verzeichnis an einen anderen Speicherort im Dateisystem. Ein Fe
 
 Verzeichnis-Kopien sind immer rekursive, und kopieren Sie alle Inhalte des Verzeichnisses.
 
-**Parameter:**
+**Parameter**:
 
 *   **Eltern**: das übergeordnete Verzeichnis in das Verzeichnis kopiert. *(DirectoryEntry)*
 
@@ -256,7 +256,7 @@ Löscht ein Verzeichnis. Ein Fehler auftritt, wenn die app versucht:
 
 *   Löschen Sie das Root-Verzeichnis des Dateisystems.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem das Verzeichnis gelöscht wird. Ohne Parameter aufgerufen. *(Funktion)*
 
@@ -275,7 +275,7 @@ Löscht ein Verzeichnis. Ein Fehler auftritt, wenn die app versucht:
 
 Suchen Sie den übergeordneten `DirectoryEntry` mit dem Verzeichnis.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der das Verzeichnis übergeordnete übergeben wird `DirectoryEntry` . *(Funktion)*
 
@@ -311,7 +311,7 @@ Erstellt oder ein vorhandenes Verzeichnis sucht. Ein Fehler auftritt, wenn die a
 
 *   Erstellen Sie ein Verzeichnis, dessen unmittelbar übergeordnete noch nicht vorhanden ist.
 
-**Parameter:**
+**Parameter**:
 
 *   **Pfad**: der Pfad zu dem Verzeichnis nachgeschlagen oder erstellt werden. Ein absoluter Pfad oder einen relativen Pfad von diesem `DirectoryEntry` . *(DOM-String und enthält)*
 
@@ -336,7 +336,7 @@ Erstellt oder eine Datei sucht. Ein Fehler auftritt, wenn die app versucht:
 
 *   Erstellen Sie eine Datei, deren unmittelbar übergeordnete noch nicht vorhanden ist.
 
-**Parameter:**
+**Parameter**:
 
 *   **Pfad**: der Pfad zu der Datei nachgeschlagen oder erstellt werden. Ein absoluter Pfad oder einen relativen Pfad von diesem `DirectoryEntry` . *(DOM-String und enthält)*
 
@@ -361,7 +361,7 @@ Löscht ein Verzeichnis und seinen Inhalt. Im Falle eines Fehlers (z. B. versuch
 
 *   Löschen Sie das Root-Verzeichnis des Dateisystems.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der nach dem führt die `DirectoryEntry` gelöscht wurden. Ohne Parameter aufgerufen. *(Funktion)*
 

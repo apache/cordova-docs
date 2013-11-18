@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **完整路徑**： 絕對路徑從根到 `DirectoryEntry` 。*() DOMString*
 
-**注：**下面的屬性由 W3C 規範定義，但*不是*支援：
+**注意**： 下面的屬性由 W3C 規範定義，但*不是*支援：
 
 *   **檔案系統**： 檔案系統的 `DirectoryEntry` 駐留。*（檔案系統）*
 
@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -72,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 查找有關目錄的中繼資料。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 要與執行的回呼函數 `Metadata` 物件。*（函數）*
 
@@ -87,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 設置目錄的擴展的屬性或中繼資料。*目前僅適用于 iOS。*
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 在成功地設置該中繼資料時執行回檔。*（函數）*
 
@@ -161,7 +161,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 移動目錄上現有的空目錄嘗試刪除並替換為該目錄。
 
-**參數：**
+**參數**：
 
 *   **父**： 要移動該目錄的父目錄。*() DirectoryEntry*
 
@@ -202,7 +202,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 目錄副本始終是遞迴的並將複製的目錄的所有內容。
 
-**參數：**
+**參數**：
 
 *   **父**： 要向其複製目錄的父目錄。*() DirectoryEntry*
 
@@ -252,7 +252,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   刪除根目錄下的一個檔案系統。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 在刪除該目錄後執行的回檔。不帶參數調用。*（函數）*
 
@@ -267,7 +267,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 查找父 `DirectoryEntry` 包含的目錄。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 一個通過目錄的父目錄的回檔 `DirectoryEntry` 。*（函數）*
 
@@ -303,7 +303,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   創建一個其直接父尚不存在的目錄。
 
-**參數：**
+**參數**：
 
 *   **路徑**： 要查找或創建的目錄的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
@@ -324,7 +324,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   創建一個其直接父尚不存在的檔。
 
-**參數：**
+**參數**：
 
 *   **路徑**： 要查找或創建的檔的路徑。絕對路徑或相對路徑從這 `DirectoryEntry` 。*() DOMString*
 
@@ -345,7 +345,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   刪除根目錄下的一個檔案系統。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 後執行的回檔 `DirectoryEntry` 已被刪除。不帶參數調用。*（函數）*
 

@@ -28,7 +28,7 @@ Afin de modifier le comportement par défaut du bouton retour, attachez un écou
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   Windows Phone 7 et 8
 
 ## Exemple court

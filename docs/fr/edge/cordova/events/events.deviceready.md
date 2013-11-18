@@ -25,7 +25,7 @@ L'évènement se déclenche lorsque Cordova est entièrement chargé.
 
 Cet évènement est essentiel à n'importe quelle application. Il signale que les API matérielles Cordova ont été chargées et sont prêtes à être utilisées.
 
-Cordova est constitué de deux bases de code : native et JavaScript. Tant que le code natif est en cours de chargement, une image personnalisée est affichée. Cependant, le code JavaScript est chargé seulement lorsque le DOM charge. Cela signifie que votre application Web peut potentiellement appeler une fonction JavaScript Cordova avant que le code natif correspondant ne soit disponible.
+Cordova est constitué de deux bases de code : native et JavaScript. Tant que le code natif est en cours de chargement, une image personnalisée est affichée. Cependant, le code JavaScript est chargé seulement lorsque le DOM charge. Cela signifie que l'application web peut potentiellement appeler une fonction Cordova JavaScript avant le code natif correspondant soit disponible.
 
 L'évènement `deviceready` se déclenche quand Cordova est totalement chargé. Une fois cet évènement déclenché, vous pouvez en toute sécurité faire appels aux API Cordova. Les applications devraient en général utiliser `document.addEventListener` pour attacher un écouteur d'évènements, une fois le DOM du document HTML chargé.
 
@@ -34,7 +34,7 @@ L'évènement `deviceready` se comporte différemment des autres évènements. T
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Paciarelli
 *   Windows Phone 7 et 8

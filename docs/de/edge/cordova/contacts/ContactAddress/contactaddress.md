@@ -43,7 +43,7 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -139,7 +139,7 @@ Das `ContactAddress` -Objekt speichert die Eigenschaften einer einzelnen Adresse
 
 *   **Pref**: nicht unterstützt, Rückkehr `false` auf Android 2.X Geräten.
 
-## BlackBerry WebWorks (OS 5.0 und höher) Macken
+## BlackBerry WebWorks 5.0 + Macken
 
 *   **Pref**: BlackBerry-Geräten, Rückgabe nicht unterstützt`false`.
 

@@ -46,9 +46,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   （在 android`app/res/xml/config.xml`)
+*   （在 android`res/xml/config.xml`)
     
-        < 功能名稱 ="加速度計">< 參數名稱 ="android 包"value="org.apache.cordova.AccelListener"/ >< / 功能 >
+        <feature name="Accelerometer">
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+        </feature>
         
 
 *   黑莓手機 WebWorks
@@ -56,7 +58,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         (in www/plugins.xml) < 功能名稱 ="加速度計">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.accelerometer.Accelerometer"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.system"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="org.apache.cordova"所需 ="true"版本 ="1.0.0"/ >
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         < 功能名稱 ="加速度計">< 參數名稱 ="ios 包"值 ="CDVAccelerometer"/ >< / 功能 >
         
@@ -72,4 +74,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

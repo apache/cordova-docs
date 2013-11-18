@@ -22,7 +22,7 @@ Contient des propriétés qui décrivent un contact, comme les contacts personne
 
 *   **id** : un identifiant globalement unique. *(DOMString)*
 
-*   **displayName** : le nom du contact, utile pour l'affichage à l'utilisateur final. *(DOMString)*
+*   **displayName**: le nom de ce Contact, approprié pour l'affichage à l'utilisateur final. *(DOMString)*
 
 *   **name** : un objet contenant tous les composants du nom de la personne. *(ContactName)*
 
@@ -60,12 +60,12 @@ Contient des propriétés qui décrivent un contact, comme les contacts personne
 
 L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent être créés, stockés ou supprimés de la base de données de contacts de l'appareil. Ils peuvent également être récupérées (individuellement ou en lot) dans la base de données en appelant la méthode `contacts.find`.
 
-**Remarque :** l'ensemble des propriétés de contact énuméré ci-dessus n'est pas supporté par toutes les plates-formes. Veuillez vous référer aux *Notes* relatives à chaque plate-forme pour plus de détails.
+**NOTE**: tous les champs de contact susmentionnés ne sont pris en charge sur chaque plate-forme de périphérique. S'il vous plaît vérifier la section *bizarreries* de chaque plate-forme pour plus de détails.
 
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -194,7 +194,7 @@ L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent 
 
 *   **categories** : non pris en charge sur les périphériques Android 2.X, valeur `null`.
 
-## Notes au sujet de BlackBerry WebWorks (OS 5.0 et plus)
+## BlackBerry WebWorks 5.0 + Quirks
 
 *   **id** : supporté, attribué par l'appareil lors de l'enregistrement du contact.
 
@@ -232,7 +232,7 @@ L'objet `Contact` représente un contact de l'utilisateur. Des contacts peuvent 
 
 *   **displayName** : lorsqu'un contact est créé, la valeur fournie pour le paramètre de nom d'affichage est différente de celle récupérée lors de la récupération ultérieure du contact.
 
-*   **urls** : lors de la création d'un contact, les utilisateurs peuvent saisir et enregistrer plusieurs adresses Web, mais seulement une sera disponible lors de la récupération du contact.
+*   **URL**: lorsque vous créez un contact, les utilisateurs peuvent entrer et enregistrer plus d'une adresse web, mais seulement un est disponible lors de la recherche du contact.
 
 *   **phoneNumbers** : l'option *pref* n'est pas prise en charge. Le *type* n'est pas supporté lors d'un appel à *find*. Seul `phoneNumber` est autorisé pour chaque *type*.
 

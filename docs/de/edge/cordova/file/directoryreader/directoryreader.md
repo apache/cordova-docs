@@ -27,7 +27,7 @@ Ein Objekt, das Dateien und Verzeichnisse in einem Verzeichnis listet in der [W3
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -36,7 +36,7 @@ Ein Objekt, das Dateien und Verzeichnisse in einem Verzeichnis listet in der [W3
 
 Lesen Sie die Einträge in diesem Verzeichnis.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der ein Array von übergeben wird `FileEntry` und `DirectoryEntry` Objekte. *(Funktion)*
 

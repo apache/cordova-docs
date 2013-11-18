@@ -71,7 +71,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Текстовая поддержка:
 
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   Windows Phone 7 и 8
 *   ОС Windows 8
 

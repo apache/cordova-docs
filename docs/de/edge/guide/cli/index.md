@@ -106,9 +106,7 @@ Wenn Sie möchten, können Sie eine SDK an dieser Stelle verwenden, um das Proje
 
 ## Die App zu bauen
 
-In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `deviceready` -Ereignishandler, standardmäßig von verwiesen `www/js/index.js` . <!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
+In der Standardeinstellung der `cordova create` Skript generiert eine Skeletts Web-basierte Anwendung, deren Homepage des Projekts ist `www/index.html` Datei. Diese Anwendung zu bearbeiten, aber Sie wollen, aber Initialisierungen werden, als Teil angegeben sollte der `deviceready` -Ereignishandler, standardmäßig von verwiesen`www/js/index.js`.
 
 Führen Sie den folgenden Befehl, um das Projekt iterativ zu erstellen:
 
@@ -154,11 +152,23 @@ Alternativ können Sie schließen den Hörer an den Computer und testen die app 
 
 Bevor Sie diesen Befehl ausführen, müssen Sie das Gerät zum Testen einrichten nach Verfahren, die für jede Plattform variieren. In Androids Fall müssten Sie eine Option **USB-debugging** auf dem Gerät zu aktivieren, und vielleicht einen USB-Treiber je nach Ihrer Entwicklung-Environmnent. Einzelheiten über jede Plattform Anforderungen finden Sie unter Plattform Guides.
 
-## Hinzufügen von Features
+## Plugin-Features hinzufügen
 
 Wenn Sie erstellen und eines neues Projekts anzeigen, nicht sehr viel die Standardanwendung, die angezeigt wird. Sie können ändern, die app in vielerlei Hinsicht zu standard-Web-Technologien nutzen, aber für die app eng mit verschiedenen Geräteebene Features zu kommunizieren, müssen Sie Plugins hinzufügen, die Zugriff auf Kern-Cordova-APIs.
 
-Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und Plugin Development Guide für Details.) Häufiger vorkommt, würde Sie eine Plugin um eine Cordovas Grundfunktionen auf Device-Ebene aktivieren hinzufügen <!--XREF diskutiert in der Application Development Guide und XREF--> in der API-Referenz.
+Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und Plugin Development Guide für Details.) Häufiger, fügen Sie eine Plugin um eine Cordovas Geräteebene Grundfunktionen in der API-Referenz detailliert aktivieren. Eine Liste dieser Plugins, einschließlich zusätzliche Plugins, die der Gemeinschaft kann bei [plugins.cordova.io][4]gefunden werden. Die CLI können Sie Plugins aus dieser Registrierung suchen. Z. B. Suche nach `bar` und `code` erzeugt ein einzelnes Ergebnis, die beide Begriffe als groß-und Kleinschreibung Teilzeichenfolgen entspricht:
+
+ [4]: http://plugins.cordova.io/
+
+        $ cordova plugin search bar code
+    
+        com.phonegap.plugins.barcodescanner - Scans Barcodes
+    
+
+Nur bei der Suche nach der `bar` Erträge und weiteres Ergebnis:
+
+        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+    
 
 Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code angeben. Hier sind Beispiele für Funktionen, die Sie hinzufügen können:
 
@@ -185,7 +195,7 @@ Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code 
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+        
 
 *   Zugriff auf Dateien auf Gerät oder Netzwerk (File API):
     
@@ -232,13 +242,54 @@ Verwendung `plugin ls` (oder `plugin list` , oder `plugin` von selbst) derzeit a
 
 Um ein Plugin zu entfernen, beziehen sich auf es durch den gleichen Bezeichner, der in der Liste angezeigt wird. Zum Beispiel, ist hier, wie Sie Unterstützung für eine Debug-Konsole aus einer Release-Version entfernen würde:
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
     
 
-Sie können Batch-entfernen oder Hinzufügen von Plugins durch mehr als ein Argument für jeden Befehl angeben.
+Sie können Batch-entfernen oder Hinzufügen von Plugins durch mehr als ein Argument für jeden Befehl angeben:
 
-## Jede Plattform anpassen
+        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+    
+
+## Erweiterte Plugin-Optionen
+
+Wenn Sie eine Plugin hinzufügen, können mehrere Optionen Sie angeben, wo Sie das Plugin zu holen. Die obigen Beispiele verwenden eine bekannte `registry.cordova.io` Registrierung und das Plugin wird angegeben durch die `id` :
+
+        $ cordova plugin add org.apache.cordova.console
+    
+
+Die `id` kann auch die Plugin-Versionsnummer, angefügt nach enthalten einen `@` Charakter. Die `latest` Version ist ein Alias für die aktuellste Version. Zum Beispiel:
+
+        $ cordova plugin add org.apache.cordova.console@latest
+        $ cordova plugin add org.apache.cordova.console@0.2.1
+    
+
+Wenn das Plugin nicht registriert ist `registry.cordova.io` aber befindet sich in einem anderen Git Repository, Sie können eine Alternative URL angeben:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+    
+
+Das Git-Beispiel oben holt das Plugin vom Ende des Zweiges master, aber eine Alternative Git-Ref z. B. einen Tag oder Zweig kann angehängt werden, nach einem `#` Charakter:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+Wenn das Plugin (und seine `plugin.xml` Datei) ist in einem Unterverzeichnis innerhalb der Git Repo, können Sie angeben, dass es mit einem `:` Charakter. Beachten Sie, dass der `#` Charakter wird noch benötigt:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+    
+
+Sie können auch kombinieren, die Git-Ref und das Unterverzeichnis:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+    
+
+Alternativ geben Sie einen lokalen Pfad zu dem Pluginverzeichnis, enthält die `plugin.xml` Datei:
+
+        $ cordova plugin add ../my_plugin_dir
+    
+
+## Verwendung *führt* , auf jeder Plattform anpassen
 
 Während Cordova auf einfache Weise eine app für viele verschiedene Plattformen bereitstellen kann, müssen Sie manchmal Anpassungen hinzufügen. In diesem Fall wollen Sie die Quellcode-Dateien in verschiedenen ändern `www` Verzeichnisse innerhalb der obersten Ebene `platforms` Verzeichnis, da sie regelmäßig mit der obersten Ebene ersetzt sind `www` des Verzeichnisses Cross-Plattform-Quelle.
 
@@ -260,7 +311,24 @@ Wenn Sie das Projekt neu erstellen, verfügt die Android Version die benutzerdef
 
 Sie können auch `merges` hinzufügen, Dateien nicht vorhanden, im Original `www` Verzeichnis. Beispielsweise eine app kann integrieren eine *Zurück-Schaltfläche* Grafik in die iOS-Benutzeroberfläche, gespeichert `merges/ios/img/back_button.png` , während die Android Version stattdessen erfassen kann `backbutton` Ereignisse über die entsprechende Taste.
 
-## Aktualisieren von Cordova
+## Hilfebefehle
+
+Cordova verfügt über ein paar globale Befehle, die Ihnen helfen können, wenn Sie stecken bleiben oder ein Problem. Der `help` Befehl zeigt alle verfügbaren Cordova-Befehle und deren Syntax:
+
+    $ cordova help
+    $ cordova        # same
+    
+
+Der `info` Befehl erzeugt eine Liste von potentiell nützliche Details, wie derzeit installierten Plattformen und Plugins, SDK-Versionen für jede Plattform und die CLI-Versionen und `node.js` :
+
+    $ cordova info
+    
+
+Es stellt die Informationen zum Bildschirm sowohl erfasst die Ausgabe in einer lokalen `info.txt` Datei.
+
+**Hinweis**: derzeit sind nur Details auf iOS und Android-Plattformen verfügbar.
+
+## Aktualisierung von Cordova und Ihr Projekt
 
 Nach der Installation der `cordova` Dienstprogramm, Sie können immer aktualisieren auf die neueste Version durch Ausführen des folgenden Befehls:
 
@@ -269,13 +337,19 @@ Nach der Installation der `cordova` Dienstprogramm, Sie können immer aktualisie
 
 Verwenden Sie diese Syntax, um eine bestimmte Version zu installieren:
 
-        $ Sudo Npm installieren -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0
     
 
-Führen Sie `cordova -v` , die aktuell ausgeführte Version zu sehen. Führen Sie den `npm
+Führen Sie `cordova -v` zu sehen, welche Version aktuell installiert ist. Führen Sie den `npm
 info` Befehl für eine längere Liste, die die aktuelle Version zusammen mit anderen Nummern für verfügbare Version enthält:
 
         $ npm info cordova
     
 
 Cordova 3.0 ist die erste Version, die in diesem Abschnitt beschriebenen Befehlszeilenschnittstelle zu unterstützen. Wenn Sie von einer Version vor 3.0 aktualisieren, müssen Sie ein neues Projekt erstellen, wie oben beschrieben, dann kopieren Sie die ältere Anwendung Vermögenswerte in der obersten Ebene `www` Verzeichnis. Gegebenenfalls stehen weitere Informationen zum Upgrade auf 3.0 in den Plattform-Führern. Nach der Aktualisierung auf die `cordova` Befehlszeilenschnittstelle und Nutzung `npm update` um dem Laufenden zu bleiben, die mehr Zeit in Anspruch, dort beschriebenen Verfahren sind nicht mehr relevant.
+
+Cordova 3.0 oder höher benötigen noch verschiedene Änderungen auf Projektebene Verzeichnisstrukturen und andere Abhängigkeiten. Nach dem Ausführen der `npm` Befehls über Cordova selbst aktualisieren, möglicherweise müssen Sie die Ressourcen des Projekts entsprechen den aktuellsten Anforderungen zu gewährleisten. Führen Sie einen Befehl wie den folgenden für jede Plattform, dass Sie erstellen:
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.

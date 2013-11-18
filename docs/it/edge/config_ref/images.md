@@ -71,7 +71,7 @@ Android specifica sia ritratto e paesaggio-oriented splash immagini dello scherm
         android/screen-xhdpi-portrait.png
     
 
-La piattaforma iOS specifica varianti per iPhone/iPod e iPad, con varianti per retina display e diversi orientamenti. Il file *568 h* è personalizzato per l'iPhone 5 schermo più alto:
+La piattaforma iOS specifica varianti per iPhone/iPod e iPad, con varianti per retina display e diversi orientamenti. Il file *568 h* vale per l'iPhone 5 schermo più alto:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,13 +109,13 @@ In `config.xml` , aggiungere le seguenti preferenze:
     <preference name="splashScreenDelay", 10000 />
     
 
-La prima riga imposta l'immagine da visualizzare come schermata iniziale. Se è il nome tuo immagine niente altro che `splash.png` , è necessario modificare questa linea.
+La prima riga imposta l'immagine da visualizzare come schermata iniziale. Se è il nome dell'immagine niente altro che `splash.png` , è necessario modificare questa linea.
 
 La seconda riga imposta il ritardo di quanto tempo lo splashscreen appare in millisecondi. Per chiudere la schermata iniziale una volta che l'app riceve il `deviceready` evento, chiamare il `navigator.splashscreen.hide()` metodo.
 
 ## Schermate iniziali per la piattaforma iOS
 
-Copiare le immagini di schermata iniziale del progetto iOS `Resources/splash` directory. Aggiungere solo le immagini per i dispositivi che si desidera supportare, come iPad o iPhone. La dimensione di ogni immagine dovrebbe essere:
+Copiare immagini di splash screen del progetto iOS `Resources/splash` directory. Aggiungere solo quelle immagini per i dispositivi che si desidera supportare, come iPad o iPhone. La dimensione di ogni immagine dovrebbe essere:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (1496 x 2048 pixel)
@@ -127,7 +127,7 @@ Copiare le immagini di schermata iniziale del progetto iOS `Resources/splash` di
 
 ## Schermate iniziali per la piattaforma BlackBerry 10
 
-Copiare le immagini di schermata iniziale del progetto `res/screen/blackberry10` directory. I nomi dei file dovrebbe essere:
+Copiare immagini di splash screen del progetto `res/screen/blackberry10` directory. I nomi dei file dovrebbe essere:
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

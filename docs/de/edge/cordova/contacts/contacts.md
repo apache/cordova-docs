@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > Das `contacts` Objekt bietet Zugriff auf die Kontaktdatenbank Gerät.
 
-**Wichtige Datenschutzhinweis:** Erhebung und Nutzung von Kontaktdaten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app Kontaktdaten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. Kontaktinformationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben Ihrer app-Privacy Policy sollten stark Sie eine just-in-Time Ankündigung vor Ihrer Anwendung Zugriff oder die Verwendung der Kontaktdaten (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf Kontaktdaten einholen. Eine klare und leicht verständliche Benutzererfahrung rund um den Einsatz von Kontakt Daten hilft Benutzer Verwirrung zu vermeiden und wahrgenommene Missbrauch der Kontaktdaten. Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Warnung**: Erhebung und Nutzung von Kontaktdaten löst wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app Kontaktdaten verwendet und ob es mit irgendwelchen anderen Parteien geteilt wird. Kontaktinformationen ist als vertraulich angesehen, weil es die Menschen zeigt, mit denen eine Person kommuniziert. Daher neben der app-Privacy Policy sollten stark Sie Bereitstellung einer just-in-Time-Bekanntmachung, bevor die app zugreift oder Kontaktdaten verwendet, wenn das Betriebssystem des Geräts bereits tun nicht. Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze die app eine Frist eine just-in-Time und erhalten die Erlaubnis des Benutzers vor dem Zugriff auf Kontaktdaten verlangen können. Eine klare und leicht verständliche Benutzererfahrung rund um die Verwendung der Kontakt-Daten Benutzer Verwirrung zu vermeiden können und wahrgenommene Missbrauch der Kontaktdaten. Weitere Informationen finden Sie in der Datenschutz-Guide.
 
 ## Methoden
 
@@ -58,13 +58,13 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
     
         (in app/res/xml/config.xml)
         <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.ContactManager" />
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         
 
 *   BlackBerry WebWorks
@@ -81,16 +81,15 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />
         </feature>
         
 
-*   Windows Phone
+*   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>
@@ -100,4 +99,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**Hinweis:** Das InAppBrowser-Fenster verhält sich wie einen standard-Webbrowser und Cordova APIs kann nicht zugegriffen werden kann.
+**Hinweis**: die InAppBrowser Fenster verhält sich wie einen standard-Webbrowser und Cordova APIs kann nicht zugegriffen werden kann.
 
 ## Beschreibung
 
@@ -48,14 +48,14 @@ Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden 
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android (in`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature name="InAppBrowser" />
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
 
 # addEventListener
 
@@ -207,7 +207,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
     ref.show();
     
 
-*   **Ref:** Verweis auf die (InAppBrowser) Fenster`InAppBrowser`)
+*   **Ref**: Verweis auf die (InAppBrowser) Fenster`InAppBrowser`)
 
 ## Unterstützte Plattformen
 
@@ -354,7 +354,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -456,10 +456,10 @@ Einige Plattformen können dieses Feature unterstützen, ohne dass eine besonder
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

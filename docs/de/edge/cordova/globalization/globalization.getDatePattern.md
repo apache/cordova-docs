@@ -25,13 +25,15 @@ Gibt eine Musterzeichenfolge zum Formatieren und Analysieren von Daten entsprech
 
 Gibt das Muster auf der `successCallback` . Das als Parameter übergebene Objekt enthält die folgenden Eigenschaften:
 
-*   **Muster**: das Datum und die Uhrzeit-Muster zur Formatierung und zum Analysieren von Daten. Die Muster folgen Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **Muster**: das Datum und die Uhrzeit-Muster zur Formatierung und zum Analysieren von Daten. Die Muster folgen [Unicode Technical Standard #35][1]. *(String)*
 
 *   **Zeitzone**: der abgekürzte Name der Zeitzone auf dem Client. *(String)*
 
 *   **Utc_offset**: die aktuelle Differenz in Sekunden zwischen dem Client Zeitzone und koordinierte Weltzeit. *(Anzahl)*
 
 *   **Dst_offset**: der aktuelle Sommerzeit-Offset in Sekunden zwischen der Client-Sommerzeit der Zeitzone und der Client Tageslicht Speichern der Zeitzone. *(Anzahl)*
+
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
 Wenn es einen Fehler erhalten das Muster der `errorCallback` führt mit ein `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
 
@@ -46,7 +48,7 @@ time`.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

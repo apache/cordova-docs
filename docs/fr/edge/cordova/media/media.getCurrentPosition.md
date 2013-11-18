@@ -23,47 +23,47 @@ Retourne la position courante dans un fichier audio.
 
 ## Paramètres
 
-*   **mediaSuccess**: le rappel qui est passé de la position actuelle en quelques secondes.
+*   **mediaSuccess** : la fonction callback à laquelle est transmise la position actuelle exprimée en secondes.
 
-*   **mediaError**: (facultatif) le rappel à exécuter si une erreur se produit.
+*   **mediaError** : (facultative) la fonction callback exécutée si une erreur se produit.
 
 ## Description
 
-Une fonction asynchrone qui retourne la position courante du fichier audio sous-jacent d'un `Media` objet. Met également à jour la `Media` de l'objet `position` paramètre.
+Une fonction asynchrone donnant accès à la position de lecture du fichier audio représenté par un objet `Media` donné. Met également à jour la valeur de la propriété `position` de l'objet `Media`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 
 *   iOS
 
 *   Windows Phone 7 et 8
 
-*   Paciarelli
+*   Tizen
 
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Audio player
+    // lecteur audio
     //
     var my_media = new Media(src, onSuccess, onError);
     
-    // Update media position every second
+    // met à jour la position de lecture du fichier à chaque seconde
     var mediaTimer = setInterval(function () {
-        // get media position
+        // récupère la position
         my_media.getCurrentPosition(
-            // success callback
+            // fonction callback de succès
             function (position) {
                 if (position > -1) {
-                    console.log((position) + " sec");
+                    console.log((position) + " secondes");
                 }
             },
-            // error callback
+            // fonction callback d'erreur
             function (e) {
-                console.log("Error getting pos=" + e);
+                console.log("Erreur lors de l'obtention de la position : " + e);
             }
         );
     }, 1000);
@@ -75,57 +75,57 @@ Une fonction asynchrone qui retourne la position courante du fichier audio sous-
                       "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for device API libraries to load
+            // attend que les API de l'appareil soient chargées
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // device APIs are available
+            // les API de l'appareil sont disponibles
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                // Create Media object from src
+                // crée un objet média à partir de src
                 my_media = new Media(src, onSuccess, onError);
     
-                // Play audio
+                // lance la lecture du clip audio
                 my_media.play();
     
-                // Update my_media position every second
+                // met à jour la position de my_media à chaque seconde
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // récupère la position de lecture de my_media
                         my_media.getCurrentPosition(
-                            // success callback
+                            // fonction callback de succès
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudioPosition((position) + " secondes");
                                 }
                             },
-                            // error callback
+                            // fonction callback d'erreur
                             function(e) {
-                                console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                console.log("Erreur lors de la récupération de la position : " + e);
+                                setAudioPosition("Erreur : " + e);
                             }
                         );
                     }, 1000);
                 }
             }
     
-            // Pause audio
+            // met en pause la lecture du clip audio
             //
             function pauseAudio() {
                 if (my_media) {
@@ -133,7 +133,7 @@ Une fonction asynchrone qui retourne la position courante du fichier audio sous-
                 }
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -143,20 +143,20 @@ Une fonction asynchrone qui retourne la position courante du fichier audio sous-
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succès");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' +
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -165,9 +165,9 @@ Une fonction asynchrone qui retourne la position courante du fichier audio sous-
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audio</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Mettre en pause la lecture</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>

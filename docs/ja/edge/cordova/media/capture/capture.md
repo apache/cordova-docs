@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > デバイスのオーディオ、イメージ、およびビデオ キャプチャ機能へのアクセスを提供します。
 
-**重要なプライバシーの注意：**画像、ビデオ、またはデバイスのカメラやマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、カメラまたはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、アプリ (デバイス オペレーティング システムしない場合そう既に) カメラまたはマイクにアクセスする前に、ジャスト イン タイム通知を提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の通知を提供して、カメラまたはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関するガイドを参照してください。
+**警告**: イメージ、ビデオ、またはデバイスのカメラやマイクからの音声の収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは、アプリがそのようなセンサーを使用する方法と、記録されたデータは他の当事者と共有かどうかを議論すべきです。 さらに、カメラまたはマイクのアプリの使用がない場合明らかに、ユーザー インターフェイスで、前に、アプリケーションにアクセスするカメラまたはマイクを (デバイスのオペレーティング システムしない場合そう既に) - 時間のお知らせを提供する必要があります。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 いくつかのアプリのマーケットプ レース - 時間の通知を提供して、カメラまたはマイクにアクセスする前にユーザーからアクセス許可を取得するアプリをする必要がありますに注意してください。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## オブジェクト
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## スコープ
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+`capture`オブジェクトに割り当てられて、 `navigator.device` オブジェクト、およびしたがってはグローバル スコープを持ちます。
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -66,7 +66,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -77,7 +77,8 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
@@ -85,7 +86,18 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 *   アンドロイド
     
-        (in app/res/xml/plugins.xml) < 機能名 =「キャプチャ」>< param の名前 =「android パッケージ」value="org.apache.cordova.Capture"/></機能 > (app/AndroidManifest.xml) で < 使用許可 android:name="android.permission.RECORD_AUDIO"/>< 使用許可 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   ブラックベリー WebWorks
@@ -93,7 +105,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         (in www/plugins.xml) < 機能名 =「キャプチャ」>< param の名前「ブラックベリー パッケージ」value="org.apache.cordova.capture.MediaCapture ="/></機能 > (www/config.xml) で < id="blackberry.system 機能"必要 ="true"のバージョン =「1.0.0.0」/>< id="blackberry.io.file の機能"必要 ="true"バージョン =「1.0.0.0」/>
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         < 機能名 =「キャプチャ」>< param の名前 = 値「ios パッケージ」="CDVCapture"/></機能 >
         
@@ -109,4 +121,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

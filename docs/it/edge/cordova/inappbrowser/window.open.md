@@ -36,20 +36,22 @@ Apre un URL in una nuova `InAppBrowser` istanza, l'istanza corrente del browser 
     Il `options` stringa non deve contenere alcun spazio vuoto, e coppie nome/valore ogni funzionalità devono essere separate da una virgola. Caratteristica nomi sono tra maiuscole e minuscole. Tutte le piattaforme supportano il valore riportato di seguito:
     
     *   **posizione**: impostata su `yes` o `no` per trasformare il `InAppBrowser` di barra di posizione on o off.
-    ## Android solo
     
-    *   **closebuttoncaption** - impostare una stringa che sarà la didascalia per il pulsante "Done". 
-    *   **nascosti** - impostato su 'sì' per creare il browser e caricare la pagina, ma non mostrarlo. L'evento di carico sarà il fuoco quando il caricamento è completato. Omettere o impostato su 'no' (predefinito) per avere il browser aperto e caricare normalmente. 
-    *   **clearcache** - impostato su 'sì' per avere la cache del browser cookie cancellata prima dell'apertura della nuova finestra
-    *   **clearsessioncache** - impostare su 'sì' per avere la cache cookie di sessione cancellata prima dell'apertura della nuova finestra
-    ## iOS solo
+    Solo su Android:
     
-    *   **closebuttoncaption** - impostare una stringa che sarà la didascalia per il pulsante "Done". Nota che devi localizzare questo valore a te stesso.
-    *   **nascosti** - impostato su 'sì' per creare il browser e caricare la pagina, ma non mostrarlo. L'evento di carico sarà il fuoco quando il caricamento è completato. Omettere o impostato su 'no' (predefinito) per avere il browser aperto e caricare normalmente. 
-    *   **toolbar** - impostato su 'sì' o 'no' per attivare o disattivare la barra degli strumenti per il InAppBrowser (default 'sì')
+    *   **closebuttoncaption**: impostare una stringa da utilizzare come didascalia del pulsante **fatto** .
+    *   **nascosti**: impostare su `yes` per creare il browser e caricare la pagina, ma non mostrarlo. Quando il caricamento è completato, viene generato l'evento di carico. Omettere o impostata su `no` (impostazione predefinita) per avere il browser aperto e caricare normalmente. 
+    *   **ClearCache**: impostare su `yes` per avere il browser di cookie cache cancellata prima dell'apertura della nuova finestra
+    *   **clearsessioncache**: impostare su `yes` per avere la cache cookie di sessione cancellata prima dell'apertura della nuova finestra
+    
+    solo iOS:
+    
+    *   **closebuttoncaption**: impostare una stringa da utilizzare come didascalia del pulsante **fatto** . Si noti che è necessario localizzare questo valore a te stesso.
+    *   **nascosti**: impostare su `yes` per creare il browser e caricare la pagina, ma non mostrarlo. Quando il caricamento è completato, viene generato l'evento di carico. Omettere o impostata su `no` (impostazione predefinita) per avere il browser aperto e caricare normalmente. 
+    *   **Toolbar**: impostare su `yes` o `no` per attivare la barra degli strumenti o disattivare per il InAppBrowser (default`yes`)
     *   **enableViewportScale**: impostare su `yes` o `no` per impedire la viewport ridimensionamento tramite un tag meta (default`no`).
     *   **mediaPlaybackRequiresUserAction**: impostare su `yes` o `no` per impedire HTML5 audio o video da AutoPlay (default`no`).
-    *   **allowInlineMediaPlayback**: impostare su `yes` o `no` per consentire la riproduzione multimediale inline HTML5, visualizzando all'interno della finestra del browser, piuttosto che un'interfaccia specifica del dispositivo di riproduzione. L'HTML `video` elemento deve includere anche il `webkit-playsinline` (default di attributo`no`)
+    *   **allowInlineMediaPlayback**: impostare su `yes` o `no` per consentire la riproduzione dei supporti HTML5 in linea, visualizzare all'interno della finestra del browser, piuttosto che un'interfaccia specifica del dispositivo di riproduzione. L'HTML `video` elemento deve includere anche il `webkit-playsinline` (default di attributo`no`)
     *   **keyboardDisplayRequiresUserAction**: impostare su `yes` o `no` per aprire la tastiera quando elementi form ricevano lo stato attivo tramite di JavaScript `focus()` chiamata (default`yes`).
     *   **suppressesIncrementalRendering**: impostare su `yes` o `no` aspettare fino a quando tutti i nuovi contenuti di vista viene ricevuto prima il rendering (default`no`).
     *   **presentationstyle**: impostare su `pagesheet` , `formsheet` o `fullscreen` per impostare lo [stile di presentazione][1] (default`fullscreen`).

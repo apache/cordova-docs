@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        平臺支援
+      </h2>
+      
+      <span>所有主要功能的相容性表。</span>
+    </li>
+    <li>
+      <h2>
         命令列介面
       </h2>
       

@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Plattformunterstützung
+      </h2>
+      
+      <span>Kompatibilitätstabelle für alle wichtigen Funktionen.</span>
+    </li>
+    <li>
+      <h2>
         Die Befehlszeilenschnittstelle
       </h2>
       

@@ -16,36 +16,94 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 플러그인 개발 가이드
 
-코르 도우 바 플러그인 교량 WebView 전원 코르도바 애플리케이션과 네이티브 플랫폼 코르도바 응용 프로그램 간에 기능의 비트에서 실행 됩니다. 플러그인은 모든 플랫폼과 자바 스크립트를 호출 하는 플랫폼 특정 플러그인 인터페이스 다음 기본 구현에서 사용 되는 단일 자바 인터페이스의 구성 됩니다. 모든 핵심 코르도바 Api는이 아키텍처를 사용 하 여 구현 됩니다.
+*플러그인* 코르도바 webview는 앱 실행 되는 네이티브 플랫폼 통신할 렌더링 수 있도록 삽입 된 코드의 패키지입니다. 플러그인은 일반적으로 웹 기반 애플 리 케이 션을 사용할 수 없습니다 장치 및 플랫폼 기능에 대 한 액세스를 제공 합니다. 모든 주요 코르도바 API 기능, 플러그인으로 구현 및 많은 다른 NFC 통신, 바코드 스캐너와 같은 기능을 사용 또는 일정에 맞게 인터페이스 사용할 수 있습니다.
 
-이 가이드 단계 간단한 에코 플러그인을 작성 하는 과정은 자바 스크립트에서 문자열을 전달 하 고 지원 되는 플랫폼에 대 한 네이티브 환경에 보냅니다. 네이티브 코드는 다음 콜백 플러그인의 자바 스크립트 내부에 다시 동일한 문자열을 반환합니다.
+각 지원 되는 플랫폼에 대 한 해당 네이티브 코드 라이브러리와 함께 단일 자바 인터페이스를 구성 하는 플러그인. 네이티브 플랫폼을 다시 한 훨씬 더 복잡 한 기능을 구축 하는 모델로 사용할 수 있는 자바 스크립트에서 문자열을 전달 하는 간단한 *에코* 플러그인-이 섹션 단계. 이 섹션에서는 기본 플러그인 구조와 외부와 접한 자바 인터페이스에 설명합니다. 각 해당 하는 기본 인터페이스에 대 한이 섹션의 끝에 목록 참조.
 
-이 가이드는 더 복잡 한 플러그인 작성 구축할 수 있습니다 충분 한 개요를 제공 합니다.
+뿐만 아니라 이러한 지침, 지도 대 한 [기존의 플러그인을][1] 살펴 것이 좋습니다 플러그인을 쓸 준비를 할 때.
 
-## 자바 스크립트
+ [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
 
-어떤 플러그인은 자바 스크립트입니다. 코르 도우 바 이므로 사용할 수 있는 이유 개발자 사용 및 쓰기 자바, 아니라 목표-C, 자바, C# 하지. 귀하의 플러그인에 대 한 JavaScript 인터페이스 코르도바 플러그인의 전면 그리고 틀림 없이 가장 중요 한 부분입니다.
+## 플러그인을 구축
 
-그러나 당신이 좋아하는 플러그인의 자바 스크립트 구조 수 있습니다. 코르 도우 바 자바 스크립트와 네이티브 환경 간의 통신에 사용 *해야 합니다* 한 가지는 `cordova.exec` 기능. 여기에 예가입니다.
+응용 프로그램 개발자는 CLI를 사용 하 여 `plugin add` (설명 명령줄 인터페이스) 명령을 프로젝트에 플러그인을 적용 하. 해당 명령에 대 한 인수 플러그인 코드가 포함 된 *git* 저장소에 대 한 URL입니다. 이 예제에서는 코르도바의 장치 API를 구현합니다.
 
-        cordova.exec(function(winParam) {}, function(error) {}, "service",
-                     "action", ["firstArgument", "secondArgument", 42,
-                     false]);
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-매개 변수는 아래의 자세한 위치:
+플러그인 저장소를 최상위 기능 해야 합니다 `plugin.xml` 매니페스트 파일. 이 파일을 구성 하는 사항은 플러그인 사양에서 사용할 수 있는 많은 방법이 있다.입니다. 이 약식된 버전의는 `Device` 모델을 사용 하는 간단한 예제를 제공 하는 플러그인:
 
-*   `function(winParam) {}`: 성공 함수 콜백입니다. 가정 당신의 `exec` 호출이 성공적으로 완료 되,이 기능 (필요에 따라 매개 변수를 다시 전달할)와 함께 호출 됩니다.
+        <?xml version="1.0" encoding="UTF-8"?>
+        <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+                id="org.apache.cordova.device" version="0.2.3">
+            <name>Device</name>
+            <description>Cordova Device Plugin</description>
+            <license>Apache 2.0</license>
+            <keywords>cordova,device</keywords>
+            <js-module src="www/device.js" name="device">
+                <clobbers target="device" />
+            </js-module>
+            <platform name="ios">
+                <config-file target="config.xml" parent="/*">
+                    <feature name="Device">
+                        <param name="ios-package" value="CDVDevice"/>
+                    </feature>
+                </config-file>
+                <header-file src="src/ios/CDVDevice.h" />
+                <source-file src="src/ios/CDVDevice.m" />
+            </platform>
+        </plugin>
+    
 
-*   `function(error) {}`: 오류 함수 콜백입니다. 작업이 성공적으로 완료 되지 않으면이 함수 (선택적으로 오류 매개 변수)와 함께 호출 됩니다.
+최상위 `plugin` 태그의 `id` 특성 같은 리버스 도메인 형식을 사용 하 여 그들은 애플 리 케이 션 있어 추가 플러그인 패키지를 식별 합니다. `js-module`태그는 일반적인 자바 인터페이스에 경로 지정 합니다. `platform`에 대 한 네이티브 코드의 해당 집합을 지정 하는 태그는 `ios` 이 경우 플랫폼. `config-file`태그를 캡슐화 한 `feature` 플랫폼 특정 주입 태그 `config.xml` 파일 추가 코드 라이브러리의 플랫폼에 게. `header-file`와 `source-file` 태그 라이브러리의 구성 요소 파일을 경로 지정 합니다.
 
-*   `"service"`: 네이티브 쪽에서 호출을 서비스 이름입니다. 이 대 한 자세한 정보는 아래에 나열 된 기본 가이드에서 사용할 수 있는 기본 클래스에 매핑됩니다.
+## 플러그인 확인
 
-*   `"action"`: 작업 이름 호출입니다. 이 네이티브 클래스 수신에 의해 선택 되는 `exec` 호출 및 플랫폼에 따라 기본적으로 클래스의 메서드를 지도. 아래에 나열 된 기본 가이드 정보를 제공 합니다.
+사용할 수 있는 `plugman` 플러그인 설치 올바르게 각 플랫폼에 대 한 여부를 확인 하는 유틸리티. 설치 `plugman` 다음 [노드][2] 명령:
 
-*   `[/* arguments */]`: 네이티브 환경에 전달할 인수입니다.
+ [2]: http://nodejs.org/
 
-### 에코 플러그인 자바 스크립트 예제
+        $ npm install -g plugman
+    
+
+최상위 같은 유효한 응용 프로그램 소스 디렉터리 필요한 `www` 명령줄 인터페이스에 설명 된 대로 기본 CLI에서 생성 된 프로젝트에 포함 하는 디렉터리. 확인 응용 프로그램의 `index.html` 홈 페이지 참조 플러그인의 자바 인터페이스의 이름을 같은 소스 디렉토리에 마치:
+
+        <script src="myplugin.js"></script>
+    
+
+IOS 종속성 로드 제대로 여부를 테스트 하려면 다음 명령을 실행:
+
+        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+    
+
+에 대 한 내용은 `plugman` 옵션, 플러그인 관리를 사용 하 여 Plugman를 참조 하십시오. 실제로 플러그인을 *디버깅* 하는 방법에 대 한 정보를이 페이지의 맨 아래에 나열 된 각 플랫폼의 기본 인터페이스 참조.
+
+## 자바 스크립트 인터페이스
+
+자바 스크립트 플러그인의 아마도 가장 중요 한 부분 만드는 전면 인터페이스를 제공 합니다. 그러나 당신이 좋아하는, 하지만 호출 해야 플러그인의 자바 스크립트 구조 수 있습니다 `cordova.exec` 다음 구문을 사용 하 여 네이티브 플랫폼 통신할 수:
+
+        cordova.exec(function(winParam) {},
+                     function(error) {},
+                     "service",
+                     "action",
+                     ["firstArgument", "secondArgument", 42, false]);
+    
+
+여기 일 하는 방법은 각 매개 변수:
+
+*   `function(winParam) {}`: 성공 콜백 함수입니다. 가정 당신의 `exec` 호출이 성공적으로 완료 되 면,이 함수에 전달 된 매개 변수 함께 실행 합니다.
+
+*   `function(error) {}`: 오류 콜백 함수입니다. 작업이 성공적으로 완료 되지 않은 경우이 함수는 선택적 오류 매개 변수와 함께 실행 합니다.
+
+*   `"service"`: 네이티브 쪽에 전화 서비스 이름입니다. 이는 더 많은 정보는 아래에 나열 된 기본 가이드에서 사용할 수 있는 기본 클래스에 해당 합니다.
+
+*   `"action"`: 네이티브 측에 전화를 작업 이름입니다. 이 일반적으로 기본 클래스 메서드에 해당합니다. 아래에 나열 된 기본 가이드를 참조 하십시오.
+
+*   `[/* arguments */]`: 네이티브 환경에 전달할 인수 배열입니다.
+
+## 샘플 자바 스크립트
+
+이 예제에서는 플러그인의 자바 인터페이스를 구현 하는 방법을 보여 줍니다.
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -54,42 +112,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         };
     
 
-이에 하자 다이빙. 플러그인에 붙어서 `window` , 구체적으로 `echo` 기능. 플러그인 사용자가 다음 다음과 같이 사용할:
+이 예제에서 플러그인 붙어서 하는 `window` 개체는 `echo` 기능, 플러그인 사용자 다음과 같이 부를 것 이다:
 
         window.echo("echome", function(echoValue) {
             alert(echoValue == "echome"); // should alert true.
         });
     
 
-먼저 보자 한 마지막 세 인수는 `exec` 기능. 전화 것입니다 우리는 `Echo` "서비스" 요청는 `echo` "액션", 그리고 인수 echo 문자열이 포함 된 배열을 전달로 첫 번째 매개 변수는 `window.echo` 기능.
+보고에 대 한 마지막 세 인수는 `cordova.exec` 기능. 첫 번째 호출에서 `Echo` *서비스*, 클래스 이름. 두 번째 요청은 `echo` *작업*, 그 클래스 내 메서드. 세 번째는 인수는 에코 문자열이 포함 된 배열에서 `window.echo` 함수의 첫 번째 매개 변수.
 
-에 전달 되는 성공 콜백 `exec` 단순히 참조를 작동 하는 `window.echo` 걸립니다. 우리가 조금 더 오류 콜백: 네이티브 쪽 오류 콜백 떨어져 발생 하는 경우 우리가 단순히 성공 콜백을 호출 하 고 그것으로 "default" 문자열을 전달 합니다.
+에 전달 되는 성공 콜백 `exec` 콜백 함수에 대 한 참조 단순히 `window.echo` 걸립니다. 네이티브 플랫폼 오류 콜백 발생 하는 경우 그것은 단순히 성공 콜백을 호출 하 고 기본 문자열에 전달.
 
-## 플러그인 명세
+## 네이티브 인터페이스
 
-코르 도우 바는 플러그인 사양 안 드 로이드, iOS, 블랙베리 10 및 Windows Phone 플랫폼 플러그인의 자동된 설치를 사용 하려면 사용할 수 있습니다. 특정 방식으로 플러그인을 구성 하 고 추가 `plugin.xml` 매니페스트 파일, 명령줄 도구를 통해 귀하의 플러그인을 설치 하는 사용자를 활성화할 수 있습니다.
-
-*   플러그인 명세
-
-## 네이티브
-
-일단 귀하의 플러그인에 대 한 자바 스크립트를 정의 적어도 하나의 네이티브 구현을 보완 해야 합니다. 이렇게 각 플랫폼에 대 한 세부 정보는 다음과 같습니다. 이 가이드는 위에서 설명한 간단한 에코 플러그인 예제에 건설을 계속.
+일단 귀하의 플러그인에 대 한 자바 스크립트를 정의 적어도 하나의 네이티브 구현을 보완 해야 합니다. 각 플랫폼에 대 한 세부 정보는 아래와 위의 간단한 에코 플러그인 예제를 바탕으로 각:
 
 *   안 드 로이드 플러그인
+*   iOS 플러그인
 *   블랙베리 플러그인
 *   블랙베리 10 플러그인
-*   iOS 플러그인
 *   Windows Phone 플러그인
 
-Tizen 플랫폼은 현재 플러그인을 지원 하지 않습니다.
+Tizen 플랫폼 플러그인을 지원 하지 않습니다.
 
 ## 게시 플러그인
 
-일단 귀하의 플러그인을 개발 하려는 그것을 간행 하 고 지역 사회와 공유. 당신은 코르도바 레지스트리 ( [npmjs][1]기준)에 귀하의 플러그인을 게시할 수 있습니다 또는 다른 npmjs 레지스트리를 기반으로 합니다. 사용자가 plugman 또는 코르도바 cli를 사용 하 여 자동으로 설치할 수 있을 것입니다.
+귀하의 플러그인을 개발 하는 일단 당신이 게시 하 고 커뮤니티와 함께 그것을 공유 할 수 있습니다. 코르 도우 바 레지스트리를 귀하의 플러그인을 게시할 수 있습니다 (기준 [ `npmjs` ][3]) 또는 다른 `npmjs` -레지스트리를 기반으로. 다른 개발자가 사용 하 여 자동으로 설치할 수 있습니다 `plugman` 또는 코르도바 CLI. (대 한 자세한 내용은 각 개발 경로, 플러그인 관리 하는 명령줄 인터페이스를 사용 하 여 Plugman를 참조.)
 
- [1]: https://github.com/isaacs/npmjs.org
+ [3]: https://github.com/isaacs/npmjs.org
 
-플러그인을 게시 하려면 plugman 도구를 사용 하 여 다음 단계를 통해 이동 해야 합니다.
+사용 해야 하는 플러그인을 게시 하는 `plugman` 도구와 다음 단계를 통해 이동:
 
     $ plugman adduser # that is if you don't have an account yet
     $ plugman publish /path/to/your/plugin
@@ -97,4 +149,4 @@ Tizen 플랫폼은 현재 플러그인을 지원 하지 않습니다.
 
 그 거 야!
 
-다른 레지스트리 기반 명령을 사용할 수 있습니다 및 `plugman --help` 어떤 명령을 사용할 수 있습니다 그리고 그들을 사용 하는 방법의 목록을 줄 것 이다.
+실행 `plugman --help` 다른 사용할 수 있는 레지스트리 기반 명령 목록을 보여 줍니다.

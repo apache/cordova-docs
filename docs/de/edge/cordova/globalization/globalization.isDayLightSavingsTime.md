@@ -32,7 +32,7 @@ Wenn gibt es einen Lesefehler das Datum der `errorCallback` führt. Erwarteten F
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

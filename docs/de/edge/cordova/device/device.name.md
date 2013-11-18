@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+**Warnung**: `device.name` ist ab Version 2.3.0 veraltet. Verwendung `device.model` statt.
 
 Modellname des Geräts zu erhalten.
 
@@ -30,7 +30,7 @@ Modellname des Geräts zu erhalten.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8

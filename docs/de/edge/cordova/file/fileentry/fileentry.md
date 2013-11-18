@@ -30,7 +30,7 @@ Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Sys
 
 *   **FullPath**: der vollständige absolute Pfad von der Wurzel an der `FileEntry` . *(DOM-String und enthält)*
 
-**Hinweis:** Das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
+**Hinweis**: das folgende Attribut wird durch die W3C-Spezifikation definiert, aber wird *nicht* unterstützt:
 
 *   **Dateisystem**: das Dateisystem, auf dem der `FileEntry` befindet. *(FileSystem)*
 
@@ -57,7 +57,7 @@ Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Sys
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -66,7 +66,7 @@ Eine Datei in einem Dateisystem darstellt, wie in der [W3C-Verzeichnisse und Sys
 
 Suchen Sie Metadaten zu einer Datei.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `Metadata` Objekt. *(Funktion)*
 
@@ -87,9 +87,9 @@ Metadaten in einer Datei.
 
 **Derzeit funktioniert nur auf iOS.**
 
-*   Dadurch wird die erweiterten Attribute einer Datei festgelegt.
+*   Dadurch wird die erweiterten Attribute einer Datei.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der ausgeführt wird, wenn die Metadaten festgelegt ist. *(Funktion)*
 
@@ -159,7 +159,7 @@ Verschieben Sie eine Datei an einen anderen Speicherort im Dateisystem. Ein Fehl
 
 Darüber hinaus versucht das Verschieben einer Datei auf eine vorhandene Datei löschen und die Datei zu ersetzen.
 
-**Parameter:**
+**Parameter**:
 
 *   **Eltern**: das übergeordnete Verzeichnis, in das die Datei verschoben. *(DirectoryEntry)*
 
@@ -195,7 +195,7 @@ Kopieren Sie eine Datei an einen neuen Speicherort im Dateisystem. Ein Fehler au
 
 *   Kopieren Sie eine Datei in übergeordneten, wenn ein anderen von seinen aktuellen Namen nicht angegeben ist.
 
-**Parameter:**
+**Parameter**:
 
 *   **Eltern**: das übergeordnete Verzeichnis, in das die Datei kopiert. *(DirectoryEntry)*
 
@@ -240,7 +240,7 @@ Gibt einen URL, die verwendet werden kann, um die Datei zu suchen.
 
 Löscht eine Datei.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der ausgeführt wird, nachdem die Datei gelöscht wurde. Ohne Parameter aufgerufen. *(Funktion)*
 
@@ -264,7 +264,7 @@ Löscht eine Datei.
 
 Suchen Sie den übergeordneten `DirectoryEntry` mit der Datei.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der die Datei übergeordnete übergeben wird `DirectoryEntry` . *(Funktion)*
 
@@ -288,7 +288,7 @@ Suchen Sie den übergeordneten `DirectoryEntry` mit der Datei.
 
 Erstellen einer `FileWriter` vom dargestellten Datei zugeordnete Objekt der`FileEntry`.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `FileWriter` Objekt. *(Funktion)*
 
@@ -312,7 +312,7 @@ Erstellen einer `FileWriter` vom dargestellten Datei zugeordnete Objekt der`File
 
 Zurück, ein `File` -Objekt, das den aktuellen Zustand der Datei darstellt, dass dies `FileEntry` darstellt.
 
-**Parameter:**
+**Parameter**:
 
 *   **SuccessCallback**: ein Rückruf, der übergeben wird ein `File` Objekt. *(Funktion)*
 

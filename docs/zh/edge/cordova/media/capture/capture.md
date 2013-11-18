@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > 提供對設備的音訊、 圖像和視頻捕獲功能的訪問。
 
-**重要的隱私注：**收集和使用的圖像、 視頻或音訊裝置的攝像頭或麥克風從提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論應用程式如何使用這種感應器和記錄的資料是否與任何其他方共用。 另外，如果攝像機或麥克風的應用程式的使用在使用者介面中不是明顯的你應該在您的應用程式訪問的相機或麥克風 （如果設備作業系統不會這樣做已經） 之前提供只是在時間的通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 請注意有些應用程式市場可能需要您的應用程式提供只是時間的通知，並從訪問攝像機或麥克風之前使用者獲得的許可權。 有關詳細資訊，請參閱隱私指南。
+**警告**： 收集和使用的圖像、 視頻或音訊裝置的攝像頭或麥克風從提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論應用程式如何使用這種感應器和記錄的資料是否與任何其他方共用。 此外，如果攝像機或麥克風的應用程式的使用在使用者介面中不是明顯的你應該之前應用程式訪問的相機或麥克風 （如果設備作業系統不會這樣做已經) 提供只是在時間的通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 請注意有些應用程式市場可能需要您的應用程式提供只是時間的通知，並從訪問攝像機或麥克風之前使用者獲得的許可權。 有關詳細資訊，請參閱隱私指南。
 
 ## 物件
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 範圍
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+`capture`物件分配給 `navigator.device` 物件，並因此具有全域範圍。
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -66,7 +66,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -77,7 +77,8 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
@@ -85,7 +86,18 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 *   Android 系統
     
-        (in app/res/xml/plugins.xml) < 功能名稱 ="捕獲">< 參數名稱 ="android 包"value="org.apache.cordova.Capture"/ >< / 功能 > (在 app/AndroidManifest.xml) < 使用許可權 android:name="android.permission.RECORD_AUDIO"/ >< 使用許可權 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/ >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   黑莓手機 WebWorks
@@ -93,7 +105,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         (in www/plugins.xml) < 功能名稱 ="捕獲">< 參數名稱 ="黑莓手機-包"value="org.apache.cordova.capture.MediaCapture"/ >< / 功能 > (在 www/config.xml) < 功能 id="blackberry.system"所需 ="true"版本 ="1.0.0.0"/ >< 功能 id="blackberry.io.file"所需 ="true"版本 ="1.0.0.0"/ >
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         < 功能名稱 ="捕獲">< 參數名稱 ="ios 包"值 ="CDVCapture"/ >< / 功能 >
         
@@ -109,4 +121,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

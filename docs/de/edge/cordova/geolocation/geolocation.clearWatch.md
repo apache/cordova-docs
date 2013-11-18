@@ -32,7 +32,7 @@ Die `geolocation.clearWatch` stoppt Veränderungen an dem Gerät Ort beobachten,
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8

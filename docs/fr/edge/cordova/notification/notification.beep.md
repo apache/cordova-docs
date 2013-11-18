@@ -21,15 +21,16 @@ Le dispositif joue un bip sonore.
     navigator.notification.beep(times);
     
 
-*   **temps**: le nombre de fois de répéter le signal sonore. *(Nombre)*
+*   **temps**: le nombre de répétitions du signal sonore. *(Nombre)*
 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
-*   Paciarelli
+*   Tizen
 *   Windows Phone 7 et 8
+*   Windows 8
 
 ## Petit exemple
 
@@ -89,16 +90,16 @@ Le dispositif joue un bip sonore.
     </html>
     
 
-## Bizarreries Android
+## Spécificités Android
 
-*   Android joue la **sonnerie de Notification** spécifié sous le panneau des **réglages/son et affichage** de valeur par défaut.
+*   Android joue la **sonnerie de Notification** par défaut spécifiée sous le panneau des **réglages/son et affichage**.
 
-## Windows Phone 7 et 8 Quirks
+## Spécificités Windows Phone 7 et 8
 
-*   S'appuie sur un fichier générique bip de la distribution de Cordova.
+*   S'appuie sur un fichier générique bip de Cordova.
 
-## Bizarreries de paciarelli
+## Spécificités Tizen
 
-*   Paciarelli implémente les bips en lisant un fichier audio via les médias API.
+*   Tizen implémente les bips en lisant un fichier audio via les médias API.
 
-*   Le fichier sonore doit être court, doit se trouver dans un `sounds` sous-répertoire du répertoire racine de l'application et doit être nommé`beep.wav`.
+*   Le fichier sonore doit être court, doit se trouver dans un sous-répertoire `sounds` du répertoire racine de l'application et doit être nommé `beep.wav`.

@@ -36,7 +36,7 @@ La mayoría de las implementaciones de Cordova utilizan un cuadro de diálogo na
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8
@@ -44,7 +44,7 @@ La mayoría de las implementaciones de Cordova utilizan un cuadro de diálogo na
 
 ## Ejemplo rápido
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something

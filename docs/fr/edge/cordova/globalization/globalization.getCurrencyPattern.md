@@ -16,63 +16,65 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getCurrencyPattern
 
-Retourne une chaîne de modèles pour formater et analyser les valeurs de monnaie selon les préférences de l'utilisateur et du code de devise ISO 4217 du client.
+Retourne une chaîne de caractères modèle, utile pour formater et parser des devises, en tenant compte des réglages du client et du code ISO 4217 associé.
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
     
 
 ## Description
 
-Retourne le modèle de la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit contenir les propriétés suivantes :
+Transmet le modèle demandé comme paramètre de la fonction `successCallback` sous la forme d'un objet `properties`. Cet objet contient normalement les propriétés suivantes :
 
-*   **modèle**: le modèle de la monnaie de formater et d'analyser les valeurs de devise. Les patrons de suivent la norme technique Unicode #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **pattern** : le modèle permettant de formater et parser des valeurs monétaires. Les modèles suivent [Unicode Technical Standard #35][1]. *(String)*
 
-*   **code**: code de devise de l'ISO 4217 pour le modèle. *(String)*
+*   **code** : le code ISO 4217 de la devise liée au modèle. *(String)*
 
-*   **fraction**: le nombre de chiffres fractionnaires à utiliser lors de l'analyse et de formatage de devises. *(Nombre)*
+*   **fraction** : le nombre de chiffres composant la partie décimale à utiliser lors de l'analyse et du formatage de la devise. *(Number)*
 
-*   **arrondissement**: l'arrondi incrémenter pour utiliser lors de l'analyse et de mise en forme. *(Nombre)*
+*   **rounding** : la valeur de l'incrément d'arrondi à utiliser pour l'analyse et le formatage. *(Number)*
 
-*   **décimal**: le symbole décimal à utiliser pour l'analyse et de mise en forme. *(String)*
+*   **decimal** : le symbole séparant la partie entière de la partie décimale à utiliser pour l'analyse et la mise en forme. *(String)*
 
-*   **regroupement**: le symbole de groupe à utiliser pour l'analyse et de mise en forme. *(String)*
+*   **grouping** : le symbole séparant les groupes de chiffres à utiliser pour l'analyse et la mise en forme. *(String)*
 
-Les entrants `currencyCode` paramètre doit être un `String` de l'un des codes de devise ISO 4217, par exemple « USD ».
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
+Le paramètre `currencyCode` doit être de type `String` et correspondre à l'un des codes de devise ISO 4217, "USD" par exemple.
 
-## Plates-formes prises en charge
+Si une erreur survient lors de l'obtention du modèle demandé, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est `GlobalizationError.FORMATTING_ERROR`.
+
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale et la devise sélectionnée est Dollars des États-Unis, cet exemple pour afficher une fenêtre popup avec un texte semblable aux résultats qui suivent :
+Si la langue du navigateur est réglée sur `fr_FR` et que la devise sélectionnée est le Dollar américain, cet exemple affiche une fenêtre popup contenant des résultats semblables à ceux qui suivent :
 
     navigator.globalization.getCurrencyPattern(
         'USD',
         function (pattern) {
-            alert('pattern: '  + pattern.pattern  + '\n' +
-                  'code: '     + pattern.code     + '\n' +
-                  'fraction: ' + pattern.fraction + '\n' +
-                  'rounding: ' + pattern.rounding + '\n' +
-                  'decimal: '  + pattern.decimal  + '\n' +
-                  'grouping: ' + pattern.grouping);
+            alert('pattern : '  + pattern.pattern  + '\n' +
+                  'code : '     + pattern.code     + '\n' +
+                  'fraction : ' + pattern.fraction + '\n' +
+                  'rounding : ' + pattern.rounding + '\n' +
+                  'decimal : '  + pattern.decimal  + '\n' +
+                  'grouping : ' + pattern.grouping);
         },
-        function () { alert('Error getting pattern\n'); }
+        function () { alert('Erreur lors de l\'obtention du modèle\n'); }
     );
     
 
-Résultat escompté :
+Résultats escomptés :
 
-    pattern: $#,##0.##;($#,##0.##)
-    code: USD
-    fraction: 2
-    rounding: 0
-    decimal: .
-    grouping: ,
+    pattern : #,##0.00 $
+    code : USD
+    fraction : 2
+    rounding : 0
+    decimal : ,
+    grouping : 
     
 
 ## Exemple complet
@@ -80,26 +82,26 @@ Résultat escompté :
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getCurrencyPattern Example</title>
+        <title>Exemple getCurrencyPattern</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkPattern() {
           navigator.globalization.getCurrencyPattern(
             'USD',
-            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
-                                      'code: '     + pattern.code     + '\n' +
-                                      'fraction: ' + pattern.fraction + '\n' +
-                                      'rounding: ' + pattern.rounding + '\n' +
-                                      'decimal: '  + pattern.decimal  + '\n' +
-                                      'grouping: ' + pattern.grouping);},
-            function () {alert('Error getting pattern\n');}
+            function (pattern) {alert('pattern : '  + pattern.pattern  + '\n' +
+                                      'code : '     + pattern.code     + '\n' +
+                                      'fraction : ' + pattern.fraction + '\n' +
+                                      'rounding : ' + pattern.rounding + '\n' +
+                                      'decimal : '  + pattern.decimal  + '\n' +
+                                      'grouping : ' + pattern.grouping);},
+            function () {alert('Erreur lors de l\'obtention du modèle\n');}
           );
         }
     
         </script>
       </head>
       <body>
-        <button onclick="checkPattern()">Click for pattern</button>
+        <button onclick="checkPattern()">Cliquer ici pour obtenir le mod&egrave;le</button>
       </body>
     </html>

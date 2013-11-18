@@ -52,11 +52,8 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
     
         (in app/res/xml/config.xml)
         <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+            <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
         </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   BlackBerry WebWorks
@@ -72,7 +69,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Battery">
             <param name="ios-package" value="CDVBattery" />
@@ -88,4 +85,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

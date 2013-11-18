@@ -25,13 +25,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 패턴을 반환 합니다 `successCallback` . 매개 변수로 전달 된 개체에는 다음 속성이 포함 되어 있습니다.
 
-*   **패턴**: 포맷 하 고 날짜를 구문 분석할 날짜 및 시간 패턴. 패턴에 따라 유니코드 기술 표준 #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(문자열)*
+*   **패턴**: 포맷 하 고 날짜를 구문 분석할 날짜 및 시간 패턴. 패턴에 따라 [유니코드 기술 표준 #35][1]. *(문자열)*
 
 *   **시간대**: 클라이언트에 표준 시간대의 약식된 이름. *(문자열)*
 
 *   **utc_offset**: 클라이언트의 시간대와 세계시 간의 초에서 현재 차이. *(수)*
 
 *   **dst_offset**: 클라이언트의 비 일광 절약 간격 (초)에 현재 일광 절약 시간제 오프셋의 시간대와 클라이언트의 일광 절약의 시간대. *(수)*
+
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
 패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로 합니다. 오류의 예상 된 코드는`GlobalizationError.PATTERN\_ERROR`.
 
@@ -46,7 +48,7 @@ time`.
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

@@ -125,7 +125,7 @@ Une fois que l'émulateur est installé et en cours d'exécution, exécutez une 
 
 Si vous êtes invité si un périphérique est connecté à votre ordinateur, répondez non.
 
-**Remarque :** Sur BlackBerry OS 5, l'application est installée dans le `Downloads` répertoire.
+**NOTE**: sur BlackBerry OS 5, l'application est installée dans le `Downloads` répertoire.
 
 ## Déployer sur le périphérique
 
@@ -144,7 +144,7 @@ Puis du répertoire du projet, exécutez une des commandes que vous le feriez po
 
 Si vous êtes invité si un périphérique est connecté à votre ordinateur, répondre Oui.
 
-**Remarque :** Sur BlackBerry OS 5, l'application est installée dans le `Downloads` répertoire.
+**NOTE**: sur BlackBerry OS 5, l'application est installée dans le `Downloads` répertoire.
 
 ## Plus d'informations
 

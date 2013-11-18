@@ -52,11 +52,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+            <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
         </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   ブラックベリー WebWorks
@@ -72,7 +69,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="Battery">
             <param name="ios-package" value="CDVBattery" />
@@ -88,4 +85,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

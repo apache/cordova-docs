@@ -45,7 +45,10 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
     
         (in app/res/xml/config.xml)
         <feature name="Notification">
-            <param name="android-package" value="org.apache.cordova.Notification" />
+            <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        </feature>
+        <feature name="Vibration">
+            <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -63,11 +66,11 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         <feature id="blackberry.ui.dialog" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

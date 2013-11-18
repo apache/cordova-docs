@@ -25,7 +25,7 @@ Restituisce una stringa per formattare e analizzare i valori di valuta secondo l
 
 Restituisce il modello per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto deve contenere le seguenti proprietà:
 
-*   **modello**: il modello valuta per formattare e analizzare i valori di valuta. I modelli seguono Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **modello**: il modello valuta per formattare e analizzare i valori di valuta. I modelli seguono [Unicode Technical Standard #35][1]. *(String)*
 
 *   **codice**: codice per il modello The ISO 4217. *(String)*
 
@@ -37,6 +37,8 @@ Restituisce il modello per la `successCallback` con un `properties` oggetto come
 
 *   **raggruppamenti**: il raggruppamento simbolo da utilizzare per l'analisi e la formattazione. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 L'ingresso `currencyCode` parametro dovrebbe essere un `String` di uno dei codici valuta ISO 4217, ad esempio 'USD'.
 
 Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguit
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Esempio rapido

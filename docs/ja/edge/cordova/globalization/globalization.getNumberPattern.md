@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 パターンを返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。そのオブジェクトには、次のプロパティが含まれています。
 
-*   **パターン**: 番号のパターンを書式設定および解析の数字。 パターンは、Unicode 技術標準 #35 に従ってください。 <http://unicode.org/reports/tr35/tr35-4.html>。 *(文字列)*
+*   **パターン**: 番号のパターンを書式設定および解析の数字。 パターンは、 [Unicode 技術標準 #35][1]に従ってください。 *(文字列)*
 
 *   **記号**: 書式設定と解析、パーセントや通貨記号などのときに使用するシンボル。*(文字列)*
 
@@ -41,6 +41,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **グループ**: 解析および書式設定を使用する区切り記号。*(文字列)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PATTERN\_ERROR`.
 
 `options`パラメーターはオプションであり、既定値は。
@@ -53,7 +55,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

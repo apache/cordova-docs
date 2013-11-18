@@ -41,7 +41,7 @@ Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottene
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -50,7 +50,7 @@ Il `File` oggetto contiene gli attributi di un singolo file. È possibile ottene
 
 Restituire un nuovo `File` oggetto, per cui `FileReader` restituisce solo la parte specificata del file. Negativi i valori per `start` o `end` sono misurati dalla fine del file. Gli indici sono posizionati rispetto alla sezione corrente. (Vedere l'esempio completo sotto.)
 
-**Parametri:**
+**Parametri**:
 
 *   **iniziare**: l'indice del primo byte da leggere, inclusiva.
 

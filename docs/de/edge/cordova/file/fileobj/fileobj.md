@@ -41,7 +41,7 @@ Das `File` -Objekt enthält Attribute einer einzelnen Datei. Erhalten Sie eine I
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -50,7 +50,7 @@ Das `File` -Objekt enthält Attribute einer einzelnen Datei. Erhalten Sie eine I
 
 Zurück ein neues `File` Objekt, für die `FileReader` gibt nur den angegebenen Teil der Datei. Negative Werte für `start` oder `end` sind, gemessen vom Ende der Datei. Indizes sind relativ das aktuelle Segment positioniert. (Siehe das vollständige Beispiel weiter unten.)
 
-**Parameter:**
+**Parameter**:
 
 *   **Start**: der Index des ersten Bytes zu lesen, inklusive.
 

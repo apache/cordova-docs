@@ -30,7 +30,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Paciarelli
@@ -85,8 +85,8 @@ Lors du démarrage initial, le déclenchement du premier évènement `online` (s
 
 ## Notes au sujet de Windows Phone 7
 
-Lorsque l'application est exécutée dans l'émulateur, la valeur de la propriété `connection.status` est toujours inconnue, ainsi cet évènement n'est *pas* déclenché.
+Lors de l'exécution dans l'émulateur, le `connection.status` est toujours inconnu, ainsi cet événement ne fait *pas* de feu.
 
 ## Notes au sujet de Windows Phone 8
 
-L'émulateur signale le type de connexion comme `Cellular`, type qui ne change jamais, ainsi l'évènement n'est *pas* déclenché.
+L'émulateur signale le type de connexion comme `Cellular` , qui ne change pas, aussi des événements ne fait *pas* de feu.

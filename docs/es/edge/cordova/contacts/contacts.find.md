@@ -42,7 +42,7 @@ La cadena de **contactFindOptions.filter** puede ser usada como un filtro de bú
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8

@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # GlobalizationError
 
-Un objet qui représente une erreur de l'API de la mondialisation.
+Un objet représentant une erreur de l'API Globalization.
 
 ## Propriétés
 
-*   **code**: Un des codes suivants qui représente le type d'erreur *(Nombre)* 
-    *   GlobalizationError.UNKNOWN _ erreur: 0
-    *   GlobalizationError.FORMATTING _ erreur: 1
-    *   GlobalizationError.PARSING _ erreur: 2
-    *   GlobalizationError.PATTERN _ erreur: 3
-*   **message**: un message texte qui comprend l'explication de l'erreur et/ou de détails *(String)*
+*   **code** : un des codes suivants décrivant le type d'erreur rencontrée *(Number)* 
+    *   GlobalizationError.UNKNOWN_ERROR : 0
+    *   GlobalizationError.FORMATTING_ERROR : 1
+    *   GlobalizationError.PARSING_ERROR : 2
+    *   GlobalizationError.PATTERN_ERROR : 3
+*   **message** : un message texte comprenant l'explication de l'erreur et/ou des détails à son sujet. *(String)*
 
 ## Description
 
-Cet objet est créé et peuplé de Cordova et retourné à un rappel en cas d'erreur.
+Cet objet est créé et peuplé par Cordova, puis transmis à une fonction callback en cas d'erreur.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
-## Petit exemple
+## Exemple court
 
-Lorsque le rappel d'erreur suivant s'exécute, il affiche une fenêtre popup avec le texte semblable à `code: 3` et`message:`
+Lorsque la fonction callback d'erreur suivante est exécutée, une fenêtre popup contenant par exemple `code : 3` et `message :` est affichée.
 
     function errorCallback(error) {
-        alert('code: ' + error.code + '\n' +
-              'message: ' + error.message + '\n');
+        alert('code : ' + error.code + '\n' +
+              'message : ' + error.message + '\n');
     };
     
 
@@ -52,24 +52,24 @@ Lorsque le rappel d'erreur suivant s'exécute, il affiche une fenêtre popup ave
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>GlobalizationError Example</title>
+        <title>Exemple GlobalizationError</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function successCallback(date) {
-          alert('month:' + date.month +
-                ' day:' + date.day +
-                ' year:' + date.year + '\n');
+          alert('month : ' + date.month +
+                ' day : ' + date.day +
+                ' year : ' + date.year + '\n');
         }
     
         function errorCallback(error) {
-          alert('code: ' + error.code + '\n' +
-                'message: ' + error.message + '\n');
+          alert('code : ' + error.code + '\n' +
+                'message : ' + error.message + '\n');
         };
     
         function checkError() {
           navigator.globalization.stringToDate(
-            'notADate',
+            'pasUneDate',
             successCallback,
             errorCallback,
             {selector:'foobar'}
@@ -79,6 +79,6 @@ Lorsque le rappel d'erreur suivant s'exécute, il affiche une fenêtre popup ave
         </script>
       </head>
       <body>
-        <button onclick="checkError()">Click for error</button>
+        <button onclick="checkError()">Cliquer ici pour d&eacute;clencher l'erreur</button>
       </body>
     </html>

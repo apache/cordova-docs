@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > `contacts`物件提供對設備的連絡人資料庫的訪問。
 
-**重要的隱私注：**連絡人資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論如何應用程式使用的連絡人資料和它是否被共用與任何其他方。 聯繫資訊被視為敏感，因為它揭示了人與人通信的人們。 因此，除了您的應用程式的隱私權原則，您應強烈考慮提供在您的應用程式訪問或使用連絡人資料 （如果設備作業系統不會這樣做已經） 之前的時間只是通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 請注意有些應用程式市場可能需要您的應用程式提供只是時間的通知，並從訪問連絡人資料之前使用者獲得的許可權。 周圍的連絡人資料將有助於避免使用者混淆使用感知的和濫用的連絡人資料的清晰和易於理解的使用者體驗。 有關詳細資訊，請參閱隱私指南。
+**警告**： 連絡人資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論如何應用程式使用的連絡人資料和它是否被共用與任何其他方。 聯繫資訊被視為敏感，因為它揭示了人與人通信的人們。 因此，除了應用程式的隱私權原則，您應強烈考慮提供-時間通知之前應用程式訪問或使用的連絡人資料，如果設備作業系統不會這樣做已經。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 請注意一些應用程式市場可能需要應用程式來提供只是在時間的通知，並獲得相應許可權的使用者在訪問連絡人資料之前。 周圍的連絡人資料可説明避免使用者混淆使用感知的和濫用的連絡人資料的清晰和易於理解的使用者體驗。 有關詳細資訊，請參閱隱私指南。
 
 ## 方法
 
@@ -58,13 +58,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.ContactManager" />
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         
 
 *   黑莓手機 WebWorks
@@ -81,16 +81,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />
         </feature>
         
 
-*   Windows Phone
+*   （在 Windows Phone`Properties/WPAppManifest.xml`)
     
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>
@@ -100,4 +99,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

@@ -25,7 +25,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Présentation
       </h2>
       
-      <span>Commencez ici si vous êtes nouveau à Cordova.</span>
+      <span>Commencez ici si vous êtes nouveau avec Cordova.</span>
+    </li>
+    <li>
+      <h2>
+        Plateforme de Support
+      </h2>
+      
+      <span>Tableau de compatibilité pour tous les principales caractéristiques.</span>
     </li>
     <li>
       <h2>
@@ -123,7 +130,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Boussole
       </h2>
       
-      <span>Dans quelle direction pointe le mobile?</span>
+      <span>Obtenir la direction dans laquelle pointe le mobile.</span>
     </li>
     <li>
       <h2>
@@ -193,7 +200,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Notification
       </h2>
       
-      <span>Notifications de visuel, sonore et tactile.</span>
+      <span>Notifications visuel, sonore et tactile.</span>
     </li>
     <li>
       <h2>
@@ -207,7 +214,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Stockage
       </h2>
       
-      <span>Crochet dans les dispositifs des options de stockage native.</span>
+      <span>Interaction dans les dispositifs des options de stockage native.</span>
     </li>
   </ul>
 </div>

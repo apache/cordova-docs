@@ -16,70 +16,77 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getNumberPattern
 
-Retourne une chaîne de modèles pour formater et d'analyser les chiffres selon les préférences de l'utilisateur du client.
+Retourne une chaîne de caractères modèle, utile pour formater et parser des nombres, en tenant compte des préférences utilisateur du client.
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne le modèle de la `successCallback` avec un `properties` objet comme paramètre. Cet objet contient les propriétés suivantes :
+Transmet le modèle demandé en paramètre à la fonction `successCallback` sous la forme d'un objet `properties`. Cet objet contient les propriétés suivantes :
 
-*   **modèle**: le modèle de numéro de formater et d'analyser les chiffres. Les modèles suivent Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **pattern** : le modèle permettant de formater et parser des nombres. Les modèles suivent [Unicode Technical Standard #35][1]. *(String)*
 
-*   **symbole**: le symbole à utiliser lors de la mise en forme et l'analyse, comme un symbole de pourcentage ou de la monnaie. *(String)*
+*   **symbol** : le symbole à utiliser lors de la mise en forme et l'analyse, par exemple le symbole de pourcentage ou un symbole monétaire. *(String)*
 
-*   **fraction**: le nombre de chiffres fractionnaires à utiliser lors de l'analyse et de mise en forme des nombres. *(Nombre)*
+*   **fraction** : le nombre de chiffres composant la partie décimale à utiliser lors de l'analyse et du formatage de nombres. *(Number)*
 
-*   **arrondissement**: l'arrondi incrémenter pour utiliser lors de l'analyse et de mise en forme. *(Nombre)*
+*   **rounding** : la valeur d'incrément d'arrondi à utiliser lors de l'analyse et du formatage. *(Number)*
 
-*   **positif**: le symbole à utiliser pour les nombres positifs lors de l'analyse et de mise en forme. *(String)*
+*   **positive** : le symbole à utiliser lors de l'analyse et du formatage des nombres positifs. *(String)*
 
-*   **négatif**: le symbole à utiliser pour les nombres négatifs lors de l'analyse et de mise en forme. *(String)*
+*   **negative** : le symbole à utiliser lors de l'analyse et du formatage des nombres négatifs. *(String)*
 
-*   **décimal**: le symbole décimal à utiliser pour l'analyse et de mise en forme. *(String)*
+*   **decimal** : le symbole séparant la partie entière de la partie décimale à utiliser pour l'analyse et la mise en forme. *(String)*
 
-*   **regroupement**: le symbole de groupe à utiliser pour l'analyse et de mise en forme. *(String)*
+*   **grouping** : le symbole séparant les groupes de chiffres à utiliser pour l'analyse et la mise en forme. *(String)*
 
-S'il y a une erreur, obtenir le modèle, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-Le `options` paramètre est facultatif, et les valeurs par défaut sont :
+Si une erreur survient lors de l'obtention du modèle demandé, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est`GlobalizationError.PATTERN_ERROR`.
 
-    {type: « decimal »}
+Le paramètre `options` est facultatif, sa valeur par défaut est :
+
+    {type:'decimal'}
     
 
-Le `options.type` peut être `decimal` , `percent` , ou`currency`.
+Les valeurs autorisées pour la propriété `options.type` sont `decimal`, `percent` et `currency`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cela doit afficher une boîte de dialogue contextuelle avec un texte semblable aux résultats qui suivent :
+Si la langue du navigateur est réglée sur `fr_FR`, cet exemple affiche une fenêtre popup contenant des résultats semblables à ceux qui suivent :
 
     navigator.globalization.getNumberPattern(
-        function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
-                                  'symbol: '   + pattern.symbol   + '\n' +
-                                  'fraction: ' + pattern.fraction + '\n' +
-                                  'rounding: ' + pattern.rounding + '\n' +
-                                  'positive: ' + pattern.positive + '\n' +
-                                  'negative: ' + pattern.negative + '\n' +
-                                  'decimal: '  + pattern.decimal  + '\n' +
-                                  'grouping: ' + pattern.grouping);},
-        function () {alert('Error getting pattern\n');},
+        function (pattern) {alert('pattern : '  + pattern.pattern  + '\n' +
+                                  'symbol : '   + pattern.symbol   + '\n' +
+                                  'fraction : ' + pattern.fraction + '\n' +
+                                  'rounding : ' + pattern.rounding + '\n' +
+                                  'positive : ' + pattern.positive + '\n' +
+                                  'negative : ' + pattern.negative + '\n' +
+                                  'decimal : '  + pattern.decimal  + '\n' +
+                                  'grouping : ' + pattern.grouping);},
+        function () {alert('Erreur lors de l\'obtention du modèle\n');},
         {type:'decimal'}
     );
     
 
 Résultats :
 
-    modèle: #, ##0. ### symbole:.
-    fraction : arrondi 0: 0 positif : négatif: - décimal:.
-    regroupement:,
+    pattern: #,##0.###
+    symbol: 
+    fraction: 0
+    rounding: 0
+    positive: +
+    negative: -
+    decimal: ,
+    grouping: 
     
 
 ## Exemple complet
@@ -87,21 +94,21 @@ Résultats :
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getNumberPattern Example</title>
+        <title>Exemple getNumberPattern</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkPattern() {
           navigator.globalization.getNumberPattern(
-            function (pattern) {alert('pattern: '  + pattern.pattern  + '\n' +
-                                      'symbol: '   + pattern.symbol   + '\n' +
-                                      'fraction: ' + pattern.fraction + '\n' +
-                                      'rounding: ' + pattern.rounding + '\n' +
-                                      'positive: ' + pattern.positive + '\n' +
-                                      'negative: ' + pattern.negative + '\n' +
-                                      'decimal: '  + pattern.decimal  + '\n' +
-                                      'grouping: ' + pattern.grouping);},
-            function () {alert('Error getting pattern\n');},
+            function (pattern) {alert('pattern : '  + pattern.pattern  + '\n' +
+                                      'symbol : '   + pattern.symbol   + '\n' +
+                                      'fraction : ' + pattern.fraction + '\n' +
+                                      'rounding : ' + pattern.rounding + '\n' +
+                                      'positive : ' + pattern.positive + '\n' +
+                                      'negative : ' + pattern.negative + '\n' +
+                                      'decimal : '  + pattern.decimal  + '\n' +
+                                      'grouping : ' + pattern.grouping);},
+            function () {alert('Erreur lors de l\'obtention du modèle\n');},
             {type:'decimal'}
           );
         }
@@ -109,13 +116,13 @@ Résultats :
         </script>
       </head>
       <body>
-        <button onclick="checkPattern()">Click for pattern</button>
+        <button onclick="checkPattern()">Cliquer ici pour obtenir le mod&egrave;le</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
-*   La `pattern` propriété n'est pas prise en charge et retuens une chaîne vide.
+*   La propriété `pattern` n'est pas prise en charge et retourne une chaîne vide.
 
-*   La `fraction` propriété n'est pas prise en charge et retourne zéro.
+*   La propriété `fraction` n'est pas prise en charge et retourne zéro.

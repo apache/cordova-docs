@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > L'objet `camera` donne accès à l'application de caméra par défaut de l'appareil.
 
-**Remarque importante sur la vie privée :** La collecte et l'utilisation des images de la caméra d'un appareil de mesure soulève des questions importantes concernant la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise l'appareil photo et si les images enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant que votre application n'accède à la caméra (si le système d'exploitation de périphérique ne le fait pas déjà). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Pour plus d'informations, consultez le Guide de la vie privée.
+**Avertissement**: collecte et utilisation des images de la caméra d'un appareil de mesure soulève des questions importantes de la vie privée. La politique de confidentialité de votre application doit examiner comment l'application utilise l'appareil photo et si les images enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps, avant que l'application accède à la caméra (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements mentionnés précédemment, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Pour plus d'informations, consultez le Guide de la vie privée.
 
 ## Méthodes
 
@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente des APIs au niveau du périphérique en tant que *plugins*. Utilisez le `plugin` de l'interface en ligne de commande, décrite dans l'Interface de ligne de commande, pour ajouter ou supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente des APIs au niveau du périphérique en tant que *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin ls
@@ -41,7 +41,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
     
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
         
         (in app/AndroidManifest)
@@ -57,13 +57,12 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
         
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-        
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans du répertoire application nommé`config.xml`)
     
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
@@ -91,4 +90,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

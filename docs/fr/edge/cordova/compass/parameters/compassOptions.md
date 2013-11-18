@@ -24,16 +24,14 @@ Un paramètre optionnel pour personnaliser la récupération de la boussole.
 
 *   **filtre** : la variation en degrés nécessaire pour initier la fonction de callback de succès watchHeading. *(Nombre)*
 
-Spécificités Android
+## Quirks Android
 
----
+*   Pas de support pour`filter`.
 
-*   `filter` n'est pas pris en charge.
+## Bizarreries de paciarelli
 
-## Spécificités Tizen
+*   Pas de support pour`filter`.
 
-*   `filter` n'est pas pris en charge.
+## Windows Phone 7 et 8 Quirks
 
-## Spécificités Windows Phone 7 et 8
-
-*   `filter` n'est pas pris en charge.
+*   Pas de support pour`filter`.

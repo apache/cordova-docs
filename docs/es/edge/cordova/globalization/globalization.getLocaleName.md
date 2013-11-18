@@ -30,7 +30,7 @@ Si hay un error al obtener la configuración regional, entonces el `errorCallbac
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

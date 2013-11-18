@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **onloadend**: вызывается при завершении запроса (либо в успех или неудача). *(Функция)*
 
-**Примечание:** Следующие недвижимость не поддерживается:
+**Примечание**: следующие недвижимость не поддерживается:
 
 *   **OnProgress**: вызывается при чтении файла, отчетности прогресс в плане `progress.loaded` / `progress.total` . *(Функция)*
 
@@ -59,14 +59,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8
 
 ## readAsDataURL
 
-**Параметры:**
+**Параметры**:
 
 *   **файл**: объект файла для чтения.
 
@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## readAsText
 
-**Параметры:**
+**Параметры**:
 
 *   **файл**: объект файла для чтения.
 
@@ -205,7 +205,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 В настоящее время поддерживается только на iOS и Android.
 
-**Параметры:**
+**Параметры**:
 
 *   **файл**: объект файла для чтения.
 
@@ -231,7 +231,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 В настоящее время поддерживается только на iOS и Android.
 
-**Параметры:**
+**Параметры**:
 
 *   **файл**: объект файла для чтения.
 

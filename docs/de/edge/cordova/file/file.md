@@ -48,11 +48,12 @@ Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden 
         $ cordova plugin rm org.apache.cordova.file
     
 
-Um die Dateiübertragung-Plugin zu verwenden, müssen Sie, die separat hinzufügen.
+Sie müssen hinzufügen der `file-transfer` Plugin separat. Die CLI fügt automatisch das `file` Plugin als Abhängigkeit, so besteht keine Notwendigkeit es separat hinzu:
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
-        [ 'org.apache.cordova.file-transfer' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.file-transfer' ]
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
@@ -60,12 +61,22 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
 *   Android
     
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+        (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
         <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -91,7 +102,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </rim:permissions>
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -101,4 +112,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

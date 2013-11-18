@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # device.name
 
-**WARNING:** `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+**警告**: `device.name` バージョン 2.3.0 は推奨されません。使用 `device.model` 代わりに。
 
 デバイスのモデル名を取得します。
 
@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 と 8

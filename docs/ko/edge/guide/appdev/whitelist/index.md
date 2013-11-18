@@ -16,187 +16,116 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 화이트 리스트 가이드
 
-## 개요
+허용 된 도메인은 액세스를 제어 하는 보안 모델 외부 도메인을 통해 당신은 응용 프로그램에서 제어 합니다. 코르도바의 기본 보안 정책에는 어떤 사이트에 액세스할 수 있습니다. 프로덕션 응용 프로그램을 이동 하기 전에 화이트 리스트를 공식화 하 고 특정 네트워크 도메인 및 하위 도메인에 대 한 액세스를 허용 해야 합니다.
 
-리소스 허용과 같은 외부 네트워크 리소스에 액세스를 제어 하는 보안 모델은 `http://google.com` . 아파치 코르도바의 기본 보안 정책은 인터넷에서 어떤 사이트에 리소스에 액세스할 수 있습니다. 프로덕션 응용 프로그램을 이동 하기 전에 그것의 허용을 검토 하 고 특정 네트워크 도메인 및 하위 도메인에 대 한 액세스를 선언 해야.
-
-## 사양
-
-도메인 허용 [W3C 위젯 액세스][1] 사양에 대 한 기초를 낳는다. 위젯 액세스 사양에는 `<access>` 요소 선언 특정 네트워크 리소스에 액세스 하는 데 사용 됩니다. 아파치 코르도바 개별 네트워크 리소스 (Url)의 허용 된 수 있도록이 개념을 확장 합니다. 미래에 아파치 코르도바 플랫폼 수단이 구현을 추상화 됩니다. 그러나, 지금은 각 플랫폼 자체 리소스 또는 도메인 허용을 구현합니다. 플랫폼 구현 간의 차이이 문서의 뒷부분에 설명 되어 있습니다.
+코르 도우 바 사양을 준수 하는 [W3C 위젯 액세스][1] 에 의존 하는 `<access>` 애플 리 케이 션의 내의 요소 `config.xml` 특정 도메인에 대 한 네트워크 액세스를 사용 하도록 파일. 설명 명령줄 인터페이스 CLI 워크플로에 의존 하는 프로젝트에 대 한이 파일은에 있는 프로젝트의 최상위 `www` 디렉터리. 그렇지 않으면 플랫폼별 개발 경로, 위치는 아래 섹션에 나열 됩니다. (각 플랫폼에 대 한 자세한 내용은 다양 한 플랫폼 가이드를 참조 하십시오.)
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-목록 항목에 대 한 일반적인 형식 "[패턴 일치][2]" 사양을 구글 크롬 패키지 애플 리 케이 션에 대 한 다음과 같습니다. 리소스 URL, 하지만 별표 지정 (*) 문자를 나타내는 "값은 여기 갈 수 있습니다" 여러 장소에서 "와일드 카드"로 사용할 수 있습니다. 구체적인 예제는 아래와 같습니다.
+다음 예제에서는 허용 된 구문을 보여 줍니다.
 
- [2]: http://developer.chrome.com/apps/match_patterns.html
+*   [Google.com][2]에 대 한 액세스:
+    
+        <access origin="http://google.com" />
+        
 
-## 구문
+*   보안 [google.com][3] 에 대 한 액세스 ( `https://` ):
+    
+        <access origin="https://google.com" />
+        
 
-[Google.com][3]에서 모든 리소스에 액세스할:
+*   하위 도메인 [maps.google.com][4]에 대 한 액세스:
+    
+        <access origin="http://maps.google.com" />
+        
 
- [3]: http://google.com
+*   하위 모든 도메인 [google.com][2], 예를 들면 [mail.google.com][5] 및 [docs.google.com][6]액세스:
+    
+        <access origin="http://*.google.com" />
+        
 
-    http://google.com/*
+*   예를 들어, [google.com][2] 및 [developer.mozilla.org][7] *모든* 도메인에 대 한 액세스:
+    
+        <access origin="*" />
+        
+    
+    이 새로 만든된 CLI 프로젝트의 기본값입니다.
+
+ [2]: http://google.com
+ [3]: https://google.com
+ [4]: http://maps.google.com
+ [5]: http://mail.google.com
+ [6]: http://docs.google.com
+ [7]: http://developer.mozilla.org
+
+## 안 드 로이드 화이트
+
+발견 되는 플랫폼 특정 허용 된 규칙`res/xml/config.xml`.
+
+**참고**: 안 드 로이드 2.3에와 도메인 허용에만 작동 하기 전에 `href` 하이퍼링크, 이미지 및 스크립트와 같은 리소스를 참조 하지. 스크립트에서 응용 프로그램에 삽입 되지 않도록 하는 조치를 취할.
+
+통해 비 허용 도메인 탐색 `href` 하이퍼링크 기본 브라우저가 아닌 응용 프로그램 내에서 열려면 페이지 원인. (아래에 언급 된 iOS의 행동에이 비교.)
+
+## iOS 수단이
+
+플랫폼의 허용 규칙 명명 된 응용 프로그램 디렉터리에서 찾을 수 있습니다 `config.xml` 파일.
+
+기원과 같은 프로토콜을 하지 않고 지정 된 `www.apache.org` 보다는 `http://www.apache.org` 의 모든 기본은 `http` , `https` , `ftp` , 및 `ftps` 계획.
+
+IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 더 유연 합니다. 예를 들어, 다음 액세스 모든 하위 도메인과 최상위 도메인 같은 `.com` 및 `.net` :
+
+        <access origin="*.google.*" />
     
 
-보안 [google.com][4] 에서 모든 리소스에 액세스 ( `https://` ):
+안 드 로이드 플랫폼 위에서 언급을 통해 비 허용 도메인 탐색 달리 `href` iOS에서 하이퍼링크 모든 열에서 페이지 방지.
 
- [4]: https://google.com
+## 블랙베리 10 화이트
 
-    https://google.com/ *
+허용 규칙에서 찾을 수 있습니다.`www/config.xml`.
+
+블랙베리 10 사용 와일드 카드의 두 가지 방법으로 다른 플랫폼에서 다릅니다.
+
+*   콘텐츠 액세스 `XMLHttpRequest` 명시적으로 선언 해야 합니다. 설정 `origin="*"` 이 경우 작동 하지 않습니다. 양자 택일로, 모든 웹 보안 비활성화 될 수 있습니다 사용 하는 `WebSecurity` 블랙베리 구성에서 설명 하는 기본 설정:
     
+        <preference name="websecurity" value="disable" />
+        
 
-특정 하위 도메인 [maps.google.com][5]에 대 한 액세스:
-
- [5]: http://maps.google.com
-
-    http://maps.google.com/*
+*   설정 하는 대신 `*.domain` , 설정 추가로 `subdomains` 속성을 `true` . 로 설정 해야 `false` 기본적으로. 다음에 액세스할 수 있습니다 예를 들어 `google.com` , `maps.google.com` , 및 `docs.google.com` :
     
-
-[Google.com][3] (예: [mail.google.com][6] 및 [docs.google.com][7])에 모든 하위 도메인에 대 한 액세스:
-
- [6]: http://mail.google.com
- [7]: http://docs.google.com
-
-    http://*.google.com/*
+        <access origin="http://google.com" subdomains="true" />
+        
     
-
-[Www.google.com][8] "/ 모바일" 경로 아래에 있는 모든 리소스에 액세스할:
-
- [8]: http://www.google.com
-
-    http://www.google.com/mobile/*
+    다음 우 스 액세스를 `google.com` :
     
-
-[Google.com][3] 프로토콜 (예: HTTP, HTTPS, FTP, 등)에 대 한 액세스:
-
-    *://google.com/*
+        <access origin="http://google.com" subdomains="false" />
+        
     
-
-인터넷에 (예를 들어, [google.com][3] [developer.mozilla.org][9]) 모든 리소스에 액세스할:
-
- [9]: http://developer.mozilla.org
-
-    *
+    지역을 포함 하 여 모든 도메인에 대 한 액세스 지정 `file://` 프로토콜:
     
-
-## 안 드 로이드
-
-### 세부 정보
-
-허용 규칙에서 찾을 수 있습니다 `res/xml/config.xml` 요소를 선언 하 고`<access origin="..." />`.
-
-안 드 로이드는 완벽 하 게 허용 된 구문을 지원합니다.
-
-### 구문
-
-[Google.com][3]에 대 한 액세스:
-
-    <access origin="http://google.com/*" />
-    
-
-## 블랙베리 10
-
-### 세부 정보
-
-허용 규칙에서 찾을 수 있습니다 `www/config.xml` 요소를 선언 하 고`<access origin="..." />`.
-
-블랙베리 10은 두 가지 방법으로 다른 플랫폼 보다 다르게 와일드 카드를 처리합니다.
-
-1) 콘텐츠 XMLHttpRequest 액세스는 명시적으로 선언 되어야 합니다. 출처 = "*"이 사용 사례에 대 한 존중 하지 것 이다. 양자 택일로, 모든 웹 보안 환경 설정을 사용 하 여 비활성화 될 수 있습니다.
-
-2) 하위 =의 대신에 사용 될 수 있습니다 "true" "*.domain"
-
-### 구문
-
-[Google.com][3]에 대 한 액세스:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-[Maps.google.com][5]에 대 한 액세스:
-
-    <access origin="http://maps.google.com" subdomains="false" />
-    
-
-[Google.com][3]에 모든 하위 도메인에 대 한 액세스:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-포함 하 여 모든 도메인에 액세스 권한을 `file://` 프로토콜:
-
     <access origin="*" subdomains="true" />
-    
 
-모든 웹 보안 사용 안 함:
+(대 한 자세한 내용은 지원, 블랙베리의 설명서를 참조 하십시오 [액세스 요소][8] 에.)
 
-    <preference name="websecurity" value="disable" />
-    
+ [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## iOS
-
-### 세부 정보
-
-허용 규칙에서 찾을 수 있습니다 `AppName/config.xml` 요소를 선언 하 고`<access origin="..." />`.
-
-iOS는 완벽 하 게 허용 된 구문을 지원합니다.
-
-### 3.1.0에서 변경:
+## 3.1.0 iOS 변화
 
 이전 버전 3.1.0, 코르도바 iOS 일부 비표준 확장 다른 코르도바 플랫폼에서 지 원하는 도메인 whilelisting 체계를 포함. 3.1.0, 현재 iOS 허용 지금이 문서 상단에 설명 된 리소스 허용 구문을 따릅니다. 전 3.1.0에서 업그레이드 하는 경우 이러한 확장을 사용 하는 변경 해야 할 수 있습니다 당신의 `config.xml` 전에 허용 된 자원의 동일한 집합을 계속 하려면 파일.
 
 특히, 이러한 패턴 업데이트 해야 합니다.
 
-*   " `apache.org` " (프로토콜):이 이전 일치 하는 것 `http` , `https` , `ftp` , 및 `ftps` 프로토콜. 변경 " `*://apache.org/*` " 모든 프로토콜을 포함 하거나 지원 해야 할 각 프로토콜에 대 한 행을 포함 합니다.
+*   `apache.org`(프로토콜):이 이전 일치 하는 것 `http` , `https` , `ftp` , 및 `ftps` 프로토콜. 변경 " `*://apache.org/*` " 모든 프로토콜을 포함 하거나 지원 해야 할 각 프로토콜에 대 한 행을 포함 합니다.
 
-*   " `http://apache.*` " (와일드 카드 도메인의 끝에):이 이전 모든 탑-레벨 도메인, 모든 가능한 두 글자 Tld를 포함 하 여 일치 하는 것 (하지만 유용 하지 않은 도메인. co.uk). 실제로 제어 하 고 허용 하는 데 필요한 각 TLD에 대 한 줄을 포함 합니다.
+*   `http://apache.*`(와일드 카드 도메인의 끝에):이 이전 모든 탑-레벨 도메인, 모든 가능한 두 글자 Tld를 포함 하 여 일치 하는 것 (하지만 유용 하지 않은 도메인. co.uk). 실제로 제어 하 고 허용 하는 데 필요한 각 TLD에 대 한 줄을 포함 합니다.
 
-*   " `h*t*://ap*he.o*g` " (임의 누락 된 문자에 대 한 와일드 카드):이 더 이상 지원, 각 도메인에 대 한 줄을 포함 하 고 당신이 프로토콜 변경 실제로 허용 해야 합니다.
+*   `h*t*://ap*he.o*g`(무작위로 누락 된 글자에 대 한 와일드 카드):이 더 이상 지원; 각 도메인 및 실제로 허용을 해야 하는 프로토콜에 대 한 행을 포함 하도록 변경 합니다.
 
-### 구문
+## Windows Phone 수단이
 
-[Google.com][3]에 대 한 액세스:
+애플 리 케이 션의에서 발견 되는 Windows Phone 7과 8에 대 한 허용 규칙 `config.xml` 파일.
 
-    <access origin="http://google.com/*" />
-    
+## Tizen 화이트
 
-## Windows Phone (7 & 8)
+애플 리 케이 션의에서 발견 되는 허용 된 규칙 `config.xml` 파일. 같은 플랫폼 의존 `subdomains` 블랙베리 플랫폼으로 특성. (대 한 자세한 내용은 지원, Tizen의 설명서를 참조 하십시오 [액세스 요소][9] 에.)
 
-허용 규칙에서 찾을 수 있습니다 `config.xml` 요소를 선언 하 고`<access origin="..." />`.
-
-### 구문
-
-[Google.com][3]에 대 한 액세스:
-
-    <access origin="http://google.com" />
-    
-
-## Tizen
-
-### 세부 정보
-
-응용 프로그램 루트 디렉터리의 `config.xml` 파일 지정 도메인 허용 규칙을 사용 하는 `<access origin="..." />` 요소. 완벽 한 기준에 대 한 [Tizen 외부 네트워크 리소스 액세스 문서][10] 를 참조 하십시오..
-
- [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
-
-### 구문
-
-[Google.com][3]에 대 한 액세스:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-보안 [google.com][4] 에 대 한 액세스 ( `https://` ):
-
-    <access origin="https://google.com" subdomains="false" />
-    
-
-[Google.com][3]에 모든 하위 도메인에 대 한 액세스:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-포함 하 여 모든 도메인에 액세스 권한을 `file://` 프로토콜:
-
-    <access origin="*" subdomains="true" />
+ [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

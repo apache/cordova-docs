@@ -24,16 +24,14 @@ Un parámetro opcional para personalizar la recuperación de la brújula.
 
 *   **filtro**: el cambio de grados necesarios para iniciar una llamada de éxito watchHeading. *(Número)*
 
-Rarezas Android
+## Rarezas Android
 
----
-
-*   `filter`No se admite.
+*   No hay soporte para`filter`.
 
 ## Rarezas Tizen
 
-*   `filter`No se admite.
+*   No hay soporte para`filter`.
 
 ## Windows Phone 7 y 8 rarezas
 
-*   `filter`No se admite.
+*   No hay soporte para`filter`.

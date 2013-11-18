@@ -34,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
 
-### BlackBerryOS/각 본
+BlackBerryOS/각 본:
 
 1.  다운로드 하 고 추출 귀하의 하드 드라이브에 영구적인 위치에 코르도바 2.9.0 소스 예`~/Cordova-2.9.0`.
 

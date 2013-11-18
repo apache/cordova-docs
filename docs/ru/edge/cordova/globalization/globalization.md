@@ -57,11 +57,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
 
-*   Android (в `app/res/xml/config.xml`)
+*   Android (в`res/xml/config.xml`)
     
         <feature name="Globalization">
-            <param name="android-package" value="org.apache.cordova.Globalization" />
+            <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
         </feature>
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.

@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaFile.getFormatData
 
-> Récupère le format d'informations sur le fichier de capture de médias.
+> Récupère des informations sur le format du fichier média capturé.
 
     mediaFile.getFormatData (MediaFileDataSuccessCB successCallback, [MediaFileDataErrorCB errorCallback]) ;
     
 
 ## Description
 
-Cette fonction de façon asynchrone tente de récupérer les informations de format pour le fichier multimédia. Si réussie, elle appelle le `MediaFileDataSuccessCB` rappel avec un `MediaFileData` objet. Si la tentative échoue, cette fonction appelle la `MediaFileDataErrorCB` rappel.
+Cette fonction tente de récupérer les informations de format d'un fichier média de façon asynchrone. Si la tentative réussit, la fonction callback `MediaFileDataSuccessCB` est exécutée et un objet `MediaFileData` lui est transmis en paramètre. Si la tentative échoue, la fonction callback `MediaFileDataErrorCB` est appelée.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-Ne fournit pas une API pour plus d'informations sur les fichiers de médias, alors tous les `MediaFileData` objets reviennent avec les valeurs par défaut.
+Aucune API permettant la récupération d'informations sur des fichiers média n'est disponible. Par conséquent, les objets `MediaFileData` contiennent toujours des valeurs par défaut.
 
-## Quirks Android
+## Particularités d'Android
 
-L'API pour accéder aux médias file format informations est limité, donc pas tous les `MediaFileData` propriétés sont prises en charge.
+L'API pour accéder aux informations de format des fichiers média est limitée, toutes les propriétés `MediaFileData` ne sont donc pas prises en charge.
 
-## iOS Quirks
+## Particularités d'iOS
 
-L'API pour accéder aux médias file format informations est limité, donc pas tous les `MediaFileData` propriétés sont prises en charge.
+L'API pour accéder aux informations de format des fichiers média est limitée, toutes les propriétés `MediaFileData` ne sont donc pas prises en charge.

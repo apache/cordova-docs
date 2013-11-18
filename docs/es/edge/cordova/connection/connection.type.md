@@ -26,7 +26,7 @@ Esta propiedad ofrece una forma rápida de determinar el estado de conexión de 
 
 *   iOS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   Tizen
 *   Windows Phone 7 y 8
 *   Windows 8

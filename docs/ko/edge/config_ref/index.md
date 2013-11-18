@@ -16,11 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Config.xml 파일
 
-응용 프로그램의 행동의 여러 측면 전역 구성 파일을 제어할 수 있습니다 `config.xml` , 즉 응용 프로그램의 홈 페이지와 함께 최상위 웹 자산 디렉터리에 배치 합니다. 이 플랫폼-불가 지론 XML 파일 W3C의 [웹 응용 프로그램 (위젯) 포장][1] 사양에 따라 포맷 이며 핵심 코르도바 API 기능, 플러그인, 및 플랫폼 관련 설정을 지정 하려면 확장.
+응용 프로그램의 행동의 여러 측면 전역 구성 파일을 제어할 수 있습니다 `config.xml` , 응용 프로그램의 홈 페이지와 함께 최상위 웹 자산 디렉터리에 속한다. 이 플랫폼-불가 지론 XML 파일 W3C의 [웹 응용 프로그램 (위젯) 포장][1] 사양에 따라 및 핵심 코르도바 API 기능, 플러그인, 및 플랫폼 관련 설정을 지정 하려면 확장 된 배열입니다.
 
  [1]: http://www.w3.org/TR/widgets/
 
-코르 도우 바 CLI (명령줄 인터페이스에 설명)를 사용 하 여 만든 프로젝트에 대 한이 파일은 최상위 수준에서 찾을 수 있습니다 `www` 디렉터리. 내에서 다양 한 하위 디렉터리에이 파일의 버전을 재생성 프로젝트를 CLI를 사용 하 여 `platforms` . CLI를 사용 하 여 프로젝트를 생성 하지만 워크플로 SDK에 이동 플랫폼 특정 파일 원본으로 사용 됩니다.
+코르 도우 바 CLI (명령줄 인터페이스에 설명)를 사용 하 여 만든 프로젝트에 대 한이 파일은 최상위 수준에서 찾을 수 있습니다 `www` 디렉터리:
+
+        app/www/config.xml
+    
+
+CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전 수 동적으로 각종으로 다른 웹 자산 소스 파일과 함께 복사 `platforms/*/www` 하위 디렉터리, 예를 들면:
+
+        app/platforms/ios/www/config.xml
+        app/platforms/blackberry10/www/config.xml
+    
+
+예외는 안 드 로이드, 누구의 경로 지정 추가 `assets` 하위 디렉터리:
+
+        애플 리 케이 션/플랫폼/안 드 로이드/자산/www/config.xml
+    
+
+CLI를 사용 하 여 프로젝트를 생성 하지만 워크플로 SDK에 이동 하는 경우 안 드 로이드와 iOS에 대 한 소스 파일의 대체 집합을 사용 하도록 해야 합니다.
+
+        app/platforms/android/res/www/config.xml
+        app/platforms/ios/<APP_NAME>/config.xml
+    
 
 이 섹션에는 글로벌 및 크로스 플랫폼 구성 옵션 자세히 설명합니다. 플랫폼 특정 옵션에 대 한 다음 섹션을 참조 하십시오.
 
@@ -79,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="Orientation" value="landscape" />
         
     
-    **참고:** `default`값은 *모두* 가로 및 세로 방향 사용 됩니다. 각 플랫폼의 기본 설정 (일반적으로 세로 전용)를 사용 하려는 경우이 태그를 두고는 `config.xml` 파일. 또한, 블랙베리를 사용 하 여 `auto` 대신 `default` 에 `config.xml` 파일. 지정 하면 `default` 는 글로벌 `config.xml` , 변환 `auto` 블랙베리 빌드에서.
+    **참고**: 있는 `default` 값은 *모두* 가로 및 세로 방향 사용 됩니다. 각 플랫폼의 기본 설정 (일반적으로 세로 전용)를 사용 하려는 경우이 태그를 두고는 `config.xml` 파일.
 
 ## 멀티 플랫폼 환경 설정
 
@@ -105,12 +125,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
     
     IOS와 블랙베리에 적용 됩니다.
-    
-    **참고:** 블랙베리에 대 한 유효한 값은 `enable` 또는`disable`.
 
-## `<feature>`요소
+## *기능* 요소
 
-CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin` 장치 Api를 사용 하려면 명령. 이 최상위 수정 하지 않습니다 `config.xml` 파일, 그래서 `<feature>` 요소 작업 흐름에 적용 되지 않습니다. 경우 SDK에서 직접 사용 하는 플랫폼 관련 `config.xml` 파일 원본으로 사용 된 `<feature>` 장치 수준 Api와 외부 플러그인을 사용 하려면 태그. 그들은 일반적으로이 폼에 나타납니다.
+CLI를 사용 하 여 응용 프로그램을 구축할 경우 사용 된 `plugin` 장치 Api를 사용 하려면 명령. 이 최상위 수정 하지 않습니다 `config.xml` 파일, 그래서 `<feature>` 요소 작업 흐름에 적용 되지 않습니다. SDK 및 플랫폼 특정 사용 하 여에서 직접 작업 하는 경우 `config.xml` 파일 원본으로 사용 된 `<feature>` 장치 수준 Api와 외부 플러그인을 사용 하려면 태그. 그들은 일반적으로이 폼에 나타납니다.
 
         <feature name="Plugin" value="PluginID" />
     

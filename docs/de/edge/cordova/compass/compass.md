@@ -45,14 +45,19 @@ Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden 
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android
     
+        (in `app/res/xml/config.xml`)
         <feature name="Compass">
-            <param name="android-package" value="org.apache.cordova.CompassListener" />
+            <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
         </feature>
         
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />
@@ -70,4 +75,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

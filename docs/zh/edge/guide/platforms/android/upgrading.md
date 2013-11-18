@@ -22,12 +22,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本-請參閱命令列介面 
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
+
 2.  運行`cordova platform update android`
 
 對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
-1.  `bin/更新 < project_path >`
+        bin/update <project_path>
+    
 
 ## 從 2.9.0 升級到 CLI （3.0.0)
 
@@ -55,8 +57,8 @@ platform add android`.
 5.  請確保要升級任何棄用 `<plugin>` 從你的舊的引用 `config.xml` 到新檔 `<feature>` 規範。
 
 6.  更新對任何引用 `org.apache.cordova.api` 包被`org.apache.cordova`.
-
-*   **注：**所有核心 Api 已被移除，必須作為外掛程式安裝。請有關詳細資訊，參閱管理外掛程式指南的使用 Plugman。
+    
+    **注**： 所有核心 Api 已被移除，必須作為外掛程式安裝。請有關詳細資訊，參閱管理外掛程式指南的使用 Plugman。
 
 ## 從 2.8.0 升級到 2.9.0
 
@@ -68,17 +70,19 @@ platform add android`.
 
 2.  添加 `cordova-2.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  複製新 `cordova.js` 到您的專案。
+<!-- SS Eclipse -->
 
-5.  更新您的 html 代碼，使用新的 `cordova.js` 檔。
+1.  複製新 `cordova.js` 到您的專案。
 
-6.  複製 `res/xml/config.xml` 檔，以匹配`framework/res/xml/config.xml`.
+2.  更新您的 html 代碼，使用新的 `cordova.js` 檔。
 
-7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
+3.  複製 `res/xml/config.xml` 檔，以匹配`framework/res/xml/config.xml`.
 
-8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
+4.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
+
+5.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
 ## 從 2.6.0 升級到 2.7.0
 
@@ -86,7 +90,7 @@ platform add android`.
 
 2.  添加 `cordova-2.7.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.7.0.js` 到您的專案。
 
@@ -104,7 +108,7 @@ platform add android`.
 
 2.  添加 `cordova-2.6.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.6.0.js` 到您的專案。
 
@@ -124,7 +128,7 @@ platform add android`.
 
 2.  添加 `cordova-2.5.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.5.0.js` 到您的專案。
 
@@ -142,7 +146,7 @@ platform add android`.
 
 2.  添加 `cordova-2.4.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.4.0.js` 到您的專案。
 
@@ -158,7 +162,7 @@ platform add android`.
 
 2.  添加 `cordova-2.3.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.3.0.js` 到您的專案。
 
@@ -174,7 +178,7 @@ platform add android`.
 
 2.  添加 `cordova-2.2.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.2.0.js` 到您的專案。
 
@@ -190,7 +194,7 @@ platform add android`.
 
 2.  添加 `cordova-2.1.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.1.0.js` 到您的專案。
 
@@ -206,7 +210,7 @@ platform add android`.
 
 2.  添加 `cordova-2.0.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-2.0.0.js` 到您的專案。
 
@@ -214,9 +218,7 @@ platform add android`.
 
 6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-### 注意到關於 2.0.0 發佈
-
-`config.xml`將會更換 `cordova.xml` 和 `plugins.xml` 。 這個新的檔是前面兩種的組合。 但是，舊的檔已被否決，和目前仍工作，同時將停止在將來的版本中工作。
+在 2.0.0 版、 `config.xml` 檔結合和替換 `cordova.xml` 和 `plugins.xml` 。 舊的檔已被否決，，雖然他們仍工作在 2.0.0，將停止在將來的版本中工作。
 
 ## 從 1.8.1 升級到 1.9.0
 
@@ -224,7 +226,7 @@ platform add android`.
 
 2.  添加 `cordova-1.9.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.9.0.js` 到您的專案。
 
@@ -232,9 +234,7 @@ platform add android`.
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-### 注意到關於 1.9.0 釋放
-
-由於採用了 `CordovaWebView` ，協力廠商外掛程式可能無法正常工作。 這些外掛程式需要獲取上下文從 `CordovaInterface` 使用 `getContext()` 或 `getActivity()` 。 如果您不是一個經驗豐富的 Android 開發者，請聯繫外掛程式的維護者和將這項任務添加到其 bug 跟蹤工具。
+由於採用了 `CordovaWebView` 的 1.9.0 版本中，協力廠商外掛程式可能無法工作。 這些外掛程式需要獲取上下文從 `CordovaInterface` 使用 `getContext()` 或 `getActivity()` 。 如果您不是一個經驗豐富的 Android 開發者，請聯繫外掛程式的維護者和將這項任務添加到其 bug 跟蹤工具。
 
 ## 從 1.8.0 升級到 1.8.0
 
@@ -242,7 +242,7 @@ platform add android`.
 
 2.  添加 `cordova-1.8.1.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.8.1.js` 到您的專案。
 
@@ -256,7 +256,7 @@ platform add android`.
 
 2.  添加 `cordova-1.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
@@ -270,7 +270,7 @@ platform add android`.
 
 2.  添加 `cordova-1.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
@@ -284,7 +284,7 @@ platform add android`.
 
 2.  添加 `cordova-1.7.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.7.0.js` 到您的專案。
 
@@ -296,7 +296,7 @@ platform add android`.
 
 2.  添加 `cordova-1.6.1.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.6.1.js` 到您的專案。
 
@@ -308,7 +308,7 @@ platform add android`.
 
 2.  添加 `cordova-1.6.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.6.0.js` 到您的專案。
 
@@ -324,7 +324,7 @@ platform add android`.
 
 2.  添加 `cordova-1.5.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `cordova-1.5.0.js` 到您的專案。
 
@@ -340,7 +340,7 @@ platform add android`.
 
 2.  添加 `phonegap-1.4.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `phonegap-1.4.0.js` 到您的專案。
 
@@ -356,7 +356,7 @@ platform add android`.
 
 2.  添加 `phonegap-1.3.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `phonegap-1.3.0.js` 到您的專案。
 
@@ -372,7 +372,7 @@ platform add android`.
 
 2.  添加 `phonegap-1.2.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `phonegap-1.2.0.js` 到您的專案。
 
@@ -388,7 +388,7 @@ platform add android`.
 
 2.  添加 `phonegap-1.1.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `phonegap-1.1.0.js` 到您的專案。
 
@@ -402,7 +402,7 @@ platform add android`.
 
 2.  添加 `phonegap-1.0.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您正在使用 Eclipse，請刷新您的 eclipse 專案，做清潔。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 4.  複製新 `phonegap-1.0.0.js` 到您的專案。
 

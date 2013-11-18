@@ -60,12 +60,12 @@ Contiene proprietà che descrivono un contatto, come il contatto personale o azi
 
 Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono essere creati, memorizzati o rimossi dal database di contatti dispositivo. Contatti possono anche essere estratto (singolarmente o in blocco) dal database richiamando il `contacts.find` metodo.
 
-**Nota:** Non tutti i campi di contatto sopra elencati sono supportati su ogni piattaforma del dispositivo. Consultare la sezione di *stranezze* su ogni piattaforma per dettagli.
+**Nota**: non tutti i campi di contatto sopra elencati sono supportati su ogni piattaforma del dispositivo. Consultare la sezione di *stranezze* su ogni piattaforma per dettagli.
 
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -194,7 +194,7 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
 
 *   **categorie**: non è supportato sui dispositivi Android 2. x, restituendo`null`.
 
-## Stranezze di blackBerry WebWorks (OS 5.0 e superiori)
+## BlackBerry WebWorks 5.0 + stranezze
 
 *   **ID**: supportato. Assegnato dal dispositivo quando si salva il contatto.
 
@@ -232,7 +232,7 @@ Il `Contact` oggetto rappresenta il contatto di un utente. Contatti possono esse
 
 *   **displayName**: quando si crea un contatto, il valore specificato per il parametro del nome di visualizzazione è diverso dal nome visualizzato Estratto quando trovare il contatto.
 
-*   **URL**: quando creando un contatto, gli utenti possono inserire e salvare più di un indirizzo web, ma solo uno è disponibile è disponibile durante la ricerca del contatto.
+*   **URL**: quando si crea un contatto, gli utenti possono inserire e salvare più di un indirizzo web, ma solo uno è disponibile durante la ricerca del contatto.
 
 *   **phoneNumbers**: non è supportata l'opzione *pref* . Il *tipo* non è supportato in un'operazione di *trovare* . Un solo `phoneNumber` è consentita per ogni *tipo*.
 

@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **onloadend**: (중 성공 또는 실패) 요청이 완료 될 때 호출 합니다. *(기능)*
 
-**참고:** 다음 porperty는 지원 되지 않습니다.
+**참고**: 다음 porperty는 지원 되지 않습니다:
 
 *   **onprogress**: 진행의 관점에서 보고, 파일을 읽는 동안 전화 `progress.loaded` / `progress.total` . *(기능)*
 
@@ -59,14 +59,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
 
 ## readAsDataURL
 
-**매개 변수:**
+**매개 변수**:
 
 *   **파일**: 파일 개체 읽기를.
 
@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## readAsText
 
-**매개 변수:**
+**매개 변수**:
 
 *   **파일**: 파일 개체 읽기를.
 
@@ -205,7 +205,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **파일**: 파일 개체 읽기를.
 
@@ -231,7 +231,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 현재 iOS와 안 드 로이드만 지원 합니다.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **파일**: 파일 개체 읽기를.
 

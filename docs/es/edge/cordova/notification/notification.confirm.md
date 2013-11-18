@@ -42,7 +42,7 @@ La devolución de llamada toma el argumento `buttonIndex` *(número)*, que es el
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8

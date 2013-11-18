@@ -37,7 +37,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   iOS
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   Tizen
 
 ## 快速的示例

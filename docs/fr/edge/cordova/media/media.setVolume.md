@@ -16,49 +16,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.setVolume
 
-Régler le volume du fichier audio.
+Permet de régler le volume d'un fichier audio.
 
-    media.setVolume(volume) ;
+    media.setVolume(volume);
     
 
 ## Paramètres
 
-*   **volume**: le volume à définir pour la lecture. La valeur doit être comprise entre de 0,0 à 1,0.
+*   **volume** : le volume à utiliser pour la lecture. La valeur doit être comprise entre 0.0 et 1.0 inclus.
 
 ## Description
 
-Fonction `media.setVolume` est une fonction asynchrone qui permet de régler le volume pendant la lecture audio.
+La méthode `media.setVolume` s'exécute de façon asynchrone, elle permet de régler le volume pendant la lecture d'un clip audio.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   iOS
 
-## Petit exemple
+## Exemple court
 
-    // Play audio
+    // joue le clip audio
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // joue le fichier audio situé à cette url
         var my_media = new Media(url,
-            // success callback
+            // fonction callback de succès
             function() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : fichier audio lu avec succès");
             },
-            // error callback
+            // fonction callback d'erreur
             function(err) {
-                console.log("playAudio():Audio Error: "+err);
+                console.log("playAudio() : erreur lors de la lecture du fichier audio : " + err);
         });
     
-        // Play audio
+        // lance la lecture du clip audio
         my_media.play();
     
-        // Mute volume after 2 seconds
+        // baisse le volume au maximum après 2 secondes
         setTimeout(function() {
             my_media.setVolume('0.0');
         }, 2000);
     
-        // Set volume to 1.0 after 5 seconds
+        // monte le volume à 1.0 (maximum) après 5 secondes
         setTimeout(function() {
             my_media.setVolume('1.0');
         }, 5000);
@@ -71,57 +71,57 @@ Fonction `media.setVolume` est une fonction asynchrone qui permet de régler le 
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for Cordova to load
+            // attend que Cordova soit chargé
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // Cordova is ready
+            // Cordova est prêt
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                // Create Media object from src
+                // crée un objet média à partir de src
                 my_media = new Media(src, onSuccess, onError);
     
-                // Play audio
+                //  lance la lecture du clip audio
                 my_media.play();
     
-                // Update my_media position every second
+                // met à jour la position de my_media à chaque seconde
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // récupère la position de lecture de my_media
                         my_media.getCurrentPosition(
-                            // success callback
+                            // fonction callback de succès
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudioPosition((position) + " secondes");
                                 }
                             },
-                            // error callback
+                            // fonction callback d'erreur
                             function(e) {
-                                console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                console.log("Erreur lors de la récupération de la position : " + e);
+                                setAudioPosition("Erreur : " + e);
                             }
                         );
                     }, 1000);
                 }
             }
     
-            // Set audio volume
+            // règle le volume du clip audio
             //
             function setVolume(volume) {
                 if (my_media) {
@@ -129,7 +129,7 @@ Fonction `media.setVolume` est une fonction asynchrone qui permet de régler le 
                 }
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -139,20 +139,20 @@ Fonction `media.setVolume` est une fonction asynchrone qui permet de régler le 
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succè");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' + 
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' + 
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -161,10 +161,10 @@ Fonction `media.setVolume` est une fonction asynchrone qui permet de régler le 
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="setVolume('0.0');">Mute Audio</a>
-            <a href="#" class="btn large" onclick="setVolume('1.0');">Unmute Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audio</a>
+            <a href="#" class="btn large" onclick="setVolume('0.0');">Baisser le volume</a>
+            <a href="#" class="btn large" onclick="setVolume('1.0');">Monter le volume</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>

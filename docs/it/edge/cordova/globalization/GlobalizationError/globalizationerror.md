@@ -34,7 +34,7 @@ Questo oggetto è creato e popolato da Cordova e restituito una richiamata in ca
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Esempio rapido

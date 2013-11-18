@@ -1,6 +1,6 @@
 ---
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Consulte el archivo aviso distribuido con este trabajo para información adicional sobre la propiedad de derechos de autor. El ASF licencias este archivo a usted bajo la licencia Apache, versión 2.0 (la "licencia"); Usted no puede usar este archivo excepto en cumplimiento de la licencia. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Los iconos y las pantallas Splash
+# Iconos y pantallas de Splash
 
 Esta sección le muestra cómo configurar de una aplicación icono y pantalla opcional para varias plataformas, tanto cuando se trabaja en la CLI de Cordova (descrito en la interfaz de línea de comandos) o herramientas específicas de la plataforma SDK (detallada en las guías de plataforma).
 
@@ -71,7 +71,7 @@ Android especifica ambas imágenes de pantalla splash retrato y paisaje-orientad
         android/screen-xhdpi-portrait.png
     
 
-La plataforma iOS especifica las variantes para iPhone/iPod y iPad, con variantes para las exhibiciones de la retina y orientaciones diferentes. El archivo *568 h* está personalizado para el iPhone de 5 pantalla más alta:
+La plataforma iOS especifica las variantes para iPhone/iPod y iPad, con variantes para las exhibiciones de la retina y orientaciones diferentes. El archivo *568 h* se aplica para el iPhone de 5 pantalla más alta:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,13 +109,13 @@ En `config.xml` , agregue las siguientes preferencias:
     <preference name="splashScreenDelay", 10000 />
     
 
-La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Si nombre su imagen nada aparte de `splash.png` , tienes que modificar esta línea.
+La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Si usted nombrar la imagen nada aparte de `splash.png` , tienes que modificar esta línea.
 
 La segunda línea establece la demora de tiempo aparece el splashscreen en milisegundos. Para despedir la pantalla de inicio una vez que la aplicación recibe el `deviceready` evento, llamada el `navigator.splashscreen.hide()` método.
 
 ## Salpicadura pantallas para la plataforma iOS
 
-Copiar tus imágenes en pantalla splash en el proyecto iOS `Resources/splash` Directorio. Sólo agregar las imágenes de los dispositivos que desea apoyar, como el iPad o el iPhone. El tamaño de cada imagen debe ser:
+Copiar imágenes de pantalla de splash en el proyecto iOS `Resources/splash` Directorio. Sólo agregar esas imágenes para los dispositivos que desea apoyar, como el iPad o el iPhone. El tamaño de cada imagen debe ser:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (1496 x 2048 píxeles)
@@ -127,7 +127,7 @@ Copiar tus imágenes en pantalla splash en el proyecto iOS `Resources/splash` Di
 
 ## Salpicadura pantallas para la plataforma BlackBerry 10
 
-Copiar tus imágenes en pantalla splash en el proyecto `res/screen/blackberry10` Directorio. Los nombres de archivo deben ser:
+Copiar imágenes de pantalla de splash en el proyecto `res/screen/blackberry10` Directorio. Los nombres de archivo deben ser:
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

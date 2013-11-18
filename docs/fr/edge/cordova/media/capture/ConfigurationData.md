@@ -16,36 +16,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ConfigurationData
 
-> Encapsule un ensemble de paramètres de capture de médias qu'un périphérique prend en charge.
+> Encapsule un ensemble de paramètres de capture de médias pris en charge par un appareil.
 
 ## Description
 
-Décrit les modes de capture de média pris en charge par le périphérique. Les données de configuration incluent le type MIME et dimensions de capture pour la capture vidéo ou image.
+Décrit les modes de capture de média pris en charge par l'appareil. Les données de configuration incluent le type MIME et les dimensions pour la capture de vidéo ou d'image.
 
-[RFC2046][1]devraient respecter les types MIME. Exemples :
+Les types MIME doivent respecter la norme [RFC2046][1]. Exemples :
 
  [1]: http://www.ietf.org/rfc/rfc2046.txt
 
-*   `vidéo/3gpp`
-*   `vidéo/quicktime`
+*   `video/3gpp`
+*   `video/quicktime`
 *   `image/jpeg`
 *   `audio/amr`
 *   `audio/wav`
 
 ## Propriétés
 
-*   **type**: The ASCII encodée en chaîne minuscule qui représente le type de média. (DOMString)
+*   **type** : la chaîne de caractères bas de casse ASCII représentant le type de média souhaité. (DOMString)
 
-*   **hauteur**: la hauteur de l'image ou la vidéo en pixels. La valeur est zéro pour les extraits sonores. (Nombre)
+*   **height** : la hauteur de l'image ou de la vidéo en pixels. La valeur pour les extraits sonores est zéro. (Number)
 
-*   **largeur**: la largeur de l'image ou la vidéo en pixels. La valeur est zéro pour les extraits sonores. (Nombre)
+*   **width** : la largeur de l'image ou de la vidéo en pixels. La valeur pour les extraits sonores est zéro. (Number)
 
-## Petit exemple
+## Exemple court
 
-    // retrieve supported image modes
+    // récupère des informations sur les modes de capture d'image supportés
     var imageModes = navigator.device.capture.supportedImageModes;
     
-    // Select mode that has the highest horizontal resolution
+    // choisit le mode possédant la résolution horizontale la plus élevée
     var width = 0;
     var selectedmode;
     for each (var mode in imageModes) {
@@ -56,4 +56,4 @@ Décrit les modes de capture de média pris en charge par le périphérique. Les
     }
     
 
-Pas pris en charge par n'importe quelle plateforme. Tous les tableaux de données de configuration sont vides.
+N'est pas pris en charge par toutes les plates-formes. Tous les tableaux de données de configuration sont vides.

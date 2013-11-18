@@ -32,7 +32,7 @@ Un objet de type `Acceleration` est retourné par chacune des méthodes de l'API
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 et 8

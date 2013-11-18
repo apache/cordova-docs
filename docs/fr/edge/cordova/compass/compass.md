@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente les APIs au niveau de l'appareil comme des *plugins*. Utilisez le `plugin` d'interface en ligne de commande, décrite dans l'Interface de ligne de commande, pour ajouter ou supprimer cette fonctionnalité pour un projet :
+Depuis la version 3.0, Cordova implémente les APIs au niveau de l'appareil comme des *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.device-orientation
         $ cordova plugin ls
@@ -45,14 +45,19 @@ Depuis la version 3.0, Cordova implémente les APIs au niveau de l'appareil comm
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient les paramètres de configuration spécifiques aux plateformes décrites ci-dessous :
 
-*   Android (dans`app/res/xml/config.xml`)
+*   Android
     
+        (in `app/res/xml/config.xml`)
         <feature name="Compass">
-            <param name="android-package" value="org.apache.cordova.CompassListener" />
+            <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
         </feature>
         
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        
 
-*   iOS (en`config.xml`)
+*   iOS (dans du répertoire application nommé`config.xml`)
     
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />
@@ -70,4 +75,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifient 
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

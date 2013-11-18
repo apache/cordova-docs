@@ -46,10 +46,10 @@ A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo
 
 Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impostazioni di configurazione specifiche della piattaforma descritte di seguito:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android (in`res/xml/config.xml`)
     
         <feature name="Accelerometer">
-            <param name="android-package" value="org.apache.cordova.AccelListener" />
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
         </feature>
         
 
@@ -65,7 +65,7 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
@@ -83,4 +83,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

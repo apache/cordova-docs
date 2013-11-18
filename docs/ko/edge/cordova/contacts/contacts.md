@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > `contacts`개체는 장치 연락처 데이터베이스에 대 한 액세스를 제공 합니다.
 
-**중요 한 개인 정보 보호 참고:** 연락처 데이터의 수집 및 사용 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 연락처 데이터를 사용 하는 방법 및 다른 당사자와 함께 공유 하는 여부를 토론 해야 한다. 연락처 정보 누구와 통신 하는 사람이 사람들 보여 때문에 민감한으로 간주 됩니다. 따라서, 응용 프로그램의 개인 정보 보호 정책 뿐만 아니라 강하게 좋습니다 그냥--시간 통지 이전에 귀하의 응용 프로그램에 액세스 하거나 사용 하 여 연락처 데이터 (장치 운영 체제는 이미 그래서를 하지 않습니다). 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 그냥--시간 공지 및 연락처 데이터에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 연락처 데이터는 사용자의 혼동을 방지 하는 데 도움이 됩니다를 사용 하 여 및 연락처 데이터의 인식된 오용 명확 하 고 이해 하기 쉬운 사용자 경험. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
+**경고**: 중요 한 개인 정보 보호 문제를 제기 하는 연락처 데이터의 수집 및 사용 합니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 연락처 데이터를 사용 하는 방법 및 다른 당사자와 함께 공유 하는 여부를 토론 해야 한다. 연락처 정보 누구와 통신 하는 사람이 사람들 보여 때문에 민감한으로 간주 됩니다. 따라서 애플 리 케이 션의 개인 정보 보호 정책 뿐만 아니라 강하게 해야 장치 운영 체제는 이렇게 이미 하지 않는 경우 응용 프로그램 액세스 또는 연락처 데이터를 사용 하기 전에 그냥--시간 통지를 제공 합니다. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 그냥--시간 공지 및 연락처 데이터에 액세스 하기 전에 사용자의 허가 받아야 응용 프로그램에 필요할 수 있습니다. 연락처 데이터는 사용자의 혼동을 방지할 수의 사용 및 연락처 데이터의 인식된 오용 명확 하 고 이해 하기 쉬운 사용자 경험. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
 
 ## 메서드
 
@@ -58,13 +58,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.ContactManager" />
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         
 
 *   블랙베리 WebWorks
@@ -81,16 +81,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />
         </feature>
         
 
-*   Windows Phone
+*   (Windows Phone`Properties/WPAppManifest.xml`)
     
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>
@@ -100,4 +99,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
