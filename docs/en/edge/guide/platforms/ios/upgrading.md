@@ -29,6 +29,19 @@ __NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to
 Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
 iOS 7 SDK is not required yet, but this may change quickly.
 
+## Upgrading 3.1.0 Projects to 3.2.0
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
+        
+
 ## Upgrading 3.0.0 Projects to 3.1.0
 
 For non-CLI projects, run:
