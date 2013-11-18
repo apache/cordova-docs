@@ -155,21 +155,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Événements
+        Évènements
       </h2>
       
       <span>Interactions avec les événements natifs via JavaScript.</span>
     </li>
     <li>
       <h2>
-        Fichier
+        File
       </h2>
       
       <span>Interactions avec le système de fichier natif via JavaScript.</span>
     </li>
     <li>
       <h2>
-        Géolocalisation
+        Geolocation
       </h2>
       
       <span>Localiser le terminal.</span>
