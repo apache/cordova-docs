@@ -76,9 +76,9 @@ thing using both workflows, certain tasks are better suited to using one workflo
 over the other. For this reason, you should understand both workflows so
 that you can use the best tool for the best situation.
 
-The two main workflows that are supported are:
+The two main workflows that are supported are the _Web Project Dev_ workflow and the _Native Platform Dev_ workflow.
 
-* Web Project Dev
+### Web Project Dev
 
 You can think of the first workflow as the _Web Project Dev_ workflow. You should use
 this workflow when you want to create a Cordova application that runs on 
@@ -93,7 +93,7 @@ more about the _Web Project Dev_ workflow in The Command-line Interface. Please 
 that often when people speak of the "CLI," they are talking about this _Web Project Dev_
 workflow.
 
-* Native Platform Dev
+### Native Platform Dev
 
 The second workflow can be thought of as a _Native Platform Dev_ workflow. You should use it
 when you want to focus on building an application for a single platform and are 
