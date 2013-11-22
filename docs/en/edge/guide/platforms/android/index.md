@@ -20,8 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Android Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Android devices. See the following for more
-detailed platform-specific information:
+deploy Cordova apps for Android devices. It walks you through the process
+of installing the Android SDK, opening an Android project in Eclipse SDK, 
+and deploying to an emulator or device. You will need to follow this guide 
+to at least Install the Android SDK, regardless of which workflow you
+are following. (Both the _Web Project Dev_ and _Native Platform Dev_ workflows
+require the Android SDK to be installed and accessable via your PATH.)
+
+See the following for more detailed platform-specific information:
 
 * Android Configuration
 * Android WebViews
@@ -52,8 +58,6 @@ Developers should use the `cordova` utility in conjunction with
 the Android SDK.  See The Command-Line Interface for
 information how to install it, add projects, then build and deploy a
 project.
-
-## Install the SDK
 
 Install the Android SDK from
 [developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk

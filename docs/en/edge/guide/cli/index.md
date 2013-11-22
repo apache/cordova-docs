@@ -23,9 +23,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
-them on different platforms, and run them within an emulator. You can
-also use the CLI to initialize project code, after which you use
-various platforms' SDKs to develop them further.
+them on different platforms, and run on real devices or within emulators. The CLI
+is the main tool to use for the cross-platform workflow (See the Overview for a description
+of the various workflows.)  However, you can also use the CLI to initialize project code, after
+which you use various platforms' SDKs and shell tools for continued development.
 
 ## Prerequisites
 
@@ -57,7 +58,7 @@ To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
    installation, you should be able to invoke `node` or `npm` on your
-   command line.
+   command line. 
 
 1. Install the `cordova` utility. In Unix, prefixing the additional
    `sudo` command may be necessary to install development utilities in
@@ -69,6 +70,12 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
+   **NOTE**: The `-g` flag above tells npm to install cordova globally. 
+   You may need to add the npm directory to your PATH in order to invoke
+   globally installed npm modules. On Windows, npm can usually be found at
+   `C:\Users\username\AppData\Roaming\npm` and on Unix at
+   `/usr/local/share/npm`.
+   
 ## Create the App
 
 Go to the directory where you maintain your source code, and run a
@@ -76,8 +83,8 @@ command such as the following:
 
         $ cordova create hello com.example.hello HelloWorld
 
-It may take some time for the command to complete, so be patient. Run
-the `cordova -d` to see information about progress.
+It may take some time for the command to complete, so be patient. Running
+the command with the ` -d` option displays information about its progress.
 
 The first argument specifies a _hello_ directory to be generated
 for your project. Its `www` subdirectory houses your application's
@@ -133,17 +140,27 @@ Running commands to add or remove platforms affects the contents of
 the project's _platforms_ directory, where each specified platform
 appears as a subdirectory. The _www_ source directory is reproduced
 within each platform's subdirectory, appearing for example in
-`platforms/ios/www` or `platforms/android/assets/www`.  By default,
-each platform's configuration file is set up to be able to access all
-of Cordova's APIs.
+`platforms/ios/www` or `platforms/android/assets/www`. Because the CLI
+constantly copies over files from the source _www_ folder, you should only
+edit these files and not the ones located under the _platforms_ subdirectories.
+If you use version control software, you should add this source _www_ folder, 
+along with the _merges_ folder, to your version control system. (More information
+about the _merges_ folder can be found in the Customize Each Platform section below.)
 
-If you wish, you can use an SDK at this point to open the project you
-created. However, any edits you make to the project within an SDK
-affect the derivative set of assets, not the original cross-platform
-source files. Use this approach if you simply want to initialize a
-project.
-(See the Platform Guides for information on how to develop applications within each SDK.)
-Read on if you wish to use command-line tools for the entire
+**WARNING**: When using the CLI to build your application, you are strongly discouraged
+from editing any files in the `/platforms/` folder unless you know what you are doing
+or are specifically told otherwise in documentation. This is because the files in the 
+`/platforms/` direcotry will be overwritten on prepare or plugin reinstallation. 
+
+If you wish at this point, you can use an SDK such as Eclipse or Xcode
+to open the project you created. You will need to open the derivative set of assets
+from the `/platforms/` directory to develop with an SDK. This is because
+the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
+(See the Platform Guides for information on how to develop applications within each IDE.)
+Use this approach if you simply want to initialize a project using the CLI and 
+then switch to an SDK for native work.
+
+Read on if you wish to use the cross-platform workflow approach (the CLI) for the entire
 development cycle.
 
 ## Build the App
@@ -243,8 +260,13 @@ Searching for only the `bar` term yields and additional result:
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
 
 The `cordova plugin add` command requires you to specify the
-repository for the plugin code.  Here are examples of features you
-might add:
+repository for the plugin code.  Please note that when you follow the 
+Web Project Dev workflow and use the CLI, the CLI will take care of adding
+the plugin code to the appropriate place for each platform. (If you are following the
+Native Project Dev Workflow, you will have to add plugins using Plugman (guide link here),
+multiple times for each platform.)
+
+Here are examples of how you might use the CLI to add features to the app:
 
 * Basic device information (Device API):
 
