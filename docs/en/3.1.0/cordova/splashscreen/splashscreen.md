@@ -43,7 +43,7 @@ platform-specific configuration settings described below:
 * Android (in `app/res/xml/config.xml`)
 
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
 
 * iOS (in `config.xml`)
@@ -70,8 +70,8 @@ configuration.  See _Platform Support_ in the Overview section.
 
 2. In config.xml, add the following preferences:
 
-        <preference name="splashscreen", "splash" />
-        <preference name="splashScreenDelay", 10000 />
+        <preference name="splashscreen" value="splash" />
+        <preference name="splashScreenDelay" value="10000" />
       
       The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
     The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.

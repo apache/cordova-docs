@@ -30,7 +30,7 @@ connection state, and type of connection.
 
 - iOS
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - Tizen
 - Windows Phone 7 and 8
 - Windows 8
@@ -108,14 +108,14 @@ eventually be removed.
 
 ## iOS Quirks
 
-- iOS cannot detect the type of cellular network connection.
+- iOS can't detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Windows Phone Quirks
 
 - When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-- Windows Phone cannot detect the type of cellular network connection.
+- Windows Phone can't detect the type of cellular network connection.
     - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Tizen Quirks

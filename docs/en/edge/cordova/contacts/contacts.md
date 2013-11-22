@@ -21,21 +21,21 @@
 
 > The `contacts` object provides access to the device contacts database.
 
-__Important privacy note:__ Collection and use of contact data raises
+__WARNING__: Collection and use of contact data raises
 important privacy issues.  Your app's privacy policy should discuss
 how the app uses contact data and whether it is shared with any other
 parties.  Contact information is considered sensitive because it
 reveals the people with whom a person communicates.  Therefore, in
-addition to your app's privacy policy, you should strongly consider
-providing a just-in-time notice prior to your app accessing or using
-contact data (if the device operating system doesn't do so
-already). That notice should provide the same information noted above,
+addition to the app's privacy policy, you should strongly consider
+providing a just-in-time notice before the app accesses or uses
+contact data, if the device operating system doesn't do so
+already. That notice should provide the same information noted above,
 as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  Note that some app
-marketplaces may require your app to provide just-in-time notice and
-obtain permission from the user prior to accessing contact data.  A
+marketplaces may require the app to provide a just-in-time notice and
+obtain the user's permission before accessing contact data.  A
 clear and easy-to-understand user experience surrounding the use of
-contact data will help avoid user confusion and perceived misuse of
+contact data helps avoid user confusion and perceived misuse of
 contact data.  For more information, please see the Privacy Guide.
 
 ## Methods
@@ -63,7 +63,7 @@ contact data.  For more information, please see the Privacy Guide.
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements device-level APIs as _plugins_.
-Use the CLI's `plugin` command, described in The Command-line
+Use the CLI's `plugin` command, described in The Command-Line
 Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.contacts

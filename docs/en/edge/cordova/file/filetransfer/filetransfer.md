@@ -49,14 +49,14 @@ device.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
 
 ## upload
 
-__Parameters:__
+__Parameters__:
 
 - __filePath__: Full path of the file on the device.
 
@@ -202,7 +202,7 @@ to a Nginx server.
 
 ## download
 
-__Parameters:__
+__Parameters__:
 
 - __source__: URL of the server to download the file, as encoded by `encodeURI()`.
 
@@ -212,7 +212,7 @@ __Parameters:__
 
 - __errorCallback__: A callback that executes if an error occurs when retrieving the `Metadata`. Invoked with a `FileTransferError` object. _(Function)_
 
-- __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true` then it will accept all security certificates. This is useful as Android rejects self signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
+- __trustAllHosts__: Optional parameter, defaults to `false`. If set to `true`, it accepts all security certificates. This is useful because Android rejects self-signed security certificates. Not recommended for production use. Supported on Android and iOS. _(boolean)_
 
 - __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 

@@ -30,7 +30,7 @@ subproject-based Cleaver implementation.
 
 These instructions require at least Cordova 2.3 and Xcode 4.5, along
 with a `config.xml` file from a newly created iOS project. You can use
-the procedure in The Command-line Interface to create a new project,
+the procedure in The Command-Line Interface to create a new project,
 then obtain the `config.xml` file from within the named application's
 subdirectory within `platforms/ios`.
 
@@ -39,7 +39,7 @@ distribution. Download it from
 [cordova.apache.org](http://cordova.apache.org) and unzip its iOS
 package.
 
-## Adding Cleaver to the Xcode project (CordovaLib sub-project)
+## Adding Cleaver to the Xcode Project (CordovaLib Sub-Project)
 
 1. Quit Xcode if it is running.
 
@@ -69,7 +69,7 @@ package.
 1. Select the __project icon__ in the __Project Navigator__, select
    the __Target__, then select the __Build Settings__ tab.
 
-1. Add `-all_load` and `-Obj-C` for the __Other Linker Flags__ value.
+1. Add `-force_load` and `-Obj-C` for the __Other Linker Flags__ value.
 
 1. Click on the __project icon__ in the Project Navigator, select the
    __Target__, then select the __Build Phases__ tab.
@@ -159,7 +159,7 @@ package.
 
         [myView addSubview:viewController.view];
 
-## Adding HTML, CSS and JavaScript assets
+## Adding HTML, CSS and JavaScript Assets
 
 1. Create a new directory within the project, `www` for example.
 

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 This section shows how to configure an app's icon and optional splash
 screen for various platforms, both when working in the Cordova CLI
-(described in The Command-line Interface) or using platform-specific
+(described in The Command-Line Interface) or using platform-specific
 SDK tools (detailed in the Platform Guides).
 
 ## Configuring Icons in the CLI
@@ -83,7 +83,7 @@ images for low, medium, high, and extra-high resolutions:
 
 The iOS platform specifies variants for iPhone/iPod and iPad, with
 variants for retina displays and different orientations. The _568h_
-file is customized for the iPhone 5's taller screen:
+file applies to the iPhone 5's taller screen:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -105,32 +105,80 @@ The following sections detail how to set up splash screens when
 working with SDKs and related command-line tools described in Platform
 Guides.
 
-## Splash Screens for the Android Platform 
+Don't forget to install the SplashScreen plugin before trying to use the
+`navigator.splashscreen.hide()` or `navigator.splashscreen.show()` methods.
+
+## Splash Screens for the Android Platform
 
 Place [9-patch image](https://developer.android.com/tools/help/draw9patch.html)
-files in the Android project's `res/drawable` directory. The size for
-each should be:
+files in the Android project's `platforms/android/res/drawable*` directories.
+
+The size for each should be:
 
 - xlarge (xhdpi): at least 960 &times; 720
 - large (hdpi): at least 640 &times; 480
 - medium (mdpi): at least 470 &times; 320
 - small (ldpi): at least 426 &times; 320
 
-In `config.xml`, add the following preferences:
+If you want to use
+the default splash screen images provided in Cordova, you'll need to copy the
+png files from `platforms/android/www/res/screen/android` to
+`platforms/android/res/drawable*/`:
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+    cd platforms/android/res
+    mkdir drawable-port-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+    mkdir drawable-land-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+    mkdir drawable-port-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+    mkdir drawable-land-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+    mkdir drawable-port-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+    mkdir drawable-land-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+    mkdir drawable-port-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+    mkdir drawable-land-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
 
-The first line sets the image to display as the splash screen. If you name your image anything other than `splash.png`, you need to modify this line.
+The `drawable` directory names must follow the Android conventions for
+supporting
+[screen sizes](http://developer.android.com/guide/practices/screens_support.html) and
+[alternate resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
-The second line sets the delay of how long the splashscreen appears in milliseconds. To dismiss the splash screen once the app receives the `deviceready` event, call the `navigator.splashscreen.hide()` method.
+In `config.xml` in the project's `www` directory, add the following preferences:
 
-## Splash Screens for the iOS Platform 
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
 
-Copy your splash screen images into the iOS project's
-`Resources/splash` directory. Only add the images for the devices you
-want to support, such as iPad or iPhone. The size of each image should
-be:
+The first line sets the image to display as the splash screen. This is the
+file name of the png in the `drawable*` directories. If you
+name the image anything other than `splash.png`, you need to modify
+this line. Do not include the filename extension (i.e., `.png`).
+If you want to use the default splash screens provided in
+Cordova as listed above, use the value `screen`.
+
+The second line sets the default delay of how long the splashscreen appears in
+milliseconds. This should be the maximum expected start time.
+The default value for SplashScreenDelay is 3000 ms.
+
+Finally, the splash screen should be present only as long as necessary. When
+your app has started and the webview has loaded, your app should hide the
+splash screen so that your main view is visible. Because the app start time
+will vary quite a bit due to a number of factors, it is recommended that your
+app explicitly invoke `navigator.splashscreen.hide()` in the Javascript
+method that responds to the `deviceready` event. Otherwise the splash screen
+will be visible for the SplashScreenDelay value that you configured above.
+This event-driven approach is highly recommended versus having the splash
+screen visible for always a fixed duration.
+
+## Splash Screens for the iOS Platform
+
+Copy splash screen images into the iOS project's `Resources/splash`
+directory. Only add those images for the devices you want to support,
+such as iPad or iPhone. The size of each image should be:
 
 - Default-568h@2x~iphone.png (640x1136 pixels)
 - Default-Landscape@2x~ipad.png (2048x1496 pixels)
@@ -140,10 +188,10 @@ be:
 - Default@2x~iphone.png (640x960 pixels)
 - Default~iphone.png (320x480 pixels)
 
-## Splash Screens for the BlackBerry 10 Platform 
+## Splash Screens for the BlackBerry 10 Platform
 
-Copy your splash screen images into the project's
-`res/screen/blackberry10` directory. The file names should be:
+Copy splash screen images into the project's `res/screen/blackberry10`
+directory. The file names should be:
 
 - splash-1280x768.png (1280x768 pixels)
 - splash-720x720.png (720x720 pixels)

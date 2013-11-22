@@ -22,42 +22,61 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to modify iOS projects to upgrade from older
 versions of Cordova.  Most of these instructions apply to projects
 created with an older set of command-line tools that precede the
-`cordova` CLI utility. See The Command-line Interface for information
+`cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
-__NOTE:__ Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
+__NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
 Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
 iOS 7 SDK is not required yet, but this may change quickly.
 
-## Upgrading 3.0.0 projects to 3.1.0 ##
+## Upgrading 3.1.0 Projects to 3.2.0
 
 For non-CLI projects, run:
 
         bin/update path/to/project
         
-For CLI projects, run: 
+For CLI projects:
 
-        1. Update the `cordova` CLI version - see The Command-line Interface 
-        2. Run `cordova platform update ios`
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
         
-### iOS 7 Issues
 
-	1. Remove the values "width=device-width, height=device-height" from your meta tag 
-	"viewport" attribute in your index.html file, see https://issues.apache.org/jira/browse/CB-4323
-	2. Update your media, media-capture and splashscreen core plugins for iOS 7 support
-	
-### Xcode 5 Issues	
+## Upgrading 3.0.0 Projects to 3.1.0
 
-	1. Update your Project Settings if Xcode 5 prompts you to do so (in the Issues Navigator)
-	2. Update your "Compiler for C/C++/Objective-C" setting, under the "Build Settings" 
-	tab, "Build Options" section. Choose "Default compiler (Apple LLVM 5.0)"
+For non-CLI projects, run:
 
-## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
+        
+iOS 7 Issues:
+
+1. Remove `width=device-width, height=device-height` from the
+   `index.html` file's `viewport` `meta` tag. (See [the relevent
+   bug](https://issues.apache.org/jira/browse/CB-4323).)
+
+2. Update your media, media-capture and splashscreen core plugins for
+   iOS 7 support.
+
+Xcode 5 Issues:
+
+1. Update your Project Settings if Xcode 5 prompts you to do so (in the Issues Navigator).
+
+2. Update your __Compiler for C/C++/Objective-C__ setting, under the
+   __Build Settings__ tab, __Build Options__ section. Choose __Default
+   compiler (Apple LLVM 5.0)__.
+
+## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in The Command-Line Interface.
 
-2. Add your platforms the the cordova project, for example: `cordova
+2. Add your platforms to the cordova project, for example: `cordova
    platform add ios`.
 
 3. Copy the contents of the project's `www` directory to the `www` directory
@@ -77,7 +96,7 @@ For CLI projects, run:
 
 7. Build and test.
 
-## Upgrading 2.9.0 projects to 3.0.0 ##
+## Upgrading 2.9.0 Projects to 3.0.0
 
 1. Download and extract the Cordova 3.0.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-3.0.0`.
 
@@ -93,12 +112,11 @@ For CLI projects, run:
 
 7. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-__NOTE:__ Starting with Cordova 3.0.0, projects do not come with any
-plugins, you will have to install the ones you require for your
-project using the `plugman` command-line utility. See Using Plugman to
-Manage Plugins.
+__NOTE__: Starting with Cordova 3.0.0, plugins are not pre-installed,
+and you need to use the `plugman` command-line utility to install them
+yourself. See Using Plugman to Manage Plugins.
 
-## Upgrading 2.8.0 projects to 2.9.0 ##
+## Upgrading 2.8.0 Projects to 2.9.0
 
 1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.9.0`.
 
@@ -114,7 +132,7 @@ Manage Plugins.
 
 7. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-## Upgrading 2.7.0 projects to 2.8.0 ##
+## Upgrading 2.7.0 Projects to 2.8.0
 
 1. Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.8.0`.
 
@@ -128,7 +146,7 @@ Manage Plugins.
 
 6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
-7. Update any `<plugin>` tags that are in your `config.xml` to `<feature>` tags. Note that existing `<plugin>` tags will still work, but are deprecated. You can copy this information in the `config.xml` for a new project. For example:
+7. Update any `<plugin>` tags in the `config.xml` file to `<feature>` tags. Note that existing `<plugin>` tags still work, but are deprecated. You can copy this information in the `config.xml` file for a new project. For example:
 
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />
@@ -142,7 +160,7 @@ Manage Plugins.
     	<!-- other <feature> tags -->
         
 
-8. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
+8. Delete the `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
 9. Add these two frameworks to your project:
         
@@ -153,7 +171,7 @@ Manage Plugins.
 
 11. Update your project's target __Build Settings__. Under __Linking &rarr; Other Linker Flags__, change __"-all\_load"__ to be `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a`. You would only need to do this if you have the problem defined in [this issue.](https://issues.apache.org/jira/browse/CB-3458).
 
-## Upgrading 2.6.0 projects to 2.7.0 ##
+## Upgrading 2.6.0 Projects to 2.7.0
 
 1. Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.7.0`.
 
@@ -173,7 +191,7 @@ Manage Plugins.
 
 9. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-## Upgrading 2.5.0 projects to 2.6.0 ##
+## Upgrading 2.5.0 Projects to 2.6.0
 
 1. Download and extract the Cordova 2.6.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.6.0`.
 
@@ -199,7 +217,7 @@ Manage Plugins.
 
 11. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-## Upgrading 2.4.0 projects to 2.5.0 ##
+## Upgrading 2.4.0 Projects to 2.5.0
 
 1. Download and extract the Cordova 2.5.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.5.0`.
 
@@ -225,7 +243,7 @@ Manage Plugins.
 
 12. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-## Upgrading 2.3.0 projects to 2.4.0 ##
+## Upgrading 2.3.0 Projects to 2.4.0
 
 1. Download and extract the Cordova 2.4.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.4.0`.
 
@@ -249,9 +267,9 @@ Manage Plugins.
 
 11. Delete your `CordovaLib` directory, and copy the `CordovaLib` directory from the new project into your project's root directory.
 
-12. Add AssetsLibrary.framework as a resource to your project.  (Go [here](https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) for instructions on how to do so.).
+12. Add AssetsLibrary.framework as a resource to your project.  (See [Apple's documentation](https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html) for instructions on how to do so.).
 
-## Upgrading 2.2.0 projects to 2.3.0 ##
+## Upgrading 2.2.0 Projects to 2.3.0
 
 1. Download and extract the Cordova 2.3.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.3.0`.
 
@@ -277,15 +295,15 @@ Manage Plugins.
 
         <plugin name="InAppBrowser" value="CDVInAppBrowser" />
 
-12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you will need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
-You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (CDVViewController) also has a `URLisAllowed` method for you to check whether a URL will pass the whitelist.
+12. Note that Objective-C plugins are _not_ whitelisted anymore. To whitelist your connections with the app whitelist, you need to set the `User-Agent` header of the connection to the same user-agent as the main Cordova WebView.
+You can get this by accessing the `userAgent` property off the main view-controller. The main view-controller (`CDVViewController`) also has a `URLisAllowed` method for you to check whether a URL passes the whitelist.
 
 13. Device API changes:
-    * For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
-    * For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
-    * For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
+    - For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
+    - For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
+    - For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
 
-## Upgrading 2.1.0 projects to 2.2.0 ##
+## Upgrading 2.1.0 Projects to 2.2.0
 
 1. Download and extract the Cordova 2.2.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.2.0`.
 
@@ -311,9 +329,9 @@ You can get this by accessing the `userAgent` property off the main view-control
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-__NOTE:__ In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
+__NOTE__: In 2.2.0, the `bin/create` script copy in the `CordovaLib` sub-project into your project. To have the same kind of setup, just copy in the right `CordovaLib` into your project directory, and update the `CordovaLib` sub-project location (relative to the project) in the Xcode File Inspector.
 
-## Upgrading 2.0.0 projects to 2.1.0 ##
+## Upgrading 2.0.0 Projects to 2.1.0
 
 With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference Counting (ARC)__. You don't need to upgrade to __ARC__ to use CordovaLib, but if you want to upgrade your project to use __ARC__, please use the Xcode migration wizard from the menu: __Edit &rarr; Refactor &rarr; Convert to Objective-C ARC...__, de-select libCordova.a, then run the wizard to completion.
 
@@ -347,7 +365,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
         `update_cordova_subproject path/to/your/project/xcodeproj`
 
-## Upgrading 1.9.0 projects to 2.0.0 ##
+## Upgrading 1.9.0 Projects to 2.0.0
 
 1. Install Cordova 2.0.0.
 
@@ -403,7 +421,7 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 22. Select the __project icon__ in the Project Navigator, select your project __Target__, then select the __Build Settings__ tab.
 
-23. Search for __Other Linker Flags__, and add the values __-all_load__ and __-Obj-C__.
+23. Search for __Other Linker Flags__, and add the values __-force_load__ and __-Obj-C__.
 
 24. Expand the `CordovaLib` sub-project.
 
@@ -439,9 +457,9 @@ With Cordova 2.1.0, `CordovaLib` has been upgraded to use __Automatic Reference 
 
 36. Select the __Run__ button.
 
-__NOTE:__ If your project is not working as expected in the Simulator, please take a note of any errors in the console log in Xcode for clues.
+__NOTE__: If your project is not working as expected in the Simulator, please take a note of any errors in the console log in Xcode for clues.
 
-## Upgrading 1.8.x projects to 1.9.0 ##
+## Upgrading 1.8.x Projects to 1.9.0
 
 1. Install Cordova 1.9.0.
 
@@ -451,10 +469,10 @@ __NOTE:__ If your project is not working as expected in the Simulator, please ta
 
 4. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.9.0.js` file.
 
-__NOTE:__ 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
+__NOTE__: 1.9.0 supports the new `BackupWebStorage` boolean `Cordova.plist` setting. It's enabled by default, so set it to
 `false` to disable it, especially on iOS 6. See [Release Notes: Safari and UIKit Section](https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html)
 
-## Upgrading 1.7.0 projects to 1.8.x ##
+## Upgrading 1.7.0 Projects to 1.8.x
 
 1. Install Cordova 1.8.0.
 
@@ -472,7 +490,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 3.  Drag the new `Capture.bundle` from Step 1 above into your Project Navigator in Xcode, then select the __Create groups for any added folders__ radio button.
 
-## Upgrading 1.6.x projects to 1.7.0 ##
+## Upgrading 1.6.x Projects to 1.7.0
 
 1. Install Cordova 1.7.0.
 
@@ -482,7 +500,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 4. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-1.7.0.js` file.
 
-## Upgrading 1.5.0 projects to 1.6.x ##
+## Upgrading 1.5.0 Projects to 1.6.x
 
 1. Install Cordova 1.6.1.
 
@@ -511,7 +529,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any settings, __Plugins__ and __ExternalHosts__ entries that you had in your __backed-up Cordova.plist__ into the new `Cordova.plist`.
 
-10. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files. Any `UIWebViewDelegate` or `CDVCommandDelegate` code in `AppDelegate.m` will need to go into `MainViewController.m` now (see commented out sections in that file).
+10. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new `AppDelegate` files. Any `UIWebViewDelegate` or `CDVCommandDelegate` code in `AppDelegate.m` needs to go into `MainViewController.m` now (see commented-out sections in that file).
 
 11. Integrate any project-specific code that you have in your backed-up `MainViewController.h` and `MainViewController.m` into the new MainViewController files.
 
@@ -521,7 +539,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 14. Select the __Apple LLVM Compiler 3.1__ value.
 
-## Upgrading 1.4.x projects to 1.5.0 ##
+## Upgrading 1.4.x Projects to 1.5.0
 
 1. Install Cordova 1.5.0.
 
@@ -591,11 +609,11 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 32. Enter __PG__ for the Find string, and __CDV__ for the Replace
     string, then press the __Replace All__ button.
 
-33. Press __Command-B__ to build, you will still have deprecations
+33. Press __Command-B__ to build. You still have deprecations
     that you can get rid of in the future (see `CDVDeprecated.h`. For
     example, replace classes in your code that use PG* to CDV*).
 
-## Upgrading 1.4.0 projects to 1.4.1 ##
+## Upgrading 1.4.0 Projects to 1.4.1
 
 1. Install Cordova 1.4.1.
 
@@ -611,7 +629,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 7. Updating the `phonegap-1.4.0.js` file is optional, nothing has changed in the JavaScript between 1.4.0 and 1.4.1.
 
-## Upgrading 1.3.0 projects to 1.4.0 ##
+## Upgrading 1.3.0 Projects to 1.4.0
 
 1. Install Cordova 1.4.0.
 
@@ -638,7 +656,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
-## Upgrading 1.2.0 projects to 1.3.0 ##
+## Upgrading 1.2.0 Projects to 1.3.0
 
 1. Install Cordova 1.3.0.
 
@@ -665,7 +683,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
-## Upgrading 1.1.0 projects to 1.2.0 ##
+## Upgrading 1.1.0 Projects to 1.2.0
 
 1. Install Cordova 1.2.0.
 
@@ -692,7 +710,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
-## Upgrading 1.0.0 projects to 1.1.0 ##
+## Upgrading 1.0.0 Projects to 1.1.0
 
 1. Install Cordova 1.1.0.
 
@@ -719,7 +737,7 @@ If you intend on using the Capture API, you will need the new __iPad retina-disp
 
 9. Integrate any project-specific code that you have in your backed-up `AppDelegate.h` and `AppDelegate.m` into the new AppDelegate files.
 
-## Upgrading 0.9.6 projects to 1.0.0 ##
+## Upgrading 0.9.6 Projects to 1.0.0
 
 1. Install Cordova 1.0.0.
 

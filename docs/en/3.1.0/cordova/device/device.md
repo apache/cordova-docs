@@ -56,11 +56,8 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Device">
-            <param name="android-package" value="org.apache.cordova.Device" />
+            <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
-
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 * BlackBerry WebWorks
 

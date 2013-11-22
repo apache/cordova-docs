@@ -32,16 +32,16 @@ This API is based on the
 [W3C Geolocation API Specification](http://dev.w3.org/geo/api/spec-source.html),
 and only executes on devices that don't already provide an implementation.
 
-__Important privacy note:__ Collection and use of geolocation data
+__WARNING__: Collection and use of geolocation data
 raises important privacy issues.  Your app's privacy policy should
 discuss how the app uses geolocation data, whether it is shared with
 any other parties, and the level of precision of the data (for
 example, coarse, fine, ZIP code level, etc.).  Geolocation data is
-generally considered sensitive because it can reveal a person's
-whereabouts and, if stored, the history of his or her travels.
-Therefore, in addition to your app's privacy policy, you should
-strongly consider providing a just-in-time notice prior to your app
-accessing geolocation data (if the device operating system doesn't do
+generally considered sensitive because it can reveal user's
+whereabouts and, if stored, the history of their travels.
+Therefore, in addition to the app's privacy policy, you should
+strongly consider providing a just-in-time notice before the app
+accesses geolocation data (if the device operating system doesn't do
 so already).  That notice should provide the same information noted
 above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
@@ -68,7 +68,7 @@ see the Privacy Guide.
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements device-level APIs as _plugins_.
-Use the CLI's `plugin` command, described in The Command-line
+Use the CLI's `plugin` command, described in The Command-Line
 Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.geolocation
@@ -101,6 +101,12 @@ platform-specific configuration settings described below:
         <rim:permissions>
             <rim:permit>read_geolocation</rim:permit>
         </rim:permissions>
+
+* FirefoxOS (in the manifest.webapp file)
+
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
 
 * iOS (in the named application directory's `config.xml`)
 

@@ -44,7 +44,7 @@ for guidance.
 ## Building a Plugin
 
 Application developers use the CLI's `plugin add` command (discussed
-in The Command-line Interface) to apply a plugin to a project. The
+in The Command-Line Interface) to apply a plugin to a project. The
 argument to that command is the URL for a _git_ repository containing
 the plugin code.  This example implements Cordova's Device API:
 
@@ -96,7 +96,7 @@ correctly for each platform.  Install `plugman` with the following
 
 You need an valid app source directory, such as the top-level `www`
 directory included in a default CLI-generated project as described in
-The Command-line Interface.  Make sure the app's `index.html` home
+The Command-Line Interface.  Make sure the app's `index.html` home
 page reference the name of the plugin's JavaScript interface, as if it
 were in the same source directory:
 
@@ -189,15 +189,23 @@ listed below, and each builds on the simple Echo Plugin example above:
 
 The Tizen platform does not support plugins.
 
-## Publishing plugins
+## Publishing Plugins
 
-Once you developed your plugin, you might want to publish it and share it with the community. You can publish your plugin to the cordova registry (based on [npmjs](https://github.com/isaacs/npmjs.org)) or to any other npmjs based registry. Users will be able to install it automatically using either plugman or cordova-cli.
+Once you develop your plugin, you may want to publish and share it
+with the community. You can publish your plugin to the cordova
+registry (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
+to any other `npmjs`-based registry. Other developers can install it
+automatically using either `plugman` or the Cordova CLI.  (For details
+on each development path, see Using Plugman to Manage Plugins and The
+Command-Line Interface.)
 
-To publish a plugin you need to use the plugman tool and go through the following steps:
+To publish a plugin you need to use the `plugman` tool and go through
+the following steps:
 
     $ plugman adduser # that is if you don't have an account yet
     $ plugman publish /path/to/your/plugin
     
 That is it!
 
-Other registry-based commands are available and `plugman --help` will give you a list of what commands are available and how to use them.
+Running `plugman --help` lists other available registry-based
+commands.

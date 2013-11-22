@@ -29,8 +29,7 @@ not connected to the Internet.
 The `offline` event fires when a previously connected device loses a
 network connection so that an application can no longer access the
 Internet.  It relies on the same information as the Connection API,
-and fires when the `connection.type` changes from `NONE` to any other
-value.
+and fires when the value of `connection.type` becomes `NONE`.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.

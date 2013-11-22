@@ -78,13 +78,13 @@ platform-specific configuration settings described below:
 
         (in app/res/xml/config.xml)
         <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.ContactManager" />
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
 
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.READ_CONTACTS" />
         <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
 * BlackBerry WebWorks
 

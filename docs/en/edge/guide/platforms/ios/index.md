@@ -30,7 +30,7 @@ following for more detailed platform-specific information:
 * iOS Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -72,7 +72,7 @@ __Install__ button next to the __Command Line Tools__ listing.
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -148,7 +148,7 @@ To deploy to the device:
 
 ## Common Problems
 
-__Deprecation Warnings:__ When an application programming interface
+__Deprecation Warnings__: When an application programming interface
 (API) is changed or replaced by another API, it is marked as
 _deprecated_.  The API still works in the near term, but is eventually
 removed.  Some of these deprecated interfaces are reflected in Apache

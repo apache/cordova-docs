@@ -19,10 +19,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Platform Guides
 
+Before developing for any of the platforms listed below, install
+cordova's command-line interface (CLI).
+(For details, see The Command-Line Interface.)
+
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless
-of whether you do the majority of your work in the SDK (Native Platform Dev
-workflow) or use the The Command-line Interface (Web Project Dev workflow.)
+of whether you do the majority of your work in the SDK or use the 
+CLI for your build cycle. 
 
 Each _Platform Guide_ listed below tells you what you need to know to
 set up each platform's development environment: where to obtain the

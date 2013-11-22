@@ -23,7 +23,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
-__NOTE:__ The current implementation does not adhere to a W3C
+__NOTE__: The current implementation does not adhere to a W3C
 specification for media capture, and is provided for convenience only.
 A future implementation will adhere to the latest W3C specification
 and may deprecate the current APIs.
@@ -81,7 +81,7 @@ The following constants are reported as the only parameter to the
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7.5
 - Tizen
@@ -90,7 +90,7 @@ The following constants are reported as the only parameter to the
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements device-level APIs as _plugins_.
-Use the CLI's `plugin` command, described in The Command-line
+Use the CLI's `plugin` command, described in The Command-Line
 Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.media 
@@ -141,7 +141,7 @@ platform-specific configuration settings described below:
 Some platforms may support this feature without requiring any special
 configuration.  See Platform Support for an overview.
 
-### Windows Phone Quirks
+## Windows Phone Quirks
 
 - Only one media file can be played back at a time.
 

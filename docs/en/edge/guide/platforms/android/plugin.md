@@ -93,7 +93,7 @@ exception names as much as possible.
 ## Threading
 
 The plugin's JavaScript does _not_ run in the main thread of the
-`WebView` interface; instead, it runs on the the `WebCore` thread, as
+`WebView` interface; instead, it runs on the `WebCore` thread, as
 does the `execute` method.  If you need to interact with the user
 interface, you should use the following variation:
 

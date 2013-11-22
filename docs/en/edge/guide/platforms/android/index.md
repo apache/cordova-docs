@@ -35,6 +35,10 @@ See the following for more detailed platform-specific information:
 * Upgrading Android
 * Android Command-line Tools
 
+The command-line tools above refer to versions prior to Cordova 3.0.
+See The Command-Line Interface for information about the
+current interface.
+
 ## Requirements and Support
 
 See the [System Requirements](http://developer.android.com/sdk/index.html)
@@ -50,13 +54,18 @@ NOTE, doc said:
 - Android 3.x (Deprecated May 2013)
 -->
 
-## Install the Android SDK
+Developers should use the `cordova` utility in conjunction with
+the Android SDK.  See The Command-Line Interface for
+information how to install it, add projects, then build and deploy a
+project.
 
 Install the Android SDK from
-[developer.android.com/sdk](http://developer.android.com/sdk/).  You
-may be presented with a choice of where to install the SDK, otherwise
-move the downloaded `adt-bundle` tree to wherever you store
-development tools.
+[developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
+is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file.
+On windows, the adt-bundle is packaged with an installer.
+On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
+[More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
+
 
 For Cordova command-line tools to work, you need to include the SDK's
 `tools` and `platform-tools` directories in your PATH environment.  On
@@ -98,7 +107,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -175,7 +184,7 @@ application to the emulator from the command line:
 
         $ cordova emulate android
 
-If instead you are working within Eclipse, right-click the project and
+If instead you work within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
 specify an AVD if none are already open.
 

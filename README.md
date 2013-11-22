@@ -146,7 +146,7 @@ and there are a handful of [good](http://dillinger.io/) online editors.
 Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are
 used to generate the HTML documentation.
 
-Generated a Version Release
+Generating a Version Release
 ---------------------------
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.

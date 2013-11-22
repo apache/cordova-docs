@@ -39,7 +39,7 @@ for an overview.
 The Windows 8 command-line tools only support creating new projects.
 Commands must be run from a cmd or powershell prompt.
 
-## Create a project
+## Create a Project
 
 Run the `create` command with the following parameters:
 

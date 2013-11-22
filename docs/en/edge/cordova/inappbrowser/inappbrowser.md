@@ -23,8 +23,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
-__NOTE:__ The InAppBrowser window behaves like a standard web browser,
-and cannot access Cordova APIs.
+__NOTE__: The InAppBrowser window behaves like a standard web browser,
+and can't access Cordova APIs.
 
 ## Description
 
@@ -42,7 +42,7 @@ The object returned from a call to `window.open`.
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements device-level APIs as _plugins_.
-Use the CLI's `plugin` command, described in The Command-line
+Use the CLI's `plugin` command, described in The Command-Line
 Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.inappbrowser
@@ -206,7 +206,7 @@ The function is passed an `InAppBrowserEvent` object.
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
 
@@ -272,7 +272,7 @@ The function is passed an `InAppBrowserEvent` object.
 
     ref.show();
 
-- __ref:__ reference to the InAppBrowser window (`InAppBrowser`)
+- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
 
 ## Supported Platforms
 
@@ -347,7 +347,7 @@ The function is passed an `InAppBrowserEvent` object.
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
 
 ## Full Example
@@ -444,10 +444,10 @@ The function is passed an `InAppBrowserEvent` object.
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
 
         function iabClose(event) {

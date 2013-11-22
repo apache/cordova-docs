@@ -31,7 +31,7 @@ specification.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -40,7 +40,7 @@ specification.
 
 Read the entries in this directory.
 
-__Parameters:__
+__Parameters__:
 
 - __successCallback__: A callback that is passed an array of `FileEntry` and `DirectoryEntry` objects. _(Function)_
 

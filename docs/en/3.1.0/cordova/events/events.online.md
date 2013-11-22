@@ -29,7 +29,8 @@ becomes connected to the Internet.
 The `online` event fires when a previously unconnected device receives
 a network connection to allow an application access to the Internet.
 It relies on the same information as the Connection API, and fires
-when the value of `connection.type` becomes `NONE`.
+when the value of `connection.type` changes from `NONE` to any other
+value.
 
 Applications typically should use `document.addEventListener` to
 attach an event listener once the `deviceready` event fires.

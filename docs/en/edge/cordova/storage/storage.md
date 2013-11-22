@@ -21,32 +21,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 > An overview of storage options for Cordova.
 
-There are several storage APIs that are available to Cordova applications. For
-a more complete overview and examples, see
-[http://www.html5rocks.com/en/features/storage](http://www.html5rocks.com/en/features/storage).
+Several storage APIs are available for Cordova applications. 
+See
+[html5rocks](http://www.html5rocks.com/en/features/storage).
+for a more complete overview and examples.
 
 ## LocalStorage
 
-This API is provided by the underlying WebView implementations. It provides
-synchronous key/value pair storage. Refer to [the spec](http://www.w3.org/TR/webstorage/) for more details.
+Also known as _web storage_, _simple storage_, or by its alternate
+_session storage_ interface, this API provides synchronous key/value
+pair storage, and is available in underlying WebView implementations.
+Refer to [the W3C spec](http://www.w3.org/TR/webstorage/) for details.
 
-### Platform Support
-
-- All of them :)
-
-### Windows Phone 7 Quirks
-
-Dot notation is _not_ available on Windows Phone 7. Be sure to use
-`setItem` or `getItem`, rather than accessing keys directly from the
-storage object, such as `window.localStorage.someKey`.
+__Windows Phone 7 Quirk__: Dot notation is _not_ available, so be sure
+to use `setItem` or `getItem` rather than access keys directly from
+the storage object, as in `window.localStorage.someKey`.
 
 ## WebSQL
 
-This API is provided by the underlying WebView.
+This API is available in the underlying WebView.
 The [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
 offers more full-featured database tables accessed via SQL queries.
 
-### Platform Support
+The following platforms support WebSQL:
 
 - Android
 - BlackBerry 10
@@ -55,15 +52,19 @@ offers more full-featured database tables accessed via SQL queries.
 
 ## IndexedDB
 
-This API is provided by the underlying WebView.
-[Indexed DB](http://www.w3.org/TR/IndexedDB/) offers more features than LocalStorage but fewer than WebSQL.
+This API is available in the underlying WebView.
+[Indexed DB](http://www.w3.org/TR/IndexedDB/) offers more features
+than LocalStorage but fewer than WebSQL.
 
-### Platform Support
+The following platforms support IndexedDB:
 
 - Windows Phone 8
 - BlackBerry 10
 
 ## Plugin-Based Options
 
-* Most notably - The File API.
-* More storage options exist through [Cordova plugins](http://plugins.cordova.io/).
+In addition to the storage APIs listed above, the File API allows you
+to cache data on the local file system.  Other
+[Cordova plugins](http://plugins.cordova.io/) provide similar storage
+options.
+

@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# The Command-line Interface
+# The Command-Line Interface
 
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
@@ -170,9 +170,6 @@ application whose home page is the project's `www/index.html` file.
 Edit this application however you want, but any initialization should
 be specified as part of the `deviceready` event handler, referenced by
 default from `www/js/index.js`.
-<!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
 
 Run the following command to iteratively build the project:
 
@@ -247,9 +244,6 @@ example when designing a hybrid app that mixes a Cordova WebView with
 native components. (See Embedding WebViews and Plugin Development
 Guide for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
-<!-- XREF
-discussed in the Application Development Guide and
-XREF -->
 detailed in the API Reference. A list of these plugins, including
 additional plugins provided by the community, can be found at
 [plugins.cordova.io](http://plugins.cordova.io/). You can use
@@ -385,7 +379,7 @@ contains the `plugin.xml` file:
 
         $ cordova plugin add ../my_plugin_dir
 
-## Customize Each Platform
+## Using _merges_ to Customize Each Platform
 
 While Cordova allows you to easily deploy an app for many different
 platforms, sometimes you need to add customizations.  In that case,
@@ -427,32 +421,29 @@ button.
 
 ## Help Commands
 
-If at any point you get stuck, Cordova has a couple global "help" commands.
-
-The first, `help` will print out a list of all available actions that Cordova can do
+Cordova features a couple of global commands, which may help you if
+you get stuck or experience a problem.  The `help` command displays
+all available Cordova commands and their syntax:
 
     $ cordova help
+    $ cordova        # same
 
-The second, `info` will print out useful information, such as installed platforms, node.js version, etc.., that are helpful for submitting bug reports and getting help.  It will also create an info.txt file at the base of your project. __Note: Currently iOS and Android platforms are output__
+The `info` command produces a listing of potentially useful details,
+such as currently installed platforms and plugins, SDK versions for
+each platform, and versions of the CLI and `node.js`:
 
     $ cordova info
 
-## Updating the App
+It both presents the information to screen and captures the output in
+a local `info.txt` file.
 
-When a new version of Cordova is released, you should update your 
-`cordova` utility by following the Updating Cordova section below.
-Once you have updated Cordova, you can update the Cordova resources that
-your project uses by typing:
+__NOTE__: Currently, only details on iOS and Android platforms are
+available.
 
-        $ cordova platform update <PLATFORM>
-This will replace the old cordova resources with new ones for the
-specified PLATFORM. You should do this for every platform that you
-are developing for. 
+## Updating Cordova and Your Project
 
-## Updating Cordova
-
-After installing the `cordova` utility, you can always
-update it to the latest version by running the following command:
+After installing the `cordova` utility, you can always update it to
+the latest version by running the following command:
 
         $ sudo npm update -g cordova
 
@@ -460,7 +451,7 @@ Use this syntax to install a specific version:
 
         $ sudo npm install -g cordova@3.1.0
 
-Run `cordova -v` to see the currently running version.  Run the `npm
+Run `cordova -v` to see which version is currently running.  Run the `npm
 info` command for a longer listing that includes the current version
 along with other available version numbers:
 
@@ -474,3 +465,15 @@ Where applicable, further details about upgrading to 3.0 are available
 in the Platform Guides.  Once you upgrade to the `cordova`
 command-line interface and use `npm update` to stay current, the more
 time-consuming procedures described there are no longer relevant.
+
+Cordova 3.0+ may still require various changes to
+project-level directory structures and other dependencies. After you
+run the `npm` command above to update Cordova itself, you may need to
+ensure your project's resources conform to the latest version's
+requirements. Run a command such as the following for each platform
+you're building:
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.
+

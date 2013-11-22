@@ -28,7 +28,7 @@ Returns a pattern string to format and parse numbers according to the client's u
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object contains the following properties:
 
-- __pattern__: The number pattern to format and parse numbers.  The patterns follow Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. _(String)_
+- __pattern__: The number pattern to format and parse numbers.  The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). _(String)_
 
 - __symbol__: The symbol to use when formatting and parsing, such as a percent or currency symbol. _(String)_
 
@@ -57,7 +57,7 @@ The `options.type` can be `decimal`, `percent`, or `currency`.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 8
 

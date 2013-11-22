@@ -59,7 +59,7 @@ map the `Echo` argument to the native `Echo` class:
 The `feature` specification's `value` attribute references a reverse
 domain-style identifier. This corresponds to a path within the Cordova
 BlackBerry WebWorks repo's `framework/ext/src` directory.  Add a
-`framework/ext/src/org/apache/cordova/echo` directory and and add a
+`framework/ext/src/org/apache/cordova/echo` directory and add a
 `Echo.java` file.
 
 The `Echo.java` needs to define a class that extends the `Plugin`
@@ -118,7 +118,7 @@ message.  This value, in turn, is passed back as an argument to the
 JavaScript success callback. In case of error, various status codes
 are sent back to the JavaScript's error callback.
 
-## Updating the .jar in the project's www directory
+## Updating the .jar in the Project's www Directory
 
 The added `Echo.java` needs to be updated in your project.  To build
 the `.jar` file, navigate to the BlackBerry WebWorks repo's root

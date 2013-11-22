@@ -40,21 +40,21 @@ instance, or the system browser.
 
     - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
     
-    Android only
-    --------------------
-    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. 
-    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
-    - __clearcache__ - set to 'yes' to have the browser's cookie cache cleared before the new window is opened
-    - __clearsessioncache__ - set to 'yes' to have the session cookie cache cleared before the new window is opened
+    Android only:
 
-    iOS only
-    --------
-    - __closebuttoncaption__ - set to a string that will be the caption for the "Done" button. Note that you will have to localize this value yourself.
-    - __hidden__ - set to 'yes' to create the browser and load the page, but not show it. The load event will fire when loading is complete. Omit or set to 'no' (default) to have the browser open and load normally. 
-    - __toolbar__ -  set to 'yes' or 'no' to turn the toolbar on or off for the InAppBrowser (defaults to 'yes')
+    - __closebuttoncaption__: set to a string to use as the __Done__ button's caption.
+    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally. 
+    - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
+    - __clearsessioncache__: set to `yes` to have the session cookie cache cleared before the new window is opened
+
+    iOS only:
+
+    - __closebuttoncaption__: set to a string to use as the __Done__ button's caption. Note that you need to localize this value yourself.
+    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally. 
+    - __toolbar__:  set to `yes` or `no` to turn the toolbar on or off for the InAppBrowser (defaults to `yes`)
     - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
     - __mediaPlaybackRequiresUserAction__: Set to `yes` or `no` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
-    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow inline HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
+    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
     - __keyboardDisplayRequiresUserAction__: Set to `yes` or `no` to open the keyboard when form elements receive focus via JavaScript's `focus()` call (defaults to `yes`).
     - __suppressesIncrementalRendering__: Set to `yes` or `no` to wait until all new view content is received before being rendered (defaults to `no`).
     - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to `fullscreen`).

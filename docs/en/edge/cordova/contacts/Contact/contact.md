@@ -25,7 +25,7 @@ Contains properties that describe a contact, such as a user's personal or busine
 
 - __id__: A globally unique identifier. _(DOMString)_
 
-- __displayName__: The name of this Contact, suitable for display to end-users. _(DOMString)_
+- __displayName__: The name of this Contact, suitable for display to end users. _(DOMString)_
 
 - __name__: An object containing all components of a persons name. _(ContactName)_
 
@@ -66,14 +66,14 @@ created, stored, or removed from the device contacts database.
 Contacts can also be retrieved (individually or in bulk) from the
 database by invoking the `contacts.find` method.
 
-__NOTE:__ Not all of the contact fields listed above are supported on
+__NOTE__: Not all of the contact fields listed above are supported on
 every device platform.  Please check each platform's _Quirks_ section
 for details.
 
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -198,7 +198,7 @@ for details.
 
 - __categories__:  Not supported on Android 2.X devices, returning `null`.
 
-## BlackBerry WebWorks (OS 5.0 and higher) Quirks
+## BlackBerry WebWorks 5.0+ Quirks
 
 - __id__: Supported.  Assigned by the device when saving the contact.
 
@@ -236,7 +236,7 @@ for details.
 
 - __displayName__: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
 
-- __urls__: When creating a contact, users can input and save more than one web address, but only one is available is available when searching the contact.
+- __urls__: When creating a contact, users can input and save more than one web address, but only one is available when searching the contact.
 
 - __phoneNumbers__: The _pref_ option is not supported. The _type_ is not supported in a _find_ operation. Only one `phoneNumber` is allowed for each _type_.
 

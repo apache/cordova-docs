@@ -26,11 +26,13 @@ config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
   application stays running in the background even after a `pause`
-  event fires.
+  event fires. Note: setting this to false will not kill the app after
+  a pause event, it will only halt execution of code in the cordova
+  webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>
 
-- `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
+- `LoadUrlTimeoutValue` (number, default to `20000`, 20 seconds): When loading a
   page, the amount of time to wait before throwing a timeout error.
   This example specifies 10 seconds rather than 20:
 

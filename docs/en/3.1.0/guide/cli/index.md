@@ -38,7 +38,7 @@ the command-line interface from the same machine that supports the
 platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
-* Android         (Mac, Linux)
+* Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)

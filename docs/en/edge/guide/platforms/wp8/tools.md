@@ -43,14 +43,20 @@ prompt.
 The WP8 repo now includes code for building both WP7 + WP8 apps.  The
 repo has subdirectories for each: `wp7/` and `wp8/`.
 
-## Create a project
+## Create a Project
 
 There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 application.
 
-### Run the batch file to create and install the templates.
+### Run the Batch File to Create and Install the Templates
 
-- The root of the repo contains a file createTemplates.bat.  Double clicking this file will generate 2 .zip files. (CordovaWP7_x_x_x.zip + CordovaWP8_x_x_x.zip where x.x.x is the current version number)  To easily use these files in Visual Studio, copy them to 
-"My Documents\Visual Studio 2012\Templates\ProjectTemplates\" You will then be able to create new Apache Cordova Windows Phone apps from the Visual Studio File->New Project menu.
+- The root of the repo contains a `createTemplates.bat` file.
+  Double-clicking it generates two `.zip` files:
+  `CordovaWP7_x_x_x.zip` and `CordovaWP8_x_x_x.zip`, where _x.x.x_
+  represents the current version number. To easily use these files in
+  Visual Studio, copy them to `My Documents\Visual Studio
+  2012\Templates\ProjectTemplates\`. You are then able to create
+  new Apache Cordova Windows Phone apps from Visual Studio's
+  __File &rarr; New Project__ menu.
 
 - If you run the batch file from the command line, you can also call with a parameter to install automatically
 
@@ -58,7 +64,7 @@ Run the script :
 
     >createTemplates.bat -install
 
-### Use the create scripts on the command line
+### Use the Create Scripts on the Command Line
 
 Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
@@ -79,7 +85,7 @@ Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project
 
 Build and Run it
 
-## Building your project (cleans then builds)
+## Building the Project (Clean, then Build)
 
 * Debug
 
@@ -89,7 +95,7 @@ Build and Run it
 
     $ C:\path\to\my_new_project\cordova\build --release
 
-## Running your application
+## Running the App
 
 Run the 'run' command with the following *optional* parameters
 
@@ -99,7 +105,7 @@ Run the 'run' command with the following *optional* parameters
 
     $ C:\path\to\my_new_project\cordova\run [Target] [Build]
 
-By default the `run` command will be called with `--emulator --debug` if flags are not provided.
+By default the `run` command is called with `--emulator --debug` if flags are not provided.
 
 ## Cleaning
 

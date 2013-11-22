@@ -46,7 +46,7 @@ an instance of a `File` object by calling a `FileEntry` object's
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -58,7 +58,7 @@ specified portion of the file.  Negative values for `start` or `end`
 are measured from the end of the file.  Indexes are positioned
 relative to the current slice. (See the full example below.)
 
-__Parameters:__
+__Parameters__:
 
 - __start__: The index of the first byte to read, inclusive.
 

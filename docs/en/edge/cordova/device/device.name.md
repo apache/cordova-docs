@@ -19,7 +19,7 @@
 
 # device.name
 
-__WARNING:__ `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+__WARNING__: `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
 
 Get the device's model name.
 
@@ -34,7 +34,7 @@ versions of the same product.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks 5.0+
 - iOS
 - Tizen
 - Windows Phone 7 and 8

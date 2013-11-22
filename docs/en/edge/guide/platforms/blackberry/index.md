@@ -31,13 +31,13 @@ information:
 * BlackBerry Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 ## Requirements and Support
 
 This version of BlackBerry is not supported by the `cordova` utility
-described in The Command-line Interface, but by a separate set of
+described in The Command-Line Interface, but by a separate set of
 command-line tools. Download the Cordova distribution from
 [cordova.apache.org](http://cordova.apache.org/#download).
 
@@ -170,7 +170,7 @@ following to install an application to the home screen:
 If you are prompted whether a device is connected to your computer,
 answer no.
 
-__NOTE:__ On BlackBerry OS 5, the application is installed in the
+__NOTE__: On BlackBerry OS 5, the application is installed in the
 `Downloads` directory.
 
 ## Deploy to Device
@@ -199,7 +199,7 @@ would to view the app in an emulator:
 If you are prompted whether a device is connected to your computer,
 answer yes.
 
-__NOTE:__ On BlackBerry OS 5, the application is installed in the
+__NOTE__: On BlackBerry OS 5, the application is installed in the
 `Downloads` directory.
 
 ## Additional Information

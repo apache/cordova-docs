@@ -21,9 +21,8 @@
 
 From version 3.0 onward, Cordova implements all device APIs as
 plugins, and leaves them disabled by default. It also supports two
-different ways to add and remove plugins, depending on which workflow
-you are using. The first is by using the
-`cordova` CLI described in The Command-line Interface (the "Web Project Dev" workflow). The second is
+different ways to add and remove plugins. The first is by using the
+`cordova` CLI described in The Command-Line Interface. The second is
 by using a lower-level
 [Plugman](https://github.com/apache/cordova-plugman/)
 command-line interface ("Native platform dev" workflow.) The main difference between these two development

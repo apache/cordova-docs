@@ -56,7 +56,7 @@ platform-specific configuration settings described below:
 * Android (in `app/res/xml/config.xml`)
 
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
 
 * iOS (in `config.xml`)
@@ -206,7 +206,7 @@ The function is passed an `InAppBrowserEvent` object.
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
 
@@ -374,7 +374,7 @@ The function is passed an `InAppBrowserEvent` object.
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
 
         function iabClose(event) {
@@ -444,10 +444,10 @@ The function is passed an `InAppBrowserEvent` object.
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
 
         function iabClose(event) {

@@ -95,7 +95,8 @@ Interface, to add or remove this feature for a project:
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
 
 These commands apply to all targeted platforms, but modify the
@@ -103,13 +104,17 @@ platform-specific configuration settings described below:
 
 * Android
 
-        (in app/res/xml/plugins.xml)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
         <feature name="Capture">
-            <param name="android-package" value="org.apache.cordova.Capture" />
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
         </feature>
 
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 * BlackBerry WebWorks
