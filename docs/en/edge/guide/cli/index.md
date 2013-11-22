@@ -147,6 +147,11 @@ If you use version control software, you should add this source _www_ folder,
 along with the _merges_ folder, to your version control system. (More information
 about the _merges_ folder can be found in the Customize Each Platform section below.)
 
+**WARNING**: When using the CLI to build your application, you are strongly discouraged
+from editing any files in the `/platforms/` folder unless you know what you are doing
+or are specifically told otherwise in documentation. This is because the files in the 
+`/platforms/` direcotry will be overwritten on prepare or plugin reinstallation. 
+
 If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
 from the `/platforms/` directory to develop with an SDK. This is because
