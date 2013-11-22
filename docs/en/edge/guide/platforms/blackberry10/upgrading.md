@@ -24,6 +24,18 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
+## Upgrading to 3.2.0 from 3.1.0
+
+For projects that were created with the cordova CLI: 
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update blackberry`
+        
+For projects not created with the cordova CLI, run:
+
+        bin/update <project_path>
+
 ## Upgrade to 3.1.0 from 3.0.0
 
 1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
