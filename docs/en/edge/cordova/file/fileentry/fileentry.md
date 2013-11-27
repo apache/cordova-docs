@@ -146,8 +146,8 @@ __Quick Example__
             fileSystem.root.getFile(filePath, {create: true, exclusive: false}, onGetFileWin, onGetFileFail);
         }
 
-        var onFSFail = function(evt) {
-            console.log(evt.target.error.code);
+        var onFSFail = function(error) {
+            console.log(error.code);
         }
 
         window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
