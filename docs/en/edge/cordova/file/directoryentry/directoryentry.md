@@ -150,8 +150,8 @@ __Quick Example__
             fileSystem.root.getDirectory(subFolder, {create: true, exclusive: false}, onGetDirectoryWin, onGetDirectoryFail);
         }
 
-        var onFSFail = function(evt) {
-            console.log(evt.target.error.code);
+        var onFSFail = function(error) {
+            console.log(error.code);
         }
 
         window.requestFileSystem(localFileSystem, 0, onFSWin, onFSFail);
