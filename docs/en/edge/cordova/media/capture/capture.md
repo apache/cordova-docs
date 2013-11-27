@@ -128,7 +128,7 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
         </feature>
 
-        (in app/AndroidManifest.xml) 
+        (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-permission android:name="android.permission.RECORD_VIDEO" />

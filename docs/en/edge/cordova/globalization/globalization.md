@@ -63,7 +63,7 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-*  Amazon Fire OS(in `res/xml/config.xml`)
+* Amazon Fire OS(in `res/xml/config.xml`)
 
         <feature name="Globalization">
             <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
@@ -77,4 +77,3 @@ platform-specific configuration settings described below:
 
 Some platforms may support this feature without requiring any special
 configuration.  See Platform Support for an overview.
-

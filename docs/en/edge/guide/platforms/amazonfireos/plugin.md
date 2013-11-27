@@ -27,72 +27,71 @@ To match the JavaScript interface's _echo_ feature described in
 Application Plugins, use the `plugin.xml` to inject a `feature`
 specification to the local platform's `config.xml` file:
 
-        <platform name="amazon-fireos">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Echo">
-                    <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
-                </feature>
-            </config-file>
-        </platform>
+    <platform name="amazon-fireos">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+            </feature>
+        </config-file>
+    </platform>
 
 Then add the following to the
 `src/org/apache/cordova/plugin/Echo.java` file:
 
-        package org.apache.cordova.plugin;
+    package org.apache.cordova.plugin;
 
-        import org.apache.cordova.CordovaPlugin;
-        import org.apache.cordova.CallbackContext;
+    import org.apache.cordova.CordovaPlugin;
+    import org.apache.cordova.CallbackContext;
 
-        import org.json.JSONArray;
-        import org.json.JSONException;
-        import org.json.JSONObject;
+    import org.json.JSONArray;
+    import org.json.JSONException;
+    import org.json.JSONObject;
 
-        /**
-         * This class echoes a string called from JavaScript.
-         */
-        public class Echo extends CordovaPlugin {
+    /**
+     * This class echoes a string called from JavaScript.
+     */
+    public class Echo extends CordovaPlugin {
 
-            @Override
-            public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-                if (action.equals("echo")) {
-                    String message = args.getString(0);
-                    this.echo(message, callbackContext);
-                    return true;
-                }
-                return false;
+        @Override
+        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+            if (action.equals("echo")) {
+                String message = args.getString(0);
+                this.echo(message, callbackContext);
+                return true;
             }
-
-            private void echo(String message, CallbackContext callbackContext) {
-                if (message != null && message.length() > 0) {
-                    callbackContext.success(message);
-                } else {
-                    callbackContext.error("Expected one non-empty string argument.");
-                }
-            }
+            return false;
         }
 
+        private void echo(String message, CallbackContext callbackContext) {
+            if (message != null && message.length() > 0) {
+                callbackContext.success(message);
+            } else {
+                callbackContext.error("Expected one non-empty string argument.");
+            }
+        }
+    }
 
 If you want to reuse Android Plugin code for the Amazon Fire OS platform then modify the plugin.xml to point to the `android` specific source file. For example,
 
-        <platform name="amazon-fireos">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Echo">
-                    <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
-                </feature>
-            </config-file>
-            <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
-        </platform>
+    <platform name="amazon-fireos">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
+    </platform>
 
 If you want to write a customized plugin for the Amazon Fire OS platform then create a folder named `amazon` under your plugin src/ folder and modify the plugin.xml to point to the `amazon` specific source file. For example,
 
-        <platform name="amazon-fireos">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Echo">
-                    <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
-                </feature>
-            </config-file>
-            <source-file src="src/amazon/Echo.java" target-dir="src/org/apache/cordova/plugin" />
-        </platform>
+    <platform name="amazon-fireos">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+            </feature>
+        </config-file>
+        <source-file src="src/amazon/Echo.java" target-dir="src/org/apache/cordova/plugin" />
+    </platform>
 
 ## Using Amazon WebView in your plugin
 

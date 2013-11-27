@@ -50,20 +50,20 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
-*  Amazon Fire OS
+* Amazon Fire OS
 
         (in `app/res/xml/config.xml`)
 
         <feature name="Compass">
             <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
         </feature>
-        
+
         (in app/AndroidManifest)
 
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-* Android 
+* Android
 
         (in `app/res/xml/config.xml`)
 

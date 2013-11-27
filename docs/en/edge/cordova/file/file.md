@@ -70,6 +70,7 @@ platform-specific configuration settings described below:
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         </feature>
+
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -78,6 +79,7 @@ platform-specific configuration settings described below:
         <feature name="FileTransfer">
             <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
+
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -88,6 +90,7 @@ platform-specific configuration settings described below:
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         </feature>
+
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -96,6 +99,7 @@ platform-specific configuration settings described below:
         <feature name="FileTransfer">
             <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
+
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 

@@ -85,7 +85,7 @@ Optional parameters to customize the camera settings.
             FRONT : 1      // Use the front-facing camera
         };
 
-##  Amazon Fire OSQuirks
+## Amazon Fire OSQuirks
 
 - Any `cameraDirection` value results in a back-facing photo.
 

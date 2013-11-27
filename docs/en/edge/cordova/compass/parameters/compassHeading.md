@@ -35,7 +35,7 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 
 The `CompassHeading` object is returned to the `compassSuccess` callback function.
 
-##  Amazon Fire OS Quirks
+## Amazon Fire OS Quirks
 
 - `trueHeading` is not supported, but reports the same value as `magneticHeading`
 

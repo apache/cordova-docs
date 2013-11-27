@@ -210,7 +210,7 @@ Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
 
-Note- Emulator support is currently not available for Amazon Fire OS
+Note: Emulator support is currently not available for Amazon Fire OS
 
 (See the Platform Guides for details.)
 For example, you may first run the `android` command to launch the

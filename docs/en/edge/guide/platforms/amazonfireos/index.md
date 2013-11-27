@@ -24,9 +24,9 @@ deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
 
 See the following for more detailed platform-specific information:
 
-*  Amazon Fire OS Configuration
-*  Amazon Fire OS WebViews
-*  Amazon Fire OS Plugins
+* Amazon Fire OS Configuration
+* Amazon Fire OS WebViews
+* Amazon Fire OS Plugins
 
 ## Requirements and Support
 
@@ -83,7 +83,7 @@ You may also need to enable Java and Ant. Open a command prompt and
 type `java`, and also type `ant`. Append to the PATH whichever fail to
 run:
 
-        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
+    ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
 ### Amazon WebView SDK
 
@@ -98,10 +98,10 @@ Download the Amazon WebView SDK from the [Amazon Developer Portal](https://devel
 Use the `cordova` utility to set up a new project, as described in The
 Cordova The Command-line Interface. For example, in a source-code directory:
 
-        $ cordova create hello com.example.hello "HelloWorld"
-        $ cd hello
-        $ cordova platform add amazon-fireos
-        $ cordova build
+    $ cordova create hello com.example.hello "HelloWorld"
+    $ cd hello
+    $ cordova platform add amazon-fireos
+    $ cordova build
 
 Once created, here's how to use the SDK to modify it:
 
@@ -137,9 +137,9 @@ and use a mini USB cable to plug it into your system.
 
 You can push the app to the device from the command line:
 
-        $ cordova run amazon-fireos
+    $ cordova run amazon-fireos
 
 Alternately within Eclipse, right-click the project and choose __Run
 As &rarr; Android Application__.
 
-_Note: Currently, testing via an emulator is not supported for Amazon WebView based apps._
+__Note__: Currently, testing via an emulator is not supported for Amazon WebView based apps.

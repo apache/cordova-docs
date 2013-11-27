@@ -91,9 +91,9 @@ The device plays a beep sound.
       </body>
     </html>
 
-##  Amazon Fire OS Quirks
+## Amazon Fire OS Quirks
 
--  Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.
+- Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.
 
 ## Android Quirks
 

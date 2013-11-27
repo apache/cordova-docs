@@ -75,12 +75,11 @@ than `DATA_URL`.
 - Windows Phone 7 and 8
 - Windows 8
 
-##  Amazon Fire OS Quirks
+## Amazon Fire OS Quirks
 
- Amazon Fire OS uses intents to launch the camera activity on the device to capture
+Amazon Fire OS uses intents to launch the camera activity on the device to capture
 images, and on phones with low memory, the Cordova activity may be killed.  In this
 scenario, the image may not appear when the cordova activity is restored.
-
 
 ## Android Quirks
 

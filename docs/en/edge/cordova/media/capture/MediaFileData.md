@@ -49,7 +49,7 @@ the following default values:
 
 - __duration__: Not supported, and returns zero.
 
-##  Amazon Fire OS Quirks
+## Amazon Fire OS Quirks
 
 Supports the following `MediaFileData` properties:
 

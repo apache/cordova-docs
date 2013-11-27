@@ -43,7 +43,7 @@ callback.
 - Windows Phone 7 and 8
 - Windows 8
 
-##  Amazon Fire OS Quirks
+## Amazon Fire OS Quirks
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
