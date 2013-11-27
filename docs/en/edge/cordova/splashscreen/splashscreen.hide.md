@@ -29,6 +29,7 @@ This method dismisses the application's splash screen.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS

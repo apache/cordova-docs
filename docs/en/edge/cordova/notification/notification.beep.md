@@ -27,6 +27,7 @@ The device plays a beep sound.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
@@ -89,6 +90,10 @@ The device plays a beep sound.
         <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
       </body>
     </html>
+
+##  Amazon Fire OS Quirks
+
+-  Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.
 
 ## Android Quirks
 

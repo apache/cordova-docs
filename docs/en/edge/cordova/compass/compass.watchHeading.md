@@ -40,6 +40,7 @@ ID can be used with `compass.clearWatch` to stop watching the compass.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS

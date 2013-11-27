@@ -66,6 +66,7 @@ The following methods can be invoked on a `DirectoryEntry` object:
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

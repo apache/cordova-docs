@@ -28,6 +28,7 @@ connection state, and type of connection.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - iOS
 - Android
 - BlackBerry WebWorks 5.0+

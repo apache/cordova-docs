@@ -181,6 +181,7 @@ Once you define JavaScript for your plugin, you need to complement it
 with at least one native implementation. Details for each platform are
 listed below, and each builds on the simple Echo Plugin example above:
 
+- Amazon Fire OS Plugins
 - Android Plugins
 - iOS Plugins
 - BlackBerry Plugins

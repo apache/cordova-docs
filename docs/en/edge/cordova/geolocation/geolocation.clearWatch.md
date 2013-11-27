@@ -36,6 +36,7 @@ location by clearing the `geolocation.watchPosition` referenced by
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS

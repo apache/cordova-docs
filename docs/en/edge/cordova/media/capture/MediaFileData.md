@@ -49,6 +49,20 @@ the following default values:
 
 - __duration__: Not supported, and returns zero.
 
+##  Amazon Fire OS Quirks
+
+Supports the following `MediaFileData` properties:
+
+- __codecs__: Not supported, and returns `null`.
+
+- __bitrate__: Not supported, and returns zero.
+
+- __height__: Supported: image and video files only.
+
+- __width__: Supported: image and video files only.
+
+- __duration__: Supported: audio and video files only
+
 ## Android Quirks
 
 Supports the following `MediaFileData` properties:

@@ -81,6 +81,7 @@ therefore has global scope.
 
 ## Supported Platforms
 
+- Amazon Fire OS
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
@@ -102,6 +103,21 @@ Interface, to add or remove this feature for a project:
 These commands apply to all targeted platforms, but modify the
 platform-specific configuration settings described below:
 
+* Amazon Fire OS
+
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+
+        (in app/AndroidManifest.xml)   
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
 * Android
 
         (in app/res/xml/config.xml)
@@ -112,7 +128,7 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
         </feature>
 
-        (in app/AndroidManifest.xml)
+        (in app/AndroidManifest.xml) 
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-permission android:name="android.permission.RECORD_VIDEO" />

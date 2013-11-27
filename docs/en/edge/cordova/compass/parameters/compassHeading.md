@@ -35,6 +35,12 @@ A `CompassHeading` object is returned to the `compassSuccess` callback function.
 
 The `CompassHeading` object is returned to the `compassSuccess` callback function.
 
+##  Amazon Fire OS Quirks
+
+- `trueHeading` is not supported, but reports the same value as `magneticHeading`
+
+- `headingAccuracy` is always 0 because there is no difference between the `magneticHeading` and `trueHeading`
+
 ## Android Quirks
 
 - The `trueHeading` property is not supported, but reports the same value as `magneticHeading`.

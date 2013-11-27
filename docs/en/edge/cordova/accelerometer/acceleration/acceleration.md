@@ -37,6 +37,7 @@ _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
 ## Supported Platforms
 
+- Amazon Fire OS 
 - Android
 - BlackBerry WebWorks 5.0+
 - iOS
