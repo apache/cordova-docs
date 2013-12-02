@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Upgrading BlackBerry
+# Upgrading BlackBerry 10
 
 This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova.
 Most of these instructions apply to projects created with an older set
