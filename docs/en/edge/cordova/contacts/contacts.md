@@ -117,6 +117,22 @@ platform-specific configuration settings described below:
             <param name="ios-package" value="CDVContacts" />
         </feature>
 
+* FirefoxOS
+       
+		Enable access to the API by changing [app permissions](https://developer.mozilla.org/en-US/Apps/Developing/App_permissions)
+
+        (in platforms/firefoxos/www/manifest.webapp)
+        "type": "privileged",
+        "permissions": {
+			"contacts": {
+				"access": (choose from "readonly", "readwrite", "readcreate", or "createonly"),
+				"description": "Describe why you need access to contacts API"
+			}
+        }
+
+		All privileged apps enforce [Content Security Policy](https://developer.mozilla.org/en-US/Apps/CSP) 
+		which forbids inline scripts. Initialize your application in another way.
+
 * Windows Phone (in `Properties/WPAppManifest.xml`)
 
         <Capabilities>
