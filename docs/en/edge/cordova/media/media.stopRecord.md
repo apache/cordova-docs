@@ -31,7 +31,6 @@ recording of an audio file.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8

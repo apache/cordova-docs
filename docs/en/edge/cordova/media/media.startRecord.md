@@ -31,7 +31,6 @@ recording for an audio file.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -129,9 +128,6 @@ recording for an audio file.
 
 - Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a _.amr_ extension.
 
-## BlackBerry WebWorks Quirks
-
-- BlackBerry devices record audio in Adaptive Multi-Rate format. The specified file must end with a _.amr_ extension.
 
 ## iOS Quirks
 
