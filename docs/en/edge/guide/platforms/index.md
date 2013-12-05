@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Before developing for any of the platforms listed below, install
 cordova's command-line interface (CLI).
-(For details, see The Command-Line Interface.)
+(For details, see The Command-line Interface.)
 
 To develop Cordova applications, you must install SDKs for each mobile
 platform you are targeting. This installation is necessary regardless
@@ -36,6 +36,13 @@ guides provide information on each platform's unique set of
 configuration options, instructions to add plugins, how to upgrade
 each platform, and platform-specific command-line tools that serve as
 a lower-level alternative to the `cordova` command-line utility.
+
+## Amazon Fire OS
+
+* Amazon Fire OS Platform Guide
+* Amazon Fire OS Configuration
+* Amazon Fire OS WebViews
+* Amazon Fire OS Plugins
 
 ## Android
 
@@ -59,7 +66,6 @@ a lower-level alternative to the `cordova` command-line utility.
 * BlackBerry 10 Configuration
 * BlackBerry 10 Plugins
 * BlackBerry 10 Command-line Tools
-* Upgrading BlackBerry 10
 
 ## iOS
 
