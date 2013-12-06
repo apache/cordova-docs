@@ -48,7 +48,6 @@ The value of `options.item` can be `months` or `days`.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 8
 

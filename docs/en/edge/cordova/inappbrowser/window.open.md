@@ -64,7 +64,7 @@ instance, or the system browser.
 
 - Amazon Fire OS
 - Android
-- BlackBerry
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 

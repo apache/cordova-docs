@@ -39,7 +39,7 @@ _x_, _y_, and _z_ values returned should be `0`, `0`, and `9.81`.
 
 - Amazon Fire OS 
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8

@@ -57,7 +57,7 @@ See the following sections for platform-specific options:
 
 - iOS Configuration
 - Android Configuration
-- BlackBerry Configuration
+- BlackBerry 10 Configuration
 
 In addition to the various configuration options detailed below, you
 can also configure an application's core set of images for each target

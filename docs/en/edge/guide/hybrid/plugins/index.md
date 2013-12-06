@@ -184,7 +184,6 @@ listed below, and each builds on the simple Echo Plugin example above:
 - Amazon Fire OS Plugins
 - Android Plugins
 - iOS Plugins
-- BlackBerry Plugins
 - BlackBerry 10 Plugins
 - Windows Phone Plugins
 

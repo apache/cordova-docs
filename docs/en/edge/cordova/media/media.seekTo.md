@@ -36,7 +36,7 @@ object. Also updates the `Media` object's `position` parameter.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks (OS 6.0 and higher)
+- BlackBerry 10 (OS 6.0 and higher)
 - iOS
 - Windows Phone 7 and 8
 - Tizen
@@ -149,6 +149,6 @@ object. Also updates the `Media` object's `position` parameter.
           </body>
         </html>
 
-## BlackBerry WebWorks Quirks
+## BlackBerry 10 Quirks
 
 - Not supported on BlackBerry OS 5 devices.

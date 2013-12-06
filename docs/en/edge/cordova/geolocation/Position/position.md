@@ -35,7 +35,7 @@ The `Position` object is created and populated by Cordova, and returned to the u
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8

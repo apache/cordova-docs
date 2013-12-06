@@ -66,15 +66,10 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Device">
-            <param name="blackberry-package" value="org.apache.cordova.device.Device" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.app" required="true" version="1.0.0.0" />
+        <feature name="Device" value="Device"/>
         <rim:permissions>
             <rim:permit>read_device_identifying_information</rim:permit>
         </rim:permissions>

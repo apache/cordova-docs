@@ -31,7 +31,7 @@ connection state, and type of connection.
 - Amazon Fire OS
 - iOS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - Tizen
 - Windows Phone 7 and 8
 - Windows 8

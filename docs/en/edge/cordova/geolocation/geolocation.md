@@ -101,14 +101,10 @@ platform-specific configuration settings described below:
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Geolocation">
-            <param name="blackberry-package" value="org.apache.cordova.geolocation.Geolocation" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
+        <feature name="Geolocation" value="Geolocation" />
         <rim:permissions>
             <rim:permit>read_geolocation</rim:permit>
         </rim:permissions>

@@ -101,17 +101,13 @@ Optional parameters to customize the camera settings.
 
 - `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
 
-## BlackBerry Quirks
+## BlackBerry 10 Quirks
 
 - Ignores the `quality` parameter.
 
 - Ignores the `sourceType` parameter.
 
 - Ignores the `allowEdit` parameter.
-
-- Application must have key injection permissions to close the native Camera application after the user snaps the photo.
-
-- Using large image sizes may result in the inability to encode images on later-model devices (e.g., Torch 9800) that feature high-resolution cameras.
 
 - `Camera.MediaType` is not supported.
 

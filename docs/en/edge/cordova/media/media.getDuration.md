@@ -32,7 +32,7 @@ unknown, it returns a value of -1.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Tizen

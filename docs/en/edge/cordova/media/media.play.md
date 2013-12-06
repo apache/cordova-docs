@@ -31,7 +31,7 @@ playing an audio file.
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Tizen
@@ -160,14 +160,6 @@ playing an audio file.
             <p id="audio_position"></p>
           </body>
         </html>
-
-## BlackBerry WebWorks Quirks
-
-- BlackBerry devices support a limited number of simultaneous audio
-  channels. CDMA devices only support a single audio channel. Other
-  devices support up to two simultaneous channels. An attempt to play
-  more audio files than the supported amount results in previous
-  playback being stopped.
 
 ## iOS Quirks
 

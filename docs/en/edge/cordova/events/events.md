@@ -69,7 +69,7 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
         </feature>
 
-* BlackBerry WebWorks
+* BlackBerry 10
 
         (in www/plugins.xml)
         <feature name="Battery">

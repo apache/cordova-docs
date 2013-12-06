@@ -52,6 +52,10 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
 
+* BlackBerry 10 (in `www/config.xml`)
+
+        <feature name="SplashScreen" value="SplashScreen" />
+
 * iOS (in the named application directory's `config.xml`)
 
         <feature name="SplashScreen">

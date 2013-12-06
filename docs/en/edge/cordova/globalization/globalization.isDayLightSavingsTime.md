@@ -41,7 +41,6 @@ executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 8
 

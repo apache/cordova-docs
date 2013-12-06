@@ -48,7 +48,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -132,7 +132,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
         </body>
     </html>
 
-## BlackBerry WebWorks Quirks
+## BlackBerry 10 Quirks
 
-- Cordova for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- Cordova for BlackBerry 10 attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 

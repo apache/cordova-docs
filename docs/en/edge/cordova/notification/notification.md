@@ -72,15 +72,10 @@ platform-specific configuration settings described below:
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.VIBRATE" />
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Notification">
-            <param name="blackberry-package" value="org.apache.cordova.notification.Notification" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.ui.dialog" />
+        <feature name="Notification" value="Notification"/>
 
 * iOS (in the named application directory's `config.xml`)
 

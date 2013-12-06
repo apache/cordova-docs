@@ -82,7 +82,7 @@ Text and Binary Support:
 
 Text-only Support:
 
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - Windows Phone 7 and 8
 - Windows 8
 

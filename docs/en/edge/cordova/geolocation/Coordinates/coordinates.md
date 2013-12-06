@@ -46,7 +46,7 @@ available to callback functions in requests for the current position.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8

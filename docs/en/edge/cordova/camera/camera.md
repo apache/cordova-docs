@@ -72,19 +72,10 @@ platform-specific configuration settings described below:
         (in app/AndroidManifest)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Camera">
-            <param name="blackberry-package" value="org.apache.cordova.camera.Camera" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.media.camera" />
-
-        <rim:permissions>
-            <rim:permit>use_camera</rim:permit>
-        </rim:permissions>
+        <feature name="Camera" value="Camera"/>
 
 * iOS (in the named application directory's `config.xml`)
 

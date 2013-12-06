@@ -98,18 +98,12 @@ platform-specific configuration settings described below:
         <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Contact">
-            <param name="blackberry-package" value="org.apache.cordova.pim.Contact" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.find"        required="true" version="1.0.0.0" />
-        <feature id="blackberry.identity"    required="true" version="1.0.0.0" />
-        <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
-        <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
+
+        <feature name="Contacts" value="Contacts"/>
+        <rim:permit>access_pimdomain_contacts</rim:permit>
 
 * iOS (in the named application directory's `config.xml`)
 

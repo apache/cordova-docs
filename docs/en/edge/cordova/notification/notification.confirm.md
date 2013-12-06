@@ -49,7 +49,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8

@@ -39,7 +39,7 @@ object's `position` parameter.
 
 - Android
 
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 
 - iOS
 

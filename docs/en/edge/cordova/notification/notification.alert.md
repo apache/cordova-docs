@@ -41,7 +41,7 @@ typically less customizable.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8
@@ -49,7 +49,7 @@ typically less customizable.
 
 ## Quick Example
 
-    // Amazon Fire OS / Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Amazon Fire OS / Android / BlackBerry 10 (OS 5.0 and higher) / iOS / Tizen
     //
     function alertDismissed() {
         // do something

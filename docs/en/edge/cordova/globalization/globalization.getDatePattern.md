@@ -53,7 +53,6 @@ time`.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 - Windows Phone 8
 

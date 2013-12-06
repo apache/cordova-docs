@@ -49,7 +49,7 @@ a `ContactAddress[]` array.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -143,7 +143,7 @@ a `ContactAddress[]` array.
 
 - __pref__: Not supported, returning `false` on Android 2.X devices.
 
-## BlackBerry WebWorks 5.0+ Quirks
+## BlackBerry 10 Quirks
 
 - __pref__: Not supported on BlackBerry devices, returning `false`.
 

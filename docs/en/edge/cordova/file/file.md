@@ -103,23 +103,10 @@ platform-specific configuration settings described below:
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="File">
-            <param name="blackberry-package" value="org.apache.cordova.file.FileManager" />
-        </feature>
-        <feature name="FileTransfer">
-            <param name="blackberry-package" value="org.apache.cordova.http.FileTransfer" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
-        <feature id="blackberry.utils"   required="true" version="1.0.0.0" />
-        <feature id="blackberry.io.dir"  required="true" version="1.0.0.0" />
-        <rim:permissions>
-            <rim:permit>access_shared</rim:permit>
-        </rim:permissions>
+        <feature name="File" value="File" />
 
 * iOS (in the named application directory's `config.xml`)
 

@@ -67,6 +67,11 @@ This method dismisses the application's splash screen.
       </body>
     </html>
 
+## BlackBerry 10 Quirk
+
+The `config.xml` file's `AutoHideSplashScreen` setting must be
+`false`. 
+
 ## iOS Quirk
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
