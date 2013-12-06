@@ -66,7 +66,7 @@ string.  Event listeners receive the `loadstart`, `progress`, `load`,
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8

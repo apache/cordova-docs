@@ -34,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
-## BlackBerry WebWorks Quirks
+## BlackBerry 10 Quirks
 
 - The __duration__ parameter is not supported, so the length of recordings can't be limited programmatically.
 

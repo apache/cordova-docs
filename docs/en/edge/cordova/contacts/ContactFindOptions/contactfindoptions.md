@@ -30,7 +30,7 @@ Contains properties that can be used to filter the results of a `contacts.find` 
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8

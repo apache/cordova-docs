@@ -70,12 +70,10 @@ platform-specific configuration settings described below:
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-* BlackBerry WebWorks
+* BlackBerry 10
 
-        (in www/plugins.xml)
-        <feature name="Network Status">
-            <param name="blackberry-package" value="org.apache.cordova.network.Network" />
-        </feature>
+        (in www/config.xml)
+        <feature name="NetworkStatus" value="NetworkStatus"/>
 
 * iOS (in the named application directory's `config.xml`)
 

@@ -42,7 +42,7 @@ properties.  A `Contact` object stores one or more
 ## Supported Platforms
 
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -125,7 +125,7 @@ properties.  A `Contact` object stores one or more
 
 - __pref__: Not supported by Android 2.X devices, returning `false`.
 
-## BlackBerry WebWorks 5.0+ Quirks
+## BlackBerry 10 Quirks
 
 - __pref__: Not supported by BlackBerry devices, returning `false`.
 

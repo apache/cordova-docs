@@ -32,7 +32,7 @@ attach an event listener once the `deviceready` event fires.
 
 ## Supported Platforms
 
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 
 ## Quick Example
 

@@ -53,13 +53,6 @@ a lower-level alternative to the `cordova` command-line utility.
 * Android Command-line Tools
 * Upgrading Android
 
-## BlackBerry
-
-* BlackBerry Platform Guide
-* BlackBerry Configuration
-* BlackBerry Command-line Tools
-* Upgrading BlackBerry
-
 ## BlackBerry 10
 
 * BlackBerry 10 Platform Guide

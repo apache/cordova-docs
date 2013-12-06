@@ -42,7 +42,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 - The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
 
-## BlackBerry WebWorks Quirks
+## BlackBerry 10 Quirks
 
 - The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
 

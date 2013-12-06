@@ -82,7 +82,7 @@ The following constants are reported as the only parameter to the
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7.5
 - Tizen
@@ -126,12 +126,10 @@ platform-specific configuration settings described below:
         <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-* BlackBerry WebWorks
+* BlackBerry 10
 
-        (in www/plugins.xml)
-        <feature name="Capture">
-            <param name="blackberry-package" value="org.apache.cordova.media.MediaCapture" />
-        </feature>
+        (in www/config.xml)
+        <feature name="Media" value="Media" />
 
 * iOS (in the named application directory's `config.xml`)
 

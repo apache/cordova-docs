@@ -53,7 +53,7 @@ string.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -142,7 +142,7 @@ string.
 
 - __pref__: Not supported, returning `false`.
 
-## BlackBerry WebWorks 5.0+ Quirks
+## BlackBerry 10 Quirks
 
 - __type__: Partially supported.  Used for phone numbers.
 

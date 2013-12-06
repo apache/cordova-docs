@@ -43,7 +43,7 @@ by JNEXT. Every plugin must also include a `plugin.xml` file.
 
 To create the native portion of your plugin, open the BlackBerry 10
 NDK IDE and select __File &rarr; New &rarr; BlackBerry Project &rarr;
-Native Extension &rarr; BlackBerry WebWorks__. Enter the desired
+Native Extension &rarr; BlackBerry 10__. Enter the desired
 project name and location, then press __Finish__.
 
 The project created by the IDE contains sample code for a memory

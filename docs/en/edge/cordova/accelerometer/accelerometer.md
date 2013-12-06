@@ -63,16 +63,10 @@ platform-specific configuration settings described below:
             <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
         </feature>
 
-* BlackBerry WebWorks
-
-        (in www/plugins.xml)
-        <feature name="Accelerometer">
-            <param name="blackberry-package" value="org.apache.cordova.accelerometer.Accelerometer" />
-        </feature>
+* BlackBerry 10
 
         (in www/config.xml)
-        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
-        <feature id="org.apache.cordova" required="true" version="1.0.0" />
+        <feature name="Accelerometer" value="Accelerometer" />
 
 * iOS (in the named application directory's `config.xml`)
 

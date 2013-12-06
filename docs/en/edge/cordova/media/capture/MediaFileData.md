@@ -33,7 +33,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 - __duration__: The length of the video or sound clip in seconds. The value is zero for images. (Number)
 
-## BlackBerry WebWorks Quirks
+## BlackBerry 10 Quirks
 
 No API provides format information for media files, so the
 `MediaFileData` object returned by `MediaFile.getFormatData` features

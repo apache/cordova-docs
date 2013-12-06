@@ -52,7 +52,6 @@ error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
 - iOS
 
 ## Quick Example

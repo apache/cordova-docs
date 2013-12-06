@@ -83,7 +83,7 @@ therefore has global scope.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
@@ -133,7 +133,7 @@ platform-specific configuration settings described below:
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-permission android:name="android.permission.RECORD_VIDEO" />
 
-* BlackBerry WebWorks
+* BlackBerry 10
 
         (in www/plugins.xml)
         <feature name="Capture">

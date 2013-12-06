@@ -54,9 +54,13 @@ devices' background tiling images used when representing applications:
         windows-phone/icon-62-tile.png
         windows-phone/icon-173-tile.png
 
-Blackberry requires an 80-pixel icon:
+Blackberry 10 requires an icon element in config.xml:
 
-        blackberry/icon-80.png
+        <icon src="blackberry10/icon-86.png" />
+
+See BlackBerry's documentation for tareting multiple sizes and locales.
+
+[http://developer.blackberry.com/html5/documentation/icon_element.html]
 
 Tizen requires an 128-pixel icon:
 
@@ -95,10 +99,8 @@ file applies to the iPhone 5's taller screen:
         ios/screen-iphone-portrait.png
         ios/screen-iphone-portrait-568h-2x.png
 
-BlackBerry and Windows Phone both specify a single splash screen
-image:
+Windows Phone specifies a single splash screen image:
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
 
 The following sections detail how to set up splash screens when
@@ -190,9 +192,7 @@ such as iPad or iPhone. The size of each image should be:
 
 ## Splash Screens for the BlackBerry 10 Platform
 
-Copy splash screen images into the project's `res/screen/blackberry10`
-directory. The file names should be:
+Add a rim:splash element to config.xml for each resolution and locale you wish
+to support:
 
-- splash-1280x768.png (1280x768 pixels)
-- splash-720x720.png (720x720 pixels)
-- splash-768x1280.png (768x1280 pixels)
+<http://developer.blackberry.com/html5/documentation/rim_splash_element.html>

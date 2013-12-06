@@ -38,7 +38,7 @@ attach an event listener once the `deviceready` event fires.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
 - Tizen

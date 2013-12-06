@@ -44,7 +44,7 @@ an event listener once the `deviceready` event fires.
 - Amazon Fire OS
 - iOS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - Tizen
 
 ## Quick Example

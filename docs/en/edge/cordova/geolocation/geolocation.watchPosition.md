@@ -50,7 +50,7 @@ there is an error, the `geolocationError` callback executes with a
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8

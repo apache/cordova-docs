@@ -35,7 +35,7 @@ back-button behavior.
 
 - Amazon Fire OS
 - Android
-- BlackBerry WebWorks 5.0+
+- BlackBerry 10
 - Windows Phone 7 and 8
 
 ## Quick Example

@@ -76,6 +76,12 @@ platform-specific configuration settings described below:
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+* BlackBerry 10
+ 
+        (in `www/config.xml`)
+
+        <feature name="Compass" value="Comapss" />
+
 * iOS (in the named application directory's `config.xml`)
 
         <feature name="Compass">
