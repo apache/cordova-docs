@@ -70,6 +70,10 @@ a lower-level alternative to the `cordova` command-line utility.
 * iOS Command-line Tools
 * Upgrading iOS
 
+## Ubuntu
+
+* Ubuntu Platform Guide
+
 ## Windows Phone
 
 * Windows Phone 8 Platform Guide

@@ -35,6 +35,7 @@ CLI's shorthand stubs.)
         <th><tt>android</tt></th>
         <th><tt>blackberry10</tt></th>
         <th><tt>ios</tt></th>
+        <th><tt>Ubuntu</tt></th>
         <th><tt>wp7</tt> (Windows<br/>Phone 7)</th>
         <th><tt>wp8</tt> (Windows<br/>Phone 8)</th>
         <th><tt>win8</tt><br/>(Windows 8)</th>
@@ -51,6 +52,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y">Mac, Windows, Linux</td>
         <td data-col="blackberry10" class="y">Mac, Windows</td>
         <td data-col="ios"        class="y">Mac</td>
+        <td data-col="ubuntu"        class="y">Ubuntu</td>
         <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
         <td data-col="win8"       class="y"></td>
@@ -64,6 +66,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html">(see details)</a></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">(see details)</a></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
@@ -77,6 +80,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html">(see details)</a></td>
         <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
         <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="win8"       class="y"></td>
@@ -95,6 +99,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -108,6 +113,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -121,6 +127,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
@@ -134,6 +141,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -147,6 +155,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -160,6 +169,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
@@ -173,6 +183,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -186,6 +197,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -199,6 +211,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -212,6 +225,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -225,6 +239,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
@@ -238,6 +253,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="p">uses iframe</td>
@@ -251,6 +267,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -264,6 +281,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -277,6 +295,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
@@ -290,6 +309,7 @@ CLI's shorthand stubs.)
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
         <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y">localStorage &amp; indexedDB</td>
         <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
         <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>

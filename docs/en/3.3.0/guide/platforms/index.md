@@ -71,6 +71,7 @@ a lower-level alternative to the `cordova` command-line utility.
 * Upgrading iOS
 
 ## Ubuntu
+
 * Ubuntu Platform Guide
 
 ## Windows Phone
