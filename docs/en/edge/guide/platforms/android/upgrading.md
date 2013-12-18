@@ -24,6 +24,15 @@ Most of these instructions apply to projects created with an older set
 of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
 version of the CLI.
 
+## Upgrading to 3.3.0 from 3.2.0
+
+Follow the same instructinos as for `3.2.0`.
+
+Starting with 3.3.0, the Cordova runtime is now compiled as an Android Library
+instead of a Jar. This should have no effect for command-line usage, but IDE
+users will need to import the newly added `MyProject-CordovaLib` project into
+their workspace.
+
 ## Upgrading to 3.2.0 from 3.1.0
 
 For projects that were created with the cordova CLI: 
