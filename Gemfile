@@ -19,4 +19,5 @@ source "https://rubygems.org"
 ruby '1.8.7'
 gem 'nokogiri', '1.5.9'
 gem 'json'
+gem 'rspec', '1.3.0'
 
