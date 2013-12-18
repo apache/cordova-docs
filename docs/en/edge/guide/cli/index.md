@@ -87,17 +87,28 @@ command such as the following:
 It may take some time for the command to complete, so be patient. Running
 the command with the ` -d` option displays information about its progress.
 
-The first argument specifies a _hello_ directory to be generated
-for your project. Its `www` subdirectory houses your application's
+The first argument _hello_ specifies a directory to be generated
+for your project. This directory should not already exist, Cordova will
+create it for you. Its `www` subdirectory houses your application's
 home page, along with various resources under `css`, `js`, and `img`,
 which follow common web development file-naming conventions. The
 `config.xml` file contains important metadata needed to generate and
 distribute the application.
 
-The other two arguments are optional: the `com.example.hello` argument
-provides your project with a reverse domain-style identifier, and the
-`HelloWorld` provides the application's display text. You can edit
-both of these values later in the `config.xml` file.
+The second argument `com.example.hello`
+provides your project with a reverse domain-style identifier. This argument
+is optional, but only if you also omit the third argument, since the arguments
+are positional. You can edit
+this value later in the `config.xml` file, but do be aware that there may
+be code generated outside of `config.xml` using this value, such as Java
+package names. The default value is `io.cordova.hellocordova`, but it is
+recommended that you select an appropriate value.
+
+The third argument `HelloWorld` provides the application's display title.
+This argument is optional. You can edit this value later in the `config.xml`
+file, but do be aware that there may be code generated outside of `config.xml`
+using this value, such as Java class names. The default value is `HelloCordova`,
+but it is recommended that you select an appropriate value.
 
 ## Add Platforms
 
