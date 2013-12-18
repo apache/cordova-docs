@@ -125,6 +125,8 @@ Once created, here's how to use the SDK to modify it:
 
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
 
+* Make sure both `hello` and `hello-CordovaLib` projects are selected to be imported. The `hello-CordovaLib` project is needed as of Cordova 3.3.0 because Cordova is now used as an Android Library instead of a .jar file.
+
 * Press __Finish__.
 
 Once the Eclipse window opens, a red __X__ may appear to indicate
