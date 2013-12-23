@@ -65,9 +65,9 @@ to your Ubuntu system:
     $ sudo add-apt-repository ppa:cordova-ubuntu/ppa
     $ sudo apt-get update
 
-Install packages:
+Install cordova-cli package (and its dependencies):
 
-    $ sudo apt-get install cordova-cli nodejs-legacy npm cmake debhelper libx11-dev libicu-dev pkg-config qtbase5-dev qtchooser qtdeclarative5-dev qtfeedback5-dev qtlocation5-dev qtmultimedia5-dev qtpim5-dev qtsensors5-dev qtsystems5-dev
+    $ sudo apt-get install cordova-cli
 
 ## Project Workflow
 
