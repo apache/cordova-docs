@@ -105,3 +105,9 @@ File for information on global configuration options.
 
         <preference name="PaginationMode" value="unpaginated"/>
 
+- `UIWebViewDecelerationSpeed` (string, defaults to `normal`): Valid values are `normal`,
+  `fast`. This property controls the deceleration speed of momentum scrolling. `normal` is
+  the default speed for most native apps, and `fast` is the default for Mobile Safari.
+
+        <preference name="UIWebViewDecelerationSpeed" value="fast" />
+
