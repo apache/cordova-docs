@@ -344,7 +344,7 @@ chosen, are listed:
 
 * amazon-fireos
 * android
-* bb10
+* blackberry10
 * ios
 * wp7
 * wp8
