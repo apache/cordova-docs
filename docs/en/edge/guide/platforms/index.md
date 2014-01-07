@@ -78,7 +78,6 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Windows Phone 8 Platform Guide
 * Windows Phone 7 Platform Guide
-* Windows Phone Configuration
 * Windows Phone Command-line Tools
 * Upgrading Windows Phone
 
