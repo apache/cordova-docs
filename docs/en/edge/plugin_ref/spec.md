@@ -474,11 +474,15 @@ file in an iOS Cordova project. For example:
 ## _resource-file_ and _header-file_ Elements
 
 Like source files, but specifically for platforms such as iOS that
-distinguish between source files, headers, and resources.  Examples:
+distinguish between source files, headers, and resources. iOS Examples:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
+
+Android example:
+
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 
 ## _lib-file_ Element
 
