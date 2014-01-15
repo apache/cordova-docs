@@ -150,7 +150,7 @@ supporting
 [screen sizes](http://developer.android.com/guide/practices/screens_support.html) and
 [alternate resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
-In `config.xml` in the project's `www` directory, add the following preferences:
+In `config.xml`, add the following preferences:
 
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="10000" />
