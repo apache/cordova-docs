@@ -58,7 +58,7 @@ Blackberry 10 requires an icon element in config.xml:
 
         <icon src="blackberry10/icon-86.png" />
 
-See BlackBerry's documentation for tareting multiple sizes and locales.
+See BlackBerry's documentation for targeting multiple sizes and locales.
 
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
