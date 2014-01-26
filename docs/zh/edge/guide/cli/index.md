@@ -269,7 +269,7 @@ XREF -->
 
 使用此語法來安裝特定的版本：
 
-        $ sudo 故宮安裝-g cordova@3.1.0
+        $ sudo 故宮安裝-g cordova@3.1.0-0.2.0
     
 
 運行 `cordova -v` ，查看當前運行的版本。 運行 `npm
