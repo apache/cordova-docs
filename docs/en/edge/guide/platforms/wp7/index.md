@@ -58,7 +58,7 @@ SDK](http://www.microsoft.com/en-us/download/details.aspx?id=27570).
 Download and extract the latest copy of
 [Cordova](http://cordova.apache.org/#download). You need to work in the
 `lib\windows-phone-8\wp7` subdirectory, `lib\windows-phone-8\wp8`
-contains the Windwos Phone 8 version of Cordova.
+contains the Windows Phone 8 version of Cordova.
 
 Copy the `CordovaWP7_x_x_x.zip` file to the `\My Documents\Visual
 Studio 2012\Templates\ProjectTemplates\` directory.

@@ -26,7 +26,7 @@ version of the CLI.
 
 ## Upgrading to 3.3.0 from 3.2.0
 
-Follow the same instructinos as for `3.2.0`.
+Follow the same instructions as for `3.2.0`.
 
 Starting with 3.3.0, the Cordova runtime is now compiled as an Android Library
 instead of a Jar. This should have no effect for command-line usage, but IDE
@@ -269,7 +269,7 @@ while they still work in 2.0.0, will stop working in a future release.
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
 Due to the introduction of the `CordovaWebView` in the 1.9.0 release,
-third-Party plugins may not work.  These plugins need to get a context
+third-party plugins may not work.  These plugins need to get a context
 from the `CordovaInterface` using `getContext()` or `getActivity()`.
 If you are not an experienced Android developer, please contact the
 plugin maintainer and add this task to their bug tracker.

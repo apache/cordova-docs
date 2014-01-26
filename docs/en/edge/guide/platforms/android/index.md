@@ -25,7 +25,7 @@ of installing the Android SDK, opening an Android project in Eclipse SDK,
 and deploying to an emulator or device. You will need to follow this guide 
 to at least Install the Android SDK, regardless of which workflow you
 are following. (Both the _Web Project Dev_ and _Native Platform Dev_ workflows
-require the Android SDK to be installed and accessable via your PATH.)
+require the Android SDK to be installed and accessible via your PATH.)
 
 See the following for more detailed platform-specific information:
 
