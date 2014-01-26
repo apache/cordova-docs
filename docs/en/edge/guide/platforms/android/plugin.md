@@ -87,7 +87,7 @@ Plugins should use the `initialize` method for their start-up logic.
 ## Writing an Android Java Plugin
 
 A JavaScript call fires off a plugin request to the native side, and
-the correspoinding Java plugin is mapped properly in the `config.xml`
+the corresponding Java plugin is mapped properly in the `config.xml`
 file, but what does the final Android Java Plugin class look like?
 Whatever is dispatched to the plugin with JavaScript's `exec` function
 is passed into the plugin class's `execute` method. Most `execute`

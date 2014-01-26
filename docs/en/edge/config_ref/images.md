@@ -58,7 +58,7 @@ Blackberry 10 requires an icon element in config.xml:
 
         <icon src="blackberry10/icon-86.png" />
 
-See BlackBerry's documentation for tareting multiple sizes and locales.
+See BlackBerry's documentation for targeting multiple sizes and locales.
 
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
@@ -170,7 +170,7 @@ Finally, the splash screen should be present only as long as necessary. When
 your app has started and the webview has loaded, your app should hide the
 splash screen so that your main view is visible. Because the app start time
 will vary quite a bit due to a number of factors, it is recommended that your
-app explicitly invoke `navigator.splashscreen.hide()` in the Javascript
+app explicitly invoke `navigator.splashscreen.hide()` in the JavaScript
 method that responds to the `deviceready` event. Otherwise the splash screen
 will be visible for the SplashScreenDelay value that you configured above.
 This event-driven approach is highly recommended versus having the splash
