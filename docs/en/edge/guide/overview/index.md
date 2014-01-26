@@ -121,7 +121,7 @@ the CLI for progressively greater shares of the development cycle:
   run the CLI on different operating systems depending on the targeted
   platform.
 
-* For supporting platforms, the CLI can compile executible
+* For supporting platforms, the CLI can compile executable
   applications and run them in an SDK-based device emulator.
   For comprehensive testing, you can also generate application files
   and install them directly on a device.

@@ -109,7 +109,7 @@ To preview the app in the iOS emulator:
    in a different emulator, you need to quit the emulator application
    and run a different target within Xcode.
 
-Xcode comes bundled with emulators for the lastest versions of iPhone
+Xcode comes bundled with emulators for the latest versions of iPhone
 and iPad. Older versions may be available from the __Xcode &rarr;
 Preferences &rarr; Downloads &rarr; Components__ panel.
 

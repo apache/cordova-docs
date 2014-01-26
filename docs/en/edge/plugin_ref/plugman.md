@@ -48,7 +48,7 @@ added the `/npm/` directory into your `PATH`.
 
 **NOTE:** You can skip this step if you don't want to pollute your global npm namespace by installing Plugman globally. If this is the case, then
 when you create a Cordova project with the shell tools, there will be a `node_modules` directory inside your project which contains Plugman. 
-Since you did not instally globally, you will have to invoke node for every Plugman command, for example `node ./node_modules/plugman/main.js -version`.
+Since you did not install globally, you will have to invoke node for every Plugman command, for example `node ./node_modules/plugman/main.js -version`.
 The rest of this guide assumes you have installed Plugman globally, meaning you can invoke it with just `plugman`. 
 
 ## Create a Cordova Project

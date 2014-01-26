@@ -55,7 +55,7 @@ apps using the
 
 Download and extract the latest copy of
 [Cordova](http://phonegap.com/download).
-These instuctions apply to the `lib\windows-8` subdirectory.
+These instructions apply to the `lib\windows-8` subdirectory.
 
 ## Set up a New Project
 
