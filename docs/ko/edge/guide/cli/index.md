@@ -269,7 +269,7 @@ XREF -->
 
 이 구문을 사용 하 여 특정 버전을 설치.
 
-        $ sudo npm 설치-g cordova@3.1.0
+        $ sudo npm 설치-g cordova@3.1.0-0.2.0
     
 
 실행 `cordova -v` 현재 실행 중인 버전을 볼 수 있습니다. 실행은 `npm
