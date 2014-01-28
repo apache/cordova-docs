@@ -20,6 +20,8 @@ La utilidad de línea de comandos de `cordova` es una herramienta de alto nivel 
 
  [1]: http://cordova.apache.org
 
+Para obtener información sobre la interfaz de línea de comandos de bajo nivel que permite plugins, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para tener una visión general.
+
 ## Crear un proyecto
 
 Ejecute el comando `create`, especificando la ruta existente para el proyecto, el identificador de paquete de reversa-dominio-estilo y nombre para mostrar de la aplicación. Aquí está la sintaxis para Mac y Windows:
@@ -30,7 +32,7 @@ Ejecute el comando `create`, especificando la ruta existente para el proyecto, e
 
 ## Construir
 
-Esto limpia entonces construye un proyecto.
+Esto limpia y luego construye un proyecto.
 
 Depuración, en Mac o Windows:
 
@@ -38,7 +40,7 @@ Depuración, en Mac o Windows:
     $ C:\path\to\project\cordova\build.bat --debug
     
 
-Liberación, en Mac o Windows:
+Lanzamiento, el Mac o Windows:
 
     $ /path/to/project/cordova/build --release
     $ C:\path\to\project\cordova\build.bat --release
@@ -46,13 +48,13 @@ Liberación, en Mac o Windows:
 
 ## Ejecute la aplicación
 
-El comando `run` acepta los siguientes parámetros *opcionales*:
+El `run` comando acepta los siguientes parámetros *opcionales* :
 
 *   Especificación del objetivo. Esto incluye `--emulator` , `--device` , o`--target=<targetID>`.
 
 *   Construir especificación. Esto incluye `--debug` , `--release` , o`--nobuild`.
     
-    $ /path/to/project/cordova/run \[destino\] \[Build\] $ C:\path\to\project\cordova\run.bat \[destino\] \[Build\]
+    $ /path/to/project/cordova/run \[Target\] \[Build\] $ C:\path\to\project\cordova\run.bat \[Target\] \[Build\]
 
 Asegúrese de crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el `android` comando. Se si más de una AVD está disponible como un objetivo, le pedirá que seleccione una. Por defecto el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo.
 
