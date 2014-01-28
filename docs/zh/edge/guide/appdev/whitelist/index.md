@@ -14,189 +14,122 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 白名單指南
+# Whitelist Guide
 
-## 概述
+域白是一种安全模式，控制访问到您应用程序有没有控制的外部域。 科尔多瓦的默认安全策略允许访问的任何站点。 在移动之前您在生产中的应用，应制订白名单和允许访问特定的网络域和子域。
 
-資源白的就是安全模型控制訪問外部網路資源，如 `http://google.com` 。 Apache 科爾多瓦預設安全性原則允許訪問 Internet 上的任何網站上的任何資源。 在移動之前您在生產中的應用，應審查其白名單和聲明訪問到特定的網路域和子域。
-
-## 規格
-
-域白為[W3C 構件訪問][1]規範奠定了基礎。 在構件訪問規範中， `<access>` 元素，用來聲明對特定的網路資源的訪問。 Apache 科爾多瓦擴展了此概念允許個別網路資源 (Url) 的白。 在將來，Apache 科爾多瓦將抽象的白平臺實現。 然而，現在每個平臺實現其自己的資源或域的白。 平臺實現之間的差異是在本文檔後面所述。
+科尔多瓦遵循[W3C 构件访问][1]规范，它依赖于 `<access>` 中应用程序的元素 `config.xml` 文件以启用对特定域的网络访问。 对于依赖于所述的命令行界面 CLI 工作流的项目，此文件位于项目的顶级目录。 否则为特定于平台的发展道路，位置列出以下各节。 （每个平台上见各种平台指南的详细信息）。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-白名單條目的一般格式如下 Google Chrome 打包企業應用套件的"[模式匹配][2]"規範。 資源指定的 URL，但一個星號 （*） 字元可用作在幾個地方的"萬用字元"表示"任何值可能會在這裡去"。 具體的例子如下所示。
+下面的示例演示白名单中的语法：
 
- [2]: http://developer.chrome.com/apps/match_patterns.html
+*   [Google.com][2]访问：
+    
+        <access origin="http://google.com" />
+        
 
-## 語法
+*   对安全[google.com][3]的访问 ( `https://` ):
+    
+        <access origin="https://google.com" />
+        
 
-在[google.com][3]的所有資源的存取權限：
+*   子域[maps.google.com][4]访问：
+    
+        <access origin="http://maps.google.com" />
+        
 
- [3]: http://google.com
+*   对所有子域[google.com][2]，例如[mail.google.com][5]和[docs.google.com][6]的访问：
+    
+        <access origin="http://*.google.com" />
+        
 
-    http://google.com/*
+*   到*所有*的域，例如， [google.com][2]和[developer.mozilla.org][7]的访问：
+    
+        <access origin="*" />
+        
+    
+    这是新创建的 CLI 项目的默认值。
+
+ [2]: http://google.com
+ [3]: https://google.com
+ [4]: http://maps.google.com
+ [5]: http://mail.google.com
+ [6]: http://docs.google.com
+ [7]: http://developer.mozilla.org
+
+## 亚马逊火 OS 白
+
+在找到特定平台白规则`res/xml/config.xml`.
+
+## Android 白
+
+在找到特定平台白规则`res/xml/config.xml`.
+
+**注**： 在 Android 2.3 上和之前，域白仅适用于 `href` 的超链接，不引用的资源，如图像和脚本。 采取步骤，避免从被注入到应用程序的脚本。
+
+导航到非白名单域通过 `href` 的超链接会导致要打开默认浏览器中，而不是在应用程序中的页。（比较这到下面提到的 iOS 的行为)。
+
+## iOS 白
+
+该平台的白规则命名的应用程序目录中找到 `config.xml` 文件。
+
+没有一个协议，如指定的起源 `www.apache.org` 而不是 `http://www.apache.org` ，默认为所有的 `http` ， `https` ， `ftp` ，和 `ftps` 计划。
+
+在 iOS 平台上的通配符是比在[W3C 构件访问][1]规范更灵活。 例如，以下访问所有子域和顶级域如 `.com` 和 `.net` ：
+
+        <access origin="*.google.*" />
     
 
-訪問所有資源在安全[google.com][4] ( `https://` ):
+与上文指出的对非白名单域通过导航的 Android 平台不同的是 `href` iOS 上的超链接可以防止页面打开在所有。
 
- [4]: https://google.com
+## 黑莓 10 白
 
-    HTTPs://google.com/ *
+在找到白规则`www/config.xml`.
+
+黑莓 10 位使用通配符有别于其他平台两种方式：
+
+*   通过访问任何内容 `XMLHttpRequest` 必须显式声明。 设置 `origin="*"` 不在这种情况下工作。 另外，所有 web 安全性可能会都禁用使用 `WebSecurity` 黑莓手机配置中所述的首选项：
     
+        <preference name="websecurity" value="disable" />
+        
 
-對特定的子域[maps.google.com][5]的訪問：
-
- [5]: http://maps.google.com
-
-    http://maps.google.com/*
+*   作为替代设置 `*.domain` ，设置附加 `subdomains` 属性为 `true` 。 它应设置为 `false` ，默认情况。 例如，以下允许访问 `google.com` ， `maps.google.com` ，和 `docs.google.com` ：
     
-
-訪問[google.com][3] （例如， [mail.google.com][6]和[docs.google.com][7]） 的所有子域：
-
- [6]: http://mail.google.com
- [7]: http://docs.google.com
-
-    http://*.google.com/*
+        <access origin="http://google.com" subdomains="true" />
+        
     
-
-對上[www.google.com][8] "/ 移動"路徑下的所有資源的訪問：
-
- [8]: http://www.google.com
-
-    http://www.google.com/mobile/*
+    以下缩小访问到 `google.com` ：
     
-
-訪問[google.com][3]上任何協定 （如 HTTP、 HTTPS、 FTP 等）：
-
-    *://google.com/*
+        <access origin="http://google.com" subdomains="false" />
+        
     
-
-所有資源 （例如， [google.com][3]和[developer.mozilla.org][9]） 在互聯網上訪問：
-
- [9]: http://developer.mozilla.org
-
-    *
+    指定访问到所有的域，包括本地 `file://` 协议：
     
-
-## Android 系統
-
-### 詳細資訊
-
-在找到白規則 `res/xml/config.xml` ，並宣佈與元素`<access origin="..." />`.
-
-Android 系統完全支援白語法。
-
-### 語法
-
-[Google.com][3]訪問：
-
-    <access origin="http://google.com/*" />
-    
-
-## 黑莓 10
-
-### 詳細資訊
-
-在找到白規則 `www/config.xml` ，並宣佈與元素`<access origin="..." />`.
-
-黑莓 10 比其他平臺兩種方式以不同的方式處理萬用字元：
-
-1） 由用戶端代碼訪問的內容必須顯式聲明。起源 ="*"將不尊重這一使用情形。或者，可使用首選項禁用所有 web 安全。
-
-2） 子域 ="true"可用於代替"*.domain"
-
-### 語法
-
-[Google.com][3]訪問：
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-對[maps.google.com][5]的訪問：
-
-    <access origin="http://maps.google.com" subdomains="false" />
-    
-
-對在[google.com][3]上的所有子域的訪問：
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-訪問到所有的域，包括 `file://` 協定：
-
     <access origin="*" subdomains="true" />
-    
 
-禁用所有 web 安全性：
+(有关支持的详细信息，请参阅黑莓的文档[访问元素][8]上.)
 
-    <preference name="websecurity" value="disable" />
-    
+ [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## iOS
+## 3.1.0 的 iOS 变化
 
-### 詳細資訊
+之前 3.1.0 版，科尔多瓦 iOS 包括一些非标准扩展域 whilelisting 计划其他科尔多瓦平台都支持的。 自 3.1.0、 iOS 白名单现在符合资源白名单语法描述了本文档的顶部。 如果您从 pre-3.1.0、 升级和使用这些扩展，您可能需要更改您 `config.xml` ，以前一样继续白组相同的资源文件。
 
-在找到白規則 `AppName/config.xml` ，並宣佈與元素`<access origin="..." />`.
+具体而言，这些模式需要更新：
 
-iOS 完全支援白語法。
+*   `apache.org`（无协议）： 这将先前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 的协议。 将更改为" `*://apache.org/*` "，包括所有协议，或都包括您需要支持的每个协议的线。
 
-### 在 3.1.0 中更改：
+*   `http://apache.*`（通配符域的一端）： 这将先前匹配的所有顶级-级别-域，包括所有可能的两个字母 Tld （但不是有用域喜欢。 co.uk)。 为每个 TLD，您实际上控制，并且需要到白名单中包括一条线。
 
-之前 3.1.0 版，科爾多瓦 iOS 包括一些非標準擴展域 whilelisting 計畫其他科爾多瓦平臺都支援的。 自 3.1.0、 iOS 白名單現在符合資源白名單語法描述了本文檔的頂部。 如果您從 pre-3.1.0、 升級和使用這些擴展，您可能需要更改您 `config.xml` ，以前一樣繼續白組相同的資源檔。
+*   `h*t*://ap*he.o*g`（随机缺少字母的通配符）： 不再支持这些 ；更改包含为每个域和协议，你实际上需要到白名单中的一线。
 
-具體而言，這些模式需要更新：
+## Windows Phone 白
 
-*   " `apache.org` "（無協定）： 這將先前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 的協定。 將更改為" `*://apache.org/*` "，包括所有協定，或都包括您需要支援的每個協定的線。
+Windows Phone 7 和 8 的白规则发现在应用程序中的 `config.xml` 文件。
 
-*   " `http://apache.*` "（萬用字元域的一端）： 這將先前匹配的所有頂級-級別-域，包括所有可能的兩個字母 Tld （但不是有用域喜歡。 co.uk)。 為每個 TLD，您實際上控制，並且需要到白名單中包括一條線。
+## Tizen 白
 
-*   " `h*t*://ap*he.o*g` "（萬用字元為隨機丟失信件）： 不再支援這些 ； 更改包含一條線的每個域和協定，您實際上需要到白名單中。
+白规则发现在应用程序中的 `config.xml` 文件。 在平台上同样依赖于 `subdomains` 属性作为黑莓平台。 (有关支持的详细信息，请参阅 Tizen 的文档[访问元素][9]上.)
 
-### 語法
-
-[Google.com][3]訪問：
-
-    <access origin="http://google.com/*" />
-    
-
-## Windows Phone (7 和 8)
-
-在找到白規則 `config.xml` ，並宣佈與元素`<access origin="..." />`.
-
-### 語法
-
-[Google.com][3]訪問：
-
-    <access origin="http://google.com" />
-    
-
-## Tizen
-
-### 詳細資訊
-
-應用程式根目錄下的 `config.xml` 檔指定域白規則，使用 `<access origin="..." />` 元素。 完整引用，請參閱[Tizen 訪問外部網路資源檔][10].
-
- [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
-
-### 語法
-
-[Google.com][3]訪問：
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-對安全[google.com][4]的訪問 ( `https://` ):
-
-    <access origin="https://google.com" subdomains="false" />
-    
-
-對在[google.com][3]上的所有子域的訪問：
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-訪問到所有的域，包括 `file://` 協定：
-
-    <access origin="*" subdomains="true" />
+ [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
