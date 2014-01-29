@@ -16,23 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-Начиная Cordova 1.9, с помощью `CordovaActivity` , Cordova можно использовать в качестве компонента в более крупных родной Android приложений. Android относится к этот компонент как `CordovaWebView` . Новые приложения на базе Cordova от 1,9 года использовать `CordovaWebView` как основной вид, независимо от того наследие `CordovaActivity` используется подход.
+В этом разделе показано, как вставлять WebView Cordova включен компонент в рамках более крупных приложений Android. Дополнительные сведения о том, как эти компоненты могут взаимодействовать друг с другом смотрите приложение плагины.
 
-Если вы не знакомы с разработки Android приложений, пожалуйста, прочитайте руководство Android платформы разработки Cordova-приложение перед попыткой включить WebView. Это не основной способ создания приложений Android Кордова. Эти инструкции в настоящее время вручную, но может быть в конечном итоге быть автоматизированы.
+Если вы не знакомы с Android, следует сначала ознакомиться с руководством Android платформы и установлен перед более необычный вариант развития встраивания WebView последний пакет SDK Android. Начиная с Cordova 1.9, платформа Android опирается на `CordovaWebView` компонент, который опирается на наследие `CordovaActivity` компонент, который до даты версии 1.9.
 
-## Необходимые условия
+1.  Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней Кордова. Скачать его с [cordova.apache.org][1] и распакуйте Android пакет.
 
-*   Кордова 1.9 или выше
+2.  Перейдите в Android пакет `/framework` директорию и запустить `ant jar` . Он создаёт Кордова `.jar` файл, как`/framework/cordova-x.x.x.jar`.
 
-*   SDK Android, обновлены до последних SDK
+3.  Копия `.jar` файл в Android-проект `/libs` каталог.
 
-## Руководство по использованию CordovaWebView в Android-проект
-
-1.  `cd`в `/framework` и запустить `ant jar` построить cordova банку. Он создает файл .jar, формируется как `cordova-x.x.x.jar` в `/framework` каталог.
-
-2.  Скопируйте cordova банку в ваш Android-проект `/libs` каталог.
-
-3.  Редактирование вашего приложения `main.xml` файл (под `/res/xml` ) чтобы выглядеть следующим образом, с `layout_height` , `layout_width` и `id` изменены в соответствии с вашего приложения:
+4.  Добавьте в приложение следующий `/res/xml/main.xml` файл, с `layout_height` , `layout_width` и `id` изменения в соответствии с приложением:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  Измените вашу деятельность, чтобы он реализует `CordovaInterface` . Следует реализовать включены методы. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или реализовать их на свой собственный. Фрагмент кода ниже показывает простое приложение, использующее интерфейс. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
+5.  Изменения деятельности таким образом, чтобы он реализует `CordovaInterface` . Она должна реализовывать методы, включены. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или иначе реализовать их на свой собственный. В следующем фрагменте кода показано простое приложение, которое опирается на интерфейсе. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,8 +49,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
-Если вы используете камеру, следует также реализовать это:
-
+6.  Если приложение должно использовать камеру, реализуйте следующее:
+    
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -72,16 +66,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-    
+        
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-    
+        
             // Start activity
             super.startActivityForResult(intent, requestCode);
         }   
-    
+        
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -99,16 +93,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
+        
+
+7.  Наконец, не забудьте добавить пул потоков, иначе плагины не нити, на которой будет выполняться:
     
-
-Наконец, не забудьте добавить пул потоков, иначе плагины нет потоков для запуска на:
-
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-    
+        
 
-1.  Скопировать файлы HTML и JavaScript вашего приложения на ваш Android-проекта `/assets/www` каталог.
+8.  Скопируйте файлы HTML и JavaScript приложения для Android-проект `/assets/www` каталог.
 
-2.  Копия `config.xml` от `/framework/res/xml` к вашему проекту `/res/xml` каталог.
+9.  Копия `config.xml` файл из `/framework/res/xml` в проект `/res/xml` каталог.
+
+ [1]: http://cordova.apache.org

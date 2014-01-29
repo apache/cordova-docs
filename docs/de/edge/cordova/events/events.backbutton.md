@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# BackButton
+# backbutton
 
 Das Ereignis wird ausgelöst, wenn der Benutzer den "zurück"-Button drückt.
 
@@ -27,8 +27,9 @@ Um das zurück-Button Standardverhalten überschreiben, registriert einen Ereign
 
 ## Unterstützte Plattformen
 
+*   Amazon Fire OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry 10
 *   Windows Phone 7 und 8
 
 ## Kurzes Beispiel

@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Incrustar WebViews
+# WebViews embebidas
 
 Cordova aplicaciones se implementan normalmente como un navegador *WebView* dentro de la plataforma móvil de nativa. Esta sección le muestra cómo, para apoyar las plataformas, para crear tu propio WebView componentes que hacen pleno usan de Cordova APIs. Entonces puede implementar estos componentes de la aplicación de Córdoba junto con componentes nativos en una aplicación híbrida.
 

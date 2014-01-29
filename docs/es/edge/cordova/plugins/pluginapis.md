@@ -7,7 +7,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 ## bajo la licencia.
 
-# Plugin API
+# Plugin APIs
 
 Cordova naves con un mínimo conjunto de APIs, y proyectos añadir qué APIs adicionales que necesitan a través de plugins.
 

@@ -16,76 +16,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # События
 
-> Кордова события жизненного цикла.
+> События жизненного цикла Cordova.
 
 ## Типы событий
 
 *   deviceready
 *   Пауза
 *   резюме
-*   онлайн
-*   автономном режиме
 *   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
 *   menubutton
-*   searchButton
+*   searchbutton
 *   startcallbutton
 *   endcallbutton
 *   volumedownbutton
 *   volumeupbutton
 
-## Доступ к функции
+## События добавляемые [org.apache.cordova.battery-status][1]
 
-Начиная с версии 3.0, состояние аккумулятора Cordova реализует и другие устройства уровня API как *плагины*. Доступ ко всем событиям, не связанные с статус батареи включены по умолчанию. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы включить или отключить аккумулятор события:
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
 
-        $ cordova plugin add org.apache.cordova.battery-status
-        $ cordova plugin ls
-        [ 'org.apache.cordova.battery-status' ]
-        $ cordova plugin rm org.apache.cordova.battery-status
-    
+*   batterycritical
+*   batterylow
+*   batterystatus
 
-Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
+## События добавляемые [org.apache.cordova.network-information][2]
 
-*   Андроид
-    
-        (in app/res/xml/config.xml)
-        <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
-        </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-        
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
 
-*   Ежевика WebWorks
-    
-        (in www/plugins.xml)
-        <feature name="Battery">
-            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
-        </feature>
-        
-        (in www/config.xml)
-        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
-        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
-        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
-        
-
-*   iOS (в`config.xml`)
-    
-        <feature name="Battery">
-            <param name="ios-package" value="CDVBattery" />
-        </feature>
-        
-
-*   Tizen (в`config.xml`)
-    
-        <feature name="http://tizen.org/api/systeminfo" required="true"/>
-        
-    
-    Ссылка: [манифест приложения для Tizen веб-приложения][1]
-
- [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
-
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+*   online
+*   offline

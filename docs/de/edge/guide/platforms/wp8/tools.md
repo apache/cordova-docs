@@ -20,9 +20,11 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+
 ## Windows Phone
 
-Die Windows Phone-Befehlszeilen-Tools unterstützen, erstellen, Erstellung und Ausführung von neue Projekten. Befehle müssen über eine Cmd oder Powershell-Eingabeaufforderung ausgeführt werden.
+Die Windows Phone-Befehlszeilen-Tools unterstützen, erstellen, Erstellung und Ausführung von neuen Projekten. Befehle müssen über eine Cmd oder Powershell-Eingabeaufforderung ausgeführt werden.
 
 WP8-Repo jetzt enthält Code zum Erstellen von WP7 + WP8 apps. Das Repo hat Unterverzeichnisse für die einzelnen: `wp7/` und`wp8/`.
 
@@ -30,9 +32,10 @@ WP8-Repo jetzt enthält Code zum Erstellen von WP7 + WP8 apps. Das Repo hat Unte
 
 Es gibt 2 Möglichkeiten, gehen Sie zum Erstellen einer neuen Apache Cordova WP7 oder WP8.
 
-### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen.
+### Führen Sie die Batchdatei erstellen und installieren Sie die Vorlagen
 
-*   Der Stamm der Repo enthält eine Datei createTemplates.bat. Doppelklick auf diese Datei wird 2 Zip-Dateien generiert. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip wo x.x.x die aktuelle Versionsnummer ist) Um diese Dateien in Visual Studio kopieren leicht zu verwenden werden sie zu "Mein Dateien\Visual Studio 2012\Templates\ProjectTemplates\" Sie dann neue Apache Cordova Windows Phone apps aus der Visual Studio-Datei-> neues Projekt im Menü erstellen können.
+*   Der Stamm der Repo enthält eine `createTemplates.bat` Datei. Doppelklick erzeugt zwei `.zip` Dateien: `CordovaWP7_x_x_x.zip` und `CordovaWP8_x_x_x.zip` , wobei *x.x.x* die aktuelle Versionsnummer darstellt. Um diese Dateien in Visual Studio leicht zu verwenden, zu kopieren, sie zu `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` . Sie können dann neue Apache Cordova Windows Phone-Anwendungen aus Visual Studio erstellen **Datei → neues Projekt** Menü.
 
 *   Wenn Sie die Batch-Datei von der Befehlszeile aus ausführen, können Sie auch mit einem Parameter automatisch installieren aufrufen
 
@@ -43,7 +46,7 @@ Führen Sie das Skript:
 
 ### Verwenden Sie Create-Skripts über die Befehlszeile
 
-Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rückwärts-Domäne-Style Paket-ID und die app-Anzeigenamen angeben. Hier ist die Syntax für Windows Phone 7 und 8:
+Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die Reverse-Domäne-Style Paket-ID und die app-Anzeigenamen angeben. Hier ist die Syntax für Windows Phone 7 und 8:
 
     >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
@@ -61,7 +64,7 @@ Starten Sie Visual Studio und öffnen Sie die Projektmappendatei (.sln) in (C:\p
 
 Erstellen und ausführen
 
-## Erstellen des Projekts (reinigt dann baut)
+## Erstellen des Projekts (reinigen, dann bauen)
 
 *   Debug
     
@@ -71,7 +74,7 @@ Erstellen und ausführen
     
     $ C:\path\to\my\_new\_project\cordova\build --release
 
-## Ausführen der Anwendung
+## Die App ausgeführt
 
 Führen Sie den Befehl "ausführen" mit den folgenden *optionalen* Parametern
 
@@ -81,7 +84,7 @@ Führen Sie den Befehl "ausführen" mit den folgenden *optionalen* Parametern
     
     $ C:\path\to\my\_new\_project\cordova\run \[Target\] \[Build\]
 
-In der Standardeinstellung der `run` Befehl mit genannt werden `--emulator --debug` Wenn Flaggen nicht bereitgestellt werden.
+In der Standardeinstellung der `run` Befehl wird aufgerufen, mit `--emulator --debug` Wenn Flaggen nicht bereitgestellt werden.
 
 ## Reinigung
 

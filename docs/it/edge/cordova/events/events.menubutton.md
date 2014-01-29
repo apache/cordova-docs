@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# pulsante menu
+# menubutton
 
 L'evento viene generato quando l'utente preme il tasto menu.
 
@@ -29,8 +29,9 @@ Applicazioni in genere è necessario utilizzare `document.addEventListener` per 
 
 ## Piattaforme supportate
 
+*   Amazon fuoco OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry 10
 
 ## Esempio rapido
 

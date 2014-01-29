@@ -25,7 +25,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Présentation
       </h2>
       
-      <span>Commencez ici si vous êtes nouveau à Cordova.</span>
+      <span>Commencez ici si vous êtes nouveau avec Cordova.</span>
+    </li>
+    <li>
+      <h2>
+        Plateforme de Support
+      </h2>
+      
+      <span>Tableau de compatibilité pour tous les principales caractéristiques.</span>
     </li>
     <li>
       <h2>
@@ -40,6 +47,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Mettre en place les projets de chaque mise à jour et SDK</span>
+    </li>
+    <li>
+      <h2>
+        L'utilisation de Plugman pour gérer les Plugins
+      </h2>
+      
+      <span>Utiliser Plugman pour gérer les Plugins sans le CLI</span>
     </li>
     <li>
       <h2>
@@ -85,6 +99,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Stockage
+      </h2>
+      
+      <span>Un aperçu des options de stockage native.</span>
+    </li>
+    <li>
+      <h2>
         <a href="_index.html">Index de mots-clés</a>
       </h2>
       
@@ -99,115 +120,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Accéléromètre
-      </h2>
-      
-      <span>Utiliser l'accéléromètre du mobile.</span>
-    </li>
-    <li>
-      <h2>
-        Appareil photo
-      </h2>
-      
-      <span>Prendre une photo en utilisant la l'appareil photo du terminal.</span>
-    </li>
-    <li>
-      <h2>
-        Capture
-      </h2>
-      
-      <span>Capturer les fichiers multimédias à l'aide des applications de capture pour le multimédia de l'appareil.</span>
-    </li>
-    <li>
-      <h2>
-        Boussole
-      </h2>
-      
-      <span>Dans quelle direction pointe le mobile?</span>
-    </li>
-    <li>
-      <h2>
-        Connexion
-      </h2>
-      
-      <span>Vérifier rapidement l'état du réseau et les informations du réseau mobile.</span>
-    </li>
-    <li>
-      <h2>
-        Contacts
-      </h2>
-      
-      <span>Interactions avec la base de données contacts du terminal.</span>
-    </li>
-    <li>
-      <h2>
-        Appareil
-      </h2>
-      
-      <span>Recueillir de l'information spécifique de périphérique.</span>
-    </li>
-    <li>
-      <h2>
         Événements
       </h2>
       
-      <span>Interactions avec les événements natifs via JavaScript.</span>
+      <span>Crochet dans les événements natifs via JavaScript.</span>
     </li>
     <li>
       <h2>
-        Fichier
+        Plugin API
       </h2>
       
-      <span>Interactions avec le système de fichier natif via JavaScript.</span>
-    </li>
-    <li>
-      <h2>
-        Géolocalisation
-      </h2>
-      
-      <span>Localiser le terminal.</span>
-    </li>
-    <li>
-      <h2>
-        Mondialisation
-      </h2>
-      
-      <span>Permettre la représentation d'objets spécifiques aux paramètres régionaux.</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>Lancer URL dans une autre instance du navigateur en app.</span>
-    </li>
-    <li>
-      <h2>
-        Media
-      </h2>
-      
-      <span>Enregistrer et lire des fichiers audio.</span>
-    </li>
-    <li>
-      <h2>
-        Notification
-      </h2>
-      
-      <span>Notifications de visuel, sonore et tactile.</span>
-    </li>
-    <li>
-      <h2>
-        SplashScreen
-      </h2>
-      
-      <span>Afficher et masquer l'écran de démarrage des applications.</span>
-    </li>
-    <li>
-      <h2>
-        Stockage
-      </h2>
-      
-      <span>Crochet dans les dispositifs des options de stockage native.</span>
+      <span>Découvrez ce que les plugins Cordova sont disponibles à utiliser dans votre projet.</span>
     </li>
   </ul>
 </div>
