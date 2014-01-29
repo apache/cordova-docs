@@ -22,7 +22,7 @@ Diese Anleitung beschreibt zum Einrichten Ihrer Entwicklungsumgebung SDK Cordova
 
 Tizen SDK erfordert Linux Ubuntu 10.04/10.10/11.04/11.10 (32-Bit) oder Windows XP SP3/7 (32-Bit).
 
-Entwickler sollten verwenden die `cordova` in Verbindung mit dem Tizen-SDK-Dienstprogramm. Finden Sie die Command-Line Interface Informationen zum Installieren, fügen Sie Projekte, dann erstellen und Bereitstellen eines Projekts.
+Entwickler sollten verwenden die `cordova` in Verbindung mit dem Tizen-SDK-Dienstprogramm. Finden Sie unter The Command-Line Interface Informationen installieren Sie es, Projekte, hinzufügen dann erstellen und Bereitstellen eines Projekts.
 
 ## Das SDK installieren
 

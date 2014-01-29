@@ -22,6 +22,8 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
 Gli strumenti della riga di comando di iOS sono costruiti su script di shell e fare affidamento sugli strumenti della riga di comando di Xcode come `xcode-select` e`xcodebuild`.
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per una panoramica, vedere applicazione plugin.
+
 ## Creare un progetto
 
 Eseguire il `create` comando, specificando il percorso esistente per il progetto, l'identificatore del pacchetto stile retro-dominio e nome visualizzato dell'app.
@@ -34,7 +36,7 @@ Eseguire il `create` comando, specificando il percorso esistente per il progetto
     $ /path/to/my_new_project/cordova/build
     
 
-## Eseguire l'applicazione sull'emulatore
+## Eseguire l'applicazione su un emulatore
 
     $ /path/to/my_new_project/cordova/run
     

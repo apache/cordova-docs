@@ -16,7 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android プラットフォーム ガイド
 
-このガイドは、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。詳細なプラットフォーム固有の情報は、次を参照してください。
+このガイドは、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 それの Android SDK をインストールする Eclipse SDK で Android プロジェクトを開くと、エミュレーターまたはデバイスに展開するプロセスについて説明します。 このガイドに従って少なくとも次ワークフローに関係なく、Android SDK をインストールをする必要があります。 ( *Web プロジェクト Dev*と*ネイティブのプラットフォーム開発*のワークフロー要求 Android SDK をインストールし、パス経由でアクセス可能）
+
+詳細なプラットフォーム固有の情報は、次を参照してください。
 
 *   Android の構成
 *   Android の web 表示
@@ -44,20 +46,19 @@ NOTE, doc said:
 
 開発者を使用する必要があります、 `cordova` 人造人間 SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、コマンド ライン インターフェイス参照してください。
 
-## SDK をインストールします。
-
-[Developer.android.com/sdk][3]から Android SDK をインストールします。 それ以外の場合、ダウンロードした移動、SDK をインストールする場所の選択肢が表示されます `adt-bundle` ツリーの開発ツールを格納する場所を。
+Android SDK をインストールします。 [developer.android.com/sdk][3].Android の sdk として配布されて、' adt-バンドル-<os>-<arch>-<ver>' ファイル。Windows では、adt バンドルは、インストーラーにパッケージ化されます。OSX と Linux 上に簡単に解凍 'adt バンドル' 開発ツールを格納する場所。 [Android の SDK のセットアップに関する詳細情報をここで発見ことができます。][4]
 
  [3]: http://developer.android.com/sdk/
+ [4]: http://developer.android.com/sdk/installing/bundle.html
 
 コルドバ動作するコマンド ライン ツール、SDK の含まする必要があります `tools` と `platform-tools` パス環境のディレクトリ。 Mac、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK のインストールに応じて、次のような行を追加します。
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+    エクスポート パス ${path} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール
     
 
 これは、SDK で新しくオープンしたターミナル windows のツールを公開します。それ以外の場合、現在のセッションで使用できるようにするこれを実行します。
 
-    $ source ~/.bash_profile
+    $ ソース ~/.bash_profile
     
 
 Windows 7 を道の環境を変更: する
@@ -79,14 +80,17 @@ Windows 7 を道の環境を変更: する
 
 また、コマンド ・ プロンプトとタイプ Java および Ant. オープンを有効にする必要があります `java` 、また入力と `ant` 。パスに追加いずれかを実行する失敗します。
 
-        %JAVA_HOME%\bin;%ANT_HOME%\bin
+        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
     
 
 ## SDK でプロジェクトを開く
 
 使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
-        $ コルドバ作成こんにちは com.example.hello"HelloWorld"$ cd こんにちは $ コルドバ プラットフォーム android $ コルドバ ビルドを追加
+        $ cordova create hello com.example.hello "HelloWorld"
+        $ cd hello
+        $ cordova platform add android
+        $ cordova build
     
 
 作成したらここでは、SDK を使用して、それを変更する方法です。
@@ -95,13 +99,15 @@ Windows 7 を道の環境を変更: する
 
 *   **新しいプロジェクト**のメニュー項目を選択します。
 
-*   表示されたダイアログ ボックスから**既存のコードから Android プロジェクト**を選択し、**次**キーを押します。 ![][4]
+*   表示されたダイアログ ボックスから**既存のコードから Android プロジェクト**を選択し、**次**キーを押します。 ![][5]
 
 *   移動する `hello` 、または好みのディレクトリに作成した、プロジェクトし、 `platforms/android` サブディレクトリ。
 
+*   必ず両方 `hello` と `hello-CordovaLib` をインポートするプロジェクトが選択されています。 `hello-CordovaLib`コルドバは .jar ファイルではなく Android ライブラリとして今使用されるためコルドバ 3.3.0 現在プロジェクトが必要です。
+
 *   **終了**キーを押します。.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: img/guide/platforms/android/eclipse_new_project.png
 
 Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 
@@ -123,46 +129,46 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 *   Eclipse、内でこのツールバー アイコンを押します。
     
-    ![][5]
+    ![][6]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
 一度開いて、アンドロイド SDK マネージャーはさまざまなランタイム ライブラリが表示されます。
 
-![][6]
+![][7]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [7]: img/guide/platforms/android/asdk_window.png
 
 **ツール → 管理 Avd** (Android 仮想デバイス) を選択し、表示されたダイアログ ボックス内の**デバイス定義**から任意の項目を選択します。
 
-![][7]
+![][8]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 これで、AVD **Android 仮想デバイス**リストに表示されます。
 
-![][9]
+![][10]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
 
-![][10]
+![][11]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 この時点で使用することができます、 `cordova` ユーティリティをコマンドラインからエミュレーターにアプリケーションを配置します。
 
-        $ コルドバ android をエミュレートします。
+        $ cordova emulate android
     
 
-代わりに Eclipse 内で作業している、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
+Eclipse 内で作業する代わりに、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
 
 高速な体験、Intel ベースのエミュレーター イメージを使用します。
 
@@ -176,13 +182,13 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 ## デバイスへの配置します。
 
-デバイスに直接アプリをプッシュするには、 [Android 開発者向けサイト][11]で説明されているようにあなたのデバイスで USB デバッグを有効にかどうかを確認し、ミニ USB ケーブルを使用してあなたのシステムにプラグインします。
+デバイスに直接アプリをプッシュするには、 [Android 開発者向けサイト][12]で説明されているようにあなたのデバイスで USB デバッグを有効にかどうかを確認し、ミニ USB ケーブルを使用してあなたのシステムにプラグインします。
 
- [11]: http://developer.android.com/tools/device.html
+ [12]: http://developer.android.com/tools/device.html
 
 アプリをデバイスにプッシュするには、コマンド行から。
 
-        android を実行 $ コルドバ
+        $ cordova run android
     
 
 Eclipse、内でプロジェクトを右クリックし、**人造人間アプリケーション → として実行**を選択します.

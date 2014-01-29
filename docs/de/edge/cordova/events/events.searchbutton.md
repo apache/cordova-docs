@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# SearchButton
+# searchbutton
 
 Das Ereignis wird ausgelöst, wenn der Benutzer die Schaltfläche Suchen auf Android drückt.
 

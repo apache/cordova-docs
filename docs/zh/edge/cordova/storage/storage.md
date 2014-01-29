@@ -16,52 +16,47 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 存儲
 
-> 提供對設備的存儲選項的訪問。
+> 科爾多瓦的存儲選項的概述。
 
-此 API 提供了基於兩個不同的 W3C 規範的存儲選項：
+幾個存儲 Api 是用於科爾多瓦的應用程式。請參閱[html5rocks][1]。為更全面地概述和示例。
 
-*   [Web 存儲 API 規範][1]允許您要訪問的資料通過簡單的鍵/值對。 上認為在此介面上的完整詳細資訊，請參閱節。
+ [1]: http://www.html5rocks.com/en/features/storage
 
-*   [Web SQL 資料庫規範][2]提供更多的功能全面的資料庫表訪問通過 SQL 查詢。 此介面的摘要將立即出現下面。
+## 認為
 
- [1]: http://dev.w3.org/html5/webstorage/
- [2]: http://dev.w3.org/html5/webdatabase/
+此 API 也已知作為*web 存儲*、*簡單的存儲*，或由其備用*會話存儲*介面，提供同步鍵/值對存儲，是可用基礎 web 視圖實現中。 請參閱[W3C 規範][2]的詳細資訊。
 
-科爾多瓦提供兩個介面都對少數已經不支援他們的設備的訪問。否則內置實現應用。
+ [2]: http://www.w3.org/TR/webstorage/
 
-## 方法
+**Windows Phone 7 怪癖**： 點標記法是*不*提供，所以一定要使用 `setItem` 或 `getItem` ，而不是在作為便捷鍵直接從存儲的物件，`window.localStorage.someKey`.
 
-*   大概
+## WebSQL
 
-## 參數
+此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供更多的功能全面的資料庫表訪問通過 SQL 查詢。
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+ [3]: http://dev.w3.org/html5/webdatabase/
 
-## 物件
+在以下平臺支援 WebSQL：
 
-*   資料庫
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   Android 系統
+*   黑莓 10
+*   iOS
+*   Tizen
 
-## 訪問功能
+## IndexedDB
 
-版本為 3.0，對存儲 Api 的訪問內置於科爾多瓦，，不需要使用 CLI 要添加的外掛程式，如所述的命令列介面。
+此 API 是在底層 web 視圖中可用。[索引的 DB][4]提供比認為更多的功能，但比 WebSQL 較少。
 
-如果您使用較舊的前面，CLI 的科爾多瓦工具集，，仍然需要以下的平臺特定的配置設置：
+ [4]: http://www.w3.org/TR/IndexedDB/
 
-*   （在 android`app/res/xml/config.xml`)
-    
-        < 功能名稱 ="存儲">< 參數名稱 ="android 包"value="org.apache.cordova.Storage"/ >< / 功能 >
-        
+在以下平臺支援 IndexedDB：
 
-*   黑莓手機 WebWorks （中`www/config.xml`)
-    
-        < 功能 id="blackberry.widgetcache"所需 ="true"版本 ="1.0.0.0"/ >
-        
+*   Windows Phone 8
+*   黑莓 10
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+## 基於外掛程式的選項
+
+除了上面列出的 Api 的存儲、[檔 API][5]允許您緩存在本地檔案系統上的資料。 其他[科爾多瓦外掛程式][6]提供類似的存儲選項。
+
+ [5]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
+ [6]: http://plugins.cordova.io/

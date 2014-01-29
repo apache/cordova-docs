@@ -16,17 +16,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Config.xml 檔
 
-與全域設定檔，可以控制應用程式的行為的許多方面 `config.xml` ，就是放在頂級 web 資產目錄和應用程式的主頁。 這與平臺無關的 XML 檔案格式基於 W3C 的[打包 Web 應用程式 （視窗小部件）][1]規範，並擴展至指定核心科爾多瓦 API 功能、 外掛程式和平臺特定的設置。
+與全域設定檔，可以控制應用程式的行為的許多方面 `config.xml` 。 這與平臺無關的 XML 檔被安排基於 W3C 的[打包 Web 應用程式 （視窗小部件）][1]規範，並擴展指定核心科爾多瓦 API 功能、 外掛程式和平臺特定的設置。
 
  [1]: http://www.w3.org/TR/widgets/
 
-為專案創建與科爾多瓦 CLI （描述在命令列介面），可以在頂級找到此檔 `www` 目錄。 使用 CLI 生成的專案將重新生成此內的各個子目錄中的檔版本 `platforms` 。 如果您使用 CLI 來創建一個專案，但您的工作流然後轉向一個 SDK，平臺特定的檔可作為源。
+為專案創建與科爾多瓦 CLI （描述在命令列介面），可以在頂層目錄中找到此檔：
+
+        app/config.xml
+    
+
+請注意之前的版本 3.3.1-0.2.0，該檔存在 `app/www/config.xml` ，並且仍然支援讓它在這裡。
+
+當使用 CLI 來生成專案時，此檔的版本被動地被覆制到各種 `platforms/` 子目錄，例如：
+
+        app/platforms/ios/AppName/config.xml
+        app/platforms/blackberry10/www/config.xml
+        app/platforms/android/res/xml/config.xml
+    
 
 本節詳細介紹全球和跨平臺的配置選項。請參見以下各節為平臺特定的選項：
 
 *   iOS 配置
 *   Android 系統組態
-*   黑莓手機配置
+*   黑莓 10 配置
 
 除了下面詳述的各種配置選項，您還可以配置每個目標平臺的圖像應用程式的核心的集。有關更多資訊，請參見圖示和啟動畫面。
 
@@ -44,12 +56,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             </author>
             <content src="index.html" />
             <access origin="*" />
-            <preference name="Fullscreen" value="true" />
-            <preference name="WebViewBounce" value="true" />
         </widget>
     
-
-<!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
 以下的配置元素出現在頂級 `config.xml` 檔，並在所有受支援的科爾多瓦平臺支援：
 
@@ -79,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="Orientation" value="landscape" />
         
     
-    **注：**`default`值是指*兩個*橫向或縱向方向被啟用。 如果您想要使用的每個平臺的預設設置 （通常縱向只），離開此標記出來的 `config.xml` 檔。 此外，黑莓手機使用 `auto` 而不是 `default` 在其 `config.xml` 檔。 如果您指定 `default` 在全球 `config.xml` ，它會轉換為 `auto` 黑莓的生成中。
+    **注**： `default` 值是指*兩個*橫向或縱向方向被啟用。 如果您想要使用的每個平臺的預設設置 （通常縱向只），離開此標記出來的 `config.xml` 檔。
 
 ## 多平臺首選項
 
@@ -105,17 +113,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
     
     適用于 iOS 和黑莓手機。
-    
-    **注：**為黑莓手機，有效的值是 `enable` 或`disable`.
 
-## `<feature>`元素
+## *功能*元素
 
-如果你使用 CLI 來構建應用程式，則使用 `plugin` 命令來啟用設備的 Api。 這不會修改的頂級 `config.xml` 檔中，所以 `<feature>` 的元素並不適用于您的工作流。 如果您直接在 SDK 中工作，使用特定平臺 `config.xml` 檔作為源，您使用 `<feature>` 標記，以使設備級 Api 和外部外掛程式。 它們通常出現在此表單中：
-
-        <feature name="Plugin" value="PluginID" />
-    
-
-他們經常出現在特定于平臺的自訂值以 `config.xml` 檔。例如，在這裡是如何指定為 Android 專案設備 API：
+如果你使用 CLI 來構建應用程式，則使用 `plugin` 命令來啟用設備的 Api。 這不會修改的頂級 `config.xml` 檔中，所以 `<feature>` 的元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定平臺工作 `config.xml` 檔作為源，您使用 `<feature>` 標記，以使設備級 Api 和外部外掛程式。 他們經常出現在特定于平臺的自訂值以 `config.xml` 檔。 例如，在這裡是如何指定為 Android 專案設備 API：
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
