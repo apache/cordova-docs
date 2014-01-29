@@ -22,6 +22,13 @@ Um Cordova Anwendungen entwickeln, installieren Sie SDKs für jede mobile Plattf
 
 Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen, jede Plattform-Entwicklungsumgebung einrichten: wo Sie das SDK zu erhalten, Geräteemulatoren einrichten, wie die Verbindung der Geräte zum direkten testen und verwalten, wichtige Signaturanforderungen. Zusätzliche Handbücher enthalten Informationen auf jede Plattform einzigartige Gruppe von Konfigurationsoptionen, Anweisungen zum Hinzufügen von Plugins, aktualisieren, jede Plattform und Plattform-spezifischen Befehlszeilentools, die als eine Low-Level-Alternative zu dienen die `cordova` des Befehlszeilen-Dienstprogramms.
 
+## Amazon Fire OS
+
+*   Handbuch für die OS-Plattform von Amazon-Feuer
+*   Amazon Fire OS Konfiguration
+*   Amazon Fire OS Webansichten für
+*   Amazon Fire OS Plugins
+
 ## Android
 
 *   Android-Plattform-Guide
@@ -31,19 +38,13 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 *   Android-Befehlszeilenprogrammen
 *   Aktualisierung von Android
 
-## BlackBerry
-
-*   Handbuch der BlackBerry-Plattform
-*   BlackBerry Configuration
-*   BlackBerry-Befehlszeilentools
-*   Aktualisieren der BlackBerry
-
 ## BlackBerry 10
 
 *   Handbuch für die Plattform von BlackBerry 10
 *   BlackBerry 10 Konfiguration
 *   BlackBerry 10 Plugins
 *   BlackBerry 10-Befehlszeilentools
+*   Aktualisieren der BlackBerry 10
 
 ## iOS
 
@@ -53,6 +54,10 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 *   iOS Plugins
 *   iOS-Befehlszeilenprogrammen
 *   IOS Upgrade
+
+## Ubuntu
+
+*   Handbuch Ubuntu Plattform
 
 ## Windows Phone
 

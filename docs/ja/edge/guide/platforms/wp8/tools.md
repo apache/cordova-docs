@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+プラグインできるようにする低レベルのコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。概要については、アプリケーション ・ プラグインを参照してください。
+
 ## Windows Phone
 
 Windows Phone のコマンド ライン ツールの作成、構築、および新規プロジェクトの実行をサポートします。Cmd または powershell プロンプトからコマンドを実行する必要があります。
@@ -32,7 +34,8 @@ WP8 レポには今 WP7 + WP8 を構築するためのコードが含まれて�
 
 ### 作成し、テンプレートをインストールするバッチ ファイルを実行します。
 
-*   レポのルートには、ファイル createTemplates.bat が含まれています。 このファイルをダブルクリック 2 .zip ファイルが生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらのファイルを簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio ファイルから新しい Apache コルドバ Windows Phone アプリを作成します。
+*   レポのルートが含まれている、 `createTemplates.bat` ファイル。 2 つが生成されますそれをダブルクリックすると `.zip` ファイル: `CordovaWP7_x_x_x.zip` と `CordovaWP8_x_x_x.zip` 、 *x.x.x*表す現在のバージョン番号。 コードを簡単に Visual Studio でこれらのファイルを使用して、コピーする `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` 。 Visual Studio から新しい Apache コルドバ Windows Phone アプリを作成することがその後**ファイル → 新規プロジェクト**メニュー。
 
 *   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ ファイルを実行する場合
 
@@ -61,7 +64,7 @@ Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューショ
 
 ビルドし、実行
 
-## プロジェクトをビルドする (ビルド クリーンアップし)
+## プロジェクトのビルド (きれいな、そしてビルド)
 
 *   デバッグ
     
@@ -71,7 +74,7 @@ Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューショ
     
     $ C:\path\to\my\_new\_project\cordova\build - リリース
 
-## アプリケーションを実行します。
+## アプリケーションの実行
 
 次の*省略可能な*パラメーターで '実行' コマンドを実行します
 
@@ -81,7 +84,7 @@ Visual Studio を起動し、(C:\path\to\my\_new\_project) のソリューショ
     
     $ C:\path\to\my\_new\_project\cordova\run [ターゲット] は、[ビルド]
 
-既定では、 `run` コマンドが呼び出された `--emulator --debug` フラグが指定されていない場合。
+既定では、 `run` コマンドが呼び出されます `--emulator --debug` フラグが指定されていない場合。
 
 ## クリーニング
 

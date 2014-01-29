@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
+
 ## Windows 8
 
 Windows 8 的命令列工具僅支援創建新專案。必須從 cmd 或 powershell 的提示符下運行命令。

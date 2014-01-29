@@ -22,6 +22,8 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
 Les outils de ligne de commande iOS sont fondées sur les scripts shell et reposent sur les outils de ligne de commande de Xcode tels que `xcode-select` et`xcodebuild`.
 
+Pour plus d'informations sur l'interface de bas niveau qui permet aux plugins, voir Plugman à l'aide à gérer les Plugins. Pour une vue d'ensemble, consultez Application Plugins.
+
 ## Créer un projet
 
 Exécutez le `create` commande, en spécifiant le chemin d'accès existant au projet, l'identificateur de package inverse-domaine-style et nom complet de l'application.
@@ -34,7 +36,7 @@ Exécutez le `create` commande, en spécifiant le chemin d'accès existant au pr
     $ /path/to/my_new_project/cordova/build
     
 
-## Exécuter l'application sur l'émulateur
+## Exécuter l'application sur un émulateur
 
     $ /path/to/my_new_project/cordova/run
     

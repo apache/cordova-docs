@@ -29,7 +29,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## サポートされているプラットフォーム
 
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー 10
 
 ## 簡単な例
 

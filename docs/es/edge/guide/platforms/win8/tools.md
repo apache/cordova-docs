@@ -20,13 +20,15 @@ El `cordova` la utilidad de línea de comandos es una herramienta de alto nivel 
 
  [1]: http://cordova.apache.org
 
+Para obtener información sobre la interfaz de línea de comandos de bajo nivel que permite plugins, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para tener una visión general.
+
 ## Windows 8
 
 Las herramientas de línea de comandos de Windows 8 sólo admiten la creación de nuevos proyectos. Los comandos deben ejecutarse desde un símbolo del sistema cmd o powershell.
 
 ## Crear un proyecto
 
-Ejecute el comando `create` con los siguientes parámetros:
+Ejecute el `create` comando con los siguientes parámetros:
 
 *   Camino a su nuevo proyecto Cordova Windows 8
 

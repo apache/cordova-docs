@@ -22,6 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 IOS コマンド ライン ツール シェル スクリプトの上に成り立っているし、など、Xcode のコマンド ライン ツールに頼る `xcode-select` と`xcodebuild`.
 
+プラグインできるようにする低レベルのコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。概要については、アプリケーション ・ プラグインを参照してください。
+
 ## プロジェクトを作成します。
 
 実行、 `create` プロジェクト、逆ドメイン スタイル パッケージ識別子、およびアプリケーションの表示名を既存のパスを指定するコマンドです。
@@ -34,7 +36,7 @@ IOS コマンド ライン ツール シェル スクリプトの上に成り立
     $ /path/to/my_new_project/cordova/build
     
 
-## エミュレーターでアプリを実行します。
+## アプリケーションをエミュレーター上で実行します。
 
     $ /path/to/my_new_project/cordova/run
     

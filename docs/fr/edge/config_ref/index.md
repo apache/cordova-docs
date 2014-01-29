@@ -16,17 +16,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Le fichier config.xml
 
-Plusieurs aspects du comportement de l'application peuvent être contrôlés avec un fichier de configuration globale, `config.xml` , qui est placé dans le répertoire racine, au même endroit que la page d'accueil de l'application. Ce fichier XML de plate-forme agnostique est formaté selon spécification [Emballés Web Applications (Widgets)][1] de la W3C et étendu pour spécifier les paramètres spécifiques à la plateforme, plugins et principales fonctionnalités API Cordova.
+Plusieurs aspects du comportement de l'application peuvent être contrôlés avec un fichier de configuration global, `config.xml` . Ce fichier XML de plate-forme agnostique est organisé selon spécification [Emballés Web Applications (Widgets)][1] de la W3C et s'étend pour spécifier des caractéristiques de Cordova API de base, des plugins et des paramètres spécifiques à la plateforme.
 
  [1]: http://www.w3.org/TR/widgets/
 
-Pour les projets créés avec l'interface en ligne de commande de Cordova (décrite dans le paragraphe "L'interface en Ligne de Commande"), ce fichier peut être trouvé dans le répertoire `www` à la racine du projet. L'utilisation du CLI pour créer un projet régénérera ce fichier dans les différents sous-dossiers dans `platforms` . Si vous utilisez le CLI pour créer un projet, mais qu'ensuite vous changez pour un SDK, le fichier spécifique à la plateforme servira de source.
+Pour les projets créés avec la CLI Cordova (décrites dans l'Interface de ligne de commande), ce fichier se trouve dans le répertoire de niveau supérieur :
+
+        app/config.xml
+    
+
+Notez qu'avant la version 3.3.1-0.2.0, le fichier existait au `app/www/config.xml` , et qu'il avoir ici est toujours supporté.
+
+Lorsque vous utilisez l'interface CLI pour générer un projet, les versions de ce fichier sont copiées passivement dans divers `platforms/` sous-répertoires, par exemple :
+
+        app/platforms/ios/AppName/config.xml
+        app/platforms/blackberry10/www/config.xml
+        app/platforms/android/res/xml/config.xml
+    
 
 Cette section décrit en détail les options de configuration globale et multi-plateforme. Consultez les sections suivantes pour les options spécifiques à la plateforme :
 
 *   Configuration iOS
 *   Configuration Android
-*   Configuration BlackBerry
+*   Configuration de blackBerry 10
 
 Outre les diverses options de configuration détaillées ci-dessous, vous pouvez également configurer ensemble de base d'une application d'images pour chaque plate-forme cible. Pour plus d'informations, consultez icônes et écrans de démarrage.
 
@@ -44,12 +56,8 @@ Cet exemple affiche la valeur par défaut `config.xml` généré par le CLI `cre
             </author>
             <content src="index.html" />
             <access origin="*" />
-            <preference name="Fullscreen" value="true" />
-            <preference name="WebViewBounce" value="true" />
         </widget>
     
-
-<!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
 Les éléments de configuration suivants apparaissent dans le premier niveau `config.xml` du fichier et sont pris en charge sur toutes les plateformes prises en charge de Cordoue :
 
@@ -59,7 +67,7 @@ Les éléments de configuration suivants apparaissent dans le premier niveau `co
 
 *   Le `<description>` et `<author>` éléments spécifient les métadonnées et les informations de contact qui peuvent apparaître au sein de l'app-store listings.
 
-*   Le paramètre optionnel `<content>` élément définit la page de démarrage de votre application dans le répertoire actif de web de niveau supérieur. La valeur par défaut est `index.html` , qui apparaît habituellement dans le dossier de niveau supérieur du projet, `www`.
+*   Le paramètre optionnel `<content>` élément définit la page de démarrage de l'application dans le répertoire actif de web de niveau supérieur. La valeur par défaut est `index.html` , qui apparaît habituellement dans le dossier de niveau supérieur du projet, `www`.
 
 *   Les éléments `<access>` définissent l'ensemble des domaines externes avec lesquels l'application est autorisée à communiquer. La valeur par défaut ci-dessus permet d'accéder à n'importe quel serveur. Consultez le Guide de liste blanche de domaine pour plus de détails.
 
@@ -79,9 +87,9 @@ Les préférences globales suivantes s'appliquent à toutes les plateformes :
         <preference name="Orientation" value="landscape" />
         
     
-    **Remarque :** La valeur `default` signifie les orientations portrait et paysage sont toutes les deux activées. Si vous souhaitez utiliser les paramètres par défaut de chaque plateforme (habituellement portrait uniquement), effacez cette balise du fichier `config.xml`. Aussi, BlackBerry utilise `auto` au lieu de `default` dans son fichier `config.xml`. Si vous spécifiez `default` dans le fichier `config.xml` global, cela se traduit par `auto` lors de la compilation pour BlackBerry.
+    **NOTE**: le `default` valeur signifie *aussi bien* des orientations portrait et paysage sont activées. Si vous souhaitez utiliser les paramètres par défaut de chaque plateforme (habituellement portrait uniquement), effacez cette balise du fichier `config.xml`.
 
-## Préférences multi-plateformes
+## Préférences de multi-plateformes
 
 Les préférences suivantes s'appliquent à plus d'une plate-forme, mais pas tous d'entre eux :
 
@@ -105,17 +113,10 @@ Les préférences suivantes s'appliquent à plus d'une plate-forme, mais pas tou
         
     
     S'applique à iOS et BlackBerry.
-    
-    **Remarque :** Pour BlackBerry, les valeurs valides sont `enable` ou`disable`.
 
-## L'élément `<feature>`
+## La *fonctionnalité* élément
 
-Si vous utilisez la CLI pour créer des applications, vous utilisez la `plugin` commande pour activer le périphérique API. Cela ne modifie pas le niveau supérieur `config.xml` fichier, donc le `<feature>` élément ne s'applique pas à votre flux de travail. Si vous êtes travaillant directement dans un kit de développement logiciel et à l'aide de la plate-forme spécifique `config.xml` fichier source, vous utilisez le `<feature>` tag pour permettre aux API de niveau périphérique et des plugins externes. Ils apparaissent généralement sous cette forme :
-
-        <feature name="Plugin" value="PluginID" />
-    
-
-Elles apparaissent souvent avec des valeurs personnalisées dans spécifique à la plateforme `config.xml` fichiers. Par exemple, voici comment spécifier l'API Device pour les projets Android :
+Si vous utilisez la CLI pour créer des applications, vous utilisez la `plugin` commande pour activer le périphérique API. Cela ne modifie pas le niveau supérieur `config.xml` fichier, donc le `<feature>` élément ne s'applique pas à votre flux de travail. Si vous travaillez directement dans un kit de développement logiciel et à l'aide de la plate-forme spécifique `config.xml` fichier source, vous utilisez le `<feature>` tag pour permettre aux API de niveau périphérique et des plugins externes. Elles apparaissent souvent avec des valeurs personnalisées dans spécifique à la plateforme `config.xml` fichiers. Par exemple, voici comment spécifier l'API Device pour les projets Android :
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />

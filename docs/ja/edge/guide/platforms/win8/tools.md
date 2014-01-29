@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+プラグインできるようにする低レベルのコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。概要については、アプリケーション ・ プラグインを参照してください。
+
 ## Windows 8
 
 Windows 8 のコマンド ライン ツールのみサポートして新しいプロジェクトを作成します。Cmd または powershell プロンプトからコマンドを実行する必要があります。

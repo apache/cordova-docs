@@ -21,94 +21,82 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Обновление для Windows 8
 *   Средства командной строки Windows 8
 
-Средства командной строки относятся к версии до Cordova 3.0. Сведения о текущем интерфейсе см интерфейс командной строки.
+Средства командной строки относятся к версии до 3.0 Кордова. Смотрите информацию о текущем интерфейсе интерфейс командной строки.
 
 Майкрософт рекомендуется использовать имя *приложения в стиле Metro* в Windows 8 и Windows RT. MSDN теперь ссылается на этот тип приложения как приложения *Магазина Windows* , и это руководство следует этой Конвенции. Кроме того в этом руководстве *Windows 8* означает Windows 8 и Windows RT.
 
-## 1. Требования
+## Требования к
 
 *   ОС Windows 8
 
 *   Visual Studio 2012 Professional или лучше или Visual Studio 2012 Express для Windows 8
 
-Следуйте инструкциям [здесь][1] представить ваши приложения Магазина Windows.
+Следуйте инструкциям в [windowsstore.com][1] представить ваше приложение для Магазина Windows.
 
  [1]: http://www.windowsstore.com/
 
-## 2. Установить SDK + Кордова
+## Установить SDK и Кордова
 
-*   Настройте ваш предпочтительный вариант Visual Studio 2012. Все платные версии продукта (профессиональный, и т.д.) позволяют создавать приложения Магазина Windows. Вам нужно **Express для Windows 8** для построения приложений Магазина Windows с использованием [Экспресс издания][2].
-
-*   Загрузите и распакуйте последнюю копию [Cordova][3]. Вы будете работать `lib\windows-8` подкаталог.
+Настройте ваш предпочтительный вариант Visual Studio 2012. Все платные версии продукта (профессиональный, и т.д.) позволяют создавать приложения Магазина Windows. Вам нужно **Express для Windows 8** для построения приложений Магазина Windows с использованием [Экспресс издания][2].
 
  [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
+
+Загрузите и распакуйте последнюю копию [Кордова][3]. Эти instuctions применяются к `lib\windows-8` подкаталога.
+
  [3]: http://phonegap.com/download
 
-## 3. Установите новый проект
+## Создание нового проекта
 
-Вы уже можете построить приложений Windows 8 с помощью *отслеживания HTML/JavaScript,* доступные в приложениях Магазина Windows. Используйте Кордова в приложениях Магазина Windows для предоставления те же API как на других платформах, поддерживаемых Cordova.
+Вы уже можете построить приложений Windows 8 с помощью *отслеживания HTML/JavaScript,* доступные в приложениях Магазина Windows. Используйте Кордова в приложениях Магазина Windows для предоставления те же API как на других платформах, поддерживаемых Кордова.
 
 *   Откройте Visual Studio 2012 и выберите **Новый проект**.
 
-*   Выберите **Установленные → шаблон → другие языки → JavaScript → магазина Windows** из дерева, а затем **Пустое приложение** из списка проекты. Введите любые имя проекта, вам нравится, такие как `CordovaWin8Foo` как в этом примере.
+*   Выберите **Установленные → шаблон → другие языки → JavaScript → Windows Store** из дерева, а затем **Пустое приложение** из списка проекты. Введите имя проекта, какой вам нравится, такие как `CordovaWin8Foo` как в этом примере:
     
     ![][4]
 
-*   Корпорация Майкрософт продолжает использовать `default.html` как домашняя страница по умолчанию, но большинство веб-разработчиков сайта `index.html` . (Плюс вполне вероятно, что в других вариантах платформа вашего проекта вы используете `index.html` как имя страницы по умолчанию.) Чтобы исправить это, в обозреватель переименовать `default.html` файл `index.html` . Затем дважды щелкните `package.appxmanifest` файл и изменить значение **Начальная страница**`index.html`.
+*   Microsoft продолжает использовать `default.html` как Главная страница по умолчанию, но большинство веб-разработчиков сайта `index.html` . Это хорошая идея, чтобы сделать это, по крайней мере соответствовать другие платформы, скорее всего, вы работаете на. Чтобы исправить это, в **Обозреватель** переименовать `default.html` файл `index.html` . Затем дважды щелкните `package.appxmanifest` файл и измените значение, **Стартовая страница** `index.html` :
     
-    ![][5]
+        ![](img/guide/platforms/win8/wschangemanifest.png)
+        
 
-*   Включить `cordova.js` в вашем проекте, щелкните правой кнопкой мыши `js` в обозревателе решений и выберите **Добавить → новый элемент**. Найдите `cordova.js` файл в `lib\windows-8` Каталог отмечалось выше.
+*   Включить `cordova.js` в проекте, щелкните правой кнопкой мыши `js` в **Обозревателе** решений и выберите **пункт Добавить → новый**. Найдите `cordova.js` файл в `lib\windows-8` каталог.
 
-*   Изменить код для `index.html` . Добавьте ссылку на `cordova.js` . Вы можете сделать это, или вручную, перетащив файл из обозревателя решений.
+*   Изменить код для `index.html` . Добавьте ссылку на `cordova.js` . Вы можете сделать это вручную, или перетащить файл из **Обозревателя решений**. Добавьте следующие другие зависимости к домашней странице приложения:
+    
+            <!-- WinJS references -->
+            <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+            <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+            <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+        
+            <!-- Cordova -->
+            <script src="/js/cordova.js"></script>
+        
+            <!-- CordovaWin8Foo references -->
+            <link href="/css/default.css" rel="stylesheet" />
+            <script src="/js/default.js"></script>
+        
+
+*   Добавить `deviceready` работает обработчик для демонстрации Кордова:
+    
+        <body>
+            <p>Content goes here</p>
+            <script type="text/javascript">
+                console.log("Subscribing...");
+                document.addEventListener("deviceready", function () {
+                    navigator.notification.alert("The device is ready!");
+                });
+            </script>
+        </body>
+        
 
  [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
 
-### Добавление ссылки на...
+## Тестирование проекта
 
-        <!-- WinJS references -->
-        <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
-        <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
-        <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-    
-        <!-- Cordova -->
-        <script src="/js/cordova.js"></script>
-    
-        <!-- CordovaWin8Foo references -->
-        <link href="/css/default.css" rel="stylesheet" />
-        <script src="/js/default.js"></script>
+Запуск проекта из Visual Studio. Вы увидите окно сообщения появляются:
+
+        ![](img/guide/platforms/win8/wsalert.png)
     
 
-*   Далее добавите, что некоторый код, который демонстрирует Cordova работает.
-
-### Добавление обработчика «deviceready»...
-
-    <body>
-        <p>Content goes here</p>
-    
-        <script type="text/javascript">
-    
-            console.log("Subscribing...");
-            document.addEventListener("deviceready", function () {
-    
-                navigator.notification.alert("The device is ready!");
-    
-            });
-    
-        </script>
-    
-    </body>
-    
-
-## 5. Тестирование проекта
-
-*   Запуск проекта из Visual Studio. Вы увидите окно сообщения появляются:
-    
-    ![][6]
-
- [6]: img/guide/platforms/win8/wsalert.png
-
-## Договорились!
-
-Вот оно что! Теперь вы готовы строить приложения Магазина Windows с Кордова.
+Вот это. Теперь вы готовы строить приложения Магазина Windows с Кордова.
