@@ -20,6 +20,8 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
  [1]: http://cordova.apache.org
 
+Pour plus d'informations sur l'interface de bas niveau qui permet aux plugins, voir Plugman à l'aide à gérer les Plugins. Pour une vue d'ensemble, consultez Application Plugins.
+
 ## Windows Phone
 
 Les outils de ligne de commande Windows Phone prend en charge la création, génération et l'exécution de nouveaux projets. Commandes doivent être exécutées à partir d'une invite cmd ou powershell.
@@ -30,9 +32,10 @@ Le repo WP8 inclut maintenant le code pour construire les deux WP7 + WP8 apps. L
 
 Il y a 2 façons de faire pour créer une nouvelle application Cordova WP7 Apache ou WP8.
 
-### Exécutez le fichier de commandes pour créer et installer les modèles.
+### Exécutez le fichier Batch pour créer et installer les modèles
 
-*   La racine de la repo contient un fichier createTemplates.bat. Un double clic sur ce fichier va générer 2 fichiers .zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip où x.x.x correspond au numéro de version actuel) Pour facilement utiliser ces fichiers dans Visual Studio, copie à « Mes Documents\Visual Studio 2012\Templates\ProjectTemplates\ » vous puis sera en mesure de créer de nouvelles applications de l'Apache Cordova Windows Phone du fichier Visual Studio-> menu du nouveau projet.
+*   La racine de la repo contient un `createTemplates.bat` fichier. Double-cliquant dessus génère deux `.zip` fichiers : `CordovaWP7_x_x_x.zip` et `CordovaWP8_x_x_x.zip` , où *x.x.x* représente le numéro de version actuel. Pour facilement utiliser ces fichiers dans Visual Studio, copiez-les à `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` . Vous êtes alors en mesure de créer de nouvelles applications de l'Apache Cordova Windows Phone depuis Visual Studio **fichier → nouveau projet** menu.
 
 *   Si vous exécutez le fichier de commandes de la ligne de commande, vous pouvez aussi appeler avec un paramètre pour installer automatiquement
 
@@ -41,7 +44,7 @@ Exécutez le script :
     > createTemplates.bat-installer
     
 
-### Utiliser les scripts de création sur la ligne de commande
+### Utiliser les Scripts de création sur la ligne de commande
 
 Exécutez le `create` commande, en spécifiant le chemin d'accès existant au projet, l'identificateur de package inverse-domaine-style et nom complet de l'application. Voici la syntaxe pour Windows Phone 7 et 8 :
 
@@ -61,7 +64,7 @@ Lancez Visual Studio et ouvrez le fichier Solution (.sln) en (C:\path\to\my\_new
 
 Générer et exécuter ce
 
-## Génération de votre projet (nettoie puis construit)
+## Le projet de construction (nettoyer, puis construire)
 
 *   Débogage
     
@@ -71,7 +74,7 @@ Générer et exécuter ce
     
     $ C:\path\to\my\_new\_project\cordova\build--communiqué
 
-## Lancez votre application
+## L'application en cours d'exécution
 
 Exécutez la commande « exécuter » avec les paramètres *facultatifs* suivants
 
@@ -81,7 +84,7 @@ Exécutez la commande « exécuter » avec les paramètres *facultatifs* suivant
     
     $ C:\path\to\my\_new\_project\cordova\run \[cible\] \[construire\]
 
-Par défaut la `run` commande s'appellera avec `--emulator --debug` si les drapeaux n'est pas fournis.
+Par défaut la `run` commande est appelée avec `--emulator --debug` si les drapeaux n'est pas fournis.
 
 ## Nettoyage
 
