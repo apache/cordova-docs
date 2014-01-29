@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 事件
 
-> Cordova生命周期事件。
+> 科爾多瓦生命週期事件。
 
-## 事件类型
+## 事件種類
 
 *   deviceready
-*   暂停
-*   简历
+*   暫停
+*   簡歷
 *   backbutton
 *   menubutton
 *   searchbutton
@@ -31,7 +31,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## 由 [org.apache.cordova.battery-status][1] 添加事件
+## 由[org.apache.cordova.battery 狀態][1]添加事件
 
  [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
 
@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   batterylow
 *   batterystatus
 
-## 由 [org.apache.cordova.network-information][2] 添加事件
+## 由[org.apache.cordova.network 資訊][2]添加事件
 
  [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
 
