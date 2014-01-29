@@ -16,129 +16,132 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS WebViews
 
-Commençant par Cordova 1.4, vous pouvez utiliser Cordova en tant que composant dans vos applications iOS. Ce composant est le nom de code « Couperet ».
+Cette section montre comment intégrer un composant WebView Cordova-activée dans une application iOS plus grande. Pour plus d'informations sur la façon dont ces composants peuvent communiquer entre eux, voir Application Plugins.
 
-Nouvelles applications basées sur Cordova créées à l'aide du modèle de Xcode fourni dans Cordova 1.4 ou une plus grande utilisation Cleaver. (Le modèle est l'implémentation de référence de Cleaver.)
+Soutien à iOS WebViews commencé avec Cordova version 1.4, en utilisant un `Cleaver` composant dont le modèle de Xcode est une implémentation de référence. Cordova 2.0 et versions ultérieures ne prennent en charge l'implémentation Cleaver sous-projet.
 
-Cordova 2.0.0 et les versions ultérieures ne prennent en charge la mise en œuvre de Cleaver sous-projet basé.
+Ces instructions exigent au moins 2.3 Cordova et Xcode 4.5, avec un `config.xml` fichier à partir d'un projet d'iOS nouvellement créé. Vous pouvez utiliser la procédure dans l'Interface de ligne de commande pour créer un nouveau projet, puis obtenir le `config.xml` dans le sous-répertoire de l'application nommé au sein du fichier de`platforms/ios`.
 
-## Conditions préalables
+Pour suivre ces instructions, vérifiez que vous avez la dernière distribution de Cordova. Téléchargez-le sur [cordova.apache.org][1] et décompressez le paquet de son iOS.
 
-*   Cordova 2.3.0 ou supérieur
+ [1]: http://cordova.apache.org
 
-*   Xcode 4.5 ou supérieur
+## Ajout de Cleaver au projet Xcode (sous-projet CordovaLib)
 
-*   `config.xml`fichier (depuis un projet nouvellement créé iOS)
+1.  Quittez Xcode s'exécute.
 
-## Ajout de Cleaver à votre projet Xcode (sous-projet CordovaLib)
+2.  Ouvrez un terminal et accédez au répertoire source pour iOS Cordova.
 
-1.  Téléchargez et extrayez la source Cordova à un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Documents/Cordova`.
+3.  Copie le `config.xml` fichier mentionné ci-dessus dans le répertoire du projet.
 
-2.  Quittez Xcode s'exécute.
+4.  Ouvrez Xcode et utilisez le Finder pour copier le `config.xml` fichier dans sa fenêtre de **Navigateur du projet** .
 
-3.  Terminal.app, accédez au répertoire où vous avez mis la source téléchargé ci-dessus.
+5.  Choisir de **créer des groupes pour tous les dossiers ajoutés** , puis appuyez sur **Terminer**.
 
-4.  Copie le `config.xml` fichier dans votre répertoire de projet sur le disque (voir celles décrites ci-dessus).
+6.  Utilisez le Finder pour copier le `CordovaLib/CordovaLib.xcodeproj` fichier dans de Xcode **Projet Navigator**
 
-5.  Faites glisser et déposez le `config.xml` fichier dans le navigateur de projet de Xcode.
+7.  Sélectionnez `CordovaLib.xcodeproj` dans le **navigateur de projet**.
 
-6.  Cliquez sur le bouton radio de **créer des groupes pour tous les dossiers ajoutés** , puis appuyez sur **Terminer**.
+8.  Tapez la combinaison de touches **Commande-Option-1** pour afficher **Fichier inspecteur**.
 
-7.  Faites glisser et déposez le `CordovaLib.xcodeproj` fichier dans le navigateur de projet de Xcode (à partir du répertoire permanent emplacement ci-dessus et il devrait être dans le `CordovaLib` sous-répertoire).
+9.  Choisissez **Relative au groupe** dans **Fichier inspecteur** pour le menu déroulant ci-bas pour **emplacement**.
 
-8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
+10. Sélectionnez l' **icône du projet** dans le **Navigateur du projet**, sélectionnez la **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
 
-9.  Tapez la combinaison de touches **Commande-Option-1** pour afficher **Fichier inspecteur**.
+11. Ajouter `-force_load` et `-Obj-C` pour la valeur **d'Autres indicateurs de Linker** .
 
-10. Choisissez **Relative au groupe** dans **Fichier inspecteur** pour le menu déroulant ci-bas pour **emplacement**.
+12. Cliquez sur l' **icône du projet** dans le projet de navigation, sélectionnez la **cible**, puis sélectionnez l'onglet **Générer des Phases** .
 
-11. Sélectionnez l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
+13. Développez **les binaires de lien avec les bibliothèques**.
 
-12. Ajouter `-all_load` et `-Obj-C` pour la valeur **d'Autres indicateurs de Linker** .
-
-13. Cliquez sur l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Générer des Phases** .
-
-14. Développez **les binaires de lien avec les bibliothèques**.
-
-15. Sélectionnez le **+** bouton et ajoutez le suivant **les cadres**. Éventuellement dans le projet de navigation, déplacez-les dans le groupe de **cadres** ) :
+14. Sélectionnez le **+** bouton et ajoutez le suivant **les cadres**. Éventuellement dans le **Navigateur du projet**, déplacez-les dans le groupe des **cadres** :
     
-        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework MediaPlayer.framework QuartzCore.framework SystemConfiguration.framework MobileCoreServices.framework CoreMedia.framework
+        AddressBook.framework
+        AddressBookUI.framework
+        AudioToolbox.framework
+        AVFoundation.framework
+        CoreLocation.framework
+        MediaPlayer.framework
+        QuartzCore.framework
+        SystemConfiguration.framework
+        MobileCoreServices.framework
+        CoreMedia.framework
         
 
-16. Développez les **Dépendances de la cible**, la top box étiquetée comme ça si vous avez plusieurs cases !
+15. Développez les **Dépendances de la cible**, la zone supérieure avec cette étiquette s'il y a plusieurs cases.
 
-17. Sélectionnez le **+** bouton et ajoutez le `CordovaLib` construire le produit.
+16. Sélectionnez le **+** bouton et ajoutez le `CordovaLib` construire le produit.
 
-18. Développez **Les binaires de lien avec les bibliothèques**, la top box étiquetée comme ça si vous avez plusieurs cases !
+17. Développez **Les binaires de lien avec les bibliothèques**, la top box avec cette étiquette s'il y a plusieurs cases.
 
-19. Sélectionnez le **+** bouton et ajoutez`libCordova.a`.
+18. Sélectionnez le **+** bouton et ajoutez`libCordova.a`.
 
-20. Définir les préférences de Xcode **Xcode préférences → lieux → données dérivées → avancé...** sur **Unique**.
+19. Définir la **Xcode préférences → lieux → dérivée données → avancé...** à **Unique**.
 
-21. Sélectionnez l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
+20. Sélectionnez l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
 
-22. Recherche de **chemins de recherche de Header**. Pour ce paramètre, ajoutez ces trois valeurs ci-dessous (avec les guillemets) :
+21. Recherche de **chemins de recherche de Header**. Pour ce paramètre, ajoutez ces trois valeurs inférieures, y compris les guillemets :
     
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
         "$(BUILT_PRODUCTS_DIR)"
         
     
-    Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Comptage de référence automatique (ARC)**. Vous ne devez de passer à l' **ARC** à utiliser CordovaLib, mais si vous voulez mettre à niveau votre projet pour utiliser un **ARC**, veuillez utiliser l'Assistant de migration de Xcode depuis le menu : **édition → Refactoriser → convertir en Objective-C ARC...**, **désélectionnez libCordova.a**, puis exécutez l'Assistant jusqu'à la fin.
+    À partir de Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Comptage de référence automatique (ARC)**. Vous n'avez pas besoin de passer à l' **ARC** à utiliser `CordovaLib` , mais si vous souhaitez mettre à niveau votre projet pour utiliser un **ARC**, vous devez utiliser l'Assistant de migration de Xcode de la **édition → Refactoriser → convertir en Objective-C ARC...** menu, **désélectionnez libCordova.a**, puis exécutez l'Assistant jusqu'à la fin.
 
-## Dans votre code à l'aide de CDVViewController
+## À l'aide de CDVViewController
 
-1.  Ajouter cet en-tête :
+1.  Ajoutez l'en-tête suivant :
     
         #import <Cordova/CDVViewController.h>
         
 
-2.  Instanciez une nouvelle `CDVViewController` et d'exercer quelque part (par exemple, d'une propriété dans votre classe) :
+2.  Instancier un nouveau `CDVViewController` et le conserver quelque part, par exemple, à une propriété de classe :
     
         CDVViewController* viewController = [CDVViewController new];
         
 
-3.  (*En option*) Définir la `wwwFolderName` propriété (la valeur par défaut `www` ) :
+3.  Vous pouvez définir la `wwwFolderName` propriété, qui est par défaut à `www` :
     
         viewController.wwwFolderName = @"myfolder";
         
 
-4.  (*En option*) Définir la page de démarrage dans votre fichier config.xml, le `<content>` tag.
+4.  Vous pouvez définir la page de démarrage le `config.xml` du fichier `<content>` tag, soit un fichier local :
     
         < src="index.html de contenu" / >
         
     
-    OR
+    .. .ou un site distant :
     
         <content src="http://apache.org" />
         
 
-5.  (*En option*) Définir la `useSplashScreen` propriété (la valeur par défaut `NO` ) :
+5.  Vous pouvez définir la `useSplashScreen` propriété, qui est par défaut à `NO` :
     
         viewController.useSplashScreen = YES;
         
 
-6.  Définir le **cadre de l'avis** (toujours définir cela comme la dernière propriété) :
+6.  Définir le **cadre de l'avis**. Toujours définir cela comme la dernière propriété :
     
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
 
-7.  Ajouter Cleaver à votre vue :
+7.  Ajoutez Cleaver à l'affichage :
     
         [myView addSubview:viewController.view];
         
 
-## Ajouter vos actifs HTML, CSS et JavaScript
+## Ajout de HTML, CSS et JavaScript actif
 
-1.  Créez un nouveau répertoire dans votre projet sur disque, `www` par exemple.
+1.  Créez un nouveau répertoire dans le cadre du projet, `www` par exemple.
 
-2.  Mettez vos actifs HTML, CSS et JavaScript dans ce répertoire.
+2.  Placer les éléments HTML, CSS et JavaScript dans ce répertoire.
 
-3.  Glissez et déposez le répertoire dans le navigateur de projet de Xcode.
+3.  Utilisez le Finder pour copier le répertoire dans la fenêtre **Projet Navigator** de Xcode.
 
-4.  Cliquez sur le bouton radio de **créer des références de dossier pour tous les dossiers ajoutés** .
+4.  Sélectionnez **créer dossier Références pour tous les dossiers ajoutés**.
 
-5.  Le cas échéant la valeur `wwwFolderName` et `startPage` Propriétés pour le dossier que vous avez initialement créé, ou utiliser les valeurs par défaut (voir section précédente) lorsque vous instanciez le`CDVViewController`.
+5.  Définir le cas échéant `wwwFolderName` et `startPage` Propriétés du répertoire que vous avez initialement créé, ou utiliser les valeurs par défaut (spécifiées dans la section précédente) lors de l'instanciation du`CDVViewController`.
     
         /*
          if you created a folder called 'myfolder' and

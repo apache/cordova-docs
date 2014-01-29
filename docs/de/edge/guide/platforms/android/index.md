@@ -16,7 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android-Plattform-Guide
 
-Diese Anleitung zeigt wie Ihre Entwicklungsumgebung SDK eingerichtet, Cordova apps für Android-Geräte bereitzustellen. Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
+Diese Anleitung zeigt wie Ihre Entwicklungsumgebung SDK eingerichtet, Cordova apps für Android-Geräte bereitzustellen. Es führt Sie durch den Prozess der Installation des Android SDK, öffnen ein Android-Projekt in Eclipse SDK und Bereitstellung auf einem Emulator oder Gerät. Sie müssen folgen dieser Anleitung um mindestens das Android SDK installieren, unabhängig davon, welcher Workflow du folgst. (Die Workflows *Web Projekt Dev* und *Einheitlichen Plattform Dev* erfordern das Android SDK installiert und Ihren Pfad erreichbar werden.)
+
+Finden Sie im folgenden detaillierte Plattform-spezifischen Informationen:
 
 *   Android-Konfiguration
 *   Android Webansichten für
@@ -44,20 +46,19 @@ NOTE, doc said:
 
 Entwickler sollten verwenden das `cordova` -Dienstprogramm in Verbindung mit dem Android SDK. Finden Sie unter The Command-Line Interface Informationen installieren Sie es, Projekte, hinzufügen dann erstellen und Bereitstellen eines Projekts.
 
-## Das SDK installieren
-
-Installieren Sie das Android SDK von [developer.android.com/sdk][3]. Sie können mit einer Wahl, wo das SDK installieren vorgelegt werden sonst die heruntergeladenen verschieben `adt-bundle` Baum, wo Sie Entwicklungstools zu speichern.
+Installieren Sie das Android SDK von [Developer.Android.com/SDK][3]. Das androide Sdk wird vertrieben als ein ' Adt-Bündel -<os>-<arch>-<ver>' Datei. Unter Windows ist das Adt-Bundle mit einem Installer gepackt. Einfach entpacken Sie auf OSX und Linux, das Adt-Bundle in der Lage, die Sie speichern Entwicklungstools. [Weitere detaillierte Informationen über Android SDK Setup finden Sie hier][4]
 
  [3]: http://developer.android.com/sdk/
+ [4]: http://developer.android.com/sdk/installing/bundle.html
 
 Für Cordova Kommandozeilen-Tools arbeiten, müssen Sie das SDK enthalten `tools` und `platform-tools` Verzeichnisse in Ihrer PATH-Umgebung. Auf Mac, können Sie einen Text-Editor zum Erstellen oder ändern die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo das SDK installiert:
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+    Export PATH = ${PATH}: / Entwicklung/Adt-Bundle/Sdk/Plattform-Tools: / Entwicklung/Adt-Bundle/Sdk/Tools
     
 
 Dies macht die SDK-Tools im neu eröffneten terminal-Fenster verfügbar. Sonst laufen Sie hier, um sie in der aktuellen Sitzung zur Verfügung stellen:
 
-    $ source ~/.bash_profile
+    $ Quelle ~/.bash_profile
     
 
 Die PATH-Umgebung unter Windows 7 zu ändern:
@@ -98,13 +99,15 @@ Einmal erstellt, wird hier das SDK zu verwenden, um es zu ändern:
 
 *   Wählen Sie **Neues Projekt** .
 
-*   Wählen Sie **Android Projekt aus vorhandenem Code** aus dem daraufhin angezeigten Dialogfeld, und klicken Sie auf **weiter**: ![][4]
+*   Wählen Sie **Android Projekt aus vorhandenem Code** aus dem daraufhin angezeigten Dialogfeld, und klicken Sie auf **weiter**: ![][5]
 
 *   Navigieren Sie zu `hello` , oder welches Verzeichnis Sie für das Projekt erstellt, dann auf die `platforms/android` Unterverzeichnis.
 
+*   Stellen Sie sicher, beide `hello` und `hello-CordovaLib` Projekte werden ausgewählt, importiert werden. Das `hello-CordovaLib` Projekt wird ab Cordova 3.3.0 benötigt, da Cordova jetzt als Android-Bibliothek anstelle einer JAR-Datei verwendet wird.
+
 *   Drücken Sie **Fertig stellen**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: img/guide/platforms/android/eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 
@@ -126,39 +129,39 @@ Können Sie das `cordova` -Dienstprogramm eine app in einem Emulator, oder Sie l
 
 *   Drücken Sie von Eclipse, dieses Symbol in der Symbolleiste:
     
-    ![][5]
+    ![][6]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Nach dem Öffnen zeigt das Android SDK Manager verschiedene Laufzeit-Bibliotheken:
 
-![][6]
+![][7]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [7]: img/guide/platforms/android/asdk_window.png
 
 Wählen Sie **Extras → Verwaltung AVDs** (Android Virtual Devices), dann wählen Sie ein Element aus **Gerätedefinitionen** in dem daraufhin angezeigten Dialogfeld:
 
-![][7]
+![][8]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 Presse **AVD erstellen**, ändern optional den Namen und drücken Sie **OK** um die Änderungen zu übernehmen.
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 Der AVD wird dann in der Liste **Android Virtual Devices** angezeigt:
 
-![][9]
+![][10]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 Um den Emulator als separate Anwendung zu öffnen, wählen Sie den AVD, und drücken Sie **Start**. Es bringt viel, wie es auf dem Gerät mit zusätzliche Steuerelemente für Hardware-Tasten zur Verfügung:
 
-![][10]
+![][11]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 An dieser Stelle können Sie das `cordova` -Dienstprogramm zum Bereitstellen der Anwendung für den Emulator von der Befehlszeile aus:
 
@@ -179,9 +182,9 @@ Verwenden Sie für eine schnellere Erfahrung ein Intel-basierten Emulator-Image:
 
 ## Bereitstellung auf Gerät
 
-Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debugging auf dem Gerät wie beschrieben auf der [Android Developer-Website][11]aktiviert ist, und verwenden Sie einen Mini-USB-Kabel zu, um es an Ihr System anschließen.
+Um eine app direkt auf das Gerät zu drücken, stellen Sie sicher, dass USB debugging auf dem Gerät wie beschrieben auf der [Android Developer-Website][12]aktiviert ist, und verwenden Sie einen Mini-USB-Kabel zu, um es an Ihr System anschließen.
 
- [11]: http://developer.android.com/tools/device.html
+ [12]: http://developer.android.com/tools/device.html
 
 Drücken Sie die app auf das Gerät von der Befehlszeile aus:
 

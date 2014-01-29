@@ -16,23 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-協助下開始在科爾多瓦 1.9， `CordovaActivity` ，你可以使用科爾多瓦作為一個更大的本機 Android 應用程式中的一個元件。 Android 是指這種元件 `CordovaWebView` 。 新的基於科爾多瓦的應用程式從 1.9 起使用 `CordovaWebView` 作為其主要的視圖，無論是否遺留下來 `CordovaActivity` 使用方法。
+这一节演示如何嵌入在较大型的 Android 应用程序内的科尔多瓦启用 web 视图组件。这些组件可以如何与对方沟通的详细信息，请参阅应用程序插件。
 
-如果你熟悉 Android 應用程式的開發，請閱讀 Android 平臺指南 》 嘗試前，包括 web 視圖開發科爾多瓦的應用程式。 它不是作者科爾多瓦 Android 應用程式的主要途徑。 這些指令是目前手動，但最終可能會實現自動化。
+如果你熟悉 Android，你应首先熟悉 Android 平台指南和之前你尝试更不寻常发展嵌入 web 视图的选项，安装了最新 Android sdk。 从开始科尔多瓦 1.9，Android 平台依靠 `CordovaWebView` 组件，生成遗留下来 `CordovaActivity` 预日期 1.9 版本的组件。
 
-## 系統必備元件
+1.  要按照这些说明进行操作，请确保您有最新的科尔多瓦分布。从[cordova.apache.org][1]下载和解压缩其 android 系统的软件包。
 
-*   科爾多瓦 1.9 或更大
+2.  导航到 Android 包 `/framework` 目录并运行 `ant jar` 。它创建了科尔多瓦 `.jar` 文件中，形成了作为`/framework/cordova-x.x.x.jar`.
 
-*   Android SDK 更新到最新的 SDK
+3.  复制 `.jar` 到 Android 项目文件 `/libs` 目录。
 
-## 在 android 系統的專案中使用 CordovaWebView 的指南
-
-1.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar 檔 `cordova-x.x.x.jar` 在 `/framework` 目錄。
-
-2.  科爾多瓦 jar 複製到您的 Android 專案 `/libs` 目錄。
-
-3.  編輯您的應用程式的 `main.xml` 檔 (根據 `/res/xml` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
+4.  将以下内容添加到应用程序的 `/res/xml/main.xml` 文件中，与 `layout_height` 、 `layout_width` 和 `id` 修改，以适合应用程序：
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
+5.  修改活动，使它实现了 `CordovaInterface` 。 它应实施的包括的方法。 您可能希望将它们从复制 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或其他执行他们自己。 下面的代码片段显示了一个基本的应用程序依赖于接口。 请注意如何引用的视图 id 匹配 `id` 在上面所示的 XML 片段中指定的属性：
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,8 +49,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
-如果您使用的相機，你應該也可以實現這：
-
+6.  如果应用程序需要使用相机，实现以下内容：
+    
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -72,16 +66,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-    
+        
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-    
+        
             // Start activity
             super.startActivityForResult(intent, requestCode);
         }   
-    
+        
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -99,16 +93,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
+        
+
+7.  最后，请记住，添加线程池，否则插件有没有线程在其上运行：
     
-
-最後，請記住，添加執行緒池，否則外掛程式有沒有線程上運行：
-
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-    
+        
 
-1.  將您的應用程式的 HTML 和 JavaScript 檔案複製到您的 Android 專案 `/assets/www` 目錄。
+8.  将应用程序的 HTML 和 JavaScript 文件复制到 Android 项目 `/assets/www` 目录。
 
-2.  複製 `config.xml` 從 `/framework/res/xml` 到您的專案的 `/res/xml` 目錄。
+9.  复制 `config.xml` 文件从 `/framework/res/xml` 到项目中的 `/res/xml` 目录。
+
+ [1]: http://cordova.apache.org

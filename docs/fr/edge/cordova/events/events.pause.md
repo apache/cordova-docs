@@ -29,8 +29,9 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 
 ## Plates-formes supportées
 
+*   Amazon Fire OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry 10
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
