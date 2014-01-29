@@ -14,19 +14,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Visualizzazioni Web Android
+# Amazon fuoco OS visualizzazioni Web
 
-In questa sezione viene illustrato come incorporare un componente WebView Cordova abilitato all'interno di un'applicazione Android più grande. Per dettagli su come questi componenti possono comunicare con a vicenda, vedere applicazione plugin.
+A partire da 3.0.0, è possibile utilizzare Cordova come componente nelle applicazioni OS fuoco Amazon. Amazon fuoco OS si riferisce a questo componente come `CordovaWebView` . `CordovaWebView`estende WebView Amazon che è costruito sul cromo progetto open source. Sfruttando questa caratteristica, le applicazioni web possono utilizzare i più recenti standard del web HTML5 in esecuzione in un motore di runtime del web moderno.
 
-Se si ha familiarità con Android, si dovrebbe acquisire familiarità con la guida di piattaforma Android e avere l'ultimo Android SDK installato prima di tentare l'opzione di sviluppo più insolito di incorporare un WebView. A partire da 1,9 a Cordova, la piattaforma Android si basa su un `CordovaWebView` componente, che si basa su un retaggio `CordovaActivity` componente che pre-date la versione 1.9.
+## Prerequisiti
 
-1.  Per seguire queste istruzioni, assicuratevi di che avere l'ultima distribuzione di Cordova. Scaricare da [cordova.apache.org][1] e decomprimere il pacchetto di Android.
+*   Cordova 3.0.0 o maggiore
 
-2.  Spostarsi del package Android `/framework` directory ed eseguire `ant jar` . Crea il Cordova `.jar` file, costituita come`/framework/cordova-x.x.x.jar`.
+*   Android SDK aggiornato all'ultimo SDK
 
-3.  Copia il `.jar` file al progetto Android `/libs` directory.
+*   Amazon WebView SDK
 
-4.  Aggiungere il seguente all'applicazione `/res/xml/main.xml` file, con la `layout_height` , `layout_width` e `id` modificato per soddisfare la domanda:
+## Guida all'utilizzo di CordovaWebView in un progetto di OS del fuoco Amazon
+
+1.  Scarica espandere [Amazon WebView SDK][1] , quindi copiare il awv_interface.jar in `/framework/libs` directory. Creare un libs / cartella se non esiste.
+
+2.  `cd`in `/framework` ed eseguire `ant jar` per costruire il barattolo di cordova. Crea il file. jar formato come `cordova-x.x.x.jar` nel `/framework` directory.
+
+3.  Modifica dell'applicazione `main.xml` file (sotto `/res/layout` ) per essere simile alla seguente, con la `layout_height` , `layout_width` e `id` modificato per soddisfare la vostra applicazione:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -34,7 +40,7 @@ Se si ha familiarità con Android, si dovrebbe acquisire familiarità con la gui
             android:layout_height="match_parent" />
         
 
-5.  Modificare l'attività in modo che esso implementa il `CordovaInterface` . Deve implementare i metodi inclusi. Si potrebbe desiderare di copiarli da `/framework/src/org/apache/cordova/CordovaActivity.java` , o altrimenti li implementare sul proprio. Il codice di esempio riportato di seguito viene illustrata un'applicazione base che si basa sull'interfaccia. Si noti come l'id di riferimento vista corrisponde la `id` attributo specificato nel frammento XML sopra indicato:
+4.  Modificare la vostra attività che implementa il `CordovaInterface` . È necessario implementare i metodi inclusi. Si potrebbe desiderare di copiarli da `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarle sul proprio. Il frammento di codice riportato di seguito viene illustrata un'applicazione di base che utilizza l'interfaccia. Si noti come l'id di riferimento vista corrisponde la `id` attributo specificato nel frammento XML sopra indicato:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -49,8 +55,10 @@ Se si ha familiarità con Android, si dovrebbe acquisire familiarità con la gui
             }
         
 
-6.  Se l'applicazione deve utilizzare la fotocamera, implementare le seguenti:
-    
+ [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+
+Se si utilizza la fotocamera, è necessario implementare anche questo:
+
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -66,16 +74,16 @@ Se si ha familiarità con Android, si dovrebbe acquisire familiarità con la gui
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-        
+    
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+    
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-        
+        }
+    
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -93,18 +101,16 @@ Se si ha familiarità con Android, si dovrebbe acquisire familiarità con la gui
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
-        
-
-7.  Infine, ricordarsi di aggiungere il pool di thread, altrimenti il plugin non hanno nessun thread su cui eseguire:
     
+
+Infine, ricordarsi di aggiungere il pool di thread, altrimenti il plugin non hanno nessun thread per eseguire:
+
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-        
+    
 
-8.  Copiare i file dell'applicazione HTML e JavaScript per il progetto Android `/assets/www` directory.
+1.  Copiare i file dell'applicazione HTML e JavaScript al progetto Amazzonia fuoco OS `/assets/www` directory.
 
-9.  Copia il `config.xml` del file da `/framework/res/xml` per il progetto `/res/xml` directory.
-
- [1]: http://cordova.apache.org
+2.  Copia `config.xml` dal `/framework/res/xml` al tuo progetto `/res/xml` directory.

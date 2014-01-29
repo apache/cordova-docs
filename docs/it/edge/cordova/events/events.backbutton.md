@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# BackButton
+# backbutton
 
 L'evento viene generato quando l'utente preme il pulsante indietro.
 
@@ -27,8 +27,9 @@ Per ignorare il comportamento predefinito tasto back, registrare un listener di 
 
 ## Piattaforme supportate
 
+*   Amazon fuoco OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry 10
 *   Windows Phone 7 e 8
 
 ## Esempio rapido

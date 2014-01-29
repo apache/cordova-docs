@@ -22,6 +22,13 @@ Per sviluppare applicazioni di Cordova, è necessario installare il SDK per ogni
 
 Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impostare sviluppo ambiente di ogni piattaforma: dove ottenere il SDK, come impostare emulatori, come collegare i dispositivi per test diretto e come gestire i requisiti chiave di firma. Guide aggiuntive forniscono informazioni su set unico di ogni piattaforma opzioni di configurazione, le istruzioni per aggiungere plugin, come aggiornare ogni piattaforma e strumenti della riga di comando specifici della piattaforma che servono come alternativa a basso livello del `cordova` utilità da riga di comando.
 
+## Amazon fuoco OS
+
+*   Amazon fuoco piattaforma OS guida
+*   Configurazione di fuoco OS Amazon
+*   Amazon fuoco OS visualizzazioni Web
+*   Amazon fuoco OS Plugins
+
 ## Android
 
 *   Guida piattaforma Android
@@ -31,19 +38,13 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 *   Android strumenti da riga di comando
 *   L'aggiornamento di Android
 
-## BlackBerry
-
-*   Guida piattaforma blackBerry
-*   Configurazione di blackBerry
-*   Strumenti della riga di comando di blackBerry
-*   L'aggiornamento di BlackBerry
-
 ## BlackBerry 10
 
 *   Guida piattaforma blackBerry 10
 *   Configurazione di blackBerry 10
 *   BlackBerry 10 plugin
 *   Strumenti della riga di comando di blackBerry 10
+*   L'aggiornamento di BlackBerry 10
 
 ## iOS
 
@@ -53,6 +54,10 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 *   iOS Plugins
 *   iOS Command-line Tools
 *   L'aggiornamento iOS
+
+## Ubuntu
+
+*   Piattaforma ubuntu guida
 
 ## Windows Phone
 

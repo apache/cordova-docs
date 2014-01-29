@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Supporto di piattaforma
+      </h2>
+      
+      <span>Tabella di compatibilità per tutte le principali caratteristiche.</span>
+    </li>
+    <li>
+      <h2>
         L'interfaccia della riga di comando
       </h2>
       
@@ -40,6 +47,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Impostare ogni SDK e aggiornamento progetti</span>
+    </li>
+    <li>
+      <h2>
+        L'utilizzo di Plugman per gestire i plugin
+      </h2>
+      
+      <span>L'utilizzo di Plugman per gestire i plugin senza CLI</span>
     </li>
     <li>
       <h2>
@@ -85,6 +99,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Archiviazione
+      </h2>
+      
+      <span>Una panoramica delle opzioni di archiviazione nativo.</span>
+    </li>
+    <li>
+      <h2>
         <a href="_index.html">Parola chiave indice</a>
       </h2>
       
@@ -99,55 +120,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Accelerometro
-      </h2>
-      
-      <span>Sfruttare il sensore di movimento del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Fotocamera
-      </h2>
-      
-      <span>Catturare una foto usando la fotocamera del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Cattura
-      </h2>
-      
-      <span>Catturare i file multimediali utilizzando le applicazioni di cattura multimediale del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Bussola
-      </h2>
-      
-      <span>Ottenere la direzione che il dispositivo sta puntando.</span>
-    </li>
-    <li>
-      <h2>
-        Connessione
-      </h2>
-      
-      <span>Verificare rapidamente lo stato di rete e informazioni della rete cellulare.</span>
-    </li>
-    <li>
-      <h2>
-        Contatti
-      </h2>
-      
-      <span>Lavorare con il database di contatti di dispositivi.</span>
-    </li>
-    <li>
-      <h2>
-        Dispositivo
-      </h2>
-      
-      <span>Raccogliere informazioni specifiche del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
         Eventi
       </h2>
       
@@ -155,59 +127,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        File
+        Plugin API
       </h2>
       
-      <span>Gancio in file system nativo tramite JavaScript.</span>
-    </li>
-    <li>
-      <h2>
-        Geolocalizzazione
-      </h2>
-      
-      <span>Sensibilizzare la vostra sede di applicazione.</span>
-    </li>
-    <li>
-      <h2>
-        Globalizzazione
-      </h2>
-      
-      <span>Attivare la rappresentazione degli oggetti specifici di una lingua.</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>Lanciare gli URL in un'altra istanza del browser in-app.</span>
-    </li>
-    <li>
-      <h2>
-        Media
-      </h2>
-      
-      <span>Registrare e riprodurre file audio.</span>
-    </li>
-    <li>
-      <h2>
-        Notifica
-      </h2>
-      
-      <span>Notifiche di dispositivi visivi, acustici e tattili.</span>
-    </li>
-    <li>
-      <h2>
-        Splashscreen
-      </h2>
-      
-      <span>Mostrare e nascondere la schermata iniziale di applicazioni.</span>
-    </li>
-    <li>
-      <h2>
-        Archiviazione
-      </h2>
-      
-      <span>Collegare i dispositivi opzioni di archiviazione nativo.</span>
+      <span>Scopri quali plugin Cordova sono disponibili all'utilizzo nel progetto.</span>
     </li>
   </ul>
 </div>
