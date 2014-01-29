@@ -14,19 +14,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android の web 表示
+# アマゾン火 OS web 表示
 
-このセクションを大きい人造人間アプリケーション内でのコルドバ有効 WebView コンポーネントを埋め込む方法を示します。これらのコンポーネントが互いと通信できる方法については、アプリケーション ・ プラグインを参照してください。
+3.0.0 以降、コルドバ アマゾン火 OS アプリケーションでコンポーネントとして使用できます。 アマゾン火 OS としてこのコンポーネントを指します `CordovaWebView` 。 `CordovaWebView`オープン ソース クロム プロジェクトに組み込まれているアマゾン WebView を拡張します。 この機能を活用してあなたの web アプリは現代のウェブ ランタイム エンジンで実行される最新の HTML5 web 標準を利用できます。
 
-人造人間に慣れていないしている場合する必要があります最初 Android プラットフォーム ガイドに慣れるお持ち、WebView を埋め込みのより珍しい開発オプションを実行する前にインストールされている最新の人造人間 SDK。 コルドバ 1.9 を皮切りに、人造人間プラットホームに依存している、 `CordovaWebView` 、従来のビルド コンポーネント `CordovaActivity` 1.9 リリース前コンポーネント。
+## 前提条件
 
-1.  これらの指示に従って、最新コルドバ分布があることを確認します。[Cordova.apache.org][1]からダウンロードし、その Android パッケージを解凍します。
+*   コルドバ 3.0.0 以上
 
-2.  Android パッケージに移動 `/framework` ディレクトリと実行 `ant jar` 。Cordova が作成されます `.jar` として形成されたファイル`/framework/cordova-x.x.x.jar`.
+*   最新の SDK を更新 android SDK
 
-3.  コピー、 `.jar` Android プロジェクトにファイル `/libs` ディレクトリ。
+*   アマゾン WebView SDK
 
-4.  次に、アプリケーションの追加 `/res/xml/main.xml` ファイルと、 `layout_height` 、 `layout_width` と `id` 、アプリケーションに合うように変更します。
+## アマゾン火 OS プロジェクトで CordovaWebView の使用へのガイドします。
+
+1.  ダウンロード[アマゾン WebView SDK][1]を展開しに awv_interface.jar をコピー `/framework/libs` ディレクトリ。 ライブラリを作成する/フォルダーが存在しない場合。
+
+2.  `cd``/framework`を実行 `ant jar` コルドバの jar を構築します。 として形成された .jar ファイルを作成します `cordova-x.x.x.jar` で、 `/framework` ディレクトリ。
+
+3.  編集アプリケーションの `main.xml` ファイル （下 `/res/layout` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -34,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-5.  アクティビティを変更して、それを実装する、 `CordovaInterface` 。 それは含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または他、自分でそれらを実装します。 次のコードは、基本的なアプリケーションのインターフェイスに依存している示しています。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
+4.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -49,8 +55,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
-6.  アプリケーションは、カメラを使用する必要がある場合、次を実装します。
-    
+ [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+
+カメラを使用する場合もこれを実装する必要があります。
+
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -66,16 +74,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-        
+    
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+    
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-        
+        }
+    
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -93,18 +101,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
-        
-
-7.  最後に、スレッド プールを追加してください、それ以外の場合プラグインには実行するスレッドはありません。
     
+
+最後に、スレッド プールを追加してください、それ以外の場合、プラグインには上で実行するスレッドはありません。
+
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-        
+    
 
-8.  アプリケーションの HTML や JavaScript ファイル Android プロジェクトをコピー `/assets/www` ディレクトリ。
+1.  アプリケーションの HTML や JavaScript ファイル、プロジェクトにコピー アマゾン火 OS の `/assets/www` ディレクトリ。
 
-9.  コピー、 `config.xml` ファイルから `/framework/res/xml` をプロジェクトの `/res/xml` ディレクトリ。
-
- [1]: http://cordova.apache.org
+2.  コピー `config.xml` から `/framework/res/xml` プロジェクトの `/res/xml` ディレクトリ。

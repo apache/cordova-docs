@@ -23,69 +23,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   deviceready
 *   一時停止します。
 *   再開
-*   オンライン
-*   オフライン
-*   戻るボタン
-*   batterycritical
-*   batterylow
-*   batterystatus
-*   メニュー ボタン
-*   ［ 検索 ］
+*   backbutton
+*   menubutton
+*   searchbutton
 *   startcallbutton
 *   endcallbutton
 *   volumedownbutton
 *   volumeupbutton
 
-## 機能へのアクセス
+## [Org.apache.cordova.battery ステータス][1]によって追加されるイベント
 
-バージョン 3.0、コルドバ implements バッテリー状態と他のデバイス レベルの Api*のプラグイン*として。 バッテリのステータスに関係のない他のすべてのイベントへのアクセスは既定で有効になります。 CLI の使用して `plugin` で、コマンドライン ・ インタ フェースを有効または無効バッテリー イベント説明されたコマンド。
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
 
-        $ cordova plugin add org.apache.cordova.battery-status
-        $ cordova plugin ls
-        [ 'org.apache.cordova.battery-status' ]
-        $ cordova plugin rm org.apache.cordova.battery-status
-    
+*   batterycritical
+*   batterylow
+*   batterystatus
 
-これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
+## [Org.apache.cordova.network 情報][2]によって追加されるイベント
 
-*   アンドロイド
-    
-        (in app/res/xml/config.xml)
-        <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
-        </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-        
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
 
-*   ブラックベリー WebWorks
-    
-        (in www/plugins.xml)
-        <feature name="Battery">
-            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
-        </feature>
-        
-        (in www/config.xml)
-        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
-        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
-        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
-        
-
-*   iOS （`config.xml`)
-    
-        <feature name="Battery">
-            <param name="ios-package" value="CDVBattery" />
-        </feature>
-        
-
-*   (Tizen`config.xml`)
-    
-        <feature name="http://tizen.org/api/systeminfo" required="true"/>
-        
-    
-    参照: [Tizen Web アプリケーションのアプリケーション マニフェスト][1]
-
- [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
-
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+*   online
+*   offline

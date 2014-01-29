@@ -29,8 +29,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## サポートされているプラットフォーム
 
+*   アマゾン火 OS
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー 10
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
