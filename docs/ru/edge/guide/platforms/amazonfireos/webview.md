@@ -14,19 +14,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android WebViews
+# Amazon Fire OS WebViews
 
-В этом разделе показано, как вставлять WebView Cordova включен компонент в рамках более крупных приложений Android. Дополнительные сведения о том, как эти компоненты могут взаимодействовать друг с другом смотрите приложение плагины.
+Начиная с 3.0.0, Cordova можно использовать в качестве компонента приложений Amazon Fire OS. Amazon Fire ОС относится к этот компонент как `CordovaWebView` . `CordovaWebView`расширяет Amazon WebView, который построен на открытым исходным кодом проекта Chromium. Используя эту функцию, веб-приложений можно использовать последних веб-стандартов HTML5, в современный веб подсистемой среды выполнения.
 
-Если вы не знакомы с Android, следует сначала ознакомиться с руководством Android платформы и установлен перед более необычный вариант развития встраивания WebView последний пакет SDK Android. Начиная с Cordova 1.9, платформа Android опирается на `CordovaWebView` компонент, который опирается на наследие `CordovaActivity` компонент, который до даты версии 1.9.
+## Необходимые условия
 
-1.  Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней Кордова. Скачать его с [cordova.apache.org][1] и распакуйте Android пакет.
+*   Кордова 3.0.0 или больше
 
-2.  Перейдите в Android пакет `/framework` директорию и запустить `ant jar` . Он создаёт Кордова `.jar` файл, как`/framework/cordova-x.x.x.jar`.
+*   Android SDK, обновлены до последних SDK
 
-3.  Копия `.jar` файл в Android-проект `/libs` каталог.
+*   Amazon WebView SDK
 
-4.  Добавьте в приложение следующий `/res/xml/main.xml` файл, с `layout_height` , `layout_width` и `id` изменения в соответствии с приложением:
+## Руководство по использованию CordovaWebView в проекте OS Amazon Fire
+
+1.  Скачать и развернуть [Amazon WebView SDK][1] , а затем скопируйте awv_interface.jar в `/framework/libs` каталог. Создайте libs / папки, если она не существует.
+
+2.  `cd`в `/framework` и запустите `ant jar` для создания jar Кордова. Он создает файл .jar, формируется как `cordova-x.x.x.jar` в `/framework` каталог.
+
+3.  Редактирование вашего приложения `main.xml` файл (под `/res/layout` ) чтобы выглядеть следующим образом, с `layout_height` , `layout_width` и `id` изменены в соответствии с приложением:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -34,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-5.  Изменения деятельности таким образом, чтобы он реализует `CordovaInterface` . Она должна реализовывать методы, включены. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или иначе реализовать их на свой собственный. В следующем фрагменте кода показано простое приложение, которое опирается на интерфейсе. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
+4.  Измените вашу деятельность так, чтобы он реализует `CordovaInterface` . Вы должны реализовать включены методы. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или реализовать их на свой собственный. В фрагменте кода ниже показано простое приложение, использующее интерфейс. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -49,8 +55,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
-6.  Если приложение должно использовать камеру, реализуйте следующее:
-    
+ [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+
+Если вы используете камеру, следует также реализовать это:
+
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -66,16 +74,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-        
+    
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+    
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-        
+        }
+    
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -93,18 +101,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
-        
-
-7.  Наконец, не забудьте добавить пул потоков, иначе плагины не нити, на которой будет выполняться:
     
+
+Наконец, не забудьте добавить пул потоков, в противном случае плагинов нет потоков для запуска на:
+
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-        
+    
 
-8.  Скопируйте файлы HTML и JavaScript приложения для Android-проект `/assets/www` каталог.
+1.  Скопировать HTML и JavaScript файлы приложения в проект Amazon Fire OS `/assets/www` каталог.
 
-9.  Копия `config.xml` файл из `/framework/res/xml` в проект `/res/xml` каталог.
-
- [1]: http://cordova.apache.org
+2.  Копия `config.xml` от `/framework/res/xml` для вашего проекта `/res/xml` каталог.

@@ -29,8 +29,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Поддерживаемые платформы
 
-*   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   Amazon Fire ОС
+*   Android
+*   BlackBerry 10
 
 ## Быстрый пример
 

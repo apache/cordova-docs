@@ -20,19 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+Сведения о низкоуровневый интерфейс командной строки, который позволяет плагины см с помощью Plugman для управления плагинами. Смотрите приложение плагины обзор.
+
 ## Windows Phone
 
 Средства командной строки Windows Phone поддерживает создание, строительство и запуск новых проектов. Команды должны быть запущены из строки cmd или powershell.
 
-Репо WP8 теперь включает в себя код для построения WP7 + WP8 apps. Репо содержит подкаталоги для каждого: `wp7/` и`wp8/`.
+Репо WP8 теперь включает в себя код для построения WP7 + WP8 apps. Repo есть подкаталоги для каждого: `wp7/` и`wp8/`.
 
 ## Создание проекта
 
-Есть 2 способа идти о создании нового приложения Apache Cordova WP7 или РГ.8.
+Есть 2 способа идти о создании нового приложения Apache Cordova WP7 или WP8.
 
-### Запустите пакетный файл для создания и установки шаблонов.
+### Запустите пакетный файл для создания и установки шаблонов
 
-*   Корень репо содержит файл createTemplates.bat. Дважды щелкнув этот файл будет генерировать 2 ZIP-файлов. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip, где ХХХ это номер текущей версии) Легко использовать эти файлы в Visual Studio, копировать их «Мои документы\Visual Studio 2012\Templates\ProjectTemplates\» вы затем сможете для создания новых приложений Apache Cordova Windows Phone из файла Visual Studio-> меню новый проект.
+*   Содержит корень репо `createTemplates.bat` файл. Дважды она генерирует два `.zip` файлы: `CordovaWP7_x_x_x.zip` и `CordovaWP8_x_x_x.zip` , где *ххх* — номер текущей версии. Чтобы легко использовать эти файлы в Visual Studio, скопируйте их в `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` . Затем вы могл создать Apache Cordova Windows Phone приложения из Visual Studio **файл → новый проект** меню.
 
 *   Если вы запустите пакетный файл из командной строки, вы также можете позвонить с параметром для автоматической установки
 
@@ -41,9 +44,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     >createTemplates.bat -install
     
 
-### Использовать скрипты create в командной строке
+### Использовать скрипты Create в командной строке
 
-Запустите `create` команду, указав существующий путь к проекту, реверс домен стиль пакет идентификатор и отображаемое имя приложения. Вот синтаксис для Windows Phone 7 и 8:
+Запуск `create` команду, указав существующий путь к проекту, реверс домен стиль пакета идентификатор и отображаемое имя приложения. Вот синтаксис для Windows Phone 7 и 8:
 
     >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
@@ -59,9 +62,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Запустите Visual Studio и откройте файл решения (SLN) в (C:\path\to\my\_new\_project)
 
-Постройте и запустите его
+Построить и запустить его
 
-## Построение проекта (затем очищает сборки)
+## Построение проекта (чистой, а затем построить)
 
 *   Отладка
     
@@ -71,9 +74,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     $ C:\path\to\my\_new\_project\cordova\build --release
 
-## Выполнение приложения
+## Запуск приложения
 
-Запустите команду «run» со следующими *необязательными* параметрами
+Выполните команду «run» со следующими *необязательными* параметрами
 
 *   Целевая спецификация. Это включает в себя `--emulator` , `--device` , или`--target=<targetID>`.
 
@@ -81,7 +84,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
     $ C:\path\to\my\_new\_project\cordova\run \[Target\] \[Build\]
 
-По умолчанию `run` команда будет называться с `--emulator --debug` если флаги не предоставляются.
+По умолчанию `run` команда вызывается с `--emulator --debug` если флаги не предоставляются.
 
 ## Очистка
 
