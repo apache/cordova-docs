@@ -27,7 +27,7 @@ Ein Beispiel-Plugin-Element:
         version="1.0.2">
     
 
-## `<plugin>`Element
+## *Plugin* Element
 
 Das `plugin` Element ist das Plugin Manifest Element der obersten Ebene. Es verfügt über die folgenden Attribute:
 
@@ -40,7 +40,7 @@ Das `plugin` Element ist das Plugin Manifest Element der obersten Ebene. Es verf
         ^\d+[.]\d+[.]\d+$
         
 
-## `<engines>`und `<engine>` Elemente
+## *Motoren* und *Motor* -Elemente
 
 Die untergeordneten Elemente der `<engines>` Element angeben Versionen von Apache-Cordova-basierten Frameworks, die dieses Plugin unterstützt. Ein Beispiel:
 
@@ -64,7 +64,7 @@ Motor-Elemente können auch angeben, fuzzy-Treffer um Wiederholung zu vermeiden 
     </engines>
     
 
-Die '<engine>' Markierungen hat auch Standardunterstützung für alle die Hauptplattformen Cordova ist vorhanden. Angabe des 'Cordoba' Motor Tags bedeutet, dass alle Versionen von Cordova auf jeder Plattform das Motor-Version-Attribut genügen müssen. Sie können auch bestimmte Plattformen und ihre Versionen auflisten, um die Catch-All 'Cordoba'-Engine zu überschreiben:
+Die `<engine>` Markierungen hat auch Standardunterstützung für alle die Hauptplattformen Cordova ist vorhanden. Angabe der `cordova` Motor Tag bedeutet, dass alle Versionen von Cordova auf jeder Plattform das Motor-Version-Attribut genügen müssen. Sie können auch eine Liste bestimmte Plattformen und ihre Versionen um die CatchAll-überschreiben `cordova` Motor:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -73,7 +73,8 @@ Die '<engine>' Markierungen hat auch Standardunterstützung für alle die Hauptp
     </engines>
     
 
-Hier ist eine Liste der Standard-Suchmaschinen, die die "<engine>'-Tag unterstützt: * 'Cordoba' * 'Cordova-Plugman' * 'Cordova-Android' * 'Cordova-Ios' * 'Cordova-blackberry10' * 'Cordova-wp7' * 'Cordova-wp8' * 'Cordova-windows8'
+Hier ist eine Liste der Standard-Suchmaschinen, die die "<engine>'-Tag unterstützt: * 'Cordoba' * 'Cordova-Plugman' * 'Cordova-Amazon-Fireos' * 'Cordova-Android' * 'Cordova-Ios' * 'Cordova-blackberry10' * 'Cordova-wp7' * 'Cordova-wp8' * 'Cordova-windows8'  
+* ' Android-Sdk' / / liefert die höchste Android-api-Ebene installiert * 'Apfel-Xcode' / / liefert die Xcode-Version * 'Apple-Ios' / / liefert die höchste installierte iOS-Version * 'Apple-Osx' / / liefert die OSX Version * 'Blackberry-Ndk' / / liefert die systemeigenen Blackberry SDK Version
 
 Benutzerdefinierte Apache Cordova-basierten Frameworks sollte aufgeführt sein, unter dem Motor-Tag angeben, etwa so:
 
@@ -84,7 +85,7 @@ Benutzerdefinierte Apache Cordova-basierten Frameworks sollte aufgeführt sein, 
     </engines>
     
 
-Ein benutzerdefinierter Apache Cordova-basiertes Framework erfordert, dass ein Motor-Element die folgenden Attribute enthält: 'Name', 'Version', 'ScriptSrc' und 'Plattform'.
+Ein benutzerdefinierter Apache Cordova-basiertes Framework erfordert, dass ein Motor-Element die folgenden Attribute enthält: `name` , `version` , `scriptSrc` , und`platform`.
 
 *   `name`(erforderlich): einen lesbaren Namen für Ihre benutzerdefinierte Rahmen.
 
@@ -92,13 +93,13 @@ Ein benutzerdefinierter Apache Cordova-basiertes Framework erfordert, dass ein M
 
 *   `scriptSrc`(erforderlich): der Skript-Datei, die Plugman sagt, welche Version von benutzerdefinierten Rahmen ist. Im Idealfall sollte diese Datei innerhalb des Verzeichnisses der obersten Ebene für Ihr Pluginverzeichnis.
 
-*   `platform`(erforderlich): Welche Plattformen, Ihr Framework unterstützt. Sie können den Platzhalter ' *' um zu sagen, für alle Plattformen unterstützt, geben Sie mehrere mit ein Pipe-Zeichen wie 'android|ios|blackberry10' oder nur einer einzigen Plattform wie 'Android'.
+*   `platform`(erforderlich): Welche Plattformen, Ihr Framework unterstützt. Sie können den Platzhalter `*` um zu sagen, für alle Plattformen unterstützt, geben Sie mehrere durch ein Pipezeichen wie `android|ios|blackberry10` oder nur eine einzelne Plattform wie`android`.
 
 Plugman bricht mit einem NULL-Code für jedes Plugin, dessen Ziel-Projekt des Motors Einschränkungen nicht erfüllt.
 
 Wenn keine `<engine>` Markierungen angegeben ist, Plugman blind in das Projektverzeichnis angegebenen Cordova zu installieren versucht.
 
-## `<name>`Element
+## *Name* Element
 
 Ein lesbarer Name für das Plugin, dessen Textinhalt den Namen des plugins enthält. Zum Beispiel:
 
@@ -107,7 +108,7 @@ Ein lesbarer Name für das Plugin, dessen Textinhalt den Namen des plugins enth�
 
 Dieses Element nicht (noch) Lokalisierung zu behandeln.
 
-## `<description>`Element
+## *Beschreibung* Element
 
 Eine Klartextbeschreibung für das Plugin. Der Textinhalt des Elements enthält die Beschreibung des Plugins. Ein Beispiel:
 
@@ -116,28 +117,28 @@ Eine Klartextbeschreibung für das Plugin. Der Textinhalt des Elements enthält 
 
 Dieses Element nicht (noch) Lokalisierung zu behandeln.
 
-## `<author>`Element
+## *Autor* Element
 
 Plugin-Autor-Namen. Der Textinhalt des Elements enthält den Namen des Autors Plugin. Ein Beispiel:
 
     <author>Foo plugin description</author>
     
 
-## `<keywords>`Element
+## *Schlüsselwörter* Element
 
 Plugin-Schlüsselwörter. Der Textinhalt des Elements enthält eine durch Kommas getrennte Stichwörter, um das Plugin zu beschreiben. Ein Beispiel:
 
     <keywords>foo,bar</keywords>
     
 
-## `<license>`Element
+## *Lizenz* Element
 
 Plugin-Lizenz. Der Textinhalt des Elements enthält das Plugin-Lizenz. Ein Beispiel:
 
     <license>Apache 2.0 License</license>
     
 
-## `<asset>`Element
+## *Asset* Element
 
 Ein oder mehrere Elemente Auflisten der Dateien oder Verzeichnisse in einer Cordova app kopieren `www` Verzeichnis. Beispiele:
 
@@ -159,7 +160,7 @@ Alle `<asset>` Tags erfordern beide `src` und `target` Attribute. Nur Web-Plugin
     
     erstellt die `js/experimental` Verzeichnis innerhalb der `www` Verzeichnis, sofern bereits vorhanden, dann Kopien der `new-foo.js` Datei und benennt es `foo.js` . Existiert eine Datei schon am Zielort, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
 
-## `<js-module>`Element
+## *Js-Modul* Element
 
 Die meisten Plugins enthalten eine oder mehrere JavaScript-Dateien. Jeder `<js-module>` Tag entspricht einer JavaScript-Datei, und verhindert, dass das Plugin Benutzer hinzufügen ein `<script>` Tag für jede Datei. Während `<asset>` Markierungen kopieren Sie einfach eine Datei aus dem Plugin-Unterverzeichnis in `www` , `<js-module>` Markierungen sind viel komplexer. Sie sieht wie folgt:
 
@@ -192,9 +193,9 @@ Wenn `src` , löst nicht an eine vorhandene Datei Plugman beendet und kehrt die 
 
 Schachteln `<js-module>` Elemente im `<platform>` deklariert plattformspezifische JavaScript-Modul Bindungen.
 
-## `<dependency>`
+## *Abhängigkeit* Element
 
-Die `<dependency>` Tag können Sie angeben, andere Plugins, die das aktuelle Plugin abhängig. Während sie zukünftige Versionen von Plugin-Repositories zugreifen werden, kurzfristig Plugins direkt verwiesen als URLs von `<dependency>` Markierungen. Sie werden wie folgt formatiert:
+Die `<dependency>` Tag können Sie andere Plugins angeben, von denen das aktuelle Plugin abhängig ist. Während sie zukünftige Versionen von Plugin-Repositories zugreifen werden, kurzfristig Plugins direkt verwiesen als URLs von `<dependency>` Markierungen. Sie werden wie folgt formatiert:
 
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
@@ -215,7 +216,7 @@ Setzen Sie die `url` der ein `<dependency>` tag zu `"."` und bieten ein `subdir`
 
 Beachten Sie, dass die `subdir` immer gibt einen Pfad relativ zum *Stammverzeichnis* das Git Repository, nicht das übergeordnete-Plugin. Dies gilt auch dann, wenn Sie das Plugin mit einem lokalen Pfad direkt darauf installiert. Plugman findet die Wurzel das Git Repository und dann findet die anderen Plugin von dort.
 
-## `<platform>`
+## *Plattform* Element
 
 Die `<platform>` Tag identifiziert Plattformen, die erfordern Änderungen an den Konfigurationsdateien oder systemeigenen Code zugeordnet. Tools, die unter Verwendung dieser Spezifikation können unterstützte Plattformen zu identifizieren und installieren Sie das Programm in Cordova Projekte.
 
@@ -235,13 +236,14 @@ Die erforderlichen `name` -Attribut identifiziert eine Plattform unterstützt, d
 
 Plattformnamen sollten Kleinbuchstaben sein. Plattformnamen, so willkürlich gewählt, sind aufgeführt:
 
+*   Amazon-fireos
 *   Android
-*   BB10
+*   blackberry10
 *   Ios
 *   WP7
 *   WP8
 
-## `<source-file>`
+## *Quelldatei* Element
 
 Die `<source-file>` Element identifiziert ausführbare Quellcodes, die in ein Projekt installiert werden soll. Beispiele:
 
@@ -266,7 +268,7 @@ Es unterstützt die folgenden Attribute:
 
 *   `compiler-flags`(nur iOS): Wenn festgelegt ist, weist der angegebenen Compiler-Flags für die bestimmten Quelldatei.
 
-## `<config-file>`
+## *Config-Datei* Element
 
 Bezeichnet eine XML-basierte Konfiguration-Datei, die geändert werden, wo in diesem Dokument die Änderung stattfinden sollen, und was geändert werden sollte.
 
@@ -314,7 +316,7 @@ Es unterstützt die folgenden Attribute:
     
     Wenn die Auswahl auf ein untergeordnetes Element des angegebenen Dokuments nicht behoben wird, das Tool beendet und kehrt des Installationsvorgangs gibt eine Warnung aus und beendet mit einem NULL-Code.
 
-## `<plugins-plist>`
+## *Plugins-plist* Element
 
 Dies ist *veraltet* , da es nur Cordova-Ios 2.2.0 und unterhalb gilt. Verwendung der `<config-file>` Tag für neuere Versionen von Cordova.
 
@@ -332,16 +334,21 @@ Gibt einen Schlüssel und Wert auf den richtigen anfügen `AppInfo.plist` Datei 
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
-## `<resource-file>`und`<header-file>`
+## *Ressource-Datei* und *Header-Datei* Elemente
 
-Wie Quelldateien, aber speziell für Plattformen wie iOS unterscheiden, die Quelldateien, Kopf- und Ressourcen. Beispiele:
+Wie Quelldateien, aber speziell für Plattformen wie iOS unterscheiden, die Quelldateien, Kopf- und Ressourcen. iOS Beispiele:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
     
 
-## `<lib-file>`
+Android-Beispiel:
+
+    < src="FooPluginStrings.xml Ressource-Datei" target="res/values/FooPluginStrings.xml" / >
+    
+
+## *Lib-Datei* Element
 
 Wie Quelle, Ressourcen- und Header-Dateien, aber speziell für Plattformen wie BlackBerry 10 User generated Bibliotheken verwenden. Beispiele:
 
@@ -355,7 +362,7 @@ Unterstützte Attribute:
 
 *   `arch`: Die Architektur, für die die `.so` Datei erstellt wurde, entweder `device` oder`simulator`.
 
-## `<framework>`
+## *Rahmen* Element
 
 Bezeichnet einen Rahmen (in der Regel Teil der OS/Plattform), von denen das Plugin abhängig ist.
 
@@ -369,7 +376,7 @@ Das `src` -Attribut identifiziert den Rahmen, welche Plugman versucht die Cordov
 
 Der optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist`false`.
 
-## `<info>`
+## *Info* Element
 
 Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätzliche Schritte erforderlich, die können nicht einfach automatisiert werden oder Plugman den Rahmen sprengen. Beispiele:
 
@@ -382,7 +389,7 @@ Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätz
     </info>
     
 
-# Variablen
+## Variablen
 
 In bestimmten Fällen kann eine Plugin müssen Änderungen an der Konfiguration der Zielanwendung abhängig zu machen. Z. B. für C2DM auf Android, eine app zu registrieren, dessen Paket-Id ist `com.alunny.message` wäre wie eine Berechtigung erforderlich:
 

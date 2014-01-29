@@ -25,7 +25,7 @@ Das Ereignis wird ausgelöst, wenn Cordova vollständig geladen ist.
 
 Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas Gerät APIs geladen haben und bereit sind, zugreifen.
 
-Cordova besteht aus zwei Codebasen: native und JavaScript. Während der native Code lädt, zeigt eine benutzerdefinierte Lade-Bild. JavaScript lädt jedoch nur wenn das DOM geladen. Dies bedeutet, dass Ihre Webanwendung möglicherweise eine Cordova JavaScript-Funktion nennen darf, bevor der entsprechende systemeigene Code verfügbar ist.
+Cordova besteht aus zwei Codebasen: native und JavaScript. Während der native Code lädt, zeigt eine benutzerdefinierte Lade-Bild. JavaScript lädt jedoch nur wenn das DOM geladen. Dies bedeutet, dass die Web-app möglicherweise eine Cordova JavaScript-Funktion nennen darf, bevor der entsprechende systemeigene Code verfügbar ist.
 
 Das `deviceready` -Ereignis wird ausgelöst, sobald Cordova vollständig geladen hat. Einmal können das Ereignis ausgelöst, Sie sicher Cordova-APIs aufrufen. Anwendungen in der Regel fügen Sie einen Ereignis-Listener mit `document.addEventListener` sobald das HTML-Dokument DOM geladen hat.
 
@@ -33,8 +33,9 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
 
 ## Unterstützte Plattformen
 
+*   Amazon Fire OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry 10
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8
