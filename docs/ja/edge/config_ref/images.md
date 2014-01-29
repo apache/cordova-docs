@@ -45,10 +45,14 @@ Windows Phone には、48 ピクセルの既定アイコンと共に様々 な�
         windows-phone/icon-173-tile.png
     
 
-ブラックベリーは、80 ピクセルのアイコンが必要です。
+ブラックベリー 10 アイコンの要素を config.xml ファイルが必要です。
 
-        blackberry/icon-80.png
+        <icon src="blackberry10/icon-86.png" />
     
+
+複数のサイズとロケールは、tareting のためのブラックベリーのマニュアルを参照してください。
+
+[http://developer.blackberry.com/html5/documentation/icon_element.html]
 
 Tizen は、128 ピクセルのアイコンが必要です。
 
@@ -71,7 +75,7 @@ Android は両方の肖像画および横向きスプラッシュ画面画像の
         android/screen-xhdpi-portrait.png
     
 
-IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面のカスタマイズされます。
+IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面に適用されます。
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,38 +88,69 @@ IOS プラットフォームの網膜ディスプレイの向きが異なる亜�
         ios/screen-iphone-portrait-568h-2x.png
     
 
-ブラックベリーと Windows Phone 単一のスプラッシュ画面のイメージを指定します。
+Windows Phone では、単一のスプラッシュ画面のイメージを指定します。
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
     
 
 次のセクションでは、プラットフォームのガイドで説明されている Sdk と関連するコマンド ライン ツールの操作時のスプラッシュ画面を設定する方法について詳しく説明します。
 
+使用する前に、SplashScreen プラグインをインストールすることを忘れないでください、 `navigator.splashscreen.hide()` または `navigator.splashscreen.show()` のメソッド。
+
 ## Android プラットフォーム用のスプラッシュ画面
 
-Android プロジェクトで[9 patch 画像][1]ファイルを置きます `res/drawable` ディレクトリ。それぞれのサイズべきであります。
+Android プロジェクトで[9 patch 画像][1]ファイルを置きます `platforms/android/res/drawable*` ディレクトリ。
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
+
+それぞれのサイズべきであります。
 
 *   エクストララージ (xhdpi): 少なくとも 960 × 720
 *   大 (hdpi): 少なくとも 640 × 480
 *   媒体 (開度計): 少なくとも 470 × 320
 *   小 (ldpi): 少なくとも 426 × 320
 
-`config.xml`、次の環境設定を追加：
+コルドバで提供される既定のスプラッシュ画面画像を使用する場合は、png ファイルをコピーする必要があります `platforms/android/www/res/screen/android` を `platforms/android/res/drawable*/` :
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+    cd platforms/android/res
+    mkdir drawable-port-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+    mkdir drawable-land-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+    mkdir drawable-port-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+    mkdir drawable-land-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+    mkdir drawable-port-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+    mkdir drawable-land-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+    mkdir drawable-port-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+    mkdir drawable-land-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
     
 
-最初の行ではスプラッシュ画面として表示するイメージを設定します。場合は任意の名前をあなたのイメージよりも、他 `splash.png` 、この行を変更する必要があります。
+`drawable`[画面サイズ][2]と[代替のリソース][3]をサポート Android 規則に従ってディレクトリ名前をする必要があります.
 
-2 行目はミリ秒にスプラッシュ ・ スクリーンが表示されますどのくらいの時間の遅延を設定します。 アプリケーションが受信するスプラッシュ画面を却下する、 `deviceready` イベント、呼び出し、 `navigator.splashscreen.hide()` メソッド。
+ [2]: http://developer.android.com/guide/practices/screens_support.html
+ [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+`config.xml`、次の環境設定を追加：
+
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
+    
+
+最初の行ではスプラッシュ画面として表示するイメージを設定します。 これはファイル名で png 形式の `drawable*` ディレクトリ。 場合は任意の名前をイメージ以外 `splash.png` 、この行を変更する必要があります。 ファイル名の拡張子を含めないでください (すなわち、 `.png` )。 コルドバ上記で提供される既定のスプラッシュ スクリーンを使用する場合は、値を使用します`screen`.
+
+2 番目の行 (ミリ秒単位) が表示されますどのように長いスプラッシュ ・ スクリーンのデフォルトの遅延を設定します。これは最大の予想開始時刻する必要があります。SplashScreenDelay の既定値は 3000 ミリ秒です。
+
+最後に、スプラッシュ画面が表示されますのみ必要な限り。 アプリが開始され、webview が読み込まれる、アプリのメイン ビューが表示されるスプラッシュ画面を隠す必要があります。 アプリ開始時刻が異なるためかなりの要因の数が多いのため、アプリを明示的に呼び出すことをお勧め `navigator.splashscreen.hide()` 応答する Javascript のメソッドで、 `deviceready` イベント。 それ以外の場合、スプラッシュ スクリーンが上に構成されている SplashScreenDelay 値の表示されます。 このイベント駆動型のアプローチは、常に一定の時間に表示されるスプラッシュ画面を持つ対強くお勧めします。
 
 ## IOS プラットフォーム用のスプラッシュ画面
 
-IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのイメージだけを追加します。 各イメージのサイズをする必要があります。
+IOS プロジェクトにスプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのためのこれらの画像を追加のみです。 各イメージのサイズをする必要があります。
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 ピクセル)
@@ -127,8 +162,8 @@ IOS のプロジェクトに、スプラッシュ画面画像をコピー `Resou
 
 ## BlackBerry 10 プラットフォーム用のスプラッシュ画面
 
-スプラッシュ画面画像をプロジェクトにコピー `res/screen/blackberry10` ディレクトリ。ファイル名にする必要があります。
+各解像度とサポートしたいロケールの config.xml にリム： スプラッシュ要素を追加します。
 
-*   splash-1280x768.png (1280x768 pixels)
-*   splash-720x720.png (720x720 pixels)
-*   splash-768x1280.png (768x1280 pixels)
+[http://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
+
+ [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
