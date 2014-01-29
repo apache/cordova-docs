@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# SearchButton
+# searchbutton
 
 L'evento viene generato quando l'utente preme il pulsante di ricerca su Android.
 

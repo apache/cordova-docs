@@ -20,6 +20,8 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
  [1]: http://cordova.apache.org
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per una panoramica, vedere applicazione plugin.
+
 ## Creare un progetto
 
 Eseguire il `create` comando, specificando il percorso esistente per il progetto, l'identificatore del pacchetto stile retro-dominio e nome visualizzato dell'app. Ecco la sintassi per Mac e Windows:

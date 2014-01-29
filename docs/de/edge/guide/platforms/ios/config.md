@@ -18,12 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-*   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` ein Viewport Meta-Tag verwenden, um entweder deaktivieren oder den Bereich der Benutzer Skalierung zu beschränken.
+*   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` um ein Viewport Metatag entweder deaktivieren oder beschränken die Bandbreite der Benutzer zu skalieren, zu ermöglichen, die standardmäßig aktiviert ist.
     
         <preference name="EnableViewportScale" value="true"/>
         
+    
+    Platzieren Sie einen Viewport wie die folgende in den HTML-Code zu deaktivieren, Skalierung und passen Inhalte flexibel innerhalb der Darstellung WebView:
+    
+        < Meta Name = "Viewport" Content = "Breite = Gerät-breit, Initial-Scale = 1, Benutzer-skalierbare = No" / >
+        
 
-*   `MediaPlaybackRequiresUserAction`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` um zu verhindern, dass HTML5-Videos automatisch mit spielen die `autoplay` Attribut. Gilt nicht beim Aufrufen von `play()` für ein video-Objekt.
+*   `MediaPlaybackRequiresUserAction`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` zu verhindern, dass HTML5-Videos oder Audios automatisch das Spiel mit der `autoplay` Attribut oder per JavaScript.
     
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
@@ -43,21 +48,6 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` um zu verhindern, dass den Begrüßungsbildschirm ein-und ausblenden wenn seinen Anzeigezustand ändert.
-    
-        <preference name="FadeSplashScreen" value="false"/>
-        
-
-*   `FadeSplashScreenDuration`(float, der Standardwert ist `2` ): gibt die Anzahl der Sekunden für den Begrüßungsbildschirm fade Effekt ausgeführt.
-    
-        <preference name="FadeSplashScreenDuration" value="4"/>
-        
-
-*   `ShowSplashScreenSpinner`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` den Begrüßungsbildschirm Spinner zu verstecken.
-    
-        <preference name="ShowSplashScreenSpinner" value="false"/>
-        
-
 *   `KeyboardDisplayRequiresUserAction`(Boolean, wird standardmäßig auf `true` ): Legen Sie auf `false` erlauben die Tastatur angezeigt werden, beim Aufrufen von `focus()` auf Formularfelder.
     
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
@@ -68,26 +58,26 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="SuppressesIncrementalRendering" value="true"/>
         
 
-*   `KeyboardShrinksView`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` , die Webview zu reduzieren, wenn die Tastatur angezeigt wird, überschreiben die Standard-Beavior, die den Viewport vertikal verkleinert,. Dies entspricht dem Standardverhalten für Android apps.
-    
-        <preference name="KeyboardShrinksView" value="true"/>
-        
-
 *   `GapBetweenPages`(float, der Standardwert ist `` ): die Größe der Lücke, zwischen Seiten in Punkt.
     
-        < Einstellungsname = "GapBetweenPages" Value = "0" / >
+        <preference name="GapBetweenPages" value="0"/>
         
 
 *   `PageLength`(float, der Standardwert ist `` ): die Größe jeder Seite in Punkt in die Richtung, die die Seiten fließen. Wenn PaginationMode rechts nach links oder von links nach rechts, diese Eigenschaft stellt die Breite auf jeder Seite. Diese Eigenschaft stellt beim PaginationMode TopToBottom oder BottomToTop ist, die Höhe der einzelnen Seiten dar. Der Standardwert ist 0, was, dass das Layout die Größe des Viewports wird verwendet bedeutet, um die Dimensionen der Seite zu bestimmen.
     
-        < Einstellungsname = "SeitenLaenge" Value = "0" / >
+        <preference name="PageLength" value="0"/>
         
 
 *   `PaginationBreakingMode`(string, der Standardwert ist `page` ): gültige Werte sind `page` und `column` .Die Art und Weise, in der Spalte oder Seitenumbruch auftritt. Diese Eigenschaft legt fest, ob bestimmte CSS-Eigenschaften zur Spalte und Seitenumbruch berücksichtigt oder ignoriert werden. Wenn diese Eigenschaft auf festgelegt ist `column` , der Inhalt steht im Einklang mit der CSS-Eigenschaften, die im Zusammenhang mit Spalte aktuelle an Stelle der Seitenumbruch.
     
-        < Einstellungsname = "PaginationBreakingMode" Value = "Seite" / >
+        <preference name="PaginationBreakingMode" value="page"/>
         
 
 *   `PaginationMode`(string, der Standardwert ist `unpaginated` ): gültige Werte sind `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , und `rightToLeft` . Diese Eigenschaft bestimmt, ob Inhalte in der Webansicht aufgebrochen in Seiten, die die eine Ansicht zu einer Zeit zu füllen, oder als eine lange durchlaufende Ansicht angezeigt. Wenn der Satz zu einem paginierten Formular, diese Eigenschaft ein paginiertes Layouts zum Inhalt: verursacht die Webansicht zu verwenden, die Werte der SeitenLaenge und GapBetweenPages zu Relayout inhaltlich schaltet.
     
-        < Einstellungsname = "PaginationMode" Value = "unpaginated" / >
+        <preference name="PaginationMode" value="unpaginated"/>
+        
+
+*   `UIWebViewDecelerationSpeed`(string, der Standardwert ist `normal` ): gültige Werte sind `normal` , `fast` . Diese Eigenschaft steuert die Geschwindigkeit Abbremsen Schwung scrollen. `normal`ist die Standardgeschwindigkeit für die meisten systemeigenen apps, und `fast` ist der Standard für Mobile Safari.
+    
+        <preference name="UIWebViewDecelerationSpeed" value="fast" />

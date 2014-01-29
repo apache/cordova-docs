@@ -18,12 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
 
-*   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` d'utiliser une balise meta de fenêtre d'affichage pour désactiver ou limiter la plage de mise à l'échelle de l'utilisateur.
+*   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` pour permettre une balise meta viewport désactiver ou limiter la plage de mise à l'échelle de l'utilisateur, qui est activée par défaut.
     
         <preference name="EnableViewportScale" value="true"/>
         
+    
+    Placer une fenêtre semblable à la suivante dans le code HTML pour désactiver la mise à l'échelle et de bonne forme contenu avec souplesse dans le rendu WebView :
+    
+        < nom meta = « fenêtre » content =' largeur = dispositif-largeur, échelle initial = 1, utilisateur évolutive = non ' / >
+        
 
-*   `MediaPlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher les vidéos HTML5 de jouer automatiquement avec le `autoplay` attribut. Ne s'applique pas lorsque vous appelez `play()` sur un objet vidéo.
+*   `MediaPlaybackRequiresUserAction`(boolean, la valeur par défaut `false` ): la valeur `true` pour empêcher les HTML5 vidéos ou audios de jouer automatiquement avec le `autoplay` attribut ou via JavaScript.
     
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
@@ -43,21 +48,6 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(boolean, la valeur par défaut `true` ): la valeur `false` pour empêcher l'écran de démarrage de fading in et out lorsque son état d'affichage est modifié.
-    
-        <preference name="FadeSplashScreen" value="false"/>
-        
-
-*   `FadeSplashScreenDuration`(float, la valeur par défaut `2` ): spécifie le nombre de secondes que l'écran de démarrage s'estomper l'effet d'exécuter.
-    
-        <preference name="FadeSplashScreenDuration" value="4"/>
-        
-
-*   `ShowSplashScreenSpinner`(boolean, la valeur par défaut `true` ): la valeur `false` pour cacher le cône de l'écran de démarrage.
-    
-        <preference name="ShowSplashScreenSpinner" value="false"/>
-        
-
 *   `KeyboardDisplayRequiresUserAction`(boolean, la valeur par défaut `true` ): la valeur `false` pour permettre le clavier à comparaître lors de l'appel `focus()` sur les entrées de formulaire.
     
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
@@ -68,26 +58,26 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="SuppressesIncrementalRendering" value="true"/>
         
 
-*   `KeyboardShrinksView`(boolean, la valeur par défaut `false` ): la valeur `true` pour réduire l'affichage Web lorsque le clavier apparaît, la substitution de la beavior par défaut qui rétrécit le viewport verticalement. Ceci renverra le comportement par défaut pour les applications Android.
-    
-        <preference name="KeyboardShrinksView" value="true"/>
-        
-
 *   `GapBetweenPages`(float, la valeur par défaut `` ): la taille de l'espace, en points, entre les pages.
     
-        < nom de l'option = « GapBetweenPages » value = « 0 » / >
+        <preference name="GapBetweenPages" value="0"/>
         
 
 *   `PageLength`(float, la valeur par défaut `` ): la taille de chaque page, en points, dans le sens qui découlent des pages. Quand PaginationMode est juste à gauche ou de gauche à droite, cette propriété représente la largeur de chaque page. Lorsque PaginationMode est topToBottom ou bottomToTop, cette propriété représente la taille de chaque page. La valeur par défaut est 0, ce qui signifie que la disposition utilise la taille de la fenêtre d'affichage pour déterminer les dimensions de la page.
     
-        < nom de l'option = « LongueurPage » value = « 0 » / >
+        <preference name="PageLength" value="0"/>
         
 
 *   `PaginationBreakingMode`(string, la valeur par défaut `page` ): les valeurs valides sont `page` et `column` .La manière dans laquelle se produit la rupture de colonne ou de page. Cette propriété détermine si certaines propriétés CSS sur colonne et page-rupture sont à l'honneur ou ignorées. Lorsque cette propriété est définie `column` , le contenu respecte les propriétés CSS associées à colonne-rupture au lieu de saut de page.
     
-        < nom de l'option = « PaginationBreakingMode » value = « page » / >
+        <preference name="PaginationBreakingMode" value="page"/>
         
 
 *   `PaginationMode`(string, la valeur par défaut `unpaginated` ): les valeurs valides sont `unpaginated` , `leftToRight` , `topToBottom` , `bottomToTop` , et `rightToLeft` . Cette propriété détermine si contenu dans l'affichage web est divisé en pages qui remplissent l'une écran vue à la fois, ou montré comme un point de vue long défilement. Si un formulaire paginé, cette propriété la valeur active/désactive une présentation paginée sur le contenu, provoquant l'affichage de web à utiliser les valeurs de LongueurPage et GapBetweenPages à la nouvelle disposition de son contenu.
     
-        < nom de l'option = « PaginationMode » value = « non paginé » / >
+        <preference name="PaginationMode" value="unpaginated"/>
+        
+
+*   `UIWebViewDecelerationSpeed`(string, la valeur par défaut `normal` ): les valeurs valides sont `normal` , `fast` . Cette propriété contrôle la vitesse de décélération de défilement dynamique. `normal`est la vitesse par défaut pour les applications plus natives, et `fast` est la valeur par défaut pour Safari Mobile.
+    
+        <preference name="UIWebViewDecelerationSpeed" value="fast" />

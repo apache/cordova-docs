@@ -45,10 +45,14 @@ Windows Phone specifica un'icona predefinita di 48 pixel, insieme a sfondo vari 
         windows-phone/icon-173-tile.png
     
 
-BlackBerry richiede un'icona 80-pixel:
+BlackBerry 10 richiede un elemento icona nel file config. xml:
 
-        blackberry/icon-80.png
+        <icon src="blackberry10/icon-86.png" />
     
+
+Vedere la documentazione di BlackBerry per tareting più dimensioni e impostazioni internazionali.
+
+[http://developer.blackberry.com/html5/documentation/icon_element.html]
 
 Tizen richiede un'icona di 128 pixel:
 
@@ -71,7 +75,7 @@ Android specifica sia ritratto e paesaggio-oriented splash immagini dello scherm
         android/screen-xhdpi-portrait.png
     
 
-La piattaforma iOS specifica varianti per iPhone/iPod e iPad, con varianti per retina display e diversi orientamenti. Il file *568 h* è personalizzato per l'iPhone 5 schermo più alto:
+La piattaforma iOS specifica varianti per iPhone/iPod e iPad, con varianti per retina display e diversi orientamenti. Il file *568 h* vale per l'iPhone 5 schermo più alto:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,38 +88,69 @@ La piattaforma iOS specifica varianti per iPhone/iPod e iPad, con varianti per r
         ios/screen-iphone-portrait-568h-2x.png
     
 
-BlackBerry e Windows Phone entrambi specificare una singola immagine:
+Windows Phone specifica una singola immagine:
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
     
 
 Le seguenti sezioni dettaglio come impostare schermate iniziali quando lavoro con SDK e gli strumenti della riga di comando correlati descritti nelle guide di piattaforma.
 
+Non dimenticare di installare il plugin SplashScreen prima di provare ad utilizzare la `navigator.splashscreen.hide()` o `navigator.splashscreen.show()` metodi.
+
 ## Schermate iniziali per la piattaforma Android
 
-Inserire i file [immagine 9-patch][1] del progetto Android `res/drawable` directory. Dovrebbe essere la dimensione per ciascuno:
+Inserire i file [immagine 9-patch][1] del progetto Android `platforms/android/res/drawable*` directory.
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
+
+Dovrebbe essere la dimensione per ciascuno:
 
 *   XLarge (xhdpi): almeno 960 × 720
 *   grande (hdpi): almeno 640 × 480
 *   medio (mdpi): almeno 470 × 320
 *   piccolo (ldpi): almeno 426 × 320
 
-In `config.xml` , aggiungere le seguenti preferenze:
+Se si desidera utilizzare le immagini di schermo splash predefinito fornite in Cordova, è necessario copiare i file png da `platforms/android/www/res/screen/android` a `platforms/android/res/drawable*/` :
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+    cd platforms/android/res
+    mkdir drawable-port-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+    mkdir drawable-land-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+    mkdir drawable-port-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+    mkdir drawable-land-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+    mkdir drawable-port-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+    mkdir drawable-land-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+    mkdir drawable-port-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+    mkdir drawable-land-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
     
 
-La prima riga imposta l'immagine da visualizzare come schermata iniziale. Se è il nome tuo immagine niente altro che `splash.png` , è necessario modificare questa linea.
+Il `drawable` i nomi di directory devono seguire le convenzioni di Android per supportare [formati di schermo][2] e [risorse alternative][3].
 
-La seconda riga imposta il ritardo di quanto tempo lo splashscreen appare in millisecondi. Per chiudere la schermata iniziale una volta che l'app riceve il `deviceready` evento, chiamare il `navigator.splashscreen.hide()` metodo.
+ [2]: http://developer.android.com/guide/practices/screens_support.html
+ [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+In `config.xml` , aggiungere le seguenti preferenze:
+
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
+    
+
+La prima riga imposta l'immagine da visualizzare come schermata iniziale. Questo è il nome del file dei png nella `drawable*` directory. Se è il nome dell'immagine niente altro che `splash.png` , è necessario modificare questa linea. Non includere l'estensione del file (cioè, `.png` ). Se si desidera utilizzare le schermate iniziali predefinito fornite in Cordova come elencato sopra, utilizzare il valore`screen`.
+
+La seconda riga imposta il ritardo predefinito di quanto tempo lo splashscreen appare in millisecondi. Questo dovrebbe essere il tempo massimo previsto inizio. Il valore predefinito per SplashScreenDelay è 3000 ms.
+
+Infine, la schermata iniziale dovrebbe essere presente solo tempo necessario. Quando ha iniziato l'app e webview ha caricato, l'app deve nascondere la schermata iniziale affinché il vostro punto di vista principale è visibile. Perché il tempo di avvio di app variano un po a causa di una serie di fattori, si raccomanda che l'app richiama esplicitamente `navigator.splashscreen.hide()` nel metodo Javascript che risponde alla `deviceready` evento. Altrimenti la schermata iniziale sarà visibile per il valore di SplashScreenDelay che configurato in precedenza. Questo approccio basato sugli eventi è altamente raccomandato contro avendo la schermata visibile per sempre una durata fissa.
 
 ## Schermate iniziali per la piattaforma iOS
 
-Copiare le immagini di schermata iniziale del progetto iOS `Resources/splash` directory. Aggiungere solo le immagini per i dispositivi che si desidera supportare, come iPad o iPhone. La dimensione di ogni immagine dovrebbe essere:
+Copiare immagini di splash screen del progetto iOS `Resources/splash` directory. Aggiungere solo quelle immagini per i dispositivi che si desidera supportare, come iPad o iPhone. La dimensione di ogni immagine dovrebbe essere:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (1496 x 2048 pixel)
@@ -127,8 +162,8 @@ Copiare le immagini di schermata iniziale del progetto iOS `Resources/splash` di
 
 ## Schermate iniziali per la piattaforma BlackBerry 10
 
-Copiare le immagini di schermata iniziale del progetto `res/screen/blackberry10` directory. I nomi dei file dovrebbe essere:
+Aggiungere un elemento di rim: spruzzata di config. xml per ogni risoluzione e le impostazioni internazionali che desiderano sostenere:
 
-*   splash-1280x768.png (1280x768 pixels)
-*   splash-720x720.png (720x720 pixels)
-*   splash-768x1280.png (768x1280 pixels)
+[http://Developer.BlackBerry.com/HTML5/Documentation/rim\_splash\_element.html][4]
+
+ [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html

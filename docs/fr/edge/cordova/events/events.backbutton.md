@@ -27,8 +27,9 @@ Afin de modifier le comportement par défaut du bouton retour, attachez un écou
 
 ## Plates-formes supportées
 
+*   Amazon Fire OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry 10
 *   Windows Phone 7 et 8
 
 ## Exemple court
