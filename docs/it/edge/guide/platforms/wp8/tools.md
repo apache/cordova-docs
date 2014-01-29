@@ -20,6 +20,8 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
  [1]: http://cordova.apache.org
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per una panoramica, vedere applicazione plugin.
+
 ## Windows Phone
 
 Gli strumenti della riga di comando di Windows Phone supportano la creazione, costruzione ed esecuzione di nuovi progetti. Comandi devono essere eseguiti da un prompt cmd o powershell.
@@ -30,9 +32,10 @@ Il repo WP8 ora include il codice per la costruzione sia WP7 + WP8 apps. Repo ha
 
 Ci sono 2 modi per andare sulla creazione di una nuova applicazione Apache Cordova WP7 o WP8.
 
-### Eseguire il file batch per creare e installare i modelli.
+### Eseguire il File Batch per creare e installare i modelli
 
-*   La radice del repo contiene un file createTemplates.bat. Doppio clic questo file genererà 2 file. zip. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip dove x.x.x è il numero di versione corrente) Per utilizzare facilmente questi file in Visual Studio, copia li a "Mio Documenti\Visual Studio 2012\Templates\ProjectTemplates\" allora sarete in grado di creare nuove applicazioni per Windows Phone di Apache Cordova dal File-> menu nuovo progetto Visual Studio.
+*   La radice del repo contiene un `createTemplates.bat` file. Facendo doppio clic su esso genera due `.zip` file: `CordovaWP7_x_x_x.zip` e `CordovaWP8_x_x_x.zip` , dove *x.x.x* rappresenta il numero di versione corrente. Per utilizzare facilmente questi file in Visual Studio, copiali in `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` . Vi sono poi in grado di creare nuove applicazioni per Windows Phone di Apache Cordova da Visual Studio **File → nuovo progetto** menu.
 
 *   Se si esegue il file batch dalla riga di comando, è possibile chiamare anche con un parametro per installare automaticamente
 
@@ -61,7 +64,7 @@ Avviare Visual Studio e aprire il file di soluzione (sln) in (C:\path\to\my\_new
 
 Costruire ed eseguirlo
 
-## La compilazione del progetto (poi pulisce compilazioni)
+## Il progetto di costruzione (pulire, poi costruire)
 
 *   Eseguire il debug
     
@@ -71,7 +74,7 @@ Costruire ed eseguirlo
     
     $ C:\path\to\my\_new\_project\cordova\build - rilascio
 
-## Che esegue l'applicazione
+## In esecuzione l'App
 
 Eseguire il comando 'Esegui' con i seguenti parametri *facoltativi*
 
@@ -81,7 +84,7 @@ Eseguire il comando 'Esegui' con i seguenti parametri *facoltativi*
     
     $ C:\path\to\my\_new\_project\cordova\run \[destinazione\] \[Build\]
 
-Per impostazione predefinita il `run` comando verrà chiamato con `--emulator --debug` se il flag non sono forniti.
+Per impostazione predefinita il `run` comando viene chiamato con `--emulator --debug` se il flag non sono forniti.
 
 ## Pulizia
 

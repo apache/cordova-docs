@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
+
 ## Windows Phone
 
 Windows Phone 的命令列工具支援創建、 構建和運行的新專案。必須從 cmd 或 powershell 的提示符下運行命令。
@@ -30,9 +32,10 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
 
 有 2 種方法去有關創建一個新的 Apache 科爾多瓦 WP7 或 WP8 應用程式。
 
-### 運行該批次檔來創建和安裝範本。
+### 運行該批次檔來創建和安裝範本
 
-*   根的回購協定包含檔 createTemplates.bat。 按兩下此檔將生成 2 個.ZIP 檔案。 （CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x 哪裡的當前版本號）方便地使用這些檔在 Visual Studio 中，複製他們到"我的 Documents\Visual 工作室 2012\Templates\ProjectTemplates\"你然後將能夠從 Visual Studio 檔-> 新專案功能表創建新的 Apache 科爾多瓦 Windows Phone 應用程式。
+*   根的回購協定包含 `createTemplates.bat` 檔。 按兩下它產生兩個 `.zip` 檔： `CordovaWP7_x_x_x.zip` 和 `CordovaWP8_x_x_x.zip` ，其中*x.x.x*表示的當前版本號。 若要方便地使用這些檔在 Visual Studio 中的，複製它們到 `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` 。 然後，可以從 Visual Studio 中創建新的 Apache 科爾多瓦 Windows Phone 應用程式**檔 → 新建專案**功能表。
 
 *   如果您從命令列運行該批次檔，還可以調用同一個參數，以便自動安裝
 
@@ -61,7 +64,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
 
 生成並運行它
 
-## 構建您的專案 （然後清除生成）
+## 建設專案 （清潔，然後生成）
 
 *   調試
     
@@ -71,7 +74,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
     
     $ C:\path\to\my\_new\_project\cordova\build — — 釋放
 
-## 運行您的應用程式
+## 運行應用程式
 
 使用下列*可選*的參數運行運行命令
 
@@ -81,7 +84,7 @@ WP8 回購現在包括用於生成 WP7 + WP8 代碼的應用程式。回購為�
     
     $ C:\path\to\my\_new\_project\cordova\run \[目標\] \[生成\]
 
-預設情況下 `run` 命令將調用 `--emulator --debug` 如果不提供了標誌。
+預設情況下 `run` 命令調用與 `--emulator --debug` 如果不提供了標誌。
 
 ## 清洗
 

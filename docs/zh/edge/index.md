@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        平臺支援
+      </h2>
+      
+      <span>所有主要功能的相容性表。</span>
+    </li>
+    <li>
+      <h2>
         命令列介面
       </h2>
       
@@ -40,6 +47,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>設置每個 SDK 和更新專案</span>
+    </li>
+    <li>
+      <h2>
+        使用 Plugman 來管理外掛程式
+      </h2>
+      
+      <span>使用 Plugman 來管理外掛程式沒有 CLI</span>
     </li>
     <li>
       <h2>
@@ -85,6 +99,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        存儲
+      </h2>
+      
+      <span>本機存儲選項的概述。</span>
+    </li>
+    <li>
+      <h2>
         <a href="_index.html">關鍵字索引</a>
       </h2>
       
@@ -99,55 +120,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        加速度計
-      </h2>
-      
-      <span>進入設備的動作感應器。</span>
-    </li>
-    <li>
-      <h2>
-        相機
-      </h2>
-      
-      <span>捕獲照片使用的設備的相機。</span>
-    </li>
-    <li>
-      <h2>
-        捕獲
-      </h2>
-      
-      <span>擷取裝置的媒體捕獲應用程式使用的媒體檔案。</span>
-    </li>
-    <li>
-      <h2>
-        指南針
-      </h2>
-      
-      <span>獲取該設備的指向的方向。</span>
-    </li>
-    <li>
-      <h2>
-        連接
-      </h2>
-      
-      <span>快速檢查網路狀態和蜂窩網路的資訊。</span>
-    </li>
-    <li>
-      <h2>
-        連絡人
-      </h2>
-      
-      <span>與設備連絡人資料庫的工作。</span>
-    </li>
-    <li>
-      <h2>
-        設備
-      </h2>
-      
-      <span>收集設備特定資訊。</span>
-    </li>
-    <li>
-      <h2>
         事件
       </h2>
       
@@ -155,59 +127,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        檔
+        外掛程式的 Api
       </h2>
       
-      <span>掛接到本機檔案系統通過 JavaScript。</span>
-    </li>
-    <li>
-      <h2>
-        地理定位
-      </h2>
-      
-      <span>讓意識到您應用程式的位置。</span>
-    </li>
-    <li>
-      <h2>
-        全球化
-      </h2>
-      
-      <span>啟用特定于地區設定的物件表示的形式。</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>啟動另一個應用程式中的瀏覽器實例的 Url。</span>
-    </li>
-    <li>
-      <h2>
-        媒體
-      </h2>
-      
-      <span>錄製和播放音訊檔。</span>
-    </li>
-    <li>
-      <h2>
-        通知
-      </h2>
-      
-      <span>可視、 可聽，和觸覺設備通知。</span>
-    </li>
-    <li>
-      <h2>
-        閃屏
-      </h2>
-      
-      <span>顯示和隱藏的應用程式的初始螢幕。</span>
-    </li>
-    <li>
-      <h2>
-        存儲
-      </h2>
-      
-      <span>掛接到設備本機存儲選項。</span>
+      <span>發現哪些外掛程式科爾多瓦是可用在您的專案中使用。</span>
     </li>
   </ul>
 </div>

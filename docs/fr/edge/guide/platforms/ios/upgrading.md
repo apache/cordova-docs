@@ -18,7 +18,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ce guide montre comment modifier des projets iOS mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
-**Remarque :** 5 Xcode Xcode 4.6 est requise, est recommandé. Actuellement, pour soumettre à l'Apple App Store, vous devez utiliser la dernière version embarquée de l'iOS SDK, qui est iOS 7. iOS SDK 7 n'est pas nécessaire encore, mais cela peut changer rapidement.
+**NOTE**: 5 Xcode Xcode 4.6 est requise, est recommandé. Actuellement, pour soumettre à l'Apple App Store, vous devez utiliser la dernière version embarquée de l'iOS SDK, qui est iOS 7. iOS SDK 7 n'est pas nécessaire encore, mais cela peut changer rapidement.
+
+## Mise à jour 3.1.0 projets à 3.2.0
+
+Pour les projets non-CLI, exécutez :
+
+        bin/mise à jour chemin/de/projet
+    
+
+Pour les projets de la CLI :
+
+1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+
+2.  Exécutez`cordova platform update ios`
 
 ## Projets de modernisation 3.0.0 à 3.1.0
 
@@ -27,26 +40,31 @@ Pour les projets non-CLI, exécutez :
         bin/mise à jour chemin/de/projet
     
 
-Pour les projets de la CLI, exécutez :
+Pour les projets de la CLI :
 
-        1. Mettre à jour la version CLI « cordova » - voir The Command-Line Interface 2. Exécutez "cordova plate-forme mise à jour ios"
-    
+1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
 
-### iOS 7 questions
+2.  Exécutez`cordova platform update ios`
 
-    1. Supprimer les valeurs "largeur = dispositif-largeur, height = hauteur appareil" de votre attribut meta tag « viewport » dans votre fichier index.html, voir https://issues.apache.org/jira/browse/CB-4323 2. Mettre à jour vos plugins principaux médias, médias-capture et splashscreen pour iOS 7 soutien
-    
+iOS 7 questions :
 
-### Xcode 5 questions
+1.  Supprimer `width=device-width, height=device-height` de la `index.html` du fichier `viewport` `meta` tag. (Voir [le bogue relevent][1].)
 
-    1. Mettre à jour vos paramètres de projet Xcode 5 vous invite à faire 2 donc (dans le navigateur de questions). Mise à jour votre "compilateur pour C / C++ c++ / Objective-C" définissant, sous l'onglet « Paramètres de génération », section « Options de construire ». Choisissez "Compilateur par défaut (Apple LLVM 5.0)"
-    
+2.  Mettre à jour vos plugins principaux médias, médias-capture et splashscreen pour iOS 7 soutien.
+
+ [1]: https://issues.apache.org/jira/browse/CB-4323
+
+Xcode 5 questions :
+
+1.  Mettre à jour vos paramètres de projet Xcode 5 vous invite à le faire (dans les questions de navigation).
+
+2.  Mise à jour de votre **compilateur pour C / C + c++ / Objective-C** définissant, sous l'onglet **Paramètres de génération** , la section des **Options de compilation** . Choisir **par défaut du compilateur (Apple LLVM 5.0)**.
 
 ## Mise à niveau à la CLI (3.0.0) de 2.9.0
 
 1.  Créez un projet Apache Cordova 3.0.0 utilisant le cordova CLI, tel que décrit dans l'Interface de ligne de commande.
 
-2.  Ajouter vos plates-formes le projet de la Cordoue, par exemple :`cordova
+2.  Ajoutez vos plates-formes cordova au projet, par exemple :`cordova
 platform add ios`.
 
 3.  Copiez le contenu du projet `www` Répertoire de la `www` répertoire à la racine du projet Cordoue vous venez de créer.
@@ -75,7 +93,7 @@ platform add ios`.
 
 7.  Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
-**Remarque :** À partir de Cordova 3.0.0, projets ne viennent pas avec les plug-ins, vous devrez installer ceux que vous avez besoin pour votre projet en utilisant le `plugman` utilitaire CLI. Voir l'utilisation de Plugman pour gérer les Plugins.
+**NOTE**: à partir de Cordova 3.0.0, plugins ne sont pas pré-installé, et vous devez utiliser le `plugman` de l'utilitaire à installer manuellement. Voir l'utilisation de Plugman pour gérer les Plugins.
 
 ## 2.8.0 Mise à niveau de projets à 2.9.0
 
@@ -93,7 +111,7 @@ platform add ios`.
 
 7.  Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
-## Projets de modernisation 2.7.0 pour 2.8.0
+## 2.7.0 Mise à niveau de projets à 2.8.0
 
 1.  Téléchargez et extrayez la source Cordova 2.8.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Documents/Cordova-2.8.0`.
 
@@ -107,12 +125,21 @@ platform add ios`.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
-7.  Mettre à jour les `<plugin>` balises dans votre `config.xml` à `<feature>` balises. Notez que celui qui existe `<plugin>` tags sera encore du travail, mais sont déconseillés. Vous pouvez copier ces informations dans le `config.xml` d'un nouveau projet. Par exemple :
+7.  Mettre à jour les `<plugin>` tags dans le `config.xml` fichier pour `<feature>` balises. Notez que celui qui existe `<plugin>` tags encore travailler, mais sont déconseillés. Vous pouvez copier ces informations dans le `config.xml` fichier pour un nouveau projet. Par exemple :
     
-        <plugins> < nom du plugin = « LocalStorage » value = « CDVLocalStorage » / ><!--autres plugins--> </plugins> <!--changer à: (noter qu'une balise <feature> est au même niveau que <plugins>--> < nom de la fonction = "LocalStorage" >< param name = valeur "ios-package" = "CDVLocalStorage" / >< / fiction ><!--autres balises <feature>-->
+        <plugins>
+            <plugin name="LocalStorage" value="CDVLocalStorage" />
+            <!-- other plugins -->
+        </plugins>
+        
+        <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
+        </feature>
+        <!-- other <feature> tags -->
         
 
-8.  Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
+8.  Supprimer le `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
 9.  Ajouter ces deux cadres à votre projet :
     
@@ -121,9 +148,9 @@ platform add ios`.
 
 10. Mise à jour de cible de votre projet **Paramètres de génération**. Sous **Liaison → autres Linker drapeaux**, edit **"- Obj - C"** pour être **«-ObjC "**.
 
-11. Mise à jour de cible de votre projet **Paramètres de génération**. **Linking → autres drapeaux de Linker**, de changement **«-all_load »** d'être `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . Vous devez seulement faire ceci si vous avez le problème défini dans [ce problème.][1].
+11. Mise à jour de cible de votre projet **Paramètres de génération**. **Linking → autres drapeaux de Linker**, de changement **«-all_load »** d'être `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . Vous devez seulement faire ceci si vous avez le problème défini dans [ce problème.][2].
 
- [1]: https://issues.apache.org/jira/browse/CB-3458
+ [2]: https://issues.apache.org/jira/browse/CB-3458
 
 ## Projets de modernisation 2.6.0 à 2.7.0
 
@@ -139,16 +166,16 @@ platform add ios`.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-2.7.0.js` fichier.
 
-7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][2]).
+7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][3]).
 
-8.  Dans votre `config.xml` fichier, [supprimez cette ligne][3].
+8.  Dans votre `config.xml` fichier, [supprimez cette ligne][4].
 
 9.  Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
- [2]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23
- [3]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc
+ [3]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23
+ [4]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc
 
-## Projets de mise à niveau de version 2.5.0 à 2.6.0
+## Projets de modernisation 2.5.0 à 2.6.0
 
 1.  Téléchargez et extrayez la source Cordova 2.6.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Documents/Cordova-2.6.0`.
 
@@ -162,22 +189,22 @@ platform add ios`.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (ainsi que tous les autres fichiers qui référencent le script) pour désigner le nouveau `cordova-2.6.0.js` fichier.
 
-7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][4]).
+7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][5]).
 
-8.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][5].
+8.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][6].
 
-9.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][6].
+9.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][7].
 
-10. Dans votre `config.xml` dossier, [UIWebViewBounce a été changé en DisallowOverscroll, et les valeurs par défaut sont différents][7].
+10. Dans votre `config.xml` dossier, [UIWebViewBounce a été changé en DisallowOverscroll, et les valeurs par défaut sont différents][8].
 
 11. Dans votre `config.xml` fichier, le `EnableLocation` préférence a été désapprouvée.
 
 12. Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
- [4]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9
- [5]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d
- [6]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f
- [7]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5
+ [5]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9
+ [6]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d
+ [7]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f
+ [8]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5
 
 ## Mise à jour 2.4.0 projets à 2.5.0
 
@@ -193,22 +220,22 @@ platform add ios`.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-2.5.0.js` fichier.
 
-7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][8]).
+7.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][9]).
 
-8.  Dans votre `config.xml` du fichier, [Ajoutez ces lignes nouvelles][9].
+8.  Dans votre `config.xml` du fichier, [Ajoutez ces lignes nouvelles][10].
 
-9.  Dans votre `config.xml` du fichier, [modifiez l'élément racine, changez-le de cordova à widget][10].
+9.  Dans votre `config.xml` du fichier, [modifiez l'élément racine, changez-le de cordova à widget][11].
 
-10. Dans votre `config.xml` déposer, [retirer la préférence OpenAllWhitelistURLsInWebView][11].
+10. Dans votre `config.xml` déposer, [retirer la préférence OpenAllWhitelistURLsInWebView][12].
 
 11. Supprimer votre `cordova` répertoire et copier le `cordova` répertoire du nouveau projet dans le répertoire racine de votre projet. Dans 2.5.0, cela a mis à jour des scripts.
 
 12. Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
- [8]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09
- [9]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb
- [10]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c
- [11]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4
+ [9]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09
+ [10]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb
+ [11]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c
+ [12]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4
 
 ## 2.3.0 Mise à niveau de projets à 2.4.0
 
@@ -224,22 +251,22 @@ platform add ios`.
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-2.4.0.js` fichier.
 
-7.  Mise à jour (ou les remplacer, si vous avez jamais modifié les fichiers) votre `MainViewController.m` fichier en fonction de celui du nouveau projet (voir [cette diff][12]).
+7.  Mise à jour (ou les remplacer, si vous avez jamais modifié les fichiers) votre `MainViewController.m` fichier en fonction de celui du nouveau projet (voir [cette diff][13]).
 
-8.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][13]).
+8.  Mise à jour (ou les remplacer, si vous avez jamais modifié le fichier) votre `AppDelegate.m` fichier en fonction de celui du nouveau projet (voir [cette diff][14]).
 
-9.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][14].
+9.  Dans votre `config.xml` du fichier, [Ajoutez cette ligne nouvelle][15].
 
 10. Supprimer votre `cordova` répertoire et copier le `cordova` répertoire du nouveau projet dans le répertoire racine de votre projet. 2.4.0, Ceci a fixé scripts.
 
 11. Supprimer votre `CordovaLib` répertoire et copier le `CordovaLib` répertoire du nouveau projet dans le répertoire racine de votre projet.
 
-12. Ajouter AssetsLibrary.framework comme une ressource à votre projet. (Allez [ici][15] pour obtenir des instructions sur la façon de le faire.).
+12. Ajouter AssetsLibrary.framework comme une ressource à votre projet. (Voir [documentation d'Apple][16] pour obtenir des instructions sur la façon de le faire.).
 
- [12]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
- [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
- [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
- [15]: https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html
+ [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
+ [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
+ [15]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
+ [16]: https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html
 
 ## 2.2.0 Mise à niveau de projets à 2.3.0
 
@@ -268,7 +295,7 @@ platform add ios`.
         < nom du plugin = « InAppBrowser » value = « CDVInAppBrowser » / >
         
 
-12. Notez que les plugins de l'Objective-C sont *pas* dans la liste blanche plus. À la liste blanche vos connexions avec la liste blanche les app, vous devrez définir le `User-Agent` en-tête de la connexion à l'agent utilisateur même comme le principal Cordova WebView. Vous pouvez obtenir cela en accédant à la `userAgent` propriété hors de la vue-contrôleur principal. La vue-contrôleur principal (CDVViewController) a aussi une `URLisAllowed` méthode vérifier si une URL passera la liste blanche.
+12. Notez que les plugins de l'Objective-C sont *pas* dans la liste blanche plus. À la liste blanche vos connexions avec la liste blanche les app, vous devez définir la `User-Agent` en-tête de la connexion à l'agent utilisateur même comme le principal Cordova WebView. Vous pouvez obtenir cela en accédant à la `userAgent` propriété hors de la vue-contrôleur principal. La vue-contrôleur principal ( `CDVViewController` ) a aussi une `URLisAllowed` méthode vérifier si une URL passe la liste blanche.
 
 13. Modifications de périphérique API :
     
@@ -276,7 +303,7 @@ platform add ios`.
     *   Pour iOS, device.name (maintenant obsolète pour toutes les plates-formes) utilisée pour retourner le nom du périphérique de l'utilisateur (par exemple ' iPhone 5′ de Shazron) ; maintenant, il retourne ce que device.platform permet de retourner : `iPhone` , `iPad` ou`iPod Touch`.
     *   Pour toutes les plateformes, il y a une nouvelle propriété appelée device.model ; Cela retourne le modèle de périphérique spécifique, par exemple `iPad2,5` (pour d'autres plateformes, il retourne ce que device.name permet de retourner).
 
-## Mise à jour 2.1.0 projets à 2.2.0
+## 2.1.0 Mise à niveau de projets à 2.2.0
 
 1.  Téléchargez et extrayez la source Cordova 2.2.0 vers un emplacement de répertoire permanent sur votre disque dur, par exemple à`~/Documents/Cordova-2.2.0`.
 
@@ -302,9 +329,9 @@ platform add ios`.
     2.  Accédez à l'emplacement où vous avez installé Cordova (voir étape 1), dans le `bin` sous-répertoire
     3.  Exécutez le script ci-dessous où le premier paramètre est le chemin de votre projet `.xcodeproj` fichier :
         
-        `update_cordova_subproject chemin/de/votre/projet/xcodeproj`
+        `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**Remarque :** Dans 2.2.0, le `bin/create` script copie dans la `CordovaLib` sous-projet dans votre projet. Pour avoir le même genre d'installation, il suffit de copier dans le droit `CordovaLib` dans votre répertoire de projet, mise à jour le `CordovaLib` sous-projet emplacement (relatives au projet) dans l'inspecteur de fichier Xcode.
+**NOTE**: en 2.2.0, le `bin/create` script copie dans la `CordovaLib` sous-projet dans votre projet. Pour avoir le même genre d'installation, il suffit de copier dans le droit `CordovaLib` dans votre répertoire de projet, mise à jour le `CordovaLib` sous-projet emplacement (relatives au projet) dans l'inspecteur de fichier Xcode.
 
 ## Mise à jour 2.0.0 projets à 2.1.0
 
@@ -343,7 +370,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
         
         `update_cordova_subproject chemin/de/votre/projet/xcodeproj`
 
-## Mise à jour 1.9.0 projets à 2.0.0
+## 1.9.0 Mise à niveau de projets à 2.0.0
 
 1.  Installer Cordova 2.0.0.
 
@@ -399,7 +426,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 22. Sélectionnez l' **icône du projet** dans le projet de navigation, sélectionnez votre projet **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
 
-23. Recherchez **d'Autres indicateurs de l'éditeur de liens**et ajoutez les valeurs **-all_load** et **- Obj-C**.
+23. Recherchez **d'Autres indicateurs de l'éditeur de liens**et ajoutez les valeurs **-force_load** et **- Obj-C**.
 
 24. Développez la `CordovaLib` du sous-projet.
 
@@ -437,7 +464,7 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 36. Cliquez sur le bouton **exécuter** .
 
-**Remarque :** Si votre projet ne fonctionne pas comme prévu dans le simulateur, veuillez prendre note des éventuelles erreurs dans le journal de console dans Xcode pour trouver des indices.
+**Remarque**: Si votre projet ne fonctionne pas comme prévu dans le simulateur, veuillez prendre note des éventuelles erreurs dans le journal de console dans Xcode pour trouver des indices.
 
 ## La mise à niveau de projets 1.8.x à 1.9.0
 
@@ -449,11 +476,11 @@ Avec Cordova 2.1.0, `CordovaLib` a été mis à niveau pour utiliser le **Compta
 
 4.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-1.9.0.js` fichier.
 
-**Remarque :** 1.9.0 prend en charge le nouveau `BackupWebStorage` booléen `Cordova.plist` réglage. Il est activé par défaut, donc mettre à `false` pour le désactiver, surtout sur iOS 6. Voir [Notes de version : Safari et UIKit Section][16]
+**NOTE**: 1.9.0 prend en charge le nouveau `BackupWebStorage` booléen `Cordova.plist` réglage. Il est activé par défaut, donc mettre à `false` pour le désactiver, surtout sur iOS 6. Voir [Notes de version : Safari et UIKit Section][17]
 
- [16]: https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html
+ [17]: https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html
 
-## Mise à jour 1.7.0 projets 1.8.x
+## Mise à jour 1.7.0 Projects to 1.8.x
 
 1.  Installer Cordova 1.8.0.
 
@@ -481,7 +508,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 4.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova-1.7.0.js` fichier.
 
-## Mise à jour 1.5.0 projets 1.6.x
+## 1.5.0 Mise à niveau de projets à 1.6.x
 
 1.  Installer Cordova 1.6.1.
 
@@ -491,7 +518,11 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 4.  Copier ces fichiers dans le nouveau projet dans votre répertoire de projet 1.5.0-based sur le disque, remplaçant les anciens fichiers (sauvegarde de vos fichiers tout d'abord de l'étape 2 ci-dessus) :
     
-        AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        Cordova.plist
         
 
 5.  Ajouter tous les nouveaux `MainViewController` et `AppDelegate` les fichiers dans votre projet Xcode.
@@ -504,7 +535,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 9.  Intégrer des paramètres, **Plugins** et **ExternalHosts** des entrées que vous aviez dans votre **sauvegarde Cordova.plist** dans le nouveau`Cordova.plist`.
 
-10. Intégrer un code spécifique au projet que vous avez dans votre sauvegarde `AppDelegate.h` et `AppDelegate.m` dans les nouveaux fichiers de AppDelegate. Toute `UIWebViewDelegate` ou `CDVCommandDelegate` code de `AppDelegate.m` devra aller en `MainViewController.m` maintenant (voir commentée des sections dans ce fichier).
+10. Intégrer un code spécifique au projet que vous avez dans votre sauvegarde `AppDelegate.h` et `AppDelegate.m` dans le nouveau `AppDelegate` fichiers. Toute `UIWebViewDelegate` ou `CDVCommandDelegate` dans le code `AppDelegate.m` a besoin d'aller en `MainViewController.m` maintenant (voir sections commentées dans ce fichier).
 
 11. Intégrer un code spécifique au projet que vous avez dans votre sauvegarde `MainViewController.h` et `MainViewController.m` dans les nouveaux fichiers de MainViewController.
 
@@ -552,7 +583,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 18. Dans votre `AppDelegate.h` , `AppDelegate.m` , et `MainViewController.h` fichiers, remplacer l'ensemble `#ifdef PHONEGAP_FRAMEWORK` bloquer avec :
     
-        #import "CDVDeprecated.h"
+        #import « CDVDeprecated.h »
         
 
 19. Cliquez sur l' **icône du projet** dans le projet de navigation, sélectionnez votre **cible**, puis sélectionnez l'onglet **Paramètres de génération** .
@@ -583,9 +614,9 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 32. Entrez **PG** de la chaîne Find et **CDV** pour la chaîne de remplacement, puis appuyez sur le bouton **Remplacer tout** .
 
-33. Appuyez sur **Commande + B** pour construire, vous aurez toujours des désapprobations qui vous pouvez vous débarrasser de l'avenir (voir `CDVDeprecated.h` . Par exemple, les classes de remplacer dans votre code qui utilisent au CDV * PG *).
+33. Appuyez sur **Commande + B** pour construire. Vous avez encore des désapprobations qui vous pouvez vous débarrasser de l'avenir (voir `CDVDeprecated.h` . Par exemple, les classes de remplacer dans votre code qui utilisent au CDV * PG *).
 
-## Mise à jour 1.4.0 projets à 1.4.1
+## 1.4.0 Mise à niveau de projets à 1.4.1
 
 1.  Installer Cordova 1.4.1.
 
@@ -647,7 +678,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 9.  Intégrer un code spécifique au projet que vous avez dans votre sauvegarde `AppDelegate.h` et `AppDelegate.m` dans les nouveaux fichiers de AppDelegate.
 
-## Mise à jour 1.1.0 projets 1.2.0
+## Mise à jour 1.1.0 Projects to 1.2.0
 
 1.  Installer Cordova 1.2.0.
 
@@ -693,7 +724,7 @@ Si vous avez l'intention à l'aide de l'API de Capture, vous devez les nouveaux 
 
 9.  Intégrer un code spécifique au projet que vous avez dans votre sauvegarde `AppDelegate.h` et `AppDelegate.m` dans les nouveaux fichiers de AppDelegate.
 
-## Projets de modernisation 0.9.6 à 1.0.0
+## 0.9.6 Mise à niveau de projets à 1.0.0
 
 1.  Installer Cordova 1.0.0.
 
