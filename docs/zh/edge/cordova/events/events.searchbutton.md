@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # searchbutton
 
-当用户在Android 上点击搜索按钮时，将触发该事件。
+當使用者按 Android 上的搜尋按鈕時，將觸發該事件。
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-如果您在 android 系统上需要重写默认的搜索按钮特性，您可以为 'searchbutton' 事件注册一个事件侦听器。
+如果您需要重寫預設的搜尋按鈕行為在 android 系統上您可以註冊為 'searchbutton' 事件一個事件攔截器。
 
-一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   Android
+*   Android 系統
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
     
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
