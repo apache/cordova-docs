@@ -20,9 +20,11 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+
 ## Windows 8
 
-Windows 8-Befehlszeilen-Tools unterstützen nur das Erstellen neuer Projekte. Befehle müssen über eine Cmd oder Powershell-Eingabeaufforderung ausgeführt werden.
+Die Windows 8-Befehlszeilentools unterstützen nur das Erstellen neuer Projekte. Befehle müssen über eine Cmd oder Powershell-Eingabeaufforderung ausgeführt werden.
 
 ## Erstellen Sie ein Projekt
 

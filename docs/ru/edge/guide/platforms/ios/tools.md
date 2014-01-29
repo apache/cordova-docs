@@ -22,6 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Средства командной строки iOS строятся на скрипты shell и полагаться на Xcode инструментов командной строки, таких как `xcode-select` и`xcodebuild`.
 
+Сведения о низкоуровневый интерфейс командной строки, который позволяет плагины см с помощью Plugman для управления плагинами. Смотрите приложение плагины обзор.
+
 ## Создание проекта
 
 Запустите `create` команду, указав существующий путь к проекту, реверс домен стиль пакет идентификатор и отображаемое имя приложения.
@@ -34,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     $ /path/to/my_new_project/cordova/build
     
 
-## Запуск приложения в эмуляторе
+## Запустить приложение на эмуляторе
 
     $ /path/to/my_new_project/cordova/run
     

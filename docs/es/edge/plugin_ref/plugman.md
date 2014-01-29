@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Utilizando Plugman para administrar Plugins
+# L'utilisation de Plugman pour gérer les Plugins
 
 Desde la versión 3.0 adelante, Cordova implementa todas las APIs del dispositivo como plugins y les deja desactivado por defecto. También soporta dos formas diferentes para agregar y quitar plugins. La primera es mediante el uso de la `cordova` descrita en la interfaz de línea de comandos CLI. La segunda es usando una línea de comandos [Plugman][1] de bajo nivel (Flujo de trabajo "Plataforma nativa de desarrollo".) La diferencia principal entre estas dos maneras de desarrollo es que Plugman sólo puede añadir plugins a una plataforma a la vez, mientra que CLI añadirá los plugins a todas las plataformas para las cuales estés desarrollando. Por esto, tiene más sentido usar Plugman cuando te encuentras trabajando estrechamente con el flujo de trabajo "Plataforma nativa de desarrollo".
 

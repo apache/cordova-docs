@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Íconos y Splash Screens
+        Iconos y pantallas de Splash
       </h2>
       
       <span>Personaliza las ímagenes que son mostradas por tu aplicación.</span>

@@ -18,12 +18,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `EnableViewportScale`(ブール値、既定値は `false` ): に設定されている `true` viewport メタ タグを使用して無効にするかユーザーのスケーリングの範囲を制限します。
+*   `EnableViewportScale`(ブール値、既定値は `false` ): に設定されている `true` が既定で有効になっているビューポート メタ タグを無効にするかユーザーがスケーリングの範囲を制限できるようにします。
     
         <preference name="EnableViewportScale" value="true"/>
         
+    
+    次のように、ビューポートのスケーリングを無効にしてフィットする HTML レンダリング WebView 内柔軟にコンテンツ。
+    
+        < メタ名 = 'ビューポート' コンテンツ =' 幅初期スケール デバイス幅を = = 1、ユーザー スケーラブル = no'/>
+        
 
-*   `MediaPlaybackRequiresUserAction`(ブール値、既定値は `false` ): に設定されている `true` を HTML5 の動画を自動的に遊ぶことから防ぐために、 `autoplay` 属性。 呼び出すときに適用されません `play()` ビデオ オブジェクト。
+*   `MediaPlaybackRequiresUserAction`(ブール値、既定値は `false` ): に設定されている `true` を HTML5 ビデオまたはオーディオが自動的に遊ぶを防ぐために、 `autoplay` 属性または JavaScript を介して。
     
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
         
@@ -43,21 +48,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `FadeSplashScreen`(ブール値、既定値は `true` ): に設定されている `false` をフェードイン、フェードアウトその表示状態が変更されたとき、スプラッシュ画面を防ぐために。
-    
-        <preference name="FadeSplashScreen" value="false"/>
-        
-
-*   `FadeSplashScreenDuration`(float、既定値は `2` ): スプラッシュ スクリーンの秒数のフェードを実行する効果を指定します。
-    
-        <preference name="FadeSplashScreenDuration" value="4"/>
-        
-
-*   `ShowSplashScreenSpinner`(ブール値、既定値は `true` ): に設定されている `false` 、スプラッシュ スクリーンのスピン ボタンを非表示にします。
-    
-        <preference name="ShowSplashScreenSpinner" value="false"/>
-        
-
 *   `KeyboardDisplayRequiresUserAction`(ブール値、既定値は `true` ): に設定されている `false` を呼び出すときに表示されるキーボードを許可する `focus()` フォーム入力に。
     
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
@@ -68,26 +58,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="SuppressesIncrementalRendering" value="true"/>
         
 
-*   `KeyboardShrinksView`(ブール値、既定値は `false` ): に設定されている `true` 、キーボードが表示されたら、ビューポートを垂直方向に縮小デフォルト beavior をオーバーライドする、webview を縮小します。 これは、Android アプリのためのデフォルトの動作と一致します。
-    
-        <preference name="KeyboardShrinksView" value="true"/>
-        
-
 *   `GapBetweenPages`(float、既定値は `` ): ページ間のポイントのギャップのサイズ。
     
-        < 設定名"GapBetweenPages"の値を = =「0」/>
+        <preference name="GapBetweenPages" value="0"/>
         
 
 *   `PageLength`(float、既定値は `` ): ページ フローの方向にポイント単位で指定する各ページのサイズ。 とき PaginationMode が右左からまたは左から右に、このプロパティは、各ページの幅を表します。 PaginationMode は、topToBottom または bottomToTop が、このプロパティの各ページの高さを表します。 既定値は 0、レイアウト ビューポートのサイズを使用して、ページの寸法を決定することを意味します。
     
-        < 設定名「か」値を = =「0」/>
+        <preference name="PageLength" value="0"/>
         
 
 *   `PaginationBreakingMode`(文字列、既定値は `page` ): 有効な値は `page` と `column` 。列またはページ分割が発生する方法です。 このプロパティは、特定の CSS プロパティの列とページ分割に関するを表彰するか無視するかどうかを決定します。 このプロパティ設定すると `column` 、コンテンツはページ区切りの場所で列区切りに関連した CSS プロパティを尊重します。
     
-        < 設定名"PaginationBreakingMode"の値を = ="page"/>
+        <preference name="PaginationBreakingMode" value="page"/>
         
 
 *   `PaginationMode`(文字列、既定値は `unpaginated` ): 有効な値は `unpaginated` 、 `leftToRight` 、 `topToBottom` 、 `bottomToTop` 、および `rightToLeft` 。 このプロパティは、web ビューのコンテンツは、時に、ビューの 1 つの画面を埋めるページに分割または 1 つの長いスクロール ビューとして表示されるかどうかを決定します。 場合は改ページ調整のフォームは、このプロパティに設定するとそのコンテンツを再配置するか、GapBetweenPages の値を使用する web ビューを引き起こすコンテンツの改ページ調整レイアウトを切り替えます。
     
-        < 設定名"PaginationMode"の値を = =「改」/>
+        <preference name="PaginationMode" value="unpaginated"/>
+        
+
+*   `UIWebViewDecelerationSpeed`(文字列、既定値は `normal` ): 有効な値は `normal` 、 `fast` 。 このプロパティは勢いのスクロールの減速速度を制御します。 `normal`ほとんどのネイティブ アプリの場合、既定の速度は、 `fast` モバイル Safari の既定値です。
+    
+        <preference name="UIWebViewDecelerationSpeed" value="fast" />

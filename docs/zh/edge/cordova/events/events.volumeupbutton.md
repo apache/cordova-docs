@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # volumeupbutton
 
-当用户按下放大音量键时，将触发该事件。
+當使用者按下了按鈕卷時，將觸發該事件。
 
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-如果您需要重写默认音量放大的特性时，你可以为 `volumeupbutton` 事件注册一个侦听器。
+如果您需要重寫預設卷起來的行為你可以註冊為事件攔截器 `volumeupbutton` 事件。
 
-一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
 *   黑莓 10
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
     
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
