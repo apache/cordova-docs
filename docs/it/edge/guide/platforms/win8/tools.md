@@ -20,6 +20,8 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
  [1]: http://cordova.apache.org
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per una panoramica, vedere applicazione plugin.
+
 ## Windows 8
 
 Gli strumenti della riga di comando di Windows 8 supportano solo la creazione di nuovi progetti. Comandi devono essere eseguiti da un prompt cmd o powershell.

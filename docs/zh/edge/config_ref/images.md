@@ -45,10 +45,14 @@ Windows Phone 指定預設 48 圖元的圖示，以及各種設備背景平鋪�
         windows-phone/icon-173-tile.png
     
 
-黑莓手機需要 80 圖元的圖示：
+黑莓 10 需要在 config.xml 中的圖示元素：
 
-        blackberry/icon-80.png
+        <icon src="blackberry10/icon-86.png" />
     
+
+多個大小和地區設定，請參閱 tareting 黑莓的文檔。
+
+[] HTTP://developer.blackberry.com/html5/documentation/icon_element.html
 
 Tizen 需要 128 圖元的圖示：
 
@@ -71,7 +75,7 @@ Android 系統指定這兩個面向肖像和風景閃屏圖像為低、 中、 �
         android/screen-xhdpi-portrait.png
     
 
-IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯示和不同的方向。*568 H*檔是為 iPhone 5 的高螢幕自訂：
+IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯示和不同的方向。*568 H*檔適用于 iPhone 5 的高螢幕：
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,38 +88,69 @@ IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯
         ios/screen-iphone-portrait-568h-2x.png
     
 
-黑莓和 Windows Phone 都指定一個初始螢幕圖像：
+Windows Phone 指定單個初始螢幕圖像：
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
     
 
 以下各節詳細說明了如何設置初始螢幕時使用 Sdk 和相關的命令列工具在平臺指南仲介紹。
 
+別忘了在嘗試使用之前安裝的閃屏外掛程式 `navigator.splashscreen.hide()` 或 `navigator.splashscreen.show()` 方法。
+
 ## Android 平臺的初始螢幕
 
-[9-修補程式的圖像][1]檔放在 Android 專案 `res/drawable` 目錄。為每個大小應為：
+[9-修補程式的圖像][1]檔放在 Android 專案 `platforms/android/res/drawable*` 目錄。
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
+
+為每個大小應為：
 
 *   xlarge (xhDPI)： 至少 960 × 720
 *   大 (下)： 至少 640 × 480
 *   中期 (mDPI)： 至少 470 × 320
 *   小 (lDPI)： 至少 426 × 320
 
-在 `config.xml` ，添加下列優惠：
+如果您想要使用在科爾多瓦中提供的預設初始螢幕圖像，您需要將 png 檔從複製 `platforms/android/www/res/screen/android` 到 `platforms/android/res/drawable*/` ：
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+    cd platforms/android/res
+    mkdir drawable-port-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+    mkdir drawable-land-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+    mkdir drawable-port-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+    mkdir drawable-land-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+    mkdir drawable-port-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+    mkdir drawable-land-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+    mkdir drawable-port-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+    mkdir drawable-land-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
     
 
-第一行設置為初始螢幕顯示的圖像。如果你命名您的圖像什麼除了 `splash.png` ，您需要修改這條線。
+`drawable`目錄名稱必須遵循支援[的螢幕大小][2]和[備用資源][3]的 Android 約定.
 
-第二行設置多久閃屏顯示以毫秒為單位的延遲。 遣散閃屏，一旦接收到 app `deviceready` 事件，調用 `navigator.splashscreen.hide()` 方法。
+ [2]: http://developer.android.com/guide/practices/screens_support.html
+ [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+在 `config.xml` ，添加下列優惠：
+
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
+    
+
+第一行設置為初始螢幕顯示的圖像。 這是在 png 檔的檔案名 `drawable*` 目錄。 如果你命名圖像什麼除了 `splash.png` ，您需要修改這條線。 不包括檔副檔名 （即 `.png` ）。 如果您想要使用提供科爾多瓦按上面列出的預設初始螢幕，使用值`screen`.
+
+第二行設置預設延遲多久閃屏顯示以毫秒為單位。這應該是最大的預期的開始時間。SplashScreenDelay 的預設值是 3000 毫秒。
+
+最後，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您的主視圖是可見。 因為應用程式開始時間將由多個因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JAVAscript 方法 `deviceready` 事件。 否則，初始螢幕將可見該你上述配置的 SplashScreenDelay 值。 與具有可見的總是固定工期的初始螢幕高度建議使用此事件驅動方法。
 
 ## IOS 平臺的初始螢幕
 
-將您的初始螢幕圖像複製到 iOS 專案 `Resources/splash` 目錄。 僅添加您想要支援的比如 iPad 或者 iPhone 的設備圖像。 每個圖像的大小應為：
+將初始螢幕圖像拷貝到 iOS 專案 `Resources/splash` 目錄。 只添加那些您想要支援的比如 iPad 或者 iPhone 的設備的圖像。 每個圖像的大小應為：
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 圖元為單位）
@@ -127,8 +162,8 @@ IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯
 
 ## 10 黑莓平臺的初始螢幕
 
-將您的初始螢幕圖像複製到專案的 `res/screen/blackberry10` 目錄。檔的名稱應該是：
+將 rim： 初始元素添加到 config.xml 每項決議和您希望支援的地區設定：
 
-*   splash-1280x768.png (1280x768 pixels)
-*   splash-720x720.png (720x720 pixels)
-*   splash-768x1280.png (768x1280 pixels)
+[HTTP://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
+
+ [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html

@@ -23,69 +23,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   deviceready
 *   Anhalten
 *   Lebenslauf
-*   Online
-*   Offline
-*   BackButton
-*   batterycritical
-*   batterylow
-*   batterystatus
+*   backbutton
 *   menubutton
-*   SearchButton
+*   searchbutton
 *   startcallbutton
 *   endcallbutton
 *   volumedownbutton
 *   volumeupbutton
 
-## Zugriff auf die Funktion
+## Ereignisse, die von den [org.apache.cordova.battery-Status][1] hinzugefügt
 
-Ab Version 3.0, Cordova implementiert Batteriestatus und andere Geräteebene APIs als *Plugins*. Zugriff auf alle anderen Ereignisse, die nicht im Zusammenhang mit Batterie-Status sind standardmäßig aktiviert. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, aktivieren oder Deaktivieren von Batterie-Veranstaltungen:
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
 
-        $ cordova plugin add org.apache.cordova.battery-status
-        $ cordova plugin ls
-        [ 'org.apache.cordova.battery-status' ]
-        $ cordova plugin rm org.apache.cordova.battery-status
-    
+*   batterycritical
+*   batterylow
+*   batterystatus
 
-Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
+## Ereignisse, die von den [org.apache.cordova.network-Informationen][2] hinzugefügt
 
-*   Android
-    
-        (in app/res/xml/config.xml)
-        <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
-        </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-        
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
 
-*   BlackBerry WebWorks
-    
-        (in www/plugins.xml)
-        <feature name="Battery">
-            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
-        </feature>
-        
-        (in www/config.xml)
-        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
-        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
-        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
-        
-
-*   iOS (in`config.xml`)
-    
-        <feature name="Battery">
-            <param name="ios-package" value="CDVBattery" />
-        </feature>
-        
-
-*   Tizen (in`config.xml`)
-    
-        <feature name="http://tizen.org/api/systeminfo" required="true"/>
-        
-    
-    Bezug: [Anwendungsmanifest für Tizen Webanwendung][1]
-
- [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
-
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+*   online
+*   offline

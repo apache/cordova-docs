@@ -22,6 +22,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 下面列出每個*平臺指南*告訴您您需要知道要設置的每個平臺的開發環境： 在何處獲取 SDK、 如何設置設備模擬程式、 如何連接設備進行直接測試和如何管理簽署的關鍵要求。 附加指南提供了每個平臺特有的配置選項，說明添加外掛程式，資訊如何升級每個平臺，以及特定于平臺的命令列工具，作為一個較低級別的替代 `cordova` 命令列實用程式。
 
+## 亞馬遜火 OS
+
+*   亞馬遜火 OS 平臺指南
+*   亞馬遜火 OS 配置
+*   亞馬遜火 OS WebViews
+*   亞馬遜火 OS 外掛程式
+
 ## Android 系統
 
 *   Android 平臺指南
@@ -31,19 +38,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Android 系統的命令列工具
 *   升級 Android
 
-## 黑莓手機
-
-*   黑莓平臺指南
-*   黑莓手機配置
-*   黑莓手機的命令列工具
-*   升級黑莓手機
-
 ## 黑莓 10
 
 *   10 黑莓平臺指南
 *   黑莓 10 配置
 *   黑莓 10 外掛程式
 *   黑莓 10 命令列工具
+*   升級黑莓 10
 
 ## iOS
 
@@ -53,6 +54,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   iOS 外掛程式
 *   iOS 命令列工具
 *   升級 iOS
+
+## Ubuntu
+
+*   Ubuntu 平臺指南
 
 ## Windows Phone
 

@@ -112,24 +112,33 @@ Para desplegar en el dispositivo:
 
 ## Problemas comunes
 
-**Deprecation avisos:** Cuando una aplicación de interfaz de programación (API) es cambiado o reemplazado por otro API, es marcado como *obsoleto*. La API todavía funciona en el corto plazo, pero eventualmente se retira. Algunas de estas interfaces obsoletas se reflejan en Apache Cordova y Xcode emite advertencias sobre ellos cuando construir y desplegar una aplicación.
+**Descarte las advertencias**: cuando una aplicación es modificada o sustituida por otra API interfaz de programación (API), que está marcado como *obsoleto*. La API todavía funciona en el corto plazo, pero eventualmente se retira. Algunas de estas interfaces obsoletas se reflejan en Apache Cordova y Xcode emite advertencias sobre ellos cuando construir y desplegar una aplicación.
 
 Xcode de la advertencia sobre el `invokeString` método refiere a una funcionalidad que lanza una app desde una dirección URL personalizada. Mientras que el mecanismo para cargar desde una dirección URL personalizada ha cambiado, este código todavía está presente para proporcionar la funcionalidad al revés para aplicaciones creadas con versiones anteriores de Córdoba. La aplicación muestra no utiliza esta funcionalidad, así que estas advertencias pueden ser ignoradas. Para evitar que aparezcan estas advertencias, quitar el código que hace referencia a la invokeString obsoleta API:
 
 *   Edite el archivo *Classes/MainViewController.m* , rodean el siguiente bloque de código con `/*` y `*/` comentarios como se muestra a continuación, escriba el **comando + s** para guardar el archivo:
     
-        theWebView:(UIWebView*) webViewDidFinishLoad (void) {/ / sólo son válidas si ___PROJECTNAME__-Info.plist especifica un protocolo para manejar / * si (self.invokeString) {/ / se pasa antes de que se desencadena el evento deviceready, así que se puede acceder en js cuando Recibes deviceready NSLog (@"DEPRECATED: window.invokeString - utilice la función window.handleOpenURL(url), que siempre se llama cuando la aplicación se ejecuta a través de una url de esquema personalizado.");
-          NSString * jsString = [NSString stringWithFormat:@"var invokeString = \" % @\ ";", self.invokeString];
+        (void)webViewDidFinishLoad:(UIWebView*)theWebView
+        {
+        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+        /*
+        if (self.invokeString) {
+          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
+          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+          NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
-        } * / / / Base color negro para fondo coincide con las aplicaciones nativas theWebView.backgroundColor = [UIColor blackColor];
+        }
+        */
+        // Black base color for background matches the native apps
+        theWebView.backgroundColor = [UIColor blackColor];
         
-        retorno [super webViewDidFinishLoad: theWebView];
+        return [super webViewDidFinishLoad:theWebView];
         }
         
 
 *   Edite el archivo *Classes/AppViewDelegate.m* , comentar la siguiente línea insertando una doble barra como se muestra abajo, a continuación, escriba el **comando + s** para guardar el archivo:
     
-        //Self.viewController.invokeString = invokeString;
+        //self.viewController.invokeString = invokeString;
         
 
 *   Pulse **comando + b** para reconstruir el proyecto y eliminar las advertencias.

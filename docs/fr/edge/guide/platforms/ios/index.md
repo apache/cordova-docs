@@ -112,7 +112,7 @@ Pour déployer sur le périphérique :
 
 ## Problèmes courants
 
-**Avertissements de désapprobation :** Lorsqu'une application interface de programmation (API) est modifiée ou remplacée par une autre API, il est marqué comme *obsolète*. L'API fonctionne à court terme, mais est finalement supprimé. Certaines de ces interfaces déconseillées sont consignées dans Apache Cordova et Xcode émet des avertissements à leur sujet lorsque vous générez et déployez une application.
+**Avertissements de désapprobation**: lorsqu'une application interface de programmation (API) est modifiée ou remplacée par une autre API, il est marqué comme *obsolète*. L'API fonctionne à court terme, mais est finalement supprimé. Certaines de ces interfaces déconseillées sont consignées dans Apache Cordova et Xcode émet des avertissements à leur sujet lorsque vous générez et déployez une application.
 
 Xcode de mise en garde concernant la `invokeString` méthode concerne une fonctionnalité qui lance une application à partir d'une URL personnalisée. Alors que le mécanisme à charger à partir d'une URL personnalisée a changé, ce code est toujours présent pour fournir des fonctionnalités en arrière pour les applications créées avec des versions plus anciennes de Cordova. L'exemple d'application n'utilise pas cette fonctionnalité, donc ces avertissements peuvent être ignorés. Pour éviter ces avertissements d'apparaître, supprimez le code qui fait référence à l'obsolète invokeString API :
 

@@ -20,9 +20,11 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
-Wenn Sie Hilfe mit jeder nachfolgenden Befehl benötigen, geben Sie den Befehl zusammen mit der `-h` oder `-help` Argumente, die unterstützt werden, indem alle Befehle und die Beschreibungen für die einzelnen verfügbaren Argumente liefern.
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
 
-## Erstellen
+Wenn Sie Hilfe mit jeder nachfolgenden Befehl benötigen, geben Sie den Befehl zusammen mit der `-h` oder `-help` Argumenten, die unterstützt werden, indem alle Befehle und die Beschreibungen für die einzelnen Argumente zur Verfügung.
+
+## Erstellen Sie eine App
 
 Der `create` Befehl erstellt ein neues Projekt:
 
@@ -37,9 +39,9 @@ wo
 
 *   `<project-name>`Gibt den Anzeigenamen apps
 
-**Hinweis:** die `create` Befehl Bootstrap Abhängigkeit Installation über den `npm install` Befehl. Je nach der Installation Directory und System Berechtigungen kann das Administratorrechte erforderlich. Wenn auf OSX/Linux Problem vorhanden ist, führen Sie `sudo npm install` vor der Verwendung der `create` Befehl. Führen Sie unter Windows `npm install` eröffnet ein Befehlszeilen-Dienstprogramm mit Administratorrechten.
+**Hinweis**: die `create` Befehl Bootstrap Abhängigkeit Installation über den `npm install` Befehl. Je nach der Installation Directory und System Berechtigungen kann das Administratorrechte erforderlich. Wenn auf OSX/Linux Problem vorhanden ist, führen Sie `sudo npm install` vor der Verwendung der `create` Befehl. Führen Sie unter Windows `npm install` eröffnet ein Befehlszeilen-Dienstprogramm mit Administratorrechten.
 
-## Ziel
+## Ein Ziel erstellen
 
 Die `target` mit dem Befehl können Sie verwalten den Emulator oder BlackBerry-Geräte, mit denen Sie Ihre Anwendung testen. Sie können hinzufügen oder entfernen ein Ziel oder ein Ziel gesetzt, als Standardziel.
 
@@ -56,7 +58,7 @@ wo
 
 *   `-p | --password <password>`Gibt das Kennwort für das Gerät oder den Emulator. Dies ist erforderlich, nur, wenn das Gerät oder den Emulator kennwortgeschützt ist.
 
-*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-Gerät, das dieses Gerät als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur, wenn Sie ein Debug-Token erstellen.
+*   `--pin <device-pin>`Gibt die PIN für das BlackBerry-Gerät, das dieses Gerät als gültige Host für die Debug-Token identifiziert. Dieses Argument ist erforderlich, nur wenn ein Debug-Token zu erstellen.
 
 ### Entfernen Sie ein Ziel
 
@@ -68,11 +70,11 @@ wo
     < Path-Projekt >/Cordova/target Standard <name>
     
 
-## Build
+## Die App zu bauen
 
 Der `build` Befehl erstellt das Projekt als ...verlegt Datei. Sie können Ihre app in beiden Release-Modus (der eine signierte ...verlegt Datei erzeugt) oder im Debug-Modus (der eine vorzeichenlose ...verlegt Datei erzeugt) erstellen.
 
-### Erstellen Sie das Projekt im Release-Modus
+### Bauen Sie die App im Release-Modus
 
     < Path-Projekt >/Cordova/Release build [-k |--Keystorepass <password>] [-b |--BuildId <number>] [-p |--Params < Params-JSON-Datei >]
     
@@ -100,41 +102,37 @@ wo
 
 *   `-ll | --loglevel <level>`Gibt die Protokollebene. Die Protokollebene möglicherweise einer der `error` , `warn` , oder`verbose`.
 
-Wenn Sie zuvor definiert als Standardziel (und zuvor installiert haben ein Debug-Token, wenn das Ziel ein BlackBerry-Gerät ist), führen Sie das Skript ohne Argumente und das Skript wird Ihre app-Paket und auf das Standardziel bereitstellen. Zum Beispiel:
+Wenn Sie zuvor definiert als Standardziel (und zuvor installiert haben ein Debug-Token, wenn das Ziel ein BlackBerry-Gerät ist), Sie können das Skript ausführen mit keine Argumente und die Skript-Pakete Ihre app und gibt dieses an das Standardziel. Zum Beispiel:
 
     < Path-Projekt >/Cordova/build debug
     
 
-## Ausführen
+## Führen Sie die Anwendung
 
-Der `run` Befehl stellt die app auf dem BlackBerry-Gerät oder einen Emulator. Bevor Sie Ihre Anwendung bereitstellen, müssen Sie zunächst ein Ziel für das Gerät oder den Emulator Ihre Anwendung bereitgestellt, mit dem Ziel-Skript soll erstellen. Das Bereitstellen-Skript wird das letzte Build Ihrer Anwendung bereitstellen.
+Der `run` Befehl stellt die app letzten Builds auf dem BlackBerry-Gerät oder einen Emulator. Wenn Ihre Anwendung bereitstellen möchten, müssen Sie ein Ziel für das Gerät oder den Emulator angeben:
 
     < Path-Projekt >/Cordova/run <target>
     
 
-wo
+... wo `<target>` gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein Gerät, dann muss es an Ihren Computer über USB-Kabel, oder aber über das gleiche Wi-Fi-Netzwerk wie Ihr Computer angeschlossen sein.
 
-*   `<target>`Gibt den Namen eines zuvor hinzugefügten Ziels. Wenn `<target>` ist ein Gerät, dann das Gerät vom USB-Anschluss an den Computer angeschlossen werden oder mit dem gleichen Wi-Fi-Netzwerk wie Ihr Computer angeschlossen werden.
+## Handle-Plugins
 
-## Plugin
-
-Der `target` Befehl können Sie hinzufügen und Entfernen von Plugins
-
-### Eine lokal gehostete Plugin zu holen
+Der `target` Befehl können Sie hinzufügen und Entfernen von Plugins. Eine lokal gehostete Plugin abzurufen:
 
     < Path-Projekt >/Cordova/Plugin Fetch < Pfad-zu-Plugin >
     
 
-### Anzeigen einer Liste der installierten plugins
+Anzeigen einer Liste der installierten Plugins:
 
     < Path-Projekt >/Cordova/Plugin ls
     
 
-### Eine Plugin hinzufügen
+Fügen Sie eine Plugin:
 
     < Path-Projekt >/Cordova/Plugin hinzufügen <name>
     
 
-### Eine Plugin zu entfernen
+Eine Plugin zu entfernen:
 
     < Path-Projekt >/Cordova/Plugin Rm <name>

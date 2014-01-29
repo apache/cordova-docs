@@ -22,6 +22,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 아래에 나열 된 각 *플랫폼 가이드* 각 플랫폼의 개발 환경을 설정 하려면 알아야 하는 무엇을 당신에 게 말한다: 어디에 SDK를 얻기 위해, 장치 에뮬레이터를 설치 하는 방법, 직접 테스트를 위한 장치를 연결 하는 방법 및 서명 키 요구 사항을 관리 하는 방법. 구성 옵션, 플러그인, 추가 지침의 각 플랫폼의 유일한 세트에 정보를 제공 하는 추가 가이드 각 플랫폼과 플랫폼 특정 명령줄 도구 하위 수준의 대안을 제공 하는 업그레이드 하는 방법에 `cordova` 명령줄 유틸리티.
 
+## 아마존 화재 운영 체제
+
+*   아마존 화재 OS 플랫폼 가이드
+*   아마존 화재 운영 체제 구성
+*   아마존 화재 OS WebViews
+*   아마존 화재 OS 플러그인
+
 ## 안 드 로이드
 
 *   안 드 로이드 플랫폼 가이드
@@ -31,19 +38,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   안 드 로이드 명령줄 도구
 *   안 드 로이드 업그레이드
 
-## 블랙베리
-
-*   블랙베리 플랫폼 가이드
-*   블랙베리 구성
-*   블랙베리 명령줄 도구
-*   블랙베리 업그레이드
-
 ## 블랙베리 10
 
 *   블랙베리 10 플랫폼 가이드
 *   블랙베리 10 구성
 *   블랙베리 10 플러그인
 *   블랙베리 10 명령줄 도구
+*   블랙베리 10 업그레이드
 
 ## iOS
 
@@ -53,6 +54,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   iOS 플러그인
 *   iOS 명령줄 도구
 *   IOS 업그레이드
+
+## 우분투
+
+*   우분투 플랫폼 가이드
 
 ## Windows Phone
 

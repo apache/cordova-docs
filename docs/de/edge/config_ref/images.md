@@ -45,10 +45,14 @@ Windows Phone gibt ein Standardsymbol 48 Pixel, zusammen mit verschiedenen Gerä
         windows-phone/icon-173-tile.png
     
 
-BlackBerry erfordert ein 80-Pixel-Symbol:
+BlackBerry 10 erfordert eine Icon-Element in config.xml:
 
-        blackberry/icon-80.png
+        <icon src="blackberry10/icon-86.png" />
     
+
+Finden Sie BlackBerry Dokumentation Tareting, mehrere Größen und Gebietsschemas.
+
+[http://developer.blackberry.com/html5/documentation/icon_element.html]
 
 Tizen erfordert ein 128 Pixeln-Symbol:
 
@@ -71,7 +75,7 @@ Android gibt sowohl Hochformat und Querformat Splash-Bildschirm-Images für nied
         android/screen-xhdpi-portrait.png
     
 
-Die iOS-Plattform gibt Varianten für iPhone/iPod und iPad, mit Varianten für Retina-Displays und verschiedenen Ausrichtungen. Die *568 h* -Datei ist für das iPhone 5 größer Bildschirm angepasst:
+Die iOS-Plattform gibt Varianten für iPhone/iPod und iPad, mit Varianten für Retina-Displays und verschiedenen Ausrichtungen. Die *568 h* -Datei gilt für das iPhone 5 größer Bildschirm:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,38 +88,69 @@ Die iOS-Plattform gibt Varianten für iPhone/iPod und iPad, mit Varianten für R
         ios/screen-iphone-portrait-568h-2x.png
     
 
-BlackBerry und Windows Phone geben Sie ein einzelnes Splash-Bildschirm-Image:
+Windows Phone gibt ein einzelnes Splash-Bildschirm-Image:
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
     
 
 In den folgenden Abschnitten ausführlich auf Splash-Screens einrichten, beim Arbeiten mit SDKs und verwandte Befehlszeilentools in Plattform Leitfäden beschrieben.
 
+Vergessen Sie nicht, das SplashScreen-Plugin zu installieren, bevor Sie versuchen, verwenden Sie die `navigator.splashscreen.hide()` oder `navigator.splashscreen.show()` Methoden.
+
 ## Splash-Screens für die Android-Plattform
 
-Platz [9-Patch][1] Bilddateien im Android-Projekt `res/drawable` Verzeichnis. Für jeden sollte sein:
+Platz [9-Patch][1] Bilddateien im Android-Projekt `platforms/android/res/drawable*` Verzeichnisse.
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
+
+Für jeden sollte sein:
 
 *   XLarge (Xhdpi): mindestens 960 × 720
 *   große (Hdpi): mindestens 640 × 480
 *   Medium (Mdpi): mindestens 470 × 320
 *   klein (Ldpi): mindestens 426 × 320
 
-In `config.xml` , fügen Sie die folgenden Einstellungen:
+Wenn Sie Standard-Splash-Bildschirm-Images bereitgestellt in Cordova verwenden möchten, müssen Sie kopieren die PNG‑Dateien von `platforms/android/www/res/screen/android` zu `platforms/android/res/drawable*/` :
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+    cd platforms/android/res
+    mkdir drawable-port-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
+    mkdir drawable-land-ldpi
+    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
+    mkdir drawable-port-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
+    mkdir drawable-land-mdpi
+    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
+    mkdir drawable-port-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
+    mkdir drawable-land-hdpi
+    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
+    mkdir drawable-port-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
+    mkdir drawable-land-xhdpi
+    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
     
 
-Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Wenn Sie Ihr Bild alles andere als nennen, `splash.png` , müssen Sie diese Zeile ändern.
+Die `drawable` Verzeichnisnamen müssen folgen den Android Konventionen zur Unterstützung der [Bildschirmgrößen][2] und [Alternative Ressourcen][3].
 
-Der zweiten Zeile wird die Verzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Um den Begrüßungsbildschirm zu entlassen, sobald die app erhält der `deviceready` Veranstaltung, Aufruf der `navigator.splashscreen.hide()` Methode.
+ [2]: http://developer.android.com/guide/practices/screens_support.html
+ [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+In `config.xml` , fügen Sie die folgenden Einstellungen:
+
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
+    
+
+Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Dies ist der Dateiname der PNG in den `drawable*` Verzeichnissen. Wenn Sie das Bild alles andere als nennen, `splash.png` , müssen Sie diese Zeile ändern. Enthalten nicht die Dateinamenerweiterung (d.h. `.png` ). Wenn Sie die Standard-Splash-Screens in Cordova oben aufgeführten bereitgestellten verwenden möchten, verwenden Sie den Wert`screen`.
+
+Der zweiten Zeile wird die Standardverzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Dies sollte die maximale erwartete Startzeit. Der Standardwert für SplashScreenDelay ist 3000 ms.
+
+Schließlich sollte der Begrüßungsbildschirm vorhanden nur so lange wie nötig sein. Wenn Ihre app begonnen hat und die Webview geladen hat, sollte Ihre Anwendung den Splash-Screen ausblenden, sodass Hauptansicht angezeigt wird. Da die Startzeit der app ziemlich aufgrund zahlreicher Faktoren variieren, es wird empfohlen, Ihre Anwendung explizit aufrufen `navigator.splashscreen.hide()` in der Javascript-Methode, die auf reagiert das `deviceready` Ereignis. Ansonsten werden der Splash-Screen für den SplashScreenDelay-Wert angezeigt, die Sie oben konfiguriert. Diese ereignisgesteuerten Ansatz wird dringend empfohlen, im Vergleich mit den Splash-Screen sichtbar für immer eine feste Laufzeit.
 
 ## Splash-Screens für die iOS-Plattform
 
-Kopieren Sie Ihre Bildschirm-Splash-Images in des iOS-Projekts `Resources/splash` Verzeichnis. Fügen Sie nur die Bilder für die Geräte, wie iPad oder iPhone unterstützen möchten. Die Größe der einzelnen Bilder sollten sein:
+Splash-Bildschirm-Images in des iOS-Projekts kopieren `Resources/splash` Verzeichnis. Fügen Sie nur diese Bilder für die Geräte, wie iPad oder iPhone unterstützen möchten. Die Größe der einzelnen Bilder sollten sein:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 Pixel)
@@ -127,8 +162,8 @@ Kopieren Sie Ihre Bildschirm-Splash-Images in des iOS-Projekts `Resources/splash
 
 ## Splash-Screens für die BlackBerry 10-Plattform
 
-Kopieren Sie Ihre Bildschirm-Splash-Images in des Projekts `res/screen/blackberry10` Verzeichnis. Die Dateinamen sollten sein:
+Fügen Sie eine Felge: Splash-Element zu "config.xml" für jede Auflösung und Gebietsschema, die Sie unterstützen möchten:
 
-*   splash-1280x768.png (1280x768 pixels)
-*   splash-720x720.png (720x720 pixels)
-*   splash-768x1280.png (768x1280 pixels)
+[http://Developer.BlackBerry.com/HTML5/Documentation/rim\_splash\_element.html][4]
+
+ [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html

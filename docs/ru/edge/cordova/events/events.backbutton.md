@@ -23,15 +23,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Подробная информация
 
-Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте прослушиватель событий для `backbutton` событий, обычно путем вызова `document.addEventListener` после того как вы получите `deviceready` событие. Это уже не нужно любой другой метод для переопределения поведения кнопки back.
+Чтобы переопределить поведение по умолчанию кнопки back, зарегистрируйте обработчик события `backbutton`, обычно путем вызова `document.addEventListener`, после того как вы произойдет событий `deviceready`. Более не требуется вызывать никакой другой метод для переопределения поведения кнопки back.
 
 ## Поддерживаемые платформы
 
-*   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   Amazon Fire OS
+*   Android
+*   BlackBerry 10
 *   Windows Phone 7 и 8
 
-## Быстрый пример
+## Краткий пример
 
     document.addEventListener("backbutton", onBackKeyDown, false);
     
@@ -40,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## Полный пример
+## Развернутый пример
 
     <!DOCTYPE html>
     <html>
