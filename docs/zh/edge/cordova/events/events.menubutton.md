@@ -16,23 +16,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # menubutton
 
-在使用者按功能表按鈕時，將觸發該事件。
+在用户按菜单按钮时，将触发该事件。
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细信息
 
-事件處理常式的應用覆蓋的預設功能表按鈕行為。
+事件处理程序的应用覆盖默认的菜单按钮的行为。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
 
-## 支援的平臺
+## 支持的平台
 
-*   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   亚马逊火 OS
+*   Android 系统
+*   黑莓 10
 
-## 快速的示例
+## 简单的例子
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
     
@@ -41,7 +42,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的示例
+## 完整的例子
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

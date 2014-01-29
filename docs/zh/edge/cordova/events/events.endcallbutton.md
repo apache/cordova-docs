@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # endcallbutton
 
-當使用者按下結束通話按鈕時，將激發此事件。
+当用户按下结束通话按钮时，将激发此事件。
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细信息
 
-該事件將重寫預設結束調用行為。
+该事件将重写默认结束调用行为。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
 
-## 支援的平臺
+## 支持的平台
 
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 10
 
-## 快速的示例
+## 简单的例子
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
     
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的示例
+## 完整的例子
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

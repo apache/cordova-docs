@@ -22,6 +22,8 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
 Die iOS-Befehlszeilentools basieren auf Shell-Skripte und verlassen sich auf Xcode-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
 
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+
 ## Erstellen Sie ein Projekt
 
 Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rückwärts-Domäne-Style Paket-ID und die app-Anzeigenamen angeben.
@@ -34,7 +36,7 @@ Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rüc
     $ /path/to/my_new_project/cordova/build
     
 
-## Emulator app läuft
+## App auf einem Emulator ausgeführt
 
     $ /path/to/my_new_project/cordova/run
     

@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 戻るボタン
+# backbutton
 
 ユーザーが [戻る] ボタンを押したときに発生します。
 
@@ -27,8 +27,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## サポートされているプラットフォーム
 
+*   アマゾン火 OS
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー 10
 *   Windows Phone 7 と 8
 
 ## 簡単な例

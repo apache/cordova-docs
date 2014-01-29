@@ -112,7 +112,7 @@ Per distribuire il dispositivo:
 
 ## Problemi comuni
 
-**Avvisi negativi:** Quando un'applicazione con interfaccia di programmazione (API) è cambiato o sostituito da un altro API, è contrassegnato come *obsoleto*. L'API ancora funziona nel breve termine, ma alla fine viene rimosso. Alcune di queste interfacce deprecate si riflettono in Apache Cordova e Xcode emette avvisi su di loro quando si creare e distribuita un'applicazione.
+**Avvisi negativi**: quando un'applicazione con interfaccia di programmazione (API) è cambiato o sostituito da un altro API, è contrassegnato come *obsoleto*. L'API ancora funziona nel breve termine, ma alla fine viene rimosso. Alcune di queste interfacce deprecate si riflettono in Apache Cordova e Xcode emette avvisi su di loro quando si creare e distribuita un'applicazione.
 
 Xcode avvertimento circa il `invokeString` Metodo riguarda funzionalità che lancia un'applicazione da un URL personalizzato. Mentre il meccanismo per caricare da un URL personalizzato è cambiato, questo codice è ancora presente per fornire all'indietro la funzionalità per le applicazioni create con versioni precedenti di Cordova. L'applicazione di esempio non utilizza questa funzionalità, quindi è possibile ignorare questi avvisi. Per evitare questi avvisi dall'apparire, rimuovere il codice che fa riferimento il deprecato invokeString API:
 
