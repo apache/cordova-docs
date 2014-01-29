@@ -16,187 +16,120 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guide de la liste blanche
 
-## Vue d'ensemble
+Domaine liste blanche est un modèle de sécurité qui contrôle l'accès à des domaines externes sur lesquels votre application n'a aucun contrôle. Stratégie de sécurité par défaut de Cordova permet d'accéder à n'importe quel site. Avant de déplacer votre application à la production, vous devez formuler une liste blanche et permettre l'accès au réseau des domaines et sous-domaines.
 
-Ressources liste blanche est un modèle de sécurité qui contrôle l'accès aux ressources réseau externe, tel que `http://google.com` . Stratégie de sécurité par défaut de Apache Cordova permet d'accéder à toute ressource sur n'importe quel site sur Internet. Avant de déplacer votre application à la production, vous devriez revoir la liste blanche et déclarer l'accès au réseau des domaines et sous-domaines.
-
-## Spécification
-
-Domaine whitelisting jette les bases pour la spécification [W3C Widget accès][1] . Dans la spécification de l'accès de Widget, le `<access>` élément est utilisé pour déclarer l'accès aux ressources de réseau spécifiques. Apache Cordova s'étend ce concept afin de permettre la liste blanche des ressources réseau individuel (URLs). À l'avenir, Apache Cordova va résumer les implémentations de liste blanche de plate-forme. Toutefois, pour l'instant chaque plate-forme implémente sa propre liste blanche de ressource ou de domaine. Les différences entre les implémentations de plate-forme sont décrites plus loin dans ce document.
+Cordova respecte la spécification [W3C Widget accès][1] , qui s'appuie sur le `<access>` élément au sein du PPA `config.xml` fichier pour activer l'accès réseau à des domaines spécifiques. Pour les projets qui s'appuient sur le workflow de CLI décrit dans l'Interface de ligne de commande, ce fichier se trouve dans le répertoire racine du projet. Autrement pour les chemins de développement spécifiques à la plateforme, les endroits sont énumérés dans les sections ci-dessous. (Voir les différents Guides de plate-forme pour plus d'informations sur chaque plate-forme).
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-Le modèle général pour les entrées de la liste blanche conforme à la spécification "[correspondre modèle][2]" pour Google Chrome emballés Apps. Les ressources sont spécifiées par l'URL, mais un astérisque (*) caractère peut être utilisé comme « Joker » dans plusieurs endroits pour indiquer « n'importe quelle valeur peut aller ici ». Des exemples précis sont indiqués ci-dessous.
+Les exemples suivants illustrent la syntaxe de la liste blanche :
 
- [2]: http://developer.chrome.com/apps/match_patterns.html
+*   Accès à [google.com][2]:
+    
+        <access origin="http://google.com" />
+        
 
-## Syntaxe
+*   Accès sécurisé [google.com][3] ( `https://` ) :
+    
+        <access origin="https://google.com" />
+        
 
-Accès à toutes les ressources à [google.com][3]:
+*   Accès pour le sous-domaine [maps.google.com][4]:
+    
+        <access origin="http://maps.google.com" />
+        
 
- [3]: http://google.com
+*   Accès à tous les sous-domaines sur [google.com][2], par exemple [mail.google.com][5] et [docs.google.com][6]:
+    
+        <access origin="http://*.google.com" />
+        
 
-    http://google.com/*
+*   Accès à *tous les* domaines, par exemple, [google.com][2] et [developer.mozilla.org][7]:
+    
+        <access origin="*" />
+        
+    
+    C'est la valeur par défaut pour les projets CLI nouvellement créés.
+
+ [2]: http://google.com
+ [3]: https://google.com
+ [4]: http://maps.google.com
+ [5]: http://mail.google.com
+ [6]: http://docs.google.com
+ [7]: http://developer.mozilla.org
+
+## Amazon Fire OS liste blanche
+
+Règles spécifiques à la plateforme whitelisting se trouvent dans`res/xml/config.xml`.
+
+## Android liste blanche
+
+Règles spécifiques à la plateforme whitelisting se trouvent dans`res/xml/config.xml`.
+
+**NOTE**: sous Android 2.3 et avant, domaine liste blanche ne fonctionne que pour `href` , les liens hypertexte non référencé ressources telles que les images et les scripts. Prendre des mesures pour éviter les scripts d'être injecté dans l'application.
+
+Navigation vers les domaines non-liste blanche via `href` lien hypertexte, la page à ouvrir dans le navigateur par défaut plutôt qu'au sein de l'application. (Comparez ceci au comportement d'iOS noté ci-dessous).
+
+## iOS liste blanche
+
+Règles de liste blanche de la plate-forme sont trouvent dans le répertoire application nommé `config.xml` fichier.
+
+Origines spécifiés sans un protocole, tel que `www.apache.org` plutôt que `http://www.apache.org` , par défaut à tous les `http` , `https` , `ftp` , et `ftps` régimes.
+
+Caractères génériques sur la plateforme iOS sont plus souples que dans la spécification [W3C Widget accès][1] . Par exemple, le texte suivant accède tous les sous-domaines et domaines de premier niveau tels que `.com` et `.net` :
+
+        <access origin="*.google.*" />
     
 
-Accès à toutes les ressources à sûr [google.com][4] ( `https://` ) :
+Contrairement à la plateforme Android susmentionnée, en accédant à des domaines non-liste blanche via `href` lien hypertexte sur iOS empêche la page d'ouverture à tous.
 
- [4]: https://google.com
+## BlackBerry 10 liste blanche
 
-    https://Google.com/ *
+Les règles de liste blanche se trouvent dans`www/config.xml`.
+
+Utilisation de quelques dizaines de blackBerry de caractères génériques se distingue des autres plates-formes de deux façons :
+
+*   Tout contenu accédé par `XMLHttpRequest` doivent être déclarées explicitement. Mise en `origin="*"` ne fonctionne pas dans ce cas. Sinon, toutes les sécurités de web peuvent être désactivée à l'aide de la `WebSecurity` préférence décrite dans Configuration de BlackBerry :
     
+        <preference name="websecurity" value="disable" />
+        
 
-Accès pour le sous-domaine spécifique [maps.google.com][5]:
-
- [5]: http://maps.google.com
-
-    http://maps.google.com/*
+*   Comme alternative au paramètre `*.domain` , définissez une nouvelle `subdomains` attribuent à `true` . Il doit avoir la valeur `false` par défaut. Par exemple, ce qui suit permet d'accéder à `google.com` , `maps.google.com` , et `docs.google.com` :
     
-
-Accès à tous les sous-domaines sur [google.com][3] (p. ex., [mail.google.com][6] et [docs.google.com][7]) :
-
- [6]: http://mail.google.com
- [7]: http://docs.google.com
-
-    http://*.google.com/*
+        <access origin="http://google.com" subdomains="true" />
+        
     
-
-Accès à toutes les ressources sur [www.google.com][8] sous le chemin d'accès "/ mobile" :
-
- [8]: http://www.google.com
-
-    http://www.google.com/mobile/*
+    Le passage suivant l'accès à `google.com` :
     
-
-Accès à [google.com][3] sur n'importe quel protocole (HTTP, HTTPS, FTP, etc.) :
-
-    *://google.com/*
+        <access origin="http://google.com" subdomains="false" />
+        
     
-
-Accès à toutes les ressources sur Internet (par exemple, [google.com][3] et [developer.mozilla.org][9]) :
-
- [9]: http://developer.mozilla.org
-
-    *
+    L'accès à tous les domaines, y compris le local `file://` protocole :
     
-
-## Android
-
-### Détails
-
-Les règles de liste blanche se trouvent dans `res/xml/config.xml` et déclarée avec l'élément`<access origin="..." />`.
-
-Android soutient pleinement la syntaxe de la liste blanche.
-
-### Syntaxe
-
-Accès à [google.com][3]:
-
-    <access origin="http://google.com/*" />
-    
-
-## BlackBerry 10
-
-### Détails
-
-Les règles de liste blanche se trouvent dans `www/config.xml` et déclarée avec l'élément`<access origin="..." />`.
-
-BlackBerry 10 gère les caractères génériques différemment des autres plates-formes de deux façons :
-
-1) Contenu accédé par XMLHttpRequest doit être déclarée explicitement. origine = "*" on respectera pas pour ce cas d'utilisation. Sinon, toute sécurité web peut être désactivée à l'aide d'une préférence.
-
-2) sous-domaines = "true" peut être utilisé à la place de "* *.domain"
-
-### Syntaxe
-
-Accès à [google.com][3]:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-Accès à [maps.google.com][5]:
-
-    <access origin="http://maps.google.com" subdomains="false" />
-    
-
-Accès à tous les sous-domaines sur [Google.fr][3]:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-Accès à tous les domaines, y compris `file://` protocole :
-
     <access origin="*" subdomains="true" />
-    
 
-Désactiver toute sécurité web :
+(Pour plus d'informations sur la prise en charge, consultez documentation de BlackBerry sur l' [élément access][8].)
 
-    <preference name="websecurity" value="disable" />
-    
+ [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## iOS
-
-### Détails
-
-Les règles de liste blanche se trouvent dans `AppName/config.xml` et déclarée avec l'élément`<access origin="..." />`.
-
-iOS soutient pleinement la syntaxe de la liste blanche.
-
-### Changé en 3.1.0 :
+## Changements d'iOS 3.1.0
 
 Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le régime de whilelisting de domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier votre `config.xml` fichier afin de continuer la liste blanche du même ensemble de ressources comme avant.
 
 Plus précisément, ces motifs doivent être actualisés :
 
-*   " `apache.org` " (pas de protocole): cela correspondrait précédemment `http` , `https` , `ftp` , et `ftps` des protocoles. Remplacez " `*://apache.org/*` " d'inclure tous les protocoles, ou inclure une ligne pour chaque protocole, vous devez appuyer.
+*   `apache.org`(pas de protocole): cela correspondrait précédemment `http` , `https` , `ftp` , et `ftps` des protocoles. Remplacez " `*://apache.org/*` " d'inclure tous les protocoles, ou inclure une ligne pour chaque protocole, vous devez appuyer.
 
-*   " `http://apache.*` " (caractère générique à la fin du domaine): cela correspondrait auparavant tous les top domaines niveau, y compris tous les TLDs possibles de deux lettres (mais pas utiles domaines aiment. co.uk). Inclure une ligne pour chaque TLD qui vous en fait Contrôlez et devez whitelist.
+*   `http://apache.*`(caractère générique à la fin du domaine): cela correspondrait auparavant tous les top domaines niveau, y compris tous les TLDs possibles de deux lettres (mais pas utiles domaines aiment. co.uk). Inclure une ligne pour chaque TLD qui vous en fait Contrôlez et devez whitelist.
 
-*   " `h*t*://ap*he.o*g` " (caractères génériques pour les lettres manquantes au hasard): ceux-ci ne sont plus supportés ; changement à inclure une ligne pour chaque domaine et protocole que vous avez réellement besoin de liste blanche.
+*   `h*t*://ap*he.o*g`(caractères génériques pour les lettres manquantes au hasard): ceux-ci ne sont plus prises en charge ; changement d'inclure une ligne pour chaque domaine et le protocole que vous devez réellement whitelist.
 
-### Syntaxe
+## Windows Phone liste blanche
 
-Accès à [google.com][3]:
+Les règles de liste blanche pour Windows Phone 7 et 8 se trouvent dans l'application `config.xml` fichier.
 
-    <access origin="http://google.com/*" />
-    
+## Liste blanche paciarelli
 
-## Windows Phone (7 & 8)
+Règles de liste blanche se trouvent dans l'application de `config.xml` fichier. La plate-forme s'appuie sur les mêmes `subdomains` attribut comme la plateforme BlackBerry. (Pour plus d'informations sur la prise en charge, consultez documentation de paciarelli sur l' [élément access][9].)
 
-Les règles de liste blanche se trouvent dans `config.xml` et déclarée avec l'élément`<access origin="..." />`.
-
-### Syntaxe
-
-Accès à [google.com][3]:
-
-    <access origin="http://google.com" />
-    
-
-## Paciarelli
-
-### Détails
-
-Du répertoire racine l'application `config.xml` fichier spécifie les règles de liste blanche de domaine, en utilisant le `<access origin="..." />` élément. Pour une référence complète, consultez la [documentation de paciarelli accès à des ressources du réseau externe][10].
-
- [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
-
-### Syntaxe
-
-Accès à [google.com][3]:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-Accès sécurisé [google.com][4] ( `https://` ) :
-
-    <access origin="https://google.com" subdomains="false" />
-    
-
-Accès à tous les sous-domaines sur [Google.fr][3]:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-Accès à tous les domaines, y compris `file://` protocole :
-
-    <access origin="*" subdomains="true" />
+ [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

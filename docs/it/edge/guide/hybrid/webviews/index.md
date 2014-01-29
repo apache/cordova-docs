@@ -16,7 +16,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Incorporamento visualizzazioni Web
 
-> Implementare Cordova WebView nel proprio progetto.
+Applicazioni di Cordova sono ordinariamente implementate come un browser-basato *WebView* all'interno della piattaforma mobile nativa. In questa sezione viene illustrato come, per sostenere piattaforme, per creare il tuo WebView componenti che fare pieno uso di Cordova APIs. È quindi possibile distribuire questi componenti di applicazione Cordova assieme componenti nativi in un'applicazione ibrida.
 
+Per distribuire un WebView, è necessario avere familiarità con ogni ambiente di programmazione nativo. Di seguito vengono fornite le istruzioni per piattaforme supportate:
+
+*   Amazon fuoco OS visualizzazioni Web
 *   Visualizzazioni Web Android
 *   iOS visualizzazioni Web

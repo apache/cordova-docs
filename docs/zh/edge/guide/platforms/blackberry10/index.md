@@ -36,17 +36,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   追加本機 SDK 安裝目錄的路徑，例如：
     
-    ;C:\bbndk\host\_10\_1\_0\_132\darwin\x86\usr\bin\
+    ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 關於 Mac 和 Linux：
 
 *   編輯 `~/.bash_profile` 檔，添加如下所示，根據安裝本機的 SDK 了一行：
     
-    $ 匯出路徑 = ${路徑}：/應用程式/bbndk/host\_10\_1\_0\_132 達爾文/x 86 usr/bin /
-    
-    或為 10.2 本機 SDK：
-    
-    $ 出口 PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
+    $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   運行下面的命令將在當前會話中的更改應用：
     
@@ -56,22 +52,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 如果您希望在設備上測試或發佈通過黑莓應用程式，您的系統必須設置為代碼簽名。
 
-若要獲取簽名金鑰，轉到黑莓手機網站和請確保保留您指定的密碼。 然後運行 `blackberry-signer` 黑莓手機本機 SDK 中包含的實用程式。
+若要獲取簽名金鑰，請轉到 \[黑莓鍵順序形式\] (HTTPs://www.blackberry.com/SignedKeys/codesigning.html)。
 
-可以在這裡找到詳細的說明：
+選擇第一個核取方塊："為 BlackBerry10 使用黑莓 NDK 開發的應用程式"，然後登錄或創建 BBID。
 
-*   [註冊您的代碼簽名金鑰。][2]
+輸入密碼並按一下"獲取權杖"以下載 bbidtoken.csk。將此檔保存到您的作業系統，將會顯示在下載頁面上的預設位置。
 
-*   [設置您的系統的代碼簽名。][3]
+最後一步是生成簽名的證書：
 
- [2]: https://www.blackberry.com/SignedKeys/codesigning.html
- [3]: https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html
+    $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
+    
 
 ## 創建一個專案
 
 使用 `cordova` 實用程式設置了一個新的專案，如所述的命令列介面。例如，在原始程式碼中的目錄：
 
-    $ 科爾多瓦創建你好 com.example.hello $ cd 你好 $ 科爾多瓦平臺添加 blackberry10 $ 科爾多瓦生成
+    $ cordova create hello com.example.hello
+    $ cd hello
+    $ cordova platform add blackberry10
+    $ cordova build
     
 
 ## 部署到模擬程式
@@ -79,96 +78,74 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 如果您想要運行的設備模擬程式，下載並安裝黑莓手機 10 模擬器。
 
 *   [下載][1]
-*   [入門][4]
+*   [入門][2]
 
- [4]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
+ [2]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
-在測試之前在模擬器或設備上的應用程式，您需要將*目標*添加到您的專案。 每個是以唯一的名稱，確定並與 IP 位址關聯。 您需要在您使用它來查看應用程式之前從模擬程式獲取的 IP 位址。
+在測試之前在模擬器或設備上的應用程式，您需要啟用發展模式。
 
 啟動模擬程式映射，然後從主畫面中選擇**設置**：
 
-![][5]
+![][3]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: img/guide/platforms/blackberry10/bb_home.png
 
-導航到**的安全和隱私 → 發展模式**節、 啟用選項，和獲得的 IP 位址：
+導航到**的安全和隱私 → 發展模式**節和啟用的選項：
 
-![][6]
+![][4]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
-
-當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄，將目標命名*動車組*與上面顯示的 IP 位址相關聯。
-
-*   關於視窗：
-    
-    $ platforms\blackberry10\cordova\target.bat 添加鴯鶓 169.254.0.1-t 模擬器
-
-*   關於 Mac/Linux：
-    
-    $ 平臺/blackberry10/科爾多瓦/目標添加鴯鶓 169.254.0.1-t 模擬器
+ [4]: img/guide/platforms/blackberry10/bb_devel.png
 
 然後，運行 `emulate` 命令來查看該應用程式：
 
-    $ 科爾多瓦效仿 blackberry10
+    $ cordova emulate blackberry10 --devicepass <password>
     
 
 ## 將部署到設備
 
-若要部署到一個設備，請確保它插入到您的電腦。 啟用發展模式和獲得的 IP 位址為 desribed 以上的模擬程式部分中。 您還需要獲得從 PIN**設置**應用程式下的**關於 → 硬體**：
-
-![][7]
-
- [7]: img/guide/platforms/blackberry10/bb_pin.png
-
-運行目標命令列實用程式將一個名稱與一個 IP 位址、 裝置密碼和 PIN 相關聯。
-
-*   關於視窗：
-    
-    $ platforms\blackberry10\cordova\target.bat 添加差異 169.254.0.1-t 設備 — — 密碼 123456 — — pin FFFF972E
-
-*   關於 Mac/Linux：
-    
-    $ 平臺/blackberry10/科爾多瓦/目標添加差異 169.254.0.1-t 設備 — — 密碼 123456 — — pin FFFF972E
-
-地點：
-
-*   `--password`是指密碼來解鎖設備。
-
-*   `--pin`是指設備從**設置**應用程式獲得的 PIN。
+要部署到一個設備，請確保它插入到您的電腦和發展模式已啟用。
 
 然後，運行 `run` 命令來查看該應用程式：
 
-    運行 blackberry10 $ 科爾多瓦
+    $ cordova run blackberry10 --devicepass <password>
     
 
-如果調試權杖未尚未設置的設備，一條錯誤訊息會提示您使用與您的簽名金鑰提供註冊時的密碼運行腳本的平臺。
+如果調試的權杖還沒有為該設備設置，錯誤訊息，提示您提供密碼您定義配置您的電腦以簽名的應用程式時。
 
-*   關於視窗：
+    $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
     
-    $ platforms\blackberry10\cordova\run.bat — — 設備 — — keystorepass mysecret
-
-*   關於 Mac/Linux：
-    
-    $ 平臺/blackberry10/科爾多瓦/運行 — — 設備 — — keystorepass mysecret
 
 ## WebInspector 的調試
 
-在調試時在設備或模擬程式上，您可以運行 WebInspector 遠端來查看應用程式的內部狀態。 使您可以連接到您的應用程式使用標準 web 瀏覽器的 URL 顯示一個提示。 有關詳細資訊，請參見[調試使用 WebInspector][8].
+在調試時在設備或模擬程式上，您可以運行 WebInspector 遠端來查看應用程式的內部狀態。 使您可以連接到您的應用程式使用標準 web 瀏覽器的 URL 顯示一個提示。 有關詳細資訊，請參見[調試使用 WebInspector][5].
 
- [8]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
+ [5]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## 生成發佈版本
 
 預設情況下，運行 `cordova build` 命令創建一個無符號的*.bar*包檔適用于設備或模擬器上測試。
 
-您需要運行一個不同 `build` 命令來創建一個發佈版本適合通過黑莓手機世界分佈。 它不依賴于 `cordova` CLI 的工具，而是使用下面的語法：
+使用 `--release` 創建一個發佈版本適合通過黑莓手機世界分佈。
+
+    $ cordova build --release --keystorepass <signing password>
+    
+
+`--keystorepass`選項指定定義配置您的電腦登錄時的密碼的應用程式。
+
+## 將部署到其他位置
+
+上面的說明假定通過 USB 插入設備或模擬器運行在本地電腦上。它也是可能部署到其他位置。
+
+當您設置黑莓 10 平臺為您的專案包含一組額外的命令列實用程式。 下面的命令，在這種情況下調用從專案的頂級目錄中，將一個名為*動車組*與 IP 位址的目標相關聯。
 
 *   關於視窗：
     
-    $ platforms\blackberry10\cordova\build.bat — — 釋放 — — keystorepass mysecret
+    $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   關於 Mac/Linux：
     
-    $ 平臺/blackberry10/科爾多瓦/生成 — — 釋放 — — keystorepass mysecret
+    $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
-`--keystorepass`選項指定定義配置您的電腦登錄時的密碼的應用程式。
+一旦定義了目標，你可以提供給運行的命令使用 `--target` ：
+
+    $ cordova run blackberry10 --target=emu

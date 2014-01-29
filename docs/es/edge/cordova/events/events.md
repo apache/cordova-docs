@@ -23,12 +23,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   deviceready
 *   pause
 *   resume
-*   online
-*   offline
 *   backbutton
-*   batterycritical
-*   batterylow
-*   batterystatus
 *   menubutton
 *   searchbutton
 *   startcallbutton
@@ -36,56 +31,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   volumedownbutton
 *   volumeupbutton
 
-## Acceso a la función
+## Añadida por [org.apache.cordova.battery-estatus][1] de eventos
 
-Desde la versión 3.0, batería Cordova implementos y otras API de nivel de dispositivo como *plugins*. Acceso a todos los demás eventos no relacionados con el estado de la batería están habilitados de forma predeterminada. Uso de la CLI `plugin` comando, que se describe en la interfaz de línea de comandos, para habilitar o deshabilitar eventos de batería:
+ [1]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
 
-        $ cordova plugin add org.apache.cordova.battery-status
-        $ cordova plugin ls
-        [ 'org.apache.cordova.battery-status' ]
-        $ cordova plugin rm org.apache.cordova.battery-status
-    
+*   batterycritical
+*   batterylow
+*   batterystatus
 
-Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
+## Añadida por [org.apache.cordova.network-información][2] de eventos
 
-*   Android
-    
-        (in app/res/xml/config.xml)
-        <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
-        </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-        
+ [2]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
 
-*   BlackBerry WebWorks
-    
-        (in www/plugins.xml)
-        <feature name="Battery">
-            <param name="blackberry-package" value="org.apache.cordova.battery.Battery" />
-        </feature>
-        
-        (in www/config.xml)
-        <feature id="blackberry.app"          required="true" version="1.0.0.0" />
-        <feature id="blackberry.app.event"    required="true" version="1.0.0.0" />
-        <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
-        
-
-*   (en iOS`config.xml`)
-    
-        <feature name="Battery">
-            <param name="ios-package" value="CDVBattery" />
-        </feature>
-        
-
-*   Tizen (en`config.xml`)
-    
-        <feature name="http://tizen.org/api/systeminfo" required="true"/>
-        
-    
-    Referencia: [aplicación manifiesto de aplicación Web Tizen][1]
-
- [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
-
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+*   online
+*   offline

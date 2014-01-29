@@ -22,7 +22,7 @@ Esta guía describe cómo configurar el entorno de desarrollo SDK para desplegar
 
 El SDK de Tizen requiere 10.04/10.10/11.04/11.10 Linux Ubuntu (32 bits) o Windows XP SP3/7 (32 bits).
 
-Los desarrolladores deben usar la utilidad de `cordova` en conjunción con el SDK de Tizen. Ver la interfaz de línea de comandos para obtener información de cómo instalarlo, añadir proyectos, entonces construir e implementar un proyecto.
+Los desarrolladores deben usar la utilidad de `cordova` en conjunción con el SDK de Tizen. Ver la interfaz de línea de comandos para obtener información como instalarlo, agregar proyectos, entonces construir e implementar un proyecto.
 
 ## Instalar el SDK
 

@@ -18,6 +18,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Ce guide montre comment modifier des projets Windows 8 mise à niveau d'anciennes versions de Cordova. La plupart de ces instructions s'appliquent aux projets créés avec un ensemble plu d'outils de ligne de commande qui précèdent le `cordova` utilitaire CLI. Voir l'Interface de ligne de commande pour plus d'informations comment mettre à jour la version de l'interface CLI.
 
+## Mise à niveau vers 3.2.0 de 3.1.0
+
+Pour les projets qui ont été créés avec le cordova CLI :
+
+1.  Mise à jour le `cordova` version CLI. Voir l'Interface de ligne de commande.
+
+2.  Exécutez`cordova platform update windows8`.
+
+Pour les projets ne créés pas avec la CLI de cordova, exécutez :
+
+        bin\update <project_path>
+    
+
 ## Mise à niveau vers 3.1.0
 
 Support de Cordova CLI pour Windows 8 a été introduite à Cordoue 3.1.0. Pour mettre à niveau, nous vous suggérons de créer un CLI Cordova nouveau projet et le passage de tous les atouts nécessaires.
