@@ -18,7 +18,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이 드 하려면 iOS 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. Cli 버전을 업데이트 하는 방법 정보에 대 한 명령줄 인터페이스를 참조.
 
-**참고:** Xcode 4.6입니다 필요, Xcode 5 좋습니다. 현재, 애플 앱 스토어에 제출, 당신은 사용 해야 합니다 최신 출하 버전의 iOS SDK, iOS 7입니다. iOS 7 SDK는 필요 하지 않습니다 아직, 하지만이 신속 하 게 변경할 수 있습니다.
+**참고**: Xcode 4.6 필요, Xcode 5가 좋습니다. 현재, 애플 앱 스토어에 제출, 당신은 사용 해야 합니다 최신 출하 버전의 iOS SDK, iOS 7입니다. iOS 7 SDK는 필요 하지 않습니다 아직, 하지만이 신속 하 게 변경할 수 있습니다.
+
+## 업그레이드 3.1.0 3.2.0을 프로젝트
+
+-CLI가 아닌 프로젝트에 대 한 실행.
+
+        빈/경로 / / 프로젝트 업데이트
+    
+
+CLI 프로젝트:
+
+1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
+
+2.  실행`cordova platform update ios`
 
 ## 업그레이드 3.0.0 3.1.0에 프로젝트
 
@@ -27,26 +40,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         빈/경로 / / 프로젝트 업데이트
     
 
-CLI 프로젝트 실행.
+CLI 프로젝트:
 
-        1. '코르도바' CLI 버전 업데이트-명령줄 인터페이스 2를 참조 하십시오. '코르 도우 바 플랫폼 업데이트 ios' 실행
-    
+1.  업데이트는 `cordova` CLI 버전. 명령줄 인터페이스를 참조 하십시오.
 
-### iOS 7 문제
+2.  실행`cordova platform update ios`
 
-    1입니다. 값을 제거 "너비 = 장치-너비, 높이 = 장치 높이" index.html 파일에 메타 태그 "뷰" 특성에서 https://issues.apache.org/jira/browse/CB-4323 2를 참조 하십시오. IOS 7 지원에 대 한 귀하의 미디어, 미디어 캡처 및 splashscreen 코어 플러그인 업데이트
-    
+iOS 7 문제:
 
-### Xcode 5 문제
+1.  제거 `width=device-width, height=device-height` 에서 있는 `index.html` 파일의 `viewport` `meta` 태그. (참조 [관련 버그][1].)
 
-    1입니다. Xcode 5 (문제 탐색기)에서 2 할 라는 메시지를 표시 하는 경우 프로젝트 설정을 업데이트 합니다. 업데이트를 "컴파일러 c / C + + / 오브 젝 티브-C" "빌드 설정" 탭에서 "빌드 옵션" 섹션을 설정 합니다. "기본 컴파일러 (Apple LLVM 5.0)"를 선택
-    
+2.  IOS 7 지원에 대 한 귀하의 미디어, 미디어 캡처 및 splashscreen 코어 플러그인을 업데이트 합니다.
+
+ [1]: https://issues.apache.org/jira/browse/CB-4323
+
+Xcode 5 문제:
+
+1.  Xcode 5 (문제 탐색기)에서 그렇게 하 라는 메시지를 표시 하는 경우 프로젝트 설정을 업데이트 합니다.
+
+2.  업데이트를 **컴파일러 c / C + + / 오브 젝 티브-C** 설정, **빌드 설정** 탭에서 **빌드 옵션** 섹션. **기본 컴파일러 (Apple LLVM 5.0)** 선택.
 
 ## 2.9.0에서 CLI (3.0.0) 업그레이드
 
 1.  명령줄 인터페이스에 설명 된 대로 코르도바 CLI를 사용 하 여 새로운 아파치 코르도바 3.0.0 프로젝트를 만듭니다.
 
-2.  당신의 플랫폼 추가는 코르도바 프로젝트, 예를 들면:`cordova
+2.  예를 들어 당신의 플랫폼 코르도바 프로젝트에 추가:`cordova
 platform add ios`.
 
 3.  프로젝트의 내용을 복사 `www` 디렉토리에 `www` 에서 방금 만든 코르 도우 바 프로젝트의 루트 디렉토리.
@@ -75,7 +93,7 @@ platform add ios`.
 
 7.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
-**참고:** 코르 도우 바 3.0.0에서 시작 해 서, 프로젝트는 어떤 플러그인과 오지 않는, 사용 하 여 프로젝트에 필요한 것 들을 설치 해야 합니다에 `plugman` CLI 유틸리티. 플러그인을 관리 하기 위해 Plugman를 사용 하 여 참조 하십시오.
+**참고**: 코르도바 3.0.0 부터는 플러그인은 미리 설치 되어 있지 및 사용 하는 `plugman` 그들을 너 자신 설치 하는 명령줄 유틸리티. 플러그인을 관리 하기 위해 Plugman를 사용 하 여 참조 하십시오.
 
 ## 업그레이드 2.8.0 2.9.0에 프로젝트
 
@@ -107,12 +125,21 @@ platform add ios`.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova.js` 파일.
 
-7.  업데이트 `<plugin>` 태그에 있는 당신의 `config.xml` 을 `<feature>` 태그. 존재 참고 `<plugin>` 태그 여전히 작동 하지만 사용 되지 않습니다. 이 정보를 복사할 수는 `config.xml` 새로운 프로젝트에 대 한. 예를 들어:
+7.  업데이트 `<plugin>` 태그는 `config.xml` 파일을 `<feature>` 태그. 존재 참고 `<plugin>` 태그는 여전히 작동 하지만 사용 되지 않습니다. 이 정보를 복사할 수는 `config.xml` 새로운 프로젝트에 대 한 파일. 예를 들어:
     
-        < 플러그인 >< 플러그인 이름 = "LocalStorage" 값 = "CDVLocalStorage" / ><!-다른 플러그인-> < / 플러그인 ><!-변경: (< 기능 > 태그는 동일한 수준에 < 플러그인 >--> 참고 < 기능 이름 "LocalStorage" = >< param 이름을 = "ios 패키지" 값 = "CDVLocalStorage" / >< / 기능 ><!-다른 < 기능 > 태그->
+        <plugins>
+            <plugin name="LocalStorage" value="CDVLocalStorage" />
+            <!-- other plugins -->
+        </plugins>
+        
+        <!-- change to: (note that a <feature> tag is on the same level as <plugins> -->
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
+        </feature>
+        <!-- other <feature> tags -->
         
 
-8.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
+8.  삭제는 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
 9.  이 두 가지 프레임 워크를 프로젝트에 추가:
     
@@ -121,9 +148,9 @@ platform add ios`.
 
 10. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **연결 → 기타 링커 플래그**에서 편집 해야 **"-Obj-C"** **"-ObjC"**.
 
-11. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **연결 → 기타 링커 플래그**에서 변경 **"-all_load"** 수 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . 에 정의 된 문제가 있는 경우 이렇게만 하면 [이 문제.][1].
+11. 프로젝트의 대상 **빌드 설정**을 업데이트 합니다. **연결 → 기타 링커 플래그**에서 변경 **"-all_load"** 수 `-force\_load ${BUILT\_PRODUCTS\_DIR}/libCordova.a` . 에 정의 된 문제가 있는 경우 이렇게만 하면 [이 문제.][2].
 
- [1]: https://issues.apache.org/jira/browse/CB-3458
+ [2]: https://issues.apache.org/jira/browse/CB-3458
 
 ## 업그레이드 2.6.0 2.7.0에 프로젝트
 
@@ -139,14 +166,14 @@ platform add ios`.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.7.0.js` 파일.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][2] 프로젝트).
+7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][3] 프로젝트).
 
-8.  당신의 `config.xml` 파일을 [이 줄을 제거][3].
+8.  당신의 `config.xml` 파일을 [이 줄을 제거][4].
 
 9.  삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
- [2]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23
- [3]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc
+ [3]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=5c05ac80e056753c0e8736f887ba9f28d5b0774c;hp=623ad8ec3c46f656ea18c6c3a190d650dd64e479;hb=c6e71147386d4ad94b07428952d1aae0a9cbf3f5;hpb=c017fda8af00375a453cf27cfc488647972e9a23
+ [4]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=537705d76a5ef6bc5e57a8ebfcab78c02bb4110b;hp=8889726d9a8f8c530fe1371c56d858c34552992a;hb=064239b7b5fa9a867144cf1ee8b2fb798ce1f988;hpb=c9f233250d4b800f3412eeded811daaafb17b2cc
 
 ## 업그레이드 2.5.0 2.6.0에 프로젝트
 
@@ -162,22 +189,22 @@ platform add ios`.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (다른 파일과 함께 스크립트를 참조 하는) 새로운 참조를 `cordova-2.6.0.js` 파일.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][4] 프로젝트).
+7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][5] 프로젝트).
 
-8.  당신의 `config.xml` 파일을 [이 새 줄을 추가][5].
+8.  당신의 `config.xml` 파일을 [이 새 줄을 추가][6].
 
-9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][6].
+9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][7].
 
-10. 당신의 `config.xml` 파일, [UIWebViewBounce, DisallowOverscroll으로 변경 되었습니다 및 기본 값이 다른][7].
+10. 당신의 `config.xml` 파일, [UIWebViewBounce, DisallowOverscroll으로 변경 되었습니다 및 기본 값이 다른][8].
 
 11. 당신의 `config.xml` 파일에 `EnableLocation` 특혜 사용 되지 않습니다.
 
 12. 삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
- [4]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9
- [5]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d
- [6]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f
- [7]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5
+ [5]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=124a56bb4f361e95616f44d6d6f5a96ffa439b60;hp=318f79326176be8f16ebc93bad85dd745f4205b6;hb=a28c7712810a63396e9f32fa4eb94fe3f8b93985;hpb=36acdf55e4cab52802d73764c8a4b5b42cf18ef9
+ [6]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=1555b5e81de326a07efe0bccaa5f5e2326b07a9a;hp=0652d60f8d35ac13c825c572dca6ed01fea4a540;hb=95f16a6dc252db0299b8e2bb53797995b1e39aa1;hpb=a2de90b8f5f5f68bd9520bcbbb9afa3ac409b96d
+ [7]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=d307827b7e67301171a913417fb10003d43ce39d;hp=04260aa9786d6d74ab20a07c86d7e8b34e31968c;hb=97b89edfae3527828c0ca6bb2f6d58d9ded95188;hpb=942d33c8e7174a5766029ea1232ba2e0df745c3f
+ [8]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=8889726d9a8f8c530fe1371c56d858c34552992a;hp=d307827b7e67301171a913417fb10003d43ce39d;hb=57982de638a4dce6ae130a26662591741b065f00;hpb=ec411f18309d577b4debefd9a2f085ba719701d5
 
 ## 업그레이드 2.4.0 2.5.0에 프로젝트
 
@@ -193,22 +220,22 @@ platform add ios`.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.5.0.js` 파일.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][8] 프로젝트).
+7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][9] 프로젝트).
 
-8.  당신의 `config.xml` 파일, [다음 새 줄을 추가][9].
+8.  당신의 `config.xml` 파일, [다음 새 줄을 추가][10].
 
-9.  당신의 `config.xml` 파일, [루트 요소를 편집, 위젯 코르도바에서 변경][10].
+9.  당신의 `config.xml` 파일, [루트 요소를 편집, 위젯 코르도바에서 변경][11].
 
-10. 당신의 `config.xml` 파일, [OpenAllWhitelistURLsInWebView 환경 설정 제거][11].
+10. 당신의 `config.xml` 파일, [OpenAllWhitelistURLsInWebView 환경 설정 제거][12].
 
 11. 삭제를 `cordova` 디렉터리 및 복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.5.0,이 스크립트를 업데이 트 했습니다.
 
 12. 삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
- [8]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09
- [9]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb
- [10]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c
- [11]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4
+ [9]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=318f79326176be8f16ebc93bad85dd745f4205b6;hp=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hb=4001ae13fcb1fcbe73168327630fbc0ce44703d0;hpb=299a324e8c30065fc4511c1fe59c6515d4842f09
+ [10]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=903944c4b1e58575295c820e154be2f5f09e6314;hp=721c734120b13004a4a543ee25f4287e541f34be;hb=ae467249b4a256bd31ee89aea7a06f4f2316b8ac;hpb=9e39f7ef8096fb15b38121ab0e245a3a958d9cbb
+ [11]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=64e71636f5dd79fa0978a97b9ff5aa3860a493f5;hp=d8579352dfb21c14e5748e09b2cf3f4396450163;hb=0e711f8d09377a7ac10ff6be4ec17d22cdbee88d;hpb=57c3c082ed9be41c0588d0d63a1d2bfcd2ed878c
+ [12]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=721c734120b13004a4a543ee25f4287e541f34be;hp=7d67508b70914aa921a16e79f79c00512502a8b6;hb=187bf21b308551bfb4b98b1a5e11edf04f699791;hpb=03b8854bdf039bcefbe0212db937abd81ac675e4
 
 ## 업그레이드 2.3.0 2.4.0에 프로젝트
 
@@ -224,22 +251,22 @@ platform add ios`.
 
 6.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-2.4.0.js` 파일.
 
-7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `MainViewController.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][12] 프로젝트).
+7.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `MainViewController.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][13] 프로젝트).
 
-8.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][13] 프로젝트).
+8.  업데이트 (또는 교체, 결코 파일을 변경한 경우) 당신의 `AppDelegate.m` 에서 새로운 것에 따라 파일 (볼 [이 사랑][14] 프로젝트).
 
-9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][14].
+9.  당신의 `config.xml` 파일을 [이 새 줄을 추가][15].
 
 10. 삭제를 `cordova` 디렉터리 및 복사는 `cordova` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리. 2.4.0에이 스크립트는 고정.
 
 11. 삭제를 `CordovaLib` 디렉터리 및 복사는 `CordovaLib` 프로젝트의 루트 디렉터리에 새 프로젝트에서 디렉토리.
 
-12. 프로젝트에 자원으로 AssetsLibrary.framework를 추가 합니다. (가 서 [여기][15] 이렇게 하는 방법에 대 한 지침.).
+12. 프로젝트에 자원으로 AssetsLibrary.framework를 추가 합니다. ( [애플의 설명서][16] 참조 이렇게 하는 방법에 대 한 지침.).
 
- [12]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
- [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
- [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
- [15]: https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html
+ [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
+ [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
+ [15]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
+ [16]: https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html
 
 ## 업그레이드 2.2.0 2.3.0에 프로젝트
 
@@ -268,7 +295,7 @@ platform add ios`.
         < 플러그인 이름 = "InAppBrowser" 값 = "CDVInAppBrowser" / >
         
 
-12. 참고-C 플러그인은 더 이상 허용 *하지* . 허용 된 사이트 목록 애플 리 케이 션 허용 된 사이트 목록에와 함께 연결 해야 설정 하는 `User-Agent` 헤더를 주요 코르도바 WebView로 같은 사용자 에이전트에 연결. 액세스 하 여이 얻을 수 있는 `userAgent` 메인 뷰 컨트롤러에서 속성. 기본 뷰 컨트롤러 (CDVViewController)에 또한 있다는 `URLisAllowed` URL는 허용을 통과할지 여부를 확인 하는 방법.
+12. 참고-C 플러그인은 더 이상 허용 *하지* . 허용 된 사이트 목록 애플 리 케이 션 허용 된 연결을 설정 해야 합니다 `User-Agent` 헤더를 주요 코르도바 WebView로 같은 사용자 에이전트에 연결. 액세스 하 여이 얻을 수 있는 `userAgent` 메인 뷰 컨트롤러에서 속성. 기본 뷰 컨트롤러 ( `CDVViewController` )도 `URLisAllowed` URL은 허용 전달 여부를 확인 하는 방법.
 
 13. 장치 API 변경:
     
@@ -302,9 +329,9 @@ platform add ios`.
     2.  코르도바를 설치한 위치로 이동 (1 단계 참조)에 `bin` 하위 디렉터리
     3.  아래 스크립트를 실행 하는 첫 번째 매개 변수는 프로젝트의 경로 `.xcodeproj` 파일:
         
-        `update_cordova_subproject 경로/로/네/프로젝트/xcodeproj`
+        `update_cordova_subproject path/to/your/project/xcodeproj`
 
-**참고:** 2.2.0,은 `bin/create` 에 복사 스크립트는 `CordovaLib` 프로젝트에 하위 프로젝트. 동일한 종류의 설치를 위해, 그냥 오른쪽에 복사 `CordovaLib` 프로젝트 디렉터리 업데이트에는 `CordovaLib` 하위 프로젝트 Xcode 파일 관리자에서 (프로젝트)의 상대적인 위치.
+**참고**: 2.2.0,은 `bin/create` 에 복사 스크립트는 `CordovaLib` 프로젝트에 하위 프로젝트. 동일한 종류의 설치를 위해, 그냥 오른쪽에 복사 `CordovaLib` 프로젝트 디렉터리 업데이트에는 `CordovaLib` 하위 프로젝트 Xcode 파일 관리자에서 (프로젝트)의 상대적인 위치.
 
 ## 업그레이드 2.0.0 2.1.0을 프로젝트
 
@@ -399,7 +426,7 @@ platform add ios`.
 
 22. 프로젝트 탐색기에서 **프로젝트 아이콘** 을 선택, **대상**, 프로젝트를 선택한 다음 **빌드 설정** 탭을 선택 합니다.
 
-23. **기타 링커 플래그**에 대 한 검색 하 고 값을 추가할 **-all_load** 및 **Obj-C**.
+23. **기타 링커 플래그**에 대 한 검색 하 고 값을 추가할 **-force_load** 및 **Obj-C**.
 
 24. 확장은 `CordovaLib` 하위 프로젝트.
 
@@ -437,7 +464,7 @@ platform add ios`.
 
 36. **실행** 버튼을 선택 합니다.
 
-**참고:** 프로젝트를 시뮬레이터에서 예상 대로 작동 하지 않습니다, 만약 단서 Xcode에서 콘솔 로그에 오류 기록을 보시기 바랍니다.
+**참고**: 프로젝트를 시뮬레이터에서 예상 대로 작동 하지 않는 경우 단서 Xcode에서 콘솔 로그에 오류 기록을 보시기 바랍니다.
 
 ## 1.9.0 1.8.X 프로젝트 업그레이드
 
@@ -449,9 +476,9 @@ platform add ios`.
 
 4.  에 코르 도우 바 스크립트 참조를 업데이트를 `www/index.html` 파일 (및 스크립트 참조를 포함 하는 기타 파일) 새를 가리키도록 `cordova-1.9.0.js` 파일.
 
-**참고:** 1.9.0 새로운 지원 `BackupWebStorage` 부울 `Cordova.plist` 설정. 그것은 기본적으로 활성화 되어, 그래서 그것을 설정 `false` 특히 iOS 6에 그것을 사용 하지 않도록 합니다. 참조 [출시 노트: 사파리와 UIKit 섹션][16]
+**참고**: 1.9.0 새로운 지원 `BackupWebStorage` 부울 `Cordova.plist` 설정. 그것은 기본적으로 활성화 되어, 그래서 그것을 설정 `false` 특히 iOS 6에 그것을 사용 하지 않도록 합니다. 참조 [출시 노트: 사파리와 UIKit 섹션][17]
 
- [16]: https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html
+ [17]: https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html
 
 ## 업그레이드 1.7.0 프로젝트 1.8.x를
 
@@ -491,7 +518,11 @@ platform add ios`.
 
 4.  (위의 2 단계에서 파일을 먼저 백업) 어떤 오래 된 파일을 대체 하는 디스크에 1.5.0-based 프로젝트 디렉토리에 새 프로젝트에서이 파일을 복사:
     
-        AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m Cordova.plist
+        AppDelegate.h
+        AppDelegate.m
+        MainViewController.h
+        MainViewController.m
+        Cordova.plist
         
 
 5.  모든 새로운 추가 `MainViewController` 및 `AppDelegate` 파일을 Xcode 프로젝트.
@@ -504,7 +535,7 @@ platform add ios`.
 
 9.  모든 설정, **플러그인** 및 **ExternalHosts** 항목에 새로운 당신의 **백업 Cordova.plist** 했다 통합`Cordova.plist`.
 
-10. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 및 `AppDelegate.m` 를 새로운 AppDelegate 파일. 모든 `UIWebViewDelegate` 또는 `CDVCommandDelegate` 에서 코드 `AppDelegate.m` 에 들어갈 필요가 있을 것 이다 `MainViewController.m` 지금 (해당 파일에서 섹션을 주석 참조).
+10. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `AppDelegate.h` 와 `AppDelegate.m` 에 새로운 `AppDelegate` 파일. 모든 `UIWebViewDelegate` 또는 `CDVCommandDelegate` 에서 코드 `AppDelegate.m` 로 갈 필요가 `MainViewController.m` 지금 (해당 파일에서 주석 처리 섹션 참조).
 
 11. 당신은 당신의 백업에 있는 모든 프로젝트 관련 코드 통합 `MainViewController.h` 및 `MainViewController.m` 를 새로운 MainViewController 파일.
 
@@ -583,7 +614,7 @@ platform add ios`.
 
 32. 바꾸기 문자열 찾기 문자열 및 **CDV** **PG** 를 입력 한 다음 **모두 바꾸기** 단추를 누릅니다.
 
-33. **명령 B** 구축 하기 위해, 당신은 아직도 것입니다 당신이 없애 수 있는 미래에 사용이 중단 된 (참조 `CDVDeprecated.h` . 예를 들어, 바꾸기 코드에서 사용할 클래스를 CDV * PG *).
+33. **명령 B** 빌드를 누릅니다. 당신은 여전히 당신은 없애 수 있는 미래에 사용이 중단 된 (참조 `CDVDeprecated.h` . 예를 들어, 바꾸기 코드에서 사용할 클래스를 CDV * PG *).
 
 ## 1.4.1에 업그레이드 1.4.0 프로젝트
 
