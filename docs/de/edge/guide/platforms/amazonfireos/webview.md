@@ -14,19 +14,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android Webansichten für
+# Amazon Fire OS Webansichten für
 
-In diesem Abschnitt veranschaulicht, wie eine Cordova-fähigen WebView Komponente innerhalb einer größeren Android Anwendung einbetten. Details darüber, wie diese Komponenten miteinander kommunizieren können finden Sie unter Application Plugins.
+Beginnend mit 3.0.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwendungen. Amazon Fire OS bezieht sich auf diese Komponente als `CordovaWebView` . `CordovaWebView`erweitert Amazon WebView, die auf der open-Source-Projekt Chromium basiert. Durch die Nutzung dieser Funktion, können Ihre Webanwendungen der neuesten HTML5-Web-Standards, die in einem modernen Web-Runtime-Engine ausgeführt nutzen.
 
-Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich vertraut mit der Android-Plattform-Guide und haben die neuesten Android SDK installiert, bevor Sie versuchen die ungewöhnlicheren Entwicklungsoption einen WebView-Einbettung. Beginnend mit Cordova 1,9, die Android-Plattform setzt auf eine `CordovaWebView` -Komponente, die auf ein Vermächtnis baut `CordovaActivity` Komponente, die vor der 1.9 Version stammt.
+## Voraussetzungen
 
-1.  Um diese Anweisungen befolgen, stellen Sie sicher, dass Sie die neueste Cordova-Verteilung. Von [cordova.apache.org][1] herunterladen Sie und entpacken Sie das Android-Paket.
+*   Cordova 3.0.0 oder größer
 
-2.  Navigieren Sie zu des Android-Pakets `/framework` Verzeichnis und führen `ant jar` . Es schafft die Cordova `.jar` Datei, bildete sich als`/framework/cordova-x.x.x.jar`.
+*   Android SDK aktualisiert, um neuesten SDK
 
-3.  Kopie der `.jar` Datei in des Android-Projekts `/libs` Verzeichnis.
+*   Amazon WebView SDK
 
-4.  Fügen Sie Folgendes in der Anwendung `/res/xml/main.xml` -Datei, mit der `layout_height` , `layout_width` und `id` die Anwendung angepasst:
+## Anleitung zur Verwendung von CordovaWebView in einem Amazon-Feuer-OS-Projekt
+
+1.  Download [Amazon WebView SDK][1] zu erweitern, und kopieren Sie die awv_interface.jar in `/framework/libs` Verzeichnis. Erstellen einer Libs / Ordner, wenn es nicht vorhanden ist.
+
+2.  `cd`in `/framework` und `ant jar` baut die Cordova-Jar. Es schafft die .jar-Datei als `cordova-x.x.x.jar` in das `/framework` Verzeichnis.
+
+3.  Bearbeiten der Anwendung `main.xml` Datei (unter `/res/layout` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -34,7 +40,7 @@ Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich 
             android:layout_height="match_parent" />
         
 
-5.  Die Aktivität ändern, sodass es implementiert die `CordovaInterface` . Es sollte die enthalten Methoden implementieren. Vielleicht möchten Sie Kopieren von `/framework/src/org/apache/cordova/CordovaActivity.java` , oder sonst auf eigene Faust zu realisieren. Das folgende Codefragment zeigt eine einfache Anwendung, die auf die Schnittstelle beruht. Beachten Sie, wie die referenzierten anzeigen-Id entspricht der `id` in das XML-Fragment oben angegebene Attribut:
+4.  Ihre Aktivität ändern, sodass es implementiert die `CordovaInterface` . Sie sollten die enthaltenen Methoden implementieren. Vielleicht möchten Sie Kopieren von `/framework/src/org/apache/cordova/CordovaActivity.java` , oder setzen sie auf eigene Faust. Das folgende Codefragment zeigt eine einfache Anwendung, die die Schnittstelle verwendet. Beachten Sie, wie die referenzierten anzeigen-Id entspricht der `id` in das XML-Fragment oben angegebene Attribut:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -49,8 +55,10 @@ Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich 
             }
         
 
-6.  Wenn die Anwendung die Kamera benutzen muss, implementieren Sie Folgendes:
-    
+ [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+
+Wenn Sie die Kamera verwenden, sollten Sie dies auch implementieren:
+
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -66,16 +74,16 @@ Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich 
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-        
+    
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+    
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-        
+        }
+    
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -93,18 +101,16 @@ Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich 
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
-        
-
-7.  Denken Sie daran, den Threadpool hinzufügen, sonst Plugins keine Threads für die Ausführung:
     
+
+Denken Sie daran, den Threadpool hinzufügen, sonst die Plugins keine Threads ausgeführt:
+
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-        
+    
 
-8.  Kopieren von HTML und JavaScript-Dateien der Anwendung für des Android-Projekts `/assets/www` Verzeichnis.
+1.  Kopieren Sie Ihre Anwendung HTML und JavaScript-Dateien zu Ihrem Amazon-Feuer-OS-Projekts `/assets/www` Verzeichnis.
 
-9.  Kopie der `config.xml` -Datei `/framework/res/xml` in des Projekts `/res/xml` Verzeichnis.
-
- [1]: http://cordova.apache.org
+2.  Kopie `config.xml` von `/framework/res/xml` zu Ihrem Projekts `/res/xml` Verzeichnis.
