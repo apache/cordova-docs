@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ---
 
-# La interfaz de línea de comandos
+# L'Interface de ligne de commande
 
 Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma (véase la introducción para una descripción de los distintos flujos de trabajo). Sin embargo, también puede utilizar la CLI para inicializar el código del proyecto, tras lo cual utiliza de diversas plataformas SDK y herramientas de shell para desarrollo continuo.
 

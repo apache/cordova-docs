@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Almacenamiento de información
+# Almacenamiento
 
 > Un Resumen de las opciones de almacenamiento para Córdoba.
 

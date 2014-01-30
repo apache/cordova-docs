@@ -50,7 +50,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Использование Plugman для управления плагинами
+        Использование Plugman для управления расширениями
       </h2>
       
       <span>Использование Plugman дл управления плагинами без CLI</span>
