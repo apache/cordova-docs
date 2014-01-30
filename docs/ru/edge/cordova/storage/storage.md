@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Хранение данных
+# Хранилище
 
 > Обзор вариантов хранения данных для Cordova.
 
