@@ -50,7 +50,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Использование Plugman для управления плагинами
+        Использование Plugman для управления расширениями
       </h2>
       
       <span>Использование Plugman дл управления плагинами без CLI</span>
@@ -92,7 +92,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Инструкция по доступу к внешним ресурсам (Whitelist)
+        Инструкция по доступу к внешним ресурсам
       </h2>
       
       <span>Разрешите приложению доступ к внешним ресурсам.</span>

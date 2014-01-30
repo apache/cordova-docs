@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Iconos y pantallas de inicio
+# Iconos y pantallas de Splash
 
 Esta sección le muestra cómo configurar de una aplicación icono y pantalla opcional para varias plataformas, tanto si se trabaja en la CLI de Cordova (descrito en la interfaz de línea de comandos) o si se utilizan herramientas específicas de la plataforma SDK (detallada en las guías de plataforma).
 
