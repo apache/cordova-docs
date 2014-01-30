@@ -37,7 +37,7 @@ Il `options.type` può essere 'decimale', '%' o 'valuta'.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

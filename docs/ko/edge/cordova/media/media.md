@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**참고:** 현재 구현 미디어 캡처에 대 한 W3C 사양을 준수 하지 않는 및 편의 위해서만 제공 됩니다. 미래 구현 최신 W3C 사양을 준수 한다 고 현재 Api 사용 중지 될 수 있습니다.
+**참고**: 현재 구현 미디어 캡처에 대 한 W3C 사양을 준수 하지 않는 및 편의 위해서만 제공 됩니다. 미래 구현 최신 W3C 사양을 준수 한다 고 현재 Api 사용 중지 될 수 있습니다.
 
 ## 매개 변수
 
@@ -76,7 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7.5
 *   Tizen
@@ -86,8 +86,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 버전 3.0, 코르도바 *플러그인*으로 장치 수준 Api를 구현합니다. CLI의 사용 `plugin` 명령 설명에 명령줄 인터페이스를 추가 하거나 프로젝트에 대 한이 기능을 제거 하려면:
 
-        $ 코르도바 플러그인 추가 org.apache.cordova.media $ 코르도바 플러그인 ls ['org.apache.cordova.media'] $ 코르도바 플러그인 rm org.apache.cordova.media
-     
+        $ 코르도바 플러그인 추가 org.apache.cordova.media $ 코르도바 플러그인 ls ['org.apache.cordova.media'] $ 코르도바 플러그인 rm org.apache.cordova.media 
+    
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
 
@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Media">
-            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />
@@ -134,9 +134,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
 
-### Windows Phone 단점
+## Windows Phone 단점
 
 *   한 번에 하나의 미디어 파일을 다시 재생할 수 있습니다.
 

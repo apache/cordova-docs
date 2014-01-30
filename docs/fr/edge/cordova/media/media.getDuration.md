@@ -23,24 +23,24 @@ Retourne la durée d'un fichier audio.
 
 ## Description
 
-La `media.getDuration` méthode s'exécute de façon synchrone, retournant la durée du fichier audio en quelques secondes, si elle est connue. Si on ne connaît pas la durée, elle retourne la valeur -1.
+La méthode `media.getDuration` s'exécute de façon synchrone, retournant la durée du fichier audio en secondes si celle-ci est connue. Dans le cas contraire, la valeur de retour est -1.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
-*   Paciarelli
+*   Tizen
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Audio player
+    // lecteur audio
     //
     var my_media = new Media(src, onSuccess, onError);
     
-    // Get duration
+    // récupère la durée
     var counter = 0;
     var timerDur = setInterval(function() {
         counter = counter + 100;
@@ -50,7 +50,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
         var dur = my_media.getDuration();
         if (dur > 0) {
             clearInterval(timerDur);
-            document.getElementById('audio_duration').innerHTML = (dur) + " sec";
+            document.getElementById('audio_duration').innerHTML = (dur) + " secondes";
         }
     }, 100);
     
@@ -61,57 +61,57 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for device API libraries to load
+            // attend que les API de l'appareil soient chargées
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // device APIs are available
+            // les API de l'appareil sont disponibles
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                // Create Media object from src
+                // crée un objet média à partir de src
                 my_media = new Media(src, onSuccess, onError);
     
-                // Play audio
+                // lance la lecture du clip audio
                 my_media.play();
     
-                // Update my_media position every second
+                // met à jour la position de my_media à chaque seconde
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // récupère la position de lecture de my_media
                         my_media.getCurrentPosition(
-                            // success callback
+                            // fonction callback de succès
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudioPosition((position) + " secondes");
                                 }
                             },
-                            // error callback
+                            // fonction callback d'erreur
                             function(e) {
-                                console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                console.log("Erreur lors de la récupération de la position : " + e);
+                                setAudioPosition("Erreur : " + e);
                             }
                         );
                     }, 1000);
                 }
             }
     
-            // Pause audio
+            // met en pause la lecture du clip audio
             //
             function pauseAudio() {
                 if (my_media) {
@@ -119,7 +119,7 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
                 }
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -129,20 +129,20 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succès");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' +
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -151,9 +151,9 @@ La `media.getDuration` méthode s'exécute de façon synchrone, retournant la du
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audi</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Mettre en pause la lecture</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>

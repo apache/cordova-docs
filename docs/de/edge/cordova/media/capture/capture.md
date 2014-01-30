@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > Ermöglicht den Zugriff auf des Geräts Audio-, Bild- und video-Capture-Funktionen.
 
-**Wichtige Datenschutzhinweis:** Erfassung und Verwendung von Bildern, Video oder Audio von Kamera oder das Mikrofon des Geräts wirft wichtige Datenschutzprobleme. Ihre app-Datenschutzerklärung sollten besprechen, wie die app solche Sensoren verwendet und ob die aufgezeichneten Daten mit irgendwelchen anderen Parteien geteilt werden. Außerdem, wenn die app-Nutzung der Kamera oder Mikrofon in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie bereitstellen eine just-in-Time-Bekanntmachung vor Ihrer Anwendung den Zugriff auf die Kamera oder das Mikrofon (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf die Kamera oder das Mikrofon einholen. Weitere Informationen finden Sie in der Datenschutz-Guide.
+**Warnung**: Erfassung und Verwendung von Bildern, Video oder Audio von Kamera oder das Mikrofon des Geräts wirft wichtige Privatsphäre Fragen. Ihre app-Datenschutzerklärung sollten besprechen, wie die app solche Sensoren verwendet und ob die aufgezeichneten Daten mit irgendwelchen anderen Parteien geteilt werden. Zusätzlich wenn die app-Nutzung der Kamera oder Mikrofon in der Benutzeroberfläche nicht offensichtlich ist, sollten Sie eine just-in-Time Ihnen vorher die app die Kamera oder das Mikrofon zugreift (wenn das Betriebssystem des Geräts bereits tun nicht). Diese Benachrichtigung sollte der gleichen Informationen, die vorstehend, sowie die Zustimmung des Benutzers (z.B. durch Präsentation Entscheidungen für das **OK** und **Nein danke**). Beachten Sie, dass einige app-Marktplätze können Ihre app eine Frist von just-in-Time und Erlaubnis des Benutzers vor dem Zugriff auf die Kamera oder das Mikrofon einholen. Weitere Informationen finden Sie in der Datenschutz-Guide.
 
 ## Objekte
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Anwendungsbereich
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+Das `capture` -Objekt zugeordnet ist das `navigator.device` -Objekt, und daher hat globalen Gültigkeitsbereich.
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -66,7 +66,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -77,7 +77,8 @@ Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden 
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
@@ -85,14 +86,18 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
 *   Android
     
-        (in app/res/xml/plugins.xml)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
         <feature name="Capture">
-            <param name="android-package" value="org.apache.cordova.Capture" />
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   BlackBerry WebWorks
@@ -107,7 +112,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="Capture">
             <param name="ios-package" value="CDVCapture" />
@@ -125,4 +130,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </Capabilities>
         
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

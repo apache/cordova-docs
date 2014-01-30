@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**Примечание:** InAppBrowser окно ведет себя как стандартный веб-браузер и не может получить доступ к Cordova интерфейсов API.
+**Примечание**: InAppBrowser окно ведет себя как стандартный веб-браузер и не может доступ API Cordova.
 
 ## Описание
 
@@ -48,14 +48,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
 
-*   Android (в`app/res/xml/config.xml`)
+*   Android (в`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.
 
 # addEventListener
 
@@ -207,7 +207,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     ref.show();
     
 
-*   **ref:** ссылка на окно (InAppBrowser`InAppBrowser`)
+*   **ссылка**: ссылка на окно (InAppBrowser`InAppBrowser`)
 
 ## Поддерживаемые платформы
 
@@ -354,7 +354,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -456,10 +456,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

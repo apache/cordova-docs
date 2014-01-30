@@ -27,7 +27,7 @@ Contient des propriétés qui peuvent être utilisées pour filtrer les résulta
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8

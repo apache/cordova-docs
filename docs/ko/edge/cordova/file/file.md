@@ -48,11 +48,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin rm org.apache.cordova.file
     
 
-파일 전송 플러그인을 사용 하 여 추가 해야 합니다을 별도로.
+추가 해야 합니다에 `file-transfer` 플러그인 별도로. CLI가 자동으로 추가 된 `file` 플러그인 종속성, 그래서 거기에 별도로 추가할 필요가 없습니다으로:
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
-        [ 'org.apache.cordova.file-transfer' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.file-transfer' ]
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
@@ -60,12 +61,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   안 드 로이드
     
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+        (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
         <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -91,7 +102,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -101,4 +112,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

@@ -16,35 +16,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.seekTo
 
-Définit la position actuelle dans un fichier audio.
+Définit la position de lecture actuelle dans un fichier audio.
 
     media.seekTo(milliseconds);
     
 
 ## Paramètres
 
-*   **millisecondes**: la mesure de la position de lecture dans l'audio, la valeur en millisecondes.
+*   **milliseconds** : la nouvelle position de lecture au sein du fichier audio, en millisecondes.
 
 ## Description
 
-Le `media.seekTo` s'exécute de façon asynchrone, mise à jour de la position actuelle de la lecture dans un fichier audio, référencé par un `Media` objet. Met également à jour la `Media` de l'objet `position` paramètre.
+La méthode `media.seekTo` s'exécute de façon asynchrone, elle permet la mise à jour de la position de lecture au sein d'un fichier audio, référencé par un objet `Media`. Elle met également à jour la valeur de la propriété `position` de l'objet `Media` correspondant.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
 *   BlackBerry WebWorks (OS 6.0 et supérieur)
 *   iOS
 *   Windows Phone 7 et 8
-*   Paciarelli
+*   Tizen
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Audio player
+    // lecteur audio
     //
     var my_media = new Media(src, onSuccess, onError);
         my_media.play();
-    // SeekTo to 10 seconds after 5 seconds
+    // avance la position à 10 secondes du début du fichier après 5 secondes
     setTimeout(function() {
         my_media.seekTo(10000);
     }, 5000);
@@ -52,52 +52,52 @@ Le `media.seekTo` s'exécute de façon asynchrone, mise à jour de la position a
 
 ## Exemple complet
 
-        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for device API libraries to load
+            // attend que les API de l'appareil soient chargées
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // device APIs are available
+            // les API de l'appareil sont disponibles
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                // Create Media object from src
+                // crée un objet média à partir de src
                 my_media = new Media(src, onSuccess, onError);
     
-                // Play audio
+                // lance la lecture du clip audio
                 my_media.play();
     
-                // Update media position every second
+                // met à jour la position de my_media à chaque seconde
                 mediaTimer = setInterval(function() {
-                    // get media position
+                    // récupère la position de lecture de my_media
                     my_media.getCurrentPosition(
-                        // success callback
+                        // fonction callback de succès
                         function(position) {
                             if (position > -1) {
-                                setAudioPosition(position + " sec");
+                                setAudioPosition((position) + " secondes");
                             }
                         },
-                        // error callback
+                        // fonction callback d'erreur
                         function(e) {
-                            console.log("Error getting pos=" + e);
+                            console.log("Erreur lors de la récupération de la position : " + e);
                         }
                     );
                 }, 1000);
@@ -108,7 +108,7 @@ Le `media.seekTo` s'exécute de façon asynchrone, mise à jour de la position a
                 }, 5000);
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -118,20 +118,20 @@ Le `media.seekTo` s'exécute de façon asynchrone, mise à jour de la position a
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succès");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' +
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -140,13 +140,13 @@ Le `media.seekTo` s'exécute de façon asynchrone, mise à jour de la position a
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audio</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>
     
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-*   Pas pris en charge sur les périphériques BlackBerry OS 5.
+*   Cette méthode n'est pas prise en charge sur les périphériques BlackBerry OS 5.

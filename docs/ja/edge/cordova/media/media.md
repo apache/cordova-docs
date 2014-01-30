@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**注：**現在の実装では、メディアのキャプチャのための W3C 仕様に準拠していないとは便宜上提供されるだけです。 将来の実装を最新の W3C 仕様に準拠し、現在 Api をとがめることがあります。
+**注**: 現在の実装では、メディアのキャプチャのための W3C 仕様に準拠していないとは便宜上提供されるだけです。 将来の実装を最新の W3C 仕様に準拠し、現在 Api をとがめることがあります。
 
 ## パラメーター
 
@@ -76,7 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7.5
 *   Tizen
@@ -86,8 +86,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 バージョン 3.0 は、コルドバ*のプラグイン*としてデバイス レベルの Api を実装します。 CLI の使用 `plugin` のコマンドライン ・ インタ フェースを追加または削除、プロジェクトに対してこの機能を記載されているコマンド。
 
-        $ コルドバ プラグイン追加 org.apache.cordova.media $ コルドバ プラグイン ['org.apache.cordova.media'] ls $ コルドバ プラグイン rm org.apache.cordova.media
-     
+        $ コルドバ プラグイン追加 org.apache.cordova.media $ コルドバ プラグイン ['org.apache.cordova.media'] ls $ コルドバ プラグイン rm org.apache.cordova.media 
+    
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
 
@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Media">
-            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />
@@ -134,9 +134,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
 
-### Windows Phone の癖
+## Windows Phone の癖
 
 *   のみ 1 つのメディア ファイルは、一度に再生できます。
 

@@ -37,14 +37,14 @@ El `FileTransfer` objeto proporciona una manera para subir archivos a un servido
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
 
 ## subir
 
-**Parámetros:**
+**Parámetros**:
 
 *   **ruta**: ruta de acceso completa del archivo en el dispositivo.
 
@@ -192,7 +192,7 @@ Establezca el `chunkedMode` opción de `false` para evitar problemas de subir a 
 
 ## descargar
 
-**Parámetros:**
+**Parámetros**:
 
 *   **fuente**: dirección URL del servidor para descargar el archivo, como codificada por`encodeURI()`.
 
@@ -202,20 +202,35 @@ Establezca el `chunkedMode` opción de `false` para evitar problemas de subir a 
 
 *   **errorCallback**: una devolución de llamada que se ejecuta si se produce un error al recuperar los `Metadata` . Invocado con un `FileTransferError` objeto. *(Función)*
 
-*   **trustAllHosts**: parámetro opcional, por defecto es `false` . Si a `true` entonces aceptará todos los certificados de seguridad. Esto es útil como Android rechaza los certificados de seguridad firmado del uno mismo. No se recomienda para uso productivo. Compatible con iOS y Android. *(boolean)*
+*   **trustAllHosts**: parámetro opcional, por defecto es `false` . Si establece en `true` , acepta todos los certificados de seguridad. Esto es útil porque Android rechaza certificados autofirmados seguridad. No se recomienda para uso productivo. Compatible con iOS y Android. *(boolean)*
 
 *   **Opciones**: parámetros opcionales, actualmente sólo soporta cabeceras (como autorización (autenticación básica), etc.).
 
 **Ejemplo rápido**
 
-    // !! Asume filePath es una ruta válida en el dispositivo var fileTransfer = new FileTransfer();
-    var uri = encodeURI ("http://some.server.com/download.php");
+    // !! Assumes filePath is a valid path on the device
     
-    fileTransfer.download (uri, filePath, function(entry) {console.log ("descarga completa:" + entry.fullPath);
-        }, function(error) {console.log ("error al descargar el origen" + error.source);
-            Console.log ("descargar error objetivo" + error.target);
-            Console.log ("código de error de carga" + error.code);
-        }, falso, {encabezados: {"Autorización": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA =="}});
+    var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://some.server.com/download.php");
+    
+    fileTransfer.download(
+        uri,
+        filePath,
+        function(entry) {
+            console.log("download complete: " + entry.fullPath);
+        },
+        function(error) {
+            console.log("download error source " + error.source);
+            console.log("download error target " + error.target);
+            console.log("upload error code" + error.code);
+        },
+        false,
+        {
+            headers: {
+                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+            }
+        }
+    );
     
 
 ## abortar
@@ -229,20 +244,27 @@ Aborta a una transferencia en curso. El callback onerror se pasa un objeto FileT
 
 **Ejemplo rápido**
 
-    // !! Asume fileURI variable contiene un URI válido para un archivo de texto en la victoria de dispositivo var function(r) = {console.log ("no se debe llamar.");}
+    // !! Assumes variable fileURI contains a valid URI to a text file on the device
     
-    var fallar = function(error) {/ / error.code == FileTransferError.ABORT_ERR alert ("ha ocurrido un error: código =" + error.code);
-        Console.log ("error al cargar el origen" + error.source);
-        Console.log ("upload error objetivo" + error.target);}
+    var win = function(r) {
+        console.log("Should not be called.");
+    }
     
-    var opciones = new FileUploadOptions();
+    var fail = function(error) {
+        // error.code == FileTransferError.ABORT_ERR
+        alert("An error has occurred: Code = " + error.code);
+        console.log("upload error source " + error.source);
+        console.log("upload error target " + error.target);
+    }
+    
+    var options = new FileUploadOptions();
     options.fileKey="file";
     options.fileName="myphoto.jpg";
     options.mimeType="image/jpeg";
     
     var ft = new FileTransfer();
-    Ft.upload (fileURI, encodeURI ("http://some.server.com/upload.php"), win, fail, opciones);
-    Ft.Abort();
+    ft.upload(fileURI, encodeURI("http://some.server.com/upload.php"), win, fail, options);
+    ft.abort();
     
 
 ## OnProgress

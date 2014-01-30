@@ -39,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド 2.X
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **フォーマット**： 部分的にサポートされると読み取り専用です。 連結を返します `honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` と`honorificSuffix`.
 
-## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
+## ブラックベリー WebWorks 5.0 + 癖
 
 *   **フォーマット**： 部分的にサポートされます。ブラックベリー **firstName**と**lastName**フィールドの連結を返します。
 

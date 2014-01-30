@@ -36,7 +36,7 @@ Die meisten Implementierungen von Cordova ein native Dialogfeld für dieses Feat
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8
@@ -44,7 +44,7 @@ Die meisten Implementierungen von Cordova ein native Dialogfeld für dieses Feat
 
 ## Kleines Beispiel
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something

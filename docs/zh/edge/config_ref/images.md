@@ -71,7 +71,7 @@ Android 系統指定這兩個面向肖像和風景閃屏圖像為低、 中、 �
         android/screen-xhdpi-portrait.png
     
 
-IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯示和不同的方向。*568 H*檔是為 iPhone 5 的高螢幕自訂：
+IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯示和不同的方向。*568 H*檔適用于 iPhone 5 的高螢幕：
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,13 +109,13 @@ IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯
     <preference name="splashScreenDelay", 10000 />
     
 
-第一行設置為初始螢幕顯示的圖像。如果你命名您的圖像什麼除了 `splash.png` ，您需要修改這條線。
+第一行設置為初始螢幕顯示的圖像。如果你命名圖像什麼除了 `splash.png` ，您需要修改這條線。
 
 第二行設置多久閃屏顯示以毫秒為單位的延遲。 遣散閃屏，一旦接收到 app `deviceready` 事件，調用 `navigator.splashscreen.hide()` 方法。
 
 ## IOS 平臺的初始螢幕
 
-將您的初始螢幕圖像複製到 iOS 專案 `Resources/splash` 目錄。 僅添加您想要支援的比如 iPad 或者 iPhone 的設備圖像。 每個圖像的大小應為：
+將初始螢幕圖像拷貝到 iOS 專案 `Resources/splash` 目錄。 只添加那些您想要支援的比如 iPad 或者 iPhone 的設備的圖像。 每個圖像的大小應為：
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 圖元為單位）
@@ -127,7 +127,7 @@ IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯
 
 ## 10 黑莓平臺的初始螢幕
 
-將您的初始螢幕圖像複製到專案的 `res/screen/blackberry10` 目錄。檔的名稱應該是：
+將初始螢幕圖像複製到專案的 `res/screen/blackberry10` 目錄。檔的名稱應該是：
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

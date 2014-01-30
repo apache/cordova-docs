@@ -38,4 +38,4 @@ A `FileUploadOptions` 可以將物件傳遞給 `FileTransfer` 物件的 `upload(
 
 ## WP7 怪癖
 
-*   **chunkedMode：**： 在 WP7 上可以忽略。
+*   **chunkedMode**： 在 WP7 上可以忽略。

@@ -26,7 +26,7 @@ Cette propriété offre un moyen rapide pour déterminer l'état et le type de l
 
 *   iOS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   Paciarelli
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -102,14 +102,14 @@ Jusqu'à Cordova 2.3.0, l'objet `Connection` était accessible via `navigator.ne
 
 ## Notes au sujet d'iOS
 
-*   iOS ne permet pas de détecter le type de connexion pour un réseau cellulaire. 
+*   iOS ne peut pas détecter le type de connexion au réseau cellulaire. 
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 
 ## Notes au sujet de Windows Phone
 
 *   When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
 
-*   Windows Phone ne permet pas de détecter le type de connexion pour un réseau cellulaire.
+*   Windows Phone ne peut pas détecter le type de connexion au réseau cellulaire.
     
     *   `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
 

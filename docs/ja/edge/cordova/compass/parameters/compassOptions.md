@@ -24,16 +24,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **フィルター**: watchHeading 成功時のコールバックを開始する必要度の変化。*(数)*
 
-Android の癖
+## Android の癖
 
----
-
-*   `filter`サポートされていません。
+*   サポートされていません`filter`.
 
 ## Tizen の癖
 
-*   `filter`サポートされていません。
+*   サポートされていません`filter`.
 
 ## Windows Phone 7 と 8 癖
 
-*   `filter`サポートされていません。
+*   サポートされていません`filter`.

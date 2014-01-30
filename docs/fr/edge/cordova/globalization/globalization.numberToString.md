@@ -16,39 +16,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.numberToString
 
-Renvoie un nombre mis en forme comme une chaîne selon les préférences de l'utilisateur du client.
+Renvoie un nombre formaté dans une chaîne de caractères en tenant compte des préférences utilisateur du client.
 
     navigator.globalization.numberToString(number, successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne la chaîne mise en forme de nombre à la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
+Transmet le nombre formaté en paramètre à la fonction `successCallback` sous la forme d'un objet `properties`. Cet contient une propriété `value` dont la valeur est de type `String`.
 
-S'il y a une erreur de mise en forme le nombre, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
+Si une erreur survient lors du formatage du nombre, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est `GlobalizationError.FORMATTING_ERROR`.
 
-Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
+Le paramètre `options` est facultatif, sa valeur par défaut est :
 
-    {type: « decimal »}
+    {type:'decimal'}
     
 
-Le `options.type` peut être « decimal », « % » ou « monnaie ».
+Les valeurs autorisées pour la propriété `options.type` sont "decimal", "percent" et "currency".
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'afficher une boîte de dialogue contextuelle avec un texte semblable à `number: 3.142` :
+Si la langue du navigateur est réglée sur `fr_FR`, une fenêtre popup contenant `number : 3,142` est affichée :
 
     navigator.globalization.numberToString(
         3.1415926,
-        function (number) {alert('number: ' + number.value + '\n');},
-        function () {alert('Error getting number\n');},
+        function (number) {alert('number : ' + number.value + '\n');},
+        function () {alert('Erreur lors du formatage du nombre\n');},
         {type:'decimal'}
     );
     
@@ -58,15 +58,15 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'affi
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>numberToString Example</title>
+        <title>Exemple numberToString</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkNumber() {
           navigator.globalization.numberToString(
             3.1415926,
-            function (number) {alert('number: ' + number.value + '\n');},
-            function () {alert('Error getting number\n');},
+            function (number) {alert('number : ' + number.value + '\n');},
+            function () {alert('Erreur lors du formatage du nombre\n');},
             {type:'decimal'}
           );
         }
@@ -74,6 +74,6 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'affi
         </script>
       </head>
       <body>
-        <button onclick="checkNumber()">Click for number</button>
+        <button onclick="checkNumber()">Cliquer ici pour formater le nombre</button>
       </body>
     </html>

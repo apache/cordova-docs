@@ -125,7 +125,7 @@ Una vez que el emulador está instalado y en ejecución, ejecutar cualquiera de 
 
 Si se le solicita si un dispositivo está conectado al ordenador, respuesta es no.
 
-**Nota:** En BlackBerry OS 5, la aplicación está instalada en el `Downloads` Directorio.
+**Nota**: el BlackBerry OS 5, la aplicación está instalada en el `Downloads` Directorio.
 
 ## Implementar al dispositivo
 
@@ -144,7 +144,7 @@ Luego del directorio del proyecto, ejecutar cualquiera de los comandos que lo ha
 
 Si se le solicita si un dispositivo está conectado al ordenador, responda sí.
 
-**Nota:** En BlackBerry OS 5, la aplicación está instalada en el `Downloads` Directorio.
+**Nota**: el BlackBerry OS 5, la aplicación está instalada en el `Downloads` Directorio.
 
 ## Información adicional
 

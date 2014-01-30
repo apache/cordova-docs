@@ -48,11 +48,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin rm org.apache.cordova.file
     
 
-Чтобы использовать плагин передачи файлов необходимо добавить что отдельно.
+Вы должны добавить `file-transfer` плагин отдельно. CLI автоматически добавляет `file` плагин как зависимость, так что не нужно отдельно добавить:
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
-        [ 'org.apache.cordova.file-transfer' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.file-transfer' ]
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
@@ -60,12 +61,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Андроид
     
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+        (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
         <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -91,7 +102,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -101,4 +112,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.

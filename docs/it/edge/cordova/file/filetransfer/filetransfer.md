@@ -37,14 +37,14 @@ Il `FileTransfer` oggetto fornisce un modo per caricare i file su un server remo
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
 
 ## caricare
 
-**Parametri:**
+**Parametri**:
 
 *   **filePath**: percorso completo del file sul dispositivo.
 
@@ -192,7 +192,7 @@ Impostare il `chunkedMode` opzione per `false` per evitare problemi di caricamen
 
 ## Scarica
 
-**Parametri:**
+**Parametri**:
 
 *   **fonte**: URL del server per scaricare il file, come codificato dal`encodeURI()`.
 
@@ -202,7 +202,7 @@ Impostare il `chunkedMode` opzione per `false` per evitare problemi di caricamen
 
 *   **errorCallback**: un callback che viene eseguito se si verifica un errore durante il recupero del `Metadata` . Invocato con un `FileTransferError` oggetto. *(Funzione)*
 
-*   **trustAllHosts**: parametro opzionale, valore predefinito è `false` . Se impostato su `true` poi accetterà tutti i certificati di sicurezza. Questo è utile come Android respinge certificati auto sicurezza firmato. Non raccomandato per uso in produzione. Supportato su Android e iOS. *(boolean)*
+*   **trustAllHosts**: parametro opzionale, valore predefinito è `false` . Se impostata su `true` , accetta tutti i certificati di sicurezza. Questo è utile perché Android respinge i certificati autofirmati sicurezza. Non raccomandato per uso in produzione. Supportato su Android e iOS. *(boolean)*
 
 *   **opzioni**: parametri facoltativi, attualmente solo supporti intestazioni (ad esempio autorizzazione (autenticazione di base), ecc.).
 

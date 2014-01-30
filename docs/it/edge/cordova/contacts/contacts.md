@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > Il `contacts` oggetto consente di accedere al database di contatti del dispositivo.
 
-**Nota importante sulla privacy:** Raccolta e utilizzo dei dati di contatto solleva questioni di privacy importante. Politica sulla privacy dell'app dovrebbe discutere come app utilizza i dati di contatto e se è condiviso con altre parti. Informazioni di contatto sono considerate sensibile perché rivela le persone con cui una persona comunica. Pertanto, oltre alla politica di privacy dell'app, è fortemente consigliabile fornendo un preavviso di just-in-time prima della tua app accedendo o utilizzando i dati di contatto (se il sistema operativo del dispositivo non farlo già). Tale comunicazione deve fornire le informazioni stesse notate sopra, oltre ad ottenere l'autorizzazione (ad esempio, presentando scelte per **OK** e **No grazie**). Si noti che alcuni mercati app possono richiedere l'app può fornire preavviso just-in-time e ottenere l'autorizzazione dell'utente prima di accedere ai dati di contatto. Un'esperienza utente chiara e facile--capisce che circonda l'uso del contatto dati verranno aiuterà a evitare la confusione dell'utente e percepito un uso improprio dei dati di contatto. Per ulteriori informazioni, vedere la guida sulla Privacy.
+**Avviso**: raccolta e utilizzo dei dati di contatto solleva questioni di privacy importante. Politica sulla privacy dell'app dovrebbe discutere come app utilizza i dati di contatto e se è condiviso con altre parti. Informazioni di contatto sono considerate sensibile perché rivela le persone con cui una persona comunica. Pertanto, oltre alla politica di privacy dell'app, è fortemente consigliabile fornendo un preavviso di just-in-time prima app accede o utilizza i dati di contatto, se il sistema operativo del dispositivo non farlo già. Tale comunicazione deve fornire le informazioni stesse notate sopra, oltre ad ottenere l'autorizzazione (ad esempio, presentando scelte per **OK** e **No grazie**). Si noti che alcuni mercati app possono richiedere l'app per fornire un preavviso di just-in-time e ottenere l'autorizzazione dell'utente prima di accedere ai dati di contatto. Un'esperienza utente chiara e facile--capisce che circonda l'uso del contatto dati aiuta a evitare la confusione dell'utente e percepito un uso improprio dei dati di contatto. Per ulteriori informazioni, vedere la guida sulla Privacy.
 
 ## Metodi
 
@@ -58,13 +58,13 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
     
         (in app/res/xml/config.xml)
         <feature name="Contacts">
-            <param name="android-package" value="org.apache.cordova.ContactManager" />
+            <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         </feature>
         
         (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         
 
 *   BlackBerry WebWorks
@@ -81,16 +81,15 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="Contacts">
             <param name="ios-package" value="CDVContacts" />
         </feature>
         
 
-*   Windows Phone
+*   Windows Phone (in`Properties/WPAppManifest.xml`)
     
-        (in Properties/WPAppManifest.xml)
         <Capabilities>
             <Capability Name="ID_CAP_CONTACTS" />
         </Capabilities>
@@ -100,4 +99,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

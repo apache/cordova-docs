@@ -29,7 +29,7 @@ platform add blackberry10`.
 
 4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` , etc..)
 
-5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie Einstellungen hier anstelle des Plattform-Verzeichnisses.
+5.  Kopie der `config.xml` -Datei in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Du musst Einstellungen hier anstatt innerhalb des Plattform-Verzeichnisses ändern.
 
 6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur Plugins markiert 3.0.0 und oben sind kompatibel mit CLI.
 
@@ -41,22 +41,22 @@ Bitte beachten Sie, dass die CLI die BlackBerry10-Plattform ausschließlich unte
 
 1.  Erstellen Sie ein neues Apache Cordova 3.0.0-Projekt mit Cordova CLI, wie in der Command-Line Interface beschrieben.
 
-2.  Fügen Sie Ihrer Plattformen die den Cordova Projekt, zum Beispiel:`cordova
+2.  Die Plattformen der Cordova Projekt fügen Sie hinzu, zum Beispiel:`cordova
 platform add blackberry10`.
 
 3.  Kopieren Sie den Inhalt des ursprünglichen Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
 
 4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `Resources` , etc..)
 
-5.  Kopie Ihrer `config.xml` in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Ändern Sie Einstellungen hier anstelle des Plattform-Verzeichnisses.
+5.  Kopie der `config.xml` -Datei in das `www` Verzeichnis und entfernen Sie alle Plugin-Definitionen. Du musst Einstellungen hier anstatt innerhalb des Plattform-Verzeichnisses ändern.
 
-6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
+6.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie unter Umständen hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
 7.  Erstellen und testen.
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 
-BlackBerry 10:
+Für BlackBerry 10:
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
 
@@ -70,7 +70,7 @@ BlackBerry 10:
 
 6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
-### BlackBerryOS/Textbuch
+Für BlackBerryOS/Textbuch:
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.9.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.9.0`.
 
@@ -92,9 +92,7 @@ BlackBerry 10:
 
 ## Upgrade 2.7.0 Projekte 2.8.0
 
-BlackBerry 10:
-
-BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Zeichenfolge enthält.
+BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwaltet. Die Anweisungen Migrieren Ihres Projekts für ein neues Projekt, anstatt ein vorhandenes Projekt, aufgrund der Komplexität der Aktualisierung eines alten Projekts zu aktualisieren. Auch beachten Sie, dass die Cordova-Js--Datei Skript heißt jetzt 'cordova.js' und nicht mehr eine Versionszeichenfolge enthält.
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 
@@ -108,7 +106,7 @@ BlackBerry 10 verwendet die neue CLI-Werkzeuge und Kern-APIs als Plugins verwalt
 
 6.  Aktualisieren von Cordova Skriptverweis in Ihre `www/index.html` Datei (und alle anderen Dateien, die den Skriptverweis enthalten) auf die neue hinzu `cordova.js` Datei.
 
-BlackBerryOS/Textbuch:
+Für BlackBerryOS/Textbuch:
 
 1.  Herunterladen Sie und extrahieren Sie die Cordova 2.8.0-Quelle zu einem permanenten Speicherort auf Ihrer Festplatte, zum Beispiel in`~/Cordova-2.8.0`.
 

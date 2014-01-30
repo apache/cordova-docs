@@ -30,7 +30,7 @@ Los detalles de cómo se genera un UUID son determinados por el fabricante del d
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8
@@ -47,8 +47,7 @@ Los detalles de cómo se genera un UUID son determinados por el fabricante del d
     // iPhone: (parafraseado de la documentación de la clase UIDevice) 
     // devuelve una cadena de valores hash creado a partir 
     //  de múltiples hardware identifica.
-    // Está garantizado para ser único para cada dispositivo y no puede ser atado 
-    // a la cuenta de usuario.
+    / / Está garantizado para ser única para cada dispositivo y no puede ser atado / / a la cuenta de usuario.
     // Windows Phone 7: devuelve un hash de dispositivo + usuario actual, 
     // si el usuario no está definido, un guid generado y persistirá hasta que se desinstala la aplicación 
     // 
@@ -92,7 +91,7 @@ Los detalles de cómo se genera un UUID son determinados por el fabricante del d
 
 ## iOS chanfle
 
-El `uuid` en iOS no es exclusiva de un dispositivo, pero varía para cada aplicación, para cada instalación. Cambia si borrar y volver a instalar la aplicación, y posiblemente también cuándo actualizar iOS, o incluso actualizar su aplicación por versión (evidente en iOS 5.1). El `uuid` no es un valor confiable.
+El `uuid` en iOS no es exclusiva de un dispositivo, pero varía para cada aplicación, para cada instalación. Cambia si puedes borrar y volver a instalar la aplicación, y posiblemente también cuándo actualizar iOS, o incluso mejorar la aplicación por la versión (evidente en iOS 5.1). El `uuid` no es un valor confiable.
 
 ## Windows Phone 7 y 8 rarezas
 

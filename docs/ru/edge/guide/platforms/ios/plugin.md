@@ -16,181 +16,163 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS плагины
 
-Плагин-это Objective-C класс, который расширяет `CDVPlugin` класс.
+Этот раздел содержит сведения о том, как реализовать код родной плагин на платформе iOS. Прежде чем читать это, увидеть приложения плагины обзор структуры плагина и его общий интерфейс JavaScript. Этот раздел продолжает демонстрировать образец *эхо* плагин, который общается с webview Кордова на родной платформе и обратно.
 
-Каждый класс плагин должен быть зарегистрирован как `<feature>` тег в `config.xml` файл. Именно через этот механизм что JavaScript `exec` метода `service` параметр сопоставляется Objective-C-класса.
+IOS плагин реализован как Objective-C класс, который расширяет `CDVPlugin` класс. Для JavaScript `exec` метода `service` параметр для сопоставления с Objective-C класс, каждый плагин должен быть зарегистрирован как `<feature>` в каталоге именованного приложения тег `config.xml` файл.
 
 ## Сопоставление классов плагина
 
-Часть JavaScript плагин всегда использует `cordova.exec` метод следующим образом:
+Часть JavaScript плагин использует `cordova.exec` метод следующим образом:
 
-    Exec (<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        Exec (<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
-Это маршалирует запрос от `UIWebView` родной стороне iOS, более или менее кипящей вплоть до вызова `action` метод `service` класса с аргументами, переданными в `args` массив.
+Это маршалирует запрос от `UIWebView` в сторону родной iOS эффективно вызова `action` метод `service` класса, с аргументами, переданными в `args` массив.
 
-Укажите плагин как `<feature>` тег в Кордова iOS приложения проекта `config.xml` файл.
+Укажите плагин как `<feature>` тег в Кордова iOS приложения проекта `config.xml` файл, используя `plugin.xml` файл, чтобы придать этой разметки автоматически, как описано в приложении плагины:
 
-    <feature name="LocalStorage">
-        <param name="ios-package" value="CDVLocalStorage" />
-    </feature>
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
+        </feature>
     
 
-Функция `name` должен соответствовать атрибут в JavaScript используется `exec` вызова `service` параметр и `value` атрибута должно соответствовать имени плагина Objective-C класса. `<param name>`всегда должно быть я `"ios-package"` . Если вы не будете следовать этой установки, плагин может компилировать, но не будет добраться на Cordova.
+Функция `name` атрибут должен соответствовать указан как JavaScript `exec` вызова `service` параметр. `value`Атрибут должен соответствовать имени плагина Objective-C класса. `<param>`Элемента `name` всегда должно быть `ios-package` . Если не следовать этим рекомендациям, может скомпилировать плагин, но Cordova до сих пор не может быть возможность доступа к ней.
 
 ## Плагин инициализации и жизни
 
-Для жизни каждого из них создается один экземпляр объекта плагин `UIWebView` . Плагины не создаются до тех пор, пока они сначала ссылается вызов из JavaScript, если не `<param>` с `onload` `name` атрибут имеет значение `"true"` в `config.xml` . Например:
+Для жизни каждого из них создается один экземпляр объекта плагин `UIWebView` . Плагины создаются обычно при первом обращении путем вызова из JavaScript. В противном случае они могут быть созданы путем установки `param` с именем `onload` для `true` в `config.xml` файл:
 
-    <feature name="Echo">
-        <param name="ios-package" value="Echo" />
-        <param name="onload" value="true" />
-    </feature>
+        <feature name="Echo">
+            <param name="ios-package" value="Echo" />
+            <param name="onload" value="true" />
+        </feature>
     
 
 Существует *нет* места для инициализатора для плагинов. Вместо этого следует использовать плагины `pluginInitialize` метод для их запуска логики.
 
-Плагины с долго выполняющихся запросов, фоновая активность (например, воспроизведение компакт-диска), слушателей или внутреннее состояние следует реализовать `onReset` метод и остановить или очистки этих мероприятий. Этот метод запускается при `UIWebView` переходит на новую страницу или обновления, которая перезагружает JavaScript.
+Плагины с долго выполняющихся запросов, фон деятельности, такие как воспроизведение мультимедиа, слушателей или что поддерживать внутреннее состояние следует осуществлять `onReset` метод для очистки этих мероприятий. Метод работает, когда `UIWebView` переходит на новую страницу или обновления, которая перезагружает JavaScript.
 
 ## Написание iOS Cordova плагин
 
-У нас есть JavaScript выстрелить плагин запрос на родной стороне. У нас есть плагин iOS Objective-C, должным образом сопоставлены через `config.xml` файл. Так как окончательный iOS плагин Objective-C класс выглядит?
+Вызов JavaScript запускает запрос плагин к родной стороне, и соответствующие iOS плагин Objective-C отображается правильно в `config.xml` файл, но как окончательный iOS Objective-C модуль класса взгляд? Все, что отправляется в плагин с JavaScript в `exec` функция передается в соответствующий класс плагин `action` метод. Метод плагин имеет подпись:
 
-Что получает разосланы плагин через JavaScript `exec` функция передается в соответствующий класс плагин `action` метод. Метод плагин имеет эта подпись:
-
-    - (void)myMethod:(CDVInvokedUrlCommand*)command
-    {
-        CDVPluginResult* pluginResult = nil;
-        NSString* myarg = [command.arguments objectAtIndex:0];
+        - (void)myMethod:(CDVInvokedUrlCommand*)command
+        {
+            CDVPluginResult* pluginResult = nil;
+            NSString* myarg = [command.arguments objectAtIndex:0];
     
-        if (myarg != nil) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        } else {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+            if (myarg != nil) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+            }
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    }
     
 
-1.  [CDVInvokedUrlCommand.h][1]
-
-2.  [CDVPluginResult.h][2]
-
-3.  [CDVCommandDelegate.h][3]
-
- [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h
- [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h
- [3]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h
+Для более подробной информации, см. `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)` , `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)` , и`[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
 
 ## iOS CDVPluginResult типы сообщений
 
-С помощью CDVPluginResult вы можете вернуть различные типы результатов вернуться к вашей обратных вызовов JavaScript, с помощью методов класса, которые выглядят как:
+Вы можете использовать `CDVPluginResult` для возвращения различных результата типа обратно в обратных вызовов JavaScript, с помощью методов класса, следовать этой схеме:
 
-    + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
-    
-
-Вы можете создать `String` , `Int` , `Double` , `Bool` , `Array` , `Dictionary` , `ArrayBuffer` , и `Multipart` типов. Или не придают любые аргументы (просто отправить статус). Или возвращает ошибку. Вы даже можете не посылать каких-либо плагин результат на всех, в этом случае функция обратного вызова не огонь.
-
-### Примечания
-
-*   `messageAsArrayBuffer`ожидает `NSData*` и преобразует в `ArrayBuffer` для вашего обратного вызова JavaScript (и `ArrayBuffers` направил плагин из JavaScript преобразуются в`NSData*`).
-*   `messageAsMultipart` ожидает `NSArray *` содержащие любой другой Поддерживаемые типы и посылает весь массив как `аргументы` для обратного вызова JavaScript. 
-    *   Галтель: это не просто синтаксический сахар (хотя это сладкое). Таким образом, все аргументы сериализуются и десериализуются в случае необходимости. Например, это безопасно вернуться `NSData*` как составной, но не как `Array` /`Dictionary`.
-
-## IOS эхо плагин плагин
-
-Мы хотели бы добавить следующее в проект `config.xml` файл:
-
-    <feature name="Echo">
-        <param name="ios-package" value="Echo" />
-    </feature>
+        + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
     
 
-Тогда мы хотели бы добавить следующие файлы ( `Echo.h` и `Echo.m` ) в директорию плагинов внутри нашего каталога приложений Cordova-iOS:
+Вы можете создать `String` , `Int` , `Double` , `Bool` , `Array` , `Dictionary` , `ArrayBuffer` , и `Multipart` типов. Вы можете также оставить вне каких-либо аргументов, чтобы отправить статус, или возвращает ошибку, или даже не решили отправить любой плагин результат, в этом случае срабатывает ни обратного вызова.
 
-    /********* Echo.h Cordova Plugin Header *******/
+Обратите внимание на следующие для сложных возвращаемых значений:
+
+*   `messageAsArrayBuffer`ожидает `NSData*` и преобразует `ArrayBuffer` в обратного вызова JavaScript. Кроме того, любой `ArrayBuffer` отправляет плагин JavaScript преобразуются в`NSData*`.
+
+*   `messageAsMultipart`ожидает `NSArray*` содержащие любые другие поддерживаемые типы и отправляет весь массив как `arguments` для обратного вызова JavaScript. Таким образом, все аргументы сериализуются и десериализуются как необходимости, так что это безопасно вернуться `NSData*` как составной, а не как `Array` /`Dictionary`.
+
+## Эхо iOS плагин пример
+
+Для сопоставления интерфейса JavaScript *эхо* функция, описанная в плагины приложения, используйте `plugin.xml` для вставки `feature` спецификации локальной платформы `config.xml` файл:
+
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Echo">
+                    <param name="ios-package" value="Echo" />
+                </feature>
+            </config-file>
+        </platform>
     
-    #import <Cordova/CDV.h>
+
+Тогда мы хотели бы добавить следующие `Echo.h` и `Echo.m` файлы в `Plugins` папку в каталоге приложений Cordova-iOS:
+
+        /********* Echo.h Cordova Plugin Header *******/
     
-    @interface Echo : CDVPlugin
+        #import <Cordova/CDV.h>
     
-    - (void)echo:(CDVInvokedUrlCommand*)command;
+        @interface Echo : CDVPlugin
     
-    @end
+        - (void)echo:(CDVInvokedUrlCommand*)command;
     
-    /********* Echo.m Cordova Plugin Implementation *******/
+        @end
     
-    #import "Echo.h"
-    #import <Cordova/CDV.h>
+        /********* Echo.m Cordova Plugin Implementation *******/
     
-    @implementation Echo
+        #import "Echo.h"
+        #import <Cordova/CDV.h>
     
-    - (void)echo:(CDVInvokedUrlCommand*)command
-    {
-        CDVPluginResult* pluginResult = nil;
-        NSString* echo = [command.arguments objectAtIndex:0];
+        @implementation Echo
     
-        if (echo != nil && [echo length] > 0) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-        } else {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        - (void)echo:(CDVInvokedUrlCommand*)command
+        {
+            CDVPluginResult* pluginResult = nil;
+            NSString* echo = [command.arguments objectAtIndex:0];
+    
+            if (echo != nil && [echo length] > 0) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+            }
+    
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
     
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    }
-    
-    @end
+        @end
     
 
-Давайте взглянем на код. В верхней части у нас есть все необходимые Cordova импорта. Наш класс простирается от `CDVPlugin` (очень важно).
+Необходимого импорта в верхней части файла расширяет класс от `CDVPlugin` . В этом случае плагин поддерживает только один `echo` действий. Он получает эхо строку путем вызова `objectAtIndex` метод получить первый параметр `arguments` массив, который соответствует аргументам, принятому JavaScript в `exec()` функции.
 
-Этот плагин поддерживает только одно действие, `echo` действий. Во-первых, мы захватить эхо строку, используя `objectAtIndex` метод на наших `args` , говоря это, мы хотим получить 0-й параметр в массиве аргументов. Мы делаем немного проверка параметров: Убедитесь, что это не `nil` и убедитесь, что он не является строкой нулевой длины.
+Он проверяет параметр, чтобы убедиться, что это не `nil` или является пустой строкой, возвращая `PluginResult` с `ERROR` статус, если это так. Если параметр проходит проверку, он возвращает `PluginResult` с `OK` статус, проходя в оригинале `echo` строка. Наконец, он отправляет результат `self.commandDelegate` , которая выполняет `exec` метода успех или неудача обратные вызовы на стороне JavaScript. Если успех обратного вызова вызывается, он проходит в `echo` параметр.
 
-Если это так, мы возвращаем `PluginResult` с `ERROR` статус. Если все эти проверки проходят, то мы вернуть `PluginResult` с `OK` статус и проход в `echo` строка, мы получили в первую очередь, как параметр.
+## iOS интеграции
 
-Наконец, мы отправить результат на `self.commandDelegate` , который выполняет `exec` метода успех или неудача обратные вызовы на стороне JavaScript. Если успех обратного вызова вызывается, он проходит в `echo` параметр.
+`CDVPlugin`Класса есть другие методы, которые можно переопределить ваш плагин. Например, вы можете захватить `pause` , `resume` , прервать app и `handleOpenURL` события. См [CDVPlugin.h][1] и [CDVPlugin.m][2] для руководства.
+
+ [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
+ [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
 ## Работа с потоками
 
-Плагин методы выполняются в том же потоке пользовательского интерфейса. Если ваш плагин требует большой обработки или требует блокирующий вызов, следует использовать фоновый поток. Например:
+Плагин методы обычно выполняются в том же потоке, что основной интерфейс. Если ваш плагин требует большой обработки или требует блокирующий вызов, вам следует использовать фоновый поток. Например:
 
-    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
-    {
-        // Check command.arguments here.
-        [self.commandDelegate runInBackground:^{
-            NSString* payload = nil;
-            // Some blocking logic...
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-            // The sendPluginResult method is thread-safe.
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }];
-    }
+        - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+        {
+            // Check command.arguments here.
+            [self.commandDelegate runInBackground:^{
+                NSString* payload = nil;
+                // Some blocking logic...
+                CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+                // The sendPluginResult method is thread-safe.
+                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+            }];
+        }
     
 
-## Расширенный плагин функциональность
+## Отладка iOS плагины
 
-Смотрите другие методы, которые можно переопределить в:
+Для отладки на стороне Objective-C, требуется встроенный отладчик Xcode's. Для JavaScript на iOS 5.0 можно использовать [Weinre, проект Apache Cordova][3] , или [iWebInspector, сторонние утилиты][4]. Для iOS 6 вы можете прикрепить Safari 6.0 для вашего приложения, выполняющиеся в iOS 6 симулятор.
 
-*   [CDVPlugin.h][4]
-
-*   [CDVPlugin.m][5]
-
- [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
- [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
-
-Например, вы можете подключить в `pause` , `resume` , прекратить app и `handleOpenURL` события.
-
-## Отладка плагины
-
-Для отладки на стороне Objective-C, будет использовать встроенный отладчик Xcode в. Для JavaScript на iOS 5.0 можно использовать [Weinre, проект Apache Cordova][6] или [iWebInspector, - сторонней утилиты][7]
-
- [6]: https://github.com/apache/cordova-weinre
- [7]: http://www.iwebinspector.com/
-
-Для iOS 6 будет использовать Safari 6.0 просто приложить к ваше приложение работает на iOS 6 симулятор.
+ [3]: https://github.com/apache/cordova-weinre
+ [4]: http://www.iwebinspector.com/
 
 ## Наиболее распространенные ошибки
 
-*   Не забудьте добавить ваш плагин сопоставление файла config.xml. Если вы забыли, ошибка регистрируется в консоли Xcode.
+*   Не забудьте добавить ваш плагин сопоставление `config.xml` . Если вы забыли, ошибка регистрируется в консоли Xcode.
 
-*   Не забудьте добавить любые узлы, при подключении к в белый список, как описано в руководстве Whitelist домена. Если вы забыли, ошибка регистрируется в консоли Xcode.
+*   Не забудьте добавить любые узлы, при подключении к в белый список, как описано в руководстве белый список доменов. Если вы забыли, ошибка регистрируется в консоли Xcode.

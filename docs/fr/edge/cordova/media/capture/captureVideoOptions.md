@@ -20,22 +20,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Propriétés
 
-*   **limite**: le nombre maximal de clips vidéo, utilisateur de l'appareil peut capturer dans une opération de capture unique. La valeur doit être supérieure ou égale à 1 (1 par défaut).
+*   **limit** : le nombre maximal de clips vidéo que utilisateur peut enregistrer en une opération unique de capture. La valeur doit être supérieure ou égale à 1 (1 par défaut).
 
-*   **durée**: la durée maximale d'un clip vidéo, en quelques secondes.
+*   **duration** : la durée maximale d'un clip vidéo, en secondes.
 
-## Petit exemple
+## Exemple court
 
-    // limit capture operation to 3 video clips
+    // limite l'opération de capture à 3 clips vidéo
     var options = { limit: 3 };
     
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
     
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
 *   Le paramètre de **durée** n'est pas supporté, donc la longueur des enregistrements ne peut pas être limitée par programme.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   Le paramètre **limit** n'est pas pris en charge. Qu'une vidéo est enregistrée par l'invocation.
+*   Le paramètre **limit** n'est pas pris en charge. De ce fait, une seule vidéo est enregistrée par appel.

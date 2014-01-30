@@ -16,27 +16,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.release
 
-Libère les ressources audio du système d'exploitation sous-jacent.
+Libère certaines ressources audio du système d'exploitation.
 
     media.release();
     
 
 ## Description
 
-La `media.release` méthode s'exécute de façon synchrone, libérant des ressources audio du système d'exploitation sous-jacent. Cela est particulièrement important pour Android, puisqu'il y a une quantité finie d'instances OpenCore pour la lecture du média. Les applications doivent appeler le `release` fonction pour tout `Media` ressource qui n'est plus nécessaire.
+La méthode `media.release` s'exécute de façon synchrone, elle permet de libérer certaines des ressources audio du système d'exploitation. Ceci est particulièrement important pour Android, puisque seule une quantité finie d'instances OpenCore est permise pour la lecture de médias. Les applications doivent en général appeler cette fonction `release` pour toute ressource `Media` qui n'est plus nécessaire.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
-*   Paciarelli
+*   Tizen
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Audio player
+    // lecteur audio
     //
     var my_media = new Media(src, onSuccess, onError);
     
@@ -51,57 +51,57 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for device API libraries to load
+            // attend que les API de l'appareil soient chargées
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // device APIs are available
+            // les API de l'appareil sont disponibles
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                // Create Media object from src
+                // crée un objet média à partir de src
                 my_media = new Media(src, onSuccess, onError);
     
-                // Play audio
+                // lance la lecture du clip audio
                 my_media.play();
     
-                // Update my_media position every second
+                // met à jour la position de my_media à chaque seconde
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // récupère la position de lecture de my_media
                         my_media.getCurrentPosition(
-                            // success callback
+                            // fonction callback de succès
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudioPosition((position) + " secondes");
                                 }
                             },
-                            // error callback
+                            // fonction callback d'erreur
                             function(e) {
-                                console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                console.log("Erreur lors de la récupération de la position : " + e);
+                                setAudioPosition("Erreur : " + e);
                             }
                         );
                     }, 1000);
                 }
             }
     
-            // Pause audio
+            // met en pause la lecture du clip audio
             //
             function pauseAudio() {
                 if (my_media) {
@@ -109,7 +109,7 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
                 }
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -119,20 +119,20 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succès");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' +
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -141,9 +141,9 @@ La `media.release` méthode s'exécute de façon synchrone, libérant des ressou
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audi</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Mettre en pause la lecture</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>

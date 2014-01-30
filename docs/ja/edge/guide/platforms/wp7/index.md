@@ -26,84 +26,79 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
 
-## 1. システム要件
+## システム要件
 
-*   オペレーティング システム：
-    
-    *   Windows 7 または Windows 8 (Pro) または Windows Vista SP2 で 
-        *   64 ビット バージョンの Windows の （64） が、SDK に必要です。
-        *   デバイス エミュレーターを実行するため、Pro バージョンをお勧めします。
+SP2 と Windows 7 または Windows 8 (Pro) または Windows Vista を使用します。64 ビット バージョンの Windows の （64） が、SDK に必要です。デバイス エミュレーターを実行するため、Pro バージョンをお勧めします。
 
-*   登録し、実際のデバイスでアプリをインストールまたは市場の場所に送信する場合に[Windows Phone デベロッパー センター][1]アカウントのお支払い。
+登録し、実際のデバイスでアプリをインストールまたは市場の場所に送信する場合に[Windows Phone デベロッパー センター][1]アカウントのお支払い。
 
  [1]: http://dev.windowsphone.com/en-us/publish
 
-**注：**SDK には、仮想マシンで実行されているいくつかの課題を提示可能性があります。 [Mac 上の Windows Phone][2]を開発するソリューションに洞察力を与えるこのブログの記事を読むことができます。.
+**メモ**: SDK には、仮想マシンで実行されている課題を提示可能性があります。ソリューションの開発に洞察力は、 [Mac 上の Windows Phone][2]をお読みください。
 
  [2]: http://aka.ms/BuildaWP8apponaMac
 
-## 2. SDK + コルドバをインストールします。
+## SDK とコルドバをインストールします。
 
-*   ダウンロードして、 [Windows Phone SDK][3]のインストール
-
-*   ダウンロードし、[コルドバ][4]の最新のコピーを抽出します。 作業をして、 `lib\windows-phone-8\wp7` サブディレクトリ、 `lib\windows-phone-8\wp8` コルドバの Windwos 電話 8 のバージョンが含まれています。
-
-*   コピー、 `CordovaWP7_x_x_x.zip` ファイルを `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
+ダウンロードして、 [Windows Phone SDK][3]のインストール.
 
  [3]: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27570/
+
+ダウンロードし、[コルドバ][4]の最新のコピーを抽出します。 作業する必要があります、 `lib\windows-phone-8\wp7` サブディレクトリ、 `lib\windows-phone-8\wp8` コルドバの Windwos 電話 8 のバージョンが含まれています。
+
  [4]: http://phonegap.com/download
 
-## 2.1 のテンプレートを作成します。
+コピー、 `CordovaWP7_x_x_x.zip` ファイルを `\My Documents\Visual
+Studio 2012\Templates\ProjectTemplates\` ディレクトリ。
 
-**注：**この手順は必要ありません。Lib\windows 携帯電話のディレクトリはすでにファイル CordovaWP7\_x\_x_x.zip が含まれている場合は、この手順をスキップ可能性があります。
+## テンプレートの構築
 
-開発プロセスを簡略化するためコルドバは Visual Studio テンプレートを作成するスクリプトが付属しています。 コルドバ Visual Studio アプリケーションを迅速に作成をできます。 必要な場合、このテンプレートを変更することができ、以下の手順、テンプレートを生成する場合を続行する方法を示します。
+**注**: 場合この手順をスキップ、 `lib\windows-phone` ディレクトリが既に含まれている、 `CordovaWP7_x_x_x.zip` ファイル。
+
+簡単に開発をコルドバは Visual Studio テンプレートを構築するためのスクリプトをバンドルします。 これらは急速に Cordova アプリを生成することができ、必要に応じてそれらを変更することができます。 以下の手順は、それを生成する方法を示します。
 
 ### 作成し、テンプレートをインストールするバッチ ファイルを実行します。
 
-*   レポのルートには、ファイル createTemplates.bat が含まれています。 このファイルをダブルクリック 2 .zip ファイルが生成されます。 (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x は現在のバージョン番号)Visual Studio では、コピーこれらのファイルを簡単に使用するには、"私の Documents\Visual Studio 2012\Templates\ProjectTemplates\"をし、ことができます新しいプロジェクト メニュー-> Visual Studio ファイルから新しい Apache コルドバ Windows Phone アプリを作成します。
+レポのルートが含まれている、 `createTemplates.bat` ファイル。 2 つが生成されますこのファイルをダブルクリックすると `.zip` ファイル: `CordovaWP7_x_x_x.zip` と `CordovaWP8_x_x_x.zip` 、 *x.x.x*は現在のバージョン番号。 Visual Studio で簡単にこれらのファイルを使用するにはそれらをコピー、 `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` サブディレクトリ。 新しい**プロジェクトから Visual Studio _\_File → 新しい Apache コルドバ Windows Phone\_ アプリ**のメニューを作成することはし。
 
-*   自動的にインストールするパラメーターで呼び出すことができますも、コマンドラインからバッチ ファイルを実行する場合
+コマンドラインからバッチ ファイルを実行する場合も自動的にインストールするパラメーターで呼び出すことができます。
 
-スクリプトを実行します。
-
-    > createTemplates.bat-インストール
+        > createTemplates.bat-インストール
     
 
-## 3. 新しいプロジェクトをセットアップします。
+## 新しいプロジェクトを設定します。
 
 *   Visual Studio Express の Windows Phone を開き、**新しいプロジェクト**を選択します.
 
-*   **CordovaWP7**を選択します。(バージョン番号は、テンプレートの説明に表示されます。)
+*   **CordovaWP7**を選択します。テンプレートの説明でバージョン番号表示します。
 
 *   プロジェクト名を指定し、 **[ok]**を選択します.
 
-## 4. プロジェクトの構造を確認します。
+## プロジェクトの構造を確認します。
 
-*   `www`ディレクトリには、コルドバが含まれています `html/js/css` と、アプリに含まれるその他のリソース。
+`www`ディレクトリの機能 `html` 、 `js` 、および `css` アプリが必要なサブディレクトリとその他のリソース。 Visual Studio プロジェクトの一部である必要がある追加のコンテンツとコンテンツとして設定する必要があります。
 
-*   Visual Studio プロジェクトの一部である必要がありますここで追加するコンテンツとコンテンツとして設定する必要があります。
-
-*   メモ： この画面キャプチャは wp8 コルドバ 2.3.0 ダウンロードから、あなたのリストは異なります、実際のバージョンがインストールされています。
+2.3.0 を次のサンプル構造を表すプロジェクト, しかし、インストールされているバージョンによって異なる場合があります。
 
 ![][5]
 
  [5]: img/guide/platforms/wp8/projectStructure.png
 
-## 6. プロジェクトをビルドし、デバイスの
+## デバイス プロジェクトをビルドします。
 
-デバイス上でアプリケーションをテストするために、デバイスを登録する必要があります。 クリックして[ここで][6]を展開すると、Windows Phone 7 上でテスト ドキュメントを読みます。
+デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 7 上でテストおよび展開する方法の詳細については、[マイクロソフトのドキュメント][6]を参照してください。 これらの基本的な手順は：
 
  [6]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
 *   あなたの携帯電話は接続され、画面がロックされていることを確認します。
 
-*   Visual Studio では、上部のドロップ ダウン メニューから「デバイス」を選択します。
+*   Visual Studio では、上部にあるドロップ ダウン メニューから**デバイス**を選択します。
 
-*   、デバッグを開始する主要なドロップ ダウン メニューの横に緑の**再生**ボタンを押すか、 **f5 キーを押してください**.
+*   または他の**f5 キーを押して**、デバッグを開始する主要なドロップ ダウン メニューの横に緑の**再生**ボタンを押す.
 
 ![][7]
 
  [7]: img/guide/platforms/wp7/wpd.png
 
-## やった ！
+この時点でしています。

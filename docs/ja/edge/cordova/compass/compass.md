@@ -45,14 +45,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
 
-*   （アンドロイド`app/res/xml/config.xml`)
+*   アンドロイド
     
+        (in `app/res/xml/config.xml`)
         <feature name="Compass">
-            <param name="android-package" value="org.apache.cordova.CompassListener" />
+            <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
         </feature>
         
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />
@@ -70,4 +75,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

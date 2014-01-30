@@ -39,7 +39,7 @@ Il `ContactName` oggetto memorizza la proprietà del nome di un contatto.
 ## Piattaforme supportate
 
 *   Android 2. x
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -122,7 +122,7 @@ Il `ContactName` oggetto memorizza la proprietà del nome di un contatto.
 
 *   **formattato**: parzialmente supportati e di sola lettura. Restituisce una concatenazione di `honorificPrefix` , `givenName` , `middleName` , `familyName` , e`honorificSuffix`.
 
-## Stranezze di blackBerry WebWorks (OS 5.0 e superiori)
+## BlackBerry WebWorks 5.0 + stranezze
 
 *   **formattato**: parzialmente supportati. Restituisce una concatenazione di campi **firstName** e **lastName** BlackBerry.
 

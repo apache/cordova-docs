@@ -34,7 +34,7 @@ BlackBerry 10 :
 
 6.  Mettre à jour la référence de script Cordova dans votre `www/index.html` fichier (et tous les autres fichiers qui contiennent la référence de script) pour pointer vers le nouveau `cordova.js` fichier.
 
-### BlackBerryOS/Playbook
+Pour BlackBerryOS/Playbook :
 
 1.  Téléchargez et extrayez la source Cordova 2.9.0 à son emplacement définitif sur votre disque dur, par exemple à`~/Cordova-2.9.0`.
 
@@ -54,7 +54,7 @@ BlackBerry 10 :
 
 9.  Copie le `cordova` répertoire du nouveau projet dans le projet existant, en écrasant l'ancienne `cordova` répertoire.
 
-## Projets de modernisation 2.7.0 pour 2.8.0
+## 2.7.0 Mise à niveau de projets à 2.8.0
 
 BlackBerry 10 :
 

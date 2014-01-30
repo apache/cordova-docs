@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -50,7 +50,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 新しい `File` オブジェクトを `FileReader` ファイルの指定した部分のみを返します。 負の値を `start` または `end` ファイルの最後から測定されます。 インデックスは、現在のスライスを基準にして配置されます。 （下記の完全な例を参照してください)。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **開始**: 最初のバイトを読み取り、包括的なインデックス。
 

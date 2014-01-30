@@ -20,26 +20,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Propriétés
 
-*   **limite**: le nombre maximal de clips audio, l'utilisateur de l'appareil permet d'enregistrer dans une opération de capture unique. La valeur doit être supérieure ou égale à 1 (1 par défaut).
+*   **limit** : le nombre maximal de clips audio que l'utilisateur peut enregistrer en une opération unique de capture. La valeur doit être supérieure ou égale à 1 (1 par défaut).
 
-*   **durée**: la durée maximale d'un clip sonore audio, en quelques secondes.
+*   **duration** : la durée maximale d'un clip audio, en secondes.
 
-## Petit exemple
+## Exemple court
 
-    // limit capture operation to 3 media files, no longer than 10 seconds each
+    // limite l'operation de capture à 3 fichiers dont la durée ne dépasse pas 10 secondes chaque
     var options = { limit: 3, duration: 10 };
     
     navigator.device.capture.captureAudio(captureSuccess, captureError, options);
     
 
-## Quirks Android
+## Particularités d'Android
 
 *   Le `duration` paramètre n'est pas pris en charge. Longueurs d'enregistrement ne peut être limitée par programme.
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
 *   Le `duration` paramètre n'est pas pris en charge. Longueurs d'enregistrement ne peut être limitée par programme.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   Le `limit` paramètre n'est pas pris en charge, ainsi qu'un enregistrement peut être créée pour chaque appel.
+*   Le paramètre `limit` n'est pas pris en charge, par conséquent un seul fichier audio peut être enregistré pour chaque appel.

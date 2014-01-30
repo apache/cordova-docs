@@ -52,11 +52,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Device">
-            <param name="android-package" value="org.apache.cordova.Device" />
+            <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
         
 
 *   Ежевика WebWorks
@@ -94,4 +91,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.

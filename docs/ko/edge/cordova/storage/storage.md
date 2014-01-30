@@ -16,52 +16,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 스토리지
 
-> 장치의 저장소 옵션에 대 한 액세스를 제공합니다.
+> 코르 도우 바에 대 한 저장소 옵션에 대 한 개요입니다.
 
-이 API는 두 가지 다른 W3C 사양에 따라 스토리지 옵션을 제공 합니다.
+여러 저장소 Api 코르도바 애플리케이션에 사용할 수 있습니다. [Html5rocks][1]를 참조 하십시오. 더 완전 한 개요 및 예제.
 
-*   [웹 저장소 API 규격][1] 을 사용 하면 단순한 키/값 쌍을 통해 데이터에 액세스할 수 있습니다. 이 인터페이스에 대 한 자세한 내용은 대 한 localStorage 섹션을 참조 하십시오.
+ [1]: http://www.html5rocks.com/en/features/storage
 
-*   [웹 SQL 데이터베이스 사양][2] 더 완전 한 기능의 데이터베이스 테이블 액세스 SQL 쿼리를 통해 제공 합니다. 이 인터페이스의 요약 바로 아래에 나타납니다.
+## LocalStorage
 
- [1]: http://dev.w3.org/html5/webstorage/
- [2]: http://dev.w3.org/html5/webdatabase/
+또한 다른 *세션 저장소* 인터페이스 또는 *웹 스토리지*, *간단한 스토리지*,으로 알려진,이 API 동기 키/값 쌍 스토리지를 제공 하 고 기본 WebView 구현에서 사용할 수 있습니다. 자세한 내용은 [W3C 사양을][2] 참조 하십시오.
 
-코르 도우 바 두 인터페이스에 이미 그들을 지원 하지 않는 장치의 소수 민족에 대 한 액세스를 제공 합니다. 그렇지 않으면 기본 구현이 적용 됩니다.
+ [2]: http://www.w3.org/TR/webstorage/
 
-## 메서드
+**Windows Phone 7 특질**: 점 표기법은 *하지* 사용할 수, 사용 해야 `setItem` 또는 `getItem` 보다는로 키 저장소 개체에서 직접 액세스`window.localStorage.someKey`.
 
-*   openDatabase
+## WebSQL
 
-## 인수
+이 API는 기본 WebView에서 사용할 수 있습니다. [웹 SQL 데이터베이스 사양][3] 더 완전 한 기능의 데이터베이스 테이블 액세스 SQL 쿼리를 통해 제공 합니다.
 
-*   database_name
-*   database_version
-*   database_displayname
-*   database_size
+ [3]: http://dev.w3.org/html5/webdatabase/
 
-## 개체
+다음 플랫폼 WebSQL을 지원합니다.
 
-*   데이터베이스
-*   SQLTransaction
-*   SQLResultSet
-*   SQLResultSetRowList
-*   SQLError
+*   안 드 로이드
+*   블랙베리 10
+*   iOS
+*   Tizen
 
-## 기능 액세스
+## IndexedDB
 
-버전 3.0, 저장소 Api에 액세스 하도록 코르도바, 내장 및 명령줄 인터페이스에 설명 된 대로 플러그인을 추가 하는 CLI를 사용 하 여 필요 하지 않습니다.
+이 API는 기본 WebView에서 사용할 수 있습니다. [색인 DB][4] LocalStorage 보다 더 많은 기능이 있지만 WebSQL 보다 적게 제공합니다.
 
-앞에 CLI 코르도바 도구의 이전 세트를 사용 하는 경우 다음 플랫폼 관련 구성 설정을 여전히 필요 합니다.
+ [4]: http://www.w3.org/TR/IndexedDB/
 
-*   (안 드 로이드`app/res/xml/config.xml`)
-    
-        < 기능 이름 "저장소" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.Storage =" / >< / 기능 >
-        
+다음 플랫폼 IndexedDB를 지원합니다.
 
-*   (블랙베리 WebWorks`www/config.xml`)
-    
-        < id="blackberry.widgetcache 기능" 필수 = "진정한" 버전 "1.0.0.0" = / >
-        
+*   Windows Phone 8
+*   블랙베리 10
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+## 플러그인 기반 옵션
+
+위에 나열 된 Api 저장소 뿐만 아니라 파일 API 로컬 파일 시스템에 캐시 데이터를 수 있습니다. [코르 도우 바 플러그인][5] 의 다른 유사한 스토리지 옵션을 제공 합니다.
+
+ [5]: http://plugins.cordova.io/

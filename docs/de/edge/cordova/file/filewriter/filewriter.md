@@ -71,7 +71,7 @@ Text- und Binär-Unterstützung:
 
 Nur-Text Unterstützung:
 
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   Windows Phone 7 und 8
 *   Windows 8
 

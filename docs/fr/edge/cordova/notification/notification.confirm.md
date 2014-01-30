@@ -23,7 +23,7 @@ Affiche une boîte de dialogue de confirmation personnalisable.
 
 *   **message**: message de la boîte de dialogue. *(String)*
 
-*   **confirmCallback**: rappel d'invoquer avec l'index du bouton pressé (1, 2 ou 3) ou lorsque la boîte de dialogue est fermée sans une presse de bouton (0). *(Fonction)*
+*   **confirmCallback**: callback à appeler avec l'index du bouton pressé (1, 2 ou 3) ou lorsque la boîte de dialogue est fermée sans qu'un bouton ne soit pressé (0). *(Fonction)*
 
 *   **titre**: titre de dialogue. *(String)* (Facultatif, par défaut`Confirm`)
 
@@ -31,20 +31,20 @@ Affiche une boîte de dialogue de confirmation personnalisable.
 
 ## Description
 
-La `notification.confirm` méthode affiche une boîte de dialogue natif qui est plus personnalisable que le navigateur `confirm` fonction.
+La méthode `notification.confirm` affiche une boîte de dialogue native qui est plus personnalisable que la fonction `confirm` du navigateur .
 
 ## confirmCallback
 
-Le `confirmCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans la boîte de dialogue de confirmation.
+Le callback `confirmCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans la boîte de dialogue de confirmation.
 
-Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton activé. Notez que l'index utilise base d'indexation, la valeur est `1` , `2` , `3` , etc..
+Le callback prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton activé. Notez que l'index utilise une indexation de base 1, donc la valeur est `1` , `2` , `3` , etc..
 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
-*   Paciarelli
+*   Tizen
 *   Windows Phone 7 et 8
 *   Windows 8
 
@@ -111,11 +111,11 @@ Le rappel prend l'argument `buttonIndex` *(nombre)*, qui est l'index du bouton a
     </html>
     
 
-## Windows Phone 7 et 8 Quirks
+## Spécificités Windows Phone 7 et 8
 
-*   Il n'y a aucune fonction de navigateur intégré pour `window.confirm` , mais vous pouvez le lier en affectant :
+*   Il n'y a aucune fonction intégrée au navigateur pour `window.confirm`, mais vous pouvez en lier une en affectant :
     
         window.confirm = navigator.notification.confirm;
         
 
-*   Les appels à `alert` et `confirm` sont non-bloquante, donc le résultat est seulement disponible de façon asynchrone.
+*   Les appels à `alert` et `confirm` sont non-bloquants, donc le résultat est seulement disponible de façon asynchrone.

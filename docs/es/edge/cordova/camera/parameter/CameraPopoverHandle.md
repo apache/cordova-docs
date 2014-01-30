@@ -30,7 +30,7 @@ Un identificador para el cuadro de diálogo popover creado por`camera.getPicture
 
 Establecer la posición de la popover.
 
-**Parámetros:**
+**Parámetros**:
 
 *   `cameraPopoverOptions`: el `CameraPopoverOptions` que especifican la nueva posición
 

@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 設置彈出的位置。
 
-**參數：**
+**參數**：
 
 *   `cameraPopoverOptions`： `CameraPopoverOptions` ，指定新的位置
 

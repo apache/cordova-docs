@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 패턴을 반환 합니다에 `successCallback` 와 함께 한 `properties` 개체를 매개 변수로. 해당 개체에는 다음과 같은 속성이 포함 되어야 합니다.
 
-*   **패턴**: 통화 패턴 서식을 지정 하 여 통화 값을 구문 분석 합니다. 패턴에 따라 유니코드 기술 표준 #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(문자열)*
+*   **패턴**: 통화 패턴 서식을 지정 하 여 통화 값을 구문 분석 합니다. 패턴에 따라 [유니코드 기술 표준 #35][1]. *(문자열)*
 
 *   **코드**: ISO 4217 통화 코드 패턴. *(문자열)*
 
@@ -37,6 +37,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **그룹화**: 구문 분석 및 서식 지정에 사용할 그룹화 기호. *(문자열)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 인바운드는 `currencyCode` 매개 변수 이어야 합니다는 `String` 의 ISO 4217 통화 코드, 예를 들어 '미화' 중 하나.
 
 패턴을 얻는 오류가 발생 하는 경우는 `errorCallback` 로 실행 한 `GlobalizationError` 개체를 매개 변수로. 오류의 예상 된 코드는`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 
 ## 빠른 예제

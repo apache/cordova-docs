@@ -35,20 +35,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
 
-*   (안 드 로이드`app/res/xml/config.xml`)
+*   (안 드 로이드`res/xml/config.xml`)
     
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="SplashScreen">
             <param name="ios-package" value="CDVSplashScreen" />
         </feature>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
 
 이러한 이미지를 구성 하는 방법에 대 한 내용은 아이콘과 시작 화면을 참조 하십시오.

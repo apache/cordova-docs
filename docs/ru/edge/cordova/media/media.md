@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**Примечание:** Текущая реализация не соответствует спецификации W3C для захвата СМИ и предоставляется только для удобства. Будущее осуществление будет придерживаться последней спецификации W3C и может Опознайте текущих API.
+**Примечание**: Текущая реализация не соответствует спецификации W3C для захвата СМИ и предоставляется только для удобства. Будущее осуществление будет придерживаться последней спецификации W3C и может Опознайте текущих API.
 
 ## Параметры
 
@@ -76,7 +76,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7.5
 *   Tizen
@@ -86,8 +86,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Начиная с версии 3.0 Кордова реализует интерфейсы API уровень устройства как *плагины*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
-        $ cordova плагин добавить org.apache.cordova.media $ cordova плагин ls ['org.apache.cordova.media'] $ cordova плагин rm org.apache.cordova.media
-     
+        $ cordova плагин добавить org.apache.cordova.media $ cordova плагин ls ['org.apache.cordova.media'] $ cordova плагин rm org.apache.cordova.media 
+    
 
 Эти команды применяются для всех целевых платформ, но изменить параметры конфигурации платформы, описанные ниже:
 
@@ -95,7 +95,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Media">
-            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -112,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </feature>
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />
@@ -134,9 +134,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.
 
-### Windows Phone причуды
+## Windows Phone причуды
 
 *   Только один файл может воспроизводиться одновременно.
 

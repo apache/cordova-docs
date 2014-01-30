@@ -25,7 +25,7 @@ Gibt eine Musterzeichenfolge zum Formatieren und Analysieren von Zahlen nach der
 
 Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Parameter. Dieses Objekt enthält die folgenden Eigenschaften:
 
-*   **Muster**: die Muster zur Formatierung und zum Analysieren von Zahlen. Die Muster folgen Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **Muster**: die Muster zur Formatierung und zum Analysieren von Zahlen. Die Muster folgen [Unicode Technical Standard #35][1]. *(String)*
 
 *   **Symbol**: das Symbol beim Formatieren und analysieren, wie ein Prozentsatz oder Symbol verwendet. *(String)*
 
@@ -41,6 +41,8 @@ Gibt das Muster auf der `successCallback` mit einem `properties` -Objekt als Par
 
 *   **Gruppieren**: das Symbol für Zifferngruppierung zum analysieren und formatieren verwenden. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Wenn ein Fehler, erhalten das Muster vorliegt dann die `errorCallback` führt mit einem `GlobalizationError` -Objekt als Parameter. Erwarteten Fehlercode ist`GlobalizationError.PATTERN\_ERROR`.
 
 Die `options` Parameter ist optional und Standardwerte sind:
@@ -53,7 +55,7 @@ Die `options.type` kann `decimal` , `percent` , oder`currency`.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

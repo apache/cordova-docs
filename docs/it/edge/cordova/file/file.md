@@ -48,11 +48,12 @@ A partire dalla versione 3.0, Cordova implementa le API a livello di dispositivo
         $ cordova plugin rm org.apache.cordova.file
     
 
-Per utilizzare il plugin di trasferimento file è necessario aggiungere che separatamente.
+È necessario aggiungere il `file-transfer` plugin separatamente. CLI aggiunge automaticamente il `file` plugin come dipendenza, quindi non non c'è alcuna necessità di aggiungere separatamente:
 
         $ cordova plugin add org.apache.cordova.file-transfer
         $ cordova plugin ls
-        [ 'org.apache.cordova.file-transfer' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.file-transfer' ]
         $ cordova plugin rm org.apache.cordova.file-transfer
     
 
@@ -60,12 +61,22 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
 
 *   Android
     
+        (after adding just the file plugin)
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.FileUtils" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+        (after adding just the file-transfer plugin)
         (in app/res/xml/config.xml)
         <feature name="File">
             <param name="android-package" value="org.apache.cordova.FileUtils" />
         </feature>
         <feature name="FileTransfer">
-            <param name="android-package" value="org.apache.cordova.FileTransfer" />
+            <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -91,7 +102,7 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         </rim:permissions>
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="File">
             <param name="ios-package" value="CDVFile" />
@@ -101,4 +112,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         </feature>
         
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

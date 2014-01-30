@@ -18,27 +18,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
 
-*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다.
+*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다. 참고:이 값을 false로 설정 죽이지 않을 것 이다 응용 프로그램 일시 중지 이벤트 후, app 백그라운드에 있는 동안 코르 도우 바 webview에서 코드 실행을 중지만 됩니다.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: 표준 HTTP 오류 400-500 범위에 대 한 응답에서을 표시 하는 오류 페이지를 지정 합니다. 홈 페이지와 다른 웹 자산을 포함 하는 최상위 디렉터리에서 지정된 된 파일을 놓습니다.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: 응용 프로그램을 로드할 때 기본 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: 애플 리 케이 션 내에서 하위 페이지를 로드할 때 기본 대화 상자를 표시 합니다. 값의 형식은 *제목, 메시지*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`(숫자, 기본값은 `20000` ): 시간 초과 오류를 throw 하기 전에 대기할 시간을 페이지를 로드할 때. 이 예제에서는 10 초 보다는 오히려 20를 지정합니다.
+*   `LoadUrlTimeoutValue`(번호, 기본적으로 `20000` , 20 초): 시간 초과 오류를 throw 하기 전에 대기할 시간을 페이지를 로드할 때. 이 예제에서는 10 초 보다는 오히려 20를 지정합니다.
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
@@ -51,3 +36,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `SplashScreenDelay`(번호, 기본값: `5000` ): 시간 시작 화면 이미지를 표시 합니다.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(boolean, 기본값은 `true` ): 컨트롤 페이지는 InAppBrowser 이내 연 액세스할 수 있는지 동일한 localStorage 및 WebSQL 저장 페이지 기본 브라우저와 함께 열립니다.

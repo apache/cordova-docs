@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**참고:** InAppBrowser 창 표준 웹 브라우저 처럼 동작 및 코르도바 Api에 액세스할 수 없습니다.
+**참고**: 동작 하는 창에 InAppBrowser 표준 웹 브라우저를 좋아하고 코르도바 Api에 액세스할 수 없습니다.
 
 ## 설명
 
@@ -48,14 +48,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
 
-*   (안 드 로이드`app/res/xml/config.xml`)
+*   (안 드 로이드`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.
 
 # addEventListener
 
@@ -207,7 +207,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     ref.show();
     
 
-*   **ref:** InAppBrowser 창 (참조`InAppBrowser`)
+*   **ref**: InAppBrowser 창 (참조`InAppBrowser`)
 
 ## 지원 되는 플랫폼
 
@@ -354,7 +354,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -456,10 +456,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

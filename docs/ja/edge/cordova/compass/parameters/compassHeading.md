@@ -34,12 +34,12 @@ A `CompassHeading` オブジェクトに返される、 `compassSuccess` コー�
 
 ## Android の癖
 
-*   `trueHeading`レポートと同じ値はサポートされていません`magneticHeading`
+*   `trueHeading`プロパティはサポートされていませんと同じ値を報告`magneticHeading`.
 
-*   `headingAccuracy`常に 0 の間の違いはありませんので、 `magneticHeading` と`trueHeading`.
+*   `headingAccuracy`プロパティは常に 0 の間の違いはありませんので、 `magneticHeading` と`trueHeading`.
 
 ## iOS の癖
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   `trueHeading`経由で有効になっている位置情報サービスのプロパティが返されますのみ`navigator.geolocation.watchLocation()`.
 
-*   IOS 4 デバイスのため、絶対位置に言及していないデバイスの現在の向きで見出し要因上記のアプリ サポートするその方向。
+*   IOS 4 デバイス上見出しデバイスの現在の向きの要因そして、その向きをサポートするアプリケーションのための絶対位置を参照していません。

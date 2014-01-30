@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Acceso a la función
 
-A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Utilice el comando `plugin` de la CLI, descrito en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
+A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *plugins*. Uso de la CLI `plugin` comando, que se describe en la interfaz de línea de comandos, para añadir o eliminar esta característica para un proyecto:
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -46,10 +46,10 @@ A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *
 
 Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
 
-*   Android (en`app/res/xml/config.xml`)
+*   Android (en`res/xml/config.xml`)
     
         <feature name="Accelerometer">
-            <param name="android-package" value="org.apache.cordova.AccelListener" />
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
         </feature>
         
 
@@ -65,7 +65,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
@@ -83,4 +83,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

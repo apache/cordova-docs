@@ -52,11 +52,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Battery">
-            <param name="android-package" value="org.apache.cordova.BatteryListener" />
+            <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
         </feature>
-        
-        (in app/AndroidManifest.xml)
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
         
 
 *   Ежевика WebWorks
@@ -72,7 +69,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.system.event" required="true" version="1.0.0.0" />
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="Battery">
             <param name="ios-package" value="CDVBattery" />
@@ -88,4 +85,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.

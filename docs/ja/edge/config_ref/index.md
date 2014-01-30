@@ -16,11 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Config.xml ファイル
 
-グローバル構成ファイルを使って、アプリの動作の多くの側面を制御できる `config.xml` は、アプリのホーム ページと共にトップレベル web アセット ディレクトリに配置されます。 このプラットフォームに依存しない XML ファイルは、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]仕様に基づいてフォーマットされ、拡張コア コルドバ API 機能、プラグイン、およびプラットフォームに固有の設定を指定します。
+グローバル構成ファイルを使って、アプリの動作の多くの側面を制御できる `config.xml` 、アプリのホーム ページと共にトップレベル web アセット ディレクトリに属する。 このプラットフォームに依存しない XML ファイルは、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]仕様に基づくとコルドバ API のコア機能、プラグイン、およびプラットフォームに固有の設定を指定する拡張に配置されます。
 
  [1]: http://www.w3.org/TR/widgets/
 
-コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクト、このファイルは、トップレベルで発見ことができます `www` ディレクトリ。 内のさまざまなサブディレクトリにこのファイルのバージョンを再生、CLI を使用してプロジェクトをビルドする `platforms` 。 作成するプロジェクトが SDK にあなたのワークフローをシフトし、CLI を使用する場合、プラットフォーム固有のファイルは、ソースとして機能します。
+コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクト、このファイルは、トップレベルで発見ことができます `www` ディレクトリ。
+
+        app/www/config.xml
+    
+
+プロジェクトをビルドするには、CLI を使用した、このファイルのバージョンは受動的に他の web 資産のソース ファイルと一緒ににコピー様々 な `platforms/*/www` サブディレクトリ、たとえば。
+
+        app/platforms/ios/www/config.xml
+        app/platforms/blackberry10/www/config.xml
+    
+
+例外はそのパスを追加指定しますアンドロイド `assets` サブディレクトリ。
+
+        アプリ/プラットフォーム/アンドロイド/資産/www/config.xml
+    
+
+作成するプロジェクトが SDK にあなたのワークフローをシフトし、CLI を使用する場合は、Android と iOS のソース ファイルの別のセットを使用する必要があります。
+
+        app/platforms/android/res/www/config.xml
+        app/platforms/ios/<APP_NAME>/config.xml
+    
 
 このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
@@ -59,7 +79,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `<description>`と `<author>` 要素メタデータおよび app の店のリスト内に表示される連絡先の情報を指定します。
 
-*   省略可能な `<content>` 要素の最上位の web 資産ディレクトリに、アプリケーションの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
+*   省略可能な `<content>` 要素を最上位の web 資産ディレクトリで、アプリの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
 
 *   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン ホワイト リスト ガイドを参照してください。
 
@@ -79,7 +99,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="Orientation" value="landscape" />
         
     
-    **注：**`default`値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。 また、ブラックベリーを使用して `auto` の代わりに `default` でその `config.xml` ファイル。 指定した場合 `default` 、グローバルで `config.xml` 、それに変換 `auto` ブラックベリー ビルドで。
+    **注**: `default` 値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。
 
 ## マルチプラット フォーム環境の設定
 
@@ -105,12 +125,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
     
     IOS とブラックベリーに適用されます。
-    
-    **注：**有効値は、BlackBerry のため `enable` または`disable`.
 
-## `<feature>`要素
+## *機能*要素
 
-使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 かどうか SDK で直接作業している特定のプラットフォームを使用して `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
+使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 SDK およびプラットフォーム固有の使用で直接作業した場合 `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
 
         <feature name="Plugin" value="PluginID" />
     

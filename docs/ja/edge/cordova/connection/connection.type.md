@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   iOS
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   Tizen
 *   Windows Phone 7 と 8
 *   Windows 8

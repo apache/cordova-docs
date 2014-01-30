@@ -37,7 +37,7 @@ El `options.type` puede ser `decimal`, `percent` o `currency`.
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

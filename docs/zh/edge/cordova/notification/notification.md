@@ -45,7 +45,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Notification">
-            <param name="android-package" value="org.apache.cordova.Notification" />
+            <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        </feature>
+        <feature name="Vibration">
+            <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -63,11 +66,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="blackberry.ui.dialog" />
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="Notification">
             <param name="ios-package" value="CDVNotification" />
         </feature>
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

@@ -16,31 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getPreferredLanguage
 
-Obtenir l'identificateur de chaîne pour la langue du client actuel.
+Retourne l'identifiant correspondant à la langue actuelle du client.
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
     
 
 ## Description
 
-Retourne la chaîne d'identificateur de langue à la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `value` propriété avec une `String` valeur.
+Transmet l'identifiant de langue en paramètre à la fonction `successCallback` sous la forme d'un objet `properties`. Cet objet contient une propriété `value` dont la valeur est de type `String`.
 
-S'il y a une erreur d'obtention de la langue, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+Si une erreur survient lors de l'obtention de l'identifiant, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est `GlobalizationError.UNKNOWN_ERROR`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cela doit afficher une boîte de dialogue contextuelle avec le texte `language: English` :
+Si la langue du navigateur est réglée sur `fr_FR`, une fenêtre popup contenant le texte `language : fr` est affichée :
 
     navigator.globalization.getPreferredLanguage(
-        function (language) {alert('language: ' + language.value + '\n');},
-        function () {alert('Error getting language\n');}
+        function (language) {alert('language : ' + language.value + '\n');},
+        function () {alert('Erreur lors de l\'obtention de l\'identifiant du langage\n');}
     );
     
 
@@ -49,24 +49,24 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela doit afficher
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getPreferredLanguage Example</title>
+        <title>Exemple getPreferredLanguage</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkLanguage() {
           navigator.globalization.getPreferredLanguage(
-            function (language) {alert('language: ' + language.value + '\n');},
-            function () {alert('Error getting language\n');}
+            function (language) {alert('language : ' + language.value + '\n');},
+            function () {alert('Erreur lors de l\'obtention de l\'identifiant du langage\n');}
           );
         }
         </script>
       </head>
       <body>
-        <button onclick="checkLanguage()">Click for language</button>
+        <button onclick="checkLanguage()">Cliquer ici pour obtenir l'identifiant du langage</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
 *   Retourne le code à deux lettres ISO 639-1 pour la langue actuelle.

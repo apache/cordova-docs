@@ -1,6 +1,6 @@
 ---
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Voir le fichier avis distribué avec ce travail d'information additionnelle concernant les droits d'auteur. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Voir le fichier des Remarques distribué avec ce travail d'information additionnel concernant les droits d'auteur. L'ASF vous licencis ce fichier sous licence Apache, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier qu'en conformité avec la licence. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -20,7 +20,7 @@ Cette section indique comment configurer une application icône et écran de dé
 
 ## Configuration des icônes dans le CLI
 
-Lorsque vous travaillez dans la CLI, icône source fichiers se trouvent dans les différents sous-répertoires spécifiques à une plateforme au sein du projet `www/res/icons` répertoire. Projets nouvellement créés disposent d'un ensemble par défaut des icônes de Cordova pour vous permet de remplacer les plates-formes que vous voulez cibler.
+Lorsque vous travaillez dans la CLI, Les fichiers sources d'icône se trouvent dans les différents sous-répertoires spécifiques à une plateforme au sein du répertoire du projet `www/res/icons`. Les projets nouvellement créés disposent d'un ensemble par défaut d'icones Cordova pour vous permettre de remplacer les plates-formes que vous voulez cibler.
 
 Android spécifie les icônes de faible, moyenne, haute et très haute résolution :
 
@@ -30,7 +30,7 @@ Android spécifie les icônes de faible, moyenne, haute et très haute résoluti
         android/icon-96-xhdpi.png
     
 
-La plateforme iOS spécifie 72-pixel-square des icônes pour les iPads, et affiche des icônes de 57 pixels pour les iPhones et iPods, avec haute résolution *x 2* variantes pour la rétine :
+La plateforme iOS spécifie 72-pixel-carré pour les icônes des iPads, et affiche des icônes de 57 pixels pour les iPhones et iPods, avec variantes hautes résolutions *x 2* pour les écran Rétina :
 
         ios/icon-57-2x.png
         ios/icon-57.png
@@ -38,28 +38,28 @@ La plateforme iOS spécifie 72-pixel-square des icônes pour les iPads, et affic
         ios/icon-72.png
     
 
-Windows Phone spécifie une icône de 48 pixels par défaut, ainsi que de l'arrière-plan des divers dispositifs carrelage images utilisées dans la représentation des applications :
+Windows Phone spécifie une icone de 48 pixels par défaut, ainsi que de nombreuses mosaïque d'arrière-plan utilisés dans la représentation des applications :
 
         windows-phone/icon-48.png
         windows-phone/icon-62-tile.png
         windows-phone/icon-173-tile.png
     
 
-BlackBerry nécessite une icône 80 pixels :
+BlackBerry nécessite une icône de 80 pixels :
 
         blackberry/icon-80.png
     
 
-Paciarelli nécessite une icône de 128 pixels :
+Tizen nécessite une icône de 128 pixels :
 
         tizen/icon-128.png
     
 
-## Configuration des écrans de démarrage dans le CLI
+## Configuration du Splashscreen dans la CLI
 
-Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran splash liminaire de l'app sur de nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
+Utiliser l'API de Splashscreen pour autoriser l'affichage de l'écran splash préliminaire de l'App sur de nombreuses plates-formes. Lorsque vous travaillez dans la CLI, les fichiers d'écran de démarrage sont situés dans un sous-répertoire du projet `www/res/screens`.
 
-Android spécifie les deux images d'écran splash-orientation portrait et paysage de faible, moyenne, haute et très haute résolution :
+Android spécifie les deux images d'écran de démarrage en mode portrait et paysage pour les faible, moyenne, haute et très haute résolutions:
 
         android/screen-hdpi-landscape.png
         android/screen-hdpi-portrait.png
@@ -71,7 +71,7 @@ Android spécifie les deux images d'écran splash-orientation portrait et paysag
         android/screen-xhdpi-portrait.png
     
 
-La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des variantes pour les écrans de la rétine et des orientations différentes. Le fichier *568 h* personnalisé pour le plus grand écran de l'iPhone 5 :
+La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des variantes pour les écrans de la rétine et des orientations différentes. Le fichier *568 h* s'applique à l'iPhone 5 écran plus grand :
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,7 +84,7 @@ La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des vari
         ios/screen-iphone-portrait-568h-2x.png
     
 
-BlackBerry et Windows Phone à la fois spécifient une image à l'écran splash unique :
+BlackBerry et Windows Phone spécifient tous deux une image unique pour l'écran de démarrage :
 
         blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
@@ -94,7 +94,7 @@ Les sections suivantes décrivent comment configurer les écrans de démarrage l
 
 ## Écrans de démarrage pour la plateforme Android
 
-Placez-y les fichiers [image 9-patch][1] du projet Android `res/drawable` répertoire. La taille de chacun doit être :
+Placez les fichiers [image 9-patch][1] le répertoire du projet Android `res/drawable`. La taille de chacun d'eux doit être :
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
 
@@ -103,19 +103,19 @@ Placez-y les fichiers [image 9-patch][1] du projet Android `res/drawable` réper
 *   moyen (mdpi): au moins 470 × 320
 *   petit (ldpi): au moins 426 × 320
 
-Dans `config.xml` , ajoutez les préférences suivantes :
+Dans `config.xml`, ajoutez les préférences suivantes :
 
     <preference name="splashscreen", "splash" />
     <preference name="splashScreenDelay", 10000 />
     
 
-La première ligne définit l'image à afficher comme écran de démarrage. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne.
+La première ligne définit l'image à afficher comme écran de démarrage. Si vous nommez l'image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne.
 
-La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
+La deuxième ligne définit le délai pendant lequel le splashscreen est visible en millisecondes. Pour fermer le splashscreen lorsque l'application reçoit l’événement `deviceready`, il est nécessaire d'appeler la méthode `navigator.splashscreen.hide()`.
 
-## Écrans de démarrage pour l'iOS plate-forme
+## Écrans de démarrage pour la plate-forme l'iOS
 
-Copiez-y votre images écran de démarrage du projet iOS `Resources/splash` répertoire. Seulement ajouter les images pour les périphériques que vous souhaitez prendre en charge, tels que l'iPad ou iPhone. La taille de chaque image doit être :
+Copiez-y les images d'écran de démarrage du projet iOS `Resources/splash` répertoire. Seulement ajouter ces images pour les périphériques que vous souhaitez prendre en charge, tels que l'iPad ou iPhone. La taille de chaque image doit être :
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 pixels)
@@ -127,7 +127,7 @@ Copiez-y votre images écran de démarrage du projet iOS `Resources/splash` rép
 
 ## Écrans de démarrage pour la plateforme BlackBerry 10
 
-Copiez vos images écran de démarrage dans le projet `res/screen/blackberry10` répertoire. Les noms de fichier doivent être :
+Copiez-y les images d'écran de démarrage du projet `res/screen/blackberry10` répertoire. Les noms de fichier doivent être :
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

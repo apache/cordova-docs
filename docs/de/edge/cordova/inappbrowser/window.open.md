@@ -36,20 +36,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     Die `options` Zeichenfolge muss keine Leerstelle enthalten, und jede Funktion Name/Wert-Paare müssen durch ein Komma getrennt werden. Featurenamen Groß-/Kleinschreibung. Alle Plattformen unterstützen die anderen Werte:
     
     *   **Lage**: Legen Sie auf `yes` oder `no` , machen die `InAppBrowser` der Adressleiste ein- oder ausschalten.
-    ## Android nur
     
-    *   **Closebuttoncaption** - setzen Sie auf eine Zeichenfolge, die die Beschriftung für die Schaltfläche "Fertig" sein wird. 
-    *   **versteckte** - legen Sie auf 'Ja', um den Browser zu erstellen und laden Sie die Seite, aber nicht zeigen. Das Load-Ereignis wird ausgelöst, wenn der Ladevorgang abgeschlossen ist. Lassen Sie, oder legen Sie auf "Nein" (Standard), den Browser öffnen und laden normalerweise zu haben. 
-    *   **Clearcache** - legen Sie auf 'Ja', um den Browser Cookiecache gelöscht, wenn das neue Fenster geöffnet wird
-    *   **Clearsessioncache** - legen Sie auf 'Ja', um die Session Cookiecache gelöscht, wenn das neue Fenster geöffnet wird
-    ## iOS nur
+    Nur Android:
     
-    *   **Closebuttoncaption** - setzen Sie auf eine Zeichenfolge, die die Beschriftung für die Schaltfläche "Fertig" sein wird. Beachten Sie, dass Sie diesen Wert selbst lokalisieren.
-    *   **versteckte** - legen Sie auf 'Ja', um den Browser zu erstellen und laden Sie die Seite, aber nicht zeigen. Das Load-Ereignis wird ausgelöst, wenn der Ladevorgang abgeschlossen ist. Lassen Sie, oder legen Sie auf "Nein" (Standard), den Browser öffnen und laden normalerweise zu haben. 
-    *   **Symbolleiste** - legen Sie auf "Ja" oder "Nein" zu die Symbolleiste aktivieren oder deaktivieren für die InAppBrowser (standardmäßig "Ja")
+    *   **Closebuttoncaption**: Legen Sie auf eine Zeichenfolge als Beschriftung der **fertig** -Schaltfläche verwenden.
+    *   **versteckte**: Legen Sie auf `yes` um den Browser zu erstellen und laden Sie die Seite, aber nicht zeigen. Das Load-Ereignis wird ausgelöst, wenn der Ladevorgang abgeschlossen ist. Weglassen oder auf `no` (Standard), den Browser öffnen und laden normalerweise zu haben. 
+    *   **ClearCache**: Legen Sie auf `yes` , der Browser ist Cookiecache gelöscht, bevor das neue Fenster geöffnet wird
+    *   **Clearsessioncache**: Legen Sie auf `yes` , der Sitzungs-Cookie Cache gelöscht, bevor das neue Fenster geöffnet wird
+    
+    iOS nur:
+    
+    *   **Closebuttoncaption**: Legen Sie auf eine Zeichenfolge als Beschriftung der **fertig** -Schaltfläche verwenden. Beachten Sie, dass Sie diesen Wert selbst zu lokalisieren müssen.
+    *   **versteckte**: Legen Sie auf `yes` um den Browser zu erstellen und laden Sie die Seite, aber nicht zeigen. Das Load-Ereignis wird ausgelöst, wenn der Ladevorgang abgeschlossen ist. Weglassen oder auf `no` (Standard), den Browser öffnen und laden normalerweise zu haben. 
+    *   **Symbolleiste**: Legen Sie auf `yes` oder `no` Aktivieren Sie die Symbolleiste ein- oder Ausschalten für InAppBrowser (Standard:`yes`)
     *   **EnableViewportScale**: Legen Sie auf `yes` oder `no` , Viewport Skalierung durch ein Meta-Tag (standardmäßig zu verhindern`no`).
     *   **MediaPlaybackRequiresUserAction**: Legen Sie auf `yes` oder `no` , HTML5 audio oder video von automatisches Abspielen (standardmäßig zu verhindern`no`).
-    *   **AllowInlineMediaPlayback**: Legen Sie auf `yes` oder `no` Inline HTML5 Medienwiedergabe, anzeigen innerhalb des Browserfensters statt eine gerätespezifische Wiedergabe-Schnittstelle ermöglichen. Des HTML `video` Element muss auch die `webkit-playsinline` Attribut (Standard:`no`)
+    *   **AllowInlineMediaPlayback**: Legen Sie auf `yes` oder `no` Inline-HTML5-Medienwiedergabe im Browserfenster anstatt eine gerätespezifische Wiedergabe-Schnittstelle ermöglichen. Des HTML `video` Element muss auch die `webkit-playsinline` Attribut (Standard:`no`)
     *   **KeyboardDisplayRequiresUserAction**: Legen Sie auf `yes` oder `no` , die Tastatur zu öffnen, wenn Formularelemente Fokus per JavaScript erhalten `focus()` Anruf (Standard:`yes`).
     *   **SuppressesIncrementalRendering**: Legen Sie auf `yes` oder `no` zu warten, bis alle neuen Fensterinhalt empfangen wird, bevor Sie wiedergegeben wird (standardmäßig`no`).
     *   **Presentationstyle**: Legen Sie auf `pagesheet` , `formsheet` oder `fullscreen` [Präsentationsstil][1] (standardmäßig fest`fullscreen`).

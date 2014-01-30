@@ -41,7 +41,7 @@ L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une inst
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -50,7 +50,7 @@ L'objet `File` contient les attributs d'un fichier. Vous pouvez obtenir une inst
 
 Retourne un nouvel objet `File` pour lequel `FileReader` renvoie uniquement la partie spécifiée du fichier. Toute valeur négative pour `start` ou `end` est mesurée à partir de la fin du fichier. Les index sont positionnés par rapport à la tranche actuelle. (Voir l'exemple complet ci-dessous.)
 
-**Paramètres :**
+**Paramètres**:
 
 *   **start** : l'index du premier octet à lire, inclusif.
 

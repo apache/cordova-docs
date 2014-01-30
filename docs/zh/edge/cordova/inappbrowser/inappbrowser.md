@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**注：**InAppBrowser 視窗類似于一個標準的 web 瀏覽器，並且無法訪問科爾多瓦的 Api。
+**注**： InAppBrowser 視窗的行為像一個標準的 web 瀏覽器，並且無法訪問科爾多瓦的 Api。
 
 ## 說明
 
@@ -48,14 +48,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 這些命令適用于所有有針對性的平臺，但修改如下所述的特定于平臺的配置設置：
 
-*   （在 android`app/res/xml/config.xml`)
+*   （在 android`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   （在 iOS`config.xml`)
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature name="InAppBrowser" />
         
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。
 
 # addEventListener
 
@@ -207,7 +207,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     ref.show();
     
 
-*   **ref:**的 InAppBrowser 視窗 (參考`InAppBrowser`)
+*   **ref**： InAppBrowser 視窗 (參考`InAppBrowser`)
 
 ## 支援的平臺
 
@@ -354,7 +354,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -456,10 +456,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

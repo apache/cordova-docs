@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要なプライバシーの注意：**地理位置情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理位置情報データを使用する方法を議論すべきです。 地理位置情報データと一般に見なされる敏感なそれは人の所在を明らかにすることができますので、保存される場合、彼または彼女の旅行の歴史。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります (デバイス オペレーティング システムしない場合そう既に) 地理位置情報データにアクセスするアプリの前にちょうど時間通知を提供しています。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
+**警告**: 地理位置情報データの収集と利用を重要なプライバシーの問題を発生させます。 アプリのプライバシー ポリシーは他の当事者とデータ (たとえば、粗い、罰金、郵便番号レベル、等) の精度のレベルでは共有されているかどうか、アプリが地理位置情報データを使用する方法を議論すべきです。 地理位置情報データと一般に見なされる敏感なユーザーの居場所を開示することができますので、彼らの旅行の歴史保存されている場合。 したがって、アプリのプライバシー ポリシーに加えて、強くする必要があります (デバイス オペレーティング システムしない場合そう既に)、アプリケーションに地理位置情報データをアクセスする前に - 時間のお知らせを提供します。 その通知は、上記の (例えば、 **[ok]**を**おかげで**選択肢を提示する) によってユーザーのアクセス許可を取得するだけでなく、同じ情報を提供する必要があります。 詳細については、プライバシーに関するガイドを参照してください。
 
 ## メソッド
 
@@ -60,13 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
         
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   ブラックベリー WebWorks
@@ -82,7 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   iOS （`config.xml`)
+*   FirefoxOS (manifest.webapp ファイル内で)
+    
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+        
+
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
@@ -100,4 +106,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。

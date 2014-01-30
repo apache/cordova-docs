@@ -43,7 +43,7 @@ El objeto `ContactAddress` almacena las propiedades de una única dirección de 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -139,7 +139,7 @@ El objeto `ContactAddress` almacena las propiedades de una única dirección de 
 
 *   **pref**: no soportado, devolviendo `false` en dispositivos Android 2.X.
 
-## Rarezas blackBerry WebWorks (OS 5.0 y superiores)
+## BlackBerry WebWorks 5.0 + rarezas
 
 *   **pref**: no compatible con dispositivos BlackBerry, devolviendo `false`.
 

@@ -43,7 +43,7 @@ Il `ContactAddress` oggetto memorizza le proprietà di un singolo indirizzo di u
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -139,7 +139,7 @@ Il `ContactAddress` oggetto memorizza le proprietà di un singolo indirizzo di u
 
 *   **pref**: non supportato, tornando `false` su dispositivi Android 2. x.
 
-## Stranezze di blackBerry WebWorks (OS 5.0 e superiori)
+## BlackBerry WebWorks 5.0 + stranezze
 
 *   **pref**: non è supportato sui dispositivi BlackBerry, restituendo`false`.
 

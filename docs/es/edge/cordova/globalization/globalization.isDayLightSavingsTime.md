@@ -32,7 +32,7 @@ Si hay un error de lectura de la fecha, luego ejecuta el `errorCallback`. Códig
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

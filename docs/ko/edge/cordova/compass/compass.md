@@ -45,12 +45,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 명령은 모든 타겟된 플랫폼에 적용 하지만 플랫폼 관련 구성 설정을 아래에 설명 된 수정:
 
-*   (안 드 로이드`app/res/xml/config.xml`)
+*   안 드 로이드
     
-        < 기능 이름 "나침반" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.CompassListener =" / >< / 기능 >
+        (in `app/res/xml/config.xml`)
+        <feature name="Compass">
+            <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+        </feature>
+        
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />
@@ -68,4 +75,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

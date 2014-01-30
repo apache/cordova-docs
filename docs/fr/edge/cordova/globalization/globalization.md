@@ -14,9 +14,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Mondialisation
+# Globalization
 
-Obtient des informations et effectue des opérations spécifiques aux paramètres régionaux et le fuseau horaire de l'utilisateur.
+Permet l'obtention d'informations et d'effectuer des opérations spécifiques aux paramètres régionaux et au fuseau horaire de l'utilisateur.
 
 ## Objets
 
@@ -39,15 +39,15 @@ Obtient des informations et effectue des opérations spécifiques aux paramètre
 
 ## Portée des variables
 
-Le `globalization` objet est un enfant de la `navigator` s'opposent, et a donc une portée globale.
+L'objet `globalization` est défini sur l'objet `navigator` et a donc une portée globale.
 
-    // The global globalization object
+    // L'objet global globalization
     var globalization = navigator.globalization;
     
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.globalization
         $ cordova plugin ls
@@ -55,13 +55,13 @@ Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme
         $ cordova plugin rm org.apache.cordova.globalization
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
-*   Android (dans`app/res/xml/config.xml`)
+*   Android (dans`res/xml/config.xml`)
     
         <feature name="Globalization">
-            <param name="android-package" value="org.apache.cordova.Globalization" />
+            <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
         </feature>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

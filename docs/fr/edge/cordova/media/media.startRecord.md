@@ -16,41 +16,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.startRecord
 
-Pour démarrer l'enregistrement d'un fichier audio.
+Permet de démarrer l'enregistrement d'un fichier audio.
 
-    media.startRecord() ;
+    media.startRecord();
     
 
 ## Description
 
-La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enregistrement pour un fichier audio.
+La méthode `media.startRecord` s'exécute de façon synchrone, elle démarre l'enregistrement d'un fichier audio.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Record audio
+    // enregistrement audio
     //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // fonction callback de succès
             function() {
-                console.log("recordAudio():Audio Success");
+                console.log("recordAudio() : audio enregistré avec succès");
             },
     
-            // error callback
+            // fonction callback d'erreur
             function(err) {
-                console.log("recordAudio():Audio Error: "+ err.code);
+                console.log("recordAudio() : erreur lors de l'enregistrement audio : " + err.code);
             });
     
-        // Record audio
+        // débute l'enregistrement audio
         mediaRec.startRecord();
     }
     
@@ -60,29 +60,29 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Exemple enregistrement audio</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // Wait for device API libraries to load
+        // attend le chargement des API de l'appareil
         //
         document.addEventListener("deviceready", onDeviceReady, false);
     
-        // Record audio
+        // enregistrement audio
         //
         function recordAudio() {
             var src = "myrecording.amr";
             var mediaRec = new Media(src, onSuccess, onError);
     
-            // Record audio
+            // démarre l'enregistrement audio
             mediaRec.startRecord();
     
-            // Stop recording after 10 sec
+            // arrête l'enregistrement après 10 secondes
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudioPosition(recTime + " secondes");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -90,26 +90,26 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
             }, 1000);
         }
     
-        // device APIs are available
+        // les API de l'appareil sont disponibles
         //
         function onDeviceReady() {
             recordAudio();
         }
     
-        // onSuccess Callback
+        // fonction callback onSuccess
         //
         function onSuccess() {
-            console.log("recordAudio():Audio Success");
+            console.log("recordAudio() : audio enregistré avec succès");
         }
     
-        // onError Callback
+        // fonction callback onError
         //
         function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
+            alert('code : '    + error.code    + '\n' +
+                  'message : ' + error.message + '\n');
         }
     
-        // Set audio position
+        // affiche la position de lecture du fichier audio
         //
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
@@ -118,31 +118,31 @@ La `media.startRecord` méthode s'exécute de façon synchrone, démarre un enre
         </script>
       </head>
       <body>
-        <p id="media">Recording audio...</p>
+        <p id="media">Enregistrement audio en cours...</p>
         <p id="audio_position"></p>
       </body>
     </html>
     
 
-## Bizarreries Android
+## Particularités d'Android
 
-*   Appareils Android enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
+*   Les appareils Android enregistrent de l'audio au format Adaptive Multi-Rate. Le nom de fichier spécifié doit donc comporter une extension *.amr*.
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-*   Appareils blackBerry enregistrent de l'audio en format Adaptive Multi-Rate. Le fichier spécifié doit se terminer par une extension *.amr* .
+*   Les appareils Android enregistrent de l'audio au format Adaptive Multi-Rate. Le nom de fichier spécifié doit donc comporter une extension *.amr*.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   iOS uniquement les enregistrements de fichiers de type *.wav* et renvoie une erreur si l'extension de nom de fichier n'est pas correctement.
+*   iOS produit uniquement des enregistrements sous la forme de fichier de type *.wav* et renvoie une erreur si l'extension du nom de fichier est incorrecte.
 
-*   Si un chemin d'accès complet n'est pas fourni, l'enregistrement est placé dans l'application `documents/tmp` répertoire. Ce qui peut être consulté le `File` à l'aide de l'API `LocalFileSystem.TEMPORARY` . N'importe quel sous-répertoire spécifié au moment de l'enregistrement doit déjà exister.
+*   Si un chemin d'accès complet n'est pas précisé, l'enregistrement est placé dans le répertoire `documents/tmp` correspondant à l'application. Il sera ensuite accessible via l'API `File` en utilisant la constante `LocalFileSystem.TEMPORARY`. Tout sous-répertoire présent dans le chemin d'accès au moment de l'enregistrement doit déjà exister.
 
-*   Les fichiers peuvent être enregistrés et lus à l'aide de l'URI les documents :
+*   Les fichiers peuvent être enregistrés et lus à l'aide de l'URI des documents :
     
         var myMedia = new Media("documents://beer.mp3")
         
 
-## Bizarreries de paciarelli
+## Particularités de Tizen
 
-*   Pas pris en charge sur les appareils paciarelli.
+*   Cette méthode n'est pas prise en charge par les appareils Tizen.

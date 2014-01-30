@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > Proporciona acceso a audio, imagen y las capacidades de captura de vídeo del dispositivo.
 
-**Nota de privacidad importante:** Recopilación y uso de imágenes, video o audio desde el micrófono o cámara del dispositivo plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza dichos sensores y si los datos registrados se compartieron con cualquiera de las partes. Además, si el uso de la aplicación de la cámara o el micrófono no es aparente en la interfaz de usuario, debe proporcionar un aviso de just-in-time antes de su aplicación accediendo a la cámara o el micrófono (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Tenga en cuenta que algunos mercados de aplicación pueden requerir su aplicación para proporcionar aviso just-in-time y obtener permiso del usuario antes de acceder a la cámara o el micrófono. Para obtener más información, por favor consulte a la guía de privacidad.
+**ADVERTENCIA**: recopilación y uso de imágenes, video o audio desde el micrófono o cámara del dispositivo plantea cuestiones de privacidad importante. Política de privacidad de su aplicación debe discutir cómo la aplicación utiliza dichos sensores y si los datos registrados se compartieron con cualquiera de las partes. Además, si el uso de la aplicación de la cámara o el micrófono no es aparente en la interfaz de usuario, debe proporcionar un aviso de just-in-time antes de la aplicación tiene acceso a la cámara o el micrófono (si el sistema operativo del dispositivo ya no hacerlo). Que el aviso debe proporcionar la misma información mencionada, además de obtener un permiso del usuario (por ejemplo, presentando opciones para **Aceptar** y **No gracias**). Tenga en cuenta que algunos mercados de aplicación pueden requerir su aplicación para proporcionar aviso just-in-time y obtener permiso del usuario antes de acceder a la cámara o el micrófono. Para obtener más información, por favor consulte a la guía de privacidad.
 
 ## Objetos
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Ámbito de aplicación
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+El objeto `capture` se asignado al objeto `navigator.device`, y por lo tanto tiene un alcance global.
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -66,7 +66,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -77,7 +77,8 @@ A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
@@ -85,7 +86,18 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
 *   Android
     
-        (in app/res/XML/plugins.xml) < nombre de la función = "Capturar" >< nombre param = "android-paquete" value="org.apache.cordova.Capture" / >< / característica > (en app/AndroidManifest.xml) < usos-permiso android:name="android.permission.RECORD_AUDIO" / >< usos-permiso android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   BlackBerry WebWorks
@@ -93,7 +105,7 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         (in www/plugins.xml) < nombre de la función = "Capturar" >< nombre param = "blackberry-paquete" value="org.apache.cordova.capture.MediaCapture" / >< / característica > (en www/config.xml) < cuentan con id="blackberry.system" requiere = "true" versión = "1.0.0.0" / >< cuentan con id="blackberry.io.file" requiere = "true" version = "1.0.0.0" / >
         
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         < nombre de la función = "Capturar" >< nombre param = "ios-paquete" value = "CDVCapture" / >< / característica >
         
@@ -109,4 +121,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
         </Capabilities>
         
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

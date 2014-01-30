@@ -30,7 +30,7 @@ Die Details wie eine UUID generiert wird werden vom Gerätehersteller und bezieh
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8
@@ -79,7 +79,7 @@ Die Details wie eine UUID generiert wird werden vom Gerätehersteller und bezieh
 
 ## iOS Quirk
 
-Die `uuid` auf iOS ist nicht eindeutig auf ein Gerät, aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder aktualisieren Sie auch Ihre app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
+Die `uuid` auf iOS ist nicht eindeutig auf ein Gerät, aber für jede Anwendung, für jede Installation variiert. Es ändert sich, wenn Sie löschen und neu die app installieren, und möglicherweise auch beim iOS zu aktualisieren, oder auch ein Upgrade möglich die app pro Version (scheinbaren in iOS 5.1). Die `uuid` ist kein zuverlässiger Wert.
 
 ## Windows Phone 7 und 8 Macken
 

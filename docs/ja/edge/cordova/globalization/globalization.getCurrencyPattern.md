@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 パターンを返します、 `successCallback` と、 `properties` オブジェクトをパラメーターとして。そのオブジェクトは、次のプロパティを含める必要があります。
 
-*   **パターン**: 通貨パターンを書式設定および通貨の値を解析します。 パターンは、Unicode 技術標準 #35 に従ってください。 <http://unicode.org/reports/tr35/tr35-4.html>。 *(文字列)*
+*   **パターン**: 通貨パターンを書式設定および通貨の値を解析します。 パターンは、 [Unicode 技術標準 #35][1]に従ってください。 *(文字列)*
 
 *   **コード**: パターンの ISO 4217 通貨コード。*(文字列)*
 
@@ -37,6 +37,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **グループ**: 解析および書式設定を使用する区切り記号。*(文字列)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 受信した `currencyCode` パラメーターをする必要があります、 `String` 、ISO 4217 通貨コードは、たとえば 'USD' のいずれかの。
 
 パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 
 ## 簡単な例

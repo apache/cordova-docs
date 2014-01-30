@@ -45,14 +45,19 @@ A partir de la versión 3.0, Cordova implementa nivel de dispositivo APIs como *
 
 Estos comandos se aplican a todas las plataformas específicas, sino modificar las opciones de configuración específicas de la plataforma que se describen a continuación:
 
-*   Android (en`app/res/xml/config.xml`)
+*   Android
     
+        (in `app/res/xml/config.xml`)
         <feature name="Compass">
-            <param name="android-package" value="org.apache.cordova.CompassListener" />
+            <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
         </feature>
         
+        (in app/AndroidManifest)
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        
 
-*   (en iOS`config.xml`)
+*   iOS (en del directorio la aplicación llamado`config.xml`)
     
         <feature name="Compass">
             <param name="ios-package" value="CDVLocation" />
@@ -70,4 +75,4 @@ Estos comandos se aplican a todas las plataformas específicas, sino modificar l
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Consulte *Soporte de la plataforma* en la sección de Resumen.
+Algunas plataformas que soportan esta característica sin necesidad de ninguna configuración especial. Ver soporte de plataforma para tener una visión general.

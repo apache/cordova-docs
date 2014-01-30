@@ -27,7 +27,7 @@ Un objet qui répertorie les fichiers et répertoires d'un répertoire, tel que 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -36,7 +36,7 @@ Un objet qui répertorie les fichiers et répertoires d'un répertoire, tel que 
 
 Lire les entrées dans ce répertoire.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un callback qui est passé à un tableau d'objets `FileEntry` et `DirectoryEntry`. *(Fonction)*
 

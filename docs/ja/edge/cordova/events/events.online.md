@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Tizen
@@ -85,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 の癖
 
-エミュレーターで実行しているとき、 `connection.status` は常に知られているので、このイベントは*ない*火。
+エミュレーターで実行しているとき、 `connection.status` は常に知られている、このイベントは*ない*火。
 
 ## Windows Phone 8 癖
 

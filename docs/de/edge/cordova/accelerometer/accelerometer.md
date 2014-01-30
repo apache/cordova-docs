@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Zugriff auf die Funktion
 
-Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie den CLI `plugin` Befehl, welche im Command-Line Interface beschrieben ist, zum hinzufügen oder entfernen dieses Features für ein Projekt:
+Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -46,10 +46,10 @@ Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden 
 
 Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen Konfigurationseinstellungen müssen, wie unten beschrieben, geändert werden:
 
-*   Android (in`app/res/xml/config.xml`)
+*   Android (in`res/xml/config.xml`)
     
         <feature name="Accelerometer">
-            <param name="android-package" value="org.apache.cordova.AccelListener" />
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
         </feature>
         
 
@@ -65,7 +65,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen K
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
@@ -83,4 +83,4 @@ Diese Befehle gelten für alle Zielplattformen, aber die plattformspezifischen K
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen ohne dass eine besondere Konfiguration notwendig ist. Siehe dazu *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.

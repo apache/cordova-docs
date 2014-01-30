@@ -16,58 +16,57 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.stringToDate
 
-Analyse une date mise en forme comme une chaîne, en fonction des préférences de l'utilisateur et du calendrier en utilisant le fuseau horaire du client, du client et retourne l'objet date correspondante.
+Retourne un objet date construit à partir d'une date contenue dans une chaîne de caractères, en tenant compte des préférences utilisateur, du calendrier et du fuseau horaire du client.
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne la date du rappel de succès avec un `properties` objet comme paramètre. Cet objet doit avoir les propriétés suivantes :
+Transmet la date demandée en paramètre à la fonction successCallback sous la forme d'un objet `properties`. Cet objet contient les propriétés suivantes :
 
-*   **année**: l'année à quatre chiffres. *(Nombre)*
+*   **year** : le nombre à quatre chiffres représentant l'année. *(Number)*
 
-*   **mois**: le mois de (0-11). *(Nombre)*
+*   **month** : le numéro du mois compris entre 0 et 11. *(Number)*
 
-*   **jour**: le jour de (1-31). *(Nombre)*
+*   **day** : le numéro du jour compris entre 1 et 31. *(Number)*
 
-*   **heure**: l'heure du (0-23). *(Nombre)*
+*   **hour** : l'heure comprise entre 0 et 23. *(Number)*
 
-*   **minute**: la minute (0-59). *(Nombre)*
+*   **minute** : le nombre de minutes compris entre 0 et 59. *(Number)*
 
-*   **deuxième**: la seconde de (0 à 59). *(Nombre)*
+*   **second** : le nombre de secondes compris entre 0 et 59. *(Number)*
 
-*   **milliseconde**: les millisecondes (entre 0 et 999), non disponibles sur toutes les plateformes. *(Nombre)*
+*   **millisecond** : le nombre de millisecondes compris entre 0 et 999, pas disponible pour toutes les plates-formes. *(Number)*
 
-Les entrants `dateString` paramètre doit être de type`String`.
+Le paramètre `dateString` doit être de type `String`.
 
-Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
+Le paramètre `options` est facultatif, sa valeur par défaut est :
 
-    {formatLength: « court », sélecteur: « date et heure »}
+    {formatLength:'short', selector:'date and time'}
     
 
-Le `options.formatLength` peut être `short` , `medium` , `long` , ou `full` . Le `options.selector` peut être `date` , `time` ou`date and
-time`.
+Les valeurs autorisées pour la propriété `options.formatLength` sont `short`, `medium`, `long` et `full`. Les valeurs autorisées pour la propriété `options.selector` sont `date`, `time` et `date and time`.
 
-S'il y a une erreur, l'analyse de la chaîne de date, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PARSING\_ERROR`.
+Si une erreur survient lors de l'analyse de la chaîne de caractères, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur prévu dans ce cas est `GlobalizationError.PARSING_ERROR`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'afficher une boîte de dialogue contextuelle avec un texte semblable à `month:8 day:25 year:2012` . Notez que le mois entier est l'un de moins que la chaîne, comme le nombre entier de mois représente un index de tableau.
+Si la langue du navigateur est réglée sur `fr_FR`, une fenêtre popup contenant `month : 8, day : 25, year : 2012` est affichée. Notez que l'entier faisant référence au numéro du mois est différent de celui présent dans la chaîne parsée, ceci car il représente un index de tableau.
 
     navigator.globalization.stringToDate(
-        '9/25/2012',
-        function (date) {alert('month:' + date.month +
-                               ' day:'  + date.day   +
-                               ' year:' + date.year  + '\n');},
-        function () {alert('Error getting date\n');},
+        '25/09/2012',
+        function (date) {alert('month : ' + date.month + ',' +
+                               ' day : '  + date.day + ',' +
+                               ' year : ' + date.year + '\n');},
+        function () {alert('Erreur lors de l\'obtention de la date\n');},
         {selector: 'date'}
     );
     
@@ -77,17 +76,17 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'affi
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>stringToDate Example</title>
+        <title>Exemple stringToDate</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkStringDate() {
           navigator.globalization.stringToDate(
-            '9/25/2012',
-            function (date) {alert('month:' + date.month +
-                                   ' day:' + date.day +
-                                   ' year:' + date.year + '\n');},
-            function () {alert('Error getting date\n');},
+            '25/09/2012',
+            function (date) {alert('month : ' + date.month + ',' +
+                                   ' day : '  + date.day + ',' +
+                                   ' year : ' + date.year + '\n');},
+            function () {alert('Erreur lors de l\'obtention de la date\n');},
             {selector:'date'}
           );
         }
@@ -95,11 +94,11 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cela permet d'affi
         </script>
       </head>
       <body>
-        <button onclick="checkStringDate()">Click for parsed date</button>
+        <button onclick="checkStringDate()">Cliquer ici pour parser la date</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
-*   Le `formatLength` prend en charge uniquement l'option `short` et `full` valeurs.
+*   Seules les valeurs `short` et `full` sont supportées pour l'option `formatLength`.

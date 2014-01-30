@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **onloadend**: (のいずれかの成功または失敗)、要求が完了したときに呼び出されます。*(機能)*
 
-**注：**次の porperty はサポートされていません。
+**注**: 次の porperty はサポートされていません。
 
 *   **onprogress**: の進行状況をレポート ファイルの読み取り中と呼ばれる `progress.loaded` / `progress.total` 。*(機能)*
 
@@ -59,14 +59,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
 
 ## readAsDataURL
 
-**パラメーター:**
+**パラメーター**:
 
 *   **ファイル**: ファイル オブジェクトを読みます。
 
@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## readAsText
 
-**パラメーター:**
+**パラメーター**:
 
 *   **ファイル**: ファイル オブジェクトを読みます。
 
@@ -205,7 +205,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 現在 iOS と Android でのみサポートされています。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **ファイル**: ファイル オブジェクトを読みます。
 
@@ -231,7 +231,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 現在 iOS と Android でのみサポートされています。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **ファイル**: ファイル オブジェクトを読みます。
 

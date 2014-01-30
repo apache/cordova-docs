@@ -16,34 +16,34 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.isDayLightSavingsTime
 
-Indique si l'heure avancée est en vigueur pour une date donnée en utilisant le calendrier et le fuseau horaire du client.
+Indique si l'heure d'été est en vigueur pour une date donnée en utilisant le calendrier et le fuseau horaire du client.
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
     
 
 ## Description
 
-Indique si l'heure avancée est en vigueur à la `successCallback` avec un `properties` objet comme paramètre. Cet objet doit avoir une `dst` propriété avec une `Boolean` valeur. A `true` valeur indique que l'heure avancée est en vigueur à la date donnée, et `false` indique qu'il ne l'est pas.
+Indique si l'heure d'été est en vigueur ou non en transmettant un objet `properties` en paramètre de la fonction `successCallback`. Cet objet contient une propriété `dst` dont la valeur est de type `Boolean`. Ainsi, `true` indique que l'heure d'été est en vigueur à la date donnée, au contraire `false` indique qu'elle ne l'est pas.
 
-Le paramètre entrant `date` doit être de type`Date`.
+Le paramètre obligatoire `date` doit être de type `Date`.
 
-S'il y a une erreur de lecture de la date, puis le `errorCallback` s'exécute. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+Si une erreur survient lors de la lecture de la date, la fonction `errorCallback` est exécutée. Le code d'erreur attendu dans ce cas est`GlobalizationError.UNKNOWN_ERROR`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Au cours de l'été, et si le navigateur est défini sur un fuseau horaire la DST-activé, il doit afficher une boîte de dialogue contextuelle avec un texte semblable à `dst: true` :
+Pendant l'été et si l'heure d'été est activée sur le fuseau horaire actuel du navigateur, une fenêtre popup contenant `dst : true` est affichée :
 
     navigator.globalization.isDayLightSavingsTime(
         new Date(),
-        function (date) {alert('dst: ' + date.dst + '\n');},
-        function () {alert('Error getting names\n');}
+        function (date) {alert('dst : ' + date.dst + '\n');},
+        function () {alert('Erreur lors de l\'obtention de la valeur de dst\n');}
     );
     
 
@@ -52,21 +52,21 @@ Au cours de l'été, et si le navigateur est défini sur un fuseau horaire la DS
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>isDayLightSavingsTime Example</title>
+        <title>Exemple isDayLightSavingsTime</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkDayLightSavings() {
           navigator.globalization.isDayLightSavingsTime(
             new Date(),
-            function (date) {alert('dst: ' + date.dst + '\n');},
-            function () {alert('Error getting names\n');}
+            function (date) {alert('dst : ' + date.dst + '\n');},
+            function () {alert('Erreur lors de l\'obtention de la valeur de dst\n');}
           );
         }
     
         </script>
       </head>
       <body>
-        <button onclick="checkDayLightSavings()">Click for daylight savings</button>
+        <button onclick="checkDayLightSavings()">Cliquer ici pour v&eacute;rifier si l'heure d'&eacute;t&eacute est en vigueur</button>
       </body>
     </html>

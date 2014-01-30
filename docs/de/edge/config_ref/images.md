@@ -71,7 +71,7 @@ Android gibt sowohl Hochformat und Querformat Splash-Bildschirm-Images für nied
         android/screen-xhdpi-portrait.png
     
 
-Die iOS-Plattform gibt Varianten für iPhone/iPod und iPad, mit Varianten für Retina-Displays und verschiedenen Ausrichtungen. Die *568 h* -Datei ist für das iPhone 5 größer Bildschirm angepasst:
+Die iOS-Plattform gibt Varianten für iPhone/iPod und iPad, mit Varianten für Retina-Displays und verschiedenen Ausrichtungen. Die *568 h* -Datei gilt für das iPhone 5 größer Bildschirm:
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -109,13 +109,13 @@ In `config.xml` , fügen Sie die folgenden Einstellungen:
     <preference name="splashScreenDelay", 10000 />
     
 
-Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Wenn Sie Ihr Bild alles andere als nennen, `splash.png` , müssen Sie diese Zeile ändern.
+Die erste Zeile legt das Bild fest als den Begrüßungsbildschirm anzuzeigen. Wenn Sie das Bild alles andere als nennen, `splash.png` , müssen Sie diese Zeile ändern.
 
 Der zweiten Zeile wird die Verzögerung der Splashscreen in Millisekunden wie lange angezeigt wird. Um den Begrüßungsbildschirm zu entlassen, sobald die app erhält der `deviceready` Veranstaltung, Aufruf der `navigator.splashscreen.hide()` Methode.
 
 ## Splash-Screens für die iOS-Plattform
 
-Kopieren Sie Ihre Bildschirm-Splash-Images in des iOS-Projekts `Resources/splash` Verzeichnis. Fügen Sie nur die Bilder für die Geräte, wie iPad oder iPhone unterstützen möchten. Die Größe der einzelnen Bilder sollten sein:
+Splash-Bildschirm-Images in des iOS-Projekts kopieren `Resources/splash` Verzeichnis. Fügen Sie nur diese Bilder für die Geräte, wie iPad oder iPhone unterstützen möchten. Die Größe der einzelnen Bilder sollten sein:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 Pixel)
@@ -127,7 +127,7 @@ Kopieren Sie Ihre Bildschirm-Splash-Images in des iOS-Projekts `Resources/splash
 
 ## Splash-Screens für die BlackBerry 10-Plattform
 
-Kopieren Sie Ihre Bildschirm-Splash-Images in des Projekts `res/screen/blackberry10` Verzeichnis. Die Dateinamen sollten sein:
+Splash-Bildschirm-Images in des Projekts zu kopieren `res/screen/blackberry10` Verzeichnis. Die Dateinamen sollten sein:
 
 *   splash-1280x768.png (1280x768 pixels)
 *   splash-720x720.png (720x720 pixels)

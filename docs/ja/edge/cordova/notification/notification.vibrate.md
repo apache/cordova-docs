@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 
@@ -97,7 +97,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
-## BB10 の癖
+## ブラックベリー 10 癖
 
 ナビゲーター オブジェクトによって所有されている関数を振動します。
 

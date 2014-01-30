@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **fullPath**: 完全絶対パスをルートから、 `DirectoryEntry` 。*（，）*
 
-**注：**次の属性は、W3C の仕様によって定義されますが*サポートされます*。
+**注**: 次の属性は、W3C 仕様で定義されるはサポートされて*いません*。
 
 *   **ファイルシステム**: ファイルシステムを `DirectoryEntry` が存在します。*(ファイルシステム)*
 
@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -72,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ディレクトリに関するメタデータをご覧ください。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: が実行するコールバック関数を `Metadata` オブジェクト。*(機能)*
 
@@ -87,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ディレクトリの拡張属性、またはメタデータを設定します。*現在 iOS でのみ動作します*。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: メタデータの設定が成功したときに実行されるコールバック。*(機能)*
 
@@ -161,7 +161,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 削除し、そのディレクトリを置き換えますしようと、既存の空のディレクトリ上にディレクトリを移動します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **親**: 親ディレクトリ、ディレクトリを移動します。*(DirectoryEntry)*
 
@@ -202,7 +202,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ディレクトリ コピーは常に再帰的で、しディレクトリのすべての内容をコピーします。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **親**: ディレクトリをコピー先の親ディレクトリです。*(DirectoryEntry)*
 
@@ -252,7 +252,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   ファイルシステムのルート ディレクトリを削除します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: ディレクトリが削除された後に実行されるコールバック。パラメーターなしで呼び出されます。*(機能)*
 
@@ -267,7 +267,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 親を見て `DirectoryEntry` ディレクトリを含みます。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**： ディレクトリの親を渡されるコールバック `DirectoryEntry` 。*(機能)*
 
@@ -303,7 +303,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   そのすぐ上の親がまだ存在しないディレクトリを作成します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **パス**: ルックアップまたは作成するディレクトリへのパス。これからの相対パスまたは絶対パス `DirectoryEntry` 。*（，）*
 
@@ -324,7 +324,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   そのすぐ上の親がまだ存在しないファイルを作成します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **パス**: ルックアップまたは作成するファイルへのパス。これからの相対パスまたは絶対パス `DirectoryEntry` 。*（，）*
 
@@ -345,7 +345,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   ファイルシステムのルート ディレクトリを削除します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   **successCallback**: の後に実行されるコールバック、 `DirectoryEntry` が削除されています。パラメーターなしで呼び出されます。*(機能)*
 

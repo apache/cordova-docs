@@ -30,7 +30,7 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 *   **fullPath**: le chemin d'accès complet absolu de la racine de `FileEntry` . *(DOMString)*
 
-**Remarque :** L'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
+**Remarque**: l'attribut suivant est défini par la spécification W3C, mais n'est *pas* supportée :
 
 *   **système de fichiers**: le système de fichiers sur lequel le `FileEntry` réside. *(Système de fichiers)*
 
@@ -57,7 +57,7 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -66,7 +66,7 @@ Représente un fichier sur un système de fichiers, tel que défini dans la spé
 
 Recherche des métadonnées relatives à un fichier.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un callback passé à un objet `Metadata`. *(Fonction)*
 
@@ -87,9 +87,9 @@ Ensemble de métadonnées sur un fichier.
 
 **Actuellement ne fonctionne que sur iOS.**
 
-*   celle-ci définira les attributs étendus d'un fichier.
+*   Ceci définit les attributs étendus d'un fichier.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un callback qui s'exécute lorsque les métadonnées sont définie. *(Fonction)*
 
@@ -159,7 +159,7 @@ Déplace un fichier vers un autre emplacement sur le système de fichiers. Une e
 
 En outre, déplacer un fichier sur un fichier existant tente de supprimer et de remplacer ce fichier.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **parent**: le répertoire parent vers laquelle déplacer le fichier. *(DirectoryEntry)*
 
@@ -195,7 +195,7 @@ Copier un fichier vers un nouvel emplacement sur le système de fichiers. Une er
 
 *   copier un fichier dans sa société mère, si un nom différent de son actuel n'est pas fourni.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **parent**: le répertoire parent dans lequel copier le fichier. *(DirectoryEntry)*
 
@@ -240,7 +240,7 @@ Retourne une URL qui peut être utilisée pour localiser le fichier.
 
 Supprime un fichier.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: une fonction de rappel qui s'exécute après que le fichier a été supprimé. Appelé sans paramètre. *(Fonction)*
 
@@ -264,7 +264,7 @@ Supprime un fichier.
 
 Rechercher le parent `DirectoryEntry` qui contient le fichier.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un rappel passé parent du fichier `DirectoryEntry` . *(Fonction)*
 
@@ -288,7 +288,7 @@ Rechercher le parent `DirectoryEntry` qui contient le fichier.
 
 Créer un `FileWriter` objet associé au fichier représenté par la`FileEntry`.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un rappel passé un `FileWriter` objet. *(Fonction)*
 
@@ -312,7 +312,7 @@ Créer un `FileWriter` objet associé au fichier représenté par la`FileEntry`.
 
 Retourner un `File` objet qui représente l'état actuel du dossier que cette `FileEntry` représente.
 
-**Paramètres :**
+**Paramètres**:
 
 *   **successCallback**: un rappel passé un `File` objet. *(Fonction)*
 

@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaFile
 
-> Encapsule les propriétés d'un fichier de capture multimédia.
+> Encapsule les propriétés d'un fichier média capturé.
 
 ## Propriétés
 
-*   **nom**: le nom du fichier, sans le chemin d'accès. (DOMString)
+*   **name** : le nom du fichier, sans le chemin d'accès associé. (DOMString)
 
-*   **fullPath**: le chemin d'accès complet du fichier, y compris le nom. (DOMString)
+*   **fullPath** : le chemin d'accès complet au fichier, nom compris. (DOMString)
 
-*   **type**: type de mime du fichier (DOMString)
+*   **type** : le type MIME du fichier. (DOMString)
 
-*   **lastModifiedDate**: la date et l'heure lorsque le fichier a été modifié. (Date)
+*   **lastModifiedDate** : la date et l'heure de la dernière modification du fichier. (Date)
 
-*   **taille**: la taille du fichier, en octets. (Nombre)
+*   **size** : le poids du fichier, en octets. (Number)
 
 ## Méthodes
 
-*   **MediaFile.getFormatData**: récupère les informations sur le format du fichier multimédia.
+*   **MediaFile.getFormatData** : récupère les informations de format du fichier média.

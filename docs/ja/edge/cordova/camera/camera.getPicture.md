@@ -43,12 +43,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**注：**新しい装置で写真の解像度はかなり良いです。 デバイスのギャラリーから選択した写真が下方の品質に縮小しない場合でも、 `quality` パラメーターを指定します。 一般的なメモリの問題を回避する設定 `Camera.destinationType` を `FILE_URI` よりもむしろ`DATA_URL`.
+**注**: 新しいデバイス上の写真の解像度はかなり良いです。 デバイスのギャラリーから選択した写真が下方の品質に縮小しない場合でも、 `quality` パラメーターを指定します。 一般的なメモリの問題を回避する設定 `Camera.destinationType` を `FILE_URI` よりもむしろ`DATA_URL`.
 
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 と 8
@@ -67,7 +67,7 @@ JavaScript を含む `alert()` 関数コールバックのいずれかの問題�
 
 ## Windows Phone 7 の癖
 
-Zune を介してお使いのデバイスが接続されているネイティブのカメラ アプリケーションの起動動作しませんし、エラー コールバックをトリガーします。
+ネイティブ カメラ アプリケーションを呼び出すと、デバイスが Zune を介して接続されている動作しませんし、エラー コールバックをトリガーします。
 
 ## Tizen の癖
 
@@ -145,7 +145,7 @@ Tizen のみをサポートしている、 `destinationType` の `Camera.Destina
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -165,7 +165,7 @@ Tizen のみをサポートしている、 `destinationType` の `Camera.Destina
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

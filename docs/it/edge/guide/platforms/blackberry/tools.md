@@ -20,6 +20,8 @@ Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello c
 
  [1]: http://cordova.apache.org
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per una panoramica, vedere applicazione plugin.
+
 ## Creare un progetto
 
 Eseguire il `create` comando, specificando il percorso esistente per il progetto, l'identificatore del pacchetto stile retro-dominio e nome visualizzato dell'app. Ecco la sintassi per Mac e Windows:
@@ -28,7 +30,7 @@ Eseguire il `create` comando, specificando il percorso esistente per il progetto
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
     
 
-**Nota:** La piattaforma BlackBerry ignora il segnaposto del nome di pacchetto ( `com.example.project_name` ), ma è ancora necessario per l'uso di strumenti multipiattaforma.
+**Nota**: piattaforma BlackBerry The ignora il segnaposto del nome di pacchetto ( `com.example.project_name` ), ma è ancora necessario per l'uso di strumenti multipiattaforma.
 
 ## Costruire un progetto
 

@@ -30,7 +30,7 @@ Les applications devraient en général utiliser `document.addEventListener` pou
 ## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 
 ## Exemple court
 

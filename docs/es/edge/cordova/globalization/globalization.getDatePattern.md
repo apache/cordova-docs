@@ -25,13 +25,15 @@ Devuelve una cadena de patrón para analizar las fechas según las preferencias 
 
 Devuelve el patrón a la `successCallback`. El objeto se pasa como parámetro contiene las siguientes propiedades:
 
-*   **patrón**: el patrón para analizar las fechas y el formato de fecha y hora. Los patrones siguen Unicode técnica estándar #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **patrón**: el patrón para analizar las fechas y el formato de fecha y hora. Los patrones siguen [Unicode técnica estándar #35][1]. *(String)*
 
 *   **zona horaria**: el nombre abreviado de la zona horaria en el cliente. *(String)*
 
 *   **utc_offset**: la actual diferencia de segundos entre la zona horaria del cliente y el tiempo universal coordinado. *(Número)*
 
 *   **dst_offset**: el desplazamiento horario actual en segundos entre no-horario del cliente de huso horario y día del cliente ahorro de zona horaria. *(Número)*
+
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
 Si hay un error obteniendo el patrón, el `errorCallback` se ejecuta con un objeto `GlobalizationError` como un parámetro. Código esperado del error es `GlobalizationError.PATTERN\_ERROR`.
 
@@ -45,7 +47,7 @@ El `options.formatLength` puede ser de `short`, `medium`, `long` o `full`. El `o
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

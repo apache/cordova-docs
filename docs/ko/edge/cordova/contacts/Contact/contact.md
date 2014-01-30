@@ -60,12 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `Contact`개체는 사용자의 연락처를 나타냅니다. 연락처 생성 수, 저장 또는 장치 연락처 데이터베이스에서 제거 합니다. 연락처도 검색할 수 있습니다 (개별적으로 또는 일괄적으로) 데이터베이스에서 호출 하 여는 `contacts.find` 방법.
 
-**참고:** 모든 연락처 필드 위에 나열 된 모든 장치 플랫폼에서 지원 됩니다. 자세한 내용은 각 플랫폼의 *단점이* 섹션을 확인 하시기 바랍니다.
+**참고**: 모든 연락처 필드 위에 나열 된 모든 장치 플랫폼에서 지원 됩니다. 자세한 내용은 각 플랫폼의 *단점이* 섹션을 확인 하시기 바랍니다.
 
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -194,7 +194,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **카테고리**: 안 드 로이드 2.X 장치, 반환에서 지원 되지 않습니다`null`.
 
-## 블랙베리 WebWorks (운영 체제 5.0와 더 높은) 단점이
+## 블랙베리 WebWorks 5.0 + 특수
 
 *   **id**: 지원. 연락처를 저장 하면 장치에 의해 할당 된.
 
@@ -232,7 +232,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **displayName**: 연락처를 만들 때 표시 이름에서 표시 이름 매개 변수 다릅니다 제공 값 검색 연락처를 찾을 때.
 
-*   **url**: 때 연락처를 만드는 사용자가 입력을 하나 이상의 웹 주소를 저장 하지만 하나만 사용할 수 때 사용할 수 있는 연락처를 검색 합니다.
+*   **url**: 연락처를 만들 때 사용자가 입력을 하나 이상의 웹 주소를 저장 하지만 하나만 사용할 수 있는 연락처를 검색할 때.
 
 *   **phoneNumbers**: *pref* 옵션이 지원 되지 않습니다. *형식* *찾기* 작업에서 지원 되지 않습니다. 단 하나 `phoneNumber` 각 *형식* 에 대 한 허용.
 

@@ -24,16 +24,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **필터**:도 watchHeading 성공 콜백을 시작 하는 데 필요한 변경. *(수)*
 
-안 드 로이드 단점
+## 안 드 로이드 단점
 
----
-
-*   `filter`지원 되지 않습니다.
+*   대 한 지원`filter`.
 
 ## Tizen 특수
 
-*   `filter`지원 되지 않습니다.
+*   대 한 지원`filter`.
 
 ## Windows Phone 7, 8 특수
 
-*   `filter`지원 되지 않습니다.
+*   대 한 지원`filter`.

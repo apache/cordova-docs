@@ -125,7 +125,7 @@ Una volta che l'emulatore è installato e in esecuzione, eseguire uno dei seguen
 
 Se viene richiesto se un dispositivo è collegato al computer, rispondere no.
 
-**Nota:** Su BlackBerry OS 5, l'applicazione viene installata nella `Downloads` directory.
+**Nota**: su BlackBerry OS 5, l'applicazione viene installata nella `Downloads` directory.
 
 ## Distribuire al dispositivo
 
@@ -144,7 +144,7 @@ Poi dalla directory del progetto, eseguire uno dei comandi che si farebbe per vi
 
 Se viene richiesto se un dispositivo è collegato al computer, rispondete sì.
 
-**Nota:** Su BlackBerry OS 5, l'applicazione viene installata nella `Downloads` directory.
+**Nota**: su BlackBerry OS 5, l'applicazione viene installata nella `Downloads` directory.
 
 ## Informazioni aggiuntive
 

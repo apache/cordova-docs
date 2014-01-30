@@ -16,14 +16,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # splashscreen.Hide
 
-Faire disparaître de l'écran de démarrage.
+Fait disparaître l'écran de démarrage.
 
     navigator.splashscreen.hide();
     
 
 ## Description
 
-Cette méthode rejette écran de démarrage de l'application.
+Cette méthode fait disparaître l'écran de démarrage de l'application.
 
 ## Plates-formes prises en charge
 
@@ -66,9 +66,9 @@ Cette méthode rejette écran de démarrage de l'application.
     </html>
     
 
-## iOS Quirk
+## Spécificités iOS
 
-La `config.xml` du fichier `AutoHideSplashScreen` doit être `false` . Pour retarder la cacher l'écran de démarrage pendant deux secondes, ajoute un minuteur comme suit dans la `deviceready` gestionnaire d'événements :
+Le paramètre `AutoHideSplashScreen</code du fichier <code>config.xml` doit être réglé à `false` . Pour retarder la disparition de l'écran de démarrage de deux secondes, ajoute un minuteur comme ci-dessous dans le gestionnaire d'événements `deviceready` :
 
         setTimeout(function() {
             navigator.splashscreen.hide();

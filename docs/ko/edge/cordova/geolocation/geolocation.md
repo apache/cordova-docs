@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**중요 한 개인 정보 보호 참고:** 위치 정보 데이터의 수집 및 사용 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 다른 당사자와의 데이터 (예를 들어, 굵고, 괜 찮 아 요, 우편 번호, 등)의 정밀도 수준을 공유 여부를 app 지리적 데이터를 사용 하는 방법 토론 해야 한다. 그것은 사람의 행방을 밝힐 수 있기 때문에 및 저장, 그의 혹은 그녀의 여행의 역사 지리적 위치 데이터는 일반적으로 중요 한 간주. 따라서 응용 프로그램의 개인 정보 보호 정책 뿐만 아니라 강하게 해야 당신의 애플 리 케이 션이 (해당 되는 경우 장치 운영 체제는 이미 그래서를 하지 않습니다) 지리적 위치 데이터에 액세스 하기 전에 그냥--시간 통지. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
+**경고**: 중요 한 개인 정보 보호 문제를 제기 하는 위치 정보 데이터의 수집 및 사용 합니다. 응용 프로그램의 개인 정보 보호 정책 다른 당사자와의 데이터 (예를 들어, 굵고, 괜 찮 아 요, 우편 번호, 등)의 정밀도 수준을 공유 여부를 app 지리적 데이터를 사용 하는 방법 토론 해야 한다. 그것은 사용자의 행방을 밝힐 수 있기 때문에 및 저장, 그들의 여행 역사 지리적 위치 데이터는 일반적으로 민감한 간주. 따라서, 애플 리 케이 션의 개인 정보 보호 정책 뿐만 아니라 강력 하 게 좋습니다 (해당 되는 경우 장치 운영 체제 이렇게 이미 하지 않는) 응용 프로그램 위치 정보 데이터에 액세스 하기 전에 그냥--시간 통지. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
 
 ## 메서드
 
@@ -60,13 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
         
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   블랙베리 WebWorks
@@ -82,7 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   (iOS`config.xml`)
+*   (Manifest.webapp 파일)에서 FirefoxOS
+    
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+        
+
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
@@ -100,4 +106,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

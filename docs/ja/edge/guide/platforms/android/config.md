@@ -18,27 +18,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 注: これを false に設定がない殺すアプリ一時停止イベントの後、アプリはバック グラウンドでコルドバ webview でコードの実行を停止のみです。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: 400-500 の範囲で標準的な HTTP エラーへの応答に表示するエラー ページを指定します。 ホーム ページおよびその他の web 資産を含む最上位ディレクトリで指定されたファイルを配置します。
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`： アプリをロードするとき、ネイティブのダイアログを表示します。値の形式は、*タイトル、メッセージです。*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: サブ ・ ページは、アプリ内での読み込み時ネイティブ ダイアログを表示します。値の形式は、*タイトル、メッセージです。*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`（番号、既定値は `20000` ): タイムアウト エラーをスローする前に待機する時間の量、ページの読み込み中。 この例では 20 よりもむしろ 10 秒を指定します。
+*   `LoadUrlTimeoutValue`(数は、既定では `20000` 、20 秒間): タイムアウト エラーをスローする前に待機する時間の量、ページの読み込み中。 この例では 20 よりもむしろ 10 秒を指定します。
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
@@ -51,3 +36,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `SplashScreenDelay`(数は、既定値は `5000` ): 時間量スプラッシュ スクリーンのイメージが表示されます。
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(ブール値、既定値は `true` ): コントロール、InAppBrowser 内でページを開くかどうかとしてアクセスできます同じ localStorage および WebSQL ストレージ ページ、既定のブラウザーで開かれます。

@@ -16,32 +16,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.prompt
 
-Affiche une boîte de dialogue d'invite personnalisable.
+Affiche une boîte de dialogue de saisie personnalisable.
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
     
 
 *   **message**: message de la boîte de dialogue. *(String)*
 
-*   **promptCallback**: rappel à appeler lorsque vous appuyez sur un bouton. *(Fonction)*
+*   **promptCallback**: callback à appeler lorsque vous appuyez sur un bouton. *(Fonction)*
 
-*   **titre**: titre *(String)* (facultatif, la valeur par défaut de dialogue`Prompt`)
+*   **titre**: titre *(String)* (facultatif, par défaut `Prompt`)
 
-*   **buttonLabels**: tableau de chaînes spécifiant les bouton *(Array)* (facultatif, par défaut, les étiquettes`["OK","Cancel"]`)
+*   **buttonLabels**: tableau de chaînes spécifiant les étiquettes de boutons *(Array)* (facultatif, par défaut, les étiquettes `["OK","Cancel"]`)
 
-*   **defaultText**: zone de texte par défaut entrée valeur ( `String` ) (en option, par défaut : chaîne vide)
+*   **defaultText**: texte par défaut de la zone de texte ( `String` ) (en option, par défaut : chaîne vide)
 
 ## Description
 
-La `notification.prompt` méthode affiche une boîte de dialogue natif qui est plus personnalisable que le navigateur `prompt` fonction.
+La méthode `notification.prompt` affiche une boîte de dialogue native qui est plus personnalisable que celle de la fonction `prompt` du navigateur.
 
 ## promptCallback
 
-Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans la boîte de dialogue d'invite. Le `results` objet passé au rappel contient les propriétés suivantes :
+Le callback `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans la boîte de dialogue de saisie. L'objet `results` passé au callback contient les propriétés suivantes :
 
-*   **buttonIndex**: l'index du bouton activé. *(Nombre)* Notez que l'index utilise base d'indexation, la valeur est `1` , `2` , `3` , etc..
+*   **buttonIndex**: l'index du bouton activé. *(Nombre)* Notez que l'index utilise une indexation de base 1, donc la valeur est `1` , `2` , `3` , etc..
 
-*   **entrée 1**: le texte entré dans la boîte de dialogue d'invite. *(String)*
+*   **entrée 1**: le texte entré dans la boîte de dialogue de saisie. *(String)*
 
 ## Plates-formes prises en charge
 
@@ -113,8 +113,8 @@ Le `promptCallback` s'exécute lorsque l'utilisateur appuie sur un bouton dans l
     </html>
     
 
-## Bizarreries Android
+## Spécificités Android
 
-*   Android prend en charge un maximum de trois boutons et ignore plus que cela.
+*   Android prend en charge un maximum de trois boutons et ignore les autres.
 
 *   Sur Android 3.0 et versions ultérieures, les boutons sont affichés dans l'ordre inverse pour les appareils qui utilisent le thème Holo.

@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **onloadend**： 當請求已完成 （無論成功或失敗） 時調用。*（函數）*
 
-**注：**以下產權不受支援：
+**注**： 以下產權不受支援：
 
 *   **onprogress**: 讀取該檔，報告進度的角度時稱為 `progress.loaded` / `progress.total` 。*（函數）*
 
@@ -59,14 +59,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
 
 ## readAsDataURL
 
-**參數：**
+**參數**：
 
 *   **檔**： 要讀取的檔物件。
 
@@ -90,7 +90,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## readAsText
 
-**參數：**
+**參數**：
 
 *   **檔**： 要讀取的檔物件。
 
@@ -205,7 +205,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 目前僅支援 iOS 和 android 系統。
 
-**參數：**
+**參數**：
 
 *   **檔**： 要讀取的檔物件。
 
@@ -231,7 +231,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 目前僅支援 iOS 和 android 系統。
 
-**參數：**
+**參數**：
 
 *   **檔**： 要讀取的檔物件。
 

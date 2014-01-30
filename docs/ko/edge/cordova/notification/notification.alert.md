@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7과 8
@@ -44,7 +44,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 빠른 예제
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something

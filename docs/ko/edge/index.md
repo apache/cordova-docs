@@ -29,17 +29,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        커맨드라인 인터페이스
+        플랫폼 지원
       </h2>
       
-      <span>커맨드라인으로 생성, 빌드, 그리고 배치까지</span>
+      <span>모든 주요 기능에 대 한 호환성 테이블입니다.</span>
+    </li>
+    <li>
+      <h2>
+        명령줄 인터페이스
+      </h2>
+      
+      <span>만들기, 빌드 및 명령줄에서 배포.</span>
     </li>
     <li>
       <h2>
         플랫폼 가이드
       </h2>
       
-      <span>해당하는 SDK설치와 프로젝트 업데이트</span>
+      <span>각 SDK 업데이트 프로젝트 설정</span>
     </li>
     <li>
       <h2>

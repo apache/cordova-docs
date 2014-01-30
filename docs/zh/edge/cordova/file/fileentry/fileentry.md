@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **完整路徑**： 絕對路徑從根到 `FileEntry` 。*() DOMString*
 
-**注：**下面的屬性由 W3C 規範定義，但*不是*支援：
+**注意**： 下面的屬性由 W3C 規範定義，但*不是*支援：
 
 *   **檔案系統**： 檔案系統的 `FileEntry` 駐留。*（檔案系統）*
 
@@ -57,7 +57,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Windows 8
@@ -66,7 +66,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 查找有關檔的中繼資料。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 傳遞一個回檔 `Metadata` 物件。*（函數）*
 
@@ -85,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   這將設置一個檔的擴展的屬性。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 當設置該中繼資料時執行回檔。*（函數）*
 
@@ -155,7 +155,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 此外，在現有檔中移動檔將嘗試刪除和替換該檔。
 
-**參數：**
+**參數**：
 
 *   **父**： 要將檔移到父目錄。*() DirectoryEntry*
 
@@ -191,7 +191,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   如果未提供從其當前的一個不同的名稱，請將檔案複製到其父。
 
-**參數：**
+**參數**：
 
 *   **父**： 要向其複製該檔的父目錄。*() DirectoryEntry*
 
@@ -236,7 +236,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 刪除的檔。
 
-**參數：**
+**參數**：
 
 *   **successCallback**: 在該檔已被刪除後執行的回檔。不帶參數調用。*（函數）*
 
@@ -260,7 +260,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 查找父 `DirectoryEntry` 包含該檔。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 傳遞檔的父的回檔 `DirectoryEntry` 。*（函數）*
 
@@ -284,7 +284,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 創建 `FileWriter` 物件與所代表的檔關聯`FileEntry`.
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 傳遞一個回檔 `FileWriter` 物件。*（函數）*
 
@@ -308,7 +308,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 返回 `File` 物件，它表示該檔的目前狀態，這 `FileEntry` 表示。
 
-**參數：**
+**參數**：
 
 *   **successCallback**： 傳遞一個回檔 `File` 物件。*（函數）*
 

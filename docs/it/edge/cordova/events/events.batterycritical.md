@@ -37,7 +37,7 @@ Applicazioni in genere è necessario utilizzare `window.addEventListener` per fi
 
 *   iOS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   Tizen
 
 ## Esempio rapido

@@ -16,44 +16,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getDateNames
 
-Retourne un tableau des noms des mois ou jours de la semaine, selon le calendrier et les préférences de l'utilisateur du client.
+Retourne un tableau contenant les noms des mois ou jours de la semaine, selon le calendrier et les préférences utilisateur du client.
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne le tableau de noms à la `successCallback` avec un `properties` objet comme paramètre. Cet objet contient une `value` propriété avec un `Array` de `String` valeurs. Les noms de fonctionnalités de tableau à partir de soit le premier mois de l'année ou le premier jour de la semaine, selon l'option choisie.
+Transmet le tableau de noms comme paramètre de la fonction `successCallback` sous la forme d'un objet `properties`. Cet objet contient une propriété `value` contenant un tableau (`Array`) dont les valeurs sont des chaînes de caractères (`String`). Ces chaînes de caractères sont classées dans le tableau à partir du premier mois de l'année ou du premier jour de la semaine, selon l'option choisie.
 
-S'il y a une erreur d'obtention des noms, puis les `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.UNKNOWN\_ERROR`.
+Si une erreur survient lors de l'obtention des noms, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Dans ce cas, le code d'erreur attendu est `GlobalizationError.UNKNOWN_ERROR`.
 
-Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
+Le paramètre `options` est facultatif, sa valeur par défaut est :
 
-    {type: « large », item: « mois »}
+    {type:'wide', item:'months'}
     
 
-La valeur de `options.type` peut être `narrow` ou`wide`.
+Les valeurs autorisées pour la propriété `options.type` sont `narrow` et `wide`.
 
-La valeur de `options.item` peut être `months` ou`days`.
+Les valeurs autorisées pour la propriété `options.item` sont `months` et `days`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple affiche une série de douze fenêtres popup, un par mois, avec un texte semblable à `month: January` :
+Si la langue du navigateur est réglée sur `fr_FR`, cet exemple affiche une série de douze fenêtres popup, une par mois, avec contenu ressemblant à `mois : janvier`.
 
     navigator.globalization.getDateNames(
         function (names) {
             for (var i = 0; i < names.value.length; i++) {
-                alert('month: ' + names.value[i] + '\n');
+                alert('mois : ' + names.value[i] + '\n');
             }
         },
-        function () { alert('Error getting names\n'); },
+        function () { alert('Erreur lors de l\'obtention des noms de mois\n'); },
         { type: 'wide', item: 'months' }
     );
     
@@ -63,7 +63,7 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple affich
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDateNames Example</title>
+        <title>Exemple getDateNames</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
@@ -71,10 +71,10 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple affich
           navigator.globalization.getDateNames(
             function (names) {
               for (var i=0; i<names.value.length; i++) {
-                alert('month: ' + names.value[i] + '\n');
+                alert('mois : ' + names.value[i] + '\n');
               }
             },
-            function () {alert('Error getting names\n');},
+            function () {alert('Erreur lors de l\'obtention des noms de mois\n');},
             {type:'wide', item:'months'}
           );
         }
@@ -82,6 +82,6 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple affich
         </script>
       </head>
       <body>
-        <button onclick="checkDateNames()">Click for date names</button>
+        <button onclick="checkDateNames()">Cliquer ici pour afficher les mois de l'ann&eacute;e</button>
       </body>
     </html>

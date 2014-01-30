@@ -37,7 +37,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
 
 *   iOS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   Tizen
 
 ## Ejemplo rápido

@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     
 
-**Remarque :** une fenêtre InAppBrowser se comporte comme un navigateur Web standard et ne peut pas accéder aux API Cordova.
+**Remarque**: InAppBrowser la fenêtre se comporte comme un navigateur web standard et ne peut pas accéder aux APIs Cordova.
 
 ## Description
 
@@ -38,7 +38,7 @@ L'objet retourné par un appel à `window.open`.
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser la commande `plugin` de l'Interface en Ligne de Commande, décrite dans la section intitulée L'Interface en Ligne de Commande, afin d'ajouter ou retirer cette fonctionnalité à un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.inappbrowser
         $ cordova plugin ls
@@ -48,14 +48,14 @@ Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant 
 
 Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
-*   Android (dans `app/res/xml/config.xml`)
+*   Android (dans`res/xml/config.xml`)
     
         <feature name="InAppBrowser">
-            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+            <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
         </feature>
         
 
-*   iOS (dans `config.xml`)
+*   iOS (dans du répertoire application nommé`config.xml`)
     
         <feature name="InAppBrowser">
             <param name="ios-package" value="CDVInAppBrowser" />
@@ -67,7 +67,7 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient l
         <feature name="InAppBrowser" />
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.
 
 # addEventListener
 
@@ -207,7 +207,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
              iabRef = window.open('http://apache.org', '_blank', 'location=yes');
              iabRef.addEventListener('loadstart', iabLoadStart);
              iabRef.addEventListener('loadstop', iabLoadStop);
-             iabRef.removeEventListener('loaderror', iabLoadError);
+             iabRef.addEventListener('loaderror', iabLoadError);
              iabRef.addEventListener('exit', iabClose);
         }
     
@@ -278,7 +278,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
     ref.show();
     
 
-*   **ref :** référence à la fenêtre InAppBrowser. (`InAppBrowser`)
+*   **Réf**: référence à la fenêtre () InAppBrowser`InAppBrowser`)
 
 ## Plates-formes supportées
 
@@ -354,7 +354,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
-        ref.executeSript({file: "myscript.js"});
+        ref.executeScript({file: "myscript.js"});
     });
     
 
@@ -382,7 +382,7 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
                 code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
             }, function() {
                 alert("Image Element Successfully Hijacked");
-            }
+            });
         }
     
         function iabClose(event) {
@@ -456,10 +456,10 @@ Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans né
         //
         function changeBackgroundColor() {
             iabRef.insertCSS({
-                code: "body { background: #ffff00"
+                code: "body { background: #ffff00; }"
             }, function() {
                 alert("Styles Altered");
-            }
+            });
         }
     
         function iabClose(event) {

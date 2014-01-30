@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Tizen
@@ -85,8 +85,8 @@ Beim ersten Start die erste `online` Ereignis (falls zutreffend) dauert mindeste
 
 ## Windows Phone 7 Macken
 
-Bei der Ausführung im Emulator, der `connection.status` ist immer unbekannt, so wird dieses Ereignis *nicht* Feuer.
+Bei der Ausführung im Emulator, der `connection.status` ist immer unbekannt, so dass dieses Ereignis *nicht* Feuer.
 
 ## Windows Phone 8 Macken
 
-Der Emulator meldet den Verbindungstyp als `Cellular` , die ändert sich nicht, so dass Ereignisse werden *nicht* Feuer.
+Der Emulator meldet den Verbindungstyp als `Cellular` , die wird nicht geändert, so dass Ereignisse *nicht* Feuer.

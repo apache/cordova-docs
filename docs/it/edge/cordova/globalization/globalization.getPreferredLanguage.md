@@ -30,7 +30,7 @@ Se c'è un errore nell'acquisizione della lingua, poi la `errorCallback` viene e
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

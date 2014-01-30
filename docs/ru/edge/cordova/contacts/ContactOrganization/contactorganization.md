@@ -37,7 +37,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8
@@ -122,7 +122,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **pref**: не поддерживается устройствами Android 2.X, возвращая`false`.
 
-## Причуды ежевики WebWorks (OS 5.0 и выше)
+## Причуды WebWorks 5.0 + ежевика
 
 *   **pref**: не поддерживается на устройствах BlackBerry, возвращая`false`.
 

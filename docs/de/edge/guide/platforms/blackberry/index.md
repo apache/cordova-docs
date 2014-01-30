@@ -130,7 +130,7 @@ Nachdem der Emulator installiert und ausgeführt wird, führen Sie einen der fol
 
 Wenn Sie gefragt werden, ob ein Gerät an Ihren Computer angeschlossen ist, Antworten Sie mit Nein.
 
-**Hinweis:** Auf BlackBerry OS 5, die Anwendung installiert ist, das `Downloads` Verzeichnis.
+**Hinweis**: auf BlackBerry OS 5, die Anwendung wird installiert das `Downloads` Verzeichnis.
 
 ## Bereitstellung auf Gerät
 
@@ -150,7 +150,7 @@ Dann aus dem Projekt-Verzeichnis, führen Sie einen der Befehle würden Sie um d
 
 Wenn Sie gefragt werden, ob ein Gerät an Ihren Computer angeschlossen ist, Antworten Sie mit Ja.
 
-**Hinweis:** Auf BlackBerry OS 5, die Anwendung installiert ist, das `Downloads` Verzeichnis.
+**Hinweis**: auf BlackBerry OS 5, die Anwendung wird installiert das `Downloads` Verzeichnis.
 
 ## Weitere Informationen
 

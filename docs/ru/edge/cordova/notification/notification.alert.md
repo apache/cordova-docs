@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 и 8
@@ -44,7 +44,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Быстрый пример
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something

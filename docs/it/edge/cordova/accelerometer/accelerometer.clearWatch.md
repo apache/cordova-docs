@@ -26,7 +26,7 @@ Smettere di guardare il `Acceleration` fanno riferimento il `watchID` parametro.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 e 8

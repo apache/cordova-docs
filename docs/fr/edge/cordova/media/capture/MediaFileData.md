@@ -16,58 +16,58 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # MediaFileData
 
-> Encapsule des informations sur le format d'un fichier multimédia.
+> Encapsule des informations de format d'un fichier média.
 
 ## Propriétés
 
-*   **codecs**: le format réel du contenu audio et vidéo. (DOMString)
+*   **codecs** : le format réel du contenu audio et vidéo. (DOMString)
 
-*   **débit**: le débit moyen du contenu. La valeur est égale à zéro pour les images. (Nombre)
+*   **bitrate** : le débit moyen du contenu. Pour les images, la valeur est zéro. (Number)
 
-*   **hauteur**: la hauteur de l'image ou la vidéo en pixels. La valeur est égale à zéro pour des clips audio. (Nombre)
+*   **height** : la hauteur de l'image ou de la vidéo en pixels. Pour des clips audio, la valeur est zéro. (Number)
 
-*   **largeur**: la largeur de l'image ou la vidéo en pixels. La valeur est égale à zéro pour des clips audio. (Nombre)
+*   **width** : la largeur de l'image ou de la vidéo en pixels. Pour des clips audio, la valeur est zéro. (Number)
 
-*   **durée**: la durée du clip vidéo ou audio en quelques secondes. La valeur est égale à zéro pour les images. (Nombre)
+*   **duration** : la durée du clip vidéo ou audio en secondes. Pour les images, la valeur est zéro. (Number)
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-Aucune API ne fournit des informations sur le format des fichiers multimédias, donc le `MediaFileData` objet retourné par `MediaFile.getFormatData` comporte les valeurs par défaut suivantes :
+Aucune API fournissant des informations sur le format des fichiers média n'est disponible, par conséquent les objets `MediaFileData` retournés par `MediaFile.getFormatData` comportent les valeurs par défaut suivantes :
 
-*   **codecs**: pas pris en charge et retourne`null`.
+*   **codecs** : propriété non prise en charge, sa valeur est `null`.
 
-*   **Bitrate**: pas pris en charge et retourne la valeur zéro.
+*   **bitrate** : propriété non prise en charge, sa valeur est zéro.
 
-*   **hauteur**: pas pris en charge et retourne la valeur zéro.
+*   **height** : propriété non prise en charge, sa valeur est zéro.
 
-*   **largeur**: non pris en charge et retourne la valeur zéro.
+*   **width** : propriété non prise en charge, sa valeur est zéro.
 
-*   **durée**: non pris en charge et retourne la valeur zéro.
+*   **duration** : propriété non prise en charge, sa valeur est zéro.
 
-## Quirks Android
+## Particularités d'Android
 
-Prend en charge ce qui suit `MediaFileData` Propriétés :
+Supporte les propriétés `MediaFileData` suivantes :
 
-*   **codecs**: pas pris en charge et retourne`null`.
+*   **codecs** : propriété non prise en charge, sa valeur est `null`.
 
-*   **Bitrate**: pas pris en charge et retourne la valeur zéro.
+*   **bitrate** : propriété non prise en charge, sa valeur est zéro.
 
-*   **hauteur**: prise en charge : seuls les fichiers image et vidéo.
+*   **height** : propriété prise en charge seulement pour les fichiers image et vidéo.
 
-*   **largeur**: prise en charge : seuls les fichiers image et vidéo.
+*   **width** : propriété prise en charge seulement pour les fichiers image et vidéo.
 
-*   **durée**: prise en charge : seuls les fichiers audio et vidéo.
+*   **duration** : propriété prise en charge seulement pour les fichiers audio et vidéo.
 
-## iOS Quirks
+## Particularités d'iOS
 
-Prend en charge ce qui suit `MediaFileData` Propriétés :
+Prend en charge les propriétés `MediaFileData` suivantes :
 
-*   **codecs**: pas pris en charge et retourne`null`.
+*   **codecs** : propriété non prise en charge, sa valeur est `null`.
 
-*   **Bitrate**: pris en charge sur les périphériques d'iOS4 pour l'audio uniquement. Renvoie zéro pour les images et vidéos.
+*   **bitrate** : propriété prise en charge uniquement pour les fichiers audio sous iOS4. Renvoie zéro pour les images et les vidéos.
 
-*   **hauteur**: prise en charge : seuls les fichiers image et vidéo.
+*   **height** : propriété prise en charge seulement pour les fichiers image et vidéo.
 
-*   **largeur**: prise en charge : seuls les fichiers image et vidéo.
+*   **width**: propriété prise en charge seulement pour les fichiers image et vidéo.
 
-*   **durée**: prise en charge : seuls les fichiers audio et vidéo.
+*   **duration** : propriété prise en charge seulement pour les fichiers audio et vidéo.

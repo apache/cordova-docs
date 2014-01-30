@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # capture.captureImage
 
-> Démarrez l'application appareil photo et retourner des informations sur les fichiers de l'image capturée.
+> Ouvre l'application appareil photo et fournit des informations sur les fichiers image capturés.
 
     navigator.device.capture.captureImage(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
@@ -25,41 +25,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Description
 
-Commence une opération asynchrone pour capturer des images à l'aide d'application caméra de l'appareil. L'opération permet aux utilisateurs de capturer plusieurs images en une seule séance.
+Débute une opération asynchrone de capture d'images via l'application appareil photo par défaut de l'appareil. Cette opération permet à l'utilisateur de l'appareil d'enregistrer plusieurs prises en une seule séance de capture.
 
-L'opération de capture soit termine lorsque l'utilisateur ferme l'application appareil photo, ou le nombre maximal d'enregistrements spécifié par `CaptureAudioOptions.limit` est atteinte. Si aucun `limit` valeur est spécifiée, par défaut à un (1), et l'opération de capture se termine après que l'utilisateur saisit une image unique.
+L'opération de capture se termine lorsque l'utilisateur quitte l'application appareil photo, ou quand le nombre maximal d'enregistrements spécifié par `CaptureImageOptions.limit` est atteint. Si aucune valeur n'est fournie pour le paramètre `limit` celle utilisée par défaut est un (1), l'opération de capture se terminerait donc après que l'utilisateur ait enregistré une seule image.
 
-Lorsque l'opération de capture terminée, elle appelle le `CaptureCB` rappel avec un tableau de `MediaFile` objets décrivant chaque fichier de l'image capturée. Si l'utilisateur annule l'opération avant la capture d'une image, la `CaptureErrorCB` rappel s'exécute avec un `CaptureError` objet mettant en vedette un `CaptureError.CAPTURE_NO_MEDIA_FILES` code d'erreur.
+Une fois l'opération de capture terminée, la fonction callback `CaptureCB` est exécutée et un tableau contenant des objets `MediaFile` décrivant chaque image capturée lui est passé en paramètre. Si l'utilisateur annule l'opération avant qu'une image ne soit capturée, la fonction callback `CaptureErrorCB` est exécutée et un objet `CaptureError` comprenant le code d'erreur `CaptureError.CAPTURE_NO_MEDIA_FILES` lui est passé en paramètre.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Windows Phone 7 Quirks
+## Particularités de Windows Phone 7
 
-Invoquant l'application native caméra alors que votre appareil est connecté via Zune ne fonctionne pas, et exécute le rappel de l'erreur.
+Ouvrir l'application native appareil photo pendant que l'appareil est connecté via Zune ne fonctionne pas, la fonction callback d'erreur est exécutée dans ce cas.
 
-## Petit exemple
+## Exemple court
 
-    // capture callback
+    // fonction callback de capture
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // faire quelque chose d'intéressant avec le fichier
         }
     };
     
-    // capture error callback
+    // fonction callback d'erreur de capture
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Code d\'erreur : ' + error.code, null, 'Erreur de capture');
     };
     
-    // start image capture
+    // débute la capture d'image(s)
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
     
 
@@ -68,13 +68,13 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Capture Image</title>
+        <title>Capture d'image</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // Called when capture operation is finished
+        // appelée quand l'opération de capture est terminée
         //
         function captureSuccess(mediaFiles) {
             var i, len;
@@ -83,22 +83,22 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
             }
         }
     
-        // Called if something bad happens.
+        // appelée si un problème survient
         //
         function captureError(error) {
-            var msg = 'An error occurred during capture: ' + error.code;
-            navigator.notification.alert(msg, null, 'Uh oh!');
+            var msg = 'Une erreur est survenue pendant la capture : ' + error.code;
+            navigator.notification.alert(msg, null, 'Oh oh !');
         }
     
-        // A button will call this function
+        // un bouton appellera cette fonction
         //
         function captureImage() {
-            // Launch device camera application,
-            // allowing user to capture up to 2 images
+            // ouvre l'application appareil photo,
+            // en permettant à l'utilisateur de capturer jusqu'à deux images
             navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 2});
         }
     
-        // Upload files to server
+        // upload des fichiers sur le serveur
         function uploadFile(mediaFile) {
             var ft = new FileTransfer(),
                 path = mediaFile.fullPath,
@@ -107,11 +107,11 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
             ft.upload(path,
                 "http://my.domain.com/upload.php",
                 function(result) {
-                    console.log('Upload success: ' + result.responseCode);
-                    console.log(result.bytesSent + ' bytes sent');
+                    console.log('Succès de l\'upload : ' + result.responseCode);
+                    console.log(result.bytesSent + ' octets envoyés');
                 },
                 function(error) {
-                    console.log('Error uploading file ' + path + ': ' + error.code);
+                    console.log('Erreur lors de l\'upload du fichier ' + path + ' : ' + error.code);
                 },
                 { fileName: name });
         }
@@ -119,6 +119,6 @@ Invoquant l'application native caméra alors que votre appareil est connecté vi
         </script>
         </head>
         <body>
-            <button onclick="captureImage();">Capture Image</button> <br>
+            <button onclick="captureImage();">Capture d'image</button> <br>
         </body>
     </html>

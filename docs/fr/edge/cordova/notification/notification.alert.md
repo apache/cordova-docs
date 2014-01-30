@@ -16,35 +16,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # notification.Alert
 
-Affiche une boîte de dialogue ou d'alerte personnalisé.
+Affiche une boîte de dialogue ou d'alerte personnalisée.
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
     
 
 *   **message**: message de la boîte de dialogue. *(String)*
 
-*   **alertCallback**: rappel à appeler lorsque la boîte de dialogue alert est rejeté. *(Fonction)*
+*   **alertCallback**: callback à appeler lorsque la boîte de dialogue d'alerte est fermée. *(Fonction)*
 
-*   **titre**: titre de dialogue. *(String)* (Facultatif, par défaut`Alert`)
+*   **titre**: titre de la boîte de dialogue. *(String)* (Facultatif, par défaut`Alert`)
 
 *   **buttonName**: nom de bouton. *(String)* (Facultatif, par défaut`OK`)
 
 ## Description
 
-La plupart des implémentations de Cordova utilisent une boîte de dialogue natives pour cette fonctionnalité, mais certaines plates-formes du navigateur `alert` fonction, qui est généralement moins personnalisable.
+La plupart des implémentations de Cordova utilisent une boîte de dialogue native pour cette fonctionnalité, mais certaines plates-formes utilisent la boîte de dialogue `alert` du navigateur, qui est généralement moins personnalisable.
 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
-*   Paciarelli
+*   Tizen
 *   Windows Phone 7 et 8
 *   Windows 8
 
 ## Petit exemple
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry WebWorks 5.0+ / iOS / Tizen
     //
     function alertDismissed() {
         // do something
@@ -102,11 +102,11 @@ La plupart des implémentations de Cordova utilisent une boîte de dialogue nati
     </html>
     
 
-## Windows Phone 7 et 8 Quirks
+## Spécificités Windows Phone 7 et 8
 
-*   Il n'y a aucune alerte navigateur intégré, mais vous pouvez lier un comme suit pour appeler `alert()` dans la portée globale :
+*   Il n'y a aucune boîte de dialogue d'alerte intégrée au navigateur, mais vous pouvez en lier une pour appeler `alert()` dans le scope global :
     
         window.alert = navigator.notification.alert;
         
 
-*   Les deux `alert` et `confirm` sont sans blocage des appels, des résultats qui ne sont disponibles que de façon asynchrone.
+*   Les deux appels `alert` et `confirm` sont non-blocants, leurs résultats ne sont disponibles que de façon asynchrone.

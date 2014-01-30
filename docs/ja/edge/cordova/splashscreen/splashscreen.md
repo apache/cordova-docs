@@ -35,20 +35,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 これらのコマンドすべてのターゲット プラットフォームに適用されますが、以下のプラットフォームに固有の構成設定を変更します。
 
-*   （アンドロイド`app/res/xml/config.xml`)
+*   （アンドロイド`res/xml/config.xml`)
     
         <feature name="SplashScreen">
-            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+            <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         </feature>
         
 
-*   iOS （`config.xml`)
+*   (名前のアプリケーション ディレクトリ内の iOS`config.xml`)
     
         <feature name="SplashScreen">
             <param name="ios-package" value="CDVSplashScreen" />
         </feature>
         
 
-いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。*プラットフォームのサポート*の概要のセクションを参照してください。
+いくつかのプラットフォームは特別な構成を必要とせずにこの機能をサポート可能性があります。概要については、プラットフォームのサポートを参照してください。
 
 これらのイメージを構成する方法の詳細については、アイコンとスプラッシュ画面を参照してください。

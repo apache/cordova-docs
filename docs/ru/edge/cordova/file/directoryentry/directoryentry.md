@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **полный путь**: полный абсолютный путь от корня к `DirectoryEntry` . *(DOMString)*
 
-**Примечание:** Следующий атрибут определен в спецификации W3C, но *не* поддерживается:
+**Примечание**: следующий атрибут определен в спецификации W3C, но *не* поддерживается:
 
 *   **Файловая система**: файловая система, на которой `DirectoryEntry` проживает. *(Файловая система)*
 
@@ -63,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 *   ОС Windows 8
@@ -72,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Поиск метаданных каталога.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: функцию обратного вызова для выполнения с `Metadata` объект. *(Функция)*
 
@@ -91,7 +91,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Устанавливает дополнительные атрибуты каталога или метаданные. *В настоящее время работает только на iOS.*
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, который выполняется, когда метаданные успешно установлены. *(Функция)*
 
@@ -165,7 +165,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Перемещение каталога поверх существующих пустой каталог пытается удалить и заменить этот каталог.
 
-**Параметры:**
+**Параметры**:
 
 *   **родитель**: родительский каталог для перемещения каталога. *(DirectoryEntry)*
 
@@ -206,7 +206,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Каталог копии всегда являются рекурсивными и скопируйте все содержимое каталога.
 
-**Параметры:**
+**Параметры**:
 
 *   **родитель**: родительский каталог, в который необходимо скопировать в каталог. *(DirectoryEntry)*
 
@@ -256,7 +256,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Удалите корневой папке файловой системы.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, который выполняется после удаления каталога. Вызывается без параметров. *(Функция)*
 
@@ -275,7 +275,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Посмотрите вверх родительского `DirectoryEntry` содержащий каталог.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратный вызов, который передается родительского каталога `DirectoryEntry` . *(Функция)*
 
@@ -311,7 +311,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Создайте каталог, чьи непосредственный родительский еще не существует.
 
-**Параметры:**
+**Параметры**:
 
 *   **путь**: путь к каталогу посмотрел вверх или создан. Либо абсолютный путь, или относительный путь от этого `DirectoryEntry` . *(DOMString)*
 
@@ -336,7 +336,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Создайте файл которого непосредственный родительский еще не существует.
 
-**Параметры:**
+**Параметры**:
 
 *   **путь**: путь к файлу посмотрел вверх или создан. Либо абсолютный путь, или относительный путь от этого `DirectoryEntry` . *(DOMString)*
 
@@ -361,7 +361,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Удалите корневой папке файловой системы.
 
-**Параметры:**
+**Параметры**:
 
 *   **successCallback**: обратного вызова, который выполняется после `DirectoryEntry` был удален. Вызывается без параметров. *(Функция)*
 

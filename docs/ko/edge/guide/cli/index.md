@@ -106,9 +106,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 ## 응용 프로그램 빌드
 
-기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `deviceready` 이벤트 처리기에서 기본적으로 참조 `www/js/index.js` . <!-- XREF
-(See the Application Development Guide for details.)
-XREF -->
+기본적으로는 `cordova create` 스크립트 생성 하는 골격 웹 기반 응용 프로그램의 홈 페이지는 프로젝트의 `www/index.html` 파일. 그러나 있지만, 모든 초기화의 일부로 지정 해야 합니다이 응용 프로그램을 편집 된 `deviceready` 이벤트 처리기에서 기본적으로 참조`www/js/index.js`.
 
 반복적으로 프로젝트를 빌드하려면 다음 명령을 실행:
 
@@ -154,11 +152,23 @@ XREF -->
 
 이 명령을 실행 하기 전에 해야 테스트를 위한 장치를 설정 하려면 다음 절차를 각 플랫폼 마다 다릅니다. 안 드 로이드의 경우, 장치에서 **USB 디버깅** 옵션을 사용 하 여 아마도 개발 environmnent에 따라 USB 드라이버를 추가 할 것입니다. 각 플랫폼의 요구 사항에 대 한 내용은 플랫폼 가이드를 참조 하십시오.
 
-## 기능 추가
+## 플러그인 기능 추가
 
 구축 하 고 새로운 프로젝트를 볼 때 표시 되는 기본 응용 프로그램 매우 많이 하지 않습니다. 표준 웹 기술을 활용 하기 위해 여러 가지에서 응용 프로그램을 수정할 수 있습니다 하지만 다양 한 장치 수준의 기능을 밀접 하 게 의사 소통을 위해 애플 리 케이 션에 대 한 핵심 코르도바 Api에 대 한 액세스를 제공 하는 플러그인을 추가 해야 합니다.
 
-*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 플러그인 개발 가이드 자세한 참조.) 더 일반적으로, 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인 추가 <!-응용 프로그램 개발 가이드에 설명 된 외부 참조 및 외부 참조--> API 참조에 대 한 자세한.
+*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 플러그인 개발 가이드 자세한 참조.) 더 일반적으로, API 참조에 대 한 자세한 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인을 추가할 것입니다. [Plugins.cordova.io][4]에 커뮤니티에서 제공 하는 추가 플러그인을 포함 하 여이 플러그인의 목록을 찾을 수 있습니다. CLI를 사용 하 여이 레지스트리에서 플러그인에 대 한 검색 수 있습니다. 예를 들어 검색 `bar` 와 `code` 두 용어 모두 소문자 부분으로 일치 하는 단일 결과 생성:
+
+ [4]: http://plugins.cordova.io/
+
+        $ cordova plugin search bar code
+    
+        com.phonegap.plugins.barcodescanner - Scans Barcodes
+    
+
+만 찾고 있는 `bar` 수확량 및 추가적인 결과:
+
+        org.apache.cordova.statusbar - Cordova StatusBar Plugin
+    
 
 `cordova plugin add`명령 코드를 플러그인에 대 한 저장소를 지정 해야 합니다. 여기에 기능을 추가할 수 있습니다 예입니다.
 
@@ -185,7 +195,7 @@ XREF -->
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
-            
+        
 
 *   장치 또는 네트워크 (파일 API) 액세스 파일:
     
@@ -232,13 +242,54 @@ XREF -->
 
 플러그인을 제거 하려면 목록에서 나타나는 같은 식별자로 그것을 참조 하십시오. 예를 들어, 여기에 어떻게 릴리스 버전에서 디버그 콘솔에 대 한 지원을 제거할 것입니다.
 
-        $ cordova plugin rm org.apache.cordova.console        
+        $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
     
 
-일괄 제거 하거나 추가할 수 있습니다 플러그인 각 명령에 대 한 하나 이상의 인수를 지정 하 여.
+일괄 제거 하거나 수 있습니다 각 명령에 대 한 하나 이상의 인수를 지정 하 여 플러그인을 추가:
 
-## 각 플랫폼을 사용자 지정
+        $ cordova plugin add org.apache.cordova.console org.apache.cordova.device
+    
+
+## 고급 플러그인 옵션
+
+플러그인을 추가 하는 경우 몇 가지 옵션 사용 플러그인 가져오기 위하여 어디에서 지정할 수 있습니다. 위의 예제를 사용 하 여 잘 알려진 `registry.cordova.io` 레지스트리 및 플러그인에 의해 지정 된 `id` :
+
+        $ cordova plugin add org.apache.cordova.console
+    
+
+`id`후 추가 하는 플러그인의 버전 번호를 포함할 수도 있습니다는 `@` 문자. `latest`버전은 최신 버전에 대 한 별칭. 예를 들어:
+
+        $ cordova plugin add org.apache.cordova.console@latest
+        $ cordova plugin add org.apache.cordova.console@0.2.1
+    
+
+플러그인에 등록 되지 않은 경우 `registry.cordova.io` 은 없지만 다른 git 저장소에 다른 URL을 지정할 수 있습니다:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
+    
+
+위의 git 예제 마스터 분기의 끝에서 플러그인을 인출 하지만 태그 또는 분기와 같은 대체 git ref 후 추가 될 수 있는 `#` 문자:
+
+        $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
+    
+
+경우 플러그인 (및 그것의 `plugin.xml` 파일)은 내 자식 repo 서브 디렉토리에서 그것을 지정할 수 있습니다 한 `:` 문자. 참고는 `#` 문자 여전히 필요:
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
+    
+
+또한 git ref 및 하위 디렉터리를 결합할 수 있습니다.
+
+        $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
+    
+
+또는 로컬 경로 포함 하는 플러그인 디렉토리를 지정할는 `plugin.xml` 파일:
+
+        $ cordova plugin add ../my_plugin_dir
+    
+
+## 각 플랫폼 사용자 지정 *병합* 을 사용 하 여
 
 코르도바를 사용 하면 쉽게 많은 다른 플랫폼을 위한 애플 리 케이 션을 배포할 수 있습니다, 하는 동안 때로는 사용자를 추가 해야 합니다. 이 경우, 다양 한 소스 파일을 수정 하 고 싶지 `www` 최상위 디렉터리만 `platforms` 디렉토리, 그들은 정기적으로 최상위로 대체 야 하기 때문에 `www` 디렉토리의 크로스 플랫폼 소스.
 
@@ -260,7 +311,24 @@ XREF -->
 
 또한 사용할 수 있습니다 `merges` 파일 원본에 존재 하지 추가할 `www` 디렉터리. 예를 들어, 애플 리 케이 션에 통합할 수 있는 *버튼을 다시* 그래픽 iOS 인터페이스에 저장 `merges/ios/img/back_button.png` , 안 드 로이드 버전 대신 캡처할 수 있습니다 하는 동안 `backbutton` 이벤트는 해당 하는 하드웨어 단추를.
 
-## 코르 도우 바 업데이트
+## 도움말 명령
+
+코르 도우 바 갇 하거나 문제가 발생할 경우 도움이 될 수 있는 글로벌 명령 몇을 갖추고 있습니다. `help`명령은 표시 모든 사용 가능한 코르도바 명령 및 구문:
+
+    $ cordova help
+    $ cordova        # same
+    
+
+`info`명령은 현재 설치 된 플랫폼, 플러그인, 각 플랫폼을 위한 SDK 버전 및 cli 버전 같은 잠재적으로 유용한 정보의 목록을 생성 하 고 `node.js` :
+
+    $ cordova info
+    
+
+그것은 모두 화면에 정보를 제공 및 로컬에서 출력을 캡처 `info.txt` 파일.
+
+**참고**: 현재, iOS 및 안 드 로이드 플랫폼에만 내용을 사용할 수 있습니다.
+
+## 코르 도우 바 및 프로젝트 업데이트
 
 설치한 후에 `cordova` 유틸리티를 업데이트할 수 있습니다 항상 그것 최신 버전을 다음 명령을 실행 하 여:
 
@@ -269,13 +337,19 @@ XREF -->
 
 이 구문을 사용 하 여 특정 버전을 설치.
 
-        $ sudo npm 설치-g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0
     
 
-실행 `cordova -v` 현재 실행 중인 버전을 볼 수 있습니다. 실행은 `npm
+실행 `cordova -v` 버전을 현재 실행 중인 볼 수 있습니다. 실행은 `npm
 info` 다른 사용 가능한 버전 번호와 함께 현재 버전을 포함 하 긴 목록에 대 한 명령:
 
         $ npm info cordova
     
 
 코르 도우 바 3.0은이 섹션에서 설명 하는 명령줄 인터페이스를 지 원하는 최초의 버전. 위에서 설명한 대로 새 프로젝트를 만든 다음 자산 이전 응용 프로그램의 최상위에 복사를 해야 3.0 이전 버전에서 업데이트 하는 경우 `www` 디렉터리. 해당 되는 추가 3.0 업그레이드에 대 한 자세한 내용은 플랫폼 가이드에서 사용할 수 있습니다. 일단 업그레이드는 `cordova` 명령줄 인터페이스 및 사용 `npm update` 최신, 거기 설명 하는 더 많은 시간이 걸리는 절차는 더 이상 관련.
+
+코르 도우 바 3.0 + 여전히 프로젝트 수준 디렉터리 구조와 다른 종속성에 다양 한 변화를 요구할 수 있습니다. 실행 한 후에 `npm` 코르 도우 바 자체를 업데이트 하는 위의 명령, 프로젝트의 리소스 최신 버전 요구 사항에 부합 되도록 할 수 있습니다. 구축 각 플랫폼에 대해 다음 명령을 실행 합니다.
+
+        $ cordova platform update android
+        $ cordova platform update ios
+        ...etc.

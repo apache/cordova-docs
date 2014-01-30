@@ -38,4 +38,4 @@ A `FileUploadOptions` 에 개체를 전달할 수는 `FileTransfer` 개체의 `u
 
 ## WP7 특질
 
-*   **chunkedMode:**: WP7에 무시 됩니다.
+*   **chunkedMode**: WP7에 무시 됩니다.

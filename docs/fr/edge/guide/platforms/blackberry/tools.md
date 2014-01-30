@@ -20,6 +20,8 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
  [1]: http://cordova.apache.org
 
+Pour plus d'informations sur l'interface de bas niveau qui permet aux plugins, voir Plugman à l'aide à gérer les Plugins. Pour une vue d'ensemble, consultez Application Plugins.
+
 ## Créer un projet
 
 Exécutez le `create` commande, en spécifiant le chemin d'accès existant au projet, l'identificateur de package inverse-domaine-style et nom complet de l'application. Voici la syntaxe pour Mac et Windows :
@@ -28,7 +30,7 @@ Exécutez le `create` commande, en spécifiant le chemin d'accès existant au pr
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
     
 
-**Remarque :** La plateforme BlackBerry ne tient pas compte de l'espace réservé du nom paquet ( `com.example.project_name` ), mais il a néanmoins nécessaire pour l'utilisation par les outils multi-plateforme.
+**NOTE**: plate-forme BlackBerry The ignore l'espace réservé du nom paquet ( `com.example.project_name` ), mais il a néanmoins nécessaire pour l'utilisation par les outils multi-plateforme.
 
 ## Construire un projet
 
@@ -57,4 +59,4 @@ et puis choisissez « non » lorsque vous êtes invité avec :
 
 ## Exploitation forestière
 
-Malheureusement, le streaming de journaux directement à partir de l'appareil est actuellement non pris en charge. Cependant, BlackBerry offre un support Web Inspector intégré pour Playbook et BlackBerry smartphone exécutant BlackBerry OS 7.0 et plus. Vous pouvez aussi accéder aux journaux de votre application (y compris tous les appels à `console.log` ) sur votre appareil en maintenant enfoncée la touche « ALT » depuis l'écran d'accueil et en tapant les touches '' lglg''.
+Malheureusement, le streaming de journaux directement à partir de l'appareil est actuellement non pris en charge. Cependant, BlackBerry offre prise en charge intégrée Web Inspector pour Playbook et BlackBerry smartphone exécutant BlackBerry OS 7.0 et plus. Vous pouvez aussi accéder aux journaux de votre application (y compris tous les appels à `console.log` ) sur votre appareil en maintenant enfoncée la touche « ALT » depuis l'écran d'accueil et en tapant les touches '' lglg''.

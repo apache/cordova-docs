@@ -25,13 +25,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 パターンを返します、 `successCallback` 。パラメーターとして渡されたオブジェクトには、次のプロパティが含まれています。
 
-*   **パターン**: 書式し、日付を解析する日付と時刻のパターン。 パターンは、Unicode 技術標準 #35 に従ってください。 <http://unicode.org/reports/tr35/tr35-4.html>。 *(文字列)*
+*   **パターン**: 書式し、日付を解析する日付と時刻のパターン。 パターンは、 [Unicode 技術標準 #35][1]に従ってください。 *(文字列)*
 
 *   **タイムゾーン**: クライアントのタイム ゾーンの省略名。*(文字列)*
 
 *   **とおりです。**: クライアントのタイム ゾーンと世界協定時刻間の秒で現在の差異。*(数)*
 
 *   **dst_offset**： クライアントの非夏時間 (秒単位) は、現在の夏時間オフセットのタイムゾーンとクライアントの夏時間保存のタイム ゾーン。*(数)*
+
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
 パターンを取得時にエラーがある場合、 `errorCallback` で実行する、 `GlobalizationError` オブジェクトをパラメーターとして。 予想されるエラーコードです。`GlobalizationError.PATTERN\_ERROR`.
 
@@ -46,7 +48,7 @@ time`.
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

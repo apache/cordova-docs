@@ -43,12 +43,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**참고:** 더 새로운 장치에 사진 해상도 확실히 좋다입니다. 소자의 갤러리에서 선택 된 사진을 하지 낮은 품질에 관하여는 경우에는 `quality` 매개 변수를 지정 합니다. 일반적인 메모리 문제를 방지 하려면 설정 `Camera.destinationType` 을 `FILE_URI` 보다는`DATA_URL`.
+**참고**: 더 새로운 장치에 사진 해상도 아주 좋은. 소자의 갤러리에서 선택 된 사진을 하지 낮은 품질에 관하여는 경우에는 `quality` 매개 변수를 지정 합니다. 일반적인 메모리 문제를 방지 하려면 설정 `Camera.destinationType` 을 `FILE_URI` 보다는`DATA_URL`.
 
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7과 8
@@ -67,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 단점
 
-당신의 장치 Zune 통해 연결 하는 동안 네이티브 카메라 응용 프로그램을 호출 하면 작동 하지 않습니다 하 고 오류 콜백 트리거합니다.
+장치 Zune 통해 연결 된 동안 네이티브 카메라 응용 프로그램을 호출 하면 작동 하지 않습니다 하 고 오류 콜백 트리거합니다.
 
 ## Tizen 특수
 
@@ -145,7 +145,7 @@ Tizen만 지원 한 `destinationType` 의 `Camera.DestinationType.FILE_URI` 와 
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -165,7 +165,7 @@ Tizen만 지원 한 `destinationType` 의 `Camera.DestinationType.FILE_URI` 와 
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

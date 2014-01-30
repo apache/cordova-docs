@@ -16,11 +16,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Il File config. Xml
 
-Molti aspetti del comportamento di un'app possono essere controllati con un file di configurazione globale, `config.xml` , che è inserito nella directory web di primo livello patrimoniale insieme a pagina iniziale dell'app. Questo file XML indipendente dalla piattaforma è formattato basato sulla specifica [Confezionato Web Apps (widget)][1] di W3C ed esteso per specificare le caratteristiche di nucleo API di Cordova, plugins e impostazioni specifiche della piattaforma.
+Molti aspetti del comportamento di un'app possono essere controllati con un file di configurazione globale, `config.xml` , che appartiene in directory web di primo livello patrimoniale oltre pagina iniziale dell'app. Questo file XML indipendente dalla piattaforma è organizzato basato sulla specifica [Confezionato Web Apps (widget)][1] del W3C ed esteso per specificare le caratteristiche di nucleo API di Cordova, plugins e impostazioni specifiche della piattaforma.
 
  [1]: http://www.w3.org/TR/widgets/
 
-Per i progetti creati con Cordova CLI (descritto nella interfaccia Command-Line), questo file può essere trovato nella directory `www` di primo livello. Utilizzando la CLI per costruire un progetto rigenera le versioni di questo file in varie sottodirectory all'interno di `platforms` . Se si utilizza la CLI per creare un progetto, ma poi spostare il vostro flusso di lavoro per un SDK, il file di specifica della piattaforma serve come fonte.
+Per i progetti creati con Cordova CLI (descritto in The Command-Line Interface), questo file può essere trovato nel primo livello `www` directory:
+
+        app/www/config.xml
+    
+
+Quando si utilizza la CLI per costruire un progetto, versioni di questo file passivamente vengono copiati insieme ad altri file di origine del web-asset in vari `platforms/*/www` sottodirectory, ad esempio:
+
+        app/platforms/ios/www/config.xml
+        app/platforms/blackberry10/www/config.xml
+    
+
+Un'eccezione è Android, il cui percorso specifica un ulteriore `assets` sottodirectory:
+
+        app/piattaforme/android/attività/www/config.xml
+    
+
+Se si utilizza la CLI per creare un progetto, ma poi spostare il vostro flusso di lavoro per un SDK, è necessario utilizzare un set alternativo di file di origine per Android e iOS:
+
+        app/platforms/android/res/www/config.xml
+        app/platforms/ios/<APP_NAME>/config.xml
+    
 
 In questa sezione in dettaglio le opzioni di configurazione globale e multi-piattaforma. Vedere le sezioni seguenti per le opzioni specifiche della piattaforma:
 
@@ -59,7 +79,7 @@ Gli elementi di configurazione seguenti appaiono nel primo livello `config.xml` 
 
 *   Il `<description>` e `<author>` elementi specificano metadati e informazioni di contatto che possono essere visualizzati all'interno di elenchi di app store.
 
-*   L'optional `<content>` elemento definisce la pagina iniziale dell'applicazione nella directory di risorse web di primo livello. Il valore predefinito è `index.html` , che abitualmente viene visualizzata in un progetto di primo livello `www` directory.
+*   L'optional `<content>` elemento definisce la pagina iniziale dell'app nella directory di risorse web di primo livello. Il valore predefinito è `index.html` , che abitualmente viene visualizzata in un progetto di primo livello `www` directory.
 
 *   `<access>`gli elementi definiscono l'insieme di domini esterni che è consentito comunicare con l'app. Il valore predefinito indicato sopra permette di accedere a qualsiasi server. Vedere la guida di dominio Whitelist per dettagli.
 
@@ -79,7 +99,7 @@ Si applicano le seguenti preferenze globali per tutte le piattaforme:
         <preference name="Orientation" value="landscape" />
         
     
-    **Nota:** Il `default` valore significa *sia* gli orientamenti orizzontale e verticale sono abilitati. Se si desidera utilizzare le impostazioni di default su ogni piattaforma (solitamente ritratto solo), lasciare questo tag della `config.xml` file. Inoltre, utilizza BlackBerry `auto` invece di `default` nel suo `config.xml` file. Se si specifica `default` nel mondiale `config.xml` , si traduce in `auto` della compilazione di BlackBerry.
+    **Nota**: il `default` valore significa *sia* gli orientamenti orizzontale e verticale sono abilitati. Se si desidera utilizzare le impostazioni di default su ogni piattaforma (solitamente ritratto solo), lasciare questo tag della `config.xml` file.
 
 ## Preferenze di multi-piattaforma
 
@@ -105,12 +125,10 @@ Per più di una piattaforma, ma non a tutte le, si applicano le seguenti prefere
         
     
     Si applica a iOS e BlackBerry.
-    
-    **Nota:** Per BlackBerry, i valori validi sono `enable` o`disable`.
 
-## Il `<feature>` elemento
+## La *funzione di* elemento
 
-Se si utilizza la CLI per costruire applicazioni, si utilizza il `plugin` comando per abilitare il dispositivo API. Questo non modifica il livello superiore `config.xml` file, quindi il `<feature>` elemento non si applica al vostro flusso di lavoro. Se sei lavorando direttamente in un SDK e utilizzando le specifiche della piattaforma `config.xml` file come origine, si utilizza il `<feature>` tag per abilitare il dispositivo-livello API e plugin esterni. In genere appaiono in questa forma:
+Se si utilizza la CLI per costruire applicazioni, si utilizza il `plugin` comando per abilitare il dispositivo API. Questo non modifica il livello superiore `config.xml` file, quindi il `<feature>` elemento non si applica al vostro flusso di lavoro. Se si lavora direttamente in un SDK e utilizzando le specifiche della piattaforma `config.xml` file come origine, si utilizza il `<feature>` tag per abilitare il dispositivo-livello API e plugin esterni. In genere appaiono in questa forma:
 
         <feature name="Plugin" value="PluginID" />
     

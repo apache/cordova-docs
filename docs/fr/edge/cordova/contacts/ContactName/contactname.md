@@ -39,7 +39,7 @@ L'objet `ContactName` stocke les propriétés de nom d'un contact.
 ## Plates-formes prises en charge
 
 *   Android 2.X
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -122,7 +122,7 @@ L'objet `ContactName` stocke les propriétés de nom d'un contact.
 
 *   **formatted** : partiellement pris en charge et en lecture seule. Retourne la concaténation de `honorificPrefix` , `givenName` , `middleName` , `familyName` , et `honorificSuffix`.
 
-## Spécificités BlackBerry WebWorks (OS 5.0 et plus)
+## BlackBerry WebWorks 5.0 + Quirks
 
 *   **formatted** : partiellement pris en charge. Retourne la concaténation de champs **firstName** et **lastName** de BlackBerry.
 

@@ -25,7 +25,7 @@ Restituisce una stringa per formattare e analizzare i numeri secondo le preferen
 
 Restituisce il modello per la `successCallback` con un `properties` oggetto come parametro. Tale oggetto contiene le seguenti proprietà:
 
-*   **modello**: il modello del numero per formattare e analizzare i numeri. I modelli seguono Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **modello**: il modello del numero per formattare e analizzare i numeri. I modelli seguono [Unicode Technical Standard #35][1]. *(String)*
 
 *   **simbolo**: il simbolo da utilizzare durante la formattazione e l'analisi, come un simbolo di percentuale o valuta. *(String)*
 
@@ -41,6 +41,8 @@ Restituisce il modello per la `successCallback` con un `properties` oggetto come
 
 *   **raggruppamenti**: il raggruppamento simbolo da utilizzare per l'analisi e la formattazione. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PATTERN\_ERROR`.
 
 Il `options` parametro è facoltativo e i valori predefiniti sono:
@@ -53,7 +55,7 @@ Il `options.type` può essere `decimal` , `percent` , o`currency`.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

@@ -34,12 +34,12 @@ Il `CompassHeading` viene restituito l'oggetto per il `compassSuccess` funzione 
 
 ## Stranezze Android
 
-*   `trueHeading`non è supportato, ma riporta lo stesso valore`magneticHeading`
+*   La `trueHeading` proprietà non è supportata, ma riporta lo stesso valore`magneticHeading`.
 
-*   `headingAccuracy`è sempre 0 perché non non c'è alcuna differenza tra la `magneticHeading` e`trueHeading`.
+*   La `headingAccuracy` proprietà è sempre 0 perché non non c'è alcuna differenza tra la `magneticHeading` e`trueHeading`.
 
 ## iOS stranezze
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   La `trueHeading` proprietà viene restituito solo per servizi di localizzazione attivate tramite`navigator.geolocation.watchLocation()`.
 
-*   Per i dispositivi iOS 4 e sopra, fattori di voce nell'orientamento corrente del dispositivo, non in riferimento alla sua posizione assoluta, per le applicazioni che supporta tale orientamento.
+*   Per i dispositivi iOS 4 sopra, voce fattori nell'orientamento corrente del dispositivo e non fa riferimento la sua posizione assoluta, per le app che supporta tale orientamento.

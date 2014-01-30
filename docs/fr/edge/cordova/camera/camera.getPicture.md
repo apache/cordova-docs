@@ -43,12 +43,12 @@ Vous pouvez faire ce que vous voulez avec l'image encodée ou l'URI, par exemple
 
  [1]: http://brianleroux.github.com/lawnchair/
 
-**REMARQUE :**La résolution des photos sur les nouveaux appareils est assez bonne. Les photos sélectionnées de la Galerie de l'appareil ne sont pas réduites avec une baisse de la qualité, même si un paramètre de `qualité` est spécifié. Pour éviter les problèmes de mémoire, définissez `Camera.destinationType` à `FILE_URI` plutôt que `DATA_URL`.
+**NOTE**: la résolution de Photo sur les nouveaux appareils est assez bonne. Les photos sélectionnées de la Galerie de l'appareil ne sont pas réduites avec une baisse de la qualité, même si un paramètre de `qualité` est spécifié. Pour éviter les problèmes de mémoire, définissez `Camera.destinationType` à `FILE_URI` plutôt que `DATA_URL`.
 
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 et 8
@@ -67,7 +67,7 @@ L'inclusion d'un `alert()` JavaScript dans une des fonctions callback peut cause
 
 ## Bizarreries Windows Phone 7
 
-L'invocation de l'application native "caméra" alors que votre appareil est connecté via Zune ne fonctionne pas et déclenche une erreur.
+Invoquant l'application native caméra alors que l'appareil est connecté via Zune ne fonctionne pas et déclenche un rappel de l'erreur.
 
 ## Bizarreries de Tizen
 
@@ -145,7 +145,7 @@ Prendre une photo et récupérer l'emplacement du fichier de l'image :
           smallImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
@@ -165,7 +165,7 @@ Prendre une photo et récupérer l'emplacement du fichier de l'image :
           largeImage.style.display = 'block';
     
           // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // The in-line CSS rules are used to resize the image
           //
           largeImage.src = imageURI;
         }

@@ -43,7 +43,7 @@ L'objet `ContactAddress` stocke les propriétés d'une seule adresse d'un contac
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -139,7 +139,7 @@ L'objet `ContactAddress` stocke les propriétés d'une seule adresse d'un contac
 
 *   **pref** : non pris en charge, retourne `false` sur les appareils Android 2.X.
 
-## Spécificités BlackBerry WebWorks (OS 5.0 et plus)
+## BlackBerry WebWorks 5.0 + Quirks
 
 *   **pref** : non pris en charge sur les appareils BlackBerry, retourne `false`.
 

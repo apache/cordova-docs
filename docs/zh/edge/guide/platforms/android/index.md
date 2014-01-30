@@ -46,18 +46,19 @@ NOTE, doc said:
 
 ## 安裝 SDK
 
-從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
+請在安裝 Android SDK 從 [developer.android.com/sdk][3].作為分發，android sdk ' adt-捆綁-<os>-<arch>-<ver>' 檔。在 windows 上，adt 捆綁打包用安裝程式安裝。在 OSX 和 Linux，只需打開包裝 'adt 捆綁' 中的位置，您將存儲的開發工具。 [關於 Android SDK 安裝程式的詳細的資訊可以在這裡找到][4]
 
  [3]: http://developer.android.com/sdk/
+ [4]: http://developer.android.com/sdk/installing/bundle.html
 
 科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。 在 Mac 上可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+    匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具
     
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
 
-    $ source ~/.bash_profile
+    元源 ~/.bash_profile
     
 
 若要修改路徑上 Windows 7 的環境：
@@ -86,7 +87,10 @@ NOTE, doc said:
 
 使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
 
-        $ 科爾多瓦創建你好 com.example.hello"HelloWorld"$ cd 你好 $ 科爾多瓦平臺添加 android $ 科爾多瓦生成
+        $ cordova create hello com.example.hello "HelloWorld"
+        $ cd hello
+        $ cordova platform add android
+        $ cordova build
     
 
 一旦創建了，這裡是如何使用 SDK 來修改它：
@@ -95,13 +99,13 @@ NOTE, doc said:
 
 *   選擇**新建專案**功能表項目。
 
-*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**： ![][4]
+*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**： ![][5]
 
 *   定位到 `hello` ，或無論你創建目錄的專案，然後到 `platforms/android` 子目錄。
 
 *   按**完成**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: img/guide/platforms/android/eclipse_new_project.png
 
 一旦日食視窗將打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，執行這些額外的步驟：
 
@@ -123,46 +127,46 @@ NOTE, doc said:
 
 *   從內日食，按此工具列圖示：
     
-    ![][5]
+    ![][6]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
 一旦打開，Android SDK 管理器將顯示不同的運行時庫：
 
-![][6]
+![][7]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [7]: img/guide/platforms/android/asdk_window.png
 
 選擇**工具 → 管理 AVDs** （Android 的虛擬裝置），然後從**裝置定義**在隨後出現的對話方塊中選擇任何項：
 
-![][7]
+![][8]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 新聞**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 AVD 然後出現在**虛擬的 Android 設備**清單中：
 
-![][9]
+![][10]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 若要打開模擬器作為單獨的應用程式，選擇 AVD 然後按**開始**。它發射將在設備上，與其他控制項可用的硬體按鈕：
 
-![][10]
+![][11]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 此時你可以使用 `cordova` 實用程式將應用部署到模擬程式從命令列：
 
-        $ 科爾多瓦效仿 android
+        $ cordova emulate android
     
 
-如果改為你使用的日食，按右鍵該專案，並選擇**運行作為 → Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
+如果改為您在 Eclipse 內工作，用滑鼠右鍵按一下該專案，並選擇**作為 → 運行 Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
 
 為獲得更快的體驗，使用基於英特爾的模擬程式映射：
 
@@ -176,13 +180,13 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ## 將部署到設備
 
-要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][11]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
+要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][12]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
 
- [11]: http://developer.android.com/tools/device.html
+ [12]: http://developer.android.com/tools/device.html
 
 從命令列，可以將應用程式推送到設備：
 
-        運行 android 的 $ 科爾多瓦
+        $ cordova run android
     
 
 交替內日食，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.

@@ -30,7 +30,7 @@ Se c'è un errore, ottenendo il pattern, allora il `errorCallback` viene eseguit
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

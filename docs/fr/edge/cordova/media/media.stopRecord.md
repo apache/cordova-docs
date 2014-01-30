@@ -16,45 +16,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # media.stopRecord
 
-Arrête d'enregistrer un fichier audio.
+Arrête l'enregistrement d'un fichier audio.
 
-    media.stopRecord() ;
+    media.stopRecord();
     
 
 ## Description
 
-La `media.stopRecord` méthode s'exécute de façon synchrone, arrêt de l'enregistrement d'un fichier audio.
+La méthode `media.stopRecord` s'exécute de façon synchrone, elle permet d'arrêter l'enregistrement d'un fichier audio.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Record audio
+    // enregistrement audio
     //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // fonction callback de succès
             function() {
-                console.log("recordAudio():Audio Success");
+                console.log("recordAudio() : audio enregistré avec succès");
             },
     
-            // error callback
+            // fonction callback d'erreur
             function(err) {
-                console.log("recordAudio():Audio Error: "+ err.code);
+                console.log("recordAudio() : erreur lors de l'enregistrement audio : " + err.code);
             }
         );
     
-        // Record audio
+        // débute l'enregistrement audio
         mediaRec.startRecord();
     
-        // Stop recording after 10 seconds
+        // arrête l'enregistrement après 10 secondes
         setTimeout(function() {
             mediaRec.stopRecord();
         }, 10000);
@@ -66,29 +66,29 @@ La `media.stopRecord` méthode s'exécute de façon synchrone, arrêt de l'enreg
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Properties Example</title>
+        <title>Exemple d'enregistrement audio</title>
     
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
-        // Wait for device API libraries to load
+        // attend le chargement des API de l'appareil
         //
         document.addEventListener("deviceready", onDeviceReady, false);
     
-        // Record audio
+        // enregistrement audio
         //
         function recordAudio() {
             var src = "myrecording.mp3";
             var mediaRec = new Media(src, onSuccess, onError);
     
-            // Record audio
+            // débute l'enregistrement audio
             mediaRec.startRecord();
     
-            // Stop recording after 10 sec
+            // arrête l'enregistrement après 10 secondes
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
-                setAudioPosition(recTime + " sec");
+                setAudioPosition(recTime + " secondes");
                 if (recTime >= 10) {
                     clearInterval(recInterval);
                     mediaRec.stopRecord();
@@ -96,26 +96,26 @@ La `media.stopRecord` méthode s'exécute de façon synchrone, arrêt de l'enreg
             }, 1000);
         }
     
-        // device APIs are available
+        // les API de l'appareil sont disponibles
         //
         function onDeviceReady() {
             recordAudio();
         }
     
-        // onSuccess Callback
+        // fonction callback onSuccess
         //
         function onSuccess() {
-            console.log("recordAudio():Audio Success");
+            console.log("recordAudio() : audio enregistré avec succès");
         }
     
-        // onError Callback
+        // fonction callback onError
         //
         function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
+            alert('code : '    + error.code    + '\n' +
+                  'message : ' + error.message + '\n');
         }
     
-        // Set audio position
+        // affiche la position de lecture
         //
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
@@ -124,12 +124,12 @@ La `media.stopRecord` méthode s'exécute de façon synchrone, arrêt de l'enreg
         </script>
       </head>
       <body>
-        <p id="media">Recording audio...</p>
+        <p id="media">Enregistrement audio en cours...</p>
         <p id="audio_position"></p>
       </body>
     </html>
     
 
-## Bizarreries de paciarelli
+## Particularités de Tizen
 
-*   Pas pris en charge sur les appareils paciarelli.
+*   Cette méthode n'est pas prise en charge par les appareils Tizen.

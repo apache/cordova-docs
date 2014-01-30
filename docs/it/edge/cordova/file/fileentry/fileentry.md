@@ -30,7 +30,7 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 
 *   **fullPath**: il percorso completo assoluto dalla radice per il `FileEntry` . *(DOMString)*
 
-**Nota:** Il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
+**Nota**: il seguente attributo è definito nella specifica W3C, ma *non* è supportato:
 
 *   **filesystem**: il filesystem su cui il `FileEntry` risiede. *(FileSystem)*
 
@@ -57,7 +57,7 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -66,7 +66,7 @@ Rappresenta un file su un file system, come definito nella specifica [W3C direct
 
 Cercare i metadati relativi a un file.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback passato un `Metadata` oggetto. *(Funzione)*
 
@@ -87,9 +87,9 @@ Metadati impostati su un file.
 
 **Attualmente funziona solo su iOS.**
 
-*   Questo imposterà gli attributi estesi di un file.
+*   Imposta gli attributi estesi di un file.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene eseguito quando i metadati sono impostato. *(Funzione)*
 
@@ -159,7 +159,7 @@ Spostare un file in una posizione diversa del file System. Un errore risultati s
 
 Inoltre, lo spostamento di un file in cima a un file esistente tenta di eliminare e sostituire quel file.
 
-**Parametri:**
+**Parametri**:
 
 *   **padre**: directory superiore, per cui spostare il file. *(DirectoryEntry)*
 
@@ -195,7 +195,7 @@ Copiare un file in una nuova posizione nel file System. Un errore risultati se t
 
 *   copiare un file in suo padre, se non viene fornito un nome diverso dal suo attuale uno.
 
-**Parametri:**
+**Parametri**:
 
 *   **padre**: la directory genitore in cui copiare il file. *(DirectoryEntry)*
 
@@ -240,7 +240,7 @@ Restituisce un URL che può essere utilizzato per individuare il file.
 
 Elimina un file.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback che viene eseguito dopo che il file è stato eliminato. Richiamato senza parametri. *(Funzione)*
 
@@ -264,7 +264,7 @@ Elimina un file.
 
 Cercare il padre `DirectoryEntry` che contiene il file.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback passato padre del file `DirectoryEntry` . *(Funzione)*
 
@@ -288,7 +288,7 @@ Cercare il padre `DirectoryEntry` che contiene il file.
 
 Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback passato un `FileWriter` oggetto. *(Funzione)*
 
@@ -312,7 +312,7 @@ Creare un `FileWriter` oggetto associato al file rappresentato dalla`FileEntry`.
 
 Restituire un `File` oggetto che rappresenta lo stato corrente del file che questa `FileEntry` rappresenta.
 
-**Parametri:**
+**Parametri**:
 
 *   **successCallback**: un callback passato un `File` oggetto. *(Funzione)*
 

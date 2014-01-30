@@ -38,7 +38,7 @@ L'objet `ContactOrganization` stocke des propriétés de l'entreprise d'un conta
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
@@ -123,7 +123,7 @@ L'objet `ContactOrganization` stocke des propriétés de l'entreprise d'un conta
 
 *   **pref** : non pris en charge par des appareils Android 2.X, retourne `false`.
 
-## Spécificités BlackBerry WebWorks (OS 5.0 et plus)
+## BlackBerry WebWorks 5.0 + Quirks
 
 *   **pref** : non pris en charge par les appareils BlackBerry, retourne `false`.
 

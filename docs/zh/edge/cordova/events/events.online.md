@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 和 8
 *   Tizen
@@ -85,8 +85,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone 7 的怪癖
 
-當運行在模擬器中， `connection.status` 始終是未知的因此，此事件將*不*火。
+當運行在模擬器中， `connection.status` 始終是未知的因此此事件不會*不*火。
 
 ## Windows Phone 8 怪癖
 
-模擬程式報告連線類型為 `Cellular` ，而不會更改，所以事件將*不*火。
+模擬程式報告連線類型為 `Cellular` ，而不會更改，所以事件不**火。

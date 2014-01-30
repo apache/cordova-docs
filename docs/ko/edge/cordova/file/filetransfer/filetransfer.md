@@ -37,14 +37,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
 
 ## 업로드
 
-**매개 변수:**
+**매개 변수**:
 
 *   **filePath**: 장치에서 파일의 전체 경로.
 
@@ -192,7 +192,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 다운로드
 
-**매개 변수:**
+**매개 변수**:
 
 *   **소스**: URL로 인코딩된 파일, 다운로드 서버`encodeURI()`.
 
@@ -202,7 +202,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **errorCallback**: 콜백 검색할 때 오류가 발생 하면 실행 되는 `Metadata` . 로 호출을 `FileTransferError` 개체. *(기능)*
 
-*   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` 후 모든 보안 인증서를 받아들일 것입니다. 안 드 로이드 자체 서명 된 보안 인증서를 거부로 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
+*   **trustAllHosts**: 선택적 매개 변수는 기본적으로 `false` . 만약 설정 `true` , 그것은 모든 보안 인증서를 허용 합니다. 안 드 로이드 자체 서명 된 보안 인증서를 거부 하기 때문에 유용 합니다. 프로덕션 환경에서 사용 권장 되지 않습니다. 안 드 로이드와 iOS에서 지원. *(부울)*
 
 *   **옵션**: 선택적 매개 변수를 현재 지 원하는 머리글만 (예: 인증 (기본 인증), 등).
 

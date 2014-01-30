@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Media.Play
+# media.play
 
 Commence ou reprend la lecture d'un fichier audio.
 
@@ -23,34 +23,34 @@ Commence ou reprend la lecture d'un fichier audio.
 
 ## Description
 
-La `media.play` méthode s'exécute de façon synchrone et commence ou reprend la lecture d'un fichier audio.
+La méthode `media.play` s'exécute de façon synchrone, elle permet de commencer ou reprendre la lecture d'un fichier audio.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
-*   Paciarelli
+*   Tizen
 *   Windows 8
 
-## Petit exemple
+## Exemple court
 
-    // Play audio
+    // joue le clip audio
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // joue le fichier audio situé à cette url
         var my_media = new Media(url,
-            // success callback
+            // fonction callback de succès
             function () {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : fichier audio lu avec succès");
             },
-            // error callback
+            // fonction callback d'erreur
             function (err) {
-                console.log("playAudio():Audio Error: " + err);
+                console.log("playAudio() : erreur lors de la lecture du fichier audio : " + err);
             }
         );
-        // Play audio
+        // commence la lecture du clip audio
         my_media.play();
     }
     
@@ -61,58 +61,57 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
                               "http://www.w3.org/TR/html4/strict.dtd">
         <html>
           <head>
-            <title>Media Example</title>
+            <title>Exemple M&eacute;dia</title>
     
             <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
             <script type="text/javascript" charset="utf-8">
     
-            // Wait for device API libraries to load
+            // attend que les API de l'appareil soient chargées
             //
             document.addEventListener("deviceready", onDeviceReady, false);
     
-            // device APIs are available
+            // les API de l'appareil sont disponibles
             //
             function onDeviceReady() {
                 playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
             }
     
-            // Audio player
+            // lecteur audio
             //
             var my_media = null;
             var mediaTimer = null;
     
-            // Play audio
+            // joue le clip audio
             //
             function playAudio(src) {
-                if (my_media == null) {
-                    // Create Media object from src
-                    my_media = new Media(src, onSuccess, onError);
-                } // else play current audio
-                // Play audio
+                // crée un objet média à partir de src
+                my_media = new Media(src, onSuccess, onError);
+    
+                // lance la lecture du clip audio
                 my_media.play();
     
-                // Update my_media position every second
+                // met à jour la position de my_media à chaque seconde
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // récupère la position de lecture de my_media
                         my_media.getCurrentPosition(
-                            // success callback
+                            // fonction callback de succès
                             function(position) {
                                 if (position > -1) {
-                                    setAudioPosition((position) + " sec");
+                                    setAudioPosition((position) + " secondes");
                                 }
                             },
-                            // error callback
+                            // fonction callback d'erreur
                             function(e) {
-                                console.log("Error getting pos=" + e);
-                                setAudioPosition("Error: " + e);
+                                console.log("Erreur lors de la récupération de la position : " + e);
+                                setAudioPosition("Erreur : " + e);
                             }
                         );
                     }, 1000);
                 }
             }
     
-            // Pause audio
+            // met en pause la lecture du clip audio
             //
             function pauseAudio() {
                 if (my_media) {
@@ -120,7 +119,7 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
                 }
             }
     
-            // Stop audio
+            // arrête la lecture du clip audio
             //
             function stopAudio() {
                 if (my_media) {
@@ -130,20 +129,20 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
                 mediaTimer = null;
             }
     
-            // onSuccess Callback
+            // fonction callback onSuccess
             //
             function onSuccess() {
-                console.log("playAudio():Audio Success");
+                console.log("playAudio() : clip joué avec succès");
             }
     
-            // onError Callback
+            // fonction callback onError
             //
             function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                      'message: ' + error.message + '\n');
+                alert('code : '    + error.code    + '\n' +
+                      'message : ' + error.message + '\n');
             }
     
-            // Set audio position
+            // affiche la position du clip audio
             //
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
@@ -152,33 +151,33 @@ La `media.play` méthode s'exécute de façon synchrone et commence ou reprend l
             </script>
           </head>
           <body>
-            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-            <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-            <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+            <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Jouer le clip audi</a>
+            <a href="#" class="btn large" onclick="pauseAudio();">Mettre en pause la lecture</a>
+            <a href="#" class="btn large" onclick="stopAudio();">Arr&ecirc;ter la lecture</a>
             <p id="audio_position"></p>
           </body>
         </html>
     
 
-## BlackBerry WebWorks Quirks
+## Particularités de BlackBerry WebWorks
 
-*   Appareils blackBerry soutiennent un nombre limité de canaux audio simultanés. Appareils CDMA ne prennent en charge un seul canal audio. Autres périphériques prennent en charge jusqu'à deux voies simultanées. Tenter de jouer les fichiers audio plus que le montant pris en charge se traduit par la lecture précédente étant arrêtée.
+*   Les appareils blackBerry ne prennent en charge qu'un nombre limité de canaux audio simultanés. Les modèles CDMA ne prennent en charge qu'un seul canal audio. Les autres modèles prennent en charge jusqu'à deux canaux en simultané. Essayer de jouer plus de fichiers audio simultanément que le nombre supporté se traduit par l'arrêt des lectures en cours.
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   **numberOfLoops**: passer cette option à le `play` méthode pour spécifier le nombre de fois que vous voulez le support de fichiers pour jouer, par exemple :
+*   **numberOfLoops** : transmettre cette option à la méthode `play` permet de spécifier le nombre de lectures à la suite d'un fichier donné, par exemple :
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
         
 
-*   **playAudioWhenScreenIsLocked**: passez cette option à le `play` méthode pour spécifier si vous souhaitez permettre la lecture lorsque l'écran est verrouillé. Si la valeur `true` (la valeur par défaut), l'état de la touche mute de matériel est ignoré, par exemple :
+*   **playAudioWhenScreenIsLocked** : transmettre cette option à la méthode `play` permet de spécifier si la lecture doit continuer même lorsque l'écran de l'appareil est verrouillé. Si la valeur est `true` (par défaut), le bouton matériel mute est ignoré, par exemple :
     
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
         
 
-*   **ordre de recherche de fichier**: lorsque seulement un nom de fichier ou chemin d'accès simple est fournie, iOS recherche dans le `www` répertoire pour le fichier, puis dans de l'application `documents/tmp` répertoire :
+*   **ordre de recherche de fichier** : si un nom de fichier ou chemin d'accès simple est fourni, iOS recherche d'abord le fichier correspondant dans le répertoire `www`, puis dans le répertoire `documents/tmp` appartenant à l'application :
     
         var myMedia = new Media("audio/beer.mp3")
-        myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        myMedia.play()  // recherche d'abord le fichier www/audio/beer.mp3 puis <application>/documents/tmp/audio/beer.mp3

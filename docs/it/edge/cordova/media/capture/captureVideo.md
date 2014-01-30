@@ -34,7 +34,7 @@ Quando termina l'operazione di acquisizione, e la `CaptureCB` callback viene ese
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8

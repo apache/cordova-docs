@@ -20,16 +20,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Propriétés
 
-*   **code**: un des codes d'erreur prédéfinis énumérés ci-dessous.
+*   **code** : un des codes d'erreur prédéfinis énumérés ci-dessous.
 
 ## Constantes
 
-*   `CaptureError.CAPTURE_INTERNAL_ERR`: La caméra ou un microphone a échoué à capturer l'image ou le son.
+*   `CaptureError.CAPTURE_INTERNAL_ERR` : la caméra ou le microphone n'a pas pu capturer d'image ou de son.
 
-*   `CaptureError.CAPTURE_APPLICATION_BUSY`: L'application de capture caméra / audio est actuellement une autre demande de capture.
+*   `CaptureError.CAPTURE_APPLICATION_BUSY` : l'application de capture vidéo ou audio est actuellement occupée à traiter une autre requête.
 
-*   `CaptureError.CAPTURE_INVALID_ARGUMENT`: Utilisation incorrecte de l'API (par exemple, la valeur de `limit` est inférieur à 1).
+*   `CaptureError.CAPTURE_INVALID_ARGUMENT` : utilisation incorrecte de l'API (par exemple, la valeur donnée pour `limit` est inférieure à 1).
 
-*   `CaptureError.CAPTURE_NO_MEDIA_FILES`: L'utilisateur quitte l'application capture audio ou de la caméra avant de capturer n'importe quoi.
+*   `CaptureError.CAPTURE_NO_MEDIA_FILES` : l'utilisateur a quitté l'application de capture audio ou vidéo avant de capturer quoi que ce soit.
 
-*   `CaptureError.CAPTURE_NOT_SUPPORTED`: L'opération de capture demandée n'est pas pris en charge.
+*   `CaptureError.CAPTURE_NOT_SUPPORTED` : l'opération de capture demandée n'est pas prise en charge.

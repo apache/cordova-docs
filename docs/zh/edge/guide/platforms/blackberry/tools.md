@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
+
 ## 創建一個專案
 
 運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。這裡是 Mac 和 Windows 的語法：
@@ -28,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
     
 
-**注：**黑莓平臺忽略套裝軟體名稱的預留位置 ( `com.example.project_name` )，但它已仍需使用的跨平臺的工具。
+**注**： 黑莓平臺忽略套裝軟體名稱的預留位置 （ `com.example.project_name` ），，但它已仍需使用的跨平臺的工具。
 
 ## 生成專案
 

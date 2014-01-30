@@ -34,12 +34,12 @@ Das `CompassHeading` Objekt wird zurückgegeben, um die `compassSuccess` Callbac
 
 ## Android Macken
 
-*   `trueHeading`wird nicht unterstützt, aber meldet den gleichen Wert wie`magneticHeading`
+*   Die `trueHeading` -Eigenschaft wird nicht unterstützt, jedoch meldet den gleichen Wert wie`magneticHeading`.
 
-*   `headingAccuracy`ist immer 0 da es keinen Unterschied zwischen gibt der `magneticHeading` und`trueHeading`.
+*   Die `headingAccuracy` -Eigenschaft ist immer 0 da es keinen Unterschied zwischen gibt der `magneticHeading` und`trueHeading`.
 
 ## iOS Macken
 
-*   `trueHeading` is only returned when location services are enabled via `navigator.geolocation.watchLocation()`
+*   Die `trueHeading` -Eigenschaft nur für Ortungsdienste aktiviert über zurückgegeben`navigator.geolocation.watchLocation()`.
 
-*   Für iOS 4 Geräte und oben, Rubrik Faktoren in die aktuelle Ausrichtung des Geräts, nicht in Bezug auf die absolute Position für apps unterstützt, das die Orientierung.
+*   Für iOS 4 Geräte oben Rubrik Faktoren in das Gerät aktuelle Ausrichtung und verweist nicht auf die absolute Position für Anwendungen, die diese Ausrichtung unterstützt.

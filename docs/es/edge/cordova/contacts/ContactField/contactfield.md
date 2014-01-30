@@ -35,7 +35,7 @@ En la mayoría de los casos, no existen previamente determinados valores para un
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -126,7 +126,7 @@ En la mayoría de los casos, no existen previamente determinados valores para un
 
 *   **Pref**: no soportado, regresando`false`.
 
-## Rarezas blackBerry WebWorks (OS 5.0 y superiores)
+## BlackBerry WebWorks 5.0 + rarezas
 
 *   **tipo**: parcialmente soportado. Utilizado para los números de teléfono.
 

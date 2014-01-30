@@ -36,20 +36,22 @@ Ouvre une URL dans une nouvelle instance de la classe `InAppBrowser`, une instan
     La chaîne `options` ne doit contenir aucun caractère vide, chaque paire nom/valeur représentant une fonctionnalité doit être séparée de la précédente par une virgule. Les noms de fonctionnalités sont sensibles à la casse. Toutes les plates-formes prennent en charge la valeur ci-dessous :
     
     *   **location** : régler à `yes` ou `no` afin d'afficher ou masquer la barre d'adresse de la fenêtre `InAppBrowser`.
-    ## Android uniquement
     
-    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". 
-    *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
-    *   **clearcache** : régler sur 'yes' pour que les cookies du navigateur soient effacés avant l'ouverture de la nouvelle fenêtre
-    *   **clearsessioncache** : régler sur 'yes' afin que les cookies de session soient supprimés avant l'ouverture de la nouvelle fenêtre
-    ## iOS uniquement
+    Android uniquement :
     
-    *   **closebuttoncaption** : permet de modifier la valeur du texte du bouton "Terminé". Dans le cas d'une application multilingue, vous devrez localiser cette valeur par vos propres moyens.
-    *   **hidden** : régler à 'yes' pour créer la fenêtre et charger la page, mais ne pas la montrer. L'événement load se déclenche lorsque le chargement est terminé. Ne pas préciser de valeur ou régler sur 'no' (par défaut) afin que la fenêtre soit affichée normalement. 
-    *   **toolbar** : régler sur 'yes' ou 'no' afin d'afficher ou masquer la barre d'outils de la fenêtre InAppBrowser ('yes' par défaut).
+    *   **closebuttoncaption**: affectez une chaîne à utiliser comme la **fait** légende du bouton.
+    *   **caché**: la valeur `yes` pour créer le navigateur et charger la page, mais ne pas le montrer. L'événement load est déclenché lorsque le chargement est terminé. Omettre ou la valeur `no` (par défaut) pour que le navigateur ouvrir et charger normalement. 
+    *   **ClearCache**: la valeur `yes` pour que le navigateur du cache de cookie effacé, avant l'ouverture de la nouvelle fenêtre
+    *   **clearsessioncache**: la valeur `yes` pour avoir le cache de cookie de session autorisé avant l'ouverture de la nouvelle fenêtre
+    
+    iOS uniquement :
+    
+    *   **closebuttoncaption**: affectez une chaîne à utiliser comme la **fait** légende du bouton. Notez que vous devrez localiser cette valeur vous-même.
+    *   **caché**: la valeur `yes` pour créer le navigateur et charger la page, mais ne pas le montrer. L'événement load est déclenché lorsque le chargement est terminé. Omettre ou la valeur `no` (par défaut) pour que le navigateur ouvrir et charger normalement. 
+    *   **barre d'outils**: la valeur `yes` ou `no` pour activer la barre d'outils ou désactiver pour le InAppBrowser (par défaut,`yes`)
     *   **enableViewportScale** : selon si la valeur est `yes` ou `no`, une balise meta est injectée avec pour but de permettre ou empêcher l'utilisateur de zoomer dans le viewport (`no` par défaut).
     *   **mediaPlaybackRequiresUserAction** : selon si la valeur est `yes` ou `no`, la lecture automatique de contenus HTML5 audio ou vidéo (c'est à dire sans action préalable de l'utilisateur) est désactivée ou activée (`no` par défaut).
-    *   **allowInlineMediaPlayback** : régler sur `yes` ou `no` pour permettre ou interdire la lecture de contenu HTML5 audio ou vidéo directement au sein du navigateur plutôt que dans une fenêtre de lecture spécifique à l'appareil. L'élément HTML `video` doit également comporter l'attribut `webkit-playsinline` (`no` par défaut)
+    *   **allowInlineMediaPlayback**: la valeur `yes` ou `no` pour permettre la lecture du média en ligne HTML5, affichage dans la fenêtre du navigateur plutôt que d'une interface de lecture spécifique au périphérique. L'élément HTML `video` doit également comporter l'attribut `webkit-playsinline` (`no` par défaut)
     *   **keyboardDisplayRequiresUserAction** : régler sur `yes` ou `no` pour interdire ou autoriser l'ouverture du clavier lorsque des éléments de formulaire reçoivent le focus par l'intermédiaire d'un appel à la méthode JavaScript `focus()` (`yes` par défaut).
     *   **suppressesIncrementalRendering** : selon si la valeur est `yes` ou `no`, le rendu de la vue attendra ou non que tout nouveau contenu soit reçu (`no` par défaut).
     *   **presentationstyle** : régler sur `pagesheet`, `formsheet` ou `fullscreen` afin d'obtenir le [style de présentation][1] de fenêtre souhaité (`fullscreen` par défaut).

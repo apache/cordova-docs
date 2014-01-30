@@ -38,4 +38,4 @@ A `FileUploadOptions` Objekt übergeben werden kann, um die `FileTransfer` des O
 
 ## WP7 Quirk
 
-*   **ChunkedMode:**: wird bei WP7 ignoriert.
+*   **ChunkedMode**: wird bei WP7 ignoriert.

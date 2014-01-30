@@ -38,7 +38,7 @@ Gibt das Gerät die aktuelle Position als ein `Position` Objekt.
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 und 8

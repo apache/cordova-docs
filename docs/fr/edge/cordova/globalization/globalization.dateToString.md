@@ -16,43 +16,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.dateToString
 
-Renvoie une date mise en forme comme une chaîne selon les paramètres régionaux du client et de fuseau horaire.
+Renvoie une date sous la forme d'une chaîne de caractères en tenant compte des réglages de langue et de fuseau horaire du client.
 
     navigator.globalization.dateToString(date, successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne la date de mise en forme `String` par une `value` propriété accessible à partir de l'objet passé comme paramètre à la`successCallback`.
+Retourne la date formatée (`String`) via la propriété `value` définie sur l'objet transmis en paramètre à la fonction `successCallback`.
 
-Les entrants `date` paramètre doit être de type`Date`.
+La valeur du premier paramètre, nommé `date`, doit être de type `Date`.
 
-S'il y a une erreur de mise en forme la date, puis le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.FORMATTING\_ERROR`.
+Si une erreur survient lors du formatage de la date, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Dans ce cas, le code d'erreur prévu est `GlobalizationError.FORMATTING_ERROR`.
 
-Le `options` paramètre est facultatif, et ses valeurs par défaut sont :
+Le paramètre `options` est facultatif, sa valeur par défaut est :
 
-    {formatLength: « court », sélecteur: « date et heure »}
+    {formatLength:'short', selector:'date and time'}
     
 
-Le `options.formatLength` peut être `short` , `medium` , `long` , ou`full`.
+Les valeurs autorisées pour la propriété `options.formatLength` sont `short`, `medium`, `long` et `full`.
 
-Le `options.selector` peut être `date` , `time` ou`date and time`.
+Les valeurs autorisées pour la propriété `options.selector` sont `date`, `time` et `date and time`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Si le navigateur est configuré pour la `en\_US` locale, cela permet d'afficher une boîte de dialogue contextuelle avec un texte semblable à `date: 9/25/2012 4:21PM` en utilisant les options par défaut :
+Si la langue du navigateur est réglée sur `fr_FR`, une fenêtre popup contenant un texte semblable à `date : 25/09/2012 16:21` est affichée (options par défaut) :
 
     navigator.globalization.dateToString(
         new Date(),
-        function (date) { alert('date: ' + date.value + '\n'); },
-        function () { alert('Error getting dateString\n'); },
+        function (date) { alert('date : ' + date.value + '\n'); },
+        function () { alert('Une erreur est survenue lors de l\'utilisation de dateToString\n'); },
         { formatLength: 'short', selector: 'date and time' }
     );
     
@@ -62,26 +62,26 @@ Si le navigateur est configuré pour la `en\_US` locale, cela permet d'afficher 
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>dateToString Example</title>
+        <title>Exemple dateToString</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkDateString() {
           navigator.globalization.dateToString(
             new Date(),
-            function (date) {alert('date: ' + date.value + '\n');},
-            function () {alert('Error getting dateString\n');,
+            function (date) {alert('date : ' + date.value + '\n');},
+            function () {alert('Une erreur est survenue lors de l\'utilisation de dateToString\n');,
             {formatLength:'short', selector:'date and time'}}
           );
         }
         </script>
       </head>
       <body>
-        <button onclick="checkDateString()">Click for date string</button>
+        <button onclick="checkDateString()">Cliquer ici pour formater la date</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
-*   Le `formatLength` prend en charge uniquement l'option `short` et `full` valeurs.
+*   Seules les valeurs `short` et `full` sont supportées pour l'option `formatLength`.

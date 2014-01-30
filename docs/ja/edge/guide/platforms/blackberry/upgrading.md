@@ -34,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
-### BlackBerryOS/脚本
+BlackBerryOS/脚本。
 
 1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的な場所にコルドバ 2.9.0 ソースを展開`~/Cordova-2.9.0`.
 
@@ -54,7 +54,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 9.  コピー、 `cordova` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `cordova` ディレクトリ。
 
-## アップグレード 2.7.0 2.8.0 にプロジェクトします。
+## アップグレード 2.7.0 2.8.0 にプロジェクト
 
 ブラックベリー 10:
 
@@ -92,7 +92,7 @@ BlackBerryOS/脚本:
 
 9.  コピー、 `cordova` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `cordova` ディレクトリ。
 
-## アップグレード 2.6.0 へ 2.7.0 プロジェクトします。
+## アップグレード 2.6.0 へ 2.7.0 プロジェクト
 
 1.  ダウンロードして、たとえば、ハード ドライブ上の永続的な場所へ 2.7.0 コルドバ ソースを抽出するには`~/Cordova-2.7.0`.
 

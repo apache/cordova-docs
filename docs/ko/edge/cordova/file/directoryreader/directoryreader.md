@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 디렉터리 항목을 읽으십시오.
 
-**매개 변수:**
+**매개 변수**:
 
 *   **successCallback**: 배열의 전달 된 콜백 `FileEntry` 및 `DirectoryEntry` 개체. *(기능)*
 

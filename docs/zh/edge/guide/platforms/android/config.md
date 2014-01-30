@@ -18,27 +18,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 注意： 將此設置為 false 不會殺了這款應用程式暫停事件之後，該應用程式時在後臺只將停止執行科爾多瓦 web 視圖中的代碼。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`： 指定顯示在 400-500 範圍內的標準 HTTP 錯誤回應的錯誤頁。 將指定的檔放在包含主頁和其他 web 資產的頂級目錄。
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`： 顯示本機對話方塊載入應用程式時。值的格式是*標題、 消息*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`： 載入一個應用程式內的子頁面時顯示本機的對話方塊。值的格式是*標題、 消息*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue`（數，預設值是 `20000` ）： 當載入一個頁面，在引發逾時錯誤之前等待的時間量。 此示例指定 10 秒，而不是 20：
+*   `LoadUrlTimeoutValue`(編號，預設值為 `20000` ，20 秒)： 當載入一個頁面，在引發逾時錯誤之前等待的時間量。 此示例指定 10 秒，而不是 20：
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
@@ -51,3 +36,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `SplashScreenDelay`(編號，預設值為 `5000` ）： 所需的時間初始螢幕圖像顯示。
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(boolean 類型的值，預設值為 `true` ）： 控制項是否在 InAppBrowser 內打開的頁可以訪問同一認為和 WebSQL 存儲作為預設瀏覽器打開的頁面。

@@ -30,7 +30,7 @@ Las aplicaciones normalmente deben utilizar `document.addEventListener` para con
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Tizen
@@ -85,8 +85,8 @@ Durante el arranque inicial, el primer evento `en línea` (si procede) al menos 
 
 ## Windows Phone 7 rarezas
 
-Cuando se ejecuta en el emulador, la `connection.status` siempre es desconocido, así que este evento *no* es fuego.
+Cuando se ejecuta en el emulador, el `connection.status` siempre es desconocida, así que este evento no se ** fuego.
 
 ## Windows Phone 8 rarezas
 
-El emulador informa el tipo de conexión como `Cellular`, que no cambia, así que eventos *no* fuego.
+El emulador, informa el tipo de conexión como `Cellular` , que no cambia, así que se lo eventos *no* fuego.

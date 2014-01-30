@@ -38,4 +38,4 @@ A `FileUploadOptions` オブジェクトに渡すことができます、 `FileT
 
 ## WP7 気まぐれ
 
-*   **chunkedMode:**: WP7 では無視されます。
+*   **chunkedMode**: WP7 では無視されます。

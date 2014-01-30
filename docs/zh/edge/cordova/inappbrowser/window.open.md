@@ -36,20 +36,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     `options`字串必須不包含任何空白的空間，和必須用逗號分隔每個功能的名稱/值對。 功能名稱區分大小寫。 所有平臺都支援下面的值：
     
     *   **位置**： 設置為 `yes` 或 `no` ，打開 `InAppBrowser` 的位置欄打開或關閉。
-    ## Android 僅
     
-    *   **closebuttoncaption** -將設置為一個字串，它將會在"完成"按鈕的標題。 
-    *   **隱藏**-設置為是以創建瀏覽器和載入頁面，但不是顯示它。 Load 事件將觸發載入完成時。 省略或設置為否 （預設值），以有瀏覽器打開，然後以正常方式載入。 
-    *   **clearcache** -設置為 'yes' 有瀏覽器的 cookie 緩存清除之前打開新視窗
-    *   **clearsessioncache** -設置為 'yes' 有會話 cookie 緩存清除之前打開新視窗
-    ## iOS 只
+    Android 系統只有：
     
-    *   **closebuttoncaption** -將設置為一個字串，它將會在"完成"按鈕的標題。注意你會有自己的當地語系化此值。
-    *   **隱藏**-設置為是以創建瀏覽器和載入頁面，但不是顯示它。 Load 事件將觸發載入完成時。 省略或設置為否 （預設值），以有瀏覽器打開，然後以正常方式載入。 
-    *   **工具列**-設置為 '是' 或 '否'，打開工具列或關閉為 InAppBrowser （預設值為是）
+    *   **closebuttoncaption**: 設置為一個字串，以用作**做**按鈕的標題。
+    *   **隱藏**： 將設置為 `yes` ，創建瀏覽器和載入頁面，但不是顯示它。 Load 事件觸發載入完成時。 省略或設置為 `no` （預設值），有的瀏覽器打開，然後以正常方式載入。 
+    *   **clearcache**： 將設置為 `yes` 有瀏覽器的 cookie 清除緩存之前打開新視窗
+    *   **clearsessioncache**： 將設置為 `yes` 有會話 cookie 緩存清除之前打開新視窗
+    
+    只有 iOS：
+    
+    *   **closebuttoncaption**: 設置為一個字串，以用作**做**按鈕的標題。請注意您需要對此值進行當地語系化你自己。
+    *   **隱藏**： 將設置為 `yes` ，創建瀏覽器和載入頁面，但不是顯示它。 Load 事件觸發載入完成時。 省略或設置為 `no` （預設值），有的瀏覽器打開，然後以正常方式載入。 
+    *   **工具列**： 設置為 `yes` 或 `no` ，為 InAppBrowser （預設為打開或關閉工具列`yes`)
     *   **enableViewportScale**： 將設置為 `yes` 或 `no` ，防止通過 meta 標記 （預設為縮放的視區`no`).
     *   **mediaPlaybackRequiresUserAction**： 將設置為 `yes` 或 `no` ，防止 HTML5 音訊或視頻從 autoplaying （預設為`no`).
-    *   **allowInlineMediaPlayback**： 將設置為 `yes` 或 `no` 允許內聯 HTML5 播放媒體，在瀏覽器視窗中，而不是特定于設備播放介面內顯示。 HTML 的 `video` 元素還必須包括 `webkit-playsinline` 屬性 （預設為`no`)
+    *   **allowInlineMediaPlayback**： 將設置為 `yes` 或 `no` ，讓線在 HTML5 播放媒體，在瀏覽器視窗中，而不是特定于設備播放介面內顯示。 HTML 的 `video` 元素還必須包括 `webkit-playsinline` 屬性 （預設為`no`)
     *   **keyboardDisplayRequiresUserAction**： 將設置為 `yes` 或 `no` 時，要打開鍵盤表單元素接收焦點通過 JavaScript 的 `focus()` 調用 （預設為`yes`).
     *   **suppressesIncrementalRendering**： 將設置為 `yes` 或 `no` 等待，直到所有新查看的內容正在呈現 （預設為前收到`no`).
     *   **presentationstyle**： 將設置為 `pagesheet` ， `formsheet` 或 `fullscreen` 來設置[演示文稿樣式][1](預設為`fullscreen`).

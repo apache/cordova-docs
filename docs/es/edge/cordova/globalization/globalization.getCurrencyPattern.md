@@ -25,7 +25,7 @@ Devuelve una cadena de patrón para analizar los valores de divisas según las p
 
 Devuelve el patrón a la `successCallback` con un objeto de `properties` como un parámetro. Ese objeto debe contener las siguientes propiedades:
 
-*   **patrón**: el patrón de la moneda para analizar los valores de la moneda y el formato. Los patrones siguen Unicode estándar técnico #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **patrón**: el patrón de la moneda para analizar los valores de la moneda y el formato. Los patrones siguen [Unicode técnica estándar #35][1]. *(String)*
 
 *   **código**: código de divisa de la ISO 4217 para el patrón. *(String)*
 
@@ -37,6 +37,8 @@ Devuelve el patrón a la `successCallback` con un objeto de `properties` como un
 
 *   **grouping**: el símbolo de la agrupación para analizar y dar formato. *(String)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 El parámetro entrantes `currencyCode` debe ser una `String` de uno de los códigos de moneda ISO 4217, por ejemplo 'USD'.
 
 Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta con un `GlobalizationError` objeto como parámetro. Código esperado del error es`GlobalizationError.FORMATTING\_ERROR`.
@@ -44,7 +46,7 @@ Si hay un error obteniendo el patrón, entonces el `errorCallback` se ejecuta co
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Ejemplo rápido

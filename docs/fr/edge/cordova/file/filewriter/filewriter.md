@@ -71,7 +71,7 @@ Support des formats texte et binaire :
 
 Support du format texte uniquement :
 
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   Windows Phone 7 et 8
 *   Windows 8
 

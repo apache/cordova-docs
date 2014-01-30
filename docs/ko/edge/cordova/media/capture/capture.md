@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > 소자의 오디오, 이미지 및 비디오 캡처 기능에 대 한 액세스를 제공합니다.
 
-**중요 한 개인 정보 보호 참고:** 수집 및 이미지, 비디오 또는 오디오 장치의 카메라 또는 마이크를 사용 하 여 중요 한 개인 정보 보호 문제를 발생 시킵니다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 같은 센서를 사용 하는 방법 및 다른 당사자와 함께 기록 된 데이터는 공유 하는 여부를 토론 해야 한다. 또한, 카메라 또는 마이크의 사용 애플 리 케이 션의 사용자 인터페이스에서 명백 하지 않은, 당신의 애플 리 케이 션이 (해당 되는 경우 장치 운영 체제 이렇게 이미 하지 않는) 카메라 또는 마이크에 액세스 하기 전에 그냥--시간 통지를 제공 해야 합니다. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 저스트-인-타임 공지 및 카메라 또는 마이크에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
+**경고**: 수집 및 이미지, 비디오 또는 오디오 장치의 카메라 또는 마이크를 사용 하 여 중요 한 개인 정보 보호 문제를 제기 하고있다. 응용 프로그램의 개인 정보 보호 정책 응용 프로그램 같은 센서를 사용 하는 방법 및 다른 당사자와 함께 기록 된 데이터는 공유 하는 여부를 토론 해야 한다. 또한, 애플 리 케이 션의 카메라 또는 마이크를 사용 하지 않으면 명백한 사용자 인터페이스에서, 제공 해야 그냥--시간 통지 (해당 되는 경우 장치 운영 체제 이렇게 이미 하지 않는) 응용 프로그램 카메라 또는 마이크에 액세스 하기 전에. 그 통지는 (예를 들어, **확인** 및 **아니오**선택 제시) 하 여 사용자의 허가 취득 뿐만 아니라, 위에서 언급 된 동일한 정보를 제공 해야 합니다. Note 일부 애플 리 케이 션 장 터 저스트-인-타임 공지 및 카메라 또는 마이크에 액세스 하기 전에 사용자에 게 허가를 귀하의 응용 프로그램에 필요할 수 있습니다. 자세한 내용은 개인 정보 보호 가이드를 참조 하십시오.
 
 ## 개체
 
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 범위
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+`capture`개체에 할당 되는 `navigator.device` 개체 및 따라서 전역 범위를 갖는.
 
     // The global capture object
     var capture = navigator.device.capture;
@@ -66,7 +66,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 ## 지원 되는 플랫폼
 
 *   안 드 로이드
-*   블랙베리 WebWorks (운영 체제 5.0와 더 높은)
+*   블랙베리 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7과 8
 *   윈도우 8
@@ -77,7 +77,8 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
@@ -85,7 +86,18 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
 
 *   안 드 로이드
     
-        (in app/res/xml/plugins.xml) < 기능 이름 "캡처" = >< param 이름을 "안 드 로이드 패키지" value="org.apache.cordova.Capture =" / >< / 기능 > (app/AndroidManifest.xml)에서 < 사용 권한 android:name="android.permission.RECORD_AUDIO" / >< 사용 권한 android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   블랙베리 WebWorks
@@ -93,7 +105,7 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         (in www/plugins.xml) < 기능 이름 "캡처" = >< param 이름을 "블랙베리 패키지" value="org.apache.cordova.capture.MediaCapture =" / >< / 기능 > (www/config.xml)에서 < id="blackberry.system 기능" 필수 = "true" 버전 "1.0.0.0" = / >< id="blackberry.io.file 기능" 필수 = "true" 버전 "1.0.0.0" = / >
         
 
-*   (iOS`config.xml`)
+*   (명명 된 응용 프로그램 디렉터리에 iOS`config.xml`)
     
         < 기능 이름 "캡처" = >< param 이름을 = "ios 패키지" 값 = "CDVCapture" / >< / 기능 >
         
@@ -109,4 +121,4 @@ The `capture` object is assigned to the `navigator.device` object, and therefore
         </Capabilities>
         
 
-일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. *플랫폼 지원* 개요 섹션에서을 참조 하십시오.
+일부 플랫폼은 특별 한 구성이 필요 없이이 기능을 지원할 수 있습니다. 플랫폼 지원에 대 한 참조.

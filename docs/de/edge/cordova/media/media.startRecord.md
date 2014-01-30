@@ -28,7 +28,7 @@ Die `media.startRecord` -Methode führt synchron, startet eine Aufnahme für ein
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8

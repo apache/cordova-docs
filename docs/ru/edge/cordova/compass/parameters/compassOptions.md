@@ -24,16 +24,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **Фильтр**: изменения в градусах, требуемых для инициирования обратного вызова успех watchHeading. *(Число)*
 
-Андроид причуды
+## Android причуды
 
----
+*   Поддержка отсутствует`filter`.
 
-*   `filter`не поддерживается.
+## Причуды Tizen
 
-## Tizen причуды
-
-*   `filter`не поддерживается.
+*   Поддержка отсутствует`filter`.
 
 ## Windows Phone 7 и 8 причуды
 
-*   `filter`не поддерживается.
+*   Поддержка отсутствует`filter`.

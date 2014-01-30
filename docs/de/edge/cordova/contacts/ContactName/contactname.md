@@ -39,7 +39,7 @@ Das `ContactName` -Objekt speichert Namenseigenschaften eines Kontakts.
 ## Unterstützte Plattformen
 
 *   Android 2.X
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 und 8
 *   Windows 8
@@ -122,7 +122,7 @@ Das `ContactName` -Objekt speichert Namenseigenschaften eines Kontakts.
 
 *   **formatiert**: teilweise unterstützte "und" Read-only. Gibt eine Verkettung von `honorificPrefix` , `givenName` , `middleName` , `familyName` , und`honorificSuffix`.
 
-## BlackBerry WebWorks (OS 5.0 und höher) Macken
+## BlackBerry WebWorks 5.0 + Macken
 
 *   **formatiert**: teilweise unterstützt. Gibt eine Verkettung von BlackBerry- **FirstName** und **LastName** -Feldern.
 

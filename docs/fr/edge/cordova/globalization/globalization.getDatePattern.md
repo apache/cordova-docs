@@ -16,48 +16,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # globalization.getDatePattern
 
-Retourne une chaîne de modèles pour formater et d'analyser les dates selon les préférences de l'utilisateur du client.
+Retourne une chaîne de caractères modèle, utile pour formater et parser des dates, en tenant compte des préférences utilisateur du client.
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
     
 
 ## Description
 
-Retourne le modèle de la `successCallback` . L'objet passé comme paramètre contient les propriétés suivantes :
+Transmet le modèle demandé à la fonction `successCallback`. Cet objet passé en paramètre contient les propriétés suivantes :
 
-*   **modèle**: le modèle de date et d'heure pour formater et analyser des dates. Les modèles suivent Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **pattern** : le modèle de date et d'heure permettant de formater et parser des dates. Les modèles suivent [Unicode Technical Standard #35][1]. *(String)*
 
-*   **fuseau horaire**: l'abréviation du fuseau horaire sur le client. *(String)*
+*   **timezone** : le nom abrégé du fuseau horaire du client. *(String)*
 
-*   **utc_offset**: la différence actuelle en secondes entre le temps universel coordonné et du fuseau horaire du client. *(Nombre)*
+*   **utc_offset** : la différence actuelle en secondes entre le fuseau horaire du client et le Temps universel coordonné. *(Number)*
 
-*   **DST_OFFSET**: l'offset d'heure actuel en secondes entre non-heure le client du fuseau horaire et l'heure du client sauver du fuseau horaire. *(Nombre)*
+*   **dst_offset** : la différence en secondes entre l'heure d'hiver et l'heure d'été du client. *(Number)*
 
-S'il y a une erreur, obtenir le modèle, le `errorCallback` s'exécute avec un `GlobalizationError` objet comme paramètre. Code attendu de l'erreur est`GlobalizationError.PATTERN\_ERROR`.
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
-Le `options` paramètre est facultatif et par défaut les valeurs suivantes :
+Si une erreur survient lors de l'obtention du modèle demandé, la fonction `errorCallback` est exécutée et un objet `GlobalizationError` lui est passé en paramètre. Le code d'erreur attendu dans ce cas est `GlobalizationError.PATTERN_ERROR`.
 
-    {formatLength: « court », sélecteur: « date et heure »}
+Le paramètre `options` est facultatif, sa valeur par défaut est la suivante :
+
+    {formatLength:'short', selector:'date and time'}
     
 
-Le `options.formatLength` peut être `short` , `medium` , `long` , ou `full` . Le `options.selector` peut être `date` , `time` ou`date and
-time`.
+Les valeurs autorisées pour la propriété `options.formatLength` sont `short`, `medium`, `long` et `full`. Les valeurs autorisées pour la propriété `options.selector` sont `date`, `time` et `date and time`.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 
-## Petit exemple
+## Exemple court
 
-Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple pour afficher une fenêtre popup avec texte comme `pattern: M/d/yyyy h:mm a` :
+Si la langue du navigateur est réglée sur `fr_FR`, cet exemple affiche une fenêtre popup contenant `pattern : dd/MM/yy HH:mm` :
 
     function checkDatePattern() {
         navigator.globalization.getDatePattern(
-            function (date) { alert('pattern: ' + date.pattern + '\n'); },
-            function () { alert('Error getting pattern\n'); },
+            function (date) { alert('pattern : ' + date.pattern + '\n'); },
+            function () { alert('Erreur lors de l\'obtention du modèle\n'); },
             { formatLength: 'short', selector: 'date and time' }
         );
     }
@@ -68,14 +69,14 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple pour a
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>getDatePattern Example</title>
+        <title>Exemple getDatePattern</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
     
         function checkDatePattern() {
           navigator.globalization.getDatePattern(
-            function (date) {alert('pattern: ' + date.pattern + '\n');},
-            function () {alert('Error getting pattern\n');},
+            function (date) {alert('pattern : ' + date.pattern + '\n');},
+            function () {alert('Erreur lors de l\'obtention du modèle\n');},
             {formatLength:'short', selector:'date and time'}
           );
         }
@@ -83,17 +84,17 @@ Lorsque le navigateur est configuré pour la `en\_US` locale, cet exemple pour a
         </script>
       </head>
       <body>
-        <button onclick="checkDatePattern()">Click for pattern</button>
+        <button onclick="checkDatePattern()">Cliquer ici pour obtenir le mod&egrave;le</button>
       </body>
     </html>
     
 
-## Windows Phone 8 Quirks
+## Particularités de Windows Phone 8
 
-*   Le `formatLength` prend uniquement en charge `short` et `full` valeurs.
+*   Seules les valeurs `short` et `full` sont supportés pour l'option `formatLength`.
 
-*   Le `pattern` pour `date and time` modèle retourne uniquement datetime plein format.
+*   La propriété `pattern` d'un modèle `date and time` retourne uniquement le plein format datetime.
 
-*   Le `timezone` retourne le nom de zone à temps plein.
+*   La propriété `timezone` d'un modèle retourne le nom complet du fuseau horaire.
 
-*   La `dst_offset` propriété n'est pas prise en charge, et toujours retourne zéro.
+*   La propriété `dst_offset` d'un modèle n'est pas prise en charge et retourne donc toujours zéro.

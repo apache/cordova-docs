@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        プラットフォームのサポート
+      </h2>
+      
+      <span>すべての主要な機能の互換性テーブル。</span>
+    </li>
+    <li>
+      <h2>
         コマンド ライン インターフェイス
       </h2>
       

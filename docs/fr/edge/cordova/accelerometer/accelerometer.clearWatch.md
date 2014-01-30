@@ -26,7 +26,7 @@ Arrêter la surveillance du `Acceleration` référencée par le paramètre `watc
 ## Plates-formes prises en charge
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 et 8

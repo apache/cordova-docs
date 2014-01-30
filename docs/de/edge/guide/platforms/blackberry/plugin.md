@@ -16,87 +16,86 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # BlackBerry-Plugins
 
-Diese Anleitung zeigt, wie ein Echo-Plugin auf BlackBerry zu entwickeln. Die Plugin-Entwicklung-Guide bietet einen umfassenden Überblick, mit dem Sie bereits vertraut sein sollten, und dieser Anleitung nimmt wo es aufhört. Darüber hinaus das [Cordova BlackBerry-Repository][1] herunterladen.
+Dieser Abschnitt enthält Informationen für das native Plugin-Code auf der BlackBerry-Plattform zu implementieren. Finden Sie bevor Sie dies lesen einen Überblick über die Plugin-Struktur und ihre gemeinsame JavaScript-Schnittstelle Anwendung Plugins. In diesem Abschnitt weiterhin das Beispiel- *Echo* -Plugin, das zum einheitlichen Plattform und zurück von Cordova-Webview kommuniziert.
 
- [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary
+Darüber hinaus laden Sie [Cordova BlackBerry-Repository][1]. Das `Cordova-BlackBerry` Projekt können Sie an BlackBerry-Geräte wie die Fackel, kühn und Playbook bereitstellen. Dem Textbuch verwendet einen anderen Code base als andere BlackBerry-handheld-Geräte, für die Sie benötigen, um Ihre Entwicklungsprojekte zu duplizieren. Dieses Handbuch konzentriert sich auf handheld-Geräten statt Tabletten.
 
-Das `Cordova-BlackBerry` Projekt können Sie an BlackBerry-Geräte wie die Fackel, kühn und Playbook bereitstellen. Dem Textbuch verwendet einen anderen Code base als andere BlackBerry-handheld-Geräte, für die Sie benötigen, um Ihre Entwicklungsprojekte zu duplizieren. Dieses Handbuch konzentriert sich auf die handheld-Geräte eher als Tabletten. (In der Zukunft sollte diesem Handbuch beide Plattformen behandelt.)
-
-Das Echo-Plugin im wesentlichen zurückgibt welcher Nachricht ein Benutzer bietet die `window.echo` Funktion:
-
-    window.echo = function(str, callback) {
-        cordova.exec(callback, function(err) {
-            callback('Nothing to echo.');
-        }, "Echo", "echo", [str]);
-    };
-    
+ [1]: https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git;a=summary
 
 ## Ändern von plugins.xml
 
-Des Projekts `www/plugins.xml` Verzeichnis enthält alle erforderlichen Verweise zu Ihrem Cordova-Projekt-Plugins. Fügen Sie zusätzliche Referenz also, dass bei `cordova.exec` ist aufgerufen, Cordova weiß, wie man die Karte der `Echo` Argument der `cordova.exec` zu der `Echo` -Klasse, die wir nativ schreiben möchten:
+Das `Echo` Plugin gibt was gesendet ein Benutzer mit der `window.echo` Funktion auf der Seite JavaScript:
 
-    <feature name="Echo">
-        <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
-    </feature>
+        window.echo = function(str, callback) {
+            cordova.exec(callback, function(err) {
+                callback('Nothing to echo.');
+            }, "Echo", "echo", [str]);
+        };
     
 
-## Hinzufügen von Echo.java
+Des Projekts `www/plugins.xml` -Datei enthält alle erforderlichen Verweise zu des Projekts Cordova Plugins. Fügen Sie einen zusätzlichen Verweis so, dass bei `cordova.exec` ist aufgerufen, Cordova weiß, wie man die Karte das `Echo` Argument für die Native `Echo` Klasse:
 
-Wenn Sie bemerken, dass die Struktur des Value-Attributs, sehen Sie einen definierten Pfad, der zu den Echo-Plugin führt. Suchen Sie im Root-Verzeichnis von Cordova BlackBerry WebWorks-Repo, ein Verzeichnis namens `framework` . Dieses Verzeichnis enthält alle des Quellcodes, die nativ auf dem BlackBerry ausgeführt wird. Navigieren Sie zu `framework/ext/src/org/apache/cordova` . An dieser Stelle sehen Sie alle Plugin-Verzeichnisse, die innerhalb derer der Source Code ist. So fügen Sie das Verzeichnis-Echo, `framework/ext/src/org/apache/cordova/echo` und erstellen Sie eine Datei namens `Echo.java` an`framework/ext/src/org/apache/cordova/echo/Echo.java`.
-
-## Schreiben Echo.java
-
-Die Grundidee hinter eine Plugin zu schreiben ist, erstellen Sie eine Klasse, die die Plugin-Klasse erweitert und haben eine Methode namens `execute` wieder eine `PluginResult` Klasse. Jeder Aufruf von `cordova.exec` übergibt die Aktion innerhalb der Klasse als auch die Argumente ausgeführt. In diesem Fall ist "Echo", die Aktion, die wir innerhalb der Klasse "Echo" und [str] ausführen möchten sind die Argumente, die wir in übergeben.
-
-    package org.apache.cordova.echo;
+        <feature name="Echo">
+            <param name="blackberry-package" value="org.apache.cordova.echo.Echo" />
+        </feature>
     
-    import org.apache.cordova.api.Plugin;
-    import org.apache.cordova.api.PluginResult;
-    import org.apache.cordova.json4j.JSONArray;
-    import org.apache.cordova.json4j.JSONException;
-    import org.apache.cordova.json4j.JSONObject;
-    /**
-     * A simple plugin to demonstrate how to build a plugin for BlackBerry
-     * Basically echos back the msg that a user calls to this plugin
-     */
-    public final class Echo extends Plugin {
+
+## Die Echo.java-Datei
+
+Die `feature` Spezifikation `value` -Attribut verweist auf einen reverse Domain-Stil-Bezeichner. Dies entspricht einem Pfad innerhalb des Cordova BlackBerry WebWorks-Repo `framework/ext/src` Verzeichnis. Fügen Sie ein `framework/ext/src/org/apache/cordova/echo` Verzeichnis und fügen Sie eine `Echo.java` Datei.
+
+Die `Echo.java` muss eine Klasse definieren, die erweitert die `Plugin` Klasse. Es muss auch umsetzen einer `execute` Methode, die zurückgibt eine `PluginResult` Klasse. Jeder Aufruf von `cordova.exec` übergibt die Aktion innerhalb der Klasse ausgeführt, sowie die Argumente. In diesem Fall die `Echo` -Klasse `echo` Methode ist die Aktion, und `[str]` ist ein zusätzliches Argument an die Methode übergeben.
+
+        package org.apache.cordova.echo;
     
-        public static final String echo = "echo";
+        import org.apache.cordova.api.Plugin;
+        import org.apache.cordova.api.PluginResult;
+        import org.apache.cordova.json4j.JSONArray;
+        import org.apache.cordova.json4j.JSONException;
+        import org.apache.cordova.json4j.JSONObject;
+        /**
+         * A simple plugin to demonstrate how to build a plugin for BlackBerry
+         * Basically echos back the msg that a user calls to this plugin
+         */
+        public final class Echo extends Plugin {
     
-        public PluginResult execute(String action, JSONArray args, String callbackId) {
-            PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
-            if(action.equals(echo)){
-                try {
-                    String theMsg = args.getString(0);
-                    if(theMsg!= null || theMsg.length()>0){
-                        result = new PluginResult(PluginResult.Status.OK, theMsg);
-                    }else{
-                        result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+            public static final String echo = "echo";
+    
+            public PluginResult execute(String action, JSONArray args, String callbackId) {
+                PluginResult result = new PluginResult(PluginResult.Status.INVALID_ACTION, "Echo: Invalid action:" + action);
+                if(action.equals(echo)){
+                    try {
+                        String theMsg = args.getString(0);
+                        if(theMsg!= null || theMsg.length()>0){
+                            result = new PluginResult(PluginResult.Status.OK, theMsg);
+                        }else{
+                            result = new PluginResult(PluginResult.Status.ERROR, "Nothing to echo.");
+                        }
+                    } catch (JSONException e) {
+                        result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
                     }
-                } catch (JSONException e) {
-                    result = new PluginResult(PluginResult.Status.JSON_EXCEPTION, e.getMessage());
                 }
+                return result;
             }
-    
-            return result;
         }
     
-    }
+
+Im Code oben die `execute` Methode bringt zunächst in einer Aktion. In diesem Fall, es ist nur eine gültige `echo` Aktion, so dass es einfach für diesen Wert überprüft.
+
+Die eingehende Nachricht als übergeben `[str]` von JavaScript steht die `Echo` -Klasse als ein `args` Array. In diesem Fall gibt es nur ein Argument, zugänglich über ein nullbasiertes Array-Index:
+
+        String theMsg = args.getString(0);
     
 
-Also wenn wir den obigen Code betrachten, können wir sehen, dass innerhalb der Execute-Methode, suchen wir zuerst was Aktionen kommen. Das Echo-Plugin hat nur eine Aktion, `echo` , so dass wir nur dafür prüfen werden wird. Hätte unser Plugin mehr Aktionen, ist es einfach eine Frage der hinzufügen weitere bedingte Tests checken für diese Aktionen.
+Nach verschiedenen Fehlerüberprüfung auf die Nachricht Wert, die-Methode instanziiert ein neues `PluginResult` mit einem `OK` Status und gibt die Meldung zurück. Dieser Wert wird wiederum als ein Argument an den JavaScript-Erfolg-Rückruf zurückgegeben. Im Fehlerfall werden verschiedene Statuscodes an das JavaScript-Fehler-Callback zurückgesendet.
 
-Wir werden dann die Nachricht aus den Argumenten zu greifen, der durch den Parameter Args geliefert wird. Wir können das erste Argument greifen, indem Sie einfach`String theMsg = args.getString(0);`.
+## Aktualisierung der .jar in das Projekt Www Verzeichnis
 
-Werden wir einige Fehlerüberprüfung und wenn die Nachricht gut aussieht, werden wir eine neue PluginResult mit einem Status ok instanziieren: `PluginResult.Status.OK` und die Meldung: `theMsg` . Danach wir das Ergebnis zurückgegeben, um zurück zu JavaScript im Erfolg Rückruf ausgelöst werden übergeben werden. Wenn etwas fehlschlägt, können wir verschiedene Status-Ausnahmen wie zurück `PluginResult.Status.ERROR` , `PluginResult.Status.JSON_EXCEPTION` , oder `PluginResult.Status.INVALID_ACTION` . Wenn wieder übergeben, Feuer diese Ergebnistypen den Fail-Rückruf in JavaScript.
+Die zusätzlichen `Echo.java` in Ihrem Projekt aktualisiert werden muss. Baut die `.jar` Datei, navigieren Sie zu dem BlackBerry WebWorks-Repo-Root-Verzeichnis und führen Sie den `ant` Befehl:
 
-## Aktualisierung der .jar in Ihrem Projekt Www-Verzeichnis
-
-Die zusätzlichen `Echo.java` in Ihrem Projekt aktualisiert werden muss. Baut die `.jar` Datei, navigieren Sie zu dem BlackBerry WebWorks-Repo-Root-Verzeichnis, und führen Sie den `ant` Befehl:
-
-    Ameise update - Dproject.path="~/path_to_my_project"
+        ant update -Dproject.path="~/path_to_my_project"
     
 
-Dies baut eine neue `.jar` Datei das `build/ext` Verzeichnis. Kopie der `build/ext/cordova.jar` -Datei in Ihr `project/www/ext` Verzeichnis.
+Dies baut eine neue `.jar` Datei das `build/ext` Verzeichnis. Kopie der `build/ext/cordova.jar` -Datei in das `project/www/ext` Verzeichnis.
 
-Wenn alles gut geht, ermöglicht, die Echo-Plugin in BlackBerry zu verwenden.
+Wenn alles gut geht, können Sie verwenden die `Echo` Plugin in BlackBerry.

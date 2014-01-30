@@ -28,7 +28,7 @@ El método `media.getDuration` se ejecuta sincrónicamente, devolviendo la durac
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Tizen

@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 7 и 8
 
@@ -97,7 +97,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         navigator.notification.vibrate(2500);   // 2500 is ignored
         
 
-## BB10 совместимости
+## Причуды blackBerry 10
 
 вибрирует функция, принадлежащий объекту навигатор
 

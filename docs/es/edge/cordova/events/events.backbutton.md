@@ -28,7 +28,7 @@ Para reemplazar el comportamiento predeterminado de botón atrás, registrar un 
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   Windows Phone 7 y 8
 
 ## Ejemplo rápido

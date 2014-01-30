@@ -25,13 +25,15 @@ Restituisce una stringa per formattare e analizzare i dati secondo le preferenze
 
 Restituisce il modello per la `successCallback` . L'oggetto passato come parametro contiene le seguenti proprietà:
 
-*   **modello**: il modello di data e ora per formattare e analizzare i dati. I modelli seguono Unicode Technical Standard #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(String)*
+*   **modello**: il modello di data e ora per formattare e analizzare i dati. I modelli seguono [Unicode Technical Standard #35][1]. *(String)*
 
 *   **fuso orario**: il nome abbreviato del fuso orario sul client. *(String)*
 
 *   **utc_offset**: l'attuale differenza in secondi tra del client fuso orario e tempo universale coordinato. *(Numero)*
 
 *   **DST_OFFSET**: l'offset corrente ora legale in secondi tra non-legale del client di fuso orario e ora legale del cliente risparmio di fuso orario. *(Numero)*
+
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
 
 Se c'è un errore per ottenere il modello, il `errorCallback` viene eseguito con un `GlobalizationError` oggetto come parametro. Previsto codice dell'errore è`GlobalizationError.PATTERN\_ERROR`.
 
@@ -46,7 +48,7 @@ time`.
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

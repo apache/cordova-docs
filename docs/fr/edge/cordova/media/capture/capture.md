@@ -16,9 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Capture
 
-> Donne accès à de l'appareil audio, image et capacités de capture vidéo.
+> Donne accès aux capacités de capture de sons, images et vidéos de l'appareil.
 
-**Remarque importante de la vie privée :** Collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. Politique de confidentialité de votre application doit examiner comment l'application utilise des capteurs et si les données enregistrées sont partagées avec d'autres parties. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps avant votre application d'accéder à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cet avis doit fournir les mêmes renseignements susmentionnées, ainsi que d'obtenir l'autorisation de l'utilisateur (par exemple, en présentant des choix **OK** et **Non merci**). Notez que certains marchés app peuvent exiger votre app à aviser le juste-à-temps et obtenir l'autorisation de l'utilisateur avant d'accéder à la caméra ou un microphone. Pour plus d'informations, consultez le Guide de la vie privée.
+**Avertissement**: collecte et utilisation des images, vidéo ou audio de la caméra ou un microphone de l'appareil soulève des questions importantes de la vie privée. La politique de confidentialité de votre application devrait traiter de la manière dont l'application utilise ces capteurs et du partage des données enregistrées avec d'autres parties ou non. En outre, si l'utilisation de l'application de la caméra ou un microphone n'est pas apparente dans l'interface utilisateur, vous devez fournir un avis juste-à-temps, avant que l'application accède à la caméra ou un microphone (si le système d'exploitation de périphérique n'est pas faire déjà). Cette notice devrait contenir les informations susmentionnées, ainsi que permettre de recueillir l'autorisation de l'utilisateur (par exemple, en offrant les possibilités **OK** et **Non merci**). Notez que certains magasins d'applications peuvent exiger la présence de ce genre de notice avant d'autoriser la distribution de votre application. Pour plus d'informations, veuillez vous référer à la section "Guide du respect de la vie privée".
 
 ## Objets
 
@@ -41,64 +41,85 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Champ d'application
 
-The `capture` object is assigned to the `navigator.device` object, and therefore has global scope.
+L'objet `capture` est défini sur l'objet `navigator.device`, il a par conséquent un champ d'application global.
 
-    // The global capture object
+    // L'objet global capture
     var capture = navigator.device.capture;
     
 
 ## Propriétés
 
-*   **supportedAudioModes**: l'enregistrement des formats pris en charge par le périphérique audio. (ConfigurationData[])
+*   **supportedAudioModes** : les formats d'enregistrement audio supportés par l'appareil. (ConfigurationData[])
 
-*   **supportedImageModes**: l'enregistrement image et formats pris en charge par le périphérique. (ConfigurationData[])
+*   **supportedImageModes** : les formats et tailles de capture d'image supportés par l'appareil. (ConfigurationData[])
 
-*   **supportedVideoModes**: l'enregistrement vidéo résolutions et formats pris en charge par le périphérique. (ConfigurationData[])
+*   **supportedVideoModes**: les formats et résolutions d'enregistrement vidéo supportés par l'appareil. (ConfigurationData[])
 
 ## Méthodes
 
-*   `capture.captureAudio`: Lancer l'application d'enregistrement audio de l'appareil pour enregistrer des clips audio.
+*   `capture.captureAudio` : ouvre l'application d'enregistrement audio de l'appareil afin d'enregistrer des clips audio.
 
-*   `capture.captureImage`: Lancer l'application appareil photo de l'appareil pour prendre des photos.
+*   `capture.captureImage` : ouvre l'application appareil photo de l'appareil pour prendre des photos.
 
-*   `capture.captureVideo`: Lancer l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
+*   `capture.captureVideo` : ouvre l'application enregistreur vidéo de l'appareil pour enregistrer des vidéos.
 
-## Plates-formes prises en charge
+## Plates-formes supportées
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 et plus)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 et 8
 *   Windows 8
 
 ## Accéder à la fonctionnalité
 
-Depuis la version 3.0, Cordova implémente API au niveau du périphérique comme les *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
+Depuis la version 3.0, Cordova implémente les API liées à l'appareil en tant que *plugins*. Utiliser de la CLI `plugin` commande, décrite dans l'Interface de ligne de commande, d'ajouter ou de supprimer cette fonction pour un projet :
 
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin ls
-        [ 'org.apache.cordova.media-capture' ]
+        [ 'org.apache.cordova.file',
+          'org.apache.cordova.media-capture']
         $ cordova plugin rm org.apache.cordova.media-capture
     
 
-Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier les paramètres de configuration spécifiques à la plateforme décrites ci-dessous :
+Ces commandes s'appliquent à toutes les plates-formes ciblées mais modifient les paramètres de configuration spécifiques aux différentes plates-formes tel que décrit ci-dessous :
 
 *   Android
     
-        (in app/res/XML/plugins.Xml) < nom de la fonction = "Capturer" >< param name = "android-package" value="org.apache.cordova.Capture" / >< / fiction > (dans app/AndroidManifest.xml) < permissions des utilisations android:name="android.permission.RECORD_AUDIO" / >< permissions des utilisations android:name="android.permission.WRITE_EXTERNAL_STORAGE" / >
+        (in app/res/xml/config.xml)
+        <feature name="File">
+            <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        </feature>
+        <feature name="Capture">
+            <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+        </feature>
+        
+        (in app/AndroidManifest.xml)
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.RECORD_VIDEO" />
         
 
 *   BlackBerry WebWorks
     
-        (in www/plugins.Xml) < nom de la fonction = "Capturer" >< param name = "blackberry-package" value="org.apache.cordova.capture.MediaCapture" / >< / fiction > (dans www/config.xml) < id="blackberry.system en vedette" requis = "true" version = "1.0.0.0" / >< id="blackberry.io.file en vedette" requis = "true" version = "1.0.0.0" / >
+        (dans www/plugins.xml)
+        <feature name="Capture">
+            <param name="blackberry-package" value="org.apache.cordova.capture.MediaCapture" />
+        </feature>
+        
+        (dans www/config.xml)
+        <feature id="blackberry.system"  required="true" version="1.0.0.0" />
+        <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
         
 
-*   iOS (en`config.xml`)
+*   iOS (dans du répertoire application nommé`config.xml`)
     
-        < nom de la fonction = « Capturer » >< param name = « ios-paquet » value = « CDVCapture » / >< / fiction >
+        <feature name="Capture">
+            <param name="ios-package" value="CDVCapture" />
+        </feature>
         
 
-*   Windows Phone (en`Properties/WPAppManifest.xml`)
+*   Windows Phone (dans `Properties/WPAppManifest.xml`)
     
         <Capabilities>
             <Capability Name="ID_CAP_MEDIALIB" />
@@ -109,4 +130,4 @@ Ces commandes s'appliquent à toutes les plates-formes ciblées, mais modifier l
         </Capabilities>
         
 
-Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir *Support de plate-forme* dans la section vue d'ensemble.
+Certaines plates-formes peuvent prendre en charge cette fonctionnalité sans nécessiter aucune configuration spéciale. Voir plate-forme prise en charge pour une vue d'ensemble.

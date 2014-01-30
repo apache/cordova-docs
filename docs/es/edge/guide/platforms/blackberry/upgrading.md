@@ -34,7 +34,7 @@ BlackBerry 10:
 
 6.  Actualizar la referencia de script Cordova en su `www/index.html` archivo (y otros archivos que contienen la referencia de comandos) para que apunte a la nueva `cordova.js` archivo.
 
-### BlackBerryOS/Playbook
+Para BlackBerryOS/Playbook:
 
 1.  Descargue y extraiga la fuente Cordova 2.9.0 magnetohidrodinámica a una ubicación permanente en tu disco duro, por ejemplo a`~/Cordova-2.9.0`.
 
@@ -58,7 +58,7 @@ BlackBerry 10:
 
 BlackBerry 10:
 
-BlackBerry 10 utiliza las nuevas herramientas de CLI y administra core APIs como plugins. Las instrucciones de migran su proyecto a un nuevo proyecto, en lugar de actualizar un proyecto existente, debido a la complejidad de un proyecto de actualización. También nota que el js cordova de la escritura de archivo ahora se llama 'cordova.js' y ya no contiene una cadena de versión.
+BlackBerry 10 utiliza las nuevas herramientas de CLI y gestiona núcleo APIs como plugins. Las instrucciones de migran su proyecto a un nuevo proyecto, en lugar de actualizar un proyecto existente, debido a la complejidad de un proyecto de actualización. También nota que el js cordova de la escritura de archivos ahora se llama 'cordova.js' y ya no contiene una cadena de versión.
 
 1.  Descargue y extraiga la fuente Cordova 2.8.0 a una ubicación permanente en tu disco duro, por ejemplo a`~/Cordova-2.8.0`.
 
@@ -92,7 +92,7 @@ BlackBerryOS/Playbook:
 
 9.  Copia el `cordova` directorio desde el nuevo proyecto en el proyecto existente, sobrescribiendo el viejo `cordova` Directorio.
 
-## 2.6.0 Actualizar proyectos a 2.7.0
+## Proyectos de modernización 2.6.0 a 2.7.0
 
 1.  Descargue y extraiga la fuente Cordova 2.7.0 a una ubicación permanente en tu disco duro, por ejemplo a`~/Cordova-2.7.0`.
 
@@ -365,7 +365,8 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
     
     Para:
     
-         < nombre del plugin = value="org.apache.cordova.capture.MediaCapture"/ "Capturar" >< plugin nombre = "Contactos" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   Para actualizar a 1.8.0, por favor ir de 1.7.0

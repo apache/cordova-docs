@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 > Il `camera` oggetto fornisce l'accesso all'applicazione fotocamera di default del dispositivo.
 
-**Nota importante sulla privacy:** Raccolta e utilizzo delle immagini dalla fotocamera del dispositivo solleva questioni di privacy importante. Politica sulla privacy dell'app dovrebbe discutere come app utilizza la telecamera e se le immagini registrate sono condivise con altre parti. Inoltre, se l'uso dell'app della fotocamera non è evidente nell'interfaccia utente, è necessario fornire un preavviso di just-in-time prima della tua app di accedere alla telecamera (se il sistema operativo del dispositivo non farlo già). Tale comunicazione deve fornire le informazioni stesse notate sopra, oltre ad ottenere l'autorizzazione (ad esempio, presentando scelte per **OK** e **No grazie**). Per ulteriori informazioni, vedere la guida sulla Privacy.
+**Avviso**: raccolta e utilizzo delle immagini dalla fotocamera del dispositivo solleva questioni di privacy importante. Politica sulla privacy dell'app dovrebbe discutere come app utilizza la telecamera e se le immagini registrate sono condivise con altre parti. Inoltre, se uso dell'app della fotocamera non è evidente nell'interfaccia utente, è necessario fornire un preavviso di just-in-time prima app accede la fotocamera (se il sistema operativo del dispositivo non farlo già). Tale comunicazione deve fornire le informazioni stesse notate sopra, oltre ad ottenere l'autorizzazione (ad esempio, presentando scelte per **OK** e **No grazie**). Per ulteriori informazioni, vedere la guida sulla Privacy.
 
 ## Metodi
 
@@ -41,7 +41,7 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
     
         (in app/res/xml/config.xml)
         <feature name="Camera">
-            <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+            <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         </feature>
         
         (in app/AndroidManifest)
@@ -57,13 +57,12 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
         
         (in www/config.xml)
         <feature id="blackberry.media.camera" />
-        
         <rim:permissions>
             <rim:permit>use_camera</rim:permit>
         </rim:permissions>
         
 
-*   iOS (in`config.xml`)
+*   iOS (nella directory applicazione denominata`config.xml`)
     
         <feature name="Camera">
             <param name="ios-package" value="CDVCamera" />
@@ -91,4 +90,4 @@ Questi comandi si applicano a tutte le piattaforme mirate, ma modificano le impo
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
  [2]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_3#8814682_CreatingaProject-EditingconfigxmlFeatures
 
-Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Vedere *Supporto piattaforma* nella sezione panoramica.
+Alcune piattaforme possono supportare questa funzionalità senza richiedere alcuna configurazione speciale. Per una panoramica, vedere supporto della piattaforma.

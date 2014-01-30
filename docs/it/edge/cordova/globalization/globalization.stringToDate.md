@@ -54,7 +54,7 @@ Se c'è un errore di parsing della stringa data, allora il `errorCallback` viene
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

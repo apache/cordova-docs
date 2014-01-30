@@ -30,7 +30,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ポップ オーバーの位置を設定します。
 
-**パラメーター:**
+**パラメーター**:
 
 *   `cameraPopoverOptions`:、 `CameraPopoverOptions` の新しい位置を指定します。
 

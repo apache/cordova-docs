@@ -22,7 +22,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **id**： グローバルに一意の識別子。*（，）*
 
-*   **displayName**: エンドユーザへの表示に適した、この連絡先の名前。*（，）*
+*   **displayName**: エンド ・ ユーザーへの表示に適した、この連絡先の名前。*（，）*
 
 *   **名前**： 人の名前のすべてのコンポーネントを格納するオブジェクト。*(ContactName)*
 
@@ -60,12 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `Contact`オブジェクトは、ユーザーの連絡先を表します。 連絡先の作成、格納、またはデバイスの連絡先データベースから削除することができます。 連絡先も取得できます (個別にまたは一括） をデータベースから呼び出すことによって、 `contacts.find` メソッド。
 
-**注：**すべて上記の連絡先フィールドのすべてのデバイス プラットフォームでサポートされます。詳細については各プラットフォームの*互換*セクションを確認してください。
+**注**: すべて上記の連絡先フィールドのすべてのデバイス プラットフォームでサポートされます。詳細については各プラットフォームの*互換*セクションを確認してください。
 
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -194,7 +194,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **カテゴリ**: 返す 2.X の Android デバイスでサポートされていません`null`.
 
-## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
+## ブラックベリー WebWorks 5.0 + 癖
 
 *   **id**: サポートされています。連絡先を保存するときに、デバイスによって割り当てられます。
 
@@ -232,7 +232,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **displayName**: 表示名パラメーターの表示名と異なるために提供値を取得、連絡先を検索するとき、連絡先を作成するとき。
 
-*   **url**: 1 つだけが利用できるが、連絡先の作成、ユーザー入力し 1 つ以上の web アドレスを保存するときは、連絡先を検索するとき。
+*   **url**: 連絡先を検索するときに 1 つだけが利用できるが、ユーザーによる入力し 1 つ以上の web アドレスを保存する連絡先を作成するとき。
 
 *   **電話番号**:*県*オプションはサポートされていません。 *型*は、*検索*操作ではサポートされていません。 1 つだけ `phoneNumber` は各*タイプ*の許可.
 

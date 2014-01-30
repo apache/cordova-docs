@@ -24,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://dev.w3.org/geo/api/spec-source.html
 
-**重要的隱私注：**地理定位資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論這款應用程式如何使用地理定位資料，資料是否共用它的任何其他締約方和的資料 （例如，粗、 細，ZIP 代碼級別，等等） 的精度水準。 地理定位資料被普遍認為敏感的因為它能揭示一個人的下落，如果存儲中，他或她的旅行史。 因此，除了您的應用程式的隱私權原則，您應強烈考慮提供在您的應用程式訪問地理定位資料 （如果設備作業系統不會這樣做已經） 之前的時間只是通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
+**警告**： 地理定位資料的收集和使用提出了重要的隱私問題。 您的應用程式的隱私權原則應該討論這款應用程式如何使用地理定位資料，資料是否共用它的任何其他締約方和的資料 （例如，粗、 細，ZIP 代碼級別，等等） 的精度水準。 地理定位資料一般認為是敏感，因為它能揭示使用者的下落以及如果存儲，他們的旅行的歷史。 因此，除了應用程式的隱私權原則，您應強烈考慮之前應用程式訪問地理定位資料 （如果設備作業系統不會這樣做已經) 提供在時間的通知。 該通知應提供相同的資訊上文指出的並獲取該使用者的許可權 （例如，通過為**確定**並**不感謝**提出的選擇）。 有關詳細資訊，請參閱隱私指南。
 
 ## 方法
 
@@ -60,13 +60,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         (in app/res/xml/config.xml)
         <feature name="Geolocation">
-            <param name="android-package" value="org.apache.cordova.GeoBroker" />
+            <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
         </feature>
         
         (in app/AndroidManifest.xml)
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
         
 
 *   黑莓手機 WebWorks
@@ -82,7 +81,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </rim:permissions>
         
 
-*   （在 iOS`config.xml`)
+*   FirefoxOS （在 manifest.webapp 檔中）
+    
+        "permissions": {
+            "geolocation": { "description": "Used to position the map to your current position" }
+        }
+        
+
+*   iOS （命名的應用程式的目錄中`config.xml`)
     
         <feature name="Geolocation">
             <param name="ios-package" value="CDVLocation" />
@@ -100,4 +106,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [2]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-一些平臺可能支援此功能，而無需任何特殊的配置。請參見在概述部分中*的平臺支援*。
+一些平臺可能支援此功能，而無需任何特殊的配置。有關概述，請參見平臺支援。

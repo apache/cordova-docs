@@ -35,7 +35,7 @@ Nella maggior parte dei casi, non esistono valori pre-determinati per un `Contac
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Windows 8
@@ -126,7 +126,7 @@ Nella maggior parte dei casi, non esistono valori pre-determinati per un `Contac
 
 *   **pref**: non supportato, restituendo`false`.
 
-## Stranezze di blackBerry WebWorks (OS 5.0 e superiori)
+## BlackBerry WebWorks 5.0 + stranezze
 
 *   **tipo**: parzialmente supportati. Usato per i numeri di telefono.
 

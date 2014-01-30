@@ -30,7 +30,7 @@ Ein Handle für das Dialogfeld "Popover" erstellt von`camera.getPicture`.
 
 Legen Sie die Position von der Popover.
 
-**Parameter:**
+**Parameter**:
 
 *   `cameraPopoverOptions`: die `CameraPopoverOptions` angeben, dass die neue Position
 

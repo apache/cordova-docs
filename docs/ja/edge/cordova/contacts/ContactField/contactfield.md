@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## サポートされているプラットフォーム
 
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 と 8
 *   Windows 8
@@ -126,7 +126,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **県**: サポートされていないを返す`false`.
 
-## ブラックベリー WebWorks (OS 5.0 およびより高い) 癖
+## ブラックベリー WebWorks 5.0 + 癖
 
 *   **種類**: 部分的にサポートされます。電話番号を使用します。
 

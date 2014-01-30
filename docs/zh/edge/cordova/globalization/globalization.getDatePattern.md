@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 返回到模式 `successCallback` 。作為一個參數傳遞的物件包含以下屬性：
 
-*   **模式**： 要格式化和解析日期的日期和時間模式。 模式按照 Unicode 技術標準 #35。 [HTTP://unicode.org/reports/tr35/tr35-4.html][1]。 *（字串）*
+*   **模式**： 要格式化和解析日期的日期和時間模式。 模式按照[Unicode 技術標準 #35][1]。 *（字串）*
 
 *   **時區**： 在用戶端上的時區的縮寫的名稱。*（字串）*
 
@@ -48,7 +48,7 @@ time`.
 ## 支援的平臺
 
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 WebWorks 5.0 +
 *   iOS
 *   Windows Phone 8
 

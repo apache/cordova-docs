@@ -24,16 +24,14 @@ Ein optionaler Parameter, um das Abrufen des Kompasses anzupassen.
 
 *   **Filter**: die Veränderung der Grad benötigt, um einen WatchHeading Erfolg Rückruf initiiert. *(Anzahl)*
 
-Android Macken
+## Android Macken
 
----
-
-*   `filter`wird nicht unterstützt.
+*   Keine Unterstützung für`filter`.
 
 ## Tizen Macken
 
-*   `filter`wird nicht unterstützt.
+*   Keine Unterstützung für`filter`.
 
 ## Windows Phone 7 und 8 Macken
 
-*   `filter`wird nicht unterstützt.
+*   Keine Unterstützung für`filter`.

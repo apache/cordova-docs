@@ -30,7 +30,7 @@ Representa un archivo en un sistema de archivos, como se define en la especifica
 
 *   **fullPath**: la ruta absoluta completa desde la raíz a la `FileEntry` . *(DOMString)*
 
-**Nota:** El siguiente atributo está definido por la especificación del W3C, pero *no* es compatible:
+**Nota**: el siguiente atributo está definido por la especificación del W3C, pero *no* es compatible:
 
 *   **sistema de archivos**: el sistema de archivo en el cual el `FileEntry` reside. *(FileSystem)*
 
@@ -57,7 +57,7 @@ Representa un archivo en un sistema de archivos, como se define en la especifica
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
@@ -66,7 +66,7 @@ Representa un archivo en un sistema de archivos, como se define en la especifica
 
 Ver metadatos de un archivo.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa un `Metadata` objeto. *(Función)*
 
@@ -74,11 +74,16 @@ Ver metadatos de un archivo.
 
 **Ejemplo rápido**
 
-    function success(metadata) {console.log ("última modificación:" + metadata.modificationTime);}
+    function success(metadata) {
+        console.log("Last Modified: " + metadata.modificationTime);
+    }
     
-    function fail(error) {alert(error.code)};
+    function fail(error) {
+        alert(error.code);
+    }
     
-    / / Solicitud objeto de metadatos para esta entrada entry.getMetadata (éxito, fail);
+    // Request the metadata object for this entry
+    entry.getMetadata(success, fail);
     
 
 ## setMetadata
@@ -87,9 +92,9 @@ Conjunto de metadatos en un archivo.
 
 **Actualmente sólo funciona en iOS.**
 
-*   Esto ajustará los atributos extendidos de un archivo.
+*   Esto establece los atributos extendidos de un archivo.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se ejecuta cuando los metadatos se establece. *(Función)*
 
@@ -159,7 +164,7 @@ Mover un archivo a una ubicación diferente en el sistema de archivos. Un error 
 
 Además, mover un archivo en la cima de un archivo existente intentos eliminar y reemplazar ese archivo.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **padres**: el directorio al que se mueva el archivo. *(DirectoryEntry)*
 
@@ -195,7 +200,7 @@ Copiar un archivo a una nueva ubicación en el sistema de archivos. Un error de 
 
 *   copiar un archivo a su padre si no se proporciona un nombre diferente a la actual.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **padres**: el directorio al que copiar el archivo. *(DirectoryEntry)*
 
@@ -240,7 +245,7 @@ Devuelve una dirección URL que se puede utilizar para localizar el archivo.
 
 Elimina un archivo.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se ejecuta después de que el archivo se ha eliminado. Se invoca sin parámetros. *(Función)*
 
@@ -264,7 +269,7 @@ Elimina un archivo.
 
 Ver el padre `DirectoryEntry` que contiene el archivo.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa a los padres del archivo `DirectoryEntry` . *(Función)*
 
@@ -288,7 +293,7 @@ Ver el padre `DirectoryEntry` que contiene el archivo.
 
 Crear un `FileWriter` objeto asociado con el archivo representado por el`FileEntry`.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa un `FileWriter` objeto. *(Función)*
 
@@ -312,7 +317,7 @@ Crear un `FileWriter` objeto asociado con el archivo representado por el`FileEnt
 
 Volver a `File` objeto que representa el estado actual del archivo que esta `FileEntry` representa.
 
-**Parámetros:**
+**Parámetros**:
 
 *   **successCallback**: una devolución de llamada que se pasa un `File` objeto. *(Función)*
 

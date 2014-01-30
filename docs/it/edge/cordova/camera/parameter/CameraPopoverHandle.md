@@ -30,7 +30,7 @@ Un handle per la finestra di dialogo di muffin creato da`camera.getPicture`.
 
 Impostare la posizione dei muffin.
 
-**Parametri:**
+**Parametri**:
 
 *   `cameraPopoverOptions`: il `CameraPopoverOptions` che specificare la nuova posizione
 

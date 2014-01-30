@@ -32,7 +32,7 @@ La `geolocation.clearWatch` se detiene observando los cambios en la ubicación d
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8

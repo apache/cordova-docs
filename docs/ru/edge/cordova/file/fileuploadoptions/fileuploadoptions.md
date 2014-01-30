@@ -38,4 +38,4 @@ A `FileUploadOptions` объект может быть передан `FileTrans
 
 ## WP7 галтель
 
-*   **chunkedMode:**: в WP7 игнорируется.
+*   **chunkedMode**: игнорируется на WP7.

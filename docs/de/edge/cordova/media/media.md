@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
     
 
-**Hinweis:** Die aktuelle Implementierung eine W3C-Spezifikation für Medien-Capture nicht halten und wird nur zu Informationszwecken zur Verfügung gestellt. Zukünftiger Implementierungen wird an der aktuellen W3C-Spezifikation und kann die aktuellen APIs entweiht.
+**Hinweis**: die aktuelle Implementierung eine W3C-Spezifikation für Medien-Capture nicht einhalten, und wird nur zu Informationszwecken zur Verfügung gestellt. Zukünftiger Implementierungen wird an der aktuellen W3C-Spezifikation und kann die aktuellen APIs entweiht.
 
 ## Parameter
 
@@ -76,7 +76,7 @@ Die folgenden Konstanten werden gemeldet, als einzigem Parameter an die `mediaSt
 ## Unterstützte Plattformen
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7.5
 *   Tizen
@@ -86,8 +86,8 @@ Die folgenden Konstanten werden gemeldet, als einzigem Parameter an die `mediaSt
 
 Ab Version 3.0 implementiert Cordova Geräteebene APIs als *Plugins*. Verwenden Sie der CLI `plugin` Befehl, beschrieben in der Command-Line Interface, hinzufügen oder Entfernen dieses Feature für ein Projekt:
 
-        $ Cordova Plugin hinzufügen org.apache.cordova.media $ Cordova Plugin ls ['org.apache.cordova.media'] $ Cordova Plugin Rm org.apache.cordova.media
-     
+        $ Cordova Plugin hinzufügen org.apache.cordova.media $ Cordova Plugin ls ['org.apache.cordova.media'] $ Cordova Plugin Rm org.apache.cordova.media 
+    
 
 Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Plattform-spezifische Konfigurationseinstellungen ändern:
 
@@ -95,7 +95,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
     
         (in app/res/xml/config.xml)
         <feature name="Media">
-            <param name="android-package" value="org.apache.cordova.AudioHandler" />
+            <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
         </feature>
         
         (in app/AndroidManifest.xml)
@@ -112,7 +112,7 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
         </feature>
         
 
-*   iOS (in`config.xml`)
+*   iOS (im Verzeichnis Anwendung mit Namen`config.xml`)
     
         <feature name="Media">
             <param name="ios-package" value="CDVSound" />
@@ -134,9 +134,9 @@ Diese Befehle gelten für alle Zielplattformen, aber die unten beschriebenen Pla
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Finden Sie unter *Plattform-Unterstützung* in der Übersicht.
+Einige Plattformen können dieses Feature unterstützen, ohne dass eine besondere Konfiguration. Eine Übersicht finden Sie unter Plattform-Support.
 
-### Windows Phone Macken
+## Windows Phone Macken
 
 *   Nur eine Mediendatei kann gleichzeitig abgespielt werden.
 

@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Utilizando Plugman para administrar Plugins
 
-Desde la versión 3.0 adelante, Cordova implementa todo el dispositivo APIs como plugins y les deja desactivado por defecto. También soporta dos formas diferentes para agregar y quitar plugins. La primera es mediante el `cordova` descrito en la interfaz de línea de comandos CLI. La segunda es mediante el uso de una interfaz de línea de comandos de nivel inferior [plugman][1]. Esta guía se centra en el segundo enfoque, que puede ser útil para los desarrolladores que desean actualizar su versión de Córdoba, pero que aún no han adoptado Cordova CLI en su flujo de trabajo.
+Desde la versión 3.0 adelante, Cordova implementa todo el dispositivo APIs como plugins y les deja desactivado por defecto. También soporta dos formas diferentes para agregar y quitar plugins. La primera es mediante el uso de la `cordova` descrita en la interfaz de línea de comandos CLI. La segunda es mediante el uso de una interfaz de línea de comandos de nivel inferior [plugman][1]. Esta guía se centra en el segundo enfoque, que puede ser útil para los desarrolladores que desean actualizar su versión de Córdoba, pero que aún no han adoptado Cordova CLI en su flujo de trabajo.
 
  [1]: https://github.com/apache/cordova-plugman/
 
@@ -30,17 +30,17 @@ Para instalar plugman, debe disponer de [node][3] instalado en su máquina:
 
  [3]: http://nodejs.org/
 
-    npm install -g plugman
+    $ npm install -g plugman
     
 
 Aquí está la sintaxis para añadir un plugin para cada plataforma:
 
-    plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
+    $ plugman --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <name|url|path> [--plugins_dir <directory>] [--www <directory>] [--variable <name>=<value> [--variable <name>=<value> ...]]
     
 
 Para desinstalar un plugin:
 
-    plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
+    $ plugman --uninstall --platform <ios|android|blackberry10|wp7|wp8> --project <directory> --plugin <id> [--www <directory>] [--plugins_dir <directory>]
     
 
 ## Instalación de Plugins de núcleo

@@ -20,6 +20,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+낮은 수준의 명령줄 인터페이스에 대 한 정보에 대 한 있도록 플러그인 플러그인 관리를 사용 하 여 Plugman를 참조 하십시오. 개요 응용 프로그램 플러그인을 참조 하십시오.
+
 ## Windows Phone
 
 Windows Phone 명령줄 도구 지원 만드는 건물과 새로운 프로젝트를 실행 합니다. 명령을은 cmd 또는 powershell 프롬프트에서 실행 해야 합니다.
@@ -30,9 +32,10 @@ WP8 repo는 지금 WP7 + WP8을 구축 하기 위한 코드를 포함 애플 리
 
 새로운 아파치 코르도바 WP7 또는 WP8 응용 프로그램을 만드는 방법에 대해 이동 하는 방법은 2 가지.
 
-### 설치 서식 파일을 만들고 배치 파일을 실행 합니다.
+### 설치 된 서식 파일을 만들고 배치 파일을 실행
 
-*   Repo의 루트 파일 createTemplates.bat에 포함 되어 있습니다. 더블 클릭이 파일 2.zip 파일을 생성 합니다. (CordovaWP7\_x\_x\_x.zip + CordovaWP8\_x\_x\_x.zip x.x.x는 현재 버전 번호) 쉽게 복사 Visual Studio에서 이러한 파일을 사용 하 여 그들에 게 "내 Documents\Visual Studio 2012\Templates\ProjectTemplates\" 다음 수 새 프로젝트 메뉴-> Visual Studio 파일에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있습니다. 있습니다
+*   Repo의 루트를 포함 한 `createTemplates.bat` 파일. 2 생성 두 번 클릭 `.zip` 파일: `CordovaWP7_x_x_x.zip` 및 `CordovaWP8_x_x_x.zip` , *x.x.x* 현재 버전 번호를 나타냅니다. Visual Studio에서 이러한 파일을 쉽게 사용 하려면 복사를 `My Documents\Visual Studio
+2012\Templates\ProjectTemplates\` . 다음 Visual Studio에서 새로운 아파치 코르도바 Windows Phone 응용 프로그램을 만들 수 있게 하는 **파일 → 새 프로젝트** 메뉴.
 
 *   명령줄에서 배치 파일을 실행 하는 경우 호출할 수 있습니다 또한 자동으로 설치 하는 매개 변수
 
@@ -61,7 +64,7 @@ Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 �
 
 빌드 및 실행
 
-## (다음 정리 빌드) 프로젝트 구축
+## 프로젝트 구축 (청소, 다음 빌드)
 
 *   디버그
     
@@ -71,7 +74,7 @@ Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 �
     
     $ C:\path\to\my\_new\_project\cordova\build-릴리스
 
-## 응용 프로그램을 실행
+## 응용 프로그램 실행
 
 다음 *선택적* 매개 변수와 함께 '실행 명령 실행
 
@@ -81,7 +84,7 @@ Visual Studio를 시작 하 고 (C:\path\to\my\_new\_project)에서 솔루션 �
     
     $ C:\path\to\my\_new\_project\cordova\run \[대상\] \[빌드\]
 
-기본적으로는 `run` 명령으로 불릴 것 이다 `--emulator --debug` 플래그가 제공 되지 않은 경우.
+기본적으로는 `run` 명령으로 불린다 `--emulator --debug` 플래그가 제공 되지 않은 경우.
 
 ## 청소
 

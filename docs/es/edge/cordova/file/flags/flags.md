@@ -27,15 +27,15 @@ Proporciona argumentos para la `DirectoryEntry` del objeto `getFile()` y `getDir
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 y 8
 *   Windows 8
 
 ## Ejemplo rápido
 
-    / / Obtener el directorio de datos, creándola si no existe.
-    dataDir = fileSystem.root.getDirectory ("datos", {crear: true});
+    // Get the data directory, creating it if it doesn't exist.
+    dataDir = fileSystem.root.getDirectory("data", {create: true});
     
-    / / Crear el archivo de bloqueo, si y sólo si no existe.
-    lockFile = dataDir.getFile ("lockfile.txt", {crear: verdadero, exclusivo: true});
+    // Create the lock file, if and only if it doesn't exist.
+    lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});

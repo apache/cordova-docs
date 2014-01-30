@@ -28,7 +28,7 @@ Il `media.release` metodo viene eseguito in modo sincrono, liberando risorse aud
 ## Piattaforme supportate
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 e superiori)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 *   Windows Phone 7 e 8
 *   Tizen

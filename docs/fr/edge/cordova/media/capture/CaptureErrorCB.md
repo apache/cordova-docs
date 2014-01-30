@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureErrorCB
 
-> Appelée si une erreur se produit pendant une opération de capture de médias.
+> Fonction callback appelée si une erreur se produit pendant une opération de capture de médias.
 
     function captureError( CaptureError error ) { ... };
     
 
 ## Description
 
-Cette fonction s'exécute si une erreur se produit lorsque vous essayez de lancer un média opération de capture. Scénarios de défaillance incluent lors de l'application capture est occupée, une opération de capture est déjà en cours, ou l'utilisateur annule l'opération avant que tous les fichiers multimédias sont capturés.
+Cette fonction est exécutée si une erreur se produit lors d'une tentative de lancement d'une opération de capture de médias. Une telle erreur peut survenir lorsque l'application de capture est occupée, quand une opération de capture est déjà en cours, ou encore si l'utilisateur annule l'opération avant qu'un fichier média ait pu être capturé.
 
-Cette fonction s'exécute avec un `CaptureError` objet contenant une erreur appropriée`code`.
+Un objet `CaptureError` contenant un `code` d'erreur approprié est transmis à cette fonction callback lors de son exécution.
 
-## Petit exemple
+## Exemple court
 
-    // capture error callback
+    // fonction callback d'erreur de capture
     var captureError = function(error) {
-        navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+        navigator.notification.alert('Code d\'erreur : ' + error.code, null, 'Erreur de capture');
     };

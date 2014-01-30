@@ -22,18 +22,20 @@ Diese Anleitung zeigt wie Android Projekte Upgrade von älteren Versionen von Co
 
 Für Projekte, die mit Cordova CLI erstellt wurden:
 
-1.  Update der `cordova` CLI-Version - siehe The Command-Line Interface 
+1.  Update der `cordova` CLI-Version. Finden Sie die Befehlszeilenschnittstelle.
+
 2.  Ausführen`cordova platform update android`
 
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
-1.  `Aktualisieren Sie bin/< Project_path >`
+        bin/update <project_path>
+    
 
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
 
 1.  Erstellen Sie ein neues Apache Cordova 3.0.0-Projekt mit Cordova CLI, wie in der Command-Line Interface beschrieben.
 
-2.  Fügen Sie Ihrer Plattformen die den Cordova Projekt, zum Beispiel:`cordova
+2.  Fügen Sie Ihrer Plattformen Projektes Cordova, zum Beispiel:`cordova
 platform add android`.
 
 3.  Kopieren Sie den Inhalt Ihres Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
@@ -55,8 +57,8 @@ platform add android`.
 5.  Achten Sie darauf, alle veraltet aktualisieren `<plugin>` Referenzen aus Ihrem alten `config.xml` Datei an den neuen `<feature>` Spezifikation.
 
 6.  Aktualisieren Sie alle Verweise auf die `org.apache.cordova.api` Paket ist`org.apache.cordova`.
-
-*   **Hinweis:** alle Core APIs wurden entfernt und als Plugins installiert sein. Einzelheiten finden Sie unter der Verwendung von Plugman zum Verwalten von Plugins-Anleitung.
+    
+    **Hinweis**: alle Core APIs wurden entfernt und als Plugins installiert sein. Einzelheiten finden Sie unter der Verwendung von Plugman zum Verwalten von Plugins-Anleitung.
 
 ## Ein Upgrade auf 2.9.0 von 2.8.0
 
@@ -68,17 +70,19 @@ platform add android`.
 
 2.  Hinzufügen von `cordova-2.8.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
-4.  Kopieren Sie die neue `cordova.js` in Ihr Projekt.
+<!-- SS Eclipse -->
 
-5.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` Datei.
+1.  Kopieren Sie die neue `cordova.js` in Ihr Projekt.
 
-6.  Kopie der `res/xml/config.xml` -Datei`framework/res/xml/config.xml`.
+2.  Aktualisieren Sie den HTML-Code um das neue `cordova.js` Datei.
 
-7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
+3.  Kopie der `res/xml/config.xml` -Datei`framework/res/xml/config.xml`.
 
-8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
+4.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
+
+5.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.7.0 von 2.6.0
 
@@ -86,7 +90,7 @@ platform add android`.
 
 2.  Hinzufügen von `cordova-2.7.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.7.0.js` in Ihr Projekt.
 
@@ -96,7 +100,7 @@ platform add android`.
 
 7.  Update `framework/res/xml/config.xml` ähnliche Einstellungen haben, wie es früher war.
 
-8.  
+8.  Kopieren Sie Dateien aus `bin/templates/cordova` für des Projekts `cordova` Verzeichnis.
 
 ## Ein Upgrade auf 2.6.0 von 2.5.0
 
@@ -104,7 +108,7 @@ platform add android`.
 
 2.  Hinzufügen von `cordova-2.6.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.6.0.js` in Ihr Projekt.
 
@@ -124,7 +128,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.5.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.5.0.js` in Ihr Projekt.
 
@@ -142,7 +146,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.4.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.4.0.js` in Ihr Projekt.
 
@@ -158,7 +162,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.3.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.3.0.js` in Ihr Projekt.
 
@@ -174,7 +178,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.2.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.2.0.js` in Ihr Projekt.
 
@@ -190,7 +194,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.1.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.1.0.js` in Ihr Projekt.
 
@@ -206,7 +210,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-2.0.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-2.0.0.js` in Ihr Projekt.
 
@@ -214,9 +218,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 6.  Kopie der `res/xml/config.xml` entsprechend`framework/res/xml/config.xml`.
 
-### Release Notes über 2.0.0
-
-`config.xml`wird anstelle `cordova.xml` und `plugins.xml` . Diese neue Datei ist eine Kombination der beiden vorherigen. Jedoch die alten Dateien sind veraltet, und beim arbeiten derzeit noch, werden nicht mehr in einer zukünftigen Version arbeiten.
+Die 2.0.0 release, die `config.xml` Datei kombiniert und ersetzt `cordova.xml` und `plugins.xml` . Die alten Dateien sind veraltet, und während sie noch in 2.0.0, arbeiten funktioniert nicht mehr in einer zukünftigen Version.
 
 ## Ein Upgrade auf 1.9.0 von 1.8.1
 
@@ -224,7 +226,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 2.  Hinzufügen von `cordova-1.9.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.9.0.js` in Ihr Projekt.
 
@@ -232,9 +234,7 @@ Führen Sie `bin/update <project>` mit den Projektpfad in Cordova Quellverzeichn
 
 6.  Update `res/xml/plugins.xml` entsprechend`framework/res/xml/plugins.xml`.
 
-### Release Notes über 1.9.0
-
-Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktionieren nicht. Diese Plugins brauchen, um einen Kontext aus dem `CordovaInterface` mit `getContext()` oder `getActivity()` . Wenn Sie kein erfahrener Android-Entwickler sind, bitte kontaktieren Sie den Plugin-Betreuer und fügen Sie diese Aufgabe auf ihre Bug-Tracker.
+Durch die Einführung der `CordovaWebView` in der 1.9.0 Release, Drittanbieter Plug-ins funktionieren nicht. Diese Plugins brauchen, um einen Kontext aus dem `CordovaInterface` mit `getContext()` oder `getActivity()` . Wenn Sie kein erfahrener Android-Entwickler sind, bitte kontaktieren Sie den Plugin-Betreuer und fügen Sie diese Aufgabe auf ihre Bug-Tracker.
 
 ## Ein Upgrade auf 1.8.0 von 1.8.0
 
@@ -242,7 +242,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.8.1.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.8.1.js` in Ihr Projekt.
 
@@ -256,7 +256,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.8.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt.
 
@@ -270,7 +270,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.8.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.8.0.js` in Ihr Projekt.
 
@@ -284,7 +284,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.7.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.7.0.js` in Ihr Projekt.
 
@@ -296,7 +296,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.6.1.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.6.1.js` in Ihr Projekt.
 
@@ -308,7 +308,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.6.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.6.0.js` in Ihr Projekt.
 
@@ -324,7 +324,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `cordova-1.5.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `cordova-1.5.0.js` in Ihr Projekt.
 
@@ -340,7 +340,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `phonegap-1.4.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `phonegap-1.4.0.js` in Ihr Projekt.
 
@@ -356,7 +356,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `phonegap-1.3.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `phonegap-1.3.0.js` in Ihr Projekt.
 
@@ -372,7 +372,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `phonegap-1.2.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `phonegap-1.2.0.js` in Ihr Projekt.
 
@@ -388,7 +388,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `phonegap-1.1.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `phonegap-1.1.0.js` in Ihr Projekt.
 
@@ -402,7 +402,7 @@ Durch die Einführung der `CordovaWebView` , Drittanbieter Plug-ins funktioniere
 
 2.  Hinzufügen von `phonegap-1.0.0.jar` für des Projekts `libs` Verzeichnis.
 
-3.  Bei Verwendung von Eclipse, Eclipse Projekt aktualisieren und eine saubere zu tun.
+3.  Wenn Sie Eclipse verwenden, aktualisieren das Eclipse-Projekt und eine saubere zu tun.
 
 4.  Kopieren Sie die neue `phonegap-1.0.0.js` in Ihr Projekt.
 

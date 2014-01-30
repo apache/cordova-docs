@@ -21,10 +21,10 @@ Un objeto que representa un error de la API de la globalización.
 ## Propiedades
 
 *   **Código**: Uno de los siguientes códigos que representa el tipo de error *(Número)* 
-    *   GlobalizationError.UNKNOWN _ ERROR: 0
-    *   GlobalizationError.FORMATTING _ ERROR: 1
-    *   GlobalizationError.PARSING _ ERROR: 2
-    *   GlobalizationError.PATTERN _ ERROR: 3
+    *   GlobalizationError.UNKNOWN_ERROR: 0
+    *   GlobalizationError.FORMATTING_ERROR: 1
+    *   GlobalizationError.PARSING_ERROR: 2
+    *   GlobalizationError.PATTERN_ERROR: 3
 *   **mensaje**: un mensaje de texto que incluye la explicación de los errores o detalles *(String)*
 
 ## Descripción
@@ -34,7 +34,7 @@ Este objeto es creado y poblada por Córdoba y regresó a una devolución de lla
 ## Plataformas soportadas
 
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry WebWorks 5.0 +
 *   iOS
 
 ## Ejemplo rápido

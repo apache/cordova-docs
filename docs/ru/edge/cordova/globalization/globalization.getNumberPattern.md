@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Возвращает шаблон для `successCallback` с `properties` объект в качестве параметра. Этот объект содержит следующие свойства:
 
-*   **шаблон**: шаблон номера для форматирования и разбора чисел. Шаблоны следуют технического стандарта Unicode #35. <http://unicode.org/reports/tr35/tr35-4.html>. *(Строка)*
+*   **шаблон**: шаблон номера для форматирования и разбора чисел. Шаблоны следуют [технического стандарта Unicode #35][1]. *(Строка)*
 
 *   **символ**: символ для использования при форматировании и синтаксическом разборе, таких как символ валюты и процентов. *(Строка)*
 
@@ -41,6 +41,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   **Группировка**: символ группировки использовать для синтаксического анализа и форматирования. *(Строка)*
 
+ [1]: http://unicode.org/reports/tr35/tr35-4.html
+
 Если есть ошибка получения шаблона, то свойство `errorCallback` выполняет с `GlobalizationError` объект в качестве параметра. Ожидаемый код ошибки`GlobalizationError.PATTERN\_ERROR`.
 
 `options`Параметр является необязательным, и значения по умолчанию являются:
@@ -53,7 +55,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Поддерживаемые платформы
 
 *   Андроид
-*   WebWorks ежевики (OS 5.0 и выше)
+*   WebWorks ежевики 5.0 +
 *   iOS
 *   Windows Phone 8
 

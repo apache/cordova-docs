@@ -20,15 +20,17 @@ Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen er
 
  [1]: http://cordova.apache.org
 
+Informationen über die Low-Level-Befehlszeilenschnittstelle, die Plugins ermöglicht, finden Sie unter Verwendung von Plugman zu Plugins verwalten. Eine Übersicht finden Sie unter Application Plugins.
+
 ## Erstellen Sie ein Projekt
 
-Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rückwärts-Domäne-Style Paket-ID und die app-Anzeigenamen angeben. Hier ist die Syntax für Mac und Windows:
+Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die Reverse-Domäne-Style Paket-ID und die app-Anzeigenamen angeben. Hier ist die Syntax für Mac und Windows:
 
     $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
     
 
-**Hinweis:** Die BlackBerry-Plattform ignoriert die Platzhalter für die Paket-Namen ( `com.example.project_name` ), aber es ist immer noch für den Einsatz von Cross-Plattform-Tools erforderlich.
+**Hinweis**: die BlackBerry-Plattform ignoriert die Platzhalter für die Paket-Namen ( `com.example.project_name` ), aber es ist immer noch für den Einsatz von Cross-Plattform-Tools erforderlich.
 
 ## Erstellen eines Projekts
 
@@ -50,11 +52,11 @@ und dann wählen Sie "Nein", mit der Aufforderung:
     Haben Sie ein BlackBerry-Gerät an Ihren Computer angeschlossen? (y/n) $ /path/to/my_new_project/cordova/run <platform>
     
 
-und dann wählen Sie "Nein", mit der Aufforderung:
+und wählen Sie dann "Nein", mit der Aufforderung:
 
     Haben Sie ein BlackBerry-Gerät an Ihren Computer angeschlossen? (y/n)
     
 
 ## Protokollierung
 
-Leider ist das streaming Protokolle direkt vom Gerät derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Textbuch und BlackBerry-Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem Gerät durch die '' ALT'' gedrückt aus dem home-Bildschirm und Eingabe '' Lglg'' Schlüssel.
+Leider ist das streaming Protokolle direkt vom Gerät derzeit nicht unterstützt. BlackBerry bietet jedoch integrierten Web Inspector-Unterstützung für Playbook und BlackBerry Smartphones mit BlackBerry OS 7.0 und höher. Sie können auch Ihre Anwendungsprotokolle zugreifen (einschließlich alle Aufrufe an `console.log` ) auf Ihrem Gerät mit gedrückter '' ALT'' von den home-Bildschirm und '' Lglg'' Schlüssel eingeben.

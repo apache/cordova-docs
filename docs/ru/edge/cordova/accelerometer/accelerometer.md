@@ -36,7 +36,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Доступ к расширениям
 
-Начиная с версии 3.0 Cordova реализует интерфейсы API как *plugins*. Используйте команду CLI `plugin`, описанные в интерфейс командной строки, чтобы добавить или удалить расширения для проекта:
+Начиная с версии 3.0 Cordova реализует интерфейсы API как *plugins*. Использование CLI `plugin` команды, описанные в интерфейс командной строки, чтобы добавить или удалить эту функцию для проекта:
 
         $ cordova plugin add org.apache.cordova.device-motion
         $ cordova plugin ls
@@ -46,10 +46,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Эти команды применяются для всех платформ, но имеют отличия конфигурации для платформ описанных ниже:
 
-*   Android (в`app/res/xml/config.xml`)
+*   Android (в`res/xml/config.xml`)
     
         <feature name="Accelerometer">
-            <param name="android-package" value="org.apache.cordova.AccelListener" />
+            <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
         </feature>
         
 
@@ -65,7 +65,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <feature id="org.apache.cordova" required="true" version="1.0.0" />
         
 
-*   iOS (в`config.xml`)
+*   iOS (в каталоге именованного приложения`config.xml`)
     
         <feature name="Accelerometer">
             <param name="ios-package" value="CDVAccelerometer" />
@@ -83,4 +83,4 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://msdn.microsoft.com/en-us/library/ff769509%28v=vs.92%29.aspx
 
-Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. В разделе *Поддержка платформы* в разделе Обзор.
+Некоторые платформы могут поддерживать эту функцию без необходимости специальной настройки. Смотрите обзор платформы поддержки.

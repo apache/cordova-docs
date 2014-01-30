@@ -16,20 +16,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # CaptureImageOptions
 
-> Encapsule les options de configuration de capture image.
+> Encapsule les options de configuration de capture d'image.
 
 ## Propriétés
 
-*   **limite**: le nombre maximum d'images, l'utilisateur peut saisir dans une opération de capture unique. La valeur doit être supérieure ou égale à 1 (1 par défaut).
+*   **limit** : le nombre maximum d'images que l'utilisateur peut enregistrer en une opération unique de capture. La valeur doit être supérieure ou égale à 1 (1 par défaut).
 
-## Petit exemple
+## Exemple court
 
-    // limit capture operation to 3 images
+    // limite l'opération de capture à 3 images
     var options = { limit: 3 };
     
     navigator.device.capture.captureImage(captureSuccess, captureError, options);
     
 
-## iOS Quirks
+## Particularités d'iOS
 
-*   Le paramètre **limit** n'est pas pris en charge, et qu'une image est prise par l'invocation.
+*   Le paramètre **limit** n'est pas pris en charge, par conséquent une seule image est capturée par appel.
