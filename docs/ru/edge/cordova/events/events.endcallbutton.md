@@ -29,7 +29,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Поддерживаемые платформы
 
-*   WebWorks ежевики (OS 5.0 и выше)
+*   BlackBerry 10
 
 ## Быстрый пример
 

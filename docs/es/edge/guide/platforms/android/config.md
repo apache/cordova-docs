@@ -18,36 +18,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning` (por defecto valor booleano, `true`): determina si la aplicación queda funcionando en segundo plano, incluso después de un `pause` de evento se desencadena.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Nota: si se establece en false no matará la aplicación después de una pausa, sólo detendrá la ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: especifica una página de error que aparece en respuesta a los errores estándar HTTP en el rango de 400-500. Coloque el archivo especificado en el nivel de directorio que contiene la página de inicio y otros activos de la web.
-    
-        <preference name="ErrorUrl" value="error.html"/>
-        
-
-*   `LoadingDialog`: muestra un diálogo nativo cuando se carga la aplicación. El formato del valor es *título, mensaje*
-    
-        <preference name="LoadingDialog" value="Please wait, the app is loading"/>
-        
-
-*   `LoadingPageDialog`: muestra un diálogo nativo al cargar subpáginas dentro de una aplicación. El formato del valor es *título, mensaje*
-    
-        <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
-        
-
-*   `LoadUrlTimeoutValue` (número, el valor predeterminado es `20000`): cuando se carga una página, la cantidad de tiempo de espera antes de tirar un error de tiempo de espera. Este ejemplo especifica 10 segundos en lugar de 20:
+*   `LoadUrlTimeoutValue`(número en milisegundos, por defecto `20000` , 20 segundos): cuando se carga una página, la cantidad de tiempo de espera antes de tirar un error de tiempo de espera. Este ejemplo especifica 10 segundos en lugar de 20:
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`: el nombre del archivo sin su extensión en el directorio `res/drawable`. Varios activos deben compartir este nombre común en diferentes subdirectorios.
+*   `SplashScreen`(string, el valor predeterminado de `splash` ): el nombre del archivo sin su extensión en el `res/drawable` Directorio. Varios activos deben compartir este nombre común en diferentes subdirectorios.
     
-        <preference name="SplashScreen" value="splash"/>
+        <preference name="SplashScreen" value="mySplash"/>
         
 
-*   `SplashScreenDelay` (número, el valor predeterminado de `5000`): la cantidad de tiempo que muestra la imagen en pantalla splash.
+*   `SplashScreenDelay`(número en milisegundos, por defecto `3000` ): la cantidad de tiempo que muestra la imagen en pantalla splash.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `InAppBrowserStorageEnabled`(por defecto es booleano, `true` ): controles si abrieron páginas dentro de un InAppBrowser pueden acceder el mismo localStorage y WebSQL almacenamiento de información como páginas abrió con el navegador por defecto.
+    
+        <preference name="InAppBrowserStorageEnabled" value="true"/>
+        
+
+*   `LoadingDialog`(string, el valor predeterminado de `null` ): Si conjunto, muestra un diálogo con el mensaje y título especificado y un hilandero, cuando cargue la primera página de una aplicación. El título y el mensaje están separados por una coma en esta cadena de valor, y eso coma se retira antes de que se muestre el cuadro de diálogo.
+    
+        <preference name="LoadingDialog" value="My Title,My Message"/>
+        
+
+*   `LoadingPageDialog`(string, el valor predeterminado de `null` ): lo mismo que `LoadingDialog` , pero para cargar cada página después de la primera página de la aplicación.
+    
+        <preference name="LoadingPageDialog" value="My Title,My Message"/>
+        
+
+*   `ErrorUrl`(URL, por defecto `null` ): Si establece, se visualizará la página que se hace referencia a un error en la aplicación en lugar de un diálogo con el título "Error de aplicación".
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>
+        
+
+*   `ShowTitle`(por defecto es booleano, `false` ): Mostrar el título en la parte superior de la pantalla.
+    
+        <preference name="ShowTitle" value="true"/>
+        
+
+*   `LogLevel`(string, el valor predeterminado de `ERROR` ): establece el nivel de registro mínimo a través de registro que se filtrarán los mensajes de la aplicación. Los valores válidos son `ERROR` , `WARN` , `INFO` , `DEBUG` , y`VERBOSE`.
+    
+        <preference name="LogLevel" value="VERBOSE"/>
+        
+
+*   `SetFullscreen`(por defecto es booleano, `false` ): igual que el `Fullscreen` parámetro en la configuración global de este archivo xml. Este elemento específico de Android está obsoleta a favor de la global `Fullscreen` elemento y se quitará en una versión futura.

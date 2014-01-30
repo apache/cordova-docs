@@ -20,6 +20,8 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
  [1]: http://cordova.apache.org
 
+Pour plus d'informations sur l'interface de bas niveau qui permet aux plugins, voir Plugman à l'aide à gérer les Plugins. Pour une vue d'ensemble, consultez Application Plugins.
+
 ## Créer un projet
 
 Exécutez le `create` commande, en spécifiant le chemin d'accès existant au projet, l'identificateur de package inverse-domaine-style et nom complet de l'application. Voici la syntaxe pour Mac et Windows :
@@ -38,7 +40,7 @@ Debug, sur Mac ou Windows :
     $ C:\path\to\project\cordova\build.bat --debug
     
 
-Libération, sur Mac ou Windows :
+Date de sortie, sur Mac ou Windows :
 
     $ /path/to/project/cordova/build --release
     $ C:\path\to\project\cordova\build.bat --release

@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        プラットフォームのサポート
+      </h2>
+      
+      <span>すべての主要な機能の互換性テーブル。</span>
+    </li>
+    <li>
+      <h2>
         コマンド ライン インターフェイス
       </h2>
       
@@ -40,6 +47,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>各 SDK の更新プロジェクトを設定します。</span>
+    </li>
+    <li>
+      <h2>
+        Plugman を使用してプラグインを管理するには
+      </h2>
+      
+      <span>Plugman を使用して cli をプラグインを管理するには</span>
     </li>
     <li>
       <h2>
@@ -85,6 +99,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        ストレージ
+      </h2>
+      
+      <span>ネイティブのストレージ オプションの概要です。</span>
+    </li>
+    <li>
+      <h2>
         <a href="_index.html">キーワード インデックス</a>
       </h2>
       
@@ -99,55 +120,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        加速度センサー
-      </h2>
-      
-      <span>デバイスのモーション センサーをタップします。</span>
-    </li>
-    <li>
-      <h2>
-        カメラ
-      </h2>
-      
-      <span>デバイスのカメラを使用して写真をキャプチャします。</span>
-    </li>
-    <li>
-      <h2>
-        キャプチャ
-      </h2>
-      
-      <span>デバイスのメディア ・ キャプチャ ・ アプリケーションを使用してメディア ファイルをキャプチャします。</span>
-    </li>
-    <li>
-      <h2>
-        コンパス
-      </h2>
-      
-      <span>デバイスが指している方向を取得します。</span>
-    </li>
-    <li>
-      <h2>
-        接続
-      </h2>
-      
-      <span>ネットワークの状態、および携帯電話のネットワーク情報をすばやく確認します。</span>
-    </li>
-    <li>
-      <h2>
-        連絡先
-      </h2>
-      
-      <span>デバイスの連絡先データベースで動作します。</span>
-    </li>
-    <li>
-      <h2>
-        デバイス
-      </h2>
-      
-      <span>デバイス固有の情報を収集します。</span>
-    </li>
-    <li>
-      <h2>
         イベント
       </h2>
       
@@ -155,59 +127,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        ファイル
+        プラグイン Api
       </h2>
       
-      <span>Java スクリプトの設定をネイティブのファイル システムにフックします。</span>
-    </li>
-    <li>
-      <h2>
-        地理位置情報
-      </h2>
-      
-      <span>アプリケーションの場所を認識させます。</span>
-    </li>
-    <li>
-      <h2>
-        グローバリゼーション
-      </h2>
-      
-      <span>ロケールに固有のオブジェクトの表現を有効にします。</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>別のアプリ内ブラウザー インスタンスで Url を起動します。</span>
-    </li>
-    <li>
-      <h2>
-        メディア
-      </h2>
-      
-      <span>記録し、オーディオ ファイルを再生します。</span>
-    </li>
-    <li>
-      <h2>
-        通知
-      </h2>
-      
-      <span>音、視覚と触覚デバイス通知。</span>
-    </li>
-    <li>
-      <h2>
-        スプラッシュ スクリーン
-      </h2>
-      
-      <span>アプリケーションのスプラッシュ スクリーンを非表示。</span>
-    </li>
-    <li>
-      <h2>
-        ストレージ
-      </h2>
-      
-      <span>ネイティブのストレージ オプションをデバイスにフックします。</span>
+      <span>どのようなプラグイン コルドバはプロジェクトで使用する利用可能な発見します。</span>
     </li>
   </ul>
 </div>

@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 此事件的任何應用程式至關重要。它發出信號科爾多瓦的設備已載入的 Api，並準備訪問。
 
-科爾多瓦組成的兩個代碼庫： 本機和 JavaScript。 雖然本機代碼載入、 顯示的自訂載入圖像。 然而，JavaScript 僅載入一旦 DOM 裝載。 這意味著您的 web 應用程式可能有可能調用的科爾多瓦 JavaScript 函數之前的相應的本機代碼是可用。
+科爾多瓦組成的兩個代碼庫： 本機和 JavaScript。 雖然本機代碼載入、 顯示的自訂載入圖像。 然而，JavaScript 僅載入一旦 DOM 裝載。 這意味著 web 應用程式可能有可能調用的科爾多瓦 JavaScript 函數之前的相應的本機代碼變得可用。
 
 `deviceready`科爾多瓦已完全載入後會觸發事件。 一次事件火，你可以安全地使對科爾多瓦 Api 的調用。 應用程式通常將附加一個事件攔截器與 `document.addEventListener` 一旦 HTML 文檔的 DOM 已載入。
 
@@ -33,8 +33,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 支援的平臺
 
+*   亞馬遜火 OS
 *   Android 系統
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 10
 *   iOS
 *   Tizen
 *   Windows Phone 7 和 8

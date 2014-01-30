@@ -36,17 +36,13 @@ Unter Windows:
 
 *   Hängen Sie die Native SDK-Installationsverzeichnis auf den Pfad, z.B.:
     
-    ;C:\bbndk\host\_10\_1\_0\_132\darwin\x86\usr\bin\
+    ;C:\bbndk\host\_10\_2\_0\_132\darwin\x86\usr\bin\
 
 Auf Mac und Linux:
 
 *   Bearbeiten Sie die `~/.bash_profile` -Datei eine Zeile wie die folgende, je nachdem, wo die Native SDK installiert wurde hinzugefügt:
     
-    $ Export PATH = ${PATH}: / Anwendungen/Bbndk/host\_10\_1\_0\_132/Darwin/X 86/Usr/bin /
-    
-    oder für das 10.2 Native SDK:
-    
-    $ Export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
+    $ export PATH=${PATH}:/Applications/Momentics.app/host\_10\_2\_0\_15/darwin/x86/usr/bin/
 
 *   Führen Sie folgendermaßen vor, um die Änderung in der aktuellen Sitzung zu übernehmen:
     
@@ -56,16 +52,16 @@ Auf Mac und Linux:
 
 Wenn Sie auf einem Gerät zu testen oder apps durch BlackBerry World verteilen möchten, muss Ihr System Setup zum Signieren von Code sein.
 
-Um einen Signaturschlüssel zu erhalten, besuchen Sie die BlackBerry-Website, und achten Sie darauf, das Kennwort zu kennen, die, das Sie angeben. Führen Sie das `blackberry-signer` -Dienstprogramm, das mit dem systemeigenen BlackBerry-SDK enthalten ist.
+Um einen Signaturschlüssel zu erhalten, gehen Sie zu \[BlackBerry Schlüssel Bestellformular\] (https://www.blackberry.com/SignedKeys/codesigning.html).
 
-Detaillierte Anweisungen finden Sie hier:
+Markieren Sie das erste Feld: "für BlackBerry10 Anwendungen mit BlackBerry NDK entwickelt" und dann anmelden oder erstellen eine BBID.
 
-*   [Registrieren Sie sich für Ihren Code signing-Key.][2]
+Geben Sie ein Kennwort, und klicken Sie auf "Token erhalten", um bbidtoken.csk zu downloaden. Speichern Sie diese Datei auf den standardmäßigen Speicherort für Ihr Betriebssystem, die auf der Downloadseite angezeigt wird.
 
-*   [Einrichten des Systems zum Signieren von Code.][3]
+Der letzte Schritt ist ein Signaturzertifikat zu generieren:
 
- [2]: https://www.blackberry.com/SignedKeys/codesigning.html
- [3]: https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html
+    $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
+    
 
 ## Erstellen Sie ein Projekt
 
@@ -82,96 +78,74 @@ Verwendung der `cordova` Utility für ein neues Projekt, wie in der Command-Line
 Wenn Sie einen Geräteemulator ausführen möchten, downloaden und Installieren der BlackBerry-10-Simulator.
 
 *   [Download][1]
-*   [Erste Schritte][4]
+*   [Erste Schritte][2]
 
- [4]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
+ [2]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
-Sie müssen vor der Prüfung einer app auf einem Emulator oder ein Gerät, ein *Ziel* zu Ihrem Projekt hinzufügen. Jedes ist mit einem eindeutigen Namen identifiziert und einer IP-Adresse zugeordnet. Sie müssen die IP-Adresse vom Emulator zu erhalten, bevor Sie es verwenden, um apps anzusehen.
+Sie müssen vor der Prüfung einer app auf einem Emulator oder ein Gerät Entwicklungsmodus aktivieren.
 
 Starten Sie das Emulator-Image, dann wählen Sie **Einstellungen** aus dem home-Bildschirm:
 
-![][5]
+![][3]
 
- [5]: img/guide/platforms/blackberry10/bb_home.png
+ [3]: img/guide/platforms/blackberry10/bb_home.png
 
-Navigieren Sie zu der **Sicherheit und Datenschutz → Entwicklungsmodus** section, aktivieren Sie die Option und die IP-Adresse beziehen:
+Navigieren Sie zu der **Sicherheit und Datenschutz → Entwicklungsmodus** Abschnitt, und aktivieren Sie die Option:
 
-![][6]
+![][4]
 
- [6]: img/guide/platforms/blackberry10/bb_devel.png
-
-Eine weitere Gruppe von Befehlszeilen-Dienstprogramme sind enthalten, wenn Sie die BlackBerry 10-Plattform für Ihr Projekt einrichten. Der folgende Befehl, in diesem Fall aus dem Projektverzeichnis auf oberster Ebene aufgerufen verknüpft ein Ziel mit dem Namen *emu* mit oben angezeigten IP-Adresse.
-
-*   Unter Windows:
-    
-    $ platforms\blackberry10\cordova\target.bat add emu 169.254.0.1 -t simulator
-
-*   Auf Mac/Linux:
-    
-    $ platforms/blackberry10/cordova/target add emu 169.254.0.1 -t simulator
+ [4]: img/guide/platforms/blackberry10/bb_devel.png
 
 Führen Sie dann den `emulate` Befehl, um die app anzuzeigen:
 
-    $ cordova emulate blackberry10
+    $ cordova emulate blackberry10 --devicepass <password>
     
 
 ## Bereitstellung auf Gerät
 
-Um auf ein Gerät bereitzustellen, sicherzustellen Sie, dass es an Ihrem Computer angeschlossen ist. Entwicklungsmodus aktivieren und die IP-Adresse als beschriebenen Emulator oben im Abschnitt zu erhalten. Sie müssen auch den Anschluß von erhalten die **lagereinstellungsanwendung unter** **über → Hardware**:
-
-![][7]
-
- [7]: img/guide/platforms/blackberry10/bb_pin.png
-
-Führen Sie das Ziel-Befehlszeilenprogramm, um eine IP-Adresse, Gerätekennwort und PIN einen Namen zuzuordnen.
-
-*   Unter Windows:
-    
-    $ platforms\blackberry10\cordova\target.bat add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-
-*   Auf Mac/Linux:
-    
-    $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
-
-Wo:
-
-*   `--password`bezieht sich auf das Kennwort zum Entsperren.
-
-*   `--pin`bezieht sich auf das Gerät PIN **die Einstellungsanwendung** eingeholt.
+Für ein Gerät bereitstellen, stellen Sie sicher, es ist an den Computer angeschlossen und Entwicklungsmodus aktiviert ist.
 
 Führen Sie dann den `run` Befehl, um die app anzuzeigen:
 
-    $ cordova run blackberry10
+    $ cordova run blackberry10 --devicepass <password>
     
 
-Wenn ein Debug-Token nicht noch für das Gerät eingerichtet ist, fordert eine Fehlermeldung Sie nutzen die Plattform, das Skript mit dem Kennwort, die Sie bei Registrierung für Signaturschlüssel.
+Wenn ein Debug-Token noch nicht für das Gerät eingerichtet, eine Fehlermeldung Sie fordert auf, das Kennwort bereitstellen, werden beim Konfigurieren des Computers zum Signieren von Anwendungen definiert.
 
-*   Unter Windows:
+    $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
     
-    $ platforms\blackberry10\cordova\run.bat --device --keystorepass mysecret
-
-*   Auf Mac/Linux:
-    
-    $ platforms/blackberry10/cordova/run --device --keystorepass mysecret
 
 ## Debuggen mit WebInspector
 
-Beim Debuggen auf dem Gerät oder einen Emulator können Sie WebInspector aus der Ferne, um den internen Zustand der Anwendung anzuzeigen ausführen. Eine Eingabeaufforderung zeigt die URL, die Sie zum Herstellen einer Verbindung mit Ihrer app mit einem standard-Webbrowser ermöglicht. Weitere Informationen finden Sie unter [Debuggen verwenden WebInspector][8].
+Beim Debuggen auf dem Gerät oder einen Emulator können Sie WebInspector aus der Ferne, um den internen Zustand der Anwendung anzuzeigen ausführen. Eine Eingabeaufforderung zeigt die URL, die Sie zum Herstellen einer Verbindung mit Ihrer app mit einem standard-Webbrowser ermöglicht. Weitere Informationen finden Sie unter [Debuggen verwenden WebInspector][5].
 
- [8]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
+ [5]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## Erstellen einer Releaseversion
 
 Standardmäßig läuft der `cordova build` Befehl erstellt eine vorzeichenlose *...verlegt* -Paketdatei geeignet zum Testen auf einem Gerät oder Simulator.
 
-Sie müssen eine andere ausführen `build` Befehl aus, um eine Release-Version zu erstellen, die für Verteilung durch BlackBerry Welt geeignet. Es ist nicht angewiesen auf die `cordova` CLI-Tool, und stattdessen verwendet die folgende Syntax:
+Verwendung `--release` zu eine Release-Version zu erstellen, die für Verteilung durch BlackBerry Welt geeignet.
+
+    $ cordova build --release --keystorepass <signing password>
+    
+
+Die `--keystorepass` Option gibt das Kennwort, die Sie beim Konfigurieren des Computers zum Signieren definiert Anwendungen.
+
+## An anderen Speicherorten bereitstellen
+
+Die Anleitung oben übernehmen ein Gerät über USB angeschlossen ist oder ein Simulator auf dem lokalen Computer ausgeführt wird. Es ist auch möglich, an anderen Speicherorten bereitstellen.
+
+Eine weitere Gruppe von Befehlszeilen-Dienstprogramme sind enthalten, wenn Sie die BlackBerry 10-Plattform für Ihr Projekt einrichten. Der folgende Befehl, in diesem Fall aus dem Projektverzeichnis auf oberster Ebene aufgerufen verknüpft ein Ziel mit dem Namen *emu* mit einer IP-Adresse.
 
 *   Unter Windows:
     
-    $ platforms\blackberry10\cordova\build.bat --release --keystorepass mysecret
+    $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
 *   Auf Mac/Linux:
     
-    $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
+    $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
-Die `--keystorepass` Option gibt das Kennwort, die Sie beim Konfigurieren des Computers zum Signieren definiert Anwendungen.
+Sobald das Ziel definiert ist, können sie den Befehl "ausführen" mit `--target` :
+
+    $ cordova run blackberry10 --target=emu

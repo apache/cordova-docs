@@ -29,7 +29,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 支援的平臺
 
-*   黑莓手機 WebWorks （OS 5.0 和更高）
+*   黑莓 10
 
 ## 快速的示例
 

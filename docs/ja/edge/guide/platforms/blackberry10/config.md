@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# ブラックベリーの構成
+# ブラックベリー 10 構成
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 ブラックベリー 10 にのみ適用されますこのセクションの詳細設定を構築します。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
