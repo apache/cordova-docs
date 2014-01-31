@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# searchButton
+# searchbutton
 
 Событие возникает, когда пользователь нажимает кнопку Поиск на Android.
 

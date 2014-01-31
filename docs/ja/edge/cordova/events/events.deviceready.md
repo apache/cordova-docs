@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 このイベントは、任意のアプリケーションに不可欠です。それ信号をコルドバのデバイス Api が読み込まれているにアクセスする準備が整いました。
 
-2 つのコード ベースから成っているコルドバ: ネイティブと JavaScript。 ネイティブ コードを読み込み、カスタム読み込み画像が表示されます。 ただし、DOM 読み込まれる一度 java スクリプトの設定を読み込むだけ。 これは、対応するネイティブ コードは、前に可能性のあるコルドバ JavaScript 関数を呼び出すことができます、web アプリケーションを意味します。
+2 つのコード ベースから成っているコルドバ: ネイティブと JavaScript。 ネイティブ コードを読み込み、カスタム読み込み画像が表示されます。 ただし、DOM 読み込まれる一度 java スクリプトの設定を読み込むだけ。 これは、対応するネイティブ コードが使用可能になる前に潜在的コルドバ JavaScript 関数を呼び出すことができます web アプリを意味します。
 
 `deviceready`コルドバが完全に読み込まれた後に発生します。 1 回のイベントが発生し、安全にすることができますコルドバ Api への呼び出し。 アプリケーションは、通常のイベント リスナーをアタッチ `document.addEventListener` HTML ドキュメント DOM が読み込まれる。
 
@@ -33,8 +33,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## サポートされているプラットフォーム
 
+*   アマゾン火 OS
 *   アンドロイド
-*   ブラックベリー WebWorks (OS 5.0 およびより高い)
+*   ブラックベリー 10
 *   iOS
 *   Tizen
 *   Windows Phone 7 と 8

@@ -29,8 +29,9 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 ## Unterstützte Plattformen
 
+*   Amazon Fire OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 und höher)
+*   BlackBerry 10
 
 ## Kleines Beispiel
 

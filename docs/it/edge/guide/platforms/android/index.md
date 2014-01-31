@@ -16,7 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guida piattaforma Android
 
-Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per dispositivi Android. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
+Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per dispositivi Android. Si cammina attraverso il processo di installare Android SDK, aprendo un progetto Android in Eclipse SDK e distribuendo un emulatore o dispositivo. Devi seguire questa guida per installare almeno il SDK di Android, indipendentemente dal flusso di lavoro che si sta seguendo. (Entrambi i workflow *Web progetto Dev* e *Nativo Dev Platform* richiedono il SDK di Android essere installato e accessibile tramite il percorso).
+
+Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
 *   Android configurazione
 *   Visualizzazioni Web Android
@@ -44,20 +46,19 @@ NOTE, doc said:
 
 Gli sviluppatori devono utilizzare il `cordova` utilità in combinazione con il SDK di Android. L'interfaccia della riga di comando per informazioni, vedere come installarlo, aggiungere progetti, quindi compilare e distribuire un progetto.
 
-## Installare il SDK
-
-Installare il SDK di Android da [developer.android.com/sdk][3]. Altrimenti può essere presentato con una scelta di dove installare il SDK, spostare lo scaricato `adt-bundle` albero ovunque si memorizzare gli strumenti di sviluppo.
+Installare il SDK di Android da [Developer.Android.com/SDK][3]. il sdk di android è distribuito come un ' adt-bundle -<os>-<arch>-<ver>' file. Su windows, l'adt-bundle è confezionato con un programma di installazione. Su OSX e Linux, semplicemente scompattare l'adt-bundle nel percorso si memorizzano gli strumenti di sviluppo. [Informazioni dettagliate sull'installazione di Android SDK possono essere trovati qui][4]
 
  [3]: http://developer.android.com/sdk/
+ [4]: http://developer.android.com/sdk/installing/bundle.html
 
 Per strumenti da riga di comando di Cordova a lavorare, è necessario includere il SDK `tools` e `platform-tools` le directory nel tuo ambiente PATH. Su Mac, è possibile utilizzare un editor di testo per creare o modificare il `~/.bash_profile` file, aggiungendo una riga come la seguente, a seconda di dove viene installato il SDK:
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+    Export PATH = ${PATH}: / / adt-bundle/sdk/piattaforma-strumenti di sviluppo: / sviluppo/adt-bundle/sdk/tools
     
 
 Questo espone strumenti SDK in windows terminal inaugurato di recente. In caso contrario eseguire questo per renderli disponibili nella sessione corrente:
 
-    $ source ~/.bash_profile
+    $ fonte ~/.bash_profile
     
 
 Per modificare l'ambiente del percorso su Windows 7:
@@ -72,21 +73,24 @@ Per modificare l'ambiente del percorso su Windows 7:
 
 *   Aggiungere quanto segue al percorso basato su cui è installato il SDK, per esempio:
     
-        ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
         
 
 *   Salvare il valore e chiudere le due finestre di dialogo.
 
 Potrebbe essere necessario abilitare Java e Ant. Apri un prompt dei comandi e digitare `java` e anche di tipo `ant` . Aggiungere al percorso qualunque non riescono ad eseguire:
 
-        ; %JAVA_HOME%\bin;%ANT_HOME%\bin
+        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
     
 
 ## Aprire un progetto in SDK
 
 Uso il `cordova` utility per impostare un nuovo progetto, come descritto in The Cordova le Command-Line Interface. Ad esempio, in una directory del codice sorgente:
 
-        $ cordova creare Ciao com.example.hello "HelloWorld" $ cd $ Ciao cordova piattaforma Aggiungi build di android $ cordova
+        $ cordova create hello com.example.hello "HelloWorld"
+        $ cd hello
+        $ cordova platform add android
+        $ cordova build
     
 
 Una volta creato, ecco come utilizzare il SDK per modificarlo:
@@ -95,13 +99,15 @@ Una volta creato, ecco come utilizzare il SDK per modificarlo:
 
 *   Selezionare la voce di menu **Nuovo progetto** .
 
-*   Scegliere **Progetto Android da codice esistente** nella finestra di dialogo risultante e premere **avanti**: ![][4]
+*   Scegliere **Progetto Android da codice esistente** nella finestra di dialogo risultante e premere **avanti**: ![][5]
 
 *   Passare a `hello` , o qualunque directory creata per il progetto, poi per il `platforms/android` sottodirectory.
 
+*   Assicurarsi che sia `hello` e `hello-CordovaLib` progetti sono selezionati per essere importati. Il `hello-CordovaLib` progetto è necessaria a partire da Cordova 3.3.0 perché Cordova è ora usato come una libreria di Android invece di un file. jar.
+
 *   Premere **fine**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: img/guide/platforms/android/eclipse_new_project.png
 
 Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per indicare problemi irrisolti. Se è così, segui questi passaggi aggiuntivi:
 
@@ -123,43 +129,43 @@ Una volta che si apre la finestra di Eclipse può apparire una rossa **X** per i
 
 *   All'interno di Eclipse, premere l'icona della barra degli strumenti:
     
-    ![][5]
+    ![][6]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Una volta aperto, l'Android SDK Manager visualizza varie librerie di runtime:
 
-![][6]
+![][7]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [7]: img/guide/platforms/android/asdk_window.png
 
 Scegliere **Strumenti → gestione AVDs** (dispositivi Android virtuale), quindi scegliere qualsiasi elemento da **Definizioni di dispositivo** nella finestra di dialogo risultante:
 
-![][7]
+![][8]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 Stampa **Creare AVD**, eventualmente modificando il nome, quindi premere **OK** per accettare le modifiche:
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 L'AVD poi appare nell'elenco dei **Dispositivi Android virtuale** :
 
-![][9]
+![][10]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 Per aprire l'emulatore come applicazione separata, selezionare l'AVD e premere **Start**. Si lancia proprio come farebbe sul dispositivo, con controlli aggiuntivi disponibili per i pulsanti hardware:
 
-![][10]
+![][11]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 A questo punto è possibile utilizzare il `cordova` utility per distribuire l'applicazione nell'emulatore dalla riga di comando:
 
-        $ cordova emulare android
+        $ cordova emulate android
     
 
 Se invece si lavora all'interno di Eclipse, il progetto di fare clic destro e scegliere **Esegui come → applicazione Android**. Può essere chiesto di specificare un AVD se nessuno è già aperto.
@@ -176,13 +182,13 @@ Per un'esperienza più veloce, utilizzare un'immagine di emulatore basato su Int
 
 ## Distribuire al dispositivo
 
-Per spingere un app direttamente al dispositivo, assicurarsi che il debug USB è attivato sul tuo dispositivo come descritto sul [Sito per sviluppatori Android][11]e utilizzare un cavo mini USB per collegarlo al vostro sistema.
+Per spingere un app direttamente al dispositivo, assicurarsi che il debug USB è attivato sul tuo dispositivo come descritto sul [Sito per sviluppatori Android][12]e utilizzare un cavo mini USB per collegarlo al vostro sistema.
 
- [11]: http://developer.android.com/tools/device.html
+ [12]: http://developer.android.com/tools/device.html
 
 Si può spingere l'app per il dispositivo dalla riga di comando:
 
-        $ cordova eseguire android
+        $ cordova run android
     
 
 Alternativamente all'interno di Eclipse, il progetto di fare clic destro e scegliere **Esegui come → applicazione Android**.

@@ -16,17 +16,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Config.xml ファイル
 
-グローバル構成ファイルを使って、アプリの動作の多くの側面を制御できる `config.xml` は、アプリのホーム ページと共にトップレベル web アセット ディレクトリに配置されます。 このプラットフォームに依存しない XML ファイルは、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]仕様に基づいてフォーマットされ、拡張コア コルドバ API 機能、プラグイン、およびプラットフォームに固有の設定を指定します。
+グローバル構成ファイルを使って、アプリの動作の多くの側面を制御できる `config.xml` 。 このプラットフォームに依存しない XML ファイルは、W3C の[Web アプリのパッケージ化 (ウィジェット)][1]仕様に基づくとコルドバ API のコア機能、プラグイン、およびプラットフォームに固有の設定を指定する拡張に配置されます。
 
  [1]: http://www.w3.org/TR/widgets/
 
-コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクト、このファイルは、トップレベルで発見ことができます `www` ディレクトリ。 内のさまざまなサブディレクトリにこのファイルのバージョンを再生、CLI を使用してプロジェクトをビルドする `platforms` 。 作成するプロジェクトが SDK にあなたのワークフローをシフトし、CLI を使用する場合、プラットフォーム固有のファイルは、ソースとして機能します。
+コルドバ CLI (コマンド ライン インターフェイスで説明します) で作成されたプロジェクトのトップレベル ディレクトリにこのファイルを検出することができます。
+
+        app/config.xml
+    
+
+バージョン 3.3.1-0.2.0 の前に、ファイルに存在したことに注意してください `app/www/config.xml` 、ここでそれを持っているがまだサポートされているとします。
+
+プロジェクトをビルドする CLI を使用して、このファイルのバージョン受動的にコピーされます様々 な `platforms/` サブディレクトリ、たとえば。
+
+        app/platforms/ios/AppName/config.xml
+        app/platforms/blackberry10/www/config.xml
+        app/platforms/android/res/xml/config.xml
+    
 
 このセクションとクロス プラットフォームのグローバル構成オプションを詳細します。プラットフォーム固有のオプションの次のセクションを参照してください。
 
 *   iOS 構成
 *   Android の構成
-*   ブラックベリーの構成
+*   ブラックベリー 10 構成
 
 以下に詳述様々 な構成のオプションに加え、アプリケーションのコア セット各ターゲット ・ プラットフォーム用の画像も構成できます。詳細については、アイコンとスプラッシュ画面を参照してください。
 
@@ -44,12 +56,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             </author>
             <content src="index.html" />
             <access origin="*" />
-            <preference name="Fullscreen" value="true" />
-            <preference name="WebViewBounce" value="true" />
         </widget>
     
-
-<!-- QUERY: is WebViewBounce superseded by DisallowOverscroll? -->
 
 次の構成要素は最上位レベルに表示されます `config.xml` ファイル、およびすべてのサポートされているコルドバ プラットフォームがサポートされています。
 
@@ -59,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `<description>`と `<author>` 要素メタデータおよび app の店のリスト内に表示される連絡先の情報を指定します。
 
-*   省略可能な `<content>` 要素の最上位の web 資産ディレクトリに、アプリケーションの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
+*   省略可能な `<content>` 要素を最上位の web 資産ディレクトリで、アプリの開始ページを定義します。 既定値は `index.html` 、トップレベルのプロジェクトで表示される習慣 `www` ディレクトリ。
 
 *   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン ホワイト リスト ガイドを参照してください。
 
@@ -79,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="Orientation" value="landscape" />
         
     
-    **注：**`default`値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。 また、ブラックベリーを使用して `auto` の代わりに `default` でその `config.xml` ファイル。 指定した場合 `default` 、グローバルで `config.xml` 、それに変換 `auto` ブラックベリー ビルドで。
+    **注**: `default` 値は横向きと縦向きの*両方*が有効になっていることを意味します。 各プラットフォームの既定の設定 (通常肖像画のみ) を使用する場合のままにこのタグのうち、 `config.xml` ファイル。
 
 ## マルチプラット フォーム環境の設定
 
@@ -105,17 +113,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
     
     IOS とブラックベリーに適用されます。
-    
-    **注：**有効値は、BlackBerry のため `enable` または`disable`.
 
-## `<feature>`要素
+## *機能*要素
 
-使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 かどうか SDK で直接作業している特定のプラットフォームを使用して `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 彼らは通常、このフォームに表示されます。
-
-        <feature name="Plugin" value="PluginID" />
-    
-
-プラットフォーム固有のカスタム値とともに表示されます多くの場合 `config.xml` ファイル。たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
+使用して、CLI を使用してアプリケーションを構築する場合、 `plugin` デバイス Api を有効にするコマンド。 これは、最上位レベルは変更されません `config.xml` ファイル、そう、 `<feature>` 要素をワークフローに適用されません。 SDK およびプラットフォーム固有の使用で直接作業した場合 `config.xml` ファイルのソースとして使用する、 `<feature>` デバイス レベルの Api と外部プラグインを有効にするタグ。 プラットフォーム固有のカスタム値とともに表示されます多くの場合 `config.xml` ファイル。 たとえば、ここで Android プロジェクト用デバイス API を指定する方法は。
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
