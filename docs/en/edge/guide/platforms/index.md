@@ -61,6 +61,10 @@ a lower-level alternative to the `cordova` command-line utility.
 * BlackBerry 10 Command-line Tools
 * Upgrading BlackBerry 10
 
+## Firefox OS
+
+* Firefox OS Platform Guide
+
 ## iOS
 
 * iOS Platform Guide
