@@ -17,5 +17,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Using VMWare
+# Configuring VMWare Fusion
 
+This section shows how to configure VMWare Fusion on a Mac so that you
+can use Cordova to generate Windows Phone applications. ((assume
+nothing necessary for win8)) Before following these instructions, you
+should have already installed Windows under VMWare Fusion, as detailed
+at the [Microsoft Developer
+Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426).
+Then follow these steps:
+
+0. Within VMWare Fusion, select the Windows 8 disk image you have
+   prepared and choose __Settings__.
+
+0. Choose the __Processors & Memory__ configuration options. Make sure
+   to specify _two_ processor cores, and to __Enable hypervisor
+   applications in this Virtual machine__:
+
+   ![](img/guide/platforms/wp8/vmware_memory_opts.png)
+
+   The Windows Phone Emulator alone uses half a megabyte of memory, so
+   overall you should reserve at least 2GB for VMWare.
+
+0. Choose the __Advanced__ settings. Enable the __Preferred
+   virtualization engine: Intel VT-x with EPT__ option:
+
+   ![](img/guide/platforms/wp8/vmware_advanced_opts.png)
+
+0. Modify the _.vmx_ file to add or modify the following settings:
+
+        hypervisor.cpuid.v0 = "FALSE"
+        mce.enable = "TRUE"
+        vhv.enable = "TRUE"
+
+Once you complete these steps, you are then ready to install the
+Windows Phone SDK.  See the Windows Phone Platform Guide for details.

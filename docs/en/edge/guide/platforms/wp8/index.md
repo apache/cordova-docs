@@ -17,6 +17,85 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
+# Windows Phone Platform Guide
+
+This guide shows how to set up your SDK development environment to
+deploy Cordova apps for Windows Phone devices. It focuses on Windows
+Phone 8, but provides additional details on how to support Windows
+Phone 7. ((check))
+
+## Requirements and Support
+
+You will need the following:
+
+- A 64-bit version of Windows 8 Pro, either an installation disk or an
+  _ISO_ disk image file. An evaluation version is available on the
+  [Microsoft Developer
+  Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
+
+- The Windows Phone SDK, available from
+  [Microsoft](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-windows-phone)
+  or [visualstudio.com](http://www.visualstudio.com).
+
+  ((which SDK, exactly? Tried __Windows Phone__ and __Ultimate 2013__
+  versions, but keep getting failure at `cordova platform add wp8`
+  stage: complains latest version is not installed.))
+  
+To develop Cordova apps for Windows Phone devices, you may use a PC
+running Windows, but you may also develop on a Mac, either by running
+a virtual machine environment or by using Boot Camp to dual-boot a
+Windows partition. Consult these resources to run the required Windows
+development environment on a Mac:
+
+- __VMWare Fusion__: To set up the Windows 8 virtual machine, follow
+  the installation instructions provided by the [Microsoft Developer
+  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426),
+  then follow the instructions at Configuring VMWare Fusion to prepare
+  the virtual environment to run the SDK.
+
+  ((bug: parallels doesn't recognize ISO's Win8 component.))
+  
+- __Parallels Desktop__: To set up the Windows 8 virtual machine,
+  follow the installation instructions provided by the [Microsoft
+  Developer
+  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
+  then follow the instructions at Configuring Parallels Desktop to
+  prepare the virtual environment to run the SDK.
+  
+- __VirtualBox__: To set up the Windows 8 virtual machine, follow the
+  installation instructions provided by the [Microsoft Developer
+  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945425).
+  ((doesn't work yet; any config info?))
+  
+- __Boot Camp__: To set up the Windows 8 partition, follow the
+  installation instructions provided by the [Microsoft Developer
+  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
+  
+Even if you already run one of these dual-boot or virtual machines,
+please read the appropriate section above and familiarize yourself
+with any additional configuration requirements that allow the Windows
+Phone emulator to run.  Whichever development option you choose, the
+next step is to install the Windows Phone SDK that allows Cordova to
+run, as described below.
+
+## Install Cordova Shell Tools
+
+## Install the SDK
+
+## Open a New Project in the SDK
+
+## Build the Project
+
+## Configure an Emulator
+
+## Deploy to Emulator
+
+## Deploy to Device
+
+## Other Commands???
+
+<!--
+
 # Windows Phone 8 Platform Guide
 
 This guide shows how to set up your SDK development environment to
@@ -159,4 +238,6 @@ The Windows Phone Developer Blog provides
 [helpful details](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 on differences between IE10 and WebKit browsers, and how to support
 both.
+
+-->
 
