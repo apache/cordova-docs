@@ -22,7 +22,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone devices. It focuses on Windows
 Phone 8, but provides additional details on how to support Windows
-Phone 7. ((check))
+Phone 7.
+<!-- 2DO: can we easily discuss wp7 within wp8 topic? -->
 
 ## Requirements and Support
 
@@ -37,9 +38,7 @@ You will need the following:
   [Microsoft](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-windows-phone)
   or [visualstudio.com](http://www.visualstudio.com).
 
-  ((which SDK, exactly? Tried __Windows Phone__ and __Ultimate 2013__
-  versions, but keep getting failure at `cordova platform add wp8`
-  stage: complains latest version is not installed.))
+  <!-- 2DO: install which SDK for WP? Both __Windows Phone__ and __Ultimate 2013__ versions, failed at `cordova platform add wp8` stage: complains latest version is not installed. Requires clean install? -->
   
 To develop Cordova apps for Windows Phone devices, you may use a PC
 running Windows, but you may also develop on a Mac, either by running
@@ -53,7 +52,7 @@ development environment on a Mac:
   then follow the instructions at Configuring VMWare Fusion to prepare
   the virtual environment to run the SDK.
 
-  ((bug: parallels doesn't recognize ISO's Win8 component.))
+  <!-- 2DO: bug: VMware doesn't recognize ISO's Win8 component. -->
   
 - __Parallels Desktop__: To set up the Windows 8 virtual machine,
   follow the installation instructions provided by the [Microsoft
@@ -65,7 +64,8 @@ development environment on a Mac:
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
   installation instructions provided by the [Microsoft Developer
   Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945425).
-  ((doesn't work yet; any config info?))
+
+  <!-- 2DO: virtualBox doesn't work yet; any config info? -->
   
 - __Boot Camp__: To set up the Windows 8 partition, follow the
   installation instructions provided by the [Microsoft Developer
@@ -80,17 +80,91 @@ run, as described below.
 
 ## Install Cordova Shell Tools
 
+If you want to use Cordova's Windows Phone-centered shell tools in
+conjunction with the SDK, download Cordova from
+[cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
+section if you plan to use the cross-platform CLI tool described in
+The Command-Line Interface.
+
+The Cordova download contains separate archives for each platform. Be
+sure to expand the appropriate archive, `wp8` in this case,
+<!-- 2DO: check location of cordova wp8 dir -->
+within an empty directory.  The relevant executible utilities are
+available in the top-level `bin` directory. (Consult the __README__
+file if necessary for more detailed directions.)
+
+These shell tools allow you to create, build, and run Windows Phone
+apps.  For information on the additional command-line interface that
+enables plugin features across all platforms, see Using Plugman to
+Manage Plugins. See Application Plugins for details on how to develop
+plugins.
+
 ## Install the SDK
 
 ## Open a New Project in the SDK
 
+At this point, to create a new project you can choose between the
+cross-platform CLI tool described in The Command-Line Interface, or
+the set of Windows Phone-specific shell tools. From within a
+source-code directory, here's the CLI approach:
+
+        $ cordova create hello com.example.hello HelloWorld
+        $ cd hello
+        $ cordova platform add wp8
+        $ cordova build
+
+Here's the corresponding lower-level shell-tool approach:
+
+        C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+
+<!-- 2DO: how to open WP SDK to modify project -->
+
 ## Build the Project
+
+If you are using the CLI in development, the project directory's
+top-level `www` directory contains the source files. Run either of
+these within the project directory to rebuild the app:
+
+        $ cordova build
+        $ cordova build wp8   # do not rebuild other platforms
+
+If you are using the Windows Phone-specific shell tools in
+development, there is a different approach.  Once you generate the
+project, the default app's source is available in the `assets/www`
+subdirectory.
+<!-- 2DO: check location of locally generated src files -->
+Subsequent commands are available in its `cordova` subdirectory.
+
+The `build` command cleans project files and rebuilds the app.  The first
+example generates debugging information, and the second signs the apps
+for release:
+<!-- 2DO: check if CL debug/release build flags are available -->
+
+        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --release
 
 ## Configure an Emulator
 
+<!-- 2DO: can you configure WP emulator to choose different devices? -->
+
 ## Deploy to Emulator
 
+At this point you can use the `cordova` CLI utility to deploy the
+application to the emulator from the command line:
+
+        $ cordova emulate wp8
+
+Otherwise use the alternate shell interface:
+
+        $ /path/to/project/cordova/run --emulator
+
+<!-- 2DO: check if run's emulator flag works for WP shell tools -->
+
 ## Deploy to Device
+
+<!-- 2DO: any app signing procedure other than registration??  -->
+
+<!-- - Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place. -->
 
 ## Other Commands???
 

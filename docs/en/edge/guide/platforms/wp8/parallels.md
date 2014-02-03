@@ -20,22 +20,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Configuring Parallels Desktop
 
 This section shows how to configure Parallels Desktop on a Mac so that
-you can use Cordova to generate Windows Phone applications. ((assume
-nothing necessary for win8)) Before following these instructions, you
-should have already installed Windows under Parallels Desktop, as
-detailed at the [Microsoft Developer
-Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424).
+you can use Cordova to generate Windows Phone applications.
+<!-- 2DO: assume no xtra parallels requirements for win8? -->
+
+Before following these instructions, you should have already installed
+Windows under Parallels Desktop, as detailed at the
+[Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424).
 Then follow these steps:
 
-0. Within Parallels Desktop, select the Windows 8 disk image you have
+1. Within Parallels Desktop, select the Windows 8 disk image you have
    prepared and choose __Settings__.
 
-0. Choose the __General &rarr; CPUs__ options. Specify _two_ CPUs and
+1. Choose the __General &rarr; CPUs__ options. Specify _two_ CPUs and
    a generous amount of memory:
 
    ![](img/guide/platforms/wp8/parallel_cpu_opts.png)
 
-0. To be able to run the device emulator image within the Windows 8
+1. To be able to run the device emulator image within the Windows 8
    virtual machine, choose the __Optimizations__ options and enable
    __Nested Virtualization__.
 
