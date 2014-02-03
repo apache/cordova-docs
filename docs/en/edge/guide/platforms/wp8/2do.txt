@@ -1,3 +1,18 @@
+Components:
+
+- wp8/index: Windows Phone Guide
+  - (see install problems below)
+- win8/index: Windows 8 Guide
+  - (works; how to run app?)
+
+- wp8/parallels: extra Parallels config info (for wp8)
+- wp8/vmware: extra vmware config info (for wp8)
+
+- wp8/virtualbox: extra vbox config info? (for wp8?)
+- wp8/bootcamp: extra config info? (for wp8?)
+
+- wp8/tools (deprecate; fold into index)
+
 Install problems:
 
 - install which SDK for WP? Both __Windows Phone__ and __Ultimate
