@@ -1,0 +1,25 @@
+- can we easily discuss wp7 within wp8 topic? -->
+
+- install which SDK for WP? Both __Windows Phone__ and __Ultimate 2013__ versions, failed at `cordova platform add wp8` stage: complains latest version is not installed. Requires clean install? -->
+
+- VMware doesn't recognize ISO's Win8 component. -->
+
+- virtualBox doesn't work yet; any config info? -->
+
+- check location of cordova wp8 dir -->
+
+- how to open WP SDK to modify project -->
+
+- check location of locally generated src files -->
+
+- check if CL debug/release build flags are available -->
+
+- can you configure WP emulator to choose different devices? -->
+
+- check if run's emulator flag works for WP shell tools -->
+
+- any app signing procedure other than registration??  -->
+
+- assume no xtra parallels requirements for win8? -->
+
+- assume no extra win8 VMware req's for win8? --> 
