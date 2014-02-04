@@ -43,13 +43,19 @@ is available from any directory on your machine:
 
 You must have also have `git` on your `PATH` to be able to install plugins directly from remote git URLs.
 
-**TIP:** If you find that after installing plugman with npm you are still unable to run any `plugman` commands, make sure that you have
-added the `/npm/` directory into your `PATH`. 
+__TIP__: If you find that after installing plugman with `npm` you are
+still unable to run any `plugman` commands, make sure that you have
+added the `/npm/` directory into your `PATH`.
 
-**NOTE:** You can skip this step if you don't want to pollute your global npm namespace by installing Plugman globally. If this is the case, then
-when you create a Cordova project with the shell tools, there will be a `node_modules` directory inside your project which contains Plugman. 
-Since you did not instally globally, you will have to invoke node for every Plugman command, for example `node ./node_modules/plugman/main.js -version`.
-The rest of this guide assumes you have installed Plugman globally, meaning you can invoke it with just `plugman`. 
+__NOTE__: You can skip this step if you don't want to pollute your
+global `npm` namespace by installing Plugman globally. If this is the
+case, then when you create a Cordova project with the shell tools,
+there will be a `node_modules` directory inside your project which
+contains Plugman.  Since you did not install globally, you need to
+invoke `node` for each Plugman command, for example `node
+./node_modules/plugman/main.js -version`.  The rest of this guide
+assumes you have installed Plugman globally, meaning you can invoke it
+with just `plugman`.
 
 ## Create a Cordova Project
 
