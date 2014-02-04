@@ -206,8 +206,6 @@ Otherwise use the alternate shell interface:
 
         $ /path/to/project/cordova/run --emulator
 
-<!-- 2DO: check if run's emulator flag works for WP shell tools -->
-
 ## Deploy to Device
 
 <!-- 2DO: any app signing procedure other than registration??  -->
