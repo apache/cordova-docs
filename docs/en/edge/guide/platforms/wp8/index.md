@@ -31,12 +31,9 @@ You will need the following:
 
 - A 64-bit version of Windows 8 Pro, either an installation disk or an
   _ISO_ disk image file. An evaluation version is available on the
-  [Microsoft Developer
-  Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
+  [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
 
-- The Windows Phone SDK, available from
-  [Microsoft](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-windows-phone)
-  or [visualstudio.com](http://www.visualstudio.com).
+- The [Windows Phone SDK](https://dev.windowsphone.com/en-us/downloadsdk).
 
   <!-- 2DO: install which SDK for WP? Both __Windows Phone__ and __Ultimate 2013__ versions, failed at `cordova platform add wp8` stage: complains latest version is not installed. Requires clean install? -->
   
@@ -47,19 +44,19 @@ Windows partition. Consult these resources to run the required Windows
 development environment on a Mac:
 
 - __VMWare Fusion__: To set up the Windows 8 virtual machine, follow
-  the installation instructions provided by the [Microsoft Developer
-  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426),
+  the instructions provided by the
+  [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426),
   then follow the instructions at Configuring VMWare Fusion to prepare
-  the virtual environment to run the SDK.
+  the virtual environment to run the emulator bundled with the SDK.
 
   <!-- 2DO: bug: VMware doesn't recognize ISO's Win8 component. -->
   
 - __Parallels Desktop__: To set up the Windows 8 virtual machine,
-  follow the installation instructions provided by the [Microsoft
-  Developer
-  Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
+  follow the instructions provided by the
+  [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
   then follow the instructions at Configuring Parallels Desktop to
-  prepare the virtual environment to run the SDK.
+  prepare the virtual environment to run the emulator bundled with the
+  SDK.
   
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
   installation instructions provided by the [Microsoft Developer
@@ -83,8 +80,8 @@ run, as described below.
 If you want to use Cordova's Windows Phone-centered shell tools in
 conjunction with the SDK, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
-section if you plan to use the cross-platform CLI tool described in
-The Command-Line Interface.
+section if you plan to use the cross-platform CLI utility, but see The
+Command-Line Interface for instructions how to install it on Windows 8.
 
 The Cordova download contains separate archives for each platform. Be
 sure to expand the appropriate archive, `wp8` in this case,
@@ -100,6 +97,57 @@ Manage Plugins. See Application Plugins for details on how to develop
 plugins.
 
 ## Install the SDK
+
+Install the latest version of the Windows Phone SDK from the
+__Downloads__ area of
+[dev.windowsphone.com](https://dev.windowsphone.com/en-us/downloadsdk),
+along with any more recent emulator updates.
+
+After installing the SDK, you need to modify the system's PATH to make
+the SDK available to Cordova on the Windows command line:
+
+- First you need to get the path string. Open the __File Explorer__,
+  navigate to `C:\Windows\Microsoft.NET\Framework`, then open the most
+  recent framework. Click on the right of the navigation path to view
+  the full path string, then type __CTRL-c__ to copy it:
+
+  ![](img/guide/platforms/wp8/modpath_copy.png)
+
+- Then you need to modify the path. Open the __Control Panel__ from
+  within the __Apps__ area of the Windows 8 home screen:
+
+  ![](img/guide/platforms/wp8/modpath_control_panel.png)
+
+- Open the __System__ control panel item:
+
+  ![](img/guide/platforms/wp8/modpath_system.png)
+
+- Choose the __Advanced System Settings__ from the list on the left:
+
+  ![](img/guide/platforms/wp8/modpath_advanced.png)
+
+- At the bottom of the resulting panel, press the __Environment
+  Variables__ button:
+
+  ![](img/guide/platforms/wp8/modpath_environment.png)
+
+- Choose __PATH__ from the __User Variables__, then press __Edit__:
+
+  ![](img/guide/platforms/wp8/modpath_edit.png)
+
+  Otherwise if there is no __PATH__ available, press __New__ to create it.
+
+  <!- 2DO: check any PATH if no npm install? -->
+
+- If a PATH value already exists, append a semicolon and paste the
+  path string you copied earlier. Otherwise simply paste the string:
+
+  ![](img/guide/platforms/wp8/modpath_append.png)
+
+  Here is a sample __PATH__ value that also specifies the `npm`
+  utility that comes from installing the Cordova CLI:
+
+    C:\Users\sierra\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
 
 ## Open a New Project in the SDK
 
