@@ -71,9 +71,9 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
-   **NOTE**: The `-g` flag above tells npm to install cordova globally. 
-   You may need to add the npm directory to your PATH in order to invoke
-   globally installed npm modules. On Windows, npm can usually be found at
+   __NOTE__: The `-g` flag above tells `npm` to install cordova globally. 
+   You may need to add the `npm` directory to your `PATH` in order to invoke
+   globally installed `npm` modules. On Windows, `npm` can usually be found at
    `C:\Users\username\AppData\Roaming\npm` and on Unix at
    `/usr/local/share/npm`.
    
@@ -162,10 +162,11 @@ If you use version control software, you should add this source _www_ folder,
 along with the _merges_ folder, to your version control system. (More information
 about the _merges_ folder can be found in the Customize Each Platform section below.)
 
-**WARNING**: When using the CLI to build your application, you are strongly discouraged
-from editing any files in the `/platforms/` folder unless you know what you are doing
-or are specifically told otherwise in documentation. This is because the files in the 
-`/platforms/` direcotry will be overwritten on prepare or plugin reinstallation. 
+__WARNING__: When using the CLI to build your application, you should
+_not_ edit any files in the `/platforms/` directory unless you know
+what you are doing, or if documentation specifies otherwise. The files
+in this directory are routinely overwritten when preparing
+applications for building, or when plugins are reinstalled.
 
 If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
