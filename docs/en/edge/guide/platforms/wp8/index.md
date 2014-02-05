@@ -206,6 +206,24 @@ Otherwise use the alternate shell interface:
 
         $ /path/to/project/cordova/run --emulator
 
+The emulator launches a device image with the app installed. From the
+home screen, navigate to the apps panel to launch the __HelloWorld__
+app:
+
+![](img/guide/platforms/wp8/wp8_emulator.png)
+
+The emulator's basic controls on the top right of the device screen
+allow you to toggle between portrait and landscape orientation. The
+__>>__ button opens more controls that allow you to test more complex
+orientations and gestures:
+
+![](img/guide/platforms/wp8/wp8_emulator_orient.png)
+
+These advanced controls also allow you to modify the device's
+location or simulate sequences of movements:
+
+![](img/guide/platforms/wp8/wp8_emulator_loc.png)
+
 ## Deploy to Device
 
 <!-- 2DO: any app signing procedure other than registration??  -->
