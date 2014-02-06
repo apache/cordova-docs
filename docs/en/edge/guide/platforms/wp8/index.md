@@ -26,12 +26,13 @@ Phone 7.
 
 <!-- 2DO: can we easily discuss wp7 within wp8 topic? -->
 
-It shows how to create Cordova apps from within Visual Studio, or
-using command-line tools: either Windows Phone-specific shell tools,
-or the cross-platform Cordova CLI discussed in The Command-Line
-Interface.  For a comparison of these paths, see the Overview.
-(Regardless of which you choose, you need to install the Windows Phone
-SDK.)
+It shows how to use either Windows Phone-specific shell tools to
+generate and build apps, or the cross-platform Cordova CLI discussed
+in The Command-Line Interface.  (See the Overview for a comparison of
+these command-line development options.) This section also shows how
+to open Cordova apps so that you can modify them within Visual Studio.
+Regardless of which approach you take, you need to install the Windows
+Phone SDK, as described below.
 
 See the following for details specific to the Windows Phone platform:
 
@@ -159,7 +160,7 @@ the SDK available to Cordova on the Windows command line:
   ![](img/guide/platforms/wp8/modpath_append.png)
 
   Here is a sample __PATH__ value that also specifies the `npm`
-  utility that comes from installing the Cordova CLI:
+  utility that is required to install the Cordova CLI:
 
     C:\Users\sierra\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
 
