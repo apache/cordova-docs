@@ -164,7 +164,7 @@ the SDK available to Cordova on the Windows command line:
 
     C:\Users\sierra\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
 
-## Open a New Project in the SDK
+## Create a New Project
 
 At this point, to create a new project you can choose between the
 cross-platform CLI tool described in The Command-Line Interface, or
@@ -239,9 +239,26 @@ location or to simulate sequences of movements:
 
 <!-- 2DO: any app signing procedure other than registration??  -->
 
-<!-- - Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place. -->
+<!-- ~~~ Register and pay for a [Windows Phone Dev
+Center](http://dev.windowsphone.com/en-us/publish) account if you want
+to install your app on a real device or submit it to Market Place. -->
 
-## Other Commands???
+## Modify the Project in the SDK
+
+Once you build a Cordova app as described above, you can open it with
+the SDK. The various `build` commands generates a Visual Studio
+Solution (_.sln_) file. Open the file to modify the project within
+Visual Studio. Along with other tools the SDK provides, the control
+below the menu allows you to launch the app in a Windows Phone
+emulator:
+
+![](img/guide/platforms/wp8/wp8_vs.png)
+
+__WARNING__: Consult the Overview for advice on how to use Cordova's
+command-line tools or the SDK in your workflow. The Cordova CLI relies
+on cross-platform source code that routinely overwrites the
+platform-specific files used by the SDK. Use the non-CLI shell tools
+as an alternative.
 
 <!--
 
