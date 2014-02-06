@@ -19,13 +19,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Configuring VMWare Fusion
 
-This section shows how to configure VMWare Fusion on a Mac so that you
-can use Cordova to generate Windows Phone applications.
-<!-- 2DO: assume no extra win8 VMware req's for win8? --> 
-Before following these instructions, you should have already installed
-Windows under VMWare Fusion, as detailed at the [Microsoft Developer
-Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426).
-Then follow these steps:
+This section shows how to configure VMWare Fusion on a Mac so that
+you can use Cordova to generate Windows Phone applications.
+
+The [Microsoft Developer
+Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
+provides general instructions for how to run Windows under VMWare
+Fusion.  After installing Windows, follow these steps:
 
 1. Within VMWare Fusion, select the Windows 8 disk image you have
    prepared and choose __Settings__.
@@ -49,6 +49,8 @@ Then follow these steps:
         hypervisor.cpuid.v0 = "FALSE"
         mce.enable = "TRUE"
         vhv.enable = "TRUE"
+
+<!-- 2DO: check how this option appears in UI -->
 
 Once you complete these steps, you are then ready to install the
 Windows Phone SDK.  See the Windows Phone Platform Guide for details.
