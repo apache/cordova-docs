@@ -26,14 +26,14 @@ Phone 7.
 
 <!-- 2DO: can we easily discuss wp7 within wp8 topic? -->
 
-It shows how to develop apps using Windows Phone-specific command-line
-tools, or the cross-platform Cordova CLI discussed in The Command-Line
-Interface.  For a comparison of the two development paths, see the
-Overview.  You need to install the Windows Phone SDK, regardless of
-which you choose.
+It shows how to create Cordova apps from within Visual Studio, or
+using command-line tools: either Windows Phone-specific shell tools,
+or the cross-platform Cordova CLI discussed in The Command-Line
+Interface.  For a comparison of these paths, see the Overview.
+(Regardless of which you choose, you need to install the Windows Phone
+SDK.)
 
-See the following for more information specific to the Windows Phone
-platform:
+See the following for details specific to the Windows Phone platform:
 
 - Windows Phone Plugins
 - Upgrading Windows Phone
@@ -52,8 +52,8 @@ You will need the following:
 To develop Cordova apps for Windows Phone devices, you may use a PC
 running Windows, but you may also develop on a Mac, either by running
 a virtual machine environment or by using Boot Camp to dual-boot a
-Windows partition. Consult these resources to run the required Windows
-development environment on a Mac:
+Windows partition. Consult these resources to set up the required
+Windows development environment on a Mac:
 
 - __VMWare Fusion__: To set up the Windows 8 virtual machine, follow
   the instructions provided by the
@@ -222,7 +222,7 @@ app:
 
 ![](img/guide/platforms/wp8/wp8_emulator.png)
 
-The emulator's basic controls on the top right of the device screen
+The emulator's basic controls on the top-right of the device screen
 allow you to toggle between portrait and landscape orientation. The
 __>>__ button opens more controls that allow you to test more complex
 orientations and gestures:
@@ -230,13 +230,9 @@ orientations and gestures:
 ![](img/guide/platforms/wp8/wp8_emulator_orient.png)
 
 These advanced controls also allow you to modify the device's
-location or simulate sequences of movements:
+location or to simulate sequences of movements:
 
 ![](img/guide/platforms/wp8/wp8_emulator_loc.png)
-
-## Configure an Emulator
-
-<!-- 2DO: can you configure WP emulator to choose different devices? -->
 
 ## Deploy to Device
 
@@ -267,11 +263,6 @@ Windows Phone 7 devices.
       not recommended because you can not build the template (see
       below) with VS Express, as it does not have the __Export
       Template__ functionality, which is only in VS Pro or higher.
-
-- Register and pay for a [Windows Phone Dev
-  Center](http://dev.windowsphone.com/en-us/publish) account if you
-  want to install your app on a real device or submit it to Market
-  Place.
 
 ## Building the Template
 
