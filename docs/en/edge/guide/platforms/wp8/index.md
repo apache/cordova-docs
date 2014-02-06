@@ -68,12 +68,13 @@ development environment on a Mac:
   installation instructions provided by the [Microsoft Developer
   Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
   
-Even if you already run one of these dual-boot or virtual machines,
-please read the appropriate section above and familiarize yourself
-with any additional configuration requirements that allow the Windows
-Phone emulator to run.  Whichever development option you choose, the
-next step is to install the Windows Phone SDK that allows Cordova to
-run, as described below.
+If you are developing on a PC, its processor must support
+virtualization (_VT-x_ on Intel) and [Second Level Address Translation
+(SLAT)](http://en.wikipedia.org/wiki/Second_Level_Address_Translation).
+Consult [Intel's list of supporting
+processors](http://ark.intel.com/Products/VirtualizationTechnology).
+Virtualization is typically disabled by default, so you need to enable
+it in your BIOS settings.
 
 ## Install Cordova Shell Tools
 
@@ -267,41 +268,21 @@ current interface.
     - 4 GB RAM
     - 64-bit (x64) CPU
 
-- Windows Phone 8 Emulator
-    - The phone emulator uses Hyper-V, so this list includes those pre-requisites.
-    - Windows 8 Pro 64-bit edition or greater
-    - Requires a processor that supports virtualization and [Second Level Address Translation (SLAT)](http://en.wikipedia.org/wiki/Second_Level_Address_Translation)
-        - See the [list of Intel processors that support VT-x (virtualization) and EPT (SLAT)](http://ark.intel.com/Products/VirtualizationTechnology)
-    - Enable the virtualization capability (i.e., VT-x on Intel) in your BIOS settings, as usually this is disabled by default.
-
 - SDK and IDE (Visual Studio)
-    - Visual Studio 2012 Professional, Premium, or Ultimate. Note that Visual Studio Express for Windows Phone (included in the SDK) is not recommended because you can not build the template (see below) with VS Express, as it does not have the __Export Template__ functionality, which is only in VS Pro or higher.
 
-- Register and pay for a [Windows Phone Dev Center](http://dev.windowsphone.com/en-us/publish) account if you want to install your app on a real device or submit it to Market Place.
+    - Visual Studio 2012 Professional, Premium, or Ultimate. Note that
+      Visual Studio Express for Windows Phone (included in the SDK) is
+      not recommended because you can not build the template (see
+      below) with VS Express, as it does not have the __Export
+      Template__ functionality, which is only in VS Pro or higher.
 
-__NOTE__: Running the SDK in Virtual Machine might present some challenges. You can read this blog post that gives insight on the solutions to develop for [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac).
-
-## Install SDK and Cordova
-
-Download and install [Windows Phone
-SDK](http://www.microsoft.com/en-us/download/details.aspx?id=35471).
-
-Download and extract the latest copy of
-[Cordova](http://phonegap.com/download). The `lib\windows-phone-8\wp8`
-subdirectory is where you need to do your work.
-
-Copy the `CordovaWP8_x_x_x.zip` file to the `\My Documents\Visual
-Studio 2012\Templates\ProjectTemplates\` directory.
+- Register and pay for a [Windows Phone Dev
+  Center](http://dev.windowsphone.com/en-us/publish) account if you
+  want to install your app on a real device or submit it to Market
+  Place.
 
 ## Building the Template
 
-__NOTE__: Skip this step if the `lib\windows-phone` directory already
-contains a `CordovaWP8_x_x_x.zip` file.
-
-To simplify development, Cordova bundles a script to build Visual
-Studio templates. These allow you to rapidly generate Cordova apps,
-and you can modify them if necessary.  The steps below show how to
-generate it.
 
 ### Run the Batch File to Create and Install the Templates
 
