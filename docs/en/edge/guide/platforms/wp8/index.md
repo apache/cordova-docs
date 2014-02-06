@@ -32,6 +32,7 @@ You will need the following:
 - A 64-bit version of Windows 8 Pro, either an installation disk or an
   _ISO_ disk image file. An evaluation version is available on the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
+  The Pro version is necessary to run the device emulator,
 
 - The [Windows Phone SDK](https://dev.windowsphone.com/en-us/downloadsdk).
 
@@ -74,7 +75,8 @@ virtualization (_VT-x_ on Intel) and [Second Level Address Translation
 Consult [Intel's list of supporting
 processors](http://ark.intel.com/Products/VirtualizationTechnology).
 Virtualization is typically disabled by default, so you need to enable
-it in your BIOS settings.
+it in your BIOS settings. The PC should have at least 6.5GB of free
+hard disk space, and 4GB of RAM.
 
 ## Install Cordova Shell Tools
 
@@ -257,16 +259,6 @@ See The Command-Line Interface for information about the
 current interface.
 
 ## System Requirements
-
-- Operating System:
-    - Windows 8 or Windows 8 Pro
-        - The 64-bit version (x64) of Windows is required for the SDK.
-        - The Pro version is recommended so you can run a device emulator.
-
-- Hardware:
-    - 6.5 GB of free hard disk space
-    - 4 GB RAM
-    - 64-bit (x64) CPU
 
 - SDK and IDE (Visual Studio)
 
