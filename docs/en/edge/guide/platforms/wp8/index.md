@@ -122,6 +122,8 @@ __Downloads__ area of
 [dev.windowsphone.com](https://dev.windowsphone.com/en-us/downloadsdk).
 You may also install more recent emulator update packages.
 
+![](img/guide/platforms/wp8/wp8_downloadSDK.png)
+
 After installing the SDK, you need to modify the system's PATH to make
 the SDK available to Cordova on the Windows command line:
 
