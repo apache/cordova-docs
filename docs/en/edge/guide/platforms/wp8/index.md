@@ -65,17 +65,16 @@ Windows development environment on a Mac:
 - __VMWare Fusion__: To set up the Windows 8 virtual machine, follow
   the instructions provided by the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426),
-  then follow the instructions at Configuring VMWare Fusion to prepare
-  the virtual environment to run the emulator bundled with the SDK.
+  then see Configuring VMWare Fusion for information on preparing the
+  virtual environment to run the emulator bundled with the SDK.
 
   <!-- 2DO: bug: VMware doesn't recognize ISO's Win8 component. -->
   
 - __Parallels Desktop__: To set up the Windows 8 virtual machine,
   follow the instructions provided by the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
-  then follow the instructions at Configuring Parallels Desktop to
-  prepare the virtual environment to run the emulator bundled with the
-  SDK.
+  then see Configuring Parallels Desktop for information on preparing
+  the virtual environment to run the emulator bundled with the SDK.
   
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
   installation instructions provided by the [Microsoft Developer
