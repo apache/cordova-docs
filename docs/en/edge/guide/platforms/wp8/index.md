@@ -39,9 +39,10 @@ See the following for details specific to the Windows Phone platform:
 
 For the Windows Phone 8 platform, the Cordova WebView relies on
 Internet Explorer 10 as its rendering engine, so as a practical matter
-you can use IE10 to test any web content that doesn't invoke Cordova
-APIs.  The Windows Phone Developer Blog provides
-[helpful guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+you can use IE10's powerful debugger to test any web content that
+doesn't invoke Cordova APIs.  The Windows Phone Developer Blog
+provides [helpful
+guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 on how to support IE10 along with comparable WebKit browsers.
 
 ## Requirements and Support
