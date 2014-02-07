@@ -279,13 +279,8 @@ Searching for only the `bar` term yields and additional result:
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
 
 The `cordova plugin add` command requires you to specify the
-repository for the plugin code.  Please note that when you follow the 
-Web Project Dev workflow and use the CLI, the CLI will take care of adding
-the plugin code to the appropriate place for each platform. (If you are following the
-Native Project Dev Workflow, you will have to add plugins using Plugman (guide link here),
-multiple times for each platform.)
-
-Here are examples of how you might use the CLI to add features to the app:
+repository for the plugin code.  Here are examples of how you might
+use the CLI to add features to the app:
 
 * Basic device information (Device API):
 
@@ -337,6 +332,12 @@ Here are examples of how you might use the CLI to add features to the app:
 * Debug console:
 
         $ cordova plugin add org.apache.cordova.console
+
+__NOTE__: The CLI adds plugin code as appropriate for each platform.
+If you want to develop with lower-level shell tools or platform SDKs
+as discussed in the Overview, you need to run the Plugman utility to
+add plugins separately for each platform. (For more information, see
+Using Plugman to Manage Plugins.)
 
 Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
 currently installed plugins. Each displays by its identifier:

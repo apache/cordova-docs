@@ -21,11 +21,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## Initial Release
 
-Welcome to the initial release of Ubuntu platform support in Cordova. With this
-release, the focus is developing on an Ubuntu system and using the Cordova Web
-Project Dev Workflow. This includes adding the Ubuntu platform to your project,
-adding standard Cordova plugins, and, of course, building and running apps for
-the Ubuntu platform.
+Welcome to the initial release of Ubuntu platform support in
+Cordova. With this release, the focus is developing on an Ubuntu
+system and using the cross-platform workflow discussed in the
+Overview.  This includes adding the Ubuntu platform to your project,
+adding standard Cordova plugins, and building and running apps for the
+Ubuntu platform.
 
 ### Ubuntu SDK
 
@@ -36,11 +37,11 @@ app.)
 
 ### Ubuntu Runtime Platforms
 
-Ubuntu is well-known for its Desktop environment (for laptops, PCs and such).
+Ubuntu is well known for its Desktop environment (for laptops, PCs and such).
 Ubuntu Touch extends the Ubuntu OS onto phones and tablets. Ubuntu runtime
 platforms have varying CPU architectures (x86, armhf, etc.). App and plugin
 code must be compiled appropriately. Support for this broad area is rapidly
-evolving in the Ubuntu.
+evolving in Ubuntu.
 
 ### Latest Information
 
@@ -73,11 +74,14 @@ Install cordova-cli package (and its dependencies):
 
 ### Create a project
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+Creates an app in a `hello` directory whose display name is
+`HelloWorld`:
+
+    $ cordova create hello com.example.hello HelloWorld
 
 ### Move into the Project Directory
 
-    $ cd project1
+    $ cd hello
 
 ### Add the Ubuntu Platform
 

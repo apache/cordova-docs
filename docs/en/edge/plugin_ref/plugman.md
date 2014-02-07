@@ -21,23 +21,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 From version 3.0 onward, Cordova implements all device APIs as
 plugins, and leaves them disabled by default. It also supports two
-different ways to add and remove plugins. The first is by using the
-`cordova` CLI described in The Command-Line Interface. The second is
-by using a lower-level
-[Plugman](https://github.com/apache/cordova-plugman/)
-command-line interface ("Native platform dev" workflow.) The main difference between these two development
-paths is that Plugman can only add plugins to one platform at a time, whereas the CLI will add plugins
-to all of the platforms that you are targeting.  Because of this, it makes more sense to use Plugman when
-you are working closely with a single platform, hence the "Native Platform Dev" name of the workflow. 
+different ways to add and remove plugins, depending on your choice of
+workflow discussed in the Overview:
 
-For more information on Plugman, especially if you are interested in consuming Plugman as a node module 
-or hacking on the Plugman code, see [the README file in its repository](https://github.com/apache/cordova-plugman/blob/master/README.md).
+- If you use a cross-platform workflow, you use the `cordova` CLI
+  utility to add plugins, as described in The Command-Line Interface.
+  The CLI modifies plugins for all specified platforms at once.
+
+- If you use a platform-centered workflow, you use a lower-level
+  [Plugman](https://github.com/apache/cordova-plugman/) command-line
+  interface, separately for each targeted platform.
+
+This section details the Plugman utility.  For more information on
+consuming Plugman as a node module or modifying the source code, see
+[the README file in its repository](https://github.com/apache/cordova-plugman/blob/master/README.md).
 
 ## Installing Plugman
 
 To install plugman, you must have [node](http://nodejs.org/) installed
-on your machine. Then you can run the following command from anywhere in your environment to install plugman globally, so that it
-is available from any directory on your machine:
+on your machine. Then you can run the following command from anywhere
+in your environment to install plugman globally, so that it is
+available from any directory:
 
     $ npm install -g plugman
 

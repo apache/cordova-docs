@@ -54,86 +54,65 @@ The application itself is implemented as a web page, named
 _index.html_ by default, that references whatever CSS, JavaScript,
 images, media files, or other resources are necessary for it to run.
 The app executes as a _WebView_ within the native application wrapper,
-which you distribute to app stores.  For the web app to interact with
-various device features the way native apps do, it must also reference
-a `cordova.js` file, which provides API bindings.
+which you distribute to app stores.
 
 The Cordova-enabled WebView may provide the application with its
-entire user interface. It can also be a component within a larger,
-hybrid application that mixes the WebView with native application
-components.  Cordova provides a _plugin_ interface for these
-components to communicate with each other.
+entire user interface. On some platforms, it can also be a component
+within a larger, hybrid application that mixes the WebView with native
+application components. (See Embedding WebViews for details.)
+
+A _plugin_ interface is available for Cordova and native components to
+communicate with each other. As of version 3.0, plugins provide
+bindings to standard device APIs.  Third-party plugins provide
+additional bindings to features not necessarily available on all
+platforms. You can also develop your own plugins, as described in
+Plugin Development Guide. Plugins may be necessary, for example, to
+communicate between Cordova and custom native components.
 
 ## Development Paths
 
-As of version 3.0, you can use two basic workflows to create
-a mobile application. While you can accomplish the same
-thing using both workflows, certain tasks are better suited to using one workflow 
-over the other. For this reason, you should understand both workflows so
-that you can use the best tool for the best situation.
+As of version 3.0, you can use two basic workflows to create a mobile
+app. While you can often use either workflow to accomplish the same
+task, they each offer advantages:
 
-The two main workflows that are supported are the _Web Project Dev_ workflow and the _Native Platform Dev_ workflow.
+- __Cross-platform workflow__: Use this workflow if you want your app
+  to run on as many different mobile operating systems as possible,
+  with little need for platform-specific development.  This workflow
+  centers around the `cordova` utility, otherwise known as the Cordova
+  _CLI_, that was introduced with Cordova 3.0. (For details on the
+  CLI, see The Command-Line Interface.) The CLI is a high-level tool
+  that allows you to build projects for many platforms at once,
+  abstracting away much of the functionality of lower-level shell
+  scripts. The CLI copies a common set of web assets into
+  subdirectories for each mobile platform, makes any necessary
+  configuration changes for each, runs build scripts to generate
+  application binaries. The CLI also provides a common interface to
+  apply plugins to your app.
 
-### Web Project Dev
+- __Platform-centered workflow__: Use this workflow if you want to
+  focus on building an app for a single platform and need to be able
+  to modify it at a lower level. You need to use this approach, for
+  example, if you want your app to mix custom native components with
+  web-based Cordova components, as discussed in Embedding WebViews.
+  As a rule of thumb, use this workflow if you need to modify the
+  project within the SDK.  This workflow relies on a set of
+  lower-level shell scripts that are tailored for each supported
+  platform, and a separate Plugman utility that allows you to apply
+  plugins.  While you can use this workflow to build cross-platform
+  apps, it is generally more difficult because the lack of a
+  higher-level tool means separate build cycles and plugin
+  modifications for each platform. Still, this workflow allows you
+  greater access to development options provided by each SDK, and is
+  essential for complex hybrid apps. (See the various Platform Guides
+  for details on each platform's available shell utilities.)
 
-You can think of the first workflow as the _Web Project Dev_ workflow. You should use
-this workflow when you want to create a Cordova application that runs on 
-as many mobile operating systems as possible with as little platform-specific
-development work as possible. This workflow came into existence with Cordova 3.0
-and the creation of the Cordova _Command-line Interface_ (CLI). The CLI abstracts
-away a lot of the functionality of lower-level shell scripts that take care of the
-details involved with building your app, such as copying your web assets into 
-the correct folders for each mobile platform, making platform specific configuration
-changes, or running specific build scripts to generate application binaries. You can read 
-more about the _Web Project Dev_ workflow in The Command-line Interface. Please note
-that often when people speak of the "CLI," they are talking about this _Web Project Dev_
-workflow.
-
-### Native Platform Dev
-
-The second workflow can be thought of as a _Native Platform Dev_ workflow. You should use it
-when you want to focus on building an application for a single platform and are 
-interested in changing the lower-level platform details. While you can still use this workflow
-to build cross-platform apps, the lack of tools to abstract away the various build steps will
-make it more difficult. For example, you will have to use Plugman to
-install the same plugin once for each platform that you want to support. The 
-benefit to using this _Native Platform Dev_ workflow is that it gives you access to the lower-level
-shell scripts to build and test the application, so if you are hacking on the native 
-side of things, this workflow is the most efficient way to test your changes. This workflow
-is also appropriate if you want to use the CordovaWebView as a small part in a larger native
-application (See the Embedding WebViews guide.)  You can read about this workflow in the different
-Shell Tool guides, for instance, Android Shell Tool Guide and iOS Shell Tool Guide.
-
-When first starting out, it might be easiest to use the _Web Project Dev_ workflow
-to create an application. (To install the CLI, see The Command-line Interface.)
-Depending on the set of platforms you wish to target, you can rely on
-the CLI for progressively greater shares of the development cycle:
-
-* In the most basic scenario, you can use the CLI simply to create a
-  new project that is populated with default configuration for you to
-  modify.
-
-* For many mobile platforms, you can also use the CLI to set up
-  additional project files required to compile within each SDK.  For
-  this to work, you must install each targeted platform's SDK.
-  (See the Platform Guides for instructions.)
-  As indicated in the Platform Support table, you may need to
-  run the CLI on different operating systems depending on the targeted
-  platform.
-
-* For supporting platforms, the CLI can compile executible
-  applications and run them in an SDK-based device emulator.
-  For comprehensive testing, you can also generate application files
-  and install them directly on a device.
-
-At any point in the development cycle, you can switch to using more of the _Native Platform
-Dev_ workflow. The platform-specific SDK tools provided may provide a richer set of
-options. (See the Platform Guides for details about each platform's SDK tool set.)
-
-An SDK environment is more appropriate if you want implement a hybrid
-app that mixes web-based and native application components.
-You may use the command-line utility to initially generate the app, or
-iteratively thereafter to feed updated code to SDK tools.  You may
-also build the app's configuration file yourself.
-(See The config.xml File for details.)
-
+When first starting out, it may be easiest to use the cross-platform
+workflow to create an app. (See The Command-line Interface for
+details.) You then have the option to switch to a platform-centered
+workflow if you need the greater control the SDK provides. However,
+once you do so, you can't go back. The CLI maintains a common set of
+cross-platform source code, which on each build it uses to write over
+platform-specific source code.  To preserve any modifications you make
+to the platform-specific assets, you need to switch to the
+platform-centered shell tools, which ignore the cross-platform source
+code, and instead relies on the platform-specific source code.
