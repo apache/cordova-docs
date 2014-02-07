@@ -164,7 +164,7 @@ the SDK available to Cordova on the Windows command line:
   Here is a sample __PATH__ value that also specifies the `npm`
   utility that is required to install the Cordova CLI:
 
-    C:\Users\sierra\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
+    C:\Users\me\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
 
 ## Create a New Project
 
@@ -204,6 +204,11 @@ for release:
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
 
+The `clean` command helps flush out directories in preparation for the
+next `build`:
+
+        C:\path\to\project\cordova\clean.bat
+
 ## Deploy to Emulator
 
 At this point you can use the `cordova` CLI utility to deploy the
@@ -213,7 +218,14 @@ application to the emulator from the command line:
 
 Otherwise use the alternate shell interface:
 
-        C:/path/to/project/cordova/run --emulator
+        C:\path\to\project\cordova\run
+
+By default, the `run` script invokes the emulator flag, and accepts
+additional build flags, for which `--debug` provides the default:
+
+        C:\path\to\project\cordova\run --emulator --debug
+        C:\path\to\project\cordova\run --emulator --release
+        C:\path\to\project\cordova\run --emulator --nobuild
 
 The emulator launches a device image with the app installed. From the
 home screen, navigate to the apps panel to launch the __HelloWorld__
@@ -249,7 +261,7 @@ Then run the following CLI command to run the app on the device:
 
 It corresponds to this lower-level shell command:
 
-        C:/path/to/project/cordova/run --device
+        C:\path\to\project\cordova\run --device
 
 Alternately, if you are working in Visual Studio, select __Windows
 Phone Device__ from the drop-down menu at the top, then press the
@@ -299,3 +311,4 @@ some advanced features available in Windows Phone 8 apps. Still, both
 implement the same set of APIs. You can run a Windows Phone 7 app on a
 Windows Phone 8 device, but not the other way around: Windows Phone 8
 apps do _not_ run on Windows Phone 7 devices.
+
