@@ -24,8 +24,6 @@ deploy Cordova apps for Windows Phone devices.  It focuses on Windows
 Phone 8, but provides additional details on how to support Windows
 Phone 7.
 
-<!-- 2DO: can we easily discuss wp7 within wp8 topic? -->
-
 It shows how to use either Windows Phone-specific shell tools to
 generate and build apps, or the cross-platform Cordova CLI discussed
 in The Command-Line Interface.  (See the Overview for a comparison of
@@ -39,9 +37,16 @@ See the following for details specific to the Windows Phone platform:
 - Windows Phone Plugins
 - Upgrading Windows Phone
 
+For the Windows Phone 8 platform, the Cordova WebView relies on
+Internet Explorer 10 as its rendering engine, so as a practical matter
+you can use IE10 to test any web content that doesn't invoke Cordova
+APIs.  The Windows Phone Developer Blog provides
+[helpful guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+on how to support IE10 along with comparable WebKit browsers.
+
 ## Requirements and Support
 
-You will need the following:
+You need the following:
 
 - A 64-bit version of Windows 8 Pro, either an installation disk or an
   _ISO_ disk image file. An evaluation version is available on the
@@ -95,14 +100,13 @@ hard disk space, and 4GB of RAM.
 If you want to use Cordova's Windows Phone-centered shell tools in
 conjunction with the SDK, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
-section if you plan to use the cross-platform CLI utility, but see The
-Command-Line Interface for instructions how to install it on Windows 8.
+section if you plan to use the cross-platform CLI utility.
 
 The Cordova download contains separate archives for each platform. Be
-sure to expand the appropriate archive, `wp8` in this case, within an
-empty directory.  The relevant executible utilities are available in
-the top-level `bin` directory. (Consult the __README__ file if
-necessary for more detailed directions.)
+sure to expand the appropriate archive, `cordova-wp8\wp8` in this
+case, within an empty directory.  The relevant executible utilities
+are available in the top-level `bin` directory. (Consult the
+__README__ file if necessary for more detailed directions.)
 
 These shell tools allow you to create, build, and run Windows Phone
 apps.  For information on the additional command-line interface that
@@ -115,8 +119,8 @@ Phone platform.
 
 Install the latest version of the Windows Phone SDK from the
 __Downloads__ area of
-[dev.windowsphone.com](https://dev.windowsphone.com/en-us/downloadsdk),
-along with any more recent emulator updates.
+[dev.windowsphone.com](https://dev.windowsphone.com/en-us/downloadsdk).
+You may also install more recent emulator update packages.
 
 After installing the SDK, you need to modify the system's PATH to make
 the SDK available to Cordova on the Windows command line:
@@ -152,8 +156,6 @@ the SDK available to Cordova on the Windows command line:
 
   Otherwise if there is no __PATH__ available, press __New__ to create it.
 
-  <!- 2DO: check any PATH if no npm install? -->
-
 - If a PATH value already exists, append a semicolon and paste the
   path string you copied earlier. Otherwise simply paste the string:
 
@@ -180,8 +182,6 @@ Here's the corresponding lower-level shell-tool approach:
 
         C:\path\to\cordova-wp8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
 
-<!-- 2DO: how to open WP SDK to modify project -->
-
 ## Build the Project
 
 If you are using the CLI in development, the project directory's
@@ -193,15 +193,13 @@ these within the project directory to rebuild the app:
 
 If you are using the Windows Phone-specific shell tools in
 development, there is a different approach.  Once you generate the
-project, the default app's source is available in the `assets/www`
-subdirectory.
-<!-- 2DO: check location of locally generated src files -->
-Subsequent commands are available in its `cordova` subdirectory.
+project, the default app's source is available in the
+`projects\wp8\www` subdirectory. Subsequent commands are available in
+the `cordova` subdirectory at the same level.
 
 The `build` command cleans project files and rebuilds the app.  The first
 example generates debugging information, and the second signs the apps
 for release:
-<!-- 2DO: check if CL debug/release build flags are available -->
 
         C:\path\to\project\cordova\build.bat --debug        
         C:\path\to\project\cordova\build.bat --release
@@ -215,7 +213,7 @@ application to the emulator from the command line:
 
 Otherwise use the alternate shell interface:
 
-        > /path/to/project/cordova/run --emulator
+        C:/path/to/project/cordova/run --emulator
 
 The emulator launches a device image with the app installed. From the
 home screen, navigate to the apps panel to launch the __HelloWorld__
@@ -239,18 +237,23 @@ location or to simulate sequences of movements:
 ## Deploy to Device
 
 Before testing your application on a device, the device must be
-registered. Consult [Microsoft's documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx)
-for details on how to deploy and test on Windows Phone 8. The basic
-steps are simple:
+registered. Consult [Microsoft's
+documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx)
+for details on how to deploy and test on Windows Phone 8. Also, make
+sure the phone is connected to the computer, and the screen is
+unlocked.
 
-- Make sure the phone is connected to the computer, and the screen is
-  unlocked.
+Then run the following CLI command to run the app on the device:
 
-- In Visual Studio, select __Windows Phone Device__ from the drop-down
-  menu at the top.
+        > cordova run wp8
 
-- Press the green __Play__ button next to the main drop-down menu to
-  start debugging, or else type __F5__.
+It corresponds to this lower-level shell command:
+
+        C:/path/to/project/cordova/run --device
+
+Alternately, if you are working in Visual Studio, select __Windows
+Phone Device__ from the drop-down menu at the top, then press the
+green __Play__ button nearby or else type __F5__.
 
 ## Modify the Project in the SDK
 
@@ -270,20 +273,29 @@ cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to work within
 the SDK, use the lower-level shell tools as an alternative to the CLI.
 
-<!--
+# Support for Windows Phone 7
 
-# Windows Phone 7
+It's as easy to generate a Windows Phone 7 app as it is for Windows
+Phone 8, but it works much like adding a separate platform. If you're
+using the CLI, simply specify `wp7` along with or instead of `wp8`:
 
-Version 7 does not have all the advanced features included in Internet
-Explorer 10, but implements the same set of APIs. Windows Phone 8 apps
-do _not_ run on Windows Phone 7 devices.
+        > cordova platform add wp7
+        > cordova build wp7
+        > cordova emulate wp7
 
-## Further Reading
+The `emulate` command produces a Windows Phone 7 device emulator that
+displays a different interface:
 
-The Windows Phone Developer Blog provides
-[helpful details](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
-on differences between IE10 and WebKit browsers, and how to support
-both.
+![](img/guide/platforms/wp8/wp7_emulator.png)
 
--->
+If you are using the platform-centered shell-tool workflow, follow all
+the steps in the _Install Cordova Shell Tools_ section above, except
+extract the tools from the `cordova-wp8\wp7` directory instead. All
+these tools work the same as their `wp8` counterparts.
 
+__NOTE__: The WebViews that underly Windows Phone 7 Cordova apps do
+_not_ use Internet Explorer 10 as their rendering engine, and thus miss
+some advanced features available in Windows Phone 8 apps. Still, both
+implement the same set of APIs. You can run a Windows Phone 7 app on a
+Windows Phone 8 device, but not the other way around: Windows Phone 8
+apps do _not_ run on Windows Phone 7 devices.
