@@ -219,7 +219,8 @@ Otherwise use the alternate shell interface:
 
 The emulator launches a device image with the app installed. From the
 home screen, navigate to the apps panel to launch the __HelloWorld__
-app:
+app. This shows the app launching with its splash screen followed by
+its main interface:
 
 ![](img/guide/platforms/wp8/wp8_emulator.png)
 
