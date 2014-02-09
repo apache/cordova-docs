@@ -355,7 +355,7 @@ CLI を使用アプリに機能を追加する方法の例を示します。
 
 特定のバージョンをインストールするには、この構文を使用します。
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 実行 `cordova -v` を現在実行されているどのバージョンを参照してください。 実行、 `npm

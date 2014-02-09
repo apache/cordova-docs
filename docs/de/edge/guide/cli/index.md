@@ -355,7 +355,7 @@ Nach der Installation der `cordova` Dienstprogramm, Sie können immer aktualisie
 
 Verwenden Sie diese Syntax, um eine bestimmte Version zu installieren:
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 Führen Sie `cordova -v` zu sehen, welche Version aktuell installiert ist. Führen Sie den `npm

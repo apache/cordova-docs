@@ -355,7 +355,7 @@ Après avoir installé la `cordova` utilitaire, vous pouvez toujours mettre à j
 
 Utilisez cette syntaxe pour installer une version spécifique :
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 Exécutez `cordova -v` pour voir quelle version est en cours d'exécution. Exécutez le `npm

@@ -355,7 +355,7 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 이 구문을 사용 하 여 특정 버전을 설치.
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 실행 `cordova -v` 버전을 현재 실행 중인 볼 수 있습니다. 실행은 `npm

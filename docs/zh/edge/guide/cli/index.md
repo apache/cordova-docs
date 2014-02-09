@@ -355,7 +355,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 使用此語法來安裝特定的版本：
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 運行 `cordova -v` 查看當前運行的版本。 運行 `npm
