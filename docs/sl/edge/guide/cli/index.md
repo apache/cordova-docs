@@ -355,7 +355,7 @@ Po namestitvi v `cordova` korist, jo lahko vedno posodobite v najnovejšo razli�
 
 Za namestitev posebne različice, uporabite to sintakso:
 
-        $ sudo npm install -g cordova@3.1.0
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 Teči `cordova -v` videti, katera različica je trenutno nameščena. Teči na `npm
