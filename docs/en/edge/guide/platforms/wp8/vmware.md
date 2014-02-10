@@ -50,7 +50,5 @@ Fusion.  After installing Windows, follow these steps:
         mce.enable = "TRUE"
         vhv.enable = "TRUE"
 
-<!-- 2DO: check how this option appears in UI -->
-
 Once you complete these steps, you are then ready to install the
 Windows Phone SDK.  See the Windows Phone Platform Guide for details.

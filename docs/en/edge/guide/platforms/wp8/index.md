@@ -41,8 +41,8 @@ For the Windows Phone 8 platform, the Cordova WebView relies on
 Internet Explorer 10 as its rendering engine, so as a practical matter
 you can use IE10's powerful debugger to test any web content that
 doesn't invoke Cordova APIs.  The Windows Phone Developer Blog
-provides [helpful
-guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+provides
+[helpful guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 on how to support IE10 along with comparable WebKit browsers.
 
 ## Requirements and Support
@@ -68,8 +68,6 @@ Windows development environment on a Mac:
   then see Configuring VMWare Fusion for information on preparing the
   virtual environment to run the emulator bundled with the SDK.
 
-  <!-- 2DO: bug: VMware doesn't recognize ISO's Win8 component. -->
-  
 - __Parallels Desktop__: To set up the Windows 8 virtual machine,
   follow the instructions provided by the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
@@ -80,10 +78,10 @@ Windows development environment on a Mac:
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
   installation instructions provided by the [Microsoft Developer
   Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945425).
+
+  2DO: virtualBox doesn't work yet; any extra config info?
 -->
 
-  <!-- 2DO: virtualBox doesn't work yet; any extra config info? -->
-  
 - __Boot Camp__: To set up the Windows 8 partition, follow the
   installation instructions provided by the [Microsoft Developer
   Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
