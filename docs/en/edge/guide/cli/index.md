@@ -23,10 +23,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
-them on different platforms, and run on real devices or within emulators. The CLI
-is the main tool to use for the cross-platform workflow (See the Overview for a description
-of the various workflows.)  However, you can also use the CLI to initialize project code, after
-which you use various platforms' SDKs and shell tools for continued development.
+them on different platforms, and run on real devices or within
+emulators. The CLI is the main tool to use for the cross-platform
+workflow described in the Overview.  Otherwise you can also use the
+CLI to initialize project code, then switch to various platforms' SDKs
+and shell tools for continued development.
 
 ## Prerequisites
 
