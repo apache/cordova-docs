@@ -76,9 +76,11 @@ Windows development environment on a Mac:
   then see Configuring Parallels Desktop for information on preparing
   the virtual environment to run the emulator bundled with the SDK.
   
+<!--
 - __VirtualBox__: To set up the Windows 8 virtual machine, follow the
   installation instructions provided by the [Microsoft Developer
   Network](http://msdn.microsoft.com/en-US/library/windows/apps/jj945425).
+-->
 
   <!-- 2DO: virtualBox doesn't work yet; any extra config info? -->
   
