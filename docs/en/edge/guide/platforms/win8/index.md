@@ -94,6 +94,21 @@ Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
 
 ## Create a New Project
 
+At this point, to create a new project you can choose between the
+cross-platform CLI tool described in The Command-Line Interface, or
+the set of Windows 8-specific shell tools. From within a source-code
+directory, this CLI approach generates an app named _HelloWorld_
+within a new `hello` project directory:
+
+        > cordova create hello com.example.hello HelloWorld
+        > cd hello
+        > cordova platform add windows8
+        > cordova build
+
+Here's the corresponding lower-level shell-tool approach:
+
+        C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+
 ## Build and Deploy the Project
 
 ## Modify the Project in the SDK
