@@ -287,7 +287,7 @@ cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to work within
 the SDK, use the lower-level shell tools as an alternative to the CLI.
 
-# Support for Windows Phone 7
+## Support for Windows Phone 7
 
 It's as easy to generate a Windows Phone 7 app as it is for Windows
 Phone 8, but it works much like adding a separate platform. If you're
