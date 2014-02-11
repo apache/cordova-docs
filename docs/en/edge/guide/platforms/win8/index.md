@@ -20,15 +20,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Windows 8 Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Windows 8. See the following for more
-detailed platform-specific information:
+deploy Cordova apps in Windows 8.  It shows how to use either shell
+tools specific to Windows 8 to generate and build apps, or the
+cross-platform Cordova CLI discussed in The Command-Line Interface.
+(See the Overview for a comparison of these development options.) This
+section also shows how to modify Cordova apps within Visual Studio.
+Regardless of which approach you take, you need to install the Visual
+Studio SDK, as described below.
 
-* Upgrading Windows 8
-* Windows 8 Command-line Tools
+See Upgrading Windows 8 for information on how to upgrade existing
+Windows 8 Cordova projects.
 
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
-current interface.
+Cordova WebViews running on Windows 8 rely on Internet Explorer 10 as
+their rendering engine, so as a practical matter you can use IE10's
+powerful debugger to test any web content that doesn't invoke Cordova
+APIs.  The Windows Phone Developer Blog provides
+[helpful guidance](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+on how to support IE10 along with comparable WebKit browsers.
+
+## Requirements and Support
+
+You need the following:
+
+- A 64-bit version of Windows 8 Pro, either an installation disk or an
+  _ISO_ disk image file. An evaluation version is available on the
+  [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
+
+  <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
+
+- [Visual Studio](http://www.visualstudio.com/downloads), either the
+  _Ultimate_, _Premium_, or _Professional_ 2013 editions.
+
+  <!-- true? -->
+
+To develop Cordova apps for Windows 8, you may use a PC running
+Windows, but you may also develop on a Mac, either by running a
+virtual machine environment or by using Boot Camp to dual-boot a
+Windows 8 partition. Consult these resources to set up the required
+Windows development environment on a Mac:
+
+- [VMWare Fusion](http://msdn.microsoft.com/en-US/library/windows/apps/jj945426)
+
+- [Parallels Desktop](http://msdn.microsoft.com/en-US/library/windows/apps/jj945424),
+  
+- [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
+  
+<!-- confirm: no "virtualization" BIOS setting necessary -->
+
+## Install Cordova Shell Tools
+
+## Install the SDK
+
+## Create a New Project
+
+## Build and Deploy the Project
+
+## Modify the Project in the SDK
+
+<!--
 
 Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
 Windows RT. MSDN now refers to this type of app as a _Windows Store_
@@ -122,3 +171,4 @@ Run the project from Visual Studio. You'll see the message box appear:
 
 That's it. You're now ready to build Windows Store apps with Cordova.
 
+-->
