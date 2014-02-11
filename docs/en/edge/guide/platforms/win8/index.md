@@ -109,7 +109,32 @@ Here's the corresponding lower-level shell-tool approach:
 
         C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
 
-## Build and Deploy the Project
+## Build the Project
+
+If you are using the CLI in development, the project directory's
+top-level `www` directory contains the source files. Run either of
+these within the project directory to rebuild the app:
+
+        > cordova build
+        > cordova build windows8   # do not rebuild other platforms
+
+If you are using the Windows Phone-specific shell tools in
+development, there is a different approach.  Once you generate the
+project, the default app's source is available in the
+`projects\windows8\www` subdirectory. Subsequent commands are available in
+the `cordova` subdirectory at the same level.
+
+The `build` command cleans project files and rebuilds the app.  The first
+example generates debugging information, and the second signs the apps
+for release:
+
+        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --release
+
+The `clean` command helps flush out directories in preparation for the
+next `build`:
+
+        C:\path\to\project\cordova\clean.bat
 
 ## Modify the Project in the SDK
 
