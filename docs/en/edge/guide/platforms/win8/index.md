@@ -136,36 +136,53 @@ next `build`:
 
         C:\path\to\project\cordova\clean.bat
 
-## Modify the Project in the SDK
+## Open the Project in the SDK and Deploy the App
+
+<!-- wasn't able to 'run' or 'emulate', so doc'ing SDK as fallback -->
+
+Once you build a Cordova app as described above, you can open it with
+Visual Studio. The various `build` commands generate a Visual Studio
+Solution (_.sln_) file. Open the file in the File Explorer to modify
+the project within Visual Studio:
+
+![](img/guide/platforms/win8/win8_sdk_openSLN.png)
+
+The `CordovaApp` component displays within the solution, and its `www`
+directory contains the web-based source code, including the
+`index.html` home page:
+
+![](img/guide/platforms/win8/win8_sdk.png)
+
+The controls below Visual Studio's main menu allow you to test or
+deploy the app:
+
+![](img/guide/platforms/win8/win8_sdk_deploy.png)
+
+With __Local Machine__ selected, press the green arrow to install the
+app on the same machine running Visual Studio. Once you do so, the app
+appears in Windows 8's app listings, as shown below on the left. Once
+available in this view, holding down the __CTRL__ key while selecting
+the app allows you to pin it to the main screen, as shown on the
+right:
+
+![](img/guide/platforms/win8/win8_sdk_run.png)
+
+Alternately, choose the __Simulator__ deployment option to view the
+app as if it were running on a tablet device:
+
+![](img/guide/platforms/win8/win8_sdk_sim.png)
+
+Unlike desktop deployment, this option allows you to simulate the
+tablet's orientation, location, and vary its network settings.
+
+__NOTE__: Consult the Overview for advice on how to use Cordova's
+command-line tools or the SDK in your workflow. The Cordova CLI relies
+on cross-platform source code that routinely overwrites the
+platform-specific files used by the SDK. If you want to use the SDK to
+modify the project, use the lower-level shell tools as an alternative
+to the CLI.
 
 <!--
-
-Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
-Windows RT. MSDN now refers to this type of app as a _Windows Store_
-app, and this guide follows that convention. Also, in this guide
-_Windows 8_ signifies both Windows 8 and Windows RT.
-
-## Requirements
-
-- Windows 8
-
-- Visual Studio 2012 Professional or better, or Visual Studio 2012 Express for Windows 8
-
-Follow the instructions at
-[windowsstore.com](http://www.windowsstore.com/)
-to submit your app to Windows Store.
-
-## Install SDK and Cordova
-
-Set up your preferred variant of Visual Studio 2012. All of the
-product's paid versions (Professional, etc.) let you build Windows
-Store apps. You need __Express for Windows 8__ to build Windows Store
-apps using the
-[Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products).
-
-Download and extract the latest copy of
-[Cordova](http://phonegap.com/download).
-These instructions apply to the `lib\windows-8` subdirectory.
 
 ## Set up a New Project
 
