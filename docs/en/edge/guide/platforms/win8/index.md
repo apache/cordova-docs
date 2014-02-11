@@ -69,6 +69,22 @@ Windows development environment on a Mac:
 
 ## Install Cordova Shell Tools
 
+If you want to use Cordova's Windows 8-centered shell tools in
+conjunction with the SDK, download Cordova from
+[cordova.apache.org](http://cordova.apache.org). Otherwise ignore this
+section if you plan to use the cross-platform CLI utility.
+
+The Cordova download contains separate archives for each platform. Be
+sure to expand the appropriate archive, `cordova-windows8\windows8` in
+this case, within an empty directory.  The relevant batch utilities
+are available in the top-level `bin` directory. (Consult the
+__README__ file if necessary for more detailed directions.)
+
+These shell tools allow you to create, build, and run Windows 8 apps.
+For information on the additional command-line interface that enables
+plugin features across all platforms, see Using Plugman to Manage
+Plugins.
+
 ## Install the SDK
 
 ## Create a New Project
