@@ -87,6 +87,11 @@ Plugins.
 
 ## Install the SDK
 
+Install the _Ultimate_, _Premium_, or _Professional_ 2013 editions of
+[Visual Studio](http://www.visualstudio.com/downloads).
+
+![](img/guide/platforms/win8/win8_installSDK.png)
+
 ## Create a New Project
 
 ## Build and Deploy the Project
