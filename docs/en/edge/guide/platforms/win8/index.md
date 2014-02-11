@@ -160,12 +160,17 @@ deploy the app:
 
 With __Local Machine__ selected, press the green arrow to install the
 app on the same machine running Visual Studio. Once you do so, the app
-appears in Windows 8's app listings, as shown below on the left. Once
-available in this view, holding down the __CTRL__ key while selecting
-the app allows you to pin it to the main screen, as shown on the
-right:
+appears in Windows 8's app listings:
 
-![](img/guide/platforms/win8/win8_sdk_run.png)
+![](img/guide/platforms/win8/win8_sdk_runApp.png)
+
+Each time you rebuild the app, the version available in the interface
+is refreshed.
+
+Once available in the app listings, holding down the __CTRL__ key
+while selecting the app allows you to pin it to the main screen:
+
+![](img/guide/platforms/win8/win8_sdk_runHome.png)
 
 Alternately, choose the __Simulator__ deployment option to view the
 app as if it were running on a tablet device:
