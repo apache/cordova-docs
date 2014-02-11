@@ -172,6 +172,12 @@ while selecting the app allows you to pin it to the main screen:
 
 ![](img/guide/platforms/win8/win8_sdk_runHome.png)
 
+Note that if you open the app within a virtual machine environment,
+you may need to click in the corners or along the sides of the windows
+to switch apps or access additional functionality:
+
+![](img/guide/platforms/win8/win8_sdk_run.png)
+
 Alternately, choose the __Simulator__ deployment option to view the
 app as if it were running on a tablet device:
 
