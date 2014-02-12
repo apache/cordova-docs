@@ -65,8 +65,6 @@ Windows development environment on a Mac:
   
 - [Boot Camp](http://msdn.microsoft.com/en-US/library/windows/apps/jj945423).
   
-<!-- confirm: no "virtualization" BIOS setting necessary -->
-
 ## Install Cordova Shell Tools
 
 If you want to use Cordova's Windows 8-centered shell tools in
