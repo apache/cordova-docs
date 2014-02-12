@@ -154,7 +154,7 @@ about the _merges_ folder can be found in the Customize Each Platform section be
 **WARNING**: When using the CLI to build your application, you are strongly discouraged
 from editing any files in the `/platforms/` folder unless you know what you are doing
 or are specifically told otherwise in documentation. This is because the files in the 
-`/platforms/` direcotry will be overwritten on prepare or plugin reinstallation. 
+`/platforms/` directory will be overwritten on prepare or plugin reinstallation. 
 
 If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
