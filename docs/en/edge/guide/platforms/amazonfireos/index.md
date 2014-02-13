@@ -103,7 +103,7 @@ Cordova The Command-line Interface. For example, in a source-code directory:
     $ cordova platform add amazon-fireos
     $ cordova build
 
-Once created, here's how to use the SDK to modify it:
+Once created, you can use the Eclipse that comes along with the Android SDK to modify it:
 
 * Launch the __Eclipse__ application.
 
