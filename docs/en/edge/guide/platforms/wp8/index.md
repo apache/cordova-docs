@@ -182,7 +182,6 @@ source-code directory, here's the CLI approach:
         > cordova create hello com.example.hello HelloWorld
         > cd hello
         > cordova platform add wp8
-        > cordova build
 
 Here's the corresponding lower-level shell-tool approach:
 
