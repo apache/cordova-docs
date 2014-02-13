@@ -114,7 +114,7 @@ Cordova The Command-Line Interface. For example, in a source-code directory:
         $ cordova platform add android
         $ cordova build
 
-Once created, here's how to use the SDK to modify it:
+Once created, you can use the Eclipse that comes along with the Android SDK to modify it:
 
 * Launch the __Eclipse__ application.
 
@@ -190,19 +190,44 @@ If instead you work within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
 specify an AVD if none are already open.
 
-For a faster experience, use an Intel-based emulator image:
+For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
+the execution speed.
+Many modern CPUs provide extensions to execute Virtual Machines more efficiently.
+Before attempting to use this type of acceleration, you need to determine if your 
+current development system's CPU, supports one the following virtualization technologies:
 
-* Install one or more `Intel x86 Atom` System Images as well as the
-  `Intel Hardware Accelerated Execution Manager`, available under
-  __Extras__.
+* __Intel Virtualization Technology__ (VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+* __AMD Virtualization__ (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
 
-* Run the Intel installer, which is available within your Android SDK
-  at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+Another way to find out if your Intel processor supports VT-x Technology, it's by executing the 
+`Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838),
+or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng), which is `OS Independent`.
 
-* Create a new AVD with the target set to an Intel image.
+After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
+in order to check if your CPU supports the Virtualization Technologies:
 
-* When starting the emulator, ensure there are no error messages
-  indicating a failure to load HAX modules.
+![](img/guide/platforms/android/intel_pid_util_620px.png)
+
+In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
+as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
+
+Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
+and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
+
+![](img/guide/platforms/android/asdk_man_intel_image_haxm.png)
+
+After download, run the Intel installer, which is available within your
+Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 
+__Note__:`If you have any problems installing the package, you can find more information and step by step guidance check this` 
+[Intel Article](http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture).
+
+Once installed, in order to test it, create new a AVD  with the `CPU/ABI` set to an `Intel (Atom) x86`  Image:
+
+![](img/guide/platforms/android/asdk_new_and_dev_intel.png)
+
+If you are using `Linux-based system`, follow the instructions in the [Android Developer Site](http://developer.android.com/tools/devices/emulator.html#vm-linux).
+
+When starting the emulator, ensure there are no error messages indicating a failure to load HAXM modules.
 
 ## Deploy to Device
 
