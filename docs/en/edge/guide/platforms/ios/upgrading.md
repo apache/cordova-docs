@@ -25,9 +25,32 @@ created with an older set of command-line tools that precede the
 `cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
-__NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
-Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
-iOS 7 SDK is not required yet, but this may change quickly.
+__NOTE__: Xcode 5 is required. Currently, to submit to the
+Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7 and this is included only with Xcode 5.
+
+## Upgrading 3.3.0 Projects to 3.4.0
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
+
+## Upgrading 3.2.0 Projects to 3.3.0
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
 
 ## Upgrading 3.1.0 Projects to 3.2.0
 
