@@ -512,6 +512,7 @@ Examples:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
 
 The `src` attribute identifies the framework, which plugman attempts
 to add to the Cordova project, in the correct fashion for a given
@@ -519,6 +520,8 @@ platform.
 
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
+
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.
 
 ## _info_ Element
 
