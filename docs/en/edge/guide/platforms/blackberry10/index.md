@@ -33,10 +33,21 @@ Blackberry Native SDK.  See The Command-Line Interface for information
 how to install `cordova`, add projects, then build and deploy for each
 platform.
 
+Blackberry 10 Device Simulator:
+
+	* `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+	* `Disk space: 10 GB`
+	* `RAM Memory: 4 GB`
+	* `Virtualization:
+		* __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+		* __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
+	
+More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
+
 ## Install the BlackBerry Native SDK
 
-The BlackBerry Native SDK is available from
-[developer.blackberry.com](http://developer.blackberry.com/native/download/).
+In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
+[developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.
 Following installation, you need to add its command-line tools to your
 system path.
 
@@ -59,6 +70,21 @@ On Mac and Linux:
 
     $ source ~/.bash_profile
 
+If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:
+
+	* On Windows:
+		$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+
+	* On Linux &rarr; Installed as root user:
+		$ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+		
+	* On Linux &rarr; Installed as non-root user:
+		$ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+	
+	* On Mac:
+		$ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+
+	
 ## Set up for Signing
 
 If you wish to test on a device or distribute apps through BlackBerry
@@ -66,7 +92,7 @@ World, your system must be setup for code signing.
 
 To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).
 
-Select the first checkbox: "for BlackBerry10 apps developed using BlackBerry 
+Select the first checkbox: "for BlackBerry10 apps developed using BlackBerry
 NDK" and then sign in or create a BBID.
 
 Enter a password and click "Get Token" to download bbidtoken.csk. Save this
@@ -81,7 +107,7 @@ The final step is to generate a signing certificate:
 
 Use the `cordova` utility to set up a new project, as described in The
 Command-Line Interface. For example, in a source-code directory:
- 
+
     $ cordova create hello com.example.hello
     $ cd hello
     $ cordova platform add blackberry10
