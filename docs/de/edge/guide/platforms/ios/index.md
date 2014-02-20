@@ -112,7 +112,7 @@ Für das Gerät bereitstellen:
 
 ## Häufige Probleme
 
-**Veraltungswarnungen:** Wenn eine Anwendung geändert oder ersetzt durch eine andere API-Programmierschnittstelle (API), wird es als *veraltet*markiert. Die API noch kurzfristig funktioniert, aber wird schließlich entfernt. Einige dieser veralteten Schnittstellen spiegeln sich in Apache Cordova und Xcode gibt Warnungen über sie, wenn Sie erstellen und eine Anwendung bereitstellen.
+**Veraltungswarnungen**: Wenn eine Anwendung geändert oder ersetzt durch eine andere API-Programmierschnittstelle (API), ist es als *veraltet*markiert. Die API noch kurzfristig funktioniert, aber wird schließlich entfernt. Einige dieser veralteten Schnittstellen spiegeln sich in Apache Cordova und Xcode gibt Warnungen über sie, wenn Sie erstellen und eine Anwendung bereitstellen.
 
 Xcode Warnung über die `invokeString` Methode betrifft die Funktionalität, die eine Anwendung über einen benutzerdefinierten URL startet. Obwohl der Mechanismus zum Laden aus einer benutzerdefinierten URL geändert hat, ist dieser Code noch rückwärts Funktionalität für Anwendungen, die mit älteren Versionen von Cordova erstellt. Die Beispielanwendung wird diese Funktionalität nicht verwendet, können diese Warnungen ignoriert werden. Um diese Warnungen angezeigt zu vermeiden, entfernen Sie den Code, der die veraltete InvokeString API verweist:
 

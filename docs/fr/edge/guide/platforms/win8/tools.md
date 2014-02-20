@@ -20,6 +20,8 @@ Le `cordova` de l'utilitaire est un outil de haut niveau qui vous permet de cré
 
  [1]: http://cordova.apache.org
 
+Pour plus d'informations sur l'interface de bas niveau qui permet aux plugins, voir Plugman à l'aide à gérer les Plugins. Pour une vue d'ensemble, consultez Application Plugins.
+
 ## Windows 8
 
 Les outils de ligne de commande de Windows 8 ne prennent en charge la création de nouveaux projets. Commandes doivent être exécutées à partir d'une invite cmd ou powershell.

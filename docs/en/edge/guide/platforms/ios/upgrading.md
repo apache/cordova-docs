@@ -25,9 +25,32 @@ created with an older set of command-line tools that precede the
 `cordova` CLI utility. See The Command-Line Interface for information
 how to update the version of the CLI.
 
-__NOTE__: Xcode 4.6 is required, Xcode 5 is recommended. Currently, to submit to the
-Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7.
-iOS 7 SDK is not required yet, but this may change quickly.
+__NOTE__: Xcode 5 is required. Currently, to submit to the
+Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7 and this is included only with Xcode 5.
+
+## Upgrading 3.3.0 Projects to 3.4.0
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
+
+## Upgrading 3.2.0 Projects to 3.3.0
+
+For non-CLI projects, run:
+
+        bin/update path/to/project
+        
+For CLI projects:
+
+1. Update the `cordova` CLI version. See The Command-Line Interface.
+
+2. Run `cordova platform update ios`
 
 ## Upgrading 3.1.0 Projects to 3.2.0
 
@@ -57,7 +80,7 @@ For CLI projects:
 iOS 7 Issues:
 
 1. Remove `width=device-width, height=device-height` from the
-   `index.html` file's `viewport` `meta` tag. (See [the relevent
+   `index.html` file's `viewport` `meta` tag. (See [the relevant
    bug](https://issues.apache.org/jira/browse/CB-4323).)
 
 2. Update your media, media-capture and splashscreen core plugins for
@@ -300,8 +323,8 @@ You can get this by accessing the `userAgent` property off the main view-control
 
 13. Device API changes:
     - For iOS, device.platform used to return `iPhone`, `iPad` or `iPod Touch`; now it returns (correctly) `iOS`.
-    - For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
-    - For all platforms, there is a new property called device.model; this returns the specific device model, e.g `iPad2,5` (for other platforms, this returns what device.name used to return).
+    - For iOS, device.name (now deprecated for all platforms) used to return the name of the user’s device (e.g. ‘Shazron’s iPhone 5′); now it returns what device.platform used to return: `iPhone`, `iPad` or `iPod Touch`.
+    - For all platforms, there is a new property called device.model; this returns the specific device model, e.g. `iPad2,5` (for other platforms, this returns what device.name used to return).
 
 ## Upgrading 2.1.0 Projects to 2.2.0
 

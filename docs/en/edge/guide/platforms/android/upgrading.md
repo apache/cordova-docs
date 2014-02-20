@@ -26,7 +26,7 @@ version of the CLI.
 
 ## Upgrading to 3.3.0 from 3.2.0
 
-Follow the same instructinos as for `3.2.0`.
+Follow the same instructions as for `3.2.0`.
 
 Starting with 3.3.0, the Cordova runtime is now compiled as an Android Library
 instead of a Jar. This should have no effect for command-line usage, but IDE
@@ -44,6 +44,10 @@ For projects that were created with the cordova CLI:
 For projects not created with the cordova CLI, run:
 
         bin/update <project_path>
+
+**WARNING:**  Starting on Android 4.4, creating a file input element with type="file" will not open the file picker dialog.
+This is a regression with Chromium on Android and the problem can be reproduced in the standalone Chrome browser on Android (see http://code.google.com/p/android/issues/detail?id=62220)  The suggested workaround is to use the FileTransfer and File plugins for Android 4.4. You can listen for an onClick event from the input type="file" and then pop up a file picker UI. In order to tie the form data with the upload, you can use JavaScript to attach form values to the multi-part POST request that FileTransfer makes. This bug still exists as of Android 4.4.2
+
 
 ## Upgrading to 3.1.0 from 3.0.0
 
@@ -269,7 +273,7 @@ while they still work in 2.0.0, will stop working in a future release.
 6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
 
 Due to the introduction of the `CordovaWebView` in the 1.9.0 release,
-third-Party plugins may not work.  These plugins need to get a context
+third-party plugins may not work.  These plugins need to get a context
 from the `CordovaInterface` using `getContext()` or `getActivity()`.
 If you are not an experienced Android developer, please contact the
 plugin maintainer and add this task to their bug tracker.

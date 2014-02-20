@@ -20,9 +20,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://cordova.apache.org
 
+低級命令列介面，它使外掛程式的資訊，請參閱使用 Plugman 到管理外掛程式。有關概述，請參見應用程式外掛程式。
+
 如果您需要幫助與下面列出的任何命令，請鍵入命令沿與 `-h` 或 `-help` 參數，所支援的所有命令並提供為每個可用的參數說明。
 
-## 創建
+## 創建一個應用程式
 
 `create`命令將創建一個新的專案：
 
@@ -37,9 +39,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `<project-name>`指定應用程式的顯示名稱
 
-**注：** `create` 命令引導其依賴項安裝通過 `npm install` 命令。 根據安裝的目錄和系統許可權，這可能需要管理員特權。 如果在 OSX/Linux 上有問題，請運行 `sudo npm install` 之前使用 `create` 命令。 在 Windows 上，運行 `npm install` 命令列實用程式中打開具有管理員許可權。
+**注**： `create` 命令引導其依賴項安裝通過 `npm install` 命令。 根據安裝的目錄和系統許可權，這可能需要管理員特權。 如果在 OSX/Linux 上有問題，請運行 `sudo npm install` 之前使用 `create` 命令。 在 Windows 上，運行 `npm install` 命令列實用程式中打開具有管理員許可權。
 
-## 目標
+## 創建目標
 
 `target`命令允許您管理模擬器或您使用來測試您的應用程式的黑莓設備。您可以添加或刪除一個目標，或將目標設置為的預設目標。
 
@@ -56,7 +58,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `-p | --password <password>`指定的設備或模擬程式的密碼。只有在設備或模擬器是受密碼保護，這是必需的。
 
-*   `--pin <device-pin>`指定的黑莓設備，作為一個有效的主機調試標記標識該設備的 PIN。 此參數是必需的只有當您要創建一個調試標記。
+*   `--pin <device-pin>`指定的黑莓設備，作為一個有效的主機調試標記標識該設備的 PIN。 只有在創建調試權杖時，此參數是必需的。
 
 ### 刪除目標
 
@@ -68,11 +70,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     < 路徑到專案 >/科爾多瓦/目標預設 < 名稱 >
     
 
-## 生成
+## 構建應用程式
 
 `build`命令將生成作為.bar 檔的專案。 您可以建立您的應用程式中任何一種釋放模式 （會產生一個簽名的.bar 檔） 或在偵錯模式下 （會產生一個無符號的.bar 檔）。
 
-### 生成您在發佈模式下的專案
+### 構建在發佈模式下的應用程式
 
     < 路徑到專案 >/科爾多瓦/生成釋放 [-k |-keystorepass < 密碼 >] [-b |-buildId < 數量 >] [-p |-params < params JSON 檔 >]
     
@@ -85,7 +87,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `-p | --params <params-JSON-file>`指定包含要傳遞給下游工具的額外參數的 JSON 檔。此參數是可選的。
 
-### 生成您在偵錯模式下的專案
+### 生成在偵錯模式下專案
 
     < 路徑到專案 >/科爾多瓦/生成調試 [< 目標 >] [-k |-keystorepass < 密碼 >] [-p |-params < params JSON 檔 >] [-ll | — — loglevel < error|warn|verbose >]
     
@@ -100,41 +102,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `-ll | --loglevel <level>`指定的日誌級別。日誌級別可能是 `error` ， `warn` ，或`verbose`.
 
-如果你有以前定義一個預設目標 （和以前安裝調試的標記，如果這一目標是黑莓設備），你可以不帶任何參數運行該腳本，該腳本將打包您的應用程式並將它部署到預設的目標。 例如：
+如果你有以前定義一個預設目標 （和以前安裝調試的標記，如果這一目標是黑莓設備），您可以使用運行該腳本沒有參數和腳本包您的應用程式並將它部署到的預設目標。 例如：
 
     < 路徑到專案 >/科爾多瓦/生成調試
     
 
-## 運行
+## 運行應用程式
 
-`run`命令部署該應用程式指定的黑莓設備或模擬程式上。 在部署之前您的應用程式，您必須首先創建一個目標設備或模擬程式您想要將您的應用程式部署到使用目標的腳本。 部署腳本將部署您的應用程式的最新版本。
+`run`命令將部署應用程式的最新生成指定的黑莓設備或模擬程式上。若要部署您的應用程式，您需要指定一個目標設備或模擬程式：
 
     < 路徑到專案 >/科爾多瓦/運行 < 目標 >
     
 
-在哪裡
+...現場 `<target>` 指定以前添加的目標的名稱。 如果 `<target>` 是一個設備，然後它必須連接到您的電腦通過 USB 電纜，或者在您的電腦位於同一 Wi-Fi 網路。
 
-*   `<target>`指定以前添加的目標的名稱。 如果 `<target>` 是一個設備，然後該設備必須連接到您的電腦的 USB 連接或連接到您的電腦位於同一 Wi-Fi 網路。
+## 控制碼外掛程式
 
-## 外掛程式
-
-`target`命令允許您添加和刪除外掛程式
-
-### 獲取本地承載的外掛程式
+`target`命令允許您添加和刪除外掛程式。要獲取本地承載的外掛程式：
 
     < 路徑到專案 >/科爾多瓦/外掛程式 fetch < 路徑到外掛程式 >
     
 
-### 查看已安裝的外掛程式的清單
+查看已安裝外掛程式的清單：
 
     < 路徑到專案 >/科爾多瓦/外掛程式 ls
     
 
-### 添加外掛程式
+添加外掛程式：
 
     < 路徑到專案 >/科爾多瓦/外掛程式添加 < 名稱 >
     
 
-### 刪除某個外掛程式
+刪除某個外掛程式：
 
     < 路徑到專案 >/科爾多瓦/外掛程式 rm < 名稱 >

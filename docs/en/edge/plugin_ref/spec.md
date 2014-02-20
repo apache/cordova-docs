@@ -265,7 +265,7 @@ Details for the `<js-module>` tag:
       `<clobbers/>` or `<merges/>` is redundant, since they also
       `cordova.require` your module.
 
-    - An empty `<js-module>` still loads and can be acccessed in other
+    - An empty `<js-module>` still loads and can be accessed in other
       modules via `cordova.require`.
 
 If `src` does not resolve to an existing file, plugman stops and

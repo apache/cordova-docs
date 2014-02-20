@@ -29,6 +29,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Soporte de plataformas
+      </h2>
+      
+      <span>Tabla de compatibilidad para todas las funciones principales.</span>
+    </li>
+    <li>
+      <h2>
         La interfaz de línea de comandos
       </h2>
       
@@ -36,52 +43,66 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Guías de plataforma
+        Guías de plataformas
       </h2>
       
       <span>Configurar cada SDK y actualización de proyectos</span>
     </li>
     <li>
       <h2>
+        Utilizando Plugman para administrar Plugins
+      </h2>
+      
+      <span>Utilizando Plugman para administrar Plugins sin el CLI</span>
+    </li>
+    <li>
+      <h2>
         El archivo config.xml
       </h2>
       
-      <span>Personalizar las características de la bobina</span>
+      <span>Personaliza las prestaciones de tu aplicación.</span>
     </li>
     <li>
       <h2>
-        Los iconos y las pantallas Splash
+        Iconos y pantallas de Splash
       </h2>
       
-      <span>Personalizar imágenes muestra la aplicación.</span>
+      <span>Personaliza las ímagenes que son mostradas por tu aplicación.</span>
     </li>
     <li>
       <h2>
-        Incrustar WebViews
+        WebViews embebidas
       </h2>
       
-      <span>Implementar la Cordova WebView en su proyecto.</span>
+      <span>Implementa el Cordova WebView en tu proyecto.</span>
     </li>
     <li>
       <h2>
-        Guía de desarrollo de plugin
+        Guía de desarrollo de Plugins
       </h2>
       
-      <span>Desarrollar su primer plugin.</span>
+      <span>Desarrolla tu primer Plugin.</span>
     </li>
     <li>
       <h2>
         Guía de privacidad
       </h2>
       
-      <span>Aprenda sobre cuestiones de privacidad móvil importante.</span>
+      <span>Aprende acerca de las incidencias de privacidad más importantes del mundo mobile .</span>
     </li>
     <li>
       <h2>
-        Guía de lista blanca
+        Guía Whitelist
       </h2>
       
-      <span>Conceder una solicitud acceso a recursos externos.</span>
+      <span>Permite a la aplicaciones acceder a recursos externos.</span>
+    </li>
+    <li>
+      <h2>
+        Almacenamiento
+      </h2>
+      
+      <span>Una perspectiva de las opciones de almacenamiento nativas.</span>
     </li>
     <li>
       <h2>
@@ -99,115 +120,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Acelerómetro
-      </h2>
-      
-      <span>Aprovechar el sensor de movimiento del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Cámara
-      </h2>
-      
-      <span>Una foto con la cámara del dispositivo de captura.</span>
-    </li>
-    <li>
-      <h2>
-        Captura
-      </h2>
-      
-      <span>Aplicaciones de captura de captura archivos de medios usando los medios de comunicación del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Brújula
-      </h2>
-      
-      <span>Obtener la dirección que apunta el dispositivo.</span>
-    </li>
-    <li>
-      <h2>
-        Conexión
-      </h2>
-      
-      <span>Comprobar rápidamente el estado de la red e información de la red celular.</span>
-    </li>
-    <li>
-      <h2>
-        Contactos
-      </h2>
-      
-      <span>Trabajar con la base de datos de dispositivos contacto.</span>
-    </li>
-    <li>
-      <h2>
-        Dispositivo
-      </h2>
-      
-      <span>Recopilar información específica del dispositivo.</span>
-    </li>
-    <li>
-      <h2>
         Eventos
       </h2>
       
-      <span>Gancho en eventos nativas a través de JavaScript.</span>
+      <span>Hooks a eventos nativos a través de JavaScript.</span>
     </li>
     <li>
       <h2>
-        Archivo
+        Plugin APIs
       </h2>
       
-      <span>Gancho en sistema de archivos nativo a través de JavaScript.</span>
-    </li>
-    <li>
-      <h2>
-        Geolocalización
-      </h2>
-      
-      <span>Conocer la ubicación de su aplicación.</span>
-    </li>
-    <li>
-      <h2>
-        Globalización
-      </h2>
-      
-      <span>Permiten la representación de objetos específicos a un escenario.</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>Lanzar URLs en otra instancia de navegador in-app.</span>
-    </li>
-    <li>
-      <h2>
-        Los medios de comunicación
-      </h2>
-      
-      <span>Grabar y reproducir archivos de audio.</span>
-    </li>
-    <li>
-      <h2>
-        Notificación
-      </h2>
-      
-      <span>Notificaciones de dispositivo audible, visual y táctil,.</span>
-    </li>
-    <li>
-      <h2>
-        SplashScreen
-      </h2>
-      
-      <span>Mostrar y ocultar la pantalla de presentación de solicitudes.</span>
-    </li>
-    <li>
-      <h2>
-        Almacenamiento de información
-      </h2>
-      
-      <span>Gancho en las opciones de almacenamiento nativo de dispositivos.</span>
+      <span>Descubre que plugins Cordova están disponibles para ser utilizados en tu proyecto.</span>
     </li>
   </ul>
 </div>

@@ -58,7 +58,7 @@ Blackberry 10 requires an icon element in config.xml:
 
         <icon src="blackberry10/icon-86.png" />
 
-See BlackBerry's documentation for tareting multiple sizes and locales.
+See BlackBerry's documentation for targeting multiple sizes and locales.
 
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
@@ -122,57 +122,44 @@ The size for each should be:
 - medium (mdpi): at least 470 &times; 320
 - small (ldpi): at least 426 &times; 320
 
-If you want to use
-the default splash screen images provided in Cordova, you'll need to copy the
-png files from `platforms/android/www/res/screen/android` to
-`platforms/android/res/drawable*/`:
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-
+When creating a new Android project, the default splash screen images
+provided in the Cordova sample app should already be present in the
+`platforms/android/res/drawable*` directories. Feel free to replace these
+with your own images.
+When providing your own splash screen images, you do not need to 
+provide the same permutation of 8 as the Cordova default ones
+here.  More or less optimization can be used. 
 The `drawable` directory names must follow the Android conventions for
 supporting
 [screen sizes](http://developer.android.com/guide/practices/screens_support.html) and
 [alternate resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
-In `config.xml`, add the following preferences:
+In the top-level `config.xml` file (not the one in `platforms`), add the
+following preferences:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
 
 The first line sets the image to display as the splash screen. This is the
-file name of the png in the `drawable*` directories. If you
-name the image anything other than `splash.png`, you need to modify
-this line. Do not include the filename extension (i.e., `.png`).
-If you want to use the default splash screens provided in
-Cordova as listed above, use the value `screen`.
+file name of the png in the `drawable*` directories, minus the `.png`
+extension. The default value for SplashScreen is `screen` (for the file
+`platforms/android/res/drawable*/screen.png`), so if you
+name the image anything other than `screen.png` in the `drawable*` directories,
+you need to add/modify this line.
 
 The second line sets the default delay of how long the splashscreen appears in
-milliseconds. This should be the maximum expected start time.
+milliseconds. This should be the worst-case expected start time.
 The default value for SplashScreenDelay is 3000 ms.
 
-Finally, the splash screen should be present only as long as necessary. When
-your app has started and the webview has loaded, your app should hide the
-splash screen so that your main view is visible. Because the app start time
-will vary quite a bit due to a number of factors, it is recommended that your
-app explicitly invoke `navigator.splashscreen.hide()` in the Javascript
+Finally, as a best practice, the splash screen should be present only as long
+as necessary. When your app has started and the webview has loaded, your app
+should hide the splash screen so that your main view is visible as soon as it
+is ready. Because the app start time will vary quite a bit due to a number of
+factors such as CPU speed and network, it is recommended that your app
+explicitly invoke `navigator.splashscreen.hide()` in the JavaScript
 method that responds to the `deviceready` event. Otherwise the splash screen
-will be visible for the SplashScreenDelay value that you configured above.
+will be visible for the SplashScreenDelay value that you configured above,
+which is likely longer than necessary.
 This event-driven approach is highly recommended versus having the splash
 screen visible for always a fixed duration.
 

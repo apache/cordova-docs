@@ -25,7 +25,7 @@ El evento se desencadena cuando Cordova está completamente cargado.
 
 Este evento es esencial para cualquier aplicación. Señales de que dispositivo de Cordova APIs han cargado y están listas para acceder.
 
-Córdoba se compone de dos bases de código: nativo y JavaScript. Mientras se carga el código nativo, muestra una imagen de carga personalizada. Sin embargo, JavaScript sólo carga una vez que el DOM cargas. Esto significa que la aplicación web potencialmente puede llamar a una función Cordova JavaScript antes el código nativo correspondiente está disponible.
+Córdoba se compone de dos bases de código: nativo y JavaScript. Mientras se carga el código nativo, muestra una imagen de carga personalizada. Sin embargo, JavaScript sólo carga una vez que el DOM cargas. Esto significa que la aplicación web potencialmente puede llamar a una función Cordova JavaScript antes el código nativo correspondiente esté disponible.
 
 El evento `deviceready` se desencadena una vez Cordova ha cargado completamente. Una vez los fuegos del evento, con seguridad puede hacer llamadas a APIs de Cordova. Aplicaciones típicamente Instale un detector de eventos con `document.addEventListener` una vez que ha cargado el DOM del documento HTML.
 
@@ -33,8 +33,9 @@ El evento `deviceready` se comporta algo diferentemente de otros. Cualquier cont
 
 ## Plataformas soportadas
 
+*   Amazon fuego OS
 *   Android
-*   BlackBerry WebWorks (OS 5.0 y superiores)
+*   BlackBerry 10
 *   iOS
 *   Tizen
 *   Windows Phone 7 y 8

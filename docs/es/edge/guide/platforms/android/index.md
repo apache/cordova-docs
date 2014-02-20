@@ -16,7 +16,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guía de la plataforma Android
 
-Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Vea el siguiente para obtener más información específica de la plataforma:
+Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Te camina a través del proceso de instalar el SDK de Android, abrir un proyecto de Android en Eclipse SDK y el despliegue en un emulador o dispositivo. Usted necesitará seguir esta guía para por lo menos instalar el SDK de Android, independientemente de que flujo de trabajo que está siguiendo. (Tanto los flujos *Web proyecto Dev* y *Nativos plataforma Dev* requieren el SDK de Android para instalarse y accesible vía la ruta).
+
+Vea el siguiente para obtener más información específica de la plataforma:
 
 *   Configuración de Android
 *   Android WebViews
@@ -24,7 +26,7 @@ Esta guía le muestra cómo configurar el entorno de desarrollo SDK para despleg
 *   Actualizar Android
 *   Android Herramientas de línea de comandos
 
-Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos de Cordova para obtener más información sobre la interfaz actual.
+Las herramientas de línea de comandos anteriores se refieren a las versiones anteriores Cordova 3.0. Ver la interfaz de línea de comandos para obtener información sobre la interfaz actual.
 
 ## Requisitos y apoyo
 
@@ -44,20 +46,19 @@ NOTE, doc said:
 
 Los desarrolladores deberían usar la `cordova` utilidad en conjunción con el SDK de Android. Ver la interfaz de línea de comandos para obtener información como instalarlo, agregar proyectos, entonces construir e implementar un proyecto.
 
-## Instalar el SDK
-
-Instalar el SDK de Android desde [developer.android.com/sdk][3]. De lo contrario usted puede presentarse con una selección de donde instalar el SDK, mueva el descargado `adt-bundle` árbol a dondequiera que usted almacenar herramientas de desarrollo.
+Instalar el SDK de Android desde [Developer.Android.com/SDK][3]. El sdk de android se distribuye como un ' adt-paquete -<os>-<arch>-<ver>' archivo. En windows, el adt-paquete viene con un instalador. En OSX y Linux, simplemente descomprimir el 'adt-bundle' en el lugar se almacenan herramientas de desarrollo. [Aquí encontrará información más detallada sobre la configuración del SDK de Android][4]
 
  [3]: http://developer.android.com/sdk/
+ [4]: http://developer.android.com/sdk/installing/bundle.html
 
 Cordova Herramientas de línea de comandos trabajar, es necesario incluir el SDK `tools` y `platform-tools` directorios en su entorno PATH. En Mac, puede utilizar un editor de texto para crear o modificar el `~/.bash_profile` archivo, añadir una línea como la siguiente, dependiendo de donde se instala el SDK:
 
-    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
+    export PATH = ${PATH}: / / adt-bundle/sdk/plataforma-herramientas de desarrollo: / desarrollo/adt-bundle/sdk/herramientas
     
 
 Esto expone SDK tools en windows terminales recién inauguradas. De lo contrario corre para que estén disponibles en el actual período de sesiones:
 
-    $ source ~/.bash_profile
+    $ fuente ~/.bash_profile
     
 
 Para modificar el entorno PATH en Windows 7:
@@ -72,21 +73,24 @@ Para modificar el entorno PATH en Windows 7:
 
 *   Agregue lo siguiente a la ruta basada en donde se ha instalado el SDK, por ejemplo:
     
-        ;C:\Development\adt-bundle\sdk\platform-Tools;C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
         
 
 *   El valor de guardar y cerrar ambos cuadros de diálogo.
 
 También necesitará habilitar Java y Ant. abrir un símbolo del sistema y el tipo `java` y también de tipo `ant` . Anexar a la trayectoria de cualquiera que no se puedan ejecutar:
 
-        ; %JAVA_HOME%\bin;%ANT_HOME%\bin
+        ;%JAVA_HOME%\bin;%ANT_HOME%\bin
     
 
 ## Abrir un proyecto en el SDK
 
-Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en el Cordova la línea de comandos de interfaz. Por ejemplo, en un directorio del código fuente:
+Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en la Córdoba del interfaz de comandos. Por ejemplo, en un directorio del código fuente:
 
-        $ cordova crear Hola com.example.hello "HelloWorld" $ cd Hola $ cordova plataforma añadir construir android $ cordova
+        $ cordova create hello com.example.hello "HelloWorld"
+        $ cd hello
+        $ cordova platform add android
+        $ cordova build
     
 
 Una vez creado, aquí es cómo utilizar el SDK para modificarlo:
@@ -95,13 +99,15 @@ Una vez creado, aquí es cómo utilizar el SDK para modificarlo:
 
 *   Seleccione el elemento de menú **Nuevo proyecto** .
 
-*   Elija **Proyecto Android de código existente** en el cuadro de diálogo resultante y pulse **siguiente**: ![][4]
+*   Elija **Proyecto Android de código existente** en el cuadro de diálogo resultante y pulse **siguiente**: ![][5]
 
 *   Vaya a `hello` , o cualquier directorio que creó para el proyecto, luego en el `platforms/android` subdirectorio.
 
+*   Asegúrese de que ambos `hello` y `hello-CordovaLib` proyectos son seleccionados para ser importados. El `hello-CordovaLib` proyecto es necesaria a partir de Cordova 3.3.0 porque Cordova ahora se utiliza como una biblioteca de Android en lugar de un archivo jar.
+
 *   Pulse **Finalizar**.
 
- [4]: img/guide/platforms/android/eclipse_new_project.png
+ [5]: img/guide/platforms/android/eclipse_new_project.png
 
 Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color rojo indicar los problemas irresueltos. Si es así, siga estos pasos adicionales:
 
@@ -123,46 +129,46 @@ Puede utilizar la `cordova` utilidad para ejecutar una aplicación en un emulado
 
 *   Desde dentro de Eclipse, presione este icono de la barra de herramientas:
     
-    ![][5]
+    ![][6]
 
- [5]: img/guide/platforms/android/eclipse_android_sdk_button.png
+ [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
 
 Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de ejecución:
 
-![][6]
+![][7]
 
- [6]: img/guide/platforms/android/asdk_window.png
+ [7]: img/guide/platforms/android/asdk_window.png
 
 Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
 
-![][7]
+![][8]
 
- [7]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_device.png
 
 Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_newAVD.png
 
 La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
 
-![][9]
+![][10]
 
- [9]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_avds.png
 
 Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
 
-![][10]
+![][11]
 
- [10]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_emulator.png
 
 En este punto se puede utilizar la `cordova` utilidad para desplegar la aplicación en el emulador desde la línea de comandos:
 
-        $ cordova emular android
+        $ cordova emulate android
     
 
-Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **ejecuta como → aplicación para Android**. Se le podría especificar una AVD si no aparece ninguna ya abierto.
+Si en cambio trabajas dentro de Eclipse, haga clic derecho en el proyecto y elija **ejecuta como → aplicación para Android**. Se le podría especificar una AVD si no aparece ninguna ya abierto.
 
 Para una experiencia más rápida, utilice una imagen de emulador basados en Intel:
 
@@ -174,15 +180,15 @@ Para una experiencia más rápida, utilice una imagen de emulador basados en Int
 
 *   Al iniciar el emulador, asegúrese que no hay error mensajes indicando la imposibilidad de cargar módulos HAX.
 
-## Desplegar en el dispositivo
+## Implementar al dispositivo
 
-Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][11]y utilice un cable mini-USB para conectarlo a su sistema.
+Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][12]y utilice un cable mini-USB para conectarlo a su sistema.
 
- [11]: http://developer.android.com/tools/device.html
+ [12]: http://developer.android.com/tools/device.html
 
 Usted puede empujar la aplicación al dispositivo de la línea de comandos:
 
-        $ cordova corre android
+        $ cordova run android
     
 
 Alternativamente dentro de Eclipse, haga clic derecho en el proyecto y elija **ejecuta como → aplicación para Android**.

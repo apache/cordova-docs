@@ -106,7 +106,7 @@ BlackBerry 10's use of wildcards differs from other platforms in two
 ways:
 
 * Any content accessed by `XMLHttpRequest` must be declared
-  explicity. Setting `origin="*"` does not work in this case.
+  explicitly. Setting `origin="*"` does not work in this case.
   Alternatively, all web security may be disabled using the
   `WebSecurity` preference described in BlackBerry Configuration:
  
@@ -133,7 +133,7 @@ ways:
 
 ## iOS Changes in 3.1.0
 
-Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whilelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change your `config.xml` file in order to continue whitelisting the same set of resources as before.
+Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whitelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change your `config.xml` file in order to continue whitelisting the same set of resources as before.
 
 Specifically, these patterns need to be updated:
 

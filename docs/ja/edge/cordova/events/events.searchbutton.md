@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# ［ 検索 ］
+# searchbutton
 
 Android 上に検索ボタンを押したときに発生します。
 
