@@ -49,8 +49,6 @@ You need the following:
 - [Visual Studio](http://www.visualstudio.com/downloads), either the
   _Ultimate_, _Premium_, or _Professional_ 2013 editions.
 
-  <!-- true? -->
-
 Apps compiled under Windows 8.1 do _not_ run under Windows 8.0. Apps
 compiled under Windows 8.0 are forward-compatible with 8.1.
 
