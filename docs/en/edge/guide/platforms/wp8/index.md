@@ -52,7 +52,7 @@ You need the following:
 - A 64-bit version of Windows 8 Pro, either an installation disk or an
   _ISO_ disk image file. An evaluation version is available on the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
-  The Pro version is necessary to run the device emulator,
+  The Pro version is necessary to run the device emulator.
 
 - The [Windows Phone SDK](https://dev.windowsphone.com/en-us/downloadsdk).
 
