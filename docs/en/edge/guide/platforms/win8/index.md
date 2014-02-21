@@ -139,8 +139,6 @@ next `build`:
 
 ## Open the Project in the SDK and Deploy the App
 
-<!-- wasn't able to 'run' or 'emulate', so doc'ing SDK as fallback -->
-
 Once you build a Cordova app as described above, you can open it with
 Visual Studio. The various `build` commands generate a Visual Studio
 Solution (_.sln_) file. Open the file in the File Explorer to modify
