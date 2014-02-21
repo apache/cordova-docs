@@ -61,26 +61,33 @@ project.
 
 Install the Android SDK from
 [developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
-is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file.
+is distributed as an 'adt-bundle-&lt;os&gt;-&lt;arch&gt;-&lt;ver&gt;' file.
 On windows, the adt-bundle is packaged with an installer.
 On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
 [More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
 
 
 For Cordova command-line tools to work, you need to include the SDK's
-`tools` and `platform-tools` directories in your PATH environment.  On
-Mac, you can use a text editor to create or modify the
-`~/.bash_profile` file, adding a line such as the following, depending
-on where the SDK installs:
+`tools` and `platform-tools` directories in your PATH environment. You also
+will need `java` and `ant`. You may already have `java` and `ant` in your
+PATH environment, try invoking them from a command line prompt to see if they
+are missing, and add only what is missing to your PATH. Be aware that Mavericks
+omits `ant` as compared to previous versions of OSX, so you may need to
+install `ant` separately if you are using Mavericks or later of OSX. On
+OSX or Linux, you can use a text editor to create or modify the
+`~/.bash_profile` file, adding a line such as the following (modify the
+locations to where the SDK is installed on your workstation):
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
-This exposes SDK tools in newly opened terminal windows. Otherwise run
-this to make them available in the current session:
+Add the paths for `java` and `ant` if needed. This line in `~/.bash_profile`
+exposes these tools in newly opened terminal windows. If your terminal
+window is already open in OSX, or to avoid a logout/login on Linux, run
+this to make them available in the current terminal window:
 
     $ source ~/.bash_profile
 
-To modify the PATH environment on Windows 7:
+To modify the PATH environment on Windows:
 
 * Click on the __Start__ menu in the lower-left corner of the desktop,
   right-click on __Computer__, then click __Properties__.
@@ -98,9 +105,9 @@ To modify the PATH environment on Windows 7:
 
 * Save the value and close both dialog boxes.
 
-You may also need to enable Java and Ant. Open a command prompt and
-type `java`, and also type `ant`. Append to the PATH whichever fail to
-run:
+* You may also need to add Java and Ant. Open a command prompt and
+type `java`, and also type `ant`. For whichever fail to run, append to the PATH
+like this:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
