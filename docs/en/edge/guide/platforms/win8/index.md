@@ -46,8 +46,6 @@ You need the following:
   _ISO_ disk image file. An evaluation version is available on the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
 
-  <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
-
 - [Visual Studio](http://www.visualstudio.com/downloads), either the
   _Ultimate_, _Premium_, or _Professional_ 2013 editions.
 
