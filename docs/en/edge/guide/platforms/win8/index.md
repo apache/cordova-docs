@@ -53,6 +53,9 @@ You need the following:
 
   <!-- true? -->
 
+Apps compiled under Windows 8.1 do _not_ run under Windows 8.0. Apps
+compiled under Windows 8.0 are forward-compatible with 8.1.
+
 To develop Cordova apps for Windows 8, you may use a PC running
 Windows, but you may also develop on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a
