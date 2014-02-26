@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Guía de la plataforma Android
 
-Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Te camina a través del proceso de instalar el SDK de Android, abrir un proyecto de Android en Eclipse SDK y el despliegue en un emulador o dispositivo. Usted necesitará seguir esta guía para por lo menos instalar el SDK de Android, independientemente de que flujo de trabajo que está siguiendo. (Tanto los flujos *Web proyecto Dev* y *Nativos plataforma Dev* requieren el SDK de Android para instalarse y accesible vía la ruta).
+Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Android. Te camina a través del proceso de instalar el SDK de Android, abrir un proyecto de Android en Eclipse SDK y el despliegue en un emulador o dispositivo. Usted necesitará seguir esta guía para por lo menos instalar el SDK de Android, independientemente de que flujo de trabajo que está siguiendo. (Ambos las *Web proyecto Dev* *Dev plataforma nativa* flujos de trabajo y requieren el SDK de Android para instalarse y accesible a través de la ruta).
 
 Vea el siguiente para obtener más información específica de la plataforma:
 

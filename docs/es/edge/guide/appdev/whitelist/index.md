@@ -114,7 +114,7 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
 
 ## iOS cambios en 3.1.0
 
-Antes de la versión 3.1.0, Cordova-iOS incluyó algunas extensiones no estándares para el dominio whilelisting esquema apoyado por otras plataformas de Córdoba. A partir de 3.1.0, la lista blanca de iOS ahora se ajusta a la sintaxis de lista blanca de recursos descrita en la parte superior de este documento. Si actualiza desde pre-3.1.0 y usaban estas extensiones, tienes que cambiar tu `config.xml` archivo para continuar whitelisting el mismo conjunto de recursos como antes.
+Antes de la versión 3.1.0, Cordova-iOS incluyó algunas extensiones no estándares al dominio whitelisting esquema apoyado por otras plataformas de Cordova. A partir de 3.1.0, la lista blanca de iOS ahora se ajusta a la sintaxis de lista blanca de recursos descrita en la parte superior de este documento. Si actualiza desde pre-3.1.0 y usaban estas extensiones, tienes que cambiar tu `config.xml` archivo para continuar whitelisting el mismo conjunto de recursos como antes.
 
 Específicamente, estos patrones necesitan ser actualizados:
 

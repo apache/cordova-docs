@@ -20,7 +20,7 @@ Esta guía le muestra cómo modificar proyectos Android para actualizar desde ve
 
 ## Actualizando a 3.3.0 desde 3.2.0
 
-Siga las mismas instrucciones para `3.2.0`.
+Siga las mismas instrucciones en cuanto a`3.2.0`.
 
 A partir de 3.3.0, el runtime de Cordova es compilado como una librería Android en vez de un jar. Esto debería no tienen ningún efecto para el uso de línea de comandos, pero los usuarios IDE tendrá que importar el recién agregado `MyProject-CordovaLib` proyecto en su espacio de trabajo.
 

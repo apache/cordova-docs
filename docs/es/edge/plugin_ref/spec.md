@@ -187,7 +187,7 @@ Detalles para el `<js-module>` etiqueta:
     
     *   `<runs/>`significa que el código debe especificarse con `cordova.require` , pero no instalado en el `window` objeto. Esto es útil cuando se inicializó el módulo, adjuntar controladores de eventos o de otra manera. Sólo puedes tener hasta uno `<runs/>` etiqueta. Tenga en cuenta que incluso un `<runs/>` con `<clobbers/>` o `<merges/>` es redundante, puesto que también `cordova.require` su módulo.
     
-    *   Vacío `<js-module>` todavía carga y puede ser acccessed en otros módulos vía`cordova.require`.
+    *   Vacío `<js-module>` todavía las cargas y se puede acceder en otros módulos vía`cordova.require`.
 
 Si `src` no se resuelve en un archivo existente, plugman se detiene y revierte la instalación, emite una notificación del problema y sale con un código distinto de cero.
 

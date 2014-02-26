@@ -61,7 +61,7 @@ Plugins deberían utilizar el `initialize` método para su lógica puesta en mar
 
 ## Escribir un Plugin de Java Android
 
-Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el plugin de Java correspoinding se asigna correctamente en el `config.xml` archivo, pero ¿qué aspecto tiene el final Android Java Plugin clase? Lo que es enviado al plugin de JavaScript `exec` función se pasa a la clase plugin `execute` método. La mayoría `execute` implementaciones de este aspecto:
+Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el plugin de Java correspondiente se asigna correctamente en el `config.xml` archivo, pero ¿qué aspecto tiene el final Android Java Plugin clase? Lo que es enviado al plugin de JavaScript `exec` función se pasa a la clase plugin `execute` método. La mayoría `execute` implementaciones de este aspecto:
 
         @Override public boolean ejecutar (acción de las cuerdas, JSONArray args, CallbackContext callbackContext) lanza JSONException {si ("beep".equals(action)) {this.beep(args.getLong(0));
                 callbackContext.success();

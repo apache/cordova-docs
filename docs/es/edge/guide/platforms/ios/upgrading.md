@@ -48,7 +48,7 @@ Para los proyectos de CLI:
 
 iOS 7 temas:
 
-1.  Eliminar `width=device-width, height=device-height` de la `index.html` del archivo `viewport` `meta` etiqueta. (Véase [el fallo relevante][1].)
+1.  Eliminar `width=device-width, height=device-height` de la `index.html` del archivo `viewport` `meta` etiqueta. (Véase [el fallo correspondiente][1].)
 
 2.  Actualiza tus plugins de núcleo los medios de comunicación, medios de comunicación-captura y splashscreen por iOS 7 apoyo.
 

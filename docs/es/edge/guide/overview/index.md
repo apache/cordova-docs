@@ -56,7 +56,7 @@ Cuando primero empezando, tal vez sea más fácil utilizar el flujo de trabajo *
 
 *   Para muchas plataformas móviles, también puede utilizar la CLI para configurar los ficheros de proyecto adicional necesarios para compilar dentro de cada SDK. Para que funcione, es necesario instalar el SDK de la plataforma de cada destino. (Vea a las guías de plataforma para obtener instrucciones). Como se indica en la tabla de soporte de plataformas, necesitará ejecutar el CLI en diferentes sistemas operativos, dependiendo de la plataforma de destino.
 
-*   Para apoyar las plataformas, la CLI puede compilar aplicaciones ejecutables y ejecutarlos en un emulador de dispositivos basados en SDK. Para la prueba integral, también puede generar archivos de aplicación e instalarlos directamente en un dispositivo.
+*   Para apoyar las plataformas, la CLI puede compilar aplicaciones ejecutables y ejecutarlos en un emulador de dispositivos basados en el SDK. Para la prueba integral, también puede generar archivos de aplicación e instalarlos directamente en un dispositivo.
 
 En cualquier punto en el ciclo de desarrollo, puede cambiar a usar más el flujo de trabajo *Nativo plataforma Dev* . Las herramientas de específica de la plataforma SDK proporcionadas pueden proporcionar un rico conjunto de opciones. (Vea las guías de plataforma para obtener más información sobre herramienta de SDK de la plataforma cada conjunto).
 

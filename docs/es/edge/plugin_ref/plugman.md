@@ -37,7 +37,7 @@ Además debes tener `git` en tu `PATH` para poder instalar los plugins directame
 
 **TIP:** Si encuentras que luego de instalar plugman con npm aún no puedes ejecutar ningún comando `plugman`, asegúrate de que has agregado el directorio de `/npm/` en tu `PATH`.
 
-**NOTA:** Puedes saltarte este paso si no quieres "contaminar" tu namespace de npm instalando Plugman globalmente. Si este es el caso, entonces cuando generes un proyecto Cordova con las herramientas shell, se creará un directorio llamado `node_modules` dentro del proyecto que contenga Plugman. Como hiciste la instalación global, tendrás que invocar node en cada comando Plugman, por ejemplo, `node ./node_modules/plugman/main.js -version`. El resto de esta guía asume que has instalado Plugman globalmente, lo que implica que podrás invocarlo solo con `plugman`.
+**NOTA:** Puedes saltarte este paso si no quieres "contaminar" tu namespace de npm instalando Plugman globalmente. Si este es el caso, entonces cuando generes un proyecto Cordova con las herramientas shell, se creará un directorio llamado `node_modules` dentro del proyecto que contenga Plugman. Puesto que no se instalar en todo el mundo, usted tendrá que invocar nodo para cada comando Plugman, por ejemplo `node ./node_modules/plugman/main.js -version` . El resto de esta guía asume que has instalado Plugman globalmente, lo que implica que podrás invocarlo solo con `plugman`.
 
 ## Crear un proyecto Cordova
 
