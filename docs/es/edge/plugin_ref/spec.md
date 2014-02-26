@@ -187,7 +187,7 @@ Detalles para el `<js-module>` etiqueta:
     
     *   `<runs/>`significa que el código debe especificarse con `cordova.require` , pero no instalado en el `window` objeto. Esto es útil cuando se inicializó el módulo, adjuntar controladores de eventos o de otra manera. Sólo puedes tener hasta uno `<runs/>` etiqueta. Tenga en cuenta que incluso un `<runs/>` con `<clobbers/>` o `<merges/>` es redundante, puesto que también `cordova.require` su módulo.
     
-    *   Vacío `<js-module>` todavía carga y puede ser acccessed en otros módulos vía`cordova.require`.
+    *   Vacío `<js-module>` todavía las cargas y se puede acceder en otros módulos vía`cordova.require`.
 
 Si `src` no se resuelve en un archivo existente, plugman se detiene y revierte la instalación, emite una notificación del problema y sale con un código distinto de cero.
 
@@ -368,13 +368,14 @@ Identifica un marco (generalmente parte de la plataforma/OS) de la cual depende 
 
 Ejemplos:
 
-    <framework src="libsqlite3.dylib" />
-    <framework src="social.framework" weak="true" />
+    < marco src="libsqlite3.dylib" / >< marco src="social.framework" débil = "true" / >< marco src="relative/path/to/my.framework" personalizado = "true" / >
     
 
 El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
 
 Opcional `weak` atributo es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es`false`.
+
+Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es`false`.
 
 ## *info* Elemento
 

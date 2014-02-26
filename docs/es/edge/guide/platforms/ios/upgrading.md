@@ -18,7 +18,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta guía le muestra cómo modificar los proyectos iOS para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
-**Nota**: Xcode 4.6 se requiere, se recomienda 5 Xcode. En la actualidad, para presentar a la App Store de Apple, utilice la última versión de iOS SDK, enviada que es iOS 7. iOS SDK 7 no es necesario todavía, pero esto puede cambiar rápidamente.
+**Nota**: se requiere Xcode 5. En la actualidad, para presentar a la App Store de Apple, utilice la última versión de iOS SDK, el cual es iOS 7 enviada y esto se incluye sólo con Xcode 5.
+
+## Proyectos de modernización 3.3.0 a 3.4.0
+
+Para proyectos no-CLI, ejecute:
+
+        bin/update path/to/project
+    
+
+Para los proyectos de CLI:
+
+1.  Actualización de la `cordova` versión CLI. Vea la interfaz de línea de comandos.
+
+2.  Ejecutar`cordova platform update ios`
+
+## Proyectos de actualización 3.2.0 a 3.3.0
+
+Para proyectos no-CLI, ejecute:
+
+        bin/update path/to/project
+    
+
+Para los proyectos de CLI:
+
+1.  Actualización de la `cordova` versión CLI. Vea la interfaz de línea de comandos.
+
+2.  Ejecutar`cordova platform update ios`
 
 ## Proyectos de modernización 3.1.0 a 3.2.0
 
@@ -48,7 +74,7 @@ Para los proyectos de CLI:
 
 iOS 7 temas:
 
-1.  Eliminar `width=device-width, height=device-height` de la `index.html` del archivo `viewport` `meta` etiqueta. (Véase [el fallo relevante][1].)
+1.  Eliminar `width=device-width, height=device-height` de la `index.html` del archivo `viewport` `meta` etiqueta. (Véase [el fallo correspondiente][1].)
 
 2.  Actualiza tus plugins de núcleo los medios de comunicación, medios de comunicación-captura y splashscreen por iOS 7 apoyo.
 
@@ -261,7 +287,7 @@ platform add ios`.
 
 11. Borrar tu `CordovaLib` Directorio y copiar el `CordovaLib` directorio desde el nuevo proyecto en el directorio raíz de su proyecto.
 
-12. Agregar a AssetsLibrary.framework como un recurso a su proyecto. (Ver [documentación de Apple][16] para obtener instrucciones sobre cómo hacerlo.).
+12. Agregar a AssetsLibrary.framework como un recurso a su proyecto. (Consulte [la documentación de Apple][16] para obtener instrucciones sobre cómo hacerlo.).
 
  [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
  [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
@@ -292,7 +318,7 @@ platform add ios`.
 
 11. Añadir el plugin InAppBrowser para su `config.xml` , añadiendo esta etiqueta bajo `<cordova><plugins>` :
     
-        < nombre del plugin = "InAppBrowser" value = "CDVInAppBrowser" / >
+        <plugin name="InAppBrowser" value="CDVInAppBrowser" />
         
 
 12. Nota que los plugins Objective-C son ya *no* clasificarlas. A la lista blanca sus conexiones con la lista blanca de la aplicación, es necesario establecer la `User-Agent` cabecera de la conexión con el mismo agente de usuario como la principal Cordova WebView. Esto puedes acceder a la `userAgent` propiedad del modelo-vista-controlador principal. El modelo-vista-controlador principal ( `CDVViewController` ) también tiene un `URLisAllowed` método para comprobar si una URL pasa la lista blanca.
@@ -405,7 +431,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
     
     a este estilo basado en soportes:
     
-        #import <Cordova/CDV.h>
+        #import < Cordova/CDV.h >
         
     
     y eliminar cualquier `#ifdef` contenedores de cualquier Cordova las importaciones, ya no son necesarios (ahora se unifican las importaciones)
@@ -446,11 +472,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 32. Búsqueda de **rutas de búsqueda encabezado**. Para ese ajuste, anexar estos tres valores, incluyendo las comillas:
     
-        "$(TARGET_BUILD_DIR)/usr/local/lib/include"
-        
-        "$(OBJROOT)/UninstalledProducts/include"
-        
-        "$(BUILT_PRODUCTS_DIR)"
+        "$(TARGET_BUILD_DIR) / usr/local/lib/incluyen" "$(OBJROOT) / UninstalledProducts/include" "$(BUILT_PRODUCTS_DIR)"
         
 
 33. Búsqueda de **otras banderas del vinculador**. Para ese ajuste, anexar este valor:
@@ -466,7 +488,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
 **Nota**: Si su proyecto no está funcionando como se esperaba en el simulador, por favor, tome nota de los errores en el registro de la consola en Xcode en busca de pistas.
 
-## 1.8.X proyectos de mejora a 1.9.0
+## 1.8.x proyectos de mejora a 1.9.0
 
 1.  Instale Cordova 1.9.0.
 
@@ -480,7 +502,7 @@ Con Cordova 2.1.0, `CordovaLib` ha sido actualizado para utilizar el **Conteo au
 
  [17]: https://developer.apple.com/library/prerelease/ios/#releasenotes/General/RN-iOSSDK-6_0/_index.html
 
-## 1.7.0 Actualización proyectos para 1.8.x
+## 1.7.0 actualización proyectos para 1.8.x
 
 1.  Instale Cordova 1.8.0.
 
@@ -498,7 +520,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Arrastre el nuevo `Capture.bundle` del paso 1 arriba en tu navegador de proyecto en Xcode, seleccione el botón **Crear grupo para cualquier añadidas carpetas** .
 
-## 1.6. X proyectos de mejora a 1.7.0
+## 1.6. x proyectos de mejora a 1.7.0
 
 1.  Instale Cordova 1.7.0.
 
@@ -516,7 +538,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 1.5.0-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 1.5.0-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m
@@ -608,13 +630,13 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 29. Haga clic en `Cordova.plist` y elija **abrir como → código fuente**.
 
-30. Pulse **Comando + opción-F**, elija **reemplazar** desde el menú desplegable en la parte superior izquierda de la ventana de código fuente.
+30. Pulse **Comando + opción +-F**, elija **reemplazar** desde el menú desplegable en la parte superior izquierda de la ventana de código fuente.
 
 31. Entrar en `com.phonegap` para la cadena de búsqueda, y `org.apache.cordova` para la cadena de reemplazo, luego presione el botón **Reemplazar todos** .
 
 32. Introduzca **PG** para la cadena de búsqueda y **CDV** para la cadena de reemplazo, luego presione el botón **Reemplazar todos** .
 
-33. Pulse **Comando + B** para construir. Todavía tienes deprecations que usted puede deshacerse de en el futuro (ver `CDVDeprecated.h` . Por ejemplo, reemplazar las clases en el código que utilizan PG * a CDV *).
+33. Pulse **Comando + B** para construir. Todavía tienes deprecations que usted puede deshacerse de en el futuro (ver `CDVDeprecated.h` . Por ejemplo, reemplazar las clases en el código que utilizan PG * a la CDV).
 
 ## Proyectos de modernización 1.4.0 a 1.4.1
 
@@ -640,7 +662,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 1.3.0-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 1.3.0-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m
@@ -667,7 +689,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 1.2.0-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 1.2.0-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m
@@ -694,7 +716,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 1.1.0-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 1.1.0-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m
@@ -721,7 +743,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 1.0.0-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 1.0.0-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m
@@ -748,7 +770,7 @@ Si piensas sobre el uso de la API de captura, necesitará los nuevo **iPad panta
 
 3.  Crear un nuevo proyecto. Usted necesitará algunos de los activos de este nuevo proyecto.
 
-4.  Copie estos archivos desde el nuevo proyecto en el directorio del proyecto 0.9.6-based en el disco, reemplazando los archivos viejos (respaldo primero los archivos desde el paso 2 anterior):
+4.  Copie estos archivos desde el nuevo proyecto en su directorio de proyecto 0.9.6-based en el disco, reemplazando los viejos archivos (copia de seguridad de sus archivos primero desde el paso 2 anterior):
     
         AppDelegate.h
         AppDelegate.m

@@ -38,7 +38,7 @@ Cordova Herramientas de línea de comandos trabajar, es necesario incluir el SDK
 
 En Mac, Linux u otras plataformas Unix-like, puede utilizar un editor de texto para crear o modificar el `~/.bash_profile` archivo, añadir una línea como la siguiente, dependiendo de donde se instala el SDK:
 
-    export PATH = ${PATH}: / / adt-bundle/sdk/plataforma-herramientas de desarrollo: / desarrollo/adt-bundle/sdk/herramientas
+    export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
     
 
 Esto expone SDK tools en windows terminales recién inauguradas. De lo contrario corre para que estén disponibles en el actual período de sesiones:
@@ -85,7 +85,7 @@ Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en
     $ cordova build
     
 
-Una vez creado, aquí es cómo utilizar el SDK para modificarlo:
+Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para modificarlo:
 
 *   Inicie la aplicación de **Eclipse** .
 

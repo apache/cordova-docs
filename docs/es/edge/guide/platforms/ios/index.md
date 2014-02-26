@@ -84,7 +84,7 @@ Para previsualizar la aplicación en el emulador de iOS:
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode viene liado con emuladores para las ultimas versiones de iPhone y iPad. Las versiones más antiguas pueden estar disponibles en el **Xcode → preferencias → descargas → componentes** panel.
+Xcode viene liado con emuladores para las últimas versiones de iPhone y iPad. Las versiones más antiguas pueden estar disponibles en el **Xcode → preferencias → descargas → componentes** panel.
 
 ## Desplegar en el dispositivo
 

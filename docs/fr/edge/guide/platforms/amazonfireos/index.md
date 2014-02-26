@@ -85,7 +85,7 @@ Utilisation du `cordova` utilitaire de mettre en place un nouveau projet, tel qu
     $ cordova build
     
 
-Une fois créé, voici comment utiliser le SDK pour le modifier :
+Une fois créé, vous pouvez utiliser l'éclipse qui est livré avec le SDK Android pour le modifier :
 
 *   Lancez l'application **Eclipse** .
 

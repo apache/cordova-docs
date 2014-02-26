@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Le fichier `config.xml` supervise les paramètres de base s'appliquant à l'application ainsi qu'à chaque instance de la classe CordovaWebView. Cette section décrit en détail les préférences uniquement liées à la compilation pour Android. Voir Le fichier config.xml pour plus d'informations concernant les options de configuration globales.
 
-*   `KeepRunning` (boolean, vaut par défaut `true`): Détermine si l'application doit continuer de s'exécuter en arrière-plan, même après le déclenchement d'un événement `pause`. Remarque : régler la valeur à false ne provoquera pas la fermeture complète de l'application après le déclenchement d'un événement pause, l'exécution de tout code dans la WebView Cordova sera simplement stoppé tant que l'application restera à l'arrière plan.
+*   `KeepRunning` (boolean, vaut par défaut `true`): Détermine si l'application doit continuer de s'exécuter en arrière-plan, même après le déclenchement d'un événement `pause`. Affectation de `false` ne tue pas l'appli après un `pause` événement, mais simplement s'arrête l'exécution du code dans le webview cordova, tandis que l'application est en arrière-plan.
     
         <preference name="KeepRunning" value="false"/>
         

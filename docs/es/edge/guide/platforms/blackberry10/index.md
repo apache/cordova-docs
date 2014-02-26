@@ -24,11 +24,25 @@ El entorno de desarrollo está disponible en Windows, Mac y Linux.
 
 Los desarrolladores deberían usar la `cordova` utilidad en conjunción con el SDK nativo de Blackberry. Ver la interfaz de línea de comandos para obtener información de cómo instalar `cordova` , agregar proyectos, entonces construir y desplegar para cada plataforma.
 
+Simulador del dispositivo BlackBerry 10:
+
+    * `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+    * `Disk space: 10 GB`
+    * `RAM Memory: 4 GB`
+    * `Virtualization:
+        * __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+        * __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
+    
+
+Más información sobre requisitos: [requisitos BB10 simulador][1].
+
+ [1]: http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html
+
 ## Instalar el SDK nativo de BlackBerry
 
-El SDK nativo de BlackBerry está disponible en [developer.blackberry.com][1]. Después de la instalación, tienes que añadir sus herramientas de línea de comandos a la ruta del sistema.
+Para obtener el SDK nativo de BlackBerry, descargar e instalar el IDE para Blackberry disponible desde [developer.blackberry.com][2], luego usando el IDE, instalar el SDK nativo de Blackberry. Después de la instalación, tienes que añadir sus herramientas de línea de comandos a la ruta del sistema.
 
- [1]: http://developer.blackberry.com/native/download/
+ [2]: http://developer.blackberry.com/native/download/
 
 En Windows:
 
@@ -47,6 +61,21 @@ En Mac y Linux:
 *   Ejecute lo siguiente para aplicar el cambio en el actual período de sesiones:
     
     $ fuente ~/.bash_profile
+
+Si tienes cualquier problema ambiental, utilizando el SDK nativo desde la línea de comandos, ejecute el archivo apropiado para su plataforma, ubicado en la ruta de instalación:
+
+    * On Windows:
+        $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+    
+    * On Linux &rarr; Installed as root user:
+        $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
+    * On Linux &rarr; Installed as non-root user:
+        $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
+    * On Mac:
+        $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
 
 ## Configurar para firma
 
@@ -77,24 +106,24 @@ Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en
 
 Si desea ejecutar un emulador de dispositivo, descargue e instale el simulador de BlackBerry 10.
 
-*   [Descargar][1]
-*   [Getting Started][2]
+*   [Descargar][2]
+*   [Getting Started][3]
 
- [2]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
+ [3]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
 Antes de probar una aplicación en un emulador o un dispositivo, tienes que activar el modo de desarrollo.
 
 Inicie la imagen del emulador, luego elija la **configuración** de la pantalla de Inicio:
 
-![][3]
+![][4]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [4]: img/guide/platforms/blackberry10/bb_home.png
 
 Desplácese hasta la **→ seguridad y privacidad, modo de desarrollo** sección y activar la opción:
 
-![][4]
+![][5]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [5]: img/guide/platforms/blackberry10/bb_devel.png
 
 A continuación, ejecute el `emulate` comando para ver la aplicación:
 
@@ -110,16 +139,16 @@ A continuación, ejecute el `run` comando para ver la aplicación:
     $ cordova run blackberry10 --devicepass <password>
     
 
-Si un token de depuración no está configurado para el dispositivo, un mensaje de error le pedirá que proporcione la contraseña ha definido al configurar el equipo para firmar las aplicaciones.
+Si una ficha depuración aún no se ha configurado para el dispositivo, un mensaje de error le solicita que proporcione la contraseña ha definido al configurar el equipo para firmar las aplicaciones.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
     
 
 ## Depuración con WebInspector
 
-Al depurar en el aparato o un emulador, puede ejecutar WebInspector remotamente para visualizar el estado interno de la aplicación. Un indicador muestra la dirección URL que le permite conectarse a su aplicación con un navegador web estándar. Para más información, vea [depuración utilizando WebInspector][5].
+Al depurar en el aparato o un emulador, puede ejecutar WebInspector remotamente para visualizar el estado interno de la aplicación. Un indicador muestra la dirección URL que le permite conectarse a su aplicación con un navegador web estándar. Para más información, vea [depuración utilizando WebInspector][6].
 
- [5]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
+ [6]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## Construir una versión
 

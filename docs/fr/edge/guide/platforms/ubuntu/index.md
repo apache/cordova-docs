@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Version initiale
 
-Bienvenue sur la version initiale de prise en charge de plates-formes de Ubuntu à Cordoue. Avec cette version, la mise au point est en développement sur un système Ubuntu et en utilisant le flux de travail Cordova Web projet Dev. Cela inclut l'ajout de la plateforme Ubuntu à votre projet, l'ajout de plugins de Cordova standard et, bien sûr, génération et l'exécution des applications pour la plate-forme Ubuntu.
+Bienvenue sur la version initiale de prise en charge de plates-formes de Ubuntu à Cordoue. Avec cette version, la mise au point est en développement sur un système Ubuntu et en utilisant le flux de travail multi-plateforme discutée dans la vue d'ensemble. Cela inclut l'ajout de la plateforme Ubuntu à votre projet, l'ajout de plugins de Cordova standard et de générer et d'exécuter des applications pour la plate-forme Ubuntu.
 
 ### Ubuntu SDK
 
@@ -28,7 +28,7 @@ Vous pouvez également installer l'environnement de développement d'Ubuntu QtCr
 
 ### Plates-formes de Runtime de Ubuntu
 
-Ubuntu est bien connue pour son environnement de bureau (pour les ordinateurs portables, PC et autres). Ubuntu Touch étend le système d'exploitation Ubuntu sur téléphones et tablettes. Ubuntu DUREE plates-formes ont diverses architectures de processeurs (x 86, Portage, etc..). App et plugin code doit être compilé correctement. Prise en charge de ce vaste domaine évolue rapidement dans l'Ubuntu.
+Ubuntu est bien connue pour son environnement de bureau (pour les ordinateurs portables, PC et autres). Ubuntu Touch étend le système d'exploitation Ubuntu sur téléphones et tablettes. Ubuntu DUREE plates-formes ont diverses architectures de processeurs (x 86, Portage, etc..). App et plugin code doit être compilé correctement. Prise en charge de ce vaste domaine évolue rapidement dans Ubuntu.
 
 ### Informations les plus récentes
 
@@ -61,12 +61,14 @@ Installez le paquet cordova-cli (et ses dépendances) :
 
 ### Créer un projet
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+Crée une application dans un `hello` répertoire dont le nom affichage est `HelloWorld` :
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### Se déplacer dans le répertoire du projet
 
-    $ cd project1
+    $ cd hello
     
 
 ### Ajouter la plateforme Ubuntu

@@ -84,7 +84,7 @@ Pour afficher un aperçu de l'application dans l'émulateur iOS :
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode est livré avec les émulateurs pour les dernières versions de l'iPhone et l'iPad. Des versions plus anciennes peuvent être obtenues auprès du **Xcode → préférences → téléchargements → composants** panneau.
+Xcode est livré avec les émulateurs pour les dernières versions des iPhone et iPad. Des versions plus anciennes peuvent être obtenues auprès du **Xcode → préférences → téléchargements → composants** panneau.
 
 ## Déployer sur le périphérique
 

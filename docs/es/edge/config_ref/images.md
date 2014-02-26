@@ -50,7 +50,7 @@ Blackberry 10 requiere que sea especificado un elemento icon en config.xml:
         <icon src="blackberry10/icon-86.png" />
     
 
-Ver documentación de BlackBerry para tareting varios tamaños y configuraciones regionales.
+Consulte la documentación de BlackBerry para apuntar varios tamaños y configuraciones regionales.
 
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
@@ -110,43 +110,22 @@ La resolución para cada uno debe ser:
 *   medio (mdpi): al menos 470 × 320
 *   pequeño (ldpi): por lo menos 426 × 320
 
-Si desea utilizar las imágenes de pantalla splash predeterminado proporcionadas en Córdoba, necesitará copiar los archivos png de `platforms/android/www/res/screen/android` a `platforms/android/res/drawable*/` :
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-    
-
-El `drawable` nombres de directorio deben seguir las convenciones Android por apoyar a [tamaños de pantalla][2] y [recursos alternativos][3].
+Cuando se crea un nuevo proyecto Android, la pantalla de inicio por defecto imágenes siempre en la Córdoba muestra app ya debe estar presente en la `platforms/android/res/drawable*` directorios. No dude en sustituir estos con sus propias imágenes. Al proporcionar su propio toque imágenes en pantalla, no necesitas proporcionar la misma permutación de 8 como Cordova predeterminado que aquí. Más o menos optimización puede ser utilizado. El `drawable` nombres de directorio deben seguir las convenciones Android por apoyar a [tamaños de pantalla][2] y [recursos alternativos][3].
 
  [2]: http://developer.android.com/guide/practices/screens_support.html
  [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
 
-En `config.xml` , agregue las siguientes preferencias:
+En el nivel superior `config.xml` archivo (no el que está en `platforms` ), agregue las siguientes preferencias:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
     
 
-La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Este es el nombre del archivo de la png en el `drawable*` directorios. Si usted nombrar la imagen nada aparte de `splash.png` , tienes que modificar esta línea. No incluyen la extensión de archivo (por ejemplo, `.png` ). Si desea utilizar las pantallas de splash predeterminado proporcionadas en Córdoba como se describe arriba, utilice el valor`screen`.
+La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Este es el nombre del archivo de la png en el `drawable*` directorios, menos la `.png` extensión. El valor predeterminado para SplashScreen es `screen` (para el archivo `platforms/android/res/drawable*/screen.png` ), así que si usted nombrar la imagen nada aparte de `screen.png` en el `drawable*` directorios, necesitas añadir/modificar esta línea.
 
-La segunda línea establece la demora por defecto de cuánto el splashscreen aparece en milisegundos. Esto debería ser la hora de salida máxima esperada. El valor predeterminado para SplashScreenDelay es ms 3000.
+La segunda línea establece la demora por defecto de cuánto el splashscreen aparece en milisegundos. Esto debería ser la peor hora prevista. El valor predeterminado para SplashScreenDelay es ms 3000.
 
-Finalmente, la pantalla de bienvenida debe estar presente sólo el tiempo necesario. Cuando su aplicación ha comenzado y se ha cargado el webview, su aplicación debe ocultar la pantalla de bienvenida para que su vista principal es visible. Debido a la hora de inicio de la aplicación variará un poco debido a una serie de factores, se recomienda que su aplicación invocar explícitamente `navigator.splashscreen.hide()` en el método Javascript que responde a la `deviceready` evento. De lo contrario la pantalla de bienvenida será visible para el valor de SplashScreenDelay que ha configurado anteriormente. Este enfoque orientado al evento es altamente recomendable versus tener la pantalla visible para siempre una duración fija.
+Finalmente, como una mejor práctica, la pantalla de bienvenida debe estar presente sólo el tiempo necesario. Cuando su aplicación ha comenzado y se ha cargado el webview, su aplicación debe ocultar la pantalla de bienvenida para que su vista principal es visible en cuanto esté listo. Debido a la hora de inicio de la aplicación variará un poco debido a una serie de factores como la velocidad de la CPU y de red, se recomienda que su aplicación invocar explícitamente `navigator.splashscreen.hide()` en el método JavaScript que responde a la `deviceready` evento. De lo contrario la pantalla de bienvenida será visible para el valor de SplashScreenDelay que ha configurado anteriormente, más de lo necesario que es probable. Este enfoque orientado al evento es altamente recomendable versus tener la pantalla visible para siempre una duración fija.
 
 ## Pantallas de inicio para la plataforma iOS
 

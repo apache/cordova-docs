@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # L'Interface de ligne de commande
 
-Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma (véase la introducción para una descripción de los distintos flujos de trabajo). Sin embargo, también puede utilizar la CLI para inicializar el código del proyecto, tras lo cual utiliza de diversas plataformas SDK y herramientas de shell para desarrollo continuo.
+Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma descrita en la descripción. Lo contrario también puede utilizar la CLI para inicializar el código del proyecto, luego cambiar a de diversas plataformas SDK y herramientas de shell para el continuo desarrollo.
 
 ## Prerequisitos
 
@@ -35,7 +35,9 @@ Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesi
 
 En el Mac, es disponible a través de la aplicación de *Terminal de* la línea de comandos. En el PC, se encuentra disponible como *símbolo* en *accesorios*.
 
-Lo más probable es que ejecute la CLI de diferentes máquinas, tiene más sentido mantener un repositorio de código fuente remota, cuyos activos que tire hacia abajo para directorios de trabajo local.
+**Nota**: para las plataformas Windows, todavía puedes hacer tu desarrollo en hardware Mac ejecutando Windows en un entorno de máquina virtual o en modo de arranque dual. Para las opciones disponibles, consulte la guía de la plataforma Windows Phone o guía de plataforma de Windows 8.
+
+Lo más probable es que ejecute la CLI de diferentes máquinas, más sentido para mantener un repositorio de código fuente remota, cuyos activos que tire hacia abajo para directorios de trabajo local.
 
 Para instalar el `cordova` de línea de comandos de la herramienta, siga estos pasos:
 
@@ -48,7 +50,7 @@ Para instalar el `cordova` de línea de comandos de la herramienta, siga estos p
     
     El registro de instalación puede producir errores para cualquier plataforma desinstalado SDK. Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos.
     
-    **Nota**: el `-g` bandera arriba dice npm instalar cordova en todo el mundo. Puede que necesites añadir el directorio npm a tu camino para invocar globalmente npm módulos instalados. En Windows, npm normalmente puede encontrarse en `C:\Users\username\AppData\Roaming\npm` y en Unix en`/usr/local/share/npm`.
+    **Nota**: el `-g` bandera arriba dice `npm` instalar cordova en todo el mundo. Puede que necesites añadir el `npm` Directorio a su `PATH` para invocar a nivel mundial instalada `npm` módulos. En Windows, `npm` generalmente se puede encontrar en `C:\Users\username\AppData\Roaming\npm` y en Unix en`/usr/local/share/npm`.
 
  [1]: http://nodejs.org/
 
@@ -110,7 +112,7 @@ Ejecutar cualquiera de los siguientes comandos sinónimos para quitar una plataf
 
 Ejecución de comandos para agregar o quitar afecta a plataformas el contenido del directorio de *plataformas* del proyecto, donde cada plataforma especificado aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www` . Porque la CLI constantemente copia archivos desde la carpeta *www* fuente, sólo debe editar estos archivos y no los ubicado debajo de los subdirectorios de *plataformas* . Si utilizas software de control de versión, debe agregar esta carpeta *www* fuente, junto con la carpeta *se funde* , a su sistema de control de versión. (Puede encontrarse más información sobre la carpeta *se funde* en la sección de personalizar cada plataforma abajo).
 
-**ADVERTENCIA**: cuando se usa la CLI para construir tu aplicación, usted está totalmente desaconsejado de editar los archivos en el `/platforms/` carpeta si no sabes lo que está haciendo o se dijo específicamente lo contrario en la documentación. Esto es porque los archivos en el `/platforms/` Directorio será sobrescrito por preparar o reinstalación del plugin.
+**ADVERTENCIA**: cuando se usa la CLI para construir su solicitud, usted debe *no* editar cualquiera de los archivos en el `/platforms/` Directorio si no sabes lo que estás haciendo, o si documentación especifica lo contrario. Los archivos de este directorio se sobrescriben rutinariamente al preparar las aplicaciones para la construcción, o cuando son instalar plugins.
 
 Si lo desea en este punto, puede utilizar un SDK como Eclipse o Xcode para abrir el proyecto que ha creado. Usted necesitará abrir el conjunto derivado de los activos de la `/platforms/` Directorio para desarrollar con un SDK. Esto es porque los archivos de metadatos específicos del SDK se almacenan dentro de la correspondiente `/platform/` subdirectorio. (Vea a las guías de plataforma para obtener información sobre cómo desarrollar aplicaciones dentro de cada IDE). Utilice este enfoque si simplemente quieres inicializar un proyecto mediante la CLI y luego cambiar a un SDK para trabajo nativo.
 
@@ -147,7 +149,7 @@ SDK para plataformas móviles vienen a menudo incluidos con emuladores que ejecu
 
 Algunas plataformas móviles emulan un dispositivo especial de forma predeterminada, como el iPhone iOS proyectos. Para otras plataformas, necesitará primero asociado a un dispositivo con un emulador.
 
-Nota: Apoyo emulador no está disponible actualmente para Amazon fuego OS
+**Nota**: apoyo emulador no está actualmente disponible para Amazon fuego OS.
 
 (Vea a las guías de plataforma para más detalles). Por ejemplo, usted primero de puede ejecutar el `android` comando para iniciar el SDK de Android, y luego ejecute una imagen del dispositivo en particular, que inicia según su comportamiento predeterminado:
 
@@ -186,9 +188,7 @@ Buscando solamente el `bar` término rendimientos y resultados adicionales:
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-El `cordova plugin add` comando requiere especificar el repositorio para el código del plugin. Por favor, tenga en cuenta que al seguir el flujo de trabajo Web proyecto Dev y utilizar la CLI, la CLI se encargará de añadir el código del plugin en el lugar apropiado para cada plataforma. (Si usted está siguiendo el proyecto Dev flujo de trabajo nativo, tendrás que añadir plugins usando Plugman (enlace guía aquí), varias veces para cada plataforma).
-
-Estos son ejemplos de cómo puede usar la CLI para agregar funciones a la aplicación:
+El `cordova plugin add` comando requiere especificar el repositorio para el código del plugin. Estos son ejemplos de cómo puede usar la CLI para agregar funciones a la aplicación:
 
 *   Información básica del dispositivo (dispositivo API):
     
@@ -251,6 +251,8 @@ Estos son ejemplos de cómo puede usar la CLI para agregar funciones a la aplica
     
         $ cordova plugin add org.apache.cordova.console
         
+
+**Nota**: el CLI agrega plugin código según proceda para cada plataforma. Si usted quiere desarrollar con las herramientas de nivel inferior cáscara o plataforma SDK como se indica en el Resumen, tienes que ejecutar la utilidad Plugman para añadir plugins por separado para cada plataforma. (Para obtener más información, véase Plugman usando a gestionar Plugins).
 
 Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente instalado plugins. Cada muestra por su identificador:
 
@@ -355,11 +357,11 @@ Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la vers
 
 Para instalar una versión específica, utilice esta sintaxis:
 
-        $ sudo npm install -g cordova@3.1.0-0.2.0
+        $ sudo npm instalar cordova@3.1.0-0.2.0 -g
     
 
 Ejecute `cordova -v` para ver qué versión se está ejecutando actualmente. Ejecute el `npm
-info` comando para obtener una lista más larga que incluye la versión actual junto con otros números de la versión disponible:
+info` comando para obtener una lista más larga que incluye la versión actual junto con otros números de versión disponible:
 
         $ npm info cordova
     

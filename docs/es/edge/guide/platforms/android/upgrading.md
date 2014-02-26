@@ -20,7 +20,7 @@ Esta guía le muestra cómo modificar proyectos Android para actualizar desde ve
 
 ## Actualizando a 3.3.0 desde 3.2.0
 
-Siga las mismas instrucciones para `3.2.0`.
+Siga las mismas instrucciones en cuanto a`3.2.0`.
 
 A partir de 3.3.0, el runtime de Cordova es compilado como una librería Android en vez de un jar. Esto debería no tienen ningún efecto para el uso de línea de comandos, pero los usuarios IDE tendrá que importar el recién agregado `MyProject-CordovaLib` proyecto en su espacio de trabajo.
 
@@ -36,6 +36,8 @@ Para proyectos no creados con el cordova CLI, ejecute:
 
         bin/update <project_path>
     
+
+**ADVERTENCIA:** A partir de Android 4.4, creando un elemento de entrada de archivo con tipo = "file" no abrirá el cuadro de diálogo selector de archivos. Esto es una regresión con cromo en Android y el problema puede ser reproducido en el navegador Chrome independiente en Android (véase http://code.google.com/p/android/issues/detail?id=62220) la solución sugerida es utilizar los plugins File Transfer y archivo para Android 4.4. Puedes escuchar para un evento onClick del tipo de entrada = "file" y luego aparecer un selector de archivos UI. Para atar los datos del formulario con la carga, puede utilizar JavaScript para fijar los valores del formulario a la solicitud POST multi-partes que hace File Transfer. Este error aún existe a partir de Android 4.4.2
 
 ## Actualización a 3.1.0 de 3.0.0
 

@@ -114,7 +114,7 @@ Utilisation de quelques dizaines de blackBerry de caractères génériques se di
 
 ## Changements d'iOS 3.1.0
 
-Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le régime de whilelisting de domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier votre `config.xml` fichier afin de continuer la liste blanche du même ensemble de ressources comme avant.
+Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le schéma de liste blanche domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier votre `config.xml` fichier afin de continuer la liste blanche du même ensemble de ressources comme avant.
 
 Plus précisément, ces motifs doivent être actualisés :
 

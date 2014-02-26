@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras Android. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Nota: si se establece en false no matará la aplicación después de una pausa, sólo detendrá la ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Si se establece como `false` no mata la aplicación después de un `pause` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
