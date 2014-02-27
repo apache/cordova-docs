@@ -23,10 +23,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 This guide shows you how to create applications and deploy them to
 various native mobile platforms using the `cordova` command-line
 interface (CLI). This tool allows you to create new projects, build
-them on different platforms, and run on real devices or within emulators. The CLI
-is the main tool to use for the cross-platform workflow (See the Overview for a description
-of the various workflows.)  However, you can also use the CLI to initialize project code, after
-which you use various platforms' SDKs and shell tools for continued development.
+them on different platforms, and run on real devices or within
+emulators. The CLI is the main tool to use for the cross-platform
+workflow described in the Overview.  Otherwise you can also use the
+CLI to initialize project code, then switch to various platforms' SDKs
+and shell tools for continued development.
 
 ## Prerequisites
 
@@ -51,6 +52,11 @@ On the Mac, the command-line is available via the _Terminal_
 application. On the PC, it's available as _Command Prompt_ under
 _Accessories_.
 
+__NOTE__: For Windows-only platforms, you can still do your
+development on Mac hardware by running Windows in a virtual machine
+environment or in dual-boot mode. For available options, see the
+Windows Phone Platform Guide or the Windows 8 Platform Guide.
+
 The more likely it is that you run the CLI from different machines,
 the more it makes sense to maintain a remote source code repository,
 whose assets you pull down to local working directories.
@@ -71,9 +77,9 @@ To install the `cordova` command-line tool, follow these steps:
    platform SDKs.  Following installation, you should be able to run
    `cordova` on the command line.
 
-   **NOTE**: The `-g` flag above tells npm to install cordova globally. 
-   You may need to add the npm directory to your PATH in order to invoke
-   globally installed npm modules. On Windows, npm can usually be found at
+   __NOTE__: The `-g` flag above tells `npm` to install cordova globally. 
+   You may need to add the `npm` directory to your `PATH` in order to invoke
+   globally installed `npm` modules. On Windows, `npm` can usually be found at
    `C:\Users\username\AppData\Roaming\npm` and on Unix at
    `/usr/local/share/npm`.
    
@@ -162,10 +168,13 @@ If you use version control software, you should add this source _www_ folder,
 along with the _merges_ folder, to your version control system. (More information
 about the _merges_ folder can be found in the Customize Each Platform section below.)
 
-**WARNING**: When using the CLI to build your application, you are strongly discouraged
-from editing any files in the `/platforms/` folder unless you know what you are doing
-or are specifically told otherwise in documentation. This is because the files in the 
-`/platforms/` directory will be overwritten on prepare or plugin reinstallation. 
+
+__WARNING__: When using the CLI to build your application, you should
+_not_ edit any files in the `/platforms/` directory unless you know
+what you are doing, or if documentation specifies otherwise. The files
+in this directory are routinely overwritten when preparing
+applications for building, or when plugins are reinstalled.
+
 
 If you wish at this point, you can use an SDK such as Eclipse or Xcode
 to open the project you created. You will need to open the derivative set of assets
@@ -221,7 +230,7 @@ Some mobile platforms emulate a particular device by default, such as
 the iPhone for iOS projects. For other platforms, you may need to
 first associate a device with an emulator.
 
-Note: Emulator support is currently not available for Amazon Fire OS
+__NOTE__: Emulator support is currently not available for Amazon Fire OS.
 
 (See the Platform Guides for details.)
 For example, you may first run the `android` command to launch the
@@ -278,13 +287,8 @@ Searching for only the `bar` term yields and additional result:
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
 
 The `cordova plugin add` command requires you to specify the
-repository for the plugin code.  Please note that when you follow the 
-Web Project Dev workflow and use the CLI, the CLI will take care of adding
-the plugin code to the appropriate place for each platform. (If you are following the
-Native Project Dev Workflow, you will have to add plugins using Plugman (guide link here),
-multiple times for each platform.)
-
-Here are examples of how you might use the CLI to add features to the app:
+repository for the plugin code.  Here are examples of how you might
+use the CLI to add features to the app:
 
 * Basic device information (Device API):
 
@@ -336,6 +340,12 @@ Here are examples of how you might use the CLI to add features to the app:
 * Debug console:
 
         $ cordova plugin add org.apache.cordova.console
+
+__NOTE__: The CLI adds plugin code as appropriate for each platform.
+If you want to develop with lower-level shell tools or platform SDKs
+as discussed in the Overview, you need to run the Plugman utility to
+add plugins separately for each platform. (For more information, see
+Using Plugman to Manage Plugins.)
 
 Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
 currently installed plugins. Each displays by its identifier:

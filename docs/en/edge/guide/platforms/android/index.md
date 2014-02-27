@@ -20,12 +20,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Android Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Android devices. It walks you through the process
-of installing the Android SDK, opening an Android project in Eclipse SDK, 
-and deploying to an emulator or device. You will need to follow this guide 
-to at least Install the Android SDK, regardless of which workflow you
-are following. (Both the _Web Project Dev_ and _Native Platform Dev_ workflows
-require the Android SDK to be installed and accessible via your PATH.)
+deploy Cordova apps for Android devices. It shows how to install the
+Android SDK, open an Android project in the SDK, and deploy it to an
+emulator or device.  You need to follow the instructions to install
+the Android SDK, regardless of whether you use the cross-platform
+workflow discussed in the Overview, or the platform-centered shell
+tools detailed at Android Command-line Tools.
 
 See the following for more detailed platform-specific information:
 
@@ -61,26 +61,33 @@ project.
 
 Install the Android SDK from
 [developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
-is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file.
+is distributed as an 'adt-bundle-&lt;os&gt;-&lt;arch&gt;-&lt;ver&gt;' file.
 On windows, the adt-bundle is packaged with an installer.
 On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
 [More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
 
 
 For Cordova command-line tools to work, you need to include the SDK's
-`tools` and `platform-tools` directories in your PATH environment.  On
-Mac, you can use a text editor to create or modify the
-`~/.bash_profile` file, adding a line such as the following, depending
-on where the SDK installs:
+`tools` and `platform-tools` directories in your PATH environment. You also
+will need `java` and `ant`. You may already have `java` and `ant` in your
+PATH environment, try invoking them from a command line prompt to see if they
+are missing, and add only what is missing to your PATH. Be aware that Mavericks
+omits `ant` as compared to previous versions of OSX, so you may need to
+install `ant` separately if you are using Mavericks or later of OSX. On
+OSX or Linux, you can use a text editor to create or modify the
+`~/.bash_profile` file, adding a line such as the following (modify the
+locations to where the SDK is installed on your workstation):
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
-This exposes SDK tools in newly opened terminal windows. Otherwise run
-this to make them available in the current session:
+Add the paths for `java` and `ant` if needed. This line in `~/.bash_profile`
+exposes these tools in newly opened terminal windows. If your terminal
+window is already open in OSX, or to avoid a logout/login on Linux, run
+this to make them available in the current terminal window:
 
     $ source ~/.bash_profile
 
-To modify the PATH environment on Windows 7:
+To modify the PATH environment on Windows:
 
 * Click on the __Start__ menu in the lower-left corner of the desktop,
   right-click on __Computer__, then click __Properties__.
@@ -98,9 +105,9 @@ To modify the PATH environment on Windows 7:
 
 * Save the value and close both dialog boxes.
 
-You may also need to enable Java and Ant. Open a command prompt and
-type `java`, and also type `ant`. Append to the PATH whichever fail to
-run:
+* You may also need to add Java and Ant. Open a command prompt and
+type `java`, and also type `ant`. For whichever fail to run, append to the PATH
+like this:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
@@ -114,7 +121,7 @@ Cordova The Command-Line Interface. For example, in a source-code directory:
         $ cordova platform add android
         $ cordova build
 
-Once created, here's how to use the SDK to modify it:
+Once created, you can use the Eclipse that comes along with the Android SDK to modify it:
 
 * Launch the __Eclipse__ application.
 
@@ -190,19 +197,44 @@ If instead you work within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
 specify an AVD if none are already open.
 
-For a faster experience, use an Intel-based emulator image:
+For a faster experience, you can use the `Virtual Machine Acceleration` to improve 
+the execution speed.
+Many modern CPUs provide extensions to execute Virtual Machines more efficiently.
+Before attempting to use this type of acceleration, you need to determine if your 
+current development system's CPU, supports one the following virtualization technologies:
 
-* Install one or more `Intel x86 Atom` System Images as well as the
-  `Intel Hardware Accelerated Execution Manager`, available under
-  __Extras__.
+* __Intel Virtualization Technology__ (VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+* __AMD Virtualization__ (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
 
-* Run the Intel installer, which is available within your Android SDK
-  at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+Another way to find out if your Intel processor supports VT-x Technology, it's by executing the 
+`Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838),
+or you can use the [booteable utility](https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng), which is `OS Independent`.
 
-* Create a new AVD with the target set to an Intel image.
+After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, 
+in order to check if your CPU supports the Virtualization Technologies:
 
-* When starting the emulator, ensure there are no error messages
-  indicating a failure to load HAX modules.
+![](img/guide/platforms/android/intel_pid_util_620px.png)
+
+In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, 
+as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
+
+Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` 
+and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
+
+![](img/guide/platforms/android/asdk_man_intel_image_haxm.png)
+
+After download, run the Intel installer, which is available within your
+Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. 
+__Note__:`If you have any problems installing the package, you can find more information and step by step guidance check this` 
+[Intel Article](http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture).
+
+Once installed, in order to test it, create new a AVD  with the `CPU/ABI` set to an `Intel (Atom) x86`  Image:
+
+![](img/guide/platforms/android/asdk_new_and_dev_intel.png)
+
+If you are using `Linux-based system`, follow the instructions in the [Android Developer Site](http://developer.android.com/tools/devices/emulator.html#vm-linux).
+
+When starting the emulator, ensure there are no error messages indicating a failure to load HAXM modules.
 
 ## Deploy to Device
 

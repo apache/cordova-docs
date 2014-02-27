@@ -61,6 +61,10 @@ a lower-level alternative to the `cordova` command-line utility.
 * BlackBerry 10 Command-line Tools
 * Upgrading BlackBerry 10
 
+## Firefox OS
+
+* Firefox OS Platform Guide
+
 ## iOS
 
 * iOS Platform Guide
@@ -76,16 +80,13 @@ a lower-level alternative to the `cordova` command-line utility.
 
 ## Windows Phone
 
-* Windows Phone 8 Platform Guide
-* Windows Phone 7 Platform Guide
-* Windows Phone Configuration
-* Windows Phone Command-line Tools
+* Windows Phone Platform Guide
+* Windows Phone Plugins
 * Upgrading Windows Phone
 
 ## Windows 8
 
 * Windows 8 Platform Guide
-* Windows 8 Command-line Tools
 * Upgrading Windows 8
 
 ## Tizen
