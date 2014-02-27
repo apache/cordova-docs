@@ -24,11 +24,25 @@ L'environnement de développement est disponible sur Windows, Mac et Linux.
 
 Les développeurs doivent utiliser les `cordova` utilitaire en conjonction avec le kit de développement natif de Blackberry. Voir l'Interface de ligne de commande pour plus d'informations comment faire pour installer `cordova` , ajouter des projets, puis générer et déployer pour chaque plate-forme.
 
+BlackBerry 10 appareil simulateur :
+
+    * `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+    * `Disk space: 10 GB`
+    * `RAM Memory: 4 GB`
+    * `Virtualization:
+        * __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+        * __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
+    
+
+Plus d'informations sur la configuration requise : [BB10 simulateur requeriments][1].
+
+ [1]: http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html
+
 ## Installer le SDK natif de BlackBerry
 
-Le kit de développement natif de BlackBerry est disponible chez [developer.blackberry.com][1]. Après installation, vous devez ajouter ses outils de ligne de commande à votre path système.
+Afin d'obtenir le kit de développement natif de BlackBerry, télécharger et installer l'IDE pour Blackberry disponible de [developer.blackberry.com][2], puis à l'aide de l'IDE, installez le kit de développement natif de Blackberry. Après installation, vous devez ajouter ses outils de ligne de commande à votre path système.
 
- [1]: http://developer.blackberry.com/native/download/
+ [2]: http://developer.blackberry.com/native/download/
 
 Sur Windows :
 
@@ -48,11 +62,26 @@ Sur Mac et Linux :
     
     $ source ~/.bash_profile
 
+Si tu as un problème environnemental, en utilisant le kit de développement natif de la ligne de commande, exécutez le fichier approprié pour votre plate-forme, située dans le chemin d'installation :
+
+    * On Windows:
+        $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+    
+    * On Linux &rarr; Installed as root user:
+        $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
+    * On Linux &rarr; Installed as non-root user:
+        $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
+    * On Mac:
+        $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+    
+
 ## Mis en place pour la signature
 
 Si vous souhaitez tester sur un périphérique ou de distribuer des applications via BlackBerry World, votre système doit être configuré pour la signature de code.
 
-Pour obtenir une clé de signature, aller à \[BlackBerry clés votre commande\] (https://www.blackberry.com/SignedKeys/codesigning.html).
+Pour obtenir une clé de signature, aller à votre \[BlackBerry touches Commande\] (https://www.blackberry.com/SignedKeys/codesigning.html).
 
 Cochez la première case: "pour BlackBerry10 apps développées à l'aide de BlackBerry NDK" et puis connectez-vous ou créez un BBID.
 
@@ -77,24 +106,24 @@ Utilisation du `cordova` utilitaire de mettre en place un nouveau projet, tel qu
 
 Si vous souhaitez lancer un émulateur de périphérique, téléchargez et installez le simulateur de 10 BlackBerry.
 
-*   [Télécharger][1]
-*   [Mise en route][2]
+*   [Télécharger][2]
+*   [Mise en route][3]
 
- [2]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
+ [3]: http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html
 
 Avant de tester une application sur un émulateur ou un périphérique, vous devez activer le mode de développement.
 
 Lancer l'image de l'émulateur, puis cliquez sur **paramètres** depuis l'écran d'accueil :
 
-![][3]
+![][4]
 
- [3]: img/guide/platforms/blackberry10/bb_home.png
+ [4]: img/guide/platforms/blackberry10/bb_home.png
 
 Accédez à la **→ sécurité et vie privée Mode de développement** section et activer l'option :
 
-![][4]
+![][5]
 
- [4]: img/guide/platforms/blackberry10/bb_devel.png
+ [5]: img/guide/platforms/blackberry10/bb_devel.png
 
 Ensuite, exécutez le `emulate` commande pour visualiser l'application :
 
@@ -117,9 +146,9 @@ Si un jeton de débogage n'est pas encore mis en place pour le périphérique, u
 
 ## Débogage avec WebInspector
 
-Lorsque vous déboguez sur l'appareil ou un émulateur, vous pouvez exécuter WebInspector à distance pour afficher état interne de l'application. Une invite de commandes affiche l'URL qui vous permet de vous connecter à votre application avec un navigateur web standard. Pour plus d'informations, consultez [débogage à l'aide de WebInspector][5].
+Lorsque vous déboguez sur l'appareil ou un émulateur, vous pouvez exécuter WebInspector à distance pour afficher état interne de l'application. Une invite de commandes affiche l'URL qui vous permet de vous connecter à votre application avec un navigateur web standard. Pour plus d'informations, consultez [débogage à l'aide de WebInspector][6].
 
- [5]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
+ [6]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## Générer une Version finale
 

@@ -29,6 +29,10 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       </th>
       
       <th>
+        <tt>Firefox OS</tt>
+      </th>
+      
+      <th>
         <tt>Ios</tt>
       </th>
       
@@ -71,6 +75,10 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
           Mac, Windows
         </td>
         
+        <td data-col="firefoxos" class="y">
+          Mac, Windows, Linux
+        </td>
+        
         <td data-col="ios"        class="y">
           Mac
         </td>
@@ -89,8 +97,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -112,6 +118,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="n">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_platforms_ios_webview.md.html">(ver detalles)</a>
         </td>
@@ -127,8 +136,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -151,6 +158,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
           <a href="guide_guide_platforms_blackberry10_plugin.md.html">(ver detalles)</a>
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_guide_platforms_ios_plugin.md.html">(ver detalles)</a>
         </td>
@@ -168,8 +178,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -198,6 +206,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="y">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -212,8 +223,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -233,6 +242,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="y">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -247,8 +259,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -268,6 +278,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -282,8 +295,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -303,6 +314,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           (3GS +)
         </td>
@@ -318,8 +332,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -339,6 +351,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -353,8 +368,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -374,6 +387,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="y">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -388,8 +404,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -409,6 +423,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="y">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -423,8 +440,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -444,6 +459,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -458,8 +476,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -479,6 +495,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -493,8 +512,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -514,6 +531,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="y">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -528,8 +548,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -549,6 +567,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="n">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -563,8 +584,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -584,6 +603,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -599,8 +621,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="win8"       class="p">
           utiliza el iframe
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -620,6 +640,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -634,8 +657,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -655,6 +676,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -669,8 +693,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -690,6 +712,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -704,8 +729,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -725,6 +748,9 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -742,8 +768,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="win8"       class="y">
           localStorage & indexedDB
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>

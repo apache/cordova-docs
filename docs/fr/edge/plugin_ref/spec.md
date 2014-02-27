@@ -187,7 +187,7 @@ Informations relatives au tag `<js-module>`:
     
     *   `<runs/>` signifie que votre code doit être spécifié avec `cordova.require` , mais pas installé sur l'objet `window`. Ceci est utile lors de l'initialisation du module, attacher le gestionnaire d'événements ou autre. Vous ne pouvez avoir plus d'une balise `<runs/>`. Notez qu'inclure un `<runs/>` avec `<clobbers/>` ou `<merges/>` est superflue, car ils ont aussi le module `cordova.require`.
     
-    *   Une balise vide `<js-module>` peut être chargée et peut être consultée dans les autres modules à travers `cordova.require`.
+    *   Vide `<js-module>` encore des charges et sont accessibles dans les autres modules à travers`cordova.require`.
 
 Si `src` ne pointe pas vers un fichier existant, plugman s'arrête et annule l'installation, prévient du problème, puis quitte avec un code différent de zéro.
 
@@ -368,13 +368,14 @@ Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend
 
 Exemples :
 
-    <framework src="libsqlite3.dylib" />
-    <framework src="social.framework" weak="true" />
+    < cadre src="libsqlite3.dylib « / >< cadre src="social.framework "faible ="true"/ >< cadre src="relative/path/to/my.framework » personnalisé = "true" / >
     
 
 Le `src` attribut identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
 
 Le paramètre optionnel `weak` attribut est une valeur booléenne qui indique si le cadre devrait être faiblement lié. La valeur par défaut est`false`.
+
+Le paramètre optionnel `custom` attribut est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est`false`.
 
 ## *info* Élément
 

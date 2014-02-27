@@ -20,7 +20,7 @@ Ce guide montre comment modifier des projets Android mise à niveau d'anciennes 
 
 ## Mise à niveau vers 3.3.0 de 3.2.0
 
-Suivez l'instructinos même en ce qui concerne`3.2.0`.
+Suivez les mêmes instructions que pour`3.2.0`.
 
 À partir de 3.3.0, le runtime de Cordova est maintenant compilé comme une bibliothèque Android au lieu d'un pot. Ceci ne devrait avoir aucun effet pour l'utilisation de ligne de commande, mais IDE utilisateurs auront besoin d'importer le nouvellement ajouté `MyProject-CordovaLib` projet dans leur espace de travail.
 
@@ -36,6 +36,8 @@ Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
         bin/update <project_path>
     
+
+**Avertissement :** Commençant sur Android 4.4, création d'un élément du fichier d'entrée avec type = « file » n'ouvrira pas la boîte de dialogue Sélecteur. Il s'agit d'une régression avec Chrome sur Android et le problème peut être reproduit dans le navigateur de Chrome autonome sur Android (voir http://code.google.com/p/android/issues/detail?id=62220) la solution de contournement suggérée est d'utiliser le transfert de fichiers et fichiers plugins pour Android 4.4. Vous pouvez écouter un événement onClick du input type = « file » et ensuite apparaître un sélecteur de fichier UI. Afin de relier les données du formulaire avec le téléchargement, vous pouvez utiliser JavaScript pour fixer des valeurs de formulaire à la requête POST plusieurs partie qui fait du transfert de fichiers. Ce bug existe toujours à partir de Android 4.4.2
 
 ## Mise à niveau vers 3.1.0 de 3.0.0
 

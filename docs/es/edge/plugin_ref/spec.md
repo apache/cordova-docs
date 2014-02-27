@@ -368,13 +368,14 @@ Identifica un marco (generalmente parte de la plataforma/OS) de la cual depende 
 
 Ejemplos:
 
-    <framework src="libsqlite3.dylib" />
-    <framework src="social.framework" weak="true" />
+    < marco src="libsqlite3.dylib" / >< marco src="social.framework" débil = "true" / >< marco src="relative/path/to/my.framework" personalizado = "true" / >
     
 
 El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
 
 Opcional `weak` atributo es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es`false`.
+
+Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es`false`.
 
 ## *info* Elemento
 

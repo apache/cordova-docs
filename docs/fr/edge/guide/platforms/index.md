@@ -46,6 +46,10 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 *   BlackBerry 10 outils de ligne de commande
 *   Mise à jour de BlackBerry 10
 
+## Firefox OS
+
+*   Firefox OS Platform Guide
+
 ## iOS
 
 *   iOS Platform Guide
@@ -61,16 +65,13 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 ## Windows Phone
 
-*   Guide de plateforme Windows Phone 8
-*   Guide de plateforme Windows Phone 7
-*   Configuration de Windows Phone
-*   Windows Phone outils de ligne de commande
+*   Guide de la plate-forme Windows Phone
+*   Windows Phone Plugins
 *   La mise à niveau de Windows Phone
 
 ## Windows 8
 
 *   Windows 8 Platform Guide
-*   Outils de ligne de commande de Windows 8
 *   La mise à niveau de Windows 8
 
 ## Paciarelli
