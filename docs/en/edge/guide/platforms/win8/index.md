@@ -40,14 +40,19 @@ on how to support IE10 along with comparable WebKit browsers.
 
 ## Requirements and Support
 
-You need the following:
+You need one of the following OS/SDK combinations, either from an
+installation disk or an _ISO_ disk image file:
 
-- A 64-bit version of Windows 8 Pro, either an installation disk or an
-  _ISO_ disk image file. An evaluation version is available on the
+- Windows 8.0 or 8.1, 32 or 64-bit _Home_, _Pro_, or _Enterprise_
+  editions, along with
+  [Visual Studio 2012 Express](http://www.visualstudio.com/downloads).
+
+- Windows 8.1, 32 or 64-bit _Home_, _Pro_, or _Enterprise_ editions,
+  along with 
+  [Visual Studio 2013 Pro](http://www.visualstudio.com/downloads)
+  or higher. An evaluation version of Windows 8.1 Enterprise is
+  available from the
   [Microsoft Developer Network](http://msdn.microsoft.com/en-US/evalcenter/jj554510).
-
-- [Visual Studio](http://www.visualstudio.com/downloads), either the
-  _Ultimate_, _Premium_, or _Professional_ 2013 editions.
 
 Apps compiled under Windows 8.1 do _not_ run under Windows 8.0. Apps
 compiled under Windows 8.0 are forward-compatible with 8.1.
