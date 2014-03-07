@@ -50,7 +50,10 @@ breaking existing apps. The available preferences are:
   throwing a timeout error on the application.
 
 * `keepRunning` (boolean, defaults to `true`): Determines whether
-  Cordova stays running in the background.
+  Cordova stays running in the background. Note: setting this to 
+  false will not kill the app after a pause event, it will only 
+  halt execution of code in the cordova webview while the app is 
+  in the background.
 
 * `splashscreen`: The name of the file minus its extension in the
   `res/drawable` directory.  If you have multiple assets, they all

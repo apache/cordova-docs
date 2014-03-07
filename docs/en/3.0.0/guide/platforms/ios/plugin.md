@@ -44,7 +44,7 @@ application's project's `config.xml` file.
 
 The feature `name` attribute should match what you use in the JavaScript
 `exec` call's `service` parameter, and the `value` attribute should match the name of the plugin's
-Objective-C class. `<param name>` should always be i`"ios-package"`.
+Objective-C class. `<param name>` should always be `"ios-package"`.
 If you do not follow this setup, the plugin may compile but will not be
 reachable by Cordova.
 

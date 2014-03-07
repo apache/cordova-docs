@@ -1,0 +1,18 @@
+{
+    "language": "Slovenian",
+    "merge": {
+        "events.md": [
+            "cordova/events/events.md",
+            "cordova/events/events.deviceready.md",
+            "cordova/events/events.pause.md",
+            "cordova/events/events.resume.md",
+            "cordova/events/events.backbutton.md",
+            "cordova/events/events.menubutton.md",
+            "cordova/events/events.searchbutton.md",
+            "cordova/events/events.startcallbutton.md",
+            "cordova/events/events.endcallbutton.md",
+            "cordova/events/events.volumedownbutton.md",
+            "cordova/events/events.volumeupbutton.md"
+        ]
+    }
+}

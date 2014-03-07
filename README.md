@@ -97,56 +97,65 @@ Please see the `STYLESHEET.md` file for guildelines on language and usage.
 Generating the Documentation
 ----------------------------
 
+### Install
+
+- Clone [joDoc](http://github.com/davebalmer/jodoc)
+
+        git clone http://github.com/davebalmer/joDoc.git
+
+- Install markdown
+
+    curl -O http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
+    unzip Markdown_1.0.1.zip
+    chmod u+x Markdown_1.0.1/Markdown.pl
+    mv Markdown_1.0.1/Markdown.pl markdown
+    rm -r Markdown_1*
+
+- Install Ruby Dependencies
+
+    curl -sSL https://get.rvm.io | bash -s stable
+    rvm install 1.8.7
+    gem install bundler
+    bundle install
+
+### Run the Script
+
+Generate all versions
+
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate
+
+Generate a specific language and version
+
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate en edge
+
+or as a shortcut
+
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate --edge
+
 ### Quick Preview
 
 When making minor edits, it is usually safe to simply render the edited from
 Markdown to HTML. Many code editors have plugins to render Markdown to HTML
 and there are a handful of [good](http://dillinger.io/) online editors.
 
-Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are used to generate the HTML documentation.
+Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are
+used to generate the HTML documentation.
 
-### Install joDoc
-
-- Clone [joDoc](http://github.com/davebalmer/jodoc)
-
-        git clone http://github.com/davebalmer/joDoc.git
-
-- Add joDoc/ to your path
-
-  Open `~/.bashrc` or `~/.profile` (or whatever you use)
-
-        export PATH=$PATH:~/path/to/joDoc/
-
-- Install markdown
-
-        # Use your package manager
-        brew install markdown
-
-- Install nokogiri (Ruby HTML parser)
-
-        gem install nokogiri
-
-- Install json (Ruby JSON parser)
-
-        gem install json
-
-### Run the Script
-
-    bin/generate
-
-If all you want to generate is edge/English, then
-
-    bin/generate --edge
-
-### Problems
-
-Generated a Version Release
+Generating a Version Release
 ---------------------------
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
 
-    # generate version 1.7.0
-    rake version[1.7.0]
+    # generate version 1.7.0 for english.
+    rake version[1.7.0,en]
+
+If while running rake you get the error 
+
+    no such file to load -- spec/rake/spectask 
+
+then run
+
+    gem install rspec -v 1.3.0
 
 FAQ
 ---
