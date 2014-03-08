@@ -200,7 +200,7 @@ platform-specific web assets, as described below. Attributes include:
   relative to the `www` directory.
   Assets can be targeted to subdirectories, for example:
 
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
 
   creates the `js/experimental` directory within the `www` directory,
   unless already present, then copies the `new-foo.js` file and
