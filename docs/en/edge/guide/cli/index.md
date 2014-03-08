@@ -268,8 +268,8 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development
-Guide for details.)  More commonly, you would add a plugin to enable
+native components. (See Embedding WebViews and [Plugin Development
+Guide](guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 detailed in the API Reference. A list of these plugins, including
 additional plugins provided by the community, can be found at
