@@ -67,6 +67,12 @@ To install the `cordova` command-line tool, follow these steps:
    installation, you should be able to invoke `node` or `npm` on your
    command line. 
 
+1. Download and install a git client, if you don't already have one.
+   Following installation, you should be able to invoke `git`
+   on your command line. Even though you won't be using `git` manually,
+   the CLI does use it behind-the-scenes to download some assets when
+   creating a new project.
+
 1. Install the `cordova` utility. In Unix, prefixing the additional
    `sudo` command may be necessary to install development utilities in
    otherwise restricted directories:
