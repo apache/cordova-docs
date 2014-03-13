@@ -105,7 +105,7 @@ were in the same source directory:
 Then run a command such as the following to test whether iOS
 dependencies load properly:
 
-        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
 
 For details on `plugman` options, see Using Plugman to Manage Plugins.
 For information on how to actually _debug_ plugins, see each
