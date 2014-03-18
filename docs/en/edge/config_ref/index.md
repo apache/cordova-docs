@@ -176,3 +176,16 @@ Here is how the element appears for iOS projects:
 
 See the API Reference for details on how to specify each feature. See
 the Plugin Development Guide for more information on plugins.
+
+
+## The _platform_ Element
+
+When using the CLI to build applications, it is sometimes necessary to specify
+preferences or other elements specific to a particular platform. Use the `<platform>`
+element to specify configuration that should only appear in a single platform-specific
+`config.xml` file. For example, here is how to specify that only android should use the
+Fullscreen preference:
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>
