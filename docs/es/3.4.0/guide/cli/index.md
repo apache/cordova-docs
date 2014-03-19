@@ -14,13 +14,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ---
 
-# L'Interface de ligne de commande
+# La interfaz de linea de comandos
 
-Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma (véase la introducción para una descripción de los distintos flujos de trabajo). Sin embargo, también puede utilizar la CLI para inicializar el código del proyecto, tras lo cual utiliza de diversas plataformas SDK y herramientas de shell para desarrollo continuo.
+Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, para diferentes plataformas y ejecutables en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma (véase la introducción para una descripción de los distintos flujos de trabajo). Sin embargo, también puede utilizar la CLI para inicializar el código del proyecto, para lo cual utiliza diversas plataformas SDK y herramientas de consola para el desarrollo continuo.
 
-## Prerequisitos
+## Pre-requisitos
 
-Antes de ejecutar cualquiera de las herramientas de línea de comandos, necesita instalar el SDK para cada plataforma de destino. (Vea a las guías de la plataforma para más detalles).
+Antes de ejecutar cualquiera de las herramientas de línea de comandos, necesita instalar el SDK para cada plataforma. (Vea a las guías de la plataforma para más detalles).
 
 Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesitará ejecutar la interfaz de línea de comandos desde la misma máquina que soporta el SDK de la plataforma. La CLI admite las siguientes combinaciones:
 
@@ -33,48 +33,48 @@ Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesi
 *   Windows 8 (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
-En el Mac, es disponible a través de la aplicación de *Terminal de* la línea de comandos. En el PC, se encuentra disponible como *símbolo* en *accesorios*.
+En Mac, la linea de comando esta disponible a través de la aplicación de *Terminal*. En PC, se encuentra disponible como *símbolo* en *accesorios*.
 
-Lo más probable es que ejecute la CLI de diferentes máquinas, tiene más sentido mantener un repositorio de código fuente remota, cuyos activos que tire hacia abajo para directorios de trabajo local.
+Lo más probable es que ejecute la CLI de diferentes máquinas, tiene más sentido mantener un repositorio de código fuente remoto, cuyos recursos traiga hacia directorios de trabajo local.
 
-Para instalar el `cordova` de línea de comandos de la herramienta, siga estos pasos:
+Para instalar las herramientas de la línea de comandos de `cordova`, siga estos pasos:
 
-1.  Descargar e instalar [Node.js][1]. Después de la instalación, usted debe ser capaz de invocar `nodo` o `npm` en su línea de comandos.
+1.  Descargar e instalar [Node.js][1]. Después de la instalación, usted debe ser capaz de ejecutar `node` o `npm` en su línea de comandos.
 
-2.  Instalar la utilidad de `cordova`. En Unix, prefijando el comando `sudo` de adicional puede ser necesario instalar utilidades de desarrollo en lo contrario restringido directorios:
+2.  Instalar las herramientas de `cordova`. En Unix puede ser necesario agregar al inicio el comando `sudo` para instalar las herramientas de desarrollo directorios restringidos:
     
         $ sudo npm install -g cordova
         
     
-    El registro de instalación puede producir errores para cualquier plataforma desinstalado SDK. Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos.
+    El registro de instalación puede producir errores al desinstalar cualquier plataforma SDK. Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos.
     
-    **Nota**: el `-g` bandera arriba dice npm instalar cordova en todo el mundo. Puede que necesites añadir el directorio npm a tu camino para invocar globalmente npm módulos instalados. En Windows, npm normalmente puede encontrarse en `C:\Users\username\AppData\Roaming\npm` y en Unix en`/usr/local/share/npm`.
+    **Nota**: el parametro `-g` indica a npm instalar cordova para todo el sistema. Puede que necesites añadir el directorio npm a tu PATH para ejecutar globalmente npm. En Windows, npm normalmente puede encontrarse en `C:\Users\username\AppData\Roaming\npm` y en Unix en`/usr/local/share/npm`.
 
  [1]: http://nodejs.org/
 
 ## Crear la aplicación
 
-Vaya al directorio donde mantener su código fuente y ejecutar un comando como el siguiente:
+Vaya al directorio donde mantenedra su código fuente y ejecute el siguiente comando:
 
         $ cordova create hello com.example.hello HelloWorld
     
 
-Puede tomar algún tiempo para que el comando completar, así que tenga paciencia. Ejecutar el comando con el `-d` opción muestra información acerca de su progreso.
+Puede demorar la ejecución del comando, así que tenga paciencia. Ejecutar el comando con parametro `-d` muestrara información acerca de su progreso.
 
-El primer argumento *Hola* especifica un directorio que se generen para su proyecto. Este directorio ya no debería existir, Córdoba lo creará para usted. Su `www` subdirectorio casas página de inicio de su aplicación, junto con diversos recursos bajo `css` , `js` , y `img` , que seguir común web convenciones de nomenclatura de archivos de desarrollo. El `config.xml` archivo contiene metadatos importantes necesarios para generar y distribuir la aplicación.
+El primer argumento *hola* especifica el directorio que se creara para su proyecto. Este directorio no debería existir, Córdoba lo creará para usted. El subdirectorio `www` sera el centro de su aplicación y contendra la página de inicio, junto con diversos recursos bajo `css`, `js`, e `img`, que siguen el común  de las convenciones de nomenclatura para archivos para el desarrollo web. El archivo `config.xml` contiene metadatos importantes, necesarios para generar y distribuir la aplicación.
 
-El segundo argumento `com.example.hello` proporciona un identificador de dominio reverso-estilo su proyecto. Este argumento es opcional, pero sólo si también omite el tercer argumento, puesto que los argumentos son posicionales. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de paquetes Java. El valor predeterminado es `io.cordova.hellocordova` , pero se recomienda que seleccione un valor apropiado.
+El segundo argumento `com.example.hello` proporciona un identificador de dominio de estilo-reverso para su proyecto. Este argumento es opcional, pero sólo si también omite el tercer argumento, puesto que los argumentos son posicionales. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de paquetes Java. El valor predeterminado es `io.cordova.hellocordova` , pero se recomienda que seleccione un valor apropiado.
 
 El tercer argumento `HelloWorld` da título de pantalla de la aplicación. Este argumento es opcional. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de clase de Java. El valor predeterminado es `HelloCordova` , pero se recomienda que seleccione un valor apropiado.
 
 ## Añadir plataformas
 
-Todos los comandos posteriores necesitan ejecutarse dentro de directorio del proyecto, o cualquier subdirectorios dentro de su ámbito de aplicación:
+Todos los comandos posteriores necesitan ejecutarse dentro de directorio del proyecto, o dentro de cualquiera de sus subdirectorios:
 
         $ cd hello
     
 
-Antes de que usted puede construir el proyecto, tienes que especificar un conjunto de plataformas de destino. Su capacidad para ejecutar estos comandos depende de si tu maquina soporta cada SDK, y si ya tienes instalación cada SDK. Ejecutar cualquiera de éstos desde un Mac:
+Antes de que usted puede construir el proyecto, tiene que agregar un conjunto de plataformas para las cuales desarrollara. Su capacidad para ejecutar estos comandos depende de si tu maquina soporta cada SDK, y si ya tienes instalación cada SDK. Ejecuta cualquiera de éstos desde un Mac:
 
         $ cordova platform add ios
         $ cordova platform add amazon-fireos
@@ -94,27 +94,27 @@ Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere 
         $ cordova platform add firefoxos
     
 
-Ejecutar para comprobar su sistema actual de plataformas:
+Ejecutar para comprobar el lsitado actual de plataformas en su sistema:
 
         $ cordova platforms ls
     
 
-(Nota del `platform` y `platforms` son sinónimos comandos.)
+(Nota `platform` y `platforms` son comandos sinónimos.)
 
-Ejecutar cualquiera de los siguientes comandos sinónimos para quitar una plataforma:
+Ejecuta cualquiera de los siguientes comandos sinónimos para quitar una plataforma:
 
         $ cordova platform remove blackberry10
         $ cordova platform rm amazon-fireos
         $ cordova platform rm android
     
 
-Ejecución de comandos para agregar o quitar afecta a plataformas el contenido del directorio de *plataformas* del proyecto, donde cada plataforma especificado aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www` . Porque la CLI constantemente copia archivos desde la carpeta *www* fuente, sólo debe editar estos archivos y no los ubicado debajo de los subdirectorios de *plataformas* . Si utilizas software de control de versión, debe agregar esta carpeta *www* fuente, junto con la carpeta *se funde* , a su sistema de control de versión. (Puede encontrarse más información sobre la carpeta *se funde* en la sección de personalizar cada plataforma abajo).
+Ejecutar comandos para agregar o quitar plataformas afecta el contenido del directorio *platforms* de tu proyecto, donde cada plataforma especificads aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www`. Porque la CLI constantemente copia archivos desde la carpeta fuente *www*, sólo debe editar estos archivos y no los ubicado debajo de los subdirectorios de *platforms*. Si utilizas software de control de versiones, debe agregar la carpeta fuente *www*, junto con la carpeta *merges* , a su sistema de control de versiones. (Puede encontrarse más información sobre la carpeta *merges* en la sección de personalización de cada plataforma).
 
-**ADVERTENCIA**: cuando se usa la CLI para construir tu aplicación, usted está totalmente desaconsejado de editar los archivos en el `/platforms/` carpeta si no sabes lo que está haciendo o se dijo específicamente lo contrario en la documentación. Esto es porque los archivos en el `/platforms/` Directorio será sobrescrito por preparar o reinstalación del plugin.
+**ADVERTENCIA**: cuando se usa la CLI para construir tu aplicación, es totalmente aconsejable no editar los archivos de la carpeta `/platforms/` si no sabes lo que está haciendo o no se dice específicamente en la documentación. Esto es debido a que los archivos en la carpeta `/platforms/` son sobrescritos para la prepararción o reinstalación de plugins.
 
-Si lo desea en este punto, puede utilizar un SDK como Eclipse o Xcode para abrir el proyecto que ha creado. Usted necesitará abrir el conjunto derivado de los activos de la `/platforms/` Directorio para desarrollar con un SDK. Esto es porque los archivos de metadatos específicos del SDK se almacenan dentro de la correspondiente `/platform/` subdirectorio. (Vea a las guías de plataforma para obtener información sobre cómo desarrollar aplicaciones dentro de cada IDE). Utilice este enfoque si simplemente quieres inicializar un proyecto mediante la CLI y luego cambiar a un SDK para trabajo nativo.
+Si lo desea en este punto, puede utilizar un SDK como Eclipse o Xcode para abrir el proyecto que ha creado. Usted necesitará abrir el conjunto derivado de los recursos de la carpeta `/platforms/` para desarrollar con un SDK. Esto es porque los archivos de metadatos específicos del SDK se almacenan dentro de la correspondiente carpeta `/platform/`. (Vea a la guía de plataformas para obtener información sobre cómo desarrollar aplicaciones dentro de cada IDE). Utilice este enfoque si simplemente quiere inicializar un proyecto mediante la CLI y luego cambiar a un SDK para trabajo de forma nativa.
 
-Lea sobre si desea utilizar el enfoque de flujo de trabajo multiplataforma (CLI) para el ciclo completo de desarrollo.
+Lea Si desea utilizar el enfoque de flujo de trabajo multiplataforma (CLI) para el ciclo de desarrollo completo.
 
 ## Construir la aplicación
 
