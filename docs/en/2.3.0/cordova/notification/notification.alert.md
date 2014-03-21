@@ -49,7 +49,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android / BlackBerry (5 - 7 and BlackBerry 10) / iPhone / Tizen
+    // Android / BlackBerry OS 5 - 7 and BlackBerry 10 / iPhone / Tizen
     //
     function alertDismissed() {
         // do something
