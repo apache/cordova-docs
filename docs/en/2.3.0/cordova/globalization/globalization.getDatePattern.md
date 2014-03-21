@@ -48,7 +48,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 8
 
 Quick Example
 -------------
@@ -87,12 +86,4 @@ Full Example
         <button onclick="checkDatePattern()">Click for pattern</button>
       </body>
     </html>
-
-Windows Phone 8 Quirks
---------------
-
-- `formatLength` option supports only short and full values.
-- `pattern` property for `date and time` pattern returns only full datetime format.
-- `timezone` property returns full time zone name
-- `dst_offset` returned property is not supported and always returns zero.
 

@@ -40,7 +40,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 8
 
 
 Quick Example
@@ -75,7 +74,3 @@ Full Example
         <button onclick="checkLocale()">Click for locale</button>
       </body>
     </html>
-
-Windows Phone 8 Quirks
----------------------
-- Returns the two-letter code defined in ISO 3166 for the current country/region.
