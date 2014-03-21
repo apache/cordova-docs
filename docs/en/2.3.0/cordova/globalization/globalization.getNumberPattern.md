@@ -50,7 +50,6 @@ Supported Platforms
 - Android
 - BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
-- Windows Phone 8
 
 Quick Example
 -------------
@@ -112,10 +111,5 @@ Full Example
         <button onclick="checkPattern()">Click for pattern</button>
       </body>
     </html>
-    
-Windows Phone 8 Quirks
-----------------
-- `pattern` property is not supported; empty string is always returned.
-- `fraction` property is not supported; zero is always returned.
     
 
