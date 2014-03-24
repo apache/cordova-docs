@@ -40,7 +40,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry OS 5 - 7 and BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8
@@ -49,7 +49,7 @@ Supported Platforms
 Quick Example
 -------------
 
-    // Android / BlackBerry WebWorks (OS 5.0 and higher) / iOS / Tizen
+    // Android / BlackBerry OS 5 - 7 and BlackBerry 10 / iOS / Tizen
     //
     function alertDismissed() {
         // do something
