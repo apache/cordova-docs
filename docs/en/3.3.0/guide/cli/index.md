@@ -40,7 +40,7 @@ platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
 * Amazon Fire OS  (Mac, Linux, Windows)
-* Android         (Mac, Linux)
+* Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)

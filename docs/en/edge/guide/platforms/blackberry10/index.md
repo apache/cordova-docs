@@ -29,9 +29,9 @@ command-line tools, described in BlackBerry Platform Guide.
 The development environment is available on Windows, Mac and Linux.
 
 Developers should use the `cordova` utility in conjunction with the
-Blackberry Native SDK.  See The Command-Line Interface for information
-how to install `cordova`, add projects, then build and deploy for each
-platform.
+BlackBerry WebWorks SDK or BlackBerry Native SDK. See The Command-Line
+Interface for information how to install `cordova`, add projects, then
+build and deploy for each platform.
 
 Blackberry 10 Device Simulator:
 
@@ -44,7 +44,17 @@ Blackberry 10 Device Simulator:
 	
 More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
 
+## Install the BlackBerry WebWorks SDK
+
+Download and install the BlackBerry WebWorks SDK from [developer.blackberry.com](https://developer.blackberry.com/html5/download/)
+
+The installer will add command-line tools to your path. Depending on your OS,
+you may need to open a new terminal window or re-log in.
+
 ## Install the BlackBerry Native SDK
+
+If you need to compile native code, for example when developing a native plugin, you
+will need to install the BlackBerry Native SDK.
 
 In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
 [developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.

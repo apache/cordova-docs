@@ -41,7 +41,7 @@ platform's SDK. The CLI supports the following combinations:
 
 * iOS             (Mac)
 * Amazon Fire OS  (Mac, Linux, Windows)
-* Android         (Mac, Linux)
+* Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
@@ -66,6 +66,12 @@ To install the `cordova` command-line tool, follow these steps:
 1. Download and install [Node.js](http://nodejs.org/). Following
    installation, you should be able to invoke `node` or `npm` on your
    command line. 
+
+1. Download and install a [git client](http://git-scm.com/), if you don't
+   already have one. Following installation, you should be able to invoke `git`
+   on your command line. Even though you won't be using `git` manually,
+   the CLI does use it behind-the-scenes to download some assets when
+   creating a new project.
 
 1. Install the `cordova` utility. In Unix, prefixing the additional
    `sudo` command may be necessary to install development utilities in
@@ -268,8 +274,8 @@ add plugins that provide access to core Cordova APIs.
 A _plugin_ is a bit of add-on code that provides an interface to
 native components. You can design your own plugin interface, for
 example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development
-Guide for details.)  More commonly, you would add a plugin to enable
+native components. (See Embedding WebViews and [Plugin Development
+Guide](guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
 detailed in the API Reference. A list of these plugins, including
 additional plugins provided by the community, can be found at
