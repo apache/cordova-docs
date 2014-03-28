@@ -122,6 +122,9 @@ file, but do be aware that there may be code generated outside of `config.xml`
 using this value, such as Java class names. The default value is `HelloCordova`,
 but it is recommended that you select an appropriate value.
 
+## Project Directory Structure
+
+
 ## Add Platforms
 
 All subsequent commands need to be run within the project's directory,
