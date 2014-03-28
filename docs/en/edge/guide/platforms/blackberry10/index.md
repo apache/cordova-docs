@@ -35,14 +35,25 @@ Shell Tool Guide.
 The development environment is available on Windows, Mac and Linux.
 
 Developers should use the `cordova` utility in conjunction with the
-Blackberry Native SDK.  See The Command-line Interface for information
+Blackberry Native SDK.  See The Command-Line Interface for information
 how to install `cordova`, add projects, then build and deploy for each
 platform.
 
+Blackberry 10 Device Simulator:
+
+	* `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+	* `Disk space: 10 GB`
+	* `RAM Memory: 4 GB`
+	* `Virtualization:
+		* __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+		* __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
+	
+More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
+
 ## Install the BlackBerry Native SDK
 
-The BlackBerry Native SDK is available from
-[developer.blackberry.com](http://developer.blackberry.com/native/download/).
+In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
+[developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.
 Following installation, you need to add its command-line tools to your
 system path.
 
@@ -69,20 +80,38 @@ On Mac and Linux:
 
         $ source ~/.bash_profile
 
+If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:
+
+	* On Windows:
+		$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+
+	* On Linux &rarr; Installed as root user:
+		$ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+		
+	* On Linux &rarr; Installed as non-root user:
+		$ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+	
+	* On Mac:
+		$ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+
+	
 ## Set up for Signing
 
 If you wish to test on a device or distribute apps through BlackBerry
 World, your system must be setup for code signing.
 
-To obtain a signing key, go to the BlackBerry website and make sure to
-retain the password you specify. Then run the `blackberry-signer`
-utility that is included with the BlackBerry Native SDK.
+To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).
 
-Detailed instuctions can be found here:
+Select the first checkbox: "for BlackBerry10 apps developed using BlackBerry
+NDK" and then sign in or create a BBID.
 
-* [Register for your code signing key.](https://www.blackberry.com/SignedKeys/codesigning.html)
+Enter a password and click "Get Token" to download bbidtoken.csk. Save this
+file to the default location for your OS which will be displayed on the
+download page.
 
-* [Set up your system for code signing.](https://developer.blackberry.com/html5/documentation/signing_setup_bb10_apps_2008396_11.html)
+The final step is to generate a signing certificate:
+
+    $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
 
 ## Create a Project
 
@@ -103,16 +132,14 @@ BlackBerry 10 Simulator.
 * [Getting Started](http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html)
 
 Before testing an app on either an emulator or a device, you need to
-add a _target_ to your project. Each is identified with a unique name,
-and associated with an IP address. You need to get the IP address from
-the emulator before you use it to view apps.
+enable development mode.
 
 Launch the emulator image, then choose __Settings__ from the home screen:
 
 ![](img/guide/platforms/blackberry10/bb_home.png)
 
 Navigate to the __Security and Privacy &rarr; Development Mode__
-section, enable the option, and obtain the IP address:
+section and enable the option:
 
 ![](img/guide/platforms/blackberry10/bb_devel.png)
 
@@ -188,10 +215,25 @@ browser.  For more information, see
 By default, running the `cordova build` command creates an unsigned
 _.bar_ package file suitable for testing on a device or simulator.
 
-You need to run a different `build` command to create a release
-version suitable for distribution through BlackBerry World.  It does
-not rely on the `cordova` CLI tool, and instead uses the following
-syntax:
+Use `--release` to create a release version suitable for distribution
+through BlackBerry World.
+
+    $ cordova build --release --keystorepass <signing password>
+
+The `--keystorepass` option specifies the password you defined when
+configuring your computer to sign applications.
+
+
+## Deploy to Other Locations
+
+The instructions above assume a device is plugged in via USB or a
+simulator is running on the local machine. It is also possible to
+deploy to other locations.
+
+An additional set of command-line utilities are included when you set
+up the BlackBerry 10 platform for your project.  The following
+command, in this case invoked from the project top-level directory,
+associates a target named _emu_ with an IP address.
 
 * On Windows:
 
@@ -201,5 +243,7 @@ syntax:
 
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
 
-The `--keystorepass` option specifies the password you defined when
-configuring your computer to sign applications.
+Once the target is defined, you can provide it to the run command using
+`--target`:
+
+    $ cordova run blackberry10 --target=emu

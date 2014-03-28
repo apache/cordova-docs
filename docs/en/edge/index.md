@@ -30,12 +30,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Compatibility table for all major features.</span>
         </li>
         <li>
-            <h2>The Command-line Interface</h2>
+            <h2>The Command-Line Interface</h2>
             <span>Create, build, and deploy from the command-line.</span>
         </li>
         <li>
             <h2>Platform Guides</h2>
             <span>Set up each SDK and update projects</span>
+        </li>
+        <li>
+         <h2>Using Plugman to Manage Plugins</h2>
+            <span>Using Plugman to manage Plugins without the CLI</span>
         </li>
         <li>
             <h2>The config.xml File</h2>
@@ -62,6 +66,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>Grant an application access to external resources.</span>
         </li>
         <li>
+            <h2>Storage</h2>
+            <span>An overview of native storage options.</span>
+        </li>
+        <li>
             <h2><a href="_index.html">Keyword Index</a></h2>
             <span>Full index of the documentation.</span>
         </li>
@@ -70,68 +78,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     <h1>API Reference</h1>
     <ul>
         <li>
-            <h2>Accelerometer</h2>
-            <span>Tap into the device's motion sensor.</span>
-        </li>
-        <li>
-            <h2>Camera</h2>
-            <span>Capture a photo using the device's camera.</span>
-        </li>
-        <li>
-            <h2>Capture</h2>
-            <span>Capture media files using device's media capture applications.</span>
-        </li>
-        <li>
-            <h2>Compass</h2>
-            <span>Obtain the direction that the device is pointing.</span>
-        </li>
-        <li>
-            <h2>Connection</h2>
-            <span>Quickly check the network state, and cellular network information.</span>
-        </li>
-        <li>
-            <h2>Contacts</h2>
-            <span>Work with the devices contact database.</span>
-        </li>
-        <li>
-            <h2>Device</h2>
-            <span>Gather device specific information.</span>
-        </li>
-        <li>
             <h2>Events</h2>
             <span>Hook into native events through JavaScript.</span>
         </li>
         <li>
-            <h2>File</h2>
-            <span>Hook into native file system through JavaScript.</span>
-        </li>
-        <li>
-            <h2>Geolocation</h2>
-            <span>Make your application location aware.</span>
-        </li>
-        <li>
-            <h2>Globalization</h2>
-            <span>Enable representation of objects specific to a locale.</span>
-        </li>
-        <li>
-            <h2>InAppBrowser</h2>
-            <span>Launch URLs in another in-app browser instance.</span>
-        </li>
-        <li>
-            <h2>Media</h2>
-            <span>Record and play back audio files.</span>
-        </li>
-        <li>
-            <h2>Notification</h2>
-            <span>Visual, audible, and tactile device notifications.</span>
-        </li>
-        <li>
-            <h2>Splashscreen</h2>
-            <span>Show and hide the applications splash screen.</span>
-        </li>
-        <li>
-            <h2>Storage</h2>
-            <span>Hook into the devices native storage options.</span>
+            <h2>Plugin APIs</h2>
+            <span>Discover what plugins Cordova are available to using in your project.</span>
         </li>
     </ul>
 

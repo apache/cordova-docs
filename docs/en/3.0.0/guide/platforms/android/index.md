@@ -20,8 +20,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Android Platform Guide
 
 This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Android devices. See the following for more
-detailed platform-specific information:
+deploy Cordova apps for Android devices. It walks you through the process
+of installing the Android SDK, opening an Android project in Eclipse SDK, 
+and deploying to an emulator or device. You will need to follow this guide 
+to at least Install the Android SDK, regardless of which workflow you
+are following. (Both the _Web Project Dev_ and _Native Platform Dev_ workflows
+require the Android SDK to be installed and accessable via your PATH.)
+
+See the following for more detailed platform-specific information:
 
 * Android Configuration
 * Android WebViews
@@ -30,7 +36,7 @@ detailed platform-specific information:
 * Android Command-line Tools
 
 The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-line Interface for information about the
+See The Command-Line Interface for information about the
 current interface.
 
 ## Requirements and Support
@@ -49,17 +55,17 @@ NOTE, doc said:
 -->
 
 Developers should use the `cordova` utility in conjunction with
-the Android SDK.  See The Command-line Interface for
+the Android SDK.  See The Command-Line Interface for
 information how to install it, add projects, then build and deploy a
 project.
 
-## Install the SDK
-
 Install the Android SDK from
-[developer.android.com/sdk](http://developer.android.com/sdk/).  You
-may be presented with a choice of where to install the SDK, otherwise
-move the downloaded `adt-bundle` tree to wherever you store
-development tools.
+[developer.android.com/sdk](http://developer.android.com/sdk/). The android sdk
+is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file.
+On windows, the adt-bundle is packaged with an installer.
+On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. 
+[More detailed information on Android SDK setup can be found here](http://developer.android.com/sdk/installing/bundle.html)
+
 
 For Cordova command-line tools to work, you need to include the SDK's
 `tools` and `platform-tools` directories in your PATH environment.  On
@@ -101,7 +107,7 @@ run:
 ## Open a Project in the SDK
 
 Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
+Cordova The Command-Line Interface. For example, in a source-code directory:
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
@@ -118,6 +124,8 @@ Once created, here's how to use the SDK to modify it:
     ![](img/guide/platforms/android/eclipse_new_project.png)
 
 * Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/android` subdirectory.
+
+* Make sure both `hello` and `hello-CordovaLib` projects are selected to be imported. The `hello-CordovaLib` project is needed as of Cordova 3.3.0 because Cordova is now used as an Android Library instead of a .jar file.
 
 * Press __Finish__.
 
@@ -178,7 +186,7 @@ application to the emulator from the command line:
 
         $ cordova emulate android
 
-If instead you are working within Eclipse, right-click the project and
+If instead you work within Eclipse, right-click the project and
 choose __Run As &rarr; Android Application__. You may be asked to
 specify an AVD if none are already open.
 

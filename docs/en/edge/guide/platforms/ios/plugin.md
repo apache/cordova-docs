@@ -108,7 +108,7 @@ For more details, see
 and
  `[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
 
-## iOS CDVPluginResult message types
+## iOS CDVPluginResult Message Types
 
 You can use `CDVPluginResult` to return a variety of result types back to
 the JavaScript callbacks, using class methods that follow this pattern:

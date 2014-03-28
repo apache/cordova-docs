@@ -41,7 +41,7 @@ plugin features across all platforms, see Using Plugman to Manage
 Plugins. See Application Plugins for details on how to develop
 plugins.
 
-## Create a project
+## Create a Project
 
 Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display

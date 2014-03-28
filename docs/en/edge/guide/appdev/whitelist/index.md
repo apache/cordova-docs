@@ -28,8 +28,8 @@ access to specific network domains and subdomains.
 Cordova adheres to the [W3C Widget Access][1] specification, which
 relies on the `<access>` element within the app's `config.xml` file to
 enable network access to specific domains. For projects that rely on
-the CLI workflow described in The Command-line Interface, this file is
-located in the project's top-level `www` directory. Otherwise for
+the CLI workflow described in The Command-Line Interface, this file is
+located in the project's top-level directory. Otherwise for
 platform-specific development paths, locations are listed in the
 sections below. (See the various Platform Guides for more information
 on each platform.)
@@ -60,12 +60,17 @@ The following examples demonstrate whitelist syntax:
 
   This is the default value for newly created CLI projects.
 
+## Amazon Fire OS Whitelisting
+
+Platform-specific whitelisting rules are found in
+`res/xml/config.xml`.
+
 ## Android Whitelisting
 
 Platform-specific whitelisting rules are found in
 `res/xml/config.xml`.
 
-__NOTE:__ On Android 2.3 and before, domain whitelisting only works
+__NOTE__: On Android 2.3 and before, domain whitelisting only works
 for `href` hyperlinks, not referenced resources such as images and
 scripts. Take steps to avoid scripts from being injected into the
 application.
@@ -101,7 +106,7 @@ BlackBerry 10's use of wildcards differs from other platforms in two
 ways:
 
 * Any content accessed by `XMLHttpRequest` must be declared
-  explicity. Setting `origin="*"` does not work in this case.
+  explicitly. Setting `origin="*"` does not work in this case.
   Alternatively, all web security may be disabled using the
   `WebSecurity` preference described in BlackBerry Configuration:
  
@@ -126,19 +131,31 @@ ways:
 (For more information on support, see BlackBerry's documentation on the
 [access element][8].)
 
-## iOS
+## iOS Changes in 3.1.0
 
-### Changed in 3.1.0:
-
-Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whilelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change the `config.xml` file in order to continue whitelisting the same set of resources as before.
+Prior to version 3.1.0, Cordova-iOS included some non-standard
+extensions to the domain whilelisting scheme supported by other
+Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the
+resource whitelist syntax described at the top of this document. If
+you upgrade from pre-3.1.0, and you were using these extensions, you
+may have to change the `config.xml` file in order to continue
+whitelisting the same set of resources as before.
 
 Specifically, these patterns need to be updated:
 
-* "`apache.org`" (no protocol): This would previously match `http`, `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`" to include all protocols, or include a line for each protocol you need to support.
+* "`apache.org`" (no protocol): This would previously match `http`,
+  `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`"
+  to include all protocols, or include a line for each protocol you
+  need to support.
 
-* "`http://apache.*`" (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.
+* "`http://apache.*`" (wildcard at end of domain): This would
+  previously match all top-level-domains, including all possible
+  two-letter TLDs (but not useful domains like .co.uk). Include a line
+  for each TLD which you actually control, and need to whitelist.
 
-* "`h*t*://ap*he.o*g`" (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
+* "`h*t*://ap*he.o*g`" (wildcards for random missing letters): These
+  are no longer supported; change to include a line for each domain
+  and protocol that you actually need to whitelist.
 
 ## Windows Phone Whitelisting
 

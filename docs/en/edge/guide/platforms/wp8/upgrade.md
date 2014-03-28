@@ -23,27 +23,40 @@ This guide shows how to modify Windows Phone projects, both versions 7
 and 8, to upgrade from older versions of Cordova.  Most of these
 instructions apply to projects created with an older set of
 command-line tools that precede the `cordova` CLI utility. See The
-Command-line Interface for information how to update the version of
+Command-Line Interface for information how to update the version of
 the CLI.  The following section shows how to upgrade from non-CLI
 projects.
 
-## Upgrade to 3.1.0 from 3.0.0 ##
+## Upgrade to 3.2.0 from 3.1.0
 
 For projects that were created with the cordova CLI: 
 
-1. Update the `cordova` CLI version - see The Command-line Interface 
+1. Update the `cordova` CLI version. See The Command-Line Interface. 
+
 2. Run `cordova platform update wp8` (or `wp7`, per the platforms you added to your project).
         
 For projects not created with the cordova CLI, run:
 
-1. `bin\update <project_path>`
+        bin\update <project_path>
 
-## Upgrade to the CLI (3.0.0) from 2.9.0 ##
+## Upgrade to 3.1.0 from 3.0.0
+
+For projects that were created with the cordova CLI: 
+
+1. Update the `cordova` CLI version. See The Command-Line Interface. 
+
+2. Run `cordova platform update wp8` (or `wp7`, per the platforms you added to your project).
+        
+For projects not created with the cordova CLI, run:
+
+        bin\update <project_path>
+
+## Upgrade to the CLI (3.0.0) from 2.9.0
 
 1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-line Interface.
+   described in The Command-Line Interface.
 
-2. Add your platforms the the cordova project, for example: `cordova
+2. Add your platforms to the cordova project, for example: `cordova
    platform add wp7 wp8`.
 
 3. Copy the contents of the project's `www` directory to the `www` directory
@@ -60,7 +73,7 @@ For projects not created with the cordova CLI, run:
 
 6. Build and test.
 
-## Upgrade to 3.0.0 (non-CLI) from 2.9.0 ##
+## Upgrade to 3.0.0 (non-CLI) from 2.9.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -74,12 +87,12 @@ In Visual Studio's Solution Explorer window:
 
 5. Build and test.
 
-__NOTE:__ all core APIs are removed from Cordova version 3.0, and must
+__NOTE__: all core APIs are removed from Cordova version 3.0, and must
 be installed separately as plugins.  For more information on how to
 re-enable these features in a non-CLI workflow, see Using Plugman to
 Manage Plugins.
 
-## Upgrade to 2.9.0 from 2.8.0 ##
+## Upgrade to 2.9.0 from 2.8.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -95,7 +108,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.8.0 from 2.7.0 ##
+## Upgrade to 2.8.0 from 2.7.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -111,7 +124,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.7.0 from 2.6.0 ##
+## Upgrade to 2.7.0 from 2.6.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -127,7 +140,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.6.0 from 2.5.0 ##
+## Upgrade to 2.6.0 from 2.5.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -143,7 +156,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.5.0 from 2.4.0 ##
+## Upgrade to 2.5.0 from 2.4.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -159,7 +172,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.4.0 from 2.3.0 ##
+## Upgrade to 2.4.0 from 2.3.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -175,7 +188,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.3.0 from 2.2.0 ##
+## Upgrade to 2.3.0 from 2.2.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -191,7 +204,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.2.0 from 2.1.0 ##
+## Upgrade to 2.2.0 from 2.1.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -207,7 +220,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.1.0 from 2.0.0 ##
+## Upgrade to 2.1.0 from 2.0.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -223,7 +236,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 2.0.0 from 1.9.0 ##
+## Upgrade to 2.0.0 from 1.9.0
 
 There have been considerable changes to the WP7 project structure in Apache Cordova 2.0.0 which make this upgrade a little more involved that the others. Essentially this is not an upgrade but creation of a new project and copy over of existing source files.
 
@@ -241,7 +254,7 @@ In Visual Studio's Solution Explorer window:
 
 6. Build and test.
 
-## Upgrade to 1.9.0 from 1.8.0 ##
+## Upgrade to 1.9.0 from 1.8.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -252,13 +265,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.9.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.9.0.js` file.
 
-## Upgrade to 1.8.0 from 1.7.0 ##
+## Upgrade to 1.8.0 from 1.7.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -269,13 +283,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.8.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.8.0.js` file.
 
-## Upgrade to 1.7.0 from 1.6.0 ##
+## Upgrade to 1.7.0 from 1.6.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -286,13 +301,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.7.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.7.0.js` file.
 
-## Upgrade to 1.6.1 from 1.6.0 ##
+## Upgrade to 1.6.1 from 1.6.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -303,13 +319,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.6.1.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.6.1.js` file.
 
-## Upgrade to 1.6.0 from 1.5.0 ##
+## Upgrade to 1.6.0 from 1.5.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -320,13 +337,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.6.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.6.0.js` file.
 
-## Upgrade to 1.5.0 from 1.4.0 ##
+## Upgrade to 1.5.0 from 1.4.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -337,13 +355,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.5.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.5.0.js` file.
 
-## Upgrade to 1.4.0 from 1.3.0 ##
+## Upgrade to 1.4.0 from 1.3.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -354,13 +373,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.4.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.4.0.js` file.
 
-## Upgrade to 1.3.0 from 1.2.0 ##
+## Upgrade to 1.3.0 from 1.2.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -371,13 +391,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.3.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.3.0.js` file.
 
-## Upgrade to 1.2.0 from 1.1.0 ##
+## Upgrade to 1.2.0 from 1.1.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -388,13 +409,14 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: You can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.2.0.js` into your project. (Be sure it is marked as Content.)
 
 6. Update your HTML to use the new `cordova-1.2.0.js` file.
 
-## Upgrade to 1.1.0 from 1.0.0 ##
+## Upgrade to 1.1.0 from 1.0.0
 
 In Visual Studio's Solution Explorer window:
 
@@ -405,7 +427,8 @@ In Visual Studio's Solution Explorer window:
 3. Right-click on __References__ and select __Add Reference__.
 
 4. Navigate to the new distribution and add the `WP7CordovaClassLib.dll` file.
-    - __NOTE:__ you can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
+
+    __NOTE__: you can view the DLL's version by right-clicking on the reference, and selecting __Properties__.
 
 5. Copy the new `cordova-1.1.0.js` into your project. (Be sure it is marked as Content.)
 

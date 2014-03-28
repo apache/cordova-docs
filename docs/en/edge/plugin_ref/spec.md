@@ -91,22 +91,21 @@ in order to override the catch-all `cordova` engine:
         <engine name="cordova-ios" version=">=1.7.1" />
     </engines>
 
-Here's a list of the default engines that the `<engine>` tag supports:
-* `cordova` 
-* `cordova-plugman` 
-* `cordova-android`
-* `cordova-ios`
-* `cordova-blackberry10` 
-* `cordova-wp7`
-* `cordova-wp8`
-* `cordova-windows8`  
-* `android-sdk` // returns the highest Android api level installed
-* `apple-xcode` // returns the xcode version 
-* `apple-ios` // returns the highest iOS version installed
-* `apple-osx` // returns the OSX version
-* `blackberry-ndk` // returns the native blackberry SDK version
-* `windows-os` // returns the Windows OS version
-* `windows-sdk` // returns the MSBuild version
+Here's a list of the default engines that the '<engine>' tag supports:
+* 'cordova' 
+* 'cordova-plugman' 
+* 'cordova-amazon-fireos'
+* 'cordova-android'
+* 'cordova-ios'
+* 'cordova-blackberry10' 
+* 'cordova-wp7'
+* 'cordova-wp8'
+* 'cordova-windows8'  
+* 'android-sdk' // returns the highest Android api level installed
+* 'apple-xcode' // returns the xcode version 
+* 'apple-ios' // returns the highest iOS version installed
+* 'apple-osx' // returns the OSX version
+* 'blackberry-ndk' // returns the native blackberry SDK version
         
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
@@ -247,18 +246,18 @@ Details for the `<js-module>` tag:
 
 * Three tags are allowed within `<js-module>`:
 
-    * `<clobbers target="some.value"/>` indicates that the
+    - `<clobbers target="some.value"/>` indicates that the
       `module.exports` is inserted into the `window` object as
       `window.some.value`. You can have as many `<clobbers>` as you
       like. Any object not available on `window` is created.
 
-    * `<merges target="some.value"/>` indicates that the module
+    - `<merges target="some.value"/>` indicates that the module
       should be merged with any existing value at `window.some.value`.
       If any key already exists, the module's version overrides the
       original. You can have as many `<merges>` as you like. Any
       object not available on `window` is created.
 
-    * `<runs/>` means that your code should be specified with
+    - `<runs/>` means that your code should be specified with
       `cordova.require`, but not installed on the `window`
       object. This is useful when initializing the module, attaching
       event handlers or otherwise. You can only have up to one
@@ -266,7 +265,7 @@ Details for the `<js-module>` tag:
       `<clobbers/>` or `<merges/>` is redundant, since they also
       `cordova.require` your module.
 
-    * An empty `<js-module>` still loads and can be acccessed in other
+    - An empty `<js-module>` still loads and can be accessed in other
       modules via `cordova.require`.
 
 If `src` does not resolve to an existing file, plugman stops and
@@ -276,9 +275,9 @@ exits with a non-zero code.
 Nesting `<js-module>` elements within `<platform>` declares
 platform-specific JavaScript module bindings.
 
-## _dependency_ element
+## _dependency_ Element
 
-The `<dependency>` tag allows you specify other plugins on which the
+The `<dependency>` tag allows you to specify other plugins on which the
 current plugin depends. While future versions will access them from
 plugin repositories, in the short term plugins are directly referenced
 as URLs by `<dependency>` tags. They are formatted as follows:
@@ -343,8 +342,9 @@ associating the element's children with that platform.
 Platform names should be lowercase. Platform names, as arbitrarily
 chosen, are listed:
 
+* amazon-fireos
 * android
-* bb10
+* blackberry10
 * ios
 * wp7
 * wp8
@@ -366,7 +366,7 @@ It supports the following attributes:
 
 * `src` (required):
   Location of the file relative to `plugin.xml`.  If the `src` file
-  cannot be found, plugman stops and reverses the installation, issues
+  can't be found, plugman stops and reverses the installation, issues
   a notification about the problem, and exits with a non-zero code.
 
 * `target-dir`:
@@ -474,11 +474,15 @@ file in an iOS Cordova project. For example:
 ## _resource-file_ and _header-file_ Elements
 
 Like source files, but specifically for platforms such as iOS that
-distinguish between source files, headers, and resources.  Examples:
+distinguish between source files, headers, and resources. iOS Examples:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
+
+Android example:
+
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 
 ## _lib-file_ Element
 
@@ -493,7 +497,7 @@ Supported attributes:
 
 * `src` (required):
   The location of the file relative to `plugin.xml`.
-  If `src` cannot be found, plugman stops and reverses the
+  If `src` can't be found, plugman stops and reverses the
   installation, issues a warning about the problem, and exits with a
   non-zero code.
 
@@ -508,6 +512,7 @@ Examples:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
 
 The `src` attribute identifies the framework, which plugman attempts
 to add to the Cordova project, in the correct fashion for a given
@@ -515,6 +520,8 @@ platform.
 
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
+
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.
 
 ## _info_ Element
 
