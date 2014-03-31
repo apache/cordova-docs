@@ -37,7 +37,7 @@ raises important privacy issues.  Your app's privacy policy should
 discuss how the app uses geolocation data, whether it is shared with
 any other parties, and the level of precision of the data (for
 example, coarse, fine, ZIP code level, etc.).  Geolocation data is
-generally considered sensitive because it can reveal user's
+generally considered sensitive because it can reveal users'
 whereabouts and, if stored, the history of their travels.
 Therefore, in addition to the app's privacy policy, you should
 strongly consider providing a just-in-time notice before the app

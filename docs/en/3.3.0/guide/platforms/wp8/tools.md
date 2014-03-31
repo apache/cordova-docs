@@ -17,22 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone Command-line Tools
+# Windows Phone Shell Tool Guide
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+This guide shows how to use Cordova's set of platform-centered shell
+tools to develop Windows Phone apps for both versions 7 and 8. This
+development path, discussed in the Overview, may offer you a greater
+range of development options for the Windows Phone platform than the
+cross-platform CLI tool described in The Command-Line Interface.
+Before using either development path, you must first configure the SDK
+environment as described in the Windows Phone 7 Platform Guide or
+the Windows Phone 8 Platform Guide.
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+To enable shell tools for Windows Phone development, download Cordova
+from [cordova.apache.org](http://cordova.apache.org). The download
+contains separate archives for each platform. Expand each you wish to
+target, `wp8` in this case, which in turn is forked into `wp7` and
+`wp8` subdirectories. The relevant tools are typically available
+in the top-level `bin` directory, otherwise consult the __README__
+file for more detailed directions.
+
+These tools allow you to create, build, and run apps.  For information
+on the all-purpose command-line interface that enables plugin
+features, see Using Plugman to Manage Plugins. See Application Plugins
+for details on how to develop plugins.
 
 ## Windows Phone
 
@@ -40,7 +47,7 @@ The Windows Phone command-line tools support creating, building, and
 running new projects. Commands must be run from a cmd or powershell
 prompt.
 
-The WP8 repo now includes code for building both WP7 + WP8 apps.  The
+The `WP8` repo now includes code to build both WP7 and WP8 apps.  The
 repo has subdirectories for each: `wp7/` and `wp8/`.
 
 ## Create a Project
@@ -62,7 +69,7 @@ There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 applicatio
 
 Run the script :
 
-    >createTemplates.bat -install
+        >createTemplates.bat -install
 
 ### Use the Create Scripts on the Command Line
 
@@ -70,16 +77,16 @@ Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
 name.  Here is the syntax for both Windows Phone 7 and 8:
 
-    >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
-    >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
+        >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
+        >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
 
-    >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
-    >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
+        >PathToNewProject : The path to where you wish to create the project
+        >PackageName      : The namespace for the project (default is Cordova.Example)
+        >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
 
-    >examples:
-    >.\wp7\bin\create C:\path\to\my_new_project
-    >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
+        >examples:
+        >.\wp7\bin\create C:\path\to\my_new_project
+        >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
 
 Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)
 
@@ -89,11 +96,11 @@ Build and Run it
 
 * Debug
 
-    $ C:\path\to\my_new_project\cordova\build --debug
+        $ C:\path\to\my_new_project\cordova\build --debug
 
 * Release
 
-    $ C:\path\to\my_new_project\cordova\build --release
+        $ C:\path\to\my_new_project\cordova\build --release
 
 ## Running the App
 
@@ -103,11 +110,11 @@ Run the 'run' command with the following *optional* parameters
 
 * Build specification. This includes `--debug`, `--release`, or `--nobuild`.
 
-    $ C:\path\to\my_new_project\cordova\run [Target] [Build]
+        $ C:\path\to\my_new_project\cordova\run [Target] [Build]
 
 By default the `run` command is called with `--emulator --debug` if flags are not provided.
 
 ## Cleaning
 
-    $ C:\path\to\my_new_project\cordova\clean
+        $ C:\path\to\my_new_project\cordova\clean
 

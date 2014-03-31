@@ -57,6 +57,14 @@ installation disk or an _ISO_ disk image file:
 Apps compiled under Windows 8.1 do _not_ run under Windows 8.0. Apps
 compiled under Windows 8.0 are forward-compatible with 8.1.
 
+  <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
+
+Follow the instructions at
+[windowsstore.com](http://www.windowsstore.com/)
+to submit the app to Windows Store.
+
+  <!-- true? -->
+
 To develop Cordova apps for Windows 8, you may use a PC running
 Windows, but you may also develop on a Mac, either by running a
 virtual machine environment or by using Boot Camp to dual-boot a

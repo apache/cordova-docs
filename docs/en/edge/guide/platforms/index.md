@@ -47,16 +47,17 @@ a lower-level alternative to the `cordova` command-line utility.
 ## Android
 
 * Android Platform Guide
+* Android Shell Tool Guide
 * Android Configuration
-* Android WebViews
 * Android Plugins
-* Android Command-line Tools
+* Android WebViews
 * Upgrading Android
 
 ## BlackBerry 10
 
 * BlackBerry 10 Platform Guide
-* BlackBerry 10 Configuration
+* BlackBerry 10 Shell Tool Guide
+* BlackBerry Configuration
 * BlackBerry 10 Plugins
 * BlackBerry 10 Command-line Tools
 * Upgrading BlackBerry 10
@@ -68,10 +69,10 @@ a lower-level alternative to the `cordova` command-line utility.
 ## iOS
 
 * iOS Platform Guide
+* iOS Shell Tool Guide
 * iOS Configuration
-* iOS WebViews
 * iOS Plugins
-* iOS Command-line Tools
+* iOS WebViews
 * Upgrading iOS
 
 ## Ubuntu
