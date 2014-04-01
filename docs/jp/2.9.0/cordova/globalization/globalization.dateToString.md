@@ -1,0 +1,94 @@
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
+
+globalization.dateToString
+===========
+
+クライアントのロケールとタイムゾーンを元にフォーマットされた日時を文字列で返します。
+
+    navigator.globalization.dateToString(date, successCallback, errorCallback, options);
+
+概要
+-----------
+
+フォーマットされた日時は、 `successCallback` に渡されるプロパティオブジェクトの `value` プロパティに文字列で渡されます。
+
+引数の `date` パラメーターは `Date` 型である必要があります。
+
+もし日時のフォーマット中にエラーが発生した場合、 `errorCallback` コールバックが `GlobalizationError` オブジェクトをパラメーターとして呼び出されます。このエラーに対するエラーコードは `GlobalizationError.FORMATTING_ERROR` です。
+
+`options` パラメーターはオプション (任意) であり、デフォルト値は以下の通りです:
+
+    {formatLength:'short', selector:'date and time'}`
+
+`options.formatLength` には `short`, `medium`, `long`, または `full` が指定出来ます。
+
+`options.selector` には `date`, `time` または `date and time` が指定出来ます。
+
+
+サポートされているプラットフォーム
+-------------------
+
+- Android
+- BlackBerry WebWorks (OS 5.0 以上)
+- iPhone
+- Windows Phone 8
+
+使用例
+-------------
+
+ブラウザーのロケールが `en\_US` に設定されている場合、次のコードはデフォルトのオプションを使用して `date: 9/25/2012 4:21PM` といったような文字列をポップアップダイアログに表示します。
+
+    navigator.globalization.dateToString(
+      new Date(),
+      function (date) {alert('date:' + date.value + '\n');},
+      function () {alert('Error getting dateString\n');},
+      {formatLength:'short', selector:'date and time'}
+    );
+
+詳細な使用例
+------------
+
+    <!DOCTYPE HTML>
+    <html>
+      <head>
+        <title>Cordova</title>
+        <script type="text/javascript" charset="utf-8" src="cordova-x.x.x.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+        function checkDateString() {
+          navigator.globalization.dateToString(
+            new Date(),
+            function (date) {alert('date: ' + date.value + '\n');},
+            function () {alert('Error getting dateString\n');,
+            {formatLength:'short', selector:'date and time'}}
+          );
+        }
+        </script>
+      </head>
+      <body>
+        <button onclick="checkDateString()">クリックして日時を表示</button>
+      </body>
+    </html>
+
+
+Windows Phone 8 に関する注意点
+--------------
+
+- `formatLength` オプションは `short` と `full` のみをサポートしています。
