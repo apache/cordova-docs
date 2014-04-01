@@ -27,7 +27,7 @@ It adds the following three `window` events:
 * batterycritical
 * batterylow
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.battery-status
 
@@ -46,7 +46,7 @@ properties:
 Applications typically should use `window.addEventListener` to
 attach an event listener once the `deviceready` event fires. e.g.:
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - iOS
@@ -55,13 +55,13 @@ attach an event listener once the `deviceready` event fires. e.g.:
 - Windows Phone 7 and 8
 - Tizen
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 Windows Phone 7 does not provide native APIs to determine battery
 level, so the `level` property is unavailable.  The `isPlugged`
 parameter _is_ supported.
 
-### Example
+### 例
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
 
@@ -85,7 +85,7 @@ properties:
 Applications typically should use `window.addEventListener` to attach
 an event listener once the `deviceready` event fires.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - iOS
@@ -93,7 +93,7 @@ an event listener once the `deviceready` event fires.
 - BlackBerry 10
 - Tizen
 
-### Example
+### 例
 
     window.addEventListener("batterycritical", onBatteryCritical, false);
 
@@ -117,7 +117,7 @@ properties:
 Applications typically should use `window.addEventListener` to
 attach an event listener once the `deviceready` event fires.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - iOS
@@ -125,7 +125,7 @@ attach an event listener once the `deviceready` event fires.
 - BlackBerry 10
 - Tizen
 
-### Example
+### 例
 
     window.addEventListener("batterylow", onBatteryLow, false);
 

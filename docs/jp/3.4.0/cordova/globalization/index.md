@@ -22,15 +22,15 @@
 This plugin obtains information and performs operations specific to the user's
 locale and timezone.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.globalization
 
-## Objects
+## オブジェクト
 
 - GlobalizationError
 
-## Methods
+## メソッド
 
 - navigator.globalization.getPreferredLanguage
 - navigator.globalization.getLocaleName
@@ -52,7 +52,7 @@ Returns a date formatted as a string according to the client's locale and timezo
 
     navigator.globalization.dateToString(date, successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the formatted date `String` via a `value` property accessible
 from the object passed as a parameter to the `successCallback`.
@@ -71,14 +71,14 @@ The `options.formatLength` can be `short`, `medium`, `long`, or `full`.
 
 The `options.selector` can be `date`, `time` or `date and time`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 If the browser is set to the `en\_US` locale, this displays a popup
 dialog with text similar to `date: 9/25/2012 4:21PM` using the default
@@ -91,7 +91,7 @@ options:
         { formatLength: 'short', selector: 'date and time' }
     );
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - The `formatLength` option supports only `short` and `full` values.
 
@@ -102,7 +102,7 @@ to the client's user preferences and ISO 4217 currency code.
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
 
-### Description
+### 解説
 
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object should contain the following properties:
@@ -126,13 +126,13 @@ If there is an error obtaining the pattern, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale and the selected
 currency is United States Dollars, this example displays a popup
@@ -168,7 +168,7 @@ depending on the client's user preferences and calendar.
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the array of names to the `successCallback` with a
 `properties` object as a parameter. That object contains a `value`
@@ -188,14 +188,14 @@ The value of `options.type` can be `narrow` or `wide`.
 
 The value of `options.item` can be `months` or `days`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this example displays
 a series of twelve popup dialogs, one per month, with text similar to
@@ -219,7 +219,7 @@ client's user preferences.
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the pattern to the `successCallback`. The object passed in as
 a parameter contains the following properties:
@@ -244,14 +244,14 @@ The `options.formatLength` can be `short`, `medium`, `long`, or
 `full`.  The `options.selector` can be `date`, `time` or `date and
 time`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this example displays
 a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
@@ -264,7 +264,7 @@ a popup dialog with text such as `pattern: M/d/yyyy h:mm a`:
         );
     }
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - The `formatLength` supports only `short` and `full` values.
 
@@ -282,7 +282,7 @@ preferences and calendar.
 
     navigator.globalization.getFirstDayOfWeek(successCallback, errorCallback);
 
-### Description
+### 解説
 
 The days of the week are numbered starting from 1, where 1 is assumed
 to be Sunday.  Returns the day to the `successCallback` with a
@@ -293,14 +293,14 @@ If there is an error obtaining the pattern, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `day: 1`.
@@ -315,7 +315,7 @@ Get the string identifier for the client's current locale setting.
 
     navigator.globalization.getLocaleName(successCallback, errorCallback);
 
-### Description
+### 解説
 
 Returns the locale identifier string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -325,14 +325,14 @@ If there is an error getting the locale, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this displays a popup
 dialog with the text `locale: en\_US`.
@@ -343,7 +343,7 @@ dialog with the text `locale: en\_US`.
     );
 
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - Returns the two-letter code defined in ISO 3166 for the current country/region.
 
@@ -353,7 +353,7 @@ Returns a pattern string to format and parse numbers according to the client's u
 
     navigator.globalization.getNumberPattern(successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the pattern to the `successCallback` with a `properties` object
 as a parameter. That object contains the following properties:
@@ -384,14 +384,14 @@ The `options` parameter is optional, and default values are:
 
 The `options.type` can be `decimal`, `percent`, or `currency`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to the results that follow:
@@ -421,7 +421,7 @@ Results:
     grouping: ,
 
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - The `pattern` property is not supported, and retuens an empty string.
 
@@ -433,7 +433,7 @@ Get the string identifier for the client's current language.
 
     navigator.globalization.getPreferredLanguage(successCallback, errorCallback);
 
-### Description
+### 解説
 
 Returns the language identifier string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -443,14 +443,14 @@ If there is an error getting the language, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with the text `language: English`:
@@ -461,7 +461,7 @@ popup dialog with the text `language: English`:
     );
 
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - Returns the ISO 639-1 two-letter code for the current language.
 
@@ -472,7 +472,7 @@ using the client's time zone and calendar.
 
     navigator.globalization.isDayLightSavingsTime(date, successCallback, errorCallback);
 
-### Description
+### 解説
 
 Indicates whether or not daylight savings time is in effect to the
 `successCallback` with a `properties` object as a parameter. That object
@@ -485,14 +485,14 @@ The inbound parameter `date` should be of type `Date`.
 If there is an error reading the date, then the `errorCallback`
 executes. The error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 During the summer, and if the browser is set to a DST-enabled
 timezone, this should display a popup dialog with text similar to
@@ -512,7 +512,7 @@ Returns a number formatted as a string according to the client's user preference
 
     navigator.globalization.numberToString(number, successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the formatted number string to the `successCallback` with a
 `properties` object as a parameter. That object should have a `value`
@@ -528,14 +528,14 @@ The `options` parameter is optional, and its default values are:
 
 The `options.type` can be 'decimal', 'percent', or 'currency'.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this displays a popup
 dialog with text similar to `number: 3.142`:
@@ -556,7 +556,7 @@ returns the corresponding date object.
 
     navigator.globalization.stringToDate(dateString, successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the date to the success callback with a `properties` object as
 a parameter. That object should have the following properties:
@@ -590,14 +590,14 @@ If there is an error parsing the date string, then the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
 error's expected code is `GlobalizationError.PARSING\_ERROR`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this displays a
 popup dialog with text similar to `month:8 day:25 year:2012`. Note
@@ -614,7 +614,7 @@ integer represents an array index.
     );
 
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 - The `formatLength` option supports only `short` and `full` values.
 
@@ -625,7 +625,7 @@ preferences and returns the corresponding number.
 
     navigator.globalization.stringToNumber(string, successCallback, errorCallback, options);
 
-### Description
+### 解説
 
 Returns the number to the `successCallback` with a `properties` object
 as a parameter. That object should have a `value` property with a
@@ -643,14 +643,14 @@ values:
 
 The `options.type` can be `decimal`, `percent`, or `currency`.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 - Windows Phone 8
 
-### Example
+### 例
 
 When the browser is set to the `en\_US` locale, this should display a
 popup dialog with text similar to `number: 1234.56`:
@@ -667,7 +667,7 @@ popup dialog with text similar to `number: 1234.56`:
 
 An object representing a error from the Globalization API.
 
-### Properties
+### プロパティ
 
 - __code__:  One of the following codes representing the error type _(Number)_
   - GlobalizationError.UNKNOWN\_ERROR: 0
@@ -676,17 +676,17 @@ An object representing a error from the Globalization API.
   - GlobalizationError.PATTERN\_ERROR: 3
 - __message__:  A text message that includes the error's explanation and/or details _(String)_
 
-### Description
+### 解説
 
 This object is created and populated by Cordova, and returned to a callback in the case of an error.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - iOS
 
-### Example
+### 例
 
 When the following error callback executes, it displays a
 popup dialog with the text similar to `code: 3` and `message:`

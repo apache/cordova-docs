@@ -19,19 +19,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # resume
 
-The event fires when an application is retrieved from the background.
+このイベントはアプリがバックグラウンドから復帰したときに、このイベントが発火します。
 
     document.addEventListener("resume", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-The `resume` event fires when the native platform pulls the
-application out from the background.
+ネイティブプラットフォームがアプリをバックグラウンドから復帰させるとき、 `resume` イベントが発火します。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -40,37 +38,37 @@ attach an event listener once the `deviceready` event fires.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## 例
 
     document.addEventListener("resume", onResume, false);
 
     function onResume() {
-        // Handle the resume event
+        // resume イベントの処理
     }
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Resume Example</title>
+        <title>Resume の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
             document.addEventListener("resume", onResume, false);
         }
 
-        // Handle the resume event
+        // resume イベントの処理
         //
         function onResume() {
         }
@@ -81,34 +79,24 @@ attach an event listener once the `deviceready` event fires.
       </body>
     </html>
 
-## iOS Quirks
+## iOS 特有の動作
 
-Any interactive functions called from a `pause` event handler execute
-later when the app resumes, as signaled by the `resume` event. These
-include alerts, `console.log()`, and any calls from plugins or the
-Cordova API, which go through Objective-C.
+アプリ復帰後 ( `resume` イベント後 ) に `pause` イベントハンドラーが呼び出したインタラクティブな他の関数が実行されます。復帰後に実行されるものの中には、alerts、`console.log()`、ならびに、Objective-C を介して行うプラグインからの呼び出しまたは Cordova API があります。
 
-- __active__ event
 
-    The iOS-specific `active` event is available as an alternative to
-`resume`, and detects when users disable the __Lock__ button to unlock
-the device with the app running in the foreground.  If the app (and
-device) is enabled for multi-tasking, this is paired with a subsequent
-`resume` event, but only under iOS 5. In effect, all locked apps in
-iOS 5 that have multi-tasking enabled are pushed to the background.
-For apps to remain running when locked under iOS 5, disable the app's
-multi-tasking by setting [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)
-to `YES`. To run when locked on iOS 4, this setting does not matter.
+- __active__ イベント
+
+    `resume` イベントの代替として使用できる、iOS 固有の `active` イベントがあります。このイベントでは、フォアグラウンド ( foreground ) で実行中のアプリに、ユーザがデバイスのロック解除をしたこと ( __ロック__ ボタンを再度押した状態 ) を検知できます。アプリ ( およびデバイス ) のマルチタスク処理が有効になっている場合には、後の処理で `resume` イベント 1 つと組み合わせることもできます。ただし、iOS 5 のみが対象となります。実行結果として、iOS 5 であれば、ロックされたアプリ ( マルチタスク処理が有効となっていること ) は、バックグラウンド処理に切り替わります。iOS 5 で、ロックがかかった状態でも処理を継続させるためには、 [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) を `YES` に設定して、アプリのマルチタスク処理を無効にします。iOS 4 の場合、ロックされた状態での処理の継続は、この設定では行えません。
     
-- __resume__ event
 
-    When called from a `resume` event handler, interactive functions such
-as `alert()` need to be wrapped in a `setTimeout()` call with a
-timeout value of zero, or else the app hangs. For example:
+
+- __resume__ イベント
+
+    `alert()` などのインタラクティブな関数群を、 `resume` イベントハンドラーから呼び出す場合、タイムアウト値を 0 に指定した `setTimeout()` の中でこれらの関数群を呼び出す必要があります。この処理を行わない場合、アプリは応答しなくなります。使用例を次に示します。
 
         document.addEventListener("resume", onResume, false);
         function onResume() {
            setTimeout(function() {
-                  // TODO: do your thing!
+                  // ここに処理を記述
                 }, 0);
         }

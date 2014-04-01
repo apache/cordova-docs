@@ -26,7 +26,7 @@ This plugin provides a web browser view that displays when calling `window.open(
 __NOTE__: The InAppBrowser window behaves like a standard web browser,
 and can't access Cordova APIs.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.inappbrowser
 
@@ -75,7 +75,7 @@ instance, or the system browser.
     - __transitionstyle__: Set to `fliphorizontal`, `crossdissolve` or `coververtical` to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to `coververtical`).
     - __toolbarposition__: Set to `top` or `bottom` (default is `bottom`). Causes the toolbar to be at the top or bottom of the window.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -83,7 +83,7 @@ instance, or the system browser.
 - iOS
 - Windows Phone 7 and 8
 
-### Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var ref2 = window.open(encodeURI('http://ja.m.wikipedia.org/wiki/ハングル'), '_blank', 'location=yes');
@@ -92,7 +92,7 @@ instance, or the system browser.
 
 The object returned from a call to `window.open`.
 
-### Methods
+### メソッド
 
 - addEventListener
 - removeEventListener
@@ -129,7 +129,7 @@ The object returned from a call to `window.open`.
 - __message__: the error message, only in the case of `loaderror`. _(String)_
 
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -137,7 +137,7 @@ The object returned from a call to `window.open`.
 - iOS
 - Windows Phone 7 and 8
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstart', function() { alert(event.url); });
@@ -160,7 +160,7 @@ The object returned from a call to `window.open`.
 - __callback__: the function to execute when the event fires.
 The function is passed an `InAppBrowserEvent` object.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -168,7 +168,7 @@ The function is passed an `InAppBrowserEvent` object.
 - iOS
 - Windows Phone 7 and 8
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     var myCallback = function() { alert(event.url); }
@@ -183,7 +183,7 @@ The function is passed an `InAppBrowserEvent` object.
 
 - __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -191,7 +191,7 @@ The function is passed an `InAppBrowserEvent` object.
 - iOS
 - Windows Phone 7 and 8
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.close();
@@ -204,14 +204,14 @@ The function is passed an `InAppBrowserEvent` object.
 
 - __ref__: reference to the InAppBrowser window (`InAppBrowser`)
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
     // some time later...
@@ -236,14 +236,14 @@ The function is passed an `InAppBrowserEvent` object.
       the return value of the last statement, or the last expression
       evaluated.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {
@@ -264,14 +264,14 @@ The function is passed an `InAppBrowserEvent` object.
 
 - __callback__: the function that executes after the CSS is injected.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS
 
-### Quick Example
+### 例
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
     ref.addEventListener('loadstop', function() {

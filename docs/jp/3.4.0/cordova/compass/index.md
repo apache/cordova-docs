@@ -19,16 +19,13 @@
 
 # org.apache.cordova.device-orientation
 
-This plugin provides access to the device's compass. The compass is a sensor
-that detects the direction or heading that the device is pointed, typically
-from the top of the device.  It measures the heading in degrees from 0 to
-359.99, where 0 is north.
+このプラグインを使用して、デバイスのコンパスにアクセスします。コンパスは、デバイスが指し示す方向・方位を検知するセンサーの 1 種です。通常、デバイストップを起点とします。0 から 359.99 度の角度で方位を計算します。0 は、北を意味します。
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.device-orientation
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -39,7 +36,7 @@ from the top of the device.  It measures the heading in degrees from 0 to
 - Windows Phone 7 and 8 (if available in hardware)
 - Windows 8
 
-## Methods
+## メソッド
 
 - navigator.compass.getCurrentHeading
 - navigator.compass.watchHeading
@@ -47,12 +44,11 @@ from the top of the device.  It measures the heading in degrees from 0 to
 
 ## navigator.compass.getCurrentHeading
 
-Get the current compass heading. The compass heading is returned via a `CompassHeading`
-object using the `compassSuccess` callback function.
+コンパスの現在の方位を取得します。 `compassSuccess` コールバック関数を使用して、 `CompassHeading` オブジェクト経由でコンパスの方位を返します。
 
     navigator.compass.getCurrentHeading(compassSuccess, compassError);
 
-### Example
+### 例
 
     function onSuccess(heading) {
         alert('Heading: ' + heading.magneticHeading);
@@ -66,20 +62,19 @@ object using the `compassSuccess` callback function.
 
 ## navigator.compass.watchHeading
 
-Gets the device's current heading at a regular interval. Each time the heading
-is retrieved, the `headingSuccess` callback function is executed.
+デバイスの方位を一定の間隔で取得します。方位を取得するたび、 `headingSuccess` コールバック関数を実行します。
 
-The returned watch ID references the compass watch interval. The watch
-ID can be used with `navigator.compass.clearWatch` to stop watching the navigator.compass.
+返された watch ID を使用して、コンパスを監視する間隔を参照します。 `navigator.compass.clearWatch` に watch ID を使用して、navigator.compass の監視を停止できます。
 
     var watchID = navigator.compass.watchHeading(compassSuccess, compassError, [compassOptions]);
 
-`compassOptions` may contain the following keys:
+`compassOptions` には、以下のオプションを格納できます。
 
-- __frequency__: How often to retrieve the compass heading in milliseconds. _(Number)_ (Default: 100)
-- __filter__: The change in degrees required to initiate a watchHeading success callback. When this value is set, __frequency__ is ignored. _(Number)_
+- __frequency__: コンパスの方位の取得頻度をミリ秒で表します。 _(Number)_ ( デフォルト : 100 )
 
-### Example
+- __filter__: watchHeading の成功時のコールバック関数を実行する際に必要となる、角度の変化です。値を設定した場合、 __frequency:__ を無視します。 _(Number)_
+
+### 例
 
     function onSuccess(heading) {
         var element = document.getElementById('heading');
@@ -92,101 +87,98 @@ ID can be used with `navigator.compass.clearWatch` to stop watching the navigato
 
     var options = {
         frequency: 3000
-    }; // Update every 3 seconds
+    }; // 3 秒間隔で更新
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
 
-### iOS Quirks
+### iOS 特有の動作
 
-Only one `watchHeading` can be in effect at one time in iOS.  If a
-`watchHeading` uses a filter, calling `getCurrentHeading` or
-`watchHeading` uses the existing filter value to specify heading
-changes. Watching heading changes with a filter is more efficient than
-with time intervals.
+iOS では、1 度に 1 つの `watchHeading` のみ有効です。
+`watchHeading` が filter を使用する場合、`getCurrentHeading` または `watchHeading` を呼び出す際、方位の変化を特定するため、既存の filter 値を使用します。filter を使用した方位の変化の監視は、時間の間隔を使用するより、効率的です。
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
-- `filter` is not supported.
+- `filter` はサポートしません。
 
-### Android Quirks
+### Android 特有の動作
 
-- No support for `filter`.
+- `filter` はサポートしません。
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
-- No support for `filter`.
+- `filter` はサポートしません。
 
-### Tizen Quirks
+### Tizen 特有の動作
 
-- No support for `filter`.
+- `filter` はサポートしません。
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
-- No support for `filter`.
+- `filter` はサポートしません。
 
 ## navigator.compass.clearWatch
 
-Stop watching the compass referenced by the watch ID parameter.
+watch ID パラメーターを使用して参照を行っている、方位の監視を停止します。
 
     navigator.compass.clearWatch(watchID);
 
-- __watchID__: The ID returned by `navigator.compass.watchHeading`.
+- __watchID__: `navigator.compass.watchHeading` が返す ID.
 
-### Example
+### 例
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-    // ... later on ...
+    // ... 後から ...
 
     navigator.compass.clearWatch(watchID);
 
 ## CompassHeading
 
-A `CompassHeading` object is returned to the `compassSuccess` callback function.
+`compassSuccess` コールバック関数に `CompassHeading` オブジェクトを返します。
 
-### Properties
+### プロパティ
 
-- __magneticHeading__: The heading in degrees from 0-359.99 at a single moment in time. _(Number)_
+- __magneticHeading__: ある瞬間の磁方位 （ 磁北を基準 ） を 0 から 359.99 度の範囲で表します。 _(Number)_
 
-- __trueHeading__: The heading relative to the geographic North Pole in degrees 0-359.99 at a single moment in time. A negative value indicates that the true heading can't be determined.  _(Number)_
+- __trueHeading__: ある瞬間の真方位 （ 真北を基準 ） を 0 から 359.99 度の範囲で表します。負の値は、真方位の値が定まっていないことを示します。  _(Number)_
 
-- __headingAccuracy__: The deviation in degrees between the reported heading and the true heading. _(Number)_
+- __headingAccuracy__: 取得した磁方位と真方位との角度の差 （ 偏角 ) を表します。 _(Number)_
 
-- __timestamp__: The time at which this heading was determined.  _(milliseconds)_
+- __timestamp__: 方位を取得した時間を表します。  _(milliseconds)_
 
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
-- `trueHeading` is not supported, but reports the same value as `magneticHeading`
+- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- `headingAccuracy` is always 0 because there is no difference between the `magneticHeading` and `trueHeading`
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
 
-### Android Quirks
+### Android 特有の動作
 
-- The `trueHeading` property is not supported, but reports the same value as `magneticHeading`.
+- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- The `headingAccuracy` property is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
-- The `trueHeading` property is not supported, but reports the same value as `magneticHeading`.
+- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- The `headingAccuracy` property is always 0 because there is no difference between the `magneticHeading` and `trueHeading`.
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
 
-### iOS Quirks
+### iOS 特有の動作
 
-- The `trueHeading` property is only returned for location services enabled via `navigator.geolocation.watchLocation()`.
+- `navigator.geolocation.watchLocation()` 経由で、位置情報サービスが使用できる場合のみ、`trueHeading` を返します。
 
-- For iOS 4 devices and above, heading factors in the device's current orientation, and does not reference its absolute position, for apps that supports that orientation.
+- デバイスの傾きをアプリ側で許容する場合には、それも方位の要素に組み入れて計算を行い、絶対位置を参照しません。
 
 ## CompassError
 
-A `CompassError` object is returned to the `compassError` callback function when an error occurs.
+エラーが起きたとき、 `compassError` コールバック関数に `CompassError` オブジェクトを返します。
 
-### Properties
+### プロパティ
 
-- __code__: One of the predefined error codes listed below.
+- __code__: 事前に定義された以下のエラーコードのうちの 1 つ
 
 ### Constants
 

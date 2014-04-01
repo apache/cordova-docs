@@ -21,11 +21,11 @@
 
 This plugin provides a way to vibrate the device.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.vibration
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -43,13 +43,13 @@ Vibrates the device for the specified amount of time.
 - __time__: Milliseconds to vibrate the device. _(Number)_
 
 
-## Example
+## 例
 
     // Vibrate for 2.5 seconds
     navigator.notification.vibrate(2500);
 
 
-## iOS Quirks
+## iOS 特有の動作
 
 - __time__: Ignores the specified time and vibrates for a pre-set amount of time.
 
