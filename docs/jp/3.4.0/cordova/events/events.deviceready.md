@@ -19,31 +19,21 @@
 
 # deviceready
 
-The event fires when Cordova is fully loaded.
+Cordova が完全にロードされたときに、このイベントが発火します。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-This event is essential to any application. It signals that Cordova's
-device APIs have loaded and are ready to access.
+このイベントはどのアプリケーションでも使用する重要なイベントです。このイベントは Cordova のデバイス API を読み込み、利用可能になったことを通知します。
 
-Cordova consists of two code bases: native and JavaScript. While the
-native code loads, a custom loading image displays. However,
-JavaScript only loads once the DOM loads. This means the web app may
-potentially call a Cordova JavaScript function before the
-corresponding native code becomes available.
+Cordova はネイティブと JavaScript の2つのコードで構成されています。ネイティブコードがロードされている間は、カスタムのロード画面が表示されます。ただし、DOM がロードされた後に、JavaScript がロードされます。そのため、関連するネイティブコードが利用可能になる前に、 ウェブアプリが Cordova の JavaScript 関数を呼ぶ可能性があります。
 
-The `deviceready` event fires once Cordova has fully loaded. Once the
-event fires, you can safely make calls to Cordova APIs.  Applications
-typically attach an event listener with `document.addEventListener`
-once the HTML document's DOM has loaded.
+`deviceready` イベントは、Cordova が完全にロードされた後に発火します。このイベントが発火した後は、 Cordova API を安全に呼び出せます。アプリは、通常、 HTML 文書の DOM がロードされた後に、 `document.addEventListener` を通じてイベントリスナーをアタッチ ( attach ) します。
 
-The `deviceready` event behaves somewhat differently from others.  Any
-event handler registered after the `deviceready` event fires has its
-callback function called immediately.
+`deviceready` イベントは他のイベントとは幾分異なった挙動をします。`deviceready` イベントの発火後に登録されている、他のイベントハンドラーのコールバック関数は、発火後、ただちに呼び出されます。
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -53,34 +43,34 @@ callback function called immediately.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## 例
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-        // Now safe to use device APIs
+        // デバイス API を安全に使用可能
     }
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Device Ready Example</title>
+        <title>Device Ready の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
-            // Now safe to use device APIs
+            // デバイス API 群を安全に使用可能
         }
 
         </script>

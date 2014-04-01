@@ -17,11 +17,11 @@
          under the License.
 ---
 
-# Events
+# イベント
 
-> Cordova lifecycle events.
+> Cordova のライフサイクル中で使用する各種イベント群です。
 
-## Event Types
+## イベントの種類
 
 - deviceready
 - pause
@@ -34,13 +34,13 @@
 - volumedownbutton
 - volumeupbutton
 
-## Events added by [org.apache.cordova.battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md)
+## [org.apache.cordova.battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md) 提供のイベント群
 
 - batterycritical
 - batterylow
 - batterystatus
 
-## Events added by [org.apache.cordova.network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md)
+## [org.apache.cordova.network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md) 提供のイベント群
 
 - online
 - offline

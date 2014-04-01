@@ -19,55 +19,53 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # searchbutton
 
-The event fires when the user presses the search button on Android.
+Android の検索ボタンを押したときに、このイベントが発火します。
 
     document.addEventListener("searchbutton", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-If you need to override the default search button behavior on Android
-you can register an event listener for the 'searchbutton' event.
+Android のデフォルトの検索ボタンの挙動を上書きしたい場合、 'searchbutton' イベントにイベントリスナーを登録できます。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Android
 
-## Quick Example
+## 例
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
 
     function onSearchKeyDown() {
-        // Handle the search button
+        // 検索ボタンの処理
     }
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>Search Button Example</title>
+        <title>検索ボタンの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
-            // Register the event listener
+            // イベントリスナーの登録
             document.addEventListener("searchbutton", onSearchKeyDown, false);
         }
 
-        // Handle the search button
+        // 検索ボタンの処理
         //
         function onSearchKeyDown() {
         }

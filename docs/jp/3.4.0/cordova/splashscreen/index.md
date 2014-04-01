@@ -21,12 +21,12 @@
 
 This plugin displays and hides a splash screen during application launch.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.splashscreen
 
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -36,12 +36,12 @@ This plugin displays and hides a splash screen during application launch.
 - Windows 8
 
 
-## Methods
+## メソッド
 
 - splashscreen.show
 - splashscreen.hide
 
-### Android Quirks
+### Android 特有の動作
 
 In your config.xml, you need to add the following preference
 
@@ -60,11 +60,11 @@ Dismiss the splash screen.
     navigator.splashscreen.hide();
 
 
-### BlackBerry 10 Quirk
+### BlackBerry 10 特有の動作
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be `false`.
 
-### iOS Quirk
+### iOS 特有の動作
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
 `false`. To delay hiding the splash screen for two seconds, add a

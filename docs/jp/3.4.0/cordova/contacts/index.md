@@ -38,11 +38,11 @@ clear and easy-to-understand user experience surrounding the use of
 contact data helps avoid user confusion and perceived misuse of
 contact data.  For more information, please see the Privacy Guide.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.contacts
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
 Create __www/manifest.webapp__ as described in 
 [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
@@ -60,12 +60,12 @@ __WARNING__: All privileged apps enforce [Content Security Policy](https://devel
 
 ## navigator.contacts
 
-### Methods
+### メソッド
 
 - navigator.contacts.create
 - navigator.contacts.find
 
-### Objects
+### オブジェクト
 
 - Contact
 - ContactName
@@ -82,7 +82,7 @@ The `navigator.contacts.create` method is synchronous, and returns a new `Contac
 This method does not retain the Contact object in the device contacts
 database, for which you need to invoke the `Contact.save` method.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -90,7 +90,7 @@ database, for which you need to invoke the `Contact.save` method.
 - iOS
 - Windows Phone 7 and 8
 
-### Example
+### 例
 
     var myContact = navigator.contacts.create({"displayName": "Test User"});
 
@@ -114,7 +114,7 @@ case-insensitive, partial value match is applied to each field
 specified in the __contactFields__ parameter.  If there's a match for
 _any_ of the specified fields, the contact is returned.
 
-### Parameters
+### パラメータ
 
 - __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
 
@@ -128,7 +128,7 @@ _any_ of the specified fields, the contact is returned.
 
     - __multiple__: Determines if the find operation returns multiple navigator.contacts. _(Boolean)_ (Default: `false`)
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -137,7 +137,7 @@ _any_ of the specified fields, the contact is returned.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     function onSuccess(contacts) {
         alert('Found ' + navigator.contacts.length + ' navigator.contacts.');
@@ -167,7 +167,7 @@ every device platform.  Please check each platform's _Quirks_ section
 for details.
 
 
-### Properties
+### プロパティ
 
 - __id__: A globally unique identifier. _(DOMString)_
 
@@ -197,7 +197,7 @@ for details.
 
 - __urls__:  An array of web pages associated with the contact. _(ContactField[])_
 
-### Methods
+### メソッド
 
 - __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
 
@@ -205,7 +205,7 @@ for details.
 
 - __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -215,7 +215,7 @@ for details.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Save Example
+### 保存 ( Save ) の例
 
     function onSuccess(contact) {
         alert("Save Success");
@@ -239,7 +239,7 @@ for details.
     // save to device
     contact.save(onSuccess,onError);
 
-### Clone Example
+### 複写 ( Clone ) の例
 
         // clone the contact object
         var clone = contact.clone();
@@ -247,7 +247,7 @@ for details.
         console.log("Original contact name = " + contact.name.givenName);
         console.log("Cloned contact name = " + clone.name.givenName);
 
-### Remove Example
+### 削除 ( Remove ) の例
 
     function onSuccess() {
         alert("Removal Success");
@@ -261,11 +261,11 @@ for details.
         contact.remove(onSuccess,onError);
 
 
-### Android 2.X Quirks
+### Android 2.X 特有の動作
 
 - __categories__:  Not supported on Android 2.X devices, returning `null`.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - __id__: Supported.  Assigned by the device when saving the contact.
 
@@ -289,7 +289,7 @@ for details.
 
 - __urls__:  Partially supported. The first URL is stored in BlackBerry __webpage__ field.
 
-### FirefoxOS Quirks
+### FirefoxOS 特有の動作
 
 - __categories__: Partially supported. Fields __pref__ and __type__ are returning `null`
 
@@ -298,7 +298,7 @@ for details.
 - __photos__: Not supported
 
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __displayName__: Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
 
@@ -308,7 +308,7 @@ for details.
 
 - __categories__:  This property is currently not supported, returning `null`.
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - __displayName__: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
 
@@ -338,7 +338,7 @@ of a contact.  A `Contact` object may include more than one address in
 a `ContactAddress[]` array.
 
 
-### Properties
+### プロパティ
 
 - __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
 
@@ -356,7 +356,7 @@ a `ContactAddress[]` array.
 
 - __country__: The country name. _(DOMString)_
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -366,7 +366,7 @@ a `ContactAddress[]` array.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     // display the address information for all contacts
 
@@ -395,11 +395,11 @@ a `ContactAddress[]` array.
     var filter = ["displayName", "addresses"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-### Android 2.X Quirks
+### Android 2.X 特有の動作
 
 - __pref__: Not supported, returning `false` on Android 2.X devices.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - __pref__: Not supported on BlackBerry devices, returning `false`.
 
@@ -417,11 +417,11 @@ a `ContactAddress[]` array.
 
 - __country__: Supported.
 
-### FirefoxOS Quirks
+### FirefoxOS 特有の動作
 
 - __formatted__: Currently not supported
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __pref__: Not supported on iOS devices, returning `false`.
 
@@ -433,7 +433,7 @@ a `ContactAddress[]` array.
 The `ContactError` object is returned to the user through the
 `contactError` callback function when an error occurs.
 
-### Properties
+### プロパティ
 
 - __code__: One of the predefined error codes listed below.
 
@@ -466,7 +466,7 @@ __url__ when the __value__ attribute contains a URL to the photo
 image, or _base64_ when the __value__ contains a base64-encoded image
 string.
 
-### Properties
+### プロパティ
 
 - __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)_
 
@@ -474,7 +474,7 @@ string.
 
 - __pref__: Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -484,7 +484,7 @@ string.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
         // create a new contact
         var contact = navigator.contacts.create();
@@ -499,11 +499,11 @@ string.
         // save the contact
         contact.save();
 
-### Android Quirks
+### Android 特有の動作
 
 - __pref__: Not supported, returning `false`.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - __type__: Partially supported.  Used for phone numbers.
 
@@ -511,7 +511,7 @@ string.
 
 - __pref__: Not supported, returning `false`.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __pref__: Not supported, returning `false`.
 
@@ -520,7 +520,7 @@ string.
 
 Contains different kinds of information about a `Contact` object's name.
 
-### Properties
+### プロパティ
 
 - __formatted__: The complete name of the contact. _(DOMString)_
 
@@ -534,7 +534,7 @@ Contains different kinds of information about a `Contact` object's name.
 
 - __honorificSuffix__: The contact's suffix (example _Esq._). _(DOMString)_
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android 2.X
@@ -544,7 +544,7 @@ Contains different kinds of information about a `Contact` object's name.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     function onSuccess(contacts) {
         for (var i = 0; i < navigator.contacts.length; i++) {
@@ -566,11 +566,11 @@ Contains different kinds of information about a `Contact` object's name.
     filter = ["displayName", "name"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-### Android Quirks
+### Android 特有の動作
 
 - __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - __formatted__: Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
 
@@ -584,11 +584,11 @@ Contains different kinds of information about a `Contact` object's name.
 
 - __honorificSuffix__: Not supported, returning `null`.
 
-### FirefoxOS Quirks
+### FirefoxOS 特有の動作
 
 - __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __formatted__: Partially supported.  Returns iOS Composite Name, but is read-only.
 
@@ -599,7 +599,7 @@ The `ContactOrganization` object stores a contact's organization
 properties.  A `Contact` object stores one or more
 `ContactOrganization` objects in an array.
 
-### Properties
+### プロパティ
 
 - __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
 
@@ -612,7 +612,7 @@ properties.  A `Contact` object stores one or more
 - __title__: The contact's title at the organization. _(DOMString)_
 
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -621,7 +621,7 @@ properties.  A `Contact` object stores one or more
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     function onSuccess(contacts) {
         for (var i = 0; i < navigator.contacts.length; i++) {
@@ -644,11 +644,11 @@ properties.  A `Contact` object stores one or more
     filter = ["displayName", "organizations"];
     navigator.contacts.find(filter, onSuccess, onError, options);
 
-### Android 2.X Quirks
+### Android 2.X 特有の動作
 
 - __pref__: Not supported by Android 2.X devices, returning `false`.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - __pref__: Not supported by BlackBerry devices, returning `false`.
 
@@ -660,7 +660,7 @@ properties.  A `Contact` object stores one or more
 
 - __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
 - __pref__: Not supported
 
@@ -670,7 +670,7 @@ properties.  A `Contact` object stores one or more
 
 - Fields __name__ and __title__ stored in __org__ and __jobTitle__.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __pref__: Not supported on iOS devices, returning `false`.
 

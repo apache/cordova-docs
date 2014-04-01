@@ -36,11 +36,11 @@ provide just-in-time notice and obtain permission from the user prior
 to accessing the camera or microphone.  For more information, please
 see the Privacy Guide.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.media-capture
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -49,7 +49,7 @@ see the Privacy Guide.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Objects
+## オブジェクト
 
 - Capture
 - CaptureAudioOptions
@@ -61,14 +61,14 @@ see the Privacy Guide.
 - MediaFile
 - MediaFileData
 
-## Methods
+## メソッド
 
 - capture.captureAudio
 - capture.captureImage
 - capture.captureVideo
 - MediaFile.getFormatData
 
-## Properties
+## プロパティ
 
 - __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
 
@@ -84,7 +84,7 @@ see the Privacy Guide.
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
     );
 
-### Description
+### 解説
 
 Starts an asynchronous operation to capture audio recordings using the
 device's default audio recording application.  The operation allows
@@ -103,7 +103,7 @@ is captured, the `CaptureErrorCallback` executes with a `CaptureError`
 object, featuring the `CaptureError.CAPTURE_NO_MEDIA_FILES` error
 code.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -112,7 +112,7 @@ code.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     // capture callback
     var captureSuccess = function(mediaFiles) {
@@ -132,15 +132,15 @@ code.
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
 
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - Cordova for BlackBerry 10 attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - iOS does not have a default audio recording application, so a simple user interface is provided.
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.
 
@@ -148,32 +148,32 @@ code.
 
 > Encapsulates audio capture configuration options.
 
-### Properties
+### プロパティ
 
 - __limit__: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
 - __duration__: The maximum duration of an audio sound clip, in seconds.
 
-### Example
+### 例
 
     // limit capture operation to 3 media files, no longer than 10 seconds each
     var options = { limit: 3, duration: 10 };
 
     navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
 - The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
 
-### Android Quirks
+### Android 特有の動作
 
 - The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - The `limit` parameter is not supported, so only one recording can be created for each invocation.
 
@@ -185,7 +185,7 @@ code.
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
     );
 
-### Description
+### 解説
 
 Starts an asynchronous operation to capture images using the device's
 camera application.  The operation allows users to capture more than
@@ -203,7 +203,7 @@ image file.  If the user terminates the operation before capturing an
 image, the `CaptureErrorCB` callback executes with a `CaptureError`
 object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -212,12 +212,12 @@ object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Windows Phone 7 Quirks
+### Windows Phone 7 特有の動作
 
 Invoking the native camera application while your device is connected
 via Zune does not work, and the error callback executes.
 
-### Example
+### 例
 
     // capture callback
     var captureSuccess = function(mediaFiles) {
@@ -242,18 +242,18 @@ via Zune does not work, and the error callback executes.
 
 > Encapsulates image capture configuration options.
 
-### Properties
+### プロパティ
 
 - __limit__: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).
 
-### Example
+### 例
 
     // limit capture operation to 3 images
     var options = { limit: 3 };
 
     navigator.device.capture.captureImage(captureSuccess, captureError, options);
 
-### iOS Quirks
+### iOS 特有の動作
 
 - The __limit__ parameter is not supported, and only one image is taken per invocation.
 
@@ -265,7 +265,7 @@ via Zune does not work, and the error callback executes.
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
     );
 
-### Description
+### 解説
 
 Starts an asynchronous operation to capture video recordings using the
 device's video recording application.  The operation allows the user
@@ -284,7 +284,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 `CaptureError` object featuring a
 `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -293,7 +293,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 - Windows Phone 7 and 8
 - Windows 8
 
-### Example
+### 例
 
     // capture callback
     var captureSuccess = function(mediaFiles) {
@@ -313,7 +313,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - Cordova for BlackBerry 10 attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
 
@@ -322,24 +322,24 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 
 > Encapsulates video capture configuration options.
 
-### Properties
+### プロパティ
 
 - __limit__: The maximum number of video clips the device's user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
 
 - __duration__: The maximum duration of a video clip, in seconds.
 
-### Example
+### 例
 
     // limit capture operation to 3 video clips
     var options = { limit: 3 };
 
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - The __duration__ parameter is not supported, so the length of recordings can't be limited programmatically.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - The __limit__ parameter is not supported.  Only one video is recorded per invocation.
 
@@ -350,7 +350,7 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
-### Description
+### 解説
 
 This function executes after a successful capture operation completes.
 At this point a media file has been captured, and either the user has
@@ -359,7 +359,7 @@ reached.
 
 Each `MediaFile` object describes a captured media file.
 
-### Example
+### 例
 
     // capture callback
     function captureSuccess(mediaFiles) {
@@ -374,7 +374,7 @@ Each `MediaFile` object describes a captured media file.
 
 > Encapsulates the error code resulting from a failed media capture operation.
 
-### Properties
+### プロパティ
 
 - __code__: One of the pre-defined error codes listed below.
 
@@ -396,7 +396,7 @@ Each `MediaFile` object describes a captured media file.
 
     function captureError( CaptureError error ) { ... };
 
-### Description
+### 解説
 
 This function executes if an error occurs when trying to launch a
 media capture operation. Failure scenarios include when the capture
@@ -406,7 +406,7 @@ the user cancels the operation before any media files are captured.
 This function executes with a `CaptureError` object containing an
 appropriate error `code`.
 
-### Example
+### 例
 
     // capture error callback
     var captureError = function(error) {
@@ -417,7 +417,7 @@ appropriate error `code`.
 
 > Encapsulates a set of media capture parameters that a device supports.
 
-### Description
+### 解説
 
 Describes media capture modes supported by the device.  The
 configuration data includes the MIME type, and capture dimensions for
@@ -431,7 +431,7 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 - `audio/amr`
 - `audio/wav`
 
-### Properties
+### プロパティ
 
 - __type__: The ASCII-encoded lowercase string representing the media type. (DOMString)
 
@@ -439,7 +439,7 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 
 - __width__: The width of the image or video in pixels.  The value is zero for sound clips. (Number)
 
-### Example
+### 例
 
     // retrieve supported image modes
     var imageModes = navigator.device.capture.supportedImageModes;
@@ -465,7 +465,7 @@ Not supported by any platform.  All configuration data arrays are empty.
         [MediaFileDataErrorCB errorCallback]
     );
 
-### Description
+### 解説
 
 This function asynchronously attempts to retrieve the format
 information for the media file.  If successful, it invokes the
@@ -473,7 +473,7 @@ information for the media file.  If successful, it invokes the
 the attempt fails, this function invokes the `MediaFileDataErrorCB`
 callback.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -482,22 +482,22 @@ callback.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 Does not provide an API for information about media files, so all
 `MediaFileData` objects return with default values.
 
-### Android Quirks
+### Android 特有の動作
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
 
-### iOS Quirks
+### iOS 特有の動作
 
 The API to access media file format information is limited, so not all
 `MediaFileData` properties are supported.
@@ -506,7 +506,7 @@ The API to access media file format information is limited, so not all
 
 > Encapsulates properties of a media capture file.
 
-### Properties
+### プロパティ
 
 - __name__: The name of the file, without path information. (DOMString)
 
@@ -518,7 +518,7 @@ The API to access media file format information is limited, so not all
 
 - __size__: The size of the file, in bytes. (Number)
 
-### Methods
+### メソッド
 
 - __MediaFile.getFormatData__: Retrieves the format information of the media file.
 
@@ -526,7 +526,7 @@ The API to access media file format information is limited, so not all
 
 > Encapsulates format information about a media file.
 
-### Properties
+### プロパティ
 
 - __codecs__: The actual format of the audio and video content. (DOMString)
 
@@ -538,7 +538,7 @@ The API to access media file format information is limited, so not all
 
 - __duration__: The length of the video or sound clip in seconds. The value is zero for images. (Number)
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 No API provides format information for media files, so the
 `MediaFileData` object returned by `MediaFile.getFormatData` features
@@ -554,7 +554,7 @@ the following default values:
 
 - __duration__: Not supported, and returns zero.
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
 Supports the following `MediaFileData` properties:
 
@@ -568,7 +568,7 @@ Supports the following `MediaFileData` properties:
 
 - __duration__: Supported: audio and video files only
 
-### Android Quirks
+### Android 特有の動作
 
 Supports the following `MediaFileData` properties:
 
@@ -582,7 +582,7 @@ Supports the following `MediaFileData` properties:
 
 - __duration__: Supported: audio and video files only.
 
-### iOS Quirks
+### iOS 特有の動作
 
 Supports the following `MediaFileData` properties:
 

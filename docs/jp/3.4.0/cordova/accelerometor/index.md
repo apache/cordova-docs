@@ -19,16 +19,13 @@
 
 # org.apache.cordova.device-motion
 
-This plugin provides access to the device's accelerometer. The accelerometer is
-a motion sensor that detects the change (_delta_) in movement relative to the
-current device orientation, in three dimensions along the _x_, _y_, and _z_
-axis.
+このプラグインを使用して、デバイス内臓の加速度センサーが持つ情報を取得します。加速度センサーは、 _x_, _y_, _z_ 軸の3 次元で、デバイスの傾きの変化 ( _delta_ ) を検知するモーションセンサーの 1 種です。
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.device-motion
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -38,13 +35,13 @@ axis.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Methods
+## メソッド
 
 - navigator.accelerometer.getCurrentAcceleration
 - navigator.accelerometer.watchAcceleration
 - navigator.accelerometer.clearWatch
 
-## Objects
+## オブジェクト
 
 - Acceleration
 
@@ -58,7 +55,7 @@ callback function.
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
 
-### Example
+### 例
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -73,7 +70,7 @@ callback function.
 
     navigator.accelerometer.getCurrentAcceleration(onSuccess, onError);
 
-### iOS Quirks
+### iOS 特有の動作
 
 - iOS doesn't recognize the concept of getting the current acceleration at any given point.
 
@@ -99,7 +96,7 @@ accelerometer.
   - __frequency__: How often to retrieve the `Acceleration` in milliseconds. _(Number)_ (Default: 10000)
 
 
-###  Example
+###  例
 
     function onSuccess(acceleration) {
         alert('Acceleration X: ' + acceleration.x + '\n' +
@@ -116,7 +113,7 @@ accelerometer.
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-### iOS Quirks
+### iOS 特有の動作
 
 The API calls the success callback function at the interval requested,
 but restricts the range of requests to the device between 40ms and
@@ -132,7 +129,7 @@ Stop watching the `Acceleration` referenced by the `watchID` parameter.
 
 - __watchID__: The ID returned by `navigator.accelerometer.watchAcceleration`.
 
-###  Example
+###  例
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
@@ -147,7 +144,7 @@ Acceleration values include the effect of gravity (9.81 m/s^2), so that when a
 device lies flat and facing up, _x_, _y_, and _z_ values returned should be
 `0`, `0`, and `9.81`.
 
-### Properties
+### プロパティ
 
 - __x__:  Amount of acceleration on the x-axis. (in m/s^2) _(Number)_
 - __y__:  Amount of acceleration on the y-axis. (in m/s^2) _(Number)_

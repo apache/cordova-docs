@@ -21,11 +21,11 @@
 
 This plugin allows you to upload and download files.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.file-transfer
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -41,11 +41,11 @@ This plugin allows you to upload and download files.
 The `FileTransfer` object provides a way to upload files using an HTTP
 multi-part POST request, and to download files as well.
 
-## Properties
+## プロパティ
 
 - __onprogress__: Called with a `ProgressEvent` whenever a new chunk of data is transferred. _(Function)_
 
-## Methods
+## メソッド
 
 - __upload__: sends a file to a server.
 
@@ -76,7 +76,7 @@ __Parameters__:
   - __chunkedMode__: Whether to upload the data in chunked streaming mode. Defaults to `true`. (Boolean)
   - __headers__: A map of header name/header values. Use an array to specify more than one value. (Object)
 
-### Example
+### 例
 
     // !! Assumes variable fileURL contains a valid URL to a text file on the device,
     //    for example, cdvfile://localhost/persistent/path/to/file.txt
@@ -147,7 +147,7 @@ __Parameters__:
 A `FileUploadResult` object is passed to the success callback of the
 `FileTransfer` object's `upload()` method.
 
-### Properties
+### プロパティ
 
 - __bytesSent__: The number of bytes sent to the server as part of the upload. (long)
 
@@ -158,7 +158,7 @@ A `FileUploadResult` object is passed to the success callback of the
 - __headers__: The HTTP response headers by the server. (Object)
   - Currently supported on iOS only.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - Does not support `responseCode` or `bytesSent`.
 
@@ -179,7 +179,7 @@ __Parameters__:
 
 - __options__: Optional parameters, currently only supports headers (such as Authorization (Basic Authentication), etc).
 
-### Example
+### 例
 
     // !! Assumes variable fileURL contains a valid URL to a path on the device,
     //    for example, cdvfile://localhost/persistent/path/to/downloads/
@@ -210,7 +210,7 @@ __Parameters__:
 
 Aborts an in-progress transfer. The onerror callback is passed a FileTransferError object which has an error code of FileTransferError.ABORT_ERR.
 
-### Example
+### 例
 
     // !! Assumes variable fileURL contains a valid URL to a text file on the device,
     //    for example, cdvfile://localhost/persistent/path/to/file.txt
@@ -240,7 +240,7 @@ Aborts an in-progress transfer. The onerror callback is passed a FileTransferErr
 
 A `FileTransferError` object is passed to an error callback when an error occurs.
 
-### Properties
+### プロパティ
 
 - __code__: One of the predefined error codes listed below. (Number)
 

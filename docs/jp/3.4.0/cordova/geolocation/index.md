@@ -45,11 +45,11 @@ above, as well as obtaining the user's permission (e.g., by presenting
 choices for __OK__ and __No Thanks__).  For more information, please
 see the Privacy Guide.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.geolocation
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
 Create __www/manifest.webapp__ as described in 
 [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
@@ -59,7 +59,7 @@ Add permisions:
 		"geolocation": { "description": "Used to position the map to your current position" }
 	}
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -70,13 +70,13 @@ Add permisions:
 - Windows Phone 7 and 8
 - Windows 8
 
-## Methods
+## メソッド
 
 - navigator.geolocation.getCurrentPosition
 - navigator.geolocation.watchPosition
 - navigator.geolocation.clearWatch
 
-## Objects (Read-Only)
+## オブジェクト ( 読み取り専用 )
 
 - Position
 - PositionError
@@ -93,7 +93,7 @@ error, the `geolocationError` callback is passed a
                                              [geolocationError],
                                              [geolocationOptions]);
 
-### Parameters
+### パラメータ
 
 - __geolocationSuccess__: The callback that is passed the current position.
 
@@ -102,7 +102,7 @@ error, the `geolocationError` callback is passed a
 - __geolocationOptions__: _(Optional)_ The geolocation options.
 
 
-### Example
+### 例
 
     // onSuccess Callback
     // This method accepts a Position object, which contains the
@@ -140,7 +140,7 @@ there is an error, the `geolocationError` callback executes with a
                                                       [geolocationError],
                                                       [geolocationOptions]);
 
-### Parameters
+### パラメータ
 
 - __geolocationSuccess__: The callback that is passed the current position.
 
@@ -152,7 +152,7 @@ there is an error, the `geolocationError` callback executes with a
 
 - __String__: returns a watch id that references the watch position interval. The watch id should be used with `navigator.geolocation.clearWatch` to stop watching for changes in position.
 
-### Example
+### 例
 
     // onSuccess Callback
     //   This method accepts a `Position` object, which contains
@@ -184,7 +184,7 @@ Optional parameters to customize the retrieval of the geolocation
 
     { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true };
 
-### Options
+### オプション
 
 - __enableHighAccuracy__: Provides a hint that the application needs the best possible results. By default, the device attempts to retrieve a `Position` using network-based methods. Setting this property to `true` tells the framework to use more accurate methods, such as satellite positioning. _(Boolean)_
 
@@ -192,7 +192,7 @@ Optional parameters to customize the retrieval of the geolocation
 
 - __maximumAge__: Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
 
-### Android Quirks
+### Android 特有の動作
 
 Android 2.x emulators do not return a geolocation result unless the `enableHighAccuracy` option is set to `true`.
 
@@ -203,11 +203,11 @@ Stop watching for changes to the device's location referenced by the
 
     navigator.geolocation.clearWatch(watchID);
 
-### Parameters
+### パラメータ
 
 - __watchID__: The id of the `watchPosition` interval to clear. (String)
 
-### Example
+### 例
 
     // Options: watch for changes in position, and use the most
     // accurate position acquisition method available.
@@ -222,7 +222,7 @@ Stop watching for changes to the device's location referenced by the
 
 Contains `Position` coordinates and timestamp, created by the geolocation API.
 
-### Properties
+### プロパティ
 
 - __coords__: A set of geographic coordinates. _(Coordinates)_
 
@@ -234,7 +234,7 @@ A `Coordinates` object is attached to a `Position` object that is
 available to callback functions in requests for the current position.
 It contains a set of properties that describe the geographic coordinates of a position.
 
-### Properties
+### プロパティ
 
 * __latitude__: Latitude in decimal degrees. _(Number)_
 
@@ -250,11 +250,11 @@ It contains a set of properties that describe the geographic coordinates of a po
 
 * __speed__: Current ground speed of the device, specified in meters per second. _(Number)_
 
-###  Amazon Fire OS Quirks
+###  Amazon Fire OS 特有の動作
 
 __altitudeAccuracy__: Not supported by Android devices, returning `null`.
 
-### Android Quirks
+### Android 特有の動作
 
 __altitudeAccuracy__: Not supported by Android devices, returning `null`.
 
@@ -263,7 +263,7 @@ __altitudeAccuracy__: Not supported by Android devices, returning `null`.
 The `PositionError` object is passed to the `geolocationError`
 callback function when an error occurs with navigator.geolocation.
 
-### Properties
+### プロパティ
 
 - __code__: One of the predefined error codes listed below.
 

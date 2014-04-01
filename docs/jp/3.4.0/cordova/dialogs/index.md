@@ -21,11 +21,11 @@
 
 This plugin provides access to some native dialog UI elements.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.dialogs
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
 Create __www/manifest.webapp__ as described in 
 [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
@@ -41,7 +41,7 @@ Edit __www/index.html__ and add following in `head` section:
 
 	<link rel="stylesheet" type="text/css" href="css/notification.css" />
 
-## Methods
+## メソッド
 
 - `navigator.notification.alert`
 - `navigator.notification.confirm`
@@ -65,7 +65,7 @@ function, which is typically less customizable.
 - __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
 
 
-### Example
+### 例
 
     function alertDismissed() {
         // do something
@@ -78,7 +78,7 @@ function, which is typically less customizable.
         'Done'                  // buttonName
     );
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -89,7 +89,7 @@ function, which is typically less customizable.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:
 
@@ -97,7 +97,7 @@ function, which is typically less customizable.
 
 - Both `alert` and `confirm` are non-blocking calls, results of which are only available asynchronously.
 
-### Firefox OS Quirks:
+### Firefox OS 特有の動作
 
 Both native-blocking `window.alert()` and non-blocking `navigator.notification.alert()` are available.
 
@@ -125,7 +125,7 @@ The callback takes the argument `buttonIndex` _(Number)_, which is the
 index of the pressed button. Note that the index uses one-based
 indexing, so the value is `1`, `2`, `3`, etc.
 
-### Example
+### 例
 
     function onConfirm(buttonIndex) {
         alert('You selected button ' + buttonIndex);
@@ -138,7 +138,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
         ['Restart','Exit']     // buttonLabels
     );
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -149,7 +149,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - There is no built-in browser function for `window.confirm`, but you can bind it by assigning:
 
@@ -157,7 +157,7 @@ indexing, so the value is `1`, `2`, `3`, etc.
 
 - Calls to `alert` and `confirm` are non-blocking, so the result is only available asynchronously.
 
-### Firefox OS Quirks:
+### Firefox OS 特有の動作
 
 Both native-blocking `window.confirm()` and non-blocking `navigator.notification.confirm()` are available.
 
@@ -187,7 +187,7 @@ contains the following properties:
 
 - __input1__: The text entered in the prompt dialog box. _(String)_
 
-### Example
+### 例
 
     function onPrompt(results) {
         alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
@@ -201,20 +201,20 @@ contains the following properties:
         'Jane Doe'                 // defaultText
     );
 
-### Supported Platforms
+### Sサポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - Firefox OS
 - iOS
 
-### Android Quirks
+### Android 特有の動作
 
 - Android supports a maximum of three buttons, and ignores any more than that.
 
 - On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.
 
-### Firefox OS Quirks:
+### Firefox OS 特有の動作
 
 Both native-blocking `window.prompt()` and non-blocking `navigator.notification.prompt()` are available.
 
@@ -226,12 +226,12 @@ The device plays a beep sound.
 
 - __times__: The number of times to repeat the beep. _(Number)_
 
-### Example
+### 例
 
     // Beep twice!
     navigator.notification.beep(2);
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -241,19 +241,19 @@ The device plays a beep sound.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
 - Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.
 
-### Android Quirks
+### Android 特有の動作
 
 - Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - Relies on a generic beep file from the Cordova distribution.
 
-### Tizen Quirks
+### Tizen 特有の動作
 
 - Tizen implements beeps by playing an audio file via the media API.
 

@@ -26,11 +26,11 @@ specification for media capture, and is provided for convenience only.
 A future implementation will adhere to the latest W3C specification
 and may deprecate the current APIs.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.media
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -39,7 +39,7 @@ and may deprecate the current APIs.
 - Tizen
 - Windows 8
 
-## Windows Phone Quirks
+## Windows Phone 特有の動作
 
 - Only one media file can be played back at a time.
 
@@ -51,7 +51,7 @@ and may deprecate the current APIs.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
-### Parameters
+### パラメータ
 
 - __src__: A URI containing the audio content. _(DOMString)_
 
@@ -72,7 +72,7 @@ The following constants are reported as the only parameter to the
 - `Media.MEDIA_PAUSED`   = 3;
 - `Media.MEDIA_STOPPED`  = 4;
 
-### Methods
+### メソッド
 
 - `media.getCurrentPosition`: Returns the current position within an audio file.
 
@@ -94,7 +94,7 @@ The following constants are reported as the only parameter to the
 
 - `media.stop`: Stop playing an audio file.
 
-### Additional ReadOnly Parameters
+### 追加のパラメータ ( 読み取り専用 )
 
 - __position__: The position within the audio playback, in seconds.
     - Not automatically updated during play; call `getCurrentPosition` to update.
@@ -108,13 +108,13 @@ Returns the current position within an audio file.  Also updates the `Media` obj
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
 
-### Parameters
+### パラメータ
 
 - __mediaSuccess__: The callback that is passed the current position in seconds.
 
 - __mediaError__: (Optional) The callback to execute if an error occurs.
 
-### Quick Example
+### 例
 
     // Audio player
     //
@@ -145,7 +145,7 @@ Returns the duration of an audio file in seconds. If the duration is unknown, it
 
     media.getDuration();
 
-### Quick Example
+### 例
 
     // Audio player
     //
@@ -173,7 +173,7 @@ Pauses playing an audio file.
     media.pause();
 
 
-### Quick Example
+### 例
 
     // Play audio
     //
@@ -203,7 +203,7 @@ Starts or resumes playing an audio file.
     media.play();
 
 
-### Quick Example
+### 例
 
     // Play audio
     //
@@ -224,7 +224,7 @@ Starts or resumes playing an audio file.
     }
 
 
-### iOS Quirks
+### iOS 特有の動作
 
 - __numberOfLoops__: Pass this option to the `play` method to specify
   the number of times you want the media file to play, e.g.:
@@ -257,7 +257,7 @@ function for any `Media` resource that is no longer needed.
     media.release();
 
 
-### Quick Example
+### 例
 
     // Audio player
     //
@@ -274,12 +274,12 @@ Sets the current position within an audio file.
 
     media.seekTo(milliseconds);
 
-### Parameters
+### パラメータ
 
 - __milliseconds__: The position to set the playback position within the audio, in milliseconds.
 
 
-### Quick Example
+### 例
 
     // Audio player
     //
@@ -291,7 +291,7 @@ Sets the current position within an audio file.
     }, 5000);
 
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
 - Not supported on BlackBerry OS 5 devices.
 
@@ -301,16 +301,16 @@ Set the volume for an audio file.
 
     media.setVolume(volume);
 
-### Parameters
+### パラメータ
 
 - __volume__: The volume to set for playback.  The value must be within the range of 0.0 to 1.0.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - iOS
 
-### Quick Example
+### 例
 
     // Play audio
     //
@@ -347,14 +347,14 @@ Starts recording an audio file.
 
     media.startRecord();
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Record audio
     //
@@ -376,11 +376,11 @@ Starts recording an audio file.
     }
 
 
-### Android Quirks
+### Android 特有の動作
 
 - Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a _.amr_ extension.
 
-### iOS Quirks
+### iOS 特有の動作
 
 - iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
 
@@ -390,7 +390,7 @@ Starts recording an audio file.
 
         var myMedia = new Media("documents://beer.mp3")
 
-### Tizen Quirks
+### Tizen 特有の動作
 
 - Not supported on Tizen devices.
 
@@ -400,7 +400,7 @@ Stops playing an audio file.
 
     media.stop();
 
-### Quick Example
+### 例
 
     // Play audio
     //
@@ -433,14 +433,14 @@ Stops recording an audio file.
 
     media.stopRecord();
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - iOS
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Record audio
     //
@@ -468,7 +468,7 @@ Stops recording an audio file.
     }
 
 
-### Tizen Quirks
+### Tizen 特有の動作
 
 - Not supported on Tizen devices.
 
@@ -477,7 +477,7 @@ Stops recording an audio file.
 A `MediaError` object is returned to the `mediaError` callback
 function when an error occurs.
 
-### Properties
+### プロパティ
 
 - __code__: One of the predefined error codes listed below.
 

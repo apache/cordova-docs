@@ -27,11 +27,11 @@ Although the object is in the global scope, it is not available until after the 
         console.log(device.cordova);
     }
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.device
 
-## Properties
+## プロパティ
 
 - device.cordova
 - device.model
@@ -44,7 +44,7 @@ Although the object is in the global scope, it is not available until after the 
 
 Get the version of Cordova running on the device.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -61,7 +61,7 @@ The `device.model` returns the name of the device's model or
 product. The value is set by the device manufacturer and may be
 different across versions of the same product.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -70,7 +70,7 @@ different across versions of the same product.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Android:    Nexus One       returns "Passion" (Nexus One code name)
     //             Motorola Droid  returns "voles"
@@ -79,15 +79,15 @@ different across versions of the same product.
     //
     var model = device.model;
 
-### Android Quirks
+### Android 特有の動作
 
 - Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
 
-### Tizen Quirks
+### Tizen 特有の動作
 
 - Returns the device model assigned by the vendor, for example, `TIZEN`
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
@@ -101,7 +101,7 @@ Get the device's operating system name.
 
     var string = device.platform;
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -111,7 +111,7 @@ Get the device's operating system name.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Depending on the device, a few examples are:
     //   - "Android"
@@ -121,11 +121,11 @@ Get the device's operating system name.
     //   - "Tizen"
     var devicePlatform = device.platform;
 
-### Windows Phone 7 Quirks
+### Windows Phone 7 特有の動作
 
 Windows Phone 7 devices report the platform as `WinCE`.
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
 Windows Phone 8 devices report the platform as `Win32NT`.
 
@@ -135,11 +135,11 @@ Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/w
 
     var string = device.uuid;
 
-### Description
+### 解説
 
 The details of how a UUID is generated are determined by the device manufacturer and are specific to the device's platform or model.
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android
 - BlackBerry 10
@@ -148,7 +148,7 @@ The details of how a UUID is generated are determined by the device manufacturer
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Android: Returns a random 64-bit integer (as a string, again!)
     //          The integer is generated on the device's first boot
@@ -166,7 +166,7 @@ The details of how a UUID is generated are determined by the device manufacturer
     // unique to every GSM and UMTS mobile phone.
     var deviceID = device.uuid;
 
-### iOS Quirk
+### iOS 特有の動作
 
 The `uuid` on iOS is not unique to a device, but varies for each
 application, for each installation.  It changes if you delete and
@@ -174,7 +174,7 @@ re-install the app, and possibly also when you upgrade iOS, or even
 upgrade the app per version (apparent in iOS 5.1). The `uuid` is not
 a reliable value.
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
 The `uuid` for Windows Phone 7 requires the permission
 `ID_CAP_IDENTITY_DEVICE`.  Microsoft will likely deprecate this
@@ -188,7 +188,7 @@ Get the operating system version.
 
     var string = device.version;
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - Android 2.1+
 - BlackBerry 10
@@ -197,7 +197,7 @@ Get the operating system version.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Quick Example
+### 例
 
     // Android:    Froyo OS would return "2.2"
     //             Eclair OS would return "2.1", "2.0.1", or "2.0"

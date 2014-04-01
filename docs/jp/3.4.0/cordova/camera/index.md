@@ -19,61 +19,43 @@
 
 # org.apache.cordova.camera
 
-This plugin provides an API for taking pictures and for choosing images from
-the system's image libarary.
+このプラグインを使用して、写真撮影およびシステムのイメージライブラリからのイメージの選択を行うことができます。
 
     cordova plugin add org.apache.cordova.camera
 
 
 ## navigator.camera.getPicture
 
-Takes a photo using the camera, or retrieves a photo from the device's
-image gallery.  The image is passed to the success callback as a
-base64-encoded `String`, or as the URI for the image file.  The method
-itself returns a `CameraPopoverHandle` object that can be used to
-reposition the file selection popover.
+デバイスのカメラでの写真撮影、または、デバイスの画像ギャラリー内の画像検索を行います。画像は Base64 形式の文字列として、または、画像ファイルの URI を、Success コールバック関数に引き渡します。このメソッド自体は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、ファイル選択用のポップオーバー ( popover ) の位置を変更できます。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
-### Description
+### 解説
 
-The `camera.getPicture` function opens the device's default camera
-application that allows users to snap pictures. This behavior occurs
-by default, when `Camera.sourceType` equals
-`Camera.PictureSourceType.CAMERA`.  Once the user snaps the photo, the
-camera application closes and the application is restored.
+The `camera.getPicture` 関数を使用して、デバイス搭載のカメラアプリを起動して、写真撮影を行います。デフォルトでは、 `Camera.sourceType` と `Camera.PictureSourceType.CAMERA` が等しいときに、この処理を実行します。 
 
-If `Camera.sourceType` is `Camera.PictureSourceType.PHOTOLIBRARY` or
-`Camera.PictureSourceType.SAVEDPHOTOALBUM`, then a dialog displays
-that allows users to select an existing image.  The
-`camera.getPicture` function returns a `CameraPopoverHandle` object,
-which can be used to reposition the image selection dialog, for
-example, when the device orientation changes.
+写真の撮影後、カメラアプリを終了して、アプリケーションに戻ります。
+`Camera.sourceType` が `Camera.PictureSourceType.PHOTOLIBRARY` の場合、または、 `Camera.PictureSourceType.SAVEDPHOTOALBUM` の場合、写真選択用のダイアログが表示され、既存の写真を選択できます。 `camera.getPicture` 関数は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、画像選択用のダイアログの位置を変更できます。例えば、端末の向きを変えた場合に使用します。
 
-The return value is sent to the `cameraSuccess` callback function, in
-one of the following formats, depending on the specified
-`cameraOptions`:
+返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます。
 
-- A `String` containing the base64-encoded photo image.
 
-- A `String` representing the image file location on local storage (default).
 
-You can do whatever you want with the encoded image or URI, for
-example:
+- Base64 形式でエンコードされたフォトイメージを表す `文字列`
 
-- Render the image in an `<img>` tag, as in the example below
+- ローカルストレージ内の画像ファイルの場所を表す `文字列` (デフォルト)
 
-- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc.)
+エンコードされたイメージまたは URI を使用して、さまざまな処理を行うことができます。以下に例を示します。
 
-- Post the data to a remote server
+- `<img>` タグで画像を表示。使用例を次のセクションで示します。
 
-__NOTE__: Photo resolution on newer devices is quite good. Photos
-selected from the device's gallery are not downscaled to a lower
-quality, even if a `quality` parameter is specified.  To avoid common
-memory problems, set `Camera.destinationType` to `FILE_URI` rather
-than `DATA_URL`.
+- ローカルにデータを保存 ( `LocalStorage` 、 [Lawnchair](http://brianleroux.github.com/lawnchair/) など )
 
-### Supported Platforms
+- リモートサーバーにデータを送信
+
+__注意:__ 最新のデバイスで撮影した写真は高い解像度を持っています。デバイスのギャラリーから取得する画像は `quality` パラメーターで画質を指定しても、縮小されません。メモリーの問題を回避するために、 `Camera.destinationType` を `DATA_URL` ではなく、 `FILE_URI` に設定してください。
+
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -84,54 +66,41 @@ than `DATA_URL`.
 - Windows Phone 7 and 8
 - Windows 8
 
-### Amazon Fire OS Quirks
+### Amazon Fire OS 特有の動作
 
-Amazon Fire OS uses intents to launch the camera activity on the device to capture
-images, and on phones with low memory, the Cordova activity may be killed.  In this
-scenario, the image may not appear when the cordova activity is restored.
+写真を撮影するために、Amazon Fire OS はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
 
-### Android Quirks
 
-*Android 4.4 only*: Android 4.4 introduced a new [Storage Access Framework](https://developer.android.com/guide/topics/providers/document-provider.html) that makes it 
-easier for users to browse and open documents across all of their preferred document storage providers.
-Cordova has not yet been fully integrated with this new Storage Access Framework. Because of this, the `getPicture()`
-method will not correctly return pictures when the user selects from the "Recent", "Drive", "Images", or "External
-Storage" folders when the `destinationType` is `FILE_URI`. However, the user will be able to correctly select any pictures
-if they go through the "Gallery" app first. Potential workarounds for this issue are documented on [this StackOverflow question](http://stackoverflow.com/questions/19834842/android-gallery-on-kitkat-returns-different-uri-for-intent-action-get-content/20177611). Please see [CB-5398](https://issues.apache.org/jira/browse/CB-5398) to track this issue. 
+### Android 特有の動作
 
-Android uses intents to launch the camera activity on the device to capture
-images, and on phones with low memory, the Cordova activity may be killed.  In this
-scenario, the image may not appear when the Cordova activity is restored.
+*Android 4.4 のみが対象*: Android 4.4 では、新しい [ ストレージ アクセス フレームワーク](https://developer.android.com/guide/topics/providers/document-provider.html) を導入しました。このフレームワークを使用して、各ドキュメント ストレージ プロバイダー が保有するドキュメントの検索と表示が簡単に行えるようになりました。Cordova では、 `destinationType` を `FILE_URI` に設定して、ユーザが "Recent" 、 "Drive" 、 "Images" 、 "External Storage" のいずれかを選択したとき、 `getPicture()` メソッドが写真を適当に返さないため、このストレージ アクセス フレームワークを完全には実装していません。ただし、"Gallery" アプリを最初に使用した場合、写真の選択を適当に行うことができます。
+この問題に対する一時的な回避策として [StackOverflow 問題解決策](http://stackoverflow.com/questions/19834842/android-gallery-on-kitkat-returns-different-uri-for-intent-action-get-content/20177611) をご確認ください。また、この問題の途中経過は [CB-5398](https://issues.apache.org/jira/browse/CB-5398) をご確認ください。 
 
-### Firefox OS Quirks
+写真を撮影するために、Android はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
 
-Camera plugin is currently implemented using [Web Activities](https://hacks.mozilla.org/2013/01/introducing-web-activities/). 
+### Firefox OS 特有の動作
 
-### iOS Quirks
+カメラ用プラグインは、現在、 [Web Activities](https://hacks.mozilla.org/2013/01/introducing-web-activities/) を使用します。 
 
-Including a JavaScript `alert()` in either of the callback functions
-can cause problems.  Wrap the alert within a `setTimeout()` to allow
-the iOS image picker or popover to fully close before the alert
-displays:
+### iOS 特有の動作
+
+コールバック関数のいづれかに JavaScript の `alert()` を記述すると、問題が生じることがあります。この場合、alert を `setTimeout()` 内に記述します。これにより、alert が表示される前に、iOS の image picker または ポップオーバー ( popover ) を完全に閉じることができます。
 
     setTimeout(function() {
-        // do your thing here!
+        // ここに処理を記述
     }, 0);
 
-### Windows Phone 7 Quirks
+### Windows Phone 7 特有の動作
 
-Invoking the native camera application while the device is connected
-via Zune does not work, and triggers an error callback.
+Zune 経由でデバイスが接続している間は、ネーティブのカメラアプリを起動することはできず、代わりに、エラーを返すコールバックが呼ばれます。
 
-### Tizen Quirks
+### Tizen 特有の動作
 
-Tizen only supports a `destinationType` of
-`Camera.DestinationType.FILE_URI` and a `sourceType` of
-`Camera.PictureSourceType.PHOTOLIBRARY`.
+Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Camera.PictureSourceType.PHOTOLIBRARY` の `sourceType` のみサポートします。 
 
-### Example
+### 例
 
-Take a photo and retrieve it as a base64-encoded image:
+写真を撮影し、 Base64 形式のイメージとして取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
@@ -146,7 +115,7 @@ Take a photo and retrieve it as a base64-encoded image:
         alert('Failed because: ' + message);
     }
 
-Take a photo and retrieve the image's file location:
+写真を撮影し、イメージファイルの位置を取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });
@@ -162,7 +131,7 @@ Take a photo and retrieve the image's file location:
 
 ## CameraOptions
 
-Optional parameters to customize the camera settings.
+カメラの設定をカスタマイズするオプションのパラメーターです。
 
     { quality : 75,
       destinationType : Camera.DestinationType.DATA_URL,
@@ -174,19 +143,19 @@ Optional parameters to customize the camera settings.
       popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: false };
 
-### Options
+### オプション
 
-- __quality__: Quality of the saved image, expressed as a range of 0-100, where 100 is typically full resolution with no loss from file compression. _(Number)_ (Note that information about the camera's resolution is unavailable.)
+- __quality__: 保存したイメージの画質を指定します。 範囲は 0 から 100 まであり、100 を指定すると非圧縮時の解像度となります。_(Number)_ ( カメラ解像度に関する情報を利用することはできません )
 
-- __destinationType__: Choose the format of the return value. Defined in `navigator.camera.DestinationType` _(Number)_
+- __destinationType__: 返り値のフォーマットを指定します。フォーマットは `navigator.camera.DestinationType` で定義します。 _(Number)_
 
         Camera.DestinationType = {
-            DATA_URL : 0,      // Return image as base64-encoded string
-            FILE_URI : 1,      // Return image file URI
-            NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)
+            DATA_URL : 0,      // 画像を Base64 形式の文字列で返す
+            FILE_URI : 1,      // 画像ファイルの URI を返す
+            NATIVE_URI : 2     // 画像のネイティブ URI を返す ( 例 ： iOS であれば assets-library:// 、Android であれば content:// )
         };
 
-- __sourceType__: Set the source of the picture.  Defined in `navigator.camera.PictureSourceType` _(Number)_
+- __sourceType__: 写真の取得先のソースを設定します。ソースは `navigator.camera.PictureSourceType` で定義します。 _(Number)_
 
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
@@ -194,124 +163,123 @@ Optional parameters to customize the camera settings.
             SAVEDPHOTOALBUM : 2
         };
 
-- __allowEdit__: Allow simple editing of image before selection. _(Boolean)_
+- __allowEdit__: イメージ選択の前に、簡単な編集を許可します。 _(Boolean)_
 
-- __encodingType__: Choose the  returned image file's encoding.  Defined in `navigator.camera.EncodingType` _(Number)_
+- __encodingType__: 返される画像ファイルのエンコード形式を選択します。形式は `navigator.camera.EncodingType` で定義します。_(Number)_
 
         Camera.EncodingType = {
-            JPEG : 0,               // Return JPEG encoded image
-            PNG : 1                 // Return PNG encoded image
+            JPEG : 0,               // JPEG 形式の画像を返す
+            PNG : 1                 // PNG 形式の画像を返す
         };
 
-- __targetWidth__: Width in pixels to scale image. Must be used with __targetHeight__.  Aspect ratio remains constant. _(Number)_
+- __targetWidth__: 画像を拡大・縮小するための幅をピクセルで指定します。 __targetHeight__ と共に使用しなければなりません。  アスペクト比は一定に保持されます。 _(Number)_
 
-- __targetHeight__: Height in pixels to scale image. Must be used with __targetWidth__. Aspect ratio remains constant. _(Number)_
+- __targetHeight__: 画像を拡大・縮小するための高さをピクセルで指定します。 __targetWidth__ と共に使用しなければなりません。アスペクト比は一定に保持されます。 _(Number)_
 
-- __mediaType__: Set the type of media to select from.  Only works when `PictureSourceType` is `PHOTOLIBRARY` or `SAVEDPHOTOALBUM`. Defined in `nagivator.camera.MediaType` _(Number)_
+- __mediaType__: 画像の取得元のメディアの種類を指定します。 `PictureSourceType` に `PHOTOLIBRARY` または `SAVEDPHOTOALBUM` が指定されている場合のみ有効です。メディアの種類は `nagivator.camera.MediaType` で定義します。 _(Number)_
 
         Camera.MediaType = {
-            PICTURE: 0,    // allow selection of still pictures only. DEFAULT. Will return format specified via DestinationType
-            VIDEO: 1,      // allow selection of video only, WILL ALWAYS RETURN FILE_URI
-            ALLMEDIA : 2   // allow selection from all media types
+            PICTURE: 0,    // 静止画像のみ。デフォルトはこちらの設定です。返り値のフォーマットは DestinationType で指定したものになります。
+            VIDEO: 1,      // ビデオのみ。返り値は常に FILE_URI となります。
+            ALLMEDIA : 2   // 全種類のメディアが対象。
 };
 
-- __correctOrientation__: Rotate the image to correct for the orientation of the device during capture. _(Boolean)_
+- __correctOrientation__: 写真を撮影したときと同じデバイスの向きになるよう写真を回転させます。 _(Boolean)_
 
-- __saveToPhotoAlbum__: Save the image to the photo album on the device after capture. _(Boolean)_
+- __saveToPhotoAlbum__: 写真を撮影した後、デバイスのフォトアルバムに画像を保存します。 _(Boolean)_
 
-- __popoverOptions__: iOS-only options that specify popover location in iPad.  Defined in `CameraPopoverOptions`.
+- __popoverOptions__: iOS 専用のオプションです。iPad でのポップオーバー ( popover ) の位置を指定します。 `CameraPopoverOptions` で定義します。
 
-- __cameraDirection__: Choose the camera to use (front- or back-facing).  Defined in `navigator.camera.Direction` _(Number)_
+- __cameraDirection__: 使用するカメラを選択します ( 前面か背面のカメラ )。 `navigator.camera.Direction` で定義します。 _(Number)_
 
         Camera.Direction = {
-            BACK : 0,      // Use the back-facing camera
-            FRONT : 1      // Use the front-facing camera
+            BACK : 0,      // 背面のカメラを使用
+            FRONT : 1      // 前面のカメラを使用
         };
 
-### Amazon Fire OSQuirks
+### Amazon Fire OS 特有の動作
 
-- Any `cameraDirection` value results in a back-facing photo.
+- `cameraDirection` を指定しても、背面のカメラで写真を撮ります。
 
-- Ignores the `allowEdit` parameter.
+- `allowEdit` パラメータを無視します。
 
-- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+- `Camera.PictureSourceType.PHOTOLIBRARY` と `Camera.PictureSourceType.SAVEDPHOTOALBUM` は、共に、同じフォトアルバムを表示します。
 
-### Android Quirks
+### Android 特有の動作
 
-- Any `cameraDirection` value results in a back-facing photo.
+- `cameraDirection` を指定しても、背面のカメラで写真を撮ります。
 
-- Ignores the `allowEdit` parameter.
+- `allowEdit` パラメータを無視します。
 
-- `Camera.PictureSourceType.PHOTOLIBRARY` and `Camera.PictureSourceType.SAVEDPHOTOALBUM` both display the same photo album.
+- `Camera.PictureSourceType.PHOTOLIBRARY` と `Camera.PictureSourceType.SAVEDPHOTOALBUM` は、共に、同じフォトアルバムを表示します。
 
-### BlackBerry 10 Quirks
+### BlackBerry 10 特有の動作
 
-- Ignores the `quality` parameter.
+- `quality` パラメータを無視します。
 
-- Ignores the `sourceType` parameter.
+- `sourceType` パラメータを無視します。
 
-- Ignores the `allowEdit` parameter.
+- `allowEdit` パラメータを無視します。
 
-- `Camera.MediaType` is not supported.
+- `Camera.MediaType` をサポートしません。
 
-- Ignores the `correctOrientation` parameter.
+- `correctOrientation` パラメータを無視します。
 
-- Ignores the `cameraDirection` parameter.
+- `cameraDirection` パラメータを無視します。
 
-### Firefox OS Quirks
+### Firefox OS 特有の動作
 
-- Ignores the `quality` parameter.
+- `quality` パラメータを無視します。
 
-- `Camera.DestinationType` is ignored and equals `1` (image file URI)
+- `Camera.DestinationType` を無視します。設定値が `1` と同様の動作をします ( 画像ファイルの URI )。
 
-- Ignores the `allowEdit` parameter.
+- `allowEdit` パラメータを無視します。
 
-- Ignores the `PictureSourceType` parameter (user chooses it in a dialog window)
+- `PictureSourceType` パラメータを無視します ( ダイアログ ウィンドウ上でユーザが種類を選択 )。
 
-- Ignores the `encodingType`
+- `encodingType` パラメータを無視します。
 
-- Ignores the `targetWidth` and `targetHeight`
+- `targetWidth` と `targetHeight` を無視します。
 
-- `Camera.MediaType` is not supported.
+- `Camera.MediaType` をサポートしません。
 
-- Ignores the `correctOrientation` parameter.
+- `correctOrientation` パラメータを無視します。
 
-- Ignores the `cameraDirection` parameter.
+- `cameraDirection` パラメータを無視します。
 
-### iOS Quirks
+### iOS 特有の動作
 
-- Set `quality` below 50 to avoid memory errors on some devices.
+- いくつかのデバイスで発生するメモリーエラーを防ぐため、 `quality` を 50 以下に設定してください。
 
-- When using `destinationType.FILE_URI`, photos are saved in the application's temporary directory.  You may delete the contents of this directory using the `navigator.fileMgr` APIs if storage space is a concern.
+- `destinationType.FILE_URI` を使用した場合、アプリケーションの temporary ディレクトリに写真は保存されます。ストレージの空きが少ない場合、 `navigator.fileMgr` API を使用して、ディレクトリ内のコンテンツを消去できます。
 
-### Tizen Quirks
+### Tizen 特有の動作
 
-- options not supported
+- オプション群をサポートしません。
 
-- always returns a FILE URI
+- FILE URI を常に返します。
 
-### Windows Phone 7 and 8 Quirks
+### Windows Phone 7 と 8 特有の動作
 
-- Ignores the `allowEdit` parameter.
+- `allowEdit` パラメータを無視します。
 
-- Ignores the `correctOrientation` parameter.
+- `correctOrientation` パラメータを無視します。
 
-- Ignores the `cameraDirection` parameter.
+- `cameraDirection` パラメータを無視します。
 
-- Ignores the `mediaType` property of `cameraOptions` as the Windows Phone SDK does not provide a way to choose videos from PHOTOLIBRARY.
-
+- `cameraOptions` の `mediaType` プロパティを無視します。これは、Windows Phone SDK では、PHOTOLIBRARY からビデオを選択する方法を提供していないためです。
 
 ## CameraError
 
-onError callback function that provides an error message.
+エラーメッセージを表示する、onError コールバック関数です。
 
     function(message) {
-        // Show a helpful message
+        // エラーメッセージを表示
     }
 
-### Parameters
+### パラメータ
 
-- __message__: The message is provided by the device's native code. _(String)_
+- __message__: デバイスのネイティブコードが提供するメッセージ _(String)_
 
 
 ## cameraSuccess
@@ -322,11 +290,11 @@ onSuccess callback function that provides the image data.
         // Do something with the image
     }
 
-### Parameters
+### パラメータ
 
 - __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. _(String)_
 
-### Example
+### 例
 
     // Show image
     //
@@ -338,25 +306,25 @@ onSuccess callback function that provides the image data.
 
 ## CameraPopoverHandle
 
-A handle to the popover dialog created by `navigator.camera.getPicture`.
+`navigator.camera.getPicture` で生成したポップオーバー ( popover ) ダイアログへのハンドルです。
 
-### Methods
+### メソッド
 
-- __setPosition__: Set the position of the popover.
+- __setPosition__: ポップオーバー ( popover ) の位置を設定します。
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - iOS
 
 ### setPosition
 
-Set the position of the popover.
+ポップオーバー ( popover ) の位置を設定します。
 
 __Parameters__:
 
-- `cameraPopoverOptions`: the `CameraPopoverOptions` that specify the new position
+- `cameraPopoverOptions`: `CameraPopoverOptions` で、新しい位置を指定します。
 
-### Example
+### 例
 
      var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
          { destinationType: Camera.DestinationType.FILE_URI,
@@ -364,7 +332,7 @@ __Parameters__:
            popoverOptions: new CameraPopoverOptions(300, 300, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY)
          });
 
-     // Reposition the popover if the orientation changes.
+     // デバイスの向きが変わったら、ポップオーバーの位置を再設定します。
      window.onorientationchange = function() {
          var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, Camera.PopoverArrowDirection.ARROW_ANY);
          cameraPopoverHandle.setPosition(cameraPopoverOptions);
@@ -373,9 +341,7 @@ __Parameters__:
 
 ## CameraPopoverOptions
 
-iOS-only parameters that specify the anchor element location and arrow
-direction of the popover when selecting images from an iPad's library
-or album.
+iOS 専用のパラメーターです。iPad のライブラリまたはアルバムから画像を選択するときのポップオーバー ( popover ) の固定位置と矢印の方向を指定します。
 
     { x : 0,
       y :  32,
@@ -386,48 +352,41 @@ or album.
 
 ### CameraPopoverOptions
 
-- __x__: x pixel coordinate of screen element onto which to anchor the popover. _(Number)_
+- __x__: 画面上に表示するポップオーバー ( popover ) の x 座標をピクセルで表します。 _(Number)_
 
-- __y__: y pixel coordinate of screen element onto which to anchor the popover. _(Number)_
+- __y__: 画面上に表示するポップオーバー ( popover ) の y 座標をピクセルで表します。 _(Number)_
 
-- __width__: width, in pixels, of the screen element onto which to anchor the popover. _(Number)_
+- __width__: 画面上に表示するポップオーバー ( popover ) の幅をピクセルで表します。 _(Number)_
 
-- __height__: height, in pixels, of the screen element onto which to anchor the popover. _(Number)_
+- __height__: 画面上に表示するポップオーバー ( popover ) の高さをピクセルで表します。 _(Number)_
 
-- __arrowDir__: Direction the arrow on the popover should point.  Defined in `Camera.PopoverArrowDirection` _(Number)_
+- __arrowDir__: ポップオーバー ( popover ) の矢印の向きを表します。 `Camera.PopoverArrowDirection` で定義します。 _(Number)_
 
             Camera.PopoverArrowDirection = {
-                ARROW_UP : 1,        // matches iOS UIPopoverArrowDirection constants
+                ARROW_UP : 1,        // iOS の UIPopoverArrowDirection 定数と同様
                 ARROW_DOWN : 2,
                 ARROW_LEFT : 4,
                 ARROW_RIGHT : 8,
                 ARROW_ANY : 15
             };
 
-Note that the size of the popover may change to adjust to the
-direction of the arrow and orientation of the screen.  Make sure to
-account for orientation changes when specifying the anchor element
-location.
+注意 ： ポップオーバーのサイズは矢印の方向や画面の向きによって調節され、変化することがあります。位置を固定するとき、画面の向きの変化を考慮に入れてください。
 
 ## navigator.camera.cleanup
 
-Removes intermediate photos taken by the camera from temporary
-storage.
+一時的なストレージに保存されている処理前の写真を削除します。
 
     navigator.camera.cleanup( cameraSuccess, cameraError );
 
-### Description
+### 解説
 
-Removes intermediate image files that are kept in temporary storage
-after calling `camera.getPicture`. Applies only when the value of
-`Camera.sourceType` equals `Camera.PictureSourceType.CAMERA` and the
-`Camera.destinationType` equals `Camera.DestinationType.FILE_URI`.
+`camera.getPicture` を呼び出した後に取得し、一時的なストレージに保存されている処理前の画像ファイルを削除します。`Camera.sourceType` の値と `Camera.PictureSourceType.CAMERA` が等しく、また、 `Camera.destinationType` が `Camera.DestinationType.FILE_URI` と等しい場合のみ有効です。
 
-### Supported Platforms
+### サポート対象のプラットフォーム
 
 - iOS
 
-### Example
+### 例
 
     navigator.camera.cleanup(onSuccess, onFail);
 

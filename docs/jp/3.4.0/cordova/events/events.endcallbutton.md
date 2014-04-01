@@ -19,54 +19,53 @@
 
 # endcallbutton
 
-This event fires when the user presses the end call button.
+通話終了ボタンを押したときに、このイベントが発火します。
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-The event overrides the default end call behavior.
+このイベントはデフォルトの通話終了ボタンの挙動を上書きします。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-## Supported Platforms
+
+## サポート対象のプラットフォーム
 
 - BlackBerry 10
 
-## Quick Example
+## 例
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
 
     function onEndCallKeyDown() {
-        // Handle the end call button
-    }
+        // 通話終了ボタンを押したときの処理
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
     <html>
       <head>
-        <title>End Call Button Example</title>
+        <title>通話終了ボタンの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
-            // Register the event listener
+            // イベントリスナーの登録
             document.addEventListener("endcallbutton", onEndCallKeyDown, false);
         }
 
-        // Handle the end call button
+        // 通話終了ボタンの処理
         //
         function onEndCallKeyDown() {
         }

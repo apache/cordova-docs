@@ -24,11 +24,11 @@ to HTML5 Rocks' [FileSystem article](http://www.html5rocks.com/en/tutorials/file
 on the subject. For an overview of other storage options, refer to Cordova's
 [storage guide](http://cordova.apache.org/docs/en/edge/cordova_storage_storage.md.html).
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.file
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -39,7 +39,7 @@ on the subject. For an overview of other storage options, refer to Cordova's
 
 \* _These platforms do not support `FileReader.readAsArrayBuffer` nor `FileWriter.write(blob)`._
 
-## Android Quirks
+## Android 特有の動作
 
 ### Android Persistent storage location
 
@@ -81,7 +81,7 @@ unable to access their previously-stored files, depending on their device.
 If your application is new, or has never previously stored files in the
 persistent filesystem, then the "internal" setting is generally recommended.
 
-## BlackBerry Quirks
+## BlackBerry 特有の動作
 
 `DirectoryEntry.removeRecursively()` may fail with a `ControlledAccessException` in the following cases:
 
@@ -93,7 +93,7 @@ persistent filesystem, then the "internal" setting is generally recommended.
 
 > Solution: disconnect the USB cable from the device and run again.
 
-## iOS Quirks
+## iOS 特有の動作
 - `FileReader.readAsText(blob, encoding)`
   - The `encoding` parameter is not supported, and UTF-8 encoding is always in effect.
 

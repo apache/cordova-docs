@@ -24,11 +24,11 @@ This plugin provides an implementation of an old version of the
 It provides information about the device's cellular and
 wifi connection, and whether the device has an internet connection.
 
-## Installation
+## インストール
 
     cordova plugin add org.apache.cordova.network-information
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -40,9 +40,9 @@ wifi connection, and whether the device has an internet connection.
 
 # Connection
 
-> The `connection` object, exposed via `navigator.connection`,  provides information about the device's cellular and wifi connection.
+> `navigator.connection` 経由で提供される `connection` オブジェクトを使用して、デバイスの携帯電話ネットワークと wifi 接続情報にアクセスできます。
 
-## Properties
+## プロパティ
 
 - connection.type
 
@@ -59,10 +59,9 @@ wifi connection, and whether the device has an internet connection.
 
 ## connection.type
 
-This property offers a fast way to determine the device's network
-connection state, and type of connection.
+このプロパティを使用して、デバイスのネットワーク接続の状態および接続のタイプを確認します。
 
-### Quick Example
+### 例
 
     function checkConnection() {
         var networkState = navigator.connection.type;
@@ -83,108 +82,92 @@ connection state, and type of connection.
     checkConnection();
 
 
-### API Change
+### API の変更点
 
-Until Cordova 2.3.0, the `Connection` object was accessed via
-`navigator.network.connection`, after which it was changed to
-`navigator.connection` to match the W3C specification.  It's still
-available at its original location, but is deprecated and will
-eventually be removed.
+Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection` オブジェクトにアクセスしましたが、W3C の仕様に準拠するため、 `navigator.connection` 経由に変更しました。 `navigator.network.connection` は利用できますが、推奨しません。将来、削除する予定です。
 
-### iOS Quirks
+### iOS 特有の動作
 
-- iOS can't detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
+- iOS では、携帯ネットワーク接続のタイプを特定できません。
+    - すべての携帯ネットワークデータにおいて、 `navigator.connection.type` を `Connection.CELL` に設定します。
 
-### Windows Phone Quirks
+### Windows Phone 特有の動作
 
-- When running in the emulator, always detects `navigator.connection.type` as `Connection.UNKNOWN`.
+- エミュレーターで実行しているとき、 `navigator.connection.type` を `Connection.UNKNOWN` として常に認識します。 
 
-- Windows Phone can't detect the type of cellular network connection.
-    - `navigator.connection.type` is set to `Connection.CELL` for all cellular data.
+- Windows Phone では、ネットワーク接続のタイプを認識することが出来ません。
+    - すべての携帯ネットワークデータにおいて、 `navigator.connection.type` を `Connection.CELL` に設定します。
 
-### Tizen Quirks
+### Tizen 特有の動作
 
-- Tizen can only detect a WiFi or cellular connection.
-    - `navigator.connection.type` is set to `Connection.CELL_2G` for all cellular data.
+- Tizen では、WiFi または 携帯電話ネットワーク接続のみ認識できます。
+    - すべての携帯ネットワークデータにおいて、 `navigator.connection.type` を `Connection.CELL_2G` に設定します。
 
-# Network-related Events
+# ネットワーク関連のイベント
 
 ## offline
 
-The event fires when an application goes offline, and the device is
-not connected to the Internet.
+アプリがオフラインになったときに、このイベントが発火して、インターネット接続が切れます。
 
     document.addEventListener("offline", yourCallbackFunction, false);
 
-### Details
+### 詳細
 
-The `offline` event fires when a previously connected device loses a
-network connection so that an application can no longer access the
-Internet.  It relies on the same information as the Connection API,
-and fires when the `connection.type` changes from `NONE` to any other
-value.
+デバイスのネットワーク接続が切れたときに、 `offline` イベントが発火します。ネットワーク接続が切れているため、アプリは、インターネットへアクセスできません。Connection API と同じ情報を使用して、 `connection.type` が `NONE` から他の値に変わったときに発火します。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-### Quick Example
+### 例
 
     document.addEventListener("offline", onOffline, false);
 
     function onOffline() {
-        // Handle the offline event
+        // offline イベントの処理
     }
 
 
-### iOS Quirks
+### iOS 特有の動作
 
-During initial startup, the first offline event (if applicable) takes at least a second to fire.
+初回起動 ( initial startup ) 中は、最初の offline イベント ( 発火の条件が揃った場合 ) が発火するまで、最低 1 秒かかります。
 
-### Windows Phone 7 Quirks
+### Windows Phone 7 特有の動作
 
-When running in the Emulator, the `connection.status` is always unknown, so this event does _not_ fire.
+エミュレーターで実行するとき、 `connection.status` は、常に、unknown になっています。よって、このイベントは、 _発火しません_ 。
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
-The Emulator reports the connection type as `Cellular`, which does not change, so the event does _not_ fire.
+エミュレーターを使用すると、常に、接続タイプ ( connection type ) を `Cellular` と認識します。 よって、このイベントは、 _発火しません_ 。
 
 ## online
 
-This event fires when an application goes online, and the device
-becomes connected to the Internet.
+アプリが、オンラインになったとき、このイベントが発火し、インターネットに接続します。
 
     document.addEventListener("online", yourCallbackFunction, false);
 
-### Details
+### 詳細
 
-The `online` event fires when a previously unconnected device receives
-a network connection to allow an application access to the Internet.
-It relies on the same information as the Connection API, and fires
-when the value of `connection.type` becomes `NONE`.
+アプリからのインターネットへの接続を行うため、ネットワーク接続を行っていないデバイスがネットワーク接続を行うとき、 `online` イベントが発火します。Connection API と同じ情報を使用して、 `connection.type` が `NONE` に変わったときに発火します。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-### Quick Example
+### 例
 
     document.addEventListener("online", onOnline, false);
 
     function onOnline() {
-        // Handle the online event
+        // online イベントの処理
     }
 
 
-### iOS Quirks
+### iOS 特有の動作
 
-During initial startup, the first `online` event (if applicable) takes
-at least a second to fire, prior to which `connection.type` is
-`UNKNOWN`.
+初回起動 ( initial startup ) 中は、最初の online イベント ( 発火の条件が揃った場合 ) が発火するまで、最低 1 秒かかります。また、このイベントは、 
+`connection.type` が `UNKNOWN` と認識される前に発火します。
 
-### Windows Phone 7 Quirks
+### Windows Phone 7 特有の動作
 
-When running in the Emulator, the `connection.status` is always unknown, so this event does _not_ fire.
+エミュレーターで実行するとき、 `connection.status` は、常に、unknown になっています。よって、このイベントは、 _発火しません_ 。
 
-### Windows Phone 8 Quirks
+### Windows Phone 8 特有の動作
 
-The Emulator reports the connection type as `Cellular`, which does not change, so events does _not_ fire.
+エミュレーターを使用すると、常に、接続タイプ ( connection type ) を `Cellular` と認識します。 よって、このイベントは、 _発火しません_ 。

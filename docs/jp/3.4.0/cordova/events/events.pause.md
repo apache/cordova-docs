@@ -19,20 +19,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # pause
 
-The event fires when an application is put into the background.
+アプリケーションがバックグラウンド処理に切り替わったときに、このイベントが発火します。
 
     document.addEventListener("pause", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-The `pause` event fires when the native platform puts the application
-into the background, typically when the user switches to a different
-application.
+ネーティブプラットフォームが、アプリをバックグラウンド処理に切り替えたときに、 `pause` が発火します。典型的な例では、ユーザが他のアプリに切り替えたときです。
 
-Applications typically should use `document.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+`deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -41,37 +38,37 @@ attach an event listener once the `deviceready` event fires.
 - Windows Phone 7 and 8
 - Windows 8
 
-## Quick Example
+## 例
 
     document.addEventListener("pause", onPause, false);
 
     function onPause() {
-        // Handle the pause event
+        // pause イベントの処理
     }
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Pause Example</title>
+        <title>Pause の使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
             document.addEventListener("pause", onPause, false);
         }
 
-        // Handle the pause event
+        // pause イベントの処理
         //
         function onPause() {
         }
@@ -82,12 +79,9 @@ attach an event listener once the `deviceready` event fires.
       </body>
     </html>
 
-## iOS Quirks
+## iOS 特有の動作
 
-In the `pause` handler, any calls to the Cordova API or to native
-plugins that go through Objective-C do not work, along with any
-interactive calls, such as alerts or `console.log()`. They are only
-processed when the app resumes, on the next run loop.
+`pause` ハンドラー内では、 Objective-C を利用するネイティブ プラグインの呼び出し、または、Cordova API の呼び出しを行うことはできません。同様に alerts または `console.log` のような、インタラクティブな呼び出しも行うことはできません。これらの呼び出しは、アプリ再開直後のランループ ( run loop ) で実行されます。
 
 The iOS-specific `resign` event is available as an alternative to
 `pause`, and detects when users enable the __Lock__ button to lock the
@@ -99,3 +93,7 @@ apps to remain running when locked under iOS 5, disable the app's
 multi-tasking by setting
 [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)
 to `YES`. To run when locked on iOS 4, this setting does not matter.
+
+
+`pause` イベントの代替として使用できる、iOS 固有の `resign` イベントがあります。このイベントでは、フォアグラウンド ( foreground ) で実行中のアプリに、ユーザがデバイスにロックをかけたこと ( __ロック__ ボタンを押した状態 ) を検知できます。アプリ ( およびデバイス ) のマルチタスク処理が有効になっている場合には、後の処理で `pause` イベント 1 つと組み合わせることもできます。ただし、iOS 5 のみが対象となります。実行結果として、iOS 5 であれば、ロックされたアプリ ( マルチタスク処理が有効となっていること ) は、バックグラウンド処理に切り替わります。iOS 5 で、ロックがかかった状態でも処理を継続させるためには、 [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) を `YES` に設定して、アプリのマルチタスク処理を無効にします。iOS 4 の場合、ロックされた状態での処理の継続は、この設定では行えません。
+

@@ -19,57 +19,53 @@
 
 # backbutton
 
-The event fires when the user presses the back button.
+戻るボタンを押したときに、このイベントが発火します。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
 
-## Details
+## 詳細
 
-To override the default back-button behavior, register an event
-listener for the `backbutton` event, typically by calling
-`document.addEventListener` once you receive the `deviceready` event.
-It is no longer necessary to call any other method to override the
-back-button behavior.
+デフォルトの戻るボタンの挙動を上書きしたい場合、 `backbutton` イベントにイベントリスナーを登録して下さい。通常は、 `deviceready` イベントを受け取った後、 `document.addEventListener` を呼び出し、登録を行います。戻るボタンの挙動を上書きするために、他のメソッドを呼び出す必要はありません。
 
-## Supported Platforms
+## サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
 - BlackBerry 10
 - Windows Phone 7 and 8
 
-## Quick Example
+## 例
 
     document.addEventListener("backbutton", onBackKeyDown, false);
 
     function onBackKeyDown() {
-        // Handle the back button
+        // 戻るボタンを押したときの処理
     }
 
-## Full Example
+## 詳細な例
 
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Back Button Example</title>
+        <title>戻るボタンの使用例</title>
 
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Wait for device API libraries to load
+        // デバイス API ライブラリのロード処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);
         }
 
-        // device APIs are available
+        // デバイス API 群の準備完了
         //
         function onDeviceReady() {
-            // Register the event listener
+            // イベントリスナーの登録
             document.addEventListener("backbutton", onBackKeyDown, false);
         }
 
-        // Handle the back button
+        // 戻るボタンの処理
         //
         function onBackKeyDown() {
         }
