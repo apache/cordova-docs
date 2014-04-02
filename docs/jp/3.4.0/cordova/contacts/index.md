@@ -1,4 +1,4 @@
-<!---
+﻿<!---
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
     distributed with this work for additional information
@@ -19,24 +19,9 @@
 
 # org.apache.cordova.contacts
 
-Provides access to the device contacts database.
+このプラグインを使用して、デバイスの連絡先データベース ( contacts database ) にアクセスできます。
 
-__WARNING__: Collection and use of contact data raises
-important privacy issues.  Your app's privacy policy should discuss
-how the app uses contact data and whether it is shared with any other
-parties.  Contact information is considered sensitive because it
-reveals the people with whom a person communicates.  Therefore, in
-addition to the app's privacy policy, you should strongly consider
-providing a just-in-time notice before the app accesses or uses
-contact data, if the device operating system doesn't do so
-already. That notice should provide the same information noted above,
-as well as obtaining the user's permission (e.g., by presenting
-choices for __OK__ and __No Thanks__).  Note that some app
-marketplaces may require the app to provide a just-in-time notice and
-obtain the user's permission before accessing contact data.  A
-clear and easy-to-understand user experience surrounding the use of
-contact data helps avoid user confusion and perceived misuse of
-contact data.  For more information, please see the Privacy Guide.
+__注意__ : 連絡先データの取得・利用には、個人情報保護の観点から、細心の注意が必要です。連絡先データの取り扱い方法と第三者への情報提供に関しては、アプリの個人情報の取り扱いに関するポリシーの中で議論すべき問題です。個人情報の中でもとりわけ連絡先情報は、交友関係等の個人のプライバシーの侵害に深く関わることから、その取り扱いには特に注意が求められます。そのため、アプリのプライバシーに関するポリシーの策定に加え、アプリが連絡先にアクセスまたは利用する際には、その直前にユーザから許諾を得る必要があります。デバイスのオペレーティングシステムがこの許諾の要請を行ってない場合には、改善する必要があります。また、許諾の要請を行う際には、必ず、個人情報の取り扱いに関するポリシーのユーザへの開示と使用方法に関するユーザの意思表示を求める必要があります ( __許可する__ 、または、 __許可しない__ のように、明示的に判断できる必要があります ) 。また、ユーザの情報へアクセスを行う前に、ユーザの許諾を得ることを条件とする、アプリのマーケットプレースもいくつか存在します。連絡先データの取り扱いの説明に関しては、ユーザの不安や困惑を取り除くため、内容を明快に理解できるよう、考慮が求められます。詳細な情報に関しては、『 Privacy Guide 』 をご覧ください。
 
 ## インストール
 
@@ -44,11 +29,11 @@ contact data.  For more information, please see the Privacy Guide.
 
 ### Firefox OS 特有の動作
 
-Create __www/manifest.webapp__ as described in 
-[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
-Add relevant permisions.
-There is also a need to change the webapp type to "privileged"  - [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#type).
-__WARNING__: All privileged apps enforce [Content Security Policy](https://developer.mozilla.org/en-US/Apps/CSP) which forbids inline script. Initialize your application in another way.
+[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) に記載された内容に沿って、 __www/manifest.webapp__ を作成してください。
+関連する権限を追加してください。
+また、webapp の type 項目を "privileged" に変更する必要があります。 [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#type) を参照してください。
+
+__注意__: privileged を取得したすべてのアプリは、 [Content Security Policy](https://developer.mozilla.org/en-US/Apps/CSP) を遵守しなければいけません。ここでは、インラインスクリプト ( inline script ) が禁止されています。アプリを起動する際には、別の方法が必要です。
 
 	"type": "privileged",
 	"permissions": {
@@ -77,10 +62,9 @@ __WARNING__: All privileged apps enforce [Content Security Policy](https://devel
 
 ## navigator.contacts.create
 
-The `navigator.contacts.create` method is synchronous, and returns a new `Contact` object.
+`navigator.contacts.create` メソッドを使用して、新しい `Contact` オブジェクトを同期的に作成します。
 
-This method does not retain the Contact object in the device contacts
-database, for which you need to invoke the `Contact.save` method.
+このメソッドで作成した Contact オブジェクトは、デバイスの連絡先データベースに保存されません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` メソッドを使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -96,37 +80,25 @@ database, for which you need to invoke the `Contact.save` method.
 
 ## navigator.contacts.find
 
-The `navigator.contacts.find` method executes asynchronously, querying the
-device contacts database and returning an array of `Contact` objects.
-The resulting objects are passed to the `contactSuccess` callback
-function specified by the __contactSuccess__ parameter.
+`navigator.contacts.find` メソッドを非同期で実行して、デバイスの連絡先データベースの検索、 `Contact` オブジェクト群の配列の取得を行います。 __contactSuccess__ パラメータで指定した `contactSuccess` コールバック関数へ、結果として返されたオブジェクトを引き渡します。
 
-The __contactFields__ parameter specifies the fields to be used as a
-search qualifier, and only those results are passed to the
-__contactSuccess__ callback function.  A zero-length __contactFields__
-parameter is invalid and results in
-`ContactError.INVALID_ARGUMENT_ERROR`. A __contactFields__ value of
-`"*"` returns all contact fields.
+__contactFields__ パラメータを使用して、検索時に使用する項目を指定します。また、ここから得た検索結果だけを __contactSuccess__ コールバック関数へ引き渡します。 __contactFields__ パラメータに空文字列 ( ゼロレングス/zero-length ) を設定した場合、無効となり、結果として、 `ContactError.INVALID_ARGUMENT_ERROR` となります。 __contactFields__ の値を `"*"` に設定した場合、連絡先に関するすべての項目を返します。
 
-The __contactFindOptions.filter__ string can be used as a search
-filter when querying the contacts database.  If provided, a
-case-insensitive, partial value match is applied to each field
-specified in the __contactFields__ parameter.  If there's a match for
-_any_ of the specified fields, the contact is returned.
+__contactFindOptions.filter__ 文字列を使用して、連絡先データベースの検索時に絞り込みを行います。この値を設定した場合、 __contactFields__ で指定した項目に対して、絞り込み検索 ( 大・小文字を区別しない、部分一致 ) をかけます。指定した項目内で一致する _内容がある_ 場合には、その連絡先を返します。
 
 ### パラメータ
 
-- __contactFields__: Contact fields to use as a search qualifier. The resulting `Contact` object only features values for these fields. _(DOMString[])_ [Required]
+- __contactFields__: 検索時に使用する連絡先の項目。検索結果として返された `Contact` オブジェクトには、ここで指定した項目の値だけが格納されています。 _(DOMString[])_ [必須]
 
-- __contactSuccess__: Success callback function invoked with the array of Contact objects returned from the database. [Required]
+- __contactSuccess__: データベースから取得した Contact オブジェクト群の配列を使用して呼び出す、Success コールバック関数。 [必須]
 
-- __contactError__: Error callback function, invoked when an error occurs. [Optional]
+- __contactError__: エラー発生時に呼び出す Error コールバック関数。 [任意]
 
-- __contactFindOptions__: Search options to filter navigator.contacts. [Optional] Keys include:
+- __contactFindOptions__: navigator.contacts で使用する絞り込み検索オプション。 [任意] 。 使用するキーを以下に示します。
 
-    - __filter__: The search string used to find navigator.contacts. _(DOMString)_ (Default: `""`)
+    - __filter__: navigator.contacts の find で使用する検索文字列 _(DOMString)_ ( デフォルト : `""` )
 
-    - __multiple__: Determines if the find operation returns multiple navigator.contacts. _(Boolean)_ (Default: `false`)
+    - __multiple__: navigator.contacts　の find の検索結果を複数にするか指定します。 _(Boolean)_ ( デフォルト : `false` )
 
 ### サポート対象のプラットフォーム
 
@@ -147,7 +119,7 @@ _any_ of the specified fields, the contact is returned.
         alert('onError!');
     };
 
-    // find all contacts with 'Bob' in any name field
+    // 名前の項目に「Bob」と入力されている連絡先をすべて検索
     var options      = new ContactFindOptions();
     options.filter   = "Bob";
     options.multiple = true;
@@ -157,53 +129,48 @@ _any_ of the specified fields, the contact is returned.
 
 ## Contact
 
-The `Contact` object represents a user's contact.  Contacts can be
-created, stored, or removed from the device contacts database.
-Contacts can also be retrieved (individually or in bulk) from the
-database by invoking the `navigator.contacts.find` method.
+`Contact` オブジェクトは、ユーザの連絡先情報を格納します。デバイスの連絡先データベースから、Contacts の作成・格納・削除を行えます。
+また、 `navigator.contacts.find` メソッドを呼び出すことにより、データベースから、単数または複数の Contact を取得できます。
 
-__NOTE__: Not all of the contact fields listed above are supported on
-every device platform.  Please check each platform's _Quirks_ section
-for details.
-
+__注意__ : 上記のすべての連絡先関連の項目が、すべてのデバイスのプラットフォームでサポートされているわけではありません。各プラットフォームの動作の詳細に関しては、各 _プラットフォーム特有の動作_ の記載内容をご確認ください。
 
 ### プロパティ
 
-- __id__: A globally unique identifier. _(DOMString)_
+- __id__: グローバルな識別子 _(DOMString)_
 
-- __displayName__: The name of this Contact, suitable for display to end users. _(DOMString)_
+- __displayName__: 各 Contact の名称。ユーザに表示する際に利用できます。 _(DOMString)_
 
-- __name__: An object containing all components of a persons name. _(ContactName)_
+- __name__: 個人名に関するすべての要素を格納するオブジェクト _(ContactName)_
 
-- __nickname__: A casual name by which to address the contact. _(DOMString)_
+- __nickname__: 連絡先に使用するニックネーム _(DOMString)_
 
-- __phoneNumbers__: An array of all the contact's phone numbers. _(ContactField[])_
+- __phoneNumbers__: 連絡先に関するすべての電話番号の配列 _(ContactField[])_
 
-- __emails__: An array of all the contact's email addresses. _(ContactField[])_
+- __emails__: 連絡先に関するすべてのメールアドレスの配列 _(ContactField[])_
 
-- __addresses__: An array of all the contact's addresses. _(ContactAddress[])_
+- __addresses__: 連絡先に関するすべての住所の配列 _(ContactAddress[])_
 
-- __ims__: An array of all the contact's IM addresses. _(ContactField[])_
+- __ims__: 連絡先に関するすべての IM　 ( インスタントメッセンジャー ) アドレスの配列 _(ContactField[])_
 
-- __organizations__: An array of all the contact's organizations. _(ContactOrganization[])_
+- __organizations__: 連絡先に関するすべての組織名の配列 _(ContactOrganization[])_
 
-- __birthday__: The birthday of the contact. _(Date)_
+- __birthday__: 連絡先の誕生日 _(Date)_
 
-- __note__: A note about the contact. _(DOMString)_
+- __note__: 連絡先のメモ _(DOMString)_
 
-- __photos__: An array of the contact's photos. _(ContactField[])_
+- __photos__: 連絡先の写真の配列 _(ContactField[])_
 
-- __categories__:  An array of all the user-defined categories associated with the contact. _(ContactField[])_
+- __categories__: 連絡先に関する、すべてのユーザ定義のカテゴリーの配列 _(ContactField[])_
 
-- __urls__:  An array of web pages associated with the contact. _(ContactField[])_
+- __urls__: 連絡先に関するウェブページの配列 _(ContactField[])_
 
 ### メソッド
 
-- __clone__: Returns a new `Contact` object that is a deep copy of the calling object, with the `id` property set to `null`.
+- __clone__: 呼び出したオブジェクトのディープコピー ( deep copy ) を行い、新しい `Contact` オブジェクトとして返します。 `id` プロパティーは `null` に設定されます。
 
-- __remove__: Removes the contact from the device contacts database, otherwise executes an error callback with a `ContactError` object.
+- __remove__: 連絡先データベースからオブジェクトを削除します。 削除が失敗した場合は `ContactError` オブジェクトを使用して、error コールバック関数を呼び出します。
 
-- __save__: Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same __id__ already exists.
+- __save__: 新しい連絡先を連絡先データベースに保存し、 既存の __id__ の場合には連絡先データベースを更新します。
 
 ### サポート対象のプラットフォーム
 
@@ -225,23 +192,23 @@ for details.
         alert("Error = " + contactError.code);
     };
 
-    // create a new contact object
+    // 新しい contact オブジェクトを作成
     var contact = navigator.contacts.create();
     contact.displayName = "Plumber";
     contact.nickname = "Plumber";            // specify both to support all devices
 
-    // populate some fields
+    // 項目の作成
     var name = new ContactName();
     name.givenName = "Jane";
     name.familyName = "Doe";
     contact.name = name;
 
-    // save to device
+    // デバイスへ保存
     contact.save(onSuccess,onError);
 
 ### 複写 ( Clone ) の例
 
-        // clone the contact object
+        // contact オブジェクトをコピー
         var clone = contact.clone();
         clone.name.givenName = "John";
         console.log("Original contact name = " + contact.name.givenName);
@@ -257,104 +224,101 @@ for details.
         alert("Error = " + contactError.code);
     };
 
-        // remove the contact from the device
+        // デバイスから連絡先を削除
         contact.remove(onSuccess,onError);
 
 
 ### Android 2.X 特有の動作
 
-- __categories__:  Not supported on Android 2.X devices, returning `null`.
+- __categories__:  Android 2.X 搭載のデバイスでは、このプロパティーをサポートしません。 `null` を返します。
 
 ### BlackBerry 10 特有の動作
 
-- __id__: Supported.  Assigned by the device when saving the contact.
+- __id__: サポートします。連絡先を保存するとき、デバイスが割り当てます。
 
-- __displayName__: Supported.  Stored in BlackBerry __user1__ field.
+- __displayName__: サポートします。BlackBerry の __user1__ 項目に保存します。
 
-- __nickname__: Not supported, returning `null`.
+- __nickname__: サポートしません。 `null` を返します。
 
-- __phoneNumbers__: Partially supported.  Phone numbers are stored in BlackBerry fields __homePhone1__ and __homePhone2__ if _type_ is 'home', __workPhone1__ and __workPhone2__ if _type_ is 'work', __mobilePhone__ if _type_ is 'mobile', __faxPhone__ if _type_ is 'fax', __pagerPhone__ if _type_ is 'pager', and __otherPhone__ if _type_ is none of the above.
+- __phoneNumbers__: 部分的にサポートします。BlackBerry では、電話番号を保存する項目は、 _type_ が 'home' の場合には __homePhone1__ と __homePhone2__ に、 'work' の場合には __workPhone1__ と __workPhone2__ に、 'mobile' の場合には __mobilePhone__ に、 'fax' の場合には __faxPhone__ に、 'pager' の場合には __pagerPhone__ に、その他の場合には __otherPhone__ に保存します。
 
-- __emails__: Partially supported.  The first three email addresses are stored in the BlackBerry __email1__, __email2__, and __email3__ fields, respectively.
+- __emails__: 部分的にサポートします。最初の 3 つのメールアドレスを、BlackBerry の __email1__ 、 __email2__ 、 __email3__ 項目にそれぞれ保存します。
 
-- __addresses__: Partially supported.  The first and second addresses are stored in the BlackBerry __homeAddress__ and __workAddress__ fields, respectively.
+- __addresses__: 部分的にサポートします。最初と 2 番目のアドレスを、BlackBerry の __homeAddress__ と __workAddress__ 項目のそれぞれに保存します。
 
-- __ims__: Not supported, returning `null`.
+- __ims__: サポートしません。 `null` を返します。
 
-- __organizations__: Partially supported.  The __name__ and __title__ of the first organization are stored in the BlackBerry __company__ and __title__ fields, respectively.
+- __organizations__: 部分的にサポートします。最初の組織の__name__ と __title__ を、BlackBerry の __company__ と __title__ 項目にそれぞれ保存します。
 
-- __photos__: Partially supported.  A single thumbnail-sized photo is supported.  To set a contact's photo, pass in a either a base64-encoded image, or a URL pointing to the image.  The image is scaled down before saving to the BlackBerry contacts database.   The contact photo is returned as a base64-encoded image.
+- __photos__: 部分的にサポートします。サムネイルサイズの写真のみサポートします。連絡先の写真を登録する場合、 Base64 形式のイメージか、イメージの場所を指す URL を引き渡します。BlackBerry の連絡先データベースに保存する前に写真の縮小を行います。連絡先の写真は Base64 形式のイメージとして返されます。
 
-- __categories__:  Partially supported.  Only _Business_ and _Personal_ categories are supported.
+- __categories__: 部分的にサポートします。 _Business_ と _Personal_ カテゴリーのみサポートします。
 
-- __urls__:  Partially supported. The first URL is stored in BlackBerry __webpage__ field.
+- __urls__: 部分的にサポートします。最初の URL を __webpage__ 項目に保存します。
 
 ### FirefoxOS 特有の動作
 
-- __categories__: Partially supported. Fields __pref__ and __type__ are returning `null`
+- __categories__: 部分的にサポートします。 __pref__ と __type__ 項目は、 `null` を返します。
 
-- __ims__: Not supported
+- __ims__: サポートしません。
 
-- __photos__: Not supported
+- __photos__: サポートしません。
 
 
 ### iOS 特有の動作
 
-- __displayName__: Not supported on iOS, returning `null` unless there is no `ContactName` specified, in which case it returns the composite name, __nickname__ or `""`, respectively.
+- __displayName__: iOS ではサポートしません。 `ContactName` を指定しない場合、 `null` を返します。この場合、合成した名前 ( composite name )、 __nickname__ 、 `""` のいづれかを返します。
 
-- __birthday__: Must be input as a JavaScript `Date` object, the same way it is returned.
+- __birthday__: JavaScript の `Date` オブジェクトとして入力をしなければなりません。また、返ってくるときも、同オブジェクトと同じように返ってきます。
 
-- __photos__: Returns a File URL to the image, which is stored in the application's temporary directory.  Contents of the temporary directory are removed when the application exits.
+- __photos__: アプリの temporary ダイレクトリに保存されたイメージを指し示す File URL を返します。アプリを閉じたときに、temporary ダイレクトリに残るコンテンツは削除されます。
 
-- __categories__:  This property is currently not supported, returning `null`.
+- __categories__: このプロパティは、現在、サポートしません。 `null` を返します。
 
 ### Windows Phone 7 と 8 特有の動作
 
-- __displayName__: When creating a contact, the value provided for the display name parameter differs from the display name retrieved when finding the contact.
+- __displayName__: 連絡先の作成をするときに display name パラメータに設定した値と、連絡先の検索を行って取得した display name は異なります。
 
-- __urls__: When creating a contact, users can input and save more than one web address, but only one is available when searching the contact.
+- __urls__: 連絡先の作成時には、複数の Web アドレスを保存できますが、連絡先の検索時には、1 つのアドレスのみ使用できます。
 
-- __phoneNumbers__: The _pref_ option is not supported. The _type_ is not supported in a _find_ operation. Only one `phoneNumber` is allowed for each _type_.
+- __phoneNumbers__: _pref_ オプションをサポートしません。 _find_ 処理では _type_ をサポートしません。各 _type_ に対して、1 つの `phoneNumber` のみ登録できます。
 
-- __emails__: The _pref_ option is not supported. Home and personal references same email entry. Only one entry is allowed for each _type_.
+- __emails__: _pref_ オプションをサポートしません。home と personal では、同じメールの入力値を参照します。各 _type_ に対して、1 つ入力値のみ登録できます。
 
-- __addresses__: Supports only work, and home/personal _type_. The home and personal _type_ reference the same address entry. Only one entry is allowed for each _type_.
+- __addresses__: work、 ならびに、 home または personal の _type_ のみサポートします。home と personal の _type_ では、同じ住所の入力値を参照します。各 _type_ に対して、1 つ入力値のみ登録できます。
 
-- __organizations__: Only one is allowed, and does not support the _pref_, _type_, and _department_ attributes.
+- __organizations__: 1 つのみサポートします。 _pref_ 、 _type_ 、 _department_ の属性はサポートしません。
 
-- __note__: Not supported, returning `null`.
+- __note__: サポートしません。 `null` を返します。
 
-- __ims__: Not supported, returning `null`.
+- __ims__: サポートしません。 `null` を返します。
 
-- __birthdays__: Not supported, returning `null`.
+- __birthdays__: サポートしません。 `null` を返します。
 
-- __categories__: Not supported, returning `null`.
+- __categories__: サポートしません。 `null` を返します。
 
 
 ## ContactAddress
 
-The `ContactAddress` object stores the properties of a single address
-of a contact.  A `Contact` object may include more than one address in
-a `ContactAddress[]` array.
-
+`ContactAddress` オブジェクトを使用して、1 つの連絡先の 1 つのアドレスのプロパティ群を格納します。 `Contact` オブジェクトでは、 `ContactAddress[]` の配列を使用して、複数の住所を格納することができます。
 
 ### プロパティ
 
-- __pref__: Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
+- __pref__: 最優先する値を `ContactAddress` が格納している場合、 `true` に設定します。 _(boolean)_
 
-- __type__: A string indicating what type of field this is, _home_ for example. _(DOMString)_
+- __type__: 項目のタイプを示す文字列。例 ： _home_ _(DOMString)_
 
-- __formatted__: The full address formatted for display. _(DOMString)_
+- __formatted__: 表示用にフォーマットした住所 _(DOMString)_
 
-- __streetAddress__: The full street address. _(DOMString)_
+- __streetAddress__: 番地 _(DOMString)_
 
-- __locality__: The city or locality. _(DOMString)_
+- __locality__: 市区町村 _(DOMString)_
 
-- __region__: The state or region. _(DOMString)_
+- __region__: 都道府県 _(DOMString)_
 
-- __postalCode__: The zip code or postal code. _(DOMString)_
+- __postalCode__: 郵便番号 _(DOMString)_
 
-- __country__: The country name. _(DOMString)_
+- __country__: 国 _(DOMString)_
 
 ### サポート対象のプラットフォーム
 
@@ -368,7 +332,7 @@ a `ContactAddress[]` array.
 
 ### 例
 
-    // display the address information for all contacts
+    // すべての連絡先の住所情報を表示
 
     function onSuccess(contacts) {
         for (var i = 0; i < navigator.contacts.length; i++) {
@@ -389,7 +353,7 @@ a `ContactAddress[]` array.
         alert('onError!');
     };
 
-    // find all contacts
+    // すべての連絡先を検索
     var options = new ContactFindOptions();
     options.filter = "";
     var filter = ["displayName", "addresses"];
@@ -397,47 +361,46 @@ a `ContactAddress[]` array.
 
 ### Android 2.X 特有の動作
 
-- __pref__: Not supported, returning `false` on Android 2.X devices.
+- __pref__: Android 2.X 搭載のデバイスでは、サポートしておらず、 `false` を返します。
 
 ### BlackBerry 10 特有の動作
 
-- __pref__: Not supported on BlackBerry devices, returning `false`.
+- __pref__: BlackBerry 搭載のデバイスではサポートしておらず、 `false` を返します。
 
-- __type__: Partially supported.  Only one each of _Work_ and _Home_ type addresses can be stored per contact.
+- __type__: 部分的にサポートします。 1 つの連絡先につき、 _Work_ と _Home_ タイプのそれぞれに 1 つだけ住所を保存できます。
 
-- __formatted__: Partially supported.  Returns a concatenation of all BlackBerry address fields.
+- __formatted__: 部分的にサポートします。BlackBerry の住所関連の項目をすべて連結して返します。
 
-- __streetAddress__: Supported.  Returns a concatenation of BlackBerry __address1__ and __address2__ address fields.
+- __streetAddress__: サポートします。BlackBerry の __address1__ と __address2__ の住所項目を連結して返します。
 
-- __locality__: Supported.  Stored in BlackBerry __city__ address field.
+- __locality__: サポートします。BlackBerry の __city__ の住所項目に保存します。
 
-- __region__: Supported.  Stored in BlackBerry __stateProvince__ address field.
+- __region__: サポートします。BlackBerry の __stateProvince__ の住所項目に保存します。
 
-- __postalCode__: Supported.  Stored in BlackBerry __zipPostal__ address field.
+- __postalCode__: サポートします。BlackBerry の __zipPostal__ の住所項目に保存します。
 
-- __country__: Supported.
+- __country__: サポートします。
 
 ### FirefoxOS 特有の動作
 
-- __formatted__: Currently not supported
+- __formatted__: 現在、サポートしません。
 
 ### iOS 特有の動作
 
-- __pref__: Not supported on iOS devices, returning `false`.
+- __pref__: iOS ではサポートしておらず、 `false` を返します。
 
-- __formatted__: Currently not supported.
+- __formatted__: 現在、サポートしません。
 
 
 ## ContactError
 
-The `ContactError` object is returned to the user through the
-`contactError` callback function when an error occurs.
+エラーの発生時に、 `ContactError` オブジェクトを、 `contactError` コールバック関数が返します。
 
 ### プロパティ
 
-- __code__: One of the predefined error codes listed below.
+- __code__: 事前に定義した以下のエラーコードのうちの 1 つ
 
-### Constants
+### 定数
 
 - `ContactError.UNKNOWN_ERROR`
 - `ContactError.INVALID_ARGUMENT_ERROR`
@@ -450,29 +413,18 @@ The `ContactError` object is returned to the user through the
 
 ## ContactField
 
-The `ContactField` object is a reusable component that represents
-contact fields generically.  Each `ContactField` object contains a
-`value`, `type`, and `pref` property.  A `Contact` object stores
-several properties in `ContactField[]` arrays, such as phone numbers
-and email addresses.
+`ContactField` オブジェクトは、連絡先の各項目を汎用的に格納するための再利用可能なコンポーネントです。各 `ContactField` オブジェクトには、 `value` 、 `type` 、 `pref` プロパティを 1 つずつ格納します。 `Contact` オブジェクトは、電話番号・メールアドレスのような複数のプロパティを、 `ContactField[]` 配列に格納します。
 
-In most instances, there are no pre-determined values for a
-`ContactField` object's __type__ attribute.  For example, a phone
-number can specify __type__ values of _home_, _work_, _mobile_,
-_iPhone_, or any other value that is supported by a particular device
-platform's contact database.  However, for the `Contact` __photos__
-field, the __type__ field indicates the format of the returned image:
-__url__ when the __value__ attribute contains a URL to the photo
-image, or _base64_ when the __value__ contains a base64-encoded image
-string.
+`ContactField` オブジェクトの __type__ 属性に関しては、多くの場合、事前に定義した値はありません。たとえば、電話番号に関しては、__type__ に設定する値として、 _home_ 、 _work_ 、 _mobile_ 、 
+_iPhone_ 、または、特定のデバイスのプラットフォームの連絡先データベースがサポートしているその他の値を指定できます。ただし、`Contact` の __photos__ 項目に関しては、 __type__ 項目を使用して、返すイメージの形式を示します。 __value__ 属性が、写真のイメージの URL を格納している場合には __url__ を、Base64 形式のイメージの文字列を格納している場合には、 _base64_ が入ります。
 
 ### プロパティ
 
-- __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)_
+- __type__: 項目のタイプを示す文字列。例 ： _home_ _(DOMString)_
 
-- __value__: The value of the field, such as a phone number or email address. _(DOMString)_
+- __value__: 項目の値。例 ： 電話番号またはメールアドレス _(DOMString)_
 
-- __pref__: Set to `true` if this `ContactField` contains the user's preferred value. _(boolean)_
+- __pref__: 最優先する値を `ContactField` が格納している場合、 `true` に設定します。 _(boolean)_
 
 ### サポート対象のプラットフォーム
 
@@ -486,53 +438,53 @@ string.
 
 ### 例
 
-        // create a new contact
+        // 新しい連絡先を作成
         var contact = navigator.contacts.create();
 
-        // store contact phone numbers in ContactField[]
+        // ContactField[] に連絡先の電話番号を保存
         var phoneNumbers = [];
         phoneNumbers[0] = new ContactField('work', '212-555-1234', false);
         phoneNumbers[1] = new ContactField('mobile', '917-555-5432', true); // preferred number
         phoneNumbers[2] = new ContactField('home', '203-555-7890', false);
         contact.phoneNumbers = phoneNumbers;
 
-        // save the contact
+        // 連絡先を保存
         contact.save();
 
 ### Android 特有の動作
 
-- __pref__: Not supported, returning `false`.
+- __pref__: サポートしません。 `false` を返します。
 
 ### BlackBerry 10 特有の動作
 
-- __type__: Partially supported.  Used for phone numbers.
+- __type__: 部分的にサポートします。電話番号で使用します。
 
-- __value__: Supported.
+- __value__: サポートします。
 
-- __pref__: Not supported, returning `false`.
+- __pref__: サポートしません。 `false` を返します。
 
 ### iOS 特有の動作
 
-- __pref__: Not supported, returning `false`.
+- __pref__: サポートしません。 `false` を返します。
 
 
 ## ContactName
 
-Contains different kinds of information about a `Contact` object's name.
+`Contact` オブジェクトの名前に関する、さまざまな情報を格納します。
 
 ### プロパティ
 
-- __formatted__: The complete name of the contact. _(DOMString)_
+- __formatted__: 連絡先のフルネーム _(DOMString)_
 
-- __familyName__: The contact's family name. _(DOMString)_
+- __familyName__: 連絡先の姓 _(DOMString)_
 
-- __givenName__: The contact's given name. _(DOMString)_
+- __givenName__: 連絡先の名 _(DOMString)_
 
-- __middleName__: The contact's middle name. _(DOMString)_
+- __middleName__: 連絡先のミドルネーム _(DOMString)_
 
-- __honorificPrefix__: The contact's prefix (example _Mr._ or _Dr._) _(DOMString)_
+- __honorificPrefix__: 連絡先の接頭敬称 ( 例 : _Mr._ または _Dr._ ) _(DOMString)_
 
-- __honorificSuffix__: The contact's suffix (example _Esq._). _(DOMString)_
+- __honorificSuffix__: 連絡先の接尾敬称 ( 例 : _Esq._ ) _(DOMString)_
 
 ### サポート対象のプラットフォーム
 
@@ -568,48 +520,45 @@ Contains different kinds of information about a `Contact` object's name.
 
 ### Android 特有の動作
 
-- __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
+- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。.
 
 ### BlackBerry 10 特有の動作
 
-- __formatted__: Partially supported.  Returns a concatenation of BlackBerry __firstName__ and __lastName__ fields.
+- __formatted__: 部分的にサポートします。BlackBerry の __firstName__ と __lastName__ 項目を連結して返します。
 
-- __familyName__: Supported.  Stored in BlackBerry __lastName__ field.
+- __familyName__: サポートします。BlackBerry の __lastName__ 項目に格納します。
 
-- __givenName__: Supported.  Stored in BlackBerry __firstName__ field.
+- __givenName__: サポートします。BlackBerry の __firstName__ 項目に格納します。
 
-- __middleName__: Not supported, returning `null`.
+- __middleName__: サポートしません。 `null` を返します。
 
-- __honorificPrefix__: Not supported, returning `null`.
+- __honorificPrefix__: サポートしません。 `null` を返します。
 
-- __honorificSuffix__: Not supported, returning `null`.
+- __honorificSuffix__: サポートしません。 `null` を返します。
 
 ### FirefoxOS 特有の動作
 
-- __formatted__: Partially supported, and read-only.  Returns a concatenation of `honorificPrefix`, `givenName`, `middleName`, `familyName`, and `honorificSuffix`.
+- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。.
 
 ### iOS 特有の動作
 
-- __formatted__: Partially supported.  Returns iOS Composite Name, but is read-only.
-
+- __formatted__: 部分的にサポートします。読み取り専用の iOS の合成名 ( Composite Name ) を返します。
 
 ## ContactOrganization
 
-The `ContactOrganization` object stores a contact's organization
-properties.  A `Contact` object stores one or more
-`ContactOrganization` objects in an array.
+`ContactOrganization` を使用して、連絡先の組織に関するプロパティ群を格納します。 `Contact` では、単数または複数の `ContactOrganization` オブジェクトを配列に格納します。
 
 ### プロパティ
 
-- __pref__: Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
+- __pref__: 最優先する値を `ContactOrganization` が格納している場合、 `true` に設定します。 _(boolean)_
 
-- __type__: A string that indicates what type of field this is, _home_ for example. _(DOMString)
+- __type__: 項目のタイプを示す文字列。 例 ： _home_ _(DOMString)_
 
-- __name__: The name of the organization. _(DOMString)_
+- __name__: 組織名 _(DOMString)_
 
-- __department__: The department the contract works for. _(DOMString)_
+- __department__: 所属する部署名 _(DOMString)_
 
-- __title__: The contact's title at the organization. _(DOMString)_
+- __title__: 役職名 _(DOMString)_
 
 
 ### サポート対象のプラットフォーム
@@ -646,38 +595,38 @@ properties.  A `Contact` object stores one or more
 
 ### Android 2.X 特有の動作
 
-- __pref__: Not supported by Android 2.X devices, returning `false`.
+- __pref__: Android 2.X 搭載のデバイスでは、サポートしておらず、 `false` を返します.
 
 ### BlackBerry 10 特有の動作
 
-- __pref__: Not supported by BlackBerry devices, returning `false`.
+- __pref__: BlackBerry 搭載のデバイスでは、サポートしておらず、 `false` を返します.
 
-- __type__: Not supported by BlackBerry devices, returning `null`.
+- __type__: BlackBerry 搭載のデバイスでは、サポートしておらず、 `null` を返します.
 
-- __name__: Partially supported.  The first organization name is stored in the BlackBerry __company__ field.
+- __name__: 部分的にサポートします。1 つ目の組織名を BlackBerry の __company__ 項目に格納します。
 
-- __department__: Not supported, returning `null`.
+- __department__: サポートしません。 `null` を返します.
 
-- __title__: Partially supported.  The first organization title is stored in the BlackBerry __jobTitle__ field.
+- __title__: 部分的にサポートします。1 つ目の役職を BlackBerry の __jobTitle__ 項目に格納します。
 
 ### Firefox OS 特有の動作
 
-- __pref__: Not supported
+- __pref__: サポートしません。
 
-- __type__: Not supported
+- __type__: サポートしません。
 
-- __department__: Not supported
+- __department__: サポートしません。
 
-- Fields __name__ and __title__ stored in __org__ and __jobTitle__.
+- __name__ と __title__ 項目を、 __org__ と __jobTitle__ にそれぞれ格納します。
 
 ### iOS 特有の動作
 
-- __pref__: Not supported on iOS devices, returning `false`.
+- __pref__: iOS 搭載のデバイスではサポートしません。 `false` を返します。
+- 
+- __type__: iOS 搭載のデバイスではサポートしません。 `null` を返します。
 
-- __type__: Not supported on iOS devices, returning `null`.
+- __name__: 部分的にサポートします。1 つ目の組織名を iOS の __kABPersonOrganizationProperty__ 項目に格納します。
 
-- __name__: Partially supported.  The first organization name is stored in the iOS __kABPersonOrganizationProperty__ field.
+- __department__: 部分的にサポートします。1 つ目の部署名を iOS の __kABPersonDepartmentProperty__ 項目に格納します。
 
-- __department__: Partially supported.  The first department name is stored in the iOS __kABPersonDepartmentProperty__ field.
-
-- __title__: Partially supported.  The first title is stored in the iOS __kABPersonJobTitleProperty__ field.
+- __title__: 部分的にサポートします。1 つ目の役職を iOS の __kABPersonJobTitleProperty__ 項目に格納します。

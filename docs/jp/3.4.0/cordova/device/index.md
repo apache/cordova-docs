@@ -42,7 +42,7 @@ Although the object is in the global scope, it is not available until after the 
 
 ## device.cordova
 
-Get the version of Cordova running on the device.
+デバイスで使用している Cordova のバージョン情報を取得します.
 
 ### サポート対象のプラットフォーム
 
@@ -57,9 +57,7 @@ Get the version of Cordova running on the device.
 
 ## device.model
 
-The `device.model` returns the name of the device's model or
-product. The value is set by the device manufacturer and may be
-different across versions of the same product.
+`device.model` を使用して、デバイスのモデル名または製品名を取得します。デバイスの製造元がこの値を設定するため、同じモデルでも異なるバージョン間で値が異なる場合があります。
 
 ### サポート対象のプラットフォーム
 
@@ -72,32 +70,32 @@ different across versions of the same product.
 
 ### 例
 
-    // Android:    Nexus One       returns "Passion" (Nexus One code name)
-    //             Motorola Droid  returns "voles"
-    // BlackBerry: Torch 9800      returns "9800"
-    // iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. See http://theiphonewiki.com/wiki/index.php?title=Models
+    // Android:    Nexus One       は "Passion" ( Nexus One のコードネーム ) を返します。
+    //             Motorola Droid  は "voles" を返します。
+    // BlackBerry: Torch 9800      は "9800" を返します。
+    // iOS:     iPad Mini は iPad2,5 を返し、 iPhone 5 は iPhone 5,1　を返します。詳細は http://theiphonewiki.com/wiki/index.php?title=Models をご確認ください。
     //
     var model = device.model;
 
 ### Android 特有の動作
 
-- Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
+- [モデル名](http://developer.android.com/reference/android/os/Build.html#MODEL) の代わりに [製品名](http://developer.android.com/reference/android/os/Build.html#PRODUCT) を取得します。製品名はほとんどの場合、生産時のコードネームになります。たとえば、Nexus One では `Passion` を返し、 Motorola Droid では `voles` を返します。
 
 ### Tizen 特有の動作
 
-- Returns the device model assigned by the vendor, for example, `TIZEN`
+- ベンダーが名付けたデバイスのモデル名 ( 例 : `TIZEN` ) を返します。
 
 ### Windows Phone 7 と 8 特有の動作
 
-- Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
+- 製造元が割り当てた、デバイスのモデル名を返します。たとえば、Samsung Focus では `SGH-i917` を返します。
 
 ## device.name
 
-__WARNING__: `device.name` is deprecated as of version 2.3.0. Use `device.model` instead.
+__注意:__ バージョン 2.3.0 では `device.name` を使用しません。代わりに `device.model` をお使いください。
 
 ## device.platform
 
-Get the device's operating system name.
+デバイスのオペレーティングシステム名を取得します。
 
     var string = device.platform;
 
@@ -113,7 +111,7 @@ Get the device's operating system name.
 
 ### 例
 
-    // Depending on the device, a few examples are:
+    // 各デバイスで異なります。例をいくつか列挙します。
     //   - "Android"
     //   - "BlackBerry 10"
     //   - "iOS"
@@ -123,21 +121,21 @@ Get the device's operating system name.
 
 ### Windows Phone 7 特有の動作
 
-Windows Phone 7 devices report the platform as `WinCE`.
+Windows Phone 7 搭載のデバイスでは、`WinCE` を返します。
 
 ### Windows Phone 8 特有の動作
 
-Windows Phone 8 devices report the platform as `Win32NT`.
+Windows Phone 8 搭載のデバイスでは、 `Win32NT` を返します。
 
 ## device.uuid
 
-Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
+デバイスの UUID ( Universally Unique Identifier ) を取得します。 ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
 
     var string = device.uuid;
 
 ### 解説
 
-The details of how a UUID is generated are determined by the device manufacturer and are specific to the device's platform or model.
+UUID の生成方法は、デバイスの製造元が主導して、デバイスのプラットフォームまたはモデルにより決定されます。
 
 ### サポート対象のプラットフォーム
 
@@ -150,41 +148,32 @@ The details of how a UUID is generated are determined by the device manufacturer
 
 ### 例
 
-    // Android: Returns a random 64-bit integer (as a string, again!)
-    //          The integer is generated on the device's first boot
+    // Android: 64 ビットの整数の乱数を文字列として返します。
+    //          整数はデバイスの初回起動時に生成します。
     //
-    // BlackBerry: Returns the PIN number of the device
-    //             This is a nine-digit unique integer (as a string, though!)
+    // BlackBerry: デバイスの PIN ナンバーを文字列として返します。
+    //             9 桁の一意な整数です。
     //
-    // iPhone: (Paraphrased from the UIDevice Class documentation)
-    //         Returns a string of hash values created from multiple hardware identifies.
-    //         It is guaranteed to be unique for every device and can't be tied
-    //         to the user account.
-    // Windows Phone 7 : Returns a hash of device+current user,
-    // if the user is not defined, a guid is generated and will persist until the app is uninstalled
-    // Tizen: returns the device IMEI (International Mobile Equipment Identity or IMEI is a number
-    // unique to every GSM and UMTS mobile phone.
+    // iPhone: ( UIDevice Class に関するドキュメントの意訳 )
+    //         ハードウェアの複数の識別子から生成したハッシュ値の文字列を返します。
+    //         各デバイスで異なることが保証されており、ユーザアカウントに紐付けることはできません。
+    // Windows Phone 7 : デバイスとユーザを用いて生成したハッシュ値を返します。
+    // ユーザの定義を行っていない場合、guid を生成して、アプリをアンインストールするまで、その値を保持します。
+    // Tizen: デバイスの IMEI (International Mobile Equipment Identity ) を返します。 IMEI は数値です。
+    // 各 GSM と UMTS 携帯電話において、一意の値です。
     var deviceID = device.uuid;
 
 ### iOS 特有の動作
 
-The `uuid` on iOS is not unique to a device, but varies for each
-application, for each installation.  It changes if you delete and
-re-install the app, and possibly also when you upgrade iOS, or even
-upgrade the app per version (apparent in iOS 5.1). The `uuid` is not
-a reliable value.
+iOS の `uuid` は各デバイスで一意ではありませんが、各アプリ・各インストールで一意となります。アプリを削除し、再インストールした場合、この値は変化します。また、iOS のバージョンアップ、アプリのバージョンアップをしたときにも変更される可能性があります ( iOS 5.1 で現象を確認 ) 。`uuid` は不変の値ではありません。
 
 ### Windows Phone 7 と 8 特有の動作
 
-The `uuid` for Windows Phone 7 requires the permission
-`ID_CAP_IDENTITY_DEVICE`.  Microsoft will likely deprecate this
-property soon.  If the capability is not available, the application
-generates a persistent guid that is maintained for the duration of the
-application's installation on the device.
+Windows Phone 7 の `uuid` に関しては `ID_CAP_IDENTITY_DEVICE` の許可が必要です。 Microsoft はこのプロパティーのサポートを近い将来に打ち切ることでしょう。この要件を解除できない場合、アプリでは、固定の guid を生成します。デバイスにアプリがインストールされている間は、この guid を保持します。
 
 ## device.version
 
-Get the operating system version.
+オペレーティングシステムのバージョンを取得します。
 
     var string = device.version;
 
@@ -199,8 +188,8 @@ Get the operating system version.
 
 ### 例
 
-    // Android:    Froyo OS would return "2.2"
-    //             Eclair OS would return "2.1", "2.0.1", or "2.0"
+    // Android:    Froyo OS では "2.2" を返します。
+    //             Eclair OS では "2.1" 、 "2.0.1" または "2.0" を返します。
     //             Version can also return update level "2.1-update1"
     //
     // BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
