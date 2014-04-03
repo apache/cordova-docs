@@ -19,8 +19,8 @@
 
 # org.apache.cordova.device
 
-This plugin defines a global `device` object, which describes the device's hardware and software.
-Although the object is in the global scope, it is not available until after the `deviceready` event.
+このプラグインを使用して、グローバル (大域) な `device` オブジェクトを生成します。このオブジェクトを使用して、デバイスのハードウェアとソフトウェアに関する情報を格納します。
+このオブジェクトは、グローバルスコープ ( global scope ) に属しますが、利用できるのは `deviceready` イベント後となります。
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
@@ -57,7 +57,7 @@ Although the object is in the global scope, it is not available until after the 
 
 ## device.model
 
-`device.model` を使用して、デバイスのモデル名または製品名を取得します。デバイスの製造元がこの値を設定するため、同じモデルでも異なるバージョン間で値が異なる場合があります。
+`device.model` を使用して、デバイスのモデル名または製品名を取得します。デバイスの製造元がこの値を設定するため、同じモデルでも異なるバージョンで値が異なる場合があります。
 
 ### サポート対象のプラットフォーム
 
@@ -190,13 +190,13 @@ Windows Phone 7 の `uuid` に関しては `ID_CAP_IDENTITY_DEVICE` の許可が
 
     // Android:    Froyo OS では "2.2" を返します。
     //             Eclair OS では "2.1" 、 "2.0.1" または "2.0" を返します。
-    //             Version can also return update level "2.1-update1"
+    //             アップデート時のバージョンの場合、 "2.1-update1" のように返すこともあります。
     //
-    // BlackBerry: Torch 9800 using OS 6.0 would return "6.0.0.600"
+    // BlackBerry: OS 6.0 を搭載した Torch 9800 では "6.0.0.600" を返します。
     //
-    // iPhone:     iOS 3.2 returns "3.2"
+    // iPhone:     iOS 3.2 では "3.2" を返します。
     //
-    // Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
-    // Tizen: returns "TIZEN_20120425_2"
+    // Windows Phone 7: OS の バージョンナンバーを返します。 Mango では 7.10.7720 を返します。
+    // Tizen: "TIZEN_20120425_2" を返します。
     var deviceVersion = device.version;
 
