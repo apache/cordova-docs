@@ -234,7 +234,7 @@ To debug on the Objective-C side, you need Xcode's built-in debugger.
 For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova
 Project](https://github.com/apache/cordova-weinre) or [iWebInspector,
 a third-party utility](http://www.iwebinspector.com/).  For iOS 6, you
-can attach Safari 6.0 to your app running within the iOS 6 Simulator.
+can attach Safari 6.0 to the app running within the iOS 6 Simulator.
 
 ## Common Pitfalls
 

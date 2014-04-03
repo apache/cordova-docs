@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Command-line Tools
+# BlackBerry 10 Shell Tool Guide
 
 The `cordova` command-line utility is a high-level tool that allows
 you to build applications across several platforms at once. An older
@@ -32,7 +32,7 @@ more detailed directions.
 
 For information on the low-level command-line interface that enables
 plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+for details on how to develop plugins.
 
 If you need help with any command listed below, type the command along
 with the `-h` or `-help` arguments, which are supported by all
@@ -43,7 +43,7 @@ arguments.
 
 The `create` command creates a new project:
 
-    bin/create <path-to-project> <project-package> <project-name>
+        bin/create <path-to-project> <project-package> <project-name>
 
 where
 
@@ -63,12 +63,12 @@ command-line utility opened with administrator privileges.
 ## Create a Target
 
 The `target` command allows you to manage the emulator or BlackBerry
-devices that you use to test your app. You can add or remove a target,
+devices that you use to test the app. You can add or remove a target,
 or set a target as the default target.
 
 ### Add a Target
 
-    <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
+        <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
 where
 
@@ -88,21 +88,21 @@ where
 
 ### Remove a Target
 
-    <path-to-project>/cordova/target remove <name>
+        <path-to-project>/cordova/target remove <name>
 
 ### Set a Target as the Default
 
-    <path-to-project>/cordova/target default <name>
+        <path-to-project>/cordova/target default <name>
 
 ## Build the App
 
 The `build` command builds the project as a .bar file. You can build
-your app in either release mode (which produces a signed .bar file) or
+the app in either release mode (which produces a signed .bar file) or
 in debug mode (which produces an unsigned .bar file).
 
 ### Build the App in Release Mode
 
-    <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
+        <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
 
 where
 
@@ -114,14 +114,14 @@ where
 
 ### Build the Project in Debug Mode
 
-    <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
+        <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
 
 where
 
 - `<target>` specifies the name of a previously added target. If
   `<target>` is not specified, the default target is used, if one has
   been created. This argument is only required if you want the script
-  to deploy your app to a BlackBerry device or emulator and you have
+  to deploy the app to a BlackBerry device or emulator and you have
   not created a default target. Additionally, if `<target>` is a
   device, then that device must be connected to your computer by USB
   connection or be connected to the same Wi-Fi network as your
@@ -144,7 +144,7 @@ installed a debug token, if that target is a BlackBerry device), you
 can run the script with no arguments, and the script packages your
 app and deploys it to the default target. For example:
 
-    <path-to-project>/cordova/build debug
+        <path-to-project>/cordova/build debug
 
 ## Run the App
 
@@ -152,7 +152,7 @@ The `run` command deploys the app's most recent build on the specified
 BlackBerry device or an emulator. To deploy your app, you need to
 specify a target for the device or emulator:
 
-    <path-to-project>/cordova/run <target>
+        <path-to-project>/cordova/run <target>
 
 ...where `<target> `specifies the name of a previously added target.
 If `<target>` is a device, then it must be connected to your computer
@@ -163,16 +163,16 @@ via USB cable, or else over the same Wi-Fi network as your computer.
 The `target` command allows you to add and remove plugins.  To fetch a
 locally hosted plugin:
 
-    <path-to-project>/cordova/plugin fetch <path-to-plugin>
+        <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
 View a list of installed plugins:
 
-    <path-to-project>/cordova/plugin ls
+        <path-to-project>/cordova/plugin ls
 
 Add a plugin:
 
-    <path-to-project>/cordova/plugin add <name>
+        <path-to-project>/cordova/plugin add <name>
 
 Remove a plugin:
 
-    <path-to-project>/cordova/plugin rm <name>
+        <path-to-project>/cordova/plugin rm <name>

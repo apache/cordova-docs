@@ -96,11 +96,11 @@ For BlackBerry 10:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
+4. Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.
 
 5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
 For BlackBerryOS/Playbook:
 
@@ -110,11 +110,11 @@ For BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
-5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
+5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
 7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
 
@@ -133,11 +133,11 @@ Also note that the cordova js script file is now called 'cordova.js' and no long
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
+4. Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.
 
 5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
 For BlackBerryOS/Playbook:
 
@@ -147,11 +147,11 @@ For BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
 
-5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
+5. Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
 
 7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
 
@@ -167,11 +167,11 @@ For BlackBerryOS/Playbook:
 
 3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
 
-4. Create a new project, as described in BlackBerry Command-line Tools. You need the assets from this new project.
+4. Create a new project, as described in BlackBerry Shell Tool Guide. You need the assets from this new project.
 
-5. Copy the `www/cordova-2.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.6.0.js` file.
+5. Copy the `www/cordova-2.7.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.6.0.js` file.
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.7.0.js` file.
+6. Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.7.0.js` file.
 
 7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
 
@@ -199,7 +199,7 @@ However, here are the new parts needed for the piecemeal update:
 
 Updating the example/ directory or migrating an existing project:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -231,7 +231,7 @@ However, here are the new parts needed for the piecemeal update:
 
 Updating the example/ directory or migrating an existing project:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -247,7 +247,7 @@ Updating the example/ directory or migrating an existing project:
 
 Updating just the `www` directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -273,15 +273,15 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 6. Open the `sample/lib/` directory and rename the `cordova.2.3.0/` directory to `cordova.2.4.0/`.
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.4.0.js` file.
+8. Open the `www` directory and update your HTML to use the new `cordova-2.4.0.js` file.
 
 ## Upgrade to 2.3.0 from 2.2.0
 
 Updating just the `www` directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -307,15 +307,15 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 6. Open the `sample/lib/` directory and rename the `cordova.2.2.0/` directory to `cordova.2.3.0/`.
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.3.0.js` file.
+8. Open the `www` directory and update your HTML to use the new `cordova-2.3.0.js` file.
 
 ## Upgrade to 2.2.0 from 2.1.0
 
 Updating just the www directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -341,15 +341,15 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 6. Open the `sample/lib/` directory and rename the `cordova.2.1.0/` directory to `cordova.2.2.0/`.
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.2.0.js` file.
+8. Open the `www` directory and update your HTML to use the new `cordova-2.2.0.js` file.
 
 ## Upgrade to 2.1.0 from 2.0.0
 
 Updating just the `www` directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -372,15 +372,15 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 5. Open the `sample/lib/` directory and rename the `cordova.2.0.0/` directory to `cordova.2.1.0/`.
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-2.1.0.js` file.
+7. Open the `www` directory and update your HTML to use the new `cordova-2.1.0.js` file.
 
 ## Upgrade to 2.0.0 from 1.9.0
 
 Updating just the `www` directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -391,7 +391,7 @@ Updating just the `www` directory:
 
 5. Update your HTML to use the new `cordova-2.0.0.js` file.
 
-6. Update your `www/plugins.xml` file. Two plugins changed their
+6. Update the `www/plugins.xml` file. Two plugins changed their
    namespace/service label. Change the old entries for the Capture and
    Contact plugins from:
 
@@ -415,11 +415,11 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 5. Open the `sample/lib/` directory and rename the `cordova.1.9.0/` directory to `cordova.2.0.0/`.
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-2.0.0.js` file.
+7. Open the `www` directory and update your HTML to use the new `cordova-2.0.0.js` file.
 
-8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
+8. Open the `www` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
    Capture and Contact plugins from:
 
@@ -437,7 +437,7 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 Updating just the `www` directory:
 
-1. Open your `www/` directory, which contains your app.
+1. Open the `www` directory, which contains the app.
 
 2. Remove and update the .jar file in the `ext/` directory.
 
@@ -448,7 +448,7 @@ Updating just the `www` directory:
 
 5. Update your HTML to use the new `cordova-1.8.0.js` file.
 
-6. Update your `www/plugins.xml` file. Two plugins changed their
+6. Update the `www/plugins.xml` file. Two plugins changed their
    namespace/service label. Change the old entries for the Capture and
    Contact plugins from:
 
@@ -472,11 +472,11 @@ Updating the sample directory (i.e., updating using the ant tools):
 
 5. Open the `sample/lib/` directory and rename the `cordova.1.7.0/` directory to `cordova.1.8.0/`.
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. Type `ant blackberry build` or `ant playbook build` to update the `www` directory with updated Cordova.
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-1.8.0.js` file.
+7. Open the `www` directory and update your HTML to use the new `cordova-1.8.0.js` file.
 
-8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
+8. Open the `www` directory and update the `plugins.xml` file. Two plugins
    changed their namespace/service label. Change the old entries for the
    Capture and Contact plugins from:
 

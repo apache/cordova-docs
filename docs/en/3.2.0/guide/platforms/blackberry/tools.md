@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry Command-line Tools
+# BlackBerry Shell Tool Guide
 
 The `cordova` command-line utility is a high-level tool that allows
 you to build applications across several platforms at once. An older
@@ -32,7 +32,7 @@ more detailed directions.
 
 For information on the low-level command-line interface that enables
 plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+for details on how to develop plugins.
 
 ## Create a Project
 
@@ -40,8 +40,8 @@ Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
 name.  Here is the syntax for both Mac and Windows:
 
-    $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
-    $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
+        $ /path/to/cordova-blackberry-webworks/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_project com.example.project_name ProjectName
 
 __NOTE__: The BlackBerry platform ignores the package name placeholder
 (`com.example.project_name`), but it's still required for use by
@@ -55,8 +55,8 @@ You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 emulator executables.
 
-    $ /path/to/my_new_project/cordova/build <platform>
-    $ /path/to/my_new_project/cordova/build.bat <platform>
+        $ /path/to/my_new_project/cordova/build <platform>
+        $ /path/to/my_new_project/cordova/build.bat <platform>
 
 ## Launch Emulator
 
@@ -66,16 +66,16 @@ You need to do so to supply your BlackBerry signing key password, and
 specify locations for the BlackBerry WebWorks SDK and BlackBerry
 emulator executables.
 
-    $ /path/to/my_new_project/cordova/run <platform>
+        $ /path/to/my_new_project/cordova/run <platform>
 
 and then choose 'no' when prompted with:
 
-    Do you have a BlackBerry device connected to your computer? (y/n)
-    $ /path/to/my_new_project/cordova/run <platform>
+        Do you have a BlackBerry device connected to your computer? (y/n)
+        $ /path/to/my_new_project/cordova/run <platform>
 
 and then choose 'no' when prompted with:
 
-    Do you have a BlackBerry device connected to your computer? (y/n)
+        Do you have a BlackBerry device connected to your computer? (y/n)
 
 ## Logging
 

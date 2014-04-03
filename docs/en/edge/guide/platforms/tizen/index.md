@@ -110,7 +110,7 @@ __Run As &rarr; Tizen Web Simulator Application__:
   ![](img/guide/platforms/tizen/connection_explorer.png)
 
 * Right-click the project in the __Project Explorer__ view, then
-  select __Run As & rarr; Tizen Web Application__:
+  select __Run As &rarr; Tizen Web Application__:
 
   ![](img/guide/platforms/tizen/runas_web_app.png)
 

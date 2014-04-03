@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows 8 Command-line Tools
+# Windows 8 Shell Tool Guide
 
 The `cordova` command-line utility is a high-level tool that allows
 you to build applications across several platforms at once. An older

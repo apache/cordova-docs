@@ -17,22 +17,29 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Command-line Tools
+# Android Shell Tool Guide
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
+This guide shows how to use Cordova's set of platform-centered shell
+tools to develop Android apps. This development path, discussed in the
+Overview, may offer you a greater range of development options than
+the cross-platform CLI tool described in The Command-Line Interface.
+For example, you need to use shell tools when deploying a custom
+Cordova WebView alongside native components.  Before using either
+development path, you must first configure the Android SDK environment
+as described in the Android Platform Guide.
+
+To enable shell tools for Android, download Cordova from
 [cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+separate archives for each platform. Expand each you wish to target,
+`android` in this case. The relevant tools are typically available in
+the top-level `bin` directory, otherwise consult the __README__ file
+for more detailed directions.
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+These tools allow you to create, build, and run Android apps.  For
+information on the additional command-line interface that enables
+plugin features across all platforms, see Using Plugman to Manage
+Plugins. See Application Plugins for details on how to develop
+plugins.
 
 ## Create a Project
 
@@ -40,8 +47,8 @@ Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
 name.  Here is the syntax for both Mac and Windows:
 
-    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
-    $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
+        $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+        $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
 
 ## Build
 
@@ -49,13 +56,13 @@ This cleans then builds a project.
 
 Debug, on Mac or Windows:
 
-    $ /path/to/project/cordova/build --debug
-    $ C:\path\to\project\cordova\build.bat --debug
+        $ /path/to/project/cordova/build --debug
+        $ C:\path\to\project\cordova\build.bat --debug
 
 Release, on Mac or Windows:
 
-    $ /path/to/project/cordova/build --release
-    $ C:\path\to\project\cordova\build.bat --release
+        $ /path/to/project/cordova/build --release
+        $ C:\path\to\project\cordova\build.bat --release
 
 ## Run the App
 
@@ -65,8 +72,8 @@ The `run` command accepts the following _optional_ parameters:
 
 * Build specification. This includes `--debug`, `--release`, or `--nobuild`.
 
-    $ /path/to/project/cordova/run [Target] [Build]
-    $ C:\path\to\project\cordova\run.bat [Target] [Build]
+        $ /path/to/project/cordova/run [Target] [Build]
+        $ C:\path\to\project\cordova\run.bat [Target] [Build]
 
 Make sure you create at least one Android Virtual Device, otherwise
 you're prompted to do so with the `android` command.  If more than one
@@ -76,10 +83,10 @@ running emulator if no device is found.
 
 ## Logging
 
-    $ /path/to/project/cordova/log
-    $ C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log
+        $ C:\path\to\project\cordova\log.bat
 
 ### Cleaning
 
-    $ /path/to/project/cordova/clean
-    $ C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean
+        $ C:\path\to\project\cordova\clean.bat
