@@ -19,12 +19,12 @@
 
 # org.apache.cordova.inappbrowser
 
-This plugin provides a web browser view that displays when calling `window.open()`, or when opening a link formed as `<a target="_blank">`.
+このプラグインを使用して、 `window.open()` の呼び出したとき、または、 `<a target="_blank">` 形式のリンクを開けたとき、別のウェブブラウザーを立ち上げます。
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
-__NOTE__: The InAppBrowser window behaves like a standard web browser,
-and can't access Cordova APIs.
+__注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser ウィンドウ ) は、標準のウェブブラウザーと同じ動作をします。また、Cordova API 群へのアクセスを行うことはできません。
+
 
 ## インストール
 
@@ -32,48 +32,43 @@ and can't access Cordova APIs.
 
 ## window.open
 
-Opens a URL in a new `InAppBrowser` instance, the current browser
-instance, or the system browser.
+新しい `InAppBrowser` のインスタンス内、現在のブラウザのインスタンス内、または、システムブラウザー内で、URL を開きます。
 
     var ref = window.open(url, target, options);
 
-- __ref__: Reference to the `InAppBrowser` window. _(InAppBrowser)_
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
+- __url__: 読み込み対象の URL _(String)_ 。 Unicode 文字が URL に含む場合、 `encodeURI()` を使用して変換します。
+- __target__: URL の読み込み先として使用するブラウザーの種別。任意のパラメータです。デフォルトでは、 `_self` となります。 _(String)_
+    - `_self`: URL がホワイトリストにある場合には、 Cordova WebView で開きます。それ以外の場合には、 `InAppBrowser` で開きます。
+    - `_blank`: `InAppBrowser` で開きます。
+    - `_system`: システムのウェブブラウザーで開きます。
+- __options__: `InAppBrowser` で使用するオプションです。任意で使用します。デフォルトでは、 `location=yes` となります。 _(String)_
 
-- __url__: The URL to load _(String)_. Call `encodeURI()` on this if the URL contains Unicode characters.
+    `options` の文字列に、空白は挿入できません。各設定 ( 名称と値の組み合わせ ) の間を、コンマで区切る必要があります。各設定の名称では、大文字・小文字を区別しません。すべてのプラットフォームで以下の値はサポートします。
 
-- __target__: The target in which to load the URL, an optional parameter that defaults to `_self`. _(String)_
+    - __location__: `yes` または `no` を設定すると、 `InAppBrowser` のロケーションバーを表示または非表示にします。
 
-    - `_self`: Opens in the Cordova WebView if the URL is in the white list, otherwise it opens in the `InAppBrowser`.
-    - `_blank`: Opens in the `InAppBrowser`.
-    - `_system`: Opens in the system's web browser.
+    Android のみ適用 :
 
-- __options__: Options for the `InAppBrowser`. Optional, defaulting to: `location=yes`. _(String)_
+    - __closebuttoncaption__: __Done__ ボタン上の表示名として使用する文字列を設定します。   
+    - __hidden__: `yes` に設定した場合、ブラウザーの作成とページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
+    - __clearcache__: `yes` に設定した場合、新規のウィンドウを開く前に、ブラウザーのクッキーとキャッシュを削除します。
+    - __clearsessioncache__: `yes` に設定した場合、新規のウィンドウを開く前に、セッション クッキーとキャッシュを削除します。
+    
+    iOS のみ適用 :
 
-    The `options` string must not contain any blank space, and each feature's name/value pairs must be separated by a comma. Feature names are case insensitive. All platforms support the value below:
-
-    - __location__: Set to `yes` or `no` to turn the `InAppBrowser`'s location bar on or off.
-
-    Android only:
-
-    - __closebuttoncaption__: set to a string to use as the __Done__ button's caption.
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __clearcache__: set to `yes` to have the browser's cookie cache cleared before the new window is opened
-    - __clearsessioncache__: set to `yes` to have the session cookie cache cleared before the new window is opened
-
-    iOS only:
-
-    - __closebuttoncaption__: set to a string to use as the __Done__ button's caption. Note that you need to localize this value yourself.
-    - __disallowoverscroll__: Set to `yes` or `no` (default is `no`). Turns on/off the UIWebViewBounce property.
-    - __hidden__: set to `yes` to create the browser and load the page, but not show it. The load event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
-    - __toolbar__:  set to `yes` or `no` to turn the toolbar on or off for the InAppBrowser (defaults to `yes`)
-    - __enableViewportScale__:  Set to `yes` or `no` to prevent viewport scaling through a meta tag (defaults to `no`).
-    - __mediaPlaybackRequiresUserAction__: Set to `yes` or `no` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
-    - __allowInlineMediaPlayback__: Set to `yes` or `no` to allow in-line HTML5 media playback, displaying within the browser window rather than a device-specific playback interface. The HTML's `video` element must also include the `webkit-playsinline` attribute (defaults to `no`)
-    - __keyboardDisplayRequiresUserAction__: Set to `yes` or `no` to open the keyboard when form elements receive focus via JavaScript's `focus()` call (defaults to `yes`).
-    - __suppressesIncrementalRendering__: Set to `yes` or `no` to wait until all new view content is received before being rendered (defaults to `no`).
-    - __presentationstyle__:  Set to `pagesheet`, `formsheet` or `fullscreen` to set the [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) (defaults to `fullscreen`).
-    - __transitionstyle__: Set to `fliphorizontal`, `crossdissolve` or `coververtical` to set the [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) (defaults to `coververtical`).
-    - __toolbarposition__: Set to `top` or `bottom` (default is `bottom`). Causes the toolbar to be at the top or bottom of the window.
+    - __closebuttoncaption__: ボタン上の表示名として使用する文字列を設定します。この値を各自でローカライズする必要があります。    - 
+    - __disallowoverscroll__: `yes` または `no` を設定すると( デフォルトでは `no` )、UIWebViewBounce プロパティをオンまたはオフにします。
+    - __hidden__: `yes` に設定した場合、ブラウザーの作成とページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
+    - __toolbar__: `yes` または `no` を設定すると、 `InAppBrowser` のツールバーを表示または非表示にします ( デフォルトでは `yes` ) 。
+    - __enableViewportScale__: `yes` または `no` に設定して、meta タグを使用したビューポート ( viewport )の尺度変更を有効または無効にします ( デフォルトでは `no` 。
+    - __mediaPlaybackRequiresUserAction__: `yes` または `no` に設定して、 HTML5 の audio または video の自動再生を有効または無効にします ( デフォルトでは `no` )。
+    - __allowInlineMediaPlayback__: デバイス固有の再生用インターフェイスを使用するのではなく、ブラウザのウィンドウ内で表示をしている、 HTML5 のインライン メディアを使用した再生処理を、`yes` または `no` に設定して、許可または不許可にします。HTML の `video` 要素には `webkit-playsinline` 属性を指定する必要があります ( デフォルトは `no` )。
+    - __keyboardDisplayRequiresUserAction__: JavaScript の `focus()` を使用して、form 要素がフォーカスされたとき、キーボードを表示するかどうかを、`yes` または `no` で設定します ( デフォルト値は `yes` )。
+    - __suppressesIncrementalRendering__: 閲覧する新規コンテンツをすべて受け取った後に、レンダリングを行うかどうかを、`yes` または `no` で設定します ( デフォルト値は `no` )。
+    - __presentationstyle__: `pagesheet` 、 `formsheet` 、 `fullscreen` のいずれかを設定して、 [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) を設定します ( デフォルトでは `fullscreen` )。
+    - __transitionstyle__: `fliphorizontal` 、 `crossdissolve` 、 `coververtical` のいずれかを設定して、 [transition style](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalTransitionStyle) を設定します ( デフォルトでは `coververtical` )。
+    - __toolbarposition__: `top` または `bottom` に設定して、ツールバーの表示位置 ( ウィンドウの上部・下部 ) を指定します ( デフォルトでは `bottom` )。
 
 ### サポート対象のプラットフォーム
 
@@ -103,30 +98,24 @@ The object returned from a call to `window.open`.
 
 ## addEventListener
 
-> Adds a listener for an event from the `InAppBrowser`.
+> イベントのリスナーを `InAppBrowser` へ追加します。
 
     ref.addEventListener(eventname, callback);
 
-- __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
-
-- __eventname__: the event to listen for _(String)_
-
-  - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
-  - __loadstop__: event fires when the `InAppBrowser` finishes loading a URL.
-  - __loaderror__: event fires when the `InAppBrowser` encounters an error when loading a URL.
-  - __exit__: event fires when the `InAppBrowser` window is closed.
-
-- __callback__: the function that executes when the event fires. The function is passed an `InAppBrowserEvent` object as a parameter.
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
+- __eventname__: リッスン ( listen/処理 ) 対象のイベント _(String)_
+  - __loadstart__: `InAppBrowser` が URL を読み込み始めたときに発火するイベント
+  - __loadstop__: `InAppBrowser` が URL を読み込み終えたときに発火するイベント
+  - __loaderror__: URL の読み込みの際に、 `InAppBrowser` がエラーを検出したときに発火するイベント
+  - __exit__: `InAppBrowser` ウィンドウを閉じるときに発火するイベント
+- __callback__: イベントが発火したときに実行する関数。パラメータとして `InAppBrowserEvent` オブジェクトをこの関数に渡します。
 
 ### InAppBrowserEvent Properties
 
-- __type__: the eventname, either `loadstart`, `loadstop`, `loaderror`, or `exit`. _(String)_
-
-- __url__: the URL that was loaded. _(String)_
-
-- __code__: the error code, only in the case of `loaderror`. _(Number)_
-
-- __message__: the error message, only in the case of `loaderror`. _(String)_
+- __type__: `loadstart` 、 `loadstop` 、 `loaderror` 、 `exit` のいずれかのイベント名 _(String)_
+- __url__: 読み込んだ URL _(String)_
+- __code__: `loaderror` が発生した場合のエラーコード _(Number)_
+- __message__: `loaderror` が発生した場合のエラーメッセージ _(String)_
 
 
 ### サポート対象のプラットフォーム
@@ -144,21 +133,17 @@ The object returned from a call to `window.open`.
 
 ## removeEventListener
 
-> Removes a listener for an event from the `InAppBrowser`.
+> イベントのリスナーを、 `InAppBrowser` から削除します。
 
     ref.removeEventListener(eventname, callback);
 
-- __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
-
-- __eventname__: the event to stop listening for. _(String)_
-
-  - __loadstart__: event fires when the `InAppBrowser` starts to load a URL.
-  - __loadstop__: event fires when the `InAppBrowser` finishes loading a URL.
-  - __loaderror__: event fires when the `InAppBrowser` encounters an error loading a URL.
-  - __exit__: event fires when the `InAppBrowser` window is closed.
-
-- __callback__: the function to execute when the event fires.
-The function is passed an `InAppBrowserEvent` object.
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
+- __eventname__: リッスン ( listen/処理 ) する、停止対象のイベント _(String)_
+  - __loadstart__: `InAppBrowser` が URL を読み込み始めたときに発火するイベント
+  - __loadstop__: `InAppBrowser` が URL を読み込み終えたときに発火するイベント
+  - __loaderror__: URL の読み込みの際に、 `InAppBrowser` がエラーを検出したときに発火するイベント
+  - __exit__: `InAppBrowser` ウィンドウを閉じるときに発火するイベント
+- __callback__: イベントが発火したときに実行する関数。 `InAppBrowserEvent` オブジェクトをこの関数に渡します。
 
 ### サポート対象のプラットフォーム
 
@@ -177,11 +162,11 @@ The function is passed an `InAppBrowserEvent` object.
 
 ## close
 
-> Closes the `InAppBrowser` window.
+> `InAppBrowser` ウィンドウを閉じます。
 
     ref.close();
 
-- __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
 
 ### サポート対象のプラットフォーム
 
@@ -198,11 +183,11 @@ The function is passed an `InAppBrowserEvent` object.
 
 ## show
 
-> Displays an InAppBrowser window that was opened hidden. Calling this has no effect if the InAppBrowser was already visible.
+> 非表示で実行している InAppBrowser ウィンドウを表示します。 InAppBrowser ウィンドウ がすでに表示されている場合には、この関数を呼んでも効果ありません。
 
     ref.show();
 
-- __ref__: reference to the InAppBrowser window (`InAppBrowser`)
+- __ref__: `InAppBrowser` ウィンドウへの参照 (`InAppBrowser`)
 
 ### サポート対象のプラットフォーム
 
@@ -214,27 +199,21 @@ The function is passed an `InAppBrowserEvent` object.
 ### 例
 
     var ref = window.open('http://apache.org', '_blank', 'hidden=yes');
-    // some time later...
+    // 少し経過してから...
     ref.show();
 
 ## executeScript
 
-> Injects JavaScript code into the `InAppBrowser` window
+> `InAppBrowser` ウィンドウに、JacaScript コードを注入 ( inject ) します。
 
     ref.executeScript(details, callback);
 
-- __ref__: reference to the `InAppBrowser` window. _(InAppBrowser)_
-
-- __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
-  - __file__: URL of the script to inject.
-  - __code__: Text of the script to inject.
-
-- __callback__: the function that executes after the JavaScript code is injected.
-    - If the injected script is of type `code`, the callback executes
-      with a single parameter, which is the return value of the
-      script, wrapped in an `Array`. For multi-line scripts, this is
-      the return value of the last statement, or the last expression
-      evaluated.
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
+- __injectDetails__: 下記の `file` または `code` キーを指定し、実行するスクリプトの詳細を設定します。 _(Object)_
+  - __file__: 注入するスクリプトの URL
+  - __code__: 注入するスクリプトのテキスト
+- __callback__: 注入した JavaScript コードの後に実行する関数
+    - 注入したスクリプトの形式が `code` の場合、コールバックにパラメータを 1 つ引き渡して実行します。このパラメータは、注入したスクリプトの戻り値 ( `配列` 形式 ) です。複数行のスクリプトに関しては、最後に評価 ( evaluate ) したステートメント ( statement ) や表現 ( expression ) の戻り値が引数となります。
 
 ### サポート対象のプラットフォーム
 
@@ -252,17 +231,16 @@ The function is passed an `InAppBrowserEvent` object.
 
 ## insertCSS
 
-> Injects CSS into the `InAppBrowser` window.
-
+> `InAppBrowser` ウィンドウへ CSS を注入 ( inject ) します。
     ref.insertCSS(details, callback);
 
-- __ref__: reference to the `InAppBrowser` window _(InAppBrowser)_
+- __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
 
-- __injectDetails__: details of the script to run, specifying either a `file` or `code` key. _(Object)_
-  - __file__: URL of the stylesheet to inject.
-  - __code__: Text of the stylesheet to inject.
+- __injectDetails__: 下記の `file` または `code` キーを指定し、実行するスクリプトの詳細を設定します。 _(Object)_
+  - __file__: 注入するスクリプトの URL
+  - __code__: 注入するスクリプトのテキスト
 
-- __callback__: the function that executes after the CSS is injected.
+- __callback__: 注入した CSS の適用後に実行する関数
 
 ### サポート対象のプラットフォーム
 
