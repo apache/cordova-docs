@@ -26,45 +26,103 @@ SDK tools (detailed in the Platform Guides).
 
 ## Configuring Icons in the CLI
 
-When working in the CLI, icon source files are located within various
-platform-specific subdirectories within the project's `www/res/icons`
-directory. Newly created projects come with a default set of Cordova
-icons for you to replace for the platforms you wish to target.
+When working in the CLI you can define app icon(s) via `<icon>` element (`config.xml`).
+If you do not specify an icon then the Apache Cordova logo is used.
 
-Android specifies icons for low, medium, high, and extra-high resolutions:
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
 
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+src: (required) specifies the location of the image file, relative to your www directory
 
-The iOS platform specifies 72-pixel-square icons for iPads, and
-57-pixel icons for iPhones and iPods, with high-resolution _2x_
-variants for retina displays:
+platform: (optional) target platform
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+width: (optional) icon width in pixels
 
-Windows Phone specifies a default 48-pixel icon, along with various
-devices' background tiling images used when representing applications:
+height: (optional) icon height in pixels 
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+density: (optional) android specific, specifies icon density
 
-Blackberry 10 requires an icon element in config.xml:
+The following configuration can be used to define single default icon
+which will be used for all platforms.
 
-        <icon src="blackberry10/icon-86.png" />
+        <icon src="res/icon.png" />
+
+For each platform you can also define a pixel-perfect icons set to fit 
+different screen resolutions.
+
+Android
+
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
+
+Blackberry10
+
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
 
 See BlackBerry's documentation for targeting multiple sizes and locales.
-
 [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-Tizen requires an 128-pixel icon:
+Firefox OS
 
-        tizen/icon-128.png
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+        
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
 
 ## Configuring Splash Screens in the CLI
 
