@@ -19,9 +19,9 @@
 
 # org.apache.cordova.battery-status
 
-This plugin provides an implementation of an old version of the [Battery Status Events API](http://www.w3.org/TR/2011/WD-battery-status-20110915/).
+このプラグインを使用して、 [Battery Status Events API](http://www.w3.org/TR/2011/WD-battery-status-20110915/) の旧バージョンを実装します。
 
-It adds the following three `window` events:
+これにより、以下の 3 つの `window` イベントを追加できます。
 
 * batterystatus
 * batterycritical
@@ -33,18 +33,17 @@ It adds the following three `window` events:
 
 ## batterystatus
 
-This event fires when the percentage of battery charge changes by at
-least 1 percent, or if the device is plugged in or unplugged.
+バッテリー残量が変化した場合 ( 最小値 1 パーセント) 、または、デバイスの充電または充電を停止した場合、このイベントが発火します。
 
-The battery status handler is passed an object that contains two
-properties:
+以下の 2 つのプロパティを格納したオブジェクトを、battery status ハンドラーに渡します。
 
-- __level__: The percentage of battery charge (0-100). _(Number)_
+- __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-- __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
+- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
 
-Applications typically should use `window.addEventListener` to
-attach an event listener once the `deviceready` event fires. e.g.:
+`deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
+
+( 原文に例示の記載なし ) 
 
 ### サポート対象のプラットフォーム
 
@@ -57,33 +56,28 @@ attach an event listener once the `deviceready` event fires. e.g.:
 
 ### Windows Phone 7 と 8 特有の動作
 
-Windows Phone 7 does not provide native APIs to determine battery
-level, so the `level` property is unavailable.  The `isPlugged`
-parameter _is_ supported.
+Windows Phone 7 では、バッテリー残量のレベルを検知するネイティブ API を提供していません。よって、 `level` プロパティを使用できません。 一方、 `isPlugged` パラメータは _サポートしています。_
 
 ### 例
 
     window.addEventListener("batterystatus", onBatteryStatus, false);
 
     function onBatteryStatus(info) {
-        // Handle the online event
+        // イベントの処理　
         console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
 ## batterycritical
 
-The event fires when the percentage of battery charge has reached the
-critical battery threshold. The value is device-specific.
+バッテリー残量が非常に少なった場合に、このイベントが発火します。しきい値は、デバイス毎に異なります。
 
-The `batterycritical` handler is passed an object that contains two
-properties:
+以下の 2 つのプロパティを格納したオブジェクトを、 `batterycritical` ハンドラーに渡します。
 
-- __level__: The percentage of battery charge (0-100). _(Number)_
+- __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-- __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
+- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
 
-Applications typically should use `window.addEventListener` to attach
-an event listener once the `deviceready` event fires.
+`deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -98,7 +92,7 @@ an event listener once the `deviceready` event fires.
     window.addEventListener("batterycritical", onBatteryCritical, false);
 
     function onBatteryCritical(info) {
-        // Handle the battery critical event
+        // バッテリー残量が残っていない場合の処理
         alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
     }
 
@@ -107,15 +101,15 @@ an event listener once the `deviceready` event fires.
 The event fires when the percentage of battery charge has reached the
 low battery threshold, device-specific value.
 
-The `batterylow` handler is passed an object that contains two
-properties:
+バッテリー残量が少なった場合に、このイベントが発火します。しきい値は、デバイス毎に異なります。
 
-- __level__: The percentage of battery charge (0-100). _(Number)_
+以下の 2 つのプロパティを格納したオブジェクトを、 `batterylow` ハンドラーに渡します。
 
-- __isPlugged__: A boolean that indicates whether the device is plugged in. _(Boolean)_
+- __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-Applications typically should use `window.addEventListener` to
-attach an event listener once the `deviceready` event fires.
+- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
+
+`deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -130,7 +124,7 @@ attach an event listener once the `deviceready` event fires.
     window.addEventListener("batterylow", onBatteryLow, false);
 
     function onBatteryLow(info) {
-        // Handle the battery low event
+        // バッテリー残量が少ない場合の処理
         alert("Battery Level Low " + info.level + "%");
     }
 

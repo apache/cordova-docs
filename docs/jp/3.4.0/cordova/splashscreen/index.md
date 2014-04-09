@@ -19,7 +19,7 @@
 
 # org.apache.cordova.splashscreen
 
-This plugin displays and hides a splash screen during application launch.
+このプラグインを使用して、アプリの起動中にスプラッシュスクリーンの表示・非表示を行います。
 
 ## インストール
 
@@ -43,32 +43,31 @@ This plugin displays and hides a splash screen during application launch.
 
 ### Android 特有の動作
 
-In your config.xml, you need to add the following preference
+config.xml に、以下の preference を追加してください。
 
 `<preference name="splashscreen" value="foo" />`
 
-Where foo is the name of the splashscreen file. Preferably a 9 patch file. Make sure to add your splashcreen files to your res/xml directory under the appropriate folders.
+foo とは、スプラッシュスクリーンのファイル名です。 9 patch 形式のファイルを推奨します。適当なフォルダー下の res/xml ディレクトリに、スプラッシュスクリーンのファイルを追加してください。
 
-For Android, you also have to edit your projects main java file. You must add a second parameter representing a time delay to your super.loadUrl.
+Android に関しては、プロジェクトのメインのファイル ( 原文 「main java file」 )
+ を編集する必要があります。 super.loadUrl に関して、時間の遅延を指定する第 2 引数を追加する必要があります。
 
 `super.loadUrl(Config.getStartUrl(), 10000);`
 
 ## splashscreen.hide
 
-Dismiss the splash screen.
+スプラッシュスクリーンを非表示にします。
 
     navigator.splashscreen.hide();
 
 
 ### BlackBerry 10 特有の動作
 
-The `config.xml` file's `AutoHideSplashScreen` setting must be `false`.
+`config.xml` ファイル内の `AutoHideSplashScreen` を、 `false` に設定します。
 
 ### iOS 特有の動作
 
-The `config.xml` file's `AutoHideSplashScreen` setting must be
-`false`. To delay hiding the splash screen for two seconds, add a
-timer such as the following in the `deviceready` event handler:
+`config.xml` ファイル内の `AutoHideSplashScreen` を、 `false` に設定する必要があります。スプラッシュスクリーンの非表示処理を 2 秒間遅らせたい場合には、 `deviceready` イベントハンドラー内に以下のようにタイマーを追加します。
 
         setTimeout(function() {
             navigator.splashscreen.hide();
@@ -76,19 +75,8 @@ timer such as the following in the `deviceready` event handler:
 
 ## splashscreen.show
 
-Displays the splash screen.
+スプラッシュスクリーンを表示します。
 
     navigator.splashscreen.show();
 
-
-Your application cannot call `navigator.splashscreen.show()` until the app has
-started and the `deviceready` event has fired. But since typically the splash
-screen is meant to be visible before your app has started, that would seem to
-defeat the purpose of the splash screen.  Providing some configuration in
-`config.xml` will automatically `show` the splash screen immediately after your
-app launch and before it has fully started and received the `deviceready`
-event. See [Icons and Splash Screens](http://cordova.apache.org/docs/en/edge/config_ref_images.md.html)
-for more information on doing this configuration. For this reason, it is
-unlikely you need to call `navigator.splashscreen.show()` to make the splash
-screen visible for app startup.
-
+アプリを起動する前、および、 `deviceready` イベントが発火する前に、 `navigator.splashscreen.show()` を呼び出すことはできません。ただし、スプラッシュスクリーンとは、アプリを起動する前に表示するスクリーンです。よって、先に述べた処理では、スプラッシュスクリーンの表示が遅れてしまうことになります。 `config.xml` に、いくつかの設定をすることで、アプリの起動後、直ち ( アプリが完全に立ち上がる前、および、 `deviceready` イベントを受け取る前 ) に、スプラッシュスクリーンを自動的に表示します。この設定の詳細に関しては、 [アイコンとスプラッシュスクリーン](http://cordova.apache.org/docs/en/edge/config_ref_images.md.html) をご確認ください。これにより、`navigator.splashscreen.show()` をわざわざ呼び出して、アプリ起動時にスプラッシュスクリーンを表示する必要はなくなります。

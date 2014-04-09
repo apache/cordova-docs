@@ -19,22 +19,9 @@
 
 # org.apache.cordova.media-capture
 
-This plugin provides access to the device's audio, image, and video capture capabilities.
+このプラグインを使用して、オーディオ・画像・動画に関する、デバイスのキャプチャー機能の制御を行います。
 
-__WARNING__: Collection and use of images, video, or
-audio from the device's camera or microphone raises important privacy
-issues.  Your app's privacy policy should discuss how the app uses
-such sensors and whether the data recorded is shared with any other
-parties.  In addition, if the app's use of the camera or microphone is
-not apparent in the user interface, you should provide a just-in-time
-notice before the app accesses the camera or microphone (if the
-device operating system doesn't do so already). That notice should
-provide the same information noted above, as well as obtaining the
-user's permission (e.g., by presenting choices for __OK__ and __No
-Thanks__).  Note that some app marketplaces may require your app to
-provide just-in-time notice and obtain permission from the user prior
-to accessing the camera or microphone.  For more information, please
-see the Privacy Guide.
+__注意__ : デバイス搭載のカメラまたはマイクロフォンを使用した画像・動画・音声の取得および利用には、個人情報保護の観点から、細心の注意が必要です。録音および録画した画像・動画・音声の取り扱い方法および第三者への情報提供に関しては、アプリの個人情報の取り扱いに関するポリシーの中で議論すべき問題です。被写体および録音対象から認識できないまたは認識が困難なカメラまたはマイクロフォンを使用する際、カメラまたはマイクロフォンを使用する直前に通知して、その許諾を得る必要があります。デバイスのオペレーティングシステムがこの通知および許諾の要請を行ってない場合には、改善する必要があります。また、ユーザへの通知および許諾の要請を行う際には、必ず、個人情報の取り扱いに関するポリシーの開示および使用方法に関する同意の意思表示を求める必要があります ( __許可する__ 、または、 __許可しない__ のように、明示的に判断できる必要があります ) 。また、アプリがカメラまたはマイクロフォンを起動する前に、通知および許諾を得ることを条件とする、アプリのマーケットプレースもいくつか存在します。詳細な情報に関しては、『 Privacy Guide 』 をご覧ください。
 
 ## インストール
 
@@ -70,15 +57,15 @@ see the Privacy Guide.
 
 ## プロパティ
 
-- __supportedAudioModes__: The audio recording formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes__: デバイスがサポートするオーディオの録音形式 (ConfigurationData[])
 
-- __supportedImageModes__: The recording image sizes and formats supported by the device. (ConfigurationData[])
+- __supportedImageModes__: デバイスがサポートする画像の録画サイズと形式 (ConfigurationData[])
 
-- __supportedVideoModes__: The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedVideoModes__: デバイスがサポートする動画録画の解像度と形式 (ConfigurationData[])
 
 ## capture.captureAudio
 
-> Start the audio recorder application and return information about captured audio clip files.
+> オーディオ録音アプリを起動して、キャプチャーしたオーディオクリップファイルの情報を返します。
 
     navigator.device.capture.captureAudio(
         CaptureCB captureSuccess, CaptureErrorCB captureError,  [CaptureAudioOptions options]
@@ -86,22 +73,12 @@ see the Privacy Guide.
 
 ### 解説
 
-Starts an asynchronous operation to capture audio recordings using the
-device's default audio recording application.  The operation allows
-the device user to capture multiple recordings in a single session.
+デバイス標準搭載のオーディオ録音アプリを使用して、オーディオのキャプチャーを行う非同期処理を開始します。この処理により、同一セッション内で、複数のキャプチャーを行うことができます。
 
-The capture operation ends when either the user exits the audio
-recording application, or the maximum number of recordings specified
-by `CaptureAudioOptions.limit` is reached.  If no `limit` parameter
-value is specified, it defaults to one (1), and the capture operation
-terminates after the user records a single audio clip.
+オーディオ録音アプリを終了したとき、または、 `CaptureAudioOptions.limit`　で指定した最大録音数に達したとき、このキャプチャー処理は終了します。 `limit` パラメータ値を指定しない場合、「 1 」がデフォルトとなります。この場合、1 つのオーディオクリップを完成させたときにキャプチャー処理が終了します。
 
-When the capture operation finishes, the `CaptureCallback` executes
-with an array of `MediaFile` objects describing each captured audio
-clip file.  If the user terminates the operation before an audio clip
-is captured, the `CaptureErrorCallback` executes with a `CaptureError`
-object, featuring the `CaptureError.CAPTURE_NO_MEDIA_FILES` error
-code.
+キャプチャー処理が終了するとき、 `MediaFile` オブジェクト群の配列を使用して、 `CaptureCallback` を実行します。各 `MediaFile` オブジェクトは、キャプチャーしたオーディオクリップファイルに関する情報を格納しています。オーディオクリップのキャプチャー前に、ユーザが操作を終了した場合、 `CaptureError` オブジェクトを使用して、 `CaptureErrorCallback` を実行します。この場合、 `CaptureError` オブジェクトは、 `CaptureError.CAPTURE_NO_MEDIA_FILES` エラーコードを使用します。
+
 
 ### サポート対象のプラットフォーム
 
@@ -114,72 +91,74 @@ code.
 
 ### 例
 
-    // capture callback
+    // キャプチャー時のコールバック
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
-    // capture error callback
+    // キャプチャーエラー時のコールバック
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start audio capture
+    // オーディオキャプチャーの開始
     navigator.device.capture.captureAudio(captureSuccess, captureError, {limit:2});
 
 
 ### BlackBerry 10 特有の動作
 
-- Cordova for BlackBerry 10 attempts to launch the __Voice Notes Recorder__ application, provided by RIM, to capture audio recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- BlackBerry 10 上で実行する Cordova アプリは、オーディオのキャプチャーを行うとき、RIM ( Research In Motion ) 提供の __Voice Notes Recorder__ アプリの起動を最初に行います。このアプリをデバイスにインストールしていない場合、Cordova アプリは、 `CaptureError.CAPTURE_NOT_SUPPORTED` エラーコードを受け取ります。
+
 
 ### iOS 特有の動作
 
-- iOS does not have a default audio recording application, so a simple user interface is provided.
+- iOS には、標準のオーディオ録音アプリがなく、また、簡易なユーザーインターフェースのみ提供されています。
 
 ### Windows Phone 7 と 8 特有の動作
 
-- Windows Phone 7 does not have a default audio recording application, so a simple user interface is provided.
+- Windows Phone 7 には、標準のオーディオ録音アプリがなく、また、簡易なユーザーインターフェースのみ提供されています。
 
 ## CaptureAudioOptions
 
-> Encapsulates audio capture configuration options.
+> オーディオキャプチャーのオプション設定を行います。
 
 ### プロパティ
 
-- __limit__: The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
+- __limit__: 同一のキャプチャー処理の中で、デバイスが録音できるオーディオクリップの最大数。値は、1 以上に設定します ( デフォルトでは 1 )。
 
-- __duration__: The maximum duration of an audio sound clip, in seconds.
+- __duration__: 1 つあたりのオーディオサウンドクリップの最大長 ( 秒単位 )
+
 
 ### 例
 
-    // limit capture operation to 3 media files, no longer than 10 seconds each
+    // 3 つのメディアファイルのキャプチャー処理を行い、1 つのファイルを 10 秒以内に設定
     var options = { limit: 3, duration: 10 };
 
     navigator.device.capture.captureAudio(captureSuccess, captureError, options);
 
 ### Amazon Fire OS 特有の動作
 
-- The `duration` parameter is not supported.  Recording lengths cannot be limited programmatically.
+- `duration` パラメータをサポートしません。録音時間をプログラムで制御できません。
 
 ### Android 特有の動作
 
-- The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
+- `duration` パラメータをサポートしません。録音時間をプログラムで制御できません。
 
 ### BlackBerry 10 特有の動作
 
-- The `duration` parameter is not supported.  Recording lengths can't be limited programmatically.
+- `duration` パラメータをサポートしません。録音時間をプログラムで制御できません。
 
 ### iOS 特有の動作
 
-- The `limit` parameter is not supported, so only one recording can be created for each invocation.
+- `limit` パラメータをサポートしません。1 回のキャプチャー処理につき、1 回の録音のみ行います。
 
 ## capture.captureImage
 
-> Start the camera application and return information about captured image files.
+> カメラアプリを起動して、キャプチャーした画像ファイルの情報を返します。
 
     navigator.device.capture.captureImage(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
@@ -187,21 +166,11 @@ code.
 
 ### 解説
 
-Starts an asynchronous operation to capture images using the device's
-camera application.  The operation allows users to capture more than
-one image in a single session.
+デバイス標準搭載のカメラアプリを使用して、画像のキャプチャーを行う非同期処理を開始します。この処理により、同一セッション内で、複数のキャプチャーを行うことができます。
 
-The capture operation ends either when the user closes the camera
-application, or the maximum number of recordings specified by
-`CaptureAudioOptions.limit` is reached.  If no `limit` value is
-specified, it defaults to one (1), and the capture operation
-terminates after the user captures a single image.
+カメラアプリを終了したとき、または、 `CaptureAudioOptions.limit`　で指定した最大数に達したとき、このキャプチャー処理は終了します。 `limit` パラメータ値を指定しない場合、「 1 」がデフォルトとなります。この場合、画像 1枚をキャプチャーして、処理が終了します。
 
-When the capture operation finishes, it invokes the `CaptureCB`
-callback with an array of `MediaFile` objects describing each captured
-image file.  If the user terminates the operation before capturing an
-image, the `CaptureErrorCB` callback executes with a `CaptureError`
-object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
+キャプチャー処理が終了するとき、 `MediaFile` オブジェクト群の配列を使用して、 `CaptureCB` を実行します。各 `MediaFile` オブジェクトは、キャプチャーした画像ファイルに関する情報を格納しています。画像のキャプチャー前に、ユーザが操作を終了した場合、 `CaptureError` オブジェクトを使用して、 `CaptureErrorCB` を実行します。この場合、 `CaptureError` オブジェクトは、 `CaptureError.CAPTURE_NO_MEDIA_FILES` エラーコードを使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -214,52 +183,51 @@ object featuring a `CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
 
 ### Windows Phone 7 特有の動作
 
-Invoking the native camera application while your device is connected
-via Zune does not work, and the error callback executes.
+Zune を使用して、デバイスが接続を行っている間は、ネーティブカメラアプリを呼んでも動作せず、エラー時に使用するコールバックを実行します。
 
 ### 例
 
-    // capture callback
+    // キャプチャー時のコールバック
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
-    // capture error callback
+    // キャプチャーエラー時のコールバック
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start image capture
+    // 画像のキャプチャーの開始
     navigator.device.capture.captureImage(captureSuccess, captureError, {limit:2});
 
 
 
 ## CaptureImageOptions
 
-> Encapsulates image capture configuration options.
+> 画像キャプチャーのオプション設定を行います。
 
 ### プロパティ
 
-- __limit__: The maximum number of images the user can capture in a single capture operation. The value must be greater than or equal to 1 (defaults to 1).
+- __limit__: 同一のキャプチャー処理の中で、ユーザがキャプチャーできる画像の最大数。値は、1 以上に設定します ( デフォルトでは 1 )。
 
 ### 例
 
-    // limit capture operation to 3 images
+    // 3 つの画像のキャプチャー処理を行う
     var options = { limit: 3 };
 
     navigator.device.capture.captureImage(captureSuccess, captureError, options);
 
 ### iOS 特有の動作
 
-- The __limit__ parameter is not supported, and only one image is taken per invocation.
+- __limit__ パラメータをサポートしません。1 回のキャプチャー処理につき、1 枚の画像のみキャプチャーします。
 
 ## capture.captureVideo
 
-> Start the video recorder application and return information about captured video clip files.
+> ビデオ録画アプリを起動して、キャプチャーしたビデオクリップファイルの情報を返します。
 
     navigator.device.capture.captureVideo(
         CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
@@ -267,22 +235,11 @@ via Zune does not work, and the error callback executes.
 
 ### 解説
 
-Starts an asynchronous operation to capture video recordings using the
-device's video recording application.  The operation allows the user
-to capture more than one recordings in a single session.
+デバイス標準搭載のビデオ録画アプリを使用して、ビデオのキャプチャーを行う非同期処理を開始します。この処理により、同一セッション内で、複数のキャプチャーを行うことができます。
 
-The capture operation ends when either the user exits the video
-recording application, or the maximum number of recordings specified
-by `CaptureVideoOptions.limit` is reached.  If no `limit` parameter
-value is specified, it defaults to one (1), and the capture operation
-terminates after the user records a single video clip.
+ビデオ録画アプリを終了したとき、または、 `CaptureVideoOptions.limit`　で指定した最大数に達したとき、このキャプチャー処理は終了します。 `limit` パラメータ値を指定しない場合、「 1 」がデフォルトとなります。この場合、1 つのビデオクリップをキャプチャーして、処理が終了します。
 
-When the capture operation finishes, it the `CaptureCB` callback
-executes with an array of `MediaFile` objects describing each captured
-video clip file.  If the user terminates the operation before
-capturing a video clip, the `CaptureErrorCB` callback executes with a
-`CaptureError` object featuring a
-`CaptureError.CAPTURE_NO_MEDIA_FILES` error code.
+キャプチャー処理が終了するとき、 `MediaFile` オブジェクト群の配列を使用して、 `CaptureCB` を実行します。各 `MediaFile` オブジェクトは、キャプチャーしたビデオクリップファイルに関する情報を格納しています。ビデオクリップのキャプチャー前に、ユーザが操作を終了した場合、 `CaptureError` オブジェクトを使用して、 `CaptureErrorCB` を実行します。この場合、 `CaptureError` オブジェクトは、 `CaptureError.CAPTURE_NO_MEDIA_FILES` エラーコードを使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -295,135 +252,127 @@ capturing a video clip, the `CaptureErrorCB` callback executes with a
 
 ### 例
 
-    // capture callback
+    // キャプチャー時のコールバック
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
-    // capture error callback
+    // キャプチャーエラー時のコールバック
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start video capture
+    // ビデオキャプチャーの開始
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
 
 ### BlackBerry 10 特有の動作
 
-- Cordova for BlackBerry 10 attempts to launch the __Video Recorder__ application, provided by RIM, to capture video recordings. The app receives a `CaptureError.CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- BlackBerry 10 上で実行する Cordova アプリは、ビデオのキャプチャーを行うとき、RIM ( Research In Motion ) 提供の __Video Recorder__ アプリの起動を最初に行います。このアプリをデバイスにインストールしていない場合、Cordova アプリは、 `CaptureError.CAPTURE_NOT_SUPPORTED` エラーコードを受け取ります。
 
 
 ## CaptureVideoOptions
 
-> Encapsulates video capture configuration options.
+> ビデオキャプチャーのオプション設定を行います。
 
 ### プロパティ
 
-- __limit__: The maximum number of video clips the device's user can capture in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
+- __limit__: 同一のキャプチャー処理の中で、ユーザがキャプチャーできるビデオクリップの最大数。値は、1 以上に設定します ( デフォルトでは 1 )。
 
-- __duration__: The maximum duration of a video clip, in seconds.
+- __duration__: 1 つあたりのビデオクリップの最大長 ( 秒単位 )
 
 ### 例
 
-    // limit capture operation to 3 video clips
+    // ビデオクリップが 3 つになるまで、キャプチャー処理を行う
     var options = { limit: 3 };
 
     navigator.device.capture.captureVideo(captureSuccess, captureError, options);
 
 ### BlackBerry 10 特有の動作
 
-- The __duration__ parameter is not supported, so the length of recordings can't be limited programmatically.
+- __duration__ パラメータをサポートしません。録画時間をプログラムで制御できません。
 
 ### iOS 特有の動作
 
-- The __limit__ parameter is not supported.  Only one video is recorded per invocation.
-
+- __limit__ パラメータをサポートしません。1 回のキャプチャー処理につき、1 個のビデオのみキャプチャーします。
 
 ## CaptureCB
 
-> Invoked upon a successful media capture operation.
+> メディアキャプチャー処理の成功時に呼び出します。
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
 ### 解説
 
-This function executes after a successful capture operation completes.
-At this point a media file has been captured, and either the user has
-exited the media capture application, or the capture limit has been
-reached.
-
-Each `MediaFile` object describes a captured media file.
+キャプチャー処理が成功した後、この関数を実行します。
+この時点までで、メディアファイルのキャプチャーが終了しており、かつ、メディアキャプチャー用アプリをユーザが閉じているか、または、キャプチャー数が最大数に達しています。
+各 `MediaFile` オブジェクトは、キャプチャーしたメディアファイルに関する情報を格納しています
 
 ### 例
 
-    // capture callback
+    // キャプチャー時のコールバック
     function captureSuccess(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // ファイルを使用した処理
         }
     };
 
 ## CaptureError
 
-> Encapsulates the error code resulting from a failed media capture operation.
+> メディアのキャプチャー処理に失敗した際に使用する、エラーコードの設定を行います。
 
 ### プロパティ
 
-- __code__: One of the pre-defined error codes listed below.
+- __code__: 事前に定義した以下のエラーコードのうちの 1 つ
 
-### Constants
+### 定数
 
-- `CaptureError.CAPTURE_INTERNAL_ERR`: The camera or microphone failed to capture image or sound.
+- `CaptureError.CAPTURE_INTERNAL_ERR`: 
+イメージまたはサウンドのキャプチャーに、カメラまたはマイクロフォンが失敗した場合
 
-- `CaptureError.CAPTURE_APPLICATION_BUSY`: The camera or audio capture application is currently serving another capture request.
+- `CaptureError.CAPTURE_APPLICATION_BUSY`: カメラまたはオーディオキャプチャー用のアプリが、別のキャプチャーリクエストの処理を現在行っている場合
 
-- `CaptureError.CAPTURE_INVALID_ARGUMENT`: Invalid use of the API (e.g., the value of `limit` is less than one).
+- `CaptureError.CAPTURE_INVALID_ARGUMENT`: API の無効な使用方法 ( 例 : `limit` の値が 1 未満 )
 
-- `CaptureError.CAPTURE_NO_MEDIA_FILES`: The user exits the camera or audio capture application before capturing anything.
+- `CaptureError.CAPTURE_NO_MEDIA_FILES`: カメラまたはオーディオキャプチャー用のアプリを、キャプチャー前に、ユーザが閉じた場合
 
-- `CaptureError.CAPTURE_NOT_SUPPORTED`: The requested capture operation is not supported.
+- `CaptureError.CAPTURE_NOT_SUPPORTED`: キャプチャー処理のリクエストをサポートしていない場合
 
 ## CaptureErrorCB
 
-> Invoked if an error occurs during a media capture operation.
+> メディアのキャプチャー処理中に、エラーが発生した場合に呼び出します。
 
     function captureError( CaptureError error ) { ... };
 
 ### 解説
 
-This function executes if an error occurs when trying to launch a
-media capture operation. Failure scenarios include when the capture
-application is busy, a capture operation is already taking place, or
-the user cancels the operation before any media files are captured.
+メディアのキャプチャー処理を開始する際に、エラーが発生した場合、この関数を実行します。想定できるエラー発生シナリオとして、キャプチャーアプリがビジー ( busy ) 状態のとき、キャプチャー処理をすでに実行しているとき、メディアファイルのキャプチャー前にユーザが処理をキャンセルしたときなどが考えられます。
 
-This function executes with a `CaptureError` object containing an
-appropriate error `code`.
+適当なエラーコード ( `code` ) を格納した `CaptureError` オブジェクトを使用して、この関数を実行します。
 
 ### 例
 
-    // capture error callback
+    // キャプチャーエラー時のコールバック
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
 ## ConfigurationData
 
-> Encapsulates a set of media capture parameters that a device supports.
+> 各デバイスでサポートしている、メディアキャプチャー用のパラメータ群を設定します。
 
 ### 解説
 
-Describes media capture modes supported by the device.  The
-configuration data includes the MIME type, and capture dimensions for
-video or image capture.
+デバイスがサポートする、メディアキャプチャーのモードを設定します。設定データには、
+MIME タイプ、および、ビデオ・画像キャプチャーのサイズ情報があります。
 
-The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt).  Examples:
+MIME タイプは、 [RFC2046](http://www.ietf.org/rfc/rfc2046.txt) に準拠する必要があります。以下に例を示します。
 
 - `video/3gpp`
 - `video/quicktime`
@@ -433,18 +382,18 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
 
 ### プロパティ
 
-- __type__: The ASCII-encoded lowercase string representing the media type. (DOMString)
+- __type__: メディアタイプを示す ASCII でエンコードされた小文字の文字列 (DOMString)
 
-- __height__: The height of the image or video in pixels.  The value is zero for sound clips. (Number)
+- __height__: ピクセル単位で示す、画像またはビデオの縦の長さ。サウンドクリップに関しては、「 0 」に設定します。 (Number)
 
-- __width__: The width of the image or video in pixels.  The value is zero for sound clips. (Number)
+- __width__: ピクセル単位で示す、画像またはビデオの横幅。サウンドクリップに関しては、「 0 」に設定します。 (Number)
 
 ### 例
 
-    // retrieve supported image modes
+    // サポートされている画像のモードを取得
     var imageModes = navigator.device.capture.supportedImageModes;
 
-    // Select mode that has the highest horizontal resolution
+    // 最も高い水平解像度を持つモードを選択
     var width = 0;
     var selectedmode;
     for each (var mode in imageModes) {
@@ -454,11 +403,11 @@ The MIME types should adhere to [RFC2046](http://www.ietf.org/rfc/rfc2046.txt). 
         }
     }
 
-Not supported by any platform.  All configuration data arrays are empty.
+どのプラットフォームでもサポートしていない場合、設定データを格納する配列は空になります。
 
 ## MediaFile.getFormatData
 
-> Retrieves format information about the media capture file.
+> メディアキャプチャーファイルのフォーマット情報を取得します。
 
     mediaFile.getFormatData(
         MediaFileDataSuccessCB successCallback,
@@ -467,11 +416,7 @@ Not supported by any platform.  All configuration data arrays are empty.
 
 ### 解説
 
-This function asynchronously attempts to retrieve the format
-information for the media file.  If successful, it invokes the
-`MediaFileDataSuccessCB` callback with a `MediaFileData` object.  If
-the attempt fails, this function invokes the `MediaFileDataErrorCB`
-callback.
+メディアファイルのフォーマット情報の取得を、非同期的にこの関数は行います。成功時には、 `MediaFileData` を使用して、 `MediaFileDataSuccessCB` コールバックを呼び出します。失敗時には、 `MediaFileDataErrorCB` コールバックをこの関数は呼び出します。
 
 ### サポート対象のプラットフォーム
 
@@ -484,114 +429,108 @@ callback.
 
 ### Amazon Fire OS 特有の動作
 
-The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+メディアファイルのフォーマット情報にアクセスできる API は限定されています。 `MediaFileData` プロパティ群の一部のみサポートします。
 
 ### BlackBerry 10 特有の動作
 
-Does not provide an API for information about media files, so all
-`MediaFileData` objects return with default values.
+メディアファイルに関する情報を API に提供しません。以下のセクションで示すデフォルト値を使用して、 `MediaFileData` オブジェクトを返します。
 
 ### Android 特有の動作
 
-The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+メディアファイルのフォーマット情報にアクセスできる API は限定されています。 `MediaFileData` プロパティ群の一部のみサポートします。
 
 ### iOS 特有の動作
 
-The API to access media file format information is limited, so not all
-`MediaFileData` properties are supported.
+メディアファイルのフォーマット情報にアクセスできる API は限定されています。 `MediaFileData` プロパティ群の一部のみサポートします。
 
 ## MediaFile
 
-> Encapsulates properties of a media capture file.
+> メディアキャプチャーファイルのプロパティを設定します。
 
 ### プロパティ
 
-- __name__: The name of the file, without path information. (DOMString)
+- __name__: ファイル名 ( パス情報の指定なし ) (DOMString)
 
-- __fullPath__: The full path of the file, including the name. (DOMString)
+- __fullPath__: ファイル名を含む、フェイルへのフルパス ( full path )。 (DOMString)
 
-- __type__: The file's mime type (DOMString)
+- __type__: ファイルの mime タイプ (DOMString)
 
-- __lastModifiedDate__: The date and time when the file was last modified. (Date)
+- __lastModifiedDate__: ファイルの最終更新日時 (Date)
 
-- __size__: The size of the file, in bytes. (Number)
+- __size__: バイト数で示す、ファイルサイズ (Number)
 
 ### メソッド
 
-- __MediaFile.getFormatData__: Retrieves the format information of the media file.
+- __MediaFile.getFormatData__: メディアファイルのフォーマット情報を取得します。
 
 ## MediaFileData
 
-> Encapsulates format information about a media file.
+> メディアファイルに関するフォーマット情報を設定します。
 
 ### プロパティ
 
-- __codecs__: The actual format of the audio and video content. (DOMString)
+- __codecs__: オーディオとビデオの実際の形式 (DOMString)
 
-- __bitrate__: The average bitrate of the content.  The value is zero for images. (Number)
+- __bitrate__: コンテンツの平均ビットレート。画像に関しては、値は 「 0 」となります。 (Number)
 
-- __height__: The height of the image or video in pixels. The value is zero for audio clips. (Number)
+- __height__: ピクセル単位で示す、画像またはビデオの縦の長さ。オーディオクリップに関しては、「 0 」に設定します。 (Number)
 
-- __width__: The width of the image or video in pixels. The value is zero for audio clips. (Number)
+- __width__: ピクセル単位で示す、画像またはビデオの横幅。オーディオクリップに関しては、「 0 」に設定します。 (Number)
 
-- __duration__: The length of the video or sound clip in seconds. The value is zero for images. (Number)
+- __duration__: 秒単位で示す、ビデオまたはサウンドクリップの長さ。画像に関しては、「 0 」に設定します。 (Number)
 
 ### BlackBerry 10 特有の動作
 
-No API provides format information for media files, so the
-`MediaFileData` object returned by `MediaFile.getFormatData` features
-the following default values:
+メディアファイルに関するフォーマット情報を提供する API はありません。よって、以下のデフォルト値を格納した `MediaFileData` オブジェクトを、 `MediaFile.getFormatData` は返します。　
 
-- __codecs__: Not supported, and returns `null`.
+- __codecs__: サポートしません。 `null` を返します。
 
-- __bitrate__: Not supported, and returns zero.
+- __bitrate__: サポートしません。「 0 」を返します。
 
-- __height__: Not supported, and returns zero.
+- __height__: サポートしません。「 0 」を返します。
 
-- __width__: Not supported, and returns zero.
+- __width__: サポートしません。「 0 」を返します。
 
-- __duration__: Not supported, and returns zero.
+- __duration__: サポートしません。「 0 」を返します。
 
 ### Amazon Fire OS 特有の動作
 
-Supports the following `MediaFileData` properties:
+以下の `MediaFileData` プロパティに関するサポート状況を以下に示します。
 
-- __codecs__: Not supported, and returns `null`.
+- __codecs__: サポートしません。 `null` を返します。
 
-- __bitrate__: Not supported, and returns zero.
+- __bitrate__: サポートしません。「 0 」を返します。
 
-- __height__: Supported: image and video files only.
+- __height__: 画像とビデオファイルのみ、サポートします。
 
-- __width__: Supported: image and video files only.
+- __width__: 画像とビデオファイルのみ、サポートします。
 
-- __duration__: Supported: audio and video files only
+- __duration__: オーディオとビデオファイルのみ、サポートします。
 
 ### Android 特有の動作
 
-Supports the following `MediaFileData` properties:
+以下の `MediaFileData` プロパティに関するサポート状況を以下に示します。
 
-- __codecs__: Not supported, and returns `null`.
+- __codecs__: サポートしません。 `null` を返します。
 
-- __bitrate__: Not supported, and returns zero.
+- __bitrate__: サポートしません。「 0 」を返します。
 
-- __height__: Supported: image and video files only.
+- __height__: 画像とビデオファイルのみ、サポートします。
 
-- __width__: Supported: image and video files only.
+- __width__: 画像とビデオファイルのみ、サポートします。
 
-- __duration__: Supported: audio and video files only.
+- __duration__: オーディオとビデオファイルのみ、サポートします。
 
 ### iOS 特有の動作
 
-Supports the following `MediaFileData` properties:
+以下の `MediaFileData` プロパティに関するサポート状況を以下に示します。
 
-- __codecs__: Not supported, and returns `null`.
+- __codecs__: サポートしません。 `null` を返します。
 
-- __bitrate__: Supported on iOS4 devices for audio only. Returns zero for images and videos.
+- __bitrate__: iOS 4 搭載のデバイスでは、オーディオのみサポートします。画像とビデオに関しては、「 0 」を返します。
 
-- __height__: Supported: image and video files only.
+- __height__: 画像とビデオファイルのみ、サポートします。
 
-- __width__: Supported: image and video files only.
+- __width__: 画像とビデオファイルのみ、サポートします。
 
-- __duration__: Supported: audio and video files only.
+- __duration__: オーディオとビデオファイルのみ、サポートします。

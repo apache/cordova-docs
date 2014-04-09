@@ -17,25 +17,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Plugin APIs
+# Plugin API
 
-Cordova ships with a minimal set of APIs, and projects add what extra APIs they require through plugins.
+Cordova は、最小限の API 群のみ提供しています。プラグインを使用して、プロジェクトに必要な他の API 群を追加してください。
 
-You can search through all existing plugins using the [Plugin Registry](http://plugins.cordova.io/).
+[Plugin Registry](http://plugins.cordova.io/) で、既存のプラグインを検索できます。
 
-The traditional set of Cordova plugins are as follows:
+また、既存の Cordova プラグインの情報に関しては、以下のサイトをご確認ください。
 
-- [Battery Status](https://github.com/apache/cordova-plugin-battery-status/blob/dev/doc/index.md)
-> Monitor the status of the device's battery.
+- [バッテリーの状態](https://github.com/apache/cordova-plugin-battery-status/blob/dev/doc/index.md)
+> デバイスのバッテリー残量の監視
 
-- [Camera](https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md)
-> Capture a photo using the device's camera.
+- [カメラ](https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md)
+> デバイス搭載のカメラを使用した、写真のキャプチャー
 
-- [Contacts](https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md)
-> Work with the devices contact database.
+- [連絡先](https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md)
+> デバイスの連絡先データベース ( contact database ) の操作 
 
-- [Device](https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md)
-> Gather device specific information.
+- [デバイス](https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md)
+> デバイス関連の情報の取得
 
 - [Device Motion (Accelerometer)](https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md)
 > Tap into the device's motion sensor.
@@ -43,38 +43,39 @@ The traditional set of Cordova plugins are as follows:
 - [Device Orientation (Compass)](https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md)
 > Obtain the direction that the device is pointing.
 
-- [Dialogs](https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md)
-> Visual device notifications.
+- [ダイアログ](https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md)
+> デバイスからの通知を表示
 
-- [FileSystem](https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md)
-> Hook into native file system through JavaScript.
+- [ファイルシステム](https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md)
+> ネイティブファイルシステムへ、JavaScript を使用して接続
 
-- [File Transfer](https://github.com/apache/cordova-plugin-file-transfer/blob/dev/doc/index.md)
-> Hook into native file system through JavaScript.
+- [ファイル転送](https://github.com/apache/cordova-plugin-file-transfer/blob/dev/doc/index.md)
+> ネイティブファイルシステムへ、JavaScript を使用して接続
 
-- [Geolocation](https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md)
-> Make your application location aware.
+- [位置情報](https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md)
+> 位置情報の取得とアプリでの使用
 
 - [Globalization](https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md)
 > Enable representation of objects specific to a locale.
 
 - [InAppBrowser](https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md)
-> Launch URLs in another in-app browser instance.
+> アプリ内でブラウザのインスタンスを立ち上げ、URL を読み込む
 
-- [Media](https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md)
-> Record and play back audio files.
+- [メディア](https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md)
+> オーディオファイルの再生と録音
 
-- [Media Capture](https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md)
-> Capture media files using device's media capture applications.
+- [メディアキャプチャー](https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md)
+> デバイス搭載のメディアキャプチャー用アプリを使用した、メディアファイルのキャプチャー
 
-- [Network Information (Connection)](https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md)
-> Quickly check the network state, and cellular network information.
+- [ネットワーク情報 ( 接続情報 )](https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md)
+> ネットワーク状態とネットワーク接続情報の確認
 
-- [Splashscreen](https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md)
-> Show and hide the applications splash screen.
+- [スプラッシュスクリーン](https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md)
+> アプリケーションのスプラッシュスクリーンの表示と非表示
 
-- [Vibration](https://github.com/apache/cordova-plugin-vibration/blob/dev/doc/index.md)
-> An API to vibrate the device.
+- [バイブレーション](https://github.com/apache/cordova-plugin-vibration/blob/dev/doc/index.md)
+> デバイスを振動させるときに使用する API 
 
-Non-English translations of these plugin docs can be found by looking at older versions of the Cordova documentation. Use the drop-down menu at the very top-right of this site to switch versions.
+各国語に訳されたプラグイン ドキュメントをご利用できます （ 以前のバーションの Cordova ドキュメントを参照して、見つけます ）。このサイトのトップ右端に表示されたドロップダウン メニューから言語とバージョンを選択できます。
+
 

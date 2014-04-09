@@ -1,97 +1,102 @@
-Notes for plugin developers
+プラグイン開発者へのメモ
 ===========================
 
-These notes are primarily intended for Android and iOS developers who want to write plugins which interface with the file system using the File plugin.
+こちらは、Android と iOS 向けに、プラグインの開発を行う開発者へのメモ書きです。ここでは、File プラグインを使用して、ファイルシステムにアクセスを行うインターフェイスを構築する際の注意を記します。
 
-Working with Cordova file system URLs
+Cordova の file system URL の使用方法
 -------------------------------------
 
-Since version 1.0.0, this plugin has used URLs with a `cdvfile` scheme for all communication over the bridge, rather than exposing raw device file system paths to JavaScript. 
+バージョン 1.0.0 以降、このプラグインでは、ブリッジを越えるすべてのコミュニケーションにおいて、 `cdvfile` スキーマを採用しています。これは、デバイス内のファイルシステムへのパスを外部 ( JavaScript ) に暴露させないためです。
 
-On the JavaScript side, this means that FileEntry and DirectoryEntry objects have a fullPath attribute which is relative to the root of the HTML file system. If your plugin's JavaScript API accepts a FileEntry or DirectoryEntry object, you should call `.toURL()` on that object before passing it across the bridge to native code.
+これに伴い、JavaScript 側では、FileEntry と DirectoryEntry オブジェクトは、fullpath 属性 ( HTML のファイルシステムの root 構造と類似 ) を持つようになりました。開発予定のプラグインの JavaScript API で FileEntry または DirectoryEntry オブジェクトを使用する場合、ネイティブコードへそのオブジェクトをブリッジ越しに渡す前に、そのオブジェクトを使用して `.toURL()` を呼ぶ必要があります。
 
-### Converting cdvfile:// URLs to fileystem paths
+### cdvfile:// 形式の URL を、ファイルシステムのパスに変更する場合
 
-Plugins which need to write to the filesystem may want to convert a received file system URL to an actual filesystem location. There are multiple ways of doing this, depending on the native platform.
+filesystem に書き込みを行うプラグインでは、返されたファイルシステムの URL を変換して filesystem 内の実際の場所を指すよう、処理を行う場合もあります。これを行う方法はいくつかありますが、ネーティブプラットフォーム毎に変換方法は異なります。
 
-It is important to remember that not all `cdvfile://` URLs are mappable to real files on the device. Some URLs can refer to assets on device which are not represented by files, or can even refer to remote resources. Because of these possibilities, plugins should always test whether they get a meaningful result back when trying to convert URLs to paths.
+`cdvfile://`　形式の URL を実際のデバイスのファイルへマップ化するとき、一部の URL をマップ化できない場合もあります。一部の URL は、ファイルでは示すことができない、デバイスのリソース ( asset ) を参照している場合もあるためです。また、リモートのリソースを参照している場合もあります。
+このようなことも想定できるため、プラグインを開発する場合には、URL からパスへの変換を行ったとき、有効な結果を返しているか常にテストする必要があります。
 
 #### Android
 
-On Android, the simplest method to convert a `cdvfile://` URL to a filesystem path is to use `org.apache.cordova.CordovaResourceApi`. `CordovaResourceApi` has several methods which can handle `cdvfile://` URLs:
+Android においては、 `org.apache.cordova.CordovaResourceApi` を使用して、 `cdvfile://` 形式の URL を filesystem のパスに変換できます。 `CordovaResourceApi` は、 `cdvfile://` 形式の URL を処理するメソッドをがいくつか実装しています。
 
-    // webView is a member of the Plugin class
+    // webView は、プラグインクラスのメンバーです
     CordovaResourceApi resourceApi = webView.getResourceApi();
 
-    // Obtain a file:/// URL representing this file on the device,
-    // or the same URL unchanged if it cannot be mapped to a file
+    // ファイルを指し示すマップ化ができない場合、デバイス上のファイルを指し示す file:/// 
+    //　形式の URL、または、マップ化できなかった URL を取得します
+    
     Uri fileURL = resourceApi.remapUri(Uri.parse(cdvfileURL));
 
-It is also possible to use the File plugin directly:
+ファイルプラグインを直接に使用することもできます。
 
     import org.apache.cordova.file.FileUtils;
     import org.apache.cordova.file.FileSystem;
     import java.net.MalformedURLException;
 
-    // Get the File plugin from the plugin manager
+    // プラグインマネジャー ( plugin manager ) から File プラグインを取得します
     FileUtils filePlugin = (FileUtils)webView.pluginManager.getPlugin("File");
 
-    // Given a URL, get a path for it
+    // URL を渡して、パスを受け取ります
     try {
         String path = filePlugin.filesystemPathForURL(cdvfileURL);
     } catch (MalformedURLException e) {
-        // The filesystem url wasn't recognized
+        // filesystem url が認識されない場合の処理
     }
 
-To convert from a path to a `cdvfile://` URL:
+パスから `cdvfile://` 形式の URL への変換
 
     import org.apache.cordova.file.LocalFilesystemURL;
 
-    // Get a LocalFilesystemURL object for a device path,
-    // or null if it cannot be represented as a cdvfile URL.
+    // cdvfile 形式の URL に変換できない場合、デバイスパス ( device path ) に
+    // 関する LocalFilesystemURL オブジェクト、または、null を取得します
+
     LocalFilesystemURL url = filePlugin.filesystemURLforLocalPath(path);
-    // Get the string representation of the URL object
+    // 文字列形式の URL オブジェクトを取得します
     String cdvfileURL = url.toString();
 
-If your plugin creates a file, and you want to return a FileEntry object for it, use the File plugin:
+プラグインでファイルを作成し、そのとき、FileEntry オブジェクトを使用したい場合には、File プラグインを使用してください。
 
-    // Return a JSON structure suitable for returning to JavaScript,
-    // or null if this file is not representable as a cdvfile URL.
+    // cdvfile 形式の URL への変換に、対象のファイルが対応していない場合には、
+    // JavaScript での使用に適した JSON 構造体、または、null を返します
     JSONObject entry = filePlugin.getEntryForFile(file);
 
 #### iOS
 
-Cordova on iOS does not use the same `CordovaResourceApi` concept as Android. On iOS, you should use the File plugin to convert between URLs and filesystem paths.
+iOS 搭載の Cordova における `CordovaResourceApi` の使用方法に関しては、Android のそれとは異なります。iOS では、URL から filesystem パスへの変換の際には、File プラグインを使用してください。
 
-    // Get a CDVFilesystem URL object from a URL string
+
+    // URL 文字列から CDVFilesystem URL オブジェクトを取得します
     CDVFilesystemURL* url = [CDVFilesystemURL fileSystemURLWithString:cdvfileURL];
-    // Get a path for the URL object, or nil if it cannot be mapped to a file
+    // マップ化できない場合には、URL オブジェクトに関するパス、または、空白 
+    // ( 原文 「 nil 」 ) を取得します 
     NSString* path = [filePlugin filesystemPathForURL:url];
     
 
-    // Get a CDVFilesystem URL object for a device path, or
-    // nil if it cannot be represented as a cdvfile URL.
+    // cdvfile 形式の URL に変換できない場合、デバイスパス ( device path ) に
+    // 関する CDVFilesystem　URL オブジェクト、または、空白 ( 原文 「 nil 」 ) を取得します
     CDVFilesystemURL* url = [filePlugin fileSystemURLforLocalPath:path];
-    // Get the string representation of the URL object
+    // 文字列形式の URL オブジェクトを取得します
     NSString* cdvfileURL = [url absoluteString];
 
-If your plugin creates a file, and you want to return a FileEntry object for it, use the File plugin:
+プラグインでファイルを作成し、そのとき、FileEntry オブジェクトを使用したい場合には、File プラグインを使用してください。
 
-    // Get a CDVFilesystem URL object for a device path, or
-    // nil if it cannot be represented as a cdvfile URL.
+    // cdvfile 形式の URL に変換できない場合、デバイスパス ( device path ) に
+    // 関する CDVFilesystem　URL オブジェクト、または、空白 ( 原文 「 nil 」 ) を取得します
     CDVFilesystemURL* url = [filePlugin fileSystemURLforLocalPath:path];
-    // Get a structure to return to JavaScript
+    // JavaScript に返す構造体を取得します
     NSDictionary* entry = [filePlugin makeEntryForLocalURL:url]
 
 #### JavaScript
 
-In JavaScript, to get a `cdvfile://` URL from a FileEntry or DirectoryEntry object, simply call `.toURL()` on it:
+JavaScript においては、FileEntry または DirectoryEntry オブジェクトから `cdvfile://` 形式の URL を取得する場合、 `.toURL()` を呼び出してください。
 
     var cdvfileURL = entry.toURL();
 
-In plugin response handlers, to convert from a returned FileEntry structure to an actual Entry object, your handler code should import the File plugin and create a new object:
+プラグインのレスポンスハンドラーにおいては、返された FileEntry 構造体を Entry オブジェクトへ変換する場合、ハンドラーのコード内で、File プラグインのインポートを行い、新しいオブジェクトを作成してください。
 
-    // create appropriate Entry object
+    // Entry オブジェクトの作成
     var entry;
     if (entryStruct.isDirectory) {
         entry = new DirectoryEntry(entryStruct.name, entryStruct.fullPath, new FileSystem(entryStruct.filesystemName));

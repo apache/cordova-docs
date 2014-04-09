@@ -19,7 +19,7 @@
 
 # org.apache.cordova.file
 
-このプラグインは、 [HTML5 Filesystem API](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/) に準拠しています。使用方法に関しては、HTML5 Rocks の [FileSystem article](http://www.html5rocks.com/en/tutorials/file/filesystem/) に記載の関係箇所をご確認ください。ストレージ関連のその他のオプションの概要に関しては、Cordova の [storage guide](http://cordova.apache.org/docs/en/edge/cordova_storage_storage.md.html) をご確認ください。
+このプラグインは、 [HTML5 Filesystem API](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/) に準拠しています。使用方法に関しては、HTML5 Rocks の [FileSystem article](http://www.html5rocks.com/en/tutorials/file/filesystem/) に記載の関係箇所をご確認ください。ストレージに関する他のオプションの概要に関しては、Cordova の [storage guide](http://cordova.apache.org/docs/en/edge/cordova_storage_storage.md.html) をご確認ください。
 
 ## インストール
 
@@ -38,13 +38,13 @@
 
 ## Android 特有の動作
 
-### Android の永続的な保存場所 ( Persistent storage location )
+### Android の Persistent ストレージの場所 ( ファイルの永続的な保存場所 )
 
 Android 搭載デバイスには、永続的なファイル ( persistent file ) を保存する、有効な場所が複数あります。さまざまな想定および用法に関しての議論は [こちらのページ](http://developer.android.com/guide/topics/data/data-storage.html) をご覧ください。
 
 以前のバーションのプラグインでは、起動時に、一時的なファイルと永続的なファイルの保存場所を、デバイスが SD カード (または、同様のストレージパーティション) を使用するかどうかを基に、選択できました。SD カードが使用できた場合、または、大容量の内臓ストレージパーティションが利用できた場合 （ 例 ： Nexus 搭載のデバイス ）、永続性的なファイルを、その領域の root に保存できました。この場合、Cordova アプリは、カード内の使用可能なファイルのすべてを閲覧することができました。
 
-SD カードが使用できなかった場合、以前のバージョンのプラグインでは、 /data/data/<packageId> 下にデータを保存できました。アプリ間のデータ処理は個別化できますが、これでは、ユーザ間ではデータの共有をすることができてしまいます。
+SD カードが使用できなかった場合、以前のバージョンのプラグインでは、 /data/data/<packageId> 下にデータを保存できました。アプリ間のデータ処理は個別化できましたが、これでは、ユーザ間ではデータの共有をすることができてしまいます。
 
 現在では、アプリの config.xml ファイルの設定に沿って、内部 ( Internal ) のファイルの保存場所を使用するか、または、以前の設定をそのまま使用してファイルを保存するか、選択できようになりました。この設定を行うには、config.xml ファイルに、以下のラインのいずれかを追加してください。
 
@@ -74,7 +74,7 @@ SD カードが使用できなかった場合、以前のバージョンのプ�
 - `FileReader.readAsText(blob, encoding)`
   - `encoding` パラメータはサポートしません。UTF-8 形式のエンコードが常に有効となります。
 
-### iOS の 永続的な保存場所 ( Persistent storage location )
+### iOS の Persistent ストレージの場所 ( ファイルの永続的な保存場所 )
 
 iOS 搭載デバイスには、永続的なファイル ( persistent file ) を保存する、有効な場所が 2 つあります。1 つ目は Documents ディレクトリ、2 つ目は Library ディレクトリです。以前のバーションのプラグインでは、Documents ディレクトリのみに、永続性のあるファイルを保存できました。ただ、iTunesにおいて、この方法を用いると、アプリが保有するすべてのファイルを常に表示してしまう問題がありました。特に、たんくさんの小さいサイズのファイルを処理するアプリでは問題となりました。Documents ディレクトリは、本来、エクスポートを行うドキュメントをまとめるために存在します。
 
@@ -94,7 +94,7 @@ iOS 搭載デバイスには、永続的なファイル ( persistent file ) を�
 
 このプラグインの v1.0.0 で、 `FileEntry` と `DirectoryEntry` の構造を変更しました。公開された仕様に基づき、追加変更を行いました。
 
-以前のバーション ( 1.0.0 より前 ) のプラグインでは、 `Entry` オブジェクトの `fullPath` プロパティ内に、デバイス固有のファイル保存場所への絶対パス ( device-absolute-file-location ) を保存していました。典型的なパスは、以下のようになりました。
+以前のバーション ( 1.0.0 より前 ) のプラグインでは、 `Entry` オブジェクトの `fullPath` プロパティ内に、ファイル保存場所へのデバイス固有の絶対パス ( device-absolute-file-location ) を保存していました。典型的なパスは、以下の形式となっていました。
 
     /var/mobile/Applications/<application UUID>/Documents/path/to/file  (iOS)
     /storage/emulated/0/path/to/file                                    (Android)
@@ -111,6 +111,6 @@ v1.0.0 では、 _HTML ファイルシステムの root 構造に習い、_ `ful
 
 この実行結果を使用して、ファイルを一意に識別できます。
 
-前方互換性に関して付け加えると、 `resolveLocalFileSystemURL()` には、デバイス固有の絶対パスを渡すことができ、それに対応した `Entry` オブジェクトを返します。ただし、TEMPORARY または PERSISTENT ファイルシステムにファイルが存在する場合のみ、これが当てはまります。
+後方互換性 ( backwards compatibility ) に関して付け加えると、 `resolveLocalFileSystemURL()` には、デバイス固有の絶対パスを渡すことができ、それに対応した `Entry` オブジェクトを返します。ただし、TEMPORARY または PERSISTENT ファイルシステムにファイルが存在する場合のみ、これが当てはまります。
 
 File-Transfer プラグインでは、デバイス固有の絶対パスを以前使用していたため、これが問題となっていました ( 渡すことは、いまだにできますが )。現在では、FileSystem URL を使用して支障なく動作するよう、更新しました。よって、 `entry.fullPath` を `entry.toURL()` に置き換えれば、このプラグインを使用して、デバイスのファイルを支障なく利用できるようになります。

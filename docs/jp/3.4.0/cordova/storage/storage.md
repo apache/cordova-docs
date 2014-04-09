@@ -19,31 +19,24 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Storage
 
-> An overview of storage options for Cordova.
+> Cordova が提供するストレージ オプションの概要
 
-Several storage APIs are available for Cordova applications. 
-See
-[html5rocks](http://www.html5rocks.com/en/features/storage).
-for a more complete overview and examples.
+Cordova アプリで使用できる、ストレージ API 群をご紹介します。詳細とサンプルに関しては、 [html5rocks](http://www.html5rocks.com/en/features/storage) をご確認ください。
 
 ## LocalStorage
 
-Also known as _web storage_, _simple storage_, or by its alternate
-_session storage_ interface, this API provides synchronous key/value
-pair storage, and is available in underlying WebView implementations.
-Refer to [the W3C spec](http://www.w3.org/TR/webstorage/) for details.
+_Web ストレージ_ もしくは _simple ストレージ_ として、または、_session ストレージ_ と対をなすものとして、知られています。この API では、キーと値の組み合わせを使用した、同期的なストレージ処理を行います。また、WebView の実行時にも使用できます。詳細に関しては、 [the W3C spec](http://www.w3.org/TR/webstorage/) をご確認ください。
 
-__Windows Phone 7 Quirk__: Dot notation is _not_ available, so be sure
-to use `setItem` or `getItem` rather than access keys directly from
-the storage object, as in `window.localStorage.someKey`.
+
+__Windows Phone 7 特有の動作__: ドット表記法は、_使用できません。_ `setItem` または `getItem` を使用してください。 `window.localStorage.someKey` に記載の方法 ( Storage オブジェクトからキーに対して、直接にアクセス ) は推奨しません。
 
 ## WebSQL
 
-This API is available in the underlying WebView.
-The [Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/)
-offers more full-featured database tables accessed via SQL queries.
+WebView 内で、この API を使用できます。
 
-The following platforms support WebSQL:
+[Web SQL Database Specification](http://dev.w3.org/html5/webdatabase/) では、SQL クエリーを使用して、データベースのテーブルへ問い合わせ等を行う各種機能を提案しています。
+
+以下のプラットフォームは、WebSQL をサポートします。
 
 - Android
 - BlackBerry 10
@@ -52,19 +45,15 @@ The following platforms support WebSQL:
 
 ## IndexedDB
 
-This API is available in the underlying WebView.
-[Indexed DB](http://www.w3.org/TR/IndexedDB/) offers more features
-than LocalStorage but fewer than WebSQL.
+WebView 内で、この API を使用できます。
 
-The following platforms support IndexedDB:
+[Indexed DB](http://www.w3.org/TR/IndexedDB/) では、LocalStorage と比較すると、より多彩な機能を提供します ( WebSQL と比較すると少ない機能提供となります )。
+
+以下のプラットフォームは、IndexedDB をサポートします。
 
 - Windows Phone 8
 - BlackBerry 10
 
 ## Plugin-Based Options
 
-In addition to the storage APIs listed above, the
-[File API](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md)
-allows you to cache data on the local file system.  Other
-[Cordova plugins](http://plugins.cordova.io/) provide similar storage options.
-
+上記のストレージ API に加えて、 [File API](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md) も利用できます。この API を使用して、ローカルファイルシステムに、データのキャッシュを行います。また、 [Cordova plugins](http://plugins.cordova.io/) でも同様のストレージオプションを提供しています。

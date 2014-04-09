@@ -19,7 +19,7 @@
 
 # org.apache.cordova.dialogs
 
-This plugin provides access to some native dialog UI elements.
+このプラグインを使用して、ネイティブのダイアログ関連の UI 要素にアクセスします。
 
 ## インストール
 
@@ -27,9 +27,9 @@ This plugin provides access to some native dialog UI elements.
 
 ### Firefox OS 特有の動作
 
-Create __www/manifest.webapp__ as described in 
-[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).
-Add permisions: 
+[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) に記載の内容に従い、 __www/manifest.webapp__ を作成してください。
+
+また、権限を追加してください。 
 
     "permissions": {
         "desktop-notification": {
@@ -37,7 +37,7 @@ Add permisions:
 		}
 	}
 
-Edit __www/index.html__ and add following in `head` section:
+Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追加してください。
 
 	<link rel="stylesheet" type="text/css" href="css/notification.css" />
 
@@ -50,32 +50,30 @@ Edit __www/index.html__ and add following in `head` section:
 
 ## navigator.notification.alert
 
-Shows a custom alert or dialog box.  Most Cordova implementations use a native
-dialog box for this feature, but some platforms use the browser's `alert`
-function, which is typically less customizable.
+カスタムしたアラートまたはダイアログボックスを表示します。通常、ネイティブのダイアログボックスを Cordova アプリでは使用しますが、いくつかのプラットフォームにおいては、ブラウザーの `アラート` ( alert ) 機能を使用します。ブラウザーのアラート機能では、カスタムが困難な場合もあります。
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
-- __message__: Dialog message. _(String)_
+- __message__: ダイアログのメッセージ _(String)_
 
-- __alertCallback__: Callback to invoke when alert dialog is dismissed. _(Function)_
+- __alertCallback__: アラートダイアログを消した後に呼ぶコールバック _(Function)_
 
-- __title__: Dialog title. _(String)_ (Optional, defaults to `Alert`)
+- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Alert` )
 
-- __buttonName__: Button name. _(String)_ (Optional, defaults to `OK`)
+- __buttonName__: ボタンの表示名 _(String)_ ( 任意、デフォルトでは `OK` )
 
 
 ### 例
 
     function alertDismissed() {
-        // do something
+        // 処理
     }
 
     navigator.notification.alert(
-        'You are the winner!',  // message
-        alertDismissed,         // callback
-        'Game Over',            // title
-        'Done'                  // buttonName
+        'You are the winner!',  // メッセージ
+        alertDismissed,         // コールバック
+        'Game Over',            // タイトル
+        'Done'                  // ボタンの表示名
     );
 
 ### サポート対象のプラットフォーム
@@ -91,39 +89,36 @@ function, which is typically less customizable.
 
 ### Windows Phone 7 と 8 特有の動作
 
-- There is no built-in browser alert, but you can bind one as follows to call `alert()` in the global scope:
+- ビルドインされたブラウザーアラートはありませんが、以下に示すように、グローバルスコープにおいて、 `alert()` を呼び出すよう、1 つのアラートをバインド ( bind ) することができます。
 
         window.alert = navigator.notification.alert;
 
-- Both `alert` and `confirm` are non-blocking calls, results of which are only available asynchronously.
+- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、利用できます。
 
 ### Firefox OS 特有の動作
 
-Both native-blocking `window.alert()` and non-blocking `navigator.notification.alert()` are available.
+ネイティブブロッキング ( native-blocking ) の `window.alert()` とノンブロッキング ( non-blocking ) の `navigator.notification.alert()` のどちらも利用できます。
 
 ## navigator.notification.confirm
 
-Displays a customizable confirmation dialog box.
+カスタム設定を行える、確認用ダイアログボックスを表示します。
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
-- __message__: Dialog message. _(String)_
+- __message__: ダイアログのメッセージ _(String)_
 
-- __confirmCallback__: Callback to invoke with index of button pressed (1, 2, or 3) or when the dialog is dismissed without a button press (0). _(Function)_
+- __confirmCallback__: 押されたボタン番号のインデックス ( index、例 ： 1、2、3 など ) を使用して呼ぶコールバック、または、ボタンを押さず ( 0 ) にダイアログを消したときに呼ぶコールバック _(Function)_
 
-- __title__: Dialog title. _(String)_ (Optional, defaults to `Confirm`)
+- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Confirm` )
 
-- __buttonLabels__: Array of strings specifying button labels. _(Array)_  (Optional, defaults to [`OK,Cancel`])
+- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 _(Array)_  ( 任意、デフォルトでは [`OK,Cancel`] )
 
 
 ### confirmCallback
 
-The `confirmCallback` executes when the user presses one of the
-buttons in the confirmation dialog box.
+確認用ダイアログボックスに表示した複数ボタンのうちの 1 つを押したときに、 `confirmCallback` を実行します。
 
-The callback takes the argument `buttonIndex` _(Number)_, which is the
-index of the pressed button. Note that the index uses one-based
-indexing, so the value is `1`, `2`, `3`, etc.
+このコールバックは、引数として、 `buttonIndex` _(Number)_ ( 押されたボタンのインデックス ) を取ります。インデックスは、1 から始まり ( one-based indexing / 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
 
 ### 例
 
@@ -132,10 +127,10 @@ indexing, so the value is `1`, `2`, `3`, etc.
     }
 
     navigator.notification.confirm(
-        'You are the winner!', // message
-         onConfirm,            // callback to invoke with index of button pressed
-        'Game Over',           // title
-        ['Restart','Exit']     // buttonLabels
+        'You are the winner!', // メッセージ
+         onConfirm,            // 押されたボタンのインデックスを使用して呼び出すコールバック
+        'Game Over',           // タイトル
+        ['Restart','Exit']     // ボタンのラベル名
     );
 
 ### サポート対象のプラットフォーム
@@ -151,41 +146,41 @@ indexing, so the value is `1`, `2`, `3`, etc.
 
 ### Windows Phone 7 と 8 特有の動作
 
-- There is no built-in browser function for `window.confirm`, but you can bind it by assigning:
+- `window.confirm` に使用できる、ビルドインされたブラウザー機能はありませんが、以下に示すように、バインド ( bind ) することができます。
 
         window.confirm = navigator.notification.confirm;
 
-- Calls to `alert` and `confirm` are non-blocking, so the result is only available asynchronously.
+- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、利用できます。
 
 ### Firefox OS 特有の動作
 
-Both native-blocking `window.confirm()` and non-blocking `navigator.notification.confirm()` are available.
+ネイティブブロッキング ( native-blocking ) の `window.confirm()` とノンブロッキング ( non-blocking ) の `navigator.notification.confirm()` のどちらも利用できます。
 
 ## navigator.notification.prompt
 
-Displays a native dialog box that is more customizable than the browser's `prompt` function.
+ブラウザーの `prompt` 機能よりもカスタマイズを行うことができる、ネイティブのダイアログボックスを表示します。
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
 
-- __message__: Dialog message. _(String)_
+- __message__: ダイアログのメッセージ _(String)_
 
-- __promptCallback__: Callback to invoke when a button is pressed. _(Function)_
+- __promptCallback__: ボタンを押したときに呼び出すコールバック _(Function)_
 
-- __title__: Dialog title _(String)_ (Optional, defaults to `Prompt`)
+- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Prompt`)
 
-- __buttonLabels__: Array of strings specifying button labels _(Array)_ (Optional, defaults to `["OK","Cancel"]`)
+- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 _(Array)_ ( 任意、デフォルトでは `["OK","Cancel"]`)
 
-- __defaultText__: Default textbox input value (`String`) (Optional, Default: empty string)
+- __defaultText__: テキストボックスへのデフォルトの入力値 ( `String` ) ( 任意、デフォルトでは、空の文字列 )
+
 
 ### promptCallback
 
-The `promptCallback` executes when the user presses one of the buttons
-in the prompt dialog box. The `results` object passed to the callback
-contains the following properties:
+入力用 ( prompt ) ダイアログボックスに表示した複数ボタンのうちの 1 つを押したときに、 `promptCallback` を実行します。
+以下のプロパティを格納した `results` オブジェクトをこのコールバックに渡します。
 
-- __buttonIndex__: The index of the pressed button. _(Number)_ Note that the index uses one-based indexing, so the value is `1`, `2`, `3`, etc.
+- __buttonIndex__: 押されたボタンのインデックス _(Number)_ インデックスは、1 から始まり ( one-based indexing / 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
 
-- __input1__: The text entered in the prompt dialog box. _(String)_
+- __input1__: 入力用 ( prompt ) ダイアログボックスに入力されたテキスト _(String)_
 
 ### 例
 
@@ -194,14 +189,14 @@ contains the following properties:
     }
 
     navigator.notification.prompt(
-        'Please enter your name',  // message
-        onPrompt,                  // callback to invoke
-        'Registration',            // title
-        ['Ok','Exit'],             // buttonLabels
-        'Jane Doe'                 // defaultText
+        'Please enter your name',  // メッセージ
+        onPrompt,                  // 呼び出すコールバック
+        'Registration',            // タイトル
+        ['Ok','Exit'],             // ボタンのラベル名
+        'Jane Doe'                 // デフォルトのテキスト
     );
 
-### Sサポート対象のプラットフォーム
+### サポート対象のプラットフォーム
 
 - Amazon Fire OS
 - Android
@@ -210,25 +205,25 @@ contains the following properties:
 
 ### Android 特有の動作
 
-- Android supports a maximum of three buttons, and ignores any more than that.
+- Android では、最大 3 個のボタンをサポートします。それ以上のボタンを無視します。
 
-- On Android 3.0 and later, buttons are displayed in reverse order for devices that use the Holo theme.
+- Android 3.0 以降に関して、Holo テーマを使用するデバイスでは、ボタンの表示順序を逆順にしています。
 
 ### Firefox OS 特有の動作
 
-Both native-blocking `window.prompt()` and non-blocking `navigator.notification.prompt()` are available.
+ネイティブブロッキング ( native-blocking ) の `window.prompt()` とノンブロッキング ( non-blocking ) の `navigator.notification.prompt()` のどちらも利用できます。
 
 ## navigator.notification.beep
 
-The device plays a beep sound.
+ビープ ( beep ) 音を、デバイスが鳴らします。
 
     navigator.notification.beep(times);
 
-- __times__: The number of times to repeat the beep. _(Number)_
+- __times__: ビープ音のリピート回数 _(Number)_
 
 ### 例
 
-    // Beep twice!
+    // ビープ音を 2 回鳴らす
     navigator.notification.beep(2);
 
 ### サポート対象のプラットフォーム
@@ -243,19 +238,18 @@ The device plays a beep sound.
 
 ### Amazon Fire OS 特有の動作
 
-- Amazon Fire OS plays the default __Notification Sound__ specified under the __Settings/Display & Sound__ panel.
+- Amazon Fire OS では、デフォルトの __Notification Sound__ を鳴らします ( __Settings/Display & Sound__ パネルで設定 )。
 
 ### Android 特有の動作
 
-- Android plays the default __Notification ringtone__ specified under the __Settings/Sound & Display__ panel.
+- Android では、デフォルトの __Notification ringtone__ を鳴らします ( __Settings/Sound & Display__ パネルで設定 )。
 
 ### Windows Phone 7 と 8 特有の動作
 
-- Relies on a generic beep file from the Cordova distribution.
+- Cordova が提供するビープ音のファイルを使用します。
 
 ### Tizen 特有の動作
 
-- Tizen implements beeps by playing an audio file via the media API.
+- Tizen では、media API を使用して、オーディオファイルの再生を行い、ビープ音を鳴らします。
 
-- The beep file must be short, must be located in a `sounds` subdirectory of the application's root directory, and must be named `beep.wav`.
-
+- ビープ音は短く、また、ファイルの置き場所は、アプリの root ディレクトリの `sounds` サブディレクトリ、また、ファイル名は `beep.wav` にする必要があります。

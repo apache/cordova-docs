@@ -19,12 +19,10 @@
 
 # org.apache.cordova.media
 
-This plugin provides the ability to record and play back audio files on a device.
+このプラグインを使用して、オーディオファイルの再生・録音機能をデバイスに提供します。
 
-__NOTE__: The current implementation does not adhere to a W3C
-specification for media capture, and is provided for convenience only.
-A future implementation will adhere to the latest W3C specification
-and may deprecate the current APIs.
+__注意__: 現在の実装方式は、メディアキャプチャー ( media capture ) に関数に関する W3C の仕様に準拠しておらず、利便上提供しているものです。
+将来リリースする実装方式では、最新の W3C の仕様に準拠する予定です。また、その際、現在の API 群を廃止することも検討しています。
 
 ## インストール
 
@@ -41,9 +39,9 @@ and may deprecate the current APIs.
 
 ## Windows Phone 特有の動作
 
-- Only one media file can be played back at a time.
+- 1 度に 1 つのメディアファイルのみ再生できます。
 
-- There are strict restrictions on how your application interacts with other media. See the [Microsoft documentation for details][url].
+- アプリ上でのメディア処理に関して、厳格な制限を課しています。詳細に関しては、 [Microsoft　サイト][url] を確認してください。
 
 [url]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh184838(v=vs.92).aspx
 
@@ -53,18 +51,18 @@ and may deprecate the current APIs.
 
 ### パラメータ
 
-- __src__: A URI containing the audio content. _(DOMString)_
+- __src__: オーディオコンテンツを指し示す URI _(DOMString)_
 
-- __mediaSuccess__: (Optional) The callback that executes after a `Media` object has completed the current play, record, or stop action. _(Function)_
+- __mediaSuccess__: ( 任意 ) 再生・録音・停止等の操作を `Media` オブジェクトが完了した後に、実行するコールバック _(Function)_
 
-- __mediaError__: (Optional) The callback that executes if an error occurs. _(Function)_
+- __mediaError__: ( 任意 ) エラーが発生した場合に、実行するコールバック _(Function)_
 
-- __mediaStatus__: (Optional) The callback that executes to indicate status changes. _(Function)_
 
-### Constants
+- __mediaStatus__: ( 任意  ) ステータスが変化したことを示すときに、実行するコールバック _(Function)_
 
-The following constants are reported as the only parameter to the
-`mediaStatus` callback:
+### 定数
+
+`mediaStatus` コールバックへの引数としてのみ、以下の定数を使用します。
 
 - `Media.MEDIA_NONE`     = 0;
 - `Media.MEDIA_STARTING` = 1;
@@ -74,63 +72,63 @@ The following constants are reported as the only parameter to the
 
 ### メソッド
 
-- `media.getCurrentPosition`: Returns the current position within an audio file.
+- `media.getCurrentPosition`: オーディオファイル内の現在の再生位置を返します。
 
-- `media.getDuration`: Returns the duration of an audio file.
+- `media.getDuration`: オーディオファイルの再生時間を返します。
 
-- `media.play`: Start or resume playing an audio file.
+- `media.play`: オーディオファイルの再生を開始または再開します。
 
-- `media.pause`: Pause playback of an audio file.
+- `media.pause`: オーディオファイルを一時停止します。
 
-- `media.release`: Releases the underlying operating system's audio resources.
+- `media.release`: オペレーティングシステムのオーディオリソースを開放 ( release ) します。
 
-- `media.seekTo`: Moves the position within the audio file.
+- `media.seekTo`: オーディオファイル内の再生位置を動かします。
 
-- `media.setVolume`: Set the volume for audio playback.
+- `media.setVolume`: オーディオ再生時の音量を設定します。
 
-- `media.startRecord`: Start recording an audio file.
+- `media.startRecord`: オーディオファイルの録音を開始します。
 
-- `media.stopRecord`: Stop recording an audio file.
+- `media.stopRecord`: オーディオファイルの録音を停止します。
 
-- `media.stop`: Stop playing an audio file.
+- `media.stop`: オーディオファイルの再生を停止します。
 
 ### 追加のパラメータ ( 読み取り専用 )
 
-- __position__: The position within the audio playback, in seconds.
-    - Not automatically updated during play; call `getCurrentPosition` to update.
+- __position__: オーディオ再生の位置 ( 秒単位 )
+    - 再生中、自動的には値を更新しないので、 `getCurrentPosition` メソッドを呼び、値を更新します。
 
-- __duration__: The duration of the media, in seconds.
+- __duration__: メディアの再生時間 ( 秒単位 )
 
 
 ## media.getCurrentPosition
 
-Returns the current position within an audio file.  Also updates the `Media` object's `position` parameter.
+オーディオファイル内の現在の再生位置を返します。また、 `Media` オブジェクト内の `position` パラメータを更新します。
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
 
 ### パラメータ
 
-- __mediaSuccess__: The callback that is passed the current position in seconds.
+- __mediaSuccess__: 現在の再生位置 ( 秒単位 ) を渡して、実行するコールバック
 
-- __mediaError__: (Optional) The callback to execute if an error occurs.
+- __mediaError__: ( 任意 ) エラーの発生時に実行するコールバック
 
 ### 例
 
-    // Audio player
+    // オーディオプレイヤー
     //
     var my_media = new Media(src, onSuccess, onError);
 
-    // Update media position every second
+    // メディアの再生位置を一秒ごとに更新
     var mediaTimer = setInterval(function () {
-        // get media position
+        // 再生位置を取得
         my_media.getCurrentPosition(
-            // success callback
+            // success 時のコールバック
             function (position) {
                 if (position > -1) {
                     console.log((position) + " sec");
                 }
             },
-            // error callback
+            // error 時のコールバック
             function (e) {
                 console.log("Error getting pos=" + e);
             }
@@ -140,18 +138,17 @@ Returns the current position within an audio file.  Also updates the `Media` obj
 
 ## media.getDuration
 
-Returns the duration of an audio file in seconds. If the duration is unknown, it returns a value of -1.
-
+オーディオファイルの再生時間を秒単位で返します。再生時間を取得できない場合には、「 -1 」の値を返します。
 
     media.getDuration();
 
 ### 例
 
-    // Audio player
+    // オーディオプレイヤー
     //
     var my_media = new Media(src, onSuccess, onError);
 
-    // Get duration
+    // 再生時間を取得
     var counter = 0;
     var timerDur = setInterval(function() {
         counter = counter + 100;
@@ -168,28 +165,28 @@ Returns the duration of an audio file in seconds. If the duration is unknown, it
 
 ## media.pause
 
-Pauses playing an audio file.
+オーディオファイルの再生を一時停止します。
 
     media.pause();
 
 
 ### 例
 
-    // Play audio
+    // オーディオ再生
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // URL で指定したオーディオファイルを再生
         var my_media = new Media(url,
-            // success callback
+            // success 時のコールバック
             function () { console.log("playAudio():Audio Success"); },
-            // error callback
+            // error 時のコールバック
             function (err) { console.log("playAudio():Audio Error: " + err); }
         );
 
-        // Play audio
+        // オーディオの再生
         my_media.play();
 
-        // Pause after 10 seconds
+        // 10 秒後に一時停止
         setTimeout(function () {
             media.pause();
         }, 10000);
@@ -198,68 +195,60 @@ Pauses playing an audio file.
 
 ## media.play
 
-Starts or resumes playing an audio file.
+オーディオファイルの再生を、開始または再開します。
 
     media.play();
 
 
 ### 例
 
-    // Play audio
+    // オーディオの再生
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // URL で指定したオーディオファイルを再生
         var my_media = new Media(url,
-            // success callback
+            // success 時のコールバック
             function () {
                 console.log("playAudio():Audio Success");
             },
-            // error callback
+            // error 時のコールバック
             function (err) {
                 console.log("playAudio():Audio Error: " + err);
             }
         );
-        // Play audio
+        // オーディオの再生
         my_media.play();
     }
 
 
 ### iOS 特有の動作
 
-- __numberOfLoops__: Pass this option to the `play` method to specify
-  the number of times you want the media file to play, e.g.:
+- __numberOfLoops__: `play` メソッドにこのオプションを渡して、メディアファイルのリピート回数を指定します。以下に例を示します。
 
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ numberOfLoops: 2 })
 
-- __playAudioWhenScreenIsLocked__: Pass in this option to the `play`
-  method to specify whether you want to allow playback when the screen
-  is locked.  If set to `true` (the default value), the state of the
-  hardware mute button is ignored, e.g.:
+- __playAudioWhenScreenIsLocked__: `play` メソッドにこのオプションを渡して、画面にロックがかかった状態でも再生を続行するか指定します。 `true` ( デフォルトではこちら ) に設定した場合、ハードウェアのミュートボタンの設定を無視します。以下に例を示します。
 
         var myMedia = new Media("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3")
         myMedia.play({ playAudioWhenScreenIsLocked : false })
 
-- __order of file search__: When only a file name or simple path is
-  provided, iOS searches in the `www` directory for the file, then in
-  the application's `documents/tmp` directory:
+- __order of file search__: ファイル名または簡易なパス ( simple path ) のみを提供した場合、iOS はファイルを、最初に、 `www` ディレクトリで検索して、次に、アプリの `documents/tmp` ダイレクトリで検索します。
 
         var myMedia = new Media("audio/beer.mp3")
-        myMedia.play()  // first looks for file in www/audio/beer.mp3 then in <application>/documents/tmp/audio/beer.mp3
+        myMedia.play()  // 最初に www/audio/beer.mp3 内でファイルを検索し、次に <application>/documents/tmp/audio/beer.mp3 を検索
 
 ## media.release
 
-Releases the underlying operating system's audio resources.
-This is particularly important for Android, since there are a finite amount of
-OpenCore instances for media playback. Applications should call the `release`
-function for any `Media` resource that is no longer needed.
+オペレーティングシステムのオーディオ関連のリソースを解放 ( release ) します。
+Androidでは、メディア再生に割り当てられた OpenCore インタスタンスの数には限りがあるため、解放処理は特に重要となります。 `Media` リソースが不要になった場合には、 `release` メソッドを呼び出してください。
 
     media.release();
 
 
 ### 例
 
-    // Audio player
+    // オーディオプレイヤー
     //
     var my_media = new Media(src, onSuccess, onError);
 
@@ -270,22 +259,21 @@ function for any `Media` resource that is no longer needed.
 
 ## media.seekTo
 
-Sets the current position within an audio file.
+オーディオファイル内の再生位置を設定します。
 
     media.seekTo(milliseconds);
 
 ### パラメータ
 
-- __milliseconds__: The position to set the playback position within the audio, in milliseconds.
-
+- __milliseconds__: オーディオ内の再生位置を、ミリ秒単位で指定します。
 
 ### 例
 
-    // Audio player
+    // オーディオプレイヤー
     //
     var my_media = new Media(src, onSuccess, onError);
         my_media.play();
-    // SeekTo to 10 seconds after 5 seconds
+    // 5 秒後に、10 秒の位置まで移動
     setTimeout(function() {
         my_media.seekTo(10000);
     }, 5000);
@@ -293,17 +281,17 @@ Sets the current position within an audio file.
 
 ### BlackBerry 10 特有の動作
 
-- Not supported on BlackBerry OS 5 devices.
+- BlackBerry OS 5 搭載のデバイスでは、サポートしません。
 
 ## media.setVolume
 
-Set the volume for an audio file.
+オーディオファイルの音量を設定します。
 
     media.setVolume(volume);
 
 ### パラメータ
 
-- __volume__: The volume to set for playback.  The value must be within the range of 0.0 to 1.0.
+- __volume__: 再生時の音量を指定します。0.0 から 1.0 の間で値を指定します。
 
 ### サポート対象のプラットフォーム
 
@@ -312,29 +300,29 @@ Set the volume for an audio file.
 
 ### 例
 
-    // Play audio
+    // オーディオの再生
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // URL で指定したオーディオファイルを再生
         var my_media = new Media(url,
-            // success callback
+            // success 時のコールバック
             function() {
                 console.log("playAudio():Audio Success");
             },
-            // error callback
+            // error 時のコールバック
             function(err) {
                 console.log("playAudio():Audio Error: "+err);
         });
 
-        // Play audio
+        // オーディオの再生
         my_media.play();
 
-        // Mute volume after 2 seconds
+        // 2 秒後に音量をミュートにする
         setTimeout(function() {
             my_media.setVolume('0.0');
         }, 2000);
 
-        // Set volume to 1.0 after 5 seconds
+        // 5 秒後に音量を 1.0 にする
         setTimeout(function() {
             my_media.setVolume('1.0');
         }, 5000);
@@ -343,7 +331,7 @@ Set the volume for an audio file.
 
 ## media.startRecord
 
-Starts recording an audio file.
+オーディオファイルの録音を開始します。
 
     media.startRecord();
 
@@ -356,71 +344,71 @@ Starts recording an audio file.
 
 ### 例
 
-    // Record audio
+    // オーディオの録音
     //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // success 時のコールバック
             function() {
                 console.log("recordAudio():Audio Success");
             },
 
-            // error callback
+            // error 時のコールバック
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
             });
 
-        // Record audio
+        // オーディオの録音
         mediaRec.startRecord();
     }
 
 
 ### Android 特有の動作
 
-- Android devices record audio in Adaptive Multi-Rate format. The specified file should end with a _.amr_ extension.
+- Android では、AMR ( Adaptive Multi-Rate ) 形式でオーディオを録音します。ファイルの拡張子は、 _.amr_ になります。
 
 ### iOS 特有の動作
 
-- iOS only records to files of type _.wav_ and returns an error if the file name extension is not correct.
+- iOS では、 _.wav_ 形式でファイルへの録音を行います。ファイル名の拡張子が正しくない場合、エラーを返します。
 
-- If a full path is not provided, the recording is placed in the application's `documents/tmp` directory. This can be accessed via the `File` API using `LocalFileSystem.TEMPORARY`. Any subdirectory specified at record time must already exist.
+- フルパス ( full path ) を指定しない場合、アプリの `documents/tmp` ディレクトリに録音ファイルを置きます。 `LocalFileSystem.TEMPORARY` を使用して、 `File` API 経由で、ファイルへのアクセスを行えます。録音時に指定するサブディレクトリは、既存のものである必要があります。
 
-- Files can be recorded and played back using the documents URI:
+- documents URI を使用して、ファイルを録音・再生できます。
 
         var myMedia = new Media("documents://beer.mp3")
 
 ### Tizen 特有の動作
 
-- Not supported on Tizen devices.
+- Tizen 搭載のデバイスではサポートしません。
 
 ## media.stop
 
-Stops playing an audio file.
+オーディオファイルの再生を停止します。
 
     media.stop();
 
 ### 例
 
-    // Play audio
+    // オーディオの再生
     //
     function playAudio(url) {
-        // Play the audio file at url
+        // URL で指定したオーディオファイルを再生
         var my_media = new Media(url,
-            // success callback
+            // success 時のコールバック
             function() {
                 console.log("playAudio():Audio Success");
             },
-            // error callback
+            // error 時のコールバック
             function(err) {
                 console.log("playAudio():Audio Error: "+err);
             }
         );
 
-        // Play audio
+        // オーディオの再生
         my_media.play();
 
-        // Pause after 10 seconds
+        // 10 秒後に一時停止
         setTimeout(function() {
             my_media.stop();
         }, 10000);
@@ -429,7 +417,7 @@ Stops playing an audio file.
 
 ## media.stopRecord
 
-Stops recording an audio file.
+オーディオファイルの録音を停止します。
 
     media.stopRecord();
 
@@ -442,26 +430,26 @@ Stops recording an audio file.
 
 ### 例
 
-    // Record audio
+    // オーディオの録音
     //
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // success 時のコールバック
             function() {
                 console.log("recordAudio():Audio Success");
             },
 
-            // error callback
+            // error 時のコールバック
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
             }
         );
 
-        // Record audio
+        // オーディオの録音
         mediaRec.startRecord();
 
-        // Stop recording after 10 seconds
+        //  10 秒後に録音を停止
         setTimeout(function() {
             mediaRec.stopRecord();
         }, 10000);
@@ -470,18 +458,17 @@ Stops recording an audio file.
 
 ### Tizen 特有の動作
 
-- Not supported on Tizen devices.
+- Tizen 搭載のデバイスではサポートしません。
 
 ## MediaError
 
-A `MediaError` object is returned to the `mediaError` callback
-function when an error occurs.
+エラーが発生した場合、 `mediaError` コールバック関数へ `MediaError` オブジェクトを返します。
 
 ### プロパティ
 
-- __code__: One of the predefined error codes listed below.
+- __code__: 事前に定義した以下のエラーコードのうちの 1 つ
 
-- __message__: An error message describing the details of the error.
+- __message__: 詳細を示したエラーメッセージ
 
 ### Constants
 

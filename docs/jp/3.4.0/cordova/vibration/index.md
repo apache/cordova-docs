@@ -19,7 +19,7 @@
 
 # org.apache.cordova.vibration
 
-This plugin provides a way to vibrate the device.
+このプラグインを使用して、デバイスを振動させることができます。
 
 ## インストール
 
@@ -36,22 +36,22 @@ This plugin provides a way to vibrate the device.
 
 ## notification.vibrate
 
-Vibrates the device for the specified amount of time.
+指定した時間の長さで、デバイスの振動を行います。
 
     navigator.notification.vibrate(time)
 
-- __time__: Milliseconds to vibrate the device. _(Number)_
+- __time__: ミリ秒単位で示す、デバイスの振動時間 _(Number)_
 
 
 ## 例
 
-    // Vibrate for 2.5 seconds
+    // 2.5 秒間、振動する
     navigator.notification.vibrate(2500);
 
 
 ## iOS 特有の動作
 
-- __time__: Ignores the specified time and vibrates for a pre-set amount of time.
+- __time__: 指定した時間を無視して、事前に設定された時間を使用して、振動します。
 
         navigator.notification.vibrate();
-        navigator.notification.vibrate(2500);   // 2500 is ignored
+        navigator.notification.vibrate(2500);   // 2500 を無視します
