@@ -37,11 +37,11 @@ Cordova は、最小限の API 群のみ提供しています。プラグイン�
 - [デバイス](https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md)
 > デバイス関連の情報の取得
 
-- [Device Motion (Accelerometer)](https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md)
-> Tap into the device's motion sensor.
+- [デバイスの傾きの変化 ( 加速度センサー )](https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md)
+> デバイス内臓のモーションセンサーの使用
 
-- [Device Orientation (Compass)](https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md)
-> Obtain the direction that the device is pointing.
+- [デバイスが指す方向 ( コンパス )](https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md)
+> デバイスが指す方向を取得
 
 - [ダイアログ](https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md)
 > デバイスからの通知を表示
@@ -55,8 +55,16 @@ Cordova は、最小限の API 群のみ提供しています。プラグイン�
 - [位置情報](https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md)
 > 位置情報の取得とアプリでの使用
 
+
+
+
+
 - [Globalization](https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md)
 > Enable representation of objects specific to a locale.
+
+
+
+
 
 - [InAppBrowser](https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md)
 > アプリ内でブラウザのインスタンスを立ち上げ、URL を読み込む

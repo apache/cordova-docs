@@ -19,7 +19,7 @@
 
 # org.apache.cordova.device-motion
 
-このプラグインを使用して、デバイス内臓の加速度センサーが持つ情報を取得します。加速度センサーは、 _x_, _y_, _z_ 軸の3 次元で、デバイスの傾きの変化 ( _delta_ ) を検知するモーションセンサーの 1 種です。
+このプラグインを使用して、デバイス内臓の加速度センサーが持つ情報を取得します。加速度センサーは、 _x_, _y_, _z_ 軸の 3 次元で、デバイスの傾きの変化 ( _delta_ ) を検知するモーションセンサーの 1 種です。
 
 ## インストール
 
@@ -47,10 +47,10 @@
 
 ## navigator.accelerometer.getCurrentAcceleration
 
-Get the current acceleration along the _x_, _y_, and _z_ axes.
+_x_, _y_, _z_ 軸方向に働いている加速度を取得します。
 
-These acceleration values are returned to the `accelerometerSuccess`
-callback function.
+`accelerometerSuccess` コールバック関数に、これらの加速度の値を返します。
+
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
@@ -72,28 +72,24 @@ callback function.
 
 ### iOS 特有の動作
 
-- iOS doesn't recognize the concept of getting the current acceleration at any given point.
+- iOS では、加速度情報の取得を、リアルタイムで行うことができません。
 
-- You must watch the acceleration and capture the data at given time intervals.
+- 加速度の監視とデータの取得を、一定の間隔で行う必要があります。
 
-- Thus, the `getCurrentAcceleration` function yields the last value reported from a `watchAccelerometer` call.
+- そのため、 `watchAccelerometer` コールから報告を受けた直近の値を、`getCurrentAcceleration` では使用します。
 
 ## navigator.accelerometer.watchAcceleration
 
-Retrieves the device's current `Acceleration` at a regular interval, executing
-the `accelerometerSuccess` callback function each time. Specify the interval in
-milliseconds via the `acceleratorOptions` object's `frequency` parameter.
+`accelerometerSuccess` コールバック関数を一定の間隔で毎回実行して、デバイスの現在の `Acceleration` を取得します。 `acceleratorOptions` オブジェクトの `frequency` パラメーターを使用して、間隔 ( ミリ秒単位 ) を指定します。
 
-The returned watch ID references the accelerometer's watch interval,
-and can be used with `navigator.accelerometer.clearWatch` to stop watching the
-accelerometer.
+返された watch ID を使用して、加速度センサーの監視間隔 ( watch interval ) を参照します。また、加速度センサーの監視を停止するときには、 `navigator.accelerometer.clearWatch` とこの ID を使用します。
 
     var watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess,
                                                            accelerometerError,
                                                            [accelerometerOptions]);
 
-- __accelerometerOptions__: An object with the following optional keys:
-  - __frequency__: How often to retrieve the `Acceleration` in milliseconds. _(Number)_ (Default: 10000)
+- __accelerometerOptions__: オブジェクト ( 以下のキーを保持 ) 
+  - __frequency__: `Acceleration` を取得する間隔　( ミリ秒単位 ) _(Number)_ ( デフォルトでは、10000 )
 
 
 ###  例
@@ -109,45 +105,40 @@ accelerometer.
         alert('onError!');
     };
 
-    var options = { frequency: 3000 };  // Update every 3 seconds
+    var options = { frequency: 3000 };  // 3 秒毎に更新
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
 ### iOS 特有の動作
 
-The API calls the success callback function at the interval requested,
-but restricts the range of requests to the device between 40ms and
-1000ms. For example, if you request an interval of 3 seconds,
-(3000ms), the API requests data from the device every 1 second, but
-only executes the success callback every 3 seconds.
+success コールバック関数を、 API は、リクエストした間隔で呼び出しますが、その間隔は、40ms から 1000ms の間となっています。たとえば、3 秒間隔 ( 3000ms ) でリクエストを行った場合、API 側は、データのリクエストを1 秒ごとに行いますが、success コールバック関数の実行を 3 秒ごとに行います。
+
 
 ## navigator.accelerometer.clearWatch
 
-Stop watching the `Acceleration` referenced by the `watchID` parameter.
+`watchID` パラメーターを参照して、`Acceleration` の監視を停止します。
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: The ID returned by `navigator.accelerometer.watchAcceleration`.
+- __watchID__: `navigator.accelerometer.watchAcceleration` が返す ID 
 
 ###  例
 
     var watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 
-    // ... later on ...
+    // ... 少し経過してから ...
 
     navigator.accelerometer.clearWatch(watchID);
 
 ## Acceleration
 
-Contains `Accelerometer` data captured at a specific point in time.
-Acceleration values include the effect of gravity (9.81 m/s^2), so that when a
-device lies flat and facing up, _x_, _y_, and _z_ values returned should be
-`0`, `0`, and `9.81`.
+特定の時間に取得した `Accelerometer` データを格納します。加速度の値には、重力加速度 ( 9.81 m/s^2 )
+ も含まれるため、デバイスの画面を上に向け、水平にした場合、 返される _x_, _y_, _z_ の値は、`0`, `0`, `9.81` となります。
 
 ### プロパティ
 
-- __x__:  Amount of acceleration on the x-axis. (in m/s^2) _(Number)_
-- __y__:  Amount of acceleration on the y-axis. (in m/s^2) _(Number)_
-- __z__:  Amount of acceleration on the z-axis. (in m/s^2) _(Number)_
-- __timestamp__: Creation timestamp in milliseconds. _(DOMTimeStamp)_
+- __x__:  x 軸における速度の変化量 ( m/s^2 単位 ) _(Number)_
+- __y__:  y 軸における速度の変化量 ( m/s^2 単位 ) _(Number)_
+- __z__:  z 軸における速度の変化量 ( m/s^2 単位 ) _(Number)_
+- __timestamp__: 作成時のタイムスタンプ ( ミリ秒単位 ) _(DOMTimeStamp)_
 

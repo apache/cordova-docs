@@ -19,8 +19,7 @@
 
 # org.apache.cordova.globalization
 
-This plugin obtains information and performs operations specific to the user's
-locale and timezone.
+このプラグインを使用して、ユーザのロケール ( locale ) と タイムゾーン ( timezone ) に対応した、情報の取得と操作の実行を行います。
 
 ## インストール
 
@@ -48,28 +47,25 @@ locale and timezone.
 
 ## navigator.globalization.dateToString
 
-Returns a date formatted as a string according to the client's locale and timezone.
+クライアントのロケールとタイムゾーンに対応する、文字列形式の日付を返します。
 
     navigator.globalization.dateToString(date, successCallback, errorCallback, options);
 
 ### 解説
 
-Returns the formatted date `String` via a `value` property accessible
-from the object passed as a parameter to the `successCallback`.
+`value` プロパティー経由で、`文字列` ( String ) 形式の日付を返します。 `successCallback` にパラメーターとして渡したオブジェクトが、 `value` プロパティーを格納しています
 
-The inbound `date` parameter should be of type `Date`.
+インバウンド ( inbound ) する `date` パラメーターは、 `Date` 型です。
 
-If there is an error formatting the date, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+日付のフォーマット時にエラーが発生した場合、パラメーターとして、 `GlobalizationError` オブジェクトを使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.FORMATTING\_ERROR` となります。
 
-The `options` parameter is optional, and its default values are:
+`options`　パラメーターの設定は任意です。デフォルト値を以下に示します。
 
     {formatLength:'short', selector:'date and time'}
 
-The `options.formatLength` can be `short`, `medium`, `long`, or `full`.
+`options.formatLength` は、 `short` 、 `medium` 、 `long` 、 `full` のいづれかとなります。
 
-The `options.selector` can be `date`, `time` or `date and time`.
+`options.selector` は、 `date` 、 `time` 、 `date and time` のいづれかとなります。
 
 ### サポート対象のプラットフォーム
 
@@ -80,9 +76,7 @@ The `options.selector` can be `date`, `time` or `date and time`.
 
 ### 例
 
-If the browser is set to the `en\_US` locale, this displays a popup
-dialog with text similar to `date: 9/25/2012 4:21PM` using the default
-options:
+ブラウザーのロケールが `en\_US` に設定されている場合、以下のオプションを使用して、 `date: 9/25/2012 4:21PM` 形式のテキストをポップアップ ダイアログに表示します。
 
     navigator.globalization.dateToString(
         new Date(),
@@ -93,38 +87,34 @@ options:
 
 ### Windows Phone 8 特有の動作
 
-- The `formatLength` option supports only `short` and `full` values.
+- `formatLength` オプションでは、 `short` と `full` の値のみサポートします。
 
 ## navigator.globalization.getCurrencyPattern
 
-Returns a pattern string to format and parse currency values according
-to the client's user preferences and ISO 4217 currency code.
+クライアントが行った設定と ISO 4217 通貨コードの選択に従い、通貨価値のパース処理 ( parse ) と通貨のフォーマット処理 ( format ) を行うときに使用・適用する、文字列形式の パターン ( pattern ) を返します。
 
      navigator.globalization.getCurrencyPattern(currencyCode, successCallback, errorCallback);
 
 ### 解説
 
-Returns the pattern to the `successCallback` with a `properties` object
-as a parameter. That object should contain the following properties:
+`properties` オブジェクトをパラメーターとして使用し、 `successCallback` に パターン ( pattern ) を渡します。オブジェクトは、以下のパラメーターを格納しています。
 
-- __pattern__: The currency pattern to format and parse currency values.  The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). _(String)_
+- __pattern__: 通貨価値のパース処理と通貨のフォーマット処理を行うときに使用する、通貨に関するパターン ( pattern )。 パターンは、 [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html) に準拠しています。 _(String)_
 
-- __code__: The ISO 4217 currency code for the pattern. _(String)_
 
-- __fraction__: The number of fractional digits to use when parsing and formatting currency. _(Number)_
+- __code__: パターン ( pattern ) に適用する ISO 4217 の通貨コード _(String)_
 
-- __rounding__: The rounding increment to use when parsing and formatting. _(Number)_
+- __fraction__: 通貨のパース処理とフォーマット処理を行う際に使用する、少数の桁数 _(Number)_
 
-- __decimal__: The decimal symbol to use for parsing and formatting. _(String)_
+- __rounding__: 通貨のパース処理とフォーマット処理を行う際に適用する、端数処理 ( 切り捨て・切り上げ ) _(Number)_
 
-- __grouping__: The grouping symbol to use for parsing and formatting. _(String)_
+- __decimal__: 通貨のパース処理とフォーマット処理を行う際に使用する、少数点の記号 _(String)_
 
-The inbound `currencyCode` parameter should be a `String` of one of
-the ISO 4217 currency codes, for example 'USD'.
+- __grouping__: 通貨のパース処理とフォーマット処理を行う際に使用する、区切り記号 ( grouping symbol/separtor ) _(String)_
 
-If there is an error obtaining the pattern, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
+インバウンド ( inbound ) する `currencyCode` パラメーターには、ISO 4217 の通貨コードの `定義` ( 文字列 ) を使用します。例 : 'USD'
+
+パターン ( pattern ) の取得時にエラーが発生した場合、パラメーターとして、 `GlobalizationError` オブジェクトを使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.FORMATTING\_ERROR` となります。
 
 ### サポート対象のプラットフォーム
 
@@ -134,9 +124,7 @@ error's expected code is `GlobalizationError.FORMATTING\_ERROR`.
 
 ### 例
 
-When the browser is set to the `en\_US` locale and the selected
-currency is United States Dollars, this example displays a popup
-dialog with text similar to the results that follow:
+ブラウザーのロケールが `en\_US` に設定され、また、選択された通貨が US ドルの場合、以下の結果をポップアップ ダイアログに表示します。
 
     navigator.globalization.getCurrencyPattern(
         'USD',
@@ -151,7 +139,7 @@ dialog with text similar to the results that follow:
         function () { alert('Error getting pattern\n'); }
     );
 
-Expected result:
+期待する結果 :
 
     pattern: $#,##0.##;($#,##0.##)
     code: USD
@@ -163,30 +151,23 @@ Expected result:
 
 ## navigator.globalization.getDateNames
 
-Returns an array of the names of the months or days of the week,
-depending on the client's user preferences and calendar.
+クライアントが行った設定とカレンダーの選択に従い、曜日または月の名が入った配列を返します。
 
     navigator.globalization.getDateNames(successCallback, errorCallback, options);
 
 ### 解説
 
-Returns the array of names to the `successCallback` with a
-`properties` object as a parameter. That object contains a `value`
-property with an `Array` of `String` values. The array features names
-starting from either the first month in the year or the first day of
-the week, depending on the option selected.
+パラメーターとして、 `properties` オブジェクトを使用して、曜日または月の名を入れた配列を `successCallback` に渡します。 `配列` ( `文字列` の値が入る ) を使用している `value` プロパティーを、オブジェクトは格納します。また、この配列には、その年の最初の月、または、週の最初の日から始まる、月または曜日名が入っています。どちらかが入るかは、オプション設定に依ります。
 
-If there is an error obtaining the names, then the `errorCallback`
-executes with a `GlobalizationError` object as a parameter. The
-error's expected code is `GlobalizationError.UNKNOWN\_ERROR`.
+月または曜日名の取得時にエラーが発生した場合、パラメーターとして、 `GlobalizationError` オブジェクトを使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.UNKNOWN\_ERROR` となります。
 
-The `options` parameter is optional, and its default values are:
+`options`　パラメーターの設定は任意です。デフォルト値を以下に示します。
 
     {type:'wide', item:'months'}
 
-The value of `options.type` can be `narrow` or `wide`.
+`options.type` の値は、 `narrow` または `wide`　となります。
 
-The value of `options.item` can be `months` or `days`.
+`options.item` の値は、 `months` または `days` となります。
 
 ### サポート対象のプラットフォーム
 
@@ -197,9 +178,7 @@ The value of `options.item` can be `months` or `days`.
 
 ### 例
 
-When the browser is set to the `en\_US` locale, this example displays
-a series of twelve popup dialogs, one per month, with text similar to
-`month: January`:
+ブラウザーのロケールが `en\_US` に設定した場合、一連の 12 個 ( 1 個あたり ひと月 ) のポップアップ ダイアログ上に、`month: January` のようなテキストを表示します。
 
     navigator.globalization.getDateNames(
         function (names) {
@@ -211,26 +190,28 @@ a series of twelve popup dialogs, one per month, with text similar to
         { type: 'wide', item: 'months' }
     );
 
-
 ## navigator.globalization.getDatePattern
 
-Returns a pattern string to format and parse dates according to the
-client's user preferences.
+クライアントの選択肢に基づき、日付のパース処理 ( parse ) と日付のフォーマット処理 ( format ) を行うときに使用・適用する、文字列形式の パターン ( pattern ) を返します。
 
     navigator.globalization.getDatePattern(successCallback, errorCallback, options);
 
 ### 解説
 
-Returns the pattern to the `successCallback`. The object passed in as
-a parameter contains the following properties:
+`successCallback` に パターン ( pattern ) を渡します。その際にパラメータとして使用するオブジェクトは、以下のプロパティーを格納しています。
 
-- __pattern__: The date and time pattern to format and parse dates. The patterns follow [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html). _(String)_
+- __pattern__: 日付のパース処理とフォーマット処理を行うときに使用する、日時に関するパターン ( pattern )。パターンは、 [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html) に準拠しています。 _(String)_
 
-- __timezone__: The abbreviated name of the time zone on the client. _(String)_
+- __timezone__: クライアントのタイムゾーンの略称 _(String)_
 
-- __utc\_offset__: The current difference in seconds between the client's time zone and coordinated universal time. _(Number)_
+- __utc\_offset__: クライアントのタイムゾーンと協定世界時 ( UTC ) 間の時差 ( 秒単位 ) _(Number)_
 
 - __dst\_offset__: The current daylight saving time offset in seconds between the client's non-daylight saving's time zone and the client's daylight saving's time zone. _(Number)_
+
+
+
+
+
 
 If there is an error obtaining the pattern, the `errorCallback`
 executes with a `GlobalizationError` object as a parameter. The
