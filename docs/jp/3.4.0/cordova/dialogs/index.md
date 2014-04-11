@@ -93,11 +93,11 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
         window.alert = navigator.notification.alert;
 
-- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、利用できます。
+- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、取得できます。
 
 ### Firefox OS 特有の動作
 
-ネイティブブロッキング ( native-blocking ) の `window.alert()` とノンブロッキング ( non-blocking ) の `navigator.notification.alert()` のどちらも利用できます。
+同期的 ( 原文　「native-blocking」 ) に実行される `window.alert()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `avigator.notification.alert()` の両方を使用できます。
 
 ## navigator.notification.confirm
 
@@ -150,11 +150,11 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
         window.confirm = navigator.notification.confirm;
 
-- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、利用できます。
+- `alert` と `confirm` は、どちらもノンブロッキング コール ( non-blocking call ) です。どちらの処理結果も、非同期的にのみ、取得できます。
 
 ### Firefox OS 特有の動作
 
-ネイティブブロッキング ( native-blocking ) の `window.confirm()` とノンブロッキング ( non-blocking ) の `navigator.notification.confirm()` のどちらも利用できます。
+同期的 ( 原文　「native-blocking」 ) に実行される `window.confirm()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `navigator.notification.confirm()` の両方を使用できます。
 
 ## navigator.notification.prompt
 
@@ -211,7 +211,7 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ### Firefox OS 特有の動作
 
-ネイティブブロッキング ( native-blocking ) の `window.prompt()` とノンブロッキング ( non-blocking ) の `navigator.notification.prompt()` のどちらも利用できます。
+同期的 ( 原文　「native-blocking」 ) に実行される `window.prompt()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `navigator.notification.prompt()` の両方を使用できます。
 
 ## navigator.notification.beep
 

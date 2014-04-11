@@ -169,9 +169,7 @@ __注意__ : 位置情報に関するデータの取得・利用には、個人�
 
 - __timeout__: `navigator.geolocation.getCurrentPosition` または `geolocation.watchPosition` を呼んでから、 対応する `geolocationSuccess` コールバックを実行するまでの最大経過時間　 ( ミリ秒 )。 `geolocationSuccess` コールバックをこの時間内に呼べない場合、 `PositionError.TIMEOUT` エラーコードを `geolocationError` に渡します ( 注意 : `geolocation.watchPosition` と共に使用したとき、 `timeout` に設定したミリ秒単位間隔で、 `geolocationError` を呼び出すことになる場合もあります)。 _(Number)_
 
-- __maximumAge__: Accept a cached position whose age is no greater than the specified time in milliseconds. _(Number)_
-
-
+- __maximumAge__: 指定された時間 ( ミリ秒単位 ) 以下の有効期間 ( age ) を持っている、 キャッシュされた位置情報のみ許容します。 _(Number)_
 
 ### Android 特有の動作
 
