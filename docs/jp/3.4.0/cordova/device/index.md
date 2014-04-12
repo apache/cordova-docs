@@ -19,8 +19,8 @@
 
 # org.apache.cordova.device
 
-このプラグインを使用して、グローバル (大域) な `device` オブジェクトを生成します。このオブジェクトを使用して、デバイスのハードウェアとソフトウェアに関する情報を格納します。
-このオブジェクトは、グローバルスコープ ( global scope ) に属しますが、利用できるのは `deviceready` イベント後となります。
+このプラグインを使用して、グローバルな `device` オブジェクトを生成します。このオブジェクトを使用して、デバイスのハードウェアとソフトウェアに関する情報を格納します。
+このオブジェクトは、グローバルスコープに属しますが、利用できるのは `deviceready` イベント後となります。
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {

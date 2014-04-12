@@ -49,7 +49,7 @@
 
 _x_, _y_, _z_ 軸方向に働いている加速度を取得します。
 
-`accelerometerSuccess` コールバック関数に、これらの加速度の値を返します。
+`accelerometerSuccess` コールバック関数に、これらの加速度の値を渡します。
 
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
@@ -80,7 +80,7 @@ _x_, _y_, _z_ 軸方向に働いている加速度を取得します。
 
 ## navigator.accelerometer.watchAcceleration
 
-`accelerometerSuccess` コールバック関数を一定の間隔で毎回実行して、デバイスの現在の `Acceleration` を取得します。 `acceleratorOptions` オブジェクトの `frequency` パラメーターを使用して、間隔 ( ミリ秒単位 ) を指定します。
+`accelerometerSuccess` コールバック関数を一定の間隔で毎回実行して、デバイスの現在の `加速度` ( Acceleration ) を取得します。 `acceleratorOptions` オブジェクトの `frequency` パラメーターを使用して、間隔 ( ミリ秒単位 ) を指定します。
 
 返された watch ID を使用して、加速度センサーの監視間隔 ( watch interval ) を参照します。また、加速度センサーの監視を停止するときには、 `navigator.accelerometer.clearWatch` とこの ID を使用します。
 
@@ -89,7 +89,7 @@ _x_, _y_, _z_ 軸方向に働いている加速度を取得します。
                                                            [accelerometerOptions]);
 
 - __accelerometerOptions__: オブジェクト ( 以下のキーを保持 ) 
-  - __frequency__: `Acceleration` を取得する間隔　( ミリ秒単位 ) _(Number)_ ( デフォルトでは、10000 )
+  - __frequency__: `加速度` ( Acceleration ) を取得する間隔　( ミリ秒単位、デフォルトでは、10000 ) _(Number)_ 
 
 
 ###  例
@@ -116,7 +116,7 @@ success コールバック関数を、 API は、リクエストした間隔で�
 
 ## navigator.accelerometer.clearWatch
 
-`watchID` パラメーターを参照して、`Acceleration` の監視を停止します。
+`watchID` パラメーターを参照して、`加速度` ( Acceleration ) の監視を停止します。
 
     navigator.accelerometer.clearWatch(watchID);
 
@@ -132,7 +132,7 @@ success コールバック関数を、 API は、リクエストした間隔で�
 
 ## Acceleration
 
-特定の時間に取得した `Accelerometer` データを格納します。加速度の値には、重力加速度 ( 9.81 m/s^2 )
+特定の時間に取得した `加速度` ( Acceleration ) データを格納します。加速度の値には、重力加速度 ( 9.81 m/s^2 )
  も含まれるため、デバイスの画面を上に向け、水平にした場合、 返される _x_, _y_, _z_ の値は、`0`, `0`, `9.81` となります。
 
 ### プロパティ

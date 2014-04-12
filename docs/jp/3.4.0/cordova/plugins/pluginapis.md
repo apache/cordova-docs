@@ -17,11 +17,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Plugin API
+# プラグイン API
 
-Cordova は、最小限の API 群のみ提供しています。プラグインを使用して、プロジェクトに必要な他の API 群を追加してください。
+最小限の API のみ、Cordova では提供しています。他の機能を必要とする場合、プラグインを使用して、プロジェクトに必要な API を追加してください。
 
-[Plugin Registry](http://plugins.cordova.io/) で、既存のプラグインを検索できます。
+[登録 プラグイン](http://plugins.cordova.io/) で、既存のプラグインを検索できます。
 
 また、既存の Cordova プラグインの情報に関しては、以下のサイトをご確認ください。
 
@@ -47,27 +47,19 @@ Cordova は、最小限の API 群のみ提供しています。プラグイン�
 > デバイスからの通知を表示
 
 - [ファイルシステム](https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md)
-> ネイティブファイルシステムへ、JavaScript を使用して接続
+> ネイティブのファイルシステムへ、JavaScript を使用して接続
 
 - [ファイル転送](https://github.com/apache/cordova-plugin-file-transfer/blob/dev/doc/index.md)
-> ネイティブファイルシステムへ、JavaScript を使用して接続
+> ネイティブのファイルシステムへ、JavaScript を使用して接続
 
 - [位置情報](https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md)
 > 位置情報の取得とアプリでの使用
 
-
-
-
-
-- [Globalization](https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md)
-> Enable representation of objects specific to a locale.
-
-
-
-
+- [国際対応](https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md)
+> ロケール別にオブジェクト内容をカスタマイズ
 
 - [InAppBrowser](https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md)
-> アプリ内でブラウザのインスタンスを立ち上げ、URL を読み込む
+> ブラウザのインスタンスのアプリ内での立ち上げ、および、URL の読み込み
 
 - [メディア](https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md)
 > オーディオファイルの再生と録音
@@ -76,14 +68,14 @@ Cordova は、最小限の API 群のみ提供しています。プラグイン�
 > デバイス搭載のメディアキャプチャー用アプリを使用した、メディアファイルのキャプチャー
 
 - [ネットワーク情報 ( 接続情報 )](https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md)
-> ネットワーク状態とネットワーク接続情報の確認
+> ネットワーク接続状態と情報の確認
 
 - [スプラッシュスクリーン](https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md)
 > アプリケーションのスプラッシュスクリーンの表示と非表示
 
 - [バイブレーション](https://github.com/apache/cordova-plugin-vibration/blob/dev/doc/index.md)
-> デバイスを振動させるときに使用する API 
+> デバイスの振動を行うときに使用する API 
 
-各国語に訳されたプラグイン ドキュメントをご利用できます （ 以前のバーションの Cordova ドキュメントを参照して、見つけます ）。このサイトのトップ右端に表示されたドロップダウン メニューから言語とバージョンを選択できます。
+( 原文の記載内容 ) 各国語に訳されたプラグイン ドキュメントをご利用できます （ 以前のバーションの Cordova ドキュメントを参照して、見つけます ）。このサイトのトップ右端に表示されたドロップダウン メニューから言語とバージョンを選択できます。
 
 

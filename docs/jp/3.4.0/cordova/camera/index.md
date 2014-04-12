@@ -19,14 +19,13 @@
 
 # org.apache.cordova.camera
 
-このプラグインを使用して、写真撮影およびシステムのイメージライブラリからのイメージの選択を行うことができます。
+このプラグインを使用して、写真撮影および画像の選択 （ システムの画像ライブラリ内 ) を行うことができます。
 
     cordova plugin add org.apache.cordova.camera
 
-
 ## navigator.camera.getPicture
 
-デバイスのカメラでの写真撮影、または、デバイスの画像ギャラリー内の画像検索を行います。画像は Base64 形式の文字列として、または、画像ファイルの URI を、Success コールバック関数に引き渡します。このメソッド自体は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、ファイル選択用のポップオーバー ( popover ) の位置を変更できます。
+デバイス内臓カメラでの写真撮影、または、デバイスの画像ギャラリー内の画像検索を行います。取得した画像は、Base64 形式の文字列として、または、画像ファイルの URI を、Success コールバック関数に引き渡します。このメソッド自体は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、ファイル選択用のポップオーバー ( popover ) の位置を変更できます。
 
     navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 
@@ -34,18 +33,16 @@
 
 The `camera.getPicture` 関数を使用して、デバイス搭載のカメラアプリを起動して、写真撮影を行います。デフォルトでは、 `Camera.sourceType` と `Camera.PictureSourceType.CAMERA` が等しいときに、この処理を実行します。 
 
-写真の撮影後、カメラアプリを終了して、アプリケーションに戻ります。
+写真の撮影後は、カメラアプリを終了して、対象のアプリケーションに戻ります。
 `Camera.sourceType` が `Camera.PictureSourceType.PHOTOLIBRARY` の場合、または、 `Camera.PictureSourceType.SAVEDPHOTOALBUM` の場合、写真選択用のダイアログが表示され、既存の写真を選択できます。 `camera.getPicture` 関数は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、画像選択用のダイアログの位置を変更できます。例えば、端末の向きを変えた場合に使用します。
 
-返り値は `cameraSuccess` 関数に送信されます。値は `cameraOptions` の設定に従い、以下のいずれかのフォーマットで送られます。
+返り値は `cameraSuccess` 関数に渡されます。値 ( 文字列 ) は `cameraOptions` の設定に基づき、以下のいずれかのフォーマットで送られます。
 
+- Base64 形式でエンコードされた写真画像を表す `文字列`
 
+- ローカルストレージ内の画像ファイルの場所を表す `文字列` ( デフォルト )
 
-- Base64 形式でエンコードされたフォトイメージを表す `文字列`
-
-- ローカルストレージ内の画像ファイルの場所を表す `文字列` (デフォルト)
-
-エンコードされたイメージまたは URI を使用して、さまざまな処理を行うことができます。以下に例を示します。
+エンコードされた画像または URI を使用して、さまざまな処理を行うことができます。以下に例を示します。
 
 - `<img>` タグで画像を表示。使用例を次のセクションで示します。
 
@@ -53,7 +50,7 @@ The `camera.getPicture` 関数を使用して、デバイス搭載のカメラ�
 
 - リモートサーバーにデータを送信
 
-__注意:__ 最新のデバイスで撮影した写真は高い解像度を持っています。デバイスのギャラリーから取得する画像は `quality` パラメーターで画質を指定しても、縮小されません。メモリーの問題を回避するために、 `Camera.destinationType` を `DATA_URL` ではなく、 `FILE_URI` に設定してください。
+__注意:__ 最新のデバイスで撮影した写真は高い解像度になります。デバイスのギャラリーから取得する画像は `quality` パラメーターで画質を指定しても、縮小されません。メモリー問題を回避するために、 `Camera.destinationType` を、`DATA_URL` ではなく、`FILE_URI` に設定してください。
 
 ### サポート対象のプラットフォーム
 
@@ -73,14 +70,14 @@ __注意:__ 最新のデバイスで撮影した写真は高い解像度を持�
 
 ### Android 特有の動作
 
-*Android 4.4 のみが対象*: Android 4.4 では、新しい [ ストレージ アクセス フレームワーク](https://developer.android.com/guide/topics/providers/document-provider.html) を導入しました。このフレームワークを使用して、各ドキュメント ストレージ プロバイダー が保有するドキュメントの検索と表示が簡単に行えるようになりました。Cordova では、 `destinationType` を `FILE_URI` に設定して、ユーザが "Recent" 、 "Drive" 、 "Images" 、 "External Storage" のいずれかを選択したとき、 `getPicture()` メソッドが写真を適当に返さないため、このストレージ アクセス フレームワークを完全には実装していません。ただし、"Gallery" アプリを最初に使用した場合、写真の選択を適当に行うことができます。
-この問題に対する一時的な回避策として [StackOverflow 問題解決策](http://stackoverflow.com/questions/19834842/android-gallery-on-kitkat-returns-different-uri-for-intent-action-get-content/20177611) をご確認ください。また、この問題の途中経過は [CB-5398](https://issues.apache.org/jira/browse/CB-5398) をご確認ください。 
+*Android 4.4 特有*: Android 4.4 では、新しい [ ストレージ アクセス フレームワーク](https://developer.android.com/guide/topics/providers/document-provider.html) を導入しました。このフレームワークを使用して、各ドキュメント ストレージ プロバイダー が保有するドキュメントの検索と表示が簡単に行えるようになりました。Cordova では、 `destinationType` を `FILE_URI` に設定して、"Recent" 、 "Drive" 、 "Images" 、 "External Storage" のいずれかをユーザが選択したとき、 `getPicture()` メソッドが写真を適当に返さないため、このストレージ アクセス フレームワークを完全には実装していません。ただし、"Gallery" アプリを最初に使用した場合、写真の選択を適当に行うことができます。
+この問題に対する一時的な回避策として [StackOverflow 問題解決策](http://stackoverflow.com/questions/19834842/android-gallery-on-kitkat-returns-different-uri-for-intent-action-get-content/20177611) をご確認ください。また、この問題の途中経過に関しては [CB-5398](https://issues.apache.org/jira/browse/CB-5398) をご確認ください。 
 
 写真を撮影するために、Android はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
 
 ### Firefox OS 特有の動作
 
-カメラ用プラグインは、現在、 [Web Activities](https://hacks.mozilla.org/2013/01/introducing-web-activities/) を使用します。 
+カメラ用プラグインは、現在、[Web Activities](https://hacks.mozilla.org/2013/01/introducing-web-activities/) を使用しています。 
 
 ### iOS 特有の動作
 
@@ -100,7 +97,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 ### 例
 
-写真を撮影し、 Base64 形式のイメージとして取得します。
+写真を撮影し、 Base64 形式の画像として取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.DATA_URL
@@ -115,7 +112,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
         alert('Failed because: ' + message);
     }
 
-写真を撮影し、イメージファイルの位置を取得します。
+写真を撮影し、画像ファイルの位置を取得します。
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
         destinationType: Camera.DestinationType.FILE_URI });
@@ -145,7 +142,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 ### オプション
 
-- __quality__: 保存したイメージの画質を指定します。 範囲は 0 から 100 まであり、100 を指定すると非圧縮時の解像度となります。_(Number)_ ( カメラ解像度に関する情報を利用することはできません )
+- __quality__: 保存した画像の画質を指定します。 範囲は 0 から 100 まであり、100 を指定すると非圧縮時の解像度となります ( カメラ解像度に関する情報は利用できません )。 _(Number)_ 
 
 - __destinationType__: 返り値のフォーマットを指定します。フォーマットは `navigator.camera.DestinationType` で定義します。 _(Number)_
 
@@ -163,7 +160,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
             SAVEDPHOTOALBUM : 2
         };
 
-- __allowEdit__: イメージ選択の前に、簡単な編集を許可します。 _(Boolean)_
+- __allowEdit__: 画像選択の前に、簡単な編集を許可します。 _(Boolean)_
 
 - __encodingType__: 返される画像ファイルのエンコード形式を選択します。形式は `navigator.camera.EncodingType` で定義します。_(Number)_
 
@@ -174,7 +171,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 - __targetWidth__: 画像を拡大・縮小するための幅をピクセルで指定します。 __targetHeight__ と共に使用しなければなりません。  アスペクト比は一定に保持されます。 _(Number)_
 
-- __targetHeight__: 画像を拡大・縮小するための高さをピクセルで指定します。 __targetWidth__ と共に使用しなければなりません。アスペクト比は一定に保持されます。 _(Number)_
+- __targetHeight__: 画像を拡大・縮小するための縦の長さをピクセルで指定します。 __targetWidth__ と共に使用しなければなりません。アスペクト比は一定に保持されます。 _(Number)_
 
 - __mediaType__: 画像の取得元のメディアの種類を指定します。 `PictureSourceType` に `PHOTOLIBRARY` または `SAVEDPHOTOALBUM` が指定されている場合のみ有効です。メディアの種類は `nagivator.camera.MediaType` で定義します。 _(Number)_
 
@@ -184,7 +181,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
             ALLMEDIA : 2   // 全種類のメディアが対象。
 };
 
-- __correctOrientation__: 写真を撮影したときと同じデバイスの向きになるよう写真を回転させます。 _(Boolean)_
+- __correctOrientation__: 写真を撮影したときのデバイスの向きになるよう、写真を回転させます。 _(Boolean)_
 
 - __saveToPhotoAlbum__: 写真を撮影した後、デバイスのフォトアルバムに画像を保存します。 _(Boolean)_
 
@@ -249,9 +246,9 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 ### iOS 特有の動作
 
-- いくつかのデバイスで発生するメモリーエラーを防ぐため、 `quality` を 50 以下に設定してください。
+- 一部のデバイスで発生するメモリーエラーを防ぐため、 `quality` を 50 以下に設定してください。
 
-- `destinationType.FILE_URI` を使用した場合、アプリケーションの temporary ディレクトリに写真は保存されます。ストレージの空きが少ない場合、 `navigator.fileMgr` API を使用して、ディレクトリ内のコンテンツを消去できます。
+- `destinationType.FILE_URI` を使用した場合、アプリケーションの temporary ディレクトリに写真を保存します。ストレージの空きが少ない場合、 `navigator.fileMgr` API を使用して、ディレクトリ内のコンテンツを消去できます。
 
 ### Tizen 特有の動作
 
@@ -271,7 +268,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 ## CameraError
 
-エラーメッセージを表示する、onError コールバック関数です。
+エラーメッセージを表示する、onError 時のコールバック関数です。
 
     function(message) {
         // エラーメッセージを表示
@@ -286,17 +283,19 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 onSuccess callback function that provides the image data.
 
+画像データを返す、onSuccess 時のコールバック関数です。
+
     function(imageData) {
         // Do something with the image
     }
 
 ### パラメータ
 
-- __imageData__: Base64 encoding of the image data, _or_ the image file URI, depending on `cameraOptions` in effect. _(String)_
+- __imageData__: Base64 形式でエンコードした画像データ、_または_、画像を指す file URI。どちらになるかは、`cameraOptions` に基づきます。 _(String)_
 
 ### 例
 
-    // Show image
+    // 画像の表示
     //
     function cameraCallback(imageData) {
         var image = document.getElementById('myImage');
@@ -320,7 +319,7 @@ onSuccess callback function that provides the image data.
 
 ポップオーバー ( popover ) の位置を設定します。
 
-__Parameters__:
+__パラメーター__:
 
 - `cameraPopoverOptions`: `CameraPopoverOptions` で、新しい位置を指定します。
 
@@ -358,7 +357,7 @@ iOS 専用のパラメーターです。iPad のライブラリまたはアル�
 
 - __width__: 画面上に表示するポップオーバー ( popover ) の幅をピクセルで表します。 _(Number)_
 
-- __height__: 画面上に表示するポップオーバー ( popover ) の高さをピクセルで表します。 _(Number)_
+- __height__: 画面上に表示するポップオーバー ( popover ) の縦の長さをピクセルで表します。 _(Number)_
 
 - __arrowDir__: ポップオーバー ( popover ) の矢印の向きを表します。 `Camera.PopoverArrowDirection` で定義します。 _(Number)_
 

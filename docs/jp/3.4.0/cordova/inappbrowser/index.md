@@ -19,12 +19,11 @@
 
 # org.apache.cordova.inappbrowser
 
-このプラグインを使用して、 `window.open()` の呼び出したとき、または、 `<a target="_blank">` 形式のリンクを開けたとき、別のウェブブラウザーを立ち上げます。
+`window.open()` を呼び出したとき、または、 `<a target="_blank">` 形式のリンクを開いたとき、このプラグインを使用して、Web ブラウザー ビューを立ち上げます。
 
     var ref = window.open('http://apache.org', '_blank', 'location=yes');
 
-__注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser ウィンドウ ) は、標準のウェブブラウザーと同じ動作をします。また、Cordova API 群へのアクセスを行うことはできません。
-
+__注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser ウィンドウ ) は、標準の Web ブラウザーと同じ動作をします。また、Cordova API へのアクセスはできません。
 
 ## インストール
 
@@ -32,26 +31,26 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 
 ## window.open
 
-新しい `InAppBrowser` のインスタンス内、現在のブラウザのインスタンス内、または、システムブラウザー内で、URL を開きます。
+新しい `InAppBrowser` のインスタンス内で、現在のブラウザのインスタンス内で、または、システムブラウザー内で、URL を開きます。
 
     var ref = window.open(url, target, options);
 
 - __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
-- __url__: 読み込み対象の URL _(String)_ 。 Unicode 文字が URL に含む場合、 `encodeURI()` を使用して変換します。
+- __url__: 読み込み対象の URL _(String)_ 。 Unicode 文字が URL に含まれる場合、 `encodeURI()` を使用して変換します。
 - __target__: URL の読み込み先として使用するブラウザーの種別。任意のパラメータです。デフォルトでは、 `_self` となります。 _(String)_
-    - `_self`: URL がホワイトリストにある場合には、 Cordova WebView で開きます。それ以外の場合には、 `InAppBrowser` で開きます。
+    - `_self`: URL がホワイトリストに載っている場合には、 Cordova WebView で開きます。それ以外の場合には、 `InAppBrowser` で開きます。
     - `_blank`: `InAppBrowser` で開きます。
-    - `_system`: システムのウェブブラウザーで開きます。
+    - `_system`: システムの Web ブラウザーで開きます。
 - __options__: `InAppBrowser` で使用するオプションです。任意で使用します。デフォルトでは、 `location=yes` となります。 _(String)_
 
-    `options` の文字列に、空白は挿入できません。各設定 ( 名称と値の組み合わせ ) の間を、コンマで区切る必要があります。各設定の名称では、大文字・小文字を区別しません。すべてのプラットフォームで以下の値はサポートします。
+    `options` の文字列に、空白は挿入できません。各設定 ( 名称と値の組み合わせ ) の間を、コンマで区切る必要があります。各設定の名称では、大文字・小文字を区別しません。すべてのプラットフォームで以下の値をサポートします。
 
     - __location__: `yes` または `no` を設定すると、 `InAppBrowser` のロケーションバーを表示または非表示にします。
 
     Android のみ適用 :
 
     - __closebuttoncaption__: __Done__ ボタン上の表示名として使用する文字列を設定します。   
-    - __hidden__: `yes` に設定した場合、ブラウザーの作成とページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
+    - __hidden__: `yes` に設定した場合、ブラウザーの立ち上げとページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
     - __clearcache__: `yes` に設定した場合、新規のウィンドウを開く前に、ブラウザーのクッキーとキャッシュを削除します。
     - __clearsessioncache__: `yes` に設定した場合、新規のウィンドウを開く前に、セッション クッキーとキャッシュを削除します。
     
@@ -61,9 +60,9 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
     - __disallowoverscroll__: `yes` または `no` を設定すると( デフォルトでは `no` )、UIWebViewBounce プロパティをオンまたはオフにします。
     - __hidden__: `yes` に設定した場合、ブラウザーの作成とページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
     - __toolbar__: `yes` または `no` を設定すると、 `InAppBrowser` のツールバーを表示または非表示にします ( デフォルトでは `yes` ) 。
-    - __enableViewportScale__: `yes` または `no` に設定して、meta タグを使用したビューポート ( viewport )の尺度変更を有効または無効にします ( デフォルトでは `no` 。
+    - __enableViewportScale__: `yes` または `no` に設定して、meta タグを使用したビューポート ( viewport ) の尺度変更を有効または無効にします ( デフォルトでは `no` 。
     - __mediaPlaybackRequiresUserAction__: `yes` または `no` に設定して、 HTML5 の audio または video の自動再生を有効または無効にします ( デフォルトでは `no` )。
-    - __allowInlineMediaPlayback__: デバイス固有の再生用インターフェイスを使用するのではなく、ブラウザのウィンドウ内で表示をしている、 HTML5 のインライン メディアを使用した再生処理を、`yes` または `no` に設定して、許可または不許可にします。HTML の `video` 要素には `webkit-playsinline` 属性を指定する必要があります ( デフォルトは `no` )。
+    - __allowInlineMediaPlayback__: デバイス固有の再生用インターフェイスを使用するのではなく、ブラウザのウィンドウ内で表示をしている、 HTML5 のインライン メディアを使用した再生処理を、許可または不許可 ( `yes` または `no` に設定 ) にします。HTML の `video` 要素には `webkit-playsinline` 属性を指定する必要があります ( デフォルトは `no` )。
     - __keyboardDisplayRequiresUserAction__: JavaScript の `focus()` を使用して、form 要素がフォーカスされたとき、キーボードを表示するかどうかを、`yes` または `no` で設定します ( デフォルト値は `yes` )。
     - __suppressesIncrementalRendering__: 閲覧する新規コンテンツをすべて受け取った後に、レンダリングを行うかどうかを、`yes` または `no` で設定します ( デフォルト値は `no` )。
     - __presentationstyle__: `pagesheet` 、 `formsheet` 、 `fullscreen` のいずれかを設定して、 [presentation style](http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/Reference/Reference.html#//apple_ref/occ/instp/UIViewController/modalPresentationStyle) を設定します ( デフォルトでは `fullscreen` )。
@@ -85,7 +84,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 
 ## InAppBrowser
 
-The object returned from a call to `window.open`.
+`window.open` を呼び出し、返ってきたオブジェクトです。
 
 ### メソッド
 
@@ -103,12 +102,12 @@ The object returned from a call to `window.open`.
     ref.addEventListener(eventname, callback);
 
 - __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
-- __eventname__: リッスン ( listen/処理 ) 対象のイベント _(String)_
+- __eventname__: リッスン ( listen ) 対象のイベント _(String)_
   - __loadstart__: `InAppBrowser` が URL を読み込み始めたときに発火するイベント
   - __loadstop__: `InAppBrowser` が URL を読み込み終えたときに発火するイベント
   - __loaderror__: URL の読み込みの際に、 `InAppBrowser` がエラーを検出したときに発火するイベント
   - __exit__: `InAppBrowser` ウィンドウを閉じるときに発火するイベント
-- __callback__: イベントが発火したときに実行する関数。パラメータとして `InAppBrowserEvent` オブジェクトをこの関数に渡します。
+- __callback__: イベントが発火したときに実行する関数。 `InAppBrowserEvent` オブジェクトをパラメータとしてこの関数に渡します。
 
 ### InAppBrowserEvent Properties
 
@@ -138,7 +137,7 @@ The object returned from a call to `window.open`.
     ref.removeEventListener(eventname, callback);
 
 - __ref__: `InAppBrowser` ウィンドウへの参照 _(InAppBrowser)_
-- __eventname__: リッスン ( listen/処理 ) する、停止対象のイベント _(String)_
+- __eventname__: リッスン ( listen ) する、停止対象のイベント _(String)_
   - __loadstart__: `InAppBrowser` が URL を読み込み始めたときに発火するイベント
   - __loadstop__: `InAppBrowser` が URL を読み込み終えたときに発火するイベント
   - __loaderror__: URL の読み込みの際に、 `InAppBrowser` がエラーを検出したときに発火するイベント

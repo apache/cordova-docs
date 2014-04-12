@@ -19,10 +19,9 @@
 
 # org.apache.cordova.network-information
 
-This plugin provides an implementation of an old version of the
-[Network Information API](http://www.w3.org/TR/2011/WD-netinfo-api-20110607/).
-It provides information about the device's cellular and
-wifi connection, and whether the device has an internet connection.
+このプラグインを使用して、 [Network Information API](http://www.w3.org/TR/2011/WD-netinfo-api-20110607/) ( 旧バージョン ) の実装を行います。
+
+携帯電話ネットワークと wifi 接続に関する情報、および、デバイスのインターネット接続情報を取得するときに使用します。
 
 ## インストール
 
@@ -93,7 +92,7 @@ Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection`
 
 ### Windows Phone 特有の動作
 
-- エミュレーターで実行しているとき、 `navigator.connection.type` を `Connection.UNKNOWN` として常に認識します。 
+- エミュレーターで実行しているとき、常に、 `navigator.connection.type` を `Connection.UNKNOWN` として認識します。 
 
 - Windows Phone では、ネットワーク接続のタイプを認識することが出来ません。
     - すべての携帯ネットワークデータにおいて、 `navigator.connection.type` を `Connection.CELL` に設定します。
@@ -113,7 +112,7 @@ Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection`
 
 ### 詳細
 
-デバイスのネットワーク接続が切れたときに、 `offline` イベントが発火します。ネットワーク接続が切れているため、アプリは、インターネットへアクセスできません。Connection API と同じ情報を使用して、 `connection.type` が `NONE` から他の値に変わったときに発火します。
+デバイスのネットワーク接続が切れたときに、 `オフライン` ( offline ) イベントが発火します。ネットワーク接続が切れているため、アプリは、インターネットへアクセスできません。Connection API と同じ情報を使用して、 `connection.type` が `NONE` から他の値に変わったときに発火します。
 
 `deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
@@ -122,13 +121,13 @@ Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection`
     document.addEventListener("offline", onOffline, false);
 
     function onOffline() {
-        // offline イベントの処理
+        // オフライン イベントの処理
     }
 
 
 ### iOS 特有の動作
 
-初回起動 ( initial startup ) 中は、最初の offline イベント ( 発火の条件が揃った場合 ) が発火するまで、最低 1 秒かかります。
+初回起動 ( initial startup ) 中は、最初の オフライン ( offline ) イベントが発火するまで ( 発火の条件が揃った場合 )、最低 1 秒かかります。
 
 ### Windows Phone 7 特有の動作
 
@@ -146,7 +145,7 @@ Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection`
 
 ### 詳細
 
-アプリからのインターネットへの接続を行うため、ネットワーク接続を行っていないデバイスがネットワーク接続を行うとき、 `online` イベントが発火します。Connection API と同じ情報を使用して、 `connection.type` が `NONE` に変わったときに発火します。
+アプリからのインターネットへの接続を行うため、ネットワーク接続を行っていないデバイスがネットワーク接続を行うとき、 `オンライン` ( online ) イベントが発火します。Connection API と同じ情報を使用して、 `connection.type` が `NONE` に変わったときに発火します。
 
 `deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 
@@ -155,13 +154,13 @@ Cordova 2.3.0 までは、 `navigator.network.connection` 経由で `Connection`
     document.addEventListener("online", onOnline, false);
 
     function onOnline() {
-        // online イベントの処理
+        // オンライン イベントの処理
     }
 
 
 ### iOS 特有の動作
 
-初回起動 ( initial startup ) 中は、最初の online イベント ( 発火の条件が揃った場合 ) が発火するまで、最低 1 秒かかります。また、このイベントは、 
+初回起動 ( initial startup ) 中は、最初の オンライン ( online ) イベントが発火するまで ( 発火の条件が揃った場合 )、最低 1 秒かかります。また、このイベントは、 
 `connection.type` が `UNKNOWN` と認識される前に発火します。
 
 ### Windows Phone 7 特有の動作

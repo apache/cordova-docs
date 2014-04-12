@@ -19,13 +19,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # startcallbutton
 
-呼び出し開始ボタンを押したときに、このイベントが発火します。
+通話の呼び出し開始ボタンを押したときに、このイベントが発火します。
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
 
 ## 詳細
 
-デフォルトの呼び出し開始ボタンの挙動を上書きしたい場合、 `startcallbutton` イベントにイベントリスナーを登録することができます。
+デフォルトの呼び出し開始ボタンの挙動を上書きする場合、 `startcallbutton` イベントにイベントリスナーを登録することができます。
 
 `deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 

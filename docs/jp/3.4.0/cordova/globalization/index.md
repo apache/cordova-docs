@@ -101,7 +101,7 @@
 
 - __pattern__: 通貨価値のパース処理と通貨のフォーマット処理を行うときに使用する、通貨に関するパターン ( pattern )。 パターンは、 [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html) に準拠しています。 _(String)_
 
-- __code__: パターン ( pattern ) に適用する ISO 4217 の通貨コード _(String)_
+- __code__: パターン ( pattern ) に使用する ISO 4217 の通貨コード _(String)_
 
 - __fraction__: 通貨のパース処理とフォーマット処理を行うときに使用する、少数の桁数 _(Number)_
 
@@ -156,7 +156,7 @@
 
 ### 解説
 
-`properties` オブジェクトをパラメーターとして使用して、曜日または月の名を入れた配列を `successCallback` に渡します。 `配列` ( `文字列` の値が入る ) を使用している `value` プロパティーを、オブジェクトは格納しています。また、この配列には、その年の最初の月、または、週の最初の日から始まる、月または曜日名が入っています。どちらかが入るかは、オプション設定に依ります。
+`properties` オブジェクトをパラメーターとして使用して、曜日または月の名を入れた配列を `successCallback` に渡します。 `配列` ( `文字列` の値が入る ) を使用している `value` プロパティーを、オブジェクトは格納しています。また、この配列には、その年の最初の月名、または、週の最初の曜日名が入っています。どちらかが入るかは、オプション設定に依ります。
 
 月または曜日名の取得時にエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.UNKNOWN\_ERROR` となります。
 
@@ -164,7 +164,7 @@
 
     {type:'wide', item:'months'}
 
-`options.type` の値は、 `narrow` または `wide`　となります。
+`options.type` の値は、 `narrow` または `wide` となります。
 
 `options.item` の値は、 `months` または `days` となります。
 
@@ -253,7 +253,7 @@
 
 ### 解説
 
-週の曜日には、1 から始まる番号が割り当てられます。1 は、日曜日を指します。 `properties` オブジェクトをパラメーターとして使用して、 `successCallback` に曜日を渡します。このオブジェクトは、 `番号` ( Number ) の値を設定した `value` プロパティーを格納しています。
+週の曜日には、1 から始まる番号が割り当てられます。1 は、日曜日を指します。 `properties` オブジェクトをパラメーターとして使用して、 `successCallback` に曜日を渡します。このオブジェクトは、 `曜日番号` の値を設定した `value` プロパティーを格納しています。
 
 パターン ( pattern ) の取得時にエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.UNKNOWN\_ERROR` となります。
 
@@ -279,7 +279,7 @@
 
 ### 解説
 
- `properties` オブジェクトをパラメーターとして使用して、文字列形式のロケール識別子 ( locale ID ) を `successCallback` に渡します。このオブジェクトは、 `文字列` ( String ) の値を設定した `value` プロパティーを格納しています。
+`properties` オブジェクトをパラメーターとして使用して、文字列形式のロケール識別子 ( locale ID ) を `successCallback` に渡します。このオブジェクトは、 `ロケール識別子` の値を設定した `value` プロパティーを格納しています。
 
 ロケールの取得時にエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.UNKNOWN\_ERROR` となります。
 
@@ -315,7 +315,7 @@
 
 - __pattern__: 数値のパース処理とフォーマット処理を行うときに使用する、数値に関するパターン ( pattern )。パターンは、 [Unicode Technical Standard #35](http://unicode.org/reports/tr35/tr35-4.html) に準拠しています。 _(String)_
 
-- __symbol__: パース処理とフォーマット処理を行うときに使用する記号 ( 例 : 通貨記号またはパーセント表示 ) _(String)_
+- __symbol__: パース処理とフォーマット処理を行うときに使用する、記号 ( 例 : 通貨記号またはパーセント表示 ) _(String)_
 
 - __fraction__: 数値のパース処理とフォーマット処理を行うときに使用する、少数の桁数 _(Number)_
 
@@ -387,7 +387,7 @@ The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづ
 
 ### 解説
 
-`properties` オブジェクトをパラメーターとして使用して、文字列形式の言語識別子 ( language ID ) を `successCallback` に渡します。このオブジェクトは、 `文字列` ( String ) の値を設定した `value` プロパティーを格納しています。
+`properties` オブジェクトをパラメーターとして使用して、文字列形式の言語識別子 ( language ID ) を `successCallback` に渡します。このオブジェクトは、 `言語識別子` の値を設定した `value` プロパティーを格納しています。
 
 言語情報の取得時にエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.UNKNOWN\_ERROR` となります。
 
@@ -453,9 +453,9 @@ The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづ
 
 `properties` オブジェクトをパラメーターとして使用して、文字列形式の数値を `successCallback` に渡します。このオブジェクトは、 `文字列` ( String ) の値を設定した `value` プロパティーを格納しています。
 
-数値のフォーマットにエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.FORMATTING\_ERROR` となります。
+数値のフォーマット時にエラーが発生した場合、 `GlobalizationError` オブジェクトをパラメーターとして使用して、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.FORMATTING\_ERROR` となります。
 
-`options`　パラメーターの設定は任意です。デフォルト値を以下に示します。
+`options` パラメーターの設定は任意です。デフォルト値を以下に示します。
 
     {type:'decimal'}
 
@@ -501,7 +501,7 @@ The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづ
 
 - __second__: 秒 ( 0-59 ) _(Number)_
 
-- __millisecond__: ミリ秒 ( 0-999 )。一部のプラットフォームのみで有効。 _(Number)_
+- __millisecond__: ミリ秒 ( 0-999 )。一部のプラットフォームでのみ有効。 _(Number)_
 
 インバウンド ( inbound ) する `dateString` パラメーターは、 文字列形式です。
 
@@ -523,7 +523,7 @@ The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづ
 
 ### 例
 
-ブラウザーのロケールを `en\_US` に設定した場合、ポップアップ ダイアログ上に、 `month:8 day:25 year:2012` に似たテキストを表示します。月を示す整数は、配列のインデックスを指す為、実際の文字列の数より、その整数は「 1 」だけ少ない数となります。
+ブラウザーのロケールを `en\_US` に設定した場合、ポップアップ ダイアログ上に、 `month:8 day:25 year:2012` に似たテキストを表示します。月を示す整数は、配列のインデックスを指す為、実際の文字列の数より、「 1 」だけ少ない数となります。
 
     navigator.globalization.stringToDate(
         '9/25/2012',
@@ -551,11 +551,11 @@ The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづ
 
 文字列形式の数値の読み込み ( parse ) 時にエラーが発生した場合、 `errorCallback` を実行します。このときに使用するエラーコードは、 `GlobalizationError.PARSING\_ERROR` となります。
 
-`options`　パラメーターの設定は任意です。デフォルト値を以下に示します。
+`options` パラメーターの設定は任意です。デフォルト値を以下に示します。
 
     {type:'decimal'}
 
-The `options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづれかとなります。
+`options.type` の値は、 `decimal` 、 `percent` 、 `currency` のいづれかとなります。
 
 ### サポート対象のプラットフォーム
 

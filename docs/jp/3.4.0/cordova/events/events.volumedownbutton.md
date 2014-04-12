@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 詳細
 
-デフォルトのボリュームダウン ボタンの挙動を上書きしたい場合、 `volumedownbutton` イベントにイベントリスナーを登録することができます。
+デフォルトのボリュームダウン ボタンの挙動を上書きする場合、 `volumedownbutton` イベントにイベントリスナーを登録することができます。
 
 `deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 

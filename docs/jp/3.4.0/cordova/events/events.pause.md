@@ -81,19 +81,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## iOS 特有の動作
 
-`pause` ハンドラー内では、 Objective-C を利用するネイティブ プラグインの呼び出し、または、Cordova API の呼び出しを行うことはできません。同様に alerts または `console.log` のような、インタラクティブな呼び出しも行うことはできません。これらの呼び出しは、アプリ再開直後のランループ ( run loop ) で実行されます。
+Objective-C を利用するネイティブ プラグインの呼び出し、または、Cordova API の呼び出しを、`pause` ハンドラー内で行うことはできません。同様に alerts または `console.log` のような、インタラクティブな呼び出しも行うことはできません。これらの呼び出しは、アプリ再開直後のランループ ( run loop ) で実行されます。
 
-The iOS-specific `resign` event is available as an alternative to
-`pause`, and detects when users enable the __Lock__ button to lock the
-device with the app running in the foreground.  If the app (and
-device) is enabled for multi-tasking, this is paired with a subsequent
-`pause` event, but only under iOS 5. In effect, all locked apps in iOS
-5 that have multi-tasking enabled are pushed to the background.  For
-apps to remain running when locked under iOS 5, disable the app's
-multi-tasking by setting
-[UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)
-to `YES`. To run when locked on iOS 4, this setting does not matter.
-
-
-`pause` イベントの代替として使用できる、iOS 固有の `resign` イベントがあります。このイベントでは、フォアグラウンド ( foreground ) で実行中のアプリに、ユーザがデバイスにロックをかけたこと ( __ロック__ ボタンを押した状態 ) を検知できます。アプリ ( およびデバイス ) のマルチタスク処理が有効になっている場合には、後の処理で `pause` イベント 1 つと組み合わせることもできます。ただし、iOS 5 のみが対象となります。実行結果として、iOS 5 であれば、ロックされたアプリ ( マルチタスク処理が有効となっていること ) は、バックグラウンド処理に切り替わります。iOS 5 で、ロックがかかった状態でも処理を継続させるためには、 [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) を `YES` に設定して、アプリのマルチタスク処理を無効にします。iOS 4 の場合、ロックされた状態での処理の継続は、この設定では行えません。
-
+`pause` イベントの代替として使用できる、iOS 固有の `resign` イベントがあります。このイベントでは、フォアグラウンド ( foreground ) で実行中のアプリに、ユーザがデバイスにロックをかけたこと ( __ロック__ ボタンを押した状態 ) を検知できます。アプリ ( およびデバイス ) のマルチタスク処理が有効になっている場合には、後の処理で `pause` イベント 1 つと組み合わせることもできます。ただし、iOS 5 のみが対象となります。実行結果として、iOS 5 であれば、ロックされたアプリ ( マルチタスク処理が有効となっていること ) は、バックグラウンド処理に切り替わります。iOS 5 において、ロックがかかった状態でも処理を継続させるためには、 [UIApplicationExitsOnSuspend](http://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) を `YES` に設定して、アプリのマルチタスク処理を無効にします。iOS 4 の場合、ロックされた状態での処理の継続は、この設定では行えません。

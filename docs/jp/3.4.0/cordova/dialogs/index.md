@@ -37,7 +37,7 @@
 		}
 	}
 
-Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追加してください。
+__www/index.html__ を編集して、以下の記述を `head` 部分に追加してください。
 
 	<link rel="stylesheet" type="text/css" href="css/notification.css" />
 
@@ -50,7 +50,7 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ## navigator.notification.alert
 
-カスタムしたアラートまたはダイアログボックスを表示します。通常、ネイティブのダイアログボックスを Cordova アプリでは使用しますが、いくつかのプラットフォームにおいては、ブラウザーの `アラート` ( alert ) 機能を使用します。ブラウザーのアラート機能では、カスタムが困難な場合もあります。
+カスタマイズしたアラートまたはダイアログボックスを表示します。通常、ネイティブのダイアログボックスを Cordova アプリでは使用しますが、いくつかのプラットフォームにおいては、ブラウザーの`アラート` ( alert ) 機能を使用します。ブラウザーの標準アラート機能では、カスタマイズが困難な場合もあります。
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
@@ -58,9 +58,9 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 - __alertCallback__: アラートダイアログを消した後に呼ぶコールバック _(Function)_
 
-- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Alert` )
+- __title__: ダイアログのタイトル ( 任意、デフォルトでは `Alert` ) _(String)_ 
 
-- __buttonName__: ボタンの表示名 _(String)_ ( 任意、デフォルトでは `OK` )
+- __buttonName__: ボタンの表示名 ( 任意、デフォルトでは `OK` ) _(String)_ 
 
 
 ### 例
@@ -89,7 +89,7 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ### Windows Phone 7 と 8 特有の動作
 
-- ビルドインされたブラウザーアラートはありませんが、以下に示すように、グローバルスコープにおいて、 `alert()` を呼び出すよう、1 つのアラートをバインド ( bind ) することができます。
+- ビルドインされたブラウザーアラートはありませんが、以下に示すように、グローバルスコープにおいて、`alert()` を呼び出すよう、1 つのアラートをバインド ( bind ) することができます。
 
         window.alert = navigator.notification.alert;
 
@@ -97,28 +97,27 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ### Firefox OS 特有の動作
 
-同期的 ( 原文　「native-blocking」 ) に実行される `window.alert()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `avigator.notification.alert()` の両方を使用できます。
+同期的 ( 原文 「native-blocking」 ) に実行される `window.alert()` 、および、非同期的 ( 原文 「non-blocking」 ) に実行される `avigator.notification.alert()` の両方を使用できます。
 
 ## navigator.notification.confirm
 
-カスタム設定を行える、確認用ダイアログボックスを表示します。
+設定をカスタマイズできる、確認用ダイアログボックスを表示します。
 
     navigator.notification.confirm(message, confirmCallback, [title], [buttonLabels])
 
 - __message__: ダイアログのメッセージ _(String)_
 
-- __confirmCallback__: 押されたボタン番号のインデックス ( index、例 ： 1、2、3 など ) を使用して呼ぶコールバック、または、ボタンを押さず ( 0 ) にダイアログを消したときに呼ぶコールバック _(Function)_
+- __confirmCallback__: 押されたボタン番号のインデックス ( index、例 ： 1、2、3 など ) を使用して呼び出すコールバック、または、ボタンを押さず ( 0 ) にダイアログを消したときに呼び出すコールバック _(Function)_
 
-- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Confirm` )
+- __title__: ダイアログのタイトル ( 任意、デフォルトでは `Confirm` ) _(String)_ 
 
-- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 _(Array)_  ( 任意、デフォルトでは [`OK,Cancel`] )
-
+- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 ( 任意、デフォルトでは [`OK,Cancel`] ) _(Array)_ 
 
 ### confirmCallback
 
 確認用ダイアログボックスに表示した複数ボタンのうちの 1 つを押したときに、 `confirmCallback` を実行します。
 
-このコールバックは、引数として、 `buttonIndex` _(Number)_ ( 押されたボタンのインデックス ) を取ります。インデックスは、1 から始まり ( one-based indexing / 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
+このコールバックは、引数として、`buttonIndex` ( 押されたボタンのインデックス ) _(Number)_ を取ります。インデックスは、1 から始まり ( 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
 
 ### 例
 
@@ -154,11 +153,11 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ### Firefox OS 特有の動作
 
-同期的 ( 原文　「native-blocking」 ) に実行される `window.confirm()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `navigator.notification.confirm()` の両方を使用できます。
+同期的 ( 原文 「native-blocking」 ) に実行される `window.confirm()` 、および、非同期的 ( 原文 「non-blocking」 ) に実行される `navigator.notification.confirm()` の両方を使用できます。
 
 ## navigator.notification.prompt
 
-ブラウザーの `prompt` 機能よりもカスタマイズを行うことができる、ネイティブのダイアログボックスを表示します。
+ブラウザー標準の `prompt` 機能よりも自由にカスタマイズできる、ネイティブのダイアログボックスを表示します。
 
     navigator.notification.prompt(message, promptCallback, [title], [buttonLabels], [defaultText])
 
@@ -166,11 +165,11 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 - __promptCallback__: ボタンを押したときに呼び出すコールバック _(Function)_
 
-- __title__: ダイアログのタイトル _(String)_ ( 任意、デフォルトでは `Prompt`)
+- __title__: ダイアログのタイトル ( 任意、デフォルトでは `Prompt`) _(String)_ 
 
-- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 _(Array)_ ( 任意、デフォルトでは `["OK","Cancel"]`)
+- __buttonLabels__: ボタンのラベル名を入れた文字列の配列 ( 任意、デフォルトでは `["OK","Cancel"]`) _(Array)_ 
 
-- __defaultText__: テキストボックスへのデフォルトの入力値 ( `String` ) ( 任意、デフォルトでは、空の文字列 )
+- __defaultText__: テキストボックスへのデフォルトの入力値 ( 任意、デフォルトでは、空の文字列 ) _(String)_ 
 
 
 ### promptCallback
@@ -178,7 +177,7 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 入力用 ( prompt ) ダイアログボックスに表示した複数ボタンのうちの 1 つを押したときに、 `promptCallback` を実行します。
 以下のプロパティを格納した `results` オブジェクトをこのコールバックに渡します。
 
-- __buttonIndex__: 押されたボタンのインデックス _(Number)_ インデックスは、1 から始まり ( one-based indexing / 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
+- __buttonIndex__: 押されたボタンのインデックス _(Number)_。インデックスは、1 から始まり ( 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
 
 - __input1__: 入力用 ( prompt ) ダイアログボックスに入力されたテキスト _(String)_
 
@@ -205,13 +204,13 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 ### Android 特有の動作
 
-- Android では、最大 3 個のボタンをサポートします。それ以上のボタンを無視します。
+- Android では、最大 3 個のボタンをサポートします。それ以上のボタンは無視します。
 
-- Android 3.0 以降に関して、Holo テーマを使用するデバイスでは、ボタンの表示順序を逆順にしています。
+- Android 3.0 以降において、Holo テーマを使用するデバイスでは、ボタンの表示順序を逆順にしています。
 
 ### Firefox OS 特有の動作
 
-同期的 ( 原文　「native-blocking」 ) に実行される `window.prompt()` 、および、非同期的 ( 原文　「non-blocking」 ) に実行される `navigator.notification.prompt()` の両方を使用できます。
+同期的 ( 原文 「native-blocking」 ) に実行される `window.prompt()` 、および、非同期的 ( 原文 「non-blocking」 ) に実行される `navigator.notification.prompt()` の両方を使用できます。
 
 ## navigator.notification.beep
 
@@ -252,4 +251,4 @@ Edit __www/index.html__ を編集して、以下の記述を `head` 部分に追
 
 - Tizen では、media API を使用して、オーディオファイルの再生を行い、ビープ音を鳴らします。
 
-- ビープ音は短く、また、ファイルの置き場所は、アプリの root ディレクトリの `sounds` サブディレクトリ、また、ファイル名は `beep.wav` にする必要があります。
+- ファイルの置き場所は、アプリの root ディレクトリの `sounds` サブディレクトリとなります。また、ファイル名は `beep.wav` にする必要があります。また、ビープ音は短くする必要があります。

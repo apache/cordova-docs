@@ -34,15 +34,15 @@
 - Windows Phone 7 and 8*
 - Windows 8*
 
-\* _`onprogress` と `abort()` をサポートしません。_
+\* _`onprogress` と `abort()` のサポートを行っていません。_
 
 # FileTransfer
 
-HTTP マルチパート形式の POST リクエストを使用して、ファイルのアップロードとダウンロードを行うときに、 `FileTransfer` オブジェクトを使用します。
+HTTP マルチパート POST リクエストを使用して、ファイルのアップロードとダウンロードを行うときに、 `FileTransfer` オブジェクトを使用します。
 
 ## プロパティ
 
-- __onprogress__: データの送受信を行うときに、 `ProgressEvent` を使用して、呼び出す関数 _(Function)_
+- __onprogress__: データの送受信を行うときに、`ProgressEvent` を使用して、呼び出す関数 _(Function)_
 
 ## メソッド
 
@@ -277,4 +277,4 @@ File プラグイン ( 原文では単に「 File 」 ) のバージョンを 1.
 
     cdvfile://localhost/persistent/path/to/file
 
-`download()` と `upload()` の両メソッド内において、ファイルへの絶対パスを置く引数に、この URL を使用できます。
+`download()` と `upload()` の両メソッド内において、ファイルへの絶対パスを指定する引数に、この URL を使用できます。

@@ -19,7 +19,7 @@
 
 # org.apache.cordova.battery-status
 
-このプラグインを使用して、 [Battery Status Events API](http://www.w3.org/TR/2011/WD-battery-status-20110915/) の旧バージョンを実装します。
+このプラグインを使用して、 [Battery Status Events API](http://www.w3.org/TR/2011/WD-battery-status-20110915/) ( 旧バージョン ) の実装を行います。
 
 これにより、以下の 3 つの `window` イベントを追加できます。
 
@@ -39,7 +39,7 @@
 
 - __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
+- __isPlugged__: デバイスが充電中かどうか示す boolean 値 _(Boolean)_
 
 `deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
 
@@ -56,7 +56,7 @@
 
 ### Windows Phone 7 と 8 特有の動作
 
-Windows Phone 7 では、バッテリー残量のレベルを検知するネイティブ API を提供していません。よって、 `level` プロパティを使用できません。 一方、 `isPlugged` パラメータは _サポートしています。_
+Windows Phone 7 では、バッテリー残量のレベルを検知するネイティブ API を提供していません。よって、`level` プロパティを使用できません。 一方、`isPlugged` パラメータは _サポートしています。_
 
 ### 例
 
@@ -75,7 +75,7 @@ Windows Phone 7 では、バッテリー残量のレベルを検知するネイ�
 
 - __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
+- __isPlugged__: デバイスが充電中かどうか示す boolean 値 _(Boolean)_
 
 `deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
 
@@ -98,16 +98,13 @@ Windows Phone 7 では、バッテリー残量のレベルを検知するネイ�
 
 ## batterylow
 
-The event fires when the percentage of battery charge has reached the
-low battery threshold, device-specific value.
-
 バッテリー残量が少なった場合に、このイベントが発火します。しきい値は、デバイス毎に異なります。
 
 以下の 2 つのプロパティを格納したオブジェクトを、 `batterylow` ハンドラーに渡します。
 
 - __level__: バッテリー残量を示すパーセンテージ ( 0-100 ) _(Number)_
 
-- __isPlugged__: デバイスが充電中かどうか示す boolean  _(Boolean)_
+- __isPlugged__: デバイスが充電中かどうか示す boolean 値 _(Boolean)_
 
 `deviceready` イベントが発火した後にイベントリスナーをアタッチ ( attach ) するとき、`window.addEventListener` を、アプリは通常使用します。
 

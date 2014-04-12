@@ -29,9 +29,9 @@ __注意__ : 連絡先データの取得・利用には、個人情報保護の�
 
 ### Firefox OS 特有の動作
 
-[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) に記載された内容に沿って、 __www/manifest.webapp__ を作成してください。
-関連する権限を追加してください。
-また、webapp の type 項目を "privileged" に変更する必要があります。 [Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#type) を参照してください。
+[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) に記載された内容に沿って、__www/manifest.webapp__ を作成してください。
+また、関連する権限を追加してください。
+また、webapp の type 項目を "privileged" に変更する必要があります。 詳細に関しては、[Manifest Docs](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#type) をご確認ください。
 
 __注意__: privileged を取得したすべてのアプリは、 [Content Security Policy](https://developer.mozilla.org/en-US/Apps/CSP) を遵守しなければいけません。ここでは、インラインスクリプト ( inline script ) が禁止されています。アプリを起動する際には、別の方法が必要です。
 
@@ -64,7 +64,7 @@ __注意__: privileged を取得したすべてのアプリは、 [Content Secur
 
 `navigator.contacts.create` メソッドを使用して、新しい `Contact` オブジェクトを同期的に作成します。
 
-このメソッドで作成した Contact オブジェクトは、デバイスの連絡先データベースに保存されません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` メソッドを使用します。
+このメソッドで作成した Contact オブジェクトは、デバイスの連絡先データベースには保存されません。 Contact オブジェクトをデバイスに保存するには、 `Contact.save` メソッドを使用します。
 
 ### サポート対象のプラットフォーム
 
@@ -80,7 +80,7 @@ __注意__: privileged を取得したすべてのアプリは、 [Content Secur
 
 ## navigator.contacts.find
 
-`navigator.contacts.find` メソッドを非同期で実行して、デバイスの連絡先データベースの検索、 `Contact` オブジェクト群の配列の取得を行います。 __contactSuccess__ パラメータで指定した `contactSuccess` コールバック関数へ、結果として返されたオブジェクトを引き渡します。
+`navigator.contacts.find` メソッドを非同期で実行して、デバイスの連絡先データベースの検索、 `Contact` オブジェクト群の配列の取得を行います。 __contactSuccess__ パラメータで指定した `contactSuccess` コールバック関数に対して、実行結果として返されたオブジェクトを引き渡します。
 
 __contactFields__ パラメータを使用して、検索時に使用する項目を指定します。また、ここから得た検索結果だけを __contactSuccess__ コールバック関数へ引き渡します。 __contactFields__ パラメータに空文字列 ( ゼロレングス/zero-length ) を設定した場合、無効となり、結果として、 `ContactError.INVALID_ARGUMENT_ERROR` となります。 __contactFields__ の値を `"*"` に設定した場合、連絡先に関するすべての項目を返します。
 
@@ -88,7 +88,7 @@ __contactFindOptions.filter__ 文字列を使用して、連絡先データベ�
 
 ### パラメータ
 
-- __contactFields__: 検索時に使用する連絡先の項目。検索結果として返された `Contact` オブジェクトには、ここで指定した項目の値だけが格納されています。 _(DOMString[])_ [必須]
+- __contactFields__: 検索時に使用する連絡先の項目。検索結果として返された `Contact` オブジェクトが格納している値は、ここで指定した項目に関する値のみとなります。 _(DOMString[])_ [必須]
 
 - __contactSuccess__: データベースから取得した Contact オブジェクト群の配列を使用して呼び出す、Success コールバック関数。 [必須]
 
@@ -130,7 +130,7 @@ __contactFindOptions.filter__ 文字列を使用して、連絡先データベ�
 ## Contact
 
 `Contact` オブジェクトは、ユーザの連絡先情報を格納します。デバイスの連絡先データベースから、Contacts の作成・格納・削除を行えます。
-また、 `navigator.contacts.find` メソッドを呼び出すことにより、データベースから、単数または複数の Contact を取得できます。
+また、 `navigator.contacts.find` メソッドを呼び出して、単数または複数の Contact を、データベースから取得できます。
 
 __注意__ : 上記のすべての連絡先関連の項目が、すべてのデバイスのプラットフォームでサポートされているわけではありません。各プラットフォームの動作の詳細に関しては、各 _プラットフォーム特有の動作_ の記載内容をご確認ください。
 
@@ -162,7 +162,7 @@ __注意__ : 上記のすべての連絡先関連の項目が、すべてのデ�
 
 - __categories__: 連絡先に関する、すべてのユーザ定義のカテゴリーの配列 _(ContactField[])_
 
-- __urls__: 連絡先に関するウェブページの配列 _(ContactField[])_
+- __urls__: 連絡先に関する Web ページの配列 _(ContactField[])_
 
 ### メソッド
 
@@ -170,7 +170,7 @@ __注意__ : 上記のすべての連絡先関連の項目が、すべてのデ�
 
 - __remove__: 連絡先データベースからオブジェクトを削除します。 削除が失敗した場合は `ContactError` オブジェクトを使用して、error コールバック関数を呼び出します。
 
-- __save__: 新しい連絡先を連絡先データベースに保存し、 既存の __id__ の場合には連絡先データベースを更新します。
+- __save__: 新しい連絡先を連絡先データベースに保存し、 既存の __id__ の場合には、連絡先データベースを更新します。
 
 ### サポート対象のプラットフォーム
 
@@ -269,7 +269,7 @@ __注意__ : 上記のすべての連絡先関連の項目が、すべてのデ�
 
 - __displayName__: iOS ではサポートしません。 `ContactName` を指定しない場合、 `null` を返します。この場合、合成した名前 ( composite name )、 __nickname__ 、 `""` のいづれかを返します。
 
-- __birthday__: JavaScript の `Date` オブジェクトとして入力をしなければなりません。また、返ってくるときも、同オブジェクトと同じように返ってきます。
+- __birthday__: JavaScript の `Date` オブジェクトとして入力をしなければなりません。また、返ってくるときも、同オブジェクトのそれと同じように返ってきます。
 
 - __photos__: アプリの temporary ダイレクトリに保存されたイメージを指し示す File URL を返します。アプリを閉じたときに、temporary ダイレクトリに残るコンテンツは削除されます。
 
@@ -416,7 +416,7 @@ __注意__ : 上記のすべての連絡先関連の項目が、すべてのデ�
 `ContactField` オブジェクトは、連絡先の各項目を汎用的に格納するための再利用可能なコンポーネントです。各 `ContactField` オブジェクトには、 `value` 、 `type` 、 `pref` プロパティを 1 つずつ格納します。 `Contact` オブジェクトは、電話番号・メールアドレスのような複数のプロパティを、 `ContactField[]` 配列に格納します。
 
 `ContactField` オブジェクトの __type__ 属性に関しては、多くの場合、事前に定義した値はありません。たとえば、電話番号に関しては、__type__ に設定する値として、 _home_ 、 _work_ 、 _mobile_ 、 
-_iPhone_ 、または、特定のデバイスのプラットフォームの連絡先データベースがサポートしているその他の値を指定できます。ただし、`Contact` の __photos__ 項目に関しては、 __type__ 項目を使用して、返すイメージの形式を示します。 __value__ 属性が、写真のイメージの URL を格納している場合には __url__ を、Base64 形式のイメージの文字列を格納している場合には、 _base64_ が入ります。
+_iPhone_ 、または、特定のデバイスのプラットフォームの連絡先データベースがサポートしているその他の値を指定できます。ただし、`Contact` の __photos__ 項目に関しては、 __type__ 項目を使用して、返すイメージの形式を設定します。 __value__ 属性が、写真のイメージの URL を格納している場合には __url__ を、Base64 形式のイメージの文字列を格納している場合には、 _base64_ が入ります。
 
 ### プロパティ
 
@@ -520,7 +520,7 @@ _iPhone_ 、または、特定のデバイスのプラットフォームの連�
 
 ### Android 特有の動作
 
-- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。.
+- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。
 
 ### BlackBerry 10 特有の動作
 
@@ -538,7 +538,7 @@ _iPhone_ 、または、特定のデバイスのプラットフォームの連�
 
 ### FirefoxOS 特有の動作
 
-- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。.
+- __formatted__: 部分的にサポートしますが、読み取り専用です。`honorificPrefix` 、 `givenName` 、 `middleName` 、 `familyName` 、 `honorificSuffix` を連結して返します。
 
 ### iOS 特有の動作
 
@@ -622,7 +622,7 @@ _iPhone_ 、または、特定のデバイスのプラットフォームの連�
 ### iOS 特有の動作
 
 - __pref__: iOS 搭載のデバイスではサポートしません。 `false` を返します。
-- 
+
 - __type__: iOS 搭載のデバイスではサポートしません。 `null` を返します。
 
 - __name__: 部分的にサポートします。1 つ目の組織名を iOS の __kABPersonOrganizationProperty__ 項目に格納します。

@@ -25,7 +25,7 @@ Android の検索ボタンを押したときに、このイベントが発火し
 
 ## 詳細
 
-Android のデフォルトの検索ボタンの挙動を上書きしたい場合、 'searchbutton' イベントにイベントリスナーを登録できます。
+Android のデフォルトの検索ボタンの挙動を上書きする場合、 searchbutton イベントにイベントリスナーを登録できます。
 
 `deviceready` イベントの発火後、イベントリスナーをアタッチ ( attach ) するには、通常、 `document.addEventListener` を使用しなければなりません。
 

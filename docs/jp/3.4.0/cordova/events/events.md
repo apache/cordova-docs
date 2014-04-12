@@ -19,7 +19,7 @@
 
 # イベント
 
-> Cordova のライフサイクル中で使用する各種イベント群です。
+> Cordova のライフサイクルにおいて使用する、各種イベント群です。
 
 ## イベントの種類
 
@@ -34,13 +34,13 @@
 - volumedownbutton
 - volumeupbutton
 
-## [org.apache.cordova.battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md) 提供のイベント群
+## [org.apache.cordova.battery-status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md) から提供のイベント群
 
 - batterycritical
 - batterylow
 - batterystatus
 
-## [org.apache.cordova.network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md) 提供のイベント群
+## [org.apache.cordova.network-information](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md) から提供のイベント群
 
 - online
 - offline
