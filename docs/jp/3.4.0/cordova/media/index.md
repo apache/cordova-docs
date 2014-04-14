@@ -33,7 +33,7 @@ __注意__: 現在の実装方式は、メディアキャプチャー ( media ca
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Tizen
 - Windows 8
 
@@ -339,7 +339,7 @@ Androidでは、メディア再生に割り当てられた OpenCore インタス
 
 - Android
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### 例
@@ -425,7 +425,7 @@ Androidでは、メディア再生に割り当てられた OpenCore インタス
 
 - Android
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### 例
@@ -464,13 +464,13 @@ Androidでは、メディア再生に割り当てられた OpenCore インタス
 
 エラーが発生した場合、 `mediaError` コールバック関数へ `MediaError` オブジェクトを返します。
 
-### プロパティ
+### プロパティー
 
 - __code__: 事前に定義した以下のエラーコードのうちの 1 つ
 
 - __message__: 詳細を示したエラーメッセージ
 
-### Constants
+### 定数
 
 - `MediaError.MEDIA_ERR_ABORTED`
 - `MediaError.MEDIA_ERR_NETWORK`

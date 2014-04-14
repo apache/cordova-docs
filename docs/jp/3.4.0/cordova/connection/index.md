@@ -33,7 +33,7 @@
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Tizen
 - Windows 8
 
@@ -41,11 +41,11 @@
 
 > `navigator.connection` 経由で提供される `connection` オブジェクトを使用して、デバイスの携帯電話ネットワークと wifi 接続情報にアクセスできます。
 
-## プロパティ
+## プロパティー
 
 - connection.type
 
-## Constants
+## 定数
 
 - Connection.UNKNOWN
 - Connection.ETHERNET
@@ -58,7 +58,7 @@
 
 ## connection.type
 
-このプロパティを使用して、デバイスのネットワーク接続の状態および接続のタイプを確認します。
+このプロパティーを使用して、デバイスのネットワーク接続の状態および接続のタイプを確認します。
 
 ### 例
 

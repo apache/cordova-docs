@@ -52,7 +52,7 @@ Android のデフォルトの検索ボタンの挙動を上書きする場合、
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // デバイス API ライブラリのロード処理中のため、待機
+        // デバイス API ライブラリの読み込み処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);

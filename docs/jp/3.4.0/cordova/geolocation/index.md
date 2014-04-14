@@ -50,7 +50,7 @@ __注意__ : 位置情報に関するデータの取得・利用には、個人�
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ## メソッド
@@ -165,7 +165,7 @@ __注意__ : 位置情報に関するデータの取得・利用には、個人�
 ### オプション
 
 - __enableHighAccuracy__: より精度の高い位置情報をアプリが必要としていることを、このオプションを使用して示します。
-デバイスのデフォルトでは、ネットワーク関連の情報を使用して、 `Position` の取得を行うよう設定されています。このプロパティを `true` にした場合、フレームワークに対して、より精度の高い方法 ( 例 ： 衛星測位情報) を使用するよう命令します。 _(Boolean)_
+デバイスのデフォルトでは、ネットワーク関連の情報を使用して、 `Position` の取得を行うよう設定されています。このプロパティーを `true` にした場合、フレームワークに対して、より精度の高い方法 ( 例 ： 衛星測位情報) を使用するよう命令します。 _(Boolean)_
 
 - __timeout__: `navigator.geolocation.getCurrentPosition` または `geolocation.watchPosition` を呼んでから、 対応する `geolocationSuccess` コールバックを実行するまでの最大経過時間　 ( ミリ秒 )。 `geolocationSuccess` コールバックをこの時間内に呼べない場合、 `PositionError.TIMEOUT` エラーコードを `geolocationError` に渡します ( 注意 : `geolocation.watchPosition` と共に使用したとき、 `timeout` に設定したミリ秒単位間隔で、 `geolocationError` を呼び出すことになる場合もあります)。 _(Number)_
 
@@ -193,7 +193,7 @@ Android 2.x のエミュレータでは、 `enableHighAccuracy` オプション�
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { enableHighAccuracy: true });
 
-    // ...後から...
+    // ...少し経過してから...
 
     navigator.geolocation.clearWatch(watchID);
 
@@ -201,7 +201,7 @@ Android 2.x のエミュレータでは、 `enableHighAccuracy` オプション�
 
 `Position` を使用して、geolocation API が 生成した座標とタイムスタンプを格納します。
 
-### プロパティ
+### プロパティー
 
 - __coords__: 地理座標のセット _(Coordinates)_
 
@@ -211,9 +211,9 @@ Android 2.x のエミュレータでは、 `enableHighAccuracy` オプション�
 
 `Coordinates` オブジェクトは、 `Position` オブジェクトに付けて使用します。 `Position` オブジェクトは、現在位置を取得する際に呼ぶコールバック関数で使用します。
 
-`Coordinates` オブジェクトには、位置の地理座標を示すプロパティ群が格納されています。
+`Coordinates` オブジェクトには、位置の地理座標を示すプロパティー群が格納されています。
 
-### プロパティ
+### プロパティー
 
 * __latitude__: 10 進法形式で示す、緯度 _(Number)_
 
@@ -241,7 +241,7 @@ __altitudeAccuracy__: Android 搭載のデバイスでは、サポートしま�
 
 navigator.geolocation の使用時にエラーが発生した場合、 `geolocationError` コールバック関数に `PositionError` オブジェクトを渡します。
 
-### プロパティ
+### プロパティー
 
 - __code__: 事前に定義した以下のエラーコードのうちの 1 つ
 

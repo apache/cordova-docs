@@ -31,10 +31,9 @@
 
 ### 解説
 
-The `camera.getPicture` 関数を使用して、デバイス搭載のカメラアプリを起動して、写真撮影を行います。デフォルトでは、 `Camera.sourceType` と `Camera.PictureSourceType.CAMERA` が等しいときに、この処理を実行します。 
+The `camera.getPicture` 関数を使用して、デバイス搭載のカメラアプリを起動して、写真撮影を行います。デフォルトでは、 `Camera.sourceType` と `Camera.PictureSourceType.CAMERA` が等しいときに、この処理を実行します。写真の撮影後は、カメラアプリを終了して、対象のアプリケーションに戻ります。
 
-写真の撮影後は、カメラアプリを終了して、対象のアプリケーションに戻ります。
-`Camera.sourceType` が `Camera.PictureSourceType.PHOTOLIBRARY` の場合、または、 `Camera.PictureSourceType.SAVEDPHOTOALBUM` の場合、写真選択用のダイアログが表示され、既存の写真を選択できます。 `camera.getPicture` 関数は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、画像選択用のダイアログの位置を変更できます。例えば、端末の向きを変えた場合に使用します。
+`Camera.sourceType` が `Camera.PictureSourceType.PHOTOLIBRARY` の場合、または、 `Camera.PictureSourceType.SAVEDPHOTOALBUM` の場合、画像用のダイアログが表示され、既存の画像を選択できます。 `camera.getPicture` 関数は `CameraPopoverHandle` オブジェクトを返します。このオブジェクトを使用して、画像選択用のダイアログの位置を変更できます。例えば、端末の向きを変えた場合に使用します。
 
 返り値は `cameraSuccess` 関数に渡されます。値 ( 文字列 ) は `cameraOptions` の設定に基づき、以下のいずれかのフォーマットで送られます。
 
@@ -60,12 +59,12 @@ __注意:__ 最新のデバイスで撮影した写真は高い解像度にな�
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### Amazon Fire OS 特有の動作
 
-写真を撮影するために、Amazon Fire OS はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
+画像のキャプチャーを行うために、Amazon Fire OS はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
 
 
 ### Android 特有の動作
@@ -73,7 +72,7 @@ __注意:__ 最新のデバイスで撮影した写真は高い解像度にな�
 *Android 4.4 特有*: Android 4.4 では、新しい [ ストレージ アクセス フレームワーク](https://developer.android.com/guide/topics/providers/document-provider.html) を導入しました。このフレームワークを使用して、各ドキュメント ストレージ プロバイダー が保有するドキュメントの検索と表示が簡単に行えるようになりました。Cordova では、 `destinationType` を `FILE_URI` に設定して、"Recent" 、 "Drive" 、 "Images" 、 "External Storage" のいずれかをユーザが選択したとき、 `getPicture()` メソッドが写真を適当に返さないため、このストレージ アクセス フレームワークを完全には実装していません。ただし、"Gallery" アプリを最初に使用した場合、写真の選択を適当に行うことができます。
 この問題に対する一時的な回避策として [StackOverflow 問題解決策](http://stackoverflow.com/questions/19834842/android-gallery-on-kitkat-returns-different-uri-for-intent-action-get-content/20177611) をご確認ください。また、この問題の途中経過に関しては [CB-5398](https://issues.apache.org/jira/browse/CB-5398) をご確認ください。 
 
-写真を撮影するために、Android はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
+画像のキャプチャーを行うために、Android はインテント群 ( intent ) を使用して、デバイスのカメラ アクティビティを起動します。メモリーが少ないデバイスでは、Cordova アクティビティが停止することがあります。この場合、Cordova アクティビティがリストアされても、画像が表示されない可能性があります。
 
 ### Firefox OS 特有の動作
 
@@ -89,7 +88,7 @@ __注意:__ 最新のデバイスで撮影した写真は高い解像度にな�
 
 ### Windows Phone 7 特有の動作
 
-Zune 経由でデバイスが接続している間は、ネーティブのカメラアプリを起動することはできず、代わりに、エラーを返すコールバックが呼ばれます。
+Zune 経由でデバイスが接続している間は、ネイティブのカメラアプリを起動することはできず、代わりに、エラーを返すコールバックが呼ばれます。
 
 ### Tizen 特有の動作
 
@@ -181,9 +180,9 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
             ALLMEDIA : 2   // 全種類のメディアが対象。
 };
 
-- __correctOrientation__: 写真を撮影したときのデバイスの向きになるよう、写真を回転させます。 _(Boolean)_
+- __correctOrientation__: キャプチャーを行ったときのデバイスの向きになるよう、画像を回転させます。 _(Boolean)_
 
-- __saveToPhotoAlbum__: 写真を撮影した後、デバイスのフォトアルバムに画像を保存します。 _(Boolean)_
+- __saveToPhotoAlbum__: キャプチャーを行った後、デバイスのフォトアルバムに画像を保存します。 _(Boolean)_
 
 - __popoverOptions__: iOS 専用のオプションです。iPad でのポップオーバー ( popover ) の位置を指定します。 `CameraPopoverOptions` で定義します。
 
@@ -264,7 +263,7 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 - `cameraDirection` パラメータを無視します。
 
-- `cameraOptions` の `mediaType` プロパティを無視します。これは、Windows Phone SDK では、PHOTOLIBRARY からビデオを選択する方法を提供していないためです。
+- `cameraOptions` の `mediaType` プロパティーを無視します。これは、Windows Phone SDK では、PHOTOLIBRARY からビデオを選択する方法を提供していないためです。
 
 ## CameraError
 
@@ -280,8 +279,6 @@ Tizen では、 `Camera.DestinationType.FILE_URI` の `destinationType` と `Cam
 
 
 ## cameraSuccess
-
-onSuccess callback function that provides the image data.
 
 画像データを返す、onSuccess 時のコールバック関数です。
 

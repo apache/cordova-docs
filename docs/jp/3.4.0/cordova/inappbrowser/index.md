@@ -57,7 +57,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
     iOS のみ適用 :
 
     - __closebuttoncaption__: ボタン上の表示名として使用する文字列を設定します。この値を各自でローカライズする必要があります。    - 
-    - __disallowoverscroll__: `yes` または `no` を設定すると( デフォルトでは `no` )、UIWebViewBounce プロパティをオンまたはオフにします。
+    - __disallowoverscroll__: `yes` または `no` を設定すると( デフォルトでは `no` )、UIWebViewBounce プロパティーをオンまたはオフにします。
     - __hidden__: `yes` に設定した場合、ブラウザーの作成とページの読み込みを行いますが、load イベントが発火するまで、表示をしません。省略または `no` ( デフォルト ) に設定した場合、通常通り、ブラウザーを開き、読み込みを行います。
     - __toolbar__: `yes` または `no` を設定すると、 `InAppBrowser` のツールバーを表示または非表示にします ( デフォルトでは `yes` ) 。
     - __enableViewportScale__: `yes` または `no` に設定して、meta タグを使用したビューポート ( viewport ) の尺度変更を有効または無効にします ( デフォルトでは `no` 。
@@ -75,7 +75,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 
 ### 例
 
@@ -123,7 +123,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 
 ### 例
 
@@ -150,7 +150,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 
 ### 例
 
@@ -173,7 +173,7 @@ __注意__ : InAppBrowser を使用して開いたウィンドウ ( InAppBrowser
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 
 ### 例
 

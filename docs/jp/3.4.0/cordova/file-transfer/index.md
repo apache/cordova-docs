@@ -31,7 +31,7 @@
 - Android
 - BlackBerry 10*
 - iOS
-- Windows Phone 7 and 8*
+- Windows Phone 7 と 8*
 - Windows 8*
 
 \* _`onprogress` と `abort()` のサポートを行っていません。_
@@ -40,7 +40,7 @@
 
 HTTP マルチパート POST リクエストを使用して、ファイルのアップロードとダウンロードを行うときに、 `FileTransfer` オブジェクトを使用します。
 
-## プロパティ
+## プロパティー
 
 - __onprogress__: データの送受信を行うときに、`ProgressEvent` を使用して、呼び出す関数 _(Function)_
 
@@ -146,7 +146,7 @@ __Parameters__:
 `FileUploadResult` オブジェクトを使用して、
 `FileTransfer` オブジェクトの `upload()` メソッド内に置かれている、 Success 時に実行するコールバックを呼び出します。
 
-### プロパティ
+### プロパティー
 
 - __bytesSent__: 
 アップロード中に、サーバーに送られたバイト ( byte ) 数 (long)
@@ -243,7 +243,7 @@ Filesystem url。後方互換性 ( backwards compatibility ) を考慮しなけ�
 
 `FileTransferError` オブジェクトを使用して、エラーの発生時に実行するコールバックを呼び出します。
 
-### プロパティ
+### プロパティー
 
 - __code__: 事前に定義した以下のエラーコードのうちの 1 つ (Number)
 
@@ -269,7 +269,7 @@ Filesystem url。後方互換性 ( backwards compatibility ) を考慮しなけ�
 
 後方互換性のサポートにより、これらの形式のパスも使用できます。 persistent ストレージに、これらのパスをアプリが保存している場合、これらの形式のパスを使用し続けることができます。
 
-以前では、File プラグインが返す `FileEntry` と `DirectoryEntry` オブジェクトの `fullPath` プロパティ内で、これらのパスが暴露されていました。新しいバーションの File プラグインでは、この問題も解消され、JavaScript へのパスの暴露も行われていません。
+以前では、File プラグインが返す `FileEntry` と `DirectoryEntry` オブジェクトの `fullPath` プロパティー内で、これらのパスが暴露されていました。新しいバーションの File プラグインでは、この問題も解消され、JavaScript へのパスの暴露も行われていません。
 
 File プラグイン ( 原文では単に「 File 」 ) のバージョンを 1.0.0 以降にアップグレードして、ならびに、`download()` または `upload()` の引数に `entry.fullPath` を以前使用していた場合には、 filesystem URL を使用するよう、コードを変更する必要があります。
 

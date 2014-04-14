@@ -31,7 +31,7 @@
 - Android
 - BlackBerry 10*
 - iOS
-- Windows Phone 7 and 8*
+- Windows Phone 7 と 8*
 - Windows 8*
 
 \* _これらのプラットフォームでは、 `FileReader.readAsArrayBuffer` および `FileWriter.write(blob)` のサポートを行っていません。_
@@ -94,7 +94,7 @@ iOS 搭載デバイスには、永続的なファイル ( persistent file ) を�
 
 `FileEntry` と `DirectoryEntry` の構造を、このプラグインの v1.0.0 から変更しました。公開された仕様に基づき、追加変更を行いました。
 
-以前のバーション ( 1.0.0 より前 ) のプラグインでは、 `Entry` オブジェクトの `fullPath` プロパティ内に、ファイル保存場所へのデバイス固有の絶対パス ( device-absolute-file-location ) を保存していました。典型的なパスは、以下の形式となっていました。
+以前のバーション ( 1.0.0 より前 ) のプラグインでは、 `Entry` オブジェクトの `fullPath` プロパティー内に、ファイル保存場所へのデバイス固有の絶対パス ( device-absolute-file-location ) を保存していました。典型的なパスは、以下の形式となっていました。
 
     /var/mobile/Applications/<application UUID>/Documents/path/to/file  (iOS)
     /storage/emulated/0/path/to/file                                    (Android)
@@ -105,7 +105,7 @@ v1.0.0 では、 _HTML ファイルシステムの root 構造に習い、_ `ful
 
     /path/to/file
 
-デバイス固有の絶対パスをアプリが使用している場合、および、 `Entry` オブジェクトの `fullPath` プロパティを使用して、絶対パスを以前取得していた場合には、 代わりに、 `entry.toURL()` を使用するよう、コードの更新を行う必要があります。このメソッドは、filesystem URL 形式で実行結果を返します。
+デバイス固有の絶対パスをアプリが使用している場合、および、 `Entry` オブジェクトの `fullPath` プロパティーを使用して、絶対パスを以前取得していた場合には、 代わりに、 `entry.toURL()` を使用するよう、コードの更新を行う必要があります。このメソッドは、filesystem URL 形式で実行結果を返します。
 
     cdvfile://localhost/persistent/path/to/file
 

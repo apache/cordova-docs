@@ -31,7 +31,7 @@
 
     cordova plugin add org.apache.cordova.device
 
-## プロパティ
+## プロパティー
 
 - device.cordova
 - device.model
@@ -52,7 +52,7 @@
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ## device.model
@@ -65,7 +65,7 @@
 - BlackBerry 10
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### 例
@@ -106,12 +106,12 @@ __注意:__ バージョン 2.3.0 では `device.name` を使用しません。�
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### 例
 
-    // 各デバイスで異なります。例をいくつか列挙します。
+    // 各デバイスで異なります。一部の例を列挙します。
     //   - "Android"
     //   - "BlackBerry 10"
     //   - "iOS"

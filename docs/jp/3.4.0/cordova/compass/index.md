@@ -33,7 +33,7 @@
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8 (if available in hardware)
+- Windows Phone 7 と 8 ( ハードウェアに搭載している場合 )
 - Windows 8
 
 ## メソッド
@@ -129,7 +129,7 @@ watch ID パラメーターを使用して参照を行っている、方位の�
 
     var watchID = navigator.compass.watchHeading(onSuccess, onError, options);
 
-    // ... 後から ...
+    // ... 少し経過してから ...
 
     navigator.compass.clearWatch(watchID);
 
@@ -137,7 +137,7 @@ watch ID パラメーターを使用して参照を行っている、方位の�
 
 `compassSuccess` コールバック関数に `CompassHeading` オブジェクトを渡します。
 
-### プロパティ
+### プロパティー
 
 - __magneticHeading__: ある瞬間の磁方位 （ 磁北を基準 ）。0 から 359.99 度の範囲で表します。 _(Number)_
 
@@ -150,21 +150,21 @@ watch ID パラメーターを使用して参照を行っている、方位の�
 
 ### Amazon Fire OS 特有の動作
 
-- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
+- `trueHeading` プロパティーをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティーは常に 0 となります。
 
 ### Android 特有の動作
 
-- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
+- `trueHeading` プロパティーをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティーは常に 0 となります。
 
 ### Firefox OS 特有の動作
 
-- `trueHeading` プロパティをサポートしません。 `magneticHeading` と同じ値を取得します。
+- `trueHeading` プロパティーをサポートしません。 `magneticHeading` と同じ値を取得します。
 
-- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティは常に 0 となります。
+- `trueHeading` と `magneticHeading` が同じ値になるため、 `headingAccuracy` プロパティーは常に 0 となります。
 
 ### iOS 特有の動作
 
@@ -176,11 +176,11 @@ watch ID パラメーターを使用して参照を行っている、方位の�
 
 エラーが起きたとき、 `compassError` コールバック関数に `CompassError` オブジェクトを渡します。
 
-### プロパティ
+### プロパティー
 
 - __code__: 事前に定義された以下のエラーコードのうちの 1 つ
 
-### Constants
+### 定数
 
 - `CompassError.COMPASS_INTERNAL_ERR`
 - `CompassError.COMPASS_NOT_SUPPORTED`

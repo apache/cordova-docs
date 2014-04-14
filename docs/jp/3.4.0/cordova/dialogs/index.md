@@ -50,7 +50,7 @@ __www/index.html__ を編集して、以下の記述を `head` 部分に追加�
 
 ## navigator.notification.alert
 
-カスタマイズしたアラートまたはダイアログボックスを表示します。通常、ネイティブのダイアログボックスを Cordova アプリでは使用しますが、いくつかのプラットフォームにおいては、ブラウザーの`アラート` ( alert ) 機能を使用します。ブラウザーの標準アラート機能では、カスタマイズが困難な場合もあります。
+カスタマイズしたアラートまたはダイアログボックスを表示します。通常、ネイティブのダイアログボックスを Cordova アプリでは使用しますが、一部のプラットフォームにおいては、ブラウザーの`アラート` ( alert ) 機能を使用します。ブラウザーの標準アラート機能では、カスタマイズが困難な場合もあります。
 
     navigator.notification.alert(message, alertCallback, [title], [buttonName])
 
@@ -84,7 +84,7 @@ __www/index.html__ を編集して、以下の記述を `head` 部分に追加�
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### Windows Phone 7 と 8 特有の動作
@@ -140,7 +140,7 @@ __www/index.html__ を編集して、以下の記述を `head` 部分に追加�
 - Firefox OS
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### Windows Phone 7 と 8 特有の動作
@@ -175,7 +175,7 @@ __www/index.html__ を編集して、以下の記述を `head` 部分に追加�
 ### promptCallback
 
 入力用 ( prompt ) ダイアログボックスに表示した複数ボタンのうちの 1 つを押したときに、 `promptCallback` を実行します。
-以下のプロパティを格納した `results` オブジェクトをこのコールバックに渡します。
+以下のプロパティーを格納した `results` オブジェクトをこのコールバックに渡します。
 
 - __buttonIndex__: 押されたボタンのインデックス _(Number)_。インデックスは、1 から始まり ( 1 オリジンインデッス方式 )、値は、`1` 、 `2` 、 `3` 、・・・　となります。
 
@@ -232,7 +232,7 @@ __www/index.html__ を編集して、以下の記述を `head` 部分に追加�
 - BlackBerry 10
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ### Amazon Fire OS 特有の動作

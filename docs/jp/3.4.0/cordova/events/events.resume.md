@@ -35,7 +35,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 - Windows 8
 
 ## 例
@@ -56,7 +56,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // デバイス API ライブラリのロード処理中のため、待機
+        // デバイス API ライブラリの読み込み処理中のため、待機
         //
         function onLoad() {
             document.addEventListener("deviceready", onDeviceReady, false);

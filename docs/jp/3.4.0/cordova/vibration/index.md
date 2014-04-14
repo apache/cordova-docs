@@ -32,7 +32,7 @@
 - BlackBerry 10
 - Firefox OS
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 7 と 8
 
 ## notification.vibrate
 
