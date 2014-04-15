@@ -28,7 +28,7 @@ Cordova アプリで使用できる、ストレージ API 群をご紹介しま�
 _Web ストレージ_ もしくは _simple ストレージ_ として、または、_session ストレージ_ と対をなすものとして、知られています。この API では、キーと値の組み合わせを使用した、同期的なストレージ処理を行います。また、WebView の実行時にも使用できます。詳細に関しては、 [the W3C spec](http://www.w3.org/TR/webstorage/) をご確認ください。
 
 
-__Windows Phone 7 特有の動作__: ドット表記法は、_使用できません。_ `setItem` または `getItem` を使用してください。 `window.localStorage.someKey` に記載の方法 ( Storage オブジェクトからキーに対して、直接にアクセス ) は推奨しません。
+__Windows Phone 7 特有の動作__: ドット表記法は、_使用できません。_ `setItem` または `getItem` を使用してください。 `window.localStorage.someKey` に記載の方法 ( Storage オブジェクトからキーに対して、直接的なアクセス ) は推奨しません。
 
 ## WebSQL
 
@@ -47,13 +47,13 @@ WebView 内で、この API を使用できます。
 
 WebView 内で、この API を使用できます。
 
-[Indexed DB](http://www.w3.org/TR/IndexedDB/) では、LocalStorage と比較すると、より多彩な機能を提供します ( WebSQL と比較すると少ない機能提供となります )。
+LocalStorage と比較すると、[Indexed DB](http://www.w3.org/TR/IndexedDB/) は、より多彩な機能を提供します ( WebSQL と比較すると少ない機能提供となります )。
 
 以下のプラットフォームは、IndexedDB をサポートします。
 
 - Windows Phone 8
 - BlackBerry 10
 
-## Plugin-Based Options
+## 他のプラグイン オプション
 
 上記のストレージ API に加えて、 [File API](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md) も利用できます。この API を使用して、ローカルファイルシステムに、データのキャッシュを行います。また、 [Cordova plugins](http://plugins.cordova.io/) でも同様のストレージオプションを提供しています。

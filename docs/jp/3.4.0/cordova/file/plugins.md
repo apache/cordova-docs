@@ -8,9 +8,9 @@ Cordova の file system URL の使用方法
 
 バージョン 1.0.0 以降、このプラグインでは、ブリッジを越えるすべてのコミュニケーションにおいて、 `cdvfile` スキーマを採用しています。これは、デバイス内のファイルシステムへのパスを外部 ( JavaScript ) に暴露させないためです。
 
-これに伴い、JavaScript 側では、FileEntry と DirectoryEntry オブジェクトは、fullpath 属性 ( HTML のファイルシステムの root 構造と類似 ) を持つようになりました。開発予定のプラグインの JavaScript API で FileEntry または DirectoryEntry オブジェクトを使用する場合、ネイティブコードへそのオブジェクトをブリッジ越しに渡す前に、そのオブジェクトを使用して `.toURL()` を呼ぶ必要があります。
+これに伴い、JavaScript 側でも、FileEntry と DirectoryEntry オブジェクトは、fullpath 属性 ( HTML のファイルシステムの root 構造と類似 ) を持つようになりました。開発予定のプラグインの JavaScript API において、FileEntry または DirectoryEntry オブジェクトを使用する場合、ネイティブコードへそのオブジェクトをブリッジ越しに渡す前に、そのオブジェクトを使用して `.toURL()` を呼ぶ必要があります。
 
-### cdvfile:// 形式の URL を、ファイルシステムのパスに変更する場合
+### cdvfile:// 形式の URL からファイルシステムのパスへの変換
 
 filesystem に書き込みを行うプラグインでは、返されたファイルシステムの URL を変換して filesystem 内の実際の場所を指すよう、処理を行う場合もあります。これを行う方法はいくつかありますが、ネイティブプラットフォーム毎に変換方法は異なります。
 
@@ -94,7 +94,7 @@ JavaScript においては、FileEntry または DirectoryEntry オブジェク�
 
     var cdvfileURL = entry.toURL();
 
-プラグインのレスポンスハンドラーにおいては、返された FileEntry 構造体を Entry オブジェクトへ変換する場合、ハンドラーのコード内で、File プラグインのインポートを行い、新しいオブジェクトを作成してください。
+プラグインのレスポンスハンドラーにおいては、返された FileEntry 構造体を Entry オブジェクトへ変換する場合、ハンドラーのコード内において、File プラグインのインポートを行い、新しいオブジェクトを作成してください。
 
     // Entry オブジェクトの作成
     var entry;
