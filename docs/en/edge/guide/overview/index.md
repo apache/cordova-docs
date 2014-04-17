@@ -20,14 +20,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Overview
 
-Cordova is an open-source mobile development framework. It allows you
+Apache Cordova is an open-source mobile development framework. It allows you
 to use standard web technologies such as HTML5, CSS3, and JavaScript
 for cross-platform development, avoiding each mobile platforms' native
 development language.  Applications execute within wrappers targeted
 to each platform, and rely on standards-compliant API bindings to
-access each device's sensors, data, and network status.
+access each device's sensors, data, and network status. 
 
-Use Cordova if you are:
+Apache Cordova graduated in October 2012 as a top level project within the Apache Software Foundation (ASF). Through the ASF, future Cordova development will ensure open stewardship of the project. It will always remain free and open source under the Apache License, Version 2.0.  Visit [cordova.apache.org](http://cordova.apache.org) for more information.
+
+Use Apache Cordova if you are:
 
 * a mobile developer and want to extend an application across more
   than one platform, without having to re-implement it with each
@@ -43,7 +45,7 @@ Use Cordova if you are:
 
 ## Basic Components
 
-Cordova applications rely on a common `config.xml` file that provides
+Apache Cordova applications rely on a common `config.xml` file that provides
 information about the app and specifies parameters affecting how it
 works, such as whether it responds to orientation shifts. This file
 adheres to the W3C's
