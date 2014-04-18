@@ -8,7 +8,7 @@ Cordova の file system URL の使用方法
 
 バージョン 1.0.0 以降、このプラグインでは、ブリッジを越えるすべてのコミュニケーションにおいて、 `cdvfile` スキーマを採用しています。これは、デバイス内のファイルシステムへのパスを外部 ( JavaScript ) に暴露させないためです。
 
-これに伴い、JavaScript 側でも、FileEntry と DirectoryEntry オブジェクトは、fullpath 属性 ( HTML のファイルシステムの root 構造と類似 ) を持つようになりました。開発予定のプラグインの JavaScript API において、FileEntry または DirectoryEntry オブジェクトを使用する場合、ネイティブコードへそのオブジェクトをブリッジ越しに渡す前に、そのオブジェクトを使用して `.toURL()` を呼ぶ必要があります。
+JavaScript 側では、FileEntry と DirectoryEntry オブジェクトに、fullpath 属性 ( HTML のファイルシステムの root 構造と類似 ) を持たせています。開発予定のプラグインの JavaScript API において、FileEntry または DirectoryEntry オブジェクトを使用する場合、ネイティブコードへそのオブジェクトをブリッジ越しに渡す前に、そのオブジェクトを使用して `.toURL()` を呼ぶ必要があります。
 
 ### cdvfile:// 形式の URL からファイルシステムのパスへの変換
 
@@ -29,7 +29,7 @@ Android においては、 `org.apache.cordova.CordovaResourceApi` を使用し�
     
     Uri fileURL = resourceApi.remapUri(Uri.parse(cdvfileURL));
 
-ファイルプラグインを直接に使用することもできます。
+File プラグインを直接に使用することもできます。
 
     import org.apache.cordova.file.FileUtils;
     import org.apache.cordova.file.FileSystem;
