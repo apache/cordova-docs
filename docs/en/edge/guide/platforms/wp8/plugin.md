@@ -163,6 +163,17 @@ bad input. This pattern appears throughout the Cordova C# code:
             // ... continue on to do our work
         }
 
+## Plugin Lifetime
+
+Plugins with long-running requests, background activity such as media
+playback, listeners, or that maintain internal state should implement
+the `onReset` method to clean up those activities. The method runs
+when the CordovaView WebBrowser navigates to a new page or refreshes, which
+reloads the JavaScript.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
+
 ## Plugin XML
 
 The following shows how to use the `plugin.xml` file to specify a
