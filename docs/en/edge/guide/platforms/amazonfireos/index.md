@@ -89,8 +89,10 @@ run:
 
 Download the Amazon WebView SDK from the [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv).
 
-* Create a `libs/` folder in `~/.cordova/lib/amazon-fireos/cordova/3.1.0/` folder.
-* Add the `awv_interface.jar` from the downloaded SDK to  `~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/`
+Note: Replace [cordova_release] below to whatever release of cordova you are working with.
+
+* Create a `libs/` folder in `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/` folder.
+* Add the `awv_interface.jar` from the downloaded SDK to  `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/libs/`
 
 
 ## Open a Project in the SDK
