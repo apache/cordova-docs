@@ -21,8 +21,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Platform Support
 
 The following shows the set of development tools and device APIs
-available for each mobile platform. (Column headers display the
-CLI's shorthand stubs.)
+available for each mobile platform. The device APIs listed here are provided by
+the core plugins, additional APIs are available via
+[third-party plugins](http://plugins.cordova.io). Column headers display the
+CLI's shorthand names.
 
 <!-- START HTML -->
 

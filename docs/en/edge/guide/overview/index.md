@@ -62,10 +62,13 @@ within a larger, hybrid application that mixes the WebView with native
 application components. (See Embedding WebViews for details.)
 
 A _plugin_ interface is available for Cordova and native components to
-communicate with each other. As of version 3.0, plugins provide
+communicate with each other. This enables you to invoke native code
+from JavaScript. As of version 3.0, plugins provide
 bindings to standard device APIs.  Third-party plugins provide
 additional bindings to features not necessarily available on all
-platforms. You can also develop your own plugins, as described in
+platforms. You can find these third-party plugins in the
+[plugin registry](http://plugins.cordova.io) and use them in your
+application. You can also develop your own plugins, as described in the
 Plugin Development Guide. Plugins may be necessary, for example, to
 communicate between Cordova and custom native components.
 
