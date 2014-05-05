@@ -85,22 +85,22 @@
     
     > 장치를 진동 하는 API.
 
- [2]: https://github.com/apache/cordova-plugin-battery-status/blob/dev/doc/index.md
- [3]: https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md
- [4]: https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md
- [5]: https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md
- [6]: https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md
- [7]: https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md
- [8]: https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md
- [9]: https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md
- [10]: https://github.com/apache/cordova-plugin-file-transfer/blob/dev/doc/index.md
- [11]: https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md
- [12]: https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md
- [13]: https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md
- [14]: https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md
- [15]: https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md
- [16]: https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md
- [17]: https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md
- [18]: https://github.com/apache/cordova-plugin-vibration/blob/dev/doc/index.md
+ [2]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
+ [3]: https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md
+ [4]: https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md
+ [5]: https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md
+ [6]: https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md
+ [7]: https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md
+ [8]: https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md
+ [9]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
+ [10]: https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md
+ [11]: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md
+ [12]: https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md
+ [13]: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md
+ [14]: https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md
+ [15]: https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md
+ [16]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
+ [17]: https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md
+ [18]: https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md
 
 이러한 플러그인 워드 프로세서의 비 영어 번역 코르도바 설명서의 이전 버전을 보고 하 여 찾을 수 있습니다. 매우 상단 오른쪽에이 사이트의 드롭 다운 메뉴를 사용 하 여 버전을 전환할.

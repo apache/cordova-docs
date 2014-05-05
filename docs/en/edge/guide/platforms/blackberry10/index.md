@@ -41,13 +41,13 @@ build and deploy for each platform.
 
 Blackberry 10 Device Simulator:
 
-	* `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
-	* `Disk space: 10 GB`
-	* `RAM Memory: 4 GB`
-	* `Virtualization:
-		* __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
-		* __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
-	
+* Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+* Disk space: 10 GB 
+* RAM Memory: 4 GB 
+* Virtualization: one of the following:
+  * __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
+  * __AMD Virtualization__ (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).
+
 More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
 
 ## Install the BlackBerry WebWorks SDK
@@ -73,7 +73,7 @@ On Windows:
 
 * Append the Native SDK's install directory to the PATH, for example:
 
-        ;C:\bbndk\host_10_1_0_132\darwin\x86\usr\bin\
+        ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
 
 On Mac and Linux:
 
@@ -92,19 +92,27 @@ On Mac and Linux:
 
 If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:
 
-	* On Windows:
-		$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+* On Windows &rarr; MS-DOS shell:
 
-	* On Linux &rarr; Installed as root user:
-		$ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-		
-	* On Linux &rarr; Installed as non-root user:
-		$ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-	
-	* On Mac:
-		$ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+        C:\> \bbndk\bbndk-env_xx_xx_xx_xxxx.bat
 
-	
+* On Windows &rarr; git bash shell:
+
+        $ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
+
+* On Linux &rarr; Installed as root user:
+
+        $ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+
+* On Linux &rarr; Installed as non-root user:
+
+        $ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+
+* On Mac:
+
+        $ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
+
+
 ## Set up for Signing
 
 If you wish to test on a device or distribute apps through BlackBerry
