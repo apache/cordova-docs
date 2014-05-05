@@ -25,7 +25,8 @@ which it runs.  Plugins provide access to device and platform
 functionality that is ordinarily unavailable to web-based apps.  All
 the main Cordova API features are implemented as plugins, and many
 others are available that enable features such as bar code scanners,
-NFC communication, or to tailor calendar interfaces.
+NFC communication, or to tailor calendar interfaces. There is a
+[registry](http://plugins.cordova.io) of available plugins.
 
 Plugins comprise a single JavaScript interface along with
 corresponding native code libraries for each supported platform.  This
@@ -38,7 +39,7 @@ this section.
 
 In addition to these instructions, when preparing to write a plugin it
 is best to look over
-[existing plugins](https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova)
+[existing plugins](http://cordova.apache.org/#contribute)
 for guidance.
 
 ## Building a Plugin
@@ -192,8 +193,8 @@ The Tizen platform does not support plugins.
 ## Publishing Plugins
 
 Once you develop your plugin, you may want to publish and share it
-with the community. You can publish your plugin to the cordova
-registry (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
+with the community. You can publish your plugin to the Cordova
+[registry](http://plugins.cordova.io) (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
 to any other `npmjs`-based registry. Other developers can install it
 automatically using either `plugman` or the Cordova CLI.  (For details
 on each development path, see Using Plugman to Manage Plugins and The
