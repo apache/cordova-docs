@@ -1,6 +1,6 @@
 # Next Steps
 
-For developers who have an understanding of how to use the Cordova CLI and make use of plugins, there are a few things you may want to consider researching next to build better, more performant Cordova applications. The following document offers advice on various topics relating to best practices, testing, upgrades, and other topics, but is not meant to be prescriptive. Consider this your launching point for your growth as a Cordova developer. Also, if you see something that can be improved, please contribute!
+For developers who have an understanding of how to use the Cordova CLI and make use of plugins, there are a few things you may want to consider researching next to build better, more performant Cordova applications. The following document offers advice on various topics relating to best practices, testing, upgrades, and other topics, but is not meant to be prescriptive. Consider this your launching point for your growth as a Cordova developer. Also, if you see something that can be improved, please [contribute](http://cordova.apache.org/#contribute)!
 
 This guide contains the following topics:
 
@@ -48,7 +48,7 @@ One of the biggest mistakes a new Cordova developer can make is to assume that t
 
 * ["You half assed it"](http://sintaxi.com/you-half-assed-it)
 * ["Top Ten Performance Tips for PhoneGap and Hybrid Apps"](http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/)
-* ["Fast Apps and Sites with JavaScript"](http://channel9.msdn.com/Events/Build/2013/4-313)
+* "Fast Apps and Sites with JavaScript": http://channel9.msdn.com/Events/Build/2013/4-313
 
 ## 3) Recognize and Handle Offline Status
 
@@ -57,9 +57,9 @@ See the previous tip about networks. Not only can you be on a slow network, it i
 Note that the online and offline events, as well as the Network Connection API is not perfect. You may need to rely on using an XHR request to see if the device is truly offline or online. At the end of the day, be sure add some form of support for network issues - in fact, the Apple store (and probably other stores) will reject apps that don’t properly handle offline/online states. For more discussion on this topic, see 
 ["Is This Thing On?"](http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29)
  
-## Handling Upgrades
+# Handling Upgrades
 
-### Upgrading Cordova Projects
+## Upgrading Cordova Projects
 
 If your existing project was created using Cordova 3.x, you can upgrade the project by issuing the following:
 
@@ -78,7 +78,7 @@ Regardless of the project's prior version, it is absolutely critical that you re
 
 Note: some plugins may not be compatible with the new version of Cordova. If a plugin is not compatible, you may be able to find a replacement plugin that does what you need, or you may need to delay upgrading your project. Alternatively, alter the plugin so that it does work under the new version and contribute back to the community.
 
-### Plugin Upgrades
+## Plugin Upgrades
 As of Cordova 3.4, there is no mechanism for upgrading changed plugins using a single command. Instead, remove the plugin and add it back to your project, and the new version will be installed:
 
 	cordova plugin rm com.some.plugin
@@ -90,11 +90,11 @@ Always test your apps to ensure that installing the new plugin has not broken so
 
 If your project has a lot of plugins that you need updated, it might save time to create a shell or batch script that removes and adds the plugins with one command. 
 
-## Testing
+# Testing
 
 Testing your applications is super important. The Cordova team uses Jasmine but any web friendly unit testing solution will do. 
 
-### Testing on a simulator vs. on a real device
+## Testing on a simulator vs. on a real device
 
 It’s not uncommon to use desktop browsers and device simulators/emulators when developing a Cordova application. However, it is incredibly important that you test your app on as many physical devices as you possibly can:
 
@@ -108,32 +108,32 @@ It is, of course, impossible to test on every possible device on the market. For
 
 Tip: It is possible on Android Nexus devices to easily flash different versions of Android onto the device. This simple process will allow you to easily test your application on different levels of Android with a single device, without voiding your warranty or requiring you to “jailbreak” or “root” your device. The Google Android factory images and instructions are located at: https://developers.google.com/android/nexus/images#instructions
 
-## Debugging
+# Debugging
 
 Debugging Cordova requires some setup. Unlike a desktop application, you can't simply open dev tools on your mobile device and start debugging, luckily there are some great alternatives.
 
-### Safari Remote Debugging
+## Safari Remote Debugging
 The first option is Safari Remote Debugging. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. For more details, see this excellent blog post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/])
 
-### Chrome Remote Debugging
+## Chrome Remote Debugging
 Virtually the same as the Safari version, this works with Android only but can be used from any desktop operating system. It requires a minimum of Android 4.4 (KitKat), minimum API level of 19, and Chrome 30+ (on the desktop). Once connected, you get the same Chrome Dev Tools experience for your mobile applications as you do with your desktop applications. Even better, the Chrome Dev Tools have a mirror option that shows your app running on the mobile device. This is more than just a view - you can scroll and click from dev tools and it updates on the mobile device. More details on Chrome Remote Debugging may be found here: [https://developers.google.com/chrome/mobile/docs/debugging](https://developers.google.com/chrome/mobile/docs/debugging)
 
 It is possible to use Chrome Dev Tools to inspect iOS apps, through a WebKit proxy: [https://github.com/google/ios-webkit-debug-proxy/](https://github.com/google/ios-webkit-debug-proxy/)
 
-### Ripple
+## Ripple
 Ripple is a desktop based emulator for Cordova projects. Essentially it lets you run a Cordova application in your desktop application and fake various Cordova features. For example, it lets you simulate the accelerometer to test shake events. It fakes the camera API by letting you select a picture from your hard drive. Ripple lets you focus more on your custom code rather than worrying about Cordova plugins. You can find out more about Ripple here: [http://ripple.incubator.apache.org/](http://ripple.incubator.apache.org/)
 
-### Weinre
+## Weinre
 Weinre creates a local server that can host a remote debug client for your Cordova applications. After you've installed and started it up, you copy a line of code into your Cordova application and then restart it. You can then open a dev tool panel on your desktop to work with the application. Weinre is not quite as fancy as Chrome and Safari Remote debugging but has the benefit of working with a much greater range of operating systems and platforms. More information may be found here: [http://people.apache.org/~pmuellr/weinre/docs/latest/](http://people.apache.org/~pmuellr/weinre/docs/latest/)
 
-### Other Options
+## Other Options
 
 * BlackBerry 10 supports debugging as well: [Documentation]( https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html)
 * You can debug using Firefox App Manager as well, see [this blog post](https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/) and this 
 [MDN article](https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging).
 * For more examples and explanation of the above debugging tips, see: [http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/](http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/)
 
-## User Interface
+# User Interface
 
 Building a Cordova application that looks nice on mobile can be a challenge, especially for developers. Many people chose to use a UI framework to make this easier. Here is a short list of options you may want to consider.
 
@@ -149,18 +149,18 @@ When building your user interface, it is important to think about all platforms 
 * [Android](https://developer.android.com/designWP8)
 * [Windows Phone](http://dev.windowsphone.com/en-us/design/library)
 
-### Additional UI Articles and Resources
+## Additional UI Articles and Resources
 
 Although browser engines become more and more standards complaint, we still live in a prefixed world (-webkit and -ms.) The following article is valuable when developing UI’s in for cross browser apps: [http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
 
-## Keeping Up
+# Keeping Up
 
 Here are a few ways to keep up to date with Cordova.
 
 * Subscribe to the [Cordova blog](http://cordova.apache.org/#news).
 * Subscribe to the [developer list](http://cordova.apache.org/#mailing-list). Note - this is not a support group! Rather this is a place where development of Cordova is discussed.
 
-## Getting Help
+# Getting Help
 
 The following links are the best places to get help for Cordova:
 
