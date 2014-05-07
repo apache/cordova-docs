@@ -69,16 +69,10 @@ based Cleaver implementation.
 
 15. Select the __+__ button, and add the following __frameworks__. Optionally in the Project Navigator, move them under the __Frameworks__ group):
 
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
 
 16. Expand __Target Dependencies__, the top box labeled like this if you have multiple boxes!
 
