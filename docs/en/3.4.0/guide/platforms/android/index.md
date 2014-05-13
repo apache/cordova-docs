@@ -242,3 +242,9 @@ You can push the app to the device from the command line:
 
 Alternately within Eclipse, right-click the project and choose __Run
 As &rarr; Android Application__.
+
+## Signing and releasing your android application
+
+### Making a private key file
+
+Create a keystore file and a keystore alias as described at [Android Developer Site](http://developer.android.com/tools/publishing/app-signing.html#cert)
