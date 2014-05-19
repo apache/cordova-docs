@@ -41,12 +41,15 @@ current interface.
 
 ## Requirements and Support
 
-See the [System Requirements](http://developer.android.com/sdk/index.html)
-for the Android SDK.
+Cordova for Android requires the Android SDK. See the Android SDK's
+[System Requirements](http://developer.android.com/sdk/index.html).
 
-Cordova supports Android 2.2, 2.3, and 4.x.  As a general rule,
-platforms are deprecated as they dip below 5% on Google's
+Cordova supports Android 2.3.x (Gingerbread, starting with Android API level 10)
+and 4.x.  As a general rule, Android versions become unsupported by Cordova as
+they dip below 5% on Google's
 [distribution dashboard](http://developer.android.com/about/dashboards/index.html).
+Android versions earlier than API level 10, and the 3.x versions (Honeycomb,
+API levels 11-13) fall significantly below that 5% threshold.
 
 <!--
 NOTE, doc said:
