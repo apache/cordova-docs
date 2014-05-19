@@ -65,8 +65,8 @@ To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
    installation, you should be able to invoke `node` and `npm` on your
-   command line. If desired, you may optionally use a tool such as `nvm` to
-   manage your Node.js installation.
+   command line. If desired, you may optionally use a tool such as `nvm` 
+   or `nave` to manage your Node.js installation.
 
 1. Download and install a [git client](http://git-scm.com/), if you don't
    already have one. Following installation, you should be able to invoke `git`
@@ -85,7 +85,7 @@ To install the `cordova` command-line tool, follow these steps:
        `sudo` may be necessary to install this development utility in
        otherwise restricted directories such as 
        `/usr/local/share`. If you are using the optional
-       `nvm` tool or have write access to the install directory,
+       nvm/nave tool or have write access to the install directory,
        you may be able to omit the `sudo` prefix. There are
        [more tips](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
        available on using `npm` without `sudo`, if you desire to do that.
@@ -103,8 +103,11 @@ To install the `cordova` command-line tool, follow these steps:
    be found at `/usr/local/share/npm`.
    
    The installation log may produce errors for any uninstalled
-   platform SDKs.  Following installation, you should be able to run
-   `cordova` on the command line, and it should print help text.
+   platform SDKs.
+
+   Following installation, you should be able to run
+   `cordova` on the command line with no arguments and it should
+   print help text.
 
 ## Create the App
 
