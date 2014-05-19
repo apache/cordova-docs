@@ -64,8 +64,9 @@ whose assets you pull down to local working directories.
 To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following
-   installation, you should be able to invoke `node` or `npm` on your
-   command line. 
+   installation, you should be able to invoke `node` and `npm` on your
+   command line. If desired, you may optionally use a tool such as `nvm` 
+   or `nave` to manage your Node.js installation.
 
 1. Download and install a [git client](http://git-scm.com/), if you don't
    already have one. Following installation, you should be able to invoke `git`
@@ -73,22 +74,42 @@ To install the `cordova` command-line tool, follow these steps:
    the CLI does use it behind-the-scenes to download some assets when
    creating a new project.
 
-1. Install the `cordova` utility. In Unix, prefixing the additional
-   `sudo` command may be necessary to install development utilities in
-   otherwise restricted directories:
+1. Install the `cordova` module using `npm` utility of Node.js. The `cordova`
+   module will automatically be downloaded by the `npm` utility.
 
-        $ sudo npm install -g cordova
+   * on OS X and Linux:
 
-   The installation log may produce errors for any uninstalled
-   platform SDKs.  Following installation, you should be able to run
-   `cordova` on the command line.
+            $ sudo npm install -g cordova
 
-   __NOTE__: The `-g` flag above tells `npm` to install cordova globally. 
+       On OS X and Linux, prefixing the `npm` command with
+       `sudo` may be necessary to install this development utility in
+       otherwise restricted directories such as 
+       `/usr/local/share`. If you are using the optional
+       nvm/nave tool or have write access to the install directory,
+       you may be able to omit the `sudo` prefix. There are
+       [more tips](http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears)
+       available on using `npm` without `sudo`, if you desire to do that.
+
+   * on Windows:
+
+            C:\>npm install -g cordova
+
+   The `-g` flag above tells `npm` to install `cordova` globally. Otherwise
+   it will be installed in the `node_modules` subdirectory of the current
+   working directory.
+
    You may need to add the `npm` directory to your `PATH` in order to invoke
    globally installed `npm` modules. On Windows, `npm` can usually be found at
-   `C:\Users\username\AppData\Roaming\npm` and on Unix at
-   `/usr/local/share/npm`.
+   `C:\Users\username\AppData\Roaming\npm`. On OS X and Linux it can usually
+   be found at `/usr/local/share/npm`.
    
+   The installation log may produce errors for any uninstalled
+   platform SDKs.
+
+   Following installation, you should be able to run
+   `cordova` on the command line with no arguments and it should
+   print help text.
+
 ## Create the App
 
 Go to the directory where you maintain your source code, and run a
