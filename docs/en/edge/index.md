@@ -70,6 +70,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <span>An overview of native storage options.</span>
         </li>
         <li>
+            <h2>Next Steps</h2>
+            <span>A look at topics that new Cordova developers will encounter as they begin using the framework.</span>
+        </li>
+        <li>
             <h2><a href="_index.html">Keyword Index</a></h2>
             <span>Full index of the documentation.</span>
         </li>

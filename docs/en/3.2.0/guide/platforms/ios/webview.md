@@ -80,16 +80,10 @@ package.
    Optionally within the __Project Navigator__, move them under the
    __Frameworks__ group:
 
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
 
 1. Expand __Target Dependencies__, the top box with that label if
    there's more than one box.
