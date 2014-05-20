@@ -17,16 +17,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Firefox OS Platform Guide
+# Firefox OS プラットフォームに関する解説
 
 This guide describes how to set up your development environment to
 create Cordova apps for Firefox OS devices, then test and publish those apps.
 
-## Requirements and Support
+## 必要事項とサポート
 
 Firefox OS apps are basically just web apps, with the addition of a manifest.webapp file that defines metadata about the app and allows it to be installed on Firefox OS devices. Any platform that Cordova supports can be used.To find out more about building web apps, consult the [App Center](https://developer.mozilla.org/en-US/Apps) on [MDN](https://developer.mozilla.org/en-US/).
 
-## Installation and Environment Setup
+## インストールと環境設定
 
 First install [Node.js](http://nodejs.org/), then install the Cordova package like so:
 
@@ -43,7 +43,7 @@ Add Firefox OS as a supported platform to the app with the following:
 
 This creates a Firefox OS app in platforms/firefoxos/www directory, which currently looks the same except that it has a Firefox manifest file (manifest.webapp) inside the www directory.
 
-##Developing your app
+## アプリの展開
 
 At this point you are ready to go — change the code inside test-app/www to whatever you want your app to be. You can add [supported plugins]() to the app using "cordova plugin add", for example:
 
@@ -71,7 +71,7 @@ When your app code is written, deploy your changes to the Firefox OS app you've 
   	
 Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
 
-##Testing and Debugging
+## テストとデバッグ
 
 The app can be tested using the Firefox OS [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
 
@@ -81,7 +81,7 @@ For here you can install the app on your test device/simulator (with the "Update
 
 Note: Before attempting to publish your app you should consider validating it using the [App validator](https://marketplace.firefox.com/developers/validator).
 
-##Publishing your app on the Firefox Marketplace
+## Firefox Marketplace 上でのアプリの配布
 
 You can submit your app to the Firefox Marketplace, or publish it yourself. Visit the [Firefox Marketplace Zone](https://developer.mozilla.org/en-US/Marketplace) on MDN to find out more about how to do this; [App publishing options](https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options) is the best place to start.
 

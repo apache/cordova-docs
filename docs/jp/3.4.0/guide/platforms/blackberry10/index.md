@@ -17,14 +17,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Platform Guide
+# BlackBerry 10 プラットフォームに関する解説
 
 This guide shows how to set up your development environment to build
 and deploy Cordova apps for BlackBerry 10 devices.  For previous
 versions of BlackBerry, you need to use a different set of
 command-line tools, described in BlackBerry Platform Guide.
 
-## Requirements
+## 必要事項
 
 The development environment is available on Windows, Mac and Linux.
 
@@ -44,7 +44,7 @@ Blackberry 10 Device Simulator:
 	
 More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
 
-## Install the BlackBerry Native SDK
+## BlackBerry Native SDK のインストール
 
 In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
 [developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.
@@ -103,7 +103,7 @@ The final step is to generate a signing certificate:
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
 
-## Create a Project
+## プロジェクトの作成
 
 Use the `cordova` utility to set up a new project, as described in The
 Command-Line Interface. For example, in a source-code directory:
@@ -113,7 +113,7 @@ Command-Line Interface. For example, in a source-code directory:
     $ cordova platform add blackberry10
     $ cordova build
 
-## Deploy to Emulator
+## エミュレーターへの展開
 
 If you wish to run a device emulator, download and install the
 BlackBerry 10 Simulator.
@@ -137,7 +137,7 @@ Then, run the `emulate` command to view the app:
 
     $ cordova emulate blackberry10 --devicepass <password>
 
-## Deploy to Device
+## デバイスへの展開
 
 To deploy to a device, make sure it is plugged into your computer and
 development mode is enabled.
@@ -152,7 +152,7 @@ computer to sign applications.
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
 
-## Debugging with WebInspector
+## WebInspector を使用したデバッグ
 
 When debugging on the device or an emulator, you may run WebInspector
 remotely to view the application's internal state.  A prompt displays
@@ -160,7 +160,7 @@ the URL that allows you to connect to your app with a standard web
 browser.  For more information, see
 [Debugging using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
 
-## Building a Release Version
+## リリースバージョンのビルド
 
 By default, running the `cordova build` command creates an unsigned
 _.bar_ package file suitable for testing on a device or simulator.
@@ -174,7 +174,7 @@ The `--keystorepass` option specifies the password you defined when
 configuring your computer to sign applications.
 
 
-## Deploy to Other Locations
+## 別の場所への展開
 
 The instructions above assume a device is plugged in via USB or a
 simulator is running on the local machine. It is also possible to

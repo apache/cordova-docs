@@ -17,12 +17,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Tizen Platform Guide
+# Tizen プラットフォームに関する解説
 
 This guide describes how to set up your SDK development environment to
 deploy Cordova apps for devices running the Tizen operating system.
 
-## Requirements and Support
+## 必要事項とサポート
 
 The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
 or Windows XP SP3/7 (32-bit).
@@ -31,7 +31,7 @@ Developers should use the `cordova` utility in conjunction with
 the Tizen SDK.  See The Command-Line Interface for information
 how to install it, add projects, then build and deploy a project.
 
-## Install the SDK
+## SDK のインストール
 
 Download the Tizen SDK from
 [tizen.org](https://developer.tizen.org/sdk).
@@ -60,7 +60,7 @@ Download the Tizen SDK from
 
 -->
 
-## Open a Project in the SDK
+## SDK でプロジェクトを開く
 
 1. Launch the Tizen Eclipse IDE.
 
@@ -91,14 +91,14 @@ and Select __Build Project__:
 A widget package file such as _hello.wgt_ should generate in the
 project's root directory.
 
-## Deploy to Emulator
+## エミュレーターへの展開
 
 Right-click the project in the __Project Explorer__ view and select
 __Run As &rarr; Tizen Web Simulator Application__:
 
 ![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
-## Deploy to Device
+## デバイスへの展開
 
 * Make sure that the target device is properly launched, connected and
   configured. Its __Date and Time__ settings must be set correctly.

@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows 8 Platform Guide
+# Windows 8 プラットフォームに関する解説
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows 8. See the following for more
@@ -35,7 +35,7 @@ Windows RT. MSDN now refers to this type of app as a _Windows Store_
 app, and this guide follows that convention. Also, in this guide
 _Windows 8_ signifies both Windows 8 and Windows RT.
 
-## Requirements
+## 必要事項
 
 - Windows 8
 
@@ -45,7 +45,7 @@ Follow the instructions at
 [windowsstore.com](http://www.windowsstore.com/)
 to submit your app to Windows Store.
 
-## Install SDK and Cordova
+## SDK と Cordova のインストール
 
 Set up your preferred variant of Visual Studio 2012. All of the
 product's paid versions (Professional, etc.) let you build Windows
@@ -57,7 +57,7 @@ Download and extract the latest copy of
 [Cordova](http://phonegap.com/download).
 These instructions apply to the `lib\windows-8` subdirectory.
 
-## Set up a New Project
+## 新規プロジェクトの設定
 
 You can already build Windows 8 apps using the _HTML/JavaScript track_
 available in Windows Store apps. Use Cordova in Windows Store apps to
@@ -114,7 +114,7 @@ expose the same APIs as on other Cordova-supported platforms.
             </script>
         </body>
 
-## Test the Project
+## プロジェクトのテスト
 
 Run the project from Visual Studio. You'll see the message box appear:
 

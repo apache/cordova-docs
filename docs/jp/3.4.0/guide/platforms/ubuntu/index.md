@@ -17,9 +17,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Ubuntu Platform Guide
+# Ubuntu プラットフォームに関する解説
 
-## Initial Release
+## イニシャルリリース ( Initial Release )
 
 Welcome to the initial release of Ubuntu platform support in Cordova. With this
 release, the focus is developing on an Ubuntu system and using the Cordova Web
@@ -34,7 +34,7 @@ You may also want to install the Ubuntu QtCreator development environment. See
 QtCreator SDK is not required to add Ubuntu platform support to your Cordova
 app.)
 
-### Ubuntu Runtime Platforms
+### Ubuntu ランタイム プラットフォーム
 
 Ubuntu is well-known for its Desktop environment (for laptops, PCs and such).
 Ubuntu Touch extends the Ubuntu OS onto phones and tablets. Ubuntu runtime
@@ -42,12 +42,12 @@ platforms have varying CPU architectures (x86, armhf, etc.). App and plugin
 code must be compiled appropriately. Support for this broad area is rapidly
 evolving in the Ubuntu.
 
-### Latest Information
+### 最新情報
 
 For the latest information on Cordova app support for Ubuntu runtime platforms,
 see [wiki.ubuntu.com/Cordova](http://wiki.ubuntu.com/Cordova).
 
-## Development Platform Requirements
+## 開発プラットフォームに関する必要事項
 
 For this initial release, the development platform should be an Ubuntu Desktop.
 Ubuntu 13.10 (codename ‘saucy’) or later is required to enjoy the full set of
@@ -56,7 +56,7 @@ supported capabilities.
 You can install Cordova on non-Ubuntu systems (using npm), but important
 capabilities are only provided through Ubuntu debian packages at this time.
 
-## Cordova Installation
+## Cordova のインストール
 
 Add the Ubuntu Cordova
 [Personal Package Archive](https://launchpad.net/~cordova-ubuntu/+archive/ppa)
@@ -69,29 +69,29 @@ Install cordova-cli package (and its dependencies):
 
     $ sudo apt-get install cordova-cli
 
-## Project Workflow
+## プロジェクトの開発手順
 
-### Create a project
+### プロジェクトの作成
 
     $ cordova create project1 REVERSEDNSNAME.project1 project1
 
-### Move into the Project Directory
+### プロジェクトを保存したディレクトリーへの移動
 
     $ cd project1
 
-### Add the Ubuntu Platform
+### Ubuntu プラットフォームの追加
 
     $ cordova platform add ubuntu
 
-### Build for Ubuntu
+### Ubuntu でのビルド
 
     $ cordova build ubuntu
 
-### Run the App
+### アプリの実行
 
     $ cordova run ubuntu
 
-### Add the Battery Status Plugin
+### Battery Status プラグインの追加
 
     $ cordova plugin add org.apache.cordova.battery-status
 

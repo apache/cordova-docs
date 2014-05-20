@@ -17,82 +17,70 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Platform Guides
+# 各プラットフォームに関する解説
 
-Before developing for any of the platforms listed below, install
-cordova's command-line interface (CLI).
-(For details, see The Command-Line Interface.)
+下記のプラットフォームで開発を行う前に、cordova のコマンドライン インターフェイス ( CLI / command-line interface ) をインストールしてください。詳細に関しては、コマンドライン インターフェイスに関する解説をご確認ください。
 
-To develop Cordova applications, you must install SDKs for each mobile
-platform you are targeting. This installation is necessary regardless
-of whether you do the majority of your work in the SDK or use the CLI
-for your build cycle.
+Cordova アプリの開発を行う場合、対象とする各モバイルプラットフォーム用の SDK をインストールする必要があります。SDK を主に使用した開発を行う場合はもちろんのこと、CLI を主に使用してビルドを行う場合でも、SDK のインストールは必須となります。
 
-Each _Platform Guide_ listed below tells you what you need to know to
-set up each platform's development environment: where to obtain the
-SDK, how to set up device emulators, how to connect devices for direct
-testing, and how to manage signing key requirements.  Additional
-guides provide information on each platform's unique set of
-configuration options, instructions to add plugins, how to upgrade
-each platform, and platform-specific command-line tools that serve as
-a lower-level alternative to the `cordova` command-line utility.
+下記の各 _プラットフォームに関する解説_ においても、各プラットフォーム別に開発環境を構築方法 ( SDK 取得方法、エミュレーターの設定方法、デバイスに直接接続してテストを行う方法、署名と鍵の取り扱い方法 ) などを記述しています。また、他の事項の解説では、プラットフォーム特有の設定オプション、プラグインの追加手順、プラットフォームのアップグレード方法、プラットフォーム別のコマンドライン ツールの使用方法 ( `cordova` のコマンドライン ユティリティー の代替として使用 ) に関する情報を提供します。 
 
 ## Amazon Fire OS
 
-* Amazon Fire OS Platform Guide
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+* Amazon Fire OS プラットフォームに関する解説
+* Amazon Fire OS に関する設定
+* Amazon Fire OS の WebView
+* Amazon Fire OS のプラグイン
 
 ## Android
 
-* Android Platform Guide
-* Android Configuration
-* Android WebViews
-* Android Plugins
-* Android Command-line Tools
-* Upgrading Android
+* Android プラットフォームに関する解説
+* Android に関する設定
+* Android の WebView
+* Android のプラグイン
+* Android のコマンドライン ツール
+* Android のアップグレード
 
 ## BlackBerry 10
 
-* BlackBerry 10 Platform Guide
-* BlackBerry 10 Configuration
-* BlackBerry 10 Plugins
-* BlackBerry 10 Command-line Tools
-* Upgrading BlackBerry 10
+* BlackBerry 10 プラットフォームに関する解説
+* BlackBerry 10 に関する設定
+* BlackBerry 10 のプラグイン
+* BlackBerry 10 のコマンドライン ツール
+* BlackBerry 10 のアップグレード
 
 ## Firefox OS
 
-* Firefox OS Platform Guide
+* Firefox OS プラットフォームに関する解説
 
 ## iOS
 
-* iOS Platform Guide
-* iOS Configuration
-* iOS WebViews
-* iOS Plugins
-* iOS Command-line Tools
-* Upgrading iOS
+* iOS プラットフォームに関する解説
+* iOS に関する設定
+* iOS の WebView
+* iOS のプラグイン
+* iOS のコマンドライン ツール
+* iOS のアップグレード
 
 ## Ubuntu
 
-* Ubuntu Platform Guide
+* Ubuntu プラットフォームに関する解説
 
 ## Windows Phone
 
-* Windows Phone 8 Platform Guide
-* Windows Phone 7 Platform Guide
-* Windows Phone Configuration
-* Windows Phone Command-line Tools
-* Upgrading Windows Phone
+* Windows Phone 8 プラットフォームに関する解説
+* Windows Phone 7 プラットフォームに関する解説
+* Windows Phone に関する設定
+* Windows Phone のコマンドライン ツール
+* Windows Phone のアップグレード
 
 ## Windows 8
 
-* Windows 8 Platform Guide
-* Windows 8 Command-line Tools
-* Upgrading Windows 8
+* Windows 8 プラットフォームに関する解説
+* Windows 8 のコマンドライン ツール
+* Windows 8 のアップグレード
 
 ## Tizen
 
-* Tizen Platform Guide
+* Tizen プラットフォームに関する解説
 

@@ -18,11 +18,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# Platform Support
+# プラットフォームのサポート情報
 
-The following shows the set of development tools and device APIs
-available for each mobile platform. (Column headers display the
-CLI's shorthand stubs.)
+各モバイルプラットフォーム上で使用できる、開発ツールとデバイス系 API ( Device API ) を下記の表で示します ( 項目の最上部に記載した OS 名は、CLI 上で使用するスタブです )。
 
 <!-- START HTML -->
 
@@ -62,12 +60,12 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="guide_hybrid_webviews_index.md.html">Embedded<br/>WebView</a></th>
-        <td data-col="amazon-fireos" class="y"><a href="guide_platforms_amazonfireos_webview.md.html">(see details)</a></td>
-        <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html">(see details)</a></td>
+        <th><a href="guide_hybrid_webviews_index.md.html">組み込み<br/>WebView</a></th>
+        <td data-col="amazon-fireos" class="y"><a href="guide_platforms_amazonfireos_webview.md.html">( 詳細はこちら )</a></td>
+        <td data-col="android"    class="y"><a href="guide_platforms_android_webview.md.html">( 詳細はこちら )</a></td>
         <td data-col="blackberry10" class="n"></td>
         <td data-col="firefoxos" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">( 詳細はこちら )</a></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
@@ -76,26 +74,26 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="guide_hybrid_plugins_index.md.html">Plug-in<br/>Interface</a></th>
-         <td data-col="amazon-fireos" class="y"><a href="guide_guide_platforms_amazonfireos_plugin.md.html">(see details)</a></td>
-        <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html">(see details)</a></td>
-        <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
+        <th><a href="guide_hybrid_plugins_index.md.html">プラグイン<br/>インターフェイス</a></th>
+         <td data-col="amazon-fireos" class="y"><a href="guide_guide_platforms_amazonfireos_plugin.md.html">( 詳細はこちら )</a></td>
+        <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html">( 詳細はこちら )</a></td>
+        <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">( 詳細はこちら )</a></td>
         <td data-col="firefoxos" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">( 詳細はこちら )</a></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
-        <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
+        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">( 詳細はこちら )</a></td>
+        <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">( 詳細はこちら )</a></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
         <th></th>
-        <th colspan="20">Platform APIs</th>
+        <th colspan="20">各プラットフォームの API サポート状況</th>
     </tr>
 
     <tr>
-        <th><a href="cordova_accelerometer_accelerometer.md.html">Accelerometer</a></th>
+        <th><a href="cordova_accelerometer_accelerometer.md.html">加速度<br/>センサー</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -109,7 +107,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_camera_camera.md.html">Camera</a></th>
+        <th><a href="cordova_camera_camera.md.html">カメラ</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -123,7 +121,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_media_capture_capture.md.html">Capture</a></th>
+        <th><a href="cordova_media_capture_capture.md.html">キャプチャー</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -137,7 +135,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_compass_compass.md.html">Compass</a></th>
+        <th><a href="cordova_compass_compass.md.html">コンパス</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -151,7 +149,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_connection_connection.md.html">Connection</a></th>
+        <th><a href="cordova_connection_connection.md.html">接続</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -165,7 +163,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_contacts_contacts.md.html">Contacts</a></th>
+        <th><a href="cordova_contacts_contacts.md.html">連絡先</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -179,7 +177,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_device_device.md.html">Device</a></th>
+        <th><a href="cordova_device_device.md.html">デバイス</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -193,7 +191,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_events_events.md.html">Events</a></th>
+        <th><a href="cordova_events_events.md.html">イベント</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -207,7 +205,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_file_file.md.html">File</a></th>
+        <th><a href="cordova_file_file.md.html">ファイル</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -221,7 +219,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_geolocation_geolocation.md.html">Geolocation</a></th>
+        <th><a href="cordova_geolocation_geolocation.md.html">位置情報</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -235,7 +233,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_globalization_globalization.md.html">Globalization</a></th>
+        <th><a href="cordova_globalization_globalization.md.html">国際対応</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -258,12 +256,12 @@ CLI's shorthand stubs.)
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="p">uses iframe</td>
+        <td data-col="win8"       class="p">iframe を使用</td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 
     <tr>
-        <th><a href="cordova_media_media.md.html">Media</a></th>
+        <th><a href="cordova_media_media.md.html">メディア</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -277,7 +275,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_notification_notification.md.html">Notification</a></th>
+        <th><a href="cordova_notification_notification.md.html">通知</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -291,7 +289,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a></th>
+        <th><a href="cordova_splashscreen_splashscreen.md.html">スプラッシュ<br/>スクリーン</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -305,7 +303,7 @@ CLI's shorthand stubs.)
     </tr>
 
     <tr>
-        <th><a href="cordova_storage_storage.md.html">Storage</a></th>
+        <th><a href="cordova_storage_storage.md.html">ストレージ</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>

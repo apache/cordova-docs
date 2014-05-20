@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Platform Guide
+# Android プラットフォームに関する解説
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Android devices. It walks you through the process
@@ -39,7 +39,7 @@ The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-Line Interface for information about the
 current interface.
 
-## Requirements and Support
+## 必要事項とサポート
 
 See the [System Requirements](http://developer.android.com/sdk/index.html)
 for the Android SDK.
@@ -104,7 +104,7 @@ run:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
-## Open a Project in the SDK
+## SDK でプロジェクトを開く
 
 Use the `cordova` utility to set up a new project, as described in The
 Cordova The Command-Line Interface. For example, in a source-code directory:
@@ -142,7 +142,7 @@ unresolved problems. If so, follow these additional steps:
 
 * Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
 
-## Deploy to Emulator
+## エミュレーターへの展開
 
 You can use the `cordova` utility to run an app in an emulator, or you
 can run it within the SDK.  Either way, the SDK must first be
@@ -229,7 +229,7 @@ If you are using `Linux-based system`, follow the instructions in the [Android D
 
 When starting the emulator, ensure there are no error messages indicating a failure to load HAXM modules.
 
-## Deploy to Device
+## デバイスへの展開
 
 To push an app directly to the device, make sure USB debugging is
 enabled on your device as described on the

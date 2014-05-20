@@ -17,129 +17,114 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Amazon Fire OS Platform Guide
+# Amazon Fire OS プラットフォームに関する解説
+SDK 開発環境の設定方法、および、Amazon Fire OS 搭載のデバイス （ Kindle Fire HDX など )　への Cordova アプリの展開方法を説明します。
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Amazon Fire OS devices, such as the Kindle Fire HDX.
+各プラットフォームの詳細情報に関しては、以下をご確認ください。
 
-See the following for more detailed platform-specific information:
+* Amazon Fire OS 設定
+* Amazon Fire OS WebView
+* Amazon Fire OS プラグイン
 
-* Amazon Fire OS Configuration
-* Amazon Fire OS WebViews
-* Amazon Fire OS Plugins
+## 必要事項とサポート
 
-## Requirements and Support
+Amazon Fire OS 用に Cordova アプリを開発する場合、Android SDK と Amazon WebView SDK が必要です。これらの SDK をインスールするときの必要事項に関しては、以下のリンク先をご確認ください。
 
-Developing Cordova apps for Amazon Fire OS requires the Android SDK and the Amazon WebView SDK. Check the requirements for these SDKs at the links below:
-
-* [Android SDK System](http://developer.android.com/sdk/)
+* [Android SDK システム](http://developer.android.com/sdk/)
 
 * [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv)
 
-## Installation
+## インストール
 
 
 ### Android SDK
 
-Install the Android SDK from
-[developer.android.com/sdk](http://developer.android.com/sdk/).  You
-may be presented with a choice of where to install the SDK, otherwise
-move the downloaded `adt-bundle` tree to wherever you store
-development tools.
+[developer.android.com/sdk](http://developer.android.com/sdk/) から Android SDK をインスールします。SDK のインストール先は自由に選択できますが、他の開発ツールと同じ保存先に、ダウンロードした `adt-bundle` フォルダーを置くことを推奨します。
 
-For Cordova command-line tools to work, you need to include the SDK's
-`tools` and `platform-tools` directories in your PATH environment.
+Cordova コマンドライン ( command-line ) ツールを使用する場合、ユーザーの PATH 環境変数に SDK の `tools` と `platform-tools` のディレクトリーを追加する必要があります。
 
-On Mac, Linux or other Unix-like platforms, you can use a text editor to create or modify the
-`~/.bash_profile` file, adding a line such as the following, depending
-on where the SDK installs:
+Mac、Linux、Unix 系のプラットフォームでは、テキストエディターを使用して、 以下のようなラインを追加して
+、 `~/.bash_profile` を編集・作成します。SDK のインスール先に応じて、内容は修正してください。
 
     export PATH=${PATH}:/Development/adt-bundle/sdk/platform-tools:/Development/adt-bundle/sdk/tools
 
-This exposes SDK tools in newly opened terminal windows. Otherwise run
-this to make them available in the current session:
+これにより、新たに開いたターミナル ( terminal window ) 上で SDK ツールを使用することができます。または、以下のコマンドで、即座に使用することもできます。
 
     $ source ~/.bash_profile
 
-To modify the PATH environment on Windows 7:
+Windows 7 における PATH 環境変数の変更方法 : 
 
-* Click on the __Start__ menu in the lower-left corner of the desktop,
-  right-click on __Computer__, then click __Properties__.
+* デスクトップ左下の __スタート__ メニューをクリックして、 __コンピュータ__ を右クリックします。次に、 __プロパティー__ を選択します。
 
-* Click __Advanced System Settings__ in the column on the left.
+* 左枠に表示された __システムの詳細設定__ をクリックします。
 
-* In the resulting dialog box, press __Environment Variables__.
+* 表示されたダイアログボックスの __環境変数__ ボタンを押します。
 
-* Select the __PATH__ variable and press __Edit__.
+* __PATH__ 環境変数を選択して、 __編集__ ボタンを押します。
 
-* Append the following to the PATH based on where you installed the
-  SDK, for example:
+* 以下のラインを、PATH に追記 ( 「;」 セミコロンを使用 ) します。SDK のインスール先に応じて、内容は修正してください。
 
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
 
-* Save the value and close both dialog boxes.
+* 設定を保存して、ダイアログボックスを閉じます。
 
-You may also need to enable Java and Ant. Open a command prompt and
-type `java`, and also type `ant`. Append to the PATH whichever fail to
-run:
+Java と Ant も有効化することができます。コマンドプロンプト画面を立ち上げて、 `java` 、次に、 `ant` とタイプします。以下のように、実行できなった方を PATH に追記します。
 
     ;%JAVA_HOME%\bin;%ANT_HOME%\bin
 
 ### Amazon WebView SDK
 
-Download the Amazon WebView SDK from the [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv).
+[Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) から Amazon WebView SDK をダウンロードしてください。
 
-* Create a `libs/` folder in `~/.cordova/lib/amazon-fireos/cordova/3.1.0/` folder.
-* Add the `awv_interface.jar` from the downloaded SDK to  `~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/`
+* `~/.cordova/lib/amazon-fireos/cordova/3.1.0/` フォルダー内に、 `libs/` フォルダーを 1 つ作成してください。
+* ダウンロードした SDK の `awv_interface.jar` を `~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/` へ追加してください。
 
+## SDK でプロジェクトを開く
 
-## Open a Project in the SDK
+新規のプロジェクトを作成・設定するときは、 `cordova` ユティリティー ( Cordova コマンドライン インターフェイス の解説に記載 ) をお使いください。ソースコードを置いたディレクトリーで以下のラインを入力します。
 
-Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-line Interface. For example, in a source-code directory:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
     $ cordova platform add amazon-fireos
     $ cordova build
 
-Once created, you can use the Eclipse that comes along with the Android SDK to modify it:
+作成後、 Android SDK に含まれる Eclipse を使用して、設定の変更をすることができます。
 
-* Launch the __Eclipse__ application.
+* __Eclipse__ アプリケーションの起動します。
 
-* Select the __New Project__ menu item.
+* __New Project__ のメニューアイテムを選択します。
 
-* Choose __Android Project from Existing Code__ from the resulting dialog box, and press __Next__:
+* 表示されたダイアログボックスから __Android Project from Existing Code__ を選択して、 __Next__ を押します。
     ![](img/guide/platforms//eclipse_new_project.png)
 
-* Navigate to `hello`, or whichever directory you created for the project, then to the `platforms/amazon-fireos` subdirectory.
+* `hello` に移動 ( またはプロジェクトを作成したディレクトリー ) 後、 `platforms/amazon-fireos` サブディレクトリーへ移動します。
 
-* Press __Finish__.
+* __Finish__ を押します。
 
-Once the Eclipse window opens, a red __X__ may appear to indicate
-unresolved problems. If so, follow these additional steps:
+Eclipse ウィンドウが開いたときに、未解決事項があると、赤色の __X__ が表示されます。その場合、以下のステップを行います。
 
-* Right-click on the project directory.
+* プロジェクトが保存されたディレクトリを右クリックします。
 
-* In the resulting __Properties__ dialog, select __Android__ from the navigation pane.
+* 表示された __Properties__ ダイアログのナビゲーション ウィンドウから、 __Android__ を選択します。
 
-* For the project build target, select the highest Android API level you have installed.
+* プロジェクトのビルドターゲット ( project build target ) に関しては、インストールを行った内の最上位の Android API レベル ( API level ) を選択してください。
 
-* Click __OK__.
+* __OK__ をクリックします。
 
-* Select __Clean__ from the __Project__ menu. This should correct all the errors in the project.
+* __Project__ メニューから __Clean__ を選択します。 ここまでの手順で、プロジェクトに存在したエラーをすべて解決することができるはずです。
 
-## Deploy to Device
 
-To push an app directly to the device, make sure USB debugging is enabled on your device as described on the
-[Android Developer Site](http://developer.android.com/tools/device.html),
-and use a mini USB cable to plug it into your system.
 
-You can push the app to the device from the command line:
+## デバイスへの展開
+
+デバイスにアプリを直接にプッシュする場合、デバイスの USB デバッグ ( USB debugging ) が有効であることを確認してください ( [Android Developer Site](http://developer.android.com/tools/device.html) の記載事項 )。また、その場合、mini USB ケーブルを使用して、システムに接続を行ってください。
+
+コマンドラインから、デバイスにアプリをプッシュできます。
 
     $ cordova run amazon-fireos
 
-Alternately within Eclipse, right-click the project and choose __Run
-As &rarr; Android Application__.
+また、Eclipse を使用することもできます。プロジェクトを右クリックして、 __実行 ( Run
+As ) &rarr; Android アプリケーション (Android Application)__ を選択します。
 
-__Note__: Currently, testing via an emulator is not supported for Amazon WebView based apps.
+__注意__: 現在、Amazon WebView を使用したアプリに関しては、エミュレーター上でのテストを行うことができません。

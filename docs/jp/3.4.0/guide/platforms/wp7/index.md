@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone 7 Platform Guide
+# Windows Phone 7 プラットフォームに関する解説
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone 7 devices.  Apps also run on
@@ -36,7 +36,7 @@ The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-Line Interface for information about the
 current interface.
 
-## System Requirements
+## システムに関する要求事項
 
 Use Windows 7 or Windows 8 (Pro) or Windows Vista with SP2.  The
 64-bit version (x64) of Windows is required for the SDK.  The Pro
@@ -50,7 +50,7 @@ __NOTE__: Running the SDK in Virtual Machine may present challenges.
 Read [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac) for
 insights on developing solutions.
 
-## Install SDK and Cordova
+## SDK と Cordova のインストール
 
 Download and install the [Windows Phone
 SDK](http://www.microsoft.com/en-us/download/details.aspx?id=27570).
@@ -63,7 +63,7 @@ contains the Windows Phone 8 version of Cordova.
 Copy the `CordovaWP7_x_x_x.zip` file to the `\My Documents\Visual
 Studio 2012\Templates\ProjectTemplates\` directory.
 
-## Building the Template
+## テンプレートを使用したビルド
 
 __NOTE__: Skip this step if the `lib\windows-phone` directory already
 contains a `CordovaWP7_x_x_x.zip` file.
@@ -73,7 +73,7 @@ Studio templates. These allow you to rapidly generate Cordova apps,
 and you can modify them if necessary.  The steps below show how to
 generate it.
 
-### Run the Batch File to Create and Install the Templates
+### テンプレートの作成とインストール ( バッチファイルを実行 )
 
 The root of the repo contains a `createTemplates.bat` file.
 Double-clicking this file generates two `.zip` files:
@@ -89,7 +89,7 @@ with a parameter to install automatically:
 
         >createTemplates.bat -install
 
-## Set up a New Project
+## 新規プロジェクトの設定
 
 - Open Visual Studio Express for Windows Phone and choose __New
   Project__.
@@ -99,7 +99,7 @@ with a parameter to install automatically:
 
 - Give the project a name, and select __OK__.
 
-## Review the Project Structure
+## プロジェクトのディレクトリー構造の確認
 
 The `www` directory features `html`, `js`, and `css` subdirectories
 and any other resources your app requires.
@@ -111,7 +111,7 @@ vary depending on installed version:
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-## Build the Project for the Device
+## デバイスを使用する場合の要求事項
 
 Before testing your application on a device, the device must be
 registered. Consult

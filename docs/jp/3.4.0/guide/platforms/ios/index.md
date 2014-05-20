@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# iOS Platform Guide
+# iOS プラットフォームに関する解説
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for iOS devices such as iPhone and iPad. See the
@@ -33,7 +33,7 @@ The command-line tools above refer to versions prior to Cordova 3.0.
 See The Command-Line Interface for information about the
 current interface.
 
-## Requirements and Support
+## 必要事項とサポート
 
 Apple® tools required to build iOS applications run only on the OS X
 operating system on Intel-based Macs. Xcode® 4.5 (the minimum required
@@ -54,7 +54,7 @@ which costs $99 per year. This guide shows how to deploy apps to the
 iOS emulator, for which you don't need to register with the developer
 program.
 
-## Install the SDK
+## SDK のインストール
 
 There are two ways to download Xcode:
 
@@ -69,7 +69,7 @@ for Cordova to run. From the __Xcode__ menu, select __Preferences__,
 then the __Downloads__ tab. From the __Components__ panel, press the
 __Install__ button next to the __Command Line Tools__ listing.
 
-## Open a Project in the SDK
+## SDK でプロジェクトを開く
 
 Use the `cordova` utility to set up a new project, as described in The
 Cordova The Command-Line Interface. For example, in a source-code directory:
@@ -85,7 +85,7 @@ look like this:
 
 ![](img/guide/platforms/ios/helloworld_project.png)
 
-## Deploy to Emulator
+## エミュレーターへの展開
 
 To preview the app in the iOS emulator:
 
@@ -113,7 +113,7 @@ Xcode comes bundled with emulators for the latest versions of iPhone
 and iPad. Older versions may be available from the __Xcode &rarr;
 Preferences &rarr; Downloads &rarr; Components__ panel.
 
-## Deploy to Device
+## デバイスへの展開
 
 For details about various requirements to deploy to a device, refer
 to the _Configuring Development and Distribution Assets_ section of
@@ -146,7 +146,7 @@ To deploy to the device:
 4. Press the __Run__ button to build, deploy and run the application
    on your device.
 
-## Common Problems
+## 問題点
 
 __Deprecation Warnings__: When an application programming interface
 (API) is changed or replaced by another API, it is marked as
