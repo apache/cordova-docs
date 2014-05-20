@@ -65,6 +65,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
             <h2>Whitelist Guide</h2>
             <span>Grant an application access to external resources.</span>
         </li>
+         <li>
+            <h2>Security Guide</h2>
+            <span>Information and tips for building a secure application.</span>
+        </li>
         <li>
             <h2>Storage</h2>
             <span>An overview of native storage options.</span>
