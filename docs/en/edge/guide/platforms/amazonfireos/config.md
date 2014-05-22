@@ -26,24 +26,28 @@ config.xml File for information on global configuration options.
 
 - `KeepRunning` (boolean, defaults to `true`): Determines whether the
   application stays running in the background even after a `pause`
-  event fires.
+  event fires. Setting this to `false` does not kill the app after a
+  `pause` event, but simply halts execution of code within the cordova
+  webview while the app is in the background.
 
         <preference name="KeepRunning" value="false"/>
 
-- `ErrorUrl`: Specifies an error page that displays in response to
-  standard HTTP errors in the 400-500 range. Place the specified file
-  in the top-level directory containing the home page and other web
-  assets.
+- `ErrorUrl` (URL, defaults to `null`):
+  If set, will display the referenced page upon an error in the application
+  instead of a dialog with the title "Application Error".
 
         <preference name="ErrorUrl" value="error.html"/>
 
-- `LoadingDialog`: Display a native dialog when loading the app. The
-  value's format is _Title, Message_
-
+- `LoadingDialog` (string, defaults to `null`): If set, displays a dialog with
+  the specified title and message, and a spinner, when loading the first
+  page of an application. The title and message are separated by a comma
+  in this value string, and that comma is removed before the dialog is
+  displayed.
+  
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
 
-- `LoadingPageDialog`: Display a native dialog when loading sub-pages
-  within an app. The value's format is _Title, Message_
+- `LoadingPageDialog` (string, defaults to `null`): The same as `LoadingDialog`,
+  but for loading every page after the first page in the application.
 
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
 
@@ -63,4 +67,15 @@ config.xml File for information on global configuration options.
   time the splash screen image displays.
 
         <preference name="SplashScreenDelay" value="10000"/>
+        
+- `ShowTitle` (boolean, defaults to `false`): Show the title at the top
+  of the screen.
+
+        <preference name="ShowTitle" value="true"/>
+
+- `LogLevel` (string, defaults to `ERROR`): Sets the minimum log level
+  through which log messages from your application will be filtered. Valid
+  values are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `VERBOSE`.
+
+        <preference name="LogLevel" value="VERBOSE"/>
 

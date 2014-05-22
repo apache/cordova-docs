@@ -19,11 +19,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Amazon Fire OS WebViews
 
-Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS applications. Amazon Fire OS refers to this component as `CordovaWebView`. `CordovaWebView` extends Amazon WebView that is built on the open source Chromium Project. By leveraging this feature, your web apps can utilize the latest HTML5 web standards running in a modern web runtime engine.
+Beginning with 3.3.0, you can use Cordova as a component in Amazon Fire OS applications. Amazon Fire OS refers to this component as `CordovaWebView`. `CordovaWebView` extends Amazon WebView that is built on the open source Chromium Project. By leveraging this feature, your web apps can utilize the latest HTML5 web standards running in a modern web runtime engine.
+
+If you're unfamiliar with Amazon Fire OS, you should first familiarize
+yourself with the Amazon Fire OS Platform Guide and have the latest SDKs installed before you attempt the more unusual development option of embedding a WebView.
 
 ## Prerequisites
 
-* Cordova 3.0.0 or greater
+* Cordova 3.3.0 or greater
 
 * Android SDK updated to the latest SDK
 
@@ -31,18 +34,29 @@ Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS appli
 
 ## Guide to using CordovaWebView in a Amazon Fire OS Project
 
-1. Download and expand the [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
+1. To follow these instructions, make sure you have the latest Cordova
+   distribution. Download it from
+   [cordova.apache.org](http://cordova.apache.org) and unzip its
+   Amazon Fire OS package.
+   
+2. Download and expand the [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
 
-2. `cd` into `/framework` and run `ant jar` to build the cordova jar. It creates the .jar file formed as `cordova-x.x.x.jar` in the `/framework` directory.
+3. Navigate to the package's `/framework` directory and run
+   `ant jar`. It creates the Cordova `.jar` file, formed as
+   `/framework/cordova-x.x.x.jar`.
 
-3. Edit your application's `main.xml` file (under `/res/layout`) to look like the following, with the `layout_height`, `layout_width` and `id` modified to suit your application:
+4. Copy the `.jar` file into the Android project's `/libs` directory.
+
+5. Add the following to the application's `/res/xml/main.xml` file,
+   with the `layout_height`, `layout_width` and `id` modified to suit
+   the application:
 
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
+6. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -108,6 +122,6 @@ Finally, remember to add the thread pool, otherwise the plugins have no threads 
             return threadPool;
         }
 
-6. Copy your application's HTML and JavaScript files to your Amazon Fire OS project's `/assets/www` directory.
+7. Copy your application's HTML and JavaScript files to your Amazon Fire OS project's `/assets/www` directory.
 
-7. Copy `config.xml` from `/framework/res/xml` to your project's `/res/xml` directory.
+8. Copy `config.xml` from `/framework/res/xml` to your project's `/res/xml` directory.
