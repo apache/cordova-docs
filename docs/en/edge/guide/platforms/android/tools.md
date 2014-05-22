@@ -45,35 +45,39 @@ plugins.
 
 Run the `create` command, specifying the existing path to the project,
 the reverse-domain-style package identifier, and the app's display
-name.  Here is the syntax for both Mac and Windows:
+name.  Here is the syntax for both Mac/Linux and Windows:
 
         $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
-        $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
+
+        C:\>\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
 
 ## Build
 
 This cleans then builds a project.
 
-Debug, on Mac or Windows:
+Debug, on Mac/Linux or Windows:
 
         $ /path/to/project/cordova/build --debug
-        $ C:\path\to\project\cordova\build.bat --debug
 
-Release, on Mac or Windows:
+        C:\>\path\to\project\cordova\build.bat --debug
+
+Release, on Mac/Linux or Windows:
 
         $ /path/to/project/cordova/build --release
-        $ C:\path\to\project\cordova\build.bat --release
+
+        C:\>\path\to\project\cordova\build.bat --release
 
 ## Run the App
 
 The `run` command accepts the following _optional_ parameters:
 
-* Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+  * Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
 
-* Build specification. This includes `--debug`, `--release`, or `--nobuild`.
+  * Build specification. This includes `--debug`, `--release`, or `--nobuild`.
 
         $ /path/to/project/cordova/run [Target] [Build]
-        $ C:\path\to\project\cordova\run.bat [Target] [Build]
+
+        C:\>\path\to\project\cordova\run.bat [Target] [Build]
 
 Make sure you create at least one Android Virtual Device, otherwise
 you're prompted to do so with the `android` command.  If more than one
@@ -84,9 +88,29 @@ running emulator if no device is found.
 ## Logging
 
         $ /path/to/project/cordova/log
-        $ C:\path\to\project\cordova\log.bat
 
-### Cleaning
+        C:\>\path\to\project\cordova\log.bat
+
+## Cleaning
 
         $ /path/to/project/cordova/clean
-        $ C:\path\to\project\cordova\clean.bat
+
+        C:\>\path\to\project\cordova\clean.bat
+
+## Manual Use of Ant
+
+If you wish to call Ant directly from the command line such as
+`ant debug install`, you need to specify additional parameters to the ant
+command:
+
+        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+
+This is because the directories used by Cordova's Ant scripts are different
+than the default. This is done to avoid conflicts when Ant is run from the
+command line versus inside Eclipse/ADT.
+
+These additional parameters are automatically added for you when using
+the `cordova/build` and `cordova/run` scripts described above. For this
+reason it is recommended to use the `cordova/build` and `cordova/run` scripts
+instead of calling Ant directly from the command line.
+
