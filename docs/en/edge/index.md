@@ -23,7 +23,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     <ul>
         <li>
             <h2>Overview</h2>
-            <span>Start here if you are new to Cordova.</span>
+            <span>Start here if you are new to Cordova. Includes installation and next steps.</span>
         </li>
         <li>
             <h2>Platform Support</h2>
@@ -35,39 +35,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </li>
         <li>
             <h2>Platform Guides</h2>
-            <span>Set up each SDK and update projects</span>
+            <span>Set up each platform SDK and update projects.</span>
         </li>
         <li>
          <h2>Using Plugman to Manage Plugins</h2>
-            <span>Using Plugman to manage Plugins without the CLI</span>
+            <span>Manage plugins without the CLI when using the platform-centered workflow.</span>
         </li>
         <li>
             <h2>The config.xml File</h2>
-            <span>Customize the app's features.</span>
+            <span>Customize your app's features.</span>
         </li>
         <li>
             <h2>Icons and Splash Screens</h2>
-            <span>Customize the app's displaying images.</span>
+            <span>Customize your app's displaying images.</span>
         </li>
         <li>
             <h2>Embedding WebViews</h2>
-            <span>Implement the Cordova WebView in your project.</span>
+            <span>Implement the Cordova WebView in your native project.</span>
         </li>
         <li>
             <h2>Plugin Development Guide</h2>
-            <span>Develop your first plugin.</span>
+            <span>Develop your own plugin.</span>
         </li>
         <li>
             <h2>Privacy Guide</h2>
             <span>Learn about important mobile privacy issues.</span>
         </li>
         <li>
-            <h2>Whitelist Guide</h2>
-            <span>Grant an application access to external resources.</span>
-        </li>
-         <li>
             <h2>Security Guide</h2>
             <span>Information and tips for building a secure application.</span>
+        </li>
+        <li>
+            <h2>Whitelist Guide</h2>
+            <span>Grant an application access to external resources.</span>
         </li>
         <li>
             <h2>Storage</h2>
@@ -75,7 +75,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </li>
         <li>
             <h2>Next Steps</h2>
-            <span>A look at topics that new Cordova developers will encounter as they begin using the framework.</span>
+            <span>A look at topics that new Cordova developers will encounter.</span>
         </li>
         <li>
             <h2><a href="_index.html">Keyword Index</a></h2>
@@ -91,7 +91,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         </li>
         <li>
             <h2>Plugin APIs</h2>
-            <span>Discover what plugins Cordova are available to using in your project.</span>
+            <span>Discover what Cordova plugins are available to use in your project.</span>
         </li>
     </ul>
 

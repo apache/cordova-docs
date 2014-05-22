@@ -21,9 +21,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Cordova ships with a minimal set of APIs, and projects add what extra APIs they require through plugins.
 
-You can search through all existing plugins using the [Plugin Registry](http://plugins.cordova.io/).
+You can search through all existing plugins (including third-party plugins) using the [Plugin Registry](http://plugins.cordova.io/).
 
-The traditional set of Cordova plugins are as follows:
+The traditional set of core Cordova plugins are as follows:
 
 - [Battery Status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md)
 > Monitor the status of the device's battery.

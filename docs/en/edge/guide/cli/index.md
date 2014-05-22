@@ -61,6 +61,11 @@ The more likely it is that you run the CLI from different machines,
 the more it makes sense to maintain a remote source code repository,
 whose assets you pull down to local working directories.
 
+## Installing the Cordova CLI
+
+The Cordova command-line tool is distributed as an npm package in a
+ready-to-use format. It is not necessary to compile it from source.
+
 To install the `cordova` command-line tool, follow these steps:
 
 1. Download and install [Node.js](http://nodejs.org/). Following

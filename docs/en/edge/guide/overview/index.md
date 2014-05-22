@@ -91,8 +91,9 @@ task, they each offer advantages:
   subdirectories for each mobile platform, makes any necessary
   configuration changes for each, runs build scripts to generate
   application binaries. The CLI also provides a common interface to
-  apply plugins to your app.  (For details on the CLI, see The
-  Command-Line Interface.)
+  apply plugins to your app. For more details on the CLI, see The
+  Command-Line Interface. Unless you have a need for the platform-centered
+  workflow, the cross-platform workflow is recommended.
 
 - __Platform-centered workflow__: Use this workflow if you want to
   focus on building an app for a single platform and need to be able
@@ -108,8 +109,8 @@ task, they each offer advantages:
   higher-level tool means separate build cycles and plugin
   modifications for each platform. Still, this workflow allows you
   greater access to development options provided by each SDK, and is
-  essential for complex hybrid apps.  (See the various Platform Guides
-  for details on each platform's available shell utilities.)
+  essential for complex hybrid apps. See the various Platform Guides
+  for details on each platform's available shell utilities.
 
 When first starting out, it may be easiest to use the cross-platform
 workflow to create an app, as described in The Command-line Interface.
@@ -130,3 +131,18 @@ you need to switch to the platform-centered shell tools, which ignore
 the cross-platform source code, and instead relies on the
 platform-specific source code.
 
+## Installing Cordova
+
+The installation of Cordova will differ depending on the workflow above
+you choose:
+
+  * Cross-platform workflow: see The Command-Line Interface.
+
+  * Platform-centered workflow: see the Platform Guides.
+
+After installing Cordova, it is recommend that you review the Platform Guides
+for the mobile platforms that you will be developing for. It is also
+recommended that you also review the Privacy Guide, Security Guide, and
+Next Steps. For configuring Cordova, see The config.xml File.
+For accessing native function on a device from JavaScript, refer
+to the Plugin APIs. And refer to the other included guides as necessary.
