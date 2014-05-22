@@ -74,7 +74,7 @@ To install the `cordova` command-line tool, follow these steps:
    the CLI does use it behind-the-scenes to download some assets when
    creating a new project.
 
-1. Install the `cordova` module using Node.js' `npm` utility. The cordova
+1. Install the `cordova` module using `npm` utility of Node.js. The `cordova`
    module will automatically be downloaded by the `npm` utility.
 
    * on OS X and Linux:
@@ -94,8 +94,9 @@ To install the `cordova` command-line tool, follow these steps:
 
             C:\>npm install -g cordova
 
-   The `-g` flag above tells `npm` to install cordova globally. Otherwise
-   it will be installed in a subdirectory of the current working directory.
+   The `-g` flag above tells `npm` to install `cordova` globally. Otherwise
+   it will be installed in the `node_modules` subdirectory of the current
+   working directory.
 
    You may need to add the `npm` directory to your `PATH` in order to invoke
    globally installed `npm` modules. On Windows, `npm` can usually be found at
