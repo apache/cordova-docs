@@ -140,7 +140,7 @@ you choose:
 
   * Platform-centered workflow: see the Platform Guides.
 
-After installing Cordova, it is recommend that you review the Platform Guides
+After installing Cordova, it is recommended that you review the Platform Guides
 for the mobile platforms that you will be developing for. It is also
 recommended that you also review the Privacy Guide, Security Guide, and
 Next Steps. For configuring Cordova, see The config.xml File.
