@@ -16,17 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Plugman を使用してプラグインを管理するには
 
-バージョン 3.0 以降、コルドバすべてデバイス Api のプラグインとして実装して、既定で無効になっているそれらを残します。 追加し、プラグインを削除する 2 つの異なる方法もサポートしています。 最初を使用して、 `cordova` CLI コマンド ライン インターフェイスで記述されています。 低レベルの[Plugman][1]コマンド ライン インターフェイス ("ネイティブ プラットフォーム dev"ワークフロー。) を使用して 2 番目のです。これら 2 つの開発パスの主な違いはこと Plugman にのみ追加できますプラグイン 1 つのプラットフォームに、CLI が対象とするプラットフォームのすべてにプラグインを追加します。 このためときに、使用する Plugman している密接にそれ故に、単一のプラットフォームで、ワークフローの"ネイティブ プラットフォーム Dev"名前より理にかなって。
+バージョン 3.0 以降、コルドバすべてデバイス Api のプラグインとして実装して、既定で無効になっているそれらを残します。 追加し、「概要」で説明したワークフローの選択に応じて、プラグインを削除する 2 つの異なる方法もサポートしています。
+
+*   If you use a cross-platform workflow, you use the `cordova` CLI utility to add plugins, as described in The Command-Line Interface. The CLI modifies plugins for all specified platforms at once.
+
+*   If you use a platform-centered workflow, you use a lower-level [Plugman][1] command-line interface, separately for each targeted platform.
 
  [1]: https://github.com/apache/cordova-plugman/
 
-についての詳細 Plugman、特に消費するノード モジュールとして Plugman または Plugman コード上でのハッキングに興味があるなら、[そのリポジトリ内の readme][2]を参照してください。.
+このセクションの詳細 Plugman ユーティリティ。 For more information on consuming Plugman as a node module or modifying the source code, see [the README file in its repository][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 
 ## Plugman をインストールします。
 
-Plugman をインストールするには、コンピューターにインストールされている[ノード][3]が必要です。 その後、次を実行することができますがあなたのマシン上の任意のディレクトリから使用可能な世界的に、plugman をインストールする環境内で任意の場所からコマンド。
+Plugman をインストールするには、コンピューターにインストールされている[ノード][3]が必要です。 Then you can run the following command from anywhere in your environment to install plugman globally, so that it is available from any directory:
 
  [3]: http://nodejs.org/
 
@@ -35,9 +39,10 @@ Plugman をインストールするには、コンピューターにインスト
 
 あなたも持っている必要があります `git` に、 `PATH` プラグインをインストールするリモートの git Url から直接ことができます。
 
-**のヒント：**Plugman 故宮をインストールした後あなたがいないまだいずれかを実行することができますを見つける場合 `plugman` 、コマンドを追加したことを確認して、 `/npm/` ディレクトリにあなた`PATH`.
+**TIP**: If you find that after installing plugman with `npm` you are still unable to run any `plugman` commands, make sure that you have added the `/npm/` directory into your `PATH`.
 
-**注：**グローバル Plugman をインストールすることによって、グローバル npm の名前空間を煩雑にしたくない場合は、この手順を省略できます。 このような場合、そのシェル ツールとコルドバ プロジェクトを作成するときがある場合、 `node_modules` ディレクトリを Plugman を含むプロジェクト内。 たとえばすべての Plugman コマンドのノードを起動する必要がありますのであなたがグローバルではなく instally、 `node ./node_modules/plugman/main.js -version` 。 このガイドの残りの部分だけでそれを呼び出すことができます意味、世界的に Plugman をインストールしたと仮定します`plugman`.
+**NOTE**: You can skip this step if you don't want to pollute your global `npm` namespace by installing Plugman globally. If this is the case, then when you create a Cordova project with the shell tools, there will be a `node_modules` directory inside your project which contains Plugman. Since you did not install globally, you need to invoke `node` for each Plugman command, for example `node
+./node_modules/plugman/main.js -version`. The rest of this guide assumes you have installed Plugman globally, meaning you can invoke it with just `plugman`.
 
 ## コルドバのプロジェクトを作成します。
 
@@ -52,17 +57,17 @@ Plugman インストールされているコルドバ プロジェクトを作�
 
 最小限のパラメーターを使用して、このコマンドはコルドバ プロジェクトにプラグインをインストールします。 そのプラットフォーム用のプラットフォームとコルドバのプロジェクトの場所を指定する必要があります。 またを指定してくださいプラグインは、別の `--plugin` パラメーターを形成されています。
 
-*   `name`: プラグイン コンテンツが存在するディレクトリ名。 これはの下で既存のディレクトリをする必要があります、 `--plugins_dir` コルドバ レジストリにプラグインまたはパス (さらに詳しい情報は、下記を参照)。
+*   `name`: The directory name where the plugin contents exist. This must be an existing directory under the `--plugins_dir` path (see below for more info) or a plugin in the Cordova registry.
 *   `url`: Https://または git で始まる URL://クローンを含む有効な git リポジトリを指している、 `plugin.xml` ファイル。 このリポジトリの内容にコピーされる、`--plugins_dir`.
-*   `path`: を含む有効なプラグインが含まれているディレクトリへのパスを `plugin.xml` ファイル。このパスのコンテンツにコピーされます、`--plugins_dir`.
+*   `path`: A path to a directory containing a valid plugin which includes a `plugin.xml` file. This path's contents will be copied into the `--plugins_dir`.
 
 その他のパラメーター:
 
-*   `--plugins_dir`既定値は `<project>/cordova/plugins` が、フェッチされるプラグイン任意のディレクトリの各サブディレクトリを含むことができます。
-*   `--www`デフォルトで、プロジェクトの `www` フォルダーの場所、コルドバ プロジェクト アプリケーション web 資産として使用される任意のディレクトリにすることができます。
-*   `--variable`指定する特定の変数、インストール時に必要な特定のプラグイン API キーまたはその他のカスタムのユーザー定義のパラメーターを必要とすることができます。 詳細については、[プラグインの仕様][4]を参照してください。
+*   `--plugins_dir` defaults to `<project>/cordova/plugins`, but can be any directory containing a subdirectory for each fetched plugin.
+*   `--www` defaults to the project's `www` folder location, but can be any directory that is to be used as cordova project application web assets.
+*   `--variable` allows to specify certain variables at install time, necessary for certain plugins requiring API keys or other custom, user-defined parameters. Please see the [plugin specification][4] for more information.
 
- [4]: plugin_spec.md
+ [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
 ## プラグインを削除します。
 

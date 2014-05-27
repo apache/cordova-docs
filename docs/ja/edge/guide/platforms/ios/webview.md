@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS の web 表示
 
-このセクションを大きい iOS アプリケーション内でのコルドバ有効 WebView コンポーネントを埋め込む方法を示します。これらのコンポーネントが互いと通信できる方法については、アプリケーション ・ プラグインを参照してください。
+This guide shows how to embed a Cordova-enabled WebView component within a larger iOS application. For details on how these components can communicate with each other, see Application Plugins.
 
 コルドバ 1.4、始まる iOS web 表示のサポートを使用して、 `Cleaver` コンポーネント Xcode テンプレートを参照実装として提供しています。 コルドバ 2.0 およびそれ以降のバージョンのみサブプロジェクト ベース包丁実装をサポートします。
 

@@ -85,7 +85,7 @@ Windows 7 を道の環境を変更: する
     $ cordova build
     
 
-作成したらここでは、SDK を使用して、それを変更する方法です。
+Once created, you can use the Eclipse that comes along with the Android SDK to modify it:
 
 *   **Eclipse**アプリケーションを起動します。
 

@@ -156,9 +156,10 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
     
     ファイルまたはディレクトリ場所 Cordova アプリでは、相対的に、 `www` ディレクトリ。資産などのサブディレクトリを対象とすることができます。
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
-    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、しない限り、既に存在、しコピーする、 `new-foo.js` ファイルし、名前が変更されます `foo.js` 。 ターゲットの場所にファイルが既に存在する場合 plugman 停止しインストール プロセスを逆に、競合について通知を発行し、ゼロ以外のコードで終了します。
+    creates the `js/experimental` directory within the `www` directory, unless already present, then copies the `new-foo.js` file and renames it `foo.js`. If a file already exists at the target location, plugman stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
 
 ## *js モジュール*要素
 
@@ -187,7 +188,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
     
     *   `<runs/>`あなたのコードで指定する必要があることを意味します `cordova.require` にインストールされていないが、 `window` オブジェクト。 イベント ハンドラーをアタッチするモジュールを初期化する場合に便利ですまたはそれ以外の場合。 あなただけ 1 つまで持つことができます `<runs/>` タグ。 メモを含む、 `<runs/>` と `<clobbers/>` または `<merges/>` は冗長ですのでまた `cordova.require` あなたのモジュール。
     
-    *   空の `<js-module>` がまだロードでき他のモジュール経由でアクセスされます。`cordova.require`.
+    *   An empty `<js-module>` still loads and can be accessed in other modules via `cordova.require`.
 
 場合 `src` plugman 停止インストールを逆に、問題の通知を発行し、0 以外のコードで終了します、既存のファイルに解決されません。
 
@@ -370,20 +371,23 @@ Android の例:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 `src`属性を plugman 与えられたプラットフォームの正しいファッションでのコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
 
 省略可能な `weak` 属性は、フレームワークが弱いリンクする必要があるかどうかを示すブール値。既定値は`false`.
 
+省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 The default is `false`.
+
 ## *情報*要素
 
-追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。例:
+Additional information provided to users. This is useful when you require extra steps that can't be easily automated or are beyond plugman's scope. Examples:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
+    You need to add the following line to the `local.properties`:
     
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>

@@ -16,13 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # プラグイン開発ガイド
 
-*プラグイン*は、それが実行されているネイティブ プラットフォームと通信を表示するアプリをコルドバ webview を許可する挿入されたコードのパッケージです。 プラグインは通常 web ベースのアプリケーションに使用可能なデバイスとプラットフォームの機能へのアクセスを提供します。 すべての主要なコルドバ API 機能、プラグインとして実装されますされ他の多くのバー コード スキャナー、NFC 通信などの機能を有効にするまたはインターフェイス カレンダーを調整します。
+A *plugin* is a package of injected code that allows the Cordova webview within which the app renders to communicate with the native platform on which it runs. プラグインは通常 web ベースのアプリケーションに使用可能なデバイスとプラットフォームの機能へのアクセスを提供します。 すべての主要なコルドバ API 機能、プラグインとして実装されますされ他の多くのバー コード スキャナー、NFC 通信などの機能を有効にするまたはインターフェイス カレンダーを調整します。 There is a [registry][1] of available plugins.
+
+ [1]: http://plugins.cordova.io
 
 プラグインはサポートされる各プラットフォーム用の対応するネイティブ コード ライブラリと共に単一の java スクリプトの設定インタ フェースを構成します。 JavaScript からネイティブ プラットフォームとはるかに複雑な機能を構築するモデルとして使用することができます 1 つ背面に文字列を渡します、簡単な*エコー*プラグインを介してこのセクションの手順します。 基本的なプラグイン構造と向き JavaScript インターフェイスについて説明します。 各対応するネイティブ インターフェイスはこのセクションの最後にリストを参照してください。
 
-に加えてこれらの手順は、プラグインを作成する[既存のプラグイン][1]の指導のために目を通すことをお勧めする準備。
+In addition to these instructions, when preparing to write a plugin it is best to look over [existing plugins][2] for guidance.
 
- [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
+ [2]: http://cordova.apache.org/#contribute
 
 ## プラグインの作成
 
@@ -59,9 +61,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## プラグインの検証
 
-使用できます、 `plugman` 各プラットフォーム用のプラグインが正しくインストールされるかどうかを確認するユーティリティです。 インストール `plugman` [ノード][2]の次のコマンドで：
+使用できます、 `plugman` 各プラットフォーム用のプラグインが正しくインストールされるかどうかを確認するユーティリティです。 インストール `plugman` [ノード][3]の次のコマンドで：
 
- [2]: http://nodejs.org/
+ [3]: http://nodejs.org/
 
         $ npm install -g plugman
     
@@ -73,7 +75,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 IOS の依存関係を正しく読み込むかどうかをテストするなど、次のコマンドを実行します。
 
-        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
     
 
 詳細については `plugman` オプションは、管理プラグインを使用して Plugman を参照してください。 実際にプラグインを*デバッグ*する方法については、このページの下部に記載されている各プラットフォームのネイティブ インターフェイスを参照してください。
@@ -137,9 +139,9 @@ Tizen プラットフォームのプラグインをサポートしていませ�
 
 ## 公開プラグイン
 
-一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 コルドバ レジストリをあなたのプラグインを公開できます (に基づく[ `npmjs` ][3]) またはその他 `npmjs` -レジストリ ベースします。 他の開発者が自動的にいずれかの方法をインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細は、管理プラグインと、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
+一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 You can publish your plugin to the Cordova [registry][1] (based on [`npmjs`][4]) or to any other `npmjs`-based registry. 他の開発者が自動的にいずれかの方法をインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細は、管理プラグインと、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
 
- [3]: https://github.com/isaacs/npmjs.org
+ [4]: https://github.com/isaacs/npmjs.org
 
 使用する必要がありますプラグインを公開して、 `plugman` ツールし、次の手順を経る。
 

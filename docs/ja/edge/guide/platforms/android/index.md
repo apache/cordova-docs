@@ -16,179 +16,267 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android プラットフォーム ガイド
 
-このガイドは、Android デバイスのための Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 それの Android SDK をインストールする Eclipse SDK で Android プロジェクトを開くと、エミュレーターまたはデバイスに展開するプロセスについて説明します。 このガイドに従って少なくとも次ワークフローに関係なく、Android SDK をインストールをする必要があります。 ( *Web プロジェクト Dev*と*ネイティブのプラットフォーム開発*のワークフロー要求 Android SDK をインストールし、パス経由でアクセス可能）
-
-詳細なプラットフォーム固有の情報は、次を参照してください。
-
-*   Android の構成
-*   Android の web 表示
-*   Android のプラグイン
-*   Android のアップグレード
-*   Android のコマンド ライン ツール
-
-上記のコマンド ライン ツールはコルドバ 3.0 より前のバージョンを参照してください。現在のインタ フェースについての情報は、コマンド ライン インターフェイスを参照してください。
+このガイドは、Android デバイスのための Cordova アプリを展開する SDK 環境を設定する方法と必要に応じて開発ワークフローでアンドロイドを中心のコマンド ライン ツールを使用する方法を示します。 You need to install the Android SDK regardless of whether you want to use these platform-centered shell tools or cross-platform Cordova CLI for development. For a comparison of the two development paths, see the Overview. For details on the CLI, see The Command-Line Interface.
 
 ## 要件、およびサポート
 
-Android の SDK は、[システム要件][1]を参照してください。
+See the Android SDK's [System Requirements][1].
 
  [1]: http://developer.android.com/sdk/index.html
 
-コルドバは、アンドロイド 2.2、2.3、および 4.x をサポートしています。一般的なルールとしてプラットフォームは Google の[分布のダッシュ ボード][2]上の 5% を下回るように推奨されません。.
+Cordova supports Android 2.2, 2.3, and 4.x. As a general rule, platforms are deprecated as they dip below 5% on Google's [distribution dashboard][2].
 
  [2]: http://developer.android.com/about/dashboards/index.html
 
-<!--
-NOTE, doc said:
-- Android 2.1 (Deprecated May 2013)
-- Android 3.x (Deprecated May 2013)
--->
+## コルドバ シェル ツールをインストールします。
 
-開発者を使用する必要があります、 `cordova` 人造人間 SDK と共にユーティリティ。 それをインストール、追加プロジェクト、ビルドし、プロジェクトを配置する方法については、コマンド ライン インターフェイス参照してください。
+SDK と一緒にコルドバのアンドロイドを中心のシェル ・ ツールを使用する場合は[cordova.apache.org][3]からコルドバをダウンロードします。 コマンド ライン インターフェイスで記述されているクロス プラットフォーム CLI ツールを使用する予定がある場合それ以外の場合このセクションを無視します。
 
-Android SDK をインストールします。 [developer.android.com/sdk][3].Android の sdk として配布されて、' adt-バンドル-<os>-<arch>-<ver>' ファイル。Windows では、adt バンドルは、インストーラーにパッケージ化されます。OSX と Linux 上に簡単に解凍 'adt バンドル' 開発ツールを格納する場所。 [Android の SDK のセットアップに関する詳細情報をここで発見ことができます。][4]
+ [3]: http://cordova.apache.org
 
- [3]: http://developer.android.com/sdk/
- [4]: http://developer.android.com/sdk/installing/bundle.html
+コルドバ ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `android` この場合、空のディレクトリ内。 関連性の高い実行ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
 
-コルドバ動作するコマンド ライン ツール、SDK の含まする必要があります `tools` と `platform-tools` パス環境のディレクトリ。 Mac、テキストエディターを使用して作成または変更することができます、 `~/.bash_profile` ファイルは、SDK のインストールに応じて、次のような行を追加します。
+これらのシェルのツールを作成、構築、および Android アプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。 プラグインを開発する方法の詳細については、アプリケーション ・ プラグインを参照してください。
 
-    エクスポート パス ${path} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール
+[Developer.android.com/sdk][4]から Android SDK をインストールします。 The android sdk is distributed as an 'adt-bundle-<os>-<arch>-<ver>' file. On windows, the adt-bundle is packaged with an installer. On OSX and Linux, simply unpack the 'adt-bundle' in the location you store development tools. [More detailed information on Android SDK setup can be found here][5]
+
+ [4]: http://developer.android.com/sdk/
+ [5]: http://developer.android.com/sdk/installing/bundle.html
+
+For Cordova command-line tools to work, or the CLI that is based upon them, you need to include the SDK's `tools` and `platform-tools` directories in your `PATH`. On a Mac, you can use a text editor to create or modify the `~/.bash_profile` file, adding a line such as the following, depending on where the SDK installs:
+
+        エクスポート パス ${path} を =:/開発/adt-バンドル/sdk/プラットフォーム固有のツール:/開発/adt-バンドル/sdk/ツール
     
 
-これは、SDK で新しくオープンしたターミナル windows のツールを公開します。それ以外の場合、現在のセッションで使用できるようにするこれを実行します。
+Add the paths for `java` and `ant` if needed. This line in `~/.bash_profile` exposes these tools in newly opened terminal windows. If your terminal window is already open in OSX, or to avoid a logout/login on Linux, run this to make them available in the current terminal window:
 
-    $ ソース ~/.bash_profile
+        $ ソース ~/.bash_profile
     
 
-Windows 7 を道の環境を変更: する
+To modify the `PATH` environment on Windows 7:
 
-*   デスクトップの左下隅の [**スタート**] メニューをクリックして、**コンピューター**を右クリックし、**プロパティ**をクリックします.
+1.  Click on the **Start** menu in the lower-left corner of the desktop, right-click on **Computer**, then select **Properties**.
 
-*   左側の列では、**システムの詳細設定**をクリックします。
+2.  Select **Advanced System Settings** in the column on the left.
 
-*   表示されたダイアログ ボックスで**環境変数**キーを押します。.
+3.  表示されたダイアログ ボックスで**環境変数**キーを押します。.
 
-*   **パス**変数を選択し、キーを押して**編集**.
+4.  **パス**変数を選択し、キーを押して**編集**.
 
-*   たとえば、SDK をインストールしたに基づくパスに次を追加します。
+5.  Append the following to the `PATH` based on where you installed the SDK, for example:
     
         ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools
         
 
-*   値を保存して両方のダイアログ ボックスを閉じます。
+6.  値を保存して両方のダイアログ ボックスを閉じます。
 
-また、コマンド ・ プロンプトとタイプ Java および Ant. オープンを有効にする必要があります `java` 、また入力と `ant` 。パスに追加いずれかを実行する失敗します。
+You may also need to enable Java and Ant. Open a command prompt and type `java`, and also type `ant`. Append to the `PATH` whichever of these fails to run:
 
         ;%JAVA_HOME%\bin;%ANT_HOME%\bin
     
 
-## SDK でプロジェクトを開く
+## Open a New Project in the SDK
 
-使用、 `cordova` コルドバのコマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
+At this point, to create a new project you can choose between the cross-platform CLI tool described in The Command-Line Interface, or the set of Android-specific shell tools. From within a source-code directory, here's the CLI approach:
 
-        $ cordova create hello com.example.hello "HelloWorld"
+        $ cordova create hello com.example.hello HelloWorld
         $ cd hello
         $ cordova platform add android
         $ cordova build
     
 
-作成したらここでは、SDK を使用して、それを変更する方法です。
+Here's the corresponding lower-level shell-tool approach for both Unix and Windows:
 
-*   **Eclipse**アプリケーションを起動します。
+        $ /path/to/cordova-android/bin/create /path/to/new/hello com.example.hello HelloWorld
+        C:\path\to\cordova-android\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+    
 
-*   **新しいプロジェクト**のメニュー項目を選択します。
+Here's how to use the SDK to modify it:
 
-*   表示されたダイアログ ボックスから**既存のコードから Android プロジェクト**を選択し、**次**キーを押します。 ![][5]
+1.  **Eclipse**アプリケーションを起動します。
 
-*   移動する `hello` 、または好みのディレクトリに作成した、プロジェクトし、 `platforms/android` サブディレクトリ。
+2.  **新しいプロジェクト**のメニュー項目を選択します。
 
-*   必ず両方 `hello` と `hello-CordovaLib` をインポートするプロジェクトが選択されています。 `hello-CordovaLib`コルドバは .jar ファイルではなく Android ライブラリとして今使用されるためコルドバ 3.3.0 現在プロジェクトが必要です。
-
-*   **終了**キーを押します。.
-
- [5]: img/guide/platforms/android/eclipse_new_project.png
-
-Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
-
-*   プロジェクト ディレクトリを右クリックします。
-
-*   結果**のプロパティ**] ダイアログ [ **Android**ナビゲーション ウィンドウから。
-
-*   プロジェクトのビルド ターゲットは、インストールされている最高の Android の API レベルを選択します。
-
-*   **[Ok]**をクリックします.
-
-*   **クリーン****をプロジェクト**メニューから選択します。これは、プロジェクト内のすべてのエラーを修正する必要があります。
-
-## エミュレーターへの展開します。
-
-使用できます、 `cordova` 、エミュレーターでアプリを実行するユーティリティが SDK 内で実行できます。 いずれかの方法では、SDK には、少なくとも 1 つのデバイスを表示する最初構成する必要があります。 Eclipse から個別に実行される Java アプリケーション アンドロイド SDK マネージャー使用します。 それを開く 2 つの方法があります。
-
-*   実行 `android` コマンド ・ ラインで。
-
-*   Eclipse、内でこのツールバー アイコンを押します。
+3.  Choose **Android Project from Existing Code** from the resulting dialog box, and press **Next**:
     
     ![][6]
 
- [6]: img/guide/platforms/android/eclipse_android_sdk_button.png
+4.  If you're using the CLI, navigate to the `hello` directory you created for the project, then to the `platforms/android` subdirectory. Alternately, if you use the `create` shell utility, simply navigate to the `hello` directory.
 
-一度開いて、アンドロイド SDK マネージャーはさまざまなランタイム ライブラリが表示されます。
+5.  **終了**キーを押します。.
 
-![][7]
+ [6]: img/guide/platforms/android/eclipse_new_project.png
 
- [7]: img/guide/platforms/android/asdk_window.png
+Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**が表示されます。もしそうなら、この追加の手順を実行します。
 
-**ツール → 管理 Avd** (Android 仮想デバイス) を選択し、表示されたダイアログ ボックス内の**デバイス定義**から任意の項目を選択します。
+1.  プロジェクト ディレクトリを右クリックします。
+
+2.  結果**のプロパティ**] ダイアログ [ **Android**ナビゲーション ウィンドウから。
+
+3.  プロジェクトのビルド ターゲットは、インストールされている最高の Android の API レベルを選択します。
+
+4.  **[Ok]**をクリックします.
+
+5.  **クリーン****をプロジェクト**メニューから選択します。これは、プロジェクト内のすべてのエラーを修正する必要があります。
+
+## Build the Project
+
+開発で CLI を使用している場合は、プロジェクト ディレクトリの最上位 `www` ディレクトリにソース ファイルが含まれています。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
+
+        $ cordova build
+        $ cordova build android   # do not rebuild other platforms
+    
+
+If you are using the Android-specific shell tools in development, there is a different approach. Once you generate the project, the default app's source is available in the `assets/www` subdirectory. Subsequent commands are available in its `cordova` subdirectory.
+
+The `build` command cleans project files and rebuilds the app. Here is the syntax for both Mac and Windows. The first pair of examples generate debugging information, and the second signs the apps for release:
+
+        $ /path/to/project/cordova/build --debug
+        C:\path\to\project\cordova\build.bat --debug
+    
+        $ /path/to/project/cordova/build --release
+        C:\path\to\project\cordova\build.bat --release
+    
+
+## Configure an Emulator
+
+You can use either the `cordova` CLI utility or Cordova's Android-centered shell tools to run an app in an emulator. Either way, the SDK must first be configured to display at least one device. To do so, use the Android SDK Manager, a Java application that runs separately from Eclipse. There are two ways to open it:
+
+1.  Run `android` on the command line.
+
+2.  From within Eclipse, press this toolbar icon:
+    
+    ![][7]
+
+ [7]: img/guide/platforms/android/eclipse_android_sdk_button.png
+
+Once open, the Android SDK Manager displays various runtime libraries:
 
 ![][8]
 
- [8]: img/guide/platforms/android/asdk_device.png
+ [8]: img/guide/platforms/android/asdk_window.png
 
-プレス**AVD の作成**、必要に応じて、名前の変更、変更を受け入れて**[ok]**を押します。
+Choose **Tools → Manage AVDs** (Android Virtual Devices), then choose any item from **Device Definitions** in the resulting dialog box:
 
 ![][9]
 
- [9]: img/guide/platforms/android/asdk_newAVD.png
+ [9]: img/guide/platforms/android/asdk_device.png
 
-これで、AVD **Android 仮想デバイス**リストに表示されます。
+Press **Create AVD**, optionally modifying the name, then press **OK** to accept the changes:
 
 ![][10]
 
- [10]: img/guide/platforms/android/asdk_avds.png
+ [10]: img/guide/platforms/android/asdk_newAVD.png
 
-エミュレーターを開くには、個別のアプリケーションとして、AVD を選択し、**開始**を押します。ハードウェア ボタンで使用できるコントロールを追加して、デバイスのように多くを起動します。
+The AVD then appears in the **Android Virtual Devices** list:
 
 ![][11]
 
- [11]: img/guide/platforms/android/asdk_emulator.png
+ [11]: img/guide/platforms/android/asdk_avds.png
 
-この時点で使用することができます、 `cordova` ユーティリティをコマンドラインからエミュレーターにアプリケーションを配置します。
+To open the emulator as a separate application, select the AVD and press **Start**. It launches much as it would on the device, with additional controls available for hardware buttons:
+
+![][12]
+
+ [12]: img/guide/platforms/android/asdk_emulator.png
+
+## エミュレーターへの展開します。
+
+この時点で使用することができます、 `cordova` CLI ユーティリティ コマンドラインからエミュレーターにアプリケーションを配置します。
 
         $ cordova emulate android
     
 
-Eclipse 内で作業する代わりに、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
+それ以外の場合、代替シェル インターフェイスを使用します。
 
-高速な体験、Intel ベースのエミュレーター イメージを使用します。
+        $ /path/to/project/cordova/run --emulator
+    
 
-*   1 つまたは複数インストール `Intel x86 Atom` システム イメージだけでなく、 `Intel Hardware Accelerated Execution Manager` 、**余分な物**の下で利用可能な.
+Instead of relying on whichever emulator is currently enabled within the SDK, you can refer to each by the names you supply:
 
-*   内でアンドロイド SDK で提供されているインテルのインストーラーを実行します。`extras/intel/Hardware_Accelerated_Execution_Manager`.
+        $ /path/to/project/cordova/run --target=NAME
+    
 
-*   インテル画像に設定されているターゲットで新しい AVD を作成します。
+This pushes the app to the home screen and launches it:
 
-*   エミュレーターを起動するときはハックス モジュールのロードに失敗を示すエラー メッセージがない確認します。
+![][13]
+
+ [13]: img/guide/platforms/android/emulator2x.png
+
+When you `run` the app, you also `build` it. You can append additional `--debug`, `--release`, and `--nobuild` flags to control how it is built, or even whether a rebuild is necessary:
+
+        $ /path/to/project/cordova/run --emulator --nobuild
+    
+
+If instead you are working within Eclipse, right-click the project and choose **Run As → Android Application**. You may be asked to specify an AVD if none are already open.
+
+For a faster experience, you can use the `Virtual Machine Acceleration` to improve the execution speed. Many modern CPUs provide extensions to execute Virtual Machines more efficiently. Before attempting to use this type of acceleration, you need to determine if your current development system's CPU, supports one the following virtualization technologies:
+
+*   **Intel Virtualization Technology** (VT-x, vmx) → [Intel VT-x supported processor list][14]
+*   **AMD Virtualization** (AMD-V, SVM), only supported for Linux (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
+
+ [14]: http://ark.intel.com/products/virtualizationtechnology
+
+Another way to find out if your Intel processor supports VT-x Technology, it's by executing the `Intel Processor Identification Utility`, for `Windows`you can download it from the Intel [Download Center][15], or you can use the [booteable utility][16], which is `OS Independent`.
+
+ [15]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
+ [16]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
+
+After install and execute the `Intel Processor Identification Utility` over Windows, you will get the following window, in order to check if your CPU supports the Virtualization Technologies:
+
+![][17]
+
+ [17]: img/guide/platforms/android/intel_pid_util_620px.png
+
+In order to speed up the emulator, you need to download and install one or more `Intel x86 Atom` System Images, as well as the `Intel Hardware Accelerated Execution Manager (HAXM)`.
+
+Open your Android SDK Manager, and select the `Intel x86 Atom` System Image, for whichever version that you want to test. Then go to `Extras` and select `Intel x86 Emulator Accelerator (HAXM)`, and install those packages:
+
+![][18]
+
+ [18]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
+
+After download, run the Intel installer, which is available within your Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`. **Note**:`If you have any problems installing the package, you can find more information and step by step guidance check this` [Intel Article][19].
+
+ [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
+
+1.  Install one or more `Intel x86 Atom` System Images as well as the `Intel Hardware Accelerated Execution Manager`, available under **Extras**.
+
+2.  Run the Intel installer, which is available within your Android SDK at `extras/intel/Hardware_Accelerated_Execution_Manager`.
+
+3.  Create a new AVD with the target set to an Intel image.
+
+4.  When starting the emulator, ensure there are no error messages indicating a failure to load HAX modules.
 
 ## デバイスへの配置します。
 
-デバイスに直接アプリをプッシュするには、 [Android 開発者向けサイト][12]で説明されているようにあなたのデバイスで USB デバッグを有効にかどうかを確認し、ミニ USB ケーブルを使用してあなたのシステムにプラグインします。
+To push an app directly to the device, make sure USB debugging is enabled on your device as described on the [Android Developer Site][20], and use a mini USB cable to plug it into your system.
 
- [12]: http://developer.android.com/tools/device.html
+ [20]: http://developer.android.com/tools/device.html
 
-アプリをデバイスにプッシュするには、コマンド行から。
+You can use this CLI command to push the app to the device:
 
         $ cordova run android
     
 
-Eclipse、内でプロジェクトを右クリックし、**人造人間アプリケーション → として実行**を選択します.
+...or use this Android-centered shell interface:
+
+        $ /path/to/project/cordova/run --device
+    
+
+With no flags specified, the `run` command detects a connected device, or a currently running emulator if no device is found, otherwise it prompts to specify an emulator.
+
+To run the app from within Eclipse, right-click the project and choose **Run As → Android Application**.
+
+## Other Commands
+
+The following generates a detailed log of the app as it runs:
+
+        $ /path/to/project/cordova/log
+        C:\path\to\project\cordova\log.bat
+    
+
+The following cleans the project files:
+
+        $ /path/to/project/cordova/clean
+        C:\path\to\project\cordova\clean.bat

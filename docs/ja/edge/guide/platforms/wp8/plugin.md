@@ -134,6 +134,14 @@ JSON エンコードされた文字列を使用して、構造化されたオブ
         }
     
 
+## プラグインの有効期間
+
+実行時間の長い要求プラグイン活動を背景は、メディアの再生、リスナー、またはその内部状態を実装する必要がありますを維持するような `onReset` それらの活動をきれいにする方法。 メソッドは、java スクリプトの設定を再読み込みを新しいページまたは更新に移動します CordovaView WebBrowser 実行されます。
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
+    
+
 ## プラグインの XML
 
 使用する方法を示します、 `plugin.xml` ファイルを Windows Phone プラットフォーム上にプラグインのソース ファイルを指定します。 利用可能なオプションの詳細については、概要、およびプラグインの仕様のアプリケーション ・ プラグインを参照してください。

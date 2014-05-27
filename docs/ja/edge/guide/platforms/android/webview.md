@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android の web 表示
 
-このセクションを大きい人造人間アプリケーション内でのコルドバ有効 WebView コンポーネントを埋め込む方法を示します。これらのコンポーネントが互いと通信できる方法については、アプリケーション ・ プラグインを参照してください。
+This guide shows how to embed a Cordova-enabled WebView component within a larger Android application. For details on how these components can communicate with each other, see Application Plugins.
 
 人造人間に慣れていないしている場合する必要があります最初 Android プラットフォーム ガイドに慣れるお持ち、WebView を埋め込みのより珍しい開発オプションを実行する前にインストールされている最新の人造人間 SDK。 コルドバ 1.9 を皮切りに、人造人間プラットホームに依存している、 `CordovaWebView` 、従来のビルド コンポーネント `CordovaActivity` 1.9 リリース前コンポーネント。
 

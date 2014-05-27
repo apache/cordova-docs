@@ -84,7 +84,7 @@ Xcode をインストールすると、いくつかのコマンド ライン ツ
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode のためのエミュレーターが付属、最新の iPhone と iPad のバージョン。 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
+Xcode comes bundled with emulators for the latest versions of iPhone and iPad. 古いバージョンはから入手できます、 **Xcode → 設定 → ダウンロード → コンポーネント**パネル。
 
 ## デバイスへの配置します。
 

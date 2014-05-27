@@ -20,43 +20,107 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## CLI でアイコンを構成します。
 
-作業する場合、CLI で、アイコンのソース ファイル内にあるさまざまなプラットフォーム固有のサブディレクトリがあり、プロジェクトの `www/res/icons` ディレクトリ。 新しく作成したプロジェクトをターゲットにするプラットフォームを交換するためのコルドバのアイコンの既定のセットが付属します。
+When working in the CLI you can define app icon(s) via `<icon>` element (`config.xml`). If you do not specify an icon then the Apache Cordova logo is used.
 
-Android の低、中、高、および超高解像度アイコンを指定します。
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-IOS プラットフォームは、Ipad 用 72 ピクセル正方形アイコンを指定し、網膜の高解像度の*2 倍*の亜種を Iphone や Ipod、57 ピクセルのアイコンが表示されます。
+src: (必須) www ディレクトリを基準にして、イメージ ファイルの場所を指定します。
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+プラットフォーム: (省略可能) ターゲット プラットフォーム
+
+幅: (省略可能) アイコンの幅 (ピクセル単位)
+
+height: (optional) icon height in pixels
+
+density: (optional) android specific, specifies icon density
+
+The following configuration can be used to define single default icon which will be used for all platforms.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone には、48 ピクセルの既定アイコンと共に様々 なデバイスのバック グラウンド アプリケーションを表すときに使用する画像を並べて表示を指定します。
+For each platform you can also define a pixel-perfect icons set to fit different screen resolutions.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+アンドロイド
+
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-ブラックベリー 10 アイコンの要素を config.xml ファイルが必要です。
+Blackberry10
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
     
 
-複数のサイズとロケールは、tareting のためのブラックベリーのマニュアルを参照してください。
+See BlackBerry's documentation for targeting multiple sizes and locales. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+Firefox OS
 
-Tizen は、128 ピクセルのアイコンが必要です。
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
 
-        tizen/icon-128.png
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
     
 
 ## CLI でスプラッシュ スクリーンを構成します。
@@ -75,7 +139,7 @@ Android は両方の肖像画および横向きスプラッシュ画面画像の
         android/screen-xhdpi-portrait.png
     
 
-IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 H*ファイルは iPhone 5 の背の高い画面に適用されます。
+IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 h*ファイルは iPhone 5 の背の高い画面に適用されます。
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -95,7 +159,7 @@ Windows Phone では、単一のスプラッシュ画面のイメージを指定
 
 次のセクションでは、プラットフォームのガイドで説明されている Sdk と関連するコマンド ライン ツールの操作時のスプラッシュ画面を設定する方法について詳しく説明します。
 
-使用する前に、SplashScreen プラグインをインストールすることを忘れないでください、 `navigator.splashscreen.hide()` または `navigator.splashscreen.show()` のメソッド。
+Don't forget to install the SplashScreen plugin before trying to use the `navigator.splashscreen.hide()` or `navigator.splashscreen.show()` methods.
 
 ## Android プラットフォーム用のスプラッシュ画面
 
@@ -110,47 +174,26 @@ Android プロジェクトで[9 patch 画像][1]ファイルを置きます `pla
 *   媒体 (開度計): 少なくとも 470 × 320
 *   小 (ldpi): 少なくとも 426 × 320
 
-コルドバで提供される既定のスプラッシュ画面画像を使用する場合は、png ファイルをコピーする必要があります `platforms/android/www/res/screen/android` を `platforms/android/res/drawable*/` :
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-    
-
-`drawable`[画面サイズ][2]と[代替のリソース][3]をサポート Android 規則に従ってディレクトリ名前をする必要があります.
+既定のスプラッシュ スクリーン イメージ、コルドバでサンプル アプリ既にあるべきで提供される新しい Android プロジェクトを作成するとき、 `platforms/android/res/drawable*` ディレクトリ。 Feel free to replace these with your own images. When providing your own splash screen images, you do not need to provide the same permutation of 8 as the Cordova default ones here. More or less optimization can be used. The `drawable` directory names must follow the Android conventions for supporting [screen sizes][2] and [alternate resources][3].
 
  [2]: http://developer.android.com/guide/practices/screens_support.html
  [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
 
-`config.xml`、次の環境設定を追加：
+In the top-level `config.xml` file (not the one in `platforms`), add the following preferences:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
     
 
-最初の行ではスプラッシュ画面として表示するイメージを設定します。 これはファイル名で png 形式の `drawable*` ディレクトリ。 場合は任意の名前をイメージ以外 `splash.png` 、この行を変更する必要があります。 ファイル名の拡張子を含めないでください (すなわち、 `.png` )。 コルドバ上記で提供される既定のスプラッシュ スクリーンを使用する場合は、値を使用します`screen`.
+The first line sets the image to display as the splash screen. This is the file name of the png in the `drawable*` directories, minus the `.png` extension. The default value for SplashScreen is `screen` (for the file `platforms/android/res/drawable*/screen.png`), so if you name the image anything other than `screen.png` in the `drawable*` directories, you need to add/modify this line.
 
-2 番目の行 (ミリ秒単位) が表示されますどのように長いスプラッシュ ・ スクリーンのデフォルトの遅延を設定します。これは最大の予想開始時刻する必要があります。SplashScreenDelay の既定値は 3000 ミリ秒です。
+The second line sets the default delay of how long the splashscreen appears in milliseconds. This should be the worst-case expected start time. The default value for SplashScreenDelay is 3000 ms.
 
-最後に、スプラッシュ画面が表示されますのみ必要な限り。 アプリが開始され、webview が読み込まれる、アプリのメイン ビューが表示されるスプラッシュ画面を隠す必要があります。 アプリ開始時刻が異なるためかなりの要因の数が多いのため、アプリを明示的に呼び出すことをお勧め `navigator.splashscreen.hide()` 応答する Javascript のメソッドで、 `deviceready` イベント。 それ以外の場合、スプラッシュ スクリーンが上に構成されている SplashScreenDelay 値の表示されます。 このイベント駆動型のアプローチは、常に一定の時間に表示されるスプラッシュ画面を持つ対強くお勧めします。
+Finally, as a best practice, the splash screen should be present only as long as necessary. When your app has started and the webview has loaded, your app should hide the splash screen so that your main view is visible as soon as it is ready. Because the app start time will vary quite a bit due to a number of factors such as CPU speed and network, it is recommended that your app explicitly invoke `navigator.splashscreen.hide()` in the JavaScript method that responds to the `deviceready` event. Otherwise the splash screen will be visible for the SplashScreenDelay value that you configured above, which is likely longer than necessary. This event-driven approach is highly recommended versus having the splash screen visible for always a fixed duration.
 
 ## IOS プラットフォーム用のスプラッシュ画面
 
-IOS プロジェクトにスプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのためのこれらの画像を追加のみです。 各イメージのサイズをする必要があります。
+Copy splash screen images into the iOS project's `Resources/splash` directory. Only add those images for the devices you want to support, such as iPad or iPhone. The size of each image should be:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 ピクセル)
@@ -162,7 +205,7 @@ IOS プロジェクトにスプラッシュ画面画像をコピー `Resources/s
 
 ## BlackBerry 10 プラットフォーム用のスプラッシュ画面
 
-各解像度とサポートしたいロケールの config.xml にリム： スプラッシュ要素を追加します。
+Add a rim:splash element to config.xml for each resolution and locale you wish to support:
 
 [http://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
 

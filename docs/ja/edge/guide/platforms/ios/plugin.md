@@ -166,7 +166,7 @@ JavaScript 呼び出し火災ネイティブ側に要求するプラグインお
 
 ## IOS のプラグインのデバッグ
 
-Objective-C 側デバッグ、Xcode の組み込みのデバッガーが必要です。 Javascript は、iOS の 5.0 使用できます[Weinre、Apache コルドバ プロジェクト][3]や[iWebInspector、サード パーティ製ユーティリティ][4]。 Ios 6, iOS の内 6 シミュレータを実行しているアプリをサファリ 6.0 を添付できます。
+Objective-C 側デバッグ、Xcode の組み込みのデバッガーが必要です。 Javascript は、iOS の 5.0 使用できます[Weinre、Apache コルドバ プロジェクト][3]や[iWebInspector、サード パーティ製ユーティリティ][4]。 Ios 6, iOS の内 6 シミュレータを実行しているアプリにサファリ 6.0 を添付できます。
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 注: これを false に設定がない殺すアプリ一時停止イベントの後、アプリはバック グラウンドでコルドバ webview でコードの実行を停止のみです。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 Setting this to `false` does not kill the app after a `pause` event, but simply halts execution of code within the cordova webview while the app is in the background.
     
         <preference name="KeepRunning" value="false"/>
         

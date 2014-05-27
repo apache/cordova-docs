@@ -57,10 +57,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Config.xml ファイル
+        The config.xml File
       </h2>
       
-      <span>アプリの機能をカスタマイズします。</span>
+      <span>Customize the app's features.</span>
     </li>
     <li>
       <h2>

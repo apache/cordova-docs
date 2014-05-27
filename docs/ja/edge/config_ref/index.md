@@ -131,3 +131,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
 
 各機能を指定する方法の詳細については API リファレンスを参照してください。プラグインの詳細については、プラグイン開発ガイドを参照してください。
+
+## *プラットフォーム*要素
+
+CLI を使用して、アプリケーションを構築する、環境設定や、特定のプラットフォームに固有の他の要素を指定する必要があります。 使用の `<platform>` 構成を指定する必要がありますだけが表示される単一プラットフォーム固有の要素 `config.xml` ファイル。 たとえば、ここではその唯一のアンドロイドがフルスクリーンの好みを使用するを指定する方法です。
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>

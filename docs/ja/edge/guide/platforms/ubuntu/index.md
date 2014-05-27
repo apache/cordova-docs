@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 初期リリース
 
-コルドバで Ubuntu のプラットフォームのサポートの最初のリリースを歓迎します。 このリリースでは、フォーカスが Ubuntu システムの開発とコルドバ Web プロジェクト開発のワークフローを使用しています。 これはあなたと、プロジェクト標準のコルドバのプラグインを追加して、もちろん、Ubuntu のプラットフォーム用のアプリを実行する Ubuntu のプラットフォームを追加されています。
+コルドバで Ubuntu のプラットフォームのサポートの最初のリリースを歓迎します。 このリリースでは、フォーカスの Ubuntu システムに開発とは、「概要」で説明したクロスプラット フォーム ワークフローを使用して。 これは、コルドバの標準プラグインを追加すると Ubuntu プラットフォーム用のアプリを実行している、あなたのプロジェクトへの Ubuntu プラットフォームの追加が含まれます。
 
 ### Ubuntu SDK
 
@@ -28,7 +28,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### Ubuntu のランタイム プラットフォーム
 
-Ubuntu はデスクトップ環境 (ラップトップ、Pc など) をよく知られています。 Ubuntu のタッチ携帯電話とタブレットの上に Ubuntu OS を拡張します。 Ubuntu ランタイム プラットフォームは、さまざまな CPU アーキテクチャを持ち (x 86、armhf、etc.）。 アプリとプラグインのコードを適切にコンパイルしなければなりません。 この広い領域のためのサポートは、Ubuntu で急速に進化しています。
+Ubuntu はデスクトップ環境 (ラップトップ、Pc など） で知られています。 Ubuntu のタッチ携帯電話とタブレットの上に Ubuntu OS を拡張します。 Ubuntu ランタイム プラットフォームは、さまざまな CPU アーキテクチャを持ち (x 86、armhf、etc.）。 アプリとプラグインのコードを適切にコンパイルしなければなりません。 この広範な地域のためのサポートは、Ubuntu で急速に進化しています。
 
 ### 最新情報
 
@@ -61,12 +61,14 @@ Ubuntu ランタイム プラットフォーム向け Cordova アプリ サポ�
 
 ### プロジェクトを作成します。
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+アプリを作成し、 `hello` 表示名前を持つディレクトリ `HelloWorld` :
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### プロジェクト ディレクトリに移動します。
 
-    $ cd project1
+    $ cd hello
     
 
 ### Ubuntu のプラットフォームを追加します。
