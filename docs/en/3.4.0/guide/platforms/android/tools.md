@@ -79,7 +79,19 @@ running emulator if no device is found.
     $ /path/to/project/cordova/log
     $ C:\path\to\project\cordova\log.bat
 
-### Cleaning
+## Cleaning
 
     $ /path/to/project/cordova/clean
     $ C:\path\to\project\cordova\clean.bat
+
+## Manual Use of Ant
+
+If you wish to call Ant directly from the command line such as
+`ant debug install`, you need to specify additional parameters to the ant
+command:
+
+        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+
+This is because the directories used by Cordova's Ant scripts are different
+than the default. This is done to avoid conflicts when Ant is run from the
+command line versus inside Eclipse/ADT.
