@@ -1,15 +1,15 @@
 ---
 
-許可證： 下一個或多個參與者授權合約許可向阿帕奇軟體基金會 (ASF)。 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 您可能會獲得在許可證的副本
+许可证： 下一个或多个参与者许可协议许可向阿帕奇软件基金会 (ASF)。 请参阅分布式与此工作为版权的所有权有关的其他信息的通知文件。 ASF 许可证，此文件到你根据 Apache 许可证，2.0 版 （"许可证"） ；您不可能使用此文件除了符合许可证。 您可能会获得在许可证的副本
 
-           HTTP://www.apache.org/licenses/LICENSE-2.0 除非適用的法律要求或書面同意，否則按照該許可證分發的軟體分發上"按原樣"的基礎，而不擔保或條件的任何種類的明示或暗示。  請參閱支配許可權和許可證下的限制的特定語言的許可證。
+           http://www.apache.org/licenses/LICENSE-2.0 除非适用的法律要求或书面同意，否则按照该许可证分发的软件分发上"按原样"的基础，而不担保或条件的任何种类的明示或暗示。  请参阅支配权限和许可证下的限制的特定语言的许可证。
     
 
 ---
 
-# 平臺支援
+# 平台支持
 
-下面顯示一的組開發工具和設備的 Api 可為每個移動平臺。 Api 在此處列出的設備是由核心外掛程式，提供額外的 Api 都是通過[協力廠商外掛程式][1]提供。 列標題顯示的 CLI 速記名稱。
+下面显示一的组开发工具和设备的 Api 可为每个移动平台。 Api 在此处列出的设备是由核心插件，提供额外的 Api 都是通过[第三方插件][1]提供。 列标题显示的 CLI 速记名称。
 
  [1]: http://plugins.cordova.io
 
@@ -19,11 +19,11 @@
   <tr>
     <th>
       </td> <th>
-        <tt>亞馬遜-fireos</tt>
+        <tt>亚马逊-fireos</tt>
       </th>
       
       <th>
-        <tt>android 系統</tt>
+        <tt>android 系统</tt>
       </th>
       
       <th>
@@ -31,7 +31,7 @@
       </th>
       
       <th>
-        <tt>火狐瀏覽器作業系統</tt>
+        <tt>火狐浏览器操作系统</tt>
       </th>
       
       <th>
@@ -43,11 +43,11 @@
       </th>
       
       <th>
-        <tt>wp7</tt>(Windows<br />電話 7）
+        <tt>wp7</tt>(Windows<br />电话 7）
       </th>
       
       <th>
-        <tt>wp8</tt>(Windows<br />電話 8）
+        <tt>wp8</tt>(Windows<br />电话 8）
       </th>
       
       <th>
@@ -62,7 +62,7 @@
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">科爾多瓦<br />CLI</a>
+          <a href="guide_cli_index.md.html">科尔多瓦<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -106,15 +106,15 @@
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">嵌入式<br />Web 視圖</a>
+          <a href="guide_hybrid_webviews_index.md.html">嵌入式<br />Web 视图</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_platforms_amazonfireos_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_platforms_amazonfireos_webview.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_platforms_android_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_platforms_android_webview.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="blackberry10" class="n">
@@ -124,7 +124,7 @@
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_platforms_ios_webview.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_platforms_ios_webview.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -145,37 +145,37 @@
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">外掛程式<br />介面</a>
+          <a href="guide_hybrid_plugins_index.md.html">插件<br />接口</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_android_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_blackberry10_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_ios_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_wp8_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">（請參閱詳細資訊）</a>
+          <a href="guide_guide_platforms_wp8_plugin.md.html">（请参阅详细信息）</a>
         </td>
         
         <td data-col="win8"       class="y">
@@ -190,49 +190,13 @@
         </th>
         
         <th colspan="20">
-          平臺 Api
+          平台 Api
         </th>
       </tr>
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">加速度計</a>
-        </th>
-        
-        <td data-col="amazon-fireos" class="y">
-        </td>
-        
-        <td data-col="android"    class="y">
-        </td>
-        
-        <td data-col="blackberry10" class="y">
-        </td>
-        
-        <td data-col="firefoxos" class="y">
-        </td>
-        
-        <td data-col="ios"        class="y">
-        </td>
-        
-        <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-        </td>
-        
-        <td data-col="winphone8"  class="y">
-        </td>
-        
-        <td data-col="win8"       class="y">
-        </td>
-        
-        <td data-col="tizen"       class="y">
-        </td>
-      </tr>
-      
-      <tr>
-        <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">相機</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">加速度计</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -268,7 +232,43 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">捕獲</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">相机</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="y">
+        </td>
+        
+        <td data-col="winphone7"  class="y">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="y">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">捕获</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -304,7 +304,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">指南針</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">指南针</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -341,7 +341,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">連接</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">连接</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -377,7 +377,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">連絡人</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">联系人</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -413,7 +413,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">設備</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">设备</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -485,7 +485,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">檔</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">文件</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -630,7 +630,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">媒體</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">媒体</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -702,7 +702,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">閃屏</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">闪屏</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -738,7 +738,7 @@
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">存儲</a>
+          <a href="cordova_storage_storage.md.html">存储</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -760,15 +760,15 @@
         </td>
         
         <td data-col="winphone7"  class="y">
-          認為 & indexedDB
+          认为 & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">
-          認為 & indexedDB
+          认为 & indexedDB
         </td>
         
         <td data-col="win8"       class="y">
-          認為 & indexedDB
+          认为 & indexedDB
         </td>
         
         <td data-col="tizen"       class="y">

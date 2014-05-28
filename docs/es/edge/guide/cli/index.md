@@ -37,19 +37,19 @@ En Mac, la linea de comando esta disponible a través de la aplicación de *Term
 
 **Nota**: para las plataformas Windows, todavía puedes desarrollar en equipos Mac ejecutando Windows en una máquina virtual o en modo de arranque dual. Para las opciones disponibles, consulte la guía de la plataforma Windows Phone o guía de plataforma de Windows 8.
 
-Lo más probable es que ejecute la CLI de diferentes máquinas, más sentido para mantener un repositorio de código fuente remota, cuyos activos que tire hacia abajo para directorios de trabajo local.
+Lo más probable es que ejecute la CLI desde diferentes equipos, lo que le da mas sentido a mantener un repositorio de código fuente remoto, cuyos archivos pueda descargar en sus directorios de trabajo local.
 
 ## Instalar la CLI de Cordova
 
-La herramienta de línea de comandos de Cordova se distribuye como un paquete de npm en un formato listo para usar. No es necesario compilarlo desde origen.
+La herramienta de línea de comandos de Cordova se distribuye como un paquete de npm en un formato listo para usar. No es necesario compilarlo desde su código fuente.
 
-Para instalar el `cordova` de línea de comandos de la herramienta, siga estos pasos:
+Para instalar `cordova` desde la línea de comandos siga estos pasos:
 
-1.  Descargue e instale [Node.js][1]. Después de la instalación, usted debe ser capaz de invocar a `node` y `npm` en la línea de comandos. Si lo desea, opcionalmente puede utilizar una herramienta como `nvm` o `nave` para administrar la instalación de Node.js.
+1.  Descargue e instale [Node.js][1]. Después de la instalación, usted debe ser capaz de ejecutar `node` y `npm` en la línea de comandos. Si lo desea, opcionalmente puede utilizar una herramienta como `nvm` o `nave` para manejar la instalación de Node.js.
 
-2.  Descarga e instala un [cliente de git][2], si ya no tienes uno. Después de la instalación, usted debe ser capaz de invocar a `git` en la línea de comandos. Aunque no utilices `git` manualmente, la CLI usarlo tras bambalinas para descargar algunos activos cuando se crea un nuevo proyecto.
+2.  Descarga e instala un [cliente de git][2], si ya no tienes uno. Después de la instalación, usted debe ser capaz de ejecutar a `git` en la línea de comandos. Aunque no utilices `git` manualmente, la CLI usa de fondo para descargar algunos archivos cuando se crea un nuevo proyecto.
 
-3.  Instale la `cordova` módulo utilizando `npm` utilidad de Node.js. La `cordova` módulo se descargarán automáticamente por el `npm` utilidad.
+3.  Instale el módulo `cordova` utilizando el manejador de paquetes de Node.js `npm`. El módulo `cordova` sera descargado automáticamente por `npm`.
 
  [1]: http://nodejs.org/
  [2]: http://git-scm.com/

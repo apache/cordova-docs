@@ -16,22 +16,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # startcallbutton
 
-當使用者按下開始呼叫按鈕時，將觸發該事件。
+当用户按下开始呼叫按钮时，将触发该事件。
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
     
 
-## 詳細資訊
+## 详细信息
 
-如果您需要重寫預設開始調用行為您可以註冊為事件攔截器 `startcallbutton` 事件。
+如果您需要重写默认开始调用特性，您可以为`startcallbutton` 事件注册一个事件侦听器 。
 
-應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
+一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
 
-## 支援的平臺
+## 支持的平台
 
 *   黑莓 10
 
-## 快速的示例
+## 简单的例子
 
     document.addEventListener("startcallbutton", onStartCallKeyDown, false);
     
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的示例
+## 完整的例子
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">
