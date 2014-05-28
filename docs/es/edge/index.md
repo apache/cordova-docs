@@ -22,10 +22,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Perspectiva general
+        Resumen
       </h2>
       
-      <span>Comience aquí si eres nuevo en Cordova.</span>
+      <span>Comience aquí si usted es nuevo a Córdoba. Incluye la instalación y próximos pasos.</span>
     </li>
     <li>
       <h2>
@@ -46,42 +46,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Guías de plataformas
       </h2>
       
-      <span>Configurar cada SDK y actualización de proyectos</span>
+      <span>Configurar cada plataforma SDK y actualización de proyectos.</span>
     </li>
     <li>
       <h2>
         Utilizando Plugman para administrar Plugins
       </h2>
       
-      <span>Utilizando Plugman para administrar Plugins sin el CLI</span>
+      <span>Administrar plugins sin la CLI cuando se utiliza el flujo de trabajo centrado en plataforma.</span>
     </li>
     <li>
       <h2>
         El archivo config.xml
       </h2>
       
-      <span>Personaliza las prestaciones de tu aplicación.</span>
+      <span>Personalizar las características de su aplicación.</span>
     </li>
     <li>
       <h2>
-        Iconos y pantallas de Splash
+        Los iconos y las pantallas Splash
       </h2>
       
-      <span>Personaliza las ímagenes que son mostradas por tu aplicación.</span>
+      <span>Personalizar imágenes muestra de su aplicación.</span>
     </li>
     <li>
       <h2>
-        WebViews embebidas
+        Incrustar WebViews
       </h2>
       
-      <span>Implementa el Cordova WebView en tu proyecto.</span>
+      <span>Implementar la Cordova WebView en su proyecto nativo.</span>
     </li>
     <li>
       <h2>
-        Guía de desarrollo de Plugins
+        Guía de desarrollo de plugin
       </h2>
       
-      <span>Desarrolla tu primer Plugin.</span>
+      <span>Desarrollar tu propio plugin.</span>
     </li>
     <li>
       <h2>
@@ -92,17 +92,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Guía Whitelist
+        Guía de seguridad
       </h2>
       
-      <span>Permite a la aplicaciones acceder a recursos externos.</span>
+      <span>Información y consejos para la creación de una aplicación segura.</span>
     </li>
     <li>
       <h2>
-        Almacenamiento
+        Guía de lista blanca
       </h2>
       
-      <span>Una perspectiva de las opciones de almacenamiento nativas.</span>
+      <span>Conceder una solicitud acceso a recursos externos.</span>
+    </li>
+    <li>
+      <h2>
+        Almacenamiento de información
+      </h2>
+      
+      <span>Un Resumen de las opciones de almacenamiento nativo.</span>
+    </li>
+    <li>
+      <h2>
+        Próximos pasos
+      </h2>
+      
+      <span>Un vistazo a los temas que se encontrarán nuevos desarrolladores Cordova.</span>
     </li>
     <li>
       <h2>
@@ -127,10 +141,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Plugin APIs
+        Plugin API
       </h2>
       
-      <span>Descubre que plugins Cordova están disponibles para ser utilizados en tu proyecto.</span>
+      <span>Descubra qué plugins Cordova están disponibles para usar en su proyecto.</span>
     </li>
   </ul>
 </div>

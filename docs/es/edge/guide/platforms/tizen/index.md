@@ -104,7 +104,7 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
     
     ![][7]
 
-*   Haga clic derecho en el proyecto en el **Explorador de proyecto** visión, luego seleccionar ejecutar como **& rarr; Aplicación Web Tizen**:
+*   Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione **Ejecutar como → Tizen Web Application**:
     
     ![][8]
 

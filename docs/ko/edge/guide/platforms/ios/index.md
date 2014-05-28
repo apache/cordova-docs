@@ -84,7 +84,7 @@ IOS 에뮬레이터에서 응용 프로그램을 미리 보기:
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode 용 에뮬레이터와 함께 번들로 제공 된 최신 버전의 iPhone 및 iPad. 이전 버전에서 사용할 수 있는 **Xcode → 환경 설정 → 다운로드 → 구성 요소** 패널.
+Xcode는 아이폰과 iPad의 최신 버전에 대 한 에뮬레이터와 함께 번들로 제공. 이전 버전에서 사용할 수 있는 **Xcode → 환경 설정 → 다운로드 → 구성 요소** 패널.
 
 ## 장치에 배포
 

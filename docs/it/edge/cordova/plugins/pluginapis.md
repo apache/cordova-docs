@@ -11,11 +11,11 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 Cordova viene fornito con un set minimo di API e progetti aggiungere cosa extra API richiedono tramite plugin.
 
-Può cercare attraverso tutti i plugin esistenti utilizzando il [Plugin Registry][1].
+Può cercare attraverso tutti i plugin esistenti (plugin di terze parti inclusi) utilizzando il [Plugin Registry][1].
 
  [1]: http://plugins.cordova.io/
 
-Il set tradizionale di Cordova plugin sono i seguenti:
+Il set tradizionale di nucleo Cordova plugin sono i seguenti:
 
 *   [Stato della batteria][2]
     

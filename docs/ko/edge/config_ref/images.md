@@ -20,43 +20,117 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## CLI 구성 아이콘
 
-CLI에서 작업할 때 아이콘 소스 파일은 프로젝트 내에서 다양 한 플랫폼 관련 하위 디렉터리 내에 있는 `www/res/icons` 디렉터리. 새로 만든된 프로젝트 대상으로 하고자 하는 플랫폼에 대 한 대체 수 코르 도우 바 아이콘의 기본 집합을 갖추고 있습니다.
+CLI에서 근무를 통해 애플 리 케이 션 아이콘을 정의할 수 있습니다 때 `<icon>` 요소 ( `config.xml` ). 아이콘을 지정 하지 않으면 아파치 코르도바 로고 사용 됩니다.
 
-안드로이드에서는 아이콘을 저해상도, 중간 해상도, 고해성도, 그리고 초고해상도로 나눕니다:
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-IOS 플랫폼 iPads, 72 픽셀 사각형 아이콘을 지정 하 고 아이폰과 아이팟, 망막에 대 한 고해상도 *2 x* 변형 57 픽셀 아이콘 표시.
+src: (필수) www 디렉토리를 기준으로 이미지 파일의 위치 지정
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+플랫폼: (선택 사항) 대상 플랫폼
+
+폭: (선택 사항) 아이콘 너비 (픽셀)
+
+높이: (선택 사항) 아이콘 높이 (픽셀)
+
+밀도: 특정 일 (선택 사항) 안 드 로이드 아이콘 밀도 지정 합니다.
+
+다음 구성은 모든 플랫폼에 사용할 수 있는 단일 기본 아이콘을 정의 하기 위해 사용할 수 있습니다.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone는 다음과 같은 다양 한 장치 배경 이미지 사용 하는 응용 프로그램을 나타내는 때 기와 함께 기본 48 픽셀 아이콘을 지정 합니다.
+각 플랫폼에 대해 다른 화면 해상도 맞게 설정 픽셀 완벽 한 아이콘을 정의할 수 있습니다.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+아마존 화재 운영 체제
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-블랙베리 10 config.xml의 아이콘 요소를 필요로 합니다.
+안 드 로이드
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-여러 크기와 로케일 tareting 블랙베리의 설명서를 참조 하십시오.
+Blackberry10
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
+    
 
-Tizen은 128 픽셀 아이콘을 필요로합니다.
+여러 크기 및 로케일을 타겟팅에 대 한 블랙베리의 설명서를 참조 하십시오. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-        tizen/icon-128.png
+Firefox 운영 체제
+
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+윈도우 Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
     
 
 ## CLI에서 시작 화면을 구성
@@ -75,7 +149,7 @@ Splashscreen API를 사용 하 여 여러 플랫폼에서 애플 리 케이 션�
         android/screen-xhdpi-portrait.png
     
 
-IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이폰/아이팟과 아이 패드에 대 한 이체를 지정합니다. *568 H* 파일 아이폰 5의 키가 화면에 적용 됩니다.
+IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이폰/아이팟과 아이 패드에 대 한 이체를 지정합니다. *568 h* 파일 아이폰 5의 키가 화면에 적용 됩니다.
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -110,43 +184,22 @@ Windows Phone 단일 시작 화면 이미지를 지정합니다.
 *   매체 (mdpi): 적어도 470 × 320
 *   작은 (ldpi): 적어도 426 × 320
 
-코르 도우 바에 제공 된 기본 시작 화면 이미지를 사용 하려는 경우에서 png 파일을 복사 해야 합니다 `platforms/android/www/res/screen/android` 에 `platforms/android/res/drawable*/` :
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-    
-
-`drawable`디렉터리 이름이 [화면 크기][2] 및 [대체 리소스][3] 를 지원 하기 위한 안 드 로이드 규칙에 따라 해야 합니다.
+새로운 안 드 로이드 프로젝트를 만들 때 기본 시작 화면 이미지는 코르도바에서 샘플 응용 프로그램 있어야 합니다에서 제공 하는 `platforms/android/res/drawable*` 디렉터리. 자유롭게 자신만 이미지와 이러한 대체. 자신의 스플래시 스크린 이미지를 제공 하는 경우에 코르도바 기본 것 들 여기로 8의 같은 순열의 제공 필요가 없습니다. 더 많거나 적은 최적화를 사용할 수 있습니다. `drawable`디렉터리 이름이 [화면 크기][2] 및 [대체 리소스][3] 를 지원 하기 위한 안 드 로이드 규칙에 따라 해야 합니다.
 
  [2]: http://developer.android.com/guide/practices/screens_support.html
  [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
 
-에 `config.xml` , 다음과 같은 환경 설정 추가:
+최상위 수준에서 `config.xml` 파일 (아니라 하나에 `platforms` ), 다음 기본 설정을 추가:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
     
 
-첫 줄 시작 화면으로 표시 하려면 이미지를 설정 합니다. 이것은에서 png 파일 이름에 `drawable*` 디렉터리. 만약 당신이 이름을 이미지 아무것도 아닌 다른 `splash.png` ,이 줄을 수정 해야 합니다. 파일 이름 확장명을 포함 하지 않습니다 (즉, `.png` ). 코르 도우 바 상기에 제공 된 기본 시작 화면을 사용 하려는 경우 값을 사용 하 여`screen`.
+첫 줄 시작 화면으로 표시 하려면 이미지를 설정 합니다. 이것은 파일 이름에 png의는 `drawable*` 디렉토리, 마이너스는 `.png` 확장. SplashScreen의 기본값은 `screen` (파일에 대 한 `platforms/android/res/drawable*/screen.png` ), 그래서 만약 당신이 이름을 이미지 아무것도 아닌 다른 `screen.png` 에 `drawable*` 이 줄을 추가/수정 해야 하는 디렉터리.
 
-두 번째 줄에는 얼마나 오래는 splashscreen 밀리초에 나타납니다의 기본 지연을 설정 합니다. 이 최대 예상된 시작 시간 이어야 합니다. SplashScreenDelay의 기본값은 3000 석사.
+두 번째 줄에는 얼마나 오래는 splashscreen 밀리초에 나타납니다의 기본 지연을 설정 합니다. 이 최악의 예상된 시작 시간 이어야 합니다. SplashScreenDelay의 기본값은 3000 석사.
 
-마지막으로, 시작 화면이 있어야 존재만 필요한 만큼. 앱 시작 했다 webview 로드 되었을 때 기본 보기에 표시 됩니다 귀하의 응용 프로그램 시작 화면 숨길 해야. 여러 가지 요인으로 인해 응용 프로그램 시작 시간이 꽤 달라 집니다 때문에 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `deviceready` 이벤트. 그렇지 않으면 시작 화면 위에 구성 하는 SplashScreenDelay 값에 대 한 표시 됩니다. 이 이벤트 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
+마지막으로, 가장 좋은 방법은 시작 화면 이어야 한다 현재만 필요한 만큼. 응용 프로그램 시작 때 webview 로드 된 앱 숨기 려 한다 시작 화면 준비가 되 자 마자 주요 보기 표시 됩니다. 응용 프로그램 시작 시간은 CPU 속도 네트워크와 같은 요인의 숫자로 인해 꽤 달라 집니다 때문에 것이 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `deviceready` 이벤트. 그렇지 않으면 시작 화면이 표시 됩니다 위에 구성 하는 SplashScreenDelay 값에 대 한 어떤은 가능성이 필요한 것 보다 더 이상. 이 이벤트 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
 
 ## IOS 플랫폼에 대 한 시작 화면
 

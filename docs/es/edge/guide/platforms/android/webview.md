@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-Esta sección le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación para Android más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
+Esta guía le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación para Android más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
 
 Si no está familiarizado con Android, primero debe familiarizarse con la guía de la plataforma Android y tiene el SDK de Android más reciente instalado antes de intentar la opción de desarrollo más inusual de incrustar un WebView. A partir de Córdoba 1.9, la plataforma Android se basa en una `CordovaWebView` componente, que se basa en un legado `CordovaActivity` componente que data de antes de la versión 1.9.
 

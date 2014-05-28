@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS WebViews
 
-이 단원에서는 큰 iOS 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
+이 가이드에서는 더 큰 iOS 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
 
 IOS WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사용 하는 `Cleaver` Xcode 템플릿 참조 구현으로 쓸모 있는 구성 요소. 코르 도우 바 2.0 및 이후 버전 에서만 하위 프로젝트 기반 칼 구현을 지원합니다.
 
@@ -56,16 +56,10 @@ IOS WebViews에 대 한 지원을 시작 코르도바 버전 1.4 사용 하는 `
 
 14. **+** 선택 버튼, 그리고 다음과 같은 **프레임 워크**를 추가 합니다. 필요에 따라 **프로젝트 탐색기**내에서 이동 **프레임 워크** 그룹:
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. **대상 종속성**, 하나 이상의 상자 경우 그 상표를 가진 최고 상자를 확장 합니다.

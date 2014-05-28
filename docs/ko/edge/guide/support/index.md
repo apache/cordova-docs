@@ -9,7 +9,9 @@
 
 # 플랫폼 지원
 
-다음 개발 도구 및 각 모바일 플랫폼에 대 한 장치 사용할 수 있는 Api의 집합을 보여 줍니다. (열 머리글 CLI의 속기 스텁이 표시.)
+다음 개발 도구 및 각 모바일 플랫폼에 대 한 장치 사용할 수 있는 Api의 집합을 보여 줍니다. Api는 여기에 나열 된 장치는 추가 Api는 [타사 플러그인][1]을 통해 사용할 수 있는 핵심 플러그인에 의해 제공 됩니다. 열 머리글 표시 CLI의 속기 이름.
+
+ [1]: http://plugins.cordova.io
 
 <!-- START HTML -->
 
@@ -26,6 +28,10 @@
       
       <th>
         <tt>blackberry10</tt>
+      </th>
+      
+      <th>
+        <tt>Firefox 운영 체제</tt>
       </th>
       
       <th>
@@ -71,6 +77,10 @@
           맥, 윈도우
         </td>
         
+        <td data-col="firefoxos" class="y">
+          맥, 윈도우, 리눅스
+        </td>
+        
         <td data-col="ios"        class="y">
           맥
         </td>
@@ -89,8 +99,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -112,6 +120,9 @@
         <td data-col="blackberry10" class="n">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_platforms_ios_webview.md.html">(상세 내용 보기)</a>
         </td>
@@ -127,8 +138,6 @@
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -151,6 +160,9 @@
           <a href="guide_guide_platforms_blackberry10_plugin.md.html">(상세 내용 보기)</a>
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_guide_platforms_ios_plugin.md.html">(상세 내용 보기)</a>
         </td>
@@ -169,8 +181,6 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
@@ -186,7 +196,7 @@
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">가 속도계</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">가 속도계</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -196,6 +206,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -213,15 +226,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">카메라</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">카메라</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -231,6 +242,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -248,15 +262,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">캡처</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">캡처</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -266,6 +278,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -283,15 +298,13 @@
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">나침반</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">나침반</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -301,6 +314,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -319,15 +335,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">연결</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">연결</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -337,6 +351,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -354,15 +371,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">연락처</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">연락처</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -372,6 +387,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -389,15 +407,13 @@
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">장치</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">장치</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -407,6 +423,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -423,8 +442,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -444,6 +461,9 @@
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -459,15 +479,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">파일</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">파일</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -479,6 +497,9 @@
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -493,8 +514,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -502,7 +521,7 @@
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">지리적 위치</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">지리적 위치</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -512,6 +531,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -529,15 +551,13 @@
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">세계화</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">세계화</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -547,6 +567,9 @@
         </td>
         
         <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -564,15 +587,13 @@
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -582,6 +603,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -600,15 +624,13 @@
           iframe을 사용 하 여
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">미디어</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">미디어</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -618,6 +640,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -634,8 +659,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -643,7 +666,7 @@
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">알림</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">알림</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -653,6 +676,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -669,8 +695,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -678,7 +702,7 @@
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">Splashscreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -688,6 +712,9 @@
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -704,8 +731,6 @@
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -725,6 +750,9 @@
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -742,8 +770,6 @@
         <td data-col="win8"       class="y">
           localStorage & indexedDB
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>

@@ -84,7 +84,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode 捆綁了模擬器為最新版本的 iPhone 和 iPad。 較舊的版本中可能會提供**Xcode → 首選項 → 下載 → 元件**面板。
+Xcode 來捆綁在一起的最新版本的 iPhone 和 iPad 的模擬器。 較舊的版本中可能會提供**Xcode → 首選項 → 下載 → 元件**面板。
 
 ## 將部署到設備
 

@@ -18,22 +18,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 El `config.xml` archivo controla los ajustes básicos de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Este preferencias detalles sección que sólo se aplican a Amazon fuego OS construye. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
-*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios.
+*   `KeepRunning`(por defecto es booleano, `true` ): determina si la aplicación queda corriendo en el fondo incluso después un `pause` evento incendios. Si se establece como `false` no mata la aplicación después de un `pause` evento, sino simplemente detiene ejecución de código en la vista Web cordova mientras la aplicación está en el fondo.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Especifica una página de error que aparece en respuesta a los errores estándar HTTP en el rango de 400-500. Coloque el archivo especificado en el nivel de directorio que contiene la página de inicio y otros activos de la web.
+*   `ErrorUrl`(URL, por defecto `null` ): Si establece, se visualizará la página que se hace referencia a un error en la aplicación en lugar de un diálogo con el título "Error de aplicación".
     
         <preference name="ErrorUrl" value="error.html"/>
         
 
-*   `LoadingDialog`: Muestra un diálogo nativo cuando se carga la aplicación. El formato del valor es *título, mensaje*
+*   `LoadingDialog`(string, el valor predeterminado de `null` ): Si conjunto, muestra un diálogo con el mensaje y título especificado y un hilandero, cuando cargue la primera página de una aplicación. El título y el mensaje están separados por una coma en esta cadena de valor, y eso coma se retira antes de que se muestre el cuadro de diálogo.
     
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
         
 
-*   `LoadingPageDialog`: Muestra un diálogo nativo al cargar subpáginas dentro de una aplicación. El formato del valor es *título, mensaje*
+*   `LoadingPageDialog`(string, el valor predeterminado de `null` ): lo mismo que `LoadingDialog` , pero para cargar cada página después de la primera página de la aplicación.
     
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
         
@@ -51,3 +51,13 @@ El `config.xml` archivo controla los ajustes básicos de una app que se aplican 
 *   `SplashScreenDelay`(número, por defecto `5000` ): la cantidad de tiempo que muestra la imagen en pantalla splash.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `ShowTitle`(por defecto es booleano, `false` ): Mostrar el título en la parte superior de la pantalla.
+    
+        <preference name="ShowTitle" value="true"/>
+        
+
+*   `LogLevel`(string, el valor predeterminado de `ERROR` ): establece el nivel de registro mínimo a través de registro que se filtrarán los mensajes de la aplicación. Los valores válidos son `ERROR` , `WARN` , `INFO` , `DEBUG` , y`VERBOSE`.
+    
+        <preference name="LogLevel" value="VERBOSE"/>

@@ -14,36 +14,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android Herramientas de línea de comandos
+# Guía de herramientas de Shell Android
 
-La utilidad de línea de comandos de `cordova` es una herramienta de alto nivel que le permite construir aplicaciones a través de varias plataformas a la vez. Una versión anterior del marco Cordova ofrece conjuntos de herramientas de línea de comandos específicos de cada plataforma. Para usarlos como una alternativa a la CLI, tienes que descargar esta versión de Córdoba desde [cordova.apache.org][1]. La descarga contiene los archivos separados para cada plataforma. Ampliar la plataforma de destino. Las herramientas aquí descritas están normalmente disponibles en el directorio `bin` de nivel superior, de lo contrario, consulte el archivo **README** para instrucciones más detalladas.
+Esta guía le muestra cómo utilizar el conjunto de Cordova de cáscara centrada en plataforma de herramientas para desarrollar aplicaciones Android. Este camino hacia el desarrollo, discutido en la descripción, puede ofrecer una mayor gama de opciones de desarrollo que la herramienta CLI multiplataforma descrita en la interfaz de línea de comandos. Por ejemplo, tienes que utilizar herramientas de shell cuando se despliega una costumbre Cordova WebView junto con componentes nativos. Antes de usar cualquier camino hacia el desarrollo, primero debe configurar el entorno de SDK de Android como se describe en la guía de la plataforma Android.
+
+Para habilitar herramientas de shell para Android, descargar Cordova de [cordova.apache.org][1]. La descarga contiene archivos separados para cada plataforma. Ampliar cada uno de destino, `android` en este caso. Las herramientas pertinentes están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
 
  [1]: http://cordova.apache.org
 
-Para obtener información sobre la interfaz de línea de comandos de bajo nivel que permite plugins, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para tener una visión general.
+Estas herramientas le permiten crear, construir y ejecutar aplicaciones Android. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Ver aplicación Plugins para obtener más información sobre cómo desarrollar plugins.
 
 ## Crear un proyecto
 
-Ejecute el comando `create`, especificando la ruta existente para el proyecto, el identificador de paquete de reversa-dominio-estilo y nombre para mostrar de la aplicación. Aquí está la sintaxis para Mac y Windows:
+Ejecute el `create` comando, especificando la ruta existente para el proyecto, el identificador de paquete estilo inversa-dominio y nombre para mostrar de la aplicación. Aquí está la sintaxis para Mac/Linux y Windows:
 
-    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
-    $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
+        $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+    
+        C:\>\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
     
 
 ## Construir
 
 Esto limpia y luego construye un proyecto.
 
-Depuración, en Mac o Windows:
+Depuración, en Mac/Linux o Windows:
 
-    $ /path/to/project/cordova/build --debug
-    $ C:\path\to\project\cordova\build.bat --debug
+        $ /path/to/project/cordova/build --debug
+    
+        C:\>\path\to\project\cordova\build.bat --debug
     
 
-Lanzamiento, el Mac o Windows:
+Lanzamiento, el Mac/Linux o Windows:
 
-    $ /path/to/project/cordova/build --release
-    $ C:\path\to\project\cordova\build.bat --release
+        $ /path/to/project/cordova/build --release
+    
+        C:\>\path\to\project\cordova\build.bat --release
     
 
 ## Ejecute la aplicación
@@ -54,15 +59,34 @@ El `run` comando acepta los siguientes parámetros *opcionales* :
 
 *   Construir especificación. Esto incluye `--debug` , `--release` , o`--nobuild`.
     
-    $ /path/to/project/cordova/run \[Target\] \[Build\] $ C:\path\to\project\cordova\run.bat \[Target\] \[Build\]
+        $ /path/to/project/cordova/run [Target] [Build]
+        
+        C:\>\path\to\project\cordova\run.bat [Target] [Build]
+        
 
-Asegúrese de crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el `android` comando. Se si más de una AVD está disponible como un objetivo, le pedirá que seleccione una. Por defecto el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo.
+Asegúrese de crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el `android` comando. Si más de una AVD está disponible como un objetivo, se le pedirá que seleccione una. Por defecto el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo.
 
 ## Tala
 
-    $ /path/to/project/cordova/log $ C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log
+    
+        C:\>\path\to\project\cordova\log.bat
     
 
-### Limpieza
+## Limpieza
 
-    $ /path/to/project/cordova/clean $ C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean
+    
+        C:\>\path\to\project\cordova\clean.bat
+    
+
+## Uso manual de hormiga
+
+Si usted desea llamar hormiga directamente desde la línea de comandos como `ant debug install` , es necesario especificar parámetros adicionales para el comando de la hormiga:
+
+        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+    
+
+Esto es porque los directorios utilizados por scripts de Ant de Cordova son diferentes a la predeterminada. Esto se hace para evitar conflictos cuando Ant se ejecuta desde la línea de comandos versus dentro de Eclipse/ADT.
+
+Estos parámetros adicionales se agregan automáticamente para usted cuando se utiliza el `cordova/build` y `cordova/run` secuencias de comandos describen anteriormente. Por esta razón se recomienda usar el `cordova/build` y `cordova/run` secuencias de comandos en lugar de hormiga llamada directamente desde la línea de comandos.

@@ -156,7 +156,8 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     
     其中的檔或目錄應設在科爾多瓦 app，相對於 `www` 目錄。資產可以被載入到目標子目錄，例如：
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     創建 `js/experimental` 目錄內 `www` 目錄中，除非已經存在，然後拷貝 `new-foo.js` 檔並將它重命名 `foo.js` 。 如果在目標位置已存在的檔，plugman 將停止反轉安裝過程、 發出一個通知有關衝突，並以非零代碼退出。
 
@@ -187,7 +188,7 @@ plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任
     
     *   `<runs/>`意味著，您的代碼應與指定 `cordova.require` ，但不是安裝在 `window` 物件。 這是有用的模組，將附加的事件處理常式初始化時或以其他方式。 你只能有一個 `<runs/>` 標記。 請注意，包括 `<runs/>` 與 `<clobbers/>` 或 `<merges/>` 是多餘的因為他們也 `cordova.require` 您的模組。
     
-    *   一個空的 `<js-module>` 仍然載入，並且可以訪問的其他模組通過中`cordova.require`.
+    *   一個空的 `<js-module>` 仍然載入，並可通過其他模組中訪問`cordova.require`.
 
 如果 `src` 不能解決到現有檔，plugman 將停止和反轉安裝，發出一個通知的問題，和以非零代碼退出。
 
@@ -370,11 +371,14 @@ Android 系統的示例：
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 `src`屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦專案中，給定平臺的正確方式。
 
 可選的 `weak` 屬性是一個布林值，該值指示是否應弱連結框架。預設值是`false`.
+
+可選的 `custom` 屬性是一個布林值，該值指示是否框架一種作為您的外掛程式檔的一部分包括 （因而它不是一個系統的框架）。 預設值是`false`.
 
 ## *資訊*元素
 
@@ -383,10 +387,7 @@ Android 系統的示例：
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    您需要將以下行添加到 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 資訊 >
     
 
 ## 變數

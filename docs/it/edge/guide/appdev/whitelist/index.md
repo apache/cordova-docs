@@ -118,11 +118,11 @@ Prima della versione 3.1.0, Cordova-iOS incluso alcune estensioni non standard p
 
 In particolare, questi modelli devono essere aggiornati:
 
-*   `apache.org`(nessun protocollo): questo sarebbe partita precedentemente `http` , `https` , `ftp` , e `ftps` protocolli. Modificare in " `*://apache.org/*` " per includere tutti i protocolli, o includere una riga per ogni protocollo è necessario supportare.
+*   " `apache.org` " (nessun protocollo): questo sarebbe partita precedentemente `http` , `https` , `ftp` , e `ftps` protocolli. Modificare in " `*://apache.org/*` " per includere tutti i protocolli, o includere una riga per ogni protocollo è necessario supportare.
 
-*   `http://apache.*`(jolly alla fine del dominio): questo sarebbe partita in precedenza tutti i top-level-domini, tra cui possibili due lettere tutti i TLD (ma come non utili domini. co.uk). Includere una riga per ogni TLD che in realtà è possibile controllare e bisogno di whitelist.
+*   " `http://apache.*` " (jolly alla fine del dominio): questo sarebbe partita in precedenza tutti i top-level-domini, tra cui possibili due lettere tutti i TLD (ma come non utili domini. co.uk). Includere una riga per ogni TLD che in realtà è possibile controllare e bisogno di whitelist.
 
-*   `h*t*://ap*he.o*g`(jolly per lettere mancanti casuali): questi non sono più supportati; cambiamento di includere una riga per ogni dominio e il protocollo che è effettivamente necessario whitelist.
+*   " `h*t*://ap*he.o*g` " (i caratteri jolly per lettere mancanti casuali): questi non sono più supportati; cambiamento di includere una riga per ogni dominio e protocollo che tu effettivamente necessario whitelist.
 
 ## Windows Phone Whitelisting
 

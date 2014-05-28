@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS WebViews
 
-Esta sección le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación iOS más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
+Esta guía le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación iOS más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
 
 Soporte para iOS WebViews comenzó con Cordova versión 1.4, usando un `Cleaver` para que la plantilla de Xcode sirve como una implementación de referencia de componente. Cordova 2.0 y versiones posteriores sólo admiten la implementación basada en el subproyecto Cleaver.
 
@@ -56,16 +56,10 @@ Para seguir estas instrucciones, asegúrate de que tienes la última distribuci�
 
 14. Seleccione el **+** botón y agregue los siguientes **Marcos**. Opcionalmente en el **Navegador de proyectos**, moverlos en el grupo de **Marcos** :
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. Ampliar **Las dependencias de destino**, el cuadro superior con esa etiqueta si hay más de una caja.

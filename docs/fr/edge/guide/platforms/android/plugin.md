@@ -26,7 +26,7 @@ Plugins Android sont basés sur Android-Cordova, qui consiste en une WebView And
 
 Interface JavaScript du plugin utilise la `cordova.exec` méthode comme suit :
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < service >, < action >, [< args >]) ;
     
 
 Cela marshale une demande de la WebView vers le côté natif Android, effectivement l'appel la `action` méthode sur la `service` classe, avec des arguments supplémentaires passés dans le `args` tableau.

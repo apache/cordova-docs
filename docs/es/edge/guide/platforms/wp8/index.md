@@ -33,7 +33,7 @@ Para la plataforma Windows Phone 8, el Cordova WebView confía en Internet Explo
 
 Se necesita lo siguiente:
 
-*   Una versión de 64 bits de Windows 8 Pro, un disco de instalación o un archivo de imagen de disco *ISO* . Una versión de evaluación está disponible en la [Microsoft Developer Network][2]. La versión Pro es necesaria ejecutar el emulador de dispositivos,
+*   Una versión de 64 bits de Windows 8 Pro, un disco de instalación o un archivo de imagen de disco *ISO* . Una versión de evaluación está disponible en la [Microsoft Developer Network][2]. La versión Pro es necesaria ejecutar el emulador de dispositivos.
 
 *   El [Windows Phone SDK][3].
 

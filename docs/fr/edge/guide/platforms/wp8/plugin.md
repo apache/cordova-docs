@@ -136,6 +136,14 @@ Lors de l'interprétation de vos arguments, `try` / `catch` blocs aident à éli
         }
     
 
+## Durée de vie de plugin
+
+Plugins avec longues requêtes, activité de fond telles que la lecture du média, auditeurs ou qui possèdent des état interne doit mettre en œuvre la `onReset` méthode pour nettoyer ces activités. La méthode s'exécute lorsque le CordovaView WebBrowser navigue vers une nouvelle page ou des actualisations, qui recharge le JavaScript.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
+    
+
 ## Plugin XML
 
 Ce qui suit montre comment utiliser le `plugin.xml` fichier pour spécifier les fichiers source d'un plugin sur la plate-forme Windows Phone. Voir Application Plugins pour une vue d'ensemble et la spécification de Plugin pour plus d'informations sur les options disponibles.

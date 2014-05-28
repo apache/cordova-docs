@@ -16,11 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Amazon fuoco OS visualizzazioni Web
 
-A partire da 3.0.0, è possibile utilizzare Cordova come componente nelle applicazioni OS fuoco Amazon. Amazon fuoco OS si riferisce a questo componente come `CordovaWebView` . `CordovaWebView`estende WebView Amazon che è costruito sul cromo progetto open source. Sfruttando questa caratteristica, le applicazioni web possono utilizzare i più recenti standard del web HTML5 in esecuzione in un motore di runtime del web moderno.
+A partire da 3.3.0, è possibile utilizzare Cordova come componente nelle applicazioni OS fuoco Amazon. Amazon fuoco OS si riferisce a questo componente come `CordovaWebView` . `CordovaWebView`estende WebView Amazon che è costruito sul cromo progetto open source. Sfruttando questa caratteristica, le applicazioni web possono utilizzare i più recenti standard del web HTML5 in esecuzione in un motore di runtime del web moderno.
+
+Se si ha familiarità con Amazon fuoco OS, in primo luogo è necessario acquisire familiarità con la guida di piattaforma Amazon fuoco OS e avere il SDK più recente installato prima di tentare l'opzione di sviluppo più insolito di incorporare un WebView.
 
 ## Prerequisiti
 
-*   Cordova 3.0.0 o maggiore
+*   Cordova 3.3.0 o maggiore
 
 *   Android SDK aggiornato all'ultimo SDK
 
@@ -28,11 +30,15 @@ A partire da 3.0.0, è possibile utilizzare Cordova come componente nelle applic
 
 ## Guida all'utilizzo di CordovaWebView in un progetto di OS del fuoco Amazon
 
-1.  Scarica espandere [Amazon WebView SDK][1] , quindi copiare il awv_interface.jar in `/framework/libs` directory. Creare un libs / cartella se non esiste.
+1.  Per seguire queste istruzioni, assicuratevi di che avere l'ultima distribuzione di Cordova. Scaricare da [cordova.apache.org][1] e decomprimere il pacchetto Amazon fuoco OS.
 
-2.  `cd`in `/framework` ed eseguire `ant jar` per costruire il barattolo di cordova. Crea il file. jar formato come `cordova-x.x.x.jar` nel `/framework` directory.
+2.  Scarica espandere [Amazon WebView SDK][2] , quindi copiare il awv_interface.jar in `/framework/libs` directory. Creare un libs / cartella se non esiste.
 
-3.  Modifica dell'applicazione `main.xml` file (sotto `/res/layout` ) per essere simile alla seguente, con la `layout_height` , `layout_width` e `id` modificato per soddisfare la vostra applicazione:
+3.  Spostarsi del pacchetto `/framework` directory ed eseguire `ant jar` . Crea il Cordova `.jar` file, costituita come`/framework/cordova-x.x.x.jar`.
+
+4.  Copia il `.jar` file al progetto Android `/libs` directory.
+
+5.  Aggiungere il seguente all'applicazione `/res/xml/main.xml` file, con la `layout_height` , `layout_width` e `id` modificato per soddisfare la domanda:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +46,7 @@ A partire da 3.0.0, è possibile utilizzare Cordova come componente nelle applic
             android:layout_height="match_parent" />
         
 
-4.  Modificare la vostra attività che implementa il `CordovaInterface` . È necessario implementare i metodi inclusi. Si potrebbe desiderare di copiarli da `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarle sul proprio. Il frammento di codice riportato di seguito viene illustrata un'applicazione di base che utilizza l'interfaccia. Si noti come l'id di riferimento vista corrisponde la `id` attributo specificato nel frammento XML sopra indicato:
+6.  Modificare la vostra attività che implementa il `CordovaInterface` . È necessario implementare i metodi inclusi. Si potrebbe desiderare di copiarli da `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarle sul proprio. Il frammento di codice riportato di seguito viene illustrata un'applicazione di base che utilizza l'interfaccia. Si noti come l'id di riferimento vista corrisponde la `id` attributo specificato nel frammento XML sopra indicato:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,7 +61,8 @@ A partire da 3.0.0, è possibile utilizzare Cordova come componente nelle applic
             }
         
 
- [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [1]: http://cordova.apache.org
+ [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
 Se si utilizza la fotocamera, è necessario implementare anche questo:
 

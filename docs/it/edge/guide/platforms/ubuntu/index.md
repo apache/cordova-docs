@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Rilascio iniziale
 
-Benvenuti alla versione iniziale di supporto della piattaforma Ubuntu in Cordova. Con questa release, il focus è lo sviluppo di un sistema Ubuntu e utilizzando il Workflow Cordova Web progetto Dev. Questo include l'aggiunta della piattaforma di Ubuntu al progetto, aggiungendo il plugin standard di Cordova e, naturalmente, generazione e l'esecuzione di applicazioni per la piattaforma di Ubuntu.
+Benvenuti alla versione iniziale di supporto della piattaforma Ubuntu in Cordova. Con questa release, il focus è lo sviluppo di un sistema Ubuntu e utilizzando il flusso di lavoro cross-piattaforma discussa nella panoramica. Questo include l'aggiunta della piattaforma di Ubuntu al progetto, l'aggiunta di plugin standard di Cordova e generazione e l'esecuzione di applicazioni per la piattaforma di Ubuntu.
 
 ### Ubuntu SDK
 
@@ -61,12 +61,14 @@ Installare il pacchetto di cordova-cli (e le relative dipendenze):
 
 ### Creare un progetto
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+Crea un'app in un `hello` directory il cui nome visualizzato è `HelloWorld` :
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### Spostarsi nella Directory del progetto
 
-    $ cd project1
+    $ cd hello
     
 
 ### Aggiungere la piattaforma Ubuntu

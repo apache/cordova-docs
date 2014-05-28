@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 命令列介面
 
-本指南演示如何創建應用程式並將它們部署到各種本機移動平臺，使用 `cordova` 命令列介面 (CLI)。 此工具允許您創建新的專案、 生成它們在不同平臺上，並運行實際設備或模擬程式內。 CLI 是要使用的跨平臺工作流的主要工具 （見有關的各項工作流程說明概述）。然而，你也可以使用 CLI 初始化專案代碼後，您使用各種平臺 Sdk 和外殼工具為繼續發展。
+本指南演示如何創建應用程式並將它們部署到各種本機移動平臺，使用 `cordova` 命令列介面 (CLI)。 此工具允許您創建新的專案、 生成它們在不同平臺上，並運行實際設備或模擬程式內。 CLI 是要使用的跨平臺工作流概述中所述的主要工具。 否則還可以使用 CLI 來初始化專案代碼，然後切換到各種平臺 Sdk 和外殼工具為繼續發展。
 
 ## 系統必備元件
 
@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   iOS (Mac)
 *   亞馬遜火 OS （Mac、 Linux、 Windows）
-*   Android （Mac、 Linux）
+*   Android （Mac、 Linux、 Windows）
 *   黑莓 10 （Mac、 Linux、 Windows）
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
@@ -35,22 +35,46 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 在 Mac 上，命令列是可通過*終端*應用的。在 PC 上，它是可作為*命令提示符*下*配件*.
 
-就越有可能是你在 CLI 運行從不同的機器，更加意義保持遠端原始程式碼儲存庫，你拉下到本地工作目錄的資產。
+**注**： 僅限 Windows 平臺，你還可以您在 Mac 的硬體上的發展通過在虛擬機器環境中或在雙啟動模式下運行 Windows。 可用的選項，請參閱 Windows Phone 平臺指南或 Windows 8 平臺指南。
+
+就越有可能是你在 CLI 運行從不同的機器，更有意義保持遠端原始程式碼儲存庫，你拉下到本地工作目錄的資產。
+
+## 安裝科爾多瓦 CLI
+
+作為故宮包中使用準備好的格式分發，科爾多瓦命令列工具。不是有必要從原始程式碼中編譯它。
 
 若要安裝 `cordova` 命令列工具，請按照這些步驟操作：
 
-1.  下載並安裝[Node.js][1]。安裝完成後，您應該能夠調用 `node` 或 `npm` 在命令列上。
+1.  下載並安裝[Node.js][1]。 安裝完成後，您應該能夠調用 `node` 和 `npm` 在命令列上。 如果需要，您可能會選擇使用工具如 `nvm` 或 `nave` 來管理您的 Node.js 安裝。
 
-2.  安裝 `cordova` 實用程式。在 Unix 中，首碼的額外 `sudo` 命令可能需要安裝開發實用程式中以其他方式限制目錄：
-    
-        $ sudo npm install -g cordova
-        
-    
-    安裝日誌可能會產生錯誤的任何已卸載平臺 Sdk。安裝完成後，您應該能夠運行 `cordova` 命令列上。
-    
-    **注**： `-g` 標誌上面告訴故宮全域安裝科爾多瓦。 您可能需要添加到您的路徑，為了調用全域的故宮目錄安裝故宮模組。 在 Windows 上，故宮通常可以找到在 `C:\Users\username\AppData\Roaming\npm` 和在 Unix 上`/usr/local/share/npm`.
+2.  下載並安裝一個[git 用戶端][2]，如果你已經沒有之一。 安裝完成後，您應該能夠調用 `git` 對您的命令列。 即使您不會使用 `git` 手動，CLI 不會使用它幕後下載一些資產時創建一個新專案。
+
+3.  安裝 `cordova` 模組使用 `npm` 實用程式的 Node.js。`cordova`模組將會自動下載的 `npm` 實用程式。
 
  [1]: http://nodejs.org/
+ [2]: http://git-scm.com/
+
+*   在 OS X 與 Linux：
+    
+            $ sudo npm install -g cordova
+        
+    
+    在 OS X 與 Linux，首碼 `npm` 命令與 `sudo` 可能需要安裝這種發展中的實用程式否則限制目錄如 `/usr/local/share` 。 如果您使用的可選的 nvm/教堂中殿工具或具有對安裝目錄的寫存取權限，您可能能夠省略 `sudo` 首碼。 有[的更多提示][3]可用上使用 `npm` 無 `sudo` 、 如果你渴望做的。
+
+*   關於視窗：
+    
+            C:\>npm install -g cordova
+        
+    
+    `-g`國旗上面告訴 `npm` 要安裝 `cordova` 全球。 否則它將被安裝在 `node_modules` 的當前工作目錄的子目錄。
+    
+    您可能需要添加 `npm` 目錄到您 `PATH` 調用全域安裝 `npm` 模組。 在 Windows 中， `npm` 通常可以發現在 `C:\Users\username\AppData\Roaming\npm` 。 在 OS X 與 Linux 上它通常可以找到在`/usr/local/share/npm`.
+    
+    安裝日誌可能會產生錯誤的任何已卸載平臺 Sdk。
+    
+    安裝完成後，您應該能夠運行 `cordova` 與沒有參數和它在命令列上應列印説明文本。
+
+ [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
 
 ## 創建應用程式
 
@@ -110,7 +134,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 運行命令來添加或刪除平臺影響專案的*平臺*目錄的內容每個指定的平臺作為一個子目錄中的顯示位置。 *Www*原始目錄轉載內每個平臺的子目錄中，例如出現在 `platforms/ios/www` 或 `platforms/android/assets/www` 。 因為 CLI 不斷複製在源*www*資料夾中的檔，應只編輯這些檔，並不是位於*平臺*的子目錄下。 如果您使用的版本控制軟體，您應將此源*www*資料夾，該*合併*的資料夾，添加到您的版本控制系統。 （有關*合併*資料夾的詳細資訊可以找到下面的自訂每個平臺部分中）
 
-**警告**： 當使用 CLI 來構建您的應用程式，您是從編輯中的任何檔，強烈建議不要採用 `/platforms/` 資料夾除非你知道你正在做什麼，或特別在文檔中以其他方式告知。 這是因為中的檔 `/platforms/` direcotry 將被覆蓋上準備或外掛程式重新安裝。
+**警告**： 當使用 CLI 來構建您的應用程式，你應該*不是*編輯任何檔在 `/platforms/` 目錄，除非你知道你在做什麼，或者如果檔指定，否則。 準備申請建設，或重新安裝外掛程式時經常將覆蓋此目錄中的檔。
 
 如果您希望在此時，你可以使用 Eclipse 或 Xcode SDK 打開你創建的專案。 您將需要打開的資產從衍生金融工具集 `/platforms/` 要用 SDK 開發目錄。 這是因為 SDK 的特定元資料檔案存儲在相應的 `/platform/` 子目錄。 （見如何開發應用程式每個 IDE 內的資訊平臺指南）使用這種方法，如果你只是想要初始化使用 CLI 的專案，然後切換到 SDK 為本機的工作。
 
@@ -118,7 +142,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 構建應用程式
 
-預設情況下， `cordova create` 腳本生成骨骼肌的以基於 web 的應用，其主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用`www/js/index.js`.
+預設情況下， `cordova create` 腳本生成骨骼基於 web 應用程式的主頁是該專案的 `www/index.html` 檔。 編輯此應用程式，但是你想要但應作為的一部分指定的任何初始化 `deviceready` 事件處理常式中，從預設的引用`www/js/index.js`.
 
 運行以下命令以反覆運算方式生成專案：
 
@@ -147,19 +171,19 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 一些移動平臺類比特定設備預設情況下，iPhone 的 iOS 專案等。對於其他平臺，您可能需要首先將設備模擬程式與相關聯。
 
-注： 模擬器支援目前不是可供亞馬遜火 OS
+**注**： 模擬器支援目前不可用的亞馬遜火 OS。
 
 （見平臺指南的詳細資訊）。例如，您可能會首先運行 `android` 命令以啟動 Android SDK，然後運行一個特定的設備圖像，啟動它根據其預設行為：
 
-![][2]
+![][4]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [4]: img/guide/cli/android_emulate_init.png
 
 跟進與 `cordova emulate` 命令刷新顯示的最新應用，現已從主畫面發射的模擬程式圖像：
 
-![][3]
+![][5]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [5]: img/guide/cli/android_emulate_install.png
 
 或者，可以將手機插入您的電腦和直接測試應用程式：
 
@@ -172,9 +196,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 生成和查看一個新專案時，將顯示預設的應用程式不會很多。 您可以修改該應用程式在許多方面，利用標準的 web 技術，但應用程式緊密的聯繫，與各種設備級功能，您需要添加外掛程式，提供對核心科爾多瓦 Api 的訪問。
 
-*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱嵌入 WebViews 和外掛程式開發指南的詳細資訊。更常見的是，您將添加外掛程式，以便啟用科爾多瓦的基本設備級功能詳細的 API Reference 中之一。 可以在[plugins.cordova.io][4]發現這些外掛程式，包括社會，所提供的附加外掛程式的清單。 你可以使用 CLI 來搜索外掛程式從此註冊表。 例如，搜索 `bar` 和 `code` 產生單個結果相匹配這兩個詞作為子字串不區分大小寫：
+*外掛程式*是有點的載入項代碼的提供的本機組件的介面。 您可以設計您自己的外掛程式介面，例如，設計一個混合應用程式，與本機組件混合科爾多瓦 web 視圖時。 （請參閱嵌入 WebViews 和[外掛程式開發指南][6]的詳細資訊。更常見的是，您將添加外掛程式，以便啟用科爾多瓦的基本設備級功能詳細的 API Reference 中之一。 [Plugins.cordova.io][7]在註冊表中，可以發現這些外掛程式，包括社會，所提供的其他協力廠商外掛程式的清單。 你可以使用 CLI 來搜索外掛程式從此註冊表。 例如，搜索 `bar` 和 `code` 產生單個結果相匹配這兩個詞作為子字串不區分大小寫：
 
- [4]: http://plugins.cordova.io/
+ [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+ [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
     
@@ -186,9 +211,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-`cordova plugin add`命令需要您指定的外掛程式代碼的存儲庫。 請注意當你遵循 Web 專案開發工作流和使用 CLI，CLI 會照顧到適當的位置為每個平臺添加外掛程式的代碼。 (如果你是在本機專案開發工作流，您會添加外掛程式使用 Plugman （這裡指南連結），多次為每個平臺)。
-
-這裡是如何使用 CLI 將功能添加到應用程式的示例：
+`cordova plugin add`命令需要您指定的外掛程式代碼的存儲庫。這裡是如何使用 CLI 將功能添加到應用程式的示例：
 
 *   基本設備資訊 （設備 API）：
     
@@ -251,6 +274,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
         $ cordova plugin add org.apache.cordova.console
         
+
+**注意**： CLI 將作為適當的每個平臺添加外掛程式的代碼。 如果你想要與更低級別外殼工具或平臺概述中討論的 Sdk 開發，您需要運行 Plugman 實用程式來添加單獨為每個平臺的外掛程式。 （更多的資訊，見到管理外掛程式使用 Plugman）。
 
 使用 `plugin ls` （或 `plugin list` ，或 `plugin` 本身） 查看當前已安裝的外掛程式。每個顯示由其識別碼：
 
@@ -327,7 +352,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 當你重新生成專案時，Android 版本功能自訂字體大小，而其他人保持不變。
 
-您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以納入*後退按鈕*圖形的 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `backbutton` 從相應的硬體按鈕的事件。
+您還可以使用 `merges` 添加中原物不存在的檔 `www` 目錄。 例如，一個應用程式可以將納入*後退按鈕*的圖形到 iOS 介面，存儲在 `merges/ios/img/back_button.png` ，而 Android 版本可以改為捕獲 `backbutton` 從相應的硬體按鈕的事件。
 
 ## 説明命令
 
@@ -359,7 +384,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
 
 運行 `cordova -v` 查看當前運行的版本。 運行 `npm
-info` 命令長清單，其中包含當前版本以及其他可用的版本號：
+info` 命令較長清單，其中包含當前版本以及其他可用的版本號：
 
         $ npm info cordova
     

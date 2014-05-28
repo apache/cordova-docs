@@ -156,7 +156,8 @@ Tous les balises `<asset>` requièrent les attributs `src` et `target`. Les plug
     
     Le fichier ou le répertoire où il doit se trouver dans l'app Cordova, par rapport au répertore `www`. Les Actifs peuvent être ciblées vers les sous-répertoires, par exemple :
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     crée le `js/experimental` répertoire dans le `www` répertoire, sauf si déjà présents, puis les copies la `new-foo.js` du dossier et le renomme `foo.js` . Si un fichier existe déjà à l'emplacement cible, plugman s'arrête et inverse le processus d'installation, émet un avis au sujet du conflit et se termine avec un code différent de zéro.
 
@@ -384,10 +385,7 @@ Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    Vous devez ajouter la ligne suivante à la « local.properties »: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
     
 
 ## Variables

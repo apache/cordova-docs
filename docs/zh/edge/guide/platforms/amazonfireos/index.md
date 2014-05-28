@@ -17,28 +17,49 @@
 *   亞馬遜火 OS WebViews
 *   亞馬遜火 OS 外掛程式
 
+## 簡介
+
+通過針對亞馬遜火 OS 平臺，科爾多瓦開發人員可以創建利用先進的 web 引擎集成的 Kindle 消防設備的混合 web 應用程式。 亞馬遜 web 視圖 API (AWV) 是獨有的火 OS 鉻派生的 web 運行時。 為 web 視圖使用的 Android 設備附帶的投遞更換，AWV 使成為可能，更好地執行功能更強大的混合 web 應用程式通過創建為一個更快的 JavaScript 引擎 (V8)、 遠端偵錯和 Kindle 消防設備包括加速 2D 畫布的硬體優化提供支援和不支援的 Android 的 HTML5 功能的訪問內置的 web 視圖如: CSS 除垢，表單驗證，getUserMedia，IndexedDB、 網路工作者、 WebSockets 和 WebGL。
+
+關於亞馬遜 web 視圖 API 的詳細資訊，請參閱亞馬遜開發人員門戶[HTML5 混合應用程式頁][1]。 有關獲取開始和其他的問題支援問題，請參見亞馬遜開發人員門戶[論壇-HTML5 混合應用程式][2].
+
+ [1]: https://developer.amazon.com/public/solutions/platforms/android-fireos/docs/building-and-testing-your-hybrid-app
+ [2]: http://forums.developer.amazon.com/forums/category.jspa?categoryID=41
+
 ## 要求和支援
 
-亞馬遜火 os 開發科爾多瓦的應用程式需要 Android SDK 和亞馬遜 web 視圖 SDK。檢查的要求這些 Sdk 在下面的連結：
+亞馬遜火 os 開發科爾多瓦的應用程式需要安裝的各種支援檔，包括 android 系統的發展，以及亞馬遜 web 視圖 SDK 所需的一切。 請檢查下面的清單中所需的安裝：
 
-*   [Android SDK 系統][1]
+*   命令列介面
+*   [Android SDK][3]
+*   [Apache Ant][4]
+*   [亞馬遜 web 視圖 SDK][1]
 
-*   [亞馬遜 web 視圖 SDK][2]
-
- [1]: http://developer.android.com/sdk/
- [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [3]: http://developer.android.com/sdk/
+ [4]: http://ant.apache.org
 
 ## 安裝
 
-### Android SDK
+### Android SDK 和 Apache Ant
 
-從[developer.android.com/sdk][1]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
+從[developer.android.com/sdk][3]安裝 Android SDK。 你可能會出現一個選擇在哪裡安裝 SDK，否則移動下載 `adt-bundle` 樹到無論您存儲的開發工具。
 
-科爾多瓦命令列工具來工作，您需要包括 SDK 的 `tools` 和 `platform-tools` 的路徑環境中目錄。
+你需要在運行 Android SDK 管理器 （ `android` 從命令列） 開始您的科爾多瓦專案前至少一次。 一定要安裝最新版本的 Android SDK 工具和 SDK 平臺**具體 API 級別為 19**。 請關於亞馬遜開發人員門戶如何設置您的開發環境為 Kindle 火 OS 設備的詳細資訊，參閱[您的開發環境設置][5]。
 
-關於 Mac、 Linux 或其他 unix 平臺，您可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，根據 SDK 的安裝位置：
+ [5]: https://developer.amazon.com/public/resources/development-tools/ide-tools/tech-docs/01-setting-up-your-development-environment
 
-    匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具
+Apache Ant 生成工具[下載螞蟻二進位分發][6]，解壓縮到您以後可以引用的目錄的安裝。 請參閱[Ant 手冊][7]為更多的資訊。
+
+ [6]: http://ant.apache.org/bindownload.cgi
+ [7]: http://ant.apache.org/manual/index.html
+
+對於科爾多瓦的命令列工具來工作，您需要包括 Android SDK 的 `tools` 、 `platform-tools` 和 `apache-ant/bin` 目錄路徑環境中的。
+
+#### Mac/Linux 路徑
+
+關於 Mac、 Linux 或其他 unix 平臺，您可以使用文字編輯器來創建或修改 `~/.bash_profile` 檔中，添加行，如下，依據的 SDK 和 Ant 安裝位置：
+
+    匯出路徑 = ${路徑}：/開發/adt-捆綁/sdk/平臺-工具：/開發/adt-捆綁/sdk/工具：/發展/阿帕奇-ant/bin
     
 
 這暴露了 SDK 工具在新打開的終端視窗。否則運行這使它們在當前會話中可用：
@@ -46,7 +67,9 @@
     元源 ~/.bash_profile
     
 
-若要修改路徑上 Windows 7 的環境：
+#### Windows 路徑
+
+若要修改路徑在 Windows 上的環境：
 
 *   在桌面的左下角的**開始**功能表上按一下，在**電腦**上，按右鍵，然後按一下**屬性**.
 
@@ -56,28 +79,35 @@
 
 *   選擇**PATH**變數，然後按**編輯**.
 
-*   將以下內容追加到基於例如安裝 SDK 的位置的路徑：
+*   將以下內容追加到哪裡你安裝了 SDK 和螞蟻，例如基於的路徑：
     
-        ;C:\Development\adt-bundle\sdk\platform-tools ；C:\Development\adt-bundle\sdk\tools
+        ;C:\Development\adt-bundle\sdk\platform-tools;C:\Development\adt-bundle\sdk\tools;C:\Development\apache-ant\bin
         
 
 *   將值保存並關閉這兩個對話方塊。
 
-您可能還需要啟用 JAVA 和螞蟻打開一個命令提示符並鍵入 `java` ，然後還鍵入 `ant` 。將追加到該路徑無法運行的日期為准：
-
-    ;%JAVA_HOME%\bin;%ANT_HOME%\bin
+*   您還將需要啟用 JAVA。 打開一個命令提示符並鍵入 `java` ，如果它沒有運行，追加到您的路徑以及 JAVA 二進位檔案的位置。 請確保已安裝 JDK 目錄指向的 %JAVA\_HOME%。 您可能必須添加 JAVA\_HOME 環境變數分別。
     
+        ； %JAVA_HOME%\bin
+        
 
 ### 亞馬遜 web 視圖 SDK
 
-從[亞馬遜開發人員門戶][2]下載亞馬遜 web 視圖 SDK.
+若要創建使用目標亞馬遜火 OS 平臺的科爾多瓦應用程式，您需要下載、 解壓和安裝亞馬遜 web 視圖 SDK 的支援檔。 此步驟將只需要去做為第一次亞馬遜火 OS 專案，或如果您升級科爾多瓦。
 
-*   創建 `libs/` 中的資料夾 `~/.cordova/lib/amazon-fireos/cordova/3.1.0/` 資料夾。
-*   添加 `awv_interface.jar` 從下載 SDK 進行`~/.cordova/lib/amazon-fireos/cordova/3.1.0/libs/`
+*   從[亞馬遜開發人員門戶][1]下載亞馬遜 web 視圖 SDK.
 
-## 在 SDK 中打開的專案
+*   複製 `awv_interface.jar` 從下載 SDK 到科爾多瓦的工作目錄：
+    
+    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    
+    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
 
-使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦命令列介面。例如，在原始程式碼中的目錄：
+***注：***由於科爾多瓦的需求安裝過程中， `~/.cordova/lib/amazon-fireos` 平臺目錄將不會創建，直到您將該平臺添加到您的第一個專案。
+
+## 為亞馬遜火 OS 創建新專案
+
+使用 `cordova` 實用程式設置了一個新的專案，如所述在科爾多瓦的命令列介面。例如，在原始程式碼中的目錄：
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -85,19 +115,58 @@
     $ cordova build
     
 
-一旦創建了，這裡是如何使用 SDK 來修改它：
+***注：***首次亞馬遜 fireos 平臺安裝在您系統上，它將到科爾多瓦的工作目錄，下載相應的檔，但然後將失敗，因為它缺少 AWV SDK 的支援檔 （見上文）。 按照上面的說明來安裝 `awv_interface.jar` ，刪除，然後重新將亞馬遜 fireos 平臺添加到您的專案。 這一步將只需要為第一次亞馬遜火 OS 專案做。
+
+## 將部署到設備
+
+要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][8]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
+
+ [8]: http://developer.android.com/tools/device.html
+
+從命令列，可以將應用程式推送到設備：
+
+    $ 科爾多瓦運行亞馬遜 fireos
+    
+
+交替內日食，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.
+
+**注**： 目前，對於亞馬遜 web 視圖基於應用程式測試通過模擬器不支援，另外，亞馬遜 web 視圖 API 才可用火 OS 的設備上。 有關詳細資訊，請參閱[亞馬遜 web 視圖 API SDK][1]文檔。
+
+### 運行標誌
+
+運行命令接受作為科爾多瓦的命令列介面文檔中指定的可選參數、 火 OS 還接受額外 `--debug` 將啟用遠端 web 調試鉻的開發人員工具的旗子。
+
+若要使用的開發工具，請輸入：
+
+    $ cordova run --debug amazon-fireos
+    
+
+這將使正在運行的用戶端上的工具。你可以連接到用戶端的埠轉發使用 Android 調試橋 （亞銀） 指的應用程式的包名。
+
+例如：
+
+    亞行轉發 tcp:9222 localabstract:com.example.helloworld.devtools
+    
+
+然後，可以使用通過鉻基於瀏覽器 DevTools 導航到：`http://localhost:9222`.
+
+### 可選的 Eclipse 支援
+
+創建後，您可以使用附帶的 Android 的 SDK，修改專案的日食。 要注意是否您繼續使用科爾多瓦的命令列工具，通過 Eclipse 所做的修改將被覆蓋。
 
 *   啟動**Eclipse**應用程式。
 
 *   選擇**新建專案**功能表項目。
 
-*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**： ![][3]
+*   從結果對話方塊中，選擇**從現有代碼的 Android 專案**並按**下一步**： ![][9]
 
 *   定位到 `hello` ，或無論你創建目錄的專案，然後到 `platforms/amazon-fireos` 子目錄。
 
+*   Eclipse 將顯示你你好、 你好-CorddovaLib-2 專案要添加。添加兩個。
+
 *   按**完成**.
 
- [3]: img/guide/platforms//eclipse_new_project.png
+ [9]: img/guide/platforms//eclipse_new_project.png
 
 一旦日食視窗將打開，一個紅色的**X**可能似乎表明未解決的問題。如果是這樣，執行這些額外的步驟：
 
@@ -105,23 +174,8 @@
 
 *   在出現的**屬性**對話方塊中，選擇**Android**從功能窗格。
 
-*   為專案生成目標，選擇您已安裝的最高的 Android API 級別。
+*   專案的生成目標，請選擇最高的 Android API 級別 （目前 API 級別 19），安裝了。
 
 *   按一下**確定**.
 
 *   從**專案**功能表中選擇**清潔**。這應該更正該專案中的所有錯誤。
-
-## 將部署到設備
-
-要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][4]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
-
- [4]: http://developer.android.com/tools/device.html
-
-從命令列，可以將應用程式推送到設備：
-
-    $ cordova run amazon-fireos
-    
-
-交替內日食，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.
-
-**注**： 目前，通過模擬程式測試不支援對於亞馬遜 web 視圖基於的應用程式。

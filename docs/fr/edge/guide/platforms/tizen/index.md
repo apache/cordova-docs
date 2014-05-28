@@ -104,7 +104,7 @@ Cliquez droit sur le projet dans **l'Explorateur de projet** , puis sélectionne
     
     ![][7]
 
-*   Cliquez droit sur le projet dans la vue **Explorateur de projets** , puis de sélectionner **Exécuter en tant que & de rarr ; Application Web paciarelli**:
+*   Cliquez droit sur le projet dans **l'Explorateur de projet** , puis sélectionnez **exécuter comme → paciarelli Web Application**:
     
     ![][8]
 

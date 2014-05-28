@@ -114,15 +114,15 @@ Utilisation de quelques dizaines de blackBerry de caractères génériques se di
 
 ## Changements d'iOS 3.1.0
 
-Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le schéma de liste blanche domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier votre `config.xml` fichier afin de continuer la liste blanche du même ensemble de ressources comme avant.
+Avant la version 3.1.0, Cordova-iOS inclus quelques extensions non standards pour le régime de whilelisting de domaine pris en charge par les autres plateformes de Cordova. En 3.1.0, le whitelist iOS est maintenant conforme à la syntaxe de liste blanche de ressource décrite en haut de ce document. Si vous mettez à niveau pre-3.1.0, et que vous utilisiez ces extensions, vous devrez peut-être modifier le `config.xml` fichier pour continuer la liste blanche le même ensemble de ressources comme avant.
 
 Plus précisément, ces motifs doivent être actualisés :
 
-*   `apache.org`(pas de protocole): cela correspondrait précédemment `http` , `https` , `ftp` , et `ftps` des protocoles. Remplacez " `*://apache.org/*` " d'inclure tous les protocoles, ou inclure une ligne pour chaque protocole, vous devez appuyer.
+*   " `apache.org` " (pas de protocole): cela correspondrait précédemment `http` , `https` , `ftp` , et `ftps` des protocoles. Remplacez " `*://apache.org/*` " d'inclure tous les protocoles, ou inclure une ligne pour chaque protocole, vous devez appuyer.
 
-*   `http://apache.*`(caractère générique à la fin du domaine): cela correspondrait auparavant tous les top domaines niveau, y compris tous les TLDs possibles de deux lettres (mais pas utiles domaines aiment. co.uk). Inclure une ligne pour chaque TLD qui vous en fait Contrôlez et devez whitelist.
+*   " `http://apache.*` " (caractère générique à la fin du domaine): cela correspondrait auparavant tous les top domaines niveau, y compris tous les TLDs possibles de deux lettres (mais pas utiles domaines aiment. co.uk). Inclure une ligne pour chaque TLD qui vous en fait Contrôlez et devez whitelist.
 
-*   `h*t*://ap*he.o*g`(caractères génériques pour les lettres manquantes au hasard): ceux-ci ne sont plus prises en charge ; changement d'inclure une ligne pour chaque domaine et le protocole que vous devez réellement whitelist.
+*   " `h*t*://ap*he.o*g` " (caractères génériques pour les lettres manquantes au hasard): ceux-ci ne sont plus supportés ; changement à inclure une ligne pour chaque domaine et protocole que vous avez réellement besoin de liste blanche.
 
 ## Windows Phone liste blanche
 

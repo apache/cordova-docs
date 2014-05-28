@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 섹션 자세히만 안 드 로이드 빌드에 적용 되는 기본 설정을 설명 합니다. 글로벌 구성 옵션에 config.xml 파일 정보를 참조 하십시오.
 
-*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다. 참고:이 값을 false로 설정 죽이지 않을 것 이다 응용 프로그램 일시 중지 이벤트 후, app 백그라운드에 있는 동안 코르 도우 바 webview에서 코드 실행을 중지만 됩니다.
+*   `KeepRunning`(boolean, 기본값은 `true` ): 응용 프로그램 유지 후에 백그라운드에서 실행 여부를 결정 합니다는 `pause` 이벤트가 발생 합니다. 이 값을 설정 `false` 후 응용 프로그램을 죽 일 하지 않습니다는 `pause` 이벤트, 하지만 단순히 중단 코드의 실행 응용 프로그램은 백그라운드에서 코르도바 webview 내에서.
     
         <preference name="KeepRunning" value="false"/>
         

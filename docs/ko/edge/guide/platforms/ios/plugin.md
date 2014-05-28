@@ -24,7 +24,7 @@ IOS 플러그인은 확장 하는 오브 젝 티브-C 클래스로 구현 되는
 
 플러그인의 자바 부분 사용 하는 `cordova.exec` 메서드가 다음과 같이:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < 서비스 >, < 작업 > [< args >]);
     
 
 이 요청을 마샬링하는 `UIWebView` iOS 기본 측면을 효과적으로 호출는 `action` 메서드는 `service` 인수에 전달 된 클래스는 `args` 배열.

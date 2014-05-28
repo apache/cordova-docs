@@ -26,7 +26,7 @@ Afin d'ajouter le support ou de recompiler un projet pour n'importe quelle plate
 
 *   iOS (Mac)
 *   Amazon Fire OS (Mac, Linux, Windows)
-*   Android (Mac, Linux)
+*   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
@@ -39,22 +39,44 @@ Sous Mac, la ligne de commande est accessible via l'application *Terminal*. Sur 
 
 Plus il est probable que vous exécutez le CLI de machines différentes, plus il est logique de maintenir un référentiel de code source éloignée, dont les actifs vous tirez vers le bas pour les répertoires de travail local.
 
+## Installation de la CLI de Cordova
+
+L'outil de ligne de commande de Cordova est distribué comme un paquet de npm dans un format prêt à l'emploi. Il n'est pas nécessaire de compiler depuis les sources.
+
 Pour installer le `cordova` de ligne de commande outil, procédez comme suit :
 
-1.  Téléchargez et installez [Node.js][1]. Après installation, vous devriez pouvoir exécuter `node` ou `npm` depuis votre ligne de commande.
+1.  Télécharger et installer [Node.js][1]. Après installation, vous devriez être capable d'appeler `node` et `npm` sur votre ligne de commande. Si vous le souhaitez, vous pouvez éventuellement utiliser un outil tel que `nvm` ou `nave` pour gérer votre installation de Node.js.
 
-2.  Installez l'utilitaire `cordova`. Sous Unix, utiliser la commande additionnelle `sudo` peut être nécessaire pour permettre l'installation d'utilitaires de développement dans des répertoires aux droits restreints :
-    
-        $ sudo npm install -g cordova
-        
-    
-    Le journal d'installation peut présenter des erreurs correspondant à chaque SDK de plate-forme manquant. Après installation, vous devriez être en mesure d'exécuter `cordova` depuis la ligne de commande.
-    
-    **NOTE**: le `-g` option ci-dessus indique `npm` pour installer cordova à l'échelle mondiale. Vous devrez peut-être ajouter le `npm` répertoire à votre `PATH` pour BENEFICIER installés dans le monde `npm` modules. Sous Windows, `npm` peut habituellement être trouvé à `C:\Users\username\AppData\Roaming\npm` et sur Unix à`/usr/local/share/npm`.
+2.  Téléchargez et installez un [client git][2], si vous n'avez pas déjà un. Après installation, vous devriez être en mesure d'invoquer `git` sur votre ligne de commande. Même si vous n'utilisez pas `git` manuellement, la CLI l'utilise dans les coulisses pour télécharger certains actifs lorsque vous créez un nouveau projet.
+
+3.  Installer le `cordova` à l'aide du module `npm` utilitaire de Node.js. Le `cordova` module sera automatiquement téléchargée par le `npm` utilitaire.
 
  [1]: http://nodejs.org/
+ [2]: http://git-scm.com/
 
-## Créer une application
+*   sur OS X et Linux :
+    
+            $ sudo npm install -g cordova
+        
+    
+    Sur OS X et Linux, faisant précéder la `npm` commande avec `sudo` peut être nécessaire d'installer cette évolution utilitaire dans autrement limité répertoires tels que `/usr/local/share` . Si vous utilisez l'outil optionnel nvm/nef ou avez accès en écriture sur le répertoire d'installation, vous pourrez omettre la `sudo` préfixe. Il y a [plus de conseils][3] sur l'utilisation `npm` sans `sudo` , si vous désirez le faire.
+
+*   sur Windows :
+    
+            C:\>npm install -g cordova
+        
+    
+    Le `-g` option ci-dessus indique `npm` pour installer `cordova` dans le monde. Dans le cas contraire il sera installé dans le `node_modules` sous-répertoire du répertoire de travail courant.
+    
+    Vous devrez peut-être ajouter le `npm` répertoire à votre `PATH` pour BENEFICIER installés dans le monde `npm` modules. Sous Windows, `npm` peut habituellement être trouvé à `C:\Users\username\AppData\Roaming\npm` . Sur OS X et Linux, il peut généralement être trouvé à`/usr/local/share/npm`.
+    
+    Le journal d'installation peut générer des erreurs pour n'importe quelle plateforme désinstallé SDK.
+    
+    Après installation, vous devriez être en mesure d'exécuter `cordova` sur la ligne de commande avec aucun argument et il doit imprimer le texte d'aide.
+
+ [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
+
+## Créer l'application
 
 Allez dans le répertoire où vous conservez votre code source et exécutez une commande comme suit :
 
@@ -118,7 +140,7 @@ Si vous le souhaitez à ce stade, vous pouvez utiliser un SDK comme Eclipse ou X
 
 Lire sur si vous souhaitez utiliser l'approche de flux de travail multi-plateforme (CLI) pour le cycle de développement complet.
 
-## Compiler l'application
+## Construire l'application
 
 Par défaut, le `cordova create` script génère une squelettique application web dont la page d'accueil est du projet `www/index.html` fichier. Modifier cette application, mais vous voulez, mais toute initialisation doit être spécifiée dans le cadre de la `deviceready` gestionnaire d'événements, référencé par défaut de`www/js/index.js`.
 
@@ -140,7 +162,7 @@ Le `cordova build` commande est un raccourci pour la suivante, qui, dans cet exe
 
 Dans ce cas, une fois que vous exécutez `prepare` , vous pouvez utiliser Apple Xcode SDK comme alternative pour modifier et compiler le code spécifique à la plateforme qui génère de Cordova dans `platforms/ios` . Vous pouvez utiliser la même approche avec les kits de développement logiciel des autres plates-formes.
 
-## Tester l'application sur un émulateur ou un appareil
+## Tester l'application sur un émulateur ou un périphérique
 
 Kits de développement logiciel pour les plates-formes mobiles sont souvent livrés avec les émulateurs qui exécutent un élément image, afin que vous pouvez lancer l'application depuis l'écran d'accueil et voir comment il interagit avec de nombreuses fonctionnalités de la plate-forme. Exécuter une commande telle que la suivante pour reconstruire l'app et il découvre au sein de l'émulateur une spécifique de la plate-forme :
 
@@ -153,15 +175,15 @@ Certaines plates-formes mobiles émulent un périphérique par défaut, tels que
 
 (Voir les Guides de la plate-forme pour plus de détails.) Par exemple, vous pouvez d'abord exécuter la `android` commande pour lancer le SDK Android, puis exécutez une image de périphérique particulier, dont il lance selon son comportement par défaut :
 
-![][2]
+![][4]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [4]: img/guide/cli/android_emulate_init.png
 
 Suivi auprès du `cordova emulate` commande actualise l'image de l'émulateur pour afficher la dernière application, qui est maintenant disponible pour le lancement de l'écran d'accueil :
 
-![][3]
+![][5]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [5]: img/guide/cli/android_emulate_install.png
 
 Alternativement, vous pouvez brancher le combiné dans votre ordinateur et tester l'application directement :
 
@@ -174,9 +196,10 @@ Avant d'exécuter cette commande, vous devez mettre en place le dispositif de te
 
 Lorsque vous générez et découvre un nouveau projet, l'application par défaut qui s'affiche ne fait pas grand chose. Vous pouvez modifier l'application de plusieurs façons de tirer parti des technologies web standard, mais l'application de communiquer étroitement avec diverses fonctions au niveau du périphérique, vous devez ajouter des plugins qui permettent d'accéder au noyau Cordova APIs.
 
-Un *plugin* est un peu de code complémentaire qui fournit une interface pour les composants natifs. Vous pouvez concevoir votre propre interface plugin, par exemple, lorsque vous concevez une application hybride qui mêle une Cordova WebView composants natifs. (Voir intégration WebViews et Plugin Development Guide pour plus de détails). Habituellement, vous devez ajouter un plugin pour permettre à l'une des caractéristiques de niveau périphérique base de Cordova, détaillées dans la référence de l'API. Une liste de ces plugins, y compris des plugins supplémentaires fournies par la Communauté, peut être trouvée à [plugins.cordova.io][4]. Vous pouvez utiliser l'interface CLI à la recherche de plugins de ce registre. Par exemple, la recherche de `bar` et `code` produit un résultat unique qui correspond à ces deux termes comme des sous-chaînes insensible à la casse :
+Un *plugin* est un peu de code complémentaire qui fournit une interface pour les composants natifs. Vous pouvez concevoir votre propre interface plugin, par exemple, lorsque vous concevez une application hybride qui mêle une Cordova WebView composants natifs. (Voir intégration WebViews et [Plugin Development Guide][6] pour plus de détails). Habituellement, vous devez ajouter un plugin pour permettre à l'une des caractéristiques de niveau périphérique base de Cordova, détaillées dans la référence de l'API. On trouvera une liste de ces plugins, y compris les plugins tiers supplémentaires fournies par la Communauté, dans le registre à [plugins.cordova.io][7]. Vous pouvez utiliser l'interface CLI à la recherche de plugins de ce registre. Par exemple, la recherche de `bar` et `code` produit un résultat unique qui correspond à ces deux termes comme des sous-chaînes insensible à la casse :
 
- [4]: http://plugins.cordova.io/
+ [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+ [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
     
@@ -190,12 +213,12 @@ Vous cherchez seulement le `bar` à terme les rendements et résultats suppléme
 
 Le `cordova plugin add` commande nécessite vous permet de spécifier le référentiel pour le code du plugin. Voici des exemples d'utilisation de l'interface CLI pour ajouter des fonctionnalités à l'application :
 
-*   Informations de base à propos de l'appareil (API Device) :
+*   Informations de base périphérique (Device API) :
     
         $ cordova plugin add org.apache.cordova.device
         
 
-*   Connexion réseau et événements liés à la batterie :
+*   Connexion réseau et événements de la batterie :
     
         $ cordova plugin add org.apache.cordova.network-information
         $ cordova plugin add org.apache.cordova.battery-status
@@ -208,26 +231,26 @@ Le `cordova plugin add` commande nécessite vous permet de spécifier le référ
         $ cordova plugin add org.apache.cordova.geolocation
         
 
-*   Appareil photo, lecture et capture de médias :
+*   Appareil photo, lecture et Capture :
     
         $ cordova plugin add org.apache.cordova.camera
         $ cordova plugin add org.apache.cordova.media-capture
         $ cordova plugin add org.apache.cordova.media
         
 
-*   Accès aux fichiers sur l'appareil ou sur le réseau (API File) :
+*   Accéder aux fichiers sur un périphérique réseau (fichier API) :
     
         $ cordova plugin add org.apache.cordova.file
         $ cordova plugin add org.apache.cordova.file-transfer
         
 
-*   Notifications via une boîte de dialogue ou des vibrations :
+*   Notification via la boîte de dialogue ou de vibration :
     
         $ cordova plugin add org.apache.cordova.dialogs
         $ cordova plugin add org.apache.cordova.vibration
         
 
-*   Gestion des contacts :
+*   Contacts :
     
         $ cordova plugin add org.apache.cordova.contacts
         
@@ -237,12 +260,12 @@ Le `cordova plugin add` commande nécessite vous permet de spécifier le référ
         $ cordova plugin add org.apache.cordova.globalization
         
 
-*   Écran de chargement :
+*   SplashScreen :
     
         $ cordova plugin add org.apache.cordova.splashscreen
         
 
-*   Ouverture de nouvelles fenêtres de navigateur (InAppBrowser) :
+*   Fenêtres ouvertes du navigateur nouvelle (InAppBrowser) :
     
         $ cordova plugin add org.apache.cordova.inappbrowser
         
@@ -315,14 +338,14 @@ Alors que Cordoue vous permet de déployer facilement une application pour nombr
 
 Au lieu de cela, le niveau supérieur `merges` répertoire offre un endroit pour spécifier des actifs de déployer sur des plates-formes spécifiques. Chaque sous-répertoire spécifique à la plateforme dans `merges` reflète la structure de répertoire de la `www` l'arbre source, ce qui vous permet de substituer ou ajouter des fichiers au besoin. Par exemple, voici comment vous pourriez utilise `merges` pour augmenter la taille de police par défaut pour les appareils Android et Amazon Fire OS :
 
-*   Modifiez le fichier `www/index.html` en lui ajoutant un lien vers un fichier CSS supplémentaire nommé par exemple `overrides.css` :
+*   Modifier la `www/index.html` fichier, en ajoutant un lien vers un fichier CSS supplémentaire, `overrides.css` dans ce cas :
     
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
         
 
-*   Créez éventuellement un fichier `www/css/overrides.css` vide, qui sera chargé pour toutes les autres plates-formes qu'Android, empêchant ainsi une erreur due à un fichier manquant.
+*   Créer éventuellement un vide `www/css/overrides.css` fichier, qui s'applique pour toutes les versions non-Android, empêchant une erreur de fichier manquant.
 
-*   Créez un sous-répertoire nommé `css` dans `merges/android`, puis ajoutez y le fichier `overrides.css` correspondant. Ce fichier doit contenir une règle CSS remplaçant la taille de police de 12 points par défaut spécifiée dans `www/css/index.css`, par exemple :
+*   Créer un `css` sous-répertoire dans `merges/android` , puis ajoutez un correspondant `overrides.css` fichier. Spécifier CSS qui remplace la taille de police de 12 points par défaut spécifiée dans `www/css/index.css` , par exemple :
     
         body { font-size:14px; }
         
@@ -348,7 +371,7 @@ Il présente l'information à l'écran et capture la sortie dans un local `info.
 
 **NOTE**: actuellement, seuls les détails sur iOS et Android plates-formes sont disponibles.
 
-## Mise à jour de Cordova et de votre Projet
+## Mise à jour de Cordova et votre projet
 
 Après avoir installé la `cordova` utilitaire, vous pouvez toujours mettre à jour vers la dernière version en exécutant la commande suivante :
 

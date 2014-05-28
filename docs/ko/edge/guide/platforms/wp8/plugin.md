@@ -136,6 +136,14 @@
         }
     
 
+## 플러그인 수명
+
+미디어 재생, 청취자, 또는 그 내부 상태를 구현 해야 합니다 유지와 같은 장기 실행 요청 플러그인 활동 배경에서 `onReset` 그 활동을 정리 하는 방법. CordovaView WebBrowser 이동 새 페이지 또는 새로 고침, 자바 스크립트를 다시 로드 하는 메서드를 실행 합니다.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
+    
+
 ## 플러그인 XML
 
 다음 사용 하는 방법을 보여 줍니다 있는 `plugin.xml` 파일 Windows Phone 플랫폼에는 플러그인의 소스 파일을 지정 합니다. 사용 가능한 옵션에 대 한 자세한 내용은 응용 프로그램 플러그인 플러그인 사양에 대 한 개요, 참조.

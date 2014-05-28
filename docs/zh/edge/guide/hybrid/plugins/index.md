@@ -16,13 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 外掛程式開發指南
 
-*外掛程式*是代碼的一個套裝軟體，注入，允許您的應用程式內的呈現與在其上運行的本機平臺進行通信的科爾多瓦 web 視圖。 外掛程式提供對基於 web 的應用程式通常不可用的設備和平臺功能的訪問。 科爾多瓦 API 的所有主要功能作為外掛程式，實現和許多其他的可用條碼掃描器、 NFC 通信等功能的啟用或定制日曆的介面。
+*外掛程式*是代碼的一個套裝軟體，注入，允許在其中應用程式呈現與在其上運行的本機平臺進行通信的科爾多瓦 web 視圖。 外掛程式提供對基於 web 的應用程式通常不可用的設備和平臺功能的訪問。 科爾多瓦 API 的所有主要功能作為外掛程式，實現和許多其他的可用條碼掃描器、 NFC 通信等功能的啟用或定制日曆的介面。 有可用外掛程式[註冊表][1]。
+
+ [1]: http://plugins.cordova.io
 
 外掛程式包括一個單一的 JavaScript 介面和相應的本機代碼庫，每個受支援的平臺。 通過將一個字串從 JavaScript 傳遞到本機平臺再回來，一個可以作為模型使用以生成更複雜的功能，簡單的*echo*外掛程式這節步驟。 本節討論的基本外掛程式結構和麵向外部 JavaScript 介面。 對於每個相應的本機介面，請參閱此部分的結尾處的清單。
 
-除了這些指令，當準備寫一個外掛程式最好是看看[現有的外掛程式][1]為指導。
+除了這些指令，當準備寫一個外掛程式最好是看看[現有的外掛程式][2]為指導。
 
- [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
+ [2]: http://cordova.apache.org/#contribute
 
 ## 建設一個外掛程式
 
@@ -59,9 +61,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 驗證外掛程式
 
-您可以使用 `plugman` 實用程式來檢查是否為每個平臺外掛程式安裝正確。 安裝 `plugman` 用下面的[節點][2]命令：
+您可以使用 `plugman` 實用程式來檢查是否為每個平臺外掛程式安裝正確。 安裝 `plugman` 用下面的[節點][3]命令：
 
- [2]: http://nodejs.org/
+ [3]: http://nodejs.org/
 
         $ npm install -g plugman
     
@@ -73,7 +75,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 然後運行下面的命令： 若要測試是否能正常載入的 iOS 的依賴關係：
 
-        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
     
 
 有關的詳細資訊 `plugman` 選項，請參閱使用 Plugman 到管理外掛程式。 有關如何實際*調試*外掛程式的資訊，請參閱此頁面的底部列出的每個平臺的本機介面。
@@ -137,9 +139,9 @@ Tizen 平臺不支援外掛程式。
 
 ## 發佈外掛程式
 
-一旦你開發你的外掛程式，您可能希望將發佈與共享它，社會。 你可以將你的外掛程式發佈到科爾多瓦註冊表 （基於[ `npmjs` ][3]） 或任何其它 `npmjs` -基於註冊表。 其他開發人員可以將它要麼使用自動安裝 `plugman` 或科爾多瓦 CLI。 （每個發展路徑的詳細資訊，見到管理外掛程式和命令列介面使用 Plugman）。
+一旦你開發你的外掛程式，您可能希望將發佈與共享它，社會。 你可以將你的外掛程式發佈到科爾多瓦[註冊表][1]（基於[ `npmjs` ][4]) 或任何其它 `npmjs` -基於註冊表。 其他開發人員可以將它要麼使用自動安裝 `plugman` 或科爾多瓦 CLI。 （每個發展路徑的詳細資訊，見到管理外掛程式和命令列介面使用 Plugman）。
 
- [3]: https://github.com/isaacs/npmjs.org
+ [4]: https://github.com/isaacs/npmjs.org
 
 要發佈外掛程式你需要使用 `plugman` 工具，通過以下步驟：
 

@@ -28,6 +28,6 @@ Le `config.xml` fichier contrôle des paramètres de base de l'application s'app
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` ou la valeur par défaut `enable` ): la valeur `disable` pour substituer les paramètres de sécurité web, permettant d'accéder à un contenu distant provenant de sources inconnues. Cette préférence est conçue comme une commodité de développement uniquement, alors Retirez-le avant l'empaquetage de votre application pour la distribution. L'application publiée, tous les URI doivent être connu et à l'aide de la liste blanche les `<access>` élément, décrit dans le Guide de liste blanche du domaine.
+*   `WebSecurity`( `disable` ou la valeur par défaut `enable` ): la valeur `disable` pour substituer les paramètres de sécurité web, permettant d'accéder à un contenu distant provenant de sources inconnues. Cette préférence est conçue comme une commodité de développement uniquement, alors Retirez-le avant l'application pour la distribution d'emballage. L'application publiée, tous les URI doivent être connu et à l'aide de la liste blanche les `<access>` élément, décrit dans le Guide de liste blanche du domaine.
     
         <preference name="WebSecurity" value="disable"/>

@@ -1,4 +1,4 @@
---licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+-- license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -143,6 +143,14 @@ Al interpretar sus argumentos, `try` / `catch` bloques ayudan a eliminar la mala
         {
             // ... continue on to do our work
         }
+    
+
+## Plugin de por vida
+
+Actividad de fondo plugins con solicitudes de larga duración, tales como medios de reproducción, los oyentes o que mantener el estado interno debe implementar el `onReset` método para limpiar esas actividades. El método se ejecuta cuando el CordovaView WebBrowser navega a una página nueva o actualizaciones, que vuelve a cargar el JavaScript.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
     
 
 ## Plugin XML

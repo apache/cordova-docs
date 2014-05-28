@@ -14,45 +14,67 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ---
 
-# L'Interface de ligne de commande
+# La interfaz de linea de comandos
 
-Esta guía le muestra cómo crear aplicaciones y desplegarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma descrita en la descripción. Lo contrario también puede utilizar la CLI para inicializar el código del proyecto, luego cambiar a de diversas plataformas SDK y herramientas de shell para el continuo desarrollo.
+Esta guía le muestra cómo crear aplicaciones y exportarlas para varias plataformas móviles nativas mediante la interfaz de línea de comandos de `cordova` (CLI). Esta herramienta le permite crear nuevos proyectos, construirlas en diferentes plataformas y ejecutar en dispositivos reales o dentro de los emuladores. El CLI es la herramienta principal para el flujo de trabajo multiplataforma descrito en la sección principal. Sin embargo, también puede utilizar el CLI para inicializar el código del proyecto, para lo cual utiliza diversas plataformas SDK y herramientas de consola para el desarrollo continuo.
 
-## Prerequisitos
+## Pre-requisitos
 
-Antes de ejecutar cualquiera de las herramientas de línea de comandos, necesita instalar el SDK para cada plataforma de destino. (Vea a las guías de la plataforma para más detalles).
+Antes de ejecutar cualquiera de las herramientas de línea de comandos, necesita instalar el SDK para cada plataforma. (Vea las guías de la plataforma para más detalles)
 
 Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesitará ejecutar la interfaz de línea de comandos desde la misma máquina que soporta el SDK de la plataforma. La CLI admite las siguientes combinaciones:
 
 *   iOS (Mac)
-*   Amazon fuego OS (Mac, Linux, Windows)
-*   Androide (Mac, Linux)
+*   Amazon Fire OS (Mac, Linux, Windows)
+*   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
 *   Windows 8 (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
-En el Mac, es disponible a través de la aplicación de *Terminal de* la línea de comandos. En el PC, se encuentra disponible como *símbolo* en *accesorios*.
+En Mac, la linea de comando esta disponible a través de la aplicación de *Terminal *. En PC, se encuentra disponible como *símbolo * en *accesorios *.
 
-**Nota**: para las plataformas Windows, todavía puedes hacer tu desarrollo en hardware Mac ejecutando Windows en un entorno de máquina virtual o en modo de arranque dual. Para las opciones disponibles, consulte la guía de la plataforma Windows Phone o guía de plataforma de Windows 8.
+**Nota**: para las plataformas Windows, todavía puedes desarrollar en equipos Mac ejecutando Windows en una máquina virtual o en modo de arranque dual. Para las opciones disponibles, consulte la guía de la plataforma Windows Phone o guía de plataforma de Windows 8.
 
 Lo más probable es que ejecute la CLI de diferentes máquinas, más sentido para mantener un repositorio de código fuente remota, cuyos activos que tire hacia abajo para directorios de trabajo local.
 
+## Instalar la CLI de Cordova
+
+La herramienta de línea de comandos de Cordova se distribuye como un paquete de npm en un formato listo para usar. No es necesario compilarlo desde origen.
+
 Para instalar el `cordova` de línea de comandos de la herramienta, siga estos pasos:
 
-1.  Descargar e instalar [Node.js][1]. Después de la instalación, usted debe ser capaz de invocar `nodo` o `npm` en su línea de comandos.
+1.  Descargue e instale [Node.js][1]. Después de la instalación, usted debe ser capaz de invocar a `node` y `npm` en la línea de comandos. Si lo desea, opcionalmente puede utilizar una herramienta como `nvm` o `nave` para administrar la instalación de Node.js.
 
-2.  Instalar la utilidad de `cordova`. En Unix, prefijando el comando `sudo` de adicional puede ser necesario instalar utilidades de desarrollo en lo contrario restringido directorios:
-    
-        $ sudo npm install -g cordova
-        
-    
-    El registro de instalación puede producir errores para cualquier plataforma desinstalado SDK. Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos.
-    
-    **Nota**: el `-g` bandera arriba dice `npm` instalar cordova en todo el mundo. Puede que necesites añadir el `npm` Directorio a su `PATH` para invocar a nivel mundial instalada `npm` módulos. En Windows, `npm` generalmente se puede encontrar en `C:\Users\username\AppData\Roaming\npm` y en Unix en`/usr/local/share/npm`.
+2.  Descarga e instala un [cliente de git][2], si ya no tienes uno. Después de la instalación, usted debe ser capaz de invocar a `git` en la línea de comandos. Aunque no utilices `git` manualmente, la CLI usarlo tras bambalinas para descargar algunos activos cuando se crea un nuevo proyecto.
+
+3.  Instale la `cordova` módulo utilizando `npm` utilidad de Node.js. La `cordova` módulo se descargarán automáticamente por el `npm` utilidad.
 
  [1]: http://nodejs.org/
+ [2]: http://git-scm.com/
+
+*   en OS X y Linux:
+    
+            $ sudo npm install -g cordova
+        
+    
+    En OS X y Linux, prefijando la `npm` mando con `sudo` puede ser necesario instalar este desarrollo utilidad en otro modo restringido directorios tales como `/usr/local/share` . Si usted está utilizando la herramienta opcional nvm/nave o tener acceso de escritura al directorio de instalación, podrá omitir el `sudo` prefijo. Hay [más consejos][3] sobre el uso de `npm` sin `sudo` , si desea hacerlo.
+
+*   en Windows:
+    
+            C:\>npm install -g cordova
+        
+    
+    El `-g` bandera arriba dice `npm` instalar `cordova` en todo el mundo. De lo contrario será instalado en el `node_modules` subdirectorio del directorio de trabajo actual.
+    
+    Puede que necesites añadir el `npm` Directorio a su `PATH` para invocar a nivel mundial instalada `npm` módulos. En Windows, `npm` generalmente se puede encontrar en `C:\Users\username\AppData\Roaming\npm` . En OS X y Linux se puede encontrar generalmente en`/usr/local/share/npm`.
+    
+    El registro de instalación puede producir errores para cualquier plataforma desinstalado SDK.
+    
+    Después de la instalación, usted debe ser capaz de ejecutar `cordova` en la línea de comandos sin argumentos y debe imprimir el texto de ayuda.
+
+ [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
 
 ## Crear la aplicación
 
@@ -69,7 +91,7 @@ El segundo argumento `com.example.hello` proporciona un identificador de dominio
 
 El tercer argumento `HelloWorld` da título de pantalla de la aplicación. Este argumento es opcional. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de clase de Java. El valor predeterminado es `HelloCordova` , pero se recomienda que seleccione un valor apropiado.
 
-## Añadir plataformas
+## Agregar plataformas
 
 Todos los comandos posteriores necesitan ejecutarse dentro de directorio del proyecto, o cualquier subdirectorios dentro de su ámbito de aplicación:
 
@@ -153,15 +175,15 @@ Algunas plataformas móviles emulan un dispositivo especial de forma predetermin
 
 (Vea a las guías de plataforma para más detalles). Por ejemplo, usted primero de puede ejecutar el `android` comando para iniciar el SDK de Android, y luego ejecute una imagen del dispositivo en particular, que inicia según su comportamiento predeterminado:
 
-![][2]
+![][4]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [4]: img/guide/cli/android_emulate_init.png
 
 Seguimiento con el `cordova emulate` comando actualiza la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
 
-![][3]
+![][5]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [5]: img/guide/cli/android_emulate_install.png
 
 Alternativamente, puedes enchufe del auricular en el ordenador y probar la aplicación directamente:
 
@@ -174,9 +196,10 @@ Antes de ejecutar este comando, tienes que configurar el dispositivo para la pru
 
 Al construir y ver un nuevo proyecto, la aplicación predeterminada que aparece no hace mucho. Puede modificar la aplicación de muchas maneras a aprovechar las tecnologías web estándar, sino de la aplicación comunicar estrechamente con varias características de nivel de dispositivo, tienes que añadir plugins que proporcionan acceso a núcleo Cordova APIs.
 
-Un *plugin* es un poco de código adicional que proporciona una interfaz para componentes nativos. Usted puede diseñar su propia interfaz plugin, por ejemplo al diseñar una aplicación híbrida que combina un Cordova WebView con componentes nativos. (Véase WebViews incrustar y Plugin Development Guide para obtener más detalles). Más comúnmente, debe agregar un plugin para activar uno de los rasgos básicos de nivel de dispositivo de Cordova detallados en la referencia de la API. Una lista de estos plugins, incluyendo plugins adicionales proporcionados por la comunidad, puede encontrarse en [plugins.cordova.io][4]. Puede utilizar la CLI para buscar plugins de este registro. Por ejemplo, buscando `bar` y `code` produce un solo resultado que coincide con ambos términos como subcadenas entre mayúsculas y minúsculas:
+Un *plugin* es un poco de código adicional que proporciona una interfaz para componentes nativos. Usted puede diseñar su propia interfaz plugin, por ejemplo al diseñar una aplicación híbrida que combina un Cordova WebView con componentes nativos. (Véase WebViews incrustar y [Plugin Development Guide][6] para obtener más detalles). Más comúnmente, debe agregar un plugin para activar uno de los rasgos básicos de nivel de dispositivo de Cordova detallados en la referencia de la API. Puede encontrarse una lista de estos plugins, plugins de terceros adicionales proporcionados por la comunidad, incluyendo en el registro en [plugins.cordova.io][7]. Puede utilizar la CLI para buscar plugins de este registro. Por ejemplo, buscando `bar` y `code` produce un solo resultado que coincide con ambos términos como subcadenas entre mayúsculas y minúsculas:
 
- [4]: http://plugins.cordova.io/
+ [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+ [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
     

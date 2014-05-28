@@ -16,54 +16,128 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Iconos y pantallas de Splash
 
-Esta sección le muestra cómo configurar de una aplicación icono y pantalla opcional para varias plataformas, tanto si se trabaja en la CLI de Cordova (descrito en la interfaz de línea de comandos) o si se utilizan herramientas específicas de la plataforma SDK (detallada en las guías de plataforma).
+Esta sección le muestra cómo configurar el icono de una aplicación y opcionalmente la pantalla de inicio para varias plataformas, tanto si se trabaja en el CLI de Cordova (descrito en la sección La Interfaz de Línea de Comandos) o si se utilizan herramientas específicas de la plataforma SDK (detallada en las guías de plataforma).
 
-## Configuración de los iconos en el CLI
+## Configurando los iconos en el CLI
 
-Cuando se trabaja en la CLI, archivos de código fuente del icono se encuentran en diferentes subdirectorios específicos a una plataforma dentro del directorio del proyecto `www/res/icons` . Los proyectos recién creados cuentan con un conjunto de iconos predeterminados de Cordova para reemplazar según la plataforma seleccionada.
+Cuando trabajes en el CLI puedes definir los iconos de la app haciendo uso del elemento `<icon>` (`config.xml`). Si no se especifica un icono se utilizara el logo de Apache Cordova.
 
-Android especifica iconos de baja, media, alta y extra alta resolución:
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-La plataforma iOS especifica 72-pixel-cuadrado iconos para iPads y muestra iconos 57-pixel para iPhones y iPods, con variantes de alta resolución *2 x* para la retina:
+src: especifica la ubicación del archivo de imagen, en relación con el directorio de www (requerido)
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+platform: plataforma de destino (opcional)
+
+width: anchura de icono en píxeles (opcional)
+
+height: altura del icono en píxeles (opcional)
+
+density: específico de android, especifica la densidad del icono (opcional)
+
+Puede utilizar la siguiente configuración para definir un icono único por defecto, que se utilizará para todas las plataformas.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone especifica un icono predeterminado 48 píxeles, junto con fondo de diversos dispositivos imágenes utilizadas al representar aplicaciones de revestimientos:
+Para cada plataforma también puede definir un conjunto de iconos para adaptarse a distintas resoluciones de pantalla.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+Amazon fuego OS
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Blackberry 10 requiere que sea especificado un elemento icon en config.xml:
+Android
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Consulte la documentación de BlackBerry para apuntar varios tamaños y configuraciones regionales.
+Blackberry10
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
-
-Tizen requiere un ícono de 128-pixel:
-
-        tizen/icon-128.png
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
     
 
-## Configuración de pantallas de inicio en el CLI
+Consulte la documentación de BlackBerry para apuntar varios tamaños y configuraciones regionales. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-Utilizar la API Splashscreen para activar la visualización de la pantalla de presentación introductoria de una app en muchas plataformas. Cuando se está trabajando en el CLI, los archivos de la splash screen se encuentran dentro del subdirectorio del proyecto `www/res/screens`.
+Firefox OS
 
-Android especifica las imágenes de las splash screen en ambas orientaciones, portrait y landscape, para las resoluciones baja, media, alta y extra-alta:
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
+    
+
+## Configurando pantallas de inicio en el CLI
+
+Utilizar la API Splashscreen para activar la visualización de la pantalla de presentación introductoria de una app en muchas plataformas. Cuando se trabaja en la CLI, archivos de código fuente de pantalla splash se encuentran dentro del proyecto `www/res/screens` subdirectorio.
+
+Android especifica ambas imágenes de pantalla splash retrato y paisaje-orientada de baja, media, alta y extra alta resolución:
 
         android/screen-hdpi-landscape.png
         android/screen-hdpi-portrait.png
@@ -99,11 +173,11 @@ No olvide instalar el plugin SplashScreen antes de intentar usar el `navigator.s
 
 ## Pantallas de inicio para la plataforma Android
 
-Ubica los archivos [9-patch image][1] dentro de los directorios del proyecto Android `platforms/android/res/drawable*` .
+Coloque los archivos de [imagen 9-parche][1] en del proyecto Android `platforms/android/res/drawable*` directorios.
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
 
-La resolución para cada uno debe ser:
+El tamaño de cada uno debe ser:
 
 *   Xlarge (xhdpi): al menos 960 × 720
 *   grande (IPAP): al menos 640 × 480
@@ -132,7 +206,7 @@ Finalmente, como una mejor práctica, la pantalla de bienvenida debe estar prese
 Copiar imágenes de pantalla de splash en el proyecto iOS `Resources/splash` Directorio. Sólo agregar esas imágenes para los dispositivos que desea apoyar, como el iPad o el iPhone. El tamaño de cada imagen debe ser:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (1496 x 2048 píxeles)
+*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
 *   Default-Landscape~ipad.png (1024x748 pixels)
 *   Default-Portrait@2x~ipad.png (1536x2008 pixels)
 *   Default-Portrait~ipad.png (768x1004 pixels)

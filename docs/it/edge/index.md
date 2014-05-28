@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Panoramica
       </h2>
       
-      <span>Iniziare qui se siete nuovi a Cordova.</span>
+      <span>Iniziare qui se siete nuovi a Cordova. Include installazione e prossimi passi.</span>
     </li>
     <li>
       <h2>
@@ -46,14 +46,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Piattaforma guide
       </h2>
       
-      <span>Impostare ogni SDK e aggiornamento progetti</span>
+      <span>Impostare ogni piattaforma SDK e aggiornare i progetti.</span>
     </li>
     <li>
       <h2>
         L'utilizzo di Plugman per gestire i plugin
       </h2>
       
-      <span>L'utilizzo di Plugman per gestire i plugin senza CLI</span>
+      <span>Gestire i plugin senza CLI quando si utilizza il flusso di lavoro basate su piattaforma.</span>
     </li>
     <li>
       <h2>
@@ -74,14 +74,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Incorporamento visualizzazioni Web
       </h2>
       
-      <span>Implementare Cordova WebView nel vostro progetto.</span>
+      <span>Implementare Cordova WebView nel progetto nativo.</span>
     </li>
     <li>
       <h2>
         Guida allo sviluppo di plugin
       </h2>
       
-      <span>Sviluppare il tuo primo plugin.</span>
+      <span>Sviluppare il tuo plugin.</span>
     </li>
     <li>
       <h2>
@@ -89,6 +89,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Ulteriori informazioni su questioni di privacy mobile importante.</span>
+    </li>
+    <li>
+      <h2>
+        Guida alla sicurezza
+      </h2>
+      
+      <span>Informazioni e suggerimenti per la creazione di un'applicazione sicura.</span>
     </li>
     <li>
       <h2>
@@ -103,6 +110,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Una panoramica delle opzioni di archiviazione nativo.</span>
+    </li>
+    <li>
+      <h2>
+        Prossimi passi
+      </h2>
+      
+      <span>Uno sguardo ad argomenti che incontrano i nuovi sviluppatori di Cordova.</span>
     </li>
     <li>
       <h2>
@@ -130,7 +144,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Plugin API
       </h2>
       
-      <span>Scopri quali plugin Cordova sono disponibili all'utilizzo nel progetto.</span>
+      <span>Scopri quali Cordova plugin sono disponibili per utilizzare nel progetto.</span>
     </li>
   </ul>
 </div>

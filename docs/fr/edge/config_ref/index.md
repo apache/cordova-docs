@@ -131,3 +131,11 @@ Voici l'apparence de l'élément pour les projets d'iOS :
     
 
 Voir la référence de l'API pour plus d'informations sur la spécification de chaque fonctionnalité. Consultez le Guide de développement de Plugin pour plus d'informations sur les plugins.
+
+## La *plate-forme* élément
+
+Lorsque vous utilisez la CLI pour créer des applications, il est parfois nécessaire de spécifier les préférences ou autres éléments spécifiques à une plate-forme particulière. Utiliser le `<platform>` élément pour spécifier la configuration qui doit uniquement apparaître dans un unique spécifique à la plateforme `config.xml` fichier. Par exemple, voici comment spécifier que seul android devrait utiliser les préférences de plein écran :
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>

@@ -26,7 +26,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인의 자바 인터페이스를 사용 하는 `cordova.exec` 메서드가 다음과 같이:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < 서비스 >, < 작업 > [< args >]);
     
 
 이 효과적으로 전화 안 드 로이드 네이티브 쪽을 WebView에서 요청 마샬링하는 `action` 메서드는 `service` 추가 인수에 전달 된 클래스는 `args` 배열.
@@ -61,7 +61,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 안 드 로이드 자바 플러그인을 작성
 
-플러그인 요청을 네이티브 쪽에서 자바 호출 발생 및 correspoinding 자바 플러그인에 제대로 매핑되지는 `config.xml` 파일, 하지만 무엇 처럼 최종 안 드 로이드 자바 플러그인 클래스 보여? 어떤 자바 스크립트의 플러그인 디스패치 됩니다 `exec` 함수 플러그인 클래스에 전달 `execute` 방법. 대부분 `execute` 구현을 다음과 같이:
+플러그인 요청을 네이티브 쪽에서 자바 호출 발생 및 해당 Java 플러그인에 제대로 매핑되지는 `config.xml` 파일, 하지만 무엇 처럼 최종 안 드 로이드 자바 플러그인 클래스 보여? 어떤 자바 스크립트의 플러그인 디스패치 됩니다 `exec` 함수 플러그인 클래스에 전달 `execute` 방법. 대부분 `execute` 구현을 다음과 같이:
 
         @Override 공공 부울 실행 (문자열 작업, JSONArray args, CallbackContext callbackContext) JSONException을 throw {경우 ("beep".equals(action)) {this.beep(args.getLong(0));
                 callbackContext.success();

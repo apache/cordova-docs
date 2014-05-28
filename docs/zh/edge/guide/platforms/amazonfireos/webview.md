@@ -16,11 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 亞馬遜火 OS WebViews
 
-從 3.0.0 開始，你可以使用科爾多瓦作為亞馬遜火 OS 應用程式中的一個元件。 亞馬遜火 OS 是指這種元件 `CordovaWebView` 。 `CordovaWebView`擴展建立在開放原始碼鉻專案的亞馬遜 web 視圖。 通過利用此功能，您的 web 應用程式可以利用最新的 HTML5 web 標準在現代 web 運行時引擎中運行。
+從 3.3.0 開始，你可以使用科爾多瓦作為亞馬遜火 OS 應用程式中的一個元件。 亞馬遜火 OS 是指這種元件 `CordovaWebView` 。 `CordovaWebView`擴展建立在開放原始碼鉻專案的亞馬遜 web 視圖。 通過利用此功能，您的 web 應用程式可以利用最新的 HTML5 web 標準在現代 web 運行時引擎中運行。
+
+如果你是亞馬遜火 OS 不熟悉，您應首先熟悉亞馬遜火 OS 平臺指南和有最新的 Sdk 安裝之前您嘗試嵌入 web 視圖的更多不尋常的發展方案。
 
 ## 系統必備元件
 
-*   科爾多瓦 3.0.0 或更大
+*   科爾多瓦 3.3.0 或更高
 
 *   Android SDK 更新到最新的 SDK
 
@@ -28,11 +30,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 在亞馬遜火 OS 專案中使用 CordovaWebView 的指南
 
-1.  下載並展開[亞馬遜 web 視圖 SDK][1] ，然後複製到 awv_interface.jar `/framework/libs` 目錄。 創建庫 / 資料夾如果它不存在。
+1.  要按照這些說明進行操作，請確保您有最新的科爾多瓦分佈。從[cordova.apache.org][1]下載並解壓其亞馬遜火 OS 套裝程式。
 
-2.  `cd`到 `/framework` 並運行 `ant jar` 打造科爾多瓦 jar。 它創建時所形成的.jar 檔 `cordova-x.x.x.jar` 在 `/framework` 目錄。
+2.  下載並展開[亞馬遜 web 視圖 SDK][2] ，然後複製到 awv_interface.jar `/framework/libs` 目錄。 創建庫 / 資料夾如果它不存在。
 
-3.  編輯您的應用程式的 `main.xml` 檔 (根據 `/res/layout` )，看起來像下面這樣，與 `layout_height` ， `layout_width` 和 `id` 修改，以適合您的應用程式：
+3.  導航到包的 `/framework` 目錄，運行 `ant jar` 。它創建了科爾多瓦 `.jar` 檔中，形成了作為`/framework/cordova-x.x.x.jar`.
+
+4.  複製 `.jar` 到 Android 專案檔案 `/libs` 目錄。
+
+5.  將以下內容添加到應用程式的 `/res/xml/main.xml` 檔中，與 `layout_height` 、 `layout_width` 和 `id` 修改，以適合應用程式：
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
+6.  修改您的活動，使它實現了 `CordovaInterface` 。 您應該執行包括的方法。 您可能希望將它們從複製 `/framework/src/org/apache/cordova/CordovaActivity.java` ，或執行這些靠你自己。 下面的代碼片段顯示了一個基本的應用程式，使用該介面。 請注意如何引用的視圖 id 匹配 `id` 在上面所示的 XML 片段中指定的屬性：
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,7 +61,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
- [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [1]: http://cordova.apache.org
+ [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
 如果您使用的相機，你應該也可以實現這：
 

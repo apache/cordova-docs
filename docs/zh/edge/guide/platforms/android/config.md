@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 注意： 將此設置為 false 不會殺了這款應用程式暫停事件之後，該應用程式時在後臺只將停止執行科爾多瓦 web 視圖中的代碼。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     
         <preference name="KeepRunning" value="false"/>
         

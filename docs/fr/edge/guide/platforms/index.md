@@ -32,16 +32,17 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 ## Android
 
 *   Guide de la plate-forme Android
+*   Android Shell Tool Guide
 *   Configuration Android
-*   Android WebViews
 *   Plugins Android
-*   Outils de ligne de commande Android
+*   Android WebViews
 *   Mise à jour Android
 
 ## BlackBerry 10
 
 *   Guide de la plate-forme blackBerry 10
-*   Configuration de blackBerry 10
+*   BlackBerry 10 Shell Tool Guide
+*   Configuration de blackBerry
 *   BlackBerry 10 Plugins
 *   BlackBerry 10 outils de ligne de commande
 *   Mise à jour de BlackBerry 10
@@ -53,10 +54,10 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 ## iOS
 
 *   iOS Platform Guide
+*   iOS Shell Tool Guide
 *   iOS Configuration
-*   iOS WebViews
 *   iOS Plugins
-*   iOS Command-line Tools
+*   iOS WebViews
 *   Mise à jour d'iOS
 
 ## Ubuntu

@@ -131,3 +131,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
 
 有關如何指定每個功能，請參閱 API 參考的詳細資訊。在外掛程式上看到外掛程式開發指南的詳細資訊。
+
+## *平臺*的元素
+
+使用 CLI 來構建應用程式時，有時必要指定首選項或其他特定于特定平臺的元素。 使用 `<platform>` 元素來指定配置，應該只出現在單個特定平臺 `config.xml` 檔。 例如，在這裡是如何指定那唯一的 android 系統應該使用全屏首選項：
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>

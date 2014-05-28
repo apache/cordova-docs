@@ -11,11 +11,11 @@ licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plu
 
 Cordova est livré avec un ensemble minimal d'API, et projets ajoutent quelles API supplémentaire dont ils ont besoin grâce à des plugins.
 
-Vous pouvez rechercher parmi tous les plugins existants en utilisant le [Plugin Registry][1].
+Vous pouvez rechercher parmi tous les plugins existants (y compris plugins tiers) en utilisant le [Plugin Registry][1].
 
  [1]: http://plugins.cordova.io/
 
-L'ensemble traditionnel de Cordova plugins sont comme suit :
+L'ensemble traditionnel de plugins de Cordova core sont les suivantes :
 
 *   [État de la batterie][2]
     

@@ -26,30 +26,36 @@ Cordova WebViews corriendo en Windows 8 confían en Internet Explorer 10 como su
 
 ## Requerimientos y apoyo
 
-Se necesita lo siguiente:
+Una de las siguientes combinaciones de OS/SDK, ya sea de un disco de instalación o un archivo de imagen de disco *ISO* necesitas:
 
-*   Una versión de 64 bits de Windows 8 Pro, un disco de instalación o un archivo de imagen de disco *ISO* . Una versión de evaluación está disponible en la [Microsoft Developer Network][2].
-    
-    <!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
+*   Windows 8.0 o 8.1, 32 o 64 bits *Home*, *Pro*o *Enterprise* Edition, junto con [Visual Studio 2012 Express][2].
 
-*   [Visual Studio][3], ediciones 2013 el *Ultimate*, *Premium*o *profesional* .
-    
-    <!-- true? -->
+*   8.1 Windows, 32 o 64 bits *Home*, *Pro*o *Enterprise* Edition, junto con [Visual Studio 2013 Pro][2] o superior. Una versión de evaluación de Windows 8.1 Enterprise está disponible desde la [Microsoft Developer Network][3].
 
- [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
- [3]: http://www.visualstudio.com/downloads
+ [2]: http://www.visualstudio.com/downloads
+ [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
+
+Hacer aplicaciones compiladas bajo Windows 8.1 *no* corre bajo Windows 8.0. Aplicaciones compiladas bajo Windows 8.0 son compatibles hacia adelante con 8.1.
+
+<!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
+
+Siga las instrucciones en [windowsstore.com][4] para someter la aplicación para Windows Store.
+
+ [4]: http://www.windowsstore.com/
+
+<!-- true? -->
 
 Para desarrollar aplicaciones de Córdoba para Windows 8, usted puede utilizar un PC con Windows, pero también puede desarrollar en un Mac, ya sea mediante la ejecución de un entorno de máquina virtual o mediante el uso de Boot Camp a la partición de arranque dual Windows 8. Consulte estos recursos para configurar el entorno de desarrollo requiere de Windows en un Mac:
 
-*   [VMWare Fusion][4]
+*   [VMWare Fusion][5]
 
-*   [Parallels Desktop][5],
+*   [Parallels Desktop][6],
 
-*   [Boot Camp][6].
+*   [Boot Camp][7].
 
- [4]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
- [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
- [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
+ [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
 ## Utilizando herramientas de Shell Cordova
 
@@ -57,19 +63,19 @@ Si desea utilizar herramientas de shell de Windows 8-centrado de Cordova en conj
 
 *   Acceder a ellos localmente desde proyecto código generado por el CLI. Están disponibles en el `platforms/windows8/cordova` Directorio después de agregar la `windows8` plataforma como se describe a continuación.
 
-*   Descárguelos desde una distribución independiente en [cordova.apache.org][7]. La distribución de Cordova contiene archivos separados para cada plataforma. Asegúrese de expandir el archivo apropiado, `cordova-windows8\windows8` en este caso, dentro de un directorio vacío. Las utilidades por lotes correspondientes están disponibles en el nivel superior `bin` Directorio. (Si es necesario para obtener instrucciones más detalladas, consulte el archivo **README** ).
+*   Descárguelos desde una distribución independiente en [cordova.apache.org][8]. La distribución de Cordova contiene archivos separados para cada plataforma. Asegúrese de expandir el archivo apropiado, `cordova-windows8\windows8` en este caso, dentro de un directorio vacío. Las utilidades por lotes correspondientes están disponibles en el nivel superior `bin` Directorio. (Si es necesario para obtener instrucciones más detalladas, consulte el archivo **README** ).
 
- [7]: http://cordova.apache.org
+ [8]: http://cordova.apache.org
 
 Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows 8. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins.
 
 ## Instalar el SDK
 
-Instalar la *Ultimate*, *Premium*o las ediciones de [Visual Studio][3] *Professional* 2013.
+Instalar la *Ultimate*, *Premium*o las ediciones de [Visual Studio][2] *Professional* 2013.
 
-![][8]
+![][9]
 
- [8]: img/guide/platforms/win8/win8_installSDK.png
+ [9]: img/guide/platforms/win8/win8_installSDK.png
 
 ## Crear un nuevo proyecto
 
@@ -109,51 +115,49 @@ El `clean` comando ayuda a eliminar directorios en preparación para la siguient
 
 ## Abra el proyecto en el SDK y desplegar la aplicación
 
-<!-- wasn't able to 'run' or 'emulate', so doc'ing SDK as fallback -->
-
 Una vez que construyes una aplicación Cordova como se describió anteriormente, puedes abrirlo con Visual Studio. El vario `build` comandos de generan un archivo de Visual Studio solución (*.sln*). Abra el archivo en el explorador de archivos para modificar el proyecto dentro de Visual Studio:
-
-![][9]
-
- [9]: img/guide/platforms/win8/win8_sdk_openSLN.png
-
-El `CordovaApp` componente muestra dentro de la solución y su `www` directorio contiene el código fuente basada en web, incluyendo el `index.html` página de Inicio:
 
 ![][10]
 
- [10]: img/guide/platforms/win8/win8_sdk.png
+ [10]: img/guide/platforms/win8/win8_sdk_openSLN.png
 
-Los controles debajo del menú principal de Visual Studio permiten probar o desplegar la aplicación:
+El `CordovaApp` componente muestra dentro de la solución y su `www` directorio contiene el código fuente basada en web, incluyendo el `index.html` página de Inicio:
 
 ![][11]
 
- [11]: img/guide/platforms/win8/win8_sdk_deploy.png
+ [11]: img/guide/platforms/win8/win8_sdk.png
 
-Con la **Máquina Local** seleccionado, pulse la flecha verde para instalar la aplicación en la misma máquina ejecutando Visual Studio. Una vez lo haces, la aplicación aparece en los listados de la aplicación de Windows 8:
+Los controles debajo del menú principal de Visual Studio permiten probar o desplegar la aplicación:
 
 ![][12]
 
- [12]: img/guide/platforms/win8/win8_sdk_runApp.png
+ [12]: img/guide/platforms/win8/win8_sdk_deploy.png
+
+Con la **Máquina Local** seleccionado, pulse la flecha verde para instalar la aplicación en la misma máquina ejecutando Visual Studio. Una vez lo haces, la aplicación aparece en los listados de la aplicación de Windows 8:
+
+![][13]
+
+ [13]: img/guide/platforms/win8/win8_sdk_runApp.png
 
 Cada vez que reconstruir la aplicación, se actualiza la versión disponible en la interfaz.
 
 Una vez disponibles en los listados de la aplicación, manteniendo presionada la tecla **CTRL** mientras selecciona la aplicación le permite culpar a la pantalla principal:
 
-![][13]
+![][14]
 
- [13]: img/guide/platforms/win8/win8_sdk_runHome.png
+ [14]: img/guide/platforms/win8/win8_sdk_runHome.png
 
 Tenga en cuenta que si se abre la aplicación dentro de un entorno de máquina virtual, necesite hacer clic en las esquinas o a lo largo de los lados de las ventanas para cambiar aplicaciones o acceder a funciones adicionales:
 
-![][14]
+![][15]
 
- [14]: img/guide/platforms/win8/win8_sdk_run.png
+ [15]: img/guide/platforms/win8/win8_sdk_run.png
 
 Alternativamente, seleccione la opción de despliegue de **simulador** para ver la aplicación como si se estaban ejecutando en un dispositivo de tableta:
 
-![][15]
+![][16]
 
- [15]: img/guide/platforms/win8/win8_sdk_sim.png
+ [16]: img/guide/platforms/win8/win8_sdk_sim.png
 
 A diferencia de la implementación de escritorio, esta opción permite simular la orientación de la tableta, ubicación, y variar su configuración de red.
 

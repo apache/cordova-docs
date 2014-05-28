@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-Cette section montre comment intégrer un composant WebView Cordova-activée dans une application Android plus grande. Pour plus d'informations sur la façon dont ces composants peuvent communiquer entre eux, voir Application Plugins.
+Ce guide montre comment intégrer un composant WebView Cordova-activée dans une application Android plus grande. Pour plus d'informations sur la façon dont ces composants peuvent communiquer entre eux, voir Application Plugins.
 
 Si vous n'êtes pas familier avec Android, vous devez tout d'abord vous familiariser avec le Guide de la plate-forme Android et avoir le dernier SDK Android installé avant d'essayer l'option de développement plus inhabituelle d'incorporation une WebView. À partir de 1,9 Cordova, la plateforme Android s'appuie sur un `CordovaWebView` composant, qui s'appuie sur un héritage `CordovaActivity` composant qui est antérieure à la version 1.9.
 

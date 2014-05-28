@@ -28,6 +28,6 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` o default `enable` ): impostare su `disable` per ignorare le impostazioni di protezione web, consentendo l'accesso ai contenuti remoti da fonti sconosciute. Questa preferenza è inteso come una comodità di sviluppo solo, quindi rimuoverla prima app per la distribuzione di imballaggio. Per l'app rilasciata, tutti gli URI devono essere conosciuto e whitelisted utilizzando il `<access>` elemento, descritto nella guida alla Whitelist di dominio.
+*   `WebSecurity`( `disable` o default `enable` ): impostare su `disable` per ignorare le impostazioni di protezione web, consentendo l'accesso ai contenuti remoti da fonti sconosciute. Questa preferenza è inteso come una comodità di sviluppo solo, quindi rimuoverla prima di imballaggio l'app per la distribuzione. Per l'app rilasciata, tutti gli URI devono essere conosciuto e whitelisted utilizzando il `<access>` elemento, descritto nella guida alla Whitelist di dominio.
     
         <preference name="WebSecurity" value="disable"/>

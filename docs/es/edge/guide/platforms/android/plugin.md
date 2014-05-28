@@ -26,7 +26,7 @@ Android plugins se basan en Córdoba-Android, el cual consiste en un WebView and
 
 Interfaz de JavaScript del plugin utiliza el `cordova.exec` método de la siguiente manera:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < service >, < acción > [< args >]);
     
 
 Esto mariscales una petición desde el WebView al lado nativo Android, llamando con eficacia el `action` método de la `service` clase, con argumentos adicionales en el `args` matriz.

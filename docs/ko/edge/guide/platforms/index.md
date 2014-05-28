@@ -32,27 +32,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## 안 드 로이드
 
 *   안 드 로이드 플랫폼 가이드
+*   안 드 로이드 쉘 도구 가이드
 *   안 드 로이드 구성
-*   안 드 로이드 WebViews
 *   안 드 로이드 플러그인
-*   안 드 로이드 명령줄 도구
+*   안 드 로이드 WebViews
 *   안 드 로이드 업그레이드
 
 ## 블랙베리 10
 
 *   블랙베리 10 플랫폼 가이드
-*   블랙베리 10 구성
+*   블랙베리 10 셸 도구 가이드
+*   블랙베리 구성
 *   블랙베리 10 플러그인
 *   블랙베리 10 명령줄 도구
 *   블랙베리 10 업그레이드
 
+## Firefox 운영 체제
+
+*   파이어 폭스 OS 플랫폼 가이드
+
 ## iOS
 
 *   iOS 플랫폼 가이드
+*   iOS 셸 도구 가이드
 *   iOS 구성
-*   iOS WebViews
 *   iOS 플러그인
-*   iOS 명령줄 도구
+*   iOS WebViews
 *   IOS 업그레이드
 
 ## 우분투
@@ -61,16 +66,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone
 
-*   Windows Phone 플랫폼 가이드 8
-*   Windows Phone 7 플랫폼 가이드
-*   Windows Phone 구성
-*   Windows Phone 명령줄 도구
+*   Windows Phone 플랫폼 가이드
+*   Windows Phone 플러그인
 *   Windows Phone 업그레이드
 
 ## 윈도우 8
 
 *   Windows 8 플랫폼 가이드
-*   윈도우 8 명령줄 도구
 *   윈도우 8을 업그레이드
 
 ## Tizen

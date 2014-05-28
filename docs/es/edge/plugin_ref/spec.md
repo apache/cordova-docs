@@ -103,7 +103,7 @@ Si no `<engine>` etiquetas se especifican, plugman intenta instalar en el direct
 
 Un nombre legible para el plugin, cuyo contenido de texto contiene el nombre del plugin. Por ejemplo:
 
-    < nombre > Foo < / nombre >
+    <name>Foo</name>
     
 
 Este elemento no es (todavía) localización de la manija.
@@ -156,7 +156,8 @@ Todos `<asset>` etiquetas requieren ambos `src` y `target` atributos. Sólo web 
     
     Donde el archivo o directorio debe estar ubicado en la aplicación de Cordova, relativo a la `www` Directorio. Activos pueden ser dirigidos a subdirectorios, por ejemplo:
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     crea el `js/experimental` directorio dentro de la `www` Directorio, a menos que ya presentes, luego copias el `new-foo.js` archivo y cambia el nombre `foo.js` . Si ya existe un archivo en la ubicación de destino, plugman se detiene y revierte el proceso de instalación, emite una notificación sobre el conflicto y sale con un código distinto de cero.
 
@@ -368,7 +369,9 @@ Identifica un marco (generalmente parte de la plataforma/OS) de la cual depende 
 
 Ejemplos:
 
-    < marco src="libsqlite3.dylib" / >< marco src="social.framework" débil = "true" / >< marco src="relative/path/to/my.framework" personalizado = "true" / >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
@@ -384,10 +387,7 @@ Información adicional proporcionada a los usuarios. Esto es útil cuando usted 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    Tienes que añadir la siguiente línea a la 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
     
 
 ## Variables

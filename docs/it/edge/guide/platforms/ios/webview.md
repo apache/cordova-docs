@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS visualizzazioni Web
 
-In questa sezione viene illustrato come incorporare un componente WebView Cordova abilitato all'interno di una più ampia applicazione iOS. Per dettagli su come questi componenti possono comunicare con a vicenda, vedere applicazione plugin.
+Questa guida Mostra come incorporare un componente WebView Cordova abilitato all'interno di una più ampia applicazione iOS. Per dettagli su come questi componenti possono comunicare con a vicenda, vedere applicazione plugin.
 
 Supporto per iOS visualizzazioni Web iniziato con Cordova versione 1.4, utilizzando un `Cleaver` componente per il quale il modello di Xcode serve come un'implementazione di riferimento. Cordova 2.0 e versioni successive supportano solo l'implementazione basata su sottoprogetto di mannaia.
 
@@ -56,16 +56,10 @@ Per seguire queste istruzioni, assicuratevi di che avere l'ultima distribuzione 
 
 14. Selezionare il **+** pulsante e aggiungere i seguenti **quadri**. Facoltativamente all'interno del **Navigatore progetto**, spostarli sotto il gruppo di **quadri** :
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. Espandere **Dipendenze di destinazione**, il bauletto con quell'etichetta se non c'è più di una casella.

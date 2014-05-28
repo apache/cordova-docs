@@ -32,27 +32,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Android 系統
 
 *   Android 平臺指南
+*   Android 殼工具指南
 *   Android 系統組態
-*   Android WebViews
 *   Android 外掛程式
-*   Android 系統的命令列工具
+*   Android WebViews
 *   升級 Android
 
 ## 黑莓 10
 
 *   10 黑莓平臺指南
-*   黑莓 10 配置
+*   黑莓 10 手機殼工具指南
+*   黑莓手機配置
 *   黑莓 10 外掛程式
 *   黑莓 10 命令列工具
 *   升級黑莓 10
 
+## 火狐瀏覽器作業系統
+
+*   火狐瀏覽器作業系統平臺指南
+
 ## iOS
 
 *   iOS 平臺指南
+*   iOS 殼工具指南
 *   iOS 配置
-*   WebViews iOS
 *   iOS 外掛程式
-*   iOS 命令列工具
+*   WebViews iOS
 *   升級 iOS
 
 ## Ubuntu
@@ -61,16 +66,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## Windows Phone
 
-*   Windows Phone 8 平臺指南
-*   Windows Phone 7 平臺指南
-*   Windows Phone 配置
-*   Windows Phone 的命令列工具
+*   Windows Phone 平臺指南
+*   Windows Phone 外掛程式
 *   升級 Windows Phone
 
 ## Windows 8
 
 *   Windows 8 平臺指南
-*   Windows 8 的命令列工具
 *   升級 Windows 8
 
 ## Tizen

@@ -9,7 +9,9 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 # Supporto di piattaforma
 
-Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e dispositivo API disponibili per ogni piattaforma mobile. (Intestazioni di colonna visualizzare mozziconi di stenografia di CLI).
+Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e dispositivo API disponibili per ogni piattaforma mobile. Il dispositivo API qui elencate sono forniti dai plugin di nucleo, API aggiuntive sono disponibili tramite [plugin di terze parti][1]. Le intestazioni di colonna di visualizzare nomi di stenografia di CLI.
+
+ [1]: http://plugins.cordova.io
 
 <!-- START HTML -->
 
@@ -26,6 +28,10 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <th>
         <tt>blackberry10</tt>
+      </th>
+      
+      <th>
+        <tt>Firefox OS</tt>
       </th>
       
       <th>
@@ -71,6 +77,10 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
           Mac, Windows
         </td>
         
+        <td data-col="firefoxos" class="y">
+          Mac, Windows, Linux
+        </td>
+        
         <td data-col="ios"        class="y">
           Mac
         </td>
@@ -89,8 +99,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -112,6 +120,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="blackberry10" class="n">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_platforms_ios_webview.md.html">(vedi dettagli)</a>
         </td>
@@ -127,8 +138,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -151,6 +160,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
           <a href="guide_guide_platforms_blackberry10_plugin.md.html">(vedi dettagli)</a>
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_guide_platforms_ios_plugin.md.html">(vedi dettagli)</a>
         </td>
@@ -169,8 +181,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
@@ -186,7 +196,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Accelerometro</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">Accelerometro</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -196,6 +206,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -213,15 +226,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Fotocamera</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Fotocamera</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -231,6 +242,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -248,15 +262,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Cattura</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">Cattura</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -266,6 +278,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -283,15 +298,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Bussola</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">Bussola</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -301,6 +314,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -319,15 +335,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Connessione</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">Connessione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -337,6 +351,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -354,15 +371,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Contatti</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">Contatti</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -372,6 +387,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -389,15 +407,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Dispositivo</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">Dispositivo</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -407,6 +423,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -423,8 +442,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -444,6 +461,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -459,15 +479,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">File</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">File</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -479,6 +497,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -493,8 +514,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -502,7 +521,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Geolocalizzazione</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">Geolocalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -512,6 +531,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -529,15 +551,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Globalizzazione</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">Globalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -547,6 +567,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -564,15 +587,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -582,6 +603,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -600,15 +624,13 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
           utilizza iframe
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Media</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">Media</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -618,6 +640,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -634,8 +659,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -643,7 +666,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Notifica</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">Notifica</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -653,6 +676,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -669,8 +695,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -678,7 +702,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">Splashscreen</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">Splashscreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -688,6 +712,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -704,8 +731,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -725,6 +750,9 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -742,8 +770,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="win8"       class="y">
           localStorage & indexedDB
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>

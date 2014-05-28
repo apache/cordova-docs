@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         概述
       </h2>
       
-      <span>如果你是新的科爾多瓦，啟動在這裡。</span>
+      <span>如果你是新的科爾多瓦，啟動在這裡。包括安裝和下一步。</span>
     </li>
     <li>
       <h2>
@@ -46,14 +46,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         平臺指南
       </h2>
       
-      <span>設置每個 SDK 和更新專案</span>
+      <span>設置每個平臺 SDK 和更新專案。</span>
     </li>
     <li>
       <h2>
         使用 Plugman 來管理外掛程式
       </h2>
       
-      <span>使用 Plugman 來管理外掛程式沒有 CLI</span>
+      <span>時使用的平臺為中心的工作流管理無 CLI 的外掛程式。</span>
     </li>
     <li>
       <h2>
@@ -67,21 +67,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         圖示和啟動畫面
       </h2>
       
-      <span>自訂應用程式的圖像顯示。</span>
+      <span>自訂您的應用程式的圖像顯示。</span>
     </li>
     <li>
       <h2>
         嵌入 WebViews
       </h2>
       
-      <span>在您的專案中實現科爾多瓦 web 視圖。</span>
+      <span>在您的本機專案中實現科爾多瓦 web 視圖。</span>
     </li>
     <li>
       <h2>
         外掛程式開發指南
       </h2>
       
-      <span>開發你的第一個外掛程式。</span>
+      <span>開發您自己的外掛程式。</span>
     </li>
     <li>
       <h2>
@@ -89,6 +89,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>瞭解重要手機隱私問題。</span>
+    </li>
+    <li>
+      <h2>
+        安全指南
+      </h2>
+      
+      <span>資訊和構建安全的應用程式的提示。</span>
     </li>
     <li>
       <h2>
@@ -103,6 +110,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>本機存儲選項的概述。</span>
+    </li>
+    <li>
+      <h2>
+        下一步
+      </h2>
+      
+      <span>看看新的科爾多瓦開發者會遇到的主題。</span>
     </li>
     <li>
       <h2>
@@ -130,7 +144,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         外掛程式的 Api
       </h2>
       
-      <span>發現哪些外掛程式科爾多瓦是可用在您的專案中使用。</span>
+      <span>發現什麼科爾多瓦外掛程式是可用來在您的專案中使用。</span>
     </li>
   </ul>
 </div>

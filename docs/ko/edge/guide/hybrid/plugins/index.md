@@ -16,13 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 플러그인 개발 가이드
 
-*플러그인* 코르도바 webview는 앱 실행 되는 네이티브 플랫폼 통신할 렌더링 수 있도록 삽입 된 코드의 패키지입니다. 플러그인은 일반적으로 웹 기반 애플 리 케이 션을 사용할 수 없습니다 장치 및 플랫폼 기능에 대 한 액세스를 제공 합니다. 모든 주요 코르도바 API 기능, 플러그인으로 구현 및 많은 다른 NFC 통신, 바코드 스캐너와 같은 기능을 사용 또는 일정에 맞게 인터페이스 사용할 수 있습니다.
+*플러그인* 코르도바 webview는 app 그것 실행 되는 네이티브 플랫폼 통신할 렌더링 수 있도록 삽입 된 코드의 패키지입니다. 플러그인은 일반적으로 웹 기반 애플 리 케이 션을 사용할 수 없습니다 장치 및 플랫폼 기능에 대 한 액세스를 제공 합니다. 모든 주요 코르도바 API 기능, 플러그인으로 구현 및 많은 다른 NFC 통신, 바코드 스캐너와 같은 기능을 사용 또는 일정에 맞게 인터페이스 사용할 수 있습니다. 사용 가능한 플러그인의 [레지스트리][1] 입니다.
+
+ [1]: http://plugins.cordova.io
 
 각 지원 되는 플랫폼에 대 한 해당 네이티브 코드 라이브러리와 함께 단일 자바 인터페이스를 구성 하는 플러그인. 네이티브 플랫폼을 다시 한 훨씬 더 복잡 한 기능을 구축 하는 모델로 사용할 수 있는 자바 스크립트에서 문자열을 전달 하는 간단한 *에코* 플러그인-이 섹션 단계. 이 섹션에서는 기본 플러그인 구조와 외부와 접한 자바 인터페이스에 설명합니다. 각 해당 하는 기본 인터페이스에 대 한이 섹션의 끝에 목록 참조.
 
-뿐만 아니라 이러한 지침, 지도 대 한 [기존의 플러그인을][1] 살펴 것이 좋습니다 플러그인을 쓸 준비를 할 때.
+뿐만 아니라 이러한 지침, 지도 대 한 [기존의 플러그인을][2] 살펴 것이 좋습니다 플러그인을 쓸 준비를 할 때.
 
- [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
+ [2]: http://cordova.apache.org/#contribute
 
 ## 플러그인을 구축
 
@@ -59,9 +61,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 플러그인 확인
 
-사용할 수 있는 `plugman` 플러그인 설치 올바르게 각 플랫폼에 대 한 여부를 확인 하는 유틸리티. 설치 `plugman` 다음 [노드][2] 명령:
+사용할 수 있는 `plugman` 플러그인 설치 올바르게 각 플랫폼에 대 한 여부를 확인 하는 유틸리티. 설치 `plugman` 다음 [노드][3] 명령:
 
- [2]: http://nodejs.org/
+ [3]: http://nodejs.org/
 
         $ npm install -g plugman
     
@@ -73,7 +75,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 IOS 종속성 로드 제대로 여부를 테스트 하려면 다음 명령을 실행:
 
-        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
     
 
 에 대 한 내용은 `plugman` 옵션, 플러그인 관리를 사용 하 여 Plugman를 참조 하십시오. 실제로 플러그인을 *디버깅* 하는 방법에 대 한 정보를이 페이지의 맨 아래에 나열 된 각 플랫폼의 기본 인터페이스 참조.
@@ -137,9 +139,9 @@ Tizen 플랫폼 플러그인을 지원 하지 않습니다.
 
 ## 게시 플러그인
 
-귀하의 플러그인을 개발 하는 일단 당신이 게시 하 고 커뮤니티와 함께 그것을 공유 할 수 있습니다. 코르 도우 바 레지스트리를 귀하의 플러그인을 게시할 수 있습니다 (기준 [ `npmjs` ][3]) 또는 다른 `npmjs` -레지스트리를 기반으로. 다른 개발자가 사용 하 여 자동으로 설치할 수 있습니다 `plugman` 또는 코르도바 CLI. (대 한 자세한 내용은 각 개발 경로, 플러그인 관리 하는 명령줄 인터페이스를 사용 하 여 Plugman를 참조.)
+귀하의 플러그인을 개발 하는 일단 당신이 게시 하 고 커뮤니티와 함께 그것을 공유 할 수 있습니다. 코르 도우 바 [레지스트리][1] 를 귀하의 플러그인을 게시할 수 있습니다 (에 따라 [ `npmjs` ][4]) 또는 다른 `npmjs` -레지스트리를 기반으로. 다른 개발자가 사용 하 여 자동으로 설치할 수 있습니다 `plugman` 또는 코르도바 CLI. (대 한 자세한 내용은 각 개발 경로, 플러그인 관리 하는 명령줄 인터페이스를 사용 하 여 Plugman를 참조.)
 
- [3]: https://github.com/isaacs/npmjs.org
+ [4]: https://github.com/isaacs/npmjs.org
 
 사용 해야 하는 플러그인을 게시 하는 `plugman` 도구와 다음 단계를 통해 이동:
 

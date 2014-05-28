@@ -156,7 +156,8 @@ Tutti i `<asset>` tag richiedono entrambi `src` e `target` gli attributi. Solo W
     
     Dove la directory o il file dovrebbe trovarsi nella app Cordova, relativo alla `www` directory. Patrimonio può essere destinato alla sottodirectory, ad esempio:
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     Crea il `js/experimental` directory all'interno il `www` directory, se non già presente, quindi copie il `new-foo.js` file e rinominarlo `foo.js` . Se un file esiste già presso la località di destinazione, plugman si ferma e inverte il processo di installazione, invia una notifica sul conflitto ed esce con un codice diverso da zero.
 
@@ -187,7 +188,7 @@ I dettagli per il `<js-module>` tag:
     
     *   `<runs/>`significa che il codice deve essere specificato con `cordova.require` , ma non installato il `window` oggetto. Questo è utile quando l'inizializzazione del modulo, associare gestori eventi o altrimenti. Si può avere solo uno `<runs/>` tag. Si noti che tra cui un `<runs/>` con `<clobbers/>` o `<merges/>` è ridondante, dato che anche `cordova.require` tuo modulo.
     
-    *   Un vuoto `<js-module>` ancora carica e possono essere accessibili in altri moduli tramite`cordova.require`.
+    *   Un vuoto `<js-module>` ancora carica e accessibili in altri moduli tramite`cordova.require`.
 
 Se `src` non si risolve in un file esistente, plugman si ferma e inverte l'installazione, invia una notifica del problema ed esce con un codice diverso da zero.
 
@@ -370,11 +371,14 @@ Esempi:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 Il `src` attributo identifica il quadro, che plugman tenta di aggiungere al progetto di Cordova, nella maniera corretta per una determinata piattaforma.
 
 L'optional `weak` attributo è un valore booleano che indica se il quadro dovrebbe essere debolmente legato. Il valore predefinito è`false`.
+
+L'optional `custom` attributo è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è`false`.
 
 ## *info* Elemento
 
@@ -383,10 +387,7 @@ Informazioni supplementari fornite agli utenti. Questo è utile quando si richie
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    È necessario aggiungere la seguente riga alla 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
     
 
 ## Variabili

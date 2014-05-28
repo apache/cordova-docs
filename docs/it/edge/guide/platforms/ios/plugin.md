@@ -24,7 +24,7 @@ Un plugin di iOS è implementato come Objective C classe che estende la `CDVPlug
 
 La parte di JavaScript di un plugin che utilizza il `cordova.exec` metodo come segue:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < servizio >, < azione >, [< args >]);
     
 
 Questo esegue il marshalling di una richiesta dalla `UIWebView` a lato nativo di iOS, efficacemente chiamando il `action` metodo sul `service` classe, con gli argomenti passati nel `args` matrice.
@@ -166,7 +166,7 @@ Plugin metodi ordinariamente eseguiti nello stesso thread come interfaccia princ
 
 ## Debug iOS Plugins
 
-Per eseguire il debug sul lato di Objective-C, è necessario il debugger integrato di Xcode. Per JavaScript, su iOS 5,0 è possibile utilizzare [Weinre, un progetto di Cordova Apache][3] o [iWebInspector, un'utilità di terze parti][4]. IOS 6, è possibile collegare Safari 6.0 all'app in esecuzione all'interno di iOS 6 simulatore.
+Per eseguire il debug sul lato di Objective-C, è necessario il debugger integrato di Xcode. Per JavaScript, su iOS 5,0 è possibile utilizzare [Weinre, un progetto di Cordova Apache][3] o [iWebInspector, un'utilità di terze parti][4]. Per iOS 6, è possibile allegare Safari 6.0 per l'applicazione in esecuzione all'interno di iOS 6 simulatore.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

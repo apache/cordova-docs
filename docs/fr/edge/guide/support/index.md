@@ -9,7 +9,9 @@ licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plu
 
 # Plateforme de Support
 
-Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif API disponibles pour chaque plate-forme mobile. (Les en-têtes de colonne affichent les talons de sténographie de la CLI.)
+Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif API disponibles pour chaque plate-forme mobile. Le dispositif API répertoriés ici sont fournis par les plugins de base, des API supplémentaires sont disponibles via [les plugins tiers][1]. Les en-têtes de colonne affichent les noms de sténographie de la CLI.
+
+ [1]: http://plugins.cordova.io
 
 <!-- START HTML -->
 
@@ -194,7 +196,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Accéléromètre</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">Accéléromètre</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -230,7 +232,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Appareil photo</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Appareil photo</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -266,7 +268,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Capture</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">Capture</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -302,7 +304,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Boussole</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">Boussole</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -339,7 +341,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Connexion</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">Connexion</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -375,7 +377,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Contacts</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">Contacts</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -411,7 +413,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Dispositif</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">Dispositif</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -483,7 +485,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Fichier</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">Fichier</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -519,7 +521,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Géolocalisation</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">Géolocalisation</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -555,7 +557,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Mondialisation</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">Mondialisation</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -591,7 +593,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -628,7 +630,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Media</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">Media</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -664,7 +666,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Notification</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">Notification</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -700,7 +702,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">SplashScreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

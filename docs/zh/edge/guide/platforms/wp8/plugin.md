@@ -134,6 +134,14 @@ JavaScript 會需要調用 `exec` 像這樣：
         }
     
 
+## 外掛程式使用壽命
+
+外掛程式需要長時間運行的請求，如媒體重播、 聽眾，保持內部狀態應執行的背景活動 `onReset` 方法來清理這些活動。 當 CordovaView webbrowser 控制項導航到新的一頁或刷新，重新載入 JavaScript 運行方法。
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
+    
+
 ## 外掛程式 XML
 
 下面演示如何使用 `plugin.xml` 檔來指定外掛程式的原始程式碼檔在 Windows Phone 平臺上。 請參閱應用程式外掛程式概述和外掛程式規範有關可用選項的詳細資訊。

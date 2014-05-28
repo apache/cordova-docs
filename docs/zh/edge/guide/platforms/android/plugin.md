@@ -26,7 +26,7 @@ Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與
 
 外掛程式的 JavaScript 介面使用 `cordova.exec` 方法，如下所示：
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
     
 
 這封送請求從 web 視圖到 Android 的本機對岸，有效地調用 `action` 方法 `service` 具有額外的參數中傳遞的類 `args` 陣列。
@@ -61,7 +61,7 @@ Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與
 
 ## 編寫一個 Android JAVA 外掛程式
 
-JavaScript 調用觸發外掛程式請求到本機的一邊，和 correspoinding JAVA 外掛程式映射正確地在 `config.xml` 檔中，但最後的 Android JAVA 外掛程式類看起來不會像什麼？ 無論派往與 JavaScript 的外掛程式 `exec` 函數傳遞到外掛程式類的 `execute` 方法。 大多數 `execute` 實現看起來像這樣：
+JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 JAVA 外掛程式映射正確地在 `config.xml` 檔中，但最後的 Android JAVA 外掛程式類看起來不會像什麼？ 無論派往與 JavaScript 的外掛程式 `exec` 函數傳遞到外掛程式類的 `execute` 方法。 大多數 `execute` 實現看起來像這樣：
 
         @Override 公共 boolean 類型的值執行 CallbackCoNtext callbackCoNtext JSONArray args 字串操作） 將引發 JSONException {如果 ("beep".equals(action)) {this.beep(args.getLong(0));callbackCoNtext.success() ；則返回 true ；} 返回 false ；/ / 返回 false 結果的"MethodNotFound"錯誤。
         }

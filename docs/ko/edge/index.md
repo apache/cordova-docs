@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         개요
       </h2>
       
-      <span>Cordova가 처음이라면?</span>
+      <span>코르 도우 바에 새로운 경우 여기를 시작 합니다. 설치 및 다음 단계를 포함 한다.</span>
     </li>
     <li>
       <h2>
@@ -46,14 +46,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         플랫폼 가이드
       </h2>
       
-      <span>각 SDK 업데이트 프로젝트 설정</span>
+      <span>각 플랫폼 SDK 설정 하 고 프로젝트를 업데이트 합니다.</span>
     </li>
     <li>
       <h2>
         Plugman를 사용 하 여 플러그인을 관리 하
       </h2>
       
-      <span>CLI 없이 플러그인을 관리 하기 위해 Plugman를 사용 하 여</span>
+      <span>플랫폼을 중심으로 워크플로 사용 하는 경우 CLI 없이 플러그인을 관리 합니다.</span>
     </li>
     <li>
       <h2>
@@ -67,21 +67,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         아이콘 및 시작 화면
       </h2>
       
-      <span>애플 리 케이 션의 표시 이미지를 사용자 지정 합니다.</span>
+      <span>응용 프로그램의 표시 이미지를 사용자 지정 합니다.</span>
     </li>
     <li>
       <h2>
         WebViews 포함
       </h2>
       
-      <span>프로젝트에서 코르도바 WebView를 구현 합니다.</span>
+      <span>네이티브 프로젝트에서 코르도바 WebView를 구현 합니다.</span>
     </li>
     <li>
       <h2>
         플러그인 개발 가이드
       </h2>
       
-      <span>첫 번째 플러그인을 개발 합니다.</span>
+      <span>자신의 플러그인을 개발 합니다.</span>
     </li>
     <li>
       <h2>
@@ -89,6 +89,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>중요 한 모바일 개인 정보 보호 문제에 대해 자세히 알아보기</span>
+    </li>
+    <li>
+      <h2>
+        보안 가이드
+      </h2>
+      
+      <span>정보 및 보안 응용 프로그램을 구축 하기 위한 팁입니다.</span>
     </li>
     <li>
       <h2>
@@ -103,6 +110,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>기본 저장 옵션의 개요입니다.</span>
+    </li>
+    <li>
+      <h2>
+        다음 단계
+      </h2>
+      
+      <span>새로운 코르 도우 바 개발자가 발생 하는 항목에서 봐.</span>
     </li>
     <li>
       <h2>
@@ -130,7 +144,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         플러그인 Api
       </h2>
       
-      <span>발견 어떤 플러그인 코르도바 프로젝트에서 사용 하 여 사용할 수 있습니다.</span>
+      <span>어떤 코르 도우 바 플러그인 프로젝트에서 사용 하 여 사용할 수 있습니다 발견.</span>
     </li>
   </ul>
 </div>

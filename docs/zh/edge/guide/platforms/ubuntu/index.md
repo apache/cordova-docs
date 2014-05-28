@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 初始版本
 
-歡迎來到科爾多瓦 Ubuntu 平臺支援的初始版本。 此版本中，重點是在 Ubuntu 的系統上開發和使用科爾多瓦 Web 專案開發工作流。 這包括將 Ubuntu 平臺添加到您的專案，添加標準科爾多瓦外掛程式，，當然，建設和運行的 Ubuntu 平臺的應用程式。
+歡迎來到科爾多瓦 Ubuntu 平臺支援的初始版本。 此版本中，重點是在 Ubuntu 的系統上開發和使用概述中討論的跨平臺工作流。 這包括將 Ubuntu 平臺添加到您的專案，添加標準科爾多瓦外掛程式，以及建設和運行的 Ubuntu 平臺的應用程式。
 
 ### Ubuntu SDK
 
@@ -28,7 +28,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### Ubuntu 運行時平臺
 
-Ubuntu 是知名的為其桌面環境 （用於筆記本電腦、 Pc 和此類）。 Ubuntu 觸摸延伸到手機和平板電腦上的 Ubuntu 作業系統。 Ubuntu 運行時平臺有不同的 CPU 體系結構 （x 86，armhf，等.）。 必須適當地編譯外掛程式和應用程式代碼。 對此廣泛領域的支援正在迅速演變在 Ubuntu 中。
+Ubuntu 是眾所周知的其桌面環境 （用於筆記本電腦、 Pc 和此類）。 Ubuntu 觸摸延伸到手機和平板電腦上的 Ubuntu 作業系統。 Ubuntu 運行時平臺有不同的 CPU 體系結構 （x 86，armhf，等.）。 必須適當地編譯外掛程式和應用程式代碼。 對此廣泛領域的支援正在迅速演變在 Ubuntu 中。
 
 ### 最新資訊
 
@@ -61,12 +61,14 @@ Ubuntu 是知名的為其桌面環境 （用於筆記本電腦、 Pc 和此類�
 
 ### 創建一個專案
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+創建一個應用程式在 `hello` 目錄的顯示名稱是 `HelloWorld` ：
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### 移動到專案目錄
 
-    $ cd project1
+    $ cd hello
     
 
 ### 添加 Ubuntu 平臺

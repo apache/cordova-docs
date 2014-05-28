@@ -16,17 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 使用 Plugman 來管理外掛程式
 
-從 3.0 版本開始，科爾多瓦實現所有設備 Api 作為外掛程式，然後留在預設情況下禁用。 此外，它還支援兩種不同的方法來添加和刪除外掛程式。 第一是通過使用 `cordova` 所述的命令列介面 CLI。 第二種是通過使用一個較低級別[Plugman][1]命令列介面 （"本機平臺 dev"工作流）。這些兩條發展路徑之間的主要區別是 Plugman 可以只添加外掛程式到一個平臺，一次而 CLI 會將外掛程式添加到的所有平臺，您的目標。 正因為如此，它更有意義，當你正在密切與單一的平臺，因此，工作流的"本機平臺 Dev"名稱時，使用 Plugman。
+從 3.0 版本開始，科爾多瓦實現所有設備 Api 作為外掛程式，然後留在預設情況下禁用。 此外，它還支援兩種不同的方法來添加和刪除外掛程式，根據您的工作流概述中討論的選擇：
+
+*   如果您使用跨平臺的工作流，則使用 `cordova` CLI 實用程式添加外掛程式，如所述的命令列介面。 CLI 一次修改所有指定平臺的外掛程式。
+
+*   如果你使用的平臺為中心的工作流程，您使用一個較低級別的[Plugman][1]命令列介面，分別為每個目標平臺。
 
  [1]: https://github.com/apache/cordova-plugman/
 
-詳細資訊關於 Plugman，尤其是如果你有興趣在消費作為節點模組 Plugman 或駭客對 Plugman 的代碼，請參閱[其庫中的讀我檔案][2].
+本節詳細介紹的 Plugman 實用程式。 消費作為節點模組 Plugman 或修改的原始程式碼的詳細資訊，請參閱[其庫中的讀我檔案][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 
 ## 安裝 Plugman
 
-要安裝 plugman，您必須在您的機器上安裝的[節點][3]。 然後您可以運行下面的命令從任意位置在您的環境以全域，安裝 plugman，這樣就可從您的電腦上的任何目錄中：
+要安裝 plugman，您必須在您的機器上安裝的[節點][3]。 然後您可以運行下面的命令從任意位置在您的環境以全域，安裝 plugman，這樣就可從任何目錄中：
 
  [3]: http://nodejs.org/
 
@@ -35,9 +39,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 您還必須有有 `git` 上你 `PATH` ，以便能夠直接從遠端 git Url 安裝的外掛程式。
 
-**提示:**如果您發現與故宮安裝 plugman 後你仍然不能運行任何 `plugman` 的命令，請確保您已添加 `/npm/` 目錄到您`PATH`.
+**提示**： 如果您在安裝與 plugman 後發現 `npm` 你是仍然不能運行任何 `plugman` 的命令，請確保您已添加 `/npm/` 目錄到您`PATH`.
 
-**注：**如果您不想通過安裝 Plugman 全球污染您的全球故宮命名空間，您可以跳過此步驟。 如果這種情況，然後當你與外殼工具創建科爾多瓦專案，將有 `node_modules` 目錄裡面您的專案包含 Plugman。 既然你不 instally 全球範圍內，您必須調用節點，每個 Plugman 命令，例如 `node ./node_modules/plugman/main.js -version` 。 本指南的其餘部分假定您已安裝 Plugman 就全球而言，意味著您可以調用它與只是`plugman`.
+**注**： 您可以跳過此步驟，如果你不想污染您的全球性 `npm` 通過全球範圍內安裝 Plugman 的命名空間。 如果這種情況，然後當你與外殼工具創建科爾多瓦專案，將有 `node_modules` 目錄裡面您的專案包含 Plugman。 由於全球範圍內你沒有安裝，您需要調用 `node` 的每個 Plugman 命令，例如 `node
+./node_modules/plugman/main.js -version` 。 本指南的其餘部分假定您已安裝 Plugman 就全球而言，意味著您可以調用它與只是`plugman`.
 
 ## 創建一個專案，科爾多瓦
 
@@ -62,7 +67,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `--www`預設值為專案的 `www` 資料夾的位置，但可以作為科爾多瓦專案應用程式 web 資產使用的任何目錄。
 *   `--variable`允許指定某些變數在安裝時，有必要對某些外掛程式需要 API 金鑰或其他自訂的使用者定義的參數。 請[外掛程式規範][4]的詳細資訊，參閱。
 
- [4]: plugin_spec.md
+ [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
 ## 刪除某個外掛程式
 

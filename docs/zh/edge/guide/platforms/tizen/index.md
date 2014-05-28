@@ -34,14 +34,14 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 - (optional) Install Tizen Cordova template projects: copy the
   `/templates` directory content into the Tizen Eclipse IDE web
-  templates directory (e.g:
+  templates directory (e.g.:
   `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
     - Select  __File &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
-    - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
+    - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
     ![](img/guide/platforms/tizen/project_template.png)
@@ -104,7 +104,7 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
     
     ![][7]
 
-*   用滑鼠右鍵按一下該專案，在**專案資源管理器**視圖，然後選擇 Run As **& rarr;Tizen Web 應用程式**：
+*   用滑鼠右鍵按一下該專案在**專案資源管理器**視圖，然後選擇**運行作為 → Tizen Web 應用程式**：
     
     ![][8]
 

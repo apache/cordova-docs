@@ -20,48 +20,122 @@ Cette section indique comment configurer une icône et un écran de démarrage f
 
 ## Configuration des icônes dans le CLI
 
-Lorsque vous travaillez dans la CLI, Les fichiers sources d'icône se trouvent dans les différents sous-répertoires spécifiques à une plateforme au sein du répertoire du projet `www/res/icons`. Les projets nouvellement créés disposent d'un ensemble par défaut d'icones Cordova pour vous permettre de remplacer les plates-formes que vous voulez cibler.
+Quand travaillant dans la CLI, vous pouvez définir des app icônes via `<icon>` élément ( `config.xml` ). Si vous ne spécifiez pas une icône, puis le logo Apache Cordova est utilisé.
 
-Android spécifie les icônes de faible, moyenne, haute et très haute résolution :
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-La plateforme iOS spécifie 72-pixel-carré pour les icônes des iPads, et affiche des icônes de 57 pixels pour les iPhones et iPods, avec variantes hautes résolutions *x 2* pour les écran Rétina :
+SRC: (obligatoire) spécifie l'emplacement du fichier image, par rapport à votre répertoire www
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+plateforme : plateforme cible (facultatif)
+
+Largeur : largeur d'icône (facultatif) en pixels
+
+hauteur : hauteur d'icône (facultatif) en pixels
+
+densité : android (facultatif) spécifique, spécifie la densité de l'icône
+
+La configuration suivante peut être utilisée pour définir l'icône par défaut unique qui sera utilisé pour toutes les plates-formes.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone spécifie une icone de 48 pixels par défaut, ainsi que de nombreuses mosaïque d'arrière-plan utilisés dans la représentation des applications :
+Pour chaque plate-forme, vous pouvez également définir un set pour s'adapter à des résolutions d'écran différentes d'icônes de pixellisés.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+Amazon Fire OS
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-BlackBerry 10 nécessite un élément de l'icône dans le fichier config.xml :
+Android
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Voir la documentation de BlackBerry pour le ciblage de plusieurs tailles et paramètres régionaux.
+Blackberry10
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
+    
 
-Paciarelli nécessite une icône de 128 pixels :
+Voir la documentation de BlackBerry pour le ciblage de plusieurs tailles et paramètres régionaux. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-        tizen/icon-128.png
+Firefox OS
+
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Paciarelli
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
     
 
 ## Configuration du Splashscreen dans la CLI
 
-Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran splash liminaire de l'app sur de nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
+Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran d'accueil introduction d'une app nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
 
 Android spécifie les deux images d'écran splash-orientation portrait et paysage de faible, moyenne, haute et très haute résolution :
 

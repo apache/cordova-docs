@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # WebViews iOS
 
-這一節演示如何嵌入在一個較大的 iOS 應用程式內的科爾多瓦啟用 web 視圖元件。這些元件可以如何與對方溝通的詳細資訊，請參閱應用程式外掛程式。
+本指南說明如何將嵌入在一個較大的 iOS 應用程式內的科爾多瓦啟用 web 視圖元件。這些元件可以如何與對方溝通的詳細資訊，請參閱應用程式外掛程式。
 
 支援的 iOS WebViews 開始與科爾多瓦版本 1.4，使用 `Cleaver` 的 Xcode 範本用作參考實現的元件。 科爾多瓦 2.0 及更高版本僅支援基於子專案的刀實施。
 
@@ -56,16 +56,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 14. 選擇**+**按鈕，然後添加下列**框架**。 （可選） 在**導航專案**內, 移動它們**框架**組下：
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. 擴展**目標的依賴關係**，與該標籤，如果有多個框頂部的框。

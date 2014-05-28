@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 초기 릴리스
 
-코르 도우 바에서 우분투 플랫폼 지원의 초기 릴리스 오신 것을 환영 합니다. 이 릴리스와 함께, 초점은 우분투 시스템에서 개발 하 고 코르 도우 바 웹 프로젝트 개발 워크플로 사용 하 여. 우분투 플랫폼 프로젝트, 표준 코르도바 플러그인을 추가 하 고, 물론, 빌드하고 실행 우분투 플랫폼을 위한 애플 리 케이 션을 추가 포함 됩니다.
+코르 도우 바에서 우분투 플랫폼 지원의 초기 릴리스 오신 것을 환영 합니다. 이 릴리스와 함께, 초점은 우분투 시스템에서 개발 하 고 개요에서 설명 하는 교차 플랫폼 워크플로우를 사용 하 여. 우분투 플랫폼 프로젝트, 표준 코르도바 플러그인을 추가 하 고 빌드 및 실행 우분투 플랫폼을 위한 애플 리 케이 션을 추가 포함 됩니다.
 
 ### 우분투 SDK
 
@@ -28,7 +28,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### 우분투 런타임 플랫폼
 
-우분투의 데스크탑 환경 (노트북, Pc와 같은)에 대 한 잘 알려져 있습니다. 우분투 터치 휴대폰 및 정제에 우분투 운영 체제를 확장합니다. 우분투 런타임 플랫폼에는 다양 한 CPU 아키텍처 (x86, armhf, 등.). 애플 리 케이 션 및 플러그인 코드는 적절 하 게 컴파일해야 합니다. 이 광범위 한 영역에 대 한 지원을 우분투에서 급속 하 게 진화 하.
+우분투의 데스크탑 환경 (노트북, Pc와 같은)으로 잘 알려져 있다. 우분투 터치 휴대폰 및 정제에 우분투 운영 체제를 확장합니다. 우분투 런타임 플랫폼에는 다양 한 CPU 아키텍처 (x86, armhf, 등.). 애플 리 케이 션 및 플러그인 코드는 적절 하 게 컴파일해야 합니다. 이 광범위 한 영역에 대 한 지원을 우분투에서 급속 하 게 진화 하.
 
 ### 최신 정보
 
@@ -61,12 +61,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### 프로젝트 만들기
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+응용 프로그램을 만듭니다를 `hello` 디렉터리 표시 이름이 `HelloWorld` :
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### 프로젝트 디렉토리로 이동
 
-    $ cd project1
+    $ cd hello
     
 
 ### 우분투 플랫폼 추가

@@ -20,43 +20,117 @@ In questa sezione viene illustrato come configurare un'app icona e schermata ini
 
 ## Configurazione di icone nella CLI
 
-Quando si lavora nella CLI, icona di file di origine si trovano all'interno di varie sottodirectory specifiche della piattaforma nell'ambito del progetto `www/res/icons` directory. Appena creati progetti nascono con un insieme predefinito di Cordova icone consente di sostituire per le piattaforme che si desidera fare riferimento.
+Quando funziona il CLI si può definire icone di app tramite `<icon>` elemento ( `config.xml` ). Se non si specifica un'icona viene utilizzato il logo Apache Cordova.
 
-Android specifica icone di basse, medie, alte e altissima risoluzione:
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-La piattaforma iOS specifica icone 72-pixel quadrati per iPad e 57-pixel icone per iPhone e iPod, con alta risoluzione *x 2* varianti per retina vengono visualizzati:
+src: (obbligatorio) specifica il percorso del file immagine, relativo alla vostra directory www
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+piattaforma: la piattaforma di destinazione (facoltativo)
+
+larghezza: larghezza di icona (opzionale) in pixel
+
+altezza: altezza (opzionale) icona in pixel
+
+densità: androide (opzionale) specifica, specifica icona densità
+
+Possibile utilizzare la configurazione seguente per definire l'icona di default unico che sarà utilizzato per tutte le piattaforme.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone specifica un'icona predefinita di 48 pixel, insieme a sfondo vari dispositivi affiancamento immagini utilizzate quando che rappresentano le applicazioni:
+Per ogni piattaforma è inoltre possibile definire un icone pixel-perfect set per adattarsi a diverse risoluzioni dello schermo.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+Amazon fuoco OS
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-BlackBerry 10 richiede un elemento icona nel file config. xml:
+Android
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Vedere la documentazione di BlackBerry per tareting più dimensioni e impostazioni internazionali.
+Blackberry10
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
+    
 
-Tizen richiede un'icona di 128 pixel:
+Vedere la documentazione di BlackBerry per il targeting più dimensioni e impostazioni internazionali. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-        tizen/icon-128.png
+Firefox OS
+
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
     
 
 ## Configurazione schermate iniziali in CLI
@@ -110,43 +184,22 @@ Dovrebbe essere la dimensione per ciascuno:
 *   medio (mdpi): almeno 470 × 320
 *   piccolo (ldpi): almeno 426 × 320
 
-Se si desidera utilizzare le immagini di schermo splash predefinito fornite in Cordova, è necessario copiare i file png da `platforms/android/www/res/screen/android` a `platforms/android/res/drawable*/` :
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-    
-
-Il `drawable` i nomi di directory devono seguire le convenzioni di Android per supportare [formati di schermo][2] e [risorse alternative][3].
+Quando si crea un nuovo progetto di Android, la schermata iniziale predefinita immagini fornite nel Cordova campione app dovrebbe essere già presente nel `platforms/android/res/drawable*` directory. Sentitevi liberi di sostituire questi con le tue immagini. Quando fornendo il proprio splash immagini dello schermo, non è necessario fornire la stessa permutazione di 8 come Cordova quelli di default qui. Più o meno ottimizzazione può essere utilizzato. Il `drawable` i nomi di directory devono seguire le convenzioni di Android per supportare [formati di schermo][2] e [risorse alternative][3].
 
  [2]: http://developer.android.com/guide/practices/screens_support.html
  [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
 
-In `config.xml` , aggiungere le seguenti preferenze:
+Nel primo livello `config.xml` file (non quello di `platforms` ), aggiungere le seguenti preferenze:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
     
 
-La prima riga imposta l'immagine da visualizzare come schermata iniziale. Questo è il nome del file dei png nella `drawable*` directory. Se è il nome dell'immagine niente altro che `splash.png` , è necessario modificare questa linea. Non includere l'estensione del file (cioè, `.png` ). Se si desidera utilizzare le schermate iniziali predefinito fornite in Cordova come elencato sopra, utilizzare il valore`screen`.
+La prima riga imposta l'immagine da visualizzare come schermata iniziale. Questo è il nome del file dei png nella `drawable*` directory, meno il `.png` estensione. Il valore predefinito di SplashScreen è `screen` (per il file `platforms/android/res/drawable*/screen.png` ), così se è il nome dell'immagine niente altro che `screen.png` nel `drawable*` directory, è necessario aggiungere/modificare questa riga.
 
-La seconda riga imposta il ritardo predefinito di quanto tempo lo splashscreen appare in millisecondi. Questo dovrebbe essere il tempo massimo previsto inizio. Il valore predefinito per SplashScreenDelay è 3000 ms.
+La seconda riga imposta il ritardo predefinito di quanto tempo lo splashscreen appare in millisecondi. Questo dovrebbe essere il tempo peggiore inizio previsto. Il valore predefinito per SplashScreenDelay è 3000 ms.
 
-Infine, la schermata iniziale dovrebbe essere presente solo tempo necessario. Quando ha iniziato l'app e webview ha caricato, l'app deve nascondere la schermata iniziale affinché il vostro punto di vista principale è visibile. Perché il tempo di avvio di app variano un po a causa di una serie di fattori, si raccomanda che l'app richiama esplicitamente `navigator.splashscreen.hide()` nel metodo Javascript che risponde alla `deviceready` evento. Altrimenti la schermata iniziale sarà visibile per il valore di SplashScreenDelay che configurato in precedenza. Questo approccio basato sugli eventi è altamente raccomandato contro avendo la schermata visibile per sempre una durata fissa.
+Infine, come best practice, la schermata iniziale dovrebbe essere presente solo tempo necessario. Quando ha iniziato l'app e webview ha caricato, l'app deve nascondere la schermata iniziale affinché il vostro punto di vista principale è visibile, non appena è pronto. Perché il tempo di avvio di app variano un po a causa di una serie di fattori quali la velocità della CPU e della rete, è consigliabile che l'app richiama esplicitamente `navigator.splashscreen.hide()` nel metodo JavaScript che risponde alla `deviceready` evento. Altrimenti la schermata iniziale sarà visibile per il valore di SplashScreenDelay che configurato in precedenza, che è probabilmente più del necessario. Questo approccio basato sugli eventi è altamente raccomandato contro avendo la schermata visibile per sempre una durata fissa.
 
 ## Schermate iniziali per la piattaforma iOS
 

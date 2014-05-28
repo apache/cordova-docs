@@ -67,7 +67,7 @@ Autres paramètres :
 *   `--www`par défaut, du projet `www` emplacement du dossier, mais peut être n'importe quel répertoire qui doit être utilisé comme patrimoine de cordova projet applicatif web.
 *   `--variable`permet de spécifier certaines variables au moment de l'installation, nécessaire pour certains plugins, exigeant que les clés de l'API ou d'autres paramètres personnalisés, définis par l'utilisateur. Veuillez consulter la [spécification de plugin][4] pour plus d'informations.
 
- [4]: plugin_spec.md
+ [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
 ## Supprimer un Plugin
 

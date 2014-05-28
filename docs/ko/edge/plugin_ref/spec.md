@@ -156,7 +156,8 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     어디 파일 또는 디렉터리에에서 있어야 코르도바 애플 리 케이 션, 상대적으로 `www` 디렉터리. 자산 하위 디렉터리, 예를 들어 대상 될 수 있습니다.
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     만듭니다는 `js/experimental` 내의 디렉토리는 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` 파일 및 그것의 이름을 바꾸고 `foo.js` . 파일이 대상 위치에 이미 있으면 plugman 중지 하 고 설치 프로세스를 취소, 충돌에 대 한 알림을 고 0이 아닌 코드와 함께 종료 됩니다.
 
@@ -187,7 +188,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이벤트 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
     
-    *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스 될 수 있습니다`cordova.require`.
+    *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스할 수 있습니다`cordova.require`.
 
 만약 `src` plugman 중지 및 설치 반대, 문제, 알림 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
 
@@ -370,11 +371,14 @@ XML에 대 한 예제:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 `src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
 
 옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
+
+옵션 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 값입니다 (따라서 아니에요 시스템 프레임 워크). 기본값은`false`.
 
 ## *정보* 요소
 
@@ -383,10 +387,7 @@ XML에 대 한 예제:
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    'Local.properties'에 다음 줄을 추가 해야: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 정보 >
     
 
 ## 변수
@@ -403,7 +404,7 @@ XML에 대 한 예제:
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 지정된 된 값 또는 빈 문자열을 변수 참조를 대체 하는 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
+plugman 지정된 된 값 또는 빈 문자열에 변수 참조를 바꿉니다 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
 
 plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청할 수 있습니다. 예를 들어 명령줄 인수로 C2M 및 구글 맵 스 API 키를 지정할 수 있습니다.
 

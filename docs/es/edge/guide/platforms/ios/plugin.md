@@ -24,7 +24,7 @@ Un plugin de iOS se implementa como una clase de Objective-C que se extiende la 
 
 La porción de JavaScript de un plugin utiliza el `cordova.exec` método de la siguiente manera:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < service >, < acción > [< args >]);
     
 
 Esto mariscales una solicitud de la `UIWebView` al lado nativo iOS, efectivamente llamando el `action` método de la `service` clase, con los argumentos pasados en la `args` matriz.
@@ -166,7 +166,7 @@ Plugin métodos normalmente se ejecutan en el mismo subproceso como la interfaz 
 
 ## Depuración de iOS Plugins
 
-Para depurar en el lado de Objective-C, necesitas a depurador incorporado de Xcode. Para JavaScript, en iOS 5,0 puede utilizar [Weinre, un proyecto de Cordova Apache][3] o [iWebInspector, una utilidad de terceros][4]. Para iOS 6, puede adjuntar a su aplicación ejecuta dentro del iOS 6 simulador Safari 6.0.
+Para depurar en el lado de Objective-C, necesitas a depurador incorporado de Xcode. Para JavaScript, en iOS 5,0 puede utilizar [Weinre, un proyecto de Cordova Apache][3] o [iWebInspector, una utilidad de terceros][4]. Para iOS 6, puede adjuntar a la aplicación que se ejecuta dentro del iOS 6 simulador Safari 6.0.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

@@ -114,15 +114,15 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
 
 ## iOS cambios en 3.1.0
 
-Antes de la versión 3.1.0, Cordova-iOS incluyó algunas extensiones no estándares al dominio whitelisting esquema apoyado por otras plataformas de Cordova. A partir de 3.1.0, la lista blanca de iOS ahora se ajusta a la sintaxis de lista blanca de recursos descrita en la parte superior de este documento. Si actualiza desde pre-3.1.0 y usaban estas extensiones, tienes que cambiar tu `config.xml` archivo para continuar whitelisting el mismo conjunto de recursos como antes.
+Antes de la versión 3.1.0, Cordova-iOS incluyó algunas extensiones no estándares para el dominio whilelisting esquema apoyado por otras plataformas de Córdoba. A partir de 3.1.0, la lista blanca de iOS ahora se ajusta a la sintaxis de lista blanca de recursos descrita en la parte superior de este documento. Si actualiza desde pre-3.1.0 y usaban estas extensiones, tienes que cambiar el `config.xml` archivo para continuar whitelisting el mismo conjunto de recursos como antes.
 
 Específicamente, estos patrones necesitan ser actualizados:
 
-*   `apache.org`(ningún protocolo): anteriormente esto coincidiría con `http` , `https` , `ftp` , y `ftps` los protocolos. Cambiar a " `*://apache.org/*` " para incluir todos los protocolos, o incluir una línea para cada protocolo que necesitas ayuda.
+*   " `apache.org` " (sin protocolo): anteriormente esto coincidiría con `http` , `https` , `ftp` , y `ftps` los protocolos. Cambiar a " `*://apache.org/*` " para incluir todos los protocolos, o incluir una línea para cada protocolo que necesitas ayuda.
 
-*   `http://apache.*`(wildcard en el final del dominio): anteriormente esto coincidiría con todos top-level-dominios, incluyendo toda posibles TLDs de dos letras (pero no útiles dominios como. co.uk). Incluir una línea para cada TLD que usted realmente controla y necesita a la lista blanca.
+*   " `http://apache.*` " (wildcard en el final del dominio): anteriormente esto coincidiría con todos top-level-dominios, incluyendo toda posibles TLDs de dos letras (pero no útiles dominios como. co.uk). Incluir una línea para cada TLD que usted realmente controla y necesita a la lista blanca.
 
-*   `h*t*://ap*he.o*g`(caracteres comodín para las letras faltantes al azar): estos ya no son compatibles; cambiar para incluir una línea para cada dominio y protocolo que en realidad necesita a la lista blanca.
+*   " `h*t*://ap*he.o*g` " (comodines para letras faltantes al azar): estos ya no son soportados; cambio para incluir una línea para cada dominio y protocolo que en realidad necesita a la lista blanca.
 
 ## Lista blanca de Windows Phone
 
