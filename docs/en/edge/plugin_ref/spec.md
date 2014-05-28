@@ -513,6 +513,7 @@ Examples:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
 
 The `src` attribute identifies the framework, which plugman attempts
 to add to the Cordova project, in the correct fashion for a given
@@ -522,6 +523,8 @@ The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
 The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.
+
+The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is supported and only on Windows 8.  Using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
 
 ## _info_ Element
 
