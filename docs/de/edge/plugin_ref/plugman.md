@@ -16,17 +16,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Plugins verwalten mithilfe Plugman
 
-Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins. Die erste ist mithilfe der `cordova` CLI in der Command-Line Interface beschrieben. Die zweite ist die Verwendung einer Low-Level- [Plugman][1] -Befehlszeilenschnittstelle ("Native Plattform Dev" Workflow.) Der Hauptunterschied zwischen diesen zwei Entwicklungswege ist, dass Plugman Plugins nur an einer Plattform zu einem Zeitpunkt hinzufügen kann, während die CLI Plugins alle Plattformen hinzufügt, die Sie abzielen. Aus diesem Grund ist es sinnvoller, Plugman zu verwenden, wenn Sie eng mit einer einzigen Plattform, daher der "Native Plattform Dev" Name des Workflows arbeiten.
+Ab Version 3.0 ff. Cordova implementiert alle Gerät APIs als Plugins und lässt sie standardmäßig deaktiviert. Es unterstützt auch zwei Möglichkeiten zum Hinzufügen und Entfernen von Plugins, je nach verwendeter Workflow diskutiert in der Übersicht:
+
+*   Wenn Sie einen Cross-Plattform-Workflow verwenden, verwenden Sie die `cordova` CLI-Hilfsprogramm, Plugins, hinzufügen, wie in der Command-Line Interface beschrieben. Die CLI ändert Plugins für alle angegebenen Plattformen gleichzeitig.
+
+*   Wenn Sie einen Workflow Plattform-zentrierte verwenden, verwenden Sie eine Low-Level- [Plugman][1] -Befehlszeilen-Schnittstelle, separat für jede Zielplattform.
 
  [1]: https://github.com/apache/cordova-plugman/
 
-Weitere Informationen über Plugman vor allem, wenn Sie verbrauchen Plugman als Knoten Modul oder auf dem Plugman-Code hacking interessiert sind, finden Sie in [der README-Datei im repository][2].
+Dieser Abschnitt erläutert das Plugman-Dienstprogramm. Weitere Informationen zu konsumieren Plugman als Knoten Modul oder den Quellcode ändern finden Sie in [der README-Datei im repository][2].
 
  [2]: https://github.com/apache/cordova-plugman/blob/master/README.md
 
 ## Installation von Plugman
 
-Um Plugman zu installieren, müssen Sie die [Knoten][3] , die auf Ihrem Computer installiert haben. Dann die folgenden ausführen Befehl an einer beliebigen Stelle in Ihrer Umgebung Plugman weltweit so installieren, dass es von einem beliebigen Verzeichnis auf Ihrem Rechner verfügbar ist:
+Um Plugman zu installieren, müssen Sie die [Knoten][3] , die auf Ihrem Computer installiert haben. Dann die folgenden ausführen Befehl an einer beliebigen Stelle in Ihrer Umgebung Plugman weltweit so installieren, dass es von einem beliebigen Verzeichnis gibt es:
 
  [3]: http://nodejs.org/
 
@@ -35,9 +39,10 @@ Um Plugman zu installieren, müssen Sie die [Knoten][3] , die auf Ihrem Computer
 
 Haben außerdem muss `git` auf Ihre `PATH` um Plugins direkt aus entfernten Git URLs zu installieren zu können.
 
-**Tipp:** Wenn Sie feststellen, dass nach der Installation von Plugman mit Npm Sie noch nicht in der Lage sind, alle `plugman` Befehle, stellen Sie sicher, dass Sie hinzugefügt haben die `/npm/` Verzeichnis in Ihrer`PATH`.
+**Tipp**: Wenn Sie, dass feststellen nach der Installation von Plugman mit `npm` Sie sind noch nicht alle `plugman` Befehle, stellen Sie sicher, dass Sie hinzugefügt haben die `/npm/` Verzeichnis in Ihrem`PATH`.
 
-**Hinweis:** Sie können diesen Schritt überspringen, wenn Sie nicht, um Ihre globalen Npm-Namespace verschmutzen durch die Installation von Plugman weltweit möchten. Wenn dies ist der Fall, wenn Sie ein Cordova-Projekt mit der Shell-Werkzeugen erstellen, gibt es ein `node_modules` Verzeichnis innerhalb des Projekts die Plugman enthält. Da du nicht instally Global hast, Sie müssen Knoten für jeden Plugman-Befehl aufrufen, z. B. `node ./node_modules/plugman/main.js -version` . Der Rest dieser Anleitung wird angenommen, dass Sie Plugman weltweit installiert haben was bedeutet, dass Sie es mit nur aufrufen können`plugman`.
+**Hinweis**: Sie können diesen Schritt überspringen, wenn Sie nicht, um Ihre globalen verschmutzen möchten `npm` Namespace durch die Installation von Plugman weltweit. Wenn dies ist der Fall, wenn Sie ein Cordova-Projekt mit der Shell-Werkzeugen erstellen, gibt es ein `node_modules` Verzeichnis innerhalb des Projekts die Plugman enthält. Da Sie nicht global installiert haben, müssen Sie aufrufen `node` für jeden Plugman-Befehl, zum Beispiel `node
+./node_modules/plugman/main.js -version` . Der Rest dieser Anleitung wird angenommen, dass Sie Plugman weltweit installiert haben was bedeutet, dass Sie es mit nur aufrufen können`plugman`.
 
 ## Erstellen Sie ein Projekt von Cordova
 
@@ -62,7 +67,7 @@ Weitere Parameter:
 *   `--www`der Standardwert ist des Projekts `www` Ordnerspeicherort, kann jedoch jedes Verzeichnis, das als Cordova Projekt Anwendung Web Vermögenswerte verwendet werden.
 *   `--variable`ermöglicht es, bestimmte Variablen zum Zeitpunkt der Installation notwendig für bestimmte Plugins, die die API-Schlüssel oder andere benutzerdefinierte, benutzerdefinierte Parameter angeben. Finden Sie die [Plugin-Spezifikation][4] für weitere Informationen.
 
- [4]: plugin_spec.md
+ [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
 ## Eine Plugin zu entfernen
 

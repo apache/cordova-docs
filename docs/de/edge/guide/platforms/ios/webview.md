@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS Webansichten für
 
-In diesem Abschnitt veranschaulicht, wie eine Cordova-fähigen WebView Komponente innerhalb einer größeren iOS-Anwendung einbetten. Details darüber, wie diese Komponenten miteinander kommunizieren können finden Sie unter Application Plugins.
+Diese Anleitung zeigt, wie eine Cordova-fähigen WebView Komponente innerhalb einer größeren iOS-Anwendung einbetten. Details darüber, wie diese Komponenten miteinander kommunizieren können finden Sie unter Application Plugins.
 
 Unterstützung für iOS Webansichten für begann mit Cordova Version 1.4, mit einer `Cleaver` Komponente, für die die Xcode-Vorlage als Referenzimplementierung dient. Cordova 2.0 und höheren Versionen unterstützen nur die Teilprojekt-basierte Cleaver-Implementierung.
 
@@ -56,16 +56,10 @@ Um diese Anweisungen befolgen, stellen Sie sicher, dass Sie die neueste Cordova-
 
 14. Wählen Sie das **+** Schaltfläche, und fügen Sie folgende **Rahmenbedingungen**. Optional in der **Projekt-Navigator**verschieben Sie unter der **Frameworks** -Gruppe:
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. **Ziel Abhängigkeiten**, das obere Feld mit diesem Label ist mehr als ein Feld zu erweitern.

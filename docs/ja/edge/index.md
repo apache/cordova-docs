@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         概要
       </h2>
       
-      <span>コルドバに新しければ、ここから始めてください。</span>
+      <span>コルドバに新しければ、ここから始めてください。インストールと次のステップが含まれています。</span>
     </li>
     <li>
       <h2>
@@ -46,21 +46,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         プラットフォームのガイド
       </h2>
       
-      <span>各 SDK の更新プロジェクトを設定します。</span>
+      <span>各プラットフォーム SDK を設定し、プロジェクトを更新します。</span>
     </li>
     <li>
       <h2>
         Plugman を使用してプラグインを管理するには
       </h2>
       
-      <span>Plugman を使用して cli をプラグインを管理するには</span>
+      <span>プラットフォームを中心としたワークフローを使用する場合、cli をプラグインを管理します。</span>
     </li>
     <li>
       <h2>
-        The config.xml File
+        Config.xml ファイル
       </h2>
       
-      <span>Customize the app's features.</span>
+      <span>アプリの機能をカスタマイズします。</span>
     </li>
     <li>
       <h2>
@@ -74,14 +74,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         埋め込み web 表示
       </h2>
       
-      <span>あなたのプロジェクトにコルドバ WebView を実装します。</span>
+      <span>コルドバ WebView をネイティブ プロジェクトで実装します。</span>
     </li>
     <li>
       <h2>
         プラグイン開発ガイド
       </h2>
       
-      <span>あなたの最初のプラグインを開発します。</span>
+      <span>独自のプラグインを開発します。</span>
     </li>
     <li>
       <h2>
@@ -89,6 +89,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>重要なモバイル プライバシーの問題について説明します。</span>
+    </li>
+    <li>
+      <h2>
+        セキュリティ ガイド
+      </h2>
+      
+      <span>情報および安全なアプリケーションを構築するためのヒント。</span>
     </li>
     <li>
       <h2>
@@ -103,6 +110,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>ネイティブのストレージ オプションの概要です。</span>
+    </li>
+    <li>
+      <h2>
+        次のステップ
+      </h2>
+      
+      <span>コルドバの新しい開発者が遭遇するトピックを見て。</span>
     </li>
     <li>
       <h2>
@@ -130,7 +144,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         プラグイン Api
       </h2>
       
-      <span>どのようなプラグイン コルドバはプロジェクトで使用する利用可能な発見します。</span>
+      <span>発見コルドバ プラグインは、プロジェクトで使用できます。</span>
     </li>
   </ul>
 </div>

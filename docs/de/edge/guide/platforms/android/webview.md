@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android Webansichten für
 
-In diesem Abschnitt veranschaulicht, wie eine Cordova-fähigen WebView Komponente innerhalb einer größeren Android Anwendung einbetten. Details darüber, wie diese Komponenten miteinander kommunizieren können finden Sie unter Application Plugins.
+Diese Anleitung zeigt, wie eine Cordova-fähigen WebView Komponente innerhalb einer größeren Android Anwendung einbetten. Details darüber, wie diese Komponenten miteinander kommunizieren können finden Sie unter Application Plugins.
 
 Wenn Sie mit Android nicht vertraut sind, sollten Sie zunächst machen Sie sich vertraut mit der Android-Plattform-Guide und haben die neuesten Android SDK installiert, bevor Sie versuchen die ungewöhnlicheren Entwicklungsoption einen WebView-Einbettung. Beginnend mit Cordova 1,9, die Android-Plattform setzt auf eine `CordovaWebView` -Komponente, die auf ein Vermächtnis baut `CordovaActivity` Komponente, die vor der 1.9 Version stammt.
 

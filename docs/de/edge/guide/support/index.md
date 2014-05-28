@@ -9,7 +9,9 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 # Plattformunterstützung
 
-Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät für jede mobile Plattform. (Spaltenüberschriften angezeigt die CLI Kurzschrift gestorben.)
+Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät für jede mobile Plattform. Das Gerät, das APIs hier aufgelistet werden bereitgestellt von Core-Plugins, zusätzliche APIs über [Drittanbieter Plug-ins][1]verfügbar sind. Spaltenüberschriften die CLI Stenographie Namen angezeigt.
+
+ [1]: http://plugins.cordova.io
 
 <!-- START HTML -->
 
@@ -26,6 +28,10 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <th>
         <tt>blackberry10</tt>
+      </th>
+      
+      <th>
+        <tt>Firefox OS</tt>
       </th>
       
       <th>
@@ -71,6 +77,10 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
           Mac, Windows
         </td>
         
+        <td data-col="firefoxos" class="y">
+          Mac, Windows, Linux
+        </td>
+        
         <td data-col="ios"        class="y">
           Mac
         </td>
@@ -89,8 +99,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -112,6 +120,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="blackberry10" class="n">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_platforms_ios_webview.md.html">(siehe Details)</a>
         </td>
@@ -127,8 +138,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="n">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -151,6 +160,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
           <a href="guide_guide_platforms_blackberry10_plugin.md.html">(siehe Details)</a>
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
           <a href="guide_guide_platforms_ios_plugin.md.html">(siehe Details)</a>
         </td>
@@ -169,8 +181,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
@@ -186,7 +196,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_accelerometer_accelerometer.md.html">Beschleunigungsmesser</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">Beschleunigungsmesser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -196,6 +206,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -213,15 +226,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_camera_camera.md.html">Kamera</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Kamera</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -231,6 +242,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -248,15 +262,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_capture_capture.md.html">Erfassen</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">Erfassen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -266,6 +278,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -283,15 +298,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_compass_compass.md.html">Kompass</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">Kompass</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -301,6 +314,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -319,15 +335,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_connection_connection.md.html">Verbindung</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">Verbindung</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -337,6 +351,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -354,15 +371,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_contacts_contacts.md.html">Kontakte</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">Kontakte</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -372,6 +387,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -389,15 +407,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_device_device.md.html">Gerät</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">Gerät</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -407,6 +423,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -423,8 +442,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -444,6 +461,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -459,15 +479,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_file_file.md.html">Datei</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">Datei</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -479,6 +497,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -493,8 +514,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -502,7 +521,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_geolocation_geolocation.md.html">Geolocation</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">Geolocation</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -512,6 +531,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
         </td>
         
         <td data-col="ios"        class="y">
@@ -529,15 +551,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="y">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_globalization_globalization.md.html">Globalisierung</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">Globalisierung</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -547,6 +567,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="n">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -564,15 +587,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="n">
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_inappbrowser_inappbrowser.md.html">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -582,6 +603,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -600,15 +624,13 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
           Iframe verwendet
         </td>
         
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
-        
         <td data-col="tizen"       class="n">
         </td>
       </tr>
       
       <tr>
         <th>
-          <a href="cordova_media_media.md.html">Medien</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">Medien</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -618,6 +640,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -634,8 +659,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -643,7 +666,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_notification_notification.md.html">Benachrichtigung</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">Benachrichtigung</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -653,6 +676,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -669,8 +695,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>
@@ -678,7 +702,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
-          <a href="cordova_splashscreen_splashscreen.md.html">SplashScreen</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">SplashScreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -688,6 +712,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
@@ -704,8 +731,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         
         <td data-col="win8"       class="y">
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="n">
         </td>
@@ -725,6 +750,9 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="blackberry10" class="y">
         </td>
         
+        <td data-col="firefoxos" class="n">
+        </td>
+        
         <td data-col="ios"        class="y">
         </td>
         
@@ -742,8 +770,6 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="win8"       class="y">
           LocalStorage & indexedDB
         </td>
-        
-        <!--        <td data-col="firefoxos"  class="n"></td> -->
         
         <td data-col="tizen"       class="y">
         </td>

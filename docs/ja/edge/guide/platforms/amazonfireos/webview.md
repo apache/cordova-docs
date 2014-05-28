@@ -16,11 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # アマゾン火 OS web 表示
 
-3.0.0 以降、コルドバ アマゾン火 OS アプリケーションでコンポーネントとして使用できます。 アマゾン火 OS としてこのコンポーネントを指します `CordovaWebView` 。 `CordovaWebView`オープン ソース クロム プロジェクトに組み込まれているアマゾン WebView を拡張します。 この機能を活用してあなたの web アプリは現代のウェブ ランタイム エンジンで実行される最新の HTML5 web 標準を利用できます。
+3.3.0 以降、コルドバ アマゾン火 OS アプリケーションでコンポーネントとして使用できます。 アマゾン火 OS としてこのコンポーネントを指します `CordovaWebView` 。 `CordovaWebView`オープン ソース クロム プロジェクトに組み込まれているアマゾン WebView を拡張します。 この機能を活用してあなたの web アプリは現代のウェブ ランタイム エンジンで実行される最新の HTML5 web 標準を利用できます。
+
+アマゾン火 OS に精通している場合は、おく必要があります最初アマゾン火 OS プラットフォーム ガイドとは、WebView を埋め込みのより珍しい開発オプションを実行する前に、最新の Sdk でインストールしました。
 
 ## 前提条件
 
-*   コルドバ 3.0.0 以上
+*   コルドバ 3.3.0 以上
 
 *   最新の SDK を更新 android SDK
 
@@ -28,11 +30,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## アマゾン火 OS プロジェクトで CordovaWebView の使用へのガイドします。
 
-1.  ダウンロード[アマゾン WebView SDK][1]を展開しに awv_interface.jar をコピー `/framework/libs` ディレクトリ。 ライブラリを作成する/フォルダーが存在しない場合。
+1.  これらの指示に従う、最新コルドバ分布があることを確認します。[Cordova.apache.org][1]からダウンロードし、そのアマゾン火 OS パッケージを解凍します。
 
-2.  `cd``/framework`を実行 `ant jar` コルドバの jar を構築します。 として形成された .jar ファイルを作成します `cordova-x.x.x.jar` で、 `/framework` ディレクトリ。
+2.  ダウンロード[アマゾン WebView SDK][2]を展開しに awv_interface.jar をコピー `/framework/libs` ディレクトリ。 ライブラリを作成する/フォルダーが存在しない場合。
 
-3.  編集アプリケーションの `main.xml` ファイル （下 `/res/layout` ) と、次のように、 `layout_height` 、 `layout_width` 、 `id` 、アプリケーションに合わせて変更します。
+3.  パッケージに移動 `/framework` ディレクトリと実行 `ant jar` 。Cordova が作成されます `.jar` として形成されたファイル`/framework/cordova-x.x.x.jar`.
+
+4.  コピー、 `.jar` Android プロジェクトにファイル `/libs` ディレクトリ。
+
+5.  次に、アプリケーションの追加 `/res/xml/main.xml` ファイルと、 `layout_height` 、 `layout_width` と `id` 、アプリケーションに合うように変更します。
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +46,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
+6.  あなたの活動を変更して、それを実装する、 `CordovaInterface` 。 含まれているメソッドを実装する必要があります。 それらをコピーすることができます `/framework/src/org/apache/cordova/CordovaActivity.java` 、または独自に実装します。 インターフェイスを使用して、基本的なアプリケーションを次のコード片に示します。 参照先のビュー id と一致する方法に注意してください、 `id` 上記のように XML フラグメントで指定された属性。
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,7 +61,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
- [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [1]: http://cordova.apache.org
+ [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
 カメラを使用する場合もこれを実装する必要があります。
 
@@ -103,7 +110,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         }
     
 
-最後に、スレッド プールを追加してください、それ以外の場合、プラグインには上で実行するスレッドはありません。
+最後に、スレッド プールを追加してください、それ以外の場合、プラグインしているスレッド上で実行します。
 
         @Override
         public ExecutorService getThreadPool() {

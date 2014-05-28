@@ -1,6 +1,6 @@
 ---
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,7 +28,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin\update <project_path>
+        bin\update < project_path >
     
 
 ## 3.1.0 3.0.0 からアップグレードします。
@@ -41,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin\update <project_path>
+        bin\update < project_path >
     
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード
@@ -55,7 +55,7 @@ platform add wp7 wp8`.
 
 4.  コピーまたは元のプロジェクトから任意のネイティブの資産を上書き ( `SplashScreen` 、 `ApplicationIcon` 、等)、確かに新しいファイルを追加する、 `.csproj` ファイル。 携帯電話の窓の内部プロジェクトのビルド、 `platforms\wp7` または `platforms\wp8` ディレクトリ。
 
-5.  コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI 処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。
+5.  コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI が処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。
 
 6.  ビルドおよびテストします。
 
@@ -65,7 +65,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 3.0.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  コピーし、スプラッシュ スクリーンまたはアイコン イメージを上書きします。
 
@@ -81,7 +81,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.9.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  名前を更新 `cordova.js` それはまだコルドバ VERSION.js （する必要がありますだけを使用している場合、HTML タグで`cordova.js`).
 
@@ -97,7 +97,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.8.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova.js` ファイル。(ファイル名にバージョン番号の欠如を注意してください)。
 
@@ -113,7 +113,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.7.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.7.0.js` ファイル。
 
@@ -129,7 +129,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.6.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.6.0.js` ファイル。
 
@@ -145,7 +145,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.5.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.5.0.js` ファイル。
 
@@ -161,7 +161,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 WP8 2.4.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` ファイル。
 
@@ -177,7 +177,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 2.3.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` ファイル。
 
@@ -193,7 +193,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 2.2.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` ファイル。
 
@@ -209,7 +209,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  作成新しい Apache コルドバ WP7 2.1.0 プロジェクトします。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` ファイル。
 
@@ -227,7 +227,7 @@ Visual Studio のソリューション エクスプ ローラー ウィンドウ
 
 1.  新しい Apache コルドバ WP7 2.0 プロジェクトを作成します。
 
-2.  Copy the contents of the `www` directory to the new project, and be sure these items are added to the VS project.
+2.  内容をコピー、 `www` ディレクトリを新規プロジェクト対プロジェクトにこれらの項目を追加してください。
 
 3.  あなたの HTML を使用して、新しい更新 `cordova-2.0.0.js` ファイル。
 

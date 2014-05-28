@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Die Befehlszeilenschnittstelle
 
-Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow verwenden (siehe die Übersicht für eine Beschreibung der verschiedenen Workflows). Allerdings können Sie auch die CLI Projektcode, initialisiert werden, nach dem Sie verschiedene Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung verwenden.
+Diese Anleitung zeigt Ihnen, wie Anwendungen zu erstellen und auf verschiedene native mobile Plattformen mit Bereitstellen der `cordova` Befehlszeilenschnittstelle (CLI). Mit diesem Tool können Sie neue Projekte erstellen und bauen sie auf verschiedenen Plattformen laufen auf echten Geräten oder innerhalb von Emulatoren. Die CLI ist das wichtigste Hilfsmittel für die Cross-Plattform-Workflow in der Übersicht beschrieben verwenden. Ansonsten können Sie auch die CLI Projektcode zu initialisieren, dann wechseln Sie in die verschiedenen Plattformen SDKs und Shell-Hilfsmittel für die weitere Entwicklung.
 
 ## Voraussetzungen
 
@@ -26,7 +26,7 @@ Hinzufügen von Unterstützung oder ein Projekt für jede Plattform neu erstelle
 
 *   iOS (Mac)
 *   Amazon Fire Betriebssystem (Mac, Linux, Windows)
-*   Android (Mac, Linux)
+*   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
@@ -35,22 +35,46 @@ Hinzufügen von Unterstützung oder ein Projekt für jede Plattform neu erstelle
 
 Auf dem Mac ist die Befehlszeile über die *Terminal* -Anwendung verfügbar. Auf dem PC steht als *Eingabeaufforderung* unter *Zubehör*.
 
+**Hinweis**: für nur-Windows-Plattformen, noch kann Ihre Entwicklung auf Mac-Hardware unter Windows in einer virtuellen Umgebung oder im Dual-Boot-Modus. Verfügbaren Optionen finden Sie unter der Windows Phone Plattform Führungslinie oder der Windows 8-Plattform.
+
 Desto wahrscheinlicher ist es, dass die CLI von verschiedenen Maschinen ausführen, desto mehr macht es Sinn, einen entfernten Quellcode-Repository, deren Vermögen verwalten Sie zu lokalen Arbeitsverzeichnisse-down Pull.
+
+## Installieren der Cordova-CLI
+
+Das Befehlszeilentool Cordova ist als Npm-Paket in ein Ready-to-Use-Format verteilt. Es ist nicht notwendig, um es von Quellcode kompilieren.
 
 Installieren der `cordova` Command-line tool, gehen Sie folgendermaßen vor:
 
-1.  Downloaden und Installieren von [Node.js][1]. Nach der Installation sollte man in der Lage sein, rufen Sie `node` oder `npm` auf der Befehlszeile.
+1.  Downloaden und Installieren von [Node.js][1]. Nach der Installation sollte man in der Lage, rufen Sie `node` und `npm` auf der Befehlszeile. Falls gewünscht, optional verwenden Sie ein Tool wie `nvm` oder `nave` , Ihre Node.js-Installation zu verwalten.
 
-2.  Installieren der `cordova` Dienstprogramm. Unter Unix voranstellen der zusätzliche `sudo` Befehl möglicherweise erforderlich, installieren Sie die Programme zur Softwareentwicklung in sonst eingeschränkt Verzeichnisse:
-    
-        $ sudo npm install -g cordova
-        
-    
-    Das Installationsprotokoll kann Fehler für alle deinstallierten Platform SDKs erzeugen. Nach der Installation sollte man laufen `cordova` in der Befehlszeile.
-    
-    **Hinweis**: die `-g` Flagge oben sagt Npm Cordova weltweit installieren. Sie müssen hinzufügen, dass das Npm-Verzeichnis auf Ihrem Pfad um Global aufzurufen Npm-Module installiert. Unter Windows, Npm in der Regel finden Sie unter `C:\Users\username\AppData\Roaming\npm` und unter Unix an`/usr/local/share/npm`.
+2.  Downloaden Sie und installieren Sie ein [Git-Client][2], wenn Sie nicht bereits ein haben. Nach der Installation sollte man in der Lage, rufen Sie `git` auf der Befehlszeile. Auch wenn Sie nicht verwenden `git` manuell, nutzt die CLI es hinter den Kulissen um einige Vermögenswerte herunterladen, wenn Sie ein neues Projekt zu erstellen.
+
+3.  Installieren der `cordova` Modul mit `npm` von Node.js-Dienstprogramm. Das `cordova` Modul wird automatisch heruntergeladen werden, indem die `npm` Dienstprogramm.
 
  [1]: http://nodejs.org/
+ [2]: http://git-scm.com/
+
+*   auf OS X und Linux:
+    
+            $ sudo npm install -g cordova
+        
+    
+    Auf OS X und Linux voranstellen der `npm` mit Befehl `sudo` kann erforderlich sein, um diese Entwicklung zu installieren-Dienstprogramm in andere Art eingeschränkt Verzeichnisse wie `/usr/local/share` . Wenn Sie für das Installationsverzeichnis Schreibrechte oder das optionale Nvm/Kirchenschiff-Tool verwenden, können Sie möglicherweise auslassen der `sudo` Präfix. Es gibt [Weitere Tipps][3] zur Verwendung von `npm` ohne `sudo` , wenn Sie das tun wollen.
+
+*   unter Windows:
+    
+            C:\>npm install -g cordova
+        
+    
+    Das `-g` Flag oben teilt `npm` Installieren `cordova` weltweit. Andernfalls wird es installiert werden, der `node_modules` Unterverzeichnis des aktuellen Arbeitsverzeichnis.
+    
+    Möglicherweise müssen Sie Hinzufügen der `npm` Verzeichnis in Ihrem `PATH` weltweit installierten Inanspruchnahme `npm` Module. Unter Windows `npm` in der Regel finden Sie unter `C:\Users\username\AppData\Roaming\npm` . Auf OS X und Linux kann es in der Regel bei gefunden werden`/usr/local/share/npm`.
+    
+    Das Installationsprotokoll kann Fehler für alle deinstallierten Platform SDKs erzeugen.
+    
+    Nach der Installation sollte man laufen `cordova` in der Befehlszeile keine Argumente und es sollte Hilfetext drucken.
+
+ [3]: http://justjs.com/posts/npm-link-developing-your-own-npm-modules-without-tears
 
 ## Erstellen Sie die App
 
@@ -110,7 +134,7 @@ Führen Sie einen der folgenden Synonym Befehle, eine Plattform zu entfernen:
 
 Ausführen Befehle hinzufügen oder Entfernen von Plattformen wirkt sich auf den Inhalt des Verzeichnis des Projekts *Plattformen* , wo jede angegebene Plattform als Unterverzeichnis angezeigt wird. Das *Www* -Quellverzeichnis wird wiedergegeben in jede Plattform-Unterverzeichnis, erscheinen zum Beispiel in `platforms/ios/www` oder `platforms/android/assets/www` . Da die CLI ständig über Dateien aus dem *Www* -Quellordner kopiert, sollten Sie nur diese Dateien und nicht diejenigen, die die *Plattformen* Unterverzeichnisse unterhalb bearbeiten. Wenn Sie Software für die Versionskontrolle verwenden, sollten Sie diese Quelle *Www* Ordner, zusammen mit Ordner *führt* zu Ihrem Versionsverwaltungssystem hinzufügen. (Weitere Informationen zum *verschmilzt* -Ordner finden Sie im Abschnitt Anpassen von jeder Plattform).
 
-**Warnung**: Wenn die CLI verwenden, um Ihre Anwendung zu erstellen, sind Sie dringend abgeraten von der Bearbeitung von Dateien mit in den `/platforms/` Ordner, wenn Sie wissen was Sie tun oder sind in der Dokumentation ausdrücklich anders gesagt. Dies liegt daran, die Dateien in die `/platforms/` Directory überschrieben werden weiter vorbereiten oder Plugin-Neuinstallation.
+**Warnung**: Wenn die CLI verwenden, um Ihre Anwendung zu erstellen, sollten Sie *nicht* bearbeiten, Dateien in, das `/platforms/` Verzeichnis, wenn Sie wissen, was du tust, oder wenn die Dokumentation nicht anders angegeben. Die Dateien in diesem Verzeichnis werden routinemäßig überschrieben, wenn Anwendungen für Gebäude vorbereiten oder Plugins installiert werden.
 
 Möchten Sie an dieser Stelle, können Sie eine SDK wie Eclipse oder Xcode verwenden, um das Projekt zu öffnen, die, das Sie erstellt. Sie müssen die abgeleitete Gruppe von Vermögenswerten aus öffnen die `/platforms/` Verzeichnis mit einem SDK entwickeln. Dies ist da die SDK-spezifische Metadaten-Dateien, innerhalb der entsprechenden gespeichert werden `/platform/` Unterverzeichnis. (Siehe die Plattform-Führer für Informationen zum Entwickeln von Anwendungen in jeder IDE.) Verwenden Sie diese Methode, wenn Sie möchten einfach Initialisieren eines Projekts mit der CLI und wechseln Sie dann zu einem SDK für native Arbeit.
 
@@ -147,19 +171,19 @@ SDKs für mobile Plattformen kommen oft mit Emulatoren, die ein Gerätebild ausg
 
 Einige mobilen Plattformen emulieren ein bestimmtes Gerät wie das iPhone für iOS-Projekte in der Standardeinstellung. Für die anderen Plattformen müssen Sie zuerst ein Gerät mit einem Emulator zuordnen.
 
-Hinweis: Emulator Unterstützung ist derzeit nicht für Amazon Fire OS
+**Hinweis**: Emulator Unterstützung ist derzeit nicht für Amazon Fire OS.
 
 (Siehe die Plattform-Führer für Details.) Beispielsweise Sie möglicherweise zunächst führen Sie den `android` Befehl zum Starten des Android SDK, dann führen Sie ein bestimmtes Gerät-Image, das es laut sein Standardverhalten startet:
 
-![][2]
+![][4]
 
- [2]: img/guide/cli/android_emulate_init.png
+ [4]: img/guide/cli/android_emulate_init.png
 
 Folgende oben mit den `cordova emulate` Befehl aktualisiert das Emulator-Bild, um die neueste Anwendung angezeigt, die jetzt für den Start aus dem home-Bildschirm vorhanden ist:
 
-![][3]
+![][5]
 
- [3]: img/guide/cli/android_emulate_install.png
+ [5]: img/guide/cli/android_emulate_install.png
 
 Alternativ können Sie schließen den Hörer an den Computer und testen die app direkt:
 
@@ -172,9 +196,10 @@ Bevor Sie diesen Befehl ausführen, müssen Sie das Gerät zum Testen einrichten
 
 Wenn Sie erstellen und eines neues Projekts anzeigen, nicht sehr viel die Standardanwendung, die angezeigt wird. Sie können ändern, die app in vielerlei Hinsicht zu standard-Web-Technologien nutzen, aber für die app eng mit verschiedenen Geräteebene Features zu kommunizieren, müssen Sie Plugins hinzufügen, die Zugriff auf Kern-Cordova-APIs.
 
-Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und Plugin Development Guide für Details.) Häufiger, fügen Sie eine Plugin um eine Cordovas Geräteebene Grundfunktionen in der API-Referenz detailliert aktivieren. Eine Liste dieser Plugins, einschließlich zusätzliche Plugins, die der Gemeinschaft kann bei [plugins.cordova.io][4]gefunden werden. Die CLI können Sie Plugins aus dieser Registrierung suchen. Z. B. Suche nach `bar` und `code` erzeugt ein einzelnes Ergebnis, die beide Begriffe als groß-und Kleinschreibung Teilzeichenfolgen entspricht:
+Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und [Plugin Development Guide][6] für Details.) Häufiger, fügen Sie eine Plugin um eine Cordovas Geräteebene Grundfunktionen in der API-Referenz detailliert aktivieren. Eine Liste dieser Plugins, einschließlich zusätzliche Drittanbieter Plug-ins der Gemeinschaft finden Sie in der Registrierung unter [plugins.cordova.io][7]. Die CLI können Sie Plugins aus dieser Registrierung suchen. Z. B. Suche nach `bar` und `code` erzeugt ein einzelnes Ergebnis, die beide Begriffe als groß-und Kleinschreibung Teilzeichenfolgen entspricht:
 
- [4]: http://plugins.cordova.io/
+ [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+ [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code
     
@@ -186,9 +211,7 @@ Nur bei der Suche nach der `bar` Erträge und weiteres Ergebnis:
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
     
 
-Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code angeben. Bitte beachten Sie, dass wenn Sie dem Web Projekt Dev-Workflow folgen und die CLI verwenden, die CLI kümmern wird der geeignete Ort für jede Plattform den Plugin-Code hinzufügen. (Wenn Sie die systemeigene Projektablauf Dev folgen, müssen Sie Plugins mit Plugman (Anleitung Link hier), mehrere Male für jede Plattform hinzufügen.)
-
-Hier sind Beispiele für die Verwendung der CLI die app Features hinzugefügt:
+Der `cordova plugin add` Befehl müssen Sie das Repository für den Plugin-Code angeben. Hier sind Beispiele für die Verwendung der CLI die app Features hinzugefügt:
 
 *   Grundlegenden Geräteinformationen (Device-API):
     
@@ -252,13 +275,15 @@ Hier sind Beispiele für die Verwendung der CLI die app Features hinzugefügt:
         $ cordova plugin add org.apache.cordova.console
         
 
+**Hinweis**: die CLI fügt Plugin-Code entsprechend für jede Plattform. Wenn Sie mit Low-Level-Shell-Werkzeugen oder Platform SDKs wie in der Übersicht beschrieben entwickeln wollen, müssen Sie das Plugman-Dienstprogramm zum Hinzufügen von Plugins separat für jede Plattform ausführen. (Weitere Informationen finden Sie unter Using Plugman zu Plugins verwalten.)
+
 Verwendung `plugin ls` (oder `plugin list` , oder `plugin` von selbst) derzeit anzeigen Plugins installiert. Jede zeigt durch seinen Bezeichner:
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
     
 
-Um ein Plugin zu entfernen, beziehen sich auf es durch den gleichen Bezeichner, der in der Liste angezeigt wird. Zum Beispiel, ist hier, wie Sie Unterstützung für eine Debug-Konsole aus einer Release-Version entfernen würde:
+Um ein Plugin zu entfernen, finden Sie es durch den gleichen Bezeichner, der in der Liste angezeigt wird. Zum Beispiel, ist hier, wie Sie Unterstützung für eine Debug-Konsole aus einer Release-Version entfernen würde:
 
         $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same

@@ -37,7 +37,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         bin/update <project_path>
     
 
-**WARNING:** Starting on Android 4.4, creating a file input element with type="file" will not open the file picker dialog. これは Android 上のクロムと回帰であり、問題を再現することができますスタンドアロン クロムブラウザー Android 上でアンドロイド 4.4 のファイル転送とファイルのプラグインを使用するは、回避策 (http://code.google.com/p/android/issues/detail?id=62220 を参照)。入力の型から、onClick イベントをリッスンすることができます「ファイル」を = し、ファイル ピッカー UI をポップアップします。 アップロードとフォーム データのネクタイ、するために JavaScript を使用して、出色のマルチパートのポストの要求にフォームの値をアタッチすることができます。 This bug still exists as of Android 4.4.2
+**警告:**アンドロイド 4.4, タイプとファイルの input 要素の作成を開始 =「ファイル」ファイル選択ダイアログ ボックスは開きません。 これは Android 上のクロムと回帰であり、問題を再現することができますスタンドアロン クロムブラウザー Android 上でアンドロイド 4.4 のファイル転送とファイルのプラグインを使用するは、回避策 (http://code.google.com/p/android/issues/detail?id=62220 を参照)。入力の型から、onClick イベントをリッスンすることができます「ファイル」を = し、ファイル ピッカー UI をポップアップします。 アップロードとフォーム データのネクタイ、するために JavaScript を使用して、出色のマルチパートのポストの要求にフォームの値をアタッチすることができます。 このバグはまだ Android 4.4.2 時点が存在します。
 
 ## 3.1.0 3.0.0 からアップグレード
 
@@ -63,7 +63,7 @@ platform add android`.
 
 4.  下で適切なディレクトリに、古いプロジェクトから、ネイティブ アセットをコピー `platforms/android` ： このディレクトリには、ネイティブのコルドバ android プロジェクトが存在します。
 
-5.  コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI 処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。
+5.  コルドバ CLI ツールを使用して、必要な任意のプラグインをインストールします。CLI が処理するすべてのコア Api のプラグインとして追加する必要がありますので注意してください。のみ 3.0.0 プラグインは CLI と互換性があります。
 
 ## 2.9.0 から 3.0.0 にアップグレードします。
 
@@ -255,7 +255,7 @@ platform add android`.
 
 6.  更新 `res/xml/plugins.xml` 一致するように`framework/res/xml/plugins.xml`.
 
-導入により、 `CordovaWebView` では 1.9.0 リリースでは、サード パーティのプラグインが動作しません。 These plugins need to get a context from the `CordovaInterface` using `getContext()` or `getActivity()`. If you are not an experienced Android developer, please contact the plugin maintainer and add this task to their bug tracker.
+導入により、 `CordovaWebView` では 1.9.0 リリースでは、サード パーティのプラグインが動作しません。 これらのプラグインからコンテキストを取得する必要があります、 `CordovaInterface` を使用して `getContext()` または `getActivity()` 。 経験豊富なアンドロイドの開発者でない場合プラグインのメンテナに連絡して、バグ追跡システムにこのタスクを追加してください。
 
 ## 1.8.0 から 1.8.0 へのアップグレードします。
 

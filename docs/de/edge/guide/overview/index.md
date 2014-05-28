@@ -16,9 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Übersicht
 
-Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
+Apache Cordova ist ein Open-Source-mobile-Entwicklung-Framework. Sie können standard-Web-Technologien wie HTML5, CSS3 und JavaScript für Cross-Plattform-Entwicklung, Vermeidung jeder mobilen Plattformen native Entwicklung der Sprache zu verwenden. Anwendungen werden in Verpackungen, die gezielt auf jede Plattform und verlassen sich auf standardkonforme API Anbindungen an jedes Gerät Sensoren, Daten und Netzwerkstatus zugreifen.
 
-Verwenden Sie Cordova, falls Sie sind:
+Apache Cordova graduierte Oktober 2012 als Top-Level-Projekt innerhalb der Apache Software Foundation (ASF). Durch die ASF wird künftige Cordova offene Leitung des Projekts sichergestellt. Es bleibt immer kostenlos und open Source unter der Apache License, Version 2.0. Besuchen Sie [cordova.apache.org][1] für weitere Informationen.
+
+ [1]: http://cordova.apache.org
+
+Verwenden Sie Apache Cordova, falls Sie sind:
 
 *   mobile Entwickler und wollen eine Anwendung über mehrere Plattformen hinweg zu erweitern, ohne es erneut mit Sprache und Tool jede Plattform implementieren festgelegt.
 
@@ -28,36 +32,36 @@ Verwenden Sie Cordova, falls Sie sind:
 
 ## Basiskomponenten
 
-Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese Datei entspricht der W3C-Spezifikation für [Verpackt Web App][1]oder *Widget*.
+Apache-Cordova-Anwendungen basieren auf einer gemeinsamen `config.xml` -Datei, enthält Informationen über die app und gibt Parameter, die beeinflussen, wie es funktioniert, z. B. ob es reagiert auf Orientierung verschiebt. Diese Datei entspricht der W3C-Spezifikation für [Verpackt Web App][2]oder *Widget*.
 
- [1]: http://www.w3.org/TR/widgets/
+ [2]: http://www.w3.org/TR/widgets/
 
-Die Anwendung selbst ist als eine Web-Seite implementiert, mit dem Namen *index.html* standardmäßig die verweist, was CSS, JavaScript, Bilder, Mediendateien, oder andere Ressourcen sind notwendig für die Ausführung. Die app führt als ein *WebView* in der Ausgangsanwendung-Wrapper, die Sie auf app Stores zu verteilen. Für die Web-app für die Interaktion mit verschiedenen Gerätefunktionen Weg native apps zu tun, muss es auch verweisen eine `cordova.js` -Datei, die API Bindungen bietet.
+Die Anwendung selbst ist als eine Web-Seite implementiert, mit dem Namen *index.html* standardmäßig die verweist, was CSS, JavaScript, Bilder, Mediendateien, oder andere Ressourcen sind notwendig für die Ausführung. Die app führt als ein *WebView* in der Ausgangsanwendung-Wrapper, die Sie auf app Stores zu verteilen.
 
-Der Cordova-fähigen WebView kann die Anwendung mit der gesamten Benutzeroberfläche bereitstellen. Es kann auch eine Komponente innerhalb einer größeren, Hybridanwendung sein, die die WebView mit nativen Komponenten mischt. Cordova bietet eine *Plugin* -Schnittstelle für diese Komponenten miteinander kommunizieren.
+Der Cordova-fähigen WebView kann die Anwendung mit der gesamten Benutzeroberfläche bereitstellen. Auf einigen Plattformen kann es auch eine Komponente innerhalb einer größeren, Hybridanwendung sein, die die WebView mit nativen Komponenten mischt. (Siehe Einbettung Webansichten für Details.)
+
+Eine *Plugin* -Schnittstelle steht für Cordova und systemeigenen Komponenten miteinander kommunizieren. Dadurch können mit systemeigenen Code aus JavaScript aufrufen. Ab der Version 3.0 bieten Plugins Bindungen an standard-Device-APIs. Drittanbieter Plug-ins bieten zusätzliche Bindungen an Funktionen nicht notwendigerweise auf allen Plattformen. Sie können finden diese Drittanbieter Plug-ins in der [Plugin-Registry][3] und in Ihrer Anwendung verwenden. Sie können auch eigene Plugins entwickeln, wie in der Plugin-Entwicklung-Handbuch beschrieben. Plugins, z. B. möglicherweise erforderlich für die Kommunikation zwischen Cordova und benutzerdefinierte systemeigenen Komponenten.
+
+ [3]: http://plugins.cordova.io
 
 ## Entwicklungspfade
 
-Ab Version 3.0 können Sie zwei einfache Workflows verwenden, um eine mobile Anwendung zu erstellen. Während Sie das gleiche mit beiden Workflows ausführen können, sind bestimmte Aufgaben besser geeignet zur Verwendung von einem Workflow über die andere. Aus diesem Grund sollten Sie beide Workflows kennen, damit Sie das beste Werkzeug für die beste Situation verwenden können.
+Ab Version 3.0 können Sie zwei einfache Workflows verwenden, um eine mobile app zu erstellen. Während Sie häufig entweder Workflow verwenden können, um die gleiche Aufgabe, bieten sie alle Vorteile:
 
-Die zwei wichtigsten Workflows, die unterstützt werden sind der *Web Projekt Dev* -Workflow und der *Einheitlichen Plattform Dev* -Workflow.
+*   **Plattformübergreifende Workflow**: Nutzung dieser Workflow Ihre app auf so viele verschiedene mobile Betriebssysteme wie möglich laufen soll mit wenig müssen für Plattform-spezifische Entwicklung. Dieser Workflow dreht sich um die `cordova` Dienstprogramm, andernfalls bekannt als die Cordova *CLI*, die mit Cordova 3.0 eingeführt wurde. Die CLI ist High-Level-Tool, das Ihnen erlaubt, Projekte für viele Plattformen gleichzeitig zu erstellen viele der Funktionen von Low-Level-Shell-Skripte zu abstrahieren. Die CLI einen gemeinsamen Satz von Web-Vermögenswerte in Unterverzeichnisse für jede mobile Plattform kopiert, macht alle notwendigen Konfigurationsänderungen für jede, läuft Buildskripts, Anwendungsbinärdateien zu generieren. Die CLI bietet auch eine gemeinsame Schnittstelle um Plugins für Ihre Anwendung zu übernehmen. Für mehr Details über die CLI siehe The Command-Line Interface. Es sei denn, Sie den Plattform-zentriert-Workflow benötigen, empfiehlt sich der Cross-Plattform-Workflow.
 
-### Web-Projekt-Dev
+*   **Plattform-zentrierte Workflow**: Verwenden Sie diesen Workflow, wenn Sie konzentrieren eine app für eine einzelne Plattform und müssen in der Lage, es auf einer niedrigeren Ebene ändern möchten. Du musst diesen Ansatz, beispielsweise verwenden, möchten Sie Ihre app zum Mischen von benutzerdefinierter systemeigener Komponenten mit Web-basierten Cordova Komponenten, wie in Webansichten Einbettung für erläutert. Als Faustregel gilt verwenden Sie diesen Workflow, wenn Sie das Projekt im SDK ändern müssen. Dieser Workflow basiert auf einer Reihe von Low-Level-Shell-Skripte, die zugeschnitten sind, für jede unterstützte Plattform und ein separates Plugman-Dienstprogramm, mit das Sie Plugins anwenden kann. Während Sie diesen Workflow verwenden können, um Cross-Plattform-Anwendungen erstellen, ist es im allgemeinen schwieriger, weil das Fehlen eines übergeordneten Tools separate Build Zyklen und Plugin Änderungen für jede Plattform bedeutet. Dennoch, diesen Workflow können Sie besseren Zugang zu von jeder SDK bereitgestellten Entwicklungsoptionen und ist essentiell für komplexe Hybrid-apps. Sehen Sie die verschiedenen Plattform-Leitfäden für Details auf jeder Plattform verfügbar Shell Versorgungseinrichtungen.
 
-Sie können den ersten Workflow als *Web Projekt Dev* -Workflow vorstellen. Sie sollten diesen Workflow verwenden, wenn eine Cordova-Anwendung zu erstellen, die auf so viele mobile Betriebssysteme wie möglich mit so wenig plattformspezifische Entwicklungsarbeit wie möglich ausgeführt werden soll. Dieser Workflow erbte bestehen mit Cordova 3.0 und die Schaffung von Cordova- *Befehlszeilenschnittstelle* (CLI). Die CLI abstrahiert entfernt viele der Funktionen von Low-Level-Shell-Skripte, die Pflege der Details, die mit dem Bau Ihrer Anwendung, z. B. Kopieren-Ihr Web-Vermögen in die richtigen Ordner für jede mobile Plattform, Plattform-spezifische Konfigurationsänderungen oder Ausführen von bestimmten Buildskripts um Anwendungsbinärdateien zu generieren. Erfahren Sie mehr über den *Web-Projekt-Dev* -Workflow in der Command-Line Interface. Bitte beachten Sie, dass oft, wenn Menschen von der "CLI" sprechen, sie über dieses *Web-Projekt-Dev* -Workflow sprechen.
+Wenn zunächst ausgehend, kann es am einfachsten, den Cross-Plattform-Workflow verwenden, um eine app zu erstellen, wie in der Command-Line Interface beschrieben sein. Sie haben dann die Möglichkeit zu einem Plattform-zentriert-Workflow zu wechseln, benötigen Sie größere Kontrolle, die das SDK enthält. Low-Level-Shell Dienstprogramme stehen unter [cordova.apache.org][1] in einer separaten Verteilerliste als CLI zur Verfügung. Für Projekte, die ursprünglich von der CLI generiert, diese Shell Tools stehen auch in das Projekt hat verschiedene `platforms/*/cordova` Verzeichnisse.
 
-### Native Plattform-Dev
+**Hinweis**: Sobald Sie von der CLI-basierte Workflow zu einem rund um die Plattform-spezifische SDKs und Shell Tools wechseln, du kannst nicht zurück gehen. Die CLI unterhält einen gemeinsamen Satz von Cross-Plattform Quellcode, die auf jedem es verwendet, um über Plattform-spezifischen Quellcode schreiben zu bauen. Um Änderungen zu den Plattform-spezifischen Vermögenswerten vorgenommenen erhalten, Sie müssen auf der Plattform-zentrierte Shell-Werkzeugen zu wechseln, die Cross-Plattform-Quellcode zu ignorieren, und stützt sich stattdessen auf den Plattform-spezifischen Quellcode.
 
-Der zweite Workflow kann als *Native Plattform Dev* Workflow betrachtet werden. Sie sollten es verwenden, wenn Sie wollen sich auf die Erstellung einer Anwendung für eine einzige Plattform und ändern die Low-Level-Plattform-Details interessiert sind. Während Sie diesen Workflow noch verwenden können, um Cross-Plattform-Anwendungen erstellen, wird der Mangel an Tools, um die verschiedenen Buildschritte abstrahieren erschweren. Beispielsweise müssen Sie Plugman verwenden, um das gleiche Plugin einmal für jede Plattform zu installieren, die Sie unterstützen möchten. Der Vorteil bei der Verwendung dieser *Einheitlichen Plattform Dev* -Workflow ist es, was gibt Ihnen Zugang zu den Low-Level-Shell-Skripte erstellen und Testen der Anwendung, also wenn Sie auf die systemeigene Seite der Dinge Hacking sind, diesen Workflow ist der effizienteste Weg, um Ihre Änderungen zu testen. Dieser Workflow ist auch geeignet, wenn Sie die CordovaWebView als eine kleine Rolle in einer größeren native Anwendung verwenden möchten (siehe Einbettung Webansichten für Guide.) Sie können diesen Workflow in den verschiedenen Shell-Tool-Führern, z.B. Android Shell Tool Guide und iOS Shell Tool Guide nachlesen.
+## Installation von Cordova
 
-Beim ersten ausgehend, könnte es am einfachsten, den *Web Projekt Dev* -Workflow verwenden zum Erstellen einer Anwendung sein. (Um die CLI zu installieren, siehe The Command-Line Interface). Abhängig von den Plattformen richten möchten, können Sie auf der CLI für schrittweise größere Anteile des Entwicklungszyklus verlassen:
+Die Installation von Cordova variieren abhängig vom obigen Workflow, die Sie wählen:
 
-*   Im einfachsten Szenario können die CLI Sie einfach erstellen ein neues Projekt, das gefüllt ist mit Standard-Konfiguration zu ändern.
+*   Plattformübergreifende Workflow: finden Sie die Befehlszeilen-Schnittstelle.
 
-*   Für viele mobile Plattformen können Sie auch die CLI einrichten weitere Projekt-Dateien erforderlich, um innerhalb jedes SDK kompilieren. Damit dies funktioniert müssen Sie jede gezielte Plattform-SDK installieren. (Siehe den Plattform-Führern Anweisungen.) Gemäß den Plattform-Support-Tabelle, müssen Sie möglicherweise die CLI auf verschiedenen Betriebssystemen abhängig von der Zielplattform ausgeführt.
+*   Plattform-zentrierte Workflow: finden Sie die Plattform-Handbüchern.
 
-*   Zur Unterstützung der Plattformen, kann die CLI Dienstprogramme kompilieren und führen sie in einem SDK-basiertes Gerät-Emulator. Für umfassende Tests, können Sie auch Anwendungsdateien zu generieren und installieren Sie sie direkt auf einem Gerät.
-
-Zu jedem Zeitpunkt im Entwicklungszyklus wechseln Sie mit mehr von der *Einheitlichen Plattform Dev* -Workflow. Die plattformspezifischen SDK Tools können eine umfangreichere Optionen bieten. (Siehe die Plattform-Führer für Details über jede Plattform-SDK-Tool festgelegt.)
-
-Eine SDK-Umgebung ist besser geeignet, wenn Sie möchten, eine Hybrid-app zu implementieren, die Web-basierte und native Anwendungskomponenten mischt. Sie können das Befehlszeile-Dienstprogramm verwenden, um zunächst die app generieren oder iterativ danach, aktualisierten Code zu SDK-Tools zu ernähren. Sie können die app-Konfigurationsdatei auch selbst erstellen. (Siehe die Datei config.xml Datei für Details.)
+Nach der Installation von Cordova, empfiehlt es sich, dass Sie die Plattform-Führer für die mobilen Plattformen überprüfen, die Sie für entwickeln werden. Es wird auch empfohlen, dass Sie auch die Privatsphäre Guide, Sicherheit und die nächsten Schritte überprüfen. Konfigurieren von Cordova, finden Sie in der Datei config.xml Datei. JavaScript native Funktion auf einem Gerät zugreifen, finden Sie in der Plugin-APIs. Und finden Sie in den anderen enthalten wie nötig.

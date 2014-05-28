@@ -159,7 +159,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    creates the `js/experimental` directory within the `www` directory, unless already present, then copies the `new-foo.js` file and renames it `foo.js`. If a file already exists at the target location, plugman stops and reverses the installation process, issues a notification about the conflict, and exits with a non-zero code.
+    作成、 `js/experimental` ディレクトリ内で、 `www` ディレクトリ、しない限り、既に存在し、コピー、 `new-foo.js` ファイルし、名前が変更されます `foo.js` 。 ターゲットの場所にファイルが既に存在する場合 plugman 停止しインストール プロセスを逆に、競合について通知を発行し、ゼロ以外のコードで終了します。
 
 ## *js モジュール*要素
 
@@ -188,7 +188,7 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
     
     *   `<runs/>`あなたのコードで指定する必要があることを意味します `cordova.require` にインストールされていないが、 `window` オブジェクト。 イベント ハンドラーをアタッチするモジュールを初期化する場合に便利ですまたはそれ以外の場合。 あなただけ 1 つまで持つことができます `<runs/>` タグ。 メモを含む、 `<runs/>` と `<clobbers/>` または `<merges/>` は冗長ですのでまた `cordova.require` あなたのモジュール。
     
-    *   An empty `<js-module>` still loads and can be accessed in other modules via `cordova.require`.
+    *   空の `<js-module>` まだロードし、他のモジュール経由でアクセスすることができます`cordova.require`.
 
 場合 `src` plugman 停止インストールを逆に、問題の通知を発行し、0 以外のコードで終了します、既存のファイルに解決されません。
 
@@ -378,19 +378,16 @@ Android の例:
 
 省略可能な `weak` 属性は、フレームワークが弱いリンクする必要があるかどうかを示すブール値。既定値は`false`.
 
-省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 The default is `false`.
+省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 既定値は`false`.
 
 ## *情報*要素
 
-Additional information provided to users. This is useful when you require extra steps that can't be easily automated or are beyond plugman's scope. Examples:
+追加の情報をユーザーに提供します。これは、余分な手順を簡単に自動化することはできませんまたは plugman の範囲を超えていることが必要な場合に役立ちます。例:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to the `local.properties`:
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    'Local.properties' に次の行を追加する必要があります： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib </情報 >
     
 
 ## 変数

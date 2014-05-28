@@ -18,22 +18,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt Informationen über Einstellungen, die nur für Amazon Fire OS gelten baut. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst.
+*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst. Diese `false` tötet nicht die app nach einem `pause` Ereignis, sondern einfach hält Ausführung von Code innerhalb der Webview Cordova, während die app im Hintergrund ist.
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: Gibt eine Fehlerseite, die als Reaktion auf standard-HTTP-Fehler im Bereich von 400-500 anzeigt. Platzieren Sie die angegebene Datei im obersten Verzeichnis enthält die Homepage und andere Web-Ressourcen.
+*   `ErrorUrl`(URL, wird standardmäßig auf `null` ): Wenn gesetzt, wird die referenzierte Seite ein Fehler in der Anwendung statt ein Dialogfeld mit dem Titel "Application Error" angezeigt.
     
         <preference name="ErrorUrl" value="error.html"/>
         
 
-*   `LoadingDialog`: Zeigen Sie einen nativen Dialog, wenn die app laden. Der Wert Format ist *Titel, Nachricht*
+*   `LoadingDialog`(string, der Standardwert ist `null` ): Wenn gesetzt, zeigt einen Dialog mit dem angegebenen Titel und Nachricht und einen Spinner, wenn Sie die erste Seite einer Anwendung zu laden. Titel und Nachricht sind durch Kommas getrennt in dieser Wertzeichenfolge, und das Komma wird entfernt, bevor das Dialogfeld angezeigt wird.
     
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
         
 
-*   `LoadingPageDialog`: Zeigen Sie einen nativen Dialog, wenn Unterseiten innerhalb einer app laden. Der Wert Format ist *Titel, Nachricht*
+*   `LoadingPageDialog`(string, der Standardwert ist `null` ): dasselbe wie `LoadingDialog` , aber für das Laden von jeder Seite nach der ersten Seite in der Anwendung.
     
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
         
@@ -51,3 +51,13 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
 *   `SplashScreenDelay`(Nummer, der Standardwert ist `5000` ): die Zeitspanne zeigt das Bild des Begrüßungsbildschirms.
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `ShowTitle`(Boolean, wird standardmäßig auf `false` ): den Titel am oberen Rand des Bildschirms anzeigen.
+    
+        <preference name="ShowTitle" value="true"/>
+        
+
+*   `LogLevel`(string, der Standardwert ist `ERROR` ): legt die minimale Protokollebene durch welches Protokoll Nachrichten aus Ihrer Anwendung gefilterte. Gültige Werte sind `ERROR` , `WARN` , `INFO` , `DEBUG` , und`VERBOSE`.
+    
+        <preference name="LogLevel" value="VERBOSE"/>

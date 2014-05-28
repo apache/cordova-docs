@@ -16,11 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Amazon Fire OS Webansichten für
 
-Beginnend mit 3.0.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwendungen. Amazon Fire OS bezieht sich auf diese Komponente als `CordovaWebView` . `CordovaWebView`erweitert Amazon WebView, die auf der open-Source-Projekt Chromium basiert. Durch die Nutzung dieser Funktion, können Ihre Webanwendungen der neuesten HTML5-Web-Standards, die in einem modernen Web-Runtime-Engine ausgeführt nutzen.
+Beginnend mit 3.3.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwendungen. Amazon Fire OS bezieht sich auf diese Komponente als `CordovaWebView` . `CordovaWebView`erweitert Amazon WebView, die auf der open-Source-Projekt Chromium basiert. Durch die Nutzung dieser Funktion, können Ihre Webanwendungen der neuesten HTML5-Web-Standards, die in einem modernen Web-Runtime-Engine ausgeführt nutzen.
+
+Wenn Sie mit Amazon Fire OS nicht vertraut sind, sollten Sie zunächst machen Sie sich mit der Amazon-Handbuch für OS-Plattform im Feuer und haben die neuesten SDKs installiert, bevor Sie versuchen die ungewöhnlicheren Entwicklungsoption einen WebView-Einbettung.
 
 ## Voraussetzungen
 
-*   Cordova 3.0.0 oder größer
+*   Cordova 3.3.0 oder größer
 
 *   Android SDK aktualisiert, um neuesten SDK
 
@@ -28,11 +30,15 @@ Beginnend mit 3.0.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwen
 
 ## Anleitung zur Verwendung von CordovaWebView in einem Amazon-Feuer-OS-Projekt
 
-1.  Download [Amazon WebView SDK][1] zu erweitern, und kopieren Sie die awv_interface.jar in `/framework/libs` Verzeichnis. Erstellen einer Libs / Ordner, wenn es nicht vorhanden ist.
+1.  Um diese Anweisungen befolgen, stellen Sie sicher, dass Sie die neueste Cordova-Verteilung. Von [cordova.apache.org][1] herunterladen Sie und entpacken Sie die Amazon Fire OS-Paket.
 
-2.  `cd`in `/framework` und `ant jar` baut die Cordova-Jar. Es schafft die .jar-Datei als `cordova-x.x.x.jar` in das `/framework` Verzeichnis.
+2.  Download [Amazon WebView SDK][2] zu erweitern, und kopieren Sie die awv_interface.jar in `/framework/libs` Verzeichnis. Erstellen einer Libs / Ordner, wenn es nicht vorhanden ist.
 
-3.  Bearbeiten der Anwendung `main.xml` Datei (unter `/res/layout` ) mit folgenden Aussehen der `layout_height` , `layout_width` und `id` Ihrer Anwendung angepasst:
+3.  Navigieren Sie zu des Pakets `/framework` Verzeichnis und führen `ant jar` . Es schafft die Cordova `.jar` Datei, bildete sich als`/framework/cordova-x.x.x.jar`.
+
+4.  Kopie der `.jar` Datei in des Android-Projekts `/libs` Verzeichnis.
+
+5.  Fügen Sie Folgendes in der Anwendung `/res/xml/main.xml` -Datei, mit der `layout_height` , `layout_width` und `id` die Anwendung angepasst:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +46,7 @@ Beginnend mit 3.0.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwen
             android:layout_height="match_parent" />
         
 
-4.  Ihre Aktivität ändern, sodass es implementiert die `CordovaInterface` . Sie sollten die enthaltenen Methoden implementieren. Vielleicht möchten Sie Kopieren von `/framework/src/org/apache/cordova/CordovaActivity.java` , oder setzen sie auf eigene Faust. Das folgende Codefragment zeigt eine einfache Anwendung, die die Schnittstelle verwendet. Beachten Sie, wie die referenzierten anzeigen-Id entspricht der `id` in das XML-Fragment oben angegebene Attribut:
+6.  Ihre Aktivität ändern, sodass es implementiert die `CordovaInterface` . Sie sollten die enthaltenen Methoden implementieren. Vielleicht möchten Sie Kopieren von `/framework/src/org/apache/cordova/CordovaActivity.java` , oder setzen sie auf eigene Faust. Das folgende Codefragment zeigt eine einfache Anwendung, die die Schnittstelle verwendet. Beachten Sie, wie die referenzierten anzeigen-Id entspricht der `id` in das XML-Fragment oben angegebene Attribut:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,7 +61,8 @@ Beginnend mit 3.0.0, können Sie Cordova als Komponente in Amazon-Feuer-OS-Anwen
             }
         
 
- [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [1]: http://cordova.apache.org
+ [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
 Wenn Sie die Kamera verwenden, sollten Sie dies auch implementieren:
 

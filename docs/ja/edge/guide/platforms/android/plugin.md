@@ -26,7 +26,7 @@ Android のプラグインはそれに取り付けられたフックを持つア
 
 プラグインの java スクリプトの設定インターフェイスを使用して、 `cordova.exec` メソッドは次のように。
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction > < failFunction >, < サービス > < アクション > [< 引数 >]);
     
 
 これは、WebView から要求アンドロイド ネイティブの側では、効果的に呼び出しをマーシャ リングします、 `action` 法、 `service` クラスに渡される引数は、 `args` 配列。
@@ -61,7 +61,7 @@ Android のプラグインはそれに取り付けられたフックを持つア
 
 ## Android の Java プラグインを書く
 
-A JavaScript call fires off a plugin request to the native side, and the corresponding Java plugin is mapped properly in the `config.xml` file, but what does the final Android Java Plugin class look like? 何が、JavaScript のプラグインにディスパッチされる `exec` 関数はプラグイン クラスに渡されます `execute` メソッド。 ほとんど `execute` の実装のようになります。
+JavaScript 呼び出しはネイティブ側に要求するプラグイン起動し、対応する Java プラグインが適切にマップされている、 `config.xml` ファイルがどのよう最終的な Android の Java プラグイン クラス見てですか？ 何が、JavaScript のプラグインにディスパッチされる `exec` 関数はプラグイン クラスに渡されます `execute` メソッド。 ほとんど `execute` の実装のようになります。
 
         @Override パブリック boolean 文字列操作、JSONArray args （CallbackContext callbackContext） を実行 JSONException がスローされます {場合 (「beep".equals(action)) {this.beep(args.getLong(0));callbackContext.success();返します true;} 戻り偽;//"MethodNotFound"エラーで誤った結果を返します。
         }

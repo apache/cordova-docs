@@ -114,15 +114,15 @@ IOS プラットフォーム上のワイルドカードは、 [W3C のウィジ�
 
 ## 3.1.0 の iOS の変化
 
-Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whilelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change the `config.xml` file in order to continue whitelisting the same set of resources as before.
+前のバージョン 3.1.0、コルドバ iOS 他コルドバのプラットフォームでサポートされているドメイン whilelisting スキームをいくつかの非標準の拡張含まれています。 3.1.0、現在 iOS のホワイト リストは今このドキュメントの上部に記載されているリソースのホワイト リストの構文に準拠します。 変更する必要があります前 3.1.0 からアップグレードする、これらの拡張機能を使用していた場合、 `config.xml` ファイルとして前にホワイト リスト登録リソースの同じセットを続行するために。
 
 具体的には、これらのパターンを更新する必要があります。
 
-*   "`apache.org`" (no protocol): This would previously match `http`, `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`" to include all protocols, or include a line for each protocol you need to support.
+*   " `apache.org` "(プロトコル): これは以前と一致 `http` 、 `https` 、 `ftp` 、および `ftps` プロトコル。 変更" `*://apache.org/*` "に、すべてのプロトコルを含めたり、各プロトコルをサポートする必要がある行が含まれます。
 
-*   "`http://apache.*`" (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.
+*   " `http://apache.*` "(ワイルドカード ドメインの終わりに): これは以前すべて上位-レベルの-ドメイン、すべての可能な 2 文字の Tld を含むと一致 (有用ではないドメインのようにしかし。 co.uk)。 行することが実際に制御、ホワイト リストに登録する必要がある各 TLD を含めます。
 
-*   "`h*t*://ap*he.o*g`" (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
+*   " `h*t*://ap*he.o*g` "(行方不明のランダムな文字のワイルドカード文字): これらはサポートされていません; ドメインごとに行を含めるし、したプロトコルへの変更は、実際にホワイト リストする必要があります。
 
 ## Windows Phone のホワイト リスト
 

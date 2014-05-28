@@ -9,7 +9,7 @@
 
 # プラットフォームのサポート
 
-The following shows the set of development tools and device APIs available for each mobile platform. The device APIs listed here are provided by the core plugins, additional APIs are available via [third-party plugins][1]. Column headers display the CLI's shorthand names.
+開発ツールとそれぞれのモバイルプラット フォーム デバイス利用可能な Api のセットを次に示します。 Api はここに記載されてデバイスは追加の Api は[サード パーティのプラグイン][1]を介して利用可能なコア プラグインによって提供されます。 CLI の省略名を列ヘッダーに表示されます。
 
  [1]: http://plugins.cordova.io
 
@@ -31,7 +31,7 @@ The following shows the set of development tools and device APIs available for e
       </th>
       
       <th>
-        <tt>Firefox OS</tt>
+        <tt>Firefox の OS</tt>
       </th>
       
       <th>
@@ -320,7 +320,7 @@ The following shows the set of development tools and device APIs available for e
         </td>
         
         <td data-col="ios"        class="y">
-          (3GS+)
+          (3 GS +)
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -621,7 +621,7 @@ The following shows the set of development tools and device APIs available for e
         </td>
         
         <td data-col="win8"       class="p">
-          uses iframe
+          iframe を使用してください。
         </td>
         
         <td data-col="tizen"       class="n">

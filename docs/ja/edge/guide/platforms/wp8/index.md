@@ -16,16 +16,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Windows Phone プラットフォーム ガイド
 
-This guide shows how to set up your SDK development environment to deploy Cordova apps for Windows Phone devices. It focuses on Windows Phone 8, but provides additional details on how to support Windows Phone 7.
+このガイドは、Windows Phone デバイスの Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 Windows Phone 8 に焦点を当てていますが、Windows Phone 7 のサポートする方法について詳細に説明します。
 
-It shows how to use either Windows Phone-specific shell tools to generate and build apps, or the cross-platform Cordova CLI discussed in The Command-Line Interface. (See the Overview for a comparison of these development workflows.) This section also shows how to open Cordova apps so that you can modify them within Visual Studio. Regardless of which approach you take, you need to install the Windows Phone SDK, as described below.
+ツールを使用するか Windows Phone 固有シェルを生成し、アプリケーションを構築する方法を示しています。 またはクロス プラットフォーム コルドバ CLI コマンド ライン インターフェイスでの議論。 （これらの開発のワークフローの比較の概要」を参照）。また、Visual Studio 内で変更することができますようにする Cordova アプリを開く方法についても説明します。 どちらの作成方法に関係なく必要があります Windows Phone SDK をインストールする以下のとおりです。
 
-See the following for details specific to the Windows Phone platform:
+Windows Phone プラットフォームに固有の詳細については、次を参照してください。
 
 *   Windows Phone のプラグイン
 *   Windows Phone のアップグレード
 
-For the Windows Phone 8 platform, the Cordova WebView relies on Internet Explorer 10 as its rendering engine, so as a practical matter you can use IE10's powerful debugger to test any web content that doesn't invoke Cordova APIs. Windows Phone 開発者ブログは対等な WebKit ブラウザーと一緒に IE10 をサポートする方法について[有用なガイダンス][1]を提供します。
+Windows Phone 8 プラットフォーム コルドバ WebView に依存しているインターネット エクスプ ローラー 10 そのレンダリング エンジンとして、実際問題としてコルドバ Api の呼び出しは、web コンテンツをテストする IE10 の強力なデバッガーを使用できるようにします。 Windows Phone 開発者ブログは対等な WebKit ブラウザーと一緒に IE10 をサポートする方法について[有用なガイダンス][1]を提供します。
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
@@ -33,18 +33,18 @@ For the Windows Phone 8 platform, the Cordova WebView relies on Internet Explore
 
 次が必要です。
 
-*   A 64-bit version of Windows 8 Pro, either an installation disk or an *ISO* disk image file. An evaluation version is available on the [Microsoft Developer Network][2]. The Pro version is necessary to run the device emulator.
+*   Windows 8 Pro をインストール ディスクまたは*ISO*ディスク イメージ ファイルのどちらかの 64 ビット バージョンです。 評価版は[マイクロソフトの開発者ネットワーク][2]で利用可能です。 Pro バージョンは、デバイス エミュレーターを実行する必要です。
 
-*   The [Windows Phone SDK][3].
+*   [Windows Phone SDK][3].
 
  [2]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
  [3]: https://dev.windowsphone.com/en-us/downloadsdk
 
-To develop Cordova apps for Windows Phone devices, you may use a PC running Windows, but you may also develop on a Mac, either by running a virtual machine environment or by using Boot Camp to dual-boot a Windows partition. Consult these resources to set up the required Windows development environment on a Mac:
+Cordova アプリの Windows Phone デバイスを開発する Windows を実行して PC を使用することがありますが可能性がありますも開発する mac では、仮想マシン環境を実行することによって、またはデュアル ブートするブート キャンプを使用して Windows パーティション。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
 
-*   **VMWare Fusion**: To set up the Windows 8 virtual machine, follow the instructions provided by the [Microsoft Developer Network][4], then see Configuring VMWare Fusion for information on preparing the virtual environment to run the emulator bundled with the SDK.
+*   **VMWare Fusion**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][4]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備についての VMWare Fusion の設定を参照してください。
 
-*   **Parallels Desktop**: To set up the Windows 8 virtual machine, follow the instructions provided by the [Microsoft Developer Network][5], then see Configuring Parallels Desktop for information on preparing the virtual environment to run the emulator bundled with the SDK.
+*   **平行線デスクトップ**: Windows 8 の仮想マシンをセットアップする[マイクロソフトの開発者ネットワーク][5]、によって提供される指示に従い、SDK にバンドルされているエミュレーターを実行する仮想環境の準備について平行線デスクトップを構成するを参照してください。
 
  [4]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
  [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
@@ -57,22 +57,22 @@ To develop Cordova apps for Windows Phone devices, you may use a PC running Wind
   2DO: virtualBox doesn't work yet; any extra config info?
 -->
 
-*   **Boot Camp**: To set up the Windows 8 partition, follow the installation instructions provided by the [Microsoft Developer Network][6].
+*   **ブート キャンプ**: Windows 8 パーティションをセットアップする[マイクロソフトの開発者ネットワーク][6]によって提供されるインストール指示に従ってください。.
 
  [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-If you are developing on a PC, its processor must support virtualization (*VT-x* on Intel) and [Second Level Address Translation (SLAT)][7]. Consult [Intel's list of supporting processors][8]. Virtualization is typically disabled by default, so you need to enable it in your BIOS settings. The PC should have at least 6.5GB of free hard disk space, and 4GB of RAM.
+PC 上で開発する場合、プロセッサは仮想化 (Intel の*VT-x* ) と[第 2 レベル アドレス変換 (SLAT)][7]をサポートしなければなりません。 [インテルのプロセッサをサポート リスト][8]を参照してください。 既定では、通常、BIOS 設定で有効にする必要がありますので、仮想化は無効です。 PC は、ハード ディスク空き容量の少なくとも 6.5 GB と 4 GB の RAM が必要です。
 
  [7]: http://en.wikipedia.org/wiki/Second_Level_Address_Translation
  [8]: http://ark.intel.com/Products/VirtualizationTechnology
 
-## Using Cordova Shell Tools
+## コルドバのシェル ・ ツールを使用してください。
 
-If you want to use Cordova's Windows Phone-centered shell tools in conjunction with the SDK, you have two basic options:
+SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ ツールを使用する場合は、2 つの基本的なオプションがあります。
 
-*   Access them locally from project code generated by the CLI. They are available in the `platforms/wp8/cordova` directory after you add the `wp8` platform as described below.
+*   CLI で生成されたプロジェクト コードからローカル アクセスします。利用できる、 `platforms/wp8/cordova` ディレクトリを追加した後、 `wp8` プラットフォームは以下のとおりです。
 
-*   Download them from a separate distribution at [cordova.apache.org][9]. The Cordova distribution contains separate archives for each platform. Be sure to expand the appropriate archive, `cordova-wp8\wp8` in this case, within an empty directory. The relevant batch utilities are available in the top-level `bin` directory. (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
+*   [Cordova.apache.org][9]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `cordova-wp8\wp8` この場合、空のディレクトリ内。 関連するバッチ ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
 
  [9]: http://cordova.apache.org
 
@@ -190,7 +190,7 @@ SDK をインストールした後 Windows コマンドラインで、SDK コル
 
  [18]: img/guide/platforms/wp8/wp8_emulator.png
 
-デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 The **>>** button opens more controls that allow you to test more complex orientations and gestures:
+デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 **>**ボタンより複雑な方向とジェスチャをテストすることができますより多くのコントロールが表示されます。
 
 ![][19]
 
@@ -204,11 +204,11 @@ SDK をインストールした後 Windows コマンドラインで、SDK コル
 
 ## デバイスへの配置します。
 
-デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][21]を参照してください。 Also, make sure the phone is connected to the computer, and the screen is unlocked.
+デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][21]を参照してください。 また、携帯電話は、コンピューターに接続されているし、画面がロックされているかどうかを確認します。
 
  [21]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
 
-Then run the following CLI command to run the app on the device:
+その後、デバイス上のアプリを実行するには、次の CLI コマンドを実行します。
 
         > cordova run wp8
     
@@ -218,33 +218,33 @@ Then run the following CLI command to run the app on the device:
         C:\path\to\project\cordova\run --device
     
 
-Alternately, if you are working in Visual Studio, select **Windows Phone Device** from the drop-down menu at the top, then press the green **Play** button nearby or else type **F5**.
+代わりに、Visual Studio で作業する場合は、トップ、押します**再生**緑の近隣にはボタンまたは他の**f5 キーを押して**にドロップ ダウン メニューから**Windows Phone デバイス**を選択します。.
 
-## Modify the Project in the SDK
+## SDK でプロジェクトを変更します。
 
-Once you build a Cordova app as described above, you can open it with the SDK. The various `build` commands generates a Visual Studio Solution (*.sln*) file. Open the file to modify the project within Visual Studio. The web-based source code is available within the project's `www` directory. Along with other tools the SDK provides, the control below the menu allows you to launch the app in a Windows Phone emulator:
+一度上記のように Cordova アプリを構築する SDK で開くことができます。 様々 な `build` コマンドは、Visual Studio のソリューション (*.sln*) ファイルを生成します。 Visual Studio 内のプロジェクトを変更するファイルを開きます。 Web ベースのソース コードは、プロジェクト内で利用可能な `www` ディレクトリ。 その他のツールと一緒に、SDK を提供します、メニューの下のコントロールは、Windows Phone エミュレーターでアプリケーションを起動することができます。
 
 ![][22]
 
  [22]: img/guide/platforms/wp8/wp8_vs.png
 
-Consult the Overview for advice on how to use Cordova's command-line tools or the SDK in your workflow. The Cordova CLI relies on cross-platform source code that routinely overwrites the platform-specific files used by the SDK. If you want to work within the SDK, use the lower-level shell tools as an alternative to the CLI.
+コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスは、「概要」を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK 内で作業する場合、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。
 
-## Support for Windows Phone 7
+## Windows Phone 7 のサポート
 
-It's as easy to generate a Windows Phone 7 app as it is for Windows Phone 8, but it works much like adding a separate platform. If you're using the CLI, simply specify `wp7` along with or instead of `wp8`:
+Windows Phone 8 は、別のプラットフォームを追加するような仕組みとして Windows Phone 7 アプリケーションを生成するように簡単です。 CLI を使用している場合指定するだけで `wp7` と一緒にまたはその代わりに `wp8` ：
 
         > cordova platform add wp7
         > cordova build wp7
         > cordova emulate wp7
     
 
-The `emulate` command produces a Windows Phone 7 device emulator that displays a different interface:
+`emulate`コマンドは、別のインターフェイスが表示されます、Windows Phone 7 デバイス エミュレーターを生成します。
 
 ![][23]
 
  [23]: img/guide/platforms/wp8/wp7_emulator.png
 
-If you are using the platform-centered shell-tool workflow, follow all the steps in the *Install Cordova Shell Tools* section above, except extract the tools from the `cordova-wp8\wp7` directory instead. All these tools work the same as their `wp8` counterparts.
+シェル ツールのプラットフォームを中心としたワークフローを使用している場合すべての手順、上記*コルドバ シェル ツールをインストールする*セクションからツールを抽出を除いて、 `cordova-wp8\wp7` ディレクトリ代わりに。 これらすべてのツールと同じように動作、 `wp8` 同等。
 
-**NOTE**: The WebViews that underly Windows Phone 7 Cordova apps do *not* use Internet Explorer 10 as their rendering engine, and thus miss some advanced features available in Windows Phone 8 apps. Still, both implement the same set of APIs. You can run a Windows Phone 7 app on a Windows Phone 8 device, but not the other way around: Windows Phone 8 apps do *not* run on Windows Phone 7 devices.
+**注**: 基礎となる Windows Phone 7 Cordova アプリ*を使用*しないでくださいインターネット エクスプ ローラー 10 のレンダリング エンジンとして、このようにいくつかのミス、web 表示機能 Windows Phone 8 アプリで利用可能です。 それでも、両方同じ Api のセットを実装します。 Windows Phone 8 デバイスがなく、他の方法で Windows Phone 7 アプリケーションを実行することができます: Windows Phone 8 アプリは*ない*Windows Phone 7 デバイス上で実行します。

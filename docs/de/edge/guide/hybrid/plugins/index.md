@@ -16,13 +16,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Plugin-Entwicklung-Guide
 
-Ein *Plugin* ist ein Paket von eingefügten Code, der die Cordova Webview ermöglicht, innerhalb, die derer Ihre Anwendung rendert mit der einheitlichen Plattform für die Kommunikation auf dem es ausgeführt wird. Plugins ermöglichen den Zugriff auf Geräte und Plattform-Funktionalität, die normalerweise nicht für Web-basierte Anwendungen verfügbar ist. Die wichtigsten Cordova API-Features sind als Plugins implementiert, und viele andere stehen, dass aktivieren wie Barcode-Scannern, NFC-Kommunikation Funktionen, oder zu Kalender anpassen Schnittstellen.
+Ein *Plugin* ist ein Paket von eingefügten Code, der die Cordova Webview ermöglicht es, innerhalb, die derer die app macht mit der einheitlichen Plattform für die Kommunikation auf dem es ausgeführt wird. Plugins ermöglichen den Zugriff auf Geräte und Plattform-Funktionalität, die normalerweise nicht für Web-basierte Anwendungen verfügbar ist. Die wichtigsten Cordova API-Features sind als Plugins implementiert, und viele andere stehen, dass aktivieren wie Barcode-Scannern, NFC-Kommunikation Funktionen, oder zu Kalender anpassen Schnittstellen. Es ist eine [Registrierung][1] der verfügbaren Plugins.
+
+ [1]: http://plugins.cordova.io
 
 Plugins umfassen eine einzelne JavaScript-Schnittstelle zusammen mit entsprechenden native Code-Bibliotheken für jede unterstützte Plattform. Dieser Abschnitt schrittweise einen einfachen *Echo* -Plugin, die übergibt eine Zeichenfolge von JavaScript zum einheitlichen Plattform und zurück, die Sie als Modell verwenden können, um viel komplexere Features zu erstellen. Dieser Abschnitt beschreibt die grundlegenden Plugin-Struktur und die nach außen gerichtete JavaScript-Schnittstelle. Jede entsprechende Benutzeroberfläche finden Sie in der Liste am Ende dieses Abschnitts.
 
-Zusätzlich zu diesen Anweisungen, wenn bereiten auf ein Plugin zu schreiben, ist es am besten über die [vorhandenen Plugins][1] , Anleitungen zu schauen.
+Zusätzlich zu diesen Anweisungen, wenn bereiten auf ein Plugin zu schreiben, ist es am besten über die [vorhandenen Plugins][2] , Anleitungen zu schauen.
 
- [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
+ [2]: http://cordova.apache.org/#contribute
 
 ## Eine Plugin erstellen
 
@@ -59,9 +61,9 @@ Der obersten Ebene `plugin` Tag `id` Attribut verwendet das gleiche umgekehrt-Do
 
 ## Eine Plugin überprüfen
 
-Können Sie das `plugman` -Dienstprogramm zum Überprüfen, ob das Plugin richtig für jede Plattform installiert. Installieren Sie `plugman` mit den folgenden [Knoten][2] -Befehl:
+Können Sie das `plugman` -Dienstprogramm zum Überprüfen, ob das Plugin richtig für jede Plattform installiert. Installieren Sie `plugman` mit den folgenden [Knoten][3] -Befehl:
 
- [2]: http://nodejs.org/
+ [3]: http://nodejs.org/
 
         $ npm install -g plugman
     
@@ -73,7 +75,7 @@ Sie benötigen eine gültige app Quellcode-Verzeichnis, z. B. der obersten Ebene
 
 Führen Sie dann einen Befehl wie den folgenden zu testen, ob iOS Abhängigkeiten richtig geladen:
 
-        $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
     
 
 Einzelheiten zum `plugman` Optionen, siehe unter Verwendung Plugman zu Plugins verwalten. Finden Sie Informationen zu tatsächlich *debug* Plugins jede Plattform systemeigene Schnittstelle an der Unterseite dieser Seite verzeichnet.
@@ -137,9 +139,9 @@ Tizen-Plattform unterstützt keine Plugins.
 
 ## Publishing Plugins
 
-Wenn Sie Ihr Plugin zu entwickeln, empfiehlt es sich, zu veröffentlichen und mit der Community teilen. Können Sie das Plugin auf der Cordova-Registrierung veröffentlichen (basierend auf [ `npmjs` ][3]) oder jede andere `npmjs` -basierte Registry. Andere Entwickler können installieren automatisch mit entweder `plugman` oder Cordova-CLI. (Für Details zu jedem Entwicklungspfad, siehe Plugman Plugins verwalten und die Befehlszeilenschnittstelle verwenden.)
+Wenn Sie Ihr Plugin zu entwickeln, empfiehlt es sich, zu veröffentlichen und mit der Community teilen. Können Sie das Plugin auf der Cordova- [Registrierung][1] veröffentlichen (basierend auf [ `npmjs` ][4]) oder jede andere `npmjs` -basierte Registry. Andere Entwickler können installieren automatisch mit entweder `plugman` oder Cordova-CLI. (Für Details zu jedem Entwicklungspfad, siehe Plugman Plugins verwalten und die Befehlszeilenschnittstelle verwenden.)
 
- [3]: https://github.com/isaacs/npmjs.org
+ [4]: https://github.com/isaacs/npmjs.org
 
 Um ein Plugin zu veröffentlichen, Sie verwenden müssen, die `plugman` -tool und gehen Sie durch die folgenden Schritte aus:
 

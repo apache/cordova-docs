@@ -156,7 +156,8 @@ Alle `<asset>` Tags erfordern beide `src` und `target` Attribute. Nur Web-Plugin
     
     Wo die Datei oder das Verzeichnis sollte gefunden werden in der app Cordova bezogen auf das `www` Verzeichnis. Vermögenswerte können z. B. auf Unterverzeichnisse, eingesetzt werden:
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     erstellt die `js/experimental` Verzeichnis innerhalb der `www` Verzeichnis, sofern bereits vorhanden, dann Kopien der `new-foo.js` Datei und benennt es `foo.js` . Existiert eine Datei schon am Zielort, Plugman beendet und kehrt den Installationsvorgang, gibt eine Benachrichtigung über den Konflikt und beendet mit einem NULL-Code.
 
@@ -187,7 +188,7 @@ Details für den `<js-module>` Tag:
     
     *   `<runs/>`Mittel, die Ihr Code mit angegeben werden sollte `cordova.require` , aber nicht auf installiert das `window` Objekt. Dies ist nützlich, wenn das Modul, das Anfügen von Ereignishandlern zu initialisieren oder auf andere Weise. Nur kann man bis zu einem `<runs/>` Tag. Beachten Sie, dass auch ein `<runs/>` mit `<clobbers/>` oder `<merges/>` ist überflüssig, da sie auch `cordova.require` Ihr Modul.
     
-    *   Eine leere `<js-module>` noch geladen und kann vorzugeben in anderen Modulen über`cordova.require`.
+    *   Eine leere `<js-module>` noch lädt und in anderen Modulen über zugegriffen werden kann`cordova.require`.
 
 Wenn `src` , löst nicht an eine vorhandene Datei Plugman beendet und kehrt die Installation, gibt eine Benachrichtigung des Problems und beendet mit einem NULL-Code.
 
@@ -370,11 +371,14 @@ Beispiele:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 Das `src` -Attribut identifiziert den Rahmen, welche Plugman versucht die Cordova-Projekt in der richtigen Weise für eine bestimmte Plattform hinzu.
 
 Der optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist`false`.
+
+Der optionale `custom` -Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist`false`.
 
 ## *Info* Element
 
@@ -383,10 +387,7 @@ Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätz
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    Sie müssen die 'local.properties' die folgende Zeile hinzu: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / Info >
     
 
 ## Variablen

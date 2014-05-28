@@ -24,7 +24,7 @@ IOS プラグインは拡張する客観的 C クラスとして実装され、 
 
 プラグインの JavaScript の部分を使用して、 `cordova.exec` メソッドは次のように。
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction > < failFunction >, < サービス > < アクション > [< 引数 >]);
     
 
 これからの要求をマーシャ リングします、 `UIWebView` iOS ネイティブ側を効果的に呼び出して、 `action` 法、 `service` に渡された引数を持つクラス、 `args` 配列。

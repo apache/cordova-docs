@@ -105,7 +105,7 @@ BlackBerryOS/脚本。
 
 ## アップグレード 2.7.0 2.8.0 にプロジェクト
 
-ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト ファイルは今 'cordova.js' と呼ばれもはやバージョン文字列が含まれています。
+ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト ファイルは今と呼ばれ 'cordova.js' はもはやバージョン文字列が含まれています。
 
 1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.8.0 ソースを展開`~/Cordova-2.8.0`.
 
@@ -113,11 +113,11 @@ BlackBerryOS/脚本。
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.
+4.  ブラックベリー シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
 
 5.  以前のプロジェクトから、プロジェクトのソースをコピー `/www` を新しいプロジェクトのディレクトリ `/www` ディレクトリ。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
 BlackBerryOS/脚本。
 
@@ -127,11 +127,11 @@ BlackBerryOS/脚本。
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
+5.  コピー、 `www/cordova.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
 7.  コピー、 `native` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `native` ディレクトリ。
 
@@ -240,7 +240,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  あなたの HTML を使用して、新しい更新 `cordova-2.4.0.js` ファイル。
 
-（すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
+（すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
@@ -275,7 +275,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  あなたの HTML を使用して、新しい更新 `cordova-2.3.0.js` ファイル。
 
-（すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
+（すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
@@ -310,7 +310,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  あなたの HTML を使用して、新しい更新 `cordova-2.2.0.js` ファイル。
 
-（すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
+（すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
@@ -344,7 +344,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 5.  あなたの HTML を使用して、新しい更新 `cordova-2.1.0.js` ファイル。
 
-（すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
+（すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 
@@ -386,7 +386,7 @@ PhoneGap のダウンロード ディレクトリを更新しています。
         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
         
 
-（すなわち、更新、ant ツールを使用して)、サンプル ディレクトリの更新。
+（すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
 
 1.  オープン、 `sample/lib/` ディレクトリ。
 

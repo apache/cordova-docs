@@ -18,7 +18,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf Android Builds gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
-*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst. Hinweis: Diese Einstellung auf False wird nicht töten die app nach einer Pause, wird es nur Ausführung von Code in der Webview Cordova zu stoppen, während die app im Hintergrund ist.
+*   `KeepRunning`(Boolean, wird standardmäßig auf `true` ): bestimmt, ob die Anwendung bleibt auch nach im Hintergrund läuft ein `pause` -Ereignis ausgelöst. Diese `false` tötet nicht die app nach einem `pause` Ereignis, sondern einfach hält Ausführung von Code innerhalb der Webview Cordova, während die app im Hintergrund ist.
     
         <preference name="KeepRunning" value="false"/>
         

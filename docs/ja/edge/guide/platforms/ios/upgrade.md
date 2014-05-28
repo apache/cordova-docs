@@ -18,9 +18,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 このガイドは、コルドバの旧バージョンからアップグレードする iOS のプロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
 
-**NOTE**: Xcode 5 is required. Currently, to submit to the Apple App Store, you should use the latest shipped version of the iOS SDK, which is iOS 7 and this is included only with Xcode 5.
+**注**: Xcode 5 が必要です。 現在、Apple の App Store に提出する iOS ios 7 SDK の最新の出荷されたバージョンを使用する必要があります、これは Xcode 5 のみ含まれています。
 
-## Upgrading 3.3.0 Projects to 3.4.0
+## アップグレード 3.3.0 プロジェクト 3.4.0
 
 CLI 以外のプロジェクトを実行します。
 
@@ -151,7 +151,7 @@ platform add ios`.
 
 6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
-7.  更新 `<plugin>` 内のタグの `config.xml` ファイルを `<feature>` タグ。 既存のことに注意してください `<plugin>` タグまだ動作しますは推奨されません。 You can copy this information in the `config.xml` file for a new project. たとえば。
+7.  更新 `<plugin>` 内のタグの `config.xml` ファイルを `<feature>` タグ。 既存のことに注意してください `<plugin>` タグまだ動作しますは推奨されません。 この情報をコピーすることができます、 `config.xml` 、新しいプロジェクト用のファイル。 たとえば。
     
         <plugins>
             <plugin name="LocalStorage" value="CDVLocalStorage" />
@@ -186,7 +186,7 @@ platform add ios`.
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. you need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
 5.  コピー、 `www/cordova-2.7.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova-2.6.0.js` ファイル。
 
@@ -213,7 +213,7 @@ platform add ios`.
 
 5.  プロジェクトのコピー `www/cordova-2.6.0.js` ファイルに、 `www` ディレクトリ、および削除、 `www/cordova-2.5.0.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (along with any other files that reference the script) to refer to the new `cordova-2.6.0.js` file.
+6.  コルドバのスクリプト参照を更新、 `www/index.html` と共に、スクリプトを参照する他のファイル) のファイルを指す、新しい `cordova-2.6.0.js` ファイル。
 
 7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][5]を見るプロジェクト).
 
@@ -240,21 +240,21 @@ platform add ios`.
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  Copy the `www/cordova-2.5.0.js` file from the new project into the `www` directory and delete the `www/cordova-2.4.0.js` file.
+5.  コピー、 `www/cordova-2.5.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリと削除、 `www/cordova-2.4.0.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.5.0.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.5.0.js` ファイル。
 
-7.  Update (or replace, if you never changed the file) the `AppDelegate.m` file according to the one from the new project (see [this diff][9]).
+7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][9]を見るプロジェクト).
 
-8.  In the `config.xml` file, [add these new lines][10].
+8.  `config.xml`ファイル、[これらの新しい行を追加][10].
 
-9.  In the `config.xml` file, [edit the root element, change it from cordova to widget][11].
+9.  `config.xml`ファイル、[ルート要素を編集する、ウィジェットにコルドバからそれを変える][11].
 
-10. In the `config.xml` file, [remove the OpenAllWhitelistURLsInWebView preference][12].
+10. `config.xml`ファイル、 [OpenAllWhitelistURLsInWebView 設定の削除][12].
 
-11. Delete the `cordova` directory, and copy the `cordova` directory from the new project into your project's root directory. In 2.5.0, this has updated scripts.
+11. 削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.5.0 で、これはスクリプトを更新します。
 
 12. 削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
@@ -271,44 +271,44 @@ platform add ios`.
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  Copy the `www/cordova-2.4.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.3.0.js` file.
+5.  コピー、 `www/cordova-2.4.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova-2.3.0.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.4.0.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.4.0.js` ファイル。
 
-7.  Update (or replace, if you never changed the files) the `MainViewController.m` file according to the one from the new project (see [this diff][13]).
+7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` ファイルから、新しい 1 つによると （[この diff][13]を見るプロジェクト).
 
-8.  Update (or replace, if you never changed the file) the `AppDelegate.m` file according to the one from the new project (see [this diff][14]).
+8.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` ファイルから、新しい 1 つによると （[この diff][14]を見るプロジェクト).
 
-9.  In the `config.xml` file, [add this new line][15].
+9.  `config.xml`ファイルは、[この新しい行を追加][15].
 
-10. Delete the `cordova` directory, and copy the `cordova` directory from the new project into your project's root directory. In 2.4.0, this has fixed scripts.
+10. 削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.4.0 でこのスクリプトを修正します。
 
 11. 削除、 `CordovaLib` ディレクトリ、およびコピー、 `CordovaLib` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。
 
-12. Add AssetsLibrary.framework as a resource to your project. (See [Apple's documentation][16] for instructions on how to do so.).
+12. リソースとしてプロジェクトに AssetsLibrary.framework を追加します。 ([マニュアル][16]参照してくださいアップルのこれを行う方法について。)。
 
  [13]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/MainViewController.m;h=5f9eeac15c2437cd02a6eb5835b48374e9b94100;hp=89da1082d06ba5e5d0dffc5b2e75a3a06d5c2aa6;hb=b4a2e4ae0445ba7aec788090dce9b822d67edfd8;hpb=a484850f4610e73c7b20cd429a7794ba829ec997
  [14]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/Classes/AppDelegate.m;h=6dc7bfc84f0ecede4cc43d2a3256ef7c5383b9fe;hp=1ca3dafeb354c4442b7e149da4f281675aa6b740;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
  [15]: https://git-wip-us.apache.org/repos/asf?p=cordova-ios.git;a=blobdiff;f=bin/templates/project/__TESTING__/config.xml;h=7d67508b70914aa921a16e79f79c00512502a8b6;hp=337d38da6f40c7432b0bce05aa3281d797eec40a;hb=6749c17640c5fed8a7d3a0b9cca204b89a855baa;hpb=deabeeb6fcb35bac9360b053c8bf902b45e6de4d
  [16]: https://developer.apple.com/library/ios/#recipes/xcode_help-project_editor/Articles/AddingaLibrarytoaTarget.html
 
-## Upgrading 2.2.0 Projects to 2.3.0
+## アップグレード 2.2.0 2.3.0 にプロジェクト
 
-1.  Download and extract the Cordova 2.3.0 source to a permanent directory location on your hard drive, for example to `~/Documents/Cordova-2.3.0`.
+1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.3.0 ソースを展開`~/Documents/Cordova-2.3.0`.
 
 2.  それが実行されている場合は、Xcode を終了します。
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  Copy the `www/cordova-2.3.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.2.0.js` file.
+5.  コピー、 `www/cordova-2.3.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova-2.2.0.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.3.0.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.3.0.js` ファイル。
 
-7.  Update (or replace, if you never changed the file) the `MainViewController.m` according to the one from the new project.
+7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `MainViewController.m` 新しいプロジェクトからの 1 つによると。
 
 8.  削除、 `cordova` ディレクトリ、およびコピー、 `cordova` プロジェクトのルート ディレクトリに新しいプロジェクト ディレクトリ。2.3.0、新しいスクリプトがあります。
 
@@ -369,11 +369,11 @@ platform add ios`.
 
 3.  ターミナルを使用して、上記ダウンロードしたソースを配置したディレクトリに移動します。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
 
-5.  Copy the `www/cordova-2.1.0.js` file from the new project into the `www` directory, and delete the `www/cordova-2.0.0.js` file.
+5.  コピー、 `www/cordova-2.1.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova-2.0.0.js` ファイル。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.1.0.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova-2.1.0.js` ファイル。
 
 7.  更新 (または置き換えるには、決してファイルを変更した場合)、 `AppDelegate.m` 新しいプロジェクトからの 1 つによると：
     
@@ -715,55 +715,55 @@ platform add ios`.
 
 5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
 
-6.  Copy the `www/phonegap-1.2.0.js` file from the new project into the `www` directory, and delete the `www/phonegap-1.1.0.js` file.
+6.  コピー、 `www/phonegap-1.2.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/phonegap-1.1.0.js` ファイル。
 
-7.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.2.0.js` file.
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.2.0.js` ファイル。
 
 8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
 9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
 
-## Upgrading 1.0.0 Projects to 1.1.0
+## アップグレード 1.0.0 1.1.0 するプロジェクト
 
-1.  Install Cordova 1.1.0.
+1.  コルドバ 1.1.0 をインストールします。
 
 2.  バックアップを作成 `AppDelegate.m` と `AppDelegate.h` プロジェクト内。
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  Copy these files from the new project into your 1.0.0-based project directory on disk, replacing any old files (backup your files first from step 2 above):
+4.  1.0.0-based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
 5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
 
-6.  Copy the `www/phonegap-1.1.0.js` file from the new project into the `www` directory, and delete the `www/phonegap-1.0.0.js` file.
+6.  コピー、 `www/phonegap-1.1.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/phonegap-1.0.0.js` ファイル。
 
-7.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.1.0.js` file.
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.1.0.js` ファイル。
 
 8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
 
 9.  あなたのバックアップであるプロジェクトに固有のコードを統合 `AppDelegate.h` と `AppDelegate.m` に新しい AppDelegate ファイル。
 
-## Upgrading 0.9.6 Projects to 1.0.0
+## アップグレード 0.9.6 プロジェクトを 1.0.0 に
 
-1.  Install Cordova 1.0.0.
+1.  コルドバ 1.0.0 をインストールします。
 
 2.  バックアップを作成 `AppDelegate.m` と `AppDelegate.h` プロジェクト内。
 
 3.  新しいプロジェクトを作成します。この新しいプロジェクトから資産の一部を必要があります。
 
-4.  Copy these files from the new project into your 0.9.6-based project directory on disk, replacing any old files (backup your files first from step 2 above):
+4.  0.9.6-based プロジェクトのディレクトリ (バックアップ ファイルを最初から上記の手順 2) すべての古いファイルを置き換える、ディスク上に新しいプロジェクトからこれらのファイルをコピーします。
     
         AppDelegate.h AppDelegate.m MainViewController.h MainViewController.m MainViewController.xib
         
 
 5.  すべて追加の `MainViewController` Xcode プロジェクトへファイルを。
 
-6.  Copy the `www/phonegap-1.0.0.js` file from the new project into the `www` directory, and delete the `www/phonegap-0.9.6.js` file.
+6.  コピー、 `www/phonegap-1.0.0.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/phonegap-0.9.6.js` ファイル。
 
-7.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `phonegap-1.0.0.js` file.
+7.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `phonegap-1.0.0.js` ファイル。
 
 8.  下で新しいエントリを追加する `Plugins` で、 `PhoneGap.plist` ファイル。キーが `com.phonegap.battery` で、値は`PGBattery`.
 

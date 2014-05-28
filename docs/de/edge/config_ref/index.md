@@ -131,3 +131,11 @@ Hier ist, wie das Element für iOS-Projekte wird angezeigt:
     
 
 Finden Sie die API-Referenz für Details zu einzelnen Funktionen angeben. Finden Sie im Plugin-Entwicklung-Handbuch weitere Informationen auf Plugins.
+
+## Die *Plattform* Element
+
+Wenn die CLI verwenden, um Anwendungen zu erstellen, ist es manchmal notwendig, Einstellungen oder andere Elemente, die auf eine spezifische Plattform anzugeben. Verwendung der `<platform>` Element angeben, Konfiguration, die nur angezeigt werden, sollten in einer einzigen Plattform-spezifischen `config.xml` Datei. Hier ist beispielsweise angeben, dass nur Android verwenden sollten, die Voreinstellung "Fullscreen":
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>

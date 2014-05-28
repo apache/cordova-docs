@@ -32,27 +32,32 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 ## Android
 
 *   Android-Plattform-Guide
+*   Android Shell Tool Guide
 *   Android-Konfiguration
-*   Android Webansichten für
 *   Android Plugins
-*   Android-Befehlszeilenprogrammen
+*   Android Webansichten für
 *   Aktualisierung von Android
 
 ## BlackBerry 10
 
 *   Handbuch für die Plattform von BlackBerry 10
-*   BlackBerry 10 Konfiguration
+*   BlackBerry 10 Shell Tool Guide
+*   BlackBerry Configuration
 *   BlackBerry 10 Plugins
 *   BlackBerry 10-Befehlszeilentools
 *   Aktualisieren der BlackBerry 10
 
+## Firefox OS
+
+*   Firefox-OS-Plattform-Guide
+
 ## iOS
 
 *   iOS Platform Guide
+*   iOS Shell Tool Guide
 *   iOS Konfiguration
-*   iOS Webansichten für
 *   iOS Plugins
-*   iOS-Befehlszeilenprogrammen
+*   iOS Webansichten für
 *   IOS Upgrade
 
 ## Ubuntu
@@ -61,16 +66,13 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 ## Windows Phone
 
-*   Handbuch für die Plattform von Windows Phone-8
-*   Windows Phone 7 Plattform Guide
-*   Windows Phone-Konfiguration
-*   Windows Phone Befehlszeilentools
+*   Windows Phone Plattform Guide
+*   Windows Phone Plugins
 *   Aktualisieren von Windows Phone
 
 ## Windows 8
 
 *   Anleitung zur Windows 8 Platform
-*   Windows 8-Befehlszeilentools
 *   Aktualisieren von Windows 8
 
 ## Tizen

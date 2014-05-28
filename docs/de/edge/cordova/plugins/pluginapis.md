@@ -11,11 +11,11 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 Cordova mit einen minimalen Satz von APIs und Projekte hinzufügen, was zusätzliche APIs, die sie durch Plugins erfordern.
 
-Sie können alle vorhandenen Plugins, die mithilfe der [Plugin Registry][1] durchsuchen.
+Sie können alle vorhandenen Plugins (einschließlich Drittanbieter Plug-ins) mithilfe der [Plugin Registry][1] durchsuchen.
 
  [1]: http://plugins.cordova.io/
 
-Der traditionelle Satz von Cordova Plugins sind wie folgt:
+Der traditionelle Kern Cordova Plugins sind wie folgt:
 
 *   [Batteriestatus][2]
     

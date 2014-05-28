@@ -16,36 +16,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # BlackBerry 10 プラットフォーム ガイド
 
-このガイドはブラックベリー 10 デバイス用 Cordova アプリを展開する SDK 環境を設定する方法を示します。 以前のバージョンの BlackBerry の異なる SDK 環境と BlackBerry プラットフォーム ガイドで説明されている、コマンド ライン ツールのセットを使用する必要があります。 ブラックベリー 10 の開発、またはコマンド ライン ツールのプラットフォーム中心の狭いセットのクロス プラットフォーム コルドバ CLI を使用するかどうかに関係なく SDK をインストールする必要があります。 For a comparison of the two development paths, see the Overview. For details on each, see The Command-Line Interface and the BlackBerry 10 Shell Tool Guide.
+このガイドはブラックベリー 10 デバイス用 Cordova アプリを展開する SDK 環境を設定する方法を示します。 以前のバージョンの BlackBerry の異なる SDK 環境と BlackBerry プラットフォーム ガイドで説明されている、コマンド ライン ツールのセットを使用する必要があります。 ブラックベリー 10 の開発、またはコマンド ライン ツールのプラットフォーム中心の狭いセットのクロス プラットフォーム コルドバ CLI を使用するかどうかに関係なく SDK をインストールする必要があります。 2 つの開発パスの比較の概要を参照してください。 それぞれ詳細については、コマンド ライン インターフェイスとブラックベリー 10 シェル ツールのガイドを参照してください。
 
 ## 要件
 
 開発環境は、Windows、Mac および Linux で利用できます。
 
-開発者を使用する必要があります、 `cordova` ブラックベリー WebWorks SDK またはブラックベリー ネイティブ SDK と共にユーティリティ。 See The Command-Line Interface for information how to install `cordova`, add projects, then build and deploy for each platform.
+開発者を使用する必要があります、 `cordova` ブラックベリー WebWorks SDK またはブラックベリー ネイティブ SDK と共にユーティリティ。 インストールする方法については、コマンド ライン インターフェイスを参照してください `cordova` 、プロジェクトを追加し、ビルドおよび各プラットフォームの配置。
 
-Blackberry 10 Device Simulator:
+ブラックベリー 10 デバイス シミュレーター:
 
-*   Processor: Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
+*   プロセッサ: インテルデュアルコア 2.0 GHz/AMD Athlon 4200 + またはより高い
 *   ディスクの空き容量: 10 ギガバイト 
-*   RAM Memory: 4 GB 
-*   Virtualization: one of the following: 
-    *   **Intel Virtualization Technology** (VT, VT-x, vmx) → [Intel VT-x supported processor list][1]
-    *   **AMD Virtualization** (AMD-V, SVM) (Since May 2006 all AMD CPUs include AMD-V except Sempron).
+*   RAM メモリ: 4 GB 
+*   仮想化： 次のいずれか。 
+    *   **インテル バーチャライゼーション ・ テクノロジー**(VT、VT-x、vmx) → [Intel VT-x 対応のプロセッサ一覧][1]
+    *   **AMD の仮想化**（AMD-V、SVM）(2006 年 5 月以来すべての AMD の Cpu を含む AMD-V Sempron を除く)。
 
  [1]: http://ark.intel.com/products/virtualizationtechnology
 
-More information about requirements: [BB10 Simulator requeriments][2].
+要件についての詳細： [BB10 シミュレータ要件][2].
 
  [2]: http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html
 
-## Install the BlackBerry WebWorks SDK
+## ブラックベリー WebWorks SDK をインストールします。
 
-Download and install the BlackBerry WebWorks SDK from [developer.blackberry.com][3]
+ダウンロードして[developer.blackberry.com][3]からブラックベリー WebWorks SDK をインストールします。
 
  [3]: https://developer.blackberry.com/html5/download/
 
-The installer will add command-line tools to your path. Depending on your OS, you may need to open a new terminal window or re-log in.
+インストーラーは、あなたのパスにコマンド ライン ツールを追加します。お使いの OS に応じて新しいターミナル ・ ウィンドウを開いたり、再ログインする必要があります。
 
 ## ブラックベリーのネイティブ SDK をインストールします。
 
@@ -57,9 +57,9 @@ The installer will add command-line tools to your path. Depending on your OS, yo
 
 Windows:
 
-*   Go to **My Computer → Properties → Advanced → Environment Variables**.
+*   **私のコンピューター → プロパティ → 詳細設定 → 環境変数**に行く.
 
-*   Append the Native SDK's install directory to the PATH, for example:
+*   ネイティブ SDK は、インストール ディレクトリのパスに追加、たとえば。
     
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
         
@@ -125,7 +125,7 @@ Mac および Linux:
 
 ## プロジェクトを作成します。
 
-Use the `cordova` utility to set up a new project, as described in The Command-line Interface. For example, in a source-code directory:
+使用の `cordova` コマンド ライン インターフェイスで説明されているように、新しいプロジェクトを設定するユーティリティ。たとえば、ソース コード ディレクトリ: で
 
         $ cordova create hello com.example.hello
         $ cd hello
@@ -193,13 +193,13 @@ Use the `cordova` utility to set up a new project, as described in The Command-l
         $ platforms/blackberry10/cordova/target add mydevice 169.254.0.1 -t device --password 123456 --pin FFFF972E
         
 
-where:
+場所：
 
 *   `--password`デバイスのロックを解除するパスワードを指します。
 
 *   `--pin`デバイス**の設定**アプリケーションから取得した PIN を指します。
 
-Then, run the `run` command to view the app:
+その後、実行、 `run` アプリケーションを表示するコマンド。
 
         blackberry10 を実行 $ コルドバ
     
@@ -218,26 +218,26 @@ Then, run the `run` command to view the app:
 
 ## WebInspector とデバッグ
 
-When debugging on the device or an emulator, you may run WebInspector remotely to view the application's internal state. A prompt displays the URL that allows you to connect to the app with a standard web browser. For more information, see [Debugging using WebInspector][9].
+デバイスまたはエミュレーター上でのデバッグ、アプリケーションの内部状態を表示するリモート WebInspector を実行ことがあります。 プロンプトは、標準の web ブラウザーでアプリケーションを接続することができます URL を表示します。 詳細については、[デバッグ使用 WebInspector][9]を参照してください。.
 
  [9]: http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html
 
 ## リリース バージョンをビルド
 
-By default, running the `cordova build` command creates an unsigned *.bar* package file suitable for testing on a device or simulator.
+既定では、実行して、 `cordova build` コマンドはデバイスまたはシミュレータにテストに適した符号なし*.bar*パッケージ ファイルを作成します。
 
-Use `--release` to create a release version suitable for distribution through BlackBerry World.
+使用する `--release` BlackBerry の世界を介して配信に適してリリース バージョンを作成します。
 
     $ cordova build --release --keystorepass <signing password>
     
 
-The `--keystorepass` option specifies the password you defined when configuring your computer to sign applications.
+`--keystorepass`オプションに署名するお使いのコンピューターを構成するときに定義されたパスワードを指定しますアプリケーション。
 
 ## 他の場所に配置します。
 
-The instructions above assume a device is plugged in via USB or a simulator is running on the local machine. It is also possible to deploy to other locations.
+上記の手順は、デバイスは USB 経由で接続されてまたはシミュレータが、ローカル コンピューターで実行されていると仮定します。また、他の場所に展開することが可能です。
 
-コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 The following command, in this case invoked from the project top-level directory, associates a target named *emu* with an IP address.
+コマンド ライン ユーティリティのセットを追加、プロジェクトの BlackBerry 10 プラットフォームを設定するときに含められます。 この場合、プロジェクトの最上位ディレクトリから呼び出される、次のコマンドは*emu* IP アドレスを持つという名前のターゲットを関連付けます。
 
 *   Windows:
     
@@ -249,6 +249,6 @@ The instructions above assume a device is plugged in via USB or a simulator is r
         $ platforms/blackberry10/cordova/build --release --keystorepass mysecret
         
 
-Once the target is defined, you can provide it to the run command using `--target`:
+ターゲットが定義されたら、実行するコマンドを使用する提供できます `--target` :
 
     $ cordova run blackberry10 --target=emu

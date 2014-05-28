@@ -24,7 +24,7 @@ Ein iOS-Plugin ist implementiert als eine Objective-C-Klasse, die erweitert die 
 
 Der JavaScript-Teil eines Plugins verwendet die `cordova.exec` -Methode, wie folgt:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        Exec (< SuccessFunction >, < FailFunction >, < Service >, < Aktion >, [< arg >]);
     
 
 Das marshallt ersuchen die `UIWebView` effektiv auf die native iOS-Seite aufrufen der `action` -Methode für die `service` -Klasse mit der übergebenen Argumente der `args` Array.
@@ -166,7 +166,7 @@ Plugin-Methoden werden normalerweise im selben Thread wie die wichtigste Schnitt
 
 ## Debuggen von iOS Plugins
 
-Zum Debuggen auf der Objective-C-Seite benötigen Sie Xcodes integrierten Debuggers. Für JavaScript auf iOS können 5,0 [Weinre, einem Apache-Cordova-Projekt][3] oder [iWebInspector, ein Drittanbieter - Dienstprogramm][4]Sie. Für iOS 6 können Sie Ihre app-Betrieb innerhalb der iOS 6 Simulator Safari 6.0 zuordnen.
+Zum Debuggen auf der Objective-C-Seite benötigen Sie Xcodes integrierten Debuggers. Für JavaScript auf iOS können 5,0 [Weinre, einem Apache-Cordova-Projekt][3] oder [iWebInspector, ein Drittanbieter - Dienstprogramm][4]Sie. Für iOS 6 können Sie die app, die in das iOS 6 Simulator ausgeführt Safari 6.0 zuordnen.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

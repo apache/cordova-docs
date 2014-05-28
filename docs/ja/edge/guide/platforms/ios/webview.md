@@ -16,7 +16,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS の web 表示
 
-This guide shows how to embed a Cordova-enabled WebView component within a larger iOS application. For details on how these components can communicate with each other, see Application Plugins.
+このガイドを大きな iOS アプリケーション内コルドバ有効 WebView コンポーネントを埋め込む方法を示します。これらのコンポーネントが互いと通信できる方法については、アプリケーション ・ プラグインを参照してください。
 
 コルドバ 1.4、始まる iOS web 表示のサポートを使用して、 `Cleaver` コンポーネント Xcode テンプレートを参照実装として提供しています。 コルドバ 2.0 およびそれ以降のバージョンのみサブプロジェクト ベース包丁実装をサポートします。
 
@@ -56,16 +56,10 @@ This guide shows how to embed a Cordova-enabled WebView component within a large
 
 14. **+**を選択してこのボタンをクリックすると、し次の**フレームワーク**を追加。 必要に応じて、**プロジェクト ナビゲーター**内移動それら**フレームワーク**グループの下。
     
-        AddressBook.framework
-        AddressBookUI.framework
-        AudioToolbox.framework
-        AVFoundation.framework
+        AssetsLibrary.framework
         CoreLocation.framework
-        MediaPlayer.framework
-        QuartzCore.framework
-        SystemConfiguration.framework
+        CoreGraphics.framework
         MobileCoreServices.framework
-        CoreMedia.framework
         
 
 15. **ターゲットの依存関係**、1 つ以上のボックスがある場合にそのラベルを持つセットトップ ボックスを展開します。

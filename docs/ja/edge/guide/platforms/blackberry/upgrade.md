@@ -14,39 +14,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Upgrading BlackBerry
+# ブラックベリーのアップグレード
 
-This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova. These instructions apply to projects created with an older set of command-line tools that precede the `cordova` CLI utility. See The Command-line Interface for information how to update the version of the CLI.
+このガイドは、コルドバの旧バージョンからアップグレードするブラックベリー プロジェクトを変更する方法を示します。 古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトにこれらの指示を適用、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
 
-## Upgrading 2.8.0 projects to 2.9.0
+## アップグレード 2.8.0 プロジェクト 2.9.0
 
-BlackBerry 10:
+ブラックベリー 10:
 
-1.  Download and extract the Cordova 2.9.0 source to a permanent location on your hard drive, for example to `~/Cordova-2.9.0`.
-
-2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
-
-3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
-
-4.  Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.
-
-5.  Copy your project's source from the old project's `/www` directory to the new project's `/www` directory.
-
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
-
-### BlackBerryOS/Playbook
-
-1.  Download and extract the Cordova 2.9.0 source to a permanent location on your hard drive, for example to `~/Cordova-2.9.0`.
+1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的な場所にコルドバ 2.9.0 ソースを展開`~/Cordova-2.9.0`.
 
 2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  Create a new project, as described in iOS Shell Tool Guide. You need the assets from this new project.
+4.  ブラックベリー シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
 
-5.  Copy the `www/cordova.js` file from the new project into the `www` directory, and delete the `www/cordova.js` file.
+5.  以前のプロジェクトからプロジェクトのソースをコピー `/www` を新しいプロジェクトのディレクトリ `/www` ディレクトリ。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
+
+### BlackBerryOS/脚本
+
+1.  ダウンロードし、するたとえば、ハード ドライブ上の永続的な場所にコルドバ 2.9.0 ソースを展開`~/Cordova-2.9.0`.
+
+2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
+
+3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
+
+4.  IOS シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。この新しいプロジェクトから資産必要があります。
+
+5.  コピー、 `www/cordova.js` ファイルから新しいプロジェクトに、 `www` ディレクトリ、および削除、 `www/cordova.js` ファイル。
+
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
 7.  コピー、 `native` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `native` ディレクトリ。
 
@@ -54,27 +54,27 @@ BlackBerry 10:
 
 9.  コピー、 `cordova` 、古いを上書きする既存のプロジェクトに新しいプロジェクト ディレクトリ `cordova` ディレクトリ。
 
-## Upgrading 2.7.0 projects to 2.8.0
+## アップグレード 2.7.0 2.8.0 にプロジェクトします。
 
-BlackBerry 10:
+ブラックベリー 10:
 
-ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト ファイルは今 'cordova.js' と呼ばれもはやバージョン文字列が含まれています。
+ブラックベリー 10 新しい CLI ツールを使用して、コア Api のプラグインとして管理します。 指示は更新、古いプロジェクトの複雑さのため、既存のプロジェクトを更新するのではなく、新しいプロジェクトにプロジェクトを移行します。 またメモ コルドバ js スクリプト ファイルは今と呼ばれ 'cordova.js' はもはやバージョン文字列が含まれています。
 
-1.  Download and extract the Cordova 2.8.0 source to a permanent location on your hard drive, for example to `~/Cordova-2.8.0`.
+1.  ダウンロード ソース展開と、コルドバ 2.8.0、ハード ドライブ上の永続的な場所を例に`~/Cordova-2.8.0`.
 
 2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
 
 3.  端末のような unix を使用して、上記ダウンロードしたソースを配置したディレクトリに移動します： ターミナル.app、Bash、Cygwin など。
 
-4.  Create a new project, as described in BlackBerry Shell Tool Guide. This becomes the home of your updated project.
+4.  ブラックベリー シェル ツール ガイドで説明されているように、新しいプロジェクトを作成します。これが、更新されたプロジェクトのホームになります。
 
-5.  Copy your project's source from the old project's `/www` directory to the new project's `/www` directory.
+5.  以前のプロジェクトからプロジェクトのソースをコピー `/www` を新しいプロジェクトのディレクトリ `/www` ディレクトリ。
 
-6.  Update the Cordova script reference in the `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6.  コルドバ スクリプト参照を更新して、 `www/index.html` ファイルとスクリプト参照が含まれている他のファイル) を指す、新しい `cordova.js` ファイル。
 
-BlackBerryOS/Playbook:
+BlackBerryOS/脚本:
 
-1.  Download and extract the Cordova 2.8.0 source to a permanent location on your hard drive, for example to `~/Cordova-2.8.0`.
+1.  ダウンロード ソース展開と、コルドバ 2.8.0、ハード ドライブ上の永続的な場所を例に`~/Cordova-2.8.0`.
 
 2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
 
@@ -353,9 +353,9 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www` 更新コルドバとディレクトリ。
 
-7.  Open the `www` directory and update your HTML to use the new `cordova-2.0.0.js` file.
+7.  オープン、 `www` ディレクトリを使用して、新しい HTML の更新と `cordova-2.0.0.js` ファイル。
 
-8.  Open the `www` directory and update the `plugins.xml` file. Two plugins changed their namespace/service label. Change the old entries for the Capture and Contact plugins from:
+8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         
@@ -407,9 +407,9 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  タイプ `ant blackberry build` または `ant playbook build` を更新する、 `www` 更新コルドバとディレクトリ。
 
-7.  Open the `www` directory and update your HTML to use the new `cordova-1.8.0.js` file.
+7.  オープン、 `www` ディレクトリを使用して、新しい HTML の更新と `cordova-1.8.0.js` ファイル。
 
-8.  Open the `www` directory and update the `plugins.xml` file. Two plugins changed their namespace/service label. Change the old entries for the Capture and Contact plugins from:
+8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         

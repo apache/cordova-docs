@@ -26,7 +26,7 @@ Android Plugins basieren auf Cordova-Android, bestehend aus einem Android WebVie
 
 Das Plugin-JavaScript-Schnittstelle verwendet die `cordova.exec` -Methode, wie folgt:
 
-        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        Exec (< SuccessFunction >, < FailFunction >, < Service >, < Aktion >, [< arg >]);
     
 
 Dies marshallt ersuchen die WebView Android native seitlich effektiv Aufrufen der `action` -Methode für die `service` -Klasse, mit zusätzlichen übergebenen Argumente der `args` Array.
@@ -61,7 +61,7 @@ Plugins sollten verwenden die `initialize` -Methode für ihre Start-up-Logik.
 
 ## Schreibe ein Android Java-Plugin
 
-Ein JavaScript-Aufruf feuert eine Plugin-Anforderung an die systemeigene Seite und das Java-Plugin von Correspoinding zugeordnet ist, richtig in die `config.xml` -Datei, aber was bedeutet die endgültige Android Java Plugin Klasse aussehen? Was auch immer an das Plugin mit JavaScript gesendet wird `exec` Funktion ist in der Plugin-Klasse übergeben `execute` Methode. Die meisten `execute` Implementierungen wie folgt aussehen:
+Ein JavaScript-Aufruf feuert eine Plugin-Anforderung an die systemeigene Seite und das entsprechende Java-Plugin zugeordnet ist richtig in der `config.xml` Datei, aber was bedeutet die endgültige Android Java Plugin Klasse aussehen? Was auch immer an das Plugin mit JavaScript gesendet wird `exec` Funktion ist in der Plugin-Klasse übergeben `execute` Methode. Die meisten `execute` Implementierungen wie folgt aussehen:
 
         @Override public Boolean ausführen (String Aktion, JSONArray Args, CallbackContext CallbackContext) löst JSONException {wenn ("beep".equals(action)) {this.beep(args.getLong(0));
                 callbackContext.success();

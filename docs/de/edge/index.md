@@ -25,7 +25,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Übersicht
       </h2>
       
-      <span>Beginnen Sie hier, wenn Sie Cordova Neuland.</span>
+      <span>Beginnen Sie hier, wenn Sie mit Cordova sind. Umfasst die Installation sowie die nächsten Schritte.</span>
     </li>
     <li>
       <h2>
@@ -46,42 +46,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Plattform-Guides
       </h2>
       
-      <span>Jede SDK und Update Projekte</span>
+      <span>Jede Plattform SDK einrichten und Projekte aktualisieren.</span>
     </li>
     <li>
       <h2>
         Plugins verwalten mithilfe Plugman
       </h2>
       
-      <span>Verwenden Plugman zum Verwalten von Plugins ohne CLI</span>
+      <span>Verwalten Sie Plugins ohne CLI, wenn den Plattform-zentrierte Workflow verwenden.</span>
     </li>
     <li>
       <h2>
         Die Datei config.xml Datei
       </h2>
       
-      <span>Die Features Ihrer Anwendung anpassen.</span>
+      <span>Ihre app Features anpassen.</span>
     </li>
     <li>
       <h2>
         Symbole und Splash-Screens
       </h2>
       
-      <span>Die app Anzeigen von Bildern anpassen.</span>
+      <span>Passen Sie Ihre app Anzeigen von Bildern.</span>
     </li>
     <li>
       <h2>
         Einbetten von Webansichten für
       </h2>
       
-      <span>Implementieren Sie die Cordova WebView in Ihrem Projekt.</span>
+      <span>Implementieren Sie die Cordova WebView im systemeigenen Projekt.</span>
     </li>
     <li>
       <h2>
         Plugin-Entwicklung-Guide
       </h2>
       
-      <span>Entwickeln Sie Ihre erste Plugin.</span>
+      <span>Entwickeln Sie Ihr eigenes Plugin.</span>
     </li>
     <li>
       <h2>
@@ -89,6 +89,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Erfahren Sie mehr über wichtige mobile Datenschutzprobleme.</span>
+    </li>
+    <li>
+      <h2>
+        Sicherheitshandbuch
+      </h2>
+      
+      <span>Informationen und Tipps für den Aufbau einer sicheren Anwendung.</span>
     </li>
     <li>
       <h2>
@@ -103,6 +110,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </h2>
       
       <span>Eine Übersicht über native Storage-Optionen.</span>
+    </li>
+    <li>
+      <h2>
+        Die nächsten Schritte
+      </h2>
+      
+      <span>Ein Blick auf Themen, die neue Cordova Entwickler stoßen.</span>
     </li>
     <li>
       <h2>
@@ -130,7 +144,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Plugin APIs
       </h2>
       
-      <span>Entdecken Sie, welche Plugins Cordova zur Verwendung in Ihrem Projekt verfügbar sind.</span>
+      <span>Entdecken Sie, welche Cordova-Plugins verwenden Sie in Ihrem Projekt verfügbar sind.</span>
     </li>
   </ul>
 </div>

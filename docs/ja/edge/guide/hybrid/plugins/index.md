@@ -16,13 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # プラグイン開発ガイド
 
-A *plugin* is a package of injected code that allows the Cordova webview within which the app renders to communicate with the native platform on which it runs. プラグインは通常 web ベースのアプリケーションに使用可能なデバイスとプラットフォームの機能へのアクセスを提供します。 すべての主要なコルドバ API 機能、プラグインとして実装されますされ他の多くのバー コード スキャナー、NFC 通信などの機能を有効にするまたはインターフェイス カレンダーを調整します。 There is a [registry][1] of available plugins.
+*プラグイン*は、それが実行されているネイティブ プラットフォームと通信を表示するアプリをコルドバ webview を許可する挿入されたコードのパッケージです。 プラグインは通常 web ベースのアプリケーションに使用可能なデバイスとプラットフォームの機能へのアクセスを提供します。 すべての主要なコルドバ API 機能、プラグインとして実装されますされ他の多くのバー コード スキャナー、NFC 通信などの機能を有効にするまたはインターフェイス カレンダーを調整します。 使用可能なプラグインの[レジストリ][1]があります。
 
  [1]: http://plugins.cordova.io
 
 プラグインはサポートされる各プラットフォーム用の対応するネイティブ コード ライブラリと共に単一の java スクリプトの設定インタ フェースを構成します。 JavaScript からネイティブ プラットフォームとはるかに複雑な機能を構築するモデルとして使用することができます 1 つ背面に文字列を渡します、簡単な*エコー*プラグインを介してこのセクションの手順します。 基本的なプラグイン構造と向き JavaScript インターフェイスについて説明します。 各対応するネイティブ インターフェイスはこのセクションの最後にリストを参照してください。
 
-In addition to these instructions, when preparing to write a plugin it is best to look over [existing plugins][2] for guidance.
+に加えてこれらの手順は、プラグインを作成する[既存のプラグイン][2]の指導のために目を通すことをお勧めする準備。
 
  [2]: http://cordova.apache.org/#contribute
 
@@ -139,7 +139,7 @@ Tizen プラットフォームのプラグインをサポートしていませ�
 
 ## 公開プラグイン
 
-一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 You can publish your plugin to the Cordova [registry][1] (based on [`npmjs`][4]) or to any other `npmjs`-based registry. 他の開発者が自動的にいずれかの方法をインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細は、管理プラグインと、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
+一度あなたのプラグインを開発するに公開され、コミュニティと共有したい場合があります。 コルドバ[レジストリ][1]をあなたのプラグインを公開できます (に基づく[ `npmjs` ][4]) またはその他 `npmjs` -レジストリ ベースします。 他の開発者が自動的にいずれかの方法をインストールすることができます `plugman` またはコルドバ CLI。 (各開発パスの詳細は、管理プラグインと、コマンド ライン インターフェイスを使用して Plugman を参照してください)。
 
  [4]: https://github.com/isaacs/npmjs.org
 

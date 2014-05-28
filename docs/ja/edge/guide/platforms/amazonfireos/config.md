@@ -18,22 +18,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 アマゾンの火の OS にのみ適用されますこのセクションの詳細設定を構築します。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
-*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。
+*   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `pause` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `ErrorUrl`: 400-500 の範囲で標準的な HTTP エラーへの応答に表示するエラー ページを指定します。 ホーム ページおよびその他の web 資産を含む最上位ディレクトリで指定されたファイルを配置します。
+*   `ErrorUrl`(デフォルトで、URL `null` ): 場合設定、「アプリケーション エラー」というタイトルのダイアログではなくアプリケーションで、エラー発生時に参照先のページが表示されます。
     
         <preference name="ErrorUrl" value="error.html"/>
         
 
-*   `LoadingDialog`： アプリをロードするとき、ネイティブのダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+*   `LoadingDialog`(文字列、既定値は `null` ): 場合セット、スピナーは、アプリケーションの最初のページの読み込み時に指定したタイトルとメッセージ、ダイアログ ボックスが表示されます。 タイトルとメッセージは、この値の文字列でコンマで区切られます、ダイアログ ボックスが表示される前に、そのカンマが削除されます。
     
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
         
 
-*   `LoadingPageDialog`: サブ ・ ページは、アプリ内での読み込み時ネイティブ ダイアログを表示します。値の形式は、*タイトル、メッセージです。*
+*   `LoadingPageDialog`(文字列、既定値は `null` ): と同じ `LoadingDialog` 、しかし、アプリケーションの最初のページの後のすべてのページをロードするため。
     
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
         
@@ -51,3 +51,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `SplashScreenDelay`(数は、既定値は `5000` ): 時間量スプラッシュ スクリーンのイメージが表示されます。
     
         <preference name="SplashScreenDelay" value="10000"/>
+        
+
+*   `ShowTitle`(ブール値、既定値は `false` )： 画面の上部にタイトルを表示します。
+    
+        <preference name="ShowTitle" value="true"/>
+        
+
+*   `LogLevel`(文字列、既定値は `ERROR` ): アプリケーションからメッセージ ログをフィルタ リングの最小のログ レベルを設定します。 有効な値は `ERROR` 、 `WARN` 、 `INFO` 、 `DEBUG` と`VERBOSE`.
+    
+        <preference name="LogLevel" value="VERBOSE"/>

@@ -89,7 +89,7 @@ Die Whitelist-Regeln finden sich in`www/config.xml`.
 
 BlackBerry 10 Verwendung von Platzhaltern unterscheidet sich von anderen Plattformen auf zwei Arten:
 
-*   Alle Inhalte erreichbar `XMLHttpRequest` ausdrücklich deklariert werden müssen. Festlegen von `origin="*"` funktioniert nicht in diesem Fall. Alternativ alle Web-Sicherheit kann deaktiviert werden mit der `WebSecurity` bevorzugt in der BlackBerry Configuration beschrieben:
+*   Alle Inhalte erreichbar `XMLHttpRequest` müssen explizit deklariert werden. Festlegen von `origin="*"` funktioniert nicht in diesem Fall. Alternativ alle Web-Sicherheit kann deaktiviert werden mit der `WebSecurity` bevorzugt in der BlackBerry Configuration beschrieben:
     
         <preference name="websecurity" value="disable" />
         
@@ -114,15 +114,15 @@ BlackBerry 10 Verwendung von Platzhaltern unterscheidet sich von anderen Plattfo
 
 ## iOS Änderungen in 3.1.0
 
-Vor Version 3.1.0 enthalten Cordova-iOS einige nicht-standard-Erweiterungen für die Domäne Whilelisting Regelung von anderen Cordova-Plattformen unterstützt. Ab 3.1.0 entspricht die iOS-Whitelist jetzt die Ressource-Whitelist-Syntax an der Spitze dieses Dokuments beschrieben. Wenn Sie ein von Pre-3.1.0 Upgrade und Sie wurden diese Erweiterungen verwenden, müssen Sie möglicherweise ändern Ihre `config.xml` Datei um Whitelisting dieselben Ressourcen wie bisher weiter.
+Vor Version 3.1.0 enthalten Cordova-iOS einige nicht-standard-Erweiterungen für die Domäne Whilelisting Regelung von anderen Cordova-Plattformen unterstützt. Ab 3.1.0 entspricht die iOS-Whitelist jetzt die Ressource-Whitelist-Syntax an der Spitze dieses Dokuments beschrieben. Wenn Sie ein von Pre-3.1.0 Upgrade und Sie wurden diese Erweiterungen verwenden, müssen Sie möglicherweise ändern die `config.xml` Datei um Whitelisting dieselben Ressourcen wie bisher weiter.
 
 Insbesondere diese Muster müssen aktualisiert werden:
 
-*   `apache.org`(kein Protokoll): dieser zuvor übereinstimmen würde, `http` , `https` , `ftp` , und `ftps` Protokolle. Ändern Sie in " `*://apache.org/*` " gehören alle Protokolle oder eine Zeile für jedes Protokoll unterstützt werden müssen.
+*   " `apache.org` " (kein Protokoll): dieser zuvor übereinstimmen würde, `http` , `https` , `ftp` , und `ftps` Protokolle. Ändern Sie in " `*://apache.org/*` " gehören alle Protokolle oder eine Zeile für jedes Protokoll unterstützt werden müssen.
 
-*   `http://apache.*`(Wildcard am Ende der Domäne): Dies würde zuvor übereinstimmen, alle top-level-Domains, einschließlich alle mögliche zwei-Buchstaben-TLDs (aber nicht nützliche Domänen mag. co.uk). Zusätzlich eine Zeile für jede TLD, die Sie eigentlich kontrollieren und müssen auf die Whitelist.
+*   " `http://apache.*` " (Wildcard am Ende der Domäne): Dies würde zuvor übereinstimmen, alle top-level-Domains, einschließlich alle mögliche zwei-Buchstaben-TLDs (aber nicht nützliche Domänen mag. co.uk). Zusätzlich eine Zeile für jede TLD, die Sie eigentlich kontrollieren und müssen auf die Whitelist.
 
-*   `h*t*://ap*he.o*g`(Platzhalter für zufällige Buchstaben fehlen): Diese werden nicht mehr unterstützt; Ändern Sie, um eine Zeile für jede Domäne und Protokoll, das Sie wirklich auf die Whitelist benötigen.
+*   " `h*t*://ap*he.o*g` " (Platzhalter für zufällige Buchstaben fehlen): Diese werden nicht mehr unterstützt; Änderung eine Zeile für jede Domäne zu Protokoll, dass Sie tatsächlich auf die Whitelist benötigen.
 
 ## Windows Phone Whitelisting
 

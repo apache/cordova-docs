@@ -16,9 +16,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 概要
 
-コルドバは、オープン ソース モバイル開発フレームワークです。 HTML5、CSS3、JavaScript などの標準的な web 技術開発を使用するクロス プラットフォーム、各モバイル プラットフォームのネイティブ開発言語を回避することができます。 アプリケーション各プラットフォームを対象としたラッパー内で実行される各デバイスのセンサー、データ、およびネットワークの状態をアクセスするための標準に準拠した API バインドに依存しています。
+Apache は、オープン ソース モバイル開発フレームワークです。 HTML5、CSS3、JavaScript などの標準的な web 技術開発を使用するクロス プラットフォーム、各モバイル プラットフォームのネイティブ開発言語を回避することができます。 アプリケーション各プラットフォームを対象としたラッパー内で実行される各デバイスのセンサー、データ、およびネットワークの状態をアクセスするための標準に準拠した API バインドに依存しています。
 
-場合は、コルドバを使用します。
+Apache コルドバ、Apache ソフトウェア財団 （ASF） 内のトップ レベルのプロジェクトとして 2012 年 10 月に卒業しました。 ASF を使用して将来のコルドバの開発プロジェクトのオープン管理が保証されます。 フリーでオープン ソースのバージョン 2.0 Apache ライセンスの下で常にままになります。詳細については[cordova.apache.org][1]を参照してください。
+
+ [1]: http://cordova.apache.org
+
+場合は、Apache コルドバを使用します。
 
 *   モバイル開発者と各プラットフォームの言語とツールを再実装しなくても 1 つ以上のプラットフォーム上でアプリケーションを拡張する設定します。
 
@@ -28,28 +32,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 基本的なコンポーネント
 
-Cordova アプリ共通に頼る `config.xml` ファイルをアプリケーションに関する情報を提供し、シフト方向に応答かどうかなど、そのしくみに影響を与えるパラメーターを指定します。 このファイルは W3C の[Web アプリのパッケージ化][1]、または*ウィジェット*は、仕様に準拠しています。
+Apache コルドバ アプリケーション共通に依存して `config.xml` ファイルをアプリケーションに関する情報を提供し、シフト方向に応答かどうかなど、そのしくみに影響を与えるパラメーターを指定します。 このファイルは W3C の[Web アプリのパッケージ化][2]、または*ウィジェット*は、仕様に準拠しています。
 
- [1]: http://www.w3.org/TR/widgets/
+ [2]: http://www.w3.org/TR/widgets/
 
 アプリケーション自体が web ページとして実装されている、既定では、どのような CSS、JavaScript、画像、メディア ファイルを参照、 *index.html*という名前またはその他のリソースを実行するために必要な。 アプリは、アプリ ストアに配布するネイティブ アプリケーションのラッパー内の*WebView*として実行します。
 
-コルドバ有効 WebView その全体のユーザー インターフェイスを持つアプリケーションがあります。 On some platforms, it can also be a component within a larger, hybrid application that mixes the WebView with native application components. (See Embedding WebViews for details.)
+コルドバ有効 WebView その全体のユーザー インターフェイスを持つアプリケーションがあります。 いくつかのプラットフォームでネイティブのアプリケーション コンポーネントと一緒に、WebView をミックス、大きな、ハイブリッド アプリケーション内のコンポーネントもできます。 （詳細は埋め込み web 表示を参照してください)。
 
-A *plugin* interface is available for Cordova and native components to communicate with each other. This enables you to invoke native code from JavaScript. As of version 3.0, plugins provide bindings to standard device APIs. Third-party plugins provide additional bindings to features not necessarily available on all platforms. You can find these third-party plugins in the [plugin registry][2] and use them in your application. You can also develop your own plugins, as described in the Plugin Development Guide. Plugins may be necessary, for example, to communicate between Cordova and custom native components.
+*プラグイン*のインターフェイスはコルドバとネイティブ コンポーネントが互いに通信するために使用できます。 Java スクリプトの設定からのネイティブ コードを呼び出すことができます。 バージョン 3.0 は、現在プラグインは標準デバイス Api へのバインディングを提供します。 サード パーティのプラグインはすべてのプラットフォームで必ずしも利用できない機能への追加のバインディングを提供します。 [プラグイン レジストリ][3]にこれらのサード パーティのプラグインを見つけるし、アプリケーションで使用することができます。 プラグイン開発ガイド 』 で説明されているように、独自のプラグインを開発することもできます。 プラグインは、コルドバとカスタム ネイティブ コンポーネント間で通信するなど、必要なことがあります。
 
- [2]: http://plugins.cordova.io
+ [3]: http://plugins.cordova.io
 
 ## 開発パス
 
-As of version 3.0, you can use two basic workflows to create a mobile app. While you can often use either workflow to accomplish the same task, they each offer advantages:
+バージョン 3.0 は、現在モバイル アプリを作成するのに 2 つの基本的なワークフローを使用できます。多くの場合同じタスクを実行するいずれかのワークフローを使用できますが、彼らはそれぞれ利点があります：
 
-*   **Cross-platform workflow**: Use this workflow if you want your app to run on as many different mobile operating systems as possible, with little need for platform-specific development. This workflow centers around the `cordova` utility, otherwise known as the Cordova *CLI*, that was introduced with Cordova 3.0. The CLI is a high-level tool that allows you to build projects for many platforms at once, abstracting away much of the functionality of lower-level shell scripts. The CLI copies a common set of web assets into subdirectories for each mobile platform, makes any necessary configuration changes for each, runs build scripts to generate application binaries. The CLI also provides a common interface to apply plugins to your app. (For details on the CLI, see The Command-Line Interface.)
+*   **クロス プラットフォームのワークフロー**: このワークフロー、可能な限り多くのモバイル オペレーティング システム上で実行するアプリの場合と少し開発に必要なプラットフォーム固有の使用。 このワークフローを中心に、 `cordova` ユーティリティ、コルドバ*CLI*、コルドバ 3.0 で導入されたとも呼ばれます。CLI は低レベルのシェル スクリプトの機能の大部分を抽象化すること一度に、多くのプラットフォームのためのプロジェクトをビルドすることができます高度なツールです。 CLI はモバイル プラットフォームごとのサブディレクトリを web 資産の共通セットをコピーごとに、必要な構成の変更になります、アプリケーション バイナリを生成するビルド スクリプトを実行します。 CLI はまた、アプリにプラグインを適用する共通インターフェイスを提供します。CLI の詳細は、コマンド ライン インターフェイスを参照してください。 プラットフォームを中心としたワークフローの必要がある場合を除き、プラットフォーム間のワークフローの使用をお勧めします。
 
-*   **Platform-centered workflow**: Use this workflow if you want to focus on building an app for a single platform and need to be able to modify it at a lower level. You need to use this approach, for example, if you want your app to mix custom native components with web-based Cordova components, as discussed in Embedding WebViews. As a rule of thumb, use this workflow if you need to modify the project within the SDK. This workflow relies on a set of lower-level shell scripts that are tailored for each supported platform, and a separate Plugman utility that allows you to apply plugins. While you can use this workflow to build cross-platform apps, it is generally more difficult because the lack of a higher-level tool means separate build cycles and plugin modifications for each platform. Still, this workflow allows you greater access to development options provided by each SDK, and is essential for complex hybrid apps. (See the various Platform Guides for details on each platform's available shell utilities.)
+*   **プラットフォームを中心としたワークフロー**: このワークフローを使用する単一のプラットフォーム用のアプリの構築に焦点を当てるし、下位レベルで変更することができる必要がある場合。 埋め込み web 表示で説明したようにカスタム ネイティブ コンポーネント コンポーネント web ベース コルドバ、ミックスにアプリをしたい場合はこの方法を使用する必要があります。 親指のルールとして、SDK 内のプロジェクトを変更する必要がある場合、このワークフローを使用します。 このワークフローはサポートされる各プラットフォームとプラグインを適用することができます別の Plugman ユーティリティに適した低レベルのシェル スクリプトのセットに依存します。 クロス プラットフォーム アプリケーションを構築するこのワークフローを使用できますが、一般的により大変だ上位レベル ツールの欠如は別個のビルド サイクルと各プラットフォーム用のプラグインの変更を意味します。 それでも、このワークフロー各 SDK によって提供される開発オプションへのアクセスを許可し、複雑なハイブリッド アプリのために不可欠です。 プラットフォームごとの使用可能なシェル ユーティリティの詳細については様々 なプラットフォームのガイドを参照してください。
 
-When first starting out, it may be easiest to use the cross-platform workflow to create an app, as described in The Command-line Interface. You then have the option to switch to a platform-centered workflow if you need the greater control the SDK provides. Lower-level shell utilities are available at [cordova.apache.org][3] in a separate distribution than the CLI. For projects initially generated by the CLI, these shell tools are also available in the project's various `platforms/*/cordova` directories.
+最初に出て起動時、コマンド ライン インターフェイスでの説明に従って、アプリを作成するプラットフォーム間のワークフローを使用する最も簡単な場合があります。 その後、SDK より詳細に制御が必要な場合、プラットフォーム中心のワークフローに切り替えるオプションがあります。 低レベルのシェル ユーティリティは CLI より別のディストリビューションで[cordova.apache.org][1]でご利用いただけます。 CLI で生成される最初プロジェクト、これらのシェルのツールも利用できますで、プロジェクトのさまざまな `platforms/*/cordova` ディレクトリ。
 
- [3]: http://cordova.apache.org
+**注**: 1 つのプラットフォーム固有の Sdk およびシェル ・ ツールを中心に、CLI ベースのワークフローから切り替えると、一度戻ることはできません。 CLI は各プラットフォーム固有のソース コードを記述する使用を構築するクロスプラット フォームのソース コードの一般的なセットを保持します。 プラットフォーム固有の資産への変更を維持するためにクロスプラット フォームのソース コードを無視する、プラットフォーム中心のシェルのツールに切り替える必要あるし、代わりにプラットフォーム固有のソース コードに依存します。
 
-**NOTE**: Once you switch from the CLI-based workflow to one centered around the platform-specific SDKs and shell tools, you can't go back. The CLI maintains a common set of cross-platform source code, which on each build it uses to write over platform-specific source code. To preserve any modifications you make to the platform-specific assets, you need to switch to the platform-centered shell tools, which ignore the cross-platform source code, and instead relies on the platform-specific source code.
+## コルドバのインストール
+
+コルドバのインストールは、上記のワークフローを選択するによって異なります。
+
+*   クロス プラットフォームのワークフロー:、コマンド ライン インターフェイスを参照してください。
+
+*   プラットフォームを中心としたワークフロー: プラットフォームのガイドを参照してください。
+
+コルドバをインストールした後の開発をして、モバイル プラットフォームのためのプラットフォームのガイドを確認することをお勧めします。 またプライバシー ガイド、セキュリティ ガイド、次の手順を確認することをお勧めします。 コルドバの構成、config.xml ファイルを参照してください。 Java スクリプトの設定からデバイスのネイティブ機能にアクセスする、プラグイン Api を参照してください。 必要に応じて、他の含まれているガイドを参照してください。
