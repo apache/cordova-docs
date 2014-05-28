@@ -348,6 +348,7 @@ chosen, are listed:
 * ios
 * wp7
 * wp8
+* windows8
 
 ## _source-file_ Element
 
