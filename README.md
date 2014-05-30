@@ -60,7 +60,7 @@ With the support of <a href="http://crowdin.net/project/cordova">Crowdin</a>,
 a translation and localization management platform, translators can login to
 the easy-to-use tooling and provide as much or as little translation assistance as
 they would like. If you know another language please support Cordova and contribute.
-<a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>.
+<a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>.  For some best practices for using the Crowdin tool please see our wiki <a href="http://wiki.apache.org/cordova/CordovaTranslations">http://wiki.apache.org/cordova/CordovaTranslations</a>.
 
 ordova language administrators, don't forget these steps: 
 
