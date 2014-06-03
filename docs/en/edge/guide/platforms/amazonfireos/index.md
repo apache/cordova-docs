@@ -103,19 +103,18 @@ type `java`, if it does not run, append the location of the Java binaries to you
 
 ### Amazon WebView SDK
 
-In order to create Cordova apps using the Amazon Fire OS platform target, you'll need to download, unpack and install the Amazon WebView SDK support files. This step will only need to be done for your first Amazon Fire OS project, or if you upgrade Cordova.
+In order to create Cordova apps using the Amazon Fire OS platform target, you'll need to download, unpack and install the Amazon WebView SDK support files. This step will only need to be done for your first Amazon Fire OS project.
 
 * Download the Amazon WebView SDK from the [Amazon Developer Portal](https://developer.amazon.com/public/solutions/platforms/android-fireos/docs/building-and-testing-your-hybrid-app).
 
-* Copy `awv_interface.jar` from the downloaded SDK to Cordova's working directory: 
+* Copy `awv_interface.jar` from the downloaded SDK to Cordova's working directory. Create commonlibs(shown below) folder if it doesn't exist: 
 	
 	**Mac/Linux:** 
-	`~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+	`~/.cordova/lib/commonlibs/`
 
 	**Windows:**
-	`%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
+	`%USERPROFILE%\.cordova\lib\commonlibs`
 
-***Note:*** Because of Cordova's on-demand install process, the `~/.cordova/lib/amazon-fireos` platform directory will not be created until you add the platform to your first project.
 
 ## Create New Project for Amazon Fire OS
 
