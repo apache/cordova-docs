@@ -454,6 +454,8 @@ It supports the following attributes:
   document, the tool stops and reverses the installation process,
   issues a warning, and exits with a non-zero code.
 
+* `after`: A prioritized list of accepted siblings after which to add the XML snippet. Useful for specifying changes in files which require strict ordering of XML elements like [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement)
+
 ## _plugins-plist_ Element
 
 This is _outdated_ as it only applies to cordova-ios 2.2.0 and
@@ -523,9 +525,16 @@ platform.
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.  ***On Android*** it specifies how to treat **src**. If `true` **src** is a relative path from the application project's directory, otherwise -- from the Android SDK directory.
 
 The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is supported and only on Windows 8.  Using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
+
+The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to add references between sub projects like in this example:
+	
+	<source-file src="src/android/FeedbackLib" target-dir="./" />
+	
+	<framework src="FeedbackLib" custom="true" />
+	<framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
 
 ## _info_ Element
 
