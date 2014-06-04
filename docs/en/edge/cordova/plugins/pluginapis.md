@@ -31,6 +31,9 @@ The traditional set of core Cordova plugins are as follows:
 - [Camera](https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md)
 > Capture a photo using the device's camera.
 
+- [Console](https://github.com/apache/cordova-plugin-console/blob/master/doc/index.md)
+> Add additional capability to console.log().
+
 - [Contacts](https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md)
 > Work with the devices contact database.
 
