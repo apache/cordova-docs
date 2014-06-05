@@ -31,7 +31,7 @@ If you do not specify an icon then the Apache Cordova logo is used.
 
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
 
-src: (required) specifies the location of the image file, relative to your www directory
+src: (required) specifies the location of the image file, relative to your project directory
 
 platform: (optional) target platform
 
