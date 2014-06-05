@@ -14,36 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS コマンド ライン ツール
+# iOS シェル ツール ガイド
 
-`cordova`コマンド ライン ユーティリティは、一度にいくつかのプラットフォームでアプリケーションをビルドすることができます高度なツールです。 コルドバ フレームワークの古いバージョンをそれぞれのプラットフォームに固有のコマンド ライン ツールのセットを提供します。 CLI に代わるものとしてそれらを使用するには[cordova.apache.org][1]からコルドバのこのバージョンをダウンロードする必要があります。 ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 ターゲットにするプラットフォームを展開します。 ここで説明したツールは、最上位レベルでふつう利用できる `bin` ディレクトリ、それ以外の場合より詳細な方向の**README**ファイルを参照してください。
+このガイドは、コルドバの一連のプラットフォームを中心としたシェル ツールを使用して iOS アプリを開発する方法を示します。 概要で説明したこの開発パスはコマンド ライン インターフェイスで記述されているクロス プラットフォーム CLI ツールよりも iOS の開発オプションの大きい範囲を提供するかもしれない。 たとえば、ネイティブ コンポーネントと一緒にカスタム コルドバ WebView を展開する場合、シェル ・ ツールを使用する必要があります。 開発パスはいずれかを使用する前に iOS プラットフォームのガイドで説明するよう、SDK 環境を構成すること最初する必要があります。 これらのツールの Xcode のコマンド ライン ツールに頼るような `xcode-select` と`xcodebuild`.
+
+IOS 用シェル ・ ツールを有効にするには、コルドバ[cordova.apache.org][1]からダウンロードします。 ダウンロードには、プラットフォームごとに別々 のアーカイブが含まれています。 各ターゲット、たい展開 `ios` この場合。 関連するツールは、最上位レベルでふつう利用できる `bin` ディレクトリ、それ以外の場合より詳細な方向の**README**ファイルを参照してください。
 
  [1]: http://cordova.apache.org
 
-IOS コマンド ライン ツール シェル スクリプトの上に成り立っているし、など、Xcode のコマンド ライン ツールに頼る `xcode-select` と`xcodebuild`.
+これらのツールを作成、構築、および iOS のアプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。 プラグインを開発する方法の詳細については、アプリケーション ・ プラグインを参照してください。
 
 ## プロジェクトを作成します。
 
 実行、 `create` プロジェクト、逆ドメイン スタイル パッケージ識別子、およびアプリケーションの表示名を既存のパスを指定するコマンドです。
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
 ## プロジェクトをビルドします。
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
     
 
-## エミュレーターでアプリを実行します。
+## アプリケーションをエミュレーター上で実行します。
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
     
 
 ## 解放します。
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
     
 
 ## ログの記録
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log

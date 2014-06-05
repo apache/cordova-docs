@@ -16,135 +16,105 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # ホワイト リスト ガイド
 
-## 概要
+ホワイト リスト登録のドメインは、アクセスを制御するセキュリティ モデルをアプリケーション コントロールを持たない外部のドメインにします。 コルドバの既定のセキュリティ ポリシーは、任意のサイトにアクセスをできます。 生産へアプリケーションを移動する前に、ホワイト リストを策定し、特定のネットワーク ドメインおよびサブドメインにアクセスできるようにする必要があります。
 
-リソースのホワイト リストを制御するセキュリティ モデルなど、外部ネットワーク リソースにアクセスが `http://google.com` 。 Apache コルドバの既定のセキュリティ ポリシーは、インターネット上の任意のサイト上の任意のリソースにアクセスできます。 運用環境にアプリケーションを移動する前にそのホワイト リストを確認し、特定のネットワーク ドメインおよびサブドメインへのアクセスを宣言する必要があります。
-
-## 仕様
-
-ドメイン ホワイト[W3C ウィジェット アクセス][1]仕様の土台となります。 ウィジェット アクセス仕様で、 `<access>` 要素を使用する特定のネットワーク リソースへのアクセスを宣言します。 Apache コルドバは個々 のネットワーク リソース (Url) のホワイト リスト登録を許可するようにこの概念を拡張します。 将来的には、Apache コルドバはプラットフォームのホワイト リストの実装を抽象化します。 しかし、今のところ各プラットフォーム独自のリソースまたはドメイン ホワイト リストを実装します。 プラットフォームの実装の違いは、このドキュメントに記載されています。
+コルドバに依存している[W3C のウィジェットのアクセス][1]仕様に準拠して、 `<access>` 、アプリ内での要素 `config.xml` 特定のドメインへのネットワーク アクセスを有効にするファイル。 コマンド ライン インターフェイスで記述された CLI ワークフローに依存するプロジェクトのためこのファイルにあるプロジェクトの最上位ディレクトリ それ以外の場合、プラットフォーム固有の開発パス場所は以下のセクションに表示されます。 （各プラットフォーム上のさまざまなプラットフォームのガイドの詳細を参照）。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-ホワイト リストのエントリーの一般的な形式の Google クロム パッケージ アプリ「[パターン一致][2]」仕様に従います。 リソースは、URL がアスタリスクによって指定されます (*) を示す任意の値が「行く」ここでいくつかの場所で「ワイルドカード」として文字を使用可能性があります。 具体的な例を紹介します。
+ホワイト リストの構文を次の例に示します。
 
- [2]: http://developer.chrome.com/apps/match_patterns.html
+*   [Google.com][2]へのアクセス:
+    
+        <access origin="http://google.com" />
+        
 
-## 構文
+*   安全な[google.com][3]へのアクセス ( `https://` )。
+    
+        <access origin="https://google.com" />
+        
 
-[Google.com][3]ですべてのリソースへのアクセス:
+*   サブドメイン[maps.google.com][4]へのアクセス:
+    
+        <access origin="http://maps.google.com" />
+        
 
- [3]: http://google.com
+*   すべてのサブドメインに[google.com][2]、たとえば[接続][5]と[docs.google.com][6]へのアクセス:
+    
+        <access origin="http://*.google.com" />
+        
 
-    http://google.com/*
+*   たとえば、 [google.com][2]および[developer.mozilla.org][7]の*すべて*のドメインへのアクセス:
+    
+        <access origin="*" />
+        
+    
+    これは、新しく作成した CLI プロジェクトの既定値です。
+
+ [2]: http://google.com
+ [3]: https://google.com
+ [4]: http://maps.google.com
+ [5]: http://mail.google.com
+ [6]: http://docs.google.com
+ [7]: http://developer.mozilla.org
+
+## アマゾン火 OS ホワイト
+
+プラットフォーム固有のホワイト リストの規則はあります。`res/xml/config.xml`.
+
+## Android のホワイト リスト
+
+プラットフォーム固有のホワイト リストの規則はあります。`res/xml/config.xml`.
+
+**注**: Android 2.3 とドメイン ホワイト リストのみで動作する前に `href` のハイパーリンク、画像、スクリプトなどのリソースも参照されていません。 アプリケーションに挿入されてからスクリプトを避けるために措置を取る。
+
+ホワイト リストに登録して非経由でドメインへの移動 `href` ハイパーリンクにより、アプリケーション内ではなく、既定のブラウザーを開いてページ。(この比較下記の iOS の動作です。)
+
+## iOS ホワイト
+
+プラットフォームのホワイト リスト登録ルールの発見の名前のアプリケーション ディレクトリに `config.xml` ファイル。
+
+起源のようなプロトコルを使わずに指定 `www.apache.org` よりもむしろ `http://www.apache.org` 、すべてのデフォルト、 `http` 、 `https` 、 `ftp` と `ftps` スキーム。
+
+IOS プラットフォーム上のワイルドカードは、 [W3C のウィジェット アクセス][1]仕様よりも柔軟性です。 たとえば、次のアクセスすべてのサブドメインおよびトップレベル ドメインなど、 `.com` と `.net` ：
+
+        <access origin="*.google.*" />
     
 
-安全な[google.com][4]ですべてのリソースへのアクセス ( `https://` )。
+ホワイト リストに登録して非経由でドメインへの移動、上述した Android のプラットフォームとは異なり `href` iOS 上のハイパーリンクが、まったく開いてページを防ぎます。
 
- [4]: https://google.com
+## ブラックベリー 10 ホワイト
 
-    https://google.com/*
+ホワイト リスト登録ルールを発見します。`www/config.xml`.
+
+ブラックベリー 10年使用ワイルドカードの次の 2 つの方法で他のプラットフォームによって異なります。
+
+*   によってアクセスできるコンテンツ `XMLHttpRequest` 明示的に宣言する必要があります。 設定 `origin="*"` この場合動作しません。 代わりに、すべての web セキュリティできない可能性がありますを使用して、 `WebSecurity` 好みのブラックベリーの構成で説明：
     
+        <preference name="websecurity" value="disable" />
+        
 
-特定のサブドメイン[maps.google.com][5]へのアクセス:
-
- [5]: http://maps.google.com
-
-    http://maps.google.com/*
+*   設定に代わるものとして `*.domain` 、セット、 `subdomains` 属性を `true` 。 設定する必要があります `false` デフォルトで。 たとえば、次のようにアクセスをできます `google.com` 、 `maps.google.com` 、および `docs.google.com` :
     
-
-[Google.com][3] (例えば、[接続][6]および[docs.google.com][7]) 上のすべてのサブドメインへのアクセス:
-
- [6]: http://mail.google.com
- [7]: http://docs.google.com
-
-    http://*.google.com/*
+        <access origin="http://google.com" subdomains="true" />
+        
     
-
-[Www.google.com][8] 「/モバイル」のパスの下にすべてのリソースへのアクセス:
-
- [8]: http://www.google.com
-
-    http://www.google.com/mobile/*
+    次の限定にアクセスする `google.com` :
     
-
-任意のプロトコル (例えば、HTTP、HTTPS、FTP など) で[google.com][3]へのアクセス:
-
-    *://google.com/*
+        <access origin="http://google.com" subdomains="false" />
+        
     
-
-（例えば、 [google.com][3]と[developer.mozilla.org][9]） のインターネット上のすべての資源へのアクセス:
-
- [9]: http://developer.mozilla.org
-
-    *
+    ローカルを含むすべてのドメインへのアクセスを指定する `file://` プロトコル。
     
-
-## アンドロイド
-
-### 詳細
-
-ホワイト リスト登録の規則は、 `res/xml/config.xml` 要素で宣言されていると`<access origin="..." />`.
-
-Android は完全にホワイト リスト構文をサポートします。
-
-### 構文
-
-[Google.com][3]へのアクセス:
-
-    <access origin="http://google.com/*" />
-    
-
-## ブラックベリー 10
-
-### 詳細
-
-ホワイト リスト登録の規則は、 `www/config.xml` 要素で宣言されていると`<access origin="..." />`.
-
-ブラックベリー 10 2 つの方法で他のプラットフォームとは異なるワイルドカードを処理します。
-
-1） XMLHttpRequest によってアクセスされるコンテンツは、明示的に宣言されなければなりません。起源 ="*"このユースケースは尊敬できません。また、web のすべてのセキュリティが好みを使用して無効になります。
-
-サブドメイン 2) ="true"の代わりに使用される可能性があります"* .domain"
-
-### 構文
-
-[Google.com][3]へのアクセス:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-[Maps.google.com][5]へのアクセス:
-
-    <access origin="http://maps.google.com" subdomains="false" />
-    
-
-[Google.com][3]でのすべてのサブドメインへのアクセス:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-含むすべてのドメインへのアクセスを `file://` プロトコル。
-
     <access origin="*" subdomains="true" />
-    
 
-すべての web セキュリティを無効にします。
+（サポートの詳細については、ブラックベリーのマニュアル参照してください[アクセス要素][8].)
 
-    <preference name="websecurity" value="disable" />
-    
+ [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## iOS
+## 3.1.0 の iOS の変化
 
-### 詳細
-
-ホワイト リスト登録の規則は、 `AppName/config.xml` 要素で宣言されていると`<access origin="..." />`.
-
-iOS は完全にホワイト リスト構文をサポートします。
-
-### 3.1.0 で変更されました。
-
-前のバージョン 3.1.0、コルドバ iOS 他コルドバのプラットフォームでサポートされているドメイン whilelisting スキームをいくつかの非標準の拡張含まれています。 3.1.0、現在 iOS のホワイト リストは今このドキュメントの上部に記載されているリソースのホワイト リストの構文に準拠します。 変更する必要があります前 3.1.0 からアップグレードする場合にこれらの拡張機能を使用していた、 `config.xml` として前にホワイト リスト登録リソースの同じセットを続行するためにファイル。
+前のバージョン 3.1.0、コルドバ iOS 他コルドバのプラットフォームでサポートされているドメイン whilelisting スキームをいくつかの非標準の拡張含まれています。 3.1.0、現在 iOS のホワイト リストは今このドキュメントの上部に記載されているリソースのホワイト リストの構文に準拠します。 変更する必要があります前 3.1.0 からアップグレードする、これらの拡張機能を使用していた場合、 `config.xml` ファイルとして前にホワイト リスト登録リソースの同じセットを続行するために。
 
 具体的には、これらのパターンを更新する必要があります。
 
@@ -154,49 +124,12 @@ iOS は完全にホワイト リスト構文をサポートします。
 
 *   " `h*t*://ap*he.o*g` "(行方不明のランダムな文字のワイルドカード文字): これらはサポートされていません; ドメインごとに行を含めるし、したプロトコルへの変更は、実際にホワイト リストする必要があります。
 
-### 構文
+## Windows Phone のホワイト リスト
 
-[Google.com][3]へのアクセス:
+アプリの Windows Phone 7 と 8 のホワイト リスト登録ルールの発見 `config.xml` ファイル。
 
-    <access origin="http://google.com/*" />
-    
+## Tizen ホワイト
 
-## Windows Phone （7 ＆ 8）
+アプリのでホワイト リスト登録ルールの発見 `config.xml` ファイル。 プラットフォーム依存して同じ `subdomains` 、黒イチゴ ・ プラットホームとしての属性。 （サポートの詳細については、Tizen のマニュアル参照してください[アクセス要素][9].)
 
-ホワイト リスト登録の規則は、 `config.xml` 要素で宣言されていると`<access origin="..." />`.
-
-### 構文
-
-[Google.com][3]へのアクセス:
-
-    <access origin="http://google.com" />
-    
-
-## Tizen
-
-### 詳細
-
-アプリケーションのルート ディレクトリの `config.xml` ファイルを使用してドメイン ホワイト リスト登録のルールを指定します、 `<access origin="..." />` の要素。 完全なリファレンス[Tizen 外部ネットワーク リソースへのアクセスのドキュメント][10]を参照してください。.
-
- [10]: https://developer.tizen.org/help/topic/org.tizen.help.gs/Creating%20a%20Project.html?path=0_1_1_4#8814682_CreatingaProject-AccessingExternalNetworkResources
-
-### 構文
-
-[Google.com][3]へのアクセス:
-
-    <access origin="http://google.com" subdomains="false" />
-    
-
-安全な[google.com][4]へのアクセス ( `https://` )。
-
-    <access origin="https://google.com" subdomains="false" />
-    
-
-[Google.com][3]でのすべてのサブドメインへのアクセス:
-
-    <access origin="http://google.com" subdomains="true" />
-    
-
-含むすべてのドメインへのアクセスを `file://` プロトコル。
-
-    <access origin="*" subdomains="true" />
+ [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

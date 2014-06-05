@@ -16,23 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-Desde Córdoba 1.9, con la asistencia de la `CordovaActivity`, puede utilizar Cordova como un componente en una aplicación Android nativa más grande. Android se refiere a este componente como el `CordovaWebView`. Nuevas aplicaciones basadas en Córdoba de 1,9 en adelante utilizar el `CordovaWebView` como su principal punto de vista, independientemente de si el legado `CordovaActivity` enfoque se utiliza.
+Esta guía le muestra cómo incrustar un componente WebView Cordova habilitado dentro de una aplicación para Android más grande. Para más detalles sobre cómo estos componentes pueden comunicarse entre sí, vea aplicación Plugins.
 
-Si no está familiarizado con el desarrollo de aplicaciones Android, por favor lea a la guía de plataforma Android para desarrollar una aplicación Cordova antes de intentar incluir un WebView. No es la forma principal de autor aplicaciones Android Cordova. Estas instrucciones están actualmente manuales, pero eventualmente se puede automatizarse.
+Si no está familiarizado con Android, primero debe familiarizarse con la guía de la plataforma Android y tiene el SDK de Android más reciente instalado antes de intentar la opción de desarrollo más inusual de incrustar un WebView. A partir de Córdoba 1.9, la plataforma Android se basa en una `CordovaWebView` componente, que se basa en un legado `CordovaActivity` componente que data de antes de la versión 1.9.
 
-## Prerequisitos
+1.  Para seguir estas instrucciones, asegúrate de que tienes la última distribución de Córdoba. Descargar desde [cordova.apache.org][1] y descomprime su paquete de Android.
 
-*   Córdoba 1.9 o mayor
+2.  Desplácese hasta el paquete Android `/framework` Directorio y ejecute `ant jar` . Crea el Cordova `.jar` archivo, formado como`/framework/cordova-x.x.x.jar`.
 
-*   SDK de Android actualizado al último SDK
+3.  Copia el `.jar` archivo del proyecto Android `/libs` Directorio.
 
-## Guía de uso de CordovaWebView en un proyecto de Android
-
-1.  `cd`en `/framework` y ejecutar `ant jar` para construir la jarra cordova. Se crea el archivo .jar formado como `cordova-x.x.x.jar` en el `/framework` Directorio.
-
-2.  Copie la jarra cordova en su proyecto Android `/libs` Directorio.
-
-3.  Editar de la aplicación `main.xml` archivo (bajo `/res/xml` ) para ver como el siguiente, con el `layout_height` , `layout_width` y `id` modificado para adaptarse a su aplicación:
+4.  Agregar lo siguiente a la aplicación `/res/xml/main.xml` archivo, con el `layout_height` , `layout_width` y `id` modificado para adaptarse al uso:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +34,7 @@ Si no está familiarizado con el desarrollo de aplicaciones Android, por favor l
             android:layout_height="match_parent" />
         
 
-4.  Modificar su actividad para que implementa el `CordovaInterface` . Debe implementar los métodos incluidos. Puede que desee copiar desde `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarlas en tu propio. El fragmento de código siguiente muestra una aplicación básica que utiliza la interfaz. Observe cómo coincide con el id de referencia ver el `id` atributo especificado en el fragmento de XML se muestra arriba:
+5.  Modificar la actividad de modo que implementa el `CordovaInterface` . Se deben implementar los métodos incluidos. Puede que desee copiar desde `/framework/src/org/apache/cordova/CordovaActivity.java` , o más implementarlas en tu propio. El siguiente fragmento de código muestra una aplicación básica que se basa en la interfaz. Observe cómo coincide con el id de referencia ver el `id` atributo especificado en el fragmento de XML se muestra arriba:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,8 +49,8 @@ Si no está familiarizado con el desarrollo de aplicaciones Android, por favor l
             }
         
 
-Si se utiliza la cámara, también debe implementar esto:
-
+6.  Si la aplicación necesita usar la cámara, implementar los siguientes:
+    
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -72,16 +66,16 @@ Si se utiliza la cámara, también debe implementar esto:
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-    
+        
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-    
+        
             // Start activity
             super.startActivityForResult(intent, requestCode);
         }   
-    
+        
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -99,16 +93,18 @@ Si se utiliza la cámara, también debe implementar esto:
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
+        
+
+7.  Finalmente, no olvide añadir el grupo de subprocesos, de lo contrario plugins no tienen ningún subproceso en el que se ejecute:
     
-
-Finalmente, no olvide añadir el grupo de subprocesos, de lo contrario los plugins no tienen hilos para correr en:
-
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-    
+        
 
-1.  Copia archivos HTML y JavaScript de la aplicación de su proyecto Android `/assets/www` Directorio.
+8.  Copia archivos HTML y JavaScript de la aplicación del proyecto Android `/assets/www` Directorio.
 
-2.  Copia `config.xml` de `/framework/res/xml` a de su proyecto `/res/xml` Directorio.
+9.  Copia el `config.xml` archivo de `/framework/res/xml` para el proyecto `/res/xml` Directorio.
+
+ [1]: http://cordova.apache.org

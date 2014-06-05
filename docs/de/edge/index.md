@@ -25,7 +25,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Übersicht
       </h2>
       
-      <span>Beginnen Sie hier, wenn Sie Cordova Neuland.</span>
+      <span>Beginnen Sie hier, wenn Sie mit Cordova sind. Umfasst die Installation sowie die nächsten Schritte.</span>
+    </li>
+    <li>
+      <h2>
+        Plattformunterstützung
+      </h2>
+      
+      <span>Kompatibilitätstabelle für alle wichtigen Funktionen.</span>
     </li>
     <li>
       <h2>
@@ -39,35 +46,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         Plattform-Guides
       </h2>
       
-      <span>Jede SDK und Update Projekte</span>
+      <span>Jede Plattform SDK einrichten und Projekte aktualisieren.</span>
+    </li>
+    <li>
+      <h2>
+        Plugins verwalten mithilfe Plugman
+      </h2>
+      
+      <span>Verwalten Sie Plugins ohne CLI, wenn den Plattform-zentrierte Workflow verwenden.</span>
     </li>
     <li>
       <h2>
         Die Datei config.xml Datei
       </h2>
       
-      <span>Die Features Ihrer Anwendung anpassen.</span>
+      <span>Ihre app Features anpassen.</span>
     </li>
     <li>
       <h2>
         Symbole und Splash-Screens
       </h2>
       
-      <span>Die app Anzeigen von Bildern anpassen.</span>
+      <span>Passen Sie Ihre app Anzeigen von Bildern.</span>
     </li>
     <li>
       <h2>
         Einbetten von Webansichten für
       </h2>
       
-      <span>Implementieren Sie die Cordova WebView in Ihrem Projekt.</span>
+      <span>Implementieren Sie die Cordova WebView im systemeigenen Projekt.</span>
     </li>
     <li>
       <h2>
         Plugin-Entwicklung-Guide
       </h2>
       
-      <span>Entwickeln Sie Ihre erste Plugin.</span>
+      <span>Entwickeln Sie Ihr eigenes Plugin.</span>
     </li>
     <li>
       <h2>
@@ -78,10 +92,31 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
+        Sicherheitshandbuch
+      </h2>
+      
+      <span>Informationen und Tipps für den Aufbau einer sicheren Anwendung.</span>
+    </li>
+    <li>
+      <h2>
         Whitelist-Guide
       </h2>
       
       <span>Gewähren Sie eine Anwendungszugriff auf externe Ressourcen.</span>
+    </li>
+    <li>
+      <h2>
+        Speicher
+      </h2>
+      
+      <span>Eine Übersicht über native Storage-Optionen.</span>
+    </li>
+    <li>
+      <h2>
+        Die nächsten Schritte
+      </h2>
+      
+      <span>Ein Blick auf Themen, die neue Cordova Entwickler stoßen.</span>
     </li>
     <li>
       <h2>
@@ -99,55 +134,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Beschleunigungsmesser
-      </h2>
-      
-      <span>Tippen Sie in das Gerät Weg-und/oder Geschwindigkeitsgeber.</span>
-    </li>
-    <li>
-      <h2>
-        Kamera
-      </h2>
-      
-      <span>Ein Foto mit der Gerätekamera zu erfassen.</span>
-    </li>
-    <li>
-      <h2>
-        Erfassen
-      </h2>
-      
-      <span>Media-Dateien mithilfe des Geräts erfassen Medienanwendungen zu erfassen.</span>
-    </li>
-    <li>
-      <h2>
-        Kompass
-      </h2>
-      
-      <span>Erhalten Sie die Richtung, die das Gerät verweist.</span>
-    </li>
-    <li>
-      <h2>
-        Verbindung
-      </h2>
-      
-      <span>Der Netzwerkstatus und Mobilfunknetz Informationen schnell zu überprüfen.</span>
-    </li>
-    <li>
-      <h2>
-        Kontakte
-      </h2>
-      
-      <span>Arbeiten Sie mit der Geräte-Kontaktdatenbank.</span>
-    </li>
-    <li>
-      <h2>
-        Gerät
-      </h2>
-      
-      <span>Gerät bestimmte Informationen zu sammeln.</span>
-    </li>
-    <li>
-      <h2>
         Veranstaltungen
       </h2>
       
@@ -155,59 +141,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Datei
+        Plugin APIs
       </h2>
       
-      <span>Haken Sie in native Dateisystem durch JavaScript.</span>
-    </li>
-    <li>
-      <h2>
-        Geolocation
-      </h2>
-      
-      <span>Machen Sie Ihre Anwendung Lage bewusst.</span>
-    </li>
-    <li>
-      <h2>
-        Globalisierung
-      </h2>
-      
-      <span>Aktivieren Sie die Darstellung von Objekten, die spezifisch für ein Gebietsschema.</span>
-    </li>
-    <li>
-      <h2>
-        InAppBrowser
-      </h2>
-      
-      <span>URLs in einer anderen in-app Browserinstanz zu starten.</span>
-    </li>
-    <li>
-      <h2>
-        Medien
-      </h2>
-      
-      <span>Aufzeichnen und Wiedergeben von audio-Dateien.</span>
-    </li>
-    <li>
-      <h2>
-        Benachrichtigung
-      </h2>
-      
-      <span>Visueller, akustischer und taktiler Gerätebenachrichtigungen.</span>
-    </li>
-    <li>
-      <h2>
-        SplashScreen
-      </h2>
-      
-      <span>Ein- und Ausblenden der Splash-Screen Anwendungen.</span>
-    </li>
-    <li>
-      <h2>
-        Speicher
-      </h2>
-      
-      <span>Haken Sie in die Geräte native Storage-Optionen.</span>
+      <span>Entdecken Sie, welche Cordova-Plugins verwenden Sie in Ihrem Projekt verfügbar sind.</span>
     </li>
   </ul>
 </div>

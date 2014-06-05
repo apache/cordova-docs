@@ -27,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         version="1.0.2">
     
 
-## `<plugin>`요소
+## *플러그인* 요소
 
 `plugin`요소는 플러그인 매니페스트의 최상위 요소입니다. 다음과 같은 특성을 보유 하 고:
 
@@ -40,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         ^\d+[.]\d+[.]\d+$
         
 
-## `<engines>`및 `<engine>` 요소
+## *엔진* 및 *엔진* 요소
 
 자식 요소는 `<engines>` 요소가이 플러그인 지원 아파치 코르도바 기반 프레임 워크의 버전을 지정 합니다. 예를 들어:
 
@@ -64,7 +64,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-'<engine>' 태그 또한 코르도바에 있는 주요 플랫폼에 대 한 기본 지원 하고있다. '코르도바' 엔진 태그를 지정 하면 모든 플랫폼에서 코르도바의 모든 버전 엔진 버전 특성을 만족 해야 합니다 의미 합니다. 또한 범용 '코르도바' 엔진을 재정의 하려면 특정 플랫폼 및 그들의 버전을 나열할 수 있습니다.
+`<engine>`태그 또한 코르도바에 있는 주요 플랫폼에 대 한 기본 지원 하고있다. 지정 하는 `cordova` 엔진 태그 의미 모든 플랫폼에서 코르도바의 모든 버전 엔진 버전 특성을 만족 해야 합니다. 당신은 또한 잡기-모든 재정의 하기 위하여 그들의 버전과 특정 플랫폼을 나열할 수 있습니다 `cordova` 엔진:
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -73,7 +73,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-기본 목록에 엔진은 여기에 '<engine>' 태그를 지원 합니다: * '코르도바' * ' 코르도바-plugman' * ' 코르도바-안 드 로이드 ' * ' 코르도바-ios' * ' 코르도바-blackberry10' * ' 코르도바 wp7' * ' 코르도바-wp8' * ' 코르도바 windows8'
+기본 목록에 엔진은 여기에 '<engine>' 태그를 지원 합니다: * '코르도바' * ' 코르도바-plugman' * ' 코르도바-아마존-fireos' * ' 코르도바-안 드 로이드 ' * ' 코르도바-ios' * ' 코르도바-blackberry10' * ' 코르도바 wp7' * ' 코르도바-wp8' * ' 코르도바 windows8'  
+* ' 안 드 로이드 sdk' / 설치 수준 높은 안 드 로이드 api 반환 / * ' 애플-xcode' / xcode 버전 반환 합니다 / * ' 애플-ios' / / 설치 된 가장 높은 iOS 버전을 반환 합니다 * ' 애플-os x ' / OSX 버전 반환 합니다 / * ' 블랙베리 ndk' / / 네이티브 blackberry SDK 버전을 반환 합니다
 
 이렇게 사용자 정의 아파치 코르도바 기반 프레임 워크 엔진 태그 아래 나열 되어야 합니다 지정:
 
@@ -84,7 +85,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-사용자 정의 아파치 코르도바 기반 프레임 워크 엔진 요소는 다음 특성을 포함 해야 합니다: '이름', '버전', 'scriptSrc' 및 '플랫폼'.
+사용자 정의 아파치 코르도바 기반 프레임 워크 엔진 요소는 다음 특성을 포함 해야 합니다: `name` , `version` , `scriptSrc` , 그리고`platform`.
 
 *   `name`(필수): 당신의 사용자 정의 프레임 워크에 대 한 인간-읽을 수 있는 이름.
 
@@ -92,13 +93,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   `scriptSrc`(필수): 스크립트 파일을 사용자 정의 프레임 워크의 버전은 plugman에 게 말한다. 이상적으로,이 파일은 플러그인 디렉토리의 최상위 수준 디렉터리 내에서 해야 합니다.
 
-*   `platform`(필수): 어떤 플랫폼을 당신의 프레임 워크를 지원 합니다. 와일드 카드를 사용할 수 있습니다 ' *' 모든 플랫폼에 대 한 지원 말, 'android|ios|blackberry10' 같은 파이프 문자 또는 '안 드 로이드'와 같은 단일 플랫폼으로 여러 개를 지정 합니다.
+*   `platform`(필수): 어떤 플랫폼을 당신의 프레임 워크를 지원 합니다. 와일드 카드를 사용할 수 있습니다 `*` 모든 플랫폼에 대 한 지원, 말 처럼 파이프 문자로 여러 개 지정 `android|ios|blackberry10` 또는 같은 단일 플랫폼`android`.
 
 plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 않는 모든 플러그인에 대 한 0이 아닌 코드를 중단 합니다.
 
 없는 경우 `<engine>` 태그 지정, plugman 맹목적으로 지정 된 코르 도우 바 프로젝트 디렉터리에 설치 하려고 합니다.
 
-## `<name>`요소
+## *이름* 요소
 
 텍스트 내용이 플러그인의 이름을 포함 하는 플러그인에 대 한 인간-읽을 수 있는 이름입니다. 예를 들어:
 
@@ -107,7 +108,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 이 요소 하지 않습니다 (아직) 지역화를 처리 합니다.
 
-## `<description>`요소
+## *설명* 요소
 
 플러그인에 대 한 인간-읽을 수 있는 설명입니다. 요소의 텍스트 콘텐츠 플러그인의 설명을 포함합니다. 예를 들어:
 
@@ -116,28 +117,28 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 이 요소 하지 않습니다 (아직) 지역화를 처리 합니다.
 
-## `<author>`요소
+## *저자* 요소
 
 플러그인 작성자 이름입니다. 요소의 텍스트 콘텐츠 플러그인 작성자의 이름을 포함합니다. 예를 들어:
 
     <author>Foo plugin description</author>
     
 
-## `<keywords>`요소
+## *키워드* 요소
 
 플러그인 키워드입니다. 요소의 텍스트 콘텐츠 플러그인을 설명 하는 쉼표로 구분 된 키워드를 포함 합니다. 예를 들어:
 
     <keywords>foo,bar</keywords>
     
 
-## `<license>`요소
+## *라이센스* 요소
 
 플러그인 라이센스입니다. 요소의 텍스트 콘텐츠 플러그인 라이선스를 포함 되어 있습니다. 예를 들어:
 
     <license>Apache 2.0 License</license>
     
 
-## `<asset>`요소
+## *자산* 요소
 
 하나 이상의 요소 목록 파일 또는 코르도바 응용 프로그램에 복사할 수 디렉터리 `www` 디렉터리. 예:
 
@@ -155,11 +156,12 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     어디 파일 또는 디렉터리에에서 있어야 코르도바 애플 리 케이 션, 상대적으로 `www` 디렉터리. 자산 하위 디렉터리, 예를 들어 대상 될 수 있습니다.
     
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        
     
     만듭니다는 `js/experimental` 내의 디렉토리는 `www` 디렉터리, 하지 않는 한 이미 현재 다음 복사본은 `new-foo.js` 파일 및 그것의 이름을 바꾸고 `foo.js` . 파일이 대상 위치에 이미 있으면 plugman 중지 하 고 설치 프로세스를 취소, 충돌에 대 한 알림을 고 0이 아닌 코드와 함께 종료 됩니다.
 
-## `<js-module>`요소
+## *js 모듈* 요소
 
 대부분의 플러그인 하나 이상의 JavaScript 파일이 포함 됩니다. 각 `<js-module>` 태그 자바 스크립트 파일에 해당 하 고 플러그인의 사용자 추가 하는 데 하지 못하도록 한 `<script>` 각 파일에 대 한 태그. 반면 `<asset>` 태그 복사한 파일에 플러그인 디렉터리에서 `www` , `<js-module>` 태그는 훨씬 더 정교한. 그들은 다음과 같습니다.
 
@@ -186,15 +188,15 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
     
     *   `<runs/>`즉, 코드를 지정 해야 합니다 `cordova.require` 에 설치 되어 있지 하지만 `window` 개체. 이벤트 처리기를 연결할 때 모듈을 초기화 하는 경우에 유용 하거나 그렇지 않으면. 수 당신은 1까지 `<runs/>` 태그. 그를 포함 한 참고는 `<runs/>` 와 `<clobbers/>` 또는 `<merges/>` 중복 되어, 이후 그들은 또한 `cordova.require` 모듈.
     
-    *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스 될 수 있습니다`cordova.require`.
+    *   빈 `<js-module>` 아직도 로드 하 고 다른 모듈을 통해 액세스할 수 있습니다`cordova.require`.
 
 만약 `src` plugman 중지 및 설치 반대, 문제, 알림 문제 및 0이 아닌 코드와 함께 종료는 기존 파일에 해결 되지 않습니다.
 
 중첩 `<js-module>` 내의 요소 `<platform>` 플랫폼 관련 자바 스크립트 모듈 바인딩을 선언 합니다.
 
-## `<dependency>`
+## *종속성* 요소
 
-`<dependency>`태그는 현재 플러그인이 종속 된 다른 플러그인을 지정할 수 있습니다. 미래 버전 플러그인 저장소에서 액세스할 것 이다, 하는 동안 짧은 기간에 플러그인 직접 참조 하 여 Url로 `<dependency>` 태그. 다음과 같이 배열 된다:
+`<dependency>`태그를 사용 하면 현재 플러그인이 종속 된 다른 플러그인을 지정할 수 있습니다. 미래 버전 플러그인 저장소에서 액세스할 것 이다, 하는 동안 짧은 기간에 플러그인 직접 참조 하 여 Url로 `<dependency>` 태그. 다음과 같이 배열 된다:
 
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
@@ -215,7 +217,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 참고는 `subdir` 항상 하지 부모 플러그인 git 저장소의 *루트* 에 상대적인 경로 지정 합니다. 로컬 경로 직접 플러그인을 설치 하는 경우에이 사실이.입니다. Plugman은 git 저장소의 루트를 발견 하 고 거기에서 다른 플러그인을 찾습니다.
 
-## `< 플랫폼 >`
+## *플랫폼* 요소
 
 `<platform>`태그 연결 된 네이티브 코드 또는 구성 파일을 수정 해야 하는 플랫폼을 식별 합니다. 이 명세를 사용 하 여 도구 지원 되는 플랫폼을 식별 하 고 코르 도우 바 프로젝트에 코드를 설치할 수 있습니다.
 
@@ -235,13 +237,14 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 플랫폼 이름은 소문자 이어야 합니다. 로 임의로 선택한 플랫폼 이름은 나열 되어 있습니다.
 
+*   아마존 fireos
 *   안 드 로이드
-*   bb10
+*   blackberry10
 *   ios
 *   wp7
 *   wp8
 
-## `< 소스 파일 >`
+## *소스 파일* 요소
 
 `<source-file>`요소는 프로젝트에는 설치 되어 있어야 실행 가능한 소스 코드를 식별 합니다. 예:
 
@@ -266,7 +269,7 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 
 *   `compiler-flags`(iOS): 만약 설정, 특정 소스 파일에 대해 지정 된 컴파일러 플래그를 지정 합니다.
 
-## `<config-file>`
+## *구성 파일* 요소
 
 수정, 어디 그 문서에서 수정 자리 한다와 무엇을 수정 해야 하는 XML 기반 구성 파일을 식별 합니다.
 
@@ -314,7 +317,7 @@ XML에 대 한 예제:
     
     선택기 지정 된 문서의 아이 게 해결 되지 않으면, 도구 중지 되 고 반대로 설치 프로세스 경고를 표시 및 0이 아닌 코드와 함께 종료 됩니다.
 
-## `<plugins-plist>`
+## *플러그인 plist* 요소
 
 이것은 *오래 된* 코르 도우 바-ios 2.2.0 아래만 적용 됩니다. 사용 된 `<config-file>` 코르 도우 바의 최신 버전에 대 한 태그.
 
@@ -332,16 +335,21 @@ XML에 대 한 예제:
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
-## `<resource-file>`그리고`<header-file>`
+## *리소스 파일* 및 *헤더 파일* 요소
 
-소스 파일 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 파일, 헤더 및 리소스 구분. 예:
+소스 파일 처럼 하지만 iOS 같은 플랫폼에 맞게 하는 소스 파일, 헤더 및 리소스 구분. iOS 예제:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
     
 
-## `<lib-file>`
+안 드 로이드 예제:
+
+    < 리소스 파일 src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" / >
+    
+
+## *lib 파일* 요소
 
 블랙베리 10 같은 플랫폼만 소스, 리소스 및 헤더 파일 처럼 사용자가 만든 라이브러리를 사용 하는. 예:
 
@@ -355,7 +363,7 @@ XML에 대 한 예제:
 
 *   `arch`: 어떤 아키텍처는 `.so` 파일이 만들어져 있다, 어느 쪽이 든 `device` 또는`simulator`.
 
-## `<framework>`
+## *프레임 워크* 요소
 
 에 따라 플러그인 프레임 워크 (일반적으로 운영 체제/플랫폼의 일부)를 식별 합니다.
 
@@ -363,26 +371,26 @@ XML에 대 한 예제:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
     
 
 `src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
 
 옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
 
-## `<info>`
+옵션 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 값입니다 (따라서 아니에요 시스템 프레임 워크). 기본값은`false`.
+
+## *정보* 요소
 
 사용자에 게 제공 하는 추가 정보. 이 쉽게 자동 수 없습니다 또는 plugman의 범위는 추가 단계를 요구 하는 경우에 유용 합니다. 예:
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    You need to add the following line to your `local.properties`
-    
-    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
-    </info>
+    'Local.properties'에 다음 줄을 추가 해야: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 정보 >
     
 
-# 변수
+## 변수
 
 어떤 경우에는 플러그인 구성 변경 대상 응용 프로그램에 의존 해야 합니다. 예를 들어, 패키지 id가 애플 리 케이 션 안 드 로이드에서 C2DM 등록을 `com.alunny.message` 와 같은 권한 요구:
 
@@ -396,7 +404,7 @@ XML에 대 한 예제:
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman 지정된 된 값 또는 빈 문자열을 변수 참조를 대체 하는 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
+plugman 지정된 된 값 또는 빈 문자열에 변수 참조를 바꿉니다 경우 찾을 수 없습니다. 변수 참조 값이 검색 될 수 있습니다 (이 경우에서 `AndroidManifest.xml` 파일) 또는 도구;의 사용자에 의해 지정 된 정확한 프로세스 특정 도구에 따라 달라 집니다.
 
 plugman은 플러그인의 필요한 변수를 지정 하는 사용자를 요청할 수 있습니다. 예를 들어 명령줄 인수로 C2M 및 구글 맵 스 API 키를 지정할 수 있습니다.
 

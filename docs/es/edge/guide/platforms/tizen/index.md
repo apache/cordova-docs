@@ -22,7 +22,7 @@ Esta guía describe cómo configurar el entorno de desarrollo SDK para desplegar
 
 El SDK de Tizen requiere 10.04/10.10/11.04/11.10 Linux Ubuntu (32 bits) o Windows XP SP3/7 (32 bits).
 
-Los desarrolladores deben usar la utilidad de `cordova` en conjunción con el SDK de Tizen. Ver la interfaz de línea de comandos para obtener información de cómo instalarlo, añadir proyectos, entonces construir e implementar un proyecto.
+Los desarrolladores deben usar la utilidad de `cordova` en conjunción con el SDK de Tizen. Ver la interfaz de línea de comandos para obtener información como instalarlo, agregar proyectos, entonces construir e implementar un proyecto.
 
 ## Instalar el SDK
 
@@ -34,14 +34,14 @@ Descargar el SDK de Tizen de [tizen.org][1].
 
 - (optional) Install Tizen Cordova template projects: copy the
   `/templates` directory content into the Tizen Eclipse IDE web
-  templates directory (e.g:
+  templates directory (e.g.:
   `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
     - Select  __File &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
-    - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
+    - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
     ![](img/guide/platforms/tizen/project_template.png)
@@ -104,7 +104,7 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
     
     ![][7]
 
-*   Haga clic derecho en el proyecto en el **Explorador de proyecto** visión, luego seleccionar ejecutar como **& rarr; Aplicación Web Tizen**:
+*   Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione **Ejecutar como → Tizen Web Application**:
     
     ![][8]
 

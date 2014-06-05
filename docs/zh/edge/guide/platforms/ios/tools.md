@@ -14,36 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS 命令列工具
+# iOS 壳工具指南
 
-`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
+本指南演示如何使用科尔多瓦的套的平台为中心的外壳程序工具来开发 iOS 应用程序。 这种发展道路，概述中讨论可能会为您提供更广泛的发展方案时，iOS 比所述的命令行界面的跨平台 CLI 工具。 例如，您需要部署一个科尔多瓦 web 视图自定义旁边的本机组件时使用外壳程序工具。 在使用之前要么发展路径，您必须首先配置 SDK 环境的 iOS 平台指南中所述。 这些工具依赖于 Xcode 的命令行工具如 `xcode-select` 和`xcodebuild`.
+
+若要启用 iOS 的外壳工具，请从[cordova.apache.org][1]下载科尔多瓦。 下载文件中包含单独的档案，为每个平台。 展开每个您想要的目标， `ios` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**文件，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
-IOS 命令列工具都建立在 shell 腳本和依賴于 Xcode 命令列工具如 `xcode-select` 和`xcodebuild`.
+这些工具允许您创建、 构建和运行 iOS 的应用程序。 额外的命令行界面，可以跨所有平台的插件功能的信息，请参阅使用 Plugman 到管理插件。 有关如何开发插件的详细信息，请参阅应用程序插件。
 
-## 創建一個專案
+## 创建一个项目
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。
+运行 `create` 命令，指定的现有路径的项目、 反向域式包标识符和应用程序的显示名称。
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
-## 生成專案
+## 生成项目
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
     
 
-## 在模擬器上運行的應用程式
+## 在模拟器上运行应用程序
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
     
 
-## 釋放
+## 释放
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
     
 
-## 日誌記錄
+## 日志记录
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log

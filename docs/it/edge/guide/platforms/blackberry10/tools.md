@@ -14,19 +14,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Strumenti della riga di comando di blackBerry 10
+# BlackBerry 10 Shell strumento guida
 
 Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello che consente di creare applicazioni su piattaforme diverse in una volta. Una versione precedente di Cordova framework fornisce il set di strumenti da riga di comando specifici per ogni piattaforma. Per utilizzarli come alternativa alla CLI, dovete scaricare questa versione di Cordova da [cordova.apache.org][1]. Il download contiene archivi separati per ciascuna piattaforma. Espandere la piattaforma che si desidera fare riferimento. Gli strumenti qui descritti sono in genere disponibili nel livello superiore `bin` directory, altrimenti consultare il file **Leggimi** per ulteriori indicazioni.
 
  [1]: http://cordova.apache.org
 
+Per informazioni sull'interfaccia della riga di comando a basso livello che Abilita plugin, vedere utilizzando Plugman per gestire i plugin. Per dettagli su come sviluppare plugin, vedere applicazione plugin.
+
 Se hai bisogno di aiuto con i comandi elencati di seguito, digitare il comando lungo con il `-h` o `-help` gli argomenti, che sono supportati da tutti i comandi e che forniscono descrizioni per ciascuno degli argomenti disponibili.
 
-## creare
+## Creare un'App
 
 Il `create` comando crea un nuovo progetto:
 
-    bin/creare < percorso-a-progetto >< progetto-pacchetto ><-nome del progetto >
+        bin/creare < percorso-a-progetto >< progetto-pacchetto ><-nome del progetto >
     
 
 dove
@@ -37,15 +39,15 @@ dove
 
 *   `<project-name>`specifica il nome visualizzato di apps
 
-**Nota:** il `create` comando avvia installazione di dipendenza attraverso il `npm install` comando. A seconda delle autorizzazioni di directory e il sistema di installazione, questo può richiedere privilegi di amministratore. Se non c'è problema su OSX/Linux, eseguire `sudo npm install` prima di utilizzare il `create` comando. Su Windows, eseguire `npm install` inaugurato in un'utilità della riga di comando con privilegi di amministratore.
+**Nota**: il `create` comando avvia installazione di dipendenza attraverso il `npm install` comando. A seconda delle autorizzazioni di directory e il sistema di installazione, questo può richiedere privilegi di amministratore. Se non c'è problema su OSX/Linux, eseguire `sudo npm install` prima di utilizzare il `create` comando. Su Windows, eseguire `npm install` inaugurato in un'utilità della riga di comando con privilegi di amministratore.
 
-## destinazione
+## Creare una destinazione
 
 Il `target` comando consente di gestire l'emulatore o dispositivi BlackBerry che si utilizzano per testare l'app. È possibile aggiungere o rimuovere una destinazione o impostare una destinazione come destinazione predefinita.
 
 ### Aggiungere una destinazione
 
-    < percorso a progetto >/cordova/destinazione aggiungere < nome >< indirizzo ip > [-t |-tipo < dispositivo | simulator >] [-p |-password password di < >] [..--pin pin < periferica >]
+        < percorso a progetto >/cordova/destinazione aggiungere < nome >< indirizzo ip > [-t |-tipo < dispositivo | simulator >] [-p |-password password di < >] [..--pin pin < periferica >]
     
 
 dove
@@ -56,25 +58,25 @@ dove
 
 *   `-p | --password <password>`specifica la password per il dispositivo o nell'emulatore. È richiesto solo se il dispositivo o l'emulatore è protetto da password.
 
-*   `--pin <device-pin>`specifica il PIN del dispositivo BlackBerry, che identifica tale dispositivo come un host valido per il token di debug. Questo argomento è obbligatorio solo se si crea un token di debug.
+*   `--pin <device-pin>`specifica il PIN del dispositivo BlackBerry, che identifica tale dispositivo come un host valido per il token di debug. Questo argomento è obbligatorio solo quando si crea un token di debug.
 
 ### Rimuovere una destinazione
 
-    < percorso a progetto >/cordova/Rimuovi < nome > di destinazione
+        < percorso a progetto >/cordova/Rimuovi < nome > di destinazione
     
 
 ### Impostare una destinazione come predefinito
 
-    < percorso a progetto >/cordova/destinazione predefinita < nome >
+        < percorso a progetto >/cordova/destinazione predefinita < nome >
     
 
-## costruire
+## Costruire l'App
 
 Il `build` comando compila il progetto come file bar. È possibile compilare l'applicazione in modalità di rilascio (che produce un file firmato bar) o in modalità di debug (che produce un file unsigned bar).
 
-### Compilare il progetto in modalità di rilascio
+### Compilare l'applicazione in modalità di rilascio
 
-    < percorso a progetto >/cordova/costruire il rilascio [-k | - keystorepass < password >] [-b | - buildId < numero >] [-p | - params < params-JSON-file >]
+        < percorso a progetto >/cordova/costruire il rilascio [-k | - keystorepass < password >] [-b | - buildId < numero >] [-p | - params < params-JSON-file >]
     
 
 dove
@@ -85,9 +87,9 @@ dove
 
 *   `-p | --params <params-JSON-file>`specifica un file JSON contenente ulteriori parametri da passare a strumenti a valle. Questo argomento è facoltativo.
 
-### Compilare il progetto in modalità di debug
+### Compilare il progetto in modalità di Debug
 
-    < percorso a progetto >/cordova/costruire debug [< target >] [-k | - keystorepass < password >] [-p | - params < params-JSON-file >] [-ll | - loglevel < error|warn|verbose >]
+        < percorso a progetto >/cordova/costruire debug [< target >] [-k | - keystorepass < password >] [-p | - params < params-JSON-file >] [-ll | - loglevel < error|warn|verbose >]
     
 
 dove
@@ -100,41 +102,37 @@ dove
 
 *   `-ll | --loglevel <level>`specifica il livello di log. Il livello di log può essere uno dei `error` , `warn` , o`verbose`.
 
-Se avete definito in precedenza una destinazione predefinita (e precedentemente installato un token di debug, se la destinazione è un dispositivo BlackBerry), è possibile eseguire lo script senza argomenti, e lo script verrà pacchetto app e distribuirlo alla destinazione predefinita. Ad esempio:
+Se avete precedentemente definito una destinazione predefinita (e precedentemente installato un token di debug, se la destinazione è un dispositivo BlackBerry), è possibile eseguire lo script con senza argomenti e i pacchetti script app e distribuisce alla destinazione predefinita. Ad esempio:
 
-    < percorso a progetto >/cordova/costruire debug
+        < percorso a progetto >/cordova/costruire debug
     
 
-## eseguire
+## Eseguire l'applicazione
 
-Il `run` comando consente di distribuire l'applicazione sul dispositivo BlackBerry specificato o un emulatore. Prima di distribuire l'applicazione, è necessario innanzitutto creare un target per il dispositivo o l'emulatore che si desidera distribuire app utilizzando lo script di destinazione. Lo script di distribuzione distribuirà la build più recente della tua app.
+Il `run` comando consente di distribuire il build più recente dell'applicazione sul dispositivo BlackBerry specificato o un emulatore. Per distribuire l'applicazione, è necessario specificare una destinazione per il dispositivo o l'emulatore:
 
-    < percorso a progetto >/cordova/eseguire < destinazione >
+        < percorso a progetto >/cordova/eseguire < destinazione >
     
 
-dove
+... dove `<target>` specifica il nome di un target aggiunto precedentemente. Se `<target>` è un dispositivo, quindi deve essere collegato al computer tramite cavo USB, oppure sulla stessa rete Wi-Fi sul computer.
 
-*   `<target>`specifica il nome di un target aggiunto precedentemente. Se `<target>` è un dispositivo, quindi che il dispositivo deve essere collegato al computer tramite collegamento USB o essere collegato alla stessa rete Wi-Fi come il computer.
+## Gestire i plugin
 
-## plugin
+Il `target` comando consente di aggiungere e rimuovere il plugin. Per recuperare un plugin ospitato localmente:
 
-Il `target` comando consente di aggiungere e rimuovere plugin
-
-### Recuperare un plugin ospitato localmente
-
-    < percorso a progetto >/cordova/plugin fetch < percorso-plugin >
+        < percorso a progetto >/cordova/plugin fetch < percorso-plugin >
     
 
-### Mostra un elenco dei plugin installati
+Mostra un elenco dei plugin installati:
 
-    < percorso a progetto >/cordova/plugin ls
+        < percorso a progetto >/cordova/plugin ls
     
 
-### Aggiungere un plugin
+Aggiungere un plugin:
 
-    < percorso a progetto > plugin/cordova/aggiungere < nome >
+        < percorso a progetto > plugin/cordova/aggiungere < nome >
     
 
-### Rimuovere un plugin
+Rimuovere un plugin:
 
-    < percorso a progetto >/cordova/plugin rm < nome >
+        < percorso a progetto >/cordova/plugin rm < nome >

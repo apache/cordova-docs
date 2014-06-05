@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# BlackBerry Configuration
+# BlackBerry 10 Konfiguration
 
 Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. In diesem Abschnitt Informationen-Einstellungen, die nur für BlackBerry 10 gelten baut. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
 
@@ -28,6 +28,6 @@ Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwend
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` oder Standard `enable` ): Legen Sie auf `disable` Web-Sicherheits-Einstellungen, den Zugriff auf remote-Inhalte aus unbekannten Quellen zu überschreiben. Diese Einstellung soll wie vor Entwicklung Bequemlichkeit nur, also dem Entfernen Verpackung Ihrer app für den Vertrieb. Für die veröffentlichten app sollte alle URIs bekannt und auf der weißen Liste mithilfe der `<access>` in die Domain-Whitelist-Guide beschriebene Element.
+*   `WebSecurity`( `disable` oder Standard `enable` ): Legen Sie auf `disable` Web-Sicherheits-Einstellungen, den Zugriff auf remote-Inhalte aus unbekannten Quellen zu überschreiben. Diese Voreinstellung ist vorgesehen, wie eine Entwicklung Bequemlichkeit nur, also vor dem Entfernen Verpackung die app für den Vertrieb. Für die veröffentlichten app sollte alle URIs bekannt und auf der weißen Liste mithilfe der `<access>` in die Domain-Whitelist-Guide beschriebene Element.
     
         <preference name="WebSecurity" value="disable"/>

@@ -1,6 +1,6 @@
 ---
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Voir le fichier avis distribué avec ce travail d'information additionnelle concernant les droits d'auteur. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Voir le fichier des Remarques distribué avec ce travail d'information additionnel concernant les droits d'auteur. L'ASF vous licencis ce fichier sous licence Apache, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier qu'en conformité avec la licence. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -16,48 +16,126 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Icones et Splash Screen
 
-Cette section indique comment configurer une application icône et écran de démarrage facultatif pour diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les Guides de la plate-forme).
+Cette section indique comment configurer une icône et un écran de démarrage facultatif pour une application sur diverses plates-formes, les deux lorsque vous travaillez dans la CLI de Cordova (décrites dans l'Interface de ligne de commande) ou en utilisant les outils du SDK spécifique à la plateforme (détaillées dans les Guides de la plate-forme).
 
 ## Configuration des icônes dans le CLI
 
-Lorsque vous travaillez dans la CLI, icône source fichiers se trouvent dans les différents sous-répertoires spécifiques à une plateforme au sein du projet `www/res/icons` répertoire. Projets nouvellement créés disposent d'un ensemble par défaut des icônes de Cordova pour vous permet de remplacer les plates-formes que vous voulez cibler.
+Quand travaillant dans la CLI, vous pouvez définir des app icônes via `<icon>` élément ( `config.xml` ). Si vous ne spécifiez pas une icône, puis le logo Apache Cordova est utilisé.
 
-Android spécifie les icônes de faible, moyenne, haute et très haute résolution :
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-La plateforme iOS spécifie 72-pixel-square des icônes pour les iPads, et affiche des icônes de 57 pixels pour les iPhones et iPods, avec haute résolution *x 2* variantes pour la rétine :
+SRC: (obligatoire) spécifie l'emplacement du fichier image, par rapport à votre répertoire www
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+plateforme : plateforme cible (facultatif)
+
+Largeur : largeur d'icône (facultatif) en pixels
+
+hauteur : hauteur d'icône (facultatif) en pixels
+
+densité : android (facultatif) spécifique, spécifie la densité de l'icône
+
+La configuration suivante peut être utilisée pour définir l'icône par défaut unique qui sera utilisé pour toutes les plates-formes.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone spécifie une icône de 48 pixels par défaut, ainsi que de l'arrière-plan des divers dispositifs carrelage images utilisées dans la représentation des applications :
+Pour chaque plate-forme, vous pouvez également définir un set pour s'adapter à des résolutions d'écran différentes d'icônes de pixellisés.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+Amazon Fire OS
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-BlackBerry nécessite une icône 80 pixels :
+Android
 
-        blackberry/icon-80.png
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Paciarelli nécessite une icône de 128 pixels :
+Blackberry10
 
-        tizen/icon-128.png
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
     
 
-## Configuration des écrans de démarrage dans le CLI
+Voir la documentation de BlackBerry pour le ciblage de plusieurs tailles et paramètres régionaux. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran splash liminaire de l'app sur de nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
+Firefox OS
+
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Paciarelli
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
+    
+
+## Configuration du Splashscreen dans la CLI
+
+Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran d'accueil introduction d'une app nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
 
 Android spécifie les deux images d'écran splash-orientation portrait et paysage de faible, moyenne, haute et très haute résolution :
 
@@ -71,7 +149,7 @@ Android spécifie les deux images d'écran splash-orientation portrait et paysag
         android/screen-xhdpi-portrait.png
     
 
-La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des variantes pour les écrans de la rétine et des orientations différentes. Le fichier *568 h* personnalisé pour le plus grand écran de l'iPhone 5 :
+La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des variantes pour les écrans de la rétine et des orientations différentes. Le fichier *568 h* s'applique à l'iPhone 5 écran plus grand :
 
         ios/screen-ipad-landscape-2x.png
         ios/screen-ipad-landscape.png
@@ -84,38 +162,48 @@ La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des vari
         ios/screen-iphone-portrait-568h-2x.png
     
 
-BlackBerry et Windows Phone à la fois spécifient une image à l'écran splash unique :
+Windows Phone spécifie une image d'écran de démarrage unique :
 
-        blackberry/screen-225.png
         windows-phone/screen-portrait.jpg
     
 
 Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les Guides de la plate-forme.
 
+N'oubliez pas d'installer le plugin de SplashScreen avant d'essayer d'utiliser les `navigator.splashscreen.hide()` ou `navigator.splashscreen.show()` méthodes.
+
 ## Écrans de démarrage pour la plateforme Android
 
-Placez-y les fichiers [image 9-patch][1] du projet Android `res/drawable` répertoire. La taille de chacun doit être :
+Placez-y les fichiers [image 9-patch][1] du projet Android `platforms/android/res/drawable*` répertoires.
 
  [1]: https://developer.android.com/tools/help/draw9patch.html
+
+La taille de chacun doit être :
 
 *   XLarge (xhdpi): au moins 960 × 720
 *   grand (hdpi): au moins 640 × 480
 *   moyen (mdpi): au moins 470 × 320
 *   petit (ldpi): au moins 426 × 320
 
-Dans `config.xml` , ajoutez les préférences suivantes :
+Lorsque vous créez un nouveau projet Android, l'écran de démarrage par défaut des images autant dans le Cordova, exemple d'application doit être déjà présente dans le `platforms/android/res/drawable*` répertoires. N'hésitez pas à remplacer par vos propres images. Lorsque votre propre splash fournissant des images à l'écran, il est inutile de fournir la même permutation de 8 par défaut Cordova plus ici. Plus ou moins l'optimisation peut être utilisée. Le `drawable` les noms de répertoire doivent respecter les conventions Android pour supporter des [tailles d'écran][2] et [autres ressources][3].
 
-    <preference name="splashscreen", "splash" />
-    <preference name="splashScreenDelay", 10000 />
+ [2]: http://developer.android.com/guide/practices/screens_support.html
+ [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
+
+Dans le premier niveau `config.xml` fichier (pas celui de `platforms` ), ajouter les préférences suivantes :
+
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="10000" />
     
 
-La première ligne définit l'image à afficher comme écran de démarrage. Si vous nommez votre image quoi que ce soit autre que `splash.png` , vous devez modifier cette ligne.
+La première ligne définit l'image à afficher comme écran de démarrage. C'est le nom de fichier de la png dans le `drawable*` annuaires, moins la `.png` extension. La valeur par défaut pour le SplashScreen est `screen` (pour le fichier `platforms/android/res/drawable*/screen.png` ), donc si vous nommez l'image quoi que ce soit autre que `screen.png` dans la `drawable*` répertoires, vous devez ajouter/modifier cette ligne.
 
-La deuxième ligne définit le retard de combien de temps le splashscreen apparaît en millisecondes. De rejeter l'écran de démarrage lorsque l'application reçoit la `deviceready` événement, appelez le `navigator.splashscreen.hide()` méthode.
+La deuxième ligne définit le délai par défaut de combien de temps le splashscreen apparaît en millisecondes. Cela devrait être l'heure de début prévue plus pessimistes. La valeur par défaut pour SplashScreenDelay est 3000 ms.
 
-## Écrans de démarrage pour l'iOS plate-forme
+Enfin, en tant que pratique exemplaire, l'écran de démarrage devrait être présent seulement aussi longtemps que nécessaire. Lorsque votre application a commencé et le mode Web a chargé, votre application doit masquer l'écran de démarrage afin que votre vue principale est visible dès qu'elle est prête. Car l'heure de début d'application varie un peu en raison de plusieurs facteurs tels que la vitesse du CPU et réseau, il est recommandé que votre application appelle explicitement `navigator.splashscreen.hide()` dans la méthode JavaScript qui répond à la `deviceready` événement. Sinon l'écran de démarrage sera visible pour la valeur de SplashScreenDelay que vous avez configuré plus haut, qui est probablement plus longtemps que nécessaire. Cette approche événementielle est hautement recommandée par rapport à avoir l'écran de démarrage visible pour toujours une durée fixe.
 
-Copiez-y votre images écran de démarrage du projet iOS `Resources/splash` répertoire. Seulement ajouter les images pour les périphériques que vous souhaitez prendre en charge, tels que l'iPad ou iPhone. La taille de chaque image doit être :
+## Écrans de démarrage pour la plate-forme l'iOS
+
+Copiez-y les images d'écran de démarrage du projet iOS `Resources/splash` répertoire. Seulement ajouter ces images pour les périphériques que vous souhaitez prendre en charge, tels que l'iPad ou iPhone. La taille de chaque image doit être :
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
 *   Default-Landscape@2x~ipad.png (2048 x 1496 pixels)
@@ -127,8 +215,8 @@ Copiez-y votre images écran de démarrage du projet iOS `Resources/splash` rép
 
 ## Écrans de démarrage pour la plateforme BlackBerry 10
 
-Copiez vos images écran de démarrage dans le projet `res/screen/blackberry10` répertoire. Les noms de fichier doivent être :
+Ajoutez un élément de la jante : splash dans config.xml pour chaque résolution et les paramètres régionaux, vous souhaitez soutenir :
 
-*   splash-1280x768.png (1280x768 pixels)
-*   splash-720x720.png (720x720 pixels)
-*   splash-768x1280.png (768x1280 pixels)
+[http://developer.BlackBerry.com/HTML5/documentation/rim\_splash\_element.html][4]
+
+ [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html

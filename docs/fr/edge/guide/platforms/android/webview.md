@@ -16,23 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Android WebViews
 
-Partir de Cordova 1,9, avec l'aide de la `CordovaActivity` , vous pouvez utiliser Cordova comme composant dans une application Android native plus grande. Android fait référence à cet élément comme le `CordovaWebView` . Nouvelles applications basées sur Cordova de 1,9 à partir servir la `CordovaWebView` sa vue principale, quel que soit l'approche héritée de `CordovaActivity` est utilisé.
+Ce guide montre comment intégrer un composant WebView Cordova-activée dans une application Android plus grande. Pour plus d'informations sur la façon dont ces composants peuvent communiquer entre eux, voir Application Plugins.
 
-Si vous n'êtes pas familier avec le développement d'applications Android, veuillez lire le Guide de la plate-forme Android au développement d'une Application de Cordova avant d'essayer d'inclure une WebView. Il n'est pas le principal moyen de créer des applications Android Cordova. Ces instructions sont actuellement manuelles, mais peut être éventuellement être automatisée.
+Si vous n'êtes pas familier avec Android, vous devez tout d'abord vous familiariser avec le Guide de la plate-forme Android et avoir le dernier SDK Android installé avant d'essayer l'option de développement plus inhabituelle d'incorporation une WebView. À partir de 1,9 Cordova, la plateforme Android s'appuie sur un `CordovaWebView` composant, qui s'appuie sur un héritage `CordovaActivity` composant qui est antérieure à la version 1.9.
 
-## Conditions préalables
+1.  Pour suivre ces instructions, vérifiez que vous avez la dernière distribution de Cordova. Téléchargez-le sur [cordova.apache.org][1] et décompressez son Android.
 
-*   Cordova 1,9 ou supérieur
+2.  Accédez à du package Android `/framework` répertoire et exécutez `ant jar` . Il crée le Cordova `.jar` fichier, formé comme`/framework/cordova-x.x.x.jar`.
 
-*   Android SDK mis à jour vers la dernière version du SDK
+3.  Copie le `.jar` fichier dans le projet Android `/libs` répertoire.
 
-## Guide d'utilisation de CordovaWebView dans un projet Android
-
-1.  `cd` en `/framework` et exécutez le `jar de fourmi` pour construire le bocal de cordova. Il crée le fichier .jar formé comme `cordova-x.x.x.jar` dans le `/framework` répertoire.
-
-2.  Copiez-y le bocal de cordova de votre projet Android `/libs` répertoire.
-
-3.  Modifiez le fichier `main.xml` de votre application (sous `/res/xml`) pour ressembler à ce qui suit, avec le `layout_height`, la `layout_width` et l' `id` modifié pour convenir à votre application :
+4.  Ajoutez le code suivant à l'application `/res/xml/main.xml` fichier, avec la `layout_height` , `layout_width` et `id` modifié en fonction de l'application :
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +34,7 @@ Si vous n'êtes pas familier avec le développement d'applications Android, veui
             android:layout_height="match_parent" />
         
 
-4.  Modifier votre activité de sorte qu'il met en œuvre le `CordovaInterface`. Vous devez implémenter les méthodes inclus. Vous pouvez les copier de `/framework/src/org/apache/cordova/CordovaActivity.java`, ou leur mise en œuvre sur votre propre. Le fragment de code ci-dessous montre une application qui utilise l'interface de base. Notez comment la vue référencée l'id correspond à l'attribut `id` spécifié dans le fragment XML indiqué ci-dessus :
+5.  Modifier l'activité de sorte qu'il met en œuvre le `CordovaInterface` . Il doit implémenter les méthodes inclus. Vous pouvez les copier de `/framework/src/org/apache/cordova/CordovaActivity.java` , ou bien leur mise en œuvre sur votre propre. Le fragment de code suivant montre une application de base qui s'appuie sur l'interface. Notez comment correspond à l'id de la vue référencée le `id` attribut spécifié dans le fragment XML indiqué ci-dessus :
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,8 +49,8 @@ Si vous n'êtes pas familier avec le développement d'applications Android, veui
             }
         
 
-Si vous utilisez l'appareil photo, vous devez également implémenter ceci :
-
+6.  Si l'application doit utiliser l'appareil photo, mettre en œuvre ce qui suit :
+    
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -72,16 +66,16 @@ Si vous utilisez l'appareil photo, vous devez également implémenter ceci :
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-    
+        
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-    
+        
             // Start activity
             super.startActivityForResult(intent, requestCode);
         }   
-    
+        
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -99,16 +93,18 @@ Si vous utilisez l'appareil photo, vous devez également implémenter ceci :
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
+        
+
+7.  Enfin, n'oubliez pas d'ajouter le pool de threads, l'auraient aucun thread sur lequel exécuter des plugins :
     
-
-Enfin, n'oubliez pas d'ajouter le pool de threads, sinon les plugins n'ont aucun thread d'exécuter sur :
-
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-    
+        
 
-1.  Copiez les fichiers HTML et JavaScript de votre application dans le répertoire `` www/actifs/de votre projet Android.
+8.  Copiez les fichiers HTML et JavaScript de l'application sur du projet Android `/assets/www` répertoire.
 
-2.  Copier `config.xml` `/framework/res/xml` dans le répertoire `/res/xml` de votre projet.
+9.  Copie le `config.xml` dossier de `/framework/res/xml` pour le projet `/res/xml` répertoire.
+
+ [1]: http://cordova.apache.org

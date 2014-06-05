@@ -16,181 +16,163 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS Plugins
 
-Un plugin es una clase de Objective-C que extiende la clase `CDVPlugin`.
+Esta sección proporciona información detallada de cómo implementar el código del plugin nativo en la plataforma iOS. Antes de leer esto, vea aplicación Plugins para tener una visión general de la estructura del plugin y su interfaz común de JavaScript. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
 
-Cada clase plugin debe estar registrado como un `<feature>` de la etiqueta en el `config.xml` archivo. Es a través de este mecanismo de ese JavaScript `exec` del método `service` parámetro asigna a una clase de Objective-C.
+Un plugin de iOS se implementa como una clase de Objective-C que se extiende la `CDVPlugin` clase. Para JavaScript `exec` del método `service` parámetro para asignar a un Objective-C, clase cada plugin debe estar registrado como un `<feature>` tag en del directorio la aplicación llamado `config.xml` archivo.
 
 ## Asignación de clase plugin
 
-La porción de JavaScript de un plugin utiliza siempre el `cordova.exec` método como sigue:
+La porción de JavaScript de un plugin utiliza el `cordova.exec` método de la siguiente manera:
 
-    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < service >, < acción > [< args >]);
     
 
-Esto mariscales una solicitud de la `UIWebView` al lado de iOS nativas, más o menos hirviendo a llamar al método de `acción` en la clase de `servicio`, con los argumentos pasados en la matriz de `args`.
+Esto mariscales una solicitud de la `UIWebView` al lado nativo iOS, efectivamente llamando el `action` método de la `service` clase, con los argumentos pasados en la `args` matriz.
 
-Especifique el plugin como un `<feature>` etiqueta de proyecto de la aplicación Cordova-iOS `config.xml` archivo.
+Especificar el plugin como un `<feature>` etiqueta de proyecto de la aplicación Cordova-iOS `config.xml` archivo, usando el `plugin.xml` archivo para inyectar este marcado automáticamente, como se describe en aplicación Plugins:
 
-    <feature name="LocalStorage">
-        <param name="ios-package" value="CDVLocalStorage" />
-    </feature>
+        <feature name="LocalStorage">
+            <param name="ios-package" value="CDVLocalStorage" />
+        </feature>
     
 
-La función `name` atributo debe coincidir con lo que usas en JavaScript `exec` llamada `service` parámetro y el `value` atributo debe coincidir con el nombre de clase de Objective-C del plugin. `<param name>`debería ser siempre `"ios-package"` . Si usted no cumple con esta configuración, el plugin puede compilar pero no será accesible por Córdoba.
+De la característica `name` atributo debe coincidir con lo que se especifica como el JavaScript `exec` llamada `service` parámetro. El `value` atributo debe coincidir con el nombre de clase de Objective-C del plugin. El `<param>` del elemento `name` siempre debe ser `ios-package` . Si usted no sigue estas pautas, el plugin puede compilar, pero Córdoba todavía no puede ser capaz de acceder a él.
 
 ## Vida e inicialización de Plugin
 
-Para la vida de cada uno se crea una instancia de un objeto plugin `UIWebView` . Plugins no se instancian hasta que primero se hace referencia mediante una llamada desde JavaScript, a menos que `<param>` con un `onload` `name` atributo se establece en `"true"` en `config.xml` . Por ejemplo:
+Para la vida de cada uno se crea una instancia de un objeto plugin `UIWebView` . Plugins normalmente se instancian cuando primero hace referencia a una llamada desde JavaScript. De lo contrario puede instanciarse mediante el establecimiento de un `param` llamado `onload` a `true` en el `config.xml` archivo:
 
-    <feature name="Echo">
-        <param name="ios-package" value="Echo" />
-        <param name="onload" value="true" />
-    </feature>
+        <feature name="Echo">
+            <param name="ios-package" value="Echo" />
+            <param name="onload" value="true" />
+        </feature>
     
 
-No hay *ningún* señalado a inicializador de plugins. Por el contrario, debe usar plugins el `pluginInitialize` método para su lógica puesta en marcha.
+No hay *ningún* señalado a inicializador de plugins. Por el contrario, debe usar plugins el `pluginInitialize` método para su lógica de arranque.
 
-Plugins con solicitudes de larga duración, actividad (por ejemplo, medios de reproducción) del fondo, los oyentes o estado interno debe implementar el `onReset` método y detener o limpiar esas actividades. Este método se ejecuta cuando el `UIWebView` se desplaza a una nueva página o actualizaciones, que vuelve a cargar el JavaScript.
+Actividad de fondo plugins con solicitudes de larga duración, tales como medios de reproducción, los oyentes o que mantener el estado interno debe implementar el `onReset` método para limpiar esas actividades. El método ejecuta cuando el `UIWebView` se desplaza a una nueva página o actualizaciones, que vuelve a cargar el JavaScript.
 
 ## Escribir un iOS Cordova Plugin
 
-Tenemos fuego JavaScript apagado una solicitud plugin nativo al lado. Tenemos el iOS Objective-C plugin asigna correctamente mediante el archivo `config.xml`. Así qué ¿te parece el final iOS Objective-C Plugin clase?
+¿Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el iOS correspondiente plugin Objective-C se asigna correctamente en el `config.xml` archivo, pero lo que le gusta el final iOS Objective-C plugin mirada de clase? Lo que es enviado al plugin de JavaScript `exec` función se pasa a la clase correspondiente plugin `action` método. Esta firma cuenta con un método de plugin:
 
-Lo obtiene despachó al plugin vía la función de JavaScript `exec` se pasa al método de `action` de la clase Plugin correspondiente. Un método de plugin tiene esta firma:
-
-    - (void)myMethod:(CDVInvokedUrlCommand*)command
-    {
-        CDVPluginResult* pluginResult = nil;
-        NSString* myarg = [command.arguments objectAtIndex:0];
+        - (void)myMethod:(CDVInvokedUrlCommand*)command
+        {
+            CDVPluginResult* pluginResult = nil;
+            NSString* myarg = [command.arguments objectAtIndex:0];
     
-        if (myarg != nil) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        } else {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+            if (myarg != nil) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
+            }
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    }
     
 
-1.  [CDVInvokedUrlCommand.h][1]
-
-2.  [CDVPluginResult.h][2]
-
-3.  [CDVCommandDelegate.h][3]
-
- [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h
- [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h
- [3]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h
+Para más detalles, ver `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)` , `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)` , y`[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
 
 ## iOS tipos de mensaje CDVPluginResult
 
-Usando CDVPluginResult puede volver una variedad de tipos de resultados a su segunda prueba de JavaScript, utilizando métodos de la clase que se parecen:
+Puede utilizar `CDVPluginResult` para devolver una variedad de resultado tipos de vuelta a las devoluciones de llamadas de JavaScript, usando métodos de la clase que siguen este patrón:
 
-    + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
-    
-
-Puede crear `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer` y `Multipart` tipos. O, no conecte ningún argumento (sólo enviar un estado). O, devolverá un Error. Incluso puede elegir no enviar ningún resultado del plugin, en cuyo caso la devolución de llamada no se dispara.
-
-### Notas
-
-*   `messageAsArrayBuffer`Espera `NSData*` y se convierte en un `ArrayBuffer` para la devolución de llamada JavaScript (y `ArrayBuffers` envió a un plugin de JavaScript se convierten en`NSData*`).
-*   `messageAsMultipart` Espera un `NSArray *` que contengan cualquiera de las otras apoyado tipos y envía la matriz entera como la `argumentos` a la devolución de llamada JavaScript. 
-    *   Capricho: esto no es sólo "syntactic sugar" (aunque es dulce). De esta manera, todos los argumentos son serializa o deserializa según sea necesario. Por ejemplo, que es seguro volver `NSData*` como varias partes, pero no como `Array` /`Dictionary`.
-
-## IOS echo Plugin Plugin
-
-Nos gustaría añadir lo siguiente al proyecto de `config.xml` archivo:
-
-    <feature name="Echo">
-        <param name="ios-package" value="Echo" />
-    </feature>
+        + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
     
 
-Entonces nos gustaría añadir los siguientes archivos (`Echo.h` y `Echo.m`) en el directorio de Plugins dentro de nuestro directorio de aplicaciones Cordova-iOS:
+Puede crear `String`, `Int`, `Double`, `Bool`, `Array`, `Dictionary`, `ArrayBuffer` y `Multipart` tipos. Puede también dejar de lado ningún argumento para enviar un estatus, o devolver un error, o incluso optar por no enviar ningún resultado del plugin, en cuyo caso se despide ni devolución de llamada.
 
-    /********* Echo.h Cordova Plugin Header *******/
+Tenga en cuenta lo siguiente para valores complejos de retorno:
+
+*   `messageAsArrayBuffer`Espera `NSData*` y se convierte en un `ArrayBuffer` en la devolución de llamada JavaScript. Asimismo, cualquier `ArrayBuffer` el JavaScript envía a un plugin se convierte en`NSData*`.
+
+*   `messageAsMultipart`Espera un `NSArray*` que contengan cualquiera de las otras apoyado tipos y envía la matriz completa como el `arguments` a la devolución de llamada JavaScript. De esta manera, todos los argumentos son serializa o deserializa según sea necesario, así que es seguro volver `NSData*` como varias partes, pero no como `Array` /`Dictionary`.
+
+## Eco iOS ejemplo Plugin
+
+Para hacer coincidir la función de *Eco* de la interfaz JavaScript descrita en Plugins de aplicación, utilice el `plugin.xml` para inyectar un `feature` Especificación de la plataforma local `config.xml` archivo:
+
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Echo">
+                    <param name="ios-package" value="Echo" />
+                </feature>
+            </config-file>
+        </platform>
     
-    #import <Cordova/CDV.h>
+
+Entonces nos gustaría añadir lo siguiente `Echo.h` y `Echo.m` los archivos en el `Plugins` carpeta dentro del directorio de la aplicación de Cordova-iOS:
+
+        /********* Echo.h Cordova Plugin Header *******/
     
-    @interface Echo : CDVPlugin
+        #import <Cordova/CDV.h>
     
-    - (void)echo:(CDVInvokedUrlCommand*)command;
+        @interface Echo : CDVPlugin
     
-    @end
+        - (void)echo:(CDVInvokedUrlCommand*)command;
     
-    /********* Echo.m Cordova Plugin Implementation *******/
+        @end
     
-    #import "Echo.h"
-    #import <Cordova/CDV.h>
+        /********* Echo.m Cordova Plugin Implementation *******/
     
-    @implementation Echo
+        #import "Echo.h"
+        #import <Cordova/CDV.h>
     
-    - (void)echo:(CDVInvokedUrlCommand*)command
-    {
-        CDVPluginResult* pluginResult = nil;
-        NSString* echo = [command.arguments objectAtIndex:0];
+        @implementation Echo
     
-        if (echo != nil && [echo length] > 0) {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-        } else {
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        - (void)echo:(CDVInvokedUrlCommand*)command
+        {
+            CDVPluginResult* pluginResult = nil;
+            NSString* echo = [command.arguments objectAtIndex:0];
+    
+            if (echo != nil && [echo length] > 0) {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+            } else {
+                pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+            }
+    
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
     
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-    }
-    
-    @end
+        @end
     
 
-Echemos un vistazo al código. En la parte superior tenemos todas las necesarias importaciones de Córdoba. Nuestra clase se extiende desde `CDVPlugin` (muy importante).
+Las importaciones necesarias en la parte superior del archivo amplía la clase de `CDVPlugin` . En este caso, el plugin sólo es compatible con un solo `echo` acción. Obtiene la cadena Eco llamando el `objectAtIndex` método de conseguir el primer parámetro de la `arguments` matriz, que corresponde a los argumentos pasaron en el JavaScript `exec()` función.
 
-Este plugin soporta sólo una acción, el `echo` acción. En primer lugar, cogemos la cadena Eco usando el `objectAtIndex` método en nuestro `args` , diciendo queremos que el parámetro décimo en la matriz de argumentos. Hacemos un poco de control de parámetro: Asegúrese de que no es `nil` y asegúrese de que no es una cadena de longitud cero.
+Comprueba el parámetro para asegurarse de que no es `nil` o una cadena vacía, devolviendo un `PluginResult` con un `ERROR` estado si es así. Si el parámetro pasa la cuenta, devuelve un `PluginResult` con un `OK` estado, generando así en el original `echo` cadena. Por último, envía el resultado a `self.commandDelegate` , que ejecuta el `exec` callbacks de éxito o fracaso del método en el lado de JavaScript. Si se llama a la devolución de llamada de éxito, pasa en la `echo` parámetro.
 
-Si lo es, volvemos a `PluginResult` con un `ERROR` estado. Si todos esos cheques pasan, entonces volvemos un `PluginResult` con un `OK` estado y pase en el `echo` que recibimos en el primer lugar como un parámetro de cadena.
+## iOS integración
 
-Finalmente, enviamos el resultado a `self.commandDelegate` , que ejecuta el `exec` callbacks de éxito o fracaso del método en el lado de JavaScript. Si se llama a la devolución de llamada de éxito, pasa en la `echo` parámetro.
+El `CDVPlugin` clase cuenta con otros métodos que puede invalidar su plugin. Por ejemplo, usted puede capturar el `pause` , `resume` , poner fin a la aplicación y `handleOpenURL` eventos. Vea la clase [CDVPlugin.h][1] y [CDVPlugin.m][2] para la dirección.
 
-## Threading
+ [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
+ [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-Plugin métodos se ejecutan en el mismo subproceso como la interfaz de usuario. Si tu plugin requiere una gran cantidad de procesamiento o requiere una llamada de bloquea, debe utilizar un subproceso de fondo. Por ejemplo:
+## Roscar
 
-    - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
-    {
-        // Check command.arguments here.
-        [self.commandDelegate runInBackground:^{
-            NSString* payload = nil;
-            // Some blocking logic...
-            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-            // The sendPluginResult method is thread-safe.
-            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-        }];
-    }
+Plugin métodos normalmente se ejecutan en el mismo subproceso como la interfaz principal. Si tu plugin requiere una gran cantidad de procesamiento o requiere una llamada de bloquea, debe utilizar un subproceso de fondo. Por ejemplo:
+
+        - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
+        {
+            // Check command.arguments here.
+            [self.commandDelegate runInBackground:^{
+                NSString* payload = nil;
+                // Some blocking logic...
+                CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+                // The sendPluginResult method is thread-safe.
+                [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+            }];
+        }
     
 
-## Funcionalidad avanzada Plugin
+## Depuración de iOS Plugins
 
-Ver otros métodos que puede reemplazar en:
+Para depurar en el lado de Objective-C, necesitas a depurador incorporado de Xcode. Para JavaScript, en iOS 5,0 puede utilizar [Weinre, un proyecto de Cordova Apache][3] o [iWebInspector, una utilidad de terceros][4]. Para iOS 6, puede adjuntar a la aplicación que se ejecuta dentro del iOS 6 simulador Safari 6.0.
 
-*   [CDVPlugin.h][4]
-
-*   [CDVPlugin.m][5]
-
- [4]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
- [5]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
-
-Por ejemplo, puede conectar en el `pause` , `resume` , poner fin a la aplicación y `handleOpenURL` eventos.
-
-## Plugins de depuración
-
-Para depurar el lado Objective-C, utilizaría a depurador incorporado de Xcode. Para JavaScript, en iOS 5,0 puede utilizar [Weinre, un proyecto de Cordova Apache][6] o [iWebInspector, una utilidad de terceros][7]
-
- [6]: https://github.com/apache/cordova-weinre
- [7]: http://www.iwebinspector.com/
-
-Para iOS 6, utilizaría Safari 6.0 simplemente adjuntar a su aplicación corriendo en el iOS Simulator 6.
+ [3]: https://github.com/apache/cordova-weinre
+ [4]: http://www.iwebinspector.com/
 
 ## Errores comunes
 
-*   No olvides agregar asignación de su plugin en config.xml. Si se olvida, se registra un error en la consola de Xcode.
+*   No te olvides de agregar asignación de su plugin para `config.xml` . Si se olvida, se registra un error en la consola de Xcode.
 
 *   No olvide agregar los hosts que conectarse en la lista blanca, como se describe en la guía de lista blanca de dominio. Si se olvida, se registra un error en la consola de Xcode.

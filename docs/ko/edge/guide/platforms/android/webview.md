@@ -16,23 +16,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 안 드 로이드 WebViews
 
-코르도바 1.9의 도움으로 시작 된 `CordovaActivity` , 코르도바 큰 네이티브 안 드 로이드 응용 프로그램에서 구성 요소를 사용할 수 있습니다. 안 드 로이드로이 구성 요소에 참조를 `CordovaWebView` . 1.9에서 새로운 코르도바 기반 응용 프로그램을 이후 사용에 `CordovaWebView` 여부에 관계 없이 그것의 기본 보기로 유산 `CordovaActivity` 접근 방식을 사용.
+이 가이드에서는 더 큰 안 드 로이드 응용 프로그램 내에서 WebView 코르도바 활성화 구성 요소를 포함 하는 방법을 보여 줍니다. 어떻게 이러한 구성 요소가 서로 통신할 수 있습니다 응용 프로그램 플러그인을 참조.
 
-안 드 로이드 응용 프로그램 개발에 익숙하지는 WebView를 포함 하기 전에 코르도바 응용 프로그램을 개발 하는 안 드 로이드 플랫폼 안내서를 읽어 보시기 바랍니다. 안 드 로이드 코르도바 응용 프로그램을 작성 하는 데 주요 방법이 아니다. 이 지침은 현재 수동 하지만 결국 수 있습니다 자동화.
+안 드 로이드에 익숙하지 당신은 먼저 안 드 로이드 플랫폼 가이드를 숙지 해야 및 설치는 WebView를 포함의 더 특이 한 개발 옵션을 시도 하기 전에 최신 안 드 로이드 SDK가. 코르도바 1.9 부터는 안 드 로이드 플랫폼에 의존 한 `CordovaWebView` 는 레거시 빌드 구성 요소 `CordovaActivity` 사전 1.9 릴리스 날짜 구성 요소.
 
-## 필수 구성 요소
+1.  이러한 지침에 따라, 최신 코르도바 분포를가지고 있는지 확인 합니다. [Cordova.apache.org][1] 에서 다운로드 하 고 그것의 안 드 로이드 패키지의 압축을 풉니다.
 
-*   코르도바 1.9 이상
+2.  안 드 로이드 패키지 이동 `/framework` 디렉토리 및 실행 `ant jar` . 그것은 코르도바 만듭니다 `.jar` 로 형성 된 파일`/framework/cordova-x.x.x.jar`.
 
-*   안 드 로이드 SDK 최신 SDK 업데이트
+3.  복사는 `.jar` 파일을 안 드 로이드 프로젝트의 `/libs` 디렉터리.
 
-## 안 드 로이드 프로젝트에서 CordovaWebView를 사용 하 여 가이드
-
-1.  `cd`에 `/framework` 실행 하 고 `ant jar` 코르도바 항아리를 구축. 그것은으로 형성 된.jar 파일을 만듭니다 `cordova-x.x.x.jar` 에 `/framework` 디렉터리.
-
-2.  안 드 로이드 프로젝트의 코르도바 jar를 복사 `/libs` 디렉터리.
-
-3.  응용 프로그램의 편집 `main.xml` 파일 (아래 `/res/xml` )는 다음과 같이 표시 하는 `layout_height` , `layout_width` 및 `id` 응용 프로그램에 맞게 수정:
+4.  다음 응용 프로그램을 추가 합니다 `/res/xml/main.xml` 파일으로는 `layout_height` , `layout_width` 및 `id` 응용 프로그램에 맞게 수정:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  활동 수정 구현 하는 `CordovaInterface` . 포함 된 메서드를 구현 해야 합니다. 복사를 하실 수 있습니다 `/framework/src/org/apache/cordova/CordovaActivity.java` , 또는 자신에 그들을 구현 합니다. 아래 코드 조각 인터페이스를 사용 하 여 기본 응용 프로그램을 보여 줍니다. 참조 된 뷰 id가 일치 하는 방법을 참고는 `id` 위의 XML 조각에서 지정 된 특성:
+5.  활동 수정 구현 하는 `CordovaInterface` . 그것은 포함 된 메서드를 구현 해야 합니다. 복사를 하실 수 있습니다 `/framework/src/org/apache/cordova/CordovaActivity.java` , 또는 그 밖에 자신에 그들을 구현 합니다. 다음 코드 조각에서는 인터페이스에 의존 하는 기본 응용 프로그램을 보여 줍니다. 참조 된 뷰 id가 일치 하는 방법을 참고는 `id` 위의 XML 조각에서 지정 된 특성:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,8 +49,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
-카메라를 사용 하는 경우에, 당신은 또한 이것을 구현 해야 합니다.
-
+6.  응용 프로그램이 카메라를 사용 하는 경우 다음을 구현 합니다.
+    
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
@@ -72,16 +66,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-    
+        
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-    
+        
             // Start activity
             super.startActivityForResult(intent, requestCode);
         }   
-    
+        
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -99,16 +93,18 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
                 callback.onActivityResult(requestCode, resultCode, intent);
             }
         }
+        
+
+7.  마지막으로, 스레드 풀에 추가 해야, 그렇지 않으면 플러그인을 실행 하는 스레드가 없으면:
     
-
-마지막으로, 스레드 풀에 추가 해야, 그렇지 않으면 플러그인에서 실행 스레드가:
-
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
-    
+        
 
-1.  안 드 로이드 프로젝트의 응용 프로그램의 HTML과 자바 스크립트 파일을 복사 `/assets/www` 디렉터리.
+8.  안 드 로이드 프로젝트의 응용 프로그램의 HTML과 자바 스크립트 파일을 복사 `/assets/www` 디렉터리.
 
-2.  복사 `config.xml` 에서 `/framework/res/xml` 를 프로젝트의 `/res/xml` 디렉터리.
+9.  복사는 `config.xml` 파일에서 `/framework/res/xml` 프로젝트의 `/res/xml` 디렉터리.
+
+ [1]: http://cordova.apache.org

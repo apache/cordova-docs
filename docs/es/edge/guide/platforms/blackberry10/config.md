@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Configuración de blackBerry
+# Configuración de blackBerry 10
 
 El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Se construye este preferencias detalles sección que sólo se aplican a BlackBerry 10. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
 
@@ -28,6 +28,6 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity` (el defecto `enable` o `disable`): establece en `disable` para anular la configuración de seguridad web, permitiendo el acceso a contenido remoto de fuentes desconocidas. Esta preferencia está pensada como una conveniencia de desarrollo solamente, así que quitarlo antes de empaquetar su aplicación para su distribución. Para la aplicación liberada, todos URIs debe conocerse y lista blanca utilizando el elemento `<access>`, descrito en la guía de lista blanca de dominio.
+*   `WebSecurity` (el defecto `enable` o `disable`): establece en `disable` para anular la configuración de seguridad web, permitiendo el acceso a contenido remoto de fuentes desconocidas. Esta preferencia está pensada como una conveniencia de desarrollo solamente, así que quitarlo antes de empaquetar la aplicación para su distribución. Para la aplicación liberada, todos URIs debe conocerse y lista blanca utilizando el elemento `<access>`, descrito en la guía de lista blanca de dominio.
     
         <preference name="WebSecurity" value="disable"/>

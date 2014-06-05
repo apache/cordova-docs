@@ -14,53 +14,79 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Android 系統的命令列工具
+# Android 壳工具指南
 
-`cordova`命令列實用程式是一個高級別的工具，允許您在一次跨幾個平臺生成的應用程式。 舊版本的科爾多瓦框架提供了特定于每個平臺的命令列工具集。 若要使用它們作為 CLI 的替代，您需要從[cordova.apache.org][1]下載此版本的科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開您想要的目標平臺。 這裡描述的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
+本指南演示如何使用平台为中心的外壳工具科尔多瓦的一整套开发 Android 应用程序。 这种发展道路，概述中讨论可能会为您提供比所述的命令行界面的跨平台 CLI 工具更大范围的发展方案。 例如，您需要部署一个科尔多瓦 web 视图自定义旁边的本机组件时使用外壳程序工具。 在使用之前要么发展路径，您必须首先配置 Android SDK 环境 Android 平台指南中所述。
+
+要为 android 系统启用外壳工具，请从[cordova.apache.org][1]下载科尔多瓦。 下载文件中包含单独的档案，为每个平台。 展开每个您想要的目标， `android` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**文件，了解有关更多详细的指示。
 
  [1]: http://cordova.apache.org
 
-## 創建一個專案
+这些工具允许您创建、 构建和运行 Android 应用程序。 额外的命令行界面，可以跨所有平台的插件功能的信息，请参阅使用 Plugman 到管理插件。 有关如何开发插件的详细信息，请参阅应用程序插件。
 
-運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。這裡是 Mac 和 Windows 的語法：
+## 创建一个项目
 
-    $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
-    $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
+运行 `create` 命令，指定的现有路径的项目、 反向域风格包标识符和应用程序的显示名称。 这里是 Mac/Linux 和 Windows 的语法：
+
+        $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
+    
+        C:\>\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
     
 
 ## 生成
 
-此清理，然後生成專案。
+此清理，然后生成项目。
 
-在 Mac 或 Windows 上調試：
+在 Mac/Linux 或 Windows 上调试：
 
-    $ /path/to/project/cordova/build --debug
-    $ C:\path\to\project\cordova\build.bat --debug
+        $ /path/to/project/cordova/build --debug
+    
+        C:\>\path\to\project\cordova\build.bat --debug
     
 
-釋放，Mac 或 Windows 上：
+释放，Mac/Linux 或 Windows 上：
 
-    $ /path/to/project/cordova/build --release
-    $ C:\path\to\project\cordova\build.bat --release
+        $ /path/to/project/cordova/build --release
+    
+        C:\>\path\to\project\cordova\build.bat --release
     
 
-## 運行應用程式
+## 运行应用程序
 
-`run`命令接受下列*可選*的參數：
+`run`命令接受下列*可选*的参数：
 
-*   目標規範。這包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
+*   目标规范。这包括 `--emulator` ， `--device` ，或`--target=<targetID>`.
 
-*   生成規范。這包括 `--debug` ， `--release` ，或`--nobuild`.
+*   生成规范。这包括 `--debug` ， `--release` ，或`--nobuild`.
     
-    \[目標\] \[生成\] $ /path/to/project/cordova/run $ C:\path\to\project\cordova\run.bat \[目標\] \[生成\]
+        $ /path/to/project/cordova/run [Target] [Build]
+        
+        C:\>\path\to\project\cordova\run.bat [Target] [Build]
+        
 
-請確保您創建至少一個 Android 虛擬裝置，否則為系統會提示您這樣與做 `android` 命令。 如果多個 AVD 可用作為目標，提示您選擇一個。 預設情況下 `run` 命令檢測連接的設備或當前正在運行的模擬程式，如果沒有設備發現。
+请确保您创建至少一个 Android 虚拟设备，否则为系统会提示您这样与做 `android` 命令。 如果多个 AVD 可用作为目标，提示您选择一个。 默认情况下 `run` 命令检测连接的设备或当前正在运行的仿真程序，如果没有设备发现。
 
-## 日誌記錄
+## 日志记录
 
-    $ /path/to/project/cordova/log $ C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log
+    
+        C:\>\path\to\project\cordova\log.bat
     
 
-### 清洗
+## 清洗
 
-    $ /path/to/project/cordova/clean $ C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean
+    
+        C:\>\path\to\project\cordova\clean.bat
+    
+
+## 手动使用的蚂蚁
+
+如果你想打电话要蚂蚁直接从命令行如 `ant debug install` ，您需要指定的附加参数到 ant 命令：
+
+        ant debug install -Dout.dir=ant-build -Dgen.absolute.dir=ant-gen
+    
+
+这是因为是比默认值不同的科尔多瓦的 Ant 脚本所使用的目录。这样做是为了避免冲突，从与在命令行运行 Ant 时日食/ADT 里面。
+
+这些附加参数，将自动为您添加时使用 `cordova/build` 和 `cordova/run` 脚本上文所述。 为此它建议使用 `cordova/build` 和 `cordova/run` 而不是直接从命令行调用 Ant 脚本。

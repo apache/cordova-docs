@@ -91,22 +91,21 @@ in order to override the catch-all `cordova` engine:
         <engine name="cordova-ios" version=">=1.7.1" />
     </engines>
 
-Here's a list of the default engines that the `<engine>` tag supports:
-* `cordova` 
-* `cordova-plugman` 
-* `cordova-android`
-* `cordova-ios`
-* `cordova-blackberry10` 
-* `cordova-wp7`
-* `cordova-wp8`
-* `cordova-windows8`  
-* `android-sdk` // returns the highest Android api level installed
-* `apple-xcode` // returns the xcode version 
-* `apple-ios` // returns the highest iOS version installed
-* `apple-osx` // returns the OSX version
-* `blackberry-ndk` // returns the native blackberry SDK version
-* `windows-os` // returns the Windows OS version
-* `windows-sdk` // returns the MSBuild version
+Here's a list of the default engines that the '<engine>' tag supports:
+* 'cordova' 
+* 'cordova-plugman' 
+* 'cordova-amazon-fireos'
+* 'cordova-android'
+* 'cordova-ios'
+* 'cordova-blackberry10' 
+* 'cordova-wp7'
+* 'cordova-wp8'
+* 'cordova-windows8'  
+* 'android-sdk' // returns the highest Android api level installed
+* 'apple-xcode' // returns the xcode version 
+* 'apple-ios' // returns the highest iOS version installed
+* 'apple-osx' // returns the OSX version
+* 'blackberry-ndk' // returns the native blackberry SDK version
         
 Specifying custom Apache Cordova-based frameworks should be listed under the engine tag like so:
 
@@ -201,7 +200,7 @@ platform-specific web assets, as described below. Attributes include:
   relative to the `www` directory.
   Assets can be targeted to subdirectories, for example:
 
-    <asset src="www/new-foo.js" target="js/experimental/foo.js" />
+        <asset src="www/new-foo.js" target="js/experimental/foo.js" />
 
   creates the `js/experimental` directory within the `www` directory,
   unless already present, then copies the `new-foo.js` file and
@@ -266,7 +265,7 @@ Details for the `<js-module>` tag:
       `<clobbers/>` or `<merges/>` is redundant, since they also
       `cordova.require` your module.
 
-    - An empty `<js-module>` still loads and can be acccessed in other
+    - An empty `<js-module>` still loads and can be accessed in other
       modules via `cordova.require`.
 
 If `src` does not resolve to an existing file, plugman stops and
@@ -343,11 +342,13 @@ associating the element's children with that platform.
 Platform names should be lowercase. Platform names, as arbitrarily
 chosen, are listed:
 
+* amazon-fireos
 * android
-* bb10
+* blackberry10
 * ios
 * wp7
 * wp8
+* windows8
 
 ## _source-file_ Element
 
@@ -474,11 +475,15 @@ file in an iOS Cordova project. For example:
 ## _resource-file_ and _header-file_ Elements
 
 Like source files, but specifically for platforms such as iOS that
-distinguish between source files, headers, and resources.  Examples:
+distinguish between source files, headers, and resources. iOS Examples:
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
+
+Android example:
+
+    <resource-file src="FooPluginStrings.xml" target="res/values/FooPluginStrings.xml" />
 
 ## _lib-file_ Element
 
@@ -508,6 +513,8 @@ Examples:
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
 
 The `src` attribute identifies the framework, which plugman attempts
 to add to the Cordova project, in the correct fashion for a given
@@ -515,6 +522,10 @@ platform.
 
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
+
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.
+
+The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is supported and only on Windows 8.  Using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
 
 ## _info_ Element
 
@@ -525,7 +536,7 @@ plugman's scope.  Examples:
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
-    You need to add the following line to your `local.properties`
+    You need to add the following line to the `local.properties`:
         
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>

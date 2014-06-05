@@ -1,6 +1,4 @@
----
-
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+-- license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -16,24 +14,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # Windows Phone Plugins
 
-Escribir un plugin para Cordova de Windows Phone requiere un entendimiento básico de la arquitectura de Córdoba. Cordova-WP7 consiste en un navegador web que aloja el código JavaScript de aplicación y administra las llamadas API nativas. Hay una clase de BaseCommand (`WP7CordovaClassLib.Cordova.Commands.BaseCommand`) en C# que se puede extender, y viene con la mayoría de las 'tuberías' construida para ti ya.
+Esta sección proporciona información sobre cómo implementar código plugin nativo en la plataforma de Windows Phone. Antes de leer esto, vea aplicación Plugins para tener una visión general de la estructura del plugin y su interfaz común de JavaScript. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
 
-1.  Seleccione su proyecto y con el botón derecho para elegir **Add → New Item...**
-    
-    *   Preferiblemente añadirlo al directorio 'Plugins', pero depende de ti
+Escribir un plugin para Cordova de Windows Phone requiere una comprensión básica de la arquitectura de Cordova. Cordova-WP7 consta de un `WebBrowser` que acoge el código JavaScript de la aplicación y administra las llamadas API nativas. Se puede extender un C# `BaseCommand` clase ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), que viene con la mayoría de la funcionalidad que usted necesita:
 
-2.  Seleccione 'Class' y asígnele el nombre `Echo.cs`
-    
-    *   El nombre de esta clase debe *exactamente* coincidir con lo que se llama a `cordova.exec (win, fail, "Eco",...)`
+1.  Seleccione su proyecto y haga clic para seleccionar **Add → nuevo artículo...** Si lo desea, puede añadir a la `Plugins` carpeta.
 
-3.  Incluyen la implementación de las clases base
+2.  **SEL** y asígnele el nombre `Echo.cs` . Coincidir esta clase nombre debe *exactamente* con lo que se llama especificar que el servicio en el `cordova.exec()` llamar al lado de JavaScript.
+
+3.  Incluyen la implementación de las clases base:
     
         using WPCordovaClassLib.Cordova;
         using WPCordovaClassLib.Cordova.Commands;
         using WPCordovaClassLib.Cordova.JSON;
         
 
-4.  Extender la clase de BaseCommand
+4.  Extender la clase de `BaseCommand` :
     
         public class Echo : BaseCommand
         {
@@ -41,7 +37,7 @@ Escribir un plugin para Cordova de Windows Phone requiere un entendimiento bási
         }
         
 
-5.  Agregue un método que es accesible desde JavaScript
+5.  Añadir un `echo` método que es accesible desde JavaScript:
     
         public class Echo : BaseCommand
         {
@@ -53,153 +49,154 @@ Escribir un plugin para Cordova de Windows Phone requiere un entendimiento bási
         }
         
 
+Vea la clase [BaseCommand.cs][1] para los métodos disponibles para el plugin anular. Por ejemplo, el plugin puede capturar eventos 'pausa' y 'volver'.
+
+ [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+
 ## Espacios de nombres
 
-Es el espacio de nombres predeterminado para comandos no cualificados:
+Es el espacio de nombres predeterminado para los comandos no cualificados:
 
-    namespace Cordova.Extension.Commands
-    {
-        // ...
-    }
-    
-
-Si desea utilizar su propio espacio de nombres, necesitas hacer una llamada totalmente calificada para `cordova.exec`. Por ejemplo, si desea definir tu clase de C# como esto:
-
-    namespace com.mydomain.cordovaExtensions
-    {
-        public class Echo : BaseCommand
+        namespace Cordova.Extension.Commands
         {
             // ...
         }
-    }
     
 
-Luego, en JavaScript necesitas llamar `exec` así:
+Si desea especificar su propio espacio de nombres, necesitas hacer una llamada totalmente calificada para `cordova.exec` . Por ejemplo, si desea definir la clase de C# así:
 
-    cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
+        namespace com.mydomain.cordovaExtensions
+        {
+            public class Echo : BaseCommand
+            {
+                // ...
+            }
+        }
     
 
-## Interpretar sus argumentos en C
+El JavaScript tendría que llamar a `exec` así:
 
-Los datos recibidos por su método de plugin están un valor de cadena, pero en realidad mirando nuestro código JavaScript, vemos que nuestra intención era pasar una matriz de cadenas. Mirando hacia atrás en nuestra llamada JavaScript a `cordova.exec`, vemos que pasamos `[str]`:
-
-    cordova.exec(win, fail, "Echo", "echo", ["input string"]);
+        cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
     
 
-Si examinamos la cadena opciones pasan en nuestro método de `Echo.echo`, vemos que el valor es en realidad:
+## Interpretación de argumentos en C
 
-    "[\"input string\"]"
+¿En el ejemplo explicado en Plugins de aplicación, los datos que recibe de su plugin están una cadena, pero lo que si desea pasar una matriz de cadenas? Supongamos que el JavaScript `cordova.exec` llamada se especifica así:
+
+        cordova.exec(win, fail, "Echo", "echo", ["input string"]);
     
 
-Todos los argumentos `exec` JavaScript son que JSON codificadas antes de ser pasado a C#.
+El valor de la `options` cadena pasada a la `Echo.echo` método es JSON:
 
-Si queremos tratar esto como la cadena que estábamos esperando, necesitamos decodificarlo. Podemos utilizar simple deserialización JSON.
+        "[\"input string\"]"
+    
 
-    string optVal = JsonHelper.Deserialize<string[]>(options)[0];
-    // optVal now has the value of "input string"
+Todos JavaScript `exec` argumentos son codificados en JSON antes de ser pasado en C# y así debemos ser decodificada:
+
+        string optVal = JsonHelper.Deserialize<string[]>(options)[0];
+        // optVal now has the value of "input string"
     
 
 ## Resultados satisfactorios de C# para JavaScript
 
-La clase base BaseCommand proporciona métodos para pasar datos a sus controladores de devolución de llamada JavaScript. Para simplemente señalar que el comando ha logrado, cuando no hay información de resultado adicional es necesario, se puede simplemente llamar:
+El `BaseCommand` clase proporciona métodos para pasar datos a los controladores de devolución de llamada JavaScript. Si simplemente desea éxito sin ningún resultado acompaña la señal, se puede simplemente llamar:
 
-    DispatchCommandResult(); // calls back with an empty plugin result, considered a success callback
+        DispatchCommandResult();
+        // calls back with an empty plugin result, considered a success callback
     
 
-Para pasar datos, tienes que llamar a una versión diferente de `DispatchCommandResult`:
+Para recuperar datos, tienes que llamar `DispatchCommandResult` diferentemente:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
     
 
-Para pasar datos de objeto estructurado a JavaScript, que debe ser codificado como una cadena JSON:
+Utilice una cadena JSON codificada para pasar datos de objeto estructurado a JavaScript:
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
     
 
-Si usted necesita indicar que se ha producido un error, puede llamar a `DispatchCommandResult` con un objeto `PluginResult`:
+Para señalar un error, llame a `DispatchCommandResult` con un `PluginResult` objeto cuyo estado es `ERROR` :
 
-    DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
     
 
-## Controlar errores de serialización en método de tu plugin C#
+## Controlar errores de serialización
 
-Al interpretar sus argumentos, es una buena idea usar un bloque try/catch en caso tenemos mala entrada. Esto es un patrón usado en todo el código Cordova C#:
+Al interpretar sus argumentos, `try` / `catch` bloques ayudan a eliminar la mala entrada. Este patrón aparece en el código de Cordova C#:
 
-    string optVal = null;
+        string optVal = null;
     
-    try
-    {
-        optVal = JsonHelper.Deserialize<string[]>(options)[0];
-    }
-    catch(Exception)
-    {
-        // simply catch the exception, we handle null values and exceptions together
-    }
+        try
+        {
+            optVal = JsonHelper.Deserialize<string[]>(options)[0];
+        }
+        catch(Exception)
+        {
+            // simply catch the exception, we handle null values and exceptions together
+        }
     
-    if (optVal == null)
-    {
-        DispatchCommandResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
-    }
-    else
-    {
-        // ... continuar a hacer nuestro trabajo}
+        if (optVal == null)
+        {
+            DispatchCommandResult(new PluginResult(PluginResult.Status.JSON_EXCEPTION));
+        }
+        else
+        {
+            // ... continue on to do our work
+        }
+    
+
+## Plugin de por vida
+
+Actividad de fondo plugins con solicitudes de larga duración, tales como medios de reproducción, los oyentes o que mantener el estado interno debe implementar el `onReset` método para limpiar esas actividades. El método se ejecuta cuando el CordovaView WebBrowser navega a una página nueva o actualizaciones, que vuelve a cargar el JavaScript.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
     
 
 ## Plugin XML
 
-Estos son ejemplos específicos de windows phone de usar el archivo plugin.xml, consulte la especificación de Plugin para más detalles
+Lo siguiente muestra cómo utilizar el `plugin.xml` archivo para especificar archivos de código fuente de un plugin en la plataforma de Windows Phone. Ver aplicación Plugins para tener una visión general y la especificación de Plugin para más detalles sobre las opciones disponibles.
 
-### `<source-file>`
+*   El `<source-file>` elemento define todos los recursos de plugin, como *CS*, *XAML*, *. xaml.cs*y archivos *.dll* y activos de imágenes.
 
-En windows teléfono el elemento `< archivo fuente >` se utiliza actualmente para definir todos los recursos de plugin (es decir. CS, XAML,. xaml.cs, .dll, activos de imágenes, etc.).
-
-### `<config-file>`
-
-El elemento `<config-file>` define qué elementos ponen en un archivo de configuración. Por ejemplo, para añadir un plugin en el archivo config.xml de plataformas, que hicieras algo como esto:
-
-    < config-file target="config.xml" padres = "/ *" >< nombre de la función = "NombrePlugin" >< nombre param = "wp-paquete" value = "NombrePlugin" / >< / característica >< / config-file >
+*   El `<config-file>` elemento define elementos para inyectar en un archivo de configuración. Este ejemplo agrega un plugin para la plataforma `config.xml` archivo:
     
-
-Si quisiéramos añadir la capacidad de contactos a la WMAppManifest.xml, se vería así:
-
-    <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
-        <Capability Name="ID_CAP_CONTACTS" />
-    </config-file>
+        <config-file target="config.xml" parent="/*">
+            <feature name="PluginName">
+                <param name="wp-package" value="PluginName"/>
+            </feature>
+        </config-file>
+        
     
+    Este ejemplo agrega la capacidad de contactos de la `WMAppManifest.xml` archivo:
+    
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_CONTACTS" />
+        </config-file>
+        
 
-## Funcionalidad avanzada Plugin
+## Depuración de Plugins
 
-Ver otros métodos que se pueden reemplazar en:
+Utilizar el depurador de Visual Studio para depurar componente de un plugin C#. Puede establecer un punto de interrupción en cualquiera de los métodos expuestos por la clase.
 
-*   [BaseCommand.cs][1]
-
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
-
-Por ejemplo, puede conectar en los eventos de aplicación 'continuar' y 'pause'.
-
-### Depuración de Plugins
-
-Para depurar el lado C#, puedes utilizar el depurador de Visual Studio, sólo tienes que configurar un punto de interrupción en cualquiera de los métodos expuestos por la clase.
-
-JavaScript es un poco más difícil de depurar en Windows Phone. Tienes que usar `console.log` para el estado de su plugin de salida, o informar de errores.
+JavaScript es más difícil de depurar en Windows Phone. Tienes que usar `console.log` estado del plugin de salida, o para informar de errores.
 
 ## Errores comunes
 
-*   Tenga cuidado al decidir sobre los argumentos que se pasa al nativo en la implementación de JavaScript. La mayoría de las plataformas de dispositivo esperan los argumentos pasados a cordova.exec para ser un array, pero si tienes diferentes tipos de objetos en esta matriz, se torna difícil o imposible deserializar.
+*   Tenga cuidado de no pasar argumentos de JavaScript al lado nativo que son difíciles de deserializar como JSON. La mayoría de las plataformas de dispositivo esperan el argumento pasado al `cordova.exec()` a una matriz como la siguiente:
     
-        Cordova.exec (win, fail, "ServiceName", "MethodName", ["esto es una cadena", 54, {literal: 'trouble'}]);
+        cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
         
     
-    *   Esto significa que el código C# recibe un difícil de descifrar el valor de cadena, tales como:
-        
-            "[\"this es un string\ ", 54, {literal: 'trouble'}]"
-            
+    Esto puede resultar en un valor de cadena excesivamente complejo para C# decodificar:
     
-    *   Considerar convertir todos los parámetros en cadenas antes de llamar a exec:
+        "[\"this is a string\", 54, { literal:'trouble' }]"
         
-            Cordova.exec (win, fail, "ServiceName", "MethodName", ["esto es una cadena", "54", "{literal: 'trouble'}"]);
-            
-            String [] optValues = JsonHelper.Deserialize < string [] > (opciones);
-            
+    
+    Por el contrario, considerar convertir *todos* los parámetros en cadenas antes de llamar al `exec()` y el descifrar cada uno por separado:
+    
+        cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"]);
+        string[] optValues = JsonHelper.Deserialize<string[]>(options);
+        
 
-*   Es generalmente una buena idea hacer parámetro comprobando tu código JavaScript, antes de llamar al `exec` . Esto le permite reutilizar código JavaScript más entre diferentes implementaciones nativa de su plugin.
+*   Es generalmente mejor comprobar parámetros en JavaScript antes de llamar al `exec()` . Así le permite reutilizar código más y tire funcionalidad innecesaria desde del plugin varias implementaciones nativas.

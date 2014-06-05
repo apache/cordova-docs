@@ -14,36 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS Command-line Tools
+# iOS guida strumento Shell
 
-Il `cordova` l'utilità della riga di comando è uno strumento ad alto livello che consente di creare applicazioni su piattaforme diverse in una volta. Una versione precedente di Cordova framework fornisce il set di strumenti da riga di comando specifici per ogni piattaforma. Per utilizzarli come alternativa alla CLI, dovete scaricare questa versione di Cordova da [cordova.apache.org][1]. Il download contiene archivi separati per ciascuna piattaforma. Espandere la piattaforma che si desidera fare riferimento. Gli strumenti qui descritti sono in genere disponibili nel livello superiore `bin` directory, altrimenti consultare il file **Leggimi** per ulteriori indicazioni.
+Questa guida illustra come utilizzare set di Cordova di piattaforma-centrato shell strumenti per sviluppare applicazioni iOS. Questo percorso di sviluppo, discusso nella panoramica, può offrire una maggiore gamma di opzioni di sviluppo per iOS rispetto le piattaforme CLI strumento descritto in l'interfaccia della riga di comando. Ad esempio, è necessario utilizzare strumenti di shell quando si distribuisce un'usanza Cordova WebView accanto alle componenti nativi. Prima di utilizzare qualsiasi percorso di sviluppo, è innanzitutto necessario configurare l'ambiente SDK come descritto nella guida piattaforma iOS. Questi strumenti si basano su strumenti della riga di comando di Xcode come `xcode-select` e`xcodebuild`.
+
+Per attivare strumenti di shell per iOS, scaricare Cordova da [cordova.apache.org][1]. Il download contiene archivi separati per ciascuna piattaforma. Espandere ciascuna si desidera fare riferimento, `ios` in questo caso. Gli strumenti pertinenti sono in genere disponibili nel primo livello `bin` directory, altrimenti consultare il file **Leggimi** per ulteriori indicazioni.
 
  [1]: http://cordova.apache.org
 
-Gli strumenti della riga di comando di iOS sono costruiti su script di shell e fare affidamento sugli strumenti della riga di comando di Xcode come `xcode-select` e`xcodebuild`.
+Questi strumenti consentono di creare, compilare ed eseguire applicazioni iOS. Per informazioni sull'interfaccia della riga di comando aggiuntiva che attiva il plugin funzionalità su tutte le piattaforme, vedere utilizzando Plugman per gestire i plugin. Per dettagli su come sviluppare plugin, vedere applicazione plugin.
 
 ## Creare un progetto
 
 Eseguire il `create` comando, specificando il percorso esistente per il progetto, l'identificatore del pacchetto stile retro-dominio e nome visualizzato dell'app.
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
 ## Costruire un progetto
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
     
 
-## Eseguire l'applicazione sull'emulatore
+## Eseguire l'applicazione su un emulatore
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
     
 
 ## Rilasciando
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
     
 
 ## Registrazione
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log

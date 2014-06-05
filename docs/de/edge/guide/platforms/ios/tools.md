@@ -14,36 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS-Befehlszeilenprogrammen
+# iOS Shell Tool Guide
 
-Die `cordova` Befehlszeilen-Dienstprogramm ist ein High-Level Tool, das Ihnen erlaubt, Anwendungen auf mehreren Plattformen gleichzeitig zu erstellen. Eine ältere Version von Cordova Rahmen bietet Gruppen von Befehlszeilentools, die spezifisch für jede Plattform. Wenn sie als Alternative zu den CLI verwenden möchten, müssen Sie diese Version von Cordova von [cordova.apache.org][1]herunterladen. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie die gewünschte Ziel-Plattform. Die hier beschriebenen Tools sind in der Regel in der obersten Ebene `bin` Verzeichnis, sonst finden Sie in die **README** -Datei ausführlichere Wegbeschreibung.
+Diese Anleitung zeigt wie Cordovas Satz von Plattform-zentrierte Shell Tools verwenden, um iOS apps zu entwickeln. Dieser Entwicklungspfad, diskutiert in der Übersicht, möglicherweise einen größeren Bereich von Entwicklungsoptionen für iOS als das Cross-Plattform-CLI-Tool beschrieben in The Command-Line Interface anbieten. Beispielsweise müssen Sie Shell-Hilfsmittel zu verwenden, wenn Sie eine benutzerdefinierte Cordova WebView neben systemeigenen Komponenten bereitstellen. Vor der Verwendung von entweder Entwicklungsweg, müssen Sie zuerst die SDK-Umgebung konfigurieren, wie in der iOS-Plattform Guide beschrieben. Diese Tools basieren auf Xcodes-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
+
+Um Shell Tools für iOS zu aktivieren, herunterladen Sie Cordova von [cordova.apache.org][1]. Der Download enthält separate Archiv für jede Plattform. Erweitern Sie jedes Ziel, soll `ios` in diesem Fall. Die entsprechenden Tools stehen in der Regel in den übergeordneten `bin` Verzeichnis, sonst finden Sie in der **README** -Datei für detailliertere Wegbeschreibung.
 
  [1]: http://cordova.apache.org
 
-Die iOS-Befehlszeilentools basieren auf Shell-Skripte und verlassen sich auf Xcode-Befehlszeilen-Tools wie `xcode-select` und`xcodebuild`.
+Diese Tools können Sie erstellen, erstellen und Ausführen von iOS-apps. Informationen über die zusätzliche Befehlszeilenschnittstelle, die Plugin-Features für alle Plattformen aktiviert, finden Sie unter Using Plugman zu Plugins verwalten. Details zum Entwickeln von Plugins finden Sie in der Anwendung-Plugins.
 
 ## Erstellen Sie ein Projekt
 
 Führen Sie den `create` Befehl, der vorhandenen Pfad für das Projekt, die rückwärts-Domäne-Style Paket-ID und die app-Anzeigenamen angeben.
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
 ## Erstellen eines Projekts
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
     
 
-## Emulator app läuft
+## App auf einem Emulator ausgeführt
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
     
 
 ## Freigabe
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
     
 
 ## Protokollierung
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log

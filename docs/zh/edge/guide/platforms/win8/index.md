@@ -14,91 +14,151 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# Windows 8 平臺指南
+# Windows 8 平台指南
 
-本指南介紹如何設置您的 SDK 開發環境為 Windows 8 部署科爾多瓦的應用程式。請參閱下列特定于平臺的詳細資訊：
+本指南介绍如何设置您的 SDK 开发环境部署科尔多瓦在 Windows 8 的应用程序。 该示例演示如何使用任一特定于 Windows 8 的外壳工具来生成和生成的应用程序，或者跨平台科尔多瓦 CLI 讨论在命令行界面。 （见的概述的这些发展选项比较）。此部分还显示如何修改科尔多瓦在 Visual Studio 中的应用程序。 无论你采取哪种方法，您需要安装 Visual Studio SDK，如下所述。
 
-*   升級 Windows 8
-*   Windows 8 的命令列工具
+有关如何升级现有的 Windows 8 科尔多瓦项目的信息，请参阅升级 Windows 8。
 
-上面的命令列工具請參閱科爾多瓦 3.0 以前的版本。關於當前介面的資訊，請參閱命令列介面。
+科尔多瓦 WebViews 运行在 Windows 8 上依靠互联网资源管理器中 10 作为他们的呈现引擎，因此作为一个实际问题你可以使用 IE10 的功能强大的调试器来测试并不调用科尔多瓦 Api 的任何 web 内容。 Windows Phone 开发者博客如何支持 IE10 和可比较的 WebKit 浏览器提供[有益的指导][1]。
 
-Microsoft 不推薦使用在 Windows 8 和 Windows 室溫下*地鐵風格的應用程式*名稱 MSDN 現在指的是這種類型的應用程式作為*Windows 應用商店*的應用程式，並且本指南跟隨該公約 》。 此外，在本指南中*Windows 8*表示 Windows 8 和 Windows 室溫下
+ [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
-## 1.要求
+## 要求和支持
 
-*   Windows 8
+您需要以下 OS/SDK 组合，可以从安装盘或*ISO*磁盘图像文件之一：
 
-*   Visual Studio 2012 專業或更好或 Visual Studio 2012 表示為 Windows 8
+*   Windows 8.0 或 8.1、 32 或 64 位*首页*、*临*，或*企业*版，以及[Visual Studio 2012 速成版][2].
 
-按照說明[在這裡][1]提交您的應用程式 Windows 存儲區。
+*   Windows 8.1、 32 或 64 位*首页*、*临*，或*企业*版，以及[Visual Studio 2013 专业版][2]或更高。 评估版的 Windows 8.1 企业是可从[Microsoft 开发人员网络][3].
 
- [1]: http://www.windowsstore.com/
+ [2]: http://www.visualstudio.com/downloads
+ [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
 
-## 2.安裝 SDK + 科爾多瓦
+根据 Windows 8.1 编译的应用程序*不*在 Windows 8.0 下运行。根据 Windows 8.0 编译的应用程序是向前兼容的 8.1。
 
-*   設置您的 Visual Studio 2012 的首選變形。 所有產品的付費版本 (專業、 等) 讓您構建 Windows 應用商店的應用程式。 你需要**表達為 Windows 8**來構建 Windows 應用商店應用程式使用的[速成版][2].
+<!-- 64-bit necessary? Pro necessary? ELSE still recommended for parallel WP dev -->
 
-*   下載並解壓縮[科爾多瓦][3]的最新副本。你將會工作 `lib\windows-8` 子目錄。
+按照在[windowsstore.com][4]的说明提交到 Windows 应用商店的应用程序。
 
- [2]: http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products
- [3]: http://phonegap.com/download
+ [4]: http://www.windowsstore.com/
 
-## 3.設置新專案
+<!-- true? -->
 
-你已經可以生成使用*HTML/JavaScript 跟蹤*在 Windows 應用商店的應用程式中可用的 Windows 8 應用程式。 在 Windows 應用商店的應用程式中使用科爾多瓦，正如在其他科爾多瓦支援的平臺上公開相同的 Api。
+为了为 Windows 8 开发科尔多瓦的应用程序，您可以使用运行 Windows 的个人电脑，但你也可能发展的 mac，通过运行一个虚拟机环境或者通过使用到双引导 Windows 8 分区的新兵训练营。 请查阅这些资源以设置在 Mac 上所需的 Windows 开发环境：
 
-*   打開 Visual Studio 2012 並選擇**新的專案**.
+*   [VMWare 融合][5]
 
-*   從專案清單從樹，然後**空白應用程式**選擇**安裝 → 範本 → 其它語言 → JavaScript → Windows 存儲區**。 輸入你喜歡的如無論專案名稱 `CordovaWin8Foo` 如本示例所示。
-    
-    ![][4]
+*   [相似之处的桌面][6],
 
-*   Microsoft 將繼續使用 `default.html` 作為預設的主頁，但大多數的 網頁程式開發人員使用 `index.html` 。 （再加上它是有可能的在其他平臺變形的您的專案中使用的 `index.html` 作為您的預設頁的名稱.)若要修復此問題，在解決方案資源管理器中重命名 `default.html` 檔到 `index.html` 。 然後按兩下 `package.appxmanifest` 檔，並將**起始頁**該值更改為`index.html`.
-    
-    ![][5]
+*   [新兵训练营][7].
 
-*   要包括 `cordova.js` 在專案中，按右鍵 `js` 目錄在解決方案資源管理器並選擇**添加 → 新專案**。 找到 `cordova.js` 檔在 `lib\windows-8` 上面指出的目錄。
+ [5]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945426
+ [6]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
+ [7]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945423
 
-*   編輯的代碼為 `index.html` 。將引用添加到 `cordova.js` 。您可以手動，或通過從解決方案資源管理器中拖動檔。
+## 使用科尔多瓦外壳工具
 
- [4]: img/guide/platforms/win8/wsnewproject.png
- [5]: img/guide/platforms/win8/wschangemanifest.png
+如果您想要使用科尔多瓦的 Windows 8 居中外壳工具与 SDK 一起，你有两个基本选项：
 
-### 增加參考......
+*   本地访问它们生成的 CLI 的项目代码中。 他们是可用在 `platforms/windows8/cordova` 目录在您添加后 `windows8` 平台如下所述。
 
-        <! — — WinJS 的引用--> < 連結 href="//Microsoft.WinJS.1.0/css/ui-dark.css"rel ="樣式表"/ >< 腳本 src="//Microsoft.WinJS.1.0/js/base.js">< / 腳本 >< 腳本 src="//Microsoft.WinJS.1.0/js/ui.js">< / 腳本 ><! — — 科爾多瓦--> < 腳本 src="/js/cordova.js">< / 腳本 ><! — — CordovaWin8Foo 的引用--> < 連結 href="/css/default.css"rel ="樣式表"/ >< 腳本 src="/js/default.js">< / 腳本 >
-    
+*   从单独的分发在[cordova.apache.org][8]下载它们。 科尔多瓦分布包含单独的档案，为每个平台。 一定要展开相应的存档， `cordova-windows8\windows8` 在这种情况下，在一个空的目录内。 有关批处理实用程序可用在顶级 `bin` 目录。 (参阅**自述**文件，如果有必要作更详细的指示）。
 
-*   下一步，添加一些代碼，演示科爾多瓦工作。
+ [8]: http://cordova.apache.org
 
-### 添加 'deviceready' 處理......
+这些外壳工具允许您创建、 构建和运行 Windows 8 的应用程序。 额外的命令行界面，可以跨所有平台的插件功能的信息，请参阅使用 Plugman 到管理插件。
 
-    <body>
-        <p>Content goes here</p>
-    
-        <script type="text/javascript">
-    
-            console.log("Subscribing...");
-            document.addEventListener("deviceready", function () {
-    
-                navigator.notification.alert("The device is ready!");
-    
-            });
-    
-        </script>
-    
-    </body>
+## 安装 SDK
+
+*最终*、*溢价*或*专业*2013年版本的[Visual Studio][2]安装.
+
+![][9]
+
+ [9]: img/guide/platforms/win8/win8_installSDK.png
+
+## 创建一个新项目
+
+此时，若要创建一个新的项目您可以选择在命令行界面或一组 Windows 8 特定 shell 工具中所述的跨平台 CLI 工具之间。 从内一个源代码目录，此 CLI 方法生成命名在一个新的*HelloWorld*应用程序 `hello` 的项目目录：
+
+        > cordova create hello com.example.hello HelloWorld
+        > cd hello
+        > cordova platform add windows8
+        > cordova build
     
 
-## 5.測試專案
+这里是相应的较低级别外壳工具方法：
 
-*   從 Visual Studio 中運行該專案。你會看到顯示的訊息方塊：
+        C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
-    ![][6]
 
- [6]: img/guide/platforms/win8/wsalert.png
+## 生成项目
 
-## 完成了 ！
+如果您在开发中使用 CLI，项目目录的顶级 `www` 目录中包含的源代码文件。运行任一内要重新生成应用程序的项目目录：
 
-就這麼簡單 ！你現在準備好建立 Windows 應用商店的應用，科爾多瓦。
+        > cordova build
+        > cordova build windows8   # do not rebuild other platforms
+    
+
+如果您使用的 Windows Phone 特定 shell 工具在发展中，有不同的方法。 一旦您生成该项目，默认应用程序的源是可用在 `projects\windows8\www` 子目录。 随后的命令都可用在 `cordova` 子目录中同一级别的。
+
+`build`命令，清理项目文件并重新生成应用程序。第一个示例将生成调试信息，和第二个标志发布的应用程序：
+
+        C:\path\to\project\cordova\build.bat --debug        
+        C:\path\to\project\cordova\build.bat --release
+    
+
+`clean`命令有助于冲洗掉下一步准备中的目录 `build` ：
+
+        C:\path\to\project\cordova\clean.bat
+    
+
+## 在 SDK 中打开的项目和部署应用程序
+
+一旦你建立科尔多瓦 app，如上文所述，您可以与 Visual Studio 一起打开它。 各种 `build` 命令生成一个 Visual Studio 解决方案 (*.sln*) 文件。 在文件浏览器来修改在 Visual Studio 项目中打开文件：
+
+![][10]
+
+ [10]: img/guide/platforms/win8/win8_sdk_openSLN.png
+
+`CordovaApp`组件显示在解决方案内和其 `www` 目录中包含的基于 web 的源代码，包括 `index.html` 的主页：
+
+![][11]
+
+ [11]: img/guide/platforms/win8/win8_sdk.png
+
+Visual Studio 主菜单下面的控件允许您测试或部署应用程序：
+
+![][12]
+
+ [12]: img/guide/platforms/win8/win8_sdk_deploy.png
+
+选择**本地计算机**，请按绿色箭头，在运行 Visual Studio 在同一台计算机上安装该应用程序。一旦你这样做，应用程序将出现在 Windows 8 的应用程序清单：
+
+![][13]
+
+ [13]: img/guide/platforms/win8/win8_sdk_runApp.png
+
+每次您重新生成应用程序，在界面中可用的版本被刷新一次。
+
+一旦可用应用程序列表中，按住**CTRL**键同时选择该应用程序允许您把它钉在主屏幕：
+
+![][14]
+
+ [14]: img/guide/platforms/win8/win8_sdk_runHome.png
+
+请注意是否您打开该应用程序在虚拟机环境中的，您可能需要单击在角落或沿边的 windows 访问额外的功能或切换应用程序：
+
+![][15]
+
+ [15]: img/guide/platforms/win8/win8_sdk_run.png
+
+或者，选择**模拟器**部署选项以查看应用程序，如果它运行在平板设备上：
+
+![][16]
+
+ [16]: img/guide/platforms/win8/win8_sdk_sim.png
+
+与不同的桌面部署，此选项允许您模拟平板的方向、 位置，并更改其网络设置。
+
+**注意**： 有关如何在您的工作流中使用科尔多瓦的命令行工具或 SDK 的建议咨询概述。 科尔多瓦 CLI 依赖经常会覆盖使用 SDK 的平台特定文件的跨平台源代码。 如果您想要使用 SDK 来修改该项目，使用较低级别壳工具作为 CLI 的替代。

@@ -14,7 +14,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# ブラックベリーの構成
+# ブラックベリー 10 構成
 
 `config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 ブラックベリー 10 にのみ適用されますこのセクションの詳細設定を構築します。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
 
@@ -28,6 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` またはデフォルト `enable` ）： に設定されている `disable` 未知のソースからリモート コンテンツにアクセスできるように、web のセキュリティ設定をオーバーライドします。 この設定は、開発の利便性だけ、ので削除して配布用アプリケーションのパッケージとして用います。 知られているとホワイト リストに登録を使用してリリースされたアプリは、すべての Uri がする必要があります、 `<access>` ドメイン ホワイト リスト ガイドで説明されている要素。
+*   `WebSecurity`( `disable` またはデフォルト `enable` ）： に設定されている `disable` 未知のソースからリモート コンテンツにアクセスできるように、web のセキュリティ設定をオーバーライドします。 この設定は、開発の利便性だけ、だから前に、削除配布用アプリケーションのパッケージとして用います。 知られているとホワイト リストに登録を使用してリリースされたアプリは、すべての Uri がする必要があります、 `<access>` ドメイン ホワイト リスト ガイドで説明されている要素。
     
         <preference name="WebSecurity" value="disable"/>

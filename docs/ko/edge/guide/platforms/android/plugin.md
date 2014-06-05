@@ -16,148 +16,161 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # 안 드 로이드 플러그인
 
-플러그인을 작성 코르도바-안 드 로이드의 아키텍처에 대 한 이해가 필요 합니다. 코르 도우 바 안 드 로이드 안 드 로이드 WebView 그것에 붙어 있던 걸이로 구성 되어 있습니다. 이 플러그인에서 클래스 매핑으로 표시 됩니다는 `config.xml` 파일.
+이 섹션에서는 안 드 로이드 플랫폼에서 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다. 다른 샘플도 [CordovaPlugin.java][1] 에서 주석 참조.
 
-플러그인 구성 확장 하는 하나 이상의 Java 클래스는 `CordovaPlugin` 클래스. 플러그인 중 하나를 재정의 해야 합니다 있는 `execute` 메서드를 `CordovaPlugin` . 최고의 연습, 플러그인 처리 하는 `pause` 및 `resume` 이벤트 및 플러그인 사이 전달 메시지. 장기 실행 요청, 미디어 재생, 청취자, 또는 내부 상태와 같은 백그라운드 작업 플러그인을 구현 하는 `onReset()` 메서드 뿐만. 때 실행은 `WebView` 이동 새 페이지 또는 새로 고침, 자바 스크립트가 다시 로드 되는.
+ [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
+
+안 드 로이드 플러그인 코르도바-안 드 로이드, 안 드 로이드 WebView 그것에 붙어 있던 걸이로 구성 된 기반으로 합니다. 플러그인에서 클래스 매핑으로 표시 됩니다는 `config.xml` 파일. 플러그인을 확장 하는 하나 이상의 Java 클래스의 구성는 `CordovaPlugin` 중 하나를 재정의 하는 클래스는 `execute` 방법. 최고의 연습, 플러그인 또한 처리 하는 `pause` 및 `resume` 플러그인 사이 전달 하는 모든 메시지와 함께 이벤트. 장기 실행 요청, 미디어 재생, 청취자, 또는 내부 상태와 같은 백그라운드 작업 플러그인을 구현 하는 `onReset()` 메서드 뿐만. 때 실행은 `WebView` 이동 새 페이지 또는 새로 고침, 자바 스크립트가 다시 로드 되는.
 
 ## 플러그인 클래스 매핑
 
-플러그인의 자바 부분 항상 사용 하는 `cordova.exec` 메서드가 다음과 같이:
+플러그인의 자바 인터페이스를 사용 하는 `cordova.exec` 메서드가 다음과 같이:
 
-    exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        exec (< successFunction >, < failFunction >, < 서비스 >, < 작업 > [< args >]);
     
 
-이 요청 전화 내려 더 많거나 적은 끓는 안 드 로이드 네이티브 쪽을 WebView에서 마샬링하는 `action` 메서드는 `service` 클래스에 전달 된 인수는 `args` 배열.
+이 효과적으로 전화 안 드 로이드 네이티브 쪽을 WebView에서 요청 마샬링하는 `action` 메서드는 `service` 추가 인수에 전달 된 클래스는 `args` 배열.
 
-플러그인에 추가 되어야 합니다 귀하의 플러그인 자바 파일 또는 그것의 자신의 병을 배포 여부는 `config.xml` 코르 도우 바 안 드 로이드 응용 프로그램에서 파일 `res/xml/` 디렉터리.
+코르 도우 바 안 드 로이드 응용 프로그램의 플러그인을 지정 해야 합니다 자바 파일 또는 *jar* 파일 자체의 플러그인 배포 여부를 `res/xml/config.xml` 파일. 사용 하는 방법에 대 한 자세한 내용은 응용 프로그램 플러그인을 참조는 `plugin.xml` 파일이 주입을 `feature` 요소:
 
-    <feature name="<service_name>">
+        <feature name="<service_name>">
+            <param name="android-package" value="<full_name_including_namespace>" />
+        </feature>
+    
+
+서비스 이름이 일치 자바 스크립트에 사용 된 `exec` 를 호출 합니다. 자바 클래스의 정규화 된 네임 스페이스 식별자입니다. 그렇지 않으면, 플러그인 컴파일 수 있지만 여전히 코르도바를 사용할 수 없습니다.
+
+## 플러그인 초기화 및 수명
+
+각각의 인생에 대 한 플러그인 개체의 인스턴스 생성 `WebView` . 플러그인은 인스턴스화되지 않습니다 JavaScript에서 호출 하 여 처음 참조 될 때까지 않는 한 `<param>` 와 `onload` `name` 특성 설정 `"true"` 에 `config.xml` . 예를 들면:
+
+    <feature name="Echo">
         <param name="android-package" value="<full_name_including_namespace>" />
+        <param name="onload" value="true" />
     </feature>
     
 
-서비스 이름은 자바 스크립트에 사용 된 것과 일치 해야 `exec` 전화와 값은 네임 스페이스를 포함 하 여 Java 클래스 전체 이름. 그렇지 않으면 플러그인 컴파일 수 있지만 여전히 코르도바에 의해 접근할 수 있습니다.
+플러그인 사용 해야 있는 `initialize` 그들의 시작 논리에 대 한 방법.
+
+    @override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+        super.initialize(cordova, webView);
+        // your init code here
+    }
+    
 
 ## 안 드 로이드 자바 플러그인을 작성
 
-자바 스크립트 플러그인 요청을 네이티브 쪽에서 발생합니다. 안 드 로이드 자바 플러그인을 통해 제대로 매핑되는 `config.xml` 파일. 그래서 무슨 최종 안 드 로이드 자바 플러그인 클래스 처럼 보여요?
+플러그인 요청을 네이티브 쪽에서 자바 호출 발생 및 해당 Java 플러그인에 제대로 매핑되지는 `config.xml` 파일, 하지만 무엇 처럼 최종 안 드 로이드 자바 플러그인 클래스 보여? 어떤 자바 스크립트의 플러그인 디스패치 됩니다 `exec` 함수 플러그인 클래스에 전달 `execute` 방법. 대부분 `execute` 구현을 다음과 같이:
 
-무슨 자바 스크립트를 통해 플러그인에 파견 되 면 `exec` 함수는 플러그인 클래스에 전달 되 면 `execute` 메서드. 대부분 `execute` 구현을 다음과 같이:
-
-    @Override 공공 부울 실행 (문자열 작업, JSONArray args, CallbackContext callbackContext) JSONException을 throw {경우 ("beep".equals(action)) {this.beep(args.getLong(0));
-            callbackContext.success();
-            반환 진정한;
-        } 반환 허위;  / / "MethodNotFound" 오류가 잘못 된 결과 반환 합니다.
-    }
+        @Override 공공 부울 실행 (문자열 작업, JSONArray args, CallbackContext callbackContext) JSONException을 throw {경우 ("beep".equals(action)) {this.beep(args.getLong(0));
+                callbackContext.success();
+                반환 진정한;
+            } 반환 허위;  / / "MethodNotFound" 오류가 잘못 된 결과 반환 합니다.
+        }
     
 
-값을 비교 하는 우리는 `action` 매개 변수, 및 파견 (개인) 메서드에 선택적으로 메서드에 전달 된 매개 변수 중 일부는 클래스에서 요청 합니다.
+자바 스크립트 `exec` 함수의 `action` 매개 변수가 선택적 매개 변수와 함께 파견 전용 클래스 메서드에 해당 합니다.
 
 예외를 catch 하 고 오류를 반환 하면 오류 반환 자바 검색 자바 예외 이름을 가능 한 한 명확 하도록 중요 하다.
 
-### 스레딩
+## 스레딩
 
-WebView에서 자바 않습니다 *하지* UI 스레드에서 실행 합니다. WebCore 스레드에서 실행 됩니다. `execute`메서드는 또한 WebCore 스레드에서 실행 됩니다.
+플러그인의 자바 스크립트는 *하지* 실행의 주 스레드에 `WebView` 인터페이스; 대신에, 그것에서 실행 되는 `WebCore` 스레드, 마찬가지로 `execute` 메서드. 사용자 인터페이스와 상호 작용 해야 하는 경우 다음 변형을 사용 해야 합니다.
 
-UI와 상호 작용 해야 하는 경우 다음 사용 해야 합니다.
-
-    @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if ("beep".equals(action)) {
-            final long duration = args.getLong(0);
-            cordova.getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    ...
-                    callbackContext.success(); // Thread-safe.
-                }
-            });
-            return true;
-        }
-        return false;
-    }
-    
-
-UI 스레드에서 실행 해야 하는 경우 하지만 WebCore 스레드를 차단 하지 않으려면:
-
-    @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        if ("beep".equals(action)) {
-            final long duration = args.getLong(0);
-            cordova.getThreadPool().execute(new Runnable() {
-                public void run() {
-                    ...
-                    callbackContext.success(); // Thread-safe.
-                }
-            });
-            return true;
-        }
-        return false;
-    }
-    
-
-### 에코 안 드 로이드 플러그인 예제
-
-다음을 추가 우리의 `config.xml` 파일:
-
-    <feature name="Echo">
-        <param name="android-package" value="org.apache.cordova.plugin.Echo" />
-    </feature>
-    
-
-그런 다음 다음 파일을 추가 `src/org/apache/cordova/plugin/Echo.java` 코르 도우 바 안 드 로이드 응용 프로그램 안에:
-
-    package org.apache.cordova.plugin;
-    
-    import org.apache.cordova.CordovaPlugin;
-    import org.apache.cordova.CallbackContext;
-    
-    import org.json.JSONArray;
-    import org.json.JSONException;
-    import org.json.JSONObject;
-    
-    /**
-     * This class echoes a string called from JavaScript.
-     */
-    public class Echo extends CordovaPlugin {
-    
         @Override
-        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if (action.equals("echo")) {
-                String message = args.getString(0);
-                this.echo(message, callbackContext);
+        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+            if ("beep".equals(action)) {
+                final long duration = args.getLong(0);
+                cordova.getActivity().runOnUiThread(new Runnable() {
+                    public void run() {
+                        ...
+                        callbackContext.success(); // Thread-safe.
+                    }
+                });
                 return true;
             }
             return false;
         }
     
-        private void echo(String message, CallbackContext callbackContext) {
-            if (message != null && message.length() > 0) {
-                callbackContext.success(message);
-            } else {
-                callbackContext.error("Expected one non-empty string argument.");
+
+사용 다음 주 인터페이스에서 실행할 필요가 없는 경우의 스레드, 하지만 차단 하지 않으려면는 `WebCore` 스레드 중 하나:
+
+        @Override
+        public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+            if ("beep".equals(action)) {
+                final long duration = args.getLong(0);
+                cordova.getThreadPool().execute(new Runnable() {
+                    public void run() {
+                        ...
+                        callbackContext.success(); // Thread-safe.
+                    }
+                });
+                return true;
             }
+            return false;
         }
-    }
     
 
-코드를 살펴 봅시다. 필요한 `imports` 상단에 있습니다. 우리의 클래스에서 확장 `CordovaPlugin` . 우리는 exec()에서 메시지를 수신 하려면 execute () 메서드를 재정의 합니다. 우리의 방법은 먼저 비교 `action` :이 플러그인만 지원 한 행동은 `echo` 작업. 다른 작업 반환 `false` , 어떤 종류의 오류가 발생 `INVALID_ACTION` , 어떤 자바 스크립트 측면에 오류 콜백 호출으로 변환 합니다. 다음으로, 우리가 사용 하 여 에코 문자열 잡아는 `getString` 방법에 우리의 `args` , 그것을 말하고 우리 싶어 일까 매개 변수가 매개 변수 배열. 우리가 매개 변수 검사의 조금을 할: 그것은 다는 것을 확인 `null` , 그것은 길이가 0 인 문자열이 있는지 확인 하십시오. 그것은 우리가 전화 `callbackContext.error()` (지금까지, 당신이 알아야 할 어떤 오류 콜백을 호출). 모든 그 검사 통과 경우 우리가 전화 `callbackContext.success()` 에 전달 하 고는 `message` 우리는 매개 변수로 받은 문자열. 이 마지막으로 자바 스크립트 측면에서 성공 콜백 호출으로 변환합니다. 그것은 또한 통과 `message` JavaScript 성공 콜백 함수에 매개 변수로 매개 변수.
+## 에코 안 드 로이드 플러그인 예제
 
-## 플러그인을 디버깅
+응용 프로그램 플러그인에서 설명 하는 자바 인터페이스 *에코* 기능은 사용는 `plugin.xml` 를 삽입 하는 `feature` 로컬 플랫폼 사양 `config.xml` 파일:
 
-이클립스 안 드 로이드 프로젝트를 디버깅 하는 데 사용할 수 있습니다 및 플러그인 자바 소스 프로젝트에 포함 된 경우 디버깅할 수 있습니다. 만 최신 버전의 안 드 로이드 개발자 도구는이 이번에 완전히 지원 되지 않고이 소스 코드 첨부 파일 JAR 종속성을 허용 알려져 있다.
+        <platform name="android">
+            <config-file target="config.xml" parent="/*">
+                <feature name="Echo">
+                    <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+                </feature>
+            </config-file>
+        </platform>
+    
 
-## 일반적인 함정
+다음에 다음 추가 `src/org/apache/cordova/plugin/Echo.java` 파일:
 
-*   플러그인에 액세스할 수 있는 `CordovaInterface` 개체. 이 개체에는 안 드 로이드에 대 한 액세스는 `Activity` 응용 프로그램을 실행 중인. 이 `Context` 새로운 안 드 로이드를 실행 하는 데 필요한 `Intent` . `CordovaInterface`시작 플러그인 수를 `Activity` 때 콜백 플러그인을 설정 하 고 결과는 `Intent` 응용 프로그램에 다시 온다. 이것은 중요 하다, 이후는 `Intent` s 시스템은 안 드 로이드 프로세스 간에 통신 하는 방법.
+        package org.apache.cordova.plugin;
+    
+        import org.apache.cordova.CordovaPlugin;
+        import org.apache.cordova.CallbackContext;
+    
+        import org.json.JSONArray;
+        import org.json.JSONException;
+        import org.json.JSONObject;
+    
+        /**
+         * This class echoes a string called from JavaScript.
+         */
+        public class Echo extends CordovaPlugin {
+    
+            @Override
+            public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+                if (action.equals("echo")) {
+                    String message = args.getString(0);
+                    this.echo(message, callbackContext);
+                    return true;
+                }
+                return false;
+            }
+    
+            private void echo(String message, CallbackContext callbackContext) {
+                if (message != null && message.length() > 0) {
+                    callbackContext.success(message);
+                } else {
+                    callbackContext.error("Expected one non-empty string argument.");
+                }
+            }
+        }
+    
 
-*   플러그인에 직접 액세스할 필요가 없습니다에 `Context` 그들은 과거에 있다. 유산 `ctx` 멤버는 사용 되지 않습니다, 그리고 및 2.0 출시 후 6 개월 동안 제거 될 것 이다. 모든 `ctx` 에 존재 하는 메서드는 `Context` , 그래서 둘 다 `getContext()` 와 `getActivity()` 필요한 적절 한 개체를 반환 할 수 있다.
+클래스를 확장 하는 파일의 상단에 필요한 수입 `CordovaPlugin` , 인 `execute()` 에서 메시지를 받도록 재정의 메서드 `exec()` . `execute()`처음의 값을 테스트 하는 방법 `action` ,이 경우에 단 하나 유효한 `echo` 값. 다른 작업 반환 `false` 에서 결과 `INVALID_ACTION` 자바 스크립트 측면에 호출 오류 콜백 변환 오류.
 
-## 원본을 사용 하 여
+다음 메서드를 사용 하 여 에코 문자열 검색에서 `args` 개체의 `getString` 메서드를 첫 번째 매개 변수를 지정 하는 메서드에 전달 된. 값은 사설 전달 된 후 `echo` 방법, 그것은 그것은 확인 하기 위하여 매개 변수 검사 `null` 또는 어떤 경우에는 빈 문자열 `callbackContext.error()` 자바 스크립트의 오류 콜백을 호출 합니다. 다양 한 검사를 통과 하는 경우는 `callbackContext.success()` 원래 전달 `message` 자바 스크립트의 성공 콜백으로 매개 변수로 문자열.
 
-[기존 플러그인을 통해 보는][1] 것입니다 자신의 플러그인을 작성 하는 자신을 준비 하는 최고의 방법 중 하나.
+## 안 드 로이드 통합
 
- [1]: https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova
+안 드 로이드 기능을 `Intent` 시스템 프로세스가 서로 통신할 수 있도록 합니다. 플러그인에 액세스할 수 있습니다 한 `CordovaInterface` 안 드 로이드를 액세스할 수 있는 개체 `Activity` 응용 프로그램을 실행 하는. 이 `Context` 새로운 안 드 로이드를 실행 하는 데 필요한 `Intent` . `CordovaInterface`시작 하는 플러그인을 수 있습니다는 `Activity` 결과, 한 때 콜백 플러그인을 설정 하는 `Intent` 응용 프로그램에 반환 합니다.
 
-또한 [CordovaPlugin.java][2] 의 의견을 통해 읽어야 한다.
+코르 도우 바 2.0 현재 플러그인 더 이상 직접 액세스할 수 있는 `Context` , 유산 `ctx` 멤버는 사용 되지 않습니다. 모든 `ctx` 에 존재 하는 메서드는 `Context` , 그래서 둘 다 `getContext()` 와 `getActivity()` 필요한 개체를 반환할 수 있습니다.
 
- [2]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
+## 디버깅 안 드 로이드 플러그인
+
+이클립스 자바 소스는 프로젝트에 포함 된 플러그인을 디버깅할 수 있습니다. 만 최신 버전의 안 드 로이드 개발자 도구를 사용 하면이 기능은 아직 지원 되지 않습니다 완벽 하 게 그래서 소스 코드를 *JAR* 종속성을 연결할 수 있습니다.

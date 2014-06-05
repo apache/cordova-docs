@@ -62,31 +62,14 @@ the easy-to-use tooling and provide as much or as little translation assistance 
 they would like. If you know another language please support Cordova and contribute.
 <a href="http://crowdin.net/project/cordova">http://crowdin.net/project/cordova</a>.
 
-For Cordova language administrators, to add the translations back into git,
-follow these steps:
+ordova language administrators, don't forget these steps: 
 
-__1. Create the language directory__
+__1. config.json__
 
-    # Spanish
-    mkdir docs/es
-
-__2. Add a version__
-
-Start with the latest stable release. You can always add other versions later.
-
-    mkdir docs/es/1.0.0
-
-__3. Begin Translating__
-
-Currently, English is the most up-to-date and so it is easiest to copy each English
-file into the new language directory.
-
-__4. config.json__
-
-For each version, there is a `config.json` that defines the name of the language and
+For each language and version, there is a `config.json` that defines the name of the language and
 how to merge the files.
 
-__5. Customizing HTML template__
+__2. Customizing HTML template__
 
 Each language can override the default template in `template/docs/LANGUAGE`.
 
@@ -103,39 +86,34 @@ Generating the Documentation
 
         git clone http://github.com/davebalmer/joDoc.git
 
-- Add joDoc/ to your path
-
-  Open `~/.bashrc` or `~/.profile` (or whatever you use)
-
-        export PATH=$PATH:~/path/to/joDoc/
-
 - Install markdown
 
-        # OS X
-        brew install markdown
+    curl -O http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
+    unzip Markdown_1.0.1.zip
+    chmod u+x Markdown_1.0.1/Markdown.pl
+    mv Markdown_1.0.1/Markdown.pl markdown
+    rm -r Markdown_1*
 
-        # Linux
-        apt-get install markdown
+- Install Ruby Dependencies
 
-- Install Ruby gems
-
-  Install [bundler](http://bundler.io/#getting-started) then
-
-        bundle install
+    curl -sSL https://get.rvm.io | bash -s stable
+    rvm install 1.8.7
+    gem install bundler
+    bundle install
 
 ### Run the Script
 
 Generate all versions
 
-    bin/generate
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate
 
 Generate a specific language and version
 
-    bin/generate en edge
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate en edge
 
 or as a shortcut
 
-    bin/generate --edge
+    PATH=$PATH:$PWD/joDoc:$PWD bin/generate --edge
 
 ### Quick Preview
 
@@ -146,7 +124,7 @@ and there are a handful of [good](http://dillinger.io/) online editors.
 Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are
 used to generate the HTML documentation.
 
-Generated a Version Release
+Generating a Version Release
 ---------------------------
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
@@ -160,7 +138,7 @@ If while running rake you get the error
 
 then run
 
-    sudo gem install rspec -v 1.3.0
+    gem install rspec -v 1.3.0
 
 FAQ
 ---

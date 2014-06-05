@@ -14,36 +14,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# iOS herramientas de línea de comandos
+# iOS Guía de herramientas de Shell
 
-El `cordova` la utilidad de línea de comandos es una herramienta de alto nivel que le permite construir aplicaciones a través de varias plataformas a la vez. Una versión anterior del marco Cordova ofrece conjuntos de herramientas de línea de comandos específicos de cada plataforma. Para usarlos como una alternativa a la CLI, tienes que descargar esta versión de Córdoba desde [cordova.apache.org][1]. La descarga contiene los archivos separados para cada plataforma. Ampliar la plataforma de destino. Las herramientas aquí descritas están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
+Esta guía le muestra cómo utilizar el conjunto de Cordova de cáscara plataforma centrada en herramientas para desarrollar aplicaciones iOS. Este camino hacia el desarrollo, discutido en la descripción, puede ofrecer una mayor gama de opciones de desarrollo para iOS que la herramienta CLI multiplataforma descrita en la interfaz de línea de comandos. Por ejemplo, tienes que utilizar herramientas de shell cuando se despliega una costumbre Cordova WebView junto con componentes nativos. Antes de usar cualquier camino hacia el desarrollo, primero debe configurar el entorno SDK como se describe en la guía de la plataforma iOS. Estas herramientas dependen de herramientas de línea de comandos de Xcode tales como `xcode-select` y`xcodebuild`.
+
+Para habilitar herramientas de shell para iOS, descargar Cordova de [cordova.apache.org][1]. La descarga contiene archivos separados para cada plataforma. Ampliar cada uno de destino, `ios` en este caso. Las herramientas pertinentes están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
 
  [1]: http://cordova.apache.org
 
-Las herramientas de línea de comandos de iOS se basan en scripts de shell y confían en Xcode tools de línea de comandos como `xcode-select` y `xcodebuild`.
+Estas herramientas le permiten crear, construir y ejecutar aplicaciones iOS. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Ver aplicación Plugins para obtener más información sobre cómo desarrollar plugins.
 
 ## Crear un proyecto
 
 Ejecute el comando `crear`, especificando la ruta existente para el proyecto, el identificador de paquete de reversa-dominio-estilo y nombre para mostrar de la aplicación.
 
-    $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
+        $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
 ## Construir un proyecto
 
-    $ /path/to/my_new_project/cordova/build
+        $ /path/to/my_new_project/cordova/build
     
 
-## Ejecutar la aplicación en el emulador
+## Ejecutar la aplicación en un emulador
 
-    $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run
     
 
 ## Liberando
 
-    $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/release
     
 
 ## Tala
 
-    $ /path/to/my_new_project/cordova/log
+        $ /path/to/my_new_project/cordova/log

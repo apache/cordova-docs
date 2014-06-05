@@ -30,7 +30,7 @@ Supported Platforms
 -------------------
 
 - Android
-- BlackBerry WebWorks (OS 5.0 and higher)
+- BlackBerry OS 5 - 7 (not supported for BlackBerry 10)
 - iPhone
 - Windows Phone 7 and 8
 - Bada 1.2 & 2.x

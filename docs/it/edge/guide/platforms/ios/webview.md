@@ -16,109 +16,106 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 # iOS visualizzazioni Web
 
-A partire da Cordoba 1.4, è possibile utilizzare Cordova come componente nelle applicazioni iOS. Questo componente è il nome in codice 'Mannaia'.
+Questa guida Mostra come incorporare un componente WebView Cordova abilitato all'interno di una più ampia applicazione iOS. Per dettagli su come questi componenti possono comunicare con a vicenda, vedere applicazione plugin.
 
-Nuove Cordova applicazioni create utilizzando il template Xcode fornito in Cordova 1.4 o maggiore utilizzo Cleaver. (Il modello è implementazione di riferimento di mannaia).
+Supporto per iOS visualizzazioni Web iniziato con Cordova versione 1.4, utilizzando un `Cleaver` componente per il quale il modello di Xcode serve come un'implementazione di riferimento. Cordova 2.0 e versioni successive supportano solo l'implementazione basata su sottoprogetto di mannaia.
 
-Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia del sotto-progetto basato.
+Queste istruzioni richiedono almeno 2.3 Cordova e Xcode 4.5, lungo con un `config.xml` file da un progetto di iOS appena creato. È possibile utilizzare la procedura in l'interfaccia della riga di comando per creare un nuovo progetto, quindi ottenere il `config.xml` all'interno di sottodirectory dell'applicazione denominata all'interno del file da`platforms/ios`.
 
-## Prerequisiti
+Per seguire queste istruzioni, assicuratevi di che avere l'ultima distribuzione di Cordova. Scaricare da [cordova.apache.org][1] e decomprimere il pacchetto iOS.
 
-*   Cordova 2.3.0 o maggiore
+ [1]: http://cordova.apache.org
 
-*   Xcode 4.5 o superiore
+## L'aggiunta di mannaia al progetto Xcode (sub-progetto CordovaLib)
 
-*   `config.xml`file (da un progetto di iOS appena creato)
+1.  Se è in esecuzione, chiudere Xcode.
 
-## Aggiunta di mannaia al progetto Xcode (sub-progetto CordovaLib)
+2.  Aprire un terminale e spostarsi nella directory del sorgente per iOS di Cordova.
 
-1.  Scaricare ed estrarre la sorgente di Cordova in un percorso di directory permanente sul disco rigido, ad esempio`~/Documents/Cordova`.
+3.  Copia il `config.xml` file descritto in precedenza nella directory del progetto.
 
-2.  Se è in esecuzione, chiudere Xcode.
+4.  Aprire Xcode e utilizzare il Finder per copiare la `config.xml` file nella relativa finestra **Navigatore progetto** .
 
-3.  Utilizzando Terminal. app, spostarsi nella directory dove avete messo la sorgente scaricata sopra.
+5.  Scegliere **crea gruppi per eventuali aggiunte cartelle** e premere **fine**.
 
-4.  Copia il `config.xml` file nella directory del progetto su disco (vedere i prerequisiti di cui sopra).
+6.  Utilizzare il Finder per copiare la `CordovaLib/CordovaLib.xcodeproj` file in di Xcode **Navigatore progetto**
 
-5.  Trascinare e rilasciare il `config.xml` file nel navigatore il progetto di Xcode.
+7.  Selezionare `CordovaLib.xcodeproj` all'interno del **progetto Navigator**.
 
-6.  Scegliere il pulsante **crea gruppi per eventuali aggiunte cartelle** e premere **fine**.
+8.  Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector**.
 
-7.  Trascinare e rilasciare il `CordovaLib.xcodeproj` file nel navigatore il progetto di Xcode (dalla directory permanente posizione sopra e dovrebbe essere nel `CordovaLib` sottodirectory).
+9.  Scegliere nel **File ispettore** per il menu a discesa **relativo al gruppo** per **posizione**.
 
-8.  Select `CordovaLib.xcodeproj` in the Project Navigator.
+10. Selezionare l' **icona del progetto** nel **Progetto navigatore**, selezionare la **destinazione**, quindi scegliere la scheda **Impostazioni di compilazione** .
 
-9.  Digitare la combinazione di tasti **opzione-comando-1** per visualizzare il **File Inspector**.
+11. Aggiungi `-force_load` e `-Obj-C` per il valore di **Altre bandiere di Linker** .
 
-10. Scegliere nel **File ispettore** per il menu a discesa **relativo al gruppo** per **posizione**.
+12. Fare clic sull' **icona progetto** in Navigatore progetto, selezionare la **destinazione**, quindi selezionare la scheda **Fasi costruire** .
 
-11. Selezionare l' **icona del progetto** nel Navigatore progetto, selezionare la **destinazione**, quindi scegliere la scheda **Impostazioni di compilazione** .
+13. Espandere i **file binari di collegamento con le librerie**.
 
-12. Aggiungi `-all_load` e `-Obj-C` per il valore di **Altre bandiere di Linker** .
-
-13. Fare clic sull' **icona progetto** in Navigatore progetto, selezionare la **destinazione**, quindi selezionare la scheda **Fasi costruire** .
-
-14. Espandere i **file binari di collegamento con le librerie**.
-
-15. Selezionare il **+** pulsante e aggiungere i seguenti **quadri**. Facoltativamente nel Navigatore progetto, spostarli sotto il gruppo di **quadri** ):
+14. Selezionare il **+** pulsante e aggiungere i seguenti **quadri**. Facoltativamente all'interno del **Navigatore progetto**, spostarli sotto il gruppo di **quadri** :
     
-        AddressBook.framework AddressBookUI.framework AudioToolbox.framework AVFoundation.framework CoreLocation.framework MediaPlayer.framework QuartzCore.framework SystemConfiguration MobileCoreServices.framework CoreMedia.framework
+        AssetsLibrary.framework
+        CoreLocation.framework
+        CoreGraphics.framework
+        MobileCoreServices.framework
         
 
-16. Espandere **Dipendenze di destinazione**, il bauletto etichettato come questo se si dispone di più caselle!
+15. Espandere **Dipendenze di destinazione**, il bauletto con quell'etichetta se non c'è più di una casella.
 
-17. Selezionare il **+** pulsante e aggiungere il `CordovaLib` costruire il prodotto.
+16. Selezionare il **+** pulsante e aggiungere il `CordovaLib` costruire il prodotto.
 
-18. Espandere **I binari di collegamento con le librerie**, il bauletto etichettato come questo se si dispone di più caselle!
+17. Espandere i **File binari di collegamento con le librerie**, il bauletto con quell'etichetta se non c'è più di una casella.
 
-19. Selezionare il **+** pulsante e aggiungere`libCordova.a`.
+18. Selezionare il **+** pulsante e aggiungere`libCordova.a`.
 
-20. Impostare la preferenza di Xcode **Xcode preferenze → posizioni → dati derivati → avanzate...** su **Unique**.
+19. Impostare il **Xcode preferenze → posizioni → derivato dati → avanzate...** a **Unique**.
 
-21. Selezionare l' **icona del progetto** nel Navigatore progetto, selezionare la **destinazione**, quindi scegliere la scheda **Impostazioni di compilazione** .
+20. Selezionare l' **icona del progetto** nel Navigatore progetto, selezionare la **destinazione**, quindi scegliere la scheda **Impostazioni di compilazione** .
 
-22. Ricerca di **percorsi di ricerca di intestazione**. Per tale impostazione, aggiungere questi tre valori inferiori (con le virgolette):
+21. Ricerca di **percorsi di ricerca di intestazione**. Per tale impostazione, aggiungere questi tre valori inferiori, comprese le virgolette:
     
         "$(TARGET_BUILD_DIR)/usr/local/lib/include"        
         "$(OBJROOT)/UninstalledProducts/include"
         "$(BUILT_PRODUCTS_DIR)"
         
     
-    Con Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggio di riferimento automatico (ARC)**. Si non serve aggiornare a **ARC** utilizzare CordovaLib, ma se volete aggiornare il vostro progetto per utilizzare **ARC**, utilizzare la migrazione guidata di Xcode dal menu: **Modifica → refactoring → Converti in Objective-C ARC...**, **de-selezionare libCordova.a**, quindi eseguire la procedura guidata fino al completamento.
+    A partire da Cordova 2.1.0, `CordovaLib` è stato aggiornato per utilizzare il **Conteggio di riferimento automatico (ARC)**. Non devi aggiornare a **ARC** utilizzare `CordovaLib` , ma se volete aggiornare il vostro progetto per utilizzare **ARC**, è necessario utilizzare la migrazione guidata di Xcode dalla **Modifica → refactoring → Converti in Objective-C ARC...** menu, **de-selezionare libCordova.a**, quindi eseguire la procedura guidata fino al completamento.
 
-## Utilizzando CDVViewController nel codice
+## Utilizzando CDVViewController
 
-1.  Aggiungi questa intestazione:
+1.  Aggiungere la seguente intestazione:
     
         #import <Cordova/CDVViewController.h>
         
 
-2.  Creare un'istanza di un nuovo `CDVViewController` e conservarlo da qualche parte (ad esempio, a una proprietà nella classe):
+2.  Creare un'istanza di un nuovo `CDVViewController` e conservarlo da qualche parte, per esempio, a una proprietà di classe:
     
         CDVViewController* viewController = [CDVViewController new];
         
 
-3.  (*Opzionale*) Impostare la `wwwFolderName` Proprietà (valore predefinito è `www` ):
+3.  Facoltativamente, impostare la `wwwFolderName` proprietà, il cui valore predefinito è `www` :
     
         viewController.wwwFolderName = @"myfolder";
         
 
-4.  (*Opzionale*) Impostare la pagina iniziale nel tuo config. xml, il `<content>` tag.
+4.  Facoltativamente, impostare la pagina iniziale `config.xml` di file `<content>` tag, un file locale:
     
         <content src="index.html" />
         
     
-    OR
+    ... o un sito remoto:
     
         <content src="http://apache.org" />
         
 
-5.  (*Opzionale*) Impostare la `useSplashScreen` Proprietà (valore predefinito è `NO` ):
+5.  Facoltativamente, impostare la `useSplashScreen` proprietà, il cui valore predefinito è `NO` :
     
         viewController.useSplashScreen = YES;
         
 
-6.  Impostare il **riquadro di visualizzazione** (sempre impostare questo ultimo della proprietà):
+6.  Impostare il **riquadro di visualizzazione**. Sempre impostare questa come l'ultima proprietà:
     
         viewController.view.frame = CGRectMake(0, 0, 320, 480);
         
@@ -128,17 +125,17 @@ Cordova 2.0.0 e versioni successive supportano solo l'implementazione di mannaia
         [myView addSubview:viewController.view];
         
 
-## Aggiungendo il vostro patrimonio HTML, CSS e JavaScript
+## Aggiunta di HTML, CSS e JavaScript attivi
 
-1.  Creare una nuova directory nel progetto su disco, `www` per esempio.
+1.  Creare una nuova directory all'interno del progetto, `www` per esempio.
 
-2.  Mettere il vostro patrimonio HTML, CSS e JavaScript in questa directory.
+2.  Inserire HTML, CSS e JavaScript attivi in questa directory.
 
-3.  Trascinare e rilasciare la directory nel navigatore il progetto di Xcode.
+3.  Utilizzare il Finder per copiare la directory nella finestra **Navigatore progetto** di Xcode.
 
-4.  Scegliere il pulsante di opzione **crea riferimenti di cartella per eventuali cartelle aggiunte** .
+4.  Selezionare **Crea cartella riferimenti per eventuali cartelle aggiunte**.
 
-5.  Impostare l'appropriato `wwwFolderName` e `startPage` proprietà per la cartella creata inizialmente, oppure utilizzare le impostazioni predefinite (vedi sezione precedente) quando si crea un'istanza del`CDVViewController`.
+5.  Impostare le opportune `wwwFolderName` e `startPage` proprietà della directory è stato inizialmente creato, oppure utilizzare le impostazioni predefinite (specificate nella sezione precedente) quando un'istanza del`CDVViewController`.
     
         /*
          if you created a folder called 'myfolder' and

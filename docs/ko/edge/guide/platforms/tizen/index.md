@@ -34,14 +34,14 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
 
 - (optional) Install Tizen Cordova template projects: copy the
   `/templates` directory content into the Tizen Eclipse IDE web
-  templates directory (e.g:
+  templates directory (e.g.:
   `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
     - Select  __File &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
-    - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
+    - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
     ![](img/guide/platforms/tizen/project_template.png)
@@ -104,7 +104,7 @@ Tizen SDK 리눅스 우분투 10.04/10.10/11.04/11.10 (32 비트), 또는 Window
     
     ![][7]
 
-*   **프로젝트 탐색기** 보기 다음 선택으로 실행 **& rarr;에서 프로젝트를 마우스 오른쪽 단추로 클릭 Tizen 웹 응용 프로그램**:
+*   **프로젝트 탐색기** 보기에서 프로젝트 마우스 오른쪽 단추로 클릭 하 고 **실행 → Tizen 웹 응용 프로그램**선택:
     
     ![][8]
 

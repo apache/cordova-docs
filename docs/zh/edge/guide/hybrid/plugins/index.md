@@ -14,38 +14,98 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
    under the License.
 ---
 
-# 外掛程式開發指南
+# 插件开发指南
 
-科爾多瓦外掛程式橋樑有點之間供電科爾多瓦應用和科爾多瓦應用程式的本機平臺 web 視圖的功能在運行時。 外掛程式的使用跨所有平臺和以下特定于平臺的外掛程式介面，JavaScript 調用到本機實現一個單一的 JavaScript 介面組成。 所有的科爾多瓦 Api 的核心是使用這種體系結構實現的。
+*插件*是代码的一个软件包，注入，允许在其中应用程序呈现与在其上运行的本机平台进行通信的科尔多瓦 web 视图。 插件提供对基于 web 的应用程序通常不可用的设备和平台功能的访问。 科尔多瓦 API 的所有主要功能作为插件，实现和许多其他的可用条码扫描器、 NFC 通信等功能的启用或定制日历的接口。 有可用插件[注册表][1]。
 
-本指南的步驟，編寫一個簡單的 Echo 外掛程式的過程傳遞一個字串從 JavaScript，並將它發送到本機環境中有關支援的平臺。 本機代碼然後回裡面的外掛程式 JavaScript 回檔返回相同的字串。
+ [1]: http://plugins.cordova.io
 
-本指南提供了足夠的概述，您可以生成來編寫更複雜的外掛程式。
+插件包括一个单一的 JavaScript 界面和相应的本机代码库，每个受支持的平台。 通过将一个字符串从 JavaScript 传递到本机平台再回来，一个可以作为模型使用以生成更复杂的功能，简单的*echo*插件这节步骤。 本节讨论的基本插件结构和面向外部 JavaScript 界面。 对于每个相应的本机接口，请参阅此部分的结尾处的列表。
 
-## JavaScript
+除了这些指令，当准备写一个插件最好是看看[现有的插件][2]为指导。
 
-任何外掛程式的進入點是 JavaScript。 科爾多瓦是這樣他們就可以使用的原因開發人員使用和寫 JavaScript，不客觀-C，不是 JAVA，C#。 你的外掛程式的 JavaScript 介面是你的科爾多瓦外掛程式的正面和可以說是最重要的部分。
+ [2]: http://cordova.apache.org/#contribute
 
-然而你喜歡，可以設計你的外掛程式 JavaScript 的結構。 您*必須*使用科爾多瓦 JavaScript 和本機環境之間進行通信的一件事是 `cordova.exec` 函數。 下面是一個示例：
+## 建设一个插件
 
-        cordova.exec(function(winParam) {}, function(error) {}, "service",
-                     "action", ["firstArgument", "secondArgument", 42,
-                     false]);
+应用程序开发人员使用 CLI 的 `plugin add` 命令 （讨论中命令行界面），对项目应用插件。 该命令的参数是*git*资源库中包含的插件代码的 URL。 此示例实现科尔多瓦的设备 API：
+
+        $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-參數詳述如下：
+插件存储库必须具备顶级 `plugin.xml` 清单文件。 有许多方式来配置此文件中，其中的详细信息是可用的插件规范中。 此缩写的版本的 `Device` 插件提供了一个简单的例子，使用作为一种模型：
 
-*   `function(winParam) {}`： 成功回呼函數。 假設您 `exec` 調用成功完成，調用此函數時 （可以選擇與您傳遞回給它的任何參數）。
+        <?xml version="1.0" encoding="UTF-8"?>
+        <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+                id="org.apache.cordova.device" version="0.2.3">
+            <name>Device</name>
+            <description>Cordova Device Plugin</description>
+            <license>Apache 2.0</license>
+            <keywords>cordova,device</keywords>
+            <js-module src="www/device.js" name="device">
+                <clobbers target="device" />
+            </js-module>
+            <platform name="ios">
+                <config-file target="config.xml" parent="/*">
+                    <feature name="Device">
+                        <param name="ios-package" value="CDVDevice"/>
+                    </feature>
+                </config-file>
+                <header-file src="src/ios/CDVDevice.h" />
+                <source-file src="src/ios/CDVDevice.m" />
+            </platform>
+        </plugin>
+    
 
-*   `function(error) {}`: 錯誤函數回檔。如果該操作未成功完成，調用此函數時 （可以選擇與錯誤參數）。
+顶级 `plugin` 标记的 `id` 属性使用相同的反向域格式所要添加到他们的应用程序识别的插件包。 `js-module`标记指定共同的 JavaScript 界面的路径。 `platform`标记为指定一组对应的本机代码， `ios` 在这种情况下的平台。 `config-file`标记封装 `feature` 注入特定平台的标记 `config.xml` 文件，以使该平台意识到额外的代码库。 `header-file`和 `source-file` 标签指定库的组件文件的路径。
 
-*   `"service"`： 要調用的本機一邊的服務名稱。這被映射到本機類，有關的更多資料，可在下面列出的本機指南。
+## 验证插件
 
-*   `"action"`： 要調入的操作名稱。 這由本機類接收拾 `exec` 調用，並且，取決於平臺，基本上將映射到類的方法。 下面列出的本機指南提供詳細資訊。
+您可以使用 `plugman` 实用程序来检查是否为每个平台插件安装正确。 安装 `plugman` 用下面的[节点][3]命令：
 
-*   `[/* arguments */]`： 要傳遞到本機環境中的參數。
+ [3]: http://nodejs.org/
 
-### Echo 外掛程式的 JavaScript 示例
+        $ npm install -g plugman
+    
+
+你需要有效的 app 源目录中，如顶级 `www` 目录包含在默认生成的 CLI 项目中所述的命令行界面。 请确保应用程序的 `index.html` 的主页引用名称的插件的 JavaScript 界面，好像它是相同的源目录中：
+
+        <script src="myplugin.js"></script>
+    
+
+然后运行下面的命令： 若要测试是否能正常加载的 iOS 的依赖关系：
+
+         $ plugman install --platform ios --project /path/to/my/project/www --plugin /path/to/my/plugin
+    
+
+有关的详细信息 `plugman` 选项，请参阅使用 Plugman 到管理插件。 有关如何实际*调试*插件的信息，请参阅此页面的底部列出的每个平台的本机界面。
+
+## JavaScript 界面
+
+JavaScript 提供了前置接口，使该插件的或许最重要的部分。 然而你喜欢，但是你需要调用可以构造你的插件 JavaScript `cordova.exec` 沟通与本机平台，使用下面的语法：
+
+        cordova.exec(function(winParam) {},
+                     function(error) {},
+                     "service",
+                     "action",
+                     ["firstArgument", "secondArgument", 42, false]);
+    
+
+这里是每个参数的工作原理：
+
+*   `function(winParam) {}`： 成功回调函数。假设您 `exec` 调用成功完成，以及任何您传递给它的参数执行此函数。
+
+*   `function(error) {}`： 错误回调函数。如果该操作未成功完成，此函数执行带有可选错误参数。
+
+*   `"service"`： 要调用的本机一边的服务名称。这对应于本机类，为其更多的资料，可在下面列出的本机指南。
+
+*   `"action"`： 要调用的本机一边的操作名称。这通常对应于本机类的方法。请参阅下面列出的本机指南。
+
+*   `[/* arguments */]`： 要传递到本机环境中的参数数组。
+
+## 示例 JavaScript
+
+此示例演示一种方法来实现插件的 JavaScript 界面：
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -54,47 +114,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         };
     
 
-讓我們深入到這。該外掛程式的重視本身到 `window` ，具體到 `echo` 函數。外掛程式使用者將然後使用，如下所示：
+在此示例中，该插件的重视本身对 `window` 对象作为 `echo` 函数，插件的用户将会调用，如下所示：
 
         window.echo("echome", function(echoValue) {
             alert(echoValue == "echome"); // should alert true.
         });
     
 
-首先，讓我們看看的最後三個參數的 `exec` 函數。 我們將調用 `Echo` "服務、"請求 `echo` "行動"，和傳遞的參數包含 echo 字串的陣列，這是進入的第一個參數 `window.echo` 函數。
+看看的最后三个参数的 `cordova.exec` 函数。 第一次调用 `Echo` *的服务*，一个类名称。 第二个请求 `echo` *行动*、 那类中的方法。 第三个是一个参数包含 echo 字符串，该字符串数组 `window.echo` 函数的第一个参数。
 
-成功回檔傳遞到 `exec` 是只是提到該回呼函數的 `window.echo` 需要。 我們多做一點為錯誤回檔： 如果本機端觸發錯誤回檔，我們只需調用成功回呼函數，並傳遞到它"的預設"的字串。
+成功回调传递到 `exec` 是简单地对回调函数的引用 `window.echo` 花。 如果本机平台触发错误回调，它只是调用成功回调并传递它的默认字符串。
 
-## 外掛程式規範
+## 本地接口
 
-科爾多瓦有可用於啟用該外掛程式為 Android、 iOS、 黑莓 10 和 Windows Phone 平臺的自動的安裝一個外掛程式規範。 通過以特定方式構建你的外掛程式，添加 `plugin.xml` 清單檔，您可以使使用者能夠安裝你的外掛程式通過命令列工具。
+一旦你为你的插件定义 JavaScript，你需要至少一个本机实现，补充。 下面，列出了每个平台的详细信息和每个生成回声插件上面的简单示例：
 
-*   外掛程式規範
+*   亚马逊火 OS 插件
+*   Android 插件
+*   iOS 插件
+*   黑莓 10 插件
+*   Windows Phone 插件
 
-## 本機
+Tizen 平台不支持插件。
 
-一旦你為你的外掛程式定義 JavaScript，你需要至少一個本機實現，補充。 下面列出了這樣做為每個平臺的詳細資訊。 這些指南繼續在上文討論過的簡單回聲外掛程式示例上。
+## 发布插件
 
-*   Android 外掛程式
-*   黑莓手機的外掛程式
-*   黑莓 10 外掛程式
-*   iOS 外掛程式
-*   Windows Phone 外掛程式
+一旦你开发你的插件，您可能希望将发布与共享它，社会。 你可以将你的插件发布到科尔多瓦[注册表][1]（基于[ `npmjs` ][4]) 或任何其它 `npmjs` -基于注册表。 其他开发人员可以将它要么使用自动安装 `plugman` 或科尔多瓦 CLI。 （每个发展路径的详细信息，见到管理插件和命令行界面使用 Plugman）。
 
-當前，Tizen 平臺不支援外掛程式。
+ [4]: https://github.com/isaacs/npmjs.org
 
-## 發佈外掛程式
-
-一旦你制定你的外掛程式，你可能想要發佈它，並與社區共用它。 你可以將你的外掛程式發佈到科爾多瓦註冊表 （基於[npmjs][1]） 或任何其他 npmjs 的基於註冊表。 使用者將能夠將它使用 plugman 或科爾多瓦 cli 自動安裝。
-
- [1]: https://github.com/isaacs/npmjs.org
-
-要發佈一個外掛程式你需要使用 plugman 工具，並通過以下步驟：
+要发布插件你需要使用 `plugman` 工具，通过以下步骤：
 
     $ plugman adduser # that is if you don't have an account yet
     $ plugman publish /path/to/your/plugin
     
 
-就這麼簡單 ！
+就这么简单 ！
 
-其他基於註冊表的命令都可用和 `plugman --help` 會給你什麼命令都可以使用和如何使用它們的清單。
+运行 `plugman --help` 列出其他可用的基于注册表的命令。
