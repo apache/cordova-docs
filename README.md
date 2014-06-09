@@ -77,8 +77,39 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 
 Please see the `STYLESHEET.md` file for guildelines on language and usage.
 
-Generating the Documentation
-----------------------------
+## Generating Documentation with Vagrant
+
+### Setup
+
+- [Install Vagrant](http://www.vagrantup.com/downloads.html)
+- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+### Initialize Vagrant Box
+
+    $ cd cordova-docs/
+    $ vagrant up
+
+### Build the Documentation
+
+    $ vagrant ssh
+    $ cd /vagrant             # shared copy of this repo
+    $
+    $ ./bin/generate          # compile all docs
+    $ ./bin/generate en edge  # compile English Edge docs
+    $
+    $ exit                    # exit the ssh tunnel
+
+The `/vagrant` directory is a shared copy of this repository. When the
+documentation is done generating, you will see a `public/` directory on
+both your virtual and local machine.
+
+### Shutdown the Virtual Machine
+
+    $ vagrant suspend  # pause the vm and save its state
+    $ vagrant halt     # shutdown the vm
+    $ vagrant destroy  # delete the vm
+
+## Generating Documentation Locally
 
 ### Install
 
