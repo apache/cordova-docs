@@ -50,7 +50,6 @@ class VersionMenu
 
     # only build versions once for performance
     if @@versions.nil?
-      puts "building menu list"
       @@versions = {}
 
       # build hash of languages and versions
@@ -70,7 +69,6 @@ class VersionMenu
     end
 
     if @@optgroup_set.nil?
-      puts "building opt group"
       @@optgroup_set = Nokogiri::XML::NodeSet.new doc
 
       # generate HTML <select> output
