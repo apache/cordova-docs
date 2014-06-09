@@ -42,12 +42,13 @@ class VersionMenu
   def generate_set doc
     optgroup_set = Nokogiri::XML::NodeSet.new doc
     docs_path    = File.expand_path File.join(__FILE__, '..', '..', '..', 'docs')
+    glob_exp     = File.join(docs_path, '*', '*', 'config.json')
     versions     = {}
     languages    = {}
     html         = []
 
     # build hash of languages and versions
-    Dir.glob(File.join docs_path, '**', 'config.json').each do |file|
+    Dir.glob(glob_exp).each do |file|
       version  = File.basename(File.dirname file)
       lang     = File.basename(File.dirname(File.dirname file))
       language = JSON.parse(IO.read(file))['language']
