@@ -21,6 +21,9 @@ require 'nokogiri'
 require 'fileutils'
 
 class VersionMenu
+  @@versions = nil
+  @@optgroup_set = nil
+
   def initialize(options = {})
       @version  = options[:version]
       @language = options[:lang]
@@ -40,44 +43,53 @@ class VersionMenu
   private
 
   def generate_set doc
-    optgroup_set = Nokogiri::XML::NodeSet.new doc
     docs_path    = File.expand_path File.join(__FILE__, '..', '..', '..', 'docs')
     glob_exp     = File.join(docs_path, '*', '*', 'config.json')
-    versions     = {}
     languages    = {}
     html         = []
 
-    # build hash of languages and versions
-    Dir.glob(glob_exp).each do |file|
-      version  = File.basename(File.dirname file)
-      lang     = File.basename(File.dirname(File.dirname file))
-      language = JSON.parse(IO.read(file))['language']
+    # only build versions once for performance
+    if @@versions.nil?
+      puts "building menu list"
+      @@versions = {}
 
-      if language
-        versions[language] ||= []
-        versions[language].push version
-        languages[language] = lang
-      else
-        puts "Warning: The key 'language' was not defined in #{file}"
+      # build hash of languages and versions
+      Dir.glob(glob_exp).each do |file|
+        version  = File.basename(File.dirname file)
+        lang     = File.basename(File.dirname(File.dirname file))
+        language = JSON.parse(IO.read(file))['language']
+
+        if language
+          @@versions[language] ||= []
+          @@versions[language].push version
+          languages[language] = lang
+        else
+          puts "Warning: The key 'language' was not defined in #{file}"
+        end
       end
     end
 
-    # generate HTML <select> output
-    versions.keys.sort.each do |language|
-      optgroup = Nokogiri::XML::Node.new 'optgroup', doc
-      optgroup['label'] = language
-      optgroup['value'] = languages[language]
-      optgroup_set.push optgroup
+    if @@optgroup_set.nil?
+      puts "building opt group"
+      @@optgroup_set = Nokogiri::XML::NodeSet.new doc
 
-      versions[language].sort.reverse.each do |v|
-        option = Nokogiri::XML::Node.new 'option', doc
-        option['selected'] = 'selected' if @version == v && @language == languages[language]
-        option['value'] = v;
-        option.content = v
-        optgroup.add_child option
+      # generate HTML <select> output
+      @@versions.keys.sort.each do |language|
+        optgroup = Nokogiri::XML::Node.new 'optgroup', doc
+        optgroup['label'] = language
+        optgroup['value'] = languages[language]
+        @@optgroup_set.push optgroup
+
+        @@versions[language].sort.reverse.each do |v|
+          option = Nokogiri::XML::Node.new 'option', doc
+          option['selected'] = 'selected' if @version == v && @language == languages[language]
+          option['value'] = v;
+          option.content = v
+          optgroup.add_child option
+        end
       end
     end
 
-    return optgroup_set
+    return @@optgroup_set
   end
 end
