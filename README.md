@@ -75,10 +75,54 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 
 ### Editorial Guidelines
 
-Please see the `STYLESHEET.md` file for guildelines on language and usage.
+Please see the `STYLESHEET.md` file for guidelines on language and usage.
 
-Generating the Documentation
-----------------------------
+## Generating Documentation with Vagrant
+
+It can be trouble generating the documentation. Juggling Ruby
+environments and the dependencies can be a sensitive matter.
+
+To make our lives easier, Vagrant support has been added to our documentation
+generator. It's easy to setup and works on all the major operating
+systems. After you've installed Vagrant and VirtualBox, you only need to
+run one command to download and provision a light-weight virtual machine
+(approx 200MB). At that point all the dependencies exist inside the
+virtual machine, so you don't need to install them manually on your
+bare metal machine.
+
+### Setup
+
+- [Install Vagrant](http://www.vagrantup.com/downloads.html)
+- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+### Initialize Vagrant Box
+
+    $ cd cordova-docs/
+    $ vagrant up
+
+### Build the Documentation
+
+    $ vagrant ssh
+    $ cd /vagrant             # shared copy of this repo
+    $
+    $ ./bin/generate          # compile all docs
+    $ ./bin/generate en edge  # compile English Edge docs
+    $
+    $ exit                    # exit the ssh tunnel
+
+The `/vagrant` directory is a shared copy of this repository. When the
+documentation is done generating, you will see a `public/` directory on
+both your virtual and local machine.
+
+### Shutdown the Virtual Machine
+
+Pick one of the following, depending on what you want to do:
+
+    $ vagrant suspend  # pause the vm and save its state
+    $ vagrant halt     # shutdown the vm
+    $ vagrant destroy  # delete the vm and all its contents
+
+## Generating Documentation Locally
 
 ### Install
 
