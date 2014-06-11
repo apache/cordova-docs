@@ -27,10 +27,10 @@ _echo_ plugin that communicates from the Cordova webview to the native
 platform and back.
 
 Writing a plugin for Cordova on Windows Phone requires a basic
-understanding of Cordova's architecture. Cordova-WP7 consists of a
+understanding of Cordova's architecture. Cordova-WP8 consists of a
 `WebBrowser` that hosts the application's JavaScript code and manages
 native API calls. You can extend a C# `BaseCommand` class
-(`WP7CordovaClassLib.Cordova.Commands.BaseCommand`), which comes with
+(`WPCordovaClassLib.Cordova.Commands.BaseCommand`), which comes with
 most of the functionality you need:
 
 1. Select your project, and right-click to choose __Add &rarr; New
@@ -65,7 +65,7 @@ most of the functionality you need:
         }
 
 See the
-[BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
+[BaseCommand.cs](https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs)
 class for methods available for the plugin to override.  For example,
 the plugin can capture 'pause' and 'resume' events.
 
