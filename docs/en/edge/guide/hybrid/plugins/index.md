@@ -187,6 +187,7 @@ listed below, and each builds on the simple Echo Plugin example above:
 - iOS Plugins
 - BlackBerry 10 Plugins
 - Windows Phone Plugins
+- Windows 8 Plugins
 
 The Tizen platform does not support plugins.
 
