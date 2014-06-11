@@ -22,7 +22,7 @@ require 'fileutils'
 
 class VersionMenu
   @@versions = nil
-  @@optgroup_set = nil
+  @@languages = {}
 
   def initialize(options = {})
       @version  = options[:version]
@@ -45,7 +45,6 @@ class VersionMenu
   def generate_set doc
     docs_path    = File.expand_path File.join(__FILE__, '..', '..', '..', 'docs')
     glob_exp     = File.join(docs_path, '*', '*', 'config.json')
-    languages    = {}
     html         = []
 
     # only build versions once for performance
@@ -61,33 +60,30 @@ class VersionMenu
         if language
           @@versions[language] ||= []
           @@versions[language].push version
-          languages[language] = lang
+          @@languages[language] = lang
         else
           puts "Warning: The key 'language' was not defined in #{file}"
         end
       end
     end
 
-    if @@optgroup_set.nil?
-      @@optgroup_set = Nokogiri::XML::NodeSet.new doc
+    # generate HTML <select> output
+    optgroup_set = Nokogiri::XML::NodeSet.new doc
+    @@versions.keys.sort.each do |language|
+      optgroup = Nokogiri::XML::Node.new 'optgroup', doc
+      optgroup['label'] = language
+      optgroup['value'] = @@languages[language]
+      optgroup_set.push optgroup
 
-      # generate HTML <select> output
-      @@versions.keys.sort.each do |language|
-        optgroup = Nokogiri::XML::Node.new 'optgroup', doc
-        optgroup['label'] = language
-        optgroup['value'] = languages[language]
-        @@optgroup_set.push optgroup
-
-        @@versions[language].sort.reverse.each do |v|
-          option = Nokogiri::XML::Node.new 'option', doc
-          option['selected'] = 'selected' if @version == v && @language == languages[language]
-          option['value'] = v;
-          option.content = v
-          optgroup.add_child option
-        end
+      @@versions[language].sort.reverse.each do |v|
+        option = Nokogiri::XML::Node.new 'option', doc
+        option['selected'] = 'selected' if @version == v && @language == @@languages[language]
+        option['value'] = v;
+        option.content = v
+        optgroup.add_child option
       end
     end
 
-    return @@optgroup_set
+    return optgroup_set
   end
 end
