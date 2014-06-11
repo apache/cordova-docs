@@ -39,7 +39,7 @@ Use Apache Cordova if you are:
   distribution in various app store portals.
 
 * a mobile developer interested in mixing native application
-  components with a _WebView_ (browser window) that can access
+  components with a _WebView_ (special browser window) that can access
   device-level APIs, or if you want to develop a plugin interface
   between native and WebView components.
 
@@ -52,8 +52,8 @@ adheres to the W3C's
 [Packaged Web App](http://www.w3.org/TR/widgets/),
 or _widget_, specification.
 
-The application itself is implemented as a web page, named
-_index.html_ by default, that references whatever CSS, JavaScript,
+The application itself is implemented as a web page, by default a local
+file named _index.html_, that references whatever CSS, JavaScript,
 images, media files, or other resources are necessary for it to run.
 The app executes as a _WebView_ within the native application wrapper,
 which you distribute to app stores.
@@ -65,7 +65,8 @@ application components. (See Embedding WebViews for details.)
 
 A _plugin_ interface is available for Cordova and native components to
 communicate with each other. This enables you to invoke native code
-from JavaScript. As of version 3.0, plugins provide
+from JavaScript. Ideally, the JavaScript APIs to that native code are
+consistent across multiple device platforms. As of version 3.0, plugins provide
 bindings to standard device APIs.  Third-party plugins provide
 additional bindings to features not necessarily available on all
 platforms. You can find these third-party plugins in the
@@ -74,13 +75,22 @@ application. You can also develop your own plugins, as described in the
 Plugin Development Guide. Plugins may be necessary, for example, to
 communicate between Cordova and custom native components.
 
+__NOTE__: As of version 3.0, when you create a Cordova project it does not have
+any plugins present. This is the new default behavior. Any plugins you
+desire, even the core plugins, must be explicitly added.
+
+Cordova does not provide any UI widgets or MV* frameworks. Cordova provides
+only the runtime in which those can execute. If you wish to use UI widgets
+and/or an MV* framework, you will need to select those and include them in
+your application yourself as third-party material.
+
 ## Development Paths
 
 As of version 3.0, you can use two basic workflows to create a mobile
 app. While you can often use either workflow to accomplish the same
 task, they each offer advantages:
 
-- __Cross-platform workflow__: Use this workflow if you want your app
+- __Cross-platform (CLI) workflow__: Use this workflow if you want your app
   to run on as many different mobile operating systems as possible,
   with little need for platform-specific development.  This workflow
   centers around the `cordova` utility, otherwise known as the Cordova

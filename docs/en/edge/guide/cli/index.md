@@ -303,7 +303,13 @@ example when designing a hybrid app that mixes a Cordova WebView with
 native components. (See Embedding WebViews and [Plugin Development
 Guide](guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) for details.)  More commonly, you would add a plugin to enable
 one of Cordova's basic device-level features
-detailed in the API Reference. A list of these plugins, including
+detailed in the API Reference. 
+
+As of version 3.0, when you create a Cordova project it does not have any
+plugins present. This is the new default behavior. Any plugins you desire,
+even the core plugins, must be explicitly added.
+
+A list of these plugins, including
 additional third-party plugins provided by the community, can be found
 in the registry at
 [plugins.cordova.io](http://plugins.cordova.io/). You can use

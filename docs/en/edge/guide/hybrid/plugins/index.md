@@ -29,8 +29,11 @@ NFC communication, or to tailor calendar interfaces. There is a
 [registry](http://plugins.cordova.io) of available plugins.
 
 Plugins comprise a single JavaScript interface along with
-corresponding native code libraries for each supported platform.  This
-section steps through a simple _echo_ plugin that passes a string from
+corresponding native code libraries for each supported platform.  In essence
+this hides the various native code implementations behind a common
+JavaScript interface.
+
+This section steps through a simple _echo_ plugin that passes a string from
 JavaScript to the native platform and back, one that you can use as a
 model to build far more complex features.  This section discusses the
 basic plugin structure and the outward-facing JavaScript interface.
