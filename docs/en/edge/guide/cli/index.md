@@ -129,7 +129,8 @@ The first argument _hello_ specifies a directory to be generated
 for your project. This directory should not already exist, Cordova will
 create it for you. Its `www` subdirectory houses your application's
 home page, along with various resources under `css`, `js`, and `img`,
-which follow common web development file-naming conventions. The
+which follow common web development file-naming conventions. These assets
+will be stored on the device's local filesystem, not served remotely. The
 `config.xml` file contains important metadata needed to generate and
 distribute the application.
 
