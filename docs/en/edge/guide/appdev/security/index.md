@@ -67,6 +67,7 @@ When running Cordova on Android, using `android:debuggable="true"` in the applic
 
 ## Encrypted storage
 
+(TBD)
 
 ## General Tips
 
