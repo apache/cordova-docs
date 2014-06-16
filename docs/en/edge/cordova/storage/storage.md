@@ -33,10 +33,6 @@ _session storage_ interface, this API provides synchronous key/value
 pair storage, and is available in underlying WebView implementations.
 Refer to [the W3C spec](http://www.w3.org/TR/webstorage/) for details.
 
-__Windows Phone 7 Quirk__: Dot notation is _not_ available, so be sure
-to use `setItem` or `getItem` rather than access keys directly from
-the storage object, as in `window.localStorage.someKey`.
-
 ## WebSQL
 
 This API is available in the underlying WebView.
@@ -58,8 +54,10 @@ than LocalStorage but fewer than WebSQL.
 
 The following platforms support IndexedDB:
 
-- Windows Phone 8
 - BlackBerry 10
+- Windows Phone 8
+- Windows 8
+
 
 ## Plugin-Based Options
 
