@@ -41,7 +41,7 @@ If you want network requests to be evaluated against the whitelist, then it is i
 
 * Android's Whitelist on Cordova 2.9.x is considered secure, however, it was discovered that if foo.com is included in the whitelist, foo.com.evil.com would be able to pass the whitelist test. This was fixed in Cordova 3.x.  
 
-* Domain whitelisting does not work on Android API 10 and below, and WP7/8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins. 
+* Domain whitelisting does not work on Android API 10 and below, and WP8 for iframes and XMLHttpRequest. This means an attacker can load any domain in an iframe and any script on that page within the iframe can directly access Cordova JavaScript objects and the corresponding native Java objects. You should take this into consideration when building applications for these platforms. In practice this means making sure you target an Android API higher than 10, and that if possible you do not use an iframe to load external content - use the inAppBrowser plugin or other third-party plugins. 
 
 
 ## Iframes and the Callback Id Mechanism

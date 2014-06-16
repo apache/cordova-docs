@@ -38,7 +38,7 @@ attach an event listener once the `deviceready` event fires.
 - Android
 - BlackBerry 10
 - iOS
-- Windows Phone 7 and 8
+- Windows Phone 8
 - Windows 8
 
 ## Quick Example

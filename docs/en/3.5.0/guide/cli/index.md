@@ -43,7 +43,6 @@ platform's SDK. The CLI supports the following combinations:
 * Amazon Fire OS  (Mac, Linux, Windows)
 * Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
-* Windows Phone 7 (Windows)
 * Windows Phone 8 (Windows)
 * Windows 8       (Windows)
 * Firefox OS      (Mac, Linux, Windows)
@@ -169,7 +168,6 @@ SDK.  Run any of these from a Mac:
 Run any of these from a Windows machine, where _wp_ refers to
 different versions of the Windows Phone operating system:
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos

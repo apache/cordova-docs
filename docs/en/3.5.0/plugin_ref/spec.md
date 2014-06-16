@@ -98,7 +98,6 @@ Here's a list of the default engines that the '<engine>' tag supports:
 * 'cordova-android'
 * 'cordova-ios'
 * 'cordova-blackberry10' 
-* 'cordova-wp7'
 * 'cordova-wp8'
 * 'cordova-windows8'  
 * 'android-sdk' // returns the highest Android api level installed
@@ -346,7 +345,6 @@ chosen, are listed:
 * android
 * blackberry10
 * ios
-* wp7
 * wp8
 
 ## _source-file_ Element

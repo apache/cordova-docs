@@ -50,7 +50,7 @@ callback function called immediately.
 - BlackBerry 10
 - iOS
 - Tizen
-- Windows Phone 7 and 8
+- Windows Phone 8
 - Windows 8
 
 ## Quick Example
