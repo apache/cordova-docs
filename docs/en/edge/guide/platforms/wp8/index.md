@@ -128,50 +128,6 @@ You may also install more recent emulator update packages.
 
 ![](img/guide/platforms/wp8/wp8_downloadSDK.png)
 
-After installing the SDK, you need to modify the system's PATH to make
-the SDK available to Cordova on the Windows command line:
-
-- First you need to get the path string. Open the __File Explorer__,
-  navigate to `C:\Windows\Microsoft.NET\Framework`, then open the most
-  recent framework. Click on the right of the navigation path to view
-  the full path string, then type __CTRL-c__ to copy it:
-
-  ![](img/guide/platforms/wp8/modpath_copy.png)
-
-- Then you need to modify the path. Open the __Control Panel__ from
-  within the __Apps__ area of the Windows 8 home screen:
-
-  ![](img/guide/platforms/wp8/modpath_control_panel.png)
-
-- Open the __System__ control panel item:
-
-  ![](img/guide/platforms/wp8/modpath_system.png)
-
-- Choose the __Advanced System Settings__ from the list on the left:
-
-  ![](img/guide/platforms/wp8/modpath_advanced.png)
-
-- At the bottom of the resulting panel, press the __Environment
-  Variables__ button:
-
-  ![](img/guide/platforms/wp8/modpath_environment.png)
-
-- Choose __PATH__ from the __User Variables__, then press __Edit__:
-
-  ![](img/guide/platforms/wp8/modpath_edit.png)
-
-  Otherwise if there is no __PATH__ available, press __New__ to create it.
-
-- If a PATH value already exists, append a semicolon and paste the
-  path string you copied earlier. Otherwise simply paste the string:
-
-  ![](img/guide/platforms/wp8/modpath_append.png)
-
-  Here is a sample __PATH__ value that also specifies the `npm`
-  utility that is required to install the Cordova CLI:
-
-    C:\Users\me\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
-
 ## Create a New Project
 
 At this point, to create a new project you can choose between the
@@ -262,11 +218,11 @@ unlocked.
 
 Then run the following CLI command to run the app on the device:
 
-        > cordova run wp8
+    > cordova run wp8
 
 It corresponds to this lower-level shell command:
 
-        C:\path\to\project\cordova\run --device
+    C:\path\to\project\cordova\run --device
 
 Alternately, if you are working in Visual Studio, select __Windows
 Phone Device__ from the drop-down menu at the top, then press the
@@ -290,31 +246,4 @@ cross-platform source code that routinely overwrites the
 platform-specific files used by the SDK. If you want to work within
 the SDK, use the lower-level shell tools as an alternative to the CLI.
 
-## Support for Windows Phone 7
-
-It's as easy to generate a Windows Phone 7 app as it is for Windows
-Phone 8, but it works much like adding a separate platform. If you're
-using the CLI, simply specify `wp7` along with or instead of `wp8`:
-
-        > cordova platform add wp7
-        > cordova build wp7
-        > cordova emulate wp7
-
-The `emulate` command produces a Windows Phone 7 device emulator that
-displays a different interface:
-
-![](img/guide/platforms/wp8/wp7_emulator.png)
-
-If you are using the platform-centered shell-tool workflow, follow all
-the steps in the _Install Cordova Shell Tools_ section above, except
-extract the tools from the `cordova-wp8\wp7` directory instead. All
-these tools work the same as their `wp8` counterparts.
-
-__NOTE__: The WebViews that underly Windows Phone 7 Cordova apps do
-_not_ use Internet Explorer 10 as their rendering engine, and thus miss
-some advanced features available in Windows Phone 8 apps. Still, both
-implement the same set of APIs. You can run a Windows Phone 7 app on a
-Windows Phone 8 device, but not the other way around: Windows Phone 8
-apps do _not_ run on Windows Phone 7 devices.
-
-[1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
+[1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx

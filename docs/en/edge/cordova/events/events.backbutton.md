@@ -36,7 +36,7 @@ back-button behavior.
 - Amazon Fire OS
 - Android
 - BlackBerry 10
-- Windows Phone 7 and 8
+- Windows Phone 8
 
 ## Quick Example
 

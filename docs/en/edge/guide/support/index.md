@@ -39,10 +39,8 @@ CLI's shorthand names.
         <th><tt>Firefox OS</tt></th>
         <th><tt>ios</tt></th>
         <th><tt>Ubuntu</tt></th>
-        <th><tt>wp7</tt> (Windows<br/>Phone 7)</th>
         <th><tt>wp8</tt> (Windows<br/>Phone 8)</th>
         <th><tt>win8</tt><br/>(Windows 8)</th>
-<!--        <th><tt>firefoxos</tt></th> -->
         <th><tt>tizen</tt></th>
     </tr>
 
@@ -57,7 +55,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y">Mac, Windows, Linux</td>
         <td data-col="ios"        class="y">Mac</td>
         <td data-col="ubuntu"        class="y">Ubuntu</td>
-        <td data-col="winphone7"  class="y">Windows</td>
         <td data-col="winphone8"  class="y">Windows</td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
@@ -71,7 +68,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"><a href="guide_platforms_ios_webview.md.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="n"></td>
         <td data-col="winphone8"  class="n"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
@@ -85,7 +81,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
@@ -104,7 +99,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -118,7 +112,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -132,7 +125,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
@@ -146,7 +138,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y">(3GS+)</td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -160,7 +151,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -174,7 +164,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
@@ -188,7 +177,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -202,7 +190,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -216,7 +203,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
@@ -230,7 +216,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="y"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -244,7 +229,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="n"></td>
         <td data-col="tizen"       class="n"></td>
@@ -258,7 +242,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="p">uses iframe</td>
         <td data-col="tizen"       class="n"></td>
@@ -272,7 +255,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -286,7 +268,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="y"></td>
@@ -300,7 +281,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"></td>
         <td data-col="winphone8"  class="y"></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
@@ -314,7 +294,6 @@ CLI's shorthand names.
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y">localStorage &amp; indexedDB</td>
         <td data-col="winphone8"  class="y">localStorage &amp; indexedDB</td>
         <td data-col="win8"       class="y">localStorage &amp; indexedDB</td>
         <td data-col="tizen"       class="y"></td>
