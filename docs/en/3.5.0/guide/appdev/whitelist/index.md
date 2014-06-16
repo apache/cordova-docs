@@ -159,7 +159,7 @@ Specifically, these patterns need to be updated:
 
 ## Windows Phone Whitelisting
 
-The whitelisting rules for Windows Phone 7 and 8 are found in the
+The whitelisting rules for Windows Phone 8 are found in the
 app's `config.xml` file.
 
 ## Tizen Whitelisting
