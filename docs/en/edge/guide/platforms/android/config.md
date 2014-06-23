@@ -91,3 +91,10 @@ config.xml File for information on global configuration options.
   element is deprecated in favor of the global `Fullscreen` element, and will
   be removed in a future version.
 
+- `AndroidLaunchMode` (string, defaults to `singleTop`): Sets the Activity
+  `android:launchMode` attribute.  This changes what happens when the app is
+  launched from app icon or intent and is already running.
+  Valid values are `standard`, `singleTop`, `singleTask`, `singleInstance`.
+
+        <preference name="AndroidLaunchMode" value="singleTop"/>
+
