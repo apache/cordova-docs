@@ -57,7 +57,7 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * BlackBerry 10 Platform Guide
 * BlackBerry 10 Shell Tool Guide
-* BlackBerry Configuration
+* BlackBerry 10 Configuration
 * BlackBerry 10 Plugins
 * BlackBerry 10 Command-line Tools
 * Upgrading BlackBerry 10
