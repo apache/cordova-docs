@@ -25,59 +25,60 @@ You can search through all existing plugins (including third-party plugins) usin
 
 The traditional set of core Cordova plugins are as follows:
 
-- [Battery Status](https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md)
+- [Battery Status](http://plugins.cordova.io/#/package/org.apache.cordova.battery-status)
 > Monitor the status of the device's battery.
 
-- [Camera](https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md)
+- [Camera](http://plugins.cordova.io/#/package/org.apache.cordova.camera)
 > Capture a photo using the device's camera.
 
-- [Console](https://github.com/apache/cordova-plugin-console/blob/master/doc/index.md)
+- [Console](http://plugins.cordova.io/#/package/org.apache.cordova.console)
 > Add additional capability to console.log().
 
-- [Contacts](https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md)
+- [Contacts](http://plugins.cordova.io/#/package/org.apache.cordova.contacts)
 > Work with the devices contact database.
 
-- [Device](https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md)
+- [Device](http://plugins.cordova.io/#/package/org.apache.cordova.device)
 > Gather device specific information.
 
-- [Device Motion (Accelerometer)](https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md)
+- [Device Motion (Accelerometer)](http://plugins.cordova.io/#/package/org.apache.cordova.device-motion)
 > Tap into the device's motion sensor.
 
-- [Device Orientation (Compass)](https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md)
+- [Device Orientation (Compass)](http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation)
 > Obtain the direction that the device is pointing.
 
-- [Dialogs](https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md)
+- [Dialogs](http://plugins.cordova.io/#/package/org.apache.cordova.dialogs)
 > Visual device notifications.
 
-- [FileSystem](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md)
+- [FileSystem](http://plugins.cordova.io/#/package/org.apache.cordova.file)
 > Hook into native file system through JavaScript.
 
-- [File Transfer](https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md)
+- [File Transfer](http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer)
 > Hook into native file system through JavaScript.
 
-- [Geolocation](https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md)
+- [Geolocation](http://plugins.cordova.io/#/package/org.apache.cordova.geolocation)
 > Make your application location aware.
 
-- [Globalization](https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md)
+- [Globalization](http://plugins.cordova.io/#/package/org.apache.globalization)
 > Enable representation of objects specific to a locale.
 
-- [InAppBrowser](https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md)
+- [InAppBrowser](http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser)
 > Launch URLs in another in-app browser instance.
 
-- [Media](https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md)
+- [Media](http://plugins.cordova.io/#/package/org.apache.cordova.media)
 > Record and play back audio files.
 
-- [Media Capture](https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md)
+- [Media Capture](http://plugins.cordova.io/#/package/org.apache.cordova.media-capture)
 > Capture media files using device's media capture applications.
 
-- [Network Information (Connection)](https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md)
+- [Network Information (Connection)](http://plugins.cordova.io/#/package/org.apache.cordova.network-information)
 > Quickly check the network state, and cellular network information.
 
-- [Splashscreen](https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md)
+- [Splashscreen](http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen)
 > Show and hide the applications splash screen.
 
-- [Vibration](https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md)
+- [Vibration](http://plugins.cordova.io/#/package/org.apache.cordova.vibration)
 > An API to vibrate the device.
 
-Non-English translations of these plugin docs can be found by looking at older versions of the Cordova documentation. Use the drop-down menu at the very top-right of this site to switch versions.
+Non-English translations of these plugin docs can be found by looking at older versions of the Cordova documentation.
+Use the drop-down menu at the very top-right of this site to switch versions.
 
