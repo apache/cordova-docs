@@ -528,9 +528,7 @@ The optional `custom` attribute is a boolean indicating whether the framework is
 The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is supported and only on Windows 8.  Using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
 
 The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to add references between sub projects like in this example:
-	
-	<source-file src="src/android/FeedbackLib" target-dir="./" />
-	
+
 	<framework src="FeedbackLib" custom="true" />
 	<framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
 
@@ -544,7 +542,7 @@ plugman's scope.  Examples:
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
 
     You need to add the following line to the `local.properties`:
-        
+
     android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
     </info>
 
