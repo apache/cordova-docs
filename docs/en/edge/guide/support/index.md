@@ -300,7 +300,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Storage</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibration</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
