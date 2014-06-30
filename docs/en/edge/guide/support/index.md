@@ -209,6 +209,19 @@ CLI's shorthand names.
     </tr>
 
     <tr>
+        <th><a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">File Transfer</a></th>
+        <td data-col="amazon-fireos" class="y"></td>
+        <td data-col="android"    class="y"></td>
+        <td data-col="blackberry10" class="y">* Do not support onprogress nor abort</td>
+        <td data-col="firefoxos" class="n"></td>
+        <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="n"></td>
+        <td data-col="winphone8"  class="y">* Do not support onprogress nor abort</td>
+        <td data-col="win8"       class="y">* Do not support onprogress nor abort</td>
+        <td data-col="tizen"       class="n"></td>
+    </tr>
+
+    <tr>
         <th><a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocation</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
