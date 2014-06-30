@@ -79,6 +79,9 @@ The traditional set of core Cordova plugins are as follows:
 - [Vibration](http://plugins.cordova.io/#/package/org.apache.cordova.vibration)
 > An API to vibrate the device.
 
+- [StatusBar](https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md)
+> An API for showing, hiding and configuring status bar background.
+
 Non-English translations of these plugin docs can be found by looking at older versions of the Cordova documentation.
 Use the drop-down menu at the very top-right of this site to switch versions.
 
