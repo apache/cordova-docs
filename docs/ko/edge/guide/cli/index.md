@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # 명령줄 인터페이스
 
@@ -28,7 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   아마존 화재 OS (맥, 리눅스, 윈도우)
 *   안 드 로이드 (맥, 리눅스, 윈도우)
 *   블랙베리 10 (맥, 리눅스, 윈도우)
-*   Windows Phone 7 (윈도 즈)
 *   Windows Phone 8 (Windows)
 *   윈도우 8 (Windows)
 *   파이어 폭스 OS (맥, 리눅스, 윈도우)
@@ -85,7 +84,7 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 
 그것은 시간이 좀 걸릴 수 있습니다를 완료 하려면 명령에 대 한 그래서 인내심. 와 함께 명령을 실행 된 `-d` 옵션 진행 상황에 대 한 정보를 표시 합니다.
 
-첫 번째 인수 *안녕하세요* 프로젝트 생성 될 디렉터리를 지정 합니다. 이 디렉토리가 이미 존재 하지 해야 합니다, 그리고 코르 도우 바 당신을 위해 그것을 만들 것입니다. 그것의 `www` 하위 디렉터리 응용 프로그램의 홈 페이지에서 다양 한 리소스와 함께 하우스 `css` , `js` , 및 `img` 는 일반적인 웹 개발 파일 명명 규칙을 따릅니다. `config.xml`파일을 생성 하 고 응용 프로그램을 배포 하는 데 필요한 중요 한 메타 데이터를 포함 합니다.
+첫 번째 인수 *안녕하세요* 프로젝트 생성 될 디렉터리를 지정 합니다. 이 디렉토리가 이미 존재 하지 해야 합니다, 그리고 코르 도우 바 당신을 위해 그것을 만들 것입니다. 그것의 `www` 하위 디렉터리 응용 프로그램의 홈 페이지에서 다양 한 리소스와 함께 하우스 `css` , `js` , 및 `img` 는 일반적인 웹 개발 파일 명명 규칙을 따릅니다. 이러한 자산 원격으로 제공 되지 않습니다 장치의 로컬 파일 시스템에 저장 됩니다. `config.xml`파일을 생성 하 고 응용 프로그램을 배포 하는 데 필요한 중요 한 메타 데이터를 포함 합니다.
 
 두 번째 인수 `com.example.hello` 역방향 도메인 스타일 식별자와 함께 프로젝트를 제공 합니다. 이 인수는 선택 사항 이지만 이후 인수는 위치 세 번째 인수를 또한 생략 하는 경우에. 이 값 나중에 편집할 수 있는 `config.xml` 파일, 하지만 밖에 서 생성 되는 코드가 있을 수 있습니다 알고 있어야 할 `config.xml` 자바 패키지 이름 등이 값을 사용 하 여. 기본값은 `io.cordova.hellocordova` , 하지만 적절 한 값을 선택 하는 것이 좋습니다.
 
@@ -109,7 +108,6 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 
 Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다른 버전을 말합니다.
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos
@@ -196,9 +194,14 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
 
 구축 하 고 새로운 프로젝트를 볼 때 표시 되는 기본 응용 프로그램 매우 많이 하지 않습니다. 표준 웹 기술을 활용 하기 위해 여러 가지에서 응용 프로그램을 수정할 수 있습니다 하지만 다양 한 장치 수준의 기능을 밀접 하 게 의사 소통을 위해 애플 리 케이 션에 대 한 핵심 코르도바 Api에 대 한 액세스를 제공 하는 플러그인을 추가 해야 합니다.
 
-*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 [플러그인 개발 가이드][6] 자세한 참조.) 더 일반적으로, API 참조에 대 한 자세한 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인을 추가할 것입니다. 커뮤니티에 의해 제공 된 추가적인 타사 플러그인을 포함 하 여 이러한 플러그인의 목록이 레지스트리에서 [plugins.cordova.io][7]에서 찾을 수 있습니다. CLI를 사용 하 여이 레지스트리에서 플러그인에 대 한 검색 수 있습니다. 예를 들어 검색 `bar` 와 `code` 두 용어 모두 소문자 부분으로 일치 하는 단일 결과 생성:
+*플러그인* 은 네이티브 구성 요소에 대 한 인터페이스를 제공 하는 부가 기능 코드의 조금 이다. 예를 들어 기본 구성 요소와 코르도바 WebView를 혼합 하이브리드 앱을 디자인할 때 자신의 플러그인 인터페이스를 디자인할 수 있습니다. (포함 WebViews 및 [플러그인 개발 가이드][6] 자세한 참조.) 더 일반적으로, API 참조에 대 한 자세한 코르도바의 기본 장치 수준 기능 중 하나를 사용 하는 플러그인을 추가할 것입니다.
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+
+버전 3.0, 코르도바 프로젝트 만들 때 없는 어떤 플러그인 존재. 이 새로운 기본 동작입니다. 심지어 코어 플러그인, 당신이 원하는 어떤 플러그인을 명시적으로 추가 되어야 합니다.
+
+커뮤니티에 의해 제공 된 추가적인 타사 플러그인을 포함 하 여 이러한 플러그인의 목록이 레지스트리에서 [plugins.cordova.io][7]에서 찾을 수 있습니다. CLI를 사용 하 여이 레지스트리에서 플러그인에 대 한 검색 수 있습니다. 예를 들어 검색 `bar` 와 `code` 두 용어 모두 소문자 부분으로 일치 하는 단일 결과 생성:
+
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code

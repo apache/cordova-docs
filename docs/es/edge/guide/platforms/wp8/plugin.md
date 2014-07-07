@@ -1,4 +1,6 @@
--- license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,14 +11,13 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone Plugins
 
 Esta sección proporciona información sobre cómo implementar código plugin nativo en la plataforma de Windows Phone. Antes de leer esto, vea aplicación Plugins para tener una visión general de la estructura del plugin y su interfaz común de JavaScript. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
 
-Escribir un plugin para Cordova de Windows Phone requiere una comprensión básica de la arquitectura de Cordova. Cordova-WP7 consta de un `WebBrowser` que acoge el código JavaScript de la aplicación y administra las llamadas API nativas. Se puede extender un C# `BaseCommand` clase ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), que viene con la mayoría de la funcionalidad que usted necesita:
+Escribir un plugin para Cordova de Windows Phone requiere una comprensión básica de la arquitectura de Cordova. Cordova-WP8 consta de un `WebBrowser` que acoge el código JavaScript de la aplicación y administra las llamadas API nativas. Se puede extender un C# `BaseCommand` clase ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), que viene con la mayoría de la funcionalidad que usted necesita:
 
 1.  Seleccione su proyecto y haga clic para seleccionar **Add → nuevo artículo...** Si lo desea, puede añadir a la `Plugins` carpeta.
 
@@ -51,7 +52,7 @@ Escribir un plugin para Cordova de Windows Phone requiere una comprensión bási
 
 Vea la clase [BaseCommand.cs][1] para los métodos disponibles para el plugin anular. Por ejemplo, el plugin puede capturar eventos 'pausa' y 'volver'.
 
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+ [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
 ## Espacios de nombres
 

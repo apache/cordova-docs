@@ -1,17 +1,23 @@
----
+* * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. Смотрите файл уведомления, распространяется с этой работой за дополнительной информацией относительно авторского права собственности. ASF лицензии этот файл вам под Apache License, версия 2.0 ("Лицензия"); Вы не можете использовать этот файл за исключением в соответствии с лицензией. Вы можете получить копию лицензии на
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.Apache.org/Licenses/License-2.0 если иное не предусмотрено действующим законодательством или согласованных в письменной форме, программное обеспечение, распространяемое под лицензией распространяется «Как есть» основе, без гарантий или условий любого рода, явных или подразумеваемых.  Смотрите лицензию для конкретного языка, регулирующих разрешения и ограничения
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## по лицензии.
+## under the License.
 
 # API плагинов
 
-Cordova поставляется с минимальным набором APIs, и проекты которым необходимы дополнительные APIs добавляют их с использованием плагинов.
+Cordova поставляется с минимальным набором APIs, и проекты которым необходимы дополнительные API, добавляют их через плагины.
 
-Вы можете осуществлять поиск по всем плагинам используя [Реестр плагинов][1].
+Вы можете осуществить поиск по всем существующим плагинам (включая сторонние плагины) с использованием [Реестра плагинов][1].
 
  [1]: http://plugins.cordova.io/
 
@@ -25,82 +31,87 @@ Cordova поставляется с минимальным набором APIs, 
     
     > Получает фото используя камеру устройства.
 
-*   [Контакты][4]
+*   [Консоль][4]
     
-    > Взаимодействует с книгой контактов на устройстве.
+    > Добавление дополнительных возможностей к console.log().
 
-*   [Устройство][5]
+*   [Контакты][5]
     
-    > Получает информацию об устройстве.
+    > Работа с базой данных контактных устройств.
 
-*   [Движение устройства (Акселерометр)][6]
+*   [Устройство][6]
     
-    > Используйте датчик движения устройства.
+    > Соберите устройство конкретную информацию.
 
-*   [Ориентация устройства (Компас)][7]
+*   [Устройство движения (акселерометр)][7]
     
-    > Получите направление в котором указывает устройство.
+    > Использовать датчик движения устройства.
 
-*   [Диалоги][8]
+*   [Ориентацию устройства (компас)][8]
     
-    > Визуальные уведомления на устройстве.
+    > Получите направление, которое указывает устройство.
 
-*   [Файловая система][9]
+*   [Диалоги][9]
     
-    > Подключитесь к файловой системе устройства с помощью JavaScript.
+    > Визуальные уведомления.
 
-*   [Передача файлов][10]
+*   [Файловая система][10]
     
     > Крюк в родной файловой системы через JavaScript.
 
-*   [Геолокация][11]
+*   [Передача файлов][11]
     
-    > Пусть ваше приложение знает свое местоположение.
+    > Крюк в родной файловой системы через JavaScript.
 
-*   [Глобализация][12]
+*   [Геолокация][12]
     
-    > Добавляет представление объектов в виде принятом для выбранной локали.
+    > Сделайте ваше приложение местоположение известно.
 
-*   [Внутренний браузер][13]
+*   [Глобализация][13]
     
-    > Открывает URL-адреса в другом окне браузера внутри приложения.
+    > Включите представление объектов, характерных для языка.
 
-*   [Аудио и видео][14]
+*   [InAppBrowser][14]
     
-    > Записывайте и проигрывайте аудиофайлы.
+    > Запуск URL-адреса в другой экземпляр браузера в приложение.
 
-*   [Захват аудио и видео][15]
+*   [Средства массовой информации][15]
     
-    > Создавайте медиа-файлы используя приложения по захвату медиа, на устройстве.
+    > Запись и воспроизведение звуковых файлов.
 
-*   [Информацию о сети (подключение)][16]
+*   [Захвата мультимедиа][16]
     
-    > Быстро проверьте состояние сети интернет, и информацию о сети сотовой связи.
+    > Захват файлов мультимедиа с помощью захвата приложений устройств в СМИ.
 
-*   [Экран-заставка][17]
+*   [Информацию о сети (подключение)][17]
     
-    > Показывайте и прячьте экран заставки приложения.
+    > Быстро проверьте состояние сети и сети сотовой связи информацию.
 
-*   [Вибрация][18]
+*   [Экран-заставка][18]
     
-    > API для вибрации устройства.
+    > Скрывать и отображать экран-заставку приложения.
 
- [2]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
- [3]: https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md
- [4]: https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md
- [5]: https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md
- [6]: https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md
- [7]: https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md
- [8]: https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md
- [9]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
- [10]: https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md
- [11]: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md
- [12]: https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md
- [13]: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md
- [14]: https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md
- [15]: https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md
- [16]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
- [17]: https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md
- [18]: https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md
+*   [Вибрация][19]
+    
+    > API-интерфейс для того чтобы вибрировать устройство.
 
-Переводы документации для этих плагинов могут быть найдены просматривая старые версии документации Cordova. Используйте выпадающее меню в верхнем правом углу сайта для выбора версии.
+ [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
+ [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
+ [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
+ [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
+ [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
+ [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
+ [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
+ [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
+ [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
+ [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
+ [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
+ [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
+ [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
+ [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
+ [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
+ [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
+ [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+
+Non-английский переводы этих документов плагин можно найти, глядя на старые версии документации, Кордова. Используйте раскрывающееся меню в очень верхней правой части этого сайта для переключения версий.

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # コマンド ライン インターフェイス
 
@@ -28,7 +28,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   アマゾン火 OS （Mac、Linux、Windows）
 *   アンドロイド (Mac、Linux、Windows)
 *   ブラックベリー 10 (Mac、Linux、Windows)
-*   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
 *   Windows 8 (Windows)
 *   Firefox OS （Mac、Linux、Windows）
@@ -85,7 +84,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 いくつかの時間がかかるを完了するコマンドがかかります。コマンドを実行して、 `-d` オプションは、進行状況に関する情報を表示します。
 
-最初の引数の*ハロー*プロジェクトに対して生成されるディレクトリを指定します。 このディレクトリは既に存在する必要があります、コルドバはあなたのために作成されます。 その `www` サブディレクトリ、アプリケーションのホーム ページで、下にあるさまざまなリソースと一緒に家 `css` 、 `js` と `img` 、一般的な web 開発ファイル名前付け規則に従いますが。 `config.xml`ファイルには生成し、アプリケーションの配布に必要な重要なメタデータが含まれています。
+最初の引数の*ハロー*プロジェクトに対して生成されるディレクトリを指定します。 このディレクトリは既に存在する必要があります、コルドバはあなたのために作成されます。 その `www` サブディレクトリ、アプリケーションのホーム ページで、下にあるさまざまなリソースと一緒に家 `css` 、 `js` と `img` 、一般的な web 開発ファイル名前付け規則に従いますが。 これらの資産は、リモートで提供されないデバイスのローカル ファイル システムに格納されます。 `config.xml`ファイルには生成し、アプリケーションの配布に必要な重要なメタデータが含まれています。
 
 2 番目の引数 `com.example.hello` 逆引きドメイン スタイル識別子と、プロジェクトを提供します。 この引数はオプションですが、またので、引数が位置指定に 3 番目の引数を省略する場合にのみです。 この値は編集できます後で、 `config.xml` ファイル、しかし、ことはの外で生成されたコードがあるかもしれないことに注意してください `config.xml` Java パッケージ名など、この値を使用して。 既定値は `io.cordova.hellocordova` が適切な値を選択することをお勧めします。
 
@@ -109,7 +108,6 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 *Wp*は Windows Phone オペレーティング システムの異なるバージョンを参照 Windows マシンからこれらのいずれかを実行します。
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos
@@ -196,9 +194,14 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 ビルド、新しいプロジェクトを表示すると表示される既定のアプリケーションは非常にしません。 標準の web テクノロジーを活用する多くの方法でアプリを変更することができますが、デバイス レベルのさまざまな機能と密接に通信するアプリ、コア コルドバ Api へのアクセスを提供するプラグインを追加する必要があります。
 
-*プラグイン*はネイティブ コンポーネントへのインタ フェースを提供するアドオン コードのビットです。 たとえば、ネイティブ コンポーネントを持つコルドバの WebView をミックスしたハイブリッド アプリを設計するときの独自のプラグイン インターフェイスをデザインできます。 (詳細については埋め込み web 表示と[プラグイン開発ガイド][6]を参照してください)。一般的に、コルドバの基本的なデバイス レベル機能は、API リファレンスの詳細のいずれかを有効にするプラグインを追加すると思います。 これらのプラグインを含む、コミュニティによって提供される追加のサード パーティのプラグインのリストは[plugins.cordova.io][7]でレジストリで見つかんだことができます。 CLI を使用するには、このレジストリからプラグインを検索します。 たとえば、検索 `bar` と `code` 小文字部分文字列としての両方の条件に一致する 1 つの結果を生成します。
+*プラグイン*はネイティブ コンポーネントへのインタ フェースを提供するアドオン コードのビットです。 たとえば、ネイティブ コンポーネントを持つコルドバの WebView をミックスしたハイブリッド アプリを設計するときの独自のプラグイン インターフェイスをデザインできます。 (詳細については埋め込み web 表示と[プラグイン開発ガイド][6]を参照してください)。一般的に、コルドバの基本的なデバイス レベル機能は、API リファレンスの詳細のいずれかを有効にするプラグインを追加すると思います。
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+
+バージョン 3.0 は、コルドバのプロジェクトを作成するときがない任意のプラグインが存在します。これは、新しい既定の動作です。任意のプラグインは、あなたが望むもコアプラグインは明示的に追加する必要があります。
+
+これらのプラグインを含む、コミュニティによって提供される追加のサード パーティのプラグインのリストは[plugins.cordova.io][7]でレジストリで見つかんだことができます。 CLI を使用するには、このレジストリからプラグインを検索します。 たとえば、検索 `bar` と `code` 小文字部分文字列としての両方の条件に一致する 1 つの結果を生成します。
+
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code

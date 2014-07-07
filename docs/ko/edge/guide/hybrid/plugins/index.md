@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 플러그인 개발 가이드
 
@@ -20,7 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://plugins.cordova.io
 
-각 지원 되는 플랫폼에 대 한 해당 네이티브 코드 라이브러리와 함께 단일 자바 인터페이스를 구성 하는 플러그인. 네이티브 플랫폼을 다시 한 훨씬 더 복잡 한 기능을 구축 하는 모델로 사용할 수 있는 자바 스크립트에서 문자열을 전달 하는 간단한 *에코* 플러그인-이 섹션 단계. 이 섹션에서는 기본 플러그인 구조와 외부와 접한 자바 인터페이스에 설명합니다. 각 해당 하는 기본 인터페이스에 대 한이 섹션의 끝에 목록 참조.
+각 지원 되는 플랫폼에 대 한 해당 네이티브 코드 라이브러리와 함께 단일 자바 인터페이스를 구성 하는 플러그인. 본질적으로이 일반적인 자바 인터페이스 뒤에 다양 한 네이티브 코드 구현을 숨깁니다.
+
+네이티브 플랫폼을 다시 한 훨씬 더 복잡 한 기능을 구축 하는 모델로 사용할 수 있는 자바 스크립트에서 문자열을 전달 하는 간단한 *에코* 플러그인-이 섹션 단계. 이 섹션에서는 기본 플러그인 구조와 외부와 접한 자바 인터페이스에 설명합니다. 각 해당 하는 기본 인터페이스에 대 한이 섹션의 끝에 목록 참조.
 
 뿐만 아니라 이러한 지침, 지도 대 한 [기존의 플러그인을][2] 살펴 것이 좋습니다 플러그인을 쓸 준비를 할 때.
 
@@ -33,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-플러그인 저장소를 최상위 기능 해야 합니다 `plugin.xml` 매니페스트 파일. 이 파일을 구성 하는 사항은 플러그인 사양에서 사용할 수 있는 많은 방법이 있다.입니다. 이 약식된 버전의는 `Device` 모델을 사용 하는 간단한 예제를 제공 하는 플러그인:
+플러그인 저장소를 최상위 기능 해야 합니다 `plugin.xml` 매니페스트 파일. 이 파일을 구성 하는 자세한 사항은 플러그인 사양에서 사용할 수 있는 많은 방법이 있다.입니다. 이 약식된 버전의는 `Device` 모델을 사용 하는 간단한 예제를 제공 하는 플러그인:
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -134,6 +135,7 @@ IOS 종속성 로드 제대로 여부를 테스트 하려면 다음 명령을 �
 *   iOS 플러그인
 *   블랙베리 10 플러그인
 *   Windows Phone 플러그인
+*   윈도우 8 플러그인
 
 Tizen 플랫폼 플러그인을 지원 하지 않습니다.
 

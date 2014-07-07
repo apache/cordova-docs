@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Actualizar Android
 
@@ -34,10 +33,10 @@ Para los proyectos que se crearon con el cordova CLI:
 
 Para proyectos no creados con el cordova CLI, ejecute:
 
-        bin/update <project_path>
+        bin/actualizar < project_path >
     
 
-**ADVERTENCIA:** A partir de Android 4.4, creando un elemento de entrada de archivo con tipo = "file" no abrirá el cuadro de diálogo selector de archivos. Esto es una regresión con cromo en Android y el problema puede ser reproducido en el navegador Chrome independiente en Android (véase http://code.google.com/p/android/issues/detail?id=62220) la solución sugerida es utilizar los plugins File Transfer y archivo para Android 4.4. Puedes escuchar para un evento onClick del tipo de entrada = "file" y luego aparecer un selector de archivos UI. Para atar los datos del formulario con la carga, puede utilizar JavaScript para fijar los valores del formulario a la solicitud POST multi-partes que hace File Transfer. Este error aún existe a partir de Android 4.4.2
+**ADVERTENCIA:** En 4.4 Android - Android 4.4.3, creando un archivo de entrada elemento con tipo = "file" no abrirá el cuadro de diálogo selector de archivos. Esto es una regresión con cromo en Android y el problema puede ser reproducido en el navegador Chrome independiente en Android (véase http://code.google.com/p/android/issues/detail?id=62220) la solución sugerida es utilizar los plugins File Transfer y archivo para Android 4.4. Puedes escuchar para un evento onClick del tipo de entrada = "file" y luego aparecer un selector de archivos UI. Para atar los datos del formulario con la carga, puede utilizar JavaScript para fijar los valores del formulario a la solicitud POST multi-partes que hace File Transfer.
 
 ## Actualización a 3.1.0 de 3.0.0
 
@@ -83,7 +82,7 @@ platform add android`.
 
 ## Actualizar a 2.9.0 magnetohidrodinámica de 2.8.0
 
-1.  Ejecutar`bin/update <project_path>`.
+1.  Run `bin/update <project_path>`.
 
 ## Actualizar a 2.8.0 desde 2.7.0
 

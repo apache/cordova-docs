@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,14 +11,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# 插件规范
+# 外掛程式規範
 
-`plugin.xml`文件是一个 XML 文档在 `plugins` 命名空间： `http://apache.org/cordova/ns/plugins/1.0` 。 它包含顶级 `plugin` 元素，定义该插件和定义插件的结构的儿童。
+`plugin.xml`檔是一個 XML 文檔在 `plugins` 命名空間： `http://apache.org/cordova/ns/plugins/1.0` 。 它包含頂級 `plugin` 元素，定義該外掛程式和定義外掛程式的結構的兒童。
 
-示例插件元素：
+示例外掛程式元素：
 
     <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -27,22 +26,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         version="1.0.2">
     
 
-## *插件*元素
+## *外掛程式*元素
 
-`plugin`元素是插件清单的顶级元素。它具有下列属性：
+`plugin`元素是外掛程式清單的頂級元素。它具有下列屬性：
 
-*   `xmlns`（必填）： 插件的命名空间， `http://apache.org/cordova/ns/plugins/1.0` 。 如果文档包含 XML 从其他命名空间如标记添加到 `AndroidManifest.xml` 文件中，这些命名空间，也应该列入的顶级元素。
+*   `xmlns`（必填）： 外掛程式的命名空間， `http://apache.org/cordova/ns/plugins/1.0` 。 如果文檔包含 XML 從其他命名空間如標記添加到 `AndroidManifest.xml` 檔中，這些命名空間，也應該列入的頂級元素。
 
-*   `id`（必填）： 一个反向域样式标识符的插件，如`com.alunny.foo`
+*   `id`（必填）： 一個反向域樣式識別碼的外掛程式，如`com.alunny.foo`
 
-*   `version`（必填）： 该插件相匹配的以下主要-未成年人-修补程序样式的正则表达式的版本号：
+*   `version`（必填）： 該外掛程式相匹配的以下主要-未成年人-修補程式樣式的正則運算式的版本號：
     
         ^\d+[.]\d+[.]\d+$
         
 
-## *发动机*和*引擎*的元素
+## *發動機*和*引擎*的元素
 
-子元素的 `<engines>` 元素指定版本的此插件支持的基于 Apache 科尔多瓦的框架。示例：
+子項目的 `<engines>` 元素指定版本的此外掛程式支援的基於 Apache 科爾多瓦的框架。示例：
 
     <engines>
         <engine name="cordova" version="1.7.0" />
@@ -51,12 +50,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-类似于 `<plugin>` 元素的 `version` 属性中，指定的版本字符串应匹配符合正则表达式的字符串主要-未成年人-修补程序：
+類似于 `<plugin>` 元素的 `version` 屬性中，指定的版本字串應匹配符合正則運算式的字串主要-未成年人-修補程式：
 
         ^\d+[.]\d+[.]\d+$
     
 
-引擎的元素也可指定模糊匹配为了避免重复，并减少维护基础平台更新时。 工具应该支持的最低 `>` ， `>=` ， `<` 和 `<=` ，例如：
+引擎的元素也可指定模糊比對為了避免重複，並減少維護基礎平臺更新時。 工具應該支援的最低 `>` ， `>=` ， `<` 和 `<=` ，例如：
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -64,7 +63,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-`<engine>`标签也有默认支持的所有主要平台存在的科尔多瓦。 指定 `cordova` 引擎标记，则意味着所有版本的科尔多瓦在任何平台上必须都满足发动机版本属性。 你可能还会列出特定的平台和它们的版本以覆盖全部捕获 `cordova` 引擎：
+`<engine>`標籤也有預設支援的所有主要平臺存在的科爾多瓦。 指定 `cordova` 引擎標記，則意味著所有版本的科爾多瓦在任何平臺上必須都滿足發動機版本屬性。 你可能還會列出特定的平臺和它們的版本以覆蓋全部捕獲 `cordova` 引擎：
 
     <engines>
         <engine name="cordova" version=">=1.7.0" />
@@ -73,10 +72,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-这里是一个列表的默认引擎，'<engine>'标签支持： * '科尔多瓦' *' 科尔多瓦-plugman' * '科尔多瓦-亚马逊-fireos' *' 科尔多瓦-android' * '科尔多瓦-ios' *' 科尔多瓦-blackberry10' * '科尔多瓦-wp7' *' 科尔多瓦-wp8' * ' 科尔多瓦-windows8'  
-* 'android sdk / / 返回的最高的 Android api 级别安装 *' 苹果 xcode' / / 返回的 xcode 版本 * '苹果 ios' / / 返回的最高的 iOS 版本，安装 *' 苹果 osx' / / 返回的 OSX 版本 * ' 黑莓-ndk' / / 返回本机黑莓 SDK 版本
+這裡是一個清單的預設引擎，'<engine>'標籤支援： * '科爾多瓦' *' 科爾多瓦-plugman' * '科爾多瓦-亞馬遜-fireos' *' 科爾多瓦-安卓系統 '*' 科爾多瓦 ios' * '科爾多瓦-blackberry10' *' 科爾多瓦-wp8' * ' 科爾多瓦 windows8'  
+* 'android sdk / / 返回的最高的 Android api 級別安裝 *' 蘋果 xcode' / / 返回的 xcode 版本 * '蘋果 ios' / / 返回的最高的 iOS 版本安裝 *' 蘋果 osx' / / 返回的 OSX 版本 * ' 黑莓 ndk' / / 返回本機黑莓 SDK 版本
 
-指定自定义的基于 Apache 科尔多瓦的框架应列出引擎标记下就像这样：
+指定自訂的基於 Apache 科爾多瓦的框架應列出引擎標記下就像這樣：
 
     <engines>
         <engine name="my_custom_framework" version="1.0.0" platform="android" scriptSrc="path_to_my_custom_framework_version"/>
@@ -85,62 +84,62 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-一个自定义的基于 Apache 科尔多瓦框架需要引擎的元素包含以下特性： `name` ， `version` ， `scriptSrc` ，和`platform`.
+一個自訂的基於 Apache 科爾多瓦框架需要引擎的元素包含以下特性： `name` ， `version` ， `scriptSrc` ，和`platform`.
 
-*   `name`（必填）： 人类可读的名称为您自定义的框架。
+*   `name`（必填）： 人類可讀的名稱為您自訂的框架。
 
-*   `version`（必填）： 您的框架必须要安装的版本。
+*   `version`（必填）： 您的框架必須要安裝的版本。
 
-*   `scriptSrc`（必填）： 告诉 plugman 是什么版本的自定义框架的脚本文件。理想情况下，此文件应该在你的插件目录的顶层目录内。
+*   `scriptSrc`（必填）： 告訴 plugman 是什麼版本的自訂框架的指令檔。理想情況下，此檔應該在你的外掛程式目錄的頂層目錄內。
 
-*   `platform`（必填）： 您的框架支持哪些平台。 您可以使用通配符 `*` 说支持所有平台，指定多个与管道字符 （如 `android|ios|blackberry10` 或像只是一个单一的平台`android`.
+*   `platform`（必填）： 您的框架支援哪些平臺。 您可以使用萬用字元 `*` 說支援所有平臺，指定多個與管道字元 （如 `android|ios|blackberry10` 或像只是一個單一的平臺`android`.
 
-plugman 中止与非零代码为其目标项目不能满足发动机的约束任何插件。
+plugman 中止與非零代碼為其目標專案不能滿足發動機的約束任何外掛程式。
 
-如果不是 `<engine>` 指定的标记、 plugman 尝试盲目地安装到指定的科尔多瓦的项目目录。
+如果不是 `<engine>` 指定的標記、 plugman 嘗試盲目地安裝到指定的科爾多瓦的專案目錄。
 
-## *名称*元素
+## *名稱*元素
 
-该插件，其文本内容包含插件的名称人类可读的名称。例如：
+該外掛程式，其文本內容包含外掛程式的名稱人類可讀的名稱。例如：
 
     <name>Foo</name>
     
 
-此元素还不能 () 处理本地化。
+此元素還不能 () 處理當地語系化。
 
-## *说明*元素
+## *說明*元素
 
-对该插件的人类可读说明。元素的文本内容包含插件的描述。示例：
+對該外掛程式的人類可讀說明。元素的文本內容包含外掛程式的描述。示例：
 
     <description>Foo plugin description</description>
     
 
-此元素还不能 () 处理本地化。
+此元素還不能 () 處理當地語系化。
 
 ## *作者*元素
 
-插件作者姓名。元素的文本内容包含插件作者的姓名。示例：
+外掛程式作者姓名。元素的文本內容包含外掛程式作者的姓名。示例：
 
     <author>Foo plugin description</author>
     
 
-## *关键字*元素
+## *關鍵字*元素
 
-插件关键字。元素的文本内容包含以逗号分隔的关键字来描述该插件。示例：
+外掛程式關鍵字。元素的文本內容包含以逗號分隔的關鍵字來描述該外掛程式。示例：
 
     <keywords>foo,bar</keywords>
     
 
-## *许可证*元素
+## *許可證*元素
 
-插件许可。元素的文本内容包含插件许可证。示例：
+外掛程式許可。元素的文本內容包含外掛程式許可證。示例：
 
     <license>Apache 2.0 License</license>
     
 
-## *资产*元素
+## *資產*元素
 
-一个或多个元素列出文件或目录复制到科尔多瓦 app `www` 目录。例子：
+一個或多個元素列出檔或目錄複寫到科爾多瓦 app `www` 目錄。例子：
 
     <!-- a single file, to be copied in the root directory -->
     <asset src="www/foo.js" target="foo.js" />
@@ -148,82 +147,82 @@ plugman 中止与非零代码为其目标项目不能满足发动机的约束任
     <asset src="www/foo" target="foo" />
     
 
-所有 `<asset>` 标签需要两个 `src` 和 `target` 的属性。 只有 web 插件包含主要是 `<asset>` 的元素。 任何 `<asset>` 元素的嵌套在 `<platform>` 元素指定特定于平台 web 资产，如下所述。 属性包括：
+所有 `<asset>` 標籤需要兩個 `src` 和 `target` 的屬性。 只有 web 外掛程式包含主要是 `<asset>` 的元素。 任何 `<asset>` 元素的嵌套在 `<platform>` 元素指定特定于平臺 web 資產，如下所述。 屬性包括：
 
-*   `src`（必填）： 在该文件或目录中的位置的插件包，相对于 `plugin.xml` 文件。 如果文件不存在指定的 `src` plugman 的位置，停止和反转安装过程、 发出一个通知有关冲突，并以非零代码退出。
+*   `src`（必填）： 在該檔或目錄中的位置的外掛程式包，相對於 `plugin.xml` 檔。 如果檔不存在指定的 `src` plugman 的位置，停止和反轉安裝過程、 發出一個通知有關衝突，並以非零代碼退出。
 
 *   `target`（必填）：
     
-    其中的文件或目录应设在科尔多瓦 app，相对于 `www` 目录。资产可以被加载到目标子目录，例如：
+    其中的檔或目錄應設在科爾多瓦 app，相對於 `www` 目錄。資產可以被載入到目標子目錄，例如：
     
         <asset src="www/new-foo.js" target="js/experimental/foo.js" />
         
     
-    创建 `js/experimental` 目录内 `www` 目录中，除非已经存在，然后拷贝 `new-foo.js` 文件并将它重命名 `foo.js` 。 如果在目标位置已存在的文件，plugman 将停止反转安装过程、 发出一个通知有关冲突，并以非零代码退出。
+    創建 `js/experimental` 目錄內 `www` 目錄中，除非已經存在，然後拷貝 `new-foo.js` 檔並將它重命名 `foo.js` 。 如果在目標位置已存在的檔，plugman 將停止反轉安裝過程、 發出一個通知有關衝突，並以非零代碼退出。
 
-## *js 模块*元素
+## *js 模組*元素
 
-大多数的插件包括一个或多个 JavaScript 文件。 每个 `<js-module>` 标记对应于一个 JavaScript 文件，并防止插件的用户不必添加 `<script>` 为每个文件标记。 虽然 `<asset>` 标签只是将一个文件复制从插件子目录到 `www` ， `<js-module>` 标记是复杂得多。 他们看起来像这样：
+大多數的外掛程式包括一個或多個 JavaScript 檔。 每個 `<js-module>` 標記對應于一個 JavaScript 檔，並防止外掛程式的使用者不必添加 `<script>` 為每個檔標記。 雖然 `<asset>` 標籤只是將一個檔案複製從外掛程式子目錄到 `www` ， `<js-module>` 標記是複雜得多。 他們看起來像這樣：
 
     <js-module src="socket.js" name="Socket">
         <clobbers target="chrome.socket" />
     </js-module>
     
 
-与上面的例子，安装一个插件时 `socket.js` 复制到 `www/plugins/my.plugin.id/socket.js` ，并作为对条目添加 `www/cordova_plugins.js` 。 在加载时，代码在 `cordova.js` 使用 XHR 来读取每个文件并注入 `<script>` 到 HTML 标记。 它将添加一个映射，以痛打或合并并酌情按如下所述。
+與上面的例子，安裝一個外掛程式時 `socket.js` 複製到 `www/plugins/my.plugin.id/socket.js` ，並作為對條目添加 `www/cordova_plugins.js` 。 在載入時，代碼在 `cordova.js` 使用 XHR 來讀取每個檔並注入 `<script>` 到 HTML 標籤。 它將添加一個映射，以痛打或合併並酌情按如下所述。
 
-*不*换行的文件 `cordova.define` ，因为它会自动添加。 模块包裹在一个闭包， `module` ， `exports` ，和 `require` 在范围中，如是正常的 AMD 模块。
+*不*換行的檔 `cordova.define` ，因為它會自動添加。 模組包裹在一個閉包， `module` ， `exports` ，和 `require` 在範圍中，如是正常的 AMD 模組。
 
-详细信息 `<js-module>` 标记：
+詳細資訊 `<js-module>` 標記：
 
-*   `src`引用相关的插件目录中的文件 `plugin.xml` 文件。
+*   `src`引用相關的外掛程式目錄中的檔 `plugin.xml` 檔。
 
-*   `name`提供的模块名称的最后一个部分。 它一般可以不管你喜欢什么，以及它只事项如果您想要使用 `cordova.require` 来导入你的插件在 JavaScript 代码中的其他部分。 模块名的 `<js-module>` 是你的插件 `id` 后面跟的值 `name` 。 对于上面的例子，与 `id` 的 `chrome.socket` ，模块名称是`chrome.socket.Socket`.
+*   `name`提供的模組名稱的最後一個部分。 它一般可以不管你喜歡什麼，以及它只事項如果您想要使用 `cordova.require` 來導入你的外掛程式在 JavaScript 代碼中的其他部分。 模組名的 `<js-module>` 是你的外掛程式 `id` 後面跟的值 `name` 。 對於上面的例子，與 `id` 的 `chrome.socket` ，模組名稱是`chrome.socket.Socket`.
 
-*   内允许有三个标签 `<js-module>` ：
+*   內允許有三個標籤 `<js-module>` ：
     
-    *   `<clobbers target="some.value"/>`指示 `module.exports` 插入到 `window` 对象作为 `window.some.value` 。 你可以有很多 `<clobbers>` 像你喜欢。 上没有可用的任何对象 `window` 创建的。
+    *   `<clobbers target="some.value"/>`指示 `module.exports` 插入到 `window` 物件作為 `window.some.value` 。 你可以有很多 `<clobbers>` 像你喜歡。 上沒有可用的任何物件 `window` 創建的。
     
-    *   `<merges target="some.value"/>`指示应与任何现有的值在合并模块 `window.some.value` 。 如果已经存在任何键，该模块的版本将覆盖原始。 你可以有很多 `<merges>` 像你喜欢。 上没有可用的任何对象 `window` 创建的。
+    *   `<merges target="some.value"/>`指示應與任何現有的值在合併模組 `window.some.value` 。 如果已經存在任何鍵，該模組的版本將覆蓋原始。 你可以有很多 `<merges>` 像你喜歡。 上沒有可用的任何物件 `window` 創建的。
     
-    *   `<runs/>`意味着，您的代码应与指定 `cordova.require` ，但不是安装在 `window` 对象。 这是有用的模块，将附加的事件处理程序初始化时或以其他方式。 你只能有一个 `<runs/>` 标记。 请注意，包括 `<runs/>` 与 `<clobbers/>` 或 `<merges/>` 是多余的因为他们也 `cordova.require` 您的模块。
+    *   `<runs/>`意味著，您的代碼應與指定 `cordova.require` ，但不是安裝在 `window` 物件。 這是有用的模組，將附加的事件處理常式初始化時或以其他方式。 你只能有一個 `<runs/>` 標記。 請注意，包括 `<runs/>` 與 `<clobbers/>` 或 `<merges/>` 是多餘的因為他們也 `cordova.require` 您的模組。
     
-    *   一个空的 `<js-module>` 仍然加载，并可通过其他模块中访问`cordova.require`.
+    *   一個空的 `<js-module>` 仍然載入，並可通過其他模組中訪問`cordova.require`.
 
-如果 `src` 不能解决到现有文件，plugman 将停止和反转安装，发出一个通知的问题，和以非零代码退出。
+如果 `src` 不能解決到現有檔，plugman 將停止和反轉安裝，發出一個通知的問題，和以非零代碼退出。
 
-嵌套 `<js-module>` 内的元素 `<platform>` 声明特定平台 JavaScript 模块绑定。
+嵌套 `<js-module>` 內的元素 `<platform>` 聲明特定平臺 JavaScript 模組綁定。
 
-## *依赖项*元素
+## *依賴項*元素
 
-`<dependency>`标记使您可以指定当前插件所依赖的其他插件。 虽然未来的版本将从插件库访问它们，在短期内的插件直接引用的 Url 作为 `<dependency>` 的标记。 他们的格式如下：
+`<dependency>`標記使您可以指定當前外掛程式所依賴的其他外掛程式。 雖然未來的版本將從外掛程式庫訪問它們，在短期內的外掛程式直接引用的 Url 作為 `<dependency>` 的標記。 他們的格式如下：
 
     <dependency id="com.plugin.id" url="https://github.com/myuser/someplugin" commit="428931ada3891801" subdir="some/path/here" />
     
 
-*   `id`： 提供插件的 ID。 它应该是全局唯一的并表示在反向域的样式。 这些限制，既不当前执行的而他们可能在未来。
+*   `id`： 提供外掛程式的 ID。 它應該是全域唯一的並表示在反向域的樣式。 這些限制，既不當前執行的而他們可能在未來。
 
-*   `url`： 插件 URL。这应该参考哪些 plugman 尝试克隆 git 资源库。
+*   `url`： 外掛程式 URL。這應該參考哪些 plugman 嘗試克隆 git 資源庫。
 
-*   `commit`： 这是理解的任何 git 引用 `git checkout` ： 一个分支或标记的名称 （例如， `master` ， `0.3.1` ），或提交 （例如，哈希`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
+*   `commit`： 這是理解的任何 git 引用 `git checkout` ： 一個分支或標記的名稱 （例如， `master` ， `0.3.1` ），或提交 （例如，雜湊`975ddb228af811dd8bb37ed1dfd092a3d05295f9`).
 
-*   `subdir`： 指定目标的插件依赖项存在作为 git 资源库的子目录。 这是很有帮助的因为它允许存储库中包含几个相关的插件，每个单独指定。
+*   `subdir`： 指定目標的外掛程式依賴項存在作為 git 資源庫的子目錄。 這是很有説明的因為它允許存儲庫中包含幾個相關的外掛程式，每個單獨指定。
 
-在将来，将会介绍版本限制，和一个插件库会存在支持按名称而不是显式 Url 获取。
+在將來，將會介紹版本限制，和一個外掛程式庫會存在支援按名稱而不是顯式 Url 獲取。
 
-### 相对依赖项的路径
+### 相對依賴項的路徑
 
-如果您将设置 `url` 的 `<dependency>` 标记到 `"."` ，并提供 `subdir` 、 依赖插件安装从同一个本地或远程 git 资源库作为父插件，指定 `<dependency>` 标记。
+如果您將設置 `url` 的 `<dependency>` 標記到 `"."` ，並提供 `subdir` 、 依賴外掛程式安裝從同一個本地或遠端 git 資源庫作為父外掛程式，指定 `<dependency>` 標記。
 
-请注意， `subdir` 总是指定*根*的 git 资源库，不该父插件的相对路径。 即使你安装的插件与直接向它的本地路径，也是如此。 Plugman 发现 git 资源库的根目录，然后查找其他插件从那里。
+請注意， `subdir` 總是指定*根*的 git 資源庫，不該父外掛程式的相對路徑。 即使你安裝的外掛程式與直接向它的本地路徑，也是如此。 Plugman 發現 git 資源庫的根目錄，然後查找其他外掛程式從那裡。
 
-## *平台*元素
+## *平臺*元素
 
-`<platform>`标记标识平台有关联的本机代码或需要对它们的配置文件进行修改。 使用此规范的工具可以标识支持的平台和科尔多瓦项目中安装代码。
+`<platform>`標記標識平臺有關聯的本機代碼或需要對它們的設定檔進行修改。 使用此規範的工具可以標識支援的平臺和科爾多瓦專案中安裝代碼。
 
-无插件 `<platform>` 标签被假定为只 JavaScript 的并因此可安装在所有的平台上。
+無外掛程式 `<platform>` 標籤被假定為只 JavaScript 的並因此可安裝在所有的平臺上。
 
-平台标记示例：
+平臺標記示例：
 
     <platform name="android">
         <!-- android-specific elements -->
@@ -233,20 +232,20 @@ plugman 中止与非零代码为其目标项目不能满足发动机的约束任
     </platform>
     
 
-所需 `name` 属性标识一个平台支持，将与该平台关联元素的子级。
+所需 `name` 屬性標識一個平臺支援，將與該平臺關聯元素的子級。
 
-平台名称应该是小写字母。平台名称，如任意选择，列出：
+平臺名稱應該是小寫字母。平臺名稱，如任意選擇，列出：
 
-*   亚马逊-fireos
-*   android 系统
+*   亞馬遜-fireos
+*   android 系統
 *   blackberry10
 *   ios
-*   wp7
 *   wp8
+*   windows8
 
-## *源代码文件*元素
+## *原始程式碼檔*元素
 
-`<source-file>`元素标识应安装到一个项目的可执行文件的源代码。例子：
+`<source-file>`元素標識應安裝到一個專案的可執行檔的原始程式碼。例子：
 
     <!-- android -->
     <source-file src="src/android/Foo.java"
@@ -257,25 +256,25 @@ plugman 中止与非零代码为其目标项目不能满足发动机的约束任
     <source-file src="src/ios/someLib.a" compiler-flags="-fno-objc-arc" />
     
 
-它支持以下属性：
+它支援以下屬性：
 
-*   `src`（必填）： 相对于文件位置的 `plugin.xml` 。 如果 `src` 文件无法找到，plugman 将停止并反转安装、 问题有关问题的通知和以非零代码退出。
+*   `src`（必填）： 相對於檔位置的 `plugin.xml` 。 如果 `src` 檔無法找到，plugman 將停止並反轉安裝、 問題有關問題的通知和以非零代碼退出。
 
-*   `target-dir`： 目录文件应该将复制到其中，相对于科尔多瓦项目的根目录。 在实践中，这是最重要的是基于 Java 的平台上，凡中的一个文件 `com.alunny.foo` 软件包必须位于 `com/alunny/foo` 目录。 对于平台的源目录并不重要，应忽略此属性。
+*   `target-dir`： 目錄檔應該將複製到其中，相對於科爾多瓦專案的根目錄。 在實踐中，這是最重要的是基於 JAVA 的平臺上，凡中的一個檔 `com.alunny.foo` 套裝軟體必須位於 `com/alunny/foo` 目錄。 對於平臺的原始目錄並不重要，應忽略此屬性。
     
-    随着资产，如果 `target` 的 `source-file` 会覆盖现有的文件、 plugman 停止和反转安装、 发出一个通知有关这一问题，并以非零代码退出。
+    隨著資產，如果 `target` 的 `source-file` 會覆蓋現有的檔、 plugman 停止和反轉安裝、 發出一個通知有關這一問題，並以非零代碼退出。
 
-*   `framework`(仅适用于 iOS): 如果设置为 `true` ，也作为一种框架向项目添加指定的文件。
+*   `framework`(僅適用于 iOS): 如果設置為 `true` ，也作為一種框架向專案添加指定的檔。
 
-*   `compiler-flags`(仅适用于 iOS)： 如果设置，分配特定的源代码文件的指定的编译器标志。
+*   `compiler-flags`(僅適用于 iOS)： 如果設置，分配特定的原始程式碼檔的指定的編譯器標誌。
 
-## *配置文件*元素
+## *設定檔*元素
 
-标识要进行修改，在该文件中修改应考虑的地方，和什么应修改基于 XML 的配置文件。
+標識要進行修改，在該檔中修改應考慮的地方，和什麼應修改基於 XML 的設定檔。
 
-与此元素修改测试过的两种文件类型是 `xml` 和 `plist` 的文件。
+與此元素修改測試過的兩種檔案類型是 `xml` 和 `plist` 的檔。
 
-`config-file`元素只允许您将新的儿童追加到 XML 文档树。孩子们在目标文档中要插入的 XML 文本。
+`config-file`元素只允許您將新的兒童追加到 XML 文檔樹。孩子們在目的文件中要插入的 XML 文本。
 
 XML 的的示例：
 
@@ -299,27 +298,31 @@ XML 的的示例：
     </config-file>
     
 
-它支持以下属性：
+它支援以下屬性：
 
 *   `target`:
     
-    将修改的文件和科尔多瓦项目的根目录的相对路径。
+    將修改的檔和科爾多瓦專案的根目錄的相對路徑。
     
-    目标可以包括通配符 （ `*` ） 的元素。在这种情况下，plugman 以递归方式搜索通过项目目录结构，并使用第一个匹配。
+    目標可以包括萬用字元 （ `*` ） 的元素。在這種情況下，plugman 以遞迴方式搜索通過專案目錄結構，並使用第一個匹配。
     
-    在 iOS，相对于项目目录根配置文件的位置未知，所以指定的目标 `config.xml` 将解析为`cordova-ios-project/MyAppName/config.xml`.
+    在 iOS，相對於專案目錄根設定檔的位置未知，所以指定的目標 `config.xml` 將解析為`cordova-ios-project/MyAppName/config.xml`.
     
-    如果指定的文件不存在，该工具将忽略配置更改并继续安装。
+    如果指定的檔不存在，該工具將忽略配置更改並繼續安裝。
 
-*   `parent`： 引用添加到配置文件中的元素的父 XPath 选择器。 如果您使用绝对选择器，您可以使用通配符 （ `*` ） 以指定的根元素，例如，`/*/plugins`.
+*   `parent`： 引用添加到設定檔中的元素的父 XPath 選擇器。 如果您使用絕對選擇器，您可以使用萬用字元 （ `*` ） 以指定的根項目，例如，`/*/plugins`.
     
-    为 `plist` 的文件， `parent` 确定应该在什么父项下插入指定的 XML。
+    為 `plist` 的檔， `parent` 確定應該在什麼父項下插入指定的 XML。
     
-    如果选择器不能解决对指定文档的一个孩子，工具停止和挫折安装过程中，会发出警告，并以非零代码退出。
+    如果選擇器不能解決對指定文檔的一個孩子，工具停止和挫折安裝過程中，會發出警告，並以非零代碼退出。
 
-## *插件-plist*元素
+*   `after`： 在其中添加 XML 程式碼片段後接受兄弟姐妹優先順序的清單。 對指定的更改在檔中需要的 XML 元素，如[HTTP://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]嚴格排序有用
 
-这是*过时*，因为它仅适用于科尔多瓦-ios 2.2.0 和下面。使用 `<config-file>` 标记科尔多瓦的较新版本。
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
+## *外掛程式-plist*元素
+
+這是*過時*，因為它僅適用于科爾多瓦-ios 2.2.0 和下面。使用 `<config-file>` 標記科爾多瓦的較新版本。
 
 示例：
 
@@ -330,96 +333,107 @@ XML 的的示例：
     </config-file>
     
 
-指定键和值将追加到正确的 `AppInfo.plist` iOS 科尔多瓦项目中的文件。例如：
+指定鍵和值將追加到正確的 `AppInfo.plist` iOS 科爾多瓦專案中的檔。例如：
 
     <plugins-plist key="Foo" string="CDVFoo" />
     
 
-## *资源文件*和*头文件*元素
+## *資源檔*和*標頭檔*元素
 
-源代码文件一样，但专门为 iOS 等平台，区分源代码文件、 标题和资源。iOS 的例子：
+原始程式碼檔一樣，但專門為 iOS 等平臺，區分原始程式碼檔、 標題和資源。iOS 的例子：
 
     <resource-file src="CDVFoo.bundle" />
     <resource-file src="CDVFooViewController.xib" />
     <header-file src="CDVFoo.h" />
     
 
-Android 系统的示例：
+Android 系統的示例：
 
-    < 资源文件 src="FooPluginStrings.xml"target="res/values/FooPluginStrings.xml"/ >
+    < 資源檔 src="FooPluginStrings.xml"target="res/values/FooPluginStrings.xml"/ >
     
 
-## *lib 文件*元素
+## *lib 檔*元素
 
-像源、 资源和头文件，但专门为黑莓 10 这样的平台，使用用户生成的库。例子：
+像源、 資源和標頭檔，但專門為黑莓 10 這樣的平臺，使用使用者生成的庫。例子：
 
     <lib-file src="src/BlackBerry10/native/device/libfoo.so" arch="device" />
     <lib-file src="src/BlackBerry10/native/simulator/libfoo.so" arch="simulator" />
     
 
-支持的属性：
+支援的屬性：
 
-*   `src`（必填）： 相对于文件位置的 `plugin.xml` 。 如果 `src` 不能发现，plugman 停止和反转安装，问题一个警告，有关这一问题，并以非零代码退出。
+*   `src`（必填）： 相對於檔位置的 `plugin.xml` 。 如果 `src` 不能發現，plugman 停止和反轉安裝，問題一個警告，有關這一問題，並以非零代碼退出。
 
-*   `arch`： 其中的体系结构 `.so` 文件已生成了，要么 `device` 或`simulator`.
+*   `arch`： 其中的體系結構 `.so` 檔已生成了，要麼 `device` 或`simulator`.
 
 ## *框架*元素
 
-标识该插件所依赖的一个框架 （通常的 OS 平台的一部分）。
+標識該外掛程式所依賴的一個框架 （通常的 OS 平臺的一部分）。
 
 例子：
 
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src`属性标识的框架，其中 plugman 尝试添加到科尔多瓦项目中，给定平台的正确方式。
+`src`屬性標識的框架，其中 plugman 嘗試添加到科爾多瓦專案中，給定平臺的正確方式。
 
-可选的 `weak` 属性是一个布尔值，该值指示是否应弱链接框架。默认值是`false`.
+可選的 `weak` 屬性是一個布林值，該值指示是否應弱連結框架。預設值是`false`.
 
-可选的 `custom` 属性是一个布尔值，该值指示是否框架一种作为您的插件文件的一部分包括 （因而它不是一个系统的框架）。 默认值是`false`.
+可選的 `custom` 屬性是一個布林值，該值指示是否框架一種作為您的外掛程式檔的一部分包括 （因而它不是一個系統的框架）。 預設值是 `false` 。 ***關於 Android***它指定如何對待**src**。 如果 `true` **src**是從應用程式專案的目錄的相對路徑，否則 — — 從 Android SDK 目錄。
 
-## *信息*元素
+可選的 `type` 屬性是一個字串，指示框架若要添加的類型。 目前只有 `projectReference` 是支援的和只能在 Windows 8 上。 使用 `custom='true'` 和 `type='projectReference'` 將引用添加到專案，將被添加到編譯 + 連結科爾多瓦專案的步驟。 這實質上是唯一的途徑目前 '自訂' 框架可以針對多個體系結構，作為它們的顯式生成作為依賴項的科爾多瓦引用應用程式。
 
-向用户提供的其他信息。当您需要额外的步骤，不能轻松地自动或超出了 plugman 的范围时，这非常有用。例子：
+可選的 `parent` 屬性目前只能在安卓系統上支援。 它將相對路徑設置為包含要向其增加參考的子專案的目錄。 預設值是 `.` ，即應用程式專案。 它允許添加像在此示例中的子專案之間的引用：
+
+    < 框架 src ="FeedbackLib"自訂 ="true"/ >< 框架 src ="臨時演員/android/支援/v7/appcompat"自訂 ="false"父 ="FeedbackLib"/ >
+    
+
+## *資訊*元素
+
+向使用者提供的其他資訊。當您需要額外的步驟，不能很容易自動或超出了 plugman 的範圍時，這非常有用。例子：
 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    您需要将以下行添加到 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 信息 >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
-## 变量
+## 變數
 
-在某些情况下，可能需要一个插件进行配置更改依赖于目标应用程序。 例如，若要为在 android 系统，其包 id 是 app C2DM 注册 `com.alunny.message` 如需要的权限：
+在某些情況下，外掛程式可能需要進行配置更改依賴于目標應用程式。 例如，若要為 android 系統，其包 id 是 app C2DM 註冊 `com.alunny.message` 如需要的許可權：
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-在这种情况下，从插入内容的位置 `plugin.xml` 文件事先并不知道，变量可以表示一个美元符号后面跟随一系列的大写英文字母、 数字或下划线。 对于上面的示例中， `plugin.xml` 文件将包括此标记：
+在這種情況下，插入內容的位置，從 `plugin.xml` 檔事先並不知道，變數可以表明一個貨幣符號其次是一系列的大寫英文字母，數位或底線。 對於上面的示例中， `plugin.xml` 檔將包括此標記：
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-如果未找到，则 plugman 将指定的值或空字符串替换变量引用。 可能检测到的变量引用的值 （在这种情况下，从 `AndroidManifest.xml` 文件） 或指定的工具 ； 用户确切的过程是依赖于特定的工具。
+plugman 變數引用替換為指定的值或空字串，如果沒有找到。 可能檢測到的變數引用的值 （在這種情況下，從 `AndroidManifest.xml` 檔） 或指定的使用者的工具 ； 確切的過程是對某一特定工具的依賴。
 
-plugman 可以要求用户指定一个插件所需的变量。例如，用于 C2M 和谷歌地图 API 密钥可以指定为一个命令行参数：
+plugman 可以要求使用者指定一個外掛程式所需的變數。例如，C2M 和谷歌地圖的 API 金鑰可以指定為一個命令列參數：
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-以使变量强制性的 `<platform>` 标记需要包含 `<preference>` 标记。例如：
+以使變數強制性的 `<platform>` 標記需要包含 `<preference>` 標記。例如：
 
     <preference name="API_KEY" />
     
 
-plugman 检查这些所需的首选项传入的。如果不是，它应警告用户如何传递中的变量和以非零代码退出。
+plugman 檢查中通過的這些所需的首選項。如果不是，它應該警告使用者如何傳遞中的變數和以非零代碼退出。
 
-应保留某些变量的名称，如下所示。
+應保留某些變數的名稱，如下所示。
 
 ## $PACKAGE_NAME
 
-反向域风格独特包的标识符，对应于 `CFBundleIdentifier` 上的 iOS 或 `package` 的顶级属性 `manifest` 中的元素 `AndroidManifest.xml` 文件。
+反向域風格的包，對應的唯一識別碼 `CFBundleIdentifier` 在 iOS 或 `package` 的頂級屬性 `manifest` 中的元素 `AndroidManifest.xml` 檔。

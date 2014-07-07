@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Especificación de plugin
 
@@ -73,7 +72,7 @@ El `<engine>` etiquetas también cuenta con soporte por defecto para todas las p
     </engines>
     
 
-Aquí está una lista de la cesación de pagos que motores del '<engine>' soporta la etiqueta: * 'cordova' * 'cordova-plugman' * 'cordova-Amazonas-fireos' * 'cordova-android' * 'cordova-ios' * 'cordova-blackberry10' * 'cordova-wp7' * 'cordova-wp8' * 'cordova-windows8'  
+Aquí está una lista de la cesación de pagos que motores del '<engine>' las ayudas de la etiqueta: * 'cordova' * 'cordova-plugman' * 'cordova-Amazonas-fireos' * 'cordova-android' * 'cordova-ios' * 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
 * ' android-sdk' / / devuelve la api de Android más alto nivel instalado * 'apple-xcode' / / devuelve la versión de xcode * 'ios de apple' / / devuelve la versión de iOS más alta instalada * 'apple-osx' / / devuelve la versión OSX * 'blackberry-ndk' / / devuelve la versión SDK nativo blackberry
 
 Especificar Marcos personalizados basados en Apache Cordova deben aparecer bajo la etiqueta de motor así:
@@ -241,8 +240,8 @@ Nombres de la plataforma deben estar en minúsculas. Nombres de plataforma, como
 *   Android
 *   blackberry10
 *   Ios
-*   WP7
 *   WP8
+*   windows8
 
 ## *archivo de código fuente* Elemento
 
@@ -317,6 +316,10 @@ Soporta los siguientes atributos:
     
     Si el selector no resuelve a un niño del documento especificado, la herramienta se detiene y revierte el proceso de instalación, emite una advertencia y sale con un código distinto de cero.
 
+*   `after`: Una lista de prioridades de hermanos aceptados después que a agregar el fragmento de XML. Útil para especificar los cambios en los archivos que requieren estricto orden de los elementos XML como [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *plugins-plist* Elemento
 
 Es *anticuado* ya que sólo se aplica a cordova-ios 2.2.0 y por debajo. Uso el `<config-file>` tag para las nuevas versiones de Córdoba.
@@ -372,13 +375,21 @@ Ejemplos:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
 
 Opcional `weak` atributo es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es`false`.
 
-Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es`false`.
+Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es `false` . ***En Android*** especifica cómo tratar **src**. Si `true` **src** es una ruta relativa desde el directorio del proyecto de la aplicación, de lo contrario, desde el directorio del SDK de Android.
+
+Opcional `type` atributo es una cadena que indica el tipo de marco para agregar. Actualmente, sólo `projectReference` es compatible y sólo en Windows 8. Usando `custom='true'` y `type='projectReference'` se agregue una referencia al proyecto que se agregarán a la compilación + enlace pasos del proyecto cordova. Esencialmente es la única forma actualmente que un marco 'custom' puede hacer objetivo a múltiples arquitecturas como se construyen explícitamente como una dependencia por la aplicación de Córdoba hace referencia a.
+
+Opcional `parent` atributo actualmente sólo es compatible con Android. Establece la ruta relativa al directorio que contiene el proyecto secundario al que se agregue la referencia. El valor predeterminado es `.` , es decir, el proyecto de aplicación. Permite para agregar referencias entre proyectos sub como en este ejemplo:
+
+    < marco src = "FeedbackLib" custom = "true" / >< marco src = "extras/android/soporte/v7/appcompat" custom = "false" padre = "FeedbackLib" / >
+    
 
 ## *info* Elemento
 
@@ -387,7 +398,10 @@ Información adicional proporcionada a los usuarios. Esto es útil cuando usted 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Tienes que añadir la siguiente línea a la 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Variables

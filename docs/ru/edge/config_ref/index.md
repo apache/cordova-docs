@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Файл config.xml
 
@@ -131,3 +130,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     
 
 Смотрите подробную информацию о том, как определить каждую функции в разделе Справочник API. Также смотрите Руководство по разработке плагинов для получения дополнительной информации по плагинам.
+
+## Элемент *platform*
+
+При использовании командной строки для построения приложений, иногда бывает необходимо указать параметры или другие элементы, специфичные для конкретной платформы. Используйте элемент `<platform>` для указания конфигурации которая должна применяться только в файле `config.xml` определенной платформы. Например, вот как можно указать, что только на платформе Android следует использовать параметр Fullscreen:
+
+        <platform name="android">
+            <preference name="Fullscreen" value="true" />
+        </platform>

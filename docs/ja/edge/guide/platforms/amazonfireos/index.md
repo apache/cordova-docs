@@ -1,4 +1,4 @@
----
+* * *
 
 免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 ライセンスのコピーを入手した可能性があります。
 
@@ -93,17 +93,15 @@ Windows の PATH 環境を変更: する
 
 ### アマゾン WebView SDK
 
-アマゾン火 OS プラットフォーム ターゲットを用いた Cordova アプリを作成するためにダウンロード、アンパック、アマゾン WebView SDK サポート ファイルをインストールする必要があります。 この手順はのみ行う必要があります、最初のアマゾン火 OS プロジェクトやコルドバをアップグレードした場合。
+アマゾン火 OS プラットフォーム ターゲットを用いた Cordova アプリを作成するためにダウンロード、アンパック、アマゾン WebView SDK サポート ファイルをインストールする必要があります。 この手順はのみ行う必要があります最初のアマゾン火 OS プロジェクト。
 
 *   [Amazon 開発者ポータル][1]からアマゾン WebView SDK をダウンロードします。.
 
-*   コピー `awv_interface.jar` コルドバの作業ディレクトリにダウンロードした SDK から。
+*   コピー `awv_interface.jar` コルドバの作業ディレクトリにダウンロードした SDK から。それが存在しない場合は、commonlibs(shown below) フォルダーを作成します。
     
-    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
-    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
-
-***注：***インストール プロセスでは、コルドバのオンデマンドのための `~/.cordova/lib/amazon-fireos` プラットフォーム ディレクトリは、最初のプロジェクトにプラットフォームを追加するまで作成されません。
+    **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## アマゾン火 OS の新しいプロジェクトを作成します。
 

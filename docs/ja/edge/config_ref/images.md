@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # アイコンとスプラッシュ画面
 
@@ -25,7 +24,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-src: (必須) www ディレクトリを基準にして、イメージ ファイルの場所を指定します。
+src: (必須)、プロジェクト ディレクトリを基準にして、イメージ ファイルの場所を指定します。
 
 プラットフォーム: (省略可能) ターゲット プラットフォーム
 

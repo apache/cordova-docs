@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone 플랫폼 가이드
 
@@ -86,50 +85,6 @@ SDK와 함께에서 코르도바의 Windows Phone 중심으로 셸 도구를 사
 
  [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
 
-SDK를 설치한 후 Windows 명령줄에서 코르도바를 SDK을 사용할 수 있도록 시스템의 경로 수정 해야 합니다.
-
-*   먼저 경로 문자열을 얻을 해야 합니다. **파일 탐색기**를 열고, 이동 `C:\Windows\Microsoft.NET\Framework` , 다음 가장 최근 프레임 워크를 엽니다. 복사 **CTRL-c** 를 입력 한 다음 전체 경로 문자열을 보려면 탐색 경로 오른쪽에 클릭 합니다.
-    
-    ![][11]
-
-*   다음 경로 수정 해야 합니다. **애플 리 케이 션** 의 영역 내에서 윈도우 8 홈 화면에서 **제어판** 을 엽니다.
-    
-    ![][12]
-
-*   **시스템** 제어판 항목을 엽니다.
-    
-    ![][13]
-
-*   왼쪽에 있는 목록에서 **고급 시스템 설정** 을 선택 하십시오.
-    
-    ![][14]
-
-*   결과 패널의 하단에서 **환경 변수** 단추를 누릅니다.
-    
-    ![][15]
-
-*   **사용자 변수**에서 **경로** 선택한 다음 **편집**을 누릅니다.
-    
-    ![][16]
-    
-    그렇지 않으면 사용할 수 없는 **경로** 경우 그것을 만들려면 **새** 을 누릅니다.
-
-*   경로 값이 이미 존재 하는 경우 세미콜론을 추가 하 고 이전 복사 경로 문자열을 붙여 넣습니다. 그렇지 않으면 단순히 문자열을 붙여 넣습니다.
-    
-    ![][17]
-    
-    여기는 샘플 **경로** 값 또한 지정 하는 `npm` 유틸리티 코르도바 CLI를 설치 하는 데 필요한:
-    
-    C:\Users\me\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
-
- [11]: img/guide/platforms/wp8/modpath_copy.png
- [12]: img/guide/platforms/wp8/modpath_control_panel.png
- [13]: img/guide/platforms/wp8/modpath_system.png
- [14]: img/guide/platforms/wp8/modpath_advanced.png
- [15]: img/guide/platforms/wp8/modpath_environment.png
- [16]: img/guide/platforms/wp8/modpath_edit.png
- [17]: img/guide/platforms/wp8/modpath_append.png
-
 ## 새 프로젝트 만들기
 
 이 시점에서 새 프로젝트를 만들 플랫폼 CLI 도구는 명령줄 인터페이스 또는 Windows Phone 관련 셸 도구 집합 설명 사이 선택할 수 있습니다. 소스 코드 디렉토리 내 여기 CLI 접근이 이다:
@@ -186,36 +141,36 @@ SDK를 설치한 후 Windows 명령줄에서 코르도바를 SDK을 사용할 �
 
 에뮬레이터 설치 된 애플 리 케이 션 장치 이미지를 실행 합니다. 홈 화면에서 **HelloWorld** 응용 프로그램을 실행 하는 애플 리 케이 션 패널으로 이동 합니다. 이 뒤에 그것의 주요 인터페이스는 시작 화면을 실행 하는 응용 프로그램을 보여 줍니다.
 
-![][18]
+![][11]
 
- [18]: img/guide/platforms/wp8/wp8_emulator.png
+ [11]: img/guide/platforms/wp8/wp8_emulator.png
 
 에뮬레이터의 기본 컨트롤 장치 화면의 상단 오른쪽에 세로 가로 방향 사이 전환할 수 있습니다. **>** 단추 더 복잡 한 방향 및 제스처를 테스트할 수 있는 더 많은 컨트롤을 엽니다.
 
-![][19]
+![][12]
 
- [19]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
 이러한 고급 컨트롤 또한 소자의 위치를 수정 하거나 수 시퀀스의 움직임을 시뮬레이션 하기 위해:
 
-![][20]
+![][13]
 
- [20]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## 장치에 배포
 
-장치에서 응용 프로그램을 테스트 하기 전에 장치를 등록 해야 합니다. 배포 하 고 Windows Phone 8에서 테스트 하는 방법에 대 한 자세한 내용은 [Microsoft의 설명서][21] 를 참조 하십시오. 또한, 휴대 전화를 컴퓨터에 연결 되어 화면 잠금 해제 되어 있는지 확인 합니다.
+장치에서 응용 프로그램을 테스트 하기 전에 장치를 등록 해야 합니다. 배포 하 고 Windows Phone 8에서 테스트 하는 방법에 대 한 자세한 내용은 [Microsoft의 설명서][14] 를 참조 하십시오. 또한, 휴대 전화를 컴퓨터에 연결 되어 화면 잠금 해제 되어 있는지 확인 합니다.
 
- [21]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
+ [14]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
 
 다음은 장치에서 응용 프로그램을 실행 하려면 다음 CLI 명령을 실행:
 
-        > cordova run wp8
+    > cordova run wp8
     
 
 그것은이 낮은 수준의 쉘 명령에 해당:
 
-        C:\path\to\project\cordova\run --device
+    C:\path\to\project\cordova\run --device
     
 
 또는, Visual Studio에서 작업 하는 경우 상단, 그 후에 보도 녹색 **재생** 버튼을 인근 또는 다른 **f 5** 를 입력에서 드롭 다운 메뉴에서 **Windows Phone 장치** 를 선택합니다.
@@ -224,27 +179,8 @@ SDK를 설치한 후 Windows 명령줄에서 코르도바를 SDK을 사용할 �
 
 위에서 설명한 대로 코르도바 애플 리 케이 션을 빌드 SDK와 함께 열 수 있습니다. 다양 한 `build` 명령을 Visual Studio 솔루션 (*.sln*) 파일을 생성 합니다. Visual Studio 내에서 프로젝트를 수정 하려면 파일을 엽니다. 웹 기반 소스 코드는 프로젝트의 `www` 디렉터리. 다른 도구는 SDK 제공, 메뉴 아래 컨트롤을 사용 하면 Windows Phone 에뮬레이터에서 응용 프로그램 실행:
 
-![][22]
+![][15]
 
- [22]: img/guide/platforms/wp8/wp8_vs.png
+ [15]: img/guide/platforms/wp8/wp8_vs.png
 
 워크플로에서 코르도바의 명령줄 도구 또는 SDK를 사용 하는 방법에 대 한 조언에 대 한 개요를 참조 하십시오. 코르 도우 바 CLI 정기적으로 SDK에서 사용 되는 플랫폼 특정 파일을 덮어 씁니다 크로스 플랫폼 소스 코드에 의존 합니다. SDK 내에서 작동 하려면 하위 셸 도구를 사용 하 여 CLI에 대 안으로.
-
-## Windows Phone 7에 대 한 지원
-
-Windows Phone 8, 하지만 별도 플랫폼을 추가 하는 등 훨씬 작동 Windows Phone 7 응용 프로그램 생성 하기 쉽습니다. CLI를 사용 하는 경우를 지정 하면 `wp7` 와 함께 또는 대신 `wp8` :
-
-        > cordova platform add wp7
-        > cordova build wp7
-        > cordova emulate wp7
-    
-
-`emulate`명령을 생성 한 다른 인터페이스를 표시 하는 Windows Phone 7 장치 에뮬레이터:
-
-![][23]
-
- [23]: img/guide/platforms/wp8/wp7_emulator.png
-
-추출 도구를 제외 하 고 위의 *코르 도우 바 쉘 도구 설치* 섹션의 모든 단계를 수행 하 셸 도구 플랫폼 중심으로 워크플로 사용 하는 경우는 `cordova-wp8\wp7` 디렉터리 대신. 이러한 모든 도구와 같은 작동 그들의 `wp8` 대조 물.
-
-**참고**: underly Windows Phone 7 코르도바 애플 리 케이 션 그들의 렌더링 엔진으로 인터넷 익스플로러 10을 사용 *하지* 않는 및 따라서 일부 보고는 WebViews 고급 Windows Phone 8 애플 리 케이 션에서 사용할 수 있는 기능. 아직도, 둘 다 동일한 Api 집합을 구현합니다. Windows Phone 8 장치 아닌 다른 방법으로 주위에 Windows Phone 7 응용 프로그램을 실행할 수 있습니다: Windows Phone 8 애플 리 케이 션 *하지* Windows Phone 7 장치에서 실행.

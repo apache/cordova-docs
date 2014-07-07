@@ -1,4 +1,4 @@
----
+* * *
 
 licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
 
@@ -93,17 +93,15 @@ Per modificare l'ambiente del percorso su Windows:
 
 ### Amazon WebView SDK
 
-Al fine di creare app di Cordova la destinazione della piattaforma Amazon fuoco OS, sarà necessario scaricare, scompattare e installare i file di supporto di Amazon WebView SDK. Questo passaggio si avrà solo bisogno di essere fatto per il primo progetto OS fuoco Amazon, o se si aggiorna a Cordova.
+Al fine di creare app di Cordova la destinazione della piattaforma Amazon fuoco OS, sarà necessario scaricare, scompattare e installare i file di supporto di Amazon WebView SDK. Solo questo passo dovrà essere fatto per il primo progetto di Amazon fuoco OS.
 
 *   Scaricare il SDK di WebView Amazon [Amazon Developer Portal][1].
 
-*   Copia `awv_interface.jar` da SDK scaricato nella directory di lavoro di Cordova:
+*   Copia `awv_interface.jar` da SDK scaricato nella directory di lavoro di Cordova. Creare la cartella commonlibs(shown below) se non esiste:
     
-    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
-    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
-
-***Nota:*** A causa su richiesta di Cordova installare il processo, il `~/.cordova/lib/amazon-fireos` directory di piattaforma non verrà creato finché non si aggiunge la piattaforma al primo progetto.
+    **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Crea nuovo progetto per Amazon fuoco OS
 

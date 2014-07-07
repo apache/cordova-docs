@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Icone e Splash screen
 
@@ -25,7 +24,7 @@ Quando funziona il CLI si può definire icone di app tramite `<icon>` elemento (
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-src: (obbligatorio) specifica il percorso del file immagine, relativo alla vostra directory www
+src: (obbligatorio) specifica il percorso del file immagine, relativo alla directory del progetto
 
 piattaforma: la piattaforma di destinazione (facoltativo)
 

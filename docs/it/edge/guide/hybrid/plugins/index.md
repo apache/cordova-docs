@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Guida allo sviluppo di plugin
 
@@ -20,7 +19,9 @@ Un *plugin* è un pacchetto di codice inserito che permette di Cordova webview e
 
  [1]: http://plugins.cordova.io
 
-Plugin comprendono una singola interfaccia JavaScript corrispondenti librerie di codice nativo per ogni piattaforma supportata. Questa procedura di sezione attraverso un plugin semplice *eco* che passa una stringa da JavaScript alla piattaforma nativa e ritorno, uno che è possibile utilizzare come modello per costruire funzioni molto più complesse. Questa sezione discute la struttura di base del plugin e l'interfaccia JavaScript rivolte. Per ogni interfaccia nativa corrispondente, vedere l'elenco alla fine di questa sezione.
+Plugin comprendono una singola interfaccia JavaScript corrispondenti librerie di codice nativo per ogni piattaforma supportata. In sostanza questo nasconde le varie implementazioni di codice nativo dietro un'interfaccia comune di JavaScript.
+
+Questa sezione a pochi passi attraverso un plugin semplice *eco* che passa una stringa da JavaScript alla piattaforma nativa e ritorno, uno che è possibile utilizzare come modello per costruire funzioni molto più complesse. Questa sezione discute la struttura di base del plugin e l'interfaccia JavaScript rivolte. Per ogni interfaccia nativa corrispondente, vedere l'elenco alla fine di questa sezione.
 
 Oltre a queste istruzioni, quando si appresta a scrivere un plugin che è meglio guardare oltre [esistenti plugin][2] per l'orientamento.
 
@@ -134,6 +135,7 @@ Una volta definito per il plugin JavaScript, è necessario integrarla con almeno
 *   iOS Plugins
 *   BlackBerry 10 plugin
 *   Windows Phone Plugins
+*   Plugin di Windows 8
 
 La piattaforma di Tizen non supporta plugin.
 

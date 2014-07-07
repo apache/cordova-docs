@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Stockage
 
@@ -27,8 +26,6 @@ Stockage de plusieurs API sont disponibles pour des applications de Cordova. Voi
 Aussi connu comme *stockage web*, *stockage simple*, ou par son interface de rechange *stockage de session* , cette API permet le stockage de paire clé/valeur synchrone et est disponible dans les implémentations sous-jacentes WebView. Reportez-vous à [la spécification W3C][2] pour plus de détails.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 bizarrerie**: notation par points est *pas* disponible, alors n'oubliez pas d'utiliser `setItem` ou `getItem` plutôt que d'accéder aux clés directement à partir de l'objet de stockage, comme dans`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ Cette API est disponible dans le mode Web sous-jacent. [Indexed DB][4] offre plu
 
 Les plates-formes suivantes prennent en charge IndexedDB :
 
-*   Windows Phone 8
 *   BlackBerry 10
+*   Windows Phone 8
+*   Windows 8
 
 ## Options fondées sur le plugin
 

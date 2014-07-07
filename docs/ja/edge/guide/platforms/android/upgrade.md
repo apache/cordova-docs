@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Android のアップグレード
 
@@ -34,10 +33,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin/update <project_path>
+        bin/更新 < project_path >
     
 
-**警告:**アンドロイド 4.4, タイプとファイルの input 要素の作成を開始 =「ファイル」ファイル選択ダイアログ ボックスは開きません。 これは Android 上のクロムと回帰であり、問題を再現することができますスタンドアロン クロムブラウザー Android 上でアンドロイド 4.4 のファイル転送とファイルのプラグインを使用するは、回避策 (http://code.google.com/p/android/issues/detail?id=62220 を参照)。入力の型から、onClick イベントをリッスンすることができます「ファイル」を = し、ファイル ピッカー UI をポップアップします。 アップロードとフォーム データのネクタイ、するために JavaScript を使用して、出色のマルチパートのポストの要求にフォームの値をアタッチすることができます。 このバグはまだ Android 4.4.2 時点が存在します。
+**警告:**アンドロイド 4.4 - アンドロイド 4.4.3、ファイルを作成する入力型を持つ要素 =「ファイル」ファイル選択ダイアログ ボックスは開きません。 これは Android 上のクロムと回帰であり、問題を再現することができますスタンドアロン クロムブラウザー Android 上でアンドロイド 4.4 のファイル転送とファイルのプラグインを使用するは、回避策 (http://code.google.com/p/android/issues/detail?id=62220 を参照)。入力の型から、onClick イベントをリッスンすることができます「ファイル」を = し、ファイル ピッカー UI をポップアップします。 アップロードとフォーム データのネクタイ、するために JavaScript を使用して、出色のマルチパートのポストの要求にフォームの値をアタッチすることができます。
 
 ## 3.1.0 3.0.0 からアップグレード
 
@@ -49,7 +48,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin/update <project_path>
+        bin/更新 < project_path >
     
 
 ## 2.9.0 から CLI (3.0.0) へのアップグレード

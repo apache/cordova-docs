@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Android の構成
 
@@ -69,3 +68,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `SetFullscreen`(ブール値、既定値は `false` ): と同じ、 `Fullscreen` でこの xml ファイルのグローバルな構成パラメーター。 このアンドロイド固有要素は推奨されませんグローバル `Fullscreen` 要素、将来のバージョンで削除されます。
+
+*   `AndroidLaunchMode`(文字列、既定値は `singleTop` ): アクティビティを設定します `android:launchMode` 属性。 これは、アプリはアプリのアイコンまたは意図から起動が既に実行されているときに何が起こるかを変更します。 有効な値は `standard` 、 `singleTop` 、 `singleTask` 、`singleInstance`.
+    
+        <preference name="AndroidLaunchMode" value="singleTop"/>

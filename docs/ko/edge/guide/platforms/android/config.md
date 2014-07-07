@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 안 드 로이드 구성
 
@@ -69,3 +68,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         
 
 *   `SetFullscreen`(boolean, 기본값은 `false` ): 동일은 `Fullscreen` 이 xml 파일의 전역 구성 매개 변수. 이 안 드 로이드 관련 요소는 전역에 찬성 폐기 `Fullscreen` 요소를 이후 버전에서 제거 될 예정입니다.
+
+*   `AndroidLaunchMode`(문자열, 기본값: `singleTop` ): 활동 설정 `android:launchMode` 특성. 이 어떻게 응용 프로그램 애플 리 케이 션 아이콘 이나 의도에서 시작 하 고 이미 실행 중인 변경 됩니다. 유효한 값은 `standard` , `singleTop` , `singleTask` ,`singleInstance`.
+    
+        <preference name="AndroidLaunchMode" value="singleTop"/>

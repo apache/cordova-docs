@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 플러그인 명세
 
@@ -73,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-기본 목록에 엔진은 여기에 '<engine>' 태그를 지원 합니다: * '코르도바' * ' 코르도바-plugman' * ' 코르도바-아마존-fireos' * ' 코르도바-안 드 로이드 ' * ' 코르도바-ios' * ' 코르도바-blackberry10' * ' 코르도바 wp7' * ' 코르도바-wp8' * ' 코르도바 windows8'  
+기본 목록에 엔진은 여기에 '<engine>' 태그를 지원 합니다: * '코르도바' * ' 코르도바-plugman' * ' 코르도바-아마존-fireos' * ' 코르도바-안 드 로이드 ' * ' 코르도바-ios' * ' 코르도바-blackberry10' * ' 코르도바-wp8' * ' 코르도바 windows8'  
 * ' 안 드 로이드 sdk' / 설치 수준 높은 안 드 로이드 api 반환 / * ' 애플-xcode' / xcode 버전 반환 합니다 / * ' 애플-ios' / / 설치 된 가장 높은 iOS 버전을 반환 합니다 * ' 애플-os x ' / OSX 버전 반환 합니다 / * ' 블랙베리 ndk' / / 네이티브 blackberry SDK 버전을 반환 합니다
 
 이렇게 사용자 정의 아파치 코르도바 기반 프레임 워크 엔진 태그 아래 나열 되어야 합니다 지정:
@@ -241,8 +240,8 @@ plugman 누구의 대상 프로젝트 엔진의 제약 조건을 충족 하지 �
 *   안 드 로이드
 *   blackberry10
 *   ios
-*   wp7
 *   wp8
+*   windows8
 
 ## *소스 파일* 요소
 
@@ -317,6 +316,10 @@ XML에 대 한 예제:
     
     선택기 지정 된 문서의 아이 게 해결 되지 않으면, 도구 중지 되 고 반대로 설치 프로세스 경고를 표시 및 0이 아닌 코드와 함께 종료 됩니다.
 
+*   `after`: XML 조각을 추가 허용된 형제 자매의 우선 순위가 지정 된 목록입니다. [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1] 같은 XML 요소의 엄격한 순서 필요로 하는 파일에 변경 내용을 지정 하는 데 유용
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *플러그인 plist* 요소
 
 이것은 *오래 된* 코르 도우 바-ios 2.2.0 아래만 적용 됩니다. 사용 된 `<config-file>` 코르 도우 바의 최신 버전에 대 한 태그.
@@ -372,13 +375,21 @@ XML에 대 한 예제:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 `src`는 plugman 지정된 된 플랫폼에 대 한 올바른 방식 코르도바 프로젝트에 추가 하려고 하는 프레임 워크를 식별 하는 특성.
 
 옵션 `weak` 특성은 프레임 워크 약하게 연결 되어야 하는지 여부를 나타내는 boolean입니다. 기본값은`false`.
 
-옵션 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 값입니다 (따라서 아니에요 시스템 프레임 워크). 기본값은`false`.
+옵션 `custom` 특성은 프레임 워크 하나 플러그인 파일의 일부로 포함 되어 있는지 여부를 나타내는 부울 값입니다 (따라서 아니에요 시스템 프레임 워크). 기본값은 `false` . ***에 안 드 로이드*** **src**를 치료 하는 방법을 지정 합니다. 만약 `true` **src** 는 응용 프로그램 프로젝트 디렉터리에서 상대 경로-안 드 로이드 SDK 디렉터리에서.
+
+옵션 `type` 특성은 추가 하는 프레임 워크의 형식을 나타내는 문자열입니다. 현재 `projectReference` 지원 되는 윈도우 8에만. 사용 하 여 `custom='true'` 및 `type='projectReference'` 는 컴파일 추가 됩니다 + 코르 도우 바 프로젝트의 단계를 연결 하는 프로젝트에 대 한 참조를 추가 합니다. 이 본질적으로 유일한 방법은 현재 프레임 워크를 '사용자 정의'로 그들은 명시적으로 참조 코르도바 응용 프로그램 종속성으로 빌드된 여러 아키텍처를 타겟팅 할 수 있습니다.
+
+옵션 `parent` 속성은 현재 안 드 로이드에만 지원 됩니다. 참조를 추가 하는 하위 프로젝트가 포함 된 디렉터리에 상대적인 경로 설정 합니다. 기본값은 `.` , 즉 응용 프로그램 프로젝트. 그것은이 예제에서 같은 하위 프로젝트 간의 참조를 추가할 수 있습니다.
+
+    < 프레임 워크 src = "FeedbackLib" 사용자 정의 = "true" / >< 프레임 워크 src = "엑스트라/안 드 로이드/지원/v7/appcompat" 사용자 정의 "false" 부모 = = "FeedbackLib" / >
+    
 
 ## *정보* 요소
 
@@ -387,7 +398,10 @@ XML에 대 한 예제:
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    'Local.properties'에 다음 줄을 추가 해야: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / 정보 >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## 변수

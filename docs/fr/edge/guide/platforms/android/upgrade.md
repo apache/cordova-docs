@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Mise à jour Android
 
@@ -34,10 +33,10 @@ Pour les projets qui ont été créés avec le cordova CLI :
 
 Pour les projets ne créés pas avec la CLI de cordova, exécutez :
 
-        bin/update <project_path>
+        bin/mise à jour < project_path >
     
 
-**Avertissement :** Commençant sur Android 4.4, création d'un élément du fichier d'entrée avec type = « file » n'ouvrira pas la boîte de dialogue Sélecteur. Il s'agit d'une régression avec Chrome sur Android et le problème peut être reproduit dans le navigateur de Chrome autonome sur Android (voir http://code.google.com/p/android/issues/detail?id=62220) la solution de contournement suggérée est d'utiliser le transfert de fichiers et fichiers plugins pour Android 4.4. Vous pouvez écouter un événement onClick du input type = « file » et ensuite apparaître un sélecteur de fichier UI. Afin de relier les données du formulaire avec le téléchargement, vous pouvez utiliser JavaScript pour fixer des valeurs de formulaire à la requête POST plusieurs partie qui fait du transfert de fichiers. Ce bug existe toujours à partir de Android 4.4.2
+**Avertissement :** Sur Android 4.4 - 4.4.3 Android, création d'un fichier d'entrée élément avec type = « file » n'ouvrira pas la boîte de dialogue Sélecteur. Il s'agit d'une régression avec Chrome sur Android et le problème peut être reproduit dans le navigateur de Chrome autonome sur Android (voir http://code.google.com/p/android/issues/detail?id=62220) la solution de contournement suggérée est d'utiliser le transfert de fichiers et fichiers plugins pour Android 4.4. Vous pouvez écouter un événement onClick du input type = « file » et ensuite apparaître un sélecteur de fichier UI. Afin de relier les données du formulaire avec le téléchargement, vous pouvez utiliser JavaScript pour fixer des valeurs de formulaire à la requête POST plusieurs partie qui fait du transfert de fichiers.
 
 ## Mise à niveau vers 3.1.0 de 3.0.0
 

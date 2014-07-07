@@ -1,4 +1,6 @@
--ライセンス: Apache ソフトウェア財団 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,14 +11,13 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone のプラグイン
 
 Windows Phone プラットフォームでネイティブのプラグインのコードを実装する方法の詳細について説明します。 これを読む前に、プラグインの構造とその一般的な JavaScript のインターフェイスの概要についてアプリケーション ・ プラグインが参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。
 
-Windows Phone 上のコルドバのプラグインを書くには、コルドバのアーキテクチャの基本的な理解が必要です。 コルドバ WP7 から成っている、 `WebBrowser` をホスト アプリケーションの JavaScript コードとネイティブ API 呼び出しを管理します。 C# を拡張する `BaseCommand` クラス ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` )、必要な機能のほとんどが付属しています：
+Windows Phone 上のコルドバのプラグインを書くには、コルドバのアーキテクチャの基本的な理解が必要です。 コルドバ WP8 から成っている、 `WebBrowser` をホスト アプリケーションの JavaScript コードとネイティブ API 呼び出しを管理します。 C# を拡張する `BaseCommand` クラス ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` )、必要な機能のほとんどが付属しています：
 
 1.  あなたのプロジェクトを選択し、**追加 → 新規アイテム...**を選択するを右クリックしてください希望する場合にそれを追加できます、 `Plugins` フォルダー。
 
@@ -40,7 +41,7 @@ Windows Phone 上のコルドバのプラグインを書くには、コルドバ
 
 [BaseCommand.cs][1]クラスをオーバーライドするプラグインを利用可能なメソッドを参照してください。 たとえば、プラグインは '一時停止' と '再開' イベントをキャプチャできます。
 
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+ [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
 ## 名前空間
 

@@ -1,6 +1,6 @@
----
+* * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Смотрите файл уведомления, распространяется с этой работой за дополнительной информацией относительно авторского права собственности. ASF лицензии этот файл вам под лицензией Apache версии 2.0 ("Лицензия"); Вы не можете использовать этот файл за исключением в соответствии с лицензией. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -11,52 +11,125 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Иконки и заставки
 
-В этом разделе показано, как настроить иконку приложения и необязательную заставку для различных платформ, как при работе с Cordova CLI (описано в разделе Интерфейс Командной Строки) так и с помощью средств SDK специфических для платформы (подробнее в разделе Руководство по поддерживаемым платформам).
+В этом разделе показано, как настроить иконку приложения и дополнительные заставки для различных платформ, как при работе с Cordova CLI (описано в разделе Интерфейс Командной Строки) так и с помощью средств SDK специфических для платформы (подробнее в разделе Руководстве по поддерживаемым платформам).
 
 ## Настройка иконок в CLI
 
-При работе в CLI, исходные файлы для иконок расположены в индивидуальных подкаталогах для каждой платформы, расположенных в каталоге `www/res/icons` проекта. Только что созданный проект, по умолчанию, идет с набором иконок Cordova, которые вы можете заменить для тех платформ на которых вы будете работать.
+Когда работает в CLI вы можете определить app icon(s) через `<icon>` элемент ( `config.xml` ). Если значок не задан, то используется Apache Cordova логотип.
 
-Android предусматривает иконки для низкого, среднего, высокого и сверхвысокого разрешения:
-
-        android/icon-36-ldpi.png
-        android/icon-48-mdpi.png
-        android/icon-72-hdpi.png
-        android/icon-96-xhdpi.png
+        <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-Платформа iOS предусматривает квадратные иконки 72x72 пикселя иконок для iPads и 57x52 пикселей для iPhone и iPod, с вариантом иконок высокого разрешеня *2x* для Retina дисплеев:
+src: (обязательно) указывает расположение файла изображения, относительно каталога проекта
 
-        ios/icon-57-2x.png
-        ios/icon-57.png
-        ios/icon-72-2x.png
-        ios/icon-72.png
+Платформа: (необязательно) Целевая платформа
+
+ширина: (необязательно) значок ширина в пикселях
+
+Высота: (необязательно) значок высота в пикселях
+
+Плотность: (опционально) android конкретные, указывает значок плотности
+
+Следующая конфигурация может использоваться для определения единого по умолчанию значок, который будет использоваться для всех платформ.
+
+        <icon src="res/icon.png" />
     
 
-Windows Phone предусматривает значок по умолчанию 48x48 пикселей, наряду с различными изображениями плиток, используемых при представления приложения:
+Для каждой платформы можно также определить идеальное значков, заданных для различных разрешений экрана.
 
-        windows-phone/icon-48.png
-        windows-phone/icon-62-tile.png
-        windows-phone/icon-173-tile.png
+Amazon Fire ОС
+
+         <platform name="amazon-fireos">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Для BlackBerry 10 необходимо определить элемент icon в файле config.xml:
+Android
 
-        <icon src="blackberry10/icon-86.png" />
+         <platform name="android">
+                  <icon src="res/android/ldpi.png" density="ldpi" />
+                  <icon src="res/android/mdpi.png" density="mdpi" />
+                  <icon src="res/android/hdpi.png" density="hdpi" />
+                  <icon src="res/android/xhdpi.png" density="xhdpi" />
+         </platform>
     
 
-Смотрите документацию BlackBerry для указания различных размеров и локалей.
+Blackberry10
 
-[http://developer.blackberry.com/html5/documentation/icon_element.html]
+         <platform name="blackberry10">
+                  <icon src="res/bb10/icon-86.png" />
+                  <icon src="res/bb10/icon-150.png" />
+         </platform>
+    
 
-Tizen предусматривает 128x128 пиксельные иконки:
+Смотрите документацию BlackBerry при ориентировании на набор различных размеров и языков. [http://developer.blackberry.com/html5/documentation/icon_element.html]
 
-        tizen/icon-128.png
+Firefox OS
+
+         <platform name="firefoxos">
+                  <icon src="res/ff/logo.png" width="60" height="60" />
+         </platform>
+    
+
+iOS
+
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
+    
+
+Tizen
+
+         <platform name="tizen">
+                  <icon src="res/tizen/icon-128.png" width="128" height="128" />
+         </platform>
+    
+
+Windows Phone8
+
+         <platform name="wp8">
+                  <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+                  <!-- tile image -->
+                  <icon src="res/wp/Background.png" width="159" height="159" />
+         </platform>
+    
+
+Windows8
+
+         <platform name="windows8">
+                  <icon src="res/windows8/logo.png" width="150" height="150" />
+                  <icon src="res/windows8/smalllogo.png" width="30" height="30" />
+                  <icon src="res/windows8/storelogo.png" width="50" height="50" />
+         </platform>
     
 
 ## Настройка заставки с помощью CLI
@@ -110,50 +183,29 @@ Windows Phone определяет только один вариант заст
 *   medium (mdpi): по крайней мере 470 × 320
 *   small (ldpi): по крайней мере 426 × 320
 
-Если вы хотите использовать заставку по умолчанию, предоставляемую с Cordova, вы должны скопировать png файлы из `platforms/android/www/res/screen/android` в `platforms/android/res/drawable*/`:
-
-    cd platforms/android/res
-    mkdir drawable-port-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-portrait.png drawable-port-ldpi/screen.png
-    mkdir drawable-land-ldpi
-    cp -p ../assets/www/res/screen/android/screen-ldpi-landscape.png drawable-land-ldpi/screen.png
-    mkdir drawable-port-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-portrait.png drawable-port-mdpi/screen.png
-    mkdir drawable-land-mdpi
-    cp -p ../assets/www/res/screen/android/screen-mdpi-landscape.png drawable-land-mdpi/screen.png
-    mkdir drawable-port-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-portrait.png drawable-port-hdpi/screen.png
-    mkdir drawable-land-hdpi
-    cp -p ../assets/www/res/screen/android/screen-hdpi-landscape.png drawable-land-hdpi/screen.png
-    mkdir drawable-port-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-portrait.png drawable-port-xhdpi/screen.png
-    mkdir drawable-land-xhdpi
-    cp -p ../assets/www/res/screen/android/screen-xhdpi-landscape.png drawable-land-xhdpi/screen.png
-    
-
-Имена под-директорий в директории `drawable` должны соответствовать конвенциям Android для поддержки [различных размеров экранов][2] и [файлов ресурсов][3].
+При создании нового проекта Android, изображения заставки по умолчанию, предоставляемые базовым приложение Cordova уже должны присутствовать в каталогах `platforms/android/res/drawable*`. Вы можете заменить их вашими собственными изображениями. При указании своих собственных заставок, вы не обязаны предоставлять все те же 8 изображений, которые предоставляет Cordova. Более или менее оптимизация может быть использована. Имена под-директорий в директории `drawable` должны соответствовать конвенциям Android для поддержки [различных размеров экранов][2] и [файлов ресурсов][3].
 
  [2]: http://developer.android.com/guide/practices/screens_support.html
  [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
 
-В `config.xml`, добавьте следующие значения:
+В файле верхнего уровня `config.xml` (не в том который находится в `platforms`) добавьте следующие параметры:
 
-    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
     
 
-Первая строка указывает изображение которое отображать в качестве заставки. Это имя PNG файла в директориях `drawable*`. Если название файла изображения отличается от `splash.png`, вам необходимо изменить значение в данной строке. Не указывайте расширение файл (т.е., `.png`). Если вы хотите использовать заставку по умолчанию, предоставляемую с Cordova как указано выше, используйте значение `screen`.
+Первая строка указывает изображение которое отображать в качестве заставки. Это имя файла png в каталогах `drawable*`, без расширения `.png`. Значения по умолчанию для заставки - `screen` (для файла `platforms/android/res/drawable*/screen.png`), так что если вы дадите изображениям другие названия, отличные от `screen.png` в каталогах `drawable*`, вам необходимо добавить/модифицировать эту линию.
 
 Вторая строка устанавливает задержку по умолчанию, как долго заставка будет отображаться в миллисекундах. Значение должно содержать максимальное ожидаемое время загрузки приложение. Значение по умолчанию для SplashScreenDelay - 3000мс.
 
-И наконец, заставки должны отображаться, только в том случае если это необходимо. Когда ваше приложение запустилось, и окно браузера загрузилось, ваше приложение должно скрывать заставку, чтобы ваш основной экран становился видимым. Из-за того что время загрузки приложения может различаться из-за различного набора параметров, рекомендуется чтобы ваше приложение явно вызывало `navigator.splashscreen.hide()` в Javascript методе который обрабатывает событие `deviceready`. В противном случае заставка будет отображаться в течении временного интервала определенного в значении SplashScreenDelay которое вы сконфигурировали выше. Этот событийно ориентированный подход, крайне рекомендуется в отличие от отображения заставки в течении фиксированного промежутка времени.
+Наконец, в качестве стандартной практики заставка должен присутствовать не дольше чем это необходимо. Когда ваше приложение запустилось и webview был загружен, ваше приложение должно скрывать заставку чтобы ваше главный экран становился видимым, сразу после того как он готов к использованию. Из-за того что время запуска приложения может достаточно сильно различаться из-за разных факторов, рекомендуется чтобы ваше приложение явно вызывало `navigator.splashscreen.hide()` в методе JavaScript который обрабатывает событие `deviceready`. В противном случае заставка будет видимым в течении количества миллисекунд указанных в параметре SplashScreenDelay, которое вы указали выше, это значение вероятно, больше, чем это необходимо. Этот событийно ориентированный подход, крайне рекомендуется в отличие от отображения заставки в течении фиксированного промежутка времени.
 
 ## Заставки для платформы iOS
 
-Скопируйте изображения заставки в каталог `Resources/splash` проекта iOS. Добавьте изображения только для тех устройств, которые вы хотите поддерживать, например iPad или iPhone. Размер каждого изображения должен быть:
+Скопируйте изображения заставки в каталог `Resources/splash` проекта iOS. Добавьте изображения только для тех устройств, которые вы хотите поддерживать, например iPad или iPhone. Размер каждого изображения должны быть:
 
 *   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048 x 1496 пикселей)
+*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
 *   Default-Landscape~ipad.png (1024x748 pixels)
 *   Default-Portrait@2x~ipad.png (1536x2008 pixels)
 *   Default-Portrait~ipad.png (768x1004 pixels)

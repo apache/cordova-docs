@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Spécification des plugins
 
@@ -73,7 +72,7 @@ Le `<engine>` tags possède aussi un support par défaut pour toutes les princip
     </engines>
     
 
-Voici une liste de la défaillance des moteurs qui les »<engine>' tag prend en charge: * « cordova » * « cordova-plugman » * « cordova-amazon-fireos » * « cordova-android » * « cordova-ios » * « cordova-blackberry10 » * « cordova-wp7 » * « cordova-wp8 » * « cordova-windows8 »  
+Voici une liste de la défaillance des moteurs qui les »<engine>' tag prend en charge: * « cordova » * « cordova-plugman » * « cordova-amazon-fireos » * « cordova-android » * « cordova-ios » * « cordova-blackberry10 » * « cordova-wp8 » * « cordova-windows8 »  
 * ' android-sdk / / retourne l'api Android plus élevé niveau installé * « apple-xcode » / / retourne la version de xcode * « apple-ios » / / retourne la plus haute version d'iOS installée * « apple-OS x » / / retourne la version OSX * « blackberry-ndk » / / retourne la version SDK natif blackberry
 
 En spécifiant des cadres personnalisés basé sur Apache Cordova doivent figurer sous la balise de moteur comme suit :
@@ -241,8 +240,8 @@ Les noms de plate-forme doivent être en minuscules. Les noms de plate-forme, so
 *   Android
 *   blackberry10
 *   iOS
-*   WP7
 *   wp8
+*   Windows8
 
 ## *fichier source* Élément
 
@@ -317,6 +316,10 @@ Il prend en charge les attributs suivants :
     
     Si le sélecteur ne résout pas à un enfant du document spécifié, l'outil s'arrête et inverse le processus d'installation, émet un avertissement et se termine avec un code différent de zéro.
 
+*   `after`: Une liste de priorités de frères et sœurs acceptées après lequel ajouter l'extrait de code XML. Utile pour spécifier des modifications dans les fichiers nécessitant un ordre strict d'éléments XML comme [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *plugins-plist* Élément
 
 Ceci est *obsolète* car elle ne s'applique à cordova-ios 2.2.0 et au-dessous. Utiliser le `<config-file>` tag pour les versions plus récentes de Cordova.
@@ -369,14 +372,24 @@ Identifie un cadre (généralement une partie de la plate-forme/OS) dont dépend
 
 Exemples :
 
-    < cadre src="libsqlite3.dylib « / >< cadre src="social.framework "faible ="true"/ >< cadre src="relative/path/to/my.framework » personnalisé = "true" / >
+    <framework src="libsqlite3.dylib" />
+    <framework src="social.framework" weak="true" />
+    <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 Le `src` attribut identifie le cadre, qui plugman tente d'ajouter au projet Cordova, dans le mode correct pour une plate-forme donnée.
 
 Le paramètre optionnel `weak` attribut est une valeur booléenne qui indique si le cadre devrait être faiblement lié. La valeur par défaut est`false`.
 
-Le paramètre optionnel `custom` attribut est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est`false`.
+Le paramètre optionnel `custom` attribut est une valeur booléenne qui indique si le cadre est celui qui est inclus dans le cadre de vos fichiers du plugin (donc il n'est pas une infrastructure de système). La valeur par défaut est `false` . ***Sur Android*** il indique comment traiter des **src**. Si `true` **src** est un chemin d'accès relatif du répertoire du projet de l'application, dans le cas contraire--depuis le répertoire du SDK Android.
+
+Le paramètre optionnel `type` attribut est une chaîne indiquant le type de cadre à ajouter. Actuellement, seul `projectReference` est pris en charge uniquement sur Windows 8. À l'aide de `custom='true'` et `type='projectReference'` va ajouter une référence au projet qui sera ajouté à la compilation + lien vers les étapes du projet cordova. Essentiellement, c'est le seul moyen actuellement qu'un cadre « personnalisé » peut cibler plusieurs architectures comme ils sont explicitement construit comme une dépendance de l'application de cordova référencement.
+
+Le paramètre optionnel `parent` attribut est actuellement pris en charge uniquement sur Android. Il définit le chemin d'accès relatif au répertoire contenant le sous-projet à laquelle ajouter la référence. La valeur par défaut est `.` , c'est-à-dire le projet d'application. Il permet d'ajouter des références entre projets sub comme dans cet exemple :
+
+    < cadre src = « FeedbackLib » custom = « true » / >< cadre src = « options/android/soutien/v7/appcompat » custom = « false » parent = « FeedbackLib » / >
+    
 
 ## *info* Élément
 
@@ -385,7 +398,10 @@ Informations supplémentaires fournies aux utilisateurs. Ceci est utile lorsque 
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Vous devez ajouter la ligne suivante à la « local.properties »: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Variables

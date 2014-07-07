@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 블랙베리 10 업그레이드
 
@@ -28,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
-        bin/update <project_path>
+        빈/업데이트 < project_path >
     
 
 ## 3.1.0 3.0.0에서 업그레이드

@@ -1,11 +1,11 @@
----
+* * *
 
 免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 ライセンスのコピーを入手した可能性があります。
 
            http://www.apache.org/licenses/LICENSE-2.0 ライセンスの下で配布されるソフトウェアで配布されて適用される法律によって必要なまたは書面で合意した、しない限り、"AS IS"なしの保証または条件、いかなる種類の明示的または黙示的、基礎。  ライセンス ライセンスにおける権限と制限を支配する特定の言語を参照してください。
     
 
----
+* * *
 
 # プラットフォームのサポート
 
@@ -43,18 +43,12 @@
       </th>
       
       <th>
-        <tt>wp7</tt>(Windows<br />携帯電話 7)
-      </th>
-      
-      <th>
         <tt>wp8</tt>(Windows<br />電話 8)
       </th>
       
       <th>
         <tt>win8</tt><br />(Windows 8)
       </th>
-      
-      <!--        <th><tt>firefoxos</tt></th> -->
       
       <th>
         <tt>tizen</tt>
@@ -87,10 +81,6 @@
         
         <td data-col="ubuntu"        class="y">
           Ubuntu
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          Windows
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -130,9 +120,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="n">
-        </td>
-        
         <td data-col="winphone8"  class="n">
         </td>
         
@@ -168,10 +155,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(詳細を参照)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -217,9 +200,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -253,9 +233,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -287,9 +264,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -326,9 +300,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -360,9 +331,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -398,9 +366,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -432,9 +397,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -470,9 +432,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -504,9 +463,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -542,9 +498,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -578,9 +531,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -612,9 +562,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -651,9 +598,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -685,9 +629,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -723,9 +664,6 @@
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -757,10 +695,6 @@
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          localStorage ＆ indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">

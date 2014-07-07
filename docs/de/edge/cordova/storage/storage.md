@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Speicher
 
@@ -27,8 +26,6 @@ Mehrere Speicher-APIs sind für Cordova-Anwendungen verfügbar. Finden Sie unter
 Auch bekannt als *web-Speicher*, *einfache Lagerung*, oder durch seine Alternative *Session-Speicherung* -Schnittstelle, diese API bietet synchrone Schlüssel/Wert-Paar Speicher, und steht im zugrunde liegenden WebView-Implementierungen. Finden Sie in [der W3C-Spezifikation][2] für Details.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 Quirk**: Dot Notation ist *nicht* möglich, so sicher sein, verwenden Sie `setItem` oder `getItem` eher als Zugriffstasten direkt aus dem Speicherobjekt, wie in`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ Diese API ist verfügbar in den zugrunde liegenden WebView. [Indiziert DB][4] bi
 
 Die folgenden Plattformen unterstützen IndexedDB:
 
-*   Windows Phone 8
 *   BlackBerry 10
+*   Windows Phone 8
+*   Windows 8
 
 ## Plugin-Optionen
 

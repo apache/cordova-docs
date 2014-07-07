@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,12 +11,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 <div id="home">
   <h1>
-    参考线
+    輔助線
   </h1>
   
   <ul>
@@ -25,110 +24,110 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         概述
       </h2>
       
-      <span>如果你是新的科尔多瓦，启动在这里。包括安装和下一步。</span>
+      <span>如果你是新的科爾多瓦，啟動在這裡。包括安裝和下一步。</span>
     </li>
     <li>
       <h2>
-        平台支持
+        平臺支援
       </h2>
       
-      <span>所有主要功能的兼容性表。</span>
+      <span>所有主要功能的相容性表。</span>
     </li>
     <li>
       <h2>
-        命令行界面
+        命令列介面
       </h2>
       
-      <span>创建、 构建和部署从命令行。</span>
+      <span>創建、 構建和部署從命令列。</span>
     </li>
     <li>
       <h2>
-        平台指南
+        平臺指南
       </h2>
       
-      <span>设置每个平台 SDK 和更新项目。</span>
+      <span>設置每個平臺 SDK 和更新專案。</span>
     </li>
     <li>
       <h2>
-        使用 Plugman 来管理插件
+        使用 Plugman 來管理外掛程式
       </h2>
       
-      <span>时使用的平台为中心的工作流管理无 CLI 的插件。</span>
+      <span>時使用的平臺為中心的工作流管理無 CLI 的外掛程式。</span>
     </li>
     <li>
       <h2>
-        Config.xml 文件
+        Config.xml 檔
       </h2>
       
-      <span>自定义您的应用程序的功能。</span>
+      <span>自訂您的應用程式的功能。</span>
     </li>
     <li>
       <h2>
-        图标和启动画面
+        圖示和啟動畫面
       </h2>
       
-      <span>自定义您的应用程序的图像显示。</span>
+      <span>自訂您的應用程式的圖像顯示。</span>
     </li>
     <li>
       <h2>
         嵌入 WebViews
       </h2>
       
-      <span>在您的本机项目中实现科尔多瓦 web 视图。</span>
+      <span>在您的本機專案中實現科爾多瓦 web 視圖。</span>
     </li>
     <li>
       <h2>
-        插件开发指南
+        外掛程式開發指南
       </h2>
       
-      <span>开发您自己的插件。</span>
+      <span>開發您自己的外掛程式。</span>
     </li>
     <li>
       <h2>
-        隐私指南
+        隱私指南
       </h2>
       
-      <span>了解重要手机隐私问题。</span>
+      <span>瞭解重要手機隱私問題。</span>
     </li>
     <li>
       <h2>
         安全指南
       </h2>
       
-      <span>信息和构建安全的应用程序的提示。</span>
+      <span>資訊和構建安全的應用程式的提示。</span>
     </li>
     <li>
       <h2>
-        白名单指南
+        白名單指南
       </h2>
       
-      <span>授予应用程序对外部资源的访问。</span>
+      <span>授予應用程式對外部資源的訪問。</span>
     </li>
     <li>
       <h2>
-        存储
+        存儲
       </h2>
       
-      <span>本机存储选项的概述。</span>
+      <span>本機存儲選項的概述。</span>
     </li>
     <li>
       <h2>
         下一步
       </h2>
       
-      <span>看看新的科尔多瓦开发者会遇到的主题。</span>
+      <span>看看新的科爾多瓦開發者會遇到的主題。</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">关键字索引</a>
+        <a href="_index.html">關鍵字索引</a>
       </h2>
       
-      <span>完整的文件的索引。</span>
+      <span>完整的檔的索引。</span>
     </li>
   </ul>
   
   <h1>
-    API 参考
+    API 參考
   </h1>
   
   <ul>
@@ -137,14 +136,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         事件
       </h2>
       
-      <span>挂接到本机事件通过 JavaScript。</span>
+      <span>掛接到本機事件通過 JavaScript。</span>
     </li>
     <li>
       <h2>
-        插件的 Api
+        外掛程式的 Api
       </h2>
       
-      <span>发现什么科尔多瓦插件是可用来在您的项目中使用。</span>
+      <span>發現什麼科爾多瓦外掛程式是可用來在您的專案中使用。</span>
     </li>
   </ul>
 </div>

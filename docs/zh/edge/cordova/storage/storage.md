@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,52 +11,50 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# 存储
+# 存儲
 
-> 对Cordova存储选项的概述。
+> 科爾多瓦的存儲選項的概述。
 
-几个存储APIs 是用于Cordova的应用程序。请参阅[html5rocks][1]。为更全面地概述和示例。
+幾個存儲 Api 是用於科爾多瓦的應用程式。請參閱[html5rocks][1]。為更全面地概述和示例。
 
  [1]: http://www.html5rocks.com/en/features/storage
 
-## LocalStorage
+## 認為
 
-此 API 也被称为*web storage*、*simple storage*，或由其备用*session storage*接口，这个API提供同步键/值对存储，并且是可用的在底层的 WebView中实现。 请参阅[W3C spec][2]的详细信息。
+此 API 也已知作為*web 存儲*、*簡單的存儲*，或由其備用*會話存儲*介面，提供同步鍵/值對存儲，是可用基礎 web 視圖實現中。 請參閱[W3C 規範][2]的詳細資訊。
 
  [2]: http://www.w3.org/TR/webstorage/
 
-**Windows Phone 7 Quirk**： 点符号是*not*提供的，所以一定要使用 `setItem` 或 `getItem` ，而不是直接从存储对象访问键，如`window.localStorage.someKey`.
-
 ## WebSQL
 
-此 API 是在底层WebView中可用。 [Web SQL Database Specification][3]提供了通过 SQL 查询访问的更多的功能全面的数据库表。
+此 API 是在底層 web 視圖中可用。 [Web SQL 資料庫規範][3]提供了更多的功能全面的資料庫表可以通過 SQL 查詢訪問。
 
  [3]: http://dev.w3.org/html5/webdatabase/
 
-在以下平台支持 WebSQL：
+以下平臺支援 WebSQL：
 
-*   Android
-*   BlackBerry 10
+*   Android 系統
+*   黑莓 10
 *   iOS
 *   Tizen
 
 ## IndexedDB
 
-此 API 是在底层WebView中可用的。[Indexed DB][4]提供比LocalStorage更多但比 WebSQL 较少的功能。
+此 API 是在底層 web 視圖中可用。[索引 DB][4]提供更多的功能比 LocalStorage 但較少比 WebSQL。
 
  [4]: http://www.w3.org/TR/IndexedDB/
 
-以下平台支持 IndexedDB：
+以下平臺支援 IndexedDB：
 
+*   黑莓 10
 *   Windows Phone 8
-*   BlackBerry 10
+*   Windows 8
 
-## Plugin-Based 选项
+## 基於外掛程式的選項
 
-除了上面列出的 APIs 的存储，[File API][5]允许您在本地文件系统上缓存数据。 其他的[Cordova plugins][6]提供类似的存储选项。
+除了上面列出的 Api 的存儲，[檔 API][5]允許您對本地檔案系統上的緩存資料。 其他的[科爾多瓦外掛程式][6]提供類似的存儲選項。
 
  [5]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
  [6]: http://plugins.cordova.io/

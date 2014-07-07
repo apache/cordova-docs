@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # L'interfaccia della riga di comando
 
@@ -28,7 +28,6 @@ Per aggiungere il supporto o ricostruire un progetto per qualsiasi piattaforma, 
 *   Amazon fuoco OS (Mac, Linux, Windows)
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
-*   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
 *   Windows 8 (Windows)
 *   Firefox OS (Mac, Linux, Windows)
@@ -85,7 +84,7 @@ Andare nella directory dove si mantiene il codice sorgente ed eseguire un comand
 
 Esso può richiedere molto tempo per completare il comando, quindi siate pazienti. Esegue il comando con il `-d` opzione Visualizza informazioni sui suoi progressi.
 
-Il primo argomento *Ciao* specifica una directory ad essere generato per il progetto. Questa directory non dovrebbe già esistere, Cordova si creerà per voi. Sua `www` sottodirectory ospita la pagina iniziale dell'applicazione, insieme a diverse risorse sotto `css` , `js` , e `img` , che seguono le convenzioni di denominazione dei file del sviluppo web comuni. La `config.xml` file contiene metadati importanti necessari per generare e distribuire l'applicazione.
+Il primo argomento *Ciao* specifica una directory ad essere generato per il progetto. Questa directory non dovrebbe già esistere, Cordova si creerà per voi. Sua `www` sottodirectory ospita la pagina iniziale dell'applicazione, insieme a diverse risorse sotto `css` , `js` , e `img` , che seguono le convenzioni di denominazione dei file del sviluppo web comuni. Queste attività verranno memorizzate su file system locale del dispositivo, non servito da remoto. La `config.xml` file contiene metadati importanti necessari per generare e distribuire l'applicazione.
 
 Il secondo argomento `com.example.hello` fornisce il tuo progetto con un identificatore di dominio-stile reverse. Questo argomento è facoltativo, ma solo se si omette anche il terzo argomento, poiché gli argomenti sono posizionali. È possibile modificare questo valore successivamente nella `config.xml` del file, ma essere consapevoli che ci può essere un codice generato di fuori di `config.xml` utilizzando questo valore, ad esempio nomi di pacchetto Java. Il valore predefinito è `io.cordova.hellocordova` , ma è consigliabile che si seleziona un valore appropriato.
 
@@ -109,7 +108,6 @@ Per poter compilare il progetto, è necessario specificare un insieme di piattaf
 
 Eseguire una qualsiasi di queste da una macchina Windows, dove *wp* si riferisce a diverse versioni del sistema operativo Windows Phone:
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos
@@ -196,9 +194,14 @@ Prima di eseguire questo comando, è necessario impostare il dispositivo per la 
 
 Quando si compila e Mostra un nuovo progetto, l'applicazione predefinita che appare non fa molto molto. È possibile modificare l'applicazione in molti modi per sfruttare tecnologie web standard, ma per le app comunicare strettamente con varie funzionalità a livello di dispositivo, è necessario aggiungere plugins che forniscono accesso al nucleo Cordova APIs.
 
-Un *plugin* è un po ' di codice del componente aggiuntivo che fornisce un'interfaccia per i componenti nativi. È possibile progettare la propria interfaccia plugin, per esempio, quando si progetta un'applicazione ibrida che mescola una Cordova WebView con componenti nativi. (Vedere visualizzazioni Web Embedding e [Guida allo sviluppo di Plugin][6] per dettagli). Più comunemente, è necessario aggiungere un plugin per abilitare una delle caratteristiche fondamentali di Cordova dispositivo-livello dettagliati in riferimento all'API. Un elenco di questi plugin, tra cui il plugin aggiuntivi di terze parti fornito dalla Comunità, può essere trovato nel registro di sistema [plugins.cordova.io][7]. È possibile utilizzare la CLI per la ricerca di plugin da questo registro. Ad esempio, alla ricerca di `bar` e `code` produce un singolo risultato che corrisponde a entrambi i termini come minuscole sottostringhe:
+Un *plugin* è un po ' di codice del componente aggiuntivo che fornisce un'interfaccia per i componenti nativi. È possibile progettare la propria interfaccia plugin, per esempio, quando si progetta un'applicazione ibrida che mescola una Cordova WebView con componenti nativi. (Vedere visualizzazioni Web Embedding e [Guida allo sviluppo di Plugin][6] per dettagli). Più comunemente, è necessario aggiungere un plugin per abilitare una delle caratteristiche fondamentali di Cordova dispositivo-livello dettagliati in riferimento all'API.
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+
+A partire dalla versione 3.0, quando si crea un progetto di Cordova non ha alcun plugin presenti. Questo è il nuovo comportamento predefinito. Tutti i plugin che desideri, anche i plugin di nucleo, devono essere aggiunto in modo esplicito.
+
+Un elenco di questi plugin, tra cui il plugin aggiuntivi di terze parti fornito dalla Comunità, può essere trovato nel registro di sistema [plugins.cordova.io][7]. È possibile utilizzare la CLI per la ricerca di plugin da questo registro. Ad esempio, alla ricerca di `bar` e `code` produce un singolo risultato che corrisponde a entrambi i termini come minuscole sottostringhe:
+
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code

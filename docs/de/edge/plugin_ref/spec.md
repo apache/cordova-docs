@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plugin-Spezifikation
 
@@ -73,8 +72,8 @@ Die `<engine>` Markierungen hat auch Standardunterstützung für alle die Hauptp
     </engines>
     
 
-Hier ist eine Liste der Standard-Suchmaschinen, die die "<engine>'-Tag unterstützt: * 'Cordoba' * 'Cordova-Plugman' * 'Cordova-Amazon-Fireos' * 'Cordova-Android' * 'Cordova-Ios' * 'Cordova-blackberry10' * 'Cordova-wp7' * 'Cordova-wp8' * 'Cordova-windows8'  
-* ' Android-Sdk' / / liefert die höchste Android-api-Ebene installiert * 'Apfel-Xcode' / / liefert die Xcode-Version * 'Apple-Ios' / / liefert die höchste installierte iOS-Version * 'Apple-Osx' / / liefert die OSX Version * 'Blackberry-Ndk' / / liefert die systemeigenen Blackberry SDK Version
+Hier ist eine Liste der Standard-Suchmaschinen, die die "<engine>"-Tag unterstützt: * 'Cordoba' * 'Cordova-Plugman' * 'Cordova-Amazon-Fireos' * 'Cordova-Android' * 'Cordova-Ios' * 'Cordova-blackberry10' * 'Cordova-wp8' * 'Cordova-windows8'  
+* "Android-Sdk' / / liefert die höchste Android-api-Ebene installiert * 'Apfel-Xcode' / / liefert die Xcode-Version * 'Apple-Ios' / / liefert die höchste installierte iOS-Version * 'Apple-Osx' / / liefert die OSX Version * 'Blackberry-Ndk' / / liefert die systemeigenen Blackberry SDK Version
 
 Benutzerdefinierte Apache Cordova-basierten Frameworks sollte aufgeführt sein, unter dem Motor-Tag angeben, etwa so:
 
@@ -241,8 +240,8 @@ Plattformnamen sollten Kleinbuchstaben sein. Plattformnamen, so willkürlich gew
 *   Android
 *   blackberry10
 *   Ios
-*   WP7
 *   WP8
+*   Windows8
 
 ## *Quelldatei* Element
 
@@ -317,6 +316,10 @@ Es unterstützt die folgenden Attribute:
     
     Wenn die Auswahl auf ein untergeordnetes Element des angegebenen Dokuments nicht behoben wird, das Tool beendet und kehrt des Installationsvorgangs gibt eine Warnung aus und beendet mit einem NULL-Code.
 
+*   `after`: Eine priorisierte Liste der akzeptierten Geschwister nach dem den XML-Ausschnitt hinzugefügt. Nützlich für die Angabe von Änderungen in Dateien, die erfordern strikte Reihenfolge von XML-Elementen wie [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *Plugins-plist* Element
 
 Dies ist *veraltet* , da es nur Cordova-Ios 2.2.0 und unterhalb gilt. Verwendung der `<config-file>` Tag für neuere Versionen von Cordova.
@@ -372,13 +375,21 @@ Beispiele:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 Das `src` -Attribut identifiziert den Rahmen, welche Plugman versucht die Cordova-Projekt in der richtigen Weise für eine bestimmte Plattform hinzu.
 
 Der optionale `weak` -Attribut ist ein boolescher Wert, der angibt, ob das Framework schwach verbunden sein sollte. Der Standardwert ist`false`.
 
-Der optionale `custom` -Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist`false`.
+Der optionale `custom` -Attribut ist ein boolescher Wert, der angibt, ob im Rahmen einer ist, als Teil Ihrer Plugin-Dateien enthalten ist (so ist es kein System-Rahmen). Der Standardwert ist `false` . ***Auf Android*** gibt es wie **Src**zu behandeln. Wenn `true` **Src** ist der relative Pfad von der Application Project-Verzeichnis, sonst--aus dem Android SDK-Verzeichnis.
+
+Das optionale `type` Attribut ist eine Zeichenfolge, die den Typ des Rahmens hinzu. Derzeit nur `projectReference` wird und nur auf Windows 8 unterstützt. Mit `custom='true'` und `type='projectReference'` fügt einen Verweis auf das Projekt, das die Kompilierung gutgeschrieben + Schritte des Projektes Cordova zu verknüpfen. Dies ist im Grunde die einzige Möglichkeit derzeit ein 'custom' Rahmen mehrere Architekturen angesprochen werden kann, da sie explizit als eine Abhängigkeit von der verweisenden Cordova-Anwendung erstellt werden.
+
+Der optionale `parent` -Attribut wird derzeit nur auf Android unterstützt. Er legt den relativen Pfad auf das Verzeichnis, in das Teilprojekt, der den Verweis hinzugefügt. Der Standardwert ist `.` , d.h. das Anwendungsprojekt. Es ermöglicht das Hinzufügen von Verweisen zwischen Teilprojekte wie in diesem Beispiel:
+
+    < Rahmen Src = "FeedbackLib" Custom = "true" / >< Rahmen-Src = "Extras/Android/Unterstützung/v7/Appcompat" Custom = "false" übergeordnete = "FeedbackLib" / >
+    
 
 ## *Info* Element
 
@@ -387,7 +398,10 @@ Zusätzliche Informationen für die Nutzer. Dies ist nützlich, wenn Sie zusätz
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Sie müssen die 'local.properties' die folgende Zeile hinzu: android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / Info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Variablen

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,22 +11,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Tizen 平台指南
+# Tizen 平臺指南
 
-本指南介绍了如何设置您的 SDK 开发环境部署科尔多瓦运行 Tizen 操作系统的设备的应用程序。
+本指南介紹了如何設置您的 SDK 開發環境部署科爾多瓦運行 Tizen 作業系統的設備的應用程式。
 
-## 要求和支持
+## 要求和支援
 
 Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows XP SP3/7 （32 位）。
 
-开发人员应使用 `cordova` 实用程序 Tizen SDK 的结合。 命令行界面信息，请参阅如何安装它，添加项目，然后生成和部署项目。
+開發人員應使用 `cordova` 實用程式 Tizen SDK 的結合。 命令列介面資訊，請參閱如何安裝它，添加專案，然後生成和部署專案。
 
-## 安装 SDK
+## 安裝 SDK
 
-从[tizen.org][1]下载 Tizen SDK.
+從[tizen.org][1]下載 Tizen SDK.
 
  [1]: https://developer.tizen.org/sdk
 
@@ -54,25 +53,25 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
 
 -->
 
-## 在 SDK 中打开的项目
+## 在 SDK 中打開的專案
 
 1.  推出 Tizen Eclipse IDE。
 
-2.  选择**文件 → 导入 → Tizen Web 项目**：
+2.  選擇**檔 → 導入 → Tizen Web 專案**：
     
     ![][2]
 
 3.  按**下一步**.
 
-4.  请确保选中了**选择根目录**。
+4.  請確保選中了**選擇根目錄**。
 
-5.  请确保选中了**复制到工作区中的项目**。
+5.  請確保選中了**複製到工作區中的專案**。
 
-6.  按**浏览**并选择科尔多瓦 Tizen `samples` 项目目录 （如 `/cordova-basic` ）：
+6.  按**流覽**並選擇科爾多瓦 Tizen `samples` 專案目錄 （如 `/cordova-basic` ）：
     
     ![][3]
 
-7.  按**完成**。您的项目现在应该将其导入并出现在**项目资源管理器**视图中：
+7.  按**完成**。您的專案現在應該將其導入並出現在**專案資源管理器**視圖中：
     
     ![][4]
 
@@ -80,31 +79,31 @@ Tizen SDK 需要 Linux Ubuntu 10.04/10.10/11.04/11.10 （32 位） 或 Windows X
  [3]: img/guide/platforms/tizen/import_widget.png
  [4]: img/guide/platforms/tizen/project_explorer.png
 
-重新生成项目，在**项目资源管理器**视图中右键单击并选择**生成项目**：
+重新生成專案，在**專案資源管理器**視圖中按右鍵並選擇**生成專案**：
 
 ![][5]
 
  [5]: img/guide/platforms/tizen/build_project.png
 
-如*hello.wgt*的小部件包文件应在项目的根目录中生成。
+如*hello.wgt*的小部件包檔應在專案的根目錄中生成。
 
-## 部署到仿真程序
+## 部署到模擬程式
 
-用鼠标右键单击**项目资源管理器**视图中的项目并选择**运行作为 → Tizen Web 模拟器应用程序**：
+用滑鼠右鍵按一下**專案資源管理器**視圖中的專案並選擇**運行作為 → Tizen Web 模擬器應用程式**：
 
 ![][6]
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## 将部署到设备
+## 將部署到設備
 
-*   请确保目标设备正常启动、 连接和配置。必须正确设置其**日期和时间**设置。
+*   請確保目標設備正常啟動、 連接和配置。必須正確設置其**日期和時間**設置。
 
-*   使用**连接资源管理器**视图选择的应用程序部署目标：**窗口显示视图 → 连接资源管理器**.
+*   使用**連接資源管理器**視圖選擇的應用程式部署目標：**視窗顯示視圖 → 連接資源管理器**.
     
     ![][7]
 
-*   用鼠标右键单击该项目在**项目资源管理器**视图，然后选择**运行作为 → Tizen Web 应用程序**：
+*   用滑鼠右鍵按一下該專案在**專案資源管理器**視圖，然後選擇**運行作為 → Tizen Web 應用程式**：
     
     ![][8]
 

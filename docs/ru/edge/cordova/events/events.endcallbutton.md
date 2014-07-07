@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,27 +11,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # endcallbutton
 
-Это событие вызывается, когда пользователь нажимает кнопку вызова.
+Это событие вызывается, когда пользователь нажимает кнопку окончания звонка.
 
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
-## Подробная информация
+## Подробности
 
-Событие переопределяет поведение по умолчанию конца вызова.
+Событие переопределяет поведение по умолчанию при окончании звонка.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
 
 ## Поддерживаемые платформы
 
 *   BlackBerry 10
 
-## Быстрый пример
+## Краткий пример
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
     

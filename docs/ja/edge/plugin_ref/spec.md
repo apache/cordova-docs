@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # プラグイン仕様
 
@@ -73,7 +72,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </engines>
     
 
-ここでは、エンジンの既定の一覧を '<engine>'タグをサポートしています： * 'コルドバ' *' コルドバ-plugman' * 'コルドバ-アマゾン-fireos' *' コルドバ人造人間 '*' コルドバ ios' * 'コルドバ-blackberry10' *' コルドバ wp7' * 'コルドバ wp8' *' コルドバ-windows8'  
+ここでは、エンジンの既定の一覧を '<engine>'タグをサポートしています： * 'コルドバ' *' コルドバ-plugman' * 'コルドバ-アマゾン-fireos' *' コルドバ人造人間 '*' コルドバ ios' * 'コルドバ-blackberry10' *' コルドバ wp8' * ' コルドバ-windows8'  
 * 'android sdk'//インストール レベル最高の Android の api を返します *' アップル xcode'//xcode バージョンを返します。 * 'アップル ios'//インストールされて最高の iOS のバージョンを返します。 *' アップルの osx'//OSX のバージョンを返します。 * ' ブラックベリー ndk'//ネイティブなブラックベリー SDK のバージョンを返します。
 
 カスタム Apache コルドバ ベース フレームワークはエンジン タグの下に表示する必要がありますを指定しましょう。
@@ -241,8 +240,8 @@ plugman は、そのターゲット プロジェクトがエンジンの制約�
 *   アンドロイド
 *   blackberry10
 *   ios
-*   wp7
 *   wp8
+*   windows8
 
 ## *ソース ファイル*要素
 
@@ -317,6 +316,10 @@ XML の例：
     
     セレクターで指定したドキュメントの子を解決しない場合、ツールが停止した逆インストール プロセスにより警告が発行し、0 以外のコードで終了します。
 
+*   `after`: XML スニペットを追加する後受け入れられた兄弟の優先順位一覧。 [Http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]のような XML 要素の厳密な順序付けが必要なファイルの変更を指定するために便利です。
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *プラグイン plist*要素
 
 これは*古い*コルドバ ios 2.2.0 へとの下にのみ適用されます。使用、 `<config-file>` コルドバの新しいバージョンのタグ。
@@ -372,13 +375,21 @@ Android の例:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 `src`属性を plugman 与えられたプラットフォームの正しいファッションでのコルドバ プロジェクトに追加しようとしています。 フレームワークを識別します。
 
 省略可能な `weak` 属性は、フレームワークが弱いリンクする必要があるかどうかを示すブール値。既定値は`false`.
 
-省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 既定値は`false`.
+省略可能な `custom` 属性は、フレームワークがプラグイン ファイルの一部として含まれているかどうかを示すブール値 (従ってそれはシステム フレームワーク）。 既定値は `false` です。 ***Android の*** **src**を治療する方法を指定します。 場合 `true` **src**は、アプリケーション プロジェクトのディレクトリからの相対パスそれ以外の場合--人造人間 SDK ディレクトリから。
+
+省略可能な `type` に追加するフレームワークの型を示す文字列属性です。 現在のところ `projectReference` であり、サポートされている Windows 8 上でのみ。 使用して `custom='true'` と `type='projectReference'` 、プロジェクトのコンパイルに追加されます + コルドバ プロジェクトの手順のリンクへの参照を追加します。 これは本質的に唯一の方法は現在 'カスタム' フレームワークが対象にする複数のアーキテクチャ参照コルドバ アプリケーションである依存関係として構築されている明示的にです。
+
+省略可能な `parent` 属性は現在 Android 上でのみサポートされています。 参照を追加するサブ プロジェクトを含むディレクトリへの相対パスを設定します。 既定値は `.` 、すなわちアプリケーション プロジェクト。 この例でのようなサブ プロジェクト間参照を追加することができます。
+
+    < フレームワーク src ="FeedbackLib"カスタム ="true"/>< フレームワーク src ="エクストラ/アンドロイド/サポート/v7/appcompat"カスタム ="false"親 ="FeedbackLib"/>
+    
 
 ## *情報*要素
 
@@ -387,7 +398,10 @@ Android の例:
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    'Local.properties' に次の行を追加する必要があります： android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib </情報 >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## 変数

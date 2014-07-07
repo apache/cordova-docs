@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,422 +11,421 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# 升级 Android
+# 升級 Android
 
-本指南演示如何修改 Android 项目从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令行工具创建的项目 `cordova` CLI 实用程序。 信息，请参阅命令行界面如何更新的 CLI 版本。
+本指南演示如何修改 Android 專案從科爾多瓦的舊版本進行升級。 大多數這些說明適用于與舊集的前面的命令列工具創建的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。
 
-## 从 3.2.0 升级到 3.3.0
+## 從 3.2.0 升級到 3.3.0
 
-按照相同的说明作为为`3.2.0`.
+按照相同的說明作為為`3.2.0`.
 
-从 3.3.0 开始，科尔多瓦运行时是现在作为编译 Android 的库，而不是 Jar。 这都不应该影响对于命令行用法，但 IDE 用户将需要导入到新添加的 `MyProject-CordovaLib` 到其工作区中的项目。
+從 3.3.0 開始，科爾多瓦運行時是現在作為編譯 Android 的庫，而不是 Jar。 這都不應該影響對於命令列用法，但 IDE 使用者將需要導入到新添加的 `MyProject-CordovaLib` 到其工作區中的專案。
 
-## 从 3.1.0 升级到 3.2.0
+## 從 3.1.0 升級到 3.2.0
 
-为创建的科尔多瓦 CLI 的项目：
+為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。请参阅命令行界面。
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
-2.  运行`cordova platform update android`
+2.  運行`cordova platform update android`
 
-对于不使用 CLI 科尔多瓦创建的项目，请运行：
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
-        bin/update <project_path>
+        bin/更新 < project_path >
     
 
-**警告：**开始使用类型创建的文件 input 的元素的 Android 4.4 ="文件，"将打开文件选择器对话框。 这是回归与铬在 android 系统上，可以重现问题在 Android 上的独立 Chrome 浏览器 （见 http://code.google.com/p/android/issues/detail?id=62220） 建议的解决方法是使用的文件传输和文件的插件为 Android 4.4。你可以倾听来自输入类型的 onClick 事件 ="文件"，然后弹出一个文件选择器 UI。 以配合与上载表单数据，您可以使用 JavaScript 将窗体值附加到文件传输使得多部分 POST 请求。 此 bug 仍然存在到 Android 4.4.2
+**警告：**關於 Android 4.4-Android 4.4.3，創建檔輸入具有類型的元素 ="檔"將不打開檔選擇器對話方塊。 這是回歸與鉻在 android 系統上，可以重現問題在 Android 上的獨立 Chrome 瀏覽器 （見 HTTP://code.google.com/p/android/issues/detail?id=62220） 建議的解決方法是使用的檔案傳輸和檔的外掛程式為 Android 4.4。你可以傾聽來自輸入類型的 onClick 事件 ="檔"，然後彈出一個檔選擇器 UI。 以配合與上載表單資料，您可以使用 JavaScript 將表單值附加到檔案傳輸使得多部分 POST 請求。
 
-## 从 3.0.0 升级到 3.1.0
+## 從 3.0.0 升級到 3.1.0
 
-为创建的科尔多瓦 CLI 的项目：
+為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。请参阅命令行界面。
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
-2.  运行`cordova platform update android`
+2.  運行`cordova platform update android`
 
-对于不使用 CLI 科尔多瓦创建的项目，请运行：
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
-        bin/update <project_path>
+        bin/更新 < project_path >
     
 
-## 从 2.9.0 升级到 CLI （3.0.0)
+## 從 2.9.0 升級到 CLI （3.0.0)
 
-1.  创建新的 Apache 科尔多瓦 3.0.0 项目使用 CLI，科尔多瓦，如所述的命令行界面。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
 
-2.  添加您的平台的科尔多瓦项目，例如：`cordova
+2.  添加您的平臺的科爾多瓦專案，例如：`cordova
 platform add android`.
 
-3.  您的项目的内容复制 `www` 到目录 `www` 目录在您刚刚创建的科尔多瓦项目的根目录。
+3.  您的專案的內容複寫 `www` 到目錄 `www` 目錄在您剛剛創建的科爾多瓦專案的根目錄。
 
-4.  将本机的任何资产从旧项目复制到相应的目录下 `platforms/android` ： 此目录是您的本机科尔多瓦 android 项目存在的地方。
+4.  將本機的任何資產從舊專案複製到相應的目錄下 `platforms/android` ： 此目錄是您的本機科爾多瓦 android 專案存在的地方。
 
-5.  使用科尔多瓦 CLI 工具来安装您需要的任何插件。请注意 CLI 处理所有核心 Api 作为插件，所以他们可能需要添加。只有 3.0.0 插件是与 CLI 兼容。
+5.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
-## 从 2.9.0 升级到 3.0.0
+## 從 2.9.0 升級到 3.0.0
 
-1.  创建一个新的 Apache 科尔多瓦 Android 项目。
+1.  創建一個新的 Apache 科爾多瓦 Android 專案。
 
-2.  将复制的内容 `www` 目录到新的项目。
+2.  將複製的內容 `www` 目錄到新的專案。
 
-3.  复制任何本机的 Android 资产从 `res` 目录到新的项目。
+3.  複製任何本機的 Android 資產從 `res` 目錄到新的專案。
 
-4.  复制在你安装从任何插件 `src` 子目录到新项目。
+4.  複製在你安裝從任何外掛程式 `src` 子目錄到新專案。
 
-5.  请确保要升级任何弃用 `<plugin>` 从你的旧的引用 `config.xml` 到新文件 `<feature>` 规范。
+5.  請確保要升級任何棄用 `<plugin>` 從你的舊的引用 `config.xml` 到新檔 `<feature>` 規範。
 
-6.  更新对任何引用 `org.apache.cordova.api` 包被`org.apache.cordova`.
+6.  更新對任何引用 `org.apache.cordova.api` 包被`org.apache.cordova`.
     
-    **注**： 所有核心 Api 已被移除，必须作为插件安装。请有关详细信息，参阅管理插件指南的使用 Plugman。
+    **注**： 所有核心 Api 已被移除，必須作為外掛程式安裝。請有關詳細資訊，參閱管理外掛程式指南的使用 Plugman。
 
-## 从 2.8.0 升级到 2.9.0
+## 從 2.8.0 升級到 2.9.0
 
-1.  运行`bin/update <project_path>`.
+1.  運行`bin/update <project_path>`.
 
-## 从 2.7.0 升级到 2.8.0
+## 從 2.7.0 升級到 2.8.0
 
-1.  删除 `cordova-2.7.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.7.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.8.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
 <!-- SS Eclipse -->
 
-1.  复制新 `cordova.js` 到您的项目。
+1.  複製新 `cordova.js` 到您的專案。
 
-2.  更新您的 html 代码，使用新的 `cordova.js` 文件。
+2.  更新您的 html 代碼，使用新的 `cordova.js` 檔。
 
-3.  复制 `res/xml/config.xml` 文件，以匹配`framework/res/xml/config.xml`.
+3.  複製 `res/xml/config.xml` 檔，以匹配`framework/res/xml/config.xml`.
 
-4.  更新 `framework/res/xml/config.xml` 以前一样有类似的设置。
+4.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-5.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+5.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.6.0 升级到 2.7.0
+## 從 2.6.0 升級到 2.7.0
 
-1.  删除 `cordova-2.6.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.6.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.7.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.7.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.7.0.js` 到您的项目。
+4.  複製新 `cordova-2.7.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.7.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.7.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  更新 `framework/res/xml/config.xml` 以前一样有类似的设置。
+7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.5.0 升级到 2.6.0
+## 從 2.5.0 升級到 2.6.0
 
-1.  删除 `cordova-2.5.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.5.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.6.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.6.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.6.0.js` 到您的项目。
+4.  複製新 `cordova-2.6.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.6.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.6.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  更新 `framework/res/xml/config.xml` 以前一样有类似的设置。
+7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-运行 `bin/update <project>` 的项目路径与科尔多瓦源目录中列出。
+運行 `bin/update <project>` 的專案路徑與科爾多瓦原始目錄中列出。
 
-## 从 2.4.0 升级到 2.5.0
+## 從 2.4.0 升級到 2.5.0
 
-1.  删除 `cordova-2.4.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.4.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.5.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.5.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.5.0.js` 到您的项目。
+4.  複製新 `cordova-2.5.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.5.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.5.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  更新 `framework/res/xml/config.xml` 以前一样有类似的设置。
+7.  更新 `framework/res/xml/config.xml` 以前一樣有類似的設置。
 
-8.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+8.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.3.0 升级到 2.4.0
+## 從 2.3.0 升級到 2.4.0
 
-1.  删除 `cordova-2.3.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.3.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.4.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.4.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.4.0.js` 到您的项目。
+4.  複製新 `cordova-2.4.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.4.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.4.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.2.0 升级到 2.3.0
+## 從 2.2.0 升級到 2.3.0
 
-1.  删除 `cordova-2.2.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.2.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.3.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.3.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.3.0.js` 到您的项目。
+4.  複製新 `cordova-2.3.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.3.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.3.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.1.0 升级到 2.2.0
+## 從 2.1.0 升級到 2.2.0
 
-1.  删除 `cordova-2.1.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.1.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.2.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.2.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.2.0.js` 到您的项目。
+4.  複製新 `cordova-2.2.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.2.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.2.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 2.0.0 升级到 2.1.0
+## 從 2.0.0 升級到 2.1.0
 
-1.  删除 `cordova-2.0.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-2.0.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.1.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.1.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.1.0.js` 到您的项目。
+4.  複製新 `cordova-2.1.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.1.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.1.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-7.  将文件从复制 `bin/templates/cordova` 到项目中的 `cordova` 目录。
+7.  將檔從複製 `bin/templates/cordova` 到專案中的 `cordova` 目錄。
 
-## 从 1.9.0 升级到 2.0.0
+## 從 1.9.0 升級到 2.0.0
 
-1.  删除 `cordova-1.9.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.9.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-2.0.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-2.0.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-2.0.0.js` 到您的项目。
+4.  複製新 `cordova-2.0.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-2.0.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-2.0.0.js` 檔。
 
-6.  复制 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
+6.  複製 `res/xml/config.xml` 以匹配`framework/res/xml/config.xml`.
 
-在 2.0.0 版、 `config.xml` 文件结合和替换 `cordova.xml` 和 `plugins.xml` 。 旧的文件已被否决，，虽然他们仍工作在 2.0.0，将停止在将来的版本中工作。
+在 2.0.0 版、 `config.xml` 檔結合和替換 `cordova.xml` 和 `plugins.xml` 。 舊的檔已被否決，，雖然他們仍工作在 2.0.0，將停止在將來的版本中工作。
 
-## 从 1.8.1 升级到 1.9.0
+## 從 1.8.1 升級到 1.9.0
 
-1.  删除 `cordova-1.8.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.8.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.9.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.9.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.9.0.js` 到您的项目。
+4.  複製新 `cordova-1.9.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-1.9.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-1.9.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-由于采用了 `CordovaWebView` 的 1.9.0 版本中，第三方插件可能无法工作。 这些插件需要获取上下文从 `CordovaInterface` 使用 `getContext()` 或 `getActivity()` 。 如果您不是一个经验丰富的 Android 开发者，请联系插件的维护者和将这项任务添加到其 bug 跟踪工具。
+由於採用了 `CordovaWebView` 的 1.9.0 版本中，協力廠商外掛程式可能無法工作。 這些外掛程式需要獲取上下文從 `CordovaInterface` 使用 `getContext()` 或 `getActivity()` 。 如果您不是一個經驗豐富的 Android 開發者，請聯繫外掛程式的維護者和將這項任務添加到其 bug 跟蹤工具。
 
-## 从 1.8.0 升级到 1.8.0
+## 從 1.8.0 升級到 1.8.0
 
-1.  删除 `cordova-1.8.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.8.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.8.1.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.8.1.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.8.1.js` 到您的项目。
+4.  複製新 `cordova-1.8.1.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-1.8.1.js` 文件。
-
-6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
-
-## 从 1.7.0 升级到 1.8.0
-
-1.  删除 `cordova-1.7.0.jar` 从项目的 `libs` 目录。
-
-2.  添加 `cordova-1.8.0.jar` 到项目中的 `libs` 目录。
-
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
-
-4.  复制新 `cordova-1.8.0.js` 到您的项目。
-
-5.  更新您的 html 代码，使用新的 `cordova-1.8.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.1.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 从 1.7.0 升级到 1.8.0
+## 從 1.7.0 升級到 1.8.0
 
-1.  删除 `cordova-1.7.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.7.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.8.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.8.0.js` 到您的项目。
+4.  複製新 `cordova-1.8.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-1.8.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 从 1.6.1 升级到 1.7.0
+## 從 1.7.0 升級到 1.8.0
 
-1.  删除 `cordova-1.6.1.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.7.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.7.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.8.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.7.0.js` 到您的项目。
+4.  複製新 `cordova-1.8.0.js` 到您的專案。
+
+5.  更新您的 html 代碼，使用新的 `cordova-1.8.0.js` 檔。
+
+6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
+
+## 從 1.6.1 升級到 1.7.0
+
+1.  刪除 `cordova-1.6.1.jar` 從專案的 `libs` 目錄。
+
+2.  添加 `cordova-1.7.0.jar` 到專案中的 `libs` 目錄。
+
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
+
+4.  複製新 `cordova-1.7.0.js` 到您的專案。
 
 5.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 从 1.6.0 升级到 1.6.1
+## 從 1.6.0 升級到 1.6.1
 
-1.  删除 `cordova-1.6.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.6.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.6.1.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.6.1.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.6.1.js` 到您的项目。
+4.  複製新 `cordova-1.6.1.js` 到您的專案。
 
 5.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 从 1.5.0 版升级到 1.6.0
+## 從 1.5.0 版升級到 1.6.0
 
-1.  删除 `cordova-1.5.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `cordova-1.5.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `cordova-1.6.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.6.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `cordova-1.6.0.js` 到您的项目。
+4.  複製新 `cordova-1.6.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `cordova-1.6.0.js` 文件。
-
-6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
-
-7.  替换 `res/xml/phonegap.xml` 与 `res/xml/cordova.xml` 进行匹配`framework/res/xml/cordova.xml`.
-
-## 从 1.4.0 升级到 1.5.0 版
-
-1.  删除 `phonegap-1.4.0.jar` 从项目的 `libs` 目录。
-
-2.  添加 `cordova-1.5.0.jar` 到项目中的 `libs` 目录。
-
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
-
-4.  复制新 `cordova-1.5.0.js` 到您的项目。
-
-5.  更新您的 html 代码，使用新的 `cordova-1.5.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-1.6.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-7.  替换 `res/xml/phonegap.xml` 与 `res/xml/cordova.xml` 进行匹配`framework/res/xml/cordova.xml`.
+7.  替換 `res/xml/phonegap.xml` 與 `res/xml/cordova.xml` 進行匹配`framework/res/xml/cordova.xml`.
 
-## 从 1.3.0 升级到 1.4.0
+## 從 1.4.0 升級到 1.5.0 版
 
-1.  删除 `phonegap-1.3.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `phonegap-1.4.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `phonegap-1.4.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `cordova-1.5.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `phonegap-1.4.0.js` 到您的项目。
+4.  複製新 `cordova-1.5.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `phonegap-1.4.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `cordova-1.5.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-7.  更新 `res/xml/phonegap.xml` 以匹配`framework/res/xml/phonegap.xml`.
+7.  替換 `res/xml/phonegap.xml` 與 `res/xml/cordova.xml` 進行匹配`framework/res/xml/cordova.xml`.
 
-## 从 1.2.0 升级到 1.3.0
+## 從 1.3.0 升級到 1.4.0
 
-1.  删除 `phonegap-1.2.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `phonegap-1.3.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `phonegap-1.3.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `phonegap-1.4.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `phonegap-1.3.0.js` 到您的项目。
+4.  複製新 `phonegap-1.4.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `phonegap-1.2.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.4.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
 7.  更新 `res/xml/phonegap.xml` 以匹配`framework/res/xml/phonegap.xml`.
 
-## 从 1.1.0 升级到 1.2.0
+## 從 1.2.0 升級到 1.3.0
 
-1.  删除 `phonegap-1.1.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `phonegap-1.2.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `phonegap-1.2.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `phonegap-1.3.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `phonegap-1.2.0.js` 到您的项目。
+4.  複製新 `phonegap-1.3.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `phonegap-1.2.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
 7.  更新 `res/xml/phonegap.xml` 以匹配`framework/res/xml/phonegap.xml`.
 
-## 从 1.0.0 升级到 1.1.0
+## 從 1.1.0 升級到 1.2.0
 
-1.  删除 `phonegap-1.0.0.jar` 从项目的 `libs` 目录。
+1.  刪除 `phonegap-1.1.0.jar` 從專案的 `libs` 目錄。
 
-2.  添加 `phonegap-1.1.0.jar` 到项目中的 `libs` 目录。
+2.  添加 `phonegap-1.2.0.jar` 到專案中的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-4.  复制新 `phonegap-1.1.0.js` 到您的项目。
+4.  複製新 `phonegap-1.2.0.js` 到您的專案。
 
-5.  更新您的 html 代码，使用新的 `phonegap-1.1.0.js` 文件。
+5.  更新您的 html 代碼，使用新的 `phonegap-1.2.0.js` 檔。
 
 6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
 
-## 从 0.9.6 升级到 1.0.0
+7.  更新 `res/xml/phonegap.xml` 以匹配`framework/res/xml/phonegap.xml`.
 
-1.  删除 `phonegap-0.9.6.jar` 从项目的 `libs` 目录。
+## 從 1.0.0 升級到 1.1.0
 
-2.  添加 `phonegap-1.0.0.jar` 到项目中的 `libs` 目录。
+1.  刪除 `phonegap-1.0.0.jar` 從專案的 `libs` 目錄。
 
-3.  如果您使用 Eclipse，请刷新您的 Eclipse 项目，做清洁。
+2.  添加 `phonegap-1.1.0.jar` 到專案中的 `libs` 目錄。
 
-4.  复制新 `phonegap-1.0.0.js` 到您的项目。
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
 
-5.  更新您的 html 代码，使用新的 `phonegap-1.0.0.js` 文件。
+4.  複製新 `phonegap-1.1.0.js` 到您的專案。
+
+5.  更新您的 html 代碼，使用新的 `phonegap-1.1.0.js` 檔。
+
+6.  更新 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.
+
+## 從 0.9.6 升級到 1.0.0
+
+1.  刪除 `phonegap-0.9.6.jar` 從專案的 `libs` 目錄。
+
+2.  添加 `phonegap-1.0.0.jar` 到專案中的 `libs` 目錄。
+
+3.  如果您使用 Eclipse，請刷新您的 Eclipse 專案，做清潔。
+
+4.  複製新 `phonegap-1.0.0.js` 到您的專案。
+
+5.  更新您的 html 代碼，使用新的 `phonegap-1.0.0.js` 檔。
 
 6.  添加 `res/xml/plugins.xml` 以匹配`framework/res/xml/plugins.xml`.

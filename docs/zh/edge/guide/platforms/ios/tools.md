@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,41 +11,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# iOS 壳工具指南
+# iOS 殼工具指南
 
-本指南演示如何使用科尔多瓦的套的平台为中心的外壳程序工具来开发 iOS 应用程序。 这种发展道路，概述中讨论可能会为您提供更广泛的发展方案时，iOS 比所述的命令行界面的跨平台 CLI 工具。 例如，您需要部署一个科尔多瓦 web 视图自定义旁边的本机组件时使用外壳程序工具。 在使用之前要么发展路径，您必须首先配置 SDK 环境的 iOS 平台指南中所述。 这些工具依赖于 Xcode 的命令行工具如 `xcode-select` 和`xcodebuild`.
+本指南演示如何使用科爾多瓦的套的平臺為中心的外殼程式工具來開發 iOS 應用程式。 這種發展道路，概述中討論可能會為您提供更廣泛的發展方案時，iOS 比所述的命令列介面的跨平臺 CLI 工具。 例如，您需要部署一個科爾多瓦 web 視圖自訂旁邊的本機組件時使用外殼程式工具。 在使用之前要麼發展路徑，您必須首先配置 SDK 環境的 iOS 平臺指南中所述。 這些工具依賴于 Xcode 的命令列工具如 `xcode-select` 和`xcodebuild`.
 
-若要启用 iOS 的外壳工具，请从[cordova.apache.org][1]下载科尔多瓦。 下载文件中包含单独的档案，为每个平台。 展开每个您想要的目标， `ios` 在这种情况下。 相关的工具，通常可用在顶级 `bin` 目录中，否则为咨询**自述**文件，了解有关更多详细的指示。
+若要啟用 iOS 的外殼工具，請從[cordova.apache.org][1]下載科爾多瓦。 下載檔案中包含單獨的檔案，為每個平臺。 展開每個您想要的目標， `ios` 在這種情況下。 相關的工具，通常可用在頂級 `bin` 目錄中，否則為諮詢**自述**檔，瞭解有關更多詳細的指示。
 
  [1]: http://cordova.apache.org
 
-这些工具允许您创建、 构建和运行 iOS 的应用程序。 额外的命令行界面，可以跨所有平台的插件功能的信息，请参阅使用 Plugman 到管理插件。 有关如何开发插件的详细信息，请参阅应用程序插件。
+這些工具允許您創建、 構建和運行 iOS 的應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 有關如何開發外掛程式的詳細資訊，請參閱應用程式外掛程式。
 
-## 创建一个项目
+## 創建一個專案
 
-运行 `create` 命令，指定的现有路径的项目、 反向域式包标识符和应用程序的显示名称。
+運行 `create` 命令，指定的現有路徑的專案、 反向域式包識別碼和應用程式的顯示名稱。
 
         $ ./path/to/cordova-ios/bin/create /path/to/my_new_project com.example.project_name ProjectName
     
 
-## 生成项目
+## 生成專案
 
         $ /path/to/my_new_project/cordova/build
     
 
-## 在模拟器上运行应用程序
+## 在模擬器上運行應用程式
 
         $ /path/to/my_new_project/cordova/run
     
 
-## 释放
+## 釋放
 
         $ /path/to/my_new_project/cordova/release
     
 
-## 日志记录
+## 日誌記錄
 
         $ /path/to/my_new_project/cordova/log

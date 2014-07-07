@@ -1,4 +1,6 @@
---Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,14 +11,13 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone плагины
 
 Этот раздел содержит сведения о том, как реализовать собственный плагин код на платформе Windows Phone. Прежде чем читать это, увидеть приложения плагины обзор структуры плагина и его общий интерфейс JavaScript. Этот раздел продолжает демонстрировать образец *эхо* плагин, который общается с webview Кордова на родной платформе и обратно.
 
-Писать плагин для Кордова на Windows Phone требуется базовое понимание архитектуры в Кордове. Кордова-WP7 состоит из `WebBrowser` , содержит код JavaScript приложения и управляет родной вызовы API. Вы можете расширить C# `BaseCommand` класса ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), которая поставляется с большинство функциональных возможностей, вам необходимо:
+Писать плагин для Кордова на Windows Phone требуется базовое понимание архитектуры в Кордове. Кордова-WP8 состоит из `WebBrowser` , содержит код JavaScript приложения и управляет родной вызовы API. Вы можете расширить C# `BaseCommand` класса ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), которая поставляется с большинство функциональных возможностей, вам необходимо:
 
 1.  Выберите ваш проект и щелкните правой кнопкой мыши выбрать **Добавить → новый элемент...** Если вы хотите, вы можете добавить его в `Plugins` папку.
 
@@ -51,7 +52,7 @@
 
 Смотреть [BaseCommand.cs][1] класс для методов, доступных для плагина для переопределения. Например плагин может захватить события «пауза» и «продолжить».
 
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+ [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
 ## Пространства имен
 
@@ -143,6 +144,14 @@ JavaScript необходимо будет вызвать `exec` , как это
         {
             // ... continue on to do our work
         }
+    
+
+## Плагин жизни
+
+Плагины с долго выполняющихся запросов, фон деятельности, такие как воспроизведение мультимедиа, слушателей или что поддерживать внутреннее состояние следует осуществлять `onReset` метод для очистки этих мероприятий. Метод выполняется, когда CordovaView WebBrowser переходит на новую страницу или обновления, которая перезагружает JavaScript.
+
+        // defined in WPCordovaClassLib.Cordova.Commands.BaseCommand
+        public virtual void OnReset() { }
     
 
 ## Плагин XML

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Archiviazione
 
@@ -27,8 +26,6 @@ Archiviazione diverse API sono disponibili per applicazioni di Cordova. Vedi [ht
 Conosciuto anche come *web storage*, *archiviazione semplice*, o dalla sua interfaccia alternativa *archiviazione della sessione* , questa API fornisce archiviazione coppia chiave/valore sincrona ed è disponibile in implementazioni di WebView sottostante. Consultare [le specifiche W3C][2] per dettagli.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 Quirk**: notazione del punto è *non* disponibile, quindi assicuratevi di utilizzare `setItem` o `getItem` piuttosto che accedere ai tasti direttamente dall'oggetto di archiviazione, come in`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ Questa API è disponibile in WebView sottostante. [DB indicizzati][4] offre più
 
 Le piattaforme seguenti supportano IndexedDB:
 
-*   Windows Phone 8
 *   BlackBerry 10
+*   Windows Phone 8
+*   Windows 8
 
 ## Opzioni basate su plugin
 

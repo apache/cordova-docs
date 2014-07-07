@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # プラグイン開発ガイド
 
@@ -20,7 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://plugins.cordova.io
 
-プラグインはサポートされる各プラットフォーム用の対応するネイティブ コード ライブラリと共に単一の java スクリプトの設定インタ フェースを構成します。 JavaScript からネイティブ プラットフォームとはるかに複雑な機能を構築するモデルとして使用することができます 1 つ背面に文字列を渡します、簡単な*エコー*プラグインを介してこのセクションの手順します。 基本的なプラグイン構造と向き JavaScript インターフェイスについて説明します。 各対応するネイティブ インターフェイスはこのセクションの最後にリストを参照してください。
+プラグインはサポートされる各プラットフォーム用の対応するネイティブ コード ライブラリと共に単一の java スクリプトの設定インタ フェースを構成します。 本質的に一般的な JavaScript のインタ フェースの背後にある様々 なネイティブ コード実装非表示となります。
+
+このセクションの手順簡単な*エコー*プラグインが JavaScript からネイティブ プラットフォームとはるかに複雑な機能を構築するモデルとして使用することができます 1 つ背面に文字列を渡します。 基本的なプラグイン構造と向き JavaScript インターフェイスについて説明します。 各対応するネイティブ インターフェイスはこのセクションの最後にリストを参照してください。
 
 に加えてこれらの手順は、プラグインを作成する[既存のプラグイン][2]の指導のために目を通すことをお勧めする準備。
 
@@ -33,7 +34,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
     
 
-プラグイン ・ リポジトリーのトップレベル機能する必要があります `plugin.xml` マニフェスト ファイル。 詳細については、プラグインの仕様でこのファイルを構成する多くの方法があります。 この簡略化されたバージョンの `Device` プラグインのモデルとして使用する簡単な例を提供します。
+プラグインのリポジトリのトップレベル機能する必要があります `plugin.xml` マニフェスト ファイル。 詳細については、プラグインの仕様でこのファイルを構成する多くの方法があります。 この簡略化されたバージョンの `Device` プラグインのモデルとして使用する簡単な例を提供します。
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -134,6 +135,7 @@ JavaScript は、プラグインのおそらく最も重要な部分を作る正
 *   iOS のプラグイン
 *   ブラックベリー 10 プラグイン
 *   Windows Phone のプラグイン
+*   Windows 8 のプラグイン
 
 Tizen プラットフォームのプラグインをサポートしていません。
 

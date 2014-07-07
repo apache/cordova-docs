@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # iOS плагины
 
@@ -24,7 +23,7 @@ IOS плагин реализован как Objective-C класс, котор�
 
 Часть JavaScript плагин использует `cordova.exec` метод следующим образом:
 
-        Exec (<successFunction>, <failFunction>, <service>, <action>, [<args>]);
+        Exec (< successFunction >, < failFunction >, < служба >, < действия > [< args >]);
     
 
 Это маршалирует запрос от `UIWebView` в сторону родной iOS эффективно вызова `action` метод `service` класса, с аргументами, переданными в `args` массив.
@@ -166,7 +165,7 @@ IOS плагин реализован как Objective-C класс, котор�
 
 ## Отладка iOS плагины
 
-Для отладки на стороне Objective-C, требуется встроенный отладчик Xcode's. Для JavaScript на iOS 5.0 можно использовать [Weinre, проект Apache Cordova][3] , или [iWebInspector, сторонние утилиты][4]. Для iOS 6 вы можете прикрепить Safari 6.0 для вашего приложения, выполняющиеся в iOS 6 симулятор.
+Для отладки на стороне Objective-C, требуется встроенный отладчик Xcode's. Для JavaScript на iOS 5.0 можно использовать [Weinre, проект Apache Cordova][3] , или [iWebInspector, сторонние утилиты][4]. Для iOS 6 Safari 6.0 можно назначить приложение работает в iOS 6 симулятор.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Almacenamiento
 
@@ -27,8 +26,6 @@ Almacenamiento varias APIs están disponibles para aplicaciones de Córdoba. Ver
 También conocido como *web storage*, *almacenamiento de información simple*, o por su interfaz alternativa de *almacenamiento de las sesiones* , esta API proporciona almacenamiento par clave-valor síncrono y está disponible en implementaciones WebView subyacentes. Consulte [la especificación W3C][2] para más detalles.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 chanfle**: notación de puntos es *no* disponible, así que asegúrate de usar `setItem` o `getItem` en lugar de acceder a las teclas directamente desde el objeto de almacenamiento, como en`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ Esta API está disponible en la vista Web subyacente. [Indexadas DB][4] ofrece m
 
 Las siguientes plataformas soportan IndexedDB:
 
-*   Windows Phone 8
 *   BlackBerry 10
+*   Windows Phone 8
+*   Windows 8
 
 ## Opciones basadas en plugin
 
