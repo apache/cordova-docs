@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # Présentation
 
@@ -28,7 +28,7 @@ Utiliser Apache Cordova, si vous êtes :
 
 *   un développeur Web et que vous souhaitez déployer une application Web prête à être distribuée dans divers portails de vente d'applications.
 
-*   un développeur de mobile intéressé par la combinaison de composants natifs avec une *WebView* (fenêtre de navigateur) capable d'accéder aux API liées à l'appareil, ou bien si vous souhaitez développer une interface (plugin) rattachant une Webview à des composants natifs.
+*   un développeur de mobile intéressé par la combinaison de composants de l'application native avec une *WebView* (fenêtre de navigateur spécial) qui peut accéder aux API de niveau périphérique, ou si vous voulez développer une interface plugin entre les autochtones et les composants WebView.
 
 ## Composants de base
 
@@ -36,19 +36,23 @@ Apache Cordova applications s'appuient sur un commun `config.xml` fichier qui fo
 
  [2]: http://www.w3.org/TR/widgets/
 
-L'application elle-même est implémenté comme une page web, nommé *index.html* par défaut, qui fait référence à quelque CSS, JavaScript, images des fichiers multimédias, ou d'autres ressources sont nécessaires pour son exécution. L'application s'exécute sous une *WebView* dans le wrapper de l'application native, qui vous distribuez à l'app store.
+L'application elle-même est implémentée comme une page web, par défaut, un fichier local nommé *index.html*, qui fait référence à quelque CSS, JavaScript, images, fichiers multimédias ou autres ressources sont nécessaires pour son exécution. L'application s'exécute sous une *WebView* dans le wrapper de l'application native, qui vous distribuez à l'app store.
 
 Le WebView Cordova-activé peut prévoir l'application grâce à son interface utilisateur entière. Sur certaines plateformes, il peut aussi être un composant dans une application hybride plus grande, qui mêle le mode Web avec des composants de l'application native. (Voir intégration WebViews pour plus de détails.)
 
-Une interface *plugin* est disponible pour Cordova et les composants natifs de communiquer entre eux. Cela vous permet d'invoquer le code natif de JavaScript. Depuis la version 3.0, plugins fournir des liaisons de périphérique standard API. Plugins tiers fournissent des liaisons supplémentaires aux fonctionnalités n'est pas nécessairement disponibles sur toutes les plateformes. Vous pouvez trouver ces plugins tierce partie dans le [Registre du plugin][3] et les utiliser dans votre application. Vous pouvez également développer vos propres plugins, comme décrit dans le Guide de développement de Plugin. Plugins peut être nécessaire, par exemple, pour communiquer entre Cordoue et les composants natifs personnalisés.
+Une interface *plugin* est disponible pour Cordova et les composants natifs de communiquer entre eux. Cela vous permet d'invoquer le code natif de JavaScript. Idéalement, les API JavaScript que code natif concordent sur de multiples plates-formes de périphérique. Depuis la version 3.0, plugins fournir des liaisons de périphérique standard API. Plugins tiers fournissent des liaisons supplémentaires aux fonctionnalités n'est pas nécessairement disponibles sur toutes les plateformes. Vous pouvez trouver ces plugins tierce partie dans le [Registre du plugin][3] et les utiliser dans votre application. Vous pouvez également développer vos propres plugins, comme décrit dans le Guide de développement de Plugin. Plugins peut être nécessaire, par exemple, pour communiquer entre Cordoue et les composants natifs personnalisés.
 
  [3]: http://plugins.cordova.io
+
+**NOTE**: depuis la version 3.0, lorsque vous créez un projet de Cordova, il n'a pas les plug-ins présents. C'est le nouveau comportement par défaut. Les plug-ins que vous désirez, même les plugins de base, doivent être ajoutés explicitement.
+
+Cordova ne fournit pas les widgets de l'interface utilisateur ou cadres de MV. Cordova fournit seulement le runtime dans lequel ceux qui peuvent s'exécuter. Si vous souhaitez utiliser les widgets de l'interface utilisateur et/ou un cadre MV *, vous devrez sélectionner celles et les inclure dans votre demande vous-même comme matériel de tierces parties.
 
 ## Voies de développement
 
 Depuis la version 3.0, vous pouvez utiliser deux workflows de base pour créer une application mobile. Alors que vous pouvez souvent utiliser un flux de travail à accomplir la même tâche, ils ont chacun des avantages :
 
-*   **Flux de travail multi-plateforme**: utiliser ce flux de travail si vous souhaitez que votre application pour exécuter le plus grand nombre des différents systèmes d'exploitation mobiles que possible, avec peu besoin spécifique à la plateforme de développement. Ce workflow est centrée autour de la `cordova` utilitaire, autrement connu comme le Cordova *CLI*, qui a été introduite avec le 3.0 de Cordova. La CLI est un outil de haut niveau qui vous permet d'élaborer des projets pour de nombreuses plateformes à la fois, faisant abstraction bien loin des fonctionnalités des scripts shell de niveau inférieur. La CLI copie un ensemble commun de ressources web dans des sous-répertoires pour chaque plate-forme mobile, apporte des changements de configuration nécessaires pour chacun, s'exécute les scripts de compilation pour générer les fichiers binaires d'application. La CLI fournit également une interface commune pour appliquer des plugins pour votre application. Pour plus de détails sur la CLI, consultez l'Interface de ligne de commande. Sauf si vous avez un besoin pour le flux de travail axée sur la plate-forme, le flux de travail multi-plateforme est recommandé.
+*   **Flux de travail multi-plateforme (CLI)**: utiliser ce flux de travail si vous souhaitez que votre application pour exécuter le plus grand nombre des différents systèmes d'exploitation mobiles que possible, avec peu besoin spécifique à la plateforme de développement. Ce workflow est centrée autour de la `cordova` utilitaire, autrement connu comme le Cordova *CLI*, qui a été introduite avec le 3.0 de Cordova. La CLI est un outil de haut niveau qui vous permet d'élaborer des projets pour de nombreuses plateformes à la fois, faisant abstraction bien loin des fonctionnalités des scripts shell de niveau inférieur. La CLI copie un ensemble commun de ressources web dans des sous-répertoires pour chaque plate-forme mobile, apporte des changements de configuration nécessaires pour chacun, s'exécute les scripts de compilation pour générer les fichiers binaires d'application. La CLI fournit également une interface commune pour appliquer des plugins pour votre application. Pour plus de détails sur la CLI, consultez l'Interface de ligne de commande. Sauf si vous avez un besoin pour le flux de travail axée sur la plate-forme, le flux de travail multi-plateforme est recommandé.
 
 *   **Flux de travail axée sur la plate-forme**: utilisez ce flux de travail si vous voulez mettre l'accent sur la construction d'une application pour une plateforme unique et doivent être en mesure de le modifier à un niveau inférieur. Vous devez utiliser cette approche, par exemple, si vous souhaitez que votre application pour mélanger les composants natifs personnalisés avec des composants de Cordoue sur le web, tel que discuté dans l'intégration WebViews. En règle générale, utilisez ce flux de travail si vous devez modifier le projet dans le SDK. Ce flux de travail s'appuie sur un ensemble de scripts shell de niveau inférieur qui sont adaptés pour chaque plate-forme prise en charge et un utilitaire distinct de Plugman qui vous permet d'appliquer des plugins. Alors que vous pouvez utiliser ce flux de travail pour créer des applications multi-plateformes, il est généralement plus difficile parce que l'absence d'un outil de niveau supérieur signifie cycles distincts construction et modifications de plugin pour chaque plate-forme. Pourtant, ce flux de travail vous permet un meilleur accès à des options de développement fournis par chaque SDK et est essentiel pour les applications hybrides complexes. Voir les différents Guides de plate-forme pour plus de détails sur les utilitaires de coquille disponible de chaque plateforme.
 

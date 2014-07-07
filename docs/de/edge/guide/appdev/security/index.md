@@ -1,4 +1,4 @@
----
+* * *
 
 Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
 
@@ -31,7 +31,7 @@ Die folgende Anleitung beinhaltet einige bewährte Sicherheitsmethoden, die Sie,
 
 *   Android ist Whitelist auf Cordova 2.9.x gilt als sicher, jedoch wurde es entdeckt, dass wenn foo.com in der weißen Liste enthalten ist, foo.com.evil.com die Whitelist-Prüfung zu bestehen könne. Dieses Problem wurde behoben in Cordova 3.x.
 
-*   Domain-Whitelist funktioniert nicht auf Android API 10 und unten und WP7/8 für Iframes und XMLHttpRequest. Dies bedeutet ein Angreifer kann einer beliebigen Domäne in einem Iframe laden und jedes Skript auf dieser Seite in Iframe direkt auf Cordova JavaScript-Objekte und die entsprechenden native Java-Objekte zugreifen kann. Sie sollten dies in Betracht ziehen, beim Erstellen von Anwendungen für diese Plattformen. In der Praxis bedeutet dies, um sicherzustellen, dass Sie Ziel einer höher als 10 Android API und, wenn möglich nicht Iframe zu verwenden, um externe Inhalte - laden das InAppBrowser-Plugin oder andere Drittanbieter Plug-ins verwenden.
+*   Domain-Whitelist funktioniert nicht auf Android API 10 und unten und WP8 für Iframes und XMLHttpRequest. Dies bedeutet ein Angreifer kann einer beliebigen Domäne in einem Iframe laden und jedes Skript auf dieser Seite in Iframe direkt auf Cordova JavaScript-Objekte und die entsprechenden native Java-Objekte zugreifen kann. Sie sollten dies in Betracht ziehen, beim Erstellen von Anwendungen für diese Plattformen. In der Praxis bedeutet dies, um sicherzustellen, dass Sie Ziel einer höher als 10 Android API und, wenn möglich nicht Iframe zu verwenden, um externe Inhalte - laden das InAppBrowser-Plugin oder andere Drittanbieter Plug-ins verwenden.
 
 ## Iframes und die Id Rückrufmechanismus
 
@@ -54,6 +54,8 @@ Die hier beschriebenen Prinzipien beziehen sich nicht auf Apache Cordova, sie ge
 Beim Ausführen von Cordova auf Android verwenden `android:debuggable="true"` in der Anwendung Manifest erlauben SSL-Fehler, z. B. Zertifikat Kette Validierungsfehler auf selbstsignierte Zertifikate. So Sie selbstsignierte Zertifikate in dieser Konfiguration können, aber dies keine Konfiguration, die verwendet werden soll ist, wenn die Anwendung in der Produktion ist. Es soll nur während der Anwendungsentwicklung verwendet werden.
 
 ## Verschlüsselte Speicherung
+
+(TBD)
 
 ## Allgemeine Tipps
 

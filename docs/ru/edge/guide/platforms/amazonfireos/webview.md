@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,28 +11,33 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Amazon Fire OS WebViews
 
-Начиная с 3.0.0, Cordova можно использовать в качестве компонента приложений Amazon Fire OS. Amazon Fire ОС относится к этот компонент как `CordovaWebView` . `CordovaWebView`расширяет Amazon WebView, который построен на открытым исходным кодом проекта Chromium. Используя эту функцию, веб-приложений можно использовать последних веб-стандартов HTML5, в современный веб подсистемой среды выполнения.
+Начиная с 3.3.0, Cordova можно использовать в качестве компонента приложений Amazon Fire OS. Amazon Fire ОС ссылается на этот компонент как `CordovaWebView` . `CordovaWebView` расширяет Amazon WebView, который построен на открытом исходном коде проекта Chromium. Используя эту функцию, веб-приложений можно использовать последние веб-стандарты HTML5, работающие в современной веб среде.
+
+Если вы не знакомы с Amazon Fire ОС, необходимо сначала ознакомиться с руководством ОС платформы Amazon огонь и установили последнюю SDK, прежде чем пытаться более необычный вариант развития встраивания WebView.
 
 ## Необходимые условия
 
-*   Кордова 3.0.0 или больше
+*   Кордова 3.3.0 или больше
 
-*   Android SDK, обновлены до последних SDK
+*   Android SDK, последней версии
 
 *   Amazon WebView SDK
 
 ## Руководство по использованию CordovaWebView в проекте OS Amazon Fire
 
-1.  Скачать и развернуть [Amazon WebView SDK][1] , а затем скопируйте awv_interface.jar в `/framework/libs` каталог. Создайте libs / папки, если она не существует.
+1.  Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней Кордова. Скачать его с [cordova.apache.org][1] и распакуйте его пакет Amazon Fire OS.
 
-2.  `cd`в `/framework` и запустите `ant jar` для создания jar Кордова. Он создает файл .jar, формируется как `cordova-x.x.x.jar` в `/framework` каталог.
+2.  Скачать и развернуть [Amazon WebView SDK][2] , а затем скопируйте awv_interface.jar в `/framework/libs` каталог. Создайте libs / папки, если она не существует.
 
-3.  Редактирование вашего приложения `main.xml` файл (под `/res/layout` ) чтобы выглядеть следующим образом, с `layout_height` , `layout_width` и `id` изменены в соответствии с приложением:
+3.  Перейдите к пакету `/framework` директорию и запустить `ant jar` . Он создаёт Кордова `.jar` файл, как`/framework/cordova-x.x.x.jar`.
+
+4.  Копия `.jar` файл в Android-проект `/libs` каталог.
+
+5.  Добавьте в приложение следующий `/res/xml/main.xml` файл, с `layout_height` , `layout_width` и `id` изменения в соответствии с приложением:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -40,7 +45,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             android:layout_height="match_parent" />
         
 
-4.  Измените вашу деятельность так, чтобы он реализует `CordovaInterface` . Вы должны реализовать включены методы. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или реализовать их на свой собственный. В фрагменте кода ниже показано простое приложение, использующее интерфейс. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
+6.  Измените вашу деятельность так, чтобы он реализует `CordovaInterface` . Вы должны реализовать включены методы. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или реализовать их на свой собственный. В фрагменте кода ниже показано простое приложение, использующее интерфейс. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -55,7 +60,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
             }
         
 
- [1]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
+ [1]: http://cordova.apache.org
+ [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
 Если вы используете камеру, следует также реализовать это:
 
@@ -111,6 +117,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         }
     
 
-1.  Скопировать HTML и JavaScript файлы приложения в проект Amazon Fire OS `/assets/www` каталог.
+1.  Скопировать HTML и JavaScript файлы приложения в каталог `/assets/www` проекта Amazon Fire OS.
 
-2.  Копия `config.xml` от `/framework/res/xml` для вашего проекта `/res/xml` каталог.
+2.  Скопируйте `config.xml` из `/framework/res/xml` для в каталог `/res/xml` вашего проекта.

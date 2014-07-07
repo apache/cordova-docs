@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,37 +11,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # deviceready
 
-当Cordova是在完全加载时，将触发该事件。
+科爾多瓦是在完全載入時，將觸發該事件。
 
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-此事件的任何应用程序至关重要。它标志着Cordova设备的APIs已被加载，并准备访问。
+此事件的任何應用程式至關重要。它發出信號科爾多瓦的設備已載入的 Api，並準備訪問。
 
-Cordova组成的两个代码库： 本机和 JavaScript。 虽然本机代码加载、 显示的自定义加载图像。 然而，一旦 DOM 装载JavaScript 仅加载。 这意味着 相应的本机代码变得可用之前，web 应用程序 有可能潜在的调用Cordova JavaScript 函数。
+科爾多瓦組成的兩個代碼庫： 本機和 JavaScript。 雖然本機代碼載入、 顯示的自訂載入圖像。 然而，JavaScript 僅載入一旦 DOM 裝載。 這意味著 web 應用程式可能有可能調用的科爾多瓦 JavaScript 函數之前的相應的本機代碼變得可用。
 
-一旦Cordova已完全加载后，会触发`deviceready`事件。 一旦触发该事件，你可以安全的调用Cordova APIs。 一旦 HTML 文档的 DOM 已经被加载，应用程序将通常`document.addEventListener` 附加一个事件侦听器。
+`deviceready`科爾多瓦已完全載入後會觸發事件。 一次事件火，你可以安全地使對科爾多瓦 Api 的調用。 應用程式通常將附加一個事件攔截器與 `document.addEventListener` 一旦 HTML 文檔的 DOM 已載入。
 
-`deviceready`事件的行为方式略有不同其它方式。注册后的任何事件处理，在`deviceready` 事件触发后 将立即调用回调函数。
+`deviceready`事件從其他人的行為方式略有不同。註冊後的任何事件處理 `deviceready` 事件將觸發了其立即調用的回呼函數。
 
-## 支持的平台
+## 支援的平臺
 
-*   亚马逊火 OS
-*   Android 系统
-*   BlackBerry 10
+*   亞馬遜火 OS
+*   Android 系統
+*   黑莓 10
 *   iOS
 *   Tizen
-*   Windows Phone 7 和 8
+*   Windows Phone 8
 *   Windows 8
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("deviceready", onDeviceReady, false);
     
@@ -50,7 +49,7 @@ Cordova组成的两个代码库： 本机和 JavaScript。 虽然本机代码加
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE html>
     <html>

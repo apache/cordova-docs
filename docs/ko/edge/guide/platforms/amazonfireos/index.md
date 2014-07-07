@@ -1,4 +1,4 @@
----
+* * *
 
 면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. NOTICE 파일 저작권 소유권에 관한 자세한 내용은이 작업 배포를 참조 하십시오. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. 라이센스의 복사본을 얻을 수 있습니다.
 
@@ -93,17 +93,15 @@ Windows에서 경로 환경 수정:
 
 ### 아마존 WebView SDK
 
-코르도바 애플 리 케이 션 아마존 화재 OS 플랫폼 대상을 사용 하 여 만들려면 다운로드 풀고 아마존 WebView SDK 지원 파일을 설치 해야 합니다. 이 단계는 첫 번째 아마존 화재 OS 프로젝트를 위해 할 수 하셔야만 또는 코르도바를 업그레이드 하는 경우.
+코르도바 애플 리 케이 션 아마존 화재 OS 플랫폼 대상을 사용 하 여 만들려면 다운로드 풀고 아마존 WebView SDK 지원 파일을 설치 해야 합니다. 이 단계는 첫 번째 아마존 화재 OS 프로젝트를 위해 할 수만 필요 합니다.
 
 *   [아마존 개발자 포털][1] 에서 아마존 WebView SDK를 다운로드.
 
-*   복사 `awv_interface.jar` 코르도바의 작업 디렉터리에 다운로드 한 SDK에서:
+*   복사 `awv_interface.jar` 코르도바의 작업 디렉터리에 다운로드 한 SDK에서. 존재 하지 않는 경우 commonlibs(shown below) 폴더를 만듭니다.
     
-    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
-    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
-
-***참고:*** 코르도바의 수요 때문에 설치 과정은 `~/.cordova/lib/amazon-fireos` 플랫폼 디렉터리 플랫폼 첫 번째 프로젝트에 추가 될 때까지 생성 되지 것입니다.
+    **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## 아마존 화재 운영 체제에 대 한 새 프로젝트를 만들려면
 

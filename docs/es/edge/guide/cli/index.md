@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # La interfaz de linea de comandos
 
@@ -28,7 +28,6 @@ Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesi
 *   Amazon Fire OS (Mac, Linux, Windows)
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
-*   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
 *   Windows 8 (Windows)
 *   Firefox OS (Mac, Linux, Windows)
@@ -85,7 +84,7 @@ Vaya al directorio donde mantener su código fuente y ejecutar un comando como e
 
 Puede tomar algún tiempo para que el comando completar, así que tenga paciencia. Ejecutar el comando con el `-d` opción muestra información acerca de su progreso.
 
-El primer argumento *Hola* especifica un directorio que se generen para su proyecto. Este directorio ya no debería existir, Córdoba lo creará para usted. Su `www` subdirectorio casas página de inicio de su aplicación, junto con diversos recursos bajo `css` , `js` , y `img` , que seguir común web convenciones de nomenclatura de archivos de desarrollo. El `config.xml` archivo contiene metadatos importantes necesarios para generar y distribuir la aplicación.
+El primer argumento *Hola* especifica un directorio que se generen para su proyecto. Este directorio ya no debería existir, Córdoba lo creará para usted. Su `www` subdirectorio casas página de inicio de su aplicación, junto con diversos recursos bajo `css` , `js` , y `img` , que seguir común web convenciones de nomenclatura de archivos de desarrollo. Estos activos se almacenarán en el sistema de archivos local del dispositivo, no sirve de forma remota. El `config.xml` archivo contiene metadatos importantes necesarios para generar y distribuir la aplicación.
 
 El segundo argumento `com.example.hello` proporciona un identificador de dominio reverso-estilo su proyecto. Este argumento es opcional, pero sólo si también omite el tercer argumento, puesto que los argumentos son posicionales. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de paquetes Java. El valor predeterminado es `io.cordova.hellocordova` , pero se recomienda que seleccione un valor apropiado.
 
@@ -109,7 +108,6 @@ Antes de que usted puede construir el proyecto, tienes que especificar un conjun
 
 Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere a diferentes versiones del sistema operativo Windows Phone:
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos
@@ -196,9 +194,14 @@ Antes de ejecutar este comando, tienes que configurar el dispositivo para la pru
 
 Al construir y ver un nuevo proyecto, la aplicación predeterminada que aparece no hace mucho. Puede modificar la aplicación de muchas maneras a aprovechar las tecnologías web estándar, sino de la aplicación comunicar estrechamente con varias características de nivel de dispositivo, tienes que añadir plugins que proporcionan acceso a núcleo Cordova APIs.
 
-Un *plugin* es un poco de código adicional que proporciona una interfaz para componentes nativos. Usted puede diseñar su propia interfaz plugin, por ejemplo al diseñar una aplicación híbrida que combina un Cordova WebView con componentes nativos. (Véase WebViews incrustar y [Plugin Development Guide][6] para obtener más detalles). Más comúnmente, debe agregar un plugin para activar uno de los rasgos básicos de nivel de dispositivo de Cordova detallados en la referencia de la API. Puede encontrarse una lista de estos plugins, plugins de terceros adicionales proporcionados por la comunidad, incluyendo en el registro en [plugins.cordova.io][7]. Puede utilizar la CLI para buscar plugins de este registro. Por ejemplo, buscando `bar` y `code` produce un solo resultado que coincide con ambos términos como subcadenas entre mayúsculas y minúsculas:
+Un *plugin* es un poco de código adicional que proporciona una interfaz para componentes nativos. Usted puede diseñar su propia interfaz plugin, por ejemplo al diseñar una aplicación híbrida que combina un Cordova WebView con componentes nativos. (Véase WebViews incrustar y [Plugin Development Guide][6] para obtener más detalles). Más comúnmente, debe agregar un plugin para activar uno de los rasgos básicos de nivel de dispositivo de Cordova detallados en la referencia de la API.
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+
+A partir de la versión 3.0, cuando se crea un proyecto de Córdoba no tiene presente algún plugin. Este es el nuevo comportamiento predeterminado. Algún plugin que desee, incluso los plugins del núcleo, debe agregarse explícitamente.
+
+Puede encontrarse una lista de estos plugins, plugins de terceros adicionales proporcionados por la comunidad, incluyendo en el registro en [plugins.cordova.io][7]. Puede utilizar la CLI para buscar plugins de este registro. Por ejemplo, buscando `bar` y `code` produce un solo resultado que coincide con ambos términos como subcadenas entre mayúsculas y minúsculas:
+
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code

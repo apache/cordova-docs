@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,29 +11,28 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # menubutton
 
-在用户按菜单按钮时，将触发该事件。
+在使用者按功能表按鈕時，將觸發該事件。
 
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-事件处理程序的应用覆盖默认的菜单按钮的行为。
+事件處理常式的應用覆蓋的預設功能表按鈕行為。
 
-一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
-*   亚马逊火 OS
-*   Android 系统
+*   亞馬遜火 OS
+*   Android 系統
 *   黑莓 10
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
     
@@ -42,7 +41,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

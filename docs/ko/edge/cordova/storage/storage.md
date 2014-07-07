@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 스토리지
 
@@ -27,8 +26,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 또한 다른 *세션 저장소* 인터페이스 또는 *웹 스토리지*, *간단한 스토리지*,으로 알려진,이 API 동기 키/값 쌍 스토리지를 제공 하 고 기본 WebView 구현에서 사용할 수 있습니다. 자세한 내용은 [W3C 사양을][2] 참조 하십시오.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 특질**: 점 표기법은 *하지* 사용할 수, 사용 해야 `setItem` 또는 `getItem` 보다는로 키 저장소 개체에서 직접 액세스`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 다음 플랫폼 IndexedDB를 지원합니다.
 
-*   Windows Phone 8
 *   블랙베리 10
+*   Windows Phone 8
+*   윈도우 8
 
 ## 플러그인 기반 옵션
 

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plugin Specification
 
@@ -73,7 +72,7 @@ Il `<engine>` tag ha anche il supporto predefinito per tutte le principali piatt
     </engines>
     
 
-Ecco un elenco di default motori che la '<engine>' etichetta supporta: * 'cordova' * 'cordova-plugman' * 'cordova-Amazzonia-fireos' * 'cordova-android' * 'cordova-ios' * 'cordova-blackberry10' * 'cordova-wp7' * 'cordova-wp8' * 'cordova-windows8'  
+Ecco un elenco di default motori che la '<engine>' etichetta supporta: * 'cordova' * 'cordova-plugman' * 'cordova-Amazzonia-fireos' * 'cordova-android' * 'cordova-ios' * 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
 * ' android-sdk' / / restituisce l'api di Android più alto livello installato * 'apple xcode-' / / restituisce la versione di xcode * 'apple-ios' / / restituisce la versione iOS installata * 'apple-osx' / / restituisce la versione OSX * 'blackberry-ndk' / / restituisce la versione SDK nativo blackberry
 
 Specifica quadri personalizzati basati su Apache Cordova dovrebbero essere elencati sotto l'etichetta del motore in questo modo:
@@ -241,8 +240,8 @@ Nomi di piattaforma dovrebbero essere minuscoli. Nomi di piattaforma, come arbit
 *   Android
 *   blackberry10
 *   iOS
-*   WP7
 *   WP8
+*   Windows8
 
 ## *file di origine* Elemento
 
@@ -317,6 +316,10 @@ Esso supporta i seguenti attributi:
     
     Se il selettore non si risolve in un bambino del documento specificato, il tool si ferma e inverte il processo di installazione, genera un avviso ed esce con un codice diverso da zero.
 
+*   `after`: Un elenco con priorità di fratelli accettati dopo di che aggiungere il frammento XML. Utile per specificare le modifiche nei file che richiedono ordine rigido di elementi XML come [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *plugin-plist* Elemento
 
 Questo è *superata* in quanto si applica solo a cordova-ios 2.2.0 e sotto. Uso il `<config-file>` tag per versioni più recenti di Cordova.
@@ -372,13 +375,21 @@ Esempi:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 Il `src` attributo identifica il quadro, che plugman tenta di aggiungere al progetto di Cordova, nella maniera corretta per una determinata piattaforma.
 
 L'optional `weak` attributo è un valore booleano che indica se il quadro dovrebbe essere debolmente legato. Il valore predefinito è`false`.
 
-L'optional `custom` attributo è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è`false`.
+L'optional `custom` attributo è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è `false` . ***Su Android*** specifica come trattare **src**. Se `true` **src** è un percorso relativo dalla directory del progetto applicazione, altrimenti - dalla directory del SDK di Android.
+
+L'optional `type` attributo è una stringa che indica il tipo di framework per aggiungere. Attualmente solo `projectReference` è supportato solo su Windows 8. Utilizzando `custom='true'` e `type='projectReference'` aggiungere un riferimento al progetto che verrà aggiunto alla compilazione + collegamento passi del progetto cordova. Questo essenzialmente è l'unico modo attualmente che un quadro 'personalizzato' possibile destinazione più architetture come sono costruite in modo esplicito come dipendenza dall'applicazione posizionamento a cordova.
+
+L'optional `parent` attributo è attualmente supportato solo su Android. Imposta il percorso relativo alla directory contenente il sottoprogetto a cui aggiungere il riferimento. Il valore predefinito è `.` , cioè il progetto di applicazione. Consente di aggiungere riferimenti tra sottoprogetti come in questo esempio:
+
+    < quadro src = "FeedbackLib" custom = "true" / >< quadro src = "extra/android/supporto/v7/appcompat" custom = "false" padre = "FeedbackLib" / >
+    
 
 ## *info* Elemento
 
@@ -387,7 +398,10 @@ Informazioni supplementari fornite agli utenti. Questo è utile quando si richie
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    È necessario aggiungere la seguente riga alla 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / info >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Variabili

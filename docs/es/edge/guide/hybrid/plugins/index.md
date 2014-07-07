@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,16 +11,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Guía de desarrollo de Plugins
+# Guía de desarrollo de plugin
 
 Un *plugin* es un paquete de código que permite la webview Cordova dentro de la cual hace que la aplicación para comunicarse con la plataforma nativa en la que se ejecuta. Plugins proporcionan acceso a la funcionalidad de plataforma y dispositivo que está normalmente disponible para aplicaciones basadas en web. Las principales características de Cordova API se implementan como plugins, y muchos otros están disponibles que permiten funciones tales como escáneres de código de barras, comunicación NFC, o adaptar el calendario interfaces. Hay un [registro][1] de extensiones disponibles.
 
  [1]: http://plugins.cordova.io
 
-Plugins comprenden una única interfaz JavaScript junto con bibliotecas de código nativo correspondiente para cada plataforma soportada. A unos pasos esta sección a través de un plugin simple *Eco* que pasa una cadena de JavaScript a la plataforma nativa y posterior, que puede utilizar como modelo para construir características mucho más complejas. Esta sección analiza la estructura básica del plugin y la interfaz JavaScript de exteriores. Para cada interfaz nativa correspondiente, consulte la lista al final de esta sección.
+Plugins comprenden una única interfaz JavaScript junto con bibliotecas de código nativo correspondiente para cada plataforma soportada. En esencia esto esconde las diversas implementaciones de código nativo detrás de una interfaz común de JavaScript.
+
+A unos pasos esta sección a través de un plugin simple *Eco* que pasa una cadena de JavaScript a la plataforma nativa y posterior, que puede utilizar como modelo para construir características mucho más complejas. Esta sección analiza la estructura básica del plugin y la interfaz JavaScript de exteriores. Para cada interfaz nativa correspondiente, consulte la lista al final de esta sección.
 
 Además de estas instrucciones, cuando se prepara para escribir un plugin es mejor mirar sobre [plugins existentes][2] para orientación.
 
@@ -134,12 +135,13 @@ Una vez se define JavaScript para tu plugin, debes complementarlo con por lo men
 *   iOS Plugins
 *   BlackBerry 10 Plugins
 *   Windows Phone Plugins
+*   Plugins de Windows 8
 
 La plataforma Tizen no admite plugins.
 
 ## Editorial Plugins
 
-Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puedes publicar tu extensión en el [registry][1] de Cordova (basado en [`npmjs`][4]) o en cualquier otro registro basado en `npmjs`. Otros desarrolladores pueden instalar automáticamente usando ya sea `plugman` o la CLI Cordova. (Para más detalles sobre cada camino hacia el desarrollo, véase utilizando Plugman para gestionar Plugins y la interfaz de línea de comandos).
+Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puede publicar su plugin en el [registro][1] de Cordova (basado en [ `npmjs` ][4]) o a cualquier otro `npmjs` -basado del registro. Otros desarrolladores pueden instalar automáticamente usando ya sea `plugman` o la CLI Cordova. (Para más detalles sobre cada camino hacia el desarrollo, véase utilizando Plugman para gestionar Plugins y la interfaz de línea de comandos).
 
  [4]: https://github.com/isaacs/npmjs.org
 

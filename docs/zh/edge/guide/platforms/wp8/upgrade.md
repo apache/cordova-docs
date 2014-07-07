@@ -1,6 +1,6 @@
----
+* * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 许可证，此文件到你根据 Apache 许可证，2.0 版 （"许可证"） ；您不可能使用此文件除了符合许可证。 You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -11,408 +11,65 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# 升级 Windows Phone
+# 升級 Windows Phone
 
-本指南演示如何修改 Windows Phone 的项目，这两个版本 7 和 8，从科尔多瓦的旧版本进行升级。 大多数这些说明适用于与旧集的前面的命令行工具创建的项目 `cordova` CLI 实用程序。 信息，请参阅命令行界面如何更新的 CLI 版本。 以下部分显示了如何从非 CLI 项目升级。
+本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
 
-## 从 3.1.0 升级到 3.2.0
+## 從 3.1.0 升級到 3.2.0
 
-为创建的科尔多瓦 CLI 的项目：
+為創建的科爾多瓦 CLI 的專案：
 
-1.  更新 `cordova` CLI 版本。请参阅命令行界面。
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
-2.  运行 `cordova platform update wp8` （或 `wp7` ，每添加到您的项目的平台）。
+2.  運行`cordova platform update wp8`
 
-对于不使用 CLI 科尔多瓦创建的项目，请运行：
-
-        bin\update < project_path >
-    
-
-## 从 3.0.0 升级到 3.1.0
-
-为创建的科尔多瓦 CLI 的项目：
-
-1.  更新 `cordova` CLI 版本。请参阅命令行界面。
-
-2.  运行 `cordova platform update wp8` （或 `wp7` ，每添加到您的项目的平台）。
-
-对于不使用 CLI 科尔多瓦创建的项目，请运行：
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
         bin\update < project_path >
     
 
-## 从 2.9.0 升级到 CLI （3.0.0)
+## 從 3.0.0 升級到 3.1.0
 
-1.  创建新的 Apache 科尔多瓦 3.0.0 项目使用 CLI，科尔多瓦，如所述的命令行界面。
+為創建的科爾多瓦 CLI 的專案：
 
-2.  添加您的平台到科尔多瓦项目中，例如：`cordova
-platform add wp7 wp8`.
+1.  更新 `cordova` CLI 版本。請參閱命令列介面。
 
-3.  该项目的内容复制 `www` 目录到 `www` 目录在您刚刚创建的科尔多瓦项目的根目录。
+2.  運行`cordova platform update wp8`
 
-4.  复制或覆盖任何本机资产从原始项目 （ `SplashScreen` ， `ApplicationIcon` 等等），这让确定要添加的任何新文件 `.csproj` 文件。 Windows 电话里面的项目生成 `platforms\wp7` 或 `platforms\wp8` 目录。
+對於不使用 CLI 科爾多瓦創建的專案，請運行：
 
-5.  使用科尔多瓦 CLI 工具来安装您需要的任何插件。请注意 CLI 处理所有核心 Api 作为插件，所以他们可能需要添加。只有 3.0.0 插件是与 CLI 兼容。
-
-6.  生成并测试。
-
-## 从 2.9.0 升级到 3.0.0 (非 CLI)
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 3.0.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  复制并覆盖任何闪屏或图标图像。
-
-4.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-5.  生成并测试。
-
-**注**： 所有核心 Api 从科尔多瓦版本 3.0 中, 移除和作为插件必须单独安装。 关于如何重新启用非 CLI 的工作流中的这些功能的详细信息，请参阅使用 Plugman 到管理插件。
-
-## 从 2.8.0 升级到 2.9.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.9.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新的名称 `cordova.js` 的 HTML 标记，如果它仍在使用科尔多瓦 VERSION.js (应该是刚中`cordova.js`).
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们也添加到.csproj 文件。
-
-6.  生成并测试。
-
-## 从 2.7.0 升级到 2.8.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.8.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova.js` 文件。（注意文件名中的版本号的缺乏。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.6.0 升级到 2.7.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.7.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.7.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.5.0 升级到 2.6.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.6.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.6.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.4.0 升级到 2.5.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.5.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.5.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.3.0 升级到 2.4.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 或 WP8 2.4.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.4.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.2.0 升级到 2.3.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建新的 Apache 科尔多瓦 WP7 2.3.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.3.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.1.0 升级到 2.2.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建新的 Apache 科尔多瓦 WP7 2.2.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.2.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 2.0.0 升级到 2.1.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建新的 Apache 科尔多瓦 WP7 2.1.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.1.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 1.9.0 升级到 2.0.0
-
-有很大变化到 Apache 科尔多瓦 2.0.0 WP7 项目结构，使这升级有点更多涉及的其他人。 本质上这不是升级而建立一个新的项目和对现有源代码文件的副本。
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  创建一个新的 Apache 科尔多瓦 WP7 2.0 项目。
-
-2.  将复制的内容 `www` 目录到新的项目，并确保这些项目添加到 VS 项目。
-
-3.  更新您的 html 代码，使用新的 `cordova-2.0.0.js` 文件。
-
-4.  复制并覆盖任何闪屏或图标图像。
-
-5.  复制超过任何插件从 `plugins` 目录到新项目，并确保他们还补充说到 VS 项目。
-
-6.  生成并测试。
-
-## 从 1.8.0 升级到 1.9.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
+        bin\update < project_path >
     
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
 
-5.  复制新 `cordova-1.9.0.js` 到您的项目。（请确定它被标记为内容）。
+## 從 2.9.0 升級到 CLI （3.0.0)
 
-6.  更新您的 html 代码，使用新的 `cordova-1.9.0.js` 文件。
+1.  創建新的 Apache 科爾多瓦 3.0.0 專案使用 CLI，科爾多瓦，如所述的命令列介面。
 
-## 从 1.7.0 升级到 1.8.0
+2.  添加您的平臺的科爾多瓦的專案，例如：`cordova
+platform add wp8`.
 
-在 Visual Studio 的解决方案资源管理器窗口中：
+3.  該專案的內容複寫 `www` 目錄到 `www` 目錄在您剛剛創建的科爾多瓦專案的根目錄。
 
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
+4.  複製或覆蓋任何本機資產從原始專案 （ `SplashScreen` ， `ApplicationIcon` 等等），這讓確定要添加的任何新檔 `.csproj` 檔。 Windows 電話裡面的專案生成 `platforms\wp8` 目錄。
 
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
+5.  使用科爾多瓦 CLI 工具來安裝您需要的任何外掛程式。請注意 CLI 處理所有核心 Api 作為外掛程式，所以他們可能需要添加。只有 3.0.0 外掛程式是與 CLI 相容。
 
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
+6.  生成並測試。
 
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
+## 從 2.x 升級到 3.0.0 (非 CLI)
 
-5.  复制新 `cordova-1.8.0.js` 到您的项目。（请确定它被标记为内容）。
+在 Visual Studio 的解決方案資源管理器視窗中：
 
-6.  更新您的 html 代码，使用新的 `cordova-1.8.0.js` 文件。
+1.  創建新的 Apache 科爾多瓦 WP8 3.0.0 專案。
 
-## 从 1.6.0 升级到 1.7.0
+2.  將複製的內容 `www` 目錄到新的專案，並確保這些專案添加到 VS 專案。
 
-在 Visual Studio 的解决方案资源管理器窗口中：
+3.  複製並覆蓋任何閃屏或圖示圖像。
 
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
+4.  複製超過任何外掛程式從 `plugins` 目錄到新專案，並確保他們還補充說到 VS 專案。
 
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
+5.  生成並測試。
 
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.7.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.7.0.js` 文件。
-
-## 从 1.6.0 升级到 1.6.1
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.6.1.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.6.1.js` 文件。
-
-## 从 1.5.0 版升级到 1.6.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.6.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.6.0.js` 文件。
-
-## 从 1.4.0 升级到 1.5.0 版
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.5.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.5.0.js` 文件。
-
-## 从 1.3.0 升级到 1.4.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.4.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.4.0.js` 文件。
-
-## 从 1.2.0 升级到 1.3.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.3.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.3.0.js` 文件。
-
-## 从 1.1.0 升级到 1.2.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.2.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.2.0.js` 文件。
-
-## 从 1.0.0 升级到 1.1.0
-
-在 Visual Studio 的解决方案资源管理器窗口中：
-
-1.  删除 `GapLib/WP7CordovaClassLib.dll` 从您的项目。
-
-2.  移除对的引用 `WP7CordovaClassLib` **的引用**的目录中。
-
-3.  **引用**上单击鼠标右键，然后选择**添加引用**.
-
-4.  导航到新分布和添加 `WP7CordovaClassLib.dll` 文件。
-    
-    **注**： 您可以通过在引用上右击并选择**属性**查看 DLL 的版本.
-
-5.  复制新 `cordova-1.1.0.js` 到您的项目。（请确定它被标记为内容）。
-
-6.  更新您的 html 代码，使用新的 `cordova-1.1.0.js` 文件。
+**注**： 所有核心 Api 從科爾多瓦版本 3.0 中, 移除和作為外掛程式必須單獨安裝。 關於如何重新啟用非 CLI 的工作流中的這些功能的詳細資訊，請參閱使用 Plugman 到管理外掛程式。

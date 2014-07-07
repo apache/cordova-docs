@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 <div id="home">
   <h1>
@@ -22,10 +21,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
   <ul>
     <li>
       <h2>
-        Введение
+        Обзор
       </h2>
       
-      <span>Начните отсюда, если вы новичок в Cordova.</span>
+      <span>Начните здесь, если вы новичок в Кордове. Включает в себя установку и последующие шаги.</span>
     </li>
     <li>
       <h2>
@@ -43,45 +42,45 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Руководство по поддерживаемым платформам
+        Платформа гиды
       </h2>
       
-      <span>Настройка SDK и обновление существующих проектов</span>
+      <span>Настройка каждой платформы SDK и обновление проектов.</span>
     </li>
     <li>
       <h2>
-        Использование Plugman для управления расширениями
+        Использование Plugman для управления плагины
       </h2>
       
-      <span>Использование Plugman дл управления плагинами без CLI</span>
+      <span>Управление плагинами без CLI при использовании рабочего процесса по центру платформы.</span>
     </li>
     <li>
       <h2>
         Файл config.xml
       </h2>
       
-      <span>Настройка возможностей вашего приложения.</span>
+      <span>Настройте функции вашего приложения.</span>
     </li>
     <li>
       <h2>
         Иконки и заставки
       </h2>
       
-      <span>Настройка отображаемых приложением изображений.</span>
+      <span>Настройка отображения изображений вашего приложения.</span>
     </li>
     <li>
       <h2>
-        Интеграция WebViews
+        Встраивание WebViews
       </h2>
       
-      <span>Добавление Cordova WebView в ваш проект.</span>
+      <span>Реализуйте собственный проект Cordova WebView.</span>
     </li>
     <li>
       <h2>
-        Руководство по разработке расширений
+        Руководство по разработке плагинов
       </h2>
       
-      <span>Создайте свой первый плагин.</span>
+      <span>Разработать свой собственный плагин.</span>
     </li>
     <li>
       <h2>
@@ -92,24 +91,38 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        Инструкция по доступу к внешним ресурсам
+        Руководство по безопасности
       </h2>
       
-      <span>Разрешите приложению доступ к внешним ресурсам.</span>
+      <span>Информация и советы по созданию безопасных приложений.</span>
     </li>
     <li>
       <h2>
-        Хранилище
+        Whitelist Путеводитель
       </h2>
       
-      <span>Обзор возможностей хранения данных, предоставляемых различными платформами.</span>
+      <span>Предоставьте приложению доступ к внешним ресурсам.</span>
     </li>
     <li>
       <h2>
-        <a href="_index.html">Алфавитный указатель</a>
+        Хранения
       </h2>
       
-      <span>Полный список документации.</span>
+      <span>Обзор вариантов родной хранения.</span>
+    </li>
+    <li>
+      <h2>
+        Последующие шаги
+      </h2>
+      
+      <span>Посмотрите на темы, которые встретите новых разработчиков Кордова.</span>
+    </li>
+    <li>
+      <h2>
+        <a href="_index.html">Индекс ключевых слов</a>
+      </h2>
+      
+      <span>Полный индекс документации.</span>
     </li>
   </ul>
   
@@ -127,10 +140,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </li>
     <li>
       <h2>
-        API плагинов
+        Плагин API-интерфейсы
       </h2>
       
-      <span>Узнайте какие плагины Cordova доступны для использования в вашем проекте.</span>
+      <span>Узнайте, какие Cordova плагины доступны для использования в проекте.</span>
     </li>
   </ul>
 </div>

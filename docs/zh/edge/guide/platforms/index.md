@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,70 +11,69 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# 平台指南
+# 平臺指南
 
-在开发之前为任何下面列出的平台，安装科尔多瓦的命令行界面 (CLI)。（有关详细信息，见命令行界面）。
+在開發之前為任何下面列出的平臺，安裝科爾多瓦的命令列介面 (CLI)。（有關詳細資訊，見命令列介面）。
 
-要开发科尔多瓦的应用程序，您必须为您的目标每个移动平台安装 Sdk。 这种安装是工作的必要无论你做你在 SDK 中多数还是为您生成周期使用 CLI 的。
+要開發科爾多瓦的應用程式，您必須為您的目標每個移動平臺安裝 Sdk。 這種安裝是工作的必要無論你做你在 SDK 中多數還是為您組建循環使用 CLI 的。
 
-下面列出每个*平台指南*告诉您您需要知道要设置的每个平台的开发环境： 在何处获取 SDK、 如何设置设备仿真程序、 如何连接设备进行直接测试和如何管理签署的关键要求。 附加指南提供了每个平台特有的配置选项，说明添加插件，信息如何升级每个平台，以及特定于平台的命令行工具，作为一个较低级别的替代 `cordova` 命令行实用程序。
+下面列出每個*平臺指南*告訴您您需要知道要設置的每個平臺的開發環境： 在何處獲取 SDK、 如何設置設備模擬程式、 如何連接設備進行直接測試和如何管理簽署的關鍵要求。 附加指南提供了每個平臺特有的配置選項，說明添加外掛程式，資訊如何升級每個平臺，以及特定于平臺的命令列工具，作為一個較低級別的替代 `cordova` 命令列實用程式。
 
-## 亚马逊火 OS
+## 亞馬遜火 OS
 
-*   亚马逊火 OS 平台指南
-*   亚马逊火 OS 配置
-*   亚马逊火 OS WebViews
-*   亚马逊火 OS 插件
+*   亞馬遜火 OS 平臺指南
+*   亞馬遜火 OS 配置
+*   亞馬遜火 OS WebViews
+*   亞馬遜火 OS 外掛程式
 
-## Android 系统
+## Android 系統
 
-*   Android 平台指南
-*   Android 壳工具指南
-*   Android 系统配置
-*   Android 插件
+*   Android 平臺指南
+*   Android 殼工具指南
+*   Android 系統組態
+*   Android 外掛程式
 *   Android WebViews
-*   升级 Android
+*   升級 Android
 
 ## 黑莓 10
 
-*   10 黑莓平台指南
-*   黑莓 10 手机壳工具指南
-*   黑莓手机配置
-*   黑莓 10 插件
-*   黑莓 10 命令行工具
-*   升级黑莓 10
+*   10 黑莓平臺指南
+*   黑莓 10 手機殼工具指南
+*   黑莓 10 配置
+*   黑莓 10 外掛程式
+*   黑莓 10 命令列工具
+*   升級黑莓 10
 
-## 火狐浏览器操作系统
+## 火狐瀏覽器作業系統
 
-*   火狐浏览器操作系统平台指南
+*   火狐瀏覽器作業系統平臺指南
 
 ## iOS
 
-*   iOS 平台指南
-*   iOS 壳工具指南
+*   iOS 平臺指南
+*   iOS 殼工具指南
 *   iOS 配置
-*   iOS 插件
+*   iOS 外掛程式
 *   WebViews iOS
-*   升级 iOS
+*   升級 iOS
 
 ## Ubuntu
 
-*   Ubuntu 平台指南
+*   Ubuntu 平臺指南
 
 ## Windows Phone
 
-*   Windows Phone 平台指南
-*   Windows Phone 插件
-*   升级 Windows Phone
+*   Windows Phone 平臺指南
+*   Windows Phone 外掛程式
+*   升級 Windows Phone
 
 ## Windows 8
 
-*   Windows 8 平台指南
-*   升级 Windows 8
+*   Windows 8 平臺指南
+*   升級 Windows 8
 
 ## Tizen
 
-*   Tizen 平台指南
+*   Tizen 平臺指南

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,14 +11,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Руководство по Ubuntu платформы
 
 ## Первоначальный релиз
 
-Добро пожаловать на первоначального выпуска Ubuntu платформы поддержки в Кордове. С этого выпуска основное внимание развивается на системе Ubuntu и используя Cordova веб проекта Dev рабочего процесса. Это включает в себя добавление платформы Ubuntu для вашего проекта, Добавление стандартных плагинов Cordova и, конечно, строительство и приложений для Ubuntu платформы.
+Добро пожаловать на первоначального выпуска Ubuntu платформы поддержки в Кордове. С этого выпуска основное внимание развивается на системе Ubuntu и использование рабочего процесса кросс платформенный, говорится в обзоре. Это включает в себя добавление платформы Ubuntu для вашего проекта, добавив стандартные плагины Cordova и построение и запуск приложения для платформы Ubuntu.
 
 ### Ubuntu SDK
 
@@ -28,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ### Ubuntu среды выполнения платформы
 
-Ubuntu является хорошо известен своей среды рабочего стола (для ноутбуков, ПК и т.п.). Ubuntu Touch расширяет ОС Ubuntu на телефоны и планшеты. Ubuntu среды выполнения платформы имеют различных Процессорных архитектур (x 86, armhf, и т.д.). Приложения и плагин код должен быть скомпилирован соответствующим образом. Поддержка этой широкой области стремительно развивается в Ubuntu.
+Ubuntu является хорошо известна своей среды рабочего стола (для ноутбуков, ПК и т.п.). Ubuntu Touch расширяет ОС Ubuntu на телефоны и планшеты. Ubuntu среды выполнения платформы имеют различных Процессорных архитектур (x 86, armhf, и т.д.). Приложения и плагин код должен быть скомпилирован соответствующим образом. Поддержка этой широкой области стремительно развивается в Ubuntu.
 
 ### Последняя информация
 
@@ -61,12 +60,14 @@ Ubuntu является хорошо известен своей среды ра
 
 ### Создание проекта
 
-    $ cordova create project1 REVERSEDNSNAME.project1 project1
+Создает приложение в `hello` каталог, чье отображаемое имя `HelloWorld` :
+
+    $ cordova create hello com.example.hello HelloWorld
     
 
 ### Перейти в каталог проекта
 
-    $ cd project1
+    $ cd hello
     
 
 ### Добавьте платформа Ubuntu

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,61 +11,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Android 系统配置
+# Android 系統組態
 
-`config.xml`文件控制应用于每个应用程序和 CordovaWebView 实例的应用程序的基本设置。 本节详细说明仅适用于 android 系统生成的首选项。 有关全局配置选项，请参阅 config.xml 文件的信息。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
 
-*   `KeepRunning`(boolean 类型的值，默认值为 `true` ）： 确定应用程序是否保持甚至后在后台运行 `pause` 事件火灾。 将此设置为 `false` 不会杀死后的 app `pause` 事件，但只是暂停执行代码内科尔多瓦 web 视图应用程序时在背景中。
+*   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     
         <preference name="KeepRunning" value="false"/>
         
 
-*   `LoadUrlTimeoutValue`(以毫秒为单位的数字，默认为 `20000` ，20 秒)： 当加载一个页面，在引发超时错误之前等待的时间量。 此示例指定 10 秒，而不是 20：
+*   `LoadUrlTimeoutValue`(以毫秒為單位的數位，預設為 `20000` ，20 秒)： 當載入一個頁面，在引發逾時錯誤之前等待的時間量。 此示例指定 10 秒，而不是 20：
     
         <preference name="LoadUrlTimeoutValue" value="10000"/>
         
 
-*   `SplashScreen`（字符串，默认值为 `splash` ）： 包括其扩展名的文件的名称 `res/drawable` 目录。 各种资产必须共享此各子目录中的共同名称。
+*   `SplashScreen`（字串，預設值為 `splash` ）： 包括其副檔名的檔的名稱 `res/drawable` 目錄。 各種資產必須共用此各子目錄中的共同名稱。
     
         <preference name="SplashScreen" value="mySplash"/>
         
 
-*   `SplashScreenDelay`(编号以毫秒为单位，默认值为 `3000` ）： 所需的时间初始屏幕图像显示。
+*   `SplashScreenDelay`(編號以毫秒為單位，預設值為 `3000` ）： 所需的時間初始螢幕圖像顯示。
     
         <preference name="SplashScreenDelay" value="10000"/>
         
 
-*   `InAppBrowserStorageEnabled`(boolean 类型的值，默认值为 `true` ）： 控件是否在 InAppBrowser 内打开的页可以访问同一认为和 WebSQL 存储作为默认浏览器打开的页面。
+*   `InAppBrowserStorageEnabled`(boolean 類型的值，預設值為 `true` ）： 控制項是否在 InAppBrowser 內打開的頁可以訪問同一認為和 WebSQL 存儲作為預設瀏覽器打開的頁面。
     
         <preference name="InAppBrowserStorageEnabled" value="true"/>
         
 
-*   `LoadingDialog`（字符串，默认值为 `null` ）： 如果设置，显示一对话框中指定的标题和消息，和一个微调框，加载的应用程序中的第一页时。 由在此值字符串中的逗号分隔的标题和消息，那逗号删除之前显示的对话框。
+*   `LoadingDialog`（字串，預設值為 `null` ）： 如果設置，顯示一對話方塊中指定的標題和消息，和一個微調框，載入的應用程式中的第一頁時。 由在此值字串中的逗號分隔的標題和消息，那逗號刪除之前顯示的對話方塊。
     
         <preference name="LoadingDialog" value="My Title,My Message"/>
         
 
-*   `LoadingPageDialog`（字符串，默认值为 `null` ）： 相同， `LoadingDialog` ，但用于在应用程序中的第一页后加载的每个页面。
+*   `LoadingPageDialog`（字串，預設值為 `null` ）： 相同， `LoadingDialog` ，但用於在應用程式中的第一頁後載入的每個頁面。
     
         <preference name="LoadingPageDialog" value="My Title,My Message"/>
         
 
-*   `ErrorUrl`（URL，默认为 `null` ）： 如果设置，将显示而不是以"应用程序错误"标题对话框的应用程序中的错误时所引用的网页。
+*   `ErrorUrl`（URL，預設為 `null` ）： 如果設置，將顯示而不是以"應用程式錯誤"標題對話方塊的應用程式中的錯誤時所引用的網頁。
     
         <preference name="ErrorUrl" value="myErrorPage.html"/>
         
 
-*   `ShowTitle`(boolean 类型的值，默认值为 `false` ）： 显示在屏幕顶部的标题。
+*   `ShowTitle`(boolean 類型的值，預設值為 `false` ）： 顯示在螢幕頂部的標題。
     
         <preference name="ShowTitle" value="true"/>
         
 
-*   `LogLevel`（字符串，默认值为 `ERROR` ）： 将通过哪些日志将过滤邮件从您的应用程序的最小日志级别设置。 有效的值为 `ERROR` ， `WARN` ， `INFO` ， `DEBUG` ，和`VERBOSE`.
+*   `LogLevel`（字串，預設值為 `ERROR` ）： 將通過哪些日誌將過濾郵件從您的應用程式的最小日誌級別設置。 有效的值為 `ERROR` ， `WARN` ， `INFO` ， `DEBUG` ，和`VERBOSE`.
     
         <preference name="LogLevel" value="VERBOSE"/>
         
 
-*   `SetFullscreen`(boolean 类型的值，默认值为 `false` ）： 同样作为 `Fullscreen` 在此 xml 文件的全局配置参数。 此 Android 特定元素支持全球否决 `Fullscreen` 元素，并将在未来版本中移除。
+*   `SetFullscreen`(boolean 類型的值，預設值為 `false` ）： 同樣作為 `Fullscreen` 在此 xml 檔的全域配置參數。 此 Android 特定元素支援全球否決 `Fullscreen` 元素，並將在未來版本中移除。
+
+*   `AndroidLaunchMode`（字串，預設值為 `singleTop` ）： 設置活動 `android:launchMode` 屬性。 這將更改該應用程式從應用程式圖示或意圖啟動的是已經在運行的過程中會發生什麼。 有效的值是 `standard` ， `singleTop` ， `singleTask` ，`singleInstance`.
+    
+        <preference name="AndroidLaunchMode" value="singleTop"/>

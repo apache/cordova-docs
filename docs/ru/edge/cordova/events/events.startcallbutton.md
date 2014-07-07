@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,21 +11,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # startcallbutton
 
-Событие возникает, когда пользователь нажимает кнопку вызова start.
+Событие возникает, когда пользователь нажимает кнопку начала звонка.
 
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
-Если необходимо переопределить поведение по умолчанию начала вызова вы можете зарегистрировать прослушиватель событий для `startcallbutton` событие.
+Если необходимо переопределить поведение по умолчанию начала вызова вы можете зарегистрировать обработчик для события `startcallbutton`.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
 
 ## Поддерживаемые платформы
 

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Amazon fuego OS Platform Guide
 
@@ -100,17 +99,15 @@ Para modificar el entorno PATH en Windows:
 
 ### Amazon WebView SDK
 
-Para crear aplicaciones de Córdoba con el objetivo de la plataforma de Amazon fuego OS, usted necesitará descargar, descomprimir e instalar los archivos de soporte de Amazon WebView SDK. Este paso sólo tendrá que hacerse para su primer proyecto Amazonas fuego OS, o si actualizas Cordova.
+Para crear aplicaciones de Córdoba con el objetivo de la plataforma de Amazon fuego OS, usted necesitará descargar, descomprimir e instalar los archivos de soporte de Amazon WebView SDK. Este paso sólo tendrá que ser hecho por tu primer proyecto Amazonas fuego OS.
 
 *   Descargue el SDK de WebView Amazonas del [Amazonas Developer Portal][1].
 
-*   Copia `awv_interface.jar` del SDK descargado al directorio de trabajo de Cordova:
+*   Copia `awv_interface.jar` del SDK descargado al directorio de trabajo de Cordova. Crear carpeta commonlibs(shown below) si no existe:
     
-    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
-    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
-
-***Nota:*** Debido a la demanda de Cordova instalar el proceso, el `~/.cordova/lib/amazon-fireos` Directorio de plataforma no se creará hasta la plataforma agrega a tu primer proyecto.
+    **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Crear nuevo proyecto para el Amazonas fuego OS
 

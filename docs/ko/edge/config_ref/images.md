@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 아이콘 및 시작 화면
 
@@ -25,7 +24,7 @@ CLI에서 근무를 통해 애플 리 케이 션 아이콘을 정의할 수 있�
         <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />
     
 
-src: (필수) www 디렉토리를 기준으로 이미지 파일의 위치 지정
+src: (필수) 이미지 파일을 프로젝트 디렉터리에 상대적인 위치를 지정 합니다
 
 플랫폼: (선택 사항) 대상 플랫폼
 

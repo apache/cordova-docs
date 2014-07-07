@@ -1,4 +1,4 @@
----
+* * *
 
 licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
 
@@ -31,7 +31,7 @@ La seguente guida include alcune procedure ottimali di protezione che è necessa
 
 *   Android di Whitelist su Cordova 2.9. x è considerata sicura, tuttavia, si scoprì che se foo.com è incluso nella lista bianca, foo.com.evil.com sarebbe in grado di superare la prova di whitelist. Questo è stato fissato in Cordova 3. x.
 
-*   Dominio whitelisting non funziona su Android API 10 e di sotto e WP7/8 per gli iFrame e XMLHttpRequest. Questo significa che un utente malintenzionato può caricare qualsiasi dominio in un iframe e qualsiasi script in quella pagina all'interno di iframe può accedere direttamente gli oggetti JavaScript di Cordova e i corrispondenti oggetti nativi di Java. Si dovrebbe prendere in considerazione durante la creazione di applicazioni per queste piattaforme. In pratica questo significa assicurandosi di destinazione un'API Android superiore a 10, e se possibile non utilizzare un iframe per caricare contenuto esterno - usare il plugin inAppBrowser o altri plugin di terze parti.
+*   Dominio whitelisting non funziona su Android API 10 e qui di seguito e WP8 per iframes e XMLHttpRequest. Questo significa che un utente malintenzionato può caricare qualsiasi dominio in un iframe e qualsiasi script in quella pagina all'interno di iframe può accedere direttamente gli oggetti JavaScript di Cordova e i corrispondenti oggetti nativi di Java. Si dovrebbe prendere in considerazione durante la creazione di applicazioni per queste piattaforme. In pratica questo significa assicurandosi di destinazione un'API Android superiore a 10, e se possibile non utilizzare un iframe per caricare contenuto esterno - usare il plugin inAppBrowser o altri plugin di terze parti.
 
 ## Iframes e il meccanismo di Callback Id
 
@@ -54,6 +54,8 @@ I principi qui descritti non sono specifici di Apache Cordova, si applicano a tu
 Durante l'esecuzione di Cordova su Android, utilizzando `android:debuggable="true"` nell'applicazione manifesto permetteranno Errori SSL come certificato errori di convalida catena su certificati autofirmati. Quindi è possibile utilizzare i certificati autofirmati in questa configurazione, ma questa non è una configurazione che deve essere utilizzata quando l'applicazione è in produzione. È pensato per essere usato solo durante lo sviluppo di applicazioni.
 
 ## Archiviazione crittografata
+
+(TBD)
 
 ## Consigli generali
 

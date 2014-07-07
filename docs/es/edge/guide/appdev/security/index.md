@@ -1,11 +1,17 @@
----
+* * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. Consulte el archivo aviso distribuido con este trabajo para información adicional sobre la propiedad de derechos de autor. El ASF licencias este archivo a usted bajo la licencia Apache, versión 2.0 (la "licencia"); Usted no puede usar este archivo excepto en cumplimiento de la licencia. Usted puede obtener una copia de la licencia en
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0 a menos que requerido por la ley aplicable o por escrito, software distribuido bajo la licencia se distribuye en un "Tal cual" base, sin garantías o condiciones de ninguna clase, expresa o implícita.  Ver la licencia para el lenguaje específico que regulan los permisos y limitaciones
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## bajo la licencia.
+## under the License.
 
 # Guía de seguridad
 
@@ -31,7 +37,7 @@ La siguiente guía incluye algunas mejores prácticas de seguridad que debe cons
 
 *   Android está lista blanca en Cordova 2.9.x se considera seguro, sin embargo, se descubrió que si foo.com está incluido en la lista blanca, foo.com.evil.com sería capaz de aprobar el examen de la lista blanca. Esto fue fijada en Cordova 3.x.
 
-*   Dominio whitelisting no funciona en Android API 10 y por debajo y WP7/8 para iframes y XMLHttpRequest. Esto significa que un atacante puede cargar cualquier tipo de dominio en un iframe y cualquier script en esa página dentro del iframe puede acceder directamente a objetos Cordova JavaScript y los objetos de Java nativos correspondientes. Debe tomar esto en consideración cuando la creación de aplicaciones para estas plataformas. En la práctica esto significa asegurándose de que se meta una API Android superior a 10, y que si es posible no utilice un iframe para cargar contenido externo - utilizan el plugin inAppBrowser u otros plugins de terceros.
+*   Dominio whitelisting no funciona en Android API 10 y a continuación y WP8 para iframes y XMLHttpRequest. Esto significa que un atacante puede cargar cualquier tipo de dominio en un iframe y cualquier script en esa página dentro del iframe puede acceder directamente a objetos Cordova JavaScript y los objetos de Java nativos correspondientes. Debe tomar esto en consideración cuando la creación de aplicaciones para estas plataformas. En la práctica esto significa asegurándose de que se meta una API Android superior a 10, y que si es posible no utilice un iframe para cargar contenido externo - utilizan el plugin inAppBrowser u otros plugins de terceros.
 
 ## Iframes y el mecanismo de identificación de llamada
 
@@ -54,6 +60,8 @@ Los principios aquí descritos no son específicos de Apache Cordova, se aplican
 Cuando se ejecuta Cordova en Android, usando `android:debuggable="true"` en la aplicación de manifiesto permitirá errores de SSL como certificado de errores de validación de la cadena de certificados autofirmados. Así que usted puede utilizar certificados autofirmados en esta configuración, pero esto no es una configuración que se debe utilizar cuando la aplicación está en producción. Es para ser utilizado sólo durante el desarrollo de aplicaciones.
 
 ## Almacenamiento cifrado
+
+(TBD)
 
 ## Consejos generales
 

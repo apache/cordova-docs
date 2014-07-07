@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,23 +11,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Настройка blackBerry 10
+# Настройка BlackBerry 10
 
-`config.xml`Файл управляет app основные параметры, которые применяются через каждое приложение и экземпляр CordovaWebView. Этот раздел Подробности настройки, которые применяются только к BlackBerry 10 строит. Смотрите информацию в файле config.xml на параметры глобальной конфигурации.
+Файл `config.xml` управляет основные параметрами приложения, которые применяются к каждому приложению и экземпляру CordovaWebView. Этот раздел описывает настройки, которые применяются только к BlackBerry 10. Смотрите раздел "Файл config.xml" для получения информации о глобальных параметрах конфигурации.
 
-*   `ChildBrowser`( `disable` или значение по умолчанию `enable` ): отключает дочерних окон браузера. По умолчанию приложения запустить окно вторичного браузера для отображения ресурсов, через `window.open()` или указав `_blank` целевого объекта привязки. Укажите `disable` переопределить это поведение по умолчанию.
+*   `ChildBrowser` (`disable` или значение по умолчанию `enable` ): отключает дочерние окна браузера. По умолчанию приложения запускает окно вторичного браузера для отображения ресурсов, через `window.open()` или указав `_blank` в качестве целевого объекта привязки. Укажите `disable` чтобы переопределить это поведение по умолчанию.
     
         <preference name="ChildBrowser" value="disable"/>
         
 
-*   `PopupBlocker`( `enable` или значение по умолчанию `disable` ): позволяет блокировщик всплывающих окон, который предотвращает вызовы `window.open()` . По умолчанию всплывающие окна отображаются в окне браузера ребёнка. Установка предпочтение `enable` предотвращает отображение на всех.
+*   `PopupBlocker` (`enable` или значение по умолчанию `disable` ): Включает блокировщик всплывающих окон, который предотвращает вызовы `window.open()` . По умолчанию всплывающие окна отображаются во второстепенном окне браузера. Установка предпочтение `enable` предотвращает отображение на всех.
     
         <preference name="PopupBlocker" value="enable"/>
         
 
-*   `WebSecurity`( `disable` или значение по умолчанию `enable` ): значение `disable` для переопределения параметров веб-безопасности, позволяя доступ к удаленному содержимому из неизвестных источников. Это предпочтение предназначен как для удобства разработки только, так что удалить его перед упаковкой приложение для распространения. Для выпущенных app, все URI должен быть известный и whitelisted с использованием `<access>` элемент, описанный в руководстве Whitelist домена.
+*   `WebSecurity` (`disable` или значение по умолчанию `enable` ): значение `disable` для переопределения параметров веб-безопасности, позволяя доступ к удаленному содержимому из неизвестных источников. Эта настройка предназначена только для удобства разработки только, так что удалите его перед упаковкой приложения для распространения. Для опубликованных приложений, все URI должен быть известны и разрешены с использованием `<access>` элемента, описанный в разделе "Инструкция по доступу к внешним ресурсам".
     
         <preference name="WebSecurity" value="disable"/>

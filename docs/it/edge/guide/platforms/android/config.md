@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Android configurazione
 
@@ -69,3 +68,7 @@ La `config.xml` file controlla le impostazioni di base di un'app che si applican
         
 
 *   `SetFullscreen`(boolean, impostazioni predefinite a `false` ): come il `Fullscreen` parametro nella configurazione globale di questo file xml. Questo elemento specifico Android è deprecato in favore del global `Fullscreen` elemento e verrà rimossa in una versione futura.
+
+*   `AndroidLaunchMode`(stringa, valore predefinito del `singleTop` ): imposta l'attività `android:launchMode` attributo. Questo cambia la cosa succede quando l'applicazione viene avviata da icona app o intenti ed è già in esecuzione. I valori validi sono `standard` , `singleTop` , `singleTask` ,`singleInstance`.
+    
+        <preference name="AndroidLaunchMode" value="singleTop"/>

@@ -1,11 +1,11 @@
----
+* * *
 
 licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
 
            http://www.apache.org/licenses/License-2.0 se non richiesto dalla legge o concordato per iscritto, il software distribuito sotto la licenza è distribuito su un "AS IS" base, senza garanzie o condizioni di alcun tipo, esplicita o implicita.  Vedere la licenza per la lingua specifica che disciplina le autorizzazioni e limitazioni della licenza.
     
 
----
+* * *
 
 # Supporto di piattaforma
 
@@ -43,18 +43,12 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       </th>
       
       <th>
-        <tt>WP7</tt> (Windows<br />Phone 7)
-      </th>
-      
-      <th>
         <tt>WP8</tt> (Windows<br />Telefono 8)
       </th>
       
       <th>
         <tt>Win8</tt><br />(Windows 8)
       </th>
-      
-      <!--        <th><tt>firefoxos</tt></th> -->
       
       <th>
         <tt>Tizen</tt>
@@ -87,10 +81,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         
         <td data-col="ubuntu"        class="y">
           Ubuntu
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          Windows
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -130,9 +120,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="n">
-        </td>
-        
         <td data-col="winphone8"  class="n">
         </td>
         
@@ -168,10 +155,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(vedi dettagli)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -217,9 +200,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -253,9 +233,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -287,9 +264,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -326,9 +300,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -360,9 +331,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -398,9 +366,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -432,9 +397,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -470,9 +432,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -504,9 +463,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -542,9 +498,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -578,9 +531,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -612,9 +562,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -651,9 +598,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -685,9 +629,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -723,9 +664,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -757,10 +695,6 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">

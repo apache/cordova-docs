@@ -1,4 +1,6 @@
--라이센스: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,14 +11,13 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone 플러그인
 
 이 섹션에서는 Windows Phone 플랫폼에 네이티브 플러그인 코드를 구현 하는 방법에 대 한 세부 정보를 제공 합니다. 이것을 읽기 전에 응용 프로그램 플러그인 플러그인의 구조와 그것의 일반 자바 스크립트 인터페이스의 개요 참조 하십시오. 이 섹션 코르도바 webview에서 네이티브 플랫폼 및 뒤 통신 샘플 *에코* 플러그인을 설명 하 고 있습니다.
 
-코르 도우 바에 대 한 Windows Phone는 플러그인을 작성 코르도바의 아키텍처에 대 한 기본적인 이해를 필요 합니다. 코르 도우 바 WP7 이루어져 있는 `WebBrowser` 네이티브 API 호출을 관리 하 고 응용 프로그램의 자바 스크립트 코드를 호스팅하. C#을 확장할 수 있습니다. `BaseCommand` 클래스 ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), 어떤 대부분의 필요한 기능을 함께 제공:
+코르 도우 바에 대 한 Windows Phone는 플러그인을 작성 코르도바의 아키텍처에 대 한 기본적인 이해를 필요 합니다. 코르 도우 바 WP8에 의하여 이루어져 있는 `WebBrowser` 네이티브 API 호출을 관리 하 고 응용 프로그램의 자바 스크립트 코드를 호스팅하. C#을 확장할 수 있습니다. `BaseCommand` 클래스 ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), 어떤 대부분의 필요한 기능을 함께 제공:
 
 1.  프로젝트를 선택 하 고 **추가 → 새 항목...** 을 선택 마우스 오른쪽 단추로 클릭 원하는 경우, 추가할 수 있는 그것에 `Plugins` 폴더.
 
@@ -42,7 +43,7 @@
 
 재정의 하려면 플러그인에 대 한 사용할 수 있는 방법에 대 한 [BaseCommand.cs][1] 클래스를 참조 하십시오. 예를 들어 플러그인 '일시 중지' 및 '다시 시작' 이벤트를 캡처할 수 있습니다.
 
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+ [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
 ## 네임 스페이스
 

@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,38 +11,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Android 插件
+# Android 外掛程式
 
-此部分提供了如何在 Android 平台上实现本机插件代码的详细信息。 之前读这篇文章，请参阅应用程序插件插件的结构和其共同的 JavaScript 界面的概述。 这一节继续表明通信从科尔多瓦 web 视图的本机平台和后面的示例*回声*插件。 另一个示例，请参阅还在[CordovaPlugin.java][1]的评论.
+此部分提供了如何在 Android 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。 另一個示例，請參閱還在[CordovaPlugin.java][1]的評論.
 
  [1]: https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaPlugin.java
 
-Android 插件基于科尔多瓦-Android，Android 的 web 视图包括与附加到它上面的钩子。 插件被表示为类映射的 `config.xml` 文件。 插件包括至少一个扩展的 Java 类的 `CordovaPlugin` 类，重写的一个其 `execute` 方法。 作为最佳实践，该插件还应处理 `pause` 和 `resume` 事件，以及任何插件之间传递的消息。 插件需要长时间运行的请求，后台活动媒体回放、 听众或内部状态等应执行 `onReset()` ，以及方法。 它执行时 `WebView` 定位到新的一页或刷新，重新加载 JavaScript。
+Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與附加到它上面的鉤子。 外掛程式被表示為類映射的 `config.xml` 檔。 外掛程式包括至少一個擴展的 JAVA 類的 `CordovaPlugin` 類，重寫的一個其 `execute` 方法。 作為最佳實踐，該外掛程式還應處理 `pause` 和 `resume` 事件，以及任何外掛程式之間傳遞的消息。 外掛程式需要長時間運行的請求，後臺活動媒體重播、 聽眾或內部狀態等應執行 `onReset()` ，以及方法。 它執行時 `WebView` 定位到新的一頁或刷新，重新載入 JavaScript。
 
-## 插件类映射
+## 外掛程式類映射
 
-插件的 JavaScript 接口使用 `cordova.exec` 方法，如下所示：
+外掛程式的 JavaScript 介面使用 `cordova.exec` 方法，如下所示：
 
-        exec （< successFunction > < failFunction >、 < 服务 >、 < 行动 > [< args >]) ；
+        exec （< successFunction > < failFunction >、 < 服務 >、 < 行動 > [< args >]) ；
     
 
-这封送请求从 web 视图到 Android 的本机对岸，有效地调用 `action` 方法 `service` 具有额外的参数中传递的类 `args` 数组。
+這封送請求從 web 視圖到 Android 的本機對岸，有效地調用 `action` 方法 `service` 具有額外的參數中傳遞的類 `args` 陣列。
 
-是否您分发插件作为 Java 文件或作为它自己的一个*jar*文件，必须在科尔多瓦 Android 应用程序中指定插件 `res/xml/config.xml` 文件。 有关如何使用的详细信息，请参阅应用程序插件 `plugin.xml` 文件，把这个注射 `feature` 元素：
+是否您分發外掛程式作為 JAVA 檔或作為它自己的一個*jar*檔，必須在科爾多瓦 Android 應用程式中指定外掛程式 `res/xml/config.xml` 檔。 有關如何使用的詳細資訊，請參閱應用程式外掛程式 `plugin.xml` 檔，把這個注射 `feature` 元素：
 
         <feature name="<service_name>">
             <param name="android-package" value="<full_name_including_namespace>" />
         </feature>
     
 
-服务名称匹配在 JavaScript 中使用 `exec` 调用。 值是 Java 类的完全限定命名空间标识符。 否则为该插件可能会编译，但仍不能使用到科尔多瓦。
+服務名稱匹配在 JavaScript 中使用 `exec` 調用。 值是 JAVA 類的完全限定命名空間識別碼。 否則為該外掛程式可能會編譯，但仍不能使用到科爾多瓦。
 
-## 插件初始化和生存期
+## 外掛程式初始化和存留期
 
-插件对象的一个实例创建为生活的每个 `WebView` 。 插件不会实例化之前他们第一次引用通过调用从 JavaScript，除非 `<param>` 与 `onload` `name` 属性设置为 `"true"` 的 `config.xml` 。 例如：
+外掛程式物件的一個實例創建為生活的每個 `WebView` 。 外掛程式不會具現化之前他們第一次引用通過調用從 JavaScript，除非 `<param>` 與 `onload` `name` 屬性設置為 `"true"` 的 `config.xml` 。 例如：
 
     <feature name="Echo">
         <param name="android-package" value="<full_name_including_namespace>" />
@@ -50,7 +49,7 @@ Android 插件基于科尔多瓦-Android，Android 的 web 视图包括与附加
     </feature>
     
 
-插件应使用 `initialize` 方法为他们的创业逻辑。
+外掛程式應使用 `initialize` 方法為他們的創業邏輯。
 
     @override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
@@ -59,21 +58,21 @@ Android 插件基于科尔多瓦-Android，Android 的 web 视图包括与附加
     }
     
 
-## 编写一个 Android Java 插件
+## 編寫一個 Android JAVA 外掛程式
 
-JavaScript 调用触发插件请求到本机的一边，和相应的 Java 插件映射正确地在 `config.xml` 文件中，但最后的 Android Java 插件类看起来不会像什么？ 无论派往与 JavaScript 的插件 `exec` 函数传递到插件类的 `execute` 方法。 大多数 `execute` 实现看起来像这样：
+JavaScript 調用觸發外掛程式請求到本機的一邊，和相應的 JAVA 外掛程式映射正確地在 `config.xml` 檔中，但最後的 Android JAVA 外掛程式類看起來不會像什麼？ 無論派往與 JavaScript 的外掛程式 `exec` 函數傳遞到外掛程式類的 `execute` 方法。 大多數 `execute` 實現看起來像這樣：
 
-        @Override 公共 boolean 类型的值执行 CallbackContext callbackContext JSONArray args 字符串操作） 将引发 JSONException {如果 ("beep".equals(action)) {this.beep(args.getLong(0));callbackContext.success() ；则返回 true ；} 返回 false ；/ / 返回 false 结果的"MethodNotFound"错误。
+        @Override 公共 boolean 類型的值執行 CallbackCoNtext callbackCoNtext JSONArray args 字串操作） 將引發 JSONException {如果 ("beep".equals(action)) {this.beep(args.getLong(0));callbackCoNtext.success() ；則返回 true ；} 返回 false ；/ / 返回 false 結果的"MethodNotFound"錯誤。
         }
     
 
-JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法派遣了可选参数。
+JavaScript `exec` 函數的 `action` 參數對應于一個類的私有類方法派遣了可選參數。
 
-当捕获异常，并返回错误，重要的是为了明确起见，错误返回给 JavaScript 匹配 Java 异常名称尽可能多。
+當捕獲異常，並返回錯誤，重要的是為了明確起見，錯誤返回給 JavaScript 匹配 JAVA 異常名稱盡可能多。
 
-## 线程处理
+## 執行緒
 
-插件的 JavaScript 并*不*在主线程中运行 `WebView` 接口 ； 相反，它会运行 `WebCore` 线程，一样 `execute` 方法。 如果您需要与用户界面进行交互，则应使用以下变化：
+外掛程式的 JavaScript 並*不*在主執行緒中運行 `WebView` 介面 ； 相反，它會運行 `WebCore` 執行緒，一樣 `execute` 方法。 如果您需要與使用者介面進行交互，則應使用以下變化：
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -91,7 +90,7 @@ JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法�
         }
     
 
-使用以下如果你不需要在主界面上运行的线程，但不是想阻止 `WebCore` 线程或者：
+使用以下如果你不需要在主介面上運行的執行緒，但不是想阻止 `WebCore` 執行緒或者：
 
         @Override
         public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
@@ -109,9 +108,9 @@ JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法�
         }
     
 
-## 回声 Android 插件示例
+## 回聲 Android 外掛程式示例
 
-若要匹配的 JavaScript 界面*回波*特征描述的应用程序插件，使用 `plugin.xml` 来注入 `feature` 到本地平台规范 `config.xml` 文件：
+若要匹配的 JavaScript 介面*回波*特徵描述的應用程式外掛程式，使用 `plugin.xml` 來注入 `feature` 到本地平臺規範 `config.xml` 檔：
 
         <platform name="android">
             <config-file target="config.xml" parent="/*">
@@ -122,7 +121,7 @@ JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法�
         </platform>
     
 
-然后添加以下到 `src/org/apache/cordova/plugin/Echo.java` 文件：
+然後添加以下到 `src/org/apache/cordova/plugin/Echo.java` 檔：
 
         package org.apache.cordova.plugin;
     
@@ -158,16 +157,16 @@ JavaScript `exec` 函数的 `action` 参数对应于一个类的私有类方法�
         }
     
 
-必要的进口商品在文件的顶部延伸中的类 `CordovaPlugin` ，其 `execute()` 方法，它将覆盖从其接收邮件 `exec()` 。 `execute()`方法第一次测试的值 `action` ，在这种情况下有有效期的只有一个 `echo` 的值。 任何其他行动返回 `false` ，并导致 `INVALID_ACTION` 错误，会转换为调用的 JavaScript 一边错误回调。
+必要的進口商品在檔的頂部延伸中的類 `CordovaPlugin` ，其 `execute()` 方法，它將覆蓋從其接收郵件 `exec()` 。 `execute()`方法第一次測試的值 `action` ，在這種情況下有有效期的只有一個 `echo` 的值。 任何其他行動返回 `false` ，並導致 `INVALID_ACTION` 錯誤，會轉換為調用的 JavaScript 一邊錯誤回檔。
 
-下一步，该方法检索 echo 字符串使用 `args` 对象的 `getString` 方法，指定的第一个参数传递给该方法。 值传递给一个私人后 `echo` 的方法，它是参数检查，以确保它不是 `null` 或空字符串，这种情况下的 `callbackContext.error()` 调用 JavaScript 的错误回调。 如果通过各种检查， `callbackContext.success()` 将传递原始 `message` 回 JavaScript 的成功回调作为参数的字符串。
+下一步，該方法檢索 echo 字串使用 `args` 物件的 `getString` 方法，指定的第一個參數傳遞給該方法。 值傳遞給一個私人後 `echo` 的方法，它是參數檢查，以確保它不是 `null` 或空字串，這種情況下的 `callbackContext.error()` 調用 JavaScript 的錯誤回檔。 如果通過各種檢查， `callbackContext.success()` 將傳遞原始 `message` 回 JavaScript 的成功回檔作為參數的字串。
 
-## Android 系统集成
+## Android 系統集成
 
-Android 功能 `Intent` 允许进程互相沟通的系统。 插件可以访问 `CordovaInterface` 对象，可以访问 Android `Activity` ，运行应用程序。 这是 `Context` 启动新的 android 系统所需 `Intent` 。 `CordovaInterface`允许插件启动 `Activity` 一个结果，并设置回调插件时 `Intent` 返回到应用程序。
+Android 功能 `Intent` 允許進程互相溝通的系統。 外掛程式可以訪問 `CordovaInterface` 物件，可以訪問 Android `Activity` ，運行應用程式。 這是 `Context` 啟動新的 android 系統所需 `Intent` 。 `CordovaInterface`允許外掛程式啟動 `Activity` 一個結果，並設置回檔外掛程式時 `Intent` 返回到應用程式。
 
-到科尔多瓦 2.0 插件可以不再直接访问 `Context` ，和遗产 `ctx` 成员已被否决。 所有 `ctx` 的方法上存在 `Context` ，所以这两个 `getContext()` 和 `getActivity()` 可以返回所需的对象。
+到科爾多瓦 2.0 外掛程式可以不再直接存取 `Context` ，和遺產 `ctx` 成員已被否決。 所有 `ctx` 的方法上存在 `Context` ，所以這兩個 `getContext()` 和 `getActivity()` 可以返回所需的物件。
 
-## 调试 Android 插件
+## 調試 Android 外掛程式
 
-Eclipse 允许您调试插件作为 Java 源代码包含在项目中。 只有最新版本的 Android 开发者工具允许您将源代码附加到*JAR*的依赖关系，所以此功能尚不完全支持。
+Eclipse 允許您調試外掛程式作為 JAVA 原始程式碼包含在專案中。 只有最新版本的 Android 開發者工具允許您將原始程式碼附加到*JAR*的依賴關係，所以此功能尚不完全支援。

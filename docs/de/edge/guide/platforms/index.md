@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plattform-Guides
 
@@ -42,7 +41,7 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 *   Handbuch für die Plattform von BlackBerry 10
 *   BlackBerry 10 Shell Tool Guide
-*   BlackBerry Configuration
+*   BlackBerry 10 Konfiguration
 *   BlackBerry 10 Plugins
 *   BlackBerry 10-Befehlszeilentools
 *   Aktualisieren der BlackBerry 10

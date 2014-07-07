@@ -1,11 +1,18 @@
----
+* * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. Consulte el archivo aviso distribuido con este trabajo para información adicional sobre la propiedad de derechos de autor. El ASF licencias este archivo a usted bajo la licencia Apache, versión 2.0 (la "licencia"); Usted no puede usar este archivo excepto en cumplimiento de la licencia. Usted puede obtener una copia de la licencia en
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.apache.org/licenses/LICENSE-2.0 a menos que requerido por la ley aplicable o por escrito, software distribuido bajo la licencia se distribuye en un "Tal cual" base, sin garantías o condiciones de ninguna clase, expresa o implícita.  Ver la licencia para el lenguaje específico que regulan los permisos y limitaciones bajo licencia.
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
     
 
----
+* * *
 
 # Soporte de plataformas
 
@@ -43,18 +50,12 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       </th>
       
       <th>
-        <tt>WP7</tt> (Windows<br />Phone 7)
-      </th>
-      
-      <th>
         <tt>WP8</tt> (Windows<br />Teléfono 8)
       </th>
       
       <th>
         <tt>win8</tt><br />(Windows 8)
       </th>
-      
-      <!--        <th><tt>firefoxos</tt></th> -->
       
       <th>
         <tt>Tizen</tt>
@@ -87,10 +88,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         
         <td data-col="ubuntu"        class="y">
           Ubuntu
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          Windows
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -130,9 +127,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="n">
-        </td>
-        
         <td data-col="winphone8"  class="n">
         </td>
         
@@ -168,10 +162,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -217,9 +207,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -253,9 +240,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -287,9 +271,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -326,9 +307,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -360,9 +338,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -398,9 +373,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -432,9 +404,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -470,9 +439,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -504,9 +470,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -542,9 +505,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -578,9 +538,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -612,9 +569,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -651,9 +605,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -685,9 +636,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -723,9 +671,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -757,10 +702,6 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">

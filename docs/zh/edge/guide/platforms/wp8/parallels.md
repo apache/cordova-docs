@@ -1,4 +1,6 @@
-— — 许可证： 下一个或多个参与者许可协议许可向阿帕奇软件基金会 (ASF)。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,28 +11,27 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 配置 512mb
 
-这一节演示如何在 Mac 上配置的相似之处桌面，以便您可以使用科尔多瓦生成 Windows Phone 应用程序。
+這一節演示如何在 Mac 上配置的相似之處桌面，以便您可以使用科爾多瓦生成 Windows Phone 應用程式。
 
-[Microsoft 开发人员网络][1]提供有关如何运行 Windows 的相似之处的桌面下的一般说明。 之后安装 Windows，请执行以下步骤：
+[Microsoft 開發人員網路][1]提供有關如何運行 Windows 的相似之處的桌面下的一般說明。 之後安裝 Windows，請執行以下步驟：
 
  [1]: http://msdn.microsoft.com/en-US/library/windows/apps/jj945424
 
-1.  在桌面的相似之处内, 选择您已经准备好的 Windows 8 磁盘映像并选择**设置**.
+1.  在桌面的相似之處內, 選擇您已經準備好的 Windows 8 磁片映射並選擇**設置**.
 
-2.  选择的**一般 → Cpu**选项。指定*两个*Cpu。指定至少 2 GB 的内存，即使它不属于建议的范围：
+2.  選擇的**一般 → Cpu**選項。指定*兩個*Cpu。指定至少 2 GB 的記憶體，即使它不屬於建議的範圍：
     
     ![][2]
 
-3.  要能运行 Windows 8 虚拟机中的设备仿真程序图像，选择**优化**选项并启用**嵌套的虚拟化**.
+3.  要能運行 Windows 8 虛擬機器中的設備模擬程式圖像，選擇**優化**選項並啟用**嵌套的虛擬化**.
     
     ![][3]
 
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-一旦你完成这些步骤，您就可以安装 Windows Phone SDK。请参阅 Windows Phone 平台指南的详细信息。
+一旦你完成這些步驟，您就可以安裝 Windows Phone SDK。請參閱 Windows Phone 平臺指南的詳細資訊。

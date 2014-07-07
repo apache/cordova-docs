@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone プラットフォーム ガイド
 
@@ -86,50 +85,6 @@ SDK と一緒にコルドバの Windows Phone を中心としたシェル ・ �
 
  [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
 
-SDK をインストールした後 Windows コマンドラインで、SDK コルドバを利用できるように、システムのパスを変更する必要があります。
-
-*   最初のパス文字列を取得する必要があります。 **ファイル エクスプ ローラー**を開くに移動し、 `C:\Windows\Microsoft.NET\Framework` を開き、最新のフレームワーク。 それをコピーの完全パスの文字列を表示し、 **CTRL-c**を入力へのナビゲーション パスの右側をクリックします。
-    
-    ![][11]
-
-*   パスを変更する必要があります。Windows 8 のホーム画面の**アプリ**の領域内から**コントロール パネル**を開きます。
-    
-    ![][12]
-
-*   **システム**のコントロール パネル アイテムを開きます。
-    
-    ![][13]
-
-*   左側のリストから**システムの詳細設定**を選択します。
-    
-    ![][14]
-
-*   結果パネルの下部には**環境変数**ボタンを押してください。
-    
-    ![][15]
-
-*   **ユーザー変数**から**パス**を選択し、キーを押して**編集します**。
-    
-    ![][16]
-    
-    それ以外の場合利用できる**パス**がない場合は**新しい**それを作成するキーを押します。
-
-*   パス値が既に存在する場合はセミコロンを追加し、先ほどコピーしたパス文字列を貼り付けます。そうでなければ単に文字列を貼り付けます。
-    
-    ![][17]
-    
-    ここも指定するサンプル**のパス**値、 `npm` コルドバ CLI をインストールするために必要なユーティリティ：
-    
-    C:\Users\me\AppData\Roaming\npm;C:\Windows\Microsoft.NET\Framework\v4.0.30319
-
- [11]: img/guide/platforms/wp8/modpath_copy.png
- [12]: img/guide/platforms/wp8/modpath_control_panel.png
- [13]: img/guide/platforms/wp8/modpath_system.png
- [14]: img/guide/platforms/wp8/modpath_advanced.png
- [15]: img/guide/platforms/wp8/modpath_environment.png
- [16]: img/guide/platforms/wp8/modpath_edit.png
- [17]: img/guide/platforms/wp8/modpath_append.png
-
 ## 新しいプロジェクトを作成します。
 
 この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは Windows Phone 固有のシェル ツール セットで説明するクロス プラットフォーム CLI ツールの間に選択できます。 ソース コード ディレクトリ内からの場合、CLI アプローチここです：
@@ -186,36 +141,36 @@ SDK をインストールした後 Windows コマンドラインで、SDK コル
 
 エミュレーターはインストールされているアプリケーションとデバイス イメージを起動します。 ホーム画面から、 **HelloWorld**アプリケーションを起動するアプリのパネルに移動します。これはメイン インタ フェースに続いてそのスプラッシュ画面を起動するアプリを示しています。
 
-![][18]
+![][11]
 
- [18]: img/guide/platforms/wp8/wp8_emulator.png
+ [11]: img/guide/platforms/wp8/wp8_emulator.png
 
 デバイスの画面の右上に、エミュレーターの基本的なコントロールを縦向きと横向きに切り替えることができます。 **>**ボタンより複雑な方向とジェスチャをテストすることができますより多くのコントロールが表示されます。
 
-![][19]
+![][12]
 
- [19]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
 これらの高度なコントロールを使用または動きのシーケンスをシミュレートするデバイスの場所を変更するしたりすることもできます。
 
-![][20]
+![][13]
 
- [20]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## デバイスへの配置します。
 
-デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][21]を参照してください。 また、携帯電話は、コンピューターに接続されているし、画面がロックされているかどうかを確認します。
+デバイス上でアプリケーションをテストする前に、デバイスを登録する必要があります。 Windows Phone 8 でテストおよび展開する方法の詳細については、 [Microsoft のマニュアル][14]を参照してください。 また、携帯電話は、コンピューターに接続されているし、画面がロックされているかどうかを確認します。
 
- [21]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
+ [14]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
 
 その後、デバイス上のアプリを実行するには、次の CLI コマンドを実行します。
 
-        > cordova run wp8
+    > cordova run wp8
     
 
 この低レベルのシェル コマンドに対応しています。
 
-        C:\path\to\project\cordova\run --device
+    C:\path\to\project\cordova\run --device
     
 
 代わりに、Visual Studio で作業する場合は、トップ、押します**再生**緑の近隣にはボタンまたは他の**f5 キーを押して**にドロップ ダウン メニューから**Windows Phone デバイス**を選択します。.
@@ -224,27 +179,8 @@ SDK をインストールした後 Windows コマンドラインで、SDK コル
 
 一度上記のように Cordova アプリを構築する SDK で開くことができます。 様々 な `build` コマンドは、Visual Studio のソリューション (*.sln*) ファイルを生成します。 Visual Studio 内のプロジェクトを変更するファイルを開きます。 Web ベースのソース コードは、プロジェクト内で利用可能な `www` ディレクトリ。 その他のツールと一緒に、SDK を提供します、メニューの下のコントロールは、Windows Phone エミュレーターでアプリケーションを起動することができます。
 
-![][22]
+![][15]
 
- [22]: img/guide/platforms/wp8/wp8_vs.png
+ [15]: img/guide/platforms/wp8/wp8_vs.png
 
 コルドバのコマンド ライン ツールまたは SDK には、ワークフローで使用する方法についてのアドバイスは、「概要」を参照してください。 コルドバ CLI は日常的に SDK で使用されるプラットフォーム固有のファイルを上書きするクロスプラット フォームのソース コードに依存します。 SDK 内で作業する場合、CLI に代わるものとして、低レベルのシェル ・ ツールを使用します。
-
-## Windows Phone 7 のサポート
-
-Windows Phone 8 は、別のプラットフォームを追加するような仕組みとして Windows Phone 7 アプリケーションを生成するように簡単です。 CLI を使用している場合指定するだけで `wp7` と一緒にまたはその代わりに `wp8` ：
-
-        > cordova platform add wp7
-        > cordova build wp7
-        > cordova emulate wp7
-    
-
-`emulate`コマンドは、別のインターフェイスが表示されます、Windows Phone 7 デバイス エミュレーターを生成します。
-
-![][23]
-
- [23]: img/guide/platforms/wp8/wp7_emulator.png
-
-シェル ツールのプラットフォームを中心としたワークフローを使用している場合すべての手順、上記*コルドバ シェル ツールをインストールする*セクションからツールを抽出を除いて、 `cordova-wp8\wp7` ディレクトリ代わりに。 これらすべてのツールと同じように動作、 `wp8` 同等。
-
-**注**: 基礎となる Windows Phone 7 Cordova アプリ*を使用*しないでくださいインターネット エクスプ ローラー 10 のレンダリング エンジンとして、このようにいくつかのミス、web 表示機能 Windows Phone 8 アプリで利用可能です。 それでも、両方同じ Api のセットを実装します。 Windows Phone 8 デバイスがなく、他の方法で Windows Phone 7 アプリケーションを実行することができます: Windows Phone 8 アプリは*ない*Windows Phone 7 デバイス上で実行します。

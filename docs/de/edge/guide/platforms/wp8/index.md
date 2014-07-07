@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Windows Phone Plattform Guide
 
@@ -86,50 +85,6 @@ Installieren Sie die neueste Version des Windows Phone SDK von der **Downloads**
 
  [10]: img/guide/platforms/wp8/wp8_downloadSDK.png
 
-Nach der Installation des SDK, müssen Sie ändern das System Pfad um das SDK Cordova in der Windows-Befehlszeile zur Verfügung:
-
-*   Zuerst müssen Sie die Pfadzeichenfolge zu erhalten. Öffnen Sie den **Datei-Explorer**, navigieren Sie zu `C:\Windows\Microsoft.NET\Framework` , öffnen Sie dann die letzten Rahmen. Klicken Sie auf das Recht der Navigationspfad zum Anzeigen der vollständigen Pfad-String, und geben Sie **STRG-c** kopieren:
-    
-    ![][11]
-
-*   Dann müssen Sie den Pfad ändern. Öffnen Sie die **Systemsteuerung** von innerhalb des Startbildschirm des Windows 8 **Apps** :
-    
-    ![][12]
-
-*   Öffnen Sie das **System** Control Panel-Element:
-    
-    ![][13]
-
-*   Wählen Sie die **Erweiterte Systemeinstellungen** aus der Liste auf der linken Seite:
-    
-    ![][14]
-
-*   Drücken Sie an der Unterseite des Bereichs resultierende die Schaltfläche " **Umgebungsvariablen** ":
-    
-    ![][15]
-
-*   Wählen Sie die **Benutzervariablen** **Pfad** , und drücken Sie **Bearbeiten**:
-    
-    ![][16]
-    
-    Wenn kein **Pfad** vorhanden ist, drücken Sie andernfalls **neu** zu erstellen.
-
-*   Wenn ein Pfadwert bereits vorhanden ist, fügen Sie ein Semikolon und fügen Sie die Zeichenfolge, die Sie zuvor kopiert. Andernfalls fügen Sie einfach die Zeichenfolge:
-    
-    ![][17]
-    
-    Hier ist ein Beispiel- **Pfad** -Wert angibt, auch das `npm` -Dienstprogramm, das erforderlich ist, um die Cordova CLI zu installieren:
-    
-    C:\Users\me\AppData\Roaming\npm;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319
-
- [11]: img/guide/platforms/wp8/modpath_copy.png
- [12]: img/guide/platforms/wp8/modpath_control_panel.png
- [13]: img/guide/platforms/wp8/modpath_system.png
- [14]: img/guide/platforms/wp8/modpath_advanced.png
- [15]: img/guide/platforms/wp8/modpath_environment.png
- [16]: img/guide/platforms/wp8/modpath_edit.png
- [17]: img/guide/platforms/wp8/modpath_append.png
-
 ## Erstellen eines neuen Projekts
 
 Zu diesem Zeitpunkt zum Erstellen eines neuen Projekts können Sie zwischen das Cross-Plattform-CLI-Tool in der Kommandozeilen-Schnittstelle oder die Menge der Windows Phone-spezifischen Shell Tools beschrieben. Von in einem Quellcode-Verzeichnis ist hier der CLI-Ansatz:
@@ -186,36 +141,36 @@ Standardmäßig die `run` Skript ruft das Emulator-Flag und übernimmt zusätzli
 
 Der Emulator startet eine Geräte-Image mit der app installiert. Navigieren Sie im home-Bildschirm dem Bedienfeld "apps", die **"HelloWorld"** app zu starten. Dies zeigt die app starten mit seinen Splash-Screen, gefolgt von seiner wichtigsten Schnittstelle:
 
-![][18]
+![][11]
 
- [18]: img/guide/platforms/wp8/wp8_emulator.png
+ [11]: img/guide/platforms/wp8/wp8_emulator.png
 
 Des Emulators grundlegenden Steuerelemente, auf die sich oben rechts auf dem Bildschirm des Geräts können Sie zwischen hoch-und Querformat zu wechseln. Die Schaltfläche **>** öffnet weitere Steuerelemente, die Sie komplexere Orientierungen und Gesten testen können:
 
-![][19]
+![][12]
 
- [19]: img/guide/platforms/wp8/wp8_emulator_orient.png
+ [12]: img/guide/platforms/wp8/wp8_emulator_orient.png
 
 Diese erweiterte Steuerelemente ermöglichen auch Ihnen, das Gerät den Speicherort ändern oder Abfolgen von Bewegungen zu simulieren:
 
-![][20]
+![][13]
 
- [20]: img/guide/platforms/wp8/wp8_emulator_loc.png
+ [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
 ## Bereitstellung auf Gerät
 
-Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werden. [Microsoft][21] Dokumentation weitere Informationen zum Bereitstellen und Testen auf Windows Phone 8. Stellen Sie außerdem sicher, dass das Telefon an den Computer angeschlossen ist, und der Bildschirm ist entsperrt.
+Vor dem Testen der Anwendung auf einem Gerät, muss das Gerät registriert werden. [Microsoft][14] Dokumentation weitere Informationen zum Bereitstellen und Testen auf Windows Phone 8. Stellen Sie außerdem sicher, dass das Telefon an den Computer angeschlossen ist, und der Bildschirm ist entsperrt.
 
- [21]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx
+ [14]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565.aspx
 
 Führen Sie den folgenden CLI-Befehl die app auf dem Gerät ausführen:
 
-        > cordova run wp8
+    > cordova run wp8
     
 
 Es entspricht dieser Low-Level Shellbefehl:
 
-        C:\path\to\project\cordova\run --device
+    C:\path\to\project\cordova\run --device
     
 
 Alternativ, wenn Sie in Visual Studio arbeiten, wählen Sie **Windows Phone Gerät** aus dem Dropdown-Menü oben, dann drücken Sie Schaltfläche in der Nähe der grünen **spielen** , sonst geben Sie **F5**.
@@ -224,27 +179,8 @@ Alternativ, wenn Sie in Visual Studio arbeiten, wählen Sie **Windows Phone Ger�
 
 Sobald Sie eine Cordova-Anwendung zu erstellen, wie oben beschrieben, können Sie es mit dem SDK öffnen. Die verschiedenen `build` Befehle generiert eine Visual Studio-Projektmappendatei (*.sln*)-Datei. Öffnen Sie die Datei um das Projekt in Visual Studio zu ändern. Der Web-basierte Quellcode steht im Rahmen des Projektes `www` Verzeichnis. Zusammen mit anderen Tools bietet im SDK, mit dem Steuerelement unter dem Menü können Sie die app im Windows Phone-Emulator zu starten:
 
-![][22]
+![][15]
 
- [22]: img/guide/platforms/wp8/wp8_vs.png
+ [15]: img/guide/platforms/wp8/wp8_vs.png
 
 Ratschläge, wie mithilfe von Cordovas Kommandozeilen-Tools oder das SDK in Ihrem Workflow finden Sie in der Übersicht. Cordova CLI stützt sich auf Cross-Plattform-Quellcode, der routinemäßig die plattformspezifischen Dateien vom SDK verwendet überschreibt. Wenn Sie im SDK arbeiten möchten, verwenden Sie die Low-Level-Shell-Werkzeugen als Alternative zu den CLI.
-
-## Unterstützung für Windows Phone 7
-
-Es ist so einfach, eine Windows Phone 7 app zu generieren, da es für Windows Phone 8, aber es ähnlich funktioniert wie eine separate Plattform. Wenn Sie die CLI verwenden, geben Sie einfach `wp7` zusammen mit oder anstelle von `wp8` :
-
-        > cordova platform add wp7
-        > cordova build wp7
-        > cordova emulate wp7
-    
-
-Der `emulate` Befehl erzeugt einen Windows Phone 7-Gerät-Emulator, der eine andere Schnittstelle zeigt:
-
-![][23]
-
- [23]: img/guide/platforms/wp8/wp7_emulator.png
-
-Bei Verwendung den Plattform-zentrierte Shell-Tool-Workflow, folgen Sie die Schritte im Abschnitt *Installieren von Cordova Shell Tools* oben, außer extrahieren Sie die Tools aus dem `cordova-wp8\wp7` Verzeichnis statt. All diese Tools funktionieren genauso wie ihre `wp8` Gegenstücke.
-
-**Hinweis**: die Webansichten für unterliegen Windows Phone 7 Cordova apps benutzen Sie *nicht* Internet Explorer 10 als ihre Rendering-Engine, und so verpassen einige erweiterte Funktionen in Windows Phone 8 apps verfügbar. Dennoch implementieren beide den gleichen Satz von APIs. Sie können eine Windows Phone 7 app auf ein Windows Phone 8-Gerät, aber nicht umgekehrt ausführen: Windows Phone 8 apps tun *nicht* laufen auf Windows Phone 7 Geräte.

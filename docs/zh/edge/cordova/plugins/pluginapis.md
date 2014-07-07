@@ -1,108 +1,111 @@
----
+* * *
 
-许可证： 在下一个或更多的贡献许可协议 授权给Apache软件基金会（ASF）。 请参阅文件分布与这项工作有关的著作权归属的附加信息的通知文件。 ASF的许可证文件到你的Apache许可证下，版本2.0（"License"）；你不可能使用此文件，除了符合许可证之外。 您可能会获得在许可证的副本
+許可證： 下一個或多個參與者授權合約許可向阿帕奇軟體基金會 (ASF)。 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 您可能會獲得在許可證的副本
 
-           http://www.apache.org/licenses/LICENSE-2.0 
-    除非适用的法律要求或书面同意，否则按照该许可证分发的软件分发上"AS IS"的基础，WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, 明示或暗示。  请参阅许可证规定的权限和限制的特定语言
+           HTTP://www.apache.org/licenses/LICENSE-2.0 除非適用的法律要求或書面同意，否則按照該許可證分發的軟體分發上"按原樣"的基礎，而不擔保或條件的任何種類的明示或暗示。  請參閱許可證規定的許可權和限制的特定語言
     
 
-## 根据许可证。
+## 根據許可證。
 
-# 插件的 APIs
+# 外掛程式的 Api
 
-Cordova全员最小的一组APIs，和项目添加额外的APIs，它们需要通过插件。
+科爾多瓦船與一組最小的 Api，和專案添加哪些額外的 Api，它們需要通過外掛程式。
 
-您可以通过使用[插件注册表][1]的所有现有插件 （包括第三方插件） 搜索.
+您可以通過使用[外掛程式註冊表][1]的所有現有外掛程式 （包括協力廠商外掛程式） 搜索.
 
  [1]: http://plugins.cordova.io/
 
-传统的核心科尔多瓦插件集如下所示：
+傳統的核心科爾多瓦外掛程式集如下所示：
 
-*   [电池状态][2]
+*   [電池狀態][2]
     
-    > 监视设备的电池的状态。
+    > 監視設備的電池的狀態。
 
-*   [相机][3]
+*   [相機][3]
     
-    > 捕获照片使用的设备的相机。
+    > 捕獲照片使用的設備的相機。
 
-*   [联系人][4]
+*   [主控台][4]
     
-    > 与设备联系人数据库的工作。
+    > 向 console.log() 添加額外的功能。
 
-*   [设备][5]
+*   [連絡人][5]
     
-    > 收集设备特定信息。
+    > 與設備接觸資料庫的工作。
 
-*   [设备运动 (加速度计)][6]
+*   [設備][6]
     
-    > 进入设备的运动传感器。
+    > 收集設備特定資訊。
 
-*   [设备定位 (指南针)][7]
+*   [設備運動 （加速度計）][7]
     
-    > 获取该设备的指向的方向。
+    > 進入設備的動作感應器。
 
-*   [会话][8]
+*   [設備的方向 (指南針)][8]
     
-    > 视觉设备通知。
+    > 獲取該設備指向的方向。
 
-*   [文件系统][9]
+*   [對話方塊][9]
     
-    > 通过 JavaScript挂接到本机文件系统。
+    > 視覺設備通知。
 
-*   [文件传输][10]
+*   [檔案系統][10]
     
-    > 通过 JavaScript挂接到本机文件系统。
+    > 掛接到本機檔案系統通過 JavaScript。
 
-*   [地理定位][11]
+*   [檔案傳輸][11]
     
-    > 意识到您的应用程序的本地位置。
+    > 掛接到本機檔案系統通過 JavaScript。
 
-*   [全球化][12]
+*   [地理位置][12]
     
-    > 启用特定于区域设置的对象表示的形式。
+    > 使意識到您應用程式的位置。
 
-*   [InAppBrowser][13]
+*   [全球化][13]
     
-    > 启动另一个应用程序中的浏览器实例的 Url。
+    > 啟用特定于地區設定的物件表示的形式。
 
-*   [媒体][14]
+*   [InAppBrowser][14]
     
-    > 录制和播放音频文件。
+    > 在另一個應用程式中的瀏覽器實例中啟動的 Url。
 
-*   [媒体捕获][15]
+*   [媒體][15]
     
-    > 使用设备的媒体捕获应用程序来捕获媒体文件。
+    > 錄製和播放音訊檔。
 
-*   [网络信息 (连接)][16]
+*   [媒體捕獲][16]
     
-    > 快速检查网络状态和蜂窝网络的信息。
+    > 擷取裝置的媒體捕獲應用程式使用的媒體檔案。
 
-*   [闪屏][17]
+*   [網路資訊 （連接）][17]
     
-    > 显示和隐藏应用程序的初始屏幕。
+    > 快速檢查網路狀態和蜂窩網路的資訊。
 
-*   [振动][18]
+*   [閃屏][18]
     
-    > 振动设备的 API。
+    > 顯示和隱藏的應用程式的初始螢幕。
 
- [2]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
- [3]: https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md
- [4]: https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md
- [5]: https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md
- [6]: https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md
- [7]: https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md
- [8]: https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md
- [9]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
- [10]: https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md
- [11]: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md
- [12]: https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md
- [13]: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md
- [14]: https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md
- [15]: https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md
- [16]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
- [17]: https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md
- [18]: https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md
+*   [振動][19]
+    
+    > 振動設備的 API。
 
-为这些插件文档的非英语翻译可以在Cordova文档的旧版本找到。使用顶部右上角的这个站点的下拉式菜单来切换版本。
+ [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
+ [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
+ [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
+ [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
+ [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
+ [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
+ [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
+ [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
+ [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
+ [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
+ [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
+ [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
+ [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
+ [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
+ [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
+ [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
+ [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+
+這些外掛程式文檔非英語翻譯可以發現通過看的科爾多瓦文檔的舊版本。使用非常右上角的這個網站在下拉式功能表切換版本。

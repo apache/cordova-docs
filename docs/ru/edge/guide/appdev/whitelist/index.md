@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Инструкция по доступу к внешним ресурсам
 
@@ -126,7 +125,7 @@ Cordova следует спецификации [W3C Доступ виджета
 
 ## Список разрешений Windows Phone
 
-Списки разрешающий правил для Windows Phone 7 и 8 находятся в файле `config.xml` приложения.
+Белый список правил для Windows Phone 8 находятся в app `config.xml` файл.
 
 ## Список разрешений Tizen
 

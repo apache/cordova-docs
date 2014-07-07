@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,27 +11,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # volumedownbutton
 
-在用户按下缩小音量键时，将触发该事件。
+在使用者按下按鈕卷時，將觸發該事件。
 
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-如果您需要重写默认音量降低特性的时候，你可以为`volumedownbutton` 事件注册一个事件侦听器 。
+如果您需要重寫預設音量降低的行為你可以註冊為事件攔截器 `volumedownbutton` 事件。
 
-一旦`deviceready` 事件触发了，应用程序通常应该使用 `document.addEventListener`附加一个事件侦听器。
+應用程式通常應使用 `document.addEventListener` 將一個事件攔截器附加一次 `deviceready` 事件火災。
 
-## 支持的平台
+## 支援的平臺
 
 *   黑莓 10
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
     
@@ -40,7 +39,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

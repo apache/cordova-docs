@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # 안 드 로이드 업그레이드
 
@@ -34,10 +33,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
-        bin/update <project_path>
+        빈/업데이트 < project_path >
     
 
-**경고:** 유형과 파일 input 요소를 생성 하는 안 드 로이드 4.4에 시작 = "파일" 파일 선택 대화 상자를 열지 것입니다. 이것은 안 드 로이드에서 크롬으로 회귀 하 고 문제를 재현할 수 독립형 크롬 브라우저 안 드 로이드 (http://code.google.com/p/android/issues/detail?id=62220 참조) 제안 된 해결 방법을 사용 하는 FileTransfer 및 파일 플러그인 안 드 로이드 4.4에 대 한. 입력된 형식에서 onClick 이벤트에 대 한 들을 수 있습니다 "파일" = 및 다음 파일 선택 UI 팝업. 업로드 양식 데이터를 연결 하기 위해 FileTransfer은 다중 파트 POST 요청에 양식 값을 연결할 자바 스크립트를 사용할 수 있습니다. 이 버그는 여전히 안 드 로이드 4.4.2로 존재
+**경고:** 4.4 안 드 로이드-안 드 로이드 4.4.3 파일 만들기 입력 형식이 있는 요소 = "파일" 파일 선택 대화 상자를 열지 것입니다. 이것은 안 드 로이드에서 크롬으로 회귀 하 고 문제를 재현할 수 독립형 크롬 브라우저 안 드 로이드 (http://code.google.com/p/android/issues/detail?id=62220 참조) 제안 된 해결 방법을 사용 하는 FileTransfer 및 파일 플러그인 안 드 로이드 4.4에 대 한. 입력된 형식에서 onClick 이벤트에 대 한 들을 수 있습니다 "파일" = 및 다음 파일 선택 UI 팝업. 업로드 양식 데이터를 연결 하기 위해 FileTransfer은 다중 파트 POST 요청에 양식 값을 연결할 자바 스크립트를 사용할 수 있습니다.
 
 ## 3.1.0 3.0.0에서 업그레이드
 
@@ -49,7 +48,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 아니라 코르도바 CLI 사용 하 여 만든 프로젝트에 대 한 실행.
 
-        bin/update <project_path>
+        빈/업데이트 < project_path >
     
 
 ## 2.9.0에서 CLI (3.0.0) 업그레이드

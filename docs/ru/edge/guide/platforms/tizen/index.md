@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Руководство по Tizen платформы
 
@@ -34,14 +33,14 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
 - (optional) Install Tizen Cordova template projects: copy the
   `/templates` directory content into the Tizen Eclipse IDE web
-  templates directory (e.g:
+  templates directory (e.g.:
   `/home/my_username/tizen-sdk/IDE/Templates/web`).
 
 - __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
     - Launch Tizen Eclipse IDE
     - Select  __File &rarr; New &rarr; Tizen Web Project__
     - Select __User Template__ and __User defined__ items
-    - Select one of the Tizen Cordova template (e.g: __CordovaBasicTemplate__)
+    - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
     - Fill the __Project name__ and its target __Location__
 
     ![](img/guide/platforms/tizen/project_template.png)
@@ -104,7 +103,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
     
     ![][7]
 
-*   Щелкните правой кнопкой мыши проект в **Project Explorer** зрения, а затем выберите **Run As & →; Tizen веб-приложение**:
+*   Щелкните правой кнопкой мыши проект в представлении **Обозреватель проектов** , а затем выберите **запустить → Tizen веб-приложения**:
     
     ![][8]
 

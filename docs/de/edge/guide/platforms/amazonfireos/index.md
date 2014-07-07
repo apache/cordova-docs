@@ -1,4 +1,4 @@
----
+* * *
 
 Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
 
@@ -93,17 +93,15 @@ So ändern Sie die PATH-Umgebung unter Windows:
 
 ### Amazon WebView SDK
 
-Um Cordova-Anwendungen mittels der Zielplattform Amazon Fire OS zu erstellen, müssen Sie herunterladen, entpacken und Installieren der Unterstützungsdateien für den Amazon WebView SDK. Diesen Schritt müssen Sie nur bei Ihrem ersten Amazon Fire OS-Projekt durchgeführt werden oder Cordova aktualisieren.
+Um Cordova-Anwendungen mittels der Zielplattform Amazon Fire OS zu erstellen, müssen Sie herunterladen, entpacken und Installieren der Unterstützungsdateien für den Amazon WebView SDK. Diesen Schritt müssen nur bei Ihrem ersten Amazon Fire OS-Projekt durchgeführt werden.
 
 *   Laden Sie das Amazon WebView SDK aus dem [Amazon-Entwicklerportal][1].
 
-*   Kopie `awv_interface.jar` aus dem heruntergeladenen SDK in Cordova Arbeitsverzeichnis:
+*   Kopie `awv_interface.jar` aus dem heruntergeladenen SDK in Cordova Arbeitsverzeichnis. Erstellen Sie Commonlibs(shown below)-Ordner, wenn es nicht vorhanden ist:
     
-    **Mac/Linux:** `~/.cordova/lib/amazon-fireos/cordova/[cordova_release]/framework/libs/`
+    **Mac/Linux:** `~/.cordova/lib/commonlibs/`
     
-    **Windows:** `%USERPROFILE%\.cordova\lib\amazon-fireos\cordova\[cordova_release]\framework\libs`
-
-***Hinweis:*** Aufgrund Cordovas Anforderungs-Installationsprozess, der `~/.cordova/lib/amazon-fireos` Plattform Verzeichnis wird nicht erstellt werden, bevor Sie Ihr erstes Projekt die Plattform hinzufügen.
+    **Windows:** `%USERPROFILE%\.cordova\lib\commonlibs`
 
 ## Neues Projekt für Amazon Fire OS erstellen
 

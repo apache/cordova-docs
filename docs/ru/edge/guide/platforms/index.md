@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Руководство по поддерживаемым платформам
 
@@ -32,47 +31,49 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 ## Android
 
 *   Руководство для платформы Android
+*   Руководство по средству Android оболочка
 *   Настройка Android
-*   WebViews в Android
 *   Плагины для Android
-*   Средства командной строки для Android
+*   Android WebViews
 *   Обновление для Android
 
 ## BlackBerry 10
 
 *   Руководство для платформы BlackBerry 10
-*   Настройка BlackBerry 10
-*   Плагины для BlackBerry 10
-*   Средства командной строки для BlackBerry 10
-*   Обновление для BlackBerry 10
+*   Руководство по средству командной blackBerry 10
+*   Настройка blackBerry 10
+*   BlackBerry 10 плагинов
+*   Средства командной строки blackBerry 10
+*   Модернизация BlackBerry 10
+
+## Firefox OS
+
+*   Руководство Firefox OS платформы
 
 ## iOS
 
-*   Руководство для платформы iOS
-*   Настройка iOS
-*   WebViews в iOS
-*   Плагины для iOS
-*   Средства командной строки для iOS
-*   Обновление для iOS
+*   iOS платформы
+*   iOS оболочки инструмент руководство
+*   iOS конфигурации
+*   iOS плагины
+*   iOS WebViews
+*   Обновление iOS
 
 ## Ubuntu
 
-*   Руководство для платформы Ubuntu
+*   Руководство по Ubuntu платформы
 
 ## Windows Phone
 
-*   Руководство для платформы Windows Phone 8
-*   Руководство для платформы Windows Phone 7
-*   Настройка Windows Phone
-*   Средства командной строки для Windows Phone
-*   Обновление для Windows Phone
+*   Руководство по Windows Phone платформы
+*   Windows Phone плагины
+*   Обновление Windows Phone
 
 ## Windows 8
 
-*   Руководство по платформе Windows 8
-*   Средства командной строки для Windows 8
+*   Руководство по Windows 8 платформы
 *   Обновление для Windows 8
 
 ## Tizen
 
-*   Руководство для платформы Tizen
+*   Руководство платформа Tizen

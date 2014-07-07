@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # プラットフォームのガイド
 
@@ -42,7 +41,7 @@ Cordova アプリを開発するには、各モバイル プラットフォー�
 
 *   BlackBerry 10 プラットフォーム ガイド
 *   ブラックベリー 10 シェル ツール ガイド
-*   ブラックベリーの構成
+*   ブラックベリー 10 構成
 *   ブラックベリー 10 プラグイン
 *   ブラックベリー 10 コマンド ライン ツール
 *   ブラックベリー 10 のアップグレード

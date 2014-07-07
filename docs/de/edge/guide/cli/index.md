@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # Die Befehlszeilenschnittstelle
 
@@ -28,7 +28,6 @@ Hinzufügen von Unterstützung oder ein Projekt für jede Plattform neu erstelle
 *   Amazon Fire Betriebssystem (Mac, Linux, Windows)
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
-*   Windows Phone 7 (Windows)
 *   Windows Phone 8 (Windows)
 *   Windows 8 (Windows)
 *   Firefox Betriebssystem (Mac, Linux, Windows)
@@ -85,7 +84,7 @@ Gehe in das Verzeichnis wo verwalten Sie Ihren Quellcode, und führen Sie einen 
 
 Es kann einige Zeit dauern für den Befehl abgeschlossen, also etwas Geduld. Ausführen des Befehls mit der `-d` Option zeigt Informationen über den Fortschritt.
 
-Das erste Argument *Hallo* gibt ein Verzeichnis für Ihr Projekt generiert werden. Dieses Verzeichnis sollte nicht bereits vorhanden, Cordova wird es für Sie erstellen. Seine `www` Unterverzeichnis Häuser Ihre Anwendung-Homepage, zusammen mit verschiedenen Ressourcen unter `css` , `js` , und `img` , die gemeinsame Web Entwicklung Dateibenennungskonventionen folgen. Die `config.xml` -Datei enthält wichtige Metadaten erzeugen und Verteilen der Anwendung erforderlich.
+Das erste Argument *Hallo* gibt ein Verzeichnis für Ihr Projekt generiert werden. Dieses Verzeichnis sollte nicht bereits vorhanden, Cordova wird es für Sie erstellen. Seine `www` Unterverzeichnis Häuser Ihre Anwendung-Homepage, zusammen mit verschiedenen Ressourcen unter `css` , `js` , und `img` , die gemeinsame Web Entwicklung Dateibenennungskonventionen folgen. Diese Vermögenswerte werden lokalen Dateisystem des Geräts, nicht aus der Ferne bedient gespeichert. Die `config.xml` -Datei enthält wichtige Metadaten erzeugen und Verteilen der Anwendung erforderlich.
 
 Das zweite Argument `com.example.hello` stellt Ihr Projekt mit einem reverse Domain-Stil-Bezeichner. Dieses Argument ist optional, aber nur, wenn Sie auch das dritte Argument weglassen, da die Argumente positionelle sind. Sie können diesen Wert später in bearbeiten die `config.xml` Datei, aber beachten Sie, dass es möglicherweise außerhalb der generierte Code `config.xml` mit diesem Wert, wie z. B. Java-Package-Namen. Der Standardwert ist `io.cordova.hellocordova` , aber es wird empfohlen, dass Sie einen geeigneten Wert auswählen.
 
@@ -109,7 +108,6 @@ Bevor Sie das Projekt erstellen, müssen Sie eine Reihe von Zielplattformen ange
 
 Führen Sie einen aus einer Windows-Maschine, wo verschiedene Versionen des Betriebssystems Windows Phone *wp* bezeichnet:
 
-        $ cordova platform add wp7
         $ cordova platform add wp8
         $ cordova platform add windows8
         $ cordova platform add amazon-fireos
@@ -196,9 +194,14 @@ Bevor Sie diesen Befehl ausführen, müssen Sie das Gerät zum Testen einrichten
 
 Wenn Sie erstellen und eines neues Projekts anzeigen, nicht sehr viel die Standardanwendung, die angezeigt wird. Sie können ändern, die app in vielerlei Hinsicht zu standard-Web-Technologien nutzen, aber für die app eng mit verschiedenen Geräteebene Features zu kommunizieren, müssen Sie Plugins hinzufügen, die Zugriff auf Kern-Cordova-APIs.
 
-Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und [Plugin Development Guide][6] für Details.) Häufiger, fügen Sie eine Plugin um eine Cordovas Geräteebene Grundfunktionen in der API-Referenz detailliert aktivieren. Eine Liste dieser Plugins, einschließlich zusätzliche Drittanbieter Plug-ins der Gemeinschaft finden Sie in der Registrierung unter [plugins.cordova.io][7]. Die CLI können Sie Plugins aus dieser Registrierung suchen. Z. B. Suche nach `bar` und `code` erzeugt ein einzelnes Ergebnis, die beide Begriffe als groß-und Kleinschreibung Teilzeichenfolgen entspricht:
+Ein *Plugin* ist ein Add-on-Code, die eine Schnittstelle zu systemeigenen Komponenten bereitstellt. Sie können Ihr eigenes Plugin-Schnittstelle, z. B. wenn eine Hybrid-app zu entwerfen, die einen Cordova WebView mit systemeigenen Komponenten mischt entwerfen. (Siehe Einbettung Webansichten für und [Plugin Development Guide][6] für Details.) Häufiger, fügen Sie eine Plugin um eine Cordovas Geräteebene Grundfunktionen in der API-Referenz detailliert aktivieren.
 
  [6]: guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide
+
+Ab der Version 3.0 beim Erstellen eines Projekts Cordova hat es irgendwelche Plugins vorhanden keinen. Dies ist das neue Standardverhalten. Alle Plugins, die Sie wünschen, die auch die Core-Plugins muss explizit hinzugefügt werden.
+
+Eine Liste dieser Plugins, einschließlich zusätzliche Drittanbieter Plug-ins der Gemeinschaft finden Sie in der Registrierung unter [plugins.cordova.io][7]. Die CLI können Sie Plugins aus dieser Registrierung suchen. Z. B. Suche nach `bar` und `code` erzeugt ein einzelnes Ergebnis, die beide Begriffe als groß-und Kleinschreibung Teilzeichenfolgen entspricht:
+
  [7]: http://plugins.cordova.io/
 
         $ cordova plugin search bar code

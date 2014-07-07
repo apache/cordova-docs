@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,28 +11,27 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # backbutton
 
-在用户点击back按钮时，将触发该事件。
+在使用者按後退按鈕時，將觸發該事件。
 
     document.addEventListener("backbutton", yourCallbackFunction, false);
     
 
-## 详细信息
+## 詳細資訊
 
-要重写后退按钮的默认行为，注册为事件侦听器 `backbutton` 事件，一旦您收到 `deviceready` 事件 通常通过调用 `document.addEventListener` 。 不再需要调用任何其他方法重写的后退按钮的行为。
+要重寫後退按鈕的預設行為，註冊為事件攔截器 `backbutton` 事件，通常通過調用 `document.addEventListener` 一旦您收到 `deviceready` 事件。 不再需要調用任何其他方法重寫的後退按鈕的行為。
 
-## 支持的平台
+## 支援的平臺
 
-*   亚马逊火 OS
-*   Android 系统
+*   亞馬遜火 OS
+*   Android 系統
 *   黑莓 10
-*   Windows Phone 7 和 8
+*   Windows Phone 8
 
-## 简单的例子
+## 快速的示例
 
     document.addEventListener("backbutton", onBackKeyDown, false);
     
@@ -41,7 +40,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     }
     
 
-## 完整的例子
+## 完整的示例
 
     <!DOCTYPE html>
     <html>

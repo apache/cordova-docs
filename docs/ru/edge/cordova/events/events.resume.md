@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,21 +11,20 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# резюме
+# resume
 
-Событие возникает, когда приложение извлекается от фона.
+Событие возникает, когда приложение восстанавливается из фонового режима.
 
     document.addEventListener("resume", yourCallbackFunction, false);
     
 
 ## Подробная информация
 
-`resume`Событие возникает, когда родной платформе вытаскивает приложения от фона.
+Событие `resume` возникает, когда платформа переводит приложения из фонового режима.
 
-Приложения обычно должны использовать `document.addEventListener` прикрепить прослушиватель событий после `deviceready` пожаров события.
+Приложения обычно должны использовать `window.addEventListener` чтобы добавить обработчик события после того как произойдет событие `deviceready`.
 
 ## Поддерживаемые платформы
 
@@ -33,10 +32,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Android
 *   BlackBerry 10
 *   iOS
-*   Windows Phone 7 и 8
+*   Windows Phone 8
 *   Windows 8
 
-## Быстрый пример
+## Краткий пример
 
     document.addEventListener("resume", onResume, false);
     
@@ -79,17 +78,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     </html>
     
 
-## iOS причуды
+## Особенности iOS
 
-Любых интерактивных функций, вызываемых из `pause` обработчик событий выполнять позже когда приложение возобновляет, как сигнализируется `resume` событие. К ним относятся оповещения, `console.log()` и все вызовы из плагинов или Кордова API, которые идут через Objective-C.
+Любых интерактивных функций, вызываемых из обработкика события `pause` выполнять позже, когда приложение возобновляет свою работу, как сигнализируется событием `resume`. К этому относятся оповещения, вызовы `console.log()` и все вызовы из плагинов или Cordova API, которые идут через Objective-C.
 
-*   **Активные** мероприятия
+*   Событие **active**
     
-    Специфичные для iOS `active` событие доступно как альтернатива `resume` и определяет, когда пользователям отключить кнопку **замка** , чтобы разблокировать устройство с app работает на переднем плане. Если приложение (и устройство) включена для поддержки многозадачности, это находится в паре с последующим `resume` событие, но только под iOS 5. По сути всех заблокированных приложений в iOS 5, которые имеют многозадачных включена выталкиваются на задний план. Для приложений, чтобы функционировать, когда locked под iOS 5, отключить приложения многозадачности, установив [UIApplicationExitsOnSuspend][1] `YES` . Чтобы запустить когда locked на iOS 4, этот параметр не имеет значения.
+    Специфичные для iOS `active` событие доступно как альтернатива `resume` и определяет, когда пользователям отключить кнопку **замка** , чтобы разблокировать устройство с приложением работающим на переднем плане. Если для приложения (и устройства) включена поддержка многозадачности, это находится в паре с последующим событием `resume`, но только под iOS 5. По сути всех заблокированных приложений в iOS 5, которые поддерживают многозадачность переводятся в фоновый режим. Чтобы приложение работало когда устройство заблокировано под iOS 5, необходимо отключить многозадачность приложения, установив [UIApplicationExitsOnSuspend][1] в значение `YES`. Чтобы выполняться когда устройство заблокировано на iOS 4, этот параметр не имеет значения.
 
-*   **возобновить** событие
+*   Событие **resume**
     
-    При вызове из `resume` обработчика событий, интерактивных функций, таких как `alert()` должны быть обернуты в `setTimeout()` вызов с таймаутом нулю, или же в приложение зависает. Например:
+    При вызове из обработчика событий `resume`, интерактивных функций, таких как `alert()`, эти функции должны быть обернуты в `setTimeout()` вызов с таймаутом нулю, или же в приложение зависает. Например:
     
         document.addEventListener("resume", onResume, false);
         function onResume() {

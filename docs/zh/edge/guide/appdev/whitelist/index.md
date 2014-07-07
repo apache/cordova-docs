@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,45 +11,44 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
-# Whitelist Guide
+# 白名單指南
 
-域白是一种安全模式，控制访问到您应用程序有没有控制的外部域。 科尔多瓦的默认安全策略允许访问的任何站点。 在移动之前您在生产中的应用，应制订白名单和允许访问特定的网络域和子域。
+域白是一種安全模式，控制訪問到您應用程式有沒有控制的外部域。 科爾多瓦的預設安全性原則允許訪問的任何網站。 在移動之前您在生產中的應用，應制訂白名單和允許訪問特定的網路域和子域。
 
-科尔多瓦遵循[W3C 构件访问][1]规范，它依赖于 `<access>` 中应用程序的元素 `config.xml` 文件以启用对特定域的网络访问。 对于依赖于所述的命令行界面 CLI 工作流的项目，此文件位于项目的顶级目录。 否则为特定于平台的发展道路，位置列出以下各节。 （每个平台上见各种平台指南的详细信息）。
+科爾多瓦遵循[W3C 構件訪問][1]規範，它依賴于 `<access>` 中應用程式的元素 `config.xml` 檔以啟用對特定域的網路訪問。 對於依賴于所述的命令列介面 CLI 工作流的專案，此檔位於專案的頂級目錄。 否則為特定于平臺的發展道路，位置列出以下各節。 （每個平臺上見各種平臺指南的詳細資訊）。
 
  [1]: http://www.w3.org/TR/widgets-access/
 
-下面的示例演示白名单中的语法：
+下面的示例演示白名單中的語法：
 
-*   [Google.com][2]访问：
+*   [Google.com][2]訪問：
     
         <access origin="http://google.com" />
         
 
-*   对安全[google.com][3]的访问 ( `https://` ):
+*   對安全[google.com][3]的訪問 ( `https://` ):
     
         <access origin="https://google.com" />
         
 
-*   子域[maps.google.com][4]访问：
+*   子域[maps.google.com][4]訪問：
     
         <access origin="http://maps.google.com" />
         
 
-*   对所有子域[google.com][2]，例如[mail.google.com][5]和[docs.google.com][6]的访问：
+*   對所有子域[google.com][2]，例如[mail.google.com][5]和[docs.google.com][6]的訪問：
     
         <access origin="http://*.google.com" />
         
 
-*   到*所有*的域，例如， [google.com][2]和[developer.mozilla.org][7]的访问：
+*   到*所有*的域，例如， [google.com][2]和[developer.mozilla.org][7]的訪問：
     
         <access origin="*" />
         
     
-    这是新创建的 CLI 项目的默认值。
+    這是新創建的 CLI 專案的預設值。
 
  [2]: http://google.com
  [3]: https://google.com
@@ -58,78 +57,78 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
  [6]: http://docs.google.com
  [7]: http://developer.mozilla.org
 
-## 亚马逊火 OS 白
+## 亞馬遜火 OS 白
 
-在找到特定平台白规则`res/xml/config.xml`.
+在找到特定平臺白規則`res/xml/config.xml`.
 
 ## Android 白
 
-在找到特定平台白规则`res/xml/config.xml`.
+在找到特定平臺白規則`res/xml/config.xml`.
 
-**注**： 在 Android 2.3 上和之前，域白仅适用于 `href` 的超链接，不引用的资源，如图像和脚本。 采取步骤，避免从被注入到应用程序的脚本。
+**注**： 在 Android 2.3 上和之前，域白僅適用于 `href` 的超連結，不引用的資源，如圖像和腳本。 採取步驟，避免從被注入到應用程式的腳本。
 
-导航到非白名单域通过 `href` 的超链接会导致要打开默认浏览器中，而不是在应用程序中的页。（比较这到下面提到的 iOS 的行为)。
+導航到非白名單域通過 `href` 的超連結會導致要打開預設瀏覽器中，而不是在應用程式中的頁。（比較這到下面提到的 iOS 的行為)。
 
 ## iOS 白
 
-该平台的白规则命名的应用程序目录中找到 `config.xml` 文件。
+該平臺的白規則命名的應用程式目錄中找到 `config.xml` 檔。
 
-没有一个协议，如指定的起源 `www.apache.org` 而不是 `http://www.apache.org` ，默认为所有的 `http` ， `https` ， `ftp` ，和 `ftps` 计划。
+沒有一個協定，如指定的起源 `www.apache.org` 而不是 `http://www.apache.org` ，預設為所有的 `http` ， `https` ， `ftp` ，和 `ftps` 計畫。
 
-在 iOS 平台上的通配符是比在[W3C 构件访问][1]规范更灵活。 例如，以下访问所有子域和顶级域如 `.com` 和 `.net` ：
+在 iOS 平臺上的萬用字元是比在[W3C 構件訪問][1]規範更靈活。 例如，以下訪問所有子域和頂層網域如 `.com` 和 `.net` ：
 
         <access origin="*.google.*" />
     
 
-与上文指出的对非白名单域通过导航的 Android 平台不同的是 `href` iOS 上的超链接可以防止页面打开在所有。
+與上文指出的對非白名單域通過導航的 Android 平臺不同的是 `href` iOS 上的超連結可以防止頁面打開在所有。
 
 ## 黑莓 10 白
 
-在找到白规则`www/config.xml`.
+在找到白規則`www/config.xml`.
 
-黑莓 10 位使用通配符有别于其他平台两种方式：
+黑莓 10 位使用萬用字元有別于其他平臺兩種方式：
 
-*   通过访问任何内容 `XMLHttpRequest` 必须显式声明。 设置 `origin="*"` 不在这种情况下工作。 另外，所有 web 安全性可能会都禁用使用 `WebSecurity` 黑莓手机配置中所述的首选项：
+*   通過訪問任何內容 `XMLHttpRequest` 必須顯式聲明。 設置 `origin="*"` 不在這種情況下工作。 另外，所有 web 安全性可能會都禁用使用 `WebSecurity` 黑莓手機配置中所述的首選項：
     
         <preference name="websecurity" value="disable" />
         
 
-*   作为替代设置 `*.domain` ，设置附加 `subdomains` 属性为 `true` 。 它应设置为 `false` ，默认情况。 例如，以下允许访问 `google.com` ， `maps.google.com` ，和 `docs.google.com` ：
+*   作為替代設置 `*.domain` ，設置附加 `subdomains` 屬性為 `true` 。 它應設置為 `false` ，預設情況。 例如，以下允許訪問 `google.com` ， `maps.google.com` ，和 `docs.google.com` ：
     
         <access origin="http://google.com" subdomains="true" />
         
     
-    以下缩小访问到 `google.com` ：
+    以下縮小訪問到 `google.com` ：
     
         <access origin="http://google.com" subdomains="false" />
         
     
-    指定访问到所有的域，包括本地 `file://` 协议：
+    指定訪問到所有的域，包括本地 `file://` 協定：
     
     <access origin="*" subdomains="true" />
 
-(有关支持的详细信息，请参阅黑莓的文档[访问元素][8]上.)
+(有關支援的詳細資訊，請參閱黑莓的文檔[訪問元素][8]上.)
 
  [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## 3.1.0 的 iOS 变化
+## 3.1.0 的 iOS 變化
 
-之前 3.1.0 版，科尔多瓦 iOS 包括一些非标准扩展域 whilelisting 计划其他科尔多瓦平台都支持的。 自 3.1.0、 iOS 白名单现在符合资源白名单语法描述了本文档的顶部。 如果您从 pre-3.1.0、 升级和使用这些扩展，您可能需要更改 `config.xml` ，以前一样继续白组相同的资源文件。
+之前 3.1.0 版，科爾多瓦 iOS 包括一些非標準擴展域 whilelisting 計畫其他科爾多瓦平臺都支援的。 自 3.1.0、 iOS 白名單現在符合資源白名單語法描述了本文檔的頂部。 如果您從 pre-3.1.0、 升級和使用這些擴展，您可能需要更改 `config.xml` ，以前一樣繼續白組相同的資源檔。
 
-具体而言，这些模式需要更新：
+具體而言，這些模式需要更新：
 
-*   " `apache.org` "（无协议）： 这将先前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 的协议。 将更改为" `*://apache.org/*` "，包括所有协议，或都包括您需要支持的每个协议的线。
+*   " `apache.org` "（無協定）： 這將先前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 的協定。 將更改為" `*://apache.org/*` "，包括所有協定，或都包括您需要支援的每個協定的線。
 
-*   " `http://apache.*` "（通配符域的一端）： 这将先前匹配的所有顶级-级别-域，包括所有可能的两个字母 Tld （但不是有用域喜欢。 co.uk)。 为每个 TLD，您实际上控制，并且需要到白名单中包括一条线。
+*   " `http://apache.*` "（萬用字元域的一端）： 這將先前匹配的所有頂級-級別-域，包括所有可能的兩個字母 Tld （但不是有用域喜歡。 co.uk)。 為每個 TLD，您實際上控制，並且需要到白名單中包括一條線。
 
-*   " `h*t*://ap*he.o*g` "（通配符为随机丢失信件）： 不再支持这些 ； 更改包含一条线的每个域和协议，您实际上需要到白名单中。
+*   " `h*t*://ap*he.o*g` "（萬用字元為隨機丟失信件）： 不再支援這些 ； 更改包含一條線的每個域和協定，您實際上需要到白名單中。
 
 ## Windows Phone 白
 
-Windows Phone 7 和 8 的白规则发现在应用程序中的 `config.xml` 文件。
+Windows Phone 8 的白名單規則發現在應用程式中的 `config.xml` 檔。
 
 ## Tizen 白
 
-白规则发现在应用程序中的 `config.xml` 文件。 在平台上同样依赖于 `subdomains` 属性作为黑莓平台。 (有关支持的详细信息，请参阅 Tizen 的文档[访问元素][9]上.)
+白規則發現在應用程式中的 `config.xml` 檔。 在平臺上同樣依賴于 `subdomains` 屬性作為黑莓平臺。 (有關支援的詳細資訊，請參閱 Tizen 的文檔[訪問元素][9]上.)
 
  [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

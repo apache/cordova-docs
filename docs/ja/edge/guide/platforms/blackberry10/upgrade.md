@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # ブラックベリー 10 のアップグレード
 
@@ -28,7 +27,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin/update <project_path>
+        bin/更新 < project_path >
     
 
 ## 3.1.0 3.0.0 からアップグレードします。
