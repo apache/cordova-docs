@@ -135,118 +135,69 @@ Windows8
 
 ## Configuring Splash Screens in the CLI
 
-Use the Splashscreen API to enable display of an app's introductory
-splash screen on many platforms.  When working in the CLI, splash
-screen source files are located within the project's `www/res/screens`
-subdirectory.
+In the top-level `config.xml` file (not the one in `platforms`), add configuration elements like those specified here.
 
-Android specifies both portrait- and landscape-oriented splash screen
-images for low, medium, high, and extra-high resolutions:
+# Example configuration 
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+Please notice that the value of the "src" attribute is relative to the project directory and not to the www directory.
+You can name the source image whatever you like. The internal name in the app are determined by Cordova.
 
-The iOS platform specifies variants for iPhone/iPod and iPad, with
-variants for retina displays and different orientations. The _568h_
-file applies to the iPhone 5's taller screen:
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
 
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
 
-Windows Phone specifies a single splash screen image:
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
 
-        windows-phone/screen-portrait.jpg
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
 
-The following sections detail how to set up splash screens when
-working with SDKs and related command-line tools described in Platform
-Guides.
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
 
-Don't forget to install the SplashScreen plugin before trying to use the
-`navigator.splashscreen.hide()` or `navigator.splashscreen.show()` methods.
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
 
-## Splash Screens for the Android Platform
 
-Place [9-patch image](https://developer.android.com/tools/help/draw9patch.html)
-files in the Android project's `platforms/android/res/drawable*` directories.
-
-The size for each should be:
-
-- xlarge (xhdpi): at least 960 &times; 720
-- large (hdpi): at least 640 &times; 480
-- medium (mdpi): at least 470 &times; 320
-- small (ldpi): at least 426 &times; 320
-
-When creating a new Android project, the default splash screen images
-provided in the Cordova sample app should already be present in the
-`platforms/android/res/drawable*` directories. Feel free to replace these
-with your own images.
-When providing your own splash screen images, you do not need to 
-provide the same permutation of 8 as the Cordova default ones
-here.  More or less optimization can be used. 
-The `drawable` directory names must follow the Android conventions for
-supporting
-[screen sizes](http://developer.android.com/guide/practices/screens_support.html) and
-[alternate resources](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
-
-In the top-level `config.xml` file (not the one in `platforms`), add the
-following preferences:
-
-    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
 
-The first line sets the image to display as the splash screen. This is the
-file name of the png in the `drawable*` directories, minus the `.png`
-extension. The default value for SplashScreen is `screen` (for the file
-`platforms/android/res/drawable*/screen.png`), so if you
-name the image anything other than `screen.png` in the `drawable*` directories,
-you need to add/modify this line.
+# Supported platforms 
 
-The second line sets the default delay of how long the splashscreen appears in
-milliseconds. This should be the worst-case expected start time.
-The default value for SplashScreenDelay is 3000 ms.
+As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.
 
-Finally, as a best practice, the splash screen should be present only as long
-as necessary. When your app has started and the webview has loaded, your app
-should hide the splash screen so that your main view is visible as soon as it
-is ready. Because the app start time will vary quite a bit due to a number of
-factors such as CPU speed and network, it is recommended that your app
-explicitly invoke `navigator.splashscreen.hide()` in the JavaScript
-method that responds to the `deviceready` event. Otherwise the splash screen
-will be visible for the SplashScreenDelay value that you configured above,
-which is likely longer than necessary.
-This event-driven approach is highly recommended versus having the splash
-screen visible for always a fixed duration.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
 
-## Splash Screens for the iOS Platform
+# Splashscreen Plugin
 
-Copy splash screen images into the iOS project's `Resources/splash`
-directory. Only add those images for the devices you want to support,
-such as iPad or iPhone. The size of each image should be:
+  Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
+  https://github.com/apache/cordova-plugin-splashscreen
 
-- Default-568h@2x~iphone.png (640x1136 pixels)
-- Default-Landscape@2x~ipad.png (2048x1496 pixels)
-- Default-Landscape~ipad.png (1024x748 pixels)
-- Default-Portrait@2x~ipad.png (1536x2008 pixels)
-- Default-Portrait~ipad.png (768x1004 pixels)
-- Default@2x~iphone.png (640x960 pixels)
-- Default~iphone.png (320x480 pixels)
 
-## Splash Screens for the BlackBerry 10 Platform
-
-Add a rim:splash element to config.xml for each resolution and locale you wish
-to support:
-
-<http://developer.blackberry.com/html5/documentation/rim_splash_element.html>
