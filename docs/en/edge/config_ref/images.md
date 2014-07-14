@@ -157,23 +157,23 @@ You can name the source image whatever you like. The internal name in the app ar
 
     <platform name="ios">
         <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png", width="320", height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png", width="640", height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png", width="768", height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png", width="1536", height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png", width="1024", height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png", width="2048", height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png", width="640", height="1136"/>
-    </platform>
-
-    <platform name="windows8">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/windows8/splashscreen.png" width="620", height="300"/>
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
     </platform>
 
     <platform name="wp8">
         <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768", height="1280"/>
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
     </platform>
 
     <preference name="SplashScreenDelay" value="10000" />
@@ -182,9 +182,13 @@ You can name the source image whatever you like. The internal name in the app ar
 
 As of now (Cordova 3.5.0 July 2014) the following platforms support splash screens.
 
-    windows8
-    wp8
-    ios
     android
+    ios
+    wp8
+    windows8
+
+# Splashscreen Plugin
+
+  Alternatively you can use this plugin: https://github.com/apache/cordova-plugin-splashscreen
 
 
