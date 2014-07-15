@@ -176,6 +176,13 @@ You can name the source image whatever you like. The internal name in the app ar
         <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
     </platform>
 
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+
+
     <preference name="SplashScreenDelay" value="10000" />
 
 # Supported platforms 
@@ -186,9 +193,11 @@ As of now (Cordova 3.5.0 July 2014) the following platforms support splash scree
     ios
     wp8
     windows8
+    blackberry10
 
 # Splashscreen Plugin
 
-  Alternatively you can use this plugin: https://github.com/apache/cordova-plugin-splashscreen
+  Apache Cordova also offers special splash screen plugin which could be used to programmatically display and hide a splash screen during application launch
+  https://github.com/apache/cordova-plugin-splashscreen
 
 
