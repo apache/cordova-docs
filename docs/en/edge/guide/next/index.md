@@ -25,12 +25,13 @@ Even if you choose not to use Cordova, creating a mobile application without usi
 Examples of SPA libraries you can use in your Cordova applications are:
 
 * [AngularJS](http://angularjs.org)
+* [EmberJS](http://emberjs.com)
 * [Backbone](http://backbonejs.org)
 * [Kendo UI](http://www.telerik.com/kendo-ui)
 * [Monaca](http://monaca.mobi/en/)
 * [ReactJS](http://facebook.github.io/react/)
 * [Sencha Touch](http://www.sencha.com/products/touch/)
-* [jQuery Mobile](jquerymobile.com)
+* [jQuery Mobile](http://jquerymobile.com)
 
 And many, many, more.
 
