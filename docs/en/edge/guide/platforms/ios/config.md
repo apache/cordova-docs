@@ -112,7 +112,7 @@ File for information on global configuration options.
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
 
 - `UseWKWebView` (boolean, defaults to `false`): Set
-  to `true` to use a WKWebView instead of a UIWebView for rendering.
+  to `true` to use a WKWebView instead of a UIWebView for rendering. Only in iOS 8.
 
         <preference name="UseWKWebView" value="true"/>
 
