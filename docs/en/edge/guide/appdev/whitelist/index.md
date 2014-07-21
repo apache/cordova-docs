@@ -75,9 +75,55 @@ for `href` hyperlinks, not referenced resources such as images and
 scripts. Take steps to avoid scripts from being injected into the
 application.
 
-Navigating to non-whitelisted domains via `href` hyperlink causes the
-page to open in the default browser rather than within the
-application.  (Compare this to iOS's behavior noted below.)
+__NOTE__: Some network requests do not go through the Cordova Whitelist.
+This includes <video> and <audio> resouces, WebSocket connections (on
+Android 4.4+), and possibly other non-http requests. On Android 4.4+,
+you can include a [CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
+header in your HTML documents to restrict access to those resources.
+On older versions of Android, it may not be possible to restrict them.
+
+### External Application Whitelist
+
+Cordova 3.6.0 introduces a second whitelist, for restricting which URLs
+are allowed to launch external applications. In previous versions of
+Cordova, all non-http URLs, such as `mailto:`, `geo:`, `sms:` and `intent`,
+were implicitly allowed to be the target of a an <a> tag. Because of the
+potential for an application to leak information, if an XSS vulnerability
+allows an attacker to construct arbitrary links, these URLs must be
+whitelisted as well, starting in Cordova 3.6.0.
+
+To allow a URL pattern to launch an external application, use an <access>
+tag in your `config.xml` file, with the `launch-external` attribute set.
+
+Examples:
+
+* To allow links to send SMS messages:
+
+    <access origin="sms:*" launch-external="yes" />
+
+* To allow links to open Maps:
+
+    <access origin="geo:*" launch-external="yes" />
+
+* To allow links to example.com to open in an external browser:
+
+    <access origin="http://example.com/*" launch-external="yes" />
+
+* To allow all non-whitelisted websites to open in an external browser:
+(This is the same as the previous behaviour for non-whitelisted URLs)
+
+    <access origin="http://*" launch-external="yes" />
+    <access origin="https://*" launch-external="yes" />
+
+* To allow access to all URLs, reverting to the Cordova 3.5.0 policy (not recommended):
+
+    <access origin="*" launch-external="yes" />
+
+When navigating to a URL from within your application, the interal whitelist
+is tested first, and if the URL is not whitelisted there, then the external
+whitelist is tested. This means that any `http:` or `https:` URLs which match
+both whitelists will be opened inside of the Cordova application, rather than
+launching the external browser.
 
 ## iOS Whitelisting
 
