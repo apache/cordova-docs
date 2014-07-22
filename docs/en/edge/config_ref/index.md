@@ -78,6 +78,10 @@ platforms:
   reverse-domain identifier, and the `version` its full version number
   expressed in major/minor/patch notation.
 
+  The widget tag can also have attributes that specify alternative versions,
+  namely versionCode for Android and CFBundleVersion for iOS. See the
+  Additional Versioning section below for details.
+
 - The `<name>` element specifies the app's formal name, as it appears
   on the device's home screen and within app-store interfaces.
 
@@ -98,6 +102,28 @@ platforms:
   case-insensitive.  Many preferences are unique to specific
   platforms, as listed at the top of this page. The following sections
   detail preferences that apply to more than one platform.
+
+### Additional Versioning
+
+Both, Android and iOS support a second version string (or number) in addition
+to the one visible in app stores,
+[versionCode](http://developer.android.com/tools/publishing/versioning.html)
+for Android and
+[CFBundleVersion](http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error)
+for iOS.
+Below is an example that explicitly sets versionCode and CFBundleVersion
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+
+If alternative version is not specified, the following
+defaults will be used:
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
 
 ## Global Preferences
 
@@ -151,7 +177,7 @@ all of them:
 
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
-  Applies to iOS and BlackBerry. 
+  Applies to iOS and BlackBerry.
 
 ## The _feature_ Element
 
