@@ -494,6 +494,11 @@ all available Cordova commands and their syntax:
     $ cordova help
     $ cordova        # same
 
+Additionally, you can get more detailed help on a specific command.
+For example:
+
+    $ cordova run --help
+
 The `info` command produces a listing of potentially useful details,
 such as currently installed platforms and plugins, SDK versions for
 each platform, and versions of the CLI and `node.js`:
