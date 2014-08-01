@@ -365,6 +365,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
     $ cordova        # same
     
 
+此外，你可以在一個特定的命令更詳細的説明。例如：
+
+    $ cordova run --help
+    
+
 `info`命令產生的潛在的有用的詳細資訊，如當前安裝的平臺和外掛程式，每個平臺，SDK 版本的 CLI 版本的清單和 `node.js` ：
 
     $ cordova info

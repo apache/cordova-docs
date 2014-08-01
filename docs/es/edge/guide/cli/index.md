@@ -365,6 +365,11 @@ Córdoba cuenta con un par de comandos globales, que puede ayudar si se atranca 
     $ cordova        # same
     
 
+Además, puede obtener ayuda detallada acerca de un comando específico. Por ejemplo:
+
+    $ cordova run --help
+    
+
 El `info` comando produce un listado de detalles potencialmente útiles, tales como plataformas actualmente instaladas y plugins, versiones SDK para cada plataforma y versiones de CLI y `node.js` :
 
     $ cordova info
@@ -383,7 +388,7 @@ Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la vers
 
 Para instalar una versión específica, utilice esta sintaxis:
 
-        $ sudo npm instalar cordova@3.1.0-0.2.0 -g
+        $ sudo npm install -g cordova@3.1.0-0.2.0
     
 
 Ejecute `cordova -v` para ver qué versión se está ejecutando actualmente. Ejecute el `npm

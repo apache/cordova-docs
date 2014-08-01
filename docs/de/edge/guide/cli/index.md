@@ -365,6 +365,11 @@ Cordova verfügt über ein paar globale Befehle, die Ihnen helfen können, wenn 
     $ cordova        # same
     
 
+Darüber hinaus erhalten Sie weitere detaillierte Hilfe zu einem bestimmten Befehl. Zum Beispiel:
+
+    $ cordova run --help
+    
+
 Der `info` Befehl erzeugt eine Liste von potentiell nützliche Details, wie derzeit installierten Plattformen und Plugins, SDK-Versionen für jede Plattform und die CLI-Versionen und `node.js` :
 
     $ cordova info

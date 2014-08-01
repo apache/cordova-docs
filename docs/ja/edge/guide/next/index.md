@@ -27,20 +27,22 @@
 Cordova アプリで使用することができますスパ ライブラリの例です：
 
 *   [AngularJS][2]
-*   [バックボーン][3]
-*   [剣道 UI][4]
-*   [モナカ][5]
-*   [ReactJS][6]
-*   [煎茶タッチ][7]
-*   [jQuery Mobile][8]
+*   [EmberJS][3]
+*   [バックボーン][4]
+*   [剣道 UI][5]
+*   [モナカ][6]
+*   [ReactJS][7]
+*   [煎茶タッチ][8]
+*   [jQuery Mobile][9]
 
  [2]: http://angularjs.org
- [3]: http://backbonejs.org
- [4]: http://www.telerik.com/kendo-ui
- [5]: http://monaca.mobi/en/
- [6]: http://facebook.github.io/react/
- [7]: http://www.sencha.com/products/touch/
- [8]: jquerymobile.com
+ [3]: http://emberjs.com
+ [4]: http://backbonejs.org
+ [5]: http://www.telerik.com/kendo-ui
+ [6]: http://monaca.mobi/en/
+ [7]: http://facebook.github.io/react/
+ [8]: http://www.sencha.com/products/touch/
+ [9]: http://jquerymobile.com
 
 さらに、多くは。
 
@@ -48,9 +50,9 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 コルドバの新しい開発者が作ることができる最大の過ちの一つは、デスクトップ ・ マシンに取得パフォーマンスが同じモバイル デバイスになると仮定します。 私達のモバイル機器はより強力な毎年得ているが、彼らはまだパワーとデスクトップのパフォーマンスを欠いています。 モバイル デバイスは通常はるかに少ない RAM とは、自分のデスクトップからは程遠い GPU がある (またはノート) の兄弟。 ここでのヒントの完全なリストはあまりにも多くがここでは （さらなる研究の終わりに長いリソースの一覧) を心に留めていくつ。
 
-**タッチとクリックして**- することができます最大かつ最も簡単な間違いは click イベントを使用します。 これら"作業中"だけで罰金携帯電話で、ほとんどのデバイスのタッチとタッチ「ホールド」イベントとを区別するためにそれらに 300 ms の遅延を課します。 使用して `touchstart` 、または `touchend` 、劇的な改善になります - 300 ms ような音は、多くがぎくしゃくの UI の更新と行動に結果することができます。 「タッチ」のイベントという事実はサポートされていませんをも考慮すべき非 webkit のブラウザーで[CanIUse][9]を参照してください。 これらの制限に対処するためにすることができますチェック アウト HandJS と Fastouch のような様々 なライブラリ。
+**タッチとクリックして**- することができます最大かつ最も簡単な間違いは click イベントを使用します。 これら"作業中"だけで罰金携帯電話で、ほとんどのデバイスのタッチとタッチ「ホールド」イベントとを区別するためにそれらに 300 ms の遅延を課します。 使用して `touchstart` 、または `touchend` 、劇的な改善になります - 300 ms ような音は、多くがぎくしゃくの UI の更新と行動に結果することができます。 「タッチ」のイベントという事実はサポートされていませんをも考慮すべき非 webkit のブラウザーで[CanIUse][10]を参照してください。 これらの制限に対処するためにすることができますチェック アウト HandJS と Fastouch のような様々 なライブラリ。
 
- [9]: http://caniuse.com/#search=touch
+ [10]: http://caniuse.com/#search=touch
 
 **DOM 操作と CSS 切り替え**- ハードウェア加速 CSS 切り替えを使用してアニメーションを作成する java スクリプトの設定を使用するよりも劇的に良くなります。 例についてはこのセクションの最後にリソースの一覧を参照してください。
 
@@ -58,20 +60,20 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 **追加のパフォーマンスの記事およびリソース**
 
-*   ["あなたは半分中途半端それ」][10]
-*   [「PhoneGap とハイブリッド アプリのトップ 10 のパフォーマンスのヒント」][11]
+*   ["あなたは半分中途半端それ」][11]
+*   [「PhoneGap とハイブリッド アプリのトップ 10 のパフォーマンスのヒント」][12]
 *   「高速アプリケーションや java スクリプトの設定をサイト」： http://channel9.msdn.com/Events/Build/2013/4-313
 
- [10]: http://sintaxi.com/you-half-assed-it
- [11]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [11]: http://sintaxi.com/you-half-assed-it
+ [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
 
 ## 3） を認識し、オフライン ステータス処理
 
 ネットワークについて前のヒントを参照してください。 だけでなく、低速のネットワークにすることができます完全にオフラインにすることがアプリケーションにとっては可能です。 アプリケーションは、インテリジェントな方法でこれを処理します。 アプリケーションない場合は、人々 は、アプリケーションが壊れていると思います。 易いというコルドバ サポート、オフラインとオンラインの両方のイベントをリッスンして） を処理するために、与えられた理由は全くない、アプリケーションをオフラインで実行されたときにも応答しないため。 (後述のテストを参照してください） をテストしてください、アプリケーション 1 つの状態で起動し、別に切り替えると、アプリケーションを処理する方法をテストしてください。
 
-そのネットワーク接続 API だけでなく、オンライン イベントとオフライン イベント、完璧ではないに注意してください。 XHR 要求を使用して、デバイスが本当にオフラインまたはオンラインを参照してくださいするに依存する必要があります。 一日の終わりには必ず実際にネットワークの問題 - サポートのいくつかのフォームを追加、アップル ストア （とおそらく他の店） は、オンライン/オフライン状態を正しく処理しないアプリケーションを拒否します。 このトピックの詳細については、 [「この事ですか？」][12]を参照してください。
+そのネットワーク接続 API だけでなく、オンライン イベントとオフライン イベント、完璧ではないに注意してください。 XHR 要求を使用して、デバイスが本当にオフラインまたはオンラインを参照してくださいするに依存する必要があります。 一日の終わりには必ず実際にネットワークの問題 - サポートのいくつかのフォームを追加、アップル ストア （とおそらく他の店） は、オンライン/オフライン状態を正しく処理しないアプリケーションを拒否します。 このトピックの詳細については、 [「この事ですか？」][13]を参照してください。
 
- [12]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # アップグレードの処理
 
@@ -133,9 +135,9 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 ## サファリのリモート デバッグ
 
-最初のオプションはサファリ リモート デバッグです。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 詳細については、この優れたブログの記事を参照してください： [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][13]
+最初のオプションはサファリ リモート デバッグです。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 詳細については、この優れたブログの記事を参照してください： [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
 
- [13]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+ [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
 
 ## Chrome リモート デバッグ
 
@@ -153,34 +155,35 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ## その他のオプション
 
-*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][14]
-*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][15]この[MDN の記事][16]を参照してくださいすることができます。.
+*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][15]
+*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][16]この[MDN の記事][17]を参照してくださいすることができます。.
 *   例と上記のデバッグのヒントの説明を参照してください： <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [15]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [16]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [17]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # ユーザー インターフェイス
 
 コルドバのアプリケーションを構築するは似合いますモバイルの挑戦、特に開発者のためすることができます。 多くの人々 は UI フレームワークを使用してこれを簡単にすることを選んだ。 ここでは考慮したい場合がありますオプションの短いリストです。
 
-*   [jQuery Mobile][8] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
-*   [イオン][17]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
-*   [ラチェット][18]- ブートス トラップを作成した人々 によってもたらされます。 
-*   [剣道 UI][4] - オープン ソース UI と Telerik からアプリケーション フレームワークです。
-*   [トップコート][19]
-*   [ReactJS][6]
+*   [jQuery Mobile][18] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
+*   [イオン][19]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
+*   [ラチェット][20]- ブートス トラップを作成した人々 によってもたらされます。 
+*   [剣道 UI][5] - オープン ソース UI と Telerik からアプリケーション フレームワークです。
+*   [トップコート][21]
+*   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [18]: jquerymobile.com
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][20] * [Android][21] * [Windows Phone][22]
+ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][22] * [Android][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## その他の UI の記事およびリソース
 
@@ -190,18 +193,18 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ここでは、コルドバで最新保つためにいくつかの方法です。
 
-*   [コルドバのブログ][23]を購読するには.
-*   [開発者メーリング リスト][24]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
+*   [コルドバのブログ][25]を購読するには.
+*   [開発者メーリング リスト][26]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # ヘルプの取得
 
 次のリンクは、コルドバの助けを得る最もよい場所です。
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova>コルドバのタグを使用して、表示およびすべてのコルドバの質問を参照できます。 StackOverflow によってこのように同様に歴史的質問にアクセスすることができますように「コルドバ」を"Phonegap"タグが自動的に変換されます。
-*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][25]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
+*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][27]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
 *   ミート： <http://phonegap.meetup.com> - ローカル コルドバ/PhoneGap ミート グループを探すことを検討
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap

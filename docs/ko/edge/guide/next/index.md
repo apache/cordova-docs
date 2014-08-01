@@ -27,20 +27,22 @@
 코르 도우 바 응용 프로그램에서 사용할 수 있는 스파 라이브러리의 보기는:
 
 *   [AngularJS][2]
-*   [백본][3]
-*   [검도 UI][4]
-*   [모 나카][5]
-*   [ReactJS][6]
-*   [Sencha 터치][7]
-*   [jQuery 모바일][8]
+*   [EmberJS][3]
+*   [백본][4]
+*   [검도 UI][5]
+*   [모 나카][6]
+*   [ReactJS][7]
+*   [Sencha 터치][8]
+*   [jQuery 모바일][9]
 
  [2]: http://angularjs.org
- [3]: http://backbonejs.org
- [4]: http://www.telerik.com/kendo-ui
- [5]: http://monaca.mobi/en/
- [6]: http://facebook.github.io/react/
- [7]: http://www.sencha.com/products/touch/
- [8]: jquerymobile.com
+ [3]: http://emberjs.com
+ [4]: http://backbonejs.org
+ [5]: http://www.telerik.com/kendo-ui
+ [6]: http://monaca.mobi/en/
+ [7]: http://facebook.github.io/react/
+ [8]: http://www.sencha.com/products/touch/
+ [9]: http://jquerymobile.com
 
 그리고 많은, 많은, 더입니다.
 
@@ -48,9 +50,9 @@
 
 새로운 코르도바 개발자가 만들 수 있는 가장 큰 실수 중 하나는 데스크탑 컴퓨터를 성능 같은 모바일 장치에서 얻을 것 이다 가정 하입니다. 우리의 모바일 기기는 매년 더 강력한 입수 했습니다, 그러나 그들은 아직도 데스크탑의 성능과 전력 부족. 모바일 장치는 일반적으로 훨씬 적은 RAM과는 멀다 그들의 데스크탑 GPU는 (또는 심지어 노트북) 형제. 여기 팁의 전체 목록은 너무 많은 것 그러나 여기 (추가 연구 끝에 더 이상 리소스 목록)와 마음에 계속 몇 가지 있습니다.
 
-Click 이벤트를 사용 하는 **터치 대 클릭** -당신이 할 수 있는 가장 큰 및 가장 간단한 실수입니다. 이러한 "작업" 잘 모바일, 하는 동안 대부분의 장치 터치와 터치 "개최" 이벤트 사이 구별 하기 위하여 그들에 300ms 지연이 부과. 사용 하 여 `touchstart` , 또는 `touchend` , 극적인 개선 귀 착될 것 이다-300ms 하지 않는 소리 처럼, 하지만 그것은 육 포 UI 업데이트 및 행동 귀 착될 수 있다. 사실 "터치" 이벤트는 지원 되지 않습니다 고려해 야 비-웹 킷 브라우저에서 [CanIUse][9]를 참조 하십시오. 이러한 제한 된 처리 하실 수 있습니다 체크 아웃 HandJS 및 Fastouch 같은 다양 한 라이브러리.
+Click 이벤트를 사용 하는 **터치 대 클릭** -당신이 할 수 있는 가장 큰 및 가장 간단한 실수입니다. 이러한 "작업" 잘 모바일, 하는 동안 대부분의 장치 터치와 터치 "개최" 이벤트 사이 구별 하기 위하여 그들에 300ms 지연이 부과. 사용 하 여 `touchstart` , 또는 `touchend` , 극적인 개선 귀 착될 것 이다-300ms 하지 않는 소리 처럼, 하지만 그것은 육 포 UI 업데이트 및 행동 귀 착될 수 있다. 사실 "터치" 이벤트는 지원 되지 않습니다 고려해 야 비-웹 킷 브라우저에서 [CanIUse][10]를 참조 하십시오. 이러한 제한 된 처리 하실 수 있습니다 체크 아웃 HandJS 및 Fastouch 같은 다양 한 라이브러리.
 
- [9]: http://caniuse.com/#search=touch
+ [10]: http://caniuse.com/#search=touch
 
 **DOM 조작 대 CSS 전환** -하드웨어 가속 CSS 전환을 사용 하 여 애니메이션을 만드는 자바 스크립트를 사용 하 여 보다 극적으로 더 나은 있을 것입니다. 예제를 보려면이 섹션의 끝에 리소스 목록을 참조 하십시오.
 
@@ -58,20 +60,20 @@ Click 이벤트를 사용 하는 **터치 대 클릭** -당신이 할 수 있는
 
 **추가 성능 기사 및 자원**
 
-*   ["반 assed 당신이 그것"][10]
-*   ["최고 10 성능 팁 PhoneGap 및 하이브리드 애플 리 케이 션에 대 한"][11]
+*   ["반 assed 당신이 그것"][11]
+*   ["최고 10 성능 팁 PhoneGap 및 하이브리드 애플 리 케이 션에 대 한"][12]
 *   "빠른 애플 리 케이 션 및 자바 스크립트 사이트": http://channel9.msdn.com/Events/Build/2013/4-313
 
- [10]: http://sintaxi.com/you-half-assed-it
- [11]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [11]: http://sintaxi.com/you-half-assed-it
+ [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
 
 ## 3) 인식 하 고 오프 라인 상태 처리
 
 네트워크에 대 한 이전 팁을 참조 하십시오. 뿐만 아니라 느린 네트워크에 있을 수 있습니다 그것은 완전히 오프 라인으로 응용 프로그램에 대 한 전적으로 가능 합니다. 응용 프로그램 지능형 방식으로이 처리 해야 합니다. 응용 프로그램이 없는 경우 응용 프로그램은 깨진 사람들이 생각 합니다. 얼마나 쉬운 그것 (모두 오프 라인 및 온라인 이벤트를 수신 대기 하는 코르 도우 바 지원)를 처리 하는, 주어진 잘 오프 라인 실행 될 때 응답 하지 응용 프로그램에 대 한 전혀 이유가 있다. (아래의 테스트 섹션 참조) 테스트 해야 응용 프로그램 한 상태에서 시작 하 고 다음 다른 전환 하는 경우 응용 프로그램에서 처리 하는 방법을 테스트 해야 합니다.
 
-Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API 완벽 하지 않습니다. XHR 요청을 사용 하 여 장치 인지 진정으로 오프 라인 또는 온라인에 의존 할 수 있습니다. 하루의 끝에, 확실히 사실 어떤 형태의 네트워크 문제-에 대 한 지원 추가, 애플 스토어 (및 아마 다른 매장) 오프 라인/온라인 상태를 제대로 처리 하지 않는 애플 리 케이 션을 거부 합니다. 이 주제에 더 많은 논의 참조 ["에이 것은?"][12]
+Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API 완벽 하지 않습니다. XHR 요청을 사용 하 여 장치 인지 진정으로 오프 라인 또는 온라인에 의존 할 수 있습니다. 하루의 끝에, 확실히 사실 어떤 형태의 네트워크 문제-에 대 한 지원 추가, 애플 스토어 (및 아마 다른 매장) 오프 라인/온라인 상태를 제대로 처리 하지 않는 애플 리 케이 션을 거부 합니다. 이 주제에 더 많은 논의 참조 ["에이 것은?"][13]
 
- [12]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # 업그레이드 처리
 
@@ -133,9 +135,9 @@ Note 온라인 및 오프 라인 이벤트 뿐 아니라 네트워크 연결 API
 
 ## 사파리 원격 디버깅
 
-첫 번째 옵션은 사파리 원격 디버깅. OSX 에서만 그리고 iOS 6 (더 높은)와 작동합니다. 그것은 사파리를 사용 하 여 장치 (또는 시뮬레이터) 및 코르도바 응용 프로그램 브라우저의 개발 도구를 연결할 것 이다. 당신은 당신이 dev 도구-DOM 검사/조작, 자바 스크립트 디버거, 네트워크 검사, 콘솔, 등에서 무엇을 기대 얻을. 자세한 내용은,이 훌륭한 블로그 게시물을 참조: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][13]
+첫 번째 옵션은 사파리 원격 디버깅. OSX 에서만 그리고 iOS 6 (더 높은)와 작동합니다. 그것은 사파리를 사용 하 여 장치 (또는 시뮬레이터) 및 코르도바 응용 프로그램 브라우저의 개발 도구를 연결할 것 이다. 당신은 당신이 dev 도구-DOM 검사/조작, 자바 스크립트 디버거, 네트워크 검사, 콘솔, 등에서 무엇을 기대 얻을. 자세한 내용은,이 훌륭한 블로그 게시물을 참조: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
 
- [13]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+ [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
 
 ## 크롬 원격 디버깅
 
@@ -153,34 +155,35 @@ Weinre 코르 도우 바 응용 프로그램에 대 한 원격 디버그 클라�
 
 ## 기타 옵션
 
-*   블랙베리 10 뿐만 아니라 디버깅을 지원 합니다: [문서][14]
-*   [이 블로그 게시물][15] 및이 [MDN 문서][16] 를 참조 하십시오 뿐만 아니라 파이어 폭스 응용 프로그램 관리자를 사용 하 여 디버깅할 수 있습니다..
+*   블랙베리 10 뿐만 아니라 디버깅을 지원 합니다: [문서][15]
+*   [이 블로그 게시물][16] 및이 [MDN 문서][17] 를 참조 하십시오 뿐만 아니라 파이어 폭스 응용 프로그램 관리자를 사용 하 여 디버깅할 수 있습니다..
 *   더 많은 예제 및 위의 디버깅 팁의 설명을 참조 하십시오: <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [15]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [16]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [17]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # 사용자 인터페이스
 
 코르 도우 바 응용 프로그램 구축에 좋은 보이는 모바일은 도전일 수 있다, 특히 개발자를 위한. 많은 사람들이 이것을 더 쉽게 만드는 UI 프레임 워크를 사용 하기로 결정 했습니다. 여기 당신이 고려해 야 할 옵션의 간단한 목록입니다.
 
-*   [모바일 jQuery][8] -jQuery 모바일 자동으로 모바일 최적화에 대 한 레이아웃을 향상 시킵니다. 그것은 또한 당신을 위해 자동으로 스파를 만들고 처리 합니다.
-*   [이오니아][17] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
-*   [래치 드][18] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
-*   [검도 UI][4] -오픈 소스 UI 및 Telerik에서 응용 프로그램 프레임 워크입니다.
-*   [외 투][19]
-*   [ReactJS][6]
+*   [모바일 jQuery][18] -jQuery 모바일 자동으로 모바일 최적화에 대 한 레이아웃을 향상 시킵니다. 그것은 또한 당신을 위해 자동으로 스파를 만들고 처리 합니다.
+*   [이오니아][19] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
+*   [래치 드][20] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
+*   [검도 UI][5] -오픈 소스 UI 및 Telerik에서 응용 프로그램 프레임 워크입니다.
+*   [외 투][21]
+*   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [18]: jquerymobile.com
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다: * [iOS][20] * [안 드 로이드][21] * [Windows Phone][22]
+사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다: * [iOS][22] * [안 드 로이드][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## 추가 UI 기사 및 자원
 
@@ -190,18 +193,18 @@ Weinre 코르 도우 바 응용 프로그램에 대 한 원격 디버그 클라�
 
 여기에 코르도바에 최신 이라고 유지 하는 몇 가지 방법이 있습니다.
 
-*   [코르 도우 바 블로그][23] 구독 하기.
-*   [개발자 목록][24]에 가입 하세요. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
+*   [코르 도우 바 블로그][25] 구독 하기.
+*   [개발자 목록][26]에 가입 하세요. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # 도움말 얻기
 
 다음 링크는 Cordova에 대 한 도움말을 얻을 좋은 장소:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> 코르도바 태그를 사용 하 여 볼 수 있고 코르도바의 모든 질문을 검색 합니다. Note는 StackOverflow 자동 변환 "Phonegap" 태그 "코르도바"를 이런 방식이으로 당신은 뿐만 아니라 역사적인 질문에 액세스할 수 있을 것 이다
-*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][25] 이 Google 그룹 때 코르 도우 바 아직도 불렀다 PhoneGap에 대 한 오래 된 지원 공개 토론 이었다. 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다 코르도바 사용자가이 그룹을 자주 많이 아직도 동안,
+*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][27] 이 Google 그룹 때 코르 도우 바 아직도 불렀다 PhoneGap에 대 한 오래 된 지원 공개 토론 이었다. 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다 코르도바 사용자가이 그룹을 자주 많이 아직도 동안,
 *   Meetup: <http://phonegap.meetup.com> -로컬 코르도바/PhoneGap meetup 그룹을 찾는 것이 좋습니다
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap

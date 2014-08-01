@@ -61,6 +61,8 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
 다음 구성 요소는 최상위에 표시 `config.xml` 파일 및 모든 지원된 코르도바 플랫폼에서 지원 됩니다:
 
 *   `<widget>`요소의 `id` 특성은 응용 프로그램의 리버스-도메인 식별자를 제공 합니다 그리고 `version` 메이저/마이너/패치 표기법 그것의 전체 버전 번호.
+    
+    위젯 태그 대체 버전, iOS에 대 한 안 드 로이드와 CFBundleVersion 즉 versionCode를 지정 하는 특성이 있을 수도 있습니다. 자세한 내용은 아래 추가 버전 관리 섹션을 참조 하십시오.
 
 *   `<name>`요소 및 애플 리 케이 션 스토어 인터페이스 내에서 디바이스의 홈 화면에 나타나는 응용 프로그램의 정식 이름을 지정 합니다.
 
@@ -71,6 +73,26 @@ CLI를 사용 하 여 프로젝트 빌드을이 파일의 버전은 수 동적�
 *   `<access>`요소는 app와 통신 하도록 허용 하는 외부 도메인 집합을 정의 합니다. 기본 값 위에 표시 된 모든 서버에 액세스할 수 있습니다. 자세한 내용은 도메인 화이트 리스트 가이드를 참조 하십시오.
 
 *   `<preference>`태그의 쌍으로 다양 한 옵션을 설정 합니다. `name` / `value` 특성. 각 기본 설정 `name` 은 대/소문자 구분. 이 페이지의 상단에 나열 된 많은 특혜는 특정 플랫폼에 고유한. 다음 섹션에서는 세부 둘 이상의 플랫폼에 적용 되는 환경 설정.
+
+### 추가 버전 관리
+
+둘 다, 안 드 로이드 및 iOS iOS에 대 한 두 번째 버전 문자열 (또는 번호) app 상점, [versionCode][2] 에 보이는 것 뿐만 아니라 안 드 로이드와 [CFBundleVersion][3] 에 대 한 지원. 다음은 versionCode와 CFBundleVersion를 명시적으로 설정 하는 예제
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+대체 버전을 지정 하지 않으면 다음과 같은 기본값이 사용 됩니다.
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## 전체 환경 설정
 

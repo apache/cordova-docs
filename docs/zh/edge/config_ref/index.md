@@ -61,6 +61,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 以下的配置元素出現在頂級 `config.xml` 檔，並在所有受支援的科爾多瓦平臺支援：
 
 *   `<widget>`元素的 `id` 屬性提供了應用程式的反向域識別碼和 `version` 主要/次要/修補程式符號表示其完整版本號碼。
+    
+    小部件標記也可以指定替代版本，即 versionCode 為安卓系統和 CFBundleVersion 的 iOS 的屬性。請參閱下面的附加版本控制部分的詳細資訊。
 
 *   `<name>`元素指定應用程式的正式名稱，因為它出現在設備的主畫面上和在應用程式商店介面內。
 
@@ -71,6 +73,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `<access>`元素定義應用程式能夠與進行通信的外部域的集。 如上所示的預設值允許它訪問任何伺服器。 請參閱域白名單指南的詳細資訊。
 
 *   `<preference>`標記設置各種選項作為對 `name` / `value` 屬性。 每個首選項的 `name` 是不區分大小寫。 很多優惠是獨有的特定平臺上，如列于此頁的頂部。 以下各節詳細介紹了適用于多個平臺的首選項。
+
+### 其他的版本控制
+
+同時，Android 和 iOS iOS 支援第二個版本字串 （或數位） 除了一個可見在應用程式商店， [versionCode][2]為安卓系統和[CFBundleVersion][3] 。 下面是一個示例，顯式地設置 versionCode 和 CFBundleVersion
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+如果不指定替代版本，則將使用以下預設值：
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## 全球首選項
 
@@ -90,7 +112,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## 多平臺首選項
 
-下面的首選項應用到多個平臺，但不是所有人都：
+下面的首選項應用到多個平臺，但不是向他們：
 
 *   `DisallowOverscroll`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` 如果你不想要當使用者滾動過去的開頭或結尾的內容時顯示的任何回饋資訊的介面。
     
@@ -115,14 +137,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## *功能*元素
 
-如果你使用 CLI 來構建應用程式，則使用 `plugin` 命令來啟用設備的 Api。 這不會修改的頂級 `config.xml` 檔中，所以 `<feature>` 的元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定平臺工作 `config.xml` 檔作為源，您使用 `<feature>` 標記，以使設備級 Api 和外部外掛程式。 他們經常出現在特定于平臺的自訂值以 `config.xml` 檔。 例如，在這裡是如何指定為 Android 專案設備 API：
+如果你使用的 CLI 來構建應用程式，則使用 `plugin` 命令來啟用設備的 Api。 這並不會修改的頂級 `config.xml` 檔中，所以 `<feature>` 元素並不適用于您的工作流。 如果您直接在 SDK 和使用特定于平臺的工作 `config.xml` 檔作為源，您使用 `<feature>` 標記，以使設備級 Api 和外部外掛程式。 他們經常出現在特定平臺中的自訂值與 `config.xml` 的檔。 例如，在這裡是如何指定為 Android 專案設備 API：
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />
         </feature>
     
 
-下面是該元素為 iOS 專案的顯示方式：
+這裡是為 iOS 專案元素的顯示方式：
 
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
@@ -133,7 +155,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## *平臺*的元素
 
-使用 CLI 來構建應用程式時，有時必要指定首選項或其他特定于特定平臺的元素。 使用 `<platform>` 元素來指定配置，應該只出現在單個特定平臺 `config.xml` 檔。 例如，在這裡是如何指定那唯一的 android 系統應該使用全屏首選項：
+當使用 CLI 來構建應用程式，它是有時必要指定首選項或其他特定于特定平臺的元素。 使用 `<platform>` 元素來指定配置應該只出現在單個特定于平臺的 `config.xml` 檔。 例如，在這裡是如何指定那唯一的 android 系統應使用全屏顯示首選項：
 
         <platform name="android">
             <preference name="Fullscreen" value="true" />

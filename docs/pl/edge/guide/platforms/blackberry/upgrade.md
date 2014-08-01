@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Uaktualnianie BlackBerry
 
@@ -385,12 +384,12 @@ Aktualizacja tylko `www` katalogu:
 
 6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< plugin name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< nazwa pluginu "Kontakt" value="org.apache.cordova.pim.Contact"/ = >
         
     
     Do:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< plugin name = "Kontakty" value="org.apache.cordova.pim.Contact"/ >
+        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< nazwa pluginu "Kontakty" value="org.apache.cordova.pim.Contact"/ = >
         
 
 Aktualizacja katalogu sample (czyli aktualizacji używając narzędzia):

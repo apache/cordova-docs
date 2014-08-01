@@ -27,20 +27,22 @@ Selbst wenn Sie nicht mithilfe von Cordova, wird mobile Application erstellen, o
 Beispiele für SPA-Bibliotheken, die Sie in Ihren Cordova-Anwendungen verwenden können sind:
 
 *   [AngularJS][2]
-*   [Rückgrat][3]
-*   [Kendo UI][4]
-*   [Monaca][5]
-*   [ReactJS][6]
-*   [Sencha Touch][7]
-*   [jQuery Mobile][8]
+*   [EmberJS][3]
+*   [Rückgrat][4]
+*   [Kendo UI][5]
+*   [Monaca][6]
+*   [ReactJS][7]
+*   [Sencha Touch][8]
+*   [jQuery Mobile][9]
 
  [2]: http://angularjs.org
- [3]: http://backbonejs.org
- [4]: http://www.telerik.com/kendo-ui
- [5]: http://monaca.mobi/en/
- [6]: http://facebook.github.io/react/
- [7]: http://www.sencha.com/products/touch/
- [8]: jquerymobile.com
+ [3]: http://emberjs.com
+ [4]: http://backbonejs.org
+ [5]: http://www.telerik.com/kendo-ui
+ [6]: http://monaca.mobi/en/
+ [7]: http://facebook.github.io/react/
+ [8]: http://www.sencha.com/products/touch/
+ [9]: http://jquerymobile.com
 
 Und viele, viele mehr.
 
@@ -48,9 +50,9 @@ Und viele, viele mehr.
 
 Einer der größten Fehler, den, die ein neuer Cordova-Entwickler leisten kann, ist anzunehmen, dass die Leistung, die sie auf einem desktop-Rechner bekommen das gleiche erhalten sie auf einem mobilen Gerät. Zwar unsere mobile Geräte leistungsfähiger jedes Jahr bekommen, es fehlen noch die Kraft und die Leistung eines Desktop-Computers. Mobile Geräte haben in der Regel viel weniger RAM und eine GPU, die weit entfernt von ihrem Desktop (oder auch Laptop) Brüder. Eine vollständige Liste der Tipps hier wäre zu viel, aber hier sind ein paar Dinge zu beachten (mit einer Liste von mehr Ressourcen am Ende für die weitere Forschung).
 
-**Klicken Sie im Vergleich zu Touch** - der größte und einfachste Fehler, den Sie machen können ist, Click-Ereignisse verwenden. Während diese "prima Mobile funktionieren", erheben die meisten Geräte 300ms Verzögerung darauf Unterscheidung zwischen einem Hauch und ein Hauch "halten"-Ereignis. Mit `touchstart` , oder `touchend` , führt zu einer dramatischen Verbesserung - 300ms nicht klingt wie viel, aber es ruckelt UI-Updates und Verhalten führen kann. Außerdem sollten Sie die Tatsache, die "Ereignisse berühren" werden nicht unterstützt auf nicht-Webkit-Browser finden Sie unter [CanIUse][9]. Um diese Einschränkungen zu begegnen, können Sie Kasse verschiedene Bibliotheken wie HandJS und Fastouch.
+**Klicken Sie im Vergleich zu Touch** - der größte und einfachste Fehler, den Sie machen können ist, Click-Ereignisse verwenden. Während diese "prima Mobile funktionieren", erheben die meisten Geräte 300ms Verzögerung darauf Unterscheidung zwischen einem Hauch und ein Hauch "halten"-Ereignis. Mit `touchstart` , oder `touchend` , führt zu einer dramatischen Verbesserung - 300ms nicht klingt wie viel, aber es ruckelt UI-Updates und Verhalten führen kann. Außerdem sollten Sie die Tatsache, die "Ereignisse berühren" werden nicht unterstützt auf nicht-Webkit-Browser finden Sie unter [CanIUse][10]. Um diese Einschränkungen zu begegnen, können Sie Kasse verschiedene Bibliotheken wie HandJS und Fastouch.
 
- [9]: http://caniuse.com/#search=touch
+ [10]: http://caniuse.com/#search=touch
 
 **CSS-Transitions gegenüber DOM-Manipulation** - mit Hilfe des Hardware-beschleunigte CSS Übergänge werden dramatisch besser als JavaScript verwendet, um Animationen zu erstellen. Finden Sie unter der Liste der Ressourcen am Ende dieses Abschnitts für Beispiele.
 
@@ -58,20 +60,20 @@ Einer der größten Fehler, den, die ein neuer Cordova-Entwickler leisten kann, 
 
 **Zusatzvorstellung Artikel und Ressourcen**
 
-*   ["Sie halb assed es"][10]
-*   ["Top zehn Tipps zur Leistungssteigerung für PhoneGap und Hybrid-Apps"][11]
+*   ["Sie halb assed es"][11]
+*   ["Top zehn Tipps zur Leistungssteigerung für PhoneGap und Hybrid-Apps"][12]
 *   "Schnelle Apps und Websites mit JavaScript": http://channel9.msdn.com/Events/Build/2013/4-313
 
- [10]: http://sintaxi.com/you-half-assed-it
- [11]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [11]: http://sintaxi.com/you-half-assed-it
+ [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
 
 ## 3) erkennen und behandeln von Offline-Status
 
 Finden Sie im vorherigen Tipp über Netzwerke. Nicht nur Sie können über ein langsames Netzwerk, es ist durchaus möglich, für Ihre Anwendung komplett offline sein. Die Anwendung sollte dies auf intelligente Weise behandeln. Wenn Ihre Anwendung nicht tut, wird glauben, dass Ihre Anwendung unterbrochen wird. Gegeben wie einfach es ist, (Cordova unterstützt hören für ein Offline- und Ereignis) zu behandeln gibt es absolut keinen Grund für Ihre Anwendung nicht mehr reagiert, wenn offline ausführen. Testen Sie (siehe Abschnitt Testing) Ihre Anwendung und sollten Sie testen, wie Ihre Anwendung behandelt, wenn Sie in einem Staat starten und dann zu einer anderen wechseln.
 
-Beachten Sie, dass die Online- und offline-Veranstaltungen sowie die Netzwerk-Verbindung-API ist nicht perfekt. Sie müssen möglicherweise verlassen sich auf mithilfe einer XHR-Anforderung um zu sehen, ob das Gerät wirklich offline oder online ist. Am Ende des Tages werden sicher irgendeine Form der Unterstützung für Netzwerkprobleme - fügen Sie in der Tat, im Apple Store (und wahrscheinlich noch andere Läden) werden apps, die ordnungsgemäß offline/online-Staaten darstellen nicht ablehnen. Weitere Diskussion zu diesem Thema finden Sie unter ["Ist das Ding auf?"][12]
+Beachten Sie, dass die Online- und offline-Veranstaltungen sowie die Netzwerk-Verbindung-API ist nicht perfekt. Sie müssen möglicherweise verlassen sich auf mithilfe einer XHR-Anforderung um zu sehen, ob das Gerät wirklich offline oder online ist. Am Ende des Tages werden sicher irgendeine Form der Unterstützung für Netzwerkprobleme - fügen Sie in der Tat, im Apple Store (und wahrscheinlich noch andere Läden) werden apps, die ordnungsgemäß offline/online-Staaten darstellen nicht ablehnen. Weitere Diskussion zu diesem Thema finden Sie unter ["Ist das Ding auf?"][13]
 
- [12]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # Umgang mit Upgrades
 
@@ -133,9 +135,9 @@ Debuggen von Cordova, muss ein Setup. Im Gegensatz zu einer desktop-Anwendung Si
 
 ## Safari Remotedebuggen
 
-Die erste Option ist Safari Remotedebuggen. Dies funktioniert nur unter OSX und nur mit iOS 6 (und höher). Es verwendet Safari zum Herstellen einer Verbindung mit Ihrem Gerät (oder der Simulator) und wird die Browser-Dev-Tools der Cordova-Anwendung verbinden. Sie bekommen, was Sie von Entwicklungstools - DOM Inspektion/Manipulation, einen JavaScript-Debugger, Netzwerk-Inspektion, die Konsole und mehr erwarten. Weitere Einzelheiten finden Sie in diesem hervorragenden Blog-post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][13]
+Die erste Option ist Safari Remotedebuggen. Dies funktioniert nur unter OSX und nur mit iOS 6 (und höher). Es verwendet Safari zum Herstellen einer Verbindung mit Ihrem Gerät (oder der Simulator) und wird die Browser-Dev-Tools der Cordova-Anwendung verbinden. Sie bekommen, was Sie von Entwicklungstools - DOM Inspektion/Manipulation, einen JavaScript-Debugger, Netzwerk-Inspektion, die Konsole und mehr erwarten. Weitere Einzelheiten finden Sie in diesem hervorragenden Blog-post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
 
- [13]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+ [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
 
 ## Chrom Remotedebuggen
 
@@ -153,34 +155,35 @@ Weinre erstellt einen lokalen Server, der einen remote-Debug-Client für Ihre Co
 
 ## Andere Optionen
 
-*   BlackBerry 10 unterstützt auch Debuggen: [Dokumentation][14]
-*   Sie können mit Firefox App Manager sowie Debuggen, finden Sie unter [diesem Blog-Post][15] und dieser [MDN-Artikel][16].
+*   BlackBerry 10 unterstützt auch Debuggen: [Dokumentation][15]
+*   Sie können mit Firefox App Manager sowie Debuggen, finden Sie unter [diesem Blog-Post][16] und dieser [MDN-Artikel][17].
 *   Weitere Beispiele und Erläuterung der oben genannten Tipps zum Debuggen finden Sie unter: <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [15]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [16]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [17]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # Benutzeroberfläche
 
 Erstellen einer Anwendung Cordova sieht schön auf mobile eine Herausforderung sein kann, vor allem für Entwickler. Viele Menschen haben ein UI-Framework verwenden, um dies zu erleichtern. Hier ist eine kurze Liste der Optionen, die Sie betrachten möchten.
 
-*   [jQuery Mobile][8] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
-*   [Ionische][17] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
-*   [Ratsche][18] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
-*   [Kendo UI][4] - Open-Source-UI und Application Framework von Telerik.
-*   [DECKLACK][19]
-*   [ReactJS][6]
+*   [jQuery Mobile][18] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
+*   [Ionische][19] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
+*   [Ratsche][20] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
+*   [Kendo UI][5] - Open-Source-UI und Application Framework von Telerik.
+*   [DECKLACK][21]
+*   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [18]: jquerymobile.com
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][20] * [Android][21] * [Windows Phone][22]
+Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][22] * [Android][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## Zusätzliche UI-Artikel und Betriebsmittel
 
@@ -190,18 +193,18 @@ Obwohl Browser-Motoren immer mehr Normen Beschwerde geworden, wir leben noch in 
 
 Hier sind ein paar Möglichkeiten, um mit Cordova aktuell zu halten.
 
-*   Abonnieren Sie den [Blog von Cordova][23].
-*   Abonnieren Sie die [Liste der Entwickler][24]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
+*   Abonnieren Sie den [Blog von Cordova][25].
+*   Abonnieren Sie die [Liste der Entwickler][26]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # Anfordern von Hilfe
 
 Die folgenden Links sind die besten Orte, um Hilfe zu Cordova zu erhalten:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> mit dem Cordova-Tag, Sie können anzeigen und durchsuchen alle Cordova Fragen. Beachten Sie, dass StackOverflow automatisch das "Phonegap" Tag "Cordoba", konvertiert so dass auf diese Weise werden Sie historische Fragen sowie Zugang zu
-*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][25] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
+*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][27] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
 *   Meetup: <http://phonegap.meetup.com> - betrachten Sie suchen nach einer lokalen Cordova/PhoneGap Meetup-Gruppe
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap

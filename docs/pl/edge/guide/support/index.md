@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -12,7 +12,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          under the License.
     
 
----
+* * *
 
 # Obsługa platformy
 
@@ -50,18 +50,12 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       </th>
       
       <th>
-        <tt>WP7</tt> (W systemie Windows<br />Phone 7)
-      </th>
-      
-      <th>
         <tt>wp8</tt> (W systemie Windows<br />Telefon 8)
       </th>
       
       <th>
         <tt>Win8</tt><br />(Windows 8)
       </th>
-      
-      <!--        <th><tt>firefoxos</tt></th> -->
       
       <th>
         <tt>tizen</tt>
@@ -94,10 +88,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         
         <td data-col="ubuntu"        class="y">
           Ubuntu
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          Windows
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -137,9 +127,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="n">
-        </td>
-        
         <td data-col="winphone8"  class="n">
         </td>
         
@@ -175,10 +162,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(zobacz szczegóły)</a>
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -224,9 +207,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -260,9 +240,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -294,9 +271,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -333,9 +307,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -367,9 +338,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -405,9 +373,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -439,9 +404,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -477,9 +439,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -511,9 +470,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -549,9 +505,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -585,9 +538,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -619,9 +569,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -658,9 +605,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -692,9 +636,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
@@ -730,9 +671,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="ubuntu"        class="y">
         </td>
         
-        <td data-col="winphone7"  class="y">
-        </td>
-        
         <td data-col="winphone8"  class="y">
         </td>
         
@@ -764,10 +702,6 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ubuntu"        class="y">
-        </td>
-        
-        <td data-col="winphone7"  class="y">
-          localStorage & indexedDB
         </td>
         
         <td data-col="winphone8"  class="y">

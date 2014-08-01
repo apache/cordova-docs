@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Uaktualnianie BlackBerry 10
 
@@ -28,7 +27,7 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
-        bin/update <project_path>
+        bin/Aktualizuj < project_path >
     
 
 ## Uaktualnić do 3.1.0 3.0.0

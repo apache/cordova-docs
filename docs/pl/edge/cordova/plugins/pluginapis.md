@@ -1,4 +1,4 @@
----
+* * *
 
 Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów 
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plugin API
 
@@ -32,82 +31,87 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
     
     > Przechwytywanie zdjęcia za pomocą aparatu urządzenia.
 
-*   [Kontakty][4]
+*   [Konsoli][4]
+    
+    > Dodać dodatkowe zdolności do console.log().
+
+*   [Kontakty][5]
     
     > Praca z bazą danych kontaktowych urządzenia.
 
-*   [Urządzenia][5]
+*   [Urządzenia][6]
     
     > Zebrać konkretne informacje o urządzeniu.
 
-*   [Ruch urządzenie (akcelerometr)][6]
+*   [Ruch urządzenie (akcelerometr)][7]
     
     > Wykorzystać czujnik ruchu urządzenia.
 
-*   [Urządzenie orientacji (kompas)][7]
+*   [Urządzenie orientacji (kompas)][8]
     
     > Uzyskania kierunku, który wskazuje urządzenie.
 
-*   [Dialogi][8]
+*   [Dialogi][9]
     
     > Powiadomienia wizualne urządzenie.
 
-*   [System plików][9]
+*   [System plików][10]
     
     > Hak do natywnego systemu poprzez JavaScript.
 
-*   [Transfer plików][10]
+*   [Transfer plików][11]
     
     > Hak do natywnego systemu poprzez JavaScript.
 
-*   [Geolocation][11]
+*   [Geolocation][12]
     
     > Uświadomić lokalizacji aplikacji.
 
-*   [Globalizacja][12]
+*   [Globalizacja][13]
     
     > Włączyć reprezentację obiekty specyficzne dla ustawień regionalnych.
 
-*   [InAppBrowser][13]
+*   [InAppBrowser][14]
     
     > Uruchomienie adresów URL w innej instancji w app przeglądarki.
 
-*   [Media][14]
+*   [Media][15]
     
     > Nagrywać i odtwarzać pliki audio.
 
-*   [Media Capture][15]
+*   [Media Capture][16]
     
     > Przechwytywać pliki multimedialne za pomocą urządzenia multimedialne przechwytywania.
 
-*   [Informacje o sieci (połączenia)][16]
+*   [Informacje o sieci (połączenia)][17]
     
     > Szybko sprawdzić stan sieci i informacje o sieci komórkowej.
 
-*   [Ekranu powitalnego][17]
+*   [Ekranu powitalnego][18]
     
     > Pokaż i Ukryj ekran powitalny aplikacji.
 
-*   [Wibracje][18]
+*   [Wibracje][19]
     
     > Interfejs API do wibrować urządzenia.
 
- [2]: https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md
- [3]: https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md
- [4]: https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md
- [5]: https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md
- [6]: https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md
- [7]: https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md
- [8]: https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md
- [9]: https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md
- [10]: https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md
- [11]: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md
- [12]: https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md
- [13]: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md
- [14]: https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md
- [15]: https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md
- [16]: https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md
- [17]: https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md
- [18]: https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md
+ [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
+ [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
+ [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
+ [5]: http://plugins.cordova.io/#/package/org.apache.cordova.contacts
+ [6]: http://plugins.cordova.io/#/package/org.apache.cordova.device
+ [7]: http://plugins.cordova.io/#/package/org.apache.cordova.device-motion
+ [8]: http://plugins.cordova.io/#/package/org.apache.cordova.device-orientation
+ [9]: http://plugins.cordova.io/#/package/org.apache.cordova.dialogs
+ [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
+ [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
+ [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
+ [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
+ [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
+ [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
+ [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
+ [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
+ [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
 
 Non-angielski tłumaczenie tych dokumentów plugin można znaleźć przez patrząc na starsze wersje dokumentacji Cordova. Użyj menu rozwijanego w bardzo prawym górnym rogu tej strony, aby przełączyć wersje.

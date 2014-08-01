@@ -61,6 +61,8 @@ Este ejemplo muestra el valor predeterminado `config.xml` generados por la CLI `
 Aparecen los siguientes elementos de configuración en el nivel superior `config.xml` de archivos y se admiten todas las plataformas soportadas Cordova:
 
 *   Atributo `id` del elemento `<widget>` proporciona identificador de reversa-dominio de la aplicación y la `versión de` su número de versión completa expresada en notación de mayor/menor/parche.
+    
+    La etiqueta widget también puede tener atributos que especifican las versiones alternativas, a saber versionCode para Android y CFBundleVersion para iOS. Vea la sección de versiones adicionales debajo para más detalles.
 
 *   El elemento `<name>` especifica nombre formal de la aplicación, como aparece en la pantalla principal del dispositivo y dentro de la tienda app interfaces.
 
@@ -71,6 +73,26 @@ Aparecen los siguientes elementos de configuración en el nivel superior `config
 *   elementos `<access>` definen el conjunto de dominios externos que puede comunicarse con la aplicación. El valor predeterminado que se muestra arriba le permite acceder a cualquier servidor. Consulte a la guía de lista blanca de dominio para obtener más detalles.
 
 *   La etiqueta `<preference>` establece varias opciones como pares de `nombre` / `valor de` atributos. De cada preferencia `name` es sensible a las mayúsculas. Muchas preferencias son exclusivos para plataformas específicas, como se indica en la parte superior de esta página. Las siguientes secciones detallan las preferencias que se aplican a más de una plataforma.
+
+### Versiones adicionales
+
+Ambos, Android y iOS apoyar una segunda cadena de versión (o número) además de la visible en tiendas de aplicaciones, [versionCode][2] para Android y [CFBundleVersion][3] para iOS. A continuación es un ejemplo que establece explícitamente versionCode y CFBundleVersion
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+Si no se especifica la versión alternativa, se utilizarán los siguientes valores predeterminados:
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## Preferencias globales
 

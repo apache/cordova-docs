@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Aktualizacja Android
 
@@ -34,10 +33,10 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
-        bin/update <project_path>
+        bin/Aktualizuj < project_path >
     
 
-**Ostrzeżenie:** Począwszy od Android 4.4, tworzenie element wejściowego pliku typu = "plik" nie zostanie otwarte okno wyboru pliku. To jest regresja z chromu na Android i problem może być odtworzone w standalone Chrom przeglądarka na Androidzie (patrz http://code.google.com/p/android/issues/detail?id=62220) sugeruje workaround jest wobec używać FileTransfer i plik wtyczki dla Android 4.4. Można posłuchać na zdarzenie onClick, z typem danych wejściowych = "plik" a następnie pojawiają się wyboru plików interfejsu użytkownika. Aby powiązać z przesyłanie danych formularza, można użyć JavaScript aby dołączyć wartości formularza do wieloczęściowego żądanie POST, który sprawia, że FileTransfer. Ten błąd nadal występuje od Android 4.4.2
+**Ostrzeżenie:** Na Android 4.4 - Android 4.4.3, tworząc plik wprowadzania elementu typu = "plik" nie zostanie otwarte okno wyboru pliku. To jest regresja z chromu na Android i problem może być odtworzone w standalone Chrom przeglądarka na Androidzie (patrz http://code.google.com/p/android/issues/detail?id=62220) sugeruje workaround jest wobec używać FileTransfer i plik wtyczki dla Android 4.4. Można posłuchać na zdarzenie onClick, z typem danych wejściowych = "plik" a następnie pojawiają się wyboru plików interfejsu użytkownika. Aby powiązać z przesyłanie danych formularza, można użyć JavaScript aby dołączyć wartości formularza do wieloczęściowego żądanie POST, który sprawia, że FileTransfer.
 
 ## Uaktualnienie do 3.1.0 od 3.0.0
 
@@ -49,7 +48,7 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
-        bin/update <project_path>
+        bin/Aktualizuj < project_path >
     
 
 ## Uaktualnienie do consoli (3.0.0) z 2.9.0

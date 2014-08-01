@@ -1,4 +1,4 @@
----
+* * *
 
 Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. Zobacz plik ogłoszenia rozpowszechniane z tej pracy, aby uzyskać dodatkowe informacje dotyczące własności praw autorskich. ASF licencje tego pliku do ci Apache License, w wersji 2.0 ("Licencja"); nie można używać tego pliku z wyjątkiem zgodnie z licencją. Możesz otrzymać kopię licencji na
 
@@ -31,7 +31,7 @@ Niniejszy Przewodnik obejmuje kilka zabezpieczeń najlepszych praktyk, które na
 
 *   Android w białej na Cordova 2.9.x jest uważany za bezpieczny, jednak okazało się, że jeśli foo.com jest zawarte w Białej listy, foo.com.evil.com będzie mógł przejść test białej listy. To był stały w Cordova 3.x.
 
-*   Białą domeny działa na Android API 10 i poniżej, a WP7/8 ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
+*   Białą domeny nie działa na Android API 10 i poniżej i WP8 dla ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
 
 ## Ramek i mechanizmu zwrotnego Id
 
@@ -54,6 +54,8 @@ Zasad opisanych tutaj nie są specyficzne dla Apache Cordova, stosują się do w
 Po uruchomieniu Cordova na Android, za pomocą `android:debuggable="true"` w aplikacji manifestu pozwolą SSL błędy takie jak świadectwo błędy sprawdzania poprawności łańcucha na certyfikatów z podpisem własnym. Tak można używać certyfikatów z podpisem własnym w tej konfiguracji, ale nie jest to konfiguracja, która powinna być używana, gdy aplikacja jest w produkcji. To ma być używana tylko podczas tworzenia aplikacji.
 
 ## Przechowywanie zaszyfrowanych
+
+(TBD)
 
 ## Wskazówki ogólne
 

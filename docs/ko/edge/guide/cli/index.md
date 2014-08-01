@@ -365,6 +365,11 @@ Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다
     $ cordova        # same
     
 
+또한, 특정 명령에 보다 자세한 도움을 받을 수 있습니다. 예를 들어:
+
+    $ cordova run --help
+    
+
 `info`명령은 현재 설치 된 플랫폼, 플러그인, 각 플랫폼을 위한 SDK 버전 및 cli 버전 같은 잠재적으로 유용한 정보의 목록을 생성 하 고 `node.js` :
 
     $ cordova info

@@ -61,6 +61,8 @@ In questo esempio viene illustrato il valore predefinito `config.xml` generato d
 Gli elementi di configurazione seguenti appaiono nel primo livello `config.xml` del file e sono supportati su tutte le piattaforme supportate di Cordova:
 
 *   Il `<widget>` dell'elemento `id` attributo fornisce l'identificatore di dominio inverso dell'app e la `version` il numero di versione completo espresso nella notazione di maggiore/minore/patch.
+    
+    Il tag widget può anche avere attributi che specificano le versioni alternative, vale a dire versionCode per Android e CFBundleVersion per iOS. Vedere la sezione delle ulteriori versioni per dettagli.
 
 *   Il `<name>` elemento specifica il nome dell'app formale, come appare sulla schermata iniziale del dispositivo e all'interno di app store interfacce.
 
@@ -71,6 +73,26 @@ Gli elementi di configurazione seguenti appaiono nel primo livello `config.xml` 
 *   `<access>`gli elementi definiscono l'insieme di domini esterni che è consentito comunicare con l'app. Il valore predefinito indicato sopra permette di accedere a qualsiasi server. Vedere la guida di dominio Whitelist per dettagli.
 
 *   Il `<preference>` etichetta imposta varie opzioni come coppie di `name` / `value` gli attributi. Ogni preferenza `name` è case-insensitive. Molte preferenze sono univoci per specifiche piattaforme, come elencato nella parte superiore di questa pagina. Le seguenti sezioni dettaglio preferenze valide per più di una piattaforma.
+
+### Controllo delle versioni aggiuntiva
+
+Entrambi, Android e iOS supporta una seconda stringa di versione (o numero) oltre a quello visibile in app store, [versionCode][2] per Android e [CFBundleVersion][3] per iOS. Di seguito è riportato un esempio che imposta in modo esplicito versionCode e CFBundleVersion
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+Se non viene specificata la versione alternativa, verranno utilizzati i seguenti valori predefiniti:
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## Preferenze globali
 

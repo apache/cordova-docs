@@ -1,4 +1,6 @@
--- license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* * *
+
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -9,14 +11,13 @@
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Wtyczki Windows Phone
 
 Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego plugin na platformie Windows Phone. Przed przeczytaniem, zobacz zastosowanie pluginów omówienie struktury wtyczki i jego wspólny interfejs JavaScript. W tej sekcji w dalszym ciągu wykazują wtyczce *echo* próbki, który komunikuje się z widoku sieci Web Cordova do macierzystego platformy i z powrotem.
 
-Napisanie wtyczki do Cordova na Windows Phone wymaga zrozumienia podstawowych Cordova w architekturze. Cordova WP7 składa się z `WebBrowser` że gospodarze aplikacji JavaScript kod i zarządza rodzimych wywołań API. Można rozszerzyć C# `BaseCommand` klasy ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ), który pochodzi z większości funkcji należy:
+Napisanie wtyczki do Cordova na Windows Phone wymaga zrozumienia podstawowych Cordova w architekturze. Cordova-WP8 składa się z `WebBrowser` że gospodarze aplikacji JavaScript kod i zarządza rodzimych wywołań API. Można rozszerzyć C# `BaseCommand` klasy ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), który pochodzi z większości funkcji należy:
 
 1.  Wybierz projekt i kliknij prawym przyciskiem myszy, aby wybrać **Dodaj → nowy element...** Jeśli chcesz, możesz dodać go do `Plugins` folderu.
 
@@ -42,7 +43,7 @@ Napisanie wtyczki do Cordova na Windows Phone wymaga zrozumienia podstawowych Co
 
 Zobacz klasę [BaseCommand.cs][1] do metody dostępne wtyczki do zastąpienia. Na przykład plugin można przechwytywać zdarzenia 'pauza' i 'życiorys'.
 
- [1]: https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs
+ [1]: https://github.com/apache/cordova-wp8/blob/master/wp8/template/cordovalib/Commands/BaseCommand.cs
 
 ## Przestrzenie nazw
 

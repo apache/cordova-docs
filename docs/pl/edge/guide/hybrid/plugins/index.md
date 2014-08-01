@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plugin rozwoju Przewodnik
 
@@ -20,7 +19,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
  [1]: http://plugins.cordova.io
 
-Wtyczki obejmuje pojedynczy interfejs JavaScript oraz odpowiednie biblioteki kodu macierzystego dla każdej z obsługiwanych platform. Ta sekcja kroki poprzez proste *echa* plugin, który przechodzi ciąg z JavaScript do macierzystego platformy i z powrotem, jeden, który służy jako wzór budować bardziej złożone funkcje. W tej sekcji omówiono strukturę podstawowy plugin i interfejsu JavaScript skierowaną na zewnątrz. Dla każdego odpowiedniego macierzysty interfejs zobacz Lista na końcu tej sekcji.
+Wtyczki obejmuje pojedynczy interfejs JavaScript oraz odpowiednie biblioteki kodu macierzystego dla każdej z obsługiwanych platform. W istocie to ukrywa różnych implementacji kodu macierzystego za wspólny interfejs JavaScript.
+
+Ta sekcja kroki poprzez proste *echa* plugin, który przechodzi ciąg z JavaScript do macierzystego platformy i z powrotem, jeden, który służy jako wzór budować bardziej złożone funkcje. W tej sekcji omówiono strukturę podstawowy plugin i interfejsu JavaScript skierowaną na zewnątrz. Dla każdego odpowiedniego macierzysty interfejs zobacz Lista na końcu tej sekcji.
 
 Oprócz tych instrukcji, przygotowując się napisać taki plugin, że najlepiej jest patrzeć na [istniejących wtyczek][2] dla orientacji.
 
@@ -134,6 +135,7 @@ Po zdefiniowaniu JavaScript dla wtyczki, trzeba uzupełnić z co najmniej jeden 
 *   iOS wtyczek
 *   Jeżyna 10 wtyczek
 *   Wtyczki Windows Phone
+*   Wtyczki Windows 8
 
 Platforma Tizen nie obsługuje wtyczek.
 

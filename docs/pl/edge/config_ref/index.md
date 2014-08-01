@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Plik config.xml
 
@@ -62,6 +61,8 @@ W tym przykładzie przedstawiono domyślne `config.xml` generowane przez CLI `cr
 Następujące elementy konfiguracji, które pojawiają się w najwyższego poziomu `config.xml` plik i są obsługiwane na wszystkich obsługiwanych platformach Cordova:
 
 *   `<widget>`Element `id` atrybut zawiera identyfikator odwrotnej domeny aplikacji i `version` jego pełna wersja numer wyrażony w notacji z głównych, drobne/patcha.
+    
+    Tagów widżetu również może mieć atrybuty, które określić alternatywne wersje, a mianowicie versionCode dla Android i CFBundleVersion dla iOS. Zobacz sekcję dodatkowe wersji poniżej szczegóły.
 
 *   `<name>`Element określa Nazwa aplikacji, jak pojawia się na ekranie urządzenia w sklepie app interfejsy.
 
@@ -72,6 +73,26 @@ Następujące elementy konfiguracji, które pojawiają się w najwyższego pozio
 *   `<access>`elementy zdefiniować zestaw aplikacji jest możliwość komunikowania się z zewnętrznych domen. Domyślna wartość powyżej pozwala na dostęp do dowolnego serwera. Zobacz przewodnik białej listy domen szczegóły.
 
 *   `<preference>`Znacznik ustawia różne opcje jako pary `name` / `value` atrybuty. Każdej preferencji `name` jest rozróżniana wielkość liter. Wiele preferencje są unikatowe dla platform określonych, wymienionych w górnej części tej strony. W poniższych sekcjach szczegółowo preferencje, które stosuje się do więcej niż jednej platformy.
+
+### Dodatkowe wersji
+
+Zarówno, Android i iOS obsługuje drugiej wersji ciąg (lub numer) oprócz ten widoczny w app Store, [versionCode][2] dla Android i [CFBundleVersion][3] dla iOS. Poniżej znajduje się przykład, który jawnie ustawia versionCode i CFBundleVersion
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+Jeśli alternatywna wersja nie jest określony, należy zastosować następujące wartości domyślne:
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## Globalny preferencje
 

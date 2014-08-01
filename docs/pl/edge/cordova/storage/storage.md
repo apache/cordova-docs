@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Magazyn
 
@@ -27,8 +26,6 @@ Kilka magazyn funkcje API są dostępne dla aplikacji Cordova. Zobacz [html5rock
 Znany również jako *Sieć pamięci masowej*, *zwykłe magazynowanie*, lub jego zastępcy *przechowywania sesji* interfejs, ten API zapewnia przechowywanie para synchroniczne klucz/wartość i jest dostępne w podstawowej implementacji widoku sieci Web. Odnoszą się do [specyfikacji W3C][2] szczegóły.
 
  [2]: http://www.w3.org/TR/webstorage/
-
-**Windows Phone 7 dziwactwo**: kropkowego jest *nie* dostępny, więc należy użyć `setItem` lub `getItem` zamiast dostęp klucze bezpośrednio z obiektu pamięci masowej, jak w`window.localStorage.someKey`.
 
 ## WebSQL
 
@@ -51,8 +48,9 @@ Ten interfejs API jest dostępny w podstawowej widoku sieci Web. [Indeksowane DB
 
 Następujące platformy wsparcia IndexedDB:
 
-*   Windows Phone 8
 *   Jeżyna 10
+*   Windows Phone 8
+*   Windows 8
 
 ## Opcje opartego na plugin
 

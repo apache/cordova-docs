@@ -27,20 +27,22 @@
 水療中心庫您可以在科爾多瓦應用程式中使用的示例如下：
 
 *   [AngularJS][2]
-*   [骨幹][3]
-*   [劍道 UI][4]
-*   [摩納卡][5]
-*   [ReactJS][6]
-*   [煎茶觸摸][7]
-*   [jQuery 移動][8]
+*   [EmberJS][3]
+*   [骨幹][4]
+*   [劍道 UI][5]
+*   [摩納卡][6]
+*   [ReactJS][7]
+*   [Sencha 觸摸][8]
+*   [jQuery 移動][9]
 
  [2]: http://angularjs.org
- [3]: http://backbonejs.org
- [4]: http://www.telerik.com/kendo-ui
- [5]: http://monaca.mobi/en/
- [6]: http://facebook.github.io/react/
- [7]: http://www.sencha.com/products/touch/
- [8]: jquerymobile.com
+ [3]: http://emberjs.com
+ [4]: http://backbonejs.org
+ [5]: http://www.telerik.com/kendo-ui
+ [6]: http://monaca.mobi/en/
+ [7]: http://facebook.github.io/react/
+ [8]: http://www.sencha.com/products/touch/
+ [9]: http://jquerymobile.com
 
 和很多很多，更多。
 
@@ -48,9 +50,9 @@
 
 科爾多瓦新開發人員可以使最大的錯誤之一是假定他們在桌上型電腦得到的性能是一樣他們會在行動裝置上。 雖然我們的行動裝置已經變得更強大每年，他們仍然缺乏的功率和性能的一個桌面。 行動裝置通常具有較少的 RAM 和 GPU 是相距甚遠，他們的桌面 （或甚至筆記本電腦） 的弟兄們。 小貼士這裡的完整清單將是太多了，但這裡有幾件事要記住 （的長在結束了為進一步研究資源的清單）。
 
-**按一下與觸摸**-你可以犯的最大和最簡單的錯誤是使用按一下事件。 雖然這些"工作"很好的手機，大多數設備施加 300 ms 延遲對他們為了區分一個觸摸和觸摸"持有"事件。 使用 `touchstart` ，或 `touchend` ，將導致的極大改善-300 ms 聽起來不像，但它可以導致生澀 UI 更新和行為。 您還應該考慮"碰"事件的事實不支援在非 webkit 的瀏覽器，請參閱[CanIUse][9]。 為了應付這些限制，你可以簽出各種庫如 HandJS 和 Fastouch。
+**按一下與觸摸**-你可以犯的最大和最簡單的錯誤是使用按一下事件。 雖然這些"工作"很好的手機，大多數設備施加 300 ms 延遲對他們為了區分一個觸摸和觸摸"持有"事件。 使用 `touchstart` ，或 `touchend` ，將導致的極大改善-300 ms 聽起來不像，但它可以導致生澀 UI 更新和行為。 您還應該考慮"碰"事件的事實不支援在非 webkit 的瀏覽器，請參閱[CanIUse][10]。 為了應付這些限制，你可以簽出各種庫如 HandJS 和 Fastouch。
 
- [9]: http://caniuse.com/#search=touch
+ [10]: http://caniuse.com/#search=touch
 
 **CSS 過渡與 DOM 操作**— — 使用硬體加速 CSS 過渡將大大優於使用 JavaScript 創建的動畫。 請參閱在結束了這一節的示例的資源的清單。
 
@@ -58,20 +60,20 @@
 
 **其他性能文章和資源**
 
-*   ["你一半屁股它"][10]
-*   ["頂十的性能提示 PhoneGap 和混合應用程式"][11]
+*   ["你一半屁股它"][11]
+*   ["頂十的性能提示 PhoneGap 和混合應用程式"][12]
 *   "快速應用程式和網站與 JavaScript"： HTTP://channel9.msdn.com/Events/Build/2013/4-313
 
- [10]: http://sintaxi.com/you-half-assed-it
- [11]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
+ [11]: http://sintaxi.com/you-half-assed-it
+ [12]: http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/
 
 ## 3） 認識和處理離線狀態
 
 請參閱有關網路的前提示。 你不僅可以在慢速網路上，它是完全有可能為您的應用程式必須完全離線。 您的應用程式應處理這以智慧方式。 如果您的應用程式不存在，人們會覺得您的應用程式是破碎。 鑒於處理 （科爾多瓦支援離線和線上活動偵聽） 它是多麼容易，是絕對沒有理由為您的應用程式離線運行時，也不作回應。 一定要測試 （請參閱下面的測試一節) 您的應用程式，一定要測試您的應用程式如何處理當你開始在一個國家中，然後切換到另一個。
 
-請注意線上和離線事件，以及網路連接 API 是不完美。 您可能需要依賴于使用 XHR 請求以查看設備是否真正離線或連線。 在結束了一天，肯定添加某種形式的網路問題-支援，事實上，蘋果商店 （和可能其他存儲） 將拒絕不正確處理離線線上狀態的應用程式。 關於這一主題的更多討論，請參見["是對這件事?"][12]
+請注意線上和離線事件，以及網路連接 API 是不完美。 您可能需要依賴于使用 XHR 請求以查看設備是否真正離線或連線。 在結束了一天，肯定添加某種形式的網路問題-支援，事實上，蘋果商店 （和可能其他存儲） 將拒絕不正確處理離線線上狀態的應用程式。 關於這一主題的更多討論，請參見["是對這件事?"][13]
 
- [12]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
+ [13]: http://blogs.telerik.com/appbuilder/posts/13-04-23/is-this-thing-on-%28part-1%29
 
 # 處理升級
 
@@ -133,88 +135,89 @@
 
 ## Safari 遠端偵錯
 
-第一個選項是 Safari 遠端偵錯。 這工作只在 OSX 和僅與 iOS 6 （和更高）。 它使用 Safari 來連接到您的設備 （或模擬器），並將連接科爾多瓦應用程式瀏覽器的開發工具。 你得到你想要從 dev 工具-DOM 檢查/操作、 JavaScript 調試器、 網路檢測、 主控台和更多。 有關更多詳細資訊，請參閱這篇優秀博客： [HTTP://moduscreate.com/enable-remote-web-inspector-in-ios-6/][13]
+第一個選項是 Safari 遠端偵錯。 這工作只在 OSX 和僅與 iOS 6 （和更高）。 它使用 Safari 來連接到您的設備 （或模擬器），並將連接科爾多瓦應用程式瀏覽器的開發工具。 你得到你想要從 dev 工具-DOM 檢查/操作、 JavaScript 調試器、 網路檢測、 主控台和更多。 有關更多詳細資訊，請參閱這篇優秀博客： [HTTP://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
 
- [13]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+ [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
 
 ## Chrome 遠端偵錯
 
-幾乎與 Safari 版本相同，這與 Android 只有但可以從任何桌面作業系統使用。 它需要的 Android 4.4 (KitKat) 最低、 最低 API 級別的 19 和鉻 30 + （桌面）。 一旦連接，您可以得到相同的 Chrome Dev 工具體驗您的移動應用程式與桌面應用程式一樣。 更好的 Chrome Dev 工具有鏡像選項，顯示了您在行動裝置上運行的應用程式。 這是不僅僅是一個視圖-你可以滾動並按一下從開發工具和它更新在行動裝置上。 Chrome 遠端偵錯功能的更多詳細資訊可在這裡找到： [HTTPs://developers.google.com/chrome/mobile/docs/debugging][14]
+幾乎與 Safari 版本相同，這與 Android 只有但可以從任何桌面作業系統使用。 它需要的 Android 4.4 (KitKat) 最低、 最低 API 級別的 19 和鉻 30 + （桌面）。 一旦連接，您可以得到相同的 Chrome Dev 工具體驗您的移動應用程式與桌面應用程式一樣。 更好的 Chrome Dev 工具有鏡像選項，顯示了您在行動裝置上運行的應用程式。 這是不僅僅是一個視圖-你可以滾動並按一下從開發工具和它更新在行動裝置上。 Chrome 遠端偵錯功能的更多詳細資訊可在這裡找到： [HTTPs://developers.google.com/chrome/mobile/docs/debugging][15]
 
- [14]: https://developers.google.com/chrome/mobile/docs/debugging
+ [15]: https://developers.google.com/chrome/mobile/docs/debugging
 
-它是可能要使用 Chrome Dev 工具檢查 iOS 的應用程式，通過 WebKit 代理： [HTTPs://github.com/google/ios-webkit-debug-proxy/][15]
+它是可能要使用 Chrome Dev 工具檢查 iOS 的應用程式，通過 WebKit 代理： [HTTPs://github.com/google/ios-webkit-debug-proxy/][16]
 
- [15]: https://github.com/google/ios-webkit-debug-proxy/
+ [16]: https://github.com/google/ios-webkit-debug-proxy/
 
 ## 波紋
 
-紋波是科爾多瓦專案桌面基於的模擬器。 基本上，它允許您在您的桌面應用程式中運行科爾多瓦應用和假科爾多瓦的各種功能。 例如，它可以類比加速度計測試震動的事件。 它通過讓您從您的硬碟中選擇圖片假貨觀景窗 API。 波紋的讓您更多集中在您的自訂代碼，而無需擔心科爾多瓦的外掛程式。 你在這裡可以找出更多關於波紋： [HTTP://ripple.incubator.apache.org/][16]
+紋波是科爾多瓦專案桌面基於的模擬器。 基本上，它允許您在您的桌面應用程式中運行科爾多瓦應用和假科爾多瓦的各種功能。 例如，它可以類比加速度計測試震動的事件。 它通過讓您從您的硬碟中選擇圖片假貨觀景窗 API。 波紋的讓您更多集中在您的自訂代碼，而無需擔心科爾多瓦的外掛程式。 你在這裡可以找出更多關於波紋： [HTTP://ripple.incubator.apache.org/][17]
 
- [16]: http://ripple.incubator.apache.org/
+ [17]: http://ripple.incubator.apache.org/
 
 ## Weinre
 
-Weinre 創建可以承載您的科爾多瓦應用程式的遠端偵錯用戶端的本機伺服器。 您已經安裝並啟動它後，你到你科爾多瓦應用程式中複製的程式碼，然後重新開機它。 然後，您可以在您的桌面上，與應用程式一起工作打開 dev 工具面板。 Weinre 並不是很有名 Chrome 和 Safari 遠端偵錯但得益于更大範圍的作業系統和平臺與合作。 可能在這裡找到更多的資訊： [HTTP://people.apache.org/~pmuellr/weinre/docs/latest/][17]
+Weinre 創建可以承載您的科爾多瓦應用程式的遠端偵錯用戶端的本機伺服器。 您已經安裝並啟動它後，你到你科爾多瓦應用程式中複製的程式碼，然後重新開機它。 然後，您可以在您的桌面上，與應用程式一起工作打開 dev 工具面板。 Weinre 並不是很有名 Chrome 和 Safari 遠端偵錯但得益于更大範圍的作業系統和平臺與合作。 可能在這裡找到更多的資訊： [HTTP://people.apache.org/~pmuellr/weinre/docs/latest/][18]
 
- [17]: http://people.apache.org/~pmuellr/weinre/docs/latest/
+ [18]: http://people.apache.org/~pmuellr/weinre/docs/latest/
 
 ## 其他選項
 
-*   黑莓 10 支援以及調試：[文檔][18]
-*   你可以調試以及使用火狐瀏覽器的應用程式管理器，請參見[此博客文章][19]和此[MDN 條][20].
-*   更多的例子和解釋上面的調試提示，請參閱： [HTTP://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/][21]
+*   黑莓 10 支援以及調試：[文檔][19]
+*   你可以調試以及使用火狐瀏覽器的應用程式管理器，請參見[此博客文章][20]和此[MDN 條][21].
+*   更多的例子和解釋上面的調試提示，請參閱： [HTTP://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/][22]
 
- [18]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [19]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [20]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
- [21]: http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/
+ [19]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [20]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [21]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [22]: http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/
 
 # 使用者介面
 
 生成科爾多瓦的應用程式，看起來不錯的移動可以是一種挑戰，尤其是對於開發人員。 很多人選擇了使用 UI 框架，使這更容易。 這裡是一個你可能想要考慮的選項的簡短清單。
 
-*   [jQuery 移動][8]-jQuery 移動自動增強了您的移動優化的佈局。它還處理自動為您創建一個水療中心。
-*   [離子][22]-此功能強大的 UI 框架實際上有它自己的 CLI 來處理創建專案。 
-*   [棘輪][23]-帶給你的那些創建引導的人。 
-*   [劍道 UI][4] -開放原始碼的使用者介面和應用程式框架從 Telerik。
-*   [面漆][24]
-*   [ReactJS][6]
+*   [jQuery 移動][23]-jQuery 移動自動增強了您的移動優化的佈局。它還處理自動為您創建一個水療中心。
+*   [離子][24]-此功能強大的 UI 框架實際上有它自己的 CLI 來處理創建專案。 
+*   [棘輪][25]-帶給你的那些創建引導的人。 
+*   [劍道 UI][5] -開放原始碼的使用者介面和應用程式框架從 Telerik。
+*   [面漆][26]
+*   [ReactJS][7]
 
- [22]: http://ionicframework.com/
- [23]: http://goratchet.com/
- [24]: http://topcoat.io
+ [23]: jquerymobile.com
+ [24]: http://ionicframework.com/
+ [25]: http://goratchet.com/
+ [26]: http://topcoat.io
 
-建立您的使用者介面，時，重要的是要想想所有的平臺，您的目標和使用者的期望之間的差異。 例如，有 iOS 風格 UI 的 Android 應用程式可能不會很好與使用者。 這有時是甚至由實施的各種應用程式商店。 因此，它是重要的是你尊重每個平臺的各項公約，因此熟悉各種人機界面指南： * [iOS][25] * [Android][26] * [Windows Phone][27]
+建立您的使用者介面，時，重要的是要想想所有的平臺，您的目標和使用者的期望之間的差異。 例如，有 iOS 風格 UI 的 Android 應用程式可能不會很好與使用者。 這有時是甚至由實施的各種應用程式商店。 因此，它是重要的是你尊重每個平臺的各項公約，因此熟悉各種人機界面指南： * [iOS][27] * [Android][28] * [Windows Phone][29]
 
- [25]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [26]: https://developer.android.com/designWP8
- [27]: http://dev.windowsphone.com/en-us/design/library
+ [27]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [28]: https://developer.android.com/designWP8
+ [29]: http://dev.windowsphone.com/en-us/design/library
 
 ## 其他 UI 文章和資源
 
-雖然瀏覽器引擎成為更多、 更多的標準投訴，但我們仍然生活在一個帶首碼的世界 (-webkit 和-女士) 以下文章是寶貴的跨瀏覽器的應用程式開發中的使用者介面的為時： [HTTP://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx][28]
+雖然瀏覽器引擎成為更多、 更多的標準投訴，但我們仍然生活在一個帶首碼的世界 (-webkit 和-女士) 以下文章是寶貴的跨瀏覽器的應用程式開發中的使用者介面的為時： [HTTP://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx][30]
 
- [28]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
+ [30]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
 # 保持
 
 這裡有幾個方法，讓與科爾多瓦，日期。
 
-*   訂閱[科爾多瓦的博客][29].
-*   訂閱到[開發者清單][30]。請注意--這不是一個支援組 ！而是這是一個地方發展的科爾多瓦討論的地方。
+*   訂閱[科爾多瓦的博客][31].
+*   訂閱到[開發者清單][32]。請注意--這不是一個支援組 ！而是這是一個地方發展的科爾多瓦討論的地方。
 
- [29]: http://cordova.apache.org/#news
- [30]: http://cordova.apache.org/#mailing-list
+ [31]: http://cordova.apache.org/#news
+ [32]: http://cordova.apache.org/#mailing-list
 
 # 獲取説明
 
 下面的連結是最好的地方去科爾多瓦的説明：
 
-*   計算機： [HTTP://stackoverflow.com/questions/tagged/cordova][31]通過使用科爾多瓦標記，您可以查看和流覽科爾多瓦的所有問題。 請注意計算機會自動將轉換到"科爾多瓦""Phonegap"標記，所以這種方式你將能夠訪問歷史問題以及
-*   PhoneGap 谷歌組: [HTTPs://groups.google.com/forum/#! 論壇/phonegap][32]此谷歌組是科爾多瓦仍然調用 PhoneGap 時的老支援論壇。 雖然仍有很多頻繁的這一組的科爾多瓦使用者，科爾多瓦表示，社會上有興趣在聚焦較少對此組和支援而不使用計算機
-*   Meetup： [HTTP://phonegap.meetup.com][33] -考慮尋找本地的科爾多瓦/PhoneGap meetup 組
+*   計算機： [HTTP://stackoverflow.com/questions/tagged/cordova][33]通過使用科爾多瓦標記，您可以查看和流覽科爾多瓦的所有問題。 請注意計算機會自動將轉換到"科爾多瓦""Phonegap"標記，所以這種方式你將能夠訪問歷史問題以及
+*   PhoneGap 谷歌組: [HTTPs://groups.google.com/forum/#! 論壇/phonegap][34]此谷歌組是科爾多瓦仍然調用 PhoneGap 時的老支援論壇。 雖然仍有很多頻繁的這一組的科爾多瓦使用者，科爾多瓦表示，社會上有興趣在聚焦較少對此組和支援而不使用計算機
+*   Meetup： [HTTP://phonegap.meetup.com][35] -考慮尋找本地的科爾多瓦/PhoneGap meetup 組
 
- [31]: http://stackoverflow.com/questions/tagged/cordova
- [32]: https://groups.google.com/forum/#!forum/phonegap
- [33]: http://phonegap.meetup.com
+ [33]: http://stackoverflow.com/questions/tagged/cordova
+ [34]: https://groups.google.com/forum/#!forum/phonegap
+ [35]: http://phonegap.meetup.com

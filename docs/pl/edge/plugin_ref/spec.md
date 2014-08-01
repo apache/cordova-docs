@@ -1,4 +1,4 @@
----
+* * *
 
 license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -11,8 +11,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
          specific language governing permissions and limitations
     
 
-   under the License.
----
+## under the License.
 
 # Specyfikacja plugin
 
@@ -73,7 +72,7 @@ Może również określić elementy silnika dopasowania rozmyte, aby uniknąć p
     </engines>
     
 
-Oto lista domyślnie wyszukiwarki, że "<engine>"tag obsługuje: * 'cordova' * 'cordova-plugman' * 'cordova Amazonka fireos' \*"cordova-android"\*"cordova-ios"* 'cordova-blackberry10' \*"cordova-wp7"\* 'cordova-wp8' * 'cordova-windows8'  
+Oto lista domyślnie wyszukiwarki, że "<engine>"tag obsługuje: * 'cordova' * 'cordova-plugman' * 'cordova Amazonka fireos' \*"cordova-android"\*"cordova-ios"* 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
 * "android sdk' / / zwraca najwyższy api Android poziom zainstalowane * 'jabłko xcode' / / zwraca wersję xcode *"apple ios"/ / zwraca najwyższej wersji iOS instalowane *"apple osx"/ / zwraca informacje o wersji OSX *"blackberry-ndk"/ / zwraca wersji macierzysta blackberry SDK
 
 Określanie niestandardowych opartych na Apache Cordova ram powinna być wymieniona w tagu silnik tak:
@@ -241,8 +240,8 @@ Platforma nazwy powinny być pisane małymi literami. Platforma nazwy, jak arbit
 *   Android
 *   blackberry10
 *   iOS
-*   WP7
 *   wp8
+*   windows8
 
 ## *plik źródłowy* Elementu
 
@@ -317,6 +316,10 @@ Obsługuje następujące atrybuty:
     
     Jeśli selektor nie rozpoznać dziecko określonego dokumentu, narzędzie zatrzymuje się i odwraca proces instalacji, ostrzeżenia i wychodzi z kodem zera.
 
+*   `after`: Priorytetową listę przyjętych rodzeństwo, po czym dodać fragment kodu XML. Przydatne do określania zmian w plikach, które wymagają ścisłej kolejności elementów XML, takich jak [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK _EXTENSIONSelement][1]
+
+ [1]: http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509%28v=vs.105%29.aspx#BKMK_EXTENSIONSelement
+
 ## *wtyczki plist* Elementu
 
 To jest *nieaktualne* , jak odnosi się jedynie do cordova-ios 2.2.0 i poniżej. Użycie `<config-file>` tag pewnym Cordova.
@@ -372,13 +375,21 @@ Przykłady:
     <framework src="libsqlite3.dylib" />
     <framework src="social.framework" weak="true" />
     <framework src="relative/path/to/my.framework" custom="true" />
+    <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
 `src`Atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
 
 Opcjonalny `weak` atrybut jest wartością logiczną wskazującą, czy ramy powinny być słabo powiązane. Wartością domyślną jest`false`.
 
-Opcjonalny `custom` atrybut jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest`false`.
+Opcjonalny `custom` atrybut jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false` . ***Na Android*** to określa, jak leczyć **src**. Jeśli `true` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
+
+Opcjonalny `type` atrybut jest ciągiem wskazującym typ struktury, aby dodać. Obecnie tylko `projectReference` jest obsługiwany i tylko na Windows 8. Za pomocą `custom='true'` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilacji + link etapy projektu cordova. Zasadniczo jest to tylko sposób obecnie że ramy 'niestandardowe' można kierować wielu architektur, jak są one wyraźnie zbudowane jako zależność przez aplikację cordova odwołujący się.
+
+Opcjonalny `parent` atrybut jest obecnie obsługiwany tylko na Android. Ustawia ścieżkę względną katalogu zawierające sub-projekt, do którego należy dodać odwołanie. Wartością domyślną jest `.` , czyli projektu aplikacji. Pozwala na dodawanie odwołania między projektami jak w tym przykładzie:
+
+    < ramy src = "FeedbackLib" niestandardowe = "true" / >< ramach src = niestandardowe "Dodatki/android/wsparcie/v7/appcompat" = "false" rodzic = "FeedbackLib" / >
+    
 
 ## *informacji* Elementu
 
@@ -387,7 +398,10 @@ Dodatkowe informacje dla użytkowników. Jest to przydatne, gdy potrzebujesz dod
     <info>
     You need to install __Google Play Services__ from the `Android Extras` section using the Android SDK manager (run `android`).
     
-    Należy dodać następujący wiersz do 'local.properties': android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib < / informacji >
+    You need to add the following line to the `local.properties`:
+    
+    android.library.reference.1=PATH_TO_ANDROID_SDK/sdk/extras/google/google_play_services/libproject/google-play-services_lib
+    </info>
     
 
 ## Zmienne

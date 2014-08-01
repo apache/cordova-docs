@@ -61,6 +61,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 次の構成要素は最上位レベルに表示されます `config.xml` ファイル、およびすべてのサポートされているコルドバ プラットフォームがサポートされています。
 
 *   `<widget>`要素の `id` 属性をアプリの逆ドメイン識別子を提供します、 `version` その完全なバージョン番号のメジャー/マイナー/パッチ表記で表されます。
+    
+    ウィジェット タグも、すなわち ios 人造人間と CFBundleVersion の versionCode の代替バージョンを指定する属性を持つことができます。詳細については、以下の追加のバージョン管理を参照してください。
 
 *   `<name>`要素をデバイスのホーム画面とアプリ ストア インターフェイス内が表示されますアプリケーションの正式な名前を指定します。
 
@@ -71,6 +73,26 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   `<access>`要素は外部ドメインのアプリケーション通信を許可するとのセットを定義します。 上記の既定値の任意のサーバーにアクセスすることができます。 詳細についてはドメイン ホワイト リスト ガイドを参照してください。
 
 *   `<preference>`タグのペアとして様々 なオプションを設定します `name` / `value` の属性。 各設定項目 `name` 小文字は区別されません。 多くの設定は、このページの上部に記載されている特定のプラットフォームに固有です。 次のセクションでは、1 つ以上のプラットフォームに適用される設定を詳細します。
+
+### その他のバージョン管理
+
+Android と iOS の両方、iOS のため、2 番目のバージョン文字列 (または番号) [versionCode][2]の app ストアで目に見える 1 つに加えて Android と[CFBundleVersion を][3]サポートします。 下記の versionCode と CFBundleVersion を明示的に設定する例です。
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+代替バージョンを指定しない場合は、次の既定値が使用されます。
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## グローバル設定
 

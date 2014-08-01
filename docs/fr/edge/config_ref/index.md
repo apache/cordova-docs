@@ -61,6 +61,8 @@ Cet exemple affiche la valeur par défaut `config.xml` généré par le CLI `cre
 Les éléments de configuration suivants apparaissent dans le premier niveau `config.xml` du fichier et sont pris en charge sur toutes les plateformes prises en charge de Cordoue :
 
 *   La `<widget>` de l'élément `id` attribut fournit l'identificateur de domaine inverse du PPA et les `version` son numéro de version complet exprimé en notation majeur/mineur/patch.
+    
+    La balise widget peut également avoir des attributs qui spécifient les versions alternatives, à savoir versionCode pour Android et CFBundleVersion pour iOS. Consultez la section gestion des versions supplémentaires ci-dessous pour plus de détails.
 
 *   L'élément `<name>` spécifie le nom formel de l'application, tel qu'il apparaît sur l'écran d'accueil de l'appareil et dans le app-store.
 
@@ -71,6 +73,26 @@ Les éléments de configuration suivants apparaissent dans le premier niveau `co
 *   Les éléments `<access>` définissent l'ensemble des domaines externes avec lesquels l'application est autorisée à communiquer. La valeur par défaut ci-dessus permet d'accéder à n'importe quel serveur. Consultez le Guide de liste blanche de domaine pour plus de détails.
 
 *   La balise `<preference>` définit différentes options sous forme de paires d'attributs `name` / `value`. Le `name` de chaque préférence est insensible à la casse. Plusieurs préférences sont spécifiques à certaines plateformes, comme indiqué en haut de cette page. Les sections suivantes détaillent les préférences qui s'appliquent à plus d'une plateforme.
+
+### Gestion des versions supplémentaires
+
+Fois, Android et iOS prend en charge une deuxième chaîne de la version (ou nombre) en plus de celui visible dans l'app store, [versionCode][2] pour Android et [CFBundleVersion][3] pour iOS. Voici un exemple qui définit explicitement versionCode et CFBundleVersion
+
+ [2]: http://developer.android.com/tools/publishing/versioning.html
+ [3]: http://stackoverflow.com/questions/4933093/cfbundleversion-in-the-info-plist-upload-error
+
+        <widget id="io.cordova.hellocordova"
+          version="0.0.1"
+          android-versionCode="7"
+          ios-CFBundleVersion="3.3.3">
+    
+
+Si la version alternative n'est pas spécifiée, les paramètres par défaut suivants seront utilisés :
+
+        // assuming version = MAJOR.MINOR.PATCH-whatever
+        versionCode = PATCH + MINOR * 100 + MAJOR * 10000
+        CFBundleVersion = "MAJOR.MINOR.PATCH"
+    
 
 ## Préférences globales
 
