@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Esta sección le muestra cómo configurar el icono de una aplicación y opcionalmente la pantalla de inicio para varias plataformas, tanto si se trabaja en el CLI de Cordova (descrito en la sección La Interfaz de Línea de Comandos) o si se utilizan herramientas específicas de la plataforma SDK (detallada en las guías de plataforma).
 
-## Configurando los iconos en el CLI
+## Configurando los íconos en el CLI
 
 Cuando trabajes en el CLI puedes definir los iconos de la app haciendo uso del elemento `<icon>` (`config.xml`). Si no se especifica un icono se utilizara el logo de Apache Cordova.
 
@@ -28,9 +28,9 @@ Fuente: (requerido) especifica la ubicación del archivo de imagen, en relación
 
 platform: plataforma de destino (opcional)
 
-width: anchura de icono en píxeles (opcional)
+width: anchura de icono en pixeles (opcional)
 
-height: altura del icono en píxeles (opcional)
+height: altura del icono en pixeles (opcional)
 
 density: específico de android, especifica la densidad del icono (opcional)
 
@@ -41,7 +41,7 @@ Puede utilizar la siguiente configuración para definir un icono único por defe
 
 Para cada plataforma también puede definir un conjunto de iconos para adaptarse a distintas resoluciones de pantalla.
 
-Amazon fuego OS
+Amazon fire OS
 
          <platform name="amazon-fireos">
                   <icon src="res/android/ldpi.png" density="ldpi" />
@@ -134,7 +134,7 @@ Windows8
 
 ## Configurando pantallas de inicio en el CLI
 
-Utilizar la API Splashscreen para activar la visualización de la pantalla de presentación introductoria de una app en muchas plataformas. Cuando se trabaja en la CLI, archivos de código fuente de pantalla splash se encuentran dentro del proyecto `www/res/screens` subdirectorio.
+Utilizar la API Splashscreen (Pantalla de Bienvenida) para activar la visualización de la pantalla de presentación introductoria de una app en muchas plataformas. Cuando se trabaja en la CLI, archivos de código fuente de pantalla splash se encuentran dentro del proyecto `www/res/screens` subdirectorio.
 
 Android especifica ambas imágenes de pantalla splash retrato y paisaje-orientada de baja, media, alta y extra alta resolución:
 
@@ -166,9 +166,9 @@ Windows Phone especifica una imagen de la pantalla splash solo:
         windows-phone/screen-portrait.jpg
     
 
-Las siguientes secciones detallan cómo configurar salpicadura pantallas cuando trabajo con SDK y las herramientas de línea de comandos relacionados con descrito en las guías de la plataforma.
+Las siguientes secciones detallan cómo configurar las pantallas de bienvenida (Splash screen) cuando trabaja con SDK y las herramientas de línea de comandos relacionados con descrito en las guías de la plataforma.
 
-No olvide instalar el plugin SplashScreen antes de intentar usar el `navigator.splashscreen.hide()` o `navigator.splashscreen.show()` los métodos.
+No olvide instalar el plugin SplashScreen (Pantalla de Bienvenida) antes de intentar usar el `navigator.splashscreen.hide()` o `navigator.splashscreen.show()` los métodos.
 
 ## Pantallas de inicio para la plataforma Android
 
