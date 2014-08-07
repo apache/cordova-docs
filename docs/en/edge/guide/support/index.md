@@ -105,6 +105,19 @@ CLI's shorthand names.
     </tr>
 
     <tr>
+        <th><a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a></th>
+        <td data-col="amazon-fireos" class="y"></td>
+        <td data-col="android"    class="y"></td>
+        <td data-col="blackberry10" class="y"></td>
+        <td data-col="firefoxos" class="y"></td>
+        <td data-col="ios"        class="y"></td>
+        <td data-col="ubuntu"        class="n"></td>
+        <td data-col="winphone8"  class="y"></td>
+        <td data-col="win8"       class="n"></td>
+        <td data-col="tizen"       class="y"></td>
+    </tr>
+
+    <tr>
         <th><a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Camera</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
