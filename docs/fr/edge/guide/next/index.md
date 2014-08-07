@@ -135,9 +135,7 @@ Débogage Cordova nécessite certaine configuration. Contrairement à une applic
 
 ## Safari de débogage distant
 
-La première option est Safari de débogage distant. Cela fonctionne seulement sur OSX et qu'avec iOS 6 (et versions ultérieures). Il utilise Safari pour vous connecter à votre appareil (ou le simulateur) et reliera les outils du navigateur à la demande de Cordova. Vous obtenez ce que vous attendez d'outils / DOM inspection/manipulation, un débogueur JavaScript, inspection de réseau, la console et plus. Pour plus de détails, voir cet excellent blog : [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
-
- [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+La première option est Safari de débogage distant. Cela fonctionne seulement sur OSX et qu'avec iOS 6 (et versions ultérieures). Il utilise Safari pour vous connecter à votre appareil (ou le simulateur) et reliera les outils du navigateur à la demande de Cordova. Vous obtenez ce que vous attendez d'outils / DOM inspection/manipulation, un débogueur JavaScript, inspection de réseau, la console et plus. Pour plus de détails, voir cet excellent blog : <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>
 
 ## Débogage distant chrome
 
@@ -155,35 +153,35 @@ Weinre crée un serveur local qui peut héberger un client de débogage distant 
 
 ## Autres Options
 
-*   BlackBerry 10 prend en charge le débogage ainsi : [Documentation][15]
-*   Vous pouvez déboguer à l'aide de Firefox App Manager aussi bien, voir [ce blog][16] et cet [article MDN][17].
+*   BlackBerry 10 prend en charge le débogage ainsi : [Documentation][14]
+*   Vous pouvez déboguer à l'aide de Firefox App Manager aussi bien, voir [ce blog][15] et cet [article MDN][16].
 *   Pour plus d'exemples et d'explication des conseils ci-dessus de débogage, consultez : <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [15]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [16]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [17]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # Interface utilisateur
 
 Création d'une application de Cordoue qui est très joli sur mobile peut être un défi, surtout pour les développeurs. Beaucoup de gens ont choisi d'utiliser une infrastructure d'interface utilisateur pour faciliter cette opération. Voici une courte liste des options, que vous voudrez peut-être.
 
-*   [jQuery Mobile][18] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
-*   [ionique][19] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
-*   [Ratchet][20] - présentée par les personnes qui ont créé le Bootstrap. 
+*   [jQuery Mobile][17] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
+*   [ionique][18] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
+*   [Ratchet][19] - présentée par les personnes qui ont créé le Bootstrap. 
 *   [Kendo UI][5] - interface Open source et applicative de Telerik.
-*   [Couche de finition][21]
+*   [Couche de finition][20]
 *   [ReactJS][7]
 
- [18]: jquerymobile.com
- [19]: http://ionicframework.com/
- [20]: http://goratchet.com/
- [21]: http://topcoat.io
+ [17]: jquerymobile.com
+ [18]: http://ionicframework.com/
+ [19]: http://goratchet.com/
+ [20]: http://topcoat.io
 
-Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine: * [iOS][22] * [Android][23] * [Windows Phone][24]
+Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine: * [iOS][21] * [Android][22] * [Windows Phone][23]
 
- [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [23]: https://developer.android.com/designWP8
- [24]: http://dev.windowsphone.com/en-us/design/library
+ [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [22]: https://developer.android.com/designWP8
+ [23]: http://dev.windowsphone.com/en-us/design/library
 
 ## Ressources et Articles d'interface utilisateur supplémentaires
 
@@ -193,18 +191,18 @@ Bien que le navigateur moteurs deviennent plainte de normes de plus en plus, nou
 
 Voici quelques façons de tenir à jour avec Cordova.
 
-*   S'abonner au [blog de Cordova][25].
-*   S'abonner à la [liste des développeurs][26]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
+*   S'abonner au [blog de Cordova][24].
+*   S'abonner à la [liste des développeurs][25]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
 
- [25]: http://cordova.apache.org/#news
- [26]: http://cordova.apache.org/#mailing-list
+ [24]: http://cordova.apache.org/#news
+ [25]: http://cordova.apache.org/#mailing-list
 
 # Obtention d'aide
 
 Les liens suivants sont les meilleurs endroits pour obtenir de l'aide pour Cordova :
 
 *   StackOverflow : <http://stackoverflow.com/questions/tagged/cordova> à l'aide de la balise de Cordova, vous pouvez afficher et parcourir toutes les questions de Cordova. Notez que les StackOverflow convertit automatiquement la balise « Phonegap » à « Cordova », sorte de cette façon, vous serez en mesure d'accéder aux questions historiques aussi bien
-*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][27] ce groupe de Google a été l'ancien forum de soutien pour quelle Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
+*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][26] ce groupe de Google a été l'ancien forum de soutien pour quelle Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
 *   Meetup : <http://phonegap.meetup.com> - pensez à trouver un groupe local de meetup Cordova/PhoneGap
 
- [27]: https://groups.google.com/forum/#!forum/phonegap
+ [26]: https://groups.google.com/forum/#!forum/phonegap

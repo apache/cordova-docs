@@ -135,9 +135,9 @@
 
 ## Safari 遠端偵錯
 
-第一個選項是 Safari 遠端偵錯。 這工作只在 OSX 和僅與 iOS 6 （和更高）。 它使用 Safari 來連接到您的設備 （或模擬器），並將連接科爾多瓦應用程式瀏覽器的開發工具。 你得到你想要從 dev 工具-DOM 檢查/操作、 JavaScript 調試器、 網路檢測、 主控台和更多。 有關更多詳細資訊，請參閱這篇優秀博客： [HTTP://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
+第一個選項是 Safari 遠端偵錯。 這工作只在 OSX 和僅與 iOS 6 （和更高）。 它使用 Safari 來連接到您的設備 （或模擬器），並將連接科爾多瓦應用程式瀏覽器的開發工具。 你得到你想要從 dev 工具-DOM 檢查/操作、 JavaScript 調試器、 網路檢測、 主控台和更多。 更多詳細資訊，請參閱這篇優秀博客： [HTTP://moduscreate.com/enable-remote-web-inspector-in-ios-6/][14]
 
- [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/]
+ [14]: http://moduscreate.com/enable-remote-web-inspector-in-ios-6/
 
 ## Chrome 遠端偵錯
 
