@@ -92,7 +92,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">Accelerometer</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accelerometer</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -105,7 +105,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Camera</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Camera</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -118,7 +118,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">Capture</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Capture</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -131,7 +131,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">Compass</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">Compass</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -144,7 +144,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">Connection</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">Connection</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -157,7 +157,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">Contacts</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">Contacts</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -170,7 +170,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">Device</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">Device</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -196,7 +196,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">File</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">File</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -209,7 +209,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">Geolocation</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocation</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -222,7 +222,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">Globalization</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Globalization</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="n"></td>
@@ -235,7 +235,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -248,7 +248,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">Media</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Media</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -261,7 +261,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">Notification</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Notification</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -274,7 +274,7 @@ CLI's shorthand names.
     </tr>
 
     <tr>
-        <th><a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">Splashscreen</a></th>
+        <th><a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Splashscreen</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>

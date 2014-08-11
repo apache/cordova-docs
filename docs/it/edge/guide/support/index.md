@@ -179,7 +179,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">Accelerometro</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accelerometro</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -212,7 +212,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">Fotocamera</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Fotocamera</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -245,7 +245,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">Cattura</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Cattura</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -278,7 +278,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">Bussola</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">Bussola</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -312,7 +312,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">Connessione</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">Connessione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -345,7 +345,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">Contatti</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">Contatti</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -378,7 +378,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">Dispositivo</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">Dispositivo</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -444,7 +444,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">File</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">File</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -477,7 +477,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">Geolocalizzazione</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -510,7 +510,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">Globalizzazione</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Globalizzazione</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -543,7 +543,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -577,7 +577,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">Media</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Media</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -610,7 +610,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">Notifica</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">Notifica</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -643,7 +643,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">Splashscreen</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Splashscreen</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

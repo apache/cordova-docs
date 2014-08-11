@@ -179,7 +179,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/dev/doc/index.md">加速度センサー</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">加速度センサー</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -212,7 +212,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/dev/doc/index.md">カメラ</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">カメラ</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -245,7 +245,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/dev/doc/index.md">キャプチャ</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">キャプチャ</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -278,7 +278,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/dev/doc/index.md">コンパス</a>
+          <a href="https://github.com/apache/cordova-plugin-device-orientation/blob/master/doc/index.md">コンパス</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -312,7 +312,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md">接続</a>
+          <a href="https://github.com/apache/cordova-plugin-network-information/blob/master/doc/index.md">接続</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -345,7 +345,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-contacts/blob/dev/doc/index.md">連絡先</a>
+          <a href="https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md">連絡先</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -378,7 +378,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device/blob/dev/doc/index.md">デバイス</a>
+          <a href="https://github.com/apache/cordova-plugin-device/blob/master/doc/index.md">デバイス</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -444,7 +444,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-file/blob/dev/doc/index.md">ファイル</a>
+          <a href="https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md">ファイル</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -477,7 +477,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/dev/doc/index.md">地理位置情報</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">地理位置情報</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -510,7 +510,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-globalization/blob/dev/doc/index.md">グローバリゼーション</a>
+          <a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">グローバリゼーション</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -543,7 +543,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/dev/doc/index.md">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -577,7 +577,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/dev/doc/index.md">メディア</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">メディア</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -610,7 +610,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/dev/doc/index.md">通知</a>
+          <a href="https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md">通知</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -643,7 +643,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/dev/doc/index.md">スプラッシュ スクリーン</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">スプラッシュ スクリーン</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
