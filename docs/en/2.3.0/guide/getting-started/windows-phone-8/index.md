@@ -90,8 +90,8 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 - Select **CordovaWP8AppFull** or **CordovaWP8AppStandalone**. ( the version number will be displayed in the template description )
 - Give your project a name, and select OK.
 
-![](img/guide/getting-started/windows-phone-8/FullTemplate.png)
-![](img/guide/getting-started/windows-phone-8/StandAloneTemplate.png)
+![](img/guide/platforms/wp8/FullTemplate.png)
+![](img/guide/platforms/wp8/StandAloneTemplate.png)
 
  
 4. Review the project structure
@@ -100,7 +100,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 - The 'www' folder contains your Cordova html/js/css and any other resources included in your app.
 - Any content that you add here needs to be a part of the Visual Studio project, and it must be set as content. 
 
-![](img/guide/getting-started/windows-phone-8/projectStructure.png)
+![](img/guide/platforms/wp8/projectStructure.png)
 
 
 5. Build and Deploy to Emulator
@@ -109,7 +109,7 @@ The 'Stand-Alone' template includes ALL the source code for Apache Cordova.  Thi
 - Make sure to have **Windows Phone Emulator** selected in the top drop-down menu.
 - Hit the green **play button** beside the Windows Phone Emulator drop-down menu to start debugging or press F5.
 
-![](img/guide/getting-started/windows-phone-8/BuildEmulator.png)
+![](img/guide/platforms/wp8/BuildEmulator.png)
 
 
 6. Build your project for the device
@@ -121,7 +121,7 @@ In order to test your application on a device, the device must be registered. Cl
 - In Visual Studio, select 'Device' from the top drop-down menu.
 - Hit the green **play button** beside the drop-down menu to start debugging or press F5.
 
-![](img/guide/getting-started/windows-phone-7/wpd.png)
+![](img/guide/platforms/wp7/wpd.png)
 
 
 Done!

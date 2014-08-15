@@ -51,11 +51,11 @@ Video Tutorials:
 - Select **New**, then **New Project...**
 - Select **Cordova-based Application** from the list of templates
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+    ![](img/guide/platforms/ios/XCode4-templates.png)
 - Select the **Next** button
 - Fill in the "Product Name" &amp; "Company Identifier" for your app
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![](img/guide/platforms/ios/xcode4-name_your_app.png)
     
 - **IMPORTANT! DO NOT CHECK** the "Use Automatic Reference Counting" checkbox 
 - Select the **Next** button
@@ -67,20 +67,20 @@ Video Tutorials:
     
     b. To fix this, we need to add a folder reference to the **www** directory into the project. 
     
-    ![](img/guide/getting-started/ios/index-not-found.png)
+    ![](img/guide/platforms/ios/index-not-found.png)
 
 - **Right-click** on the project icon in the Project Navigator (left sidebar) and select **Show in Finder**
 - **In the Finder**, you should see the **www** directory beside your project
 
-    ![](img/guide/getting-started/ios/www-folder.png)
+    ![](img/guide/platforms/ios/www-folder.png)
 
 - **IMPORTANT**! **Drag** the **www** folder into Xcode 4. **Don't** drag the www folder into your app's folder. **It needs to be dragged into Xcode 4.** For example, you would drag and drop it on the **highlighted red section** of the HelloWorld project shown below.
     
-    ![](img/guide/getting-started/ios/project.jpg)
+    ![](img/guide/platforms/ios/project.jpg)
 - A window sheet should slide down with a few options, after the **"www"** folder has been dragged and dropped into the project. 
 - Select the radio-button **Create folder references for any added folders**.
 
-    ![](img/guide/getting-started/ios/create-folder-reference.png)
+    ![](img/guide/platforms/ios/create-folder-reference.png)
 
 - Select the **Finish** button
 
@@ -110,7 +110,7 @@ You can also add any associated JavaScript and CSS files there as well.
 - Change the Active SDK in the Scheme drop-down menu on the toolbar to **[DEVICENAME]** where [DEVICENAME] is the name of the device you want to deploy to.
 - Select the **Run** button in your project window's toolbar
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)    
+    ![](img/guide/platforms/ios/HelloWorldiPhone4.png)    
 
 
 Done!

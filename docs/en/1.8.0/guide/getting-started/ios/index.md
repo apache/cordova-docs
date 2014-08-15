@@ -51,12 +51,12 @@ Setup New Project
 - Select _New_ -> _New Project..._
 - Select _Cordova-based Application_ from the list of templates
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+    ![](img/guide/platforms/ios/XCode4-templates.png)
 
 - Select the _Next_ button
 - Fill in the _Product Name_ and _Company Identifier_ for your app
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![](img/guide/platforms/ios/xcode4-name_your_app.png)
 
 - **Note:** Do **not** check _Use Automatic Reference Counting_
 - Select the _Next_ button
@@ -72,24 +72,24 @@ in Xcode project templates.
     - you should see an error in the iOS Simulator informing you that _www/index.html was not found_
     - we can fix this by adding a folder to the project that references `www`
 
-    ![](img/guide/getting-started/ios/index-not-found.png)
+    ![](img/guide/platforms/ios/index-not-found.png)
 
 - Right-click on the project icon in the _Project Navigator_ (left sidebar) and select _Show in Finder_
 - Using Finder, you should see a `www` directory inside your project
 
-    ![](img/guide/getting-started/ios/www-folder.png)
+    ![](img/guide/platforms/ios/www-folder.png)
 
 - Drag the `www` directory into Xcode
     - A common mistake is to drag the `www` directory into your app's directory inside of Finder
     - Please follow the red highlighted section of the image below:
 
-    ![](img/guide/getting-started/ios/project.jpg)
+    ![](img/guide/platforms/ios/project.jpg)
 
 - After dragging `www` into Xcode, you will be prompted with a few options.
     - Select _Create folder references for any added folders_
     - Select the _Finish_ button
 
-    ![](img/guide/getting-started/ios/create-folder-reference.png)
+    ![](img/guide/platforms/ios/create-folder-reference.png)
 
 Hello World
 -----------
@@ -118,7 +118,7 @@ Deploy to Device
     - You will need to have your device connected via USB
 - Select the _Run_ button in your project window's toolbar
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)
+    ![](img/guide/platforms/ios/HelloWorldiPhone4.png)
 
 Build Your App
 --------------

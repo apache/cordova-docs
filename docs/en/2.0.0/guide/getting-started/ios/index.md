@@ -45,7 +45,7 @@ Setup New Project
 - Run the installer **'Cordova-2.0.0.pkg'** to completion
 - Copy the **bin** folder (either from the source, or from the .dmg) to a location on your hard drive
 
-    ![](img/guide/getting-started/ios/bin_folder.png)
+    ![](img/guide/platforms/ios/bin_folder.png)
 
 - Launch **Terminal.app**
 - Drag the copied **bin** folder to the **Terminal.app** icon in your Dock, it should launch a new Terminal window
@@ -55,7 +55,7 @@ Setup New Project
         <package_name> is the package name, following reverse-domain style convention
         <project_name> is the project name
         
-    ![](img/guide/getting-started/ios/bin_create_project.png)
+    ![](img/guide/platforms/ios/bin_create_project.png)
 
 
 - **Locate** your new project folder that you just created
@@ -68,7 +68,7 @@ Deploy to Simulator
 - Change the **Target** in the **Scheme** drop-down menu on the toolbar to **"HelloWorld"** (your project name)
 - Change the **Active SDK** in the **Scheme** drop-down menu on the toolbar to **iOS [version] Simulator**
 
-    ![](img/guide/getting-started/ios/active_scheme_simulator.png)
+    ![](img/guide/platforms/ios/active_scheme_simulator.png)
 
 - Select the **Run** button in your project window's toolbar
 
@@ -82,7 +82,7 @@ Deploy to Device
 - Change the **Active SDK** in the Scheme drop-down menu on the toolbar to **[Your Device Name]**
     - You will need to have your device connected via USB
 
-    ![](img/guide/getting-started/ios/active_scheme_device.png)
+    ![](img/guide/platforms/ios/active_scheme_device.png)
     
 - Select the **Run** button in your project window's toolbar
 
@@ -90,7 +90,7 @@ Results
 ----------------
 - You should see the screen below, with a pulsating green **"device is ready"** message
 
-    ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+    ![](img/guide/platforms/ios/HelloWorldStandard.png)
     
 Problems in Xcode
 ----------------

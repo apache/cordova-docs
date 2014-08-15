@@ -79,7 +79,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
 3. Use the Finder to navigate to the `cordova-ios` directory from the downloaded and extracted Cordova code. Highlight the `bin` subdirectory as shown:
 
-  ![](img/guide/getting-started/ios/bin_dir_listing.png)
+  ![](img/guide/platforms/ios/bin_dir_listing.png)
 
   __NOTE:__ Your listing varies depending on Cordova's version number.
 
@@ -108,7 +108,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
   In the terminal app with bin as the current directory, enter the 3 pieces of information via the following command:
      `./create ~/Documents/CordovaXY/HelloWorld org.apache.cordova.HelloWorld HelloWorld`
 
-  ![](img/guide/getting-started/ios/create.png)
+  ![](img/guide/platforms/ios/create.png)
 
   3. Fix Common Problems
 
@@ -146,13 +146,13 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
   Your screen should look similar to:
 
-![](img/guide/getting-started/ios/helloworld_project.png)
+![](img/guide/platforms/ios/helloworld_project.png)
   __NOTE:__ this screen capture shows a project that was created with the name as HelloWorld23.
 ### Deploy to the Simulator
 
   1. In the upper-left corner of Xcode, click on the Scheme drop-down list and select the project name, HelloWorld, as the target.
   2. Click the device section and select an iOS Simulator such as iPhone 6.0 Simulator as shown:
-![](img/guide/getting-started/ios/select_xcode_scheme.png)
+![](img/guide/platforms/ios/select_xcode_scheme.png)
 
   3. Click the **Run** button in your project window's toolbar to build, deploy and run the application in the simulator.
 
@@ -182,7 +182,7 @@ project files.  This tutorial uses `~/Documents/CordovaXY`, where the
 
   The running HelloWorld app is shown below.  The Device is Ready line should be slowly pulsating.
 
-  ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+  ![](img/guide/platforms/ios/HelloWorldStandard.png)
 
 ## Common Problems
 
@@ -240,7 +240,7 @@ references the deprecated invokeString API:
 
   1.  Within the Xcode menus select **Xcode &rarr; Preferences &rarr; Locations**.
   2. In the __Derived Data__ section click the __Advanced__ button and select __Unique__ as the __Build Location_ as shown:
-![](img/guide/getting-started/ios/xcode_build_location.png)
+![](img/guide/platforms/ios/xcode_build_location.png)
 
   This is the default setting for a new Xcode install, but it may be set differently if you upgraded from an older version of Xcode.
 

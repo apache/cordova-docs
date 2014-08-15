@@ -42,7 +42,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Launch Eclipse, and select menu item **New &gt; Android Project**.  Fill out the three panels of the **New Android Project** wizard shown below.
 
-    ![](img/guide/getting-started/android/AndroidFlow.png)
+    ![](img/guide/platforms/android/AndroidFlow.png)
     
 - In the root directory of your project, create two new directories:
  	- **/libs**
@@ -53,14 +53,14 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Verify that **cordova-1.9.0.jar** is listed in the Build Path for your project. Right click on the /libs folder and go to **Build Paths/ &gt; Configure Build Path...**. Then, in the Libraries tab, add **cordova-1.9.0.jar** to the project. If Eclipse is being temperamental, you might need to refresh (F5) the project once again.
 
-    ![](img/guide/getting-started/android/buildPath.jpg)
+    ![](img/guide/platforms/android/buildPath.jpg)
 
 - Edit your project's main Java file found in the **src** folder in Eclipse:
 	- Add **import org.apache.cordova.*;**
 	- Change the class's extend from **Activity** to **DroidGap**
 	- Replace the **setContentView()** line with **super.loadUrl("file:///android_asset/www/index.html");**	
 
-	![](img/guide/getting-started/android/javaSrc.jpg)
+	![](img/guide/platforms/android/javaSrc.jpg)
 	
 - Right click on AndroidManifest.xml and select **Open With &gt; XML Editor**
 - Paste the following permissions between the **&lt;uses-sdk.../&gt;** and **&lt;application.../&gt;** tags.
@@ -93,7 +93,7 @@ This guide describes how to set up your development environment for Cordova and 
 
 - Your AndroidManifest.xml file should look like
 
-    ![](img/guide/getting-started/android/manifest.jpg)
+    ![](img/guide/platforms/android/manifest.jpg)
 
 4. Hello World
 --------------    

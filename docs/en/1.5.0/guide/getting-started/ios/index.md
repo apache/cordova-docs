@@ -48,10 +48,10 @@ Video Tutorials:
 - Launch Xcode, then under the File menu select **New** and then **New Project...**
 - Select **PhoneGap-based Application** from the list of templates
 
-    ![](img/guide/getting-started/ios/XCode4-templates.png)
+    ![](img/guide/platforms/ios/XCode4-templates.png)
 - Select the **Next** button, Fill in the "Product Name" &amp; "Company Identifier" for your app
 
-    ![](img/guide/getting-started/ios/xcode4-name_your_app.png)
+    ![](img/guide/platforms/ios/xcode4-name_your_app.png)
     
 - Choose a directory to store your app
 - You should see your project in Xcode 4 now. Press the **Run** button in the top left corner. Your build should succeed and launch in the simulator
@@ -60,7 +60,7 @@ Video Tutorials:
 - In Finder, you should see the **www** directory beside your project
 - Next step is **IMPORTANT**! Drag the **www** folder into Xcode 4. You can't just drag the www folder into your app's folder. It needs to be dragged into Xcode 4!! In my case I would drag it and drop it on HiWorld shown below.
     
-    ![](img/guide/getting-started/ios/project.jpg)
+    ![](img/guide/platforms/ios/project.jpg)
 - After you drag, you should see a prompt with a few options. Make sure to select **Create folder references for any added folders**. Click Finish
 
 
@@ -84,7 +84,7 @@ Open the folder named **www** and type `<h1>Hello World</h1>` after the `<body>`
 - Make sure to change the Active SDK in the top left menu to **Device+version#**.
 - Hit **Run** in your project window header.
 
-    ![](img/guide/getting-started/ios/HelloWorldiPhone4.png)    
+    ![](img/guide/platforms/ios/HelloWorldiPhone4.png)    
 
 
 Done!
