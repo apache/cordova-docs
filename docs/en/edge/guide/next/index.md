@@ -9,6 +9,7 @@ This guide contains the following topics:
 * Testing
 * Debugging
 * User Interface
+* Special Considerations
 * Keeping Up
 * Getting Help 
 
@@ -153,6 +154,20 @@ When building your user interface, it is important to think about all platforms 
 ## Additional UI Articles and Resources
 
 Although browser engines become more and more standards complaint, we still live in a prefixed world (-webkit and -ms.) The following article is valuable when developing UI’s in for cross browser apps: [http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx](http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx)
+
+# Special Considerations
+
+Although Cordova makes cross-platform development easier, it's just not possible to provide 100% isolation from the underlying native platform. So do be aware of restrictions.
+
+## Platform Quirks
+
+While reading the documentation, look for sections which outline different behaviors or requirements on multiple platforms. If present, these would be in a section titled "Android Quirks", "iOS Quirks", etc. Read through these quirks and be aware of them as you work with Cordova.
+
+## Loading Remote Content
+
+Invoking Cordova JavaScript functions from a remotely-loaded HTML page (an HTML page not stored locally on the device) is an unsupported configuration. This is because Cordova was not designed for this, and the Apache Cordova community does no testing of this configuration. While it can work in some circumstances, it is not recommended nor supported. There are challenges with the same origin policy, keeping the JavaScript and native portions of Cordova synchronized at the same version (since they are coupled via private APIs which may change), the trustworthiness of remote content calling native local functions, and potential app store rejection.
+
+The display of remotely-loaded HTML content in a webview should be done using Cordova's InAppBrowser. The InAppBrowser is designed so that JavaScript running there does not have access to the Cordova JavaScript APIs for the reasons listed above. Please refer to the Security Guide.
 
 # Keeping Up
 
