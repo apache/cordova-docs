@@ -44,7 +44,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 2. Install SDK + Cordova
 ----------------------------
 
-- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
+- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone\
 - copy the file CordovaStarter-x.x.x.zip to the folder : \My Documents\Visual Studio 2010\Templates\ProjectTemplates\
 if you have just installed VisualStudio, you should launch it once to create this folder

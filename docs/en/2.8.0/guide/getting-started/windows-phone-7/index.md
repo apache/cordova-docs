@@ -44,7 +44,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 2. Install SDK + Cordova
 ----------------------------
 
-- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
+- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the subfolder: lib\windows-phone\
 - copy the file CordovaWP7_x_x_x.zip to the folder : \My Documents\Visual Studio 2012\Templates\ProjectTemplates
 ( if the template file does not exist, you will need to build it. See 2.1 below )

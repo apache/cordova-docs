@@ -43,7 +43,7 @@ Necessary for Installing on Device and Submitting to Market Place:
 2. Install SDK + PhoneGap
 ----------------------------
 
-- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
+- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570)
 - Download the latest copy of [PhoneGap](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
 

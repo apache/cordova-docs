@@ -40,7 +40,7 @@ __NOTE:__ Running in VM does not work well. If you are on a Mac, you need to set
 2. Install SDK + Cordova
 ----------------------------
 
-- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/)
+- Download and install [Windows Phone  SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570)
 - Download and extract the latest copy of [Cordova](http://phonegap.com/download). You will be working in the `lib\windows-phone` subfolder.
 - Copy the `CordovaWP7_x.x.x.zip` to the `\My Documents\Visual Studio 2012\Templates\ProjectTemplates\` folder.
 (If the template file does not exist, you need to build it as described in 2.1 below.)
