@@ -77,14 +77,14 @@ CLI's shorthand stubs.)
 
     <tr>
         <th><a href="guide_hybrid_plugins_index.md.html">Plug-in<br/>Interface</a></th>
-         <td data-col="amazon-fireos" class="y"><a href="guide_guide_platforms_amazonfireos_plugin.md.html">(see details)</a></td>
-        <td data-col="android"    class="y"><a href="guide_guide_platforms_android_plugin.md.html">(see details)</a></td>
-        <td data-col="blackberry10" class="y"><a href="guide_guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
+         <td data-col="amazon-fireos" class="y"><a href="guide_platforms_amazonfireos_plugin.md.html">(see details)</a></td>
+        <td data-col="android"    class="y"><a href="guide_platforms_android_plugin.md.html">(see details)</a></td>
+        <td data-col="blackberry10" class="y"><a href="guide_platforms_blackberry10_plugin.md.html">(see details)</a></td>
         <td data-col="firefoxos" class="n"></td>
-        <td data-col="ios"        class="y"><a href="guide_guide_platforms_ios_plugin.md.html">(see details)</a></td>
+        <td data-col="ios"        class="y"><a href="guide_platforms_ios_plugin.md.html">(see details)</a></td>
         <td data-col="ubuntu"        class="y"></td>
-        <td data-col="winphone7"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
-        <td data-col="winphone8"  class="y"><a href="guide_guide_platforms_wp8_plugin.md.html">(see details)</a></td>
+        <td data-col="winphone7"  class="y"><a href="guide_platforms_wp8_plugin.md.html">(see details)</a></td>
+        <td data-col="winphone8"  class="y"><a href="guide_platforms_wp8_plugin.md.html">(see details)</a></td>
         <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>

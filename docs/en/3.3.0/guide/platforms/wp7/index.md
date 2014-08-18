@@ -53,7 +53,7 @@ insights on developing solutions.
 ## Install SDK and Cordova
 
 Download and install the [Windows Phone
-SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570/).
+SDK](http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=27570).
 
 Download and extract the latest copy of
 [Cordova](http://phonegap.com/download). You need to work in the
@@ -115,7 +115,7 @@ vary depending on installed version:
 
 Before testing your application on a device, the device must be
 registered. Consult
-[Microsoft's documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx)
+[Microsoft's documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105\).aspx)
 for details on how to deploy and test on Windows Phone 7. These are
 the basic steps:
 

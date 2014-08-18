@@ -23,7 +23,7 @@ This guide shows how to develop an Echo plugin on BlackBerry.  The
 Plugin Development Guide provides a broad overview with which you
 should already be familiar, and this guide picks up where it leaves
 off.  In addition, download the [Cordova BlackBerry
-repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry-webworks.git;a=summary).
+repository](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git).
 
 The `Cordova-BlackBerry` project allows you to deploy to BlackBerry
 devices such as the Torch, Bold, and Playbook. The Playbook uses a

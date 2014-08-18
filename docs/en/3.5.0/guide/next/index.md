@@ -30,7 +30,7 @@ Examples of SPA libraries you can use in your Cordova applications are:
 * [Monaca](http://monaca.mobi/en/)
 * [ReactJS](http://facebook.github.io/react/)
 * [Sencha Touch](http://www.sencha.com/products/touch/)
-* [jQuery Mobile](jquerymobile.com)
+* [jQuery Mobile](http://jquerymobile.com)
 
 And many, many, more.
 
@@ -113,7 +113,7 @@ Tip: It is possible on Android Nexus devices to easily flash different versions 
 Debugging Cordova requires some setup. Unlike a desktop application, you can't simply open dev tools on your mobile device and start debugging, luckily there are some great alternatives.
 
 ## Safari Remote Debugging
-The first option is Safari Remote Debugging. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. For more details, see this excellent blog post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/])
+The first option is Safari Remote Debugging. This works only on OSX and only with iOS 6 (and higher). It uses Safari to connect to your device (or the simulator) and will connect the browser's dev tools to the Cordova application. You get what you expect from dev tools - DOM inspection/manipulation, a JavaScript debugger, network inspection, the console, and more. For more details, see this excellent blog post: [http://moduscreate.com/enable-remote-web-inspector-in-ios-6/](http://moduscreate.com/enable-remote-web-inspector-in-ios-6/)
 
 ## Chrome Remote Debugging
 Virtually the same as the Safari version, this works with Android only but can be used from any desktop operating system. It requires a minimum of Android 4.4 (KitKat), minimum API level of 19, and Chrome 30+ (on the desktop). Once connected, you get the same Chrome Dev Tools experience for your mobile applications as you do with your desktop applications. Even better, the Chrome Dev Tools have a mirror option that shows your app running on the mobile device. This is more than just a view - you can scroll and click from dev tools and it updates on the mobile device. More details on Chrome Remote Debugging may be found here: [https://developers.google.com/chrome/mobile/docs/debugging](https://developers.google.com/chrome/mobile/docs/debugging)
@@ -137,7 +137,7 @@ Weinre creates a local server that can host a remote debug client for your Cordo
 
 Building a Cordova application that looks nice on mobile can be a challenge, especially for developers. Many people chose to use a UI framework to make this easier. Here is a short list of options you may want to consider.
 
-* [jQuery Mobile](jquerymobile.com) - jQuery Mobile automatically enhances your layout for mobile optimization. It also handles creating a SPA for you automatically.
+* [jQuery Mobile](http://jquerymobile.com) - jQuery Mobile automatically enhances your layout for mobile optimization. It also handles creating a SPA for you automatically.
 * [ionic](http://ionicframework.com/) - This powerful UI framework actually has its own CLI to handle project creation. 
 * [Ratchet](http://goratchet.com/) - Brought to you by the people who created Bootstrap. 
 * [Kendo UI](http://www.telerik.com/kendo-ui) - Open source UI and application framework from Telerik.
@@ -146,7 +146,7 @@ Building a Cordova application that looks nice on mobile can be a challenge, esp
 
 When building your user interface, it is important to think about all platforms that you are targeting and the differences between the user’s expectations. For example, an Android application that has an iOS-style UI will probably not go over well with users. This sometimes is even enforced by the various application stores. Because of this, it is important that you respect the conventions of each platform and therefore are familiar with the various Human Interface Guidelines: 
 * [iOS](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html)
-* [Android](https://developer.android.com/designWP8)
+* [Android](https://developer.android.com/design)
 * [Windows Phone](http://dev.windowsphone.com/en-us/design/library)
 
 ## Additional UI Articles and Resources

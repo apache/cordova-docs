@@ -55,10 +55,10 @@ guides and references.
   and databases typically found on mobile devices and tablets, such as
   geolocation information, contacts/phonebook, microphone/camera, and
   stored pictures/videos. See the following documentation pages for
-  more information: [camera](cordova_camera_camera.md.html),
-  [capture](cordova_media_capture_capture.md.html),
-  [contacts](cordova_contacts_contacts.md.html), and
-  [geolocation](cordova_geolocation_geolocation.md.html). Generally,
+  more information: [camera](https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md),
+  [capture](https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md),
+  [contacts](https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md), and
+  [geolocation](https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md). Generally,
   you should obtain a user's express permission before collecting
   sensitive information and, if possible, provide a control mechanism
   that allows a user to easily change permissions. App operating

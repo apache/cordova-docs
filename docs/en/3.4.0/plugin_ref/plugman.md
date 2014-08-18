@@ -73,7 +73,7 @@ Other parameters:
 
 * `--plugins_dir` defaults to `<project>/cordova/plugins`, but can be any directory containing a subdirectory for each fetched plugin.
 * `--www` defaults to the project's `www` folder location, but can be any directory that is to be used as cordova project application web assets.
-* `--variable` allows to specify certain variables at install time, necessary for certain plugins requiring API keys or other custom, user-defined parameters. Please see the [plugin specification](plugin_spec.md) for more information.
+* `--variable` allows to specify certain variables at install time, necessary for certain plugins requiring API keys or other custom, user-defined parameters. Please see the [plugin specification](spec.md) for more information.
 
 ## Remove a Plugin
 
