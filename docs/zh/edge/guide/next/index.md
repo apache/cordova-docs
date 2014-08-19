@@ -11,6 +11,7 @@
 *   測試
 *   調試
 *   使用者介面
+*   特殊的注意事項
 *   保持
 *   獲取説明 
 
@@ -176,48 +177,61 @@ Weinre 創建可以承載您的科爾多瓦應用程式的遠端偵錯用戶端�
 
 生成科爾多瓦的應用程式，看起來不錯的移動可以是一種挑戰，尤其是對於開發人員。 很多人選擇了使用 UI 框架，使這更容易。 這裡是一個你可能想要考慮的選項的簡短清單。
 
-*   [jQuery 移動][23]-jQuery 移動自動增強了您的移動優化的佈局。它還處理自動為您創建一個水療中心。
-*   [離子][24]-此功能強大的 UI 框架實際上有它自己的 CLI 來處理創建專案。 
-*   [棘輪][25]-帶給你的那些創建引導的人。 
+*   [jQuery 移動][9]-jQuery 移動自動增強您的移動優化的佈局。它也可以處理自動為你創建一個水療中心。
+*   [離子][23]-此功能強大的 UI 框架實際上有它自己的 CLI 來處理創建專案。 
+*   [棘輪][24]-帶給你的那些創建引導的人。 
 *   [劍道 UI][5] -開放原始碼的使用者介面和應用程式框架從 Telerik。
-*   [面漆][26]
+*   [面漆][25]
 *   [ReactJS][7]
 
- [23]: jquerymobile.com
- [24]: http://ionicframework.com/
- [25]: http://goratchet.com/
- [26]: http://topcoat.io
+ [23]: http://ionicframework.com/
+ [24]: http://goratchet.com/
+ [25]: http://topcoat.io
 
-建立您的使用者介面，時，重要的是要想想所有的平臺，您的目標和使用者的期望之間的差異。 例如，有 iOS 風格 UI 的 Android 應用程式可能不會很好與使用者。 這有時是甚至由實施的各種應用程式商店。 因此，它是重要的是你尊重每個平臺的各項公約，因此熟悉各種人機界面指南： * [iOS][27] * [Android][28] * [Windows Phone][29]
+建立您的使用者介面，時，重要的是要想想所有的平臺，您的目標和使用者的期望之間的差異。 例如，有 iOS 風格 UI 的 Android 應用程式可能不會很好與使用者。 這有時是甚至由實施的各種應用程式商店。 因此，它是重要的是你尊重每個平臺的各項公約，因此熟悉各種人機界面指南： * [iOS][26] * [Android][27] * [Windows Phone][28]
 
- [27]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [28]: https://developer.android.com/designWP8
- [29]: http://dev.windowsphone.com/en-us/design/library
+ [26]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [27]: https://developer.android.com/designWP8
+ [28]: http://dev.windowsphone.com/en-us/design/library
 
 ## 其他 UI 文章和資源
 
-雖然瀏覽器引擎成為更多、 更多的標準投訴，但我們仍然生活在一個帶首碼的世界 (-webkit 和-女士) 以下文章是寶貴的跨瀏覽器的應用程式開發中的使用者介面的為時： [HTTP://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx][30]
+雖然瀏覽器引擎成為更多、 更多的標準投訴，但我們仍然生活在一個帶首碼的世界 (-webkit 和-女士) 以下文章是寶貴的跨瀏覽器的應用程式開發中的使用者介面的為時： [HTTP://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx][29]
 
- [30]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
+ [29]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
+
+# 特殊的注意事項
+
+雖然科爾多瓦跨平臺的開發更加容易，它是不可能提供從基礎本機平臺的 100%隔離。所以一定要注意的限制的。
+
+## 平臺的怪癖
+
+在閱讀的文檔，同時尋找節其中簡要說明了不同的行為或在多個平臺上的要求。 如果存在，這些將是在一節題為"Android 怪癖"，"iOS 的怪癖"，等等。 閱讀通過這些怪癖，意識到它們作為你工作與科爾多瓦。
+
+## 載入遠端內容
+
+調用科爾多瓦 JavaScript 函數從一個遠端載入的 HTML 頁面 （不存儲在本地設備上的 HTML 頁） 是一種不受支援的配置。 這是因為科爾多瓦不為此，設計和 Apache 科爾多瓦社區並沒有測試此配置。 雖然它可以工作在某些情況下，它不是建議也不支援。 有挑戰與同源策略，保持 JavaScript 和科爾多瓦的本機部分同步在相同的版本 （因為他們都通過私人的 Api 可能會更改耦合），調用本機的本地函數和潛在的應用程式商店拒絕遠端內容的可信度。
+
+應該做的遠端載入 HTML 內容在 web 視圖中顯示使用科爾多瓦的 InAppBrowser。 InAppBrowser 專門設計，以便 JavaScript 運行那裡沒有訪問到科爾多瓦 JavaScript Api 為上面列出的原因。 請參閱安全指南。
 
 # 保持
 
-這裡有幾個方法，讓與科爾多瓦，日期。
+這裡有幾種方法可以使科爾多瓦。
 
-*   訂閱[科爾多瓦的博客][31].
-*   訂閱到[開發者清單][32]。請注意--這不是一個支援組 ！而是這是一個地方發展的科爾多瓦討論的地方。
+*   訂閱[科爾多瓦的博客][30].
+*   訂閱到[開發者清單][31]。請注意--這不是一個支援組 ！而是這是一個地方發展的科爾多瓦討論的地方。
 
- [31]: http://cordova.apache.org/#news
- [32]: http://cordova.apache.org/#mailing-list
+ [30]: http://cordova.apache.org/#news
+ [31]: http://cordova.apache.org/#mailing-list
 
 # 獲取説明
 
 下面的連結是最好的地方去科爾多瓦的説明：
 
-*   計算機： [HTTP://stackoverflow.com/questions/tagged/cordova][33]通過使用科爾多瓦標記，您可以查看和流覽科爾多瓦的所有問題。 請注意計算機會自動將轉換到"科爾多瓦""Phonegap"標記，所以這種方式你將能夠訪問歷史問題以及
-*   PhoneGap 谷歌組: [HTTPs://groups.google.com/forum/#! 論壇/phonegap][34]此谷歌組是科爾多瓦仍然調用 PhoneGap 時的老支援論壇。 雖然仍有很多頻繁的這一組的科爾多瓦使用者，科爾多瓦表示，社會上有興趣在聚焦較少對此組和支援而不使用計算機
-*   Meetup： [HTTP://phonegap.meetup.com][35] -考慮尋找本地的科爾多瓦/PhoneGap meetup 組
+*   計算機： [HTTP://stackoverflow.com/questions/tagged/cordova][32]通過使用科爾多瓦標記，您可以查看和流覽科爾多瓦的所有問題。 請注意計算機會自動將轉換到"科爾多瓦""Phonegap"標記，所以這種方式你將能夠訪問歷史問題以及
+*   PhoneGap 谷歌組: [HTTPs://groups.google.com/forum/#! 論壇/phonegap][33]此谷歌組是科爾多瓦仍然調用 PhoneGap 時的老支援論壇。 雖然仍有很多頻繁的這一組的科爾多瓦使用者，科爾多瓦表示，社會上有興趣在聚焦較少對此組和支援而不使用計算機
+*   Meetup： [HTTP://phonegap.meetup.com][34] -考慮尋找本地的科爾多瓦/PhoneGap meetup 組
 
- [33]: http://stackoverflow.com/questions/tagged/cordova
- [34]: https://groups.google.com/forum/#!forum/phonegap
- [35]: http://phonegap.meetup.com
+ [32]: http://stackoverflow.com/questions/tagged/cordova
+ [33]: https://groups.google.com/forum/#!forum/phonegap
+ [34]: http://phonegap.meetup.com

@@ -164,7 +164,7 @@ Einmal erstellt, können Sie die Sonnenfinsternis, die zusammen mit dem Android 
 
 *   Drücken Sie **Fertig stellen**.
 
- [9]: img/guide/platforms//eclipse_new_project.png
+ [9]: img/guide/platforms/android/eclipse_new_project.png
 
 Sobald das Eclipse-Fenster wird geöffnet, erscheint ein rotes **X** auf ungelöste Probleme hinweisen. Wenn ja, gehen Sie zusätzlichen folgendermaßen:
 

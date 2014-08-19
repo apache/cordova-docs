@@ -143,29 +143,29 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </th>
         
         <td data-col="amazon-fireos" class="y">
-          <a href="guide_guide_platforms_amazonfireos_plugin.md.html">(ver detalles)</a>
+          <a href="guide_platforms_amazonfireos_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="android"    class="y">
-          <a href="guide_guide_platforms_android_plugin.md.html">(ver detalles)</a>
+          <a href="guide_platforms_android_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="blackberry10" class="y">
-          <a href="guide_guide_platforms_blackberry10_plugin.md.html">(ver detalles)</a>
+          <a href="guide_platforms_blackberry10_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="firefoxos" class="n">
         </td>
         
         <td data-col="ios"        class="y">
-          <a href="guide_guide_platforms_ios_plugin.md.html">(ver detalles)</a>
+          <a href="guide_platforms_ios_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="ubuntu"        class="y">
         </td>
         
         <td data-col="winphone8"  class="y">
-          <a href="guide_guide_platforms_wp8_plugin.md.html">(ver detalles)</a>
+          <a href="guide_platforms_wp8_plugin.md.html">(ver detalles)</a>
         </td>
         
         <td data-col="win8"       class="y">

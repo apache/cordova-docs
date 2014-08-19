@@ -11,6 +11,7 @@
 *   테스트
 *   디버깅
 *   사용자 인터페이스
+*   특별 한 고려 사항
 *   유지
 *   도움말 얻기 
 
@@ -165,44 +166,57 @@ Weinre 코르 도우 바 응용 프로그램에 대 한 원격 디버그 클라�
 
 코르 도우 바 응용 프로그램 구축에 좋은 보이는 모바일은 도전일 수 있다, 특히 개발자를 위한. 많은 사람들이 이것을 더 쉽게 만드는 UI 프레임 워크를 사용 하기로 결정 했습니다. 여기 당신이 고려해 야 할 옵션의 간단한 목록입니다.
 
-*   [모바일 jQuery][17] -jQuery 모바일 자동으로 모바일 최적화에 대 한 레이아웃을 향상 시킵니다. 그것은 또한 당신을 위해 자동으로 스파를 만들고 처리 합니다.
-*   [이오니아][18] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
-*   [래치 드][19] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
+*   [모바일 jQuery][9] -jQuery 모바일 자동으로 모바일 최적화에 대 한 레이아웃을 향상 시킵니다. 그것은 또한 당신을 위해 자동으로 스파를 만들고 처리 합니다.
+*   [이오니아][17] -이 강력한 UI 프레임 워크는 실제로 자체 CLI 프로젝트 생성을 처리 하는. 
+*   [래치 드][18] -부트스트랩을 만든 사람들에 의해 당신에 게 가져. 
 *   [검도 UI][5] -오픈 소스 UI 및 Telerik에서 응용 프로그램 프레임 워크입니다.
-*   [외 투][20]
+*   [외 투][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다: * [iOS][21] * [안 드 로이드][22] * [Windows Phone][23]
+사용자 인터페이스를 빌드할 때 대상으로 하는 모든 플랫폼 및 사용자의 기대의 차이 대해 생각 하는 것이 중요입니다. 예를 들어, iOS-스타일 UI가 안 드 로이드 응용 프로그램 사용자와 잘 갈 아닐 것 이다. 이 가끔은 심지어 적용 다양 한 응용 프로그램 저장소. 이 때문에, 각 플랫폼의 규칙을 존중 하 고 다양 한 휴먼 인터페이스 가이드라인에 잘 알고 있다 따라서 중요 하다: * [iOS][20] * [안 드 로이드][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## 추가 UI 기사 및 자원
 
 브라우저 엔진 되기 점점 더 많은 표준 불만, 비록 우리가 아직도 접두사가 세계에 살고 (-웹 킷 및-양) 크로스 브라우저 애플 리 케이 션의에 대 한 UI를 개발할 때 다음 문서 가치가 있다: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# 특별 한 고려 사항
+
+코르 도우 바 쉽게 크로스 플랫폼 개발, 기본 네이티브 플랫폼에서 100% 분리 수는 그냥 없습니다. 그래서 할 제한 사항을 알고 있어야 합니다.
+
+## 플랫폼 단점
+
+설명서를 읽고, 다른 동작 또는 여러 플랫폼에서 요구 사항을 설명 하는 섹션을 찾습니다. 존재 하는 경우이 단원의 "안 드 로이드 단점", "iOS 버르 장이", 등등에는 것입니다. 이러한 단점을 통해 읽었고 코르도바와 함께 작업 하는 동안 그들을 알고 있어야 합니다.
+
+## 원격 콘텐츠를 로드
+
+원격으로 로드 HTML 페이지에서 코르 도우 바 자바 스크립트 함수 호출 (장치에 로컬로 저장 되지 않고 HTML 페이지)는 지원 되지 않는 구성입니다. 이 때문에 코르 도우 바가에 대 한 설계 되지 않았습니다 및 아파치 코르도바 지역 사회 아니이 구성의 테스트지 않습니다. 일부 경우에 작동할 수 있다, 그러나 그것은 권장 하거나 하지 지원. 자바 스크립트 유지 동일한 근원 정책 과제가 고 동일한 버전 (이후 그들은 변경 될 수 있습니다 전용 Api를 통해 결합 하는), 코르도바의 기본 부분 동기화 기본 로컬 기능 및 잠재적인 애플 리 케이 션 스토어 거부를 호출 하는 원격 콘텐츠의 신뢰성.
+
+원격으로 로드 된 HTML 콘텐츠는 webview에 표시 할 수 Cordova의 InAppBrowser를 사용 하 여. InAppBrowser 설계는 거기 실행 되는 JavaScript 위에 나열 된 이유로 코르도바 자바 Api에 액세스를 권한이 없습니다. 보안 가이드를 참조 하십시오.
+
 # 유지
 
 여기에 코르도바에 최신 이라고 유지 하는 몇 가지 방법이 있습니다.
 
-*   [코르 도우 바 블로그][24] 구독 하기.
-*   [개발자 목록][25]에 가입 하세요. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
+*   [코르 도우 바 블로그][23] 구독 하기.
+*   [개발자 목록][24]에 가입 하세요. Note-이것은 지원 그룹! 오히려 이것은 코르도바의 개발을 논의 하는 장소 이다.
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # 도움말 얻기
 
 다음 링크는 Cordova에 대 한 도움말을 얻을 좋은 장소:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> 코르도바 태그를 사용 하 여 볼 수 있고 코르도바의 모든 질문을 검색 합니다. Note는 StackOverflow 자동 변환 "Phonegap" 태그 "코르도바"를 이런 방식이으로 당신은 뿐만 아니라 역사적인 질문에 액세스할 수 있을 것 이다
-*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][26] 이 Google 그룹 때 코르 도우 바 아직도 불렀다 PhoneGap에 대 한 오래 된 지원 공개 토론 이었다. 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다 코르도바 사용자가이 그룹을 자주 많이 아직도 동안,
+*   PhoneGap Google 그룹: [https://groups.google.com/forum/#! 포럼/phonegap][25] 이 Google 그룹 때 코르 도우 바 아직도 불렀다 PhoneGap에 대 한 오래 된 지원 공개 토론 이었다. 코르도바 커뮤니티가이 그룹에 덜 집중 하 고 지원을 위한 StackOverflow를 사용 하는 대신에 관심을 표명 했다 코르도바 사용자가이 그룹을 자주 많이 아직도 동안,
 *   Meetup: <http://phonegap.meetup.com> -로컬 코르도바/PhoneGap meetup 그룹을 찾는 것이 좋습니다
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap

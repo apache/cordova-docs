@@ -164,7 +164,7 @@ Une fois créé, vous pouvez utiliser l'éclipse qui est livré avec le SDK Andr
 
 *   Appuyez sur **Terminer**.
 
- [9]: img/guide/platforms//eclipse_new_project.png
+ [9]: img/guide/platforms/android/eclipse_new_project.png
 
 Une fois que la fenêtre de Eclipse s'ouvre, un rouge **X** peut apparaître pour indiquer les problèmes non résolus. Dans l'affirmative, suivez ces étapes supplémentaires :
 

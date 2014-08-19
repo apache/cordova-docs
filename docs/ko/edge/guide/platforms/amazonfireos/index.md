@@ -164,7 +164,7 @@ Windows에서 경로 환경 수정:
 
 *   **완료** 를 누르면합니다.
 
- [9]: img/guide/platforms//eclipse_new_project.png
+ [9]: img/guide/platforms/android/eclipse_new_project.png
 
 일단 이클립스 창이 열립니다, 해결 되지 않은 문제를 나타내는 빨간색 **X** 나타날 수 있습니다. 그렇다면, 다음 추가 단계를 수행:
 

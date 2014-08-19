@@ -11,6 +11,7 @@ Questa guida contiene i seguenti argomenti:
 *   Test
 *   Debug
 *   Interfaccia utente
+*   Considerazioni speciali
 *   Tenere il passo
 *   Come ottenere aiuto 
 
@@ -165,44 +166,57 @@ Weinre crea un server locale che può ospitare un debug remoto client per le app
 
 Creazione di un'applicazione di Cordova che sembra piacevole su mobile può essere una sfida, soprattutto per gli sviluppatori. Molte persone hanno scelto di utilizzare un framework di interfaccia utente per rendere questo più facile. Ecco un breve elenco di opzioni che si possono prendere in considerazione.
 
-*   [jQuery Mobile][17] - jQuery Mobile aumenta automaticamente il layout per l'ottimizzazione mobile. Gestisce anche la creazione di una SPA per voi automaticamente.
-*   [ionico][18] -questo potente framework di interfaccia utente in realtà ha la propria CLI per gestire la creazione del progetto. 
-*   [Ratchet][19] - di chi ha creato il Bootstrap. 
+*   [jQuery Mobile][9] - jQuery Mobile aumenta automaticamente il layout per l'ottimizzazione mobile. Gestisce anche la creazione di una SPA per voi automaticamente.
+*   [ionico][17] -questo potente framework di interfaccia utente in realtà ha la propria CLI per gestire la creazione del progetto. 
+*   [Ratchet][18] - di chi ha creato il Bootstrap. 
 *   [Kendo UI][5] - Open source UI e ambito di applicazione da Telerik.
-*   [Topcoat][20]
+*   [Topcoat][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-Quando si costruisce l'interfaccia utente, è importante pensare a tutte le piattaforme che vi si rivolgono e le differenze tra le aspettative dell'utente. Ad esempio, un'applicazione Android che ha un'interfaccia utente stile iOS probabilmente non andrà bene con gli utenti. Questo a volte è anche applicato i vari negozi di applicazione. Per questo motivo, è importante rispettare le convenzioni di ciascuna piattaforma e pertanto hanno familiarità con i vari orientamenti interfaccia umana: * [iOS][21] * [Android][22] * [Windows Phone][23]
+Quando si costruisce l'interfaccia utente, è importante pensare a tutte le piattaforme che vi si rivolgono e le differenze tra le aspettative dell'utente. Ad esempio, un'applicazione Android che ha un'interfaccia utente stile iOS probabilmente non andrà bene con gli utenti. Questo a volte è anche applicato i vari negozi di applicazione. Per questo motivo, è importante rispettare le convenzioni di ciascuna piattaforma e pertanto hanno familiarità con i vari orientamenti interfaccia umana: * [iOS][20] * [Android][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## UI ulteriori articoli e risorse
 
 Sebbene motori browser diventano più denuncia standard, viviamo ancora in un mondo con prefisso (-webkit e - ms.) il seguente articolo è prezioso quando lo sviluppo di UI in per attraversare apps browser: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# Considerazioni speciali
+
+Sebbene Cordova facilita lo sviluppo multipiattaforma, non solo è possibile fornire 100% isolamento dalla piattaforma nativa sottostante. Quindi essere consapevoli delle restrizioni.
+
+## Piattaforma stranezze
+
+Durante la lettura della documentazione, cercare sezioni che delineano i requisiti su più piattaforme o comportamenti diversi. Se presenti, questi sarebbero in una sezione intitolata "Quirks Android", "iOS Quirks", ecc. Leggere queste stranezze ed essere consapevoli di loro come si lavora con Cordova.
+
+## Caricamento di contenuto remoto
+
+Il richiamo di funzioni Cordova JavaScript da una pagina HTML caricata da remoto (una pagina HTML non memorizzata localmente sul dispositivo) è una configurazione non supportata. Questo è perché Cordova non è stato progettato per questo, e la comunità Apache Cordova non fa nessun test di questa configurazione. Mentre si può lavorare in alcune circostanze, non è raccomandato né sostenuto. Ci sono sfide con lo stesso criterio di origine, mantenendo il JavaScript e porzioni nativi di Cordova sincronizzato presso la stessa versione (poiché essi sono accoppiati tramite API private che possono cambiare), l'affidabilità del contenuto remoto chiamando funzioni native locali e potenziale rifiuto di app store.
+
+Visualizzati da remoto-caricato contenuti HTML in un webview dovrebbero essere fatto utilizzando InAppBrowser di Cordova. Il InAppBrowser è progettato in modo che JavaScript in esecuzione ci non ha accesso al Cordova JavaScript APIs per i motivi sopra elencati. Fare riferimento alla guida alla sicurezza.
+
 # Tenere il passo
 
 Ecco alcuni modi per tenersi aggiornati con Cordova.
 
-*   Iscriviti al [blog di Cordova][24].
-*   Iscriviti alla [lista di sviluppatore][25]. Nota - Questo non è un gruppo di supporto! Piuttosto, questo è un posto dove lo sviluppo di Cordova è discussa.
+*   Iscriviti al [blog di Cordova][23].
+*   Iscriviti alla [lista di sviluppatore][24]. Nota - Questo non è un gruppo di supporto! Piuttosto, questo è un posto dove lo sviluppo di Cordova è discussa.
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # Come ottenere aiuto
 
 I seguenti link sono i posti migliori per ottenere aiuto per Cordova:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> utilizzando il tag di Cordova, è possibile visualizzare e sfogliare tutte le domande di Cordova. Si noti che StackOverflow converte automaticamente il tag "Phonegap" a "Cordova", così in questo modo sarete in grado di accedere anche questioni storiche
-*   PhoneGap gruppo Google: [https://groups.google.com/forum/#! forum/phonegap][26] questo gruppo di Google è stato il vecchio forum di supporto per quando Cordova era ancora chiamato PhoneGap. Mentre ci sono ancora un sacco di utenti di Cordova che frequentano questo gruppo, la Comunità di Cordova ha espresso interesse nella messa a fuoco di meno su questo gruppo e utilizzando invece StackOverflow per supporto
+*   PhoneGap gruppo Google: [https://groups.google.com/forum/#! forum/phonegap][25] questo gruppo di Google è stato il vecchio forum di supporto per quando Cordova era ancora chiamato PhoneGap. Mentre ci sono ancora un sacco di utenti di Cordova che frequentano questo gruppo, la Comunità di Cordova ha espresso interesse nella messa a fuoco di meno su questo gruppo e utilizzando invece StackOverflow per supporto
 *   Meetup: <http://phonegap.meetup.com> - considerare trovando un gruppo meetup di Cordova/PhoneGap locale
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap

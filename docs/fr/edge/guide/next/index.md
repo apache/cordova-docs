@@ -11,6 +11,7 @@ Ce guide contient les rubriques suivantes :
 *   Test
 *   Débogage
 *   Interface utilisateur
+*   Considérations particulières
 *   Jonglant
 *   Obtention d'aide 
 
@@ -165,44 +166,57 @@ Weinre crée un serveur local qui peut héberger un client de débogage distant 
 
 Création d'une application de Cordoue qui est très joli sur mobile peut être un défi, surtout pour les développeurs. Beaucoup de gens ont choisi d'utiliser une infrastructure d'interface utilisateur pour faciliter cette opération. Voici une courte liste des options, que vous voudrez peut-être.
 
-*   [jQuery Mobile][17] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
-*   [ionique][18] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
-*   [Ratchet][19] - présentée par les personnes qui ont créé le Bootstrap. 
+*   [jQuery Mobile][9] - jQuery Mobile améliore automatiquement votre mise en page pour l'optimisation des mobile. Il gère également la création d'un SPA pour vous automatiquement.
+*   [ionique][17] -cette infrastructure d'interface utilisateur puissante a fait son propre indicateur composite avancé pour gérer la création d'un projet. 
+*   [Ratchet][18] - présentée par les personnes qui ont créé le Bootstrap. 
 *   [Kendo UI][5] - interface Open source et applicative de Telerik.
-*   [Couche de finition][20]
+*   [Couche de finition][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine: * [iOS][21] * [Android][22] * [Windows Phone][23]
+Lorsque vous générez votre interface utilisateur, il est important de penser à toutes les plateformes que vous ciblez et les différences entre les attentes de l'utilisateur. Par exemple, une application Android qui a une interface style iOS ira probablement pas plus de bien avec les utilisateurs. C'est parfois même appliquée par les divers magasins de l'application. Pour cette raison, il est important de respecter les conventions de chaque plateforme et sont donc familiers avec les différentes directives d'Interface humaine: * [iOS][20] * [Android][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## Ressources et Articles d'interface utilisateur supplémentaires
 
 Bien que le navigateur moteurs deviennent plainte de normes de plus en plus, nous vivons encore dans un monde avec des préfixes (-webkit et - Mme) l'article suivant est utile lors du développement de l'interface utilisateur dans des Croix navigateur apps: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# Considérations particulières
+
+Bien que Cordova facilite le développement interplate-forme, c'est juste pas possible d'assurer une isolation 100 % de la plate-forme native sous-jacente. Il ne faut pas être au courant des restrictions.
+
+## Bizarreries de la plate-forme
+
+En lisant la documentation, chercher des sections qui décrivent les exigences sur plusieurs plates-formes ou des comportements différents. S'il est présent, il s'agit dans une section intitulée « Bizarreries Android », « iOS Quirks », etc.. Lisez ces bizarreries et être conscients d'eux pendant que vous travaillez avec Cordova.
+
+## Chargement du contenu distant
+
+Appel de fonctions de Cordova JavaScript d'une page HTML de chargement à distance (une page HTML ne pas stockée localement sur l'appareil) est une configuration non prise en charge. C'est parce que Cordova n'a pas été conçu pour cela, et la communauté Apache Cordova ne fait aucun test de cette configuration. Même si elle peut fonctionner dans certaines circonstances, il n'est pas recommandé ni pris en charge. Il existe des défis avec la stratégie de même origine, gardant le JavaScript et portions natives de Cordova synchronisées à la même version (puisqu'ils sont couplés via API privé qui peut changer), la fiabilité du contenu distant en appelant les fonctions locales natives et potentiel rejet de magasin de $ $ etAPP.
+
+L'affichage du chargement à distance HTML contenu dans une webview devrait être fait à l'aide de InAppBrowser de Cordova. Le InAppBrowser est conçu pour que JavaScript exécutant il n'a pas accès aux APIs JavaScript Cordova pour les raisons énumérées ci-dessus. Veuillez consulter le Guide de la sécurité.
+
 # Jonglant
 
 Voici quelques façons de tenir à jour avec Cordova.
 
-*   S'abonner au [blog de Cordova][24].
-*   S'abonner à la [liste des développeurs][25]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
+*   S'abonner au [blog de Cordova][23].
+*   S'abonner à la [liste des développeurs][24]. Note - ce n'est pas un groupe de soutien ! Plutôt, c'est un endroit où le développement de Cordova est discutée.
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # Obtention d'aide
 
 Les liens suivants sont les meilleurs endroits pour obtenir de l'aide pour Cordova :
 
 *   StackOverflow : <http://stackoverflow.com/questions/tagged/cordova> à l'aide de la balise de Cordova, vous pouvez afficher et parcourir toutes les questions de Cordova. Notez que les StackOverflow convertit automatiquement la balise « Phonegap » à « Cordova », sorte de cette façon, vous serez en mesure d'accéder aux questions historiques aussi bien
-*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][26] ce groupe de Google a été l'ancien forum de soutien pour quelle Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
+*   PhoneGap Google Group : [https://groups.google.com/forum/#! forum/phonegap][25] ce groupe de Google a été l'ancien forum de soutien pour quelle Cordova s'appelait encore PhoneGap. Bien qu'il existe encore beaucoup d'utilisateurs de Cordoue qui fréquentent ce groupe, la communauté de Cordova a exprimé un intérêt en se concentrant moins sur ce groupe et à la place utiliser StackOverflow pour un support
 *   Meetup : <http://phonegap.meetup.com> - pensez à trouver un groupe local de meetup Cordova/PhoneGap
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap

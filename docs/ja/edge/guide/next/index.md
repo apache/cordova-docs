@@ -11,6 +11,7 @@
 *   テスト
 *   デバッグ
 *   ユーザー インターフェイス
+*   特別な考慮事項
 *   維持します。
 *   ヘルプの取得 
 
@@ -165,44 +166,57 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 コルドバのアプリケーションを構築するは似合いますモバイルの挑戦、特に開発者のためすることができます。 多くの人々 は UI フレームワークを使用してこれを簡単にすることを選んだ。 ここでは考慮したい場合がありますオプションの短いリストです。
 
-*   [jQuery Mobile][17] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
-*   [イオン][18]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
-*   [ラチェット][19]- ブートス トラップを作成した人々 によってもたらされます。 
+*   [jQuery Mobile][9] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
+*   [イオン][17]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
+*   [ラチェット][18]- ブートス トラップを作成した人々 によってもたらされます。 
 *   [剣道 UI][5] - オープン ソース UI と Telerik からアプリケーション フレームワークです。
-*   [トップコート][20]
+*   [トップコート][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][21] * [Android][22] * [Windows Phone][23]
+ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][20] * [Android][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## その他の UI の記事およびリソース
 
 ブラウザー エンジンより多くの標準の苦情となって、我々 はまだ住んで接頭辞世界 (-webkit とさん)、次の資料が貴重なクロス ブラウザー アプリケーションでの UI のための開発: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# 特別な考慮事項
+
+コルドバは、クロスプラット フォーム開発が容易になったが基になるネイティブ プラットフォームから 100 ％ の分離を提供することが可能ですだけではないです。だからことの制限に注意してください。
+
+## プラットフォーム互換
+
+マニュアルを読んで、さまざまな動作または複数プラットフォームでの要件の概要のセクションを探します。 存在する場合、これらは「iOS の癖」、等「Android 互換」というタイトルのセクションでされるでしょう。 これらの癖を読んで、コルドバで作業するには、それらに注意してください。
+
+## リモート コンテンツの読み込み
+
+リモートから読み込まれた HTML ページからコルドバの JavaScript 関数の呼び出し (「デバイスにローカルに格納されない HTML ページ) は、サポートされない構成です。 これはコルドバ意図していないこれは、Apache コルドバ コミュニティしませんこの構成のテストします。 いくつかの状況で動作することができます、しない推奨もサポートされています。 Java スクリプトの設定を維持する、同一生成元ポリシーと課題があり、コルドバのネイティブ部分同期バージョンでは、同じ (彼らが変更するプライベート Api を介して結合されている) ので、ネイティブのローカル関数および app ストアの潜在的な拒絶反応を呼び出すリモート コンテンツの信頼性。
+
+リモートで読み込まれた HTML コンテンツは、webview の表示するべきコルドバの InAppBrowser を使用して。 InAppBrowser が実行されている JavaScript 上記理由のコルドバ JavaScript Api へのアクセスがあるないように設計されています。 『 セキュリティ ガイド 』 を参照してください。
+
 # 維持します。
 
 ここでは、コルドバで最新保つためにいくつかの方法です。
 
-*   [コルドバのブログ][24]を購読するには.
-*   [開発者メーリング リスト][25]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
+*   [コルドバのブログ][23]を購読するには.
+*   [開発者メーリング リスト][24]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # ヘルプの取得
 
 次のリンクは、コルドバの助けを得る最もよい場所です。
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova>コルドバのタグを使用して、表示およびすべてのコルドバの質問を参照できます。 StackOverflow によってこのように同様に歴史的質問にアクセスすることができますように「コルドバ」を"Phonegap"タグが自動的に変換されます。
-*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][26]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
+*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][25]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
 *   ミート： <http://phonegap.meetup.com> - ローカル コルドバ/PhoneGap ミート グループを探すことを検討
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap

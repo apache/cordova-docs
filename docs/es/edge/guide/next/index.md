@@ -11,6 +11,7 @@ Esta guía contiene los siguientes temas:
 *   Pruebas
 *   Depuración
 *   Interfaz de usuario
+*   Consideraciones especiales
 *   Mantenerse al día
 *   Cómo obtener ayuda 
 
@@ -165,44 +166,57 @@ Weinre crea un servidor local que puede albergar a un cliente depuración remota
 
 Creación de una aplicación de Córdoba que queda bien móvil puede ser un desafío, especialmente para los desarrolladores. Mucha gente optó por usar un marco de interfaz de usuario para hacerlo más fácil. Aquí está una lista corta de las opciones que usted puede desear considerar.
 
-*   [jQuery Mobile][17] - jQuery Mobile automáticamente realza su diseño para la optimización del móvil. También maneja creando un SPA para usted automáticamente.
-*   [iónico][18] -este potente entorno de interfaz de usuario en realidad tiene su propio CLI para manejar la creación del proyecto. 
-*   [Trinquete][19] - traído a usted por la gente que creó Bootstrap. 
+*   [jQuery Mobile][9] - jQuery Mobile automáticamente realza su diseño para la optimización del móvil. También maneja creando un SPA para usted automáticamente.
+*   [iónico][17] -este potente entorno de interfaz de usuario en realidad tiene su propio CLI para manejar la creación del proyecto. 
+*   [Trinquete][18] - traído a usted por la gente que creó Bootstrap. 
 *   [Kendo UI][5] - interfaz de usuario de código abierto y marco de aplicación de Telerik.
-*   [TOPCOAT][20]
+*   [TOPCOAT][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-Al construir la interfaz de usuario, es importante pensar en todas las plataformas que está atacando y las diferencias entre las expectativas del usuario. Por ejemplo, una aplicación para Android que tiene una interfaz de usuario estilo iOS probablemente no va bien con los usuarios. Esto a veces es incluso aplicada por las diferentes tiendas de aplicaciones. Por ello, es importante respetar las convenciones de cada plataforma y por lo tanto están familiarizados con las diversas directrices de interfaz humana: * [iOS][21] * [Android][22] * [Windows Phone][23]
+Al construir la interfaz de usuario, es importante pensar en todas las plataformas que está atacando y las diferencias entre las expectativas del usuario. Por ejemplo, una aplicación para Android que tiene una interfaz de usuario estilo iOS probablemente no va bien con los usuarios. Esto a veces es incluso aplicada por las diferentes tiendas de aplicaciones. Por ello, es importante respetar las convenciones de cada plataforma y por lo tanto están familiarizados con las diversas directrices de interfaz humana: * [iOS][20] * [Android][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## Recursos y artículos adicionales UI
 
 Aunque los motores navegador convertido en queja estándares cada vez más, vivimos en un mundo con prefijo (-webkit y - la Sra.) el siguiente artículo es valioso en el desarrollo de interfaz de usuario en cruz aplicaciones del navegador: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# Consideraciones especiales
+
+Aunque Cordova facilita el desarrollo multiplataforma, no es posible proporcionar aislamiento 100% desde la plataforma nativo subyacente. Para ser conscientes de las restricciones.
+
+## Plataforma rarezas
+
+Al leer la documentación, busque las secciones que describen diferentes comportamientos o requisitos en múltiples plataformas. Si está presente, estos serían en una sección titulada "Rarezas Android", "iOS rarezas", etc.. Lea detenidamente estas rarezas y ser conscientes de ellas mientras trabajas con Córdoba.
+
+## Cargando contenido remoto
+
+Invocar funciones Cordova JavaScript desde una página HTML cargados remotamente (una página HTML no almacenada localmente en el dispositivo) es una configuración no admitida. Esto es porque Córdoba no fue diseñado para esto, y la comunidad Apache Cordova no hace ninguna prueba de esta configuración. Mientras que puede funcionar en algunas circunstancias, no es recomendable ni apoyado. Hay problemas con la política del mismo origen, manteniendo el JavaScript y las porciones nativas de Córdoba sincronización en la misma versión (puesto que están acoplados mediante APIs privadas que pueden cambiar), la confiabilidad del contenido remoto llamar a funciones nativas locales y potencial rechazo de app store.
+
+La visualización de contenido HTML cargados remotamente en un webview debe hacerse usando InAppBrowser de Cordova. El InAppBrowser está diseñado para que JavaScript corriendo allá no tienen acceso a las APIs de JavaScript Cordova por las razones mencionadas anteriormente. Por favor consulte la guía de seguridad.
+
 # Mantenerse al día
 
 Aquí están algunas maneras de mantenerse al día con Córdoba.
 
-*   Suscríbete al [blog de Córdoba][24].
-*   Suscribirse a la [lista de desarrolladores][25]. Nota: esto no es un grupo de apoyo. Más bien es un lugar donde se discute el desarrollo de Córdoba.
+*   Suscríbete al [blog de Córdoba][23].
+*   Suscribirse a la [lista de desarrolladores][24]. Nota: esto no es un grupo de apoyo. Más bien es un lugar donde se discute el desarrollo de Córdoba.
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # Cómo obtener ayuda
 
 Los siguientes enlaces son los mejores lugares para conseguir ayuda para Córdoba:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> mediante el uso de la etiqueta de Cordova, puede ver y examinar todas las cuestiones Cordova. Tenga en cuenta que StackOverflow convierte automáticamente la etiqueta de "Phonegap" a "Córdoba", para que de esta manera podrá acceder a preguntas históricas así como
-*   PhoneGap Google Group: [https://groups.google.com/forum/#! Foro/phonegap][26] este grupo Google era el antiguo Foro de apoyo para cuando Cordova todavía se llamaba PhoneGap. Mientras que todavía hay un montón de usuarios Cordova que frecuentan este grupo, la comunidad de Córdoba ha expresado su interés en centrarse menos en este grupo y en su lugar utilizando StackOverflow para apoyo
+*   PhoneGap Google Group: [https://groups.google.com/forum/#! Foro/phonegap][25] este grupo Google era el antiguo Foro de apoyo para cuando Cordova todavía se llamaba PhoneGap. Mientras que todavía hay un montón de usuarios Cordova que frecuentan este grupo, la comunidad de Córdoba ha expresado su interés en centrarse menos en este grupo y en su lugar utilizando StackOverflow para apoyo
 *   Quedadas: <http://phonegap.meetup.com> - considere encontrar un grupo local de meetup Cordova/PhoneGap
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap

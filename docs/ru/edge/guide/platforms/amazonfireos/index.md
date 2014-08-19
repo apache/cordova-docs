@@ -170,7 +170,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Нажмите кнопку **Готово**.
 
- [9]: img/guide/platforms//eclipse_new_project.png
+ [9]: img/guide/platforms/android/eclipse_new_project.png
 
 После того, как откроется окно Eclipse, красный **X** может показаться указывают нерешенные проблемы. Если это так, выполните следующие дополнительные действия:
 

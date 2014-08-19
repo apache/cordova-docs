@@ -11,6 +11,7 @@ Dieses Handbuch enthält die folgenden Themen:
 *   Testen
 *   Debuggen
 *   Benutzeroberfläche
+*   Besondere Überlegungen
 *   Halten
 *   Anfordern von Hilfe 
 
@@ -165,44 +166,57 @@ Weinre erstellt einen lokalen Server, der einen remote-Debug-Client für Ihre Co
 
 Erstellen einer Anwendung Cordova sieht schön auf mobile eine Herausforderung sein kann, vor allem für Entwickler. Viele Menschen haben ein UI-Framework verwenden, um dies zu erleichtern. Hier ist eine kurze Liste der Optionen, die Sie betrachten möchten.
 
-*   [jQuery Mobile][17] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
-*   [Ionische][18] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
-*   [Ratsche][19] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
+*   [jQuery Mobile][9] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
+*   [Ionische][17] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
+*   [Ratsche][18] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
 *   [Kendo UI][5] - Open-Source-UI und Application Framework von Telerik.
-*   [DECKLACK][20]
+*   [DECKLACK][19]
 *   [ReactJS][7]
 
- [17]: jquerymobile.com
- [18]: http://ionicframework.com/
- [19]: http://goratchet.com/
- [20]: http://topcoat.io
+ [17]: http://ionicframework.com/
+ [18]: http://goratchet.com/
+ [19]: http://topcoat.io
 
-Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][21] * [Android][22] * [Windows Phone][23]
+Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][20] * [Android][21] * [Windows Phone][22]
 
- [21]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [22]: https://developer.android.com/designWP8
- [23]: http://dev.windowsphone.com/en-us/design/library
+ [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [21]: https://developer.android.com/designWP8
+ [22]: http://dev.windowsphone.com/en-us/design/library
 
 ## Zusätzliche UI-Artikel und Betriebsmittel
 
 Obwohl Browser-Motoren immer mehr Normen Beschwerde geworden, wir leben noch in einer vorangestellten Welt (-Webkit und - Frau) der folgende Artikel ist wertvoll, wenn UI in für cross-Browser-apps entwickeln: <http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx>
 
+# Besondere Überlegungen
+
+Obwohl Cordova Cross-Plattform-Entwicklung einfacher macht, ist es einfach nicht möglich, 100 % unabhängig von der zugrunde liegenden systemeigenen Plattform bereitzustellen. Also Einschränkungen bewusst.
+
+## Plattform Macken
+
+Achten Sie beim Lesen der Dokumentation auf Abschnitte, die unterschiedliche Verhaltensweisen oder Anforderungen auf mehreren Plattformen zu skizzieren. Falls vorhanden, wäre dies in einem Abschnitt mit dem Titel "Android Eigenarten", "iOS Marotten", etc.. Durch diese Eigenheiten lesen Sie und beachten sie beim Arbeiten mit Cordova.
+
+## Remote-Inhalte laden
+
+Aufrufen von Cordova JavaScript-Funktionen aus einer HTML-Seite aus der Ferne geladen ist (eine HTML-Seite nicht lokal auf dem Gerät gespeichert) eine nicht unterstützte Konfiguration. Dies ist da Cordova war nicht dafür ausgelegt, und die Apache-Cordova-Gemeinschaft tut keine Prüfung dieser Konfiguration. Während es in einigen Fällen wirken kann, wird es nicht empfohlen oder unterstützt. Es gibt Herausforderungen mit der gleichen Ursprungs-Policy, halten das JavaScript und native Teile von Cordova synchronisiert auf die gleiche Version (da sie über private APIs geändert werden gekoppelt sind), die Vertrauenswürdigkeit des remote-Inhalte aufrufen systemeigene lokale Funktionen und möglichen app-Store-Ablehnung.
+
+Die Anzeige der HTML-Inhalt aus der Ferne geladen, in ein Webview getan werden mit Cordova's InAppBrowser. Die InAppBrowser ist so konzipiert, dass es ausgeführtes JavaScript keinen Zugriff auf die Cordova-JavaScript-APIs aus den oben aufgeführten Gründen hat. Finden Sie im Security Guide.
+
 # Halten
 
 Hier sind ein paar Möglichkeiten, um mit Cordova aktuell zu halten.
 
-*   Abonnieren Sie den [Blog von Cordova][24].
-*   Abonnieren Sie die [Liste der Entwickler][25]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
+*   Abonnieren Sie den [Blog von Cordova][23].
+*   Abonnieren Sie die [Liste der Entwickler][24]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
 
- [24]: http://cordova.apache.org/#news
- [25]: http://cordova.apache.org/#mailing-list
+ [23]: http://cordova.apache.org/#news
+ [24]: http://cordova.apache.org/#mailing-list
 
 # Anfordern von Hilfe
 
 Die folgenden Links sind die besten Orte, um Hilfe zu Cordova zu erhalten:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> mit dem Cordova-Tag, Sie können anzeigen und durchsuchen alle Cordova Fragen. Beachten Sie, dass StackOverflow automatisch das "Phonegap" Tag "Cordoba", konvertiert so dass auf diese Weise werden Sie historische Fragen sowie Zugang zu
-*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][26] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
+*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][25] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
 *   Meetup: <http://phonegap.meetup.com> - betrachten Sie suchen nach einer lokalen Cordova/PhoneGap Meetup-Gruppe
 
- [26]: https://groups.google.com/forum/#!forum/phonegap
+ [25]: https://groups.google.com/forum/#!forum/phonegap
