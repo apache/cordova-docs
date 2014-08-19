@@ -251,7 +251,7 @@ CLI's shorthand names.
         <th><a href="https://github.com/apache/cordova-plugin-globalization/blob/master/doc/index.md">Globalization</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
-        <td data-col="blackberry10" class="n"></td>
+        <td data-col="blackberry10" class="y"></td>
         <td data-col="firefoxos" class="n"></td>
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
