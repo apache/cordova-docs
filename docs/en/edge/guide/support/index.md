@@ -39,8 +39,8 @@ CLI's shorthand names.
         <th><tt>Firefox OS</tt></th>
         <th><tt>ios</tt></th>
         <th><tt>Ubuntu</tt></th>
-        <th><tt>wp8</tt> (Windows<br/>Phone 8)</th>
-        <th><tt>win8</tt><br/>(Windows 8)</th>
+        <th><tt>wp8</tt><br/>(Windows Phone 8)</th>
+        <th><tt>windows</tt><br/>(8.0, 8.1,<br/>Phone 8.1)</th>
         <th><tt>tizen</tt></th>
     </tr>
 
@@ -139,7 +139,7 @@ CLI's shorthand names.
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 
@@ -178,7 +178,7 @@ CLI's shorthand names.
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="p">partially</td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 

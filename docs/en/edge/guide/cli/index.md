@@ -44,7 +44,7 @@ platform's SDK. The CLI supports the following combinations:
 * Android         (Mac, Linux, Windows)
 * BlackBerry 10   (Mac, Linux, Windows)
 * Windows Phone 8 (Windows)
-* Windows 8       (Windows)
+* Windows         (Windows)
 * Firefox OS      (Mac, Linux, Windows)
 
 On the Mac, the command-line is available via the _Terminal_
@@ -54,7 +54,7 @@ _Accessories_.
 __NOTE__: For Windows-only platforms, you can still do your
 development on Mac hardware by running Windows in a virtual machine
 environment or in dual-boot mode. For available options, see the
-Windows Phone Platform Guide or the Windows 8 Platform Guide.
+Windows Phone 8 Platform Guide or the Windows Platform Guide.
 
 The more likely it is that you run the CLI from different machines,
 the more it makes sense to maintain a remote source code repository,
@@ -170,7 +170,7 @@ Run any of these from a Windows machine, where _wp_ refers to
 different versions of the Windows Phone operating system:
 
         $ cordova platform add wp8
-        $ cordova platform add windows8
+        $ cordova platform add windows
         $ cordova platform add amazon-fireos
         $ cordova platform add android
         $ cordova platform add blackberry10

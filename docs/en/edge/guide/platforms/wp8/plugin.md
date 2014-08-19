@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone Plugins
+# Windows Phone 8 Plugins
 
 This section provides details for how to implement native plugin code
 on the Windows Phone platform. Before reading this, see Application

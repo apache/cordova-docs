@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone Platform Guide
+# Windows Phone 8 Platform Guide
 
 This guide shows how to set up your SDK development environment to
 deploy Cordova apps for Windows Phone devices.  It focuses on Windows
@@ -34,8 +34,8 @@ Phone SDK, as described below.
 
 See the following for details specific to the Windows Phone platform:
 
-- Windows Phone Plugins
-- Upgrading Windows Phone
+- Windows Phone 8 Plugins
+- Upgrading Windows Phone 8
 
 For the Windows Phone 8 platform, the Cordova WebView relies on
 Internet Explorer 10 as its rendering engine, so as a practical matter

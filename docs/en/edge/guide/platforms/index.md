@@ -79,15 +79,15 @@ a lower-level alternative to the `cordova` command-line utility.
 
 * Ubuntu Platform Guide
 
-## Windows Phone
+## Windows Phone 8
 
-* Windows Phone Platform Guide
-* Windows Phone Plugins
-* Upgrading Windows Phone
+* Windows Phone 8 Platform Guide
+* Windows Phone 8 Plugins
+* Upgrading Windows Phone 8
 
-## Windows 8
+## Windows
 
-* Windows 8 Platform Guide
+* Windows Platform Guide
 * Upgrading Windows 8
 
 ## Tizen

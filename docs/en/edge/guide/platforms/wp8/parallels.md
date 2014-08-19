@@ -43,4 +43,4 @@ Desktop. After installing Windows, follow these steps:
    ![](img/guide/platforms/wp8/parallel_optimize_opts.png)
 
 Once you complete these steps, you are ready to install the Windows
-Phone SDK.  See the Windows Phone Platform Guide for details.
+Phone SDK.  See the Windows Phone 8 Platform Guide for details.
