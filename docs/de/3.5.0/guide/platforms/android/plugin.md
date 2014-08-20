@@ -52,7 +52,7 @@ Wird eine Instanz eines Plugin-Objekts erstellt, für das Leben eines jeden `Web
 
 Plugins sollten verwenden die `initialize` -Methode für ihre Start-up-Logik.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

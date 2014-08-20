@@ -52,7 +52,7 @@ En primerek predmeta plugin je ustvarjen za življenje vsakega `WebView` . Plugi
 
 Uporabljajte plugins je `initialize` metoda za svoje start-up logiko.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here
