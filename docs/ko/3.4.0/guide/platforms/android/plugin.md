@@ -52,7 +52,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 플러그인 사용 해야 있는 `initialize` 그들의 시작 논리에 대 한 방법.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

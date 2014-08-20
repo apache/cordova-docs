@@ -51,7 +51,7 @@ Android 外掛程式基於科爾多瓦-Android，Android 的 web 視圖包括與
 
 外掛程式應使用 `initialize` 方法為他們的創業邏輯。
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

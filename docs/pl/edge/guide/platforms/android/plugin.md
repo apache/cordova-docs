@@ -51,7 +51,7 @@ Jedno wystąpienie obiekt plugin jest tworzony dla życia każdego `WebView` . W
 
 Należy używać wtyczki `initialize` Metoda ich uruchamiania logiki.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

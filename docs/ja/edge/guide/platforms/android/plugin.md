@@ -51,7 +51,7 @@ Android のプラグインはそれに取り付けられたフックを持つア
 
 プラグインを使用する必要があります、 `initialize` 、スタート アップ ロジックのメソッド。
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

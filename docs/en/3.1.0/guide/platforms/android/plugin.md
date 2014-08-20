@@ -70,7 +70,7 @@ referenced by a call from JavaScript, unless `<param>` with an `onload`
 
 Plugins should use the `initialize` method for their start-up logic.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
       super.initialize(cordova, webView);
       // your init code here

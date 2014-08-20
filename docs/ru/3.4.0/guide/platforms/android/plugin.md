@@ -52,7 +52,7 @@ Android плагины основаны на Cordova-андроида, кото�
 
 Следует использовать плагины `initialize` метод для их запуска логики.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here

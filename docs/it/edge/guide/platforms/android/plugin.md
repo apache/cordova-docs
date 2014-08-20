@@ -51,7 +51,7 @@ Viene creata un'istanza di un oggetto plugin per la vita di ogni `WebView` . Plu
 
 Plugin dovrebbe usare il `initialize` metodo per la loro logica di avviamento.
 
-    @override
+    @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         // your init code here
