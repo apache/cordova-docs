@@ -75,6 +75,13 @@ for `href` hyperlinks, not referenced resources such as images and
 scripts. Take steps to avoid scripts from being injected into the
 application.
 
+__NOTE__: In order to prevent external URLs such as `mailto:` from being opened
+in the Cordova webview as of Cordova 3.6.0, specifying `origin="*"` will
+implicity add rules for http and https protocols. If you require access to
+additional custom protocols, then you should also add them explicity to the
+whitelist. Also see "External Application Whitelist" below for more information
+on launching external applications by URL.
+
 __NOTE__: Some network requests do not go through the Cordova Whitelist.
 This includes <video> and <audio> resouces, WebSocket connections (on
 Android 4.4+), and possibly other non-http requests. On Android 4.4+,
