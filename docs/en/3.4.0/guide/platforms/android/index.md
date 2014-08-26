@@ -247,7 +247,7 @@ As &rarr; Android Application__.
 
 Create a keystore file and a keystore alias as described at [Android Developer Site](http://developer.android.com/tools/publishing/app-signing.html#cert). AFter that, follow these steps.
 
-* Run `phonegap build android` from the folder containing `www` folder
+* Run `cordova build android` from the folder containing `www` folder
 * `cd` to this path `platforms/android/`
 * Make sure `ant.properties` in this folder contains these keys and right values
 > key.store=<absolute_path_to_keystore_file_on_disk>
