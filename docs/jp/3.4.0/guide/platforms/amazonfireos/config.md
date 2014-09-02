@@ -17,50 +17,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Amazon Fire OS Configuration
+# Amazon Fire OS の設定
 
-The `config.xml` file controls an app's basic settings that apply
-across each application and CordovaWebView instance. This section
-details preferences that only apply to  Amazon Fire OS builds. See The
-config.xml File for information on global configuration options.
+`config.xml` ファイルを使用して、各アプリと各 CordovaWebView のインスタンス間に適用する、アプリの基本的な設定を行います。
+この節では、Amazon Fire OS のビルドのみに適用する preference に関して解説します。グローバル設定で使用する各種オプションに関しては、『 config.xml ファイル 』 をご確認ください。
 
-- `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
-  event fires.
+- `KeepRunning` ( boolean、デフォルトは `true` ) : `pause` ( 一時停止 ) イベントの発火後でも、バックグラウンドにおいて、アプリの実行を継続するか決定するときに使用します。
 
         <preference name="KeepRunning" value="false"/>
 
-- `ErrorUrl`: Specifies an error page that displays in response to
-  standard HTTP errors in the 400-500 range. Place the specified file
-  in the top-level directory containing the home page and other web
-  assets.
+- `ErrorUrl` : HTTP の標準エラー ( 400　から 500 までのステータスコード ) が発生した場合に表示するエラーページを指定します。
+ホームページと他のリソースを格納している最上位 ( top-level ) のディレクトリに、指定するファイルを置きます。
 
         <preference name="ErrorUrl" value="error.html"/>
 
-- `LoadingDialog`: Display a native dialog when loading the app. The
-  value's format is _Title, Message_
+- `LoadingDialog` : アプリを読み込んでいるとき、ネイティブのダイアログを表示します。value の形式は、 _タイトル , メッセージ_ です。
 
         <preference name="LoadingDialog" value="Please wait, the app is loading"/>
 
-- `LoadingPageDialog`: Display a native dialog when loading sub-pages
-  within an app. The value's format is _Title, Message_
+- `LoadingPageDialog` : アプリがサブページ ( sub-page ) を読み込んでいるとき、ネイティブのダイアログを表示します。value の形式は、 _タイトル , メッセージ_ です。
 
         <preference name="LoadingPageDialog" value="Please wait, the data is loading"/>
 
-- `LoadUrlTimeoutValue` (number, default is `20000`): When loading a
-  page, the amount of time to wait before throwing a timeout error.
-  This example specifies 10 seconds rather than 20:
+- `LoadUrlTimeoutValue` ( number、デフォルトは `20000` ) : ページの読み込み時における、タイムアウトエラーを投げるまでの待ち時間です。下の例では、20 秒ではなく、10 秒に設定しています。
 
         <preference name="LoadUrlTimeoutValue" value="10000"/>
 
-- `SplashScreen`: The name of the file minus its extension in the
-  `res/drawable` directory.  Various assets must share this common
-  name in various subdirectories.
+-  `SplashScreen`: `res/drawable` ディレクトリ内に格納されたファイルの名前 ( 拡張子なし ) です。また、画面上で使用する各種リソースは、このディレクトリ ( res/ ) 下に格納する必要があります。
 
         <preference name="SplashScreen" value="splash"/>
 
-- `SplashScreenDelay` (number, defaults to `5000`): The amount of
-  time the splash screen image displays.
+- `SplashScreenDelay` ( number、 デフォルトは `5000` ) : スプラッシュ画像を表示する時間です。
 
         <preference name="SplashScreenDelay" value="10000"/>
-

@@ -17,45 +17,43 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Upgrading Windows 8
+# Windows 8 の更新
 
-This guide shows how to modify Windows 8 projects to upgrade from older versions of Cordova.
-Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
-version of the CLI.
+このガイドでは、新しいバージョンの Cordova へ移行するときに必要となる、 Windows 8 プロジェクト側の修正点に関して解説します。このガイドで使用する手順のほとんどは、 `cordova` の CLI ユーティリティがリリースされる前のコマンドライン ツールを使用して作成されたプロジェクトに適用するものです。CLI 自体のバージョン更新に関しては、『 コマンドライン インターフェイス 』 をご確認ください。
 
-## Upgrade to 3.2.0 from 3.1.0
+## 3.1.0 から 3.2.0 への更新
 
-For projects that were created with the cordova CLI: 
+cordova CLI を使用して作成したプロジェクトの場合、以下の処理を行います。
 
-1. Update the `cordova` CLI version. See The Command-Line Interface. 
+1. `cordova` CLI のバージョンを更新します。『 コマンドライン インターフェイス 』 をご確認ください。
 
-2. Run `cordova platform update windows8`.
-        
-For projects not created with the cordova CLI, run:
+2. `cordova platform update windows8` を実行します。
+
+cordova CLI を使用せずに作成したプロジェクトの場合、以下を実行します。
 
         bin\update <project_path>
 
-## Upgrade to 3.1.0
+## 3.1.0 への更新
 
-Cordova CLI support for Windows 8 was introduced in Cordova 3.1.0. To upgrade, we suggest creating a new Cordova CLI project and moving over all necessary assets.  
+Windows 8 に対する Cordova CLI のサポートは、Cordova 3.1.0 から始まりました。
+アップグレードを行うときには、Cordova CLI を使用して、プロジェクトの新規作成を行い、そして、必要なすべてのアセット ( assets ) を移行することを推奨します。
 
-## Upgrade to 2.9.0 from 2.8.0
+## 2.8.0 から 2.9.0 への更新
 
-The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
+プロジェクトへの参照 ( project reference ) が更新または削除されていることを確実にするため、以下の手順 ( 原文 「 command 」 ) を Visual Studio 上で実行してください。
 
-1. Remove `cordova-2.8.0.js` from the project's `www` directory.
+1. プロジェクトの `www` ディレクトリから `cordova-2.8.0.js` を削除します。
 
-2. Add `cordova.js` file from the source to the project's `www` directory. (Note that the file no longer contains a version number in the filename.)
+2. source ( src ) の `cordova.js` ファイルを、プロジェクトの `www` ディレクトリへ追加します ( ファイル名の後ろには、バージョン番号を入れません )。
 
-3. Build and test!
+3. ビルドとテストを行います。
 
-## Upgrade to 2.8.0 from 2.7.0
+## 2.7.0 から 2.8.0 への更新
 
-The following commands should be done from within Visual Studio to be sure that the any project references are updated/deleted.
+プロジェクトへの参照 ( project reference ) が更新または削除されていることを確実にするため、以下の手順 ( 原文 「 command 」 ) を Visual Studio 上で実行してください。
 
-1. Remove `cordova-2.7.0.js` from the project's `www` directory. 
+1. プロジェクトの `www` ディレクトリから `cordova-2.7.0.js` を削除します。
 
-2. Add `cordova.js` file from the source to the project's `www` directory. (Note that the file no longer contains a version number in the filename.)
+2. source ( src ) の `cordova.js` ファイルを、プロジェクトの `www` ディレクトリへ追加します ( ファイル名の後ろには、バージョン番号を入れません )。
 
-3. Build and test!
+3. ビルドとテストを行います。

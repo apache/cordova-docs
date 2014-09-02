@@ -19,98 +19,83 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Tizen プラットフォームに関する解説
 
-This guide describes how to set up your SDK development environment to
-deploy Cordova apps for devices running the Tizen operating system.
+SDK 開発環境の設定方法、および、Tizen オペレーティングシステム搭載のデバイスへの Cordova アプリの展開方法を説明します。
 
-## 必要事項とサポート
+## システム要件とサポート
 
-The Tizen SDK requires Linux Ubuntu 10.04/10.10/11.04/11.10 (32-bit),
-or Windows XP SP3/7 (32-bit).
+Tizen SDK のシステム要件として、Linux Ubuntu 10.04 / 10.10 / 11.04 / 11.10 ( 32-bit )、または、Windows XP SP3 / 7 ( 32-bit ) が必要です。
 
-Developers should use the `cordova` utility in conjunction with
-the Tizen SDK.  See The Command-Line Interface for information
-how to install it, add projects, then build and deploy a project.
+Tizen SDK と併用して、`cordova` ユーティリティを使用してください。コマンドライン インターフェイスのインストール方法、および、プロジェクトの追加・ビルド・展開方法に関しては、『 コマンドライン インターフェイス 』 をご確認ください。
 
 ## SDK のインストール
 
-Download the Tizen SDK from
-[tizen.org](https://developer.tizen.org/sdk).
+[tizen.org](https://developer.tizen.org/sdk) から Tizen SDK をダウンロードします。
 
 <!--
 
-- (optional) Install Tizen Cordova template projects: copy the
-  `/templates` directory content into the Tizen Eclipse IDE web
-  templates directory (e.g.:
-  `/home/my_username/tizen-sdk/IDE/Templates/web`).
+- ( 任意 ) Tizen 用 Cordova プロジェクト テンプレートをインストールします。 `/templates` ディレクトリ内のコンテンツを Tizen Eclipse IDE の Templates の web ディレクトリ ( 例 : `/home/my_username/tizen-sdk/IDE/Templates/web` ) にコピーします。
 
-- __Method #2: Use Tizen Eclipse IDE Cordova Tizen project templates__
-    - Launch Tizen Eclipse IDE
-    - Select  __File &rarr; New &rarr; Tizen Web Project__
-    - Select __User Template__ and __User defined__ items
-    - Select one of the Tizen Cordova template (e.g.: __CordovaBasicTemplate__)
-    - Fill the __Project name__ and its target __Location__
+- __2 番目の方法 : Tizen Eclipse IDE の Tizen 用 Cordova プロジェクト テンプレートの使用__
+
+    - Tizen Eclipse IDE を起動します。
+    - __File &rarr; New &rarr; Tizen Web Project__ を選択します。
+    - __User Template__ と __User defined__ を選択します。
+    - Tizen 用 Cordova テンプレート ( __CordovaBasicTemplate__ ) を 1 つ選択します。
+    - __Project name__ と Target の __Location__ を入力します。
 
     ![](img/guide/platforms/tizen/project_template.png)
 
-    - Click __Finish__
+    - __Finish__ をクリックします。
 
     ![](img/guide/platforms/tizen/project_explorer.png)
 
-    - Your project should now appear in the __Project Explorer__ view
+    - __Project Explorer__ に、プロジェクトが表示されます。
 
 -->
 
 ## SDK でプロジェクトを開く
 
-1. Launch the Tizen Eclipse IDE.
+1. Tizen Eclipse IDE を起動します。.
 
-2. Select __File &rarr; Import &rarr; Tizen Web Project__:
+2. __File &rarr; Import &rarr; Tizen Web Project__ を選択します。
 
    ![](img/guide/platforms/tizen/import_project.png)
 
-3. Press __Next__.
+3. __Next__ ボタンを押します。
 
-4. Make sure __Select root directory__ is checked.
+4. __Select root directory__ が選択されていることを確認してください。
 
-5. Make sure __Copy projects into workspace__ is checked.
+5. __Copy projects into workspace__ が選択されていることを確認してください。
 
-6. Press __Browse__ and select the Cordova Tizen `samples` project directory (such as `/cordova-basic`):
+6. __Browse__ ボタンを押して、tizen/ `samples` / 下のディレクトリ ( ここでは `/cordova-basic` ) を選択します。
 
    ![](img/guide/platforms/tizen/import_widget.png)
 
-7. Press __Finish__. Your project should now be imported and appear in
-   the __Project Explorer__ view:
+7. __Finish__ ボタンを押します。 プロジェクトがインポートされ、 __Project Explorer__ に表示されます。
 
    ![](img/guide/platforms/tizen/project_explorer.png)
 
-To rebuild the project, right-click in the __Project Explorer__ view
-and Select __Build Project__:
+プロジェクトを再ビルドする場合、 __Project Explorer__ 上で右クリックして、 __Build Project__ を選択します。
 
 ![](img/guide/platforms/tizen/build_project.png)
 
-A widget package file such as _hello.wgt_ should generate in the
-project's root directory.
+ウィジェットパッケージ ファイル ( 例 : _hello.wgt_ ) がプロジェクトのルート ( root ) ディレクトリに作成されます。
 
 ## エミュレーターへの展開
 
-Right-click the project in the __Project Explorer__ view and select
-__Run As &rarr; Tizen Web Simulator Application__:
+__Project Explorer__ のプロジェクトを右クリックして、 __Run As &rarr; Tizen Web Simulator Application__ を選択します。
 
 ![](img/guide/platforms/tizen/runas_web_sim_app.png)
 
 ## デバイスへの展開
 
-* Make sure that the target device is properly launched, connected and
-  configured. Its __Date and Time__ settings must be set correctly.
+* Target のデバイスが正しく起動・接続・設定されていることを確認してください。 特に __日付と時間__ は正しく設定してください。
 
-* Use the __Connection Explorer__ view to select the application
-  deployment target: __Window &rarr; Show View &rarr; Connection
-  Explorer__.
+* __Connection Explorer__ を使用して、アプリの展開先となる Target を選択します。 __Window &rarr; Show View &rarr; Connection Explorer__ を選択します。
 
   ![](img/guide/platforms/tizen/connection_explorer.png)
 
-* Right-click the project in the __Project Explorer__ view, then
-  select __Run As & rarr; Tizen Web Application__:
+* __Project Explorer__ のプロジェクトを右クリックします。次に、 __Run As & rarr; Tizen Web Application__ を選択します。
 
   ![](img/guide/platforms/tizen/runas_web_app.png)
 

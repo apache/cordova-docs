@@ -19,38 +19,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Firefox OS プラットフォームに関する解説
 
-This guide describes how to set up your development environment to
-create Cordova apps for Firefox OS devices, then test and publish those apps.
+SDK 開発環境の設定方法、および、Firefox OS 搭載のデバイスへの Cordova アプリの展開方法を説明します。
 
-## 必要事項とサポート
+## システム要件とサポート
 
-Firefox OS apps are basically just web apps, with the addition of a manifest.webapp file that defines metadata about the app and allows it to be installed on Firefox OS devices. Any platform that Cordova supports can be used.To find out more about building web apps, consult the [App Center](https://developer.mozilla.org/en-US/Apps) on [MDN](https://developer.mozilla.org/en-US/).
+Firefox OS アプリは、基本的に、単なる Web アプリです。ただし、アプリに関するメタデータを定義した manifest.webapp ファイルを使用して、Firefox OS 搭載デバイスにインストールすることができます。Cordova のサポート対象のプラットフォームであれば、どのプラットフォームも使用できます。Web アプリのビルドに関しては、　[MDN](https://developer.mozilla.org/en-US/) の [アプリセンター](https://developer.mozilla.org/en-US/Apps) をご確認ください。
 
 ## インストールと環境設定
 
-First install [Node.js](http://nodejs.org/), then install the Cordova package like so:
+[Node.js](http://nodejs.org/) をインストールして、次に、Cordova パッケージをインストールします。
 
   	$ npm install -g cordova
 
-Next, create a sample Cordova app then navigate into the newly created directory:
+次に、テスト用 Cordova アプリ ( test-app ) を作成して、新規に作成されたディレクトリへ移動します。
 
   	$ cordova create test-app
   	$ cd test-app
 
-Add Firefox OS as a supported platform to the app with the following:
+以下のように、アプリのサポート対象のプラットフォームとして、Firefox OS を追加します。
 
   	$ cordova platform add firefoxos
 
-This creates a Firefox OS app in platforms/firefoxos/www directory, which currently looks the same except that it has a Firefox manifest file (manifest.webapp) inside the www directory.
+これにより、platforms/firefoxos/www ディレクトリに、Firefox OS アプリが作成されます。Firefox manifest ファイル ( manifest.webapp ) が www ディレクトリに置かれている点に関して、他のプラットフォームのディレクトリとは異なります。
 
 ## アプリの展開
 
-At this point you are ready to go — change the code inside test-app/www to whatever you want your app to be. You can add [supported plugins]() to the app using "cordova plugin add", for example:
+ここまでの手順で、基本的な準備は整いました。test-app/www 内のコードを変更して、アプリを修正することもできます。 "cordova plugin add" コマンドを使用して、プラグインを追加することもできます ( 原文では、プラグイン群へのリンクを、ここに置く予定だったようです )。例を以下に記します。
 
 	cordova plugin add org.apache.cordova.device
 	cordova plugin add org.apache.cordova.vibration
 
-You also need to add a custom manifest.webapp file into your test-app/www directory, which should include at least the following:
+また、test-app/www ディレクトリに、カスタマイズした manifest.webapp ファイルを追加する必要があります。このファイルには、最低限、以下の内容を記述します。
 
   	{ 
     	"launch_path":"/index.html",
@@ -63,25 +62,24 @@ You also need to add a custom manifest.webapp file into your test-app/www direct
     	}
   	}
 
-For more information about Firefox App manifests, read [App manifest](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) on MDN.
+Firefox アプリの manifest に関しては、MDN 上の [アプリの manifest](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) をご確認ください。
 
-When your app code is written, deploy your changes to the Firefox OS app you've added to your project with
+アプリのコードを修正した後、Firefox OS アプリに変更を反映させる場合には、以下のコマンドを実行します。
 
   	$ cordova prepare
-  	
-Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
+
+Firefox OS プラットフォームを扱うときは、build ( cordova build  ) コマンドは必要ありません。Firefox OS アプリは、HTML を基にしているので、コンパイルの必要がないからです。
 
 ## テストとデバッグ
 
-The app can be tested using the Firefox OS [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
+Firefox OS [アプリマネージャ](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager) を使用して、アプリのテストを行うことができます。
 
-When you have connected the App Manager to your test device/simulator, select the "Add Packaged App" option, then make sure you point to the test-app/platforms/firefoxos/www/ directory to include the App in the Manager interface.
+テスト用デバイス ( またはシミュレータ ) とアプリマネージャを接続するとき、 "Add Packaged App" オプションを選択して、test-app/platforms/firefoxos/www/ ディレクトリを指しているか確認してください。次に、マネージャインターフェイス上でアプリが表示されていることを確認してください。
 
-For here you can install the app on your test device/simulator (with the "Update" button). Using the "Debug" button you can then debug the app and edit its code live. 
+ここで、"Update" ボタンを押して、テスト用デバイス ( またはシミュレータ ) にアプリをインストールすることができます。 "Debug" ボタンを押すと、アプリのデバッグとコードの編集を行うことができます。
 
-Note: Before attempting to publish your app you should consider validating it using the [App validator](https://marketplace.firefox.com/developers/validator).
+注意 : アプリを公開する前に、 [アプリの検証テスター](https://marketplace.firefox.com/developers/validator) を使用して、検証することを推奨します。
 
 ## Firefox Marketplace 上でのアプリの配布
 
-You can submit your app to the Firefox Marketplace, or publish it yourself. Visit the [Firefox Marketplace Zone](https://developer.mozilla.org/en-US/Marketplace) on MDN to find out more about how to do this; [App publishing options](https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options) is the best place to start.
-
+Firefox Marketplace に、自作アプリの配布申請を行うことができます。または、開発者自身で、配布を行うこともできます。詳細な方法に関しては、MDN の [Firefox Marketplace](https://developer.mozilla.org/en-US/Marketplace) をご確認ください。 [アプリの配布に関するオプション](https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options) では、開発者自身の配布方法に関して解説しています。

@@ -121,7 +121,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </tr>
 
     <tr>
-        <th><a href="cordova_media_capture_capture.md.html">キャプチャー</a></th>
+        <th><a href="cordova_media_capture_capture.md.html">メディアキャプチャー</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -149,7 +149,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </tr>
 
     <tr>
-        <th><a href="cordova_connection_connection.md.html">接続</a></th>
+        <th><a href="cordova_connection_connection.md.html">ネットワーク接続</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>
@@ -275,7 +275,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </tr>
 
     <tr>
-        <th><a href="cordova_notification_notification.md.html">通知</a></th>
+        <th><a href="cordova_notification_notification.md.html">通知機能</a></th>
         <td data-col="amazon-fireos" class="y"></td>
         <td data-col="android"    class="y"></td>
         <td data-col="blackberry10" class="y"></td>

@@ -17,77 +17,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# iOS Plugins
+# iOS プラグイン
 
-This section provides details for how to implement native plugin code
-on the iOS platform. Before reading this, see Application Plugins for
-an overview of the plugin's structure and its common JavaScript
-interface. This section continues to demonstrate the sample _echo_
-plugin that communicates from the Cordova webview to the native
-platform and back.
+この節では、iOS プラットフォームにおけるネイティブプラグインコードの実装方法の詳細に関して解説します。この節を読む前に、
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) を読み、プラグインの構造と JavaScript の汎用インターフェイスの概要をご確認ください。
+この節では、Cordova Webview とネイティブプラットフォーム間で通信を行う、_echo_ プラグインのサンプルを引き続き使用して、解説を行います。 
 
-An iOS plugin is implemented as an Objective-C class that extends the
-`CDVPlugin` class.  For JavaScript's `exec` method's `service`
-parameter to map to an Objective-C class, each plugin class must be
-registered as a `<feature>` tag in the named application directory's
-`config.xml` file.
+`CDVPlugin` クラスを拡張する Objective-C のクラスとして、iOS プラグインは実装されます。
+各プラグインのクラスは、アプリのディレクトリ内にある `config.xml` ファイル内で、 `<feature>` タグを使用して、登録する必要があります ( Objective-C クラスへマッピングを行うときに使用する、JavaScript の `exec` メソッドの `service` パラメータとの対応付け ) 。
 
-## Plugin Class Mapping
+## プラグインのクラスマッピング
 
-The JavaScript portion of a plugin uses the `cordova.exec` method as
-follows:
+プラグインの JavaScript では、 `cordova.exec` メソッドを以下のように使用します。
 
         exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
 
-This marshals a request from the `UIWebView` to the iOS native side,
-effectively calling the `action` method on the `service` class, with
-the arguments passed in the `args` array.
+これにより、`args` 配列内の引数と共に、 `service` クラスの `action` メソッドを効果的に呼び出し、`UIWebView` から iOS のネイティブ側へ、リクエストを送れます。
 
-Specify the plugin as a `<feature>` tag in your Cordova-iOS
-application's project's `config.xml` file, using the `plugin.xml` file
-to inject this markup automatically, as described in Application
-Plugins:
+Cordova-iOS アプリプロジェクトの `config.xml` ファイル内で `<feature>` タグを使用して、プラグインの指定を行います。また、
+ `plugin.xml` ファイルを使用して、自動的に、この記述を注入 ( inject ) するようにします。詳細に関しては、『 Application
+Plugins 』 に記載があります。
 
         <feature name="LocalStorage">
             <param name="ios-package" value="CDVLocalStorage" />
         </feature>
 
-The feature's `name` attribute should match what you specify as the
-JavaScript `exec` call's `service` parameter. The `value` attribute
-should match the name of the plugin's Objective-C class. The `<param>`
-element's `name` should always be `ios-package`.  If you do not follow
-these guidelines, the plugin may compile, but Cordova may still not be
-able to access it.
+feature の `name` 属性値は、JavaScript の `exec` の `service` パラメータとして指定したものと同じものです。
+`value` 属性値は、プラグインの Objective-C クラスの名前と同じになります。 `<param>` 要素の `name` は、常に、 `ios-package` となります。これらのガイドラインに従わない場合、プラグインのコンパイルはできますが、Cordova からアクセスはできません。
 
-## Plugin Initialization and Lifetime
+## プラグインの初期化と寿命
 
-One instance of a plugin object is created for the life of each
-`UIWebView`. Plugins are ordinarily instantiated when first referenced
-by a call from JavaScript. Otherwise they can be instantiated by
-setting a `param` named `onload` to `true` in the `config.xml` file:
+各 `UIWebView` が生き続ける間は、プラグインオブジェクトのインスタンスも生き続けます。JavaScript から呼び出され、最初に参照されたときに、プラグインのインスタンス化が通常行われます。これ以外の方法では、 
+`config.xml` ファイル内で、 `param` に `onload` / `true` と設定して、インスタンス化することもできます。
 
         <feature name="Echo">
             <param name="ios-package" value="Echo" />
             <param name="onload" value="true" />
         </feature>
 
-There is _no_ designated initializer for plugins. Instead, plugins
-should use the `pluginInitialize` method for their startup logic.
+プラグインの初期化方法に関しては、これといった _指定はありません_ が、プラグインの使用開始時のロジックで、 `pluginInitialize` メソッドを使用することを推奨します。
 
-Plugins with long-running requests, background activity such as media
-playback, listeners, or that maintain internal state should implement
-the `onReset` method to clean up those activities. The method runs
-when the `UIWebView` navigates to a new page or refreshes, which
-reloads the JavaScript.
+長時間実行されるリクエスト、バックグラウンドでの処理 ( メディア再生、リスナーなど )、内部情報の保持などを行うプラグインでは、これらの処理をクリーンアップする場合、 `onReset` メソッドを使用する必要があります。このメソッドは、新たなページへの遷移またはページのリフレッシュを `UIWebView` が行うときに実行され、いづれの場合も JavaScript の再読み込みを行います。
 
-## Writing an iOS Cordova Plugin
+## iOS Cordova プラグインの構築
 
-A JavaScript call fires off a plugin request to the native side, and
-the corresponding iOS Objective-C plugin is mapped properly in the
-`config.xml` file, but what does the final iOS Objective-C plugin
-class look like?  Whatever is dispatched to the plugin with
-JavaScript's `exec` function is passed into the corresponding plugin
-class's `action` method. A plugin method has this signature:
+JavaScript からの呼び出しにより、プラグインのリクエストがネイティブ側に送られます。そして、 `config.xml` ファイルで記述されているとおりに、対応する iOS Objective-C のプラグインのマッピングが適切に行われるわけですが、最終的な iOS Objective-C プラグインクラスとは、どのようなものなのでしょうか。JavaScript の `exec` 関数を使用してプラグインに渡されたものが、対応するプラグインクラスの `action` メソッドに渡されます。プラグインメソッドは、下記のシグネチャ ( signature ) を持ちます。
 
         - (void)myMethod:(CDVInvokedUrlCommand*)command
         {
@@ -102,42 +76,31 @@ class's `action` method. A plugin method has this signature:
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
 
-For more details, see
+詳細に関しては、以下をご確認ください。
  `[CDVInvokedUrlCommand.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVInvokedUrlCommand.h)`,
  `[CDVPluginResult.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPluginResult.h)`,
-and
  `[CDVCommandDelegate.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVCommandDelegate.h)`.
 
-## iOS CDVPluginResult Message Types
+## iOS CDVPluginResult メッセージの型
 
-You can use `CDVPluginResult` to return a variety of result types back to
-the JavaScript callbacks, using class methods that follow this pattern:
+`CDVPluginResult` を使用して、さまざまな型の実行結果を JavaScript のコールバックに返すことができます。その際、
+以下のような、クラスのメソッドを使用します。
 
         + (CDVPluginResult*)resultWithStatus:(CDVCommandStatus)statusOrdinal messageAs...
 
-You can create `String`, `Int`, `Double`, `Bool`, `Array`,
-`Dictionary`, `ArrayBuffer`, and `Multipart` types. You can also leave
-out any arguments to send a status, or return an error, or even choose
-not to send any plugin result, in which case neither callback fires.
+作成できる型は、 `String` 、 `Int` 、 `Double` 、 `Bool` 、 `Array` 、 `Dictionary` 、 `ArrayBuffer` 、 `Multipart` となります。
+また、引数を省略して一部情報 ( ステータス情報、エラー情報 ) の引き渡しを行ったり、または、プラグインの実行結果をまったく返さないようにすることもできます。
+いずれの場合も、コールバックは発火しなくなります。
 
-Note the following for complex return values:
+複合型の戻り値 ( complex return value ) に関しては、以下をお読みください。
 
-- `messageAsArrayBuffer` expects `NSData*` and converts to an
-  `ArrayBuffer` in the JavaScript callback. Likewise, any
-  `ArrayBuffer` the JavaScript sends to a plugin are converted to
-  `NSData*`.
+- `messageAsArrayBuffer` 側では、 `NSData*` を受け取ることを想定しています。そして、JavaScript コールバック側で、 `NSData*` を `ArrayBuffer` に変換します。同じように、JavaScript からプラグインに渡される `ArrayBuffer` は、 `NSData*` に変換されます。
 
-- `messageAsMultipart` expects an `NSArray*` containing any of the
-  other supported types, and sends the entire array as the `arguments`
-  to your JavaScript callback.  This way, all of the arguments are
-  serialized or deserialized as necessary, so it is safe to return
-  `NSData*` as multipart, but not as `Array`/`Dictionary`.
+- `messageAsMultipart` 側では、サポート対象の型を使用した `NSArray*` を受け取ることを想定しています。そして、JavaScript のコールバックに、 `arguments` として、その配列を渡します。また、必要に応じて、引数すべてをシリアル化したり・しなかったりすることができます。このため、 `Array`/`Dictionary` 形式ではなく、 multipart 形式で、 `NSData*` を返す方が安全です。
 
-## Echo iOS Plugin Example
+## iOS Echo プラグインの例
 
-To match the JavaScript interface's _echo_ feature described in
-Application Plugins, use the `plugin.xml` to inject a `feature`
-specification to the local platform's `config.xml` file:
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) に記載されているような、JavaScript インターフェイスの _エコー_ 機能にしたい場合には、 `plugin.xml` を使用して、ローカルプラットフォームの `config.xml` ファイルに `feature` を注入 ( inject ) します。
 
         <platform name="ios">
             <config-file target="config.xml" parent="/*">
@@ -147,11 +110,9 @@ specification to the local platform's `config.xml` file:
             </config-file>
         </platform>
 
+次に、 Cordova-iOS アプリのディレクトリ内の `Plugins` フォルダーに、以下の `Echo.h` と `Echo.m` ファイルを追加します。
 
-Then we would add the following `Echo.h` and `Echo.m` files to the
-`Plugins` folder within the Cordova-iOS application directory:
-
-        /********* Echo.h Cordova Plugin Header *******/
+        /********* Echo.h Cordova プラグインのヘッダーファイル *******/
 
         #import <Cordova/CDV.h>
 
@@ -161,7 +122,7 @@ Then we would add the following `Echo.h` and `Echo.m` files to the
 
         @end
 
-        /********* Echo.m Cordova Plugin Implementation *******/
+        /********* Echo.m Cordova プラグインの実装ファイル *******/
 
         #import "Echo.h"
         #import <Cordova/CDV.h>
@@ -184,63 +145,42 @@ Then we would add the following `Echo.h` and `Echo.m` files to the
 
         @end
 
-The necessary imports at the top of the file extends the class from
-`CDVPlugin`.  In this case, the plugin only supports a single `echo`
-action. It obtains the echo string by calling the `objectAtIndex`
-method get the first parameter of the `arguments` array, which
-corresponds to the arguments passed in by the JavaScript `exec()`
-function.
+ファイルの最上部に import を記述して、クラスの拡張を `CDVPlugin` から行うことを示します。この例では、 `echo` アクションを行います。 `objectAtIndex` メソッドを呼び出して、`arguments` 配列の最初のパラメータを取得して、エコーの文字列を獲得します。配列に格納されているパラメータは、JavaScript の `exec()` 関数から渡された引数です。
 
-It checks the parameter to make sure it is not `nil` or an empty
-string, returning a `PluginResult` with an `ERROR` status if so.  If
-the parameter passes the check, it returns a `PluginResult` with an
-`OK` status, passing in the original `echo` string.  Finally, it sends
-the result to `self.commandDelegate`, which executes the `exec`
-method's success or failure callbacks on the JavaScript side. If the
-success callback is called, it passes in the `echo` parameter.
+次に、パラメータが `nil` または空の文字列ではないことを確認します。 `nil` または空の文字列 であった場合、 `ERROR` ステータスの `PluginResult` を返します。確認が無事済んだ場合、 `OK` ステータスの `PluginResult` を返し、また、 `echo` の文字列もそのまま渡します。最後に、実行結果を `self.commandDelegate` に送ります。 `self.commandDelegate` は、JavaScript 側の `exec` メソッド内の成功時または失敗時のコールバックを実行します。成功時のコールバックが呼ばれた場合、 `echo` パラメータを渡します。
 
-## iOS Integration
+## iOS への組み込み
 
-The `CDVPlugin` class features other methods that your plugin can
-override.  For example, you can capture the `pause`, `resume`, app
-terminate and `handleOpenURL` events. See the
+`CDVPlugin` クラスには、開発者側のプラグインを使用して、オーバーライド ( override ) できるメソッドが複数あります。たとえば、 `pause` ( 一時停止 )、 `resume` ( 再開 )、 app_terminate ( アプリの終了 ) 、 `handleOpenURL` イベントなどがあります。クラスのガイダンスに関しては、 
 [CDVPlugin.h](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h)
-and
-[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m)
-class for guidance.
+ と 
+[CDVPlugin.m](https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m) 
+をご確認ください。
 
-## Threading
+## スレッドの処理
 
-Plugin methods ordinarily execute in the same thread as the main
-interface. If your plugin requires a great deal of processing or
-requires a blocking call, you should use a background thread. For
-example:
+通常、プラグインのメソッドは、メインのインターフェイスと同じスレッド内で実行されます。プラグイン側で大量の処理が発生する場合、または、ブロックキング コール ( blocking call ) を必要とする場合には、バックグラウンド スレッド ( background thread ) の使用を推奨します。以下に例を示します。
 
         - (void)myPluginMethod:(CDVInvokedUrlCommand*)command
         {
-            // Check command.arguments here.
+            // command.arguments の内容確認
             [self.commandDelegate runInBackground:^{
                 NSString* payload = nil;
-                // Some blocking logic...
+                // ブロッキング
                 CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-                // The sendPluginResult method is thread-safe.
+                // sendPluginResult メソッドは、 スレッドセーフ ( thread-safe ) です
                 [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
             }];
         }
 
-## Debugging iOS Plugins
+## iOS プラグインのデバッグ
 
-To debug on the Objective-C side, you need Xcode's built-in debugger.
-For JavaScript, on iOS 5.0 you can use [Weinre, an Apache Cordova
-Project](https://github.com/apache/cordova-weinre) or [iWebInspector,
-a third-party utility](http://www.iwebinspector.com/).  For iOS 6, you
-can attach Safari 6.0 to your app running within the iOS 6 Simulator.
+Objective-C 側のデバッグには、 Xcode 搭載のデバッガーを使用します。JavaScript 側であれば、iOS 5.0 の場合、 [Weinre - Apache Cordova
+プロジェクト](https://github.com/apache/cordova-weinre) または [iWebInspector ( 第三者提供のユーティリティ )](http://www.iwebinspector.com/) を使用できます。iOS 6 の場合、iOS 6 シミュレータ内で実行しているアプリに、Safari 6.0 をアタッチ ( attach ) することができます。
 
-## Common Pitfalls
+## よくある失敗
 
-- Don't forget to add your plugin's mapping to `config.xml`. If you
-  forget, an error is logged in the Xcode console.
+- `config.xml` でプラグインをマッピングすることを忘れないでください。忘れた場合、Xcode のコンソール上でエラーが出力されます。
 
-- Don't forget to add any hosts you connect to in the whitelist, as
-  described in Domain Whitelist Guide. If you forget, an error is
-  logged in the Xcode console.
+- 接続を行うホストをホワイトリストに登録することを忘れないでください ( Domain Whitelist Guide を参照 )。忘れた場合、Xcode のコンソール上でエラーが出力されます。
+

@@ -19,213 +19,152 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # iOS プラットフォームに関する解説
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for iOS devices such as iPhone and iPad. See the
-following for more detailed platform-specific information:
+SDK 開発環境の設定方法、および、iOS 搭載のデバイス ( iPhone、iPad など ) への Cordova アプリの展開方法を説明します。
+プラットフォーム固有の詳細情報に関しては、以下をご確認ください。
 
-* iOS Configuration
-* Upgrading iOS
+* iOS の設定
+* iOS のアップグレード
 * iOS WebViews
-* iOS Plugins
-* iOS Command-line Tools
+* iOS プラグイン
+* iOS コマンドライン ツール
 
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
-current interface.
+上記の 『 コマンドライン ツール 』 では、旧バージョン ( Cordova 3.0 以前 ) に実装されていたツールでの作業手順を記しています。
+現コマンドライン インターフェイス ( CLI ) に関しては、『 コマンドライン インターフェイス 』 の記載内容をご確認ください。
 
-## 必要事項とサポート
+## システム要件とサポート
 
-Apple® tools required to build iOS applications run only on the OS X
-operating system on Intel-based Macs. Xcode® 4.5 (the minimum required
-version) runs only on OS X version 10.7 (Lion) or greater, and
-includes the iOS 6 SDK (Software Development Kit).  To submit apps to
-the Apple App Store℠ requires the latest versions of the Apple tools.
+iOS アプリのビルド時に必要となる Apple® ツールは、OS X オペレーティングシステム ( Intel 搭載の Mac ) 上でのみ動作します。Xcode® 4.5 ( 開発に必要な最低限のバージョン、iOS 6 SDK を実装 ) は、バージョン 10.7 Lion 以上の OS X 上でのみ動作します。
+Apple の App Store℠ にアプリを提出する場合、Apple ツールの最新版が必要です。
 
-You can test many of the Cordova features using the iOS emulator
-installed with the iOS SDK and Xcode, but you need an actual device to
-fully test all of the app's device features before submitting to the
-App Store.  The device must have at least iOS 5.x installed, the
-minimum iOS version supported as of Cordova 2.3.  Supporting devices
-include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
-Generation or later. To install apps onto a device, you must also be a
-member of Apple's
-[iOS Developer Program](https://developer.apple.com/programs/ios/),
-which costs $99 per year. This guide shows how to deploy apps to the
-iOS emulator, for which you don't need to register with the developer
-program.
+iOS SDK と Xcode に実装されている iOS エミュレーターを使用して、Cordova の性能をテストすることができますが、App Store へ提出する前には、アプリの全性能を、実機上でテストする必要があります。実機には、最低限、5.x 系の iOS がインストールされている必要があります ( Cordova 2.3 でサポートしている、最小限の iOS バージョン )。サポート対象のデバイスは、iPad® モデルのすべて、iPhone® 3GS　以上、iPod® Touch 第 3 世代以上です。 デバイスにアプリをインストールするには、Apple の 
+[iOS Developer Program](https://developer.apple.com/programs/ios/) の会員である必要があります ( 年会費 99 ドル )。ここでは、iOS エミュレータへのアプリの展開方法を解説します ( エミュレータへの展開の場合、Developer Program への登録は不要です )。
 
 ## SDK のインストール
 
-There are two ways to download Xcode:
+Xcode のダウンロード方法には、2 通りあります。
 
-* from the [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12),
-  available by searching for "Xcode" in the __App Store__ application.
+* [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) から "Xcode" をダウンロードします。
 
-* from [Apple Developer Downloads](https://developer.apple.com/downloads/index.action),
-  which requires registration as an Apple Developer.
+* [Apple Developer ダウンロード](https://developer.apple.com/downloads/index.action) から取得します。Apple Developer へ登録する必要があります。
 
-Once Xcode is installed, several command-line tools need to be enabled
-for Cordova to run. From the __Xcode__ menu, select __Preferences__,
-then the __Downloads__ tab. From the __Components__ panel, press the
-__Install__ button next to the __Command Line Tools__ listing.
+Xcode のインストール後、Cordova を実行するため、コマンドライン ツール を有効にする必要があります。
+__Xcode__ メニューから、 __Preferences__ を選択して、次に __Downloads__ タブを選択します。 __Components__ 画面の一覧表の __Command Line Tools__ の横に表示された __Install__ ボタンを押します。
 
 ## SDK でプロジェクトを開く
 
-Use the `cordova` utility to set up a new project, as described in The
-Cordova The Command-Line Interface. For example, in a source-code directory:
+`cordova` ユーティリティを使用して、『 コマンドライン インターフェイス 』 の記載内容に従い、プロジェクトを新規作成します。
+たとえば、ソースコードディレクトリ上で以下のコマンドを実行します。
 
         $ cordova create hello com.example.hello "HelloWorld"
         $ cd hello
         $ cordova platform add ios
         $ cordova prepare              # or "cordova build"
 
-Once created, you can open it from within Xcode. Double-click to open
-the `hello/platforms/ios/hello.xcodeproj` file.  The screen should
-look like this:
+作成後は、Xcode 上で開くことができます。 `hello/platforms/ios/hello.xcodeproj` ファイルを、ダブルクリックして開きます。
+以下のような画面が表示されます。
 
 ![](img/guide/platforms/ios/helloworld_project.png)
 
 ## エミュレーターへの展開
 
-To preview the app in the iOS emulator:
+iOS エミュレータ上で、アプリを起動させる場合、以下の手順に従います。
 
-1. Make sure the _.xcodeproj_ file is selected in the left panel.
+1. 左側の画面上で、 _.xcodeproj_ ファイルが選択されているか確認してください。
 
-2. Select the __hello__ app in the panel immediately to the right.
+2. 左から 2 番目の枠内の __hello__ アプリを選択します。
 
-3. Select the intended device from the toolbar's __Scheme__ menu, such
-   as the iPhone 6.0 Simulator as highlighted here:
+3. ツールバー上の __Scheme__ メニューから、対象のデバイスを選択します。ここでは、以下のように、iPhone 6.0 Simulator を選択します。
 
    ![](img/guide/platforms/ios/select_xcode_scheme.png)
 
-4. Press the __Run__ button that appears in the same toolbar to the
-   left of the __Scheme__. That builds, deploys and runs the
-   application in the emulator. A separate emulator application opens
-   to display the app:
+4. ツールバーの左端 ( __Scheme__ メニューの左 ) の __Run__ ボタンを押します。ボタンを押すと、ビルド、ならびに、エミュレータへのアプリの展開および実行を行います。エミュレータアプリが別個に起動して、アプリの表示を行います。
 
    ![](img/guide/platforms/ios/HelloWorldStandard.png)
 
-   Only one emulator may run at a time, so if you want to test the app
-   in a different emulator, you need to quit the emulator application
-   and run a different target within Xcode.
+   1 度に実行できるエミュレータは、1 つです。別のエミュレータ上でアプリのテストを行う場合には、エミュレータアプリを閉じて、Xcode 上で別のデバイスを選択します。
 
-Xcode comes bundled with emulators for the latest versions of iPhone
-and iPad. Older versions may be available from the __Xcode &rarr;
-Preferences &rarr; Downloads &rarr; Components__ panel.
+Xcode には、最新バージョンの iPhone と iPad 用の複数のエミュレータが実装されています。旧バージョンのいくつかは、 __Xcode &rarr;
+Preferences &rarr; Downloads &rarr; Components__ から使用できます。
 
 ## デバイスへの展開
 
-For details about various requirements to deploy to a device, refer
-to the _Configuring Development and Distribution Assets_ section of
-Apple's
-[Tools Workflow Guide for iOS](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959).
-Briefly, you need to do the following before deploying:
+デバイスへの展開時の各種要件に関しては、Apple の [iOS ツールワークフロー ガイド](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959) の _開発アセット、配布アセットの設定_ をご確認ください。展開時の手順を、以下に、簡単に説明します。
 
-1. Join the Apple iOS Developer Program.
+1. Apple iOS Developer Program に登録します。
 
-2. Create a _Provisioning Profile_ within the
-   [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action).
-   You can use its _Development Provisioning Assistant_ to create and
-   install the profile and certificate Xcode requires.
+2. [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action) で、 _プロビジョニング プロファイル_ を作成します。 _Development Provisioning Assistant_ を使用して、Xcode 側で必要とする、プロファイルと証明書を、作成・インストールすることができます。
 
-3. Verify that the _Code Signing_ section's _Code Signing Identity_
-   within the project settings is set to your provisioning profile
-   name.
+3. プロジェクトの設定内の _コード署名 ( Code Signing )_ 項目の _コード署名 ID ( Code Signing Identity )_ に、開発者のプロビジョニング プロファイルの名前が設定されているか確認します。
 
-To deploy to the device:
+デバイス上に展開する手順を以下に記します。
 
-1. Use the USB cable to plug the device into your Mac.
+1. USB ケーブルを使用して、デバイスと Mac を接続します。
 
-2. Select the name of the project in the Xcode window's __Scheme__
+2. Xcode ウィンドウ上の __Scheme__ ドロップダウン リストから、プロジェクトの名前を選択します。
    drop-down list.
 
-3. Select your device from the __Device__ drop-down list. If it is
-   plugged in via USB but still does not appear, press the
-   __Organizer__ button to resolve any errors.
+3. __Devices__ 一覧からデバイスを選択します。 USB 接続を使用していると、デバイスが一覧上で表示されない場合があります。その場合には、 __Organizer__ から問題を解決してください。
 
-4. Press the __Run__ button to build, deploy and run the application
+4. __実行__ ボタンを押して、ビルド、ならびに、デバイスへのアプリの展開および実行を行います。
    on your device.
 
-## 問題点
+## 注意事項
 
-__Deprecation Warnings__: When an application programming interface
-(API) is changed or replaced by another API, it is marked as
-_deprecated_.  The API still works in the near term, but is eventually
-removed.  Some of these deprecated interfaces are reflected in Apache
-Cordova, and Xcode issues warnings about them when you build and
-deploy an application.
+__廃止された API に関する注意点__ : 新 API、または別の API が存在して、現 API の変更・置き換えをしなければならない場合、 _廃止 ( deprecated )_ と注意書きされています。対象の API は、一定期間中は使用することができますが、その期間を越えると削除されます。
+廃止対象のインターフェイスのいくつかは、Apache Cordova 側にも反映されます。また、Xcode 側では、アプリのビルド・展開のときに、これらのインターフェイスに関しては、警告 ( Warnings ) が発行されます。
 
-Xcode's warning about the `invokeString` method concerns functionality
-that launches an app from a custom URL. While the mechanism to load
-from a custom URL has changed, this code is still present to provide
-backwards functionality for apps created with older versions of
-Cordova.  The sample app does not use this functionality, so these
-warnings can be ignored.  To prevent these warnings from appearing,
-remove the code that references the deprecated invokeString API:
+`invokeString` メソッドについての　Xcode の警告メッセージは、カスタム URL ( custom ) からアプリを起動する機能と関係があります。
+カスタム URL から読み込みを行う機能は変更されているため、このコードを使用して、旧バージョンの Cordova アプリ用に後方互換性を提供しています。このサンプルアプリでは、この機能は使用していませんので、これらの警告を無視することもできます。警告の表示を止めたい場合には、廃止した invokeString API を参照しているコードを削除します。
 
-* Edit the _Classes/MainViewController.m_ file, surround the following
-  block of code with `/*` and `*/` comments as shown below, then type
-  __Command-s__ to save the file:
+* _Classes/MainViewController.m_ ファイル内を変更します。コメントマーク ( `/*` と `*/` ) を挿入して、以下のコードをコメントアウトします。挿入後、 __Command-s__ ショットカットキーをタイプして、変更を保存します。
 
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
-        // only valid if ___PROJECTNAME__-Info.plist specifies a protocol to handle
+        // ___PROJECTNAME__-Info.plist 内で、取り扱うプロトコルを指定している場合だけ、有効です。
         /*
         if (self.invokeString) {
-          // this is passed before the deviceready event is fired, so you can access it in js when you receive deviceready
-          NSLog(@"DEPRECATED: window.invokeString - use the window.handleOpenURL(url) function instead, which is always called when the app is launched through a custom scheme url.");
+          // deviceready イベントが発火する前に、ここを通過します。これにより、deviceready を受け取るときに、js 内で、アクセスできます。
+          NSLog(@"window.invokeString は、廃止されています。window.handleOpenURL(url) 関数を代わりに使用してください。こちらの関数は、 カスタム URL スキーム ( custom scheme url )経由で、アプリが起動したときに、常に、呼び出されます。");
           NSString* jsString = [NSString stringWithFormat:@"var invokeString = \"%@\";", self.invokeString];
           [theWebView stringByEvaluatingJavaScriptFromString:jsString];
         }
         */
-        // Black base color for background matches the native apps
+        // ネイティブアプリの背景色と一致するよう、黒を設定します。
         theWebView.backgroundColor = [UIColor blackColor];
 
         return [super webViewDidFinishLoad:theWebView];
         }
 
-* Edit the _Classes/AppViewDelegate.m_ file, comment out the following
-  line by inserting a double slash as shown below, then type
-  __Command-s__ to save the file:
+* _Classes/AppViewDelegate.m_ ファイル内を変更します。スラッシュを 2 つ挿入して、以下のラインをコメントアウトします。次に、 __Command-s__ ショットカットキーをタイプして、ファイルの変更を保存します。
 
         //self.viewController.invokeString = invokeString;
 
-* Press __Command-b__ to rebuild the project and eliminate the warnings.
+* __Command-b__ ショートカットキーをタイプして、プロジェクトの再ビルドを行い、警告メッセージを止めます。
 
-<!-- Does this fix only last until the next "cordova prepare"? -->
+<!-- この修正で支障なく実行できるのは、次の "cordova prepare" まで？ ( おそらく、開発者のメモ書きと思われます ) -->
 
-__Missing Headers__: Compilation errors relating to missing headers
-result from problems with the build location, and can be fixed 
-via Xcode preferences:
+__ヘッダーがありません ( Missing Header ) __ : Build Location ( ビルドロケーション ) に問題があることから発生するコンパイルエラー ( ヘッダーの欠如も起因 ) です。Xcode の Preference から修正できます。
 
-1. Select __Xcode &rarr; Preferences &rarr; Locations__.
+1. __Xcode &rarr; Preferences &rarr; Locations__ を選択します。
 
-2. In the __Derived Data__ section, press the __Advanced__ button and
-   select __Unique__ as the __Build Location__ as shown here:
+2. __Derived Data__ 項目の左下の __Advanced__ ボタンを押して、 __Build Location__ 項目の __Unique__ を選択します。
 
    ![](img/guide/platforms/ios/xcode_build_location.png)
 
-This is the default setting for a new Xcode install, but it may be set
-differently following an upgrade from an older version of Xcode.
+こちらが Xcode の新規インストール時のデフォルト設定です。Xcode の旧バージョンからアップグレードを行う場合には、異なる設定になっている場合があります。
 
-For further information, consult Apple's documentation:
+詳細に関しては、Apple のドキュメントをご確認ください。
 
-*  [Start Developing iOS Apps Today](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343) provides a quick overview of steps for developing iOS Apps.
+*  [Start Developing iOS Apps Today ( 今日から始めよう、iOS アプリ開発 )](http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343) では、iOS アプリの開発手順の概要を解説しています。
 
-* [Member Center home page](https://developer.apple.com/membercenter/index.action)
-   provides links to several iOS technical resources including
-   technical resources, the provisioning portal, distribution guides
-   and community forums.
+* [メンバーセンターのホームページ](https://developer.apple.com/membercenter/index.action) では、複数の iOS 開発関連のリソースへのリンクを提供しています。開発関連のリソースには、開発関連の情報、provisioning portal、配布ガイド、コミュニティフォーラムなどが含まれます。
 
-* [Tools Workflow Guide for iOS](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959)
+* [iOS ツールワークフローガイド](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959)
 
-* [Xcode 4 User Guide](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
+* [Xcode 4 ユーザーガイド](http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/Xcode4UserGuide/000-About_Xcode/about.html#//apple_ref/doc/uid/TP40010215)
 
-* [Session Videos](https://developer.apple.com/videos/wwdc/2012/) from
-  the Apple World Wide Developer Conference 2012 (WWDC2012)
+* [講演ビデオ](https://developer.apple.com/videos/wwdc/2012/) Apple World Wide Developer Conference 2012 ( WWDC2012 ) での講演 ( Session ) を録画しています。
 
-* The [xcode-select command](http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html),
-  which helps specify the correct version of Xcode if more than one is installed.
+* [xcode-select コマンド](http://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xcode-select.1.html) は、複数の Xcode がインストールされている場合、対象の Xcode のバージョンを指定するときに使用します。
 
-(Mac®, OS X®, Apple®, Xcode®, App Store℠, iPad®, iPhone®, iPod® and  Finder® are Trademarks of Apple Inc.)
-
+(Mac®、OS X®、Apple®、Xcode®、App Store℠、iPad®、iPhone®、iPod® および Finder® は、Apple 社の登録商標マークです。)

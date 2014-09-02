@@ -17,35 +17,21 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Configuration
+# BlackBerry 10 の設定
 
-The `config.xml` file controls an app's basic settings that apply
-across each application and CordovaWebView instance. This section
-details preferences that only apply to BlackBerry 10 builds. See The
-config.xml File for information on global configuration options.
+`config.xml` ファイルを使用して、各アプリと各 CordovaWebView のインスタンス間に適用する、アプリの基本的な設定を行います。
+この節では、BlackBerry 10 のビルドのみに適用する preference に関して解説します。グローバル設定で使用する各種オプションに関しては、『 config.xml ファイル 』 をご確認ください。
 
-- `ChildBrowser` (`disable` or the default `enable`): Disables child
-  browser windows. By default, apps launch a secondary browser window
-  to display resources accessed via `window.open()` or by specifying a
-  `_blank` anchor target. Specify `disable` to override this default
-  behavior.
+- `ChildBrowser` ( `disable` 、または、デフォルトでは `enable` ) : Child Browser ウィンドウを無効にします。
+デフォルト設定の場合、 `window.open()` またはアンカー ( target = `_blank` ) を使用してアクセスした各リソースを表示するとき、別のブラウザーウィンドウをアプリ側で立ち上げます。 `disable` に指定すると、デフォルトの挙動を上書きします。
 
         <preference name="ChildBrowser" value="disable"/>
 
-- `PopupBlocker` (`enable` or the default `disable`): Enables the
-  popup blocker, which prevents calls to `window.open()`. By default,
-  popups display in a child browser window. Setting the preference to
-  `enable` prevents it from displaying at all.
+- `PopupBlocker` ( `enable` 、または、デフォルトでは `disable` ) : ポップアップブロック ( popup blocker ) を有効にします。ポップアップブロックを有効にすると、 `window.open()` への呼び出しを防ぎます。デフォルトでは、Child Browser ウィンドウ内でポップアップを表示します。preference を `enable` に設定することにより、表示不可にすることができます。
 
         <preference name="PopupBlocker" value="enable"/>
 
-- `WebSecurity` (`disable` or the default `enable`): Set to `disable`
-  to override web security settings, allowing access to remote content
-  from unknown sources. This preference is intended as a development
-  convenience only, so remove it before packaging your app for
-  distribution.  For the released app, all URIs should be known and
-  whitelisted using the `<access>` element, described in the Domain
-  Whitelist Guide.
+- `WebSecurity` ( `disable` 、または、デフォルトでは `enable` ) : `disable` に設定すると、Web のセキュリティ設定を上書きし、提供元不明のアプリ ( Unknown Source ) からのリモートコンテンツへのアクセスを行えるようにします。
+この preference は、開発中のみ、使用するものです。配布用にアプリをパッケージ化する前に削除する必要があります。『 ホワイトリストに関するガイド 』 で記載されているように、リリースを行うアプリに関しては、`<access>` 要素を使用して、ホワイトリストに URI の登録を行い、外部ドメインは既知の状態になっている必要があります。
 
         <preference name="WebSecurity" value="disable"/>
-

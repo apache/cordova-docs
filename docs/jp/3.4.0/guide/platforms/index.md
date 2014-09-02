@@ -23,30 +23,30 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 Cordova アプリの開発を行う場合、対象とする各モバイルプラットフォーム用の SDK をインストールする必要があります。SDK を主に使用した開発を行う場合はもちろんのこと、CLI を主に使用してビルドを行う場合でも、SDK のインストールは必須となります。
 
-下記の各 _プラットフォームに関する解説_ においても、各プラットフォーム別に開発環境を構築方法 ( SDK 取得方法、エミュレーターの設定方法、デバイスに直接接続してテストを行う方法、署名と鍵の取り扱い方法 ) などを記述しています。また、他の事項の解説では、プラットフォーム特有の設定オプション、プラグインの追加手順、プラットフォームのアップグレード方法、プラットフォーム別のコマンドライン ツールの使用方法 ( `cordova` のコマンドライン ユティリティー の代替として使用 ) に関する情報を提供します。 
+下記の各 _プラットフォームに関する解説_ においても、各プラットフォーム別に開発環境を構築方法 ( SDK 取得方法、エミュレーターの設定方法、デバイスに直接接続してテストを行う方法、署名と鍵の取り扱い方法 ) などを記述しています。また、他の事項の解説では、プラットフォーム特有の設定オプション、プラグインの追加手順、プラットフォームのアップグレード方法、プラットフォーム別のコマンドライン ツールの使用方法 ( `cordova` のコマンドライン ユーティリティ の代替として使用 ) に関する情報を提供します。 
 
 ## Amazon Fire OS
 
 * Amazon Fire OS プラットフォームに関する解説
-* Amazon Fire OS に関する設定
-* Amazon Fire OS の WebView
-* Amazon Fire OS のプラグイン
+* Amazon Fire OS の設定
+* Amazon Fire OS WebView
+* Amazon Fire OS プラグイン
 
 ## Android
 
 * Android プラットフォームに関する解説
-* Android に関する設定
-* Android の WebView
-* Android のプラグイン
-* Android のコマンドライン ツール
+* Android の設定
+* Android WebView
+* Android プラグイン
+* Android コマンドライン ツール
 * Android のアップグレード
 
 ## BlackBerry 10
 
 * BlackBerry 10 プラットフォームに関する解説
-* BlackBerry 10 に関する設定
-* BlackBerry 10 のプラグイン
-* BlackBerry 10 のコマンドライン ツール
+* BlackBerry 10 の設定
+* BlackBerry 10 プラグイン
+* BlackBerry 10 コマンドライン ツール
 * BlackBerry 10 のアップグレード
 
 ## Firefox OS
@@ -56,10 +56,10 @@ Cordova アプリの開発を行う場合、対象とする各モバイルプラ
 ## iOS
 
 * iOS プラットフォームに関する解説
-* iOS に関する設定
-* iOS の WebView
-* iOS のプラグイン
-* iOS のコマンドライン ツール
+* iOS の設定
+* iOS WebView
+* iOS プラグイン
+* iOS コマンドライン ツール
 * iOS のアップグレード
 
 ## Ubuntu
@@ -70,14 +70,14 @@ Cordova アプリの開発を行う場合、対象とする各モバイルプラ
 
 * Windows Phone 8 プラットフォームに関する解説
 * Windows Phone 7 プラットフォームに関する解説
-* Windows Phone に関する設定
-* Windows Phone のコマンドライン ツール
+* Windows Phone の設定
+* Windows Phone コマンドライン ツール
 * Windows Phone のアップグレード
 
 ## Windows 8
 
 * Windows 8 プラットフォームに関する解説
-* Windows 8 のコマンドライン ツール
+* Windows 8 コマンドライン ツール
 * Windows 8 のアップグレード
 
 ## Tizen

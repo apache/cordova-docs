@@ -17,98 +17,35 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Privacy Guide
+# プライバシーに関する注意点
 
-Mobile privacy is a critical issue that every app developer must
-address. Your users expect that their private information will be
-collected and treated appropriately by your app. Also, there are an
-increasing number of jurisdictions that now have legal requirements
-regarding mobile privacy practices.
+携帯端末と個人情報に関わる事項は、アプリケーション開発者が検討しなければならない問題の 1 つです。
+アプリが取り扱う個人情報に関して、適切に、処理・管理されていることを、ユーザーは期待しています。
+また、携帯端末と個人情報の取り扱いに関する法的な制度も、近年では急速に整備されつつあります。
 
-This guide on mobile app privacy should be considered a _primer_
-addressing some the most significant issues. It outlines some broadly
-accepted best practices and provides references to other more detailed
-guides and references.
+携帯端末と個人情報は、その取り扱いに関連して、さまざまな問題も生じさせる導火線になりかねません。ここでは、共通認識となりつつある、個人情報の収集・処理・管理に関する一般的な注意点、および、他のガイド・参考文献などを紹介しています。
 
-* __Privacy Policy__: You app should include a privacy policy that
-  addresses topics such as what kind of information your app collects
-  from or about your users, how that information is used, with whom it
-  is shared, and how users can make privacy-related choices within the
-  app. To aid understanding, you should use plain language and avoid
-  technical jargon. You should make your privacy policy available for
-  users to review prior to download, such as in the app description in
-  the app marketplace. In addition, you should make your privacy
-  policy available within the app itself. The limited size of mobile
-  device displays creates challenges for displaying privacy policies
-  to users. Consider developing a _short form_ of the policy that
-  includes the most important information, and then provide a link to
-  the "long form" policy for those interested in more details. Several
-  groups are attempting to develop icon-based standards for
-  communicating privacy practices, which you may want to consider once
-  these standards mature.
+* __プライバシー ポリシー__ : 収集を行うユーザー情報の内容、情報の利用目的、第三者への提供の有無、個人情報の取り扱いに関するユーザーの許諾などは、プライバシー ポリシー内で、記述を行うべき事項です。ユーザーの困惑を最小限にするため、わかりやすい言葉を使用して、技術的な詳細は避けるようにしましょう。また、アプリのダウンロード画面上で、アプリの概要を記述している項目内に、プライバシー ポリシーを記述するなどして、ユーザーがアプリのダウンロードを行う前に、その内容を確認できるようにしましょう。また、アプリ内においても、プライバシー ポリシーを確認できるようにしましょう。また、ユーザーが使用する端末の画面サイズを考慮にいれ、プライバシー ポリシーを適切・十分に表示できるようにもしましょう。プライバシー ポリシーの中でも、重要事項のみをまとめて _省略_ した内容を作成することも良いでしょう。併せて、その内容にリンクを貼り、リンク先に、改めて "詳細" な内容を掲載するなど、工夫も必要です。また、複数の団体においては、個人情報の取り扱いの標準化 ( アイコンの使用・作成・統一化 ) に取り組んでいます。これらの標準化が一般に浸透してきたときには、これらに準拠するのも良いかもしれません。
 
-* __Collection of sensitive information__: An app's collection of
-  sensitive personal information raises important privacy concerns.
-  Examples of sensitive personal information include financial
-  information, health information, and information from or about
-  children. It also includes information gathered from certain sensors
-  and databases typically found on mobile devices and tablets, such as
-  geolocation information, contacts/phonebook, microphone/camera, and
-  stored pictures/videos. See the following documentation pages for
-  more information: [camera](cordova_camera_camera.md.html),
-  [capture](cordova_media_capture_capture.md.html),
-  [contacts](cordova_contacts_contacts.md.html), and
-  [geolocation](cordova_geolocation_geolocation.md.html). Generally,
-  you should obtain a user's express permission before collecting
-  sensitive information and, if possible, provide a control mechanism
-  that allows a user to easily change permissions. App operating
-  systems can help in some instances by presenting just-in-time dialog
-  boxes that ask for the user's permission before collection. In these
-  cases, be sure to take advantage of any opportunity to customize the
-  dialog box text to clarify how the app uses and, if applicable,
-  shares such information.
+* __個人情報の収集__ : アプリによる個人情報の収集に関しては、プライバシー侵害の問題があります。個人情報の中でも、ユーザーが入力した、経済・健康・家族構成に関する情報は、その取り扱いに注意が必要です。併せて、携帯端末・タブレット上のセンサーとデータベースから収集する個人情報 ( 位置情報・連絡先・カメラ・写真・動画など ) の取り扱いにも注意が必要です。詳細に関しては、 [カメラ](cordova_camera_camera.md.html) 、 [メディアキャプチャー](cordova_media_capture_capture.md.html) 、 [連絡先](cordova_contacts_contacts.md.html) 、 [位置情報](cordova_geolocation_geolocation.md.html) をご確認ください。個人情報を収集する前に、ユーザーへの明示的な許諾を取るようにしましょう。また、可能であれば、使用許諾に関して、後から、ユーザー側で変更できるように、管理機能も提供するようにしましょう。いくつかのオペレーシングシステムでは、情報収集前に、ユーザーの許諾を要求するダイアログボックスを表示できます。そのようなオペレーティングシステムであれば、ダイアログをカスタマイズして、使用するのも良いでしょう。
 
-* __Avoiding user surprise__: If your app collects or uses information
-  in a way that may be surprising to users in light of the primary
-  purpose of your app (for example, a music player that accesses
-  stored pictures), you should take similar steps as with the
-  collection of sensitive personal information. That is, you should
-  strongly consider the use of just-in-time dialog boxes to inform the
-  user about the collection or use of that information and, if
-  appropriate, provide a corresponding privacy control.
+* __ユーザー側の不安解消__ : アプリが提供している機能の一部において、ユーザーを不快にする方法で、収集した情報を使用している場合があります ( 保存されている写真にアクセス・表示する、ミュージック再生アプリなど )。アプリの機能の一部ではありますが、このような場合も、上述のような、ユーザーの許諾を先に取得する必要があります。ユーザーへの事前通知と許諾を得るため、上述のダイアログボックスを使用すること、併せて、許諾取得後も、許諾を取り消せるよう、管理機能を提供すると良いでしょう。
 
-* __Third party data collection or sharing__: If you app collects
-  information that is provided to another company--such as a social
-  networking platform or an ad network (for example, if your app
-  displays advertising)--you should inform your users of that
-  collection and sharing. At a minimum, your privacy policy should
-  describe the information collection and sharing and, if appropriate,
-  offer your users the ability to control or opt-out of such
-  collection or sharing.
+* __第三者への情報提供と共同利用__ : 第三者 ( ソーシャルネットワーク、広告配信ネットワークなど ) へ提供する情報を収集する機能がアプリに実装されている場合、その旨をユーザーに告知する必要があります。プリバシー ポリシー内で、第三者への情報提供と共同利用に関する記載をして、適当であれば、これについて、制御・拒絶などをユーザー側で行える必要があります。
 
-* __Collection limitation and security__: Your users entrust your app
-  with their information and they expect that you will take
-  appropriate security precautions to protect it. One of the best ways
-  to avoid security compromises of personal information is not to
-  collect the information in the first place unless your app has a
-  specific and legitimate business reason for the collection. For
-  information that does need to be collected, ensure that you provide
-  appropriate security controls to protect that information, whether
-  it is stored on the device or on your backend servers. You should
-  also develop an appropriate data retention policy that is
-  implemented within the app and on your backend servers.
+* __収集の制限とセキュリティー__ : アプリで収集した情報は、適当なセキュリティー管理下にあるものと、ユーザーは期待しています。セキュリティーに不安がある場合、正当な目的がある場合を除き、個人情報の収集を行わないことが最善の策です。収集しなければならない情報がある場合、データの保存場所 ( アプリ上またはバックエンドサーバー上 ) に関わらず、セキュリティー管理が適切に行われている必要があります。また、データ保持の期間に関しても、ポリシーを策定する必要があります。
 
-Following are some additional helpful mobile privacy guides for developers:
+開発者向けに書かれた、携帯端末と個人情報の取り扱いに関する他のガイドを、以下に記します。
 
-* California Attorney General, [Privacy on the Go: Recommendations for the Mobile Ecosystem][1]
+* カリフォルニア州司法長官、 [プライバシーの保護 : モバイル エコシステム ( Mobile Ecosystem ) 向けの勧告][1]
 
-* Center for Democracy & Technology, Future of Privacy Forum, [Best Practices for Mobile App Developers][2]
+* 民主主義とテクノロジー センター ( Center for Democracy & Technology )、プライバシーの未来フォーラム ( Future of Privacy Forum )、[携帯アプリ開発者が検討すべき事項][2]
 
-* CTIA-The Wireless Association, [Best Practices and Guidelines for Location Based Services][3]
+* CTIA 無線協会 ( CTIA-The Wireless Association )、 [位置情報を使用したサービスの取り扱いとガイドライン][3]
 
-* Federal Trade Commission, [Mobile Privacy Disclosures: Building Trust Through Transparency][4]
+* 米連邦取引委員会 ( Federal Trade Commission )、 [携帯端末とプライバシーの暴露 : 透明性を通じた信頼性の構築][4]
 
-* Future of Privacy Forum, [Application Privacy][5] Website
+* プライバシーの未来フォーラム、 [アプリケーションのプライバシー][5] ウェブサイト
 
 [1]: http://oag.ca.gov/sites/all/files/pdfs/privacy/privacy_on_the_go.pdf
 [2]: http://www.futureofprivacy.org/wp-content/uploads/Best-Practices-for-Mobile-App-Developers_Final.pdf

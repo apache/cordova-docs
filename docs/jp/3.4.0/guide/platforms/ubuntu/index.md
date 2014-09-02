@@ -19,53 +19,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Ubuntu プラットフォームに関する解説
 
-## イニシャルリリース ( Initial Release )
+## イニシャルリリース ( 初版リリース / Initial Release )
 
-Welcome to the initial release of Ubuntu platform support in Cordova. With this
-release, the focus is developing on an Ubuntu system and using the Cordova Web
-Project Dev Workflow. This includes adding the Ubuntu platform to your project,
-adding standard Cordova plugins, and, of course, building and running apps for
-the Ubuntu platform.
+Ubuntu プラットフォームをサポートする、イニシャルリリースとなります。ここでは、Ubuntu 上でのアプリ構築と Web プロジェクト開発手順に従った作業を行います。手順には、プロジェクトへの Ubuntu プラットフォームの追加、Cordova 標準プラグインの追加、Ubuntu プラットフォーム用アプリのビルド・実行まで含まれています。
 
 ### Ubuntu SDK
 
-You may also want to install the Ubuntu QtCreator development environment. See
-[developer.ubuntu.com](http://developer.ubuntu.com) for more info. (The
-QtCreator SDK is not required to add Ubuntu platform support to your Cordova
-app.)
+Ubuntu QtCreator 開発環境をインストールすることができます。詳細に関しては、 [developer.ubuntu.com](http://developer.ubuntu.com) をご確認ください ( QtCreator SDK のインストールは、任意です。必要であれば追加してください。 )。
 
-### Ubuntu ランタイム プラットフォーム
+### Ubuntu ランタイム プラットフォーム ( Runtime Platform )
 
-Ubuntu is well-known for its Desktop environment (for laptops, PCs and such).
-Ubuntu Touch extends the Ubuntu OS onto phones and tablets. Ubuntu runtime
-platforms have varying CPU architectures (x86, armhf, etc.). App and plugin
-code must be compiled appropriately. Support for this broad area is rapidly
-evolving in the Ubuntu.
+Ubuntu は、そのデスクトップ環境の利便性により、広く認知されるようになりました ( laptop、PC など )。
+Ubuntu Touch は、スマートフォンとタブレット上で Ubuntu OS が動作するよう、拡張を行ったものです。
+Ubuntu ランタイム プラットフォーム ( runtime
+platform ) は、複数の異なる CPU アーキテクチャ ( x86、armhf など ) をサポートしています。よって、アプリとプラグインコードは、適宜、コンパイルする必要があります。この分野のサポートは、Ubuntu 側でも急速に進化・改変しています。
 
 ### 最新情報
 
-For the latest information on Cordova app support for Ubuntu runtime platforms,
-see [wiki.ubuntu.com/Cordova](http://wiki.ubuntu.com/Cordova).
+Ubuntu ランタイム プラットフォーム上における、Cordova アプリのサポートに関しての最新情報は、 [wiki.ubuntu.com/Cordova](http://wiki.ubuntu.com/Cordova) をご確認ください。
 
 ## 開発プラットフォームに関する必要事項
 
-For this initial release, the development platform should be an Ubuntu Desktop.
-Ubuntu 13.10 (codename ‘saucy’) or later is required to enjoy the full set of
-supported capabilities.
+イニシャルリリースにおいては、開発対象のプラットフォームは、Ubuntu デスクトップのいずれかとなります。サポートされている機能のすべてを使用するには、
+Ubuntu 13.10 ( コード名 「 ‘saucy’ 」 ) 以降のバージョンが必要です。
 
-You can install Cordova on non-Ubuntu systems (using npm), but important
-capabilities are only provided through Ubuntu debian packages at this time.
+非公式の Ubuntu システムに、npm を使用して、Cordova をインストールすることもできます。ただし、Ubuntu 用 Debian パッケージ群経由で現在提供されている、重要な機能は使用できません。
 
 ## Cordova のインストール
 
-Add the Ubuntu Cordova
-[Personal Package Archive](https://launchpad.net/~cordova-ubuntu/+archive/ppa)
-to your Ubuntu system:
+Ubuntu Cordova 
+[Personal Package Archive ( PPA )](https://launchpad.net/~cordova-ubuntu/+archive/ppa) を、開発者の Ubuntu システムに追加します。
 
     $ sudo add-apt-repository ppa:cordova-ubuntu/ppa
     $ sudo apt-get update
 
-Install cordova-cli package (and its dependencies):
+Install cordova-cli パッケージ ( 各種依存関係を含む ) をインストールします。
 
     $ sudo apt-get install cordova-cli
 
@@ -75,7 +63,7 @@ Install cordova-cli package (and its dependencies):
 
     $ cordova create project1 REVERSEDNSNAME.project1 project1
 
-### プロジェクトを保存したディレクトリーへの移動
+### プロジェクトを保存したディレクトリーへ移動
 
     $ cd project1
 

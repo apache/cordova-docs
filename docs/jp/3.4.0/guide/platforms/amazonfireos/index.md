@@ -18,15 +18,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 ---
 
 # Amazon Fire OS プラットフォームに関する解説
+
 SDK 開発環境の設定方法、および、Amazon Fire OS 搭載のデバイス （ Kindle Fire HDX など )　への Cordova アプリの展開方法を説明します。
 
 各プラットフォームの詳細情報に関しては、以下をご確認ください。
 
-* Amazon Fire OS 設定
+* Amazon Fire OS の設定
 * Amazon Fire OS WebView
 * Amazon Fire OS プラグイン
 
-## 必要事項とサポート
+## システム要件とサポート
 
 Amazon Fire OS 用に Cordova アプリを開発する場合、Android SDK と Amazon WebView SDK が必要です。これらの SDK をインスールするときの必要事項に関しては、以下のリンク先をご確認ください。
 
@@ -35,7 +36,6 @@ Amazon Fire OS 用に Cordova アプリを開発する場合、Android SDK と A
 * [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv)
 
 ## インストール
-
 
 ### Android SDK
 
@@ -81,8 +81,7 @@ Java と Ant も有効化することができます。コマンドプロンプ�
 
 ## SDK でプロジェクトを開く
 
-新規のプロジェクトを作成・設定するときは、 `cordova` ユティリティー ( Cordova コマンドライン インターフェイス の解説に記載 ) をお使いください。ソースコードを置いたディレクトリーで以下のラインを入力します。
-
+新規のプロジェクトを作成・設定するときは、 `cordova` ユーティリティ ( 『 コマンドライン インターフェイス 』 に記載 ) をお使いください。ソースコードを置いたディレクトリーで以下のラインを入力します。
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -114,8 +113,6 @@ Eclipse ウィンドウが開いたときに、未解決事項があると、赤
 
 * __Project__ メニューから __Clean__ を選択します。 ここまでの手順で、プロジェクトに存在したエラーをすべて解決することができるはずです。
 
-
-
 ## デバイスへの展開
 
 デバイスにアプリを直接にプッシュする場合、デバイスの USB デバッグ ( USB debugging ) が有効であることを確認してください ( [Android Developer Site](http://developer.android.com/tools/device.html) の記載事項 )。また、その場合、mini USB ケーブルを使用して、システムに接続を行ってください。
@@ -125,6 +122,6 @@ Eclipse ウィンドウが開いたときに、未解決事項があると、赤
     $ cordova run amazon-fireos
 
 また、Eclipse を使用することもできます。プロジェクトを右クリックして、 __実行 ( Run
-As ) &rarr; Android アプリケーション (Android Application)__ を選択します。
+As ) &rarr; Android アプリケーション ( Android Application )__ を選択します。
 
 __注意__: 現在、Amazon WebView を使用したアプリに関しては、エミュレーター上でのテストを行うことができません。

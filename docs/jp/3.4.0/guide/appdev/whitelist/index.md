@@ -17,144 +17,107 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Whitelist Guide
+# ホワイトリストに関するガイド
 
-Domain whitelisting is a security model that controls access to
-external domains over which you application has no control.  Cordova's
-default security policy allows access to any site. Before moving your
-application to production, you should formulate a whitelist and allow
-access to specific network domains and subdomains.
+セキュリティ対策の一環として、アプリの制御範囲外に位置する外部ドメインへのアクセスを制御するため、ドメインを使用したホワイトリストの作成を行います。Cordova の通常のセキュリティポリシーでは、どのサイトにでもアクセス可能となっています。アプリを製品として出荷する前に、ホワイトリストの策定と特定のネットワークドメイン・サブドメインへのアクセス許可の設定を行う必要があります。
 
-Cordova adheres to the [W3C Widget Access][1] specification, which
-relies on the `<access>` element within the app's `config.xml` file to
-enable network access to specific domains. For projects that rely on
-the CLI workflow described in The Command-Line Interface, this file is
-located in the project's top-level directory. Otherwise for
-platform-specific development paths, locations are listed in the
-sections below. (See the various Platform Guides for more information
-on each platform.)
+Cordova は、 [W3C Widget Access][1] の規格に準拠しています。この規格では、アプリの `config.xml` ファイル内で `<access>` 要素を使用して、特定のドメインにネットワークアクセスできるよう規定しています。 『 コマンドライン インターフェイス 』 に記載の CLI 作業手順 ( 「 Web プロジェクト開発 」 作業手順 ) に従い、プロジェクトを作成する場合、このファイルは、プロジェクトの最上位 ( top-level ) のディレクトリに置かれています。これ以外の場合、プラットフォーム毎の開発工程 ( 「 ネイティブ プラットフォーム開発 」 作業手順 ) に従うのであれば、ファイルの位置は、下記をご確認ください ( 詳細に関しては、各 『 プラットフォームに関する解説 』 をご確認ください )。
 
-The following examples demonstrate whitelist syntax:
+以下にホワイトリストの記法を示します。
 
-* Access to [google.com][2]:
+* [google.com][2] へのアクセス 
 
         <access origin="http://google.com" />
 
-* Access to the secure [google.com][3] (`https://`):
+* 安全が確認されている [google.com][3] (`https://`) へのアクセス
 
         <access origin="https://google.com" />
 
-* Access to the subdomain [maps.google.com][4]:
+* サブドメインである [maps.google.com][4] へのアクセス 
 
         <access origin="http://maps.google.com" />
 
-* Access to all the subdomains on [google.com][2], for example
-  [mail.google.com][5] and [docs.google.com][6]:
+* [google.com][2] 下のすべてのサブドメインへのアクセス。ここでは、例として [mail.google.com][5] と [docs.google.com][6] を想定します。 
 
         <access origin="http://*.google.com" />
 
-* Access to _all_ domains, for example, [google.com][2] and
-  [developer.mozilla.org][7]:
+* _すべて_ のドメインへのアクセス。ここでは、例として、 [google.com][2] と
+  [developer.mozilla.org][7] を想定します。 
 
         <access origin="*" />
 
-  This is the default value for newly created CLI projects.
+  こちらは、CLI を使用して、プロジェクトを新規作成した場合のデフォルト値です。
 
-## Amazon Fire OS Whitelisting
+## Amazon Fire OS におけるホワイトリストの作成
 
-Platform-specific whitelisting rules are found in
-`res/xml/config.xml`.
+このプラットフォームのホワイトリストの登録は、 `res/xml/config.xml` で行います。
 
-## Android Whitelisting
+## Android におけるホワイトリストの作成
 
-Platform-specific whitelisting rules are found in
-`res/xml/config.xml`.
+このプラットフォームのホワイトリスト登録は、 `res/xml/config.xml` で行います。
 
-__NOTE__: On Android 2.3 and before, domain whitelisting only works
-for `href` hyperlinks, not referenced resources such as images and
-scripts. Take steps to avoid scripts from being injected into the
-application.
+__注意__ : Android 2.3 以前では、ドメインを使用したホワイトリスト化は、 `href` のハイパーリンクのみが対象で、画像とスクリプトのような参照対象のリソースは対象外でした。
+スクリプトがアプリに注入 ( inject ) されることを避けるために、必要な処理を行ってください。
 
-Navigating to non-whitelisted domains via `href` hyperlink causes the
-page to open in the default browser rather than within the
-application.  (Compare this to iOS's behavior noted below.)
+`href` のハイパーリンク経由で、ホワイトリストに未登録のドメインにナビした場合、アプリ内ではなく、標準ブラウザー内でページを開きます ( この点を下記の iOS の挙動と比較してみてください )。
 
-## iOS Whitelisting
+## iOS におけるホワイトリストの作成
 
-The platform's whitelisting rules are found in the named application
-directory's `config.xml` file.
+このプラットフォームのホワイトリストの登録は、アプリのディレクトリの `config.xml` ファイルで行います。
 
-Origins specified without a protocol, such as `www.apache.org` rather
-than `http://www.apache.org`, default to all of the `http`, `https`,
-`ftp`, and `ftps` schemes.
+`http://www.apache.org` ではなく、 `www.apache.org` のように、プロトコルを書き加えず、生成元 ( Origin ) だけを指定した場合、デフォルトでは、 `http` 、 `https` 、 `ftp` 、 `ftps` スキームをすべて適用します。
 
-Wildcards on the iOS platform are more flexible than in the [W3C
-Widget Access][1] specification.  For example, the following accesses
-all subdomains and top-level domains such as `.com` and `.net`:
+iOS プラットフォームにおけるワイルドカードの取り扱いは、 [W3CWidget Access][1] 規格より柔軟です。たとえば、以下の記述を使用すると、 `.com` と `.net` のすべてのサブドメインとトップレベルのドメインにアクセスできます。
 
         <access origin="*.google.*" />
 
-Unlike the Android platform noted above, navigating to non-whitelisted
-domains via `href` hyperlink on iOS prevents the page from opening at
-all.
+上記の Android プラットフォームとは異なり、 `href` のハイパーリンク経由で、ホワイトリストに未登録のドメインへナビゲートした場合、iOS では、ページが開きません。
 
-## BlackBerry 10 Whitelisting
+## BlackBerry 10 におけるホワイトリストの作成
 
-The whitelisting rules are found in `www/config.xml`.
+ホワイトリストの登録は、 `www/config.xml` で行います。
 
-BlackBerry 10's use of wildcards differs from other platforms in two
-ways:
+BlackBerry 10 では、以下の 2 つの点で、ワイルドカードの取り扱いが他のプラットフォームとは異なります。
 
-* Any content accessed by `XMLHttpRequest` must be declared
-  explicitly. Setting `origin="*"` does not work in this case.
-  Alternatively, all web security may be disabled using the
-  `WebSecurity` preference described in BlackBerry Configuration:
+* `XMLHttpRequest` を使用してアクセスを行うコンテンツを、明示的に宣言しなければいけません。この場合、 `origin="*"` は使用できません。『 BlackBerry 10 の設定 』 に記載されているように、代替的に、 `WebSecurity` の preference を使用して、Web セキュリティを無効にすることもできます。
  
         <preference name="websecurity" value="disable" />
 
-* As an alternative to setting `*.domain`, set an additional
-  `subdomains` attribute to `true`. It should be set to `false` by
-  default. For example, the following allows access to `google.com`,
-  `maps.google.com`, and `docs.google.com`:
+* `*.domain` と設定する代わりに、 `subdomains` 属性 ( `true` に設定 ) を追加することもできます。デフォルトでは、 `false` に設定します。たとえば、以下の設定では、 `google.com` 、 `maps.google.com` 、 `docs.google.com` にアクセス可能です。
 
         <access origin="http://google.com" subdomains="true" />
 
-  The following narrows access to `google.com`:
+  以下の設定では、 `google.com` のみにアクセスを絞り込みます。
 
         <access origin="http://google.com" subdomains="false" />
 
-  Specify access to all domains, including the local `file://`
-  protocol:
+  以下の設定では、ローカル ( `file://` プロトコル ) を含む、すべてのドメインにアクセス可能です。
 
     <access origin="*" subdomains="true" />
 
-(For more information on support, see BlackBerry's documentation on the
-[access element][8].)
+( サポートに関する詳細は、BlackBerry のドキュメントの [access element][8] をご確認ください。)
 
-## iOS Changes in 3.1.0
+## 3.1.0 における変更点 ( iOS が対象 )
 
-Prior to version 3.1.0, Cordova-iOS included some non-standard extensions to the domain whitelisting scheme supported by other Cordova platforms. As of 3.1.0, the iOS whitelist now conforms to the resource whitelist syntax described at the top of this document. If you upgrade from pre-3.1.0, and you were using these extensions, you may have to change your `config.xml` file in order to continue whitelisting the same set of resources as before.
+3.1.0 より前のバージョンにおいて、Cordova-iOS では、ホワイトリストのドメインに、他の Cordova-OtherPlatform ( 他のプラットフォーム ) がサポートを行っていた、標準ではない、いくつかの拡張子を使用していました。3.1.0 では、iOS ホワイトリストは、この節の最初に記述しているように、ネットワークリソースへのアクセスを行うときに適用するホワイトリストの記法に準拠しています。3.1.0 より前からアップグレードを行い、そして、前述のような拡張子を使用していた場合、以前と同じリソースが使用できるよう、`config.xml` ファイル内のホワイトリストを変更する必要があります。
 
-Specifically, these patterns need to be updated:
+特に、以下で示す記述は更新が必要です。
 
-- `apache.org` (no protocol): This would previously match `http`, `https`, `ftp`, and `ftps` protocols. Change to "`*://apache.org/*`" to include all protocols, or include a line for each protocol you need to support.
+- `apache.org` ( プロトコルなし ) : この記法を使用すると、以前では、 `http` 、 `https` 、 `ftp` 、 `ftps` プロトコルを適用していました。更新後は、 "`*://apache.org/*`" に変更して、すべてのプロトコルが対象であると明示的に定義します。または、サポートするプロトコルを個別に書きます。
 
-- `http://apache.*` (wildcard at end of domain): This would previously match all top-level-domains, including all possible two-letter TLDs (but not useful domains like .co.uk). Include a line for each TLD which you actually control, and need to whitelist.
+- `http://apache.*` ( ドメインの最後にワイルドカード ) : この記法を使用すると、以前では、2 つの文字の可能な限り ( .co.uk のような組み合わせのドメインは除く ) の組み合わせを含む、すべてのトップレベルドメイン ( top-level-domain / TLD ) を適用していました。更新後は、実際に制御を行う各 TLD を使用して、ホワイトリスト化します。
 
-- `h*t*://ap*he.o*g` (wildcards for random missing letters): These are no longer supported; change to include a line for each domain and protocol that you actually need to whitelist.
+- `h*t*://ap*he.o*g` ( ワイルドカードを虫食い状態に挿入 ) : こちらのサポートは行いません。更新後は、実際の各ドメインとプロトコルを使用して、ホワイトリスト化します。
 
-## Windows Phone Whitelisting
+## Windows Phone におけるホワイトリストの作成
 
-The whitelisting rules for Windows Phone 7 and 8 are found in the
-app's `config.xml` file.
+Windows Phone 7 と 8 のホワイトリストの登録は、アプリの `config.xml` ファイルで行います。
 
-## Tizen Whitelisting
+## Tizen におけるホワイトリストの作成
 
-Whitelisting rules are found in the app's `config.xml` file. The
-platform relies on the same `subdomains` attribute as the BlackBerry
-platform.
-(For more information on support, see Tizen's documentation on the
-[access element][9].)
+ホワイトリストの登録は、アプリの `config.xml` ファイルで行います。BlackBerry と同じく、このプラットフォームでは、 `subdomains` 属性を使用します。
+
+( サポートに関する詳細は、Tizen のドキュメントの [access element][9] をご確認ください。)
 
 [1]: http://www.w3.org/TR/widgets-access/
 [2]: http://google.com

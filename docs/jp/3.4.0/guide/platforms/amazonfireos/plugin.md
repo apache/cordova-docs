@@ -17,15 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Amazon Fire OS Plugins
+# Amazon Fire OS プラグイン
 
-Follow the instructions provided in the Android Plugins Guide for an overview of developing custom plugins.
+プラグインのカスタマイズに関する概要を記載した 『 Android プラグイン 』 の手順をご確認ください。
 
-## Echo Amazon Fire OS Plugin Example
+## Amazon Fire OS における Echo プラグインの例
 
-To match the JavaScript interface's _echo_ feature described in
-Application Plugins, use the `plugin.xml` to inject a `feature`
-specification to the local platform's `config.xml` file:
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) に記載されている、JavaScript インターフェイスの _エコー_ 機能にしたい場合には、 `plugin.xml` を使用して、ローカルプラットフォームの `config.xml` ファイルに `feature` を注入 ( inject ) します。
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -35,8 +33,7 @@ specification to the local platform's `config.xml` file:
         </config-file>
     </platform>
 
-Then add the following to the
-`src/org/apache/cordova/plugin/Echo.java` file:
+次に、以下のラインを `src/org/apache/cordova/plugin/Echo.java` ファイルに追加します。
 
     package org.apache.cordova.plugin;
 
@@ -48,8 +45,9 @@ Then add the following to the
     import org.json.JSONObject;
 
     /**
-     * This class echoes a string called from JavaScript.
+     * JavaScript から呼ばれた文字列をエコーします。
      */
+
     public class Echo extends CordovaPlugin {
 
         @Override
@@ -71,7 +69,7 @@ Then add the following to the
         }
     }
 
-If you want to reuse Android Plugin code for the Amazon Fire OS platform then modify the plugin.xml to point to the `android` specific source file. For example,
+Android プラグインのコードを、Amazon Fire OS プラットフォーム用に再利用したい場合は、`android` 下のソースファイル ( source-file ) を指すよう、plugin.xml の修正を下記のように行ってください。
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -82,7 +80,7 @@ If you want to reuse Android Plugin code for the Amazon Fire OS platform then mo
         <source-file src="src/android/Echo.java" target-dir="src/org/apache/cordova/plugin" />
     </platform>
 
-If you want to write a customized plugin for the Amazon Fire OS platform then create a folder named `amazon` under your plugin src/ folder and modify the plugin.xml to point to the `amazon` specific source file. For example,
+Amazon Fire OS 用にプラグインのカスタマイズを行いたい場合には、開発者のプラグインの src/ フォルダー下に `amazon` と名付けたフォルダーを作成してください。次に、`amazon` 下のソースファイル ( source-file ) を指すよう、plugin.xml の修正を下記のように行ってください。
 
     <platform name="amazon-fireos">
         <config-file target="config.xml" parent="/*">
@@ -93,8 +91,8 @@ If you want to write a customized plugin for the Amazon Fire OS platform then cr
         <source-file src="src/amazon/Echo.java" target-dir="src/org/apache/cordova/plugin" />
     </platform>
 
-## Using Amazon WebView in your plugin
+## 開発者のプラグインでの Amazon WebView の使用
 
-Cordova for Amazon Fire OS makes use of custom Amazon WebView that is built on the open-source Chromium project. It is GPU accelerated and optimized for fluid performance on Kindle Fire.
+Amazon Fire OS において、Cordova は、カスタマイズされている Amazon WebView を使用します ( Chromium オープンソース プロジェクト 提供 )。Amazon WebView では、Kindle Fire におけるパフォーマンスの最適化と GPU による高速化を行っています。
 
-To understand how to best use Amazon WebView in your project, check out the [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html).
+プロジェクトにおける Amazon WebView の使用方法に関しては、 [Amazon Developer Portal](https://developer.amazon.com/sdk/fire/IntegratingAWV.html) をご確認ください。

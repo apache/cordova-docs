@@ -17,36 +17,36 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Amazon Fire OS WebViews
+# Amazon Fire OS WebView
 
-Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS applications. Amazon Fire OS refers to this component as `CordovaWebView`. `CordovaWebView` extends Amazon WebView that is built on the open source Chromium Project. By leveraging this feature, your web apps can utilize the latest HTML5 web standards running in a modern web runtime engine.
+バージョン 3.0.0 から、Amazon Fire OS アプリ内のコンポーネントとして、Cordova を使うことができます。Amazon Fire OS では、このコンポーネントを `CordovaWebView` と呼んでいます。 `CordovaWebView` を使用して、Amazon WebView ( Chromium Project が提供するオープンソースを基に構築 ) を拡張できます。これにより、モダンウェブ用ランタイムエンジン上で動作して、最新の HTML 5 Web 標準を活用できる、Web アプリを作成することができます。
 
-## Prerequisites
+## 必須条件
 
-* Cordova 3.0.0 or greater
+* Cordova 3.0.0 以降のバージョン
 
-* Android SDK updated to the latest SDK
+* 最新の Android SDK
 
 * Amazon WebView SDK
 
-## Guide to using CordovaWebView in a Amazon Fire OS Project
+## Amazon Fire OS プロジェクトにおける CordovaWebView の使用方法
 
-1. Download and expand the [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
+1. [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) をダウンロードして、解凍します。次に、 `/framework/libs` ディレクトリへ、awv_interface.jar をコピーします。libs/ フォルダーが存在しない場合には、作成します。
 
-2. `cd` into `/framework` and run `ant jar` to build the cordova jar. It creates the .jar file formed as `cordova-3.4.0.jar` in the `/framework` directory.
+2. /framework` に移動 ( `cd` ) して、cordova の jar をビルドするため、 `ant jar` を実行します。実行後、 `/framework` ディレクトリ内に `cordova-3.4.0.jar` ( .jar ファイル形式 ) が作成されます。
 
-3. Edit your application's `main.xml` file (under `/res/layout`) to look like the following, with the `layout_height`, `layout_width` and `id` modified to suit your application:
+3. `/res/layout` 下に置かれている、アプリの `main.xml` ファイルを以下のように変更します。`layout_height` 、 `layout_width` 、 `id` は、アプリに合わせ、適宜変更してください。
 
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-4. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
+開発者のアクティビティ ( Activity ) を編集して、 `CordovaInterface` を実装 ( implements ) できるようにします。インクルードされているメソッド ( included methods ) も実装する必要があります。 `/framework/src/org/apache/cordova/CordovaActivity.java` から、これらのメソッドをコピーすることができます。または、開発者自身で実装させることもできます。インターフェイスを使用するアプリのコードの一例を、以下に記します。参照している view の id と `id` 属性を一致させる方法に関しては、上記 XML のフラグメントをご確認ください。
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
-            /* Called when the activity is first created. */
+            /* アクティビティが最初に作成されたときに、呼び出されます */
             @Override
             public void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -56,42 +56,42 @@ Beginning with 3.0.0, you can use Cordova as a component in Amazon Fire OS appli
                 cwv.loadUrl(Config.getStartUrl());
             }
 
-If you use the camera, you should also implement this:
+カメラを使用する場合には、以下も組み込む必要があります。
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
             this.activityResultCallback = plugin;
         }
         /**
-         * Launch an activity for which you would like a result when it finished. When this activity exits,
-         * your onActivityResult() method is called.
+         * 完了時に、なんらかの結果を返すアクティビティをここで実行します。アクティビティが終了 ( exit ) したとき、
+         * onActivityResult() メソッドを呼び出します。
          *
-         * @param command           The command object
-         * @param intent            The intent to start
-         * @param requestCode       The request code that is passed to callback to identify the activity
+         * @param command           command オブジェクト
+         * @param intent            開始のインテント ( intent )
+         * @param requestCode       アクティビティの特定を行うため、コールバックに渡すリクエストコード ( request code )
          */
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
 
-            // If multitasking turned on, then disable it for activities that return results
+            // マルチタスク処理を行っている場合、結果を返すアクティビティに関しては、マルチタスク処理を無効にします.
             if (command != null) {
                 this.keepRunning = false;
             }
 
-            // Start activity
+            // アクティビティを開始します.
             super.startActivityForResult(intent, requestCode);
         }
 
         @Override
         /**
-         * Called when an activity you launched exits, giving you the requestCode you started it with,
-         * the resultCode it returned, and any additional data from it.
+         * 開始したアクティビティが終了 ( exit ) したときに、こちらを呼び出します。そのとき、開始時に使用した requestCode 、アクティビティが返す 
+         * resultCode、および、付随的なデータを返します。
          *
-         * @param requestCode       The request code originally supplied to startActivityForResult(),
-         *                          allowing you to identify who this result came from.
-         * @param resultCode        The integer result code returned by the child activity through its setResult().
-         * @param data              An Intent, which can return result data to the caller (various data can be attached to Intent "extras").
+         * @param requestCode       startActivityForResult() へ渡した request code。だれがこの結果を返したのか特定するときに使用します。
+         *                          
+         * @param resultCode        setResult() 経由で、子アクティビティ ( child activity ) が返した result code ( 整数 ) です。
+         * @param data              インテントです。呼び出し元へ結果を返すことができます ( Intent の "extra" を使用してさまざまなデータを追加できます )。
          */
         protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
             super.onActivityResult(requestCode, resultCode, intent);
@@ -101,13 +101,13 @@ If you use the camera, you should also implement this:
             }
         }
 
-Finally, remember to add the thread pool, otherwise the plugins have no threads to run on:
+最後に、スレッドプール ( thread pool ) を追加してください。追加しない場合、プラグインを実行するためのスレッドがなくなります。
 
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
 
-6. Copy your application's HTML and JavaScript files to your Amazon Fire OS project's `/assets/www` directory.
+6. アプリの HTML と JavaScript ファイルを、Amazon Fire OS プロジェクトの `/assets/www` ディレクトリへコピーします。
 
-7. Copy `config.xml` from `/framework/res/xml` to your project's `/res/xml` directory.
+7. `/framework/res/xml` の `config.xml` を、プロジェクトの `/res/xml` ディレクトリへコピーします。

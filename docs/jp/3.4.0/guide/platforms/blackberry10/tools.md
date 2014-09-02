@@ -17,162 +17,116 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Command-line Tools
+# BlackBerry 10 コマンドライン ツール
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+異なるプラットフォームで動作するアプリのビルドを、`cordova` コマンドライン ユーティリティ上で、一度に行うことができます。以前のバージョンの Cordova フレームワークでも、各プラットフォームに対象を絞ったコマンドライン ツールを提供しています。新 CLI の代わりに、旧コマンドラインを使用する場合には、 [cordova.apache.org](http://cordova.apache.org) からダウンロードしてください。各プラットフォーム用のアーカイブ ( archive ) をご提供しています。ご希望のプラットフォーム下に置かれたアーカイブをクリックしてください。前述しているツール群は、通常、最上位 ( top-level ) の `bin` ディレクトリ内で使用します。それ以外の場合には、 __README__ の記載内容をご確認ください。
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+プラグインを組み込むときに使用するコマンドライン インターフェイスに関する情報は、『 Plugman を使用した、プラグインの管理 』 をご確認ください。概要に関しては、『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) をご確認ください。
 
-If you need help with any command listed below, type the command along
-with the `-h` or `-help` arguments, which are supported by all
-commands and which provide descriptions for each of the available
-arguments.
+下記のコマンドに関するヘルプを確認する場合には、コマンドの後ろに、オプションとして、 `-h` または `-help` を入力してください。
+サポートしているオプションの一覧と解説を表示します。
 
-## Create an App
+## アプリの作成
 
-The `create` command creates a new project:
+The `create` コマンドを使用して、プロジェクトを新規作成します。
 
     bin/create <path-to-project> <project-package> <project-name>
 
-where
+オプションの解説をします。
 
-- `<path-to-project>` specifies the directory you want the project created in
+- `<path-to-project>` では、作成したプロジェクトの保存先となるディレクトリを指定します。
 
-- `<project-package>` specifies a reverse domain style identifier
+- `<project-package>` では、逆ドメイン記法の識別子 ( reverse domain style identifier ) を指定します。 
 
-- `<project-name>` specifies the apps display name
+- `<project-name>` では、アプリの表示名を指定します。
 
-__NOTE__: the `create` command bootstraps dependency installation
-through the `npm install` command. Depending on the installation
-directory and system permissions, this may require administrator
-privileges.  If there's problem on OSX/Linux, run `sudo npm install`
-before using the `create` command. On Windows, run `npm install` in a
-command-line utility opened with administrator privileges.
+__注意__ : `create` コマンドでは、 `npm install` コマンドを使用して、依存性の処理も自動で行います。インストール先のディレクトリとシステム権限にもよりますが、この処理には、アドミニストレーションの権限が必要となるかもしれません。OSX/Linux 上で障害が発生した場合には、 `create` コマンドを実行する前に、 `sudo npm install` を実行してください。Windows の場合、アドミニストレーション権限を使用して、コマンドライン ユーティリティを立ち上げて、コマンドライン上で `npm install` を実行してください。
 
-## Create a Target
+## Target の作成
 
-The `target` command allows you to manage the emulator or BlackBerry
-devices that you use to test your app. You can add or remove a target,
-or set a target as the default target.
+`target` コマンドを使用して、アプリの検証時に使用する、エミュレータまたは BlackBerry 搭載デバイスを指定することができます。Target の追加・削除、または、デフォルトの Target を設定することができます。
 
-### Add a Target
+### Target の追加
 
     <path-to-project>/cordova/target add <name> <ip-address> [-t | --type <device | simulator>] [-p | --password <password>] [--pin <device-pin>]
 
-where
+オプションの解説をします。
 
-- `<name>` specifies a unique name for the target.
+- `<name>` では、Target の識別名を指定します。
 
-- `<ip-address>` specifies the ip address of the BlackBerry device or
-  simulator.
+- `<ip-address>` では、BlackBerry デバイスまたはシミュレータの IP アドレスを指定します。
 
-- `-p | --password <password>` specifies the password for the device or
-  emulator. This is required only if the device or emulator is
-  password protected.
+- `-p | --password <password>` では、デバイスまたはエミュレータのパスワードを指定します。デバイスまたはエミュレータにパスワード設定がされているときだけ、指定が必要です。
 
-- `--pin <device-pin>` specifies the PIN of the BlackBerry device,
-  which identifies that device as a valid host for the debug
-  token. This argument is required only when creating a debug
-  token.
+- `--pin <device-pin>` では、BlackBerry デバイスの PIN を指定します。PIN は、 デバッグトークン ( Debug Token ) を使用した開発において、使用するデバイスが有効なホストかどうかを識別するときに使用します。このオプションは、デバッグトークンを作成するときだけ、必要となります。
 
-### Remove a Target
+### Target の削除
 
     <path-to-project>/cordova/target remove <name>
 
-### Set a Target as the Default
+### デフォルトで使用する Target の設定
 
     <path-to-project>/cordova/target default <name>
 
-## Build the App
+## アプリのビルド
 
-The `build` command builds the project as a .bar file. You can build
-your app in either release mode (which produces a signed .bar file) or
-in debug mode (which produces an unsigned .bar file).
+`build` コマンドを使用して、.bar ファイル形式で、プロジェクトをビルドします。リリースモード ( 署名済み .bar ファイル )、または、デバッグモード ( 署名なしの .bar ファイル ) のアプリをビルドできます。
 
-### Build the App in Release Mode
+### リリースモードでのアプリのビルド
 
     <path-to-project>/cordova/build release [-k | --keystorepass <password>] [-b | --buildId <number>] [-p | --params <params-JSON-file>]
 
-where
+オプションの解説をします。
 
--   `-k | --keystorepass <password>`  specifies the password you defined when you configured your computer to sign applications.
+-   `-k | --keystorepass <password>`  では、アプリに署名をするために、コンピュータの設定時に使用したパスワードを指定します。
 
--   `-b | --buildId <number>`  specifies the build version number of your application. Typically, this number should be incremented from the previous signed version. This argument is optional.
+-   `-b | --buildId <number>`  では、アプリのビルドバージョン番号を指定します。通常、この番号は、以前の署名済みバージョンの番号をアップグレードしたものです。このオプションは任意です。
 
--   `-p | --params <params-JSON-file>`  specifies a JSON file containing additional parameters to pass to downstream tools. This argument is optional.
+-   `-p | --params <params-JSON-file>`  では、JSON ファイルを指定します。このファイルには、ツール ( downstream tool ) に渡す、追加のパラメータが記述されています。このオプションは任意です。
 
-### Build the Project in Debug Mode
+### デバッグモードでのアプリのビルド
 
     <path-to-project>/cordova/build debug [<target>] [-k | --keystorepass <password>] [-p | --params <params-JSON-file>]  [-ll | --loglevel <error|warn|verbose>]
 
-where
+オプションの解説をします。
 
-- `<target>` specifies the name of a previously added target. If
-  `<target>` is not specified, the default target is used, if one has
-  been created. This argument is only required if you want the script
-  to deploy your app to a BlackBerry device or emulator and you have
-  not created a default target. Additionally, if `<target>` is a
-  device, then that device must be connected to your computer by USB
-  connection or be connected to the same Wi-Fi network as your
-  computer.
+- `<target>` では、前述の手順 ( Target の追加 ) で追加した Target の名前を指定します。 `<target>` を指定しない場合、デフォルトの Target を設定していれば、そちらが使用されます。BlackBerry デバイスまたはエミュレータにアプリを展開するときにスクリプトを使用する場合、および、デフォルトの Target を設定していない場合だけ、このオプションを使用します。 `<target>` がデバイス ( 実機 ) の場合、そのデバイスは、USB または Wi-Fi ネットワーク経由で、コンピュータと接続されている必要があります。
 
-- `-k | --keystorepass <password>` specifies the password you defined
-  when you configured your computer to sign applications. This
-  password is also used to create your debug token. This argument is
-  only required if you want the script to create and install the debug
-  token for you.
+- `-k | --keystorepass <password>` では、アプリに署名をするために、コンピュータの設定時に使用したパスワードを指定します。このパスワードは、デバッグトークンの生成時にも使用します。このオプションは、デバッグトーキンの生成時・インストール時に、スクリプトを使用する場合だけ、必要となります。
 
-- `-p | --params <params-JSON-file>` specifies a JSON file containing
-  additional parameters to pass to downstream tools.
+- `-p | --params <params-JSON-file>`  は、JSON ファイルを指定します。このファイルには、ツール ( downstream tool ) に渡す、追加のパラメータが記述されています。
 
-- `-ll | --loglevel <level>` specifies the log level. The log level may
-  be one of `error`, `warn`, or `verbose`.
+- `-ll | --loglevel <level>` では、ログ出力のレベルを指定します。レベルは、 `error` 、 `warn` 、 `verbose` のいずれかとなります。
 
-If you have previously defined a default target (and previously
-installed a debug token, if that target is a BlackBerry device), you
-can run the script with no arguments, and the script packages your
-app and deploys it to the default target. For example:
+前述の手順でデフォルトの Target を設定している場合 ( デフォルトの Target が BlackBerry デバイスの場合には、デバッグトークンはインストール済みであること )、オプションなしで、スクリプトを実行することもできます。また、スクリプトを実行すると、アプリのパッケージ化とデフォルトの Target への展開を行います。例を以下に記します。
 
     <path-to-project>/cordova/build debug
 
-## Run the App
+## アプリの実行
 
-The `run` command deploys the app's most recent build on the specified
-BlackBerry device or an emulator. To deploy your app, you need to
-specify a target for the device or emulator:
+`run` コマンドを使用して、指定した BlackBerry デバイスまたはエミュレータ上で、最新ビルドのアプリを展開します。アプリの展開時には、Target のデバイスまたはエミュレータを指定する必要があります。
 
     <path-to-project>/cordova/run <target>
 
-...where `<target> `specifies the name of a previously added target.
-If `<target>` is a device, then it must be connected to your computer
-via USB cable, or else over the same Wi-Fi network as your computer.
+オプションの解説をします。
+
+- `<target> `では、前述の手順 ( Target の追加 ) で追加した Target の名前を指定します。 `<target>` がデバイス ( 実機 ) の場合、そのデバイスは、USB または Wi-Fi ネットワーク経由で、コンピュータと接続されている必要があります。
 
 ## Handle Plugins
+## プラグインの取り扱い
 
-The `target` command allows you to add and remove plugins.  To fetch a
-locally hosted plugin:
+`target` コマンドを使用して、プラグインの追加・削除を行います。ローカルに置いてあるプラグインを使用 ( fetch ) する方法を以下に記します。
 
     <path-to-project>/cordova/plugin fetch <path-to-plugin>
 
-View a list of installed plugins:
+インストールしたプラグインの一覧を表示します。
 
     <path-to-project>/cordova/plugin ls
 
-Add a plugin:
+プラグインを追加します。
 
     <path-to-project>/cordova/plugin add <name>
 
-Remove a plugin:
+プラグインを削除します。
 
     <path-to-project>/cordova/plugin rm <name>

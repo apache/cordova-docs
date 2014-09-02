@@ -17,20 +17,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Embedding WebViews
+# WebView の組み込み
 
-Cordova applications are ordinarily implemented as a browser-based
-_WebView_ within the native mobile platform. This section shows how,
-for supporting platforms, to create your own WebView components that
-make full use of Cordova APIs. You can then deploy these Cordova
-application components along with native components in a hybrid
-application.
+もともと、Cordova アプリは、ネイティブのモバイルプラットフォーム内で起動する、ブラウザーを基盤とする _WebView_ として、実装されていました。
+この節では、サポート対象のプラットフォームにおける、Cordova API の活用を目的とした、WebView コンポーネントの作成方法を解説します。
+これにより、ハイブリッドアプリにおいて、ネイティブコンポーネントを活用できる Cordova アプリのコンポーネントを展開できるようになります。
 
-To deploy a WebView, you need to be familiar with each native
-programming environment. The following provides instructions for
-supported platforms:
+WebView を取り扱う場合には、各ネイティブ プログラミングの環境に慣れている必要があります。
+以下のリンクでは、サポート対象のプラットフォームにおける作業手順を記してあります。
 
-- Amazon Fire OS WebViews
-- Android WebViews
-- iOS WebViews
+- Amazon Fire OS WebView
+- Android WebView
+- iOS WebView
 

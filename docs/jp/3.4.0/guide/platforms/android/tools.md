@@ -17,69 +17,52 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Command-line Tools
+# Android コマンドライン ツール
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+異なるプラットフォームで動作するアプリのビルドを、`cordova` コマンドライン ユーティリティ上で、一度に行うことができます。以前のバージョンの Cordova フレームワークでも、各プラットフォームに対象を絞ったコマンドライン ツールを提供しています。新 CLI の代わりに、旧コマンドラインを使用する場合には、 [cordova.apache.org](http://cordova.apache.org) からダウンロードしてください。各プラットフォーム用のアーカイブ ( archive ) をご提供しています。ご希望のプラットフォーム下に置かれたアーカイブをクリックしてください。前述しているツール群は、通常、最上位 ( top-level ) の `bin` ディレクトリ内で使用します。それ以外の場合には、 __README__ の記載内容をご確認ください。
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+プラグインを組み込むときに使用するコマンドライン インターフェイスに関する情報は、『 Plugman を使用した、プラグインの管理 』 をご確認ください。概要に関しては、『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) をご確認ください。
 
-## Create a Project
+## プロジェクトの作成
 
-Run the `create` command, specifying the existing path to the project,
-the reverse-domain-style package identifier, and the app's display
-name.  Here is the syntax for both Mac and Windows:
+プロジェクトへのパス ( path )、逆ドメイン形式のパッケージの識別子、および、アプリの表示名を指定して `create` コマンドを実行します。Mac と Windows の記法を、以下に記します。
 
     $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
     $ C:\path\to\cordova-android\bin\create.bat C:\path\to\project com.example.project_name ProjectName
 
-## Build
+## ビルド
 
-This cleans then builds a project.
+クリーンアップ後、プロジェクトのビルドを行います。
 
-Debug, on Mac or Windows:
+デバッグビルドの作成方法を以下に記します ( Mac と Windows )。
 
     $ /path/to/project/cordova/build --debug
     $ C:\path\to\project\cordova\build.bat --debug
 
-Release, on Mac or Windows:
+リリースビルドの作成方法を以下に記します ( Mac と Windows )。
 
     $ /path/to/project/cordova/build --release
     $ C:\path\to\project\cordova\build.bat --release
 
-## Run the App
+## アプリの実行
 
-The `run` command accepts the following _optional_ parameters:
+`run` コマンドで使用できる、 _任意_ のパラメータを以下に記します。
 
-* Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+* Target ( ターゲット ) の指定 : `--emulator` 、 `--device` 、 `--target=<targetID>`　
 
-* Build specification. This includes `--debug`, `--release`, or `--nobuild`.
+* Build ( ビルド ) の指定 : `--debug` 、 `--release` 、 `--nobuild`
 
     $ /path/to/project/cordova/run [Target] [Build]
     $ C:\path\to\project\cordova\run.bat [Target] [Build]
 
-Make sure you create at least one Android Virtual Device, otherwise
-you're prompted to do so with the `android` command.  If more than one
-AVD is available as a target, you're prompted to select one. By
-default the `run` command detects a connected device, or a currently
-running emulator if no device is found.
+Android 仮想デバイス ( AVD ) を 1 つ以上作成してください。作成していない場合には、 `android` コマンドを使用して、作成してください。Target として、複数の AVD が利用可能な場合には、その中から 1 つ選択します。デフォルトでは、 `run` コマンドを使用すると、接続されたデバイスを検知します。デバイスを検知できない場合には、実行中のエミュレータが Target となります。
 
-## Logging
+## ログの出力
 
     $ /path/to/project/cordova/log
     $ C:\path\to\project\cordova\log.bat
 
-### Cleaning
+### クリーンアップ
 
     $ /path/to/project/cordova/clean
     $ C:\path\to\project\cordova\clean.bat

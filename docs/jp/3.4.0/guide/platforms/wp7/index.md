@@ -19,113 +19,79 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows Phone 7 プラットフォームに関する解説
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Windows Phone 7 devices.  Apps also run on
-Windows Phone 8 devices using the same APIs, but version 7 lacks some
-of IE10's advanced features available on Windows Phone 8. Windows
-Phone 8 apps do _not_ run on Windows Phone 7 devices.
+SDK 開発環境の設定方法、および、Windows Phone 7 搭載のデバイスへの Cordova アプリの展開方法を説明します。また、同じ API 群を使用して、Windows Phone 8 搭載デバイス上でも、アプリは実行できます。ただし、Windows Phone 8 では使用できる、IE 10 実装の最新機能のいくつかは、バージョン 7 では使用することはできません。Windows
+Phone 8 アプリは、Windows Phone 7 搭載デバイス上では _実行できません_ 。
 
-See the following for more detailed platform-specific information that
-applies to both versions:
+プラットフォーム固有の詳細情報 ( 両方のプラットフォームに共通 ) に関しては、以下をご確認ください。
 
-* Upgrading Windows Phone
-* Windows Phone Plugins
-* Windows Phone Command-line Tools
+* Windows Phone のアップグレード
+* Windows Phone プラグイン
+* Windows Phone コマンドライン ツール
 
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
-current interface.
+上記の 『 コマンドライン ツール 』 では、旧バージョン ( Cordova 3.0 以前 ) に実装されていたツールでの作業手順を記しています。
+現コマンドライン インターフェイス ( CLI ) に関しては、『 コマンドライン インターフェイス 』 の記載内容をご確認ください。
 
-## システムに関する要求事項
+## システム要件
 
-Use Windows 7 or Windows 8 (Pro) or Windows Vista with SP2.  The
-64-bit version (x64) of Windows is required for the SDK.  The Pro
-version is recommended for running a device emulator.
+Windows 7、Windows 8 ( Pro )、または、Windows Vista SP2 を使用します。SDK を使用する場合、Windows の 64 ビット版 ( x64 ) が必要です。また、デバイスのエミュレータを実行するには、 Pro バージョンを推奨しています。
 
-Register and pay for a [Windows Phone Dev
-Center](http://dev.windowsphone.com/en-us/publish) account if you want
-to install an app on a real device or submit it to Market Place.
+端末へのアプリのインストール、または、Market Place への申請を検討している場合、 [Windows Phone デベロッパーセンター ( Dev
+Center ) ](http://dev.windowsphone.com/en-us/publish) 上でアカウントに登録 ( 登録料の支払いを含む ) してください。
 
-__NOTE__: Running the SDK in Virtual Machine may present challenges.
-Read [Windows Phone on a Mac](http://aka.ms/BuildaWP8apponaMac) for
-insights on developing solutions.
+__注意__ : 仮想マシーン ( Virtual Machine ) 上で SDK を実行する場合、注意事項がありますので、こちらの [ Mac 上での Windows Phone 開発 ](http://aka.ms/BuildaWP8apponaMac) をご確認ください。
 
 ## SDK と Cordova のインストール
 
-Download and install the [Windows Phone
-SDK](http://www.microsoft.com/en-us/download/details.aspx?id=27570).
+[Windows Phone SDK](http://www.microsoft.com/en-us/download/details.aspx?id=27570) をダウンロード・インストールします。
 
-Download and extract the latest copy of
-[Cordova](http://cordova.apache.org/#download). You need to work in the
-`lib\windows-phone-8\wp7` subdirectory, `lib\windows-phone-8\wp8`
-contains the Windows Phone 8 version of Cordova.
+最新の [Cordova](http://cordova.apache.org/#download) をダウンロード・解凍します。
+`lib\windows-phone-8\wp7` サブディレクトリで作業を行います ( Windows Phone 8 用 Cordova の場合、 `lib\windows-phone-8\wp8` )。
 
-Copy the `CordovaWP7_x_x_x.zip` file to the `\My Documents\Visual
-Studio 2012\Templates\ProjectTemplates\` directory.
+`\My Documents\Visual
+Studio 2012\Templates\ProjectTemplates\` ディレクトリへ `CordovaWP7_x_x_x.zip` ファイルをコピーします。
 
-## テンプレートを使用したビルド
+## テンプレートのビルド
 
-__NOTE__: Skip this step if the `lib\windows-phone` directory already
-contains a `CordovaWP7_x_x_x.zip` file.
+__注意__ : `lib\windows-phone` ディレクトリ内に `CordovaWP7_x_x_x.zip` ファイルが既に存在する場合には、こちらの手順を行う必要はありません。
 
-To simplify development, Cordova bundles a script to build Visual
-Studio templates. These allow you to rapidly generate Cordova apps,
-and you can modify them if necessary.  The steps below show how to
-generate it.
+Visual Studio 用のテンプレートをビルドするためのスクリプトを、Cordova 側で用意しています。こちらを使用すると、開発を簡素化できます。
+これらのテンプレートを使用すれば、Cordova アプリを即座に作成することができ、また、必要であれば修正を加えることもできます。
+下記の手順で、作成を行います。
 
-### テンプレートの作成とインストール ( バッチファイルを実行 )
+### バッチファイルを使用した、テンプレートの作成とインストール
 
-The root of the repo contains a `createTemplates.bat` file.
-Double-clicking this file generates two `.zip` files:
-`CordovaWP7_x_x_x.zip` and `CordovaWP8_x_x_x.zip`, where _3.4.0_ is
-the current version number. To use these files easily in Visual
-Studio, copy them to the `My Documents\Visual Studio
-2012\Templates\ProjectTemplates\` subdirectory. You are then able to
-create new __Apache Cordova Windows Phone_ apps from Visual Studio's
-__File &rarr; New Project__ menu.
+レポジトリのルート ( root ) に `createTemplates.bat` ファイルを置いています。このファイルをダブルクリックすると、2 つの `.zip` ファイルが生成されます ( `CordovaWP7_x_x_x.zip` と `CordovaWP8_x_x_x.zip` )。ファイル名の _3.4.0_ は、現在のバージョン番号です。Visual Studio でこれらのファイルを使用する場合には、 `My Documents\Visual Studio 2012\Templates\ProjectTemplates\` サブディレクトリへファイルをコピーします。次に、Visual Studio メニューの __ファイル &rarr; 新規作成 &rarr; 新しいプロジェクト__ を選択して、 __Apache Cordova Windows Phone__ アプリを、簡単に新規作成することができます。
 
-If you run the batch file from the command line, you can also call
-with a parameter to install automatically:
+コマンドラインからバッチファイルを実行した場合、オプションを追加して、インストールを自動で実行することもできます。
 
         >createTemplates.bat -install
 
 ## 新規プロジェクトの設定
 
-- Open Visual Studio Express for Windows Phone and choose __New
-  Project__.
+- Visual Studio Express for Windows Phone を起動させ、 __新しいプロジェクト__ を選択します。
 
-- Select __CordovaWP7__. The version number displays in the template
-  description.
+- __CordovaWP7__ を選択します ( テンプレート詳細画面上に、バージョン番号が表示されます )。
 
-- Give the project a name, and select __OK__.
+- プロジェクト名 ( Name ) を入力して、 __OK__ ボタンを押します。
 
-## プロジェクトのディレクトリー構造の確認
+## プロジェクトのディレクトリ構造
 
-The `www` directory features `html`, `js`, and `css` subdirectories
-and any other resources your app requires.
-Any additional content needs to be a part of the Visual Studio
-project, and it must be set as content.
+`www` ディレクトリ下に、 `html` 、 `js` 、 `css` サブディレクトリを含む、アプリで必要なリソース ( resource ) を置きます。Visual Studio プロジェクトに必要な追加コンテンツがある場合、content ( コンテンツ ) の指定を行う必要があります。
 
-The following sample structure represents a 2.3.0 project, but may
-vary depending on installed version:
+2．3.0 のサンプルプロジェクトのディレクトリ構造を以下に示します。構造は、インストールしたバージョンにより異なります。
 
 ![](img/guide/platforms/wp8/projectStructure.png)
 
-## デバイスを使用する場合の要求事項
+## デバイスの使用とプロジェクトのビルド
 
-Before testing your application on a device, the device must be
-registered. Consult
-[Microsoft's documentation](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx)
-for details on how to deploy and test on Windows Phone 7. These are
-the basic steps:
+実機上でアプリをテストする前に、実機の登録を行う必要があります。Windows Phone 7 上での展開・テスト方法の詳細に関しては、[Microsoft のドキュメント](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402565(v=vs.105).aspx) をご確認ください。以下に基本的な手順を記します。
 
-- Make sure your phone is connected, and the screen is unlocked.
+- 端末が接続されて、画面がロックされていないことを確認してください。
 
-- In Visual Studio, select __Device__ from the drop-down menu at the top.
+- Visual Studio のトップのドロップダウンメニューから、__Windows Phone Device__ を選択します。
 
-- Press the green __play__ button next to the main drop-down menu to
-  start debugging, or else type __F5__.
+- ドロップダウンメニュー横の緑の __実行__ ボタンを押すか、または、 __F5__ をタイプして、デバッグを開始します。
 
 ![](img/guide/platforms/wp7/wpd.png)
 
-At this point, you're done.
+ここまでの手順で、準備が完了しました。

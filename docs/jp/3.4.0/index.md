@@ -19,71 +19,71 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 <div id="home">
 
-    <h1>Guides</h1>
+    <h1>ガイドライン</h1>
     <ul>
         <li>
-            <h2>Overview</h2>
-            <span>Start here if you are new to Cordova.</span>
+            <h2>概要</h2>
+            <span>Cordova 初心者の方は、こちらからお読みください。</span>
         </li>
         <li>
-            <h2>Platform Support</h2>
-            <span>Compatibility table for all major features.</span>
+            <h2>サポート対象のプラットフォーム</h2>
+            <span>主な機能の互換性一覧をご用意しています。</span>
         </li>
         <li>
-            <h2>The Command-Line Interface</h2>
-            <span>Create, build, and deploy from the command-line.</span>
+            <h2>コマンドライン インターフェイス</h2>
+            <span>コマンドラインを使用して、各種操作 ( 作成・ビルド・展開 ) を行います。</span>
         </li>
         <li>
-            <h2>Platform Guides</h2>
-            <span>Set up each SDK and update projects</span>
+            <h2>各プラットフォームに関する解説</h2>
+            <span>各 SDK のセットアップとプロジェクトの更新を解説します。</span>
         </li>
         <li>
-         <h2>Using Plugman to Manage Plugins</h2>
-            <span>Using Plugman to manage Plugins without the CLI</span>
+         <h2>Plugman を使用した、プラグインの管理</h2>
+            <span>CLI ではなく、Plugman を使用して、プラグインの管理を行います。</span>
         </li>
         <li>
-            <h2>The config.xml File</h2>
-            <span>Customize the features of your app.</span>
+            <h2>config.xml ファイル</h2>
+            <span>アプリの機能をカスタマイズします。</span>
         </li>
         <li>
-            <h2>Icons and Splash Screens</h2>
-            <span>Customize the app's displaying images.</span>
+            <h2>アイコンとスプラッシュ画像</h2>
+            <span>アプリの表示画面をカスタマイズします。</span>
         </li>
         <li>
-            <h2>Embedding WebViews</h2>
-            <span>Implement the Cordova WebView in your project.</span>
+            <h2>WebView の組み込み</h2>
+            <span>Cordova WebView をプロジェクトに実装します。</span>
         </li>
         <li>
-            <h2>Plugin Development Guide</h2>
-            <span>Develop your first plugin.</span>
+            <h2>プラグイン開発ガイド</h2>
+            <span>初めての自作プラグインを開発しましょう。</span>
         </li>
         <li>
-            <h2>Privacy Guide</h2>
-            <span>Learn about important mobile privacy issues.</span>
+            <h2>プライバシーに関する注意点</h2>
+            <span>携帯端末とプライバシー関連の重要事項をご案内します。</span>
         </li>
         <li>
-            <h2>Whitelist Guide</h2>
-            <span>Grant an application access to external resources.</span>
+            <h2>ホワイトリスト ガイド</h2>
+            <span>外部リソースへのアプリからアクセス許可の設定をします。</span>
         </li>
         <li>
-            <h2>Storage</h2>
-            <span>An overview of native storage options.</span>
+            <h2>ストレージ</h2>
+            <span>ネイティブのストレージオプションの概要です。</span>
         </li>
         <li>
-            <h2><a href="_index.html">Keyword Index</a></h2>
-            <span>Full index of the documentation.</span>
+            <h2><a href="_index.html">目次</a></h2>
+            <span>ドキュメントの目次です。</span>
         </li>
     </ul>
 
-    <h1>API Reference</h1>
+    <h1>API リファレンス</h1>
     <ul>
         <li>
-            <h2>Events</h2>
-            <span>Hook into native events through JavaScript.</span>
+            <h2>イベント</h2>
+            <span>JavaScript を使用して、ネイティブ側のイベントにフック ( hook ) します。</span>
         </li>
         <li>
-            <h2>Plugin APIs</h2>
-            <span>Discover what plugins Cordova are available to using in your project.</span>
+            <h2>プラグイン API</h2>
+            <span>プロジェクトで使用できる、Cordova プラグイン群をご紹介します。</span>
         </li>
     </ul>
 

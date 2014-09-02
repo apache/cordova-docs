@@ -17,17 +17,13 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# BlackBerry 10 Plugins
+# BlackBerry 10 プラグイン
 
-This section provides details for how to implement native plugin code
-on the BlackBerry 10 platform. Before reading this, see Application
-Plugins for an overview of the plugin's structure and its common
-JavaScript interface. This section continues to demonstrate the sample
-_echo_ plugin that communicates from the Cordova webview to the native
-platform and back.
+この節では、BlackBerry 10 プラットフォームにおけるネイティブプラグインコードの実装方法の詳細に関して解説します。この節を読む前に、
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) を読み、プラグインの構造と JavaScript の汎用インターフェイスの概要をご確認ください。
+この節では、Cordova Webview とネイティブプラットフォーム間で通信を行う、_echo_ プラグインのサンプルを引き続き使用して、解説を行います。 
 
-The Echo plugin basically returns whatever string the `window.echo`
-function sends from JavaScript:
+Echo プラグインは、基本的に、JavaScript 側が `window.echo` 関数を使用して送った文字列を返します。
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -35,30 +31,21 @@ function sends from JavaScript:
             }, "Echo", "echo", [str]);
         };
 
-A Cordova plugin for BlackBerry 10 contains both JavaScript and native
-code, which communicate with each other through a framework provided
-by JNEXT. Every plugin must also include a `plugin.xml` file.
+BlackBerry 10 の Cordova プラグインは、JavaScript とネイティブコードから構成され、JNEXT 提供のフレームワークを通じて、互いに通信を行います。また、すべてのプラグインで、 `plugin.xml` ファイルをインクルード ( include ) する必要があります。
 
-## Creating the Native Class
+## ネイティブクラスの作成
 
-To create the native portion of your plugin, open the BlackBerry 10
-NDK IDE and select __File &rarr; New &rarr; BlackBerry Project &rarr;
-Native Extension &rarr; BlackBerry 10__. Enter the desired
-project name and location, then press __Finish__.
+開発者のプラグインのネイティブ部分の作成を行うには、BlackBerry 10
+NDK IDE を開き、 __File &rarr; New &rarr; BlackBerry Project &rarr;
+Native Extension &rarr; BlackBerry 10__ を選択します。プロジェクト名とロケーションを入力して、 __Finish__ を押します。
 
-The project created by the IDE contains sample code for a memory
-plugin. You may replace or modify these files to implement your own
-functionality:
+IDE を使用して作成したプロジェクトには、Memory プラグインのサンプルコードが含まれています。これらのファイルを置き換えるかまたは修正を行い、希望する機能を実装させることもできます。
 
-- `*name*_js.hpp`: C++ header for the JNEXT code.
+- `*name*_js.hpp`: JNEXT コード用の C++ ヘッダーファイル
 
-- `*name*_js.cpp`: C++ code for JNEXT.
+- `*name*_js.cpp`: JNEXT コード用の C++ コードファイル
 
-The native interface for the JNEXT extension can be viewed in the
-plugin header file located in the project's public directory. It also
-features constants and utility functions available from within native
-code. The plugin must be derived from `JSExt`, which is defined in
-`plugin.h`. That is, you must implement the following class:
+JNEXT の拡張機能を使用するネイティブインターフェイスは、プロジェクトの public ディレクトリに保存された、プラグインのヘッダーファイルで確認することができます。また、ネイティブコード内部から利用できる、定数と各種ユーティリティ機能を、そのファイルに記述しています。プラグインは、 `JSExt` から派生しなければいけません ( `plugin.h` 内で定義 )。つまり、以下に示すクラスを実装する必要があります。
 
         class JSExt
         {
@@ -70,8 +57,7 @@ code. The plugin must be derived from `JSExt`, which is defined in
             std::string m_id;
         };
 
-The extension should include the `plugin.h` header file. In the `Echo`
-example, you use `JSExt` as follows in the `echo_js.hpp` file:
+拡張を行うときには、 `plugin.h` ヘッダーファイルをインクルード ( include ) しなければなりません。 `Echo` のサンプルでは、 `echo_js.hpp` ファイル内で、以下のように `JSExt` を使用します。
 
         #include "../public/plugin.h"
         #include <string>
@@ -92,26 +78,16 @@ example, you use `JSExt` as follows in the `echo_js.hpp` file:
 
         #endif // ECHO_JS_H_
 
-The `m_id` attribute contains the `JNEXT` id for the object, which is
-passed to the class as an argument to the constructor. It is needed
-for the native side to trigger events on the JavaScript side.  The
-`CanDelete` method determines whether the native object can be
-deleted.  The `InvokeMethod` function is called as a result from a
-request from JavaScript to invoke a method of this particular
-object. The only argument to this function is a string passed from
-JavaScript that this method parses to determine which of the native
-object's methods should execute.  These methods are implemented in
-`echo_js.cpp`. Here is the `InvokeMethod` function for the `Echo`
-example:
+`m_id` 属性には、オブジェクト用の `JNEXT` id を格納します。この id は、コンストラクタへの引数として、クラスに渡されます。次のラインは、JavaScript 側のイベントの発火 ( trigger ) を行うため、ネイティブ側で必要としています。 `CanDelete` メソッドを使用して、ネイティブオブジェクトの削除を行うか決定します。次に、このオブジェクトのメソッドを呼び出す、JavaScript からのリクエストに応じて、 `InvokeMethod` 関数を呼び出します。この関数の唯一の引数は、JavaScript から渡された文字列だけです。このメソッドを使用して、この文字列をパース ( parse ) して、ネイティブオブジェクトのどちらのメソッドを実行するか決定します。このメソッドは、 `echo_js.cpp` 内に実装されています。以下に、 `Echo` の例における `InvokeMethod` 関数を示します。
 
         string Echo::InvokeMethod(const string& command) {
 
-            //parse command and args from string
+            // 文字列からコマンドと引数のパース処理を行います
             int index = command.find_first_of(" ");
             string strCommand = command.substr(0, index);
             string strValue = command.substr(index + 1, command.length());
 
-            // Determine which function should be executed
+            // どちらの関数を実行するか決定します
             if (strCommand == "echo") {
                 return strValue;
             } else {
@@ -119,29 +95,20 @@ example:
             }
         }
 
-The native plugin must also implement the following callback
-functions:
+ネイティブプラグイン側では、以下のコールバック関数を実装する必要があります。
 
 - `extern char* onGetObjList( void );`
 
 - `extern JSExt* onCreateObject( const string& strClassName, const string& strObjId );`
 
-The `onGetObjList` function returns a comma-separated list of classes
-supported by JNEXT. JNEXT uses this function to determine the set of
-classes that JNEXT can instantiate. The `Echo` plugin implements the
-following in `echo_js.cpp`:
+`onGetObjList` 関数を使用して、JNEXT がサポートするクラスの一覧 ( コンマ区切り ) を返します。JNEXT はこの関数を使用して、JNEXT がインスタンス化を行えるクラスを決定します。 `Echo` プラグインでは、 `echo_js.cpp` 内に以下の記述を行います。
 
         char* onGetObjList() {
             static char name[] = "Echo";
             return name;
         }
 
-The `onCreateObject ` function takes two parameters. The first is the
-name of the requested class to be created from the JavaScript side,
-with valid names as those returned in `onGetObjList`. The second
-parameter is the class's unique object id. This method returns a
-pointer to the created plugin object. The `Echo` plugin implements the
-following in `echo_js.cpp`:
+`onCreateObject ` 関数は、2 つのパラメータを取ります。最初のパラメータは、JavaScript 側からリクエストされたため、 `onGetObjList` で返された名前と同じ名前を使用して、作成を行うクラスの名前です。2 番目のパラメータは、クラスが保持する、重複していないオブジェクト id です。このメソッドを使用して、作成したプラグインオブジェクトへのポインター ( pointer ) を返します。`Echo` プラグインでは、 `echo_js.cpp` 内に以下の記述を行います。
 
         JSExt* onCreateObject(const string& className, const string& id) {
             if (className == "Echo") {
@@ -150,24 +117,15 @@ following in `echo_js.cpp`:
             return NULL;
         }
 
-## Creating the Plugin's JavaScript
+## プラグインの JavaScript の作成
 
-The plugin must contain the following JavaScript files:
+プラグインは、以下の JavaScript ファイルを使用します。
 
-- `client.js`: This is considered the client side and contains the API
-  available to a Cordova application. The API in `client.js` calls
-  makes calls to `index.js`. The API in `client.js` also connects
-  callback functions to the events that fire the callbacks.
+- `client.js`: クライアント側のファイルです。Cordova アプリで使用できる API を記述しています。 `client.js` ファイルの API は、`index.js` への呼び出しを行います。また、 `client.js` の API は、コールバックを発火させるイベントとコールバック関数の関連付けを行います。
 
-- `index.js`: Cordova loads `index.js` and makes it accessible through
-  the cordova.exec bridge. The `client.js` file makes calls to the API
-  in the `index.js` file, which in turn makes call to JNEXT to
-  communicate with the native side.
+- `index.js`: Cordova は、 `index.js` を読み込み、ブリッジ ( cordova.exec ) を通じて、index.js にアクセスできるようにします。 `client.js` ファイルは、 `index.js` ファイル内の API を呼び出します。そのあと、ネイティブ側と通信を行うため、JNEXT を呼び出します。
 
-The client and server side (`client.js` and `index.js`) interacts
-through the `Cordova.exec` function. The `client.js` needs to invoke
-the `exec` function and provide the necessary arguments. The `Echo`
-plugin implements the following in the `client.js` file:
+クライアント側とサーバ側 ( `client.js` と `index.js` ) は、 `Cordova.exec` 関数を通じて、互いに通信を行います。 `client.js` 側では、 `exec` 関数を呼び出し、必要な引数を提供する必要があります。`Echo` プラグインでは、 `client.js` 内に以下の記述を行います。
 
         var service = "org.apache.cordova.blackberry.echo",
             exec = cordova.require("cordova/exec");
@@ -178,31 +136,21 @@ plugin implements the following in the `client.js` file:
             }
         };
 
-The `index.js` component uses JNEXT to interact with the native
-side. Attaching a constructor function named `Echo` to JNEXT allows
-you to perform the following key operations using the `init` function:
+`index.js` コンポーネントは、 JNEXT を使用して、ネイティブ側との通信を行います。 `Echo` と名付けたコンストラクタ関数 ( constructor ) を JNEXT にアタッチ ( attach ) することにより `init` 関数を使用して、下記の重要な処理を行えるようになります。
 
-- Specify the required module exported by the native side. The name of
-  the required module must match the name of a shared library file
-  (`.so` file):
+- 使用 ( require ) するモジュール ( ネイティブ側からエクスポート ) を指定します。使用 ( require ) するモジュールの名前は、共有ライブラリファイル ( `.so` ファイル ) の名前と一致している必要があります。
 
         JNEXT.require("libecho")
 
-- Create an object by using an acquired module and save the ID that's
-  returned by the call:
+- 取得したモジュールを使用して、オブジェクトの作成を行い、その呼び出しから返された ID を保存します。
 
         self.m_id = JNEXT.createObject("libecho.Echo");
 
-  When the application calls the `echo` function in `client.js`, that
-  call in turn calls the `echo` function in `index.js`, where the
-  `PluginResult` object sends data as a response back to `client.js`.
-  Since the `args` argument passed into the functions was converted by
-  `JSON.stringfy()` and encoded as a `URIcomponent`, you must call the
-  following:
+アプリは、 `client.js` の `echo` 関数を呼び出し、次に、 `index.js` の `echo` 関数を連鎖して呼び出します。そのとき、 `PluginResult` オブジェクトは、レスポンスとして、`client.js` へデータを送り返します。また、関数へ渡された `args` 引数は、 `JSON.stringfy()` を使用して変換され、そして、 `URIcomponent` としてエンコード化されているため、以下の呼び出しを行う必要があります。
 
         data = JSON.parse(decodeURIComponent(args.data));
 
-You can now send the data back, as in the following:
+これにより、以下のように、データを送り返すことができます。
 
         module.exports = {
             echo: function (success, fail, args, env) {
@@ -213,14 +161,11 @@ You can now send the data back, as in the following:
             }
         };
 
-## Plugin Architecture
+## プラグインの構造
 
-You can place the plugin's artifacts, including the `plugin.xml` file,
-the JavaScript and C++ source files, and the `.so` binary files within
-any directory structure, as long as you correctly specify the file
-locations in the `plugin.xml` file. Here is a typical structure:
+プラグインの構成要素 ( `plugin.xml` ファイル、JavaScript、C++ ソースファイル、 `.so` バイナリファイルなど )は、どのディレクトリにでも置くことはできます。ただし、 `plugin.xml` ファイルにおいて、ファイルの配置を正しく指定する必要があります。以下に典型的な構造を示します。
 
-***project_directory*** (>plugin.xml)
+***プロジェクト_ディレクトリ*** (>plugin.xml)
 
 - **www** (>client.js)
 - **src**
@@ -228,15 +173,11 @@ locations in the `plugin.xml` file. Here is a typical structure:
   - **device** (>*binary file* *.so)
   - **simulator** (>*binary file* *.so)
 
-The list shows the hierarchical relationship among the top-level
-folders. The parenthesis shows the contents of a given directory. All
-directory names appear in bold text. File names are preceded by the `>`
-sign.
+この一覧は、最上位 ( top-level ) に位置するフォルダー間の階層的な関係を示しています。括弧は、ディレクトリ内のコンテンツを表記するために使用しています。ディレクトリ名は、Bold で表記しています。ファイル名の先頭には、`>` 記号を付けています。
 
-## The _plugin.xml_ file
+## _plugin.xml_ ファイル
 
-The `plugin.xml` file contains the extension's namespace and other
-metadata. Set up the `Echo` plugin as follows:
+`plugin.xml` には、拡張を行ったプラグインの名前空間および他のメタデータを記述しています。 `Echo` プラグインでは、以下のように設定します。 
 
         <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
             id="org.apache.cordova.blackberry.echo"

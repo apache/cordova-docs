@@ -76,6 +76,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 - [バイブレーション](https://github.com/apache/cordova-plugin-vibration/blob/dev/doc/index.md)
 > デバイスの振動を行うときに使用する API 
 
-( 原文の記載内容 ) 各国語に訳されたプラグイン ドキュメントをご利用できます （ 以前のバーションの Cordova ドキュメントを参照して、見つけます ）。このサイトのトップ右端に表示されたドロップダウン メニューから言語とバージョンを選択できます。
+( 原文の記載内容 ) 各言語に翻訳したプラグイン ドキュメントをご利用できます （ 以前のバーションの Cordova ドキュメントに関しては、各言語に翻訳しているものもあります ）。このサイトのトップ右上に表示されたドロップダウン メニューから言語とバージョンを選択できます。
 
 

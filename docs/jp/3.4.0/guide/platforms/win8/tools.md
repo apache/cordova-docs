@@ -17,34 +17,23 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows 8 Command-line Tools
+# Windows 8 コマンドライン ツール
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+異なるプラットフォームで動作するアプリのビルドを、`cordova` コマンドライン ユーティリティ上で、一度に行うことができます。以前のバージョンの Cordova フレームワークでも、各プラットフォームに対象を絞ったコマンドライン ツールを提供しています。新 CLI の代わりに、旧コマンドラインを使用する場合には、 [cordova.apache.org](http://cordova.apache.org) からダウンロードしてください。各プラットフォーム用のアーカイブ ( archive ) をご提供しています。ご希望のプラットフォーム下に置かれたアーカイブをクリックしてください。前述しているツール群は、通常、最上位 ( top-level ) の `bin` ディレクトリ内で使用します。それ以外の場合には、 __README__ の記載内容をご確認ください。
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+プラグインを組み込むときに使用するコマンドライン インターフェイスに関する情報は、『 Plugman を使用した、プラグインの管理 』 をご確認ください。概要に関しては、『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) をご確認ください。
 
 ## Windows 8
 
-The Windows 8 command-line tools only support creating new projects.
-Commands must be run from a cmd or powershell prompt.
+Windows 8 コマンドライン ツールは、プロジェクトの新規作成のみサポートします。
+cmd または Powershell を使用して、コマンドを実行する必要があります。
 
-## Create a Project
+## プロジェクトの作成
 
-Run the `create` command with the following parameters:
+下記のオプションを追加して、 `create` コマンドを実行します。
 
-* Path to your new Cordova Windows 8 project
+* Cordova Windows 8 の新プロジェクトへのパス ( Path )
 
-* Package Name, following reverse-domain style convention. This becomes the default Namespace.
+* パッケージ名 ( 逆ドメイン形式 )。こちらがデフォルトの名前空間になります。
 
-* Project name
+* プロジェクト名

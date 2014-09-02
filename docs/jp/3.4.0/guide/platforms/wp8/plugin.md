@@ -1,4 +1,4 @@
---
+---
 license: Licensed to the Apache Software Foundation (ASF) under one
          or more contributor license agreements.  See the NOTICE file
          distributed with this work for additional information
@@ -17,70 +17,58 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone Plugins
+# Windows Phone プラグイン
 
-This section provides details for how to implement native plugin code
-on the Windows Phone platform. Before reading this, see Application
-Plugins for an overview of the plugin's structure and its common
-JavaScript interface. This section continues to demonstrate the sample
-_echo_ plugin that communicates from the Cordova webview to the native
-platform and back.
+この節では、Windows Phone プラットフォームにおけるネイティブプラグインコードの実装方法の詳細に関して解説します。この節を読む前に、
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) を読み、プラグインの構造と JavaScript の汎用インターフェイスの概要をご確認ください。
+この節では、Cordova Webview とネイティブプラットフォーム間で通信を行う、_echo_ プラグインのサンプルを引き続き使用して、解説を行います。
 
-Writing a plugin for Cordova on Windows Phone requires a basic
-understanding of Cordova's architecture. Cordova-WP7 consists of a
-`WebBrowser` that hosts the application's JavaScript code and manages
-native API calls. You can extend a C# `BaseCommand` class
-(`WP7CordovaClassLib.Cordova.Commands.BaseCommand`), which comes with
-most of the functionality you need:
+Windows Phone 上で Cordova のプラグインを構築する場合、Cordova の構造に関する理解が必要です。Cordova-WP7 では、アプリ側の JavaScript のホスト役となり、また、ネイティブ API の呼び出し制御を行う、 `WebBrowser` を使用します。必要となる機能群をほぼ網羅している、C# の `BaseCommand` クラス ( `WP7CordovaClassLib.Cordova.Commands.BaseCommand` ) を拡張することができます。
 
-1. Select your project, and right-click to choose __Add &rarr; New
-   Item...__ If you wish, you can add it to the `Plugins` folder.
+1. プロジェクトを選択して、右クリックをして、 __Add &rarr; New
+   Item...__ を選択してください。 `Plugins` フォルダーに新規アイテムを追加することもできます。
 
-2. Select __Class__ and name it `Echo.cs`.  This class name must
-   _exactly_ match what you call specify as the service in the
-   `cordova.exec()` call on the JavaScript side.
+2. __Class__ を選択して、 `Echo.cs` と名付けます。クラス名は、 JavaScript 側の `cordova.exec()` 内で service ( サービス ) として指定したものと _同じ名前_ にする必要があります。
 
-3. Include the base classes implementation:
+3. 基本クラス ( base class ) をインクルード ( include ) します。
 
         using WPCordovaClassLib.Cordova;
         using WPCordovaClassLib.Cordova.Commands;
         using WPCordovaClassLib.Cordova.JSON;
 
-4. Extend your class from `BaseCommand`:
+4. `BaseCommand` からクラスを拡張します。
 
         public class Echo : BaseCommand
         {
             // ...
         }
 
-5. Add an `echo` method that is callable from JavaScript:
+5. JavaScript 側から呼び出せる `echo` メソッドを追加します。
 
         public class Echo : BaseCommand
         {
             public void echo(string options)
             {
-                // all JS callable plugin methods MUST have this signature!
-                // public, returning void, 1 argument that is a string
+                // JS から呼ぶことのできるプラグインメソッドは、このシグネチャ () を保持する必要があります
+                // public、void 型の戻り値、 文字列の引数 1 つ
             }
         }
 
-See the
-[BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs)
-class for methods available for the plugin to override.  For example,
-the plugin can capture 'pause' and 'resume' events.
+プラグインでオーバーライド ( override ) を行えるクラスのメソッドに関しては、 [BaseCommand.cs](https://github.com/apache/cordova-wp7/blob/master/templates/standalone/cordovalib/Commands/BaseCommand.cs) をご確認ください。たとえば、 'pause' と 'resume' イベントを、プラグインはオーバーライドすることができます。
 
-## Namespaces
+## 名前空間
 
-The default namespace for unqualified commands is:
+カスタマイズする処理の名前空間は、デフォルトでは、以下のようになります。
 
         namespace Cordova.Extension.Commands
         {
             // ...
         }
 
-If you want to specify your own namespace, you need to make a fully
-qualified call to `cordova.exec`. For example, if you want to define
-your C# class like this:
+独自の名前空間を指定したい場合には、 `cordova.exec` に対して、正当な型の呼び出しを行う必要があります。たとえば、C# のクラスを以下のように定義したい場合には、
+JavaScript では以下のように `exec` を呼び出す必要があります。
+
+C#　クラスの定義 ：
 
         namespace com.mydomain.cordovaExtensions
         {
@@ -90,58 +78,49 @@ your C# class like this:
             }
         }
 
-The JavaScript would need to call `exec` like this:
+JavaScript 側 ：
 
         cordova.exec(win, fail, "com.mydomain.cordovaExtensions.Echo", ...);
 
-## Interpreting Arguments in C#
+## C# における引数の解釈
 
-In the example discussed in Application Plugins, the data your plugin
-receives is a string, but what if you want to pass an array of
-strings?  Suppose the JavaScript `cordova.exec` call is specified like
-this:
+『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) で使用した例では、開発者のプラグインが受け取るデータは文字列でしたが、文字列の配列を渡したい場合には、どんな処理をすればよいのでしょうか？
+JavaScript 側の `cordova.exec` は、以下のように定義されているとします。
 
         cordova.exec(win, fail, "Echo", "echo", ["input string"]);
 
-The value of `options` string passed to the `Echo.echo` method is
-JSON:
+`Echo.echo` メソッドに渡された、`options` 文字列の値は、JSON です。
 
         "[\"input string\"]"
 
-All JavaScript `exec` arguments are JSON-encoded before being passed
-into C#, and so need to be decoded:
+JavaScript 側の `exec` のすべての引数は、C# に渡される前は、JSON 形式でエンコード化されます。そのため、デコード処理 ( decode ) が必要となります。
 
         string optVal = JsonHelper.Deserialize<string[]>(options)[0];
-        // optVal now has the value of "input string"
+        // optVal の値は、現在、 "input string" となります
 
-## Passing Results from C# to JavaScript
+## C# から JavaScript への結果の引き渡し
 
-The `BaseCommand` class provides methods to pass data to JavaScript
-callback handlers.  If you simply want to signal success with no
-accompanying result, you can simply call:
+`BaseCommand` クラスでは、JavaScript のコールバック ハンドラーにデータを渡すメソッドを提供しています。結果を渡さず成功の合図のみ行う場合には、以下の呼び出を行います。
 
         DispatchCommandResult();
-        // calls back with an empty plugin result, considered a success callback
+        // 空の結果を使用して、コールバックを行います。成功時のコールバックとみなされます。
 
-To pass data back, you need to call `DispatchCommandResult`
-differently:
+データを返す場合には、異なる方法で、 `DispatchCommandResult` を呼び出す必要があります。
 
-        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "Everything went as planned, this is a result that is passed to the success handler."));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "計画通りに処理が終了しました。その結果を成功時のコールバックハンドラーへ渡します。"));
 
-Use an encoded JSON string to pass structured object data back to
-JavaScript:
+構造化されたオブジェクトのデータ ( structured object data ) を JavaScript 側へ返す場合、JSON 形式でエンコード化している文字列を使用します。
 
         DispatchCommandResult(new PluginResult(PluginResult.Status.OK, "{result:\"super awesome!\"}"));
 
-To signal an error, call `DispatchCommandResult` with a `PluginResult`
-object whose status is `ERROR`:
+実行に失敗した場合、 `ERROR` ステータスを持つ `PluginResult` オブジェクトを使用して、 `DispatchCommandResult` を呼び出します。
 
-        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo signaled an error"));
+        DispatchCommandResult(new PluginResult(PluginResult.Status.ERROR, "Echo からエラーが返ってきました。"));
 
-## Handling Serialization Errors
+## シリアル化エラー ( Serialization Error ) の処理
 
-When interpreting your arguments, `try`/`catch` blocks help screen out
-bad input. This pattern appears throughout the Cordova C# code:
+引数の解釈を行うとき、 `try`/`catch` ブロックを使用して、障害発生時の状態を画面に表示させると便利です。
+以下のようなパターンのコードを、Cordova C# コード全体に組み込みます。
 
         string optVal = null;
 
@@ -163,19 +142,13 @@ bad input. This pattern appears throughout the Cordova C# code:
             // ... continue on to do our work
         }
 
-## Plugin XML
+## Plugin.xml
 
-The following shows how to use the `plugin.xml` file to specify a
-plugin's source files on the Windows Phone platform.  See Application
-Plugins for an overview, and Plugin Specification for details on
-available options.
+ここでは、Windows Phone プラットフォームで、プラグインのソースファイルを指定するために使用する `plugin.xml` ファイルの使用方法に関して解説します。概要に関しては、『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 )  を、使用可能なオプションなどの詳細に関しては、各プラットフォームの 『 プラグイン 』 ( 原文 「 Plugin Specification 」 ) をご確認ください。
 
-- The `<source-file>` element defines all plugin resources, such
-  as _.cs_, _.xaml_, _.xaml.cs_, and _.dll_ files, and image assets.
+- `<source-file>` 要素を使用して、プラグインが使用するリソース ( _.cs_ 、 _.xaml_ 、 _.xaml.cs_ 、 _.dll_ ファイル、および、イメージ関連のリソース ) を指定します。
 
-- The `<config-file>` element defines elements to inject into a
-  configuration file. This example adds a plugin to the platform's
-  `config.xml` file:
+- `<config-file>` 要素を使用して、設定ファイルへ注入 ( inject ) するリソースを指定します。以下の例では、プラットフォームの `config.xml` ファイルへプラグインを 1 つ追加しています。
 
         <config-file target="config.xml" parent="/*">
             <feature name="PluginName">
@@ -183,42 +156,32 @@ available options.
             </feature>
         </config-file>
 
-  This example adds the contacts capability to the `WMAppManifest.xml`
-  file:
+こちらの例では、連絡先のデータにアクセスするための機能を、 `WMAppManifest.xml` に追加します。
 
         <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
             <Capability Name="ID_CAP_CONTACTS" />
         </config-file>
 
-## Debugging Plugins
+## プラグインのデバッグ
 
-Use Visual Studio's debugger to debug a plugin's C# component. You can
-set a break point at any of the methods exposed by your class.
+プラグインの C# コンポーネントのデバッグを行う場合、Visual Studio 搭載のデバッガを使用します。開発者のクラスが使用するメソッドにブレークポイント ( break point ) を設定できます。
 
-JavaScript is more difficult to debug on Windows Phone. You need to
-use `console.log` to output the plugin's state, or to inform
-yourself of errors.
+Windows Phone における JavaScript のデバッグは、より困難です。 `console.log` を使用して、プラグインの状態の出力またはエラーの出力を行なう必要があります。
 
-## Common Pitfalls
+## よくある失敗
 
-- Be careful not to pass arguments from JavaScript to the native side
-  that are difficult to deserialize as JSON. Most device platforms
-  expect the argument passed to `cordova.exec()` to be an array, such
-  as the following:
+- JavaScript からネイティブ側へ引数を渡すとき、JSON の逆シリアル化 ( deserialize ) を行うことが困難な引数を渡さないように注意してください。
+デバイスのプラットフォーム側では、 `cordova.exec()` に渡す引数は、以下のような配列形式を想定しています。
 
         cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", 54, {literal:'trouble'}]);
 
-  This may result in an overly complex string value for C# to decode:
+    こちらは、C# 側でデコード ( decode ) を行うには、多少、複雑な文字列となってしまいます。
 
         "[\"this is a string\", 54, { literal:'trouble' }]"
 
-  Instead, consider converting _all_ parameters to strings before
-  calling `exec()`, and decoding each separately:
+    代わりに、 `exec()` を呼ぶ前に、 _すべての_ パラメータを文字列に変換して、そして、個別にデコードしてみましょう。 
 
         cordova.exec(win, fail, "ServiceName", "MethodName", ["this is a string", "54", "{literal:'trouble'}"]);
         string[] optValues = JsonHelper.Deserialize<string[]>(options);
 
-- It is usually better to check parameters in JavaScript before
-  calling `exec()`. Doing so allows you to re-use more code and pull
-  unnecessary functionality from the plugin's various native
-  implementations.
+- `exec()` を呼び出す前に、JavaScript のパラメータの確認を行うことを推奨します。確認を行うことにより、プラグインのネイティブ側のコードの再利用や不必要な機能の省略を行うことができます。

@@ -17,438 +17,417 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Upgrading Android
+# Android の更新
 
-This guide shows how to modify Android projects to upgrade from older versions of Cordova.
-Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
-version of the CLI.
+このガイドでは、新しいバージョンの Cordova へ移行するときに必要となる、 Android プロジェクト側の修正点に関して解説します。このガイドで使用する手順のほとんどは、 `cordova` の CLI ユーティリティがリリースされる前のコマンドライン ツールを使用して作成されたプロジェクトに適用するものです。CLI 自体のバージョン更新に関しては、『 コマンドライン インターフェイス 』 をご確認ください。
 
-## Upgrading to 3.3.0 from 3.2.0
+## 3.2.0 から 3.3.0 への更新
 
-Follow the same instructions as for `3.2.0`.
+`3.2.0` 記載の手順に従います。
 
-Starting with 3.3.0, the Cordova runtime is now compiled as an Android Library
-instead of a Jar. This should have no effect for command-line usage, but IDE
-users will need to import the newly added `MyProject-CordovaLib` project into
-their workspace.
+3.3.0 から使用する場合、Cordova ランタイムは、Jar ではなく、Android ライブラリとしてコンパイルされます。コマンドラインを使用している場合には、影響はありませんが、IDE を使用している場合には、新規追加を行った `MyProject-CordovaLib` ( MyProject > CordovaLib ) プロジェクトを、ワークスペースにインポートする必要があります。
 
-## Upgrading to 3.2.0 from 3.1.0
+## 3.1.0 から 3.2.0 への更新
 
-For projects that were created with the cordova CLI: 
+cordova CLI を使用して作成したプロジェクトの場合、以下の処理を行います。
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. `cordova` CLI のバージョンを更新します。『 コマンドライン インターフェイス 』 をご確認ください。
 
-2. Run `cordova platform update android`
-        
-For projects not created with the cordova CLI, run:
+2. `cordova platform update android` を実行します。
+
+cordova CLI を使用せずに作成したプロジェクトの場合、以下を実行します。
 
         bin/update <project_path>
 
-**WARNING:**  Starting on Android 4.4, creating a file input element with type="file" will not open the file picker dialog.
-This is a regression with Chromium on Android and the problem can be reproduced in the standalone Chrome browser on Android (see http://code.google.com/p/android/issues/detail?id=62220)  The suggested workaround is to use the FileTransfer and File plugins for Android 4.4. You can listen for an onClick event from the input type="file" and then pop up a file picker UI. In order to tie the form data with the upload, you can use JavaScript to attach form values to the multi-part POST request that FileTransfer makes. This bug still exists as of Android 4.4.2
+**警告 :**  Android 4.4 では、type="file" 指定をした input 要素の記述を行った場合、「 ファイルを開く 」 ダイアログは開きません。これは、Android の Chromium 側の問題です。Android の独立型 ( standalone ) の Chrome ブラウザーを使用して、この問題を再現することができます ( http://code.google.com/p/android/issues/detail?id=62220 を参照のこと )。回避策として、Android 4.4 では、FileTransfer プラグインと File プラグインの使用を提案します。input 要素 ( type="file" ) に onClick イベントを挿入して、「 ファイルを開く 」 ダイアログ UI を表示することもできます。form data を使用して、アップロードを行う場合、JavaScript を使用して、FileTransfer が行う multi-part POST リクエストに、 form の値をアタッチ ( attach ) します。Android 4.4.2 でも、このバグがあります。
 
+## 3.0.0 から 3.1.0 への更新
 
-## Upgrading to 3.1.0 from 3.0.0
+cordova CLI を使用して作成したプロジェクトの場合、以下の処理を行います。
 
-For projects that were created with the cordova CLI: 
+1. `cordova` CLI のバージョンを更新します。『 コマンドライン インターフェイス 』 をご確認ください。
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+2. `cordova platform update android` を実行します。
 
-2. Run `cordova platform update android`
-        
-For projects not created with the cordova CLI, run:
+cordova CLI を使用せずに作成したプロジェクトの場合、以下を実行します。
 
         bin/update <project_path>
-        
-## Upgrade to the CLI (3.0.0) from 2.9.0
 
-1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+## 2.9.0 から CLI ( 3.0.0 ) への更新
 
-2. Add your platforms the cordova project, for example: `cordova
-   platform add android`.
+1. 『 コマンドライン インターフェイス 』 の記載内容に従い、cordova CLI を使用して、Apache Cordova 3.0.0 プロジェクトを新規作成します。
 
-3. Copy the contents of your project's `www` directory to the `www` directory
-   at the root of the cordova project you just created.
+2. プラットフォームを cordova プロジェクトに追加します。例 ： 「 `cordova
+   platform add android` 」 
 
-4. Copy any native assets from your old project into the appropriate
-   directories under `platforms/android`: this directory is where your
-   native cordova-android project exists.
+3. 開発者のプロジェクトの `www` ディレクトリのコンテンツを、先ほど作成した cordova プロジェクトの root ( ルート ) に位置する `www` ディレクトリにコピーします。
 
-5. Use the cordova CLI tool to install any plugins you need. Note that
-   the CLI handles all core APIs as plugins, so they may need to be
-   added. Only 3.0.0 plugins are compatible with the CLI.
+4. 旧プロジェクトで使用していたネイティブのアセット ( native assets ) を、 `platforms/android` 下の適当なディレクトリにコピーします。 `platforms/android` のディレクトリは、ネイティブの cordova-android プロジェクトが置かれているディレクトリです。
 
-## Upgrade to 3.0.0 from 2.9.0
+5. cordova CLI ツールを使用して、必要なプラグインをインストールします。CLI では、すべてのコア API をプラグインとして取り扱うため、すべてのプラグインをインストールしておくことを推奨します。また、3.0.0 系のプラグインのみ、CLI で取り扱うことができます。
 
-1. Create a new Apache Cordova Android project.
+## 2.9.0 から 3.0.0 への更新　
 
-2. Copy the contents of your `www` directory to the new project.
+1. Apache Cordova Android プロジェクトを新規に作成します。
 
-3. Copy any native Android assets from your `res` directory to the new project.
+2. 開発者の `www` ディレクトリのコンテンツを、新規のプロジェクトにコピーします。
 
-4. Copy over any plugins you installed from the `src` subdirectories into the new project.
+3. 開発者の `res` ディレクトリから Android のネイティブ側のアセット ( assets ) を新規のプロジェクトにコピーします。
 
-5. Make sure to upgrade any deprecated `<plugin>` references from your old `config.xml` file to the new `<feature>` specification.
+4. インストールしていたプラグインを、`src` サブディレクトリから新規のプロジェクトにコピーします。
 
-6. Update any references to the `org.apache.cordova.api` package to be `org.apache.cordova`.
+5. 旧 `config.xml` ファイルの `<plugin>` のリファレンスの中から、すでに廃止されている プラグインの修正も行います。このとき、新しい `<feature>` の仕様に適合するように、編集してください。
 
-   __NOTE__: all core APIs have been removed and must be installed as plugins. Please see the Using Plugman to Manage Plugins Guide for details.
+6. `org.apache.cordova.api` パッケージへの参照を、 `org.apache.cordova` へ更新します。
 
-## Upgrade to 2.9.0 from 2.8.0
+   __注意__: コア API のすべてを一度削除して、プラグインとして再インストールする必要があります。詳細に関しては、『 Plugman を使用した、プラグインの管理 』 ガイドをご確認ください。
 
-1. Run `bin/update <project_path>`.
+## 2.8.0 から 2.9.0 への更新　
 
-## Upgrade to 2.8.0 from 2.7.0
+1. `bin/update <project_path>` を実行します。
 
-1. Remove `cordova-2.7.0.jar` from the project's `libs` directory.
+## 2.7.0 から 2.8.0 への更新　
 
-2. Add `cordova-2.8.0.jar` to the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.7.0.jar` を削除します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.8.0.jar` を追加します。
+
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
 <!-- SS Eclipse -->
 
-4. Copy the new `cordova.js` into your project.
+4. 新しい `cordova.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova.js` file.
+5. 新 `cordova.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` file to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Update `framework/res/xml/config.xml` to have similar settings as it did previously.
+7. 以前のような設定になるように、 `framework/res/xml/config.xml` を更新します。
 
-8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+8. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.7.0 from 2.6.0
+## 2.6.0 から 2.7.0 への更新
 
-1. Remove `cordova-2.6.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.6.0.jar` を削除します。
 
-2. Add `cordova-2.7.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.7.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.7.0.js` into your project.
+4. 新しい `cordova-2.7.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.7.0.js` file.
+5. 新 `cordova-2.7.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Update `framework/res/xml/config.xml` to have similar settings as it did previously.
+7. 以前のような設定になるように、 `framework/res/xml/config.xml` を更新します。
 
-8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+8. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.6.0 from 2.5.0
+## 2.5.0 からの 2.6.0 への更新
 
-1. Remove `cordova-2.5.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.5.0.jar` を削除します。
 
-2. Add `cordova-2.6.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.6.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.6.0.js` into your project.
+4. 新しい `cordova-2.6.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.6.0.js` file.
+5. 新 `cordova-2.6.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Update `framework/res/xml/config.xml` to have similar settings as it did previously.
+7. 以前のような設定になるように、 `framework/res/xml/config.xml` を更新します。
 
-8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+8. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-Run `bin/update <project>` with the project path listed in the Cordova Source directory.
+Cordova の Source ディレクトリ内で一覧化されているプロジェクトパスを使用して、 `bin/update <project>` を実行します。
 
-## Upgrade to 2.5.0 from 2.4.0
+## 2.4.0 から 2.5.0 への更新
 
-1. Remove `cordova-2.4.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.4.0.jar` を削除します。
 
-2. Add `cordova-2.5.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.5.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.5.0.js` into your project.
+4. 新しい `cordova-2.5.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.5.0.js` file.
+5. 新 `cordova-2.5.0.js.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Update `framework/res/xml/config.xml` to have similar settings as it did previously.
+7. 以前のような設定になるように、 `framework/res/xml/config.xml` を更新します。
 
-8. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+8. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.4.0 from 2.3.0
+## 2.3.0 から 2.4.0 への更新
 
-1. Remove `cordova-2.3.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.3.0.jar` を削除します。
 
-2. Add `cordova-2.4.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.4.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.4.0.js` into your project.
+4. 新しい `cordova-2.4.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.4.0.js` file.
+5. 新 `cordova-2.4.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+7. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.3.0 from 2.2.0
+## 2.2.0 から 2.3.0 への更新
 
-1. Remove `cordova-2.2.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.2.0.jar` を削除します。
 
-2. Add `cordova-2.3.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.3.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.3.0.js` into your project.
+4. 新しい `cordova-2.3.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.3.0.js` file.
+5. 新 `cordova-2.3.0.js.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+7. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.2.0 from 2.1.0
+## 2.1.0 から 2.2.0 への更新
 
-1. Remove `cordova-2.1.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.1.0.jar` を削除します。
 
-2. Add `cordova-2.2.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.2.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.2.0.js` into your project.
+4. 新しい `cordova-2.2.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.2.0.js` file.
+5. 新 `cordova-2.2.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+7. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.1.0 from 2.0.0
+## 2.0.0 から 2.1.0 への更新
 
-1. Remove `cordova-2.0.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-2.0.0.jar` を削除します。
 
-2. Add `cordova-2.1.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.1.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.1.0.js` into your project.
+4. 新しい `cordova-2.1.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.1.0.js` file.
+5. 新 `cordova-2.1.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-7. Copy files from `bin/templates/cordova` to the project's `cordova` directory.
+7. `bin/templates/cordova` のファイルを、プロジェクトの `cordova` ディレクトリへコピーします。
 
-## Upgrade to 2.0.0 from 1.9.0
+## 1.9.0 から 2.0.0 への更新
 
-1. Remove `cordova-1.9.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.9.0.jar` を削除します。
 
-2. Add `cordova-2.0.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-2.0.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-2.0.0.js` into your project.
+4. 新しい `cordova-2.0.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-2.0.0.js` file.
+5. 新 `cordova-2.0.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Copy the `res/xml/config.xml` to match `framework/res/xml/config.xml`.
+6. `framework/res/xml/config.xml` に一致するように、 `res/xml/config.xml` ファイルをコピーします。
 
-In the 2.0.0 release, the `config.xml` file combines and replaces
-`cordova.xml` and `plugins.xml`.  The old files are deprecated, and
-while they still work in 2.0.0, will stop working in a future release.
+2.0.0 のリリースでは、 `cordova.xml` と `plugins.xml` の代わりに、 `config.xml` ファイルが使用されるようになりました。これらの旧設定ファイルは、2.0.0 では、サポートしておりますが、将来のリリースでは、廃止する予定です。
 
-## Upgrade to 1.9.0 from 1.8.1
+## 1.8.1 から 1.9.0 への更新
 
-1. Remove `cordova-1.8.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.8.0.jar` を削除します。
 
-2. Add `cordova-1.9.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.9.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.9.0.js` into your project.
+4. 新しい `cordova-1.9.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.9.0.js` file.
+5. 新 `cordova-1.9.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-Due to the introduction of the `CordovaWebView` in the 1.9.0 release,
-third-party plugins may not work.  These plugins need to get a context
-from the `CordovaInterface` using `getContext()` or `getActivity()`.
-If you are not an experienced Android developer, please contact the
-plugin maintainer and add this task to their bug tracker.
+1.9.0 のリリースから導入された `CordovaWebView` では、第三者提供のプラグインを使用できない場合もあります。その場合、 `getContext()` または `getActivity()` を使用して、 `CordovaInterface` から Context を取得する必要があります。Android 開発の上級者ではない場合、プラグインの開発者に連絡を取ったり、彼らが運営するバグの掲示板 ( bug tracker ) にこの問題を投稿してください。
 
-## Upgrade to 1.8.0 from 1.8.0
+## 1.8.0 から 1.8.1 ( 原文 「 1.8.0 」 ) への更新
 
-1. Remove `cordova-1.8.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.8.0.jar` を削除します。
 
-2. Add `cordova-1.8.1.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.8.1.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.8.1.js` into your project.
+4. 新しい `cordova-1.8.1.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.8.1.js` file.
+5. 新 `cordova-1.8.1.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-## Upgrade to 1.8.0 from 1.7.0
+## 1.7.0 から 1.8.0 への更新
 
-1. Remove `cordova-1.7.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.7.0.jar` を削除します。
 
-2. Add `cordova-1.8.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.8.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.8.0.js` into your project.
+4. 新しい `cordova-1.8.0.js.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.8.0.js` file.
+5. 新 `cordova-1.8.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-## Upgrade to 1.8.0 from 1.7.0
+## 1.7.0 から 1.8.0 への更新
 
-1. Remove `cordova-1.7.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.7.0.jar` を削除します。
 
-2. Add `cordova-1.8.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.8.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.8.0.js` into your project.
+4. 新しい `cordova-1.8.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.8.0.js` file.
+5. 新 `cordova-1.8.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml ファイルを更新します。 
 
-## Upgrade to 1.7.0 from 1.6.1
+## 1.6.1 から 1.7.0 への更新
 
-1. Remove `cordova-1.6.1.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.6.1.jar` を削除します。
 
-2. Add `cordova-1.7.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.7.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.7.0.js` into your project.
+4. 新しい `cordova-1.7.0.js` をプロジェクトにコピーします。
 
-5. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+5. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルをコピーします。 
 
-## Upgrade to 1.6.1 from 1.6.0
+## 1.6.0 から 1.6.1 への更新
 
-1. Remove `cordova-1.6.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.6.0.jar` を削除します。
 
-2. Add `cordova-1.6.1.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.6.1.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.6.1.js` into your project.
+4. 新しい `cordova-1.6.1.js` をプロジェクトにコピーします。
 
-5. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+5. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-## Upgrade to 1.6.0 from 1.5.0
+## 1.5.0 から 1.6.0 への更新
 
-1. Remove `cordova-1.5.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `cordova-1.5.0.jar` を削除します。
 
-2. Add `cordova-1.6.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.6.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.6.0.js` into your project.
+4. 新しい `cordova-1.6.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.6.0.js` file.
+5. 新 `cordova-1.6.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xm` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-7. Replace `res/xml/phonegap.xml` with `res/xml/cordova.xml` to match `framework/res/xml/cordova.xml`.
+7. `framework/res/xml/cordova.xml` に一致するように、 `res/xml/cordova.xml` を使用して、 `res/xml/phonegap.xml` を置き換えます。
 
-## Upgrade to 1.5.0 from 1.4.0
+## 1.4.0 から 1.5.0 への更新
 
-1. Remove `phonegap-1.4.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-1.4.0.jar` を削除します。
 
-2. Add `cordova-1.5.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.5.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `cordova-1.5.0.js` into your project.
+4. 新しい `cordova-1.5.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `cordova-1.5.0.js` file.
+5. 新 `cordova-1.5.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-7. Replace `res/xml/phonegap.xml` with `res/xml/cordova.xml` to match `framework/res/xml/cordova.xml`.
+7. `framework/res/xml/cordova.xml` に一致するように、 `res/xml/cordova.xml` を使用して、 `res/xml/phonegap.xml` を置き換えます。
 
-## Upgrade to 1.4.0 from 1.3.0
+## 1.3.0 から 1.4.0 への更新
 
-1. Remove `phonegap-1.3.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-1.3.0.jar` を削除します。
 
-2. Add `phonegap-1.4.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `cordova-1.4.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `phonegap-1.4.0.js` into your project.
+4. 新しい `phonegap-1.4.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `phonegap-1.4.0.js` file.
+5. 新 `phonegap-1.4.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
+7. `framework/res/xml/phonegap.xml` に一致するように、`res/xml/phonegap.xml` ファイルを更新します。 
 
-## Upgrade to 1.3.0 from 1.2.0
+## 1.2.0 から 1.3.0 への更新
 
-1. Remove `phonegap-1.2.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-1.2.0.jar` を削除します。
 
-2. Add `phonegap-1.3.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `phonegap-1.3.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `phonegap-1.3.0.js` into your project.
+4. 新しい `phonegap-1.3.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `phonegap-1.2.0.js` file.
+5. 新 `phonegap-1.2.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。
 
-7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
+7. `framework/res/xml/phonegap.xml` に一致するように、`res/xml/phonegap.xml` ファイルを更新します。
 
-## Upgrade to 1.2.0 from 1.1.0
+## 1.1.0 から 1.2.0 への更新
 
-1. Remove `phonegap-1.1.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-1.1.0.jar` を削除します。
 
-2. Add `phonegap-1.2.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `phonegap-1.2.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `phonegap-1.2.0.js` into your project.
+4. 新しい `phonegap-1.2.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `phonegap-1.2.0.js` file.
+5. 新 `phonegap-1.2.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-7. Update `res/xml/phonegap.xml` to match `framework/res/xml/phonegap.xml`.
+7. `framework/res/xml/phonegap.xml` に一致するように、`res/xml/phonegap.xml` ファイルを更新します。 
 
-## Upgrade to 1.1.0 from 1.0.0
+## 1.0.0 から 1.1.0 への更新
 
-1. Remove `phonegap-1.0.0.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-1.0.0.jar` を削除します。
 
-2. Add `phonegap-1.1.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `phonegap-1.1.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `phonegap-1.1.0.js` into your project.
+4. 新しい `phonegap-1.1.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `phonegap-1.1.0.js` file.
+5. 新 `phonegap-1.1.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを更新します。 
 
-## Upgrade to 1.0.0 from 0.9.6
+## 0.9.6 から 1.0.0 への更新
 
-1. Remove `phonegap-0.9.6.jar` from the project's `libs` directory.
+1. プロジェクトの `libs` ディレクトリから、 `phonegap-0.9.6.jar` を削除します。
 
-2. Add `phonegap-1.0.0.jar` to the project's `libs` directory.
+2. プロジェクトの `libs` ディレクトリへ、 `phonegap-1.0.0.jar` を追加します。
 
-3. If you use Eclipse, please refresh your Eclipse project and do a clean.
+3. Eclipse を使用している場合、Eclipse プロジェクトのリフレッシュとクリーンアップを行ってください。
 
-4. Copy the new `phonegap-1.0.0.js` into your project.
+4. 新しい `phonegap-1.0.0.js` をプロジェクトにコピーします。
 
-5. Update your HTML to use the new `phonegap-1.0.0.js` file.
+5. 新 `phonegap-1.0.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Add the `res/xml/plugins.xml` to match `framework/res/xml/plugins.xml`.
-
+6. `framework/res/xml/plugins.xml` に一致するように、`res/xml/plugins.xml` ファイルを追加します。 

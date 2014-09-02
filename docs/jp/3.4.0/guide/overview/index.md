@@ -18,122 +18,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ---
 
-# Overview
+# 概要
 
-Cordova is an open-source mobile development framework. It allows you
-to use standard web technologies such as HTML5, CSS3, and JavaScript
-for cross-platform development, avoiding each mobile platforms' native
-development language.  Applications execute within wrappers targeted
-to each platform, and rely on standards-compliant API bindings to
-access each device's sensors, data, and network status.
+Cordova は、オープンソースのモバイル開発フレームワークです。Cordova を使用することにより、クロスプラットフォーム開発において、
+各モバイルプラットフォームのネイティブ開発言語に縛られることなく、WEB 標準技術 ( HTML5、CSS3、JavaScript など ) を駆使することができます。
+アプリケーションは、各プラットフォームに特化した 「 ラッパー ( 包み込むもの / wrapper ) 」 内で実行され、規格に準拠した API バインディング ( standards-compliant API bindings ) を使用して、各デバイスのリソース ( 各種センサー、データ、ネットワーク状態など ) にアクセスを行います。 
 
-Use Cordova if you are:
+こんな方が Cordova を使っています。
 
-* a mobile developer and want to extend an application across more
-  than one platform, without having to re-implement it with each
-  platform's language and tool set.
+* 携帯アプリ開発者 ： 各プラットフォームの言語と開発環境に縛られることなく、複数のプラットフォームでアプリの展開を検討されている方。
 
-* a web developer and want to deploy a web app that's packaged for
-  distribution in various app store portals.
+* Web 開発者 ： 複数のアプリストアで、パッケージ化された Web アプリの配布を検討されている方。
 
-* a mobile developer interested in mixing native application
-  components with a _WebView_ (browser window) that can access
-  device-level APIs, or if you want to develop a plugin interface
-  between native and WebView components.
+* 携帯アプリ開発者 ： デバイスレベルの API 群へアクセスできる _WebView_ ( ブラウザー　ウィンドウ ) とネイティブコンポーネントの併用を検討されている方。または、ネイティブコンポーネントと WebView コンポーネント間を結ぶ、プラグイン インターフェイスの開発を検討されている方。
 
-## Basic Components
+## 基本的なコンポーネント
 
-Cordova applications rely on a common `config.xml` file that provides
-information about the app and specifies parameters affecting how it
-works, such as whether it responds to orientation shifts. This file
-adheres to the W3C's
-[Packaged Web App](http://www.w3.org/TR/widgets/),
-or _widget_, specification.
+Cordova アプリでは、 `config.xml` ファイルを使用して、アプリに関する情報の提供とアプリの挙動制御 ( パラメーター設定 )を行います。
+挙動の制御には、端末のオリエンテーション変化への対応を含みます。このファイルは、W3C の [Packaged Web App](http://www.w3.org/TR/widgets/) または
+_ウィジェット ( widget )_ の仕様に準拠しています。
 
-The application itself is implemented as a web page, named
-_index.html_ by default, that references whatever CSS, JavaScript,
-images, media files, or other resources are necessary for it to run.
-The app executes as a _WebView_ within the native application wrapper,
-which you distribute to app stores.  For the web app to interact with
-various device features the way native apps do, it must also reference
-a `cordova.js` file, which provides API bindings.
+アプリケーション自体は、Web ページ ( デフォルトでは、「 _index.html_ 」 を使用 ) として実装され、実行に必要なリソース ( CSS、JavaScript、イメージ、メディアファイルなど ) を参照します。アプリは、ネイティブアプリのラッパー ( native application wrapper ) を使用して、 _WebView_ として実行されます。また、アプリは、各アプリストアで配布できます。ネイティブアプリ同様にデバイスの各機能を使用する Web アプリに関しては、API バインディング ( API bindings ) を記述している `cordova.js` ファイルを使用します。
 
-The Cordova-enabled WebView may provide the application with its
-entire user interface. It can also be a component within a larger,
-hybrid application that mixes the WebView with native application
-components.  Cordova provides a _plugin_ interface for these
-components to communicate with each other.
+Cordova を使用している WebView は、アプリで使用するユーザインターフェイスを一手に担う場合もあります。また、ネイティブアプリのコンポーネントと WebView を併用している、比較的大規模なハイブリッドアプリの 1 つのコンポーネントとして、この WebView を使用する場合もあります。Cordova は、両方のコンポーネント間で発生する処理を行えるよう、 _プラグイン_ インターフェイスを提供しています。
 
-## Development Paths
+## 開発手順
 
-As of version 3.0, you can use two basic workflows to create
-a mobile application. While you can accomplish the same
-thing using both workflows, certain tasks are better suited to using one workflow 
-over the other. For this reason, you should understand both workflows so
-that you can use the best tool for the best situation.
+バージョン 3.0 系では、携帯アプリを開発するときに使用する、2 通りの基本的な作業手順を用意しています。どちらの作業手順を使用しても、同じ結果となりますが、特定の作業に関しては、どちらか一方の作業手順の方が、より効率的に進めることができる場合もあります。このため、両方の作業手順を理解して、適当に使い分けを行うのが良いかと思います。
 
-The two main workflows that are supported are the _Web Project Dev_ workflow and the _Native Platform Dev_ workflow.
+2 通りの作業手順とは、「_Web プロジェクト開発 ( Web Project Dev )_ 」 と 「 _ネイティブ プラットフォーム開発 ( Native Platform Dev )_ 」です。
 
-### Web Project Dev
+### Web プロジェクト開発 作業手順
 
-You can think of the first workflow as the _Web Project Dev_ workflow. You should use
-this workflow when you want to create a Cordova application that runs on 
-as many mobile operating systems as possible with as little platform-specific
-development work as possible. This workflow came into existence with Cordova 3.0
-and the creation of the Cordova _Command-line Interface_ (CLI). The CLI abstracts
-away a lot of the functionality of lower-level shell scripts that take care of the
-details involved with building your app, such as copying your web assets into 
-the correct folders for each mobile platform, making platform specific configuration
-changes, or running specific build scripts to generate application binaries. You can read 
-more about the _Web Project Dev_ workflow in The Command-line Interface. Please note
-that often when people speak of the "CLI," they are talking about this _Web Project Dev_
-workflow.
+最初に紹介する、こちらの作業手順を _Web プロジェクト開発_ と呼びます。各プラットフォームに特化した開発を最小限度にしながらも、より多くのモバイル オペーレティング システム上で、Cordova アプリを実行したい場合に、この作業手順を使用します。この作業手順は、 _コマンドライン インターフェイス ( CLI, Command-line Interface )_ を Cordova 3.0 で実装したことにより、実現できました。CLI は、アプリをビルドするときに発生する細かい処理を行っていた、シェルスクリプトの機能群を抽出して構築しています。例としては、「 各プラットフォーム所定のフォルダーに、関連したファイルなどをコピーする 」、「 各プラットフォームに特化した設定変更を行う 」、「 アプリのバイナリーを生成するため、特定のビルド用スクリプト ( build script ) を実行する 」 などが挙げられます。 _Web プロジェクト開発_ 作業手順の詳細に関しては、コマンドライン インターフェイスに関する解説に記載がありますので、そちらをご確認ください。このドキュメントの中で頻繁に目にする "CLI" とは、この _Web プロジェクト開発_ に記載の作業手順のことを指します。
 
-### Native Platform Dev
+### ネイティブ プラットフォーム開発　作業手順
 
-The second workflow can be thought of as a _Native Platform Dev_ workflow. You should use it
-when you want to focus on building an application for a single platform and are 
-interested in changing the lower-level platform details. While you can still use this workflow
-to build cross-platform apps, the lack of tools to abstract away the various build steps will
-make it more difficult. For example, you will have to use Plugman to
-install the same plugin once for each platform that you want to support. The 
-benefit to using this _Native Platform Dev_ workflow is that it gives you access to the lower-level
-shell scripts to build and test the application, so if you are hacking on the native 
-side of things, this workflow is the most efficient way to test your changes. This workflow
-is also appropriate if you want to use the CordovaWebView as a small part in a larger native
-application (See the Embedding WebViews guide.)  You can read about this workflow in the different
-Shell Tool guides, for instance, Android Shell Tool Guide and iOS Shell Tool Guide.
+こちらの 2 番目の作業手順は、 _ネイティブ プラットフォーム開発_ と呼んでいます。こちらの作業手順では、アプリ開発対象のプラットフォームを 1 つに絞り込み、また、プラットフォームの詳細設定の変更までを対象とします。この作業手順を使用しても、クロスプラットフォームのアプリをビルドすることはできますが、ビルドの各工程で使用するツールがないため、より困難な開発となります。この場合、例として、「 Plugman を必ず使用して、開発対象とする各プラットフォームに対して、同じプラグインをインストールしていく必要がある 」 などが挙げられます。この _ネイティブ プラットフォーム開発_ 作業手順を使用する利点は、アプリのビルドと検証を行うため、下位層のシェルスクリプトへのアクセスを行えることです。ネイティブ側をハッキング ( hack ) しているときには、行った変更箇所の検証を行えるため、この作業手順の方が適当です。また、大きなネイティブアプリの一部として CordovaWebView を使用する場合にも、こちらの作業手順の方が適当です ( 『 WebView の組み込み 』 を参照のこと )。こちらの作業手順に関しては、『 Android Shell Tool Guide 』、『 iOS Shell Tool Guide 』 などのシェルのツールガイドにも記載がありますので、ご確認ください。
 
-When first starting out, it might be easiest to use the _Web Project Dev_ workflow
-to create an application. (To install the CLI, see The Command-line Interface.)
-Depending on the set of platforms you wish to target, you can rely on
-the CLI for progressively greater shares of the development cycle:
+アプリ開発を初めて行う場合には、 _Web プロジェクト開発_ 作業手順を使用する方が簡単です ( CLI のインストール方法に関しては、『 コマンドライン インターフェイス 』 をご確認ください )。開発対象とするプラットフォームに依りますが、その開発サイクル全体において、CLI を使用することもできます。
 
-* In the most basic scenario, you can use the CLI simply to create a
-  new project that is populated with default configuration for you to
-  modify.
+* 最も基本的なシナリオでは、CLI を使用した、プロジェクトの新規作成 ( 作成時にはデフォルト設定を使用 ) が考えられます。
 
-* For many mobile platforms, you can also use the CLI to set up
-  additional project files required to compile within each SDK.  For
-  this to work, you must install each targeted platform's SDK.
-  (See the Platform Guides for instructions.)
-  As indicated in the Platform Support table, you may need to
-  run the CLI on different operating systems depending on the targeted
-  platform.
+* 各モバイルプラットフォームの SDK を使用して、コンパイルを行うときに必要となる各プロジェクトファイルを、CLI を使用して設定することもできます。実行前に、開発対象とするプラットフォームの SDK をインストールしておく必要があります ( 手順に関しては、『 プラットフォームに関する解説 』 をご確認ください )。『 プラットフォームのサポート 』 表にも記載されているように、さまざまなオペレーティングシステム上で、CLI を実行することができます。
 
-* For supporting platforms, the CLI can compile executable
-  applications and run them in an SDK-based device emulator.
-  For comprehensive testing, you can also generate application files
-  and install them directly on a device.
+* サポート対象のプラットフォーム上では、CLI を使用して、実行可能なアプリをコンパイルでき、また、SDK 実装のデバイスエミュレータ上で実行することもできます。
+総合的な検証を行う場合には、アプリファイルを作成して、直接、実機にインストールできます。
 
-At any point in the development cycle, you can switch to using more of the _Native Platform
-Dev_ workflow. The platform-specific SDK tools provided may provide a richer set of
-options. (See the Platform Guides for details about each platform's SDK tool set.)
+開発サイクルのどの段階においても、 _ネイティブ プラットフォーム開発_ 作業手順に切り替えることができます。また、各プラットフォームで提供している SDK の方が、より多くのオプションを提供している場合もあります ( 各プラットフォームが提供する SDK のツール群に関しては、『 プラットフォームに関する解説 』 をご確認ください )。
 
-An SDK environment is more appropriate if you want implement a hybrid
-app that mixes web-based and native application components.
-You may use the command-line utility to initially generate the app, or
-iteratively thereafter to feed updated code to SDK tools.  You may
-also build the app's configuration file yourself.
-(See The config.xml File for details.)
-
+Web 系アプリとネイティブアプリのコンポーネントを併用しているハイブリッドアプリの構築の場合には、SDK 環境の方が適当かと思います。
+その場合でも、コマンドライン ユーティリティを使って、アプリの初期生成を行ったり、または、初期生成後、コードの更新部分を SDK ツールにフィードバックするときに、コマンドライン ユーティリティを使用することもできます。また、アプリの各種設定ファイルをビルドすることもできます ( 詳細に関しては、『 config.xml ファイル 』 をご確認ください )。

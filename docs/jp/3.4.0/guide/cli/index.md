@@ -20,27 +20,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # コマンドライン インターフェイス
 
-This guide shows you how to create applications and deploy them to
-various native mobile platforms using the `cordova` command-line
-interface (CLI). This tool allows you to create new projects, build
-them on different platforms, and run on real devices or within emulators. The CLI
-is the main tool to use for the cross-platform workflow (See the Overview for a description
-of the various workflows.)  However, you can also use the CLI to initialize project code, after
-which you use various platforms' SDKs and shell tools for continued development.
-
-
+ここでは、 `cordova` コマンドライン インターフェイス ( CLI ) を使用した、アプリの作成方法、および、複数のネイティブモバイルプラットフォームへの展開方法を解説します。
+このツールを使用して、新規プロジェクトの作成、異なるプラットフォーム上でのプロジェクトのビルド、実機もしくはエミュレータ上でのアプリの検証を行うことができます。
+「 Web プロジェクト開発 」 作業手順 ( 原文では 「 cross-platform workflow 」 ) を使用する場合、CLI は強力なツールとなります ( 各種作業手順に関しては、『 概要 』 をご確認ください )。また、各種 SDK とシェルツールを使用して開発を行っている場合でも、プロジェクトコードを初期化するときなどに、CLI を使用できます。
 
 ## CLI を使用する前に
 
-コマンドライン ツールを実行する前に、対象とする各モバイルプラットフォーム用の SDK をインストールする必要があります ( 詳細に関しては、「プラットフォームに関する解説」をご確認ください )。
+コマンドライン ツールを実行する前に、開発対象とする各モバイルプラットフォーム用の SDK をインストールする必要があります ( 詳細に関しては、『 プラットフォームに関する解説 』 をご確認ください )。
 
-
-To add support or rebuild a project for any platform, you need to run
-the command-line interface from the same machine that supports the
-platform's SDK. The CLI supports the following combinations:
-
-
-サポートツールの追加またはプロジェクトの再ビルドをプラットフォーム上で行う場合、プラットフォームの SDK をサポートしている端末から、コマンドライン インターフェイスを実行する必要があります。
+サポートツールの追加またはプロジェクトの再ビルドを各プラットフォームで行う場合、プラットフォームの SDK をサポートしている端末から、コマンドライン インターフェイスを実行する必要があります。
+以下の組み合わせを CLI はサポートしています。
 
 * iOS             (Mac)
 * Amazon Fire OS  (Mac, Linux, Windows)
@@ -53,41 +42,20 @@ platform's SDK. The CLI supports the following combinations:
 
 Mac では、 _ターミナル_ アプリケーションからコマンドラインを使用できます。PC では、 _アクセサリ_ の _コマンド プロンプト_ から使用できます。
 
-The more likely it is that you run the CLI from different machines,
-the more it makes sense to maintain a remote source code repository,
-whose assets you pull down to local working directories.
-
-異なる端末から CLI を実行すると、
-
+異なる端末から CLI を実行する場合も十分に予想されますので、そのような場合には、リモートのレポジトリー ( ソースコードなどを格納 ) を使用して、ローカルの作業用ディレクトリへファイルなどを持って ( pull ) くることも考慮すべきです。
 
 `cordova` コマンドライン ツールをインストールする場合、以下の手順を行ってください。
 
-1. [Node.js](http://nodejs.org/) をダウンロードして、インストールします。インストレーション後、 `node` または `npm` コマンドライン上で実行することができます。
+1. [Node.js](http://nodejs.org/) をダウンロードして、インストールします。インストール後、 `node` または `npm` を、コマンドライン上で実行することができます。
 
-1. Install the `cordova` utility. In Unix, prefixing the additional
-   `sudo` command may be necessary to install development utilities in
-   otherwise restricted directories:
-
-
-
-
-`cordova` ユーティリティをインストールします。Unix では、 `sudo` コマンドを最初に入力して開発ユーティリティのインストール
+1. `cordova` ユーティリティをインストールします。Unix では、 制限のかけてあるディレクトリへは、`sudo` コマンドを最初に入力して、開発ユーティリティのインストールを行う必要があります。
 
         $ sudo npm install -g cordova
 
-   The installation log may produce errors for any uninstalled
-   platform SDKs.  Following installation, you should be able to run
-   `cordova` on the command line.
-
-
-アンインストールした SDK をインストールのログを取る
-
+   アンインストールした SDK に関して、インストール ログ内にエラーを出力する場合もあります。インストール後、コマンドライン上で、 `cordova` を実行できます。
 
    ** 注意 **: 上記のように、 `-g` フラグを使用して、cordova をグローバルに使用できるよう、npm に命令します。
-   また、インストールを行った npm モジュールをグローバルに呼び出すため、ユーザーの PATH 環境変数に npm ディレクトリーを追加する必要があります。Windows では、 C:\Users\username\AppData\Roaming\npm` で npm を通常見つけることができます。Unix では、 `/usr/local/share/npm` となります。
-
-
-
+   また、インストールを行った npm モジュールをグローバルに呼び出すため、ユーザーの PATH 環境変数に npm ディレクトリーを追加する必要があります。Windows では、 `C:\Users\username\AppData\Roaming\npm` で npm を通常見つけることができます。Unix では、 `/usr/local/share/npm` となります。
 
 ## アプリの作成
 
@@ -95,18 +63,18 @@ whose assets you pull down to local working directories.
 
         $ cordova create hello com.example.hello HelloWorld
 
-コマンド実行から完了までに時間がかかるときもありますので、しばらくそのまま待ちます。コマンド実行時に ` -d` オプションを追加すると、
-進行状況の情報を表示します。
+コマンドの実行から完了までに時間がかかるときもありますので、しばらくそのまま待ちます。コマンド実行時に ` -d` オプションを追加すると、
+進行状況の確認を行えます。
 
-第一引数「 _hello_ 」を使用して、プロジェクト用に使用するディレクトリーを指定します。ディレクトリーが存在しない場合、Cordova 側で作成してくれます。
-`www` サブディレクトリー に、 `css` 、 `js` 、 `img` 下のさまざまなリソースと共に、アプリのホームページを格納します( ファイル名などは、ウェブ開発で通常使用する命名規則に従います )。
-`config.xml` ファイルは、アプリの起動と配布に必要な各種メタデータを記述します。
+第一引数 「 _hello_ 」 を使用して、プロジェクト用に使用するディレクトリーを指定します。ディレクトリーが存在しない場合、Cordova 側で作成してくれます。
+`www` サブディレクトリー に、 `css` 、 `js` 、 `img` 下のさまざまなリソースと共に、アプリのホームページを格納します ( ファイル名などは、Web 開発で使用する通常の命名規則に従います )。
+`config.xml` ファイルは、アプリの起動と配布に必要な各種メタデータを記述しています。
 
-第二引数「 `com.example.hello` 」を使用して、逆引きドメイン形式の識別子 ( reverse domain-style identifier ) をプロジェクトに設定します。この引数は、任意です。省略した場合には、引数にも順序があるため、第三引数も省略する必要があります。
+第二引数 「 `com.example.hello` 」 を使用して、逆引きドメイン形式の識別子 ( reverse domain-style identifier ) をプロジェクトに設定します。この引数は、任意です。省略した場合には、引数にも順序があるため、第三引数も省略する必要があります。
 この値は、 `config.xml` ファイル内で後から変更することができます。ただし、Java パッケージ名のように、 `config.xml` の範囲外で、この値を使用しているコードがある場合には、注意が必要です。
 デフォルトでは、この値は `io.cordova.hellocordova` となりますが、適当な名前を付けることを推奨します。
 
-第三引数「 `HelloWorld` 」を使用して、アプリの表示タイトルを設定します。この引数は、任意です。
+第三引数 「 `HelloWorld` 」 を使用して、アプリの表示タイトルを設定します。この引数は、任意です。
 この値は、 `config.xml` ファイル内で後から変更することができます。ただし、Java クラス名のように、 `config.xml` の範囲外で、この値を使用しているコードがある場合には、注意が必要です。
 デフォルトでは、この値は `HelloCordova` となりますが、適当な名前を付けることを推奨します。
 
@@ -116,7 +84,7 @@ whose assets you pull down to local working directories.
 
         $ cd hello
 
-プロジェクトを作成する前に、対象とするプラットフォームを指定する必要があります。ここで示すコマンドを実行できるかどうかは、端末が各 SDK をサポートしているかどうかに依ります。
+プロジェクトを作成する前に、対象とするプラットフォームを指定する必要があります。ここで示すコマンドを実行できるかどうかは、各 SDK を端末がサポートしているかどうかに依ります。
 以下で示すコマンドのいずれかを Mac で実行してください。
 
         $ cordova platform add ios
@@ -139,7 +107,7 @@ whose assets you pull down to local working directories.
 
         $ cordova platforms ls
 
-(注意 ： `platform` と `platforms` コマンドは、同じものです。）
+( 注意 ： `platform` と `platforms` コマンドは、同じものです ）
 
 プラットフォームを削除する場合には、以下で示すコマンドを実行してください。
 
@@ -147,59 +115,27 @@ whose assets you pull down to local working directories.
         $ cordova platform rm amazon-fireos
         $ cordova platform rm android
 
-プラットフォームの追加・削除を行うコマンドを実行すると、プロジェクトの _platforms_ ディレクトリー ( 各プラットファームのサブディレクトリー ) に影響を与えます。
-各プラットフォームのサブディレクトリー内に、_www_ ソースディレクトリー ( 例 ： `platforms/ios/www` 、 `platforms/android/assets/www` ) が再作成されます。
-CLI では、ソースの _www_ フォルダーからファイル群のコピーを定期的に行うため、これらのファイルに対してのみ修正を行います。 _platforms_ サブディレクトリー下に格納しているファイルは修正しません。
-バージョン管理ソフトウェアを使用している場合には、このソースの _www_ フォルダーと _merges_ フォルダーをソフトに追加してください ( _merges_ フォルダーの詳細に関しては、下記の「各プラットフォームのカスタマイズ」をご確認ください)。
+プラットフォームの追加・削除を行うコマンドを実行すると、プロジェクトの _platforms_ のディレクトリ ( 各プラットフォームのサブディレクトリ ) に影響を与えます。
+各プラットフォームのサブディレクトリ内に、_www_ ソースディレクトリ ( 例 ： `platforms/ios/www` 、 `platforms/android/assets/www` ) が再構築されます。
+CLI では、ソースの _www_ フォルダーからファイル群のコピーを定期的に行うため、これらのファイルに対してのみ修正を行います。 _platforms_ サブディレクトリ下に格納しているファイルは修正しません。バージョン管理ソフトウェアを使用している場合には、このソースの _www_ フォルダーと _merges_ フォルダーをソフトに追加してください ( _merges_ フォルダーの詳細に関しては、下記の 「 各プラットフォームのカスタマイズを行う場合 」 をご確認ください)。
 
+**警告** : アプリのビルドに CLI を使用する場合、システムの動作を熟知しているか、または、ドキュメントに記載されているとき以外で、 `/platforms/` フォルダー下のファイルの修正を行うことは推奨しません。これは、plugin を使用したプラグインの再インストール、または、prepare を使用した場合、`/platforms/` ディレクトリーの上書きを行うためです。
 
+ここまでの時点で、Eclipse または Xcode などの SDK を使用して、作成したプロジェクトを開くことができます。SDK を使用して開発を行う場合、 `/platforms/` ディレクトリ下の各リソースを開く必要があります。SDK 固有のメタデータファイルは、各 `/platform/` サブディレクトリ内に保存されているためです ( 各 IDE におけるアプリの開発方法の詳細は、『 プラットフォームに関する解説 』 をご確認ください )。最初に、CLI を使用して、プロジェクトの初期化を行い、後に、ネイティブ開発用 SDK に環境を移行する場合には、こちらの方法を使用してください。
 
-**WARNING**: When using the CLI to build your application, you are strongly discouraged
-from editing any files in the `/platforms/` folder unless you know what you are doing
-or are specifically told otherwise in documentation. This is because the files in the 
-`/platforms/` directory will be overwritten on prepare or plugin reinstallation.
-
-**警告**: アプリのビルドに CLI を使用するとき、システムの動作を熟知しているか、または、ドキュメントに記載されている場合以外で、 `/platforms/` フォルダー下のファイルを修正することは推奨しません。prepare または plugin を使用した再インストール処理のときに、`/platforms/` ディレクトリーは上書きされます。
-
-
-
-
-If you wish at this point, you can use an SDK such as Eclipse or Xcode
-to open the project you created. You will need to open the derivative set of assets
-from the `/platforms/` directory to develop with an SDK. 
-This is because
-the SDK specific metadata files are stored within the appropriate `/platform/` subdirectory.
-(See the Platform Guides for information on how to develop applications within each IDE.)
-Use this approach if you simply want to initialize a project using the CLI and 
-then switch to an SDK for native work.
-
-
-ここまでの時点で、プロジェクトを開く場合、Eclipse または Xcode のような SDK を使用することができます。
-SDK を使用して開発を行う場合、 `/platforms/` ディレクトリーから派生した各リソース　　を開く必要があります。
-
-
-
-全開発サイクルでクロスプラットフォームでの作業手順 ( CLI ) を検討している場合は、このまま読み続けてください。
+開発サイクルのすべての工程で、「 Web プロジェクト開発 」 ( 原文では 「 cross-platform workflow 」 ) 作業手順 ( CLI ) を検討している場合は、このまま読み続けてください。
 
 ## アプリのビルド
 
-By default, the `cordova create` script generates a skeletal web-based
-application whose home page is the project's `www/index.html` file.
-Edit this application however you want, but any initialization should
-be specified as part of the `deviceready` event handler, referenced by
-default from `www/js/index.js`.
-
-
-デフォルトでは、スクリプト「 `cordova create` 」を使用して、プロジェクト下の `www/index.html` のファイルをホームページとする、アプリ ( WEB 展開を行うアプリの骨組み ) を生成します。
-
+通常、スクリプト ( `cordova create` ) を使用して、プロジェクト下の `www/index.html` ファイルをホームページとする、WEB 系アプリの枠組みを構築します。
+このアプリを編集することもできますが、アプリの起動を行う場合、 `deviceready` イベントハンドラーの一部として、その処理を記述することになります （ デフォルトでは、 `www/js/index.js` を使用 ）。
 
 プロジェクトのビルドを行うときには、以下のコマンドを実行してください。
 
         $ cordova build
 
-これにより、プロジェクトの `platforms` サブディレクトリー内に、コードを生成することができます。
-各ビルドで、異なるプラットフォームを使用したい場合には、指定することもできます。
-
+これにより、プロジェクトの `platforms` サブディレクトリ内に、コードを生成することができます。
+各ビルドで、異なるプラットフォームを使用したい場合には、それを指定することもできます。
 
         $ cordova build ios
 
@@ -208,87 +144,60 @@ default from `www/js/index.js`.
         $ cordova prepare ios
         $ cordova compile ios
 
-上記のように、 `prepare` コマンドを実行すると、 `platforms/ios` 内にプラットフォーム別のコードを生成し、Apple の Xcode SDK を代替的に使用して、コードの修正とコンパイルを行うことができます。また、他のプラットフォームの SDK を使用して同様のことを行えます。
+上記のように、 `prepare` コマンドを実行すると、Apple の Xcode SDK を代替的に使用して、 `platforms/ios` 内に Cordova 側が生成した、プラットフォーム固有のコードの修正・コンパイルを行うことができます。また、他のプラットフォームの SDK を使用して同様のことを行えます。
 
-## アプリのテスト ( エミュレーターまたはデバイスを使用 )
+## アプリの検証 ( エミュレータまたは実機を使用 )
 
-携帯端末用のプラットフォームの多くの SDK には、デバイスのイメージを用いたエミュレーターが実装されています。
-エミュレーターを使用して、ホーム画面からアプリを起動することもできます。また、プラットフォーム実装の機能の動作を確認することもできます。
-以下に示すコマンドを実行して、アプリの再ビルド、および、プラットフォームのエミュレーター上での表示を行います。
+携帯端末用のプラットフォームの SDK の多くには、デバイスのイメージを用いたエミュレータが実装されています。
+エミュレータを使用して、ホーム画面からアプリを起動することもできます。また、プラットフォーム側の機能との間の動作を確認することもできます。
+以下に示すコマンドを実行すると、アプリの再ビルドとプラットフォームのエミュレータ上での表示処理を行います。
 
         $ cordova emulate android
 
-Some mobile platforms emulate a particular device by default, such as
-the iPhone for iOS projects. For other platforms, you may need to
-first associate a device with an emulator.
+携帯端末用のいくつかのプラットフォームでは、特定のデバイスのエミュレータをデフォルトで使用しています。たとえば、iOS プロジェクトでは、iPhone となります。
+その他のプラットフォームでは、どのデバイスのエミュレータを使用するか最初に設定する必要があります。
 
+注意： Amazon Fire OS では、現在、エミュレータをサポートしていません。
 
-
-
-
-
-Note: Emulator support is currently not available for Amazon Fire OS
-
-(See the Platform Guides for details.)
-For example, you may first run the `android` command to launch the
-Android SDK, then run a particular device image, which launches it
-according to its default behavior:
+( 詳細に関しては、各 『 プラットフォームに関する解説 』 をご確認ください ) たとえば、最初に、 `android` コマンドを使用して、Android SDK を起動します。次に、指定したデバイス画面を立ち上げます ( 立ち上げ方法は、デフォルト設定に依ります )。
 
 ![](img/guide/cli/android_emulate_init.png)
 
-Following up with the `cordova emulate` command refreshes the emulator
-image to display the latest application, which is now available for
-launch from the home screen:
+`cordova emulate` コマンドを使用すると、画面のリフレッシュを行い、エミュレータの画面上には、最新状態のアプリが表示されます。
+ホーム画面からアプリを起動することができます。
 
 ![](img/guide/cli/android_emulate_install.png)
 
-Alternately, you can plug the handset into your computer and test the
-app directly:
+または、お手持ちのハンドセット ( 携帯端末の周辺機器 ) をコンピューターに接続して、直接、アプリを検証することもできます。
 
         $ cordova run android
 
-Before running this command, you need to set up the device for
-testing, following procedures that vary for each platform. In
-Android and Amazon Fire OS devices, you would have to enable a __USB debugging__ option on
-the device, and perhaps add a USB driver depending on your development
-environmnent.
-See Platform Guides for details on each platform's requirements.
+このコマンドを実行する前に、デバイスを検証用に設定する必要があります。こちらの設定方法は、デバイス毎に異なります。Android および Amazon Fire OS 搭載のデバイスでは、デバイスの __USB debugging__ オプションを使うことができるでしょう。開発環境にも依りますが、USB のドライバーを追加インストールしなければならない場合もあります。
+各プラットフォームに関する必要条件などは、各プラットフォームの解説をご確認ください。
 
-## Add Plugin Features
+## プラグイン機能の追加
 
-When you build and view a new project, the default application that
-appears doesn't do very much. You can modify the app in many ways to
-take advantage of standard web technologies, but for the app to
-communicate closely with various device-level features, you need to
-add plugins that provide access to core Cordova APIs.
+新規プロジェクトのビルドおよび確認を行うとき、デフォルト設定のアプリの機能では、できることも限られています。
+WEB の標準的な技術を使用して、複数の方法で、アプリ機能を追加することができます。また、さまざまなデバイスレベルの機能を使用するアプリに関しては、
+コア の Cordova API 群 ( core Cordova APIs ) へのアクセスを提供するプラグイン群を追加する必要があります。
 
-A _plugin_ is a bit of add-on code that provides an interface to
-native components. You can design your own plugin interface, for
-example when designing a hybrid app that mixes a Cordova WebView with
-native components. (See Embedding WebViews and Plugin Development
-Guide for details.)  More commonly, you would add a plugin to enable
-one of Cordova's basic device-level features
-detailed in the API Reference. A list of these plugins, including
-additional plugins provided by the community, can be found at
-[plugins.cordova.io](http://plugins.cordova.io/). You can use
-the CLI to search for plugins from this registry. For example,
-searching for `bar` and `code` produces a single result that matches
-both terms as case-insensitive substrings:
+プラグインとは、ネイティブ コンポーネントとの接点 ( インターフェイス ) を提供する、ちょっとしたアドオン コード ( add-on code ) です。
+「 ネイティブ コンポーネントと Cordova WebView を併用したハイブリッド アプリを開発したい 」 などの場合には、プラグイン インターフェイスを自由に設計することもできます
+( 詳細に関しては、『 WebView の組み込む 』 と　『 プラグイン開発ガイド 』 をご確認ください )。
+最も多い使用例としては、「 Cordova が持つデバイス レベルの基本機能を使用するため、プラグインを追加する 」 などがあります。デバイス レベルの基本機能に関しては、API リファレンスをご確認ください。プラグインの一覧 ( コミュニティー提供のプラグインを含む ) に関しては、 [plugins.cordova.io](http://plugins.cordova.io/) をご確認ください。
+また、CLI　を使用して、レジストリーからプラグインを検索することもできます。たとえば、 `bar` と `code` を入力して検索を行った場合、両方の条件を満たした検索結果 ( 大文字・小文字を区別しない ) を 1 つ表示します。
 
         $ cordova plugin search bar code
 
         com.phonegap.plugins.barcodescanner - Scans Barcodes
 
-Searching for only the `bar` term yields and additional result:
+`bar` のみ使用した場合の検索結果は以下のようになります。
 
         org.apache.cordova.statusbar - Cordova StatusBar Plugin
 
-The `cordova plugin add` command requires you to specify the
-repository for the plugin code.  Please note that when you follow the 
-Web Project Dev workflow and use the CLI, the CLI will take care of adding
-the plugin code to the appropriate place for each platform. (If you are following the
-Native Project Dev Workflow, you will have to add plugins using Plugman (guide link here),
-multiple times for each platform.)
+`cordova plugin add` コマンドを使用するときには、プラグインコードのレポジトリーを指定する必要があります。
+Web プロジェクト開発 作業手順に従い、CLI を使用する場合には、プラグインコードを追加する適当な場所の設定などは、CLI 側が行ってくれます ( 各プラットフォームに対応 )。
+ネイティブ プラットフォーム開発 作業手順に従う場合には、Plugman を使用して ( 原文では GitHub Plugman への外部リンクがここに入る予定だったようです ) 、各プラットフォームにて、複数回、プラグインを追加する必要があります。
 
 CLI を使用して、アプリへ機能を追加する方法の例を以下に示します。
 
@@ -343,10 +252,7 @@ CLI を使用して、アプリへ機能を追加する方法の例を以下に�
 
         $ cordova plugin add org.apache.cordova.console
 
-Use `plugin ls` (or `plugin list`, or `plugin` by itself) to view
-currently installed plugins. Each displays by its identifier:
-
-`plugin ls` (  ) を使用して、
+`plugin ls` ( `plugin list` または `plugin` ) を使用して、現在、インストールされているプラグインを確認できます。識別子と共に、結果を表示します。
 
         $ cordova plugin ls    # or 'plugin list'
         [ 'org.apache.cordova.console' ]
@@ -364,138 +270,96 @@ currently installed plugins. Each displays by its identifier:
 
 プラグインを追加するとき、プラグインの取得場所を指定できるオプションが複数あります。上記の例では、良く知られている `registry.cordova.io` レジストリーを使用しています。また、プラグインは、 `id` を使用して指定しています。
 
-
         $ cordova plugin add org.apache.cordova.console
 
-The `id` may also include the plugin's version number, appended after
-an `@` character. The `latest` version is an alias for the most recent
-version. For example:
-
-
-
+`id` には、 `@` 記号の後に、プラグインのバージョン番号が含まれている場合もあります。最新のバージョンの場合には、 `latest` と表示します。
 
         $ cordova plugin add org.apache.cordova.console@latest
         $ cordova plugin add org.apache.cordova.console@0.2.1
 
-If the plugin is not registered at `registry.cordova.io` but is located in
-another git repository, you can specify an alternate URL:
+`registry.cordova.io` には、プラグインが登録されていないが、git のレポジトリーに置いてあるという場合には、URL ( an alternate URL ) を指定することもできます。
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git
 
-The git example above fetches the plugin from the end of the master
-branch, but an alternate git-ref such as a tag or branch can be
-appended after a `#` character:
+上記の git の例では、Master ブランチからプラグインを持ってきます ( fetch )。 `#` 記号の後に、タグまたはブランチを追加して、使用することができます。
 
         $ cordova plugin add https://github.com/apache/cordova-plugin-console.git#r0.2.0
 
-If the plugin (and its `plugin.xml` file) is in a subdirectory within
-the git repo, you can specify it with a `:` character. Note that the
-`#` character is still needed:
+Git レポジトリーのサブディレクトリにプラグイン ( `plugin.xml` ファイルを含む ) が置かれている場合、 `:` 符号を使用して、場所を指定します。
+この場合も、 `#` 記号を使用しますので、ご注意ください。
 
         $ cordova plugin add https://github.com/someone/aplugin.git#:/my/sub/dir
 
-You can also combine both the git-ref and the subdirectory:
+git のリファレンス ( git-ref ) とサブディレクトリを併用することもできます。
 
         $ cordova plugin add https://github.com/someone/aplugin.git#r0.0.1:/my/sub/dir
 
-Alternately, specify a local path to the plugin directory that
-contains the `plugin.xml` file:
+または、 `plugin.xml` ファイルを置いているプラグイン ディレクトリへのローカルパスを指定することもできます。
 
         $ cordova plugin add ../my_plugin_dir
 
-## Using _merges_ to Customize Each Platform
+## _merges_ を使用して、各プラットフォームのカスタマイズを行う場合
 
-While Cordova allows you to easily deploy an app for many different
-platforms, sometimes you need to add customizations.  In that case,
-you don't want to modify the source files in various `www` directories
-within the top-level `platforms` directory, because they're regularly
-replaced with the top-level `www` directory's cross-platform source.
+Cordova を使用すれば、複数のプラットファームで起動するアプリを簡単に展開できますが、カスタマイズを必要とする場合もあります。
+そのような場合でも、 トップレベルの `platforms` ディレクトリに置かれた各 `www` ディレクトリのソースファイルは、修正の対象外にしたいときもあります。
+なぜなら、トップレベルの `www` ディレクトリのクロスプラットフォーム関連のソースを使用して、これらのソースファイルは定期的に置き換えられてしまうからです。
 
-Instead, the top-level `merges` directory offers a place to specify
-assets to deploy on specific platforms. Each platform-specific
-subdirectory within `merges` mirrors the directory structure of the
-`www` source tree, allowing you to override or add files as needed.
-For example, here is how you might uses `merges` to boost the default
-font size for Android and Amazon Fire OS devices:
+その代わりに、各プラットフォームで使用するリソース ( assets ) を指定する場所として、トップレベルの `merges` ディレクトリを使用することができます。
+`merges` 内の各プラットフォームのサブディレクトリでは、 `www` ソースツリーのディレクトリ構造をミラー化しています。これにより、必要に応じて、ファイルのオーバーライド ( override ) または追加を行うことができます。
+`merges` を使用した、デフォルト フォントサイズの変更方法を例として以下に示します ( Android と Amazon Fire OS 搭載デバイス )。
 
-* Edit the `www/index.html` file, adding a link to an additional CSS
-  file, `overrides.css` in this case:
+* CSS ファイル ( `overrides.css` ) へのリンクを追加して、 `www/index.html` ファイルを編集します。
 
         <link rel="stylesheet" type="text/css" href="css/overrides.css" />
 
-* Optionally create an empty `www/css/overrides.css` file, which would
-  apply for all non-Android builds, preventing a missing-file error.
+* また、ファイルの未検出エラーを防止するため、空の `www/css/overrides.css` ファイル ( Android 系以外のビルドに使用 ) を任意で作成することもできます。
 
-* Create a `css` subdirectory within `merges/android`, then add a
-  corresponding `overrides.css` file. Specify CSS that overrides the
-  12-point default font size specified within `www/css/index.css`, for
-  example:
+* `merges/android` 内に `css` サブディレクトリを作成します。次に、対応する `overrides.css` ファイルを追加します。`www/css/index.css` 内で指定されているデフォルトのフォントサイズ 12 のオーバーライド ( override ) を行う CSS を指定します。以下に例を示します。
 
         body { font-size:14px; }
 
-When you rebuild the project, the Android version features the custom
-font size, while others remain unchanged.
+これにより、プロジェクトの再ビルドを行うとき、Android 側では、カスタマイズしたフォントサイズを使用します ( 他の設定は以前のまま保持 )。
 
-You can also use `merges` to add files not present in the original
-`www` directory. For example, an app can incorporate a _back button_
-graphic into the iOS interface, stored in
-`merges/ios/img/back_button.png`, while the Android version can
-instead capture `backbutton` events from the corresponding hardware
-button.
+また、もともとの `www` ディレクトリにはなかったファイルを追加する場合にも、 `merges` を使用することができます。
+たとえば、iOS のインターフェイスに、 _戻るボタン_ 画像 ( `merges/ios/img/back_button.png` ) を組み入れることもできます。また、Android では、対応するハードウェアのボタンを押したときに、 `backbutton` イベントをキャプチャー ( capture ) することもできます。
 
-## Help Commands
+## Help コマンド
 
-Cordova features a couple of global commands, which may help you if
-you get stuck or experience a problem.  The `help` command displays
-all available Cordova commands and their syntax:
+Cordova では、障害が発生した場合に使用できる、いくつかのグローバルコマンド ( global command ) をご用意しています。
+`help` コマンドを使用すると、利用可能な Cordova コマンドと入力方法を表示できます。
 
     $ cordova help
     $ cordova        # same
 
-The `info` command produces a listing of potentially useful details,
-such as currently installed platforms and plugins, SDK versions for
-each platform, and versions of the CLI and `node.js`:
+`info` コマンドを使用すると、現在、インストールしているプラットフォームとプラグインの一覧、各プラットフォームの SDK のバージョン、CLI と `node.js` のバージョンなどを表示できます。
 
     $ cordova info
 
-It both presents the information to screen and captures the output in
-a local `info.txt` file.
+上記のコマンドを使用すると、情報の表示、および、ローカルに置かれている `info.txt` ファイルへの出力を行います。
 
-__NOTE__: Currently, only details on iOS and Android platforms are
-available.
+__注意__: 現時点では、iOS と Android 系のプラットフォームに関する詳細のみご利用できます。
 
-## Updating Cordova and Your Project
+## Cordova と プロジェクトの更新
 
-After installing the `cordova` utility, you can always update it to
-the latest version by running the following command:
+`cordova` ユーティリティをインストールした後、以下のコマンドを使用して、最新のバージョンに更新することができます。
 
         $ sudo npm update -g cordova
 
-Use this syntax to install a specific version:
+また、特定のバージョンを指定して、インストールすることもできます。
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
 
-Run `cordova -v` to see which version is currently running.  Run the `npm
-info` command for a longer listing that includes the current version
-along with other available version numbers:
+`cordova -v` を実行して、現在実行しているバージョンを確認できます。 `npm info` を使用すると、利用可能な他のバージョンの一覧と共に
+現在のバージョンを表示します。
 
         $ npm info cordova
 
-Cordova 3.0 is the first version to support the command-line interface
-described in this section. If you are updating from a version prior to
-3.0, you need to create a new project as described above, then copy
-the older application's assets into the top-level `www` directory.
-Where applicable, further details about upgrading to 3.0 are available
-in the Platform Guides.  Once you upgrade to the `cordova`
-command-line interface and use `npm update` to stay current, the more
-time-consuming procedures described there are no longer relevant.
+この節で解説を行った CLI ( command-line interface ) は、Cordova 3.0 からサポートを開始しました。
+以前のバージョンから 3.0 に更新する場合には、上記の手順に従い、新規プロジェクトを作成して、次に、アプリの以前のアセット ( assets ) を、トップレベルの `www` ディレクトリにコピーします。
+3.0 への更新に伴う解説の詳細は、各プラットフォームの解説にてご確認ください。 `cordova` の CLI が使用できるバージョンにアップグレードした後は、 `npm update` を使用して、最新の状態にしてください。これにより、各プラットフォームの解説に記載された、時間のかかる他の手順を行う必要はなくなります。
 
-Cordova 3.0+ may still require various changes to
-project-level directory structures and other dependencies. After you
-run the `npm` command above to update Cordova itself, you may need to
-ensure your project's resources conform to the latest version's
-requirements. Run a command such as the following for each platform
-you're building:
+Cordova 3.0　以降では、プロジェクトレベルでのディレクトリ構造の変更などが予想されます。上記の `npm` コマンドを使用して、Cordova を更新した後、プロジェクト関連の各種リソース ( resource ) が、必要とされる最新の条件を満たしているか確認する必要があります。以下のコマンドを実行して、ビルドを行っているプラットフォームの更新を行います。
+
 
         $ cordova platform update android
         $ cordova platform update ios

@@ -17,97 +17,77 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Windows Phone Command-line Tools
+# Windows Phone コマンドライン ツール
 
-The `cordova` command-line utility is a high-level tool that allows
-you to build applications across several platforms at once. An older
-version of the Cordova framework provides sets of command-line tools
-specific to each platform. To use them as an alternative to the CLI,
-you need to download this version of Cordova from
-[cordova.apache.org](http://cordova.apache.org). The download contains
-separate archives for each platform. Expand the platform you wish to
-target. The tools described here are typically available in the
-top-level `bin` directory, otherwise consult the __README__ file for
-more detailed directions.
+異なるプラットフォームで動作するアプリのビルドを、`cordova` コマンドライン ユーティリティ上で、一度に行うことができます。以前のバージョンの Cordova フレームワークでも、各プラットフォームに対象を絞ったコマンドライン ツールを提供しています。新 CLI の代わりに、旧コマンドラインを使用する場合には、 [cordova.apache.org](http://cordova.apache.org) からダウンロードしてください。各プラットフォーム用のアーカイブ ( archive ) をご提供しています。ご希望のプラットフォーム下に置かれたアーカイブをクリックしてください。前述しているツール群は、通常、最上位 ( top-level ) の `bin` ディレクトリ内で使用します。それ以外の場合には、 __README__ の記載内容をご確認ください。
 
-For information on the low-level command-line interface that enables
-plugins, see Using Plugman to Manage Plugins. See Application Plugins
-for an overview.
+プラグインを組み込むときに使用するコマンドライン インターフェイスに関する情報は、『 Plugman を使用した、プラグインの管理 』 をご確認ください。概要に関しては、『 プラグイン開発ガイド 』 ( 原文 「 Application Plugins 」 ) をご確認ください。
 
 ## Windows Phone
 
-The Windows Phone command-line tools support creating, building, and
-running new projects. Commands must be run from a cmd or powershell
-prompt.
+Windows Phone コマンドライン ツールでは、プロジェクトの新規作成・ビルド・実行をサポートします。
+cmd または Powershell を使用して、コマンドを実行する必要があります。
 
-The WP8 repo now includes code for building both WP7 + WP8 apps.  The
-repo has subdirectories for each: `wp7/` and `wp8/`.
+WP8 のレポジトリには、現在、WP7 と WP8 の両方のアプリをビルドするためのコードが置いてあります。
+レポジトリ には、 `wp7/` と `wp8/` 用のサブディレクトリを作成してあります。
 
-## Create a Project
+## プロジェクトの作成
 
-There are 2 ways to go about creating a new Apache Cordova WP7 or WP8 application.
+Apache Cordova WP7 または WP8 アプリを新規に作成するには、2 通りの方法があります。
 
-### Run the Batch File to Create and Install the Templates
+### テンプレート作成用のバッチファイルを実行して、テンプレートをインストールする方法
 
-- The root of the repo contains a `createTemplates.bat` file.
-  Double-clicking it generates two `.zip` files:
-  `CordovaWP7_x_x_x.zip` and `CordovaWP8_x_x_x.zip`, where _3.4.0_
-  represents the current version number. To easily use these files in
-  Visual Studio, copy them to `My Documents\Visual Studio
-  2012\Templates\ProjectTemplates\`. You are then able to create
-  new Apache Cordova Windows Phone apps from Visual Studio's
-  __File &rarr; New Project__ menu.
+- レポジトリのルート ( root ) に `createTemplates.bat` ファイルを置いています。このファイルをダブルクリックすると、2 つの `.zip` ファイル ( `CordovaWP7_x_x_x.zip` と `CordovaWP8_x_x_x.zip` ) が生成されます。ファイル名の _3.4.0_ は、現在のバージョン番号です。Visual Studio でこれらのファイルを使用する場合には、 `My Documents\Visual Studio
+  2012\Templates\ProjectTemplates\` へファイルをコピーします。これにより、Visual Studio メニューの __ファイル &rarr; 新規作成__ で、Apache Cordova Windows Phone アプリを、新規に、簡単に作成することができます。
 
-- If you run the batch file from the command line, you can also call with a parameter to install automatically
+- コマンドラインからバッチファイルを実行した場合、オプションを追加して、インストールを自動で実行することもできます。
 
-Run the script :
+以下のスクリプトを実行します。
 
     >createTemplates.bat -install
 
-### Use the Create Scripts on the Command Line
+### コマンドライン上で、作成 ( Create ) 用スクリプトを使用する方法
 
-Run the `create` command, specifying the existing path to the project,
-the reverse-domain-style package identifier, and the app's display
-name.  Here is the syntax for both Windows Phone 7 and 8:
+プロジェクトへのパス ( path )、逆ドメイン形式のパッケージの識別子、および、アプリの表示名を指定して `create` コマンドを実行します。Windows Phone 7 と 8 の記法を、以下に記します。
 
     >.\wp7\bin\create PathToNewProject [ PackageName ] [ AppName ]
     >.\wp8\bin\create PathToNewProject [ PackageName ] [ AppName ]
 
-    >PathToNewProject : The path to where you wish to create the project
-    >PackageName      : The namespace for the project (default is Cordova.Example)
-    >AppName          : The name of the application (default is CordovaWP8AppProj or CordovaWP7AppProj)
+    >PathToNewProject : プロジェクトの作成先のパス ( path )
+    >PackageName      : プロジェクトの名前空間 ( デフォルトは Cordova.Example )
+    >AppName          : アプリの名前 ( デフォルトは CordovaWP8AppProj または CordovaWP7AppProj )
 
-    >examples:
+    >例 :
     >.\wp7\bin\create C:\path\to\my_new_project
     >.\wp8\bin\create C:\path\to\my_new_project io.cordova.example CordovaWP8App
 
-Launch Visual Studio and open Solution file (.sln) in (C:\path\to\my_new_project)
+Visual Studio を起動させ、( C:\path\to\my_new_project ) 内のソリューションファイル ( .sln ) を開きます。
 
-Build and Run it
+次に、ビルドと実行をします。
 
-## Building the Project (Clean, then Build)
+## プロジェクトのビルド ( クリーンアップ後、ビルド )
 
-* Debug
+* デバッグビルド
 
     $ C:\path\to\my_new_project\cordova\build --debug
 
-* Release
+* リリースビルド
 
     $ C:\path\to\my_new_project\cordova\build --release
 
-## Running the App
+## アプリの実行
 
-Run the 'run' command with the following *optional* parameters
+*任意* のオプションを追加して、 'run' コマンドを実行します。
 
-* Target specification. This includes `--emulator`, `--device`, or `--target=<targetID>`.
+* Target ( ターゲット ) の指定 : `--emulator` 、 `--device` 、 `--target=<targetID>`　
 
-* Build specification. This includes `--debug`, `--release`, or `--nobuild`.
+* Build ( ビルド ) の指定 : `--debug` 、 `--release` 、 `--nobuild`
 
     $ C:\path\to\my_new_project\cordova\run [Target] [Build]
 
-By default the `run` command is called with `--emulator --debug` if flags are not provided.
+オプション指定がない場合、デフォルトでは、 `--emulator --debug` 設定で、 'run' コマンドが実行されます。
 
-## Cleaning
+## クリーンアップ
 
     $ C:\path\to\my_new_project\cordova\clean
 

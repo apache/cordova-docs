@@ -17,97 +17,64 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# iOS Configuration
+# iOS の設定
 
-The `config.xml` file controls an app's basic settings that apply
-across each application and CordovaWebView instance. This section
-details preferences that only apply to iOS builds. See The config.xml
-File for information on global configuration options.
+`config.xml` ファイルを使用して、各アプリと各 CordovaWebView のインスタンス間に適用する、アプリの基本的な設定を行います。
+この節では、iOS のビルドのみに適用する preference に関して解説します。グローバル設定で使用する各種オプションに関しては、『 config.xml ファイル 』 をご確認ください。
 
-- `EnableViewportScale` (boolean, defaults to `false`): Set to `true`
-  to allow a viewport meta tag to either disable or restrict the range
-  of user scaling, which is enabled by default.
+- `EnableViewportScale` ( boolean、デフォルトでは `false` ) : `true` に設定すると、viewport の meta タグ ( viewport meta tag ) を使用して、スケーリング ( scaling ) の禁止 ( disable ) または範囲の制限 ( restrict ) を行うことができます。デフォルトでは、禁止と制限はかかっていません ( enable )。
 
         <preference name="EnableViewportScale" value="true"/>
 
-  Place a viewport such as the following in the HTML to disable
-  scaling and fit content flexibly within the rendering WebView:
+  以下のように HTML 内に viewport meta タグを記述して、スケーリングの無効化、および、レンダリングで使用する WebView 内に、コンテンツが収まるようにします。
 
         <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 
-- `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
-  Set to `true` to prevent HTML5 videos or audios from playing
-  automatically with the `autoplay` attribute or via JavaScript.
+- `MediaPlaybackRequiresUserAction` ( boolean、デフォルトでは `false` ) : 
+`true` に設定すると、`autoplay` 属性を使用した、または、JavaScript 経由での、HTML5 の動画または音楽の自動再生を無効にします。
 
         <preference name="MediaPlaybackRequiresUserAction" value="true"/>
 
-- `AllowInlineMediaPlayback` (boolean, defaults to `false`): Set to
-  `true` to allow HTML5 media playback to appear _inline_ within the
-  screen layout, using browser-supplied controls rather than native
-  controls. For this to work, add the `webkit-playsinline` attribute
-  to any `<video>` elements.
+- `AllowInlineMediaPlayback` ( boolean、デフォルトでは `false` ) : `true` に設定すると、HTML5 メディア再生は、画面のレイアウト内において _インライン_ ( inline ) で行われます。このとき、ネイティブ側で制御を行うのではなく、ブラウザー側で制御を行います。これを使用する場合、 `<video>` 要素に、 `webkit-playsinline` 属性を追加してください。
 
         <preference name="AllowInlineMediaPlayback" value="true"/>
 
-- `BackupWebStorage` (string, either `none`, `local`, or the default
-  `cloud`): Set to `cloud` to allow web storage data to backup via
-  iCloud. Set to `local` to allow only local backups via iTunes
-  sync. Set to `none` prevent web storage backups.
+- `BackupWebStorage` [ 文字列、`none` 、 `local` または `cloud` ( デフォルト )　] : 
+`cloud` に設定すると、iCloud 経由で、Web Storage のデータのバックアップを行うことができます。 `local` に設定すると、iTunes
+ sync 経由でローカルのバックアップのみを行うことができます。 `none` に設定すると、Web Storage のバックアップを禁止します。
 
         <preference name="BackupWebStorage" value="local"/>
 
-- `TopActivityIndicator` (string, defaults to `gray`): Controls the
-  appearance of the small spinning icon in the status bar that
-  indicates significant processor activity.  Valid values are
-  `whiteLarge`, `white`, and `gray`.
+- `TopActivityIndicator` ( 文字列、デフォルトでは `gray` ) : プロセッサーの処理状況を示すステータスバー内において、処理中アイコン ( spinning icon ) の表示制御を行います。有効な値は、 `whiteLarge` 、 `white` または `gray` です。
 
         <preference name="TopActivityIndicator" value="white"/>
 
-- `KeyboardDisplayRequiresUserAction` (boolean, defaults to `true`):
-  Set to `false` to allow the keyboard to appear when calling
-  `focus()` on form inputs.
+- `KeyboardDisplayRequiresUserAction` ( boolean、デフォルトでは `true` ) :
+  `false` に設定すると、フォーム ( form ) の入力欄において `focus()` を呼んだときに、キーボードを表示します。
 
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
 
-- `SuppressesIncrementalRendering` (boolean, defaults to `false`): Set
-  to `true` to wait until all content has been received before it
-  renders to the screen.
+- `SuppressesIncrementalRendering` ( boolean、デフォルトでは `false` ) : `true` に設定すると、すべてのコンテンツを受け取るまで、画面上にレンダリングを行いません。
 
         <preference name="SuppressesIncrementalRendering" value="true"/>
 
-- `GapBetweenPages` (float, defaults to `0`): The size of the gap, in points, between pages.
+- `GapBetweenPages` ( float、デフォルトでは `0` ) : 各ページの隙間の距離 ( ポイント間 )。
 
         <preference name="GapBetweenPages" value="0"/>
 
-- `PageLength` (float, defaults to `0`): The size of each page, in points, in the 
-  direction that the pages flow. When PaginationMode is right to left or left to right, 
-  this property represents the width of each page. When PaginationMode is topToBottom 
-  or bottomToTop, this property represents the height of each page. The default value 
-  is 0, which means the layout uses the size of the viewport to determine the dimensions
-  of the page.
+- `PageLength` ( float、デフォルトでは `0` ) : ページを移動 ( フリックなど ) するときに適用する、各ページのサイズ ( ポイント間 )。PaginationMode を RightToLeft ( 右から左 ) または LeftToRight ( 左から右 ) にした場合、このプロパティを使用して、各ページの幅を決定します。PaginationMode を topToBottom ( 上から下 ) または bottomToTop ( 下から上 ) にした場合、このプロパティを使用して、各ページの縦の長さを決定します。デフォルト値は、 0 です。0 の場合、ページの寸法を決定するとき、Viewport のサイズを使用します。
 
         <preference name="PageLength" value="0"/>
 
-- `PaginationBreakingMode` (string, defaults to `page`): Valid values are `page` and 
-  `column`.The manner in which column- or page-breaking occurs. This property 
-  determines whether certain CSS properties regarding column- and page-breaking are 
-  honored or ignored. When this property is set to `column`,  the content respects
-  the CSS properties related to column-breaking in place of page-breaking.
+- `PaginationBreakingMode` ( 文字列、デフォルトでは `page` ): 有効な値は、 `page` と `column` です。ページ区切りの方法を、段区切り ( colum-breaking ) または改ページ ( page-breaking ) にします。
+このプロパティーを使用して、段区切りと改ページに関連する特定の CSS プロパティーを適用するかしないか決定します。このプロパティを `column` に設定した場合、ページ区切りを行うときに、段区切りに関連する CSS プロパティを、コンテンツに適用します。
 
         <preference name="PaginationBreakingMode" value="page"/>
 
-- `PaginationMode` (string, defaults to `unpaginated`): Valid values are `unpaginated`,
-  `leftToRight`, `topToBottom`, `bottomToTop`, and `rightToLeft`. This property determines 
-  whether content in the web view is broken up into pages that fill the view one screen 
-  at a time, or shown as one long scrolling view. If set to a paginated form, this 
-  property toggles a paginated layout on the content, causing the web view to use the 
-  values of PageLength and GapBetweenPages to relayout its content.
+- `PaginationMode` ( 文字列、デフォルトでは `unpaginated` ) : 有効な値は、`unpaginated` 、 `leftToRight` 、 `topToBottom` 、 `bottomToTop` 、 `rightToLeft` です。このプロパティーを使用して、WebView 内のコンテンツを、1 表示画面 に収まるようなページ単位に分割するか、または、スクロールを加えて表示するか決定します。ぺージネーションを行う場合、このプロパティーを使用して、コンテンツのページネーション用レイアウトの切り替えを行います。切り替えのときは、PageLength と GapBetweenPages の値を使用して、コンテンツのレイアウトの再編成 ( re-layout ) を Webview が行います。
 
         <preference name="PaginationMode" value="unpaginated"/>
 
-- `UIWebViewDecelerationSpeed` (string, defaults to `normal`): Valid values are `normal`,
-  `fast`. This property controls the deceleration speed of momentum scrolling. `normal` is
-  the default speed for most native apps, and `fast` is the default for Mobile Safari.
+- `UIWebViewDecelerationSpeed` ( 文字列、デフォルトでは `normal` ) : 有効な値は、 `normal` と `fast` です。このプロパティーを使用して、スクロールの減速 ( フリックジェスチャのように、スクロール方向へドラッグを行い、画面から指を離しても、その勢いがしばらく止まらない状態 ) を制御します。ほとんどのネイティブアプリでは、デフォルトの速度である `normal` を使用しますが、Mobile Safari では、 `fast` をデフォルトとします。
 
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
-

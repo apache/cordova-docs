@@ -17,43 +17,25 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Plugin Development Guide
+# プラグインの開発ガイド
 
-A _plugin_ is a package of injected code that allows the Cordova webview within
-which your app renders to communicate with the native platform on
-which it runs.  Plugins provide access to device and platform
-functionality that is ordinarily unavailable to web-based apps.  All
-the main Cordova API features are implemented as plugins, and many
-others are available that enable features such as bar code scanners,
-NFC communication, or to tailor calendar interfaces.
+_プラグイン_ とは、アプリ実行時のレンダリングに使用する Cordova WebView とネイティブプラットフォーム間の通信を行うときに使用・注入 ( inject ) するコードのパッケージのことを指します。プラグインを使用することにより、Web 系のアプリでは通常利用できなかった、デバイスとプラットフォームの機能にアクセスできるようになります。
+Cordova API が提供する主な機能は、プラグインとして実装することになります。また、他にも、バーコードスキャナーおよび NFC 通信機能の提供
+、ならびに、カレンダーインターフェイスの編集も行っています。
 
-Plugins comprise a single JavaScript interface along with
-corresponding native code libraries for each supported platform.  This
-section steps through a simple _echo_ plugin that passes a string from
-JavaScript to the native platform and back, one that you can use as a
-model to build far more complex features.  This section discusses the
-basic plugin structure and the outward-facing JavaScript interface.
-For each corresponding native interface, see the list at the end of
-this section.
+プラグインは、1 個の JavaScript インターフェイスおよび ( サポート対象の各プラットフォームの ) 対応するネイティブコードの複数のライブラリ から構成されています。
+この節では、JavaScript とネイティブプラットフォーム間で、ある文字列のやり取りを行う、簡単な _echo_ ( エコー ) プラグインを使用した開発手順の解説を行います。この例を基本として、より複雑な機能をビルドすることもできるでしょう。また、この節では、プラグインの基本的な構造およびネイティブ側への JavaScript インターフェイス ( outward-facing JavaScript Interface ) に関しても議論しています。各ネイティブインターフェイスの詳細に関しては、この節の最後に記載している一覧をご確認ください。
 
-In addition to these instructions, when preparing to write a plugin it
-is best to look over
-[existing plugins](https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova)
-for guidance.
+プラグインの構築準備をしているときには、ここに記載されている手順に加え、 [既存のプラグイン](https://github.com/apache/cordova-android/tree/master/framework/src/org/apache/cordova) ガイダンスもご確認ください。
 
-## Building a Plugin
+## プラグインのビルド
 
-Application developers use the CLI's `plugin add` command (discussed
-in The Command-Line Interface) to apply a plugin to a project. The
-argument to that command is the URL for a _git_ repository containing
-the plugin code.  This example implements Cordova's Device API:
+アプリの開発者は、CLI の `plugin add` コマンド ( 詳細は、『 コマンドライン インターフェイス 』 を参照 ) を使用して、プロジェクトにプラグインを実装させます。
+このコマンドの引数には、プラグインコードを格納している _git_ レポジトリーの URL を指定します。ここで示す例では、Cordova の Device API を使用します。
 
         $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 
-The plugin repository must feature a top-level `plugin.xml` manifest
-file. There are many ways to configure this file, details for which
-are available in the Plugin Specification. This abbreviated version of
-the `Device` plugin provides a simple example to use as a model:
+プラグインのレポジトリーには、最上位 ( top-level ) に位置する  `plugin.xml` マニュフェスト ファイルを格納している必要があります。このファイルの設定方法はいくつかありますが、詳細は、『 プラグイン開発ガイド 』 ( 原文 「 Plugin Specification 」 ) をご確認ください。こちらの `Device` プラグインを使用した簡易な例では、基本的な使用法を示しています。
 
         <?xml version="1.0" encoding="UTF-8"?>
         <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
@@ -76,48 +58,29 @@ the `Device` plugin provides a simple example to use as a model:
             </platform>
         </plugin>
 
-The top-level `plugin` tag's `id` attribute uses the same
-reverse-domain format to identify the plugin package as the apps to
-they're added.  The `js-module` tag specifies the path to the common
-JavaScript interface.  The `platform` tag specifies a corresponding
-set of native code, for the `ios` platform in this case.  The
-`config-file` tag encapsulates a `feature` tag that is injected into
-the platform-specific `config.xml` file to make the platform aware of
-the additional code library.  The `header-file` and `source-file` tags
-specify the path to the library's component files.
+最上部の `plugin` タグの `id` 属性では、アプリにプラグインを追加するときと同じように、逆引きドメイン形式 ( reverse-domain format ) の識別子を使用して、プラグインパッケージを指定します。
+`js-module` タグでは、汎用 JavaScript インターフェイスへのパス ( path ) を指定します。 `platform` タグでは、対応するネイティブコードを指定します。ここでは、 `ios` となります。 `config-file` タグでは、 追加のコードライブラリが存在することをプラットフォームに通知するために `feature` タグを囲い、各プラットフォームの `config.xml` ファイルへの注入 ( inject ) を行っています。 `header-file` と `source-file` タグでは、ライブラリのコンポーネントファイルへのパスを指定します。
 
-## Validating a Plugin
+## プラグインの確認
 
-You can use the `plugman` utility to check whether the plugin installs
-correctly for each platform.  Install `plugman` with the following
-[node](http://nodejs.org/) command:
+`plugman` ユーティリティを使用して、各プラットフォームに、プラグインが正しくインストールされているか確認できます。以下の [node](http://nodejs.org/) コマンドを使用して、 `plugman` をインストールします。
 
         $ npm install -g plugman
 
-You need an valid app source directory, such as the top-level `www`
-directory included in a default CLI-generated project as described in
-The Command-Line Interface.  Make sure the app's `index.html` home
-page reference the name of the plugin's JavaScript interface, as if it
-were in the same source directory:
+CLI を使用して作成したプロジェクト ( デフォルト設定 ) に含まれる、最上位 ( top-level ) の `www` ディレクトリのような、有効なアプリのソースディレクトリが必要です ( 『 コマンドライン インターフェイス 』 を参照のこと )。　アプリの `index.html` ( ホームページ ) では、あたかも同じソースディレクトリに置かれているかのように、プラグインの JavaScript インターフェイスの名前を参照する必要があります。
 
         <script src="myplugin.js"></script>
 
-Then run a command such as the following to test whether iOS
-dependencies load properly:
+次に、以下のようなコマンドを実行して、iOS の関連リソースが正しく読み込まれているか確認します。
 
         $ plugman -platform ios /path/to/my/project/www /path/to/my/plugin
 
-For details on `plugman` options, see Using Plugman to Manage Plugins.
-For information on how to actually _debug_ plugins, see each
-platform's native interface listed at the bottom of this page.
+`plugman` 関連のオプションの詳細に関しては、『 Plugman を使用した、プラグインの管理 』 を参照してください。プラグインの実際の _デバック_ 方法に関しては、このページの下に記載している各プラットフォームのネイティブインターフェイス一覧をご確認ください。
 
-## The JavaScript Interface
+## JavaScript インターフェイス
 
-The JavaScript provides the front-facing interface, making it perhaps
-the most important part of the plugin.  You can structure your
-plugin's JavaScript however you like, but you need to call
-`cordova.exec` to communicate with the native platform, using the
-following syntax:
+JavaScript を使用して、ユーザ側のインターフェイス ( front-facing interface ) を構築します。プラグインの重要な役割として、このユーザインターフェイスの提供があります。プラグイン側の JavaScript は自由に構築できますが、ネイティブプラットフォームとやり取りをするときには、 `cordova.exec` を
+呼び出す必要があります。以下に例を示します。
 
         cordova.exec(function(winParam) {},
                      function(error) {},
@@ -125,31 +88,22 @@ following syntax:
                      "action",
                      ["firstArgument", "secondArgument", 42, false]);
 
-Here is how each parameter works:
+各パラメータの説明をします。
 
-- `function(winParam) {}`: A success callback function. Assuming your
-  `exec` call completes successfully, this function executes along
-  with any parameters you pass to it.
+- `function(winParam) {}`: 成功時のコールバック関数。 `exec` の処理が成功した場合、引き渡したパラメータを使用して、
+この関数を実行します。
 
-- `function(error) {}`: An error callback function. If the operation
-  does not complete successfully, this function executes with an
-  optional error parameter.
+- `function(error) {}`: 失敗時のコールバック関数。処理が失敗した場合、任意のエラーパラメータを使用して、この関数を実行します。
 
-- `"service"`: The service name to call on the native side. This
-  corresponds to a native class, for which more information is
-  available in the native guides listed below.
+- `"service"`: ネイティブ側を呼び出すときに使用するサービス名。ネイティブクラスと対応付けます。詳細に関しては、下記のネイティブガイドの一覧をご確認ください。
 
-- `"action"`: The action name to call on the native side. This
-  generally corresponds to the native class method. See the native
-  guides listed below.
+- `"action"`: ネイティブ側を呼び出すときに使用するアクション名。通常は、ネイティブクラスのメソッドと対応付けます。下記のネイティブガイドの一覧をご確認ください。
 
-- `[/* arguments */]`: An array of arguments to pass into the native
-  environment.
+- `[/* arguments */]`: ネイティブ環境側に渡す、引数の配列。
 
-## Sample JavaScript
+## JavaScript サンプル
 
-This example shows one way to implement the plugin's JavaScript
-interface:
+プラグインの JavaScript インターフェイスの実装方法の一例を示します。
 
         window.echo = function(str, callback) {
             cordova.exec(callback, function(err) {
@@ -157,55 +111,38 @@ interface:
             }, "Echo", "echo", [str]);
         };
 
-In this example, the plugin attaches itself to the `window` object as
-the `echo` function, which plugin users would call as follows:
+この例のプラグインは、 `echo` 関数として、 `window` オブジェクトに自身をアタッチ ( attach ) します。
+プラグインのユーザは、以下のように呼び出しを行います。
 
         window.echo("echome", function(echoValue) {
-            alert(echoValue == "echome"); // should alert true.
+            alert(echoValue == "echome"); // True を返します。
         });
 
-Look at the last three arguments to the `cordova.exec` function. The
-first calls the `Echo` _service_, a class name. The second requests
-the `echo` _action_, a method within that class. The third is an array
-of arguments containing the echo string, which is the `window.echo`
-function's the first parameter.
+`cordova.exec` 関数の引数の内、後ろから 3 つの引数を見てください。最初に、 `Echo` _サービス_ ( クラス名 ) を呼んでいます。2 番目に `echo` _アクション_ ( そのクラスが持つメソッド ) をリクエストしています。3 番目は、エコー用の引数を格納した配列です。この場合、 `window.echo` 関数の最初のパラメータが格納されています。
 
-The success callback passed into `exec` is simply a reference to the
-callback function `window.echo` takes. If the native platform fires
-the error callback, it simply calls the success callback and passes it
-a default string.
+`exec` に渡された成功時のコールバックは、単に、 `window.echo` が行うコールバック関数を参照しています。失敗時のコールバック関数を、ネイティブプラットフォーム側が発火させた場合、単に、成功時のコールバック関数を呼び出し、デフォルトの文字列を渡します。
 
-## Native Interfaces
+## ネイティブ側のインターフェイス
 
-Once you define JavaScript for your plugin, you need to complement it
-with at least one native implementation. Details for each platform are
-listed below, and each builds on the simple Echo Plugin example above:
+開発者独自のプラグインの JavaScript を定義したあとは、ネイティブ側の実装と、少なくとも 1 つ以上、組み合わせます。各プラットフォームの詳細は、以下の一覧のリンク先をご確認ください。また、参照先のビルドでは、上記の Echo プラグインの例を使用しています。
 
-- Amazon Fire OS Plugins
-- Android Plugins
-- iOS Plugins
-- BlackBerry 10 Plugins
-- Windows Phone Plugins
+- Amazon Fire OS プラグイン
+- Android プラグイン
+- iOS プラグイン
+- BlackBerry 10 プラグイン
+- Windows Phone プラグイン
 
-The Tizen platform does not support plugins.
+Tizen プラットフォームでは、プラグインをサポートしていません。
 
-## Publishing Plugins
+## プラグインの公開
 
-Once you develop your plugin, you may want to publish and share it
-with the community. You can publish your plugin to the cordova
-registry (based on [`npmjs`](https://github.com/isaacs/npmjs.org)) or
-to any other `npmjs`-based registry. Other developers can install it
-automatically using either `plugman` or the Cordova CLI.  (For details
-on each development path, see Using Plugman to Manage Plugins and The
-Command-Line Interface.)
+開発者独自のプラグインを開発したあと、プラグインの公開とコミュニティへの提供を行いたい場合、cordova レジストリ ( registry ) へプラグインを公開できます ( [`npmjs`](https://github.com/isaacs/npmjs.org) を使用 )。または、 `npmjs` を使用しているレジストリなら同様に公開できます。開発者は、 `plugman` または Cordova CLI のいづれかを使用して、自動的にプラグインをインストールできます ( 開発手順の詳細は、『 Plugman を使用した、プラグインの管理 』 および 『 コマンドライン インターフェイス 』 をご確認ください )。
 
-To publish a plugin you need to use the `plugman` tool and go through
-the following steps:
+プラグインの公開には、 `plugman` ツールを使用して、以下の手順を行う必要があります。
 
     $ plugman adduser # that is if you don't have an account yet
     $ plugman publish /path/to/your/plugin
-    
-That is it!
 
-Running `plugman --help` lists other available registry-based
-commands.
+これで完了です。
+
+`plugman --help`　を実行すると、利用可能なレジストリ関連のコマンドの一覧を表示します。

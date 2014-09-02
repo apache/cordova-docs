@@ -17,473 +17,450 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Upgrading BlackBerry 10
+# BlackBerry 10 の更新
 
-This guide shows how to modify BlackBerry projects to upgrade from older versions of Cordova.
-Most of these instructions apply to projects created with an older set
-of command-line tools that precede the `cordova` CLI utility. See The Command-Line Interface for information how to update the
-version of the CLI.
+このガイドでは、新しいバージョンの Cordova へ移行するときに必要となる、 BlackBerry プロジェクト側の修正点に関して解説します。このガイドで使用する手順のほとんどは、 `cordova` の CLI ユーティリティがリリースされる前のコマンドライン ツールを使用して作成されたプロジェクトに適用するものです。CLI 自体のバージョン更新に関しては、『 コマンドライン インターフェイス 』 をご確認ください。
 
-## Upgrading to 3.2.0 from 3.1.0
+## 3.1.0 から 3.2.0 への更新
 
-For projects that were created with the cordova CLI: 
+cordova CLI を使用して作成したプロジェクトの場合、以下の処理を行います。
 
-1. Update the `cordova` CLI version. See The Command-Line Interface.
+1. `cordova` CLI のバージョンを更新します。『 コマンドライン インターフェイス 』 をご確認ください。
 
-2. Run `cordova platform update blackberry`
-        
-For projects not created with the cordova CLI, run:
+2. `cordova platform update blackberry` を実行します。
+
+cordova CLI を使用せずに作成したプロジェクトの場合、以下を実行します。
 
         bin/update <project_path>
 
-## Upgrade to 3.1.0 from 3.0.0
+## 3.0.0 から 3.1.0 への更新
 
-1. Create a new Apache Cordova 3.1.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+1. 『 コマンドライン インターフェイス 』 の記載内容に従い、cordova CLI を使用して、Apache Cordova 3.1.0 プロジェクトを新規作成します。
 
-2. Add your platforms to the cordova project, for example: `cordova
-   platform add blackberry10`.
+2. プラットフォームを cordova プロジェクトに追加します。例 ： 「 `cordova platform add blackberry10` 」 
 
-3. Copy the contents of the original project's `www` directory to the `www` directory
-   at the root of the cordova project you just created.
+3. 旧プロジェクトの `www` ディレクトリのコンテンツを、先ほど作成した cordova プロジェクトの root ( ルート ) に位置する `www` ディレクトリにコピーします。
 
-4. Copy or overwrite any native assets from your original project
-   (`Resources`, etc.)
+4. ネイティブのアセット ( native assets ) のコピーまたは上書きを、旧プロジェクトから行います ( `Resources` など )。
 
-5. Copy the `config.xml` file into the `www` directory, and remove any
-   plugin definitions. You need to modify settings here rather than
-   within the platform directory.
+5. `config.xml` ファイルを `www` ディレクトリにコピーして、次に、プラグインの定義を削除します。プラットフォーム下のディレクトリのファイルではなく、このファイルの設定の更新を行います。
 
-6. Use the cordova CLI tool to install any plugins you need. Note that
-   the CLI handles all core APIs as plugins, so they may need to be
-   added. Only plugins marked 3.0.0 and above are compatible with the CLI.
+6. cordova CLI ツールを使用して、必要なプラグインをインストールします。CLI では、すべてのコア API をプラグインとして取り扱うため、すべてのプラグインをインストールしておくことを推奨します。また、3.0.0 系以上のプラグインのみ、CLI で取り扱うことができます。
 
-7. Build and test.
+7. ビルドとテストを行います。
 
-Please note that the CLI supports the BlackBerry10 platform exclusively. For PlayBook and BBOS, please see Cordova version 2.9.0 and below.
+CLI では、BlackBerry10 のプラットフォームのみ、サポートを行っています。PlayBook と BBOS に関しては、以下に記す内容と Cordova バージョン 2.9.0 の方をご確認ください。
 
-## Upgrade to the CLI (3.0.0) from 2.9.0
+## 2.9.0 から CLI ( 3.0.0 ) への更新
 
-1. Create a new Apache Cordova 3.0.0 project using the cordova CLI, as
-   described in The Command-Line Interface.
+1. 『 コマンドライン インターフェイス 』 の記載内容に従い、cordova CLI を使用して、Apache Cordova 3.0.0 プロジェクトを新規作成します。
 
-2. Add your platforms to the cordova project, for example: `cordova
-   platform add blackberry10`.
+2. プラットフォームを cordova プロジェクトに追加します。例 ： 「 `cordova
+   platform add blackberry10` 」 
 
-3. Copy the contents of the original project's `www` directory to the `www` directory
-   at the root of the cordova project you just created.
+3. 旧プロジェクトの `www` ディレクトリのコンテンツを、先ほど作成した cordova プロジェクトの root ( ルート ) に位置する `www` ディレクトリにコピーします。
 
-4. Copy or overwrite any native assets from your original project
-   (`Resources`, etc.)
+4. ネイティブのアセット ( native assets ) のコピーまたは上書きを、旧プロジェクトから行います ( `Resources` など )。
 
-5. Copy the `config.xml` file into the `www` directory, and remove any
-   plugin definitions. You need to modify settings here rather than
-   within the platform directory.
+5. `config.xml` ファイルを `www` ディレクトリにコピーして、次に、プラグインの定義を削除します。プラットフォーム下のディレクトリのファイルではなく、このファイルの設定の更新を行います。
 
-6. Use the cordova CLI tool to install any plugins you need. Note that
-   the CLI handles all core APIs as plugins, so they may need to be
-   added. Only 3.0.0 plugins are compatible with the CLI.
+6. cordova CLI ツールを使用して、必要なプラグインをインストールします。CLI では、すべてのコア API をプラグインとして取り扱うため、すべてのプラグインをインストールしておくことを推奨します。また、3.0.0 系のプラグインのみ、CLI で取り扱うことができます。
 
-7. Build and test.
+7. ビルドとテストを行います。
 
-## Upgrading 2.8.0 Projects to 2.9.0
+## 2.8.0 プロジェクト から 2.9.0 への更新
 
-For BlackBerry 10:
+BlackBerry 10 では、以下の処理を行います。
 
-1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
+1. Cordova 2.9.0 のソースのダウンロード後、ハードドライブ上の恒常的なディレクトリへ解凍を行います ( 例 : `~/Cordova-2.9.0` )。
 
-2. Quit any running SDK tools: Eclipse, Momentics and the like.
+2. 実行中の SDK ツール ( Eclipse、Momentics など ) を終了します。
 
-3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
+3. unix 類似のターミナル ( Terminal.app、Bash、Cygwin など ) を使用して、上記でダウンロードしたソースを置いたディレクトリへ移動します。
 
-4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
+4. 『 BlackBerry コマンドライン ツール 』 の記載内容に従い、プロジェクトを新規作成してください。これが、更新を行っていくプロジェクトのホーム ( home ) となります。
 
-5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
+5. 旧プロジェクトの `/www` ディレクトリから新規のプロジェクトの `/www` ディレクトリへ、プロジェクトソースのコピーを行ってください。
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. 開発者の `www/index.html` ファイル ( および、スクリプトの参照を行っているファイル ) 内で Cordova スクリプトを参照している箇所を、新 `cordova.js` ファイルを指すように更新します。
 
-For BlackBerryOS/Playbook:
+BlackBerryOS/Playbook では、以下の処理を行います。
 
-1. Download and extract the Cordova 2.9.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.9.0`.
+1. Cordova 2.9.0 のソースのダウンロード後、ハードドライブ上の恒常的なディレクトリへ解凍を行います ( 例 : `~/Cordova-2.9.0` )。
 
-2. Quit any running SDK tools: Eclipse, Momentics and the like.
+2. 実行中の SDK ツール ( Eclipse、Momentics など ) を終了します。
 
-3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
+3. unix 類似のターミナル ( Terminal.app、Bash、Cygwin など ) を使用して、上記でダウンロードしたソースを置いたディレクトリへ移動します。
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. 『 BlackBerry ( 原文 「 iOS 」 ) のコマンドライン ツール 』 の記載内容に従い、プロジェクトを新規作成してください。この新規のプロジェクトの `assets` が必要となります。
 
-5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
+5. 新規のプロジェクトの `www/cordova.js` ファイルを開発者の `www` ディレクトリへコピーして、開発者の `www/cordova.js` ファイルを削除します。
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. 開発者の `www/index.html` ファイル ( および、スクリプトの参照を行っているファイル ) 内で Cordova スクリプトを参照している箇所を、新 `cordova.js` ファイルを指すように更新します。
 
-7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
+7. 新規のプロジェクトの `native` ディレクトリを、既存のプロジェクトにコピーして、旧 `native` ディレクトリの上書きを行います。
 
-8. Copy the `lib` directory from the new project into the existing project, overwriting the old `lib` directory.
+8. 新規のプロジェクトの `lib` ディレクトリを、既存のプロジェクトにコピーして、旧 `lib` ディレクトリの上書きを行います。
 
-9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
+9. 新規のプロジェクトの `cordova` ディレクトリを、既存のプロジェクトにコピーして、旧 `cordova` ディレクトリの上書きを行います。
 
-## Upgrading 2.7.0 Projects to 2.8.0
+## 2.7.0 プロジェクト から 2.8.0 への更新
 
-BlackBerry 10 uses the new CLI tooling and manages core APIs as plugins. The instructions migrate your project to a new project, rather than updating an existing project, due to the complexity of updating an old project.
-Also note that the cordova js script file is now called 'cordova.js' and no longer contains a version string.
+BlackBerry 10 では、新たな CLI ツールの使用、および、プラグインとしてのコア API の制御を行っています。既存のプロジェクトの更新は複雑な処理を含むため、「 更新 」 よりも、既存のプロジェクトから新規のプロジェクトへの 「 移行 」 手順を示します。また、cordova js スクリプトファイルの呼称を改め、 'cordova.js' とします。また、ファイル名にバージョン文字列は含めません。
 
-1. Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.8.0`.
+1. Cordova 2.8.0 のソースのダウンロード後、ハードドライブ上の恒常的なディレクトリへ解凍を行います ( 例 : `~/Cordova-2.8.0` )。
 
-2. Quit any running SDK tools: Eclipse, Momentics and the like.
+2. 実行中の SDK ツール ( Eclipse、Momentics など ) を終了します。
 
-3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
+3. unix 類似のターミナル ( Terminal.app、Bash、Cygwin など ) を使用して、上記でダウンロードしたソースを置いたディレクトリへ移動します。
 
-4. Create a new project, as described in BlackBerry Command-line Tools. This becomes the home of your updated project.
+4. 『 BlackBerry コマンドライン ツール 』 の記載内容に従い、プロジェクトを新規作成してください。これが、更新を行っていくプロジェクトのホーム ( home ) となります。
 
-5. Copy your projects source from the old project's `/www` directory to the new project's `/www` directory.
+5. 旧プロジェクトの `/www` ディレクトリから新規のプロジェクトの `/www` ディレクトリへ、プロジェクトソースのコピーを行ってください。
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. 開発者の `www/index.html` ファイル ( および、スクリプトの参照を行っているファイル ) 内で Cordova スクリプトを参照している箇所を、新 `cordova.js` ファイルを指すように更新します。
 
-For BlackBerryOS/Playbook:
+BlackBerryOS/Playbook では、以下の処理を行います。
 
-1. Download and extract the Cordova 2.8.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.8.0`.
+1. Cordova 2.8.0 のソースのダウンロード後、ハードドライブ上の恒常的なディレクトリへ解凍を行います ( 例 : `~/Cordova-2.8.0` )。
 
-2. Quit any running SDK tools: Eclipse, Momentics and the like.
+2. 実行中の SDK ツール ( Eclipse、Momentics など ) を終了します。
 
-3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
+3. unix 類似のターミナル ( Terminal.app、Bash、Cygwin など ) を使用して、上記でダウンロードを行ったソースを置いたディレクトリへ移動します。
 
-4. Create a new project, as described in iOS Command-line Tools. You need the assets from this new project.
+4. 『 BlackBerry ( 原文 「 iOS 」 ) のコマンドライン ツール 』 の記載内容に従い、プロジェクトを新規作成してください。この新規のプロジェクトの `assets` が必要となります。
 
-5. Copy the `www/cordova.js` file from the new project into your `www` directory, and delete your `www/cordova.js` file.
+5. 新規のプロジェクトの `www/cordova.js` ファイルを開発者の `www` ディレクトリへコピーして、開発者の `www/cordova.js` ファイルを削除します。
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova.js` file.
+6. 開発者の `www/index.html` ファイル ( および、スクリプトの参照を行っているファイル ) 内で Cordova スクリプトを参照している箇所を、新 `cordova.js` ファイルを指すように更新します。
 
-7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
+7. 新規のプロジェクトの `native` ディレクトリを、既存のプロジェクトにコピーして、旧 `native` ディレクトリの上書きを行います。
 
-8. Copy the `lib` directory from the new project into the existing project, overwriting the old `lib` directory.
+8. 新規のプロジェクトの `lib` ディレクトリを、既存のプロジェクトにコピーして、旧 `lib` ディレクトリの上書きを行います。
 
-9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
+9. 新規のプロジェクトの `cordova` ディレクトリを、既存のプロジェクトにコピーして、旧 `cordova` ディレクトリの上書きを行います。
 
-## Upgrading 2.6.0 Projects to 2.7.0
+## 2.6.0 プロジェクト から 2.7.0 への更新
 
-1. Download and extract the Cordova 2.7.0 source to a permanent directory location on your hard drive, for example to `~/Cordova-2.7.0`.
+1. Cordova 2.7.0 のソースのダウンロード後、ハードドライブ上の恒常的なディレクトリへ解凍を行います ( 例 : `~/Cordova-2.7.0` )。
 
-2. Quit any running SDK tools: Eclipse, Momentics and the like.
+2. 実行中の SDK ツール ( Eclipse、Momentics など ) を終了します。
 
-3. Navigate to the directory where you put the downloaded source above, using a unix like terminal: Terminal.app, Bash, Cygwin, etc.
+3. unix 類似のターミナル ( Terminal.app、Bash、Cygwin など ) を使用して、上記でダウンロードしたソースを置いたディレクトリへ移動します。
 
-4. Create a new project, as described in BlackBerry Command-line Tools. You need the assets from this new project.
+4. 『 BlackBerry のコマンドライン ツール 』 の記載内容に従い、プロジェクトを新規作成してください。この新規のプロジェクトの `assets` が必要となります。
 
-5. Copy the `www/cordova-2.7.0.js` file from the new project into your `www` directory, and delete your `www/cordova-2.6.0.js` file.
+5. 新規のプロジェクトの `www/cordova-2.7.0.js` ファイルを開発者の `www` ディレクトリへコピーして、開発者の `www/cordova-2.6.0.js` ファイルを削除します。
 
-6. Update the Cordova script reference in your `www/index.html` file (and any other files that contain the script reference) to point to the new `cordova-2.7.0.js` file.
+6. 開発者の `www/index.html` ファイル ( および、スクリプトの参照を行っているファイル ) 内で Cordova スクリプトを参照している箇所を、新 `cordova-2.7.0.js` ファイルを指すように更新します。
 
-7. Copy the `native` directory from the new project into the existing project, overwriting the old `native` directory.
+7. 新規のプロジェクトの `native` ディレクトリを、既存のプロジェクトにコピーして、旧 `native` ディレクトリの上書きを行います。
 
-8. Copy the `lib` directory from the new project into the existing project, overwriting the old `lib` directory.
+8. 新規のプロジェクトの `lib` ディレクトリを、既存のプロジェクトにコピーして、旧 `lib` ディレクトリの上書きを行います。
 
-9. Copy the `cordova` directory from the new project into the existing project, overwriting the old `cordova` directory.
+9. 新規のプロジェクトの `cordova` ディレクトリを、既存のプロジェクトにコピーして、旧 `cordova` ディレクトリの上書きを行います。
 
-## Upgrade to 2.6.0 from 2.5.0
+## 2.5.0 から 2.6.0 への更新
 
-Updating the PhoneGap download directory:
+PhoneGap のダウンロード先のディレクトリを更新します。
 
-It is recommended that you download a fresh copy of the entire directory.
+ディレクトリ全体の最新コピーのダウンロードを推奨します。
 
-However, here are the new parts needed for the piecemeal update:
+ただし、以下の箇所に関しては、個別に更新していくことを推奨します。
 
-1. Update the cordova.blackberry.js file in the `Phonegap-2.6.0/lib/blackberry/javascript` directory.
+1. `Phonegap-2.6.0/lib/blackberry/javascript` ディレクトリの cordova.blackberry.js ファイルを更新します。
 
-2. Update the `ext`, `ext-air`, and `ext-qnx` in the `Phonegap-2.6.0/lib/blackberry/framework` directory.
+2. `Phonegap-2.6.0/lib/blackberry/framework` ディレクトリの `ext` 、 `ext-air` 、 `ext-qnx` を更新します。
 
-3. Update the `build.xml` file in the `Phonegap-2.6.0/lib/blackberry` directory.
+3. `Phonegap-2.6.0/lib/blackberry` ディレクトリの `build.xml` ファイルを更新します。
 
-4. Update the `Phonegap-2.6.0/lib/blackberry/bin` directory.
+4. `Phonegap-2.6.0/lib/blackberry/bin` ディレクトリを更新します。
 
-5. Update the `VERSION` file in the `Phonegap-2.6.0/lib/blackberry` directory.
+5. `Phonegap-2.6.0/lib/blackberry` ディレクトリの `VERSION` ファイルを更新します。
 
-Updating the example/ directory or migrating an existing project:
+「 / 」 下のディレクトリの更新、または、既存のプロジェクトを移行します。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the contents of the `ext-qnx/` directory.
+4. `ext-qnx/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.6.0.js` into your project.
+5. 開発者のプロジェクトに新 `cordova-2.6.0.js` をコピーします。
 
-5. Update your HTML to use the new `cordova-2.6.0.js` file.
+6. 新 `cordova-2.6.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.5.0 from 2.4.0
+## 2.4.0 から 2.5.0 への更新
 
-Updating the PhoneGap download directory:
+PhoneGap のダウンロード先のディレクトリを更新します。
 
-It is recommended that you download a fresh copy of the entire directory.
+ディレクトリ全体の最新コピーのダウンロードを推奨します。
 
-However, here are the new parts needed for the piecemeal update:
+ただし、以下の箇所に関しては、個別に更新していくことを推奨します。
 
-1. Update the cordova.blackberry.js file in the `Phonegap-2.5.0/lib/blackberry/javascript` directory.
+1. `Phonegap-2.5.0/lib/blackberry/javascript` ディレクトリの cordova.blackberry.js ファイルを更新します。
 
-2. Update the `ext`, `ext-air`, and `ext-qnx` in the `Phonegap-2.5.0/lib/blackberry/framework` directory.
+2. `Phonegap-2.5.0/lib/blackberry/framework` ディレクトリの `ext` 、 `ext-air` 、 `ext-qnx` を更新します。
 
-3. Update the `build.xml` file in the `Phonegap-2.5.0/lib/blackberry` directory.
+3. `Phonegap-2.5.0/lib/blackberry` ディレクトリの `build.xml` ファイルを更新します。
 
-4. Update the `Phonegap-2.5.0/lib/blackberry/bin` directory.
+4. `Phonegap-2.5.0/lib/blackberry/bin` ディレクトリを更新します。
 
-5. Update the `VERSION` file in the `Phonegap-2.5.0/lib/blackberry` directory.
+5. `Phonegap-2.5.0/lib/blackberry` ディレクトリの `VERSION` ファイルを更新します。
 
-Updating the example/ directory or migrating an existing project:
+「 / 」 下のディレクトリの更新、または、既存のプロジェクトを移行します。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the contents of the `ext-qnx/` directory.
+4. `ext-qnx/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.5.0.js` into your project.
+5. 開発者のプロジェクトに新 `cordova-2.5.0.js` をコピーします。
 
-5. Update your HTML to use the new `cordova-2.5.0.js` file.
+6. 新 `cordova-2.5.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.4.0 from 2.3.0
+## 2.3.0 から 2.4.0 への更新
 
-Updating just the `www` directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.4.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
-    - If BlackBerry 10, then update the .js file in the `qnx/` directory.
+4. 開発者のプロジェクトに新 `cordova-2.4.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
+    - BlackBerry 10 の場合、 `qnx/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-2.4.0.js` file.
+5. 新 `cordova-2.4.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. `sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.2.3.0/ext/` directory.
+2. `cordova.2.3.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.2.3.0/ext-air/` directory.
+3. `cordova.2.3.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the contents of the `cordova.2.3.0/ext-qnx/` directory.
+4. `cordova.2.3.0/ext-qnx/` ディレクトリのコンテンツを更新します。
 
-5. Update the .js file in the `cordova.2.3.0/javascript/` directory.
+5. `cordova.2.3.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-6. Open the `sample/lib/` directory and rename the `cordova.2.3.0/` directory to `cordova.2.4.0/`.
+6. `sample/lib/` ディレクトリを開き、 `cordova.2.3.0/` ディレクトリ名を `cordova.2.4.0/` へ変更します。
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.4.0.js` file.
+8. `www/` ディレクトリを開き、新 `cordova-2.4.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.3.0 from 2.2.0
+## 2.2.0 から 2.3.0 への更新
 
-Updating just the `www` directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.3.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
-    - If BlackBerry 10, then update the .js file in the `qnx/` directory.
+4. 開発者のプロジェクトに新 `cordova-2.3.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
+    - BlackBerry 10 の場合、 `qnx/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-2.3.0.js` file.
+5. 新 `cordova-2.3.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. Open the`sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.2.2.0/ext/` directory.
+2. `cordova.2.2.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.2.2.0/ext-air/` directory.
+3. `cordova.2.2.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the contents of the `cordova.2.2.0/ext-qnx/` directory.
+4. `cordova.2.2.0/ext-qnx/` ディレクトリのコンテンツを更新します。
 
-5. Update the .js file in the `cordova.2.2.0/javascript/` directory.
+5. `cordova.2.2.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-6. Open the `sample/lib/` directory and rename the `cordova.2.2.0/` directory to `cordova.2.3.0/`.
+6. `sample/lib/` ディレクトリを開き、 `cordova.2.2.0/` ディレクトリ名を `cordova.2.3.0/` へ変更します。
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.3.0.js` file.
+8. `www/` ディレクトリを開き、新 `cordova-2.3.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.2.0 from 2.1.0
+## 2.1.0 から 2.2.0 への更新
 
-Updating just the www directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.2.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
-    - If BlackBerry 10, then update the .js file in the `qnx/` directory.
+4. 開発者のプロジェクトに新 `cordova-2.2.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
+    - BlackBerry 10 の場合、 `qnx/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-2.2.0.js` file.
+5. 新 `cordova-2.2.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. `sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.2.1.0/ext/` directory.
+2. `cordova.2.1.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.2.1.0/ext-air/` directory.
+3. `cordova.2.1.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the contents of the `cordova.2.1.0/ext-qnx/` directory.
+4. `cordova.2.1.0/ext-qnx/` ディレクトリのコンテンツを更新します。
 
-5. Update the .js file in the `cordova.2.1.0/javascript/` directory.
+5. `cordova.2.1.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-6. Open the `sample/lib/` directory and rename the `cordova.2.1.0/` directory to `cordova.2.2.0/`.
+6. `sample/lib/` ディレクトリを開き、 `cordova.2.1.0/` ディレクトリ名を `cordova.2.2.0/` へ変更します。
 
-7. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+7. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-8. Open the `www/` directory and update your HTML to use the new `cordova-2.2.0.js` file.
+8. `www/` ディレクトリを開き、新 `cordova-2.2.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.1.0 from 2.0.0
+## 2.0.0 から 2.1.0 への更新
 
-Updating just the `www` directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.1.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
+4. 開発者のプロジェクトに新 `cordova-2.1.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-2.1.0.js` file.
+5. 新 `cordova-2.1.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. `sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.2.0.0/ext/` directory.
+2. `cordova.2.0.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.2.0.0/ext-air/` directory.
+3. `cordova.2.0.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the .js file in the `cordova.2.0.0/javascript/` directory.
+4. `cordova.2.0.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-5. Open the `sample/lib/` directory and rename the `cordova.2.0.0/` directory to `cordova.2.1.0/`.
+5. `sample/lib/` ディレクトリを開き、 `cordova.2.0.0/` ディレクトリ名を `cordova.2.1.0/` へ変更します。
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-2.1.0.js` file.
+7. `www/` ディレクトリを開き、新 `cordova-2.1.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-## Upgrade to 2.0.0 from 1.9.0
+## 1.9.0 から 2.0.0 への更新
 
-Updating just the `www` directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-2.0.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
+4. 開発者のプロジェクトに新 `cordova-2.0.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-2.0.0.js` file.
+5. 新 `cordova-2.0.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+6. 開発者の `www/plugins.xml` ファイルを更新します。2 つのプラグインの名前空間/サービスが変わっています。
+Capture プラグインと Contact プラグインに関する、下記の 2 つのエントリーを更新します。
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-   To:
+   更新後は下記のようになります。
 
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. `sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.1.9.0/ext/` directory.
+2. `cordova.1.9.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.1.9.0/ext-air/` directory.
+3. `cordova.1.9.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the .js file in the `cordova.1.9.0/javascript/` directory.
+4. `cordova.1.9.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-5. Open the `sample/lib/` directory and rename the `cordova.1.9.0/` directory to `cordova.2.0.0/`.
+5. `sample/lib/` ディレクトリを開き、 `cordova.1.9.0/` ディレクトリ名を `cordova.2.0.0/` へ変更します。
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-2.0.0.js` file.
+7. `www/` ディレクトリを開き、新 `cordova-2.0.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
-   changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+8. `www/` ディレクトリを開き、 `plugins.xml` ファイルを更新します。2 つのプラグインの名前空間/サービスが変わっています。
+Capture プラグインと Contact プラグインに関する、下記の 2 つのエントリーを更新します。
 
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-   To:
+   更新後は下記のようになります。
 
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
          <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
-- To upgrade to 1.8.0, please go from 1.7.0
+- 1.8.0 へ更新する場合、1.7.0 の手順から開始してください。
 
-## Upgrade to 1.8.0 from 1.7.0
+## 1.7.0 から 1.8.0 への更新
 
-Updating just the `www` directory:
+`www` ディレクトリの更新のみを行います。
 
-1. Open your `www/` directory, which contains your app.
+1. アプリが置かれた `www/` ディレクトリを開きます。
 
-2. Remove and update the .jar file in the `ext/` directory.
+2. `ext/` ディレクトリの .jar ファイルの削除と更新をします。
 
-3. Update the contents of the `ext-air/` directory.
+3. `ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Copy the new `cordova-1.8.0.js` into your project.
-    - If playbook, then update the .js file in the `playbook/` directory.
+4. 開発者のプロジェクトに新 `cordova-1.8.0.js` をコピーします。
+    - playbook の場合、 `playbook/` ディレクトリの .js ファイルを更新します。
 
-5. Update your HTML to use the new `cordova-1.8.0.js` file.
+5. 新 `cordova-1.8.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-6. Update your `www/plugins.xml` file. Two plugins changed their
-   namespace/service label. Change the old entries for the Capture and
-   Contact plugins from:
+6. 開発者の `www/plugins.xml` ファイルを更新します。2 つのプラグインの名前空間/サービスが変わっています。
+Capture プラグインと Contact プラグインに関する、下記の 2 つのエントリーを更新します。
 
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-   To:
+   更新後は下記のようになります。
 
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
 
-Updating the sample directory (i.e., updating using the ant tools):
+sample ディレクトリの更新を行います ( ant ツールを使用した更新 )。
 
-1. Open the `sample/lib/` directory.
+1. `sample/lib/` ディレクトリを開きます。
 
-2. Update the .jar file in the `cordova.1.7.0/ext/` directory.
+2. `cordova.1.7.0/ext/` ディレクトリの .jar ファイルを更新します。
 
-3. Update the contents of the `cordova.1.7.0/ext-air/` directory.
+3. `cordova.1.7.0/ext-air/` ディレクトリのコンテンツを更新します。
 
-4. Update the .js file in the `cordova.1.7.0/javascript/` directory.
+4. `cordova.1.7.0/javascript/` ディレクトリの .js ファイルを更新します。
 
-5. Open the `sample/lib/` directory and rename the `cordova.1.7.0/` directory to `cordova.1.8.0/`.
+5. `sample/lib/` ディレクトリを開き、 `cordova.1.7.0/` ディレクトリ名を `cordova.1.8.0/` へ変更します。
 
-6. Type `ant blackberry build` or `ant playbook build` to update the `www/` directory with updated Cordova.
+6. 更新した Cordova を使用して、 `www/` ディレクトリを更新します。 `ant blackberry build` または `ant playbook build` と入力します。
 
-7. Open the `www/` directory and update your HTML to use the new `cordova-1.8.0.js` file.
+7. `www/` ディレクトリを開き、新 `cordova-1.8.0.js` ファイルを使用できるように、HTML の更新を行います。
 
-8. Open the `www/` directory and update the `plugins.xml` file. Two plugins
-   changed their namespace/service label. Change the old entries for the
-   Capture and Contact plugins from:
+8. `www/` ディレクトリを開き、 `plugins.xml` ファイルを更新します。2 つのプラグインの名前空間/サービスが変わっています。
+Capture プラグインと Contact プラグインに関する、下記の 2 つのエントリーを更新します。
 
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
 
-   To:
+   更新後は下記のようになります。
 
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
          <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

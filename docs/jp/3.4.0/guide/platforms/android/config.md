@@ -17,77 +17,51 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android Configuration
+# Android の設定
 
-The `config.xml` file controls an app's basic settings that apply
-across each application and CordovaWebView instance. This section
-details preferences that only apply to Android builds. See The
-config.xml File for information on global configuration options.
+`config.xml` ファイルを使用して、各アプリと各 CordovaWebView のインスタンス間に適用する、アプリの基本的な設定を行います。
+この節では、Android のビルドのみに適用する preference に関して解説します。グローバル設定で使用する各種オプションに関しては、『 config.xml ファイル 』 をご確認ください。
 
-- `KeepRunning` (boolean, defaults to `true`): Determines whether the
-  application stays running in the background even after a `pause`
-  event fires. Note: setting this to false will not kill the app after
-  a pause event, it will only halt execution of code in the cordova
-  webview while the app is in the background.
+- `KeepRunning` ( boolean、デフォルトでは `true` ) : `pause` ( 一時停止 ) イベントの発火後でも、バックグラウンドにおいて、アプリの実行を継続するか決定するときに使用します。注意 : 値を false に設定している場合、 pause イベント後でも、アプリは終了しません。アプリは、バックグラウンドに移動して、cordova webview 内で冬眠状態となります。
 
         <preference name="KeepRunning" value="false"/>
 
-- `LoadUrlTimeoutValue` (number in milliseconds, default to `20000`,
-  20 seconds): When loading a page, the amount of time to wait before throwing
-  a timeout error. This example specifies 10 seconds rather than 20:
+-  `LoadUrlTimeoutValue` [ number ( ミリ秒単位 )、デフォルトは `20000` ( 20 秒 ) ] : ページの読み込み時において、タイムアウトエラーを投げるまでの待ち時間です。下の例では、20 秒ではなく、10 秒に設定しています。
 
         <preference name="LoadUrlTimeoutValue" value="10000"/>
 
-- `SplashScreen` (string, defaults to `splash`): The name of the file minus
-  its extension in the `res/drawable` directory.  Various assets must share
-  this common name in various subdirectories.
+-  `SplashScreen` ( 文字列、デフォルトでは `splash` ) : `res/drawable` ディレクトリ内に格納されたファイルの名前 ( 拡張子なし ) です。また、画面上で使用する各種リソースは、このディレクトリ ( res/ ) 下に格納する必要があります。
 
         <preference name="SplashScreen" value="mySplash"/>
 
-- `SplashScreenDelay` (number in milliseconds, defaults to `3000`): The amount
-  of time the splash screen image displays.
+- `SplashScreenDelay` [ number ( ミリ秒単位 )、 デフォルトは `3000` ] : スプラッシュ画像を表示する時間です。
 
         <preference name="SplashScreenDelay" value="10000"/>
 
-- `InAppBrowserStorageEnabled` (boolean, defaults to `true`): Controls
-  whether pages opened within an InAppBrowser can access the same
-  localStorage and WebSQL storage as pages opened with the default
-  browser.
+- `InAppBrowserStorageEnabled` ( boolean、デフォルトでは `true` ) : 標準ブラウザーで開いたページと同じように、InAppBrowser 内で開いたページからでも、標準ブラウザーと同じ localStorage と WebSQL ストレージにアクセスできるか指定します。
 
         <preference name="InAppBrowserStorageEnabled" value="true"/>
 
-- `LoadingDialog` (string, defaults to `null`): If set, displays a dialog with
-  the specified title and message, and a spinner, when loading the first
-  page of an application. The title and message are separated by a comma
-  in this value string, and that comma is removed before the dialog is
-  displayed.
+- `LoadingDialog` ( 文字列、デフォルトでは `null` ) : 設定をした場合、アプリの最初のページを読み込んでいるとき、指定したタイトルとメッセージを使用したダイアログの表示、ならびに、処理中表示 ( spinner ) を行います。タイトルとメッセージは、文字列の中で、コンマ ( , ) を使用して区切ります。コンマ自体は表示されません。
 
         <preference name="LoadingDialog" value="My Title,My Message"/>
 
-- `LoadingPageDialog` (string, defaults to `null`): The same as `LoadingDialog`,
-  but for loading every page after the first page in the application.
+- `LoadingPageDialog` ( 文字列、デフォルトでは `null` ) : `LoadingDialog` とほぼ同じですが、こちらは、アプリの最初のページを読み込んだあと、別のページを読み込む度に行われる設定となります。
 
         <preference name="LoadingPageDialog" value="My Title,My Message"/>
 
-- `ErrorUrl` (URL, defaults to `null`):
-  If set, will display the referenced page upon an error in the application
-  instead of a dialog with the title "Application Error".
+- `ErrorUrl` ( URL、デフォルトでは `null` ) :
+  アプリでエラーが発生した場合に表示するページを指定します。通常では、タイトル部に "Application Error" と表示されたダイアログが使用されます。
 
         <preference name="ErrorUrl" value="myErrorPage.html"/>
 
-- `ShowTitle` (boolean, defaults to `false`): Show the title at the top
-  of the screen.
+- `ShowTitle` ( boolean、デフォルトでは `false` ) : 画面トップにタイトルを表示します。
 
         <preference name="ShowTitle" value="true"/>
 
-- `LogLevel` (string, defaults to `ERROR`): Sets the minimum log level
-  through which log messages from your application will be filtered. Valid
-  values are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `VERBOSE`.
+- `LogLevel` ( 文字列、デフォルトでは `ERROR` ) : アプリが出力するログメッセージのフィルタを設定します。有効な値は `ERROR` 、 `WARN` 、 `INFO` 、 `DEBUG` または `VERBOSE` となります。
 
         <preference name="LogLevel" value="VERBOSE"/>
 
-- `SetFullscreen` (boolean, defaults to `false`): Same as the `Fullscreen`
-  parameter in the global configuration of this xml file. This Android-specific
-  element is deprecated in favor of the global `Fullscreen` element, and will
-  be removed in a future version.
+- `SetFullscreen` ( boolean、デフォルトでは `false` ) : xml ファイルのグローバル設定で使用する `Fullscreen` パラメータと同じです。グローバル `Fullscreen` 要素を既に使用している場合には、こちらの Android 特有の要素は無視されます。また、将来のバージョンでは、この設定は削除する予定です。
 

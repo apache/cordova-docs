@@ -19,78 +19,54 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # Windows 8 プラットフォームに関する解説
 
-This guide shows how to set up your SDK development environment to
-deploy Cordova apps for Windows 8. See the following for more
-detailed platform-specific information:
+SDK 開発環境の設定方法、および、Windows 8 搭載のデバイスへの Cordova アプリの展開方法を説明します。
+プラットフォーム固有の詳細情報に関しては、以下をご確認ください。
 
-* Upgrading Windows 8
-* Windows 8 Command-line Tools
+* Windows 8 のアップグレード
+* Windows 8 コマンドライン ツール
 
-The command-line tools above refer to versions prior to Cordova 3.0.
-See The Command-Line Interface for information about the
-current interface.
+上記の 『 コマンドライン ツール 』 では、旧バージョン ( Cordova 3.0 以前 ) に実装されていたツールでの作業手順を記しています。
+現コマンドライン インターフェイス ( CLI ) に関しては、『 コマンドライン インターフェイス 』 の記載内容をご確認ください。
 
-Microsoft deprecated the name _Metro-style apps_ in Windows 8 and
-Windows RT. MSDN now refers to this type of app as a _Windows Store_
-app, and this guide follows that convention. Also, in this guide
-_Windows 8_ signifies both Windows 8 and Windows RT.
-
-## 必要事項
+Window 8 と Window RT で使用していた _メトロスタイル アプリ_ という呼称は、廃止しました。MSDN では、この種のアプリを、 _Windows ストア_ アプリと現在呼んでいます。この解説中でも、こちらの呼び名を使用しています。また、こちらの _Windows 8_ のプラットフォームガイドは、Windows 8 だけではなく、windows RT にも適用できます。
+ 
+## システム要件
 
 - Windows 8
 
-- Visual Studio 2012 Professional or better, or Visual Studio 2012 Express for Windows 8
+- Visual Studio 2012 Professional 以上、または、Visual Studio 2012 Express ( Windows 8 用 ) 
 
-Follow the instructions at
-[windowsstore.com](http://www.windowsstore.com/)
-to submit your app to Windows Store.
+Windows ストアに対して、アプリの申請を行うときには、 [windowsstore.com](http://www.windowsstore.com/) の記載内容に従ってください。
 
 ## SDK と Cordova のインストール
 
-Set up your preferred variant of Visual Studio 2012. All of the
-product's paid versions (Professional, etc.) let you build Windows
-Store apps. You need __Express for Windows 8__ to build Windows Store
-apps using the
-[Express editions](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products).
+Visual Studio 2012 であれば、どの製品でもビルドは行えますが、無料のバージョン以外の製品版をご使用ください ( Professional 版など )。なお、Windows ストアアプリのビルドには、 __Express for Windows 8__ ( [こちらのページ](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-products) から適宜、更新・拡張機能を適用のこと ) が必要です。
 
-Download and extract the latest copy of
-[Cordova](http://phonegap.com/download).
-These instructions apply to the `lib\windows-8` subdirectory.
+最新の [Cordova](http://phonegap.com/download) をダウンロード・解凍します。
+上記のサイト上の手順は、 `lib\windows-8` サブディレクトリに対して適用します。
 
 ## 新規プロジェクトの設定
 
-You can already build Windows 8 apps using the _HTML/JavaScript track_
-available in Windows Store apps. Use Cordova in Windows Store apps to
-expose the same APIs as on other Cordova-supported platforms.
+_HTML/JavaScript track_ ( 『 Windows 向けアプリ 』 ページから利用可能 ) を使用して、Windows 8 アプリをビルドすることができます。『 Windows 向けアプリ 』 ページ上で Cordova と検索して、Cordova がサポートしている他のプラットフォームでも使用できる、同種の API を確認してください。
+( 翻訳者メモ : この一段落に関しては、内容の精査をすることができませんでした。)
 
-- Open Visual Studio 2012 and choose __New Project__.
+- Visual Studio 2012 を起動させ、 __新しいプロジェクト__ を選択します。
 
-- Select __Installed &rarr; Template &rarr; Other Languages &rarr;
-  JavaScript &rarr; Windows Store__ from the tree, and then __Blank
-  App__ from the projects list. Enter whatever project name you like,
-  such as `CordovaWin8Foo` as in this example:
-
+- __インストール済み &rarr; テンプレート &rarr; 他の言語 &rarr;
+  JavaScript &rarr; Windows ストア__ を選択して、次に、プロジェクト一覧から __空のアプリケーション__ を選択します。そして、プロジェクト名 ( 「 名前 」 ) を入力します ( ここでは、例として `CordovaWin8Foo` を使用します )。
+  
     ![](img/guide/platforms/win8/wsnewproject.png)
 
-- Microsoft continues to use `default.html` as the default home page,
-  but most web developers use `index.html`. It's a good idea to do so,
-  at least to match other platforms you're likely working on.  To fix
-  this, in __Solution Explorer__ rename the `default.html` file to
-  `index.html`. Then double-click the `package.appxmanifest` file and
-  change the __Start page__ value to `index.html`:
+- Microsoft では、デフォルトのホームページとして、 `default.html` 
+を引き続き使用しています。一方、開発者の多くは、 `index.html` を使用しています。利便上、他の開発対象のプラットフォームとも合わせる必要があるため、ファイル名を変えることを推奨します。ファイル名を変更する場合、 __ソリューション エクスプローラ ( Solution Explorer )__ 上で、 `default.html` ファイル名を、 `index.html` にします。次に、 `package.appxmanifest` ファイルをダブルクリックして、 __スタートページ__ 項目の値を、 `index.html` に変更します。
 
         ![](img/guide/platforms/win8/wschangemanifest.png)
 
-- To include `cordova.js` in your project, right-click on the `js`
-  directory in __Solution Explorer__ and select __Add &rarr; New
-  Item__. Locate the `cordova.js` file in the `lib\windows-8`
-  directory.
+- プロジェクトに `cordova.js` をインクルード ( include ) します。 __ソリューション エクスプローラ__ の `js` ディレクトリを右クリックして、 __追加 &rarr; 新しい項目の追加__ を選択します。 `lib\windows-8` ディレクトリの `cordova.js` ファイルを選択します。
 
-- Edit the code for `index.html`. Add a reference to `cordova.js`. You
-  can do this manually, or by dragging the file from __Solution
-  Explorer__. Add the following other dependencies to the app's home page:
+`index.html` との関連個所を修正します。 `cordova.js` へファイルへの参照を追加します。手動で行うか、または、 __ソリューション エクスプローラ__ からファイルをドラッグして行うことができます。以下の依存関係を、アプリのホームページに追加します。
 
-            <!-- WinJS references -->
+            <!-- WinJS への参照 -->
             <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
             <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
             <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
@@ -98,11 +74,11 @@ expose the same APIs as on other Cordova-supported platforms.
             <!-- Cordova -->
             <script src="/js/cordova.js"></script>
 
-            <!-- CordovaWin8Foo references -->
+            <!-- CordovaWin8Foo への参照 -->
             <link href="/css/default.css" rel="stylesheet" />
             <script src="/js/default.js"></script>
 
-- Add a `deviceready` handler to demonstrate Cordova is working:
+- `deviceready` ハンドラーを使用して、Corodva 側の準備を行います。
 
         <body>
             <p>Content goes here</p>
@@ -116,9 +92,9 @@ expose the same APIs as on other Cordova-supported platforms.
 
 ## プロジェクトのテスト
 
-Run the project from Visual Studio. You'll see the message box appear:
+Visual Studio からプロジェクトを実行します。以下のメッセージが表示されます。
 
         ![](img/guide/platforms/win8/wsalert.png)
 
-That's it. You're now ready to build Windows Store apps with Cordova.
+ここまでの手順で、Window ストアアプリを、Cordova を使用して、ビルドする準備が整いました。
 

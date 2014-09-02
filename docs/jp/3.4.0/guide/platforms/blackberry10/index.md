@@ -19,181 +19,150 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 # BlackBerry 10 プラットフォームに関する解説
 
-This guide shows how to set up your development environment to build
-and deploy Cordova apps for BlackBerry 10 devices.  For previous
-versions of BlackBerry, you need to use a different set of
-command-line tools, described in BlackBerry Platform Guide.
+SDK 開発環境の設定方法、および、BlackBerry 10 搭載のデバイスへの Cordova アプリの展開方法を説明します。
+以前のバージョンの BlackBerry の場合には、『 BlackBerry コマンドライン ツール 』 ( 原文では、「 BlackBerry Platform Guide 」 と記載 ) の記載内容に従い、以前のコマンドラインツール群を使用して、セットアップを行う必要があります。
 
-## 必要事項
+## システム要件
 
-The development environment is available on Windows, Mac and Linux.
+開発環境は、Windows、Mac、Linux 上で使用できます。
 
-Developers should use the `cordova` utility in conjunction with the
-Blackberry Native SDK.  See The Command-Line Interface for information
-how to install `cordova`, add projects, then build and deploy for each
-platform.
+Blackberry Native SDK と併用して、`cordova` ユーティリティを使用してください。コマンドライン インターフェイスのインストール方法、および、プロジェクトの追加・ビルド・展開方法に関しては、『 コマンドライン インターフェイス 』 をご確認ください。
 
-Blackberry 10 Device Simulator:
+Blackberry 10 デバイス シミュレーターの仕様を以下に記します。
 
-	* `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
-	* `Disk space: 10 GB`
-	* `RAM Memory: 4 GB`
-	* `Virtualization:
-		* __Intel Virtualization Technology__ (VT, VT-x, vmx) &rarr; [Intel VT-x supported processor list](http://ark.intel.com/products/virtualizationtechnology)
-		* __AMD Virtualization__ (AMD-V, SVM) (Since May 2006, all CPUs AMD include AMD-V, except Sempron).
-	
-More information about requirements: [BB10 Simulator requeriments](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html).
+	* `プロセッサー :`Intel dual core 2.0 GHz/AMD Athlon 4200+ 以上
+	* `ディスク容量 : 10 GB`
+	* `RAM メモリー : 4 GB`
+	* `仮想化機構 :
+		* __インテル バーチャライゼーション テクノロジー__ ( VT、VT-x、vmx ) &rarr; [Intel VT-x をサポートしているプロセッサーの一覧](http://ark.intel.com/products/virtualizationtechnology)
+		* __AMD Virtualization__ ( AMD-V、SVM ) 2006年5月から、すべての AMD 社の CPU には、AMD-V が実装されています。Sempron は対象外となります。
+
+システム要件の詳細に関しては、 [BB10 シミュレータの要件](http://developer.blackberry.com/devzone/develop/simulator/simulator_systemrequirements.html) をご確認ください。
 
 ## BlackBerry Native SDK のインストール
 
-In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
-[developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.
-Following installation, you need to add its command-line tools to your
-system path.
+BlackBerry Native SDK を取得するには、[developer.blackberry.com](http://developer.blackberry.com/native/download/) から、BlackBerry 用の IDE をダウンロード・インストールして、IDE 経由で、BlackBerry Native SDK をインストールします。また、以下に記すように、インストール時に、システム環境変数のパス ( system path ) にコマンドライン ツールを追加する必要があります。
 
-On Windows:
+Windows 上の設定方法を以下に記します。
 
-* Go to __My Computer &rarr; Properties &rarr; Advanced &rarr; Environment Variables__.
+* __マイ コンピュータ &rarr; プロパティ &rarr; 詳細設定 &rarr; 環境変数__ に移動します。
 
-* Append the Native SDK's install directory to the PATH, for example:
+* Native SDK のインストール先ディレクトリを、PATH に追加します。例を以下に記します。
 
     ;C:\bbndk\host_10_2_0_132\darwin\x86\usr\bin\
 
-On Mac and Linux:
+Mac と Linux の設定方法を以下に記します。
 
-* Edit the `~/.bash_profile` file, adding a line such as the
-  following, depending on where the Native SDK was installed:
+* 以下のラインを追加して、 `~/.bash_profile` ファイルを編集します ( Native SDK のインストール先によっては、記述が異なります )。
 
     $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
 
-* Run the following to apply the change in the current session:
+* 現在のセッション内で変更を反映したい場合には、以下を実行します。
 
     $ source ~/.bash_profile
 
-If you got any environmental problem, using the Native SDK from the command line, execute the appropriate file for your platform, located within the installation path:
+コマンドラインから Native SDK を使用するときに障害が発生した場合、インストール先 ( installation path ) に置かれた、以下の各プラットフォーム用のファイルを適宜実行します。
 
-	* On Windows:
+    * Windows の場合 :
 		$ `\bbndk\bbndk-env_xx_xx_xx_xxxx.bat`
 
-	* On Linux &rarr; Installed as root user:
+    * Linux の場合 ( root ユーザーとしてインストール ) :
 		$ `./opt/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
 		
-	* On Linux &rarr; Installed as non-root user:
+
+    * Linux の場合 ( root ユーザー以外でインストール ) :
 		$ `./home/username/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-	
-	* On Mac:
+
+　　　 * Mac の場合 :
 		$ `/Developer/SDKs/bbndk/bbndk-env_xx_xx_xx_xxxx.sh`
-
 	
-## Set up for Signing
+## 署名 ( Signing ) の設定
 
-If you wish to test on a device or distribute apps through BlackBerry
-World, your system must be setup for code signing.
+実機でのテスト、または、BlackBerry World 上でアプリの配布を検討している場合、コード署名 ( code signing ) を設定する必要があります。
 
-To obtain a signing key, go to the [BlackBerry Keys Order Form] (https://www.blackberry.com/SignedKeys/codesigning.html).
+署名キー ( signing key ) の取得は、 [ BlackBerry キー取得申請フォーム ](https://www.blackberry.com/SignedKeys/codesigning.html) から行います。
 
-Select the first checkbox: "for BlackBerry10 apps developed using BlackBerry
-NDK" and then sign in or create a BBID.
+最初のチェックボックス ( "for BlackBerry10 apps developed using BlackBerry
+NDK" ) を選択して、サインインまたは BBID の作成を行ってください。
 
-Enter a password and click "Get Token" to download bbidtoken.csk. Save this
-file to the default location for your OS which will be displayed on the
-download page.
+パスワードを入力して、 "Get Token" をクリックして、bbidtoken.csk をダウンロードします。ダウンロードページ上で指定されている、デフォルトのディレクトリに、このファイルを保存します。
 
-The final step is to generate a signing certificate:
+最後の手順は、署名証明書 ( signing certificate ) の発行です。
 
     $ blackberry-keytool -genkeypair -storepass <password> -author 'Your Name’
 
 ## プロジェクトの作成
 
-Use the `cordova` utility to set up a new project, as described in The
-Command-Line Interface. For example, in a source-code directory:
+`cordova` ユーティリティを使用して、『 コマンドライン インターフェイス 』 の記載内容に従い、プロジェクトを新規作成します。
+たとえば、ソースコードディレクトリ上で以下のコマンドを実行します。
 
     $ cordova create hello com.example.hello
     $ cd hello
     $ cordova platform add blackberry10
     $ cordova build
 
-## エミュレーターへの展開
+## エミュレータへの展開
 
-If you wish to run a device emulator, download and install the
-BlackBerry 10 Simulator.
+デバイスのエミュレータを実行する場合、BlackBerry 10 シミュレータをダウンロード・インストールします。
 
-* [Download](http://developer.blackberry.com/native/download/)
-* [Getting Started](http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html)
+* [ダウンロード](http://developer.blackberry.com/native/download/)
+* [はじめに](http://developer.blackberry.com/devzone/develop/simulator/blackberry_10_simulator_start.html)
 
-Before testing an app on either an emulator or a device, you need to
-enable development mode.
+エミュレータまたはデバイス上でアプリをテストする前に、開発モード ( development mode ) を有効化する必要があります。
 
-Launch the emulator image, then choose __Settings__ from the home screen:
+エミュレータ画面を起動させ、ホーム画面から __設定__ を選択します。
 
 ![](img/guide/platforms/blackberry10/bb_home.png)
 
-Navigate to the __Security and Privacy &rarr; Development Mode__
-section and enable the option:
+__セキュリティとプライバシー &rarr; 開発モード__ を選択して、該当オプションを有効化します。
 
 ![](img/guide/platforms/blackberry10/bb_devel.png)
 
-Then, run the `emulate` command to view the app:
+次に、 `emulate` コマンドを使用して、アプリを表示します。
 
     $ cordova emulate blackberry10 --devicepass <password>
 
 ## デバイスへの展開
 
-To deploy to a device, make sure it is plugged into your computer and
-development mode is enabled.
+デバイスへの展開を行う場合、コンピュータとデバイスが接続され、開発モードが有効になっているか確認してください。
 
-Then, run the `run` command to view the app:
+次に、 `run` コマンドを使用して、アプリを表示します。
 
     $ cordova run blackberry10 --devicepass <password>
 
-If a debug token is not yet set up for the device, an error message
-prompts you to provide the password you defined when configuring your
-computer to sign applications.
+デバッグトークン ( debug token ) を、デバイスに設定していない場合、エラーメッセージが表示されますので、そのときは、アプリの署名時に使用したパスワードを入力してください。
 
     $ cordova run blackberry10 --devicepass <password> --keystorepass <signing password>
 
-## WebInspector を使用したデバッグ
+## Web インスペクタ ( Inspector ) を使用したデバッグ
 
-When debugging on the device or an emulator, you may run WebInspector
-remotely to view the application's internal state.  A prompt displays
-the URL that allows you to connect to your app with a standard web
-browser.  For more information, see
-[Debugging using WebInspector](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html).
+デバイスまたはエミュレータ上でデバッグを行うとき、Web インスペクタ をリモートで実行して、アプリの状態を確認することもできます。画面に表示された URL を使用して、標準 Web ブラウザからアプリへ接続することができます。詳細に関しては、 [Web インスペクタを使用したデバッグ](http://developer.blackberry.com/html5/documentation/web_inspector_overview_1553586_11.html) をご確認ください。
 
 ## リリースバージョンのビルド
 
-By default, running the `cordova build` command creates an unsigned
-_.bar_ package file suitable for testing on a device or simulator.
+デフォルトでは、 `cordova build` コマンドを実行して、署名なしの _.bar_ パッケージファイルを作成します。こちらのファイルは、デバイスまたはシミュレータ上でのテスト用に使用します。
 
-Use `--release` to create a release version suitable for distribution
-through BlackBerry World.
+`--release` オプションを使用して、リリース版を作成します。こちらは、BlackBerry World 上での配布用に使用できます。
 
     $ cordova build --release --keystorepass <signing password>
 
-The `--keystorepass` option specifies the password you defined when
-configuring your computer to sign applications.
+`--keystorepass` オプションを使用して、アプリの署名時に設定したパスワードを指定します。
 
+## 上述の場所以外への展開
 
-## 別の場所への展開
+上述の手順では、USB 経由でデバイスを接続する場合、または、ローカルのマシーン上でシミュレータを実行する場合を想定していました。
+それ以外の場合でも、アプリの展開を行うことができます。
 
-The instructions above assume a device is plugged in via USB or a
-simulator is running on the local machine. It is also possible to
-deploy to other locations.
+BlackBerry 10 プラットフォームを設定したときにインストールしたコマンドライン ユーティリティには、追加のコマンドが用意されています。_emu_ と名称設定した Target ( 展開先のデバイス ) と その IP アドレスを使用して、以下のコマンドを実行します ( ここでは、プロジェクトのトップディレクトリから実行します )。
 
-An additional set of command-line utilities are included when you set
-up the BlackBerry 10 platform for your project.  The following
-command, in this case invoked from the project top-level directory,
-associates a target named _emu_ with an IP address.
-
-* On Windows:
+* Windows の場合 :
 
     $ platforms\blackberry10\cordova\target.bat add emu 192.168.2.24 -t simulator
 
-* On Mac/Linux:
+* Mac/Linux の場合 :
 
     $ platforms/blackberry10/cordova/target add emu 192.168.2.24 -t simulator
 
-Once the target is defined, you can provide it to the run command using
-`--target`:
+Target を定義している場合、 `--target` オプションを使用して、run コマンドに追加できます。
 
     $ cordova run blackberry10 --target=emu
