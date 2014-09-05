@@ -25,6 +25,9 @@ gem install bundler
 # install nokogiri dependencies
 apt-get install -y libxslt-dev libxml2-dev
 
+# additonal tools to build new versions
+apt-get install -y rake
+
 # setup project
 cd /vagrant
 bundle install
