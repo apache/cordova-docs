@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 You may obtain a copy of the License at
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## CLI でスプラッシュ スクリーンを構成します。
 
-多くのプラットフォームで、アプリの導入のスプラッシュ画面の表示を有効にするには、Splashscreen API を使用します。 作業する場合、CLI で、スプラッシュ スクリーンのソース ファイル内にあるプロジェクトの `www/res/screens` サブディレクトリ。
+最上位 `config.xml` ファイル （ものではない `platforms` ）、ここで指定したそれらのような構成要素を追加します。
 
-Android は両方の肖像画および横向きスプラッシュ画面画像の低、中、高、および超高解像度を指定します。
+# 構成の例
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+"Src"属性の値は、プロジェクト ディレクトリからの相対ではなく、www ディレクトリに注意してください。 どのようにソース イメージ名前ことができます。 アプリの内部名はコルドバによって決定されます。
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-IOS プラットフォームの網膜ディスプレイの向きが異なる亜種の iPhone/iPod と iPad のバリエーションを指定します。*568 h*ファイルは iPhone 5 の背の高い画面に適用されます。
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone では、単一のスプラッシュ画面のイメージを指定します。
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-次のセクションでは、プラットフォームのガイドで説明されている Sdk と関連するコマンド ライン ツールの操作時のスプラッシュ画面を設定する方法について詳しく説明します。
-
-使用する前に、SplashScreen プラグインをインストールすることを忘れないでください、 `navigator.splashscreen.hide()` または `navigator.splashscreen.show()` のメソッド。
-
-## Android プラットフォーム用のスプラッシュ画面
-
-Android プロジェクトで[9 patch 画像][1]ファイルを置きます `platforms/android/res/drawable*` ディレクトリ。
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-それぞれのサイズべきであります。
-
-*   エクストララージ (xhdpi): 少なくとも 960 × 720
-*   大 (hdpi): 少なくとも 640 × 480
-*   媒体 (開度計): 少なくとも 470 × 320
-*   小 (ldpi): 少なくとも 426 × 320
-
-既定のスプラッシュ スクリーン イメージ、コルドバでサンプル アプリ既にあるべきで提供される新しい Android プロジェクトを作成するとき、 `platforms/android/res/drawable*` ディレクトリ。 あなた自身のイメージでこれらを置き換えるお気軽に。 提供する場合、独自のスプラッシュ画面のイメージ、コルドバ既定ものここに 8 の同じ順列を提供する必要はありません。 もっとまたはより少なく最適化を使用することができます。 `drawable`[画面サイズ][2]と[代替のリソース][3]をサポート Android 規則に従ってディレクトリ名前をする必要があります.
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-最上位 `config.xml` ファイル （ものではない `platforms` )、次の環境設定を追加：
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-最初の行ではスプラッシュ画面として表示するイメージを設定します。 これで png 形式のファイル名は、 `drawable*` ディレクトリ、マイナス、 `.png` 拡張機能。 スプラッシュ スクリーンの既定値は `screen` (ファイルの `platforms/android/res/drawable*/screen.png` ) 任意の名前をイメージよりも、他のであれば、 `screen.png` で、 `drawable*` ディレクトリ、この行を追加/修正する必要があります。
+# サポートされているプラットフォーム
 
-2 番目の行 (ミリ秒単位) が表示されますどのように長いスプラッシュ ・ スクリーンのデフォルトの遅延を設定します。これは最悪の予想開始時刻する必要があります。SplashScreenDelay の既定値は 3000 ミリ秒です。
+今の時点で （コルドバ 3.5.0 2014 年 7 月)、次のプラットフォームのスプラッシュ スクリーンをサポートします。
 
-最後に、ベスト プラクティスとして、スプラッシュ画面が表示されますのみ必要な限り。 アプリが開始、webview が読み込まれたとき、アプリはメイン ビューを表示できるように準備ができているとすぐにスプラッシュ画面を隠す必要があります。 アプリ開始時刻が異なるためかなり CPU 速度、およびネットワークなどの要因の数のため、アプリを明示的に呼び出すことをお勧め `navigator.splashscreen.hide()` 応答する JavaScript のメソッドで、 `deviceready` イベント。 それ以外の場合、スプラッシュ スクリーンが表示されます、上記構成の SplashScreenDelay 値を必要以上に長い可能性があります。 このイベント駆動型のアプローチは、常に一定の時間に表示されるスプラッシュ画面を持つ対強くお勧めします。
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## IOS プラットフォーム用のスプラッシュ画面
+# Splashscreen プラグイン
 
-IOS プロジェクトにスプラッシュ画面画像をコピー `Resources/splash` ディレクトリ。 IPad や iPhone などをサポートするデバイスのためのこれらの画像を追加のみです。 各イメージのサイズをする必要があります。
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048 x 1496 ピクセル)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## BlackBerry 10 プラットフォーム用のスプラッシュ画面
-
-各解像度とサポートしたいロケールの config.xml にリム： スプラッシュ要素を追加します。
-
-[http://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache コルドバはプログラムで表示し、アプリケーション起動 https://github.com/apache/cordova-plugin-splashscreen 中にスプラッシュ スクリーンを非表示するために使用できる特別なスプラッシュ画面のプラグインを提供しています

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
+Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. Finden Sie verteilte mit dieser Arbeit für weitere Informationen bezüglich Urheberrecht und Datenschutz-Datei. Die ASF-Lizenzen-diese Datei, um Sie unter der Apache License, Version 2.0 (die "Lizenz"); Sie können diese Datei nur in Übereinstimmung mit der Lizenz. Sie können eine Kopie der Lizenz zu erhalten.
 
            http://www.Apache.org/licenses/LICENSE-2.0 sofern gesetzlich erforderlich oder schriftlich vereinbart, ist die Software unter der Lizenz verteilt auf einer "AS IS" BASIS, ohne Gewährleistungen oder Bedingungen irgendwelcher Art, weder ausdrücklich noch stillschweigend.  Finden Sie die Lizenz für die jeweilige Sprache, EZB, Berechtigungen und Beschränkungen
     
@@ -35,4 +35,4 @@ Das [Microsoft Developer Network][1] bietet allgemeine Anweisungen zum Ausführe
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
 
-Nachdem Sie diese Schritte abgeschlossen haben, können Sie dann das Windows Phone SDK installieren. Finden Sie im Windows Phone Plattform für Details.
+Nachdem Sie diese Schritte abgeschlossen haben, können Sie dann das Windows Phone SDK installieren. Finden Sie im Windows Phone 8 Plattform für Details.

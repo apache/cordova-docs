@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   アンドロイド (Mac、Linux、Windows)
 *   ブラックベリー 10 (Mac、Linux、Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Windows (Windows)
 *   Firefox OS （Mac、Linux、Windows）
 
 Mac のコマンドラインです*ターミナル*アプリケーション経由で利用できます。PC 上だ*アクセサリー*の下で*コマンド プロンプト*として使用可能.
 
-**注**: Windows 専用プラットフォームをまだ Mac のハードウェア上で開発仮想マシン環境またはデュアル ブート モードで Windows を実行して行うことができます。 使用可能なオプションは、Windows Phone プラットフォーム ガイド 』 または 『 Windows 8 プラットフォーム ガイド 』 を参照してください。
+**注**: Windows 専用プラットフォームをまだ Mac のハードウェア上で開発仮想マシン環境またはデュアル ブート モードで Windows を実行して行うことができます。 使用可能なオプションは、Windows Phone 8 プラットフォーム ガイドまたは Windows プラットフォーム ガイドを参照してください。
 
 多くの可能性、CLI リモート ソース コード リポジトリでは、ローカルの作業ディレクトリにプルダウンその資産を維持するために理にかなってより多くの異なるマシンからに実行することです。
 
@@ -108,12 +108,7 @@ Mac のコマンドラインです*ターミナル*アプリケーション経�
 
 *Wp*は Windows Phone オペレーティング システムの異なるバージョンを参照 Windows マシンからこれらのいずれかを実行します。
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        $ コルドバ プラットフォーム追加 wp8 $ コルドバ プラットフォーム追加 $ コルドバ プラットフォームは、追加の windows アマゾン fireos $ コルドバ プラットフォーム追加 android の $ コルドバ プラットフォームは blackberry10 $、追加コルドバ プラットフォーム firefoxos を追加
     
 
 現在のプラットフォームのセットを確認するこれを実行します。

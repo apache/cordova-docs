@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF лицензии этот файл вам под Apache License, версия 2.0 ("Лицензия"); Вы не можете использовать этот файл за исключением в соответствии с лицензией. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF лицензии этот файл вам под Apache License, версия 2.0 ("Лицензия"); Вы не можете использовать этот файл за исключением в соответствии с лицензией. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Обновление Windows Phone
+# Обновление Windows Phone 8
 
 В этом руководстве показано, как изменить Windows Phone 8 проектов, для обновления старых версий Кордова. Некоторые из этих инструкций применяются для проектов, созданных с старого набора средств командной строки, которые предшествуют `cordova` утилиты CLI. Увидеть интерфейс командной строки для получения информации как обновить версию инфраструктуры CLI. В следующем разделе показано, как перейти от проектов-CLI.
 

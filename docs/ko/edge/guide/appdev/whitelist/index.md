@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -67,7 +67,41 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 **참고**: 안 드 로이드 2.3에와 도메인 허용에만 작동 하기 전에 `href` 하이퍼링크, 이미지 및 스크립트와 같은 리소스를 참조 하지. 스크립트에서 응용 프로그램에 삽입 되지 않도록 하는 조치를 취할.
 
-통해 비 허용 도메인 탐색 `href` 하이퍼링크 기본 브라우저가 아닌 응용 프로그램 내에서 열려면 페이지 원인. (아래에 언급 된 iOS의 행동에이 비교.)
+**참고**: 외부 Url을과 같은 방지 하기 위하여 `mailto:` 코르도바 3.6.0, 현재 코르도바 webview에서 열리지 못하게 지정 `origin="*"` 암시적 http 및 https 프로토콜에 대 한 규칙을 추가 합니다. 추가 사용자 지정 프로토콜에 액세스 해야 하는 경우 추가 해야 합니다 또한 그들 명시적으로 화이트 리스트에 있습니다. 또한 url이 외부 응용 프로그램 실행에 대 한 자세한 내용은 아래 "외부 응용 프로그램 허용" 참조.
+
+**참고**: 일부 네트워크 요청 코르도바 Whitelist를 통해 이동 하지 마십시오. 이것은 포함 한다 <video> 그리고 <audio> 리소스, WebSocket 연결 (안 드 로이드 4.4 +), 그리고 다른 비 http 요청. 안 드 로이드 4.4 +에 포함할 수 있는 [CSP][8] 리소스에 대 한 액세스를 제한 하 여 HTML 문서에 헤더입니다. 안 드 로이드의 이전 버전에서 그들을 제한 하는 것이 가능 하지 않을 수 있습니다.
+
+ [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+
+### 외부 응용 프로그램 허용
+
+코르 도우 바 3.6.0 소개 두 번째 목록, 제한에 대 한 Url은 외부 응용 프로그램을 실행할 수 있는. 코르도바, 모든 비 http Url의 이전 버전에서와 같은 `mailto:` , `geo:` , `sms:` 및 `intent` , 암시적으로의 표적이 될 수 있었습니다 한는 <a>태그.</a> 누출 정보를 응용 프로그램에 대 한 가능성 때문에 XSS 취약점 허용 공격자가 임의의 링크를 생성 하는 경우이 Url 이어야 허용 뿐만 아니라, 코르도바 3.6.0에서에서 시작.
+
+외부 응용 프로그램을 시작 하는 URL 패턴을 허용 하려면 사용을 <access> 태그에 대 한 당신의 `config.xml` 파일와 `launch-external` 특성 세트.
+
+예:
+
+*   링크 SMS 메시지를 보낼 수 있도록:
+    
+    <access origin="sms:*" launch-external="yes" />
+
+*   지도 열고 링크를 허용:
+    
+    <access origin="geo:*" launch-external="yes" />
+
+*   외부 브라우저에서 열려면 example.com에 대 한 링크를 허용:
+    
+    <access origin="http://example.com/*" launch-external="yes" />
+
+*   외부 브라우저에서 열려면 모든 비 허용 된 웹 사이트 수를: (이것은 비 허용 된 Url에 대 한 이전 행동와 동일)
+    
+    <access origin="http://*" launch-external="yes" /> <access origin="https://*" launch-external="yes" />
+
+*   코르 도우 바 3.5.0 정책 (권장 하지 않음)을 모든 Url에 액세스할 수 있도록:
+    
+    <access origin="*" launch-external="yes" />
+
+내경 허용 먼저 테스트 하 고 응용 프로그램 내에서 URL을 탐색할 때 고 URL 허용 거기 없는 경우에, 외부 목록 테스트 됩니다. 즉 어떤 `http:` 또는 `https:` 두 주소록이 일치 하는 Url 보다는 외부 브라우저 시작 코르도바 응용 프로그램 안으로 열릴 것 이다.
 
 ## iOS 수단이
 
@@ -77,7 +111,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 더 유연 합니다. 예를 들어, 다음 액세스 모든 하위 도메인과 최상위 도메인 같은 `.com` 및 `.net` :
 
-        <access origin="*.google.*" />
+        < 원본 액세스 = "*.google. *" / >
     
 
 안 드 로이드 플랫폼 위에서 언급을 통해 비 허용 도메인 탐색 달리 `href` iOS에서 하이퍼링크 모든 열에서 페이지 방지.
@@ -90,26 +124,26 @@ IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 
 
 *   콘텐츠 액세스 `XMLHttpRequest` 명시적으로 선언 해야 합니다. 설정 `origin="*"` 이 경우 작동 하지 않습니다. 양자 택일로, 모든 웹 보안 비활성화 될 수 있습니다 사용 하는 `WebSecurity` 블랙베리 구성에서 설명 하는 기본 설정:
     
-        <preference name="websecurity" value="disable" />
+        < 선호 이름 = "websecurity" 값 = "사용 안 함" / >
         
 
 *   설정 하는 대신 `*.domain` , 설정 추가로 `subdomains` 속성을 `true` . 로 설정 해야 `false` 기본적으로. 다음에 액세스할 수 있습니다 예를 들어 `google.com` , `maps.google.com` , 및 `docs.google.com` :
     
-        <access origin="http://google.com" subdomains="true" />
+        < 출처에 액세스 "http://google.com" 하위 도메인 = = "true" / >
         
     
     다음 우 스 액세스를 `google.com` :
     
-        <access origin="http://google.com" subdomains="false" />
+        < 출처에 액세스 "http://google.com" 하위 도메인 = = "false" / >
         
     
     지역을 포함 하 여 모든 도메인에 대 한 액세스 지정 `file://` 프로토콜:
     
     <access origin="*" subdomains="true" />
 
-(대 한 자세한 내용은 지원, 블랙베리의 설명서를 참조 하십시오 [액세스 요소][8] 에.)
+(자세한 내용은 지원 설명서를 참조 하십시오 블랙베리의 [액세스 요소][9] 에.)
 
- [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+ [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
 ## 3.1.0 iOS 변화
 
@@ -129,6 +163,6 @@ IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 
 
 ## Tizen 화이트
 
-애플 리 케이 션의에서 발견 되는 허용 된 규칙 `config.xml` 파일. 같은 플랫폼 의존 `subdomains` 블랙베리 플랫폼으로 특성. (대 한 자세한 내용은 지원, Tizen의 설명서를 참조 하십시오 [액세스 요소][9] 에.)
+애플 리 케이 션의에서 발견 되는 허용 된 규칙 `config.xml` 파일. 같은 플랫폼 의존 `subdomains` 블랙베리 플랫폼으로 특성. (에 대 한 자세한 내용은 지원, Tizen의 설명서 참조 [액세스 요소][10] 에.)
 
- [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
+ [10]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

@@ -89,6 +89,10 @@
     
     > 장치를 진동 하는 API.
 
+*   [상태 표시줄][20]
+    
+    > 표시, 숨기기 및 상태 표시줄 배경을 구성 하는 API.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 이러한 플러그인 워드 프로세서의 비 영어 번역 코르도바 설명서의 이전 버전을 보고 하 여 찾을 수 있습니다. 매우 상단 오른쪽에이 사이트의 드롭 다운 메뉴를 사용 하 여 버전을 전환할.

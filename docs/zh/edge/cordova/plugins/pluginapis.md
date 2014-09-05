@@ -89,6 +89,10 @@
     
     > 振動設備的 API。
 
+*   [顯示狀態列][20]
+    
+    > 顯示、 隱藏和配置狀況欄背景的 API。
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 這些外掛程式文檔非英語翻譯可以發現通過看的科爾多瓦文檔的舊版本。使用非常右上角的這個網站在下拉式功能表切換版本。

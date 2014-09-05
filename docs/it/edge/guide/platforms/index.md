@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,15 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 
 *   Piattaforma ubuntu guida
 
-## Windows Phone
+## Windows Phone 8
 
-*   Guida di piattaforma Windows Phone
-*   Windows Phone Plugins
-*   L'aggiornamento di Windows Phone
+*   Guida di Windows Phone 8 piattaforma
+*   Windows Phone 8 plugin
+*   L'aggiornamento di Windows Phone 8
 
-## Windows 8
+## Windows
 
-*   Windows 8 piattaforma guida
+*   Guida alla piattaforma Windows
 *   L'aggiornamento di Windows 8
 
 ## Tizen

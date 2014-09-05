@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 You may obtain a copy of the License at
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# 升級 Windows Phone
+# 升級 Windows Phone 8
 
 本指南演示如何修改 Windows Phone 8 專案，從科爾多瓦的舊版本進行升級。 這些指令的一些適用于創建與前面的命令列工具舊套的專案 `cordova` CLI 實用程式。 資訊，請參閱命令列介面如何更新的 CLI 版本。 以下部分顯示了如何從非 CLI 專案升級。
 

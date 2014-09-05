@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -50,11 +50,11 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       </th>
       
       <th>
-        <tt>WP8</tt> (Windows<br />Teléfono 8)
+        <tt>WP8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>win8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Teléfono 8.1)
       </th>
       
       <th>
@@ -219,6 +219,39 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">HomeScreen PlusPlus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Cámara</a>
         </th>
         
@@ -276,7 +309,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -376,7 +409,8 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          parcialmente
         </td>
         
         <td data-col="tizen"       class="n">
@@ -484,6 +518,42 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Transferencia de archivos</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * No apoyan onprogress ni abortar
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * No apoyan onprogress ni abortar
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * No apoyan onprogress ni abortar
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocalización</a>
         </th>
         
@@ -526,7 +596,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -713,6 +783,39 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibración</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -50,11 +50,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       </th>
       
       <th>
-        <tt>WP8</tt> (Windows<br />Телефон 8)
+        <tt>WP8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>Win8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Телефон 8.1)
       </th>
       
       <th>
@@ -219,7 +219,40 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Камера</a>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Камеры</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -252,7 +285,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Съемка</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Захват</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -276,7 +309,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -301,7 +334,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </td>
         
         <td data-col="ios"        class="y">
-          (3GS+)
+          (3GS +)
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -376,7 +409,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          частично
         </td>
         
         <td data-col="tizen"       class="n">
@@ -484,6 +518,42 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Передача файлов</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * Не поддерживает onprogress не прервать
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * Не поддерживает onprogress не прервать
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * Не поддерживает onprogress не прервать
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Геолокация</a>
         </th>
         
@@ -526,7 +596,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -584,7 +654,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Аудио и видео</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Средства массовой информации</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -650,7 +720,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Заставка</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Экран-заставка</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -683,7 +753,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Хранилище</a>
+          <a href="cordova_storage_storage.md.html">Хранения</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -713,6 +783,39 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Вибрация</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

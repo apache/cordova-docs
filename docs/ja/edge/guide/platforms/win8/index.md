@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,13 +13,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows 8 プラットフォーム ガイド
+# Windows プラットフォームのガイド
 
-このガイドは、Windows 8 の Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 Windows 8 に固有のどちらかのシェルのツールを使用して生成し、アプリケーションを構築する方法を示します。 またはクロス プラットフォーム コルドバ CLI コマンド ライン インターフェイスでの議論。 （これらの開発オプション比較の概要」を参照）。また、Visual Studio 内で Cordova アプリを変更する方法についても説明します。 どちらの作成方法に関係なく下記のような Visual Studio SDK をインストールする必要はあります。
+このガイドは、SDK の開発環境構築および Windows 8、Windows 8.1 および Windows Phone 8.1 Cordova アプリを展開するを設定する方法を示します。ツールを使用してどちらかシェルを生成し、アプリケーションを構築する方法を示しています。 またはクロス プラットフォーム コルドバ CLI コマンド ライン インターフェイスでの議論。 （これらの開発オプション比較の概要」を参照）。また、Visual Studio 内で Cordova アプリを変更する方法についても説明します。 どちらの作成方法に関係なく下記のような Visual Studio SDK をインストールする必要はあります。
 
 既存の Windows 8 コルドバ プロジェクトをアップグレードする方法の詳細については、Windows 8 のアップグレードを参照してください。
 
-コルドバ web 表示 Windows 8 を実行しているインターネット エクスプ ローラー 10 として頼る、レンダリング エンジンは、実際の問題としてコルドバ Api の呼び出しは、web コンテンツをテストする IE10 の強力なデバッガーを使用できるように。 Windows Phone 開発者ブログは対等な WebKit ブラウザーと一緒に IE10 をサポートする方法について[有用なガイダンス][1]を提供します。
+別のプラットフォームとしてのウィンドウ携帯電話 8 (wp8） 滞在詳細については Windows Phone 8 プラットフォーム ガイド参照してください。
+
+コルドバ web 表示の Windows で実行されているインターネット エクスプ ローラー 10 (Windows 8) と依存インターネット エクスプ ローラー 11 (Windows 8.1 および Windows Phone 8.1) そのレンダリング エンジンとして、実際の問題としてコルドバ Api の呼び出しは、web コンテンツをテストする IE の強力なデバッガーを使用できるようにします。 Windows Phone 開発者ブログ サポート IE と同等の WebKit ブラウザーと一緒にする方法の[有益なガイダンス][1]を提供します。
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
@@ -27,11 +29,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 次の OS/SDK の組み合わせ、インストール ディスクまたは*ISO*ディスク イメージ ファイルからのいずれか必要があります。
 
+のみ Windows 8.0 用アプリの開発：
+
 *   8.0 もしくは 8.1 Windows、32 ビットまたは 64 ビット*ホーム*、 *Pro*、または*エンタープライズ*エディションでは、 [Visual Studio 2012 Express][2]と共に.
 
-*   Windows 8.1、32 または 64 ビット*ホーム*、 *Pro*、または*エンタープライズ*エディションでは、 [Visual Studio 2013 Pro][2]と共にまたはより高い。 Windows 8.1 エンタープライズの評価版は[マイクロソフトの開発者ネットワーク][3]から利用可能.
-
  [2]: http://www.visualstudio.com/downloads
+
+すべてのプラットフォーム (Windows 8.0、8.1 Windows と Windows Phone 8.1) アプリの開発：
+
+*   Windows 8.1、32 ビットまたは 64 ビット*ホーム*、 *Pro*、または*エンタープライズ*エディションでは、 [Visual Studio 2013 Express][2]と共にまたはより高い。 Windows 8.1 エンタープライズの評価版は[マイクロソフトの開発者ネットワーク][3]から利用可能.
+
  [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
 
 Windows 8.1 でコンパイルしたアプリケーションは*いない*Windows 8.0 の下で実行します。Windows 8.0 でコンパイルしたアプリケーションは転送-互換性のある 8.1 で。
@@ -44,7 +51,7 @@ Windows ストアにアプリを提出する[windowsstore.com][4]に記載され
 
 <!-- true? -->
 
-Windows 8 向け Cordova アプリを開発する Windows を実行して PC を使用することがありますが、仮想マシン環境を実行して、またはを使用してブート キャンプをデュアル ブート Windows 8 パーティションも mac では、開発可能性があります。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
+Windows の Cordova アプリを開発する Windows を実行して PC を使用する可能性がありますが、仮想マシン環境を実行して、またはを使用してブート キャンプをデュアル ブート Windows 8.1 パーティションも mac では、開発可能性があります。 Mac で必要な Windows 開発環境を設定するこれらのリソースを参照してください。
 
 *   [VMWare 融解][5]
 
@@ -58,15 +65,15 @@ Windows 8 向け Cordova アプリを開発する Windows を実行して PC を
 
 ## コルドバのシェル ・ ツールを使用してください。
 
-SDK と一緒にコルドバの Windows 8 中心のシェル ・ ツールを使用する場合は、2 つの基本的なオプションがあります。
+SDK と一緒にコルドバの Windows 中心のシェル ・ ツールを使用する場合は、2 つの基本的なオプションがあります。
 
-*   CLI で生成されたプロジェクト コードからローカル アクセスします。 利用できる、 `platforms/windows8/cordova` ディレクトリを追加した後、 `windows8` プラットフォームは以下のとおりです。
+*   CLI で生成されたプロジェクト コードからローカル アクセスします。 利用できる、 `platforms/windows/cordova` ディレクトリを追加した後、 `windows` プラットフォームは以下のとおりです。
 
-*   [Cordova.apache.org][8]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `cordova-windows8\windows8` この場合、空のディレクトリ内。 関連するバッチ ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
+*   [Cordova.apache.org][8]で別のディストリビューションからそれらをダウンロードします。 コルドバ分布にはプラットフォームごとに別々 のアーカイブが含まれています。 適切なアーカイブを展開してください `cordova-windows\windows` この場合、空のディレクトリ内。 関連するバッチ ユーティリティは、トップレベルで利用可能な `bin` ディレクトリ。 (より詳細な指示が必要な場合は、 **README**ファイルを参照して)。
 
  [8]: http://cordova.apache.org
 
-これらのシェルのツールを作成、構築、および Windows 8 アプリを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。
+これらのシェルのツールを作成、構築、および Windows アプリケーションを実行することができます。 すべてのプラットフォームのプラグイン機能を有効にする追加のコマンド ライン インターフェイスについては、管理プラグインを使用して Plugman を参照してください。
 
 ## SDK をインストールします。
 
@@ -78,17 +85,17 @@ SDK と一緒にコルドバの Windows 8 中心のシェル ・ ツールを使
 
 ## 新しいプロジェクトを作成します。
 
-この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは Windows 8 固有のシェルのツールのセットで説明するクロス プラットフォーム CLI ツールの間に選択できます。 ソース コード ディレクトリ内でこの CLI 接近が生成する新しい内*HelloWorld*という名前のアプリ `hello` プロジェクト ディレクトリ。
+この時点で、新しいプロジェクトを作成する、コマンド ライン インターフェイスまたは特定の Windows シェル ツールのセットで説明するクロス プラットフォーム CLI ツールの間に選択できます。 ソース コード ディレクトリ内でこの CLI 接近が生成する新しい内*HelloWorld*という名前のアプリ `hello` プロジェクト ディレクトリ。
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
-        > cordova platform add windows8
+        > cordova platform add windows
         > cordova build
     
 
 ここでは、対応する下位レベル シェル ツール アプローチ：
 
-        C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+        C:\path\to\cordova-win\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
 ## プロジェクトをビルドします
@@ -96,10 +103,10 @@ SDK と一緒にコルドバの Windows 8 中心のシェル ・ ツールを使
 開発で CLI を使用している場合は、プロジェクト ディレクトリの最上位 `www` ディレクトリにソース ファイルが含まれています。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
 
         > cordova build
-        > cordova build windows8   # do not rebuild other platforms
+        > cordova build windows   # do not rebuild other platforms
     
 
-開発で Windows Phone 固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリケーションのソースは、 `projects\windows8\www` サブディレクトリ。 以降のコマンドは、 `cordova` 、同じレベルのサブディレクトリ。
+プロジェクトを生成した後、既定のアプリケーションのソースは、 `projects\windows\www` サブディレクトリ。 以降のコマンドは、 `cordova` 、同じレベルのサブディレクトリ。
 
 `build`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。最初の例では、デバッグ情報を生成して、2 番目のリリースのアプリに署名します。
 
@@ -110,6 +117,29 @@ SDK と一緒にコルドバの Windows 8 中心のシェル ・ ツールを使
 `clean`コマンドは準備として、次のディレクトリを洗い流すのに役立ちます `build` :
 
         C:\path\to\project\cordova\clean.bat
+    
+
+## 対象の Windows のバージョンを構成します。
+
+既定では `build` コマンドには 2 つのパッケージが生成されます: Windows 8.0 と Windows Phone 8.1。Windows パッケージ バージョン 8.1 にアップグレードするには、次の構成設定構成ファイル （に追加します。`config.xml`).
+
+        <preference name='windows-target-version' value='8.1' />
+    
+
+この設定を追加する `build` コマンドは、Windows の 8.1 および Windows Phone 8.1 のパッケージの生産を開始します。
+
+## アプリを展開します。
+
+パッケージを展開する Windows Phone:
+
+        > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
+        > cordova run windows --device -- --phone  # deploy app to connected device
+    
+
+パッケージを展開する Windows:
+
+        > cordova run windows -- --win  # explicitly specify Windows as deployment target
+        > cordova run windows # `run` uses Windows package by default
     
 
 ## SDK でプロジェクトを開き、アプリを展開します。

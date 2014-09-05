@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. ASF 라이센스 아파치 라이센스 버전 2.0 ("라이센스");이 파일 당신이 라이선스 준수를 제외 하 고이 파일을 사용할 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows Phone 업그레이드
+# Windows Phone 8 업그레이드
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이드 하려면 Windows Phone 8 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 지침 중 일부 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. 내용은 참조 하십시오 명령줄 인터페이스 CLI의 버전을 업데이트 하는 방법. 다음 섹션에서는 비 CLI 프로젝트에서 업그레이드 하는 방법을 보여 줍니다.
 

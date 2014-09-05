@@ -89,6 +89,10 @@ Der traditionelle Kern Cordova Plugins sind wie folgt:
     
     > Eine API, das Gerät zu vibrieren.
 
+*   [StatusBar][20]
+    
+    > Eine API zum Anzeigen, ausblenden und Konfigurieren der Status Bar Hintergrund.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@ Der traditionelle Kern Cordova Plugins sind wie folgt:
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Nicht-englische Übersetzungen über diese Plugin-Docs finden Sie indem Sie sich ältere Versionen von Cordova-Dokumentation. Verwenden Sie das Drop-Down-Menü auf die ganz oben rechts auf dieser Seite, um Versionen wechseln.

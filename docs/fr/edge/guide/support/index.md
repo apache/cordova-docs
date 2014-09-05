@@ -43,11 +43,11 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       </th>
       
       <th>
-        <tt>wp8</tt> (Windows<br />Téléphone 8)
+        <tt>wp8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>WIN8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Téléphone 8.1)
       </th>
       
       <th>
@@ -212,6 +212,39 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Appareil photo</a>
         </th>
         
@@ -269,7 +302,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -369,7 +402,8 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          partiellement
         </td>
         
         <td data-col="tizen"       class="n">
@@ -477,6 +511,42 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Transfert de fichiers</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * Ne pas soutenir onprogress ni abandonner.
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * Ne pas soutenir onprogress ni abandonner.
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * Ne pas soutenir onprogress ni abandonner.
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Géolocalisation</a>
         </th>
         
@@ -519,7 +589,7 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -706,6 +776,39 @@ Vous trouverez ci-dessous l'ensemble des outils de développement et dispositif 
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibration</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

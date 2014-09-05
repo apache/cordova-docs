@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,25 +13,32 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows 8 piattaforma guida
+# Guida alla piattaforma Windows
 
-Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire applicazioni di Cordova in Windows 8. Viene illustrato come utilizzare strumenti specifici di Windows 8 shell per generare e compilare applicazioni o piattaforme Cordova CLI discusso in l'interfaccia della riga di comando. (Vedi la panoramica per un confronto di queste opzioni di sviluppo). In questa sezione viene illustrato anche come modificare Cordova apps all'interno di Visual Studio. Indipendentemente da quale approccio si prende, è necessario installare Visual Studio SDK, come descritto di seguito.
+Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per creare e distribuire applicazioni Cordova per Windows 8, Windows 8.1 e 8.1 di Windows Phone. Viene illustrato come utilizzare strumenti shell per generare e compilare applicazioni o piattaforme Cordova CLI discusso in l'interfaccia della riga di comando. (Vedi la panoramica per un confronto di queste opzioni di sviluppo). In questa sezione viene illustrato anche come modificare Cordova apps all'interno di Visual Studio. Indipendentemente da quale approccio si prende, è necessario installare Visual Studio SDK, come descritto di seguito.
 
 Per informazioni su come aggiornare progetti esistenti di Windows 8 Cordova, vedere l'aggiornamento di Windows 8.
 
-Cordova WebViews in esecuzione su Windows 8 si basano su Internet Explorer 10 come loro motore di rendering, quindi in pratica è possibile utilizzare il debugger potente di IE10 per testare qualsiasi contenuto web che non richiama Cordova APIs. Il Blog di Windows Phone Developer fornisce [indicazioni utili][1] su come sostenere IE10 insieme paragonabile browser WebKit.
+Finestra telefono 8 (wp8) soggiorni come una piattaforma separata, per dettagli, vedere Guida piattaforma Windows Phone 8.
+
+Cordova WebViews in esecuzione su Windows si basano su Internet Explorer 10 (Windows 8) e Internet Explorer 11 (8.1 di Windows e Windows Phone 8.1) come loro motore di rendering, quindi in pratica è possibile utilizzare il debugger potente di IE per testare qualsiasi contenuto web che non richiama Cordova APIs. Il Windows Phone Developer Blog fornisce [consigli utili][1] su come supporto IE insieme paragonabile browser WebKit.
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
 ## Requisiti e supporto
 
-Hai bisogno di una delle seguenti combinazioni di OS/SDK, da un disco di installazione o da un file di immagine disco *ISO* :
+Hai bisogno di una delle seguenti combinazioni di OS/SDK, da un disco di installazione o da un file di immagine disco *ISO* .
+
+Per sviluppare applicazioni per Windows 8.0 solo:
 
 *   Windows 8.0 o 8.1, 32 o 64 bit *Home*, *Pro*o *Enterprise* edizioni, insieme a [Visual Studio Express 2012][2].
 
-*   8.1 di Windows, 32 o 64 bit *Home*, *Pro*o *Enterprise* edizioni, insieme a [Visual Studio 2013 Pro][2] o superiore. Una versione di valutazione di Windows 8.1 Enterprise è disponibile in [Microsoft Developer Network][3].
-
  [2]: http://www.visualstudio.com/downloads
+
+Sviluppare applicazioni per tutte le piattaforme (Windows 8.0, 8.1 di Windows e Windows Phone 8.1):
+
+*   8.1 di Windows, 32 o 64 bit *Home*, *Pro*o *Enterprise* edizioni, insieme a [Visual Studio Express 2013][2] o superiore. Una versione di valutazione di Windows 8.1 Enterprise è disponibile in [Microsoft Developer Network][3].
+
  [3]: http://msdn.microsoft.com/en-US/evalcenter/jj554510
 
 Fare applicazioni compilate sotto Windows 8.1 *non* eseguire sotto Windows 8.0. Le applicazioni compilate sotto Windows 8.0 sono compatibili con con 8.1.
@@ -44,7 +51,7 @@ Seguire le istruzioni a [windowsstore.com][4] presentare all'app di Windows Stor
 
 <!-- true? -->
 
-Per sviluppare applicazioni di Cordova per Windows 8, si può utilizzare un PC con Windows, ma può anche sviluppare su un Mac, eseguendo un ambiente di macchina virtuale o tramite Boot Camp per la partizione di dual-boot un Windows 8. Consultare queste risorse per impostare l'ambiente di sviluppo richiesto Windows su un Mac:
+Per sviluppare applicazioni di Cordova per Windows, si può utilizzare un PC con Windows, ma può anche sviluppare su un Mac, eseguendo un ambiente di macchina virtuale o tramite Boot Camp per la partizione di dual-boot un 8.1 di Windows. Consultare queste risorse per impostare l'ambiente di sviluppo richiesto Windows su un Mac:
 
 *   [VMWare Fusion][5]
 
@@ -58,15 +65,15 @@ Per sviluppare applicazioni di Cordova per Windows 8, si può utilizzare un PC c
 
 ## Utilizzando strumenti di Cordova Shell
 
-Se si desidera utilizzare strumenti shell di Windows 8-centrata di Cordova in concomitanza con il SDK, hai due opzioni di base:
+Se si desidera utilizzare strumenti shell di Windows-centrata di Cordova in concomitanza con il SDK, hai due opzioni di base:
 
-*   Accedervi localmente dal progetto codice generato da CLI. Essi sono disponibili nelle `platforms/windows8/cordova` directory dopo aver aggiunto la `windows8` piattaforma come descritto di seguito.
+*   Accedervi localmente dal progetto codice generato da CLI. Essi sono disponibili nelle `platforms/windows/cordova` directory dopo aver aggiunto la `windows` piattaforma come descritto di seguito.
 
-*   Download da una distribuzione separata presso [cordova.apache.org][8]. La distribuzione di Cordova contiene archivi separati per ciascuna piattaforma. Assicurarsi di espandere l'archivio appropriato, `cordova-windows8\windows8` in questo caso, all'interno di una directory vuota. Il lotto rilevante utilità sono disponibili nel primo livello `bin` directory. (Se necessario per indicazioni più dettagliate, consultare il file **Leggimi** .)
+*   Download da una distribuzione separata presso [cordova.apache.org][8]. La distribuzione di Cordova contiene archivi separati per ciascuna piattaforma. Assicurarsi di espandere l'archivio appropriato, `cordova-windows\windows` in questo caso, all'interno di una directory vuota. Il lotto rilevante utilità sono disponibili nel primo livello `bin` directory. (Se necessario per indicazioni più dettagliate, consultare il file **Leggimi** .)
 
  [8]: http://cordova.apache.org
 
-Questi strumenti shell consentono di creare, compilare ed eseguire applicazioni Windows 8. Per informazioni sull'interfaccia della riga di comando aggiuntiva che attiva il plugin funzionalità su tutte le piattaforme, vedere utilizzando Plugman per gestire i plugin.
+Questi strumenti shell consentono di creare, compilare ed eseguire le applicazioni Windows. Per informazioni sull'interfaccia della riga di comando aggiuntiva che attiva il plugin funzionalità su tutte le piattaforme, vedere utilizzando Plugman per gestire i plugin.
 
 ## Installare il SDK
 
@@ -78,17 +85,17 @@ Installare la *Ultimate*, *Premium*o *Professional* 2013 edizioni di [Visual Stu
 
 ## Creare un nuovo progetto
 
-A questo punto, per creare un nuovo progetto può scegliere tra il multipiattaforma CLI strumento descritto in l'interfaccia della riga di comando, o il set di strumenti di Windows shell 8-specifica. All'interno di una directory del codice sorgente, questo approccio CLI genera un'app denominata *HelloWorld* all'interno di un nuovo `hello` directory di progetto:
+A questo punto, per creare un nuovo progetto può scegliere tra il multipiattaforma CLI strumento descritto in l'interfaccia della riga di comando, o il set di strumenti di shell di Windows specifici. All'interno di una directory del codice sorgente, questo approccio CLI genera un'app denominata *HelloWorld* all'interno di un nuovo `hello` directory di progetto:
 
         > cordova create hello com.example.hello HelloWorld
         > cd hello
-        > cordova platform add windows8
+        > cordova platform add windows
         > cordova build
     
 
 Qui è l'approccio di shell-strumento di basso livello corrispondente:
 
-        C:\path\to\cordova-win8\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
+        C:\path\to\cordova-win\bin\create.bat C:\path\to\new\hello com.example.hello HelloWorld
     
 
 ## Compilare il progetto
@@ -96,10 +103,10 @@ Qui è l'approccio di shell-strumento di basso livello corrispondente:
 Se si utilizza la CLI nello sviluppo, nella directory del progetto di primo livello `www` directory contiene i file di origine. Eseguire uno di questi all'interno della directory di progetto per ricostruire l'app:
 
         > cordova build
-        > cordova build windows8   # do not rebuild other platforms
+        > cordova build windows   # do not rebuild other platforms
     
 
-Se si utilizza i Windows Phone-shell strumenti specifici nello sviluppo, c'è un approccio diverso. Una volta che si genera il progetto, la sorgente dell'app predefinita è disponibile nella `projects\windows8\www` sottodirectory. Comandi successivi sono disponibili nelle `cordova` sottodirectory allo stesso livello.
+Una volta che si genera il progetto, la sorgente dell'app predefinita è disponibile nella `projects\windows\www` sottodirectory. Comandi successivi sono disponibili nelle `cordova` sottodirectory allo stesso livello.
 
 Il `build` comando pulisce i file di progetto e ricostruisce l'app. Il primo esempio genera informazioni di debug, e la seconda firma le apps per il rilascio:
 
@@ -110,6 +117,29 @@ Il `build` comando pulisce i file di progetto e ricostruisce l'app. Il primo ese
 Il `clean` comando aiuta a scovare le directory in preparazione per la prossima `build` :
 
         C:\path\to\project\cordova\clean.bat
+    
+
+## Configurare la versione di Windows di destinazione
+
+Per impostazione predefinita `build` comando produce due pacchetti: Windows 8.0 e 8.1 di Windows Phone. Per aggiornare il pacchetto di Windows alla versione 8.1 è necessario aggiungere la seguente impostazione di configurazione (file di configurazione`config.xml`).
+
+        <preference name='windows-target-version' value='8.1' />
+    
+
+Dopo aver aggiunto questa impostazione `build` comando inizierà a produrre pacchetti Windows 8.1 e 8.1 di Windows Phone.
+
+## Distribuire l'applicazione
+
+Per distribuire il pacchetto di Windows Phone:
+
+        > cordova run windows -- --phone  # deploy app to Windows Phone 8.1 emulator
+        > cordova run windows --device -- --phone  # deploy app to connected device
+    
+
+Per distribuire il pacchetto di Windows:
+
+        > cordova run windows -- --win  # explicitly specify Windows as deployment target
+        > cordova run windows # `run` uses Windows package by default
     
 
 ## Aprire il progetto in SDK e distribuire l'applicazione

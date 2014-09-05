@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Guía de la plataforma de Windows Phone
+# Guía de la plataforma de Windows Phone 8
 
 Esta guía le muestra cómo configurar el entorno de desarrollo SDK para desplegar aplicaciones Cordova para dispositivos Windows Phone. Aunque se centra en Windows Phone 8, proporciona información adicional sobre cómo soporte Windows Phone 7.
 
@@ -21,8 +21,8 @@ Muestra cómo utilizar herramientas shell Windows Phone específicas para genera
 
 Vea el siguiente para los detalles específicos a la plataforma de Windows Phone:
 
-*   Windows Phone Plugins
-*   Actualización de Windows Phone
+*   Windows Phone 8 Plugins
+*   Actualización de Windows Phone 8
 
 Para la plataforma Windows Phone 8, el Cordova WebView confía en Internet Explorer 10 como su motor de render, así como una cuestión práctica puede utilizar a potente depurador de IE10 para probar cualquier contenido web que no invoca Cordova APIs. El Blog de desarrolladores de Windows Phone proporciona una [guía útil][1] sobre cómo apoyar IE10 junto con navegadores WebKit comparables.
 

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ Per aggiungere il supporto o ricostruire un progetto per qualsiasi piattaforma, 
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
 Su Mac, la riga di comando è disponibile tramite l'applicazione *terminale* . Sul PC, è disponibile come *Prompt dei comandi* sotto *accessori*.
 
-**Nota**: per le piattaforme Windows-only, si può ancora fare vostro sviluppo hardware Mac eseguendo Windows in un ambiente di macchina virtuale o in modalità dual-boot. Per le opzioni disponibili, vedere la guida di piattaforma Windows Phone o la guida di piattaforma Windows 8.
+**Nota**: per le piattaforme Windows-only, si può ancora fare vostro sviluppo hardware Mac eseguendo Windows in un ambiente di macchina virtuale o in modalità dual-boot. Per le opzioni disponibili, vedere la guida di Windows Phone 8 piattaforma o la guida di piattaforma di Windows.
 
 Il più probabile è che si esegue CLI da macchine diverse, più ha senso mantenere un repository di codice sorgente remota, la cui attività si tira per le directory di lavoro locale.
 
@@ -108,12 +108,7 @@ Per poter compilare il progetto, è necessario specificare un insieme di piattaf
 
 Eseguire una qualsiasi di queste da una macchina Windows, dove *wp* si riferisce a diverse versioni del sistema operativo Windows Phone:
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        piattaforma di cordova $ aggiungere $ wp8 cordova piattaforma aggiungere windows piattaforma cordova $ aggiungere piattaforma di amazon-fireos $ cordova aggiungere $ android piattaforma cordova aggiungere $ blackberry10 cordova piattaforma aggiungere firefoxos
     
 
 Eseguire questo per controllare il set corrente di piattaforme:

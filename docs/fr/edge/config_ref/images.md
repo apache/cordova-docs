@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Voir le fichier des Remarques distribué avec ce travail d'information additionnel concernant les droits d'auteur. L'ASF vous licencis ce fichier sous licence Apache, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier qu'en conformité avec la licence. You may obtain a copy of the License at
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. Voir le fichier des Remarques distribué avec ce travail d'information additionnel concernant les droits d'auteur. L'ASF vous licencis ce fichier sous licence Apache, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier qu'en conformité avec la licence. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## Configuration du Splashscreen dans la CLI
 
-Utiliser l'API de Splashscreen pour permettre l'affichage de l'écran d'accueil introduction d'une app nombreuses plates-formes. Lorsque vous travaillez dans le CLI, les fichiers source écran d'éclaboussure sont situés au sein du projet `www/res/screens` sous-répertoire.
+Dans le premier niveau `config.xml` fichier (pas celui de `platforms` ), ajouter des éléments de configuration tels que celles spécifiées ici.
 
-Android spécifie les deux images d'écran splash-orientation portrait et paysage de faible, moyenne, haute et très haute résolution :
+# Exemple de configuration
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+Veuillez noter que la valeur de l'attribut « src » est relatif au répertoire de projet et de ne pas le répertoire www. Vous pouvez nommer l'image source, ce qui vous plait. Le nom interne de l'application sont déterminées par Cordova.
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-La plateforme iOS spécifie des variantes pour iPhone/iPod / iPad, avec des variantes pour les écrans de la rétine et des orientations différentes. Le fichier *568 h* s'applique à l'iPhone 5 écran plus grand :
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone spécifie une image d'écran de démarrage unique :
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-Les sections suivantes décrivent comment configurer les écrans de démarrage lors de l'utilisation des kits de développement logiciel et les outils de ligne de commande associés décrit dans les Guides de la plate-forme.
-
-N'oubliez pas d'installer le plugin de SplashScreen avant d'essayer d'utiliser les `navigator.splashscreen.hide()` ou `navigator.splashscreen.show()` méthodes.
-
-## Écrans de démarrage pour la plateforme Android
-
-Placez-y les fichiers [image 9-patch][1] du projet Android `platforms/android/res/drawable*` répertoires.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-La taille de chacun doit être :
-
-*   XLarge (xhdpi): au moins 960 × 720
-*   grand (hdpi): au moins 640 × 480
-*   moyen (mdpi): au moins 470 × 320
-*   petit (ldpi): au moins 426 × 320
-
-Lorsque vous créez un nouveau projet Android, l'écran de démarrage par défaut des images autant dans le Cordova, exemple d'application doit être déjà présente dans le `platforms/android/res/drawable*` répertoires. N'hésitez pas à remplacer par vos propres images. Lorsque votre propre splash fournissant des images à l'écran, il est inutile de fournir la même permutation de 8 par défaut Cordova plus ici. Plus ou moins l'optimisation peut être utilisée. Le `drawable` les noms de répertoire doivent respecter les conventions Android pour supporter des [tailles d'écran][2] et [autres ressources][3].
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-Dans le premier niveau `config.xml` fichier (pas celui de `platforms` ), ajouter les préférences suivantes :
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-La première ligne définit l'image à afficher comme écran de démarrage. C'est le nom de fichier de la png dans le `drawable*` annuaires, moins la `.png` extension. La valeur par défaut pour le SplashScreen est `screen` (pour le fichier `platforms/android/res/drawable*/screen.png` ), donc si vous nommez l'image quoi que ce soit autre que `screen.png` dans la `drawable*` répertoires, vous devez ajouter/modifier cette ligne.
+# Plates-formes prises en charge
 
-La deuxième ligne définit le délai par défaut de combien de temps le splashscreen apparaît en millisecondes. Cela devrait être l'heure de début prévue plus pessimistes. La valeur par défaut pour SplashScreenDelay est 3000 ms.
+A partir de maintenant (Cordova 3.5.0 juillet 2014) les plates-formes suivants prennent en charge les écrans de démarrage.
 
-Enfin, en tant que pratique exemplaire, l'écran de démarrage devrait être présent seulement aussi longtemps que nécessaire. Lorsque votre application a commencé et le mode Web a chargé, votre application doit masquer l'écran de démarrage afin que votre vue principale est visible dès qu'elle est prête. Car l'heure de début d'application varie un peu en raison de plusieurs facteurs tels que la vitesse du CPU et réseau, il est recommandé que votre application appelle explicitement `navigator.splashscreen.hide()` dans la méthode JavaScript qui répond à la `deviceready` événement. Sinon l'écran de démarrage sera visible pour la valeur de SplashScreenDelay que vous avez configuré plus haut, qui est probablement plus longtemps que nécessaire. Cette approche événementielle est hautement recommandée par rapport à avoir l'écran de démarrage visible pour toujours une durée fixe.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## Écrans de démarrage pour la plate-forme l'iOS
+# SplashScreen Plugin
 
-Copiez-y les images d'écran de démarrage du projet iOS `Resources/splash` répertoire. Seulement ajouter ces images pour les périphériques que vous souhaitez prendre en charge, tels que l'iPad ou iPhone. La taille de chaque image doit être :
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048 x 1496 pixels)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## Écrans de démarrage pour la plateforme BlackBerry 10
-
-Ajoutez un élément de la jante : splash dans config.xml pour chaque résolution et les paramètres régionaux, vous souhaitez soutenir :
-
-[http://developer.BlackBerry.com/HTML5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache Cordova offre également des projections spéciales écran plugin qui pourrait servir à afficher et masquer un écran de démarrage pendant https://github.com/apache/cordova-plugin-splashscreen lancement application par programme

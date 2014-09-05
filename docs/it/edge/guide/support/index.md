@@ -43,11 +43,11 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       </th>
       
       <th>
-        <tt>WP8</tt> (Windows<br />Telefono 8)
+        <tt>WP8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>Win8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Telefono 8.1)
       </th>
       
       <th>
@@ -212,6 +212,39 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Fotocamera</a>
         </th>
         
@@ -269,7 +302,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -369,7 +402,8 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          parzialmente
         </td>
         
         <td data-col="tizen"       class="n">
@@ -477,6 +511,42 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Trasferimento di file</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * Non supporta onprogress non abortire
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * Non supporta onprogress non abortire
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * Non supporta onprogress non abortire
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocalizzazione</a>
         </th>
         
@@ -519,7 +589,7 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -706,6 +776,39 @@ Nell'esempio seguente viene illustrato il set di strumenti di sviluppo e disposi
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibrazione</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

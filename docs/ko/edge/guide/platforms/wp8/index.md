@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows Phone 플랫폼 가이드
+# Windows Phone 플랫폼 가이드 8
 
 이 가이드에서는 Windows Phone 장치에 대 한 코르도바 애플 리 케이 션을 배포 하기 위해 SDK 개발 환경을 설정 하는 방법을 보여 줍니다. 그것은 Windows Phone 8에 초점을 맞추고 있지만 지원 Windows Phone 7 하는 방법에 추가 정보를 제공 합니다.
 
@@ -21,8 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Windows Phone 플랫폼에 특정 내용은 다음을 참조 하십시오.
 
-*   Windows Phone 플러그인
-*   Windows Phone 업그레이드
+*   Windows Phone 8 플러그인
+*   Windows Phone 8 업그레이드
 
 Windows Phone 8 플랫폼에 대 한 코르도바 WebView 의존 인터넷 익스플로러 10의 렌더링 엔진으로, 실질적인 문제로 서 코르도바 Api를 호출 하지 않는 모든 웹 콘텐츠를 테스트 하려면 IE10의 강력한 디버거를 사용할 수 있습니다. Windows Phone 개발자 블로그 IE10 비교 웹 킷 브라우저와 함께 지 원하는 방법에 [유용한 지침][1] 을 제공 합니다.
 

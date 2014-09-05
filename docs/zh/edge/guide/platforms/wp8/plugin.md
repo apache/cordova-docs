@@ -13,7 +13,7 @@
 
 ## under the License.
 
-# Windows Phone 外掛程式
+# Windows Phone 8 外掛程式
 
 此部分提供了如何在 Windows Phone 平臺上實現本機外掛程式代碼的詳細資訊。 之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續表明通信從科爾多瓦 web 視圖的本機平臺和後面的示例*回聲*外掛程式。
 

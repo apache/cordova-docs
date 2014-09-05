@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -95,6 +95,10 @@ Cordova поставляется с минимальным набором APIs, 
     
     > API-интерфейс для того чтобы вибрировать устройство.
 
+*   [StatusBar][20]
+    
+    > API-интерфейс для отображения, скрытия и настройке фона строки состояния.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -113,5 +117,6 @@ Cordova поставляется с минимальным набором APIs, 
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Non-английский переводы этих документов плагин можно найти, глядя на старые версии документации, Кордова. Используйте раскрывающееся меню в очень верхней правой части этого сайта для переключения версий.

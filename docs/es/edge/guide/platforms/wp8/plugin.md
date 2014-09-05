@@ -13,7 +13,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 ## under the License.
 
-# Windows Phone Plugins
+# Windows Phone 8 Plugins
 
 Esta sección proporciona información sobre cómo implementar código plugin nativo en la plataforma de Windows Phone. Antes de leer esto, vea aplicación Plugins para tener una visión general de la estructura del plugin y su interfaz común de JavaScript. Esta sección sigue demostrando el plugin *Eco* muestra que comunica desde la webview Cordova a la plataforma nativa y de regreso.
 

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows Phone 平臺指南
+# Windows Phone 8 平臺指南
 
 本指南介紹如何設置您的 SDK 開發環境部署科爾多瓦的 Windows Phone 設備的應用程式。 它側重于 Windows Phone 8，但提供如何支援 Windows Phone 7 的附加詳細資訊。
 
@@ -21,8 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 見到 Windows Phone 平臺特定的詳細資訊如下：
 
-*   Windows Phone 外掛程式
-*   升級 Windows Phone
+*   Windows Phone 8 外掛程式
+*   升級 Windows Phone 8
 
 對於 Windows Phone 8 平臺，科爾多瓦 web 視圖依賴于互聯網資源管理器中 10 作為自己的渲染引擎，因此作為一個實際問題你可以使用 IE10 的功能強大的調試器來測試並不調用科爾多瓦 Api 的任何 web 內容。 Windows Phone 開發者博客如何支援 IE10 和可比較的 WebKit 瀏覽器提供[有益的指導][1]。
 

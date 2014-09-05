@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. È possibile ottenere una copia della licenza a
 
            http://www.apache.org/licenses/License-2.0 se non richiesto dalla legge o concordato per iscritto, il software distribuito sotto la licenza è distribuito su un "AS IS" base, senza garanzie o condizioni di alcun tipo, esplicita o implicita.  Vedere la licenza per la lingua specifica che disciplina le autorizzazioni e limitazioni
     
@@ -35,4 +35,4 @@ In questa sezione viene illustrato come configurare VMWare Fusion su Mac in modo
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
 
-Dopo aver completato questi passaggi, allora siete pronti ad installare il SDK di Windows Phone. Vedere la guida di piattaforma Windows Phone per i dettagli.
+Dopo aver completato questi passaggi, allora siete pronti ad installare il SDK di Windows Phone. Vedere la guida di piattaforma Windows Phone 8 per dettagli.

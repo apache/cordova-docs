@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Окна (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
 На Mac командная строка доступна с помощью приложения *Терминал*. На ПК он доступен как приложение *Командная строка* в разделе *Аксессуары*.
 
-**Примечание**: Для Windows платформ, вы по прежнему можете вести свою разработку на Mac запуская Windows в виртуальной машине или в режиме двойной загрузки. Доступные параметры см. в разделах "Руководство платформы Windows Phone" или "Руководстве платформы Windows 8".
+**Примечание**: Для Windows платформ, вы по прежнему можете вести свою разработку на Mac запуская Windows в виртуальной машине или в режиме двойной загрузки. Доступные параметры см. Руководство по платформы Windows Phone 8 или в руководстве платформы Windows.
 
 Скорее всего, вы будете запускать CLI с различных компьютеров, тем больше имеет смысл поддерживать удаленный репозиторий, откуда вы будете забирать рабочие материалы в локальные каталоги.
 
@@ -108,12 +108,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Запустите любую из этих команд на Windows компьютере, где *wp* ссылается на различные версии операционной системы Windows Phone:
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        $ cordova платформа добавить wp8 $ cordova платформа добавить добавить $ cordova платформы windows Амазонки fireos $ cordova платформа добавить android $ cordova платформа добавить blackberry10 $ cordova платформа добавить firefoxos
     
 
 Выполните это, чтобы проверить ваш текущий набор платформ:

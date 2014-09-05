@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,15 @@ Chaque *Plateforme Guide* ci-dessous vous indique ce que vous devez savoir pour 
 
 *   Guide de la plate-forme Ubuntu
 
-## Windows Phone
+## Windows Phone 8
 
-*   Guide de la plate-forme Windows Phone
-*   Windows Phone Plugins
-*   La mise à niveau de Windows Phone
+*   Guide de plateforme Windows Phone 8
+*   Windows Phone 8 Plugins
+*   La mise à niveau de Windows Phone 8
 
-## Windows 8
+## Windows
 
-*   Windows 8 Platform Guide
+*   Guide de la plate-forme Windows
 *   La mise à niveau de Windows 8
 
 ## Paciarelli

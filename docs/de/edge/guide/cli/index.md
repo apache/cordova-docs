@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software Foundation (ASF) lizenziert. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ Hinzufügen von Unterstützung oder ein Projekt für jede Plattform neu erstelle
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Windows (Windows)
 *   Firefox Betriebssystem (Mac, Linux, Windows)
 
 Auf dem Mac ist die Befehlszeile über die *Terminal* -Anwendung verfügbar. Auf dem PC steht als *Eingabeaufforderung* unter *Zubehör*.
 
-**Hinweis**: für nur-Windows-Plattformen, noch kann Ihre Entwicklung auf Mac-Hardware unter Windows in einer virtuellen Umgebung oder im Dual-Boot-Modus. Verfügbaren Optionen finden Sie unter der Windows Phone Plattform Führungslinie oder der Windows 8-Plattform.
+**Hinweis**: für nur-Windows-Plattformen, noch kann Ihre Entwicklung auf Mac-Hardware unter Windows in einer virtuellen Umgebung oder im Dual-Boot-Modus. Verfügbaren Optionen finden Sie unter der Windows Phone 8 Platform Guide oder die Anleitung für die Windows-Plattform.
 
 Desto wahrscheinlicher ist es, dass die CLI von verschiedenen Maschinen ausführen, desto mehr macht es Sinn, einen entfernten Quellcode-Repository, deren Vermögen verwalten Sie zu lokalen Arbeitsverzeichnisse-down Pull.
 
@@ -108,12 +108,7 @@ Bevor Sie das Projekt erstellen, müssen Sie eine Reihe von Zielplattformen ange
 
 Führen Sie einen aus einer Windows-Maschine, wo verschiedene Versionen des Betriebssystems Windows Phone *wp* bezeichnet:
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        $ Cordova Plattform hinzufügen wp8 $ Cordova Plattform hinzufügen Fügen Sie $ Cordova Plattform Windows Amazon-Fireos $ Cordova Plattform hinzufügen android $ Cordova Plattform hinzufügen blackberry10 $ Cordova Plattform hinzufügen Firefoxos
     
 
 Führen Sie diese um Ihren aktuellen Satz von Plattformen zu überprüfen:

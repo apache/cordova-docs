@@ -89,6 +89,10 @@ L'ensemble traditionnel de plugins de Cordova core sont les suivantes :
     
     > Une API à vibrer l'appareil.
 
+*   [StatusBar][20]
+    
+    > Une API pour montrer, cacher et configuration fond barre de statut.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@ L'ensemble traditionnel de plugins de Cordova core sont les suivantes :
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Non anglais traductions de ces documents plugin se trouvent en regardant les anciennes versions de la documentation de Cordova. Utilisez le menu déroulant en très haut à droite de ce site les versions.

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Windows Phone プラットフォーム ガイド
+# Windows Phone 8 プラットフォーム ガイド
 
 このガイドは、Windows Phone デバイスの Cordova アプリを展開する SDK の開発環境を設定する方法を示します。 Windows Phone 8 に焦点を当てていますが、Windows Phone 7 のサポートする方法について詳細に説明します。
 
@@ -21,8 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Windows Phone プラットフォームに固有の詳細については、次を参照してください。
 
-*   Windows Phone のプラグイン
-*   Windows Phone のアップグレード
+*   Windows Phone 8 プラグイン
+*   Windows Phone 8 をアップグレードします。
 
 Windows Phone 8 プラットフォーム コルドバ WebView に依存しているインターネット エクスプ ローラー 10 そのレンダリング エンジンとして、実際問題としてコルドバ Api の呼び出しは、web コンテンツをテストする IE10 の強力なデバッガーを使用できるようにします。 Windows Phone 開発者ブログは対等な WebKit ブラウザーと一緒に IE10 をサポートする方法について[有用なガイダンス][1]を提供します。
 

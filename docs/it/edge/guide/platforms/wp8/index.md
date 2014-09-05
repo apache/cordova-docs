@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Guida di piattaforma Windows Phone
+# Guida di Windows Phone 8 piattaforma
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per dispositivi Windows Phone. Esso si concentra su Windows Phone 8, ma fornisce ulteriori dettagli su come supporto Windows Phone 7.
 
@@ -21,8 +21,8 @@ Viene illustrato come utilizzare sia Windows Phone-shell strumenti specifici per
 
 Vedi quanto segue per dettagli specifici per la piattaforma Windows Phone:
 
-*   Windows Phone Plugins
-*   L'aggiornamento di Windows Phone
+*   Windows Phone 8 plugin
+*   L'aggiornamento di Windows Phone 8
 
 Per la piattaforma Windows Phone 8, Cordova WebView si basa su Internet Explorer 10 come suo motore di rendering, quindi in pratica è possibile utilizzare il debugger potente di IE10 per testare qualsiasi contenuto web che non richiama Cordova APIs. Il Blog di Windows Phone Developer fornisce [indicazioni utili][1] su come sostenere IE10 insieme paragonabile browser WebKit.
 

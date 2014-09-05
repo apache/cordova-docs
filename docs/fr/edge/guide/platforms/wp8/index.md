@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Guide de la plate-forme Windows Phone
+# Guide de plateforme Windows Phone 8
 
 Ce guide montre comment configurer votre environnement de développement SDK pour déployer Cordova apps pour les appareils Windows Phone. Il se concentre sur Windows Phone 8, mais fournit des détails supplémentaires sur la façon de soutenir Windows Phone 7.
 
@@ -21,8 +21,8 @@ Il montre comment utiliser deux outils de shell Windows Phone spécifiques pour 
 
 Voir ce qui suit pour plus de détails spécifiques à la plate-forme Windows Phone :
 
-*   Windows Phone Plugins
-*   La mise à niveau de Windows Phone
+*   Windows Phone 8 Plugins
+*   La mise à niveau de Windows Phone 8
 
 Pour la plateforme Windows Phone 8, les Cordova WebView s'appuie sur Internet Explorer 10 comme son moteur de rendu, donc en pratique vous pouvez utiliser le débogueur puissant de IE10 pour tester n'importe quel contenu web qui n'est pas invoquer Cordova APIs. Le Blog des développeurs Windows Phone fournit des [indications utiles][1] sur comment soutenir IE10 avec les navigateurs WebKit comparables.
 

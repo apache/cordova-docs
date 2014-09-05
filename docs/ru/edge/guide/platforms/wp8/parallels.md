@@ -34,4 +34,4 @@
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-После выполнения этих шагов, вы готовы к установке Windows Phone SDK. Руководстве платформу Windows Phone для деталей.
+После выполнения этих шагов, вы готовы к установке Windows Phone SDK. В руководстве Windows Phone 8 платформа для деталей.

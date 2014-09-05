@@ -89,6 +89,10 @@
     
     > デバイスを振動する API です。
 
+*   [ステータスバー][20]
+    
+    > 表示、非表示、ステータス バーの背景を構成するための API。
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 これらのプラグインのドキュメントの翻訳を英語以外の言語コルドバ ドキュメントの古いバージョンを見て発見することができます。非常に右上のこのサイトでバージョンを切り替えるには、ドロップ ダウン メニューを使用します。

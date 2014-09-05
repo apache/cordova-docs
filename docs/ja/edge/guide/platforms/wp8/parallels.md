@@ -34,4 +34,4 @@
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-これらの手順が完了すると、Windows Phone SDK をインストールする準備が整いました。詳細については、Windows Phone プラットフォーム ガイドを参照してください。
+これらの手順が完了すると、Windows Phone SDK をインストールする準備が整いました。詳細については、「Windows Phone 8 プラットフォーム ガイドを参照してください。

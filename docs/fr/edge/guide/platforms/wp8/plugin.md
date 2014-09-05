@@ -13,7 +13,7 @@ licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plu
 
 ## under the License.
 
-# Windows Phone Plugins
+# Windows Phone 8 Plugins
 
 Cette section fournit des détails pour l'implémentation de code du plugin native sur la plate-forme Windows Phone. Avant de lire ceci, voir Application Plugins pour avoir un aperçu de la structure du plugin et son interface commune de JavaScript. Cette section continue de démontrer l'échantillon *écho* plugin qui communique de la webview Cordova à la plate-forme native et le dos.
 

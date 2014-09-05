@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## Configurando pantallas de inicio en el CLI
 
-Utilizar la API Splashscreen (Pantalla de Bienvenida) para activar la visualización de la pantalla de presentación introductoria de una app en muchas plataformas. Cuando se trabaja en la CLI, archivos de código fuente de pantalla splash se encuentran dentro del proyecto `www/res/screens` subdirectorio.
+En el nivel superior `config.xml` archivo (no el que está en `platforms` ), añadir elementos de configuración como los aquí especificados.
 
-Android especifica ambas imágenes de pantalla splash retrato y paisaje-orientada de baja, media, alta y extra alta resolución:
+# Ejemplo de configuración
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+Por favor observe que el valor del atributo "src" es relativa al directorio de proyecto y no en el directorio de www. Puedes nombrar a la imagen de origen lo que quieras. El nombre interno de la aplicación están determinados por Córdoba.
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-La plataforma iOS especifica las variantes para iPhone/iPod y iPad, con variantes para las exhibiciones de la retina y orientaciones diferentes. El archivo *568 h* se aplica para el iPhone de 5 pantalla más alta:
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone especifica una imagen de la pantalla splash solo:
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-Las siguientes secciones detallan cómo configurar las pantallas de bienvenida (Splash screen) cuando trabaja con SDK y las herramientas de línea de comandos relacionados con descrito en las guías de la plataforma.
-
-No olvide instalar el plugin SplashScreen (Pantalla de Bienvenida) antes de intentar usar el `navigator.splashscreen.hide()` o `navigator.splashscreen.show()` los métodos.
-
-## Pantallas de inicio para la plataforma Android
-
-Coloque los archivos de [imagen 9-parche][1] en del proyecto Android `platforms/android/res/drawable*` directorios.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-El tamaño de cada uno debe ser:
-
-*   Xlarge (xhdpi): al menos 960 × 720
-*   grande (IPAP): al menos 640 × 480
-*   medio (mdpi): al menos 470 × 320
-*   pequeño (ldpi): por lo menos 426 × 320
-
-Cuando se crea un nuevo proyecto Android, la pantalla de inicio por defecto imágenes siempre en la Córdoba muestra app ya debe estar presente en la `platforms/android/res/drawable*` directorios. No dude en sustituir estos con sus propias imágenes. Al proporcionar su propio toque imágenes en pantalla, no necesitas proporcionar la misma permutación de 8 como Cordova predeterminado que aquí. Más o menos optimización puede ser utilizado. El `drawable` nombres de directorio deben seguir las convenciones Android por apoyar a [tamaños de pantalla][2] y [recursos alternativos][3].
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-En el nivel superior `config.xml` archivo (no el que está en `platforms` ), agregue las siguientes preferencias:
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-La primera línea establece la imagen que se mostrará como la pantalla de bienvenida. Este es el nombre del archivo de la png en el `drawable*` directorios, menos la `.png` extensión. El valor predeterminado para SplashScreen es `screen` (para el archivo `platforms/android/res/drawable*/screen.png` ), así que si usted nombrar la imagen nada aparte de `screen.png` en el `drawable*` directorios, necesitas añadir/modificar esta línea.
+# Plataformas soportadas
 
-La segunda línea establece la demora por defecto de cuánto el splashscreen aparece en milisegundos. Esto debería ser la peor hora prevista. El valor predeterminado para SplashScreenDelay es ms 3000.
+A partir de ahora (Córdoba 3.5.0 julio de 2014) las siguientes plataformas soportan salpicadura pantallas.
 
-Finalmente, como una mejor práctica, la pantalla de bienvenida debe estar presente sólo el tiempo necesario. Cuando su aplicación ha comenzado y se ha cargado el webview, su aplicación debe ocultar la pantalla de bienvenida para que su vista principal es visible en cuanto esté listo. Debido a la hora de inicio de la aplicación variará un poco debido a una serie de factores como la velocidad de la CPU y de red, se recomienda que su aplicación invocar explícitamente `navigator.splashscreen.hide()` en el método JavaScript que responde a la `deviceready` evento. De lo contrario la pantalla de bienvenida será visible para el valor de SplashScreenDelay que ha configurado anteriormente, más de lo necesario que es probable. Este enfoque orientado al evento es altamente recomendable versus tener la pantalla visible para siempre una duración fija.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## Pantallas de inicio para la plataforma iOS
+# SplashScreen Plugin
 
-Copiar imágenes de pantalla de splash en el proyecto iOS `Resources/splash` Directorio. Sólo agregar esas imágenes para los dispositivos que desea apoyar, como el iPad o el iPhone. El tamaño de cada imagen debe ser:
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## Pantallas de inicio para la plataforma BlackBerry 10
-
-Añadir un elemento de borde: splash en config.xml para cada resolución y configuración regional que desea apoyar:
-
-[http://developer.BlackBerry.com/HTML5/Documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache Cordova también ofrece plugin de pantalla splash especiales que podría ser utilizado para mostrar y ocultar una pantalla de bienvenida durante la aplicación lanzamiento https://github.com/apache/cordova-plugin-splashscreen mediante programación

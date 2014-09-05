@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   안 드 로이드 (맥, 리눅스, 윈도우)
 *   블랙베리 10 (맥, 리눅스, 윈도우)
 *   Windows Phone 8 (Windows)
-*   윈도우 8 (Windows)
+*   Windows (윈도우)
 *   파이어 폭스 OS (맥, 리눅스, 윈도우)
 
 Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니다. Pc, 그것은 가능한 *액세서리* 아래 *명령 프롬프트*.
 
-**참고**: Windows 전용 플랫폼에 대 한 여전히 할 수 맥 하드웨어 개발 가상 컴퓨터 환경에서 또는 듀얼 부팅 모드에서 Windows를 실행 하 여. 사용 가능한 옵션에 대 한 Windows Phone 플랫폼 가이드 또는 Windows 8 플랫폼 가이드를 참조 하십시오.
+**참고**: Windows 전용 플랫폼에 대 한 여전히 할 수 맥 하드웨어 개발 가상 컴퓨터 환경에서 또는 듀얼 부팅 모드에서 Windows를 실행 하 여. 사용 가능한 옵션 Windows Phone 8 플랫폼 가이드 또는 Windows 플랫폼 설명서를 참조 하십시오.
 
 확률이 더 높다 그것이 실행 하는 CLI 다른 컴퓨터에서 로컬 작업 디렉토리에 풀 다운 자산이 원격 소스 코드 저장소를 유지 하는 것이 의미가 한 더.
 
@@ -108,12 +108,7 @@ Mac에서는 명령줄 *터미널* 응용 프로그램을 통해 제공 됩니�
 
 Windows 시스템에서 이러한 실행 *wp* Windows Phone 운영 체제의 다른 버전을 말합니다.
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        $ 코르도바 플랫폼 추가 wp8 $ 코르도바 플랫폼 추가 $ 코르도바 플랫폼 추가 windows 아마존 fireos $ 코르도바 플랫폼 안 드 로이드 $ 추가 코르도바 플랫폼 추가 blackberry10 $ 코르도바 플랫폼 추가 firefoxos
     
 
 이 플랫폼의 현재 집합을 확인 하려면 실행:

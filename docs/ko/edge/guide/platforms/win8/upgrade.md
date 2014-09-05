@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 이 가이드에는 코르도바의 이전 버전에서 업그레이드 하려면 Windows 8 프로젝트를 수정 하는 방법을 보여 줍니다. 이러한 명령의 대부분 명령줄 도구 앞의 오래 된 세트를 사용 하 여 만든 프로젝트에 적용 된 `cordova` CLI 유틸리티. 내용은 참조 하십시오 명령줄 인터페이스 CLI의 버전을 업데이트 하는 방법.
 
-## 3.2.0 3.1.0에서 업그레이드
+## 3.6.0 3.1.0에서 또는 나중에 업그레이드
 
 코르 도우 바 CLI로 만든 프로젝트의 경우:
 

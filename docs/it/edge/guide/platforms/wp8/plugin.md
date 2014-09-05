@@ -13,7 +13,7 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 ## under the License.
 
-# Windows Phone Plugins
+# Windows Phone 8 plugin
 
 In questa sezione vengono fornite informazioni dettagliate per come implementare il codice plugin nativo sulla piattaforma Windows Phone. Prima di leggere questo, vedere applicazione plugin per una panoramica della struttura del plugin e la sua interfaccia JavaScript comune. Questa sezione continua a dimostrare il plugin di esempio *eco* che comunica da Cordova webview alla piattaforma nativa e ritorno.
 

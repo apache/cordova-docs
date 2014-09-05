@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -67,7 +67,41 @@ Le regole specifiche della piattaforma whitelisting si trovano in`res/xml/config
 
 **Nota**: Android 2.3 e prima, dominio whitelist funziona solo per `href` i collegamenti ipertestuali, non fa riferimento a risorse quali immagini e script. Prendere provvedimenti per evitare gli script da essere iniettato nell'applicazione.
 
-Navigazione verso domini non whitelisted via `href` collegamento ipertestuale provoca la pagina aprire nel browser predefinito, piuttosto che all'interno dell'applicazione. (Confrontare questo comportamento su iOS riportata di seguito).
+**Nota**: al fine di prevenire gli URL esterni come `mailto:` da essere aperto in webview Cordova a partire da Cordova 3.6.0, specificando `origin="*"` contenuto aggiungerà le regole per i protocolli http e https. Se si richiede l'accesso a ulteriori protocolli personalizzati, poi si dovrebbe anche aggiungere in modo esplicito alla whitelist. Vedi anche "Esterno applicazione Whitelist" sotto per ulteriori informazioni sull'avvio di applicazioni esterne di URL.
+
+**NOTA**: Alcune richieste di rete non andare attraverso la Cordova Whitelist. Questo include <video> e <audio> resouces WebSocket connessioni (4.4 + Android) e possibilmente altre richieste non http. 4.4 + Android, è possibile includere un [CSP][8] intestazione nei documenti HTML per limitare l'accesso a tali risorse. Su vecchie versioni di Android, potrebbe non essere possibile limitarli.
+
+ [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+
+### Applicazione esterna Whitelist
+
+Cordova 3.6.0 introduce un secondo whitelist, per la limitazione che gli URL sono autorizzati a lanciare applicazioni esterne. Nelle versioni precedenti di Cordova, tutti gli URL non http, come `mailto:` , `geo:` , `sms:` e `intent` , implicitamente sono stati autorizzati a essere bersaglio di un un <a>tag.</a> A causa del potenziale per un'applicazione per informazioni sulle perdite, se una vulnerabilità XSS consente a un utente malintenzionato di costruire collegamenti arbitrari, questi URL devono essere whitelisted pure, a partire da Cordova 3.6.0.
+
+Per consentire a un modello di URL lanciare un'applicazione esterna, utilizzare un <access> Tag nel tuo `config.xml` file, con il `launch-external` attributo impostato.
+
+Esempi:
+
+*   Per consentire i collegamenti inviare messaggi SMS:
+    
+    <access origin="sms:*" launch-external="yes" />
+
+*   Per consentire i collegamenti aprire le mappe:
+    
+    <access origin="geo:*" launch-external="yes" />
+
+*   Per consentire i collegamenti a example.com per aprire in un browser esterno:
+    
+    <access origin="http://example.com/*" launch-external="yes" />
+
+*   Per consentire a tutti i siti Web non-whitelisted ad aprire in un browser esterno: (questo è lo stesso come il precedente comportamento per gli URL non whitelisted)
+    
+    <access origin="http://*" launch-external="yes" /> <access origin="https://*" launch-external="yes" />
+
+*   Per consentire l'accesso a tutti gli URL, ripristinando la politica di Cordova 3.5.0 (non consigliata):
+    
+    <access origin="*" launch-external="yes" />
+
+Navigazione verso un URL all'interno dell'applicazione, la whitelist interal viene verificato prima, e se l'URL non ci whitelisted, viene testata la whitelist esterni. Questo significa che qualsiasi `http:` o `https:` gli URL che corrispondono entrambi whitelists sarà aperto all'interno dell'applicazione di Cordova, piuttosto che lanciare il browser esterno.
 
 ## iOS Whitelisting
 
@@ -77,7 +111,7 @@ Origini specificati senza un protocollo, ad esempio `www.apache.org` anziché `h
 
 Caratteri jolly sulla piattaforma iOS sono più flessibile nella specifica [W3C Widget accesso][1] . Ad esempio, il seguente accede tutti i sottodomini e domini di primo livello come `.com` e `.net` :
 
-        <access origin="*.google.*" />
+        < accesso origine = "*.google. *" / >
     
 
 A differenza della piattaforma Android sopra indicata, navigando per domini non whitelisted tramite `href` collegamento ipertestuale su iOS impedisce la pagina di apertura a tutti.
@@ -90,26 +124,26 @@ Uso di blackBerry 10 di caratteri jolly si differenzia da altre piattaforme in d
 
 *   Qualsiasi contenuto accessibile da `XMLHttpRequest` deve essere dichiarato in modo esplicito. L'impostazione di `origin="*"` non funziona in questo caso. In alternativa, tutta la sicurezza web può essere disattivata utilizzando il `WebSecurity` preferenza descritto in configurazione del BlackBerry:
     
-        <preference name="websecurity" value="disable" />
+        < nome preferenza = "websecurity" value = "disable" / >
         
 
 *   In alternativa all'impostazione `*.domain` , impostare un ulteriore `subdomains` attribuire a `true` . Deve essere impostato su `false` per impostazione predefinita. Ad esempio, il seguente consente l'accesso a `google.com` , `maps.google.com` , e `docs.google.com` :
     
-        <access origin="http://google.com" subdomains="true" />
+        < accesso origine = sottodomini "http://google.com" = "true" / >
         
     
     La seguente restringe accedi a `google.com` :
     
-        <access origin="http://google.com" subdomains="false" />
+        < accesso origine = sottodomini "http://google.com" = "false" / >
         
     
     Specificare l'accesso a tutti i domini, tra cui il locale `file://` protocollo:
     
     <access origin="*" subdomains="true" />
 
-(Per ulteriori informazioni sul supporto, vedere documentazione di BlackBerry nell' [elemento di accesso][8].)
+(Per ulteriori informazioni sul supporto, vedere documentazione di BlackBerry nell' [elemento di accesso][9].)
 
- [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+ [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
 ## Cambiamenti iOS 3.1.0
 
@@ -129,6 +163,6 @@ Le regole di whitelisting per Windows Phone 8 si trovano nell'app `config.xml` f
 
 ## Tizen Whitelisting
 
-Regole di whitelisting si trovano nell'app `config.xml` file. La piattaforma si basa sulla stessa `subdomains` attributo come la piattaforma BlackBerry. (Per ulteriori informazioni sul supporto, vedere documentazione di Tizen sull' [elemento di accesso][9].)
+Regole di whitelisting si trovano nell'app `config.xml` file. La piattaforma si basa sulla stessa `subdomains` attributo come la piattaforma BlackBerry. (Per ulteriori informazioni sul supporto, vedere documentazione di Tizen sull' [elemento di accesso][10].)
 
- [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
+ [10]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

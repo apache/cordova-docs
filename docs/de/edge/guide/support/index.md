@@ -43,11 +43,11 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       </th>
       
       <th>
-        <tt>WP8</tt> (Windows<br />Telefon 8)
+        <tt>WP8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>win8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Telefon 8.1)
       </th>
       
       <th>
@@ -212,6 +212,39 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Kamera</a>
         </th>
         
@@ -269,7 +302,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -369,7 +402,8 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          teilweise
         </td>
         
         <td data-col="tizen"       class="n">
@@ -477,6 +511,42 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">File-Transfer</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * Unterstützen Sie Onprogress weder Abbrechen
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * Unterstützen Sie Onprogress weder Abbrechen
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * Unterstützen Sie Onprogress weder Abbrechen
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocation</a>
         </th>
         
@@ -519,7 +589,7 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -706,6 +776,39 @@ Im folgenden wird die Gruppe von Entwicklungs-Tools und APIs verfügbar-Gerät f
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Vibration</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

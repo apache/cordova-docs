@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   Руководство по Ubuntu платформы
 
-## Windows Phone
+## Windows Phone 8
 
-*   Руководство по Windows Phone платформы
-*   Windows Phone плагины
-*   Обновление Windows Phone
+*   Руководство по платформы Windows Phone 8
+*   Windows Phone 8 плагины
+*   Обновление Windows Phone 8
 
-## Windows 8
+## Windows
 
-*   Руководство по Windows 8 платформы
+*   Руководство по платформе Windows
 *   Обновление для Windows 8
 
 ## Tizen

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 You may obtain a copy of the License at
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 請參閱分散式與此工作為版權的擁有權有關的其他資訊的通知檔。 ASF 許可證，此檔到你根據 Apache 許可證，2.0 版 （"許可證"） ；您不可能使用此檔除了符合許可證。 You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## 在 CLI 中配置初始螢幕
 
-使用閃屏 API 來啟用應用程式的介紹性閃屏在許多平臺上的顯示。 工作時在 CLI 中，初始螢幕原始程式碼檔位於專案的 `www/res/screens` 子目錄。
+在頂級 `config.xml` 檔 （不是在一個 `platforms` ），添加像那些在此指定的配置元素。
 
-Android 系統指定這兩個面向肖像和風景閃屏圖像為低、 中、 高、 特高的各項決議：
+# 配置示例
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+請注意"src"屬性的值是相對於專案目錄而不是 www 目錄。 你可以命名源映射任何你喜歡的。 在應用程式中的內部名稱取決於科爾多瓦。
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-IOS 平臺指定變形為 iPhone 和 iPod 和 iPad，具有變形為視網膜顯示和不同的方向。*568 h*檔適用于 iPhone 5 的高螢幕：
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone 指定單個初始螢幕圖像：
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-以下各節詳細說明了如何設置初始螢幕時使用 Sdk 和相關的命令列工具在平臺指南仲介紹。
-
-別忘了在嘗試使用之前安裝的閃屏外掛程式 `navigator.splashscreen.hide()` 或 `navigator.splashscreen.show()` 方法。
-
-## Android 平臺的初始螢幕
-
-[9-修補程式的圖像][1]檔放在 Android 專案 `platforms/android/res/drawable*` 目錄。
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-為每個大小應為：
-
-*   xlarge (xhDPI)： 至少 960 × 720
-*   大 (下)： 至少 640 × 480
-*   中期 (mDPI)： 至少 470 × 320
-*   小 (lDPI)： 至少 426 × 320
-
-創建新的 Android 專案時，預設的初始螢幕圖像提供科爾多瓦應用程式範例已經應該出現在 `platforms/android/res/drawable*` 的目錄。 隨意替換這些與您自己的圖像。 提供您自己的初始螢幕圖像時, 您不需要提供 8 科爾多瓦的預設在這裡同樣的排列順序。 更多或更少可以使用優化。 `drawable`目錄名稱必須遵循支援[的螢幕大小][2]和[備用資源][3]的 Android 約定.
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-在頂級 `config.xml` 檔 （不是中的一 `platforms` )，添加以下首選項：
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-第一行設置為初始螢幕顯示的圖像。 這是在 png 檔的檔案名 `drawable*` 目錄、 減號 `.png` 副檔名。 閃屏的預設值是 `screen` (該檔為 `platforms/android/res/drawable*/screen.png` )，所以如果你形象命名為任何名稱以外 `screen.png` 在 `drawable*` 目錄，您需要添加修改這條線。
+# 支援的平臺
 
-第二行設置預設延遲多久閃屏顯示以毫秒為單位。這應該是最壞的預期的開始時間。SplashScreenDelay 的預設值是 3000 毫秒。
+到目前為止 （科爾多瓦 3.5.0 7 月 2014年) 以下平臺支援的閃屏。
 
-最後，作為一種最佳做法，初始螢幕應該是存在只，只要有必要。 當您的應用程式已啟動並已載入 web 視圖時，您的應用程式應隱藏初始螢幕，以便您主視圖是可見的儘快準備好。 因為應用程式開始時間將由多個 CPU 速度和網路等因素造成差別很大，所以建議您的應用程式顯式地調用 `navigator.splashscreen.hide()` 在回應的 JavaScript 方法 `deviceready` 事件。 否則，初始螢幕將可見該您配置上面的 SplashScreenDelay 值，很可能超過必要的。 與具有可見的總是固定工期的初始螢幕高度建議使用此事件驅動方法。
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## IOS 平臺的初始螢幕
+# 閃屏外掛程式
 
-將初始螢幕圖像拷貝到 iOS 專案 `Resources/splash` 目錄。 只添加那些您想要支援的比如 iPad 或者 iPhone 的設備的圖像。 每個圖像的大小應為：
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048 x 1496 圖元為單位）
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## 10 黑莓平臺的初始螢幕
-
-將 rim： 初始元素添加到 config.xml 每項決議和您希望支援的地區設定：
-
-[HTTP://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache 科爾多瓦還提供特殊飛濺螢幕外掛程式，它可以用來以程式設計方式顯示和隱藏在應用程式啟動 HTTPs://github.com/apache/cordova-plugin-splashscreen 期間的初始螢幕

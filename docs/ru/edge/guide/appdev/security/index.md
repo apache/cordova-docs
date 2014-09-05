@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -38,6 +38,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Android белый на Cordova 2.9.x считается безопасным, однако, было обнаружено, что если foo.com включен в белый список, foo.com.evil.com сможет пройти тест whitelist. Это было зафиксировано в Кордове 3.x.
 
 *   Белый список доменов не работает на Android API 10 и ниже и WP8 для iframes и XMLHttpRequest. Это значит, злоумышленник может загрузить любой домен в iframe и любой сценарий на этой странице внутри iframe непосредственно доступ к Cordova JavaScript-объекты и соответствующие собственного Java-объектов. Вы должны принять это во внимание при создании приложений для этих платформ. На практике это означает, убедившись, что вы целевой Android API выше, чем 10, и по возможности не использовать iframe для загрузки внешнего содержимого - использовать плагин inAppBrowser или других сторонних плагинов.
+
+*   На Android, по состоянию на Cordova 3.6.0 необходимо теперь белый список URL-адресов вне вашего приложения, если приложение создает ссылки для этих URL-адресов. Если вы приложение генерирует `tel:` , `geo:` , `sms:` , `intent:` или аналогичные URL, или ссылки на внешнее содержимое, которое вы планируете открыть в браузере пользователя, то вам необходимо обновить ваш белый список. Подробности в руководстве Whitelist.
 
 ## Плавающие фреймы и Id механизм обратного вызова
 

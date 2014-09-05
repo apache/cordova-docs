@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ Afin d'ajouter le support ou de recompiler un projet pour n'importe quelle plate
 *   Android (Mac, Linux, Windows)
 *   BlackBerry 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
 Sous Mac, la ligne de commande est accessible via l'application *Terminal*. Sur PC, celle-ci est disponible via l'*invite de commande* sous *accessoires*.
 
-**NOTE**: pour les plates-formes Windows uniquement, vous pouvez toujours faire votre développement sur matériel Mac en exécutant Windows dans un environnement de machine virtuelle ou en mode dual-boot. Pour plus d'options disponibles, consultez le Guide de la plate-forme Windows Phone ou le Guide de la plateforme Windows 8.
+**NOTE**: pour les plates-formes Windows uniquement, vous pouvez toujours faire votre développement sur matériel Mac en exécutant Windows dans un environnement de machine virtuelle ou en mode dual-boot. Pour les options disponibles, consultez le Guide de plate-forme Windows Phone 8 ou Windows Platform.
 
 Plus il est probable que vous exécutez le CLI de machines différentes, plus il est logique de maintenir un référentiel de code source éloignée, dont les actifs vous tirez vers le bas pour les répertoires de travail local.
 
@@ -108,12 +108,7 @@ Avant que vous pouvez générer le projet, vous devez spécifier un jeu de plate
 
 Courir à chacun d'entre eux depuis une machine Windows, où *wp* se réfère aux différentes versions du système d'exploitation Windows Phone :
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        plate-forme cordova $ ajouter wp8 $ cordova plate-forme ajouter windows plate-forme cordova $ ajouter amazon-fireos plateforme de cordova $ ajouter $ android plate-forme cordova ajoutez blackberry10 $ cordova plate-forme ajouter firefoxos
     
 
 Exécutez-le pour vérifier votre noyau de plateformes :

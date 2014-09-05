@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -43,4 +43,4 @@ La [Microsoft Developer Network][1] proporciona instrucciones generales sobre c�
  [2]: img/guide/platforms/wp8/vmware_memory_opts.png
  [3]: img/guide/platforms/wp8/vmware_advanced_opts.png
 
-Una vez que complete estos pasos, entonces estás listo para instalar el SDK de Windows Phone. Consulte a la guía de plataforma de Windows Phone para más detalles.
+Una vez que complete estos pasos, entonces estás listo para instalar el SDK de Windows Phone. Consulte a la guía de plataforma de Windows Phone 8 para más detalles.

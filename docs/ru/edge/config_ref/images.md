@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## Настройка заставки с помощью CLI
 
-Используйте Splashscreen API для включения отображения приложения заставки на различных платформах. При работе в CLI, исходные файлы заставки расположены в рамках подкаталоге `www/res/screens` проекта.
+В верхнего уровня `config.xml` файл (не один в `platforms` ), добавьте элементы конфигурации как те, которые указаны здесь.
 
-Android указывает два набора заставок ориентированных на портретную и альбомную ориентацию, для низкого, среднего, высокого и сверхвысокого разрешения:
+# Пример конфигурации
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+Пожалуйста, обратите внимание, что значение атрибута «src» является относительно каталога проекта, а не в каталог www. Как угодно можно назвать исходного изображения. Внутреннее имя в приложении определяются Кордова.
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-Платформы iOS определяет варианты для iPhone/iPod и iPad, с вариантами для retina дисплеев в различных ориентациях. *568 H* файл относится к более продолговатому экрану iPhone 5:
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone определяет только один вариант заставки:
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-В следующих разделах раскрывается как настроить заставки, когда работаешь с использованием SDK и связанных с ними средств командной строки описанных в Руководстве по платформам.
-
-Не забудьте установить плагин SplashScreen перед тем как использовать методы `navigator.splashscreen.hide()` или `navigator.splashscreen.show()`.
-
-## Заставки для платформы Android
-
-Разместите файлы [изображения 9-patch][1] в директории `platforms/android/res/drawable*` проекта на Android.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-Размер для каждой директории должен быть следующим:
-
-*   xlarge (xhdpi): по крайней мере 960 × 720
-*   large (hdpi): по крайней мере 640 × 480
-*   medium (mdpi): по крайней мере 470 × 320
-*   small (ldpi): по крайней мере 426 × 320
-
-При создании нового проекта Android, изображения заставки по умолчанию, предоставляемые базовым приложение Cordova уже должны присутствовать в каталогах `platforms/android/res/drawable*`. Вы можете заменить их вашими собственными изображениями. При указании своих собственных заставок, вы не обязаны предоставлять все те же 8 изображений, которые предоставляет Cordova. Более или менее оптимизация может быть использована. Имена под-директорий в директории `drawable` должны соответствовать конвенциям Android для поддержки [различных размеров экранов][2] и [файлов ресурсов][3].
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-В файле верхнего уровня `config.xml` (не в том который находится в `platforms`) добавьте следующие параметры:
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-Первая строка указывает изображение которое отображать в качестве заставки. Это имя файла png в каталогах `drawable*`, без расширения `.png`. Значения по умолчанию для заставки - `screen` (для файла `platforms/android/res/drawable*/screen.png`), так что если вы дадите изображениям другие названия, отличные от `screen.png` в каталогах `drawable*`, вам необходимо добавить/модифицировать эту линию.
+# Поддерживаемые платформы
 
-Вторая строка устанавливает задержку по умолчанию, как долго заставка будет отображаться в миллисекундах. Значение должно содержать максимальное ожидаемое время загрузки приложение. Значение по умолчанию для SplashScreenDelay - 3000мс.
+На данный момент (Кордова 3.5.0 июля 2014 года) следующие платформы поддерживают экраны-заставки.
 
-Наконец, в качестве стандартной практики заставка должен присутствовать не дольше чем это необходимо. Когда ваше приложение запустилось и webview был загружен, ваше приложение должно скрывать заставку чтобы ваше главный экран становился видимым, сразу после того как он готов к использованию. Из-за того что время запуска приложения может достаточно сильно различаться из-за разных факторов, рекомендуется чтобы ваше приложение явно вызывало `navigator.splashscreen.hide()` в методе JavaScript который обрабатывает событие `deviceready`. В противном случае заставка будет видимым в течении количества миллисекунд указанных в параметре SplashScreenDelay, которое вы указали выше, это значение вероятно, больше, чем это необходимо. Этот событийно ориентированный подход, крайне рекомендуется в отличие от отображения заставки в течении фиксированного промежутка времени.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## Заставки для платформы iOS
+# SplashScreen плагин
 
-Скопируйте изображения заставки в каталог `Resources/splash` проекта iOS. Добавьте изображения только для тех устройств, которые вы хотите поддерживать, например iPad или iPhone. Размер каждого изображения должны быть:
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## Заставки для платформы BlackBerry 10
-
-Добавьте элемент rim:splash в config.xml для каждого разрешения и локали, которые вы хотите поддерживать:
-
-[http://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache Cordova также предлагает специальные заставки экрана плагин, который может быть использован для программного отображения и скрытия заставки во время https://github.com/apache/cordova-plugin-splashscreen запуска приложения

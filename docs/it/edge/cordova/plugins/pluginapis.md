@@ -89,6 +89,10 @@ Il set tradizionale di nucleo Cordova plugin sono i seguenti:
     
     > Un'API per vibrare il dispositivo.
 
+*   [StatusBar][20]
+    
+    > Un'API per mostrare, nascondere e la configurazione sfondo barra di stato.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -107,5 +111,6 @@ Il set tradizionale di nucleo Cordova plugin sono i seguenti:
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Traduzioni inglese di questi documenti di plugin si possono trovare guardando le versioni precedenti della documentazione Cordova. Utilizzare il menu a discesa a molto alto a destra di questo sito per passare le versioni.

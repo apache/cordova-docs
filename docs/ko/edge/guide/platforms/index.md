@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,15 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 *   우분투 플랫폼 가이드
 
-## Windows Phone
+## Windows Phone 8
 
-*   Windows Phone 플랫폼 가이드
-*   Windows Phone 플러그인
-*   Windows Phone 업그레이드
+*   Windows Phone 플랫폼 가이드 8
+*   Windows Phone 8 플러그인
+*   Windows Phone 8 업그레이드
 
-## 윈도우 8
+## 윈도우
 
-*   Windows 8 플랫폼 가이드
+*   Windows 플랫폼 가이드
 *   윈도우 8을 업그레이드
 
 ## Tizen

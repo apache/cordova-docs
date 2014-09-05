@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,15 @@ Cordova アプリを開発するには、各モバイル プラットフォー�
 
 *   Ubuntu プラットフォーム ガイド
 
-## Windows Phone
+## Windows Phone 8
 
-*   Windows Phone プラットフォーム ガイド
-*   Windows Phone のプラグイン
-*   Windows Phone のアップグレード
+*   Windows Phone 8 プラットフォーム ガイド
+*   Windows Phone 8 プラグイン
+*   Windows Phone 8 をアップグレードします。
 
-## Windows 8
+## Windows
 
-*   Windows 8 プラットフォーム ガイド
+*   Windows プラットフォームのガイド
 *   Windows 8 アップグレード
 
 ## Tizen

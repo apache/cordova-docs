@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,88 +134,67 @@ Windows8
 
 ## CLI에서 시작 화면을 구성
 
-Splashscreen API를 사용 하 여 여러 플랫폼에서 애플 리 케이 션의 소개 시작 화면을 표시 하도록 설정 합니다. 시작 화면 소스 파일 프로젝트의 내 위치 하는 CLI에서 작업할 때 `www/res/screens` 하위 디렉터리.
+최상위 수준에서 `config.xml` 파일 (아니라 하나에 `platforms` ), 여기에 지정 된 것과 같은 구성 요소를 추가 합니다.
 
-안 드 로이드는 낮은, 중간, 높은, 매우 높은 해상도 대 한 두 초상화와 가로 중심 스플래시 스크린 이미지를 지정합니다.
+# 예제 구성
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+"Src" 특성의 값은 프로젝트 디렉터리를 기준으로 그리고 www 디렉토리를 주의 하십시오. 원하는 소스 이미지 이름을 지정할 수 있습니다. 응용 프로그램에서 내부 이름은 코르도바에 의해 결정 됩니다.
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-IOS 플랫폼 변형 망막 디스플레이 및 다른 방향에 대 한 아이폰/아이팟과 아이 패드에 대 한 이체를 지정합니다. *568 h* 파일 아이폰 5의 키가 화면에 적용 됩니다.
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone 단일 시작 화면 이미지를 지정합니다.
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-다음 섹션에서는 Sdk 및 관련된 명령줄 도구 플랫폼 가이드에서 설명 하는 경우 시작 화면을 설정 하는 방법을 자세히 설명.
-
-사용 하기 전에 SplashScreen 플러그인을 설치 하는 것을 잊지 마세요는 `navigator.splashscreen.hide()` 또는 `navigator.splashscreen.show()` 방법.
-
-## 안 드 로이드 플랫폼에 대 한 시작 화면
-
-안 드 로이드 프로젝트에 [9 패치 이미지][1] 파일을 배치 `platforms/android/res/drawable*` 디렉터리.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-각각에 대 한 크기 이어야 합니다.
-
-*   xlarge (xhdpi): 적어도 960 × 720
-*   대형 (hdpi): 640 × 480 이상
-*   매체 (mdpi): 적어도 470 × 320
-*   작은 (ldpi): 적어도 426 × 320
-
-새로운 안 드 로이드 프로젝트를 만들 때 기본 시작 화면 이미지는 코르도바에서 샘플 응용 프로그램 있어야 합니다에서 제공 하는 `platforms/android/res/drawable*` 디렉터리. 자유롭게 자신만 이미지와 이러한 대체. 자신의 스플래시 스크린 이미지를 제공 하는 경우에 코르도바 기본 것 들 여기로 8의 같은 순열의 제공 필요가 없습니다. 더 많거나 적은 최적화를 사용할 수 있습니다. `drawable`디렉터리 이름이 [화면 크기][2] 및 [대체 리소스][3] 를 지원 하기 위한 안 드 로이드 규칙에 따라 해야 합니다.
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-최상위 수준에서 `config.xml` 파일 (아니라 하나에 `platforms` ), 다음 기본 설정을 추가:
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-첫 줄 시작 화면으로 표시 하려면 이미지를 설정 합니다. 이것은 파일 이름에 png의는 `drawable*` 디렉토리, 마이너스는 `.png` 확장. SplashScreen의 기본값은 `screen` (파일에 대 한 `platforms/android/res/drawable*/screen.png` ), 그래서 만약 당신이 이름을 이미지 아무것도 아닌 다른 `screen.png` 에 `drawable*` 이 줄을 추가/수정 해야 하는 디렉터리.
+# 지원 되는 플랫폼
 
-두 번째 줄에는 얼마나 오래는 splashscreen 밀리초에 나타납니다의 기본 지연을 설정 합니다. 이 최악의 예상된 시작 시간 이어야 합니다. SplashScreenDelay의 기본값은 3000 석사.
+지금 현재 (코르도바 3.5.0 7 월 2014) 다음 플랫폼 지원 시작 화면.
 
-마지막으로, 가장 좋은 방법은 시작 화면 이어야 한다 현재만 필요한 만큼. 응용 프로그램 시작 때 webview 로드 된 앱 숨기 려 한다 시작 화면 준비가 되 자 마자 주요 보기 표시 됩니다. 응용 프로그램 시작 시간은 CPU 속도 네트워크와 같은 요인의 숫자로 인해 꽤 달라 집니다 때문에 것이 좋습니다 당신의 app 명시적으로 호출 `navigator.splashscreen.hide()` 자바 메서드에 응답 하는 `deviceready` 이벤트. 그렇지 않으면 시작 화면이 표시 됩니다 위에 구성 하는 SplashScreenDelay 값에 대 한 어떤은 가능성이 필요한 것 보다 더 이상. 이 이벤트 구동 방식은 대 표시 항상 고정된 기간 동안 시작 화면을가지고 것이 좋습니다.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## IOS 플랫폼에 대 한 시작 화면
+# Splashscreen 플러그인
 
-IOS 프로젝트에 스플래시 스크린 이미지를 복사 `Resources/splash` 디렉터리. 만 iPad 또는 아이폰 지원 장치에 대 한 이미지를 추가 합니다. 각 이미지의 크기 이어야 합니다.
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048 x 1496 픽셀)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## 블랙베리 10 플랫폼에 대 한 시작 화면
-
-각 해상도 로캘 지원 하고자에 대해 config.xml에 변죽: 스플래시 요소를 추가:
-
-[http://developer.blackberry.com/html5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+또한 프로그래밍 방식으로 표시 하 고 응용 프로그램 실행 https://github.com/apache/cordova-plugin-splashscreen 동안 시작 화면을 숨기는 데 사용할 수 있는 특별 한 스플래시 화면 플러그인을 제공 하는 아파치 코르도바

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Руководство по Windows Phone платформы
+# Руководство по платформы Windows Phone 8
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для устройств Windows Phone. Он фокусируется на Windows Phone 8, но дополнительные сведения о том, как поддержка Windows Phone 7.
 
@@ -21,8 +21,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 Смотрите следующие детали, характерные для платформы Windows Phone:
 
-*   Windows Phone плагины
-*   Обновление Windows Phone
+*   Windows Phone 8 плагины
+*   Обновление Windows Phone 8
 
 Для платформы Windows Phone 8 Cordova WebView опирается на Internet Explorer 10 как ее движок, так что с практической точки зрения IE10 мощный отладчик можно использовать для тестирования любого веб-контента, который не вызвать API Cordova. Блог разработчиков Windows Phone предоставляет [полезные рекомендации][1] о том, как поддержать IE10 наряду с сопоставимыми WebKit-браузерами.
 

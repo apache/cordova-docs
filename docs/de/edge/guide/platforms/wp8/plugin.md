@@ -13,7 +13,7 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 ## under the License.
 
-# Windows Phone Plugins
+# Windows Phone 8 Plugins
 
 Dieser Abschnitt enthält Informationen für das native Plugin-Code auf der Windows Phone Plattform zu implementieren. Finden Sie bevor Sie dies lesen einen Überblick über die Plugin-Struktur und ihre gemeinsame JavaScript-Schnittstelle Anwendung Plugins. In diesem Abschnitt weiterhin das Beispiel- *Echo* -Plugin, das zum einheitlichen Plattform und zurück von Cordova-Webview kommuniziert.
 

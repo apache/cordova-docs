@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -38,6 +38,8 @@ La siguiente guía incluye algunas mejores prácticas de seguridad que debe cons
 *   Android está lista blanca en Cordova 2.9.x se considera seguro, sin embargo, se descubrió que si foo.com está incluido en la lista blanca, foo.com.evil.com sería capaz de aprobar el examen de la lista blanca. Esto fue fijada en Cordova 3.x.
 
 *   Dominio whitelisting no funciona en Android API 10 y a continuación y WP8 para iframes y XMLHttpRequest. Esto significa que un atacante puede cargar cualquier tipo de dominio en un iframe y cualquier script en esa página dentro del iframe puede acceder directamente a objetos Cordova JavaScript y los objetos de Java nativos correspondientes. Debe tomar esto en consideración cuando la creación de aplicaciones para estas plataformas. En la práctica esto significa asegurándose de que se meta una API Android superior a 10, y que si es posible no utilice un iframe para cargar contenido externo - utilizan el plugin inAppBrowser u otros plugins de terceros.
+
+*   En Android, a partir de Cordova 3.6.0, ahora es necesario URLs blanca fuera de su aplicación, si su aplicación genera enlaces a las direcciones URL. Si tu aplicación genera `tel:` , `geo:` , `sms:` , `intent:` o URLs similares, o proporciona enlaces a contenido externo que tiene previsto abrir en el navegador del usuario, entonces tendrá que actualizar su lista blanca. Consulte a la guía de la lista blanca para más detalles.
 
 ## Iframes y el mecanismo de identificación de llamada
 

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 （ASF）。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 *   Android （Mac、 Linux、 Windows）
 *   黑莓 10 （Mac、 Linux、 Windows）
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   視窗 （視窗）
 *   火狐瀏覽器的作業系統 （Mac、 Linux、 Windows）
 
 在 Mac 上，命令列是可通過*終端*應用的。在 PC 上，它是可作為*命令提示符*下*配件*.
 
-**注**： 僅限 Windows 平臺，你還可以您在 Mac 的硬體上的發展通過在虛擬機器環境中或在雙啟動模式下運行 Windows。 可用的選項，請參閱 Windows Phone 平臺指南或 Windows 8 平臺指南。
+**注**： 僅限 Windows 平臺，你還可以您在 Mac 的硬體上的發展通過在虛擬機器環境中或在雙啟動模式下運行 Windows。 可用的選項，請參閱 Windows Phone 8 平臺指南或 Windows 平臺指南。
 
 就越有可能是你在 CLI 運行從不同的機器，更有意義保持遠端原始程式碼儲存庫，你拉下到本地工作目錄的資產。
 
@@ -108,12 +108,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 運行的這些 Windows 機器上，從任何地方*wp*指的是不同版本的 Windows Phone 作業系統：
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        $ 科爾多瓦平臺添加 wp8 $ 科爾多瓦平臺添加的 windows $ 科爾多瓦平臺添加亞馬遜 fireos $ 科爾多瓦平臺添加 android $ 科爾多瓦平臺添加 blackberry10 $ 科爾多瓦平臺添加 firefoxos
     
 
 運行此檢查當前設置的平臺：
