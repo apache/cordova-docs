@@ -33,4 +33,4 @@ supported platforms:
 - Amazon Fire OS WebViews
 - Android WebViews
 - iOS WebViews
-
+- Windows Phone 8.0 WebViews
