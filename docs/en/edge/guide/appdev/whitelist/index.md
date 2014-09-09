@@ -83,7 +83,7 @@ whitelist. Also see "External Application Whitelist" below for more information
 on launching external applications by URL.
 
 __NOTE__: Some network requests do not go through the Cordova Whitelist.
-This includes <video> and <audio> resouces, WebSocket connections (on
+This includes &lt;video&gt; and &lt;audio&gt; resouces, WebSocket connections (on
 Android 4.4+), and possibly other non-http requests. On Android 4.4+,
 you can include a [CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
 header in your HTML documents to restrict access to those resources.
