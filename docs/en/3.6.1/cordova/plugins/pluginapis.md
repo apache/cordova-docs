@@ -58,7 +58,7 @@ The traditional set of core Cordova plugins are as follows:
 - [Geolocation](http://plugins.cordova.io/#/package/org.apache.cordova.geolocation)
 > Make your application location aware.
 
-- [Globalization](http://plugins.cordova.io/#/package/org.apache.globalization)
+- [Globalization](http://plugins.cordova.io/#/package/org.apache.cordova.globalization)
 > Enable representation of objects specific to a locale.
 
 - [InAppBrowser](http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser)
