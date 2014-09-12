@@ -35,6 +35,11 @@ File for information on global configuration options.
 
         <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
 
+- `MediaPlaybackAllowsAirPlay` (boolean, defaults to `true`):
+  Set to `false` to prevent Air Play from being used in this view. Available in default UIWebView and WKWebView.
+
+        <preference name="MediaPlaybackAllowsAirPlay" value="false"/>
+
 - `MediaPlaybackRequiresUserAction` (boolean, defaults to `false`):
   Set to `true` to prevent HTML5 videos or audios from playing
   automatically with the `autoplay` attribute or via JavaScript.
