@@ -380,7 +380,6 @@ Modernizirati samo v `www` imenik:
     
         < ime plugin = "Kapitan" value="org.apache.cordova.media.MediaCapture"/ >< ime plugin = "Stik" value="org.apache.cordova.pim.Contact"/ >
         
-    
     Za:
     
         < ime plugin = "Kapitan" value="org.apache.cordova.capture.MediaCapture"/ >< ime plugin = value="org.apache.cordova.pim.Contact"/ "Imenik" >
@@ -407,7 +406,6 @@ Posodabljanje vzorec imenik (tj, posodabljanje orodji mravlja):
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Za:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -436,7 +434,6 @@ Modernizirati samo v `www` imenik:
     
         < ime plugin = "Kapitan" value="org.apache.cordova.media.MediaCapture"/ >< ime plugin = "Stik" value="org.apache.cordova.pim.Contact"/ >
         
-    
     Za:
     
         < ime plugin = "Kapitan" value="org.apache.cordova.capture.MediaCapture"/ >< ime plugin = value="org.apache.cordova.pim.Contact"/ "Imenik" >
@@ -463,7 +460,6 @@ Posodabljanje vzorec imenik (tj, posodabljanje orodji mravlja):
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Za:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>

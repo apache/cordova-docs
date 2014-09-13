@@ -1,5 +1,6 @@
 .DS_Store
 tmp/
+node_modules/
 public/
 release/
 TAGS

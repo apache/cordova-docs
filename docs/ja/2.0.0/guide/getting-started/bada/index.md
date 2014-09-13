@@ -28,6 +28,7 @@ Getting Started with Bada
 - Windows
 - cordova-bada を使うためには、 bada 1.2 SDK が必要です (すでに Samsung のウェブサイトでは入手できません)
 
+
 2. SDK と Cordova のインストール
 -------------------------
 
@@ -50,6 +51,7 @@ Getting Started with Bada
 - "Finish" をクリックします
 
     ![](img/guide/getting-started/bada/bada_project.png)
+
 
 4. Hello World の作成
 --------------

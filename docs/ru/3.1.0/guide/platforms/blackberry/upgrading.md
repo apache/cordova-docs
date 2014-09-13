@@ -334,7 +334,6 @@ BlackberryOS обеспечение/пьес:
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -362,7 +361,6 @@ BlackberryOS обеспечение/пьес:
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -392,7 +390,6 @@ BlackberryOS обеспечение/пьес:
         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -420,7 +417,6 @@ BlackberryOS обеспечение/пьес:
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>

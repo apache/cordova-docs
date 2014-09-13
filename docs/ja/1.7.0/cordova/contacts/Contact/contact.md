@@ -214,6 +214,7 @@ BlackBerry WebWorks (OS 5.0 and higher) に関する注意点
  - __categories:__ 部分的にサポートされています。 'Business' と 'Personal' カテゴリーのみサポートされています。
  - __urls:__ 部分的にサポートされています。 BlackBerry では、最初の URL が __webpage__ フィールドに保存されます。
 
+
  iOS に関する注意点
  ----------
  - __displayName:__ このプロパティーは iOS ではサポートされておらず、 ContactName が指定されていない場合限り `null` を返します。 もし ContactName が指定されていない場合、合成された名前、 __nickname__ 、または "" が __displayName__ として返されます。

@@ -31,6 +31,7 @@ Getting Started with iOS
     - Apple iOS デバイス (iPhone, iPad, iPod Touch)
     - iOS デベロッパー証明書
 
+
 SDK と Apache Cordova のインストール
 ------------------------
 
@@ -40,12 +41,14 @@ SDK と Apache Cordova のインストール
     - ダウンロードしたものを解凍します
     - Apache Corder iOS は `lib/ios` ディレクトリ以下にあります
 
+
 CordovaLib のインストール
 ------------------
 
 1. Cordova を **ダウンロード** します
 2. ダウンロードしたものを、ハードディスクの恒久的な場所に **解凍** します (例: ~/Documents/CordovaLib-2.X.X)
 3. Step 3 はありません
+
 
 新規プロジェクトの作成
 --------------------
@@ -72,6 +75,7 @@ Cordova 2.2 から、プロジェクトが Cordova インストール内の Cord
 `./create --shared` が使用できます。または、プロジェクトを作成した後で
 `./update_cordova_subproject path/to/you/project` とすることで、参照を変更できます。
 
+
 シミュレーターへのデプロイ
 -----------------------
 
@@ -81,6 +85,7 @@ Cordova 2.2 から、プロジェクトが Cordova インストール内の Cord
     ![](img/guide/getting-started/ios/active_scheme_simulator.png)
 
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
+
 
 デバイスへのデプロイ
 --------------------
@@ -96,11 +101,13 @@ Cordova 2.2 から、プロジェクトが Cordova インストール内の Cord
 
 - プロジェクトウィンドウのツールバーにある _Run_ ボタンをクリックします
 
+
 結果
 ----------------
 - 緑色の点滅した **"device is ready"** のメッセージを伴った画面が見えるはずです
 
     ![](img/guide/getting-started/ios/HelloWorldStandard.png)
+
 
 Xcode の問題
 ----------------

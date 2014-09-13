@@ -37,6 +37,7 @@ This guide describes how to set up your development environment for Cordova and 
 - Download and install [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents. We will be working with the Android directory.
 
+
  3. Setup New Project
 ---------------------
 
@@ -96,6 +97,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/platforms/android/manifest.jpg)
 
+
 4. Hello World
 --------------    
 
@@ -111,6 +113,7 @@ This guide describes how to set up your development environment for Cordova and 
         <h1>Hello World</h1>
         </body>
         </html>
+
 
 5A. Deploy to Simulator
 -----------------------

@@ -33,11 +33,13 @@ Windows 8 と Windows RT での開発中で、 Microsoft は "Metro スタイル
 
 [ここ](http://www.windowsstore.com/) の手順に沿って Windows ストアにアプリを登録してください。
 
+
 2. SDK と Cordova のインストール
 ----------------------------
 
 - お好きなエディションをセットアップしてください。すべての有料エディション (Professional 等) で Windows ストアアプリを作成できます。 [Express エディション](http://www.microsoft.com/visualstudio/jpn/products/visual-studio-express-products) を使用して Windows ストアアプリを作成するには、 **Express for Windows 8** が必要になります。
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。 これから **lib\windows-8** サブフォルダーと一緒に作業を進めます。
+
 
 3. 新規プロジェクトの作成
 --------------------

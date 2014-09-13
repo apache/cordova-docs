@@ -369,7 +369,6 @@ BlackberryOS обеспечение/пьес:
     
         < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
         < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
@@ -395,7 +394,6 @@ BlackberryOS обеспечение/пьес:
     
          < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
          < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
@@ -423,7 +421,6 @@ BlackberryOS обеспечение/пьес:
     
         < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
         < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
@@ -449,7 +446,6 @@ BlackberryOS обеспечение/пьес:
     
          < плагин имя = «Захвата» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
          < плагин имя = «Захвата» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя = «Контакты» value="org.apache.cordova.pim.Contact"/ >
