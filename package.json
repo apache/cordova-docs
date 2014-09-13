@@ -1,0 +1,26 @@
+{
+  "name": "cordova-docs",
+  "version": "3.6.1",
+  "description": "Documentation for the Apache Cordova",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "jodoc": "git://github.com/kant2002/jodoc-js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/cordova-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apache/cordova-docs/issues"
+  },
+  "homepage": "https://github.com/apache/cordova-docs"
+}
