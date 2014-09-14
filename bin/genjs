@@ -23,7 +23,10 @@
 var generator = require('../lib/docs_generator');
 var yargs = require('yargs')
     .describe('edge', 'Generate edge version of English docs')
-    .usage('Usage: $0 [lang] [version] [--edge]\n'
+    .count("verbose")
+    .alias('v', 'verbose')
+    .describe('verbose', 'Increase verbosity level of produced output')
+    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n'
         + '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n'
         + '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
 var argv = yargs.argv;
@@ -55,4 +58,4 @@ if (argv.edge) {
     }
 }
 
-new generator().run(language, version);
+new generator().run(language, version, argv.verbose);
