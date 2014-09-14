@@ -1,0 +1,58 @@
+#!/usr/bin/env node
+
+/*
+       Licensed to the Apache Software Foundation (ASF) under one
+       or more contributor license agreements.  See the NOTICE file
+       distributed with this work for additional information
+       regarding copyright ownership.  The ASF licenses this file
+       to you under the Apache License, Version 2.0 (the
+       "License"); you may not use this file except in compliance
+       with the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing,
+       software distributed under the License is distributed on an
+       "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+       KIND, either express or implied.  See the License for the
+       specific language governing permissions and limitations
+       under the License.
+*/
+/*jslint node:true, nomen: true */
+
+var generator = require('../lib/docs_generator');
+var yargs = require('yargs')
+    .describe('edge', 'Generate edge version of English docs')
+    .usage('Usage: $0 [lang] [version] [--edge]\n'
+        + '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n'
+        + '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
+var argv = yargs.argv;
+
+if (argv.help) {
+    yargs.showHelp();
+    process.exit(1);
+}
+
+var language = null;
+var version = null;
+if (argv.edge) {
+    language = "en";
+    version = "edge";
+} else {
+    var argumentsCount = argv._.length;
+    if (argumentsCount !== 0) {
+        if (argumentsCount === 2) {
+            language = argv._[0];
+            version = argv._[1];
+        } else {
+            var data = argv._[0];
+            if (data.length === 2) {
+                language = data;
+            } else {
+                version = data;
+            }
+        }
+    }
+}
+
+new generator().run(language, version);
