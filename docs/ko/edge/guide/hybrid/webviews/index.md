@@ -22,3 +22,4 @@ WebView를 배포 하려면 각 네이티브 프로그래밍 환경에 잘 알�
 *   아마존 화재 OS WebViews
 *   안 드 로이드 WebViews
 *   iOS WebViews
+*   Windows Phone 8.0 WebViews

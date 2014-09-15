@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -67,7 +67,41 @@ Regulamin platformy białą znajdują się w`res/xml/config.xml`.
 
 **Uwaga**: na Android 2.3, a przed białą domeny działa tylko dla `href` hiperłącza, nie odwołuje się do zasobów, takich jak obrazy i skrypty. Podejmują kroki w celu uniknięcia skrypty z trwający wstrzyknięty w aplikacji.
 
-Nawigacja do nie-białej liście domen za pośrednictwem `href` hiperłącza powoduje stronę, aby otworzyć w domyślnej przeglądarki, a nie w ramach aplikacji. (Porównaj to do iOS jest zachowanie wskazanych poniżej).
+**Uwaga**: aby zapobiec zewnętrznych adresów URL, takich jak `mailto:` z jest otwarty w widoku sieci Web Cordova, od Cordova 3.6.0, określając `origin="*"` implicity doda zasady protokoły http i https. Jeśli potrzebujesz dostępu do dodatkowych protokołów niestandardowych, a następnie należy również dodać je jawnie do białej listy. Również zobaczyć "Zewnętrznych aplikacji Biała" poniżej więcej informacji na temat uruchamiania aplikacji zewnętrznych przez adres URL.
+
+**Uwaga**: niektóre żądania sieciowe nie przejść przez Cordova białej listy. Obejmuje to < wideo > i < audio > zasoby, WebSocket połączeń (na Android 4.4 +) i ewentualnie innych niż http żądania. Na Android 4.4 + może zawierać nagłówek [CSP][8] w dokumencie HTML, aby ograniczyć dostęp do tych zasobów. W starszych wersjach systemu Android nie może być możliwe, aby ograniczyć ich.
+
+ [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+
+### Biała zewnętrznej aplikacji
+
+Cordova 3.6.0 wprowadza biała druga, dla ograniczenia które adresy URL są dozwolone do uruchamiania aplikacji zewnętrznych. W poprzednich wersjach Cordova, wszystkie adresy innych niż http, takich jak `mailto:` , `geo:` , `sms:` i `intent` , niejawnie mogły być celem <a>tagu.</a> Ze względu na możliwość aplikacji do wycieku informacji, jeśli luki XSS pozwala atakującemu na budowę dowolnego łącza, te adresy URL muszą być whitelisted, począwszy od Cordova 3.6.0.
+
+Aby umożliwić wzór adresu URL linków na uruchomienie aplikacji zewnętrznej, <access> uchwyt w swojej `config.xml` pliku, z `launch-external` atrybut zestaw.
+
+Przykłady:
+
+*   Aby umożliwić linki do wysyłania wiadomości SMS:
+    
+    <access origin="sms:*" launch-external="yes" />
+
+*   Aby umożliwić linki, aby otworzyć mapy:
+    
+    <access origin="geo:*" launch-external="yes" />
+
+*   Aby umożliwić linki do example.com wobec otworzyć w zewnętrznej przeglądarce:
+    
+    <access origin="http://example.com/*" launch-external="yes" />
+
+*   Aby umożliwić wszystkich stron nie whitelisted w zewnętrznej przeglądarce: (to jest taka sama jak poprzednie zachowanie dla nie-białej liście adresów URL)
+    
+    <access origin="http://*" launch-external="yes" /> <access origin="https://*" launch-external="yes" />
+
+*   Aby umożliwić dostęp do wszystkich adresów URL, powrotu do polityki Cordova 3.5.0 (nie zalecane):
+    
+    <access origin="*" launch-external="yes" />
+
+Podczas nawigowania do adresu URL z aplikacji, biała interal jest najpierw testowane, i jeśli adres URL nie jest whitelisted tam, następnie zewnętrznych Biała jest testowany. To oznacza, że wszelkie `http:` lub `https:` adresów URL, które odpowiadają zarówno białymi listami zostanie otwarty wewnątrz aplikacji Cordova, raczej niż uruchomienie zewnętrznej przeglądarki.
 
 ## iOS Whitelisting
 
@@ -107,9 +141,9 @@ Jeżyna 10 korzystanie z symboli wieloznacznych różni się od innych platform 
     
     <access origin="*" subdomains="true" />
 
-(Aby uzyskać więcej informacji na temat wsparcia, dokumentacji BlackBerry [dostęp do elementu][8].)
+(Aby uzyskać więcej informacji na temat wsparcia, dokumentacji BlackBerry [dostęp do elementu][9].)
 
- [8]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
+ [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
 ## iOS zmiany w 3.1.0
 
@@ -129,6 +163,6 @@ Zasady białą Windows Phone 8 znajdują się w aplikacji `config.xml` pliku.
 
 ## Tizen Whitelisting
 
-Białą zasad znajdują się w aplikacji `config.xml` pliku. Platformie opiera się na tym samym `subdomains` atrybut jako platformy BlackBerry. (Aby uzyskać więcej informacji na temat wsparcia, dokumentacji Tizen na na [dostęp do elementu][9].)
+Białą zasad znajdują się w aplikacji `config.xml` pliku. Platformie opiera się na tym samym `subdomains` atrybut jako platformy BlackBerry. (Aby uzyskać więcej informacji na temat wsparcia, dokumentacji Tizen na na [dostęp do elementu][10].)
 
- [9]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
+ [10]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm

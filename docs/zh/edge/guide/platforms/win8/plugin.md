@@ -13,17 +13,17 @@
 
 ## under the License.
 
-# Windows 8 的外掛程式
+# Windows 外掛程式
 
 此部分提供了如何在 Windows 應用商店應用程式中實現一個使用的外掛程式的詳細資訊。之前讀這篇文章，請參閱應用程式外掛程式外掛程式的結構和其共同的 JavaScript 介面的概述。 這一節繼續顯示示例*回聲*外掛程式從科爾多瓦 web 視圖的本機平臺和背部進行通信。
 
-它是重要的是請注意 Windows 8 支援直接在 JAVAscript 中，這意味著發展中國家在僅需要在特殊情況下的 '本土' 部分發展。
+很重要的是要注意 Windows 支援直接在 JAVAscript 中，這意味著發展中國家的 '本土' 的部分，只需要在特殊情況下發展。
 
-## 在 JavaScript 中創建一個 Windows 8 的外掛程式
+## 在 JavaScript 中創建一個 Windows 外掛程式
 
 這些指令是要創建一個純 JavaScript 外掛程式。理解這一點對於理解如何添加本機/託管位至關重要。
 
-Windows 8 科爾多瓦外掛程式是現有的 WinJS 提供的功能，本質上是薄薄的包裝，但假設你會想要定義多個設備你 JS 通用的介面，您通常會 1 個 JS 檔，提供了 API。
+Windows 科爾多瓦外掛程式是本質上是一個薄包裝周圍現有 WinJS 提供的功能，但假設你會想要定義為多個設備你 JS 通用介面，你通常會提供 API 的 1 JS 檔。
 
     // inside file echoplugin.js
     var EchoPlugin = {
@@ -35,9 +35,9 @@ Windows 8 科爾多瓦外掛程式是現有的 WinJS 提供的功能，本質上
     }
     
 
-## 在 Windows 8 上裡面的科爾多瓦 exec
+## 在 Windows 上的裡面科爾多瓦 exec。
 
-Cordova.exec 函數以不同的方式定義的每個平臺上，這是因為每個平臺都有它自己的應用 js 代碼和本機包裝代碼之間進行通信的方式。 但在 Windows 8 有沒有本地的包裝，所以 exec 調用是有一致性。 就像你可以直接在 EchoPlugin.echo，你 js 只有外掛程式工作：
+Cordova.exec 函數以不同的方式定義的每個平臺上，這是因為每個平臺都有它自己的應用 js 代碼和本機包裝代碼之間進行通信的方式。 但在 Windows 中，有沒有本地的包裝，所以 exec 調用有一致性。 就像你可以直接在 EchoPlugin.echo，你 js 只有外掛程式工作：
 
     // inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
     var EchoPlugin = {
@@ -52,17 +52,17 @@ Cordova.exec 函數以不同的方式定義的每個平臺上，這是因為每�
     }
     
 
-這將可能會做工精細，但是它意味著您將需要為不同的平臺，不同版本的 echoPlugin.js，可能你可以在你的實現中有不一致的問題。 作為最佳實踐，我們決定模仿裡面關於 Windows 8，cordova.exec 本機 API，所以我們可以運行相同的 JS 代碼，並不需要重寫一遍為平臺，和也利用的任何參數檢查，或由開發人員在其他平臺上工作的人員提供其他通用代碼。
+這將可能會做工精細，但是它意味著您將需要為不同的平臺，不同版本的 echoPlugin.js，可能你可以在你的實現中有不一致的問題。 作為最佳實踐，我們決定模仿 cordova.exec 上窗戶，裡面的本機 API，所以我們可以運行相同的 JS 代碼，並不需要重寫一遍為平臺，和也利用檢查，任何參數或其他常見的代碼，由開發人員在其他平臺上工作的人員提供。
 
 ## 科爾多瓦 exec 代理
 
-關於 Windows 8，科爾多瓦提供一個代理，您可以使用來註冊一個物件，它將處理所有 cordova.exec 調用的 API。
+在 Windows 上，科爾多瓦提供一個代理，您可以使用來註冊一個物件，它將處理所有的 cordova.exec 調用的 API。
 
 例如如果你想要為加速度感應器 API 提供實現，你會這樣做：
 
 cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這裡......}/ /......，其餘的在這裡的 API}） ；
 
-所以在我們的例子中，我們將假設 echoplugin.js 中的代碼處理跨平臺相關，JavaScript，和我們可以簡單地寫為 Windows 8 的代理
+所以在我們的例子中，我們將假設中 echoplugin.js 的代碼處理跨平臺相關，JavaScript，和我們可以只編寫 Windows 的代理
 
     // in file echopluginProxy.js
     cordova.commandProxy.add("EchoPlugin",{
@@ -92,9 +92,9 @@ cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這�
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
         </platform>
@@ -104,11 +104,11 @@ cordova.commandProxy.add ("加速度"{開始： function() {/ / 你代碼在這�
     </plugin>
     
 
-這給了我們工作 Windows 8 JavaScript 外掛程式，使用一個通用的檔 （echoplugin.js） 並使用代理來提供 Windows 8 只有這部分的執行 （echopluginProxy.js）。 我們怎麼做將本機/託管代碼添加到這？ 好吧我們要開始相同，唯一的區別將在 echopluginProxy 方法中我們做裡面。
+這給了我們 Windows JavaScript 外掛程式，使用一個通用的檔 （echoplugin.js） 和使用代理伺服器提供實施 （echopluginProxy.js） 的 Windows 只有部分工作。 我們怎麼做將本機/託管代碼添加到這？ 好吧我們要開始相同，唯一的區別將在 echopluginProxy 方法中我們做裡面。
 
 # WinJS 如何訪問本機/託管代碼
 
-在 Windows 8 中，WinJS 編寫的應用程式都能夠與本機代碼進行交互這間的 op 是可用於 Windows 運行時元件。 細節很多，和本指南只會掩蓋基本知識。 Microsoft 提供了更多的資訊[在這裡][2].
+在 Windows 中，WinJS 編寫的應用程式都能夠與本機代碼進行交互，這間的 op 是供 Windows 運行時元件。 細節很多，和本指南只會掩蓋基本知識。 Microsoft 提供了更多的資訊[在這裡][2].
 
  [2]: http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx
 
@@ -159,13 +159,13 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
     });
     
 
-就是這樣，我們有一個端到端 c + + 支援 js 可調用的外掛程式使用 Apache 科爾多瓦 Windows 8 中 ！
+就是這樣，我們在 Apache Cordova Windows 中有使用端到端 c + + 支援 js 調用外掛程式 ！
 
 # 技術的一些注意事項：
 
 *   回檔通常是非同步所以馬上調用回檔可能預計不會由調用方。 在實踐中，如果電話不是非同步，你應該至少使用 javascript 超時強制被稱為非同步回檔。
 *   可啟動的類可以做各種各樣的太棒了，像在調度，非同步回檔，通過您自己的物件類型、 陣列、 集合、 重載的方法和更多的事件。 我建議你做你的家庭作業。
-*   如果你堅持共同的 Windows Phone 8 和 Windows 8 SDK API 呼叫，你將能夠在 Windows Phone 8 Apache 科爾多瓦外掛程式中使用相同的運行時元件 （本機或託管位）。 ~ 敬請期待這一職務。
+*   如果你堅持共同的 Windows Phone 8.0 和 Windows SDK API 呼叫，你將能夠在 Windows Phone 8.0 Apache 科爾多瓦外掛程式中使用相同的運行時元件 （本機或託管的位）。 ~ 敬請期待這一職務。
 
 # 定義你的外掛程式
 
@@ -180,12 +180,12 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
-            <framework src="src/windows8/EchoRuntimeComponent.winmd" custom="true"/>
+            <framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/>
         </platform>
     
         <!-- other platforms -->
@@ -193,8 +193,8 @@ var res = EchoRuntimeComponent.EchoPluginRT.echo("boom") ；我們將這移動�
     </plugin>
     
 
-就是這樣，你現在有一個可分發的外掛程式，你可以與世界分享 ！ 要注意，將框架添加到 Windows 8 科爾多瓦專案的支援只是最近才補充說：，所以您將需要確保模具當前你科爾多瓦的一件事。 科爾多瓦 cli 和科爾多瓦 plugman 支援添加刪除本機支援的外掛程式。
+就是這樣，你現在有一個可分發的外掛程式，你可以與世界分享 ！ 要注意，將框架添加到 Windows 科爾多瓦專案支援最近才加入，所以您將需要確保模具當前你科爾多瓦的一件事。 科爾多瓦 cli 和科爾多瓦 plugman 支援添加刪除本機支援的外掛程式。
 
-> 科爾多瓦外掛程式添加 com.risingj.echoplugin 或 > plugman 安裝 — — 平臺 windows8 的外掛程式 — — com.risingj.echoplugin — — 專案。
+> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 HTTPs://github.com/purplecabbage/cordova-runtimecomp-echoplug

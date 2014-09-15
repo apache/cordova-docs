@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -50,11 +50,11 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       </th>
       
       <th>
-        <tt>wp8</tt> (W systemie Windows<br />Telefon 8)
+        <tt>wp8</tt><br />(Windows Phone 8)
       </th>
       
       <th>
-        <tt>Win8</tt><br />(Windows 8)
+        <tt>Windows</tt><br />(8.0, 8.1,<br />Telefon 8.1)
       </th>
       
       <th>
@@ -219,7 +219,40 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Aparat</a>
+          <a href="https://github.com/apache/cordova-plugin-battery-status/blob/master/doc/index.md">BatteryStatus</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Aparat fotograficzny</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -276,7 +309,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="y">
         </td>
         
         <td data-col="tizen"       class="n">
@@ -376,7 +409,8 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="winphone8"  class="y">
         </td>
         
-        <td data-col="win8"       class="n">
+        <td data-col="win8"       class="p">
+          częściowo
         </td>
         
         <td data-col="tizen"       class="n">
@@ -484,6 +518,42 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       
       <tr>
         <th>
+          <a href="https://github.com/apache/cordova-plugin-file-transfer/blob/master/doc/index.md">Transfer plików</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+          * Nie obsługuje onprogress ani przerwać
+        </td>
+        
+        <td data-col="firefoxos" class="n">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+          * Nie obsługuje onprogress ani przerwać
+        </td>
+        
+        <td data-col="win8"       class="y">
+          * Nie obsługuje onprogress ani przerwać
+        </td>
+        
+        <td data-col="tizen"       class="n">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
           <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Geolocation</a>
         </th>
         
@@ -526,7 +596,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         <td data-col="android"    class="y">
         </td>
         
-        <td data-col="blackberry10" class="n">
+        <td data-col="blackberry10" class="y">
         </td>
         
         <td data-col="firefoxos" class="n">
@@ -713,6 +783,39 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="tizen"       class="y">
+        </td>
+      </tr>
+      
+      <tr>
+        <th>
+          <a href="https://github.com/apache/cordova-plugin-vibration/blob/master/doc/index.md">Wibracje</a>
+        </th>
+        
+        <td data-col="amazon-fireos" class="y">
+        </td>
+        
+        <td data-col="android"    class="y">
+        </td>
+        
+        <td data-col="blackberry10" class="y">
+        </td>
+        
+        <td data-col="firefoxos" class="y">
+        </td>
+        
+        <td data-col="ios"        class="y">
+        </td>
+        
+        <td data-col="ubuntu"        class="n">
+        </td>
+        
+        <td data-col="winphone8"  class="y">
+        </td>
+        
+        <td data-col="win8"       class="n">
+        </td>
+        
+        <td data-col="tizen"       class="n">
         </td>
       </tr></table> 
       

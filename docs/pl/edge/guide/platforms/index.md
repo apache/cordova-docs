@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,15 +63,16 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Platforma Ubuntu Guide
 
-## Windows Phone
+## Windows Phone 8
 
-*   Przewodnik platformy Windows Phone
-*   Wtyczki Windows Phone
-*   Aktualizacja Windows Phone
+*   Przewodnik platformy Windows Phone 8
+*   Windows Phone 8 wtyczki
+*   Aktualizacja Windows Phone 8
 
-## Windows 8
+## Windows
 
-*   Windows 8 platformy Przewodnik
+*   Przewodnik platforma Windows
+*   Wtyczki Windows
 *   Aktualizacja systemu Windows 8
 
 ## Tizen

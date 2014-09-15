@@ -13,17 +13,17 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 ## under the License.
 
-# Windows 8-Plugins
+# Windows Plugins
 
 Dieser Abschnitt enthält Informationen für das eine Plugin für die Verwendung in einem Windows-Speicher-app zu implementieren. Finden Sie bevor Sie dies lesen einen Überblick über die Plugin-Struktur und ihre gemeinsame JavaScript-Schnittstelle Anwendung Plugins. In diesem Abschnitt weiterhin das Beispiel- *Echo* -Plugin, das zum einheitlichen Plattform und zurück von Cordova-Webview kommuniziert.
 
-Es ist wichtig zu beachten, dass Windows 8 Entwicklung direkt in Javascript, das bedeutet unterstützt, die 'native' Teile in nur erforderlich in besonderen Fällen zu entwickeln.
+Es ist wichtig zu beachten, dass Windows Entwicklung direkt in Javascript, das bedeutet unterstützt, die 'native' Teile in nur erforderlich in besonderen Fällen zu entwickeln.
 
-## Erstellen eine Windows 8-Plugin in JavaScript
+## Erstellen eine Windows-Plugin in JavaScript
 
 Diese Anweisungen sind eine reine JavaScript-Plugin erstellen. Verständnis dieser ist entscheidend für das Verständnis wie die systemeigen/verwaltet Bits hinzugefügt.
 
-Windows 8 Cordova Plugins sind im Wesentlichen einen einfachen Wrapper vorhandenen WinJS bereitgestellten Funktionen, aber vorausgesetzt, dass Ihr JS-common Interface für mehrere Geräte definieren möchten, in der Regel habt ihr 1 JS-Datei, die die API bereitstellt.
+Windows Cordova Plugins sind im Wesentlichen einen einfachen Wrapper vorhandenen WinJS bereitgestellten Funktionen, aber vorausgesetzt, dass Ihr JS-common Interface für mehrere Geräte definieren möchten, in der Regel habt ihr 1 JS-Datei, die die API bereitstellt.
 
     // inside file echoplugin.js
     var EchoPlugin = {
@@ -35,9 +35,9 @@ Windows 8 Cordova Plugins sind im Wesentlichen einen einfachen Wrapper vorhanden
     }
     
 
-## Innen Cordova Exec auf Windows 8
+## Innen Cordova Exec unter Windows
 
-Die cordova.exec-Funktion ist auf jeder Plattform unterschiedlich definiert, das ist, weil jede Plattform hat seine eigene Art der Kommunikation zwischen der Anwendung-Js-Code und dem systemeigenen Wrapper-Code. Doch bei Windows 8 gibt es keine systemeigenen Wrapper, also der Exec-Aufruf für Konsistenz gibt. Sie konnte Ihre Js nur Plugin direkt in EchoPlugin.echo, arbeiten so etwas wie:
+Die cordova.exec-Funktion ist auf jeder Plattform unterschiedlich definiert, das ist, weil jede Plattform hat seine eigene Art der Kommunikation zwischen der Anwendung-Js-Code und dem systemeigenen Wrapper-Code. Doch im Falle von Windows, gibt es keine systemeigenen Wrapper also der Exec-Aufruf für Konsistenz gibt. Sie konnte Ihre Js nur Plugin direkt in EchoPlugin.echo, arbeiten so etwas wie:
 
     // inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
     var EchoPlugin = {
@@ -52,17 +52,17 @@ Die cordova.exec-Funktion ist auf jeder Plattform unterschiedlich definiert, das
     }
     
 
-Dies würde/könnte funktionieren, aber es bedeutet, dass für verschiedene Plattformen Sie verschiedene Versionen von echoPlugin.js benötigen, und vielleicht Sie Probleme mit Inkonsistenzen in Ihre Implementierungen hätten. Als bewährte Methode beschlossen wir, eine native API innerhalb cordova.exec auf Windows 8 zu imitieren, so konnte wir den gleichen JS-Code führen und nicht haben, es für die Plattform neu zu schreiben, und auch nutzen Parameterüberprüfung oder anderen gemeinsamen Code zur Verfügung gestellt von Entwicklern, die auf anderen Plattformen arbeiteten.
+Dies würde/könnte funktionieren, aber es bedeutet, dass für verschiedene Plattformen Sie verschiedene Versionen von echoPlugin.js benötigen, und vielleicht Sie Probleme mit Inkonsistenzen in Ihre Implementierungen hätten. Als bewährte Methode beschlossen wir, eine native API innerhalb cordova.exec unter Windows zu imitieren, also wir könnten führen Sie den gleichen JS-Code nicht haben, es für die Plattform neu zu schreiben und auch nutzen jede Parameterprüfung oder anderen gemeinsamen Code zur Verfügung gestellt von Entwicklern, die auf anderen Plattformen arbeiteten.
 
 ## Cordova-Exec-proxy
 
-Auf Windows 8 bietet Cordova einen Proxy, den Sie verwenden können, um ein Objekt zu registrieren, die alle cordova.exec Aufrufe an eine API behandelt wird.
+Unter Windows bietet Cordova einen Proxy, den Sie verwenden können, um ein Objekt zu registrieren, die alle cordova.exec Aufrufe an eine API behandelt wird.
 
 Zum Beispiel wenn Sie die Implementierung für die Beschleunigungsmesser-API bereitstellen wollte, würde Sie dies tun:
 
 cordova.commandProxy.add ("Accelerometer", {Start: function() {/ / Ihr code hier...} / /... und der Rest der API hier});
 
-Also in unserem Fall, wir annehmen, dass der Code in echoplugin.js ist cross-Plattform entsprechenden Umgang mit JavaScript, und wir kann einfach schreiben, ein Proxy für Windows 8
+Also in unserem Fall, wir annehmen, dass der Code in echoplugin.js ist cross-Plattform entsprechenden Umgang mit JavaScript, und wir kann einfach schreiben, ein Proxy für Windows
 
     // in file echopluginProxy.js
     cordova.commandProxy.add("EchoPlugin",{
@@ -92,9 +92,9 @@ Wenn wir wollen, dass Benutzer unseres Plugins, einfach unser Plugin installiere
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
         </platform>
@@ -104,11 +104,11 @@ Wenn wir wollen, dass Benutzer unseres Plugins, einfach unser Plugin installiere
     </plugin>
     
 
-Dies gibt uns ein funktionierendes Windows 8 JavaScript-Plugin, das eine gemeinsame Datei (echoplugin.js) verwendet und verwendet einen Proxy für den Windows 8 nur Teil der Umsetzung (echopluginProxy.js). Wie füge wir Native/verwaltetem Code dazu? Nun werden wir gleich beginnen, der einzige Unterschied wird sein, was wir tun, innen in EchopluginProxy Methoden.
+Dies gibt uns eine funktionierende Windows-JavaScript-Plugin, das eine gemeinsame Datei (echoplugin.js) verwendet, und verwendet einen Proxy, um den einzigen Teil der Windows-Implementierung (echopluginProxy.js) zur Verfügung zu stellen. Wie füge wir Native/verwaltetem Code dazu? Nun werden wir gleich beginnen, der einzige Unterschied wird sein, was wir tun, innen in EchopluginProxy Methoden.
 
 # Wie WinJS Native/verwaltetem Code zugreift
 
-In Windows 8 WinJS erstellte apps mit systemeigenem Code interagieren sind ist diese DLLs für Windows-Runtime-Komponenten verfügbar. Die Details sind zahlreich, und diese Anleitung deckt nur die Grundlagen. Microsoft bietet viel mehr Info [hier][2].
+Unter Windows WinJS erstellte apps mit systemeigenem Code interagieren sind ist diese DLLs für Windows-Runtime-Komponenten verfügbar. Die Details sind zahlreich, und diese Anleitung deckt nur die Grundlagen. Microsoft bietet viel mehr Info [hier][2].
 
  [2]: http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx
 
@@ -159,13 +159,13 @@ Var Res = EchoRuntimeComponent.EchoPluginRT.echo("boom"); Verschieben dies in un
     });
     
 
-Und das war 's, wir haben eine durchgehende C++ unterstützt Js aufrufbaren Plugin für den Einsatz in Apache Cordova Windows 8!
+Und das war's, wir haben eine durchgehende C++ unterstützt Js aufrufbaren Plugin für den Einsatz in Apache Cordova Windows!
 
 # Einige technische Hinweise:
 
 *   der Rückruf ist in der Regel Async, so dass er den Rückruf sofort vom Aufrufer wahrscheinlich nicht erwartet wird. In der Praxis wenn der Aufruf nicht Async, sollten Sie mindestens einen Javascript-Timeout verwenden zwingen den Rückruf asynchron aufgerufen werden.
 *   Aktivierbare Klassen können alle Arten von awesome, wie Event dispatching, asynchronen Rückrufe, übergeben, eigene Objekttypen, Arrays, Sammlungen, überladene Methoden und vieles mehr tun. Ich empfehle, dass Sie Ihre Hausaufgaben machen.
-*   Wenn Sie häufige Windows Phone 8 und Windows 8 SDK API-Aufrufe halten, werden Sie in der Lage, die gleiche Runtime-Komponente (native oder verwalteten Bits) in einem Windows Phone 8 Apache Cordova-Plugin zu verwenden. ~ stay tuned für diese Stelle.
+*   Wenn Sie häufige Windows Phone 8.0 und Windows SDK-API-Aufrufe halten, werden Sie in der Lage, die gleiche Runtime-Komponente (native oder verwalteten Bits) in einem Windows Phone 8.0 Apache Cordova-Plugin zu verwenden. ~ stay tuned für diese Stelle.
 
 # Definieren Ihr plugin
 
@@ -180,12 +180,12 @@ Jetzt, da wir eine Plugin arbeiten, müssen wir die Plugin-Definition von frühe
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
-            <framework src="src/windows8/EchoRuntimeComponent.winmd" custom="true"/>
+            <framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/>
         </platform>
     
         <!-- other platforms -->
@@ -193,8 +193,8 @@ Jetzt, da wir eine Plugin arbeiten, müssen wir die Plugin-Definition von frühe
     </plugin>
     
 
-Das ist es, Sie haben jetzt eine verteilbare Plugin, die Sie mit der Welt teilen können! Folgendes ist zu beachten, Unterstützung für das Hinzufügen von Rahmen zu Windows 8 Cordova Projekt erst kürzlich hinzugefügt wurde, müssen Sie sicherstellen, dass Ihre aktuellen Werkzeugmaschinen Cordova. Cordova-Cli und Cordova-Plugman unterstützt hinzufügen, Entfernen von native unterstützt Plugins.
+Das ist es, Sie haben jetzt eine verteilbare Plugin, die Sie mit der Welt teilen können! Folgendes ist zu beachten, Unterstützung für das Hinzufügen von Rahmen zu Windows-Cordova-Projekt erst kürzlich hinzugefügt wurde, müssen Sie sicherstellen, dass Ihre aktuellen Werkzeugmaschinen Cordova. Cordova-Cli und Cordova-Plugman unterstützt hinzufügen, Entfernen von native unterstützt Plugins.
 
-> Cordova Plugin hinzufügen com.risingj.echoplugin oder > Plugman installieren--Plattform windows8 Plugin--com.risingj.echoplugin--Projekt.
+> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/Cordova-runtimecomp-echoplug

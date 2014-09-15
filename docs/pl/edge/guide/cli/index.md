@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -29,12 +29,12 @@ Aby dodać obsługę lub przebudować projekt dla którejkolwiek z platform, trz
 *   Android (Mac, Linux, Windows)
 *   Jeżyna 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Systemu Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
 Na komputerze Mac wiersza polecenia jest dostępne za pośrednictwem aplikacji *terminala* . Na komputerze jest on dostępny jako *polecenia* w *akcesoria*.
 
-**Uwaga**: dla platformy tylko w systemie Windows, można jeszcze zrobić swój rozwój na sprzęcie Mac przez w środowisku wirtualnej lub w trybie podwójnego rozruchu z systemem Windows. Dla dostępnych opcji zobacz przewodnik platformy Windows Phone lub podręczniku platformy Windows 8.
+**Uwaga**: dla platformy tylko w systemie Windows, można jeszcze zrobić swój rozwój na sprzęcie Mac przez w środowisku wirtualnej lub w trybie podwójnego rozruchu z systemem Windows. Dla dostępnych opcji zobacz przewodnik platformy Windows Phone 8 lub przewodnik platformy Windows.
 
 Bardziej prawdopodobne jest to, aby uruchomić CLI z różnych maszyn, bardziej sensowne jest do utrzymania źródła zdalnego repozytorium kodu, którego aktywa można ciągnąć w dół do lokalnych katalogów roboczych.
 
@@ -108,12 +108,7 @@ Przed dokonaniem kompilacji projektu, należy określić zestaw platform docelow
 
 Uruchomić wszelki od tych z pewien Windows maszyna, gdzie *wp* odnosi się do różnych wersji systemu operacyjnego Windows Phone:
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        dodać platformy cordova $ wp8 $ cordova platformy windows $ cordova platformy dodać dodać dodać Amazonka fireos $ cordova platformy android $ cordova platformy dodać blackberry10 $ cordova platformy dodać firefoxos
     
 
 Biegać ten wobec sprawdzanie twój bieżący zestaw platform:

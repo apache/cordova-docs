@@ -22,3 +22,4 @@ Wenn einen WebView bereitstellen möchten, müssen Sie mit jedem native Programm
 *   Amazon Fire OS Webansichten für
 *   Android Webansichten für
 *   iOS Webansichten für
+*   Windows Phone 8,0 Webansichten für

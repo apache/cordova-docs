@@ -22,3 +22,4 @@ Para implementar un WebView, necesitas estar familiarizado con cada entorno de p
 *   Amazon fuego OS WebViews
 *   Android WebViews
 *   iOS WebViews
+*   Windows Phone 8,0 WebViews

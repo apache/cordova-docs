@@ -69,7 +69,7 @@ Le regole specifiche della piattaforma whitelisting si trovano in`res/xml/config
 
 **Nota**: al fine di prevenire gli URL esterni come `mailto:` da essere aperto in webview Cordova a partire da Cordova 3.6.0, specificando `origin="*"` contenuto aggiungerà le regole per i protocolli http e https. Se si richiede l'accesso a ulteriori protocolli personalizzati, poi si dovrebbe anche aggiungere in modo esplicito alla whitelist. Vedi anche "Esterno applicazione Whitelist" sotto per ulteriori informazioni sull'avvio di applicazioni esterne di URL.
 
-**NOTA**: Alcune richieste di rete non andare attraverso la Cordova Whitelist. Questo include <video> e <audio> resouces WebSocket connessioni (4.4 + Android) e possibilmente altre richieste non http. 4.4 + Android, è possibile includere un [CSP][8] intestazione nei documenti HTML per limitare l'accesso a tali risorse. Su vecchie versioni di Android, potrebbe non essere possibile limitarli.
+**Nota**: alcune richieste di rete non andare attraverso la Cordova Whitelist. Questo include < video > e < audio > resouces WebSocket connessioni (4.4 + Android) e possibilmente altre richieste non http. 4.4 + Android, è possibile includere un'intestazione [CSP][8] nei documenti HTML per limitare l'accesso a tali risorse. Su vecchie versioni di Android, potrebbe non essere possibile limitarli.
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -111,7 +111,7 @@ Origini specificati senza un protocollo, ad esempio `www.apache.org` anziché `h
 
 Caratteri jolly sulla piattaforma iOS sono più flessibile nella specifica [W3C Widget accesso][1] . Ad esempio, il seguente accede tutti i sottodomini e domini di primo livello come `.com` e `.net` :
 
-        < accesso origine = "*.google. *" / >
+        <access origin="*.google.*" />
     
 
 A differenza della piattaforma Android sopra indicata, navigando per domini non whitelisted tramite `href` collegamento ipertestuale su iOS impedisce la pagina di apertura a tutti.
@@ -124,17 +124,17 @@ Uso di blackBerry 10 di caratteri jolly si differenzia da altre piattaforme in d
 
 *   Qualsiasi contenuto accessibile da `XMLHttpRequest` deve essere dichiarato in modo esplicito. L'impostazione di `origin="*"` non funziona in questo caso. In alternativa, tutta la sicurezza web può essere disattivata utilizzando il `WebSecurity` preferenza descritto in configurazione del BlackBerry:
     
-        < nome preferenza = "websecurity" value = "disable" / >
+        <preference name="websecurity" value="disable" />
         
 
 *   In alternativa all'impostazione `*.domain` , impostare un ulteriore `subdomains` attribuire a `true` . Deve essere impostato su `false` per impostazione predefinita. Ad esempio, il seguente consente l'accesso a `google.com` , `maps.google.com` , e `docs.google.com` :
     
-        < accesso origine = sottodomini "http://google.com" = "true" / >
+        <access origin="http://google.com" subdomains="true" />
         
     
     La seguente restringe accedi a `google.com` :
     
-        < accesso origine = sottodomini "http://google.com" = "false" / >
+        <access origin="http://google.com" subdomains="false" />
         
     
     Specificare l'accesso a tutti i domini, tra cui il locale `file://` protocollo:

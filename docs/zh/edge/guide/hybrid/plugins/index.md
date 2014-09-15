@@ -134,8 +134,8 @@ JavaScript 提供了面向前面的介面，使外掛程式的也許最重要的
 *   Android 外掛程式
 *   iOS 外掛程式
 *   黑莓 10 外掛程式
-*   Windows Phone 外掛程式
-*   Windows 8 的外掛程式
+*   Windows Phone 8 外掛程式
+*   Windows 外掛程式
 
 Tizen 平臺不支援外掛程式。
 

@@ -13,7 +13,7 @@ Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów 
 
 ## under the License.
 
-# Wtyczki Windows Phone
+# Windows Phone 8 wtyczki
 
 Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego plugin na platformie Windows Phone. Przed przeczytaniem, zobacz zastosowanie pluginów omówienie struktury wtyczki i jego wspólny interfejs JavaScript. W tej sekcji w dalszym ciągu wykazują wtyczce *echo* próbki, który komunikuje się z widoku sieci Web Cordova do macierzystego platformy i z powrotem.
 

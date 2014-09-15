@@ -104,7 +104,7 @@ L'ensemble traditionnel de plugins de Cordova core sont les suivantes :
  [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
  [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
  [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
  [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
  [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
  [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture

@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Przewodnik platformy Windows Phone
+# Przewodnik platformy Windows Phone 8
 
 Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova aplikacje na urządzenia Windows Phone. Skupia się na Windows Phone 8, ale zapewnia dodatkowe szczegóły na temat wsparcia Windows Phone 7.
 
@@ -21,8 +21,8 @@ To pokazuje, jak używać albo powłoki Windows Phone specjalne narzędzia do tw
 
 Zobacz następujące szczegółowe informacje specyficzne dla platformy Windows Phone:
 
-*   Wtyczki Windows Phone
-*   Aktualizacja Windows Phone
+*   Windows Phone 8 wtyczki
+*   Aktualizacja Windows Phone 8
 
 Na platformie Windows Phone 8 Cordova widoku sieci Web polega na Internet Explorer 10 jako jego silnik renderujący, więc jako praktyczny można użyć IE10 jest rozbudowanym debuggerem do badania wszelkich treści internetowych, które nie wywołać Cordova API. Windows Phone autora blogu zawiera [pomocne wskazówki][1] na temat wsparcia IE10 wraz z porównywalnych WebKit przeglądarki.
 
@@ -75,7 +75,7 @@ Jeśli chcesz użyć Cordova w środku Windows Phone powłoka narzędzia w poł�
 
  [9]: http://cordova.apache.org
 
-Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i wtyczki Windows Phone na dane specyficzne dla platformy Windows Phone.
+Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i Windows Phone 8 wtyczki szczegóły specyficzne dla platformy Windows Phone.
 
 ## Instalowania zestawu SDK
 
