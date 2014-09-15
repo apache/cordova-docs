@@ -72,6 +72,7 @@ Cada *Plataforma guía* a continuación te dice lo que necesitas saber para conf
 ## Windows
 
 *   Guía de la plataforma Windows
+*   Windows Plugins
 *   Actualización de Windows 8
 
 ## Tizen

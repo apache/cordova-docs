@@ -134,8 +134,8 @@ Una vez se define JavaScript para tu plugin, debes complementarlo con por lo men
 *   Android Plugins
 *   iOS Plugins
 *   BlackBerry 10 Plugins
-*   Windows Phone Plugins
-*   Plugins de Windows 8
+*   Windows Phone 8 Plugins
+*   Windows Plugins
 
 La plataforma Tizen no admite plugins.
 

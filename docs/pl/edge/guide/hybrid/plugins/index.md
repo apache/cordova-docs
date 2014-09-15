@@ -1,6 +1,6 @@
 * * *
 
-license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,8 +134,8 @@ Po zdefiniowaniu JavaScript dla wtyczki, trzeba uzupełnić z co najmniej jeden 
 *   Wtyczek Android
 *   iOS wtyczek
 *   Jeżyna 10 wtyczek
-*   Wtyczki Windows Phone
-*   Wtyczki Windows 8
+*   Windows Phone 8 wtyczki
+*   Wtyczki Windows
 
 Platforma Tizen nie obsługuje wtyczek.
 

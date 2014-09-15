@@ -69,7 +69,7 @@
 
 **注**: ように外部 Url を防ぐために `mailto:` コルドバ 3.6.0、現在コルドバ webview で開かれているからの指定 `origin="*"` 場中 http および https プロトコルのルールが追加されます。 追加のカスタム プロトコルへのアクセスが必要な場合必要がありますもしてに追加明示的にホワイト リストに。 また「外部アプリケーション ホワイト リスト」URL を外部アプリケーションの起動の詳細について下記参照してください。
 
-**メモ**: いくつかネットワーク要求コルドバ ホワイト リストを通過しません。これが含まれています <video> と <audio> 資源、WebSocket 接続 (Android 4.4 +)、およびその他の非 http 要求。アンドロイド 4.4 + を含めることができます、 [CSP][8] これらのリソースへのアクセスを制限、HTML ドキュメント内のヘッダー。Android の古いバージョンはそれらを制限できないことがあります。
+**注**: いくつかネットワーク要求通過しないコルドバ ホワイト リスト。 < ビデオ > これが含まれていますと < オーディオ > 資源、WebSocket 接続 (Android 4.4 +)、および多分他非 http 要求。 アンドロイド 4.4 +、それらのリソースへのアクセスを制限する HTML ドキュメントで、 [CSP][8]ヘッダーを含めることができます。 Android の古いバージョンはそれらを制限できないことがあります。
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -111,7 +111,7 @@ Interal ホワイト リストは、まず、テストからアプリケーシ�
 
 IOS プラットフォーム上のワイルドカードは、 [W3C のウィジェット アクセス][1]仕様よりも柔軟性です。 たとえば、次にアクセスするすべてのサブドメインおよびトップレベル ドメインなど、 `.com` と `.net` ：
 
-        < アクセス始点 ="*.google. *"/>
+        <access origin="*.google.*" />
     
 
 ホワイト リストに登録して非経由でドメインへの移動、上述した Android のプラットフォームとは異なり `href` iOS 上のハイパーリンクが、まったく開いてページを防ぎます。
@@ -124,17 +124,17 @@ IOS プラットフォーム上のワイルドカードは、 [W3C のウィジ�
 
 *   によってアクセスできるコンテンツ `XMLHttpRequest` 明示的に宣言する必要があります。 設定 `origin="*"` この場合動作しません。 また、すべての web セキュリティできない可能性がありますを使用して、 `WebSecurity` 好みのブラックベリーの構成で説明：
     
-        < 設定名"websecurity"の値を = =「無効」/>
+        <preference name="websecurity" value="disable" />
         
 
 *   設定に代わるものとして `*.domain` 、セット、 `subdomains` 属性を `true` 。 設定する必要があります `false` デフォルトで。 たとえば、次のようにアクセスをできます `google.com` 、 `maps.google.com` 、および `docs.google.com` :
     
-        < アクセス始点がサブドメイン"http://google.com"= ="true"/>
+        <access origin="http://google.com" subdomains="true" />
         
     
     次の限定にアクセスする `google.com` :
     
-        < アクセス始点がサブドメイン"http://google.com"= ="false"/>
+        <access origin="http://google.com" subdomains="false" />
         
     
     ローカルを含むすべてのドメインへのアクセスを指定する `file://` プロトコル。

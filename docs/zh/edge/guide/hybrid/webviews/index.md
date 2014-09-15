@@ -22,3 +22,4 @@
 *   亞馬遜火 OS WebViews
 *   Android WebViews
 *   WebViews iOS
+*   Windows Phone 8.0 WebViews

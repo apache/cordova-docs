@@ -75,7 +75,7 @@ Si desea utilizar herramientas de shell de Windows Phone-centrado de Cordova en 
 
  [9]: http://cordova.apache.org
 
-Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y Windows Phone Plugins para detalles específicos de la plataforma de Windows Phone.
+Estas herramientas de shell le permiten crear, construir y ejecutar aplicaciones de Windows Phone. Para obtener información sobre la interfaz de línea de comandos adicional que permite plugin características en todas las plataformas, ver usando Plugman para gestionar Plugins. Consulte aplicación Plugins para orientación sobre cómo desarrollar plugins y Windows Phone 8 Plugins para detalles específicos de la plataforma de Windows Phone.
 
 ## Instalar el SDK
 

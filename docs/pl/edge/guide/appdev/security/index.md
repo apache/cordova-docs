@@ -33,6 +33,8 @@ Niniejszy Przewodnik obejmuje kilka zabezpieczeń najlepszych praktyk, które na
 
 *   Białą domeny nie działa na Android API 10 i poniżej i WP8 dla ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
 
+*   Na Android, jak Cordova 3.6.0 to teraz niezbędne do białej listy adresów od aplikacji, jeśli aplikacja generuje linki do tych adresów URL. Jeśli użytkownik aplikacji generuje `tel:` , `geo:` , `sms:` , `intent:` lub podobne adresy URL, lub łącza do zawartości zewnętrznej, których można oczekiwać, aby otworzyć w przeglądarce użytkownika, a następnie trzeba będzie zaktualizować swoje Biała. Zobacz przewodnik Biała lista szczegóły.
+
 ## Ramek i mechanizmu zwrotnego Id
 
 Jeśli zawartość jest dostarczana w ramce z domeny Białej liście, że domeny będą mieli dostęp do mostu rodzimych Cordova. Oznacza to, że jeśli whitelist sieci reklamy firm i te reklamy poprzez iframe, to jest możliwe, że złośliwe reklamy będą mogli zerwać z iframe i wykonania szkodliwego działania. W związku z tym ogólnie nie należy używać ramek chyba kontrola serwera obsługującego zawartości iframe. Należy również pamiętać, że istnieją pluginy trzeciej dostępne do obsługi sieci reklamowych. Należy pamiętać, że to stwierdzenie nie jest prawdziwe dla iOS, który przechwytuje wszystko łącznie z połączeniami iframe.

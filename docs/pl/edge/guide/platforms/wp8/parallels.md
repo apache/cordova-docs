@@ -34,4 +34,4 @@ Ta sekcja pokazuje jak skonfigurować Parallels Desktop na komputerze Mac, tak, 
  [2]: img/guide/platforms/wp8/parallel_cpu_opts.png
  [3]: img/guide/platforms/wp8/parallel_optimize_opts.png
 
-Po wykonaniu tych kroków, jesteś gotowy do zainstalowania zestawu SDK Windows Phone. Zobacz przewodnik platformy Windows Phone, szczegóły.
+Po wykonaniu tych kroków, jesteś gotowy do zainstalowania zestawu SDK Windows Phone. Zobacz przewodnik platformy Windows Phone 8 szczegóły.

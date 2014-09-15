@@ -72,6 +72,7 @@
 ## Windows
 
 *   Руководство по платформе Windows
+*   Windows плагины
 *   Обновление для Windows 8
 
 ## Tizen

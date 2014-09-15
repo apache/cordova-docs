@@ -95,6 +95,10 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
     
     > Interfejs API do wibrować urządzenia.
 
+*   [Pasek stanu][20]
+    
+    > API dla Wyświetlono, ukrywanie i konfigurowania tła paska stanu.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -106,12 +110,13 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
  [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
  [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
  [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
  [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
  [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
  [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Non-angielski tłumaczenie tych dokumentów plugin można znaleźć przez patrząc na starsze wersje dokumentacji Cordova. Użyj menu rozwijanego w bardzo prawym górnym rogu tej strony, aby przełączyć wersje.

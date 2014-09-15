@@ -72,6 +72,7 @@
 ## Windows
 
 *   Windows 平臺指南
+*   Windows 外掛程式
 *   升級 Windows 8
 
 ## Tizen

@@ -75,7 +75,7 @@ Si vous souhaitez utiliser les outils de shell Windows Phone-centrée de Cordova
 
  [9]: http://cordova.apache.org
 
-Ces outils de coquille permettent de créer, construire et exécuter des applications Windows Phone. Pour plus d'informations sur l'interface de ligne de commande supplémentaire qui active les fonctionnalités de plugin sur toutes les plateformes, voir Plugman à l'aide à gérer les Plugins. Voir Application Plugins pour des conseils sur la façon de développer des plugins et Windows Phone Plugins pour plus d'informations spécifiques à la plate-forme Windows Phone.
+Ces outils de coquille permettent de créer, construire et exécuter des applications Windows Phone. Pour plus d'informations sur l'interface de ligne de commande supplémentaire qui active les fonctionnalités de plugin sur toutes les plateformes, voir Plugman à l'aide à gérer les Plugins. Voir Application Plugins pour des conseils sur la façon de développer des plugins et Windows Phone 7 Plugins pour plus d'informations spécifiques à la plate-forme Windows Phone.
 
 ## Installer le SDK
 

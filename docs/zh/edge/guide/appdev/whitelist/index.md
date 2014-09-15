@@ -69,52 +69,52 @@
 
 **注**： 為了防止外部 Url 如 `mailto:` 從在科爾多瓦科爾多瓦 3.6.0，如 web 視圖中打開指定 `origin="*"` 含蓄將添加 HTTP 和 HTTPs 協定的規則。 如果你需要額外的自訂協定訪問，然後你應該也添加它們明確地到白名單。 也請參見"外部應用程式白名單"下面啟動外部應用程式的 URL 的詳細資訊。
 
-**請注意**： 有些網路請求不經過科爾多瓦白名單。這包括 <video> 和 <audio> 資源，WebSocket 連接 （在 Android 4.4 +），以及可能的其他非 HTTP 請求。關於 Android 4.4 +，您可以包括 [CSP][8] 標頭在你的 HTML 文檔，以限制對這些資源的訪問。較早版本的 android 系統，它不可能對他們進行限制。
+**注意**： 有些網路請求不經過科爾多瓦白名單。 這包括 < 視頻 > 和 < 音訊 > 資源、 WebSocket 連接 （關於 Android 4.4 +） 和其他可能的非 HTTP 請求。 Android 4.4 +，您可以在 HTML 文檔，以限制對這些資源的訪問包括[CSP][8]的標頭。 較早版本的 android 系統，它不可能對他們進行限制。
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
 ### 外部應用程式白名單
 
-科爾多瓦 3.6.0 介紹了第二次的白名單，限制允許使用 Url 來啟動外部應用程式。 在以前版本的科爾多瓦，所有非 HTTP Url，如 `mailto:` ， `geo:` ， `sms:` 和 `intent` ，被隱式地允許的目標<a>標記。</a> 因為潛在的洩漏資訊到應用程式，如果一個 XSS 漏洞，允許攻擊者構建任意的連結，這些 Url 必須列入白名單，以及開始在科爾多瓦 3.6.0。
+科爾多瓦 3.6.0 版介紹了第二個白名單中，限制允許使用 Url 來啟動外部應用程式。 在以前版本的科爾多瓦，所有的非 HTTP Url，如 `mailto:` ， `geo:` ， `sms:` 和 `intent` ，被隱式允許的目標<a>標記。</a> 由於洩漏資訊中的應用潛力，如果一個 XSS 漏洞，使得攻擊者能夠構建任意的連結，這些 Url 必須列入白名單，以及科爾多瓦 3.6.0 版開始。
 
-若要允許啟動外部應用程式的 URL 模式，請使用 <access> 標記在你 `config.xml` 檔中，用 `launch-external` 屬性設置。
+若要允許啟動外部應用程式的 URL 模式，請使用 <access> 標記在你 `config.xml` 檔中，與 `launch-external` 屬性設置。
 
-例子：
+示例：
 
 *   若要允許發送 SMS 消息的連結：
     
     <access origin="sms:*" launch-external="yes" />
 
-*   若要允許打開地圖的連結：
+*   若要允許連結打開映射：
     
     <access origin="geo:*" launch-external="yes" />
 
-*   若要允許 example.com 在外部瀏覽器中打開的連結：
+*   若要允許在外部瀏覽器中打開的連結的連結：
     
     <access origin="http://example.com/*" launch-external="yes" />
 
-*   允許在外部瀏覽器中打開的所有非白名單網站： （這是的先前行為的非白名單的 Url 相同）
+*   允許在外部瀏覽器中打開的所有非白名單網站： （這是先前的行為，非白名單的 url 相同）
     
     <access origin="http://*" launch-external="yes" /> <access origin="https://*" launch-external="yes" />
 
-*   要允許訪問所有的 url，恢復到科爾多瓦 3.5.0 政策 （不推薦）：
+*   若要允許訪問所有的 url，恢復到科爾多瓦 3.5.0 政策 （不推薦）：
     
     <access origin="*" launch-external="yes" />
 
-當導航到一個 URL 從應用程式內，內部白名單第一，測試，如果 URL 不是有白名單，然後測試外部的白名單。 這意味著，任何 `http:` 或 `https:` 匹配這兩個白名單的 Url 將在科爾多瓦的應用程式，打開，而不是啟動外部瀏覽器。
+當導航到一個 URL 從應用程式內，內部白名單第一，測試，如果 URL 未有列入白名單，然後測試外部的白名單。 這意味著，任何 `http:` 或 `https:` 匹配這兩個白名單的 Url 在科爾多瓦的應用程式，將會打開，而不是啟動外部瀏覽器。
 
 ## iOS 白名單
 
-該平臺的白名單規則命名的應用程式目錄中找到 `config.xml` 檔。
+在指定的應用程式目錄中找到了該平臺的白名單規則 `config.xml` 檔。
 
-沒有一個協定，如指定的起源 `www.apache.org` 而不是 `http://www.apache.org` ，預設為所有的 `http` ， `https` ， `ftp` ，和 `ftps` 計畫。
+沒有一種協定，如指定的起源 `www.apache.org` 而不是 `http://www.apache.org` ，預設為所有的 `http` ， `https` ， `ftp` ，和 `ftps` 方案。
 
-萬用字元在 iOS 平臺上的是比在[W3C 小部件訪問][1]規範更靈活。 例如，以下訪問所有子域和頂層網域如 `.com` 和 `.net` ：
+萬用字元在 iOS 平臺上的是比在[W3C 部件訪問][1]規範更加靈活。 例如，以下訪問所有子域和頂層網域名如 `.com` 和 `.net` ：
 
-        < 訪問來源 ="*.google.*"/ >
+        <access origin="*.google.*" />
     
 
-與不同的 Android 平臺上文指出的導航到非白名單域通過 `href` iOS 上的超連結可以防止頁面在所有開放。
+與 Android 平臺上文指出的導航到非白名單域通過不同 `href` iOS 上的超連結可防止頁面打開根本。
 
 ## 黑莓 10 白名單
 
@@ -124,17 +124,17 @@
 
 *   通過訪問任何內容 `XMLHttpRequest` 必須顯式聲明。 設置 `origin="*"` 不能在這種情況下。 另外，所有 web 安全性可能會都禁用使用 `WebSecurity` 偏好黑莓手機配置中所述：
     
-        < 首選項名稱 = 值"websecurity"="禁用"/ >
+        <preference name="websecurity" value="disable" />
         
 
-*   作為替代設置 `*.domain` ，設置附加 `subdomains` 屬性到 `true` 。 它應設置為 `false` ，預設情況。 例如，以下允許訪問 `google.com` ， `maps.google.com` ，和 `docs.google.com` ：
+*   作為替代設置 `*.domain` ，設置附加 `subdomains` 歸因於 `true` 。 應將其設置為 `false` ，預設情況。 例如，以下允許訪問 `google.com` ， `maps.google.com` ，和 `docs.google.com` ：
     
-        < 訪問來源 ="HTTP://google.com"的子域 ="true"/ >
+        <access origin="http://google.com" subdomains="true" />
         
     
-    以下變窄訪問到 `google.com` ：
+    以下縮小訪問到 `google.com` ：
     
-        < 訪問來源 ="HTTP://google.com"的子域 ="false"/ >
+        <access origin="http://google.com" subdomains="false" />
         
     
     指定訪問到所有的域，包括當地 `file://` 協定：
@@ -145,24 +145,24 @@
 
  [9]: https://developer.blackberry.com/html5/documentation/ww_developing/Access_element_834677_11.html
 
-## 3.1.0 的 iOS 變化
+## 3.1.0 iOS 變化
 
-在版本之前 3.1.0，科爾多瓦 iOS 包括一些非標準的擴展到其他科爾多瓦平臺都支援的域 whilelisting 方案。 自 3.1.0，iOS 白名單現在符合資源白名單語法描述了本文檔的頂部。 如果您從 pre-3.1.0，升級，您在使用這些擴展，您可能需要更改 `config.xml` 才能像以前一樣繼續白名單組相同的資源檔。
+在 3.1.0 版之前, 科爾多瓦 iOS 包括一些非標準的擴展到其他科爾多瓦平臺都支援的域 whilelisting 方案。 截至 3.1.0、 iOS 白名單現在符合本文檔前面所述的資源白名單語法。 如果您從預 3.1.0、 升級和使用這些擴展，您可能需要更改 `config.xml` 檔，以便像以前一樣繼續白名單相同的資源集。
 
-具體來說，這些模式需要更新：
+具體而言，這些模式需要更新：
 
-*   " `apache.org` "（無協定）： 這將先前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 的協定。 將更改為" `*://apache.org/*` "，包括所有協定，或都包括一條線為每個您需要支援的協定。
+*   " `apache.org` "（沒有協定）： 這將以前匹配 `http` ， `https` ， `ftp` ，和 `ftps` 協定。 將更改為" `*://apache.org/*` "，包括所有協定，或都包括一條線為每個您需要支援的協定。
 
-*   " `http://apache.*` "（萬用字元域的末尾）： 這以前將匹配所有頂級-級別-域，包括所有可能的兩個字母 Tld （但不是有用的域喜歡.co.uk)。 為每個 TLD，您實際上控制，並且需要到白名單中包括一條線。
+*   " `http://apache.*` "（萬用字元域的末尾）： 這以前將匹配所有頂級-級別-域，包括所有可能的兩個字母 Tld （但不是有用的域喜歡。 co.uk）。 為每個 TLD，您實際上控制，並且需要到白名單中包括一條線。
 
-*   " `h*t*://ap*he.o*g` "（隨機丟失信件的萬用字元）： 這些都不再支援 ； 變化，包括一條線的每個域，協定，你實際上需要到白名單中。
+*   " `h*t*://ap*he.o*g` "（隨機丟失信件的萬用字元）： 這些都不再支援 ； 變化，包括一條線為每個域，協定，你實際上需要到白名單中。
 
 ## Windows Phone 白名單
 
 Windows Phone 8 的白名單規則發現在應用程式中的 `config.xml` 檔。
 
-## Tizen 白名單
+## 泰白名單
 
-白名單規則發現在應用程式中的 `config.xml` 檔。 該平臺依賴于相同 `subdomains` 屬性作為黑莓平臺。 （有關支援的詳細資訊，請參閱 Tizen 的文檔[訪問元素][10]上.)
+白名單規則發現在應用程式中的 `config.xml` 檔。 平臺依靠相同 `subdomains` 作為黑莓平臺屬性。 （有關支援的詳細資訊，請參閱 Tizen 的文檔[訪問元素][10]上.)
 
  [10]: https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.web.appprogramming%2Fhtml%2Fide_sdk_tools%2Fconfig_editor_w3celements.htm
