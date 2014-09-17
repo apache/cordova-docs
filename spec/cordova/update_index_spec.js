@@ -63,7 +63,6 @@
             sut.run(files.input);
             dom = cheerio.load(fs.readFileSync(files.output));
             new_title = dom('#subheader > h1').first().html();
-            console.log(new_title);
             assert.strictEqual(sut.header_title, new_title);
         });
 
