@@ -134,9 +134,19 @@ Sugerencia: Es posible en dispositivos Android Nexus a flash fácilmente distint
 
 Depuración Cordova requiere una configuración. A diferencia de una aplicación de escritorio, no puedes simplemente open dev herramientas del dispositivo móvil y empezar a depurar, por suerte hay algunas grandes alternativas.
 
-## Safari depuración remota
+## iOS depuración
 
-La primera opción es la depuración remota de Safari. Esto funciona sólo en OSX y sólo con iOS 6 (o superior). Utiliza Safari para conectarse a su dispositivo (o el simulador) y conectará herramientas del revelador del navegador con la aplicación de Córdoba. Obtienes lo que esperas de dev tools - DOM inspección/manipulación, un depurador de JavaScript, inspección de la red, la consola y mucho más. Para más detalles, vea este excelente blog post: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>
+### Xcode
+
+Con Xcode puede depurar el lado nativo iOS de la aplicación de Córdoba. Asegúrese de que la zona de depuración está mostrando (vista-> área de depuración). Una vez que su aplicación se ejecuta en el dispositivo (o simulador), usted puede ver registro de salida en la zona de depuración. Esto es donde se imprimirán los errores o advertencias. También puede establecer puntos de interrupción en los archivos fuente. Esto le permitirá dar un paso a través de la línea de un código en un momento y ver el estado de las variables en aquel momento. El estado de las variables se muestra en el área de depuración cuando se alcanza un punto de interrupción. Una vez que su aplicación está en marcha en el dispositivo, puede traer a inspector de Safari web (como se describe a continuación) para depurar el lado webview y js de su aplicación. Para más información y ayuda, consulte la guía de Xcode: [Guía de depuración de Xcode][14]
+
+ [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+
+### Safari remoto depuración con Web Inspector
+
+Con el inspector web de Safari puede depurar el código webview y js en su aplicación de Córdoba. Esto funciona sólo en OSX y sólo con iOS 6 (o superior). Utiliza Safari para conectarse a su dispositivo (o el simulador) y conectará herramientas del revelador del navegador con la aplicación de Córdoba. Obtienes lo que esperas de dev tools - DOM inspección/manipulación, un depurador de JavaScript, inspección de la red, la consola y mucho más. Como Xcode, con inspector de Safari web puede establecer puntos de interrupción en el código JavaScript y ver el estado de las variables en aquel momento. Usted puede ver los errores, advertencias o mensajes que aparecen en la consola. También puede ejecutar comandos JavaScript directamente desde la consola como su aplicación se está ejecutando. Para más detalles sobre cómo ponerlo en marcha y lo que puedes hacer, ver este excelente blog post: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> y esta guía: [Guía de Safari Web Inspector][15]
+
+ [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## Depuración remota de cromo
 
@@ -154,34 +164,34 @@ Weinre crea un servidor local que puede albergar a un cliente depuración remota
 
 ## Otras opciones
 
-*   BlackBerry 10 soporta depuración así como: [documentación][14]
-*   Puede depurar usando Firefox App Manager así, vea [esta entrada de blog][15] y este [artículo MDN][16].
+*   BlackBerry 10 soporta depuración así como: [documentación][16]
+*   Puede depurar usando Firefox App Manager así, vea [esta entrada de blog][17] y este [artículo MDN][18].
 *   Para más ejemplos y explicación de los anteriores consejos de depuración, vea: <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # Interfaz de usuario
 
 Creación de una aplicación de Córdoba que queda bien móvil puede ser un desafío, especialmente para los desarrolladores. Mucha gente optó por usar un marco de interfaz de usuario para hacerlo más fácil. Aquí está una lista corta de las opciones que usted puede desear considerar.
 
 *   [jQuery Mobile][9] - jQuery Mobile automáticamente realza su diseño para la optimización del móvil. También maneja creando un SPA para usted automáticamente.
-*   [iónico][17] -este potente entorno de interfaz de usuario en realidad tiene su propio CLI para manejar la creación del proyecto. 
-*   [Trinquete][18] - traído a usted por la gente que creó Bootstrap. 
+*   [iónico][19] -este potente entorno de interfaz de usuario en realidad tiene su propio CLI para manejar la creación del proyecto. 
+*   [Trinquete][20] - traído a usted por la gente que creó Bootstrap. 
 *   [Kendo UI][5] - interfaz de usuario de código abierto y marco de aplicación de Telerik.
-*   [TOPCOAT][19]
+*   [TOPCOAT][21]
 *   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-Al construir la interfaz de usuario, es importante pensar en todas las plataformas que está atacando y las diferencias entre las expectativas del usuario. Por ejemplo, una aplicación para Android que tiene una interfaz de usuario estilo iOS probablemente no va bien con los usuarios. Esto a veces es incluso aplicada por las diferentes tiendas de aplicaciones. Por ello, es importante respetar las convenciones de cada plataforma y por lo tanto están familiarizados con las diversas directrices de interfaz humana: * [iOS][20] * [Android][21] * [Windows Phone][22]
+Al construir la interfaz de usuario, es importante pensar en todas las plataformas que está atacando y las diferencias entre las expectativas del usuario. Por ejemplo, una aplicación para Android que tiene una interfaz de usuario estilo iOS probablemente no va bien con los usuarios. Esto a veces es incluso aplicada por las diferentes tiendas de aplicaciones. Por ello, es importante respetar las convenciones de cada plataforma y por lo tanto están familiarizados con las diversas directrices de interfaz humana: * [iOS][22] * [Android][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## Recursos y artículos adicionales UI
 
@@ -205,18 +215,18 @@ La visualización de contenido HTML cargados remotamente en un webview debe hace
 
 Aquí están algunas maneras de mantenerse al día con Córdoba.
 
-*   Suscríbete al [blog de Córdoba][23].
-*   Suscribirse a la [lista de desarrolladores][24]. Nota: esto no es un grupo de apoyo. Más bien es un lugar donde se discute el desarrollo de Córdoba.
+*   Suscríbete al [blog de Córdoba][25].
+*   Suscribirse a la [lista de desarrolladores][26]. Nota: esto no es un grupo de apoyo. Más bien es un lugar donde se discute el desarrollo de Córdoba.
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # Cómo obtener ayuda
 
 Los siguientes enlaces son los mejores lugares para conseguir ayuda para Córdoba:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> mediante el uso de la etiqueta de Cordova, puede ver y examinar todas las cuestiones Cordova. Tenga en cuenta que StackOverflow convierte automáticamente la etiqueta de "Phonegap" a "Córdoba", para que de esta manera podrá acceder a preguntas históricas así como
-*   PhoneGap Google Group: [https://groups.google.com/forum/#! Foro/phonegap][25] este grupo Google era el antiguo Foro de apoyo para cuando Cordova todavía se llamaba PhoneGap. Mientras que todavía hay un montón de usuarios Cordova que frecuentan este grupo, la comunidad de Córdoba ha expresado su interés en centrarse menos en este grupo y en su lugar utilizando StackOverflow para apoyo
+*   PhoneGap Google Group: [https://groups.google.com/forum/#! Foro/phonegap][27] este grupo Google era el antiguo Foro de apoyo para cuando Cordova todavía se llamaba PhoneGap. Mientras que todavía hay un montón de usuarios Cordova que frecuentan este grupo, la comunidad de Córdoba ha expresado su interés en centrarse menos en este grupo y en su lugar utilizando StackOverflow para apoyo
 *   Quedadas: <http://phonegap.meetup.com> - considere encontrar un grupo local de meetup Cordova/PhoneGap
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap

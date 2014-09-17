@@ -15,7 +15,9 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 # iOS configuración
 
-El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras de iOS. Vea el archivo config.xml archivo para obtener información sobre las opciones de configuración global.
+El archivo `config.xml` controla la configuración básica de una app que se aplican a través de cada aplicación y una instancia de CordovaWebView. Esta sección detalla las preferencias que se aplican sólo a estructuras de iOS. See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(por defecto es booleano, `false` ): A `true` para permitir una etiqueta meta viewport a deshabilitar o restringir el intervalo de usuario escalamiento, que está habilitada de forma predeterminada.
     

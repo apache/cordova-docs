@@ -134,9 +134,19 @@ Tipp: Es ist möglich auf Android Nexus Geräten leicht unterschiedliche Version
 
 Debuggen von Cordova, muss ein Setup. Im Gegensatz zu einer desktop-Anwendung Sie können nicht öffnen Sie einfach Dev Tools auf Ihrem mobilen Gerät und Debuggen starten, zum Glück gibt es einige tolle Alternativen.
 
-## Safari Remotedebuggen
+## iOS Debuggen
 
-Die erste Option ist Safari Remotedebuggen. Dies funktioniert nur unter OSX und nur mit iOS 6 (und höher). Es verwendet Safari zum Herstellen einer Verbindung mit Ihrem Gerät (oder der Simulator) und wird die Browser-Dev-Tools der Cordova-Anwendung verbinden. Sie bekommen, was Sie von Entwicklungstools - DOM Inspektion/Manipulation, einen JavaScript-Debugger, Netzwerk-Inspektion, die Konsole und mehr erwarten. Weitere Einzelheiten finden Sie in diesem hervorragenden Blog-post: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>
+### Xcode
+
+Mit Xcode können Sie die native iOS Seite Ihrer Cordova-Anwendung debuggen. Stellen Sie sicher, dass der Debug-Umgebung (Blick-> Debug Bereich) angezeigt wird. Sobald Ihre app auf dem Gerät (oder Simulator) ausgeführt wird, können Sie im Bereich Debug Protokollausgabe anzeigen. Dies ist, wo Fehler oder Warnungen gedruckt wird. Sie können auch Haltepunkte innerhalb der Quelldateien festlegen. Dies ermöglicht Ihnen, Schritt für Schritt durch den Code eine Zeile zu einem Zeitpunkt und den Zustand der Variablen damals. Der Zustand der Variablen wird im Bereich Debuggen angezeigt, wenn ein Haltepunkt erreicht wird. Sobald Ihre app auf dem Gerät installiert und läuft ist, können Sie Safari Webinformationen bringen (wie unten beschrieben), um die Webview und Js Seite Ihrer Anwendung zu debuggen. Weitere Informationen und Hilfe finden Sie im Xcode-Guide: [Xcode Debuggen Guide][14]
+
+ [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+
+### Safari Remote Debuggen mit Webinformationen
+
+Mit der Safari Web-Inspektor können Sie den Webview und Js-Code in der Cordova-Anwendung debuggen. Dies funktioniert nur unter OSX und nur mit iOS 6 (und höher). Es verwendet Safari zum Herstellen einer Verbindung mit Ihrem Gerät (oder der Simulator) und wird die Browser-Dev-Tools der Cordova-Anwendung verbinden. Sie bekommen, was Sie von Entwicklungstools - DOM Inspektion/Manipulation, einen JavaScript-Debugger, Netzwerk-Inspektion, die Konsole und mehr erwarten. Wie Xcode mit Safari Webinformationen können Haltepunkte im JavaScript-Code und den Zustand der Variablen zu diesem Zeitpunkt anzeigen. Sie können anzeigen, Fehler, Warnungen oder Nachrichten, die auf der Konsole ausgegeben werden. Sie können auch JavaScript-Befehle direkt über die Konsole ausführen, wie Ihre Anwendung ausgeführt wird. Weitere Details zu wie Sie es einrichten und was Sie tun können, finden Sie in diesem hervorragenden Blog-post: <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/> und dieser Anleitung: [Safari Web Inspector Guide][15]
+
+ [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## Chrom Remotedebuggen
 
@@ -154,34 +164,34 @@ Weinre erstellt einen lokalen Server, der einen remote-Debug-Client für Ihre Co
 
 ## Andere Optionen
 
-*   BlackBerry 10 unterstützt auch Debuggen: [Dokumentation][14]
-*   Sie können mit Firefox App Manager sowie Debuggen, finden Sie unter [diesem Blog-Post][15] und dieser [MDN-Artikel][16].
+*   BlackBerry 10 unterstützt auch Debuggen: [Dokumentation][16]
+*   Sie können mit Firefox App Manager sowie Debuggen, finden Sie unter [diesem Blog-Post][17] und dieser [MDN-Artikel][18].
 *   Weitere Beispiele und Erläuterung der oben genannten Tipps zum Debuggen finden Sie unter: <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # Benutzeroberfläche
 
 Erstellen einer Anwendung Cordova sieht schön auf mobile eine Herausforderung sein kann, vor allem für Entwickler. Viele Menschen haben ein UI-Framework verwenden, um dies zu erleichtern. Hier ist eine kurze Liste der Optionen, die Sie betrachten möchten.
 
 *   [jQuery Mobile][9] - jQuery Mobile erhöht automatisch Ihre Layout für mobile Optimierung. Es behandelt auch einen SPA für Sie automatisch erstellen.
-*   [Ionische][17] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
-*   [Ratsche][18] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
+*   [Ionische][19] -dieser leistungsstarke UI-Framework hat tatsächlich eigene CLI Projekterstellung zu behandeln. 
+*   [Ratsche][20] - geholt Ihnen durch die Menschen, die Bootstrap erstellt. 
 *   [Kendo UI][5] - Open-Source-UI und Application Framework von Telerik.
-*   [DECKLACK][19]
+*   [DECKLACK][21]
 *   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][20] * [Android][21] * [Windows Phone][22]
+Wenn Sie Ihre Benutzeroberfläche zu erstellen, ist es wichtig, über alle Plattformen, die Sie abzielen und die Unterschiede zwischen den Benutzererwartungen zu denken. Beispielsweise wird eine Android-Anwendung, die Benutzeroberfläche eines iOS-Stil hat wahrscheinlich nicht gut mit Benutzer rüber. Dies wird manchmal auch durch die verschiedene Anwendung-Stores erzwungen. Aus diesem Grund ist es wichtig, dass Sie die Konventionen der jede Plattform respektieren und daher vertraut mit den verschiedenen Human Interface Guidelines sind: * [iOS][22] * [Android][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## Zusätzliche UI-Artikel und Betriebsmittel
 
@@ -205,18 +215,18 @@ Die Anzeige der HTML-Inhalt aus der Ferne geladen, in ein Webview getan werden m
 
 Hier sind ein paar Möglichkeiten, um mit Cordova aktuell zu halten.
 
-*   Abonnieren Sie den [Blog von Cordova][23].
-*   Abonnieren Sie die [Liste der Entwickler][24]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
+*   Abonnieren Sie den [Blog von Cordova][25].
+*   Abonnieren Sie die [Liste der Entwickler][26]. Hinweis: Dies ist keine Selbsthilfegruppe! Vielmehr ist dies ein Ort, wo die Entwicklung von Cordova diskutiert wird.
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # Anfordern von Hilfe
 
 Die folgenden Links sind die besten Orte, um Hilfe zu Cordova zu erhalten:
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova> mit dem Cordova-Tag, Sie können anzeigen und durchsuchen alle Cordova Fragen. Beachten Sie, dass StackOverflow automatisch das "Phonegap" Tag "Cordoba", konvertiert so dass auf diese Weise werden Sie historische Fragen sowie Zugang zu
-*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][25] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
+*   PhoneGap Google Group: [https://groups.google.com/forum/#! Forum/Phonegap][27] diese Google Group war das alte Support-Forum für wann Cordova noch PhoneGap genannt wurde. Zwar es noch eine Menge von Cordova-Benutzer, die dieser Gruppe häufig gibt, hat die Gemeinde Cordova ein Interesse an Konzentration weniger auf diese Gruppe und stattdessen StackOverflow für Unterstützung geäußert.
 *   Meetup: <http://phonegap.meetup.com> - betrachten Sie suchen nach einer lokalen Cordova/PhoneGap Meetup-Gruppe
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap
