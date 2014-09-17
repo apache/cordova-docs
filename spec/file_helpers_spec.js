@@ -16,28 +16,18 @@
        specific language governing permissions and limitations
        under the License.
 */
-/*jslint node: true */
-var fs = require("fs-extra");
-var path = require("path");
-
-var FileMerger = (function () {
+/*jslint node: true*/
+/*global describe, it, beforeEach */
+(function () {
     'use strict';
-    
-    /**
-    * Creates a new instance of FileMerger
-    * @param options Options for the generation process.
-    */
-    function FileMerger(options) {
-        this.options = options || { verbose: 0 };
-        this.stage = "Merge files";
-    }
-    
-    FileMerger.prototype.run = function (file) {
-        if (this.options.verbose > 1) {
-            console.log("Merge file " + file);
-        }
-    };
-    
-    return FileMerger;
+    var assert = require("assert"),
+        path = require('path'),
+        fs = require('fs'),
+        FileHelpers = require("../lib/file_helpers");
+
+    describe('FileHelpers', function () {
+        it('should have a default input directory that exists', function () {
+            assert.equal(true, fs.existsSync(FileHelpers.getDefaultInputDirectory()));
+        });
+    });
 }());
-module.exports = FileMerger;
