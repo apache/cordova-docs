@@ -116,7 +116,7 @@ These shell tools allow you to create, build, and run Windows Phone
 apps.  For information on the additional command-line interface that
 enables plugin features across all platforms, see Using Plugman to
 Manage Plugins. See Application Plugins for guidance on how to develop
-plugins, and Windows Phone Plugins for details specific to the Windows
+plugins, and Windows Phone 8 Plugins for details specific to the Windows
 Phone platform.
 
 ## Install the SDK

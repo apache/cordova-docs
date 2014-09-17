@@ -6,9 +6,9 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          to you under the Apache License, Version 2.0 (the
          "License"); you may not use this file except in compliance
          with the License.  You may obtain a copy of the License at
-         
+
            http://www.apache.org/licenses/LICENSE-2.0
-         
+
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -17,31 +17,37 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-# Android WebViews
+# Amazon Fire OS WebViews
 
-This guide shows how to embed a Cordova-enabled WebView component
-within a larger Android application. For details on how these
-components can communicate with each other, see Application Plugins.
+Beginning with 3.3.0, you can use Cordova as a component in Amazon Fire OS applications. Amazon Fire OS refers to this component as `CordovaWebView`. `CordovaWebView` extends Amazon WebView that is built on the open source Chromium Project. By leveraging this feature, your web apps can utilize the latest HTML5 web standards running in a modern web runtime engine.
 
-If you're unfamiliar with Android, you should first familiarize
-yourself with the Android Platform Guide and have the latest Android
-SDK installed before you attempt the more unusual development option
-of embedding a WebView.  Starting with Cordova 1.9, the Android
-platform relies on a `CordovaWebView` component, which builds on a
-legacy `CordovaActivity` component that pre-dates the 1.9 release.
+If you're unfamiliar with Amazon Fire OS, you should first familiarize
+yourself with the Amazon Fire OS Platform Guide and have the latest SDKs installed before you attempt the more unusual development option of embedding a WebView.
+
+## Prerequisites
+
+* Cordova 3.3.0 or greater
+
+* Android SDK updated to the latest SDK
+
+* Amazon WebView SDK
+
+## Guide to using CordovaWebView in a Amazon Fire OS Project
 
 1. To follow these instructions, make sure you have the latest Cordova
    distribution. Download it from
    [cordova.apache.org](http://cordova.apache.org) and unzip its
-   Android package.
+   Amazon Fire OS package.
+   
+2. Download and expand the [Amazon WebView SDK](https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv) , then copy the awv_interface.jar into `/framework/libs` directory. Create a libs/ folder if it doesn't exist.
 
-1. Navigate to the Android package's `/framework` directory and run
+3. Navigate to the package's `/framework` directory and run
    `ant jar`. It creates the Cordova `.jar` file, formed as
-   `/framework/cordova-3.6.1.jar`.
+   `/framework/cordova-3.6.0.jar`.
 
-1. Copy the `.jar` file into the Android project's `/libs` directory.
+4. Copy the `.jar` file into the Android project's `/libs` directory.
 
-1. Add the following to the application's `/res/xml/main.xml` file,
+5. Add the following to the application's `/res/xml/main.xml` file,
    with the `layout_height`, `layout_width` and `id` modified to suit
    the application:
 
@@ -50,13 +56,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-1. Modify the activity so that it implements the `CordovaInterface`.
-   It should implement the included methods.  You may wish to copy
-   them from `/framework/src/org/apache/cordova/CordovaActivity.java`,
-   or else implement them on your own.  The following code fragment
-   shows a basic application that relies on the interface. Note how
-   the referenced view id matches the `id` attribute specified in the
-   XML fragment shown above:
+6. Modify your activity so that it implements the `CordovaInterface`.  You should implement the included methods.  You may wish to copy them from `/framework/src/org/apache/cordova/CordovaActivity.java`, or implement them on your own.  The code fragment below shows a basic application that uses the interface. Note how the referenced view id matches the `id` attribute specified in the XML fragment shown above:
 
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -70,8 +70,7 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
                 cwv.loadUrl(Config.getStartUrl());
             }
 
-1. If the application needs to use the camera, implement the
-   following:
+If you use the camera, you should also implement this:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -88,16 +87,16 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
         public void startActivityForResult(CordovaPlugin command, Intent intent, int requestCode) {
             this.activityResultCallback = command;
             this.activityResultKeepRunning = this.keepRunning;
-            
+
             // If multitasking turned on, then disable it for activities that return results
             if (command != null) {
                 this.keepRunning = false;
             }
-        
+
             // Start activity
             super.startActivityForResult(intent, requestCode);
-        }   
-    
+        }
+
         @Override
         /**
          * Called when an activity you launched exits, giving you the requestCode you started it with,
@@ -116,16 +115,13 @@ legacy `CordovaActivity` component that pre-dates the 1.9 release.
             }
         }
 
-1. Finally, remember to add the thread pool, otherwise plugins
-   have no threads on which to run:
+Finally, remember to add the thread pool, otherwise the plugins have no threads to run on:
 
         @Override
         public ExecutorService getThreadPool() {
             return threadPool;
         }
 
-1. Copy the application's HTML and JavaScript files to the Android
-   project's `/assets/www` directory.
+7. Copy your application's HTML and JavaScript files to your Amazon Fire OS project's `/assets/www` directory.
 
-1. Copy the `config.xml` file from `/framework/res/xml` to the
-   project's `/res/xml` directory.
+8. Copy `config.xml` from `/framework/res/xml` to your project's `/res/xml` directory.
