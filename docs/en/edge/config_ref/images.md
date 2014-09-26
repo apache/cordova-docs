@@ -86,6 +86,9 @@ Firefox OS
 iOS
 
          <platform name="ios">
+                  <!-- iOS 8.0+ -->
+                  <!-- iPhone 6 Plus  -->
+                  <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
                   <!-- iOS 7.0+ -->
                   <!-- iPhone / iPod Touch  -->
                   <icon src="res/ios/icon-60.png" width="60" height="60" />
