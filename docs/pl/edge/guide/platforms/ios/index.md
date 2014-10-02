@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -17,7 +17,7 @@ Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów 
 
 Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova aplikacji dla systemu iOS iPhone i iPad. Zobacz następujące szczegółowe informacje specyficzne dla platformy:
 
-*   iOS konfiguracji
+*   Konfiguracja iOS
 *   Aktualizacja iOS
 *   iOS WebViews
 *   iOS wtyczek
@@ -33,7 +33,7 @@ Możesz przetestować wiele cech Cordova, przy użyciu emulatora iOS instalowane
 
  [1]: https://developer.apple.com/programs/ios/
 
-## Instalowania zestawu SDK
+## Instalowanie SDK
 
 Istnieją dwa sposoby pobrania Xcode:
 

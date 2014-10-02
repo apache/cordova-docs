@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -21,7 +21,7 @@ Do tworzenia aplikacji Cordova, należy zainstalować SDK dla każdej platformy 
 
 Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć, aby skonfigurować środowisko programistyczne każdej platformy: gdzie otrzymać zestaw SDK, jak ustawić urządzenie emulatory, jak połączyć urządzenia do bezpośredniego badania i jak zarządzać wymagania klucza podpisywania. Dodatkowe przewodniki dostarczają informacji na temat każdej z platform unikatowy zestaw opcji konfiguracyjnych, instrukcje, aby dodać wtyczki, jak uaktualnić każdej platformy i narzędzi wiersza polecenia specyficznych dla platformy, które służą jako alternatywa do niższego poziomu `cordova` narzędzie wiersza polecenia.
 
-## Amazon ogień OS
+## Amazon Fire OS
 
 *   Amazon ogień platformy OS Przewodnik
 *   Amazon ogień OS konfiguracja
@@ -32,10 +32,10 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Przewodnik platformy Android
 *   Android Shell narzędzia Przewodnik
-*   Android konfiguracji
-*   Wtyczek Android
-*   Android WebViews
-*   Aktualizacja Android
+*   Konfiguracja Androida
+*   Wtyczki dla Androida
+*   WebView
+*   Aktualizacja
 
 ## BlackBerry 10
 
@@ -54,7 +54,7 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Przewodnik platformy iOS
 *   iOS Shell narzędzia Przewodnik
-*   iOS konfiguracji
+*   Konfiguracja iOS
 *   iOS wtyczek
 *   iOS WebViews
 *   Aktualizacja iOS

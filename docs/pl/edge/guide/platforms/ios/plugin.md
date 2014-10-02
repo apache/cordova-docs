@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -146,7 +146,7 @@ Sprawdza parametru, aby upewnić się, że to nie jest `nil` lub ciąg pusty, po
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-## Wątków
+## Wątki
 
 Plugin metody zwykle wykonać w tym samym wątku jako głównego interfejsu. Jeśli twój plugin wymaga dużo przetwarzania lub wymaga blokowanie połączenia, należy użyć wątek tła. Na przykład:
 

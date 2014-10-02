@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -172,7 +172,7 @@ A continuación, ejecute el `emulate` comando para ver la aplicación:
         $ cordova emulate blackberry10
     
 
-## Implementar al dispositivo
+## Desplegar en el dispositivo
 
 Para desplegar a un dispositivo, asegúrese de que esté conectado a su computadora. Activar el modo de desarrollo y obtener la dirección IP como descrito en la sección de emulador anterior. Usted también necesitará obtener el PIN de la la aplicación de **configuración** en **sobre → Hardware**:
 

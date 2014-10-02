@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -17,7 +17,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 Esta guía le muestra cómo utilizar el conjunto de Cordova de cáscara centrada en plataforma de herramientas para desarrollar aplicaciones Android. Este camino hacia el desarrollo, discutido en la descripción, puede ofrecer una mayor gama de opciones de desarrollo que la herramienta CLI multiplataforma descrita en la interfaz de línea de comandos. Por ejemplo, tienes que utilizar herramientas de shell cuando se despliega una costumbre Cordova WebView junto con componentes nativos. Antes de usar cualquier camino hacia el desarrollo, primero debe configurar el entorno de SDK de Android como se describe en la guía de la plataforma Android.
 
-Para habilitar herramientas de shell para Android, descargar Cordova de [cordova.apache.org][1]. La descarga contiene archivos separados para cada plataforma. Ampliar cada uno de destino, `android` en este caso. Las herramientas pertinentes están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
+Para habilitar herramientas de shell para Android, descargar Cordova de [cordova.apache.org][1]. La descarga contiene los archivos separados para cada plataforma. Ampliar cada uno de destino, `android` en este caso. Las herramientas pertinentes están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
 
  [1]: http://cordova.apache.org
 
@@ -25,16 +25,16 @@ Estas herramientas le permiten crear, construir y ejecutar aplicaciones Android.
 
 ## Crear un proyecto
 
-Ejecute el `create` comando, especificando la ruta existente para el proyecto, el identificador de paquete estilo inversa-dominio y nombre para mostrar de la aplicación. Aquí está la sintaxis para Mac/Linux y Windows:
+Ejecute el comando `create`, especificando la ruta existente para el proyecto, el identificador de paquete de reversa-dominio-estilo y nombre para mostrar de la aplicación. Aquí está la sintaxis para Mac/Linux y Windows:
 
         $ /path/to/cordova-android/bin/create /path/to/project com.example.project_name ProjectName
     
         C:\>\path\to\cordova-android\bin\create.bat \path\to\project com.example.project_name ProjectName
     
 
-## Construir
+## construir
 
-Esto limpia y luego construye un proyecto.
+Esto limpia entonces construye un proyecto.
 
 Depuración, en Mac/Linux o Windows:
 
@@ -52,18 +52,18 @@ Lanzamiento, el Mac/Linux o Windows:
 
 ## Ejecute la aplicación
 
-El `run` comando acepta los siguientes parámetros *opcionales* :
+El comando `run` acepta los siguientes parámetros *opcionales*:
 
-*   Especificación del objetivo. Esto incluye `--emulator` , `--device` , o`--target=<targetID>`.
+*   Especificación de destino. Esto incluye `--emulador`, `, device`, o `--target = <targetID>`.
 
-*   Construir especificación. Esto incluye `--debug` , `--release` , o`--nobuild`.
+*   Especificación de construir. Esto incluye `--debug`, `--release`, o `--nobuild`.
     
         $ /path/to/project/cordova/run [Target] [Build]
         
         C:\>\path\to\project\cordova\run.bat [Target] [Build]
         
 
-Asegúrese de crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el `android` comando. Si más de una AVD está disponible como un objetivo, se le pedirá que seleccione una. Por defecto el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo.
+Asegúrese de que crear al menos un Virtual dispositivo Android, caso contrario se le pedirá a hacerlo con el comando `android`. Si más de una AVD está disponible como un objetivo, usted se pedirá para seleccionar uno. Por defecto el comando `run` detecta un dispositivo conectado, o ejecutando un emulador si no se encuentra ningún dispositivo.
 
 ## Tala
 

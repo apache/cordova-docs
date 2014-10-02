@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,7 +28,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Obsługiwane platformy
 
-*   Jeżyna 10
+*   BlackBerry 10
 
 ## Szybki przykład
 
@@ -39,7 +39,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

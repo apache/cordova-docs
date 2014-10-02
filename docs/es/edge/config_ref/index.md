@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -37,7 +37,7 @@ Esta sección detalla las opciones de configuración global y multiplataforma. C
 
 *   Configuración de iOS
 *   Configuración de Android
-*   Configuración de blackBerry 10
+*   Configuración de BlackBerry 10
 
 Además de las diversas opciones de configuración detalladas a continuación, también puede configurar el conjunto básico de una aplicación de imágenes para cada plataforma de destino. Ver los iconos y salpicadura pantallas para obtener más información.
 
@@ -58,7 +58,7 @@ Este ejemplo muestra el valor predeterminado `config.xml` generados por la CLI `
         </widget>
     
 
-Aparecen los siguientes elementos de configuración en el nivel superior `config.xml` de archivos y se admiten todas las plataformas soportadas Cordova:
+Los siguientes elementos de configuración aparecen en el archivo `config.xml` de primer nivel y se admiten todas las plataformas soportadas Cordova:
 
 *   Atributo `id` del elemento `<widget>` proporciona identificador de reversa-dominio de la aplicación y la `versión de` su número de versión completa expresada en notación de mayor/menor/parche.
     
@@ -137,7 +137,7 @@ A más de una plataforma, pero no a todos ellos se aplican las siguientes prefer
 
 ## La *función de* elemento
 
-Si utilizas la CLI para construir aplicaciones, utiliza el `plugin` comando para activar el dispositivo de APIs. Esto no modifica el nivel superior `config.xml` archivo, así que el `<feature>` elemento no se aplica a su flujo de trabajo. Si usted trabaja directamente en un SDK y el uso específico del plataforma `config.xml` archivo como fuente, utiliza el `<feature>` etiqueta para permitir a nivel de dispositivo APIs y plugins externos. A menudo aparecen con valores personalizados en específica de la plataforma `config.xml` archivos. Por ejemplo, aquí es cómo especificar el dispositivo de API para proyectos Android:
+Si utilizas la CLI para construir aplicaciones, utilice el comando `plugin` para habilitar dispositivo APIs. Esto no modifica el archivo `config.xml` de primer nivel, así que el elemento `<feature>` no se aplica a su flujo de trabajo. Si usted trabaja directamente en un SDK y el uso específico del plataforma `config.xml` archivo como fuente, utiliza el `<feature>` etiqueta para permitir a nivel de dispositivo APIs y plugins externos. A menudo aparecen con valores personalizados en específica de la plataforma `config.xml` archivos. Por ejemplo, aquí es cómo especificar el dispositivo de API para proyectos Android:
 
         <feature name="Device">
             <param name="android-package" value="org.apache.cordova.device.Device" />

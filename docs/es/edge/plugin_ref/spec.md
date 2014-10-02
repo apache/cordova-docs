@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -306,13 +306,13 @@ Soporta los siguientes atributos:
     
     El objetivo puede incluir comodines ( `*` ) elementos. En este caso, plugman recurrentemente busca a través de la estructura de directorios del proyecto y utiliza al primer partido.
     
-    En iOS, la ubicación de los archivos de configuración relativa a la raíz del directorio de proyecto se desconoce, así que especifica un objetivo de `config.xml` , resuelve`cordova-ios-project/MyAppName/config.xml`.
+    En iOS, la ubicación de los archivos de configuración relativa a la raíz del directorio de proyecto se desconoce, para especificar un objetivo de `config.xml`, resuelve `cordova-ios-project/MyAppName/config.xml`.
     
     Si el archivo especificado no existe, la herramienta omite el cambio en la configuración y continúa la instalación.
 
-*   `parent`: Un selector XPath hacen referencia a los padres de los elementos que se agregará al archivo config. Si utilizas selectores absolutos, puede utilizar un carácter comodín ( `*` ) para especificar el elemento raíz, por ejemplo,`/*/plugins`.
+*   `parent`: selector XPath una referencia a los padres de los elementos que se agregará al archivo config. Si utilizas selectores absolutos, necesitas un comodín (`*`) para especificar el elemento raíz, por ejemplo, `/ */plugins`.
     
-    Para `plist` archivos, el `parent` determina bajo qué clave primaria debe insertarse el XML especificado.
+    Para los archivos `plist`, los `parent` determina bajo qué clave primaria debe insertarse el XML especificado.
     
     Si el selector no resuelve a un niño del documento especificado, la herramienta se detiene y revierte el proceso de instalación, emite una advertencia y sale con un código distinto de cero.
 
@@ -378,9 +378,9 @@ Ejemplos:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-El `src` atributo identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
+El atributo `src` identifica el marco, que plugman intenta agregar al proyecto de Cordova, de la manera correcta para una determinada plataforma.
 
-Opcional `weak` atributo es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es`false`.
+El atributo opcional `weak` es un valor booleano que indica si el marco debe ser vinculado débilmente. El valor predeterminado es `false`.
 
 Opcional `custom` atributo es un valor booleano que indica si el marco es que se incluye como parte de los archivos del plugin (por lo tanto no es un marco de sistema). El valor predeterminado es `false` . ***En Android*** especifica cómo tratar **src**. Si `true` **src** es una ruta relativa desde el directorio del proyecto de la aplicación, de lo contrario, desde el directorio del SDK de Android.
 

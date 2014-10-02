@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@
 
 ## under the License.
 
-# iOS WebViews
+# WebViews в iOS
 
 В этом руководстве показано, как внедрить компонент WebView Cordova поддержкой в рамках более крупных приложений iOS. Дополнительные сведения о том, как эти компоненты могут взаимодействовать друг с другом смотрите приложение плагины.
 

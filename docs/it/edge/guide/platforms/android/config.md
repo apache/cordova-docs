@@ -13,7 +13,7 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 ## under the License.
 
-# Android configurazione
+# Configurazione Android
 
 La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di Android. Vedere il file config. XML File per informazioni sulle opzioni di configurazione globale.
 

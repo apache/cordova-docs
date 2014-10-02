@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -49,12 +49,12 @@ El archivo `config.xml` controla la configuración básica de una app que se apl
         <preference name="TopActivityIndicator" value="white"/>
         
 
-*   `KeyboardDisplayRequiresUserAction`(booleano, el valor predeterminado `true` ): A `false` para permitir que el teclado que aparece cuando se llama a `focus()` en las entradas del formulario.
+*   `KeyboardDisplayRequiresUserAction` (por defecto valor booleano, `true`): establecida en `false` para permitir que el teclado que aparece cuando se llama `focus()` en entradas del formulario.
     
         <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
         
 
-*   `SuppressesIncrementalRendering`(por defecto es booleano, `false` ): establecer `true` a esperar hasta que todo el contenido ha sido recibido antes que presta a la pantalla.
+*   `SuppressesIncrementalRendering` (boolean, valor predeterminado `false`): establece en `true` para esperar a que todo el contenido ha sido recibido antes que presta a la pantalla.
     
         <preference name="SuppressesIncrementalRendering" value="true"/>
         

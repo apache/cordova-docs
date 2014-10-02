@@ -20,7 +20,7 @@ Dieses Ereignis wird ausgelöst, wenn der Benutzer die End-Call-Taste drückt.
     document.addEventListener("endcallbutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Das Ereignis überschreibt das Standardverhalten des End-Aufruf.
 
@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 *   BlackBerry 10
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("endcallbutton", onEndCallKeyDown, false);
     

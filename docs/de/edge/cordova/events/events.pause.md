@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung in den Hintergrund gelegt wird
     document.addEventListener("pause", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Das `pause` -Ereignis wird ausgelöst, wenn die einheitlichen Plattform die Anwendung in den Hintergrund, in der Regel, setzt wenn der Benutzer zu einer anderen Anwendung wechselt.
 
@@ -35,7 +35,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 *   Windows Phone 8
 *   Windows 8
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("pause", onPause, false);
     

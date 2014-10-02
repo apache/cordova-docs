@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -20,6 +20,6 @@ Cordova aplikacje zwykle są implementowane jako oparte na przeglądarce *widoku
 Aby wdrożyć widoku sieci Web, musisz zapoznać się z każdym macierzystego środowiska programowania. Poniżej przedstawiono instrukcje dotyczące obsługiwanych platform:
 
 *   Amazon ogień OS WebViews
-*   Android WebViews
+*   WebView
 *   iOS WebViews
 *   Windows Phone 8.0 WebViews

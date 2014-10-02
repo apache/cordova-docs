@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -186,7 +186,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Акселерометр</a>
+          <a href="https://github.com/apache/cordova-plugin-device-motion/blob/master/doc/index.md">Accelerometer</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -252,7 +252,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Камеры</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Камера</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -285,7 +285,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Захват</a>
+          <a href="https://github.com/apache/cordova-plugin-media-capture/blob/master/doc/index.md">Съемка</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -334,7 +334,7 @@
         </td>
         
         <td data-col="ios"        class="y">
-          (3GS +)
+          (3GS+)
         </td>
         
         <td data-col="ubuntu"        class="y">
@@ -554,7 +554,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Геолокация</a>
+          <a href="https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md">Географическое положение</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -620,7 +620,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">InAppBrowser</a>
+          <a href="https://github.com/apache/cordova-plugin-inappbrowser/blob/master/doc/index.md">Внутренний браузер</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -654,7 +654,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Средства массовой информации</a>
+          <a href="https://github.com/apache/cordova-plugin-media/blob/master/doc/index.md">Аудио и видео</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -720,7 +720,7 @@
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Экран-заставка</a>
+          <a href="https://github.com/apache/cordova-plugin-splashscreen/blob/master/doc/index.md">Заставка</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -753,7 +753,7 @@
       
       <tr>
         <th>
-          <a href="cordova_storage_storage.md.html">Хранения</a>
+          <a href="cordova_storage_storage.md.html">Хранилище</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">

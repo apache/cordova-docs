@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,9 +28,9 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   iOS
 *   Windows Phone 8
 *   Windows 8
@@ -44,7 +44,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE html>
     <html>
@@ -78,7 +78,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     </html>
     
 
-## iOS dziwactwa
+## Dziwactwa iOS
 
 W `pause` obsługi, wszelkie wywołania interfejsu API Cordova lub macierzystego wtyczek, które przechodzą przez Objective-C nie działają, a także jakichkolwiek połączeń interaktywnych, takich jak alarmy lub `console.log()` . One są przetwarzane tylko podczas wznawiania działania aplikacji, na następnym uruchomieniu pętli.
 

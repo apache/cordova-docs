@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lauter Taste drückt.
     document.addEventListener("volumeupbutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Wenn Sie die Standard-Lautstärke erhöhen Verhalten überschreiben müssen registrieren Sie einen Ereignis-Listener für das `volumeupbutton` Ereignis.
 
@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 *   BlackBerry 10
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("volumeupbutton", onVolumeUpKeyDown, false);
     

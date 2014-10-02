@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -17,7 +17,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 Esta guía describe cómo configurar el entorno de desarrollo para crear Cordova aplicaciones para dispositivos de Firefox OS, entonces probar y publicar las aplicaciones.
 
-## Requerimientos y apoyo
+## Requisitos y apoyo
 
 Firefox las apps son básicamente sólo aplicaciones web, con la adición de un archivo manifest.webapp que define metadatos acerca de la aplicación y le permite ser instalado en dispositivos Firefox OS. Puede utilizarse cualquier plataforma que soporta Cordova.Para averiguar más sobre la construcción de aplicaciones web, consulte la [App Center][1] en [MDN][2].
 

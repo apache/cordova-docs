@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,7 +28,7 @@ Para la plataforma Windows Phone 8, el Cordova WebView confía en Internet Explo
 
  [1]: http://blogs.windows.com/windows_phone/b/wpdev/archive/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10.aspx
 
-## Requerimientos y apoyo
+## Requisitos y apoyo
 
 Se necesita lo siguiente:
 
@@ -157,7 +157,7 @@ Estos controles avanzados también permiten modificar la ubicación del disposit
 
  [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
-## Implementar al dispositivo
+## Desplegar en el dispositivo
 
 Antes de probar la aplicación en un dispositivo, el dispositivo debe estar registrado. Consulte la [documentación de Microsoft][14] para obtener más información sobre cómo implementar y probar en Windows Phone 8. También, asegúrese de que el teléfono está conectado al ordenador y la pantalla está desbloqueada.
 

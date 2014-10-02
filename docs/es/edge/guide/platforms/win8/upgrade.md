@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -15,7 +15,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 # Actualización de Windows 8
 
-Esta guía le muestra cómo modificar Windows 8 proyectos para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un mayor conjunto de herramientas de línea de comandos que preceden a la `cordova` utilidad de CLI. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
+Esta guía le muestra cómo modificar los proyectos de Windows 8 para actualizar desde versiones anteriores de Córdoba. La mayoría de estas instrucciones se aplica a proyectos creados con un conjunto mayor de herramientas de línea de comandos que preceden a la utilidad de la CLI de `cordova`. Vea la interfaz de línea de comandos para información de cómo actualizar la versión de la CLI.
 
 ## Actualícese a 3.6.0 de 3.1.0 o posterior
 
@@ -36,9 +36,9 @@ Soporte Cordova CLI para Windows 8 fue introducido en Cordova 3.1.0. Para actual
 
 ## Actualizar a 2.9.0 magnetohidrodinámica de 2.8.0
 
-Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizados o borrados.
+Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizadas o borradas.
 
-1.  Quitar `cordova-2.8.0.js` del proyecto de `www` Directorio.
+1.  Retire `cordova-2.8.0.js` del directorio de `www` del proyecto.
 
 2.  Añadir `cordova.js` archivo de la fuente para el proyecto `www` Directorio. (Observe que el archivo no contiene un número de versión en el nombre del fichero).
 
@@ -46,9 +46,9 @@ Los siguientes comandos deben realizarse desde dentro de Visual Studio para aseg
 
 ## Actualizar a 2.8.0 desde 2.7.0
 
-Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizados o borrados.
+Los siguientes comandos deben realizarse desde dentro de Visual Studio para asegurarse que las referencias de cualquier proyecto son actualizadas o borradas.
 
-1.  Quitar `cordova-2.7.0.js` del proyecto de `www` Directorio.
+1.  Retire `cordova-2.7.0.js` del directorio de `www` del proyecto.
 
 2.  Añadir `cordova.js` archivo de la fuente para el proyecto `www` Directorio. (Observe que el archivo no contiene un número de versión en el nombre del fichero).
 

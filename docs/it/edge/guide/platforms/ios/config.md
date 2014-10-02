@@ -13,7 +13,7 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 ## under the License.
 
-# iOS Configuration
+# Configurazione iOS
 
 La `config.xml` file controlla le impostazioni di base di un'app che si applicano a ogni applicazione e istanza di CordovaWebView. In questa sezione i dettagli delle preferenze che si applicano solo a Build di iOS. See [The config.xml File][1] for information on global configuration options.
 

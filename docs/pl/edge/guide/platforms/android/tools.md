@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -34,7 +34,7 @@ Uruchom `create` polecenie, określając ścieżkę istniejącego projektu, iden
 
 ## Budowanie
 
-To oczyszcza potem buduje projektu.
+Ta komenda czyści a następnie buduje projekt.
 
 Debugowania, na Mac/Linux czy Windows:
 
@@ -52,11 +52,11 @@ Wydanie, na Mac/Linux czy Windows:
 
 ## Uruchamianie aplikacji
 
-`run`Polecenie akceptuje następujące parametry *opcjonalne* :
+Komenda `run` akceptuje następujące *opcjonalne* parametry:
 
-*   Cel specyfikacji. Dotyczy to `--emulator` , `--device` , lub`--target=<targetID>`.
+*   Wyszczególnienie celu. Zawiera `--emulator`, `--device`, lub `--target=<targetID>`.
 
-*   Tworzenie specyfikacji. Dotyczy to `--debug` , `--release` , lub`--nobuild`.
+*   Wyszczególnienie opcji budowania. Zawiera `--debug`, `--release`, lub `--nobuild`.
     
         $ /path/to/project/cordova/run [Target] [Build]
         

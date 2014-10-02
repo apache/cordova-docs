@@ -1,11 +1,17 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. Zobacz plik ogłoszenia rozpowszechniane z tej pracy, aby uzyskać dodatkowe informacje dotyczące własności praw autorskich. ASF licencje tego pliku do ci Apache License, w wersji 2.0 ("Licencja"); nie można używać tego pliku z wyjątkiem zgodnie z licencją. Możesz otrzymać kopię licencji na
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.Apache.org/licenses/License-2.0 chyba że wymagane przez prawo lub uzgodnione na piśmie, oprogramowanie rozpowszechniane na licencji jest rozpowszechniany na "AS IS" podstawę, bez gwarancji lub warunków gwarancji jakiegokolwiek rodzaju, wyraźnych ani dorozumianych.  Zobacz licencji dla określonego języka, regulujących uprawnienia i ograniczenia
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## na licencji.
+## under the License.
 
 # Konfigurowanie VMWare Fusion
 

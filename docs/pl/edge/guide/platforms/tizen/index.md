@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -23,7 +23,7 @@ Tizen SDK wymaga 10.04/10.10/11.04/11.10 Linux Ubuntu (32-bitowa) lub Windows XP
 
 Programiści powinni używać `cordova` narzędzie w połączeniu z Tizen SDK. Zobacz interfejs wiersza poleceń do informacji jak go zainstalować, dodać projektów, a następnie tworzenia i wdrażania projektu.
 
-## Instalowania zestawu SDK
+## Instalowanie SDK
 
 Pobrać Tizen SDK z [tizen.org][1].
 
@@ -53,7 +53,7 @@ Pobrać Tizen SDK z [tizen.org][1].
 
 -->
 
-## Otwórz projekt w SDK
+## Otwieranie projektu w SDK
 
 1.  Uruchomienie Tizen Eclipse IDE.
 
@@ -87,7 +87,7 @@ Aby odbudować projekt, kliknij prawym przyciskiem myszy w widoku **Eksplorator 
 
 Plik pakietu widżet jak *hello.wgt* powinien generować w katalogu projektu.
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 Kliknij prawym przyciskiem myszy w widoku **Eksplorator projektu** projektu i wybierz **Uruchom jako → Tizen www symulator aplikacji**:
 
@@ -95,7 +95,7 @@ Kliknij prawym przyciskiem myszy w widoku **Eksplorator projektu** projektu i wy
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 *   Upewnij się, że urządzenie jest prawidłowo rozpoczęła, połączone i skonfigurowany. Ustawienia **daty i czasu** muszą być ustawione prawidłowo.
 
