@@ -116,25 +116,66 @@ instead of calling Ant directly from the command line.
 
 ## Building with Gradle (Experimental!)
 
-Cordova for Android now supports building with [Gradle](http://www.gradle.org/) This is optional in Cordova 3.x, but will be enabled by default in the future, probably with Cordova 4.0. The build system is controlled with environment variables, which can be set for the shell, or specified on the command line alongside the `cordova build` command.
+Cordova for Android now supports building with
+[Gradle](http://www.gradle.org/). This is optional in Cordova 3.x, but will be
+enabled by default in the future, probably with Cordova 4.0. The build system
+is controlled with environment variables, which can be set for the shell, or
+specified on the command line alongside the `cordova build` command.
 
-Please note that the Gradle build rules are still in development, and will likely be subject to large changes before Gradle becomes the default build system. Developers are encouraged to try it, and experiment with it, but if you base your own production build system on top of it, you will probably experience several breaking changes over the next few releases, before it stabilizes.
+Please note that the Gradle build rules are still in development, and will
+likely be subject to large changes before Gradle becomes the default build
+system. Developers are encouraged to try it, and experiment with it, but if you
+base your own production build system on top of it, you will probably
+experience several breaking changes over the next few releases, before it
+stabilizes.
 
 ### Relevant Environment Variables
 
   * **ANDROID\_BUILD**
 
-  This variable controls which build system is used to build the project. In can take either of the values `ant` or `gradle`.
+  This variable controls which build system is used to build the project. In
+  can take either of the values `ant` or `gradle`.
 
   If not set, it currently defaults to `ant`, but this is expected to change.
 
   * **BUILD\_MULTIPLE\_APKS**
 
-  If this is set, then multiple APK files will be generated: One per native platform supported by library projects (x86, ARM, etc). This can be important if your project uses large native libraries, which can drastically increase the size of the generated APK.
+  If this is set, then multiple APK files will be generated: One per native
+  platform supported by library projects (x86, ARM, etc). This can be important
+  if your project uses large native libraries, which can drastically increase
+  the size of the generated APK.
 
   If not set, then a single APK will be generated which can be used on all devices.
 
-### Other Environment Variables
+  * **BUILD\_MULTIPLE\_APKS**
+
+  If this is set, then multiple APK files will be generated: One per native
+  platform supported by library projects (x86, ARM, etc). This can be important
+  if your project uses large native libraries, which can drastically increase
+  the size of the generated APK.
+
+  If not set, then a single APK will be generated which can be used on all devices.
+
+  * **ANDROID\_VERSION\_CODE**
+
+  Overrides the versionCode set in `AndroidManifest.xml`
+
+  * **RELEASE\_SIGNING\_PROPERTIES\_FILE**
+
+  Path to a .properties file that contains signing information for release builds.
+  The file should look like:
+  ```
+  storeFile=relative/path/to/keystore.p12
+  storePassword=SECRET1
+  storeType=pkcs12
+  keyAlias=DebugSigningKey
+  keyPassword=SECRET2
+  ```
+
+  `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
+
+
+### Other Environment Variables (you don't normally need to set these)
 
   * **ANDROID\_HOME**
 
@@ -142,7 +183,9 @@ Please note that the Gradle build rules are still in development, and will likel
 
   * **JAVA\_HOME**
 
-  On some machines, this will need to be set so that Gradle can find the Java compiler. On OSX, the value for this variable can be found by running `/usr/libexec/java_home`
+  On some machines, this will need to be set so that Gradle can find the Java
+  compiler. On OSX, the value for this variable can be found by running
+  `/usr/libexec/java_home`
 
 ### Example Build
 
