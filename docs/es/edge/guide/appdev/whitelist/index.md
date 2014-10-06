@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,7 +28,7 @@ Los siguientes ejemplos demuestran sintaxis de lista blanca:
         <access origin="http://google.com" />
         
 
-*   Acceso a los seguros [google.com][3] ( `https://` ):
+*   Acceso a la segura [google.com][3] (`https://`):
     
         <access origin="https://google.com" />
         
@@ -129,12 +129,12 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
 
 *   Como alternativa al ajuste `*.domain` , establecer un adicional `subdomains` atribuyen a `true` . Se deben ajustar para que `false` por defecto. Por ejemplo, el siguiente permite el acceso a `google.com` , `maps.google.com` , y `docs.google.com` :
     
-        <access origin="http://google.com" subdomains="true" />
+        < accede origin="http://google.com" subdomains = "true" / >
         
     
     Angosto del siguiente acceso a `google.com` :
     
-        <access origin="http://google.com" subdomains="false" />
+        < accede origin="http://google.com" subdomains = "false" / >
         
     
     Especifica el acceso a todos los ámbitos, incluyendo el local `file://` Protocolo:

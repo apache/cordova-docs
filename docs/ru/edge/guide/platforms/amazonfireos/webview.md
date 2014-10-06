@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@
 
 ## under the License.
 
-# Amazon Fire OS WebViews
+# WebView в Amazon Fire OS
 
 Начиная с 3.3.0, Cordova можно использовать в качестве компонента приложений Amazon Fire OS. Amazon Fire ОС ссылается на этот компонент как `CordovaWebView` . `CordovaWebView` расширяет Amazon WebView, который построен на открытом исходном коде проекта Chromium. Используя эту функцию, веб-приложений можно использовать последние веб-стандарты HTML5, работающие в современной веб среде.
 
@@ -31,13 +31,13 @@
 
 1.  Следовать этим инструкциям, убедитесь, что у вас есть дистрибутив последней Кордова. Скачать его с [cordova.apache.org][1] и распакуйте его пакет Amazon Fire OS.
 
-2.  Скачать и развернуть [Amazon WebView SDK][2] , а затем скопируйте awv_interface.jar в `/framework/libs` каталог. Создайте libs / папки, если она не существует.
+2.  Скачать и распаковать [Amazon WebView SDK][2], затем скопируйте awv_interface.jar в каталог `/framework/libs`. Создайте каталог libs/, если он не существует.
 
 3.  Перейдите к пакету `/framework` директорию и запустить `ant jar` . Он создаёт Кордова `.jar` файл, как`/framework/cordova-x.x.x.jar`.
 
-4.  Копия `.jar` файл в Android-проект `/libs` каталог.
+4.  Скопируйте файл `.jar` в каталог `/libs` Android-проекта.
 
-5.  Добавьте в приложение следующий `/res/xml/main.xml` файл, с `layout_height` , `layout_width` и `id` изменения в соответствии с приложением:
+5.  Добавьте в приложение следующий файл `/res/xml/main.xml`, с `layout_height`, `layout_width` и `id` модицифированными в соответствии с нуждами приложения:
     
         <org.apache.cordova.CordovaWebView
             android:id="@+id/tutorialView"
@@ -45,7 +45,7 @@
             android:layout_height="match_parent" />
         
 
-6.  Измените вашу деятельность так, чтобы он реализует `CordovaInterface` . Вы должны реализовать включены методы. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java` , или реализовать их на свой собственный. В фрагменте кода ниже показано простое приложение, использующее интерфейс. Обратите внимание, как ссылающееся представление id соответствует `id` атрибут, указанный в XML-фрагменте показано выше:
+6.  Измените вашу деятельность так, чтобы этот класс реализовал `CordovaInterface` . Вы должны реализовать описанные методы этого интерфейса. Вы можете скопировать их из `/framework/src/org/apache/cordova/CordovaActivity.java`, или реализовать их самостоятельно. Нижеуказанный фрагмент кода показывает простое приложение , которое использует интерфейс. Обратите внимание, что id упоминаемого окна соответствует `id` атрибут, указанный в XML-фрагменте показаном выше:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;
@@ -63,7 +63,7 @@
  [1]: http://cordova.apache.org
  [2]: https://developer.amazon.com/sdk/fire/IntegratingAWV.html#installawv
 
-Если вы используете камеру, следует также реализовать это:
+Если вы используете камеру, следует также реализовать следующее:
 
         @Override
         public void setActivityResultCallback(CordovaPlugin plugin) {
@@ -109,7 +109,7 @@
         }
     
 
-Наконец, не забудьте добавить пул потоков, в противном случае плагинов нет потоков для запуска на:
+Наконец, не забудьте добавить пул потоков, в противном случае у плагинов не будет потоков где можно будет выполняться:
 
         @Override
         public ExecutorService getThreadPool() {

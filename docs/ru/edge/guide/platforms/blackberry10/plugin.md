@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -97,7 +97,7 @@ Cordova плагин для BlackBerry 10 содержит как JavaScript т�
 
 *   `extern JSExt* onCreateObject( const string& strClassName, const string& strObjId );`
 
-Функция `onGetObjList` возвращает разделенный запятыми список классов, поддерживаемых JNEXT. JNEXT использует эту функцию для определения набора классов, которые могут быть созданы JNEXT. Плагин `Echo` реализует следующе в `echo_js.cpp` :
+Функция `onGetObjList` возвращает разделенный запятыми список классов, поддерживаемых JNEXT. JNEXT использует эту функцию для определения набора классов, которые могут быть созданы JNEXT. Плагин `Echo` реализует следующе в `echo_js.cpp`:
 
         char* onGetObjList() {
             static char name[] = "Echo";

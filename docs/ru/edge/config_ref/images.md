@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -41,7 +41,7 @@ src: (обязательно) указывает расположение фай
 
 Для каждой платформы можно также определить идеальное значков, заданных для различных разрешений экрана.
 
-Amazon Fire ОС
+Amazon Fire OS
 
          <platform name="amazon-fireos">
                   <icon src="res/android/ldpi.png" density="ldpi" />

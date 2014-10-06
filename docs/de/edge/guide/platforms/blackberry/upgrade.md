@@ -15,7 +15,7 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 # Aktualisieren der BlackBerry
 
-Diese Anleitung zeigt wie zum Ändern von BlackBerry Projekten Upgrade von älteren Versionen von Cordova. Diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
+Diese Anleitung zeigt wie BlackBerry Projekte geändert werden müssen um ein Upgrade von älteren Versionen von Cordova durchzuführen. Diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
 
 ## Upgrade 2.8.0 Projekte 2.9.0
 

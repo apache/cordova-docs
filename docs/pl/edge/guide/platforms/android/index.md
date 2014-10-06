@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -179,7 +179,7 @@ Aby otworzyć ten emulator jako oddzielną aplikację, wybierz AVD i naciśnij *
 
  [12]: img/guide/platforms/android/asdk_emulator.png
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
@@ -247,7 +247,7 @@ Po pobraniu uruchomić instalator Intel, który jest dostępny w twój Android S
 
 4.  Podczas uruchamiania emulatora, upewnij się, nie są bez komunikatów o błędach, wskazując błąd ładowania modułów HAX.
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB jest włączona w urządzeniu, zgodnie z opisem na [Android Developer witryny][20]i używać mini kabla USB do podłączenia go do systemu.
 

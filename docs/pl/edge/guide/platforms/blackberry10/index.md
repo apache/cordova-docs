@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -132,7 +132,7 @@ Użycie `cordova` narzędzie, aby skonfigurować nowy projekt, zgodnie z opisem 
         $ cordova build
     
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 Jeśli chcesz uruchomić emulator urządzenia, pobrać i zainstalować symulator 10 BlackBerry.
 
@@ -172,7 +172,7 @@ Następnie uruchom `emulate` polecenie, aby wyświetlić aplikację:
         $ cordova emulate blackberry10
     
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Aby wdrożyć do urządzenia, upewnij się, że jest on podłączony do komputera. Włącz tryb opracowania i uzyskać adres IP jako opisaną w sekcji emulatora. Także trzeba będzie uzyskać PIN od **Ustawienia** aplikacji pod **o → sprzętu**:
 

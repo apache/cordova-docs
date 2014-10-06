@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -32,17 +32,17 @@ Para añadir soporte o reconstruir un proyecto para cualquier plataforma, necesi
 *   Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
-En Mac, la linea de comando esta disponible a través de la aplicación de *Terminal *. En PC, se encuentra disponible como *símbolo * en *accesorios *.
+En el Mac, es disponible a través de la aplicación de la *Terminal de* la línea de comandos. En el PC, está disponible como *Command Prompt* bajo *Accessories*.
 
 **Nota**: para las plataformas Windows, todavía puedes desarrollar en equipos Mac ejecutando Windows en una máquina virtual o en modo de arranque dual. Para las opciones disponibles, consulte la guía de la plataforma de Windows Phone 8 o la guía de la plataforma Windows.
 
-Lo más probable es que ejecute la CLI desde diferentes equipos, lo que le da mas sentido a mantener un repositorio de código fuente remoto, cuyos archivos pueda descargar en sus directorios de trabajo local.
+Lo más probable es que ejecute la CLI de diferentes máquinas, más tiene sentido mantener un repositorio de código fuente remota, cuyos activos tire hacia abajo para directorios de trabajo local.
 
 ## Instalar la CLI de Cordova
 
 La herramienta de línea de comandos de Cordova se distribuye como un paquete de npm en un formato listo para usar. No es necesario compilarlo desde su código fuente.
 
-Para instalar `cordova` desde la línea de comandos siga estos pasos:
+Para instalar la herramienta de línea de comandos de `cordova`, siga estos pasos:
 
 1.  Descargue e instale [Node.js][1]. Después de la instalación, usted debe ser capaz de ejecutar `node` y `npm` en la línea de comandos. Si lo desea, opcionalmente puede utilizar una herramienta como `nvm` o `nave` para manejar la instalación de Node.js.
 
@@ -84,20 +84,20 @@ Vaya al directorio donde mantener su código fuente y ejecutar un comando como e
 
 Puede tomar algún tiempo para que el comando completar, así que tenga paciencia. Ejecutar el comando con el `-d` opción muestra información acerca de su progreso.
 
-El primer argumento *Hola* especifica un directorio que se generen para su proyecto. Este directorio ya no debería existir, Córdoba lo creará para usted. Su `www` subdirectorio casas página de inicio de su aplicación, junto con diversos recursos bajo `css` , `js` , y `img` , que seguir común web convenciones de nomenclatura de archivos de desarrollo. Estos activos se almacenarán en el sistema de archivos local del dispositivo, no sirve de forma remota. El `config.xml` archivo contiene metadatos importantes necesarios para generar y distribuir la aplicación.
+El primer argumento *Hola* especifica un directorio que se generen para su proyecto. Este directorio ya no debería existir, Córdoba lo creará para usted. Página de inicio de su aplicación, junto con diversos recursos bajo `css`, `js` y `img`, que seguir común web convenciones de nomenclatura de archivos de desarrollo las casas su subdirectorio `www`. Estos activos se almacenarán en el sistema de archivos local del dispositivo, no sirve de forma remota. El archivo `config.xml` contiene metadatos importantes necesarios para generar y distribuir la aplicación.
 
 El segundo argumento `com.example.hello` proporciona un identificador de dominio reverso-estilo su proyecto. Este argumento es opcional, pero sólo si también omite el tercer argumento, puesto que los argumentos son posicionales. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de paquetes Java. El valor predeterminado es `io.cordova.hellocordova` , pero se recomienda que seleccione un valor apropiado.
 
 El tercer argumento `HelloWorld` da título de pantalla de la aplicación. Este argumento es opcional. Puede editar este valor más adelante en el `config.xml` de archivos, pero tenga en cuenta que puede haber código generado fuera de `config.xml` utilizando este valor, tales como nombres de clase de Java. El valor predeterminado es `HelloCordova` , pero se recomienda que seleccione un valor apropiado.
 
-## Agregar plataformas
+## Añadir plataformas
 
-Todos los comandos posteriores necesitan ejecutarse dentro de directorio del proyecto, o cualquier subdirectorios dentro de su ámbito de aplicación:
+Todos los comandos posteriores necesitan ejecutarse en el directorio del proyecto, o cualquier subdirectorios dentro de su ámbito de aplicación:
 
         $ cd hello
     
 
-Antes de que usted puede construir el proyecto, tienes que especificar un conjunto de plataformas de destino. Su capacidad para ejecutar estos comandos depende de si tu maquina soporta cada SDK, y si ya tienes instalación cada SDK. Ejecutar cualquiera de éstos desde un Mac:
+Antes de poder construir el proyecto, tienes que especificar un conjunto de plataformas de destino. Su capacidad para ejecutar estos comandos depende de si tu maquina soporta cada SDK, y si ya tienes instalación cada SDK. Ejecutar cualquiera de éstos desde un Mac:
 
         $ cordova platform add ios
         $ cordova platform add amazon-fireos
@@ -106,17 +106,17 @@ Antes de que usted puede construir el proyecto, tienes que especificar un conjun
         $ cordova platform add firefoxos
     
 
-Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere a diferentes versiones del sistema operativo Windows Phone:
+Ejecutar cualquiera de éstos desde una máquina Windows, donde *wp* se refiere a las diferentes versiones del sistema operativo Windows Phone:
 
         plataforma $ cordova agregar $ wp8 cordova plataforma añadir windows plataforma $ cordova añadir plataforma amazon-fireos $ cordova añadir android $ cordova plataforma añadir $ blackberry10 cordova plataforma agregar firefoxos
     
 
-Ejecutar para comprobar su sistema actual de plataformas:
+Ejecutar esto para comprobar su sistema actual de plataformas:
 
         $ cordova platforms ls
     
 
-(Nota del `platform` y `platforms` son sinónimos comandos.)
+(Tenga en cuenta que los comandos `platform` y `platforms` son sinónimos).
 
 Ejecutar cualquiera de los siguientes comandos sinónimos para quitar una plataforma:
 
@@ -125,7 +125,7 @@ Ejecutar cualquiera de los siguientes comandos sinónimos para quitar una plataf
         $ cordova platform rm android
     
 
-Ejecución de comandos para agregar o quitar afecta a plataformas el contenido del directorio de *plataformas* del proyecto, donde cada plataforma especificado aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www` . Porque la CLI constantemente copia archivos desde la carpeta *www* fuente, sólo debe editar estos archivos y no los ubicado debajo de los subdirectorios de *plataformas* . Si utilizas software de control de versión, debe agregar esta carpeta *www* fuente, junto con la carpeta *se funde* , a su sistema de control de versión. (Puede encontrarse más información sobre la carpeta *se funde* en la sección de personalizar cada plataforma abajo).
+Ejecución de comandos para agregar o quitar afecta a plataformas el contenido del directorio de *platforms* del proyecto, donde cada plataforma especificado aparece como un subdirectorio. El directorio de origen *www* se reproduce dentro del subdirectorio de cada plataforma, que aparece por ejemplo en `platforms/ios/www` o `platforms/android/assets/www`. Porque la CLI constantemente copia archivos desde la carpeta *www* fuente, sólo debe editar estos archivos y no los ubicado debajo de los subdirectorios de *plataformas* . Si utilizas software de control de versión, debe agregar esta carpeta *www* fuente, junto con la carpeta *se funde* , a su sistema de control de versión. (Puede encontrarse más información sobre la carpeta *se funde* en la sección de personalizar cada plataforma abajo).
 
 **ADVERTENCIA**: cuando se usa la CLI para construir su solicitud, usted debe *no* editar cualquiera de los archivos en el `/platforms/` Directorio si no sabes lo que estás haciendo, o si documentación especifica lo contrario. Los archivos de este directorio se sobrescriben rutinariamente al preparar las aplicaciones para la construcción, o cuando son instalar plugins.
 
@@ -135,29 +135,29 @@ Lea sobre si desea utilizar el enfoque de flujo de trabajo multiplataforma (CLI)
 
 ## Construir la aplicación
 
-De forma predeterminada, el `cordova create` script genera una aplicación basada en web esquelética cuya portada es el proyecto `www/index.html` archivo. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `deviceready` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
+De forma predeterminada, la secuencia de comandos `cordova create` genera una esquelética aplicación basada en web cuya página de inicio es el archivo del proyecto `www/index.html`. Editar esta aplicación que quieras, pero cualquier inicialización debe especificarse como parte de la `deviceready` controlador de eventos, que se hace referencia por defecto de`www/js/index.js`.
 
 Ejecute el siguiente comando para crear iterativamente el proyecto:
 
         $ cordova build
     
 
-Esto genera código específico de plataforma dentro del proyecto `platforms` subdirectorio. Opcionalmente puede limitar el alcance de cada generación de plataformas específicas:
+Esto genera un código específico de plataforma dentro del subdirectorio del proyecto `platforms`. Opcionalmente puede limitar el alcance de cada build a plataformas específicas:
 
         $ cordova build ios
     
 
-El `cordova build` el comando es una abreviatura para el siguiente, que en este ejemplo también está orientado a una única plataforma:
+El comando `cordova build` es una abreviatura para el siguiente, que en este ejemplo también está orientado a una única plataforma:
 
         $ cordova prepare ios
         $ cordova compile ios
     
 
-En este caso, una vez se ejecuta `prepare` , puede utilizar como una alternativa Xcode SDK de Apple para modificar y compilar el código específico de plataforma que Córdoba se genera dentro de `platforms/ios` . Puede utilizar el mismo enfoque con SDK de otras plataformas.
+En este caso, una vez que `prepare`, puede utilizar Xcode SDK de Apple como alternativa para modificar y compilar el código específico de plataforma que Córdoba se genera dentro de `platforms/ios`. Puede utilizar el mismo enfoque con SDK de otras plataformas.
 
 ## Probar la aplicación en un emulador o dispositivo
 
-SDK para plataformas móviles vienen a menudo incluidos con emuladores que ejecutan una imagen del dispositivo, así que usted puede lanzar la aplicación desde la pantalla principal y ver cómo interactúa con muchas características de la plataforma. Ejecutar un comando como el siguiente para reconstruir la aplicación y visualizarlo en emulador de una plataforma específica:
+SDK para plataformas móviles vienen a menudo incluidos con emuladores que ejecutan una imagen del dispositivo, así que usted puede lanzar la aplicación desde la pantalla principal y ver cómo interactúa con muchas características de la plataforma. Ejecutar un comando como el siguiente para reconstruir la app y visualizarlo en un emulador de una plataforma específica:
 
         $ cordova emulate android
     
@@ -166,13 +166,13 @@ Algunas plataformas móviles emulan un dispositivo especial de forma predetermin
 
 **Nota**: apoyo emulador no está actualmente disponible para Amazon fuego OS.
 
-(Vea a las guías de plataforma para más detalles). Por ejemplo, usted primero de puede ejecutar el `android` comando para iniciar el SDK de Android, y luego ejecute una imagen del dispositivo en particular, que inicia según su comportamiento predeterminado:
+(Vea a las guías de la plataforma para más detalles). Por ejemplo, usted puede ejecuta el comando `android` para lanzar el SDK de Android, luego ejecute una imagen del dispositivo en particular, que inicia según su comportamiento predeterminado:
 
 ![][4]
 
  [4]: img/guide/cli/android_emulate_init.png
 
-Seguimiento con el `cordova emulate` comando actualiza la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
+Siguiendo con el comando `cordova emulate` refresca la imagen de emulador para mostrar la última aplicación, que ahora está disponible para el lanzamiento de la pantalla de Inicio:
 
 ![][5]
 
@@ -187,7 +187,7 @@ Antes de ejecutar este comando, tienes que configurar el dispositivo para la pru
 
 ## Añadir funciones Plugin
 
-Al construir y ver un nuevo proyecto, la aplicación predeterminada que aparece no hace mucho. Puede modificar la aplicación de muchas maneras a aprovechar las tecnologías web estándar, sino de la aplicación comunicar estrechamente con varias características de nivel de dispositivo, tienes que añadir plugins que proporcionan acceso a núcleo Cordova APIs.
+Cuando construyes y ver un nuevo proyecto, la aplicación predeterminada que aparece no hace mucho. Puede modificar la aplicación de muchas maneras a aprovechar las tecnologías web estándar, pero para que la aplicación para comunicar estrechamente con varias características de nivel de dispositivo, necesitará añadir plugins que proporcionan acceso a núcleo Cordova APIs.
 
 Un *plugin* es un poco de código adicional que proporciona una interfaz para componentes nativos. Usted puede diseñar su propia interfaz plugin, por ejemplo al diseñar una aplicación híbrida que combina un Cordova WebView con componentes nativos. (Véase WebViews incrustar y [Plugin Development Guide][6] para obtener más detalles). Más comúnmente, debe agregar un plugin para activar uno de los rasgos básicos de nivel de dispositivo de Cordova detallados en la referencia de la API.
 
@@ -281,7 +281,7 @@ Uso `plugin ls` (o `plugin list` , o `plugin` por sí mismo) ver actualmente ins
         [ 'org.apache.cordova.console' ]
     
 
-Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo le quita apoyo para una consola de depuración de una versión:
+Para quitar un plugin, referirse a él por el mismo identificador que aparece en el listado. Por ejemplo, aquí es cómo quitaría apoyo para una consola de depuración de una versión:
 
         $ cordova plugin rm org.apache.cordova.console
         $ cordova plugin remove org.apache.cordova.console    # same
@@ -381,7 +381,7 @@ Después de instalar el `cordova` utilidad, puede siempre actualizarlo a la vers
         $ sudo npm update -g cordova
     
 
-Para instalar una versión específica, utilice esta sintaxis:
+Utilice esta sintaxis para instalar una versión específica:
 
         $ sudo npm install -g cordova@3.1.0-0.2.0
     

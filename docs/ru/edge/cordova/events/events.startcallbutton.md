@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -20,7 +20,7 @@
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
     
 
-## Подробная информация
+## Подробности
 
 Если необходимо переопределить поведение по умолчанию начала вызова вы можете зарегистрировать обработчик для события `startcallbutton`.
 
@@ -30,7 +30,7 @@
 
 *   BlackBerry 10
 
-## Быстрый пример
+## Краткий пример
 
     document.addEventListener("startcallbutton", onStartCallKeyDown, false);
     
@@ -39,7 +39,7 @@
     }
     
 
-## Полный пример
+## Развернутый пример
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

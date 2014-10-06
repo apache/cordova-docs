@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -44,7 +44,7 @@ Rozwój Cordova aplikacje dla Amazon ognia systemu operacyjnego wymaga instalacj
  [3]: http://developer.android.com/sdk/
  [4]: http://ant.apache.org
 
-## Instalacji
+## Instalacja
 
 ### Android SDK i Apache Ant
 
@@ -121,7 +121,7 @@ Użycie `cordova` narzędzie, aby skonfigurować nowy projekt, opisanym w The Co
 
 ***Uwaga:*** Po raz pierwszy na platformie amazon-fireos jest zainstalowana w systemie, to pobierze odpowiednie pliki do katalogu roboczego Cordova, ale wtedy zakończy się niepowodzeniem, ponieważ brakuje plików pomocy AWV SDK (patrz wyżej). Postępuj zgodnie z instrukcjami powyżej, aby zainstalować `awv_interface.jar` , a następnie usunąć i dodać ponownie platformie amazon-fireos do projektu. Ten krok będzie tylko trzeba będzie zrobić pierwszy projekt Amazon ogień OS.
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB jest włączona w urządzeniu, zgodnie z opisem na [Android Developer witryny][8]i używać mini kabla USB do podłączenia go do systemu.
 

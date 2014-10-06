@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -23,7 +23,7 @@ Un plugin de iOS se implementa como una clase de Objective-C que se extiende la 
 
 La porción de JavaScript de un plugin utiliza el `cordova.exec` método de la siguiente manera:
 
-        exec (< successFunction >, < failFunction >, < service >, < acción > [< args >]);
+        exec(<successFunction>, <failFunction>, <service>, <action>, [<args>]);
     
 
 Esto mariscales una solicitud de la `UIWebView` al lado nativo iOS, efectivamente llamando el `action` método de la `service` clase, con los argumentos pasados en la `args` matriz.
@@ -146,7 +146,7 @@ El `CDVPlugin` clase cuenta con otros métodos que puede invalidar su plugin. Po
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-## Roscar
+## Threading
 
 Plugin métodos normalmente se ejecutan en el mismo subproceso como la interfaz principal. Si tu plugin requiere una gran cantidad de procesamiento o requiere una llamada de bloquea, debe utilizar un subproceso de fondo. Por ejemplo:
 

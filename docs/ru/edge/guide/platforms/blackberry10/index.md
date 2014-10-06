@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -56,28 +56,28 @@
 
 В Windows:
 
-*   Перейти к **переменных среды → мой компьютер → свойства → дополнительно**.
+*   Перейти к **мой компьютер → Свойства → Дополнительно → Переменные среды**.
 
-*   Добавьте каталог установки родного SDK путь, например:
+*   Добавьте каталог установки Native SDK к пути, например:
     
         ;C:\bbndk\host_10_1_0_132\win32\x86\usr\bin\
         
 
 На Mac и Linux:
 
-*   Изменить `~/.bash_profile` файл, добавив строку, например, в зависимости от того, где была установлена родного SDK:
+*   Отредактируйте файл `~/.bash_profile`, добавив строку, наподобие нижеуказанной, изменив ее в зависимости от того, где был установлен Native SDK:
     
         $ export PATH=${PATH}:/Applications/bbndk/host_10_1_0_132/darwin/x86/usr/bin/
         
     
-    или за 10,2 родного SDK:
+    или для Native SDK 10.2:
     
         $ export PATH=${PATH}:/Applications/Momentics.app/host_10_2_0_15/darwin/x86/usr/bin/
         
 
 *   Выполните следующие действия, чтобы применить изменения в текущем сеансе:
     
-        $ source ~/.bash_profile
+        $ источника ~/.bash_profile
         
 
 Если у вас есть любые проблемы со средой, используя Native SDK выполните из командной строки, соответствующий для вашей платформы файл, расположенный в пути установки:
@@ -194,9 +194,9 @@
 
 где:
 
-*   `--password`относится к пароль, чтобы разблокировать устройство.
+*   `--password` указывает на пароль, необходимый чтобы разблокировать устройство.
 
-*   `--pin`относится к устройству PIN, полученные из **параметров** приложения.
+*   `--pin` относится к PIN устройства, полученный из приложения **Настройки**.
 
 Затем выполните команду `run` для просмотра приложений:
 

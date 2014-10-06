@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Menü-Taste drückt.
     document.addEventListener("menubutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Anwenden eines Event-handlers überschreibt das Standardverhalten der Menü-Taste.
 
@@ -32,7 +32,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 *   Android
 *   BlackBerry 10
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("menubutton", onMenuKeyDown, false);
     

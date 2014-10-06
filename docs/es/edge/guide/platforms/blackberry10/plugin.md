@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -93,9 +93,9 @@ El `m_id` atributo contiene el `JNEXT` id para el objeto que se pasa como argume
 
 El plugin nativo también debe implementar las siguientes funciones de devolución de llamada:
 
-*   `extern char * onGetObjList (void);`
+*   `extern char* onGetObjList( void );`
 
-*   `extern JSExt * onCreateObject (const cadena & strClassName, const string & strObjId);`
+*   `extern JSExt* onCreateObject( const string& strClassName, const string& strObjId );`
 
 El `onGetObjList` función devuelve una lista separada por comas de clases apoyada por JNEXT. JNEXT utiliza esta función para determinar el conjunto de clases que puede crear una instancia de JNEXT. El `Echo` plugin implementa la siguiente `echo_js.cpp` :
 
@@ -105,7 +105,7 @@ El `onGetObjList` función devuelve una lista separada por comas de clases apoya
         }
     
 
-La `onCreateObject` la función toma dos parámetros. El primero es el nombre de la clase solicitada para ser creado desde el lado de JavaScript, con nombres válidos como los devueltos en `onGetObjList` . El segundo parámetro es el identificador de objeto único de la clase. Este método devuelve un puntero al objeto creado plugin. El `Echo` plugin implementa la siguiente `echo_js.cpp` :
+La función de `onCreateObject` toma dos parámetros. El primero es el nombre de la clase solicitada para ser creado desde el lado de JavaScript, con nombres válidos como los devueltos en `onGetObjList` . El segundo parámetro es el identificador de objeto único de la clase. Este método devuelve un puntero al objeto creado plugin. El `Echo` plugin implementa la siguiente `echo_js.cpp` :
 
         JSExt* onCreateObject(const string& className, const string& id) {
             if (className == "Echo") {
@@ -172,9 +172,9 @@ Usted puede colocar artefactos del plugin, incluyendo el `plugin.xml` archivo, l
 
 *   **www** (>client.js)
 *   **src** 
-    *   **blackberry10** (> **nativa** , index.js > *.cpp, *.hpp)
+    *   **blackberry10** (>index.js, **native** >*.cpp, *.hpp)
     *   **dispositivo** (>*archivo binario* * así)
-    *   **simulador** (>*archivo binario* * así)
+    *   **simulator** (>*binary file* *.so)
 
 La lista muestra la relación jerárquica entre las carpetas de nivel superior. El paréntesis muestra el contenido de un directorio determinado. Todos los nombres de directorio aparecen en negrita. Nombres de archivo son precedidos por el `>` señal.
 

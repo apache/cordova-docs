@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@
 
 ## under the License.
 
-# Руководство по платформы Windows Phone 8
+# Руководство для платформы Windows Phone 8
 
 В этом руководстве показано, как настроить среду разработки SDK для развертывания приложений Cordova для устройств Windows Phone. Он фокусируется на Windows Phone 8, но дополнительные сведения о том, как поддержка Windows Phone 7.
 
@@ -101,7 +101,7 @@
 
 ## Построение проекта
 
-Если вы используете CLI в развитии, в каталог проекта верхнего уровня `www` Каталог содержит исходные файлы. Запустите любой из них в каталоге проекта по восстановлению app:
+Если вы используете CLI для разработки, каталога `www` проекта содержит исходные файлы. Запустите любой из нижеследующего в каталоге проекта для перепостроения приложения:
 
         > cordova build
         > cordova build wp8   # do not rebuild other platforms
@@ -120,9 +120,9 @@
         C:\path\to\project\cordova\clean.bat
     
 
-## Развернуть эмулятор
+## Развертывание на эмулятор
 
-В этот момент вы можете использовать `cordova` утилиты CLI для развертывания приложения в эмулятор из командной строки:
+К этому моменту можно использовать утилиту CLI `cordova` для развертывания приложения на эмулятор из командной строки:
 
         > cordova emulate wp8
     

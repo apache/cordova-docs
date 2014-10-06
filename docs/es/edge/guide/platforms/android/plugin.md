@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -39,7 +39,7 @@ Si usted distribuye un plugin como archivo de Java o como un archivo *jar* de su
 
 El nombre de servicio coincide con la utilizada en el JavaScript `exec` llamar. El valor es el identificador de la clase Java de nombres completos. De lo contrario, el plugin puede compilar pero todavía estar disponible a Córdoba.
 
-## Vida e inicialización Plugin
+## Vida e inicialización de Plugin
 
 Para la vida de cada uno se crea una instancia de un objeto plugin `WebView` . Plugins no se instancian hasta que primero se hace referencia mediante una llamada desde JavaScript, a menos que `<param>` con un `onload` `name` atributo se establece en `"true"` en `config.xml` . Por ejemplo:
 
@@ -60,7 +60,7 @@ Plugins deberían utilizar el `initialize` método para su lógica puesta en mar
 
 ## Escribir un Plugin de Java Android
 
-Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el plugin de Java correspondiente se asigna correctamente en el `config.xml` archivo, pero ¿qué aspecto tiene el final Android Java Plugin clase? Lo que es enviado al plugin de JavaScript `exec` función se pasa a la clase plugin `execute` método. La mayoría `execute` implementaciones de este aspecto:
+Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el plugin de Java correspondiente se asigna correctamente en el `config.xml` archivo, pero ¿qué aspecto tiene el final Android Java Plugin clase? Lo que es enviado al plugin de JavaScript `exec` función se pasa a la clase plugin `execute` método. La mayoría de las implementaciones de `execute` este aspecto:
 
         @Override public boolean ejecutar (acción de las cuerdas, JSONArray args, CallbackContext callbackContext) lanza JSONException {si ("beep".equals(action)) {this.beep(args.getLong(0));
                 callbackContext.success();
@@ -71,9 +71,9 @@ Una llamada JavaScript dispara una solicitud plugin nativo al lado, y el plugin 
 
 El JavaScript `exec` de función `action` parámetro corresponde a un método de clase privada para despachar con parámetros opcionales.
 
-Cuando captura de excepciones y devolver errores, es importante en aras de la claridad que los errores devueltos a nombres de JavaScript partido Java excepción tanto como sea posibles.
+Cuando captura de excepciones y devolver errores, es importante en aras de la claridad que los errores devueltos a nombres de excepción de JavaScript partido Java tanto como sea posibles.
 
-## Roscar
+## Threading
 
 JavaScript del plugin hace *no* ejecuta en el subproceso principal de la `WebView` interfaz; en cambio, se ejecuta en el `WebCore` del hilo de rosca, como lo hace el `execute` método. Si usted necesita interactuar con la interfaz de usuario, debe usar las siguientes variaciones:
 

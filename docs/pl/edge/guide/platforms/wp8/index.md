@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -77,7 +77,7 @@ Jeśli chcesz użyć Cordova w środku Windows Phone powłoka narzędzia w poł�
 
 Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i Windows Phone 8 wtyczki szczegóły specyficzne dla platformy Windows Phone.
 
-## Instalowania zestawu SDK
+## Instalowanie SDK
 
 Zainstaluj najnowszą wersję zestawu SDK Windows Phone z obszaru **do pobrania** [dev.windowsphone.com][3]. Można również zainstalować najnowsze emulatora aktualizacji pakietów.
 
@@ -120,7 +120,7 @@ Jeśli używasz narzędzia powłoki Windows Phone określonych w rozwoju, ma inn
         C:\path\to\project\cordova\clean.bat
     
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
@@ -157,7 +157,7 @@ Te Zaawansowane sterowanie pozwala również do modyfikowania położenia urząd
 
  [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Przed testowaniem aplikacji na urządzeniu, urządzenie musi być zarejestrowany. Dokumentacji [firmy Microsoft][14] informacje na temat wdrażania i testowania na Windows Phone 8. Również upewnij się, że telefon jest podłączony do komputera, a na ekranie jest odblokowany.
 

@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn Cordova vollständig geladen ist.
     document.addEventListener("deviceready", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Dieses Ereignis ist wesentlich für jede Anwendung. Es signalisiert, dass Cordovas Gerät APIs geladen haben und bereit sind, zugreifen.
 
@@ -40,7 +40,7 @@ Das `deviceready` Ereignis verhält sich etwas anders als von anderen. Ein Ereig
 *   Windows Phone 8
 *   Windows 8
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("deviceready", onDeviceReady, false);
     

@@ -32,7 +32,7 @@ Jede *Platform Guide* unten aufgeführten erfahren Sie, was Sie brauchen, wissen
 
 *   Android-Plattform-Guide
 *   Android Shell Tool Guide
-*   Android-Konfiguration
+*   Android Konfiguration
 *   Android Plugins
 *   Android Webansichten für
 *   Aktualisierung von Android

@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -14,7 +14,7 @@ Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów 
 
 * * *
 
-# Obsługa platformy
+# Wspierane platformy
 
 Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne dla każdej z platform mobilnych. Urządzenie, które API tutaj wymienione są dostarczane przez podstawowe pluginy, dodatkowe funkcje API są dostępne za pośrednictwem [innej wtyczki][1]. CLI skrót nazwy wyświetlane nagłówki kolumn.
 
@@ -180,7 +180,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </th>
         
         <th colspan="20">
-          Platforma API
+          API
         </th>
       </tr>
       
@@ -252,7 +252,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
       
       <tr>
         <th>
-          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Aparat fotograficzny</a>
+          <a href="https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md">Aparat</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -334,7 +334,7 @@ Poniżej przedstawiono zestaw narzędzi i urządzeń interfejsów API dostępne 
         </td>
         
         <td data-col="ios"        class="y">
-          (3GS +)
+          (3GS+)
         </td>
         
         <td data-col="ubuntu"        class="y">
