@@ -187,6 +187,13 @@ stabilizes.
   compiler. On OSX, the value for this variable can be found by running
   `/usr/libexec/java_home`
 
+### Extending build.gradle
+
+If you need to customize `build.gradle`, rather than edit directly, you should create
+a sibling file named `build-extras.gradle`. This file will be included by the main
+`build.gradle` when present.
+
 ### Example Build
 
         ANDROID_BUILD=gradle cordova build android
+
