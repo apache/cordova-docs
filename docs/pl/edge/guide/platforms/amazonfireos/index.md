@@ -92,7 +92,7 @@ Aby zmienić ścieżka środowisko naturalne w systemie Windows:
 
 *   Zapisz wartość i zamknij obu oknach dialogowych.
 
-*   Także trzeba będzie włączyć Java. Otworzyć pewien rozkazywać wierzyciel i typ `java` , jeśli to nie działa, Dołącz lokalizacji plików binarnych Java do Twojej ścieżki, jak również. Upewnij się, że JAVA\_HOME % jest skierowany do zainstalowanego katalogu JDK. Może trzeba dodać środowiska JAVA\_HOME zmienny osobno.
+*   Także trzeba będzie włączyć Java. Otworzyć pewien rozkazywać wierzyciel i typ `java` , jeśli to nie działa, Dołącz lokalizacji plików binarnych Java do Twojej ścieżki, jak również. Upewnij się, że JAVA_HOME % jest skierowany do zainstalowanego katalogu JDK. Może trzeba dodać środowiska JAVA_HOME zmienny osobno.
     
         ; %JAVA_HOME%\bin
         
