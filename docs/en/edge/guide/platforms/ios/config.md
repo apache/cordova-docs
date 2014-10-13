@@ -111,3 +111,6 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
 
+- `MinimumFontSize` (float, defaults to `0`): The minimum font size in points for text in a WKWebView. Requires "UseWKWebView" preference to be set to "true" and will only work in iOS 8.
+
+        <preference name="MinimumFontSize" value="1.0"/>
