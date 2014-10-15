@@ -86,7 +86,7 @@ Per modificare l'ambiente del percorso su Windows:
 
 *   Salvare il valore e chiudere le due finestre di dialogo.
 
-*   Inoltre devi abilitare Java. Aprire un prompt dei comandi e digitare `java` , se non viene eseguito, aggiungere il percorso dei binari Java al vostro percorso pure. Rendere %JAVA\_HOME% sia rivolto verso il JDK installato nella directory. Potrebbe essere necessario aggiungere separatamente variabile di ambiente JAVA\_HOME.
+*   Inoltre devi abilitare Java. Aprire un prompt dei comandi e digitare `java` , se non viene eseguito, aggiungere il percorso dei binari Java al vostro percorso pure. Rendere %JAVA_HOME% sia rivolto verso il JDK installato nella directory. Potrebbe essere necessario aggiungere separatamente variabile di ambiente JAVA_HOME.
     
         ; %JAVA_HOME%\bin
         
