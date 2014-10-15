@@ -86,7 +86,7 @@ Pour modifier l'environnement PATH sous Windows :
 
 *   Enregistrez la valeur et fermez les deux boîtes de dialogue.
 
-*   Vous devrez aussi activer Java. Ouvrez une invite de commandes et tapez `java` , si elle ne s'exécute pas, ajoutez l'emplacement des fichiers binaires Java à votre chemin aussi bien. Assurez-vous de JAVA\_HOME % pointe vers le répertoire JDK installé. Vous devrez peut-être ajouter JAVA\_HOME environnement variable séparément.
+*   Vous devrez aussi activer Java. Ouvrez une invite de commandes et tapez `java` , si elle ne s'exécute pas, ajoutez l'emplacement des fichiers binaires Java à votre chemin aussi bien. Assurez-vous de JAVA_HOME % pointe vers le répertoire JDK installé. Vous devrez peut-être ajouter JAVA_HOME environnement variable séparément.
     
         ; %JAVA_HOME%\bin
         

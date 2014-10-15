@@ -92,7 +92,7 @@ Para modificar el entorno PATH en Windows:
 
 *   El valor de guardar y cerrar ambos cuadros de diálogo.
 
-*   Usted también necesitará habilitar Java. Abra un símbolo del sistema y el tipo `java` , si no funciona, anexar su camino así como la ubicación de los binarios de Java. Asegúrese de que JAVA\_HOME % apunta al directorio JDK instalado. Tendrás que agregar separadamente variable de entorno JAVA\_HOME.
+*   Usted también necesitará habilitar Java. Abra un símbolo del sistema y el tipo `java` , si no funciona, anexar su camino así como la ubicación de los binarios de Java. Asegúrese de que JAVA_HOME % apunta al directorio JDK instalado. Tendrás que agregar separadamente variable de entorno JAVA_HOME.
     
         ; %JAVA_HOME%\bin
         
