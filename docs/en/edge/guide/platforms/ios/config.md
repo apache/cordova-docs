@@ -111,3 +111,8 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
 
+- `UseWKWebView` (boolean, defaults to `false`): Set
+  to `true` to use a WKWebView instead of a UIWebView for rendering. Only in iOS 8.
+
+        <preference name="UseWKWebView" value="true"/>
+
