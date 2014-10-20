@@ -84,31 +84,8 @@ Firefox OS
 
 iOS
 
-         <platform name="ios">
-                  <!-- iOS 7.0+ -->
-                  <!-- iPhone / iPod Touch  -->
-                  <icon src="res/ios/icon-60.png" width="60" height="60" />
-                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-76.png" width="76" height="76" />
-                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-                  <!-- iOS 6.1 -->
-                  <!-- Spotlight Icon -->
-                  <icon src="res/ios/icon-40.png" width="40" height="40" />
-                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
-                  <!-- iPhone / iPod Touch -->
-                  <icon src="res/ios/icon.png" width="57" height="57" />
-                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-72.png" width="72" height="72" />
-                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
-                  <!-- iPhone Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-small.png" width="29" height="29" />
-                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
-                  <!-- iPad Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-50.png" width="50" height="50" />
-                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
-         </platform>
+         < nazwa platformy = "ios" ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < ikona src="res/ios/icon-60.png" szerokość = wysokość "60" = "60" / >< ikona src = szerokość "res, ios, icon-60@2x.png" = "120" wysokość = "120" / ><!--iPad--> < ikona src="res/ios/icon-76.png" szerokość = "76" wysokość = "76" / >< ikona src = szerokość "res, ios, icon-76@2x.png" = "152" wysokość = "152" / ><!--iOS 6.1--> <!--Spotlight ikona--> < ikona src="res/ios/icon-40.png" szerokość = wysokość "40" = "40" / >
+                  < ikona src = szerokość "res, ios, icon-40@2x.png" = "80" wysokość = "80" / ><!--iPhone / iPod Touch--> < ikona src="res/ios/icon.png" szerokość = wysokość "57" = "57" / >< ikona src = szerokość "res, ios, icon@2x.png" = "114" wysokość = "114" / ><!--iPad--> < ikona src="res/ios/icon-72.png" szerokość = wysokość "72" = "72" / >< ikona src = szerokość "res, ios, icon-72@2x.png" = "144" wysokość = "144" / ><!--iPhone Spotlight i ikonę ustawienia--> < ikona src="res/ios/icon-small.png" szerokość = "29" wysokość = "29" />< ikona src = szerokość "res, ios, icon-small@2x.png" = "58" wysokość = "58" / ><!--iPad Spotlight i ikonę ustawienia--> < src="res/ios/icon-50.png ikona" szerokość = wysokość "50" = "50" / >< ikona src = szerokość "res, ios, icon-50@2x.png" = "100" wysokość = "100" / >< / platformy >
     
 
 Tizen
@@ -158,18 +135,7 @@ Proszę zauważyć, że wartość atrybutu "src" jest katalogiem projektu, a nie
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    </platform>
-    
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
+        <!-- images are determined by width and height. Obsługiwane są następujące--> < opryskać src="res/screen/ios/Default~iphone.png" szerokość = "320" wysokość = "480" / >< powitalny src="res/screen/ios/Default@2x~iphone.png" szerokość = "640" wysokość = "960" / >< powitalny src="res/screen/ios/Default-Portrait~ipad.png" szerokość = "768" wysokość = "1024" / >< powitalny src="res/screen/ios/Default-Portrait@2x~ipad.png" szerokość = "1536" wysokość = "2048" / >< powitalny src="res/screen/ios/Default-Landscape~ipad.png" szerokość = "1024" wysokość = "768" / >< opryskać src="res/screen/ios/Default-Landscape@2x~ipad.png" szerokość = "2048" wysokość = "1536" / >< powitalny src="res/screen/ios/Default-568h@2x~iphone.png" szerokość = wysokość "640" = "1136" / >< / platformy >< platformy nazwa = "wp8" ><!--obrazy są ustalane przez szerokość i wysokość. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     
