@@ -154,7 +154,18 @@ Por favor observe que el valor del atributo "src" es relativa al directorio de p
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. Se admiten las siguientes--> < salpicar src="res/screen/ios/Default~iphone.png" ancho = "320" height = "480" / >< splash src="res/screen/ios/Default@2x~iphone.png" ancho = "640" altura = "960" / >< splash src="res/screen/ios/Default-Portrait~ipad.png" ancho = altura "768" = "1024" / >< splash src="res/screen/ios/Default-Portrait@2x~ipad.png" ancho = altura "1536" = "2048" / >< splash src="res/screen/ios/Default-Landscape~ipad.png" ancho = "1024" altura = "768" / >< splash src="res/screen/ios/Default-Landscape@2x~ipad.png" ancho = "2048" altura = "1536" / >< splash src="res/screen/ios/Default-568h@2x~iphone.png" ancho = "640" height = "1136" / >< / plataforma >< nombre de plataforma = "wp8" ><!--imágenes están determinados por la altura y anchura. The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     

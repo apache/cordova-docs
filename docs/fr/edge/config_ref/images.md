@@ -154,7 +154,18 @@ Veuillez noter que la valeur de l'attribut « src » est relatif au répertoire 
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. Suivants sont pris en charge--> < éclabousser src="res/screen/ios/Default~iphone.png" largeur = "320" height = "480" / >< éclabousser src="res/screen/ios/Default@2x~iphone.png" largeur = "640" height = "960" / >< éclabousser src="res/screen/ios/Default-Portrait~ipad.png" largeur = "768" hauteur = "1024" / >< éclabousser src="res/screen/ios/Default-Portrait@2x~ipad.png" largeur = "1536" height = "2048" / >< éclabousser src="res/screen/ios/Default-Landscape~ipad.png" largeur = "1024" height = "768" / >< éclabousser src="res/screen/ios/Default-Landscape@2x~ipad.png" largeur = "2048" hauteur = "1 536" / >< éclabousser src="res/screen/ios/Default-568h@2x~iphone.png" largeur = "640" height = "1136" / >< / plateforme >< nom de plate-forme = "at 8" ><!--images sont déterminées par la largeur et la hauteur. The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     

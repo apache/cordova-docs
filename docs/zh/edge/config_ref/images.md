@@ -154,7 +154,18 @@ Windows8
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. 以下支援--> < 飛濺 src="res/screen/ios/Default~iphone.png"寬度 ="320"高度 ="480"/ >< 飛濺 src="res/screen/ios/Default@2x~iphone.png"寬度 ="640"高度 ="960"/ >< 飛濺 src="res/screen/ios/Default-Portrait~ipad.png"寬度 ="768"高度 ="1024"/ >< 飛濺 src="res/screen/ios/Default-Portrait@2x~ipad.png"寬度 ="1536"高度 ="2048"/ >< 飛濺 src="res/screen/ios/Default-Landscape~ipad.png"寬度 ="1024"高度 ="768"/ >< 飛濺 src="res/screen/ios/Default-Landscape@2x~ipad.png"寬度 ="2048"高度 ="1536"/ >< 飛濺 src="res/screen/ios/Default-568h@2x~iphone.png"寬度 ="640"高度 ="1136"/ >< / 平臺 >< 平臺名稱 ="wp8"><! — — 圖像由寬度和高度。 The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     

@@ -154,7 +154,18 @@ Windows8
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. 次はサポートされて--> < スプラッシュ src="res/screen/ios/Default~iphone.png"幅 =「320」高さ =「480」/>< スプラッシュ src="res/screen/ios/Default@2x~iphone.png"幅 =「640」高さ =「960」/>< スプラッシュ src="res/screen/ios/Default-Portrait~ipad.png"幅「768」の高さ = =「1024」/>< スプラッシュ src="res/screen/ios/Default-Portrait@2x~ipad.png"幅「1536」の高さ = =「2048」/>< スプラッシュ src="res/screen/ios/Default-Landscape~ipad.png"幅「1024」の高さ = =「768」/>< スプラッシュ src="res/screen/ios/Default-Landscape@2x~ipad.png"幅 =「2048」高さ =「1536」/>< スプラッシュ src="res/screen/ios/Default-568h@2x~iphone.png"幅 =「640」高さ「1136」=/></プラットフォーム >< プラットフォーム名 ="wp8">< ！--画像は幅と高さによって決定されます。 The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     

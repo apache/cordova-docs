@@ -154,7 +154,18 @@ Windows8
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. Поддерживаются следующие--> < всплеск src="res/screen/ios/Default~iphone.png» ширина = «320» высота ="480"/ >< всплеск src="res/screen/ios/Default@2x~iphone.png» ширина = "640" высота = «960» / >< всплеск src="res/screen/ios/Default-Portrait~ipad.png» ширина ="768"высота ="1024"/ >< всплеск src="res/screen/ios/Default-Portrait@2x~ipad.png» ширина = «1536» высота = «2048» / >< всплеск src="res/screen/ios/Default-Landscape~ipad.png» ширина ="1024"высота ="768"/ >< всплеск src="res/screen/ios/Default-Landscape@2x~ipad.png» ширина = «2048» высота = «1536» / >< всплеск src="res/screen/ios/Default-568h@2x~iphone.png" ширина = "640" высота = "1136" / >< / платформа >< имя платформы = "wp8" ><!--изображения определяются ширина и высота. The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     
