@@ -80,31 +80,7 @@ Firefox の OS
 
 iOS
 
-         <platform name="ios">
-                  <!-- iOS 7.0+ -->
-                  <!-- iPhone / iPod Touch  -->
-                  <icon src="res/ios/icon-60.png" width="60" height="60" />
-                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-76.png" width="76" height="76" />
-                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
-                  <!-- iOS 6.1 -->
-                  <!-- Spotlight Icon -->
-                  <icon src="res/ios/icon-40.png" width="40" height="40" />
-                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
-                  <!-- iPhone / iPod Touch -->
-                  <icon src="res/ios/icon.png" width="57" height="57" />
-                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
-                  <!-- iPad -->
-                  <icon src="res/ios/icon-72.png" width="72" height="72" />
-                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
-                  <!-- iPhone Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-small.png" width="29" height="29" />
-                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
-                  <!-- iPad Spotlight and Settings Icon -->
-                  <icon src="res/ios/icon-50.png" width="50" height="50" />
-                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
-         </platform>
+         < プラットフォーム名 ="ios">< ！--iOS 7.0 +--> < ！--iPhone/iPod のタッチ ・ < アイコン src="res/ios/icon-60.png"幅 =「60」高さ =「60」/>< アイコン src"解像度/ios/icon-60@2x.png"幅 =「120」の高さ = =「120」/>< ！--ipad と--> < アイコン src="res/ios/icon-76.png"幅 =「76」高さ =「76」/>< アイコン src"解像度/ios/icon-76@2x.png"幅 =「152」の高さ = =「152」/>< ！--iOS 6.1--> < ！--Spotlight アイコン--> < アイコン src="res/ios/icon-40.png"幅 =「40」高さ =「40」/>< アイコン src"解像度/ios/icon-40@2x.png"幅 =「80」の高さ = =「80」/>< ！--iPhone/iPod のタッチ ・ < アイコン src="res/ios/icon.png"幅 =「57」高さ =「57」/>< アイコン src"解像度/ios/icon@2x.png"幅 =「114」高さ = =「114」/>< ！--ipad と--> < アイコン src="res/ios/icon-72.png"幅「72」の高さ = ="72"/>< アイコン src"解像度/ios/icon-72@2x.png"幅 =「144」高さ = =「144」/>< ！--iPhone スポット ライトとアイコンの設定--> < アイコン src="res/ios/icon-small.png"幅"29"の高さ = =「29」/>< アイコン src"解像度/ios/icon-small@2x.png"幅 =「58」の高さ = =「58」/>< ！-スポット ライトの iPad との設定アイコン--> < アイコン src="res/ios/icon-50.png"幅 =「50」高さ =「50」/>< アイコン src"解像度/ios/icon-50@2x.png"幅 =「100」の高さ = =「100」/></プラットフォーム >
     
 
 Tizen
@@ -154,18 +130,7 @@ Windows8
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    </platform>
-    
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
+        <!-- images are determined by width and height. 次はサポートされて--> < スプラッシュ src="res/screen/ios/Default~iphone.png"幅 =「320」高さ =「480」/>< スプラッシュ src="res/screen/ios/Default@2x~iphone.png"幅 =「640」高さ =「960」/>< スプラッシュ src="res/screen/ios/Default-Portrait~ipad.png"幅「768」の高さ = =「1024」/>< スプラッシュ src="res/screen/ios/Default-Portrait@2x~ipad.png"幅「1536」の高さ = =「2048」/>< スプラッシュ src="res/screen/ios/Default-Landscape~ipad.png"幅「1024」の高さ = =「768」/>< スプラッシュ src="res/screen/ios/Default-Landscape@2x~ipad.png"幅 =「2048」高さ =「1536」/>< スプラッシュ src="res/screen/ios/Default-568h@2x~iphone.png"幅 =「640」高さ「1136」=/></プラットフォーム >< プラットフォーム名 ="wp8">< ！--画像は幅と高さによって決定されます。 The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     
