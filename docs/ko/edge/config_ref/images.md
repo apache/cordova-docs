@@ -135,7 +135,18 @@ Windows8
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. 다음과 같은 지원 되는-> < src="res/screen/ios/Default~iphone.png 스플래시" 너비 = "320" 높이 = "480" / >< src="res/screen/ios/Default@2x~iphone.png 스플래시" 폭 "640" 높이 = "960" = / >< src="res/screen/ios/Default-Portrait~ipad.png 스플래시" 폭 "768" 높이 = "1024" = / >< src="res/screen/ios/Default-Portrait@2x~ipad.png 스플래시" 폭 "1536" 높이 = "2048" = / >< src="res/screen/ios/Default-Landscape~ipad.png 스플래시" 폭 "1024" 높이 = "768" = / >< src="res/screen/ios/Default-Landscape@2x~ipad.png 스플래시" 폭 "2048" = 높이 = "1536" / >< src="res/screen/ios/Default-568h@2x~iphone.png 스플래시" 너비 = "640" 높이 = "1136" / >< / 플랫폼 >< 플랫폼 이름 = "wp8" ><!-이미지 너비와 높이 의해 결정 됩니다. The following are supported -->
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
+    
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     
