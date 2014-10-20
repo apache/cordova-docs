@@ -1,6 +1,6 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -80,8 +80,31 @@ Firefox 운영 체제
 
 iOS
 
-         < 플랫폼 이름 "ios" = ><!-iOS 7.0 +-> <!-아이폰 / 아이팟 터치-> < 아이콘 src="res/ios/icon-60.png" 너비 = "60" 높이 = "60" / >< 아이콘 src "res/ios/icon-60@2x.png" 너비 = "120" 높이 = = "120" / ><!-iPad-> < 아이콘 src="res/ios/icon-76.png" 폭 "76" 높이 = "76" = / >< 아이콘 src "res/ios/icon-76@2x.png" 너비 = "152" 높이 = "152" = / ><!-iOS 6.1-> <!-Spotlight 아이콘-> < 아이콘 src="res/ios/icon-40.png" 폭 = "40" 높이 = "40" / >
-                  < 아이콘 src = "res/ios/icon-40@2x.png" 너비 = "80" 높이 = "80" / ><!-아이폰 / 아이팟 터치-> < 아이콘 src="res/ios/icon.png" 폭 "57" 높이 = "57" = / >< 아이콘 src "res/ios/icon@2x.png" 너비 = "114" 높이 = "114" = / ><!-iPad-> < 아이콘 src="res/ios/icon-72.png" 폭 "72" 높이 = = "72" / >< 아이콘 src "res/ios/icon-72@2x.png" 너비 = "144" 높이 = "144" = / ><!-아이폰 스포트 라이트 및 설정 아이콘-> < 아이콘 src="res/ios/icon-small.png" 폭 "29" 높이 = "29" = />< 아이콘 src = "res/ios/icon-small@2x.png" 너비 "58" 높이 = "58" = / ><!-iPad 스포트 라이트 및 설정 아이콘-> < 아이콘 src="res/ios/icon-50.png" 너비 = "50" 높이 = "50" / >< 아이콘 src = "res/ios/icon-50@2x.png" 너비 = "100" 높이 = "100" / >< / 플랫폼 >
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
     
 
 Tizen

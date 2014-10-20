@@ -1,6 +1,6 @@
 * * *
 
-licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). Vedere il file avviso distribuito con questo lavoro per ulteriori informazioni riguardanti la proprietà del copyright. L'ASF licenze questo file a voi con la licenza Apache, versione 2.0 (la "licenza"); non si può usare questo file se non in conformità con la licenza. You may obtain a copy of the License at
+licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache Software Foundation (ASF). See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -80,8 +80,31 @@ Firefox OS
 
 iOS
 
-         < nome piattaforma = "ios" ><!-iOS 7.0 +--> <!-iPhone / iPod Touch--> < icona src="res/ios/icon-60.png" larghezza = "60" altezza = "60" / >< icona src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!-iPad--> < icona src="res/ios/icon-76.png" larghezza = altezza "76" = "76" / >< icona src = larghezza "res/ios/icon-76@2x.png" = altezza "152" = "152" / ><!-iOS 6.1--> <!-Spotlight icona--> < icona src="res/ios/icon-40.png" larghezza = "40" altezza = "40" / >
-                  < icona src = larghezza "res/ios/icon-40@2x.png" = "80" altezza = "80" / ><!-iPhone / iPod Touch--> < icona src="res/ios/icon.png" larghezza = "57" altezza = "57" / >< icona src = "res/ios/icon@2x.png" larghezza = altezza "114" = "114" / ><!-iPad--> < icona src="res/ios/icon-72.png" larghezza = altezza "72" = "72" / >< icona src = larghezza "res/ios/icon-72@2x.png" = "144" altezza = "144" / ><!-iPhone Spotlight e icona impostazioni--> < icona src="res/ios/icon-small.png" larghezza = "29" altezza = "29" />< icona src = larghezza "res/ios/icon-small@2x.png" = "58" altezza = "58" / ><!-iPad Spotlight e icona impostazioni--> < icona src="res/ios/icon-50.png" larghezza = "50" altezza = "50" / >< icona src = "res/ios/icon-50@2x.png" width = "100" altezza = "100" / >< / piattaforma >
+         <platform name="ios">
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
     
 
 Tizen
