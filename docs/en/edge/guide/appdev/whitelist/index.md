@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Whitelist Guide
 
 Domain whitelisting is a security model that controls access to
-external domains over which you application has no control.  Cordova's
+external domains over which your application has no control.  Cordova's
 default security policy allows access to any site. Before moving your
 application to production, you should formulate a whitelist and allow
 access to specific network domains and subdomains.
@@ -59,6 +59,9 @@ The following examples demonstrate whitelist syntax:
         <access origin="*" />
 
   This is the default value for newly created CLI projects.
+
+Note that the whitelist applies only to the main Cordova webview, and does not
+apply to an InAppBrowser webview or opening links in the system web browser.
 
 ## Amazon Fire OS Whitelisting
 
