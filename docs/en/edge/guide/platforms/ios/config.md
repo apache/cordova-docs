@@ -111,3 +111,9 @@ File](config_ref_index.md.html#The%20config.xml%20File) for information on globa
 
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
 
+- `ErrorUrl` (string, not set by default):
+  If set, will display the referenced local page upon an error in the application.
+
+        <preference name="ErrorUrl" value="myErrorPage.html"/>
+
+
