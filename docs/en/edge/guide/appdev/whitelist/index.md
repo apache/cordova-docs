@@ -60,6 +60,14 @@ The following examples demonstrate whitelist syntax:
 
   This is the default value for newly created CLI projects.
 
+Be aware that some websites may automatically redirect from their home page to
+a different url, such as using https protocol or to a country-specific
+domain. For example http://www.google.com will redirect to use SSL/TLS at
+https://www.google.com, and then may further redirect to a geography such as
+https://www.google.co.uk. Such scenarios may require modified or additional
+whitelist entries beyond your initial requirement. Please consider this
+as you are building your whitelist.
+
 Note that the whitelist applies only to the main Cordova webview, and does not
 apply to an InAppBrowser webview or opening links in the system web browser.
 
