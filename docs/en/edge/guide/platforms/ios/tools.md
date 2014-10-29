@@ -56,11 +56,17 @@ name.
 
 ## Run App on an Emulator
 
-        $ /path/to/my_new_project/cordova/run
+        $ /path/to/my_new_project/cordova/run --emulator
+
+## Run App on a Device
+
+        $ /path/to/my_new_project/cordova/run --device
 
 ## Releasing
 
-        $ /path/to/my_new_project/cordova/release
+        $ /path/to/my_new_project/cordova/build --release
+        
+(modify the `cordova/build-release.xcconfig` file for your Code Signing identity)
 
 ## Logging
 

@@ -36,16 +36,16 @@ current interface.
 ## Requirements and Support
 
 Apple® tools required to build iOS applications run only on the OS X
-operating system on Intel-based Macs. Xcode® 4.5 (the minimum required
-version) runs only on OS X version 10.7 (Lion) or greater, and
-includes the iOS 6 SDK (Software Development Kit).  To submit apps to
+operating system on Intel-based Macs. Xcode® 6.0 (the minimum required
+version) runs only on OS X version 10.9 (Mavericks) or greater, and
+includes the iOS 8 SDK (Software Development Kit).  To submit apps to
 the Apple App Store℠ requires the latest versions of the Apple tools.
 
 You can test many of the Cordova features using the iOS emulator
 installed with the iOS SDK and Xcode, but you need an actual device to
 fully test all of the app's device features before submitting to the
-App Store.  The device must have at least iOS 5.x installed, the
-minimum iOS version supported as of Cordova 2.3.  Supporting devices
+App Store.  The device must have at least iOS 6.x installed, the
+minimum iOS version supported as of Cordova 3.0.  Supporting devices
 include all iPad® models, iPhone® 3GS and above, and iPod® Touch 3rd
 Generation or later. To install apps onto a device, you must also be a
 member of Apple's

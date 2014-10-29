@@ -28,7 +28,7 @@ Support for iOS WebViews started with Cordova version 1.4, using a
 implementation.  Cordova 2.0 and later versions only support the
 subproject-based Cleaver implementation.
 
-These instructions require at least Cordova 2.3 and Xcode 4.5, along
+These instructions require at least Cordova 3.x and Xcode 6.0, along
 with a `config.xml` file from a newly created iOS project. You can use
 the procedure in The Command-Line Interface to create a new project,
 then obtain the `config.xml` file from within the named application's
