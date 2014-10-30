@@ -21,7 +21,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 > An overview of storage options for Cordova.
 
-Several storage APIs are available for Cordova applications. 
+Several storage APIs are available for Cordova applications.
 See
 [html5rocks](http://www.html5rocks.com/en/features/storage).
 for a more complete overview and examples.
@@ -55,9 +55,9 @@ than LocalStorage but fewer than WebSQL.
 The following platforms support IndexedDB:
 
 - BlackBerry 10
+- Firefox OS
 - Windows Phone 8
 - Windows 8
-
 
 ## Plugin-Based Options
 
@@ -65,4 +65,3 @@ In addition to the storage APIs listed above, the
 [File API](https://github.com/apache/cordova-plugin-file/blob/master/doc/index.md)
 allows you to cache data on the local file system.  Other
 [Cordova plugins](http://plugins.cordova.io/) provide similar storage options.
-
