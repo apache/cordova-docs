@@ -52,9 +52,13 @@ At this point you are ready to go — change the code inside test-app/www to wha
 
 When your app code is written, deploy your changes to the Firefox OS app you've added to your project with
 
-  	$ cordova prepare
+  	$ cordova prepare firefoxos
   	
-Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
+To create a packaged app one can zip the platforms/firefoxos/www directory. You can also simply build it using 
+
+    $ cordova build firefoxos
+
+The Firefox OS packaged app will be built in platforms/firefoxos/build/package.zip
 
 ##Testing and Debugging
 
