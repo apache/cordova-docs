@@ -113,7 +113,7 @@ CLI's shorthand names.
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="n"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="y">* Windows Phone 8.1 only</td>
         <td data-col="tizen"       class="y"></td>
     </tr>
 
