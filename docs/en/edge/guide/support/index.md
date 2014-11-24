@@ -256,7 +256,7 @@ CLI's shorthand names.
         <td data-col="ios"        class="y"></td>
         <td data-col="ubuntu"        class="y"></td>
         <td data-col="winphone8"  class="y"></td>
-        <td data-col="win8"       class="n"></td>
+        <td data-col="win8"       class="y"></td>
         <td data-col="tizen"       class="n"></td>
     </tr>
 
