@@ -26,9 +26,9 @@ var yargs = require('yargs')
     .count("verbose")
     .alias('v', 'verbose')
     .describe('verbose', 'Increase verbosity level of produced output')
-    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n'
-        + '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n'
-        + '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
+    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n' +
+        '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n' +
+        '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
 var argv = yargs.argv;
 
 if (argv.help) {
