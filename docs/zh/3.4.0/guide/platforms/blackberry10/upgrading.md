@@ -380,7 +380,6 @@ platform add blackberry10`.
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -406,7 +405,6 @@ platform add blackberry10`.
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -434,7 +432,6 @@ platform add blackberry10`.
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -460,7 +457,6 @@ platform add blackberry10`.
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >

@@ -369,7 +369,6 @@ BlackBerryOS/行動手冊：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -395,7 +394,6 @@ BlackBerryOS/行動手冊：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -423,7 +421,6 @@ BlackBerryOS/行動手冊：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
         < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
@@ -449,7 +446,6 @@ BlackBerryOS/行動手冊：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.media.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
         
-    
     自：
     
          < 外掛程式名稱 ="捕獲"value="org.apache.cordova.capture.MediaCapture"/ >< 外掛程式名稱 ="連絡人"value="org.apache.cordova.pim.Contact"/ >
