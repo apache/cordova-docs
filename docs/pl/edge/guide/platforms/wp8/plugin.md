@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@ Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów 
 
 ## under the License.
 
-# Wtyczki Windows Phone
+# Windows Phone 8 wtyczki
 
 Ta sekcja zawiera szczegóły dotyczące sposobu realizacji kodu macierzystego plugin na platformie Windows Phone. Przed przeczytaniem, zobacz zastosowanie pluginów omówienie struktury wtyczki i jego wspólny interfejs JavaScript. W tej sekcji w dalszym ciągu wykazują wtyczce *echo* próbki, który komunikuje się z widoku sieci Web Cordova do macierzystego platformy i z powrotem.
 
@@ -173,7 +173,7 @@ Debugowanie pluginu w C# składnika za pomocą programu Visual Studio debugger. 
 
 JavaScript jest trudniejsze do debugowania na Windows Phone. Musisz użyć `console.log` do wyprowadzenia Państwa wtyczki, lub aby zapoznać się z błędów.
 
-## Typowych pułapek
+## Typowe pułapki
 
 *   Należy uważać, aby nie przekazywać argumenty z JavaScript na stronie rodzimych, które są trudne do deserializacji jako JSON. Większość platform urządzenie oczekuje argument przekazany do `cordova.exec()` do tablicy, takie jak następujące:
     

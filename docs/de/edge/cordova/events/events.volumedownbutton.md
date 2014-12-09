@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Lautstärke-Taste drückt.
     document.addEventListener("volumedownbutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Wenn Sie die Standard-Lautstärke reduzieren Verhalten überschreiben müssen erfassen Sie einen Ereignis-Listener für das `volumedownbutton` Ereignis.
 
@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 *   BlackBerry 10
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
     

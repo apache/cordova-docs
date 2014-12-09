@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,7 +63,7 @@
 Другие параметры:
 
 *   `--plugins_dir` по умолчанию, `<project>/cordova/plugins`, но может быть любым каталогом, котобый содержит подкаталог для каждого загруженного плагина.
-*   `--www` по умолчанию каталог `www`, но может быть любой директорией которая будет использоваться проектом Cordova как каталог содержащий веб ресурсы приложения.
+*   `--www` поумолчанию каталог `www`, но может быть любой директорией которая будет использоваться проектом Cordova как каталог содержащий веб ресурсы приложения.
 *   `--variable` позволяет указывать определенные переменные во время установки, для некоторых плагинов необходимо указывать ключи API или другие настраиваемые параметры. Обратитесь к [спецификации плагинов][4] для получения дополнительной информации.
 
  [4]: plugin_ref_spec.md.html#Plugin%20Specification

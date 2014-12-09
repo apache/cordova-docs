@@ -13,9 +13,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# iOS konfiguracji
+# Konfiguracja iOS
 
-`config.xml`Plik steruje aplikacji podstawowe ustawienia, które mają zastosowanie w każdej aplikacji i wystąpienie CordovaWebView. Ta sekcja zawiera szczegóły preferencje, które stosuje się tylko do iOS buduje. Zobacz informacje w pliku config.xml na opcje konfiguracji globalnej.
+`config.xml`Plik steruje aplikacji podstawowe ustawienia, które mają zastosowanie w każdej aplikacji i wystąpienie CordovaWebView. Ta sekcja zawiera szczegóły preferencje, które stosuje się tylko do iOS buduje. See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(domyślnie wartość logiczna, `false` ): zestaw `true` Aby tag meta rzutni wyłączyć lub ograniczyć zakres skalowania użytkownika, który jest domyślnie włączona.
     

@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,14 +134,14 @@ Una vez se define JavaScript para tu plugin, debes complementarlo con por lo men
 *   Android Plugins
 *   iOS Plugins
 *   BlackBerry 10 Plugins
-*   Windows Phone Plugins
-*   Plugins de Windows 8
+*   Windows Phone 8 Plugins
+*   Windows Plugins
 
 La plataforma Tizen no admite plugins.
 
 ## Editorial Plugins
 
-Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puede publicar su plugin en el [registro][1] de Cordova (basado en [ `npmjs` ][4]) o a cualquier otro `npmjs` -basado del registro. Otros desarrolladores pueden instalar automáticamente usando ya sea `plugman` o la CLI Cordova. (Para más detalles sobre cada camino hacia el desarrollo, véase utilizando Plugman para gestionar Plugins y la interfaz de línea de comandos).
+Una vez que desarrollas tu plugin, quizá quieras publicar y compartir con la comunidad. Puedes publicar tu extensión en el [registry][1] de Cordova (basado en [`npmjs`][4]) o en cualquier otro registro basado en `npmjs`. Otros desarrolladores pueden instalar automáticamente usando ya sea `plugman` o la CLI Cordova. (Para más detalles sobre cada camino hacia el desarrollo, véase utilizando Plugman para gestionar Plugins y la interfaz de línea de comandos).
 
  [4]: https://github.com/isaacs/npmjs.org
 

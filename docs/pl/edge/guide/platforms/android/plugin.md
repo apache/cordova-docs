@@ -73,7 +73,7 @@ JavaScript `exec` funkcji `action` parametr odpowiada Metoda prywatnych klasy do
 
 Kiedy łowienie wyjątki i powrocie błędy, to ważne ze względu na jasność, że błędy powrócił do nazwy wyjątek JavaScript meczu Java jak najwięcej.
 
-## Wątków
+## Wątki
 
 Plugin JavaScript czy *nie* uruchomić w głównym wątku z `WebView` interfejs, zamiast, działa `WebCore` wątek, jak `execute` Metoda. Jeśli ty potrzebować wobec wchodzić w interakcje z interfejsu użytkownika, należy użyć następujących zmian:
 
@@ -111,7 +111,7 @@ Użycie następujących, jeśli nie musisz uruchomić na interfejsie głównym w
         }
     
 
-## Echo Android Plugin przykład
+## Przykład wtyczki Echo
 
 Do interfejsu JavaScript *echa* funkcji opisanych w aplikacji wtyczek, użyj `plugin.xml` Aby wprowadzić `feature` specyfikacji do lokalnej platformie `config.xml` pliku:
 

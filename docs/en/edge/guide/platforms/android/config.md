@@ -98,3 +98,9 @@ config.xml File for information on global configuration options.
 
         <preference name="AndroidLaunchMode" value="singleTop"/>
 
+- `DefaultVolumeStream` (string, defaults to `default`, added in cordova-android 3.7.0): Sets which volume
+  the hardware volume buttons link to. By default this is "call" for phones
+  and "media" for tablets. Set this to "media" to have your app's volume
+  buttons always change the media volume. Note that when using Cordova's
+  media plugin, the volume buttons will dynamically change to controlling
+  the media volume when any Media objects are active.

@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Aktualizacja Android
+# Aktualizacja
 
 Ten poradnik pokazuje jak zmodyfikować Android projektów do uaktualnienia ze starszych wersji Cordova. Większość tych instrukcji ma zastosowanie do projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.
 
@@ -80,11 +80,11 @@ platform add android`.
     
     **Uwaga**: wszystkie podstawowe API zostały usunięte i musi być zainstalowany jako wtyczki. Aby uzyskać szczegółowe informacje, zapoznaj się z za pomocą Plugman do zarządzania Plugins przewodnik.
 
-## Uaktualnienie do 2.9.0 z 2.8.0
+## Aktualizacja z wersji 2.8.0 do wersji 2.9.0
 
-1.  Uruchom`bin/update <project_path>`.
+1.  Uruchom `bin/update <project_path>`.
 
-## Uaktualnić do 2.8.0 2.7.0
+## Aktualizacja z wersji 2.7.0 do wersji 2.8.0
 
 1.  Usuń `cordova-2.7.0.jar` z projektu `libs` katalogu.
 
@@ -98,13 +98,13 @@ platform add android`.
 
 2.  Uaktualnić twój HTML, aby skorzystać z nowego `cordova.js` pliku.
 
-3.  Kopia `res/xml/config.xml` plik, aby dopasować`framework/res/xml/config.xml`.
+3.  Skopiuj plik `res/xml/config.xml` do `framework/res/xml/config.xml`.
 
 4.  Aktualizacja `framework/res/xml/config.xml` mają podobne ustawienia, jak to miało miejsce wcześniej.
 
 5.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Uaktualnić do 2.7.0 2.6.0
+## Aktualizacja z wersji 2.6.0 do wersji 2.7.0
 
 1.  Usuń `cordova-2.6.0.jar` z projektu `libs` katalogu.
 
@@ -122,7 +122,7 @@ platform add android`.
 
 8.  Skopiuj pliki z `bin/templates/cordova` do projektu `cordova` katalogu.
 
-## Uaktualnienie do 2.6.0 z 2.5.0
+## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
 
 1.  Usuń `cordova-2.5.0.jar` z projektu `libs` katalogu.
 

@@ -72,7 +72,7 @@ Może również określić elementy silnika dopasowania rozmyte, aby uniknąć p
     </engines>
     
 
-Oto lista domyślnie wyszukiwarki, że "<engine>"tag obsługuje: * 'cordova' * 'cordova-plugman' * 'cordova Amazonka fireos' \*"cordova-android"\*"cordova-ios"* 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
+Oto lista domyślnie wyszukiwarki, że "<engine>"tag obsługuje: * 'cordova' * 'cordova-plugman' * 'cordova Amazonka fireos' *"cordova-android"*"cordova-ios"* 'cordova-blackberry10' * 'cordova-wp8' * 'cordova-windows8'  
 * "android sdk' / / zwraca najwyższy api Android poziom zainstalowane * 'jabłko xcode' / / zwraca wersję xcode *"apple ios"/ / zwraca najwyższej wersji iOS instalowane *"apple osx"/ / zwraca informacje o wersji OSX *"blackberry-ndk"/ / zwraca wersji macierzysta blackberry SDK
 
 Określanie niestandardowych opartych na Apache Cordova ram powinna być wymieniona w tagu silnik tak:

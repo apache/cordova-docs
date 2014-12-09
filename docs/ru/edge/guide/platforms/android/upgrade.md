@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -19,13 +19,13 @@
 
 ## Обновление до 3.3.0 с 3.2.0
 
-Следуйте инструкциям как для`3.2.0`.
+Следуйте тем же инструкциям что и для `3.2.0`.
 
 Начиная с 3.3.0, среда выполнения Cordova теперь компилируется как Android библиотека вместо Jar. Это не должно иметь никакого эффекта при использовании из командной строки, но пользователям IDE нужно будет импортировать новые проекты `MyProject-CordovaLib` в их рабочее пространство.
 
 ## Обновление до 3.2.0 с 3.1.0
 
-Для проектов, которые были созданы с Кордова CLI:
+Для проектов, которые были созданы с помощью cordova CLI:
 
 1.  Обновите версию `cordova` CLI. Смотрите "Интерфейс командной строки".
 
@@ -40,20 +40,20 @@
 
 ## Обновление с 3.0.0 до 3.1.0
 
-Для проектов, которые были созданы с Кордова CLI:
+Для проектов, которые были созданы с помощью cordova CLI:
 
-1.  Обновление `cordova` CLI-версия. Увидеть интерфейс командной строки.
+1.  Обновите версию `cordova` CLI. Смотрите "Интерфейс командной строки".
 
-2.  Запуск`cordova platform update android`
+2.  Запустите `cordova platform update android`
 
-Для проектов, не созданных с Кордова CLI выполните:
+Для проектов, не созданных с помощью cordova CLI выполните:
 
         bin/update <project_path>
     
 
-## Обновление к CLI (3.0.0) с 2.9.0
+## Обновление до CLI (3.0.0) с 2.9.0
 
-1.  Создайте новый проект Apache Cordova 3.0.0 используя cordova CLI, как описано в интерфейс командной строки.
+1.  Создайте новый проект Apache Cordova 3.0.0 используя Cordova CLI, как описано в разделе "Интерфейс командной строки".
 
 2.  Добавьте ваш платформ проекта cordova, например:`cordova
 platform add android`.
@@ -62,7 +62,7 @@ platform add android`.
 
 4.  Скопируйте любые собственные активы из старого проекта в соответствующие каталоги под `platforms/android` : этот каталог является, где существует собственный проект cordova-android.
 
-5.  Используйте средство CLI cordova для установки любых плагинов, что вам нужно. Обратите внимание, что CLI обрабатывает все основные API плагинов, так что они могут и должны быть добавлены. Только 3.0.0 плагины совместимы с CLI.
+5.  Используйте Сordova CLI для установки необходимых вам плагинов. Обратите внимание что CLI интерпретирует все базовые APIs как плагины, так что они тоже должны быть добавлены. Только плагины для версии 3.0.0 поддерживаются CLI.
 
 ## Обновление до 3.0.0 от 2.9.0
 
@@ -110,7 +110,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.7.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.7.0.js` в ваш проект.
 
@@ -118,9 +118,9 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Обновление `framework/res/xml/config.xml` имеют одинаковые параметры, как это было ранее.
+7.  Обновите `framework/res/xml/config.xml` чтобы иметь одинаковые параметры, как это было ранее.
 
-8.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+8.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.6.0 от 2.5.0
 
@@ -128,7 +128,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.6.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.6.0.js` в ваш проект.
 
@@ -136,9 +136,9 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Обновление `framework/res/xml/config.xml` имеют одинаковые параметры, как это было ранее.
+7.  Обновите `framework/res/xml/config.xml` чтобы иметь одинаковые параметры, как это было ранее.
 
-8.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+8.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 Запустите `bin/update <project>` из пути проекта, перечисленным в исходном каталоге Cordova.
 
@@ -148,7 +148,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.5.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.5.0.js` в ваш проект.
 
@@ -156,9 +156,9 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Обновление `framework/res/xml/config.xml` имеют одинаковые параметры, как это было ранее.
+7.  Обновите `framework/res/xml/config.xml` чтобы иметь одинаковые параметры, как это было ранее.
 
-8.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+8.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.4.0 от 2.3.0
 
@@ -166,7 +166,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.4.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.4.0.js` в ваш проект.
 
@@ -174,7 +174,7 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+7.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.3.0 от 2.2.0
 
@@ -182,7 +182,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.3.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.3.0.js` в ваш проект.
 
@@ -190,7 +190,7 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+7.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.2.0 из 2.1.0
 
@@ -198,7 +198,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.2.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.2.0.js` в ваш проект.
 
@@ -206,7 +206,7 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+7.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.1.0 с 2.0.0
 
@@ -214,7 +214,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.1.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.1.0.js` в ваш проект.
 
@@ -222,7 +222,7 @@ platform add android`.
 
 6.  Копия `res/xml/config.xml` соответствовать`framework/res/xml/config.xml`.
 
-7.  Скопируйте файлы из `bin/templates/cordova` в проект `cordova` каталог.
+7.  Скопируйте файлы из `bin/templates/cordova` в каталог проекта `cordova`.
 
 ## Обновление до 2.0.0 от 1.9.0
 
@@ -230,7 +230,7 @@ platform add android`.
 
 2.  Добавить `cordova-2.0.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-2.0.0.js` в ваш проект.
 
@@ -246,7 +246,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.9.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.9.0.js` в ваш проект.
 
@@ -262,7 +262,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.8.1.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.8.1.js` в ваш проект.
 
@@ -276,7 +276,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.8.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.8.0.js` в ваш проект.
 
@@ -290,7 +290,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.8.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.8.0.js` в ваш проект.
 
@@ -304,7 +304,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.7.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.7.0.js` в ваш проект.
 
@@ -316,7 +316,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.6.1.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.6.1.js` в ваш проект.
 
@@ -328,7 +328,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.6.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.6.0.js` в ваш проект.
 
@@ -344,7 +344,7 @@ platform add android`.
 
 2.  Добавить `cordova-1.5.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `cordova-1.5.0.js` в ваш проект.
 
@@ -360,7 +360,7 @@ platform add android`.
 
 2.  Добавить `phonegap-1.4.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `phonegap-1.4.0.js` в ваш проект.
 
@@ -376,7 +376,7 @@ platform add android`.
 
 2.  Добавить `phonegap-1.3.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `phonegap-1.3.0.js` в ваш проект.
 
@@ -392,7 +392,7 @@ platform add android`.
 
 2.  Добавить `phonegap-1.2.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `phonegap-1.2.0.js` в ваш проект.
 
@@ -402,13 +402,13 @@ platform add android`.
 
 7.  Обновление `res/xml/phonegap.xml` в соответствии`framework/res/xml/phonegap.xml`.
 
-## Обновление 1.1.0 1.0.0
+## Обновление до 1.1.0 с 1.0.0
 
 1.  Удалить `phonegap-1.0.0.jar` из проекта `libs` каталог.
 
 2.  Добавить `phonegap-1.1.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `phonegap-1.1.0.js` в ваш проект.
 
@@ -422,7 +422,7 @@ platform add android`.
 
 2.  Добавить `phonegap-1.0.0.jar` в проект `libs` каталог.
 
-3.  Если вы используете Eclipse, обновите ваш проект Eclipse и сделать чистой.
+3.  Если вы используете Eclipse, обновите ваш проект Eclipse и выполните clean.
 
 4.  Скопируйте новый `phonegap-1.0.0.js` в ваш проект.
 

@@ -28,9 +28,9 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   iOS
 *   Windows Phone 8
 *   Windows 8
@@ -44,7 +44,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE html>
     <html>
@@ -78,7 +78,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     </html>
     
 
-## iOS dziwactwa
+## Dziwactwa iOS
 
 W `pause` obsługi, wszelkie wywołania interfejsu API Cordova lub macierzystego wtyczek, które przechodzą przez Objective-C nie działają, a także jakichkolwiek połączeń interaktywnych, takich jak alarmy lub `console.log()` . One są przetwarzane tylko podczas wznawiania działania aplikacji, na następnym uruchomieniu pętli.
 

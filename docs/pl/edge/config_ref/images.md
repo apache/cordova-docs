@@ -41,7 +41,7 @@ Następująca konfiguracja może służyć do określenia jednej domyślnej ikon
 
 Dla każdej platformy, można również zdefiniować ikony idealny zestaw do różnych rozdzielczościach ekranu.
 
-Amazon ogień OS
+Amazon Fire OS
 
          <platform name="amazon-fireos">
                   <icon src="res/android/ldpi.png" density="ldpi" />
@@ -134,88 +134,67 @@ Windows8
 
 ## Konfigurowanie ekrany powitalne w aplikacjach w consoli
 
-Użyj ekranu powitalnego API umożliwiające wyświetlanie ekranu powitalnego wprowadzające aplikacji na wielu platformach. Podczas pracy w consoli opryskać tęcza pliki źródłowe znajdują się w ramach projektu `www/res/screens` podkatalogu.
+W najwyższego poziomu `config.xml` pliku (nie ten w `platforms` ), dodać elementy konfiguracji, takie jak te określone w tym miejscu.
 
-Android określa zarówno portret i krajobraz zorientowana powitalny ekran obrazy o niskiej, średniej, wysokiej i bardzo wysokiej rozdzielczości:
+# Przykład konfiguracji
 
-        android/screen-hdpi-landscape.png
-        android/screen-hdpi-portrait.png
-        android/screen-ldpi-landscape.png
-        android/screen-ldpi-portrait.png
-        android/screen-mdpi-landscape.png
-        android/screen-mdpi-portrait.png
-        android/screen-xhdpi-landscape.png
-        android/screen-xhdpi-portrait.png
+Proszę zauważyć, że wartość atrybutu "src" jest katalogiem projektu, a nie do katalogu www. Możesz wymienić obrazu źródłowego cokolwiek chcesz. Nazwa wewnętrzna w aplikacji są określane przez Cordova.
+
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
     
-
-Platformy iOS określa warianty dla iPhone/iPod i iPad, warianty wyświetla siatkówki i inne kierunki. Plik *568 h* stosuje się wyższy ekran iPhone 5:
-
-        ios/screen-ipad-landscape-2x.png
-        ios/screen-ipad-landscape.png
-        ios/screen-ipad-portrait-2x.png
-        ios/screen-ipad-portrait.png
-        ios/screen-iphone-landscape-2x.png
-        ios/screen-iphone-landscape.png
-        ios/screen-iphone-portrait-2x.png
-        ios/screen-iphone-portrait.png
-        ios/screen-iphone-portrait-568h-2x.png
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
     
-
-Windows Phone określa pojedynczy znajdowa:
-
-        windows-phone/screen-portrait.jpg
+    <platform name="ios">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+    </platform>
     
-
-W poniższych sekcjach opisano, jak skonfigurować ekrany powitalne w aplikacjach podczas pracy z SDK i pokrewne narzędzia wiersza polecenia opisane w przewodnikach platformy.
-
-Nie zapomnij zainstalować wtyczki ekranu powitalnego przed trudny wobec używać `navigator.splashscreen.hide()` i `navigator.splashscreen.show()` metody.
-
-## Ekrany powitalne w aplikacjach na platformie Android
-
-Miejsce [9-łatka wyobrażenie o osobie][1] akta w projekcie Android `platforms/android/res/drawable*` katalogów.
-
- [1]: https://developer.android.com/tools/help/draw9patch.html
-
-Rozmiar dla każdego powinno być:
-
-*   xlarge (xhdpi): co najmniej 960 x 720
-*   duże (hdpi): co najmniej 640 x 480
-*   Średni (mdpi): co najmniej 470 × 320
-*   mały (ldpi): co najmniej 426 x 320
-
-Podczas tworzenia nowego projektu Android, ekran powitalny domyślne obrazy w Cordova przykładowej aplikacji powinny być już obecny w `platforms/android/res/drawable*` katalogów. Zapraszam zastąpić je z własnych zdjęć. Podczas tworzenia własnych rozchlapać obrazów z ekranu, nie trzeba podać sam permutacji 8 domyślnie Cordova te tutaj. Mniej lub bardziej służy optymalizacji. `drawable`Nazwy katalogów musi konwencjami Android dla [rozmiaru ekranu][2] i [alternatywnych zasobów][3].
-
- [2]: http://developer.android.com/guide/practices/screens_support.html
- [3]: http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources
-
-W najwyższego poziomu `config.xml` pliku (nie ten w `platforms` ), dodać następujące preferencje:
-
-    <preference name="SplashScreen" value="screen" />
+    <platform name="wp8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
+    </platform>
+    
+    <platform name="windows8">
+        <!-- images are determined by width and height. The following are supported -->
+        <splash src="res/screen/windows8/splashscreen.png" width="620" height="300"/>
+    </platform>
+    
+    <platform name="blackberry10">
+        <!-- Add a rim:splash element for each resolution and locale you wish -->
+        <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
+        <rim:splash src="res/screen/windows8/splashscreen.png"/>
+    </platform>
+    
+    
     <preference name="SplashScreenDelay" value="10000" />
     
 
-Pierwszy wiersz ustawia obrazek, aby wyświetlić ekran powitalny. Jest to nazwa pliku PNG w `drawable*` katalogi, minus `.png` rozszerzenie. Wartość domyślna dla ekranu powitalnego jest `screen` (pliku `platforms/android/res/drawable*/screen.png` ), więc jeśli możesz wymienić obrazu nic innego niż `screen.png` w `drawable*` katalogi, ty potrzebować wobec dodać ten wiersz, modyfikować.
+# Obsługiwane platformy
 
-Drugi wiersz ustawia domyślne opóźnienie o ile pojawia się ekranu powitalnego w milisekundach. Powinno to być najgorszy start przewidywany czas. Wartość domyślna dla SplashScreenDelay jest 3000 ms.
+W chwili obecnej (Cordova 3.5.0 lipca 2014 roku) następujących platformach obsługuje ekrany powitalne w aplikacjach.
 
-Wreszcie, jako najlepsze praktyki ekran powitalny powinien znajdować się tylko tak długo jak to konieczne. Gdy Twoja aplikacja została uruchomiona i Widok sieci Web został załadowany, aplikacji należy ukryć opryskać tęcza, tak, że główny widok jest widoczny, tak szybko, jak to jest gotowy. Ponieważ czas rozpoczęcia aplikacji będzie różnić się trochę ze względu na wiele czynników, takich jak szybkość procesora i sieci, zalecane jest, że aplikacja jawnie wywołać `navigator.splashscreen.hide()` w metodzie JavaScript, który odpowiada `deviceready` zdarzenie. Inaczej ekran powitalny będą widoczne dla wartości SplashScreenDelay, który skonfigurowany powyżej, które prawdopodobnie dłużej niż jest to konieczne. Podejście to zdarzenie napędzana jest wysoce zalecane kontra konieczności ekran powitalny widoczny zawsze stały czas trwania.
+    android
+    ios
+    wp8
+    windows8
+    blackberry10
+    
 
-## Ekrany powitalne w aplikacjach dla platformy iOS
+# Plugin ekranu powitalnego
 
-Kopiowanie obrazów z ekranu powitalnego w projekcie iOS `Resources/splash` katalogu. Tylko dodać te obrazy dla urządzenia, które chcesz obsługiwać, iPad lub iPhone. Rozmiar każdego obrazu należy:
-
-*   Default-568h@2x~iphone.png (640x1136 pixels)
-*   Default-Landscape@2x~ipad.png (2048x1496 pixels)
-*   Default-Landscape~ipad.png (1024x748 pixels)
-*   Default-Portrait@2x~ipad.png (1536x2008 pixels)
-*   Default-Portrait~ipad.png (768x1004 pixels)
-*   Default@2x~iphone.png (640x960 pixels)
-*   Default~iphone.png (320x480 pixels)
-
-## Ekrany powitalne w aplikacjach na platformie BlackBerry 10
-
-Dodaj element obręczy: powitalny do pliku config.xml dla każdej rozdzielczości i ustawień regionalnych, które chcesz obsługiwać:
-
-[http://developer.BlackBerry.com/HTML5/documentation/rim\_splash\_element.html][4]
-
- [4]: http://developer.blackberry.com/html5/documentation/rim_splash_element.html
+Apache Cordova oferuje również specjalny powitalny ekran wtyczki, które mogą być wykorzystane do programowego wyświetlania i ukrywania ekran powitalny podczas uruchamiania aplikacji https://github.com/apache/cordova-plugin-splashscreen

@@ -69,7 +69,7 @@ gdzie
         < ścieżka do projektu >/cordova/miejsce docelowe domyślnie <name>
     
 
-## Tworzenie aplikacji
+## Budowanie aplikacji
 
 `build`Polecenie tworzy projekt jako plik .bar. Można zbudować aplikację w trybie wydania, (który tworzy plik podpisany .bar) lub w trybie debugowania, (która produkuje plik nie podpisany .bar).
 
@@ -106,7 +106,7 @@ Jeśli wcześniej zdefiniowany cel domyślne (i wcześniej zainstalowany token d
         < ścieżka do projektu >/cordova/budować debugowania
     
 
-## Uruchom aplikację
+## Uruchamianie aplikacji
 
 `run`Polecenie wdraża najnowsze budowania aplikacji na określonym urządzeniu BlackBerry lub emulator. Aby wdrożyć aplikacji, należy określić miejsce docelowe dla urządzenia lub emulatora:
 

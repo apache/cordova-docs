@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -15,7 +15,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
 
 # BlackBerry 10 Guía de herramientas de Shell
 
-El `cordova` la utilidad de línea de comandos es una herramienta de alto nivel que le permite construir aplicaciones a través de varias plataformas a la vez. Una versión anterior del marco Cordova ofrece conjuntos de herramientas de línea de comandos específicos de cada plataforma. Para usarlos como una alternativa a la CLI, tienes que descargar esta versión de Córdoba desde [cordova.apache.org][1]. La descarga contiene los archivos separados para cada plataforma. Ampliar la plataforma de destino. Las herramientas aquí descritas están normalmente disponibles en el nivel superior `bin` Directorio de otra manera, consulte el archivo **Léame** para obtener direcciones más detallada.
+La utilidad de línea de comandos de `cordova` es una herramienta de alto nivel que le permite construir aplicaciones a través de varias plataformas a la vez. Una versión anterior del marco Cordova ofrece conjuntos de herramientas de línea de comandos específicos de cada plataforma. Para usarlos como una alternativa a la CLI, tienes que descargar esta versión de Córdoba desde [cordova.apache.org][1]. La descarga contiene los archivos separados para cada plataforma. Ampliar la plataforma de destino. Las herramientas aquí descritas están normalmente disponibles en el directorio `bin` de nivel superior, de lo contrario, consulte el archivo **README** para instrucciones más detalladas.
 
  [1]: http://cordova.apache.org
 
@@ -51,13 +51,13 @@ La `target` mando le permite administrar el emulador o dispositivos BlackBerry q
 
 donde
 
-*   `<name>`especifica un nombre único para el objetivo.
+*   `<name>` especifica un nombre único para el objetivo.
 
-*   `<ip-address>`especifica la dirección ip del dispositivo BlackBerry o simulador.
+*   `<ip-address>` especifica la dirección ip del dispositivo BlackBerry o emulador.
 
-*   `-p | --password <password>`especifica la contraseña para el dispositivo o el emulador. Esto sólo es necesario si el dispositivo o el emulador está protegido con contraseña.
+*   `-p |--password <password>` especifica la contraseña para el dispositivo o el emulador. Esto es necesario sólo si el dispositivo o el emulador está protegido con contraseña.
 
-*   `--pin <device-pin>`especifica el PIN del dispositivo BlackBerry, que identifica el dispositivo como un host válido para el token de depuración. Este argumento es necesario solamente cuando se crea un token de depuración.
+*   `--pin < device-pin >` especifica el PIN del dispositivo BlackBerry, que identifica el dispositivo como un host válido para el token de depuración. Este argumento es necesario solamente cuando se crea un token de depuración.
 
 ### Quitar un destino
 
@@ -71,7 +71,7 @@ donde
 
 ## Construir la aplicación
 
-El `build` comando construye el proyecto como un archivo en pantalla. Usted puede construir la aplicación en cualquier modo de lanzamiento (que produce un archivo firmado pantalla) o en modo debug (que produce un archivo unsigned pantalla).
+El comando `build` construye el proyecto como un archivo de .bar. Usted puede construir la aplicación en cualquier modo de lanzamiento (que produce un archivo firmado pantalla) o en modo debug (que produce un archivo unsigned pantalla).
 
 ### Construir la aplicación en modo de liberación
 
@@ -80,11 +80,11 @@ El `build` comando construye el proyecto como un archivo en pantalla. Usted pued
 
 donde
 
-*   `-k | --keystorepass <password>`especifica la contraseña que se ha definido al configurar su ordenador para firmar las aplicaciones.
+*   `-k |--keystorepass <password>` especifica la contraseña que se ha definido Cuándo configurado el ordenador para firmar las aplicaciones.
 
-*   `-b | --buildId <number>`especifica el número de versión de compilación de la aplicación. Por lo general, este número debe ser incrementado de la anterior versión firmada. Este argumento es opcional.
+*   `-b |--buildId <number>` especifica el número de versión de compilación de la aplicación. Típicamente, este número debe ser incrementado de la anterior versión firmada. Este argumento es opcional.
 
-*   `-p | --params <params-JSON-file>`especifica un archivo JSON que contiene parámetros adicionales para pasar a herramientas de aguas abajo. Este argumento es opcional.
+*   `-p |--params < params-JSON-file >` especifica un archivo JSON que contiene parámetros adicionales para pasar a herramientas abajo. Este argumento es opcional.
 
 ### Construir el proyecto en modo de depuración
 
@@ -93,13 +93,13 @@ donde
 
 donde
 
-*   `<target>`especifica el nombre de un objetivo previamente agregado. Si `<target>` no se especifica, se utiliza el destino predeterminado, si uno ha sido creada. Este argumento sólo es necesario si quieres el script para desplegar la aplicación en un dispositivo BlackBerry o emulador y usted no ha creado un destino predeterminado. Además, si `<target>` es un dispositivo, luego que el dispositivo debe estar conectado a su computadora por USB o conectarse a la misma red Wi-Fi que su computadora.
+*   `<target>` especifica el nombre de un objetivo previamente agregado. Si `<target>` no se especifica, se utiliza el destino predeterminado, si uno ha sido creado. Este argumento sólo es necesario si quieres el script para desplegar la aplicación en un dispositivo BlackBerry o emulador y usted no ha creado un destino predeterminado. Además, si `<target>` es un dispositivo, entonces ese dispositivo debe estar conectado al ordenador por USB o estar conectado a la misma red Wi-Fi como su computadora.
 
-*   `-k | --keystorepass <password>`especifica la contraseña que se ha definido al configurar su ordenador para firmar las aplicaciones. Esta contraseña se utiliza también para crear su token de depuración. Este argumento sólo es necesario si quieres el script para crear e instalar el token de depuración para ti.
+*   `-k |--keystorepass <password>` especifica la contraseña que se ha definido Cuándo configurado el ordenador para firmar las aplicaciones. Esta contraseña se utiliza también para crear su token de depuración. Este argumento sólo es necesario si quieres el script para crear e instalar el token de depuración para ti.
 
-*   `-p | --params <params-JSON-file>`especifica un archivo JSON que contiene parámetros adicionales para pasar a herramientas de aguas abajo.
+*   `-p |--params < params-JSON-file >` especifica un archivo JSON que contiene parámetros adicionales para pasar a herramientas abajo.
 
-*   `-ll | --loglevel <level>`especifica el nivel de registro. El nivel de registro puede ser uno de `error` , `warn` , o`verbose`.
+*   `-ll |--loglevel <level>` especifica el nivel de registro. El nivel de registro puede ser uno de los `errores`, `advertir` o `detallado`.
 
 Si tienes definido previamente un destino por defecto (y previamente instalado un token de depuración, si ese objetivo es un dispositivo BlackBerry), puede ejecutar el script con sin argumentos y los paquetes de escritura su aplicación y lo despliega en el destino por defecto. Por ejemplo:
 

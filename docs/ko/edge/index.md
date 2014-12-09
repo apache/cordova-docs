@@ -1,6 +1,6 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -84,10 +84,10 @@
     </li>
     <li>
       <h2>
-        개인 정보 보호 가이드
+        개인정보보호 가이드
       </h2>
       
-      <span>중요 한 모바일 개인 정보 보호 문제에 대해 자세히 알아보기</span>
+      <span>모바일 개인정보보호 이슈에 대해 알아보기</span>
     </li>
     <li>
       <h2>
@@ -119,10 +119,10 @@
     </li>
     <li>
       <h2>
-        <a href="_index.html">키워드 인덱스</a>
+        <a href="_index.html">키워드 색인</a>
       </h2>
       
-      <span>설명서의 전체 인덱스입니다.</span>
+      <span>문서내 전체 색인 보기</span>
     </li>
   </ul>
   
@@ -136,7 +136,7 @@
         이벤트
       </h2>
       
-      <span>자바 스크립트를 통해 네이티브 이벤트에 후크 합니다.</span>
+      <span>자바스크립트를 통해 내장 이벤트에 연결하기</span>
     </li>
     <li>
       <h2>

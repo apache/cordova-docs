@@ -146,7 +146,7 @@ Sprawdza parametru, aby upewnić się, że to nie jest `nil` lub ciąg pusty, po
  [1]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.h
  [2]: https://github.com/apache/cordova-ios/blob/master/CordovaLib/Classes/CDVPlugin.m
 
-## Wątków
+## Wątki
 
 Plugin metody zwykle wykonać w tym samym wątku jako głównego interfejsu. Jeśli twój plugin wymaga dużo przetwarzania lub wymaga blokowanie połączenia, należy użyć wątek tła. Na przykład:
 

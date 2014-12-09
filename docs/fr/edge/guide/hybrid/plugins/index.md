@@ -134,8 +134,8 @@ Une fois que vous définissez JavaScript pour votre plugin, vous devez compléte
 *   Plugins Android
 *   iOS Plugins
 *   BlackBerry 10 Plugins
-*   Windows Phone Plugins
-*   Windows 8 Plugins
+*   Windows Phone 8 Plugins
+*   Plugins Windows
 
 La plateforme de paciarelli ne supporte pas les plugins.
 

@@ -158,7 +158,7 @@ Dla BlackBerryOS/Playbook:
 
 9.  Kopia `cordova` katalogu z nowym projektem do istniejącego projektu, zastępując stare `cordova` katalogu.
 
-## Uaktualnienie do 2.6.0 z 2.5.0
+## Aktualizacja z wersji 2.5.0 do wersji 2.6.0
 
 Aktualizacja katalogu download telefon:
 

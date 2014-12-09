@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -19,7 +19,7 @@ Comenzando con 3.3.0, puede utilizar Cordova como componente de aplicaciones de 
 
 Si no está familiarizado con Amazon fuego OS, primero debe familiarizarse con la Amazonía fuego OS Platform Guide y tener instalado los últimos SDK antes de intentar la opción de desarrollo más inusual de incrustar un WebView.
 
-## Requisitos previos
+## Pre-requisitos
 
 *   Cordova 3.3.0 o mayor
 
@@ -45,7 +45,7 @@ Si no está familiarizado con Amazon fuego OS, primero debe familiarizarse con l
             android:layout_height="match_parent" />
         
 
-6.  Modificar su actividad para que implementa el `CordovaInterface` . Debe implementar los métodos incluidos. Puede que desee copiar desde `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarlas en tu propio. El fragmento de código siguiente muestra una aplicación básica que utiliza la interfaz. Observe cómo coincide con el id de referencia ver el `id` atributo especificado en el fragmento de XML se muestra arriba:
+6.  Modificar su actividad para que implementa la `CordovaInterface`. Debe implementar los métodos incluidos. Puede que desee copiar desde `/framework/src/org/apache/cordova/CordovaActivity.java` , o implementarlas en tu propio. El fragmento de código siguiente muestra una aplicación básica que utiliza la interfaz. Observe cómo el id de referencia vista coincide con el atributo `id` especificado en el fragmento XML que se muestra arriba:
     
         public class CordovaViewTestActivity extends Activity implements CordovaInterface {
             CordovaWebView cwv;

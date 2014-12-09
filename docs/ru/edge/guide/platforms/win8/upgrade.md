@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -15,17 +15,17 @@
 
 # Обновление для Windows 8
 
-В этом руководстве показано, как изменить проекты Windows 8 для обновления старых версий Кордова. Большинство из этих инструкций применяются для проектов, созданных с старого набора средств командной строки, которые предшествуют `cordova` утилиты CLI. Увидеть интерфейс командной строки для получения информации как обновить версию инфраструктуры CLI.
+В этом руководстве показано, как изменить проекты Windows 8 для обновления старых версий Кордова. Большинство этих инструкций применимы для проектов, созданных со старым набором средств командной строки, которые предшествуют утилите CLI `cordova`. Смотрите раздел "Интерфейс командной строки" для получения информации как обновить версию CLI.
 
 ## Обновление до 3.6.0 от 3.1.0 или более поздней версии
 
-Для проектов, которые были созданы с Кордова CLI:
+Для проектов, которые были созданы с помощью cordova CLI:
 
-1.  Обновление `cordova` CLI-версия. Увидеть интерфейс командной строки.
+1.  Обновите версию `cordova` CLI. Смотрите "Интерфейс командной строки".
 
 2.  Запуск`cordova platform update windows8`.
 
-Для проектов, не созданных с Кордова CLI выполните:
+Для проектов, не созданных с помощью cordova CLI выполните:
 
         bin\update <project_path>
     

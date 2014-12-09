@@ -86,7 +86,7 @@ So ändern Sie die PATH-Umgebung unter Windows:
 
 *   Speichern Sie den Wert und schließen Sie beide Dialogfelder zu.
 
-*   Auch müssen Sie Java aktivieren. Öffnen Sie eine Eingabeaufforderung und geben `java` , wenn es nicht ausgeführt wird, fügen Sie den Speicherort der Java-Binärdateien an Ihren Weg auch. Stellen Sie sicher, dass %JAVA\_HOME% auf installierte JDK-Verzeichnis verweist. Sie müssen möglicherweise JAVA\_HOME Umgebung Variable separat hinzufügen.
+*   Auch müssen Sie Java aktivieren. Öffnen Sie eine Eingabeaufforderung und geben `java` , wenn es nicht ausgeführt wird, fügen Sie den Speicherort der Java-Binärdateien an Ihren Weg auch. Stellen Sie sicher, dass %JAVA_HOME% auf installierte JDK-Verzeichnis verweist. Sie müssen möglicherweise JAVA_HOME Umgebung Variable separat hinzufügen.
     
         ; %JAVA_HOME%\bin
         

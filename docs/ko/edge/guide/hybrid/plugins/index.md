@@ -1,6 +1,6 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -134,8 +134,8 @@ IOS 종속성 로드 제대로 여부를 테스트 하려면 다음 명령을 �
 *   안 드 로이드 플러그인
 *   iOS 플러그인
 *   블랙베리 10 플러그인
-*   Windows Phone 플러그인
-*   윈도우 8 플러그인
+*   Windows Phone 8 플러그인
+*   윈도우 플러그인
 
 Tizen 플랫폼 플러그인을 지원 하지 않습니다.
 

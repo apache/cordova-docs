@@ -36,7 +36,7 @@ Ten interfejs API jest dostępny w podstawowej widoku sieci Web. [Web SQL bazy d
 Następujących platformach wsparcie WebSQL:
 
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   iOS
 *   Tizen
 
@@ -48,7 +48,7 @@ Ten interfejs API jest dostępny w podstawowej widoku sieci Web. [Indeksowane DB
 
 Następujące platformy wsparcia IndexedDB:
 
-*   Jeżyna 10
+*   BlackBerry 10
 *   Windows Phone 8
 *   Windows 8
 

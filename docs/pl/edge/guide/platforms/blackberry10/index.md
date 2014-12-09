@@ -132,7 +132,7 @@ Użycie `cordova` narzędzie, aby skonfigurować nowy projekt, zgodnie z opisem 
         $ cordova build
     
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 Jeśli chcesz uruchomić emulator urządzenia, pobrać i zainstalować symulator 10 BlackBerry.
 
@@ -172,7 +172,7 @@ Następnie uruchom `emulate` polecenie, aby wyświetlić aplikację:
         $ cordova emulate blackberry10
     
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Aby wdrożyć do urządzenia, upewnij się, że jest on podłączony do komputera. Włącz tryb opracowania i uzyskać adres IP jako opisaną w sekcji emulatora. Także trzeba będzie uzyskać PIN od **Ustawienia** aplikacji pod **o → sprzętu**:
 

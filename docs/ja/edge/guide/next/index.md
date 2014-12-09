@@ -134,9 +134,19 @@ Cordova アプリで使用することができますスパ ライブラリの�
 
 コルドバのデバッグには、いくつかのセットアップが必要です。デスクトップ アプリケーションとは異なり単にオープン dev ツール、モバイル デバイス上にことはできませんし、デバッグを開始、幸いにもいくつかの素晴らしい選択肢です。
 
-## サファリのリモート デバッグ
+## iOS のデバッグ
 
-最初のオプションはサファリ リモート デバッグです。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 詳細については、この優れたブログの記事を参照してください： <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>
+### Xcode
+
+Xcode Cordova アプリの iOS ネイティブ側をデバッグできます。 デバッグ領域は表示 (デバッグ領域->) を確認します。 アプリが実行されたらデバイス （またはシミュレータ） に、デバッグ領域でログ出力を表示できます。 これは、エラーや警告が印刷されます。 ソース ファイル内でブレークポイントを設定することもできます。 一度にコードの 1 行をステップし、その時点での変数の状態を表示することができます。 変数の状態はブレークポイントにヒットしたときにデバッグ領域に表示されます。 アプリが実行中で、デバイスで、一度を持ち出すことができます Safari の web インスペクター （後述） としてアプリケーションの webview および js 側をデバッグします。 詳細とヘルプは、Xcode ガイド参照してください： [Xcode デバッグ ガイド][14]
+
+ [14]: https://developer.apple.com/library/mac/documentation/ToolsLanguages/Conceptual/Xcode_Overview/DebugYourApp/DebugYourApp.html#//apple_ref/doc/uid/TP40010215-CH18-SW1
+
+### サファリでのリモート デバッグ Web インスペクター
+
+Safari の web インスペクター コルドバ アプリケーションで webview および js のコードをデバッグできます。 これは OSX 上でのみ、iOS 6 (高い) でのみ動作します。 サファリを使用して、デバイス （またはシミュレータ） に接続しはコルドバ アプリケーションにブラウザーの dev ツールを接続します。 あなたは何を期待する dev ツール - DOM 検査/操作、JavaScript デバッガー、ネットワーク検査、コンソール、および得る。 Xcode のようなサファリの web インスペクターの JavaScript コードにブレークポイントを設定し、できますその時点での変数の状態を表示します。 任意のエラー、警告、またはメッセージをコンソールに出力を表示できます。 アプリが実行されているコンソールから直接 JavaScript コマンドを実行することもできます。 何を行うことができますを設定する方法の詳細については、この優れたブログの記事を参照してください： <http://moduscreate.com/enable-remote-web-inspector-in-ios-6/>とこのガイド： [Web インスペクターのサファリのガイド][15]
+
+ [15]: https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html
 
 ## Chrome リモート デバッグ
 
@@ -154,34 +164,34 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ## その他のオプション
 
-*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][14]
-*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][15]この[MDN の記事][16]を参照してくださいすることができます。.
+*   ブラックベリー 10 と同様にデバッグをサポートします:[ドキュメント][16]
+*   同様に Firefox アプリケーション マネージャーを使用してデバッグ、[このブログの記事][17]この[MDN の記事][18]を参照してくださいすることができます。.
 *   例と上記のデバッグのヒントの説明を参照してください： <http://developer.telerik.com/featured/a-concise-guide-to-remote-debugging-on-ios-android-and-windows-phone/>
 
- [14]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
- [15]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
- [16]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
+ [16]: https://developer.blackberry.com/html5/documentation/v2_0/debugging_using_web_inspector.html
+ [17]: https://hacks.mozilla.org/2014/02/building-cordova-apps-for-firefox-os/
+ [18]: https://developer.mozilla.org/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS#Testing_and_debugging
 
 # ユーザー インターフェイス
 
 コルドバのアプリケーションを構築するは似合いますモバイルの挑戦、特に開発者のためすることができます。 多くの人々 は UI フレームワークを使用してこれを簡単にすることを選んだ。 ここでは考慮したい場合がありますオプションの短いリストです。
 
 *   [jQuery Mobile][9] - jQuery Mobile は自動的にあなたのモバイルへの最適化のためのレイアウトを向上します。それも自動的にあなたのため、スパの作成を処理します。
-*   [イオン][17]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
-*   [ラチェット][18]- ブートス トラップを作成した人々 によってもたらされます。 
+*   [イオン][19]-この強力な UI フレームワークは、実際にプロジェクトの作成を処理する独自の CLI を持っています。 
+*   [ラチェット][20]- ブートス トラップを作成した人々 によってもたらされます。 
 *   [剣道 UI][5] - オープン ソース UI と Telerik からアプリケーション フレームワークです。
-*   [トップコート][19]
+*   [トップコート][21]
 *   [ReactJS][7]
 
- [17]: http://ionicframework.com/
- [18]: http://goratchet.com/
- [19]: http://topcoat.io
+ [19]: http://ionicframework.com/
+ [20]: http://goratchet.com/
+ [21]: http://topcoat.io
 
-ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][20] * [Android][21] * [Windows Phone][22]
+ユーザー インターフェイスを構築対象としているすべてのプラットフォームとユーザーの期待の違いについて考えることが重要です。 たとえば、iOS スタイル UI には、Android のアプリケーションはおそらく行かないもユーザーと。 これは、時も、さまざまなアプリケーション ストアによって強制されます。 このため、各プラットフォームの規則を尊重し、従って様々 なヒューマン インターフェイス ガイドラインに精通していることが重要です： * [iOS][22] * [Android][23] * [Windows Phone][24]
 
- [20]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
- [21]: https://developer.android.com/designWP8
- [22]: http://dev.windowsphone.com/en-us/design/library
+ [22]: https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html
+ [23]: https://developer.android.com/designWP8
+ [24]: http://dev.windowsphone.com/en-us/design/library
 
 ## その他の UI の記事およびリソース
 
@@ -205,18 +215,18 @@ Weinre は、コルドバ アプリケーションのリモート デバッグ �
 
 ここでは、コルドバで最新保つためにいくつかの方法です。
 
-*   [コルドバのブログ][23]を購読するには.
-*   [開発者メーリング リスト][24]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
+*   [コルドバのブログ][25]を購読するには.
+*   [開発者メーリング リスト][26]に登録.注 - サポート グループではありません ！むしろこれはコルドバの開発は議論した場所です。
 
- [23]: http://cordova.apache.org/#news
- [24]: http://cordova.apache.org/#mailing-list
+ [25]: http://cordova.apache.org/#news
+ [26]: http://cordova.apache.org/#mailing-list
 
 # ヘルプの取得
 
 次のリンクは、コルドバの助けを得る最もよい場所です。
 
 *   StackOverflow: <http://stackoverflow.com/questions/tagged/cordova>コルドバのタグを使用して、表示およびすべてのコルドバの質問を参照できます。 StackOverflow によってこのように同様に歴史的質問にアクセスすることができますように「コルドバ」を"Phonegap"タグが自動的に変換されます。
-*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][25]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
+*   PhoneGap Google のグループ： [https://groups.google.com/forum/# ！ フォーラム/phonegap][27]この Google グループだったときコルドバまだと呼ばれていた PhoneGap の古いサポート フォーラム。 まだこのグループ頻繁にコルドバのユーザーの多くは、コルドバのコミュニティに関心を StackOverflow のサポートを使用してこのグループにはあまり焦点を当てて
 *   ミート： <http://phonegap.meetup.com> - ローカル コルドバ/PhoneGap ミート グループを探すことを検討
 
- [25]: https://groups.google.com/forum/#!forum/phonegap
+ [27]: https://groups.google.com/forum/#!forum/phonegap

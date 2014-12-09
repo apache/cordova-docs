@@ -13,17 +13,17 @@
 
 ## under the License.
 
-# Windows 8 のプラグイン
+# Windows のプラグイン
 
 Windows ストア アプリで使用するためのプラグインを実装する方法の詳細について説明します。これを読む前に、プラグインの構造とその一般的な JavaScript のインターフェイスの概要についてアプリケーション ・ プラグインが参照してください。 このセクションは、ネイティブ プラットフォームに戻るコルドバ webview から通信するサンプル*エコー*プラグインを示すために続けています。
 
-Windows 8 が直接 Javascript では、開発に必要な特別なケースだけで 'native' の部分を意味する開発をサポートすることに注意してくださいすることが重要です。
+Windows が直接 Javascript では、開発に必要な特別なケースだけで 'native' の部分を意味する開発をサポートすることに注意してくださいすることが重要です。
 
-## Java スクリプトの設定で Windows 8 プラグインを作成します。
+## Java スクリプトの設定で、Windows のプラグインの作成
 
 これらの手順は、純粋な JavaScript のプラグインを作成します。これを理解するネイティブ/マネージ ビットを追加する方法を理解する重要です。
 
-Windows 8 コルドバ プラグインは本質的に薄いラッパー関数は、提供されている既存の WinJS が複数のデバイスは、JS 共通インターフェイスを定義したいと仮定すると、通常は 1 の JS ファイルを API を提供します。
+Windows コルドバ プラグインは本質的に薄いラッパー関数は、提供されている既存の WinJS が複数のデバイスは、JS 共通インターフェイスを定義したいと仮定すると、通常は 1 の JS ファイルを API を提供します。
 
     // inside file echoplugin.js
     var EchoPlugin = {
@@ -35,9 +35,9 @@ Windows 8 コルドバ プラグインは本質的に薄いラッパー関数は
     }
     
 
-## Windows 8 の内側のコルドバ exec
+## Windows の内部のコルドバ exec
 
-Cordova.exec 関数は、すべてのプラットフォームで定義が異なるので、これは各プラットフォームには、アプリケーションの js コードとネイティブ ラッパー コード間の通信のそれ自身の方法。 しかし、Windows 8 の場合 exec 呼び出しが一貫性を保つのためにあるので、ネイティブ ラッパーはありません。 あなたがあなたの仕事 js のみプラグイン EchoPlugin.echo で直接のようなもの：
+Cordova.exec 関数は、すべてのプラットフォームで定義が異なるので、これは各プラットフォームには、アプリケーションの js コードとネイティブ ラッパー コード間の通信のそれ自身の方法。 しかし、Windows の場合 exec 呼び出しが一貫性を保つのためにあるので、ネイティブ ラッパーはありません。 あなたがあなたの仕事 js のみプラグイン EchoPlugin.echo で直接のようなもの：
 
     // inside file echoplugin.js ( this is what NOT to do if you want to reuse the JS API cross platform )
     var EchoPlugin = {
@@ -52,17 +52,17 @@ Cordova.exec 関数は、すべてのプラットフォームで定義が異な�
     }
     
 
-これは可能性がうまく、しかしそれことを意味します、異なるプラットフォーム用の echoPlugin.js の異なるバージョンを必要がありますおそらく実装に不整合の問題を持って可能性があります。 ベスト プラクティスとして、我々 でした同じ JS コードを実行し、プラットフォームの書き換えをしていないも任意のパラメーターをチェックまたは他のプラットフォームで働いていた開発者によって提供されるその他の一般的なコードの利点を取るように Windows 8 では、cordova.exec 内のネイティブ API を模倣することを決めた。
+これは可能性がうまく、しかしそれことを意味します、異なるプラットフォーム用の echoPlugin.js の異なるバージョンを必要がありますおそらく実装に不整合の問題を持って可能性があります。 ベスト プラクティスとして、我々 でした同じ JS コードを実行し、プラットフォームの書き換えをしていないも任意のパラメーターをチェック、または他の一般的なコード他のプラットフォームで働いていた開発者によって提供される利点を取るので、windows では、cordova.exec 内のネイティブ API を模倣することを決めた。
 
 ## コルドバ exec プロキシ
 
-Windows 8 では、コルドバ API へのすべての cordova.exec 呼び出しを処理するオブジェクトの登録に使用することができますプロキシを提供します。
+Windows では、コルドバ API へのすべての cordova.exec 呼び出しを処理するオブジェクトの登録に使用することができますプロキシを提供します。
 
 たとえば、加速度計 API の実装を提供したい場合これを行うだろう：
 
 cordova.commandProxy.add (「加速」{開始: 関数 {//あなたのコードをここに...}、//ここでの API の残りの部分});
 
-従って我々 は仮定する例では、Windows 8 用のプロキシを単に書くことができます JavaScript と私たちにクロスプラット フォームの関連する echoplugin.js 内のコードが処理すること
+従って我々 は仮定する例では、Windows のプロキシを単に書くことができます JavaScript と私たちにクロスプラット フォームの関連する echoplugin.js 内のコードが処理すること
 
     // in file echopluginProxy.js
     cordova.commandProxy.add("EchoPlugin",{
@@ -92,9 +92,9 @@ cordova.commandProxy.add (「加速」{開始: 関数 {//あなたのコード�
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
         </platform>
@@ -104,11 +104,11 @@ cordova.commandProxy.add (「加速」{開始: 関数 {//あなたのコード�
     </plugin>
     
 
-これは私たちの作業を実装 (echopluginProxy.js) の部分だけで Windows 8 を提供するためにプロキシを使用して共通ファイル (echoplugin.js) を使用して Windows 8 JavaScript のプラグインを与えます。 どのように私たちにネイティブ/マネージ コードを追加しますか？ 我々 は同じを始めるつもり、唯一の違いは、echopluginProxy メソッドの中で行うことになります。
+これにより作業 Windows JavaScript のプラグインの実装 (echopluginProxy.js) の Windows のみの部分を提供するためにプロキシを使用して共通ファイル (echoplugin.js) を使用します。 どのように私たちにネイティブ/マネージ コードを追加しますか？ 我々 は同じを始めるつもり、唯一の違いは、echopluginProxy メソッドの中で行うことになります。
 
 # WinJS は、ネイティブ/マネージ コードにアクセスする方法
 
-Windows 8、WinJS 作成アプリはネイティブ コードと相互作用することでこの間 op は Windows ランタイム コンポーネントで利用できます。 詳細は数多くあり、このガイドは基本をカバーしてのみ。 マイクロソフトは多くの情報を提供します[ここ][2].
+Windows では、作成したアプリは、ネイティブ コードと対話することができる WinJS この間 op は Windows ランタイム コンポーネントの利用可能です。 詳細は数多くあり、このガイドは基本をカバーしてのみ。 マイクロソフトは多くの情報を提供します[ここ][2].
 
  [2]: http://msdn.microsoft.com/en-us/library/windows/apps/hh441569.aspx
 
@@ -159,13 +159,13 @@ var 解像度 = EchoRuntimeComponent.EchoPluginRT.echo("boom");これをファ�
     });
     
 
-そしてそれは、Apache コルドバ Windows 8 では、エンド ツー エンド バックアップ C++ js の呼び出し可能なプラグインの使用のためがある ！
+そしてそれは、我々 の使用のため、エンド ツー エンド バックアップ C++ js 呼び出し可能プラグイン Apache コルドバ、Windows にある ！
 
 # いくつかのテクニカル ノート:
 
 *   コールバックは通常 async 呼び出し元によるコールバックをすぐに呼び出すことは期待していないだろうです。 実習では、呼び出しが非同期場合、少なくともしてください javascript タイムアウトを強制的に非同期に呼び出されるコールバック。
 *   アクティブ化可能なクラスは派遣、非同期コールバック、独自のオブジェクトの型、配列、コレクション、オーバー ロードされたメソッドおよび大いに多くを渡すイベントのような素晴れらしいのすべての種類を行うことができます。 私はあなたの宿題をお勧めします。
-*   一般的な Windows Phone 8 と Windows 8 SDK API 呼び出しに固執する場合は、コンポーネントを使用して、同じランタイム (ネイティブまたはマネージ ビット) Windows Phone 8 Apache コルドバ プラグインできます。 〜 ポスト用にチューニング滞在します。
+*   一般的な Windows Phone 8.0 と Windows SDK API 呼び出しに固執する場合は、コンポーネントを使用して、同じランタイム (ネイティブまたはマネージ ビット) Windows Phone 8.0 Apache コルドバ プラグインできます。 〜 ポスト用にチューニング滞在します。
 
 # あなたのプラグインを定義します。
 
@@ -180,12 +180,12 @@ var 解像度 = EchoRuntimeComponent.EchoPluginRT.echo("boom");これをファ�
             <clobbers target="window.echoplugin" />
         </js-module>
     
-        <!-- windows8 -->
-        <platform name="windows8">
-            <js-module src="src/windows8/echopluginProxy.js" name="EchoProxy">
+        <!-- windows -->
+        <platform name="windows">
+            <js-module src="src/windows/echopluginProxy.js" name="EchoProxy">
                 <merges target="" />
             </js-module>
-            <framework src="src/windows8/EchoRuntimeComponent.winmd" custom="true"/>
+            <framework src="src/windows/EchoRuntimeComponent.winmd" custom="true"/>
         </platform>
     
         <!-- other platforms -->
@@ -193,8 +193,8 @@ var 解像度 = EchoRuntimeComponent.EchoPluginRT.echo("boom");これをファ�
     </plugin>
     
 
-それは、今、世界と共有することができます、配布可能なプラグインがある! 1 つの事に注意してください Windows 8 コルドバ プロジェクトにフレームワークを追加するためのサポートは、コルドバの現在のツーリングになっていることを確認する必要がありますのでのみ最近追加されました。 コルドバ cli とコルドバ plugman サポート ネイティブ バックアップのプラグインを削除するを追加します。
+それは、今、世界と共有することができます、配布可能なプラグインがある! 1 つの事に注意してください Windows コルドバ プロジェクトにフレームワークを追加するためのサポートは、コルドバの現在のツーリングになっていることを確認する必要がありますのでのみ最近追加されました。 コルドバ cli とコルドバ plugman サポート ネイティブ バックアップのプラグインを削除するを追加します。
 
-> コルドバ プラグインを追加する com.risingj.echoplugin または > plugman インストール--プラットフォーム windows8 プラグイン--com.risingj.echoplugin--プロジェクト。
+> cordova plugin add com.risingj.echoplugin or > plugman install --platform windows --plugin com.risingj.echoplugin --project .
 
 https://github.com/purplecabbage/cordova-runtimecomp-echoplug

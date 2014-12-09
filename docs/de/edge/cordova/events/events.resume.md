@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn eine Anwendung aus dem Hintergrund abgerufen 
     document.addEventListener("resume", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Das `resume` -Ereignis wird ausgelöst, wenn die native Plattform die Anwendung aus dem Hintergrund zieht.
 
@@ -35,7 +35,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 *   Windows Phone 8
 *   Windows 8
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("resume", onResume, false);
     

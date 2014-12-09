@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -15,7 +15,7 @@
 
 # Windows Phone 8 плагины
 
-Этот раздел содержит сведения о том, как реализовать собственный плагин код на платформе Windows Phone. Прежде чем читать это, увидеть приложения плагины обзор структуры плагина и его общий интерфейс JavaScript. Этот раздел продолжает демонстрировать образец *эхо* плагин, который общается с webview Кордова на родной платформе и обратно.
+Этот раздел содержит сведения о том, как реализовать собственный плагин код на платформе Windows Phone. Прежде чем читать это, прочтите секции "Архитектура плагинов" для обзор структуры плагина и его общего JavaScript интерфейса. Этот раздел продолжает демонстрировать образец плагина *echo*, который взаимодействует с WebView Cordova на стороне платформы и наоборот.
 
 Писать плагин для Кордова на Windows Phone требуется базовое понимание архитектуры в Кордове. Кордова-WP8 состоит из `WebBrowser` , содержит код JavaScript приложения и управляет родной вызовы API. Вы можете расширить C# `BaseCommand` класса ( `WPCordovaClassLib.Cordova.Commands.BaseCommand` ), которая поставляется с большинство функциональных возможностей, вам необходимо:
 

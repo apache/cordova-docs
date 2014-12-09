@@ -1,6 +1,6 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -27,7 +27,7 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
     
     > Monitorowanie stanu baterii urządzenia.
 
-*   [Aparat fotograficzny][3]
+*   [Aparat][3]
     
     > Przechwytywanie zdjęcia za pomocą aparatu urządzenia.
 
@@ -95,6 +95,10 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
     
     > Interfejs API do wibrować urządzenia.
 
+*   [Pasek stanu][20]
+    
+    > API dla Wyświetlono, ukrywanie i konfigurowania tła paska stanu.
+
  [2]: http://plugins.cordova.io/#/package/org.apache.cordova.battery-status
  [3]: http://plugins.cordova.io/#/package/org.apache.cordova.camera
  [4]: http://plugins.cordova.io/#/package/org.apache.cordova.console
@@ -106,12 +110,13 @@ Tradycyjny zestaw podstawowych Cordova wtyczki są następująco:
  [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
  [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
  [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
  [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
  [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
  [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture
  [17]: http://plugins.cordova.io/#/package/org.apache.cordova.network-information
  [18]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
  [19]: http://plugins.cordova.io/#/package/org.apache.cordova.vibration
+ [20]: https://github.com/apache/cordova-plugin-statusbar/blob/master/doc/index.md
 
 Non-angielski tłumaczenie tych dokumentów plugin można znaleźć przez patrząc na starsze wersje dokumentacji Cordova. Użyj menu rozwijanego w bardzo prawym górnym rogu tej strony, aby przełączyć wersje.

@@ -158,11 +158,13 @@ unresolved problems. If so, follow these additional steps:
 ## Build the Project
 
 If you are using the CLI in development, the project directory's
-top-level `www` directory contains the source files. Run either of
+top-level `www` directory contains the source files. Run any of
 these within the project directory to rebuild the app:
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ cordova build                   # build all platforms that were added
+        $ cordova build android           # build debug for only Android
+        $ cordova build android --debug   # build debug for only Android
+        $ cordova build android --release # build release for only Android
 
 If you are using the Android-specific shell tools in development,
 there is a different approach.  Once you generate the project, the
@@ -171,7 +173,7 @@ Subsequent commands are available in its `cordova` subdirectory.
 
 The `build` command cleans project files and rebuilds the app. Here is
 the syntax for both Mac and Windows. The first pair of examples
-generate debugging information, and the second signs the apps for
+generate debugging information, and the second builds the apps for
 release:
 
         $ /path/to/project/cordova/build --debug
@@ -179,6 +181,19 @@ release:
         
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
+
+When building for release, if you add the following definitions to your
+`local.properties` file, then your APK will get signed and aligned such that
+it will be ready for upload to the Google Play store:
+
+        key.store=/Users/me/Developer/mykeystore.jks
+        key.alias=mykeyalias
+
+If the keystore and/or the aliased key have a password, the build script will
+prompt you for the password. You do not need to define the passwords in a
+properties file. If you do want to avoid the prompt, you can define them in 
+`local.properties` as `key.store.password` and `key.alias.password`. Be aware
+of security concerns with those passwords if you do so.
 
 ## Configure an Emulator
 

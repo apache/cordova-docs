@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -56,7 +56,7 @@ Vea la clase [BaseCommand.cs][1] para los métodos disponibles para el plugin an
 
 ## Espacios de nombres
 
-Es el espacio de nombres predeterminado para los comandos no cualificados:
+Es el espacio de nombres predeterminado para comandos no cualificados:
 
         namespace Cordova.Extension.Commands
         {
@@ -176,7 +176,7 @@ Lo siguiente muestra cómo utilizar el `plugin.xml` archivo para especificar arc
         </config-file>
         
 
-## Depuración de Plugins
+## Plugins de depuración
 
 Utilizar el depurador de Visual Studio para depurar componente de un plugin C#. Puede establecer un punto de interrupción en cualquiera de los métodos expuestos por la clase.
 

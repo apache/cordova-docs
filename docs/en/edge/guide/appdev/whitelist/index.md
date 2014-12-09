@@ -20,7 +20,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 # Whitelist Guide
 
 Domain whitelisting is a security model that controls access to
-external domains over which you application has no control.  Cordova's
+external domains over which your application has no control.  Cordova's
 default security policy allows access to any site. Before moving your
 application to production, you should formulate a whitelist and allow
 access to specific network domains and subdomains.
@@ -60,6 +60,17 @@ The following examples demonstrate whitelist syntax:
 
   This is the default value for newly created CLI projects.
 
+Be aware that some websites may automatically redirect from their home page to
+a different url, such as using https protocol or to a country-specific
+domain. For example http://www.google.com will redirect to use SSL/TLS at
+https://www.google.com, and then may further redirect to a geography such as
+https://www.google.co.uk. Such scenarios may require modified or additional
+whitelist entries beyond your initial requirement. Please consider this
+as you are building your whitelist.
+
+Note that the whitelist applies only to the main Cordova webview, and does not
+apply to an InAppBrowser webview or opening links in the system web browser.
+
 ## Amazon Fire OS Whitelisting
 
 Platform-specific whitelisting rules are found in
@@ -83,7 +94,7 @@ whitelist. Also see "External Application Whitelist" below for more information
 on launching external applications by URL.
 
 __NOTE__: Some network requests do not go through the Cordova Whitelist.
-This includes <video> and <audio> resouces, WebSocket connections (on
+This includes &lt;video&gt; and &lt;audio&gt; resouces, WebSocket connections (on
 Android 4.4+), and possibly other non-http requests. On Android 4.4+,
 you can include a [CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
 header in your HTML documents to restrict access to those resources.
@@ -94,37 +105,37 @@ On older versions of Android, it may not be possible to restrict them.
 Cordova 3.6.0 introduces a second whitelist, for restricting which URLs
 are allowed to launch external applications. In previous versions of
 Cordova, all non-http URLs, such as `mailto:`, `geo:`, `sms:` and `intent`,
-were implicitly allowed to be the target of a an <a> tag. Because of the
+were implicitly allowed to be the target of an &lt;a&gt; tag. Because of the
 potential for an application to leak information, if an XSS vulnerability
 allows an attacker to construct arbitrary links, these URLs must be
 whitelisted as well, starting in Cordova 3.6.0.
 
-To allow a URL pattern to launch an external application, use an <access>
+To allow a URL pattern to launch an external application, use an &lt;access>
 tag in your `config.xml` file, with the `launch-external` attribute set.
 
 Examples:
 
 * To allow links to send SMS messages:
 
-    <access origin="sms:*" launch-external="yes" />
+        <access origin="sms:*" launch-external="yes" />
 
 * To allow links to open Maps:
 
-    <access origin="geo:*" launch-external="yes" />
+        <access origin="geo:*" launch-external="yes" />
 
 * To allow links to example.com to open in an external browser:
 
-    <access origin="http://example.com/*" launch-external="yes" />
+        <access origin="http://example.com/*" launch-external="yes" />
 
 * To allow all non-whitelisted websites to open in an external browser:
 (This is the same as the previous behaviour for non-whitelisted URLs)
 
-    <access origin="http://*" launch-external="yes" />
-    <access origin="https://*" launch-external="yes" />
+        <access origin="http://*" launch-external="yes" />
+        <access origin="https://*" launch-external="yes" />
 
 * To allow access to all URLs, reverting to the Cordova 3.5.0 policy (not recommended):
 
-    <access origin="*" launch-external="yes" />
+        <access origin="*" launch-external="yes" />
 
 When navigating to a URL from within your application, the interal whitelist
 is tested first, and if the URL is not whitelisted there, then the external

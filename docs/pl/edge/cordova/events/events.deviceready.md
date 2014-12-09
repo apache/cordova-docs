@@ -32,9 +32,9 @@ Cordova składa się z dwóch baz kod: macierzystego i JavaScript. Podczas gdy �
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   iOS
 *   Tizen
 *   Windows Phone 8
@@ -49,7 +49,7 @@ Cordova składa się z dwóch baz kod: macierzystego i JavaScript. Podczas gdy �
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE html>
     <html>

@@ -28,6 +28,7 @@ require 'fileutils'
 require 'table_of_contents'
 require 'version_menu'
 require 'navigation_menu'
+require 'noindex'
 require 'prettify'
 
 class DocsGenerator
@@ -101,7 +102,7 @@ class DocsGenerator
   end
   
   def after_jodoc(input_directory, options)
-    klasses = [ AddTitle.new, UpdateIndex.new, UpdateKeywordIndex.new, TableOfContents.new, VersionMenu.new(options), NavigationMenu.new(options), Prettify.new ]
+    klasses = [ AddTitle.new, UpdateIndex.new, UpdateKeywordIndex.new, TableOfContents.new, VersionMenu.new(options), NavigationMenu.new(options), Prettify.new, NoIndex.new(options) ]
     
     klasses.each do |klass|
       each_file input_directory do |file|

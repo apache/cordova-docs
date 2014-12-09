@@ -32,7 +32,7 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 
 *   Guida piattaforma Android
 *   Shell Android strumento guida
-*   Android configurazione
+*   Configurazione Android
 *   Plugin Android
 *   Visualizzazioni Web Android
 *   L'aggiornamento di Android
@@ -54,7 +54,7 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 
 *   iOS guida piattaforma
 *   iOS guida strumento Shell
-*   iOS Configuration
+*   Configurazione iOS
 *   iOS Plugins
 *   iOS visualizzazioni Web
 *   L'aggiornamento iOS
@@ -72,6 +72,7 @@ Ogni *Piattaforma guida* sottoelencate ti dice quello che dovete sapere per impo
 ## Windows
 
 *   Guida alla piattaforma Windows
+*   Plugin di Windows
 *   L'aggiornamento di Windows 8
 
 ## Tizen

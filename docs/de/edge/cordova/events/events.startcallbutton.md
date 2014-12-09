@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Startschaltfläche drückt.
     document.addEventListener("startcallbutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Wenn Sie das Start-Aufruf Standardverhalten überschreiben möchten registrieren Sie einen Ereignis-Listener für das `startcallbutton` Ereignis.
 
@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 *   BlackBerry 10
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("startcallbutton", onStartCallKeyDown, false);
     

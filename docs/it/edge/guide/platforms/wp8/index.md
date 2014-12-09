@@ -75,7 +75,7 @@ Se si desidera utilizzare strumenti shell Windows Phone-centrata di Cordova in c
 
  [9]: http://cordova.apache.org
 
-Questi strumenti shell consentono di creare, compilare ed eseguire applicazioni Windows Phone. Per informazioni sull'interfaccia della riga di comando aggiuntiva che attiva il plugin funzionalità su tutte le piattaforme, vedere utilizzando Plugman per gestire i plugin. Vedere applicazione plugin per indicazioni su come sviluppare plugin e Windows Phone Plugins per dettagli specifici per la piattaforma Windows Phone.
+Questi strumenti shell consentono di creare, compilare ed eseguire applicazioni Windows Phone. Per informazioni sull'interfaccia della riga di comando aggiuntiva che attiva il plugin funzionalità su tutte le piattaforme, vedere utilizzando Plugman per gestire i plugin. Vedere applicazione plugin per indicazioni su come sviluppare plugin e Windows Phone 8 Plugins per dettagli specifici per la piattaforma Windows Phone.
 
 ## Installare il SDK
 

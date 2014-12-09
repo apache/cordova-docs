@@ -21,7 +21,7 @@ Do tworzenia aplikacji Cordova, należy zainstalować SDK dla każdej platformy 
 
 Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć, aby skonfigurować środowisko programistyczne każdej platformy: gdzie otrzymać zestaw SDK, jak ustawić urządzenie emulatory, jak połączyć urządzenia do bezpośredniego badania i jak zarządzać wymagania klucza podpisywania. Dodatkowe przewodniki dostarczają informacji na temat każdej z platform unikatowy zestaw opcji konfiguracyjnych, instrukcje, aby dodać wtyczki, jak uaktualnić każdej platformy i narzędzi wiersza polecenia specyficznych dla platformy, które służą jako alternatywa do niższego poziomu `cordova` narzędzie wiersza polecenia.
 
-## Amazon ogień OS
+## Amazon Fire OS
 
 *   Amazon ogień platformy OS Przewodnik
 *   Amazon ogień OS konfiguracja
@@ -32,10 +32,10 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Przewodnik platformy Android
 *   Android Shell narzędzia Przewodnik
-*   Android konfiguracji
-*   Wtyczek Android
-*   Android WebViews
-*   Aktualizacja Android
+*   Konfiguracja Androida
+*   Wtyczki dla Androida
+*   WebView
+*   Aktualizacja
 
 ## BlackBerry 10
 
@@ -54,7 +54,7 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Przewodnik platformy iOS
 *   iOS Shell narzędzia Przewodnik
-*   iOS konfiguracji
+*   Konfiguracja iOS
 *   iOS wtyczek
 *   iOS WebViews
 *   Aktualizacja iOS
@@ -63,15 +63,16 @@ Każdy *Przewodnik platformy* wymienione poniżej informuje, co musisz wiedzieć
 
 *   Platforma Ubuntu Guide
 
-## Windows Phone
+## Windows Phone 8
 
-*   Przewodnik platformy Windows Phone
-*   Wtyczki Windows Phone
-*   Aktualizacja Windows Phone
+*   Przewodnik platformy Windows Phone 8
+*   Windows Phone 8 wtyczki
+*   Aktualizacja Windows Phone 8
 
-## Windows 8
+## Windows
 
-*   Windows 8 platformy Przewodnik
+*   Przewodnik platforma Windows
+*   Wtyczki Windows
 *   Aktualizacja systemu Windows 8
 
 ## Tizen

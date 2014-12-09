@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -58,9 +58,9 @@ Para modificar el `PATH` ambiente en Windows 7:
 
 2.  Seleccione **Configuración avanzada del sistema** en la columna de la izquierda.
 
-3.  En el cuadro de diálogo resultante, pulse **Las Variables de entorno**.
+3.  En el cuadro de diálogo resultante, presione **Environment Variables**.
 
-4.  Seleccionar la variable **PATH** y pulse **Editar**.
+4.  Seleccione la variable **PATH** y pulse **Editar**.
 
 5.  Añadir lo siguiente a la `PATH` basada en donde se ha instalado el SDK, por ejemplo:
     
@@ -92,9 +92,9 @@ Aquí es el enfoque de shell-herramienta de nivel inferior correspondiente para 
 
 Aquí es cómo utilizar el SDK para modificarlo:
 
-1.  Inicie la aplicación de **Eclipse** .
+1.  Inicie la aplicación de **Eclipse**.
 
-2.  Seleccione el elemento de menú **Nuevo proyecto** .
+2.  Seleccione el elemento de menú **Nuevo proyecto**.
 
 3.  Elija **Proyecto Android de código existente** en el cuadro de diálogo resultante y pulse **siguiente**:
     
@@ -102,7 +102,7 @@ Aquí es cómo utilizar el SDK para modificarlo:
 
 4.  Si estás usando CLI, desplácese hasta la `hello` directorio creado para el proyecto, luego a la `platforms/android` subdirectorio. Alternativamente, si utilizas el `create` utilidad de shell, simplemente vaya a la `hello` Directorio.
 
-5.  Pulse **Finalizar**.
+5.  Pulse **Finish**.
 
  [6]: img/guide/platforms/android/eclipse_new_project.png
 
@@ -110,13 +110,13 @@ Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color roj
 
 1.  Haga clic en el directorio del proyecto.
 
-2.  En el cuadro de diálogo **Propiedades** resultante, seleccione **Android** desde el panel de navegación.
+2.  En el cuadro de diálogo **Properties** resultante, seleccione **Android** desde el panel de navegación.
 
-3.  Para el proyecto de construcción de destino, seleccione el nivel más alto de la API de Android instalado.
+3.  Para el proyecto de construir el destino, seleccione el nivel más alto de la API de Android instalado.
 
-4.  Haga clic en **Aceptar**.
+4.  Haga clic en **OK**.
 
-5.  Seleccione el menú **proyecto** **limpio** . Esto debe corregir todos los errores en el proyecto.
+5.  Seleccione **Clean** en el menú **Project**. Esto debería corregir todos los errores en el proyecto.
 
 ## Construir el proyecto
 
@@ -139,9 +139,9 @@ El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aqu
 
 ## Configurar un emulador
 
-Se puede utilizar ya sea la `cordova` CLI utilidad o cáscara de Android-centrado de Cordova Herramientas para ejecutar una aplicación en un emulador. De cualquier manera, el SDK primero debe configurarse para mostrar al menos un dispositivo. Para ello, utilice el Android SDK Manager, una aplicación Java que funciona por separado del Eclipse. Hay dos maneras para abrirlo:
+Se puede utilizar ya sea la `cordova` CLI utilidad o cáscara de Android-centrado de Cordova Herramientas para ejecutar una aplicación en un emulador. De cualquier manera, el SDK primero debe configurarse para mostrar al menos un dispositivo. Para ello, utilice el Android SDK Manager, una aplicación Java que funciona por separado del Eclipse. Hay dos formas de abrirlo:
 
-1.  Ejecute `android` en la línea de comandos.
+1.  Ejecutar `android` en la línea de comandos.
 
 2.  Desde dentro de Eclipse, presione este icono de la barra de herramientas:
     
@@ -155,25 +155,25 @@ Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de 
 
  [8]: img/guide/platforms/android/asdk_window.png
 
-Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
+Elegir **Tools → Manage AVDs** (Android dispositivos virtuales), luego elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
 
 ![][9]
 
  [9]: img/guide/platforms/android/asdk_device.png
 
-Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
+Pulse **Create AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
 
 ![][10]
 
  [10]: img/guide/platforms/android/asdk_newAVD.png
 
-La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
+La AVD entonces aparece en la lista de **Dispositivos Android Virtual**:
 
 ![][11]
 
  [11]: img/guide/platforms/android/asdk_avds.png
 
-Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
+Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Lanza tanto como en el dispositivo, con controles adicionales disponibles para los botones de hardware:
 
 ![][12]
 
@@ -207,7 +207,7 @@ Cuando te `run` la aplicación, también `build` lo. Se pueden añadir adicional
         $ /path/to/project/cordova/run --emulator --nobuild
     
 
-Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **Ejecutar como → aplicación para Android**. Se le podría especificar una AVD si no aparece ninguna ya abierto.
+Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **Run As → Android Application**. Se le podría especificar una AVD si ninguno está ya abierto.
 
 Para una experiencia más rápida, puede utilizar el `Virtual Machine Acceleration` para mejorar la velocidad de ejecución. Muchas CPUs modernas ofrecen extensiones para ejecutar máquinas virtuales más eficientemente. Antes de usar este tipo de aceleración, es necesario determinar si CPU de su sistema actual de desarrollo, uno admite las siguientes tecnologías de virtualización:
 
@@ -239,17 +239,17 @@ Después de la descarga, ejecute el instalador de Intel, que está disponible en
 
  [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
 
-1.  Instalar uno o más `Intel x86 Atom` imágenes del sistema así como el `Intel Hardware Accelerated Execution Manager` , disponible bajo **Extras**.
+1.  Instalar una o más imágenes del sistema `x 86 de Intel Atom`, así como la `Acelerada ejecución administrador de Hardware de Intel`, disponible bajo **Extras**.
 
-2.  Ejecute al instalador de Intel, que está disponible en el SDK de Android en`extras/intel/Hardware_Accelerated_Execution_Manager`.
+2.  Ejecute al instalador de Intel, que está disponible en el SDK de Android en `extras/intel/Hardware_Accelerated_Execution_Manager`.
 
-3.  Crear un nuevo AVD con el objetivo fijado a una imagen de Intel.
+3.  Crear un nuevo AVD con el objetivo establecido de una imagen de Intel.
 
-4.  Al iniciar el emulador, asegúrese que no hay error mensajes indicando la imposibilidad de cargar módulos HAX.
+4.  Al iniciar el emulador, asegurar que no hay mensajes de error que indica la imposibilidad de cargar módulos HAX.
 
-## Implementar al dispositivo
+## Desplegar en el dispositivo
 
-Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][20]y utilice un cable mini-USB para conectarlo a su sistema.
+Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][20] y usar un mini cable USB para conectarlo a su sistema.
 
  [20]: http://developer.android.com/tools/device.html
 
