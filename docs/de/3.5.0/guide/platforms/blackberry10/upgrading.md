@@ -380,7 +380,6 @@ Aktualisierung nur das `www` Verzeichnis:
     
         < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
         
-    
     An:
     
         < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
@@ -406,7 +405,6 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
     
          < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
         
-    
     An:
     
          < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
@@ -434,7 +432,6 @@ Aktualisierung nur das `www` Verzeichnis:
     
         < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
         
-    
     An:
     
         < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
@@ -460,7 +457,6 @@ Aktualisieren das Beispielverzeichnis (d. h. Aktualisierung mithilfe der Ant-Too
     
          < Plugin Name = "Capture" value="org.apache.cordova.media.MediaCapture"/ >< Plugin-Name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
         
-    
     An:
     
          < Plugin Name = "Capture" value="org.apache.cordova.capture.MediaCapture"/ >< Plugin-Namen "Kontakte" value="org.apache.cordova.pim.Contact"/ = >
