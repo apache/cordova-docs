@@ -380,7 +380,6 @@ Actualizar el `www` Directorio:
     
         < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
         
-    
     Para:
     
         < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
@@ -407,7 +406,6 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Para:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -436,7 +434,6 @@ Actualizar el `www` Directorio:
     
         < nombre del plugin = "Capturar" value="org.apache.cordova.media.MediaCapture"/ >< nombre del plugin = "Contacto" value="org.apache.cordova.pim.Contact"/ >
         
-    
     Para:
     
         < nombre del plugin = "Capturar" value="org.apache.cordova.capture.MediaCapture"/ >< nombre del plugin "Contactos" value="org.apache.cordova.pim.Contact"/ = >
@@ -463,7 +460,6 @@ Actualizar el directorio de muestra (es decir, actualización usando las herrami
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Para:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
