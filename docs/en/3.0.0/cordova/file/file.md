@@ -41,6 +41,7 @@ Objects
 - LocalFileSystem
 - Metadata
 
+
 ## Accessing the Feature
 
 As of version 3.0, Cordova implements device-level APIs as _plugins_.
