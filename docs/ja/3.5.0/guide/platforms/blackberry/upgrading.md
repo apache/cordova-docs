@@ -333,7 +333,6 @@ PhoneGap のダウンロード ディレクトリを更新しています。
     
         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         
-    
     宛先：
     
         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
@@ -359,7 +358,6 @@ PhoneGap のダウンロード ディレクトリを更新しています。
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         
-    
     宛先：
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
@@ -387,7 +385,6 @@ PhoneGap のダウンロード ディレクトリを更新しています。
     
         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         
-    
     宛先：
     
         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
@@ -413,7 +410,6 @@ PhoneGap のダウンロード ディレクトリを更新しています。
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
         
-    
     宛先：
     
          < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
