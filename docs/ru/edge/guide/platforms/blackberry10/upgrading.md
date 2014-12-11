@@ -380,7 +380,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
     
         < имя плагина = «Захват» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
         < имя плагина = «Захват» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя «Контакты» value="org.apache.cordova.pim.Contact"/ = >
@@ -407,7 +406,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
@@ -436,7 +434,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
     
         < имя плагина = «Захват» value="org.apache.cordova.media.MediaCapture"/ >< плагин имя = «Контакт» value="org.apache.cordova.pim.Contact"/ >
         
-    
     Кому:
     
         < имя плагина = «Захват» value="org.apache.cordova.capture.MediaCapture"/ >< плагин имя «Контакты» value="org.apache.cordova.pim.Contact"/ = >
@@ -463,7 +460,6 @@ BlackBerry 10 использует новый инструмент CLI и упр
          <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
          <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
-    
     Кому:
     
          <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
