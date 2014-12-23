@@ -33,6 +33,7 @@ Cordova for BlackBerry は [BlackBerry WebWorks framework](https://bdsc.webapps.
     - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi)
     - Mac OS X: Apache Ant は Java と一緒にインストールされます
 
+
 2. SDK と Cordova のインストール
 -------------------------
 
@@ -42,6 +43,7 @@ Cordova for BlackBerry は [BlackBerry WebWorks framework](https://bdsc.webapps.
     - PlayBook の開発: [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。
 
+
 3. 新規プロジェクトの作成
 --------------------
 
@@ -50,6 +52,7 @@ Cordova for BlackBerry は [BlackBerry WebWorks framework](https://bdsc.webapps.
 - blackberry のディレクトリには、 `sample` と `www` の2つのディレクトリがあります。 `sample` フォルダーには、完成した Cordova プロジェクトが入っています。 `sample` フォルダーをコンピュータ内の別の場所にコピーします。
 - コピーしたフォルダーに移動します。
 - project.properties ファイルをあなたの好きなエディタで開き、 `blackberry.bbwp.dir=` および／または `playbook.bbwp.dir=` の部分を編集します。 値には、先ほどインストールした WebWorks SDK の中の `bbwp` バイナリファイルの位置をセットします。
+
 
 4. Hello World の作成
 --------------

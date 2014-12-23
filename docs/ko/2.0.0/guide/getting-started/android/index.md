@@ -37,6 +37,7 @@ Getting Started with Android
 - [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing)  를 다운로드받고 설치한다.
 - 최신버전의 [Cordova](http://phonegap.com/download) 를 다운받고 압축을 푼다. 이제부터는 Android 디렉토리에서 작업할 것이다. 
 
+
  3. Setup New Project
 ---------------------
 
@@ -99,6 +100,7 @@ Getting Started with Android
 - 이제 AndroidManifest.xml 파일은 아래와 같이 보일 것이다.
 
     ![](img/guide/getting-started/android/manifest.png)
+
 
 4. Hello World
 --------------    

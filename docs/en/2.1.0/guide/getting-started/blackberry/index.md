@@ -33,6 +33,7 @@ Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://
     - Windows: [Apache Ant](http://ant.apache.org/bindownload.cgi).
     - Mac OS X: Apache Ant is bundled with Java install.
 
+
 2.  Install SDK + Cordova
 -------------------------
 
@@ -42,6 +43,7 @@ Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://
     - PlayBook Development: [BlackBerry WebWorks Tablet OS SDK](https://bdsc.webapps.blackberry.com/html5/download/sdk)
 - Download the latest copy of [Cordova](http://phonegap.com/download) and extract its contents.
 
+
 3.  Setup New Project
 --------------------
 
@@ -50,6 +52,7 @@ Cordova for BlackBerry makes use of the [BlackBerry WebWorks framework](https://
 - The blackberry directory contains two directories, `sample` and `www`.  The `sample` folder contains a complete Cordova project.  Copy the `sample` folder to another location on your computer.
 - Change to the newly created directory.
 - Open up the project.properties file with your favorite editor and edit the entries for `blackberry.bbwp.dir=` and/or `playbook.bbwp.dir=`. Set the  value(s) to the directory containing the `bbwp` binary in the WebWorks SDK(s) installed earlier.
+
 
 4.  Hello World
 --------------

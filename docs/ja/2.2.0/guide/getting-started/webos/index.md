@@ -51,6 +51,7 @@ Getting Started with WebOS
 
 - ターミナルまたは cygwin を開き、 Cordova を解凍したフォルダーまで移動します。 webOS ディレクトリに移動します。
 
+
 4. Hello World の作成
 --------------
 

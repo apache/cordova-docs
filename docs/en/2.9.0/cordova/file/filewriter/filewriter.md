@@ -39,6 +39,7 @@ Properties
 The following property is _not_ supported:
 
 - __onprogress__: Called while writing the file, reporting progress in terms of `progress.loaded`/`progress.total`. _(Function)_
+
 Methods
 -------
 

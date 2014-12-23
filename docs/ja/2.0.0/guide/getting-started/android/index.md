@@ -37,6 +37,7 @@ Getting Started with Android
 - [ADT Plugin](http://developer.android.com/sdk/eclipse-adt.html#installing) のダウンロードとインストール
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから Android ディレクトリと一緒に作業を進めます。
 
+
  3. 新規プロジェクトの作成
 ---------------------
 
@@ -102,6 +103,7 @@ Getting Started with Android
 - AndroidManifest.xml は以下のようになります。
 
     ![](img/guide/getting-started/android/manifest.png)
+
 
 4. Hello World の作成
 --------------

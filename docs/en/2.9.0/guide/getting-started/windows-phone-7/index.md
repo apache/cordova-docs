@@ -28,6 +28,7 @@ Video Tutorials:
 - [Cordova and Windows Phone quick setup video](http://www.youtube.com/v/wO9xdRcNHIM?autoplay=1)
 - [Cordova and Windows Phone deep dive](http://www.youtube.com/v/BJFX1GRUXj8?autoplay=1)
 
+
 1. Requirements
 ---------------
 
@@ -36,6 +37,7 @@ Video Tutorials:
 __NOTE:__ Running in VM does not work well. If you are on a Mac, you need to set up a bootcamp partition with Windows 7 or Vista.
 
 - Become an [App Hub member](http://create.msdn.com/en-US/home/membership). You need to do so to install onto a device and submit the application to the market place.
+
 
 2. Install SDK + Cordova
 ----------------------------
@@ -61,6 +63,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - __NOTE:__ If you select __Automatically import the template...__, then you don't need to copy the `.zip` file over as outlined in step 2.
 - Press __Finish__.
 
+
 3. Set up New Project
 --------------------
 
@@ -71,6 +74,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 
     ![](img/guide/platforms/wp7/wpnewproj.png)
 
+
 4. Review the project structure
 -------------------------------
 
@@ -78,6 +82,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 - Any content that you add needs to be a part of the Visual Studio project, and it must be set as content.
 
     ![](img/guide/platforms/wp7/wp7projectstructure.png)
+
 
 5. Build and Deploy to Emulator
 -------------------------------
@@ -89,6 +94,7 @@ __NOTE:__ Skip this step if the `lib\windows-phone` directory already contains a
 
     ![](img/guide/platforms/wp7/wpfirstrun.png)
 
+
 6. Build your project for the device
 ------------------------------------
 
@@ -99,6 +105,7 @@ To test your application on a device, the device must be registered. MSDN provid
 - Press the green **play** button next to the main drop-down menu to start debugging, or type __F5__.
 
     ![](img/guide/platforms/wp7/wpd.png)
+
 
 Done!
 -----
