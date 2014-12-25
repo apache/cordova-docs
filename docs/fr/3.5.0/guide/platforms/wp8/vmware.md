@@ -1,9 +1,21 @@
---licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. Voir le fichier avis distribué avec ce travail d'information additionnelle concernant les droits d'auteur. L'ASF licenses ce fichier vous sous Apache License, Version 2.0 (la "licence") ; vous ne pouvez utiliser ce fichier sauf en conformité avec la licence. Vous pouvez obtenir une copie de la licence à
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-           http://www.Apache.org/licenses/License-2.0 sauf si requis par la loi applicable ou accord écrit, distribué sous la licence de logiciel est distribué sur un « Tel quel » fondement, sans garanties ou CONDITIONS d'aucune sorte, explicite ou implicite.  Voir la licence pour la langue spécifique régissant les autorisations et les limites
-    
+           http://www.apache.org/licenses/LICENSE-2.0
 
-## aux termes de la licence.
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
 
 # Configuration de VMWare Fusion
 
