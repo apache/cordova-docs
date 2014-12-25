@@ -26,9 +26,12 @@ var yargs = require('yargs')
     .count("verbose")
     .alias('v', 'verbose')
     .describe('verbose', 'Increase verbosity level of produced output')
-    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n' +
+    .describe('source', 'Path to the documentation sources. Default: docs')
+    .describe('out', 'Path where documentation would be generated. Default: public')
+    .example('./bin/genjs --out public/test en', 'Generates English docs in the directory public/test')
+    .usage('Usage: $0 [-v] [...options] [--edge] [lang] [version]\n' +
         '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n' +
-        '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
+        '    <version>: Version for which generate docs. If not specified then generate all versions.');
 var argv = yargs.argv;
 
 if (argv.help) {
@@ -58,4 +61,4 @@ if (argv.edge) {
     }
 }
 
-new generator().run(language, version, argv.verbose);
+new generator(argv.source, argv.out).run(language, version, argv.verbose);

@@ -11,3 +11,4 @@ _*
 /Gemfile.lock
 *Screen Shot [0-9]*
 /.vagrant
+/npm-debug.log
