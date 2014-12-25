@@ -15,7 +15,7 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 # IOS Upgrade
 
-Diese Anleitung zeigt wie iOS-Projekte, die ein upgrade von älteren Versionen von Cordova zu ändern. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
+Diese Anleitung zeigt wie iOS-Projekte von älteren Versionen von Cordova upgedatet werden. Die meisten diese Anweisungen gelten für Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren.
 
 **Hinweis**: Xcode 5 ist erforderlich. Derzeit um die Apple-App-Store zu senden, verwenden Sie die neueste ausgelieferte Version des iOS SDK, welches iOS 7 ist, und dies ist nur in Xcode 5 enthalten.
 

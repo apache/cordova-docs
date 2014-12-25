@@ -15,7 +15,9 @@ licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plu
 
 # iOS Configuration
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette section décrit en détail les préférences qui s'appliquent uniquement aux versions d'iOS. See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(boolean, la valeur par défaut `false` ): la valeur `true` pour permettre une balise meta viewport désactiver ou limiter la plage de mise à l'échelle de l'utilisateur, qui est activée par défaut.
     

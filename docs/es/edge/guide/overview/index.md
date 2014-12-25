@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -24,7 +24,7 @@ Apache Cordova se graduó en octubre de 2012 como un proyecto de nivel superior 
 
 Usar Apache Cordova si eres:
 
-*   establecen un móvil desarrollador y desea extender una aplicación a través de más de una plataforma, sin tener que volver a implementarlo con el lenguaje y herramienta de cada plataforma.
+*   establecen un móvil desarrollador y desea extender una aplicación a través de más de una plataforma, sin tener que reimplementarlo con herramienta y lenguaje de cada plataforma.
 
 *   un desarrollador web y desea implementar una aplicación web que se envasa para su distribución en varias app store portales.
 
@@ -32,15 +32,15 @@ Usar Apache Cordova si eres:
 
 ## Componentes básicos
 
-Apache Cordova aplicaciones se basan en un común `config.xml` archivo que proporciona información acerca de la aplicación y especifica los parámetros que afectan a cómo funciona, como si responde a la orientación cambia de puesto. Este archivo se adhiere a la especificación de [Empaquetado de la aplicación Web][2]o *widget*, de la W3C.
+Apache Cordova aplicaciones se basan en un común `config.xml` archivo que proporciona información acerca de la aplicación y especifica los parámetros que afectan a cómo funciona, como si responde a la orientación cambia de puesto. Este archivo se adhiere a la especificación de [Empaquetado de la aplicación Web][2], *widget*, o de la W3C.
 
  [2]: http://www.w3.org/TR/widgets/
 
 La misma aplicación se implementa como una página web, un archivo local llamado *index.html*, que hace referencia a cualquier CSS, JavaScript, imágenes, archivos multimedia u otros recursos son necesarios para que se ejecute de forma predeterminada. La aplicación se ejecuta como un *WebView* dentro de la envoltura de la aplicación nativa, que distribuye a tiendas de aplicaciones.
 
-El WebView Cordova habilitado puede proporcionar la aplicación con su interfaz de usuario completa. En algunas plataformas, también puede ser un componente dentro de una aplicación híbrida más grande, que mezcla la vista Web con componentes de la aplicación nativa. (Véase WebViews incrustación para más detalles).
+El WebView Cordova-habilitado puede proporcionar la aplicación con su interfaz de usuario completa. En algunas plataformas, también puede ser un componente dentro de una aplicación híbrida más grande, que mezcla la vista Web con componentes de la aplicación nativa. (Véase WebViews incrustación para más detalles).
 
-Una interfaz *plugin* está disponible para Cordova y componentes nativos para comunicarse con los demás. Esto le permite invocar código nativo desde JavaScript. Idealmente, las API de JavaScript para ese código nativo son consistentes a través de múltiples plataformas de dispositivos. A partir de la versión 3.0, plugins proporcionan enlaces a dispositivo estándar API. Plugins de terceros proporcionan enlaces adicionales a funciones no necesariamente disponibles en todas las plataformas. Puede encontrar estos plugins de terceros en el [registro de plugin][3] y utilizarlos en su aplicación. También puedes desarrollar tus propios plugins, como se describe en la guía de desarrollo de Plugin. Plugins puede ser necesario, por ejemplo, para comunicarse entre Córdoba y componentes personalizados de nativos.
+Una interfaz *plugin* está disponible para Cordova y componentes nativos para comunicarse con los demás. Esto te permite invocar un código de JavaScript. Idealmente, las API de JavaScript para ese código nativo son consistentes a través de múltiples plataformas de dispositivos. A partir de la versión 3.0, las extensiones proporcionan enlaces a APIs estándar. Plugins de terceros proporcionan enlaces adicionales a funciones no necesariamente disponibles en todas las plataformas. Puede encontrar estos plugins de terceros en el [registro de plugin][3] y utilizarlos en su aplicación. También puedes desarrollar tus propios plugins, como se describe en la guía de desarrollo de Plugin. Plugins puede ser necesario, por ejemplo, para comunicarse entre Córdoba y componentes personalizados de nativos.
 
  [3]: http://plugins.cordova.io
 

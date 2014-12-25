@@ -15,7 +15,9 @@
 
 # iOS 構成
 
-`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
+`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(ブール値、既定値は `false` ): に設定されている `true` が既定で有効になっているビューポート メタ タグを無効にするかユーザーがスケーリングの範囲を制限できるようにします。
     

@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -63,7 +63,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_cli_index.md.html">Cordova<br />CLI</a>
+          <a href="guide_cli_index.md.html">cordova<br />CLI</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -103,7 +103,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_hybrid_webviews_index.md.html">Incrustado<br />WebView</a>
+          <a href="guide_hybrid_webviews_index.md.html">Embedded<br />WebView</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -139,7 +139,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
       
       <tr>
         <th>
-          <a href="guide_hybrid_plugins_index.md.html">Plug-in<br />Interfaz</a>
+          <a href="guide_hybrid_plugins_index.md.html">Plug-in<br />Interface</a>
         </th>
         
         <td data-col="amazon-fireos" class="y">
@@ -180,7 +180,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </th>
         
         <th colspan="20">
-          Plataforma API
+          API de la plataforma
         </th>
       </tr>
       
@@ -334,7 +334,7 @@ A continuación muestra el conjunto de herramientas de desarrollo y dispositivo 
         </td>
         
         <td data-col="ios"        class="y">
-          (3GS +)
+          (3GS+)
         </td>
         
         <td data-col="ubuntu"        class="y">

@@ -75,7 +75,7 @@
 
  [9]: http://cordova.apache.org
 
-這些外殼工具允許您創建、 構建和運行 Windows Phone 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 指導如何開發外掛程式和 Windows Phone 外掛程式特定的 Windows Phone 平臺的詳細資訊，請參閱應用程式外掛程式。
+這些外殼工具允許您創建、 構建和運行 Windows Phone 應用程式。 額外的命令列介面，可以跨所有平臺的外掛程式功能的資訊，請參閱使用 Plugman 到管理外掛程式。 指導如何開發外掛程式和 Windows Phone 8 外掛程式特定于 Windows Phone 平臺的詳細資訊，請參閱應用程式外掛程式。
 
 ## 安裝 SDK
 

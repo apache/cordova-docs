@@ -1,11 +1,17 @@
 * * *
 
-Licencja: na licencji Apache Software Foundation (ASF) jedną lub więcej umów licencyjnych współautorów. Zobacz plik ogłoszenia rozpowszechniane z tej pracy, aby uzyskać dodatkowe informacje dotyczące własności praw autorskich. ASF licencje tego pliku do ci Apache License, w wersji 2.0 ("Licencja"); nie można używać tego pliku z wyjątkiem zgodnie z licencją. Możesz otrzymać kopię licencji na
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-           http://www.Apache.org/licenses/License-2.0 chyba że wymagane przez prawo lub uzgodnione na piśmie, oprogramowanie rozpowszechniane na licencji jest rozpowszechniany na "AS IS" podstawę, bez gwarancji lub warunków gwarancji jakiegokolwiek rodzaju, wyraźnych ani dorozumianych.  Zobacz licencji dla określonego języka, regulujących uprawnienia i ograniczenia
+           http://www.apache.org/licenses/LICENSE-2.0
+    
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
     
 
-## na licencji.
+## under the License.
 
 # Przewodnik bezpieczeństwa
 
@@ -32,6 +38,8 @@ Niniejszy Przewodnik obejmuje kilka zabezpieczeń najlepszych praktyk, które na
 *   Android w białej na Cordova 2.9.x jest uważany za bezpieczny, jednak okazało się, że jeśli foo.com jest zawarte w Białej listy, foo.com.evil.com będzie mógł przejść test białej listy. To był stały w Cordova 3.x.
 
 *   Białą domeny nie działa na Android API 10 i poniżej i WP8 dla ramek i XMLHttpRequest. Oznacza to, osoba atakująca może załadować dowolnej domeny w iframe i dowolny skrypt na tej stronie w iframe bezpośrednio dostęp do obiektów Cordova JavaScript i odpowiadających im obiektów Java native. Należy wziąć to pod uwagę podczas tworzenia aplikacji dla tych platform. W praktyce oznacza to, upewniając się, że cel Android API wyższe niż 10, i że jeśli to możliwe nie używasz iframe załadować zawartość zewnętrzna - inAppBrowser plugin lub inne pluginy trzeciej.
+
+*   Na Android, jak Cordova 3.6.0 to teraz niezbędne do białej listy adresów od aplikacji, jeśli aplikacja generuje linki do tych adresów URL. Jeśli użytkownik aplikacji generuje `tel:` , `geo:` , `sms:` , `intent:` lub podobne adresy URL, lub łącza do zawartości zewnętrznej, których można oczekiwać, aby otworzyć w przeglądarce użytkownika, a następnie trzeba będzie zaktualizować swoje Biała. Zobacz przewodnik Biała lista szczegóły.
 
 ## Ramek i mechanizmu zwrotnego Id
 

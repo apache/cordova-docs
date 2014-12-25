@@ -17,7 +17,7 @@ licenza: licenza uno o più contratti di licenza di collaboratore per l'Apache S
 
 Questa guida illustra come impostare il vostro ambiente di sviluppo SDK per distribuire Cordova apps per i dispositivi iOS come iPhone e iPad. Vedere la seguente per informazioni più dettagliate specifiche della piattaforma:
 
-*   iOS Configuration
+*   Configurazione iOS
 *   L'aggiornamento iOS
 *   iOS visualizzazioni Web
 *   iOS Plugins

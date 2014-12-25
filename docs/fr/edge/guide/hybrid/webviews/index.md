@@ -22,3 +22,4 @@ Pour déployer une WebView, vous devez être familier avec chaque environnement 
 *   Amazon Fire OS WebViews
 *   Android WebViews
 *   iOS WebViews
+*   Windows Phone 8,0 WebViews

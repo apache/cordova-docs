@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Android konfiguracji
+# Konfiguracja dla platformy Android
 
 `config.xml`Plik steruje aplikacji podstawowe ustawienia, które mają zastosowanie w każdej aplikacji i wystąpienie CordovaWebView. Ta sekcja zawiera szczegóły preferencje, które stosuje się tylko do Android buduje. Zobacz informacje w pliku config.xml na opcje konfiguracji globalnej.
 

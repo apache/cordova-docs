@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -32,11 +32,11 @@ Para obtener más información acerca de la Amazonía WebView API, consulte del 
  [1]: https://developer.amazon.com/public/solutions/platforms/android-fireos/docs/building-and-testing-your-hybrid-app
  [2]: http://forums.developer.amazon.com/forums/category.jspa?categoryID=41
 
-## Requerimientos y apoyo
+## Requisitos y apoyo
 
 Desarrollando aplicaciones Cordova para Amazon fuego OS requiere la instalación de una variedad de archivos de apoyo, incluyendo todo lo necesario para el desarrollo de Android, así como el Amazonas WebView SDK. Compruebe la lista de abajo para las instalaciones necesarias:
 
-*   La interfaz de línea de comandos
+*   La interfaz de linea de comandos
 *   [SDK de Android][3]
 *   [Apache Ant][4]
 *   [Amazon WebView SDK][1]
@@ -48,7 +48,7 @@ Desarrollando aplicaciones Cordova para Amazon fuego OS requiere la instalación
 
 ### El SDK de Android y Apache Ant
 
-Instalar el SDK de Android desde [developer.android.com/sdk][3]. De lo contrario usted puede presentarse con una selección de donde instalar el SDK, mueva el descargado `adt-bundle` árbol a dondequiera que usted almacenar herramientas de desarrollo.
+Instalar el SDK de Android desde [developer.android.com/sdk][3]. Puede presentarse con una elección de donde instalar el SDK, de lo contrario mover el árbol descargado `adt-bundle` a dondequiera que usted almacenar herramientas de desarrollo.
 
 Usted necesitará ejecutar el administrador de Android SDK ( `android` de línea de comandos) al menos una vez antes de comenzar su proyecto Cordova. Asegúrese de instalar la versión más reciente del Android SDK Tools y plataforma SDK **específicamente nivel API 19**. Consulte [configurar el entorno de desarrollo][5] de la Amazonía Developer Portal para obtener más información sobre cómo configurar su entorno de desarrollo para dispositivos Kindle fuego OS.
 
@@ -77,13 +77,13 @@ Esto expone SDK tools en windows terminales recién inauguradas. De lo contrario
 
 Para modificar el entorno PATH en Windows:
 
-*   Haga clic en el menú de **Inicio** en la esquina inferior izquierda del escritorio, haga clic en la **computadora**, luego haga clic en **Propiedades**.
+*   Haga clic en el menú de **Start** en la esquina inferior izquierda del escritorio, haga clic derecho en el **Computer**, haga clic en **Properties**.
 
-*   En la columna de la izquierda, haga clic en **Configuración avanzada del sistema** .
+*   En la columna de la izquierda, haga clic en **Configuración avanzada del sistema**.
 
-*   En el cuadro de diálogo resultante, pulse **Las Variables de entorno**.
+*   En el cuadro de diálogo resultante, presione **Environment Variables**.
 
-*   Seleccionar la variable **PATH** y pulse **Editar**.
+*   Seleccione la variable **PATH** y pulse **Editar**.
 
 *   Agregue lo siguiente a la ruta basada en donde se ha instalado el SDK de la hormiga, por ejemplo:
     
@@ -92,7 +92,7 @@ Para modificar el entorno PATH en Windows:
 
 *   El valor de guardar y cerrar ambos cuadros de diálogo.
 
-*   Usted también necesitará habilitar Java. Abra un símbolo del sistema y el tipo `java` , si no funciona, anexar su camino así como la ubicación de los binarios de Java. Asegúrese de que JAVA\_HOME % apunta al directorio JDK instalado. Tendrás que agregar separadamente variable de entorno JAVA\_HOME.
+*   Usted también necesitará habilitar Java. Abra un símbolo del sistema y el tipo `java` , si no funciona, anexar su camino así como la ubicación de los binarios de Java. Asegúrese de que JAVA_HOME % apunta al directorio JDK instalado. Tendrás que agregar separadamente variable de entorno JAVA_HOME.
     
         ; %JAVA_HOME%\bin
         
@@ -111,7 +111,7 @@ Para crear aplicaciones de Córdoba con el objetivo de la plataforma de Amazon f
 
 ## Crear nuevo proyecto para el Amazonas fuego OS
 
-Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en la Córdoba del interfaz de comandos. Por ejemplo, en un directorio del código fuente:
+Utilice la utilidad de `cordova` para configurar un nuevo proyecto, tal como se describe en el Cordova la línea de comandos de interfaz. Por ejemplo, en un directorio del código fuente:
 
     $ cordova create hello com.example.hello "HelloWorld"
     $ cd hello
@@ -121,18 +121,18 @@ Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en
 
 ***Nota:*** La primera vez que la plataforma amazon-fireos está instalada en su sistema, se descargará los archivos correspondientes en el directorio de trabajo de Córdoba, pero entonces fracasará como le faltan los archivos de soporte AWV SDK (véase arriba). Siga las instrucciones anteriores para instalar el `awv_interface.jar` , luego quitar y volver a agregar la plataforma amazon-fireos a su proyecto. Este paso sólo tendrá que hacerse para primer proyecto Amazonas fuego OS.
 
-## Implementar al dispositivo
+## Desplegar en el dispositivo
 
 Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][8]y utilice un cable mini-USB para conectarlo a su sistema.
 
  [8]: http://developer.android.com/tools/device.html
 
-Usted puede empujar la aplicación al dispositivo de la línea de comandos:
+Usted puede empujar la aplicación para el dispositivo de la línea de comandos:
 
     $ cordova ejecutar Amazonas-fireos
     
 
-Alternativamente dentro de Eclipse, haga clic derecho en el proyecto y elija **Ejecutar como → aplicación para Android**.
+Alternativamente dentro de Eclipse, haga clic derecho en el proyecto y elija **Run As → Android Application**.
 
 **Nota**: Actualmente, la prueba mediante un emulador no es compatible para Amazon WebView basados en aplicaciones, además la API WebView Amazon sólo está disponible en dispositivos fuego OS. Para obtener más información, consulte la documentación de [Amazon WebView API SDK][1] .
 
@@ -158,9 +158,9 @@ Puede utilizar el DevTools mediante un navegador basado en Chromium desplazándo
 
 Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para modificar el proyecto. Tenga cuidado que las modificaciones efectuadas a través de Eclipse se sobrescribirán si continúa utilizando herramientas de línea de comandos de Córdoba.
 
-*   Inicie la aplicación de **Eclipse** .
+*   Inicie la aplicación de **Eclipse**.
 
-*   Seleccione el elemento de menú **Nuevo proyecto** .
+*   Seleccione el elemento de menú **Nuevo proyecto**.
 
 *   Elija **Proyecto Android de código existente** en el cuadro de diálogo resultante y pulse **siguiente**: ![][9]
 
@@ -168,7 +168,7 @@ Una vez creado, puede utilizar el Eclipse que viene con el SDK de Android para m
 
 *   Eclipse le mostrará el Hola y Hola-CorddovaLib - 2 proyectos a agregarse. Añadir ambos.
 
-*   Pulse **Finalizar**.
+*   Pulse **Finish**.
 
  [9]: img/guide/platforms/android/eclipse_new_project.png
 
@@ -176,10 +176,10 @@ Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color roj
 
 *   Haga clic en el directorio del proyecto.
 
-*   En el cuadro de diálogo **Propiedades** resultante, seleccione **Android** desde el panel de navegación.
+*   En el cuadro de diálogo **Properties** resultante, seleccione **Android** desde el panel de navegación.
 
 *   Para el objetivo de construir proyecto, seleccione el nivel más alto de Android API (actualmente API nivel 19) instalado.
 
-*   Haga clic en **Aceptar**.
+*   Haga clic en **OK**.
 
-*   Seleccione el menú **proyecto** **limpio** . Esto debe corregir todos los errores en el proyecto.
+*   Seleccione **Clean** en el menú **Project**. Esto debería corregir todos los errores en el proyecto.

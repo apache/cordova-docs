@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -28,7 +28,7 @@ Los siguientes ejemplos demuestran sintaxis de lista blanca:
         <access origin="http://google.com" />
         
 
-*   Acceso a los seguros [google.com][3] ( `https://` ):
+*   Acceso a la segura [google.com][3] (`https://`):
     
         <access origin="https://google.com" />
         
@@ -69,7 +69,7 @@ Reglas específicas de la plataforma whitelisting se encuentran en`res/xml/confi
 
 **Nota**: para evitar direcciones URL externas tales como `mailto:` se abra en el webview de Córdoba a partir de Cordova 3.6.0, especificando `origin="*"` implícitamente agregará las reglas para los protocolos http y https. Si necesita acceso a protocolos personalizados adicionales, entonces debe también agregar los explícitamente a la lista blanca. Ver también "Whitelist aplicación externa" abajo para obtener más información sobre lanzamiento de aplicaciones externas de URL.
 
-**NOTA**: Algunas peticiones de red no pasan por el Cordova Whitelist. Esto incluye <video> y <audio> recursos, conexiones WebSocket (en Android 4.4 +) y posiblemente otras solicitudes no http. En Android 4.4 +, puede incluir un [CSP][8] Rúbrica en los documentos HTML para restringir el acceso a esos recursos. En versiones anteriores de Android, no puede ser posible restringirlos.
+**Nota**: algunas peticiones de red no pasan por el Cordova Whitelist. Esto incluye < video > y < audio > recursos, conexiones WebSocket (en Android 4.4 +) y posiblemente otras solicitudes no http. En Android 4.4 +, puede incluir un encabezado [CSP][8] en tus documentos HTML para restringir el acceso a esos recursos. En versiones anteriores de Android, no puede ser posible restringirlos.
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -111,7 +111,7 @@ Orígenes especificados sin un protocolo, tales como `www.apache.org` en lugar d
 
 Los comodines en la plataforma iOS son más flexibles que en la especificación del [W3C Widget de acceso][1] . Por ejemplo, los siguientes accesos todos los subdominios y dominios de primer nivel tales como `.com` y `.net` :
 
-        < accede origen = "*.google. *" / >
+        <access origin="*.google.*" />
     
 
 A diferencia de la plataforma Android mencionada, navegando por non-lista blanca dominios vía `href` hipervínculo en iOS evita que la página de apertura en todos.
@@ -124,17 +124,17 @@ Uso de blackBerry decenas de comodines difiere de otras plataformas de dos maner
 
 *   Acceder a cualquier contenido `XMLHttpRequest` debe declararse explícitamente. Configuración de `origin="*"` no funciona en este caso. Alternativamente, se puede desactivar toda seguridad web utilizando la `WebSecurity` preferencia se describe en configuración de BlackBerry:
     
-        < nombre de preferencia = "websecurity" value = "Deshabilitar" / >
+        <preference name="websecurity" value="disable" />
         
 
 *   Como alternativa al ajuste `*.domain` , establecer un adicional `subdomains` atribuyen a `true` . Se deben ajustar para que `false` por defecto. Por ejemplo, el siguiente permite el acceso a `google.com` , `maps.google.com` , y `docs.google.com` :
     
-        < accede origen = subdominios "http://google.com" = "true" / >
+        < accede origin="http://google.com" subdomains = "true" / >
         
     
     Angosto del siguiente acceso a `google.com` :
     
-        < accede origen = subdominios "http://google.com" = "false" / >
+        < accede origin="http://google.com" subdomains = "false" / >
         
     
     Especifica el acceso a todos los ámbitos, incluyendo el local `file://` Protocolo:

@@ -22,3 +22,4 @@ Per distribuire un WebView, è necessario avere familiarità con ogni ambiente d
 *   Amazon fuoco OS visualizzazioni Web
 *   Visualizzazioni Web Android
 *   iOS visualizzazioni Web
+*   Windows Phone visualizzazioni 8,0 Web

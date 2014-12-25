@@ -44,7 +44,7 @@ Rozwój Cordova aplikacje dla Amazon ognia systemu operacyjnego wymaga instalacj
  [3]: http://developer.android.com/sdk/
  [4]: http://ant.apache.org
 
-## Instalacji
+## Instalacja
 
 ### Android SDK i Apache Ant
 
@@ -92,7 +92,7 @@ Aby zmienić ścieżka środowisko naturalne w systemie Windows:
 
 *   Zapisz wartość i zamknij obu oknach dialogowych.
 
-*   Także trzeba będzie włączyć Java. Otworzyć pewien rozkazywać wierzyciel i typ `java` , jeśli to nie działa, Dołącz lokalizacji plików binarnych Java do Twojej ścieżki, jak również. Upewnij się, że JAVA\_HOME % jest skierowany do zainstalowanego katalogu JDK. Może trzeba dodać środowiska JAVA\_HOME zmienny osobno.
+*   Także trzeba będzie włączyć Java. Otworzyć pewien rozkazywać wierzyciel i typ `java` , jeśli to nie działa, Dołącz lokalizacji plików binarnych Java do Twojej ścieżki, jak również. Upewnij się, że JAVA_HOME % jest skierowany do zainstalowanego katalogu JDK. Może trzeba dodać środowiska JAVA_HOME zmienny osobno.
     
         ; %JAVA_HOME%\bin
         
@@ -121,7 +121,7 @@ Użycie `cordova` narzędzie, aby skonfigurować nowy projekt, opisanym w The Co
 
 ***Uwaga:*** Po raz pierwszy na platformie amazon-fireos jest zainstalowana w systemie, to pobierze odpowiednie pliki do katalogu roboczego Cordova, ale wtedy zakończy się niepowodzeniem, ponieważ brakuje plików pomocy AWV SDK (patrz wyżej). Postępuj zgodnie z instrukcjami powyżej, aby zainstalować `awv_interface.jar` , a następnie usunąć i dodać ponownie platformie amazon-fireos do projektu. Ten krok będzie tylko trzeba będzie zrobić pierwszy projekt Amazon ogień OS.
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB jest włączona w urządzeniu, zgodnie z opisem na [Android Developer witryny][8]i używać mini kabla USB do podłączenia go do systemu.
 

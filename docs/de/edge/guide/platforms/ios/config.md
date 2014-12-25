@@ -15,7 +15,9 @@ Lizenz: eine oder mehrere Mitwirkende/r Lizenzverträge an die Apache Software F
 
 # iOS Konfiguration
 
-Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. Finden Sie die Datei config.xml Datei Informationen auf globalen Konfigurations-Optionen.
+Die `config.xml` Datei steuert eine app-Grundeinstellungen, die für jede Anwendung und CordovaWebView Instanz gelten. Dieser Abschnitt beschreibt die Einstellungen, die nur auf iOS-Builds zu gelten. See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(Boolean, wird standardmäßig auf `false` ): Legen Sie auf `true` um ein Viewport Metatag entweder deaktivieren oder beschränken die Bandbreite der Benutzer zu skalieren, zu ermöglichen, die standardmäßig aktiviert ist.
     

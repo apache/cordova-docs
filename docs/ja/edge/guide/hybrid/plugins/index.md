@@ -134,8 +134,8 @@ JavaScript は、プラグインのおそらく最も重要な部分を作る正
 *   Android のプラグイン
 *   iOS のプラグイン
 *   ブラックベリー 10 プラグイン
-*   Windows Phone のプラグイン
-*   Windows 8 のプラグイン
+*   Windows Phone 8 プラグイン
+*   Windows のプラグイン
 
 Tizen プラットフォームのプラグインをサポートしていません。
 

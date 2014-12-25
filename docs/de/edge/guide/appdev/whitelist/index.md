@@ -69,7 +69,7 @@ Plattform-spezifische Whitelisting Regeln findet man in`res/xml/config.xml`.
 
 **Hinweis**: um zu verhindern, dass externe URLs wie `mailto:` in der Webview Cordova ab Cordova 3.6.0, öffnen angeben `origin="*"` wird implizit Regeln für http- und Https-Protokolle hinzufügen. Wenn Sie Zugriff auf zusätzliche benutzerdefinierte Protokolle benötigen, sollte dann Sie auch sie ausdrücklich auf die Whitelist hinzufügen. Auch "Externe Anwendung Whitelist" weiter unten finden Sie weitere Informationen zum Starten von externer Anwendungen durch URL.
 
-**HINWEIS**: Einige Netzwerkanfragen gehen nicht durch die Cordova Whitelist. Dazu gehören <video> und <audio> Resouces, WebSocket-Verbindungen (auf Android 4.4 +), und möglicherweise andere nicht-http-Anforderungen. Auf Android 4.4 +, können Sie eine [CSP][8] Header in Ihre HTML-Dokumente Zugriff auf diese Ressourcen einschränken. Unter älteren Versionen von Android kann es nicht möglich, sie zu beschränken sein.
+**Hinweis**: einige Netzwerkanfragen gehen nicht durch die Cordova Whitelist. Dazu gehören < Video > und < Audio > Resouces WebSocket-Verbindungen (auf Android 4.4 +) und eventuell mit anderen nicht-http-Anforderungen. Unter Android 4.4 + können Sie einen [CSP][8] -Header in Ihre HTML-Dokumente Zugriff auf diese Ressourcen beschränkt aufnehmen. Unter älteren Versionen von Android kann es nicht möglich, sie zu beschränken sein.
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -111,7 +111,7 @@ Herkunft angegeben ohne Protokoll, wie z. B. `www.apache.org` statt `http://www.
 
 Platzhalter auf der iOS-Plattform sind flexibler als in der Spezifikation des [W3C Widget Zugang][1] . Beispielsweise die folgenden greift auf alle Subdomains und Domänen der obersten Ebene wie `.com` und `.net` :
 
-        < zugreifen Ursprung = "*.google. *" / >
+        <access origin="*.google.*" />
     
 
 Im Gegensatz zu der Android-Plattform oben, navigieren zu nicht zugelassenen Domains über `href` Hyperlink auf iOS verhindert, dass die Seite überhaupt zu öffnen.
@@ -124,17 +124,17 @@ BlackBerry 10 Verwendung von Platzhaltern unterscheidet sich von anderen Plattfo
 
 *   Alle Inhalte erreichbar `XMLHttpRequest` müssen explizit deklariert werden. Festlegen von `origin="*"` funktioniert nicht in diesem Fall. Alternativ alle Web-Sicherheit kann deaktiviert werden mit der `WebSecurity` bevorzugt in der BlackBerry Configuration beschrieben:
     
-        < Einstellungsname = "Websecurity" Value = "disable" / >
+        <preference name="websecurity" value="disable" />
         
 
 *   Als Alternative zur Einstellung `*.domain` , legen Sie ein zusätzliches `subdomains` -Attribut auf `true` . Es sollte festgelegt werden, um `false` standardmäßig. Beispielsweise Folgendes ermöglicht den Zugriff auf `google.com` , `maps.google.com` , und `docs.google.com` :
     
-        < zugreifen Ursprung = "http://google.com" Sub-Domains = "true" / >
+        <access origin="http://google.com" subdomains="true" />
         
     
     Die folgenden Narrows Zugang zu `google.com` :
     
-        < zugreifen Ursprung = "http://google.com" Sub-Domains = "false" / >
+        <access origin="http://google.com" subdomains="false" />
         
     
     Geben Sie Zugriff auf alle Domänen, einschließlich der lokales `file://` Protokoll:

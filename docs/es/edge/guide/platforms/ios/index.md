@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -27,9 +27,9 @@ Las herramientas de línea de comandos anteriores se refieren a las versiones an
 
 ## Requisitos y apoyo
 
-Apple ® herramientas necesarias para crear aplicaciones iOS ejecutar sólo en el sistema operativo OS X de Mac basados en Intel. Xcode ® 4.5 (la versión mínima requerida) se ejecuta en OS X versión 10.7 (Lion) o mayor e incluye el iOS 6 SDK (Software Development Kit). Presentar aplicaciones para el Apple App Store℠ requiere las últimas versiones de las herramientas de Apple.
+Apple ® herramientas necesarias para crear aplicaciones de iOS ejecutar sólo en el sistema operativo OS X Macs basados en Intel. Xcode ® 4.5 (la versión mínima requerida) se ejecuta sólo en OS X versión 10.7 (Lion) o mayor e incluye el iOS 6 SDK (Software Development Kit). Presentar aplicaciones para el Apple App Store℠ requiere las últimas versiones de las herramientas de Apple.
 
-Usted puede probar muchas de las características de Cordova usando el emulador de iOS instalado con el iOS SDK y Xcode, pero necesita un dispositivo real a completamente todas las características de la aplicación dispositivo de prueba antes de presentar a la App Store. El dispositivo debe tener por lo menos iOS 5.x instalado, la versión de iOS mínimo apoyado desde Cordova 2.3. Dispositivos de apoyo incluyen todos iPad ® modelos, iPhone ® 3GS y arriba y iPod ® Touch de 3ª generación o posterior. Para instalar aplicaciones en un dispositivo, también debe ser un miembro de Apple [iOS Developer Program][1], que cuesta $99 por año. Esta guía le muestra cómo implementar aplicaciones para el emulador de iOS, para lo cual no tienes que registrar con el programa para desarrolladores.
+Muchas de las características de Cordova usando el emulador de iOS instalado con el iOS SDK y Xcode puede probar, pero necesitas un dispositivo real para completamente todas las características de la aplicación dispositivo de prueba antes de presentar a la App Store. El dispositivo debe tener por lo menos iOS 5.x instalado, la versión de iOS mínimo apoyado desde 2.3 Cordova. Dispositivos de apoyo incluyen todos iPad ® modelos, iPhone ® 3GS y anteriores y iPod ® Touch de 3ª generación o posterior. Para instalar aplicaciones en un dispositivo, también debe ser un miembro de Apple [iOS Developer Program][1], que cuesta $99 por año. Esta guía le muestra cómo implementar aplicaciones para el emulador de iOS, para lo cual no debes registrarte con el programa de desarrolladores.
 
  [1]: https://developer.apple.com/programs/ios/
 
@@ -37,14 +37,14 @@ Usted puede probar muchas de las características de Cordova usando el emulador 
 
 Hay dos maneras de descargar Xcode:
 
-*   desde la [App Store][2], disponible mediante la búsqueda de "Xcode" en la aplicación de **La App Store** .
+*   desde la [App Store][2], disponible mediante la búsqueda de "Xcode" en la aplicación de **La App Store**.
 
 *   de [Descargas de desarrollador de Apple][3], que requiere el registro como desarrollador de Apple.
 
  [2]: https://itunes.apple.com/us/app/xcode/id497799835?mt=12
  [3]: https://developer.apple.com/downloads/index.action
 
-Una vez instalado Xcode, varias herramientas de línea de comandos necesitan estar habilitada para que Córdoba ejecutar. En el menú de **Xcode** , seleccione **preferencias**y luego la pestaña **descargas** . Desde el panel **componentes** , pulse el botón **instalar** junto a la lista de **Herramientas de línea de comandos** .
+Una vez instalado Xcode, necesitan varias herramientas de línea de comandos debe estar habilitada para que Cordova ejecutar. En el menú de **Xcode**, seleccione **preferencias** y luego en la pestaña de **descargas**. Desde el panel **componentes**, pulse el botón **instalar** junto a la lista de **Herramientas de línea de comandos**.
 
 ## Abrir un proyecto en el SDK
 
@@ -56,7 +56,7 @@ Uso el `cordova` utilidad para configurar un nuevo proyecto, como se describe en
         $ cordova prepare              # or "cordova build"
     
 
-Una vez creado, puede abrir desde dentro de Xcode. Haga doble clic para abrir el `hello/platforms/ios/hello.xcodeproj` archivo. La pantalla debe verse así:
+Una vez creado, puede abrir desde dentro de Xcode. Haga doble clic para abrir el archivo `hello/platforms/ios/hello.xcodeproj`. La pantalla debería parecerse a esto:
 
 ![][4]
 
@@ -83,11 +83,11 @@ Para previsualizar la aplicación en el emulador de iOS:
  [5]: img/guide/platforms/ios/select_xcode_scheme.png
  [6]: img/guide/platforms/ios/HelloWorldStandard.png
 
-Xcode viene liado con emuladores para las últimas versiones de iPhone y iPad. Las versiones más antiguas pueden estar disponibles en el **Xcode → preferencias → descargas → componentes** panel.
+Xcode viene liado con emuladores para las últimas versiones de iPhone y iPad. Las versiones más antiguas pueden estar disponibles en el **Xcode → Preferences → Downloads → Components** panel.
 
 ## Desplegar en el dispositivo
 
-Para obtener más información acerca de varios requisitos para implementar en un dispositivo, consulte la sección *configuración de desarrollo y distribución de activos* de [Herramientas de flujo de trabajo guía para iOS][7]de Apple. Brevemente, necesitas hacer lo siguiente antes de implementar:
+Para obtener más información acerca de varios requisitos para implementar un dispositivo, consulte la sección *configuración de desarrollo y distribución de activos* de la [Guía de herramientas de flujo de trabajo para iOS][7] de Apple. Brevemente, tienes que hacer lo siguiente antes de implementar:
 
  [7]: http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/00-About_the_iOS_Application_Development_Workflow/introduction.html#//apple_ref/doc/uid/TP40007959
 
@@ -99,7 +99,7 @@ Para obtener más información acerca de varios requisitos para implementar en u
 
  [8]: https://developer.apple.com/ios/manage/overview/index.action
 
-Para desplegar en el dispositivo:
+Para desplegar el dispositivo:
 
 1.  Utilice el cable USB para enchufar el dispositivo en tu Mac.
 
@@ -111,11 +111,11 @@ Para desplegar en el dispositivo:
 
 ## Problemas comunes
 
-**Descarte las advertencias**: cuando una aplicación es modificada o sustituida por otra API interfaz de programación (API), que está marcado como *obsoleto*. La API todavía funciona en el corto plazo, pero eventualmente se retira. Algunas de estas interfaces obsoletas se reflejan en Apache Cordova y Xcode emite advertencias sobre ellos cuando construir y desplegar una aplicación.
+**Descarte las advertencias**: cuando una aplicación es modificada o sustituida por otra API interfaz de programación (API), que está marcado como *obsoleto*. La API aún trabaja en el corto plazo, pero eventualmente se quita. Algunas de estas interfaces obsoletas se reflejan en Apache Cordova y Xcode emite advertencias sobre ellos cuando construir y desplegar una aplicación.
 
-Xcode de la advertencia sobre el `invokeString` método refiere a una funcionalidad que lanza una app desde una dirección URL personalizada. Mientras que el mecanismo para cargar desde una dirección URL personalizada ha cambiado, este código todavía está presente para proporcionar la funcionalidad al revés para aplicaciones creadas con versiones anteriores de Córdoba. La aplicación muestra no utiliza esta funcionalidad, así que estas advertencias pueden ser ignoradas. Para evitar que aparezcan estas advertencias, quitar el código que hace referencia a la invokeString obsoleta API:
+ADVERTENCIA de Xcode sobre el método `invokeString` refiere a funcionalidad que lanza una app desde una dirección URL personalizada. Mientras que el mecanismo para cargar desde una dirección URL personalizada ha cambiado, este código es todavía presente para proporcionar la funcionalidad al revés para aplicaciones creadas con versiones anteriores de Córdoba. La aplicación de muestra no utiliza esta funcionalidad, así que estas advertencias pueden ser ignoradas. Para evitar estas advertencias aparezcan, quitar el código que hace referencia a la invokeString deprecated API:
 
-*   Edite el archivo *Classes/MainViewController.m* , rodean el siguiente bloque de código con `/*` y `*/` comentarios como se muestra a continuación, escriba el **comando + s** para guardar el archivo:
+*   Editar el archivo *Classes/MainViewController.m*, rodean el siguiente bloque de código con `/ *` y `* /` comentarios como se muestra a continuación, escriba el **Comando-s** para guardar el archivo:
     
         (void)webViewDidFinishLoad:(UIWebView*)theWebView
         {
@@ -135,16 +135,16 @@ Xcode de la advertencia sobre el `invokeString` método refiere a una funcionali
         }
         
 
-*   Edite el archivo *Classes/AppViewDelegate.m* , comentar la siguiente línea insertando una doble barra como se muestra abajo, a continuación, escriba el **comando + s** para guardar el archivo:
+*   Editar el archivo *Classes/AppViewDelegate.m*, comentar la siguiente línea insertando una doble barra como se muestra abajo, a continuación, escriba el **comando + s** para guardar el archivo:
     
         //self.viewController.invokeString = invokeString;
         
 
-*   Pulse **comando + b** para reconstruir el proyecto y eliminar las advertencias.
+*   Pulsar **comando + b** para reconstruir el proyecto y eliminar las advertencias.
 
 <!-- Does this fix only last until the next "cordova prepare"? -->
 
-**Faltan encabezados**: errores de compilación relativos a cabeceras de faltantes el resultado de problemas con la ubicación de construir y puede estar fijados mediante Xcode preferencias:
+**Faltan encabezados**: errores de compilación relativos a cabeceras de faltantes el resultado de problemas con la ubicación de la construcción y puede ser fijados mediante Xcode preferencias:
 
 1.  Seleccione **Xcode → preferencias → ubicaciones de**.
 
@@ -154,21 +154,21 @@ Xcode de la advertencia sobre el `invokeString` método refiere a una funcionali
 
  [9]: img/guide/platforms/ios/xcode_build_location.png
 
-Esta es la configuración predeterminada para una instalación nueva de Xcode, pero se puede ajustar diferentemente después de una actualización de una versión anterior de Xcode.
+Esta es la configuración predeterminada para una instalación nueva de Xcode, pero se puede ajustar diferentemente siguiendo una actualización desde una versión anterior de Xcode.
 
 Para más información, consulte la documentación de Apple:
 
-*   [IOS empezar a desarrollar aplicaciones hoy][10] proporciona una rápida visión de los pasos para el desarrollo de aplicaciones iOS.
+*   [IOS de empezar a desarrollar aplicaciones hoy][10] proporciona un rápido Resumen de pasos para el desarrollo de iOS Apps.
 
-*   [Miembro del centro página][11] proporciona enlaces a varios iOS recursos técnicos incluyendo recursos técnicos, el portal de aprovisionamiento, guías de distribución y foros de la comunidad.
+*   [Miembro del centro Página][11] proporciona enlaces a varios iOS recursos técnicos incluyendo recursos técnicos, el portal provisioning, guías de distribución y foros de la comunidad.
 
-*   [Herramientas de flujo de trabajo guía para iOS][7]
+*   [Guía de herramientas de flujo de trabajo para iOS][7]
 
-*   [Xcode 4 Guía del usuario][12]
+*   [Guía de usuario de Xcode 4][12]
 
-*   [Videos de sesiones][13] de la Conferencia de desarrolladores amplia manzana mundial 2012 (WWDC2012)
+*   [Videos de sesiones][13] de la Apple World Wide Developer Conference 2012 (WWDC2012)
 
-*   Se instala el [comando selección de xcode][14], que ayuda a especificar la versión correcta de Xcode si más de uno.
+*   El [comando select-xcode][14], que ayuda a especificar la versión correcta de Xcode si más de uno está instalado.
 
  [10]: http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343
  [11]: https://developer.apple.com/membercenter/index.action

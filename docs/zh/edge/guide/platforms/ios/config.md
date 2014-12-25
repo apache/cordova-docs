@@ -15,7 +15,9 @@
 
 # iOS 配置
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 iOS 版本的首選項。 See [The config.xml File][1] for information on global configuration options.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `EnableViewportScale`(boolean 類型的值，預設值為 `false` ）： 設置為 `true` ，以便視區元標記來禁用或限制的範圍的使用者比例，這預設啟用的。
     

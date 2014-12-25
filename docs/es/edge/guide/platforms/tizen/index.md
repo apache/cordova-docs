@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -65,7 +65,7 @@ Descargar el SDK de Tizen de [tizen.org][1].
 
 4.  Asegúrese de **que seleccionar el directorio raíz** está activada.
 
-5.  Asegúrese de **que copiar proyectos en espacio de trabajo** está activada.
+5.  Asegúrese de **que copiar proyectos en el área de trabajo** está marcada.
 
 6.  Pulse en **Browse** y seleccione el directorio del proyecto Cordova Tizen `samples` (por ejemplo `/ cordova-basic`):
     
@@ -99,7 +99,7 @@ Haga clic derecho en el proyecto en la vista **Project Explorer** y seleccione *
 
 *   Asegúrese de que el dispositivo de destino correctamente es lanzado, conectado y configurado. Su configuración de **fecha y hora** debe configurarse correctamente.
 
-*   Utilizar la vista **Explorador de conexión** para seleccionar el objetivo del despliegue de aplicación: **ventana → Mostrar vista → conexión Explorer**.
+*   Utilice la vista **Connection Explorer** para seleccionar el objetivo del despliegue de aplicaciones: **Window → Show View → Connection Explorer**.
     
     ![][7]
 

@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -87,7 +87,7 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
         Guía de privacidad
       </h2>
       
-      <span>Aprende acerca de las incidencias de privacidad más importantes del mundo mobile .</span>
+      <span>Aprenda sobre cuestiones de privacidad móvil importantes.</span>
     </li>
     <li>
       <h2>
@@ -98,17 +98,17 @@ licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licenc
     </li>
     <li>
       <h2>
-        Guía de lista blanca
+        Guía Whitelist
       </h2>
       
-      <span>Conceder una solicitud acceso a recursos externos.</span>
+      <span>Permite a la aplicaciones acceder a recursos externos.</span>
     </li>
     <li>
       <h2>
-        Almacenamiento de información
+        Almacenamiento
       </h2>
       
-      <span>Un Resumen de las opciones de almacenamiento nativo.</span>
+      <span>Una perspectiva de las opciones de almacenamiento nativas.</span>
     </li>
     <li>
       <h2>

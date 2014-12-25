@@ -134,8 +134,8 @@ Wenn Sie JavaScript für Ihr Plugin definieren, müssen Sie es mit mindestens ei
 *   Android Plugins
 *   iOS Plugins
 *   BlackBerry 10 Plugins
-*   Windows Phone Plugins
-*   Windows 8-Plugins
+*   Windows Phone 8 Plugins
+*   Windows Plugins
 
 Tizen-Plattform unterstützt keine Plugins.
 

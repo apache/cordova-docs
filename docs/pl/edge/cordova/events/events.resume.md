@@ -28,9 +28,9 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   iOS
 *   Windows Phone 8
 *   Windows 8
@@ -44,7 +44,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE html>
     <html>
@@ -78,7 +78,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     </html>
     
 
-## iOS dziwactwa
+## Dziwactwa iOS
 
 Wszelkie interaktywne funkcje wywoływane z `pause` obsługi zdarzeń wykonać później podczas wznawiania działania aplikacji, jak sygnalizowane przez `resume` zdarzenie. Należą do nich alerty, `console.log()` i wszelkie rozmowy z wtyczki lub Cordova API, które przechodzą przez Objective-C.
 

@@ -29,20 +29,20 @@ Aby dodać obsługę lub przebudować projekt dla którejkolwiek z platform, trz
 *   Android (Mac, Linux, Windows)
 *   Jeżyna 10 (Mac, Linux, Windows)
 *   Windows Phone 8 (Windows)
-*   Windows 8 (Windows)
+*   Systemu Windows (Windows)
 *   Firefox OS (Mac, Linux, Windows)
 
-Na komputerze Mac wiersza polecenia jest dostępne za pośrednictwem aplikacji *terminala* . Na komputerze jest on dostępny jako *polecenia* w *akcesoria*.
+Na komputerach Mac wiersz poleceń jest dostępny za pośrednictwem aplikacji *Terminal*. Na komputerach PC jest dostępny jako *Wiersz poleceń*, znajdujący się on w *Akcesoriach*.
 
-**Uwaga**: dla platformy tylko w systemie Windows, można jeszcze zrobić swój rozwój na sprzęcie Mac przez w środowisku wirtualnej lub w trybie podwójnego rozruchu z systemem Windows. Dla dostępnych opcji zobacz przewodnik platformy Windows Phone lub podręczniku platformy Windows 8.
+**Uwaga**: dla platformy tylko w systemie Windows, można jeszcze zrobić swój rozwój na sprzęcie Mac przez w środowisku wirtualnej lub w trybie podwójnego rozruchu z systemem Windows. Dla dostępnych opcji zobacz przewodnik platformy Windows Phone 8 lub przewodnik platformy Windows.
 
-Bardziej prawdopodobne jest to, aby uruchomić CLI z różnych maszyn, bardziej sensowne jest do utrzymania źródła zdalnego repozytorium kodu, którego aktywa można ciągnąć w dół do lokalnych katalogów roboczych.
+Bardziej prawdopodobne jest to, że będziesz uruchamiał CLI na różnych maszynach, wtedy bardziej sensowne jest trzymanie kodu źródłowego w zdalnym repozytorium, które będzie można ściągnąć do lokalnych katalogów roboczych.
 
 ## Instalacja w consoli Cordova
 
 Narzędzie wiersza polecenia Cordova jest dystrybuowany w postaci pakietu npm w formacie gotowy wobec używać. Nie jest konieczne skompilować go ze źródeł.
 
-Aby zainstalować `cordova` wiersza polecenia narzędzia, wykonaj następujące kroki:
+Aby zainstalować narzędzia wiersza poleceń projektu `cordova`, wykonaj następujące kroki:
 
 1.  Pobierz i zainstaluj [Node.js][1]. Po instalacji, powinny być w stanie powołać `node` i `npm` na linii poleceń. W razie potrzeby, opcjonalnie może użyć narzędzia takie jak `nvm` lub `nave` do zarządzania Node.js instalacji.
 
@@ -77,27 +77,27 @@ Aby zainstalować `cordova` wiersza polecenia narzędzia, wykonaj następujące 
 
 ## Tworzenie aplikacji
 
-Przejdź do katalogu, gdzie utrzymanie twój kod źródłowe i uruchom polecenie, takie jak następujące:
+Przejdź do katalogu, gdzie utrzymujesz swój kod źródłowy i wywołaj poniższe polecenie:
 
         $ cordova create hello com.example.hello HelloWorld
     
 
 Może to zająć trochę czasu dla polecenia do wykonania, więc uzbroić się w cierpliwość. Uruchomienie polecenia z `-d` opcja wyświetla informacje o postępach.
 
-Pierwszy argument *Witam* określa katalog został wygenerowany dla projektu. Katalog ten nie powinien już istnieć, Cordova go utworzy. Jego `www` podkatalogu domy Strona aplikacji, wraz z różnych zasobów pod `css` , `js` , i `img` , który po wspólnej sieci web rozwoju konwencje nazewnictwa plików. Aktywa te będą przechowywane na lokalnym systemie plików urządzenia, nie był zdalnie. `config.xml`Plik zawiera ważne metadane potrzebne do tworzenia i rozpowszechniania aplikacji.
+Pierwszy argument *Witam* określa katalog został wygenerowany dla projektu. Katalog ten nie powinien już istnieć, Cordova go utworzy. Podkatalog `www` przetrzymuje stronę domową aplikacji, wraz z różnymi zasobami znajdującymi się w `css`, `js`, oraz `img`, które przestrzegają konwencję nazw plików dla tworzenia stron internetowych. Aktywa te będą przechowywane na lokalnym systemie plików urządzenia, nie był zdalnie. Plik `config.xml` zawiera istotne metadane potrzebne do tworzenia i dystrybucji aplikacji.
 
 Drugi argument `com.example.hello` zapewnia identyfikator odwrotnej domeny styl twojego projektu. Ten argument jest opcjonalny, ale tylko wtedy, gdy również pominięto trzeci argument, ponieważ argumenty pozycyjne. Możesz edytować tę wartość później w `config.xml` pliku, ale należy pamiętać, że może być kod generowany poza `config.xml` za pomocą tej wartości, takich jak nazwy pakietu Java. Wartością domyślną jest `io.cordova.hellocordova` , ale zaleca się, że można wybrać odpowiednią wartość.
 
 Trzeci argument `HelloWorld` zawiera tytuł wyświetlania aplikacji. Ten argument jest opcjonalny. Możesz edytować tę wartość później w `config.xml` pliku, ale należy pamiętać, że może być kod generowany poza `config.xml` za pomocą tej wartości, takich jak nazwy klas Java. Wartością domyślną jest `HelloCordova` , ale zaleca się, że można wybrać odpowiednią wartość.
 
-## Dodać platformy
+## Dodawanie platformy
 
-Wszystkie kolejne polecenia muszą być uruchamiane w ramach projektu katalogu lub podkatalogami swoim zakresem:
+Wszystkie kolejne polecenia muszą być uruchamiane w katalogu projektu lub w odpowiednich podkatalogach:
 
         $ cd hello
     
 
-Przed dokonaniem kompilacji projektu, należy określić zestaw platform docelowych. Możliwość uruchomienia polecenia zależy od tego, czy komputer obsługuje każdego zestawu SDK, i czy masz już zainstalowany każdego zestawu SDK. Uruchomić wszelki od tych z komputerem Mac:
+Zanim zbudujesz projekt, musisz określić docelowe platformy. Możliwość uruchomienia tych poleceń zależy od tego czy Twój komputer wspiera dany zestaw SDK oraz czy jest on zainstalowany. Uruchom jedno z nich na komputerze Mac:
 
         $ cordova platform add ios
         $ cordova platform add amazon-fireos
@@ -106,24 +106,19 @@ Przed dokonaniem kompilacji projektu, należy określić zestaw platform docelow
         $ cordova platform add firefoxos
     
 
-Uruchomić wszelki od tych z pewien Windows maszyna, gdzie *wp* odnosi się do różnych wersji systemu operacyjnego Windows Phone:
+Uruchom jedno z nich na komputerze z Windows, *wp* odnosi się do różnych wersji systemu operacyjnego Windows Phone:
 
-        $ cordova platform add wp8
-        $ cordova platform add windows8
-        $ cordova platform add amazon-fireos
-        $ cordova platform add android
-        $ cordova platform add blackberry10
-        $ cordova platform add firefoxos
+        dodać platformy cordova $ wp8 $ cordova platformy windows $ cordova platformy dodać dodać dodać Amazonka fireos $ cordova platformy android $ cordova platformy dodać blackberry10 $ cordova platformy dodać firefoxos
     
 
-Biegać ten wobec sprawdzanie twój bieżący zestaw platform:
+Aby sprawdzić aktualny zestaw platform uruchom:
 
         $ cordova platforms ls
     
 
-(Uwaga `platform` i `platforms` są synonimem polecenia.)
+(Zauważ, że polecenia `platform` i `platforms` są tożsame.)
 
-Jedno z następujących poleceń synonimem usunąć platformę uruchamiania:
+Uruchom jedno z tożsamych poleceń aby usunąć platformę:
 
         $ cordova platform remove blackberry10
         $ cordova platform rm amazon-fireos
@@ -138,7 +133,7 @@ Jeśli chcesz w tym momencie, można użyć SDK Xcode np Eclipse aby otworzyć p
 
 Czytaj dalej, jeśli chcesz korzystać z podejścia przekreślać platforma pracy (CLI) dla rozwoju całego cyklu.
 
-## Tworzenie aplikacji
+## Budowanie aplikacji
 
 Domyślnie `cordova create` skrypt generuje szkieletowych aplikacji opartych na sieci web, których strona jest projektem `www/index.html` pliku. Edycja tej aplikacji, jednak chcesz, ale wszelkie inicjowania powinien być określony jako część `deviceready` obsługi zdarzeń, odwołuje się domyślnie z`www/js/index.js`.
 

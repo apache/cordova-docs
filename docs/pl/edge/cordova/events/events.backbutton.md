@@ -26,9 +26,9 @@ Aby zastąpić domyślne zachowanie przycisku wstecz, zarejestrować detektor zd
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 *   Windows Phone 8
 
 ## Szybki przykład
@@ -40,7 +40,7 @@ Aby zastąpić domyślne zachowanie przycisku wstecz, zarejestrować detektor zd
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE html>
     <html>

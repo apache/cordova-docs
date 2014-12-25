@@ -80,7 +80,7 @@ Tworzy aplikację w `hello` katalogu, którego nazwa wyświetlana jest `HelloWor
     $ cordova build ubuntu
     
 
-### Uruchom aplikację
+### Uruchamianie aplikacji
 
     $ cordova run ubuntu
     

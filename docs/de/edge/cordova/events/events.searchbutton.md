@@ -20,7 +20,7 @@ Das Ereignis wird ausgelöst, wenn der Benutzer die Schaltfläche Suchen auf And
     document.addEventListener("searchbutton", yourCallbackFunction, false);
     
 
-## Informationen
+## Details
 
 Wenn Sie das Standardverhalten für die Schaltfläche von Suche auf Android überschreiben möchten können Sie einen Ereignis-Listener für das Ereignis 'Searchbutton' registrieren.
 
@@ -30,7 +30,7 @@ Anwendungen sollten in der Regel verwenden `document.addEventListener` einmal ei
 
 *   Android
 
-## Kleines Beispiel
+## Kurzes Beispiel
 
     document.addEventListener("searchbutton", onSearchKeyDown, false);
     

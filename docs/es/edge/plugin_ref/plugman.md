@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -56,15 +56,15 @@ Una vez que has instalado Plugman y creado un proyecto Cordova, puedes comenzar 
 
 Usando una mínima cantidad de parámetros, este comando instala un plugin en un proyecto Cordova. Debes especificar una plataforma y la ubicación de un proyecto Cordova para dicha plataforma. Además, debes especificar un plugin con las diferentes formas del parámetro `--plugin` , las mismas son:
 
-*   `name`: El nombre del directorio donde existen los contenidos del plugin. Esto debe ser un directorio existente bajo el `--plugins_dir` camino (véase abajo para más información) o un plugin en el registro de Córdoba.
-*   `url`: A partir de https:// o git una URL: / /, apuntando a un repositorio git válida que es clonable y contiene un `plugin.xml` archivo. El contenido de este repositorio se copiarán en la`--plugins_dir`.
-*   `path`: Un camino hacia un directorio que contenga un plugin válido que incluye un `plugin.xml` archivo. Contenido de este sendero se copiará en el`--plugins_dir`.
+*   `name`: El nombre del directorio en dnde reside el plugin. Este debe ser un directorio dentro del path `--plugins_dir` (ve más abajo por más información) o un plugin del Cordova registry.
+*   `url`: Una URL que comience https:// o git://, y apunte a un repositorio git válido que es clonable y contenga el archivo `plugin.xml`. Los contenidos de este repositorio serán copiados a `--plugins_dir`.
+*   `path`: Una ruta a un directorio que contenga un plugin válido el cual incluya el archivo `plugin.xml`. El contenido de esta ruta será copiada a `--plugins_dir`.
 
 Otro parámetros:
 
-*   `--plugins_dir`por defecto es `<project>/cordova/plugins` , pero puede ser cualquier directorio que contiene un subdirectorio para cada uno trajo plugin.
-*   `--www`los valores predeterminados del proyecto de `www` Ubicación de la carpeta, pero puede ser cualquier directorio que se va a utilizar como activos cordova proyecto aplicación web.
-*   `--variable`permite para especificar ciertas variables en el tiempo de instalación, necesario para ciertos plugins que requieren claves API u otros parámetros personalizados, definida por el usuario. Por favor, vea la [Especificación plugin][4] para obtener más información.
+*   `--plugins_dir` cuyo valor por defecto es `<project>/cordova/plugins`, pero puede ser cualquier directorio que contenga un subdirectorio por cada plugin.
+*   `--www` cuyo valor por defecto es la ruta de la carpeta `www`, pero puede ser cualquier directorio del proyecto Cordova que es utilizado como para los assets de la aplicación web.
+*   `--variable` permite especificar ciertas variables en el momento de la instalación, necesario para aquellos plugins que requieras una key del API u otros parámetros personalizados por el usuario. Por favor, vea la [Especificación plugin][4] para obtener más información.
 
  [4]: plugin_ref_spec.md.html#Plugin%20Specification
 
@@ -126,9 +126,9 @@ Puedes obtener información acerca de cualquier plugin que se encuentre almacena
 
 Esto contactará al registro de plugins y obtendrá información como la versión del plugin.
 
-## Instalando Core Plugins
+## Instalación de Plugins de núcleo
 
-Los ejemplos descritos más abajo muestran como agregar plugins según se necesite, de modo que cualquier proyecto Cordova que utilize la API superior a la versión 3.0 siga funcionando. Por cada comando, necesitas seleccionar la plataforma destino, y referencias el directorio del proyecto.
+Los ejemplos siguientes muestran cómo agregar plugins según sea necesario para que cualquier APIs Cordova utilizas en tu proyecto todavía funcionan después de actualizar a la versión 3.0. Para cada comando, debes seleccionar la plataforma de destino y directorio del proyecto de la plataforma de referencia.
 
 *   cordova-plugin-battery-status
     

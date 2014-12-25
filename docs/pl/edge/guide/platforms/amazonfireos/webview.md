@@ -19,7 +19,7 @@ Począwszy od 3.3.0, można użyć Cordova jako składnika w aplikacji Amazon og
 
 Jeśli jesteś zaznajomiony z Amazon ogień OS, najpierw należy zapoznać się z Amazon ogień OS platformy przewodnik i najnowsze SDK zainstalowany zanim spróbujesz opcji rozwoju bardziej nietypowe osadzanie widoku sieci Web.
 
-## Warunki wstępne
+## Wymagania
 
 *   Cordova 3.3.0 lub większa
 

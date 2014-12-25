@@ -1,6 +1,6 @@
 * * *
 
-licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -55,7 +55,7 @@ El conjunto tradicional de núcleo Cordova plugins son como sigue:
     
     > Notificaciones de dispositivo visual.
 
-*   [Sistema de archivos][10]
+*   [FileSystem][10]
     
     > Enganche en el sistema de archivo nativo a través de JavaScript.
 
@@ -110,7 +110,7 @@ El conjunto tradicional de núcleo Cordova plugins son como sigue:
  [10]: http://plugins.cordova.io/#/package/org.apache.cordova.file
  [11]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
  [12]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
- [13]: http://plugins.cordova.io/#/package/org.apache.globalization
+ [13]: http://plugins.cordova.io/#/package/org.apache.cordova.globalization
  [14]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
  [15]: http://plugins.cordova.io/#/package/org.apache.cordova.media
  [16]: http://plugins.cordova.io/#/package/org.apache.cordova.media-capture

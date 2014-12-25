@@ -179,7 +179,7 @@ Aby otworzyć ten emulator jako oddzielną aplikację, wybierz AVD i naciśnij *
 
  [12]: img/guide/platforms/android/asdk_emulator.png
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
@@ -247,7 +247,7 @@ Po pobraniu uruchomić instalator Intel, który jest dostępny w twój Android S
 
 4.  Podczas uruchamiania emulatora, upewnij się, nie są bez komunikatów o błędach, wskazując błąd ładowania modułów HAX.
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Push aplikacja bezpośrednio do urządzenia, upewnij się, że debugowanie USB jest włączona w urządzeniu, zgodnie z opisem na [Android Developer witryny][20]i używać mini kabla USB do podłączenia go do systemu.
 

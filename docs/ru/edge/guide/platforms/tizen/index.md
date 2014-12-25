@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -13,7 +13,7 @@
 
 ## under the License.
 
-# Руководство по Tizen платформы
+# Руководство для платформы Tizen
 
 В этом руководстве описывается, как настроить среду разработки SDK для развертывания приложений Cordova для устройств под управлением операционной системы Tizen.
 
@@ -87,7 +87,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
 В корневом каталоге проекта должен создать файл пакета виджета, например *hello.wgt* .
 
-## Развертывание в эмулятор
+## Развертывание на эмулятор
 
 Щелкните правой кнопкой мыши проект в представлении **Project Explorer** и выберите **Запуск как → Tizen симулятор веб-приложения**:
 
@@ -95,7 +95,7 @@ Tizen SDK требует Linux Ubuntu 10.04/10.10/11.04/11.10 (32-бит) или
 
  [6]: img/guide/platforms/tizen/runas_web_sim_app.png
 
-## Развернуть устройстве
+## Развертывание на устройство
 
 *   Убедитесь, что целевое устройство должным образом начали, подключено и настроено. Необходимо правильно задать его параметры **даты и времени** .
 

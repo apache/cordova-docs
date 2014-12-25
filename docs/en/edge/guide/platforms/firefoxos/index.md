@@ -50,34 +50,23 @@ At this point you are ready to go — change the code inside test-app/www to wha
 	cordova plugin add org.apache.cordova.device
 	cordova plugin add org.apache.cordova.vibration
 
-You also need to add a custom manifest.webapp file into your test-app/www directory, which should include at least the following:
-
-  	{ 
-    	"launch_path":"/index.html",
-    	"installs_allowed_from":["*"],
-    	"version":"0.0.1",
-    	"name":"My app",
-    	"pkgName":"io.cordova.hellocordova",
-    	"icons": {
-      		"128": "/img/logo.png"
-    	}
-  	}
-
-For more information about Firefox App manifests, read [App manifest](https://developer.mozilla.org/en-US/Apps/Developing/Manifest) on MDN.
-
 When your app code is written, deploy your changes to the Firefox OS app you've added to your project with
 
-  	$ cordova prepare
+  	$ cordova prepare firefoxos
   	
-Note that a build step (i.e. cordova build) is not required when deploying to the Firefox OS platform, as Firefox OS apps are HTML-based, and therefore not compiled. 
+To create a packaged app one can zip the platforms/firefoxos/www directory. You can also simply build it using 
+
+    $ cordova build firefoxos
+
+The Firefox OS packaged app will be built in platforms/firefoxos/build/package.zip
 
 ##Testing and Debugging
 
-The app can be tested using the Firefox OS [App Manager](https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager).
+The app can be tested using the Firefox OS [Web IDE](https://developer.mozilla.org/en-US/docs/Tools/WebIDE).
 
-When you have connected the App Manager to your test device/simulator, select the "Add Packaged App" option, then make sure you point to the test-app/platforms/firefoxos/www/ directory to include the App in the Manager interface.
+When you have connected the Web IDE to your test device/simulator, select the "Open Packaged App" option, then make sure you point to the test-app/platforms/firefoxos/www/ directory to include the App in the Manager interface.
 
-For here you can install the app on your test device/simulator (with the "Update" button). Using the "Debug" button you can then debug the app and edit its code live. 
+For here you can install the app on your test device/simulator (with the "Play" button). Using the "Pause" button you can then debug the app and edit its code live. 
 
 Note: Before attempting to publish your app you should consider validating it using the [App validator](https://marketplace.firefox.com/developers/validator).
 

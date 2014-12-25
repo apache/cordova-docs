@@ -1,6 +1,6 @@
 * * *
 
-Лицензия: лицензируются для Apache Software Foundation (ASF) одного или нескольких корреспондентов лицензионных соглашений. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -113,7 +113,7 @@ JavaScript плагине *не* выполняются в основном по
 
 ## Пример плагина Echo Android
 
-Для сопоставления интерфейса JavaScript функции *echo*, описанная в разделе "Расширения приложения", используйте `plugin.xml` для вставки специфицикации `feature` в файл локальной платформы `config.xml`:
+Для сопоставления интерфейса JavaScript функция *echo*, описанная в разделе "Плагины приложения", используйте `plugin.xml` для вставки спецификации `feature` в файл `config.xml` платформы:
 
         <platform name="android">
             <config-file target="config.xml" parent="/*">

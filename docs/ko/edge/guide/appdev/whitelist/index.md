@@ -1,6 +1,6 @@
 * * *
 
-면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+면허: 아파치 소프트웨어 재단 (ASF)에 하나 이상의 참가자 사용권 계약 하에서 허가 된. 저작권에 대한 추가 정보를 보려면 NOTICE 파일을 보십시오. ASF는 이 파일을 아파치 라이센스 2.0 (이하 "라이센스") 하에 배포합니다. 라이센스에 허가되지 않은 용도로는 이 파일을 사용하실 수 없습니다. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
     
@@ -69,7 +69,7 @@
 
 **참고**: 외부 Url을과 같은 방지 하기 위하여 `mailto:` 코르도바 3.6.0, 현재 코르도바 webview에서 열리지 못하게 지정 `origin="*"` 암시적 http 및 https 프로토콜에 대 한 규칙을 추가 합니다. 추가 사용자 지정 프로토콜에 액세스 해야 하는 경우 추가 해야 합니다 또한 그들 명시적으로 화이트 리스트에 있습니다. 또한 url이 외부 응용 프로그램 실행에 대 한 자세한 내용은 아래 "외부 응용 프로그램 허용" 참조.
 
-**참고**: 일부 네트워크 요청 코르도바 Whitelist를 통해 이동 하지 마십시오. 이것은 포함 한다 <video> 그리고 <audio> 리소스, WebSocket 연결 (안 드 로이드 4.4 +), 그리고 다른 비 http 요청. 안 드 로이드 4.4 +에 포함할 수 있는 [CSP][8] 리소스에 대 한 액세스를 제한 하 여 HTML 문서에 헤더입니다. 안 드 로이드의 이전 버전에서 그들을 제한 하는 것이 가능 하지 않을 수 있습니다.
+**참고**: 일부 네트워크 요청 코르도바 허용을 통해 가지 않는다. 이 포함 하는 < 비디오 >와 < 오디오 > 리소스, WebSocket 연결 (안 드 로이드 4.4 +), 및 기타 비 http 요청. 안 드 로이드 4.4 +, 리소스에 대 한 액세스를 제한 하 여 HTML 문서에 [CSP][8] 헤더를 포함할 수 있습니다. 안 드 로이드의 이전 버전에서 그들을 제한 하는 것이 가능 하지 않을 수 있습니다.
 
  [8]: https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
 
@@ -111,7 +111,7 @@
 
 IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 더 유연 합니다. 예를 들어, 다음 액세스 모든 하위 도메인과 최상위 도메인 같은 `.com` 및 `.net` :
 
-        < 원본 액세스 = "*.google. *" / >
+        <access origin="*.google.*" />
     
 
 안 드 로이드 플랫폼 위에서 언급을 통해 비 허용 도메인 탐색 달리 `href` iOS에서 하이퍼링크 모든 열에서 페이지 방지.
@@ -124,17 +124,17 @@ IOS 플랫폼에서 와일드 카드는 [W3C 위젯 액세스][1] 사양 보다 
 
 *   콘텐츠 액세스 `XMLHttpRequest` 명시적으로 선언 해야 합니다. 설정 `origin="*"` 이 경우 작동 하지 않습니다. 양자 택일로, 모든 웹 보안 비활성화 될 수 있습니다 사용 하는 `WebSecurity` 블랙베리 구성에서 설명 하는 기본 설정:
     
-        < 선호 이름 = "websecurity" 값 = "사용 안 함" / >
+        <preference name="websecurity" value="disable" />
         
 
 *   설정 하는 대신 `*.domain` , 설정 추가로 `subdomains` 속성을 `true` . 로 설정 해야 `false` 기본적으로. 다음에 액세스할 수 있습니다 예를 들어 `google.com` , `maps.google.com` , 및 `docs.google.com` :
     
-        < 출처에 액세스 "http://google.com" 하위 도메인 = = "true" / >
+        <access origin="http://google.com" subdomains="true" />
         
     
     다음 우 스 액세스를 `google.com` :
     
-        < 출처에 액세스 "http://google.com" 하위 도메인 = = "false" / >
+        <access origin="http://google.com" subdomains="false" />
         
     
     지역을 포함 하 여 모든 도메인에 대 한 액세스 지정 `file://` 프로토콜:

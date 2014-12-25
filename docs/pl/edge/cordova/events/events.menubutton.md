@@ -28,9 +28,9 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
 
 ## Obsługiwane platformy
 
-*   Amazon ogień OS
+*   Amazon Fire OS
 *   Android
-*   Jeżyna 10
+*   BlackBerry 10
 
 ## Szybki przykład
 
@@ -41,7 +41,7 @@ Aplikacje zwykle należy użyć `document.addEventListener` Aby dołączyć słu
     }
     
 
-## Przykład pełnego
+## Pełny przykład
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                           "http://www.w3.org/TR/html4/strict.dtd">

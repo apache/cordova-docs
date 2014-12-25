@@ -13,7 +13,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one or more cont
 
 ## under the License.
 
-# Przewodnik platformy Windows Phone
+# Przewodnik platformy Windows Phone 8
 
 Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova aplikacje na urządzenia Windows Phone. Skupia się na Windows Phone 8, ale zapewnia dodatkowe szczegóły na temat wsparcia Windows Phone 7.
 
@@ -21,8 +21,8 @@ To pokazuje, jak używać albo powłoki Windows Phone specjalne narzędzia do tw
 
 Zobacz następujące szczegółowe informacje specyficzne dla platformy Windows Phone:
 
-*   Wtyczki Windows Phone
-*   Aktualizacja Windows Phone
+*   Windows Phone 8 wtyczki
+*   Aktualizacja Windows Phone 8
 
 Na platformie Windows Phone 8 Cordova widoku sieci Web polega na Internet Explorer 10 jako jego silnik renderujący, więc jako praktyczny można użyć IE10 jest rozbudowanym debuggerem do badania wszelkich treści internetowych, które nie wywołać Cordova API. Windows Phone autora blogu zawiera [pomocne wskazówki][1] na temat wsparcia IE10 wraz z porównywalnych WebKit przeglądarki.
 
@@ -75,9 +75,9 @@ Jeśli chcesz użyć Cordova w środku Windows Phone powłoka narzędzia w poł�
 
  [9]: http://cordova.apache.org
 
-Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i wtyczki Windows Phone na dane specyficzne dla platformy Windows Phone.
+Te powłoka narzędzia pozwalają na tworzenie, budowania i uruchamiania aplikacji Windows Phone. O dodatkowy interfejs wiersza poleceń, który umożliwia funkcji plugin na wszystkich platformach Zobacz za pomocą Plugman do zarządzania wtyczki. Zobacz wtyczki aplikacji wskazówki w jaki sposób rozwijać wtyczki i Windows Phone 8 wtyczki szczegóły specyficzne dla platformy Windows Phone.
 
-## Instalowania zestawu SDK
+## Instalowanie SDK
 
 Zainstaluj najnowszą wersję zestawu SDK Windows Phone z obszaru **do pobrania** [dev.windowsphone.com][3]. Można również zainstalować najnowsze emulatora aktualizacji pakietów.
 
@@ -120,7 +120,7 @@ Jeśli używasz narzędzia powłoki Windows Phone określonych w rozwoju, ma inn
         C:\path\to\project\cordova\clean.bat
     
 
-## Wdrażanie do emulatora
+## Uruchamianie na emulatorze
 
 W tym momencie można użyć `cordova` CLI narzędzia do wdrażania aplikacji do emulatora z linii poleceń:
 
@@ -157,7 +157,7 @@ Te Zaawansowane sterowanie pozwala również do modyfikowania położenia urząd
 
  [13]: img/guide/platforms/wp8/wp8_emulator_loc.png
 
-## Wdrażanie do urządzenia
+## Uruchamianie na urządzeniu
 
 Przed testowaniem aplikacji na urządzeniu, urządzenie musi być zarejestrowany. Dokumentacji [firmy Microsoft][14] informacje na temat wdrażania i testowania na Windows Phone 8. Również upewnij się, że telefon jest podłączony do komputera, a na ekranie jest odblokowany.
 

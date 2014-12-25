@@ -34,7 +34,7 @@ Uruchom `create` polecenie, określając ścieżkę istniejącego projektu, iden
 
 ## Budowanie
 
-To oczyszcza potem buduje projektu.
+Ta komenda czyści a następnie buduje projekt.
 
 Debugowania, na Mac/Linux czy Windows:
 
@@ -52,11 +52,11 @@ Wydanie, na Mac/Linux czy Windows:
 
 ## Uruchamianie aplikacji
 
-`run`Polecenie akceptuje następujące parametry *opcjonalne* :
+Komenda `run` akceptuje następujące *opcjonalne* parametry:
 
-*   Cel specyfikacji. Dotyczy to `--emulator` , `--device` , lub`--target=<targetID>`.
+*   Wyszczególnienie celu. Zawiera `--emulator`, `--device`, lub `--target=<targetID>`.
 
-*   Tworzenie specyfikacji. Dotyczy to `--debug` , `--release` , lub`--nobuild`.
+*   Wyszczególnienie opcji budowania. Zawiera `--debug`, `--release`, lub `--nobuild`.
     
         $ /path/to/project/cordova/run [Target] [Build]
         
