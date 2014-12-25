@@ -1,11 +1,21 @@
-* * *
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-免許証: アパッシュ ソフトウェア基礎 (ASF) を 1 つまたは複数の共同作成者のライセンス契約の下でライセンスされています。 著作権所有権に関する追加情報のためのこの仕事と分散 NOTICE ファイルを参照してください。 ASF は、Version 2.0 (「ライセンス」）; Apache ライセンスの下であなたにこのファイルをライセンスします。ライセンスに従う場合、このファイルを使用可能性があります。 ライセンスのコピーを入手した可能性があります。
+           http://www.apache.org/licenses/LICENSE-2.0
 
-           http://www.apache.org/licenses/LICENSE-2.0 ソフトウェア ライセンスの下で配布で配布されて適用される法律によって必要なまたは書面で合意した、しない限り、「そのまま」なし保証またはいかなる種類の保証、明示または黙示を問わず、基礎。  アクセス許可と制限を支配する特定の言語用のライセンスを参照してください。
-    
-
-## ライセンス。
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
 
 # セキュリティ ガイド
 

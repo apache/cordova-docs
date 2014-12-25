@@ -1,11 +1,21 @@
 ---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
 
-Licenca: licenco za Apache Software Foundation (ASF) pod eno ali več prispeva licenčnih pogodb. Glej obvestilo datoteko razdeli s to delo za dodatne informacije glede avtorskih pravic lastništva. V APK licence to datoteko, da si pod licenco Apache, različica 2.0 ("licence"); ne smete uporabljati to datoteko, razen v skladu z licenco. Lahko dobijo izvod licence v
+           http://www.apache.org/licenses/LICENSE-2.0
 
-           http://www.Apache.org/licenses/License-2.0 razen če zahteva zakon ali dogovorjene v pisni obliki, programske opreme, ki se razdelijo pod licenco razdeljeni na na "Kot je" podlaga, brez jamstva ali pogoje za kakršnekoli vrste, niti izrecne ali zakonske.  Glej licenca za poseben jezik, ki urejajo dovoljenja in omejitve
-    
-
-## pod licenco.
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
 
 # Amazon ogenj OS platformo vodnik
 
