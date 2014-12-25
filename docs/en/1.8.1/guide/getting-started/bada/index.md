@@ -28,6 +28,7 @@ This guide describes how to set up your development environment for Cordova and 
 - Windows
 - You need the bada 1.2 SDK to use cordova-bada (which is no longer available on Samsung&apos;s website)
 
+
 2. Install SDK + Cordova
 -------------------------
 
@@ -51,6 +52,7 @@ This guide describes how to set up your development environment for Cordova and 
 
     ![](img/guide/platforms/bada/bada_project.png)
  
+
 4. Hello World
 --------------
 

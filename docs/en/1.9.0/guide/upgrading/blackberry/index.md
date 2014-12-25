@@ -24,6 +24,7 @@ This document is for people who need to upgrade their Cordova versions from an o
 
 - To upgrade to 1.9.0, please go from 1.8.1
 
+
 ## Upgrade to 1.9.0 from 1.8.1 ##
 
 Updating just the www folder:

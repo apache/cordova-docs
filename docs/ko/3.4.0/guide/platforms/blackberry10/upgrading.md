@@ -380,7 +380,6 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
-    
     받는 사람:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
@@ -406,7 +405,6 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
-    
     받는 사람:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
@@ -434,7 +432,6 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
-    
     받는 사람:
     
         < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
@@ -460,7 +457,6 @@ PhoneGap 다운로드 디렉터리를 업데이트:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.media.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >
         
-    
     받는 사람:
     
          < 플러그인 이름 "캡처" value="org.apache.cordova.capture.MediaCapture"/ = >< 플러그인 이름 "연락처" value="org.apache.cordova.pim.Contact"/ = >

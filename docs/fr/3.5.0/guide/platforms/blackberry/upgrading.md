@@ -333,7 +333,6 @@ Mise à jour juste le `www` répertoire :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
-    
     À:
     
         < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
@@ -359,7 +358,6 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
     
          < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
-    
     À:
     
          < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
@@ -387,7 +385,6 @@ Mise à jour juste le `www` répertoire :
     
         < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
-    
     À:
     
         < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >
@@ -413,7 +410,6 @@ Mise à jour le répertoire de l'exemple (c'est à dire, mise à jour grâce aux
     
          < nom du plugin = « Capturer » value="org.apache.cordova.media.MediaCapture"/ >< nom du plugin = « Contact » value="org.apache.cordova.pim.Contact"/ >
         
-    
     À:
     
          < nom du plugin = « Capturer » value="org.apache.cordova.capture.MediaCapture"/ >< nom du plugin = « Contacts » value="org.apache.cordova.pim.Contact"/ >

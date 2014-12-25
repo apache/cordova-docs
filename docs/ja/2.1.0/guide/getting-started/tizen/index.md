@@ -27,12 +27,14 @@ Getting Started with Tizen
 
 - Linux Ubuntu 10.04/10.10/11.04/11.10 32-bit, Windows XP SP3/7 32-bit.
 
+
 2. SDK と Cordova のインストール
 -------------------------
 
 - [Tizen SDK](https://developer.tizen.org/sdk) のダウンロードとインストール
 - [Cordova](http://phonegap.com/download) の最新版をダウンロードし解凍します。これから tizen ディレクトリと一緒に作業を進めます
 - (オプション) Tizen の Cordova テンプレートプロジェクトをインストール: copy the `/templates` ディレクトリの中身を Tizen Eclipse IDE の web templates ディレクトリにコピーします (例: `/home/my_username/tizen-sdk/IDE/Templates/web`)
+
 
 3. 新規プロジェクトの作成
 --------------------
@@ -71,6 +73,7 @@ Getting Started with Tizen
     ![](img/guide/getting-started/tizen/project_explorer.png)
 
     - これで、プロジェクトは作成され **Project Explorer** ビューに表示されます
+
 
 4. Hello World の作成
 --------------
