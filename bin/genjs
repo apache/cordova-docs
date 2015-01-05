@@ -64,4 +64,4 @@ if (argv.edge) {
     }
 }
 
-new generator(argv.source, argv.out).run(language, version, argv.verbose, !!argv.timing);
+new generator(argv.source, argv.out).run(language, version, argv.verbose, argv.timing);
