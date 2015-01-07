@@ -49,12 +49,14 @@
         });
 
         it('should find the table of content values', function () {
-            var result = sut.run(files.normal);
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                result = sut.run(files.normal, dom);
             assert.strictEqual(32, result.length);
         });
 
         it('should find all <h1> elements', function () {
-            var result = sut.run(files.normal),
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                result = sut.run(files.normal, dom),
                 headers = [];
             
             result.forEach(function (header, index) {
@@ -67,7 +69,8 @@
         });
 
         it('should find all <h2> elements', function () {
-            var result = sut.run(files.normal),
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                result = sut.run(files.normal, dom),
                 headers = [];
             
             result.forEach(function (header, index) {
@@ -81,9 +84,10 @@
         });
 
         it('should ignore whitespace in the target name', function () {
-            var result = sut.run(files.normal),
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                result = sut.run(files.normal, dom),
                 names = [],
-                doc = cheerio.load(fs.readFileSync(files.normal));
+                doc = dom;
             
             //result = result.reverse();
             //console.log(result[0]);
@@ -99,19 +103,21 @@
         });
 
         it('should create a HTML select element', function () {
-            var result = sut.run(files.normal),
-                doc = cheerio.load(files.normal);
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                result = sut.run(files.normal, dom);
             
-            assert.ok(('#subheader > small > select').length > 0);
+            assert.ok(dom('#subheader > small > select').length > 0);
         });
 
         it('should skip files with no source title', function () {
-            var result = sut.run(files.no_source);
+            var dom = cheerio.load(fs.readFileSync(files.no_source)),
+                result = sut.run(files.no_source, dom);
             assert.strictEqual(null, result);
         });
 
         it('should skip files with no target title', function () {
-            var result = sut.run(files.no_target);
+            var dom = cheerio.load(fs.readFileSync(files.no_target)),
+                result = sut.run(files.no_target, dom);
             assert.ok(null === result, "Find something when should not");
         });
     });

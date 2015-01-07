@@ -49,20 +49,21 @@
 
         it('should set the title', function () {
             var testing_file = files.normal,
-                result = sut.run(testing_file),
-                dom;
+                dom = cheerio.load(fs.readFileSync(testing_file)),
+                result = sut.run(testing_file, dom);
             assert.strictEqual('Accelerometer', result);
-            dom = cheerio.load(fs.readFileSync(testing_file));
             assert.strictEqual('Accelerometer', dom('#subheader > h1').first().html());
         });
 
         it('should skip files with no source title', function () {
-            var result = sut.run(files.no_source);
+            var dom = cheerio.load(fs.readFileSync(files.no_source)),
+                result = sut.run(files.no_source, dom);
             assert.strictEqual(null, result);
         });
 
         it('should skip files with no target title', function () {
-            var result = sut.run(files.no_target);
+            var dom = cheerio.load(fs.readFileSync(files.no_target)),
+                result = sut.run(files.no_target, dom);
             assert.strictEqual(null, result);
         });
     });
