@@ -46,17 +46,17 @@
         });
 
         it('should find some code blocks', function () {
-            var code_tags = sut.run(files.normal);
+            var dom = cheerio.load(fs.readFileSync(files.normal)),
+                code_tags = sut.run(files.normal, dom);
             assert.ok(code_tags.length > 0);
         });
 
         it('should add the prettyprint class to each code block', function () {
             var testing_file = files.normal,
-                dom,
+                dom = cheerio.load(fs.readFileSync(files.normal)),
                 initial_title,
                 new_title;
-            sut.run(files.normal);
-            dom = cheerio.load(fs.readFileSync(files.normal));
+            sut.run(files.normal, dom);
             assert.ok(dom('#content pre.prettyprint').length > 0);
         });
     });
