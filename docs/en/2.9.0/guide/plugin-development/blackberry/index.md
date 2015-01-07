@@ -20,12 +20,12 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 Developing a Plugin on BlackBerry
 =================================
 
-## How to make the Echo plugin on Blackberry
+## How to make the Echo plugin on BlackBerry
 
 This guide explores how to develop the Echo plugin on BlackBerry.
 If you haven't read the top-level guide about the JavaScript part of
 the plugin, it would be best if you read that first and then this
-guide. In addition, please download the [Cordova Blackberry
+guide. In addition, please download the [Cordova BlackBerry
 repo](https://git-wip-us.apache.org/repos/asf?p=cordova-blackberry.git).
 
 The Cordova-BlackBerry project allows you to deploy to BlackBerry
@@ -91,7 +91,7 @@ and [str] are the arguments we are passing in.
     import org.apache.cordova.json4j.JSONException;
     import org.apache.cordova.json4j.JSONObject;
     /**
-     * A simple plugin to demonstrate how to build a plugin for Blackberry
+     * A simple plugin to demonstrate how to build a plugin for BlackBerry
      * Basically echos back the msg that a user calls to this plugin
      */
     public final class Echo extends Plugin {

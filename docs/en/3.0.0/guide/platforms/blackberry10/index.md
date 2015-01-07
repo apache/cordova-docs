@@ -29,7 +29,7 @@ command-line tools, described in BlackBerry Platform Guide.
 The development environment is available on Windows, Mac and Linux.
 
 Developers should use the `cordova` utility in conjunction with the
-Blackberry Native SDK.  See The Command-line Interface for information
+BlackBerry Native SDK.  See The Command-line Interface for information
 how to install `cordova`, add projects, then build and deploy for each
 platform.
 

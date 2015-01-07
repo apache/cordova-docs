@@ -54,7 +54,7 @@ devices' background tiling images used when representing applications:
         windows-phone/icon-62-tile.png
         windows-phone/icon-173-tile.png
 
-Blackberry 10 requires an icon element in config.xml:
+BlackBerry 10 requires an icon element in config.xml:
 
         <icon src="blackberry10/icon-86.png" />
 

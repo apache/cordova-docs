@@ -171,7 +171,7 @@ or, on **Windows**
 
     $ /path/to/cordova-blackberry-webworks/bin/create.bat /path/to/my_new_cordova_project com.example.cordova_project_name CordovaProjectName
 
-Note: the package name placeholder (com.example.cordova_project_name) is ignored on the Blackberry platform, but is required for use of the crossplatform tools
+Note: the package name placeholder (com.example.cordova_project_name) is ignored on the BlackBerry platform, but is required for use of the crossplatform tools
 
 ### Build a project
 

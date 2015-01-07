@@ -175,7 +175,7 @@ If you intend on using the **Capture API**, you will need the new **iPad retina-
 5. **Add** all the new **MainViewController** and **AppDelegate** files into your Xcode project
 6. **Copy** the **www/cordova-1.6.1.js** file from the new project into your **www** folder, and delete your **www/cordova-1.5.0.js** file
 7. **Update** the Cordova script reference in your **www/index.html** file (and any other files that contain the script reference) to point to the new **cordova-1.6.1.js** file
-8. **Add** the new **Cordova.plist** file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and Blackberry, for a unified Cordova JavaScript file (cordova-js). 
+8. **Add** the new **Cordova.plist** file into your project - this is because the core plugin service names needed to be changed to match the ones from Android and BlackBerry, for a unified Cordova JavaScript file (cordova-js). 
 9. **Integrate** any settings, **Plugins** and **ExternalHosts** entries that you had in your **backed-up Cordova.plist** into the new **Cordova.plist**
 10. **Integrate** any project specific code that you have in your **backed-up AppDelegate.h and AppDelegate.m** into the new AppDelegate files. Any **UIWebViewDelegate** or **CDVCommandDelegate** code in **AppDelegate.m** will need to go into MainViewController.m now (see commented out sections in that file)
 11. **Integrate** any project specific code that you have in your **backed-up MainViewController.h and MainViewController.m** into the new MainViewController files

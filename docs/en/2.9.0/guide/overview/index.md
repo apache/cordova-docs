@@ -135,8 +135,8 @@ available for each mobile platform:
     <tr>
         <th></td>
         <th>Android</th>
-        <th>Blackberry</th>
-        <th>Blackberry 10</th>
+        <th>BlackBerry</th>
+        <th>BlackBerry 10</th>
         <th>iOS</th>
         <th>Windows<br/>Phone 7</th>
         <th>Windows<br/>Phone 8</th>

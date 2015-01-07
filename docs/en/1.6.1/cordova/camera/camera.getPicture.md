@@ -48,7 +48,7 @@ Supported Platforms
 -------------------
 
 - Android
-- Blackberry WebWorks (OS 5.0 and higher)
+- BlackBerry WebWorks (OS 5.0 and higher)
 - iPhone
 - Windows Phone 7 ( Mango )
 

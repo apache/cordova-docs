@@ -17,7 +17,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
          under the License.
 ---
 
-Getting Started with Blackberry
+Getting Started with BlackBerry
 ============================
 
 

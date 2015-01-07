@@ -33,7 +33,7 @@ BlackBerry WebWorks SDK or BlackBerry Native SDK. See The Command-Line
 Interface for information how to install `cordova`, add projects, then
 build and deploy for each platform.
 
-Blackberry 10 Device Simulator:
+BlackBerry 10 Device Simulator:
 
 	* `Processor:`Intel dual core 2.0 GHz/AMD Athlon 4200+ or higher
 	* `Disk space: 10 GB`
@@ -56,8 +56,8 @@ you may need to open a new terminal window or re-log in.
 If you need to compile native code, for example when developing a native plugin, you
 will need to install the BlackBerry Native SDK.
 
-In order to get the BlackBerry Native SDK, download and install the IDE for Blackberry available from
-[developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the Blackberry Native SDK.
+In order to get the BlackBerry Native SDK, download and install the IDE for BlackBerry available from
+[developer.blackberry.com](http://developer.blackberry.com/native/download/), then using the IDE, install the BlackBerry Native SDK.
 Following installation, you need to add its command-line tools to your
 system path.
 

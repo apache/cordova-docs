@@ -67,7 +67,7 @@ Android
                   <icon src="res/android/xhdpi.png" density="xhdpi" />
          </platform>
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
