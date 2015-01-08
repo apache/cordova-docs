@@ -119,7 +119,7 @@ instead of calling Ant directly from the command line.
 Cordova for Android now supports building with
 [Gradle](http://www.gradle.org/). This is optional in Cordova 3.x, but will be
 enabled by default in the future, probably with Cordova 4.0. The build system
-is controlled with environment variables, which can be set for the shell, or
+is enabled by an environment variable, which can be set for the shell, or
 specified on the command line alongside the `cordova build` command.
 
 Please note that the Gradle build rules are still in development, and will
@@ -138,7 +138,25 @@ stabilizes.
 
   If not set, it currently defaults to `ant`, but this is expected to change.
 
-  * **BUILD\_MULTIPLE\_APKS**
+### Other Environment Variables (you don't normally need to set these)
+
+  * **ANDROID\_HOME**
+
+  This should be set to the directory containing the Android SDK. Cordova looks
+  for this in the default install locations, as well as by looking at your PATH
+  variable, so it doesn't normally require setting.
+
+  * **JAVA\_HOME**
+
+  On some machines, this will need to be set so that Gradle can find the Java
+  compiler.
+
+### Gradle Properties
+
+These [properties](http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html)
+can be set to customize the build:
+
+  * **cdvBuildMultipleApks**
 
   If this is set, then multiple APK files will be generated: One per native
   platform supported by library projects (x86, ARM, etc). This can be important
@@ -147,20 +165,11 @@ stabilizes.
 
   If not set, then a single APK will be generated which can be used on all devices.
 
-  * **BUILD\_MULTIPLE\_APKS**
-
-  If this is set, then multiple APK files will be generated: One per native
-  platform supported by library projects (x86, ARM, etc). This can be important
-  if your project uses large native libraries, which can drastically increase
-  the size of the generated APK.
-
-  If not set, then a single APK will be generated which can be used on all devices.
-
-  * **ANDROID\_VERSION\_CODE**
+  * **cdvVersionCode**
 
   Overrides the versionCode set in `AndroidManifest.xml`
 
-  * **RELEASE\_SIGNING\_PROPERTIES\_FILE**
+  * **cdvReleaseSigningPropertiesFile**
 
   Path to a .properties file that contains signing information for release builds.
   The file should look like:
@@ -174,26 +183,42 @@ stabilizes.
 
   `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
 
+  * **cdvDebugSigningPropertiesFile**
 
-### Other Environment Variables (you don't normally need to set these)
+  Same as cdvReleaseSigningPropertiesFile, but for debug builds. Useful when you need
+  to share a signing key with other developers.
 
-  * **ANDROID\_HOME**
+  * **cdvMinSdkVersion**
 
-  This should be set to the directory containing the Android SDK.
+  Overrides the value of `minSdkVersion` set in `AndroidManifest.xml`. Useful when
+  creating multiple APKs based on SDK version.
 
-  * **JAVA\_HOME**
+  * **cdvBuildToolsVersion**
 
-  On some machines, this will need to be set so that Gradle can find the Java
-  compiler. On OSX, the value for this variable can be found by running
-  `/usr/libexec/java_home`
+  Override the automatically detected `android.buildToolsVersion` value.
+
+  * **cdvCompileSdkVersion**
+
+  Override the automatically detected `android.compileSdkVersion` value.
+
 
 ### Extending build.gradle
 
 If you need to customize `build.gradle`, rather than edit directly, you should create
 a sibling file named `build-extras.gradle`. This file will be included by the main
-`build.gradle` when present.
+`build.gradle` when present. Here's an example:
+
+    # Example build-extras.gradle
+    # This file is included at the beginning of `build.gradle`
+    ext.cdvDebugSigningPropertiesFile = '../../android-debug-keys.properties'
+    # When set, this function allows code to run at the end of `build.gradle`
+    ext.postBuildExtras = {
+        android.buildTypes.debug.applicationIdSuffix = '.debug'
+    }
 
 ### Example Build
 
-        ANDROID_BUILD=gradle cordova build android
+    export ANDROID_BUILD=gradle
+    export ORG_GRADLE_PROJECT_cdvMinSdkVersion=14
+    cordova build android -- --gradleArg=-PcdvBuildMultipleApks=true
 
