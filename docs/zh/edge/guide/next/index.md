@@ -1,3 +1,22 @@
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
+
 # 下一步
 
 對於開發人員瞭解如何使用科爾多瓦 CLI 並使使用的外掛程式，有幾件事你可能想要考慮旁邊生成更好、 更多的性能科爾多瓦應用研究。 下面的文檔提供有關的最佳做法、 測試、 升級和其他主題的各種主題的建議，但不是強制性規定。 這考慮您為您作為科爾多瓦的開發人員的增長的啟動點。 同時，如果你看到可以改善的東西，請[作出貢獻][1]!

@@ -1,3 +1,22 @@
+---
+license: Licensed to the Apache Software Foundation (ASF) under one
+         or more contributor license agreements.  See the NOTICE file
+         distributed with this work for additional information
+         regarding copyright ownership.  The ASF licenses this file
+         to you under the Apache License, Version 2.0 (the
+         "License"); you may not use this file except in compliance
+         with the License.  You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+         Unless required by applicable law or agreed to in writing,
+         software distributed under the License is distributed on an
+         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         KIND, either express or implied.  See the License for the
+         specific language governing permissions and limitations
+         under the License.
+---
+
 # Prossimi passi
 
 Per gli sviluppatori che hanno una comprensione di come usare la CLI di Cordova e fare uso di plugin, ci sono alcune cose che si possono prendere in considerazione ricercando accanto a costruire meglio, più performante Cordova applicazioni. Il seguente documento offre consulenza su vari argomenti inerenti alle migliori pratiche, test, aggiornamenti e altri argomenti, ma non vuol essere prescrittiva. Considerare questo tuo punto di lancio per la tua crescita come uno sviluppatore di Cordova. Inoltre, se vedete qualcosa che può essere migliorato, si prega di [contribuire][1]!

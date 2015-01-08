@@ -17,9 +17,7 @@ File Structure
     docs/LANGUAGE
     docs/LANGUAGE/VERSION
     docs/LANGUAGE/VERSION/cordova/
-    docs/LANGUAGE/VERSION/cordova/PluginName/
-    docs/LANGUAGE/VERSION/cordova/PluginName/className.md
-    docs/LANGUAGE/VERSION/cordova/PluginName/className.functionName.md
+    docs/LANGUAGE/VERSION/guide/platforms/PLATFORMNAME/
 
 Contributing to the Documentation
 ---------------------------------
@@ -78,87 +76,27 @@ Each language can override the default template in `template/docs/LANGUAGE`.
 
 Please see the `STYLESHEET.md` file for guidelines on language and usage.
 
-## Generating Documentation with Vagrant
+## Generating Documentation with Node.js
 
-It can be trouble generating the documentation. Juggling Ruby
-environments and the dependencies can be a sensitive matter.
+Right now documentation could be run using Node.js either on Windows, or on Linux box.
 
-To make our lives easier, Vagrant support has been added to our documentation
-generator. It's easy to setup and works on all the major operating
-systems. After you've installed Vagrant and VirtualBox, you only need to
-run one command to download and provision a light-weight virtual machine
-(approx 200MB). At that point all the dependencies exist inside the
-virtual machine, so you don't need to install them manually on your
-bare metal machine.
+    $ ./bin/genjs           # compile all docs
+    $ ./bin/genjs en edge   # compile English Edge docs
+    $ ./bin/genjs ru edge   # compile Russian Edge docs
+    $ ./bin/genjs es 3.5.0  # compile Spanish 3.5.0 docs
+    
+### Setting up Node.js
 
-### Setup
+1. Go to Node.JS [downloads page](http://nodejs.org/download/)
+2. Download and install package for your operation system.
+3. Checkout this repository using Git
 
-- [Install Vagrant](http://www.vagrantup.com/downloads.html)
-- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+        git clone https://github.com/apache/cordova-docs
 
-### Initialize Vagrant Box
-
-    $ cd cordova-docs/
-    $ vagrant up
-
-### Build the Documentation
-
-    $ vagrant ssh
-    $ cd /vagrant             # shared copy of this repo
-    $
-    $ ./bin/generate          # compile all docs
-    $ ./bin/generate en edge  # compile English Edge docs
-    $
-    $ exit                    # exit the ssh tunnel
-
-The `/vagrant` directory is a shared copy of this repository. When the
-documentation is done generating, you will see a `public/` directory on
-both your virtual and local machine.
-
-### Shutdown the Virtual Machine
-
-Pick one of the following, depending on what you want to do:
-
-    $ vagrant suspend  # pause the vm and save its state
-    $ vagrant halt     # shutdown the vm
-    $ vagrant destroy  # delete the vm and all its contents
-
-## Generating Documentation Locally
-
-### Install
-
-- Clone [joDoc](http://github.com/davebalmer/jodoc)
-
-        git clone http://github.com/davebalmer/joDoc.git
-
-- Install markdown
-
-    curl -O http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
-    unzip Markdown_1.0.1.zip
-    chmod u+x Markdown_1.0.1/Markdown.pl
-    mv Markdown_1.0.1/Markdown.pl markdown
-    rm -r Markdown_1*
-
-- Install Ruby Dependencies
-
-    curl -sSL https://get.rvm.io | bash -s stable
-    rvm install 1.8.7
-    gem install bundler
-    bundle install
-
-### Run the Script
-
-Generate all versions
-
-    PATH=$PATH:$PWD/joDoc:$PWD bin/generate
-
-Generate a specific language and version
-
-    PATH=$PATH:$PWD/joDoc:$PWD bin/generate en edge
-
-or as a shortcut
-
-    PATH=$PATH:$PWD/joDoc:$PWD bin/generate --edge
+4. Install dependencies. In the root of the cloned cordova-docs folder run
+   
+        npm install
+5. Now you able to build documentation locally.
 
 ### Quick Preview
 
@@ -166,7 +104,7 @@ When making minor edits, it is usually safe to simply render the edited from
 Markdown to HTML. Many code editors have plugins to render Markdown to HTML
 and there are a handful of [good](http://dillinger.io/) online editors.
 
-Currently, a Ruby script and [joDoc](http://github.com/davebalmer/jodoc) are
+Currently, a Node.JS script and [joDoc-js](https://github.com/kant2002/jodoc-js) are
 used to generate the HTML documentation.
 
 Generating a Version Release
@@ -174,53 +112,6 @@ Generating a Version Release
 
 There is a Rake task to increment the version, generate the version directory, and update the edge documentation.
 
-    # generate version 1.7.0 for english.
-    rake version[1.7.0,en]
-
-If while running rake you get the error 
-
-    no such file to load -- spec/rake/spectask 
-
-then run
-
-    gem install rspec -v 1.3.0
-
-FAQ
----
-
-### Error while running `./bin/generate`
-
-If you get the following error:
-
-    ./bin/../lib/cordova/navigation_menu.rb:14:in `read': can't convert nil into String (TypeError)
-        from ./bin/../lib/cordova/navigation_menu.rb:14:in `initialize'
-        from ./bin/../lib/docs_generator.rb:86:in `new'
-        from ./bin/../lib/docs_generator.rb:86:in `after_jodoc'
-        from ./bin/../lib/docs_generator.rb:55:in `run'
-        from ./bin/../lib/docs_generator.rb:45:in `foreach'
-        from ./bin/../lib/docs_generator.rb:45:in `run'
-        from ./bin/../lib/docs_generator.rb:41:in `foreach'
-        from ./bin/../lib/docs_generator.rb:41:in `run'
-        from ./bin/generate:6
-
-You may need to add the following line to the joDoc script:
-
-    $markdown_bin = "/path/to/Markdown.pl";
-
-For more details, see the [Issue #590](https://issues.apache.org/jira/browse/CB-590).
-
-### Error with ruby and nokogiri versions
-
-If you get the following error:
-
-    custom_require.rb:36:in `require': /lib/cordova/jodoc.rb:28: syntax error, unexpected tCONSTANT, expecting ']' (SyntaxError)
-    @template_directories = [ File.join TEMPLATE_PATH, 'default' ]
-                                                     ^
-- You may need to downgrade the version of ruby to 1.8.7 and nokogiri to 1.5.2
-  Use rvm and the Gemfile provided to install the dependencies
-
-    rvm install 1.8.7
-    rvm use 1.8.7
-    bundle install
-
+    # generate version 4.1.0 for english.
+    .\bin\incrementversion en 4.1.0
 

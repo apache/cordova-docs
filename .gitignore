@@ -1,6 +1,7 @@
 .DS_Store
 tmp/
 node_modules/
+v8.log
 public/
 release/
 TAGS
@@ -11,3 +12,4 @@ _*
 /Gemfile.lock
 *Screen Shot [0-9]*
 /.vagrant
+/npm-debug.log

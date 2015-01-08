@@ -25,10 +25,16 @@ var yargs = require('yargs')
     .describe('edge', 'Generate edge version of English docs')
     .count("verbose")
     .alias('v', 'verbose')
+    .describe('timing', 'Species level of timing measurements. If level not provided level 0 is used.')
     .describe('verbose', 'Increase verbosity level of produced output')
-    .usage('Usage: $0 [-v] [lang] [version] [--edge]\n' +
+    .describe('source', 'Path to the documentation sources. Default: docs')
+    .describe('out', 'Path where documentation would be generated. Default: public')
+    .example('./bin/genjs --out public/test en', 'Generates English docs in the directory public/test')
+    .example('./bin/genjs --timing', 'Basic timing measurements')
+    .example('./bin/genjs --timing 1', 'Detailed timing measurements')
+    .usage('Usage: $0 [-v] [...options] [--edge] [lang] [version]\n' +
         '    <lang>: Language for which generate docs. If not specified then generate for all languages.\n' +
-        '    <version>: Version for which generate docs. If not specified then generate all versions.\n');
+        '    <version>: Version for which generate docs. If not specified then generate all versions.');
 var argv = yargs.argv;
 
 if (argv.help) {
@@ -58,4 +64,4 @@ if (argv.edge) {
     }
 }
 
-new generator().run(language, version, argv.verbose);
+new generator(argv.source, argv.out).run(language, version, argv.verbose, argv.timing);

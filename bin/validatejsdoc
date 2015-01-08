@@ -20,7 +20,6 @@
 */
 /*jslint node:true, nomen: true */
 
-var comparer = require('../lib/docs_comparer');
 var yargs = require('yargs')
     .describe('edge', 'Compare edge version of English docs with Ruby version')
     .count("verbose")
@@ -58,4 +57,10 @@ if (argv.edge) {
     }
 }
 
-new comparer().compare(language, version, argv.verbose);
+if (argv.compare) {
+    var comparer = require('../lib/docs_comparer');
+    new comparer().compare(language, version, argv.verbose);
+} else {
+    var validator = require('../lib/docs_validator');
+    new validator().validate(language, version, argv.verbose);
+}
