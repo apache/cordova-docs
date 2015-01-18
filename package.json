@@ -1,6 +1,6 @@
 {
   "name": "cordova-docs",
-  "version": "3.6.1",
+  "version": "4.0.1-dev",
   "description": "Documentation for the Apache Cordova",
   "main": "index.js",
   "directories": {
