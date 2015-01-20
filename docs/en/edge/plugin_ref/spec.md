@@ -505,6 +505,31 @@ Supported attributes:
 * `arch`: The architecture for which the `.so` file has been built,
   either `device` or `simulator`.
 
+For the Windows platform, the `<lib-file>` element allows the inclusion of an `<SDKReference>` in the generated Windows
+project files.
+
+Supported attributes:
+
+* `src` (required):
+  The name of the SDK to include (which will be used as value of the `Include` attribute of the generated
+  `<SDKReference>` element).
+
+* `arch`: Indicates that the `<SDKReference>` should only be included when building for the specified architecture.
+  Supported values are `x86`, `x64` or `ARM`.
+
+* `target`: Indicates that the `<SDKReference>` should only be included when building for the specified target device
+  type. Supported values are `win` (or `windows`), `phone` or `all`.
+
+* `versions`: Indicates that the `<SDKReference>` should only be included when building for versions that match the specified version
+  string. Value can be any valid node semantic version range string.
+
+Examples:
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+
 ## _framework_ Element
 
 Identifies a framework (usually part of the OS/platform) on which the plugin depends.
@@ -523,14 +548,41 @@ platform.
 The optional `weak` attribute is a boolean indicating whether the
 framework should be weakly linked. The default is `false`.
 
-The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your plugin files (thus it is not a system framework). The default is `false`.  ***On Android*** it specifies how to treat **src**. If `true` **src** is a relative path from the application project's directory, otherwise -- from the Android SDK directory.
+The optional `custom` attribute is a boolean indicating whether the framework is one that is included as part of your
+plugin files (thus it is not a system framework). The default is `false`.  ***On Android*** it specifies how to treat
+**src**. If `true` **src** is a relative path from the application project's directory, otherwise -- from the Android
+SDK directory.
 
-The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is supported and only on Windows 8.  Using `custom='true'` and `type='projectReference'` will add a reference to the project which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a 'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing cordova application.
+The optional `type` attribute is a string indicating the type of framework to add. Currently only `projectReference` is
+supported and only for Windows.  Using `custom='true'` and `type='projectReference'` will add a reference to the project
+which will be added to the compile+link steps of the cordova project.  This essentially is the only way currently that a
+'custom' framework can target multiple architectures as they are explicitly built as a dependency by the referencing
+cordova application.
 
-The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to add references between sub projects like in this example:
+The optional `parent` attribute is currently supported only on Android. It sets the relative path to the directory
+containing the sub-project to which to add the reference. The default is `.`, i.e. the application project. It allows to
+add references between sub projects like in this example:
 
 	<framework src="FeedbackLib" custom="true" />
 	<framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+
+The Windows platform supports three additional attributes (all optional) to refine when the framework should be included:
+
+The `arch` attribute indicates that the framework should only be included when building for the specified architecture.
+Supported values are `x86`, `x64` or `ARM`.
+
+The `target` attribute indicates that the framwork should only be included when building for the specified target device
+type. Supported values are `win` (or `windows`), `phone` or `all`.
+
+The `versions` attribute indicates that the framework should only be included when building for versions that match the
+specified version string. Value can be any valid node semantic version range string.
+
+Examples of using these Windows specific attributes:
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
 
 ## _info_ Element
 
