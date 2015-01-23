@@ -19,7 +19,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 <div id="home">
   <h1>
-    Справочники
+    Инструкции
   </h1>
   
   <ul>
@@ -46,10 +46,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Платформа гиды
+        Руководство по платформам
       </h2>
       
-      <span>Настройка каждой платформы SDK и обновление проектов.</span>
+      <span>Настройка SDK каждой платформы и обновление проектов.</span>
     </li>
     <li>
       <h2>
@@ -74,17 +74,17 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Встраивание WebViews
+        Интеграция WebViews
       </h2>
       
-      <span>Реализуйте собственный проект Cordova WebView.</span>
+      <span>Добавление Cordova WebView в ваш проект.</span>
     </li>
     <li>
       <h2>
-        Руководство по разработке плагинов
+        Руководство по разработке расширений
       </h2>
       
-      <span>Разработать свой собственный плагин.</span>
+      <span>Создайте свой первый плагин.</span>
     </li>
     <li>
       <h2>
@@ -119,7 +119,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         Последующие шаги
       </h2>
       
-      <span>Посмотрите на темы, которые встретите новых разработчиков Кордова.</span>
+      <span>Посмотрите на темы, которые интересуют новых разработчиков Cordova.</span>
     </li>
     <li>
       <h2>
@@ -144,10 +144,10 @@ license: Licensed to the Apache Software Foundation (ASF) under one
     </li>
     <li>
       <h2>
-        Плагин API-интерфейсы
+        API плагинов
       </h2>
       
-      <span>Узнайте, какие Cordova плагины доступны для использования в проекте.</span>
+      <span>Узнайте, какие плагины Cordova доступны для использования в вашем проекте.</span>
     </li>
   </ul>
 </div>
