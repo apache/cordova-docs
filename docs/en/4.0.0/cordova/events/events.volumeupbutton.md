@@ -33,6 +33,7 @@ attach an event listener once the `deviceready` event fires.
 
 ## Supported Platforms
 
+- Android
 - BlackBerry 10
 
 ## Quick Example
