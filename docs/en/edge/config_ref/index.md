@@ -134,17 +134,6 @@ The following global preferences apply to all platforms:
 
         <preference name="Fullscreen" value="true" />
 
-- `Orientation` allows you to lock orientation and prevent the
-  interface from rotating in response to changes in orientation.
-  Possible values are `default`, `landscape`, or `portrait`. Example:
-
-        <preference name="Orientation" value="landscape" />
-
-  __NOTE__: The `default` value means _both_ landscape and portrait
-  orientations are enabled.  If you want to use each platform's
-  default settings (usually portrait-only), leave this tag out of the
-  `config.xml` file.
-
 ## Multi-Platform Preferences
 
 The following preferences apply to more than one platform, but not to
@@ -178,6 +167,26 @@ all of them:
         <preference name="HideKeyboardFormAccessoryBar" value="true"/>
 
   Applies to iOS and BlackBerry.
+  
+- `Orientation` (string, defaults to `default`): allows you to lock 
+  orientation and prevent the interface from rotating in response to 
+  changes in orientation. Possible values are `default`, `landscape` 
+  or `portrait`. Example:
+
+        <preference name="Orientation" value="landscape" />
+    
+  Additionally, you can specify any platform-specific orientation value
+  if you place the `<preference>` element within a `<platform>` element:
+  
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+  
+  Applies to Android, iOS, WP8, Amazon Fire OS and Firefox OS.
+
+  __NOTE__: The `default` value means Cordova will strip the orientation
+  preference entry from the platform's manifest/configuration file
+  allowing the platform to fallback to its default behavior.
 
 ## The _feature_ Element
 
