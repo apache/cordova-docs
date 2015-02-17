@@ -174,11 +174,11 @@ can be set to customize the build:
   Path to a .properties file that contains signing information for release builds.
   The file should look like:
   ```
-  storeFile=relative/path/to/keystore.p12
-  storePassword=SECRET1
-  storeType=pkcs12
-  keyAlias=DebugSigningKey
-  keyPassword=SECRET2
+  key.store=relative/path/to/keystore.p12
+  key.store.password=SECRET1
+  key.storeType=pkcs12
+  key.alias=DebugSigningKey
+  key.alias.password=SECRET2
   ```
 
   `storePassword` and `keyPassword` are optional, and will be prompted for if omitted.
