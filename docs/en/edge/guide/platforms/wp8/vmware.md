@@ -36,7 +36,7 @@ Fusion.  After installing Windows, follow these steps:
 
    ![](img/guide/platforms/wp8/vmware_memory_opts.png)
 
-   The Windows Phone Emulator alone uses half a megabyte of memory, so
+   The Windows Phone Emulator alone uses half a gigabyte of memory, so
    overall you should reserve at least 2GB for VMWare.
 
 1. Choose the __Advanced__ settings. Enable the __Preferred

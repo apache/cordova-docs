@@ -23,8 +23,8 @@ This guide shows how to modify Windows Phone 8 projects, to upgrade from older v
 instructions apply to projects created with an older set of
 command-line tools that precede the `cordova` CLI utility. See The
 Command-Line Interface for information how to update the version of
-the CLI.  The following section shows how to upgrade from non-CLI
-projects.
+the CLI.  The following section shows how to upgrade from non-CLI and
+CLI projects.
 
 ## Upgrading 3.6.0 Projects to 4.0.0
 
