@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Config.xml 檔
 
@@ -107,13 +103,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`允許您鎖定方向和防止介面旋轉，在回應的方向變化。 可能的值是 `default` ， `landscape` ，或 `portrait` 。 示例：
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **注**： `default` 值是指*兩個*橫向或縱向方向被啟用。 如果您想要使用的每個平臺的預設設置 （通常縱向只），離開此標記出來的 `config.xml` 檔。
-
 ## 多平臺首選項
 
 下面的首選項應用到多個平臺，但不是向他們：
@@ -138,6 +127,22 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         
     
     適用于 iOS 和黑莓手機。
+
+*   `Orientation`（字串，預設值為 `default`）： 允許您鎖定方向並防止介面回應變化的方向旋轉。 可能的值是 `default`，`landscape` 或 `portrait`。 示例：
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    此外，您可以指定任何特定于平臺的定位值如果您放置 `<preference>` 元素中的 `<platform>` 元素：
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    適用于 Android、 iOS，WP8，亞馬遜火 OS 和火狐瀏覽器的作業系統。
+    
+    **注意**： `default` 值意味著科爾多瓦將帶定位首選項條目從平臺的清單/設定檔允許回退到其預設行為的平臺。
 
 ## *功能*元素
 

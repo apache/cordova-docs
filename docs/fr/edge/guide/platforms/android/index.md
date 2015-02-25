@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guide pour la plate-forme Android
 
@@ -124,15 +120,14 @@ Une fois que la fenêtre de Eclipse s'ouvre, un rouge **X** peut apparaître pou
 
 ## Générez le projet
 
-Si vous utilisez l'interface CLI dans le développement, le niveau supérieur du répertoire du projet `www` répertoire contenant les fichiers sources. Exécutez un de ces dans le répertoire du projet pour reconstruire l'application :
+Si vous utilisez l'interface CLI dans le développement, le niveau supérieur du répertoire du projet `www` répertoire contenant les fichiers sources. Courir à chacun d'entre eux dans le répertoire du projet pour reconstruire l'application :
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ cordova build # build toutes les plates-formes qui ont été ajouté $ cordova build debug build # android pour Android seulement $ cordova build android--debug # build debug pour seulement Android $ cordova build android--communiqué # build diffusion pour Android seul
     
 
 Si vous utilisez les outils de coquille spécifiques à Android en développement, il y a une approche différente. Une fois que vous générez le projet, source de l'application par défaut est disponible dans le `assets/www` sous-répertoire. Les commandes suivantes sont disponibles dans ses `cordova` sous-répertoire.
 
-Le `build` commande nettoie les fichiers projet et régénère le $ $ etAPP. Voici la syntaxe pour Mac et Windows. Les deux premiers exemples génèrent des informations de débogage, et le second signe les apps pour diffusion immédiate :
+Le `build` commande nettoie les fichiers projet et régénère le $ $ etAPP. Voici la syntaxe pour Mac et Windows. Les deux premiers exemples génèrent des informations de débogage, et le second s'appuie les apps pour diffusion immédiate :
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -140,6 +135,13 @@ Le `build` commande nettoie les fichiers projet et régénère le $ $ etAPP. Voi
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
     
+
+Lors de la construction pour libération, si vous ajoutez les définitions suivantes à votre `local.properties` du fichier, puis votre APK sera signé et alignée telles qu'il sera prêt pour téléchargement sur la boutique Google Play :
+
+        Key.Store=/Users/me/Developer/mykeystore.JKS key.alias=mykeyalias
+    
+
+Si le fichier de clés et/ou la clé d'un alias ont un mot de passe, le script de compilation vous demandera le mot de passe. Vous n'avez pas besoin de définir les mots de passe dans un fichier de propriétés. Si vous ne voulez pas éviter l'invite de commandes, vous pouvez les définir dans `local.properties` comme `key.store.password` et `key.alias.password` . Soyez conscient des problèmes de sécurité avec ces mots de passe si vous le faites.
 
 ## Configurer un émulateur
 
@@ -187,17 +189,17 @@ Pour ouvrir l'émulateur comme une demande distincte, l'AVD et cliquez sur **Dé
 
 À ce stade, vous pouvez utiliser le `cordova` utilitaire CLI pour déployer l'application sur l'émulateur de la ligne de commande :
 
-        $ cordova emulate android
+        $ cordova émuler android
     
 
 Sinon, utilisez l'interface de coquille alternative :
 
-        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run--émulateur
     
 
 Au lieu de compter sur n'importe quel émulateur est actuellement activé dans le SDK, vous pouvez faire référence à chacun des noms que vous fournissez :
 
-        $ /path/to/project/cordova/run --target=NAME
+        $ /path/to/project/cordova/run--cible = nom
     
 
 Cela pousse l'app à l'écran d'accueil et il lance :
@@ -206,9 +208,9 @@ Cela pousse l'app à l'écran d'accueil et il lance :
 
  [13]: img/guide/platforms/android/emulator2x.png
 
-Lorsque vous `run` le $ $ etAPP, vous aussi `build` il. Vous pouvez ajouter des `--debug` , `--release` , et `--nobuild` drapeaux pour contrôler comment il est construit, ou même si une reconstruction est nécessaire :
+Lorsque vous `run` l'app, vous aussi `build` il. Vous pouvez ajouter des `--debug` , `--release` , et `--nobuild` drapeaux pour contrôler comment il est construit, ou même si une reconstruction est nécessaire :
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $ /path/to/project/cordova/run--émulateur--nobuild
     
 
 Si au lieu de cela, vous travaillez au sein d'Eclipse, cliquez droit sur le projet et choisissez **Exécuter en tant que → Application Android**. Vous devrez peut-être spécifier un AVD si aucun n'est encore ouvert.
@@ -253,18 +255,18 @@ Après le téléchargement, exécuter le programme d'installation d'Intel, qui e
 
 ## Déployer sur le périphérique
 
-Pour repousser un $ $ etAPP directement sur l'appareil, assurez-vous que débogage USB est activé sur votre appareil tel que décrit sur le [Site des développeurs Android][20]et utiliser un câble mini USB à brancher sur votre système.
+Pour repousser une application directement sur l'appareil, assurez-vous que débogage USB est activé sur votre appareil tel que décrit sur le [Site des développeurs Android][20]et utiliser un câble mini USB à brancher sur votre système.
 
  [20]: http://developer.android.com/tools/device.html
 
 Vous pouvez utiliser cette commande CLI pour pousser l'application sur le périphérique :
 
-        $ cordova run android
+        cordova $ courir android
     
 
 .. .ou utiliser cette interface shell centrée sur Android :
 
-        $ /path/to/project/cordova/run --device
+        $ /path/to/project/cordova/run--dispositif
     
 
 Sans indicateurs spécifiés, la `run` commande détecte un appareil ou un émulateur en cours d'exécution si aucun périphérique n'est trouvée, sinon il vous invite à spécifier un émulateur.
@@ -275,11 +277,9 @@ Pour exécuter l'application à partir d'Eclipse, cliquez droit sur le projet et
 
 Ce qui suit génère un journal détaillé de l'application en cours d'exécution :
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        /path/to/project/cordova/log $ C:\path\to\project\cordova\log.bat
     
 
 Le texte suivant nettoie les fichiers de projet :
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        /path/to/project/cordova/clean $ C:\path\to\project\cordova\clean.bat

@@ -1,21 +1,11 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
 
-           http://www.apache.org/licenses/LICENSE-2.0
+licencia: licencia a la Apache Software Foundation (ASF) bajo acuerdos de licencia de uno o más colaborador. Consulte el archivo aviso distribuido con este trabajo para información adicional sobre la propiedad de derechos de autor. El ASF licencias este archivo a usted bajo la licencia Apache, versión 2.0 (la "licencia"); Usted no puede usar este archivo excepto en cumplimiento de la licencia. Usted puede obtener una copia de la licencia en
 
-         Unless required by applicable law or agreed to in writing,
-         software distributed under the License is distributed on an
-         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-         specific language governing permissions and limitations
-         under the License.
----
+           http://www.apache.org/licenses/LICENSE-2.0 a menos que requerido por la ley aplicable o por escrito, software distribuido bajo la licencia se distribuye en un "Tal cual" base, sin garantías o condiciones de ninguna clase, expresa o implícita.  Ver la licencia para el lenguaje específico que regulan los permisos y limitaciones
+    
+
+## bajo la licencia.
 
 # Próximos pasos
 
@@ -68,7 +58,7 @@ Y muchos, muchos más.
 
 ## 2) consideraciones de rendimiento
 
-Uno de los mayores errores que puede hacer un nuevo desarrollador Cordova es suponer que el rendimiento en una máquina de escritorio es el mismo que van a salir en un dispositivo móvil. Mientras que nuestros dispositivos móviles han conseguido más de gran alcance cada año, todavía carecen de la potencia y el rendimiento de un ordenador de sobremesa. Dispositivos móviles suelen tienen mucho menos memoria RAM y una GPU que dista mucho de su escritorio (o incluso portátil) hermanos. Una lista completa de sugerencias aquí sería demasiado, pero aquí están algunas cosas a tener en cuenta (con una lista de más recursos al final para futuras investigaciones).
+Uno de los mayores errores que puede hacer un nuevo desarrollador Cordova es suponer que el rendimiento que sacan de una máquina de escritorio es el mismo que van a salir en un dispositivo móvil. Mientras que nuestros dispositivos móviles han conseguido más de gran alcance cada año, todavía carecen de la potencia y el rendimiento de un ordenador de sobremesa. Dispositivos móviles suelen tienen mucho menos memoria RAM y una GPU que dista mucho de su escritorio (o incluso portátil) hermanos. Una lista completa de sugerencias aquí sería demasiado, pero aquí están algunas cosas a tener en cuenta (con una lista de más recursos al final para futuras investigaciones).
 
 **Haga clic en comparación con tacto** - el error más grande y más simple que usted puede hacer es utilizar eventos de clic. Mientras estos "trabajaren" muy bien en el móvil, mayoría de los dispositivos impone un retraso de 300ms sobre ellos con el fin de distinguir entre un toque y un toque "hold" evento. Usando `touchstart` , o `touchend` , resultará en una mejora dramática - 300ms no parece mucho, pero puede resultar en un desigual comportamiento y las actualizaciones de la interfaz de usuario. También debe considerar el hecho de que "tocar" eventos no son compatibles en los navegadores no-webkit, ver [CanIUse][10]. Con el fin de hacer frente a estas limitaciones, puedes retirada varias bibliotecas como HandJS y Fastouch.
 
@@ -101,7 +91,7 @@ Tenga en cuenta que los eventos online y offline, así como la API de conexión 
 
 Si su proyecto existente fue creado usando Cordova 3.x, puede actualizar el proyecto mediante la emisión de los siguientes:
 
-    cordova platform update platform-name ios, android, etc.
+    Cordova plataforma actualización plataforma-nombre ios, android, etc..
     
 
 Si su proyecto existente se creó en una versión anterior Cordova 3.x, probablemente sería mejor crear un nuevo proyecto de Cordova 3.x y luego copiar código y activos existentes de su proyecto para el nuevo proyecto. Pasos habituales:
@@ -121,8 +111,7 @@ Nota: algunos plugins no sean compatibles con la nueva versión de Córdoba. Si 
 
 A partir de 3.4 Cordova, no hay ningún mecanismo para actualizar plugins cambiante utilizando un único comando. En cambio, quitar el plugin y agregar nuevamente a su proyecto, y se instalará la nueva versión:
 
-    cordova plugin rm com.some.plugin
-    cordova plugin add com.some.plugin
+    Cordova plugin rm com.some.plugin cordova plugin agregar com.some.plugin
     
 
 Asegúrese de consultar la documentación del plugin actualizado, como puede que deba ajustar el código para trabajar con la nueva versión. También, asegurate de que la nueva versión del plugin funciona con la versión de su proyecto de Córdoba.

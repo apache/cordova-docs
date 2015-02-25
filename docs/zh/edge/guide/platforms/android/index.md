@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android 平臺指南
 
@@ -124,15 +120,14 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 ## 生成專案
 
-如果您在開發中使用 CLI，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任一內要重新生成應用程式的專案目錄：
+如果您在開發中使用 CLI，專案目錄的頂級 `www` 目錄中包含的原始程式碼檔。運行任何這些專案目錄重新生成該應用程式中：
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ 科爾多瓦 # 構建了添加的 $ 科爾多瓦的所有平臺都生成 android # 都生成調試只 Android $ 科爾多瓦建造安卓 — — 只有 Android $ 科爾多瓦都生成 android — — 唯一的 android 版本 # 都生成調試 # 都生成調試
     
 
 如果您使用特定于 android 作業系統外殼工具在發展中，有不同的方法。 一旦您生成該專案，預設應用程式的源是可用在 `assets/www` 子目錄。 隨後的命令都可用在其 `cordova` 子目錄。
 
-`build`命令，清理專案檔案並重新生成應用程式。這裡是為 Mac 和 Windows 的語法。 第一次兩個示例生成調試資訊，和第二個標誌發佈的應用程式：
+`build`命令，清理專案檔案並重新生成應用程式。這裡是為 Mac 和 Windows 的語法。 第一次兩個示例生成調試資訊，和第二個構建版本的應用程式：
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -141,9 +136,16 @@ license: Licensed to the Apache Software Foundation (ASF) under one
         C:\path\to\project\cordova\build.bat --release
     
 
+當生成版本中，如果您添加到下面的定義你 `local.properties` 檔，然後您的 APK 將得到簽署並對齊，它將會準備上傳到谷歌播放存儲：
+
+        key.store=/Users/me/Developer/mykeystore.jks key.alias=mykeyalias
+    
+
+如果金鑰存儲庫和/或使用別名的鍵有一個密碼，則生成腳本將提示您輸入密碼。 你不需要在屬性檔中定義的密碼。 如果你想要避免出現提示，您可以定義它們在 `local.properties` 為 `key.store.password` 和 `key.alias.password` 。 如果你這樣做，會意識到這些密碼的安全擔憂。
+
 ## 配置模擬器
 
-您可以使用任一 `cordova` CLI 實用程式或科爾多瓦的 Android 居中殼的工具在模擬器中運行應用程式。 不管怎樣，SDK 必須首先配置以顯示至少一個設備。 若要這樣做，請使用 Android SDK 管理器中，從 Eclipse 獨立運行的 JAVA 應用程式。 有兩種方法來打開它：
+您可以使用 `cordova` CLI 實用程式或科爾多瓦的安卓系統中心殼的工具，以在模擬器中運行應用程式。 無論哪種方式，SDK 必須首先配置顯示至少一個設備。 要這樣做，請使用 Android SDK 管理器，從 Eclipse 獨立運行的 JAVA 應用程式。 有兩種方法，以將其打開：
 
 1.  運行 `android` 命令列上。
 
@@ -165,7 +167,7 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
  [9]: img/guide/platforms/android/asdk_device.png
 
-新聞**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
+按**創建 AVD**，（可選） 修改該名稱，然後按**確定**以接受這些更改：
 
 ![][10]
 
@@ -177,7 +179,7 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
  [11]: img/guide/platforms/android/asdk_avds.png
 
-若要打開模擬器作為單獨的應用程式，選擇 AVD 然後按**開始**。它發射將在設備上，與其他控制項可用的硬體按鈕：
+若要打開模擬器作為單獨的應用程式，請選擇 AVD，然後按**開始**。它推出一樣在設備上，使用其他控制項可用的硬體按鈕:
 
 ![][12]
 
@@ -185,61 +187,61 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ## 部署到模擬程式
 
-此時你可以使用 `cordova` CLI 實用程式將應用部署到模擬程式從命令列：
+在這一點上，您可以使用 `cordova` CLI 實用程式部署到模擬器應用程式從命令列：
 
-        $ cordova emulate android
+        $ 科爾多瓦效仿安卓系統
     
 
-否則請使用備用外殼介面：
+否則使用備用殼介面：
 
-        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run — — 模擬器
     
 
-不依賴于哪個模擬器當前已啟用內 SDK，您可以引用每個由您提供的名稱：
+而不是依靠哪種模擬器當前啟用在 SDK 中，你可以引用每個由您提供的名稱：
 
-        $ /path/to/project/cordova/run --target=NAME
+        $ /path/to/project/cordova/run — — 目標 = 名稱
     
 
-這將應用程式推到主畫面，並啟動它：
+這將應用程式推送至主畫面，啟動它：
 
 ![][13]
 
  [13]: img/guide/platforms/android/emulator2x.png
 
-當你 `run` 這款應用，你還 `build` 它。 您可以附加額外 `--debug` ， `--release` ，和 `--nobuild` 標誌來控制它怎樣構建的或甚至是否需要重新生成：
+當你 `run` 應用程式，您也 `build` 它。 您可以附加額外 `--debug` ， `--release` ，和 `--nobuild` 標誌來控制它如何構建的或甚至是否重建是必需的：
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $ /path/to/project/cordova/run — — 模擬器 — — 不允許建造區域
     
 
-如果改為你使用的日食，按右鍵該專案，並選擇**運行作為 → Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
+如果相反你正在在 Eclipse 中，按右鍵該專案，並選擇**作為 → 運行 Android 應用程式**。可能要求您指定 AVD，如果都已經打開。
 
-為獲得更快的體驗，您可以使用 `Virtual Machine Acceleration` 來提高執行速度。 許多現代 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前, 你需要確定是否您當前發展系統的 CPU，支援一種以下的虛擬化技術：
+為獲得更快的體驗，您可以使用 `Virtual Machine Acceleration` 來提高執行速度。 許多現代的 Cpu 提供擴展外掛程式，以更有效地執行虛擬機器。 嘗試使用這種類型的加速度之前，您需要確定是否您當前的開發系統 CPU 支援一種以下的虛擬化技術：
 
 *   **英特爾虛擬化技術**(VT-x，vmx) →[英特爾 VT-x 支援的處理器清單][14]
 *   **AMD 虛擬化**（AMD-V，支援向量機），只支援 Linux （自 2006 年 5 月以來所有 Cpu AMD 都包括 AMD-V，閃龍除外）。
 
  [14]: http://ark.intel.com/products/virtualizationtechnology
 
-另一種方法，以找出您的英特爾處理器支援 VT-x 技術，它是由執行 `Intel Processor Identification Utility` ，為 `Windows` 你可以從英特爾[下載中心][15]，下載它，或者你可以使用[booteable 實用程式][16]，這是`OS Independent`.
+另一種方法來找出如果您的英特爾處理器支援 VT x 技術，它是由執行 `Intel Processor Identification Utility` ，為 `Windows` 您可以從英特爾[下載中心][15]，下載它，或者你可以使用[booteable 實用程式][16]，這是`OS Independent`.
 
  [15]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7838
  [16]: https://downloadcenter.intel.com/Detail_Desc.aspx?ProductID=1881&DwnldID=7840&lang=eng
 
-以後安裝和執行 `Intel Processor Identification Utility` 在 Windows 中，你會得到下面的視窗，以檢查你的 CPU 是否支援虛擬化技術：
+後安裝和執行 `Intel Processor Identification Utility` 在 Windows 中，你會得到下面的視窗，以檢查是否您的 CPU 支援虛擬化技術：
 
 ![][17]
 
  [17]: img/guide/platforms/android/intel_pid_util_620px.png
 
-為了加快模擬程式，您需要下載並安裝一個或多個 `Intel x86 Atom` 系統圖像，以及`Intel Hardware Accelerated Execution Manager (HAXM)`.
+為了加快模擬程式，您需要下載並安裝一個或多個 `Intel x86 Atom` 系統映射，以及`Intel Hardware Accelerated Execution Manager (HAXM)`.
 
-打開您的 Android SDK 經理，並選擇 `Intel x86 Atom` 系統圖像，無論您想要測試的版本。 然後轉至 `Extras` ，選擇 `Intel x86 Emulator Accelerator (HAXM)` ，並安裝這些套裝軟體：
+打開你的 Android SDK 經理，並選擇 `Intel x86 Atom` 為您想要測試哪種版本的系統映射。 然後轉到 `Extras` ，並選擇 `Intel x86 Emulator Accelerator (HAXM)` ，並安裝這些套裝軟體：
 
 ![][18]
 
  [18]: img/guide/platforms/android/asdk_man_intel_image_haxm.png
 
-下載後，運行英特爾安裝程式，這是在您 Android SDK 內可用 `extras/intel/Hardware_Accelerated_Execution_Manager` 。 **注**： `If you have any problems installing the package, you can find more information and step by step guidance check this` [英特爾條][19] .
+下載後，運行了英特爾的安裝程式，在 Android SDK 中有可用 `extras/intel/Hardware_Accelerated_Execution_Manager` 。 **注**： `If you have any problems installing the package, you can find more information and step by step guidance check this` [英特爾條][19] .
 
  [19]: http://software.intel.com/en-us/android/articles/speeding-up-the-android-emulator-on-intel-architecture
 
@@ -253,33 +255,31 @@ AVD 然後出現在**虛擬的 Android 設備**清單中：
 
 ## 將部署到設備
 
-要將應用程式推直接到設備，請確保您的設備上的[Android 開發者網站][20]，所述上啟用 USB 調試和使用一個迷你 USB 電纜，將其插入您的系統。
+若要應用程式直接推向該設備，請確保在您的設備在[安卓開發者網站][20]上，所述啟用 USB 調試，然後使用一個迷你的 USB 電纜把它插到你的系統。
 
  [20]: http://developer.android.com/tools/device.html
 
-您可以使用此 CLI 命令將推送到該設備的應用程式：
+可以使用此 CLI 命令以將應用程式推送到設備：
 
-        $ cordova run android
+        運行 android 的 $ 科爾多瓦
     
 
-...或是使用此 Android 居中外殼介面：
+你要麼使用此以 Android 為中心的 shell 介面：
 
-        $ /path/to/project/cordova/run --device
+        $ /path/to/project/cordova/run — — 設備
     
 
-無標誌指定， `run` 命令檢測到連接的設備或當前正在運行的模擬程式如果發現沒有設備，否則將提示您指定一個模擬器。
+無標誌指定， `run` 命令檢測到已連接的設備或當前正在運行的模擬程式，如果沒有設備被發現，否則將提示您指定一個模擬器。
 
-若要運行在 Eclipse 內的從 app，按右鍵該專案並選擇**作為 → 運行 Android 應用程式**.
+若要運行該應用程式從在 Eclipse 中的，按右鍵該專案，並選擇**作為 → 運行 Android 應用程式**.
 
 ## 其他命令
 
-以下將生成應用程式的詳細的的日誌，運行：
+下列生成詳細的日誌，該應用程式的運行時：
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        $ C:\path\to\project\cordova\log.bat /path/to/project/cordova/log
     
 
-以下清理專案檔案：
+以下清理的專案檔案：
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        $ C:\path\to\project\cordova\clean.bat /path/to/project/cordova/clean

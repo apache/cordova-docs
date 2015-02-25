@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Guía de la plataforma Android
 
@@ -126,13 +122,12 @@ Una vez que se abre la ventana de Eclipse, puede aparecer una **X** de color roj
 
 Si utilizas la CLI en el desarrollo, el directorio del proyecto es de alto nivel `www` directorio contiene los archivos de origen. Ejecutar cualquiera de éstos dentro del directorio del proyecto para la reconstrucción de la aplicación:
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ cordova build # construir construcción todas las plataformas que fueron agregados $ cordova # androide construir depuración para Android sólo $ cordova construir android--debug # construir depuración paraAndroid sólo Android $ cordova construir--versión # construir versión para Android sólo
     
 
 Si está utilizando las herramientas de shell específicas para Android en desarrollo, hay un enfoque diferente. Una vez que se genera el proyecto, fuente de la aplicación por defecto está disponible en el `assets/www` subdirectorio. Los comandos están disponibles en su `cordova` subdirectorio.
 
-El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aquí está la sintaxis para Mac y Windows. El primer par de ejemplos generará información de depuración, y la segunda firma las aplicaciones para el lanzamiento:
+El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aquí está la sintaxis para Mac y Windows. El primer par de ejemplos generará información de depuración, y la segunda crea las aplicaciones para el lanzamiento:
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -141,9 +136,16 @@ El `build` comando limpia archivos de proyecto y reconstruye la aplicación. Aqu
         C:\path\to\project\cordova\build.bat --release
     
 
+Al construir para el lanzamiento, si añades las siguientes definiciones a tu `local.properties` de archivos, entonces tu APK firmado y alineada que estará listo para subir a la tienda de Google Play:
+
+        Key.Store=/users/me/Developer/mykeystore.jks key.alias=mykeyalias
+    
+
+Si el almacén de claves o la clave con alias tiene una contraseña, el script le pedirá la contraseña. No necesitas definir las contraseñas en un archivo de propiedades. Si quieres evitar el símbolo del sistema, se pueden definir en `local.properties` como `key.store.password` y `key.alias.password` . Ser conscientes de las preocupaciones de seguridad con esas claves si lo hace.
+
 ## Configurar un emulador
 
-Se puede utilizar ya sea la `cordova` CLI utilidad o cáscara de Android-centrado de Cordova Herramientas para ejecutar una aplicación en un emulador. De cualquier manera, el SDK primero debe configurarse para mostrar al menos un dispositivo. Para ello, utilice el Android SDK Manager, una aplicación Java que funciona por separado del Eclipse. Hay dos formas de abrirlo:
+Se puede utilizar ya sea la `cordova` CLI utilidad o cáscara de Android-centrado de Cordova Herramientas para ejecutar una aplicación en un emulador. De cualquier manera, el SDK primero debe configurarse para mostrar al menos un dispositivo. Para ello, utilice el Android SDK Manager, una aplicación Java que funciona por separado del Eclipse. Hay dos maneras para abrirlo:
 
 1.  Ejecutar `android` en la línea de comandos.
 
@@ -159,25 +161,25 @@ Una vez abierto, el Android SDK Manager muestra varias bibliotecas de tiempo de 
 
  [8]: img/guide/platforms/android/asdk_window.png
 
-Elegir **Tools → Manage AVDs** (Android dispositivos virtuales), luego elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
+Elija **Herramientas → administrar AVDs** (Android dispositivos virtuales), a continuación elegir cualquier artículo de **Definiciones de dispositivos** en el cuadro de diálogo resultante:
 
 ![][9]
 
  [9]: img/guide/platforms/android/asdk_device.png
 
-Pulse **Create AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
+Pulse **Crear AVD**, opcionalmente modificar el nombre, luego pulse **OK** para aceptar los cambios:
 
 ![][10]
 
  [10]: img/guide/platforms/android/asdk_newAVD.png
 
-La AVD entonces aparece en la lista de **Dispositivos Android Virtual**:
+La AVD entonces aparece en la lista de **Dispositivos Android Virtual** :
 
 ![][11]
 
  [11]: img/guide/platforms/android/asdk_avds.png
 
-Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Lanza tanto como en el dispositivo, con controles adicionales disponibles para los botones de hardware:
+Para abrir el emulador como una aplicación independiente, seleccione la AVD y presione **Start**. Se lanza como lo haría en el dispositivo, con controles adicionales disponibles para los botones de hardware:
 
 ![][12]
 
@@ -187,17 +189,17 @@ Para abrir el emulador como una aplicación independiente, seleccione la AVD y p
 
 En este punto se puede utilizar la `cordova` utilidad CLI para desplegar la aplicación en el emulador desde la línea de comandos:
 
-        $ cordova emulate android
+        $ cordova emular android
     
 
 De lo contrario utilice la interfaz de shell alterno:
 
-        $ /path/to/project/cordova/run --emulator
+        $ /path/to/project/cordova/run--emulador
     
 
 En lugar de depender de cualquier emulador está habilitado actualmente dentro del SDK, puede hacer referencia a cada uno de los nombres que usted suministra:
 
-        $ /path/to/project/cordova/run --target=NAME
+        $ /path/to/project/cordova/run--target = nombre
     
 
 Esto empuja la aplicación a la pantalla de inicio y lo lanza:
@@ -208,10 +210,10 @@ Esto empuja la aplicación a la pantalla de inicio y lo lanza:
 
 Cuando te `run` la aplicación, también `build` lo. Se pueden añadir adicional `--debug` , `--release` , y `--nobuild` banderas para controlar cómo se construye, o incluso si es necesaria una reconstrucción:
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $ /path/to/project/cordova/run--emulador--nobuild
     
 
-Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **Run As → Android Application**. Se le podría especificar una AVD si ninguno está ya abierto.
+Si en cambio están trabajando dentro de Eclipse, haga clic derecho en el proyecto y elija **Ejecutar como → aplicación para Android**. Se le podría especificar una AVD si no aparece ninguna ya abierto.
 
 Para una experiencia más rápida, puede utilizar el `Virtual Machine Acceleration` para mejorar la velocidad de ejecución. Muchas CPUs modernas ofrecen extensiones para ejecutar máquinas virtuales más eficientemente. Antes de usar este tipo de aceleración, es necesario determinar si CPU de su sistema actual de desarrollo, uno admite las siguientes tecnologías de virtualización:
 
@@ -253,18 +255,18 @@ Después de la descarga, ejecute el instalador de Intel, que está disponible en
 
 ## Desplegar en el dispositivo
 
-Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][20] y usar un mini cable USB para conectarlo a su sistema.
+Para empujar una aplicación directamente al dispositivo, asegúrese de depuración USB está habilitado en el dispositivo como se describe en el [Sitio para desarrolladores de Android][20]y utilice un cable mini-USB para conectarlo a su sistema.
 
  [20]: http://developer.android.com/tools/device.html
 
 Puede utilizar este comando CLI para empujar la aplicación para el dispositivo:
 
-        $ cordova run android
+        $ cordova corre android
     
 
 .. .o utilice esta interfaz Android centrado en la cáscara:
 
-        $ /path/to/project/cordova/run --device
+        $ /path/to/project/cordova/run--dispositivo
     
 
 Con sin banderas especificados, el `run` comando detecta un dispositivo conectado, o un emulador ejecutando si no se encuentra ningún dispositivo, de lo contrario se solicita para especificar un emulador.
@@ -275,11 +277,9 @@ Para ejecutar la aplicación desde dentro de Eclipse, haga clic derecho en el pr
 
 Los siguientes genera un registro detallado de la aplicación que se ejecuta:
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        $ /path/to/project/cordova/log C:\path\to\project\cordova\log.bat
     
 
 A continuación limpia los archivos del proyecto:
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        $ /path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat

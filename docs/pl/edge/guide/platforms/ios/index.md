@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Przewodnik platformy iOS
 
@@ -31,9 +27,9 @@ Narzędzia wiersza polecenia powyżej odnosi się do wcześniejszych Cordova 3.0
 
 ## Wymagania i wsparcie
 
-Apple ® narzędzia potrzebne do tworzenia aplikacji iOS tylko na systemie operacyjnym na Intel oparty Mac OS X. Xcode ® 4.5 (minimalna wymagana wersja) działa tylko na OS X 10.7 (Lion) wersja lub większym i obejmuje iOS 6 SDK (Software Development Kit). Do składania aplikacji na Apple App Store℠ wymaga najnowszej wersji narzędzia Apple.
+Apple ® narzędzia potrzebne do tworzenia aplikacji iOS tylko na systemie operacyjnym na Intel oparty Mac OS X. Xcode ® 6.0 (minimalna wymagana wersja) działa tylko na OS X w wersji 10.9 (Mavericks) lub większym i zawiera iOS 8 SDK (Software Development Kit). Do składania aplikacji na Apple App Store℠ wymaga najnowszej wersji narzędzia Apple.
 
-Możesz przetestować wiele cech Cordova, przy użyciu emulatora iOS instalowane z iOS SDK i Xcode, ale potrzebna jest rzeczywiste urządzenie pełni przetestować wszystkie funkcje urządzenia aplikacji przed złożeniem do App Store. Urządzenie musi mieć co najmniej iOS 5.x zainstalowane, w wersji minimalnej iOS obsługiwane od Cordova 2.3. Urządzenia towarzyszące obejmują wszystkie iPad ® modeli, iPhone ® 3GS i powyżej i iPod ® Touch 3. generacji lub później. Aby zainstalować aplikacje na urządzenia, należy również członkiem Apple [iOS Developer Program][1], który kosztuje 99 dolarów rocznie. Ten przewodnik pokazuje, jak wdrożyć aplikacje iOS emulator, dla którego nie musisz zarejestrować się w programie autora.
+Możesz przetestować wiele cech Cordova, przy użyciu emulatora iOS instalowane z iOS SDK i Xcode, ale potrzebna jest rzeczywiste urządzenie pełni przetestować wszystkie funkcje urządzenia aplikacji przed złożeniem do App Store. Do składania aplikacji na Apple App Store℠ wymaga najnowszej wersji narzędzia Apple. Aby zainstalować aplikacje na urządzenia, należy również członkiem Apple [iOS Developer Program][1], który kosztuje 99 dolarów rocznie. Ten przewodnik pokazuje, jak wdrożyć aplikacje iOS emulator, dla którego nie musisz zarejestrować się w programie autora.
 
  [1]: https://developer.apple.com/programs/ios/
 

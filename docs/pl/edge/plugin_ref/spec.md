@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Specyfikacja plugin
 
@@ -370,6 +366,26 @@ Obsługiwanych atrybutów:
 
 *   `arch`: Architektura która `.so` plik został zbudowany, albo `device` lub`simulator`.
 
+Na platformie Windows element `<lib-file>` umożliwia włączenie `< SDKReference >` w wygenerowane pliki projektu systemu Windows.
+
+Obsługiwanych atrybutów:
+
+*   `src` (wymagane): Nazwa zestawu SDK do (który będzie używany jako wartość atrybut `Include` wygenerowane elementu `< SDKReference >`).
+
+*   `arch`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
+
+*   `target`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+
+*   `versions`: wskazuje, że `< SDKReference >` tylko powinny być uwzględniane podczas tworzenia dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
+
+Przykłady:
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+    
+
 ## *ramy* Elementu
 
 Określa ramy (zwykle jest częścią platformy OS), na którym zależy od wtyczka.
@@ -382,17 +398,34 @@ Przykłady:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-`src`Atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
+`src` atrybut określa ramy, w które plugman próbuje dodać do projektu Cordova, w sposób prawidłowy dla danej platformy.
 
-Opcjonalny `weak` atrybut jest wartością logiczną wskazującą, czy ramy powinny być słabo powiązane. Wartością domyślną jest`false`.
+Atrybut opcjonalny `weak` jest wartością logiczną wskazującą, czy ramy powinny być słabo powiązane. Wartością domyślną jest `false`.
 
-Opcjonalny `custom` atrybut jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false` . ***Na Android*** to określa, jak leczyć **src**. Jeśli `true` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
+Atrybut opcjonalny `custom` jest wartością logiczną wskazującą, czy RAM jest jeden, który jest częścią plików plugin (tak, to nie jest ramy systemu). Wartością domyślną jest `false`. ***Na Android*** to określa, jak leczyć **src**. Jeśli `true` **src** jest ścieżką względną z katalogu projektu aplikacji, inaczej--z katalogu Android SDK.
 
-Opcjonalny `type` atrybut jest ciągiem wskazującym typ struktury, aby dodać. Obecnie tylko `projectReference` jest obsługiwany i tylko na Windows 8. Za pomocą `custom='true'` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilacji + link etapy projektu cordova. Zasadniczo jest to tylko sposób obecnie że ramy 'niestandardowe' można kierować wielu architektur, jak są one wyraźnie zbudowane jako zależność przez aplikację cordova odwołujący się.
+Atrybut opcjonalny `type` jest ciągiem wskazującym typ struktury, aby dodać. Obsługiwane jest obecnie tylko `projectReference` i tylko dla Windows. Za pomocą `custom="true"` i `type='projectReference'` będzie dodać odwołanie do projektu, który zostanie dodany do kompilacji + link etapy projektu cordova. Zasadniczo jest to tylko sposób obecnie że ramy 'niestandardowe' można kierować wielu architektur, jak są one wyraźnie zbudowane jako zależność przez aplikację cordova odwołujący się.
 
-Opcjonalny `parent` atrybut jest obecnie obsługiwany tylko na Android. Ustawia ścieżkę względną katalogu zawierające sub-projekt, do którego należy dodać odwołanie. Wartością domyślną jest `.` , czyli projektu aplikacji. Pozwala na dodawanie odwołania między projektami jak w tym przykładzie:
+Atrybut opcjonalny `parent` jest obecnie obsługiwany tylko na Android. Ustawia ścieżkę względną katalogu zawierające sub-projekt, do którego należy dodać odwołanie. Wartością domyślną jest `.`, czyli projektu aplikacji. Pozwala na dodawanie odwołania między projektami jak w tym przykładzie:
 
-    < ramy src = "FeedbackLib" niestandardowe = "true" / >< ramach src = niestandardowe "Dodatki/android/wsparcie/v7/appcompat" = "false" rodzic = "FeedbackLib" / >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    
+
+Na platformie Windows obsługuje trzy dodatkowe atrybuty (wszystkie opcjonalne) aby zawęzić przy ramach należy uwzględnić:
+
+`arch` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla określonej architektury. Obsługiwane wartości są `x86`, `x64` i `ARM`.
+
+Atrybut `target` wskazuje, że framwork tylko należy włączyć, gdy budynek dla określonego miejsce docelowe typu urządzenia. Obsługiwane wartości są `win` (lub `windows`), `phone` lub `all`.
+
+`versions` atrybut wskazuje, że ramach tylko należy włączyć, gdy budynek dla wersji, które odpowiadają określonej wersji ciąg. Wartość może być dowolny ciąg zakres semantyczny wersja ważny węzeł.
+
+Przykłady użycia tych Windows określonych atrybutów:
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *informacji* Elementu
@@ -410,26 +443,26 @@ Dodatkowe informacje dla użytkowników. Jest to przydatne, gdy potrzebujesz dod
 
 ## Zmienne
 
-W niektórych przypadkach plugin może być konieczne do zmiany konfiguracji zależy od aplikacji miejsce docelowe. Na przykład, aby zarejestrować się do C2DM na Android, aplikacji o identyfikatorze pakietu `com.alunny.message` wymaga uprawnienia takie jak:
+W niektórych przypadkach plugin może być konieczne do zmiany konfiguracji zależy od aplikacji miejsce docelowe. Na przykład aby zarejestrować się do C2DM na Android, aplikacji o identyfikatorze pakietu jest `com.alunny.message` wymaga uprawnienia takie jak:
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-W takich przypadkach, gdzie zawartość dodaje z `plugin.xml` pliku nie jest znana przed czasem, zmiennych może być wskazany przez dolara, a następnie przez szereg liter, cyfr lub podkreśleń. Dla powyższego przykładu `plugin.xml` plik obejmowałyby tego tagu:
+W takich przypadkach, w których zawartość z pliku `plugin.xml` nie jest znana przed czasem zmiennych może być wskazany przez dolara, a następnie przez szereg liter, cyfr lub podkreśleń. Dla powyższego przykładu plik `plugin.xml` obejmowałyby tego tagu:
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman zastępuje zmienną odniesienia określonej wartości lub ciąg pusty, jeśli nie znaleziono. Wartość zmiennej odniesienia może być wykryte (w tym przypadku z `AndroidManifest.xml` pliku) lub określony przez użytkownika narzędzia; proces dokładnej zależy od konkretnego narzędzia.
+plugman zastępuje zmienną odniesienia określonej wartości lub ciąg pusty, jeśli nie znaleziono. Wartość zmiennej odniesienia mogą być wykryte (w tym przypadku z pliku `AndroidManifest.xml`) lub określony przez użytkownika narzędzia; dokładny proces jest zależne od konkretnego narzędzia.
 
 plugman na życzenie użytkowników, aby określić wtyczki wymagane zmienne. Na przykład klucze C2M i Google Maps API może być określony jako argument wiersza polecenia:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Aby zmienna obowiązkowe, `<platform>` etykieta musi zawierać `<preference>` tagu. Na przykład:
+Aby zmienna obowiązkowe, tagu `<platform>` musi zawierać tagu `<preference>`. Na przykład:
 
     <preference name="API_KEY" />
     
@@ -440,4 +473,4 @@ Niektóre nazwy zmiennych powinny być zastrzeżone, wymienionych poniżej.
 
 ## $PACKAGE_NAME
 
-Domeny odwrotnej styl unikatowy identyfikator pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `package` atrybut najwyższego poziomu `manifest` element w `AndroidManifest.xml` pliku.
+Identyfikator unikatowy styl domeny odwrotnej pakietu, odpowiadające `CFBundleIdentifier` na iOS lub `package` atrybut element najwyższego poziomu `manifest` pliku `AndroidManifest.xml`.

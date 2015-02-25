@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android プラットフォーム ガイド
 
@@ -126,13 +122,12 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 開発で CLI を使用している場合は、プロジェクト ディレクトリの最上位 `www` ディレクトリにソース ファイルが含まれています。アプリを再構築するには、プロジェクト ディレクトリ内のこれらのいずれかを実行します。
 
-        $ cordova build
-        $ cordova build android   # do not rebuild other platforms
+        $ コルドバ ビルド # 追加 $ コルドバをされたすべてのプラットフォームのビルド ビルド android ＃ ビルド デバッグの唯一のアンドロイド $ コルドバ ビルド android--デバッグ # ビルド デバッグのみ $ コルドバ ビルド アンドロイドアンドロイド--唯一のアンドロイドのための # ビルドのリリースのために
     
 
 開発で人造人間に固有のシェルのツールを使用している場合、別のアプローチがあります。 プロジェクトを生成した後、既定のアプリケーションのソースは、 `assets/www` サブディレクトリ。 後続のコマンドがその `cordova` サブディレクトリ。
 
-`build`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。ここでは、Mac と Windows の両方の構文です。 例の最初のペアを生成するデバッグ情報と 2 番目のリリースのアプリに署名します。
+`build`コマンドをプロジェクト ファイルを消去して、アプリを再構築します。ここでは、Mac と Windows の両方の構文です。 例の最初のペアを生成するデバッグ情報と 2 番目のリリースのアプリを構築します。
 
         $ /path/to/project/cordova/build --debug
         C:\path\to\project\cordova\build.bat --debug
@@ -140,6 +135,13 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
         $ /path/to/project/cordova/build --release
         C:\path\to\project\cordova\build.bat --release
     
+
+次の定義を追加する場合は、リリースのビルド時、 `local.properties` ファイルを APK は署名を取得し、Google Play ストアにアップロードする準備がされるように配置されます。
+
+        key.store=/Users/me/Developer/mykeystore.jks key.alias=mykeyalias
+    
+
+ビルド スクリプトがあれば、キーストアおよび別名キー、パスワード、パスワードの求められます。 プロパティ ファイルでパスワードを定義する必要はありません。 それらを定義できます、プロンプトを回避する場合は、 `local.properties` として `key.store.password` と `key.alias.password` 。 これを行う場合、これらのパスワードでセキュリティ上の懸念の注意します。
 
 ## エミュレーターを構成します。
 
@@ -187,17 +189,17 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 この時点で使用することができます、 `cordova` CLI ユーティリティ コマンドラインからエミュレーターにアプリケーションを配置します。
 
-        $ cordova emulate android
+        $ コルドバ android をエミュレートします。
     
 
 それ以外の場合、代替シェル インターフェイスを使用します。
 
-        $ /path/to/project/cordova/run --emulator
+        $/path/to/project/cordova/run - エミュレーター
     
 
 エミュレーターは、現在、SDK 内有効に頼らずに指定する名前ごとに参照できます。
 
-        $ /path/to/project/cordova/run --target=NAME
+        $/path/to/project/cordova/run - ターゲット名 =
     
 
 これは、ホーム画面にアプリをプッシュし、それを起動します。
@@ -208,7 +210,7 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 ときにあなた `run` 、アプリは、あなたも `build` それ。 追加を追加することができます `--debug` 、 `--release` 、および `--nobuild` 構築方法やも、再構築が必要かどうかを制御するフラグ。
 
-        $ /path/to/project/cordova/run --emulator --nobuild
+        $/path/to/project/cordova/run - エミュレーター - nobuild
     
 
 代わりに Eclipse 内で作業している、プロジェクトを右クリックし、 **Android アプリケーション → として実行**を選択します。どれもが既に開かれている場合、AVD を指定しようとしています。
@@ -259,12 +261,12 @@ Eclipse ウィンドウが開いたら、未解決の問題を示す赤い**X**�
 
 この CLI コマンドを使用してアプリをデバイスにプッシュすることができます。
 
-        $ cordova run android
+        android を実行 $ コルドバ
     
 
 .. またはこの人造人間中心のシェル インターフェイスを使用します。
 
-        $ /path/to/project/cordova/run --device
+        $/path/to/project/cordova/run - デバイス
     
 
 指定したフラグなしで、 `run` コマンドはデバイスが見つからない場合、接続先のデバイスまたは現在実行中のエミュレーターを検出し、それ以外の場合、エミュレーターを指定するよう求められます。
@@ -275,11 +277,9 @@ Eclipse 内からアプリケーションを実行するには、プロジェク
 
 実行時のアプリケーションの詳細なログを生成します。
 
-        $ /path/to/project/cordova/log
-        C:\path\to\project\cordova\log.bat
+        $/path/to/project/cordova/log C:\path\to\project\cordova\log.bat
     
 
 次のプロジェクト ファイルが消去されます。
 
-        $ /path/to/project/cordova/clean
-        C:\path\to\project\cordova\clean.bat
+        $/path/to/project/cordova/clean C:\path\to\project\cordova\clean.bat

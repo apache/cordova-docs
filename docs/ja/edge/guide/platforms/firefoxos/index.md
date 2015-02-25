@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Firefox の OS プラットフォームのガイド
 
@@ -58,48 +54,35 @@ Firefox の OS アプリ www ディレクトリ内に Firefox のマニフェス
     cordova plugin add org.apache.cordova.vibration
     
 
-また、カスタム manifest.webapp ファイルは以下の少なくとも、テスト-アプリ/www ディレクトリに追加する必要があります。
-
-    { 
-        "launch_path":"/index.html",
-        "installs_allowed_from":["*"],
-        "version":"0.0.1",
-        "name":"My app",
-        "pkgName":"io.cordova.hellocordova",
-        "icons": {
-            "128": "/img/logo.png"
-        }
-    }
-    
-
-Firefox アプリケーション マニフェストの詳細については、[アプリ マニフェストの][4]MDN にをお読みください。
-
- [4]: https://developer.mozilla.org/en-US/Apps/Developing/Manifest
-
 アプリのコードが書き込まれるとき、変更を使用してプロジェクトに追加した Firefox OS アプリに配置します。
 
-    $ cordova prepare
+    $ cordova prepare firefoxos
     
 
-ビルド ステップ (すなわちコルドバ ビルド) が必要ないこと Firefox OS プラットフォームに展開する場合 Firefox の OS アプリが HTML ベースおよびしたがってコンパイルされていません注意してください。
+パッケージ化されたアプリケーションを作成するには、1 つのプラットフォーム/firefoxos/www ディレクトリの zip することができます。また、単にそれを使用して構築できます。
+
+    $ cordova build firefoxos
+    
+
+Firefox OS パッケージ アプリは platforms/firefoxos/build/package.zip に建設されます。
 
 ## テストとデバッグ
 
-Firefox OS[アプリケーション マネージャー][5]を使用してアプリをテストすることができます。.
+Firefox の OS [Web IDE][4] を使用してアプリをテストすることができます。.
 
- [5]: https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
+ [4]: https://developer.mozilla.org/en-US/docs/Tools/WebIDE
 
-アプリ マネージャー、テスト デバイス/シミュレータに接続し「パッケージ化アプリケーションを追加」オプションを選択してテスト-アプリケーション/プラットフォーム/firefoxos/www をポイントを確認してください/ディレクトリ マネージャーのインターフェイスに、アプリを含める。
+Web IDE、テスト デバイス/シミュレータに接続し「オープン パッケージ アプリ」オプションを選択して、テスト アプリケーション/プラットフォーム/firefoxos/www をポイントを確認してください/ディレクトリ マネージャーのインターフェイスに、アプリを含める。
 
-ここで、テスト デバイス/シミュレータ (「更新」ボタン) と、アプリをインストールできます。"Debug"ボタンし、アプリをデバッグしてコードを編集することができますライブを使用してください。
+ここで、テスト デバイス/シミュレータ (「再生」ボタン) と、アプリをインストールできます。「一時停止」ボタンし、アプリをデバッグしてコードを編集することができますライブを使用してください。
 
-注: アプリを公開する前にする必要があります[アプリケーション検証ツール][6]を使用してそれを検証します。.
+注: アプリを公開する前にする必要があります [アプリケーション検証ツール][5] を使用してそれを検証します。.
 
- [6]: https://marketplace.firefox.com/developers/validator
+ [5]: https://marketplace.firefox.com/developers/validator
 
 ## Firefox のマーケットプ レースでアプリの公開
 
-アプリを Firefox マーケットプ レースに提出または自分で発行することができます。 MDN; これを行う方法についての詳細を見つけるために、 [Firefox 市場ゾーン][7]を訪問します。[アプリの発行オプション][8]は、起動する最高の場所です。
+アプリを Firefox マーケットプ レースに提出または自分で発行することができます。 MDN; これを行う方法についての詳細を見つけるために、[Firefox 市場ゾーン][6] を訪問します。[アプリの発行オプション][7] は、起動する最高の場所です。
 
- [7]: https://developer.mozilla.org/en-US/Marketplace
- [8]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options
+ [6]: https://developer.mozilla.org/en-US/Marketplace
+ [7]: https://developer.mozilla.org/en-US/Marketplace/Publishing/Publish_options

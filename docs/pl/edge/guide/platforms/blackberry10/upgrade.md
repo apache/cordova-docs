@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Uaktualnianie BlackBerry 10
 
 Ten poradnik pokazuje jak zmodyfikować BlackBerry projektów do uaktualnienia ze starszych wersji Cordova. Większość tych instrukcji ma zastosowanie do projektów utworzonych w starszych zestaw narzędzi wiersza polecenia, które poprzedzają `cordova` Narzędzia CLI. Zobacz interfejs wiersza poleceń do informacji jak zaktualizować do wersji CLI.
+
+## Projekty modernizacji 3.6.0 4.0.0
+
+Projekty-CLI, uruchom:
+
+        bin/update path/to/project
+    
+
+Dla projektów CLI:
+
+1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
+
+2.  Uruchom `cordova platform update blackberry` w istniejących projektach.
 
 ## Uaktualnienie do 3.2.0 od 3.1.0
 
@@ -27,11 +36,11 @@ Dla projektów, które zostały utworzone z cordova CLI:
 
 1.  Aktualizacja `cordova` wersji CLI. Zobacz interfejs wiersza poleceń.
 
-2.  Uruchom`cordova platform update blackberry`
+2.  Uruchom `cordova platform update blackberry`
 
 Dla projektów nie stworzony z cordova CLI Uruchom:
 
-        bin/Aktualizuj < project_path >
+        bin/update <project_path>
     
 
 ## Uaktualnić do 3.1.0 3.0.0
@@ -82,7 +91,7 @@ Dla BlackBerry 10:
 
 4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Staje się to w domu zaktualizowanego projektu.
 
-5.  Skopiować źródła projektów od starego projektu `/www` katalogu do nowego projektu `/www` katalogu.
+5.  Skopiować źródła projektów od starego projektu `/ www` katalogu do nowego projektu `/ www` katalogu.
 
 6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
@@ -118,7 +127,7 @@ BlackBerry 10 korzysta z nowych narzędzi CLI i zarządza podstawowe API jako wt
 
 4.  Tworzenie nowego projektu, opisanych w przewodniku narzędziem BlackBerry powłoki. Staje się to w domu zaktualizowanego projektu.
 
-5.  Skopiować źródła projektów od starego projektu `/www` katalogu do nowego projektu `/www` katalogu.
+5.  Skopiować źródła projektów od starego projektu `/ www` katalogu do nowego projektu `/ www` katalogu.
 
 6.  Aktualizacja Cordova odniesienia skrypt w `www/index.html` pliku (i innych plików, które zawierają odniesienia skrypt) do nowej `cordova.js` pliku.
 
@@ -144,7 +153,7 @@ Dla BlackBerryOS/Playbook:
 
 ## Projekty modernizacji 2.6.0 2.7.0
 
-1.  Pobierz i rozpakuj źródła Cordova 2.7.0 na miejsce stałe katalogu na dysku twardym, na przykład do`~/Cordova-2.7.0`.
+1.  Pobierz i rozpakuj źródła Cordova 2.7.0 na miejsce stałe katalogu na dysku twardym, na przykład do `~/Cordova-2.7.0`.
 
 2.  Zamknąć uruchomione narzędzi SDK: Eclipse, Momentics i tym podobne.
 
@@ -381,12 +390,14 @@ Aktualizacja tylko `www` katalogu:
 
 6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< nazwa pluginu "Kontakt" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Do:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< nazwa pluginu "Kontakty" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
@@ -407,12 +418,14 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
-         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< plugin name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Do:
     
-         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< plugin name = "Kontakty" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   Aby uaktualnić 1.8.0, proszę przejść od 1.7.0
@@ -435,12 +448,14 @@ Aktualizacja tylko `www` katalogu:
 
 6.  Aktualizacja `www/plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< nazwa pluginu "Kontakt" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Do:
     
-        < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< nazwa pluginu "Kontakty" value="org.apache.cordova.pim.Contact"/ = >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
@@ -461,9 +476,11 @@ Aktualizacja katalogu sample (tj, aktualizacji za pomocą narzędzia):
 
 8.  Otwarte `www` katalog i aktualizacji `plugins.xml` pliku. Dwie wtyczki zmienił ich etykiecie nazw usług. Zmienić stare wpisy do przechwytywania i kontaktu wtyczki od:
     
-         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.media.MediaCapture"/ >< plugin name = "Kontakt" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     Do:
     
-         < nazwa pluginu = "Przechwytywania" value="org.apache.cordova.capture.MediaCapture"/ >< plugin name = "Kontakty" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS guida piattaforma
 
@@ -31,9 +27,9 @@ Gli strumenti della riga di comando qui sopra si riferiscono a versioni preceden
 
 ## Requisiti e supporto
 
-Apple ® gli strumenti necessari per costruire applicazioni iOS eseguite solo sul sistema operativo OS X sui Mac basati su Intel. Xcode ® 4.5 (la versione minima richiesta) funziona solo su OS X versione 10.7 (Lion) o maggiore e include l'iOS 6 SDK (Software Development Kit). A presentare le apps per il App Store℠ Apple richiede le ultime versioni degli strumenti Apple.
+Apple ® gli strumenti necessari per costruire applicazioni iOS eseguite solo sul sistema operativo OS X sui Mac basati su Intel. Xcode ® 6.0 (la versione minima richiesta) funziona solo su OS X versione 10.9 (Mavericks) o maggiore e comprende 8 iOS SDK (Software Development Kit). A presentare le apps per il App Store℠ Apple richiede le ultime versioni degli strumenti Apple.
 
-È possibile testare molte delle funzionalità di Cordova utilizzando l'emulatore di iOS installato con l'iOS SDK e Xcode, ma è necessario un dispositivo reale pienamente tutte le caratteristiche del dispositivo dell'app testare prima di presentare all'App Store. Il dispositivo deve avere almeno iOS 5. x installato, la versione di iOS minima supportata a partire da 2.3 a Cordova. Dispositivi di sostegno comprendono tutti gli iPad ® modelli, iPhone ® 3GS e sopra e iPod ® Touch di terza generazione o successiva. Per installare applicazioni su un dispositivo, è necessario essere anche un membro di Apple [iOS Developer Program][1], che costa $99 all'anno. Questa guida viene illustrato come distribuire applicazioni all'emulatore di iOS, per cui non è necessario registrarsi con il programma per gli sviluppatori.
+È possibile testare molte delle funzionalità di Cordova utilizzando l'emulatore di iOS installato con l'iOS SDK e Xcode, ma è necessario un dispositivo reale pienamente tutte le caratteristiche del dispositivo dell'app testare prima di presentare all'App Store. Il dispositivo deve avere almeno iOS 6. x installato, la versione di iOS minima supportata a partire da 3.0 a Cordova. Dispositivi di sostegno comprendono tutti gli iPad ® modelli, iPhone ® 3GS e sopra e iPod ® Touch di terza generazione o successiva. Per installare applicazioni su un dispositivo, è necessario essere anche un membro di Apple [iOS Developer Program][1], che costa $99 all'anno. Questa guida viene illustrato come distribuire applicazioni all'emulatore di iOS, per cui non è necessario registrarsi con il programma per gli sviluppatori.
 
  [1]: https://developer.apple.com/programs/ios/
 

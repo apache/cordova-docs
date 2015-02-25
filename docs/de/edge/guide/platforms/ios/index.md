@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Platform Guide
 
@@ -31,9 +27,9 @@ Die Befehlszeilentools, die oben beziehen sich auf Versionen vor 3.0 Cordova. In
 
 ## Anforderungen und Unterstützung
 
-Apple ® Werkzeuge zum Erstellen von iOS-Anwendungen, die nur auf das Betriebssystem OS X auf Intel-basierten Macs ausgeführt. Xcode ® 4.5 (die erforderliche Mindestversion) läuft nur unter OS X Version 10.7 (Lion) oder größer, und umfasst das iOS 6 SDK (Software Development Kit). Einreichen von apps, die Apple-App-Store℠ erfordert die neuesten Versionen der Apple-Tools.
+Apple ® Werkzeuge zum Erstellen von iOS-Anwendungen, die nur auf das Betriebssystem OS X auf Intel-basierten Macs ausgeführt. Xcode ® 6.0 (die erforderliche Mindestversion) läuft nur unter OS X Version 10.9 (Mavericks) oder größer, und umfasst das iOS 8 SDK (Software Development Kit). Einreichen von apps, die Apple-App-Store℠ erfordert die neuesten Versionen der Apple-Tools.
 
-Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das Gerät muss mindestens iOS 5.x installiert, die mindestens iOS-Version ab Cordova 2.3 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
+Sie können viele der mit dem iOS-Emulator installiert mit der iOS SDK und Xcode Cordova-Features testen, aber man braucht ein echtes Gerät vollständig testen aller Gerätefunktionen die app vor der Einreichung zum App-Speicher. Das Gerät muss mindestens iOS 6.x installiert, die mindestens iOS-Version ab Cordova 3.0 unterstützt. Unterstützende Geräten gehören alle iPad ® Modelle, iPhone ® 3GS und höher, und iPod ® Touch 3rd Generation oder höher. Um apps auf einem Gerät zu installieren, müssen Sie auch ein Mitglied von Apples [iOS Developer Program][1], sein, die kostet $99 pro Jahr. Diese Anleitung zeigt wie zum Implementieren von apps auf der iOS-Emulator, wofür Sie müssen sich nicht mit dem Entwicklerprogramm registrieren.
 
  [1]: https://developer.apple.com/programs/ios/
 

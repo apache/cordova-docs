@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS Plugins
 
@@ -169,7 +165,7 @@ Plugin méthodes exécutent habituellement dans le même thread que l'interface 
 
 ## Débogage iOS Plugins
 
-Pour déboguer sur le côté de l'Objective-C, vous devez le débogueur intégré de Xcode. Pour JavaScript, sur iOS 5,0 vous pouvez utiliser [Weinre, un projet de Cordova Apache][3] ou [iWebInspector, un utilitaire tiers][4]. Pour iOS 6, vous pouvez joindre Safari 6.0 à l'application en cours d'exécution au sein de l'iOS simulateur 6.
+Pour déboguer sur le côté de l'Objective-C, vous devez le débogueur intégré de Xcode. Pour JavaScript, iOS 5.0 ou version ultérieure, vous pouvez utiliser [Weinre, un projet de Cordova Apache][3] ou [iWebInspector, un utilitaire tiers][4]. Pour iOS 8, vous pouvez joindre Safari 8.0 à l'application en cours d'exécution au sein de l'iOS Simulator 8.
 
  [3]: https://github.com/apache/cordova-weinre
  [4]: http://www.iwebinspector.com/

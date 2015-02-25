@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+licence : une licence à l'Apache Software Foundation (ASF) au titre d'un ou plusieurs contrats de licence pour le cotisant. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Configuration de blackBerry 10
 
-Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails d'article s'appliquant uniquement aux BlackBerry 10 construit. Voir le fichier config.xml File pour plus d'informations sur les options de configuration globale.
+Le `config.xml` fichier contrôle des paramètres de base de l'application s'appliquent à chaque demande et chaque instance de CordovaWebView. Cette préférences de détails d'article s'appliquant uniquement aux BlackBerry 10 construit. Voir [le fichier config.xml File][1] pour plus d'informations sur les options de configuration globale.
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `ChildBrowser`( `disable` ou la valeur par défaut `enable` ): désactive les fenêtres de navigateur d'enfants. Par défaut, les apps pour lancent une fenêtre de navigateur secondaire pour afficher les ressources accédés via `window.open()` ou en spécifiant une `_blank` cible de l'ancre. Spécifiez `disable` pour substituer ce comportement par défaut.
     

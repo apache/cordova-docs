@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # アイコンとスプラッシュ画面
 
@@ -65,7 +61,7 @@ src: (必須)、プロジェクト ディレクトリを基準にして、イメ
          </platform>
     
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
@@ -84,7 +80,34 @@ Firefox の OS
 
 iOS
 
-         < プラットフォーム名 ="ios">< ！--iOS 7.0 +--> < ！--iPhone/iPod のタッチ ・ < アイコン src="res/ios/icon-60.png"幅 =「60」高さ =「60」/>< アイコン src"解像度/ios/icon-60@2x.png"幅 =「120」の高さ = =「120」/>< ！--ipad と--> < アイコン src="res/ios/icon-76.png"幅 =「76」高さ =「76」/>< アイコン src"解像度/ios/icon-76@2x.png"幅 =「152」の高さ = =「152」/>< ！--iOS 6.1--> < ！--Spotlight アイコン--> < アイコン src="res/ios/icon-40.png"幅 =「40」高さ =「40」/>< アイコン src"解像度/ios/icon-40@2x.png"幅 =「80」の高さ = =「80」/>< ！--iPhone/iPod のタッチ ・ < アイコン src="res/ios/icon.png"幅 =「57」高さ =「57」/>< アイコン src"解像度/ios/icon@2x.png"幅 =「114」高さ = =「114」/>< ！--ipad と--> < アイコン src="res/ios/icon-72.png"幅「72」の高さ = ="72"/>< アイコン src"解像度/ios/icon-72@2x.png"幅 =「144」高さ = =「144」/>< ！--iPhone スポット ライトとアイコンの設定--> < アイコン src="res/ios/icon-small.png"幅"29"の高さ = =「29」/>< アイコン src"解像度/ios/icon-small@2x.png"幅 =「58」の高さ = =「58」/>< ！-スポット ライトの iPad との設定アイコン--> < アイコン src="res/ios/icon-50.png"幅 =「50」高さ =「50」/>< アイコン src"解像度/ios/icon-50@2x.png"幅 =「100」の高さ = =「100」/></プラットフォーム >
+         <platform name="ios">
+                  <!-- iOS 8.0+ -->
+                  <!-- iPhone 6 Plus  -->
+                  <icon src="res/ios/icon-60@3x.png" width="180" height="180" />
+                  <!-- iOS 7.0+ -->
+                  <!-- iPhone / iPod Touch  -->
+                  <icon src="res/ios/icon-60.png" width="60" height="60" />
+                  <icon src="res/ios/icon-60@2x.png" width="120" height="120" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-76.png" width="76" height="76" />
+                  <icon src="res/ios/icon-76@2x.png" width="152" height="152" />
+                  <!-- iOS 6.1 -->
+                  <!-- Spotlight Icon -->
+                  <icon src="res/ios/icon-40.png" width="40" height="40" />
+                  <icon src="res/ios/icon-40@2x.png" width="80" height="80" />
+                  <!-- iPhone / iPod Touch -->
+                  <icon src="res/ios/icon.png" width="57" height="57" />
+                  <icon src="res/ios/icon@2x.png" width="114" height="114" />
+                  <!-- iPad -->
+                  <icon src="res/ios/icon-72.png" width="72" height="72" />
+                  <icon src="res/ios/icon-72@2x.png" width="144" height="144" />
+                  <!-- iPhone Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-small.png" width="29" height="29" />
+                  <icon src="res/ios/icon-small@2x.png" width="58" height="58" />
+                  <!-- iPad Spotlight and Settings Icon -->
+                  <icon src="res/ios/icon-50.png" width="50" height="50" />
+                  <icon src="res/ios/icon-50@2x.png" width="100" height="100" />
+         </platform>
     
 
 Tizen
@@ -142,6 +165,9 @@ Windows8
         <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
         <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
         <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <splash src="res/screen/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
     
     <platform name="wp8">

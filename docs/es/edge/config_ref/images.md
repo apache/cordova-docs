@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Iconos y pantallas de Splash
 
@@ -65,7 +61,7 @@ Android
          </platform>
     
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
@@ -84,8 +80,7 @@ Firefox OS
 
 iOS
 
-         < nombre de plataforma = "ios" ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < icono src="res/ios/icon-60.png" ancho = "60" height = "60" / >< icono src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!--iPad--> < icono src="res/ios/icon-76.png" ancho = altura "76" = "76" / >< icono src = "res/ios/icon-76@2x.png" width = "152" altura = "152" / ><!--iOS 6.1--> <!--Spotlight icono--> < icono src="res/ios/icon-40.png" ancho = "40" altura = "40" / >
-                  < icono src = "res/ios/icon-40@2x.png" width = "80" altura = "80" / ><!--iPhone / iPod Touch--> < icono src="res/ios/icon.png" ancho = altura "57" = "57" / >< icono src = "res/ios/icon@2x.png" width = altura "114" = "114" / ><!----> iPad < icono src="res/ios/icon-72.png" ancho = altura "72" = "72" / >< icono src = "res/ios/icon-72@2x.png" width = "144" height = "144" / ><!--iPhone Spotlight y el icono Configuración--> < icono src="res/ios/icon-small.png" ancho = "29" height = "29" />< icono src = "res/ios/icon-small@2x.png" width = "58" height = "58" / ><!--iPad Spotlight y el icono Configuración--> < icono src="res/ios/icon-50.png" ancho = "50" height = "50" / >< icono src = "res/ios/icon-50@2x.png" width = "100" height = "100" / >< / plataforma >
+         < nombre de plataforma = "ios" ><!--iOS 8.0 +--> <!--iPhone Plus 6--> < icono src = "res/ios/icon-60@3x.png" width = "180" altura = "180" / ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < icono src="res/ios/icon-60.png" ancho = "60" height = "60" / >< icono src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!----> iPad < icono src="res/ios/icon-76.png" ancho = altura "76" = "76" / >< icono src = "res/ios/icon-76@2x.png" width = "152" height = "152" /><!--iOS 6.1--> <!--icono Spotlight--> < icono src="res/ios/icon-40.png" ancho = "40" altura = "40" / >< icono src = "res/ios/icon-40@2x.png" width = "80" height = "80" / ><!--iPhone / iPod Touch--> < icono src="res/ios/icon.png" ancho = altura "57" = "57" / >< icono src = "res/ios/icon@2x.png" width = altura "114" = "114" / ><!--iPad--> < icono src="res/ios/icon-72.png" ancho = altura "72" = "72" / >< icono src = "res/ios/icon-72@2x.png" width = "144" altura = "144" / ><!--iPhone Spotlight y el icono Configuración--> < icono src="res/ios/icon-small.png" ancho = "29" height = "29" / >< icono src = "res/ios/icon-small@2x.png" width = "58" height = "58" / ><!--iPad Spotlight y el icono Configuración--> < icono src="res/ios/icon-50.png" ancho = "50" altura = "50" / >< icono src = "res/ios/icon-50@2x.png" width = "100" height = "100" / >< / plataforma >
     
 
 Tizen
@@ -135,18 +130,7 @@ Por favor observe que el valor del atributo "src" es relativa al directorio de p
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    </platform>
-    
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
+        <!-- images are determined by width and height. Se admiten las siguientes--> < salpicar src="res/screen/ios/Default~iphone.png" ancho = "320" height = "480" / >< splash src="res/screen/ios/Default@2x~iphone.png" ancho = "640" altura = "960" / >< splash src="res/screen/ios/Default-Portrait~ipad.png" ancho = altura "768" = "1024" / >< splash src="res/screen/ios/Default-Portrait@2x~ipad.png" ancho = altura "1536" = "2048" / >< splash src="res/screen/ios/Default-Landscape~ipad.png" ancho = "1024" altura = "768" / >< splash src="res/screen/ios/Default-Landscape@2x~ipad.png" ancho = "2048" altura = "1536" / >< splash src="res/screen/ios/Default-568h@2x~iphone.png" ancho = "640" height = "1136" / >< splash src="res/screen/ios/Default-667h.png" ancho = "750" height = "1334" / >< splash src="res/screen/ios/Default-736h.png" ancho = "1242" altura = "2208" / >< splash src="res/screen/ios/Default-Landscape-736h.png" ancho = altura "2208" = "1242" / >< / plataforma >< nombre de plataforma = "wp8" ><!--imágenes están determinados por la anchura y la altura. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     
@@ -167,7 +151,7 @@ Por favor observe que el valor del atributo "src" es relativa al directorio de p
 
 # Plataformas soportadas
 
-A partir de ahora (Córdoba 3.5.0 julio de 2014) las siguientes plataformas soportan salpicadura pantallas.
+A partir de ahora (Cordova 3.5.0 julio de 2014) las siguientes plataformas soportan pantallas splash.
 
     android
     ios

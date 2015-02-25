@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # 黑莓 10 配置
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 僅適用于黑莓 10 此節的詳細資訊偏好生成。 有關全域配置選項，請參閱 config.xml 檔的資訊。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 僅適用于黑莓 10 此節的詳細資訊偏好生成。 有關全域配置選項的資訊，請參閱 [config.xml 檔][1]。
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `ChildBrowser`( `disable` 或預設的 `enable` ）： 禁用兒童瀏覽器視窗。 預設情況下，應用程式啟動一個輔助瀏覽器視窗以顯示資源通過訪問 `window.open()` 或通過指定 `_blank` 錨點目標。 指定 `disable` 重寫此預設行為。
     

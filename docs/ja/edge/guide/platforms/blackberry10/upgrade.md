@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # ブラックベリー 10 のアップグレード
 
 このガイドは、コルドバの旧バージョンからアップグレードするブラックベリー プロジェクトを変更する方法を示します。 これらの命令のほとんど、古いの前にあるコマンド ライン ツールのセットで作成されたプロジェクトに適用されます、 `cordova` CLI ユーティリティ。 CLI のバージョンを更新する方法については、コマンド ライン インターフェイス参照してください。
+
+## アップグレード 3.6.0 プロジェクト 4.0.0
+
+CLI 以外のプロジェクトを実行します。
+
+        bin/update path/to/project
+    
+
+CLI のプロジェクト。
+
+1.  更新、 `cordova` CLI バージョン。コマンド ライン インターフェイスを参照してください。
+
+2.  既存のプロジェクトでは、`コルドバ プラットフォーム更新ブラックベリー` を実行します。
 
 ## 3.1.0 から 3.2.0 へのアップグレード
 
@@ -27,11 +36,11 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 
 1.  更新、 `cordova` CLI バージョン。コマンド ライン インターフェイスを参照してください。
 
-2.  実行`cordova platform update blackberry`
+2.  `cordova platform update blackberry` を実行します。
 
 コルドバ CLI で作成されていないプロジェクトの場合に実行します。
 
-        bin/更新 < project_path >
+        bin/update <project_path>
     
 
 ## 3.1.0 3.0.0 からアップグレードします。
@@ -144,7 +153,7 @@ BlackBerryOS/脚本。
 
 ## アップグレード 2.6.0 へ 2.7.0 プロジェクト
 
-1.  ダウンロードし、たとえば、ハード ドライブ上の永続的なディレクトリの場所へ 2.7.0 コルドバ ソースを抽出、`~/Cordova-2.7.0`.
+1.  ダウンロードし、`~/Cordova-2.7.0` にたとえば、ハード ドライブ上の永続的なディレクトリ場所にコルドバ 2.7.0 ソース抽出.
 
 2.  SDK ツールを実行する任意の終了: Eclipse、Momentics など。
 
@@ -381,12 +390,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  更新、 `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 （すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
@@ -407,12 +418,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   1.8.0 へのアップグレード、1.7.0 から行ってください。
@@ -435,12 +448,14 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 6.  更新、 `www/plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-        < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 （すなわち、更新ツールを使用して、ant） サンプル ディレクトリを更新しています。
@@ -461,9 +476,11 @@ PhoneGap のダウンロード ディレクトリを更新しています。
 
 8.  オープン、 `www` ディレクトリと更新、 `plugins.xml` ファイル。2 つのプラグインの名前空間のサービス ラベルを変更。キャプチャと接触のプラグインからの古いエントリを変更します。
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.media.MediaCapture"/>< プラグイン名 =「お問い合わせ」value="org.apache.cordova.pim.Contact"/>
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     宛先：
     
-         < プラグイン名 =「キャプチャ」value="org.apache.cordova.capture.MediaCapture"/>< プラグイン名「連絡先」value="org.apache.cordova.pim.Contact"/= >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

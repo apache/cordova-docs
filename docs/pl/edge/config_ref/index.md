@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Plik config.xml
 
@@ -107,13 +103,6 @@ Następujące ustawienia globalne stosuje się do wszystkich platform:
         <preference name="Fullscreen" value="true" />
         
 
-*   `Orientation`pozwala na blokowanie orientacji i uniemożliwić obracanie w odpowiedzi na zmiany orientacji interfejsu. Możliwe wartości to `default` , `landscape` , lub `portrait` . Przykład:
-    
-        <preference name="Orientation" value="landscape" />
-        
-    
-    **Uwaga**: `default` wartość oznacza *zarówno* orientacji poziomej i pionowej są włączone. Jeśli chcesz użyć ustawień domyolnych każdej platformy (zwykle portret tylko), zostawić ten tag z `config.xml` pliku.
-
 ## Wielo--platforma preferencje
 
 Następujące preferencje stosuje się do więcej niż jednej platformy, ale nie wszystkie z nich:
@@ -139,6 +128,22 @@ Następujące preferencje stosuje się do więcej niż jednej platformy, ale nie
     
     Stosuje się do iOS i BlackBerry.
 
+*   `Orientation` (ciąg, domyślne ustawienia `default`): pozwala na blokowanie orientacji i uniemożliwić obracanie w odpowiedzi na zmiany orientacji interfejsu. Możliwe wartości są `default`, `landscape` albo `portrait`. Przykład:
+    
+        <preference name="Orientation" value="landscape" />
+        
+    
+    Dodatkowo można określić wartości specyficzne dla platformy orientacji, jeśli można umieścić element `<preference>` w elemencie `<platform>`:
+    
+        <platform name="android">
+            <preference name="Orientation" value="sensorLandscape" />
+        </platform>
+        
+    
+    Ma zastosowanie do Android, iOS, WP8, Amazon ognia systemu operacyjnego i programu Firefox OS.
+    
+    **Uwaga**: `default` wartość oznacza Cordova pasek orientacji preferencji wpisu z pliku manifestu/konfiguracja platformy umożliwiające platformie do powrotu do jego domyślne zachowanie.
+
 ## *Funkcja* elementu
 
 Jeśli używasz CLI do tworzenia aplikacji, można użyć `plugin` polecenie, aby włączyć urządzenie API. Ten nie wymaga nie modyfikować najwyższego poziomu `config.xml` pliku, więc `<feature>` element nie stosuje się do pracy. Jeśli pracujesz w SDK i za pomocą platformy `config.xml` plik jako źródło, można użyć `<feature>` tag, aby włączyć urządzenie na poziomie API i zewnętrznych wtyczek. Pojawiają się często z niestandardowych wartości specyficzne dla platformy `config.xml` pliki. Na przykład Oto jak określić API urządzenia Android projektów:
@@ -157,7 +162,7 @@ Oto, jak element jest wyświetlany dla iOS projektów:
 
 Zobacz API Reference szczegółów w jaki sposób określić każdej funkcji. Zobacz przewodnik rozwoju Plugin, aby uzyskać więcej informacji na wtyczki.
 
-## *Platforma* Element
+## *Platform* Element
 
 Podczas tworzenia aplikacji za pomocą CLI, czasem jest konieczne do określenia preferencji lub inne elementy specyficzne dla konkretnej platformy. Użycie `<platform>` element, aby określić konfigurację, która powinna się znajdować tylko w jednej platformy `config.xml` pliku. Na przykład Oto jak określić, że tylko android należy użyć preferencji pełny ekran:
 

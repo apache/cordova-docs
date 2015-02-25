@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+許可證： 根據一個或多個參與者授權合約許可到 Apache 軟體基金會 (ASF)。 See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android 系統組態
 
-`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項，請參閱 config.xml 檔的資訊。
+`config.xml`檔控制應用於每個應用程式和 CordovaWebView 實例的應用程式的基本設置。 本節詳細說明僅適用于 android 系統生成的首選項。 有關全域配置選項的資訊，請參閱[config.xml 檔][1]。
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `KeepRunning`(boolean 類型的值，預設值為 `true` ）： 確定應用程式是否保持甚至後在後臺運行 `pause` 事件火災。 將此設置為 `false` 不會殺死後的 app `pause` 事件，但只是暫停執行代碼內科爾多瓦 web 視圖應用程式時在背景中。
     
@@ -76,3 +74,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `AndroidLaunchMode`（字串，預設值為 `singleTop` ）： 設置活動 `android:launchMode` 屬性。 這將更改該應用程式從應用程式圖示或意圖啟動的是已經在運行的過程中會發生什麼。 有效的值是 `standard` ， `singleTop` ， `singleTask` ，`singleInstance`.
     
         <preference name="AndroidLaunchMode" value="singleTop"/>
+        
+
+*   `DefaultVolumeStream`（字串，預設值為 `default` ，加在科爾多瓦 android 3.7.0): 設置的音量按鈕連結到的硬體音量。 預設情況下這是"叫"手機和平板電腦的"媒體"。 將此設置為"媒體"有您的應用程式卷按鈕總是改變媒體卷。 請注意，當使用科爾多瓦的媒體外掛程式時，音量按鈕將動態地更改為任何媒體物件處於活動狀態時，控制的媒體卷。

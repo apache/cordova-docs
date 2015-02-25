@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Konfiguracja iOS
 
-`config.xml`Plik steruje aplikacji podstawowe ustawienia, które mają zastosowanie w każdej aplikacji i wystąpienie CordovaWebView. Ta sekcja zawiera szczegóły preferencje, które stosuje się tylko do iOS buduje. See [The config.xml File][1] for information on global configuration options.
+`config.xml`Plik steruje aplikacji podstawowe ustawienia, które mają zastosowanie w każdej aplikacji i wystąpienie CordovaWebView. Ta sekcja zawiera szczegóły preferencje, które stosuje się tylko do iOS buduje. Zobacz [plik config.xml][1] informacji na temat opcji konfiguracji globalnej.
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +82,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `UIWebViewDecelerationSpeed`(ciąg, domyślnie `normal` ): prawidłowe wartości to `normal` , `fast` . Właściwość ta określa prędkość spowalniania tempa przewijania. `normal`jest domyślna prędkość dla najbardziej natywne aplikacje, i `fast` jest wartość domyślna dla Mobile Safari.
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl` (ciąg, nie ustawiona domyślnie): Jeśli ustawiona, wyświetli stronę lokalnych odwołanie na błąd w aplikacji.
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>

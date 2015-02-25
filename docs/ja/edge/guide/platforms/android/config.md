@@ -1,25 +1,23 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
+         KIND, either express or implied. See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Android の構成
 
-`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成のオプションには、config.xml ファイル情報を参照してください。
+`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定アンドロイドのビルドにのみ適用されます。 グローバル構成オプションの詳細については、 [config.xml ファイル][1]を参照してください。
+
+ [1]: config_ref_index.md.html#The%20config.xml%20File
 
 *   `KeepRunning`(ブール値、既定値は `true` ): アプリケーション滞在後もバック グラウンドで実行されているかどうかを判断します、 `pause` イベントが発生します。 これを設定する `false` 後アプリを殺すことはありません、 `pause` イベントが、単にアプリがバック グラウンドでのコルドバ webview 内のコードの実行を停止します。
     
@@ -76,3 +74,6 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `AndroidLaunchMode`(文字列、既定値は `singleTop` ): アクティビティを設定します `android:launchMode` 属性。 これは、アプリはアプリのアイコンまたは意図から起動が既に実行されているときに何が起こるかを変更します。 有効な値は `standard` 、 `singleTop` 、 `singleTask` 、`singleInstance`.
     
         <preference name="AndroidLaunchMode" value="singleTop"/>
+        
+
+*   `DefaultVolumeStream`(文字列、既定値は `default` 、コルドバ アンドロイド 3.7.0 に追加)： ボリューム、ハードウェアのボリューム ボタンにリンクを設定します。 既定ではこれは「電話」携帯電話とタブレットのための「メディア」です。 常に音量を変更するメディア アプリの音量ボタンを「メディア」に設定します。 コルドバのメディア プラグインを使用して、ボリューム ボタンは任意のメディア オブジェクトがアクティブな場合にメディア ボリュームを制御する変更は動的に注意してください。

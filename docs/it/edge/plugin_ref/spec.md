@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Plugin Specification
 
@@ -370,6 +366,26 @@ Attributi supportati:
 
 *   `arch`: L'architettura per la quale il `.so` file è stato costruito, o `device` o`simulator`.
 
+Per la piattaforma Windows, elemento `<lib-file>` permette l'inserimento di un `<SDKReference>` nel file di progetto di Windows generati.
+
+Attributi supportati:
+
+*   `src` (obbligatorio): il nome del SDK per includere (che verrà utilizzato come valore dell'attributo `Include` dell'elemento `<SDKReference>` generato).
+
+*   `arch`: indica che il `<SDKReference>` solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
+
+*   `target`: indica che il `<SDKReference>` solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+
+*   `versions`: indica che il `<SDKReference>` solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificato. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+
+Esempi:
+
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" arch="x86" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" versions=">=8.1" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="phone" />
+    <lib-file src="Microsoft.WinJS.2.0, Version=1.0" target="win" versions="8.0" arch="x86" />
+    
+
 ## *quadro* Elemento
 
 Identifica un quadro (solitamente parte della piattaforma/OS) su cui il plugin dipende.
@@ -382,17 +398,34 @@ Esempi:
     <framework src="path/to/project/LibProj.csproj" custom="true" type="projectReference"/>
     
 
-Il `src` attributo identifica il quadro, che plugman tenta di aggiungere al progetto di Cordova, nella maniera corretta per una determinata piattaforma.
+L'attributo `src` identifica il quadro, che plugman tenta di aggiungere al progetto di Cordova, nella maniera corretta per una determinata piattaforma.
 
-L'optional `weak` attributo è un valore booleano che indica se il quadro dovrebbe essere debolmente legato. Il valore predefinito è`false`.
+L'attributo facoltativo `weak` è un valore booleano che indica se il quadro dovrebbe essere debolmente legato. Il valore predefinito è `false`.
 
-L'optional `custom` attributo è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è `false` . ***Su Android*** specifica come trattare **src**. Se `true` **src** è un percorso relativo dalla directory del progetto applicazione, altrimenti - dalla directory del SDK di Android.
+L'attributo facoltativo `custom` è un valore booleano che indica se il quadro è quello che è incluso come parte del vostro file di plugin (quindi non è un quadro di sistema). Il valore predefinito è `false`. ***Su Android*** specifica come trattare **src**. Se `true` **src** è un percorso relativo dalla directory del progetto applicazione, altrimenti - dalla directory del SDK di Android.
 
-L'optional `type` attributo è una stringa che indica il tipo di framework per aggiungere. Attualmente solo `projectReference` è supportato solo su Windows 8. Utilizzando `custom='true'` e `type='projectReference'` aggiungere un riferimento al progetto che verrà aggiunto alla compilazione + collegamento passi del progetto cordova. Questo essenzialmente è l'unico modo attualmente che un quadro 'personalizzato' possibile destinazione più architetture come sono costruite in modo esplicito come dipendenza dall'applicazione posizionamento a cordova.
+L'attributo facoltativo `type` è una stringa che indica il tipo di framework per aggiungere. Attualmente solo `projectReference` è supportato solo per Windows. Utilizzando `custom='true'` e `tipo = 'projectReference'` aggiungere un riferimento al progetto che verrà aggiunto alla compilazione + collegamento passi del progetto cordova. Questo essenzialmente è l'unico modo attualmente che un quadro 'personalizzato' possibile destinazione più architetture come sono costruite in modo esplicito come dipendenza dall'applicazione posizionamento a cordova.
 
-L'optional `parent` attributo è attualmente supportato solo su Android. Imposta il percorso relativo alla directory contenente il sottoprogetto a cui aggiungere il riferimento. Il valore predefinito è `.` , cioè il progetto di applicazione. Consente di aggiungere riferimenti tra sottoprogetti come in questo esempio:
+L'attributo facoltativo `parent` attualmente è supportato solo su Android. Imposta il percorso relativo alla directory contenente il sottoprogetto a cui aggiungere il riferimento. Il valore predefinito è `.`, cioè il progetto di applicazione. Consente di aggiungere riferimenti tra sottoprogetti come in questo esempio:
 
-    < quadro src = "FeedbackLib" custom = "true" / >< quadro src = "extra/android/supporto/v7/appcompat" custom = "false" padre = "FeedbackLib" / >
+    <framework src="FeedbackLib" custom="true" />
+    <framework src="extras/android/support/v7/appcompat" custom="false" parent="FeedbackLib" />
+    
+
+La piattaforma Windows supporta tre attributi aggiuntivi (facoltativi) per affinare quando il quadro dovrebbe essere incluso:
+
+L'attributo `arch` indica che il quadro solo deve essere incluso quando si compila per architettura specificato. Valori supportati sono `x86`, `x64` o `ARM`.
+
+L'attributo `target` indica che il framwork solo deve essere incluso quando si costruisce per il tipo di periferica di destinazione specificata. Valori supportati sono `win` (o `windows`), `phone` o `all`.
+
+L'attributo `versions` indica che il quadro solo deve essere incluso quando si costruisce per le versioni che corrispondono alla stringa di versione specificata. Valore può essere qualsiasi stringa di gamma versione semantico nodo valido.
+
+Esempi di utilizzo di questi attributi specifici di Windows:
+
+    <framework src="src/windows/example.dll" arch="x64" />
+    <framework src="src/windows/example.dll" versions=">=8.0" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="win" />
+    <framework src="src/windows/example.vcxproj" type="projectReference" target="all" versions="8.1" arch="x86" />
     
 
 ## *info* Elemento
@@ -410,26 +443,26 @@ Informazioni supplementari fornite agli utenti. Questo è utile quando si richie
 
 ## Variabili
 
-In alcuni casi, un plugin potrebbe essere necessario apportare modifiche alla configurazione dipende l'applicazione di destinazione. Ad esempio, per registrare per C2DM su Android, un'app con ID pacchetto `com.alunny.message` vuoi richiedere un'autorizzazione come:
+In alcuni casi, un plugin potrebbe essere necessario apportare modifiche alla configurazione dipende l'applicazione di destinazione. Ad esempio, per registrare per C2DM su Android, un'app di cui id del pacchetto è `com.alunny.message` richiederebbe un'autorizzazione quali:
 
     <uses-permission
     android:name="com.alunny.message.permission.C2D_MESSAGE"/>
     
 
-In tali casi in cui il contenuto inserito dalla `plugin.xml` file non è noto prima del tempo, le variabili possono essere indicate da un segno di dollaro, seguito da una serie di lettere, cifre o caratteri di sottolineatura. Per l'esempio precedente, il `plugin.xml` file dovrebbe includere questo tag:
+In tali casi dove il contenuto inserito dal file `plugin.xml` non è noto prima del tempo, le variabili possono essere indicate da un segno di dollaro, seguito da una serie di lettere, cifre o caratteri di sottolineatura. Per l'esempio precedente, il file di `plugin.xml` dovrebbe includere questo tag:
 
     <uses-permission
     android:name="$PACKAGE_NAME.permission.C2D_MESSAGE"/>
     
 
-plugman sostituisce i riferimenti a variabili con il valore specificato, o una stringa vuota se non trovato. Il valore del riferimento variabile può essere rilevato (in questo caso, dalla `AndroidManifest.xml` file) o specificato dall'utente dello strumento; il processo esatto dipende dalla particolare strumento.
+plugman sostituisce i riferimenti a variabili con il valore specificato, o una stringa vuota se non trovato. Il valore del riferimento variabile può essere rilevato (in questo caso, dal file `AndroidManifest.xml`) o specificato dall'utente dello strumento; il processo esatto dipende dalla particolare strumento.
 
 plugman possibile richiedere agli utenti di specificare le variabili necessarie di un plugin. Ad esempio, i tasti per C2M e Google Maps API possono essere specificati come un argomento della riga di comando:
 
     plugman --platform android --project /path/to/project --plugin name|git-url|path --variable API_KEY=!@CFATGWE%^WGSFDGSDFW$%^#$%YTHGsdfhsfhyer56734
     
 
-Per rendere la variabile obbligatoria, il `<platform>` tag deve contenere un `<preference>` tag. Ad esempio:
+Per rendere obbligatoria la variabile, il tag `<platform>` deve contenere un tag `<preference>`. Per esempio:
 
     <preference name="API_KEY" />
     
@@ -440,4 +473,4 @@ Alcuni nomi di variabile dovrebbero essere riservati, come elencato di seguito.
 
 ## $PACKAGE_NAME
 
-Il retromarcia-dominio stile identificatore univoco per il pacchetto, corrispondente alla `CFBundleIdentifier` su iOS o il `package` attributo di primo livello `manifest` elemento in un `AndroidManifest.xml` file.
+L'identificatore univoco di stile retro-dominio per il pacchetto, corrispondente per il `CFBundleIdentifier` su iOS o il `package` attributo dell'elemento di primo livello `manifest` in un file `AndroidManifest.xml`.

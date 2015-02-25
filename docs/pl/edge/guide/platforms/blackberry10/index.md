@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Przewodnik platformy blackBerry 10
 
@@ -27,7 +23,7 @@ Ten poradnik pokazuje jak skonfigurować SDK środowiska wdrażania Cordova apli
 
 Programiści powinni używać `cordova` narzędzie w połączeniu z BlackBerry WebWorks SDK lub BlackBerry Native SDK. Zobacz interfejs wiersza poleceń do informacji jak zainstalować `cordova` , dodać projektów, a następnie tworzenia i wdrażania dla każdej platformy.
 
-Symulator urządzenia BlackBerry 10:
+Symulator urządzenia blackBerry 10:
 
 *   Procesor: Intel dwurdzeniowy 2.0 GHz/AMD Athlon 4200 + lub wyższy
 *   Miejsce na dysku: 10 GB 
@@ -54,7 +50,7 @@ Instalator będzie dodać narzędzia wiersza polecenia do ścieżki. W zależno�
 
 Jeśli musisz skompilować kodu macierzystego, na przykład podczas tworzenia macierzystego plugin, trzeba będzie zainstalować BlackBerry Native SDK.
 
-Aby uzyskać BlackBerry Native SDK, pobrać i zainstalować IDE dla Blackberry dostępne od [developer.blackberry.com][4], a następnie przy użyciu IDE, zainstalować Blackberry Native SDK. Po zakończeniu instalacji należy dodać jego narzędzia wiersza polecenia do ścieżki systemowej.
+Aby uzyskać BlackBerry Native SDK, pobrać i zainstalować IDE dla BlackBerry dostępne od [developer.blackberry.com][4], a następnie przy użyciu IDE, zainstalować BlackBerry Native SDK. Po zakończeniu instalacji należy dodać jego narzędzia wiersza polecenia do ścieżki systemowej.
 
  [4]: http://developer.blackberry.com/native/download/
 

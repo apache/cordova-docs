@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # アンドロイド シェル ツール ガイド
 
@@ -93,3 +89,81 @@ Mac の/Linux または Windows のリリース：
 これは、コルドバの Ant スクリプトで使用されるディレクトリは、既定とは異なるためにです。これは、Ant をコマンドラインから実行時の競合を避けるために日食/ADT の内部。
 
 これらの追加のパラメーターが自動的に追加されますあなたのためを使用して、 `cordova/build` と `cordova/run` スクリプトは、上記します。 使用することをお勧めします。 このため、 `cordova/build` と `cordova/run` ではなく、コマンドラインから直接呼び出す Ant スクリプトです。
+
+## Gradle （！） 実験建物
+
+人造人間のためのコルドバ[Gradle][2]建物になりました。 これはコルドバに任意 3.x が既定で有効に将来的には、おそらくコルドバ 4.0 が。ビルド システムは、シェルの設定またはと一緒にコマンドラインで指定することができる環境変数で有効になって、 `cordova build` コマンド。
+
+ [2]: http://www.gradle.org/
+
+Gradle ビルド規則は、まだ開発中, と Gradle 既定のビルド システムになる前に大規模な変更の対象となることに注意してください。 開発者は、それをしようと、それを試してみることをお勧めすることがそれの上にあなた自身の生産のビルド システムを作成する場合はおそらくいくつか重大な変更次のいくつかのリリースでそれが安定する前に。
+
+### 関連する環境変数
+
+*   **アンドロイド _ を構築**
+    
+    この変数は、どのビルド システムは、プロジェクトをビルドする使用を制御します。値のいずれかを取ることができる `ant` または`gradle`.
+    
+    設定しないと、現在既定の `ant` 、しかし、これを変更すると予想されます。
+
+### （あなたは通常これらを設定する必要はありません） その他の環境変数
+
+*   **アンドロイド _ ホーム**
+    
+    これは Android の SDK を含むディレクトリに設定する必要があります。 コルドバは検索これを通常の設定を必要としないので、PATH 変数を見てだけでなく、既定のインストール場所にします。
+
+*   **JAVA _ ホーム**
+    
+    いくつかのマシンでこの Gradle は、Java コンパイラを見つけることができるように設定する必要があります。
+
+### Gradle プロパティ
+
+これらの[プロパティ][3]は、ビルドのカスタマイズを設定できます。
+
+ [3]: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
+
+*   **cdvBuildMultipleApks**
+    
+    これが設定されている場合は複数の APK ファイルが生成されます: ライブラリ プロジェクトでサポートされているネイティブ プラットフォームごとに 1 つ (x 86、腕、等)。 これは、プロジェクトで生成された APK のサイズを大幅に増やすことができます大規模なのネイティブ ライブラリを使用する場合に重要なことができます。
+    
+    設定しない場合、[すべてのデバイスで使用できる単一の APK が生成されます。
+
+*   **cdvVersionCode**
+    
+    VersionCode 設定よりも優先されます。`AndroidManifest.xml`
+
+*   **cdvReleaseSigningPropertiesFile**
+    
+    リリースの署名情報を含む .properties ファイルへのパスを構築します。ファイルはようになります。
+    
+        storeFile=relative/path/to/keystore.p12 storePassword SECRET1 [storetype] を = = pkcs12 keyAlias DebugSigningKey keyPassword = SECRET2 =
+        
+    
+    `storePassword``keyPassword`はオプションであり、入力を求められますを省略すると。
+
+*   **cdvDebugSigningPropertiesFile**
+    
+    同じです cdvReleaseSigningPropertiesFile がデバッグをビルドします。署名キーを他の開発者と共有する必要がある場合に役立ちます。
+
+*   **cdvMinSdkVersion**
+    
+    値をオーバーライドする `minSdkVersion` で設定 `AndroidManifest.xml` 。複数を作成するときに便利です APKs SDK バージョンをに基づいてください。
+
+*   **cdvBuildToolsVersion**
+    
+    自動検出をオーバーライド `android.buildToolsVersion` 値。
+
+*   **cdvCompileSdkVersion**
+    
+    自動検出をオーバーライド `android.compileSdkVersion` 値。
+
+### 拡張 build.gradle
+
+カスタマイズする必要がある場合 `build.gradle` 、むしろ直接編集よりはという兄弟ファイルを作成する必要があります `build-extras.gradle` 。 このファイルは、メインにインクルードされます `build.gradle` 場合します。 ここで例に示します。
+
+    ＃ 例ビルド extras.gradle # このファイルは 'build.gradle' ext.cdvDebugSigningPropertiesFile の先頭に = ' (プラモデル)/../アンドロイド-デバッグ-keys.properties' # この関数セットが 'build.gradle' ext.postBuildExtras の終わりに実行するコードを使用できるとき = {android.buildTypes.debug.applicationIdSuffix = '.debug'}
+    
+
+### 例のビルド
+
+    ANDROID_BUILD エクスポート エクスポート gradle ORG_GRADLE_PROJECT_cdvMinSdkVersion = 14 コルドバ ビルド android----gradleArg = PcdvBuildMultipleApks = = true

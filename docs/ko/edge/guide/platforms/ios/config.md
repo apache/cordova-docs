@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 구성
 
-`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 단원만 iOS 빌드에 적용 되는 환경 설정을 자세히 설명 합니다. See [The config.xml File][1] for information on global configuration options.
+`config.xml`파일을 각 응용 프로그램 및 CordovaWebView 인스턴스에 적용 되는 응용 프로그램의 기본 설정 제어. 이 단원만 iOS 빌드에 적용 되는 환경 설정을 자세히 설명 합니다. 글로벌 구성 옵션에 대 한 내용은 [config.xml 파일을][1] 참조 하십시오.
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +82,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `UIWebViewDecelerationSpeed`(문자열, 기본값: `normal` ): 유효한 값은 `normal` , `fast` . 이 속성은 기세 스크롤의 감속 속도 제어합니다. `normal`대부분의 네이티브 애플 리 케이 션에 대 한 기본 속도 `fast` 는 모바일 사파리에 대 한 기본값입니다.
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl` (기본적으로 설정 되지 않는 문자열): 만약 설정, 응용 프로그램에서 오류에 참조 된 로컬 페이지를 표시 합니다.
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>

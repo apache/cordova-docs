@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # L'aggiornamento di BlackBerry 10
 
 Questa guida Mostra come modificare i progetti di BlackBerry per l'aggiornamento da versioni precedenti di Cordova. La maggior parte di queste istruzioni si applicano ai progetti creati con un vecchio set di strumenti da riga di comando che precedono la `cordova` utilità CLI. L'interfaccia della riga di comando per informazioni, vedere come aggiornare la versione di CLI.
+
+## All'aggiornamento 3.6.0 proietta al 4.0.0
+
+Per i progetti non-CLI, eseguire:
+
+        bin/update percorso/per/progetto
+    
+
+Per i progetti di CLI:
+
+1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
+
+2.  Eseguire `cordova platform update blackberry` nei progetti esistenti.
 
 ## L'aggiornamento a 3.2.0 da 3.1.0
 
@@ -27,11 +36,11 @@ Per i progetti creati con il cordova CLI:
 
 1.  Aggiornamento del `cordova` versione CLI. Vedere l'interfaccia della riga di comando.
 
-2.  Eseguire`cordova platform update blackberry`
+2.  Eseguire `cordova platform update blackberry`
 
 Per i progetti non creati con la CLI di cordova, eseguire:
 
-        bin/aggiornamento < project_path >
+        bin/update <project_path>
     
 
 ## Aggiornamento a 3.1.0 da 3.0.0
@@ -82,7 +91,7 @@ Per BlackBerry 10:
 
 4.  Creare un nuovo progetto, come descritto nella guida strumento Shell di BlackBerry. Questo diventa la casa del tuo progetto aggiornato.
 
-5.  Copiare la vostra fonte di progetti dal vecchio progetto `/www` il nuovo progetto nella directory `/www` directory.
+5.  Copiare la vostra fonte di progetti dal vecchio progetto `/ www` nella directory del progetto nuovo `/ www` directory.
 
 6.  Aggiornare il riferimento allo script di Cordova nella `www/index.html` file (e qualsiasi altro file che contengono il riferimento allo script) per puntare al nuovo `cordova.js` file.
 
@@ -118,7 +127,7 @@ BlackBerry 10 utilizza i nuovi utensili CLI e gestisce core API come plugin. Le 
 
 4.  Creare un nuovo progetto, come descritto nella guida strumento Shell di BlackBerry. Questo diventa la casa del tuo progetto aggiornato.
 
-5.  Copiare la vostra fonte di progetti dal vecchio progetto `/www` il nuovo progetto nella directory `/www` directory.
+5.  Copiare la vostra fonte di progetti dal vecchio progetto `/ www` nella directory del progetto nuovo `/ www` directory.
 
 6.  Aggiornare il riferimento allo script di Cordova nella `www/index.html` file (e qualsiasi altro file che contengono il riferimento allo script) per puntare al nuovo `cordova.js` file.
 
@@ -144,7 +153,7 @@ Per BlackBerryOS/Playbook:
 
 ## 2.6.0 all'aggiornamento di progetti a 2.7.0
 
-1.  Scaricare ed estrarre la sorgente di Cordova 2.7.0 in un percorso di directory permanente sul disco rigido, ad esempio`~/Cordova-2.7.0`.
+1.  Scaricare ed estrarre la sorgente di Cordova 2.7.0 in un percorso di directory permanente sul disco rigido, per esempio a `~/Cordova-2.7.0`.
 
 2.  Chiudere eventuali strumenti SDK in esecuzione: Eclipse, Momentics e simili.
 
@@ -381,12 +390,14 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento del `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     A:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
@@ -407,12 +418,14 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 
 8.  Aperto il `www` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     A:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 *   Per aggiornare a 1.8.0, si prega di andare da 1.7.0
@@ -435,12 +448,14 @@ Aggiornamento appena il `www` directory:
 
 6.  Aggiornamento del `www/plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+        <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+        <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     A:
     
-        < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+        <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+        <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>
         
 
 Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti della formica):
@@ -461,9 +476,11 @@ Aggiornando la directory di esempio (cioè, aggiornamento usando gli strumenti d
 
 8.  Aperto il `www` directory e aggiornamento del `plugins.xml` file. Due plugin cambiato la loro etichetta di servizio/spazio dei nomi. Cambiare le vecchie voci per i plugin di cattura e di contatto da:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.media.MediaCapture"/ >< plugin nome = "Contatto" value="org.apache.cordova.pim.Contact"/ >
+         <plugin name="Capture" value="org.apache.cordova.media.MediaCapture"/>
+         <plugin name="Contact" value="org.apache.cordova.pim.Contact"/>
         
     
     A:
     
-         < nome plugin = "Cattura" value="org.apache.cordova.capture.MediaCapture"/ >< nome del plugin = value="org.apache.cordova.pim.Contact"/ "Contatti" >
+         <plugin name="Capture" value="org.apache.cordova.capture.MediaCapture"/>
+         <plugin name="Contacts" value="org.apache.cordova.pim.Contact"/>

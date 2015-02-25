@@ -1,25 +1,21 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # iOS 構成
 
-`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 See [The config.xml File][1] for information on global configuration options.
+`config.xml`ファイルは、各アプリケーションと CordovaWebView のインスタンス全体に適用される、アプリの基本的な設定を制御します。 このセクションの詳細設定を iOS のビルドにのみ適用されます。 グローバル構成オプションの詳細については、[config.xml ファイル][1] を参照してください。
 
  [1]: config_ref_index.md.html#The%20config.xml%20File
 
@@ -86,3 +82,8 @@ license: Licensed to the Apache Software Foundation (ASF) under one
 *   `UIWebViewDecelerationSpeed`(文字列、既定値は `normal` ): 有効な値は `normal` 、 `fast` 。 このプロパティは勢いのスクロールの減速速度を制御します。 `normal`ほとんどのネイティブ アプリの場合、既定の速度は、 `fast` モバイル Safari の既定値です。
     
         <preference name="UIWebViewDecelerationSpeed" value="fast" />
+        
+
+*   `ErrorUrl`(既定で設定されていない文字列): 場合は、設定アプリケーションで、エラー発生時に参照先のローカル ページが表示されます。
+    
+        <preference name="ErrorUrl" value="myErrorPage.html"/>

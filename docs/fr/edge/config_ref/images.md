@@ -1,21 +1,17 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Icones et Splash Screen
 
@@ -65,7 +61,7 @@ Android
          </platform>
     
 
-Blackberry10
+BlackBerry10
 
          <platform name="blackberry10">
                   <icon src="res/bb10/icon-86.png" />
@@ -84,8 +80,7 @@ Firefox OS
 
 iOS
 
-         < nom de plate-forme = "ios" ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < icône src="res/ios/icon-60.png" largeur = "60" height = "60" / >< icône src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!--iPad--> < icône src="res/ios/icon-76.png" largeur = hauteur "76" = "76" / >< icône src = "res/ios/icon-76@2x.png" width = "152" height = "152" / ><!--iOS 6.1--> <!--icône Spotlight--> < icône src="res/ios/icon-40.png" largeur = "40" height = "40" / >
-                  < icône src = "res/ios/icon-40@2x.png" width = "80" height = "80" / ><!--iPhone / iPod Touch--> < icône src="res/ios/icon.png" largeur = "57" height = "57" / >< icône src = "res/ios/icon@2x.png" width = "114" height = "114" / ><!--iPad--> < icône src="res/ios/icon-72.png" largeur = hauteur "72" = "72" / >< icône src = "res/ios/icon-72@2x.png" width = "144" height = "144" / ><!--iPhone Spotlight et icône Paramètres--> < icône src="res/ios/icon-small.png" largeur = "29" height = "29" />< icône src = "res/ios/icon-small@2x.png" width = "58" hauteur = "58" / ><!--iPad Spotlight et icône Paramètres--> < icône src="res/ios/icon-50.png" largeur = "50" height = "50" / >< icône src = "res/ios/icon-50@2x.png" width = "100" height = "100" / >< / plate-forme >
+         < nom de plate-forme = "ios" ><!--iOS 8.0 +--> <!--iPhone Plus 6--> < icône src = "res/ios/icon-60@3x.png" width = "180" height = "180" / ><!--iOS 7.0 +--> <!--iPhone / iPod Touch--> < icône src="res/ios/icon-60.png" largeur = "60" height = "60" / >< icône src = "res/ios/icon-60@2x.png" width = "120" height = "120" / ><!--iPad--> < icône src="res/ios/icon-76.png" largeur = hauteur "76" = "76" / >< icône src = "res/ios/icon-76@2x.png" width = "152" height = "152" /><!--iOS 6.1--> <!--icône Spotlight--> < icône src="res/ios/icon-40.png" largeur = "40" height = "40" / >< icône src = "res/ios/icon-40@2x.png" width = "80" height = "80" / ><!--iPhone / iPod Touch--> < icône src="res/ios/icon.png" largeur = "57" height = "57" / >< icône src = "res/ios/icon@2x.png" width = "114" height = "114" / ><!--iPad--> < icône src="res/ios/icon-72.png" largeur = hauteur "72" = "72" / >< icône src = "res/ios/icon-72@2x.png" width = "144" hauteur = "144" / ><!--iPhone Spotlight et icône Paramètres--> < icône src="res/ios/icon-small.png" largeur = "29" height = "29" / >< icône src = "res/ios/icon-small@2x.png" width = height "58" = "58" / ><!--iPad Spotlight et icône Paramètres--> < icône src="res/ios/icon-50.png" largeur = "50" height = "50" / >< icône src = "res/ios/icon-50@2x.png" width = "100" height = "100" / >< / plate-forme >
     
 
 Paciarelli
@@ -135,18 +130,7 @@ Veuillez noter que la valeur de l'attribut « src » est relatif au répertoire 
     </platform>
     
     <platform name="ios">
-        <!-- images are determined by width and height. The following are supported -->
-        <splash src="res/screen/ios/Default~iphone.png" width="320" height="480"/>
-        <splash src="res/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
-        <splash src="res/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
-        <splash src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
-        <splash src="res/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
-        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
-        <splash src="res/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
-    </platform>
-    
-    <platform name="wp8">
-        <!-- images are determined by width and height. The following are supported -->
+        <!-- images are determined by width and height. Suivants sont pris en charge--> < éclabousser src="res/screen/ios/Default~iphone.png" largeur = "320" height = "480" / >< éclabousser src="res/screen/ios/Default@2x~iphone.png" largeur = "640" height = "960" / >< éclabousser src="res/screen/ios/Default-Portrait~ipad.png" largeur = "768" hauteur = "1024" / >< éclabousser src="res/screen/ios/Default-Portrait@2x~ipad.png" largeur = "1536" height = "2048" / >< éclabousser src="res/screen/ios/Default-Landscape~ipad.png" largeur = "1024" height = "768" / >< éclabousser src="res/screen/ios/Default-Landscape@2x~ipad.png" largeur = "2048" hauteur = "1536" / >< éclabousser src="res/screen/ios/Default-568h@2x~iphone.png" largeur = "640" height = "1136" / >< éclabousser src="res/screen/ios/Default-667h.png" largeur = "750" height = "1334" / >< éclabousser src="res/screen/ios/Default-736h.png" largeur = "1242" height = "2208" / >< éclabousser src="res/screen/ios/Default-Landscape-736h.png" largeur = "2208" height = "1242" / >< / plateforme >< nom de plate-forme = "at 8" ><!--images sont déterminées par la largeur et la hauteur. The following are supported -->
         <splash src="res/screen/wp8/SplashScreenImage.jpg" width="768" height="1280"/>
     </platform>
     

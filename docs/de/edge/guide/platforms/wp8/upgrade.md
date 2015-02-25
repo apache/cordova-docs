@@ -1,25 +1,34 @@
----
-license: Licensed to the Apache Software Foundation (ASF) under one
-         or more contributor license agreements.  See the NOTICE file
-         distributed with this work for additional information
-         regarding copyright ownership.  The ASF licenses this file
-         to you under the Apache License, Version 2.0 (the
-         "License"); you may not use this file except in compliance
-         with the License.  You may obtain a copy of the License at
+* * *
+
+license: Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
            http://www.apache.org/licenses/LICENSE-2.0
-
+    
          Unless required by applicable law or agreed to in writing,
          software distributed under the License is distributed on an
          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
          KIND, either express or implied.  See the License for the
          specific language governing permissions and limitations
-         under the License.
----
+    
+
+## under the License.
 
 # Aktualisieren von Windows Phone 8
 
 Diese Anleitung zeigt, wie Windows Phone 8 Projekte, um ein upgrade von älteren Versionen von Cordova zu ändern. Einige dieser Anweisungen beziehen sich auf Projekte, die mit einer älteren Befehlszeilentools, die vorangehen erstellt die `cordova` CLI-Hilfsprogramm. Informationen finden Sie unter The Command-Line Interface die CLI-Version zu aktualisieren. Der folgende Abschnitt zeigt wie von nicht-CLI Projekte aktualisiert.
+
+## Upgrade 3.6.0 Projekte 4.0.0
+
+Für nicht-CLI Projekte führen:
+
+        bin/update path/to/project
+    
+
+CLI-Projekte:
+
+1.  Update der `cordova` CLI-Version. Finden Sie die Befehlszeilenschnittstelle.
+
+2.  Führen Sie `cordova platform update wp8` in Ihre bestehenden Projekte.
 
 ## Ein Upgrade auf 3.2.0 von 3.1.0
 
@@ -44,7 +53,7 @@ Für Projekte, die mit Cordova CLI erstellt wurden:
 
 Für Projekte, die nicht mit der Cordova CLI erstellt ausgeführt:
 
-        Bin\update < Project_path >
+        bin\update <project_path>
     
 
 ## Upgrade auf die CLI (3.0.0) von 2.9.0
@@ -56,7 +65,7 @@ platform add wp8`.
 
 3.  Kopieren Sie den Inhalt des Projekts `www` Verzeichnis in das `www` Verzeichnis im Stammverzeichnis des Projektes Cordova, die Sie gerade erstellt haben.
 
-4.  Kopieren oder nativen Vermögen aus dem ursprünglichen Projekt zu überschreiben ( `SplashScreen` , `ApplicationIcon` , etc.), die sicher um jede neuen Dateien auf die `.csproj` Datei. Die Windows phone Projektbuilds innerhalb der `platforms\wp8` Verzeichnis.
+4.  Kopieren oder überschreiben nativen Vermögen aus dem ursprünglichen Projekt (`SplashScreen`, `ApplicationIcon`, etc.), sicherstellen, dass alle neuen Dateien die `.csproj`-Datei hinzu. Die Fenster Telefon Projektbuilds innerhalb des `platforms\wp8`-Verzeichnisses.
 
 5.  Verwenden Sie Cordova-CLI-Tool, um alle Plugins zu installieren, die Sie brauchen. Beachten Sie, dass die CLI behandelt alle Kern-APIs als Plugins, so müssen sie möglicherweise hinzugefügt werden. Nur 3.0.0 Plugins sind kompatibel mit CLI.
 
@@ -72,7 +81,7 @@ Im Projektmappen-Explorer-Fenster von Visual Studio:
 
 3.  Kopieren Sie und überschreiben Sie alle Splash-Screen oder Symbolbilder.
 
-4.  Kopie über alle Plugins aus dem `plugins` Verzeichnis in das neue Projekt und stellen Sie sicher, dass sie auch das VS-Projekt hinzugefügt werden.
+4.  Über alle Plugins aus dem `plugins`-Verzeichnis in das neue Projekt kopieren und damit auch das VS-Projekt hinzugefügt werden.
 
 5.  Erstellen und testen.
 
